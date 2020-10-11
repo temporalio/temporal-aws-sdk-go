@@ -57,6 +57,7 @@ func NewSignerStub() SignerClient {
 }
 
 type SignerCancelSigningProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -67,6 +68,7 @@ func (r *SignerCancelSigningProfileFuture) Get(ctx workflow.Context) (*signer.Ca
 }
 
 type SignerDescribeSigningJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -77,6 +79,7 @@ func (r *SignerDescribeSigningJobFuture) Get(ctx workflow.Context) (*signer.Desc
 }
 
 type SignerGetSigningPlatformFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -87,6 +90,7 @@ func (r *SignerGetSigningPlatformFuture) Get(ctx workflow.Context) (*signer.GetS
 }
 
 type SignerGetSigningProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +101,7 @@ func (r *SignerGetSigningProfileFuture) Get(ctx workflow.Context) (*signer.GetSi
 }
 
 type SignerListSigningJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +112,7 @@ func (r *SignerListSigningJobsFuture) Get(ctx workflow.Context) (*signer.ListSig
 }
 
 type SignerListSigningPlatformsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +123,7 @@ func (r *SignerListSigningPlatformsFuture) Get(ctx workflow.Context) (*signer.Li
 }
 
 type SignerListSigningProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +134,7 @@ func (r *SignerListSigningProfilesFuture) Get(ctx workflow.Context) (*signer.Lis
 }
 
 type SignerListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +145,7 @@ func (r *SignerListTagsForResourceFuture) Get(ctx workflow.Context) (*signer.Lis
 }
 
 type SignerPutSigningProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +156,7 @@ func (r *SignerPutSigningProfileFuture) Get(ctx workflow.Context) (*signer.PutSi
 }
 
 type SignerStartSigningJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +167,7 @@ func (r *SignerStartSigningJobFuture) Get(ctx workflow.Context) (*signer.StartSi
 }
 
 type SignerTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +178,7 @@ func (r *SignerTagResourceFuture) Get(ctx workflow.Context) (*signer.TagResource
 }
 
 type SignerUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

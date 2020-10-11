@@ -11,202 +11,202 @@ import (
 
 type CloudDirectoryClient interface {
 	AddFacetToObject(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) (*clouddirectory.AddFacetToObjectOutput, error)
-	AddFacetToObjectAsync(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) *ClouddirectoryAddFacetToObjectFuture
+	AddFacetToObjectAsync(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) *CloudDirectoryAddFacetToObjectFuture
 
 	ApplySchema(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) (*clouddirectory.ApplySchemaOutput, error)
-	ApplySchemaAsync(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) *ClouddirectoryApplySchemaFuture
+	ApplySchemaAsync(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) *CloudDirectoryApplySchemaFuture
 
 	AttachObject(ctx workflow.Context, input *clouddirectory.AttachObjectInput) (*clouddirectory.AttachObjectOutput, error)
-	AttachObjectAsync(ctx workflow.Context, input *clouddirectory.AttachObjectInput) *ClouddirectoryAttachObjectFuture
+	AttachObjectAsync(ctx workflow.Context, input *clouddirectory.AttachObjectInput) *CloudDirectoryAttachObjectFuture
 
 	AttachPolicy(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) (*clouddirectory.AttachPolicyOutput, error)
-	AttachPolicyAsync(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) *ClouddirectoryAttachPolicyFuture
+	AttachPolicyAsync(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) *CloudDirectoryAttachPolicyFuture
 
 	AttachToIndex(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) (*clouddirectory.AttachToIndexOutput, error)
-	AttachToIndexAsync(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) *ClouddirectoryAttachToIndexFuture
+	AttachToIndexAsync(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) *CloudDirectoryAttachToIndexFuture
 
 	AttachTypedLink(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) (*clouddirectory.AttachTypedLinkOutput, error)
-	AttachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) *ClouddirectoryAttachTypedLinkFuture
+	AttachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) *CloudDirectoryAttachTypedLinkFuture
 
 	BatchRead(ctx workflow.Context, input *clouddirectory.BatchReadInput) (*clouddirectory.BatchReadOutput, error)
-	BatchReadAsync(ctx workflow.Context, input *clouddirectory.BatchReadInput) *ClouddirectoryBatchReadFuture
+	BatchReadAsync(ctx workflow.Context, input *clouddirectory.BatchReadInput) *CloudDirectoryBatchReadFuture
 
 	BatchWrite(ctx workflow.Context, input *clouddirectory.BatchWriteInput) (*clouddirectory.BatchWriteOutput, error)
-	BatchWriteAsync(ctx workflow.Context, input *clouddirectory.BatchWriteInput) *ClouddirectoryBatchWriteFuture
+	BatchWriteAsync(ctx workflow.Context, input *clouddirectory.BatchWriteInput) *CloudDirectoryBatchWriteFuture
 
 	CreateDirectory(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) (*clouddirectory.CreateDirectoryOutput, error)
-	CreateDirectoryAsync(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) *ClouddirectoryCreateDirectoryFuture
+	CreateDirectoryAsync(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) *CloudDirectoryCreateDirectoryFuture
 
 	CreateFacet(ctx workflow.Context, input *clouddirectory.CreateFacetInput) (*clouddirectory.CreateFacetOutput, error)
-	CreateFacetAsync(ctx workflow.Context, input *clouddirectory.CreateFacetInput) *ClouddirectoryCreateFacetFuture
+	CreateFacetAsync(ctx workflow.Context, input *clouddirectory.CreateFacetInput) *CloudDirectoryCreateFacetFuture
 
 	CreateIndex(ctx workflow.Context, input *clouddirectory.CreateIndexInput) (*clouddirectory.CreateIndexOutput, error)
-	CreateIndexAsync(ctx workflow.Context, input *clouddirectory.CreateIndexInput) *ClouddirectoryCreateIndexFuture
+	CreateIndexAsync(ctx workflow.Context, input *clouddirectory.CreateIndexInput) *CloudDirectoryCreateIndexFuture
 
 	CreateObject(ctx workflow.Context, input *clouddirectory.CreateObjectInput) (*clouddirectory.CreateObjectOutput, error)
-	CreateObjectAsync(ctx workflow.Context, input *clouddirectory.CreateObjectInput) *ClouddirectoryCreateObjectFuture
+	CreateObjectAsync(ctx workflow.Context, input *clouddirectory.CreateObjectInput) *CloudDirectoryCreateObjectFuture
 
 	CreateSchema(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) (*clouddirectory.CreateSchemaOutput, error)
-	CreateSchemaAsync(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) *ClouddirectoryCreateSchemaFuture
+	CreateSchemaAsync(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) *CloudDirectoryCreateSchemaFuture
 
 	CreateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) (*clouddirectory.CreateTypedLinkFacetOutput, error)
-	CreateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) *ClouddirectoryCreateTypedLinkFacetFuture
+	CreateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) *CloudDirectoryCreateTypedLinkFacetFuture
 
 	DeleteDirectory(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) (*clouddirectory.DeleteDirectoryOutput, error)
-	DeleteDirectoryAsync(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) *ClouddirectoryDeleteDirectoryFuture
+	DeleteDirectoryAsync(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) *CloudDirectoryDeleteDirectoryFuture
 
 	DeleteFacet(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) (*clouddirectory.DeleteFacetOutput, error)
-	DeleteFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) *ClouddirectoryDeleteFacetFuture
+	DeleteFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) *CloudDirectoryDeleteFacetFuture
 
 	DeleteObject(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) (*clouddirectory.DeleteObjectOutput, error)
-	DeleteObjectAsync(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) *ClouddirectoryDeleteObjectFuture
+	DeleteObjectAsync(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) *CloudDirectoryDeleteObjectFuture
 
 	DeleteSchema(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) (*clouddirectory.DeleteSchemaOutput, error)
-	DeleteSchemaAsync(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) *ClouddirectoryDeleteSchemaFuture
+	DeleteSchemaAsync(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) *CloudDirectoryDeleteSchemaFuture
 
 	DeleteTypedLinkFacet(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) (*clouddirectory.DeleteTypedLinkFacetOutput, error)
-	DeleteTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) *ClouddirectoryDeleteTypedLinkFacetFuture
+	DeleteTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) *CloudDirectoryDeleteTypedLinkFacetFuture
 
 	DetachFromIndex(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) (*clouddirectory.DetachFromIndexOutput, error)
-	DetachFromIndexAsync(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) *ClouddirectoryDetachFromIndexFuture
+	DetachFromIndexAsync(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) *CloudDirectoryDetachFromIndexFuture
 
 	DetachObject(ctx workflow.Context, input *clouddirectory.DetachObjectInput) (*clouddirectory.DetachObjectOutput, error)
-	DetachObjectAsync(ctx workflow.Context, input *clouddirectory.DetachObjectInput) *ClouddirectoryDetachObjectFuture
+	DetachObjectAsync(ctx workflow.Context, input *clouddirectory.DetachObjectInput) *CloudDirectoryDetachObjectFuture
 
 	DetachPolicy(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) (*clouddirectory.DetachPolicyOutput, error)
-	DetachPolicyAsync(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) *ClouddirectoryDetachPolicyFuture
+	DetachPolicyAsync(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) *CloudDirectoryDetachPolicyFuture
 
 	DetachTypedLink(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) (*clouddirectory.DetachTypedLinkOutput, error)
-	DetachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) *ClouddirectoryDetachTypedLinkFuture
+	DetachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) *CloudDirectoryDetachTypedLinkFuture
 
 	DisableDirectory(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) (*clouddirectory.DisableDirectoryOutput, error)
-	DisableDirectoryAsync(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) *ClouddirectoryDisableDirectoryFuture
+	DisableDirectoryAsync(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) *CloudDirectoryDisableDirectoryFuture
 
 	EnableDirectory(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) (*clouddirectory.EnableDirectoryOutput, error)
-	EnableDirectoryAsync(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) *ClouddirectoryEnableDirectoryFuture
+	EnableDirectoryAsync(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) *CloudDirectoryEnableDirectoryFuture
 
 	GetAppliedSchemaVersion(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) (*clouddirectory.GetAppliedSchemaVersionOutput, error)
-	GetAppliedSchemaVersionAsync(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) *ClouddirectoryGetAppliedSchemaVersionFuture
+	GetAppliedSchemaVersionAsync(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) *CloudDirectoryGetAppliedSchemaVersionFuture
 
 	GetDirectory(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) (*clouddirectory.GetDirectoryOutput, error)
-	GetDirectoryAsync(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) *ClouddirectoryGetDirectoryFuture
+	GetDirectoryAsync(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) *CloudDirectoryGetDirectoryFuture
 
 	GetFacet(ctx workflow.Context, input *clouddirectory.GetFacetInput) (*clouddirectory.GetFacetOutput, error)
-	GetFacetAsync(ctx workflow.Context, input *clouddirectory.GetFacetInput) *ClouddirectoryGetFacetFuture
+	GetFacetAsync(ctx workflow.Context, input *clouddirectory.GetFacetInput) *CloudDirectoryGetFacetFuture
 
 	GetLinkAttributes(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) (*clouddirectory.GetLinkAttributesOutput, error)
-	GetLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) *ClouddirectoryGetLinkAttributesFuture
+	GetLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) *CloudDirectoryGetLinkAttributesFuture
 
 	GetObjectAttributes(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) (*clouddirectory.GetObjectAttributesOutput, error)
-	GetObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) *ClouddirectoryGetObjectAttributesFuture
+	GetObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) *CloudDirectoryGetObjectAttributesFuture
 
 	GetObjectInformation(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) (*clouddirectory.GetObjectInformationOutput, error)
-	GetObjectInformationAsync(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) *ClouddirectoryGetObjectInformationFuture
+	GetObjectInformationAsync(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) *CloudDirectoryGetObjectInformationFuture
 
 	GetSchemaAsJson(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) (*clouddirectory.GetSchemaAsJsonOutput, error)
-	GetSchemaAsJsonAsync(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) *ClouddirectoryGetSchemaAsJsonFuture
+	GetSchemaAsJsonAsync(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) *CloudDirectoryGetSchemaAsJsonFuture
 
 	GetTypedLinkFacetInformation(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) (*clouddirectory.GetTypedLinkFacetInformationOutput, error)
-	GetTypedLinkFacetInformationAsync(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) *ClouddirectoryGetTypedLinkFacetInformationFuture
+	GetTypedLinkFacetInformationAsync(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) *CloudDirectoryGetTypedLinkFacetInformationFuture
 
 	ListAppliedSchemaArns(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) (*clouddirectory.ListAppliedSchemaArnsOutput, error)
-	ListAppliedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) *ClouddirectoryListAppliedSchemaArnsFuture
+	ListAppliedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) *CloudDirectoryListAppliedSchemaArnsFuture
 
 	ListAttachedIndices(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) (*clouddirectory.ListAttachedIndicesOutput, error)
-	ListAttachedIndicesAsync(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) *ClouddirectoryListAttachedIndicesFuture
+	ListAttachedIndicesAsync(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) *CloudDirectoryListAttachedIndicesFuture
 
 	ListDevelopmentSchemaArns(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) (*clouddirectory.ListDevelopmentSchemaArnsOutput, error)
-	ListDevelopmentSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) *ClouddirectoryListDevelopmentSchemaArnsFuture
+	ListDevelopmentSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) *CloudDirectoryListDevelopmentSchemaArnsFuture
 
 	ListDirectories(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) (*clouddirectory.ListDirectoriesOutput, error)
-	ListDirectoriesAsync(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) *ClouddirectoryListDirectoriesFuture
+	ListDirectoriesAsync(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) *CloudDirectoryListDirectoriesFuture
 
 	ListFacetAttributes(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) (*clouddirectory.ListFacetAttributesOutput, error)
-	ListFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) *ClouddirectoryListFacetAttributesFuture
+	ListFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) *CloudDirectoryListFacetAttributesFuture
 
 	ListFacetNames(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) (*clouddirectory.ListFacetNamesOutput, error)
-	ListFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) *ClouddirectoryListFacetNamesFuture
+	ListFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) *CloudDirectoryListFacetNamesFuture
 
 	ListIncomingTypedLinks(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) (*clouddirectory.ListIncomingTypedLinksOutput, error)
-	ListIncomingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) *ClouddirectoryListIncomingTypedLinksFuture
+	ListIncomingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) *CloudDirectoryListIncomingTypedLinksFuture
 
 	ListIndex(ctx workflow.Context, input *clouddirectory.ListIndexInput) (*clouddirectory.ListIndexOutput, error)
-	ListIndexAsync(ctx workflow.Context, input *clouddirectory.ListIndexInput) *ClouddirectoryListIndexFuture
+	ListIndexAsync(ctx workflow.Context, input *clouddirectory.ListIndexInput) *CloudDirectoryListIndexFuture
 
 	ListManagedSchemaArns(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) (*clouddirectory.ListManagedSchemaArnsOutput, error)
-	ListManagedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) *ClouddirectoryListManagedSchemaArnsFuture
+	ListManagedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) *CloudDirectoryListManagedSchemaArnsFuture
 
 	ListObjectAttributes(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) (*clouddirectory.ListObjectAttributesOutput, error)
-	ListObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) *ClouddirectoryListObjectAttributesFuture
+	ListObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) *CloudDirectoryListObjectAttributesFuture
 
 	ListObjectChildren(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) (*clouddirectory.ListObjectChildrenOutput, error)
-	ListObjectChildrenAsync(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) *ClouddirectoryListObjectChildrenFuture
+	ListObjectChildrenAsync(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) *CloudDirectoryListObjectChildrenFuture
 
 	ListObjectParentPaths(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) (*clouddirectory.ListObjectParentPathsOutput, error)
-	ListObjectParentPathsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) *ClouddirectoryListObjectParentPathsFuture
+	ListObjectParentPathsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) *CloudDirectoryListObjectParentPathsFuture
 
 	ListObjectParents(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) (*clouddirectory.ListObjectParentsOutput, error)
-	ListObjectParentsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) *ClouddirectoryListObjectParentsFuture
+	ListObjectParentsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) *CloudDirectoryListObjectParentsFuture
 
 	ListObjectPolicies(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) (*clouddirectory.ListObjectPoliciesOutput, error)
-	ListObjectPoliciesAsync(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) *ClouddirectoryListObjectPoliciesFuture
+	ListObjectPoliciesAsync(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) *CloudDirectoryListObjectPoliciesFuture
 
 	ListOutgoingTypedLinks(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) (*clouddirectory.ListOutgoingTypedLinksOutput, error)
-	ListOutgoingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) *ClouddirectoryListOutgoingTypedLinksFuture
+	ListOutgoingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) *CloudDirectoryListOutgoingTypedLinksFuture
 
 	ListPolicyAttachments(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) (*clouddirectory.ListPolicyAttachmentsOutput, error)
-	ListPolicyAttachmentsAsync(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) *ClouddirectoryListPolicyAttachmentsFuture
+	ListPolicyAttachmentsAsync(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) *CloudDirectoryListPolicyAttachmentsFuture
 
 	ListPublishedSchemaArns(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) (*clouddirectory.ListPublishedSchemaArnsOutput, error)
-	ListPublishedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) *ClouddirectoryListPublishedSchemaArnsFuture
+	ListPublishedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) *CloudDirectoryListPublishedSchemaArnsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) (*clouddirectory.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) *ClouddirectoryListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) *CloudDirectoryListTagsForResourceFuture
 
 	ListTypedLinkFacetAttributes(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) (*clouddirectory.ListTypedLinkFacetAttributesOutput, error)
-	ListTypedLinkFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) *ClouddirectoryListTypedLinkFacetAttributesFuture
+	ListTypedLinkFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) *CloudDirectoryListTypedLinkFacetAttributesFuture
 
 	ListTypedLinkFacetNames(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) (*clouddirectory.ListTypedLinkFacetNamesOutput, error)
-	ListTypedLinkFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) *ClouddirectoryListTypedLinkFacetNamesFuture
+	ListTypedLinkFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) *CloudDirectoryListTypedLinkFacetNamesFuture
 
 	LookupPolicy(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) (*clouddirectory.LookupPolicyOutput, error)
-	LookupPolicyAsync(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) *ClouddirectoryLookupPolicyFuture
+	LookupPolicyAsync(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) *CloudDirectoryLookupPolicyFuture
 
 	PublishSchema(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) (*clouddirectory.PublishSchemaOutput, error)
-	PublishSchemaAsync(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) *ClouddirectoryPublishSchemaFuture
+	PublishSchemaAsync(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) *CloudDirectoryPublishSchemaFuture
 
 	PutSchemaFromJson(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) (*clouddirectory.PutSchemaFromJsonOutput, error)
-	PutSchemaFromJsonAsync(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) *ClouddirectoryPutSchemaFromJsonFuture
+	PutSchemaFromJsonAsync(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) *CloudDirectoryPutSchemaFromJsonFuture
 
 	RemoveFacetFromObject(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) (*clouddirectory.RemoveFacetFromObjectOutput, error)
-	RemoveFacetFromObjectAsync(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) *ClouddirectoryRemoveFacetFromObjectFuture
+	RemoveFacetFromObjectAsync(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) *CloudDirectoryRemoveFacetFromObjectFuture
 
 	TagResource(ctx workflow.Context, input *clouddirectory.TagResourceInput) (*clouddirectory.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *clouddirectory.TagResourceInput) *ClouddirectoryTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *clouddirectory.TagResourceInput) *CloudDirectoryTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *clouddirectory.UntagResourceInput) (*clouddirectory.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *clouddirectory.UntagResourceInput) *ClouddirectoryUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *clouddirectory.UntagResourceInput) *CloudDirectoryUntagResourceFuture
 
 	UpdateFacet(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) (*clouddirectory.UpdateFacetOutput, error)
-	UpdateFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) *ClouddirectoryUpdateFacetFuture
+	UpdateFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) *CloudDirectoryUpdateFacetFuture
 
 	UpdateLinkAttributes(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) (*clouddirectory.UpdateLinkAttributesOutput, error)
-	UpdateLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) *ClouddirectoryUpdateLinkAttributesFuture
+	UpdateLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) *CloudDirectoryUpdateLinkAttributesFuture
 
 	UpdateObjectAttributes(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) (*clouddirectory.UpdateObjectAttributesOutput, error)
-	UpdateObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) *ClouddirectoryUpdateObjectAttributesFuture
+	UpdateObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) *CloudDirectoryUpdateObjectAttributesFuture
 
 	UpdateSchema(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) (*clouddirectory.UpdateSchemaOutput, error)
-	UpdateSchemaAsync(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) *ClouddirectoryUpdateSchemaFuture
+	UpdateSchemaAsync(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) *CloudDirectoryUpdateSchemaFuture
 
 	UpdateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) (*clouddirectory.UpdateTypedLinkFacetOutput, error)
-	UpdateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) *ClouddirectoryUpdateTypedLinkFacetFuture
+	UpdateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) *CloudDirectoryUpdateTypedLinkFacetFuture
 
 	UpgradeAppliedSchema(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) (*clouddirectory.UpgradeAppliedSchemaOutput, error)
-	UpgradeAppliedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) *ClouddirectoryUpgradeAppliedSchemaFuture
+	UpgradeAppliedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) *CloudDirectoryUpgradeAppliedSchemaFuture
 
 	UpgradePublishedSchema(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) (*clouddirectory.UpgradePublishedSchemaOutput, error)
-	UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *ClouddirectoryUpgradePublishedSchemaFuture
+	UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *CloudDirectoryUpgradePublishedSchemaFuture
 }
 
 type CloudDirectoryStub struct{}
@@ -215,661 +215,727 @@ func NewCloudDirectoryStub() CloudDirectoryClient {
 	return &CloudDirectoryStub{}
 }
 
-type ClouddirectoryAddFacetToObjectFuture struct {
+type CloudDirectoryAddFacetToObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryAddFacetToObjectFuture) Get(ctx workflow.Context) (*clouddirectory.AddFacetToObjectOutput, error) {
+func (r *CloudDirectoryAddFacetToObjectFuture) Get(ctx workflow.Context) (*clouddirectory.AddFacetToObjectOutput, error) {
 	var output clouddirectory.AddFacetToObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryApplySchemaFuture struct {
+type CloudDirectoryApplySchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryApplySchemaFuture) Get(ctx workflow.Context) (*clouddirectory.ApplySchemaOutput, error) {
+func (r *CloudDirectoryApplySchemaFuture) Get(ctx workflow.Context) (*clouddirectory.ApplySchemaOutput, error) {
 	var output clouddirectory.ApplySchemaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryAttachObjectFuture struct {
+type CloudDirectoryAttachObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryAttachObjectFuture) Get(ctx workflow.Context) (*clouddirectory.AttachObjectOutput, error) {
+func (r *CloudDirectoryAttachObjectFuture) Get(ctx workflow.Context) (*clouddirectory.AttachObjectOutput, error) {
 	var output clouddirectory.AttachObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryAttachPolicyFuture struct {
+type CloudDirectoryAttachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryAttachPolicyFuture) Get(ctx workflow.Context) (*clouddirectory.AttachPolicyOutput, error) {
+func (r *CloudDirectoryAttachPolicyFuture) Get(ctx workflow.Context) (*clouddirectory.AttachPolicyOutput, error) {
 	var output clouddirectory.AttachPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryAttachToIndexFuture struct {
+type CloudDirectoryAttachToIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryAttachToIndexFuture) Get(ctx workflow.Context) (*clouddirectory.AttachToIndexOutput, error) {
+func (r *CloudDirectoryAttachToIndexFuture) Get(ctx workflow.Context) (*clouddirectory.AttachToIndexOutput, error) {
 	var output clouddirectory.AttachToIndexOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryAttachTypedLinkFuture struct {
+type CloudDirectoryAttachTypedLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryAttachTypedLinkFuture) Get(ctx workflow.Context) (*clouddirectory.AttachTypedLinkOutput, error) {
+func (r *CloudDirectoryAttachTypedLinkFuture) Get(ctx workflow.Context) (*clouddirectory.AttachTypedLinkOutput, error) {
 	var output clouddirectory.AttachTypedLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryBatchReadFuture struct {
+type CloudDirectoryBatchReadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryBatchReadFuture) Get(ctx workflow.Context) (*clouddirectory.BatchReadOutput, error) {
+func (r *CloudDirectoryBatchReadFuture) Get(ctx workflow.Context) (*clouddirectory.BatchReadOutput, error) {
 	var output clouddirectory.BatchReadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryBatchWriteFuture struct {
+type CloudDirectoryBatchWriteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryBatchWriteFuture) Get(ctx workflow.Context) (*clouddirectory.BatchWriteOutput, error) {
+func (r *CloudDirectoryBatchWriteFuture) Get(ctx workflow.Context) (*clouddirectory.BatchWriteOutput, error) {
 	var output clouddirectory.BatchWriteOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryCreateDirectoryFuture struct {
+type CloudDirectoryCreateDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryCreateDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.CreateDirectoryOutput, error) {
+func (r *CloudDirectoryCreateDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.CreateDirectoryOutput, error) {
 	var output clouddirectory.CreateDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryCreateFacetFuture struct {
+type CloudDirectoryCreateFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryCreateFacetFuture) Get(ctx workflow.Context) (*clouddirectory.CreateFacetOutput, error) {
+func (r *CloudDirectoryCreateFacetFuture) Get(ctx workflow.Context) (*clouddirectory.CreateFacetOutput, error) {
 	var output clouddirectory.CreateFacetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryCreateIndexFuture struct {
+type CloudDirectoryCreateIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryCreateIndexFuture) Get(ctx workflow.Context) (*clouddirectory.CreateIndexOutput, error) {
+func (r *CloudDirectoryCreateIndexFuture) Get(ctx workflow.Context) (*clouddirectory.CreateIndexOutput, error) {
 	var output clouddirectory.CreateIndexOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryCreateObjectFuture struct {
+type CloudDirectoryCreateObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryCreateObjectFuture) Get(ctx workflow.Context) (*clouddirectory.CreateObjectOutput, error) {
+func (r *CloudDirectoryCreateObjectFuture) Get(ctx workflow.Context) (*clouddirectory.CreateObjectOutput, error) {
 	var output clouddirectory.CreateObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryCreateSchemaFuture struct {
+type CloudDirectoryCreateSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryCreateSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.CreateSchemaOutput, error) {
+func (r *CloudDirectoryCreateSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.CreateSchemaOutput, error) {
 	var output clouddirectory.CreateSchemaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryCreateTypedLinkFacetFuture struct {
+type CloudDirectoryCreateTypedLinkFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryCreateTypedLinkFacetFuture) Get(ctx workflow.Context) (*clouddirectory.CreateTypedLinkFacetOutput, error) {
+func (r *CloudDirectoryCreateTypedLinkFacetFuture) Get(ctx workflow.Context) (*clouddirectory.CreateTypedLinkFacetOutput, error) {
 	var output clouddirectory.CreateTypedLinkFacetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDeleteDirectoryFuture struct {
+type CloudDirectoryDeleteDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDeleteDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteDirectoryOutput, error) {
+func (r *CloudDirectoryDeleteDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteDirectoryOutput, error) {
 	var output clouddirectory.DeleteDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDeleteFacetFuture struct {
+type CloudDirectoryDeleteFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDeleteFacetFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteFacetOutput, error) {
+func (r *CloudDirectoryDeleteFacetFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteFacetOutput, error) {
 	var output clouddirectory.DeleteFacetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDeleteObjectFuture struct {
+type CloudDirectoryDeleteObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDeleteObjectFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteObjectOutput, error) {
+func (r *CloudDirectoryDeleteObjectFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteObjectOutput, error) {
 	var output clouddirectory.DeleteObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDeleteSchemaFuture struct {
+type CloudDirectoryDeleteSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDeleteSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteSchemaOutput, error) {
+func (r *CloudDirectoryDeleteSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteSchemaOutput, error) {
 	var output clouddirectory.DeleteSchemaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDeleteTypedLinkFacetFuture struct {
+type CloudDirectoryDeleteTypedLinkFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDeleteTypedLinkFacetFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteTypedLinkFacetOutput, error) {
+func (r *CloudDirectoryDeleteTypedLinkFacetFuture) Get(ctx workflow.Context) (*clouddirectory.DeleteTypedLinkFacetOutput, error) {
 	var output clouddirectory.DeleteTypedLinkFacetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDetachFromIndexFuture struct {
+type CloudDirectoryDetachFromIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDetachFromIndexFuture) Get(ctx workflow.Context) (*clouddirectory.DetachFromIndexOutput, error) {
+func (r *CloudDirectoryDetachFromIndexFuture) Get(ctx workflow.Context) (*clouddirectory.DetachFromIndexOutput, error) {
 	var output clouddirectory.DetachFromIndexOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDetachObjectFuture struct {
+type CloudDirectoryDetachObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDetachObjectFuture) Get(ctx workflow.Context) (*clouddirectory.DetachObjectOutput, error) {
+func (r *CloudDirectoryDetachObjectFuture) Get(ctx workflow.Context) (*clouddirectory.DetachObjectOutput, error) {
 	var output clouddirectory.DetachObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDetachPolicyFuture struct {
+type CloudDirectoryDetachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDetachPolicyFuture) Get(ctx workflow.Context) (*clouddirectory.DetachPolicyOutput, error) {
+func (r *CloudDirectoryDetachPolicyFuture) Get(ctx workflow.Context) (*clouddirectory.DetachPolicyOutput, error) {
 	var output clouddirectory.DetachPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDetachTypedLinkFuture struct {
+type CloudDirectoryDetachTypedLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDetachTypedLinkFuture) Get(ctx workflow.Context) (*clouddirectory.DetachTypedLinkOutput, error) {
+func (r *CloudDirectoryDetachTypedLinkFuture) Get(ctx workflow.Context) (*clouddirectory.DetachTypedLinkOutput, error) {
 	var output clouddirectory.DetachTypedLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryDisableDirectoryFuture struct {
+type CloudDirectoryDisableDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryDisableDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.DisableDirectoryOutput, error) {
+func (r *CloudDirectoryDisableDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.DisableDirectoryOutput, error) {
 	var output clouddirectory.DisableDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryEnableDirectoryFuture struct {
+type CloudDirectoryEnableDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryEnableDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.EnableDirectoryOutput, error) {
+func (r *CloudDirectoryEnableDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.EnableDirectoryOutput, error) {
 	var output clouddirectory.EnableDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryGetAppliedSchemaVersionFuture struct {
+type CloudDirectoryGetAppliedSchemaVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryGetAppliedSchemaVersionFuture) Get(ctx workflow.Context) (*clouddirectory.GetAppliedSchemaVersionOutput, error) {
+func (r *CloudDirectoryGetAppliedSchemaVersionFuture) Get(ctx workflow.Context) (*clouddirectory.GetAppliedSchemaVersionOutput, error) {
 	var output clouddirectory.GetAppliedSchemaVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryGetDirectoryFuture struct {
+type CloudDirectoryGetDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryGetDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.GetDirectoryOutput, error) {
+func (r *CloudDirectoryGetDirectoryFuture) Get(ctx workflow.Context) (*clouddirectory.GetDirectoryOutput, error) {
 	var output clouddirectory.GetDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryGetFacetFuture struct {
+type CloudDirectoryGetFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryGetFacetFuture) Get(ctx workflow.Context) (*clouddirectory.GetFacetOutput, error) {
+func (r *CloudDirectoryGetFacetFuture) Get(ctx workflow.Context) (*clouddirectory.GetFacetOutput, error) {
 	var output clouddirectory.GetFacetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryGetLinkAttributesFuture struct {
+type CloudDirectoryGetLinkAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryGetLinkAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.GetLinkAttributesOutput, error) {
+func (r *CloudDirectoryGetLinkAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.GetLinkAttributesOutput, error) {
 	var output clouddirectory.GetLinkAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryGetObjectAttributesFuture struct {
+type CloudDirectoryGetObjectAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryGetObjectAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.GetObjectAttributesOutput, error) {
+func (r *CloudDirectoryGetObjectAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.GetObjectAttributesOutput, error) {
 	var output clouddirectory.GetObjectAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryGetObjectInformationFuture struct {
+type CloudDirectoryGetObjectInformationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryGetObjectInformationFuture) Get(ctx workflow.Context) (*clouddirectory.GetObjectInformationOutput, error) {
+func (r *CloudDirectoryGetObjectInformationFuture) Get(ctx workflow.Context) (*clouddirectory.GetObjectInformationOutput, error) {
 	var output clouddirectory.GetObjectInformationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryGetSchemaAsJsonFuture struct {
+type CloudDirectoryGetSchemaAsJsonFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryGetSchemaAsJsonFuture) Get(ctx workflow.Context) (*clouddirectory.GetSchemaAsJsonOutput, error) {
+func (r *CloudDirectoryGetSchemaAsJsonFuture) Get(ctx workflow.Context) (*clouddirectory.GetSchemaAsJsonOutput, error) {
 	var output clouddirectory.GetSchemaAsJsonOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryGetTypedLinkFacetInformationFuture struct {
+type CloudDirectoryGetTypedLinkFacetInformationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryGetTypedLinkFacetInformationFuture) Get(ctx workflow.Context) (*clouddirectory.GetTypedLinkFacetInformationOutput, error) {
+func (r *CloudDirectoryGetTypedLinkFacetInformationFuture) Get(ctx workflow.Context) (*clouddirectory.GetTypedLinkFacetInformationOutput, error) {
 	var output clouddirectory.GetTypedLinkFacetInformationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListAppliedSchemaArnsFuture struct {
+type CloudDirectoryListAppliedSchemaArnsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListAppliedSchemaArnsFuture) Get(ctx workflow.Context) (*clouddirectory.ListAppliedSchemaArnsOutput, error) {
+func (r *CloudDirectoryListAppliedSchemaArnsFuture) Get(ctx workflow.Context) (*clouddirectory.ListAppliedSchemaArnsOutput, error) {
 	var output clouddirectory.ListAppliedSchemaArnsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListAttachedIndicesFuture struct {
+type CloudDirectoryListAttachedIndicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListAttachedIndicesFuture) Get(ctx workflow.Context) (*clouddirectory.ListAttachedIndicesOutput, error) {
+func (r *CloudDirectoryListAttachedIndicesFuture) Get(ctx workflow.Context) (*clouddirectory.ListAttachedIndicesOutput, error) {
 	var output clouddirectory.ListAttachedIndicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListDevelopmentSchemaArnsFuture struct {
+type CloudDirectoryListDevelopmentSchemaArnsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListDevelopmentSchemaArnsFuture) Get(ctx workflow.Context) (*clouddirectory.ListDevelopmentSchemaArnsOutput, error) {
+func (r *CloudDirectoryListDevelopmentSchemaArnsFuture) Get(ctx workflow.Context) (*clouddirectory.ListDevelopmentSchemaArnsOutput, error) {
 	var output clouddirectory.ListDevelopmentSchemaArnsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListDirectoriesFuture struct {
+type CloudDirectoryListDirectoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListDirectoriesFuture) Get(ctx workflow.Context) (*clouddirectory.ListDirectoriesOutput, error) {
+func (r *CloudDirectoryListDirectoriesFuture) Get(ctx workflow.Context) (*clouddirectory.ListDirectoriesOutput, error) {
 	var output clouddirectory.ListDirectoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListFacetAttributesFuture struct {
+type CloudDirectoryListFacetAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListFacetAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.ListFacetAttributesOutput, error) {
+func (r *CloudDirectoryListFacetAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.ListFacetAttributesOutput, error) {
 	var output clouddirectory.ListFacetAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListFacetNamesFuture struct {
+type CloudDirectoryListFacetNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListFacetNamesFuture) Get(ctx workflow.Context) (*clouddirectory.ListFacetNamesOutput, error) {
+func (r *CloudDirectoryListFacetNamesFuture) Get(ctx workflow.Context) (*clouddirectory.ListFacetNamesOutput, error) {
 	var output clouddirectory.ListFacetNamesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListIncomingTypedLinksFuture struct {
+type CloudDirectoryListIncomingTypedLinksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListIncomingTypedLinksFuture) Get(ctx workflow.Context) (*clouddirectory.ListIncomingTypedLinksOutput, error) {
+func (r *CloudDirectoryListIncomingTypedLinksFuture) Get(ctx workflow.Context) (*clouddirectory.ListIncomingTypedLinksOutput, error) {
 	var output clouddirectory.ListIncomingTypedLinksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListIndexFuture struct {
+type CloudDirectoryListIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListIndexFuture) Get(ctx workflow.Context) (*clouddirectory.ListIndexOutput, error) {
+func (r *CloudDirectoryListIndexFuture) Get(ctx workflow.Context) (*clouddirectory.ListIndexOutput, error) {
 	var output clouddirectory.ListIndexOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListManagedSchemaArnsFuture struct {
+type CloudDirectoryListManagedSchemaArnsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListManagedSchemaArnsFuture) Get(ctx workflow.Context) (*clouddirectory.ListManagedSchemaArnsOutput, error) {
+func (r *CloudDirectoryListManagedSchemaArnsFuture) Get(ctx workflow.Context) (*clouddirectory.ListManagedSchemaArnsOutput, error) {
 	var output clouddirectory.ListManagedSchemaArnsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListObjectAttributesFuture struct {
+type CloudDirectoryListObjectAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListObjectAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectAttributesOutput, error) {
+func (r *CloudDirectoryListObjectAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectAttributesOutput, error) {
 	var output clouddirectory.ListObjectAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListObjectChildrenFuture struct {
+type CloudDirectoryListObjectChildrenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListObjectChildrenFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectChildrenOutput, error) {
+func (r *CloudDirectoryListObjectChildrenFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectChildrenOutput, error) {
 	var output clouddirectory.ListObjectChildrenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListObjectParentPathsFuture struct {
+type CloudDirectoryListObjectParentPathsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListObjectParentPathsFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectParentPathsOutput, error) {
+func (r *CloudDirectoryListObjectParentPathsFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectParentPathsOutput, error) {
 	var output clouddirectory.ListObjectParentPathsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListObjectParentsFuture struct {
+type CloudDirectoryListObjectParentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListObjectParentsFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectParentsOutput, error) {
+func (r *CloudDirectoryListObjectParentsFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectParentsOutput, error) {
 	var output clouddirectory.ListObjectParentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListObjectPoliciesFuture struct {
+type CloudDirectoryListObjectPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListObjectPoliciesFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectPoliciesOutput, error) {
+func (r *CloudDirectoryListObjectPoliciesFuture) Get(ctx workflow.Context) (*clouddirectory.ListObjectPoliciesOutput, error) {
 	var output clouddirectory.ListObjectPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListOutgoingTypedLinksFuture struct {
+type CloudDirectoryListOutgoingTypedLinksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListOutgoingTypedLinksFuture) Get(ctx workflow.Context) (*clouddirectory.ListOutgoingTypedLinksOutput, error) {
+func (r *CloudDirectoryListOutgoingTypedLinksFuture) Get(ctx workflow.Context) (*clouddirectory.ListOutgoingTypedLinksOutput, error) {
 	var output clouddirectory.ListOutgoingTypedLinksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListPolicyAttachmentsFuture struct {
+type CloudDirectoryListPolicyAttachmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListPolicyAttachmentsFuture) Get(ctx workflow.Context) (*clouddirectory.ListPolicyAttachmentsOutput, error) {
+func (r *CloudDirectoryListPolicyAttachmentsFuture) Get(ctx workflow.Context) (*clouddirectory.ListPolicyAttachmentsOutput, error) {
 	var output clouddirectory.ListPolicyAttachmentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListPublishedSchemaArnsFuture struct {
+type CloudDirectoryListPublishedSchemaArnsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListPublishedSchemaArnsFuture) Get(ctx workflow.Context) (*clouddirectory.ListPublishedSchemaArnsOutput, error) {
+func (r *CloudDirectoryListPublishedSchemaArnsFuture) Get(ctx workflow.Context) (*clouddirectory.ListPublishedSchemaArnsOutput, error) {
 	var output clouddirectory.ListPublishedSchemaArnsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListTagsForResourceFuture struct {
+type CloudDirectoryListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListTagsForResourceFuture) Get(ctx workflow.Context) (*clouddirectory.ListTagsForResourceOutput, error) {
+func (r *CloudDirectoryListTagsForResourceFuture) Get(ctx workflow.Context) (*clouddirectory.ListTagsForResourceOutput, error) {
 	var output clouddirectory.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListTypedLinkFacetAttributesFuture struct {
+type CloudDirectoryListTypedLinkFacetAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListTypedLinkFacetAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.ListTypedLinkFacetAttributesOutput, error) {
+func (r *CloudDirectoryListTypedLinkFacetAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.ListTypedLinkFacetAttributesOutput, error) {
 	var output clouddirectory.ListTypedLinkFacetAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryListTypedLinkFacetNamesFuture struct {
+type CloudDirectoryListTypedLinkFacetNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryListTypedLinkFacetNamesFuture) Get(ctx workflow.Context) (*clouddirectory.ListTypedLinkFacetNamesOutput, error) {
+func (r *CloudDirectoryListTypedLinkFacetNamesFuture) Get(ctx workflow.Context) (*clouddirectory.ListTypedLinkFacetNamesOutput, error) {
 	var output clouddirectory.ListTypedLinkFacetNamesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryLookupPolicyFuture struct {
+type CloudDirectoryLookupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryLookupPolicyFuture) Get(ctx workflow.Context) (*clouddirectory.LookupPolicyOutput, error) {
+func (r *CloudDirectoryLookupPolicyFuture) Get(ctx workflow.Context) (*clouddirectory.LookupPolicyOutput, error) {
 	var output clouddirectory.LookupPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryPublishSchemaFuture struct {
+type CloudDirectoryPublishSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryPublishSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.PublishSchemaOutput, error) {
+func (r *CloudDirectoryPublishSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.PublishSchemaOutput, error) {
 	var output clouddirectory.PublishSchemaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryPutSchemaFromJsonFuture struct {
+type CloudDirectoryPutSchemaFromJsonFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryPutSchemaFromJsonFuture) Get(ctx workflow.Context) (*clouddirectory.PutSchemaFromJsonOutput, error) {
+func (r *CloudDirectoryPutSchemaFromJsonFuture) Get(ctx workflow.Context) (*clouddirectory.PutSchemaFromJsonOutput, error) {
 	var output clouddirectory.PutSchemaFromJsonOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryRemoveFacetFromObjectFuture struct {
+type CloudDirectoryRemoveFacetFromObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryRemoveFacetFromObjectFuture) Get(ctx workflow.Context) (*clouddirectory.RemoveFacetFromObjectOutput, error) {
+func (r *CloudDirectoryRemoveFacetFromObjectFuture) Get(ctx workflow.Context) (*clouddirectory.RemoveFacetFromObjectOutput, error) {
 	var output clouddirectory.RemoveFacetFromObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryTagResourceFuture struct {
+type CloudDirectoryTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryTagResourceFuture) Get(ctx workflow.Context) (*clouddirectory.TagResourceOutput, error) {
+func (r *CloudDirectoryTagResourceFuture) Get(ctx workflow.Context) (*clouddirectory.TagResourceOutput, error) {
 	var output clouddirectory.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryUntagResourceFuture struct {
+type CloudDirectoryUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryUntagResourceFuture) Get(ctx workflow.Context) (*clouddirectory.UntagResourceOutput, error) {
+func (r *CloudDirectoryUntagResourceFuture) Get(ctx workflow.Context) (*clouddirectory.UntagResourceOutput, error) {
 	var output clouddirectory.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryUpdateFacetFuture struct {
+type CloudDirectoryUpdateFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryUpdateFacetFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateFacetOutput, error) {
+func (r *CloudDirectoryUpdateFacetFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateFacetOutput, error) {
 	var output clouddirectory.UpdateFacetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryUpdateLinkAttributesFuture struct {
+type CloudDirectoryUpdateLinkAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryUpdateLinkAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateLinkAttributesOutput, error) {
+func (r *CloudDirectoryUpdateLinkAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateLinkAttributesOutput, error) {
 	var output clouddirectory.UpdateLinkAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryUpdateObjectAttributesFuture struct {
+type CloudDirectoryUpdateObjectAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryUpdateObjectAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateObjectAttributesOutput, error) {
+func (r *CloudDirectoryUpdateObjectAttributesFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateObjectAttributesOutput, error) {
 	var output clouddirectory.UpdateObjectAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryUpdateSchemaFuture struct {
+type CloudDirectoryUpdateSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryUpdateSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateSchemaOutput, error) {
+func (r *CloudDirectoryUpdateSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateSchemaOutput, error) {
 	var output clouddirectory.UpdateSchemaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryUpdateTypedLinkFacetFuture struct {
+type CloudDirectoryUpdateTypedLinkFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryUpdateTypedLinkFacetFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateTypedLinkFacetOutput, error) {
+func (r *CloudDirectoryUpdateTypedLinkFacetFuture) Get(ctx workflow.Context) (*clouddirectory.UpdateTypedLinkFacetOutput, error) {
 	var output clouddirectory.UpdateTypedLinkFacetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryUpgradeAppliedSchemaFuture struct {
+type CloudDirectoryUpgradeAppliedSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryUpgradeAppliedSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.UpgradeAppliedSchemaOutput, error) {
+func (r *CloudDirectoryUpgradeAppliedSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.UpgradeAppliedSchemaOutput, error) {
 	var output clouddirectory.UpgradeAppliedSchemaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ClouddirectoryUpgradePublishedSchemaFuture struct {
+type CloudDirectoryUpgradePublishedSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ClouddirectoryUpgradePublishedSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.UpgradePublishedSchemaOutput, error) {
+func (r *CloudDirectoryUpgradePublishedSchemaFuture) Get(ctx workflow.Context) (*clouddirectory.UpgradePublishedSchemaOutput, error) {
 	var output clouddirectory.UpgradePublishedSchemaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -881,9 +947,9 @@ func (a *CloudDirectoryStub) AddFacetToObject(ctx workflow.Context, input *cloud
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) AddFacetToObjectAsync(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) *ClouddirectoryAddFacetToObjectFuture {
+func (a *CloudDirectoryStub) AddFacetToObjectAsync(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) *CloudDirectoryAddFacetToObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AddFacetToObject", input)
-	return &ClouddirectoryAddFacetToObjectFuture{Future: future}
+	return &CloudDirectoryAddFacetToObjectFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ApplySchema(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) (*clouddirectory.ApplySchemaOutput, error) {
@@ -892,9 +958,9 @@ func (a *CloudDirectoryStub) ApplySchema(ctx workflow.Context, input *clouddirec
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ApplySchemaAsync(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) *ClouddirectoryApplySchemaFuture {
+func (a *CloudDirectoryStub) ApplySchemaAsync(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) *CloudDirectoryApplySchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ApplySchema", input)
-	return &ClouddirectoryApplySchemaFuture{Future: future}
+	return &CloudDirectoryApplySchemaFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) AttachObject(ctx workflow.Context, input *clouddirectory.AttachObjectInput) (*clouddirectory.AttachObjectOutput, error) {
@@ -903,9 +969,9 @@ func (a *CloudDirectoryStub) AttachObject(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) AttachObjectAsync(ctx workflow.Context, input *clouddirectory.AttachObjectInput) *ClouddirectoryAttachObjectFuture {
+func (a *CloudDirectoryStub) AttachObjectAsync(ctx workflow.Context, input *clouddirectory.AttachObjectInput) *CloudDirectoryAttachObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachObject", input)
-	return &ClouddirectoryAttachObjectFuture{Future: future}
+	return &CloudDirectoryAttachObjectFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) AttachPolicy(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) (*clouddirectory.AttachPolicyOutput, error) {
@@ -914,9 +980,9 @@ func (a *CloudDirectoryStub) AttachPolicy(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) AttachPolicyAsync(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) *ClouddirectoryAttachPolicyFuture {
+func (a *CloudDirectoryStub) AttachPolicyAsync(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) *CloudDirectoryAttachPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachPolicy", input)
-	return &ClouddirectoryAttachPolicyFuture{Future: future}
+	return &CloudDirectoryAttachPolicyFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) AttachToIndex(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) (*clouddirectory.AttachToIndexOutput, error) {
@@ -925,9 +991,9 @@ func (a *CloudDirectoryStub) AttachToIndex(ctx workflow.Context, input *clouddir
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) AttachToIndexAsync(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) *ClouddirectoryAttachToIndexFuture {
+func (a *CloudDirectoryStub) AttachToIndexAsync(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) *CloudDirectoryAttachToIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachToIndex", input)
-	return &ClouddirectoryAttachToIndexFuture{Future: future}
+	return &CloudDirectoryAttachToIndexFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) AttachTypedLink(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) (*clouddirectory.AttachTypedLinkOutput, error) {
@@ -936,9 +1002,9 @@ func (a *CloudDirectoryStub) AttachTypedLink(ctx workflow.Context, input *cloudd
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) AttachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) *ClouddirectoryAttachTypedLinkFuture {
+func (a *CloudDirectoryStub) AttachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) *CloudDirectoryAttachTypedLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachTypedLink", input)
-	return &ClouddirectoryAttachTypedLinkFuture{Future: future}
+	return &CloudDirectoryAttachTypedLinkFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) BatchRead(ctx workflow.Context, input *clouddirectory.BatchReadInput) (*clouddirectory.BatchReadOutput, error) {
@@ -947,9 +1013,9 @@ func (a *CloudDirectoryStub) BatchRead(ctx workflow.Context, input *clouddirecto
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) BatchReadAsync(ctx workflow.Context, input *clouddirectory.BatchReadInput) *ClouddirectoryBatchReadFuture {
+func (a *CloudDirectoryStub) BatchReadAsync(ctx workflow.Context, input *clouddirectory.BatchReadInput) *CloudDirectoryBatchReadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.BatchRead", input)
-	return &ClouddirectoryBatchReadFuture{Future: future}
+	return &CloudDirectoryBatchReadFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) BatchWrite(ctx workflow.Context, input *clouddirectory.BatchWriteInput) (*clouddirectory.BatchWriteOutput, error) {
@@ -958,9 +1024,9 @@ func (a *CloudDirectoryStub) BatchWrite(ctx workflow.Context, input *clouddirect
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) BatchWriteAsync(ctx workflow.Context, input *clouddirectory.BatchWriteInput) *ClouddirectoryBatchWriteFuture {
+func (a *CloudDirectoryStub) BatchWriteAsync(ctx workflow.Context, input *clouddirectory.BatchWriteInput) *CloudDirectoryBatchWriteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.BatchWrite", input)
-	return &ClouddirectoryBatchWriteFuture{Future: future}
+	return &CloudDirectoryBatchWriteFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) CreateDirectory(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) (*clouddirectory.CreateDirectoryOutput, error) {
@@ -969,9 +1035,9 @@ func (a *CloudDirectoryStub) CreateDirectory(ctx workflow.Context, input *cloudd
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) CreateDirectoryAsync(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) *ClouddirectoryCreateDirectoryFuture {
+func (a *CloudDirectoryStub) CreateDirectoryAsync(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) *CloudDirectoryCreateDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateDirectory", input)
-	return &ClouddirectoryCreateDirectoryFuture{Future: future}
+	return &CloudDirectoryCreateDirectoryFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) CreateFacet(ctx workflow.Context, input *clouddirectory.CreateFacetInput) (*clouddirectory.CreateFacetOutput, error) {
@@ -980,9 +1046,9 @@ func (a *CloudDirectoryStub) CreateFacet(ctx workflow.Context, input *clouddirec
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) CreateFacetAsync(ctx workflow.Context, input *clouddirectory.CreateFacetInput) *ClouddirectoryCreateFacetFuture {
+func (a *CloudDirectoryStub) CreateFacetAsync(ctx workflow.Context, input *clouddirectory.CreateFacetInput) *CloudDirectoryCreateFacetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateFacet", input)
-	return &ClouddirectoryCreateFacetFuture{Future: future}
+	return &CloudDirectoryCreateFacetFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) CreateIndex(ctx workflow.Context, input *clouddirectory.CreateIndexInput) (*clouddirectory.CreateIndexOutput, error) {
@@ -991,9 +1057,9 @@ func (a *CloudDirectoryStub) CreateIndex(ctx workflow.Context, input *clouddirec
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) CreateIndexAsync(ctx workflow.Context, input *clouddirectory.CreateIndexInput) *ClouddirectoryCreateIndexFuture {
+func (a *CloudDirectoryStub) CreateIndexAsync(ctx workflow.Context, input *clouddirectory.CreateIndexInput) *CloudDirectoryCreateIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateIndex", input)
-	return &ClouddirectoryCreateIndexFuture{Future: future}
+	return &CloudDirectoryCreateIndexFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) CreateObject(ctx workflow.Context, input *clouddirectory.CreateObjectInput) (*clouddirectory.CreateObjectOutput, error) {
@@ -1002,9 +1068,9 @@ func (a *CloudDirectoryStub) CreateObject(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) CreateObjectAsync(ctx workflow.Context, input *clouddirectory.CreateObjectInput) *ClouddirectoryCreateObjectFuture {
+func (a *CloudDirectoryStub) CreateObjectAsync(ctx workflow.Context, input *clouddirectory.CreateObjectInput) *CloudDirectoryCreateObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateObject", input)
-	return &ClouddirectoryCreateObjectFuture{Future: future}
+	return &CloudDirectoryCreateObjectFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) CreateSchema(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) (*clouddirectory.CreateSchemaOutput, error) {
@@ -1013,9 +1079,9 @@ func (a *CloudDirectoryStub) CreateSchema(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) CreateSchemaAsync(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) *ClouddirectoryCreateSchemaFuture {
+func (a *CloudDirectoryStub) CreateSchemaAsync(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) *CloudDirectoryCreateSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateSchema", input)
-	return &ClouddirectoryCreateSchemaFuture{Future: future}
+	return &CloudDirectoryCreateSchemaFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) CreateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) (*clouddirectory.CreateTypedLinkFacetOutput, error) {
@@ -1024,9 +1090,9 @@ func (a *CloudDirectoryStub) CreateTypedLinkFacet(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) CreateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) *ClouddirectoryCreateTypedLinkFacetFuture {
+func (a *CloudDirectoryStub) CreateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) *CloudDirectoryCreateTypedLinkFacetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateTypedLinkFacet", input)
-	return &ClouddirectoryCreateTypedLinkFacetFuture{Future: future}
+	return &CloudDirectoryCreateTypedLinkFacetFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DeleteDirectory(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) (*clouddirectory.DeleteDirectoryOutput, error) {
@@ -1035,9 +1101,9 @@ func (a *CloudDirectoryStub) DeleteDirectory(ctx workflow.Context, input *cloudd
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DeleteDirectoryAsync(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) *ClouddirectoryDeleteDirectoryFuture {
+func (a *CloudDirectoryStub) DeleteDirectoryAsync(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) *CloudDirectoryDeleteDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteDirectory", input)
-	return &ClouddirectoryDeleteDirectoryFuture{Future: future}
+	return &CloudDirectoryDeleteDirectoryFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DeleteFacet(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) (*clouddirectory.DeleteFacetOutput, error) {
@@ -1046,9 +1112,9 @@ func (a *CloudDirectoryStub) DeleteFacet(ctx workflow.Context, input *clouddirec
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DeleteFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) *ClouddirectoryDeleteFacetFuture {
+func (a *CloudDirectoryStub) DeleteFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) *CloudDirectoryDeleteFacetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteFacet", input)
-	return &ClouddirectoryDeleteFacetFuture{Future: future}
+	return &CloudDirectoryDeleteFacetFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DeleteObject(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) (*clouddirectory.DeleteObjectOutput, error) {
@@ -1057,9 +1123,9 @@ func (a *CloudDirectoryStub) DeleteObject(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DeleteObjectAsync(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) *ClouddirectoryDeleteObjectFuture {
+func (a *CloudDirectoryStub) DeleteObjectAsync(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) *CloudDirectoryDeleteObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteObject", input)
-	return &ClouddirectoryDeleteObjectFuture{Future: future}
+	return &CloudDirectoryDeleteObjectFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DeleteSchema(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) (*clouddirectory.DeleteSchemaOutput, error) {
@@ -1068,9 +1134,9 @@ func (a *CloudDirectoryStub) DeleteSchema(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DeleteSchemaAsync(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) *ClouddirectoryDeleteSchemaFuture {
+func (a *CloudDirectoryStub) DeleteSchemaAsync(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) *CloudDirectoryDeleteSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteSchema", input)
-	return &ClouddirectoryDeleteSchemaFuture{Future: future}
+	return &CloudDirectoryDeleteSchemaFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DeleteTypedLinkFacet(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) (*clouddirectory.DeleteTypedLinkFacetOutput, error) {
@@ -1079,9 +1145,9 @@ func (a *CloudDirectoryStub) DeleteTypedLinkFacet(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DeleteTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) *ClouddirectoryDeleteTypedLinkFacetFuture {
+func (a *CloudDirectoryStub) DeleteTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) *CloudDirectoryDeleteTypedLinkFacetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteTypedLinkFacet", input)
-	return &ClouddirectoryDeleteTypedLinkFacetFuture{Future: future}
+	return &CloudDirectoryDeleteTypedLinkFacetFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DetachFromIndex(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) (*clouddirectory.DetachFromIndexOutput, error) {
@@ -1090,9 +1156,9 @@ func (a *CloudDirectoryStub) DetachFromIndex(ctx workflow.Context, input *cloudd
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DetachFromIndexAsync(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) *ClouddirectoryDetachFromIndexFuture {
+func (a *CloudDirectoryStub) DetachFromIndexAsync(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) *CloudDirectoryDetachFromIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachFromIndex", input)
-	return &ClouddirectoryDetachFromIndexFuture{Future: future}
+	return &CloudDirectoryDetachFromIndexFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DetachObject(ctx workflow.Context, input *clouddirectory.DetachObjectInput) (*clouddirectory.DetachObjectOutput, error) {
@@ -1101,9 +1167,9 @@ func (a *CloudDirectoryStub) DetachObject(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DetachObjectAsync(ctx workflow.Context, input *clouddirectory.DetachObjectInput) *ClouddirectoryDetachObjectFuture {
+func (a *CloudDirectoryStub) DetachObjectAsync(ctx workflow.Context, input *clouddirectory.DetachObjectInput) *CloudDirectoryDetachObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachObject", input)
-	return &ClouddirectoryDetachObjectFuture{Future: future}
+	return &CloudDirectoryDetachObjectFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DetachPolicy(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) (*clouddirectory.DetachPolicyOutput, error) {
@@ -1112,9 +1178,9 @@ func (a *CloudDirectoryStub) DetachPolicy(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DetachPolicyAsync(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) *ClouddirectoryDetachPolicyFuture {
+func (a *CloudDirectoryStub) DetachPolicyAsync(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) *CloudDirectoryDetachPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachPolicy", input)
-	return &ClouddirectoryDetachPolicyFuture{Future: future}
+	return &CloudDirectoryDetachPolicyFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DetachTypedLink(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) (*clouddirectory.DetachTypedLinkOutput, error) {
@@ -1123,9 +1189,9 @@ func (a *CloudDirectoryStub) DetachTypedLink(ctx workflow.Context, input *cloudd
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DetachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) *ClouddirectoryDetachTypedLinkFuture {
+func (a *CloudDirectoryStub) DetachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) *CloudDirectoryDetachTypedLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachTypedLink", input)
-	return &ClouddirectoryDetachTypedLinkFuture{Future: future}
+	return &CloudDirectoryDetachTypedLinkFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) DisableDirectory(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) (*clouddirectory.DisableDirectoryOutput, error) {
@@ -1134,9 +1200,9 @@ func (a *CloudDirectoryStub) DisableDirectory(ctx workflow.Context, input *cloud
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) DisableDirectoryAsync(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) *ClouddirectoryDisableDirectoryFuture {
+func (a *CloudDirectoryStub) DisableDirectoryAsync(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) *CloudDirectoryDisableDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DisableDirectory", input)
-	return &ClouddirectoryDisableDirectoryFuture{Future: future}
+	return &CloudDirectoryDisableDirectoryFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) EnableDirectory(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) (*clouddirectory.EnableDirectoryOutput, error) {
@@ -1145,9 +1211,9 @@ func (a *CloudDirectoryStub) EnableDirectory(ctx workflow.Context, input *cloudd
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) EnableDirectoryAsync(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) *ClouddirectoryEnableDirectoryFuture {
+func (a *CloudDirectoryStub) EnableDirectoryAsync(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) *CloudDirectoryEnableDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.EnableDirectory", input)
-	return &ClouddirectoryEnableDirectoryFuture{Future: future}
+	return &CloudDirectoryEnableDirectoryFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) GetAppliedSchemaVersion(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) (*clouddirectory.GetAppliedSchemaVersionOutput, error) {
@@ -1156,9 +1222,9 @@ func (a *CloudDirectoryStub) GetAppliedSchemaVersion(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) GetAppliedSchemaVersionAsync(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) *ClouddirectoryGetAppliedSchemaVersionFuture {
+func (a *CloudDirectoryStub) GetAppliedSchemaVersionAsync(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) *CloudDirectoryGetAppliedSchemaVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetAppliedSchemaVersion", input)
-	return &ClouddirectoryGetAppliedSchemaVersionFuture{Future: future}
+	return &CloudDirectoryGetAppliedSchemaVersionFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) GetDirectory(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) (*clouddirectory.GetDirectoryOutput, error) {
@@ -1167,9 +1233,9 @@ func (a *CloudDirectoryStub) GetDirectory(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) GetDirectoryAsync(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) *ClouddirectoryGetDirectoryFuture {
+func (a *CloudDirectoryStub) GetDirectoryAsync(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) *CloudDirectoryGetDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetDirectory", input)
-	return &ClouddirectoryGetDirectoryFuture{Future: future}
+	return &CloudDirectoryGetDirectoryFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) GetFacet(ctx workflow.Context, input *clouddirectory.GetFacetInput) (*clouddirectory.GetFacetOutput, error) {
@@ -1178,9 +1244,9 @@ func (a *CloudDirectoryStub) GetFacet(ctx workflow.Context, input *clouddirector
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) GetFacetAsync(ctx workflow.Context, input *clouddirectory.GetFacetInput) *ClouddirectoryGetFacetFuture {
+func (a *CloudDirectoryStub) GetFacetAsync(ctx workflow.Context, input *clouddirectory.GetFacetInput) *CloudDirectoryGetFacetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetFacet", input)
-	return &ClouddirectoryGetFacetFuture{Future: future}
+	return &CloudDirectoryGetFacetFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) GetLinkAttributes(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) (*clouddirectory.GetLinkAttributesOutput, error) {
@@ -1189,9 +1255,9 @@ func (a *CloudDirectoryStub) GetLinkAttributes(ctx workflow.Context, input *clou
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) GetLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) *ClouddirectoryGetLinkAttributesFuture {
+func (a *CloudDirectoryStub) GetLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) *CloudDirectoryGetLinkAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetLinkAttributes", input)
-	return &ClouddirectoryGetLinkAttributesFuture{Future: future}
+	return &CloudDirectoryGetLinkAttributesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) GetObjectAttributes(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) (*clouddirectory.GetObjectAttributesOutput, error) {
@@ -1200,9 +1266,9 @@ func (a *CloudDirectoryStub) GetObjectAttributes(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) GetObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) *ClouddirectoryGetObjectAttributesFuture {
+func (a *CloudDirectoryStub) GetObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) *CloudDirectoryGetObjectAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetObjectAttributes", input)
-	return &ClouddirectoryGetObjectAttributesFuture{Future: future}
+	return &CloudDirectoryGetObjectAttributesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) GetObjectInformation(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) (*clouddirectory.GetObjectInformationOutput, error) {
@@ -1211,9 +1277,9 @@ func (a *CloudDirectoryStub) GetObjectInformation(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) GetObjectInformationAsync(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) *ClouddirectoryGetObjectInformationFuture {
+func (a *CloudDirectoryStub) GetObjectInformationAsync(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) *CloudDirectoryGetObjectInformationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetObjectInformation", input)
-	return &ClouddirectoryGetObjectInformationFuture{Future: future}
+	return &CloudDirectoryGetObjectInformationFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) GetSchemaAsJson(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) (*clouddirectory.GetSchemaAsJsonOutput, error) {
@@ -1222,9 +1288,9 @@ func (a *CloudDirectoryStub) GetSchemaAsJson(ctx workflow.Context, input *cloudd
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) GetSchemaAsJsonAsync(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) *ClouddirectoryGetSchemaAsJsonFuture {
+func (a *CloudDirectoryStub) GetSchemaAsJsonAsync(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) *CloudDirectoryGetSchemaAsJsonFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetSchemaAsJson", input)
-	return &ClouddirectoryGetSchemaAsJsonFuture{Future: future}
+	return &CloudDirectoryGetSchemaAsJsonFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) GetTypedLinkFacetInformation(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) (*clouddirectory.GetTypedLinkFacetInformationOutput, error) {
@@ -1233,9 +1299,9 @@ func (a *CloudDirectoryStub) GetTypedLinkFacetInformation(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) GetTypedLinkFacetInformationAsync(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) *ClouddirectoryGetTypedLinkFacetInformationFuture {
+func (a *CloudDirectoryStub) GetTypedLinkFacetInformationAsync(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) *CloudDirectoryGetTypedLinkFacetInformationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetTypedLinkFacetInformation", input)
-	return &ClouddirectoryGetTypedLinkFacetInformationFuture{Future: future}
+	return &CloudDirectoryGetTypedLinkFacetInformationFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListAppliedSchemaArns(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) (*clouddirectory.ListAppliedSchemaArnsOutput, error) {
@@ -1244,9 +1310,9 @@ func (a *CloudDirectoryStub) ListAppliedSchemaArns(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListAppliedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) *ClouddirectoryListAppliedSchemaArnsFuture {
+func (a *CloudDirectoryStub) ListAppliedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) *CloudDirectoryListAppliedSchemaArnsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListAppliedSchemaArns", input)
-	return &ClouddirectoryListAppliedSchemaArnsFuture{Future: future}
+	return &CloudDirectoryListAppliedSchemaArnsFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListAttachedIndices(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) (*clouddirectory.ListAttachedIndicesOutput, error) {
@@ -1255,9 +1321,9 @@ func (a *CloudDirectoryStub) ListAttachedIndices(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListAttachedIndicesAsync(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) *ClouddirectoryListAttachedIndicesFuture {
+func (a *CloudDirectoryStub) ListAttachedIndicesAsync(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) *CloudDirectoryListAttachedIndicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListAttachedIndices", input)
-	return &ClouddirectoryListAttachedIndicesFuture{Future: future}
+	return &CloudDirectoryListAttachedIndicesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListDevelopmentSchemaArns(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) (*clouddirectory.ListDevelopmentSchemaArnsOutput, error) {
@@ -1266,9 +1332,9 @@ func (a *CloudDirectoryStub) ListDevelopmentSchemaArns(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListDevelopmentSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) *ClouddirectoryListDevelopmentSchemaArnsFuture {
+func (a *CloudDirectoryStub) ListDevelopmentSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) *CloudDirectoryListDevelopmentSchemaArnsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListDevelopmentSchemaArns", input)
-	return &ClouddirectoryListDevelopmentSchemaArnsFuture{Future: future}
+	return &CloudDirectoryListDevelopmentSchemaArnsFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListDirectories(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) (*clouddirectory.ListDirectoriesOutput, error) {
@@ -1277,9 +1343,9 @@ func (a *CloudDirectoryStub) ListDirectories(ctx workflow.Context, input *cloudd
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListDirectoriesAsync(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) *ClouddirectoryListDirectoriesFuture {
+func (a *CloudDirectoryStub) ListDirectoriesAsync(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) *CloudDirectoryListDirectoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListDirectories", input)
-	return &ClouddirectoryListDirectoriesFuture{Future: future}
+	return &CloudDirectoryListDirectoriesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListFacetAttributes(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) (*clouddirectory.ListFacetAttributesOutput, error) {
@@ -1288,9 +1354,9 @@ func (a *CloudDirectoryStub) ListFacetAttributes(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) *ClouddirectoryListFacetAttributesFuture {
+func (a *CloudDirectoryStub) ListFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) *CloudDirectoryListFacetAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListFacetAttributes", input)
-	return &ClouddirectoryListFacetAttributesFuture{Future: future}
+	return &CloudDirectoryListFacetAttributesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListFacetNames(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) (*clouddirectory.ListFacetNamesOutput, error) {
@@ -1299,9 +1365,9 @@ func (a *CloudDirectoryStub) ListFacetNames(ctx workflow.Context, input *clouddi
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) *ClouddirectoryListFacetNamesFuture {
+func (a *CloudDirectoryStub) ListFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) *CloudDirectoryListFacetNamesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListFacetNames", input)
-	return &ClouddirectoryListFacetNamesFuture{Future: future}
+	return &CloudDirectoryListFacetNamesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListIncomingTypedLinks(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) (*clouddirectory.ListIncomingTypedLinksOutput, error) {
@@ -1310,9 +1376,9 @@ func (a *CloudDirectoryStub) ListIncomingTypedLinks(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListIncomingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) *ClouddirectoryListIncomingTypedLinksFuture {
+func (a *CloudDirectoryStub) ListIncomingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) *CloudDirectoryListIncomingTypedLinksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListIncomingTypedLinks", input)
-	return &ClouddirectoryListIncomingTypedLinksFuture{Future: future}
+	return &CloudDirectoryListIncomingTypedLinksFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListIndex(ctx workflow.Context, input *clouddirectory.ListIndexInput) (*clouddirectory.ListIndexOutput, error) {
@@ -1321,9 +1387,9 @@ func (a *CloudDirectoryStub) ListIndex(ctx workflow.Context, input *clouddirecto
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListIndexAsync(ctx workflow.Context, input *clouddirectory.ListIndexInput) *ClouddirectoryListIndexFuture {
+func (a *CloudDirectoryStub) ListIndexAsync(ctx workflow.Context, input *clouddirectory.ListIndexInput) *CloudDirectoryListIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListIndex", input)
-	return &ClouddirectoryListIndexFuture{Future: future}
+	return &CloudDirectoryListIndexFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListManagedSchemaArns(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) (*clouddirectory.ListManagedSchemaArnsOutput, error) {
@@ -1332,9 +1398,9 @@ func (a *CloudDirectoryStub) ListManagedSchemaArns(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListManagedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) *ClouddirectoryListManagedSchemaArnsFuture {
+func (a *CloudDirectoryStub) ListManagedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) *CloudDirectoryListManagedSchemaArnsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListManagedSchemaArns", input)
-	return &ClouddirectoryListManagedSchemaArnsFuture{Future: future}
+	return &CloudDirectoryListManagedSchemaArnsFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectAttributes(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) (*clouddirectory.ListObjectAttributesOutput, error) {
@@ -1343,9 +1409,9 @@ func (a *CloudDirectoryStub) ListObjectAttributes(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) *ClouddirectoryListObjectAttributesFuture {
+func (a *CloudDirectoryStub) ListObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) *CloudDirectoryListObjectAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectAttributes", input)
-	return &ClouddirectoryListObjectAttributesFuture{Future: future}
+	return &CloudDirectoryListObjectAttributesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectChildren(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) (*clouddirectory.ListObjectChildrenOutput, error) {
@@ -1354,9 +1420,9 @@ func (a *CloudDirectoryStub) ListObjectChildren(ctx workflow.Context, input *clo
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListObjectChildrenAsync(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) *ClouddirectoryListObjectChildrenFuture {
+func (a *CloudDirectoryStub) ListObjectChildrenAsync(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) *CloudDirectoryListObjectChildrenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectChildren", input)
-	return &ClouddirectoryListObjectChildrenFuture{Future: future}
+	return &CloudDirectoryListObjectChildrenFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectParentPaths(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) (*clouddirectory.ListObjectParentPathsOutput, error) {
@@ -1365,9 +1431,9 @@ func (a *CloudDirectoryStub) ListObjectParentPaths(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListObjectParentPathsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) *ClouddirectoryListObjectParentPathsFuture {
+func (a *CloudDirectoryStub) ListObjectParentPathsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) *CloudDirectoryListObjectParentPathsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectParentPaths", input)
-	return &ClouddirectoryListObjectParentPathsFuture{Future: future}
+	return &CloudDirectoryListObjectParentPathsFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectParents(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) (*clouddirectory.ListObjectParentsOutput, error) {
@@ -1376,9 +1442,9 @@ func (a *CloudDirectoryStub) ListObjectParents(ctx workflow.Context, input *clou
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListObjectParentsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) *ClouddirectoryListObjectParentsFuture {
+func (a *CloudDirectoryStub) ListObjectParentsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) *CloudDirectoryListObjectParentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectParents", input)
-	return &ClouddirectoryListObjectParentsFuture{Future: future}
+	return &CloudDirectoryListObjectParentsFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectPolicies(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) (*clouddirectory.ListObjectPoliciesOutput, error) {
@@ -1387,9 +1453,9 @@ func (a *CloudDirectoryStub) ListObjectPolicies(ctx workflow.Context, input *clo
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListObjectPoliciesAsync(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) *ClouddirectoryListObjectPoliciesFuture {
+func (a *CloudDirectoryStub) ListObjectPoliciesAsync(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) *CloudDirectoryListObjectPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectPolicies", input)
-	return &ClouddirectoryListObjectPoliciesFuture{Future: future}
+	return &CloudDirectoryListObjectPoliciesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListOutgoingTypedLinks(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) (*clouddirectory.ListOutgoingTypedLinksOutput, error) {
@@ -1398,9 +1464,9 @@ func (a *CloudDirectoryStub) ListOutgoingTypedLinks(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListOutgoingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) *ClouddirectoryListOutgoingTypedLinksFuture {
+func (a *CloudDirectoryStub) ListOutgoingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) *CloudDirectoryListOutgoingTypedLinksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListOutgoingTypedLinks", input)
-	return &ClouddirectoryListOutgoingTypedLinksFuture{Future: future}
+	return &CloudDirectoryListOutgoingTypedLinksFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListPolicyAttachments(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) (*clouddirectory.ListPolicyAttachmentsOutput, error) {
@@ -1409,9 +1475,9 @@ func (a *CloudDirectoryStub) ListPolicyAttachments(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListPolicyAttachmentsAsync(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) *ClouddirectoryListPolicyAttachmentsFuture {
+func (a *CloudDirectoryStub) ListPolicyAttachmentsAsync(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) *CloudDirectoryListPolicyAttachmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListPolicyAttachments", input)
-	return &ClouddirectoryListPolicyAttachmentsFuture{Future: future}
+	return &CloudDirectoryListPolicyAttachmentsFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListPublishedSchemaArns(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) (*clouddirectory.ListPublishedSchemaArnsOutput, error) {
@@ -1420,9 +1486,9 @@ func (a *CloudDirectoryStub) ListPublishedSchemaArns(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListPublishedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) *ClouddirectoryListPublishedSchemaArnsFuture {
+func (a *CloudDirectoryStub) ListPublishedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) *CloudDirectoryListPublishedSchemaArnsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListPublishedSchemaArns", input)
-	return &ClouddirectoryListPublishedSchemaArnsFuture{Future: future}
+	return &CloudDirectoryListPublishedSchemaArnsFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListTagsForResource(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) (*clouddirectory.ListTagsForResourceOutput, error) {
@@ -1431,9 +1497,9 @@ func (a *CloudDirectoryStub) ListTagsForResource(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListTagsForResourceAsync(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) *ClouddirectoryListTagsForResourceFuture {
+func (a *CloudDirectoryStub) ListTagsForResourceAsync(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) *CloudDirectoryListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTagsForResource", input)
-	return &ClouddirectoryListTagsForResourceFuture{Future: future}
+	return &CloudDirectoryListTagsForResourceFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListTypedLinkFacetAttributes(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) (*clouddirectory.ListTypedLinkFacetAttributesOutput, error) {
@@ -1442,9 +1508,9 @@ func (a *CloudDirectoryStub) ListTypedLinkFacetAttributes(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListTypedLinkFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) *ClouddirectoryListTypedLinkFacetAttributesFuture {
+func (a *CloudDirectoryStub) ListTypedLinkFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) *CloudDirectoryListTypedLinkFacetAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTypedLinkFacetAttributes", input)
-	return &ClouddirectoryListTypedLinkFacetAttributesFuture{Future: future}
+	return &CloudDirectoryListTypedLinkFacetAttributesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) ListTypedLinkFacetNames(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) (*clouddirectory.ListTypedLinkFacetNamesOutput, error) {
@@ -1453,9 +1519,9 @@ func (a *CloudDirectoryStub) ListTypedLinkFacetNames(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) ListTypedLinkFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) *ClouddirectoryListTypedLinkFacetNamesFuture {
+func (a *CloudDirectoryStub) ListTypedLinkFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) *CloudDirectoryListTypedLinkFacetNamesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTypedLinkFacetNames", input)
-	return &ClouddirectoryListTypedLinkFacetNamesFuture{Future: future}
+	return &CloudDirectoryListTypedLinkFacetNamesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) LookupPolicy(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) (*clouddirectory.LookupPolicyOutput, error) {
@@ -1464,9 +1530,9 @@ func (a *CloudDirectoryStub) LookupPolicy(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) LookupPolicyAsync(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) *ClouddirectoryLookupPolicyFuture {
+func (a *CloudDirectoryStub) LookupPolicyAsync(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) *CloudDirectoryLookupPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.LookupPolicy", input)
-	return &ClouddirectoryLookupPolicyFuture{Future: future}
+	return &CloudDirectoryLookupPolicyFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) PublishSchema(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) (*clouddirectory.PublishSchemaOutput, error) {
@@ -1475,9 +1541,9 @@ func (a *CloudDirectoryStub) PublishSchema(ctx workflow.Context, input *clouddir
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) PublishSchemaAsync(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) *ClouddirectoryPublishSchemaFuture {
+func (a *CloudDirectoryStub) PublishSchemaAsync(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) *CloudDirectoryPublishSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.PublishSchema", input)
-	return &ClouddirectoryPublishSchemaFuture{Future: future}
+	return &CloudDirectoryPublishSchemaFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) PutSchemaFromJson(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) (*clouddirectory.PutSchemaFromJsonOutput, error) {
@@ -1486,9 +1552,9 @@ func (a *CloudDirectoryStub) PutSchemaFromJson(ctx workflow.Context, input *clou
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) PutSchemaFromJsonAsync(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) *ClouddirectoryPutSchemaFromJsonFuture {
+func (a *CloudDirectoryStub) PutSchemaFromJsonAsync(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) *CloudDirectoryPutSchemaFromJsonFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.PutSchemaFromJson", input)
-	return &ClouddirectoryPutSchemaFromJsonFuture{Future: future}
+	return &CloudDirectoryPutSchemaFromJsonFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) RemoveFacetFromObject(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) (*clouddirectory.RemoveFacetFromObjectOutput, error) {
@@ -1497,9 +1563,9 @@ func (a *CloudDirectoryStub) RemoveFacetFromObject(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) RemoveFacetFromObjectAsync(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) *ClouddirectoryRemoveFacetFromObjectFuture {
+func (a *CloudDirectoryStub) RemoveFacetFromObjectAsync(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) *CloudDirectoryRemoveFacetFromObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.RemoveFacetFromObject", input)
-	return &ClouddirectoryRemoveFacetFromObjectFuture{Future: future}
+	return &CloudDirectoryRemoveFacetFromObjectFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) TagResource(ctx workflow.Context, input *clouddirectory.TagResourceInput) (*clouddirectory.TagResourceOutput, error) {
@@ -1508,9 +1574,9 @@ func (a *CloudDirectoryStub) TagResource(ctx workflow.Context, input *clouddirec
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) TagResourceAsync(ctx workflow.Context, input *clouddirectory.TagResourceInput) *ClouddirectoryTagResourceFuture {
+func (a *CloudDirectoryStub) TagResourceAsync(ctx workflow.Context, input *clouddirectory.TagResourceInput) *CloudDirectoryTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.TagResource", input)
-	return &ClouddirectoryTagResourceFuture{Future: future}
+	return &CloudDirectoryTagResourceFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) UntagResource(ctx workflow.Context, input *clouddirectory.UntagResourceInput) (*clouddirectory.UntagResourceOutput, error) {
@@ -1519,9 +1585,9 @@ func (a *CloudDirectoryStub) UntagResource(ctx workflow.Context, input *clouddir
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) UntagResourceAsync(ctx workflow.Context, input *clouddirectory.UntagResourceInput) *ClouddirectoryUntagResourceFuture {
+func (a *CloudDirectoryStub) UntagResourceAsync(ctx workflow.Context, input *clouddirectory.UntagResourceInput) *CloudDirectoryUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UntagResource", input)
-	return &ClouddirectoryUntagResourceFuture{Future: future}
+	return &CloudDirectoryUntagResourceFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) UpdateFacet(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) (*clouddirectory.UpdateFacetOutput, error) {
@@ -1530,9 +1596,9 @@ func (a *CloudDirectoryStub) UpdateFacet(ctx workflow.Context, input *clouddirec
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) UpdateFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) *ClouddirectoryUpdateFacetFuture {
+func (a *CloudDirectoryStub) UpdateFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) *CloudDirectoryUpdateFacetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateFacet", input)
-	return &ClouddirectoryUpdateFacetFuture{Future: future}
+	return &CloudDirectoryUpdateFacetFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) UpdateLinkAttributes(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) (*clouddirectory.UpdateLinkAttributesOutput, error) {
@@ -1541,9 +1607,9 @@ func (a *CloudDirectoryStub) UpdateLinkAttributes(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) UpdateLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) *ClouddirectoryUpdateLinkAttributesFuture {
+func (a *CloudDirectoryStub) UpdateLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) *CloudDirectoryUpdateLinkAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateLinkAttributes", input)
-	return &ClouddirectoryUpdateLinkAttributesFuture{Future: future}
+	return &CloudDirectoryUpdateLinkAttributesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) UpdateObjectAttributes(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) (*clouddirectory.UpdateObjectAttributesOutput, error) {
@@ -1552,9 +1618,9 @@ func (a *CloudDirectoryStub) UpdateObjectAttributes(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) UpdateObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) *ClouddirectoryUpdateObjectAttributesFuture {
+func (a *CloudDirectoryStub) UpdateObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) *CloudDirectoryUpdateObjectAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateObjectAttributes", input)
-	return &ClouddirectoryUpdateObjectAttributesFuture{Future: future}
+	return &CloudDirectoryUpdateObjectAttributesFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) UpdateSchema(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) (*clouddirectory.UpdateSchemaOutput, error) {
@@ -1563,9 +1629,9 @@ func (a *CloudDirectoryStub) UpdateSchema(ctx workflow.Context, input *clouddire
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) UpdateSchemaAsync(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) *ClouddirectoryUpdateSchemaFuture {
+func (a *CloudDirectoryStub) UpdateSchemaAsync(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) *CloudDirectoryUpdateSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateSchema", input)
-	return &ClouddirectoryUpdateSchemaFuture{Future: future}
+	return &CloudDirectoryUpdateSchemaFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) UpdateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) (*clouddirectory.UpdateTypedLinkFacetOutput, error) {
@@ -1574,9 +1640,9 @@ func (a *CloudDirectoryStub) UpdateTypedLinkFacet(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) UpdateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) *ClouddirectoryUpdateTypedLinkFacetFuture {
+func (a *CloudDirectoryStub) UpdateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) *CloudDirectoryUpdateTypedLinkFacetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateTypedLinkFacet", input)
-	return &ClouddirectoryUpdateTypedLinkFacetFuture{Future: future}
+	return &CloudDirectoryUpdateTypedLinkFacetFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) UpgradeAppliedSchema(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) (*clouddirectory.UpgradeAppliedSchemaOutput, error) {
@@ -1585,9 +1651,9 @@ func (a *CloudDirectoryStub) UpgradeAppliedSchema(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) UpgradeAppliedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) *ClouddirectoryUpgradeAppliedSchemaFuture {
+func (a *CloudDirectoryStub) UpgradeAppliedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) *CloudDirectoryUpgradeAppliedSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpgradeAppliedSchema", input)
-	return &ClouddirectoryUpgradeAppliedSchemaFuture{Future: future}
+	return &CloudDirectoryUpgradeAppliedSchemaFuture{Future: future}
 }
 
 func (a *CloudDirectoryStub) UpgradePublishedSchema(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) (*clouddirectory.UpgradePublishedSchemaOutput, error) {
@@ -1596,7 +1662,7 @@ func (a *CloudDirectoryStub) UpgradePublishedSchema(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *CloudDirectoryStub) UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *ClouddirectoryUpgradePublishedSchemaFuture {
+func (a *CloudDirectoryStub) UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *CloudDirectoryUpgradePublishedSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpgradePublishedSchema", input)
-	return &ClouddirectoryUpgradePublishedSchemaFuture{Future: future}
+	return &CloudDirectoryUpgradePublishedSchemaFuture{Future: future}
 }

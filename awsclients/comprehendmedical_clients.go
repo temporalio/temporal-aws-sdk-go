@@ -11,67 +11,67 @@ import (
 
 type ComprehendMedicalClient interface {
 	DescribeEntitiesDetectionV2Job(ctx workflow.Context, input *comprehendmedical.DescribeEntitiesDetectionV2JobInput) (*comprehendmedical.DescribeEntitiesDetectionV2JobOutput, error)
-	DescribeEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.DescribeEntitiesDetectionV2JobInput) *ComprehendmedicalDescribeEntitiesDetectionV2JobFuture
+	DescribeEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.DescribeEntitiesDetectionV2JobInput) *ComprehendMedicalDescribeEntitiesDetectionV2JobFuture
 
 	DescribeICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.DescribeICD10CMInferenceJobInput) (*comprehendmedical.DescribeICD10CMInferenceJobOutput, error)
-	DescribeICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.DescribeICD10CMInferenceJobInput) *ComprehendmedicalDescribeICD10CMInferenceJobFuture
+	DescribeICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.DescribeICD10CMInferenceJobInput) *ComprehendMedicalDescribeICD10CMInferenceJobFuture
 
 	DescribePHIDetectionJob(ctx workflow.Context, input *comprehendmedical.DescribePHIDetectionJobInput) (*comprehendmedical.DescribePHIDetectionJobOutput, error)
-	DescribePHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.DescribePHIDetectionJobInput) *ComprehendmedicalDescribePHIDetectionJobFuture
+	DescribePHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.DescribePHIDetectionJobInput) *ComprehendMedicalDescribePHIDetectionJobFuture
 
 	DescribeRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.DescribeRxNormInferenceJobInput) (*comprehendmedical.DescribeRxNormInferenceJobOutput, error)
-	DescribeRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.DescribeRxNormInferenceJobInput) *ComprehendmedicalDescribeRxNormInferenceJobFuture
+	DescribeRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.DescribeRxNormInferenceJobInput) *ComprehendMedicalDescribeRxNormInferenceJobFuture
 
 	DetectEntities(ctx workflow.Context, input *comprehendmedical.DetectEntitiesInput) (*comprehendmedical.DetectEntitiesOutput, error)
-	DetectEntitiesAsync(ctx workflow.Context, input *comprehendmedical.DetectEntitiesInput) *ComprehendmedicalDetectEntitiesFuture
+	DetectEntitiesAsync(ctx workflow.Context, input *comprehendmedical.DetectEntitiesInput) *ComprehendMedicalDetectEntitiesFuture
 
 	DetectEntitiesV2(ctx workflow.Context, input *comprehendmedical.DetectEntitiesV2Input) (*comprehendmedical.DetectEntitiesV2Output, error)
-	DetectEntitiesV2Async(ctx workflow.Context, input *comprehendmedical.DetectEntitiesV2Input) *ComprehendmedicalDetectEntitiesV2Future
+	DetectEntitiesV2Async(ctx workflow.Context, input *comprehendmedical.DetectEntitiesV2Input) *ComprehendMedicalDetectEntitiesV2Future
 
 	DetectPHI(ctx workflow.Context, input *comprehendmedical.DetectPHIInput) (*comprehendmedical.DetectPHIOutput, error)
-	DetectPHIAsync(ctx workflow.Context, input *comprehendmedical.DetectPHIInput) *ComprehendmedicalDetectPHIFuture
+	DetectPHIAsync(ctx workflow.Context, input *comprehendmedical.DetectPHIInput) *ComprehendMedicalDetectPHIFuture
 
 	InferICD10CM(ctx workflow.Context, input *comprehendmedical.InferICD10CMInput) (*comprehendmedical.InferICD10CMOutput, error)
-	InferICD10CMAsync(ctx workflow.Context, input *comprehendmedical.InferICD10CMInput) *ComprehendmedicalInferICD10CMFuture
+	InferICD10CMAsync(ctx workflow.Context, input *comprehendmedical.InferICD10CMInput) *ComprehendMedicalInferICD10CMFuture
 
 	InferRxNorm(ctx workflow.Context, input *comprehendmedical.InferRxNormInput) (*comprehendmedical.InferRxNormOutput, error)
-	InferRxNormAsync(ctx workflow.Context, input *comprehendmedical.InferRxNormInput) *ComprehendmedicalInferRxNormFuture
+	InferRxNormAsync(ctx workflow.Context, input *comprehendmedical.InferRxNormInput) *ComprehendMedicalInferRxNormFuture
 
 	ListEntitiesDetectionV2Jobs(ctx workflow.Context, input *comprehendmedical.ListEntitiesDetectionV2JobsInput) (*comprehendmedical.ListEntitiesDetectionV2JobsOutput, error)
-	ListEntitiesDetectionV2JobsAsync(ctx workflow.Context, input *comprehendmedical.ListEntitiesDetectionV2JobsInput) *ComprehendmedicalListEntitiesDetectionV2JobsFuture
+	ListEntitiesDetectionV2JobsAsync(ctx workflow.Context, input *comprehendmedical.ListEntitiesDetectionV2JobsInput) *ComprehendMedicalListEntitiesDetectionV2JobsFuture
 
 	ListICD10CMInferenceJobs(ctx workflow.Context, input *comprehendmedical.ListICD10CMInferenceJobsInput) (*comprehendmedical.ListICD10CMInferenceJobsOutput, error)
-	ListICD10CMInferenceJobsAsync(ctx workflow.Context, input *comprehendmedical.ListICD10CMInferenceJobsInput) *ComprehendmedicalListICD10CMInferenceJobsFuture
+	ListICD10CMInferenceJobsAsync(ctx workflow.Context, input *comprehendmedical.ListICD10CMInferenceJobsInput) *ComprehendMedicalListICD10CMInferenceJobsFuture
 
 	ListPHIDetectionJobs(ctx workflow.Context, input *comprehendmedical.ListPHIDetectionJobsInput) (*comprehendmedical.ListPHIDetectionJobsOutput, error)
-	ListPHIDetectionJobsAsync(ctx workflow.Context, input *comprehendmedical.ListPHIDetectionJobsInput) *ComprehendmedicalListPHIDetectionJobsFuture
+	ListPHIDetectionJobsAsync(ctx workflow.Context, input *comprehendmedical.ListPHIDetectionJobsInput) *ComprehendMedicalListPHIDetectionJobsFuture
 
 	ListRxNormInferenceJobs(ctx workflow.Context, input *comprehendmedical.ListRxNormInferenceJobsInput) (*comprehendmedical.ListRxNormInferenceJobsOutput, error)
-	ListRxNormInferenceJobsAsync(ctx workflow.Context, input *comprehendmedical.ListRxNormInferenceJobsInput) *ComprehendmedicalListRxNormInferenceJobsFuture
+	ListRxNormInferenceJobsAsync(ctx workflow.Context, input *comprehendmedical.ListRxNormInferenceJobsInput) *ComprehendMedicalListRxNormInferenceJobsFuture
 
 	StartEntitiesDetectionV2Job(ctx workflow.Context, input *comprehendmedical.StartEntitiesDetectionV2JobInput) (*comprehendmedical.StartEntitiesDetectionV2JobOutput, error)
-	StartEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.StartEntitiesDetectionV2JobInput) *ComprehendmedicalStartEntitiesDetectionV2JobFuture
+	StartEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.StartEntitiesDetectionV2JobInput) *ComprehendMedicalStartEntitiesDetectionV2JobFuture
 
 	StartICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.StartICD10CMInferenceJobInput) (*comprehendmedical.StartICD10CMInferenceJobOutput, error)
-	StartICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StartICD10CMInferenceJobInput) *ComprehendmedicalStartICD10CMInferenceJobFuture
+	StartICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StartICD10CMInferenceJobInput) *ComprehendMedicalStartICD10CMInferenceJobFuture
 
 	StartPHIDetectionJob(ctx workflow.Context, input *comprehendmedical.StartPHIDetectionJobInput) (*comprehendmedical.StartPHIDetectionJobOutput, error)
-	StartPHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.StartPHIDetectionJobInput) *ComprehendmedicalStartPHIDetectionJobFuture
+	StartPHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.StartPHIDetectionJobInput) *ComprehendMedicalStartPHIDetectionJobFuture
 
 	StartRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.StartRxNormInferenceJobInput) (*comprehendmedical.StartRxNormInferenceJobOutput, error)
-	StartRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StartRxNormInferenceJobInput) *ComprehendmedicalStartRxNormInferenceJobFuture
+	StartRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StartRxNormInferenceJobInput) *ComprehendMedicalStartRxNormInferenceJobFuture
 
 	StopEntitiesDetectionV2Job(ctx workflow.Context, input *comprehendmedical.StopEntitiesDetectionV2JobInput) (*comprehendmedical.StopEntitiesDetectionV2JobOutput, error)
-	StopEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.StopEntitiesDetectionV2JobInput) *ComprehendmedicalStopEntitiesDetectionV2JobFuture
+	StopEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.StopEntitiesDetectionV2JobInput) *ComprehendMedicalStopEntitiesDetectionV2JobFuture
 
 	StopICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.StopICD10CMInferenceJobInput) (*comprehendmedical.StopICD10CMInferenceJobOutput, error)
-	StopICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopICD10CMInferenceJobInput) *ComprehendmedicalStopICD10CMInferenceJobFuture
+	StopICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopICD10CMInferenceJobInput) *ComprehendMedicalStopICD10CMInferenceJobFuture
 
 	StopPHIDetectionJob(ctx workflow.Context, input *comprehendmedical.StopPHIDetectionJobInput) (*comprehendmedical.StopPHIDetectionJobOutput, error)
-	StopPHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.StopPHIDetectionJobInput) *ComprehendmedicalStopPHIDetectionJobFuture
+	StopPHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.StopPHIDetectionJobInput) *ComprehendMedicalStopPHIDetectionJobFuture
 
 	StopRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) (*comprehendmedical.StopRxNormInferenceJobOutput, error)
-	StopRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) *ComprehendmedicalStopRxNormInferenceJobFuture
+	StopRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) *ComprehendMedicalStopRxNormInferenceJobFuture
 }
 
 type ComprehendMedicalStub struct{}
@@ -80,211 +80,232 @@ func NewComprehendMedicalStub() ComprehendMedicalClient {
 	return &ComprehendMedicalStub{}
 }
 
-type ComprehendmedicalDescribeEntitiesDetectionV2JobFuture struct {
+type ComprehendMedicalDescribeEntitiesDetectionV2JobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalDescribeEntitiesDetectionV2JobFuture) Get(ctx workflow.Context) (*comprehendmedical.DescribeEntitiesDetectionV2JobOutput, error) {
+func (r *ComprehendMedicalDescribeEntitiesDetectionV2JobFuture) Get(ctx workflow.Context) (*comprehendmedical.DescribeEntitiesDetectionV2JobOutput, error) {
 	var output comprehendmedical.DescribeEntitiesDetectionV2JobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalDescribeICD10CMInferenceJobFuture struct {
+type ComprehendMedicalDescribeICD10CMInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalDescribeICD10CMInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.DescribeICD10CMInferenceJobOutput, error) {
+func (r *ComprehendMedicalDescribeICD10CMInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.DescribeICD10CMInferenceJobOutput, error) {
 	var output comprehendmedical.DescribeICD10CMInferenceJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalDescribePHIDetectionJobFuture struct {
+type ComprehendMedicalDescribePHIDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalDescribePHIDetectionJobFuture) Get(ctx workflow.Context) (*comprehendmedical.DescribePHIDetectionJobOutput, error) {
+func (r *ComprehendMedicalDescribePHIDetectionJobFuture) Get(ctx workflow.Context) (*comprehendmedical.DescribePHIDetectionJobOutput, error) {
 	var output comprehendmedical.DescribePHIDetectionJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalDescribeRxNormInferenceJobFuture struct {
+type ComprehendMedicalDescribeRxNormInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalDescribeRxNormInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.DescribeRxNormInferenceJobOutput, error) {
+func (r *ComprehendMedicalDescribeRxNormInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.DescribeRxNormInferenceJobOutput, error) {
 	var output comprehendmedical.DescribeRxNormInferenceJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalDetectEntitiesFuture struct {
+type ComprehendMedicalDetectEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalDetectEntitiesFuture) Get(ctx workflow.Context) (*comprehendmedical.DetectEntitiesOutput, error) {
+func (r *ComprehendMedicalDetectEntitiesFuture) Get(ctx workflow.Context) (*comprehendmedical.DetectEntitiesOutput, error) {
 	var output comprehendmedical.DetectEntitiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalDetectEntitiesV2Future struct {
+type ComprehendMedicalDetectEntitiesV2Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalDetectEntitiesV2Future) Get(ctx workflow.Context) (*comprehendmedical.DetectEntitiesV2Output, error) {
+func (r *ComprehendMedicalDetectEntitiesV2Future) Get(ctx workflow.Context) (*comprehendmedical.DetectEntitiesV2Output, error) {
 	var output comprehendmedical.DetectEntitiesV2Output
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalDetectPHIFuture struct {
+type ComprehendMedicalDetectPHIFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalDetectPHIFuture) Get(ctx workflow.Context) (*comprehendmedical.DetectPHIOutput, error) {
+func (r *ComprehendMedicalDetectPHIFuture) Get(ctx workflow.Context) (*comprehendmedical.DetectPHIOutput, error) {
 	var output comprehendmedical.DetectPHIOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalInferICD10CMFuture struct {
+type ComprehendMedicalInferICD10CMFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalInferICD10CMFuture) Get(ctx workflow.Context) (*comprehendmedical.InferICD10CMOutput, error) {
+func (r *ComprehendMedicalInferICD10CMFuture) Get(ctx workflow.Context) (*comprehendmedical.InferICD10CMOutput, error) {
 	var output comprehendmedical.InferICD10CMOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalInferRxNormFuture struct {
+type ComprehendMedicalInferRxNormFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalInferRxNormFuture) Get(ctx workflow.Context) (*comprehendmedical.InferRxNormOutput, error) {
+func (r *ComprehendMedicalInferRxNormFuture) Get(ctx workflow.Context) (*comprehendmedical.InferRxNormOutput, error) {
 	var output comprehendmedical.InferRxNormOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalListEntitiesDetectionV2JobsFuture struct {
+type ComprehendMedicalListEntitiesDetectionV2JobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalListEntitiesDetectionV2JobsFuture) Get(ctx workflow.Context) (*comprehendmedical.ListEntitiesDetectionV2JobsOutput, error) {
+func (r *ComprehendMedicalListEntitiesDetectionV2JobsFuture) Get(ctx workflow.Context) (*comprehendmedical.ListEntitiesDetectionV2JobsOutput, error) {
 	var output comprehendmedical.ListEntitiesDetectionV2JobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalListICD10CMInferenceJobsFuture struct {
+type ComprehendMedicalListICD10CMInferenceJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalListICD10CMInferenceJobsFuture) Get(ctx workflow.Context) (*comprehendmedical.ListICD10CMInferenceJobsOutput, error) {
+func (r *ComprehendMedicalListICD10CMInferenceJobsFuture) Get(ctx workflow.Context) (*comprehendmedical.ListICD10CMInferenceJobsOutput, error) {
 	var output comprehendmedical.ListICD10CMInferenceJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalListPHIDetectionJobsFuture struct {
+type ComprehendMedicalListPHIDetectionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalListPHIDetectionJobsFuture) Get(ctx workflow.Context) (*comprehendmedical.ListPHIDetectionJobsOutput, error) {
+func (r *ComprehendMedicalListPHIDetectionJobsFuture) Get(ctx workflow.Context) (*comprehendmedical.ListPHIDetectionJobsOutput, error) {
 	var output comprehendmedical.ListPHIDetectionJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalListRxNormInferenceJobsFuture struct {
+type ComprehendMedicalListRxNormInferenceJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalListRxNormInferenceJobsFuture) Get(ctx workflow.Context) (*comprehendmedical.ListRxNormInferenceJobsOutput, error) {
+func (r *ComprehendMedicalListRxNormInferenceJobsFuture) Get(ctx workflow.Context) (*comprehendmedical.ListRxNormInferenceJobsOutput, error) {
 	var output comprehendmedical.ListRxNormInferenceJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalStartEntitiesDetectionV2JobFuture struct {
+type ComprehendMedicalStartEntitiesDetectionV2JobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalStartEntitiesDetectionV2JobFuture) Get(ctx workflow.Context) (*comprehendmedical.StartEntitiesDetectionV2JobOutput, error) {
+func (r *ComprehendMedicalStartEntitiesDetectionV2JobFuture) Get(ctx workflow.Context) (*comprehendmedical.StartEntitiesDetectionV2JobOutput, error) {
 	var output comprehendmedical.StartEntitiesDetectionV2JobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalStartICD10CMInferenceJobFuture struct {
+type ComprehendMedicalStartICD10CMInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalStartICD10CMInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StartICD10CMInferenceJobOutput, error) {
+func (r *ComprehendMedicalStartICD10CMInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StartICD10CMInferenceJobOutput, error) {
 	var output comprehendmedical.StartICD10CMInferenceJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalStartPHIDetectionJobFuture struct {
+type ComprehendMedicalStartPHIDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalStartPHIDetectionJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StartPHIDetectionJobOutput, error) {
+func (r *ComprehendMedicalStartPHIDetectionJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StartPHIDetectionJobOutput, error) {
 	var output comprehendmedical.StartPHIDetectionJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalStartRxNormInferenceJobFuture struct {
+type ComprehendMedicalStartRxNormInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalStartRxNormInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StartRxNormInferenceJobOutput, error) {
+func (r *ComprehendMedicalStartRxNormInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StartRxNormInferenceJobOutput, error) {
 	var output comprehendmedical.StartRxNormInferenceJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalStopEntitiesDetectionV2JobFuture struct {
+type ComprehendMedicalStopEntitiesDetectionV2JobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalStopEntitiesDetectionV2JobFuture) Get(ctx workflow.Context) (*comprehendmedical.StopEntitiesDetectionV2JobOutput, error) {
+func (r *ComprehendMedicalStopEntitiesDetectionV2JobFuture) Get(ctx workflow.Context) (*comprehendmedical.StopEntitiesDetectionV2JobOutput, error) {
 	var output comprehendmedical.StopEntitiesDetectionV2JobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalStopICD10CMInferenceJobFuture struct {
+type ComprehendMedicalStopICD10CMInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalStopICD10CMInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StopICD10CMInferenceJobOutput, error) {
+func (r *ComprehendMedicalStopICD10CMInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StopICD10CMInferenceJobOutput, error) {
 	var output comprehendmedical.StopICD10CMInferenceJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalStopPHIDetectionJobFuture struct {
+type ComprehendMedicalStopPHIDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalStopPHIDetectionJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StopPHIDetectionJobOutput, error) {
+func (r *ComprehendMedicalStopPHIDetectionJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StopPHIDetectionJobOutput, error) {
 	var output comprehendmedical.StopPHIDetectionJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComprehendmedicalStopRxNormInferenceJobFuture struct {
+type ComprehendMedicalStopRxNormInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComprehendmedicalStopRxNormInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StopRxNormInferenceJobOutput, error) {
+func (r *ComprehendMedicalStopRxNormInferenceJobFuture) Get(ctx workflow.Context) (*comprehendmedical.StopRxNormInferenceJobOutput, error) {
 	var output comprehendmedical.StopRxNormInferenceJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -296,9 +317,9 @@ func (a *ComprehendMedicalStub) DescribeEntitiesDetectionV2Job(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) DescribeEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.DescribeEntitiesDetectionV2JobInput) *ComprehendmedicalDescribeEntitiesDetectionV2JobFuture {
+func (a *ComprehendMedicalStub) DescribeEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.DescribeEntitiesDetectionV2JobInput) *ComprehendMedicalDescribeEntitiesDetectionV2JobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.DescribeEntitiesDetectionV2Job", input)
-	return &ComprehendmedicalDescribeEntitiesDetectionV2JobFuture{Future: future}
+	return &ComprehendMedicalDescribeEntitiesDetectionV2JobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) DescribeICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.DescribeICD10CMInferenceJobInput) (*comprehendmedical.DescribeICD10CMInferenceJobOutput, error) {
@@ -307,9 +328,9 @@ func (a *ComprehendMedicalStub) DescribeICD10CMInferenceJob(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) DescribeICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.DescribeICD10CMInferenceJobInput) *ComprehendmedicalDescribeICD10CMInferenceJobFuture {
+func (a *ComprehendMedicalStub) DescribeICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.DescribeICD10CMInferenceJobInput) *ComprehendMedicalDescribeICD10CMInferenceJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.DescribeICD10CMInferenceJob", input)
-	return &ComprehendmedicalDescribeICD10CMInferenceJobFuture{Future: future}
+	return &ComprehendMedicalDescribeICD10CMInferenceJobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) DescribePHIDetectionJob(ctx workflow.Context, input *comprehendmedical.DescribePHIDetectionJobInput) (*comprehendmedical.DescribePHIDetectionJobOutput, error) {
@@ -318,9 +339,9 @@ func (a *ComprehendMedicalStub) DescribePHIDetectionJob(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) DescribePHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.DescribePHIDetectionJobInput) *ComprehendmedicalDescribePHIDetectionJobFuture {
+func (a *ComprehendMedicalStub) DescribePHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.DescribePHIDetectionJobInput) *ComprehendMedicalDescribePHIDetectionJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.DescribePHIDetectionJob", input)
-	return &ComprehendmedicalDescribePHIDetectionJobFuture{Future: future}
+	return &ComprehendMedicalDescribePHIDetectionJobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) DescribeRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.DescribeRxNormInferenceJobInput) (*comprehendmedical.DescribeRxNormInferenceJobOutput, error) {
@@ -329,9 +350,9 @@ func (a *ComprehendMedicalStub) DescribeRxNormInferenceJob(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) DescribeRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.DescribeRxNormInferenceJobInput) *ComprehendmedicalDescribeRxNormInferenceJobFuture {
+func (a *ComprehendMedicalStub) DescribeRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.DescribeRxNormInferenceJobInput) *ComprehendMedicalDescribeRxNormInferenceJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.DescribeRxNormInferenceJob", input)
-	return &ComprehendmedicalDescribeRxNormInferenceJobFuture{Future: future}
+	return &ComprehendMedicalDescribeRxNormInferenceJobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) DetectEntities(ctx workflow.Context, input *comprehendmedical.DetectEntitiesInput) (*comprehendmedical.DetectEntitiesOutput, error) {
@@ -340,9 +361,9 @@ func (a *ComprehendMedicalStub) DetectEntities(ctx workflow.Context, input *comp
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) DetectEntitiesAsync(ctx workflow.Context, input *comprehendmedical.DetectEntitiesInput) *ComprehendmedicalDetectEntitiesFuture {
+func (a *ComprehendMedicalStub) DetectEntitiesAsync(ctx workflow.Context, input *comprehendmedical.DetectEntitiesInput) *ComprehendMedicalDetectEntitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.DetectEntities", input)
-	return &ComprehendmedicalDetectEntitiesFuture{Future: future}
+	return &ComprehendMedicalDetectEntitiesFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) DetectEntitiesV2(ctx workflow.Context, input *comprehendmedical.DetectEntitiesV2Input) (*comprehendmedical.DetectEntitiesV2Output, error) {
@@ -351,9 +372,9 @@ func (a *ComprehendMedicalStub) DetectEntitiesV2(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) DetectEntitiesV2Async(ctx workflow.Context, input *comprehendmedical.DetectEntitiesV2Input) *ComprehendmedicalDetectEntitiesV2Future {
+func (a *ComprehendMedicalStub) DetectEntitiesV2Async(ctx workflow.Context, input *comprehendmedical.DetectEntitiesV2Input) *ComprehendMedicalDetectEntitiesV2Future {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.DetectEntitiesV2", input)
-	return &ComprehendmedicalDetectEntitiesV2Future{Future: future}
+	return &ComprehendMedicalDetectEntitiesV2Future{Future: future}
 }
 
 func (a *ComprehendMedicalStub) DetectPHI(ctx workflow.Context, input *comprehendmedical.DetectPHIInput) (*comprehendmedical.DetectPHIOutput, error) {
@@ -362,9 +383,9 @@ func (a *ComprehendMedicalStub) DetectPHI(ctx workflow.Context, input *comprehen
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) DetectPHIAsync(ctx workflow.Context, input *comprehendmedical.DetectPHIInput) *ComprehendmedicalDetectPHIFuture {
+func (a *ComprehendMedicalStub) DetectPHIAsync(ctx workflow.Context, input *comprehendmedical.DetectPHIInput) *ComprehendMedicalDetectPHIFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.DetectPHI", input)
-	return &ComprehendmedicalDetectPHIFuture{Future: future}
+	return &ComprehendMedicalDetectPHIFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) InferICD10CM(ctx workflow.Context, input *comprehendmedical.InferICD10CMInput) (*comprehendmedical.InferICD10CMOutput, error) {
@@ -373,9 +394,9 @@ func (a *ComprehendMedicalStub) InferICD10CM(ctx workflow.Context, input *compre
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) InferICD10CMAsync(ctx workflow.Context, input *comprehendmedical.InferICD10CMInput) *ComprehendmedicalInferICD10CMFuture {
+func (a *ComprehendMedicalStub) InferICD10CMAsync(ctx workflow.Context, input *comprehendmedical.InferICD10CMInput) *ComprehendMedicalInferICD10CMFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.InferICD10CM", input)
-	return &ComprehendmedicalInferICD10CMFuture{Future: future}
+	return &ComprehendMedicalInferICD10CMFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) InferRxNorm(ctx workflow.Context, input *comprehendmedical.InferRxNormInput) (*comprehendmedical.InferRxNormOutput, error) {
@@ -384,9 +405,9 @@ func (a *ComprehendMedicalStub) InferRxNorm(ctx workflow.Context, input *compreh
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) InferRxNormAsync(ctx workflow.Context, input *comprehendmedical.InferRxNormInput) *ComprehendmedicalInferRxNormFuture {
+func (a *ComprehendMedicalStub) InferRxNormAsync(ctx workflow.Context, input *comprehendmedical.InferRxNormInput) *ComprehendMedicalInferRxNormFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.InferRxNorm", input)
-	return &ComprehendmedicalInferRxNormFuture{Future: future}
+	return &ComprehendMedicalInferRxNormFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) ListEntitiesDetectionV2Jobs(ctx workflow.Context, input *comprehendmedical.ListEntitiesDetectionV2JobsInput) (*comprehendmedical.ListEntitiesDetectionV2JobsOutput, error) {
@@ -395,9 +416,9 @@ func (a *ComprehendMedicalStub) ListEntitiesDetectionV2Jobs(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) ListEntitiesDetectionV2JobsAsync(ctx workflow.Context, input *comprehendmedical.ListEntitiesDetectionV2JobsInput) *ComprehendmedicalListEntitiesDetectionV2JobsFuture {
+func (a *ComprehendMedicalStub) ListEntitiesDetectionV2JobsAsync(ctx workflow.Context, input *comprehendmedical.ListEntitiesDetectionV2JobsInput) *ComprehendMedicalListEntitiesDetectionV2JobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.ListEntitiesDetectionV2Jobs", input)
-	return &ComprehendmedicalListEntitiesDetectionV2JobsFuture{Future: future}
+	return &ComprehendMedicalListEntitiesDetectionV2JobsFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) ListICD10CMInferenceJobs(ctx workflow.Context, input *comprehendmedical.ListICD10CMInferenceJobsInput) (*comprehendmedical.ListICD10CMInferenceJobsOutput, error) {
@@ -406,9 +427,9 @@ func (a *ComprehendMedicalStub) ListICD10CMInferenceJobs(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) ListICD10CMInferenceJobsAsync(ctx workflow.Context, input *comprehendmedical.ListICD10CMInferenceJobsInput) *ComprehendmedicalListICD10CMInferenceJobsFuture {
+func (a *ComprehendMedicalStub) ListICD10CMInferenceJobsAsync(ctx workflow.Context, input *comprehendmedical.ListICD10CMInferenceJobsInput) *ComprehendMedicalListICD10CMInferenceJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.ListICD10CMInferenceJobs", input)
-	return &ComprehendmedicalListICD10CMInferenceJobsFuture{Future: future}
+	return &ComprehendMedicalListICD10CMInferenceJobsFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) ListPHIDetectionJobs(ctx workflow.Context, input *comprehendmedical.ListPHIDetectionJobsInput) (*comprehendmedical.ListPHIDetectionJobsOutput, error) {
@@ -417,9 +438,9 @@ func (a *ComprehendMedicalStub) ListPHIDetectionJobs(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) ListPHIDetectionJobsAsync(ctx workflow.Context, input *comprehendmedical.ListPHIDetectionJobsInput) *ComprehendmedicalListPHIDetectionJobsFuture {
+func (a *ComprehendMedicalStub) ListPHIDetectionJobsAsync(ctx workflow.Context, input *comprehendmedical.ListPHIDetectionJobsInput) *ComprehendMedicalListPHIDetectionJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.ListPHIDetectionJobs", input)
-	return &ComprehendmedicalListPHIDetectionJobsFuture{Future: future}
+	return &ComprehendMedicalListPHIDetectionJobsFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) ListRxNormInferenceJobs(ctx workflow.Context, input *comprehendmedical.ListRxNormInferenceJobsInput) (*comprehendmedical.ListRxNormInferenceJobsOutput, error) {
@@ -428,9 +449,9 @@ func (a *ComprehendMedicalStub) ListRxNormInferenceJobs(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) ListRxNormInferenceJobsAsync(ctx workflow.Context, input *comprehendmedical.ListRxNormInferenceJobsInput) *ComprehendmedicalListRxNormInferenceJobsFuture {
+func (a *ComprehendMedicalStub) ListRxNormInferenceJobsAsync(ctx workflow.Context, input *comprehendmedical.ListRxNormInferenceJobsInput) *ComprehendMedicalListRxNormInferenceJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.ListRxNormInferenceJobs", input)
-	return &ComprehendmedicalListRxNormInferenceJobsFuture{Future: future}
+	return &ComprehendMedicalListRxNormInferenceJobsFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) StartEntitiesDetectionV2Job(ctx workflow.Context, input *comprehendmedical.StartEntitiesDetectionV2JobInput) (*comprehendmedical.StartEntitiesDetectionV2JobOutput, error) {
@@ -439,9 +460,9 @@ func (a *ComprehendMedicalStub) StartEntitiesDetectionV2Job(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) StartEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.StartEntitiesDetectionV2JobInput) *ComprehendmedicalStartEntitiesDetectionV2JobFuture {
+func (a *ComprehendMedicalStub) StartEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.StartEntitiesDetectionV2JobInput) *ComprehendMedicalStartEntitiesDetectionV2JobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.StartEntitiesDetectionV2Job", input)
-	return &ComprehendmedicalStartEntitiesDetectionV2JobFuture{Future: future}
+	return &ComprehendMedicalStartEntitiesDetectionV2JobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) StartICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.StartICD10CMInferenceJobInput) (*comprehendmedical.StartICD10CMInferenceJobOutput, error) {
@@ -450,9 +471,9 @@ func (a *ComprehendMedicalStub) StartICD10CMInferenceJob(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) StartICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StartICD10CMInferenceJobInput) *ComprehendmedicalStartICD10CMInferenceJobFuture {
+func (a *ComprehendMedicalStub) StartICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StartICD10CMInferenceJobInput) *ComprehendMedicalStartICD10CMInferenceJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.StartICD10CMInferenceJob", input)
-	return &ComprehendmedicalStartICD10CMInferenceJobFuture{Future: future}
+	return &ComprehendMedicalStartICD10CMInferenceJobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) StartPHIDetectionJob(ctx workflow.Context, input *comprehendmedical.StartPHIDetectionJobInput) (*comprehendmedical.StartPHIDetectionJobOutput, error) {
@@ -461,9 +482,9 @@ func (a *ComprehendMedicalStub) StartPHIDetectionJob(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) StartPHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.StartPHIDetectionJobInput) *ComprehendmedicalStartPHIDetectionJobFuture {
+func (a *ComprehendMedicalStub) StartPHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.StartPHIDetectionJobInput) *ComprehendMedicalStartPHIDetectionJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.StartPHIDetectionJob", input)
-	return &ComprehendmedicalStartPHIDetectionJobFuture{Future: future}
+	return &ComprehendMedicalStartPHIDetectionJobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) StartRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.StartRxNormInferenceJobInput) (*comprehendmedical.StartRxNormInferenceJobOutput, error) {
@@ -472,9 +493,9 @@ func (a *ComprehendMedicalStub) StartRxNormInferenceJob(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) StartRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StartRxNormInferenceJobInput) *ComprehendmedicalStartRxNormInferenceJobFuture {
+func (a *ComprehendMedicalStub) StartRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StartRxNormInferenceJobInput) *ComprehendMedicalStartRxNormInferenceJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.StartRxNormInferenceJob", input)
-	return &ComprehendmedicalStartRxNormInferenceJobFuture{Future: future}
+	return &ComprehendMedicalStartRxNormInferenceJobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) StopEntitiesDetectionV2Job(ctx workflow.Context, input *comprehendmedical.StopEntitiesDetectionV2JobInput) (*comprehendmedical.StopEntitiesDetectionV2JobOutput, error) {
@@ -483,9 +504,9 @@ func (a *ComprehendMedicalStub) StopEntitiesDetectionV2Job(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) StopEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.StopEntitiesDetectionV2JobInput) *ComprehendmedicalStopEntitiesDetectionV2JobFuture {
+func (a *ComprehendMedicalStub) StopEntitiesDetectionV2JobAsync(ctx workflow.Context, input *comprehendmedical.StopEntitiesDetectionV2JobInput) *ComprehendMedicalStopEntitiesDetectionV2JobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.StopEntitiesDetectionV2Job", input)
-	return &ComprehendmedicalStopEntitiesDetectionV2JobFuture{Future: future}
+	return &ComprehendMedicalStopEntitiesDetectionV2JobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) StopICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.StopICD10CMInferenceJobInput) (*comprehendmedical.StopICD10CMInferenceJobOutput, error) {
@@ -494,9 +515,9 @@ func (a *ComprehendMedicalStub) StopICD10CMInferenceJob(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) StopICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopICD10CMInferenceJobInput) *ComprehendmedicalStopICD10CMInferenceJobFuture {
+func (a *ComprehendMedicalStub) StopICD10CMInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopICD10CMInferenceJobInput) *ComprehendMedicalStopICD10CMInferenceJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.StopICD10CMInferenceJob", input)
-	return &ComprehendmedicalStopICD10CMInferenceJobFuture{Future: future}
+	return &ComprehendMedicalStopICD10CMInferenceJobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) StopPHIDetectionJob(ctx workflow.Context, input *comprehendmedical.StopPHIDetectionJobInput) (*comprehendmedical.StopPHIDetectionJobOutput, error) {
@@ -505,9 +526,9 @@ func (a *ComprehendMedicalStub) StopPHIDetectionJob(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) StopPHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.StopPHIDetectionJobInput) *ComprehendmedicalStopPHIDetectionJobFuture {
+func (a *ComprehendMedicalStub) StopPHIDetectionJobAsync(ctx workflow.Context, input *comprehendmedical.StopPHIDetectionJobInput) *ComprehendMedicalStopPHIDetectionJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.StopPHIDetectionJob", input)
-	return &ComprehendmedicalStopPHIDetectionJobFuture{Future: future}
+	return &ComprehendMedicalStopPHIDetectionJobFuture{Future: future}
 }
 
 func (a *ComprehendMedicalStub) StopRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) (*comprehendmedical.StopRxNormInferenceJobOutput, error) {
@@ -516,7 +537,7 @@ func (a *ComprehendMedicalStub) StopRxNormInferenceJob(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ComprehendMedicalStub) StopRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) *ComprehendmedicalStopRxNormInferenceJobFuture {
+func (a *ComprehendMedicalStub) StopRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) *ComprehendMedicalStopRxNormInferenceJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehendmedical.StopRxNormInferenceJob", input)
-	return &ComprehendmedicalStopRxNormInferenceJobFuture{Future: future}
+	return &ComprehendMedicalStopRxNormInferenceJobFuture{Future: future}
 }

@@ -57,6 +57,7 @@ func NewCloud9Stub() Cloud9Client {
 }
 
 type Cloud9CreateEnvironmentEC2Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -67,6 +68,7 @@ func (r *Cloud9CreateEnvironmentEC2Future) Get(ctx workflow.Context) (*cloud9.Cr
 }
 
 type Cloud9CreateEnvironmentMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -77,6 +79,7 @@ func (r *Cloud9CreateEnvironmentMembershipFuture) Get(ctx workflow.Context) (*cl
 }
 
 type Cloud9DeleteEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -87,6 +90,7 @@ func (r *Cloud9DeleteEnvironmentFuture) Get(ctx workflow.Context) (*cloud9.Delet
 }
 
 type Cloud9DeleteEnvironmentMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +101,7 @@ func (r *Cloud9DeleteEnvironmentMembershipFuture) Get(ctx workflow.Context) (*cl
 }
 
 type Cloud9DescribeEnvironmentMembershipsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +112,7 @@ func (r *Cloud9DescribeEnvironmentMembershipsFuture) Get(ctx workflow.Context) (
 }
 
 type Cloud9DescribeEnvironmentStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +123,7 @@ func (r *Cloud9DescribeEnvironmentStatusFuture) Get(ctx workflow.Context) (*clou
 }
 
 type Cloud9DescribeEnvironmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +134,7 @@ func (r *Cloud9DescribeEnvironmentsFuture) Get(ctx workflow.Context) (*cloud9.De
 }
 
 type Cloud9ListEnvironmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +145,7 @@ func (r *Cloud9ListEnvironmentsFuture) Get(ctx workflow.Context) (*cloud9.ListEn
 }
 
 type Cloud9ListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +156,7 @@ func (r *Cloud9ListTagsForResourceFuture) Get(ctx workflow.Context) (*cloud9.Lis
 }
 
 type Cloud9TagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +167,7 @@ func (r *Cloud9TagResourceFuture) Get(ctx workflow.Context) (*cloud9.TagResource
 }
 
 type Cloud9UntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +178,7 @@ func (r *Cloud9UntagResourceFuture) Get(ctx workflow.Context) (*cloud9.UntagReso
 }
 
 type Cloud9UpdateEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +189,7 @@ func (r *Cloud9UpdateEnvironmentFuture) Get(ctx workflow.Context) (*cloud9.Updat
 }
 
 type Cloud9UpdateEnvironmentMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

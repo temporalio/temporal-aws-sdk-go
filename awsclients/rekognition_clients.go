@@ -165,6 +165,7 @@ func NewRekognitionStub() RekognitionClient {
 }
 
 type RekognitionCompareFacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +176,7 @@ func (r *RekognitionCompareFacesFuture) Get(ctx workflow.Context) (*rekognition.
 }
 
 type RekognitionCreateCollectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +187,7 @@ func (r *RekognitionCreateCollectionFuture) Get(ctx workflow.Context) (*rekognit
 }
 
 type RekognitionCreateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +198,7 @@ func (r *RekognitionCreateProjectFuture) Get(ctx workflow.Context) (*rekognition
 }
 
 type RekognitionCreateProjectVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +209,7 @@ func (r *RekognitionCreateProjectVersionFuture) Get(ctx workflow.Context) (*reko
 }
 
 type RekognitionCreateStreamProcessorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +220,7 @@ func (r *RekognitionCreateStreamProcessorFuture) Get(ctx workflow.Context) (*rek
 }
 
 type RekognitionDeleteCollectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +231,7 @@ func (r *RekognitionDeleteCollectionFuture) Get(ctx workflow.Context) (*rekognit
 }
 
 type RekognitionDeleteFacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +242,7 @@ func (r *RekognitionDeleteFacesFuture) Get(ctx workflow.Context) (*rekognition.D
 }
 
 type RekognitionDeleteProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +253,7 @@ func (r *RekognitionDeleteProjectFuture) Get(ctx workflow.Context) (*rekognition
 }
 
 type RekognitionDeleteProjectVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +264,7 @@ func (r *RekognitionDeleteProjectVersionFuture) Get(ctx workflow.Context) (*reko
 }
 
 type RekognitionDeleteStreamProcessorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -265,6 +275,7 @@ func (r *RekognitionDeleteStreamProcessorFuture) Get(ctx workflow.Context) (*rek
 }
 
 type RekognitionDescribeCollectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -275,6 +286,7 @@ func (r *RekognitionDescribeCollectionFuture) Get(ctx workflow.Context) (*rekogn
 }
 
 type RekognitionDescribeProjectVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -285,6 +297,7 @@ func (r *RekognitionDescribeProjectVersionsFuture) Get(ctx workflow.Context) (*r
 }
 
 type RekognitionDescribeProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -295,6 +308,7 @@ func (r *RekognitionDescribeProjectsFuture) Get(ctx workflow.Context) (*rekognit
 }
 
 type RekognitionDescribeStreamProcessorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -305,6 +319,7 @@ func (r *RekognitionDescribeStreamProcessorFuture) Get(ctx workflow.Context) (*r
 }
 
 type RekognitionDetectCustomLabelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -315,6 +330,7 @@ func (r *RekognitionDetectCustomLabelsFuture) Get(ctx workflow.Context) (*rekogn
 }
 
 type RekognitionDetectFacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +341,7 @@ func (r *RekognitionDetectFacesFuture) Get(ctx workflow.Context) (*rekognition.D
 }
 
 type RekognitionDetectLabelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +352,7 @@ func (r *RekognitionDetectLabelsFuture) Get(ctx workflow.Context) (*rekognition.
 }
 
 type RekognitionDetectModerationLabelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +363,7 @@ func (r *RekognitionDetectModerationLabelsFuture) Get(ctx workflow.Context) (*re
 }
 
 type RekognitionDetectTextFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +374,7 @@ func (r *RekognitionDetectTextFuture) Get(ctx workflow.Context) (*rekognition.De
 }
 
 type RekognitionGetCelebrityInfoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +385,7 @@ func (r *RekognitionGetCelebrityInfoFuture) Get(ctx workflow.Context) (*rekognit
 }
 
 type RekognitionGetCelebrityRecognitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +396,7 @@ func (r *RekognitionGetCelebrityRecognitionFuture) Get(ctx workflow.Context) (*r
 }
 
 type RekognitionGetContentModerationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +407,7 @@ func (r *RekognitionGetContentModerationFuture) Get(ctx workflow.Context) (*reko
 }
 
 type RekognitionGetFaceDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -395,6 +418,7 @@ func (r *RekognitionGetFaceDetectionFuture) Get(ctx workflow.Context) (*rekognit
 }
 
 type RekognitionGetFaceSearchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -405,6 +429,7 @@ func (r *RekognitionGetFaceSearchFuture) Get(ctx workflow.Context) (*rekognition
 }
 
 type RekognitionGetLabelDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -415,6 +440,7 @@ func (r *RekognitionGetLabelDetectionFuture) Get(ctx workflow.Context) (*rekogni
 }
 
 type RekognitionGetPersonTrackingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -425,6 +451,7 @@ func (r *RekognitionGetPersonTrackingFuture) Get(ctx workflow.Context) (*rekogni
 }
 
 type RekognitionGetSegmentDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -435,6 +462,7 @@ func (r *RekognitionGetSegmentDetectionFuture) Get(ctx workflow.Context) (*rekog
 }
 
 type RekognitionGetTextDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -445,6 +473,7 @@ func (r *RekognitionGetTextDetectionFuture) Get(ctx workflow.Context) (*rekognit
 }
 
 type RekognitionIndexFacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -455,6 +484,7 @@ func (r *RekognitionIndexFacesFuture) Get(ctx workflow.Context) (*rekognition.In
 }
 
 type RekognitionListCollectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -465,6 +495,7 @@ func (r *RekognitionListCollectionsFuture) Get(ctx workflow.Context) (*rekogniti
 }
 
 type RekognitionListFacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -475,6 +506,7 @@ func (r *RekognitionListFacesFuture) Get(ctx workflow.Context) (*rekognition.Lis
 }
 
 type RekognitionListStreamProcessorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -485,6 +517,7 @@ func (r *RekognitionListStreamProcessorsFuture) Get(ctx workflow.Context) (*reko
 }
 
 type RekognitionRecognizeCelebritiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -495,6 +528,7 @@ func (r *RekognitionRecognizeCelebritiesFuture) Get(ctx workflow.Context) (*reko
 }
 
 type RekognitionSearchFacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -505,6 +539,7 @@ func (r *RekognitionSearchFacesFuture) Get(ctx workflow.Context) (*rekognition.S
 }
 
 type RekognitionSearchFacesByImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -515,6 +550,7 @@ func (r *RekognitionSearchFacesByImageFuture) Get(ctx workflow.Context) (*rekogn
 }
 
 type RekognitionStartCelebrityRecognitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -525,6 +561,7 @@ func (r *RekognitionStartCelebrityRecognitionFuture) Get(ctx workflow.Context) (
 }
 
 type RekognitionStartContentModerationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -535,6 +572,7 @@ func (r *RekognitionStartContentModerationFuture) Get(ctx workflow.Context) (*re
 }
 
 type RekognitionStartFaceDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -545,6 +583,7 @@ func (r *RekognitionStartFaceDetectionFuture) Get(ctx workflow.Context) (*rekogn
 }
 
 type RekognitionStartFaceSearchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -555,6 +594,7 @@ func (r *RekognitionStartFaceSearchFuture) Get(ctx workflow.Context) (*rekogniti
 }
 
 type RekognitionStartLabelDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -565,6 +605,7 @@ func (r *RekognitionStartLabelDetectionFuture) Get(ctx workflow.Context) (*rekog
 }
 
 type RekognitionStartPersonTrackingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -575,6 +616,7 @@ func (r *RekognitionStartPersonTrackingFuture) Get(ctx workflow.Context) (*rekog
 }
 
 type RekognitionStartProjectVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -585,6 +627,7 @@ func (r *RekognitionStartProjectVersionFuture) Get(ctx workflow.Context) (*rekog
 }
 
 type RekognitionStartSegmentDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -595,6 +638,7 @@ func (r *RekognitionStartSegmentDetectionFuture) Get(ctx workflow.Context) (*rek
 }
 
 type RekognitionStartStreamProcessorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -605,6 +649,7 @@ func (r *RekognitionStartStreamProcessorFuture) Get(ctx workflow.Context) (*reko
 }
 
 type RekognitionStartTextDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -615,6 +660,7 @@ func (r *RekognitionStartTextDetectionFuture) Get(ctx workflow.Context) (*rekogn
 }
 
 type RekognitionStopProjectVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -625,6 +671,7 @@ func (r *RekognitionStopProjectVersionFuture) Get(ctx workflow.Context) (*rekogn
 }
 
 type RekognitionStopStreamProcessorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -27,7 +27,7 @@ type {{ $name }}Client interface {
 {{ else }}
 {{- $prefix := CapitalizeFirstLetter $method.Output.Package }}
 {{ "	"}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error)
-{{ "	"}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{$prefix}}{{ $method.Name }}Future
+{{ "	"}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{ $name }}{{ $method.Name }}Future
 {{ end }}
 {{- end -}}
 }
@@ -39,18 +39,17 @@ func New{{ $name }}Stub() {{ $name }}Client {
 }
 {{- range $i, $method := .Methods }}
 {{- if not (IsNil $method.Output) }}
-{{- if not (IsDuplicate "Output" (print $method.Output.Package "." $method.Name)) }}
 {{ $prefix := CapitalizeFirstLetter $method.Output.Package }}
-type {{ $prefix }}{{ $method.Name }}Future struct {
+type {{ $name }}{{ $method.Name }}Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *{{ $prefix }}{{ $method.Name }}Future) Get(ctx workflow.Context) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
+func (r *{{ $name }}{{ $method.Name }}Future) Get(ctx workflow.Context) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
 	var output {{ $method.Output.Package }}.{{ $method.Output.Name }}
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
-{{- end -}}
 {{- end }}
 {{- end }}
 {{ range $i, $method := .Methods }}
@@ -71,9 +70,9 @@ func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $me
 	return &output, err
 }
 
-func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{$prefix}}{{ $method.Name }}Future {
+func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{ $name }}{{ $method.Name }}Future {
 	future := workflow.ExecuteActivity(ctx, "aws.{{ $id }}.{{$method.Name}}", input)
-	return &{{$prefix}}{{ $method.Name }}Future{Future: future}
+	return &{{ $name }}{{ $method.Name }}Future{Future: future}
 }
 {{ end -}}
 {{- end -}}

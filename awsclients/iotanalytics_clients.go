@@ -11,106 +11,106 @@ import (
 
 type IoTAnalyticsClient interface {
 	BatchPutMessage(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) (*iotanalytics.BatchPutMessageOutput, error)
-	BatchPutMessageAsync(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) *IotanalyticsBatchPutMessageFuture
+	BatchPutMessageAsync(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) *IoTAnalyticsBatchPutMessageFuture
 
 	CancelPipelineReprocessing(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) (*iotanalytics.CancelPipelineReprocessingOutput, error)
-	CancelPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) *IotanalyticsCancelPipelineReprocessingFuture
+	CancelPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) *IoTAnalyticsCancelPipelineReprocessingFuture
 
 	CreateChannel(ctx workflow.Context, input *iotanalytics.CreateChannelInput) (*iotanalytics.CreateChannelOutput, error)
-	CreateChannelAsync(ctx workflow.Context, input *iotanalytics.CreateChannelInput) *IotanalyticsCreateChannelFuture
+	CreateChannelAsync(ctx workflow.Context, input *iotanalytics.CreateChannelInput) *IoTAnalyticsCreateChannelFuture
 
 	CreateDataset(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) (*iotanalytics.CreateDatasetOutput, error)
-	CreateDatasetAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) *IotanalyticsCreateDatasetFuture
+	CreateDatasetAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) *IoTAnalyticsCreateDatasetFuture
 
 	CreateDatasetContent(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) (*iotanalytics.CreateDatasetContentOutput, error)
-	CreateDatasetContentAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) *IotanalyticsCreateDatasetContentFuture
+	CreateDatasetContentAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) *IoTAnalyticsCreateDatasetContentFuture
 
 	CreateDatastore(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) (*iotanalytics.CreateDatastoreOutput, error)
-	CreateDatastoreAsync(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) *IotanalyticsCreateDatastoreFuture
+	CreateDatastoreAsync(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) *IoTAnalyticsCreateDatastoreFuture
 
 	CreatePipeline(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) (*iotanalytics.CreatePipelineOutput, error)
-	CreatePipelineAsync(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) *IotanalyticsCreatePipelineFuture
+	CreatePipelineAsync(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) *IoTAnalyticsCreatePipelineFuture
 
 	DeleteChannel(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) (*iotanalytics.DeleteChannelOutput, error)
-	DeleteChannelAsync(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) *IotanalyticsDeleteChannelFuture
+	DeleteChannelAsync(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) *IoTAnalyticsDeleteChannelFuture
 
 	DeleteDataset(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) (*iotanalytics.DeleteDatasetOutput, error)
-	DeleteDatasetAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) *IotanalyticsDeleteDatasetFuture
+	DeleteDatasetAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) *IoTAnalyticsDeleteDatasetFuture
 
 	DeleteDatasetContent(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) (*iotanalytics.DeleteDatasetContentOutput, error)
-	DeleteDatasetContentAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) *IotanalyticsDeleteDatasetContentFuture
+	DeleteDatasetContentAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) *IoTAnalyticsDeleteDatasetContentFuture
 
 	DeleteDatastore(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) (*iotanalytics.DeleteDatastoreOutput, error)
-	DeleteDatastoreAsync(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) *IotanalyticsDeleteDatastoreFuture
+	DeleteDatastoreAsync(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) *IoTAnalyticsDeleteDatastoreFuture
 
 	DeletePipeline(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) (*iotanalytics.DeletePipelineOutput, error)
-	DeletePipelineAsync(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) *IotanalyticsDeletePipelineFuture
+	DeletePipelineAsync(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) *IoTAnalyticsDeletePipelineFuture
 
 	DescribeChannel(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) (*iotanalytics.DescribeChannelOutput, error)
-	DescribeChannelAsync(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) *IotanalyticsDescribeChannelFuture
+	DescribeChannelAsync(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) *IoTAnalyticsDescribeChannelFuture
 
 	DescribeDataset(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) (*iotanalytics.DescribeDatasetOutput, error)
-	DescribeDatasetAsync(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) *IotanalyticsDescribeDatasetFuture
+	DescribeDatasetAsync(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) *IoTAnalyticsDescribeDatasetFuture
 
 	DescribeDatastore(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) (*iotanalytics.DescribeDatastoreOutput, error)
-	DescribeDatastoreAsync(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) *IotanalyticsDescribeDatastoreFuture
+	DescribeDatastoreAsync(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) *IoTAnalyticsDescribeDatastoreFuture
 
 	DescribeLoggingOptions(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) (*iotanalytics.DescribeLoggingOptionsOutput, error)
-	DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) *IotanalyticsDescribeLoggingOptionsFuture
+	DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) *IoTAnalyticsDescribeLoggingOptionsFuture
 
 	DescribePipeline(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) (*iotanalytics.DescribePipelineOutput, error)
-	DescribePipelineAsync(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) *IotanalyticsDescribePipelineFuture
+	DescribePipelineAsync(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) *IoTAnalyticsDescribePipelineFuture
 
 	GetDatasetContent(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) (*iotanalytics.GetDatasetContentOutput, error)
-	GetDatasetContentAsync(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) *IotanalyticsGetDatasetContentFuture
+	GetDatasetContentAsync(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) *IoTAnalyticsGetDatasetContentFuture
 
 	ListChannels(ctx workflow.Context, input *iotanalytics.ListChannelsInput) (*iotanalytics.ListChannelsOutput, error)
-	ListChannelsAsync(ctx workflow.Context, input *iotanalytics.ListChannelsInput) *IotanalyticsListChannelsFuture
+	ListChannelsAsync(ctx workflow.Context, input *iotanalytics.ListChannelsInput) *IoTAnalyticsListChannelsFuture
 
 	ListDatasetContents(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) (*iotanalytics.ListDatasetContentsOutput, error)
-	ListDatasetContentsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) *IotanalyticsListDatasetContentsFuture
+	ListDatasetContentsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) *IoTAnalyticsListDatasetContentsFuture
 
 	ListDatasets(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) (*iotanalytics.ListDatasetsOutput, error)
-	ListDatasetsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) *IotanalyticsListDatasetsFuture
+	ListDatasetsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) *IoTAnalyticsListDatasetsFuture
 
 	ListDatastores(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) (*iotanalytics.ListDatastoresOutput, error)
-	ListDatastoresAsync(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) *IotanalyticsListDatastoresFuture
+	ListDatastoresAsync(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) *IoTAnalyticsListDatastoresFuture
 
 	ListPipelines(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) (*iotanalytics.ListPipelinesOutput, error)
-	ListPipelinesAsync(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) *IotanalyticsListPipelinesFuture
+	ListPipelinesAsync(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) *IoTAnalyticsListPipelinesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) (*iotanalytics.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) *IotanalyticsListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) *IoTAnalyticsListTagsForResourceFuture
 
 	PutLoggingOptions(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) (*iotanalytics.PutLoggingOptionsOutput, error)
-	PutLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) *IotanalyticsPutLoggingOptionsFuture
+	PutLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) *IoTAnalyticsPutLoggingOptionsFuture
 
 	RunPipelineActivity(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) (*iotanalytics.RunPipelineActivityOutput, error)
-	RunPipelineActivityAsync(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) *IotanalyticsRunPipelineActivityFuture
+	RunPipelineActivityAsync(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) *IoTAnalyticsRunPipelineActivityFuture
 
 	SampleChannelData(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) (*iotanalytics.SampleChannelDataOutput, error)
-	SampleChannelDataAsync(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) *IotanalyticsSampleChannelDataFuture
+	SampleChannelDataAsync(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) *IoTAnalyticsSampleChannelDataFuture
 
 	StartPipelineReprocessing(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) (*iotanalytics.StartPipelineReprocessingOutput, error)
-	StartPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) *IotanalyticsStartPipelineReprocessingFuture
+	StartPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) *IoTAnalyticsStartPipelineReprocessingFuture
 
 	TagResource(ctx workflow.Context, input *iotanalytics.TagResourceInput) (*iotanalytics.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iotanalytics.TagResourceInput) *IotanalyticsTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *iotanalytics.TagResourceInput) *IoTAnalyticsTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *iotanalytics.UntagResourceInput) (*iotanalytics.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iotanalytics.UntagResourceInput) *IotanalyticsUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *iotanalytics.UntagResourceInput) *IoTAnalyticsUntagResourceFuture
 
 	UpdateChannel(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) (*iotanalytics.UpdateChannelOutput, error)
-	UpdateChannelAsync(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) *IotanalyticsUpdateChannelFuture
+	UpdateChannelAsync(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) *IoTAnalyticsUpdateChannelFuture
 
 	UpdateDataset(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) (*iotanalytics.UpdateDatasetOutput, error)
-	UpdateDatasetAsync(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) *IotanalyticsUpdateDatasetFuture
+	UpdateDatasetAsync(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) *IoTAnalyticsUpdateDatasetFuture
 
 	UpdateDatastore(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) (*iotanalytics.UpdateDatastoreOutput, error)
-	UpdateDatastoreAsync(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) *IotanalyticsUpdateDatastoreFuture
+	UpdateDatastoreAsync(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) *IoTAnalyticsUpdateDatastoreFuture
 
 	UpdatePipeline(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) (*iotanalytics.UpdatePipelineOutput, error)
-	UpdatePipelineAsync(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) *IotanalyticsUpdatePipelineFuture
+	UpdatePipelineAsync(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) *IoTAnalyticsUpdatePipelineFuture
 }
 
 type IoTAnalyticsStub struct{}
@@ -119,341 +119,375 @@ func NewIoTAnalyticsStub() IoTAnalyticsClient {
 	return &IoTAnalyticsStub{}
 }
 
-type IotanalyticsBatchPutMessageFuture struct {
+type IoTAnalyticsBatchPutMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsBatchPutMessageFuture) Get(ctx workflow.Context) (*iotanalytics.BatchPutMessageOutput, error) {
+func (r *IoTAnalyticsBatchPutMessageFuture) Get(ctx workflow.Context) (*iotanalytics.BatchPutMessageOutput, error) {
 	var output iotanalytics.BatchPutMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsCancelPipelineReprocessingFuture struct {
+type IoTAnalyticsCancelPipelineReprocessingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsCancelPipelineReprocessingFuture) Get(ctx workflow.Context) (*iotanalytics.CancelPipelineReprocessingOutput, error) {
+func (r *IoTAnalyticsCancelPipelineReprocessingFuture) Get(ctx workflow.Context) (*iotanalytics.CancelPipelineReprocessingOutput, error) {
 	var output iotanalytics.CancelPipelineReprocessingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsCreateChannelFuture struct {
+type IoTAnalyticsCreateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsCreateChannelFuture) Get(ctx workflow.Context) (*iotanalytics.CreateChannelOutput, error) {
+func (r *IoTAnalyticsCreateChannelFuture) Get(ctx workflow.Context) (*iotanalytics.CreateChannelOutput, error) {
 	var output iotanalytics.CreateChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsCreateDatasetFuture struct {
+type IoTAnalyticsCreateDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsCreateDatasetFuture) Get(ctx workflow.Context) (*iotanalytics.CreateDatasetOutput, error) {
+func (r *IoTAnalyticsCreateDatasetFuture) Get(ctx workflow.Context) (*iotanalytics.CreateDatasetOutput, error) {
 	var output iotanalytics.CreateDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsCreateDatasetContentFuture struct {
+type IoTAnalyticsCreateDatasetContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsCreateDatasetContentFuture) Get(ctx workflow.Context) (*iotanalytics.CreateDatasetContentOutput, error) {
+func (r *IoTAnalyticsCreateDatasetContentFuture) Get(ctx workflow.Context) (*iotanalytics.CreateDatasetContentOutput, error) {
 	var output iotanalytics.CreateDatasetContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsCreateDatastoreFuture struct {
+type IoTAnalyticsCreateDatastoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsCreateDatastoreFuture) Get(ctx workflow.Context) (*iotanalytics.CreateDatastoreOutput, error) {
+func (r *IoTAnalyticsCreateDatastoreFuture) Get(ctx workflow.Context) (*iotanalytics.CreateDatastoreOutput, error) {
 	var output iotanalytics.CreateDatastoreOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsCreatePipelineFuture struct {
+type IoTAnalyticsCreatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsCreatePipelineFuture) Get(ctx workflow.Context) (*iotanalytics.CreatePipelineOutput, error) {
+func (r *IoTAnalyticsCreatePipelineFuture) Get(ctx workflow.Context) (*iotanalytics.CreatePipelineOutput, error) {
 	var output iotanalytics.CreatePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDeleteChannelFuture struct {
+type IoTAnalyticsDeleteChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDeleteChannelFuture) Get(ctx workflow.Context) (*iotanalytics.DeleteChannelOutput, error) {
+func (r *IoTAnalyticsDeleteChannelFuture) Get(ctx workflow.Context) (*iotanalytics.DeleteChannelOutput, error) {
 	var output iotanalytics.DeleteChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDeleteDatasetFuture struct {
+type IoTAnalyticsDeleteDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDeleteDatasetFuture) Get(ctx workflow.Context) (*iotanalytics.DeleteDatasetOutput, error) {
+func (r *IoTAnalyticsDeleteDatasetFuture) Get(ctx workflow.Context) (*iotanalytics.DeleteDatasetOutput, error) {
 	var output iotanalytics.DeleteDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDeleteDatasetContentFuture struct {
+type IoTAnalyticsDeleteDatasetContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDeleteDatasetContentFuture) Get(ctx workflow.Context) (*iotanalytics.DeleteDatasetContentOutput, error) {
+func (r *IoTAnalyticsDeleteDatasetContentFuture) Get(ctx workflow.Context) (*iotanalytics.DeleteDatasetContentOutput, error) {
 	var output iotanalytics.DeleteDatasetContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDeleteDatastoreFuture struct {
+type IoTAnalyticsDeleteDatastoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDeleteDatastoreFuture) Get(ctx workflow.Context) (*iotanalytics.DeleteDatastoreOutput, error) {
+func (r *IoTAnalyticsDeleteDatastoreFuture) Get(ctx workflow.Context) (*iotanalytics.DeleteDatastoreOutput, error) {
 	var output iotanalytics.DeleteDatastoreOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDeletePipelineFuture struct {
+type IoTAnalyticsDeletePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDeletePipelineFuture) Get(ctx workflow.Context) (*iotanalytics.DeletePipelineOutput, error) {
+func (r *IoTAnalyticsDeletePipelineFuture) Get(ctx workflow.Context) (*iotanalytics.DeletePipelineOutput, error) {
 	var output iotanalytics.DeletePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDescribeChannelFuture struct {
+type IoTAnalyticsDescribeChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDescribeChannelFuture) Get(ctx workflow.Context) (*iotanalytics.DescribeChannelOutput, error) {
+func (r *IoTAnalyticsDescribeChannelFuture) Get(ctx workflow.Context) (*iotanalytics.DescribeChannelOutput, error) {
 	var output iotanalytics.DescribeChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDescribeDatasetFuture struct {
+type IoTAnalyticsDescribeDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDescribeDatasetFuture) Get(ctx workflow.Context) (*iotanalytics.DescribeDatasetOutput, error) {
+func (r *IoTAnalyticsDescribeDatasetFuture) Get(ctx workflow.Context) (*iotanalytics.DescribeDatasetOutput, error) {
 	var output iotanalytics.DescribeDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDescribeDatastoreFuture struct {
+type IoTAnalyticsDescribeDatastoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDescribeDatastoreFuture) Get(ctx workflow.Context) (*iotanalytics.DescribeDatastoreOutput, error) {
+func (r *IoTAnalyticsDescribeDatastoreFuture) Get(ctx workflow.Context) (*iotanalytics.DescribeDatastoreOutput, error) {
 	var output iotanalytics.DescribeDatastoreOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDescribeLoggingOptionsFuture struct {
+type IoTAnalyticsDescribeLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDescribeLoggingOptionsFuture) Get(ctx workflow.Context) (*iotanalytics.DescribeLoggingOptionsOutput, error) {
+func (r *IoTAnalyticsDescribeLoggingOptionsFuture) Get(ctx workflow.Context) (*iotanalytics.DescribeLoggingOptionsOutput, error) {
 	var output iotanalytics.DescribeLoggingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsDescribePipelineFuture struct {
+type IoTAnalyticsDescribePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsDescribePipelineFuture) Get(ctx workflow.Context) (*iotanalytics.DescribePipelineOutput, error) {
+func (r *IoTAnalyticsDescribePipelineFuture) Get(ctx workflow.Context) (*iotanalytics.DescribePipelineOutput, error) {
 	var output iotanalytics.DescribePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsGetDatasetContentFuture struct {
+type IoTAnalyticsGetDatasetContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsGetDatasetContentFuture) Get(ctx workflow.Context) (*iotanalytics.GetDatasetContentOutput, error) {
+func (r *IoTAnalyticsGetDatasetContentFuture) Get(ctx workflow.Context) (*iotanalytics.GetDatasetContentOutput, error) {
 	var output iotanalytics.GetDatasetContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsListChannelsFuture struct {
+type IoTAnalyticsListChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsListChannelsFuture) Get(ctx workflow.Context) (*iotanalytics.ListChannelsOutput, error) {
+func (r *IoTAnalyticsListChannelsFuture) Get(ctx workflow.Context) (*iotanalytics.ListChannelsOutput, error) {
 	var output iotanalytics.ListChannelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsListDatasetContentsFuture struct {
+type IoTAnalyticsListDatasetContentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsListDatasetContentsFuture) Get(ctx workflow.Context) (*iotanalytics.ListDatasetContentsOutput, error) {
+func (r *IoTAnalyticsListDatasetContentsFuture) Get(ctx workflow.Context) (*iotanalytics.ListDatasetContentsOutput, error) {
 	var output iotanalytics.ListDatasetContentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsListDatasetsFuture struct {
+type IoTAnalyticsListDatasetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsListDatasetsFuture) Get(ctx workflow.Context) (*iotanalytics.ListDatasetsOutput, error) {
+func (r *IoTAnalyticsListDatasetsFuture) Get(ctx workflow.Context) (*iotanalytics.ListDatasetsOutput, error) {
 	var output iotanalytics.ListDatasetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsListDatastoresFuture struct {
+type IoTAnalyticsListDatastoresFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsListDatastoresFuture) Get(ctx workflow.Context) (*iotanalytics.ListDatastoresOutput, error) {
+func (r *IoTAnalyticsListDatastoresFuture) Get(ctx workflow.Context) (*iotanalytics.ListDatastoresOutput, error) {
 	var output iotanalytics.ListDatastoresOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsListPipelinesFuture struct {
+type IoTAnalyticsListPipelinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsListPipelinesFuture) Get(ctx workflow.Context) (*iotanalytics.ListPipelinesOutput, error) {
+func (r *IoTAnalyticsListPipelinesFuture) Get(ctx workflow.Context) (*iotanalytics.ListPipelinesOutput, error) {
 	var output iotanalytics.ListPipelinesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsListTagsForResourceFuture struct {
+type IoTAnalyticsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsListTagsForResourceFuture) Get(ctx workflow.Context) (*iotanalytics.ListTagsForResourceOutput, error) {
+func (r *IoTAnalyticsListTagsForResourceFuture) Get(ctx workflow.Context) (*iotanalytics.ListTagsForResourceOutput, error) {
 	var output iotanalytics.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsPutLoggingOptionsFuture struct {
+type IoTAnalyticsPutLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsPutLoggingOptionsFuture) Get(ctx workflow.Context) (*iotanalytics.PutLoggingOptionsOutput, error) {
+func (r *IoTAnalyticsPutLoggingOptionsFuture) Get(ctx workflow.Context) (*iotanalytics.PutLoggingOptionsOutput, error) {
 	var output iotanalytics.PutLoggingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsRunPipelineActivityFuture struct {
+type IoTAnalyticsRunPipelineActivityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsRunPipelineActivityFuture) Get(ctx workflow.Context) (*iotanalytics.RunPipelineActivityOutput, error) {
+func (r *IoTAnalyticsRunPipelineActivityFuture) Get(ctx workflow.Context) (*iotanalytics.RunPipelineActivityOutput, error) {
 	var output iotanalytics.RunPipelineActivityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsSampleChannelDataFuture struct {
+type IoTAnalyticsSampleChannelDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsSampleChannelDataFuture) Get(ctx workflow.Context) (*iotanalytics.SampleChannelDataOutput, error) {
+func (r *IoTAnalyticsSampleChannelDataFuture) Get(ctx workflow.Context) (*iotanalytics.SampleChannelDataOutput, error) {
 	var output iotanalytics.SampleChannelDataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsStartPipelineReprocessingFuture struct {
+type IoTAnalyticsStartPipelineReprocessingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsStartPipelineReprocessingFuture) Get(ctx workflow.Context) (*iotanalytics.StartPipelineReprocessingOutput, error) {
+func (r *IoTAnalyticsStartPipelineReprocessingFuture) Get(ctx workflow.Context) (*iotanalytics.StartPipelineReprocessingOutput, error) {
 	var output iotanalytics.StartPipelineReprocessingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsTagResourceFuture struct {
+type IoTAnalyticsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsTagResourceFuture) Get(ctx workflow.Context) (*iotanalytics.TagResourceOutput, error) {
+func (r *IoTAnalyticsTagResourceFuture) Get(ctx workflow.Context) (*iotanalytics.TagResourceOutput, error) {
 	var output iotanalytics.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsUntagResourceFuture struct {
+type IoTAnalyticsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsUntagResourceFuture) Get(ctx workflow.Context) (*iotanalytics.UntagResourceOutput, error) {
+func (r *IoTAnalyticsUntagResourceFuture) Get(ctx workflow.Context) (*iotanalytics.UntagResourceOutput, error) {
 	var output iotanalytics.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsUpdateChannelFuture struct {
+type IoTAnalyticsUpdateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsUpdateChannelFuture) Get(ctx workflow.Context) (*iotanalytics.UpdateChannelOutput, error) {
+func (r *IoTAnalyticsUpdateChannelFuture) Get(ctx workflow.Context) (*iotanalytics.UpdateChannelOutput, error) {
 	var output iotanalytics.UpdateChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsUpdateDatasetFuture struct {
+type IoTAnalyticsUpdateDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsUpdateDatasetFuture) Get(ctx workflow.Context) (*iotanalytics.UpdateDatasetOutput, error) {
+func (r *IoTAnalyticsUpdateDatasetFuture) Get(ctx workflow.Context) (*iotanalytics.UpdateDatasetOutput, error) {
 	var output iotanalytics.UpdateDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsUpdateDatastoreFuture struct {
+type IoTAnalyticsUpdateDatastoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsUpdateDatastoreFuture) Get(ctx workflow.Context) (*iotanalytics.UpdateDatastoreOutput, error) {
+func (r *IoTAnalyticsUpdateDatastoreFuture) Get(ctx workflow.Context) (*iotanalytics.UpdateDatastoreOutput, error) {
 	var output iotanalytics.UpdateDatastoreOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotanalyticsUpdatePipelineFuture struct {
+type IoTAnalyticsUpdatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotanalyticsUpdatePipelineFuture) Get(ctx workflow.Context) (*iotanalytics.UpdatePipelineOutput, error) {
+func (r *IoTAnalyticsUpdatePipelineFuture) Get(ctx workflow.Context) (*iotanalytics.UpdatePipelineOutput, error) {
 	var output iotanalytics.UpdatePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -465,9 +499,9 @@ func (a *IoTAnalyticsStub) BatchPutMessage(ctx workflow.Context, input *iotanaly
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) BatchPutMessageAsync(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) *IotanalyticsBatchPutMessageFuture {
+func (a *IoTAnalyticsStub) BatchPutMessageAsync(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) *IoTAnalyticsBatchPutMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.BatchPutMessage", input)
-	return &IotanalyticsBatchPutMessageFuture{Future: future}
+	return &IoTAnalyticsBatchPutMessageFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) CancelPipelineReprocessing(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) (*iotanalytics.CancelPipelineReprocessingOutput, error) {
@@ -476,9 +510,9 @@ func (a *IoTAnalyticsStub) CancelPipelineReprocessing(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) CancelPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) *IotanalyticsCancelPipelineReprocessingFuture {
+func (a *IoTAnalyticsStub) CancelPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) *IoTAnalyticsCancelPipelineReprocessingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.CancelPipelineReprocessing", input)
-	return &IotanalyticsCancelPipelineReprocessingFuture{Future: future}
+	return &IoTAnalyticsCancelPipelineReprocessingFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) CreateChannel(ctx workflow.Context, input *iotanalytics.CreateChannelInput) (*iotanalytics.CreateChannelOutput, error) {
@@ -487,9 +521,9 @@ func (a *IoTAnalyticsStub) CreateChannel(ctx workflow.Context, input *iotanalyti
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) CreateChannelAsync(ctx workflow.Context, input *iotanalytics.CreateChannelInput) *IotanalyticsCreateChannelFuture {
+func (a *IoTAnalyticsStub) CreateChannelAsync(ctx workflow.Context, input *iotanalytics.CreateChannelInput) *IoTAnalyticsCreateChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.CreateChannel", input)
-	return &IotanalyticsCreateChannelFuture{Future: future}
+	return &IoTAnalyticsCreateChannelFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) CreateDataset(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) (*iotanalytics.CreateDatasetOutput, error) {
@@ -498,9 +532,9 @@ func (a *IoTAnalyticsStub) CreateDataset(ctx workflow.Context, input *iotanalyti
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) CreateDatasetAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) *IotanalyticsCreateDatasetFuture {
+func (a *IoTAnalyticsStub) CreateDatasetAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) *IoTAnalyticsCreateDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.CreateDataset", input)
-	return &IotanalyticsCreateDatasetFuture{Future: future}
+	return &IoTAnalyticsCreateDatasetFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) CreateDatasetContent(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) (*iotanalytics.CreateDatasetContentOutput, error) {
@@ -509,9 +543,9 @@ func (a *IoTAnalyticsStub) CreateDatasetContent(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) CreateDatasetContentAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) *IotanalyticsCreateDatasetContentFuture {
+func (a *IoTAnalyticsStub) CreateDatasetContentAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) *IoTAnalyticsCreateDatasetContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.CreateDatasetContent", input)
-	return &IotanalyticsCreateDatasetContentFuture{Future: future}
+	return &IoTAnalyticsCreateDatasetContentFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) CreateDatastore(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) (*iotanalytics.CreateDatastoreOutput, error) {
@@ -520,9 +554,9 @@ func (a *IoTAnalyticsStub) CreateDatastore(ctx workflow.Context, input *iotanaly
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) CreateDatastoreAsync(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) *IotanalyticsCreateDatastoreFuture {
+func (a *IoTAnalyticsStub) CreateDatastoreAsync(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) *IoTAnalyticsCreateDatastoreFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.CreateDatastore", input)
-	return &IotanalyticsCreateDatastoreFuture{Future: future}
+	return &IoTAnalyticsCreateDatastoreFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) CreatePipeline(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) (*iotanalytics.CreatePipelineOutput, error) {
@@ -531,9 +565,9 @@ func (a *IoTAnalyticsStub) CreatePipeline(ctx workflow.Context, input *iotanalyt
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) CreatePipelineAsync(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) *IotanalyticsCreatePipelineFuture {
+func (a *IoTAnalyticsStub) CreatePipelineAsync(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) *IoTAnalyticsCreatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.CreatePipeline", input)
-	return &IotanalyticsCreatePipelineFuture{Future: future}
+	return &IoTAnalyticsCreatePipelineFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DeleteChannel(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) (*iotanalytics.DeleteChannelOutput, error) {
@@ -542,9 +576,9 @@ func (a *IoTAnalyticsStub) DeleteChannel(ctx workflow.Context, input *iotanalyti
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DeleteChannelAsync(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) *IotanalyticsDeleteChannelFuture {
+func (a *IoTAnalyticsStub) DeleteChannelAsync(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) *IoTAnalyticsDeleteChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DeleteChannel", input)
-	return &IotanalyticsDeleteChannelFuture{Future: future}
+	return &IoTAnalyticsDeleteChannelFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DeleteDataset(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) (*iotanalytics.DeleteDatasetOutput, error) {
@@ -553,9 +587,9 @@ func (a *IoTAnalyticsStub) DeleteDataset(ctx workflow.Context, input *iotanalyti
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DeleteDatasetAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) *IotanalyticsDeleteDatasetFuture {
+func (a *IoTAnalyticsStub) DeleteDatasetAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) *IoTAnalyticsDeleteDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DeleteDataset", input)
-	return &IotanalyticsDeleteDatasetFuture{Future: future}
+	return &IoTAnalyticsDeleteDatasetFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DeleteDatasetContent(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) (*iotanalytics.DeleteDatasetContentOutput, error) {
@@ -564,9 +598,9 @@ func (a *IoTAnalyticsStub) DeleteDatasetContent(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DeleteDatasetContentAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) *IotanalyticsDeleteDatasetContentFuture {
+func (a *IoTAnalyticsStub) DeleteDatasetContentAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) *IoTAnalyticsDeleteDatasetContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DeleteDatasetContent", input)
-	return &IotanalyticsDeleteDatasetContentFuture{Future: future}
+	return &IoTAnalyticsDeleteDatasetContentFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DeleteDatastore(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) (*iotanalytics.DeleteDatastoreOutput, error) {
@@ -575,9 +609,9 @@ func (a *IoTAnalyticsStub) DeleteDatastore(ctx workflow.Context, input *iotanaly
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DeleteDatastoreAsync(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) *IotanalyticsDeleteDatastoreFuture {
+func (a *IoTAnalyticsStub) DeleteDatastoreAsync(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) *IoTAnalyticsDeleteDatastoreFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DeleteDatastore", input)
-	return &IotanalyticsDeleteDatastoreFuture{Future: future}
+	return &IoTAnalyticsDeleteDatastoreFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DeletePipeline(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) (*iotanalytics.DeletePipelineOutput, error) {
@@ -586,9 +620,9 @@ func (a *IoTAnalyticsStub) DeletePipeline(ctx workflow.Context, input *iotanalyt
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DeletePipelineAsync(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) *IotanalyticsDeletePipelineFuture {
+func (a *IoTAnalyticsStub) DeletePipelineAsync(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) *IoTAnalyticsDeletePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DeletePipeline", input)
-	return &IotanalyticsDeletePipelineFuture{Future: future}
+	return &IoTAnalyticsDeletePipelineFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DescribeChannel(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) (*iotanalytics.DescribeChannelOutput, error) {
@@ -597,9 +631,9 @@ func (a *IoTAnalyticsStub) DescribeChannel(ctx workflow.Context, input *iotanaly
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DescribeChannelAsync(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) *IotanalyticsDescribeChannelFuture {
+func (a *IoTAnalyticsStub) DescribeChannelAsync(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) *IoTAnalyticsDescribeChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DescribeChannel", input)
-	return &IotanalyticsDescribeChannelFuture{Future: future}
+	return &IoTAnalyticsDescribeChannelFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DescribeDataset(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) (*iotanalytics.DescribeDatasetOutput, error) {
@@ -608,9 +642,9 @@ func (a *IoTAnalyticsStub) DescribeDataset(ctx workflow.Context, input *iotanaly
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DescribeDatasetAsync(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) *IotanalyticsDescribeDatasetFuture {
+func (a *IoTAnalyticsStub) DescribeDatasetAsync(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) *IoTAnalyticsDescribeDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DescribeDataset", input)
-	return &IotanalyticsDescribeDatasetFuture{Future: future}
+	return &IoTAnalyticsDescribeDatasetFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DescribeDatastore(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) (*iotanalytics.DescribeDatastoreOutput, error) {
@@ -619,9 +653,9 @@ func (a *IoTAnalyticsStub) DescribeDatastore(ctx workflow.Context, input *iotana
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DescribeDatastoreAsync(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) *IotanalyticsDescribeDatastoreFuture {
+func (a *IoTAnalyticsStub) DescribeDatastoreAsync(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) *IoTAnalyticsDescribeDatastoreFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DescribeDatastore", input)
-	return &IotanalyticsDescribeDatastoreFuture{Future: future}
+	return &IoTAnalyticsDescribeDatastoreFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DescribeLoggingOptions(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) (*iotanalytics.DescribeLoggingOptionsOutput, error) {
@@ -630,9 +664,9 @@ func (a *IoTAnalyticsStub) DescribeLoggingOptions(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) *IotanalyticsDescribeLoggingOptionsFuture {
+func (a *IoTAnalyticsStub) DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) *IoTAnalyticsDescribeLoggingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DescribeLoggingOptions", input)
-	return &IotanalyticsDescribeLoggingOptionsFuture{Future: future}
+	return &IoTAnalyticsDescribeLoggingOptionsFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) DescribePipeline(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) (*iotanalytics.DescribePipelineOutput, error) {
@@ -641,9 +675,9 @@ func (a *IoTAnalyticsStub) DescribePipeline(ctx workflow.Context, input *iotanal
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) DescribePipelineAsync(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) *IotanalyticsDescribePipelineFuture {
+func (a *IoTAnalyticsStub) DescribePipelineAsync(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) *IoTAnalyticsDescribePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.DescribePipeline", input)
-	return &IotanalyticsDescribePipelineFuture{Future: future}
+	return &IoTAnalyticsDescribePipelineFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) GetDatasetContent(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) (*iotanalytics.GetDatasetContentOutput, error) {
@@ -652,9 +686,9 @@ func (a *IoTAnalyticsStub) GetDatasetContent(ctx workflow.Context, input *iotana
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) GetDatasetContentAsync(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) *IotanalyticsGetDatasetContentFuture {
+func (a *IoTAnalyticsStub) GetDatasetContentAsync(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) *IoTAnalyticsGetDatasetContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.GetDatasetContent", input)
-	return &IotanalyticsGetDatasetContentFuture{Future: future}
+	return &IoTAnalyticsGetDatasetContentFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) ListChannels(ctx workflow.Context, input *iotanalytics.ListChannelsInput) (*iotanalytics.ListChannelsOutput, error) {
@@ -663,9 +697,9 @@ func (a *IoTAnalyticsStub) ListChannels(ctx workflow.Context, input *iotanalytic
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) ListChannelsAsync(ctx workflow.Context, input *iotanalytics.ListChannelsInput) *IotanalyticsListChannelsFuture {
+func (a *IoTAnalyticsStub) ListChannelsAsync(ctx workflow.Context, input *iotanalytics.ListChannelsInput) *IoTAnalyticsListChannelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.ListChannels", input)
-	return &IotanalyticsListChannelsFuture{Future: future}
+	return &IoTAnalyticsListChannelsFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) ListDatasetContents(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) (*iotanalytics.ListDatasetContentsOutput, error) {
@@ -674,9 +708,9 @@ func (a *IoTAnalyticsStub) ListDatasetContents(ctx workflow.Context, input *iota
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) ListDatasetContentsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) *IotanalyticsListDatasetContentsFuture {
+func (a *IoTAnalyticsStub) ListDatasetContentsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) *IoTAnalyticsListDatasetContentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.ListDatasetContents", input)
-	return &IotanalyticsListDatasetContentsFuture{Future: future}
+	return &IoTAnalyticsListDatasetContentsFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) ListDatasets(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) (*iotanalytics.ListDatasetsOutput, error) {
@@ -685,9 +719,9 @@ func (a *IoTAnalyticsStub) ListDatasets(ctx workflow.Context, input *iotanalytic
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) ListDatasetsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) *IotanalyticsListDatasetsFuture {
+func (a *IoTAnalyticsStub) ListDatasetsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) *IoTAnalyticsListDatasetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.ListDatasets", input)
-	return &IotanalyticsListDatasetsFuture{Future: future}
+	return &IoTAnalyticsListDatasetsFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) ListDatastores(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) (*iotanalytics.ListDatastoresOutput, error) {
@@ -696,9 +730,9 @@ func (a *IoTAnalyticsStub) ListDatastores(ctx workflow.Context, input *iotanalyt
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) ListDatastoresAsync(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) *IotanalyticsListDatastoresFuture {
+func (a *IoTAnalyticsStub) ListDatastoresAsync(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) *IoTAnalyticsListDatastoresFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.ListDatastores", input)
-	return &IotanalyticsListDatastoresFuture{Future: future}
+	return &IoTAnalyticsListDatastoresFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) ListPipelines(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) (*iotanalytics.ListPipelinesOutput, error) {
@@ -707,9 +741,9 @@ func (a *IoTAnalyticsStub) ListPipelines(ctx workflow.Context, input *iotanalyti
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) ListPipelinesAsync(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) *IotanalyticsListPipelinesFuture {
+func (a *IoTAnalyticsStub) ListPipelinesAsync(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) *IoTAnalyticsListPipelinesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.ListPipelines", input)
-	return &IotanalyticsListPipelinesFuture{Future: future}
+	return &IoTAnalyticsListPipelinesFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) ListTagsForResource(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) (*iotanalytics.ListTagsForResourceOutput, error) {
@@ -718,9 +752,9 @@ func (a *IoTAnalyticsStub) ListTagsForResource(ctx workflow.Context, input *iota
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) ListTagsForResourceAsync(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) *IotanalyticsListTagsForResourceFuture {
+func (a *IoTAnalyticsStub) ListTagsForResourceAsync(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) *IoTAnalyticsListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.ListTagsForResource", input)
-	return &IotanalyticsListTagsForResourceFuture{Future: future}
+	return &IoTAnalyticsListTagsForResourceFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) PutLoggingOptions(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) (*iotanalytics.PutLoggingOptionsOutput, error) {
@@ -729,9 +763,9 @@ func (a *IoTAnalyticsStub) PutLoggingOptions(ctx workflow.Context, input *iotana
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) PutLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) *IotanalyticsPutLoggingOptionsFuture {
+func (a *IoTAnalyticsStub) PutLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) *IoTAnalyticsPutLoggingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.PutLoggingOptions", input)
-	return &IotanalyticsPutLoggingOptionsFuture{Future: future}
+	return &IoTAnalyticsPutLoggingOptionsFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) RunPipelineActivity(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) (*iotanalytics.RunPipelineActivityOutput, error) {
@@ -740,9 +774,9 @@ func (a *IoTAnalyticsStub) RunPipelineActivity(ctx workflow.Context, input *iota
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) RunPipelineActivityAsync(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) *IotanalyticsRunPipelineActivityFuture {
+func (a *IoTAnalyticsStub) RunPipelineActivityAsync(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) *IoTAnalyticsRunPipelineActivityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.RunPipelineActivity", input)
-	return &IotanalyticsRunPipelineActivityFuture{Future: future}
+	return &IoTAnalyticsRunPipelineActivityFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) SampleChannelData(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) (*iotanalytics.SampleChannelDataOutput, error) {
@@ -751,9 +785,9 @@ func (a *IoTAnalyticsStub) SampleChannelData(ctx workflow.Context, input *iotana
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) SampleChannelDataAsync(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) *IotanalyticsSampleChannelDataFuture {
+func (a *IoTAnalyticsStub) SampleChannelDataAsync(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) *IoTAnalyticsSampleChannelDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.SampleChannelData", input)
-	return &IotanalyticsSampleChannelDataFuture{Future: future}
+	return &IoTAnalyticsSampleChannelDataFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) StartPipelineReprocessing(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) (*iotanalytics.StartPipelineReprocessingOutput, error) {
@@ -762,9 +796,9 @@ func (a *IoTAnalyticsStub) StartPipelineReprocessing(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) StartPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) *IotanalyticsStartPipelineReprocessingFuture {
+func (a *IoTAnalyticsStub) StartPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) *IoTAnalyticsStartPipelineReprocessingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.StartPipelineReprocessing", input)
-	return &IotanalyticsStartPipelineReprocessingFuture{Future: future}
+	return &IoTAnalyticsStartPipelineReprocessingFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) TagResource(ctx workflow.Context, input *iotanalytics.TagResourceInput) (*iotanalytics.TagResourceOutput, error) {
@@ -773,9 +807,9 @@ func (a *IoTAnalyticsStub) TagResource(ctx workflow.Context, input *iotanalytics
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) TagResourceAsync(ctx workflow.Context, input *iotanalytics.TagResourceInput) *IotanalyticsTagResourceFuture {
+func (a *IoTAnalyticsStub) TagResourceAsync(ctx workflow.Context, input *iotanalytics.TagResourceInput) *IoTAnalyticsTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.TagResource", input)
-	return &IotanalyticsTagResourceFuture{Future: future}
+	return &IoTAnalyticsTagResourceFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) UntagResource(ctx workflow.Context, input *iotanalytics.UntagResourceInput) (*iotanalytics.UntagResourceOutput, error) {
@@ -784,9 +818,9 @@ func (a *IoTAnalyticsStub) UntagResource(ctx workflow.Context, input *iotanalyti
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) UntagResourceAsync(ctx workflow.Context, input *iotanalytics.UntagResourceInput) *IotanalyticsUntagResourceFuture {
+func (a *IoTAnalyticsStub) UntagResourceAsync(ctx workflow.Context, input *iotanalytics.UntagResourceInput) *IoTAnalyticsUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.UntagResource", input)
-	return &IotanalyticsUntagResourceFuture{Future: future}
+	return &IoTAnalyticsUntagResourceFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) UpdateChannel(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) (*iotanalytics.UpdateChannelOutput, error) {
@@ -795,9 +829,9 @@ func (a *IoTAnalyticsStub) UpdateChannel(ctx workflow.Context, input *iotanalyti
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) UpdateChannelAsync(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) *IotanalyticsUpdateChannelFuture {
+func (a *IoTAnalyticsStub) UpdateChannelAsync(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) *IoTAnalyticsUpdateChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.UpdateChannel", input)
-	return &IotanalyticsUpdateChannelFuture{Future: future}
+	return &IoTAnalyticsUpdateChannelFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) UpdateDataset(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) (*iotanalytics.UpdateDatasetOutput, error) {
@@ -806,9 +840,9 @@ func (a *IoTAnalyticsStub) UpdateDataset(ctx workflow.Context, input *iotanalyti
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) UpdateDatasetAsync(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) *IotanalyticsUpdateDatasetFuture {
+func (a *IoTAnalyticsStub) UpdateDatasetAsync(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) *IoTAnalyticsUpdateDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.UpdateDataset", input)
-	return &IotanalyticsUpdateDatasetFuture{Future: future}
+	return &IoTAnalyticsUpdateDatasetFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) UpdateDatastore(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) (*iotanalytics.UpdateDatastoreOutput, error) {
@@ -817,9 +851,9 @@ func (a *IoTAnalyticsStub) UpdateDatastore(ctx workflow.Context, input *iotanaly
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) UpdateDatastoreAsync(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) *IotanalyticsUpdateDatastoreFuture {
+func (a *IoTAnalyticsStub) UpdateDatastoreAsync(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) *IoTAnalyticsUpdateDatastoreFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.UpdateDatastore", input)
-	return &IotanalyticsUpdateDatastoreFuture{Future: future}
+	return &IoTAnalyticsUpdateDatastoreFuture{Future: future}
 }
 
 func (a *IoTAnalyticsStub) UpdatePipeline(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) (*iotanalytics.UpdatePipelineOutput, error) {
@@ -828,7 +862,7 @@ func (a *IoTAnalyticsStub) UpdatePipeline(ctx workflow.Context, input *iotanalyt
 	return &output, err
 }
 
-func (a *IoTAnalyticsStub) UpdatePipelineAsync(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) *IotanalyticsUpdatePipelineFuture {
+func (a *IoTAnalyticsStub) UpdatePipelineAsync(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) *IoTAnalyticsUpdatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotanalytics.UpdatePipeline", input)
-	return &IotanalyticsUpdatePipelineFuture{Future: future}
+	return &IoTAnalyticsUpdatePipelineFuture{Future: future}
 }

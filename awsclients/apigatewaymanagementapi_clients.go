@@ -11,13 +11,13 @@ import (
 
 type ApiGatewayManagementApiClient interface {
 	DeleteConnection(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) (*apigatewaymanagementapi.DeleteConnectionOutput, error)
-	DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *ApigatewaymanagementapiDeleteConnectionFuture
+	DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *ApiGatewayManagementApiDeleteConnectionFuture
 
 	GetConnection(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) (*apigatewaymanagementapi.GetConnectionOutput, error)
-	GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *ApigatewaymanagementapiGetConnectionFuture
+	GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *ApiGatewayManagementApiGetConnectionFuture
 
 	PostToConnection(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) (*apigatewaymanagementapi.PostToConnectionOutput, error)
-	PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApigatewaymanagementapiPostToConnectionFuture
+	PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApiGatewayManagementApiPostToConnectionFuture
 }
 
 type ApiGatewayManagementApiStub struct{}
@@ -26,31 +26,34 @@ func NewApiGatewayManagementApiStub() ApiGatewayManagementApiClient {
 	return &ApiGatewayManagementApiStub{}
 }
 
-type ApigatewaymanagementapiDeleteConnectionFuture struct {
+type ApiGatewayManagementApiDeleteConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ApigatewaymanagementapiDeleteConnectionFuture) Get(ctx workflow.Context) (*apigatewaymanagementapi.DeleteConnectionOutput, error) {
+func (r *ApiGatewayManagementApiDeleteConnectionFuture) Get(ctx workflow.Context) (*apigatewaymanagementapi.DeleteConnectionOutput, error) {
 	var output apigatewaymanagementapi.DeleteConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewaymanagementapiGetConnectionFuture struct {
+type ApiGatewayManagementApiGetConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ApigatewaymanagementapiGetConnectionFuture) Get(ctx workflow.Context) (*apigatewaymanagementapi.GetConnectionOutput, error) {
+func (r *ApiGatewayManagementApiGetConnectionFuture) Get(ctx workflow.Context) (*apigatewaymanagementapi.GetConnectionOutput, error) {
 	var output apigatewaymanagementapi.GetConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewaymanagementapiPostToConnectionFuture struct {
+type ApiGatewayManagementApiPostToConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ApigatewaymanagementapiPostToConnectionFuture) Get(ctx workflow.Context) (*apigatewaymanagementapi.PostToConnectionOutput, error) {
+func (r *ApiGatewayManagementApiPostToConnectionFuture) Get(ctx workflow.Context) (*apigatewaymanagementapi.PostToConnectionOutput, error) {
 	var output apigatewaymanagementapi.PostToConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -62,9 +65,9 @@ func (a *ApiGatewayManagementApiStub) DeleteConnection(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ApiGatewayManagementApiStub) DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *ApigatewaymanagementapiDeleteConnectionFuture {
+func (a *ApiGatewayManagementApiStub) DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *ApiGatewayManagementApiDeleteConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.DeleteConnection", input)
-	return &ApigatewaymanagementapiDeleteConnectionFuture{Future: future}
+	return &ApiGatewayManagementApiDeleteConnectionFuture{Future: future}
 }
 
 func (a *ApiGatewayManagementApiStub) GetConnection(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) (*apigatewaymanagementapi.GetConnectionOutput, error) {
@@ -73,9 +76,9 @@ func (a *ApiGatewayManagementApiStub) GetConnection(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ApiGatewayManagementApiStub) GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *ApigatewaymanagementapiGetConnectionFuture {
+func (a *ApiGatewayManagementApiStub) GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *ApiGatewayManagementApiGetConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.GetConnection", input)
-	return &ApigatewaymanagementapiGetConnectionFuture{Future: future}
+	return &ApiGatewayManagementApiGetConnectionFuture{Future: future}
 }
 
 func (a *ApiGatewayManagementApiStub) PostToConnection(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) (*apigatewaymanagementapi.PostToConnectionOutput, error) {
@@ -84,7 +87,7 @@ func (a *ApiGatewayManagementApiStub) PostToConnection(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ApiGatewayManagementApiStub) PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApigatewaymanagementapiPostToConnectionFuture {
+func (a *ApiGatewayManagementApiStub) PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApiGatewayManagementApiPostToConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.PostToConnection", input)
-	return &ApigatewaymanagementapiPostToConnectionFuture{Future: future}
+	return &ApiGatewayManagementApiPostToConnectionFuture{Future: future}
 }

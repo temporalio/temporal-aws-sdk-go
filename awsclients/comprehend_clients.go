@@ -186,6 +186,7 @@ func NewComprehendStub() ComprehendClient {
 }
 
 type ComprehendBatchDetectDominantLanguageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +197,7 @@ func (r *ComprehendBatchDetectDominantLanguageFuture) Get(ctx workflow.Context) 
 }
 
 type ComprehendBatchDetectEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +208,7 @@ func (r *ComprehendBatchDetectEntitiesFuture) Get(ctx workflow.Context) (*compre
 }
 
 type ComprehendBatchDetectKeyPhrasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +219,7 @@ func (r *ComprehendBatchDetectKeyPhrasesFuture) Get(ctx workflow.Context) (*comp
 }
 
 type ComprehendBatchDetectSentimentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -226,6 +230,7 @@ func (r *ComprehendBatchDetectSentimentFuture) Get(ctx workflow.Context) (*compr
 }
 
 type ComprehendBatchDetectSyntaxFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -236,6 +241,7 @@ func (r *ComprehendBatchDetectSyntaxFuture) Get(ctx workflow.Context) (*comprehe
 }
 
 type ComprehendClassifyDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -246,6 +252,7 @@ func (r *ComprehendClassifyDocumentFuture) Get(ctx workflow.Context) (*comprehen
 }
 
 type ComprehendCreateDocumentClassifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -256,6 +263,7 @@ func (r *ComprehendCreateDocumentClassifierFuture) Get(ctx workflow.Context) (*c
 }
 
 type ComprehendCreateEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -266,6 +274,7 @@ func (r *ComprehendCreateEndpointFuture) Get(ctx workflow.Context) (*comprehend.
 }
 
 type ComprehendCreateEntityRecognizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -276,6 +285,7 @@ func (r *ComprehendCreateEntityRecognizerFuture) Get(ctx workflow.Context) (*com
 }
 
 type ComprehendDeleteDocumentClassifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -286,6 +296,7 @@ func (r *ComprehendDeleteDocumentClassifierFuture) Get(ctx workflow.Context) (*c
 }
 
 type ComprehendDeleteEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -296,6 +307,7 @@ func (r *ComprehendDeleteEndpointFuture) Get(ctx workflow.Context) (*comprehend.
 }
 
 type ComprehendDeleteEntityRecognizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -306,6 +318,7 @@ func (r *ComprehendDeleteEntityRecognizerFuture) Get(ctx workflow.Context) (*com
 }
 
 type ComprehendDescribeDocumentClassificationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +329,7 @@ func (r *ComprehendDescribeDocumentClassificationJobFuture) Get(ctx workflow.Con
 }
 
 type ComprehendDescribeDocumentClassifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -326,6 +340,7 @@ func (r *ComprehendDescribeDocumentClassifierFuture) Get(ctx workflow.Context) (
 }
 
 type ComprehendDescribeDominantLanguageDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -336,6 +351,7 @@ func (r *ComprehendDescribeDominantLanguageDetectionJobFuture) Get(ctx workflow.
 }
 
 type ComprehendDescribeEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -346,6 +362,7 @@ func (r *ComprehendDescribeEndpointFuture) Get(ctx workflow.Context) (*comprehen
 }
 
 type ComprehendDescribeEntitiesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -356,6 +373,7 @@ func (r *ComprehendDescribeEntitiesDetectionJobFuture) Get(ctx workflow.Context)
 }
 
 type ComprehendDescribeEntityRecognizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -366,6 +384,7 @@ func (r *ComprehendDescribeEntityRecognizerFuture) Get(ctx workflow.Context) (*c
 }
 
 type ComprehendDescribeKeyPhrasesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -376,6 +395,7 @@ func (r *ComprehendDescribeKeyPhrasesDetectionJobFuture) Get(ctx workflow.Contex
 }
 
 type ComprehendDescribePiiEntitiesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -386,6 +406,7 @@ func (r *ComprehendDescribePiiEntitiesDetectionJobFuture) Get(ctx workflow.Conte
 }
 
 type ComprehendDescribeSentimentDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -396,6 +417,7 @@ func (r *ComprehendDescribeSentimentDetectionJobFuture) Get(ctx workflow.Context
 }
 
 type ComprehendDescribeTopicsDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -406,6 +428,7 @@ func (r *ComprehendDescribeTopicsDetectionJobFuture) Get(ctx workflow.Context) (
 }
 
 type ComprehendDetectDominantLanguageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -416,6 +439,7 @@ func (r *ComprehendDetectDominantLanguageFuture) Get(ctx workflow.Context) (*com
 }
 
 type ComprehendDetectEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -426,6 +450,7 @@ func (r *ComprehendDetectEntitiesFuture) Get(ctx workflow.Context) (*comprehend.
 }
 
 type ComprehendDetectKeyPhrasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -436,6 +461,7 @@ func (r *ComprehendDetectKeyPhrasesFuture) Get(ctx workflow.Context) (*comprehen
 }
 
 type ComprehendDetectPiiEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -446,6 +472,7 @@ func (r *ComprehendDetectPiiEntitiesFuture) Get(ctx workflow.Context) (*comprehe
 }
 
 type ComprehendDetectSentimentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -456,6 +483,7 @@ func (r *ComprehendDetectSentimentFuture) Get(ctx workflow.Context) (*comprehend
 }
 
 type ComprehendDetectSyntaxFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -466,6 +494,7 @@ func (r *ComprehendDetectSyntaxFuture) Get(ctx workflow.Context) (*comprehend.De
 }
 
 type ComprehendListDocumentClassificationJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -476,6 +505,7 @@ func (r *ComprehendListDocumentClassificationJobsFuture) Get(ctx workflow.Contex
 }
 
 type ComprehendListDocumentClassifiersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -486,6 +516,7 @@ func (r *ComprehendListDocumentClassifiersFuture) Get(ctx workflow.Context) (*co
 }
 
 type ComprehendListDominantLanguageDetectionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -496,6 +527,7 @@ func (r *ComprehendListDominantLanguageDetectionJobsFuture) Get(ctx workflow.Con
 }
 
 type ComprehendListEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -506,6 +538,7 @@ func (r *ComprehendListEndpointsFuture) Get(ctx workflow.Context) (*comprehend.L
 }
 
 type ComprehendListEntitiesDetectionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -516,6 +549,7 @@ func (r *ComprehendListEntitiesDetectionJobsFuture) Get(ctx workflow.Context) (*
 }
 
 type ComprehendListEntityRecognizersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -526,6 +560,7 @@ func (r *ComprehendListEntityRecognizersFuture) Get(ctx workflow.Context) (*comp
 }
 
 type ComprehendListKeyPhrasesDetectionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -536,6 +571,7 @@ func (r *ComprehendListKeyPhrasesDetectionJobsFuture) Get(ctx workflow.Context) 
 }
 
 type ComprehendListPiiEntitiesDetectionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -546,6 +582,7 @@ func (r *ComprehendListPiiEntitiesDetectionJobsFuture) Get(ctx workflow.Context)
 }
 
 type ComprehendListSentimentDetectionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -556,6 +593,7 @@ func (r *ComprehendListSentimentDetectionJobsFuture) Get(ctx workflow.Context) (
 }
 
 type ComprehendListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -566,6 +604,7 @@ func (r *ComprehendListTagsForResourceFuture) Get(ctx workflow.Context) (*compre
 }
 
 type ComprehendListTopicsDetectionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -576,6 +615,7 @@ func (r *ComprehendListTopicsDetectionJobsFuture) Get(ctx workflow.Context) (*co
 }
 
 type ComprehendStartDocumentClassificationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -586,6 +626,7 @@ func (r *ComprehendStartDocumentClassificationJobFuture) Get(ctx workflow.Contex
 }
 
 type ComprehendStartDominantLanguageDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -596,6 +637,7 @@ func (r *ComprehendStartDominantLanguageDetectionJobFuture) Get(ctx workflow.Con
 }
 
 type ComprehendStartEntitiesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -606,6 +648,7 @@ func (r *ComprehendStartEntitiesDetectionJobFuture) Get(ctx workflow.Context) (*
 }
 
 type ComprehendStartKeyPhrasesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -616,6 +659,7 @@ func (r *ComprehendStartKeyPhrasesDetectionJobFuture) Get(ctx workflow.Context) 
 }
 
 type ComprehendStartPiiEntitiesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -626,6 +670,7 @@ func (r *ComprehendStartPiiEntitiesDetectionJobFuture) Get(ctx workflow.Context)
 }
 
 type ComprehendStartSentimentDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -636,6 +681,7 @@ func (r *ComprehendStartSentimentDetectionJobFuture) Get(ctx workflow.Context) (
 }
 
 type ComprehendStartTopicsDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -646,6 +692,7 @@ func (r *ComprehendStartTopicsDetectionJobFuture) Get(ctx workflow.Context) (*co
 }
 
 type ComprehendStopDominantLanguageDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -656,6 +703,7 @@ func (r *ComprehendStopDominantLanguageDetectionJobFuture) Get(ctx workflow.Cont
 }
 
 type ComprehendStopEntitiesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -666,6 +714,7 @@ func (r *ComprehendStopEntitiesDetectionJobFuture) Get(ctx workflow.Context) (*c
 }
 
 type ComprehendStopKeyPhrasesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -676,6 +725,7 @@ func (r *ComprehendStopKeyPhrasesDetectionJobFuture) Get(ctx workflow.Context) (
 }
 
 type ComprehendStopPiiEntitiesDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -686,6 +736,7 @@ func (r *ComprehendStopPiiEntitiesDetectionJobFuture) Get(ctx workflow.Context) 
 }
 
 type ComprehendStopSentimentDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -696,6 +747,7 @@ func (r *ComprehendStopSentimentDetectionJobFuture) Get(ctx workflow.Context) (*
 }
 
 type ComprehendStopTrainingDocumentClassifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -706,6 +758,7 @@ func (r *ComprehendStopTrainingDocumentClassifierFuture) Get(ctx workflow.Contex
 }
 
 type ComprehendStopTrainingEntityRecognizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -716,6 +769,7 @@ func (r *ComprehendStopTrainingEntityRecognizerFuture) Get(ctx workflow.Context)
 }
 
 type ComprehendTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -726,6 +780,7 @@ func (r *ComprehendTagResourceFuture) Get(ctx workflow.Context) (*comprehend.Tag
 }
 
 type ComprehendUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -736,6 +791,7 @@ func (r *ComprehendUntagResourceFuture) Get(ctx workflow.Context) (*comprehend.U
 }
 
 type ComprehendUpdateEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

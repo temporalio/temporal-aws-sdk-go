@@ -90,6 +90,7 @@ func NewKendraStub() KendraClient {
 }
 
 type KendraBatchDeleteDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -100,6 +101,7 @@ func (r *KendraBatchDeleteDocumentFuture) Get(ctx workflow.Context) (*kendra.Bat
 }
 
 type KendraBatchPutDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -110,6 +112,7 @@ func (r *KendraBatchPutDocumentFuture) Get(ctx workflow.Context) (*kendra.BatchP
 }
 
 type KendraCreateDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -120,6 +123,7 @@ func (r *KendraCreateDataSourceFuture) Get(ctx workflow.Context) (*kendra.Create
 }
 
 type KendraCreateFaqFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -130,6 +134,7 @@ func (r *KendraCreateFaqFuture) Get(ctx workflow.Context) (*kendra.CreateFaqOutp
 }
 
 type KendraCreateIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -140,6 +145,7 @@ func (r *KendraCreateIndexFuture) Get(ctx workflow.Context) (*kendra.CreateIndex
 }
 
 type KendraDeleteDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -150,6 +156,7 @@ func (r *KendraDeleteDataSourceFuture) Get(ctx workflow.Context) (*kendra.Delete
 }
 
 type KendraDeleteFaqFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +167,7 @@ func (r *KendraDeleteFaqFuture) Get(ctx workflow.Context) (*kendra.DeleteFaqOutp
 }
 
 type KendraDeleteIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +178,7 @@ func (r *KendraDeleteIndexFuture) Get(ctx workflow.Context) (*kendra.DeleteIndex
 }
 
 type KendraDescribeDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +189,7 @@ func (r *KendraDescribeDataSourceFuture) Get(ctx workflow.Context) (*kendra.Desc
 }
 
 type KendraDescribeFaqFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -190,6 +200,7 @@ func (r *KendraDescribeFaqFuture) Get(ctx workflow.Context) (*kendra.DescribeFaq
 }
 
 type KendraDescribeIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -200,6 +211,7 @@ func (r *KendraDescribeIndexFuture) Get(ctx workflow.Context) (*kendra.DescribeI
 }
 
 type KendraListDataSourceSyncJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -210,6 +222,7 @@ func (r *KendraListDataSourceSyncJobsFuture) Get(ctx workflow.Context) (*kendra.
 }
 
 type KendraListDataSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -220,6 +233,7 @@ func (r *KendraListDataSourcesFuture) Get(ctx workflow.Context) (*kendra.ListDat
 }
 
 type KendraListFaqsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -230,6 +244,7 @@ func (r *KendraListFaqsFuture) Get(ctx workflow.Context) (*kendra.ListFaqsOutput
 }
 
 type KendraListIndicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -240,6 +255,7 @@ func (r *KendraListIndicesFuture) Get(ctx workflow.Context) (*kendra.ListIndices
 }
 
 type KendraListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -250,6 +266,7 @@ func (r *KendraListTagsForResourceFuture) Get(ctx workflow.Context) (*kendra.Lis
 }
 
 type KendraQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -260,6 +277,7 @@ func (r *KendraQueryFuture) Get(ctx workflow.Context) (*kendra.QueryOutput, erro
 }
 
 type KendraStartDataSourceSyncJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -270,6 +288,7 @@ func (r *KendraStartDataSourceSyncJobFuture) Get(ctx workflow.Context) (*kendra.
 }
 
 type KendraStopDataSourceSyncJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -280,6 +299,7 @@ func (r *KendraStopDataSourceSyncJobFuture) Get(ctx workflow.Context) (*kendra.S
 }
 
 type KendraSubmitFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -290,6 +310,7 @@ func (r *KendraSubmitFeedbackFuture) Get(ctx workflow.Context) (*kendra.SubmitFe
 }
 
 type KendraTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -300,6 +321,7 @@ func (r *KendraTagResourceFuture) Get(ctx workflow.Context) (*kendra.TagResource
 }
 
 type KendraUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -310,6 +332,7 @@ func (r *KendraUntagResourceFuture) Get(ctx workflow.Context) (*kendra.UntagReso
 }
 
 type KendraUpdateDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -320,6 +343,7 @@ func (r *KendraUpdateDataSourceFuture) Get(ctx workflow.Context) (*kendra.Update
 }
 
 type KendraUpdateIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

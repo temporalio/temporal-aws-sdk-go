@@ -39,6 +39,7 @@ func NewMacieStub() MacieClient {
 }
 
 type MacieAssociateMemberAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -49,6 +50,7 @@ func (r *MacieAssociateMemberAccountFuture) Get(ctx workflow.Context) (*macie.As
 }
 
 type MacieAssociateS3ResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -59,6 +61,7 @@ func (r *MacieAssociateS3ResourcesFuture) Get(ctx workflow.Context) (*macie.Asso
 }
 
 type MacieDisassociateMemberAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -69,6 +72,7 @@ func (r *MacieDisassociateMemberAccountFuture) Get(ctx workflow.Context) (*macie
 }
 
 type MacieDisassociateS3ResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -79,6 +83,7 @@ func (r *MacieDisassociateS3ResourcesFuture) Get(ctx workflow.Context) (*macie.D
 }
 
 type MacieListMemberAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -89,6 +94,7 @@ func (r *MacieListMemberAccountsFuture) Get(ctx workflow.Context) (*macie.ListMe
 }
 
 type MacieListS3ResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -99,6 +105,7 @@ func (r *MacieListS3ResourcesFuture) Get(ctx workflow.Context) (*macie.ListS3Res
 }
 
 type MacieUpdateS3ResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

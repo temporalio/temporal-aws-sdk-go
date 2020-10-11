@@ -11,115 +11,115 @@ import (
 
 type SWFClient interface {
 	CountClosedWorkflowExecutions(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error)
-	CountClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) *SwfCountClosedWorkflowExecutionsFuture
+	CountClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) *SWFCountClosedWorkflowExecutionsFuture
 
 	CountOpenWorkflowExecutions(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error)
-	CountOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) *SwfCountOpenWorkflowExecutionsFuture
+	CountOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) *SWFCountOpenWorkflowExecutionsFuture
 
 	CountPendingActivityTasks(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) (*swf.PendingTaskCount, error)
-	CountPendingActivityTasksAsync(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) *SwfCountPendingActivityTasksFuture
+	CountPendingActivityTasksAsync(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) *SWFCountPendingActivityTasksFuture
 
 	CountPendingDecisionTasks(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) (*swf.PendingTaskCount, error)
-	CountPendingDecisionTasksAsync(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) *SwfCountPendingDecisionTasksFuture
+	CountPendingDecisionTasksAsync(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) *SWFCountPendingDecisionTasksFuture
 
 	DeprecateActivityType(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) (*swf.DeprecateActivityTypeOutput, error)
-	DeprecateActivityTypeAsync(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) *SwfDeprecateActivityTypeFuture
+	DeprecateActivityTypeAsync(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) *SWFDeprecateActivityTypeFuture
 
 	DeprecateDomain(ctx workflow.Context, input *swf.DeprecateDomainInput) (*swf.DeprecateDomainOutput, error)
-	DeprecateDomainAsync(ctx workflow.Context, input *swf.DeprecateDomainInput) *SwfDeprecateDomainFuture
+	DeprecateDomainAsync(ctx workflow.Context, input *swf.DeprecateDomainInput) *SWFDeprecateDomainFuture
 
 	DeprecateWorkflowType(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) (*swf.DeprecateWorkflowTypeOutput, error)
-	DeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) *SwfDeprecateWorkflowTypeFuture
+	DeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) *SWFDeprecateWorkflowTypeFuture
 
 	DescribeActivityType(ctx workflow.Context, input *swf.DescribeActivityTypeInput) (*swf.DescribeActivityTypeOutput, error)
-	DescribeActivityTypeAsync(ctx workflow.Context, input *swf.DescribeActivityTypeInput) *SwfDescribeActivityTypeFuture
+	DescribeActivityTypeAsync(ctx workflow.Context, input *swf.DescribeActivityTypeInput) *SWFDescribeActivityTypeFuture
 
 	DescribeDomain(ctx workflow.Context, input *swf.DescribeDomainInput) (*swf.DescribeDomainOutput, error)
-	DescribeDomainAsync(ctx workflow.Context, input *swf.DescribeDomainInput) *SwfDescribeDomainFuture
+	DescribeDomainAsync(ctx workflow.Context, input *swf.DescribeDomainInput) *SWFDescribeDomainFuture
 
 	DescribeWorkflowExecution(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) (*swf.DescribeWorkflowExecutionOutput, error)
-	DescribeWorkflowExecutionAsync(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) *SwfDescribeWorkflowExecutionFuture
+	DescribeWorkflowExecutionAsync(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) *SWFDescribeWorkflowExecutionFuture
 
 	DescribeWorkflowType(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) (*swf.DescribeWorkflowTypeOutput, error)
-	DescribeWorkflowTypeAsync(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) *SwfDescribeWorkflowTypeFuture
+	DescribeWorkflowTypeAsync(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) *SWFDescribeWorkflowTypeFuture
 
 	GetWorkflowExecutionHistory(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) (*swf.GetWorkflowExecutionHistoryOutput, error)
-	GetWorkflowExecutionHistoryAsync(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) *SwfGetWorkflowExecutionHistoryFuture
+	GetWorkflowExecutionHistoryAsync(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) *SWFGetWorkflowExecutionHistoryFuture
 
 	ListActivityTypes(ctx workflow.Context, input *swf.ListActivityTypesInput) (*swf.ListActivityTypesOutput, error)
-	ListActivityTypesAsync(ctx workflow.Context, input *swf.ListActivityTypesInput) *SwfListActivityTypesFuture
+	ListActivityTypesAsync(ctx workflow.Context, input *swf.ListActivityTypesInput) *SWFListActivityTypesFuture
 
 	ListClosedWorkflowExecutions(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error)
-	ListClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) *SwfListClosedWorkflowExecutionsFuture
+	ListClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) *SWFListClosedWorkflowExecutionsFuture
 
 	ListDomains(ctx workflow.Context, input *swf.ListDomainsInput) (*swf.ListDomainsOutput, error)
-	ListDomainsAsync(ctx workflow.Context, input *swf.ListDomainsInput) *SwfListDomainsFuture
+	ListDomainsAsync(ctx workflow.Context, input *swf.ListDomainsInput) *SWFListDomainsFuture
 
 	ListOpenWorkflowExecutions(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error)
-	ListOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) *SwfListOpenWorkflowExecutionsFuture
+	ListOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) *SWFListOpenWorkflowExecutionsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *swf.ListTagsForResourceInput) (*swf.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *swf.ListTagsForResourceInput) *SwfListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *swf.ListTagsForResourceInput) *SWFListTagsForResourceFuture
 
 	ListWorkflowTypes(ctx workflow.Context, input *swf.ListWorkflowTypesInput) (*swf.ListWorkflowTypesOutput, error)
-	ListWorkflowTypesAsync(ctx workflow.Context, input *swf.ListWorkflowTypesInput) *SwfListWorkflowTypesFuture
+	ListWorkflowTypesAsync(ctx workflow.Context, input *swf.ListWorkflowTypesInput) *SWFListWorkflowTypesFuture
 
 	PollForActivityTask(ctx workflow.Context, input *swf.PollForActivityTaskInput) (*swf.PollForActivityTaskOutput, error)
-	PollForActivityTaskAsync(ctx workflow.Context, input *swf.PollForActivityTaskInput) *SwfPollForActivityTaskFuture
+	PollForActivityTaskAsync(ctx workflow.Context, input *swf.PollForActivityTaskInput) *SWFPollForActivityTaskFuture
 
 	PollForDecisionTask(ctx workflow.Context, input *swf.PollForDecisionTaskInput) (*swf.PollForDecisionTaskOutput, error)
-	PollForDecisionTaskAsync(ctx workflow.Context, input *swf.PollForDecisionTaskInput) *SwfPollForDecisionTaskFuture
+	PollForDecisionTaskAsync(ctx workflow.Context, input *swf.PollForDecisionTaskInput) *SWFPollForDecisionTaskFuture
 
 	RecordActivityTaskHeartbeat(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) (*swf.RecordActivityTaskHeartbeatOutput, error)
-	RecordActivityTaskHeartbeatAsync(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) *SwfRecordActivityTaskHeartbeatFuture
+	RecordActivityTaskHeartbeatAsync(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) *SWFRecordActivityTaskHeartbeatFuture
 
 	RegisterActivityType(ctx workflow.Context, input *swf.RegisterActivityTypeInput) (*swf.RegisterActivityTypeOutput, error)
-	RegisterActivityTypeAsync(ctx workflow.Context, input *swf.RegisterActivityTypeInput) *SwfRegisterActivityTypeFuture
+	RegisterActivityTypeAsync(ctx workflow.Context, input *swf.RegisterActivityTypeInput) *SWFRegisterActivityTypeFuture
 
 	RegisterDomain(ctx workflow.Context, input *swf.RegisterDomainInput) (*swf.RegisterDomainOutput, error)
-	RegisterDomainAsync(ctx workflow.Context, input *swf.RegisterDomainInput) *SwfRegisterDomainFuture
+	RegisterDomainAsync(ctx workflow.Context, input *swf.RegisterDomainInput) *SWFRegisterDomainFuture
 
 	RegisterWorkflowType(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) (*swf.RegisterWorkflowTypeOutput, error)
-	RegisterWorkflowTypeAsync(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) *SwfRegisterWorkflowTypeFuture
+	RegisterWorkflowTypeAsync(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) *SWFRegisterWorkflowTypeFuture
 
 	RequestCancelWorkflowExecution(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) (*swf.RequestCancelWorkflowExecutionOutput, error)
-	RequestCancelWorkflowExecutionAsync(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) *SwfRequestCancelWorkflowExecutionFuture
+	RequestCancelWorkflowExecutionAsync(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) *SWFRequestCancelWorkflowExecutionFuture
 
 	RespondActivityTaskCanceled(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) (*swf.RespondActivityTaskCanceledOutput, error)
-	RespondActivityTaskCanceledAsync(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) *SwfRespondActivityTaskCanceledFuture
+	RespondActivityTaskCanceledAsync(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) *SWFRespondActivityTaskCanceledFuture
 
 	RespondActivityTaskCompleted(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) (*swf.RespondActivityTaskCompletedOutput, error)
-	RespondActivityTaskCompletedAsync(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) *SwfRespondActivityTaskCompletedFuture
+	RespondActivityTaskCompletedAsync(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) *SWFRespondActivityTaskCompletedFuture
 
 	RespondActivityTaskFailed(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) (*swf.RespondActivityTaskFailedOutput, error)
-	RespondActivityTaskFailedAsync(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) *SwfRespondActivityTaskFailedFuture
+	RespondActivityTaskFailedAsync(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) *SWFRespondActivityTaskFailedFuture
 
 	RespondDecisionTaskCompleted(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) (*swf.RespondDecisionTaskCompletedOutput, error)
-	RespondDecisionTaskCompletedAsync(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) *SwfRespondDecisionTaskCompletedFuture
+	RespondDecisionTaskCompletedAsync(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) *SWFRespondDecisionTaskCompletedFuture
 
 	SignalWorkflowExecution(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) (*swf.SignalWorkflowExecutionOutput, error)
-	SignalWorkflowExecutionAsync(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) *SwfSignalWorkflowExecutionFuture
+	SignalWorkflowExecutionAsync(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) *SWFSignalWorkflowExecutionFuture
 
 	StartWorkflowExecution(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) (*swf.StartWorkflowExecutionOutput, error)
-	StartWorkflowExecutionAsync(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) *SwfStartWorkflowExecutionFuture
+	StartWorkflowExecutionAsync(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) *SWFStartWorkflowExecutionFuture
 
 	TagResource(ctx workflow.Context, input *swf.TagResourceInput) (*swf.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *swf.TagResourceInput) *SwfTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *swf.TagResourceInput) *SWFTagResourceFuture
 
 	TerminateWorkflowExecution(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) (*swf.TerminateWorkflowExecutionOutput, error)
-	TerminateWorkflowExecutionAsync(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) *SwfTerminateWorkflowExecutionFuture
+	TerminateWorkflowExecutionAsync(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) *SWFTerminateWorkflowExecutionFuture
 
 	UndeprecateActivityType(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) (*swf.UndeprecateActivityTypeOutput, error)
-	UndeprecateActivityTypeAsync(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) *SwfUndeprecateActivityTypeFuture
+	UndeprecateActivityTypeAsync(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) *SWFUndeprecateActivityTypeFuture
 
 	UndeprecateDomain(ctx workflow.Context, input *swf.UndeprecateDomainInput) (*swf.UndeprecateDomainOutput, error)
-	UndeprecateDomainAsync(ctx workflow.Context, input *swf.UndeprecateDomainInput) *SwfUndeprecateDomainFuture
+	UndeprecateDomainAsync(ctx workflow.Context, input *swf.UndeprecateDomainInput) *SWFUndeprecateDomainFuture
 
 	UndeprecateWorkflowType(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) (*swf.UndeprecateWorkflowTypeOutput, error)
-	UndeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) *SwfUndeprecateWorkflowTypeFuture
+	UndeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) *SWFUndeprecateWorkflowTypeFuture
 
 	UntagResource(ctx workflow.Context, input *swf.UntagResourceInput) (*swf.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *swf.UntagResourceInput) *SwfUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *swf.UntagResourceInput) *SWFUntagResourceFuture
 }
 
 type SWFStub struct{}
@@ -128,371 +128,408 @@ func NewSWFStub() SWFClient {
 	return &SWFStub{}
 }
 
-type SwfCountClosedWorkflowExecutionsFuture struct {
+type SWFCountClosedWorkflowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfCountClosedWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.WorkflowExecutionCount, error) {
+func (r *SWFCountClosedWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.WorkflowExecutionCount, error) {
 	var output swf.WorkflowExecutionCount
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfCountOpenWorkflowExecutionsFuture struct {
+type SWFCountOpenWorkflowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfCountOpenWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.WorkflowExecutionCount, error) {
+func (r *SWFCountOpenWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.WorkflowExecutionCount, error) {
 	var output swf.WorkflowExecutionCount
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfCountPendingActivityTasksFuture struct {
+type SWFCountPendingActivityTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfCountPendingActivityTasksFuture) Get(ctx workflow.Context) (*swf.PendingTaskCount, error) {
+func (r *SWFCountPendingActivityTasksFuture) Get(ctx workflow.Context) (*swf.PendingTaskCount, error) {
 	var output swf.PendingTaskCount
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfCountPendingDecisionTasksFuture struct {
+type SWFCountPendingDecisionTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfCountPendingDecisionTasksFuture) Get(ctx workflow.Context) (*swf.PendingTaskCount, error) {
+func (r *SWFCountPendingDecisionTasksFuture) Get(ctx workflow.Context) (*swf.PendingTaskCount, error) {
 	var output swf.PendingTaskCount
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfDeprecateActivityTypeFuture struct {
+type SWFDeprecateActivityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfDeprecateActivityTypeFuture) Get(ctx workflow.Context) (*swf.DeprecateActivityTypeOutput, error) {
+func (r *SWFDeprecateActivityTypeFuture) Get(ctx workflow.Context) (*swf.DeprecateActivityTypeOutput, error) {
 	var output swf.DeprecateActivityTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfDeprecateDomainFuture struct {
+type SWFDeprecateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfDeprecateDomainFuture) Get(ctx workflow.Context) (*swf.DeprecateDomainOutput, error) {
+func (r *SWFDeprecateDomainFuture) Get(ctx workflow.Context) (*swf.DeprecateDomainOutput, error) {
 	var output swf.DeprecateDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfDeprecateWorkflowTypeFuture struct {
+type SWFDeprecateWorkflowTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfDeprecateWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.DeprecateWorkflowTypeOutput, error) {
+func (r *SWFDeprecateWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.DeprecateWorkflowTypeOutput, error) {
 	var output swf.DeprecateWorkflowTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfDescribeActivityTypeFuture struct {
+type SWFDescribeActivityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfDescribeActivityTypeFuture) Get(ctx workflow.Context) (*swf.DescribeActivityTypeOutput, error) {
+func (r *SWFDescribeActivityTypeFuture) Get(ctx workflow.Context) (*swf.DescribeActivityTypeOutput, error) {
 	var output swf.DescribeActivityTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfDescribeDomainFuture struct {
+type SWFDescribeDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfDescribeDomainFuture) Get(ctx workflow.Context) (*swf.DescribeDomainOutput, error) {
+func (r *SWFDescribeDomainFuture) Get(ctx workflow.Context) (*swf.DescribeDomainOutput, error) {
 	var output swf.DescribeDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfDescribeWorkflowExecutionFuture struct {
+type SWFDescribeWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfDescribeWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.DescribeWorkflowExecutionOutput, error) {
+func (r *SWFDescribeWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.DescribeWorkflowExecutionOutput, error) {
 	var output swf.DescribeWorkflowExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfDescribeWorkflowTypeFuture struct {
+type SWFDescribeWorkflowTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfDescribeWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.DescribeWorkflowTypeOutput, error) {
+func (r *SWFDescribeWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.DescribeWorkflowTypeOutput, error) {
 	var output swf.DescribeWorkflowTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfGetWorkflowExecutionHistoryFuture struct {
+type SWFGetWorkflowExecutionHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfGetWorkflowExecutionHistoryFuture) Get(ctx workflow.Context) (*swf.GetWorkflowExecutionHistoryOutput, error) {
+func (r *SWFGetWorkflowExecutionHistoryFuture) Get(ctx workflow.Context) (*swf.GetWorkflowExecutionHistoryOutput, error) {
 	var output swf.GetWorkflowExecutionHistoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfListActivityTypesFuture struct {
+type SWFListActivityTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfListActivityTypesFuture) Get(ctx workflow.Context) (*swf.ListActivityTypesOutput, error) {
+func (r *SWFListActivityTypesFuture) Get(ctx workflow.Context) (*swf.ListActivityTypesOutput, error) {
 	var output swf.ListActivityTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfListClosedWorkflowExecutionsFuture struct {
+type SWFListClosedWorkflowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfListClosedWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.WorkflowExecutionInfos, error) {
+func (r *SWFListClosedWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.WorkflowExecutionInfos, error) {
 	var output swf.WorkflowExecutionInfos
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfListDomainsFuture struct {
+type SWFListDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfListDomainsFuture) Get(ctx workflow.Context) (*swf.ListDomainsOutput, error) {
+func (r *SWFListDomainsFuture) Get(ctx workflow.Context) (*swf.ListDomainsOutput, error) {
 	var output swf.ListDomainsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfListOpenWorkflowExecutionsFuture struct {
+type SWFListOpenWorkflowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfListOpenWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.WorkflowExecutionInfos, error) {
+func (r *SWFListOpenWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.WorkflowExecutionInfos, error) {
 	var output swf.WorkflowExecutionInfos
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfListTagsForResourceFuture struct {
+type SWFListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfListTagsForResourceFuture) Get(ctx workflow.Context) (*swf.ListTagsForResourceOutput, error) {
+func (r *SWFListTagsForResourceFuture) Get(ctx workflow.Context) (*swf.ListTagsForResourceOutput, error) {
 	var output swf.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfListWorkflowTypesFuture struct {
+type SWFListWorkflowTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfListWorkflowTypesFuture) Get(ctx workflow.Context) (*swf.ListWorkflowTypesOutput, error) {
+func (r *SWFListWorkflowTypesFuture) Get(ctx workflow.Context) (*swf.ListWorkflowTypesOutput, error) {
 	var output swf.ListWorkflowTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfPollForActivityTaskFuture struct {
+type SWFPollForActivityTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfPollForActivityTaskFuture) Get(ctx workflow.Context) (*swf.PollForActivityTaskOutput, error) {
+func (r *SWFPollForActivityTaskFuture) Get(ctx workflow.Context) (*swf.PollForActivityTaskOutput, error) {
 	var output swf.PollForActivityTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfPollForDecisionTaskFuture struct {
+type SWFPollForDecisionTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfPollForDecisionTaskFuture) Get(ctx workflow.Context) (*swf.PollForDecisionTaskOutput, error) {
+func (r *SWFPollForDecisionTaskFuture) Get(ctx workflow.Context) (*swf.PollForDecisionTaskOutput, error) {
 	var output swf.PollForDecisionTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRecordActivityTaskHeartbeatFuture struct {
+type SWFRecordActivityTaskHeartbeatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRecordActivityTaskHeartbeatFuture) Get(ctx workflow.Context) (*swf.RecordActivityTaskHeartbeatOutput, error) {
+func (r *SWFRecordActivityTaskHeartbeatFuture) Get(ctx workflow.Context) (*swf.RecordActivityTaskHeartbeatOutput, error) {
 	var output swf.RecordActivityTaskHeartbeatOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRegisterActivityTypeFuture struct {
+type SWFRegisterActivityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRegisterActivityTypeFuture) Get(ctx workflow.Context) (*swf.RegisterActivityTypeOutput, error) {
+func (r *SWFRegisterActivityTypeFuture) Get(ctx workflow.Context) (*swf.RegisterActivityTypeOutput, error) {
 	var output swf.RegisterActivityTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRegisterDomainFuture struct {
+type SWFRegisterDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRegisterDomainFuture) Get(ctx workflow.Context) (*swf.RegisterDomainOutput, error) {
+func (r *SWFRegisterDomainFuture) Get(ctx workflow.Context) (*swf.RegisterDomainOutput, error) {
 	var output swf.RegisterDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRegisterWorkflowTypeFuture struct {
+type SWFRegisterWorkflowTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRegisterWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.RegisterWorkflowTypeOutput, error) {
+func (r *SWFRegisterWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.RegisterWorkflowTypeOutput, error) {
 	var output swf.RegisterWorkflowTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRequestCancelWorkflowExecutionFuture struct {
+type SWFRequestCancelWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRequestCancelWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.RequestCancelWorkflowExecutionOutput, error) {
+func (r *SWFRequestCancelWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.RequestCancelWorkflowExecutionOutput, error) {
 	var output swf.RequestCancelWorkflowExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRespondActivityTaskCanceledFuture struct {
+type SWFRespondActivityTaskCanceledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRespondActivityTaskCanceledFuture) Get(ctx workflow.Context) (*swf.RespondActivityTaskCanceledOutput, error) {
+func (r *SWFRespondActivityTaskCanceledFuture) Get(ctx workflow.Context) (*swf.RespondActivityTaskCanceledOutput, error) {
 	var output swf.RespondActivityTaskCanceledOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRespondActivityTaskCompletedFuture struct {
+type SWFRespondActivityTaskCompletedFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRespondActivityTaskCompletedFuture) Get(ctx workflow.Context) (*swf.RespondActivityTaskCompletedOutput, error) {
+func (r *SWFRespondActivityTaskCompletedFuture) Get(ctx workflow.Context) (*swf.RespondActivityTaskCompletedOutput, error) {
 	var output swf.RespondActivityTaskCompletedOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRespondActivityTaskFailedFuture struct {
+type SWFRespondActivityTaskFailedFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRespondActivityTaskFailedFuture) Get(ctx workflow.Context) (*swf.RespondActivityTaskFailedOutput, error) {
+func (r *SWFRespondActivityTaskFailedFuture) Get(ctx workflow.Context) (*swf.RespondActivityTaskFailedOutput, error) {
 	var output swf.RespondActivityTaskFailedOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfRespondDecisionTaskCompletedFuture struct {
+type SWFRespondDecisionTaskCompletedFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfRespondDecisionTaskCompletedFuture) Get(ctx workflow.Context) (*swf.RespondDecisionTaskCompletedOutput, error) {
+func (r *SWFRespondDecisionTaskCompletedFuture) Get(ctx workflow.Context) (*swf.RespondDecisionTaskCompletedOutput, error) {
 	var output swf.RespondDecisionTaskCompletedOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfSignalWorkflowExecutionFuture struct {
+type SWFSignalWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfSignalWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.SignalWorkflowExecutionOutput, error) {
+func (r *SWFSignalWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.SignalWorkflowExecutionOutput, error) {
 	var output swf.SignalWorkflowExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfStartWorkflowExecutionFuture struct {
+type SWFStartWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfStartWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.StartWorkflowExecutionOutput, error) {
+func (r *SWFStartWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.StartWorkflowExecutionOutput, error) {
 	var output swf.StartWorkflowExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfTagResourceFuture struct {
+type SWFTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfTagResourceFuture) Get(ctx workflow.Context) (*swf.TagResourceOutput, error) {
+func (r *SWFTagResourceFuture) Get(ctx workflow.Context) (*swf.TagResourceOutput, error) {
 	var output swf.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfTerminateWorkflowExecutionFuture struct {
+type SWFTerminateWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfTerminateWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.TerminateWorkflowExecutionOutput, error) {
+func (r *SWFTerminateWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.TerminateWorkflowExecutionOutput, error) {
 	var output swf.TerminateWorkflowExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfUndeprecateActivityTypeFuture struct {
+type SWFUndeprecateActivityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfUndeprecateActivityTypeFuture) Get(ctx workflow.Context) (*swf.UndeprecateActivityTypeOutput, error) {
+func (r *SWFUndeprecateActivityTypeFuture) Get(ctx workflow.Context) (*swf.UndeprecateActivityTypeOutput, error) {
 	var output swf.UndeprecateActivityTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfUndeprecateDomainFuture struct {
+type SWFUndeprecateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfUndeprecateDomainFuture) Get(ctx workflow.Context) (*swf.UndeprecateDomainOutput, error) {
+func (r *SWFUndeprecateDomainFuture) Get(ctx workflow.Context) (*swf.UndeprecateDomainOutput, error) {
 	var output swf.UndeprecateDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfUndeprecateWorkflowTypeFuture struct {
+type SWFUndeprecateWorkflowTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfUndeprecateWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.UndeprecateWorkflowTypeOutput, error) {
+func (r *SWFUndeprecateWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.UndeprecateWorkflowTypeOutput, error) {
 	var output swf.UndeprecateWorkflowTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SwfUntagResourceFuture struct {
+type SWFUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SwfUntagResourceFuture) Get(ctx workflow.Context) (*swf.UntagResourceOutput, error) {
+func (r *SWFUntagResourceFuture) Get(ctx workflow.Context) (*swf.UntagResourceOutput, error) {
 	var output swf.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -504,9 +541,9 @@ func (a *SWFStub) CountClosedWorkflowExecutions(ctx workflow.Context, input *swf
 	return &output, err
 }
 
-func (a *SWFStub) CountClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) *SwfCountClosedWorkflowExecutionsFuture {
+func (a *SWFStub) CountClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) *SWFCountClosedWorkflowExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.CountClosedWorkflowExecutions", input)
-	return &SwfCountClosedWorkflowExecutionsFuture{Future: future}
+	return &SWFCountClosedWorkflowExecutionsFuture{Future: future}
 }
 
 func (a *SWFStub) CountOpenWorkflowExecutions(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error) {
@@ -515,9 +552,9 @@ func (a *SWFStub) CountOpenWorkflowExecutions(ctx workflow.Context, input *swf.C
 	return &output, err
 }
 
-func (a *SWFStub) CountOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) *SwfCountOpenWorkflowExecutionsFuture {
+func (a *SWFStub) CountOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) *SWFCountOpenWorkflowExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.CountOpenWorkflowExecutions", input)
-	return &SwfCountOpenWorkflowExecutionsFuture{Future: future}
+	return &SWFCountOpenWorkflowExecutionsFuture{Future: future}
 }
 
 func (a *SWFStub) CountPendingActivityTasks(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) (*swf.PendingTaskCount, error) {
@@ -526,9 +563,9 @@ func (a *SWFStub) CountPendingActivityTasks(ctx workflow.Context, input *swf.Cou
 	return &output, err
 }
 
-func (a *SWFStub) CountPendingActivityTasksAsync(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) *SwfCountPendingActivityTasksFuture {
+func (a *SWFStub) CountPendingActivityTasksAsync(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) *SWFCountPendingActivityTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.CountPendingActivityTasks", input)
-	return &SwfCountPendingActivityTasksFuture{Future: future}
+	return &SWFCountPendingActivityTasksFuture{Future: future}
 }
 
 func (a *SWFStub) CountPendingDecisionTasks(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) (*swf.PendingTaskCount, error) {
@@ -537,9 +574,9 @@ func (a *SWFStub) CountPendingDecisionTasks(ctx workflow.Context, input *swf.Cou
 	return &output, err
 }
 
-func (a *SWFStub) CountPendingDecisionTasksAsync(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) *SwfCountPendingDecisionTasksFuture {
+func (a *SWFStub) CountPendingDecisionTasksAsync(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) *SWFCountPendingDecisionTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.CountPendingDecisionTasks", input)
-	return &SwfCountPendingDecisionTasksFuture{Future: future}
+	return &SWFCountPendingDecisionTasksFuture{Future: future}
 }
 
 func (a *SWFStub) DeprecateActivityType(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) (*swf.DeprecateActivityTypeOutput, error) {
@@ -548,9 +585,9 @@ func (a *SWFStub) DeprecateActivityType(ctx workflow.Context, input *swf.Depreca
 	return &output, err
 }
 
-func (a *SWFStub) DeprecateActivityTypeAsync(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) *SwfDeprecateActivityTypeFuture {
+func (a *SWFStub) DeprecateActivityTypeAsync(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) *SWFDeprecateActivityTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.DeprecateActivityType", input)
-	return &SwfDeprecateActivityTypeFuture{Future: future}
+	return &SWFDeprecateActivityTypeFuture{Future: future}
 }
 
 func (a *SWFStub) DeprecateDomain(ctx workflow.Context, input *swf.DeprecateDomainInput) (*swf.DeprecateDomainOutput, error) {
@@ -559,9 +596,9 @@ func (a *SWFStub) DeprecateDomain(ctx workflow.Context, input *swf.DeprecateDoma
 	return &output, err
 }
 
-func (a *SWFStub) DeprecateDomainAsync(ctx workflow.Context, input *swf.DeprecateDomainInput) *SwfDeprecateDomainFuture {
+func (a *SWFStub) DeprecateDomainAsync(ctx workflow.Context, input *swf.DeprecateDomainInput) *SWFDeprecateDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.DeprecateDomain", input)
-	return &SwfDeprecateDomainFuture{Future: future}
+	return &SWFDeprecateDomainFuture{Future: future}
 }
 
 func (a *SWFStub) DeprecateWorkflowType(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) (*swf.DeprecateWorkflowTypeOutput, error) {
@@ -570,9 +607,9 @@ func (a *SWFStub) DeprecateWorkflowType(ctx workflow.Context, input *swf.Depreca
 	return &output, err
 }
 
-func (a *SWFStub) DeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) *SwfDeprecateWorkflowTypeFuture {
+func (a *SWFStub) DeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) *SWFDeprecateWorkflowTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.DeprecateWorkflowType", input)
-	return &SwfDeprecateWorkflowTypeFuture{Future: future}
+	return &SWFDeprecateWorkflowTypeFuture{Future: future}
 }
 
 func (a *SWFStub) DescribeActivityType(ctx workflow.Context, input *swf.DescribeActivityTypeInput) (*swf.DescribeActivityTypeOutput, error) {
@@ -581,9 +618,9 @@ func (a *SWFStub) DescribeActivityType(ctx workflow.Context, input *swf.Describe
 	return &output, err
 }
 
-func (a *SWFStub) DescribeActivityTypeAsync(ctx workflow.Context, input *swf.DescribeActivityTypeInput) *SwfDescribeActivityTypeFuture {
+func (a *SWFStub) DescribeActivityTypeAsync(ctx workflow.Context, input *swf.DescribeActivityTypeInput) *SWFDescribeActivityTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.DescribeActivityType", input)
-	return &SwfDescribeActivityTypeFuture{Future: future}
+	return &SWFDescribeActivityTypeFuture{Future: future}
 }
 
 func (a *SWFStub) DescribeDomain(ctx workflow.Context, input *swf.DescribeDomainInput) (*swf.DescribeDomainOutput, error) {
@@ -592,9 +629,9 @@ func (a *SWFStub) DescribeDomain(ctx workflow.Context, input *swf.DescribeDomain
 	return &output, err
 }
 
-func (a *SWFStub) DescribeDomainAsync(ctx workflow.Context, input *swf.DescribeDomainInput) *SwfDescribeDomainFuture {
+func (a *SWFStub) DescribeDomainAsync(ctx workflow.Context, input *swf.DescribeDomainInput) *SWFDescribeDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.DescribeDomain", input)
-	return &SwfDescribeDomainFuture{Future: future}
+	return &SWFDescribeDomainFuture{Future: future}
 }
 
 func (a *SWFStub) DescribeWorkflowExecution(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) (*swf.DescribeWorkflowExecutionOutput, error) {
@@ -603,9 +640,9 @@ func (a *SWFStub) DescribeWorkflowExecution(ctx workflow.Context, input *swf.Des
 	return &output, err
 }
 
-func (a *SWFStub) DescribeWorkflowExecutionAsync(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) *SwfDescribeWorkflowExecutionFuture {
+func (a *SWFStub) DescribeWorkflowExecutionAsync(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) *SWFDescribeWorkflowExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.DescribeWorkflowExecution", input)
-	return &SwfDescribeWorkflowExecutionFuture{Future: future}
+	return &SWFDescribeWorkflowExecutionFuture{Future: future}
 }
 
 func (a *SWFStub) DescribeWorkflowType(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) (*swf.DescribeWorkflowTypeOutput, error) {
@@ -614,9 +651,9 @@ func (a *SWFStub) DescribeWorkflowType(ctx workflow.Context, input *swf.Describe
 	return &output, err
 }
 
-func (a *SWFStub) DescribeWorkflowTypeAsync(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) *SwfDescribeWorkflowTypeFuture {
+func (a *SWFStub) DescribeWorkflowTypeAsync(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) *SWFDescribeWorkflowTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.DescribeWorkflowType", input)
-	return &SwfDescribeWorkflowTypeFuture{Future: future}
+	return &SWFDescribeWorkflowTypeFuture{Future: future}
 }
 
 func (a *SWFStub) GetWorkflowExecutionHistory(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) (*swf.GetWorkflowExecutionHistoryOutput, error) {
@@ -625,9 +662,9 @@ func (a *SWFStub) GetWorkflowExecutionHistory(ctx workflow.Context, input *swf.G
 	return &output, err
 }
 
-func (a *SWFStub) GetWorkflowExecutionHistoryAsync(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) *SwfGetWorkflowExecutionHistoryFuture {
+func (a *SWFStub) GetWorkflowExecutionHistoryAsync(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) *SWFGetWorkflowExecutionHistoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.GetWorkflowExecutionHistory", input)
-	return &SwfGetWorkflowExecutionHistoryFuture{Future: future}
+	return &SWFGetWorkflowExecutionHistoryFuture{Future: future}
 }
 
 func (a *SWFStub) ListActivityTypes(ctx workflow.Context, input *swf.ListActivityTypesInput) (*swf.ListActivityTypesOutput, error) {
@@ -636,9 +673,9 @@ func (a *SWFStub) ListActivityTypes(ctx workflow.Context, input *swf.ListActivit
 	return &output, err
 }
 
-func (a *SWFStub) ListActivityTypesAsync(ctx workflow.Context, input *swf.ListActivityTypesInput) *SwfListActivityTypesFuture {
+func (a *SWFStub) ListActivityTypesAsync(ctx workflow.Context, input *swf.ListActivityTypesInput) *SWFListActivityTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.ListActivityTypes", input)
-	return &SwfListActivityTypesFuture{Future: future}
+	return &SWFListActivityTypesFuture{Future: future}
 }
 
 func (a *SWFStub) ListClosedWorkflowExecutions(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error) {
@@ -647,9 +684,9 @@ func (a *SWFStub) ListClosedWorkflowExecutions(ctx workflow.Context, input *swf.
 	return &output, err
 }
 
-func (a *SWFStub) ListClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) *SwfListClosedWorkflowExecutionsFuture {
+func (a *SWFStub) ListClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) *SWFListClosedWorkflowExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.ListClosedWorkflowExecutions", input)
-	return &SwfListClosedWorkflowExecutionsFuture{Future: future}
+	return &SWFListClosedWorkflowExecutionsFuture{Future: future}
 }
 
 func (a *SWFStub) ListDomains(ctx workflow.Context, input *swf.ListDomainsInput) (*swf.ListDomainsOutput, error) {
@@ -658,9 +695,9 @@ func (a *SWFStub) ListDomains(ctx workflow.Context, input *swf.ListDomainsInput)
 	return &output, err
 }
 
-func (a *SWFStub) ListDomainsAsync(ctx workflow.Context, input *swf.ListDomainsInput) *SwfListDomainsFuture {
+func (a *SWFStub) ListDomainsAsync(ctx workflow.Context, input *swf.ListDomainsInput) *SWFListDomainsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.ListDomains", input)
-	return &SwfListDomainsFuture{Future: future}
+	return &SWFListDomainsFuture{Future: future}
 }
 
 func (a *SWFStub) ListOpenWorkflowExecutions(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error) {
@@ -669,9 +706,9 @@ func (a *SWFStub) ListOpenWorkflowExecutions(ctx workflow.Context, input *swf.Li
 	return &output, err
 }
 
-func (a *SWFStub) ListOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) *SwfListOpenWorkflowExecutionsFuture {
+func (a *SWFStub) ListOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) *SWFListOpenWorkflowExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.ListOpenWorkflowExecutions", input)
-	return &SwfListOpenWorkflowExecutionsFuture{Future: future}
+	return &SWFListOpenWorkflowExecutionsFuture{Future: future}
 }
 
 func (a *SWFStub) ListTagsForResource(ctx workflow.Context, input *swf.ListTagsForResourceInput) (*swf.ListTagsForResourceOutput, error) {
@@ -680,9 +717,9 @@ func (a *SWFStub) ListTagsForResource(ctx workflow.Context, input *swf.ListTagsF
 	return &output, err
 }
 
-func (a *SWFStub) ListTagsForResourceAsync(ctx workflow.Context, input *swf.ListTagsForResourceInput) *SwfListTagsForResourceFuture {
+func (a *SWFStub) ListTagsForResourceAsync(ctx workflow.Context, input *swf.ListTagsForResourceInput) *SWFListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.ListTagsForResource", input)
-	return &SwfListTagsForResourceFuture{Future: future}
+	return &SWFListTagsForResourceFuture{Future: future}
 }
 
 func (a *SWFStub) ListWorkflowTypes(ctx workflow.Context, input *swf.ListWorkflowTypesInput) (*swf.ListWorkflowTypesOutput, error) {
@@ -691,9 +728,9 @@ func (a *SWFStub) ListWorkflowTypes(ctx workflow.Context, input *swf.ListWorkflo
 	return &output, err
 }
 
-func (a *SWFStub) ListWorkflowTypesAsync(ctx workflow.Context, input *swf.ListWorkflowTypesInput) *SwfListWorkflowTypesFuture {
+func (a *SWFStub) ListWorkflowTypesAsync(ctx workflow.Context, input *swf.ListWorkflowTypesInput) *SWFListWorkflowTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.ListWorkflowTypes", input)
-	return &SwfListWorkflowTypesFuture{Future: future}
+	return &SWFListWorkflowTypesFuture{Future: future}
 }
 
 func (a *SWFStub) PollForActivityTask(ctx workflow.Context, input *swf.PollForActivityTaskInput) (*swf.PollForActivityTaskOutput, error) {
@@ -702,9 +739,9 @@ func (a *SWFStub) PollForActivityTask(ctx workflow.Context, input *swf.PollForAc
 	return &output, err
 }
 
-func (a *SWFStub) PollForActivityTaskAsync(ctx workflow.Context, input *swf.PollForActivityTaskInput) *SwfPollForActivityTaskFuture {
+func (a *SWFStub) PollForActivityTaskAsync(ctx workflow.Context, input *swf.PollForActivityTaskInput) *SWFPollForActivityTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.PollForActivityTask", input)
-	return &SwfPollForActivityTaskFuture{Future: future}
+	return &SWFPollForActivityTaskFuture{Future: future}
 }
 
 func (a *SWFStub) PollForDecisionTask(ctx workflow.Context, input *swf.PollForDecisionTaskInput) (*swf.PollForDecisionTaskOutput, error) {
@@ -713,9 +750,9 @@ func (a *SWFStub) PollForDecisionTask(ctx workflow.Context, input *swf.PollForDe
 	return &output, err
 }
 
-func (a *SWFStub) PollForDecisionTaskAsync(ctx workflow.Context, input *swf.PollForDecisionTaskInput) *SwfPollForDecisionTaskFuture {
+func (a *SWFStub) PollForDecisionTaskAsync(ctx workflow.Context, input *swf.PollForDecisionTaskInput) *SWFPollForDecisionTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.PollForDecisionTask", input)
-	return &SwfPollForDecisionTaskFuture{Future: future}
+	return &SWFPollForDecisionTaskFuture{Future: future}
 }
 
 func (a *SWFStub) RecordActivityTaskHeartbeat(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) (*swf.RecordActivityTaskHeartbeatOutput, error) {
@@ -724,9 +761,9 @@ func (a *SWFStub) RecordActivityTaskHeartbeat(ctx workflow.Context, input *swf.R
 	return &output, err
 }
 
-func (a *SWFStub) RecordActivityTaskHeartbeatAsync(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) *SwfRecordActivityTaskHeartbeatFuture {
+func (a *SWFStub) RecordActivityTaskHeartbeatAsync(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) *SWFRecordActivityTaskHeartbeatFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RecordActivityTaskHeartbeat", input)
-	return &SwfRecordActivityTaskHeartbeatFuture{Future: future}
+	return &SWFRecordActivityTaskHeartbeatFuture{Future: future}
 }
 
 func (a *SWFStub) RegisterActivityType(ctx workflow.Context, input *swf.RegisterActivityTypeInput) (*swf.RegisterActivityTypeOutput, error) {
@@ -735,9 +772,9 @@ func (a *SWFStub) RegisterActivityType(ctx workflow.Context, input *swf.Register
 	return &output, err
 }
 
-func (a *SWFStub) RegisterActivityTypeAsync(ctx workflow.Context, input *swf.RegisterActivityTypeInput) *SwfRegisterActivityTypeFuture {
+func (a *SWFStub) RegisterActivityTypeAsync(ctx workflow.Context, input *swf.RegisterActivityTypeInput) *SWFRegisterActivityTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RegisterActivityType", input)
-	return &SwfRegisterActivityTypeFuture{Future: future}
+	return &SWFRegisterActivityTypeFuture{Future: future}
 }
 
 func (a *SWFStub) RegisterDomain(ctx workflow.Context, input *swf.RegisterDomainInput) (*swf.RegisterDomainOutput, error) {
@@ -746,9 +783,9 @@ func (a *SWFStub) RegisterDomain(ctx workflow.Context, input *swf.RegisterDomain
 	return &output, err
 }
 
-func (a *SWFStub) RegisterDomainAsync(ctx workflow.Context, input *swf.RegisterDomainInput) *SwfRegisterDomainFuture {
+func (a *SWFStub) RegisterDomainAsync(ctx workflow.Context, input *swf.RegisterDomainInput) *SWFRegisterDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RegisterDomain", input)
-	return &SwfRegisterDomainFuture{Future: future}
+	return &SWFRegisterDomainFuture{Future: future}
 }
 
 func (a *SWFStub) RegisterWorkflowType(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) (*swf.RegisterWorkflowTypeOutput, error) {
@@ -757,9 +794,9 @@ func (a *SWFStub) RegisterWorkflowType(ctx workflow.Context, input *swf.Register
 	return &output, err
 }
 
-func (a *SWFStub) RegisterWorkflowTypeAsync(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) *SwfRegisterWorkflowTypeFuture {
+func (a *SWFStub) RegisterWorkflowTypeAsync(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) *SWFRegisterWorkflowTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RegisterWorkflowType", input)
-	return &SwfRegisterWorkflowTypeFuture{Future: future}
+	return &SWFRegisterWorkflowTypeFuture{Future: future}
 }
 
 func (a *SWFStub) RequestCancelWorkflowExecution(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) (*swf.RequestCancelWorkflowExecutionOutput, error) {
@@ -768,9 +805,9 @@ func (a *SWFStub) RequestCancelWorkflowExecution(ctx workflow.Context, input *sw
 	return &output, err
 }
 
-func (a *SWFStub) RequestCancelWorkflowExecutionAsync(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) *SwfRequestCancelWorkflowExecutionFuture {
+func (a *SWFStub) RequestCancelWorkflowExecutionAsync(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) *SWFRequestCancelWorkflowExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RequestCancelWorkflowExecution", input)
-	return &SwfRequestCancelWorkflowExecutionFuture{Future: future}
+	return &SWFRequestCancelWorkflowExecutionFuture{Future: future}
 }
 
 func (a *SWFStub) RespondActivityTaskCanceled(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) (*swf.RespondActivityTaskCanceledOutput, error) {
@@ -779,9 +816,9 @@ func (a *SWFStub) RespondActivityTaskCanceled(ctx workflow.Context, input *swf.R
 	return &output, err
 }
 
-func (a *SWFStub) RespondActivityTaskCanceledAsync(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) *SwfRespondActivityTaskCanceledFuture {
+func (a *SWFStub) RespondActivityTaskCanceledAsync(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) *SWFRespondActivityTaskCanceledFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RespondActivityTaskCanceled", input)
-	return &SwfRespondActivityTaskCanceledFuture{Future: future}
+	return &SWFRespondActivityTaskCanceledFuture{Future: future}
 }
 
 func (a *SWFStub) RespondActivityTaskCompleted(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) (*swf.RespondActivityTaskCompletedOutput, error) {
@@ -790,9 +827,9 @@ func (a *SWFStub) RespondActivityTaskCompleted(ctx workflow.Context, input *swf.
 	return &output, err
 }
 
-func (a *SWFStub) RespondActivityTaskCompletedAsync(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) *SwfRespondActivityTaskCompletedFuture {
+func (a *SWFStub) RespondActivityTaskCompletedAsync(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) *SWFRespondActivityTaskCompletedFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RespondActivityTaskCompleted", input)
-	return &SwfRespondActivityTaskCompletedFuture{Future: future}
+	return &SWFRespondActivityTaskCompletedFuture{Future: future}
 }
 
 func (a *SWFStub) RespondActivityTaskFailed(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) (*swf.RespondActivityTaskFailedOutput, error) {
@@ -801,9 +838,9 @@ func (a *SWFStub) RespondActivityTaskFailed(ctx workflow.Context, input *swf.Res
 	return &output, err
 }
 
-func (a *SWFStub) RespondActivityTaskFailedAsync(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) *SwfRespondActivityTaskFailedFuture {
+func (a *SWFStub) RespondActivityTaskFailedAsync(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) *SWFRespondActivityTaskFailedFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RespondActivityTaskFailed", input)
-	return &SwfRespondActivityTaskFailedFuture{Future: future}
+	return &SWFRespondActivityTaskFailedFuture{Future: future}
 }
 
 func (a *SWFStub) RespondDecisionTaskCompleted(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) (*swf.RespondDecisionTaskCompletedOutput, error) {
@@ -812,9 +849,9 @@ func (a *SWFStub) RespondDecisionTaskCompleted(ctx workflow.Context, input *swf.
 	return &output, err
 }
 
-func (a *SWFStub) RespondDecisionTaskCompletedAsync(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) *SwfRespondDecisionTaskCompletedFuture {
+func (a *SWFStub) RespondDecisionTaskCompletedAsync(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) *SWFRespondDecisionTaskCompletedFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.RespondDecisionTaskCompleted", input)
-	return &SwfRespondDecisionTaskCompletedFuture{Future: future}
+	return &SWFRespondDecisionTaskCompletedFuture{Future: future}
 }
 
 func (a *SWFStub) SignalWorkflowExecution(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) (*swf.SignalWorkflowExecutionOutput, error) {
@@ -823,9 +860,9 @@ func (a *SWFStub) SignalWorkflowExecution(ctx workflow.Context, input *swf.Signa
 	return &output, err
 }
 
-func (a *SWFStub) SignalWorkflowExecutionAsync(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) *SwfSignalWorkflowExecutionFuture {
+func (a *SWFStub) SignalWorkflowExecutionAsync(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) *SWFSignalWorkflowExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.SignalWorkflowExecution", input)
-	return &SwfSignalWorkflowExecutionFuture{Future: future}
+	return &SWFSignalWorkflowExecutionFuture{Future: future}
 }
 
 func (a *SWFStub) StartWorkflowExecution(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) (*swf.StartWorkflowExecutionOutput, error) {
@@ -834,9 +871,9 @@ func (a *SWFStub) StartWorkflowExecution(ctx workflow.Context, input *swf.StartW
 	return &output, err
 }
 
-func (a *SWFStub) StartWorkflowExecutionAsync(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) *SwfStartWorkflowExecutionFuture {
+func (a *SWFStub) StartWorkflowExecutionAsync(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) *SWFStartWorkflowExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.StartWorkflowExecution", input)
-	return &SwfStartWorkflowExecutionFuture{Future: future}
+	return &SWFStartWorkflowExecutionFuture{Future: future}
 }
 
 func (a *SWFStub) TagResource(ctx workflow.Context, input *swf.TagResourceInput) (*swf.TagResourceOutput, error) {
@@ -845,9 +882,9 @@ func (a *SWFStub) TagResource(ctx workflow.Context, input *swf.TagResourceInput)
 	return &output, err
 }
 
-func (a *SWFStub) TagResourceAsync(ctx workflow.Context, input *swf.TagResourceInput) *SwfTagResourceFuture {
+func (a *SWFStub) TagResourceAsync(ctx workflow.Context, input *swf.TagResourceInput) *SWFTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.TagResource", input)
-	return &SwfTagResourceFuture{Future: future}
+	return &SWFTagResourceFuture{Future: future}
 }
 
 func (a *SWFStub) TerminateWorkflowExecution(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) (*swf.TerminateWorkflowExecutionOutput, error) {
@@ -856,9 +893,9 @@ func (a *SWFStub) TerminateWorkflowExecution(ctx workflow.Context, input *swf.Te
 	return &output, err
 }
 
-func (a *SWFStub) TerminateWorkflowExecutionAsync(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) *SwfTerminateWorkflowExecutionFuture {
+func (a *SWFStub) TerminateWorkflowExecutionAsync(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) *SWFTerminateWorkflowExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.TerminateWorkflowExecution", input)
-	return &SwfTerminateWorkflowExecutionFuture{Future: future}
+	return &SWFTerminateWorkflowExecutionFuture{Future: future}
 }
 
 func (a *SWFStub) UndeprecateActivityType(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) (*swf.UndeprecateActivityTypeOutput, error) {
@@ -867,9 +904,9 @@ func (a *SWFStub) UndeprecateActivityType(ctx workflow.Context, input *swf.Undep
 	return &output, err
 }
 
-func (a *SWFStub) UndeprecateActivityTypeAsync(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) *SwfUndeprecateActivityTypeFuture {
+func (a *SWFStub) UndeprecateActivityTypeAsync(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) *SWFUndeprecateActivityTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.UndeprecateActivityType", input)
-	return &SwfUndeprecateActivityTypeFuture{Future: future}
+	return &SWFUndeprecateActivityTypeFuture{Future: future}
 }
 
 func (a *SWFStub) UndeprecateDomain(ctx workflow.Context, input *swf.UndeprecateDomainInput) (*swf.UndeprecateDomainOutput, error) {
@@ -878,9 +915,9 @@ func (a *SWFStub) UndeprecateDomain(ctx workflow.Context, input *swf.Undeprecate
 	return &output, err
 }
 
-func (a *SWFStub) UndeprecateDomainAsync(ctx workflow.Context, input *swf.UndeprecateDomainInput) *SwfUndeprecateDomainFuture {
+func (a *SWFStub) UndeprecateDomainAsync(ctx workflow.Context, input *swf.UndeprecateDomainInput) *SWFUndeprecateDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.UndeprecateDomain", input)
-	return &SwfUndeprecateDomainFuture{Future: future}
+	return &SWFUndeprecateDomainFuture{Future: future}
 }
 
 func (a *SWFStub) UndeprecateWorkflowType(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) (*swf.UndeprecateWorkflowTypeOutput, error) {
@@ -889,9 +926,9 @@ func (a *SWFStub) UndeprecateWorkflowType(ctx workflow.Context, input *swf.Undep
 	return &output, err
 }
 
-func (a *SWFStub) UndeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) *SwfUndeprecateWorkflowTypeFuture {
+func (a *SWFStub) UndeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) *SWFUndeprecateWorkflowTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.UndeprecateWorkflowType", input)
-	return &SwfUndeprecateWorkflowTypeFuture{Future: future}
+	return &SWFUndeprecateWorkflowTypeFuture{Future: future}
 }
 
 func (a *SWFStub) UntagResource(ctx workflow.Context, input *swf.UntagResourceInput) (*swf.UntagResourceOutput, error) {
@@ -900,7 +937,7 @@ func (a *SWFStub) UntagResource(ctx workflow.Context, input *swf.UntagResourceIn
 	return &output, err
 }
 
-func (a *SWFStub) UntagResourceAsync(ctx workflow.Context, input *swf.UntagResourceInput) *SwfUntagResourceFuture {
+func (a *SWFStub) UntagResourceAsync(ctx workflow.Context, input *swf.UntagResourceInput) *SWFUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.swf.UntagResource", input)
-	return &SwfUntagResourceFuture{Future: future}
+	return &SWFUntagResourceFuture{Future: future}
 }

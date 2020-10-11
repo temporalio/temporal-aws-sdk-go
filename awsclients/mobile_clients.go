@@ -45,6 +45,7 @@ func NewMobileStub() MobileClient {
 }
 
 type MobileCreateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -55,6 +56,7 @@ func (r *MobileCreateProjectFuture) Get(ctx workflow.Context) (*mobile.CreatePro
 }
 
 type MobileDeleteProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -65,6 +67,7 @@ func (r *MobileDeleteProjectFuture) Get(ctx workflow.Context) (*mobile.DeletePro
 }
 
 type MobileDescribeBundleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -75,6 +78,7 @@ func (r *MobileDescribeBundleFuture) Get(ctx workflow.Context) (*mobile.Describe
 }
 
 type MobileDescribeProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +89,7 @@ func (r *MobileDescribeProjectFuture) Get(ctx workflow.Context) (*mobile.Describ
 }
 
 type MobileExportBundleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +100,7 @@ func (r *MobileExportBundleFuture) Get(ctx workflow.Context) (*mobile.ExportBund
 }
 
 type MobileExportProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +111,7 @@ func (r *MobileExportProjectFuture) Get(ctx workflow.Context) (*mobile.ExportPro
 }
 
 type MobileListBundlesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +122,7 @@ func (r *MobileListBundlesFuture) Get(ctx workflow.Context) (*mobile.ListBundles
 }
 
 type MobileListProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +133,7 @@ func (r *MobileListProjectsFuture) Get(ctx workflow.Context) (*mobile.ListProjec
 }
 
 type MobileUpdateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

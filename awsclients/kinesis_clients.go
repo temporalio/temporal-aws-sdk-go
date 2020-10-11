@@ -108,6 +108,7 @@ func NewKinesisStub() KinesisClient {
 }
 
 type KinesisAddTagsToStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -118,6 +119,7 @@ func (r *KinesisAddTagsToStreamFuture) Get(ctx workflow.Context) (*kinesis.AddTa
 }
 
 type KinesisCreateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -128,6 +130,7 @@ func (r *KinesisCreateStreamFuture) Get(ctx workflow.Context) (*kinesis.CreateSt
 }
 
 type KinesisDecreaseStreamRetentionPeriodFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -138,6 +141,7 @@ func (r *KinesisDecreaseStreamRetentionPeriodFuture) Get(ctx workflow.Context) (
 }
 
 type KinesisDeleteStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -148,6 +152,7 @@ func (r *KinesisDeleteStreamFuture) Get(ctx workflow.Context) (*kinesis.DeleteSt
 }
 
 type KinesisDeregisterStreamConsumerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -158,6 +163,7 @@ func (r *KinesisDeregisterStreamConsumerFuture) Get(ctx workflow.Context) (*kine
 }
 
 type KinesisDescribeLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -168,6 +174,7 @@ func (r *KinesisDescribeLimitsFuture) Get(ctx workflow.Context) (*kinesis.Descri
 }
 
 type KinesisDescribeStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +185,7 @@ func (r *KinesisDescribeStreamFuture) Get(ctx workflow.Context) (*kinesis.Descri
 }
 
 type KinesisDescribeStreamConsumerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +196,7 @@ func (r *KinesisDescribeStreamConsumerFuture) Get(ctx workflow.Context) (*kinesi
 }
 
 type KinesisDescribeStreamSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +207,7 @@ func (r *KinesisDescribeStreamSummaryFuture) Get(ctx workflow.Context) (*kinesis
 }
 
 type KinesisDisableEnhancedMonitoringFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +218,7 @@ func (r *KinesisDisableEnhancedMonitoringFuture) Get(ctx workflow.Context) (*kin
 }
 
 type KinesisEnableEnhancedMonitoringFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +229,7 @@ func (r *KinesisEnableEnhancedMonitoringFuture) Get(ctx workflow.Context) (*kine
 }
 
 type KinesisGetRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +240,7 @@ func (r *KinesisGetRecordsFuture) Get(ctx workflow.Context) (*kinesis.GetRecords
 }
 
 type KinesisGetShardIteratorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +251,7 @@ func (r *KinesisGetShardIteratorFuture) Get(ctx workflow.Context) (*kinesis.GetS
 }
 
 type KinesisIncreaseStreamRetentionPeriodFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +262,7 @@ func (r *KinesisIncreaseStreamRetentionPeriodFuture) Get(ctx workflow.Context) (
 }
 
 type KinesisListShardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +273,7 @@ func (r *KinesisListShardsFuture) Get(ctx workflow.Context) (*kinesis.ListShards
 }
 
 type KinesisListStreamConsumersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +284,7 @@ func (r *KinesisListStreamConsumersFuture) Get(ctx workflow.Context) (*kinesis.L
 }
 
 type KinesisListStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -278,6 +295,7 @@ func (r *KinesisListStreamsFuture) Get(ctx workflow.Context) (*kinesis.ListStrea
 }
 
 type KinesisListTagsForStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -288,6 +306,7 @@ func (r *KinesisListTagsForStreamFuture) Get(ctx workflow.Context) (*kinesis.Lis
 }
 
 type KinesisMergeShardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +317,7 @@ func (r *KinesisMergeShardsFuture) Get(ctx workflow.Context) (*kinesis.MergeShar
 }
 
 type KinesisPutRecordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +328,7 @@ func (r *KinesisPutRecordFuture) Get(ctx workflow.Context) (*kinesis.PutRecordOu
 }
 
 type KinesisPutRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +339,7 @@ func (r *KinesisPutRecordsFuture) Get(ctx workflow.Context) (*kinesis.PutRecords
 }
 
 type KinesisRegisterStreamConsumerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +350,7 @@ func (r *KinesisRegisterStreamConsumerFuture) Get(ctx workflow.Context) (*kinesi
 }
 
 type KinesisRemoveTagsFromStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +361,7 @@ func (r *KinesisRemoveTagsFromStreamFuture) Get(ctx workflow.Context) (*kinesis.
 }
 
 type KinesisSplitShardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +372,7 @@ func (r *KinesisSplitShardFuture) Get(ctx workflow.Context) (*kinesis.SplitShard
 }
 
 type KinesisStartStreamEncryptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +383,7 @@ func (r *KinesisStartStreamEncryptionFuture) Get(ctx workflow.Context) (*kinesis
 }
 
 type KinesisStopStreamEncryptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +394,7 @@ func (r *KinesisStopStreamEncryptionFuture) Get(ctx workflow.Context) (*kinesis.
 }
 
 type KinesisSubscribeToShardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +405,7 @@ func (r *KinesisSubscribeToShardFuture) Get(ctx workflow.Context) (*kinesis.Subs
 }
 
 type KinesisUpdateShardCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -11,79 +11,79 @@ import (
 
 type GroundStationClient interface {
 	CancelContact(ctx workflow.Context, input *groundstation.CancelContactInput) (*groundstation.CancelContactOutput, error)
-	CancelContactAsync(ctx workflow.Context, input *groundstation.CancelContactInput) *GroundstationCancelContactFuture
+	CancelContactAsync(ctx workflow.Context, input *groundstation.CancelContactInput) *GroundStationCancelContactFuture
 
 	CreateConfig(ctx workflow.Context, input *groundstation.CreateConfigInput) (*groundstation.CreateConfigOutput, error)
-	CreateConfigAsync(ctx workflow.Context, input *groundstation.CreateConfigInput) *GroundstationCreateConfigFuture
+	CreateConfigAsync(ctx workflow.Context, input *groundstation.CreateConfigInput) *GroundStationCreateConfigFuture
 
 	CreateDataflowEndpointGroup(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) (*groundstation.CreateDataflowEndpointGroupOutput, error)
-	CreateDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) *GroundstationCreateDataflowEndpointGroupFuture
+	CreateDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) *GroundStationCreateDataflowEndpointGroupFuture
 
 	CreateMissionProfile(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) (*groundstation.CreateMissionProfileOutput, error)
-	CreateMissionProfileAsync(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) *GroundstationCreateMissionProfileFuture
+	CreateMissionProfileAsync(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) *GroundStationCreateMissionProfileFuture
 
 	DeleteConfig(ctx workflow.Context, input *groundstation.DeleteConfigInput) (*groundstation.DeleteConfigOutput, error)
-	DeleteConfigAsync(ctx workflow.Context, input *groundstation.DeleteConfigInput) *GroundstationDeleteConfigFuture
+	DeleteConfigAsync(ctx workflow.Context, input *groundstation.DeleteConfigInput) *GroundStationDeleteConfigFuture
 
 	DeleteDataflowEndpointGroup(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) (*groundstation.DeleteDataflowEndpointGroupOutput, error)
-	DeleteDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) *GroundstationDeleteDataflowEndpointGroupFuture
+	DeleteDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) *GroundStationDeleteDataflowEndpointGroupFuture
 
 	DeleteMissionProfile(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) (*groundstation.DeleteMissionProfileOutput, error)
-	DeleteMissionProfileAsync(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) *GroundstationDeleteMissionProfileFuture
+	DeleteMissionProfileAsync(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) *GroundStationDeleteMissionProfileFuture
 
 	DescribeContact(ctx workflow.Context, input *groundstation.DescribeContactInput) (*groundstation.DescribeContactOutput, error)
-	DescribeContactAsync(ctx workflow.Context, input *groundstation.DescribeContactInput) *GroundstationDescribeContactFuture
+	DescribeContactAsync(ctx workflow.Context, input *groundstation.DescribeContactInput) *GroundStationDescribeContactFuture
 
 	GetConfig(ctx workflow.Context, input *groundstation.GetConfigInput) (*groundstation.GetConfigOutput, error)
-	GetConfigAsync(ctx workflow.Context, input *groundstation.GetConfigInput) *GroundstationGetConfigFuture
+	GetConfigAsync(ctx workflow.Context, input *groundstation.GetConfigInput) *GroundStationGetConfigFuture
 
 	GetDataflowEndpointGroup(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) (*groundstation.GetDataflowEndpointGroupOutput, error)
-	GetDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) *GroundstationGetDataflowEndpointGroupFuture
+	GetDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) *GroundStationGetDataflowEndpointGroupFuture
 
 	GetMinuteUsage(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) (*groundstation.GetMinuteUsageOutput, error)
-	GetMinuteUsageAsync(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) *GroundstationGetMinuteUsageFuture
+	GetMinuteUsageAsync(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) *GroundStationGetMinuteUsageFuture
 
 	GetMissionProfile(ctx workflow.Context, input *groundstation.GetMissionProfileInput) (*groundstation.GetMissionProfileOutput, error)
-	GetMissionProfileAsync(ctx workflow.Context, input *groundstation.GetMissionProfileInput) *GroundstationGetMissionProfileFuture
+	GetMissionProfileAsync(ctx workflow.Context, input *groundstation.GetMissionProfileInput) *GroundStationGetMissionProfileFuture
 
 	GetSatellite(ctx workflow.Context, input *groundstation.GetSatelliteInput) (*groundstation.GetSatelliteOutput, error)
-	GetSatelliteAsync(ctx workflow.Context, input *groundstation.GetSatelliteInput) *GroundstationGetSatelliteFuture
+	GetSatelliteAsync(ctx workflow.Context, input *groundstation.GetSatelliteInput) *GroundStationGetSatelliteFuture
 
 	ListConfigs(ctx workflow.Context, input *groundstation.ListConfigsInput) (*groundstation.ListConfigsOutput, error)
-	ListConfigsAsync(ctx workflow.Context, input *groundstation.ListConfigsInput) *GroundstationListConfigsFuture
+	ListConfigsAsync(ctx workflow.Context, input *groundstation.ListConfigsInput) *GroundStationListConfigsFuture
 
 	ListContacts(ctx workflow.Context, input *groundstation.ListContactsInput) (*groundstation.ListContactsOutput, error)
-	ListContactsAsync(ctx workflow.Context, input *groundstation.ListContactsInput) *GroundstationListContactsFuture
+	ListContactsAsync(ctx workflow.Context, input *groundstation.ListContactsInput) *GroundStationListContactsFuture
 
 	ListDataflowEndpointGroups(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) (*groundstation.ListDataflowEndpointGroupsOutput, error)
-	ListDataflowEndpointGroupsAsync(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) *GroundstationListDataflowEndpointGroupsFuture
+	ListDataflowEndpointGroupsAsync(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) *GroundStationListDataflowEndpointGroupsFuture
 
 	ListGroundStations(ctx workflow.Context, input *groundstation.ListGroundStationsInput) (*groundstation.ListGroundStationsOutput, error)
-	ListGroundStationsAsync(ctx workflow.Context, input *groundstation.ListGroundStationsInput) *GroundstationListGroundStationsFuture
+	ListGroundStationsAsync(ctx workflow.Context, input *groundstation.ListGroundStationsInput) *GroundStationListGroundStationsFuture
 
 	ListMissionProfiles(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) (*groundstation.ListMissionProfilesOutput, error)
-	ListMissionProfilesAsync(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) *GroundstationListMissionProfilesFuture
+	ListMissionProfilesAsync(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) *GroundStationListMissionProfilesFuture
 
 	ListSatellites(ctx workflow.Context, input *groundstation.ListSatellitesInput) (*groundstation.ListSatellitesOutput, error)
-	ListSatellitesAsync(ctx workflow.Context, input *groundstation.ListSatellitesInput) *GroundstationListSatellitesFuture
+	ListSatellitesAsync(ctx workflow.Context, input *groundstation.ListSatellitesInput) *GroundStationListSatellitesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) (*groundstation.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) *GroundstationListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) *GroundStationListTagsForResourceFuture
 
 	ReserveContact(ctx workflow.Context, input *groundstation.ReserveContactInput) (*groundstation.ReserveContactOutput, error)
-	ReserveContactAsync(ctx workflow.Context, input *groundstation.ReserveContactInput) *GroundstationReserveContactFuture
+	ReserveContactAsync(ctx workflow.Context, input *groundstation.ReserveContactInput) *GroundStationReserveContactFuture
 
 	TagResource(ctx workflow.Context, input *groundstation.TagResourceInput) (*groundstation.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *groundstation.TagResourceInput) *GroundstationTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *groundstation.TagResourceInput) *GroundStationTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *groundstation.UntagResourceInput) (*groundstation.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *groundstation.UntagResourceInput) *GroundstationUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *groundstation.UntagResourceInput) *GroundStationUntagResourceFuture
 
 	UpdateConfig(ctx workflow.Context, input *groundstation.UpdateConfigInput) (*groundstation.UpdateConfigOutput, error)
-	UpdateConfigAsync(ctx workflow.Context, input *groundstation.UpdateConfigInput) *GroundstationUpdateConfigFuture
+	UpdateConfigAsync(ctx workflow.Context, input *groundstation.UpdateConfigInput) *GroundStationUpdateConfigFuture
 
 	UpdateMissionProfile(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) (*groundstation.UpdateMissionProfileOutput, error)
-	UpdateMissionProfileAsync(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) *GroundstationUpdateMissionProfileFuture
+	UpdateMissionProfileAsync(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) *GroundStationUpdateMissionProfileFuture
 }
 
 type GroundStationStub struct{}
@@ -92,251 +92,276 @@ func NewGroundStationStub() GroundStationClient {
 	return &GroundStationStub{}
 }
 
-type GroundstationCancelContactFuture struct {
+type GroundStationCancelContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationCancelContactFuture) Get(ctx workflow.Context) (*groundstation.CancelContactOutput, error) {
+func (r *GroundStationCancelContactFuture) Get(ctx workflow.Context) (*groundstation.CancelContactOutput, error) {
 	var output groundstation.CancelContactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationCreateConfigFuture struct {
+type GroundStationCreateConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationCreateConfigFuture) Get(ctx workflow.Context) (*groundstation.CreateConfigOutput, error) {
+func (r *GroundStationCreateConfigFuture) Get(ctx workflow.Context) (*groundstation.CreateConfigOutput, error) {
 	var output groundstation.CreateConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationCreateDataflowEndpointGroupFuture struct {
+type GroundStationCreateDataflowEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationCreateDataflowEndpointGroupFuture) Get(ctx workflow.Context) (*groundstation.CreateDataflowEndpointGroupOutput, error) {
+func (r *GroundStationCreateDataflowEndpointGroupFuture) Get(ctx workflow.Context) (*groundstation.CreateDataflowEndpointGroupOutput, error) {
 	var output groundstation.CreateDataflowEndpointGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationCreateMissionProfileFuture struct {
+type GroundStationCreateMissionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationCreateMissionProfileFuture) Get(ctx workflow.Context) (*groundstation.CreateMissionProfileOutput, error) {
+func (r *GroundStationCreateMissionProfileFuture) Get(ctx workflow.Context) (*groundstation.CreateMissionProfileOutput, error) {
 	var output groundstation.CreateMissionProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationDeleteConfigFuture struct {
+type GroundStationDeleteConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationDeleteConfigFuture) Get(ctx workflow.Context) (*groundstation.DeleteConfigOutput, error) {
+func (r *GroundStationDeleteConfigFuture) Get(ctx workflow.Context) (*groundstation.DeleteConfigOutput, error) {
 	var output groundstation.DeleteConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationDeleteDataflowEndpointGroupFuture struct {
+type GroundStationDeleteDataflowEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationDeleteDataflowEndpointGroupFuture) Get(ctx workflow.Context) (*groundstation.DeleteDataflowEndpointGroupOutput, error) {
+func (r *GroundStationDeleteDataflowEndpointGroupFuture) Get(ctx workflow.Context) (*groundstation.DeleteDataflowEndpointGroupOutput, error) {
 	var output groundstation.DeleteDataflowEndpointGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationDeleteMissionProfileFuture struct {
+type GroundStationDeleteMissionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationDeleteMissionProfileFuture) Get(ctx workflow.Context) (*groundstation.DeleteMissionProfileOutput, error) {
+func (r *GroundStationDeleteMissionProfileFuture) Get(ctx workflow.Context) (*groundstation.DeleteMissionProfileOutput, error) {
 	var output groundstation.DeleteMissionProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationDescribeContactFuture struct {
+type GroundStationDescribeContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationDescribeContactFuture) Get(ctx workflow.Context) (*groundstation.DescribeContactOutput, error) {
+func (r *GroundStationDescribeContactFuture) Get(ctx workflow.Context) (*groundstation.DescribeContactOutput, error) {
 	var output groundstation.DescribeContactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationGetConfigFuture struct {
+type GroundStationGetConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationGetConfigFuture) Get(ctx workflow.Context) (*groundstation.GetConfigOutput, error) {
+func (r *GroundStationGetConfigFuture) Get(ctx workflow.Context) (*groundstation.GetConfigOutput, error) {
 	var output groundstation.GetConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationGetDataflowEndpointGroupFuture struct {
+type GroundStationGetDataflowEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationGetDataflowEndpointGroupFuture) Get(ctx workflow.Context) (*groundstation.GetDataflowEndpointGroupOutput, error) {
+func (r *GroundStationGetDataflowEndpointGroupFuture) Get(ctx workflow.Context) (*groundstation.GetDataflowEndpointGroupOutput, error) {
 	var output groundstation.GetDataflowEndpointGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationGetMinuteUsageFuture struct {
+type GroundStationGetMinuteUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationGetMinuteUsageFuture) Get(ctx workflow.Context) (*groundstation.GetMinuteUsageOutput, error) {
+func (r *GroundStationGetMinuteUsageFuture) Get(ctx workflow.Context) (*groundstation.GetMinuteUsageOutput, error) {
 	var output groundstation.GetMinuteUsageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationGetMissionProfileFuture struct {
+type GroundStationGetMissionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationGetMissionProfileFuture) Get(ctx workflow.Context) (*groundstation.GetMissionProfileOutput, error) {
+func (r *GroundStationGetMissionProfileFuture) Get(ctx workflow.Context) (*groundstation.GetMissionProfileOutput, error) {
 	var output groundstation.GetMissionProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationGetSatelliteFuture struct {
+type GroundStationGetSatelliteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationGetSatelliteFuture) Get(ctx workflow.Context) (*groundstation.GetSatelliteOutput, error) {
+func (r *GroundStationGetSatelliteFuture) Get(ctx workflow.Context) (*groundstation.GetSatelliteOutput, error) {
 	var output groundstation.GetSatelliteOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationListConfigsFuture struct {
+type GroundStationListConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationListConfigsFuture) Get(ctx workflow.Context) (*groundstation.ListConfigsOutput, error) {
+func (r *GroundStationListConfigsFuture) Get(ctx workflow.Context) (*groundstation.ListConfigsOutput, error) {
 	var output groundstation.ListConfigsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationListContactsFuture struct {
+type GroundStationListContactsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationListContactsFuture) Get(ctx workflow.Context) (*groundstation.ListContactsOutput, error) {
+func (r *GroundStationListContactsFuture) Get(ctx workflow.Context) (*groundstation.ListContactsOutput, error) {
 	var output groundstation.ListContactsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationListDataflowEndpointGroupsFuture struct {
+type GroundStationListDataflowEndpointGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationListDataflowEndpointGroupsFuture) Get(ctx workflow.Context) (*groundstation.ListDataflowEndpointGroupsOutput, error) {
+func (r *GroundStationListDataflowEndpointGroupsFuture) Get(ctx workflow.Context) (*groundstation.ListDataflowEndpointGroupsOutput, error) {
 	var output groundstation.ListDataflowEndpointGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationListGroundStationsFuture struct {
+type GroundStationListGroundStationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationListGroundStationsFuture) Get(ctx workflow.Context) (*groundstation.ListGroundStationsOutput, error) {
+func (r *GroundStationListGroundStationsFuture) Get(ctx workflow.Context) (*groundstation.ListGroundStationsOutput, error) {
 	var output groundstation.ListGroundStationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationListMissionProfilesFuture struct {
+type GroundStationListMissionProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationListMissionProfilesFuture) Get(ctx workflow.Context) (*groundstation.ListMissionProfilesOutput, error) {
+func (r *GroundStationListMissionProfilesFuture) Get(ctx workflow.Context) (*groundstation.ListMissionProfilesOutput, error) {
 	var output groundstation.ListMissionProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationListSatellitesFuture struct {
+type GroundStationListSatellitesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationListSatellitesFuture) Get(ctx workflow.Context) (*groundstation.ListSatellitesOutput, error) {
+func (r *GroundStationListSatellitesFuture) Get(ctx workflow.Context) (*groundstation.ListSatellitesOutput, error) {
 	var output groundstation.ListSatellitesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationListTagsForResourceFuture struct {
+type GroundStationListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationListTagsForResourceFuture) Get(ctx workflow.Context) (*groundstation.ListTagsForResourceOutput, error) {
+func (r *GroundStationListTagsForResourceFuture) Get(ctx workflow.Context) (*groundstation.ListTagsForResourceOutput, error) {
 	var output groundstation.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationReserveContactFuture struct {
+type GroundStationReserveContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationReserveContactFuture) Get(ctx workflow.Context) (*groundstation.ReserveContactOutput, error) {
+func (r *GroundStationReserveContactFuture) Get(ctx workflow.Context) (*groundstation.ReserveContactOutput, error) {
 	var output groundstation.ReserveContactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationTagResourceFuture struct {
+type GroundStationTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationTagResourceFuture) Get(ctx workflow.Context) (*groundstation.TagResourceOutput, error) {
+func (r *GroundStationTagResourceFuture) Get(ctx workflow.Context) (*groundstation.TagResourceOutput, error) {
 	var output groundstation.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationUntagResourceFuture struct {
+type GroundStationUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationUntagResourceFuture) Get(ctx workflow.Context) (*groundstation.UntagResourceOutput, error) {
+func (r *GroundStationUntagResourceFuture) Get(ctx workflow.Context) (*groundstation.UntagResourceOutput, error) {
 	var output groundstation.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationUpdateConfigFuture struct {
+type GroundStationUpdateConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationUpdateConfigFuture) Get(ctx workflow.Context) (*groundstation.UpdateConfigOutput, error) {
+func (r *GroundStationUpdateConfigFuture) Get(ctx workflow.Context) (*groundstation.UpdateConfigOutput, error) {
 	var output groundstation.UpdateConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GroundstationUpdateMissionProfileFuture struct {
+type GroundStationUpdateMissionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GroundstationUpdateMissionProfileFuture) Get(ctx workflow.Context) (*groundstation.UpdateMissionProfileOutput, error) {
+func (r *GroundStationUpdateMissionProfileFuture) Get(ctx workflow.Context) (*groundstation.UpdateMissionProfileOutput, error) {
 	var output groundstation.UpdateMissionProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -348,9 +373,9 @@ func (a *GroundStationStub) CancelContact(ctx workflow.Context, input *groundsta
 	return &output, err
 }
 
-func (a *GroundStationStub) CancelContactAsync(ctx workflow.Context, input *groundstation.CancelContactInput) *GroundstationCancelContactFuture {
+func (a *GroundStationStub) CancelContactAsync(ctx workflow.Context, input *groundstation.CancelContactInput) *GroundStationCancelContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.CancelContact", input)
-	return &GroundstationCancelContactFuture{Future: future}
+	return &GroundStationCancelContactFuture{Future: future}
 }
 
 func (a *GroundStationStub) CreateConfig(ctx workflow.Context, input *groundstation.CreateConfigInput) (*groundstation.CreateConfigOutput, error) {
@@ -359,9 +384,9 @@ func (a *GroundStationStub) CreateConfig(ctx workflow.Context, input *groundstat
 	return &output, err
 }
 
-func (a *GroundStationStub) CreateConfigAsync(ctx workflow.Context, input *groundstation.CreateConfigInput) *GroundstationCreateConfigFuture {
+func (a *GroundStationStub) CreateConfigAsync(ctx workflow.Context, input *groundstation.CreateConfigInput) *GroundStationCreateConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateConfig", input)
-	return &GroundstationCreateConfigFuture{Future: future}
+	return &GroundStationCreateConfigFuture{Future: future}
 }
 
 func (a *GroundStationStub) CreateDataflowEndpointGroup(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) (*groundstation.CreateDataflowEndpointGroupOutput, error) {
@@ -370,9 +395,9 @@ func (a *GroundStationStub) CreateDataflowEndpointGroup(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *GroundStationStub) CreateDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) *GroundstationCreateDataflowEndpointGroupFuture {
+func (a *GroundStationStub) CreateDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) *GroundStationCreateDataflowEndpointGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateDataflowEndpointGroup", input)
-	return &GroundstationCreateDataflowEndpointGroupFuture{Future: future}
+	return &GroundStationCreateDataflowEndpointGroupFuture{Future: future}
 }
 
 func (a *GroundStationStub) CreateMissionProfile(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) (*groundstation.CreateMissionProfileOutput, error) {
@@ -381,9 +406,9 @@ func (a *GroundStationStub) CreateMissionProfile(ctx workflow.Context, input *gr
 	return &output, err
 }
 
-func (a *GroundStationStub) CreateMissionProfileAsync(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) *GroundstationCreateMissionProfileFuture {
+func (a *GroundStationStub) CreateMissionProfileAsync(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) *GroundStationCreateMissionProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateMissionProfile", input)
-	return &GroundstationCreateMissionProfileFuture{Future: future}
+	return &GroundStationCreateMissionProfileFuture{Future: future}
 }
 
 func (a *GroundStationStub) DeleteConfig(ctx workflow.Context, input *groundstation.DeleteConfigInput) (*groundstation.DeleteConfigOutput, error) {
@@ -392,9 +417,9 @@ func (a *GroundStationStub) DeleteConfig(ctx workflow.Context, input *groundstat
 	return &output, err
 }
 
-func (a *GroundStationStub) DeleteConfigAsync(ctx workflow.Context, input *groundstation.DeleteConfigInput) *GroundstationDeleteConfigFuture {
+func (a *GroundStationStub) DeleteConfigAsync(ctx workflow.Context, input *groundstation.DeleteConfigInput) *GroundStationDeleteConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteConfig", input)
-	return &GroundstationDeleteConfigFuture{Future: future}
+	return &GroundStationDeleteConfigFuture{Future: future}
 }
 
 func (a *GroundStationStub) DeleteDataflowEndpointGroup(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) (*groundstation.DeleteDataflowEndpointGroupOutput, error) {
@@ -403,9 +428,9 @@ func (a *GroundStationStub) DeleteDataflowEndpointGroup(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *GroundStationStub) DeleteDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) *GroundstationDeleteDataflowEndpointGroupFuture {
+func (a *GroundStationStub) DeleteDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) *GroundStationDeleteDataflowEndpointGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteDataflowEndpointGroup", input)
-	return &GroundstationDeleteDataflowEndpointGroupFuture{Future: future}
+	return &GroundStationDeleteDataflowEndpointGroupFuture{Future: future}
 }
 
 func (a *GroundStationStub) DeleteMissionProfile(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) (*groundstation.DeleteMissionProfileOutput, error) {
@@ -414,9 +439,9 @@ func (a *GroundStationStub) DeleteMissionProfile(ctx workflow.Context, input *gr
 	return &output, err
 }
 
-func (a *GroundStationStub) DeleteMissionProfileAsync(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) *GroundstationDeleteMissionProfileFuture {
+func (a *GroundStationStub) DeleteMissionProfileAsync(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) *GroundStationDeleteMissionProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteMissionProfile", input)
-	return &GroundstationDeleteMissionProfileFuture{Future: future}
+	return &GroundStationDeleteMissionProfileFuture{Future: future}
 }
 
 func (a *GroundStationStub) DescribeContact(ctx workflow.Context, input *groundstation.DescribeContactInput) (*groundstation.DescribeContactOutput, error) {
@@ -425,9 +450,9 @@ func (a *GroundStationStub) DescribeContact(ctx workflow.Context, input *grounds
 	return &output, err
 }
 
-func (a *GroundStationStub) DescribeContactAsync(ctx workflow.Context, input *groundstation.DescribeContactInput) *GroundstationDescribeContactFuture {
+func (a *GroundStationStub) DescribeContactAsync(ctx workflow.Context, input *groundstation.DescribeContactInput) *GroundStationDescribeContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.DescribeContact", input)
-	return &GroundstationDescribeContactFuture{Future: future}
+	return &GroundStationDescribeContactFuture{Future: future}
 }
 
 func (a *GroundStationStub) GetConfig(ctx workflow.Context, input *groundstation.GetConfigInput) (*groundstation.GetConfigOutput, error) {
@@ -436,9 +461,9 @@ func (a *GroundStationStub) GetConfig(ctx workflow.Context, input *groundstation
 	return &output, err
 }
 
-func (a *GroundStationStub) GetConfigAsync(ctx workflow.Context, input *groundstation.GetConfigInput) *GroundstationGetConfigFuture {
+func (a *GroundStationStub) GetConfigAsync(ctx workflow.Context, input *groundstation.GetConfigInput) *GroundStationGetConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetConfig", input)
-	return &GroundstationGetConfigFuture{Future: future}
+	return &GroundStationGetConfigFuture{Future: future}
 }
 
 func (a *GroundStationStub) GetDataflowEndpointGroup(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) (*groundstation.GetDataflowEndpointGroupOutput, error) {
@@ -447,9 +472,9 @@ func (a *GroundStationStub) GetDataflowEndpointGroup(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *GroundStationStub) GetDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) *GroundstationGetDataflowEndpointGroupFuture {
+func (a *GroundStationStub) GetDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) *GroundStationGetDataflowEndpointGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetDataflowEndpointGroup", input)
-	return &GroundstationGetDataflowEndpointGroupFuture{Future: future}
+	return &GroundStationGetDataflowEndpointGroupFuture{Future: future}
 }
 
 func (a *GroundStationStub) GetMinuteUsage(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) (*groundstation.GetMinuteUsageOutput, error) {
@@ -458,9 +483,9 @@ func (a *GroundStationStub) GetMinuteUsage(ctx workflow.Context, input *groundst
 	return &output, err
 }
 
-func (a *GroundStationStub) GetMinuteUsageAsync(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) *GroundstationGetMinuteUsageFuture {
+func (a *GroundStationStub) GetMinuteUsageAsync(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) *GroundStationGetMinuteUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetMinuteUsage", input)
-	return &GroundstationGetMinuteUsageFuture{Future: future}
+	return &GroundStationGetMinuteUsageFuture{Future: future}
 }
 
 func (a *GroundStationStub) GetMissionProfile(ctx workflow.Context, input *groundstation.GetMissionProfileInput) (*groundstation.GetMissionProfileOutput, error) {
@@ -469,9 +494,9 @@ func (a *GroundStationStub) GetMissionProfile(ctx workflow.Context, input *groun
 	return &output, err
 }
 
-func (a *GroundStationStub) GetMissionProfileAsync(ctx workflow.Context, input *groundstation.GetMissionProfileInput) *GroundstationGetMissionProfileFuture {
+func (a *GroundStationStub) GetMissionProfileAsync(ctx workflow.Context, input *groundstation.GetMissionProfileInput) *GroundStationGetMissionProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetMissionProfile", input)
-	return &GroundstationGetMissionProfileFuture{Future: future}
+	return &GroundStationGetMissionProfileFuture{Future: future}
 }
 
 func (a *GroundStationStub) GetSatellite(ctx workflow.Context, input *groundstation.GetSatelliteInput) (*groundstation.GetSatelliteOutput, error) {
@@ -480,9 +505,9 @@ func (a *GroundStationStub) GetSatellite(ctx workflow.Context, input *groundstat
 	return &output, err
 }
 
-func (a *GroundStationStub) GetSatelliteAsync(ctx workflow.Context, input *groundstation.GetSatelliteInput) *GroundstationGetSatelliteFuture {
+func (a *GroundStationStub) GetSatelliteAsync(ctx workflow.Context, input *groundstation.GetSatelliteInput) *GroundStationGetSatelliteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetSatellite", input)
-	return &GroundstationGetSatelliteFuture{Future: future}
+	return &GroundStationGetSatelliteFuture{Future: future}
 }
 
 func (a *GroundStationStub) ListConfigs(ctx workflow.Context, input *groundstation.ListConfigsInput) (*groundstation.ListConfigsOutput, error) {
@@ -491,9 +516,9 @@ func (a *GroundStationStub) ListConfigs(ctx workflow.Context, input *groundstati
 	return &output, err
 }
 
-func (a *GroundStationStub) ListConfigsAsync(ctx workflow.Context, input *groundstation.ListConfigsInput) *GroundstationListConfigsFuture {
+func (a *GroundStationStub) ListConfigsAsync(ctx workflow.Context, input *groundstation.ListConfigsInput) *GroundStationListConfigsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListConfigs", input)
-	return &GroundstationListConfigsFuture{Future: future}
+	return &GroundStationListConfigsFuture{Future: future}
 }
 
 func (a *GroundStationStub) ListContacts(ctx workflow.Context, input *groundstation.ListContactsInput) (*groundstation.ListContactsOutput, error) {
@@ -502,9 +527,9 @@ func (a *GroundStationStub) ListContacts(ctx workflow.Context, input *groundstat
 	return &output, err
 }
 
-func (a *GroundStationStub) ListContactsAsync(ctx workflow.Context, input *groundstation.ListContactsInput) *GroundstationListContactsFuture {
+func (a *GroundStationStub) ListContactsAsync(ctx workflow.Context, input *groundstation.ListContactsInput) *GroundStationListContactsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListContacts", input)
-	return &GroundstationListContactsFuture{Future: future}
+	return &GroundStationListContactsFuture{Future: future}
 }
 
 func (a *GroundStationStub) ListDataflowEndpointGroups(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) (*groundstation.ListDataflowEndpointGroupsOutput, error) {
@@ -513,9 +538,9 @@ func (a *GroundStationStub) ListDataflowEndpointGroups(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *GroundStationStub) ListDataflowEndpointGroupsAsync(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) *GroundstationListDataflowEndpointGroupsFuture {
+func (a *GroundStationStub) ListDataflowEndpointGroupsAsync(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) *GroundStationListDataflowEndpointGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListDataflowEndpointGroups", input)
-	return &GroundstationListDataflowEndpointGroupsFuture{Future: future}
+	return &GroundStationListDataflowEndpointGroupsFuture{Future: future}
 }
 
 func (a *GroundStationStub) ListGroundStations(ctx workflow.Context, input *groundstation.ListGroundStationsInput) (*groundstation.ListGroundStationsOutput, error) {
@@ -524,9 +549,9 @@ func (a *GroundStationStub) ListGroundStations(ctx workflow.Context, input *grou
 	return &output, err
 }
 
-func (a *GroundStationStub) ListGroundStationsAsync(ctx workflow.Context, input *groundstation.ListGroundStationsInput) *GroundstationListGroundStationsFuture {
+func (a *GroundStationStub) ListGroundStationsAsync(ctx workflow.Context, input *groundstation.ListGroundStationsInput) *GroundStationListGroundStationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListGroundStations", input)
-	return &GroundstationListGroundStationsFuture{Future: future}
+	return &GroundStationListGroundStationsFuture{Future: future}
 }
 
 func (a *GroundStationStub) ListMissionProfiles(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) (*groundstation.ListMissionProfilesOutput, error) {
@@ -535,9 +560,9 @@ func (a *GroundStationStub) ListMissionProfiles(ctx workflow.Context, input *gro
 	return &output, err
 }
 
-func (a *GroundStationStub) ListMissionProfilesAsync(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) *GroundstationListMissionProfilesFuture {
+func (a *GroundStationStub) ListMissionProfilesAsync(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) *GroundStationListMissionProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListMissionProfiles", input)
-	return &GroundstationListMissionProfilesFuture{Future: future}
+	return &GroundStationListMissionProfilesFuture{Future: future}
 }
 
 func (a *GroundStationStub) ListSatellites(ctx workflow.Context, input *groundstation.ListSatellitesInput) (*groundstation.ListSatellitesOutput, error) {
@@ -546,9 +571,9 @@ func (a *GroundStationStub) ListSatellites(ctx workflow.Context, input *groundst
 	return &output, err
 }
 
-func (a *GroundStationStub) ListSatellitesAsync(ctx workflow.Context, input *groundstation.ListSatellitesInput) *GroundstationListSatellitesFuture {
+func (a *GroundStationStub) ListSatellitesAsync(ctx workflow.Context, input *groundstation.ListSatellitesInput) *GroundStationListSatellitesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListSatellites", input)
-	return &GroundstationListSatellitesFuture{Future: future}
+	return &GroundStationListSatellitesFuture{Future: future}
 }
 
 func (a *GroundStationStub) ListTagsForResource(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) (*groundstation.ListTagsForResourceOutput, error) {
@@ -557,9 +582,9 @@ func (a *GroundStationStub) ListTagsForResource(ctx workflow.Context, input *gro
 	return &output, err
 }
 
-func (a *GroundStationStub) ListTagsForResourceAsync(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) *GroundstationListTagsForResourceFuture {
+func (a *GroundStationStub) ListTagsForResourceAsync(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) *GroundStationListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListTagsForResource", input)
-	return &GroundstationListTagsForResourceFuture{Future: future}
+	return &GroundStationListTagsForResourceFuture{Future: future}
 }
 
 func (a *GroundStationStub) ReserveContact(ctx workflow.Context, input *groundstation.ReserveContactInput) (*groundstation.ReserveContactOutput, error) {
@@ -568,9 +593,9 @@ func (a *GroundStationStub) ReserveContact(ctx workflow.Context, input *groundst
 	return &output, err
 }
 
-func (a *GroundStationStub) ReserveContactAsync(ctx workflow.Context, input *groundstation.ReserveContactInput) *GroundstationReserveContactFuture {
+func (a *GroundStationStub) ReserveContactAsync(ctx workflow.Context, input *groundstation.ReserveContactInput) *GroundStationReserveContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ReserveContact", input)
-	return &GroundstationReserveContactFuture{Future: future}
+	return &GroundStationReserveContactFuture{Future: future}
 }
 
 func (a *GroundStationStub) TagResource(ctx workflow.Context, input *groundstation.TagResourceInput) (*groundstation.TagResourceOutput, error) {
@@ -579,9 +604,9 @@ func (a *GroundStationStub) TagResource(ctx workflow.Context, input *groundstati
 	return &output, err
 }
 
-func (a *GroundStationStub) TagResourceAsync(ctx workflow.Context, input *groundstation.TagResourceInput) *GroundstationTagResourceFuture {
+func (a *GroundStationStub) TagResourceAsync(ctx workflow.Context, input *groundstation.TagResourceInput) *GroundStationTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.TagResource", input)
-	return &GroundstationTagResourceFuture{Future: future}
+	return &GroundStationTagResourceFuture{Future: future}
 }
 
 func (a *GroundStationStub) UntagResource(ctx workflow.Context, input *groundstation.UntagResourceInput) (*groundstation.UntagResourceOutput, error) {
@@ -590,9 +615,9 @@ func (a *GroundStationStub) UntagResource(ctx workflow.Context, input *groundsta
 	return &output, err
 }
 
-func (a *GroundStationStub) UntagResourceAsync(ctx workflow.Context, input *groundstation.UntagResourceInput) *GroundstationUntagResourceFuture {
+func (a *GroundStationStub) UntagResourceAsync(ctx workflow.Context, input *groundstation.UntagResourceInput) *GroundStationUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.UntagResource", input)
-	return &GroundstationUntagResourceFuture{Future: future}
+	return &GroundStationUntagResourceFuture{Future: future}
 }
 
 func (a *GroundStationStub) UpdateConfig(ctx workflow.Context, input *groundstation.UpdateConfigInput) (*groundstation.UpdateConfigOutput, error) {
@@ -601,9 +626,9 @@ func (a *GroundStationStub) UpdateConfig(ctx workflow.Context, input *groundstat
 	return &output, err
 }
 
-func (a *GroundStationStub) UpdateConfigAsync(ctx workflow.Context, input *groundstation.UpdateConfigInput) *GroundstationUpdateConfigFuture {
+func (a *GroundStationStub) UpdateConfigAsync(ctx workflow.Context, input *groundstation.UpdateConfigInput) *GroundStationUpdateConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.UpdateConfig", input)
-	return &GroundstationUpdateConfigFuture{Future: future}
+	return &GroundStationUpdateConfigFuture{Future: future}
 }
 
 func (a *GroundStationStub) UpdateMissionProfile(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) (*groundstation.UpdateMissionProfileOutput, error) {
@@ -612,7 +637,7 @@ func (a *GroundStationStub) UpdateMissionProfile(ctx workflow.Context, input *gr
 	return &output, err
 }
 
-func (a *GroundStationStub) UpdateMissionProfileAsync(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) *GroundstationUpdateMissionProfileFuture {
+func (a *GroundStationStub) UpdateMissionProfileAsync(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) *GroundStationUpdateMissionProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.groundstation.UpdateMissionProfile", input)
-	return &GroundstationUpdateMissionProfileFuture{Future: future}
+	return &GroundStationUpdateMissionProfileFuture{Future: future}
 }

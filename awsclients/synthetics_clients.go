@@ -57,6 +57,7 @@ func NewSyntheticsStub() SyntheticsClient {
 }
 
 type SyntheticsCreateCanaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -67,6 +68,7 @@ func (r *SyntheticsCreateCanaryFuture) Get(ctx workflow.Context) (*synthetics.Cr
 }
 
 type SyntheticsDeleteCanaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -77,6 +79,7 @@ func (r *SyntheticsDeleteCanaryFuture) Get(ctx workflow.Context) (*synthetics.De
 }
 
 type SyntheticsDescribeCanariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -87,6 +90,7 @@ func (r *SyntheticsDescribeCanariesFuture) Get(ctx workflow.Context) (*synthetic
 }
 
 type SyntheticsDescribeCanariesLastRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +101,7 @@ func (r *SyntheticsDescribeCanariesLastRunFuture) Get(ctx workflow.Context) (*sy
 }
 
 type SyntheticsDescribeRuntimeVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +112,7 @@ func (r *SyntheticsDescribeRuntimeVersionsFuture) Get(ctx workflow.Context) (*sy
 }
 
 type SyntheticsGetCanaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +123,7 @@ func (r *SyntheticsGetCanaryFuture) Get(ctx workflow.Context) (*synthetics.GetCa
 }
 
 type SyntheticsGetCanaryRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +134,7 @@ func (r *SyntheticsGetCanaryRunsFuture) Get(ctx workflow.Context) (*synthetics.G
 }
 
 type SyntheticsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +145,7 @@ func (r *SyntheticsListTagsForResourceFuture) Get(ctx workflow.Context) (*synthe
 }
 
 type SyntheticsStartCanaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +156,7 @@ func (r *SyntheticsStartCanaryFuture) Get(ctx workflow.Context) (*synthetics.Sta
 }
 
 type SyntheticsStopCanaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +167,7 @@ func (r *SyntheticsStopCanaryFuture) Get(ctx workflow.Context) (*synthetics.Stop
 }
 
 type SyntheticsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +178,7 @@ func (r *SyntheticsTagResourceFuture) Get(ctx workflow.Context) (*synthetics.Tag
 }
 
 type SyntheticsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +189,7 @@ func (r *SyntheticsUntagResourceFuture) Get(ctx workflow.Context) (*synthetics.U
 }
 
 type SyntheticsUpdateCanaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

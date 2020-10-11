@@ -11,82 +11,82 @@ import (
 
 type FMSClient interface {
 	AssociateAdminAccount(ctx workflow.Context, input *fms.AssociateAdminAccountInput) (*fms.AssociateAdminAccountOutput, error)
-	AssociateAdminAccountAsync(ctx workflow.Context, input *fms.AssociateAdminAccountInput) *FmsAssociateAdminAccountFuture
+	AssociateAdminAccountAsync(ctx workflow.Context, input *fms.AssociateAdminAccountInput) *FMSAssociateAdminAccountFuture
 
 	DeleteAppsList(ctx workflow.Context, input *fms.DeleteAppsListInput) (*fms.DeleteAppsListOutput, error)
-	DeleteAppsListAsync(ctx workflow.Context, input *fms.DeleteAppsListInput) *FmsDeleteAppsListFuture
+	DeleteAppsListAsync(ctx workflow.Context, input *fms.DeleteAppsListInput) *FMSDeleteAppsListFuture
 
 	DeleteNotificationChannel(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) (*fms.DeleteNotificationChannelOutput, error)
-	DeleteNotificationChannelAsync(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) *FmsDeleteNotificationChannelFuture
+	DeleteNotificationChannelAsync(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) *FMSDeleteNotificationChannelFuture
 
 	DeletePolicy(ctx workflow.Context, input *fms.DeletePolicyInput) (*fms.DeletePolicyOutput, error)
-	DeletePolicyAsync(ctx workflow.Context, input *fms.DeletePolicyInput) *FmsDeletePolicyFuture
+	DeletePolicyAsync(ctx workflow.Context, input *fms.DeletePolicyInput) *FMSDeletePolicyFuture
 
 	DeleteProtocolsList(ctx workflow.Context, input *fms.DeleteProtocolsListInput) (*fms.DeleteProtocolsListOutput, error)
-	DeleteProtocolsListAsync(ctx workflow.Context, input *fms.DeleteProtocolsListInput) *FmsDeleteProtocolsListFuture
+	DeleteProtocolsListAsync(ctx workflow.Context, input *fms.DeleteProtocolsListInput) *FMSDeleteProtocolsListFuture
 
 	DisassociateAdminAccount(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) (*fms.DisassociateAdminAccountOutput, error)
-	DisassociateAdminAccountAsync(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) *FmsDisassociateAdminAccountFuture
+	DisassociateAdminAccountAsync(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) *FMSDisassociateAdminAccountFuture
 
 	GetAdminAccount(ctx workflow.Context, input *fms.GetAdminAccountInput) (*fms.GetAdminAccountOutput, error)
-	GetAdminAccountAsync(ctx workflow.Context, input *fms.GetAdminAccountInput) *FmsGetAdminAccountFuture
+	GetAdminAccountAsync(ctx workflow.Context, input *fms.GetAdminAccountInput) *FMSGetAdminAccountFuture
 
 	GetAppsList(ctx workflow.Context, input *fms.GetAppsListInput) (*fms.GetAppsListOutput, error)
-	GetAppsListAsync(ctx workflow.Context, input *fms.GetAppsListInput) *FmsGetAppsListFuture
+	GetAppsListAsync(ctx workflow.Context, input *fms.GetAppsListInput) *FMSGetAppsListFuture
 
 	GetComplianceDetail(ctx workflow.Context, input *fms.GetComplianceDetailInput) (*fms.GetComplianceDetailOutput, error)
-	GetComplianceDetailAsync(ctx workflow.Context, input *fms.GetComplianceDetailInput) *FmsGetComplianceDetailFuture
+	GetComplianceDetailAsync(ctx workflow.Context, input *fms.GetComplianceDetailInput) *FMSGetComplianceDetailFuture
 
 	GetNotificationChannel(ctx workflow.Context, input *fms.GetNotificationChannelInput) (*fms.GetNotificationChannelOutput, error)
-	GetNotificationChannelAsync(ctx workflow.Context, input *fms.GetNotificationChannelInput) *FmsGetNotificationChannelFuture
+	GetNotificationChannelAsync(ctx workflow.Context, input *fms.GetNotificationChannelInput) *FMSGetNotificationChannelFuture
 
 	GetPolicy(ctx workflow.Context, input *fms.GetPolicyInput) (*fms.GetPolicyOutput, error)
-	GetPolicyAsync(ctx workflow.Context, input *fms.GetPolicyInput) *FmsGetPolicyFuture
+	GetPolicyAsync(ctx workflow.Context, input *fms.GetPolicyInput) *FMSGetPolicyFuture
 
 	GetProtectionStatus(ctx workflow.Context, input *fms.GetProtectionStatusInput) (*fms.GetProtectionStatusOutput, error)
-	GetProtectionStatusAsync(ctx workflow.Context, input *fms.GetProtectionStatusInput) *FmsGetProtectionStatusFuture
+	GetProtectionStatusAsync(ctx workflow.Context, input *fms.GetProtectionStatusInput) *FMSGetProtectionStatusFuture
 
 	GetProtocolsList(ctx workflow.Context, input *fms.GetProtocolsListInput) (*fms.GetProtocolsListOutput, error)
-	GetProtocolsListAsync(ctx workflow.Context, input *fms.GetProtocolsListInput) *FmsGetProtocolsListFuture
+	GetProtocolsListAsync(ctx workflow.Context, input *fms.GetProtocolsListInput) *FMSGetProtocolsListFuture
 
 	GetViolationDetails(ctx workflow.Context, input *fms.GetViolationDetailsInput) (*fms.GetViolationDetailsOutput, error)
-	GetViolationDetailsAsync(ctx workflow.Context, input *fms.GetViolationDetailsInput) *FmsGetViolationDetailsFuture
+	GetViolationDetailsAsync(ctx workflow.Context, input *fms.GetViolationDetailsInput) *FMSGetViolationDetailsFuture
 
 	ListAppsLists(ctx workflow.Context, input *fms.ListAppsListsInput) (*fms.ListAppsListsOutput, error)
-	ListAppsListsAsync(ctx workflow.Context, input *fms.ListAppsListsInput) *FmsListAppsListsFuture
+	ListAppsListsAsync(ctx workflow.Context, input *fms.ListAppsListsInput) *FMSListAppsListsFuture
 
 	ListComplianceStatus(ctx workflow.Context, input *fms.ListComplianceStatusInput) (*fms.ListComplianceStatusOutput, error)
-	ListComplianceStatusAsync(ctx workflow.Context, input *fms.ListComplianceStatusInput) *FmsListComplianceStatusFuture
+	ListComplianceStatusAsync(ctx workflow.Context, input *fms.ListComplianceStatusInput) *FMSListComplianceStatusFuture
 
 	ListMemberAccounts(ctx workflow.Context, input *fms.ListMemberAccountsInput) (*fms.ListMemberAccountsOutput, error)
-	ListMemberAccountsAsync(ctx workflow.Context, input *fms.ListMemberAccountsInput) *FmsListMemberAccountsFuture
+	ListMemberAccountsAsync(ctx workflow.Context, input *fms.ListMemberAccountsInput) *FMSListMemberAccountsFuture
 
 	ListPolicies(ctx workflow.Context, input *fms.ListPoliciesInput) (*fms.ListPoliciesOutput, error)
-	ListPoliciesAsync(ctx workflow.Context, input *fms.ListPoliciesInput) *FmsListPoliciesFuture
+	ListPoliciesAsync(ctx workflow.Context, input *fms.ListPoliciesInput) *FMSListPoliciesFuture
 
 	ListProtocolsLists(ctx workflow.Context, input *fms.ListProtocolsListsInput) (*fms.ListProtocolsListsOutput, error)
-	ListProtocolsListsAsync(ctx workflow.Context, input *fms.ListProtocolsListsInput) *FmsListProtocolsListsFuture
+	ListProtocolsListsAsync(ctx workflow.Context, input *fms.ListProtocolsListsInput) *FMSListProtocolsListsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *fms.ListTagsForResourceInput) (*fms.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *fms.ListTagsForResourceInput) *FmsListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *fms.ListTagsForResourceInput) *FMSListTagsForResourceFuture
 
 	PutAppsList(ctx workflow.Context, input *fms.PutAppsListInput) (*fms.PutAppsListOutput, error)
-	PutAppsListAsync(ctx workflow.Context, input *fms.PutAppsListInput) *FmsPutAppsListFuture
+	PutAppsListAsync(ctx workflow.Context, input *fms.PutAppsListInput) *FMSPutAppsListFuture
 
 	PutNotificationChannel(ctx workflow.Context, input *fms.PutNotificationChannelInput) (*fms.PutNotificationChannelOutput, error)
-	PutNotificationChannelAsync(ctx workflow.Context, input *fms.PutNotificationChannelInput) *FmsPutNotificationChannelFuture
+	PutNotificationChannelAsync(ctx workflow.Context, input *fms.PutNotificationChannelInput) *FMSPutNotificationChannelFuture
 
 	PutPolicy(ctx workflow.Context, input *fms.PutPolicyInput) (*fms.PutPolicyOutput, error)
-	PutPolicyAsync(ctx workflow.Context, input *fms.PutPolicyInput) *FmsPutPolicyFuture
+	PutPolicyAsync(ctx workflow.Context, input *fms.PutPolicyInput) *FMSPutPolicyFuture
 
 	PutProtocolsList(ctx workflow.Context, input *fms.PutProtocolsListInput) (*fms.PutProtocolsListOutput, error)
-	PutProtocolsListAsync(ctx workflow.Context, input *fms.PutProtocolsListInput) *FmsPutProtocolsListFuture
+	PutProtocolsListAsync(ctx workflow.Context, input *fms.PutProtocolsListInput) *FMSPutProtocolsListFuture
 
 	TagResource(ctx workflow.Context, input *fms.TagResourceInput) (*fms.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *fms.TagResourceInput) *FmsTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *fms.TagResourceInput) *FMSTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *fms.UntagResourceInput) (*fms.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *fms.UntagResourceInput) *FmsUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *fms.UntagResourceInput) *FMSUntagResourceFuture
 }
 
 type FMSStub struct{}
@@ -95,261 +95,287 @@ func NewFMSStub() FMSClient {
 	return &FMSStub{}
 }
 
-type FmsAssociateAdminAccountFuture struct {
+type FMSAssociateAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsAssociateAdminAccountFuture) Get(ctx workflow.Context) (*fms.AssociateAdminAccountOutput, error) {
+func (r *FMSAssociateAdminAccountFuture) Get(ctx workflow.Context) (*fms.AssociateAdminAccountOutput, error) {
 	var output fms.AssociateAdminAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsDeleteAppsListFuture struct {
+type FMSDeleteAppsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsDeleteAppsListFuture) Get(ctx workflow.Context) (*fms.DeleteAppsListOutput, error) {
+func (r *FMSDeleteAppsListFuture) Get(ctx workflow.Context) (*fms.DeleteAppsListOutput, error) {
 	var output fms.DeleteAppsListOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsDeleteNotificationChannelFuture struct {
+type FMSDeleteNotificationChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsDeleteNotificationChannelFuture) Get(ctx workflow.Context) (*fms.DeleteNotificationChannelOutput, error) {
+func (r *FMSDeleteNotificationChannelFuture) Get(ctx workflow.Context) (*fms.DeleteNotificationChannelOutput, error) {
 	var output fms.DeleteNotificationChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsDeletePolicyFuture struct {
+type FMSDeletePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsDeletePolicyFuture) Get(ctx workflow.Context) (*fms.DeletePolicyOutput, error) {
+func (r *FMSDeletePolicyFuture) Get(ctx workflow.Context) (*fms.DeletePolicyOutput, error) {
 	var output fms.DeletePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsDeleteProtocolsListFuture struct {
+type FMSDeleteProtocolsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsDeleteProtocolsListFuture) Get(ctx workflow.Context) (*fms.DeleteProtocolsListOutput, error) {
+func (r *FMSDeleteProtocolsListFuture) Get(ctx workflow.Context) (*fms.DeleteProtocolsListOutput, error) {
 	var output fms.DeleteProtocolsListOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsDisassociateAdminAccountFuture struct {
+type FMSDisassociateAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsDisassociateAdminAccountFuture) Get(ctx workflow.Context) (*fms.DisassociateAdminAccountOutput, error) {
+func (r *FMSDisassociateAdminAccountFuture) Get(ctx workflow.Context) (*fms.DisassociateAdminAccountOutput, error) {
 	var output fms.DisassociateAdminAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsGetAdminAccountFuture struct {
+type FMSGetAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsGetAdminAccountFuture) Get(ctx workflow.Context) (*fms.GetAdminAccountOutput, error) {
+func (r *FMSGetAdminAccountFuture) Get(ctx workflow.Context) (*fms.GetAdminAccountOutput, error) {
 	var output fms.GetAdminAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsGetAppsListFuture struct {
+type FMSGetAppsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsGetAppsListFuture) Get(ctx workflow.Context) (*fms.GetAppsListOutput, error) {
+func (r *FMSGetAppsListFuture) Get(ctx workflow.Context) (*fms.GetAppsListOutput, error) {
 	var output fms.GetAppsListOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsGetComplianceDetailFuture struct {
+type FMSGetComplianceDetailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsGetComplianceDetailFuture) Get(ctx workflow.Context) (*fms.GetComplianceDetailOutput, error) {
+func (r *FMSGetComplianceDetailFuture) Get(ctx workflow.Context) (*fms.GetComplianceDetailOutput, error) {
 	var output fms.GetComplianceDetailOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsGetNotificationChannelFuture struct {
+type FMSGetNotificationChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsGetNotificationChannelFuture) Get(ctx workflow.Context) (*fms.GetNotificationChannelOutput, error) {
+func (r *FMSGetNotificationChannelFuture) Get(ctx workflow.Context) (*fms.GetNotificationChannelOutput, error) {
 	var output fms.GetNotificationChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsGetPolicyFuture struct {
+type FMSGetPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsGetPolicyFuture) Get(ctx workflow.Context) (*fms.GetPolicyOutput, error) {
+func (r *FMSGetPolicyFuture) Get(ctx workflow.Context) (*fms.GetPolicyOutput, error) {
 	var output fms.GetPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsGetProtectionStatusFuture struct {
+type FMSGetProtectionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsGetProtectionStatusFuture) Get(ctx workflow.Context) (*fms.GetProtectionStatusOutput, error) {
+func (r *FMSGetProtectionStatusFuture) Get(ctx workflow.Context) (*fms.GetProtectionStatusOutput, error) {
 	var output fms.GetProtectionStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsGetProtocolsListFuture struct {
+type FMSGetProtocolsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsGetProtocolsListFuture) Get(ctx workflow.Context) (*fms.GetProtocolsListOutput, error) {
+func (r *FMSGetProtocolsListFuture) Get(ctx workflow.Context) (*fms.GetProtocolsListOutput, error) {
 	var output fms.GetProtocolsListOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsGetViolationDetailsFuture struct {
+type FMSGetViolationDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsGetViolationDetailsFuture) Get(ctx workflow.Context) (*fms.GetViolationDetailsOutput, error) {
+func (r *FMSGetViolationDetailsFuture) Get(ctx workflow.Context) (*fms.GetViolationDetailsOutput, error) {
 	var output fms.GetViolationDetailsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsListAppsListsFuture struct {
+type FMSListAppsListsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsListAppsListsFuture) Get(ctx workflow.Context) (*fms.ListAppsListsOutput, error) {
+func (r *FMSListAppsListsFuture) Get(ctx workflow.Context) (*fms.ListAppsListsOutput, error) {
 	var output fms.ListAppsListsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsListComplianceStatusFuture struct {
+type FMSListComplianceStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsListComplianceStatusFuture) Get(ctx workflow.Context) (*fms.ListComplianceStatusOutput, error) {
+func (r *FMSListComplianceStatusFuture) Get(ctx workflow.Context) (*fms.ListComplianceStatusOutput, error) {
 	var output fms.ListComplianceStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsListMemberAccountsFuture struct {
+type FMSListMemberAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsListMemberAccountsFuture) Get(ctx workflow.Context) (*fms.ListMemberAccountsOutput, error) {
+func (r *FMSListMemberAccountsFuture) Get(ctx workflow.Context) (*fms.ListMemberAccountsOutput, error) {
 	var output fms.ListMemberAccountsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsListPoliciesFuture struct {
+type FMSListPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsListPoliciesFuture) Get(ctx workflow.Context) (*fms.ListPoliciesOutput, error) {
+func (r *FMSListPoliciesFuture) Get(ctx workflow.Context) (*fms.ListPoliciesOutput, error) {
 	var output fms.ListPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsListProtocolsListsFuture struct {
+type FMSListProtocolsListsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsListProtocolsListsFuture) Get(ctx workflow.Context) (*fms.ListProtocolsListsOutput, error) {
+func (r *FMSListProtocolsListsFuture) Get(ctx workflow.Context) (*fms.ListProtocolsListsOutput, error) {
 	var output fms.ListProtocolsListsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsListTagsForResourceFuture struct {
+type FMSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsListTagsForResourceFuture) Get(ctx workflow.Context) (*fms.ListTagsForResourceOutput, error) {
+func (r *FMSListTagsForResourceFuture) Get(ctx workflow.Context) (*fms.ListTagsForResourceOutput, error) {
 	var output fms.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsPutAppsListFuture struct {
+type FMSPutAppsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsPutAppsListFuture) Get(ctx workflow.Context) (*fms.PutAppsListOutput, error) {
+func (r *FMSPutAppsListFuture) Get(ctx workflow.Context) (*fms.PutAppsListOutput, error) {
 	var output fms.PutAppsListOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsPutNotificationChannelFuture struct {
+type FMSPutNotificationChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsPutNotificationChannelFuture) Get(ctx workflow.Context) (*fms.PutNotificationChannelOutput, error) {
+func (r *FMSPutNotificationChannelFuture) Get(ctx workflow.Context) (*fms.PutNotificationChannelOutput, error) {
 	var output fms.PutNotificationChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsPutPolicyFuture struct {
+type FMSPutPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsPutPolicyFuture) Get(ctx workflow.Context) (*fms.PutPolicyOutput, error) {
+func (r *FMSPutPolicyFuture) Get(ctx workflow.Context) (*fms.PutPolicyOutput, error) {
 	var output fms.PutPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsPutProtocolsListFuture struct {
+type FMSPutProtocolsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsPutProtocolsListFuture) Get(ctx workflow.Context) (*fms.PutProtocolsListOutput, error) {
+func (r *FMSPutProtocolsListFuture) Get(ctx workflow.Context) (*fms.PutProtocolsListOutput, error) {
 	var output fms.PutProtocolsListOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsTagResourceFuture struct {
+type FMSTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsTagResourceFuture) Get(ctx workflow.Context) (*fms.TagResourceOutput, error) {
+func (r *FMSTagResourceFuture) Get(ctx workflow.Context) (*fms.TagResourceOutput, error) {
 	var output fms.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FmsUntagResourceFuture struct {
+type FMSUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FmsUntagResourceFuture) Get(ctx workflow.Context) (*fms.UntagResourceOutput, error) {
+func (r *FMSUntagResourceFuture) Get(ctx workflow.Context) (*fms.UntagResourceOutput, error) {
 	var output fms.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -361,9 +387,9 @@ func (a *FMSStub) AssociateAdminAccount(ctx workflow.Context, input *fms.Associa
 	return &output, err
 }
 
-func (a *FMSStub) AssociateAdminAccountAsync(ctx workflow.Context, input *fms.AssociateAdminAccountInput) *FmsAssociateAdminAccountFuture {
+func (a *FMSStub) AssociateAdminAccountAsync(ctx workflow.Context, input *fms.AssociateAdminAccountInput) *FMSAssociateAdminAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.AssociateAdminAccount", input)
-	return &FmsAssociateAdminAccountFuture{Future: future}
+	return &FMSAssociateAdminAccountFuture{Future: future}
 }
 
 func (a *FMSStub) DeleteAppsList(ctx workflow.Context, input *fms.DeleteAppsListInput) (*fms.DeleteAppsListOutput, error) {
@@ -372,9 +398,9 @@ func (a *FMSStub) DeleteAppsList(ctx workflow.Context, input *fms.DeleteAppsList
 	return &output, err
 }
 
-func (a *FMSStub) DeleteAppsListAsync(ctx workflow.Context, input *fms.DeleteAppsListInput) *FmsDeleteAppsListFuture {
+func (a *FMSStub) DeleteAppsListAsync(ctx workflow.Context, input *fms.DeleteAppsListInput) *FMSDeleteAppsListFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.DeleteAppsList", input)
-	return &FmsDeleteAppsListFuture{Future: future}
+	return &FMSDeleteAppsListFuture{Future: future}
 }
 
 func (a *FMSStub) DeleteNotificationChannel(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) (*fms.DeleteNotificationChannelOutput, error) {
@@ -383,9 +409,9 @@ func (a *FMSStub) DeleteNotificationChannel(ctx workflow.Context, input *fms.Del
 	return &output, err
 }
 
-func (a *FMSStub) DeleteNotificationChannelAsync(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) *FmsDeleteNotificationChannelFuture {
+func (a *FMSStub) DeleteNotificationChannelAsync(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) *FMSDeleteNotificationChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.DeleteNotificationChannel", input)
-	return &FmsDeleteNotificationChannelFuture{Future: future}
+	return &FMSDeleteNotificationChannelFuture{Future: future}
 }
 
 func (a *FMSStub) DeletePolicy(ctx workflow.Context, input *fms.DeletePolicyInput) (*fms.DeletePolicyOutput, error) {
@@ -394,9 +420,9 @@ func (a *FMSStub) DeletePolicy(ctx workflow.Context, input *fms.DeletePolicyInpu
 	return &output, err
 }
 
-func (a *FMSStub) DeletePolicyAsync(ctx workflow.Context, input *fms.DeletePolicyInput) *FmsDeletePolicyFuture {
+func (a *FMSStub) DeletePolicyAsync(ctx workflow.Context, input *fms.DeletePolicyInput) *FMSDeletePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.DeletePolicy", input)
-	return &FmsDeletePolicyFuture{Future: future}
+	return &FMSDeletePolicyFuture{Future: future}
 }
 
 func (a *FMSStub) DeleteProtocolsList(ctx workflow.Context, input *fms.DeleteProtocolsListInput) (*fms.DeleteProtocolsListOutput, error) {
@@ -405,9 +431,9 @@ func (a *FMSStub) DeleteProtocolsList(ctx workflow.Context, input *fms.DeletePro
 	return &output, err
 }
 
-func (a *FMSStub) DeleteProtocolsListAsync(ctx workflow.Context, input *fms.DeleteProtocolsListInput) *FmsDeleteProtocolsListFuture {
+func (a *FMSStub) DeleteProtocolsListAsync(ctx workflow.Context, input *fms.DeleteProtocolsListInput) *FMSDeleteProtocolsListFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.DeleteProtocolsList", input)
-	return &FmsDeleteProtocolsListFuture{Future: future}
+	return &FMSDeleteProtocolsListFuture{Future: future}
 }
 
 func (a *FMSStub) DisassociateAdminAccount(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) (*fms.DisassociateAdminAccountOutput, error) {
@@ -416,9 +442,9 @@ func (a *FMSStub) DisassociateAdminAccount(ctx workflow.Context, input *fms.Disa
 	return &output, err
 }
 
-func (a *FMSStub) DisassociateAdminAccountAsync(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) *FmsDisassociateAdminAccountFuture {
+func (a *FMSStub) DisassociateAdminAccountAsync(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) *FMSDisassociateAdminAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.DisassociateAdminAccount", input)
-	return &FmsDisassociateAdminAccountFuture{Future: future}
+	return &FMSDisassociateAdminAccountFuture{Future: future}
 }
 
 func (a *FMSStub) GetAdminAccount(ctx workflow.Context, input *fms.GetAdminAccountInput) (*fms.GetAdminAccountOutput, error) {
@@ -427,9 +453,9 @@ func (a *FMSStub) GetAdminAccount(ctx workflow.Context, input *fms.GetAdminAccou
 	return &output, err
 }
 
-func (a *FMSStub) GetAdminAccountAsync(ctx workflow.Context, input *fms.GetAdminAccountInput) *FmsGetAdminAccountFuture {
+func (a *FMSStub) GetAdminAccountAsync(ctx workflow.Context, input *fms.GetAdminAccountInput) *FMSGetAdminAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.GetAdminAccount", input)
-	return &FmsGetAdminAccountFuture{Future: future}
+	return &FMSGetAdminAccountFuture{Future: future}
 }
 
 func (a *FMSStub) GetAppsList(ctx workflow.Context, input *fms.GetAppsListInput) (*fms.GetAppsListOutput, error) {
@@ -438,9 +464,9 @@ func (a *FMSStub) GetAppsList(ctx workflow.Context, input *fms.GetAppsListInput)
 	return &output, err
 }
 
-func (a *FMSStub) GetAppsListAsync(ctx workflow.Context, input *fms.GetAppsListInput) *FmsGetAppsListFuture {
+func (a *FMSStub) GetAppsListAsync(ctx workflow.Context, input *fms.GetAppsListInput) *FMSGetAppsListFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.GetAppsList", input)
-	return &FmsGetAppsListFuture{Future: future}
+	return &FMSGetAppsListFuture{Future: future}
 }
 
 func (a *FMSStub) GetComplianceDetail(ctx workflow.Context, input *fms.GetComplianceDetailInput) (*fms.GetComplianceDetailOutput, error) {
@@ -449,9 +475,9 @@ func (a *FMSStub) GetComplianceDetail(ctx workflow.Context, input *fms.GetCompli
 	return &output, err
 }
 
-func (a *FMSStub) GetComplianceDetailAsync(ctx workflow.Context, input *fms.GetComplianceDetailInput) *FmsGetComplianceDetailFuture {
+func (a *FMSStub) GetComplianceDetailAsync(ctx workflow.Context, input *fms.GetComplianceDetailInput) *FMSGetComplianceDetailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.GetComplianceDetail", input)
-	return &FmsGetComplianceDetailFuture{Future: future}
+	return &FMSGetComplianceDetailFuture{Future: future}
 }
 
 func (a *FMSStub) GetNotificationChannel(ctx workflow.Context, input *fms.GetNotificationChannelInput) (*fms.GetNotificationChannelOutput, error) {
@@ -460,9 +486,9 @@ func (a *FMSStub) GetNotificationChannel(ctx workflow.Context, input *fms.GetNot
 	return &output, err
 }
 
-func (a *FMSStub) GetNotificationChannelAsync(ctx workflow.Context, input *fms.GetNotificationChannelInput) *FmsGetNotificationChannelFuture {
+func (a *FMSStub) GetNotificationChannelAsync(ctx workflow.Context, input *fms.GetNotificationChannelInput) *FMSGetNotificationChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.GetNotificationChannel", input)
-	return &FmsGetNotificationChannelFuture{Future: future}
+	return &FMSGetNotificationChannelFuture{Future: future}
 }
 
 func (a *FMSStub) GetPolicy(ctx workflow.Context, input *fms.GetPolicyInput) (*fms.GetPolicyOutput, error) {
@@ -471,9 +497,9 @@ func (a *FMSStub) GetPolicy(ctx workflow.Context, input *fms.GetPolicyInput) (*f
 	return &output, err
 }
 
-func (a *FMSStub) GetPolicyAsync(ctx workflow.Context, input *fms.GetPolicyInput) *FmsGetPolicyFuture {
+func (a *FMSStub) GetPolicyAsync(ctx workflow.Context, input *fms.GetPolicyInput) *FMSGetPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.GetPolicy", input)
-	return &FmsGetPolicyFuture{Future: future}
+	return &FMSGetPolicyFuture{Future: future}
 }
 
 func (a *FMSStub) GetProtectionStatus(ctx workflow.Context, input *fms.GetProtectionStatusInput) (*fms.GetProtectionStatusOutput, error) {
@@ -482,9 +508,9 @@ func (a *FMSStub) GetProtectionStatus(ctx workflow.Context, input *fms.GetProtec
 	return &output, err
 }
 
-func (a *FMSStub) GetProtectionStatusAsync(ctx workflow.Context, input *fms.GetProtectionStatusInput) *FmsGetProtectionStatusFuture {
+func (a *FMSStub) GetProtectionStatusAsync(ctx workflow.Context, input *fms.GetProtectionStatusInput) *FMSGetProtectionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.GetProtectionStatus", input)
-	return &FmsGetProtectionStatusFuture{Future: future}
+	return &FMSGetProtectionStatusFuture{Future: future}
 }
 
 func (a *FMSStub) GetProtocolsList(ctx workflow.Context, input *fms.GetProtocolsListInput) (*fms.GetProtocolsListOutput, error) {
@@ -493,9 +519,9 @@ func (a *FMSStub) GetProtocolsList(ctx workflow.Context, input *fms.GetProtocols
 	return &output, err
 }
 
-func (a *FMSStub) GetProtocolsListAsync(ctx workflow.Context, input *fms.GetProtocolsListInput) *FmsGetProtocolsListFuture {
+func (a *FMSStub) GetProtocolsListAsync(ctx workflow.Context, input *fms.GetProtocolsListInput) *FMSGetProtocolsListFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.GetProtocolsList", input)
-	return &FmsGetProtocolsListFuture{Future: future}
+	return &FMSGetProtocolsListFuture{Future: future}
 }
 
 func (a *FMSStub) GetViolationDetails(ctx workflow.Context, input *fms.GetViolationDetailsInput) (*fms.GetViolationDetailsOutput, error) {
@@ -504,9 +530,9 @@ func (a *FMSStub) GetViolationDetails(ctx workflow.Context, input *fms.GetViolat
 	return &output, err
 }
 
-func (a *FMSStub) GetViolationDetailsAsync(ctx workflow.Context, input *fms.GetViolationDetailsInput) *FmsGetViolationDetailsFuture {
+func (a *FMSStub) GetViolationDetailsAsync(ctx workflow.Context, input *fms.GetViolationDetailsInput) *FMSGetViolationDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.GetViolationDetails", input)
-	return &FmsGetViolationDetailsFuture{Future: future}
+	return &FMSGetViolationDetailsFuture{Future: future}
 }
 
 func (a *FMSStub) ListAppsLists(ctx workflow.Context, input *fms.ListAppsListsInput) (*fms.ListAppsListsOutput, error) {
@@ -515,9 +541,9 @@ func (a *FMSStub) ListAppsLists(ctx workflow.Context, input *fms.ListAppsListsIn
 	return &output, err
 }
 
-func (a *FMSStub) ListAppsListsAsync(ctx workflow.Context, input *fms.ListAppsListsInput) *FmsListAppsListsFuture {
+func (a *FMSStub) ListAppsListsAsync(ctx workflow.Context, input *fms.ListAppsListsInput) *FMSListAppsListsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.ListAppsLists", input)
-	return &FmsListAppsListsFuture{Future: future}
+	return &FMSListAppsListsFuture{Future: future}
 }
 
 func (a *FMSStub) ListComplianceStatus(ctx workflow.Context, input *fms.ListComplianceStatusInput) (*fms.ListComplianceStatusOutput, error) {
@@ -526,9 +552,9 @@ func (a *FMSStub) ListComplianceStatus(ctx workflow.Context, input *fms.ListComp
 	return &output, err
 }
 
-func (a *FMSStub) ListComplianceStatusAsync(ctx workflow.Context, input *fms.ListComplianceStatusInput) *FmsListComplianceStatusFuture {
+func (a *FMSStub) ListComplianceStatusAsync(ctx workflow.Context, input *fms.ListComplianceStatusInput) *FMSListComplianceStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.ListComplianceStatus", input)
-	return &FmsListComplianceStatusFuture{Future: future}
+	return &FMSListComplianceStatusFuture{Future: future}
 }
 
 func (a *FMSStub) ListMemberAccounts(ctx workflow.Context, input *fms.ListMemberAccountsInput) (*fms.ListMemberAccountsOutput, error) {
@@ -537,9 +563,9 @@ func (a *FMSStub) ListMemberAccounts(ctx workflow.Context, input *fms.ListMember
 	return &output, err
 }
 
-func (a *FMSStub) ListMemberAccountsAsync(ctx workflow.Context, input *fms.ListMemberAccountsInput) *FmsListMemberAccountsFuture {
+func (a *FMSStub) ListMemberAccountsAsync(ctx workflow.Context, input *fms.ListMemberAccountsInput) *FMSListMemberAccountsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.ListMemberAccounts", input)
-	return &FmsListMemberAccountsFuture{Future: future}
+	return &FMSListMemberAccountsFuture{Future: future}
 }
 
 func (a *FMSStub) ListPolicies(ctx workflow.Context, input *fms.ListPoliciesInput) (*fms.ListPoliciesOutput, error) {
@@ -548,9 +574,9 @@ func (a *FMSStub) ListPolicies(ctx workflow.Context, input *fms.ListPoliciesInpu
 	return &output, err
 }
 
-func (a *FMSStub) ListPoliciesAsync(ctx workflow.Context, input *fms.ListPoliciesInput) *FmsListPoliciesFuture {
+func (a *FMSStub) ListPoliciesAsync(ctx workflow.Context, input *fms.ListPoliciesInput) *FMSListPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.ListPolicies", input)
-	return &FmsListPoliciesFuture{Future: future}
+	return &FMSListPoliciesFuture{Future: future}
 }
 
 func (a *FMSStub) ListProtocolsLists(ctx workflow.Context, input *fms.ListProtocolsListsInput) (*fms.ListProtocolsListsOutput, error) {
@@ -559,9 +585,9 @@ func (a *FMSStub) ListProtocolsLists(ctx workflow.Context, input *fms.ListProtoc
 	return &output, err
 }
 
-func (a *FMSStub) ListProtocolsListsAsync(ctx workflow.Context, input *fms.ListProtocolsListsInput) *FmsListProtocolsListsFuture {
+func (a *FMSStub) ListProtocolsListsAsync(ctx workflow.Context, input *fms.ListProtocolsListsInput) *FMSListProtocolsListsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.ListProtocolsLists", input)
-	return &FmsListProtocolsListsFuture{Future: future}
+	return &FMSListProtocolsListsFuture{Future: future}
 }
 
 func (a *FMSStub) ListTagsForResource(ctx workflow.Context, input *fms.ListTagsForResourceInput) (*fms.ListTagsForResourceOutput, error) {
@@ -570,9 +596,9 @@ func (a *FMSStub) ListTagsForResource(ctx workflow.Context, input *fms.ListTagsF
 	return &output, err
 }
 
-func (a *FMSStub) ListTagsForResourceAsync(ctx workflow.Context, input *fms.ListTagsForResourceInput) *FmsListTagsForResourceFuture {
+func (a *FMSStub) ListTagsForResourceAsync(ctx workflow.Context, input *fms.ListTagsForResourceInput) *FMSListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.ListTagsForResource", input)
-	return &FmsListTagsForResourceFuture{Future: future}
+	return &FMSListTagsForResourceFuture{Future: future}
 }
 
 func (a *FMSStub) PutAppsList(ctx workflow.Context, input *fms.PutAppsListInput) (*fms.PutAppsListOutput, error) {
@@ -581,9 +607,9 @@ func (a *FMSStub) PutAppsList(ctx workflow.Context, input *fms.PutAppsListInput)
 	return &output, err
 }
 
-func (a *FMSStub) PutAppsListAsync(ctx workflow.Context, input *fms.PutAppsListInput) *FmsPutAppsListFuture {
+func (a *FMSStub) PutAppsListAsync(ctx workflow.Context, input *fms.PutAppsListInput) *FMSPutAppsListFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.PutAppsList", input)
-	return &FmsPutAppsListFuture{Future: future}
+	return &FMSPutAppsListFuture{Future: future}
 }
 
 func (a *FMSStub) PutNotificationChannel(ctx workflow.Context, input *fms.PutNotificationChannelInput) (*fms.PutNotificationChannelOutput, error) {
@@ -592,9 +618,9 @@ func (a *FMSStub) PutNotificationChannel(ctx workflow.Context, input *fms.PutNot
 	return &output, err
 }
 
-func (a *FMSStub) PutNotificationChannelAsync(ctx workflow.Context, input *fms.PutNotificationChannelInput) *FmsPutNotificationChannelFuture {
+func (a *FMSStub) PutNotificationChannelAsync(ctx workflow.Context, input *fms.PutNotificationChannelInput) *FMSPutNotificationChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.PutNotificationChannel", input)
-	return &FmsPutNotificationChannelFuture{Future: future}
+	return &FMSPutNotificationChannelFuture{Future: future}
 }
 
 func (a *FMSStub) PutPolicy(ctx workflow.Context, input *fms.PutPolicyInput) (*fms.PutPolicyOutput, error) {
@@ -603,9 +629,9 @@ func (a *FMSStub) PutPolicy(ctx workflow.Context, input *fms.PutPolicyInput) (*f
 	return &output, err
 }
 
-func (a *FMSStub) PutPolicyAsync(ctx workflow.Context, input *fms.PutPolicyInput) *FmsPutPolicyFuture {
+func (a *FMSStub) PutPolicyAsync(ctx workflow.Context, input *fms.PutPolicyInput) *FMSPutPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.PutPolicy", input)
-	return &FmsPutPolicyFuture{Future: future}
+	return &FMSPutPolicyFuture{Future: future}
 }
 
 func (a *FMSStub) PutProtocolsList(ctx workflow.Context, input *fms.PutProtocolsListInput) (*fms.PutProtocolsListOutput, error) {
@@ -614,9 +640,9 @@ func (a *FMSStub) PutProtocolsList(ctx workflow.Context, input *fms.PutProtocols
 	return &output, err
 }
 
-func (a *FMSStub) PutProtocolsListAsync(ctx workflow.Context, input *fms.PutProtocolsListInput) *FmsPutProtocolsListFuture {
+func (a *FMSStub) PutProtocolsListAsync(ctx workflow.Context, input *fms.PutProtocolsListInput) *FMSPutProtocolsListFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.PutProtocolsList", input)
-	return &FmsPutProtocolsListFuture{Future: future}
+	return &FMSPutProtocolsListFuture{Future: future}
 }
 
 func (a *FMSStub) TagResource(ctx workflow.Context, input *fms.TagResourceInput) (*fms.TagResourceOutput, error) {
@@ -625,9 +651,9 @@ func (a *FMSStub) TagResource(ctx workflow.Context, input *fms.TagResourceInput)
 	return &output, err
 }
 
-func (a *FMSStub) TagResourceAsync(ctx workflow.Context, input *fms.TagResourceInput) *FmsTagResourceFuture {
+func (a *FMSStub) TagResourceAsync(ctx workflow.Context, input *fms.TagResourceInput) *FMSTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.TagResource", input)
-	return &FmsTagResourceFuture{Future: future}
+	return &FMSTagResourceFuture{Future: future}
 }
 
 func (a *FMSStub) UntagResource(ctx workflow.Context, input *fms.UntagResourceInput) (*fms.UntagResourceOutput, error) {
@@ -636,7 +662,7 @@ func (a *FMSStub) UntagResource(ctx workflow.Context, input *fms.UntagResourceIn
 	return &output, err
 }
 
-func (a *FMSStub) UntagResourceAsync(ctx workflow.Context, input *fms.UntagResourceInput) *FmsUntagResourceFuture {
+func (a *FMSStub) UntagResourceAsync(ctx workflow.Context, input *fms.UntagResourceInput) *FMSUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fms.UntagResource", input)
-	return &FmsUntagResourceFuture{Future: future}
+	return &FMSUntagResourceFuture{Future: future}
 }

@@ -114,6 +114,7 @@ func NewSchemasStub() SchemasClient {
 }
 
 type SchemasCreateDiscovererFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +125,7 @@ func (r *SchemasCreateDiscovererFuture) Get(ctx workflow.Context) (*schemas.Crea
 }
 
 type SchemasCreateRegistryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +136,7 @@ func (r *SchemasCreateRegistryFuture) Get(ctx workflow.Context) (*schemas.Create
 }
 
 type SchemasCreateSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +147,7 @@ func (r *SchemasCreateSchemaFuture) Get(ctx workflow.Context) (*schemas.CreateSc
 }
 
 type SchemasDeleteDiscovererFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +158,7 @@ func (r *SchemasDeleteDiscovererFuture) Get(ctx workflow.Context) (*schemas.Dele
 }
 
 type SchemasDeleteRegistryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +169,7 @@ func (r *SchemasDeleteRegistryFuture) Get(ctx workflow.Context) (*schemas.Delete
 }
 
 type SchemasDeleteResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +180,7 @@ func (r *SchemasDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*schemas.
 }
 
 type SchemasDeleteSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +191,7 @@ func (r *SchemasDeleteSchemaFuture) Get(ctx workflow.Context) (*schemas.DeleteSc
 }
 
 type SchemasDeleteSchemaVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +202,7 @@ func (r *SchemasDeleteSchemaVersionFuture) Get(ctx workflow.Context) (*schemas.D
 }
 
 type SchemasDescribeCodeBindingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +213,7 @@ func (r *SchemasDescribeCodeBindingFuture) Get(ctx workflow.Context) (*schemas.D
 }
 
 type SchemasDescribeDiscovererFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +224,7 @@ func (r *SchemasDescribeDiscovererFuture) Get(ctx workflow.Context) (*schemas.De
 }
 
 type SchemasDescribeRegistryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +235,7 @@ func (r *SchemasDescribeRegistryFuture) Get(ctx workflow.Context) (*schemas.Desc
 }
 
 type SchemasDescribeSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +246,7 @@ func (r *SchemasDescribeSchemaFuture) Get(ctx workflow.Context) (*schemas.Descri
 }
 
 type SchemasExportSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +257,7 @@ func (r *SchemasExportSchemaFuture) Get(ctx workflow.Context) (*schemas.ExportSc
 }
 
 type SchemasGetCodeBindingSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +268,7 @@ func (r *SchemasGetCodeBindingSourceFuture) Get(ctx workflow.Context) (*schemas.
 }
 
 type SchemasGetDiscoveredSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +279,7 @@ func (r *SchemasGetDiscoveredSchemaFuture) Get(ctx workflow.Context) (*schemas.G
 }
 
 type SchemasGetResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +290,7 @@ func (r *SchemasGetResourcePolicyFuture) Get(ctx workflow.Context) (*schemas.Get
 }
 
 type SchemasListDiscoverersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +301,7 @@ func (r *SchemasListDiscoverersFuture) Get(ctx workflow.Context) (*schemas.ListD
 }
 
 type SchemasListRegistriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +312,7 @@ func (r *SchemasListRegistriesFuture) Get(ctx workflow.Context) (*schemas.ListRe
 }
 
 type SchemasListSchemaVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +323,7 @@ func (r *SchemasListSchemaVersionsFuture) Get(ctx workflow.Context) (*schemas.Li
 }
 
 type SchemasListSchemasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +334,7 @@ func (r *SchemasListSchemasFuture) Get(ctx workflow.Context) (*schemas.ListSchem
 }
 
 type SchemasListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +345,7 @@ func (r *SchemasListTagsForResourceFuture) Get(ctx workflow.Context) (*schemas.L
 }
 
 type SchemasPutCodeBindingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +356,7 @@ func (r *SchemasPutCodeBindingFuture) Get(ctx workflow.Context) (*schemas.PutCod
 }
 
 type SchemasPutResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +367,7 @@ func (r *SchemasPutResourcePolicyFuture) Get(ctx workflow.Context) (*schemas.Put
 }
 
 type SchemasSearchSchemasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +378,7 @@ func (r *SchemasSearchSchemasFuture) Get(ctx workflow.Context) (*schemas.SearchS
 }
 
 type SchemasStartDiscovererFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +389,7 @@ func (r *SchemasStartDiscovererFuture) Get(ctx workflow.Context) (*schemas.Start
 }
 
 type SchemasStopDiscovererFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +400,7 @@ func (r *SchemasStopDiscovererFuture) Get(ctx workflow.Context) (*schemas.StopDi
 }
 
 type SchemasTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +411,7 @@ func (r *SchemasTagResourceFuture) Get(ctx workflow.Context) (*schemas.TagResour
 }
 
 type SchemasUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +422,7 @@ func (r *SchemasUntagResourceFuture) Get(ctx workflow.Context) (*schemas.UntagRe
 }
 
 type SchemasUpdateDiscovererFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +433,7 @@ func (r *SchemasUpdateDiscovererFuture) Get(ctx workflow.Context) (*schemas.Upda
 }
 
 type SchemasUpdateRegistryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +444,7 @@ func (r *SchemasUpdateRegistryFuture) Get(ctx workflow.Context) (*schemas.Update
 }
 
 type SchemasUpdateSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

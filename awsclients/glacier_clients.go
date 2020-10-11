@@ -123,6 +123,7 @@ func NewGlacierStub() GlacierClient {
 }
 
 type GlacierAbortMultipartUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +134,7 @@ func (r *GlacierAbortMultipartUploadFuture) Get(ctx workflow.Context) (*glacier.
 }
 
 type GlacierAbortVaultLockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +145,7 @@ func (r *GlacierAbortVaultLockFuture) Get(ctx workflow.Context) (*glacier.AbortV
 }
 
 type GlacierAddTagsToVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +156,7 @@ func (r *GlacierAddTagsToVaultFuture) Get(ctx workflow.Context) (*glacier.AddTag
 }
 
 type GlacierCompleteMultipartUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +167,7 @@ func (r *GlacierCompleteMultipartUploadFuture) Get(ctx workflow.Context) (*glaci
 }
 
 type GlacierCompleteVaultLockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +178,7 @@ func (r *GlacierCompleteVaultLockFuture) Get(ctx workflow.Context) (*glacier.Com
 }
 
 type GlacierCreateVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +189,7 @@ func (r *GlacierCreateVaultFuture) Get(ctx workflow.Context) (*glacier.CreateVau
 }
 
 type GlacierDeleteArchiveFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +200,7 @@ func (r *GlacierDeleteArchiveFuture) Get(ctx workflow.Context) (*glacier.DeleteA
 }
 
 type GlacierDeleteVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +211,7 @@ func (r *GlacierDeleteVaultFuture) Get(ctx workflow.Context) (*glacier.DeleteVau
 }
 
 type GlacierDeleteVaultAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +222,7 @@ func (r *GlacierDeleteVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glaci
 }
 
 type GlacierDeleteVaultNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +233,7 @@ func (r *GlacierDeleteVaultNotificationsFuture) Get(ctx workflow.Context) (*glac
 }
 
 type GlacierDescribeJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +244,7 @@ func (r *GlacierDescribeJobFuture) Get(ctx workflow.Context) (*glacier.JobDescri
 }
 
 type GlacierDescribeVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +255,7 @@ func (r *GlacierDescribeVaultFuture) Get(ctx workflow.Context) (*glacier.Describ
 }
 
 type GlacierGetDataRetrievalPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +266,7 @@ func (r *GlacierGetDataRetrievalPolicyFuture) Get(ctx workflow.Context) (*glacie
 }
 
 type GlacierGetJobOutputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +277,7 @@ func (r *GlacierGetJobOutputFuture) Get(ctx workflow.Context) (*glacier.GetJobOu
 }
 
 type GlacierGetVaultAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +288,7 @@ func (r *GlacierGetVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glacier.
 }
 
 type GlacierGetVaultLockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +299,7 @@ func (r *GlacierGetVaultLockFuture) Get(ctx workflow.Context) (*glacier.GetVault
 }
 
 type GlacierGetVaultNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +310,7 @@ func (r *GlacierGetVaultNotificationsFuture) Get(ctx workflow.Context) (*glacier
 }
 
 type GlacierInitiateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +321,7 @@ func (r *GlacierInitiateJobFuture) Get(ctx workflow.Context) (*glacier.InitiateJ
 }
 
 type GlacierInitiateMultipartUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +332,7 @@ func (r *GlacierInitiateMultipartUploadFuture) Get(ctx workflow.Context) (*glaci
 }
 
 type GlacierInitiateVaultLockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +343,7 @@ func (r *GlacierInitiateVaultLockFuture) Get(ctx workflow.Context) (*glacier.Ini
 }
 
 type GlacierListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +354,7 @@ func (r *GlacierListJobsFuture) Get(ctx workflow.Context) (*glacier.ListJobsOutp
 }
 
 type GlacierListMultipartUploadsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -343,6 +365,7 @@ func (r *GlacierListMultipartUploadsFuture) Get(ctx workflow.Context) (*glacier.
 }
 
 type GlacierListPartsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -353,6 +376,7 @@ func (r *GlacierListPartsFuture) Get(ctx workflow.Context) (*glacier.ListPartsOu
 }
 
 type GlacierListProvisionedCapacityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -363,6 +387,7 @@ func (r *GlacierListProvisionedCapacityFuture) Get(ctx workflow.Context) (*glaci
 }
 
 type GlacierListTagsForVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -373,6 +398,7 @@ func (r *GlacierListTagsForVaultFuture) Get(ctx workflow.Context) (*glacier.List
 }
 
 type GlacierListVaultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -383,6 +409,7 @@ func (r *GlacierListVaultsFuture) Get(ctx workflow.Context) (*glacier.ListVaults
 }
 
 type GlacierPurchaseProvisionedCapacityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -393,6 +420,7 @@ func (r *GlacierPurchaseProvisionedCapacityFuture) Get(ctx workflow.Context) (*g
 }
 
 type GlacierRemoveTagsFromVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -403,6 +431,7 @@ func (r *GlacierRemoveTagsFromVaultFuture) Get(ctx workflow.Context) (*glacier.R
 }
 
 type GlacierSetDataRetrievalPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -413,6 +442,7 @@ func (r *GlacierSetDataRetrievalPolicyFuture) Get(ctx workflow.Context) (*glacie
 }
 
 type GlacierSetVaultAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -423,6 +453,7 @@ func (r *GlacierSetVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glacier.
 }
 
 type GlacierSetVaultNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -433,6 +464,7 @@ func (r *GlacierSetVaultNotificationsFuture) Get(ctx workflow.Context) (*glacier
 }
 
 type GlacierUploadArchiveFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -443,6 +475,7 @@ func (r *GlacierUploadArchiveFuture) Get(ctx workflow.Context) (*glacier.Archive
 }
 
 type GlacierUploadMultipartPartFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

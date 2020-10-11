@@ -45,6 +45,7 @@ func NewTranslateStub() TranslateClient {
 }
 
 type TranslateDeleteTerminologyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -55,6 +56,7 @@ func (r *TranslateDeleteTerminologyFuture) Get(ctx workflow.Context) (*translate
 }
 
 type TranslateDescribeTextTranslationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -65,6 +67,7 @@ func (r *TranslateDescribeTextTranslationJobFuture) Get(ctx workflow.Context) (*
 }
 
 type TranslateGetTerminologyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -75,6 +78,7 @@ func (r *TranslateGetTerminologyFuture) Get(ctx workflow.Context) (*translate.Ge
 }
 
 type TranslateImportTerminologyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +89,7 @@ func (r *TranslateImportTerminologyFuture) Get(ctx workflow.Context) (*translate
 }
 
 type TranslateListTerminologiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +100,7 @@ func (r *TranslateListTerminologiesFuture) Get(ctx workflow.Context) (*translate
 }
 
 type TranslateListTextTranslationJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +111,7 @@ func (r *TranslateListTextTranslationJobsFuture) Get(ctx workflow.Context) (*tra
 }
 
 type TranslateStartTextTranslationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +122,7 @@ func (r *TranslateStartTextTranslationJobFuture) Get(ctx workflow.Context) (*tra
 }
 
 type TranslateStopTextTranslationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +133,7 @@ func (r *TranslateStopTextTranslationJobFuture) Get(ctx workflow.Context) (*tran
 }
 
 type TranslateTextFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

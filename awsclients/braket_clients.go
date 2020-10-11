@@ -36,6 +36,7 @@ func NewBraketStub() BraketClient {
 }
 
 type BraketCancelQuantumTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -46,6 +47,7 @@ func (r *BraketCancelQuantumTaskFuture) Get(ctx workflow.Context) (*braket.Cance
 }
 
 type BraketCreateQuantumTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -56,6 +58,7 @@ func (r *BraketCreateQuantumTaskFuture) Get(ctx workflow.Context) (*braket.Creat
 }
 
 type BraketGetDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -66,6 +69,7 @@ func (r *BraketGetDeviceFuture) Get(ctx workflow.Context) (*braket.GetDeviceOutp
 }
 
 type BraketGetQuantumTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +80,7 @@ func (r *BraketGetQuantumTaskFuture) Get(ctx workflow.Context) (*braket.GetQuant
 }
 
 type BraketSearchDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +91,7 @@ func (r *BraketSearchDevicesFuture) Get(ctx workflow.Context) (*braket.SearchDev
 }
 
 type BraketSearchQuantumTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

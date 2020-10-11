@@ -11,31 +11,31 @@ import (
 
 type SavingsPlansClient interface {
 	CreateSavingsPlan(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error)
-	CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsplansCreateSavingsPlanFuture
+	CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsPlansCreateSavingsPlanFuture
 
 	DeleteQueuedSavingsPlan(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) (*savingsplans.DeleteQueuedSavingsPlanOutput, error)
-	DeleteQueuedSavingsPlanAsync(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) *SavingsplansDeleteQueuedSavingsPlanFuture
+	DeleteQueuedSavingsPlanAsync(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) *SavingsPlansDeleteQueuedSavingsPlanFuture
 
 	DescribeSavingsPlanRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error)
-	DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsplansDescribeSavingsPlanRatesFuture
+	DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsPlansDescribeSavingsPlanRatesFuture
 
 	DescribeSavingsPlans(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error)
-	DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *SavingsplansDescribeSavingsPlansFuture
+	DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *SavingsPlansDescribeSavingsPlansFuture
 
 	DescribeSavingsPlansOfferingRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error)
-	DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *SavingsplansDescribeSavingsPlansOfferingRatesFuture
+	DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *SavingsPlansDescribeSavingsPlansOfferingRatesFuture
 
 	DescribeSavingsPlansOfferings(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error)
-	DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *SavingsplansDescribeSavingsPlansOfferingsFuture
+	DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *SavingsPlansDescribeSavingsPlansOfferingsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *SavingsplansListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *SavingsPlansListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *SavingsplansTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *SavingsPlansTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsplansUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsPlansUntagResourceFuture
 }
 
 type SavingsPlansStub struct{}
@@ -44,91 +44,100 @@ func NewSavingsPlansStub() SavingsPlansClient {
 	return &SavingsPlansStub{}
 }
 
-type SavingsplansCreateSavingsPlanFuture struct {
+type SavingsPlansCreateSavingsPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansCreateSavingsPlanFuture) Get(ctx workflow.Context) (*savingsplans.CreateSavingsPlanOutput, error) {
+func (r *SavingsPlansCreateSavingsPlanFuture) Get(ctx workflow.Context) (*savingsplans.CreateSavingsPlanOutput, error) {
 	var output savingsplans.CreateSavingsPlanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SavingsplansDeleteQueuedSavingsPlanFuture struct {
+type SavingsPlansDeleteQueuedSavingsPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansDeleteQueuedSavingsPlanFuture) Get(ctx workflow.Context) (*savingsplans.DeleteQueuedSavingsPlanOutput, error) {
+func (r *SavingsPlansDeleteQueuedSavingsPlanFuture) Get(ctx workflow.Context) (*savingsplans.DeleteQueuedSavingsPlanOutput, error) {
 	var output savingsplans.DeleteQueuedSavingsPlanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SavingsplansDescribeSavingsPlanRatesFuture struct {
+type SavingsPlansDescribeSavingsPlanRatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansDescribeSavingsPlanRatesFuture) Get(ctx workflow.Context) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
+func (r *SavingsPlansDescribeSavingsPlanRatesFuture) Get(ctx workflow.Context) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
 	var output savingsplans.DescribeSavingsPlanRatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SavingsplansDescribeSavingsPlansFuture struct {
+type SavingsPlansDescribeSavingsPlansFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansDescribeSavingsPlansFuture) Get(ctx workflow.Context) (*savingsplans.DescribeSavingsPlansOutput, error) {
+func (r *SavingsPlansDescribeSavingsPlansFuture) Get(ctx workflow.Context) (*savingsplans.DescribeSavingsPlansOutput, error) {
 	var output savingsplans.DescribeSavingsPlansOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SavingsplansDescribeSavingsPlansOfferingRatesFuture struct {
+type SavingsPlansDescribeSavingsPlansOfferingRatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansDescribeSavingsPlansOfferingRatesFuture) Get(ctx workflow.Context) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error) {
+func (r *SavingsPlansDescribeSavingsPlansOfferingRatesFuture) Get(ctx workflow.Context) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error) {
 	var output savingsplans.DescribeSavingsPlansOfferingRatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SavingsplansDescribeSavingsPlansOfferingsFuture struct {
+type SavingsPlansDescribeSavingsPlansOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansDescribeSavingsPlansOfferingsFuture) Get(ctx workflow.Context) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error) {
+func (r *SavingsPlansDescribeSavingsPlansOfferingsFuture) Get(ctx workflow.Context) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error) {
 	var output savingsplans.DescribeSavingsPlansOfferingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SavingsplansListTagsForResourceFuture struct {
+type SavingsPlansListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansListTagsForResourceFuture) Get(ctx workflow.Context) (*savingsplans.ListTagsForResourceOutput, error) {
+func (r *SavingsPlansListTagsForResourceFuture) Get(ctx workflow.Context) (*savingsplans.ListTagsForResourceOutput, error) {
 	var output savingsplans.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SavingsplansTagResourceFuture struct {
+type SavingsPlansTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansTagResourceFuture) Get(ctx workflow.Context) (*savingsplans.TagResourceOutput, error) {
+func (r *SavingsPlansTagResourceFuture) Get(ctx workflow.Context) (*savingsplans.TagResourceOutput, error) {
 	var output savingsplans.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SavingsplansUntagResourceFuture struct {
+type SavingsPlansUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SavingsplansUntagResourceFuture) Get(ctx workflow.Context) (*savingsplans.UntagResourceOutput, error) {
+func (r *SavingsPlansUntagResourceFuture) Get(ctx workflow.Context) (*savingsplans.UntagResourceOutput, error) {
 	var output savingsplans.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -140,9 +149,9 @@ func (a *SavingsPlansStub) CreateSavingsPlan(ctx workflow.Context, input *saving
 	return &output, err
 }
 
-func (a *SavingsPlansStub) CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsplansCreateSavingsPlanFuture {
+func (a *SavingsPlansStub) CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsPlansCreateSavingsPlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.CreateSavingsPlan", input)
-	return &SavingsplansCreateSavingsPlanFuture{Future: future}
+	return &SavingsPlansCreateSavingsPlanFuture{Future: future}
 }
 
 func (a *SavingsPlansStub) DeleteQueuedSavingsPlan(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) (*savingsplans.DeleteQueuedSavingsPlanOutput, error) {
@@ -151,9 +160,9 @@ func (a *SavingsPlansStub) DeleteQueuedSavingsPlan(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *SavingsPlansStub) DeleteQueuedSavingsPlanAsync(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) *SavingsplansDeleteQueuedSavingsPlanFuture {
+func (a *SavingsPlansStub) DeleteQueuedSavingsPlanAsync(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) *SavingsPlansDeleteQueuedSavingsPlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DeleteQueuedSavingsPlan", input)
-	return &SavingsplansDeleteQueuedSavingsPlanFuture{Future: future}
+	return &SavingsPlansDeleteQueuedSavingsPlanFuture{Future: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlanRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
@@ -162,9 +171,9 @@ func (a *SavingsPlansStub) DescribeSavingsPlanRates(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *SavingsPlansStub) DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsplansDescribeSavingsPlanRatesFuture {
+func (a *SavingsPlansStub) DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsPlansDescribeSavingsPlanRatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlanRates", input)
-	return &SavingsplansDescribeSavingsPlanRatesFuture{Future: future}
+	return &SavingsPlansDescribeSavingsPlanRatesFuture{Future: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlans(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error) {
@@ -173,9 +182,9 @@ func (a *SavingsPlansStub) DescribeSavingsPlans(ctx workflow.Context, input *sav
 	return &output, err
 }
 
-func (a *SavingsPlansStub) DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *SavingsplansDescribeSavingsPlansFuture {
+func (a *SavingsPlansStub) DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *SavingsPlansDescribeSavingsPlansFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlans", input)
-	return &SavingsplansDescribeSavingsPlansFuture{Future: future}
+	return &SavingsPlansDescribeSavingsPlansFuture{Future: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlansOfferingRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error) {
@@ -184,9 +193,9 @@ func (a *SavingsPlansStub) DescribeSavingsPlansOfferingRates(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *SavingsPlansStub) DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *SavingsplansDescribeSavingsPlansOfferingRatesFuture {
+func (a *SavingsPlansStub) DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *SavingsPlansDescribeSavingsPlansOfferingRatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlansOfferingRates", input)
-	return &SavingsplansDescribeSavingsPlansOfferingRatesFuture{Future: future}
+	return &SavingsPlansDescribeSavingsPlansOfferingRatesFuture{Future: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlansOfferings(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error) {
@@ -195,9 +204,9 @@ func (a *SavingsPlansStub) DescribeSavingsPlansOfferings(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *SavingsPlansStub) DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *SavingsplansDescribeSavingsPlansOfferingsFuture {
+func (a *SavingsPlansStub) DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *SavingsPlansDescribeSavingsPlansOfferingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlansOfferings", input)
-	return &SavingsplansDescribeSavingsPlansOfferingsFuture{Future: future}
+	return &SavingsPlansDescribeSavingsPlansOfferingsFuture{Future: future}
 }
 
 func (a *SavingsPlansStub) ListTagsForResource(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error) {
@@ -206,9 +215,9 @@ func (a *SavingsPlansStub) ListTagsForResource(ctx workflow.Context, input *savi
 	return &output, err
 }
 
-func (a *SavingsPlansStub) ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *SavingsplansListTagsForResourceFuture {
+func (a *SavingsPlansStub) ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *SavingsPlansListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.ListTagsForResource", input)
-	return &SavingsplansListTagsForResourceFuture{Future: future}
+	return &SavingsPlansListTagsForResourceFuture{Future: future}
 }
 
 func (a *SavingsPlansStub) TagResource(ctx workflow.Context, input *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error) {
@@ -217,9 +226,9 @@ func (a *SavingsPlansStub) TagResource(ctx workflow.Context, input *savingsplans
 	return &output, err
 }
 
-func (a *SavingsPlansStub) TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *SavingsplansTagResourceFuture {
+func (a *SavingsPlansStub) TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *SavingsPlansTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.TagResource", input)
-	return &SavingsplansTagResourceFuture{Future: future}
+	return &SavingsPlansTagResourceFuture{Future: future}
 }
 
 func (a *SavingsPlansStub) UntagResource(ctx workflow.Context, input *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error) {
@@ -228,7 +237,7 @@ func (a *SavingsPlansStub) UntagResource(ctx workflow.Context, input *savingspla
 	return &output, err
 }
 
-func (a *SavingsPlansStub) UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsplansUntagResourceFuture {
+func (a *SavingsPlansStub) UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsPlansUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.UntagResource", input)
-	return &SavingsplansUntagResourceFuture{Future: future}
+	return &SavingsPlansUntagResourceFuture{Future: future}
 }

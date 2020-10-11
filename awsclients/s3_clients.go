@@ -303,6 +303,7 @@ func NewS3Stub() S3Client {
 }
 
 type S3AbortMultipartUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +314,7 @@ func (r *S3AbortMultipartUploadFuture) Get(ctx workflow.Context) (*s3.AbortMulti
 }
 
 type S3CompleteMultipartUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +325,7 @@ func (r *S3CompleteMultipartUploadFuture) Get(ctx workflow.Context) (*s3.Complet
 }
 
 type S3CopyObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +336,7 @@ func (r *S3CopyObjectFuture) Get(ctx workflow.Context) (*s3.CopyObjectOutput, er
 }
 
 type S3CreateBucketFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -343,6 +347,7 @@ func (r *S3CreateBucketFuture) Get(ctx workflow.Context) (*s3.CreateBucketOutput
 }
 
 type S3CreateMultipartUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -353,6 +358,7 @@ func (r *S3CreateMultipartUploadFuture) Get(ctx workflow.Context) (*s3.CreateMul
 }
 
 type S3DeleteBucketFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -363,6 +369,7 @@ func (r *S3DeleteBucketFuture) Get(ctx workflow.Context) (*s3.DeleteBucketOutput
 }
 
 type S3DeleteBucketAnalyticsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -373,6 +380,7 @@ func (r *S3DeleteBucketAnalyticsConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type S3DeleteBucketCorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -383,6 +391,7 @@ func (r *S3DeleteBucketCorsFuture) Get(ctx workflow.Context) (*s3.DeleteBucketCo
 }
 
 type S3DeleteBucketEncryptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -393,6 +402,7 @@ func (r *S3DeleteBucketEncryptionFuture) Get(ctx workflow.Context) (*s3.DeleteBu
 }
 
 type S3DeleteBucketInventoryConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -403,6 +413,7 @@ func (r *S3DeleteBucketInventoryConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type S3DeleteBucketLifecycleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -413,6 +424,7 @@ func (r *S3DeleteBucketLifecycleFuture) Get(ctx workflow.Context) (*s3.DeleteBuc
 }
 
 type S3DeleteBucketMetricsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -423,6 +435,7 @@ func (r *S3DeleteBucketMetricsConfigurationFuture) Get(ctx workflow.Context) (*s
 }
 
 type S3DeleteBucketOwnershipControlsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -433,6 +446,7 @@ func (r *S3DeleteBucketOwnershipControlsFuture) Get(ctx workflow.Context) (*s3.D
 }
 
 type S3DeleteBucketPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -443,6 +457,7 @@ func (r *S3DeleteBucketPolicyFuture) Get(ctx workflow.Context) (*s3.DeleteBucket
 }
 
 type S3DeleteBucketReplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -453,6 +468,7 @@ func (r *S3DeleteBucketReplicationFuture) Get(ctx workflow.Context) (*s3.DeleteB
 }
 
 type S3DeleteBucketTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -463,6 +479,7 @@ func (r *S3DeleteBucketTaggingFuture) Get(ctx workflow.Context) (*s3.DeleteBucke
 }
 
 type S3DeleteBucketWebsiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -473,6 +490,7 @@ func (r *S3DeleteBucketWebsiteFuture) Get(ctx workflow.Context) (*s3.DeleteBucke
 }
 
 type S3DeleteObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -483,6 +501,7 @@ func (r *S3DeleteObjectFuture) Get(ctx workflow.Context) (*s3.DeleteObjectOutput
 }
 
 type S3DeleteObjectTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -493,6 +512,7 @@ func (r *S3DeleteObjectTaggingFuture) Get(ctx workflow.Context) (*s3.DeleteObjec
 }
 
 type S3DeleteObjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -503,6 +523,7 @@ func (r *S3DeleteObjectsFuture) Get(ctx workflow.Context) (*s3.DeleteObjectsOutp
 }
 
 type S3DeletePublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -513,6 +534,7 @@ func (r *S3DeletePublicAccessBlockFuture) Get(ctx workflow.Context) (*s3.DeleteP
 }
 
 type S3GetBucketAccelerateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -523,6 +545,7 @@ func (r *S3GetBucketAccelerateConfigurationFuture) Get(ctx workflow.Context) (*s
 }
 
 type S3GetBucketAclFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -533,6 +556,7 @@ func (r *S3GetBucketAclFuture) Get(ctx workflow.Context) (*s3.GetBucketAclOutput
 }
 
 type S3GetBucketAnalyticsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -543,6 +567,7 @@ func (r *S3GetBucketAnalyticsConfigurationFuture) Get(ctx workflow.Context) (*s3
 }
 
 type S3GetBucketCorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -553,6 +578,7 @@ func (r *S3GetBucketCorsFuture) Get(ctx workflow.Context) (*s3.GetBucketCorsOutp
 }
 
 type S3GetBucketEncryptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -563,6 +589,7 @@ func (r *S3GetBucketEncryptionFuture) Get(ctx workflow.Context) (*s3.GetBucketEn
 }
 
 type S3GetBucketInventoryConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -573,6 +600,7 @@ func (r *S3GetBucketInventoryConfigurationFuture) Get(ctx workflow.Context) (*s3
 }
 
 type S3GetBucketLifecycleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -583,6 +611,7 @@ func (r *S3GetBucketLifecycleFuture) Get(ctx workflow.Context) (*s3.GetBucketLif
 }
 
 type S3GetBucketLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -593,6 +622,7 @@ func (r *S3GetBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3
 }
 
 type S3GetBucketLocationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -603,6 +633,7 @@ func (r *S3GetBucketLocationFuture) Get(ctx workflow.Context) (*s3.GetBucketLoca
 }
 
 type S3GetBucketLoggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -613,6 +644,7 @@ func (r *S3GetBucketLoggingFuture) Get(ctx workflow.Context) (*s3.GetBucketLoggi
 }
 
 type S3GetBucketMetricsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -623,6 +655,7 @@ func (r *S3GetBucketMetricsConfigurationFuture) Get(ctx workflow.Context) (*s3.G
 }
 
 type S3GetBucketNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -633,6 +666,7 @@ func (r *S3GetBucketNotificationFuture) Get(ctx workflow.Context) (*s3.Notificat
 }
 
 type S3GetBucketNotificationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -643,6 +677,7 @@ func (r *S3GetBucketNotificationConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type S3GetBucketOwnershipControlsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -653,6 +688,7 @@ func (r *S3GetBucketOwnershipControlsFuture) Get(ctx workflow.Context) (*s3.GetB
 }
 
 type S3GetBucketPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -663,6 +699,7 @@ func (r *S3GetBucketPolicyFuture) Get(ctx workflow.Context) (*s3.GetBucketPolicy
 }
 
 type S3GetBucketPolicyStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -673,6 +710,7 @@ func (r *S3GetBucketPolicyStatusFuture) Get(ctx workflow.Context) (*s3.GetBucket
 }
 
 type S3GetBucketReplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -683,6 +721,7 @@ func (r *S3GetBucketReplicationFuture) Get(ctx workflow.Context) (*s3.GetBucketR
 }
 
 type S3GetBucketRequestPaymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -693,6 +732,7 @@ func (r *S3GetBucketRequestPaymentFuture) Get(ctx workflow.Context) (*s3.GetBuck
 }
 
 type S3GetBucketTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -703,6 +743,7 @@ func (r *S3GetBucketTaggingFuture) Get(ctx workflow.Context) (*s3.GetBucketTaggi
 }
 
 type S3GetBucketVersioningFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -713,6 +754,7 @@ func (r *S3GetBucketVersioningFuture) Get(ctx workflow.Context) (*s3.GetBucketVe
 }
 
 type S3GetBucketWebsiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -723,6 +765,7 @@ func (r *S3GetBucketWebsiteFuture) Get(ctx workflow.Context) (*s3.GetBucketWebsi
 }
 
 type S3GetObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -733,6 +776,7 @@ func (r *S3GetObjectFuture) Get(ctx workflow.Context) (*s3.GetObjectOutput, erro
 }
 
 type S3GetObjectAclFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -743,6 +787,7 @@ func (r *S3GetObjectAclFuture) Get(ctx workflow.Context) (*s3.GetObjectAclOutput
 }
 
 type S3GetObjectLegalHoldFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -753,6 +798,7 @@ func (r *S3GetObjectLegalHoldFuture) Get(ctx workflow.Context) (*s3.GetObjectLeg
 }
 
 type S3GetObjectLockConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -763,6 +809,7 @@ func (r *S3GetObjectLockConfigurationFuture) Get(ctx workflow.Context) (*s3.GetO
 }
 
 type S3GetObjectRetentionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -773,6 +820,7 @@ func (r *S3GetObjectRetentionFuture) Get(ctx workflow.Context) (*s3.GetObjectRet
 }
 
 type S3GetObjectTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -783,6 +831,7 @@ func (r *S3GetObjectTaggingFuture) Get(ctx workflow.Context) (*s3.GetObjectTaggi
 }
 
 type S3GetObjectTorrentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -793,6 +842,7 @@ func (r *S3GetObjectTorrentFuture) Get(ctx workflow.Context) (*s3.GetObjectTorre
 }
 
 type S3GetPublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -803,6 +853,7 @@ func (r *S3GetPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3.GetPublicA
 }
 
 type S3HeadBucketFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -813,6 +864,7 @@ func (r *S3HeadBucketFuture) Get(ctx workflow.Context) (*s3.HeadBucketOutput, er
 }
 
 type S3HeadObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -823,6 +875,7 @@ func (r *S3HeadObjectFuture) Get(ctx workflow.Context) (*s3.HeadObjectOutput, er
 }
 
 type S3ListBucketAnalyticsConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -833,6 +886,7 @@ func (r *S3ListBucketAnalyticsConfigurationsFuture) Get(ctx workflow.Context) (*
 }
 
 type S3ListBucketInventoryConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -843,6 +897,7 @@ func (r *S3ListBucketInventoryConfigurationsFuture) Get(ctx workflow.Context) (*
 }
 
 type S3ListBucketMetricsConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -853,6 +908,7 @@ func (r *S3ListBucketMetricsConfigurationsFuture) Get(ctx workflow.Context) (*s3
 }
 
 type S3ListBucketsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -863,6 +919,7 @@ func (r *S3ListBucketsFuture) Get(ctx workflow.Context) (*s3.ListBucketsOutput, 
 }
 
 type S3ListMultipartUploadsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -873,6 +930,7 @@ func (r *S3ListMultipartUploadsFuture) Get(ctx workflow.Context) (*s3.ListMultip
 }
 
 type S3ListObjectVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -883,6 +941,7 @@ func (r *S3ListObjectVersionsFuture) Get(ctx workflow.Context) (*s3.ListObjectVe
 }
 
 type S3ListObjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -893,6 +952,7 @@ func (r *S3ListObjectsFuture) Get(ctx workflow.Context) (*s3.ListObjectsOutput, 
 }
 
 type S3ListObjectsV2Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -903,6 +963,7 @@ func (r *S3ListObjectsV2Future) Get(ctx workflow.Context) (*s3.ListObjectsV2Outp
 }
 
 type S3ListPartsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -913,6 +974,7 @@ func (r *S3ListPartsFuture) Get(ctx workflow.Context) (*s3.ListPartsOutput, erro
 }
 
 type S3PutBucketAccelerateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -923,6 +985,7 @@ func (r *S3PutBucketAccelerateConfigurationFuture) Get(ctx workflow.Context) (*s
 }
 
 type S3PutBucketAclFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -933,6 +996,7 @@ func (r *S3PutBucketAclFuture) Get(ctx workflow.Context) (*s3.PutBucketAclOutput
 }
 
 type S3PutBucketAnalyticsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -943,6 +1007,7 @@ func (r *S3PutBucketAnalyticsConfigurationFuture) Get(ctx workflow.Context) (*s3
 }
 
 type S3PutBucketCorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -953,6 +1018,7 @@ func (r *S3PutBucketCorsFuture) Get(ctx workflow.Context) (*s3.PutBucketCorsOutp
 }
 
 type S3PutBucketEncryptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -963,6 +1029,7 @@ func (r *S3PutBucketEncryptionFuture) Get(ctx workflow.Context) (*s3.PutBucketEn
 }
 
 type S3PutBucketInventoryConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -973,6 +1040,7 @@ func (r *S3PutBucketInventoryConfigurationFuture) Get(ctx workflow.Context) (*s3
 }
 
 type S3PutBucketLifecycleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -983,6 +1051,7 @@ func (r *S3PutBucketLifecycleFuture) Get(ctx workflow.Context) (*s3.PutBucketLif
 }
 
 type S3PutBucketLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -993,6 +1062,7 @@ func (r *S3PutBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3
 }
 
 type S3PutBucketLoggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1003,6 +1073,7 @@ func (r *S3PutBucketLoggingFuture) Get(ctx workflow.Context) (*s3.PutBucketLoggi
 }
 
 type S3PutBucketMetricsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1013,6 +1084,7 @@ func (r *S3PutBucketMetricsConfigurationFuture) Get(ctx workflow.Context) (*s3.P
 }
 
 type S3PutBucketNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1023,6 +1095,7 @@ func (r *S3PutBucketNotificationFuture) Get(ctx workflow.Context) (*s3.PutBucket
 }
 
 type S3PutBucketNotificationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1033,6 +1106,7 @@ func (r *S3PutBucketNotificationConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type S3PutBucketOwnershipControlsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1043,6 +1117,7 @@ func (r *S3PutBucketOwnershipControlsFuture) Get(ctx workflow.Context) (*s3.PutB
 }
 
 type S3PutBucketPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1053,6 +1128,7 @@ func (r *S3PutBucketPolicyFuture) Get(ctx workflow.Context) (*s3.PutBucketPolicy
 }
 
 type S3PutBucketReplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1063,6 +1139,7 @@ func (r *S3PutBucketReplicationFuture) Get(ctx workflow.Context) (*s3.PutBucketR
 }
 
 type S3PutBucketRequestPaymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1073,6 +1150,7 @@ func (r *S3PutBucketRequestPaymentFuture) Get(ctx workflow.Context) (*s3.PutBuck
 }
 
 type S3PutBucketTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1083,6 +1161,7 @@ func (r *S3PutBucketTaggingFuture) Get(ctx workflow.Context) (*s3.PutBucketTaggi
 }
 
 type S3PutBucketVersioningFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1093,6 +1172,7 @@ func (r *S3PutBucketVersioningFuture) Get(ctx workflow.Context) (*s3.PutBucketVe
 }
 
 type S3PutBucketWebsiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1103,6 +1183,7 @@ func (r *S3PutBucketWebsiteFuture) Get(ctx workflow.Context) (*s3.PutBucketWebsi
 }
 
 type S3PutObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1113,6 +1194,7 @@ func (r *S3PutObjectFuture) Get(ctx workflow.Context) (*s3.PutObjectOutput, erro
 }
 
 type S3PutObjectAclFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1123,6 +1205,7 @@ func (r *S3PutObjectAclFuture) Get(ctx workflow.Context) (*s3.PutObjectAclOutput
 }
 
 type S3PutObjectLegalHoldFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1133,6 +1216,7 @@ func (r *S3PutObjectLegalHoldFuture) Get(ctx workflow.Context) (*s3.PutObjectLeg
 }
 
 type S3PutObjectLockConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1143,6 +1227,7 @@ func (r *S3PutObjectLockConfigurationFuture) Get(ctx workflow.Context) (*s3.PutO
 }
 
 type S3PutObjectRetentionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1153,6 +1238,7 @@ func (r *S3PutObjectRetentionFuture) Get(ctx workflow.Context) (*s3.PutObjectRet
 }
 
 type S3PutObjectTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1163,6 +1249,7 @@ func (r *S3PutObjectTaggingFuture) Get(ctx workflow.Context) (*s3.PutObjectTaggi
 }
 
 type S3PutPublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1173,6 +1260,7 @@ func (r *S3PutPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3.PutPublicA
 }
 
 type S3RestoreObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1183,6 +1271,7 @@ func (r *S3RestoreObjectFuture) Get(ctx workflow.Context) (*s3.RestoreObjectOutp
 }
 
 type S3SelectObjectContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1193,6 +1282,7 @@ func (r *S3SelectObjectContentFuture) Get(ctx workflow.Context) (*s3.SelectObjec
 }
 
 type S3UploadPartFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1203,6 +1293,7 @@ func (r *S3UploadPartFuture) Get(ctx workflow.Context) (*s3.UploadPartOutput, er
 }
 
 type S3UploadPartCopyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

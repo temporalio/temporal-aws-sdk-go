@@ -11,7 +11,7 @@ import (
 
 type WorkMailMessageFlowClient interface {
 	GetRawMessageContent(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error)
-	GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentFuture
+	GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkMailMessageFlowGetRawMessageContentFuture
 }
 
 type WorkMailMessageFlowStub struct{}
@@ -20,11 +20,12 @@ func NewWorkMailMessageFlowStub() WorkMailMessageFlowClient {
 	return &WorkMailMessageFlowStub{}
 }
 
-type WorkmailmessageflowGetRawMessageContentFuture struct {
+type WorkMailMessageFlowGetRawMessageContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkmailmessageflowGetRawMessageContentFuture) Get(ctx workflow.Context) (*workmailmessageflow.GetRawMessageContentOutput, error) {
+func (r *WorkMailMessageFlowGetRawMessageContentFuture) Get(ctx workflow.Context) (*workmailmessageflow.GetRawMessageContentOutput, error) {
 	var output workmailmessageflow.GetRawMessageContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -36,7 +37,7 @@ func (a *WorkMailMessageFlowStub) GetRawMessageContent(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *WorkMailMessageFlowStub) GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentFuture {
+func (a *WorkMailMessageFlowStub) GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkMailMessageFlowGetRawMessageContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmailmessageflow.GetRawMessageContent", input)
-	return &WorkmailmessageflowGetRawMessageContentFuture{Future: future}
+	return &WorkMailMessageFlowGetRawMessageContentFuture{Future: future}
 }

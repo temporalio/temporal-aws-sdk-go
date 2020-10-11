@@ -192,6 +192,7 @@ func NewRoute53Stub() Route53Client {
 }
 
 type Route53AssociateVPCWithHostedZoneFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +203,7 @@ func (r *Route53AssociateVPCWithHostedZoneFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53ChangeResourceRecordSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +214,7 @@ func (r *Route53ChangeResourceRecordSetsFuture) Get(ctx workflow.Context) (*rout
 }
 
 type Route53ChangeTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +225,7 @@ func (r *Route53ChangeTagsForResourceFuture) Get(ctx workflow.Context) (*route53
 }
 
 type Route53CreateHealthCheckFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +236,7 @@ func (r *Route53CreateHealthCheckFuture) Get(ctx workflow.Context) (*route53.Cre
 }
 
 type Route53CreateHostedZoneFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +247,7 @@ func (r *Route53CreateHostedZoneFuture) Get(ctx workflow.Context) (*route53.Crea
 }
 
 type Route53CreateQueryLoggingConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -252,6 +258,7 @@ func (r *Route53CreateQueryLoggingConfigFuture) Get(ctx workflow.Context) (*rout
 }
 
 type Route53CreateReusableDelegationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +269,7 @@ func (r *Route53CreateReusableDelegationSetFuture) Get(ctx workflow.Context) (*r
 }
 
 type Route53CreateTrafficPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +280,7 @@ func (r *Route53CreateTrafficPolicyFuture) Get(ctx workflow.Context) (*route53.C
 }
 
 type Route53CreateTrafficPolicyInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +291,7 @@ func (r *Route53CreateTrafficPolicyInstanceFuture) Get(ctx workflow.Context) (*r
 }
 
 type Route53CreateTrafficPolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +302,7 @@ func (r *Route53CreateTrafficPolicyVersionFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53CreateVPCAssociationAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +313,7 @@ func (r *Route53CreateVPCAssociationAuthorizationFuture) Get(ctx workflow.Contex
 }
 
 type Route53DeleteHealthCheckFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +324,7 @@ func (r *Route53DeleteHealthCheckFuture) Get(ctx workflow.Context) (*route53.Del
 }
 
 type Route53DeleteHostedZoneFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +335,7 @@ func (r *Route53DeleteHostedZoneFuture) Get(ctx workflow.Context) (*route53.Dele
 }
 
 type Route53DeleteQueryLoggingConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +346,7 @@ func (r *Route53DeleteQueryLoggingConfigFuture) Get(ctx workflow.Context) (*rout
 }
 
 type Route53DeleteReusableDelegationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +357,7 @@ func (r *Route53DeleteReusableDelegationSetFuture) Get(ctx workflow.Context) (*r
 }
 
 type Route53DeleteTrafficPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +368,7 @@ func (r *Route53DeleteTrafficPolicyFuture) Get(ctx workflow.Context) (*route53.D
 }
 
 type Route53DeleteTrafficPolicyInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +379,7 @@ func (r *Route53DeleteTrafficPolicyInstanceFuture) Get(ctx workflow.Context) (*r
 }
 
 type Route53DeleteVPCAssociationAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +390,7 @@ func (r *Route53DeleteVPCAssociationAuthorizationFuture) Get(ctx workflow.Contex
 }
 
 type Route53DisassociateVPCFromHostedZoneFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -382,6 +401,7 @@ func (r *Route53DisassociateVPCFromHostedZoneFuture) Get(ctx workflow.Context) (
 }
 
 type Route53GetAccountLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -392,6 +412,7 @@ func (r *Route53GetAccountLimitFuture) Get(ctx workflow.Context) (*route53.GetAc
 }
 
 type Route53GetChangeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -402,6 +423,7 @@ func (r *Route53GetChangeFuture) Get(ctx workflow.Context) (*route53.GetChangeOu
 }
 
 type Route53GetCheckerIpRangesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -412,6 +434,7 @@ func (r *Route53GetCheckerIpRangesFuture) Get(ctx workflow.Context) (*route53.Ge
 }
 
 type Route53GetGeoLocationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -422,6 +445,7 @@ func (r *Route53GetGeoLocationFuture) Get(ctx workflow.Context) (*route53.GetGeo
 }
 
 type Route53GetHealthCheckFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -432,6 +456,7 @@ func (r *Route53GetHealthCheckFuture) Get(ctx workflow.Context) (*route53.GetHea
 }
 
 type Route53GetHealthCheckCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -442,6 +467,7 @@ func (r *Route53GetHealthCheckCountFuture) Get(ctx workflow.Context) (*route53.G
 }
 
 type Route53GetHealthCheckLastFailureReasonFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -452,6 +478,7 @@ func (r *Route53GetHealthCheckLastFailureReasonFuture) Get(ctx workflow.Context)
 }
 
 type Route53GetHealthCheckStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -462,6 +489,7 @@ func (r *Route53GetHealthCheckStatusFuture) Get(ctx workflow.Context) (*route53.
 }
 
 type Route53GetHostedZoneFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -472,6 +500,7 @@ func (r *Route53GetHostedZoneFuture) Get(ctx workflow.Context) (*route53.GetHost
 }
 
 type Route53GetHostedZoneCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -482,6 +511,7 @@ func (r *Route53GetHostedZoneCountFuture) Get(ctx workflow.Context) (*route53.Ge
 }
 
 type Route53GetHostedZoneLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -492,6 +522,7 @@ func (r *Route53GetHostedZoneLimitFuture) Get(ctx workflow.Context) (*route53.Ge
 }
 
 type Route53GetQueryLoggingConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -502,6 +533,7 @@ func (r *Route53GetQueryLoggingConfigFuture) Get(ctx workflow.Context) (*route53
 }
 
 type Route53GetReusableDelegationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -512,6 +544,7 @@ func (r *Route53GetReusableDelegationSetFuture) Get(ctx workflow.Context) (*rout
 }
 
 type Route53GetReusableDelegationSetLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -522,6 +555,7 @@ func (r *Route53GetReusableDelegationSetLimitFuture) Get(ctx workflow.Context) (
 }
 
 type Route53GetTrafficPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -532,6 +566,7 @@ func (r *Route53GetTrafficPolicyFuture) Get(ctx workflow.Context) (*route53.GetT
 }
 
 type Route53GetTrafficPolicyInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -542,6 +577,7 @@ func (r *Route53GetTrafficPolicyInstanceFuture) Get(ctx workflow.Context) (*rout
 }
 
 type Route53GetTrafficPolicyInstanceCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -552,6 +588,7 @@ func (r *Route53GetTrafficPolicyInstanceCountFuture) Get(ctx workflow.Context) (
 }
 
 type Route53ListGeoLocationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -562,6 +599,7 @@ func (r *Route53ListGeoLocationsFuture) Get(ctx workflow.Context) (*route53.List
 }
 
 type Route53ListHealthChecksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -572,6 +610,7 @@ func (r *Route53ListHealthChecksFuture) Get(ctx workflow.Context) (*route53.List
 }
 
 type Route53ListHostedZonesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -582,6 +621,7 @@ func (r *Route53ListHostedZonesFuture) Get(ctx workflow.Context) (*route53.ListH
 }
 
 type Route53ListHostedZonesByNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -592,6 +632,7 @@ func (r *Route53ListHostedZonesByNameFuture) Get(ctx workflow.Context) (*route53
 }
 
 type Route53ListHostedZonesByVPCFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -602,6 +643,7 @@ func (r *Route53ListHostedZonesByVPCFuture) Get(ctx workflow.Context) (*route53.
 }
 
 type Route53ListQueryLoggingConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -612,6 +654,7 @@ func (r *Route53ListQueryLoggingConfigsFuture) Get(ctx workflow.Context) (*route
 }
 
 type Route53ListResourceRecordSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -622,6 +665,7 @@ func (r *Route53ListResourceRecordSetsFuture) Get(ctx workflow.Context) (*route5
 }
 
 type Route53ListReusableDelegationSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -632,6 +676,7 @@ func (r *Route53ListReusableDelegationSetsFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53ListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -642,6 +687,7 @@ func (r *Route53ListTagsForResourceFuture) Get(ctx workflow.Context) (*route53.L
 }
 
 type Route53ListTagsForResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -652,6 +698,7 @@ func (r *Route53ListTagsForResourcesFuture) Get(ctx workflow.Context) (*route53.
 }
 
 type Route53ListTrafficPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -662,6 +709,7 @@ func (r *Route53ListTrafficPoliciesFuture) Get(ctx workflow.Context) (*route53.L
 }
 
 type Route53ListTrafficPolicyInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -672,6 +720,7 @@ func (r *Route53ListTrafficPolicyInstancesFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53ListTrafficPolicyInstancesByHostedZoneFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -682,6 +731,7 @@ func (r *Route53ListTrafficPolicyInstancesByHostedZoneFuture) Get(ctx workflow.C
 }
 
 type Route53ListTrafficPolicyInstancesByPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -692,6 +742,7 @@ func (r *Route53ListTrafficPolicyInstancesByPolicyFuture) Get(ctx workflow.Conte
 }
 
 type Route53ListTrafficPolicyVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -702,6 +753,7 @@ func (r *Route53ListTrafficPolicyVersionsFuture) Get(ctx workflow.Context) (*rou
 }
 
 type Route53ListVPCAssociationAuthorizationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -712,6 +764,7 @@ func (r *Route53ListVPCAssociationAuthorizationsFuture) Get(ctx workflow.Context
 }
 
 type Route53TestDNSAnswerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -722,6 +775,7 @@ func (r *Route53TestDNSAnswerFuture) Get(ctx workflow.Context) (*route53.TestDNS
 }
 
 type Route53UpdateHealthCheckFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -732,6 +786,7 @@ func (r *Route53UpdateHealthCheckFuture) Get(ctx workflow.Context) (*route53.Upd
 }
 
 type Route53UpdateHostedZoneCommentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -742,6 +797,7 @@ func (r *Route53UpdateHostedZoneCommentFuture) Get(ctx workflow.Context) (*route
 }
 
 type Route53UpdateTrafficPolicyCommentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -752,6 +808,7 @@ func (r *Route53UpdateTrafficPolicyCommentFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53UpdateTrafficPolicyInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

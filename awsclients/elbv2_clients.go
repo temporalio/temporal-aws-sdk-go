@@ -11,106 +11,106 @@ import (
 
 type ELBV2Client interface {
 	AddListenerCertificates(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) (*elbv2.AddListenerCertificatesOutput, error)
-	AddListenerCertificatesAsync(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) *Elbv2AddListenerCertificatesFuture
+	AddListenerCertificatesAsync(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) *ELBV2AddListenerCertificatesFuture
 
 	AddTags(ctx workflow.Context, input *elbv2.AddTagsInput) (*elbv2.AddTagsOutput, error)
-	AddTagsAsync(ctx workflow.Context, input *elbv2.AddTagsInput) *Elbv2AddTagsFuture
+	AddTagsAsync(ctx workflow.Context, input *elbv2.AddTagsInput) *ELBV2AddTagsFuture
 
 	CreateListener(ctx workflow.Context, input *elbv2.CreateListenerInput) (*elbv2.CreateListenerOutput, error)
-	CreateListenerAsync(ctx workflow.Context, input *elbv2.CreateListenerInput) *Elbv2CreateListenerFuture
+	CreateListenerAsync(ctx workflow.Context, input *elbv2.CreateListenerInput) *ELBV2CreateListenerFuture
 
 	CreateLoadBalancer(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) (*elbv2.CreateLoadBalancerOutput, error)
-	CreateLoadBalancerAsync(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) *Elbv2CreateLoadBalancerFuture
+	CreateLoadBalancerAsync(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) *ELBV2CreateLoadBalancerFuture
 
 	CreateRule(ctx workflow.Context, input *elbv2.CreateRuleInput) (*elbv2.CreateRuleOutput, error)
-	CreateRuleAsync(ctx workflow.Context, input *elbv2.CreateRuleInput) *Elbv2CreateRuleFuture
+	CreateRuleAsync(ctx workflow.Context, input *elbv2.CreateRuleInput) *ELBV2CreateRuleFuture
 
 	CreateTargetGroup(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) (*elbv2.CreateTargetGroupOutput, error)
-	CreateTargetGroupAsync(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) *Elbv2CreateTargetGroupFuture
+	CreateTargetGroupAsync(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) *ELBV2CreateTargetGroupFuture
 
 	DeleteListener(ctx workflow.Context, input *elbv2.DeleteListenerInput) (*elbv2.DeleteListenerOutput, error)
-	DeleteListenerAsync(ctx workflow.Context, input *elbv2.DeleteListenerInput) *Elbv2DeleteListenerFuture
+	DeleteListenerAsync(ctx workflow.Context, input *elbv2.DeleteListenerInput) *ELBV2DeleteListenerFuture
 
 	DeleteLoadBalancer(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) (*elbv2.DeleteLoadBalancerOutput, error)
-	DeleteLoadBalancerAsync(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) *Elbv2DeleteLoadBalancerFuture
+	DeleteLoadBalancerAsync(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) *ELBV2DeleteLoadBalancerFuture
 
 	DeleteRule(ctx workflow.Context, input *elbv2.DeleteRuleInput) (*elbv2.DeleteRuleOutput, error)
-	DeleteRuleAsync(ctx workflow.Context, input *elbv2.DeleteRuleInput) *Elbv2DeleteRuleFuture
+	DeleteRuleAsync(ctx workflow.Context, input *elbv2.DeleteRuleInput) *ELBV2DeleteRuleFuture
 
 	DeleteTargetGroup(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) (*elbv2.DeleteTargetGroupOutput, error)
-	DeleteTargetGroupAsync(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) *Elbv2DeleteTargetGroupFuture
+	DeleteTargetGroupAsync(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) *ELBV2DeleteTargetGroupFuture
 
 	DeregisterTargets(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) (*elbv2.DeregisterTargetsOutput, error)
-	DeregisterTargetsAsync(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) *Elbv2DeregisterTargetsFuture
+	DeregisterTargetsAsync(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) *ELBV2DeregisterTargetsFuture
 
 	DescribeAccountLimits(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) (*elbv2.DescribeAccountLimitsOutput, error)
-	DescribeAccountLimitsAsync(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) *Elbv2DescribeAccountLimitsFuture
+	DescribeAccountLimitsAsync(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) *ELBV2DescribeAccountLimitsFuture
 
 	DescribeListenerCertificates(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) (*elbv2.DescribeListenerCertificatesOutput, error)
-	DescribeListenerCertificatesAsync(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) *Elbv2DescribeListenerCertificatesFuture
+	DescribeListenerCertificatesAsync(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) *ELBV2DescribeListenerCertificatesFuture
 
 	DescribeListeners(ctx workflow.Context, input *elbv2.DescribeListenersInput) (*elbv2.DescribeListenersOutput, error)
-	DescribeListenersAsync(ctx workflow.Context, input *elbv2.DescribeListenersInput) *Elbv2DescribeListenersFuture
+	DescribeListenersAsync(ctx workflow.Context, input *elbv2.DescribeListenersInput) *ELBV2DescribeListenersFuture
 
 	DescribeLoadBalancerAttributes(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) (*elbv2.DescribeLoadBalancerAttributesOutput, error)
-	DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) *Elbv2DescribeLoadBalancerAttributesFuture
+	DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) *ELBV2DescribeLoadBalancerAttributesFuture
 
 	DescribeLoadBalancers(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) (*elbv2.DescribeLoadBalancersOutput, error)
-	DescribeLoadBalancersAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *Elbv2DescribeLoadBalancersFuture
+	DescribeLoadBalancersAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *ELBV2DescribeLoadBalancersFuture
 
 	DescribeRules(ctx workflow.Context, input *elbv2.DescribeRulesInput) (*elbv2.DescribeRulesOutput, error)
-	DescribeRulesAsync(ctx workflow.Context, input *elbv2.DescribeRulesInput) *Elbv2DescribeRulesFuture
+	DescribeRulesAsync(ctx workflow.Context, input *elbv2.DescribeRulesInput) *ELBV2DescribeRulesFuture
 
 	DescribeSSLPolicies(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) (*elbv2.DescribeSSLPoliciesOutput, error)
-	DescribeSSLPoliciesAsync(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) *Elbv2DescribeSSLPoliciesFuture
+	DescribeSSLPoliciesAsync(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) *ELBV2DescribeSSLPoliciesFuture
 
 	DescribeTags(ctx workflow.Context, input *elbv2.DescribeTagsInput) (*elbv2.DescribeTagsOutput, error)
-	DescribeTagsAsync(ctx workflow.Context, input *elbv2.DescribeTagsInput) *Elbv2DescribeTagsFuture
+	DescribeTagsAsync(ctx workflow.Context, input *elbv2.DescribeTagsInput) *ELBV2DescribeTagsFuture
 
 	DescribeTargetGroupAttributes(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) (*elbv2.DescribeTargetGroupAttributesOutput, error)
-	DescribeTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) *Elbv2DescribeTargetGroupAttributesFuture
+	DescribeTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) *ELBV2DescribeTargetGroupAttributesFuture
 
 	DescribeTargetGroups(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) (*elbv2.DescribeTargetGroupsOutput, error)
-	DescribeTargetGroupsAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) *Elbv2DescribeTargetGroupsFuture
+	DescribeTargetGroupsAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) *ELBV2DescribeTargetGroupsFuture
 
 	DescribeTargetHealth(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) (*elbv2.DescribeTargetHealthOutput, error)
-	DescribeTargetHealthAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *Elbv2DescribeTargetHealthFuture
+	DescribeTargetHealthAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *ELBV2DescribeTargetHealthFuture
 
 	ModifyListener(ctx workflow.Context, input *elbv2.ModifyListenerInput) (*elbv2.ModifyListenerOutput, error)
-	ModifyListenerAsync(ctx workflow.Context, input *elbv2.ModifyListenerInput) *Elbv2ModifyListenerFuture
+	ModifyListenerAsync(ctx workflow.Context, input *elbv2.ModifyListenerInput) *ELBV2ModifyListenerFuture
 
 	ModifyLoadBalancerAttributes(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) (*elbv2.ModifyLoadBalancerAttributesOutput, error)
-	ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) *Elbv2ModifyLoadBalancerAttributesFuture
+	ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) *ELBV2ModifyLoadBalancerAttributesFuture
 
 	ModifyRule(ctx workflow.Context, input *elbv2.ModifyRuleInput) (*elbv2.ModifyRuleOutput, error)
-	ModifyRuleAsync(ctx workflow.Context, input *elbv2.ModifyRuleInput) *Elbv2ModifyRuleFuture
+	ModifyRuleAsync(ctx workflow.Context, input *elbv2.ModifyRuleInput) *ELBV2ModifyRuleFuture
 
 	ModifyTargetGroup(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) (*elbv2.ModifyTargetGroupOutput, error)
-	ModifyTargetGroupAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) *Elbv2ModifyTargetGroupFuture
+	ModifyTargetGroupAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) *ELBV2ModifyTargetGroupFuture
 
 	ModifyTargetGroupAttributes(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) (*elbv2.ModifyTargetGroupAttributesOutput, error)
-	ModifyTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) *Elbv2ModifyTargetGroupAttributesFuture
+	ModifyTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) *ELBV2ModifyTargetGroupAttributesFuture
 
 	RegisterTargets(ctx workflow.Context, input *elbv2.RegisterTargetsInput) (*elbv2.RegisterTargetsOutput, error)
-	RegisterTargetsAsync(ctx workflow.Context, input *elbv2.RegisterTargetsInput) *Elbv2RegisterTargetsFuture
+	RegisterTargetsAsync(ctx workflow.Context, input *elbv2.RegisterTargetsInput) *ELBV2RegisterTargetsFuture
 
 	RemoveListenerCertificates(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) (*elbv2.RemoveListenerCertificatesOutput, error)
-	RemoveListenerCertificatesAsync(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) *Elbv2RemoveListenerCertificatesFuture
+	RemoveListenerCertificatesAsync(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) *ELBV2RemoveListenerCertificatesFuture
 
 	RemoveTags(ctx workflow.Context, input *elbv2.RemoveTagsInput) (*elbv2.RemoveTagsOutput, error)
-	RemoveTagsAsync(ctx workflow.Context, input *elbv2.RemoveTagsInput) *Elbv2RemoveTagsFuture
+	RemoveTagsAsync(ctx workflow.Context, input *elbv2.RemoveTagsInput) *ELBV2RemoveTagsFuture
 
 	SetIpAddressType(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) (*elbv2.SetIpAddressTypeOutput, error)
-	SetIpAddressTypeAsync(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) *Elbv2SetIpAddressTypeFuture
+	SetIpAddressTypeAsync(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) *ELBV2SetIpAddressTypeFuture
 
 	SetRulePriorities(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) (*elbv2.SetRulePrioritiesOutput, error)
-	SetRulePrioritiesAsync(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) *Elbv2SetRulePrioritiesFuture
+	SetRulePrioritiesAsync(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) *ELBV2SetRulePrioritiesFuture
 
 	SetSecurityGroups(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) (*elbv2.SetSecurityGroupsOutput, error)
-	SetSecurityGroupsAsync(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) *Elbv2SetSecurityGroupsFuture
+	SetSecurityGroupsAsync(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) *ELBV2SetSecurityGroupsFuture
 
 	SetSubnets(ctx workflow.Context, input *elbv2.SetSubnetsInput) (*elbv2.SetSubnetsOutput, error)
-	SetSubnetsAsync(ctx workflow.Context, input *elbv2.SetSubnetsInput) *Elbv2SetSubnetsFuture
+	SetSubnetsAsync(ctx workflow.Context, input *elbv2.SetSubnetsInput) *ELBV2SetSubnetsFuture
 
 	WaitUntilLoadBalancerAvailable(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
 	WaitUntilLoadBalancerAvailableAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *VoidFuture
@@ -134,341 +134,375 @@ func NewELBV2Stub() ELBV2Client {
 	return &ELBV2Stub{}
 }
 
-type Elbv2AddListenerCertificatesFuture struct {
+type ELBV2AddListenerCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2AddListenerCertificatesFuture) Get(ctx workflow.Context) (*elbv2.AddListenerCertificatesOutput, error) {
+func (r *ELBV2AddListenerCertificatesFuture) Get(ctx workflow.Context) (*elbv2.AddListenerCertificatesOutput, error) {
 	var output elbv2.AddListenerCertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2AddTagsFuture struct {
+type ELBV2AddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2AddTagsFuture) Get(ctx workflow.Context) (*elbv2.AddTagsOutput, error) {
+func (r *ELBV2AddTagsFuture) Get(ctx workflow.Context) (*elbv2.AddTagsOutput, error) {
 	var output elbv2.AddTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2CreateListenerFuture struct {
+type ELBV2CreateListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2CreateListenerFuture) Get(ctx workflow.Context) (*elbv2.CreateListenerOutput, error) {
+func (r *ELBV2CreateListenerFuture) Get(ctx workflow.Context) (*elbv2.CreateListenerOutput, error) {
 	var output elbv2.CreateListenerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2CreateLoadBalancerFuture struct {
+type ELBV2CreateLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2CreateLoadBalancerFuture) Get(ctx workflow.Context) (*elbv2.CreateLoadBalancerOutput, error) {
+func (r *ELBV2CreateLoadBalancerFuture) Get(ctx workflow.Context) (*elbv2.CreateLoadBalancerOutput, error) {
 	var output elbv2.CreateLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2CreateRuleFuture struct {
+type ELBV2CreateRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2CreateRuleFuture) Get(ctx workflow.Context) (*elbv2.CreateRuleOutput, error) {
+func (r *ELBV2CreateRuleFuture) Get(ctx workflow.Context) (*elbv2.CreateRuleOutput, error) {
 	var output elbv2.CreateRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2CreateTargetGroupFuture struct {
+type ELBV2CreateTargetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2CreateTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.CreateTargetGroupOutput, error) {
+func (r *ELBV2CreateTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.CreateTargetGroupOutput, error) {
 	var output elbv2.CreateTargetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DeleteListenerFuture struct {
+type ELBV2DeleteListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DeleteListenerFuture) Get(ctx workflow.Context) (*elbv2.DeleteListenerOutput, error) {
+func (r *ELBV2DeleteListenerFuture) Get(ctx workflow.Context) (*elbv2.DeleteListenerOutput, error) {
 	var output elbv2.DeleteListenerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DeleteLoadBalancerFuture struct {
+type ELBV2DeleteLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DeleteLoadBalancerFuture) Get(ctx workflow.Context) (*elbv2.DeleteLoadBalancerOutput, error) {
+func (r *ELBV2DeleteLoadBalancerFuture) Get(ctx workflow.Context) (*elbv2.DeleteLoadBalancerOutput, error) {
 	var output elbv2.DeleteLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DeleteRuleFuture struct {
+type ELBV2DeleteRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DeleteRuleFuture) Get(ctx workflow.Context) (*elbv2.DeleteRuleOutput, error) {
+func (r *ELBV2DeleteRuleFuture) Get(ctx workflow.Context) (*elbv2.DeleteRuleOutput, error) {
 	var output elbv2.DeleteRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DeleteTargetGroupFuture struct {
+type ELBV2DeleteTargetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DeleteTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.DeleteTargetGroupOutput, error) {
+func (r *ELBV2DeleteTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.DeleteTargetGroupOutput, error) {
 	var output elbv2.DeleteTargetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DeregisterTargetsFuture struct {
+type ELBV2DeregisterTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DeregisterTargetsFuture) Get(ctx workflow.Context) (*elbv2.DeregisterTargetsOutput, error) {
+func (r *ELBV2DeregisterTargetsFuture) Get(ctx workflow.Context) (*elbv2.DeregisterTargetsOutput, error) {
 	var output elbv2.DeregisterTargetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeAccountLimitsFuture struct {
+type ELBV2DescribeAccountLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeAccountLimitsFuture) Get(ctx workflow.Context) (*elbv2.DescribeAccountLimitsOutput, error) {
+func (r *ELBV2DescribeAccountLimitsFuture) Get(ctx workflow.Context) (*elbv2.DescribeAccountLimitsOutput, error) {
 	var output elbv2.DescribeAccountLimitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeListenerCertificatesFuture struct {
+type ELBV2DescribeListenerCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeListenerCertificatesFuture) Get(ctx workflow.Context) (*elbv2.DescribeListenerCertificatesOutput, error) {
+func (r *ELBV2DescribeListenerCertificatesFuture) Get(ctx workflow.Context) (*elbv2.DescribeListenerCertificatesOutput, error) {
 	var output elbv2.DescribeListenerCertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeListenersFuture struct {
+type ELBV2DescribeListenersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeListenersFuture) Get(ctx workflow.Context) (*elbv2.DescribeListenersOutput, error) {
+func (r *ELBV2DescribeListenersFuture) Get(ctx workflow.Context) (*elbv2.DescribeListenersOutput, error) {
 	var output elbv2.DescribeListenersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeLoadBalancerAttributesFuture struct {
+type ELBV2DescribeLoadBalancerAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elbv2.DescribeLoadBalancerAttributesOutput, error) {
+func (r *ELBV2DescribeLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elbv2.DescribeLoadBalancerAttributesOutput, error) {
 	var output elbv2.DescribeLoadBalancerAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeLoadBalancersFuture struct {
+type ELBV2DescribeLoadBalancersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeLoadBalancersFuture) Get(ctx workflow.Context) (*elbv2.DescribeLoadBalancersOutput, error) {
+func (r *ELBV2DescribeLoadBalancersFuture) Get(ctx workflow.Context) (*elbv2.DescribeLoadBalancersOutput, error) {
 	var output elbv2.DescribeLoadBalancersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeRulesFuture struct {
+type ELBV2DescribeRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeRulesFuture) Get(ctx workflow.Context) (*elbv2.DescribeRulesOutput, error) {
+func (r *ELBV2DescribeRulesFuture) Get(ctx workflow.Context) (*elbv2.DescribeRulesOutput, error) {
 	var output elbv2.DescribeRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeSSLPoliciesFuture struct {
+type ELBV2DescribeSSLPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeSSLPoliciesFuture) Get(ctx workflow.Context) (*elbv2.DescribeSSLPoliciesOutput, error) {
+func (r *ELBV2DescribeSSLPoliciesFuture) Get(ctx workflow.Context) (*elbv2.DescribeSSLPoliciesOutput, error) {
 	var output elbv2.DescribeSSLPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeTagsFuture struct {
+type ELBV2DescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeTagsFuture) Get(ctx workflow.Context) (*elbv2.DescribeTagsOutput, error) {
+func (r *ELBV2DescribeTagsFuture) Get(ctx workflow.Context) (*elbv2.DescribeTagsOutput, error) {
 	var output elbv2.DescribeTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeTargetGroupAttributesFuture struct {
+type ELBV2DescribeTargetGroupAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeTargetGroupAttributesFuture) Get(ctx workflow.Context) (*elbv2.DescribeTargetGroupAttributesOutput, error) {
+func (r *ELBV2DescribeTargetGroupAttributesFuture) Get(ctx workflow.Context) (*elbv2.DescribeTargetGroupAttributesOutput, error) {
 	var output elbv2.DescribeTargetGroupAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeTargetGroupsFuture struct {
+type ELBV2DescribeTargetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeTargetGroupsFuture) Get(ctx workflow.Context) (*elbv2.DescribeTargetGroupsOutput, error) {
+func (r *ELBV2DescribeTargetGroupsFuture) Get(ctx workflow.Context) (*elbv2.DescribeTargetGroupsOutput, error) {
 	var output elbv2.DescribeTargetGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2DescribeTargetHealthFuture struct {
+type ELBV2DescribeTargetHealthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2DescribeTargetHealthFuture) Get(ctx workflow.Context) (*elbv2.DescribeTargetHealthOutput, error) {
+func (r *ELBV2DescribeTargetHealthFuture) Get(ctx workflow.Context) (*elbv2.DescribeTargetHealthOutput, error) {
 	var output elbv2.DescribeTargetHealthOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2ModifyListenerFuture struct {
+type ELBV2ModifyListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2ModifyListenerFuture) Get(ctx workflow.Context) (*elbv2.ModifyListenerOutput, error) {
+func (r *ELBV2ModifyListenerFuture) Get(ctx workflow.Context) (*elbv2.ModifyListenerOutput, error) {
 	var output elbv2.ModifyListenerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2ModifyLoadBalancerAttributesFuture struct {
+type ELBV2ModifyLoadBalancerAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2ModifyLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elbv2.ModifyLoadBalancerAttributesOutput, error) {
+func (r *ELBV2ModifyLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elbv2.ModifyLoadBalancerAttributesOutput, error) {
 	var output elbv2.ModifyLoadBalancerAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2ModifyRuleFuture struct {
+type ELBV2ModifyRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2ModifyRuleFuture) Get(ctx workflow.Context) (*elbv2.ModifyRuleOutput, error) {
+func (r *ELBV2ModifyRuleFuture) Get(ctx workflow.Context) (*elbv2.ModifyRuleOutput, error) {
 	var output elbv2.ModifyRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2ModifyTargetGroupFuture struct {
+type ELBV2ModifyTargetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2ModifyTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.ModifyTargetGroupOutput, error) {
+func (r *ELBV2ModifyTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.ModifyTargetGroupOutput, error) {
 	var output elbv2.ModifyTargetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2ModifyTargetGroupAttributesFuture struct {
+type ELBV2ModifyTargetGroupAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2ModifyTargetGroupAttributesFuture) Get(ctx workflow.Context) (*elbv2.ModifyTargetGroupAttributesOutput, error) {
+func (r *ELBV2ModifyTargetGroupAttributesFuture) Get(ctx workflow.Context) (*elbv2.ModifyTargetGroupAttributesOutput, error) {
 	var output elbv2.ModifyTargetGroupAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2RegisterTargetsFuture struct {
+type ELBV2RegisterTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2RegisterTargetsFuture) Get(ctx workflow.Context) (*elbv2.RegisterTargetsOutput, error) {
+func (r *ELBV2RegisterTargetsFuture) Get(ctx workflow.Context) (*elbv2.RegisterTargetsOutput, error) {
 	var output elbv2.RegisterTargetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2RemoveListenerCertificatesFuture struct {
+type ELBV2RemoveListenerCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2RemoveListenerCertificatesFuture) Get(ctx workflow.Context) (*elbv2.RemoveListenerCertificatesOutput, error) {
+func (r *ELBV2RemoveListenerCertificatesFuture) Get(ctx workflow.Context) (*elbv2.RemoveListenerCertificatesOutput, error) {
 	var output elbv2.RemoveListenerCertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2RemoveTagsFuture struct {
+type ELBV2RemoveTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2RemoveTagsFuture) Get(ctx workflow.Context) (*elbv2.RemoveTagsOutput, error) {
+func (r *ELBV2RemoveTagsFuture) Get(ctx workflow.Context) (*elbv2.RemoveTagsOutput, error) {
 	var output elbv2.RemoveTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2SetIpAddressTypeFuture struct {
+type ELBV2SetIpAddressTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2SetIpAddressTypeFuture) Get(ctx workflow.Context) (*elbv2.SetIpAddressTypeOutput, error) {
+func (r *ELBV2SetIpAddressTypeFuture) Get(ctx workflow.Context) (*elbv2.SetIpAddressTypeOutput, error) {
 	var output elbv2.SetIpAddressTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2SetRulePrioritiesFuture struct {
+type ELBV2SetRulePrioritiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2SetRulePrioritiesFuture) Get(ctx workflow.Context) (*elbv2.SetRulePrioritiesOutput, error) {
+func (r *ELBV2SetRulePrioritiesFuture) Get(ctx workflow.Context) (*elbv2.SetRulePrioritiesOutput, error) {
 	var output elbv2.SetRulePrioritiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2SetSecurityGroupsFuture struct {
+type ELBV2SetSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2SetSecurityGroupsFuture) Get(ctx workflow.Context) (*elbv2.SetSecurityGroupsOutput, error) {
+func (r *ELBV2SetSecurityGroupsFuture) Get(ctx workflow.Context) (*elbv2.SetSecurityGroupsOutput, error) {
 	var output elbv2.SetSecurityGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Elbv2SetSubnetsFuture struct {
+type ELBV2SetSubnetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Elbv2SetSubnetsFuture) Get(ctx workflow.Context) (*elbv2.SetSubnetsOutput, error) {
+func (r *ELBV2SetSubnetsFuture) Get(ctx workflow.Context) (*elbv2.SetSubnetsOutput, error) {
 	var output elbv2.SetSubnetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -480,9 +514,9 @@ func (a *ELBV2Stub) AddListenerCertificates(ctx workflow.Context, input *elbv2.A
 	return &output, err
 }
 
-func (a *ELBV2Stub) AddListenerCertificatesAsync(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) *Elbv2AddListenerCertificatesFuture {
+func (a *ELBV2Stub) AddListenerCertificatesAsync(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) *ELBV2AddListenerCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.AddListenerCertificates", input)
-	return &Elbv2AddListenerCertificatesFuture{Future: future}
+	return &ELBV2AddListenerCertificatesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) AddTags(ctx workflow.Context, input *elbv2.AddTagsInput) (*elbv2.AddTagsOutput, error) {
@@ -491,9 +525,9 @@ func (a *ELBV2Stub) AddTags(ctx workflow.Context, input *elbv2.AddTagsInput) (*e
 	return &output, err
 }
 
-func (a *ELBV2Stub) AddTagsAsync(ctx workflow.Context, input *elbv2.AddTagsInput) *Elbv2AddTagsFuture {
+func (a *ELBV2Stub) AddTagsAsync(ctx workflow.Context, input *elbv2.AddTagsInput) *ELBV2AddTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.AddTags", input)
-	return &Elbv2AddTagsFuture{Future: future}
+	return &ELBV2AddTagsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) CreateListener(ctx workflow.Context, input *elbv2.CreateListenerInput) (*elbv2.CreateListenerOutput, error) {
@@ -502,9 +536,9 @@ func (a *ELBV2Stub) CreateListener(ctx workflow.Context, input *elbv2.CreateList
 	return &output, err
 }
 
-func (a *ELBV2Stub) CreateListenerAsync(ctx workflow.Context, input *elbv2.CreateListenerInput) *Elbv2CreateListenerFuture {
+func (a *ELBV2Stub) CreateListenerAsync(ctx workflow.Context, input *elbv2.CreateListenerInput) *ELBV2CreateListenerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.CreateListener", input)
-	return &Elbv2CreateListenerFuture{Future: future}
+	return &ELBV2CreateListenerFuture{Future: future}
 }
 
 func (a *ELBV2Stub) CreateLoadBalancer(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) (*elbv2.CreateLoadBalancerOutput, error) {
@@ -513,9 +547,9 @@ func (a *ELBV2Stub) CreateLoadBalancer(ctx workflow.Context, input *elbv2.Create
 	return &output, err
 }
 
-func (a *ELBV2Stub) CreateLoadBalancerAsync(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) *Elbv2CreateLoadBalancerFuture {
+func (a *ELBV2Stub) CreateLoadBalancerAsync(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) *ELBV2CreateLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.CreateLoadBalancer", input)
-	return &Elbv2CreateLoadBalancerFuture{Future: future}
+	return &ELBV2CreateLoadBalancerFuture{Future: future}
 }
 
 func (a *ELBV2Stub) CreateRule(ctx workflow.Context, input *elbv2.CreateRuleInput) (*elbv2.CreateRuleOutput, error) {
@@ -524,9 +558,9 @@ func (a *ELBV2Stub) CreateRule(ctx workflow.Context, input *elbv2.CreateRuleInpu
 	return &output, err
 }
 
-func (a *ELBV2Stub) CreateRuleAsync(ctx workflow.Context, input *elbv2.CreateRuleInput) *Elbv2CreateRuleFuture {
+func (a *ELBV2Stub) CreateRuleAsync(ctx workflow.Context, input *elbv2.CreateRuleInput) *ELBV2CreateRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.CreateRule", input)
-	return &Elbv2CreateRuleFuture{Future: future}
+	return &ELBV2CreateRuleFuture{Future: future}
 }
 
 func (a *ELBV2Stub) CreateTargetGroup(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) (*elbv2.CreateTargetGroupOutput, error) {
@@ -535,9 +569,9 @@ func (a *ELBV2Stub) CreateTargetGroup(ctx workflow.Context, input *elbv2.CreateT
 	return &output, err
 }
 
-func (a *ELBV2Stub) CreateTargetGroupAsync(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) *Elbv2CreateTargetGroupFuture {
+func (a *ELBV2Stub) CreateTargetGroupAsync(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) *ELBV2CreateTargetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.CreateTargetGroup", input)
-	return &Elbv2CreateTargetGroupFuture{Future: future}
+	return &ELBV2CreateTargetGroupFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DeleteListener(ctx workflow.Context, input *elbv2.DeleteListenerInput) (*elbv2.DeleteListenerOutput, error) {
@@ -546,9 +580,9 @@ func (a *ELBV2Stub) DeleteListener(ctx workflow.Context, input *elbv2.DeleteList
 	return &output, err
 }
 
-func (a *ELBV2Stub) DeleteListenerAsync(ctx workflow.Context, input *elbv2.DeleteListenerInput) *Elbv2DeleteListenerFuture {
+func (a *ELBV2Stub) DeleteListenerAsync(ctx workflow.Context, input *elbv2.DeleteListenerInput) *ELBV2DeleteListenerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DeleteListener", input)
-	return &Elbv2DeleteListenerFuture{Future: future}
+	return &ELBV2DeleteListenerFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DeleteLoadBalancer(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) (*elbv2.DeleteLoadBalancerOutput, error) {
@@ -557,9 +591,9 @@ func (a *ELBV2Stub) DeleteLoadBalancer(ctx workflow.Context, input *elbv2.Delete
 	return &output, err
 }
 
-func (a *ELBV2Stub) DeleteLoadBalancerAsync(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) *Elbv2DeleteLoadBalancerFuture {
+func (a *ELBV2Stub) DeleteLoadBalancerAsync(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) *ELBV2DeleteLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DeleteLoadBalancer", input)
-	return &Elbv2DeleteLoadBalancerFuture{Future: future}
+	return &ELBV2DeleteLoadBalancerFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DeleteRule(ctx workflow.Context, input *elbv2.DeleteRuleInput) (*elbv2.DeleteRuleOutput, error) {
@@ -568,9 +602,9 @@ func (a *ELBV2Stub) DeleteRule(ctx workflow.Context, input *elbv2.DeleteRuleInpu
 	return &output, err
 }
 
-func (a *ELBV2Stub) DeleteRuleAsync(ctx workflow.Context, input *elbv2.DeleteRuleInput) *Elbv2DeleteRuleFuture {
+func (a *ELBV2Stub) DeleteRuleAsync(ctx workflow.Context, input *elbv2.DeleteRuleInput) *ELBV2DeleteRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DeleteRule", input)
-	return &Elbv2DeleteRuleFuture{Future: future}
+	return &ELBV2DeleteRuleFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DeleteTargetGroup(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) (*elbv2.DeleteTargetGroupOutput, error) {
@@ -579,9 +613,9 @@ func (a *ELBV2Stub) DeleteTargetGroup(ctx workflow.Context, input *elbv2.DeleteT
 	return &output, err
 }
 
-func (a *ELBV2Stub) DeleteTargetGroupAsync(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) *Elbv2DeleteTargetGroupFuture {
+func (a *ELBV2Stub) DeleteTargetGroupAsync(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) *ELBV2DeleteTargetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DeleteTargetGroup", input)
-	return &Elbv2DeleteTargetGroupFuture{Future: future}
+	return &ELBV2DeleteTargetGroupFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DeregisterTargets(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) (*elbv2.DeregisterTargetsOutput, error) {
@@ -590,9 +624,9 @@ func (a *ELBV2Stub) DeregisterTargets(ctx workflow.Context, input *elbv2.Deregis
 	return &output, err
 }
 
-func (a *ELBV2Stub) DeregisterTargetsAsync(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) *Elbv2DeregisterTargetsFuture {
+func (a *ELBV2Stub) DeregisterTargetsAsync(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) *ELBV2DeregisterTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DeregisterTargets", input)
-	return &Elbv2DeregisterTargetsFuture{Future: future}
+	return &ELBV2DeregisterTargetsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeAccountLimits(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) (*elbv2.DescribeAccountLimitsOutput, error) {
@@ -601,9 +635,9 @@ func (a *ELBV2Stub) DescribeAccountLimits(ctx workflow.Context, input *elbv2.Des
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeAccountLimitsAsync(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) *Elbv2DescribeAccountLimitsFuture {
+func (a *ELBV2Stub) DescribeAccountLimitsAsync(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) *ELBV2DescribeAccountLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeAccountLimits", input)
-	return &Elbv2DescribeAccountLimitsFuture{Future: future}
+	return &ELBV2DescribeAccountLimitsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeListenerCertificates(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) (*elbv2.DescribeListenerCertificatesOutput, error) {
@@ -612,9 +646,9 @@ func (a *ELBV2Stub) DescribeListenerCertificates(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeListenerCertificatesAsync(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) *Elbv2DescribeListenerCertificatesFuture {
+func (a *ELBV2Stub) DescribeListenerCertificatesAsync(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) *ELBV2DescribeListenerCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeListenerCertificates", input)
-	return &Elbv2DescribeListenerCertificatesFuture{Future: future}
+	return &ELBV2DescribeListenerCertificatesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeListeners(ctx workflow.Context, input *elbv2.DescribeListenersInput) (*elbv2.DescribeListenersOutput, error) {
@@ -623,9 +657,9 @@ func (a *ELBV2Stub) DescribeListeners(ctx workflow.Context, input *elbv2.Describ
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeListenersAsync(ctx workflow.Context, input *elbv2.DescribeListenersInput) *Elbv2DescribeListenersFuture {
+func (a *ELBV2Stub) DescribeListenersAsync(ctx workflow.Context, input *elbv2.DescribeListenersInput) *ELBV2DescribeListenersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeListeners", input)
-	return &Elbv2DescribeListenersFuture{Future: future}
+	return &ELBV2DescribeListenersFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeLoadBalancerAttributes(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) (*elbv2.DescribeLoadBalancerAttributesOutput, error) {
@@ -634,9 +668,9 @@ func (a *ELBV2Stub) DescribeLoadBalancerAttributes(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) *Elbv2DescribeLoadBalancerAttributesFuture {
+func (a *ELBV2Stub) DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) *ELBV2DescribeLoadBalancerAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeLoadBalancerAttributes", input)
-	return &Elbv2DescribeLoadBalancerAttributesFuture{Future: future}
+	return &ELBV2DescribeLoadBalancerAttributesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeLoadBalancers(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) (*elbv2.DescribeLoadBalancersOutput, error) {
@@ -645,9 +679,9 @@ func (a *ELBV2Stub) DescribeLoadBalancers(ctx workflow.Context, input *elbv2.Des
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeLoadBalancersAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *Elbv2DescribeLoadBalancersFuture {
+func (a *ELBV2Stub) DescribeLoadBalancersAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *ELBV2DescribeLoadBalancersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeLoadBalancers", input)
-	return &Elbv2DescribeLoadBalancersFuture{Future: future}
+	return &ELBV2DescribeLoadBalancersFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeRules(ctx workflow.Context, input *elbv2.DescribeRulesInput) (*elbv2.DescribeRulesOutput, error) {
@@ -656,9 +690,9 @@ func (a *ELBV2Stub) DescribeRules(ctx workflow.Context, input *elbv2.DescribeRul
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeRulesAsync(ctx workflow.Context, input *elbv2.DescribeRulesInput) *Elbv2DescribeRulesFuture {
+func (a *ELBV2Stub) DescribeRulesAsync(ctx workflow.Context, input *elbv2.DescribeRulesInput) *ELBV2DescribeRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeRules", input)
-	return &Elbv2DescribeRulesFuture{Future: future}
+	return &ELBV2DescribeRulesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeSSLPolicies(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) (*elbv2.DescribeSSLPoliciesOutput, error) {
@@ -667,9 +701,9 @@ func (a *ELBV2Stub) DescribeSSLPolicies(ctx workflow.Context, input *elbv2.Descr
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeSSLPoliciesAsync(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) *Elbv2DescribeSSLPoliciesFuture {
+func (a *ELBV2Stub) DescribeSSLPoliciesAsync(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) *ELBV2DescribeSSLPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeSSLPolicies", input)
-	return &Elbv2DescribeSSLPoliciesFuture{Future: future}
+	return &ELBV2DescribeSSLPoliciesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeTags(ctx workflow.Context, input *elbv2.DescribeTagsInput) (*elbv2.DescribeTagsOutput, error) {
@@ -678,9 +712,9 @@ func (a *ELBV2Stub) DescribeTags(ctx workflow.Context, input *elbv2.DescribeTags
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeTagsAsync(ctx workflow.Context, input *elbv2.DescribeTagsInput) *Elbv2DescribeTagsFuture {
+func (a *ELBV2Stub) DescribeTagsAsync(ctx workflow.Context, input *elbv2.DescribeTagsInput) *ELBV2DescribeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeTags", input)
-	return &Elbv2DescribeTagsFuture{Future: future}
+	return &ELBV2DescribeTagsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeTargetGroupAttributes(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) (*elbv2.DescribeTargetGroupAttributesOutput, error) {
@@ -689,9 +723,9 @@ func (a *ELBV2Stub) DescribeTargetGroupAttributes(ctx workflow.Context, input *e
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) *Elbv2DescribeTargetGroupAttributesFuture {
+func (a *ELBV2Stub) DescribeTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) *ELBV2DescribeTargetGroupAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeTargetGroupAttributes", input)
-	return &Elbv2DescribeTargetGroupAttributesFuture{Future: future}
+	return &ELBV2DescribeTargetGroupAttributesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeTargetGroups(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) (*elbv2.DescribeTargetGroupsOutput, error) {
@@ -700,9 +734,9 @@ func (a *ELBV2Stub) DescribeTargetGroups(ctx workflow.Context, input *elbv2.Desc
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeTargetGroupsAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) *Elbv2DescribeTargetGroupsFuture {
+func (a *ELBV2Stub) DescribeTargetGroupsAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) *ELBV2DescribeTargetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeTargetGroups", input)
-	return &Elbv2DescribeTargetGroupsFuture{Future: future}
+	return &ELBV2DescribeTargetGroupsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) DescribeTargetHealth(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) (*elbv2.DescribeTargetHealthOutput, error) {
@@ -711,9 +745,9 @@ func (a *ELBV2Stub) DescribeTargetHealth(ctx workflow.Context, input *elbv2.Desc
 	return &output, err
 }
 
-func (a *ELBV2Stub) DescribeTargetHealthAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *Elbv2DescribeTargetHealthFuture {
+func (a *ELBV2Stub) DescribeTargetHealthAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *ELBV2DescribeTargetHealthFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.DescribeTargetHealth", input)
-	return &Elbv2DescribeTargetHealthFuture{Future: future}
+	return &ELBV2DescribeTargetHealthFuture{Future: future}
 }
 
 func (a *ELBV2Stub) ModifyListener(ctx workflow.Context, input *elbv2.ModifyListenerInput) (*elbv2.ModifyListenerOutput, error) {
@@ -722,9 +756,9 @@ func (a *ELBV2Stub) ModifyListener(ctx workflow.Context, input *elbv2.ModifyList
 	return &output, err
 }
 
-func (a *ELBV2Stub) ModifyListenerAsync(ctx workflow.Context, input *elbv2.ModifyListenerInput) *Elbv2ModifyListenerFuture {
+func (a *ELBV2Stub) ModifyListenerAsync(ctx workflow.Context, input *elbv2.ModifyListenerInput) *ELBV2ModifyListenerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.ModifyListener", input)
-	return &Elbv2ModifyListenerFuture{Future: future}
+	return &ELBV2ModifyListenerFuture{Future: future}
 }
 
 func (a *ELBV2Stub) ModifyLoadBalancerAttributes(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) (*elbv2.ModifyLoadBalancerAttributesOutput, error) {
@@ -733,9 +767,9 @@ func (a *ELBV2Stub) ModifyLoadBalancerAttributes(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *ELBV2Stub) ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) *Elbv2ModifyLoadBalancerAttributesFuture {
+func (a *ELBV2Stub) ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) *ELBV2ModifyLoadBalancerAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.ModifyLoadBalancerAttributes", input)
-	return &Elbv2ModifyLoadBalancerAttributesFuture{Future: future}
+	return &ELBV2ModifyLoadBalancerAttributesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) ModifyRule(ctx workflow.Context, input *elbv2.ModifyRuleInput) (*elbv2.ModifyRuleOutput, error) {
@@ -744,9 +778,9 @@ func (a *ELBV2Stub) ModifyRule(ctx workflow.Context, input *elbv2.ModifyRuleInpu
 	return &output, err
 }
 
-func (a *ELBV2Stub) ModifyRuleAsync(ctx workflow.Context, input *elbv2.ModifyRuleInput) *Elbv2ModifyRuleFuture {
+func (a *ELBV2Stub) ModifyRuleAsync(ctx workflow.Context, input *elbv2.ModifyRuleInput) *ELBV2ModifyRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.ModifyRule", input)
-	return &Elbv2ModifyRuleFuture{Future: future}
+	return &ELBV2ModifyRuleFuture{Future: future}
 }
 
 func (a *ELBV2Stub) ModifyTargetGroup(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) (*elbv2.ModifyTargetGroupOutput, error) {
@@ -755,9 +789,9 @@ func (a *ELBV2Stub) ModifyTargetGroup(ctx workflow.Context, input *elbv2.ModifyT
 	return &output, err
 }
 
-func (a *ELBV2Stub) ModifyTargetGroupAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) *Elbv2ModifyTargetGroupFuture {
+func (a *ELBV2Stub) ModifyTargetGroupAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) *ELBV2ModifyTargetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.ModifyTargetGroup", input)
-	return &Elbv2ModifyTargetGroupFuture{Future: future}
+	return &ELBV2ModifyTargetGroupFuture{Future: future}
 }
 
 func (a *ELBV2Stub) ModifyTargetGroupAttributes(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) (*elbv2.ModifyTargetGroupAttributesOutput, error) {
@@ -766,9 +800,9 @@ func (a *ELBV2Stub) ModifyTargetGroupAttributes(ctx workflow.Context, input *elb
 	return &output, err
 }
 
-func (a *ELBV2Stub) ModifyTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) *Elbv2ModifyTargetGroupAttributesFuture {
+func (a *ELBV2Stub) ModifyTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) *ELBV2ModifyTargetGroupAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.ModifyTargetGroupAttributes", input)
-	return &Elbv2ModifyTargetGroupAttributesFuture{Future: future}
+	return &ELBV2ModifyTargetGroupAttributesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) RegisterTargets(ctx workflow.Context, input *elbv2.RegisterTargetsInput) (*elbv2.RegisterTargetsOutput, error) {
@@ -777,9 +811,9 @@ func (a *ELBV2Stub) RegisterTargets(ctx workflow.Context, input *elbv2.RegisterT
 	return &output, err
 }
 
-func (a *ELBV2Stub) RegisterTargetsAsync(ctx workflow.Context, input *elbv2.RegisterTargetsInput) *Elbv2RegisterTargetsFuture {
+func (a *ELBV2Stub) RegisterTargetsAsync(ctx workflow.Context, input *elbv2.RegisterTargetsInput) *ELBV2RegisterTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.RegisterTargets", input)
-	return &Elbv2RegisterTargetsFuture{Future: future}
+	return &ELBV2RegisterTargetsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) RemoveListenerCertificates(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) (*elbv2.RemoveListenerCertificatesOutput, error) {
@@ -788,9 +822,9 @@ func (a *ELBV2Stub) RemoveListenerCertificates(ctx workflow.Context, input *elbv
 	return &output, err
 }
 
-func (a *ELBV2Stub) RemoveListenerCertificatesAsync(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) *Elbv2RemoveListenerCertificatesFuture {
+func (a *ELBV2Stub) RemoveListenerCertificatesAsync(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) *ELBV2RemoveListenerCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.RemoveListenerCertificates", input)
-	return &Elbv2RemoveListenerCertificatesFuture{Future: future}
+	return &ELBV2RemoveListenerCertificatesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) RemoveTags(ctx workflow.Context, input *elbv2.RemoveTagsInput) (*elbv2.RemoveTagsOutput, error) {
@@ -799,9 +833,9 @@ func (a *ELBV2Stub) RemoveTags(ctx workflow.Context, input *elbv2.RemoveTagsInpu
 	return &output, err
 }
 
-func (a *ELBV2Stub) RemoveTagsAsync(ctx workflow.Context, input *elbv2.RemoveTagsInput) *Elbv2RemoveTagsFuture {
+func (a *ELBV2Stub) RemoveTagsAsync(ctx workflow.Context, input *elbv2.RemoveTagsInput) *ELBV2RemoveTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.RemoveTags", input)
-	return &Elbv2RemoveTagsFuture{Future: future}
+	return &ELBV2RemoveTagsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) SetIpAddressType(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) (*elbv2.SetIpAddressTypeOutput, error) {
@@ -810,9 +844,9 @@ func (a *ELBV2Stub) SetIpAddressType(ctx workflow.Context, input *elbv2.SetIpAdd
 	return &output, err
 }
 
-func (a *ELBV2Stub) SetIpAddressTypeAsync(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) *Elbv2SetIpAddressTypeFuture {
+func (a *ELBV2Stub) SetIpAddressTypeAsync(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) *ELBV2SetIpAddressTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.SetIpAddressType", input)
-	return &Elbv2SetIpAddressTypeFuture{Future: future}
+	return &ELBV2SetIpAddressTypeFuture{Future: future}
 }
 
 func (a *ELBV2Stub) SetRulePriorities(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) (*elbv2.SetRulePrioritiesOutput, error) {
@@ -821,9 +855,9 @@ func (a *ELBV2Stub) SetRulePriorities(ctx workflow.Context, input *elbv2.SetRule
 	return &output, err
 }
 
-func (a *ELBV2Stub) SetRulePrioritiesAsync(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) *Elbv2SetRulePrioritiesFuture {
+func (a *ELBV2Stub) SetRulePrioritiesAsync(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) *ELBV2SetRulePrioritiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.SetRulePriorities", input)
-	return &Elbv2SetRulePrioritiesFuture{Future: future}
+	return &ELBV2SetRulePrioritiesFuture{Future: future}
 }
 
 func (a *ELBV2Stub) SetSecurityGroups(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) (*elbv2.SetSecurityGroupsOutput, error) {
@@ -832,9 +866,9 @@ func (a *ELBV2Stub) SetSecurityGroups(ctx workflow.Context, input *elbv2.SetSecu
 	return &output, err
 }
 
-func (a *ELBV2Stub) SetSecurityGroupsAsync(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) *Elbv2SetSecurityGroupsFuture {
+func (a *ELBV2Stub) SetSecurityGroupsAsync(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) *ELBV2SetSecurityGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.SetSecurityGroups", input)
-	return &Elbv2SetSecurityGroupsFuture{Future: future}
+	return &ELBV2SetSecurityGroupsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) SetSubnets(ctx workflow.Context, input *elbv2.SetSubnetsInput) (*elbv2.SetSubnetsOutput, error) {
@@ -843,9 +877,9 @@ func (a *ELBV2Stub) SetSubnets(ctx workflow.Context, input *elbv2.SetSubnetsInpu
 	return &output, err
 }
 
-func (a *ELBV2Stub) SetSubnetsAsync(ctx workflow.Context, input *elbv2.SetSubnetsInput) *Elbv2SetSubnetsFuture {
+func (a *ELBV2Stub) SetSubnetsAsync(ctx workflow.Context, input *elbv2.SetSubnetsInput) *ELBV2SetSubnetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elbv2.SetSubnets", input)
-	return &Elbv2SetSubnetsFuture{Future: future}
+	return &ELBV2SetSubnetsFuture{Future: future}
 }
 
 func (a *ELBV2Stub) WaitUntilLoadBalancerAvailable(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error {

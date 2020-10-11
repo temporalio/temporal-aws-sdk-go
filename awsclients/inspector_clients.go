@@ -129,6 +129,7 @@ func NewInspectorStub() InspectorClient {
 }
 
 type InspectorAddAttributesToFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +140,7 @@ func (r *InspectorAddAttributesToFindingsFuture) Get(ctx workflow.Context) (*ins
 }
 
 type InspectorCreateAssessmentTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +151,7 @@ func (r *InspectorCreateAssessmentTargetFuture) Get(ctx workflow.Context) (*insp
 }
 
 type InspectorCreateAssessmentTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +162,7 @@ func (r *InspectorCreateAssessmentTemplateFuture) Get(ctx workflow.Context) (*in
 }
 
 type InspectorCreateExclusionsPreviewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +173,7 @@ func (r *InspectorCreateExclusionsPreviewFuture) Get(ctx workflow.Context) (*ins
 }
 
 type InspectorCreateResourceGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +184,7 @@ func (r *InspectorCreateResourceGroupFuture) Get(ctx workflow.Context) (*inspect
 }
 
 type InspectorDeleteAssessmentRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +195,7 @@ func (r *InspectorDeleteAssessmentRunFuture) Get(ctx workflow.Context) (*inspect
 }
 
 type InspectorDeleteAssessmentTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +206,7 @@ func (r *InspectorDeleteAssessmentTargetFuture) Get(ctx workflow.Context) (*insp
 }
 
 type InspectorDeleteAssessmentTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +217,7 @@ func (r *InspectorDeleteAssessmentTemplateFuture) Get(ctx workflow.Context) (*in
 }
 
 type InspectorDescribeAssessmentRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +228,7 @@ func (r *InspectorDescribeAssessmentRunsFuture) Get(ctx workflow.Context) (*insp
 }
 
 type InspectorDescribeAssessmentTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +239,7 @@ func (r *InspectorDescribeAssessmentTargetsFuture) Get(ctx workflow.Context) (*i
 }
 
 type InspectorDescribeAssessmentTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +250,7 @@ func (r *InspectorDescribeAssessmentTemplatesFuture) Get(ctx workflow.Context) (
 }
 
 type InspectorDescribeCrossAccountAccessRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +261,7 @@ func (r *InspectorDescribeCrossAccountAccessRoleFuture) Get(ctx workflow.Context
 }
 
 type InspectorDescribeExclusionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +272,7 @@ func (r *InspectorDescribeExclusionsFuture) Get(ctx workflow.Context) (*inspecto
 }
 
 type InspectorDescribeFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +283,7 @@ func (r *InspectorDescribeFindingsFuture) Get(ctx workflow.Context) (*inspector.
 }
 
 type InspectorDescribeResourceGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +294,7 @@ func (r *InspectorDescribeResourceGroupsFuture) Get(ctx workflow.Context) (*insp
 }
 
 type InspectorDescribeRulesPackagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +305,7 @@ func (r *InspectorDescribeRulesPackagesFuture) Get(ctx workflow.Context) (*inspe
 }
 
 type InspectorGetAssessmentReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +316,7 @@ func (r *InspectorGetAssessmentReportFuture) Get(ctx workflow.Context) (*inspect
 }
 
 type InspectorGetExclusionsPreviewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +327,7 @@ func (r *InspectorGetExclusionsPreviewFuture) Get(ctx workflow.Context) (*inspec
 }
 
 type InspectorGetTelemetryMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +338,7 @@ func (r *InspectorGetTelemetryMetadataFuture) Get(ctx workflow.Context) (*inspec
 }
 
 type InspectorListAssessmentRunAgentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +349,7 @@ func (r *InspectorListAssessmentRunAgentsFuture) Get(ctx workflow.Context) (*ins
 }
 
 type InspectorListAssessmentRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +360,7 @@ func (r *InspectorListAssessmentRunsFuture) Get(ctx workflow.Context) (*inspecto
 }
 
 type InspectorListAssessmentTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +371,7 @@ func (r *InspectorListAssessmentTargetsFuture) Get(ctx workflow.Context) (*inspe
 }
 
 type InspectorListAssessmentTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +382,7 @@ func (r *InspectorListAssessmentTemplatesFuture) Get(ctx workflow.Context) (*ins
 }
 
 type InspectorListEventSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +393,7 @@ func (r *InspectorListEventSubscriptionsFuture) Get(ctx workflow.Context) (*insp
 }
 
 type InspectorListExclusionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +404,7 @@ func (r *InspectorListExclusionsFuture) Get(ctx workflow.Context) (*inspector.Li
 }
 
 type InspectorListFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +415,7 @@ func (r *InspectorListFindingsFuture) Get(ctx workflow.Context) (*inspector.List
 }
 
 type InspectorListRulesPackagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +426,7 @@ func (r *InspectorListRulesPackagesFuture) Get(ctx workflow.Context) (*inspector
 }
 
 type InspectorListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +437,7 @@ func (r *InspectorListTagsForResourceFuture) Get(ctx workflow.Context) (*inspect
 }
 
 type InspectorPreviewAgentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +448,7 @@ func (r *InspectorPreviewAgentsFuture) Get(ctx workflow.Context) (*inspector.Pre
 }
 
 type InspectorRegisterCrossAccountAccessRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +459,7 @@ func (r *InspectorRegisterCrossAccountAccessRoleFuture) Get(ctx workflow.Context
 }
 
 type InspectorRemoveAttributesFromFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +470,7 @@ func (r *InspectorRemoveAttributesFromFindingsFuture) Get(ctx workflow.Context) 
 }
 
 type InspectorSetTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +481,7 @@ func (r *InspectorSetTagsForResourceFuture) Get(ctx workflow.Context) (*inspecto
 }
 
 type InspectorStartAssessmentRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +492,7 @@ func (r *InspectorStartAssessmentRunFuture) Get(ctx workflow.Context) (*inspecto
 }
 
 type InspectorStopAssessmentRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +503,7 @@ func (r *InspectorStopAssessmentRunFuture) Get(ctx workflow.Context) (*inspector
 }
 
 type InspectorSubscribeToEventFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +514,7 @@ func (r *InspectorSubscribeToEventFuture) Get(ctx workflow.Context) (*inspector.
 }
 
 type InspectorUnsubscribeFromEventFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +525,7 @@ func (r *InspectorUnsubscribeFromEventFuture) Get(ctx workflow.Context) (*inspec
 }
 
 type InspectorUpdateAssessmentTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

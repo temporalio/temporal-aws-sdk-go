@@ -159,6 +159,7 @@ func NewConnectStub() ConnectClient {
 }
 
 type ConnectAssociateRoutingProfileQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +170,7 @@ func (r *ConnectAssociateRoutingProfileQueuesFuture) Get(ctx workflow.Context) (
 }
 
 type ConnectCreateContactFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +181,7 @@ func (r *ConnectCreateContactFlowFuture) Get(ctx workflow.Context) (*connect.Cre
 }
 
 type ConnectCreateRoutingProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +192,7 @@ func (r *ConnectCreateRoutingProfileFuture) Get(ctx workflow.Context) (*connect.
 }
 
 type ConnectCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +203,7 @@ func (r *ConnectCreateUserFuture) Get(ctx workflow.Context) (*connect.CreateUser
 }
 
 type ConnectDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +214,7 @@ func (r *ConnectDeleteUserFuture) Get(ctx workflow.Context) (*connect.DeleteUser
 }
 
 type ConnectDescribeContactFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +225,7 @@ func (r *ConnectDescribeContactFlowFuture) Get(ctx workflow.Context) (*connect.D
 }
 
 type ConnectDescribeRoutingProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +236,7 @@ func (r *ConnectDescribeRoutingProfileFuture) Get(ctx workflow.Context) (*connec
 }
 
 type ConnectDescribeUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +247,7 @@ func (r *ConnectDescribeUserFuture) Get(ctx workflow.Context) (*connect.Describe
 }
 
 type ConnectDescribeUserHierarchyGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +258,7 @@ func (r *ConnectDescribeUserHierarchyGroupFuture) Get(ctx workflow.Context) (*co
 }
 
 type ConnectDescribeUserHierarchyStructureFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +269,7 @@ func (r *ConnectDescribeUserHierarchyStructureFuture) Get(ctx workflow.Context) 
 }
 
 type ConnectDisassociateRoutingProfileQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +280,7 @@ func (r *ConnectDisassociateRoutingProfileQueuesFuture) Get(ctx workflow.Context
 }
 
 type ConnectGetContactAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +291,7 @@ func (r *ConnectGetContactAttributesFuture) Get(ctx workflow.Context) (*connect.
 }
 
 type ConnectGetCurrentMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +302,7 @@ func (r *ConnectGetCurrentMetricDataFuture) Get(ctx workflow.Context) (*connect.
 }
 
 type ConnectGetFederationTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +313,7 @@ func (r *ConnectGetFederationTokenFuture) Get(ctx workflow.Context) (*connect.Ge
 }
 
 type ConnectGetMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +324,7 @@ func (r *ConnectGetMetricDataFuture) Get(ctx workflow.Context) (*connect.GetMetr
 }
 
 type ConnectListContactFlowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +335,7 @@ func (r *ConnectListContactFlowsFuture) Get(ctx workflow.Context) (*connect.List
 }
 
 type ConnectListHoursOfOperationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +346,7 @@ func (r *ConnectListHoursOfOperationsFuture) Get(ctx workflow.Context) (*connect
 }
 
 type ConnectListPhoneNumbersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +357,7 @@ func (r *ConnectListPhoneNumbersFuture) Get(ctx workflow.Context) (*connect.List
 }
 
 type ConnectListPromptsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +368,7 @@ func (r *ConnectListPromptsFuture) Get(ctx workflow.Context) (*connect.ListPromp
 }
 
 type ConnectListQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +379,7 @@ func (r *ConnectListQueuesFuture) Get(ctx workflow.Context) (*connect.ListQueues
 }
 
 type ConnectListRoutingProfileQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +390,7 @@ func (r *ConnectListRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*conn
 }
 
 type ConnectListRoutingProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +401,7 @@ func (r *ConnectListRoutingProfilesFuture) Get(ctx workflow.Context) (*connect.L
 }
 
 type ConnectListSecurityProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +412,7 @@ func (r *ConnectListSecurityProfilesFuture) Get(ctx workflow.Context) (*connect.
 }
 
 type ConnectListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +423,7 @@ func (r *ConnectListTagsForResourceFuture) Get(ctx workflow.Context) (*connect.L
 }
 
 type ConnectListUserHierarchyGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +434,7 @@ func (r *ConnectListUserHierarchyGroupsFuture) Get(ctx workflow.Context) (*conne
 }
 
 type ConnectListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +445,7 @@ func (r *ConnectListUsersFuture) Get(ctx workflow.Context) (*connect.ListUsersOu
 }
 
 type ConnectResumeContactRecordingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +456,7 @@ func (r *ConnectResumeContactRecordingFuture) Get(ctx workflow.Context) (*connec
 }
 
 type ConnectStartChatContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +467,7 @@ func (r *ConnectStartChatContactFuture) Get(ctx workflow.Context) (*connect.Star
 }
 
 type ConnectStartContactRecordingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +478,7 @@ func (r *ConnectStartContactRecordingFuture) Get(ctx workflow.Context) (*connect
 }
 
 type ConnectStartOutboundVoiceContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +489,7 @@ func (r *ConnectStartOutboundVoiceContactFuture) Get(ctx workflow.Context) (*con
 }
 
 type ConnectStopContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +500,7 @@ func (r *ConnectStopContactFuture) Get(ctx workflow.Context) (*connect.StopConta
 }
 
 type ConnectStopContactRecordingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +511,7 @@ func (r *ConnectStopContactRecordingFuture) Get(ctx workflow.Context) (*connect.
 }
 
 type ConnectSuspendContactRecordingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +522,7 @@ func (r *ConnectSuspendContactRecordingFuture) Get(ctx workflow.Context) (*conne
 }
 
 type ConnectTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -499,6 +533,7 @@ func (r *ConnectTagResourceFuture) Get(ctx workflow.Context) (*connect.TagResour
 }
 
 type ConnectUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -509,6 +544,7 @@ func (r *ConnectUntagResourceFuture) Get(ctx workflow.Context) (*connect.UntagRe
 }
 
 type ConnectUpdateContactAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -519,6 +555,7 @@ func (r *ConnectUpdateContactAttributesFuture) Get(ctx workflow.Context) (*conne
 }
 
 type ConnectUpdateContactFlowContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -529,6 +566,7 @@ func (r *ConnectUpdateContactFlowContentFuture) Get(ctx workflow.Context) (*conn
 }
 
 type ConnectUpdateContactFlowNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -539,6 +577,7 @@ func (r *ConnectUpdateContactFlowNameFuture) Get(ctx workflow.Context) (*connect
 }
 
 type ConnectUpdateRoutingProfileConcurrencyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -549,6 +588,7 @@ func (r *ConnectUpdateRoutingProfileConcurrencyFuture) Get(ctx workflow.Context)
 }
 
 type ConnectUpdateRoutingProfileDefaultOutboundQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -559,6 +599,7 @@ func (r *ConnectUpdateRoutingProfileDefaultOutboundQueueFuture) Get(ctx workflow
 }
 
 type ConnectUpdateRoutingProfileNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -569,6 +610,7 @@ func (r *ConnectUpdateRoutingProfileNameFuture) Get(ctx workflow.Context) (*conn
 }
 
 type ConnectUpdateRoutingProfileQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -579,6 +621,7 @@ func (r *ConnectUpdateRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*co
 }
 
 type ConnectUpdateUserHierarchyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -589,6 +632,7 @@ func (r *ConnectUpdateUserHierarchyFuture) Get(ctx workflow.Context) (*connect.U
 }
 
 type ConnectUpdateUserIdentityInfoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -599,6 +643,7 @@ func (r *ConnectUpdateUserIdentityInfoFuture) Get(ctx workflow.Context) (*connec
 }
 
 type ConnectUpdateUserPhoneConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -609,6 +654,7 @@ func (r *ConnectUpdateUserPhoneConfigFuture) Get(ctx workflow.Context) (*connect
 }
 
 type ConnectUpdateUserRoutingProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -619,6 +665,7 @@ func (r *ConnectUpdateUserRoutingProfileFuture) Get(ctx workflow.Context) (*conn
 }
 
 type ConnectUpdateUserSecurityProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

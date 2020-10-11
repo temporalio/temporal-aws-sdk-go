@@ -171,6 +171,7 @@ func NewOrganizationsStub() OrganizationsClient {
 }
 
 type OrganizationsAcceptHandshakeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +182,7 @@ func (r *OrganizationsAcceptHandshakeFuture) Get(ctx workflow.Context) (*organiz
 }
 
 type OrganizationsAttachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +193,7 @@ func (r *OrganizationsAttachPolicyFuture) Get(ctx workflow.Context) (*organizati
 }
 
 type OrganizationsCancelHandshakeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +204,7 @@ func (r *OrganizationsCancelHandshakeFuture) Get(ctx workflow.Context) (*organiz
 }
 
 type OrganizationsCreateAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +215,7 @@ func (r *OrganizationsCreateAccountFuture) Get(ctx workflow.Context) (*organizat
 }
 
 type OrganizationsCreateGovCloudAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +226,7 @@ func (r *OrganizationsCreateGovCloudAccountFuture) Get(ctx workflow.Context) (*o
 }
 
 type OrganizationsCreateOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +237,7 @@ func (r *OrganizationsCreateOrganizationFuture) Get(ctx workflow.Context) (*orga
 }
 
 type OrganizationsCreateOrganizationalUnitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +248,7 @@ func (r *OrganizationsCreateOrganizationalUnitFuture) Get(ctx workflow.Context) 
 }
 
 type OrganizationsCreatePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +259,7 @@ func (r *OrganizationsCreatePolicyFuture) Get(ctx workflow.Context) (*organizati
 }
 
 type OrganizationsDeclineHandshakeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +270,7 @@ func (r *OrganizationsDeclineHandshakeFuture) Get(ctx workflow.Context) (*organi
 }
 
 type OrganizationsDeleteOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +281,7 @@ func (r *OrganizationsDeleteOrganizationFuture) Get(ctx workflow.Context) (*orga
 }
 
 type OrganizationsDeleteOrganizationalUnitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +292,7 @@ func (r *OrganizationsDeleteOrganizationalUnitFuture) Get(ctx workflow.Context) 
 }
 
 type OrganizationsDeletePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +303,7 @@ func (r *OrganizationsDeletePolicyFuture) Get(ctx workflow.Context) (*organizati
 }
 
 type OrganizationsDeregisterDelegatedAdministratorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +314,7 @@ func (r *OrganizationsDeregisterDelegatedAdministratorFuture) Get(ctx workflow.C
 }
 
 type OrganizationsDescribeAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +325,7 @@ func (r *OrganizationsDescribeAccountFuture) Get(ctx workflow.Context) (*organiz
 }
 
 type OrganizationsDescribeCreateAccountStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +336,7 @@ func (r *OrganizationsDescribeCreateAccountStatusFuture) Get(ctx workflow.Contex
 }
 
 type OrganizationsDescribeEffectivePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +347,7 @@ func (r *OrganizationsDescribeEffectivePolicyFuture) Get(ctx workflow.Context) (
 }
 
 type OrganizationsDescribeHandshakeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +358,7 @@ func (r *OrganizationsDescribeHandshakeFuture) Get(ctx workflow.Context) (*organ
 }
 
 type OrganizationsDescribeOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +369,7 @@ func (r *OrganizationsDescribeOrganizationFuture) Get(ctx workflow.Context) (*or
 }
 
 type OrganizationsDescribeOrganizationalUnitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +380,7 @@ func (r *OrganizationsDescribeOrganizationalUnitFuture) Get(ctx workflow.Context
 }
 
 type OrganizationsDescribePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +391,7 @@ func (r *OrganizationsDescribePolicyFuture) Get(ctx workflow.Context) (*organiza
 }
 
 type OrganizationsDetachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +402,7 @@ func (r *OrganizationsDetachPolicyFuture) Get(ctx workflow.Context) (*organizati
 }
 
 type OrganizationsDisableAWSServiceAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +413,7 @@ func (r *OrganizationsDisableAWSServiceAccessFuture) Get(ctx workflow.Context) (
 }
 
 type OrganizationsDisablePolicyTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +424,7 @@ func (r *OrganizationsDisablePolicyTypeFuture) Get(ctx workflow.Context) (*organ
 }
 
 type OrganizationsEnableAWSServiceAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +435,7 @@ func (r *OrganizationsEnableAWSServiceAccessFuture) Get(ctx workflow.Context) (*
 }
 
 type OrganizationsEnableAllFeaturesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +446,7 @@ func (r *OrganizationsEnableAllFeaturesFuture) Get(ctx workflow.Context) (*organ
 }
 
 type OrganizationsEnablePolicyTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +457,7 @@ func (r *OrganizationsEnablePolicyTypeFuture) Get(ctx workflow.Context) (*organi
 }
 
 type OrganizationsInviteAccountToOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +468,7 @@ func (r *OrganizationsInviteAccountToOrganizationFuture) Get(ctx workflow.Contex
 }
 
 type OrganizationsLeaveOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +479,7 @@ func (r *OrganizationsLeaveOrganizationFuture) Get(ctx workflow.Context) (*organ
 }
 
 type OrganizationsListAWSServiceAccessForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +490,7 @@ func (r *OrganizationsListAWSServiceAccessForOrganizationFuture) Get(ctx workflo
 }
 
 type OrganizationsListAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +501,7 @@ func (r *OrganizationsListAccountsFuture) Get(ctx workflow.Context) (*organizati
 }
 
 type OrganizationsListAccountsForParentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +512,7 @@ func (r *OrganizationsListAccountsForParentFuture) Get(ctx workflow.Context) (*o
 }
 
 type OrganizationsListChildrenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +523,7 @@ func (r *OrganizationsListChildrenFuture) Get(ctx workflow.Context) (*organizati
 }
 
 type OrganizationsListCreateAccountStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +534,7 @@ func (r *OrganizationsListCreateAccountStatusFuture) Get(ctx workflow.Context) (
 }
 
 type OrganizationsListDelegatedAdministratorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +545,7 @@ func (r *OrganizationsListDelegatedAdministratorsFuture) Get(ctx workflow.Contex
 }
 
 type OrganizationsListDelegatedServicesForAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +556,7 @@ func (r *OrganizationsListDelegatedServicesForAccountFuture) Get(ctx workflow.Co
 }
 
 type OrganizationsListHandshakesForAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +567,7 @@ func (r *OrganizationsListHandshakesForAccountFuture) Get(ctx workflow.Context) 
 }
 
 type OrganizationsListHandshakesForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +578,7 @@ func (r *OrganizationsListHandshakesForOrganizationFuture) Get(ctx workflow.Cont
 }
 
 type OrganizationsListOrganizationalUnitsForParentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +589,7 @@ func (r *OrganizationsListOrganizationalUnitsForParentFuture) Get(ctx workflow.C
 }
 
 type OrganizationsListParentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +600,7 @@ func (r *OrganizationsListParentsFuture) Get(ctx workflow.Context) (*organizatio
 }
 
 type OrganizationsListPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +611,7 @@ func (r *OrganizationsListPoliciesFuture) Get(ctx workflow.Context) (*organizati
 }
 
 type OrganizationsListPoliciesForTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +622,7 @@ func (r *OrganizationsListPoliciesForTargetFuture) Get(ctx workflow.Context) (*o
 }
 
 type OrganizationsListRootsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +633,7 @@ func (r *OrganizationsListRootsFuture) Get(ctx workflow.Context) (*organizations
 }
 
 type OrganizationsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +644,7 @@ func (r *OrganizationsListTagsForResourceFuture) Get(ctx workflow.Context) (*org
 }
 
 type OrganizationsListTargetsForPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +655,7 @@ func (r *OrganizationsListTargetsForPolicyFuture) Get(ctx workflow.Context) (*or
 }
 
 type OrganizationsMoveAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +666,7 @@ func (r *OrganizationsMoveAccountFuture) Get(ctx workflow.Context) (*organizatio
 }
 
 type OrganizationsRegisterDelegatedAdministratorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +677,7 @@ func (r *OrganizationsRegisterDelegatedAdministratorFuture) Get(ctx workflow.Con
 }
 
 type OrganizationsRemoveAccountFromOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +688,7 @@ func (r *OrganizationsRemoveAccountFromOrganizationFuture) Get(ctx workflow.Cont
 }
 
 type OrganizationsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -651,6 +699,7 @@ func (r *OrganizationsTagResourceFuture) Get(ctx workflow.Context) (*organizatio
 }
 
 type OrganizationsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -661,6 +710,7 @@ func (r *OrganizationsUntagResourceFuture) Get(ctx workflow.Context) (*organizat
 }
 
 type OrganizationsUpdateOrganizationalUnitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -671,6 +721,7 @@ func (r *OrganizationsUpdateOrganizationalUnitFuture) Get(ctx workflow.Context) 
 }
 
 type OrganizationsUpdatePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

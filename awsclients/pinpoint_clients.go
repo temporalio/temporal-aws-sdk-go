@@ -354,6 +354,7 @@ func NewPinpointStub() PinpointClient {
 }
 
 type PinpointCreateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +365,7 @@ func (r *PinpointCreateAppFuture) Get(ctx workflow.Context) (*pinpoint.CreateApp
 }
 
 type PinpointCreateCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +376,7 @@ func (r *PinpointCreateCampaignFuture) Get(ctx workflow.Context) (*pinpoint.Crea
 }
 
 type PinpointCreateEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +387,7 @@ func (r *PinpointCreateEmailTemplateFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointCreateExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +398,7 @@ func (r *PinpointCreateExportJobFuture) Get(ctx workflow.Context) (*pinpoint.Cre
 }
 
 type PinpointCreateImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +409,7 @@ func (r *PinpointCreateImportJobFuture) Get(ctx workflow.Context) (*pinpoint.Cre
 }
 
 type PinpointCreateJourneyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +420,7 @@ func (r *PinpointCreateJourneyFuture) Get(ctx workflow.Context) (*pinpoint.Creat
 }
 
 type PinpointCreatePushTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +431,7 @@ func (r *PinpointCreatePushTemplateFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointCreateRecommenderConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -434,6 +442,7 @@ func (r *PinpointCreateRecommenderConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type PinpointCreateSegmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -444,6 +453,7 @@ func (r *PinpointCreateSegmentFuture) Get(ctx workflow.Context) (*pinpoint.Creat
 }
 
 type PinpointCreateSmsTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -454,6 +464,7 @@ func (r *PinpointCreateSmsTemplateFuture) Get(ctx workflow.Context) (*pinpoint.C
 }
 
 type PinpointCreateVoiceTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -464,6 +475,7 @@ func (r *PinpointCreateVoiceTemplateFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointDeleteAdmChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -474,6 +486,7 @@ func (r *PinpointDeleteAdmChannelFuture) Get(ctx workflow.Context) (*pinpoint.De
 }
 
 type PinpointDeleteApnsChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -484,6 +497,7 @@ func (r *PinpointDeleteApnsChannelFuture) Get(ctx workflow.Context) (*pinpoint.D
 }
 
 type PinpointDeleteApnsSandboxChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -494,6 +508,7 @@ func (r *PinpointDeleteApnsSandboxChannelFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointDeleteApnsVoipChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -504,6 +519,7 @@ func (r *PinpointDeleteApnsVoipChannelFuture) Get(ctx workflow.Context) (*pinpoi
 }
 
 type PinpointDeleteApnsVoipSandboxChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -514,6 +530,7 @@ func (r *PinpointDeleteApnsVoipSandboxChannelFuture) Get(ctx workflow.Context) (
 }
 
 type PinpointDeleteAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -524,6 +541,7 @@ func (r *PinpointDeleteAppFuture) Get(ctx workflow.Context) (*pinpoint.DeleteApp
 }
 
 type PinpointDeleteBaiduChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -534,6 +552,7 @@ func (r *PinpointDeleteBaiduChannelFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointDeleteCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -544,6 +563,7 @@ func (r *PinpointDeleteCampaignFuture) Get(ctx workflow.Context) (*pinpoint.Dele
 }
 
 type PinpointDeleteEmailChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -554,6 +574,7 @@ func (r *PinpointDeleteEmailChannelFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointDeleteEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -564,6 +585,7 @@ func (r *PinpointDeleteEmailTemplateFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointDeleteEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -574,6 +596,7 @@ func (r *PinpointDeleteEndpointFuture) Get(ctx workflow.Context) (*pinpoint.Dele
 }
 
 type PinpointDeleteEventStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -584,6 +607,7 @@ func (r *PinpointDeleteEventStreamFuture) Get(ctx workflow.Context) (*pinpoint.D
 }
 
 type PinpointDeleteGcmChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -594,6 +618,7 @@ func (r *PinpointDeleteGcmChannelFuture) Get(ctx workflow.Context) (*pinpoint.De
 }
 
 type PinpointDeleteJourneyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -604,6 +629,7 @@ func (r *PinpointDeleteJourneyFuture) Get(ctx workflow.Context) (*pinpoint.Delet
 }
 
 type PinpointDeletePushTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -614,6 +640,7 @@ func (r *PinpointDeletePushTemplateFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointDeleteRecommenderConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -624,6 +651,7 @@ func (r *PinpointDeleteRecommenderConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type PinpointDeleteSegmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -634,6 +662,7 @@ func (r *PinpointDeleteSegmentFuture) Get(ctx workflow.Context) (*pinpoint.Delet
 }
 
 type PinpointDeleteSmsChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -644,6 +673,7 @@ func (r *PinpointDeleteSmsChannelFuture) Get(ctx workflow.Context) (*pinpoint.De
 }
 
 type PinpointDeleteSmsTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -654,6 +684,7 @@ func (r *PinpointDeleteSmsTemplateFuture) Get(ctx workflow.Context) (*pinpoint.D
 }
 
 type PinpointDeleteUserEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -664,6 +695,7 @@ func (r *PinpointDeleteUserEndpointsFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointDeleteVoiceChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -674,6 +706,7 @@ func (r *PinpointDeleteVoiceChannelFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointDeleteVoiceTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -684,6 +717,7 @@ func (r *PinpointDeleteVoiceTemplateFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointGetAdmChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -694,6 +728,7 @@ func (r *PinpointGetAdmChannelFuture) Get(ctx workflow.Context) (*pinpoint.GetAd
 }
 
 type PinpointGetApnsChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -704,6 +739,7 @@ func (r *PinpointGetApnsChannelFuture) Get(ctx workflow.Context) (*pinpoint.GetA
 }
 
 type PinpointGetApnsSandboxChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -714,6 +750,7 @@ func (r *PinpointGetApnsSandboxChannelFuture) Get(ctx workflow.Context) (*pinpoi
 }
 
 type PinpointGetApnsVoipChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -724,6 +761,7 @@ func (r *PinpointGetApnsVoipChannelFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointGetApnsVoipSandboxChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -734,6 +772,7 @@ func (r *PinpointGetApnsVoipSandboxChannelFuture) Get(ctx workflow.Context) (*pi
 }
 
 type PinpointGetAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -744,6 +783,7 @@ func (r *PinpointGetAppFuture) Get(ctx workflow.Context) (*pinpoint.GetAppOutput
 }
 
 type PinpointGetApplicationDateRangeKpiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -754,6 +794,7 @@ func (r *PinpointGetApplicationDateRangeKpiFuture) Get(ctx workflow.Context) (*p
 }
 
 type PinpointGetApplicationSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -764,6 +805,7 @@ func (r *PinpointGetApplicationSettingsFuture) Get(ctx workflow.Context) (*pinpo
 }
 
 type PinpointGetAppsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -774,6 +816,7 @@ func (r *PinpointGetAppsFuture) Get(ctx workflow.Context) (*pinpoint.GetAppsOutp
 }
 
 type PinpointGetBaiduChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -784,6 +827,7 @@ func (r *PinpointGetBaiduChannelFuture) Get(ctx workflow.Context) (*pinpoint.Get
 }
 
 type PinpointGetCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -794,6 +838,7 @@ func (r *PinpointGetCampaignFuture) Get(ctx workflow.Context) (*pinpoint.GetCamp
 }
 
 type PinpointGetCampaignActivitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -804,6 +849,7 @@ func (r *PinpointGetCampaignActivitiesFuture) Get(ctx workflow.Context) (*pinpoi
 }
 
 type PinpointGetCampaignDateRangeKpiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -814,6 +860,7 @@ func (r *PinpointGetCampaignDateRangeKpiFuture) Get(ctx workflow.Context) (*pinp
 }
 
 type PinpointGetCampaignVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -824,6 +871,7 @@ func (r *PinpointGetCampaignVersionFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointGetCampaignVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -834,6 +882,7 @@ func (r *PinpointGetCampaignVersionsFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointGetCampaignsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -844,6 +893,7 @@ func (r *PinpointGetCampaignsFuture) Get(ctx workflow.Context) (*pinpoint.GetCam
 }
 
 type PinpointGetChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -854,6 +904,7 @@ func (r *PinpointGetChannelsFuture) Get(ctx workflow.Context) (*pinpoint.GetChan
 }
 
 type PinpointGetEmailChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -864,6 +915,7 @@ func (r *PinpointGetEmailChannelFuture) Get(ctx workflow.Context) (*pinpoint.Get
 }
 
 type PinpointGetEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -874,6 +926,7 @@ func (r *PinpointGetEmailTemplateFuture) Get(ctx workflow.Context) (*pinpoint.Ge
 }
 
 type PinpointGetEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -884,6 +937,7 @@ func (r *PinpointGetEndpointFuture) Get(ctx workflow.Context) (*pinpoint.GetEndp
 }
 
 type PinpointGetEventStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -894,6 +948,7 @@ func (r *PinpointGetEventStreamFuture) Get(ctx workflow.Context) (*pinpoint.GetE
 }
 
 type PinpointGetExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -904,6 +959,7 @@ func (r *PinpointGetExportJobFuture) Get(ctx workflow.Context) (*pinpoint.GetExp
 }
 
 type PinpointGetExportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -914,6 +970,7 @@ func (r *PinpointGetExportJobsFuture) Get(ctx workflow.Context) (*pinpoint.GetEx
 }
 
 type PinpointGetGcmChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -924,6 +981,7 @@ func (r *PinpointGetGcmChannelFuture) Get(ctx workflow.Context) (*pinpoint.GetGc
 }
 
 type PinpointGetImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -934,6 +992,7 @@ func (r *PinpointGetImportJobFuture) Get(ctx workflow.Context) (*pinpoint.GetImp
 }
 
 type PinpointGetImportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -944,6 +1003,7 @@ func (r *PinpointGetImportJobsFuture) Get(ctx workflow.Context) (*pinpoint.GetIm
 }
 
 type PinpointGetJourneyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -954,6 +1014,7 @@ func (r *PinpointGetJourneyFuture) Get(ctx workflow.Context) (*pinpoint.GetJourn
 }
 
 type PinpointGetJourneyDateRangeKpiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -964,6 +1025,7 @@ func (r *PinpointGetJourneyDateRangeKpiFuture) Get(ctx workflow.Context) (*pinpo
 }
 
 type PinpointGetJourneyExecutionActivityMetricsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -974,6 +1036,7 @@ func (r *PinpointGetJourneyExecutionActivityMetricsFuture) Get(ctx workflow.Cont
 }
 
 type PinpointGetJourneyExecutionMetricsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -984,6 +1047,7 @@ func (r *PinpointGetJourneyExecutionMetricsFuture) Get(ctx workflow.Context) (*p
 }
 
 type PinpointGetPushTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -994,6 +1058,7 @@ func (r *PinpointGetPushTemplateFuture) Get(ctx workflow.Context) (*pinpoint.Get
 }
 
 type PinpointGetRecommenderConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1004,6 +1069,7 @@ func (r *PinpointGetRecommenderConfigurationFuture) Get(ctx workflow.Context) (*
 }
 
 type PinpointGetRecommenderConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1014,6 +1080,7 @@ func (r *PinpointGetRecommenderConfigurationsFuture) Get(ctx workflow.Context) (
 }
 
 type PinpointGetSegmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1024,6 +1091,7 @@ func (r *PinpointGetSegmentFuture) Get(ctx workflow.Context) (*pinpoint.GetSegme
 }
 
 type PinpointGetSegmentExportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1034,6 +1102,7 @@ func (r *PinpointGetSegmentExportJobsFuture) Get(ctx workflow.Context) (*pinpoin
 }
 
 type PinpointGetSegmentImportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1044,6 +1113,7 @@ func (r *PinpointGetSegmentImportJobsFuture) Get(ctx workflow.Context) (*pinpoin
 }
 
 type PinpointGetSegmentVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1054,6 +1124,7 @@ func (r *PinpointGetSegmentVersionFuture) Get(ctx workflow.Context) (*pinpoint.G
 }
 
 type PinpointGetSegmentVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1064,6 +1135,7 @@ func (r *PinpointGetSegmentVersionsFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointGetSegmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1074,6 +1146,7 @@ func (r *PinpointGetSegmentsFuture) Get(ctx workflow.Context) (*pinpoint.GetSegm
 }
 
 type PinpointGetSmsChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1084,6 +1157,7 @@ func (r *PinpointGetSmsChannelFuture) Get(ctx workflow.Context) (*pinpoint.GetSm
 }
 
 type PinpointGetSmsTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1094,6 +1168,7 @@ func (r *PinpointGetSmsTemplateFuture) Get(ctx workflow.Context) (*pinpoint.GetS
 }
 
 type PinpointGetUserEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1104,6 +1179,7 @@ func (r *PinpointGetUserEndpointsFuture) Get(ctx workflow.Context) (*pinpoint.Ge
 }
 
 type PinpointGetVoiceChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1114,6 +1190,7 @@ func (r *PinpointGetVoiceChannelFuture) Get(ctx workflow.Context) (*pinpoint.Get
 }
 
 type PinpointGetVoiceTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1124,6 +1201,7 @@ func (r *PinpointGetVoiceTemplateFuture) Get(ctx workflow.Context) (*pinpoint.Ge
 }
 
 type PinpointListJourneysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1134,6 +1212,7 @@ func (r *PinpointListJourneysFuture) Get(ctx workflow.Context) (*pinpoint.ListJo
 }
 
 type PinpointListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1144,6 +1223,7 @@ func (r *PinpointListTagsForResourceFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointListTemplateVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1154,6 +1234,7 @@ func (r *PinpointListTemplateVersionsFuture) Get(ctx workflow.Context) (*pinpoin
 }
 
 type PinpointListTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1164,6 +1245,7 @@ func (r *PinpointListTemplatesFuture) Get(ctx workflow.Context) (*pinpoint.ListT
 }
 
 type PinpointPhoneNumberValidateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1174,6 +1256,7 @@ func (r *PinpointPhoneNumberValidateFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointPutEventStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1184,6 +1267,7 @@ func (r *PinpointPutEventStreamFuture) Get(ctx workflow.Context) (*pinpoint.PutE
 }
 
 type PinpointPutEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1194,6 +1278,7 @@ func (r *PinpointPutEventsFuture) Get(ctx workflow.Context) (*pinpoint.PutEvents
 }
 
 type PinpointRemoveAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1204,6 +1289,7 @@ func (r *PinpointRemoveAttributesFuture) Get(ctx workflow.Context) (*pinpoint.Re
 }
 
 type PinpointSendMessagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1214,6 +1300,7 @@ func (r *PinpointSendMessagesFuture) Get(ctx workflow.Context) (*pinpoint.SendMe
 }
 
 type PinpointSendUsersMessagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1224,6 +1311,7 @@ func (r *PinpointSendUsersMessagesFuture) Get(ctx workflow.Context) (*pinpoint.S
 }
 
 type PinpointTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1234,6 +1322,7 @@ func (r *PinpointTagResourceFuture) Get(ctx workflow.Context) (*pinpoint.TagReso
 }
 
 type PinpointUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1244,6 +1333,7 @@ func (r *PinpointUntagResourceFuture) Get(ctx workflow.Context) (*pinpoint.Untag
 }
 
 type PinpointUpdateAdmChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1254,6 +1344,7 @@ func (r *PinpointUpdateAdmChannelFuture) Get(ctx workflow.Context) (*pinpoint.Up
 }
 
 type PinpointUpdateApnsChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1264,6 +1355,7 @@ func (r *PinpointUpdateApnsChannelFuture) Get(ctx workflow.Context) (*pinpoint.U
 }
 
 type PinpointUpdateApnsSandboxChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1274,6 +1366,7 @@ func (r *PinpointUpdateApnsSandboxChannelFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointUpdateApnsVoipChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1284,6 +1377,7 @@ func (r *PinpointUpdateApnsVoipChannelFuture) Get(ctx workflow.Context) (*pinpoi
 }
 
 type PinpointUpdateApnsVoipSandboxChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1294,6 +1388,7 @@ func (r *PinpointUpdateApnsVoipSandboxChannelFuture) Get(ctx workflow.Context) (
 }
 
 type PinpointUpdateApplicationSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1304,6 +1399,7 @@ func (r *PinpointUpdateApplicationSettingsFuture) Get(ctx workflow.Context) (*pi
 }
 
 type PinpointUpdateBaiduChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1314,6 +1410,7 @@ func (r *PinpointUpdateBaiduChannelFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointUpdateCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1324,6 +1421,7 @@ func (r *PinpointUpdateCampaignFuture) Get(ctx workflow.Context) (*pinpoint.Upda
 }
 
 type PinpointUpdateEmailChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1334,6 +1432,7 @@ func (r *PinpointUpdateEmailChannelFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointUpdateEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1344,6 +1443,7 @@ func (r *PinpointUpdateEmailTemplateFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointUpdateEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1354,6 +1454,7 @@ func (r *PinpointUpdateEndpointFuture) Get(ctx workflow.Context) (*pinpoint.Upda
 }
 
 type PinpointUpdateEndpointsBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1364,6 +1465,7 @@ func (r *PinpointUpdateEndpointsBatchFuture) Get(ctx workflow.Context) (*pinpoin
 }
 
 type PinpointUpdateGcmChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1374,6 +1476,7 @@ func (r *PinpointUpdateGcmChannelFuture) Get(ctx workflow.Context) (*pinpoint.Up
 }
 
 type PinpointUpdateJourneyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1384,6 +1487,7 @@ func (r *PinpointUpdateJourneyFuture) Get(ctx workflow.Context) (*pinpoint.Updat
 }
 
 type PinpointUpdateJourneyStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1394,6 +1498,7 @@ func (r *PinpointUpdateJourneyStateFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointUpdatePushTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1404,6 +1509,7 @@ func (r *PinpointUpdatePushTemplateFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointUpdateRecommenderConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1414,6 +1520,7 @@ func (r *PinpointUpdateRecommenderConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type PinpointUpdateSegmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1424,6 +1531,7 @@ func (r *PinpointUpdateSegmentFuture) Get(ctx workflow.Context) (*pinpoint.Updat
 }
 
 type PinpointUpdateSmsChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1434,6 +1542,7 @@ func (r *PinpointUpdateSmsChannelFuture) Get(ctx workflow.Context) (*pinpoint.Up
 }
 
 type PinpointUpdateSmsTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1444,6 +1553,7 @@ func (r *PinpointUpdateSmsTemplateFuture) Get(ctx workflow.Context) (*pinpoint.U
 }
 
 type PinpointUpdateTemplateActiveVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1454,6 +1564,7 @@ func (r *PinpointUpdateTemplateActiveVersionFuture) Get(ctx workflow.Context) (*
 }
 
 type PinpointUpdateVoiceChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1464,6 +1575,7 @@ func (r *PinpointUpdateVoiceChannelFuture) Get(ctx workflow.Context) (*pinpoint.
 }
 
 type PinpointUpdateVoiceTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

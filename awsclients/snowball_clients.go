@@ -84,6 +84,7 @@ func NewSnowballStub() SnowballClient {
 }
 
 type SnowballCancelClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -94,6 +95,7 @@ func (r *SnowballCancelClusterFuture) Get(ctx workflow.Context) (*snowball.Cance
 }
 
 type SnowballCancelJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -104,6 +106,7 @@ func (r *SnowballCancelJobFuture) Get(ctx workflow.Context) (*snowball.CancelJob
 }
 
 type SnowballCreateAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -114,6 +117,7 @@ func (r *SnowballCreateAddressFuture) Get(ctx workflow.Context) (*snowball.Creat
 }
 
 type SnowballCreateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +128,7 @@ func (r *SnowballCreateClusterFuture) Get(ctx workflow.Context) (*snowball.Creat
 }
 
 type SnowballCreateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +139,7 @@ func (r *SnowballCreateJobFuture) Get(ctx workflow.Context) (*snowball.CreateJob
 }
 
 type SnowballCreateReturnShippingLabelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +150,7 @@ func (r *SnowballCreateReturnShippingLabelFuture) Get(ctx workflow.Context) (*sn
 }
 
 type SnowballDescribeAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +161,7 @@ func (r *SnowballDescribeAddressFuture) Get(ctx workflow.Context) (*snowball.Des
 }
 
 type SnowballDescribeAddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +172,7 @@ func (r *SnowballDescribeAddressesFuture) Get(ctx workflow.Context) (*snowball.D
 }
 
 type SnowballDescribeClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +183,7 @@ func (r *SnowballDescribeClusterFuture) Get(ctx workflow.Context) (*snowball.Des
 }
 
 type SnowballDescribeJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +194,7 @@ func (r *SnowballDescribeJobFuture) Get(ctx workflow.Context) (*snowball.Describ
 }
 
 type SnowballDescribeReturnShippingLabelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +205,7 @@ func (r *SnowballDescribeReturnShippingLabelFuture) Get(ctx workflow.Context) (*
 }
 
 type SnowballGetJobManifestFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +216,7 @@ func (r *SnowballGetJobManifestFuture) Get(ctx workflow.Context) (*snowball.GetJ
 }
 
 type SnowballGetJobUnlockCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +227,7 @@ func (r *SnowballGetJobUnlockCodeFuture) Get(ctx workflow.Context) (*snowball.Ge
 }
 
 type SnowballGetSnowballUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +238,7 @@ func (r *SnowballGetSnowballUsageFuture) Get(ctx workflow.Context) (*snowball.Ge
 }
 
 type SnowballGetSoftwareUpdatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +249,7 @@ func (r *SnowballGetSoftwareUpdatesFuture) Get(ctx workflow.Context) (*snowball.
 }
 
 type SnowballListClusterJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +260,7 @@ func (r *SnowballListClusterJobsFuture) Get(ctx workflow.Context) (*snowball.Lis
 }
 
 type SnowballListClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +271,7 @@ func (r *SnowballListClustersFuture) Get(ctx workflow.Context) (*snowball.ListCl
 }
 
 type SnowballListCompatibleImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +282,7 @@ func (r *SnowballListCompatibleImagesFuture) Get(ctx workflow.Context) (*snowbal
 }
 
 type SnowballListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +293,7 @@ func (r *SnowballListJobsFuture) Get(ctx workflow.Context) (*snowball.ListJobsOu
 }
 
 type SnowballUpdateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +304,7 @@ func (r *SnowballUpdateClusterFuture) Get(ctx workflow.Context) (*snowball.Updat
 }
 
 type SnowballUpdateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +315,7 @@ func (r *SnowballUpdateJobFuture) Get(ctx workflow.Context) (*snowball.UpdateJob
 }
 
 type SnowballUpdateJobShipmentStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

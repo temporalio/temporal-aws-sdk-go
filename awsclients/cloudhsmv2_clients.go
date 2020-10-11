@@ -11,43 +11,43 @@ import (
 
 type CloudHSMV2Client interface {
 	CopyBackupToRegion(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) (*cloudhsmv2.CopyBackupToRegionOutput, error)
-	CopyBackupToRegionAsync(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) *Cloudhsmv2CopyBackupToRegionFuture
+	CopyBackupToRegionAsync(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) *CloudHSMV2CopyBackupToRegionFuture
 
 	CreateCluster(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) (*cloudhsmv2.CreateClusterOutput, error)
-	CreateClusterAsync(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) *Cloudhsmv2CreateClusterFuture
+	CreateClusterAsync(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) *CloudHSMV2CreateClusterFuture
 
 	CreateHsm(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) (*cloudhsmv2.CreateHsmOutput, error)
-	CreateHsmAsync(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) *Cloudhsmv2CreateHsmFuture
+	CreateHsmAsync(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) *CloudHSMV2CreateHsmFuture
 
 	DeleteBackup(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) (*cloudhsmv2.DeleteBackupOutput, error)
-	DeleteBackupAsync(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) *Cloudhsmv2DeleteBackupFuture
+	DeleteBackupAsync(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) *CloudHSMV2DeleteBackupFuture
 
 	DeleteCluster(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) (*cloudhsmv2.DeleteClusterOutput, error)
-	DeleteClusterAsync(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) *Cloudhsmv2DeleteClusterFuture
+	DeleteClusterAsync(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) *CloudHSMV2DeleteClusterFuture
 
 	DeleteHsm(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) (*cloudhsmv2.DeleteHsmOutput, error)
-	DeleteHsmAsync(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) *Cloudhsmv2DeleteHsmFuture
+	DeleteHsmAsync(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) *CloudHSMV2DeleteHsmFuture
 
 	DescribeBackups(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) (*cloudhsmv2.DescribeBackupsOutput, error)
-	DescribeBackupsAsync(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) *Cloudhsmv2DescribeBackupsFuture
+	DescribeBackupsAsync(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) *CloudHSMV2DescribeBackupsFuture
 
 	DescribeClusters(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) (*cloudhsmv2.DescribeClustersOutput, error)
-	DescribeClustersAsync(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) *Cloudhsmv2DescribeClustersFuture
+	DescribeClustersAsync(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) *CloudHSMV2DescribeClustersFuture
 
 	InitializeCluster(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) (*cloudhsmv2.InitializeClusterOutput, error)
-	InitializeClusterAsync(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) *Cloudhsmv2InitializeClusterFuture
+	InitializeClusterAsync(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) *CloudHSMV2InitializeClusterFuture
 
 	ListTags(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) (*cloudhsmv2.ListTagsOutput, error)
-	ListTagsAsync(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) *Cloudhsmv2ListTagsFuture
+	ListTagsAsync(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) *CloudHSMV2ListTagsFuture
 
 	RestoreBackup(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) (*cloudhsmv2.RestoreBackupOutput, error)
-	RestoreBackupAsync(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) *Cloudhsmv2RestoreBackupFuture
+	RestoreBackupAsync(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) *CloudHSMV2RestoreBackupFuture
 
 	TagResource(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) (*cloudhsmv2.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) *Cloudhsmv2TagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) *CloudHSMV2TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) (*cloudhsmv2.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) *Cloudhsmv2UntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) *CloudHSMV2UntagResourceFuture
 }
 
 type CloudHSMV2Stub struct{}
@@ -56,131 +56,144 @@ func NewCloudHSMV2Stub() CloudHSMV2Client {
 	return &CloudHSMV2Stub{}
 }
 
-type Cloudhsmv2CopyBackupToRegionFuture struct {
+type CloudHSMV2CopyBackupToRegionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2CopyBackupToRegionFuture) Get(ctx workflow.Context) (*cloudhsmv2.CopyBackupToRegionOutput, error) {
+func (r *CloudHSMV2CopyBackupToRegionFuture) Get(ctx workflow.Context) (*cloudhsmv2.CopyBackupToRegionOutput, error) {
 	var output cloudhsmv2.CopyBackupToRegionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2CreateClusterFuture struct {
+type CloudHSMV2CreateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2CreateClusterFuture) Get(ctx workflow.Context) (*cloudhsmv2.CreateClusterOutput, error) {
+func (r *CloudHSMV2CreateClusterFuture) Get(ctx workflow.Context) (*cloudhsmv2.CreateClusterOutput, error) {
 	var output cloudhsmv2.CreateClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2CreateHsmFuture struct {
+type CloudHSMV2CreateHsmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2CreateHsmFuture) Get(ctx workflow.Context) (*cloudhsmv2.CreateHsmOutput, error) {
+func (r *CloudHSMV2CreateHsmFuture) Get(ctx workflow.Context) (*cloudhsmv2.CreateHsmOutput, error) {
 	var output cloudhsmv2.CreateHsmOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2DeleteBackupFuture struct {
+type CloudHSMV2DeleteBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2DeleteBackupFuture) Get(ctx workflow.Context) (*cloudhsmv2.DeleteBackupOutput, error) {
+func (r *CloudHSMV2DeleteBackupFuture) Get(ctx workflow.Context) (*cloudhsmv2.DeleteBackupOutput, error) {
 	var output cloudhsmv2.DeleteBackupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2DeleteClusterFuture struct {
+type CloudHSMV2DeleteClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2DeleteClusterFuture) Get(ctx workflow.Context) (*cloudhsmv2.DeleteClusterOutput, error) {
+func (r *CloudHSMV2DeleteClusterFuture) Get(ctx workflow.Context) (*cloudhsmv2.DeleteClusterOutput, error) {
 	var output cloudhsmv2.DeleteClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2DeleteHsmFuture struct {
+type CloudHSMV2DeleteHsmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2DeleteHsmFuture) Get(ctx workflow.Context) (*cloudhsmv2.DeleteHsmOutput, error) {
+func (r *CloudHSMV2DeleteHsmFuture) Get(ctx workflow.Context) (*cloudhsmv2.DeleteHsmOutput, error) {
 	var output cloudhsmv2.DeleteHsmOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2DescribeBackupsFuture struct {
+type CloudHSMV2DescribeBackupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2DescribeBackupsFuture) Get(ctx workflow.Context) (*cloudhsmv2.DescribeBackupsOutput, error) {
+func (r *CloudHSMV2DescribeBackupsFuture) Get(ctx workflow.Context) (*cloudhsmv2.DescribeBackupsOutput, error) {
 	var output cloudhsmv2.DescribeBackupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2DescribeClustersFuture struct {
+type CloudHSMV2DescribeClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2DescribeClustersFuture) Get(ctx workflow.Context) (*cloudhsmv2.DescribeClustersOutput, error) {
+func (r *CloudHSMV2DescribeClustersFuture) Get(ctx workflow.Context) (*cloudhsmv2.DescribeClustersOutput, error) {
 	var output cloudhsmv2.DescribeClustersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2InitializeClusterFuture struct {
+type CloudHSMV2InitializeClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2InitializeClusterFuture) Get(ctx workflow.Context) (*cloudhsmv2.InitializeClusterOutput, error) {
+func (r *CloudHSMV2InitializeClusterFuture) Get(ctx workflow.Context) (*cloudhsmv2.InitializeClusterOutput, error) {
 	var output cloudhsmv2.InitializeClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2ListTagsFuture struct {
+type CloudHSMV2ListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2ListTagsFuture) Get(ctx workflow.Context) (*cloudhsmv2.ListTagsOutput, error) {
+func (r *CloudHSMV2ListTagsFuture) Get(ctx workflow.Context) (*cloudhsmv2.ListTagsOutput, error) {
 	var output cloudhsmv2.ListTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2RestoreBackupFuture struct {
+type CloudHSMV2RestoreBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2RestoreBackupFuture) Get(ctx workflow.Context) (*cloudhsmv2.RestoreBackupOutput, error) {
+func (r *CloudHSMV2RestoreBackupFuture) Get(ctx workflow.Context) (*cloudhsmv2.RestoreBackupOutput, error) {
 	var output cloudhsmv2.RestoreBackupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2TagResourceFuture struct {
+type CloudHSMV2TagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2TagResourceFuture) Get(ctx workflow.Context) (*cloudhsmv2.TagResourceOutput, error) {
+func (r *CloudHSMV2TagResourceFuture) Get(ctx workflow.Context) (*cloudhsmv2.TagResourceOutput, error) {
 	var output cloudhsmv2.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloudhsmv2UntagResourceFuture struct {
+type CloudHSMV2UntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Cloudhsmv2UntagResourceFuture) Get(ctx workflow.Context) (*cloudhsmv2.UntagResourceOutput, error) {
+func (r *CloudHSMV2UntagResourceFuture) Get(ctx workflow.Context) (*cloudhsmv2.UntagResourceOutput, error) {
 	var output cloudhsmv2.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -192,9 +205,9 @@ func (a *CloudHSMV2Stub) CopyBackupToRegion(ctx workflow.Context, input *cloudhs
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) CopyBackupToRegionAsync(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) *Cloudhsmv2CopyBackupToRegionFuture {
+func (a *CloudHSMV2Stub) CopyBackupToRegionAsync(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) *CloudHSMV2CopyBackupToRegionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.CopyBackupToRegion", input)
-	return &Cloudhsmv2CopyBackupToRegionFuture{Future: future}
+	return &CloudHSMV2CopyBackupToRegionFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) CreateCluster(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) (*cloudhsmv2.CreateClusterOutput, error) {
@@ -203,9 +216,9 @@ func (a *CloudHSMV2Stub) CreateCluster(ctx workflow.Context, input *cloudhsmv2.C
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) CreateClusterAsync(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) *Cloudhsmv2CreateClusterFuture {
+func (a *CloudHSMV2Stub) CreateClusterAsync(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) *CloudHSMV2CreateClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.CreateCluster", input)
-	return &Cloudhsmv2CreateClusterFuture{Future: future}
+	return &CloudHSMV2CreateClusterFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) CreateHsm(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) (*cloudhsmv2.CreateHsmOutput, error) {
@@ -214,9 +227,9 @@ func (a *CloudHSMV2Stub) CreateHsm(ctx workflow.Context, input *cloudhsmv2.Creat
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) CreateHsmAsync(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) *Cloudhsmv2CreateHsmFuture {
+func (a *CloudHSMV2Stub) CreateHsmAsync(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) *CloudHSMV2CreateHsmFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.CreateHsm", input)
-	return &Cloudhsmv2CreateHsmFuture{Future: future}
+	return &CloudHSMV2CreateHsmFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) DeleteBackup(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) (*cloudhsmv2.DeleteBackupOutput, error) {
@@ -225,9 +238,9 @@ func (a *CloudHSMV2Stub) DeleteBackup(ctx workflow.Context, input *cloudhsmv2.De
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) DeleteBackupAsync(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) *Cloudhsmv2DeleteBackupFuture {
+func (a *CloudHSMV2Stub) DeleteBackupAsync(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) *CloudHSMV2DeleteBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.DeleteBackup", input)
-	return &Cloudhsmv2DeleteBackupFuture{Future: future}
+	return &CloudHSMV2DeleteBackupFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) DeleteCluster(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) (*cloudhsmv2.DeleteClusterOutput, error) {
@@ -236,9 +249,9 @@ func (a *CloudHSMV2Stub) DeleteCluster(ctx workflow.Context, input *cloudhsmv2.D
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) DeleteClusterAsync(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) *Cloudhsmv2DeleteClusterFuture {
+func (a *CloudHSMV2Stub) DeleteClusterAsync(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) *CloudHSMV2DeleteClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.DeleteCluster", input)
-	return &Cloudhsmv2DeleteClusterFuture{Future: future}
+	return &CloudHSMV2DeleteClusterFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) DeleteHsm(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) (*cloudhsmv2.DeleteHsmOutput, error) {
@@ -247,9 +260,9 @@ func (a *CloudHSMV2Stub) DeleteHsm(ctx workflow.Context, input *cloudhsmv2.Delet
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) DeleteHsmAsync(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) *Cloudhsmv2DeleteHsmFuture {
+func (a *CloudHSMV2Stub) DeleteHsmAsync(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) *CloudHSMV2DeleteHsmFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.DeleteHsm", input)
-	return &Cloudhsmv2DeleteHsmFuture{Future: future}
+	return &CloudHSMV2DeleteHsmFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) DescribeBackups(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) (*cloudhsmv2.DescribeBackupsOutput, error) {
@@ -258,9 +271,9 @@ func (a *CloudHSMV2Stub) DescribeBackups(ctx workflow.Context, input *cloudhsmv2
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) DescribeBackupsAsync(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) *Cloudhsmv2DescribeBackupsFuture {
+func (a *CloudHSMV2Stub) DescribeBackupsAsync(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) *CloudHSMV2DescribeBackupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.DescribeBackups", input)
-	return &Cloudhsmv2DescribeBackupsFuture{Future: future}
+	return &CloudHSMV2DescribeBackupsFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) DescribeClusters(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) (*cloudhsmv2.DescribeClustersOutput, error) {
@@ -269,9 +282,9 @@ func (a *CloudHSMV2Stub) DescribeClusters(ctx workflow.Context, input *cloudhsmv
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) DescribeClustersAsync(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) *Cloudhsmv2DescribeClustersFuture {
+func (a *CloudHSMV2Stub) DescribeClustersAsync(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) *CloudHSMV2DescribeClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.DescribeClusters", input)
-	return &Cloudhsmv2DescribeClustersFuture{Future: future}
+	return &CloudHSMV2DescribeClustersFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) InitializeCluster(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) (*cloudhsmv2.InitializeClusterOutput, error) {
@@ -280,9 +293,9 @@ func (a *CloudHSMV2Stub) InitializeCluster(ctx workflow.Context, input *cloudhsm
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) InitializeClusterAsync(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) *Cloudhsmv2InitializeClusterFuture {
+func (a *CloudHSMV2Stub) InitializeClusterAsync(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) *CloudHSMV2InitializeClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.InitializeCluster", input)
-	return &Cloudhsmv2InitializeClusterFuture{Future: future}
+	return &CloudHSMV2InitializeClusterFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) ListTags(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) (*cloudhsmv2.ListTagsOutput, error) {
@@ -291,9 +304,9 @@ func (a *CloudHSMV2Stub) ListTags(ctx workflow.Context, input *cloudhsmv2.ListTa
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) ListTagsAsync(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) *Cloudhsmv2ListTagsFuture {
+func (a *CloudHSMV2Stub) ListTagsAsync(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) *CloudHSMV2ListTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.ListTags", input)
-	return &Cloudhsmv2ListTagsFuture{Future: future}
+	return &CloudHSMV2ListTagsFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) RestoreBackup(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) (*cloudhsmv2.RestoreBackupOutput, error) {
@@ -302,9 +315,9 @@ func (a *CloudHSMV2Stub) RestoreBackup(ctx workflow.Context, input *cloudhsmv2.R
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) RestoreBackupAsync(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) *Cloudhsmv2RestoreBackupFuture {
+func (a *CloudHSMV2Stub) RestoreBackupAsync(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) *CloudHSMV2RestoreBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.RestoreBackup", input)
-	return &Cloudhsmv2RestoreBackupFuture{Future: future}
+	return &CloudHSMV2RestoreBackupFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) TagResource(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) (*cloudhsmv2.TagResourceOutput, error) {
@@ -313,9 +326,9 @@ func (a *CloudHSMV2Stub) TagResource(ctx workflow.Context, input *cloudhsmv2.Tag
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) TagResourceAsync(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) *Cloudhsmv2TagResourceFuture {
+func (a *CloudHSMV2Stub) TagResourceAsync(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) *CloudHSMV2TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.TagResource", input)
-	return &Cloudhsmv2TagResourceFuture{Future: future}
+	return &CloudHSMV2TagResourceFuture{Future: future}
 }
 
 func (a *CloudHSMV2Stub) UntagResource(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) (*cloudhsmv2.UntagResourceOutput, error) {
@@ -324,7 +337,7 @@ func (a *CloudHSMV2Stub) UntagResource(ctx workflow.Context, input *cloudhsmv2.U
 	return &output, err
 }
 
-func (a *CloudHSMV2Stub) UntagResourceAsync(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) *Cloudhsmv2UntagResourceFuture {
+func (a *CloudHSMV2Stub) UntagResourceAsync(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) *CloudHSMV2UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudhsmv2.UntagResource", input)
-	return &Cloudhsmv2UntagResourceFuture{Future: future}
+	return &CloudHSMV2UntagResourceFuture{Future: future}
 }

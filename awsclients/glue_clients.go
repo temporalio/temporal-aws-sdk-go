@@ -423,6 +423,7 @@ func NewGlueStub() GlueClient {
 }
 
 type GlueBatchCreatePartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -433,6 +434,7 @@ func (r *GlueBatchCreatePartitionFuture) Get(ctx workflow.Context) (*glue.BatchC
 }
 
 type GlueBatchDeleteConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -443,6 +445,7 @@ func (r *GlueBatchDeleteConnectionFuture) Get(ctx workflow.Context) (*glue.Batch
 }
 
 type GlueBatchDeletePartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -453,6 +456,7 @@ func (r *GlueBatchDeletePartitionFuture) Get(ctx workflow.Context) (*glue.BatchD
 }
 
 type GlueBatchDeleteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -463,6 +467,7 @@ func (r *GlueBatchDeleteTableFuture) Get(ctx workflow.Context) (*glue.BatchDelet
 }
 
 type GlueBatchDeleteTableVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -473,6 +478,7 @@ func (r *GlueBatchDeleteTableVersionFuture) Get(ctx workflow.Context) (*glue.Bat
 }
 
 type GlueBatchGetCrawlersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -483,6 +489,7 @@ func (r *GlueBatchGetCrawlersFuture) Get(ctx workflow.Context) (*glue.BatchGetCr
 }
 
 type GlueBatchGetDevEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -493,6 +500,7 @@ func (r *GlueBatchGetDevEndpointsFuture) Get(ctx workflow.Context) (*glue.BatchG
 }
 
 type GlueBatchGetJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -503,6 +511,7 @@ func (r *GlueBatchGetJobsFuture) Get(ctx workflow.Context) (*glue.BatchGetJobsOu
 }
 
 type GlueBatchGetPartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -513,6 +522,7 @@ func (r *GlueBatchGetPartitionFuture) Get(ctx workflow.Context) (*glue.BatchGetP
 }
 
 type GlueBatchGetTriggersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -523,6 +533,7 @@ func (r *GlueBatchGetTriggersFuture) Get(ctx workflow.Context) (*glue.BatchGetTr
 }
 
 type GlueBatchGetWorkflowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -533,6 +544,7 @@ func (r *GlueBatchGetWorkflowsFuture) Get(ctx workflow.Context) (*glue.BatchGetW
 }
 
 type GlueBatchStopJobRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -543,6 +555,7 @@ func (r *GlueBatchStopJobRunFuture) Get(ctx workflow.Context) (*glue.BatchStopJo
 }
 
 type GlueBatchUpdatePartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -553,6 +566,7 @@ func (r *GlueBatchUpdatePartitionFuture) Get(ctx workflow.Context) (*glue.BatchU
 }
 
 type GlueCancelMLTaskRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -563,6 +577,7 @@ func (r *GlueCancelMLTaskRunFuture) Get(ctx workflow.Context) (*glue.CancelMLTas
 }
 
 type GlueCreateClassifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -573,6 +588,7 @@ func (r *GlueCreateClassifierFuture) Get(ctx workflow.Context) (*glue.CreateClas
 }
 
 type GlueCreateConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -583,6 +599,7 @@ func (r *GlueCreateConnectionFuture) Get(ctx workflow.Context) (*glue.CreateConn
 }
 
 type GlueCreateCrawlerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -593,6 +610,7 @@ func (r *GlueCreateCrawlerFuture) Get(ctx workflow.Context) (*glue.CreateCrawler
 }
 
 type GlueCreateDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -603,6 +621,7 @@ func (r *GlueCreateDatabaseFuture) Get(ctx workflow.Context) (*glue.CreateDataba
 }
 
 type GlueCreateDevEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -613,6 +632,7 @@ func (r *GlueCreateDevEndpointFuture) Get(ctx workflow.Context) (*glue.CreateDev
 }
 
 type GlueCreateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -623,6 +643,7 @@ func (r *GlueCreateJobFuture) Get(ctx workflow.Context) (*glue.CreateJobOutput, 
 }
 
 type GlueCreateMLTransformFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -633,6 +654,7 @@ func (r *GlueCreateMLTransformFuture) Get(ctx workflow.Context) (*glue.CreateMLT
 }
 
 type GlueCreatePartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -643,6 +665,7 @@ func (r *GlueCreatePartitionFuture) Get(ctx workflow.Context) (*glue.CreateParti
 }
 
 type GlueCreateScriptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -653,6 +676,7 @@ func (r *GlueCreateScriptFuture) Get(ctx workflow.Context) (*glue.CreateScriptOu
 }
 
 type GlueCreateSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -663,6 +687,7 @@ func (r *GlueCreateSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue
 }
 
 type GlueCreateTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -673,6 +698,7 @@ func (r *GlueCreateTableFuture) Get(ctx workflow.Context) (*glue.CreateTableOutp
 }
 
 type GlueCreateTriggerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -683,6 +709,7 @@ func (r *GlueCreateTriggerFuture) Get(ctx workflow.Context) (*glue.CreateTrigger
 }
 
 type GlueCreateUserDefinedFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -693,6 +720,7 @@ func (r *GlueCreateUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.C
 }
 
 type GlueCreateWorkflowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -703,6 +731,7 @@ func (r *GlueCreateWorkflowFuture) Get(ctx workflow.Context) (*glue.CreateWorkfl
 }
 
 type GlueDeleteClassifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -713,6 +742,7 @@ func (r *GlueDeleteClassifierFuture) Get(ctx workflow.Context) (*glue.DeleteClas
 }
 
 type GlueDeleteColumnStatisticsForPartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -723,6 +753,7 @@ func (r *GlueDeleteColumnStatisticsForPartitionFuture) Get(ctx workflow.Context)
 }
 
 type GlueDeleteColumnStatisticsForTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -733,6 +764,7 @@ func (r *GlueDeleteColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*g
 }
 
 type GlueDeleteConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -743,6 +775,7 @@ func (r *GlueDeleteConnectionFuture) Get(ctx workflow.Context) (*glue.DeleteConn
 }
 
 type GlueDeleteCrawlerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -753,6 +786,7 @@ func (r *GlueDeleteCrawlerFuture) Get(ctx workflow.Context) (*glue.DeleteCrawler
 }
 
 type GlueDeleteDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -763,6 +797,7 @@ func (r *GlueDeleteDatabaseFuture) Get(ctx workflow.Context) (*glue.DeleteDataba
 }
 
 type GlueDeleteDevEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -773,6 +808,7 @@ func (r *GlueDeleteDevEndpointFuture) Get(ctx workflow.Context) (*glue.DeleteDev
 }
 
 type GlueDeleteJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -783,6 +819,7 @@ func (r *GlueDeleteJobFuture) Get(ctx workflow.Context) (*glue.DeleteJobOutput, 
 }
 
 type GlueDeleteMLTransformFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -793,6 +830,7 @@ func (r *GlueDeleteMLTransformFuture) Get(ctx workflow.Context) (*glue.DeleteMLT
 }
 
 type GlueDeletePartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -803,6 +841,7 @@ func (r *GlueDeletePartitionFuture) Get(ctx workflow.Context) (*glue.DeleteParti
 }
 
 type GlueDeleteResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -813,6 +852,7 @@ func (r *GlueDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*glue.Delete
 }
 
 type GlueDeleteSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -823,6 +863,7 @@ func (r *GlueDeleteSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue
 }
 
 type GlueDeleteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -833,6 +874,7 @@ func (r *GlueDeleteTableFuture) Get(ctx workflow.Context) (*glue.DeleteTableOutp
 }
 
 type GlueDeleteTableVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -843,6 +885,7 @@ func (r *GlueDeleteTableVersionFuture) Get(ctx workflow.Context) (*glue.DeleteTa
 }
 
 type GlueDeleteTriggerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -853,6 +896,7 @@ func (r *GlueDeleteTriggerFuture) Get(ctx workflow.Context) (*glue.DeleteTrigger
 }
 
 type GlueDeleteUserDefinedFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -863,6 +907,7 @@ func (r *GlueDeleteUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.D
 }
 
 type GlueDeleteWorkflowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -873,6 +918,7 @@ func (r *GlueDeleteWorkflowFuture) Get(ctx workflow.Context) (*glue.DeleteWorkfl
 }
 
 type GlueGetCatalogImportStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -883,6 +929,7 @@ func (r *GlueGetCatalogImportStatusFuture) Get(ctx workflow.Context) (*glue.GetC
 }
 
 type GlueGetClassifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -893,6 +940,7 @@ func (r *GlueGetClassifierFuture) Get(ctx workflow.Context) (*glue.GetClassifier
 }
 
 type GlueGetClassifiersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -903,6 +951,7 @@ func (r *GlueGetClassifiersFuture) Get(ctx workflow.Context) (*glue.GetClassifie
 }
 
 type GlueGetColumnStatisticsForPartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -913,6 +962,7 @@ func (r *GlueGetColumnStatisticsForPartitionFuture) Get(ctx workflow.Context) (*
 }
 
 type GlueGetColumnStatisticsForTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -923,6 +973,7 @@ func (r *GlueGetColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*glue
 }
 
 type GlueGetConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -933,6 +984,7 @@ func (r *GlueGetConnectionFuture) Get(ctx workflow.Context) (*glue.GetConnection
 }
 
 type GlueGetConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -943,6 +995,7 @@ func (r *GlueGetConnectionsFuture) Get(ctx workflow.Context) (*glue.GetConnectio
 }
 
 type GlueGetCrawlerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -953,6 +1006,7 @@ func (r *GlueGetCrawlerFuture) Get(ctx workflow.Context) (*glue.GetCrawlerOutput
 }
 
 type GlueGetCrawlerMetricsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -963,6 +1017,7 @@ func (r *GlueGetCrawlerMetricsFuture) Get(ctx workflow.Context) (*glue.GetCrawle
 }
 
 type GlueGetCrawlersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -973,6 +1028,7 @@ func (r *GlueGetCrawlersFuture) Get(ctx workflow.Context) (*glue.GetCrawlersOutp
 }
 
 type GlueGetDataCatalogEncryptionSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -983,6 +1039,7 @@ func (r *GlueGetDataCatalogEncryptionSettingsFuture) Get(ctx workflow.Context) (
 }
 
 type GlueGetDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -993,6 +1050,7 @@ func (r *GlueGetDatabaseFuture) Get(ctx workflow.Context) (*glue.GetDatabaseOutp
 }
 
 type GlueGetDatabasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1003,6 +1061,7 @@ func (r *GlueGetDatabasesFuture) Get(ctx workflow.Context) (*glue.GetDatabasesOu
 }
 
 type GlueGetDataflowGraphFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1013,6 +1072,7 @@ func (r *GlueGetDataflowGraphFuture) Get(ctx workflow.Context) (*glue.GetDataflo
 }
 
 type GlueGetDevEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1023,6 +1083,7 @@ func (r *GlueGetDevEndpointFuture) Get(ctx workflow.Context) (*glue.GetDevEndpoi
 }
 
 type GlueGetDevEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1033,6 +1094,7 @@ func (r *GlueGetDevEndpointsFuture) Get(ctx workflow.Context) (*glue.GetDevEndpo
 }
 
 type GlueGetJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1043,6 +1105,7 @@ func (r *GlueGetJobFuture) Get(ctx workflow.Context) (*glue.GetJobOutput, error)
 }
 
 type GlueGetJobBookmarkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1053,6 +1116,7 @@ func (r *GlueGetJobBookmarkFuture) Get(ctx workflow.Context) (*glue.GetJobBookma
 }
 
 type GlueGetJobRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1063,6 +1127,7 @@ func (r *GlueGetJobRunFuture) Get(ctx workflow.Context) (*glue.GetJobRunOutput, 
 }
 
 type GlueGetJobRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1073,6 +1138,7 @@ func (r *GlueGetJobRunsFuture) Get(ctx workflow.Context) (*glue.GetJobRunsOutput
 }
 
 type GlueGetJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1083,6 +1149,7 @@ func (r *GlueGetJobsFuture) Get(ctx workflow.Context) (*glue.GetJobsOutput, erro
 }
 
 type GlueGetMLTaskRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1093,6 +1160,7 @@ func (r *GlueGetMLTaskRunFuture) Get(ctx workflow.Context) (*glue.GetMLTaskRunOu
 }
 
 type GlueGetMLTaskRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1103,6 +1171,7 @@ func (r *GlueGetMLTaskRunsFuture) Get(ctx workflow.Context) (*glue.GetMLTaskRuns
 }
 
 type GlueGetMLTransformFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1113,6 +1182,7 @@ func (r *GlueGetMLTransformFuture) Get(ctx workflow.Context) (*glue.GetMLTransfo
 }
 
 type GlueGetMLTransformsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1123,6 +1193,7 @@ func (r *GlueGetMLTransformsFuture) Get(ctx workflow.Context) (*glue.GetMLTransf
 }
 
 type GlueGetMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1133,6 +1204,7 @@ func (r *GlueGetMappingFuture) Get(ctx workflow.Context) (*glue.GetMappingOutput
 }
 
 type GlueGetPartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1143,6 +1215,7 @@ func (r *GlueGetPartitionFuture) Get(ctx workflow.Context) (*glue.GetPartitionOu
 }
 
 type GlueGetPartitionIndexesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1153,6 +1226,7 @@ func (r *GlueGetPartitionIndexesFuture) Get(ctx workflow.Context) (*glue.GetPart
 }
 
 type GlueGetPartitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1163,6 +1237,7 @@ func (r *GlueGetPartitionsFuture) Get(ctx workflow.Context) (*glue.GetPartitions
 }
 
 type GlueGetPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1173,6 +1248,7 @@ func (r *GlueGetPlanFuture) Get(ctx workflow.Context) (*glue.GetPlanOutput, erro
 }
 
 type GlueGetResourcePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1183,6 +1259,7 @@ func (r *GlueGetResourcePoliciesFuture) Get(ctx workflow.Context) (*glue.GetReso
 }
 
 type GlueGetResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1193,6 +1270,7 @@ func (r *GlueGetResourcePolicyFuture) Get(ctx workflow.Context) (*glue.GetResour
 }
 
 type GlueGetSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1203,6 +1281,7 @@ func (r *GlueGetSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue.Ge
 }
 
 type GlueGetSecurityConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1213,6 +1292,7 @@ func (r *GlueGetSecurityConfigurationsFuture) Get(ctx workflow.Context) (*glue.G
 }
 
 type GlueGetTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1223,6 +1303,7 @@ func (r *GlueGetTableFuture) Get(ctx workflow.Context) (*glue.GetTableOutput, er
 }
 
 type GlueGetTableVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1233,6 +1314,7 @@ func (r *GlueGetTableVersionFuture) Get(ctx workflow.Context) (*glue.GetTableVer
 }
 
 type GlueGetTableVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1243,6 +1325,7 @@ func (r *GlueGetTableVersionsFuture) Get(ctx workflow.Context) (*glue.GetTableVe
 }
 
 type GlueGetTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1253,6 +1336,7 @@ func (r *GlueGetTablesFuture) Get(ctx workflow.Context) (*glue.GetTablesOutput, 
 }
 
 type GlueGetTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1263,6 +1347,7 @@ func (r *GlueGetTagsFuture) Get(ctx workflow.Context) (*glue.GetTagsOutput, erro
 }
 
 type GlueGetTriggerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1273,6 +1358,7 @@ func (r *GlueGetTriggerFuture) Get(ctx workflow.Context) (*glue.GetTriggerOutput
 }
 
 type GlueGetTriggersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1283,6 +1369,7 @@ func (r *GlueGetTriggersFuture) Get(ctx workflow.Context) (*glue.GetTriggersOutp
 }
 
 type GlueGetUserDefinedFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1293,6 +1380,7 @@ func (r *GlueGetUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.GetU
 }
 
 type GlueGetUserDefinedFunctionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1303,6 +1391,7 @@ func (r *GlueGetUserDefinedFunctionsFuture) Get(ctx workflow.Context) (*glue.Get
 }
 
 type GlueGetWorkflowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1313,6 +1402,7 @@ func (r *GlueGetWorkflowFuture) Get(ctx workflow.Context) (*glue.GetWorkflowOutp
 }
 
 type GlueGetWorkflowRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1323,6 +1413,7 @@ func (r *GlueGetWorkflowRunFuture) Get(ctx workflow.Context) (*glue.GetWorkflowR
 }
 
 type GlueGetWorkflowRunPropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1333,6 +1424,7 @@ func (r *GlueGetWorkflowRunPropertiesFuture) Get(ctx workflow.Context) (*glue.Ge
 }
 
 type GlueGetWorkflowRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1343,6 +1435,7 @@ func (r *GlueGetWorkflowRunsFuture) Get(ctx workflow.Context) (*glue.GetWorkflow
 }
 
 type GlueImportCatalogToGlueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1353,6 +1446,7 @@ func (r *GlueImportCatalogToGlueFuture) Get(ctx workflow.Context) (*glue.ImportC
 }
 
 type GlueListCrawlersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1363,6 +1457,7 @@ func (r *GlueListCrawlersFuture) Get(ctx workflow.Context) (*glue.ListCrawlersOu
 }
 
 type GlueListDevEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1373,6 +1468,7 @@ func (r *GlueListDevEndpointsFuture) Get(ctx workflow.Context) (*glue.ListDevEnd
 }
 
 type GlueListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1383,6 +1479,7 @@ func (r *GlueListJobsFuture) Get(ctx workflow.Context) (*glue.ListJobsOutput, er
 }
 
 type GlueListMLTransformsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1393,6 +1490,7 @@ func (r *GlueListMLTransformsFuture) Get(ctx workflow.Context) (*glue.ListMLTran
 }
 
 type GlueListTriggersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1403,6 +1501,7 @@ func (r *GlueListTriggersFuture) Get(ctx workflow.Context) (*glue.ListTriggersOu
 }
 
 type GlueListWorkflowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1413,6 +1512,7 @@ func (r *GlueListWorkflowsFuture) Get(ctx workflow.Context) (*glue.ListWorkflows
 }
 
 type GluePutDataCatalogEncryptionSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1423,6 +1523,7 @@ func (r *GluePutDataCatalogEncryptionSettingsFuture) Get(ctx workflow.Context) (
 }
 
 type GluePutResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1433,6 +1534,7 @@ func (r *GluePutResourcePolicyFuture) Get(ctx workflow.Context) (*glue.PutResour
 }
 
 type GluePutWorkflowRunPropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1443,6 +1545,7 @@ func (r *GluePutWorkflowRunPropertiesFuture) Get(ctx workflow.Context) (*glue.Pu
 }
 
 type GlueResetJobBookmarkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1453,6 +1556,7 @@ func (r *GlueResetJobBookmarkFuture) Get(ctx workflow.Context) (*glue.ResetJobBo
 }
 
 type GlueResumeWorkflowRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1463,6 +1567,7 @@ func (r *GlueResumeWorkflowRunFuture) Get(ctx workflow.Context) (*glue.ResumeWor
 }
 
 type GlueSearchTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1473,6 +1578,7 @@ func (r *GlueSearchTablesFuture) Get(ctx workflow.Context) (*glue.SearchTablesOu
 }
 
 type GlueStartCrawlerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1483,6 +1589,7 @@ func (r *GlueStartCrawlerFuture) Get(ctx workflow.Context) (*glue.StartCrawlerOu
 }
 
 type GlueStartCrawlerScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1493,6 +1600,7 @@ func (r *GlueStartCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.StartC
 }
 
 type GlueStartExportLabelsTaskRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1503,6 +1611,7 @@ func (r *GlueStartExportLabelsTaskRunFuture) Get(ctx workflow.Context) (*glue.St
 }
 
 type GlueStartImportLabelsTaskRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1513,6 +1622,7 @@ func (r *GlueStartImportLabelsTaskRunFuture) Get(ctx workflow.Context) (*glue.St
 }
 
 type GlueStartJobRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1523,6 +1633,7 @@ func (r *GlueStartJobRunFuture) Get(ctx workflow.Context) (*glue.StartJobRunOutp
 }
 
 type GlueStartMLEvaluationTaskRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1533,6 +1644,7 @@ func (r *GlueStartMLEvaluationTaskRunFuture) Get(ctx workflow.Context) (*glue.St
 }
 
 type GlueStartMLLabelingSetGenerationTaskRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1543,6 +1655,7 @@ func (r *GlueStartMLLabelingSetGenerationTaskRunFuture) Get(ctx workflow.Context
 }
 
 type GlueStartTriggerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1553,6 +1666,7 @@ func (r *GlueStartTriggerFuture) Get(ctx workflow.Context) (*glue.StartTriggerOu
 }
 
 type GlueStartWorkflowRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1563,6 +1677,7 @@ func (r *GlueStartWorkflowRunFuture) Get(ctx workflow.Context) (*glue.StartWorkf
 }
 
 type GlueStopCrawlerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1573,6 +1688,7 @@ func (r *GlueStopCrawlerFuture) Get(ctx workflow.Context) (*glue.StopCrawlerOutp
 }
 
 type GlueStopCrawlerScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1583,6 +1699,7 @@ func (r *GlueStopCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.StopCra
 }
 
 type GlueStopTriggerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1593,6 +1710,7 @@ func (r *GlueStopTriggerFuture) Get(ctx workflow.Context) (*glue.StopTriggerOutp
 }
 
 type GlueStopWorkflowRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1603,6 +1721,7 @@ func (r *GlueStopWorkflowRunFuture) Get(ctx workflow.Context) (*glue.StopWorkflo
 }
 
 type GlueTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1613,6 +1732,7 @@ func (r *GlueTagResourceFuture) Get(ctx workflow.Context) (*glue.TagResourceOutp
 }
 
 type GlueUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1623,6 +1743,7 @@ func (r *GlueUntagResourceFuture) Get(ctx workflow.Context) (*glue.UntagResource
 }
 
 type GlueUpdateClassifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1633,6 +1754,7 @@ func (r *GlueUpdateClassifierFuture) Get(ctx workflow.Context) (*glue.UpdateClas
 }
 
 type GlueUpdateColumnStatisticsForPartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1643,6 +1765,7 @@ func (r *GlueUpdateColumnStatisticsForPartitionFuture) Get(ctx workflow.Context)
 }
 
 type GlueUpdateColumnStatisticsForTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1653,6 +1776,7 @@ func (r *GlueUpdateColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*g
 }
 
 type GlueUpdateConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1663,6 +1787,7 @@ func (r *GlueUpdateConnectionFuture) Get(ctx workflow.Context) (*glue.UpdateConn
 }
 
 type GlueUpdateCrawlerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1673,6 +1798,7 @@ func (r *GlueUpdateCrawlerFuture) Get(ctx workflow.Context) (*glue.UpdateCrawler
 }
 
 type GlueUpdateCrawlerScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1683,6 +1809,7 @@ func (r *GlueUpdateCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.Updat
 }
 
 type GlueUpdateDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1693,6 +1820,7 @@ func (r *GlueUpdateDatabaseFuture) Get(ctx workflow.Context) (*glue.UpdateDataba
 }
 
 type GlueUpdateDevEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1703,6 +1831,7 @@ func (r *GlueUpdateDevEndpointFuture) Get(ctx workflow.Context) (*glue.UpdateDev
 }
 
 type GlueUpdateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1713,6 +1842,7 @@ func (r *GlueUpdateJobFuture) Get(ctx workflow.Context) (*glue.UpdateJobOutput, 
 }
 
 type GlueUpdateMLTransformFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1723,6 +1853,7 @@ func (r *GlueUpdateMLTransformFuture) Get(ctx workflow.Context) (*glue.UpdateMLT
 }
 
 type GlueUpdatePartitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1733,6 +1864,7 @@ func (r *GlueUpdatePartitionFuture) Get(ctx workflow.Context) (*glue.UpdateParti
 }
 
 type GlueUpdateTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1743,6 +1875,7 @@ func (r *GlueUpdateTableFuture) Get(ctx workflow.Context) (*glue.UpdateTableOutp
 }
 
 type GlueUpdateTriggerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1753,6 +1886,7 @@ func (r *GlueUpdateTriggerFuture) Get(ctx workflow.Context) (*glue.UpdateTrigger
 }
 
 type GlueUpdateUserDefinedFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1763,6 +1897,7 @@ func (r *GlueUpdateUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.U
 }
 
 type GlueUpdateWorkflowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

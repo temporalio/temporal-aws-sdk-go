@@ -11,88 +11,88 @@ import (
 
 type NetworkManagerClient interface {
 	AssociateCustomerGateway(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) (*networkmanager.AssociateCustomerGatewayOutput, error)
-	AssociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) *NetworkmanagerAssociateCustomerGatewayFuture
+	AssociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) *NetworkManagerAssociateCustomerGatewayFuture
 
 	AssociateLink(ctx workflow.Context, input *networkmanager.AssociateLinkInput) (*networkmanager.AssociateLinkOutput, error)
-	AssociateLinkAsync(ctx workflow.Context, input *networkmanager.AssociateLinkInput) *NetworkmanagerAssociateLinkFuture
+	AssociateLinkAsync(ctx workflow.Context, input *networkmanager.AssociateLinkInput) *NetworkManagerAssociateLinkFuture
 
 	CreateDevice(ctx workflow.Context, input *networkmanager.CreateDeviceInput) (*networkmanager.CreateDeviceOutput, error)
-	CreateDeviceAsync(ctx workflow.Context, input *networkmanager.CreateDeviceInput) *NetworkmanagerCreateDeviceFuture
+	CreateDeviceAsync(ctx workflow.Context, input *networkmanager.CreateDeviceInput) *NetworkManagerCreateDeviceFuture
 
 	CreateGlobalNetwork(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) (*networkmanager.CreateGlobalNetworkOutput, error)
-	CreateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) *NetworkmanagerCreateGlobalNetworkFuture
+	CreateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) *NetworkManagerCreateGlobalNetworkFuture
 
 	CreateLink(ctx workflow.Context, input *networkmanager.CreateLinkInput) (*networkmanager.CreateLinkOutput, error)
-	CreateLinkAsync(ctx workflow.Context, input *networkmanager.CreateLinkInput) *NetworkmanagerCreateLinkFuture
+	CreateLinkAsync(ctx workflow.Context, input *networkmanager.CreateLinkInput) *NetworkManagerCreateLinkFuture
 
 	CreateSite(ctx workflow.Context, input *networkmanager.CreateSiteInput) (*networkmanager.CreateSiteOutput, error)
-	CreateSiteAsync(ctx workflow.Context, input *networkmanager.CreateSiteInput) *NetworkmanagerCreateSiteFuture
+	CreateSiteAsync(ctx workflow.Context, input *networkmanager.CreateSiteInput) *NetworkManagerCreateSiteFuture
 
 	DeleteDevice(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) (*networkmanager.DeleteDeviceOutput, error)
-	DeleteDeviceAsync(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) *NetworkmanagerDeleteDeviceFuture
+	DeleteDeviceAsync(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) *NetworkManagerDeleteDeviceFuture
 
 	DeleteGlobalNetwork(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) (*networkmanager.DeleteGlobalNetworkOutput, error)
-	DeleteGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) *NetworkmanagerDeleteGlobalNetworkFuture
+	DeleteGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) *NetworkManagerDeleteGlobalNetworkFuture
 
 	DeleteLink(ctx workflow.Context, input *networkmanager.DeleteLinkInput) (*networkmanager.DeleteLinkOutput, error)
-	DeleteLinkAsync(ctx workflow.Context, input *networkmanager.DeleteLinkInput) *NetworkmanagerDeleteLinkFuture
+	DeleteLinkAsync(ctx workflow.Context, input *networkmanager.DeleteLinkInput) *NetworkManagerDeleteLinkFuture
 
 	DeleteSite(ctx workflow.Context, input *networkmanager.DeleteSiteInput) (*networkmanager.DeleteSiteOutput, error)
-	DeleteSiteAsync(ctx workflow.Context, input *networkmanager.DeleteSiteInput) *NetworkmanagerDeleteSiteFuture
+	DeleteSiteAsync(ctx workflow.Context, input *networkmanager.DeleteSiteInput) *NetworkManagerDeleteSiteFuture
 
 	DeregisterTransitGateway(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) (*networkmanager.DeregisterTransitGatewayOutput, error)
-	DeregisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) *NetworkmanagerDeregisterTransitGatewayFuture
+	DeregisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) *NetworkManagerDeregisterTransitGatewayFuture
 
 	DescribeGlobalNetworks(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) (*networkmanager.DescribeGlobalNetworksOutput, error)
-	DescribeGlobalNetworksAsync(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) *NetworkmanagerDescribeGlobalNetworksFuture
+	DescribeGlobalNetworksAsync(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) *NetworkManagerDescribeGlobalNetworksFuture
 
 	DisassociateCustomerGateway(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) (*networkmanager.DisassociateCustomerGatewayOutput, error)
-	DisassociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) *NetworkmanagerDisassociateCustomerGatewayFuture
+	DisassociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) *NetworkManagerDisassociateCustomerGatewayFuture
 
 	DisassociateLink(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) (*networkmanager.DisassociateLinkOutput, error)
-	DisassociateLinkAsync(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) *NetworkmanagerDisassociateLinkFuture
+	DisassociateLinkAsync(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) *NetworkManagerDisassociateLinkFuture
 
 	GetCustomerGatewayAssociations(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) (*networkmanager.GetCustomerGatewayAssociationsOutput, error)
-	GetCustomerGatewayAssociationsAsync(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) *NetworkmanagerGetCustomerGatewayAssociationsFuture
+	GetCustomerGatewayAssociationsAsync(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) *NetworkManagerGetCustomerGatewayAssociationsFuture
 
 	GetDevices(ctx workflow.Context, input *networkmanager.GetDevicesInput) (*networkmanager.GetDevicesOutput, error)
-	GetDevicesAsync(ctx workflow.Context, input *networkmanager.GetDevicesInput) *NetworkmanagerGetDevicesFuture
+	GetDevicesAsync(ctx workflow.Context, input *networkmanager.GetDevicesInput) *NetworkManagerGetDevicesFuture
 
 	GetLinkAssociations(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) (*networkmanager.GetLinkAssociationsOutput, error)
-	GetLinkAssociationsAsync(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) *NetworkmanagerGetLinkAssociationsFuture
+	GetLinkAssociationsAsync(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) *NetworkManagerGetLinkAssociationsFuture
 
 	GetLinks(ctx workflow.Context, input *networkmanager.GetLinksInput) (*networkmanager.GetLinksOutput, error)
-	GetLinksAsync(ctx workflow.Context, input *networkmanager.GetLinksInput) *NetworkmanagerGetLinksFuture
+	GetLinksAsync(ctx workflow.Context, input *networkmanager.GetLinksInput) *NetworkManagerGetLinksFuture
 
 	GetSites(ctx workflow.Context, input *networkmanager.GetSitesInput) (*networkmanager.GetSitesOutput, error)
-	GetSitesAsync(ctx workflow.Context, input *networkmanager.GetSitesInput) *NetworkmanagerGetSitesFuture
+	GetSitesAsync(ctx workflow.Context, input *networkmanager.GetSitesInput) *NetworkManagerGetSitesFuture
 
 	GetTransitGatewayRegistrations(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) (*networkmanager.GetTransitGatewayRegistrationsOutput, error)
-	GetTransitGatewayRegistrationsAsync(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) *NetworkmanagerGetTransitGatewayRegistrationsFuture
+	GetTransitGatewayRegistrationsAsync(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) *NetworkManagerGetTransitGatewayRegistrationsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) (*networkmanager.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) *NetworkmanagerListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) *NetworkManagerListTagsForResourceFuture
 
 	RegisterTransitGateway(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) (*networkmanager.RegisterTransitGatewayOutput, error)
-	RegisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) *NetworkmanagerRegisterTransitGatewayFuture
+	RegisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) *NetworkManagerRegisterTransitGatewayFuture
 
 	TagResource(ctx workflow.Context, input *networkmanager.TagResourceInput) (*networkmanager.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *networkmanager.TagResourceInput) *NetworkmanagerTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *networkmanager.TagResourceInput) *NetworkManagerTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *networkmanager.UntagResourceInput) (*networkmanager.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *networkmanager.UntagResourceInput) *NetworkmanagerUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *networkmanager.UntagResourceInput) *NetworkManagerUntagResourceFuture
 
 	UpdateDevice(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) (*networkmanager.UpdateDeviceOutput, error)
-	UpdateDeviceAsync(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) *NetworkmanagerUpdateDeviceFuture
+	UpdateDeviceAsync(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) *NetworkManagerUpdateDeviceFuture
 
 	UpdateGlobalNetwork(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) (*networkmanager.UpdateGlobalNetworkOutput, error)
-	UpdateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) *NetworkmanagerUpdateGlobalNetworkFuture
+	UpdateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) *NetworkManagerUpdateGlobalNetworkFuture
 
 	UpdateLink(ctx workflow.Context, input *networkmanager.UpdateLinkInput) (*networkmanager.UpdateLinkOutput, error)
-	UpdateLinkAsync(ctx workflow.Context, input *networkmanager.UpdateLinkInput) *NetworkmanagerUpdateLinkFuture
+	UpdateLinkAsync(ctx workflow.Context, input *networkmanager.UpdateLinkInput) *NetworkManagerUpdateLinkFuture
 
 	UpdateSite(ctx workflow.Context, input *networkmanager.UpdateSiteInput) (*networkmanager.UpdateSiteOutput, error)
-	UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *NetworkmanagerUpdateSiteFuture
+	UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *NetworkManagerUpdateSiteFuture
 }
 
 type NetworkManagerStub struct{}
@@ -101,281 +101,309 @@ func NewNetworkManagerStub() NetworkManagerClient {
 	return &NetworkManagerStub{}
 }
 
-type NetworkmanagerAssociateCustomerGatewayFuture struct {
+type NetworkManagerAssociateCustomerGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerAssociateCustomerGatewayFuture) Get(ctx workflow.Context) (*networkmanager.AssociateCustomerGatewayOutput, error) {
+func (r *NetworkManagerAssociateCustomerGatewayFuture) Get(ctx workflow.Context) (*networkmanager.AssociateCustomerGatewayOutput, error) {
 	var output networkmanager.AssociateCustomerGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerAssociateLinkFuture struct {
+type NetworkManagerAssociateLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerAssociateLinkFuture) Get(ctx workflow.Context) (*networkmanager.AssociateLinkOutput, error) {
+func (r *NetworkManagerAssociateLinkFuture) Get(ctx workflow.Context) (*networkmanager.AssociateLinkOutput, error) {
 	var output networkmanager.AssociateLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerCreateDeviceFuture struct {
+type NetworkManagerCreateDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerCreateDeviceFuture) Get(ctx workflow.Context) (*networkmanager.CreateDeviceOutput, error) {
+func (r *NetworkManagerCreateDeviceFuture) Get(ctx workflow.Context) (*networkmanager.CreateDeviceOutput, error) {
 	var output networkmanager.CreateDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerCreateGlobalNetworkFuture struct {
+type NetworkManagerCreateGlobalNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerCreateGlobalNetworkFuture) Get(ctx workflow.Context) (*networkmanager.CreateGlobalNetworkOutput, error) {
+func (r *NetworkManagerCreateGlobalNetworkFuture) Get(ctx workflow.Context) (*networkmanager.CreateGlobalNetworkOutput, error) {
 	var output networkmanager.CreateGlobalNetworkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerCreateLinkFuture struct {
+type NetworkManagerCreateLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerCreateLinkFuture) Get(ctx workflow.Context) (*networkmanager.CreateLinkOutput, error) {
+func (r *NetworkManagerCreateLinkFuture) Get(ctx workflow.Context) (*networkmanager.CreateLinkOutput, error) {
 	var output networkmanager.CreateLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerCreateSiteFuture struct {
+type NetworkManagerCreateSiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerCreateSiteFuture) Get(ctx workflow.Context) (*networkmanager.CreateSiteOutput, error) {
+func (r *NetworkManagerCreateSiteFuture) Get(ctx workflow.Context) (*networkmanager.CreateSiteOutput, error) {
 	var output networkmanager.CreateSiteOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerDeleteDeviceFuture struct {
+type NetworkManagerDeleteDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerDeleteDeviceFuture) Get(ctx workflow.Context) (*networkmanager.DeleteDeviceOutput, error) {
+func (r *NetworkManagerDeleteDeviceFuture) Get(ctx workflow.Context) (*networkmanager.DeleteDeviceOutput, error) {
 	var output networkmanager.DeleteDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerDeleteGlobalNetworkFuture struct {
+type NetworkManagerDeleteGlobalNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerDeleteGlobalNetworkFuture) Get(ctx workflow.Context) (*networkmanager.DeleteGlobalNetworkOutput, error) {
+func (r *NetworkManagerDeleteGlobalNetworkFuture) Get(ctx workflow.Context) (*networkmanager.DeleteGlobalNetworkOutput, error) {
 	var output networkmanager.DeleteGlobalNetworkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerDeleteLinkFuture struct {
+type NetworkManagerDeleteLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerDeleteLinkFuture) Get(ctx workflow.Context) (*networkmanager.DeleteLinkOutput, error) {
+func (r *NetworkManagerDeleteLinkFuture) Get(ctx workflow.Context) (*networkmanager.DeleteLinkOutput, error) {
 	var output networkmanager.DeleteLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerDeleteSiteFuture struct {
+type NetworkManagerDeleteSiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerDeleteSiteFuture) Get(ctx workflow.Context) (*networkmanager.DeleteSiteOutput, error) {
+func (r *NetworkManagerDeleteSiteFuture) Get(ctx workflow.Context) (*networkmanager.DeleteSiteOutput, error) {
 	var output networkmanager.DeleteSiteOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerDeregisterTransitGatewayFuture struct {
+type NetworkManagerDeregisterTransitGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerDeregisterTransitGatewayFuture) Get(ctx workflow.Context) (*networkmanager.DeregisterTransitGatewayOutput, error) {
+func (r *NetworkManagerDeregisterTransitGatewayFuture) Get(ctx workflow.Context) (*networkmanager.DeregisterTransitGatewayOutput, error) {
 	var output networkmanager.DeregisterTransitGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerDescribeGlobalNetworksFuture struct {
+type NetworkManagerDescribeGlobalNetworksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerDescribeGlobalNetworksFuture) Get(ctx workflow.Context) (*networkmanager.DescribeGlobalNetworksOutput, error) {
+func (r *NetworkManagerDescribeGlobalNetworksFuture) Get(ctx workflow.Context) (*networkmanager.DescribeGlobalNetworksOutput, error) {
 	var output networkmanager.DescribeGlobalNetworksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerDisassociateCustomerGatewayFuture struct {
+type NetworkManagerDisassociateCustomerGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerDisassociateCustomerGatewayFuture) Get(ctx workflow.Context) (*networkmanager.DisassociateCustomerGatewayOutput, error) {
+func (r *NetworkManagerDisassociateCustomerGatewayFuture) Get(ctx workflow.Context) (*networkmanager.DisassociateCustomerGatewayOutput, error) {
 	var output networkmanager.DisassociateCustomerGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerDisassociateLinkFuture struct {
+type NetworkManagerDisassociateLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerDisassociateLinkFuture) Get(ctx workflow.Context) (*networkmanager.DisassociateLinkOutput, error) {
+func (r *NetworkManagerDisassociateLinkFuture) Get(ctx workflow.Context) (*networkmanager.DisassociateLinkOutput, error) {
 	var output networkmanager.DisassociateLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerGetCustomerGatewayAssociationsFuture struct {
+type NetworkManagerGetCustomerGatewayAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerGetCustomerGatewayAssociationsFuture) Get(ctx workflow.Context) (*networkmanager.GetCustomerGatewayAssociationsOutput, error) {
+func (r *NetworkManagerGetCustomerGatewayAssociationsFuture) Get(ctx workflow.Context) (*networkmanager.GetCustomerGatewayAssociationsOutput, error) {
 	var output networkmanager.GetCustomerGatewayAssociationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerGetDevicesFuture struct {
+type NetworkManagerGetDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerGetDevicesFuture) Get(ctx workflow.Context) (*networkmanager.GetDevicesOutput, error) {
+func (r *NetworkManagerGetDevicesFuture) Get(ctx workflow.Context) (*networkmanager.GetDevicesOutput, error) {
 	var output networkmanager.GetDevicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerGetLinkAssociationsFuture struct {
+type NetworkManagerGetLinkAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerGetLinkAssociationsFuture) Get(ctx workflow.Context) (*networkmanager.GetLinkAssociationsOutput, error) {
+func (r *NetworkManagerGetLinkAssociationsFuture) Get(ctx workflow.Context) (*networkmanager.GetLinkAssociationsOutput, error) {
 	var output networkmanager.GetLinkAssociationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerGetLinksFuture struct {
+type NetworkManagerGetLinksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerGetLinksFuture) Get(ctx workflow.Context) (*networkmanager.GetLinksOutput, error) {
+func (r *NetworkManagerGetLinksFuture) Get(ctx workflow.Context) (*networkmanager.GetLinksOutput, error) {
 	var output networkmanager.GetLinksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerGetSitesFuture struct {
+type NetworkManagerGetSitesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerGetSitesFuture) Get(ctx workflow.Context) (*networkmanager.GetSitesOutput, error) {
+func (r *NetworkManagerGetSitesFuture) Get(ctx workflow.Context) (*networkmanager.GetSitesOutput, error) {
 	var output networkmanager.GetSitesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerGetTransitGatewayRegistrationsFuture struct {
+type NetworkManagerGetTransitGatewayRegistrationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerGetTransitGatewayRegistrationsFuture) Get(ctx workflow.Context) (*networkmanager.GetTransitGatewayRegistrationsOutput, error) {
+func (r *NetworkManagerGetTransitGatewayRegistrationsFuture) Get(ctx workflow.Context) (*networkmanager.GetTransitGatewayRegistrationsOutput, error) {
 	var output networkmanager.GetTransitGatewayRegistrationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerListTagsForResourceFuture struct {
+type NetworkManagerListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerListTagsForResourceFuture) Get(ctx workflow.Context) (*networkmanager.ListTagsForResourceOutput, error) {
+func (r *NetworkManagerListTagsForResourceFuture) Get(ctx workflow.Context) (*networkmanager.ListTagsForResourceOutput, error) {
 	var output networkmanager.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerRegisterTransitGatewayFuture struct {
+type NetworkManagerRegisterTransitGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerRegisterTransitGatewayFuture) Get(ctx workflow.Context) (*networkmanager.RegisterTransitGatewayOutput, error) {
+func (r *NetworkManagerRegisterTransitGatewayFuture) Get(ctx workflow.Context) (*networkmanager.RegisterTransitGatewayOutput, error) {
 	var output networkmanager.RegisterTransitGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerTagResourceFuture struct {
+type NetworkManagerTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerTagResourceFuture) Get(ctx workflow.Context) (*networkmanager.TagResourceOutput, error) {
+func (r *NetworkManagerTagResourceFuture) Get(ctx workflow.Context) (*networkmanager.TagResourceOutput, error) {
 	var output networkmanager.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerUntagResourceFuture struct {
+type NetworkManagerUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerUntagResourceFuture) Get(ctx workflow.Context) (*networkmanager.UntagResourceOutput, error) {
+func (r *NetworkManagerUntagResourceFuture) Get(ctx workflow.Context) (*networkmanager.UntagResourceOutput, error) {
 	var output networkmanager.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerUpdateDeviceFuture struct {
+type NetworkManagerUpdateDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerUpdateDeviceFuture) Get(ctx workflow.Context) (*networkmanager.UpdateDeviceOutput, error) {
+func (r *NetworkManagerUpdateDeviceFuture) Get(ctx workflow.Context) (*networkmanager.UpdateDeviceOutput, error) {
 	var output networkmanager.UpdateDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerUpdateGlobalNetworkFuture struct {
+type NetworkManagerUpdateGlobalNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerUpdateGlobalNetworkFuture) Get(ctx workflow.Context) (*networkmanager.UpdateGlobalNetworkOutput, error) {
+func (r *NetworkManagerUpdateGlobalNetworkFuture) Get(ctx workflow.Context) (*networkmanager.UpdateGlobalNetworkOutput, error) {
 	var output networkmanager.UpdateGlobalNetworkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerUpdateLinkFuture struct {
+type NetworkManagerUpdateLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerUpdateLinkFuture) Get(ctx workflow.Context) (*networkmanager.UpdateLinkOutput, error) {
+func (r *NetworkManagerUpdateLinkFuture) Get(ctx workflow.Context) (*networkmanager.UpdateLinkOutput, error) {
 	var output networkmanager.UpdateLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NetworkmanagerUpdateSiteFuture struct {
+type NetworkManagerUpdateSiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *NetworkmanagerUpdateSiteFuture) Get(ctx workflow.Context) (*networkmanager.UpdateSiteOutput, error) {
+func (r *NetworkManagerUpdateSiteFuture) Get(ctx workflow.Context) (*networkmanager.UpdateSiteOutput, error) {
 	var output networkmanager.UpdateSiteOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -387,9 +415,9 @@ func (a *NetworkManagerStub) AssociateCustomerGateway(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *NetworkManagerStub) AssociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) *NetworkmanagerAssociateCustomerGatewayFuture {
+func (a *NetworkManagerStub) AssociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) *NetworkManagerAssociateCustomerGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.AssociateCustomerGateway", input)
-	return &NetworkmanagerAssociateCustomerGatewayFuture{Future: future}
+	return &NetworkManagerAssociateCustomerGatewayFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) AssociateLink(ctx workflow.Context, input *networkmanager.AssociateLinkInput) (*networkmanager.AssociateLinkOutput, error) {
@@ -398,9 +426,9 @@ func (a *NetworkManagerStub) AssociateLink(ctx workflow.Context, input *networkm
 	return &output, err
 }
 
-func (a *NetworkManagerStub) AssociateLinkAsync(ctx workflow.Context, input *networkmanager.AssociateLinkInput) *NetworkmanagerAssociateLinkFuture {
+func (a *NetworkManagerStub) AssociateLinkAsync(ctx workflow.Context, input *networkmanager.AssociateLinkInput) *NetworkManagerAssociateLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.AssociateLink", input)
-	return &NetworkmanagerAssociateLinkFuture{Future: future}
+	return &NetworkManagerAssociateLinkFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) CreateDevice(ctx workflow.Context, input *networkmanager.CreateDeviceInput) (*networkmanager.CreateDeviceOutput, error) {
@@ -409,9 +437,9 @@ func (a *NetworkManagerStub) CreateDevice(ctx workflow.Context, input *networkma
 	return &output, err
 }
 
-func (a *NetworkManagerStub) CreateDeviceAsync(ctx workflow.Context, input *networkmanager.CreateDeviceInput) *NetworkmanagerCreateDeviceFuture {
+func (a *NetworkManagerStub) CreateDeviceAsync(ctx workflow.Context, input *networkmanager.CreateDeviceInput) *NetworkManagerCreateDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateDevice", input)
-	return &NetworkmanagerCreateDeviceFuture{Future: future}
+	return &NetworkManagerCreateDeviceFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) CreateGlobalNetwork(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) (*networkmanager.CreateGlobalNetworkOutput, error) {
@@ -420,9 +448,9 @@ func (a *NetworkManagerStub) CreateGlobalNetwork(ctx workflow.Context, input *ne
 	return &output, err
 }
 
-func (a *NetworkManagerStub) CreateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) *NetworkmanagerCreateGlobalNetworkFuture {
+func (a *NetworkManagerStub) CreateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) *NetworkManagerCreateGlobalNetworkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateGlobalNetwork", input)
-	return &NetworkmanagerCreateGlobalNetworkFuture{Future: future}
+	return &NetworkManagerCreateGlobalNetworkFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) CreateLink(ctx workflow.Context, input *networkmanager.CreateLinkInput) (*networkmanager.CreateLinkOutput, error) {
@@ -431,9 +459,9 @@ func (a *NetworkManagerStub) CreateLink(ctx workflow.Context, input *networkmana
 	return &output, err
 }
 
-func (a *NetworkManagerStub) CreateLinkAsync(ctx workflow.Context, input *networkmanager.CreateLinkInput) *NetworkmanagerCreateLinkFuture {
+func (a *NetworkManagerStub) CreateLinkAsync(ctx workflow.Context, input *networkmanager.CreateLinkInput) *NetworkManagerCreateLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateLink", input)
-	return &NetworkmanagerCreateLinkFuture{Future: future}
+	return &NetworkManagerCreateLinkFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) CreateSite(ctx workflow.Context, input *networkmanager.CreateSiteInput) (*networkmanager.CreateSiteOutput, error) {
@@ -442,9 +470,9 @@ func (a *NetworkManagerStub) CreateSite(ctx workflow.Context, input *networkmana
 	return &output, err
 }
 
-func (a *NetworkManagerStub) CreateSiteAsync(ctx workflow.Context, input *networkmanager.CreateSiteInput) *NetworkmanagerCreateSiteFuture {
+func (a *NetworkManagerStub) CreateSiteAsync(ctx workflow.Context, input *networkmanager.CreateSiteInput) *NetworkManagerCreateSiteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateSite", input)
-	return &NetworkmanagerCreateSiteFuture{Future: future}
+	return &NetworkManagerCreateSiteFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) DeleteDevice(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) (*networkmanager.DeleteDeviceOutput, error) {
@@ -453,9 +481,9 @@ func (a *NetworkManagerStub) DeleteDevice(ctx workflow.Context, input *networkma
 	return &output, err
 }
 
-func (a *NetworkManagerStub) DeleteDeviceAsync(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) *NetworkmanagerDeleteDeviceFuture {
+func (a *NetworkManagerStub) DeleteDeviceAsync(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) *NetworkManagerDeleteDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteDevice", input)
-	return &NetworkmanagerDeleteDeviceFuture{Future: future}
+	return &NetworkManagerDeleteDeviceFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) DeleteGlobalNetwork(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) (*networkmanager.DeleteGlobalNetworkOutput, error) {
@@ -464,9 +492,9 @@ func (a *NetworkManagerStub) DeleteGlobalNetwork(ctx workflow.Context, input *ne
 	return &output, err
 }
 
-func (a *NetworkManagerStub) DeleteGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) *NetworkmanagerDeleteGlobalNetworkFuture {
+func (a *NetworkManagerStub) DeleteGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) *NetworkManagerDeleteGlobalNetworkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteGlobalNetwork", input)
-	return &NetworkmanagerDeleteGlobalNetworkFuture{Future: future}
+	return &NetworkManagerDeleteGlobalNetworkFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) DeleteLink(ctx workflow.Context, input *networkmanager.DeleteLinkInput) (*networkmanager.DeleteLinkOutput, error) {
@@ -475,9 +503,9 @@ func (a *NetworkManagerStub) DeleteLink(ctx workflow.Context, input *networkmana
 	return &output, err
 }
 
-func (a *NetworkManagerStub) DeleteLinkAsync(ctx workflow.Context, input *networkmanager.DeleteLinkInput) *NetworkmanagerDeleteLinkFuture {
+func (a *NetworkManagerStub) DeleteLinkAsync(ctx workflow.Context, input *networkmanager.DeleteLinkInput) *NetworkManagerDeleteLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteLink", input)
-	return &NetworkmanagerDeleteLinkFuture{Future: future}
+	return &NetworkManagerDeleteLinkFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) DeleteSite(ctx workflow.Context, input *networkmanager.DeleteSiteInput) (*networkmanager.DeleteSiteOutput, error) {
@@ -486,9 +514,9 @@ func (a *NetworkManagerStub) DeleteSite(ctx workflow.Context, input *networkmana
 	return &output, err
 }
 
-func (a *NetworkManagerStub) DeleteSiteAsync(ctx workflow.Context, input *networkmanager.DeleteSiteInput) *NetworkmanagerDeleteSiteFuture {
+func (a *NetworkManagerStub) DeleteSiteAsync(ctx workflow.Context, input *networkmanager.DeleteSiteInput) *NetworkManagerDeleteSiteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteSite", input)
-	return &NetworkmanagerDeleteSiteFuture{Future: future}
+	return &NetworkManagerDeleteSiteFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) DeregisterTransitGateway(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) (*networkmanager.DeregisterTransitGatewayOutput, error) {
@@ -497,9 +525,9 @@ func (a *NetworkManagerStub) DeregisterTransitGateway(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *NetworkManagerStub) DeregisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) *NetworkmanagerDeregisterTransitGatewayFuture {
+func (a *NetworkManagerStub) DeregisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) *NetworkManagerDeregisterTransitGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeregisterTransitGateway", input)
-	return &NetworkmanagerDeregisterTransitGatewayFuture{Future: future}
+	return &NetworkManagerDeregisterTransitGatewayFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) DescribeGlobalNetworks(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) (*networkmanager.DescribeGlobalNetworksOutput, error) {
@@ -508,9 +536,9 @@ func (a *NetworkManagerStub) DescribeGlobalNetworks(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *NetworkManagerStub) DescribeGlobalNetworksAsync(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) *NetworkmanagerDescribeGlobalNetworksFuture {
+func (a *NetworkManagerStub) DescribeGlobalNetworksAsync(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) *NetworkManagerDescribeGlobalNetworksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DescribeGlobalNetworks", input)
-	return &NetworkmanagerDescribeGlobalNetworksFuture{Future: future}
+	return &NetworkManagerDescribeGlobalNetworksFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) DisassociateCustomerGateway(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) (*networkmanager.DisassociateCustomerGatewayOutput, error) {
@@ -519,9 +547,9 @@ func (a *NetworkManagerStub) DisassociateCustomerGateway(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *NetworkManagerStub) DisassociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) *NetworkmanagerDisassociateCustomerGatewayFuture {
+func (a *NetworkManagerStub) DisassociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) *NetworkManagerDisassociateCustomerGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DisassociateCustomerGateway", input)
-	return &NetworkmanagerDisassociateCustomerGatewayFuture{Future: future}
+	return &NetworkManagerDisassociateCustomerGatewayFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) DisassociateLink(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) (*networkmanager.DisassociateLinkOutput, error) {
@@ -530,9 +558,9 @@ func (a *NetworkManagerStub) DisassociateLink(ctx workflow.Context, input *netwo
 	return &output, err
 }
 
-func (a *NetworkManagerStub) DisassociateLinkAsync(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) *NetworkmanagerDisassociateLinkFuture {
+func (a *NetworkManagerStub) DisassociateLinkAsync(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) *NetworkManagerDisassociateLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DisassociateLink", input)
-	return &NetworkmanagerDisassociateLinkFuture{Future: future}
+	return &NetworkManagerDisassociateLinkFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) GetCustomerGatewayAssociations(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) (*networkmanager.GetCustomerGatewayAssociationsOutput, error) {
@@ -541,9 +569,9 @@ func (a *NetworkManagerStub) GetCustomerGatewayAssociations(ctx workflow.Context
 	return &output, err
 }
 
-func (a *NetworkManagerStub) GetCustomerGatewayAssociationsAsync(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) *NetworkmanagerGetCustomerGatewayAssociationsFuture {
+func (a *NetworkManagerStub) GetCustomerGatewayAssociationsAsync(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) *NetworkManagerGetCustomerGatewayAssociationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetCustomerGatewayAssociations", input)
-	return &NetworkmanagerGetCustomerGatewayAssociationsFuture{Future: future}
+	return &NetworkManagerGetCustomerGatewayAssociationsFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) GetDevices(ctx workflow.Context, input *networkmanager.GetDevicesInput) (*networkmanager.GetDevicesOutput, error) {
@@ -552,9 +580,9 @@ func (a *NetworkManagerStub) GetDevices(ctx workflow.Context, input *networkmana
 	return &output, err
 }
 
-func (a *NetworkManagerStub) GetDevicesAsync(ctx workflow.Context, input *networkmanager.GetDevicesInput) *NetworkmanagerGetDevicesFuture {
+func (a *NetworkManagerStub) GetDevicesAsync(ctx workflow.Context, input *networkmanager.GetDevicesInput) *NetworkManagerGetDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetDevices", input)
-	return &NetworkmanagerGetDevicesFuture{Future: future}
+	return &NetworkManagerGetDevicesFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) GetLinkAssociations(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) (*networkmanager.GetLinkAssociationsOutput, error) {
@@ -563,9 +591,9 @@ func (a *NetworkManagerStub) GetLinkAssociations(ctx workflow.Context, input *ne
 	return &output, err
 }
 
-func (a *NetworkManagerStub) GetLinkAssociationsAsync(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) *NetworkmanagerGetLinkAssociationsFuture {
+func (a *NetworkManagerStub) GetLinkAssociationsAsync(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) *NetworkManagerGetLinkAssociationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetLinkAssociations", input)
-	return &NetworkmanagerGetLinkAssociationsFuture{Future: future}
+	return &NetworkManagerGetLinkAssociationsFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) GetLinks(ctx workflow.Context, input *networkmanager.GetLinksInput) (*networkmanager.GetLinksOutput, error) {
@@ -574,9 +602,9 @@ func (a *NetworkManagerStub) GetLinks(ctx workflow.Context, input *networkmanage
 	return &output, err
 }
 
-func (a *NetworkManagerStub) GetLinksAsync(ctx workflow.Context, input *networkmanager.GetLinksInput) *NetworkmanagerGetLinksFuture {
+func (a *NetworkManagerStub) GetLinksAsync(ctx workflow.Context, input *networkmanager.GetLinksInput) *NetworkManagerGetLinksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetLinks", input)
-	return &NetworkmanagerGetLinksFuture{Future: future}
+	return &NetworkManagerGetLinksFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) GetSites(ctx workflow.Context, input *networkmanager.GetSitesInput) (*networkmanager.GetSitesOutput, error) {
@@ -585,9 +613,9 @@ func (a *NetworkManagerStub) GetSites(ctx workflow.Context, input *networkmanage
 	return &output, err
 }
 
-func (a *NetworkManagerStub) GetSitesAsync(ctx workflow.Context, input *networkmanager.GetSitesInput) *NetworkmanagerGetSitesFuture {
+func (a *NetworkManagerStub) GetSitesAsync(ctx workflow.Context, input *networkmanager.GetSitesInput) *NetworkManagerGetSitesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetSites", input)
-	return &NetworkmanagerGetSitesFuture{Future: future}
+	return &NetworkManagerGetSitesFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) GetTransitGatewayRegistrations(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) (*networkmanager.GetTransitGatewayRegistrationsOutput, error) {
@@ -596,9 +624,9 @@ func (a *NetworkManagerStub) GetTransitGatewayRegistrations(ctx workflow.Context
 	return &output, err
 }
 
-func (a *NetworkManagerStub) GetTransitGatewayRegistrationsAsync(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) *NetworkmanagerGetTransitGatewayRegistrationsFuture {
+func (a *NetworkManagerStub) GetTransitGatewayRegistrationsAsync(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) *NetworkManagerGetTransitGatewayRegistrationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetTransitGatewayRegistrations", input)
-	return &NetworkmanagerGetTransitGatewayRegistrationsFuture{Future: future}
+	return &NetworkManagerGetTransitGatewayRegistrationsFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) ListTagsForResource(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) (*networkmanager.ListTagsForResourceOutput, error) {
@@ -607,9 +635,9 @@ func (a *NetworkManagerStub) ListTagsForResource(ctx workflow.Context, input *ne
 	return &output, err
 }
 
-func (a *NetworkManagerStub) ListTagsForResourceAsync(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) *NetworkmanagerListTagsForResourceFuture {
+func (a *NetworkManagerStub) ListTagsForResourceAsync(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) *NetworkManagerListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.ListTagsForResource", input)
-	return &NetworkmanagerListTagsForResourceFuture{Future: future}
+	return &NetworkManagerListTagsForResourceFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) RegisterTransitGateway(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) (*networkmanager.RegisterTransitGatewayOutput, error) {
@@ -618,9 +646,9 @@ func (a *NetworkManagerStub) RegisterTransitGateway(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *NetworkManagerStub) RegisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) *NetworkmanagerRegisterTransitGatewayFuture {
+func (a *NetworkManagerStub) RegisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) *NetworkManagerRegisterTransitGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.RegisterTransitGateway", input)
-	return &NetworkmanagerRegisterTransitGatewayFuture{Future: future}
+	return &NetworkManagerRegisterTransitGatewayFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) TagResource(ctx workflow.Context, input *networkmanager.TagResourceInput) (*networkmanager.TagResourceOutput, error) {
@@ -629,9 +657,9 @@ func (a *NetworkManagerStub) TagResource(ctx workflow.Context, input *networkman
 	return &output, err
 }
 
-func (a *NetworkManagerStub) TagResourceAsync(ctx workflow.Context, input *networkmanager.TagResourceInput) *NetworkmanagerTagResourceFuture {
+func (a *NetworkManagerStub) TagResourceAsync(ctx workflow.Context, input *networkmanager.TagResourceInput) *NetworkManagerTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.TagResource", input)
-	return &NetworkmanagerTagResourceFuture{Future: future}
+	return &NetworkManagerTagResourceFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) UntagResource(ctx workflow.Context, input *networkmanager.UntagResourceInput) (*networkmanager.UntagResourceOutput, error) {
@@ -640,9 +668,9 @@ func (a *NetworkManagerStub) UntagResource(ctx workflow.Context, input *networkm
 	return &output, err
 }
 
-func (a *NetworkManagerStub) UntagResourceAsync(ctx workflow.Context, input *networkmanager.UntagResourceInput) *NetworkmanagerUntagResourceFuture {
+func (a *NetworkManagerStub) UntagResourceAsync(ctx workflow.Context, input *networkmanager.UntagResourceInput) *NetworkManagerUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UntagResource", input)
-	return &NetworkmanagerUntagResourceFuture{Future: future}
+	return &NetworkManagerUntagResourceFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) UpdateDevice(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) (*networkmanager.UpdateDeviceOutput, error) {
@@ -651,9 +679,9 @@ func (a *NetworkManagerStub) UpdateDevice(ctx workflow.Context, input *networkma
 	return &output, err
 }
 
-func (a *NetworkManagerStub) UpdateDeviceAsync(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) *NetworkmanagerUpdateDeviceFuture {
+func (a *NetworkManagerStub) UpdateDeviceAsync(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) *NetworkManagerUpdateDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateDevice", input)
-	return &NetworkmanagerUpdateDeviceFuture{Future: future}
+	return &NetworkManagerUpdateDeviceFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) UpdateGlobalNetwork(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) (*networkmanager.UpdateGlobalNetworkOutput, error) {
@@ -662,9 +690,9 @@ func (a *NetworkManagerStub) UpdateGlobalNetwork(ctx workflow.Context, input *ne
 	return &output, err
 }
 
-func (a *NetworkManagerStub) UpdateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) *NetworkmanagerUpdateGlobalNetworkFuture {
+func (a *NetworkManagerStub) UpdateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) *NetworkManagerUpdateGlobalNetworkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateGlobalNetwork", input)
-	return &NetworkmanagerUpdateGlobalNetworkFuture{Future: future}
+	return &NetworkManagerUpdateGlobalNetworkFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) UpdateLink(ctx workflow.Context, input *networkmanager.UpdateLinkInput) (*networkmanager.UpdateLinkOutput, error) {
@@ -673,9 +701,9 @@ func (a *NetworkManagerStub) UpdateLink(ctx workflow.Context, input *networkmana
 	return &output, err
 }
 
-func (a *NetworkManagerStub) UpdateLinkAsync(ctx workflow.Context, input *networkmanager.UpdateLinkInput) *NetworkmanagerUpdateLinkFuture {
+func (a *NetworkManagerStub) UpdateLinkAsync(ctx workflow.Context, input *networkmanager.UpdateLinkInput) *NetworkManagerUpdateLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateLink", input)
-	return &NetworkmanagerUpdateLinkFuture{Future: future}
+	return &NetworkManagerUpdateLinkFuture{Future: future}
 }
 
 func (a *NetworkManagerStub) UpdateSite(ctx workflow.Context, input *networkmanager.UpdateSiteInput) (*networkmanager.UpdateSiteOutput, error) {
@@ -684,7 +712,7 @@ func (a *NetworkManagerStub) UpdateSite(ctx workflow.Context, input *networkmana
 	return &output, err
 }
 
-func (a *NetworkManagerStub) UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *NetworkmanagerUpdateSiteFuture {
+func (a *NetworkManagerStub) UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *NetworkManagerUpdateSiteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateSite", input)
-	return &NetworkmanagerUpdateSiteFuture{Future: future}
+	return &NetworkManagerUpdateSiteFuture{Future: future}
 }

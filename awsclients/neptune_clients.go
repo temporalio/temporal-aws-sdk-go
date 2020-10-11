@@ -201,6 +201,7 @@ func NewNeptuneStub() NeptuneClient {
 }
 
 type NeptuneAddRoleToDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +212,7 @@ func (r *NeptuneAddRoleToDBClusterFuture) Get(ctx workflow.Context) (*neptune.Ad
 }
 
 type NeptuneAddSourceIdentifierToSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +223,7 @@ func (r *NeptuneAddSourceIdentifierToSubscriptionFuture) Get(ctx workflow.Contex
 }
 
 type NeptuneAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +234,7 @@ func (r *NeptuneAddTagsToResourceFuture) Get(ctx workflow.Context) (*neptune.Add
 }
 
 type NeptuneApplyPendingMaintenanceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +245,7 @@ func (r *NeptuneApplyPendingMaintenanceActionFuture) Get(ctx workflow.Context) (
 }
 
 type NeptuneCopyDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +256,7 @@ func (r *NeptuneCopyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*n
 }
 
 type NeptuneCopyDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +267,7 @@ func (r *NeptuneCopyDBClusterSnapshotFuture) Get(ctx workflow.Context) (*neptune
 }
 
 type NeptuneCopyDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +278,7 @@ func (r *NeptuneCopyDBParameterGroupFuture) Get(ctx workflow.Context) (*neptune.
 }
 
 type NeptuneCreateDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +289,7 @@ func (r *NeptuneCreateDBClusterFuture) Get(ctx workflow.Context) (*neptune.Creat
 }
 
 type NeptuneCreateDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +300,7 @@ func (r *NeptuneCreateDBClusterParameterGroupFuture) Get(ctx workflow.Context) (
 }
 
 type NeptuneCreateDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +311,7 @@ func (r *NeptuneCreateDBClusterSnapshotFuture) Get(ctx workflow.Context) (*neptu
 }
 
 type NeptuneCreateDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +322,7 @@ func (r *NeptuneCreateDBInstanceFuture) Get(ctx workflow.Context) (*neptune.Crea
 }
 
 type NeptuneCreateDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +333,7 @@ func (r *NeptuneCreateDBParameterGroupFuture) Get(ctx workflow.Context) (*neptun
 }
 
 type NeptuneCreateDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +344,7 @@ func (r *NeptuneCreateDBSubnetGroupFuture) Get(ctx workflow.Context) (*neptune.C
 }
 
 type NeptuneCreateEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +355,7 @@ func (r *NeptuneCreateEventSubscriptionFuture) Get(ctx workflow.Context) (*neptu
 }
 
 type NeptuneDeleteDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +366,7 @@ func (r *NeptuneDeleteDBClusterFuture) Get(ctx workflow.Context) (*neptune.Delet
 }
 
 type NeptuneDeleteDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +377,7 @@ func (r *NeptuneDeleteDBClusterParameterGroupFuture) Get(ctx workflow.Context) (
 }
 
 type NeptuneDeleteDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +388,7 @@ func (r *NeptuneDeleteDBClusterSnapshotFuture) Get(ctx workflow.Context) (*neptu
 }
 
 type NeptuneDeleteDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +399,7 @@ func (r *NeptuneDeleteDBInstanceFuture) Get(ctx workflow.Context) (*neptune.Dele
 }
 
 type NeptuneDeleteDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +410,7 @@ func (r *NeptuneDeleteDBParameterGroupFuture) Get(ctx workflow.Context) (*neptun
 }
 
 type NeptuneDeleteDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +421,7 @@ func (r *NeptuneDeleteDBSubnetGroupFuture) Get(ctx workflow.Context) (*neptune.D
 }
 
 type NeptuneDeleteEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +432,7 @@ func (r *NeptuneDeleteEventSubscriptionFuture) Get(ctx workflow.Context) (*neptu
 }
 
 type NeptuneDescribeDBClusterParameterGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +443,7 @@ func (r *NeptuneDescribeDBClusterParameterGroupsFuture) Get(ctx workflow.Context
 }
 
 type NeptuneDescribeDBClusterParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +454,7 @@ func (r *NeptuneDescribeDBClusterParametersFuture) Get(ctx workflow.Context) (*n
 }
 
 type NeptuneDescribeDBClusterSnapshotAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +465,7 @@ func (r *NeptuneDescribeDBClusterSnapshotAttributesFuture) Get(ctx workflow.Cont
 }
 
 type NeptuneDescribeDBClusterSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +476,7 @@ func (r *NeptuneDescribeDBClusterSnapshotsFuture) Get(ctx workflow.Context) (*ne
 }
 
 type NeptuneDescribeDBClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +487,7 @@ func (r *NeptuneDescribeDBClustersFuture) Get(ctx workflow.Context) (*neptune.De
 }
 
 type NeptuneDescribeDBEngineVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +498,7 @@ func (r *NeptuneDescribeDBEngineVersionsFuture) Get(ctx workflow.Context) (*nept
 }
 
 type NeptuneDescribeDBInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +509,7 @@ func (r *NeptuneDescribeDBInstancesFuture) Get(ctx workflow.Context) (*neptune.D
 }
 
 type NeptuneDescribeDBParameterGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +520,7 @@ func (r *NeptuneDescribeDBParameterGroupsFuture) Get(ctx workflow.Context) (*nep
 }
 
 type NeptuneDescribeDBParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +531,7 @@ func (r *NeptuneDescribeDBParametersFuture) Get(ctx workflow.Context) (*neptune.
 }
 
 type NeptuneDescribeDBSubnetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +542,7 @@ func (r *NeptuneDescribeDBSubnetGroupsFuture) Get(ctx workflow.Context) (*neptun
 }
 
 type NeptuneDescribeEngineDefaultClusterParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +553,7 @@ func (r *NeptuneDescribeEngineDefaultClusterParametersFuture) Get(ctx workflow.C
 }
 
 type NeptuneDescribeEngineDefaultParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +564,7 @@ func (r *NeptuneDescribeEngineDefaultParametersFuture) Get(ctx workflow.Context)
 }
 
 type NeptuneDescribeEventCategoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +575,7 @@ func (r *NeptuneDescribeEventCategoriesFuture) Get(ctx workflow.Context) (*neptu
 }
 
 type NeptuneDescribeEventSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +586,7 @@ func (r *NeptuneDescribeEventSubscriptionsFuture) Get(ctx workflow.Context) (*ne
 }
 
 type NeptuneDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +597,7 @@ func (r *NeptuneDescribeEventsFuture) Get(ctx workflow.Context) (*neptune.Descri
 }
 
 type NeptuneDescribeOrderableDBInstanceOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +608,7 @@ func (r *NeptuneDescribeOrderableDBInstanceOptionsFuture) Get(ctx workflow.Conte
 }
 
 type NeptuneDescribePendingMaintenanceActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +619,7 @@ func (r *NeptuneDescribePendingMaintenanceActionsFuture) Get(ctx workflow.Contex
 }
 
 type NeptuneDescribeValidDBInstanceModificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +630,7 @@ func (r *NeptuneDescribeValidDBInstanceModificationsFuture) Get(ctx workflow.Con
 }
 
 type NeptuneFailoverDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +641,7 @@ func (r *NeptuneFailoverDBClusterFuture) Get(ctx workflow.Context) (*neptune.Fai
 }
 
 type NeptuneListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +652,7 @@ func (r *NeptuneListTagsForResourceFuture) Get(ctx workflow.Context) (*neptune.L
 }
 
 type NeptuneModifyDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +663,7 @@ func (r *NeptuneModifyDBClusterFuture) Get(ctx workflow.Context) (*neptune.Modif
 }
 
 type NeptuneModifyDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +674,7 @@ func (r *NeptuneModifyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (
 }
 
 type NeptuneModifyDBClusterSnapshotAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +685,7 @@ func (r *NeptuneModifyDBClusterSnapshotAttributeFuture) Get(ctx workflow.Context
 }
 
 type NeptuneModifyDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -651,6 +696,7 @@ func (r *NeptuneModifyDBInstanceFuture) Get(ctx workflow.Context) (*neptune.Modi
 }
 
 type NeptuneModifyDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -661,6 +707,7 @@ func (r *NeptuneModifyDBParameterGroupFuture) Get(ctx workflow.Context) (*neptun
 }
 
 type NeptuneModifyDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -671,6 +718,7 @@ func (r *NeptuneModifyDBSubnetGroupFuture) Get(ctx workflow.Context) (*neptune.M
 }
 
 type NeptuneModifyEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -681,6 +729,7 @@ func (r *NeptuneModifyEventSubscriptionFuture) Get(ctx workflow.Context) (*neptu
 }
 
 type NeptunePromoteReadReplicaDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -691,6 +740,7 @@ func (r *NeptunePromoteReadReplicaDBClusterFuture) Get(ctx workflow.Context) (*n
 }
 
 type NeptuneRebootDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -701,6 +751,7 @@ func (r *NeptuneRebootDBInstanceFuture) Get(ctx workflow.Context) (*neptune.Rebo
 }
 
 type NeptuneRemoveRoleFromDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -711,6 +762,7 @@ func (r *NeptuneRemoveRoleFromDBClusterFuture) Get(ctx workflow.Context) (*neptu
 }
 
 type NeptuneRemoveSourceIdentifierFromSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -721,6 +773,7 @@ func (r *NeptuneRemoveSourceIdentifierFromSubscriptionFuture) Get(ctx workflow.C
 }
 
 type NeptuneRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -731,6 +784,7 @@ func (r *NeptuneRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*neptun
 }
 
 type NeptuneResetDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -741,6 +795,7 @@ func (r *NeptuneResetDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type NeptuneResetDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -751,6 +806,7 @@ func (r *NeptuneResetDBParameterGroupFuture) Get(ctx workflow.Context) (*neptune
 }
 
 type NeptuneRestoreDBClusterFromSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -761,6 +817,7 @@ func (r *NeptuneRestoreDBClusterFromSnapshotFuture) Get(ctx workflow.Context) (*
 }
 
 type NeptuneRestoreDBClusterToPointInTimeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -771,6 +828,7 @@ func (r *NeptuneRestoreDBClusterToPointInTimeFuture) Get(ctx workflow.Context) (
 }
 
 type NeptuneStartDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -781,6 +839,7 @@ func (r *NeptuneStartDBClusterFuture) Get(ctx workflow.Context) (*neptune.StartD
 }
 
 type NeptuneStopDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

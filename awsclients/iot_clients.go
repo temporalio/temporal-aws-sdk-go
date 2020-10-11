@@ -11,640 +11,640 @@ import (
 
 type IoTClient interface {
 	AcceptCertificateTransfer(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) (*iot.AcceptCertificateTransferOutput, error)
-	AcceptCertificateTransferAsync(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) *IotAcceptCertificateTransferFuture
+	AcceptCertificateTransferAsync(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) *IoTAcceptCertificateTransferFuture
 
 	AddThingToBillingGroup(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) (*iot.AddThingToBillingGroupOutput, error)
-	AddThingToBillingGroupAsync(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) *IotAddThingToBillingGroupFuture
+	AddThingToBillingGroupAsync(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) *IoTAddThingToBillingGroupFuture
 
 	AddThingToThingGroup(ctx workflow.Context, input *iot.AddThingToThingGroupInput) (*iot.AddThingToThingGroupOutput, error)
-	AddThingToThingGroupAsync(ctx workflow.Context, input *iot.AddThingToThingGroupInput) *IotAddThingToThingGroupFuture
+	AddThingToThingGroupAsync(ctx workflow.Context, input *iot.AddThingToThingGroupInput) *IoTAddThingToThingGroupFuture
 
 	AssociateTargetsWithJob(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) (*iot.AssociateTargetsWithJobOutput, error)
-	AssociateTargetsWithJobAsync(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) *IotAssociateTargetsWithJobFuture
+	AssociateTargetsWithJobAsync(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) *IoTAssociateTargetsWithJobFuture
 
 	AttachPolicy(ctx workflow.Context, input *iot.AttachPolicyInput) (*iot.AttachPolicyOutput, error)
-	AttachPolicyAsync(ctx workflow.Context, input *iot.AttachPolicyInput) *IotAttachPolicyFuture
+	AttachPolicyAsync(ctx workflow.Context, input *iot.AttachPolicyInput) *IoTAttachPolicyFuture
 
 	AttachPrincipalPolicy(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) (*iot.AttachPrincipalPolicyOutput, error)
-	AttachPrincipalPolicyAsync(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) *IotAttachPrincipalPolicyFuture
+	AttachPrincipalPolicyAsync(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) *IoTAttachPrincipalPolicyFuture
 
 	AttachSecurityProfile(ctx workflow.Context, input *iot.AttachSecurityProfileInput) (*iot.AttachSecurityProfileOutput, error)
-	AttachSecurityProfileAsync(ctx workflow.Context, input *iot.AttachSecurityProfileInput) *IotAttachSecurityProfileFuture
+	AttachSecurityProfileAsync(ctx workflow.Context, input *iot.AttachSecurityProfileInput) *IoTAttachSecurityProfileFuture
 
 	AttachThingPrincipal(ctx workflow.Context, input *iot.AttachThingPrincipalInput) (*iot.AttachThingPrincipalOutput, error)
-	AttachThingPrincipalAsync(ctx workflow.Context, input *iot.AttachThingPrincipalInput) *IotAttachThingPrincipalFuture
+	AttachThingPrincipalAsync(ctx workflow.Context, input *iot.AttachThingPrincipalInput) *IoTAttachThingPrincipalFuture
 
 	CancelAuditMitigationActionsTask(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) (*iot.CancelAuditMitigationActionsTaskOutput, error)
-	CancelAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) *IotCancelAuditMitigationActionsTaskFuture
+	CancelAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) *IoTCancelAuditMitigationActionsTaskFuture
 
 	CancelAuditTask(ctx workflow.Context, input *iot.CancelAuditTaskInput) (*iot.CancelAuditTaskOutput, error)
-	CancelAuditTaskAsync(ctx workflow.Context, input *iot.CancelAuditTaskInput) *IotCancelAuditTaskFuture
+	CancelAuditTaskAsync(ctx workflow.Context, input *iot.CancelAuditTaskInput) *IoTCancelAuditTaskFuture
 
 	CancelCertificateTransfer(ctx workflow.Context, input *iot.CancelCertificateTransferInput) (*iot.CancelCertificateTransferOutput, error)
-	CancelCertificateTransferAsync(ctx workflow.Context, input *iot.CancelCertificateTransferInput) *IotCancelCertificateTransferFuture
+	CancelCertificateTransferAsync(ctx workflow.Context, input *iot.CancelCertificateTransferInput) *IoTCancelCertificateTransferFuture
 
 	CancelJob(ctx workflow.Context, input *iot.CancelJobInput) (*iot.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *iot.CancelJobInput) *IotCancelJobFuture
+	CancelJobAsync(ctx workflow.Context, input *iot.CancelJobInput) *IoTCancelJobFuture
 
 	CancelJobExecution(ctx workflow.Context, input *iot.CancelJobExecutionInput) (*iot.CancelJobExecutionOutput, error)
-	CancelJobExecutionAsync(ctx workflow.Context, input *iot.CancelJobExecutionInput) *IotCancelJobExecutionFuture
+	CancelJobExecutionAsync(ctx workflow.Context, input *iot.CancelJobExecutionInput) *IoTCancelJobExecutionFuture
 
 	ClearDefaultAuthorizer(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) (*iot.ClearDefaultAuthorizerOutput, error)
-	ClearDefaultAuthorizerAsync(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) *IotClearDefaultAuthorizerFuture
+	ClearDefaultAuthorizerAsync(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) *IoTClearDefaultAuthorizerFuture
 
 	ConfirmTopicRuleDestination(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) (*iot.ConfirmTopicRuleDestinationOutput, error)
-	ConfirmTopicRuleDestinationAsync(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) *IotConfirmTopicRuleDestinationFuture
+	ConfirmTopicRuleDestinationAsync(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) *IoTConfirmTopicRuleDestinationFuture
 
 	CreateAuditSuppression(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) (*iot.CreateAuditSuppressionOutput, error)
-	CreateAuditSuppressionAsync(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) *IotCreateAuditSuppressionFuture
+	CreateAuditSuppressionAsync(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) *IoTCreateAuditSuppressionFuture
 
 	CreateAuthorizer(ctx workflow.Context, input *iot.CreateAuthorizerInput) (*iot.CreateAuthorizerOutput, error)
-	CreateAuthorizerAsync(ctx workflow.Context, input *iot.CreateAuthorizerInput) *IotCreateAuthorizerFuture
+	CreateAuthorizerAsync(ctx workflow.Context, input *iot.CreateAuthorizerInput) *IoTCreateAuthorizerFuture
 
 	CreateBillingGroup(ctx workflow.Context, input *iot.CreateBillingGroupInput) (*iot.CreateBillingGroupOutput, error)
-	CreateBillingGroupAsync(ctx workflow.Context, input *iot.CreateBillingGroupInput) *IotCreateBillingGroupFuture
+	CreateBillingGroupAsync(ctx workflow.Context, input *iot.CreateBillingGroupInput) *IoTCreateBillingGroupFuture
 
 	CreateCertificateFromCsr(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) (*iot.CreateCertificateFromCsrOutput, error)
-	CreateCertificateFromCsrAsync(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) *IotCreateCertificateFromCsrFuture
+	CreateCertificateFromCsrAsync(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) *IoTCreateCertificateFromCsrFuture
 
 	CreateDimension(ctx workflow.Context, input *iot.CreateDimensionInput) (*iot.CreateDimensionOutput, error)
-	CreateDimensionAsync(ctx workflow.Context, input *iot.CreateDimensionInput) *IotCreateDimensionFuture
+	CreateDimensionAsync(ctx workflow.Context, input *iot.CreateDimensionInput) *IoTCreateDimensionFuture
 
 	CreateDomainConfiguration(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) (*iot.CreateDomainConfigurationOutput, error)
-	CreateDomainConfigurationAsync(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) *IotCreateDomainConfigurationFuture
+	CreateDomainConfigurationAsync(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) *IoTCreateDomainConfigurationFuture
 
 	CreateDynamicThingGroup(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) (*iot.CreateDynamicThingGroupOutput, error)
-	CreateDynamicThingGroupAsync(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) *IotCreateDynamicThingGroupFuture
+	CreateDynamicThingGroupAsync(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) *IoTCreateDynamicThingGroupFuture
 
 	CreateJob(ctx workflow.Context, input *iot.CreateJobInput) (*iot.CreateJobOutput, error)
-	CreateJobAsync(ctx workflow.Context, input *iot.CreateJobInput) *IotCreateJobFuture
+	CreateJobAsync(ctx workflow.Context, input *iot.CreateJobInput) *IoTCreateJobFuture
 
 	CreateKeysAndCertificate(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) (*iot.CreateKeysAndCertificateOutput, error)
-	CreateKeysAndCertificateAsync(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) *IotCreateKeysAndCertificateFuture
+	CreateKeysAndCertificateAsync(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) *IoTCreateKeysAndCertificateFuture
 
 	CreateMitigationAction(ctx workflow.Context, input *iot.CreateMitigationActionInput) (*iot.CreateMitigationActionOutput, error)
-	CreateMitigationActionAsync(ctx workflow.Context, input *iot.CreateMitigationActionInput) *IotCreateMitigationActionFuture
+	CreateMitigationActionAsync(ctx workflow.Context, input *iot.CreateMitigationActionInput) *IoTCreateMitigationActionFuture
 
 	CreateOTAUpdate(ctx workflow.Context, input *iot.CreateOTAUpdateInput) (*iot.CreateOTAUpdateOutput, error)
-	CreateOTAUpdateAsync(ctx workflow.Context, input *iot.CreateOTAUpdateInput) *IotCreateOTAUpdateFuture
+	CreateOTAUpdateAsync(ctx workflow.Context, input *iot.CreateOTAUpdateInput) *IoTCreateOTAUpdateFuture
 
 	CreatePolicy(ctx workflow.Context, input *iot.CreatePolicyInput) (*iot.CreatePolicyOutput, error)
-	CreatePolicyAsync(ctx workflow.Context, input *iot.CreatePolicyInput) *IotCreatePolicyFuture
+	CreatePolicyAsync(ctx workflow.Context, input *iot.CreatePolicyInput) *IoTCreatePolicyFuture
 
 	CreatePolicyVersion(ctx workflow.Context, input *iot.CreatePolicyVersionInput) (*iot.CreatePolicyVersionOutput, error)
-	CreatePolicyVersionAsync(ctx workflow.Context, input *iot.CreatePolicyVersionInput) *IotCreatePolicyVersionFuture
+	CreatePolicyVersionAsync(ctx workflow.Context, input *iot.CreatePolicyVersionInput) *IoTCreatePolicyVersionFuture
 
 	CreateProvisioningClaim(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) (*iot.CreateProvisioningClaimOutput, error)
-	CreateProvisioningClaimAsync(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) *IotCreateProvisioningClaimFuture
+	CreateProvisioningClaimAsync(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) *IoTCreateProvisioningClaimFuture
 
 	CreateProvisioningTemplate(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) (*iot.CreateProvisioningTemplateOutput, error)
-	CreateProvisioningTemplateAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) *IotCreateProvisioningTemplateFuture
+	CreateProvisioningTemplateAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) *IoTCreateProvisioningTemplateFuture
 
 	CreateProvisioningTemplateVersion(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) (*iot.CreateProvisioningTemplateVersionOutput, error)
-	CreateProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) *IotCreateProvisioningTemplateVersionFuture
+	CreateProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) *IoTCreateProvisioningTemplateVersionFuture
 
 	CreateRoleAlias(ctx workflow.Context, input *iot.CreateRoleAliasInput) (*iot.CreateRoleAliasOutput, error)
-	CreateRoleAliasAsync(ctx workflow.Context, input *iot.CreateRoleAliasInput) *IotCreateRoleAliasFuture
+	CreateRoleAliasAsync(ctx workflow.Context, input *iot.CreateRoleAliasInput) *IoTCreateRoleAliasFuture
 
 	CreateScheduledAudit(ctx workflow.Context, input *iot.CreateScheduledAuditInput) (*iot.CreateScheduledAuditOutput, error)
-	CreateScheduledAuditAsync(ctx workflow.Context, input *iot.CreateScheduledAuditInput) *IotCreateScheduledAuditFuture
+	CreateScheduledAuditAsync(ctx workflow.Context, input *iot.CreateScheduledAuditInput) *IoTCreateScheduledAuditFuture
 
 	CreateSecurityProfile(ctx workflow.Context, input *iot.CreateSecurityProfileInput) (*iot.CreateSecurityProfileOutput, error)
-	CreateSecurityProfileAsync(ctx workflow.Context, input *iot.CreateSecurityProfileInput) *IotCreateSecurityProfileFuture
+	CreateSecurityProfileAsync(ctx workflow.Context, input *iot.CreateSecurityProfileInput) *IoTCreateSecurityProfileFuture
 
 	CreateStream(ctx workflow.Context, input *iot.CreateStreamInput) (*iot.CreateStreamOutput, error)
-	CreateStreamAsync(ctx workflow.Context, input *iot.CreateStreamInput) *IotCreateStreamFuture
+	CreateStreamAsync(ctx workflow.Context, input *iot.CreateStreamInput) *IoTCreateStreamFuture
 
 	CreateThing(ctx workflow.Context, input *iot.CreateThingInput) (*iot.CreateThingOutput, error)
-	CreateThingAsync(ctx workflow.Context, input *iot.CreateThingInput) *IotCreateThingFuture
+	CreateThingAsync(ctx workflow.Context, input *iot.CreateThingInput) *IoTCreateThingFuture
 
 	CreateThingGroup(ctx workflow.Context, input *iot.CreateThingGroupInput) (*iot.CreateThingGroupOutput, error)
-	CreateThingGroupAsync(ctx workflow.Context, input *iot.CreateThingGroupInput) *IotCreateThingGroupFuture
+	CreateThingGroupAsync(ctx workflow.Context, input *iot.CreateThingGroupInput) *IoTCreateThingGroupFuture
 
 	CreateThingType(ctx workflow.Context, input *iot.CreateThingTypeInput) (*iot.CreateThingTypeOutput, error)
-	CreateThingTypeAsync(ctx workflow.Context, input *iot.CreateThingTypeInput) *IotCreateThingTypeFuture
+	CreateThingTypeAsync(ctx workflow.Context, input *iot.CreateThingTypeInput) *IoTCreateThingTypeFuture
 
 	CreateTopicRule(ctx workflow.Context, input *iot.CreateTopicRuleInput) (*iot.CreateTopicRuleOutput, error)
-	CreateTopicRuleAsync(ctx workflow.Context, input *iot.CreateTopicRuleInput) *IotCreateTopicRuleFuture
+	CreateTopicRuleAsync(ctx workflow.Context, input *iot.CreateTopicRuleInput) *IoTCreateTopicRuleFuture
 
 	CreateTopicRuleDestination(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) (*iot.CreateTopicRuleDestinationOutput, error)
-	CreateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) *IotCreateTopicRuleDestinationFuture
+	CreateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) *IoTCreateTopicRuleDestinationFuture
 
 	DeleteAccountAuditConfiguration(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) (*iot.DeleteAccountAuditConfigurationOutput, error)
-	DeleteAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) *IotDeleteAccountAuditConfigurationFuture
+	DeleteAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) *IoTDeleteAccountAuditConfigurationFuture
 
 	DeleteAuditSuppression(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) (*iot.DeleteAuditSuppressionOutput, error)
-	DeleteAuditSuppressionAsync(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) *IotDeleteAuditSuppressionFuture
+	DeleteAuditSuppressionAsync(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) *IoTDeleteAuditSuppressionFuture
 
 	DeleteAuthorizer(ctx workflow.Context, input *iot.DeleteAuthorizerInput) (*iot.DeleteAuthorizerOutput, error)
-	DeleteAuthorizerAsync(ctx workflow.Context, input *iot.DeleteAuthorizerInput) *IotDeleteAuthorizerFuture
+	DeleteAuthorizerAsync(ctx workflow.Context, input *iot.DeleteAuthorizerInput) *IoTDeleteAuthorizerFuture
 
 	DeleteBillingGroup(ctx workflow.Context, input *iot.DeleteBillingGroupInput) (*iot.DeleteBillingGroupOutput, error)
-	DeleteBillingGroupAsync(ctx workflow.Context, input *iot.DeleteBillingGroupInput) *IotDeleteBillingGroupFuture
+	DeleteBillingGroupAsync(ctx workflow.Context, input *iot.DeleteBillingGroupInput) *IoTDeleteBillingGroupFuture
 
 	DeleteCACertificate(ctx workflow.Context, input *iot.DeleteCACertificateInput) (*iot.DeleteCACertificateOutput, error)
-	DeleteCACertificateAsync(ctx workflow.Context, input *iot.DeleteCACertificateInput) *IotDeleteCACertificateFuture
+	DeleteCACertificateAsync(ctx workflow.Context, input *iot.DeleteCACertificateInput) *IoTDeleteCACertificateFuture
 
 	DeleteCertificate(ctx workflow.Context, input *iot.DeleteCertificateInput) (*iot.DeleteCertificateOutput, error)
-	DeleteCertificateAsync(ctx workflow.Context, input *iot.DeleteCertificateInput) *IotDeleteCertificateFuture
+	DeleteCertificateAsync(ctx workflow.Context, input *iot.DeleteCertificateInput) *IoTDeleteCertificateFuture
 
 	DeleteDimension(ctx workflow.Context, input *iot.DeleteDimensionInput) (*iot.DeleteDimensionOutput, error)
-	DeleteDimensionAsync(ctx workflow.Context, input *iot.DeleteDimensionInput) *IotDeleteDimensionFuture
+	DeleteDimensionAsync(ctx workflow.Context, input *iot.DeleteDimensionInput) *IoTDeleteDimensionFuture
 
 	DeleteDomainConfiguration(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) (*iot.DeleteDomainConfigurationOutput, error)
-	DeleteDomainConfigurationAsync(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) *IotDeleteDomainConfigurationFuture
+	DeleteDomainConfigurationAsync(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) *IoTDeleteDomainConfigurationFuture
 
 	DeleteDynamicThingGroup(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) (*iot.DeleteDynamicThingGroupOutput, error)
-	DeleteDynamicThingGroupAsync(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) *IotDeleteDynamicThingGroupFuture
+	DeleteDynamicThingGroupAsync(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) *IoTDeleteDynamicThingGroupFuture
 
 	DeleteJob(ctx workflow.Context, input *iot.DeleteJobInput) (*iot.DeleteJobOutput, error)
-	DeleteJobAsync(ctx workflow.Context, input *iot.DeleteJobInput) *IotDeleteJobFuture
+	DeleteJobAsync(ctx workflow.Context, input *iot.DeleteJobInput) *IoTDeleteJobFuture
 
 	DeleteJobExecution(ctx workflow.Context, input *iot.DeleteJobExecutionInput) (*iot.DeleteJobExecutionOutput, error)
-	DeleteJobExecutionAsync(ctx workflow.Context, input *iot.DeleteJobExecutionInput) *IotDeleteJobExecutionFuture
+	DeleteJobExecutionAsync(ctx workflow.Context, input *iot.DeleteJobExecutionInput) *IoTDeleteJobExecutionFuture
 
 	DeleteMitigationAction(ctx workflow.Context, input *iot.DeleteMitigationActionInput) (*iot.DeleteMitigationActionOutput, error)
-	DeleteMitigationActionAsync(ctx workflow.Context, input *iot.DeleteMitigationActionInput) *IotDeleteMitigationActionFuture
+	DeleteMitigationActionAsync(ctx workflow.Context, input *iot.DeleteMitigationActionInput) *IoTDeleteMitigationActionFuture
 
 	DeleteOTAUpdate(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) (*iot.DeleteOTAUpdateOutput, error)
-	DeleteOTAUpdateAsync(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) *IotDeleteOTAUpdateFuture
+	DeleteOTAUpdateAsync(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) *IoTDeleteOTAUpdateFuture
 
 	DeletePolicy(ctx workflow.Context, input *iot.DeletePolicyInput) (*iot.DeletePolicyOutput, error)
-	DeletePolicyAsync(ctx workflow.Context, input *iot.DeletePolicyInput) *IotDeletePolicyFuture
+	DeletePolicyAsync(ctx workflow.Context, input *iot.DeletePolicyInput) *IoTDeletePolicyFuture
 
 	DeletePolicyVersion(ctx workflow.Context, input *iot.DeletePolicyVersionInput) (*iot.DeletePolicyVersionOutput, error)
-	DeletePolicyVersionAsync(ctx workflow.Context, input *iot.DeletePolicyVersionInput) *IotDeletePolicyVersionFuture
+	DeletePolicyVersionAsync(ctx workflow.Context, input *iot.DeletePolicyVersionInput) *IoTDeletePolicyVersionFuture
 
 	DeleteProvisioningTemplate(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) (*iot.DeleteProvisioningTemplateOutput, error)
-	DeleteProvisioningTemplateAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) *IotDeleteProvisioningTemplateFuture
+	DeleteProvisioningTemplateAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) *IoTDeleteProvisioningTemplateFuture
 
 	DeleteProvisioningTemplateVersion(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) (*iot.DeleteProvisioningTemplateVersionOutput, error)
-	DeleteProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) *IotDeleteProvisioningTemplateVersionFuture
+	DeleteProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) *IoTDeleteProvisioningTemplateVersionFuture
 
 	DeleteRegistrationCode(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) (*iot.DeleteRegistrationCodeOutput, error)
-	DeleteRegistrationCodeAsync(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) *IotDeleteRegistrationCodeFuture
+	DeleteRegistrationCodeAsync(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) *IoTDeleteRegistrationCodeFuture
 
 	DeleteRoleAlias(ctx workflow.Context, input *iot.DeleteRoleAliasInput) (*iot.DeleteRoleAliasOutput, error)
-	DeleteRoleAliasAsync(ctx workflow.Context, input *iot.DeleteRoleAliasInput) *IotDeleteRoleAliasFuture
+	DeleteRoleAliasAsync(ctx workflow.Context, input *iot.DeleteRoleAliasInput) *IoTDeleteRoleAliasFuture
 
 	DeleteScheduledAudit(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) (*iot.DeleteScheduledAuditOutput, error)
-	DeleteScheduledAuditAsync(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) *IotDeleteScheduledAuditFuture
+	DeleteScheduledAuditAsync(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) *IoTDeleteScheduledAuditFuture
 
 	DeleteSecurityProfile(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) (*iot.DeleteSecurityProfileOutput, error)
-	DeleteSecurityProfileAsync(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) *IotDeleteSecurityProfileFuture
+	DeleteSecurityProfileAsync(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) *IoTDeleteSecurityProfileFuture
 
 	DeleteStream(ctx workflow.Context, input *iot.DeleteStreamInput) (*iot.DeleteStreamOutput, error)
-	DeleteStreamAsync(ctx workflow.Context, input *iot.DeleteStreamInput) *IotDeleteStreamFuture
+	DeleteStreamAsync(ctx workflow.Context, input *iot.DeleteStreamInput) *IoTDeleteStreamFuture
 
 	DeleteThing(ctx workflow.Context, input *iot.DeleteThingInput) (*iot.DeleteThingOutput, error)
-	DeleteThingAsync(ctx workflow.Context, input *iot.DeleteThingInput) *IotDeleteThingFuture
+	DeleteThingAsync(ctx workflow.Context, input *iot.DeleteThingInput) *IoTDeleteThingFuture
 
 	DeleteThingGroup(ctx workflow.Context, input *iot.DeleteThingGroupInput) (*iot.DeleteThingGroupOutput, error)
-	DeleteThingGroupAsync(ctx workflow.Context, input *iot.DeleteThingGroupInput) *IotDeleteThingGroupFuture
+	DeleteThingGroupAsync(ctx workflow.Context, input *iot.DeleteThingGroupInput) *IoTDeleteThingGroupFuture
 
 	DeleteThingType(ctx workflow.Context, input *iot.DeleteThingTypeInput) (*iot.DeleteThingTypeOutput, error)
-	DeleteThingTypeAsync(ctx workflow.Context, input *iot.DeleteThingTypeInput) *IotDeleteThingTypeFuture
+	DeleteThingTypeAsync(ctx workflow.Context, input *iot.DeleteThingTypeInput) *IoTDeleteThingTypeFuture
 
 	DeleteTopicRule(ctx workflow.Context, input *iot.DeleteTopicRuleInput) (*iot.DeleteTopicRuleOutput, error)
-	DeleteTopicRuleAsync(ctx workflow.Context, input *iot.DeleteTopicRuleInput) *IotDeleteTopicRuleFuture
+	DeleteTopicRuleAsync(ctx workflow.Context, input *iot.DeleteTopicRuleInput) *IoTDeleteTopicRuleFuture
 
 	DeleteTopicRuleDestination(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) (*iot.DeleteTopicRuleDestinationOutput, error)
-	DeleteTopicRuleDestinationAsync(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) *IotDeleteTopicRuleDestinationFuture
+	DeleteTopicRuleDestinationAsync(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) *IoTDeleteTopicRuleDestinationFuture
 
 	DeleteV2LoggingLevel(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) (*iot.DeleteV2LoggingLevelOutput, error)
-	DeleteV2LoggingLevelAsync(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) *IotDeleteV2LoggingLevelFuture
+	DeleteV2LoggingLevelAsync(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) *IoTDeleteV2LoggingLevelFuture
 
 	DeprecateThingType(ctx workflow.Context, input *iot.DeprecateThingTypeInput) (*iot.DeprecateThingTypeOutput, error)
-	DeprecateThingTypeAsync(ctx workflow.Context, input *iot.DeprecateThingTypeInput) *IotDeprecateThingTypeFuture
+	DeprecateThingTypeAsync(ctx workflow.Context, input *iot.DeprecateThingTypeInput) *IoTDeprecateThingTypeFuture
 
 	DescribeAccountAuditConfiguration(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) (*iot.DescribeAccountAuditConfigurationOutput, error)
-	DescribeAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) *IotDescribeAccountAuditConfigurationFuture
+	DescribeAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) *IoTDescribeAccountAuditConfigurationFuture
 
 	DescribeAuditFinding(ctx workflow.Context, input *iot.DescribeAuditFindingInput) (*iot.DescribeAuditFindingOutput, error)
-	DescribeAuditFindingAsync(ctx workflow.Context, input *iot.DescribeAuditFindingInput) *IotDescribeAuditFindingFuture
+	DescribeAuditFindingAsync(ctx workflow.Context, input *iot.DescribeAuditFindingInput) *IoTDescribeAuditFindingFuture
 
 	DescribeAuditMitigationActionsTask(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) (*iot.DescribeAuditMitigationActionsTaskOutput, error)
-	DescribeAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) *IotDescribeAuditMitigationActionsTaskFuture
+	DescribeAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) *IoTDescribeAuditMitigationActionsTaskFuture
 
 	DescribeAuditSuppression(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) (*iot.DescribeAuditSuppressionOutput, error)
-	DescribeAuditSuppressionAsync(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) *IotDescribeAuditSuppressionFuture
+	DescribeAuditSuppressionAsync(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) *IoTDescribeAuditSuppressionFuture
 
 	DescribeAuditTask(ctx workflow.Context, input *iot.DescribeAuditTaskInput) (*iot.DescribeAuditTaskOutput, error)
-	DescribeAuditTaskAsync(ctx workflow.Context, input *iot.DescribeAuditTaskInput) *IotDescribeAuditTaskFuture
+	DescribeAuditTaskAsync(ctx workflow.Context, input *iot.DescribeAuditTaskInput) *IoTDescribeAuditTaskFuture
 
 	DescribeAuthorizer(ctx workflow.Context, input *iot.DescribeAuthorizerInput) (*iot.DescribeAuthorizerOutput, error)
-	DescribeAuthorizerAsync(ctx workflow.Context, input *iot.DescribeAuthorizerInput) *IotDescribeAuthorizerFuture
+	DescribeAuthorizerAsync(ctx workflow.Context, input *iot.DescribeAuthorizerInput) *IoTDescribeAuthorizerFuture
 
 	DescribeBillingGroup(ctx workflow.Context, input *iot.DescribeBillingGroupInput) (*iot.DescribeBillingGroupOutput, error)
-	DescribeBillingGroupAsync(ctx workflow.Context, input *iot.DescribeBillingGroupInput) *IotDescribeBillingGroupFuture
+	DescribeBillingGroupAsync(ctx workflow.Context, input *iot.DescribeBillingGroupInput) *IoTDescribeBillingGroupFuture
 
 	DescribeCACertificate(ctx workflow.Context, input *iot.DescribeCACertificateInput) (*iot.DescribeCACertificateOutput, error)
-	DescribeCACertificateAsync(ctx workflow.Context, input *iot.DescribeCACertificateInput) *IotDescribeCACertificateFuture
+	DescribeCACertificateAsync(ctx workflow.Context, input *iot.DescribeCACertificateInput) *IoTDescribeCACertificateFuture
 
 	DescribeCertificate(ctx workflow.Context, input *iot.DescribeCertificateInput) (*iot.DescribeCertificateOutput, error)
-	DescribeCertificateAsync(ctx workflow.Context, input *iot.DescribeCertificateInput) *IotDescribeCertificateFuture
+	DescribeCertificateAsync(ctx workflow.Context, input *iot.DescribeCertificateInput) *IoTDescribeCertificateFuture
 
 	DescribeDefaultAuthorizer(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) (*iot.DescribeDefaultAuthorizerOutput, error)
-	DescribeDefaultAuthorizerAsync(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) *IotDescribeDefaultAuthorizerFuture
+	DescribeDefaultAuthorizerAsync(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) *IoTDescribeDefaultAuthorizerFuture
 
 	DescribeDimension(ctx workflow.Context, input *iot.DescribeDimensionInput) (*iot.DescribeDimensionOutput, error)
-	DescribeDimensionAsync(ctx workflow.Context, input *iot.DescribeDimensionInput) *IotDescribeDimensionFuture
+	DescribeDimensionAsync(ctx workflow.Context, input *iot.DescribeDimensionInput) *IoTDescribeDimensionFuture
 
 	DescribeDomainConfiguration(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) (*iot.DescribeDomainConfigurationOutput, error)
-	DescribeDomainConfigurationAsync(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) *IotDescribeDomainConfigurationFuture
+	DescribeDomainConfigurationAsync(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) *IoTDescribeDomainConfigurationFuture
 
 	DescribeEndpoint(ctx workflow.Context, input *iot.DescribeEndpointInput) (*iot.DescribeEndpointOutput, error)
-	DescribeEndpointAsync(ctx workflow.Context, input *iot.DescribeEndpointInput) *IotDescribeEndpointFuture
+	DescribeEndpointAsync(ctx workflow.Context, input *iot.DescribeEndpointInput) *IoTDescribeEndpointFuture
 
 	DescribeEventConfigurations(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) (*iot.DescribeEventConfigurationsOutput, error)
-	DescribeEventConfigurationsAsync(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) *IotDescribeEventConfigurationsFuture
+	DescribeEventConfigurationsAsync(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) *IoTDescribeEventConfigurationsFuture
 
 	DescribeIndex(ctx workflow.Context, input *iot.DescribeIndexInput) (*iot.DescribeIndexOutput, error)
-	DescribeIndexAsync(ctx workflow.Context, input *iot.DescribeIndexInput) *IotDescribeIndexFuture
+	DescribeIndexAsync(ctx workflow.Context, input *iot.DescribeIndexInput) *IoTDescribeIndexFuture
 
 	DescribeJob(ctx workflow.Context, input *iot.DescribeJobInput) (*iot.DescribeJobOutput, error)
-	DescribeJobAsync(ctx workflow.Context, input *iot.DescribeJobInput) *IotDescribeJobFuture
+	DescribeJobAsync(ctx workflow.Context, input *iot.DescribeJobInput) *IoTDescribeJobFuture
 
 	DescribeJobExecution(ctx workflow.Context, input *iot.DescribeJobExecutionInput) (*iot.DescribeJobExecutionOutput, error)
-	DescribeJobExecutionAsync(ctx workflow.Context, input *iot.DescribeJobExecutionInput) *IotDescribeJobExecutionFuture
+	DescribeJobExecutionAsync(ctx workflow.Context, input *iot.DescribeJobExecutionInput) *IoTDescribeJobExecutionFuture
 
 	DescribeMitigationAction(ctx workflow.Context, input *iot.DescribeMitigationActionInput) (*iot.DescribeMitigationActionOutput, error)
-	DescribeMitigationActionAsync(ctx workflow.Context, input *iot.DescribeMitigationActionInput) *IotDescribeMitigationActionFuture
+	DescribeMitigationActionAsync(ctx workflow.Context, input *iot.DescribeMitigationActionInput) *IoTDescribeMitigationActionFuture
 
 	DescribeProvisioningTemplate(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) (*iot.DescribeProvisioningTemplateOutput, error)
-	DescribeProvisioningTemplateAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) *IotDescribeProvisioningTemplateFuture
+	DescribeProvisioningTemplateAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) *IoTDescribeProvisioningTemplateFuture
 
 	DescribeProvisioningTemplateVersion(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) (*iot.DescribeProvisioningTemplateVersionOutput, error)
-	DescribeProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) *IotDescribeProvisioningTemplateVersionFuture
+	DescribeProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) *IoTDescribeProvisioningTemplateVersionFuture
 
 	DescribeRoleAlias(ctx workflow.Context, input *iot.DescribeRoleAliasInput) (*iot.DescribeRoleAliasOutput, error)
-	DescribeRoleAliasAsync(ctx workflow.Context, input *iot.DescribeRoleAliasInput) *IotDescribeRoleAliasFuture
+	DescribeRoleAliasAsync(ctx workflow.Context, input *iot.DescribeRoleAliasInput) *IoTDescribeRoleAliasFuture
 
 	DescribeScheduledAudit(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) (*iot.DescribeScheduledAuditOutput, error)
-	DescribeScheduledAuditAsync(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) *IotDescribeScheduledAuditFuture
+	DescribeScheduledAuditAsync(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) *IoTDescribeScheduledAuditFuture
 
 	DescribeSecurityProfile(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) (*iot.DescribeSecurityProfileOutput, error)
-	DescribeSecurityProfileAsync(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) *IotDescribeSecurityProfileFuture
+	DescribeSecurityProfileAsync(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) *IoTDescribeSecurityProfileFuture
 
 	DescribeStream(ctx workflow.Context, input *iot.DescribeStreamInput) (*iot.DescribeStreamOutput, error)
-	DescribeStreamAsync(ctx workflow.Context, input *iot.DescribeStreamInput) *IotDescribeStreamFuture
+	DescribeStreamAsync(ctx workflow.Context, input *iot.DescribeStreamInput) *IoTDescribeStreamFuture
 
 	DescribeThing(ctx workflow.Context, input *iot.DescribeThingInput) (*iot.DescribeThingOutput, error)
-	DescribeThingAsync(ctx workflow.Context, input *iot.DescribeThingInput) *IotDescribeThingFuture
+	DescribeThingAsync(ctx workflow.Context, input *iot.DescribeThingInput) *IoTDescribeThingFuture
 
 	DescribeThingGroup(ctx workflow.Context, input *iot.DescribeThingGroupInput) (*iot.DescribeThingGroupOutput, error)
-	DescribeThingGroupAsync(ctx workflow.Context, input *iot.DescribeThingGroupInput) *IotDescribeThingGroupFuture
+	DescribeThingGroupAsync(ctx workflow.Context, input *iot.DescribeThingGroupInput) *IoTDescribeThingGroupFuture
 
 	DescribeThingRegistrationTask(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) (*iot.DescribeThingRegistrationTaskOutput, error)
-	DescribeThingRegistrationTaskAsync(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) *IotDescribeThingRegistrationTaskFuture
+	DescribeThingRegistrationTaskAsync(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) *IoTDescribeThingRegistrationTaskFuture
 
 	DescribeThingType(ctx workflow.Context, input *iot.DescribeThingTypeInput) (*iot.DescribeThingTypeOutput, error)
-	DescribeThingTypeAsync(ctx workflow.Context, input *iot.DescribeThingTypeInput) *IotDescribeThingTypeFuture
+	DescribeThingTypeAsync(ctx workflow.Context, input *iot.DescribeThingTypeInput) *IoTDescribeThingTypeFuture
 
 	DetachPolicy(ctx workflow.Context, input *iot.DetachPolicyInput) (*iot.DetachPolicyOutput, error)
-	DetachPolicyAsync(ctx workflow.Context, input *iot.DetachPolicyInput) *IotDetachPolicyFuture
+	DetachPolicyAsync(ctx workflow.Context, input *iot.DetachPolicyInput) *IoTDetachPolicyFuture
 
 	DetachPrincipalPolicy(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) (*iot.DetachPrincipalPolicyOutput, error)
-	DetachPrincipalPolicyAsync(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) *IotDetachPrincipalPolicyFuture
+	DetachPrincipalPolicyAsync(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) *IoTDetachPrincipalPolicyFuture
 
 	DetachSecurityProfile(ctx workflow.Context, input *iot.DetachSecurityProfileInput) (*iot.DetachSecurityProfileOutput, error)
-	DetachSecurityProfileAsync(ctx workflow.Context, input *iot.DetachSecurityProfileInput) *IotDetachSecurityProfileFuture
+	DetachSecurityProfileAsync(ctx workflow.Context, input *iot.DetachSecurityProfileInput) *IoTDetachSecurityProfileFuture
 
 	DetachThingPrincipal(ctx workflow.Context, input *iot.DetachThingPrincipalInput) (*iot.DetachThingPrincipalOutput, error)
-	DetachThingPrincipalAsync(ctx workflow.Context, input *iot.DetachThingPrincipalInput) *IotDetachThingPrincipalFuture
+	DetachThingPrincipalAsync(ctx workflow.Context, input *iot.DetachThingPrincipalInput) *IoTDetachThingPrincipalFuture
 
 	DisableTopicRule(ctx workflow.Context, input *iot.DisableTopicRuleInput) (*iot.DisableTopicRuleOutput, error)
-	DisableTopicRuleAsync(ctx workflow.Context, input *iot.DisableTopicRuleInput) *IotDisableTopicRuleFuture
+	DisableTopicRuleAsync(ctx workflow.Context, input *iot.DisableTopicRuleInput) *IoTDisableTopicRuleFuture
 
 	EnableTopicRule(ctx workflow.Context, input *iot.EnableTopicRuleInput) (*iot.EnableTopicRuleOutput, error)
-	EnableTopicRuleAsync(ctx workflow.Context, input *iot.EnableTopicRuleInput) *IotEnableTopicRuleFuture
+	EnableTopicRuleAsync(ctx workflow.Context, input *iot.EnableTopicRuleInput) *IoTEnableTopicRuleFuture
 
 	GetCardinality(ctx workflow.Context, input *iot.GetCardinalityInput) (*iot.GetCardinalityOutput, error)
-	GetCardinalityAsync(ctx workflow.Context, input *iot.GetCardinalityInput) *IotGetCardinalityFuture
+	GetCardinalityAsync(ctx workflow.Context, input *iot.GetCardinalityInput) *IoTGetCardinalityFuture
 
 	GetEffectivePolicies(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) (*iot.GetEffectivePoliciesOutput, error)
-	GetEffectivePoliciesAsync(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) *IotGetEffectivePoliciesFuture
+	GetEffectivePoliciesAsync(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) *IoTGetEffectivePoliciesFuture
 
 	GetIndexingConfiguration(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) (*iot.GetIndexingConfigurationOutput, error)
-	GetIndexingConfigurationAsync(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) *IotGetIndexingConfigurationFuture
+	GetIndexingConfigurationAsync(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) *IoTGetIndexingConfigurationFuture
 
 	GetJobDocument(ctx workflow.Context, input *iot.GetJobDocumentInput) (*iot.GetJobDocumentOutput, error)
-	GetJobDocumentAsync(ctx workflow.Context, input *iot.GetJobDocumentInput) *IotGetJobDocumentFuture
+	GetJobDocumentAsync(ctx workflow.Context, input *iot.GetJobDocumentInput) *IoTGetJobDocumentFuture
 
 	GetLoggingOptions(ctx workflow.Context, input *iot.GetLoggingOptionsInput) (*iot.GetLoggingOptionsOutput, error)
-	GetLoggingOptionsAsync(ctx workflow.Context, input *iot.GetLoggingOptionsInput) *IotGetLoggingOptionsFuture
+	GetLoggingOptionsAsync(ctx workflow.Context, input *iot.GetLoggingOptionsInput) *IoTGetLoggingOptionsFuture
 
 	GetOTAUpdate(ctx workflow.Context, input *iot.GetOTAUpdateInput) (*iot.GetOTAUpdateOutput, error)
-	GetOTAUpdateAsync(ctx workflow.Context, input *iot.GetOTAUpdateInput) *IotGetOTAUpdateFuture
+	GetOTAUpdateAsync(ctx workflow.Context, input *iot.GetOTAUpdateInput) *IoTGetOTAUpdateFuture
 
 	GetPercentiles(ctx workflow.Context, input *iot.GetPercentilesInput) (*iot.GetPercentilesOutput, error)
-	GetPercentilesAsync(ctx workflow.Context, input *iot.GetPercentilesInput) *IotGetPercentilesFuture
+	GetPercentilesAsync(ctx workflow.Context, input *iot.GetPercentilesInput) *IoTGetPercentilesFuture
 
 	GetPolicy(ctx workflow.Context, input *iot.GetPolicyInput) (*iot.GetPolicyOutput, error)
-	GetPolicyAsync(ctx workflow.Context, input *iot.GetPolicyInput) *IotGetPolicyFuture
+	GetPolicyAsync(ctx workflow.Context, input *iot.GetPolicyInput) *IoTGetPolicyFuture
 
 	GetPolicyVersion(ctx workflow.Context, input *iot.GetPolicyVersionInput) (*iot.GetPolicyVersionOutput, error)
-	GetPolicyVersionAsync(ctx workflow.Context, input *iot.GetPolicyVersionInput) *IotGetPolicyVersionFuture
+	GetPolicyVersionAsync(ctx workflow.Context, input *iot.GetPolicyVersionInput) *IoTGetPolicyVersionFuture
 
 	GetRegistrationCode(ctx workflow.Context, input *iot.GetRegistrationCodeInput) (*iot.GetRegistrationCodeOutput, error)
-	GetRegistrationCodeAsync(ctx workflow.Context, input *iot.GetRegistrationCodeInput) *IotGetRegistrationCodeFuture
+	GetRegistrationCodeAsync(ctx workflow.Context, input *iot.GetRegistrationCodeInput) *IoTGetRegistrationCodeFuture
 
 	GetStatistics(ctx workflow.Context, input *iot.GetStatisticsInput) (*iot.GetStatisticsOutput, error)
-	GetStatisticsAsync(ctx workflow.Context, input *iot.GetStatisticsInput) *IotGetStatisticsFuture
+	GetStatisticsAsync(ctx workflow.Context, input *iot.GetStatisticsInput) *IoTGetStatisticsFuture
 
 	GetTopicRule(ctx workflow.Context, input *iot.GetTopicRuleInput) (*iot.GetTopicRuleOutput, error)
-	GetTopicRuleAsync(ctx workflow.Context, input *iot.GetTopicRuleInput) *IotGetTopicRuleFuture
+	GetTopicRuleAsync(ctx workflow.Context, input *iot.GetTopicRuleInput) *IoTGetTopicRuleFuture
 
 	GetTopicRuleDestination(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) (*iot.GetTopicRuleDestinationOutput, error)
-	GetTopicRuleDestinationAsync(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) *IotGetTopicRuleDestinationFuture
+	GetTopicRuleDestinationAsync(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) *IoTGetTopicRuleDestinationFuture
 
 	GetV2LoggingOptions(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) (*iot.GetV2LoggingOptionsOutput, error)
-	GetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) *IotGetV2LoggingOptionsFuture
+	GetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) *IoTGetV2LoggingOptionsFuture
 
 	ListActiveViolations(ctx workflow.Context, input *iot.ListActiveViolationsInput) (*iot.ListActiveViolationsOutput, error)
-	ListActiveViolationsAsync(ctx workflow.Context, input *iot.ListActiveViolationsInput) *IotListActiveViolationsFuture
+	ListActiveViolationsAsync(ctx workflow.Context, input *iot.ListActiveViolationsInput) *IoTListActiveViolationsFuture
 
 	ListAttachedPolicies(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) (*iot.ListAttachedPoliciesOutput, error)
-	ListAttachedPoliciesAsync(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) *IotListAttachedPoliciesFuture
+	ListAttachedPoliciesAsync(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) *IoTListAttachedPoliciesFuture
 
 	ListAuditFindings(ctx workflow.Context, input *iot.ListAuditFindingsInput) (*iot.ListAuditFindingsOutput, error)
-	ListAuditFindingsAsync(ctx workflow.Context, input *iot.ListAuditFindingsInput) *IotListAuditFindingsFuture
+	ListAuditFindingsAsync(ctx workflow.Context, input *iot.ListAuditFindingsInput) *IoTListAuditFindingsFuture
 
 	ListAuditMitigationActionsExecutions(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) (*iot.ListAuditMitigationActionsExecutionsOutput, error)
-	ListAuditMitigationActionsExecutionsAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) *IotListAuditMitigationActionsExecutionsFuture
+	ListAuditMitigationActionsExecutionsAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) *IoTListAuditMitigationActionsExecutionsFuture
 
 	ListAuditMitigationActionsTasks(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) (*iot.ListAuditMitigationActionsTasksOutput, error)
-	ListAuditMitigationActionsTasksAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) *IotListAuditMitigationActionsTasksFuture
+	ListAuditMitigationActionsTasksAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) *IoTListAuditMitigationActionsTasksFuture
 
 	ListAuditSuppressions(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) (*iot.ListAuditSuppressionsOutput, error)
-	ListAuditSuppressionsAsync(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) *IotListAuditSuppressionsFuture
+	ListAuditSuppressionsAsync(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) *IoTListAuditSuppressionsFuture
 
 	ListAuditTasks(ctx workflow.Context, input *iot.ListAuditTasksInput) (*iot.ListAuditTasksOutput, error)
-	ListAuditTasksAsync(ctx workflow.Context, input *iot.ListAuditTasksInput) *IotListAuditTasksFuture
+	ListAuditTasksAsync(ctx workflow.Context, input *iot.ListAuditTasksInput) *IoTListAuditTasksFuture
 
 	ListAuthorizers(ctx workflow.Context, input *iot.ListAuthorizersInput) (*iot.ListAuthorizersOutput, error)
-	ListAuthorizersAsync(ctx workflow.Context, input *iot.ListAuthorizersInput) *IotListAuthorizersFuture
+	ListAuthorizersAsync(ctx workflow.Context, input *iot.ListAuthorizersInput) *IoTListAuthorizersFuture
 
 	ListBillingGroups(ctx workflow.Context, input *iot.ListBillingGroupsInput) (*iot.ListBillingGroupsOutput, error)
-	ListBillingGroupsAsync(ctx workflow.Context, input *iot.ListBillingGroupsInput) *IotListBillingGroupsFuture
+	ListBillingGroupsAsync(ctx workflow.Context, input *iot.ListBillingGroupsInput) *IoTListBillingGroupsFuture
 
 	ListCACertificates(ctx workflow.Context, input *iot.ListCACertificatesInput) (*iot.ListCACertificatesOutput, error)
-	ListCACertificatesAsync(ctx workflow.Context, input *iot.ListCACertificatesInput) *IotListCACertificatesFuture
+	ListCACertificatesAsync(ctx workflow.Context, input *iot.ListCACertificatesInput) *IoTListCACertificatesFuture
 
 	ListCertificates(ctx workflow.Context, input *iot.ListCertificatesInput) (*iot.ListCertificatesOutput, error)
-	ListCertificatesAsync(ctx workflow.Context, input *iot.ListCertificatesInput) *IotListCertificatesFuture
+	ListCertificatesAsync(ctx workflow.Context, input *iot.ListCertificatesInput) *IoTListCertificatesFuture
 
 	ListCertificatesByCA(ctx workflow.Context, input *iot.ListCertificatesByCAInput) (*iot.ListCertificatesByCAOutput, error)
-	ListCertificatesByCAAsync(ctx workflow.Context, input *iot.ListCertificatesByCAInput) *IotListCertificatesByCAFuture
+	ListCertificatesByCAAsync(ctx workflow.Context, input *iot.ListCertificatesByCAInput) *IoTListCertificatesByCAFuture
 
 	ListDimensions(ctx workflow.Context, input *iot.ListDimensionsInput) (*iot.ListDimensionsOutput, error)
-	ListDimensionsAsync(ctx workflow.Context, input *iot.ListDimensionsInput) *IotListDimensionsFuture
+	ListDimensionsAsync(ctx workflow.Context, input *iot.ListDimensionsInput) *IoTListDimensionsFuture
 
 	ListDomainConfigurations(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) (*iot.ListDomainConfigurationsOutput, error)
-	ListDomainConfigurationsAsync(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) *IotListDomainConfigurationsFuture
+	ListDomainConfigurationsAsync(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) *IoTListDomainConfigurationsFuture
 
 	ListIndices(ctx workflow.Context, input *iot.ListIndicesInput) (*iot.ListIndicesOutput, error)
-	ListIndicesAsync(ctx workflow.Context, input *iot.ListIndicesInput) *IotListIndicesFuture
+	ListIndicesAsync(ctx workflow.Context, input *iot.ListIndicesInput) *IoTListIndicesFuture
 
 	ListJobExecutionsForJob(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) (*iot.ListJobExecutionsForJobOutput, error)
-	ListJobExecutionsForJobAsync(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) *IotListJobExecutionsForJobFuture
+	ListJobExecutionsForJobAsync(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) *IoTListJobExecutionsForJobFuture
 
 	ListJobExecutionsForThing(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) (*iot.ListJobExecutionsForThingOutput, error)
-	ListJobExecutionsForThingAsync(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) *IotListJobExecutionsForThingFuture
+	ListJobExecutionsForThingAsync(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) *IoTListJobExecutionsForThingFuture
 
 	ListJobs(ctx workflow.Context, input *iot.ListJobsInput) (*iot.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *iot.ListJobsInput) *IotListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *iot.ListJobsInput) *IoTListJobsFuture
 
 	ListMitigationActions(ctx workflow.Context, input *iot.ListMitigationActionsInput) (*iot.ListMitigationActionsOutput, error)
-	ListMitigationActionsAsync(ctx workflow.Context, input *iot.ListMitigationActionsInput) *IotListMitigationActionsFuture
+	ListMitigationActionsAsync(ctx workflow.Context, input *iot.ListMitigationActionsInput) *IoTListMitigationActionsFuture
 
 	ListOTAUpdates(ctx workflow.Context, input *iot.ListOTAUpdatesInput) (*iot.ListOTAUpdatesOutput, error)
-	ListOTAUpdatesAsync(ctx workflow.Context, input *iot.ListOTAUpdatesInput) *IotListOTAUpdatesFuture
+	ListOTAUpdatesAsync(ctx workflow.Context, input *iot.ListOTAUpdatesInput) *IoTListOTAUpdatesFuture
 
 	ListOutgoingCertificates(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) (*iot.ListOutgoingCertificatesOutput, error)
-	ListOutgoingCertificatesAsync(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) *IotListOutgoingCertificatesFuture
+	ListOutgoingCertificatesAsync(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) *IoTListOutgoingCertificatesFuture
 
 	ListPolicies(ctx workflow.Context, input *iot.ListPoliciesInput) (*iot.ListPoliciesOutput, error)
-	ListPoliciesAsync(ctx workflow.Context, input *iot.ListPoliciesInput) *IotListPoliciesFuture
+	ListPoliciesAsync(ctx workflow.Context, input *iot.ListPoliciesInput) *IoTListPoliciesFuture
 
 	ListPolicyPrincipals(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) (*iot.ListPolicyPrincipalsOutput, error)
-	ListPolicyPrincipalsAsync(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) *IotListPolicyPrincipalsFuture
+	ListPolicyPrincipalsAsync(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) *IoTListPolicyPrincipalsFuture
 
 	ListPolicyVersions(ctx workflow.Context, input *iot.ListPolicyVersionsInput) (*iot.ListPolicyVersionsOutput, error)
-	ListPolicyVersionsAsync(ctx workflow.Context, input *iot.ListPolicyVersionsInput) *IotListPolicyVersionsFuture
+	ListPolicyVersionsAsync(ctx workflow.Context, input *iot.ListPolicyVersionsInput) *IoTListPolicyVersionsFuture
 
 	ListPrincipalPolicies(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) (*iot.ListPrincipalPoliciesOutput, error)
-	ListPrincipalPoliciesAsync(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) *IotListPrincipalPoliciesFuture
+	ListPrincipalPoliciesAsync(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) *IoTListPrincipalPoliciesFuture
 
 	ListPrincipalThings(ctx workflow.Context, input *iot.ListPrincipalThingsInput) (*iot.ListPrincipalThingsOutput, error)
-	ListPrincipalThingsAsync(ctx workflow.Context, input *iot.ListPrincipalThingsInput) *IotListPrincipalThingsFuture
+	ListPrincipalThingsAsync(ctx workflow.Context, input *iot.ListPrincipalThingsInput) *IoTListPrincipalThingsFuture
 
 	ListProvisioningTemplateVersions(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) (*iot.ListProvisioningTemplateVersionsOutput, error)
-	ListProvisioningTemplateVersionsAsync(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) *IotListProvisioningTemplateVersionsFuture
+	ListProvisioningTemplateVersionsAsync(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) *IoTListProvisioningTemplateVersionsFuture
 
 	ListProvisioningTemplates(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) (*iot.ListProvisioningTemplatesOutput, error)
-	ListProvisioningTemplatesAsync(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) *IotListProvisioningTemplatesFuture
+	ListProvisioningTemplatesAsync(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) *IoTListProvisioningTemplatesFuture
 
 	ListRoleAliases(ctx workflow.Context, input *iot.ListRoleAliasesInput) (*iot.ListRoleAliasesOutput, error)
-	ListRoleAliasesAsync(ctx workflow.Context, input *iot.ListRoleAliasesInput) *IotListRoleAliasesFuture
+	ListRoleAliasesAsync(ctx workflow.Context, input *iot.ListRoleAliasesInput) *IoTListRoleAliasesFuture
 
 	ListScheduledAudits(ctx workflow.Context, input *iot.ListScheduledAuditsInput) (*iot.ListScheduledAuditsOutput, error)
-	ListScheduledAuditsAsync(ctx workflow.Context, input *iot.ListScheduledAuditsInput) *IotListScheduledAuditsFuture
+	ListScheduledAuditsAsync(ctx workflow.Context, input *iot.ListScheduledAuditsInput) *IoTListScheduledAuditsFuture
 
 	ListSecurityProfiles(ctx workflow.Context, input *iot.ListSecurityProfilesInput) (*iot.ListSecurityProfilesOutput, error)
-	ListSecurityProfilesAsync(ctx workflow.Context, input *iot.ListSecurityProfilesInput) *IotListSecurityProfilesFuture
+	ListSecurityProfilesAsync(ctx workflow.Context, input *iot.ListSecurityProfilesInput) *IoTListSecurityProfilesFuture
 
 	ListSecurityProfilesForTarget(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) (*iot.ListSecurityProfilesForTargetOutput, error)
-	ListSecurityProfilesForTargetAsync(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) *IotListSecurityProfilesForTargetFuture
+	ListSecurityProfilesForTargetAsync(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) *IoTListSecurityProfilesForTargetFuture
 
 	ListStreams(ctx workflow.Context, input *iot.ListStreamsInput) (*iot.ListStreamsOutput, error)
-	ListStreamsAsync(ctx workflow.Context, input *iot.ListStreamsInput) *IotListStreamsFuture
+	ListStreamsAsync(ctx workflow.Context, input *iot.ListStreamsInput) *IoTListStreamsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iot.ListTagsForResourceInput) (*iot.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iot.ListTagsForResourceInput) *IotListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *iot.ListTagsForResourceInput) *IoTListTagsForResourceFuture
 
 	ListTargetsForPolicy(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) (*iot.ListTargetsForPolicyOutput, error)
-	ListTargetsForPolicyAsync(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) *IotListTargetsForPolicyFuture
+	ListTargetsForPolicyAsync(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) *IoTListTargetsForPolicyFuture
 
 	ListTargetsForSecurityProfile(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) (*iot.ListTargetsForSecurityProfileOutput, error)
-	ListTargetsForSecurityProfileAsync(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) *IotListTargetsForSecurityProfileFuture
+	ListTargetsForSecurityProfileAsync(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) *IoTListTargetsForSecurityProfileFuture
 
 	ListThingGroups(ctx workflow.Context, input *iot.ListThingGroupsInput) (*iot.ListThingGroupsOutput, error)
-	ListThingGroupsAsync(ctx workflow.Context, input *iot.ListThingGroupsInput) *IotListThingGroupsFuture
+	ListThingGroupsAsync(ctx workflow.Context, input *iot.ListThingGroupsInput) *IoTListThingGroupsFuture
 
 	ListThingGroupsForThing(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) (*iot.ListThingGroupsForThingOutput, error)
-	ListThingGroupsForThingAsync(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) *IotListThingGroupsForThingFuture
+	ListThingGroupsForThingAsync(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) *IoTListThingGroupsForThingFuture
 
 	ListThingPrincipals(ctx workflow.Context, input *iot.ListThingPrincipalsInput) (*iot.ListThingPrincipalsOutput, error)
-	ListThingPrincipalsAsync(ctx workflow.Context, input *iot.ListThingPrincipalsInput) *IotListThingPrincipalsFuture
+	ListThingPrincipalsAsync(ctx workflow.Context, input *iot.ListThingPrincipalsInput) *IoTListThingPrincipalsFuture
 
 	ListThingRegistrationTaskReports(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) (*iot.ListThingRegistrationTaskReportsOutput, error)
-	ListThingRegistrationTaskReportsAsync(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) *IotListThingRegistrationTaskReportsFuture
+	ListThingRegistrationTaskReportsAsync(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) *IoTListThingRegistrationTaskReportsFuture
 
 	ListThingRegistrationTasks(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) (*iot.ListThingRegistrationTasksOutput, error)
-	ListThingRegistrationTasksAsync(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) *IotListThingRegistrationTasksFuture
+	ListThingRegistrationTasksAsync(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) *IoTListThingRegistrationTasksFuture
 
 	ListThingTypes(ctx workflow.Context, input *iot.ListThingTypesInput) (*iot.ListThingTypesOutput, error)
-	ListThingTypesAsync(ctx workflow.Context, input *iot.ListThingTypesInput) *IotListThingTypesFuture
+	ListThingTypesAsync(ctx workflow.Context, input *iot.ListThingTypesInput) *IoTListThingTypesFuture
 
 	ListThings(ctx workflow.Context, input *iot.ListThingsInput) (*iot.ListThingsOutput, error)
-	ListThingsAsync(ctx workflow.Context, input *iot.ListThingsInput) *IotListThingsFuture
+	ListThingsAsync(ctx workflow.Context, input *iot.ListThingsInput) *IoTListThingsFuture
 
 	ListThingsInBillingGroup(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) (*iot.ListThingsInBillingGroupOutput, error)
-	ListThingsInBillingGroupAsync(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) *IotListThingsInBillingGroupFuture
+	ListThingsInBillingGroupAsync(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) *IoTListThingsInBillingGroupFuture
 
 	ListThingsInThingGroup(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) (*iot.ListThingsInThingGroupOutput, error)
-	ListThingsInThingGroupAsync(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) *IotListThingsInThingGroupFuture
+	ListThingsInThingGroupAsync(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) *IoTListThingsInThingGroupFuture
 
 	ListTopicRuleDestinations(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) (*iot.ListTopicRuleDestinationsOutput, error)
-	ListTopicRuleDestinationsAsync(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) *IotListTopicRuleDestinationsFuture
+	ListTopicRuleDestinationsAsync(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) *IoTListTopicRuleDestinationsFuture
 
 	ListTopicRules(ctx workflow.Context, input *iot.ListTopicRulesInput) (*iot.ListTopicRulesOutput, error)
-	ListTopicRulesAsync(ctx workflow.Context, input *iot.ListTopicRulesInput) *IotListTopicRulesFuture
+	ListTopicRulesAsync(ctx workflow.Context, input *iot.ListTopicRulesInput) *IoTListTopicRulesFuture
 
 	ListV2LoggingLevels(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) (*iot.ListV2LoggingLevelsOutput, error)
-	ListV2LoggingLevelsAsync(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) *IotListV2LoggingLevelsFuture
+	ListV2LoggingLevelsAsync(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) *IoTListV2LoggingLevelsFuture
 
 	ListViolationEvents(ctx workflow.Context, input *iot.ListViolationEventsInput) (*iot.ListViolationEventsOutput, error)
-	ListViolationEventsAsync(ctx workflow.Context, input *iot.ListViolationEventsInput) *IotListViolationEventsFuture
+	ListViolationEventsAsync(ctx workflow.Context, input *iot.ListViolationEventsInput) *IoTListViolationEventsFuture
 
 	RegisterCACertificate(ctx workflow.Context, input *iot.RegisterCACertificateInput) (*iot.RegisterCACertificateOutput, error)
-	RegisterCACertificateAsync(ctx workflow.Context, input *iot.RegisterCACertificateInput) *IotRegisterCACertificateFuture
+	RegisterCACertificateAsync(ctx workflow.Context, input *iot.RegisterCACertificateInput) *IoTRegisterCACertificateFuture
 
 	RegisterCertificate(ctx workflow.Context, input *iot.RegisterCertificateInput) (*iot.RegisterCertificateOutput, error)
-	RegisterCertificateAsync(ctx workflow.Context, input *iot.RegisterCertificateInput) *IotRegisterCertificateFuture
+	RegisterCertificateAsync(ctx workflow.Context, input *iot.RegisterCertificateInput) *IoTRegisterCertificateFuture
 
 	RegisterCertificateWithoutCA(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) (*iot.RegisterCertificateWithoutCAOutput, error)
-	RegisterCertificateWithoutCAAsync(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) *IotRegisterCertificateWithoutCAFuture
+	RegisterCertificateWithoutCAAsync(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) *IoTRegisterCertificateWithoutCAFuture
 
 	RegisterThing(ctx workflow.Context, input *iot.RegisterThingInput) (*iot.RegisterThingOutput, error)
-	RegisterThingAsync(ctx workflow.Context, input *iot.RegisterThingInput) *IotRegisterThingFuture
+	RegisterThingAsync(ctx workflow.Context, input *iot.RegisterThingInput) *IoTRegisterThingFuture
 
 	RejectCertificateTransfer(ctx workflow.Context, input *iot.RejectCertificateTransferInput) (*iot.RejectCertificateTransferOutput, error)
-	RejectCertificateTransferAsync(ctx workflow.Context, input *iot.RejectCertificateTransferInput) *IotRejectCertificateTransferFuture
+	RejectCertificateTransferAsync(ctx workflow.Context, input *iot.RejectCertificateTransferInput) *IoTRejectCertificateTransferFuture
 
 	RemoveThingFromBillingGroup(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) (*iot.RemoveThingFromBillingGroupOutput, error)
-	RemoveThingFromBillingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) *IotRemoveThingFromBillingGroupFuture
+	RemoveThingFromBillingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) *IoTRemoveThingFromBillingGroupFuture
 
 	RemoveThingFromThingGroup(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) (*iot.RemoveThingFromThingGroupOutput, error)
-	RemoveThingFromThingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) *IotRemoveThingFromThingGroupFuture
+	RemoveThingFromThingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) *IoTRemoveThingFromThingGroupFuture
 
 	ReplaceTopicRule(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) (*iot.ReplaceTopicRuleOutput, error)
-	ReplaceTopicRuleAsync(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) *IotReplaceTopicRuleFuture
+	ReplaceTopicRuleAsync(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) *IoTReplaceTopicRuleFuture
 
 	SearchIndex(ctx workflow.Context, input *iot.SearchIndexInput) (*iot.SearchIndexOutput, error)
-	SearchIndexAsync(ctx workflow.Context, input *iot.SearchIndexInput) *IotSearchIndexFuture
+	SearchIndexAsync(ctx workflow.Context, input *iot.SearchIndexInput) *IoTSearchIndexFuture
 
 	SetDefaultAuthorizer(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) (*iot.SetDefaultAuthorizerOutput, error)
-	SetDefaultAuthorizerAsync(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) *IotSetDefaultAuthorizerFuture
+	SetDefaultAuthorizerAsync(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) *IoTSetDefaultAuthorizerFuture
 
 	SetDefaultPolicyVersion(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) (*iot.SetDefaultPolicyVersionOutput, error)
-	SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) *IotSetDefaultPolicyVersionFuture
+	SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) *IoTSetDefaultPolicyVersionFuture
 
 	SetLoggingOptions(ctx workflow.Context, input *iot.SetLoggingOptionsInput) (*iot.SetLoggingOptionsOutput, error)
-	SetLoggingOptionsAsync(ctx workflow.Context, input *iot.SetLoggingOptionsInput) *IotSetLoggingOptionsFuture
+	SetLoggingOptionsAsync(ctx workflow.Context, input *iot.SetLoggingOptionsInput) *IoTSetLoggingOptionsFuture
 
 	SetV2LoggingLevel(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) (*iot.SetV2LoggingLevelOutput, error)
-	SetV2LoggingLevelAsync(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) *IotSetV2LoggingLevelFuture
+	SetV2LoggingLevelAsync(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) *IoTSetV2LoggingLevelFuture
 
 	SetV2LoggingOptions(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) (*iot.SetV2LoggingOptionsOutput, error)
-	SetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) *IotSetV2LoggingOptionsFuture
+	SetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) *IoTSetV2LoggingOptionsFuture
 
 	StartAuditMitigationActionsTask(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) (*iot.StartAuditMitigationActionsTaskOutput, error)
-	StartAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) *IotStartAuditMitigationActionsTaskFuture
+	StartAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) *IoTStartAuditMitigationActionsTaskFuture
 
 	StartOnDemandAuditTask(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) (*iot.StartOnDemandAuditTaskOutput, error)
-	StartOnDemandAuditTaskAsync(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) *IotStartOnDemandAuditTaskFuture
+	StartOnDemandAuditTaskAsync(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) *IoTStartOnDemandAuditTaskFuture
 
 	StartThingRegistrationTask(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) (*iot.StartThingRegistrationTaskOutput, error)
-	StartThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) *IotStartThingRegistrationTaskFuture
+	StartThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) *IoTStartThingRegistrationTaskFuture
 
 	StopThingRegistrationTask(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) (*iot.StopThingRegistrationTaskOutput, error)
-	StopThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) *IotStopThingRegistrationTaskFuture
+	StopThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) *IoTStopThingRegistrationTaskFuture
 
 	TagResource(ctx workflow.Context, input *iot.TagResourceInput) (*iot.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iot.TagResourceInput) *IotTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *iot.TagResourceInput) *IoTTagResourceFuture
 
 	TestAuthorization(ctx workflow.Context, input *iot.TestAuthorizationInput) (*iot.TestAuthorizationOutput, error)
-	TestAuthorizationAsync(ctx workflow.Context, input *iot.TestAuthorizationInput) *IotTestAuthorizationFuture
+	TestAuthorizationAsync(ctx workflow.Context, input *iot.TestAuthorizationInput) *IoTTestAuthorizationFuture
 
 	TestInvokeAuthorizer(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) (*iot.TestInvokeAuthorizerOutput, error)
-	TestInvokeAuthorizerAsync(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) *IotTestInvokeAuthorizerFuture
+	TestInvokeAuthorizerAsync(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) *IoTTestInvokeAuthorizerFuture
 
 	TransferCertificate(ctx workflow.Context, input *iot.TransferCertificateInput) (*iot.TransferCertificateOutput, error)
-	TransferCertificateAsync(ctx workflow.Context, input *iot.TransferCertificateInput) *IotTransferCertificateFuture
+	TransferCertificateAsync(ctx workflow.Context, input *iot.TransferCertificateInput) *IoTTransferCertificateFuture
 
 	UntagResource(ctx workflow.Context, input *iot.UntagResourceInput) (*iot.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iot.UntagResourceInput) *IotUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *iot.UntagResourceInput) *IoTUntagResourceFuture
 
 	UpdateAccountAuditConfiguration(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) (*iot.UpdateAccountAuditConfigurationOutput, error)
-	UpdateAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) *IotUpdateAccountAuditConfigurationFuture
+	UpdateAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) *IoTUpdateAccountAuditConfigurationFuture
 
 	UpdateAuditSuppression(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) (*iot.UpdateAuditSuppressionOutput, error)
-	UpdateAuditSuppressionAsync(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) *IotUpdateAuditSuppressionFuture
+	UpdateAuditSuppressionAsync(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) *IoTUpdateAuditSuppressionFuture
 
 	UpdateAuthorizer(ctx workflow.Context, input *iot.UpdateAuthorizerInput) (*iot.UpdateAuthorizerOutput, error)
-	UpdateAuthorizerAsync(ctx workflow.Context, input *iot.UpdateAuthorizerInput) *IotUpdateAuthorizerFuture
+	UpdateAuthorizerAsync(ctx workflow.Context, input *iot.UpdateAuthorizerInput) *IoTUpdateAuthorizerFuture
 
 	UpdateBillingGroup(ctx workflow.Context, input *iot.UpdateBillingGroupInput) (*iot.UpdateBillingGroupOutput, error)
-	UpdateBillingGroupAsync(ctx workflow.Context, input *iot.UpdateBillingGroupInput) *IotUpdateBillingGroupFuture
+	UpdateBillingGroupAsync(ctx workflow.Context, input *iot.UpdateBillingGroupInput) *IoTUpdateBillingGroupFuture
 
 	UpdateCACertificate(ctx workflow.Context, input *iot.UpdateCACertificateInput) (*iot.UpdateCACertificateOutput, error)
-	UpdateCACertificateAsync(ctx workflow.Context, input *iot.UpdateCACertificateInput) *IotUpdateCACertificateFuture
+	UpdateCACertificateAsync(ctx workflow.Context, input *iot.UpdateCACertificateInput) *IoTUpdateCACertificateFuture
 
 	UpdateCertificate(ctx workflow.Context, input *iot.UpdateCertificateInput) (*iot.UpdateCertificateOutput, error)
-	UpdateCertificateAsync(ctx workflow.Context, input *iot.UpdateCertificateInput) *IotUpdateCertificateFuture
+	UpdateCertificateAsync(ctx workflow.Context, input *iot.UpdateCertificateInput) *IoTUpdateCertificateFuture
 
 	UpdateDimension(ctx workflow.Context, input *iot.UpdateDimensionInput) (*iot.UpdateDimensionOutput, error)
-	UpdateDimensionAsync(ctx workflow.Context, input *iot.UpdateDimensionInput) *IotUpdateDimensionFuture
+	UpdateDimensionAsync(ctx workflow.Context, input *iot.UpdateDimensionInput) *IoTUpdateDimensionFuture
 
 	UpdateDomainConfiguration(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) (*iot.UpdateDomainConfigurationOutput, error)
-	UpdateDomainConfigurationAsync(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) *IotUpdateDomainConfigurationFuture
+	UpdateDomainConfigurationAsync(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) *IoTUpdateDomainConfigurationFuture
 
 	UpdateDynamicThingGroup(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) (*iot.UpdateDynamicThingGroupOutput, error)
-	UpdateDynamicThingGroupAsync(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) *IotUpdateDynamicThingGroupFuture
+	UpdateDynamicThingGroupAsync(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) *IoTUpdateDynamicThingGroupFuture
 
 	UpdateEventConfigurations(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) (*iot.UpdateEventConfigurationsOutput, error)
-	UpdateEventConfigurationsAsync(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) *IotUpdateEventConfigurationsFuture
+	UpdateEventConfigurationsAsync(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) *IoTUpdateEventConfigurationsFuture
 
 	UpdateIndexingConfiguration(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) (*iot.UpdateIndexingConfigurationOutput, error)
-	UpdateIndexingConfigurationAsync(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) *IotUpdateIndexingConfigurationFuture
+	UpdateIndexingConfigurationAsync(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) *IoTUpdateIndexingConfigurationFuture
 
 	UpdateJob(ctx workflow.Context, input *iot.UpdateJobInput) (*iot.UpdateJobOutput, error)
-	UpdateJobAsync(ctx workflow.Context, input *iot.UpdateJobInput) *IotUpdateJobFuture
+	UpdateJobAsync(ctx workflow.Context, input *iot.UpdateJobInput) *IoTUpdateJobFuture
 
 	UpdateMitigationAction(ctx workflow.Context, input *iot.UpdateMitigationActionInput) (*iot.UpdateMitigationActionOutput, error)
-	UpdateMitigationActionAsync(ctx workflow.Context, input *iot.UpdateMitigationActionInput) *IotUpdateMitigationActionFuture
+	UpdateMitigationActionAsync(ctx workflow.Context, input *iot.UpdateMitigationActionInput) *IoTUpdateMitigationActionFuture
 
 	UpdateProvisioningTemplate(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) (*iot.UpdateProvisioningTemplateOutput, error)
-	UpdateProvisioningTemplateAsync(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) *IotUpdateProvisioningTemplateFuture
+	UpdateProvisioningTemplateAsync(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) *IoTUpdateProvisioningTemplateFuture
 
 	UpdateRoleAlias(ctx workflow.Context, input *iot.UpdateRoleAliasInput) (*iot.UpdateRoleAliasOutput, error)
-	UpdateRoleAliasAsync(ctx workflow.Context, input *iot.UpdateRoleAliasInput) *IotUpdateRoleAliasFuture
+	UpdateRoleAliasAsync(ctx workflow.Context, input *iot.UpdateRoleAliasInput) *IoTUpdateRoleAliasFuture
 
 	UpdateScheduledAudit(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) (*iot.UpdateScheduledAuditOutput, error)
-	UpdateScheduledAuditAsync(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) *IotUpdateScheduledAuditFuture
+	UpdateScheduledAuditAsync(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) *IoTUpdateScheduledAuditFuture
 
 	UpdateSecurityProfile(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) (*iot.UpdateSecurityProfileOutput, error)
-	UpdateSecurityProfileAsync(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) *IotUpdateSecurityProfileFuture
+	UpdateSecurityProfileAsync(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) *IoTUpdateSecurityProfileFuture
 
 	UpdateStream(ctx workflow.Context, input *iot.UpdateStreamInput) (*iot.UpdateStreamOutput, error)
-	UpdateStreamAsync(ctx workflow.Context, input *iot.UpdateStreamInput) *IotUpdateStreamFuture
+	UpdateStreamAsync(ctx workflow.Context, input *iot.UpdateStreamInput) *IoTUpdateStreamFuture
 
 	UpdateThing(ctx workflow.Context, input *iot.UpdateThingInput) (*iot.UpdateThingOutput, error)
-	UpdateThingAsync(ctx workflow.Context, input *iot.UpdateThingInput) *IotUpdateThingFuture
+	UpdateThingAsync(ctx workflow.Context, input *iot.UpdateThingInput) *IoTUpdateThingFuture
 
 	UpdateThingGroup(ctx workflow.Context, input *iot.UpdateThingGroupInput) (*iot.UpdateThingGroupOutput, error)
-	UpdateThingGroupAsync(ctx workflow.Context, input *iot.UpdateThingGroupInput) *IotUpdateThingGroupFuture
+	UpdateThingGroupAsync(ctx workflow.Context, input *iot.UpdateThingGroupInput) *IoTUpdateThingGroupFuture
 
 	UpdateThingGroupsForThing(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) (*iot.UpdateThingGroupsForThingOutput, error)
-	UpdateThingGroupsForThingAsync(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) *IotUpdateThingGroupsForThingFuture
+	UpdateThingGroupsForThingAsync(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) *IoTUpdateThingGroupsForThingFuture
 
 	UpdateTopicRuleDestination(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) (*iot.UpdateTopicRuleDestinationOutput, error)
-	UpdateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) *IotUpdateTopicRuleDestinationFuture
+	UpdateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) *IoTUpdateTopicRuleDestinationFuture
 
 	ValidateSecurityProfileBehaviors(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) (*iot.ValidateSecurityProfileBehaviorsOutput, error)
-	ValidateSecurityProfileBehaviorsAsync(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) *IotValidateSecurityProfileBehaviorsFuture
+	ValidateSecurityProfileBehaviorsAsync(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) *IoTValidateSecurityProfileBehaviorsFuture
 }
 
 type IoTStub struct{}
@@ -653,2121 +653,2333 @@ func NewIoTStub() IoTClient {
 	return &IoTStub{}
 }
 
-type IotAcceptCertificateTransferFuture struct {
+type IoTAcceptCertificateTransferFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotAcceptCertificateTransferFuture) Get(ctx workflow.Context) (*iot.AcceptCertificateTransferOutput, error) {
+func (r *IoTAcceptCertificateTransferFuture) Get(ctx workflow.Context) (*iot.AcceptCertificateTransferOutput, error) {
 	var output iot.AcceptCertificateTransferOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotAddThingToBillingGroupFuture struct {
+type IoTAddThingToBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotAddThingToBillingGroupFuture) Get(ctx workflow.Context) (*iot.AddThingToBillingGroupOutput, error) {
+func (r *IoTAddThingToBillingGroupFuture) Get(ctx workflow.Context) (*iot.AddThingToBillingGroupOutput, error) {
 	var output iot.AddThingToBillingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotAddThingToThingGroupFuture struct {
+type IoTAddThingToThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotAddThingToThingGroupFuture) Get(ctx workflow.Context) (*iot.AddThingToThingGroupOutput, error) {
+func (r *IoTAddThingToThingGroupFuture) Get(ctx workflow.Context) (*iot.AddThingToThingGroupOutput, error) {
 	var output iot.AddThingToThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotAssociateTargetsWithJobFuture struct {
+type IoTAssociateTargetsWithJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotAssociateTargetsWithJobFuture) Get(ctx workflow.Context) (*iot.AssociateTargetsWithJobOutput, error) {
+func (r *IoTAssociateTargetsWithJobFuture) Get(ctx workflow.Context) (*iot.AssociateTargetsWithJobOutput, error) {
 	var output iot.AssociateTargetsWithJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotAttachPolicyFuture struct {
+type IoTAttachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotAttachPolicyFuture) Get(ctx workflow.Context) (*iot.AttachPolicyOutput, error) {
+func (r *IoTAttachPolicyFuture) Get(ctx workflow.Context) (*iot.AttachPolicyOutput, error) {
 	var output iot.AttachPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotAttachPrincipalPolicyFuture struct {
+type IoTAttachPrincipalPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotAttachPrincipalPolicyFuture) Get(ctx workflow.Context) (*iot.AttachPrincipalPolicyOutput, error) {
+func (r *IoTAttachPrincipalPolicyFuture) Get(ctx workflow.Context) (*iot.AttachPrincipalPolicyOutput, error) {
 	var output iot.AttachPrincipalPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotAttachSecurityProfileFuture struct {
+type IoTAttachSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotAttachSecurityProfileFuture) Get(ctx workflow.Context) (*iot.AttachSecurityProfileOutput, error) {
+func (r *IoTAttachSecurityProfileFuture) Get(ctx workflow.Context) (*iot.AttachSecurityProfileOutput, error) {
 	var output iot.AttachSecurityProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotAttachThingPrincipalFuture struct {
+type IoTAttachThingPrincipalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotAttachThingPrincipalFuture) Get(ctx workflow.Context) (*iot.AttachThingPrincipalOutput, error) {
+func (r *IoTAttachThingPrincipalFuture) Get(ctx workflow.Context) (*iot.AttachThingPrincipalOutput, error) {
 	var output iot.AttachThingPrincipalOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCancelAuditMitigationActionsTaskFuture struct {
+type IoTCancelAuditMitigationActionsTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCancelAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) (*iot.CancelAuditMitigationActionsTaskOutput, error) {
+func (r *IoTCancelAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) (*iot.CancelAuditMitigationActionsTaskOutput, error) {
 	var output iot.CancelAuditMitigationActionsTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCancelAuditTaskFuture struct {
+type IoTCancelAuditTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCancelAuditTaskFuture) Get(ctx workflow.Context) (*iot.CancelAuditTaskOutput, error) {
+func (r *IoTCancelAuditTaskFuture) Get(ctx workflow.Context) (*iot.CancelAuditTaskOutput, error) {
 	var output iot.CancelAuditTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCancelCertificateTransferFuture struct {
+type IoTCancelCertificateTransferFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCancelCertificateTransferFuture) Get(ctx workflow.Context) (*iot.CancelCertificateTransferOutput, error) {
+func (r *IoTCancelCertificateTransferFuture) Get(ctx workflow.Context) (*iot.CancelCertificateTransferOutput, error) {
 	var output iot.CancelCertificateTransferOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCancelJobFuture struct {
+type IoTCancelJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCancelJobFuture) Get(ctx workflow.Context) (*iot.CancelJobOutput, error) {
+func (r *IoTCancelJobFuture) Get(ctx workflow.Context) (*iot.CancelJobOutput, error) {
 	var output iot.CancelJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCancelJobExecutionFuture struct {
+type IoTCancelJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCancelJobExecutionFuture) Get(ctx workflow.Context) (*iot.CancelJobExecutionOutput, error) {
+func (r *IoTCancelJobExecutionFuture) Get(ctx workflow.Context) (*iot.CancelJobExecutionOutput, error) {
 	var output iot.CancelJobExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotClearDefaultAuthorizerFuture struct {
+type IoTClearDefaultAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotClearDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.ClearDefaultAuthorizerOutput, error) {
+func (r *IoTClearDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.ClearDefaultAuthorizerOutput, error) {
 	var output iot.ClearDefaultAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotConfirmTopicRuleDestinationFuture struct {
+type IoTConfirmTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotConfirmTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.ConfirmTopicRuleDestinationOutput, error) {
+func (r *IoTConfirmTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.ConfirmTopicRuleDestinationOutput, error) {
 	var output iot.ConfirmTopicRuleDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateAuditSuppressionFuture struct {
+type IoTCreateAuditSuppressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.CreateAuditSuppressionOutput, error) {
+func (r *IoTCreateAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.CreateAuditSuppressionOutput, error) {
 	var output iot.CreateAuditSuppressionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateAuthorizerFuture struct {
+type IoTCreateAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateAuthorizerFuture) Get(ctx workflow.Context) (*iot.CreateAuthorizerOutput, error) {
+func (r *IoTCreateAuthorizerFuture) Get(ctx workflow.Context) (*iot.CreateAuthorizerOutput, error) {
 	var output iot.CreateAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateBillingGroupFuture struct {
+type IoTCreateBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateBillingGroupFuture) Get(ctx workflow.Context) (*iot.CreateBillingGroupOutput, error) {
+func (r *IoTCreateBillingGroupFuture) Get(ctx workflow.Context) (*iot.CreateBillingGroupOutput, error) {
 	var output iot.CreateBillingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateCertificateFromCsrFuture struct {
+type IoTCreateCertificateFromCsrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateCertificateFromCsrFuture) Get(ctx workflow.Context) (*iot.CreateCertificateFromCsrOutput, error) {
+func (r *IoTCreateCertificateFromCsrFuture) Get(ctx workflow.Context) (*iot.CreateCertificateFromCsrOutput, error) {
 	var output iot.CreateCertificateFromCsrOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateDimensionFuture struct {
+type IoTCreateDimensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateDimensionFuture) Get(ctx workflow.Context) (*iot.CreateDimensionOutput, error) {
+func (r *IoTCreateDimensionFuture) Get(ctx workflow.Context) (*iot.CreateDimensionOutput, error) {
 	var output iot.CreateDimensionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateDomainConfigurationFuture struct {
+type IoTCreateDomainConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.CreateDomainConfigurationOutput, error) {
+func (r *IoTCreateDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.CreateDomainConfigurationOutput, error) {
 	var output iot.CreateDomainConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateDynamicThingGroupFuture struct {
+type IoTCreateDynamicThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.CreateDynamicThingGroupOutput, error) {
+func (r *IoTCreateDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.CreateDynamicThingGroupOutput, error) {
 	var output iot.CreateDynamicThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateJobFuture struct {
+type IoTCreateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateJobFuture) Get(ctx workflow.Context) (*iot.CreateJobOutput, error) {
+func (r *IoTCreateJobFuture) Get(ctx workflow.Context) (*iot.CreateJobOutput, error) {
 	var output iot.CreateJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateKeysAndCertificateFuture struct {
+type IoTCreateKeysAndCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateKeysAndCertificateFuture) Get(ctx workflow.Context) (*iot.CreateKeysAndCertificateOutput, error) {
+func (r *IoTCreateKeysAndCertificateFuture) Get(ctx workflow.Context) (*iot.CreateKeysAndCertificateOutput, error) {
 	var output iot.CreateKeysAndCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateMitigationActionFuture struct {
+type IoTCreateMitigationActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateMitigationActionFuture) Get(ctx workflow.Context) (*iot.CreateMitigationActionOutput, error) {
+func (r *IoTCreateMitigationActionFuture) Get(ctx workflow.Context) (*iot.CreateMitigationActionOutput, error) {
 	var output iot.CreateMitigationActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateOTAUpdateFuture struct {
+type IoTCreateOTAUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateOTAUpdateFuture) Get(ctx workflow.Context) (*iot.CreateOTAUpdateOutput, error) {
+func (r *IoTCreateOTAUpdateFuture) Get(ctx workflow.Context) (*iot.CreateOTAUpdateOutput, error) {
 	var output iot.CreateOTAUpdateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreatePolicyFuture struct {
+type IoTCreatePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreatePolicyFuture) Get(ctx workflow.Context) (*iot.CreatePolicyOutput, error) {
+func (r *IoTCreatePolicyFuture) Get(ctx workflow.Context) (*iot.CreatePolicyOutput, error) {
 	var output iot.CreatePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreatePolicyVersionFuture struct {
+type IoTCreatePolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreatePolicyVersionFuture) Get(ctx workflow.Context) (*iot.CreatePolicyVersionOutput, error) {
+func (r *IoTCreatePolicyVersionFuture) Get(ctx workflow.Context) (*iot.CreatePolicyVersionOutput, error) {
 	var output iot.CreatePolicyVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateProvisioningClaimFuture struct {
+type IoTCreateProvisioningClaimFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateProvisioningClaimFuture) Get(ctx workflow.Context) (*iot.CreateProvisioningClaimOutput, error) {
+func (r *IoTCreateProvisioningClaimFuture) Get(ctx workflow.Context) (*iot.CreateProvisioningClaimOutput, error) {
 	var output iot.CreateProvisioningClaimOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateProvisioningTemplateFuture struct {
+type IoTCreateProvisioningTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.CreateProvisioningTemplateOutput, error) {
+func (r *IoTCreateProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.CreateProvisioningTemplateOutput, error) {
 	var output iot.CreateProvisioningTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateProvisioningTemplateVersionFuture struct {
+type IoTCreateProvisioningTemplateVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateProvisioningTemplateVersionFuture) Get(ctx workflow.Context) (*iot.CreateProvisioningTemplateVersionOutput, error) {
+func (r *IoTCreateProvisioningTemplateVersionFuture) Get(ctx workflow.Context) (*iot.CreateProvisioningTemplateVersionOutput, error) {
 	var output iot.CreateProvisioningTemplateVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateRoleAliasFuture struct {
+type IoTCreateRoleAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateRoleAliasFuture) Get(ctx workflow.Context) (*iot.CreateRoleAliasOutput, error) {
+func (r *IoTCreateRoleAliasFuture) Get(ctx workflow.Context) (*iot.CreateRoleAliasOutput, error) {
 	var output iot.CreateRoleAliasOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateScheduledAuditFuture struct {
+type IoTCreateScheduledAuditFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateScheduledAuditFuture) Get(ctx workflow.Context) (*iot.CreateScheduledAuditOutput, error) {
+func (r *IoTCreateScheduledAuditFuture) Get(ctx workflow.Context) (*iot.CreateScheduledAuditOutput, error) {
 	var output iot.CreateScheduledAuditOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateSecurityProfileFuture struct {
+type IoTCreateSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateSecurityProfileFuture) Get(ctx workflow.Context) (*iot.CreateSecurityProfileOutput, error) {
+func (r *IoTCreateSecurityProfileFuture) Get(ctx workflow.Context) (*iot.CreateSecurityProfileOutput, error) {
 	var output iot.CreateSecurityProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateStreamFuture struct {
+type IoTCreateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateStreamFuture) Get(ctx workflow.Context) (*iot.CreateStreamOutput, error) {
+func (r *IoTCreateStreamFuture) Get(ctx workflow.Context) (*iot.CreateStreamOutput, error) {
 	var output iot.CreateStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateThingFuture struct {
+type IoTCreateThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateThingFuture) Get(ctx workflow.Context) (*iot.CreateThingOutput, error) {
+func (r *IoTCreateThingFuture) Get(ctx workflow.Context) (*iot.CreateThingOutput, error) {
 	var output iot.CreateThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateThingGroupFuture struct {
+type IoTCreateThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateThingGroupFuture) Get(ctx workflow.Context) (*iot.CreateThingGroupOutput, error) {
+func (r *IoTCreateThingGroupFuture) Get(ctx workflow.Context) (*iot.CreateThingGroupOutput, error) {
 	var output iot.CreateThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateThingTypeFuture struct {
+type IoTCreateThingTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateThingTypeFuture) Get(ctx workflow.Context) (*iot.CreateThingTypeOutput, error) {
+func (r *IoTCreateThingTypeFuture) Get(ctx workflow.Context) (*iot.CreateThingTypeOutput, error) {
 	var output iot.CreateThingTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateTopicRuleFuture struct {
+type IoTCreateTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateTopicRuleFuture) Get(ctx workflow.Context) (*iot.CreateTopicRuleOutput, error) {
+func (r *IoTCreateTopicRuleFuture) Get(ctx workflow.Context) (*iot.CreateTopicRuleOutput, error) {
 	var output iot.CreateTopicRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotCreateTopicRuleDestinationFuture struct {
+type IoTCreateTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotCreateTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.CreateTopicRuleDestinationOutput, error) {
+func (r *IoTCreateTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.CreateTopicRuleDestinationOutput, error) {
 	var output iot.CreateTopicRuleDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteAccountAuditConfigurationFuture struct {
+type IoTDeleteAccountAuditConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteAccountAuditConfigurationFuture) Get(ctx workflow.Context) (*iot.DeleteAccountAuditConfigurationOutput, error) {
+func (r *IoTDeleteAccountAuditConfigurationFuture) Get(ctx workflow.Context) (*iot.DeleteAccountAuditConfigurationOutput, error) {
 	var output iot.DeleteAccountAuditConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteAuditSuppressionFuture struct {
+type IoTDeleteAuditSuppressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.DeleteAuditSuppressionOutput, error) {
+func (r *IoTDeleteAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.DeleteAuditSuppressionOutput, error) {
 	var output iot.DeleteAuditSuppressionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteAuthorizerFuture struct {
+type IoTDeleteAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteAuthorizerFuture) Get(ctx workflow.Context) (*iot.DeleteAuthorizerOutput, error) {
+func (r *IoTDeleteAuthorizerFuture) Get(ctx workflow.Context) (*iot.DeleteAuthorizerOutput, error) {
 	var output iot.DeleteAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteBillingGroupFuture struct {
+type IoTDeleteBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteBillingGroupFuture) Get(ctx workflow.Context) (*iot.DeleteBillingGroupOutput, error) {
+func (r *IoTDeleteBillingGroupFuture) Get(ctx workflow.Context) (*iot.DeleteBillingGroupOutput, error) {
 	var output iot.DeleteBillingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteCACertificateFuture struct {
+type IoTDeleteCACertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteCACertificateFuture) Get(ctx workflow.Context) (*iot.DeleteCACertificateOutput, error) {
+func (r *IoTDeleteCACertificateFuture) Get(ctx workflow.Context) (*iot.DeleteCACertificateOutput, error) {
 	var output iot.DeleteCACertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteCertificateFuture struct {
+type IoTDeleteCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteCertificateFuture) Get(ctx workflow.Context) (*iot.DeleteCertificateOutput, error) {
+func (r *IoTDeleteCertificateFuture) Get(ctx workflow.Context) (*iot.DeleteCertificateOutput, error) {
 	var output iot.DeleteCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteDimensionFuture struct {
+type IoTDeleteDimensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteDimensionFuture) Get(ctx workflow.Context) (*iot.DeleteDimensionOutput, error) {
+func (r *IoTDeleteDimensionFuture) Get(ctx workflow.Context) (*iot.DeleteDimensionOutput, error) {
 	var output iot.DeleteDimensionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteDomainConfigurationFuture struct {
+type IoTDeleteDomainConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.DeleteDomainConfigurationOutput, error) {
+func (r *IoTDeleteDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.DeleteDomainConfigurationOutput, error) {
 	var output iot.DeleteDomainConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteDynamicThingGroupFuture struct {
+type IoTDeleteDynamicThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.DeleteDynamicThingGroupOutput, error) {
+func (r *IoTDeleteDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.DeleteDynamicThingGroupOutput, error) {
 	var output iot.DeleteDynamicThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteJobFuture struct {
+type IoTDeleteJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteJobFuture) Get(ctx workflow.Context) (*iot.DeleteJobOutput, error) {
+func (r *IoTDeleteJobFuture) Get(ctx workflow.Context) (*iot.DeleteJobOutput, error) {
 	var output iot.DeleteJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteJobExecutionFuture struct {
+type IoTDeleteJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteJobExecutionFuture) Get(ctx workflow.Context) (*iot.DeleteJobExecutionOutput, error) {
+func (r *IoTDeleteJobExecutionFuture) Get(ctx workflow.Context) (*iot.DeleteJobExecutionOutput, error) {
 	var output iot.DeleteJobExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteMitigationActionFuture struct {
+type IoTDeleteMitigationActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteMitigationActionFuture) Get(ctx workflow.Context) (*iot.DeleteMitigationActionOutput, error) {
+func (r *IoTDeleteMitigationActionFuture) Get(ctx workflow.Context) (*iot.DeleteMitigationActionOutput, error) {
 	var output iot.DeleteMitigationActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteOTAUpdateFuture struct {
+type IoTDeleteOTAUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteOTAUpdateFuture) Get(ctx workflow.Context) (*iot.DeleteOTAUpdateOutput, error) {
+func (r *IoTDeleteOTAUpdateFuture) Get(ctx workflow.Context) (*iot.DeleteOTAUpdateOutput, error) {
 	var output iot.DeleteOTAUpdateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeletePolicyFuture struct {
+type IoTDeletePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeletePolicyFuture) Get(ctx workflow.Context) (*iot.DeletePolicyOutput, error) {
+func (r *IoTDeletePolicyFuture) Get(ctx workflow.Context) (*iot.DeletePolicyOutput, error) {
 	var output iot.DeletePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeletePolicyVersionFuture struct {
+type IoTDeletePolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeletePolicyVersionFuture) Get(ctx workflow.Context) (*iot.DeletePolicyVersionOutput, error) {
+func (r *IoTDeletePolicyVersionFuture) Get(ctx workflow.Context) (*iot.DeletePolicyVersionOutput, error) {
 	var output iot.DeletePolicyVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteProvisioningTemplateFuture struct {
+type IoTDeleteProvisioningTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.DeleteProvisioningTemplateOutput, error) {
+func (r *IoTDeleteProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.DeleteProvisioningTemplateOutput, error) {
 	var output iot.DeleteProvisioningTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteProvisioningTemplateVersionFuture struct {
+type IoTDeleteProvisioningTemplateVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteProvisioningTemplateVersionFuture) Get(ctx workflow.Context) (*iot.DeleteProvisioningTemplateVersionOutput, error) {
+func (r *IoTDeleteProvisioningTemplateVersionFuture) Get(ctx workflow.Context) (*iot.DeleteProvisioningTemplateVersionOutput, error) {
 	var output iot.DeleteProvisioningTemplateVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteRegistrationCodeFuture struct {
+type IoTDeleteRegistrationCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteRegistrationCodeFuture) Get(ctx workflow.Context) (*iot.DeleteRegistrationCodeOutput, error) {
+func (r *IoTDeleteRegistrationCodeFuture) Get(ctx workflow.Context) (*iot.DeleteRegistrationCodeOutput, error) {
 	var output iot.DeleteRegistrationCodeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteRoleAliasFuture struct {
+type IoTDeleteRoleAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteRoleAliasFuture) Get(ctx workflow.Context) (*iot.DeleteRoleAliasOutput, error) {
+func (r *IoTDeleteRoleAliasFuture) Get(ctx workflow.Context) (*iot.DeleteRoleAliasOutput, error) {
 	var output iot.DeleteRoleAliasOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteScheduledAuditFuture struct {
+type IoTDeleteScheduledAuditFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteScheduledAuditFuture) Get(ctx workflow.Context) (*iot.DeleteScheduledAuditOutput, error) {
+func (r *IoTDeleteScheduledAuditFuture) Get(ctx workflow.Context) (*iot.DeleteScheduledAuditOutput, error) {
 	var output iot.DeleteScheduledAuditOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteSecurityProfileFuture struct {
+type IoTDeleteSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteSecurityProfileFuture) Get(ctx workflow.Context) (*iot.DeleteSecurityProfileOutput, error) {
+func (r *IoTDeleteSecurityProfileFuture) Get(ctx workflow.Context) (*iot.DeleteSecurityProfileOutput, error) {
 	var output iot.DeleteSecurityProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteStreamFuture struct {
+type IoTDeleteStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteStreamFuture) Get(ctx workflow.Context) (*iot.DeleteStreamOutput, error) {
+func (r *IoTDeleteStreamFuture) Get(ctx workflow.Context) (*iot.DeleteStreamOutput, error) {
 	var output iot.DeleteStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteThingFuture struct {
+type IoTDeleteThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteThingFuture) Get(ctx workflow.Context) (*iot.DeleteThingOutput, error) {
+func (r *IoTDeleteThingFuture) Get(ctx workflow.Context) (*iot.DeleteThingOutput, error) {
 	var output iot.DeleteThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteThingGroupFuture struct {
+type IoTDeleteThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteThingGroupFuture) Get(ctx workflow.Context) (*iot.DeleteThingGroupOutput, error) {
+func (r *IoTDeleteThingGroupFuture) Get(ctx workflow.Context) (*iot.DeleteThingGroupOutput, error) {
 	var output iot.DeleteThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteThingTypeFuture struct {
+type IoTDeleteThingTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteThingTypeFuture) Get(ctx workflow.Context) (*iot.DeleteThingTypeOutput, error) {
+func (r *IoTDeleteThingTypeFuture) Get(ctx workflow.Context) (*iot.DeleteThingTypeOutput, error) {
 	var output iot.DeleteThingTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteTopicRuleFuture struct {
+type IoTDeleteTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteTopicRuleFuture) Get(ctx workflow.Context) (*iot.DeleteTopicRuleOutput, error) {
+func (r *IoTDeleteTopicRuleFuture) Get(ctx workflow.Context) (*iot.DeleteTopicRuleOutput, error) {
 	var output iot.DeleteTopicRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteTopicRuleDestinationFuture struct {
+type IoTDeleteTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.DeleteTopicRuleDestinationOutput, error) {
+func (r *IoTDeleteTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.DeleteTopicRuleDestinationOutput, error) {
 	var output iot.DeleteTopicRuleDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeleteV2LoggingLevelFuture struct {
+type IoTDeleteV2LoggingLevelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeleteV2LoggingLevelFuture) Get(ctx workflow.Context) (*iot.DeleteV2LoggingLevelOutput, error) {
+func (r *IoTDeleteV2LoggingLevelFuture) Get(ctx workflow.Context) (*iot.DeleteV2LoggingLevelOutput, error) {
 	var output iot.DeleteV2LoggingLevelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDeprecateThingTypeFuture struct {
+type IoTDeprecateThingTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDeprecateThingTypeFuture) Get(ctx workflow.Context) (*iot.DeprecateThingTypeOutput, error) {
+func (r *IoTDeprecateThingTypeFuture) Get(ctx workflow.Context) (*iot.DeprecateThingTypeOutput, error) {
 	var output iot.DeprecateThingTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeAccountAuditConfigurationFuture struct {
+type IoTDescribeAccountAuditConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeAccountAuditConfigurationFuture) Get(ctx workflow.Context) (*iot.DescribeAccountAuditConfigurationOutput, error) {
+func (r *IoTDescribeAccountAuditConfigurationFuture) Get(ctx workflow.Context) (*iot.DescribeAccountAuditConfigurationOutput, error) {
 	var output iot.DescribeAccountAuditConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeAuditFindingFuture struct {
+type IoTDescribeAuditFindingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeAuditFindingFuture) Get(ctx workflow.Context) (*iot.DescribeAuditFindingOutput, error) {
+func (r *IoTDescribeAuditFindingFuture) Get(ctx workflow.Context) (*iot.DescribeAuditFindingOutput, error) {
 	var output iot.DescribeAuditFindingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeAuditMitigationActionsTaskFuture struct {
+type IoTDescribeAuditMitigationActionsTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) (*iot.DescribeAuditMitigationActionsTaskOutput, error) {
+func (r *IoTDescribeAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) (*iot.DescribeAuditMitigationActionsTaskOutput, error) {
 	var output iot.DescribeAuditMitigationActionsTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeAuditSuppressionFuture struct {
+type IoTDescribeAuditSuppressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.DescribeAuditSuppressionOutput, error) {
+func (r *IoTDescribeAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.DescribeAuditSuppressionOutput, error) {
 	var output iot.DescribeAuditSuppressionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeAuditTaskFuture struct {
+type IoTDescribeAuditTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeAuditTaskFuture) Get(ctx workflow.Context) (*iot.DescribeAuditTaskOutput, error) {
+func (r *IoTDescribeAuditTaskFuture) Get(ctx workflow.Context) (*iot.DescribeAuditTaskOutput, error) {
 	var output iot.DescribeAuditTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeAuthorizerFuture struct {
+type IoTDescribeAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeAuthorizerFuture) Get(ctx workflow.Context) (*iot.DescribeAuthorizerOutput, error) {
+func (r *IoTDescribeAuthorizerFuture) Get(ctx workflow.Context) (*iot.DescribeAuthorizerOutput, error) {
 	var output iot.DescribeAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeBillingGroupFuture struct {
+type IoTDescribeBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeBillingGroupFuture) Get(ctx workflow.Context) (*iot.DescribeBillingGroupOutput, error) {
+func (r *IoTDescribeBillingGroupFuture) Get(ctx workflow.Context) (*iot.DescribeBillingGroupOutput, error) {
 	var output iot.DescribeBillingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeCACertificateFuture struct {
+type IoTDescribeCACertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeCACertificateFuture) Get(ctx workflow.Context) (*iot.DescribeCACertificateOutput, error) {
+func (r *IoTDescribeCACertificateFuture) Get(ctx workflow.Context) (*iot.DescribeCACertificateOutput, error) {
 	var output iot.DescribeCACertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeCertificateFuture struct {
+type IoTDescribeCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeCertificateFuture) Get(ctx workflow.Context) (*iot.DescribeCertificateOutput, error) {
+func (r *IoTDescribeCertificateFuture) Get(ctx workflow.Context) (*iot.DescribeCertificateOutput, error) {
 	var output iot.DescribeCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeDefaultAuthorizerFuture struct {
+type IoTDescribeDefaultAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.DescribeDefaultAuthorizerOutput, error) {
+func (r *IoTDescribeDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.DescribeDefaultAuthorizerOutput, error) {
 	var output iot.DescribeDefaultAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeDimensionFuture struct {
+type IoTDescribeDimensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeDimensionFuture) Get(ctx workflow.Context) (*iot.DescribeDimensionOutput, error) {
+func (r *IoTDescribeDimensionFuture) Get(ctx workflow.Context) (*iot.DescribeDimensionOutput, error) {
 	var output iot.DescribeDimensionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeDomainConfigurationFuture struct {
+type IoTDescribeDomainConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.DescribeDomainConfigurationOutput, error) {
+func (r *IoTDescribeDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.DescribeDomainConfigurationOutput, error) {
 	var output iot.DescribeDomainConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeEndpointFuture struct {
+type IoTDescribeEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeEndpointFuture) Get(ctx workflow.Context) (*iot.DescribeEndpointOutput, error) {
+func (r *IoTDescribeEndpointFuture) Get(ctx workflow.Context) (*iot.DescribeEndpointOutput, error) {
 	var output iot.DescribeEndpointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeEventConfigurationsFuture struct {
+type IoTDescribeEventConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeEventConfigurationsFuture) Get(ctx workflow.Context) (*iot.DescribeEventConfigurationsOutput, error) {
+func (r *IoTDescribeEventConfigurationsFuture) Get(ctx workflow.Context) (*iot.DescribeEventConfigurationsOutput, error) {
 	var output iot.DescribeEventConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeIndexFuture struct {
+type IoTDescribeIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeIndexFuture) Get(ctx workflow.Context) (*iot.DescribeIndexOutput, error) {
+func (r *IoTDescribeIndexFuture) Get(ctx workflow.Context) (*iot.DescribeIndexOutput, error) {
 	var output iot.DescribeIndexOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeJobFuture struct {
+type IoTDescribeJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeJobFuture) Get(ctx workflow.Context) (*iot.DescribeJobOutput, error) {
+func (r *IoTDescribeJobFuture) Get(ctx workflow.Context) (*iot.DescribeJobOutput, error) {
 	var output iot.DescribeJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeJobExecutionFuture struct {
+type IoTDescribeJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeJobExecutionFuture) Get(ctx workflow.Context) (*iot.DescribeJobExecutionOutput, error) {
+func (r *IoTDescribeJobExecutionFuture) Get(ctx workflow.Context) (*iot.DescribeJobExecutionOutput, error) {
 	var output iot.DescribeJobExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeMitigationActionFuture struct {
+type IoTDescribeMitigationActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeMitigationActionFuture) Get(ctx workflow.Context) (*iot.DescribeMitigationActionOutput, error) {
+func (r *IoTDescribeMitigationActionFuture) Get(ctx workflow.Context) (*iot.DescribeMitigationActionOutput, error) {
 	var output iot.DescribeMitigationActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeProvisioningTemplateFuture struct {
+type IoTDescribeProvisioningTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.DescribeProvisioningTemplateOutput, error) {
+func (r *IoTDescribeProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.DescribeProvisioningTemplateOutput, error) {
 	var output iot.DescribeProvisioningTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeProvisioningTemplateVersionFuture struct {
+type IoTDescribeProvisioningTemplateVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeProvisioningTemplateVersionFuture) Get(ctx workflow.Context) (*iot.DescribeProvisioningTemplateVersionOutput, error) {
+func (r *IoTDescribeProvisioningTemplateVersionFuture) Get(ctx workflow.Context) (*iot.DescribeProvisioningTemplateVersionOutput, error) {
 	var output iot.DescribeProvisioningTemplateVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeRoleAliasFuture struct {
+type IoTDescribeRoleAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeRoleAliasFuture) Get(ctx workflow.Context) (*iot.DescribeRoleAliasOutput, error) {
+func (r *IoTDescribeRoleAliasFuture) Get(ctx workflow.Context) (*iot.DescribeRoleAliasOutput, error) {
 	var output iot.DescribeRoleAliasOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeScheduledAuditFuture struct {
+type IoTDescribeScheduledAuditFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeScheduledAuditFuture) Get(ctx workflow.Context) (*iot.DescribeScheduledAuditOutput, error) {
+func (r *IoTDescribeScheduledAuditFuture) Get(ctx workflow.Context) (*iot.DescribeScheduledAuditOutput, error) {
 	var output iot.DescribeScheduledAuditOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeSecurityProfileFuture struct {
+type IoTDescribeSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeSecurityProfileFuture) Get(ctx workflow.Context) (*iot.DescribeSecurityProfileOutput, error) {
+func (r *IoTDescribeSecurityProfileFuture) Get(ctx workflow.Context) (*iot.DescribeSecurityProfileOutput, error) {
 	var output iot.DescribeSecurityProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeStreamFuture struct {
+type IoTDescribeStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeStreamFuture) Get(ctx workflow.Context) (*iot.DescribeStreamOutput, error) {
+func (r *IoTDescribeStreamFuture) Get(ctx workflow.Context) (*iot.DescribeStreamOutput, error) {
 	var output iot.DescribeStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeThingFuture struct {
+type IoTDescribeThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeThingFuture) Get(ctx workflow.Context) (*iot.DescribeThingOutput, error) {
+func (r *IoTDescribeThingFuture) Get(ctx workflow.Context) (*iot.DescribeThingOutput, error) {
 	var output iot.DescribeThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeThingGroupFuture struct {
+type IoTDescribeThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeThingGroupFuture) Get(ctx workflow.Context) (*iot.DescribeThingGroupOutput, error) {
+func (r *IoTDescribeThingGroupFuture) Get(ctx workflow.Context) (*iot.DescribeThingGroupOutput, error) {
 	var output iot.DescribeThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeThingRegistrationTaskFuture struct {
+type IoTDescribeThingRegistrationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot.DescribeThingRegistrationTaskOutput, error) {
+func (r *IoTDescribeThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot.DescribeThingRegistrationTaskOutput, error) {
 	var output iot.DescribeThingRegistrationTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDescribeThingTypeFuture struct {
+type IoTDescribeThingTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDescribeThingTypeFuture) Get(ctx workflow.Context) (*iot.DescribeThingTypeOutput, error) {
+func (r *IoTDescribeThingTypeFuture) Get(ctx workflow.Context) (*iot.DescribeThingTypeOutput, error) {
 	var output iot.DescribeThingTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDetachPolicyFuture struct {
+type IoTDetachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDetachPolicyFuture) Get(ctx workflow.Context) (*iot.DetachPolicyOutput, error) {
+func (r *IoTDetachPolicyFuture) Get(ctx workflow.Context) (*iot.DetachPolicyOutput, error) {
 	var output iot.DetachPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDetachPrincipalPolicyFuture struct {
+type IoTDetachPrincipalPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDetachPrincipalPolicyFuture) Get(ctx workflow.Context) (*iot.DetachPrincipalPolicyOutput, error) {
+func (r *IoTDetachPrincipalPolicyFuture) Get(ctx workflow.Context) (*iot.DetachPrincipalPolicyOutput, error) {
 	var output iot.DetachPrincipalPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDetachSecurityProfileFuture struct {
+type IoTDetachSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDetachSecurityProfileFuture) Get(ctx workflow.Context) (*iot.DetachSecurityProfileOutput, error) {
+func (r *IoTDetachSecurityProfileFuture) Get(ctx workflow.Context) (*iot.DetachSecurityProfileOutput, error) {
 	var output iot.DetachSecurityProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDetachThingPrincipalFuture struct {
+type IoTDetachThingPrincipalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDetachThingPrincipalFuture) Get(ctx workflow.Context) (*iot.DetachThingPrincipalOutput, error) {
+func (r *IoTDetachThingPrincipalFuture) Get(ctx workflow.Context) (*iot.DetachThingPrincipalOutput, error) {
 	var output iot.DetachThingPrincipalOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotDisableTopicRuleFuture struct {
+type IoTDisableTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotDisableTopicRuleFuture) Get(ctx workflow.Context) (*iot.DisableTopicRuleOutput, error) {
+func (r *IoTDisableTopicRuleFuture) Get(ctx workflow.Context) (*iot.DisableTopicRuleOutput, error) {
 	var output iot.DisableTopicRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotEnableTopicRuleFuture struct {
+type IoTEnableTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotEnableTopicRuleFuture) Get(ctx workflow.Context) (*iot.EnableTopicRuleOutput, error) {
+func (r *IoTEnableTopicRuleFuture) Get(ctx workflow.Context) (*iot.EnableTopicRuleOutput, error) {
 	var output iot.EnableTopicRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetCardinalityFuture struct {
+type IoTGetCardinalityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetCardinalityFuture) Get(ctx workflow.Context) (*iot.GetCardinalityOutput, error) {
+func (r *IoTGetCardinalityFuture) Get(ctx workflow.Context) (*iot.GetCardinalityOutput, error) {
 	var output iot.GetCardinalityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetEffectivePoliciesFuture struct {
+type IoTGetEffectivePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetEffectivePoliciesFuture) Get(ctx workflow.Context) (*iot.GetEffectivePoliciesOutput, error) {
+func (r *IoTGetEffectivePoliciesFuture) Get(ctx workflow.Context) (*iot.GetEffectivePoliciesOutput, error) {
 	var output iot.GetEffectivePoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetIndexingConfigurationFuture struct {
+type IoTGetIndexingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetIndexingConfigurationFuture) Get(ctx workflow.Context) (*iot.GetIndexingConfigurationOutput, error) {
+func (r *IoTGetIndexingConfigurationFuture) Get(ctx workflow.Context) (*iot.GetIndexingConfigurationOutput, error) {
 	var output iot.GetIndexingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetJobDocumentFuture struct {
+type IoTGetJobDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetJobDocumentFuture) Get(ctx workflow.Context) (*iot.GetJobDocumentOutput, error) {
+func (r *IoTGetJobDocumentFuture) Get(ctx workflow.Context) (*iot.GetJobDocumentOutput, error) {
 	var output iot.GetJobDocumentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetLoggingOptionsFuture struct {
+type IoTGetLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetLoggingOptionsFuture) Get(ctx workflow.Context) (*iot.GetLoggingOptionsOutput, error) {
+func (r *IoTGetLoggingOptionsFuture) Get(ctx workflow.Context) (*iot.GetLoggingOptionsOutput, error) {
 	var output iot.GetLoggingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetOTAUpdateFuture struct {
+type IoTGetOTAUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetOTAUpdateFuture) Get(ctx workflow.Context) (*iot.GetOTAUpdateOutput, error) {
+func (r *IoTGetOTAUpdateFuture) Get(ctx workflow.Context) (*iot.GetOTAUpdateOutput, error) {
 	var output iot.GetOTAUpdateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetPercentilesFuture struct {
+type IoTGetPercentilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetPercentilesFuture) Get(ctx workflow.Context) (*iot.GetPercentilesOutput, error) {
+func (r *IoTGetPercentilesFuture) Get(ctx workflow.Context) (*iot.GetPercentilesOutput, error) {
 	var output iot.GetPercentilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetPolicyFuture struct {
+type IoTGetPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetPolicyFuture) Get(ctx workflow.Context) (*iot.GetPolicyOutput, error) {
+func (r *IoTGetPolicyFuture) Get(ctx workflow.Context) (*iot.GetPolicyOutput, error) {
 	var output iot.GetPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetPolicyVersionFuture struct {
+type IoTGetPolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetPolicyVersionFuture) Get(ctx workflow.Context) (*iot.GetPolicyVersionOutput, error) {
+func (r *IoTGetPolicyVersionFuture) Get(ctx workflow.Context) (*iot.GetPolicyVersionOutput, error) {
 	var output iot.GetPolicyVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetRegistrationCodeFuture struct {
+type IoTGetRegistrationCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetRegistrationCodeFuture) Get(ctx workflow.Context) (*iot.GetRegistrationCodeOutput, error) {
+func (r *IoTGetRegistrationCodeFuture) Get(ctx workflow.Context) (*iot.GetRegistrationCodeOutput, error) {
 	var output iot.GetRegistrationCodeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetStatisticsFuture struct {
+type IoTGetStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetStatisticsFuture) Get(ctx workflow.Context) (*iot.GetStatisticsOutput, error) {
+func (r *IoTGetStatisticsFuture) Get(ctx workflow.Context) (*iot.GetStatisticsOutput, error) {
 	var output iot.GetStatisticsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetTopicRuleFuture struct {
+type IoTGetTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetTopicRuleFuture) Get(ctx workflow.Context) (*iot.GetTopicRuleOutput, error) {
+func (r *IoTGetTopicRuleFuture) Get(ctx workflow.Context) (*iot.GetTopicRuleOutput, error) {
 	var output iot.GetTopicRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetTopicRuleDestinationFuture struct {
+type IoTGetTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.GetTopicRuleDestinationOutput, error) {
+func (r *IoTGetTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.GetTopicRuleDestinationOutput, error) {
 	var output iot.GetTopicRuleDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotGetV2LoggingOptionsFuture struct {
+type IoTGetV2LoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotGetV2LoggingOptionsFuture) Get(ctx workflow.Context) (*iot.GetV2LoggingOptionsOutput, error) {
+func (r *IoTGetV2LoggingOptionsFuture) Get(ctx workflow.Context) (*iot.GetV2LoggingOptionsOutput, error) {
 	var output iot.GetV2LoggingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListActiveViolationsFuture struct {
+type IoTListActiveViolationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListActiveViolationsFuture) Get(ctx workflow.Context) (*iot.ListActiveViolationsOutput, error) {
+func (r *IoTListActiveViolationsFuture) Get(ctx workflow.Context) (*iot.ListActiveViolationsOutput, error) {
 	var output iot.ListActiveViolationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListAttachedPoliciesFuture struct {
+type IoTListAttachedPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListAttachedPoliciesFuture) Get(ctx workflow.Context) (*iot.ListAttachedPoliciesOutput, error) {
+func (r *IoTListAttachedPoliciesFuture) Get(ctx workflow.Context) (*iot.ListAttachedPoliciesOutput, error) {
 	var output iot.ListAttachedPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListAuditFindingsFuture struct {
+type IoTListAuditFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListAuditFindingsFuture) Get(ctx workflow.Context) (*iot.ListAuditFindingsOutput, error) {
+func (r *IoTListAuditFindingsFuture) Get(ctx workflow.Context) (*iot.ListAuditFindingsOutput, error) {
 	var output iot.ListAuditFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListAuditMitigationActionsExecutionsFuture struct {
+type IoTListAuditMitigationActionsExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListAuditMitigationActionsExecutionsFuture) Get(ctx workflow.Context) (*iot.ListAuditMitigationActionsExecutionsOutput, error) {
+func (r *IoTListAuditMitigationActionsExecutionsFuture) Get(ctx workflow.Context) (*iot.ListAuditMitigationActionsExecutionsOutput, error) {
 	var output iot.ListAuditMitigationActionsExecutionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListAuditMitigationActionsTasksFuture struct {
+type IoTListAuditMitigationActionsTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListAuditMitigationActionsTasksFuture) Get(ctx workflow.Context) (*iot.ListAuditMitigationActionsTasksOutput, error) {
+func (r *IoTListAuditMitigationActionsTasksFuture) Get(ctx workflow.Context) (*iot.ListAuditMitigationActionsTasksOutput, error) {
 	var output iot.ListAuditMitigationActionsTasksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListAuditSuppressionsFuture struct {
+type IoTListAuditSuppressionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListAuditSuppressionsFuture) Get(ctx workflow.Context) (*iot.ListAuditSuppressionsOutput, error) {
+func (r *IoTListAuditSuppressionsFuture) Get(ctx workflow.Context) (*iot.ListAuditSuppressionsOutput, error) {
 	var output iot.ListAuditSuppressionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListAuditTasksFuture struct {
+type IoTListAuditTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListAuditTasksFuture) Get(ctx workflow.Context) (*iot.ListAuditTasksOutput, error) {
+func (r *IoTListAuditTasksFuture) Get(ctx workflow.Context) (*iot.ListAuditTasksOutput, error) {
 	var output iot.ListAuditTasksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListAuthorizersFuture struct {
+type IoTListAuthorizersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListAuthorizersFuture) Get(ctx workflow.Context) (*iot.ListAuthorizersOutput, error) {
+func (r *IoTListAuthorizersFuture) Get(ctx workflow.Context) (*iot.ListAuthorizersOutput, error) {
 	var output iot.ListAuthorizersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListBillingGroupsFuture struct {
+type IoTListBillingGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListBillingGroupsFuture) Get(ctx workflow.Context) (*iot.ListBillingGroupsOutput, error) {
+func (r *IoTListBillingGroupsFuture) Get(ctx workflow.Context) (*iot.ListBillingGroupsOutput, error) {
 	var output iot.ListBillingGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListCACertificatesFuture struct {
+type IoTListCACertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListCACertificatesFuture) Get(ctx workflow.Context) (*iot.ListCACertificatesOutput, error) {
+func (r *IoTListCACertificatesFuture) Get(ctx workflow.Context) (*iot.ListCACertificatesOutput, error) {
 	var output iot.ListCACertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListCertificatesFuture struct {
+type IoTListCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListCertificatesFuture) Get(ctx workflow.Context) (*iot.ListCertificatesOutput, error) {
+func (r *IoTListCertificatesFuture) Get(ctx workflow.Context) (*iot.ListCertificatesOutput, error) {
 	var output iot.ListCertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListCertificatesByCAFuture struct {
+type IoTListCertificatesByCAFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListCertificatesByCAFuture) Get(ctx workflow.Context) (*iot.ListCertificatesByCAOutput, error) {
+func (r *IoTListCertificatesByCAFuture) Get(ctx workflow.Context) (*iot.ListCertificatesByCAOutput, error) {
 	var output iot.ListCertificatesByCAOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListDimensionsFuture struct {
+type IoTListDimensionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListDimensionsFuture) Get(ctx workflow.Context) (*iot.ListDimensionsOutput, error) {
+func (r *IoTListDimensionsFuture) Get(ctx workflow.Context) (*iot.ListDimensionsOutput, error) {
 	var output iot.ListDimensionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListDomainConfigurationsFuture struct {
+type IoTListDomainConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListDomainConfigurationsFuture) Get(ctx workflow.Context) (*iot.ListDomainConfigurationsOutput, error) {
+func (r *IoTListDomainConfigurationsFuture) Get(ctx workflow.Context) (*iot.ListDomainConfigurationsOutput, error) {
 	var output iot.ListDomainConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListIndicesFuture struct {
+type IoTListIndicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListIndicesFuture) Get(ctx workflow.Context) (*iot.ListIndicesOutput, error) {
+func (r *IoTListIndicesFuture) Get(ctx workflow.Context) (*iot.ListIndicesOutput, error) {
 	var output iot.ListIndicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListJobExecutionsForJobFuture struct {
+type IoTListJobExecutionsForJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListJobExecutionsForJobFuture) Get(ctx workflow.Context) (*iot.ListJobExecutionsForJobOutput, error) {
+func (r *IoTListJobExecutionsForJobFuture) Get(ctx workflow.Context) (*iot.ListJobExecutionsForJobOutput, error) {
 	var output iot.ListJobExecutionsForJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListJobExecutionsForThingFuture struct {
+type IoTListJobExecutionsForThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListJobExecutionsForThingFuture) Get(ctx workflow.Context) (*iot.ListJobExecutionsForThingOutput, error) {
+func (r *IoTListJobExecutionsForThingFuture) Get(ctx workflow.Context) (*iot.ListJobExecutionsForThingOutput, error) {
 	var output iot.ListJobExecutionsForThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListJobsFuture struct {
+type IoTListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListJobsFuture) Get(ctx workflow.Context) (*iot.ListJobsOutput, error) {
+func (r *IoTListJobsFuture) Get(ctx workflow.Context) (*iot.ListJobsOutput, error) {
 	var output iot.ListJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListMitigationActionsFuture struct {
+type IoTListMitigationActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListMitigationActionsFuture) Get(ctx workflow.Context) (*iot.ListMitigationActionsOutput, error) {
+func (r *IoTListMitigationActionsFuture) Get(ctx workflow.Context) (*iot.ListMitigationActionsOutput, error) {
 	var output iot.ListMitigationActionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListOTAUpdatesFuture struct {
+type IoTListOTAUpdatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListOTAUpdatesFuture) Get(ctx workflow.Context) (*iot.ListOTAUpdatesOutput, error) {
+func (r *IoTListOTAUpdatesFuture) Get(ctx workflow.Context) (*iot.ListOTAUpdatesOutput, error) {
 	var output iot.ListOTAUpdatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListOutgoingCertificatesFuture struct {
+type IoTListOutgoingCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListOutgoingCertificatesFuture) Get(ctx workflow.Context) (*iot.ListOutgoingCertificatesOutput, error) {
+func (r *IoTListOutgoingCertificatesFuture) Get(ctx workflow.Context) (*iot.ListOutgoingCertificatesOutput, error) {
 	var output iot.ListOutgoingCertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListPoliciesFuture struct {
+type IoTListPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListPoliciesFuture) Get(ctx workflow.Context) (*iot.ListPoliciesOutput, error) {
+func (r *IoTListPoliciesFuture) Get(ctx workflow.Context) (*iot.ListPoliciesOutput, error) {
 	var output iot.ListPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListPolicyPrincipalsFuture struct {
+type IoTListPolicyPrincipalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListPolicyPrincipalsFuture) Get(ctx workflow.Context) (*iot.ListPolicyPrincipalsOutput, error) {
+func (r *IoTListPolicyPrincipalsFuture) Get(ctx workflow.Context) (*iot.ListPolicyPrincipalsOutput, error) {
 	var output iot.ListPolicyPrincipalsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListPolicyVersionsFuture struct {
+type IoTListPolicyVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListPolicyVersionsFuture) Get(ctx workflow.Context) (*iot.ListPolicyVersionsOutput, error) {
+func (r *IoTListPolicyVersionsFuture) Get(ctx workflow.Context) (*iot.ListPolicyVersionsOutput, error) {
 	var output iot.ListPolicyVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListPrincipalPoliciesFuture struct {
+type IoTListPrincipalPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListPrincipalPoliciesFuture) Get(ctx workflow.Context) (*iot.ListPrincipalPoliciesOutput, error) {
+func (r *IoTListPrincipalPoliciesFuture) Get(ctx workflow.Context) (*iot.ListPrincipalPoliciesOutput, error) {
 	var output iot.ListPrincipalPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListPrincipalThingsFuture struct {
+type IoTListPrincipalThingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListPrincipalThingsFuture) Get(ctx workflow.Context) (*iot.ListPrincipalThingsOutput, error) {
+func (r *IoTListPrincipalThingsFuture) Get(ctx workflow.Context) (*iot.ListPrincipalThingsOutput, error) {
 	var output iot.ListPrincipalThingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListProvisioningTemplateVersionsFuture struct {
+type IoTListProvisioningTemplateVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListProvisioningTemplateVersionsFuture) Get(ctx workflow.Context) (*iot.ListProvisioningTemplateVersionsOutput, error) {
+func (r *IoTListProvisioningTemplateVersionsFuture) Get(ctx workflow.Context) (*iot.ListProvisioningTemplateVersionsOutput, error) {
 	var output iot.ListProvisioningTemplateVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListProvisioningTemplatesFuture struct {
+type IoTListProvisioningTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListProvisioningTemplatesFuture) Get(ctx workflow.Context) (*iot.ListProvisioningTemplatesOutput, error) {
+func (r *IoTListProvisioningTemplatesFuture) Get(ctx workflow.Context) (*iot.ListProvisioningTemplatesOutput, error) {
 	var output iot.ListProvisioningTemplatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListRoleAliasesFuture struct {
+type IoTListRoleAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListRoleAliasesFuture) Get(ctx workflow.Context) (*iot.ListRoleAliasesOutput, error) {
+func (r *IoTListRoleAliasesFuture) Get(ctx workflow.Context) (*iot.ListRoleAliasesOutput, error) {
 	var output iot.ListRoleAliasesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListScheduledAuditsFuture struct {
+type IoTListScheduledAuditsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListScheduledAuditsFuture) Get(ctx workflow.Context) (*iot.ListScheduledAuditsOutput, error) {
+func (r *IoTListScheduledAuditsFuture) Get(ctx workflow.Context) (*iot.ListScheduledAuditsOutput, error) {
 	var output iot.ListScheduledAuditsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListSecurityProfilesFuture struct {
+type IoTListSecurityProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListSecurityProfilesFuture) Get(ctx workflow.Context) (*iot.ListSecurityProfilesOutput, error) {
+func (r *IoTListSecurityProfilesFuture) Get(ctx workflow.Context) (*iot.ListSecurityProfilesOutput, error) {
 	var output iot.ListSecurityProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListSecurityProfilesForTargetFuture struct {
+type IoTListSecurityProfilesForTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListSecurityProfilesForTargetFuture) Get(ctx workflow.Context) (*iot.ListSecurityProfilesForTargetOutput, error) {
+func (r *IoTListSecurityProfilesForTargetFuture) Get(ctx workflow.Context) (*iot.ListSecurityProfilesForTargetOutput, error) {
 	var output iot.ListSecurityProfilesForTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListStreamsFuture struct {
+type IoTListStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListStreamsFuture) Get(ctx workflow.Context) (*iot.ListStreamsOutput, error) {
+func (r *IoTListStreamsFuture) Get(ctx workflow.Context) (*iot.ListStreamsOutput, error) {
 	var output iot.ListStreamsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListTagsForResourceFuture struct {
+type IoTListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListTagsForResourceFuture) Get(ctx workflow.Context) (*iot.ListTagsForResourceOutput, error) {
+func (r *IoTListTagsForResourceFuture) Get(ctx workflow.Context) (*iot.ListTagsForResourceOutput, error) {
 	var output iot.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListTargetsForPolicyFuture struct {
+type IoTListTargetsForPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListTargetsForPolicyFuture) Get(ctx workflow.Context) (*iot.ListTargetsForPolicyOutput, error) {
+func (r *IoTListTargetsForPolicyFuture) Get(ctx workflow.Context) (*iot.ListTargetsForPolicyOutput, error) {
 	var output iot.ListTargetsForPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListTargetsForSecurityProfileFuture struct {
+type IoTListTargetsForSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListTargetsForSecurityProfileFuture) Get(ctx workflow.Context) (*iot.ListTargetsForSecurityProfileOutput, error) {
+func (r *IoTListTargetsForSecurityProfileFuture) Get(ctx workflow.Context) (*iot.ListTargetsForSecurityProfileOutput, error) {
 	var output iot.ListTargetsForSecurityProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingGroupsFuture struct {
+type IoTListThingGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingGroupsFuture) Get(ctx workflow.Context) (*iot.ListThingGroupsOutput, error) {
+func (r *IoTListThingGroupsFuture) Get(ctx workflow.Context) (*iot.ListThingGroupsOutput, error) {
 	var output iot.ListThingGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingGroupsForThingFuture struct {
+type IoTListThingGroupsForThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingGroupsForThingFuture) Get(ctx workflow.Context) (*iot.ListThingGroupsForThingOutput, error) {
+func (r *IoTListThingGroupsForThingFuture) Get(ctx workflow.Context) (*iot.ListThingGroupsForThingOutput, error) {
 	var output iot.ListThingGroupsForThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingPrincipalsFuture struct {
+type IoTListThingPrincipalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingPrincipalsFuture) Get(ctx workflow.Context) (*iot.ListThingPrincipalsOutput, error) {
+func (r *IoTListThingPrincipalsFuture) Get(ctx workflow.Context) (*iot.ListThingPrincipalsOutput, error) {
 	var output iot.ListThingPrincipalsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingRegistrationTaskReportsFuture struct {
+type IoTListThingRegistrationTaskReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingRegistrationTaskReportsFuture) Get(ctx workflow.Context) (*iot.ListThingRegistrationTaskReportsOutput, error) {
+func (r *IoTListThingRegistrationTaskReportsFuture) Get(ctx workflow.Context) (*iot.ListThingRegistrationTaskReportsOutput, error) {
 	var output iot.ListThingRegistrationTaskReportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingRegistrationTasksFuture struct {
+type IoTListThingRegistrationTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingRegistrationTasksFuture) Get(ctx workflow.Context) (*iot.ListThingRegistrationTasksOutput, error) {
+func (r *IoTListThingRegistrationTasksFuture) Get(ctx workflow.Context) (*iot.ListThingRegistrationTasksOutput, error) {
 	var output iot.ListThingRegistrationTasksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingTypesFuture struct {
+type IoTListThingTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingTypesFuture) Get(ctx workflow.Context) (*iot.ListThingTypesOutput, error) {
+func (r *IoTListThingTypesFuture) Get(ctx workflow.Context) (*iot.ListThingTypesOutput, error) {
 	var output iot.ListThingTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingsFuture struct {
+type IoTListThingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingsFuture) Get(ctx workflow.Context) (*iot.ListThingsOutput, error) {
+func (r *IoTListThingsFuture) Get(ctx workflow.Context) (*iot.ListThingsOutput, error) {
 	var output iot.ListThingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingsInBillingGroupFuture struct {
+type IoTListThingsInBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingsInBillingGroupFuture) Get(ctx workflow.Context) (*iot.ListThingsInBillingGroupOutput, error) {
+func (r *IoTListThingsInBillingGroupFuture) Get(ctx workflow.Context) (*iot.ListThingsInBillingGroupOutput, error) {
 	var output iot.ListThingsInBillingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListThingsInThingGroupFuture struct {
+type IoTListThingsInThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListThingsInThingGroupFuture) Get(ctx workflow.Context) (*iot.ListThingsInThingGroupOutput, error) {
+func (r *IoTListThingsInThingGroupFuture) Get(ctx workflow.Context) (*iot.ListThingsInThingGroupOutput, error) {
 	var output iot.ListThingsInThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListTopicRuleDestinationsFuture struct {
+type IoTListTopicRuleDestinationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListTopicRuleDestinationsFuture) Get(ctx workflow.Context) (*iot.ListTopicRuleDestinationsOutput, error) {
+func (r *IoTListTopicRuleDestinationsFuture) Get(ctx workflow.Context) (*iot.ListTopicRuleDestinationsOutput, error) {
 	var output iot.ListTopicRuleDestinationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListTopicRulesFuture struct {
+type IoTListTopicRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListTopicRulesFuture) Get(ctx workflow.Context) (*iot.ListTopicRulesOutput, error) {
+func (r *IoTListTopicRulesFuture) Get(ctx workflow.Context) (*iot.ListTopicRulesOutput, error) {
 	var output iot.ListTopicRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListV2LoggingLevelsFuture struct {
+type IoTListV2LoggingLevelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListV2LoggingLevelsFuture) Get(ctx workflow.Context) (*iot.ListV2LoggingLevelsOutput, error) {
+func (r *IoTListV2LoggingLevelsFuture) Get(ctx workflow.Context) (*iot.ListV2LoggingLevelsOutput, error) {
 	var output iot.ListV2LoggingLevelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotListViolationEventsFuture struct {
+type IoTListViolationEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotListViolationEventsFuture) Get(ctx workflow.Context) (*iot.ListViolationEventsOutput, error) {
+func (r *IoTListViolationEventsFuture) Get(ctx workflow.Context) (*iot.ListViolationEventsOutput, error) {
 	var output iot.ListViolationEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotRegisterCACertificateFuture struct {
+type IoTRegisterCACertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotRegisterCACertificateFuture) Get(ctx workflow.Context) (*iot.RegisterCACertificateOutput, error) {
+func (r *IoTRegisterCACertificateFuture) Get(ctx workflow.Context) (*iot.RegisterCACertificateOutput, error) {
 	var output iot.RegisterCACertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotRegisterCertificateFuture struct {
+type IoTRegisterCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotRegisterCertificateFuture) Get(ctx workflow.Context) (*iot.RegisterCertificateOutput, error) {
+func (r *IoTRegisterCertificateFuture) Get(ctx workflow.Context) (*iot.RegisterCertificateOutput, error) {
 	var output iot.RegisterCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotRegisterCertificateWithoutCAFuture struct {
+type IoTRegisterCertificateWithoutCAFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotRegisterCertificateWithoutCAFuture) Get(ctx workflow.Context) (*iot.RegisterCertificateWithoutCAOutput, error) {
+func (r *IoTRegisterCertificateWithoutCAFuture) Get(ctx workflow.Context) (*iot.RegisterCertificateWithoutCAOutput, error) {
 	var output iot.RegisterCertificateWithoutCAOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotRegisterThingFuture struct {
+type IoTRegisterThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotRegisterThingFuture) Get(ctx workflow.Context) (*iot.RegisterThingOutput, error) {
+func (r *IoTRegisterThingFuture) Get(ctx workflow.Context) (*iot.RegisterThingOutput, error) {
 	var output iot.RegisterThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotRejectCertificateTransferFuture struct {
+type IoTRejectCertificateTransferFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotRejectCertificateTransferFuture) Get(ctx workflow.Context) (*iot.RejectCertificateTransferOutput, error) {
+func (r *IoTRejectCertificateTransferFuture) Get(ctx workflow.Context) (*iot.RejectCertificateTransferOutput, error) {
 	var output iot.RejectCertificateTransferOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotRemoveThingFromBillingGroupFuture struct {
+type IoTRemoveThingFromBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotRemoveThingFromBillingGroupFuture) Get(ctx workflow.Context) (*iot.RemoveThingFromBillingGroupOutput, error) {
+func (r *IoTRemoveThingFromBillingGroupFuture) Get(ctx workflow.Context) (*iot.RemoveThingFromBillingGroupOutput, error) {
 	var output iot.RemoveThingFromBillingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotRemoveThingFromThingGroupFuture struct {
+type IoTRemoveThingFromThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotRemoveThingFromThingGroupFuture) Get(ctx workflow.Context) (*iot.RemoveThingFromThingGroupOutput, error) {
+func (r *IoTRemoveThingFromThingGroupFuture) Get(ctx workflow.Context) (*iot.RemoveThingFromThingGroupOutput, error) {
 	var output iot.RemoveThingFromThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotReplaceTopicRuleFuture struct {
+type IoTReplaceTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotReplaceTopicRuleFuture) Get(ctx workflow.Context) (*iot.ReplaceTopicRuleOutput, error) {
+func (r *IoTReplaceTopicRuleFuture) Get(ctx workflow.Context) (*iot.ReplaceTopicRuleOutput, error) {
 	var output iot.ReplaceTopicRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotSearchIndexFuture struct {
+type IoTSearchIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotSearchIndexFuture) Get(ctx workflow.Context) (*iot.SearchIndexOutput, error) {
+func (r *IoTSearchIndexFuture) Get(ctx workflow.Context) (*iot.SearchIndexOutput, error) {
 	var output iot.SearchIndexOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotSetDefaultAuthorizerFuture struct {
+type IoTSetDefaultAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotSetDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.SetDefaultAuthorizerOutput, error) {
+func (r *IoTSetDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.SetDefaultAuthorizerOutput, error) {
 	var output iot.SetDefaultAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotSetDefaultPolicyVersionFuture struct {
+type IoTSetDefaultPolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotSetDefaultPolicyVersionFuture) Get(ctx workflow.Context) (*iot.SetDefaultPolicyVersionOutput, error) {
+func (r *IoTSetDefaultPolicyVersionFuture) Get(ctx workflow.Context) (*iot.SetDefaultPolicyVersionOutput, error) {
 	var output iot.SetDefaultPolicyVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotSetLoggingOptionsFuture struct {
+type IoTSetLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotSetLoggingOptionsFuture) Get(ctx workflow.Context) (*iot.SetLoggingOptionsOutput, error) {
+func (r *IoTSetLoggingOptionsFuture) Get(ctx workflow.Context) (*iot.SetLoggingOptionsOutput, error) {
 	var output iot.SetLoggingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotSetV2LoggingLevelFuture struct {
+type IoTSetV2LoggingLevelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotSetV2LoggingLevelFuture) Get(ctx workflow.Context) (*iot.SetV2LoggingLevelOutput, error) {
+func (r *IoTSetV2LoggingLevelFuture) Get(ctx workflow.Context) (*iot.SetV2LoggingLevelOutput, error) {
 	var output iot.SetV2LoggingLevelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotSetV2LoggingOptionsFuture struct {
+type IoTSetV2LoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotSetV2LoggingOptionsFuture) Get(ctx workflow.Context) (*iot.SetV2LoggingOptionsOutput, error) {
+func (r *IoTSetV2LoggingOptionsFuture) Get(ctx workflow.Context) (*iot.SetV2LoggingOptionsOutput, error) {
 	var output iot.SetV2LoggingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotStartAuditMitigationActionsTaskFuture struct {
+type IoTStartAuditMitigationActionsTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotStartAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) (*iot.StartAuditMitigationActionsTaskOutput, error) {
+func (r *IoTStartAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) (*iot.StartAuditMitigationActionsTaskOutput, error) {
 	var output iot.StartAuditMitigationActionsTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotStartOnDemandAuditTaskFuture struct {
+type IoTStartOnDemandAuditTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotStartOnDemandAuditTaskFuture) Get(ctx workflow.Context) (*iot.StartOnDemandAuditTaskOutput, error) {
+func (r *IoTStartOnDemandAuditTaskFuture) Get(ctx workflow.Context) (*iot.StartOnDemandAuditTaskOutput, error) {
 	var output iot.StartOnDemandAuditTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotStartThingRegistrationTaskFuture struct {
+type IoTStartThingRegistrationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotStartThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot.StartThingRegistrationTaskOutput, error) {
+func (r *IoTStartThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot.StartThingRegistrationTaskOutput, error) {
 	var output iot.StartThingRegistrationTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotStopThingRegistrationTaskFuture struct {
+type IoTStopThingRegistrationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotStopThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot.StopThingRegistrationTaskOutput, error) {
+func (r *IoTStopThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot.StopThingRegistrationTaskOutput, error) {
 	var output iot.StopThingRegistrationTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotTagResourceFuture struct {
+type IoTTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotTagResourceFuture) Get(ctx workflow.Context) (*iot.TagResourceOutput, error) {
+func (r *IoTTagResourceFuture) Get(ctx workflow.Context) (*iot.TagResourceOutput, error) {
 	var output iot.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotTestAuthorizationFuture struct {
+type IoTTestAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotTestAuthorizationFuture) Get(ctx workflow.Context) (*iot.TestAuthorizationOutput, error) {
+func (r *IoTTestAuthorizationFuture) Get(ctx workflow.Context) (*iot.TestAuthorizationOutput, error) {
 	var output iot.TestAuthorizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotTestInvokeAuthorizerFuture struct {
+type IoTTestInvokeAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotTestInvokeAuthorizerFuture) Get(ctx workflow.Context) (*iot.TestInvokeAuthorizerOutput, error) {
+func (r *IoTTestInvokeAuthorizerFuture) Get(ctx workflow.Context) (*iot.TestInvokeAuthorizerOutput, error) {
 	var output iot.TestInvokeAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotTransferCertificateFuture struct {
+type IoTTransferCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotTransferCertificateFuture) Get(ctx workflow.Context) (*iot.TransferCertificateOutput, error) {
+func (r *IoTTransferCertificateFuture) Get(ctx workflow.Context) (*iot.TransferCertificateOutput, error) {
 	var output iot.TransferCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUntagResourceFuture struct {
+type IoTUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUntagResourceFuture) Get(ctx workflow.Context) (*iot.UntagResourceOutput, error) {
+func (r *IoTUntagResourceFuture) Get(ctx workflow.Context) (*iot.UntagResourceOutput, error) {
 	var output iot.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateAccountAuditConfigurationFuture struct {
+type IoTUpdateAccountAuditConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateAccountAuditConfigurationFuture) Get(ctx workflow.Context) (*iot.UpdateAccountAuditConfigurationOutput, error) {
+func (r *IoTUpdateAccountAuditConfigurationFuture) Get(ctx workflow.Context) (*iot.UpdateAccountAuditConfigurationOutput, error) {
 	var output iot.UpdateAccountAuditConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateAuditSuppressionFuture struct {
+type IoTUpdateAuditSuppressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.UpdateAuditSuppressionOutput, error) {
+func (r *IoTUpdateAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.UpdateAuditSuppressionOutput, error) {
 	var output iot.UpdateAuditSuppressionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateAuthorizerFuture struct {
+type IoTUpdateAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateAuthorizerFuture) Get(ctx workflow.Context) (*iot.UpdateAuthorizerOutput, error) {
+func (r *IoTUpdateAuthorizerFuture) Get(ctx workflow.Context) (*iot.UpdateAuthorizerOutput, error) {
 	var output iot.UpdateAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateBillingGroupFuture struct {
+type IoTUpdateBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateBillingGroupFuture) Get(ctx workflow.Context) (*iot.UpdateBillingGroupOutput, error) {
+func (r *IoTUpdateBillingGroupFuture) Get(ctx workflow.Context) (*iot.UpdateBillingGroupOutput, error) {
 	var output iot.UpdateBillingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateCACertificateFuture struct {
+type IoTUpdateCACertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateCACertificateFuture) Get(ctx workflow.Context) (*iot.UpdateCACertificateOutput, error) {
+func (r *IoTUpdateCACertificateFuture) Get(ctx workflow.Context) (*iot.UpdateCACertificateOutput, error) {
 	var output iot.UpdateCACertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateCertificateFuture struct {
+type IoTUpdateCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateCertificateFuture) Get(ctx workflow.Context) (*iot.UpdateCertificateOutput, error) {
+func (r *IoTUpdateCertificateFuture) Get(ctx workflow.Context) (*iot.UpdateCertificateOutput, error) {
 	var output iot.UpdateCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateDimensionFuture struct {
+type IoTUpdateDimensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateDimensionFuture) Get(ctx workflow.Context) (*iot.UpdateDimensionOutput, error) {
+func (r *IoTUpdateDimensionFuture) Get(ctx workflow.Context) (*iot.UpdateDimensionOutput, error) {
 	var output iot.UpdateDimensionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateDomainConfigurationFuture struct {
+type IoTUpdateDomainConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.UpdateDomainConfigurationOutput, error) {
+func (r *IoTUpdateDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.UpdateDomainConfigurationOutput, error) {
 	var output iot.UpdateDomainConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateDynamicThingGroupFuture struct {
+type IoTUpdateDynamicThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.UpdateDynamicThingGroupOutput, error) {
+func (r *IoTUpdateDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.UpdateDynamicThingGroupOutput, error) {
 	var output iot.UpdateDynamicThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateEventConfigurationsFuture struct {
+type IoTUpdateEventConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateEventConfigurationsFuture) Get(ctx workflow.Context) (*iot.UpdateEventConfigurationsOutput, error) {
+func (r *IoTUpdateEventConfigurationsFuture) Get(ctx workflow.Context) (*iot.UpdateEventConfigurationsOutput, error) {
 	var output iot.UpdateEventConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateIndexingConfigurationFuture struct {
+type IoTUpdateIndexingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateIndexingConfigurationFuture) Get(ctx workflow.Context) (*iot.UpdateIndexingConfigurationOutput, error) {
+func (r *IoTUpdateIndexingConfigurationFuture) Get(ctx workflow.Context) (*iot.UpdateIndexingConfigurationOutput, error) {
 	var output iot.UpdateIndexingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateJobFuture struct {
+type IoTUpdateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateJobFuture) Get(ctx workflow.Context) (*iot.UpdateJobOutput, error) {
+func (r *IoTUpdateJobFuture) Get(ctx workflow.Context) (*iot.UpdateJobOutput, error) {
 	var output iot.UpdateJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateMitigationActionFuture struct {
+type IoTUpdateMitigationActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateMitigationActionFuture) Get(ctx workflow.Context) (*iot.UpdateMitigationActionOutput, error) {
+func (r *IoTUpdateMitigationActionFuture) Get(ctx workflow.Context) (*iot.UpdateMitigationActionOutput, error) {
 	var output iot.UpdateMitigationActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateProvisioningTemplateFuture struct {
+type IoTUpdateProvisioningTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.UpdateProvisioningTemplateOutput, error) {
+func (r *IoTUpdateProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.UpdateProvisioningTemplateOutput, error) {
 	var output iot.UpdateProvisioningTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateRoleAliasFuture struct {
+type IoTUpdateRoleAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateRoleAliasFuture) Get(ctx workflow.Context) (*iot.UpdateRoleAliasOutput, error) {
+func (r *IoTUpdateRoleAliasFuture) Get(ctx workflow.Context) (*iot.UpdateRoleAliasOutput, error) {
 	var output iot.UpdateRoleAliasOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateScheduledAuditFuture struct {
+type IoTUpdateScheduledAuditFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateScheduledAuditFuture) Get(ctx workflow.Context) (*iot.UpdateScheduledAuditOutput, error) {
+func (r *IoTUpdateScheduledAuditFuture) Get(ctx workflow.Context) (*iot.UpdateScheduledAuditOutput, error) {
 	var output iot.UpdateScheduledAuditOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateSecurityProfileFuture struct {
+type IoTUpdateSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateSecurityProfileFuture) Get(ctx workflow.Context) (*iot.UpdateSecurityProfileOutput, error) {
+func (r *IoTUpdateSecurityProfileFuture) Get(ctx workflow.Context) (*iot.UpdateSecurityProfileOutput, error) {
 	var output iot.UpdateSecurityProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateStreamFuture struct {
+type IoTUpdateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateStreamFuture) Get(ctx workflow.Context) (*iot.UpdateStreamOutput, error) {
+func (r *IoTUpdateStreamFuture) Get(ctx workflow.Context) (*iot.UpdateStreamOutput, error) {
 	var output iot.UpdateStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateThingFuture struct {
+type IoTUpdateThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateThingFuture) Get(ctx workflow.Context) (*iot.UpdateThingOutput, error) {
+func (r *IoTUpdateThingFuture) Get(ctx workflow.Context) (*iot.UpdateThingOutput, error) {
 	var output iot.UpdateThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateThingGroupFuture struct {
+type IoTUpdateThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateThingGroupFuture) Get(ctx workflow.Context) (*iot.UpdateThingGroupOutput, error) {
+func (r *IoTUpdateThingGroupFuture) Get(ctx workflow.Context) (*iot.UpdateThingGroupOutput, error) {
 	var output iot.UpdateThingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateThingGroupsForThingFuture struct {
+type IoTUpdateThingGroupsForThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateThingGroupsForThingFuture) Get(ctx workflow.Context) (*iot.UpdateThingGroupsForThingOutput, error) {
+func (r *IoTUpdateThingGroupsForThingFuture) Get(ctx workflow.Context) (*iot.UpdateThingGroupsForThingOutput, error) {
 	var output iot.UpdateThingGroupsForThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotUpdateTopicRuleDestinationFuture struct {
+type IoTUpdateTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotUpdateTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.UpdateTopicRuleDestinationOutput, error) {
+func (r *IoTUpdateTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.UpdateTopicRuleDestinationOutput, error) {
 	var output iot.UpdateTopicRuleDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotValidateSecurityProfileBehaviorsFuture struct {
+type IoTValidateSecurityProfileBehaviorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IotValidateSecurityProfileBehaviorsFuture) Get(ctx workflow.Context) (*iot.ValidateSecurityProfileBehaviorsOutput, error) {
+func (r *IoTValidateSecurityProfileBehaviorsFuture) Get(ctx workflow.Context) (*iot.ValidateSecurityProfileBehaviorsOutput, error) {
 	var output iot.ValidateSecurityProfileBehaviorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -2779,9 +2991,9 @@ func (a *IoTStub) AcceptCertificateTransfer(ctx workflow.Context, input *iot.Acc
 	return &output, err
 }
 
-func (a *IoTStub) AcceptCertificateTransferAsync(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) *IotAcceptCertificateTransferFuture {
+func (a *IoTStub) AcceptCertificateTransferAsync(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) *IoTAcceptCertificateTransferFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.AcceptCertificateTransfer", input)
-	return &IotAcceptCertificateTransferFuture{Future: future}
+	return &IoTAcceptCertificateTransferFuture{Future: future}
 }
 
 func (a *IoTStub) AddThingToBillingGroup(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) (*iot.AddThingToBillingGroupOutput, error) {
@@ -2790,9 +3002,9 @@ func (a *IoTStub) AddThingToBillingGroup(ctx workflow.Context, input *iot.AddThi
 	return &output, err
 }
 
-func (a *IoTStub) AddThingToBillingGroupAsync(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) *IotAddThingToBillingGroupFuture {
+func (a *IoTStub) AddThingToBillingGroupAsync(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) *IoTAddThingToBillingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.AddThingToBillingGroup", input)
-	return &IotAddThingToBillingGroupFuture{Future: future}
+	return &IoTAddThingToBillingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) AddThingToThingGroup(ctx workflow.Context, input *iot.AddThingToThingGroupInput) (*iot.AddThingToThingGroupOutput, error) {
@@ -2801,9 +3013,9 @@ func (a *IoTStub) AddThingToThingGroup(ctx workflow.Context, input *iot.AddThing
 	return &output, err
 }
 
-func (a *IoTStub) AddThingToThingGroupAsync(ctx workflow.Context, input *iot.AddThingToThingGroupInput) *IotAddThingToThingGroupFuture {
+func (a *IoTStub) AddThingToThingGroupAsync(ctx workflow.Context, input *iot.AddThingToThingGroupInput) *IoTAddThingToThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.AddThingToThingGroup", input)
-	return &IotAddThingToThingGroupFuture{Future: future}
+	return &IoTAddThingToThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) AssociateTargetsWithJob(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) (*iot.AssociateTargetsWithJobOutput, error) {
@@ -2812,9 +3024,9 @@ func (a *IoTStub) AssociateTargetsWithJob(ctx workflow.Context, input *iot.Assoc
 	return &output, err
 }
 
-func (a *IoTStub) AssociateTargetsWithJobAsync(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) *IotAssociateTargetsWithJobFuture {
+func (a *IoTStub) AssociateTargetsWithJobAsync(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) *IoTAssociateTargetsWithJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.AssociateTargetsWithJob", input)
-	return &IotAssociateTargetsWithJobFuture{Future: future}
+	return &IoTAssociateTargetsWithJobFuture{Future: future}
 }
 
 func (a *IoTStub) AttachPolicy(ctx workflow.Context, input *iot.AttachPolicyInput) (*iot.AttachPolicyOutput, error) {
@@ -2823,9 +3035,9 @@ func (a *IoTStub) AttachPolicy(ctx workflow.Context, input *iot.AttachPolicyInpu
 	return &output, err
 }
 
-func (a *IoTStub) AttachPolicyAsync(ctx workflow.Context, input *iot.AttachPolicyInput) *IotAttachPolicyFuture {
+func (a *IoTStub) AttachPolicyAsync(ctx workflow.Context, input *iot.AttachPolicyInput) *IoTAttachPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.AttachPolicy", input)
-	return &IotAttachPolicyFuture{Future: future}
+	return &IoTAttachPolicyFuture{Future: future}
 }
 
 func (a *IoTStub) AttachPrincipalPolicy(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) (*iot.AttachPrincipalPolicyOutput, error) {
@@ -2834,9 +3046,9 @@ func (a *IoTStub) AttachPrincipalPolicy(ctx workflow.Context, input *iot.AttachP
 	return &output, err
 }
 
-func (a *IoTStub) AttachPrincipalPolicyAsync(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) *IotAttachPrincipalPolicyFuture {
+func (a *IoTStub) AttachPrincipalPolicyAsync(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) *IoTAttachPrincipalPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.AttachPrincipalPolicy", input)
-	return &IotAttachPrincipalPolicyFuture{Future: future}
+	return &IoTAttachPrincipalPolicyFuture{Future: future}
 }
 
 func (a *IoTStub) AttachSecurityProfile(ctx workflow.Context, input *iot.AttachSecurityProfileInput) (*iot.AttachSecurityProfileOutput, error) {
@@ -2845,9 +3057,9 @@ func (a *IoTStub) AttachSecurityProfile(ctx workflow.Context, input *iot.AttachS
 	return &output, err
 }
 
-func (a *IoTStub) AttachSecurityProfileAsync(ctx workflow.Context, input *iot.AttachSecurityProfileInput) *IotAttachSecurityProfileFuture {
+func (a *IoTStub) AttachSecurityProfileAsync(ctx workflow.Context, input *iot.AttachSecurityProfileInput) *IoTAttachSecurityProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.AttachSecurityProfile", input)
-	return &IotAttachSecurityProfileFuture{Future: future}
+	return &IoTAttachSecurityProfileFuture{Future: future}
 }
 
 func (a *IoTStub) AttachThingPrincipal(ctx workflow.Context, input *iot.AttachThingPrincipalInput) (*iot.AttachThingPrincipalOutput, error) {
@@ -2856,9 +3068,9 @@ func (a *IoTStub) AttachThingPrincipal(ctx workflow.Context, input *iot.AttachTh
 	return &output, err
 }
 
-func (a *IoTStub) AttachThingPrincipalAsync(ctx workflow.Context, input *iot.AttachThingPrincipalInput) *IotAttachThingPrincipalFuture {
+func (a *IoTStub) AttachThingPrincipalAsync(ctx workflow.Context, input *iot.AttachThingPrincipalInput) *IoTAttachThingPrincipalFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.AttachThingPrincipal", input)
-	return &IotAttachThingPrincipalFuture{Future: future}
+	return &IoTAttachThingPrincipalFuture{Future: future}
 }
 
 func (a *IoTStub) CancelAuditMitigationActionsTask(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) (*iot.CancelAuditMitigationActionsTaskOutput, error) {
@@ -2867,9 +3079,9 @@ func (a *IoTStub) CancelAuditMitigationActionsTask(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *IoTStub) CancelAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) *IotCancelAuditMitigationActionsTaskFuture {
+func (a *IoTStub) CancelAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) *IoTCancelAuditMitigationActionsTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CancelAuditMitigationActionsTask", input)
-	return &IotCancelAuditMitigationActionsTaskFuture{Future: future}
+	return &IoTCancelAuditMitigationActionsTaskFuture{Future: future}
 }
 
 func (a *IoTStub) CancelAuditTask(ctx workflow.Context, input *iot.CancelAuditTaskInput) (*iot.CancelAuditTaskOutput, error) {
@@ -2878,9 +3090,9 @@ func (a *IoTStub) CancelAuditTask(ctx workflow.Context, input *iot.CancelAuditTa
 	return &output, err
 }
 
-func (a *IoTStub) CancelAuditTaskAsync(ctx workflow.Context, input *iot.CancelAuditTaskInput) *IotCancelAuditTaskFuture {
+func (a *IoTStub) CancelAuditTaskAsync(ctx workflow.Context, input *iot.CancelAuditTaskInput) *IoTCancelAuditTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CancelAuditTask", input)
-	return &IotCancelAuditTaskFuture{Future: future}
+	return &IoTCancelAuditTaskFuture{Future: future}
 }
 
 func (a *IoTStub) CancelCertificateTransfer(ctx workflow.Context, input *iot.CancelCertificateTransferInput) (*iot.CancelCertificateTransferOutput, error) {
@@ -2889,9 +3101,9 @@ func (a *IoTStub) CancelCertificateTransfer(ctx workflow.Context, input *iot.Can
 	return &output, err
 }
 
-func (a *IoTStub) CancelCertificateTransferAsync(ctx workflow.Context, input *iot.CancelCertificateTransferInput) *IotCancelCertificateTransferFuture {
+func (a *IoTStub) CancelCertificateTransferAsync(ctx workflow.Context, input *iot.CancelCertificateTransferInput) *IoTCancelCertificateTransferFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CancelCertificateTransfer", input)
-	return &IotCancelCertificateTransferFuture{Future: future}
+	return &IoTCancelCertificateTransferFuture{Future: future}
 }
 
 func (a *IoTStub) CancelJob(ctx workflow.Context, input *iot.CancelJobInput) (*iot.CancelJobOutput, error) {
@@ -2900,9 +3112,9 @@ func (a *IoTStub) CancelJob(ctx workflow.Context, input *iot.CancelJobInput) (*i
 	return &output, err
 }
 
-func (a *IoTStub) CancelJobAsync(ctx workflow.Context, input *iot.CancelJobInput) *IotCancelJobFuture {
+func (a *IoTStub) CancelJobAsync(ctx workflow.Context, input *iot.CancelJobInput) *IoTCancelJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CancelJob", input)
-	return &IotCancelJobFuture{Future: future}
+	return &IoTCancelJobFuture{Future: future}
 }
 
 func (a *IoTStub) CancelJobExecution(ctx workflow.Context, input *iot.CancelJobExecutionInput) (*iot.CancelJobExecutionOutput, error) {
@@ -2911,9 +3123,9 @@ func (a *IoTStub) CancelJobExecution(ctx workflow.Context, input *iot.CancelJobE
 	return &output, err
 }
 
-func (a *IoTStub) CancelJobExecutionAsync(ctx workflow.Context, input *iot.CancelJobExecutionInput) *IotCancelJobExecutionFuture {
+func (a *IoTStub) CancelJobExecutionAsync(ctx workflow.Context, input *iot.CancelJobExecutionInput) *IoTCancelJobExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CancelJobExecution", input)
-	return &IotCancelJobExecutionFuture{Future: future}
+	return &IoTCancelJobExecutionFuture{Future: future}
 }
 
 func (a *IoTStub) ClearDefaultAuthorizer(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) (*iot.ClearDefaultAuthorizerOutput, error) {
@@ -2922,9 +3134,9 @@ func (a *IoTStub) ClearDefaultAuthorizer(ctx workflow.Context, input *iot.ClearD
 	return &output, err
 }
 
-func (a *IoTStub) ClearDefaultAuthorizerAsync(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) *IotClearDefaultAuthorizerFuture {
+func (a *IoTStub) ClearDefaultAuthorizerAsync(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) *IoTClearDefaultAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ClearDefaultAuthorizer", input)
-	return &IotClearDefaultAuthorizerFuture{Future: future}
+	return &IoTClearDefaultAuthorizerFuture{Future: future}
 }
 
 func (a *IoTStub) ConfirmTopicRuleDestination(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) (*iot.ConfirmTopicRuleDestinationOutput, error) {
@@ -2933,9 +3145,9 @@ func (a *IoTStub) ConfirmTopicRuleDestination(ctx workflow.Context, input *iot.C
 	return &output, err
 }
 
-func (a *IoTStub) ConfirmTopicRuleDestinationAsync(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) *IotConfirmTopicRuleDestinationFuture {
+func (a *IoTStub) ConfirmTopicRuleDestinationAsync(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) *IoTConfirmTopicRuleDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ConfirmTopicRuleDestination", input)
-	return &IotConfirmTopicRuleDestinationFuture{Future: future}
+	return &IoTConfirmTopicRuleDestinationFuture{Future: future}
 }
 
 func (a *IoTStub) CreateAuditSuppression(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) (*iot.CreateAuditSuppressionOutput, error) {
@@ -2944,9 +3156,9 @@ func (a *IoTStub) CreateAuditSuppression(ctx workflow.Context, input *iot.Create
 	return &output, err
 }
 
-func (a *IoTStub) CreateAuditSuppressionAsync(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) *IotCreateAuditSuppressionFuture {
+func (a *IoTStub) CreateAuditSuppressionAsync(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) *IoTCreateAuditSuppressionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateAuditSuppression", input)
-	return &IotCreateAuditSuppressionFuture{Future: future}
+	return &IoTCreateAuditSuppressionFuture{Future: future}
 }
 
 func (a *IoTStub) CreateAuthorizer(ctx workflow.Context, input *iot.CreateAuthorizerInput) (*iot.CreateAuthorizerOutput, error) {
@@ -2955,9 +3167,9 @@ func (a *IoTStub) CreateAuthorizer(ctx workflow.Context, input *iot.CreateAuthor
 	return &output, err
 }
 
-func (a *IoTStub) CreateAuthorizerAsync(ctx workflow.Context, input *iot.CreateAuthorizerInput) *IotCreateAuthorizerFuture {
+func (a *IoTStub) CreateAuthorizerAsync(ctx workflow.Context, input *iot.CreateAuthorizerInput) *IoTCreateAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateAuthorizer", input)
-	return &IotCreateAuthorizerFuture{Future: future}
+	return &IoTCreateAuthorizerFuture{Future: future}
 }
 
 func (a *IoTStub) CreateBillingGroup(ctx workflow.Context, input *iot.CreateBillingGroupInput) (*iot.CreateBillingGroupOutput, error) {
@@ -2966,9 +3178,9 @@ func (a *IoTStub) CreateBillingGroup(ctx workflow.Context, input *iot.CreateBill
 	return &output, err
 }
 
-func (a *IoTStub) CreateBillingGroupAsync(ctx workflow.Context, input *iot.CreateBillingGroupInput) *IotCreateBillingGroupFuture {
+func (a *IoTStub) CreateBillingGroupAsync(ctx workflow.Context, input *iot.CreateBillingGroupInput) *IoTCreateBillingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateBillingGroup", input)
-	return &IotCreateBillingGroupFuture{Future: future}
+	return &IoTCreateBillingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) CreateCertificateFromCsr(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) (*iot.CreateCertificateFromCsrOutput, error) {
@@ -2977,9 +3189,9 @@ func (a *IoTStub) CreateCertificateFromCsr(ctx workflow.Context, input *iot.Crea
 	return &output, err
 }
 
-func (a *IoTStub) CreateCertificateFromCsrAsync(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) *IotCreateCertificateFromCsrFuture {
+func (a *IoTStub) CreateCertificateFromCsrAsync(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) *IoTCreateCertificateFromCsrFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateCertificateFromCsr", input)
-	return &IotCreateCertificateFromCsrFuture{Future: future}
+	return &IoTCreateCertificateFromCsrFuture{Future: future}
 }
 
 func (a *IoTStub) CreateDimension(ctx workflow.Context, input *iot.CreateDimensionInput) (*iot.CreateDimensionOutput, error) {
@@ -2988,9 +3200,9 @@ func (a *IoTStub) CreateDimension(ctx workflow.Context, input *iot.CreateDimensi
 	return &output, err
 }
 
-func (a *IoTStub) CreateDimensionAsync(ctx workflow.Context, input *iot.CreateDimensionInput) *IotCreateDimensionFuture {
+func (a *IoTStub) CreateDimensionAsync(ctx workflow.Context, input *iot.CreateDimensionInput) *IoTCreateDimensionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateDimension", input)
-	return &IotCreateDimensionFuture{Future: future}
+	return &IoTCreateDimensionFuture{Future: future}
 }
 
 func (a *IoTStub) CreateDomainConfiguration(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) (*iot.CreateDomainConfigurationOutput, error) {
@@ -2999,9 +3211,9 @@ func (a *IoTStub) CreateDomainConfiguration(ctx workflow.Context, input *iot.Cre
 	return &output, err
 }
 
-func (a *IoTStub) CreateDomainConfigurationAsync(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) *IotCreateDomainConfigurationFuture {
+func (a *IoTStub) CreateDomainConfigurationAsync(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) *IoTCreateDomainConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateDomainConfiguration", input)
-	return &IotCreateDomainConfigurationFuture{Future: future}
+	return &IoTCreateDomainConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) CreateDynamicThingGroup(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) (*iot.CreateDynamicThingGroupOutput, error) {
@@ -3010,9 +3222,9 @@ func (a *IoTStub) CreateDynamicThingGroup(ctx workflow.Context, input *iot.Creat
 	return &output, err
 }
 
-func (a *IoTStub) CreateDynamicThingGroupAsync(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) *IotCreateDynamicThingGroupFuture {
+func (a *IoTStub) CreateDynamicThingGroupAsync(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) *IoTCreateDynamicThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateDynamicThingGroup", input)
-	return &IotCreateDynamicThingGroupFuture{Future: future}
+	return &IoTCreateDynamicThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) CreateJob(ctx workflow.Context, input *iot.CreateJobInput) (*iot.CreateJobOutput, error) {
@@ -3021,9 +3233,9 @@ func (a *IoTStub) CreateJob(ctx workflow.Context, input *iot.CreateJobInput) (*i
 	return &output, err
 }
 
-func (a *IoTStub) CreateJobAsync(ctx workflow.Context, input *iot.CreateJobInput) *IotCreateJobFuture {
+func (a *IoTStub) CreateJobAsync(ctx workflow.Context, input *iot.CreateJobInput) *IoTCreateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateJob", input)
-	return &IotCreateJobFuture{Future: future}
+	return &IoTCreateJobFuture{Future: future}
 }
 
 func (a *IoTStub) CreateKeysAndCertificate(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) (*iot.CreateKeysAndCertificateOutput, error) {
@@ -3032,9 +3244,9 @@ func (a *IoTStub) CreateKeysAndCertificate(ctx workflow.Context, input *iot.Crea
 	return &output, err
 }
 
-func (a *IoTStub) CreateKeysAndCertificateAsync(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) *IotCreateKeysAndCertificateFuture {
+func (a *IoTStub) CreateKeysAndCertificateAsync(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) *IoTCreateKeysAndCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateKeysAndCertificate", input)
-	return &IotCreateKeysAndCertificateFuture{Future: future}
+	return &IoTCreateKeysAndCertificateFuture{Future: future}
 }
 
 func (a *IoTStub) CreateMitigationAction(ctx workflow.Context, input *iot.CreateMitigationActionInput) (*iot.CreateMitigationActionOutput, error) {
@@ -3043,9 +3255,9 @@ func (a *IoTStub) CreateMitigationAction(ctx workflow.Context, input *iot.Create
 	return &output, err
 }
 
-func (a *IoTStub) CreateMitigationActionAsync(ctx workflow.Context, input *iot.CreateMitigationActionInput) *IotCreateMitigationActionFuture {
+func (a *IoTStub) CreateMitigationActionAsync(ctx workflow.Context, input *iot.CreateMitigationActionInput) *IoTCreateMitigationActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateMitigationAction", input)
-	return &IotCreateMitigationActionFuture{Future: future}
+	return &IoTCreateMitigationActionFuture{Future: future}
 }
 
 func (a *IoTStub) CreateOTAUpdate(ctx workflow.Context, input *iot.CreateOTAUpdateInput) (*iot.CreateOTAUpdateOutput, error) {
@@ -3054,9 +3266,9 @@ func (a *IoTStub) CreateOTAUpdate(ctx workflow.Context, input *iot.CreateOTAUpda
 	return &output, err
 }
 
-func (a *IoTStub) CreateOTAUpdateAsync(ctx workflow.Context, input *iot.CreateOTAUpdateInput) *IotCreateOTAUpdateFuture {
+func (a *IoTStub) CreateOTAUpdateAsync(ctx workflow.Context, input *iot.CreateOTAUpdateInput) *IoTCreateOTAUpdateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateOTAUpdate", input)
-	return &IotCreateOTAUpdateFuture{Future: future}
+	return &IoTCreateOTAUpdateFuture{Future: future}
 }
 
 func (a *IoTStub) CreatePolicy(ctx workflow.Context, input *iot.CreatePolicyInput) (*iot.CreatePolicyOutput, error) {
@@ -3065,9 +3277,9 @@ func (a *IoTStub) CreatePolicy(ctx workflow.Context, input *iot.CreatePolicyInpu
 	return &output, err
 }
 
-func (a *IoTStub) CreatePolicyAsync(ctx workflow.Context, input *iot.CreatePolicyInput) *IotCreatePolicyFuture {
+func (a *IoTStub) CreatePolicyAsync(ctx workflow.Context, input *iot.CreatePolicyInput) *IoTCreatePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreatePolicy", input)
-	return &IotCreatePolicyFuture{Future: future}
+	return &IoTCreatePolicyFuture{Future: future}
 }
 
 func (a *IoTStub) CreatePolicyVersion(ctx workflow.Context, input *iot.CreatePolicyVersionInput) (*iot.CreatePolicyVersionOutput, error) {
@@ -3076,9 +3288,9 @@ func (a *IoTStub) CreatePolicyVersion(ctx workflow.Context, input *iot.CreatePol
 	return &output, err
 }
 
-func (a *IoTStub) CreatePolicyVersionAsync(ctx workflow.Context, input *iot.CreatePolicyVersionInput) *IotCreatePolicyVersionFuture {
+func (a *IoTStub) CreatePolicyVersionAsync(ctx workflow.Context, input *iot.CreatePolicyVersionInput) *IoTCreatePolicyVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreatePolicyVersion", input)
-	return &IotCreatePolicyVersionFuture{Future: future}
+	return &IoTCreatePolicyVersionFuture{Future: future}
 }
 
 func (a *IoTStub) CreateProvisioningClaim(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) (*iot.CreateProvisioningClaimOutput, error) {
@@ -3087,9 +3299,9 @@ func (a *IoTStub) CreateProvisioningClaim(ctx workflow.Context, input *iot.Creat
 	return &output, err
 }
 
-func (a *IoTStub) CreateProvisioningClaimAsync(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) *IotCreateProvisioningClaimFuture {
+func (a *IoTStub) CreateProvisioningClaimAsync(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) *IoTCreateProvisioningClaimFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateProvisioningClaim", input)
-	return &IotCreateProvisioningClaimFuture{Future: future}
+	return &IoTCreateProvisioningClaimFuture{Future: future}
 }
 
 func (a *IoTStub) CreateProvisioningTemplate(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) (*iot.CreateProvisioningTemplateOutput, error) {
@@ -3098,9 +3310,9 @@ func (a *IoTStub) CreateProvisioningTemplate(ctx workflow.Context, input *iot.Cr
 	return &output, err
 }
 
-func (a *IoTStub) CreateProvisioningTemplateAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) *IotCreateProvisioningTemplateFuture {
+func (a *IoTStub) CreateProvisioningTemplateAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) *IoTCreateProvisioningTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateProvisioningTemplate", input)
-	return &IotCreateProvisioningTemplateFuture{Future: future}
+	return &IoTCreateProvisioningTemplateFuture{Future: future}
 }
 
 func (a *IoTStub) CreateProvisioningTemplateVersion(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) (*iot.CreateProvisioningTemplateVersionOutput, error) {
@@ -3109,9 +3321,9 @@ func (a *IoTStub) CreateProvisioningTemplateVersion(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *IoTStub) CreateProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) *IotCreateProvisioningTemplateVersionFuture {
+func (a *IoTStub) CreateProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) *IoTCreateProvisioningTemplateVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateProvisioningTemplateVersion", input)
-	return &IotCreateProvisioningTemplateVersionFuture{Future: future}
+	return &IoTCreateProvisioningTemplateVersionFuture{Future: future}
 }
 
 func (a *IoTStub) CreateRoleAlias(ctx workflow.Context, input *iot.CreateRoleAliasInput) (*iot.CreateRoleAliasOutput, error) {
@@ -3120,9 +3332,9 @@ func (a *IoTStub) CreateRoleAlias(ctx workflow.Context, input *iot.CreateRoleAli
 	return &output, err
 }
 
-func (a *IoTStub) CreateRoleAliasAsync(ctx workflow.Context, input *iot.CreateRoleAliasInput) *IotCreateRoleAliasFuture {
+func (a *IoTStub) CreateRoleAliasAsync(ctx workflow.Context, input *iot.CreateRoleAliasInput) *IoTCreateRoleAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateRoleAlias", input)
-	return &IotCreateRoleAliasFuture{Future: future}
+	return &IoTCreateRoleAliasFuture{Future: future}
 }
 
 func (a *IoTStub) CreateScheduledAudit(ctx workflow.Context, input *iot.CreateScheduledAuditInput) (*iot.CreateScheduledAuditOutput, error) {
@@ -3131,9 +3343,9 @@ func (a *IoTStub) CreateScheduledAudit(ctx workflow.Context, input *iot.CreateSc
 	return &output, err
 }
 
-func (a *IoTStub) CreateScheduledAuditAsync(ctx workflow.Context, input *iot.CreateScheduledAuditInput) *IotCreateScheduledAuditFuture {
+func (a *IoTStub) CreateScheduledAuditAsync(ctx workflow.Context, input *iot.CreateScheduledAuditInput) *IoTCreateScheduledAuditFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateScheduledAudit", input)
-	return &IotCreateScheduledAuditFuture{Future: future}
+	return &IoTCreateScheduledAuditFuture{Future: future}
 }
 
 func (a *IoTStub) CreateSecurityProfile(ctx workflow.Context, input *iot.CreateSecurityProfileInput) (*iot.CreateSecurityProfileOutput, error) {
@@ -3142,9 +3354,9 @@ func (a *IoTStub) CreateSecurityProfile(ctx workflow.Context, input *iot.CreateS
 	return &output, err
 }
 
-func (a *IoTStub) CreateSecurityProfileAsync(ctx workflow.Context, input *iot.CreateSecurityProfileInput) *IotCreateSecurityProfileFuture {
+func (a *IoTStub) CreateSecurityProfileAsync(ctx workflow.Context, input *iot.CreateSecurityProfileInput) *IoTCreateSecurityProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateSecurityProfile", input)
-	return &IotCreateSecurityProfileFuture{Future: future}
+	return &IoTCreateSecurityProfileFuture{Future: future}
 }
 
 func (a *IoTStub) CreateStream(ctx workflow.Context, input *iot.CreateStreamInput) (*iot.CreateStreamOutput, error) {
@@ -3153,9 +3365,9 @@ func (a *IoTStub) CreateStream(ctx workflow.Context, input *iot.CreateStreamInpu
 	return &output, err
 }
 
-func (a *IoTStub) CreateStreamAsync(ctx workflow.Context, input *iot.CreateStreamInput) *IotCreateStreamFuture {
+func (a *IoTStub) CreateStreamAsync(ctx workflow.Context, input *iot.CreateStreamInput) *IoTCreateStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateStream", input)
-	return &IotCreateStreamFuture{Future: future}
+	return &IoTCreateStreamFuture{Future: future}
 }
 
 func (a *IoTStub) CreateThing(ctx workflow.Context, input *iot.CreateThingInput) (*iot.CreateThingOutput, error) {
@@ -3164,9 +3376,9 @@ func (a *IoTStub) CreateThing(ctx workflow.Context, input *iot.CreateThingInput)
 	return &output, err
 }
 
-func (a *IoTStub) CreateThingAsync(ctx workflow.Context, input *iot.CreateThingInput) *IotCreateThingFuture {
+func (a *IoTStub) CreateThingAsync(ctx workflow.Context, input *iot.CreateThingInput) *IoTCreateThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateThing", input)
-	return &IotCreateThingFuture{Future: future}
+	return &IoTCreateThingFuture{Future: future}
 }
 
 func (a *IoTStub) CreateThingGroup(ctx workflow.Context, input *iot.CreateThingGroupInput) (*iot.CreateThingGroupOutput, error) {
@@ -3175,9 +3387,9 @@ func (a *IoTStub) CreateThingGroup(ctx workflow.Context, input *iot.CreateThingG
 	return &output, err
 }
 
-func (a *IoTStub) CreateThingGroupAsync(ctx workflow.Context, input *iot.CreateThingGroupInput) *IotCreateThingGroupFuture {
+func (a *IoTStub) CreateThingGroupAsync(ctx workflow.Context, input *iot.CreateThingGroupInput) *IoTCreateThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateThingGroup", input)
-	return &IotCreateThingGroupFuture{Future: future}
+	return &IoTCreateThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) CreateThingType(ctx workflow.Context, input *iot.CreateThingTypeInput) (*iot.CreateThingTypeOutput, error) {
@@ -3186,9 +3398,9 @@ func (a *IoTStub) CreateThingType(ctx workflow.Context, input *iot.CreateThingTy
 	return &output, err
 }
 
-func (a *IoTStub) CreateThingTypeAsync(ctx workflow.Context, input *iot.CreateThingTypeInput) *IotCreateThingTypeFuture {
+func (a *IoTStub) CreateThingTypeAsync(ctx workflow.Context, input *iot.CreateThingTypeInput) *IoTCreateThingTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateThingType", input)
-	return &IotCreateThingTypeFuture{Future: future}
+	return &IoTCreateThingTypeFuture{Future: future}
 }
 
 func (a *IoTStub) CreateTopicRule(ctx workflow.Context, input *iot.CreateTopicRuleInput) (*iot.CreateTopicRuleOutput, error) {
@@ -3197,9 +3409,9 @@ func (a *IoTStub) CreateTopicRule(ctx workflow.Context, input *iot.CreateTopicRu
 	return &output, err
 }
 
-func (a *IoTStub) CreateTopicRuleAsync(ctx workflow.Context, input *iot.CreateTopicRuleInput) *IotCreateTopicRuleFuture {
+func (a *IoTStub) CreateTopicRuleAsync(ctx workflow.Context, input *iot.CreateTopicRuleInput) *IoTCreateTopicRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateTopicRule", input)
-	return &IotCreateTopicRuleFuture{Future: future}
+	return &IoTCreateTopicRuleFuture{Future: future}
 }
 
 func (a *IoTStub) CreateTopicRuleDestination(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) (*iot.CreateTopicRuleDestinationOutput, error) {
@@ -3208,9 +3420,9 @@ func (a *IoTStub) CreateTopicRuleDestination(ctx workflow.Context, input *iot.Cr
 	return &output, err
 }
 
-func (a *IoTStub) CreateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) *IotCreateTopicRuleDestinationFuture {
+func (a *IoTStub) CreateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) *IoTCreateTopicRuleDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.CreateTopicRuleDestination", input)
-	return &IotCreateTopicRuleDestinationFuture{Future: future}
+	return &IoTCreateTopicRuleDestinationFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteAccountAuditConfiguration(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) (*iot.DeleteAccountAuditConfigurationOutput, error) {
@@ -3219,9 +3431,9 @@ func (a *IoTStub) DeleteAccountAuditConfiguration(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTStub) DeleteAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) *IotDeleteAccountAuditConfigurationFuture {
+func (a *IoTStub) DeleteAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) *IoTDeleteAccountAuditConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteAccountAuditConfiguration", input)
-	return &IotDeleteAccountAuditConfigurationFuture{Future: future}
+	return &IoTDeleteAccountAuditConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteAuditSuppression(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) (*iot.DeleteAuditSuppressionOutput, error) {
@@ -3230,9 +3442,9 @@ func (a *IoTStub) DeleteAuditSuppression(ctx workflow.Context, input *iot.Delete
 	return &output, err
 }
 
-func (a *IoTStub) DeleteAuditSuppressionAsync(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) *IotDeleteAuditSuppressionFuture {
+func (a *IoTStub) DeleteAuditSuppressionAsync(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) *IoTDeleteAuditSuppressionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteAuditSuppression", input)
-	return &IotDeleteAuditSuppressionFuture{Future: future}
+	return &IoTDeleteAuditSuppressionFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteAuthorizer(ctx workflow.Context, input *iot.DeleteAuthorizerInput) (*iot.DeleteAuthorizerOutput, error) {
@@ -3241,9 +3453,9 @@ func (a *IoTStub) DeleteAuthorizer(ctx workflow.Context, input *iot.DeleteAuthor
 	return &output, err
 }
 
-func (a *IoTStub) DeleteAuthorizerAsync(ctx workflow.Context, input *iot.DeleteAuthorizerInput) *IotDeleteAuthorizerFuture {
+func (a *IoTStub) DeleteAuthorizerAsync(ctx workflow.Context, input *iot.DeleteAuthorizerInput) *IoTDeleteAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteAuthorizer", input)
-	return &IotDeleteAuthorizerFuture{Future: future}
+	return &IoTDeleteAuthorizerFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteBillingGroup(ctx workflow.Context, input *iot.DeleteBillingGroupInput) (*iot.DeleteBillingGroupOutput, error) {
@@ -3252,9 +3464,9 @@ func (a *IoTStub) DeleteBillingGroup(ctx workflow.Context, input *iot.DeleteBill
 	return &output, err
 }
 
-func (a *IoTStub) DeleteBillingGroupAsync(ctx workflow.Context, input *iot.DeleteBillingGroupInput) *IotDeleteBillingGroupFuture {
+func (a *IoTStub) DeleteBillingGroupAsync(ctx workflow.Context, input *iot.DeleteBillingGroupInput) *IoTDeleteBillingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteBillingGroup", input)
-	return &IotDeleteBillingGroupFuture{Future: future}
+	return &IoTDeleteBillingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteCACertificate(ctx workflow.Context, input *iot.DeleteCACertificateInput) (*iot.DeleteCACertificateOutput, error) {
@@ -3263,9 +3475,9 @@ func (a *IoTStub) DeleteCACertificate(ctx workflow.Context, input *iot.DeleteCAC
 	return &output, err
 }
 
-func (a *IoTStub) DeleteCACertificateAsync(ctx workflow.Context, input *iot.DeleteCACertificateInput) *IotDeleteCACertificateFuture {
+func (a *IoTStub) DeleteCACertificateAsync(ctx workflow.Context, input *iot.DeleteCACertificateInput) *IoTDeleteCACertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteCACertificate", input)
-	return &IotDeleteCACertificateFuture{Future: future}
+	return &IoTDeleteCACertificateFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteCertificate(ctx workflow.Context, input *iot.DeleteCertificateInput) (*iot.DeleteCertificateOutput, error) {
@@ -3274,9 +3486,9 @@ func (a *IoTStub) DeleteCertificate(ctx workflow.Context, input *iot.DeleteCerti
 	return &output, err
 }
 
-func (a *IoTStub) DeleteCertificateAsync(ctx workflow.Context, input *iot.DeleteCertificateInput) *IotDeleteCertificateFuture {
+func (a *IoTStub) DeleteCertificateAsync(ctx workflow.Context, input *iot.DeleteCertificateInput) *IoTDeleteCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteCertificate", input)
-	return &IotDeleteCertificateFuture{Future: future}
+	return &IoTDeleteCertificateFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteDimension(ctx workflow.Context, input *iot.DeleteDimensionInput) (*iot.DeleteDimensionOutput, error) {
@@ -3285,9 +3497,9 @@ func (a *IoTStub) DeleteDimension(ctx workflow.Context, input *iot.DeleteDimensi
 	return &output, err
 }
 
-func (a *IoTStub) DeleteDimensionAsync(ctx workflow.Context, input *iot.DeleteDimensionInput) *IotDeleteDimensionFuture {
+func (a *IoTStub) DeleteDimensionAsync(ctx workflow.Context, input *iot.DeleteDimensionInput) *IoTDeleteDimensionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteDimension", input)
-	return &IotDeleteDimensionFuture{Future: future}
+	return &IoTDeleteDimensionFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteDomainConfiguration(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) (*iot.DeleteDomainConfigurationOutput, error) {
@@ -3296,9 +3508,9 @@ func (a *IoTStub) DeleteDomainConfiguration(ctx workflow.Context, input *iot.Del
 	return &output, err
 }
 
-func (a *IoTStub) DeleteDomainConfigurationAsync(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) *IotDeleteDomainConfigurationFuture {
+func (a *IoTStub) DeleteDomainConfigurationAsync(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) *IoTDeleteDomainConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteDomainConfiguration", input)
-	return &IotDeleteDomainConfigurationFuture{Future: future}
+	return &IoTDeleteDomainConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteDynamicThingGroup(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) (*iot.DeleteDynamicThingGroupOutput, error) {
@@ -3307,9 +3519,9 @@ func (a *IoTStub) DeleteDynamicThingGroup(ctx workflow.Context, input *iot.Delet
 	return &output, err
 }
 
-func (a *IoTStub) DeleteDynamicThingGroupAsync(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) *IotDeleteDynamicThingGroupFuture {
+func (a *IoTStub) DeleteDynamicThingGroupAsync(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) *IoTDeleteDynamicThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteDynamicThingGroup", input)
-	return &IotDeleteDynamicThingGroupFuture{Future: future}
+	return &IoTDeleteDynamicThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteJob(ctx workflow.Context, input *iot.DeleteJobInput) (*iot.DeleteJobOutput, error) {
@@ -3318,9 +3530,9 @@ func (a *IoTStub) DeleteJob(ctx workflow.Context, input *iot.DeleteJobInput) (*i
 	return &output, err
 }
 
-func (a *IoTStub) DeleteJobAsync(ctx workflow.Context, input *iot.DeleteJobInput) *IotDeleteJobFuture {
+func (a *IoTStub) DeleteJobAsync(ctx workflow.Context, input *iot.DeleteJobInput) *IoTDeleteJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteJob", input)
-	return &IotDeleteJobFuture{Future: future}
+	return &IoTDeleteJobFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteJobExecution(ctx workflow.Context, input *iot.DeleteJobExecutionInput) (*iot.DeleteJobExecutionOutput, error) {
@@ -3329,9 +3541,9 @@ func (a *IoTStub) DeleteJobExecution(ctx workflow.Context, input *iot.DeleteJobE
 	return &output, err
 }
 
-func (a *IoTStub) DeleteJobExecutionAsync(ctx workflow.Context, input *iot.DeleteJobExecutionInput) *IotDeleteJobExecutionFuture {
+func (a *IoTStub) DeleteJobExecutionAsync(ctx workflow.Context, input *iot.DeleteJobExecutionInput) *IoTDeleteJobExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteJobExecution", input)
-	return &IotDeleteJobExecutionFuture{Future: future}
+	return &IoTDeleteJobExecutionFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteMitigationAction(ctx workflow.Context, input *iot.DeleteMitigationActionInput) (*iot.DeleteMitigationActionOutput, error) {
@@ -3340,9 +3552,9 @@ func (a *IoTStub) DeleteMitigationAction(ctx workflow.Context, input *iot.Delete
 	return &output, err
 }
 
-func (a *IoTStub) DeleteMitigationActionAsync(ctx workflow.Context, input *iot.DeleteMitigationActionInput) *IotDeleteMitigationActionFuture {
+func (a *IoTStub) DeleteMitigationActionAsync(ctx workflow.Context, input *iot.DeleteMitigationActionInput) *IoTDeleteMitigationActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteMitigationAction", input)
-	return &IotDeleteMitigationActionFuture{Future: future}
+	return &IoTDeleteMitigationActionFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteOTAUpdate(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) (*iot.DeleteOTAUpdateOutput, error) {
@@ -3351,9 +3563,9 @@ func (a *IoTStub) DeleteOTAUpdate(ctx workflow.Context, input *iot.DeleteOTAUpda
 	return &output, err
 }
 
-func (a *IoTStub) DeleteOTAUpdateAsync(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) *IotDeleteOTAUpdateFuture {
+func (a *IoTStub) DeleteOTAUpdateAsync(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) *IoTDeleteOTAUpdateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteOTAUpdate", input)
-	return &IotDeleteOTAUpdateFuture{Future: future}
+	return &IoTDeleteOTAUpdateFuture{Future: future}
 }
 
 func (a *IoTStub) DeletePolicy(ctx workflow.Context, input *iot.DeletePolicyInput) (*iot.DeletePolicyOutput, error) {
@@ -3362,9 +3574,9 @@ func (a *IoTStub) DeletePolicy(ctx workflow.Context, input *iot.DeletePolicyInpu
 	return &output, err
 }
 
-func (a *IoTStub) DeletePolicyAsync(ctx workflow.Context, input *iot.DeletePolicyInput) *IotDeletePolicyFuture {
+func (a *IoTStub) DeletePolicyAsync(ctx workflow.Context, input *iot.DeletePolicyInput) *IoTDeletePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeletePolicy", input)
-	return &IotDeletePolicyFuture{Future: future}
+	return &IoTDeletePolicyFuture{Future: future}
 }
 
 func (a *IoTStub) DeletePolicyVersion(ctx workflow.Context, input *iot.DeletePolicyVersionInput) (*iot.DeletePolicyVersionOutput, error) {
@@ -3373,9 +3585,9 @@ func (a *IoTStub) DeletePolicyVersion(ctx workflow.Context, input *iot.DeletePol
 	return &output, err
 }
 
-func (a *IoTStub) DeletePolicyVersionAsync(ctx workflow.Context, input *iot.DeletePolicyVersionInput) *IotDeletePolicyVersionFuture {
+func (a *IoTStub) DeletePolicyVersionAsync(ctx workflow.Context, input *iot.DeletePolicyVersionInput) *IoTDeletePolicyVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeletePolicyVersion", input)
-	return &IotDeletePolicyVersionFuture{Future: future}
+	return &IoTDeletePolicyVersionFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteProvisioningTemplate(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) (*iot.DeleteProvisioningTemplateOutput, error) {
@@ -3384,9 +3596,9 @@ func (a *IoTStub) DeleteProvisioningTemplate(ctx workflow.Context, input *iot.De
 	return &output, err
 }
 
-func (a *IoTStub) DeleteProvisioningTemplateAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) *IotDeleteProvisioningTemplateFuture {
+func (a *IoTStub) DeleteProvisioningTemplateAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) *IoTDeleteProvisioningTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteProvisioningTemplate", input)
-	return &IotDeleteProvisioningTemplateFuture{Future: future}
+	return &IoTDeleteProvisioningTemplateFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteProvisioningTemplateVersion(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) (*iot.DeleteProvisioningTemplateVersionOutput, error) {
@@ -3395,9 +3607,9 @@ func (a *IoTStub) DeleteProvisioningTemplateVersion(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *IoTStub) DeleteProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) *IotDeleteProvisioningTemplateVersionFuture {
+func (a *IoTStub) DeleteProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) *IoTDeleteProvisioningTemplateVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteProvisioningTemplateVersion", input)
-	return &IotDeleteProvisioningTemplateVersionFuture{Future: future}
+	return &IoTDeleteProvisioningTemplateVersionFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteRegistrationCode(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) (*iot.DeleteRegistrationCodeOutput, error) {
@@ -3406,9 +3618,9 @@ func (a *IoTStub) DeleteRegistrationCode(ctx workflow.Context, input *iot.Delete
 	return &output, err
 }
 
-func (a *IoTStub) DeleteRegistrationCodeAsync(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) *IotDeleteRegistrationCodeFuture {
+func (a *IoTStub) DeleteRegistrationCodeAsync(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) *IoTDeleteRegistrationCodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteRegistrationCode", input)
-	return &IotDeleteRegistrationCodeFuture{Future: future}
+	return &IoTDeleteRegistrationCodeFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteRoleAlias(ctx workflow.Context, input *iot.DeleteRoleAliasInput) (*iot.DeleteRoleAliasOutput, error) {
@@ -3417,9 +3629,9 @@ func (a *IoTStub) DeleteRoleAlias(ctx workflow.Context, input *iot.DeleteRoleAli
 	return &output, err
 }
 
-func (a *IoTStub) DeleteRoleAliasAsync(ctx workflow.Context, input *iot.DeleteRoleAliasInput) *IotDeleteRoleAliasFuture {
+func (a *IoTStub) DeleteRoleAliasAsync(ctx workflow.Context, input *iot.DeleteRoleAliasInput) *IoTDeleteRoleAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteRoleAlias", input)
-	return &IotDeleteRoleAliasFuture{Future: future}
+	return &IoTDeleteRoleAliasFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteScheduledAudit(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) (*iot.DeleteScheduledAuditOutput, error) {
@@ -3428,9 +3640,9 @@ func (a *IoTStub) DeleteScheduledAudit(ctx workflow.Context, input *iot.DeleteSc
 	return &output, err
 }
 
-func (a *IoTStub) DeleteScheduledAuditAsync(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) *IotDeleteScheduledAuditFuture {
+func (a *IoTStub) DeleteScheduledAuditAsync(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) *IoTDeleteScheduledAuditFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteScheduledAudit", input)
-	return &IotDeleteScheduledAuditFuture{Future: future}
+	return &IoTDeleteScheduledAuditFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteSecurityProfile(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) (*iot.DeleteSecurityProfileOutput, error) {
@@ -3439,9 +3651,9 @@ func (a *IoTStub) DeleteSecurityProfile(ctx workflow.Context, input *iot.DeleteS
 	return &output, err
 }
 
-func (a *IoTStub) DeleteSecurityProfileAsync(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) *IotDeleteSecurityProfileFuture {
+func (a *IoTStub) DeleteSecurityProfileAsync(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) *IoTDeleteSecurityProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteSecurityProfile", input)
-	return &IotDeleteSecurityProfileFuture{Future: future}
+	return &IoTDeleteSecurityProfileFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteStream(ctx workflow.Context, input *iot.DeleteStreamInput) (*iot.DeleteStreamOutput, error) {
@@ -3450,9 +3662,9 @@ func (a *IoTStub) DeleteStream(ctx workflow.Context, input *iot.DeleteStreamInpu
 	return &output, err
 }
 
-func (a *IoTStub) DeleteStreamAsync(ctx workflow.Context, input *iot.DeleteStreamInput) *IotDeleteStreamFuture {
+func (a *IoTStub) DeleteStreamAsync(ctx workflow.Context, input *iot.DeleteStreamInput) *IoTDeleteStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteStream", input)
-	return &IotDeleteStreamFuture{Future: future}
+	return &IoTDeleteStreamFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteThing(ctx workflow.Context, input *iot.DeleteThingInput) (*iot.DeleteThingOutput, error) {
@@ -3461,9 +3673,9 @@ func (a *IoTStub) DeleteThing(ctx workflow.Context, input *iot.DeleteThingInput)
 	return &output, err
 }
 
-func (a *IoTStub) DeleteThingAsync(ctx workflow.Context, input *iot.DeleteThingInput) *IotDeleteThingFuture {
+func (a *IoTStub) DeleteThingAsync(ctx workflow.Context, input *iot.DeleteThingInput) *IoTDeleteThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteThing", input)
-	return &IotDeleteThingFuture{Future: future}
+	return &IoTDeleteThingFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteThingGroup(ctx workflow.Context, input *iot.DeleteThingGroupInput) (*iot.DeleteThingGroupOutput, error) {
@@ -3472,9 +3684,9 @@ func (a *IoTStub) DeleteThingGroup(ctx workflow.Context, input *iot.DeleteThingG
 	return &output, err
 }
 
-func (a *IoTStub) DeleteThingGroupAsync(ctx workflow.Context, input *iot.DeleteThingGroupInput) *IotDeleteThingGroupFuture {
+func (a *IoTStub) DeleteThingGroupAsync(ctx workflow.Context, input *iot.DeleteThingGroupInput) *IoTDeleteThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteThingGroup", input)
-	return &IotDeleteThingGroupFuture{Future: future}
+	return &IoTDeleteThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteThingType(ctx workflow.Context, input *iot.DeleteThingTypeInput) (*iot.DeleteThingTypeOutput, error) {
@@ -3483,9 +3695,9 @@ func (a *IoTStub) DeleteThingType(ctx workflow.Context, input *iot.DeleteThingTy
 	return &output, err
 }
 
-func (a *IoTStub) DeleteThingTypeAsync(ctx workflow.Context, input *iot.DeleteThingTypeInput) *IotDeleteThingTypeFuture {
+func (a *IoTStub) DeleteThingTypeAsync(ctx workflow.Context, input *iot.DeleteThingTypeInput) *IoTDeleteThingTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteThingType", input)
-	return &IotDeleteThingTypeFuture{Future: future}
+	return &IoTDeleteThingTypeFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteTopicRule(ctx workflow.Context, input *iot.DeleteTopicRuleInput) (*iot.DeleteTopicRuleOutput, error) {
@@ -3494,9 +3706,9 @@ func (a *IoTStub) DeleteTopicRule(ctx workflow.Context, input *iot.DeleteTopicRu
 	return &output, err
 }
 
-func (a *IoTStub) DeleteTopicRuleAsync(ctx workflow.Context, input *iot.DeleteTopicRuleInput) *IotDeleteTopicRuleFuture {
+func (a *IoTStub) DeleteTopicRuleAsync(ctx workflow.Context, input *iot.DeleteTopicRuleInput) *IoTDeleteTopicRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteTopicRule", input)
-	return &IotDeleteTopicRuleFuture{Future: future}
+	return &IoTDeleteTopicRuleFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteTopicRuleDestination(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) (*iot.DeleteTopicRuleDestinationOutput, error) {
@@ -3505,9 +3717,9 @@ func (a *IoTStub) DeleteTopicRuleDestination(ctx workflow.Context, input *iot.De
 	return &output, err
 }
 
-func (a *IoTStub) DeleteTopicRuleDestinationAsync(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) *IotDeleteTopicRuleDestinationFuture {
+func (a *IoTStub) DeleteTopicRuleDestinationAsync(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) *IoTDeleteTopicRuleDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteTopicRuleDestination", input)
-	return &IotDeleteTopicRuleDestinationFuture{Future: future}
+	return &IoTDeleteTopicRuleDestinationFuture{Future: future}
 }
 
 func (a *IoTStub) DeleteV2LoggingLevel(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) (*iot.DeleteV2LoggingLevelOutput, error) {
@@ -3516,9 +3728,9 @@ func (a *IoTStub) DeleteV2LoggingLevel(ctx workflow.Context, input *iot.DeleteV2
 	return &output, err
 }
 
-func (a *IoTStub) DeleteV2LoggingLevelAsync(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) *IotDeleteV2LoggingLevelFuture {
+func (a *IoTStub) DeleteV2LoggingLevelAsync(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) *IoTDeleteV2LoggingLevelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeleteV2LoggingLevel", input)
-	return &IotDeleteV2LoggingLevelFuture{Future: future}
+	return &IoTDeleteV2LoggingLevelFuture{Future: future}
 }
 
 func (a *IoTStub) DeprecateThingType(ctx workflow.Context, input *iot.DeprecateThingTypeInput) (*iot.DeprecateThingTypeOutput, error) {
@@ -3527,9 +3739,9 @@ func (a *IoTStub) DeprecateThingType(ctx workflow.Context, input *iot.DeprecateT
 	return &output, err
 }
 
-func (a *IoTStub) DeprecateThingTypeAsync(ctx workflow.Context, input *iot.DeprecateThingTypeInput) *IotDeprecateThingTypeFuture {
+func (a *IoTStub) DeprecateThingTypeAsync(ctx workflow.Context, input *iot.DeprecateThingTypeInput) *IoTDeprecateThingTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DeprecateThingType", input)
-	return &IotDeprecateThingTypeFuture{Future: future}
+	return &IoTDeprecateThingTypeFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeAccountAuditConfiguration(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) (*iot.DescribeAccountAuditConfigurationOutput, error) {
@@ -3538,9 +3750,9 @@ func (a *IoTStub) DescribeAccountAuditConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *IoTStub) DescribeAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) *IotDescribeAccountAuditConfigurationFuture {
+func (a *IoTStub) DescribeAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) *IoTDescribeAccountAuditConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeAccountAuditConfiguration", input)
-	return &IotDescribeAccountAuditConfigurationFuture{Future: future}
+	return &IoTDescribeAccountAuditConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeAuditFinding(ctx workflow.Context, input *iot.DescribeAuditFindingInput) (*iot.DescribeAuditFindingOutput, error) {
@@ -3549,9 +3761,9 @@ func (a *IoTStub) DescribeAuditFinding(ctx workflow.Context, input *iot.Describe
 	return &output, err
 }
 
-func (a *IoTStub) DescribeAuditFindingAsync(ctx workflow.Context, input *iot.DescribeAuditFindingInput) *IotDescribeAuditFindingFuture {
+func (a *IoTStub) DescribeAuditFindingAsync(ctx workflow.Context, input *iot.DescribeAuditFindingInput) *IoTDescribeAuditFindingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeAuditFinding", input)
-	return &IotDescribeAuditFindingFuture{Future: future}
+	return &IoTDescribeAuditFindingFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeAuditMitigationActionsTask(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) (*iot.DescribeAuditMitigationActionsTaskOutput, error) {
@@ -3560,9 +3772,9 @@ func (a *IoTStub) DescribeAuditMitigationActionsTask(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *IoTStub) DescribeAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) *IotDescribeAuditMitigationActionsTaskFuture {
+func (a *IoTStub) DescribeAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) *IoTDescribeAuditMitigationActionsTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeAuditMitigationActionsTask", input)
-	return &IotDescribeAuditMitigationActionsTaskFuture{Future: future}
+	return &IoTDescribeAuditMitigationActionsTaskFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeAuditSuppression(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) (*iot.DescribeAuditSuppressionOutput, error) {
@@ -3571,9 +3783,9 @@ func (a *IoTStub) DescribeAuditSuppression(ctx workflow.Context, input *iot.Desc
 	return &output, err
 }
 
-func (a *IoTStub) DescribeAuditSuppressionAsync(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) *IotDescribeAuditSuppressionFuture {
+func (a *IoTStub) DescribeAuditSuppressionAsync(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) *IoTDescribeAuditSuppressionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeAuditSuppression", input)
-	return &IotDescribeAuditSuppressionFuture{Future: future}
+	return &IoTDescribeAuditSuppressionFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeAuditTask(ctx workflow.Context, input *iot.DescribeAuditTaskInput) (*iot.DescribeAuditTaskOutput, error) {
@@ -3582,9 +3794,9 @@ func (a *IoTStub) DescribeAuditTask(ctx workflow.Context, input *iot.DescribeAud
 	return &output, err
 }
 
-func (a *IoTStub) DescribeAuditTaskAsync(ctx workflow.Context, input *iot.DescribeAuditTaskInput) *IotDescribeAuditTaskFuture {
+func (a *IoTStub) DescribeAuditTaskAsync(ctx workflow.Context, input *iot.DescribeAuditTaskInput) *IoTDescribeAuditTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeAuditTask", input)
-	return &IotDescribeAuditTaskFuture{Future: future}
+	return &IoTDescribeAuditTaskFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeAuthorizer(ctx workflow.Context, input *iot.DescribeAuthorizerInput) (*iot.DescribeAuthorizerOutput, error) {
@@ -3593,9 +3805,9 @@ func (a *IoTStub) DescribeAuthorizer(ctx workflow.Context, input *iot.DescribeAu
 	return &output, err
 }
 
-func (a *IoTStub) DescribeAuthorizerAsync(ctx workflow.Context, input *iot.DescribeAuthorizerInput) *IotDescribeAuthorizerFuture {
+func (a *IoTStub) DescribeAuthorizerAsync(ctx workflow.Context, input *iot.DescribeAuthorizerInput) *IoTDescribeAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeAuthorizer", input)
-	return &IotDescribeAuthorizerFuture{Future: future}
+	return &IoTDescribeAuthorizerFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeBillingGroup(ctx workflow.Context, input *iot.DescribeBillingGroupInput) (*iot.DescribeBillingGroupOutput, error) {
@@ -3604,9 +3816,9 @@ func (a *IoTStub) DescribeBillingGroup(ctx workflow.Context, input *iot.Describe
 	return &output, err
 }
 
-func (a *IoTStub) DescribeBillingGroupAsync(ctx workflow.Context, input *iot.DescribeBillingGroupInput) *IotDescribeBillingGroupFuture {
+func (a *IoTStub) DescribeBillingGroupAsync(ctx workflow.Context, input *iot.DescribeBillingGroupInput) *IoTDescribeBillingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeBillingGroup", input)
-	return &IotDescribeBillingGroupFuture{Future: future}
+	return &IoTDescribeBillingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeCACertificate(ctx workflow.Context, input *iot.DescribeCACertificateInput) (*iot.DescribeCACertificateOutput, error) {
@@ -3615,9 +3827,9 @@ func (a *IoTStub) DescribeCACertificate(ctx workflow.Context, input *iot.Describ
 	return &output, err
 }
 
-func (a *IoTStub) DescribeCACertificateAsync(ctx workflow.Context, input *iot.DescribeCACertificateInput) *IotDescribeCACertificateFuture {
+func (a *IoTStub) DescribeCACertificateAsync(ctx workflow.Context, input *iot.DescribeCACertificateInput) *IoTDescribeCACertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeCACertificate", input)
-	return &IotDescribeCACertificateFuture{Future: future}
+	return &IoTDescribeCACertificateFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeCertificate(ctx workflow.Context, input *iot.DescribeCertificateInput) (*iot.DescribeCertificateOutput, error) {
@@ -3626,9 +3838,9 @@ func (a *IoTStub) DescribeCertificate(ctx workflow.Context, input *iot.DescribeC
 	return &output, err
 }
 
-func (a *IoTStub) DescribeCertificateAsync(ctx workflow.Context, input *iot.DescribeCertificateInput) *IotDescribeCertificateFuture {
+func (a *IoTStub) DescribeCertificateAsync(ctx workflow.Context, input *iot.DescribeCertificateInput) *IoTDescribeCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeCertificate", input)
-	return &IotDescribeCertificateFuture{Future: future}
+	return &IoTDescribeCertificateFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeDefaultAuthorizer(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) (*iot.DescribeDefaultAuthorizerOutput, error) {
@@ -3637,9 +3849,9 @@ func (a *IoTStub) DescribeDefaultAuthorizer(ctx workflow.Context, input *iot.Des
 	return &output, err
 }
 
-func (a *IoTStub) DescribeDefaultAuthorizerAsync(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) *IotDescribeDefaultAuthorizerFuture {
+func (a *IoTStub) DescribeDefaultAuthorizerAsync(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) *IoTDescribeDefaultAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeDefaultAuthorizer", input)
-	return &IotDescribeDefaultAuthorizerFuture{Future: future}
+	return &IoTDescribeDefaultAuthorizerFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeDimension(ctx workflow.Context, input *iot.DescribeDimensionInput) (*iot.DescribeDimensionOutput, error) {
@@ -3648,9 +3860,9 @@ func (a *IoTStub) DescribeDimension(ctx workflow.Context, input *iot.DescribeDim
 	return &output, err
 }
 
-func (a *IoTStub) DescribeDimensionAsync(ctx workflow.Context, input *iot.DescribeDimensionInput) *IotDescribeDimensionFuture {
+func (a *IoTStub) DescribeDimensionAsync(ctx workflow.Context, input *iot.DescribeDimensionInput) *IoTDescribeDimensionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeDimension", input)
-	return &IotDescribeDimensionFuture{Future: future}
+	return &IoTDescribeDimensionFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeDomainConfiguration(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) (*iot.DescribeDomainConfigurationOutput, error) {
@@ -3659,9 +3871,9 @@ func (a *IoTStub) DescribeDomainConfiguration(ctx workflow.Context, input *iot.D
 	return &output, err
 }
 
-func (a *IoTStub) DescribeDomainConfigurationAsync(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) *IotDescribeDomainConfigurationFuture {
+func (a *IoTStub) DescribeDomainConfigurationAsync(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) *IoTDescribeDomainConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeDomainConfiguration", input)
-	return &IotDescribeDomainConfigurationFuture{Future: future}
+	return &IoTDescribeDomainConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeEndpoint(ctx workflow.Context, input *iot.DescribeEndpointInput) (*iot.DescribeEndpointOutput, error) {
@@ -3670,9 +3882,9 @@ func (a *IoTStub) DescribeEndpoint(ctx workflow.Context, input *iot.DescribeEndp
 	return &output, err
 }
 
-func (a *IoTStub) DescribeEndpointAsync(ctx workflow.Context, input *iot.DescribeEndpointInput) *IotDescribeEndpointFuture {
+func (a *IoTStub) DescribeEndpointAsync(ctx workflow.Context, input *iot.DescribeEndpointInput) *IoTDescribeEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeEndpoint", input)
-	return &IotDescribeEndpointFuture{Future: future}
+	return &IoTDescribeEndpointFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeEventConfigurations(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) (*iot.DescribeEventConfigurationsOutput, error) {
@@ -3681,9 +3893,9 @@ func (a *IoTStub) DescribeEventConfigurations(ctx workflow.Context, input *iot.D
 	return &output, err
 }
 
-func (a *IoTStub) DescribeEventConfigurationsAsync(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) *IotDescribeEventConfigurationsFuture {
+func (a *IoTStub) DescribeEventConfigurationsAsync(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) *IoTDescribeEventConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeEventConfigurations", input)
-	return &IotDescribeEventConfigurationsFuture{Future: future}
+	return &IoTDescribeEventConfigurationsFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeIndex(ctx workflow.Context, input *iot.DescribeIndexInput) (*iot.DescribeIndexOutput, error) {
@@ -3692,9 +3904,9 @@ func (a *IoTStub) DescribeIndex(ctx workflow.Context, input *iot.DescribeIndexIn
 	return &output, err
 }
 
-func (a *IoTStub) DescribeIndexAsync(ctx workflow.Context, input *iot.DescribeIndexInput) *IotDescribeIndexFuture {
+func (a *IoTStub) DescribeIndexAsync(ctx workflow.Context, input *iot.DescribeIndexInput) *IoTDescribeIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeIndex", input)
-	return &IotDescribeIndexFuture{Future: future}
+	return &IoTDescribeIndexFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeJob(ctx workflow.Context, input *iot.DescribeJobInput) (*iot.DescribeJobOutput, error) {
@@ -3703,9 +3915,9 @@ func (a *IoTStub) DescribeJob(ctx workflow.Context, input *iot.DescribeJobInput)
 	return &output, err
 }
 
-func (a *IoTStub) DescribeJobAsync(ctx workflow.Context, input *iot.DescribeJobInput) *IotDescribeJobFuture {
+func (a *IoTStub) DescribeJobAsync(ctx workflow.Context, input *iot.DescribeJobInput) *IoTDescribeJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeJob", input)
-	return &IotDescribeJobFuture{Future: future}
+	return &IoTDescribeJobFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeJobExecution(ctx workflow.Context, input *iot.DescribeJobExecutionInput) (*iot.DescribeJobExecutionOutput, error) {
@@ -3714,9 +3926,9 @@ func (a *IoTStub) DescribeJobExecution(ctx workflow.Context, input *iot.Describe
 	return &output, err
 }
 
-func (a *IoTStub) DescribeJobExecutionAsync(ctx workflow.Context, input *iot.DescribeJobExecutionInput) *IotDescribeJobExecutionFuture {
+func (a *IoTStub) DescribeJobExecutionAsync(ctx workflow.Context, input *iot.DescribeJobExecutionInput) *IoTDescribeJobExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeJobExecution", input)
-	return &IotDescribeJobExecutionFuture{Future: future}
+	return &IoTDescribeJobExecutionFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeMitigationAction(ctx workflow.Context, input *iot.DescribeMitigationActionInput) (*iot.DescribeMitigationActionOutput, error) {
@@ -3725,9 +3937,9 @@ func (a *IoTStub) DescribeMitigationAction(ctx workflow.Context, input *iot.Desc
 	return &output, err
 }
 
-func (a *IoTStub) DescribeMitigationActionAsync(ctx workflow.Context, input *iot.DescribeMitigationActionInput) *IotDescribeMitigationActionFuture {
+func (a *IoTStub) DescribeMitigationActionAsync(ctx workflow.Context, input *iot.DescribeMitigationActionInput) *IoTDescribeMitigationActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeMitigationAction", input)
-	return &IotDescribeMitigationActionFuture{Future: future}
+	return &IoTDescribeMitigationActionFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeProvisioningTemplate(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) (*iot.DescribeProvisioningTemplateOutput, error) {
@@ -3736,9 +3948,9 @@ func (a *IoTStub) DescribeProvisioningTemplate(ctx workflow.Context, input *iot.
 	return &output, err
 }
 
-func (a *IoTStub) DescribeProvisioningTemplateAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) *IotDescribeProvisioningTemplateFuture {
+func (a *IoTStub) DescribeProvisioningTemplateAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) *IoTDescribeProvisioningTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeProvisioningTemplate", input)
-	return &IotDescribeProvisioningTemplateFuture{Future: future}
+	return &IoTDescribeProvisioningTemplateFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeProvisioningTemplateVersion(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) (*iot.DescribeProvisioningTemplateVersionOutput, error) {
@@ -3747,9 +3959,9 @@ func (a *IoTStub) DescribeProvisioningTemplateVersion(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *IoTStub) DescribeProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) *IotDescribeProvisioningTemplateVersionFuture {
+func (a *IoTStub) DescribeProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) *IoTDescribeProvisioningTemplateVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeProvisioningTemplateVersion", input)
-	return &IotDescribeProvisioningTemplateVersionFuture{Future: future}
+	return &IoTDescribeProvisioningTemplateVersionFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeRoleAlias(ctx workflow.Context, input *iot.DescribeRoleAliasInput) (*iot.DescribeRoleAliasOutput, error) {
@@ -3758,9 +3970,9 @@ func (a *IoTStub) DescribeRoleAlias(ctx workflow.Context, input *iot.DescribeRol
 	return &output, err
 }
 
-func (a *IoTStub) DescribeRoleAliasAsync(ctx workflow.Context, input *iot.DescribeRoleAliasInput) *IotDescribeRoleAliasFuture {
+func (a *IoTStub) DescribeRoleAliasAsync(ctx workflow.Context, input *iot.DescribeRoleAliasInput) *IoTDescribeRoleAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeRoleAlias", input)
-	return &IotDescribeRoleAliasFuture{Future: future}
+	return &IoTDescribeRoleAliasFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeScheduledAudit(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) (*iot.DescribeScheduledAuditOutput, error) {
@@ -3769,9 +3981,9 @@ func (a *IoTStub) DescribeScheduledAudit(ctx workflow.Context, input *iot.Descri
 	return &output, err
 }
 
-func (a *IoTStub) DescribeScheduledAuditAsync(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) *IotDescribeScheduledAuditFuture {
+func (a *IoTStub) DescribeScheduledAuditAsync(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) *IoTDescribeScheduledAuditFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeScheduledAudit", input)
-	return &IotDescribeScheduledAuditFuture{Future: future}
+	return &IoTDescribeScheduledAuditFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeSecurityProfile(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) (*iot.DescribeSecurityProfileOutput, error) {
@@ -3780,9 +3992,9 @@ func (a *IoTStub) DescribeSecurityProfile(ctx workflow.Context, input *iot.Descr
 	return &output, err
 }
 
-func (a *IoTStub) DescribeSecurityProfileAsync(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) *IotDescribeSecurityProfileFuture {
+func (a *IoTStub) DescribeSecurityProfileAsync(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) *IoTDescribeSecurityProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeSecurityProfile", input)
-	return &IotDescribeSecurityProfileFuture{Future: future}
+	return &IoTDescribeSecurityProfileFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeStream(ctx workflow.Context, input *iot.DescribeStreamInput) (*iot.DescribeStreamOutput, error) {
@@ -3791,9 +4003,9 @@ func (a *IoTStub) DescribeStream(ctx workflow.Context, input *iot.DescribeStream
 	return &output, err
 }
 
-func (a *IoTStub) DescribeStreamAsync(ctx workflow.Context, input *iot.DescribeStreamInput) *IotDescribeStreamFuture {
+func (a *IoTStub) DescribeStreamAsync(ctx workflow.Context, input *iot.DescribeStreamInput) *IoTDescribeStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeStream", input)
-	return &IotDescribeStreamFuture{Future: future}
+	return &IoTDescribeStreamFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeThing(ctx workflow.Context, input *iot.DescribeThingInput) (*iot.DescribeThingOutput, error) {
@@ -3802,9 +4014,9 @@ func (a *IoTStub) DescribeThing(ctx workflow.Context, input *iot.DescribeThingIn
 	return &output, err
 }
 
-func (a *IoTStub) DescribeThingAsync(ctx workflow.Context, input *iot.DescribeThingInput) *IotDescribeThingFuture {
+func (a *IoTStub) DescribeThingAsync(ctx workflow.Context, input *iot.DescribeThingInput) *IoTDescribeThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeThing", input)
-	return &IotDescribeThingFuture{Future: future}
+	return &IoTDescribeThingFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeThingGroup(ctx workflow.Context, input *iot.DescribeThingGroupInput) (*iot.DescribeThingGroupOutput, error) {
@@ -3813,9 +4025,9 @@ func (a *IoTStub) DescribeThingGroup(ctx workflow.Context, input *iot.DescribeTh
 	return &output, err
 }
 
-func (a *IoTStub) DescribeThingGroupAsync(ctx workflow.Context, input *iot.DescribeThingGroupInput) *IotDescribeThingGroupFuture {
+func (a *IoTStub) DescribeThingGroupAsync(ctx workflow.Context, input *iot.DescribeThingGroupInput) *IoTDescribeThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeThingGroup", input)
-	return &IotDescribeThingGroupFuture{Future: future}
+	return &IoTDescribeThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeThingRegistrationTask(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) (*iot.DescribeThingRegistrationTaskOutput, error) {
@@ -3824,9 +4036,9 @@ func (a *IoTStub) DescribeThingRegistrationTask(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTStub) DescribeThingRegistrationTaskAsync(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) *IotDescribeThingRegistrationTaskFuture {
+func (a *IoTStub) DescribeThingRegistrationTaskAsync(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) *IoTDescribeThingRegistrationTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeThingRegistrationTask", input)
-	return &IotDescribeThingRegistrationTaskFuture{Future: future}
+	return &IoTDescribeThingRegistrationTaskFuture{Future: future}
 }
 
 func (a *IoTStub) DescribeThingType(ctx workflow.Context, input *iot.DescribeThingTypeInput) (*iot.DescribeThingTypeOutput, error) {
@@ -3835,9 +4047,9 @@ func (a *IoTStub) DescribeThingType(ctx workflow.Context, input *iot.DescribeThi
 	return &output, err
 }
 
-func (a *IoTStub) DescribeThingTypeAsync(ctx workflow.Context, input *iot.DescribeThingTypeInput) *IotDescribeThingTypeFuture {
+func (a *IoTStub) DescribeThingTypeAsync(ctx workflow.Context, input *iot.DescribeThingTypeInput) *IoTDescribeThingTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DescribeThingType", input)
-	return &IotDescribeThingTypeFuture{Future: future}
+	return &IoTDescribeThingTypeFuture{Future: future}
 }
 
 func (a *IoTStub) DetachPolicy(ctx workflow.Context, input *iot.DetachPolicyInput) (*iot.DetachPolicyOutput, error) {
@@ -3846,9 +4058,9 @@ func (a *IoTStub) DetachPolicy(ctx workflow.Context, input *iot.DetachPolicyInpu
 	return &output, err
 }
 
-func (a *IoTStub) DetachPolicyAsync(ctx workflow.Context, input *iot.DetachPolicyInput) *IotDetachPolicyFuture {
+func (a *IoTStub) DetachPolicyAsync(ctx workflow.Context, input *iot.DetachPolicyInput) *IoTDetachPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DetachPolicy", input)
-	return &IotDetachPolicyFuture{Future: future}
+	return &IoTDetachPolicyFuture{Future: future}
 }
 
 func (a *IoTStub) DetachPrincipalPolicy(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) (*iot.DetachPrincipalPolicyOutput, error) {
@@ -3857,9 +4069,9 @@ func (a *IoTStub) DetachPrincipalPolicy(ctx workflow.Context, input *iot.DetachP
 	return &output, err
 }
 
-func (a *IoTStub) DetachPrincipalPolicyAsync(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) *IotDetachPrincipalPolicyFuture {
+func (a *IoTStub) DetachPrincipalPolicyAsync(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) *IoTDetachPrincipalPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DetachPrincipalPolicy", input)
-	return &IotDetachPrincipalPolicyFuture{Future: future}
+	return &IoTDetachPrincipalPolicyFuture{Future: future}
 }
 
 func (a *IoTStub) DetachSecurityProfile(ctx workflow.Context, input *iot.DetachSecurityProfileInput) (*iot.DetachSecurityProfileOutput, error) {
@@ -3868,9 +4080,9 @@ func (a *IoTStub) DetachSecurityProfile(ctx workflow.Context, input *iot.DetachS
 	return &output, err
 }
 
-func (a *IoTStub) DetachSecurityProfileAsync(ctx workflow.Context, input *iot.DetachSecurityProfileInput) *IotDetachSecurityProfileFuture {
+func (a *IoTStub) DetachSecurityProfileAsync(ctx workflow.Context, input *iot.DetachSecurityProfileInput) *IoTDetachSecurityProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DetachSecurityProfile", input)
-	return &IotDetachSecurityProfileFuture{Future: future}
+	return &IoTDetachSecurityProfileFuture{Future: future}
 }
 
 func (a *IoTStub) DetachThingPrincipal(ctx workflow.Context, input *iot.DetachThingPrincipalInput) (*iot.DetachThingPrincipalOutput, error) {
@@ -3879,9 +4091,9 @@ func (a *IoTStub) DetachThingPrincipal(ctx workflow.Context, input *iot.DetachTh
 	return &output, err
 }
 
-func (a *IoTStub) DetachThingPrincipalAsync(ctx workflow.Context, input *iot.DetachThingPrincipalInput) *IotDetachThingPrincipalFuture {
+func (a *IoTStub) DetachThingPrincipalAsync(ctx workflow.Context, input *iot.DetachThingPrincipalInput) *IoTDetachThingPrincipalFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DetachThingPrincipal", input)
-	return &IotDetachThingPrincipalFuture{Future: future}
+	return &IoTDetachThingPrincipalFuture{Future: future}
 }
 
 func (a *IoTStub) DisableTopicRule(ctx workflow.Context, input *iot.DisableTopicRuleInput) (*iot.DisableTopicRuleOutput, error) {
@@ -3890,9 +4102,9 @@ func (a *IoTStub) DisableTopicRule(ctx workflow.Context, input *iot.DisableTopic
 	return &output, err
 }
 
-func (a *IoTStub) DisableTopicRuleAsync(ctx workflow.Context, input *iot.DisableTopicRuleInput) *IotDisableTopicRuleFuture {
+func (a *IoTStub) DisableTopicRuleAsync(ctx workflow.Context, input *iot.DisableTopicRuleInput) *IoTDisableTopicRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.DisableTopicRule", input)
-	return &IotDisableTopicRuleFuture{Future: future}
+	return &IoTDisableTopicRuleFuture{Future: future}
 }
 
 func (a *IoTStub) EnableTopicRule(ctx workflow.Context, input *iot.EnableTopicRuleInput) (*iot.EnableTopicRuleOutput, error) {
@@ -3901,9 +4113,9 @@ func (a *IoTStub) EnableTopicRule(ctx workflow.Context, input *iot.EnableTopicRu
 	return &output, err
 }
 
-func (a *IoTStub) EnableTopicRuleAsync(ctx workflow.Context, input *iot.EnableTopicRuleInput) *IotEnableTopicRuleFuture {
+func (a *IoTStub) EnableTopicRuleAsync(ctx workflow.Context, input *iot.EnableTopicRuleInput) *IoTEnableTopicRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.EnableTopicRule", input)
-	return &IotEnableTopicRuleFuture{Future: future}
+	return &IoTEnableTopicRuleFuture{Future: future}
 }
 
 func (a *IoTStub) GetCardinality(ctx workflow.Context, input *iot.GetCardinalityInput) (*iot.GetCardinalityOutput, error) {
@@ -3912,9 +4124,9 @@ func (a *IoTStub) GetCardinality(ctx workflow.Context, input *iot.GetCardinality
 	return &output, err
 }
 
-func (a *IoTStub) GetCardinalityAsync(ctx workflow.Context, input *iot.GetCardinalityInput) *IotGetCardinalityFuture {
+func (a *IoTStub) GetCardinalityAsync(ctx workflow.Context, input *iot.GetCardinalityInput) *IoTGetCardinalityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetCardinality", input)
-	return &IotGetCardinalityFuture{Future: future}
+	return &IoTGetCardinalityFuture{Future: future}
 }
 
 func (a *IoTStub) GetEffectivePolicies(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) (*iot.GetEffectivePoliciesOutput, error) {
@@ -3923,9 +4135,9 @@ func (a *IoTStub) GetEffectivePolicies(ctx workflow.Context, input *iot.GetEffec
 	return &output, err
 }
 
-func (a *IoTStub) GetEffectivePoliciesAsync(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) *IotGetEffectivePoliciesFuture {
+func (a *IoTStub) GetEffectivePoliciesAsync(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) *IoTGetEffectivePoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetEffectivePolicies", input)
-	return &IotGetEffectivePoliciesFuture{Future: future}
+	return &IoTGetEffectivePoliciesFuture{Future: future}
 }
 
 func (a *IoTStub) GetIndexingConfiguration(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) (*iot.GetIndexingConfigurationOutput, error) {
@@ -3934,9 +4146,9 @@ func (a *IoTStub) GetIndexingConfiguration(ctx workflow.Context, input *iot.GetI
 	return &output, err
 }
 
-func (a *IoTStub) GetIndexingConfigurationAsync(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) *IotGetIndexingConfigurationFuture {
+func (a *IoTStub) GetIndexingConfigurationAsync(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) *IoTGetIndexingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetIndexingConfiguration", input)
-	return &IotGetIndexingConfigurationFuture{Future: future}
+	return &IoTGetIndexingConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) GetJobDocument(ctx workflow.Context, input *iot.GetJobDocumentInput) (*iot.GetJobDocumentOutput, error) {
@@ -3945,9 +4157,9 @@ func (a *IoTStub) GetJobDocument(ctx workflow.Context, input *iot.GetJobDocument
 	return &output, err
 }
 
-func (a *IoTStub) GetJobDocumentAsync(ctx workflow.Context, input *iot.GetJobDocumentInput) *IotGetJobDocumentFuture {
+func (a *IoTStub) GetJobDocumentAsync(ctx workflow.Context, input *iot.GetJobDocumentInput) *IoTGetJobDocumentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetJobDocument", input)
-	return &IotGetJobDocumentFuture{Future: future}
+	return &IoTGetJobDocumentFuture{Future: future}
 }
 
 func (a *IoTStub) GetLoggingOptions(ctx workflow.Context, input *iot.GetLoggingOptionsInput) (*iot.GetLoggingOptionsOutput, error) {
@@ -3956,9 +4168,9 @@ func (a *IoTStub) GetLoggingOptions(ctx workflow.Context, input *iot.GetLoggingO
 	return &output, err
 }
 
-func (a *IoTStub) GetLoggingOptionsAsync(ctx workflow.Context, input *iot.GetLoggingOptionsInput) *IotGetLoggingOptionsFuture {
+func (a *IoTStub) GetLoggingOptionsAsync(ctx workflow.Context, input *iot.GetLoggingOptionsInput) *IoTGetLoggingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetLoggingOptions", input)
-	return &IotGetLoggingOptionsFuture{Future: future}
+	return &IoTGetLoggingOptionsFuture{Future: future}
 }
 
 func (a *IoTStub) GetOTAUpdate(ctx workflow.Context, input *iot.GetOTAUpdateInput) (*iot.GetOTAUpdateOutput, error) {
@@ -3967,9 +4179,9 @@ func (a *IoTStub) GetOTAUpdate(ctx workflow.Context, input *iot.GetOTAUpdateInpu
 	return &output, err
 }
 
-func (a *IoTStub) GetOTAUpdateAsync(ctx workflow.Context, input *iot.GetOTAUpdateInput) *IotGetOTAUpdateFuture {
+func (a *IoTStub) GetOTAUpdateAsync(ctx workflow.Context, input *iot.GetOTAUpdateInput) *IoTGetOTAUpdateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetOTAUpdate", input)
-	return &IotGetOTAUpdateFuture{Future: future}
+	return &IoTGetOTAUpdateFuture{Future: future}
 }
 
 func (a *IoTStub) GetPercentiles(ctx workflow.Context, input *iot.GetPercentilesInput) (*iot.GetPercentilesOutput, error) {
@@ -3978,9 +4190,9 @@ func (a *IoTStub) GetPercentiles(ctx workflow.Context, input *iot.GetPercentiles
 	return &output, err
 }
 
-func (a *IoTStub) GetPercentilesAsync(ctx workflow.Context, input *iot.GetPercentilesInput) *IotGetPercentilesFuture {
+func (a *IoTStub) GetPercentilesAsync(ctx workflow.Context, input *iot.GetPercentilesInput) *IoTGetPercentilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetPercentiles", input)
-	return &IotGetPercentilesFuture{Future: future}
+	return &IoTGetPercentilesFuture{Future: future}
 }
 
 func (a *IoTStub) GetPolicy(ctx workflow.Context, input *iot.GetPolicyInput) (*iot.GetPolicyOutput, error) {
@@ -3989,9 +4201,9 @@ func (a *IoTStub) GetPolicy(ctx workflow.Context, input *iot.GetPolicyInput) (*i
 	return &output, err
 }
 
-func (a *IoTStub) GetPolicyAsync(ctx workflow.Context, input *iot.GetPolicyInput) *IotGetPolicyFuture {
+func (a *IoTStub) GetPolicyAsync(ctx workflow.Context, input *iot.GetPolicyInput) *IoTGetPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetPolicy", input)
-	return &IotGetPolicyFuture{Future: future}
+	return &IoTGetPolicyFuture{Future: future}
 }
 
 func (a *IoTStub) GetPolicyVersion(ctx workflow.Context, input *iot.GetPolicyVersionInput) (*iot.GetPolicyVersionOutput, error) {
@@ -4000,9 +4212,9 @@ func (a *IoTStub) GetPolicyVersion(ctx workflow.Context, input *iot.GetPolicyVer
 	return &output, err
 }
 
-func (a *IoTStub) GetPolicyVersionAsync(ctx workflow.Context, input *iot.GetPolicyVersionInput) *IotGetPolicyVersionFuture {
+func (a *IoTStub) GetPolicyVersionAsync(ctx workflow.Context, input *iot.GetPolicyVersionInput) *IoTGetPolicyVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetPolicyVersion", input)
-	return &IotGetPolicyVersionFuture{Future: future}
+	return &IoTGetPolicyVersionFuture{Future: future}
 }
 
 func (a *IoTStub) GetRegistrationCode(ctx workflow.Context, input *iot.GetRegistrationCodeInput) (*iot.GetRegistrationCodeOutput, error) {
@@ -4011,9 +4223,9 @@ func (a *IoTStub) GetRegistrationCode(ctx workflow.Context, input *iot.GetRegist
 	return &output, err
 }
 
-func (a *IoTStub) GetRegistrationCodeAsync(ctx workflow.Context, input *iot.GetRegistrationCodeInput) *IotGetRegistrationCodeFuture {
+func (a *IoTStub) GetRegistrationCodeAsync(ctx workflow.Context, input *iot.GetRegistrationCodeInput) *IoTGetRegistrationCodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetRegistrationCode", input)
-	return &IotGetRegistrationCodeFuture{Future: future}
+	return &IoTGetRegistrationCodeFuture{Future: future}
 }
 
 func (a *IoTStub) GetStatistics(ctx workflow.Context, input *iot.GetStatisticsInput) (*iot.GetStatisticsOutput, error) {
@@ -4022,9 +4234,9 @@ func (a *IoTStub) GetStatistics(ctx workflow.Context, input *iot.GetStatisticsIn
 	return &output, err
 }
 
-func (a *IoTStub) GetStatisticsAsync(ctx workflow.Context, input *iot.GetStatisticsInput) *IotGetStatisticsFuture {
+func (a *IoTStub) GetStatisticsAsync(ctx workflow.Context, input *iot.GetStatisticsInput) *IoTGetStatisticsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetStatistics", input)
-	return &IotGetStatisticsFuture{Future: future}
+	return &IoTGetStatisticsFuture{Future: future}
 }
 
 func (a *IoTStub) GetTopicRule(ctx workflow.Context, input *iot.GetTopicRuleInput) (*iot.GetTopicRuleOutput, error) {
@@ -4033,9 +4245,9 @@ func (a *IoTStub) GetTopicRule(ctx workflow.Context, input *iot.GetTopicRuleInpu
 	return &output, err
 }
 
-func (a *IoTStub) GetTopicRuleAsync(ctx workflow.Context, input *iot.GetTopicRuleInput) *IotGetTopicRuleFuture {
+func (a *IoTStub) GetTopicRuleAsync(ctx workflow.Context, input *iot.GetTopicRuleInput) *IoTGetTopicRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetTopicRule", input)
-	return &IotGetTopicRuleFuture{Future: future}
+	return &IoTGetTopicRuleFuture{Future: future}
 }
 
 func (a *IoTStub) GetTopicRuleDestination(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) (*iot.GetTopicRuleDestinationOutput, error) {
@@ -4044,9 +4256,9 @@ func (a *IoTStub) GetTopicRuleDestination(ctx workflow.Context, input *iot.GetTo
 	return &output, err
 }
 
-func (a *IoTStub) GetTopicRuleDestinationAsync(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) *IotGetTopicRuleDestinationFuture {
+func (a *IoTStub) GetTopicRuleDestinationAsync(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) *IoTGetTopicRuleDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetTopicRuleDestination", input)
-	return &IotGetTopicRuleDestinationFuture{Future: future}
+	return &IoTGetTopicRuleDestinationFuture{Future: future}
 }
 
 func (a *IoTStub) GetV2LoggingOptions(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) (*iot.GetV2LoggingOptionsOutput, error) {
@@ -4055,9 +4267,9 @@ func (a *IoTStub) GetV2LoggingOptions(ctx workflow.Context, input *iot.GetV2Logg
 	return &output, err
 }
 
-func (a *IoTStub) GetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) *IotGetV2LoggingOptionsFuture {
+func (a *IoTStub) GetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) *IoTGetV2LoggingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.GetV2LoggingOptions", input)
-	return &IotGetV2LoggingOptionsFuture{Future: future}
+	return &IoTGetV2LoggingOptionsFuture{Future: future}
 }
 
 func (a *IoTStub) ListActiveViolations(ctx workflow.Context, input *iot.ListActiveViolationsInput) (*iot.ListActiveViolationsOutput, error) {
@@ -4066,9 +4278,9 @@ func (a *IoTStub) ListActiveViolations(ctx workflow.Context, input *iot.ListActi
 	return &output, err
 }
 
-func (a *IoTStub) ListActiveViolationsAsync(ctx workflow.Context, input *iot.ListActiveViolationsInput) *IotListActiveViolationsFuture {
+func (a *IoTStub) ListActiveViolationsAsync(ctx workflow.Context, input *iot.ListActiveViolationsInput) *IoTListActiveViolationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListActiveViolations", input)
-	return &IotListActiveViolationsFuture{Future: future}
+	return &IoTListActiveViolationsFuture{Future: future}
 }
 
 func (a *IoTStub) ListAttachedPolicies(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) (*iot.ListAttachedPoliciesOutput, error) {
@@ -4077,9 +4289,9 @@ func (a *IoTStub) ListAttachedPolicies(ctx workflow.Context, input *iot.ListAtta
 	return &output, err
 }
 
-func (a *IoTStub) ListAttachedPoliciesAsync(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) *IotListAttachedPoliciesFuture {
+func (a *IoTStub) ListAttachedPoliciesAsync(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) *IoTListAttachedPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListAttachedPolicies", input)
-	return &IotListAttachedPoliciesFuture{Future: future}
+	return &IoTListAttachedPoliciesFuture{Future: future}
 }
 
 func (a *IoTStub) ListAuditFindings(ctx workflow.Context, input *iot.ListAuditFindingsInput) (*iot.ListAuditFindingsOutput, error) {
@@ -4088,9 +4300,9 @@ func (a *IoTStub) ListAuditFindings(ctx workflow.Context, input *iot.ListAuditFi
 	return &output, err
 }
 
-func (a *IoTStub) ListAuditFindingsAsync(ctx workflow.Context, input *iot.ListAuditFindingsInput) *IotListAuditFindingsFuture {
+func (a *IoTStub) ListAuditFindingsAsync(ctx workflow.Context, input *iot.ListAuditFindingsInput) *IoTListAuditFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListAuditFindings", input)
-	return &IotListAuditFindingsFuture{Future: future}
+	return &IoTListAuditFindingsFuture{Future: future}
 }
 
 func (a *IoTStub) ListAuditMitigationActionsExecutions(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) (*iot.ListAuditMitigationActionsExecutionsOutput, error) {
@@ -4099,9 +4311,9 @@ func (a *IoTStub) ListAuditMitigationActionsExecutions(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *IoTStub) ListAuditMitigationActionsExecutionsAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) *IotListAuditMitigationActionsExecutionsFuture {
+func (a *IoTStub) ListAuditMitigationActionsExecutionsAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) *IoTListAuditMitigationActionsExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListAuditMitigationActionsExecutions", input)
-	return &IotListAuditMitigationActionsExecutionsFuture{Future: future}
+	return &IoTListAuditMitigationActionsExecutionsFuture{Future: future}
 }
 
 func (a *IoTStub) ListAuditMitigationActionsTasks(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) (*iot.ListAuditMitigationActionsTasksOutput, error) {
@@ -4110,9 +4322,9 @@ func (a *IoTStub) ListAuditMitigationActionsTasks(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTStub) ListAuditMitigationActionsTasksAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) *IotListAuditMitigationActionsTasksFuture {
+func (a *IoTStub) ListAuditMitigationActionsTasksAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) *IoTListAuditMitigationActionsTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListAuditMitigationActionsTasks", input)
-	return &IotListAuditMitigationActionsTasksFuture{Future: future}
+	return &IoTListAuditMitigationActionsTasksFuture{Future: future}
 }
 
 func (a *IoTStub) ListAuditSuppressions(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) (*iot.ListAuditSuppressionsOutput, error) {
@@ -4121,9 +4333,9 @@ func (a *IoTStub) ListAuditSuppressions(ctx workflow.Context, input *iot.ListAud
 	return &output, err
 }
 
-func (a *IoTStub) ListAuditSuppressionsAsync(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) *IotListAuditSuppressionsFuture {
+func (a *IoTStub) ListAuditSuppressionsAsync(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) *IoTListAuditSuppressionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListAuditSuppressions", input)
-	return &IotListAuditSuppressionsFuture{Future: future}
+	return &IoTListAuditSuppressionsFuture{Future: future}
 }
 
 func (a *IoTStub) ListAuditTasks(ctx workflow.Context, input *iot.ListAuditTasksInput) (*iot.ListAuditTasksOutput, error) {
@@ -4132,9 +4344,9 @@ func (a *IoTStub) ListAuditTasks(ctx workflow.Context, input *iot.ListAuditTasks
 	return &output, err
 }
 
-func (a *IoTStub) ListAuditTasksAsync(ctx workflow.Context, input *iot.ListAuditTasksInput) *IotListAuditTasksFuture {
+func (a *IoTStub) ListAuditTasksAsync(ctx workflow.Context, input *iot.ListAuditTasksInput) *IoTListAuditTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListAuditTasks", input)
-	return &IotListAuditTasksFuture{Future: future}
+	return &IoTListAuditTasksFuture{Future: future}
 }
 
 func (a *IoTStub) ListAuthorizers(ctx workflow.Context, input *iot.ListAuthorizersInput) (*iot.ListAuthorizersOutput, error) {
@@ -4143,9 +4355,9 @@ func (a *IoTStub) ListAuthorizers(ctx workflow.Context, input *iot.ListAuthorize
 	return &output, err
 }
 
-func (a *IoTStub) ListAuthorizersAsync(ctx workflow.Context, input *iot.ListAuthorizersInput) *IotListAuthorizersFuture {
+func (a *IoTStub) ListAuthorizersAsync(ctx workflow.Context, input *iot.ListAuthorizersInput) *IoTListAuthorizersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListAuthorizers", input)
-	return &IotListAuthorizersFuture{Future: future}
+	return &IoTListAuthorizersFuture{Future: future}
 }
 
 func (a *IoTStub) ListBillingGroups(ctx workflow.Context, input *iot.ListBillingGroupsInput) (*iot.ListBillingGroupsOutput, error) {
@@ -4154,9 +4366,9 @@ func (a *IoTStub) ListBillingGroups(ctx workflow.Context, input *iot.ListBilling
 	return &output, err
 }
 
-func (a *IoTStub) ListBillingGroupsAsync(ctx workflow.Context, input *iot.ListBillingGroupsInput) *IotListBillingGroupsFuture {
+func (a *IoTStub) ListBillingGroupsAsync(ctx workflow.Context, input *iot.ListBillingGroupsInput) *IoTListBillingGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListBillingGroups", input)
-	return &IotListBillingGroupsFuture{Future: future}
+	return &IoTListBillingGroupsFuture{Future: future}
 }
 
 func (a *IoTStub) ListCACertificates(ctx workflow.Context, input *iot.ListCACertificatesInput) (*iot.ListCACertificatesOutput, error) {
@@ -4165,9 +4377,9 @@ func (a *IoTStub) ListCACertificates(ctx workflow.Context, input *iot.ListCACert
 	return &output, err
 }
 
-func (a *IoTStub) ListCACertificatesAsync(ctx workflow.Context, input *iot.ListCACertificatesInput) *IotListCACertificatesFuture {
+func (a *IoTStub) ListCACertificatesAsync(ctx workflow.Context, input *iot.ListCACertificatesInput) *IoTListCACertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListCACertificates", input)
-	return &IotListCACertificatesFuture{Future: future}
+	return &IoTListCACertificatesFuture{Future: future}
 }
 
 func (a *IoTStub) ListCertificates(ctx workflow.Context, input *iot.ListCertificatesInput) (*iot.ListCertificatesOutput, error) {
@@ -4176,9 +4388,9 @@ func (a *IoTStub) ListCertificates(ctx workflow.Context, input *iot.ListCertific
 	return &output, err
 }
 
-func (a *IoTStub) ListCertificatesAsync(ctx workflow.Context, input *iot.ListCertificatesInput) *IotListCertificatesFuture {
+func (a *IoTStub) ListCertificatesAsync(ctx workflow.Context, input *iot.ListCertificatesInput) *IoTListCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListCertificates", input)
-	return &IotListCertificatesFuture{Future: future}
+	return &IoTListCertificatesFuture{Future: future}
 }
 
 func (a *IoTStub) ListCertificatesByCA(ctx workflow.Context, input *iot.ListCertificatesByCAInput) (*iot.ListCertificatesByCAOutput, error) {
@@ -4187,9 +4399,9 @@ func (a *IoTStub) ListCertificatesByCA(ctx workflow.Context, input *iot.ListCert
 	return &output, err
 }
 
-func (a *IoTStub) ListCertificatesByCAAsync(ctx workflow.Context, input *iot.ListCertificatesByCAInput) *IotListCertificatesByCAFuture {
+func (a *IoTStub) ListCertificatesByCAAsync(ctx workflow.Context, input *iot.ListCertificatesByCAInput) *IoTListCertificatesByCAFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListCertificatesByCA", input)
-	return &IotListCertificatesByCAFuture{Future: future}
+	return &IoTListCertificatesByCAFuture{Future: future}
 }
 
 func (a *IoTStub) ListDimensions(ctx workflow.Context, input *iot.ListDimensionsInput) (*iot.ListDimensionsOutput, error) {
@@ -4198,9 +4410,9 @@ func (a *IoTStub) ListDimensions(ctx workflow.Context, input *iot.ListDimensions
 	return &output, err
 }
 
-func (a *IoTStub) ListDimensionsAsync(ctx workflow.Context, input *iot.ListDimensionsInput) *IotListDimensionsFuture {
+func (a *IoTStub) ListDimensionsAsync(ctx workflow.Context, input *iot.ListDimensionsInput) *IoTListDimensionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListDimensions", input)
-	return &IotListDimensionsFuture{Future: future}
+	return &IoTListDimensionsFuture{Future: future}
 }
 
 func (a *IoTStub) ListDomainConfigurations(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) (*iot.ListDomainConfigurationsOutput, error) {
@@ -4209,9 +4421,9 @@ func (a *IoTStub) ListDomainConfigurations(ctx workflow.Context, input *iot.List
 	return &output, err
 }
 
-func (a *IoTStub) ListDomainConfigurationsAsync(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) *IotListDomainConfigurationsFuture {
+func (a *IoTStub) ListDomainConfigurationsAsync(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) *IoTListDomainConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListDomainConfigurations", input)
-	return &IotListDomainConfigurationsFuture{Future: future}
+	return &IoTListDomainConfigurationsFuture{Future: future}
 }
 
 func (a *IoTStub) ListIndices(ctx workflow.Context, input *iot.ListIndicesInput) (*iot.ListIndicesOutput, error) {
@@ -4220,9 +4432,9 @@ func (a *IoTStub) ListIndices(ctx workflow.Context, input *iot.ListIndicesInput)
 	return &output, err
 }
 
-func (a *IoTStub) ListIndicesAsync(ctx workflow.Context, input *iot.ListIndicesInput) *IotListIndicesFuture {
+func (a *IoTStub) ListIndicesAsync(ctx workflow.Context, input *iot.ListIndicesInput) *IoTListIndicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListIndices", input)
-	return &IotListIndicesFuture{Future: future}
+	return &IoTListIndicesFuture{Future: future}
 }
 
 func (a *IoTStub) ListJobExecutionsForJob(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) (*iot.ListJobExecutionsForJobOutput, error) {
@@ -4231,9 +4443,9 @@ func (a *IoTStub) ListJobExecutionsForJob(ctx workflow.Context, input *iot.ListJ
 	return &output, err
 }
 
-func (a *IoTStub) ListJobExecutionsForJobAsync(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) *IotListJobExecutionsForJobFuture {
+func (a *IoTStub) ListJobExecutionsForJobAsync(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) *IoTListJobExecutionsForJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListJobExecutionsForJob", input)
-	return &IotListJobExecutionsForJobFuture{Future: future}
+	return &IoTListJobExecutionsForJobFuture{Future: future}
 }
 
 func (a *IoTStub) ListJobExecutionsForThing(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) (*iot.ListJobExecutionsForThingOutput, error) {
@@ -4242,9 +4454,9 @@ func (a *IoTStub) ListJobExecutionsForThing(ctx workflow.Context, input *iot.Lis
 	return &output, err
 }
 
-func (a *IoTStub) ListJobExecutionsForThingAsync(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) *IotListJobExecutionsForThingFuture {
+func (a *IoTStub) ListJobExecutionsForThingAsync(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) *IoTListJobExecutionsForThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListJobExecutionsForThing", input)
-	return &IotListJobExecutionsForThingFuture{Future: future}
+	return &IoTListJobExecutionsForThingFuture{Future: future}
 }
 
 func (a *IoTStub) ListJobs(ctx workflow.Context, input *iot.ListJobsInput) (*iot.ListJobsOutput, error) {
@@ -4253,9 +4465,9 @@ func (a *IoTStub) ListJobs(ctx workflow.Context, input *iot.ListJobsInput) (*iot
 	return &output, err
 }
 
-func (a *IoTStub) ListJobsAsync(ctx workflow.Context, input *iot.ListJobsInput) *IotListJobsFuture {
+func (a *IoTStub) ListJobsAsync(ctx workflow.Context, input *iot.ListJobsInput) *IoTListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListJobs", input)
-	return &IotListJobsFuture{Future: future}
+	return &IoTListJobsFuture{Future: future}
 }
 
 func (a *IoTStub) ListMitigationActions(ctx workflow.Context, input *iot.ListMitigationActionsInput) (*iot.ListMitigationActionsOutput, error) {
@@ -4264,9 +4476,9 @@ func (a *IoTStub) ListMitigationActions(ctx workflow.Context, input *iot.ListMit
 	return &output, err
 }
 
-func (a *IoTStub) ListMitigationActionsAsync(ctx workflow.Context, input *iot.ListMitigationActionsInput) *IotListMitigationActionsFuture {
+func (a *IoTStub) ListMitigationActionsAsync(ctx workflow.Context, input *iot.ListMitigationActionsInput) *IoTListMitigationActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListMitigationActions", input)
-	return &IotListMitigationActionsFuture{Future: future}
+	return &IoTListMitigationActionsFuture{Future: future}
 }
 
 func (a *IoTStub) ListOTAUpdates(ctx workflow.Context, input *iot.ListOTAUpdatesInput) (*iot.ListOTAUpdatesOutput, error) {
@@ -4275,9 +4487,9 @@ func (a *IoTStub) ListOTAUpdates(ctx workflow.Context, input *iot.ListOTAUpdates
 	return &output, err
 }
 
-func (a *IoTStub) ListOTAUpdatesAsync(ctx workflow.Context, input *iot.ListOTAUpdatesInput) *IotListOTAUpdatesFuture {
+func (a *IoTStub) ListOTAUpdatesAsync(ctx workflow.Context, input *iot.ListOTAUpdatesInput) *IoTListOTAUpdatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListOTAUpdates", input)
-	return &IotListOTAUpdatesFuture{Future: future}
+	return &IoTListOTAUpdatesFuture{Future: future}
 }
 
 func (a *IoTStub) ListOutgoingCertificates(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) (*iot.ListOutgoingCertificatesOutput, error) {
@@ -4286,9 +4498,9 @@ func (a *IoTStub) ListOutgoingCertificates(ctx workflow.Context, input *iot.List
 	return &output, err
 }
 
-func (a *IoTStub) ListOutgoingCertificatesAsync(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) *IotListOutgoingCertificatesFuture {
+func (a *IoTStub) ListOutgoingCertificatesAsync(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) *IoTListOutgoingCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListOutgoingCertificates", input)
-	return &IotListOutgoingCertificatesFuture{Future: future}
+	return &IoTListOutgoingCertificatesFuture{Future: future}
 }
 
 func (a *IoTStub) ListPolicies(ctx workflow.Context, input *iot.ListPoliciesInput) (*iot.ListPoliciesOutput, error) {
@@ -4297,9 +4509,9 @@ func (a *IoTStub) ListPolicies(ctx workflow.Context, input *iot.ListPoliciesInpu
 	return &output, err
 }
 
-func (a *IoTStub) ListPoliciesAsync(ctx workflow.Context, input *iot.ListPoliciesInput) *IotListPoliciesFuture {
+func (a *IoTStub) ListPoliciesAsync(ctx workflow.Context, input *iot.ListPoliciesInput) *IoTListPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListPolicies", input)
-	return &IotListPoliciesFuture{Future: future}
+	return &IoTListPoliciesFuture{Future: future}
 }
 
 func (a *IoTStub) ListPolicyPrincipals(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) (*iot.ListPolicyPrincipalsOutput, error) {
@@ -4308,9 +4520,9 @@ func (a *IoTStub) ListPolicyPrincipals(ctx workflow.Context, input *iot.ListPoli
 	return &output, err
 }
 
-func (a *IoTStub) ListPolicyPrincipalsAsync(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) *IotListPolicyPrincipalsFuture {
+func (a *IoTStub) ListPolicyPrincipalsAsync(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) *IoTListPolicyPrincipalsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListPolicyPrincipals", input)
-	return &IotListPolicyPrincipalsFuture{Future: future}
+	return &IoTListPolicyPrincipalsFuture{Future: future}
 }
 
 func (a *IoTStub) ListPolicyVersions(ctx workflow.Context, input *iot.ListPolicyVersionsInput) (*iot.ListPolicyVersionsOutput, error) {
@@ -4319,9 +4531,9 @@ func (a *IoTStub) ListPolicyVersions(ctx workflow.Context, input *iot.ListPolicy
 	return &output, err
 }
 
-func (a *IoTStub) ListPolicyVersionsAsync(ctx workflow.Context, input *iot.ListPolicyVersionsInput) *IotListPolicyVersionsFuture {
+func (a *IoTStub) ListPolicyVersionsAsync(ctx workflow.Context, input *iot.ListPolicyVersionsInput) *IoTListPolicyVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListPolicyVersions", input)
-	return &IotListPolicyVersionsFuture{Future: future}
+	return &IoTListPolicyVersionsFuture{Future: future}
 }
 
 func (a *IoTStub) ListPrincipalPolicies(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) (*iot.ListPrincipalPoliciesOutput, error) {
@@ -4330,9 +4542,9 @@ func (a *IoTStub) ListPrincipalPolicies(ctx workflow.Context, input *iot.ListPri
 	return &output, err
 }
 
-func (a *IoTStub) ListPrincipalPoliciesAsync(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) *IotListPrincipalPoliciesFuture {
+func (a *IoTStub) ListPrincipalPoliciesAsync(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) *IoTListPrincipalPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListPrincipalPolicies", input)
-	return &IotListPrincipalPoliciesFuture{Future: future}
+	return &IoTListPrincipalPoliciesFuture{Future: future}
 }
 
 func (a *IoTStub) ListPrincipalThings(ctx workflow.Context, input *iot.ListPrincipalThingsInput) (*iot.ListPrincipalThingsOutput, error) {
@@ -4341,9 +4553,9 @@ func (a *IoTStub) ListPrincipalThings(ctx workflow.Context, input *iot.ListPrinc
 	return &output, err
 }
 
-func (a *IoTStub) ListPrincipalThingsAsync(ctx workflow.Context, input *iot.ListPrincipalThingsInput) *IotListPrincipalThingsFuture {
+func (a *IoTStub) ListPrincipalThingsAsync(ctx workflow.Context, input *iot.ListPrincipalThingsInput) *IoTListPrincipalThingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListPrincipalThings", input)
-	return &IotListPrincipalThingsFuture{Future: future}
+	return &IoTListPrincipalThingsFuture{Future: future}
 }
 
 func (a *IoTStub) ListProvisioningTemplateVersions(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) (*iot.ListProvisioningTemplateVersionsOutput, error) {
@@ -4352,9 +4564,9 @@ func (a *IoTStub) ListProvisioningTemplateVersions(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *IoTStub) ListProvisioningTemplateVersionsAsync(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) *IotListProvisioningTemplateVersionsFuture {
+func (a *IoTStub) ListProvisioningTemplateVersionsAsync(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) *IoTListProvisioningTemplateVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListProvisioningTemplateVersions", input)
-	return &IotListProvisioningTemplateVersionsFuture{Future: future}
+	return &IoTListProvisioningTemplateVersionsFuture{Future: future}
 }
 
 func (a *IoTStub) ListProvisioningTemplates(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) (*iot.ListProvisioningTemplatesOutput, error) {
@@ -4363,9 +4575,9 @@ func (a *IoTStub) ListProvisioningTemplates(ctx workflow.Context, input *iot.Lis
 	return &output, err
 }
 
-func (a *IoTStub) ListProvisioningTemplatesAsync(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) *IotListProvisioningTemplatesFuture {
+func (a *IoTStub) ListProvisioningTemplatesAsync(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) *IoTListProvisioningTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListProvisioningTemplates", input)
-	return &IotListProvisioningTemplatesFuture{Future: future}
+	return &IoTListProvisioningTemplatesFuture{Future: future}
 }
 
 func (a *IoTStub) ListRoleAliases(ctx workflow.Context, input *iot.ListRoleAliasesInput) (*iot.ListRoleAliasesOutput, error) {
@@ -4374,9 +4586,9 @@ func (a *IoTStub) ListRoleAliases(ctx workflow.Context, input *iot.ListRoleAlias
 	return &output, err
 }
 
-func (a *IoTStub) ListRoleAliasesAsync(ctx workflow.Context, input *iot.ListRoleAliasesInput) *IotListRoleAliasesFuture {
+func (a *IoTStub) ListRoleAliasesAsync(ctx workflow.Context, input *iot.ListRoleAliasesInput) *IoTListRoleAliasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListRoleAliases", input)
-	return &IotListRoleAliasesFuture{Future: future}
+	return &IoTListRoleAliasesFuture{Future: future}
 }
 
 func (a *IoTStub) ListScheduledAudits(ctx workflow.Context, input *iot.ListScheduledAuditsInput) (*iot.ListScheduledAuditsOutput, error) {
@@ -4385,9 +4597,9 @@ func (a *IoTStub) ListScheduledAudits(ctx workflow.Context, input *iot.ListSched
 	return &output, err
 }
 
-func (a *IoTStub) ListScheduledAuditsAsync(ctx workflow.Context, input *iot.ListScheduledAuditsInput) *IotListScheduledAuditsFuture {
+func (a *IoTStub) ListScheduledAuditsAsync(ctx workflow.Context, input *iot.ListScheduledAuditsInput) *IoTListScheduledAuditsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListScheduledAudits", input)
-	return &IotListScheduledAuditsFuture{Future: future}
+	return &IoTListScheduledAuditsFuture{Future: future}
 }
 
 func (a *IoTStub) ListSecurityProfiles(ctx workflow.Context, input *iot.ListSecurityProfilesInput) (*iot.ListSecurityProfilesOutput, error) {
@@ -4396,9 +4608,9 @@ func (a *IoTStub) ListSecurityProfiles(ctx workflow.Context, input *iot.ListSecu
 	return &output, err
 }
 
-func (a *IoTStub) ListSecurityProfilesAsync(ctx workflow.Context, input *iot.ListSecurityProfilesInput) *IotListSecurityProfilesFuture {
+func (a *IoTStub) ListSecurityProfilesAsync(ctx workflow.Context, input *iot.ListSecurityProfilesInput) *IoTListSecurityProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListSecurityProfiles", input)
-	return &IotListSecurityProfilesFuture{Future: future}
+	return &IoTListSecurityProfilesFuture{Future: future}
 }
 
 func (a *IoTStub) ListSecurityProfilesForTarget(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) (*iot.ListSecurityProfilesForTargetOutput, error) {
@@ -4407,9 +4619,9 @@ func (a *IoTStub) ListSecurityProfilesForTarget(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTStub) ListSecurityProfilesForTargetAsync(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) *IotListSecurityProfilesForTargetFuture {
+func (a *IoTStub) ListSecurityProfilesForTargetAsync(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) *IoTListSecurityProfilesForTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListSecurityProfilesForTarget", input)
-	return &IotListSecurityProfilesForTargetFuture{Future: future}
+	return &IoTListSecurityProfilesForTargetFuture{Future: future}
 }
 
 func (a *IoTStub) ListStreams(ctx workflow.Context, input *iot.ListStreamsInput) (*iot.ListStreamsOutput, error) {
@@ -4418,9 +4630,9 @@ func (a *IoTStub) ListStreams(ctx workflow.Context, input *iot.ListStreamsInput)
 	return &output, err
 }
 
-func (a *IoTStub) ListStreamsAsync(ctx workflow.Context, input *iot.ListStreamsInput) *IotListStreamsFuture {
+func (a *IoTStub) ListStreamsAsync(ctx workflow.Context, input *iot.ListStreamsInput) *IoTListStreamsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListStreams", input)
-	return &IotListStreamsFuture{Future: future}
+	return &IoTListStreamsFuture{Future: future}
 }
 
 func (a *IoTStub) ListTagsForResource(ctx workflow.Context, input *iot.ListTagsForResourceInput) (*iot.ListTagsForResourceOutput, error) {
@@ -4429,9 +4641,9 @@ func (a *IoTStub) ListTagsForResource(ctx workflow.Context, input *iot.ListTagsF
 	return &output, err
 }
 
-func (a *IoTStub) ListTagsForResourceAsync(ctx workflow.Context, input *iot.ListTagsForResourceInput) *IotListTagsForResourceFuture {
+func (a *IoTStub) ListTagsForResourceAsync(ctx workflow.Context, input *iot.ListTagsForResourceInput) *IoTListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListTagsForResource", input)
-	return &IotListTagsForResourceFuture{Future: future}
+	return &IoTListTagsForResourceFuture{Future: future}
 }
 
 func (a *IoTStub) ListTargetsForPolicy(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) (*iot.ListTargetsForPolicyOutput, error) {
@@ -4440,9 +4652,9 @@ func (a *IoTStub) ListTargetsForPolicy(ctx workflow.Context, input *iot.ListTarg
 	return &output, err
 }
 
-func (a *IoTStub) ListTargetsForPolicyAsync(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) *IotListTargetsForPolicyFuture {
+func (a *IoTStub) ListTargetsForPolicyAsync(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) *IoTListTargetsForPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListTargetsForPolicy", input)
-	return &IotListTargetsForPolicyFuture{Future: future}
+	return &IoTListTargetsForPolicyFuture{Future: future}
 }
 
 func (a *IoTStub) ListTargetsForSecurityProfile(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) (*iot.ListTargetsForSecurityProfileOutput, error) {
@@ -4451,9 +4663,9 @@ func (a *IoTStub) ListTargetsForSecurityProfile(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTStub) ListTargetsForSecurityProfileAsync(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) *IotListTargetsForSecurityProfileFuture {
+func (a *IoTStub) ListTargetsForSecurityProfileAsync(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) *IoTListTargetsForSecurityProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListTargetsForSecurityProfile", input)
-	return &IotListTargetsForSecurityProfileFuture{Future: future}
+	return &IoTListTargetsForSecurityProfileFuture{Future: future}
 }
 
 func (a *IoTStub) ListThingGroups(ctx workflow.Context, input *iot.ListThingGroupsInput) (*iot.ListThingGroupsOutput, error) {
@@ -4462,9 +4674,9 @@ func (a *IoTStub) ListThingGroups(ctx workflow.Context, input *iot.ListThingGrou
 	return &output, err
 }
 
-func (a *IoTStub) ListThingGroupsAsync(ctx workflow.Context, input *iot.ListThingGroupsInput) *IotListThingGroupsFuture {
+func (a *IoTStub) ListThingGroupsAsync(ctx workflow.Context, input *iot.ListThingGroupsInput) *IoTListThingGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThingGroups", input)
-	return &IotListThingGroupsFuture{Future: future}
+	return &IoTListThingGroupsFuture{Future: future}
 }
 
 func (a *IoTStub) ListThingGroupsForThing(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) (*iot.ListThingGroupsForThingOutput, error) {
@@ -4473,9 +4685,9 @@ func (a *IoTStub) ListThingGroupsForThing(ctx workflow.Context, input *iot.ListT
 	return &output, err
 }
 
-func (a *IoTStub) ListThingGroupsForThingAsync(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) *IotListThingGroupsForThingFuture {
+func (a *IoTStub) ListThingGroupsForThingAsync(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) *IoTListThingGroupsForThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThingGroupsForThing", input)
-	return &IotListThingGroupsForThingFuture{Future: future}
+	return &IoTListThingGroupsForThingFuture{Future: future}
 }
 
 func (a *IoTStub) ListThingPrincipals(ctx workflow.Context, input *iot.ListThingPrincipalsInput) (*iot.ListThingPrincipalsOutput, error) {
@@ -4484,9 +4696,9 @@ func (a *IoTStub) ListThingPrincipals(ctx workflow.Context, input *iot.ListThing
 	return &output, err
 }
 
-func (a *IoTStub) ListThingPrincipalsAsync(ctx workflow.Context, input *iot.ListThingPrincipalsInput) *IotListThingPrincipalsFuture {
+func (a *IoTStub) ListThingPrincipalsAsync(ctx workflow.Context, input *iot.ListThingPrincipalsInput) *IoTListThingPrincipalsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThingPrincipals", input)
-	return &IotListThingPrincipalsFuture{Future: future}
+	return &IoTListThingPrincipalsFuture{Future: future}
 }
 
 func (a *IoTStub) ListThingRegistrationTaskReports(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) (*iot.ListThingRegistrationTaskReportsOutput, error) {
@@ -4495,9 +4707,9 @@ func (a *IoTStub) ListThingRegistrationTaskReports(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *IoTStub) ListThingRegistrationTaskReportsAsync(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) *IotListThingRegistrationTaskReportsFuture {
+func (a *IoTStub) ListThingRegistrationTaskReportsAsync(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) *IoTListThingRegistrationTaskReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThingRegistrationTaskReports", input)
-	return &IotListThingRegistrationTaskReportsFuture{Future: future}
+	return &IoTListThingRegistrationTaskReportsFuture{Future: future}
 }
 
 func (a *IoTStub) ListThingRegistrationTasks(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) (*iot.ListThingRegistrationTasksOutput, error) {
@@ -4506,9 +4718,9 @@ func (a *IoTStub) ListThingRegistrationTasks(ctx workflow.Context, input *iot.Li
 	return &output, err
 }
 
-func (a *IoTStub) ListThingRegistrationTasksAsync(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) *IotListThingRegistrationTasksFuture {
+func (a *IoTStub) ListThingRegistrationTasksAsync(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) *IoTListThingRegistrationTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThingRegistrationTasks", input)
-	return &IotListThingRegistrationTasksFuture{Future: future}
+	return &IoTListThingRegistrationTasksFuture{Future: future}
 }
 
 func (a *IoTStub) ListThingTypes(ctx workflow.Context, input *iot.ListThingTypesInput) (*iot.ListThingTypesOutput, error) {
@@ -4517,9 +4729,9 @@ func (a *IoTStub) ListThingTypes(ctx workflow.Context, input *iot.ListThingTypes
 	return &output, err
 }
 
-func (a *IoTStub) ListThingTypesAsync(ctx workflow.Context, input *iot.ListThingTypesInput) *IotListThingTypesFuture {
+func (a *IoTStub) ListThingTypesAsync(ctx workflow.Context, input *iot.ListThingTypesInput) *IoTListThingTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThingTypes", input)
-	return &IotListThingTypesFuture{Future: future}
+	return &IoTListThingTypesFuture{Future: future}
 }
 
 func (a *IoTStub) ListThings(ctx workflow.Context, input *iot.ListThingsInput) (*iot.ListThingsOutput, error) {
@@ -4528,9 +4740,9 @@ func (a *IoTStub) ListThings(ctx workflow.Context, input *iot.ListThingsInput) (
 	return &output, err
 }
 
-func (a *IoTStub) ListThingsAsync(ctx workflow.Context, input *iot.ListThingsInput) *IotListThingsFuture {
+func (a *IoTStub) ListThingsAsync(ctx workflow.Context, input *iot.ListThingsInput) *IoTListThingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThings", input)
-	return &IotListThingsFuture{Future: future}
+	return &IoTListThingsFuture{Future: future}
 }
 
 func (a *IoTStub) ListThingsInBillingGroup(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) (*iot.ListThingsInBillingGroupOutput, error) {
@@ -4539,9 +4751,9 @@ func (a *IoTStub) ListThingsInBillingGroup(ctx workflow.Context, input *iot.List
 	return &output, err
 }
 
-func (a *IoTStub) ListThingsInBillingGroupAsync(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) *IotListThingsInBillingGroupFuture {
+func (a *IoTStub) ListThingsInBillingGroupAsync(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) *IoTListThingsInBillingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThingsInBillingGroup", input)
-	return &IotListThingsInBillingGroupFuture{Future: future}
+	return &IoTListThingsInBillingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) ListThingsInThingGroup(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) (*iot.ListThingsInThingGroupOutput, error) {
@@ -4550,9 +4762,9 @@ func (a *IoTStub) ListThingsInThingGroup(ctx workflow.Context, input *iot.ListTh
 	return &output, err
 }
 
-func (a *IoTStub) ListThingsInThingGroupAsync(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) *IotListThingsInThingGroupFuture {
+func (a *IoTStub) ListThingsInThingGroupAsync(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) *IoTListThingsInThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListThingsInThingGroup", input)
-	return &IotListThingsInThingGroupFuture{Future: future}
+	return &IoTListThingsInThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) ListTopicRuleDestinations(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) (*iot.ListTopicRuleDestinationsOutput, error) {
@@ -4561,9 +4773,9 @@ func (a *IoTStub) ListTopicRuleDestinations(ctx workflow.Context, input *iot.Lis
 	return &output, err
 }
 
-func (a *IoTStub) ListTopicRuleDestinationsAsync(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) *IotListTopicRuleDestinationsFuture {
+func (a *IoTStub) ListTopicRuleDestinationsAsync(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) *IoTListTopicRuleDestinationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListTopicRuleDestinations", input)
-	return &IotListTopicRuleDestinationsFuture{Future: future}
+	return &IoTListTopicRuleDestinationsFuture{Future: future}
 }
 
 func (a *IoTStub) ListTopicRules(ctx workflow.Context, input *iot.ListTopicRulesInput) (*iot.ListTopicRulesOutput, error) {
@@ -4572,9 +4784,9 @@ func (a *IoTStub) ListTopicRules(ctx workflow.Context, input *iot.ListTopicRules
 	return &output, err
 }
 
-func (a *IoTStub) ListTopicRulesAsync(ctx workflow.Context, input *iot.ListTopicRulesInput) *IotListTopicRulesFuture {
+func (a *IoTStub) ListTopicRulesAsync(ctx workflow.Context, input *iot.ListTopicRulesInput) *IoTListTopicRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListTopicRules", input)
-	return &IotListTopicRulesFuture{Future: future}
+	return &IoTListTopicRulesFuture{Future: future}
 }
 
 func (a *IoTStub) ListV2LoggingLevels(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) (*iot.ListV2LoggingLevelsOutput, error) {
@@ -4583,9 +4795,9 @@ func (a *IoTStub) ListV2LoggingLevels(ctx workflow.Context, input *iot.ListV2Log
 	return &output, err
 }
 
-func (a *IoTStub) ListV2LoggingLevelsAsync(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) *IotListV2LoggingLevelsFuture {
+func (a *IoTStub) ListV2LoggingLevelsAsync(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) *IoTListV2LoggingLevelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListV2LoggingLevels", input)
-	return &IotListV2LoggingLevelsFuture{Future: future}
+	return &IoTListV2LoggingLevelsFuture{Future: future}
 }
 
 func (a *IoTStub) ListViolationEvents(ctx workflow.Context, input *iot.ListViolationEventsInput) (*iot.ListViolationEventsOutput, error) {
@@ -4594,9 +4806,9 @@ func (a *IoTStub) ListViolationEvents(ctx workflow.Context, input *iot.ListViola
 	return &output, err
 }
 
-func (a *IoTStub) ListViolationEventsAsync(ctx workflow.Context, input *iot.ListViolationEventsInput) *IotListViolationEventsFuture {
+func (a *IoTStub) ListViolationEventsAsync(ctx workflow.Context, input *iot.ListViolationEventsInput) *IoTListViolationEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ListViolationEvents", input)
-	return &IotListViolationEventsFuture{Future: future}
+	return &IoTListViolationEventsFuture{Future: future}
 }
 
 func (a *IoTStub) RegisterCACertificate(ctx workflow.Context, input *iot.RegisterCACertificateInput) (*iot.RegisterCACertificateOutput, error) {
@@ -4605,9 +4817,9 @@ func (a *IoTStub) RegisterCACertificate(ctx workflow.Context, input *iot.Registe
 	return &output, err
 }
 
-func (a *IoTStub) RegisterCACertificateAsync(ctx workflow.Context, input *iot.RegisterCACertificateInput) *IotRegisterCACertificateFuture {
+func (a *IoTStub) RegisterCACertificateAsync(ctx workflow.Context, input *iot.RegisterCACertificateInput) *IoTRegisterCACertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.RegisterCACertificate", input)
-	return &IotRegisterCACertificateFuture{Future: future}
+	return &IoTRegisterCACertificateFuture{Future: future}
 }
 
 func (a *IoTStub) RegisterCertificate(ctx workflow.Context, input *iot.RegisterCertificateInput) (*iot.RegisterCertificateOutput, error) {
@@ -4616,9 +4828,9 @@ func (a *IoTStub) RegisterCertificate(ctx workflow.Context, input *iot.RegisterC
 	return &output, err
 }
 
-func (a *IoTStub) RegisterCertificateAsync(ctx workflow.Context, input *iot.RegisterCertificateInput) *IotRegisterCertificateFuture {
+func (a *IoTStub) RegisterCertificateAsync(ctx workflow.Context, input *iot.RegisterCertificateInput) *IoTRegisterCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.RegisterCertificate", input)
-	return &IotRegisterCertificateFuture{Future: future}
+	return &IoTRegisterCertificateFuture{Future: future}
 }
 
 func (a *IoTStub) RegisterCertificateWithoutCA(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) (*iot.RegisterCertificateWithoutCAOutput, error) {
@@ -4627,9 +4839,9 @@ func (a *IoTStub) RegisterCertificateWithoutCA(ctx workflow.Context, input *iot.
 	return &output, err
 }
 
-func (a *IoTStub) RegisterCertificateWithoutCAAsync(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) *IotRegisterCertificateWithoutCAFuture {
+func (a *IoTStub) RegisterCertificateWithoutCAAsync(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) *IoTRegisterCertificateWithoutCAFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.RegisterCertificateWithoutCA", input)
-	return &IotRegisterCertificateWithoutCAFuture{Future: future}
+	return &IoTRegisterCertificateWithoutCAFuture{Future: future}
 }
 
 func (a *IoTStub) RegisterThing(ctx workflow.Context, input *iot.RegisterThingInput) (*iot.RegisterThingOutput, error) {
@@ -4638,9 +4850,9 @@ func (a *IoTStub) RegisterThing(ctx workflow.Context, input *iot.RegisterThingIn
 	return &output, err
 }
 
-func (a *IoTStub) RegisterThingAsync(ctx workflow.Context, input *iot.RegisterThingInput) *IotRegisterThingFuture {
+func (a *IoTStub) RegisterThingAsync(ctx workflow.Context, input *iot.RegisterThingInput) *IoTRegisterThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.RegisterThing", input)
-	return &IotRegisterThingFuture{Future: future}
+	return &IoTRegisterThingFuture{Future: future}
 }
 
 func (a *IoTStub) RejectCertificateTransfer(ctx workflow.Context, input *iot.RejectCertificateTransferInput) (*iot.RejectCertificateTransferOutput, error) {
@@ -4649,9 +4861,9 @@ func (a *IoTStub) RejectCertificateTransfer(ctx workflow.Context, input *iot.Rej
 	return &output, err
 }
 
-func (a *IoTStub) RejectCertificateTransferAsync(ctx workflow.Context, input *iot.RejectCertificateTransferInput) *IotRejectCertificateTransferFuture {
+func (a *IoTStub) RejectCertificateTransferAsync(ctx workflow.Context, input *iot.RejectCertificateTransferInput) *IoTRejectCertificateTransferFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.RejectCertificateTransfer", input)
-	return &IotRejectCertificateTransferFuture{Future: future}
+	return &IoTRejectCertificateTransferFuture{Future: future}
 }
 
 func (a *IoTStub) RemoveThingFromBillingGroup(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) (*iot.RemoveThingFromBillingGroupOutput, error) {
@@ -4660,9 +4872,9 @@ func (a *IoTStub) RemoveThingFromBillingGroup(ctx workflow.Context, input *iot.R
 	return &output, err
 }
 
-func (a *IoTStub) RemoveThingFromBillingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) *IotRemoveThingFromBillingGroupFuture {
+func (a *IoTStub) RemoveThingFromBillingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) *IoTRemoveThingFromBillingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.RemoveThingFromBillingGroup", input)
-	return &IotRemoveThingFromBillingGroupFuture{Future: future}
+	return &IoTRemoveThingFromBillingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) RemoveThingFromThingGroup(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) (*iot.RemoveThingFromThingGroupOutput, error) {
@@ -4671,9 +4883,9 @@ func (a *IoTStub) RemoveThingFromThingGroup(ctx workflow.Context, input *iot.Rem
 	return &output, err
 }
 
-func (a *IoTStub) RemoveThingFromThingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) *IotRemoveThingFromThingGroupFuture {
+func (a *IoTStub) RemoveThingFromThingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) *IoTRemoveThingFromThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.RemoveThingFromThingGroup", input)
-	return &IotRemoveThingFromThingGroupFuture{Future: future}
+	return &IoTRemoveThingFromThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) ReplaceTopicRule(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) (*iot.ReplaceTopicRuleOutput, error) {
@@ -4682,9 +4894,9 @@ func (a *IoTStub) ReplaceTopicRule(ctx workflow.Context, input *iot.ReplaceTopic
 	return &output, err
 }
 
-func (a *IoTStub) ReplaceTopicRuleAsync(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) *IotReplaceTopicRuleFuture {
+func (a *IoTStub) ReplaceTopicRuleAsync(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) *IoTReplaceTopicRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ReplaceTopicRule", input)
-	return &IotReplaceTopicRuleFuture{Future: future}
+	return &IoTReplaceTopicRuleFuture{Future: future}
 }
 
 func (a *IoTStub) SearchIndex(ctx workflow.Context, input *iot.SearchIndexInput) (*iot.SearchIndexOutput, error) {
@@ -4693,9 +4905,9 @@ func (a *IoTStub) SearchIndex(ctx workflow.Context, input *iot.SearchIndexInput)
 	return &output, err
 }
 
-func (a *IoTStub) SearchIndexAsync(ctx workflow.Context, input *iot.SearchIndexInput) *IotSearchIndexFuture {
+func (a *IoTStub) SearchIndexAsync(ctx workflow.Context, input *iot.SearchIndexInput) *IoTSearchIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.SearchIndex", input)
-	return &IotSearchIndexFuture{Future: future}
+	return &IoTSearchIndexFuture{Future: future}
 }
 
 func (a *IoTStub) SetDefaultAuthorizer(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) (*iot.SetDefaultAuthorizerOutput, error) {
@@ -4704,9 +4916,9 @@ func (a *IoTStub) SetDefaultAuthorizer(ctx workflow.Context, input *iot.SetDefau
 	return &output, err
 }
 
-func (a *IoTStub) SetDefaultAuthorizerAsync(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) *IotSetDefaultAuthorizerFuture {
+func (a *IoTStub) SetDefaultAuthorizerAsync(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) *IoTSetDefaultAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.SetDefaultAuthorizer", input)
-	return &IotSetDefaultAuthorizerFuture{Future: future}
+	return &IoTSetDefaultAuthorizerFuture{Future: future}
 }
 
 func (a *IoTStub) SetDefaultPolicyVersion(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) (*iot.SetDefaultPolicyVersionOutput, error) {
@@ -4715,9 +4927,9 @@ func (a *IoTStub) SetDefaultPolicyVersion(ctx workflow.Context, input *iot.SetDe
 	return &output, err
 }
 
-func (a *IoTStub) SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) *IotSetDefaultPolicyVersionFuture {
+func (a *IoTStub) SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) *IoTSetDefaultPolicyVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.SetDefaultPolicyVersion", input)
-	return &IotSetDefaultPolicyVersionFuture{Future: future}
+	return &IoTSetDefaultPolicyVersionFuture{Future: future}
 }
 
 func (a *IoTStub) SetLoggingOptions(ctx workflow.Context, input *iot.SetLoggingOptionsInput) (*iot.SetLoggingOptionsOutput, error) {
@@ -4726,9 +4938,9 @@ func (a *IoTStub) SetLoggingOptions(ctx workflow.Context, input *iot.SetLoggingO
 	return &output, err
 }
 
-func (a *IoTStub) SetLoggingOptionsAsync(ctx workflow.Context, input *iot.SetLoggingOptionsInput) *IotSetLoggingOptionsFuture {
+func (a *IoTStub) SetLoggingOptionsAsync(ctx workflow.Context, input *iot.SetLoggingOptionsInput) *IoTSetLoggingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.SetLoggingOptions", input)
-	return &IotSetLoggingOptionsFuture{Future: future}
+	return &IoTSetLoggingOptionsFuture{Future: future}
 }
 
 func (a *IoTStub) SetV2LoggingLevel(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) (*iot.SetV2LoggingLevelOutput, error) {
@@ -4737,9 +4949,9 @@ func (a *IoTStub) SetV2LoggingLevel(ctx workflow.Context, input *iot.SetV2Loggin
 	return &output, err
 }
 
-func (a *IoTStub) SetV2LoggingLevelAsync(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) *IotSetV2LoggingLevelFuture {
+func (a *IoTStub) SetV2LoggingLevelAsync(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) *IoTSetV2LoggingLevelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.SetV2LoggingLevel", input)
-	return &IotSetV2LoggingLevelFuture{Future: future}
+	return &IoTSetV2LoggingLevelFuture{Future: future}
 }
 
 func (a *IoTStub) SetV2LoggingOptions(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) (*iot.SetV2LoggingOptionsOutput, error) {
@@ -4748,9 +4960,9 @@ func (a *IoTStub) SetV2LoggingOptions(ctx workflow.Context, input *iot.SetV2Logg
 	return &output, err
 }
 
-func (a *IoTStub) SetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) *IotSetV2LoggingOptionsFuture {
+func (a *IoTStub) SetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) *IoTSetV2LoggingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.SetV2LoggingOptions", input)
-	return &IotSetV2LoggingOptionsFuture{Future: future}
+	return &IoTSetV2LoggingOptionsFuture{Future: future}
 }
 
 func (a *IoTStub) StartAuditMitigationActionsTask(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) (*iot.StartAuditMitigationActionsTaskOutput, error) {
@@ -4759,9 +4971,9 @@ func (a *IoTStub) StartAuditMitigationActionsTask(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTStub) StartAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) *IotStartAuditMitigationActionsTaskFuture {
+func (a *IoTStub) StartAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) *IoTStartAuditMitigationActionsTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.StartAuditMitigationActionsTask", input)
-	return &IotStartAuditMitigationActionsTaskFuture{Future: future}
+	return &IoTStartAuditMitigationActionsTaskFuture{Future: future}
 }
 
 func (a *IoTStub) StartOnDemandAuditTask(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) (*iot.StartOnDemandAuditTaskOutput, error) {
@@ -4770,9 +4982,9 @@ func (a *IoTStub) StartOnDemandAuditTask(ctx workflow.Context, input *iot.StartO
 	return &output, err
 }
 
-func (a *IoTStub) StartOnDemandAuditTaskAsync(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) *IotStartOnDemandAuditTaskFuture {
+func (a *IoTStub) StartOnDemandAuditTaskAsync(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) *IoTStartOnDemandAuditTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.StartOnDemandAuditTask", input)
-	return &IotStartOnDemandAuditTaskFuture{Future: future}
+	return &IoTStartOnDemandAuditTaskFuture{Future: future}
 }
 
 func (a *IoTStub) StartThingRegistrationTask(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) (*iot.StartThingRegistrationTaskOutput, error) {
@@ -4781,9 +4993,9 @@ func (a *IoTStub) StartThingRegistrationTask(ctx workflow.Context, input *iot.St
 	return &output, err
 }
 
-func (a *IoTStub) StartThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) *IotStartThingRegistrationTaskFuture {
+func (a *IoTStub) StartThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) *IoTStartThingRegistrationTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.StartThingRegistrationTask", input)
-	return &IotStartThingRegistrationTaskFuture{Future: future}
+	return &IoTStartThingRegistrationTaskFuture{Future: future}
 }
 
 func (a *IoTStub) StopThingRegistrationTask(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) (*iot.StopThingRegistrationTaskOutput, error) {
@@ -4792,9 +5004,9 @@ func (a *IoTStub) StopThingRegistrationTask(ctx workflow.Context, input *iot.Sto
 	return &output, err
 }
 
-func (a *IoTStub) StopThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) *IotStopThingRegistrationTaskFuture {
+func (a *IoTStub) StopThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) *IoTStopThingRegistrationTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.StopThingRegistrationTask", input)
-	return &IotStopThingRegistrationTaskFuture{Future: future}
+	return &IoTStopThingRegistrationTaskFuture{Future: future}
 }
 
 func (a *IoTStub) TagResource(ctx workflow.Context, input *iot.TagResourceInput) (*iot.TagResourceOutput, error) {
@@ -4803,9 +5015,9 @@ func (a *IoTStub) TagResource(ctx workflow.Context, input *iot.TagResourceInput)
 	return &output, err
 }
 
-func (a *IoTStub) TagResourceAsync(ctx workflow.Context, input *iot.TagResourceInput) *IotTagResourceFuture {
+func (a *IoTStub) TagResourceAsync(ctx workflow.Context, input *iot.TagResourceInput) *IoTTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.TagResource", input)
-	return &IotTagResourceFuture{Future: future}
+	return &IoTTagResourceFuture{Future: future}
 }
 
 func (a *IoTStub) TestAuthorization(ctx workflow.Context, input *iot.TestAuthorizationInput) (*iot.TestAuthorizationOutput, error) {
@@ -4814,9 +5026,9 @@ func (a *IoTStub) TestAuthorization(ctx workflow.Context, input *iot.TestAuthori
 	return &output, err
 }
 
-func (a *IoTStub) TestAuthorizationAsync(ctx workflow.Context, input *iot.TestAuthorizationInput) *IotTestAuthorizationFuture {
+func (a *IoTStub) TestAuthorizationAsync(ctx workflow.Context, input *iot.TestAuthorizationInput) *IoTTestAuthorizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.TestAuthorization", input)
-	return &IotTestAuthorizationFuture{Future: future}
+	return &IoTTestAuthorizationFuture{Future: future}
 }
 
 func (a *IoTStub) TestInvokeAuthorizer(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) (*iot.TestInvokeAuthorizerOutput, error) {
@@ -4825,9 +5037,9 @@ func (a *IoTStub) TestInvokeAuthorizer(ctx workflow.Context, input *iot.TestInvo
 	return &output, err
 }
 
-func (a *IoTStub) TestInvokeAuthorizerAsync(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) *IotTestInvokeAuthorizerFuture {
+func (a *IoTStub) TestInvokeAuthorizerAsync(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) *IoTTestInvokeAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.TestInvokeAuthorizer", input)
-	return &IotTestInvokeAuthorizerFuture{Future: future}
+	return &IoTTestInvokeAuthorizerFuture{Future: future}
 }
 
 func (a *IoTStub) TransferCertificate(ctx workflow.Context, input *iot.TransferCertificateInput) (*iot.TransferCertificateOutput, error) {
@@ -4836,9 +5048,9 @@ func (a *IoTStub) TransferCertificate(ctx workflow.Context, input *iot.TransferC
 	return &output, err
 }
 
-func (a *IoTStub) TransferCertificateAsync(ctx workflow.Context, input *iot.TransferCertificateInput) *IotTransferCertificateFuture {
+func (a *IoTStub) TransferCertificateAsync(ctx workflow.Context, input *iot.TransferCertificateInput) *IoTTransferCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.TransferCertificate", input)
-	return &IotTransferCertificateFuture{Future: future}
+	return &IoTTransferCertificateFuture{Future: future}
 }
 
 func (a *IoTStub) UntagResource(ctx workflow.Context, input *iot.UntagResourceInput) (*iot.UntagResourceOutput, error) {
@@ -4847,9 +5059,9 @@ func (a *IoTStub) UntagResource(ctx workflow.Context, input *iot.UntagResourceIn
 	return &output, err
 }
 
-func (a *IoTStub) UntagResourceAsync(ctx workflow.Context, input *iot.UntagResourceInput) *IotUntagResourceFuture {
+func (a *IoTStub) UntagResourceAsync(ctx workflow.Context, input *iot.UntagResourceInput) *IoTUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UntagResource", input)
-	return &IotUntagResourceFuture{Future: future}
+	return &IoTUntagResourceFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateAccountAuditConfiguration(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) (*iot.UpdateAccountAuditConfigurationOutput, error) {
@@ -4858,9 +5070,9 @@ func (a *IoTStub) UpdateAccountAuditConfiguration(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTStub) UpdateAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) *IotUpdateAccountAuditConfigurationFuture {
+func (a *IoTStub) UpdateAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) *IoTUpdateAccountAuditConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateAccountAuditConfiguration", input)
-	return &IotUpdateAccountAuditConfigurationFuture{Future: future}
+	return &IoTUpdateAccountAuditConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateAuditSuppression(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) (*iot.UpdateAuditSuppressionOutput, error) {
@@ -4869,9 +5081,9 @@ func (a *IoTStub) UpdateAuditSuppression(ctx workflow.Context, input *iot.Update
 	return &output, err
 }
 
-func (a *IoTStub) UpdateAuditSuppressionAsync(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) *IotUpdateAuditSuppressionFuture {
+func (a *IoTStub) UpdateAuditSuppressionAsync(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) *IoTUpdateAuditSuppressionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateAuditSuppression", input)
-	return &IotUpdateAuditSuppressionFuture{Future: future}
+	return &IoTUpdateAuditSuppressionFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateAuthorizer(ctx workflow.Context, input *iot.UpdateAuthorizerInput) (*iot.UpdateAuthorizerOutput, error) {
@@ -4880,9 +5092,9 @@ func (a *IoTStub) UpdateAuthorizer(ctx workflow.Context, input *iot.UpdateAuthor
 	return &output, err
 }
 
-func (a *IoTStub) UpdateAuthorizerAsync(ctx workflow.Context, input *iot.UpdateAuthorizerInput) *IotUpdateAuthorizerFuture {
+func (a *IoTStub) UpdateAuthorizerAsync(ctx workflow.Context, input *iot.UpdateAuthorizerInput) *IoTUpdateAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateAuthorizer", input)
-	return &IotUpdateAuthorizerFuture{Future: future}
+	return &IoTUpdateAuthorizerFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateBillingGroup(ctx workflow.Context, input *iot.UpdateBillingGroupInput) (*iot.UpdateBillingGroupOutput, error) {
@@ -4891,9 +5103,9 @@ func (a *IoTStub) UpdateBillingGroup(ctx workflow.Context, input *iot.UpdateBill
 	return &output, err
 }
 
-func (a *IoTStub) UpdateBillingGroupAsync(ctx workflow.Context, input *iot.UpdateBillingGroupInput) *IotUpdateBillingGroupFuture {
+func (a *IoTStub) UpdateBillingGroupAsync(ctx workflow.Context, input *iot.UpdateBillingGroupInput) *IoTUpdateBillingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateBillingGroup", input)
-	return &IotUpdateBillingGroupFuture{Future: future}
+	return &IoTUpdateBillingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateCACertificate(ctx workflow.Context, input *iot.UpdateCACertificateInput) (*iot.UpdateCACertificateOutput, error) {
@@ -4902,9 +5114,9 @@ func (a *IoTStub) UpdateCACertificate(ctx workflow.Context, input *iot.UpdateCAC
 	return &output, err
 }
 
-func (a *IoTStub) UpdateCACertificateAsync(ctx workflow.Context, input *iot.UpdateCACertificateInput) *IotUpdateCACertificateFuture {
+func (a *IoTStub) UpdateCACertificateAsync(ctx workflow.Context, input *iot.UpdateCACertificateInput) *IoTUpdateCACertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateCACertificate", input)
-	return &IotUpdateCACertificateFuture{Future: future}
+	return &IoTUpdateCACertificateFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateCertificate(ctx workflow.Context, input *iot.UpdateCertificateInput) (*iot.UpdateCertificateOutput, error) {
@@ -4913,9 +5125,9 @@ func (a *IoTStub) UpdateCertificate(ctx workflow.Context, input *iot.UpdateCerti
 	return &output, err
 }
 
-func (a *IoTStub) UpdateCertificateAsync(ctx workflow.Context, input *iot.UpdateCertificateInput) *IotUpdateCertificateFuture {
+func (a *IoTStub) UpdateCertificateAsync(ctx workflow.Context, input *iot.UpdateCertificateInput) *IoTUpdateCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateCertificate", input)
-	return &IotUpdateCertificateFuture{Future: future}
+	return &IoTUpdateCertificateFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateDimension(ctx workflow.Context, input *iot.UpdateDimensionInput) (*iot.UpdateDimensionOutput, error) {
@@ -4924,9 +5136,9 @@ func (a *IoTStub) UpdateDimension(ctx workflow.Context, input *iot.UpdateDimensi
 	return &output, err
 }
 
-func (a *IoTStub) UpdateDimensionAsync(ctx workflow.Context, input *iot.UpdateDimensionInput) *IotUpdateDimensionFuture {
+func (a *IoTStub) UpdateDimensionAsync(ctx workflow.Context, input *iot.UpdateDimensionInput) *IoTUpdateDimensionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateDimension", input)
-	return &IotUpdateDimensionFuture{Future: future}
+	return &IoTUpdateDimensionFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateDomainConfiguration(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) (*iot.UpdateDomainConfigurationOutput, error) {
@@ -4935,9 +5147,9 @@ func (a *IoTStub) UpdateDomainConfiguration(ctx workflow.Context, input *iot.Upd
 	return &output, err
 }
 
-func (a *IoTStub) UpdateDomainConfigurationAsync(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) *IotUpdateDomainConfigurationFuture {
+func (a *IoTStub) UpdateDomainConfigurationAsync(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) *IoTUpdateDomainConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateDomainConfiguration", input)
-	return &IotUpdateDomainConfigurationFuture{Future: future}
+	return &IoTUpdateDomainConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateDynamicThingGroup(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) (*iot.UpdateDynamicThingGroupOutput, error) {
@@ -4946,9 +5158,9 @@ func (a *IoTStub) UpdateDynamicThingGroup(ctx workflow.Context, input *iot.Updat
 	return &output, err
 }
 
-func (a *IoTStub) UpdateDynamicThingGroupAsync(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) *IotUpdateDynamicThingGroupFuture {
+func (a *IoTStub) UpdateDynamicThingGroupAsync(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) *IoTUpdateDynamicThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateDynamicThingGroup", input)
-	return &IotUpdateDynamicThingGroupFuture{Future: future}
+	return &IoTUpdateDynamicThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateEventConfigurations(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) (*iot.UpdateEventConfigurationsOutput, error) {
@@ -4957,9 +5169,9 @@ func (a *IoTStub) UpdateEventConfigurations(ctx workflow.Context, input *iot.Upd
 	return &output, err
 }
 
-func (a *IoTStub) UpdateEventConfigurationsAsync(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) *IotUpdateEventConfigurationsFuture {
+func (a *IoTStub) UpdateEventConfigurationsAsync(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) *IoTUpdateEventConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateEventConfigurations", input)
-	return &IotUpdateEventConfigurationsFuture{Future: future}
+	return &IoTUpdateEventConfigurationsFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateIndexingConfiguration(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) (*iot.UpdateIndexingConfigurationOutput, error) {
@@ -4968,9 +5180,9 @@ func (a *IoTStub) UpdateIndexingConfiguration(ctx workflow.Context, input *iot.U
 	return &output, err
 }
 
-func (a *IoTStub) UpdateIndexingConfigurationAsync(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) *IotUpdateIndexingConfigurationFuture {
+func (a *IoTStub) UpdateIndexingConfigurationAsync(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) *IoTUpdateIndexingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateIndexingConfiguration", input)
-	return &IotUpdateIndexingConfigurationFuture{Future: future}
+	return &IoTUpdateIndexingConfigurationFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateJob(ctx workflow.Context, input *iot.UpdateJobInput) (*iot.UpdateJobOutput, error) {
@@ -4979,9 +5191,9 @@ func (a *IoTStub) UpdateJob(ctx workflow.Context, input *iot.UpdateJobInput) (*i
 	return &output, err
 }
 
-func (a *IoTStub) UpdateJobAsync(ctx workflow.Context, input *iot.UpdateJobInput) *IotUpdateJobFuture {
+func (a *IoTStub) UpdateJobAsync(ctx workflow.Context, input *iot.UpdateJobInput) *IoTUpdateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateJob", input)
-	return &IotUpdateJobFuture{Future: future}
+	return &IoTUpdateJobFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateMitigationAction(ctx workflow.Context, input *iot.UpdateMitigationActionInput) (*iot.UpdateMitigationActionOutput, error) {
@@ -4990,9 +5202,9 @@ func (a *IoTStub) UpdateMitigationAction(ctx workflow.Context, input *iot.Update
 	return &output, err
 }
 
-func (a *IoTStub) UpdateMitigationActionAsync(ctx workflow.Context, input *iot.UpdateMitigationActionInput) *IotUpdateMitigationActionFuture {
+func (a *IoTStub) UpdateMitigationActionAsync(ctx workflow.Context, input *iot.UpdateMitigationActionInput) *IoTUpdateMitigationActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateMitigationAction", input)
-	return &IotUpdateMitigationActionFuture{Future: future}
+	return &IoTUpdateMitigationActionFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateProvisioningTemplate(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) (*iot.UpdateProvisioningTemplateOutput, error) {
@@ -5001,9 +5213,9 @@ func (a *IoTStub) UpdateProvisioningTemplate(ctx workflow.Context, input *iot.Up
 	return &output, err
 }
 
-func (a *IoTStub) UpdateProvisioningTemplateAsync(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) *IotUpdateProvisioningTemplateFuture {
+func (a *IoTStub) UpdateProvisioningTemplateAsync(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) *IoTUpdateProvisioningTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateProvisioningTemplate", input)
-	return &IotUpdateProvisioningTemplateFuture{Future: future}
+	return &IoTUpdateProvisioningTemplateFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateRoleAlias(ctx workflow.Context, input *iot.UpdateRoleAliasInput) (*iot.UpdateRoleAliasOutput, error) {
@@ -5012,9 +5224,9 @@ func (a *IoTStub) UpdateRoleAlias(ctx workflow.Context, input *iot.UpdateRoleAli
 	return &output, err
 }
 
-func (a *IoTStub) UpdateRoleAliasAsync(ctx workflow.Context, input *iot.UpdateRoleAliasInput) *IotUpdateRoleAliasFuture {
+func (a *IoTStub) UpdateRoleAliasAsync(ctx workflow.Context, input *iot.UpdateRoleAliasInput) *IoTUpdateRoleAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateRoleAlias", input)
-	return &IotUpdateRoleAliasFuture{Future: future}
+	return &IoTUpdateRoleAliasFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateScheduledAudit(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) (*iot.UpdateScheduledAuditOutput, error) {
@@ -5023,9 +5235,9 @@ func (a *IoTStub) UpdateScheduledAudit(ctx workflow.Context, input *iot.UpdateSc
 	return &output, err
 }
 
-func (a *IoTStub) UpdateScheduledAuditAsync(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) *IotUpdateScheduledAuditFuture {
+func (a *IoTStub) UpdateScheduledAuditAsync(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) *IoTUpdateScheduledAuditFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateScheduledAudit", input)
-	return &IotUpdateScheduledAuditFuture{Future: future}
+	return &IoTUpdateScheduledAuditFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateSecurityProfile(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) (*iot.UpdateSecurityProfileOutput, error) {
@@ -5034,9 +5246,9 @@ func (a *IoTStub) UpdateSecurityProfile(ctx workflow.Context, input *iot.UpdateS
 	return &output, err
 }
 
-func (a *IoTStub) UpdateSecurityProfileAsync(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) *IotUpdateSecurityProfileFuture {
+func (a *IoTStub) UpdateSecurityProfileAsync(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) *IoTUpdateSecurityProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateSecurityProfile", input)
-	return &IotUpdateSecurityProfileFuture{Future: future}
+	return &IoTUpdateSecurityProfileFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateStream(ctx workflow.Context, input *iot.UpdateStreamInput) (*iot.UpdateStreamOutput, error) {
@@ -5045,9 +5257,9 @@ func (a *IoTStub) UpdateStream(ctx workflow.Context, input *iot.UpdateStreamInpu
 	return &output, err
 }
 
-func (a *IoTStub) UpdateStreamAsync(ctx workflow.Context, input *iot.UpdateStreamInput) *IotUpdateStreamFuture {
+func (a *IoTStub) UpdateStreamAsync(ctx workflow.Context, input *iot.UpdateStreamInput) *IoTUpdateStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateStream", input)
-	return &IotUpdateStreamFuture{Future: future}
+	return &IoTUpdateStreamFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateThing(ctx workflow.Context, input *iot.UpdateThingInput) (*iot.UpdateThingOutput, error) {
@@ -5056,9 +5268,9 @@ func (a *IoTStub) UpdateThing(ctx workflow.Context, input *iot.UpdateThingInput)
 	return &output, err
 }
 
-func (a *IoTStub) UpdateThingAsync(ctx workflow.Context, input *iot.UpdateThingInput) *IotUpdateThingFuture {
+func (a *IoTStub) UpdateThingAsync(ctx workflow.Context, input *iot.UpdateThingInput) *IoTUpdateThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateThing", input)
-	return &IotUpdateThingFuture{Future: future}
+	return &IoTUpdateThingFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateThingGroup(ctx workflow.Context, input *iot.UpdateThingGroupInput) (*iot.UpdateThingGroupOutput, error) {
@@ -5067,9 +5279,9 @@ func (a *IoTStub) UpdateThingGroup(ctx workflow.Context, input *iot.UpdateThingG
 	return &output, err
 }
 
-func (a *IoTStub) UpdateThingGroupAsync(ctx workflow.Context, input *iot.UpdateThingGroupInput) *IotUpdateThingGroupFuture {
+func (a *IoTStub) UpdateThingGroupAsync(ctx workflow.Context, input *iot.UpdateThingGroupInput) *IoTUpdateThingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateThingGroup", input)
-	return &IotUpdateThingGroupFuture{Future: future}
+	return &IoTUpdateThingGroupFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateThingGroupsForThing(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) (*iot.UpdateThingGroupsForThingOutput, error) {
@@ -5078,9 +5290,9 @@ func (a *IoTStub) UpdateThingGroupsForThing(ctx workflow.Context, input *iot.Upd
 	return &output, err
 }
 
-func (a *IoTStub) UpdateThingGroupsForThingAsync(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) *IotUpdateThingGroupsForThingFuture {
+func (a *IoTStub) UpdateThingGroupsForThingAsync(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) *IoTUpdateThingGroupsForThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateThingGroupsForThing", input)
-	return &IotUpdateThingGroupsForThingFuture{Future: future}
+	return &IoTUpdateThingGroupsForThingFuture{Future: future}
 }
 
 func (a *IoTStub) UpdateTopicRuleDestination(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) (*iot.UpdateTopicRuleDestinationOutput, error) {
@@ -5089,9 +5301,9 @@ func (a *IoTStub) UpdateTopicRuleDestination(ctx workflow.Context, input *iot.Up
 	return &output, err
 }
 
-func (a *IoTStub) UpdateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) *IotUpdateTopicRuleDestinationFuture {
+func (a *IoTStub) UpdateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) *IoTUpdateTopicRuleDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.UpdateTopicRuleDestination", input)
-	return &IotUpdateTopicRuleDestinationFuture{Future: future}
+	return &IoTUpdateTopicRuleDestinationFuture{Future: future}
 }
 
 func (a *IoTStub) ValidateSecurityProfileBehaviors(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) (*iot.ValidateSecurityProfileBehaviorsOutput, error) {
@@ -5100,7 +5312,7 @@ func (a *IoTStub) ValidateSecurityProfileBehaviors(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *IoTStub) ValidateSecurityProfileBehaviorsAsync(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) *IotValidateSecurityProfileBehaviorsFuture {
+func (a *IoTStub) ValidateSecurityProfileBehaviorsAsync(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) *IoTValidateSecurityProfileBehaviorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot.ValidateSecurityProfileBehaviors", input)
-	return &IotValidateSecurityProfileBehaviorsFuture{Future: future}
+	return &IoTValidateSecurityProfileBehaviorsFuture{Future: future}
 }

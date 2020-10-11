@@ -162,6 +162,7 @@ func NewBackupStub() BackupClient {
 }
 
 type BackupCreateBackupPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +173,7 @@ func (r *BackupCreateBackupPlanFuture) Get(ctx workflow.Context) (*backup.Create
 }
 
 type BackupCreateBackupSelectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +184,7 @@ func (r *BackupCreateBackupSelectionFuture) Get(ctx workflow.Context) (*backup.C
 }
 
 type BackupCreateBackupVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +195,7 @@ func (r *BackupCreateBackupVaultFuture) Get(ctx workflow.Context) (*backup.Creat
 }
 
 type BackupDeleteBackupPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +206,7 @@ func (r *BackupDeleteBackupPlanFuture) Get(ctx workflow.Context) (*backup.Delete
 }
 
 type BackupDeleteBackupSelectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +217,7 @@ func (r *BackupDeleteBackupSelectionFuture) Get(ctx workflow.Context) (*backup.D
 }
 
 type BackupDeleteBackupVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +228,7 @@ func (r *BackupDeleteBackupVaultFuture) Get(ctx workflow.Context) (*backup.Delet
 }
 
 type BackupDeleteBackupVaultAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +239,7 @@ func (r *BackupDeleteBackupVaultAccessPolicyFuture) Get(ctx workflow.Context) (*
 }
 
 type BackupDeleteBackupVaultNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +250,7 @@ func (r *BackupDeleteBackupVaultNotificationsFuture) Get(ctx workflow.Context) (
 }
 
 type BackupDeleteRecoveryPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -252,6 +261,7 @@ func (r *BackupDeleteRecoveryPointFuture) Get(ctx workflow.Context) (*backup.Del
 }
 
 type BackupDescribeBackupJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +272,7 @@ func (r *BackupDescribeBackupJobFuture) Get(ctx workflow.Context) (*backup.Descr
 }
 
 type BackupDescribeBackupVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +283,7 @@ func (r *BackupDescribeBackupVaultFuture) Get(ctx workflow.Context) (*backup.Des
 }
 
 type BackupDescribeCopyJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +294,7 @@ func (r *BackupDescribeCopyJobFuture) Get(ctx workflow.Context) (*backup.Describ
 }
 
 type BackupDescribeProtectedResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +305,7 @@ func (r *BackupDescribeProtectedResourceFuture) Get(ctx workflow.Context) (*back
 }
 
 type BackupDescribeRecoveryPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +316,7 @@ func (r *BackupDescribeRecoveryPointFuture) Get(ctx workflow.Context) (*backup.D
 }
 
 type BackupDescribeRegionSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +327,7 @@ func (r *BackupDescribeRegionSettingsFuture) Get(ctx workflow.Context) (*backup.
 }
 
 type BackupDescribeRestoreJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +338,7 @@ func (r *BackupDescribeRestoreJobFuture) Get(ctx workflow.Context) (*backup.Desc
 }
 
 type BackupExportBackupPlanTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +349,7 @@ func (r *BackupExportBackupPlanTemplateFuture) Get(ctx workflow.Context) (*backu
 }
 
 type BackupGetBackupPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +360,7 @@ func (r *BackupGetBackupPlanFuture) Get(ctx workflow.Context) (*backup.GetBackup
 }
 
 type BackupGetBackupPlanFromJSONFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +371,7 @@ func (r *BackupGetBackupPlanFromJSONFuture) Get(ctx workflow.Context) (*backup.G
 }
 
 type BackupGetBackupPlanFromTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +382,7 @@ func (r *BackupGetBackupPlanFromTemplateFuture) Get(ctx workflow.Context) (*back
 }
 
 type BackupGetBackupSelectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +393,7 @@ func (r *BackupGetBackupSelectionFuture) Get(ctx workflow.Context) (*backup.GetB
 }
 
 type BackupGetBackupVaultAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -382,6 +404,7 @@ func (r *BackupGetBackupVaultAccessPolicyFuture) Get(ctx workflow.Context) (*bac
 }
 
 type BackupGetBackupVaultNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -392,6 +415,7 @@ func (r *BackupGetBackupVaultNotificationsFuture) Get(ctx workflow.Context) (*ba
 }
 
 type BackupGetRecoveryPointRestoreMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -402,6 +426,7 @@ func (r *BackupGetRecoveryPointRestoreMetadataFuture) Get(ctx workflow.Context) 
 }
 
 type BackupGetSupportedResourceTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -412,6 +437,7 @@ func (r *BackupGetSupportedResourceTypesFuture) Get(ctx workflow.Context) (*back
 }
 
 type BackupListBackupJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -422,6 +448,7 @@ func (r *BackupListBackupJobsFuture) Get(ctx workflow.Context) (*backup.ListBack
 }
 
 type BackupListBackupPlanTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -432,6 +459,7 @@ func (r *BackupListBackupPlanTemplatesFuture) Get(ctx workflow.Context) (*backup
 }
 
 type BackupListBackupPlanVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -442,6 +470,7 @@ func (r *BackupListBackupPlanVersionsFuture) Get(ctx workflow.Context) (*backup.
 }
 
 type BackupListBackupPlansFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -452,6 +481,7 @@ func (r *BackupListBackupPlansFuture) Get(ctx workflow.Context) (*backup.ListBac
 }
 
 type BackupListBackupSelectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -462,6 +492,7 @@ func (r *BackupListBackupSelectionsFuture) Get(ctx workflow.Context) (*backup.Li
 }
 
 type BackupListBackupVaultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -472,6 +503,7 @@ func (r *BackupListBackupVaultsFuture) Get(ctx workflow.Context) (*backup.ListBa
 }
 
 type BackupListCopyJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -482,6 +514,7 @@ func (r *BackupListCopyJobsFuture) Get(ctx workflow.Context) (*backup.ListCopyJo
 }
 
 type BackupListProtectedResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -492,6 +525,7 @@ func (r *BackupListProtectedResourcesFuture) Get(ctx workflow.Context) (*backup.
 }
 
 type BackupListRecoveryPointsByBackupVaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -502,6 +536,7 @@ func (r *BackupListRecoveryPointsByBackupVaultFuture) Get(ctx workflow.Context) 
 }
 
 type BackupListRecoveryPointsByResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -512,6 +547,7 @@ func (r *BackupListRecoveryPointsByResourceFuture) Get(ctx workflow.Context) (*b
 }
 
 type BackupListRestoreJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -522,6 +558,7 @@ func (r *BackupListRestoreJobsFuture) Get(ctx workflow.Context) (*backup.ListRes
 }
 
 type BackupListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -532,6 +569,7 @@ func (r *BackupListTagsFuture) Get(ctx workflow.Context) (*backup.ListTagsOutput
 }
 
 type BackupPutBackupVaultAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -542,6 +580,7 @@ func (r *BackupPutBackupVaultAccessPolicyFuture) Get(ctx workflow.Context) (*bac
 }
 
 type BackupPutBackupVaultNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -552,6 +591,7 @@ func (r *BackupPutBackupVaultNotificationsFuture) Get(ctx workflow.Context) (*ba
 }
 
 type BackupStartBackupJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -562,6 +602,7 @@ func (r *BackupStartBackupJobFuture) Get(ctx workflow.Context) (*backup.StartBac
 }
 
 type BackupStartCopyJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -572,6 +613,7 @@ func (r *BackupStartCopyJobFuture) Get(ctx workflow.Context) (*backup.StartCopyJ
 }
 
 type BackupStartRestoreJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -582,6 +624,7 @@ func (r *BackupStartRestoreJobFuture) Get(ctx workflow.Context) (*backup.StartRe
 }
 
 type BackupStopBackupJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -592,6 +635,7 @@ func (r *BackupStopBackupJobFuture) Get(ctx workflow.Context) (*backup.StopBacku
 }
 
 type BackupTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -602,6 +646,7 @@ func (r *BackupTagResourceFuture) Get(ctx workflow.Context) (*backup.TagResource
 }
 
 type BackupUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -612,6 +657,7 @@ func (r *BackupUntagResourceFuture) Get(ctx workflow.Context) (*backup.UntagReso
 }
 
 type BackupUpdateBackupPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -622,6 +668,7 @@ func (r *BackupUpdateBackupPlanFuture) Get(ctx workflow.Context) (*backup.Update
 }
 
 type BackupUpdateRecoveryPointLifecycleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -632,6 +679,7 @@ func (r *BackupUpdateRecoveryPointLifecycleFuture) Get(ctx workflow.Context) (*b
 }
 
 type BackupUpdateRegionSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

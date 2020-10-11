@@ -45,6 +45,7 @@ func NewPollyStub() PollyClient {
 }
 
 type PollyDeleteLexiconFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -55,6 +56,7 @@ func (r *PollyDeleteLexiconFuture) Get(ctx workflow.Context) (*polly.DeleteLexic
 }
 
 type PollyDescribeVoicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -65,6 +67,7 @@ func (r *PollyDescribeVoicesFuture) Get(ctx workflow.Context) (*polly.DescribeVo
 }
 
 type PollyGetLexiconFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -75,6 +78,7 @@ func (r *PollyGetLexiconFuture) Get(ctx workflow.Context) (*polly.GetLexiconOutp
 }
 
 type PollyGetSpeechSynthesisTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +89,7 @@ func (r *PollyGetSpeechSynthesisTaskFuture) Get(ctx workflow.Context) (*polly.Ge
 }
 
 type PollyListLexiconsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +100,7 @@ func (r *PollyListLexiconsFuture) Get(ctx workflow.Context) (*polly.ListLexicons
 }
 
 type PollyListSpeechSynthesisTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +111,7 @@ func (r *PollyListSpeechSynthesisTasksFuture) Get(ctx workflow.Context) (*polly.
 }
 
 type PollyPutLexiconFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +122,7 @@ func (r *PollyPutLexiconFuture) Get(ctx workflow.Context) (*polly.PutLexiconOutp
 }
 
 type PollyStartSpeechSynthesisTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +133,7 @@ func (r *PollyStartSpeechSynthesisTaskFuture) Get(ctx workflow.Context) (*polly.
 }
 
 type PollySynthesizeSpeechFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

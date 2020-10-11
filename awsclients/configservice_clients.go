@@ -11,238 +11,238 @@ import (
 
 type ConfigServiceClient interface {
 	BatchGetAggregateResourceConfig(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) (*configservice.BatchGetAggregateResourceConfigOutput, error)
-	BatchGetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) *ConfigserviceBatchGetAggregateResourceConfigFuture
+	BatchGetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) *ConfigServiceBatchGetAggregateResourceConfigFuture
 
 	BatchGetResourceConfig(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) (*configservice.BatchGetResourceConfigOutput, error)
-	BatchGetResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) *ConfigserviceBatchGetResourceConfigFuture
+	BatchGetResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) *ConfigServiceBatchGetResourceConfigFuture
 
 	DeleteAggregationAuthorization(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) (*configservice.DeleteAggregationAuthorizationOutput, error)
-	DeleteAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) *ConfigserviceDeleteAggregationAuthorizationFuture
+	DeleteAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) *ConfigServiceDeleteAggregationAuthorizationFuture
 
 	DeleteConfigRule(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) (*configservice.DeleteConfigRuleOutput, error)
-	DeleteConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) *ConfigserviceDeleteConfigRuleFuture
+	DeleteConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) *ConfigServiceDeleteConfigRuleFuture
 
 	DeleteConfigurationAggregator(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) (*configservice.DeleteConfigurationAggregatorOutput, error)
-	DeleteConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) *ConfigserviceDeleteConfigurationAggregatorFuture
+	DeleteConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) *ConfigServiceDeleteConfigurationAggregatorFuture
 
 	DeleteConfigurationRecorder(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) (*configservice.DeleteConfigurationRecorderOutput, error)
-	DeleteConfigurationRecorderAsync(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) *ConfigserviceDeleteConfigurationRecorderFuture
+	DeleteConfigurationRecorderAsync(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) *ConfigServiceDeleteConfigurationRecorderFuture
 
 	DeleteConformancePack(ctx workflow.Context, input *configservice.DeleteConformancePackInput) (*configservice.DeleteConformancePackOutput, error)
-	DeleteConformancePackAsync(ctx workflow.Context, input *configservice.DeleteConformancePackInput) *ConfigserviceDeleteConformancePackFuture
+	DeleteConformancePackAsync(ctx workflow.Context, input *configservice.DeleteConformancePackInput) *ConfigServiceDeleteConformancePackFuture
 
 	DeleteDeliveryChannel(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) (*configservice.DeleteDeliveryChannelOutput, error)
-	DeleteDeliveryChannelAsync(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) *ConfigserviceDeleteDeliveryChannelFuture
+	DeleteDeliveryChannelAsync(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) *ConfigServiceDeleteDeliveryChannelFuture
 
 	DeleteEvaluationResults(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) (*configservice.DeleteEvaluationResultsOutput, error)
-	DeleteEvaluationResultsAsync(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) *ConfigserviceDeleteEvaluationResultsFuture
+	DeleteEvaluationResultsAsync(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) *ConfigServiceDeleteEvaluationResultsFuture
 
 	DeleteOrganizationConfigRule(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) (*configservice.DeleteOrganizationConfigRuleOutput, error)
-	DeleteOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) *ConfigserviceDeleteOrganizationConfigRuleFuture
+	DeleteOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) *ConfigServiceDeleteOrganizationConfigRuleFuture
 
 	DeleteOrganizationConformancePack(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) (*configservice.DeleteOrganizationConformancePackOutput, error)
-	DeleteOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) *ConfigserviceDeleteOrganizationConformancePackFuture
+	DeleteOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) *ConfigServiceDeleteOrganizationConformancePackFuture
 
 	DeleteRemediationConfiguration(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) (*configservice.DeleteRemediationConfigurationOutput, error)
-	DeleteRemediationConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) *ConfigserviceDeleteRemediationConfigurationFuture
+	DeleteRemediationConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) *ConfigServiceDeleteRemediationConfigurationFuture
 
 	DeleteRemediationExceptions(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) (*configservice.DeleteRemediationExceptionsOutput, error)
-	DeleteRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) *ConfigserviceDeleteRemediationExceptionsFuture
+	DeleteRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) *ConfigServiceDeleteRemediationExceptionsFuture
 
 	DeleteResourceConfig(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) (*configservice.DeleteResourceConfigOutput, error)
-	DeleteResourceConfigAsync(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) *ConfigserviceDeleteResourceConfigFuture
+	DeleteResourceConfigAsync(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) *ConfigServiceDeleteResourceConfigFuture
 
 	DeleteRetentionConfiguration(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) (*configservice.DeleteRetentionConfigurationOutput, error)
-	DeleteRetentionConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) *ConfigserviceDeleteRetentionConfigurationFuture
+	DeleteRetentionConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) *ConfigServiceDeleteRetentionConfigurationFuture
 
 	DeliverConfigSnapshot(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) (*configservice.DeliverConfigSnapshotOutput, error)
-	DeliverConfigSnapshotAsync(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) *ConfigserviceDeliverConfigSnapshotFuture
+	DeliverConfigSnapshotAsync(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) *ConfigServiceDeliverConfigSnapshotFuture
 
 	DescribeAggregateComplianceByConfigRules(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) (*configservice.DescribeAggregateComplianceByConfigRulesOutput, error)
-	DescribeAggregateComplianceByConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) *ConfigserviceDescribeAggregateComplianceByConfigRulesFuture
+	DescribeAggregateComplianceByConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) *ConfigServiceDescribeAggregateComplianceByConfigRulesFuture
 
 	DescribeAggregationAuthorizations(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) (*configservice.DescribeAggregationAuthorizationsOutput, error)
-	DescribeAggregationAuthorizationsAsync(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) *ConfigserviceDescribeAggregationAuthorizationsFuture
+	DescribeAggregationAuthorizationsAsync(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) *ConfigServiceDescribeAggregationAuthorizationsFuture
 
 	DescribeComplianceByConfigRule(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) (*configservice.DescribeComplianceByConfigRuleOutput, error)
-	DescribeComplianceByConfigRuleAsync(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) *ConfigserviceDescribeComplianceByConfigRuleFuture
+	DescribeComplianceByConfigRuleAsync(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) *ConfigServiceDescribeComplianceByConfigRuleFuture
 
 	DescribeComplianceByResource(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) (*configservice.DescribeComplianceByResourceOutput, error)
-	DescribeComplianceByResourceAsync(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) *ConfigserviceDescribeComplianceByResourceFuture
+	DescribeComplianceByResourceAsync(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) *ConfigServiceDescribeComplianceByResourceFuture
 
 	DescribeConfigRuleEvaluationStatus(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) (*configservice.DescribeConfigRuleEvaluationStatusOutput, error)
-	DescribeConfigRuleEvaluationStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) *ConfigserviceDescribeConfigRuleEvaluationStatusFuture
+	DescribeConfigRuleEvaluationStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) *ConfigServiceDescribeConfigRuleEvaluationStatusFuture
 
 	DescribeConfigRules(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) (*configservice.DescribeConfigRulesOutput, error)
-	DescribeConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) *ConfigserviceDescribeConfigRulesFuture
+	DescribeConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) *ConfigServiceDescribeConfigRulesFuture
 
 	DescribeConfigurationAggregatorSourcesStatus(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) (*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, error)
-	DescribeConfigurationAggregatorSourcesStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) *ConfigserviceDescribeConfigurationAggregatorSourcesStatusFuture
+	DescribeConfigurationAggregatorSourcesStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) *ConfigServiceDescribeConfigurationAggregatorSourcesStatusFuture
 
 	DescribeConfigurationAggregators(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) (*configservice.DescribeConfigurationAggregatorsOutput, error)
-	DescribeConfigurationAggregatorsAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) *ConfigserviceDescribeConfigurationAggregatorsFuture
+	DescribeConfigurationAggregatorsAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) *ConfigServiceDescribeConfigurationAggregatorsFuture
 
 	DescribeConfigurationRecorderStatus(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) (*configservice.DescribeConfigurationRecorderStatusOutput, error)
-	DescribeConfigurationRecorderStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) *ConfigserviceDescribeConfigurationRecorderStatusFuture
+	DescribeConfigurationRecorderStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) *ConfigServiceDescribeConfigurationRecorderStatusFuture
 
 	DescribeConfigurationRecorders(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) (*configservice.DescribeConfigurationRecordersOutput, error)
-	DescribeConfigurationRecordersAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) *ConfigserviceDescribeConfigurationRecordersFuture
+	DescribeConfigurationRecordersAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) *ConfigServiceDescribeConfigurationRecordersFuture
 
 	DescribeConformancePackCompliance(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) (*configservice.DescribeConformancePackComplianceOutput, error)
-	DescribeConformancePackComplianceAsync(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) *ConfigserviceDescribeConformancePackComplianceFuture
+	DescribeConformancePackComplianceAsync(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) *ConfigServiceDescribeConformancePackComplianceFuture
 
 	DescribeConformancePackStatus(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) (*configservice.DescribeConformancePackStatusOutput, error)
-	DescribeConformancePackStatusAsync(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) *ConfigserviceDescribeConformancePackStatusFuture
+	DescribeConformancePackStatusAsync(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) *ConfigServiceDescribeConformancePackStatusFuture
 
 	DescribeConformancePacks(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) (*configservice.DescribeConformancePacksOutput, error)
-	DescribeConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) *ConfigserviceDescribeConformancePacksFuture
+	DescribeConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) *ConfigServiceDescribeConformancePacksFuture
 
 	DescribeDeliveryChannelStatus(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) (*configservice.DescribeDeliveryChannelStatusOutput, error)
-	DescribeDeliveryChannelStatusAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) *ConfigserviceDescribeDeliveryChannelStatusFuture
+	DescribeDeliveryChannelStatusAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) *ConfigServiceDescribeDeliveryChannelStatusFuture
 
 	DescribeDeliveryChannels(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) (*configservice.DescribeDeliveryChannelsOutput, error)
-	DescribeDeliveryChannelsAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) *ConfigserviceDescribeDeliveryChannelsFuture
+	DescribeDeliveryChannelsAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) *ConfigServiceDescribeDeliveryChannelsFuture
 
 	DescribeOrganizationConfigRuleStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) (*configservice.DescribeOrganizationConfigRuleStatusesOutput, error)
-	DescribeOrganizationConfigRuleStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) *ConfigserviceDescribeOrganizationConfigRuleStatusesFuture
+	DescribeOrganizationConfigRuleStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) *ConfigServiceDescribeOrganizationConfigRuleStatusesFuture
 
 	DescribeOrganizationConfigRules(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) (*configservice.DescribeOrganizationConfigRulesOutput, error)
-	DescribeOrganizationConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) *ConfigserviceDescribeOrganizationConfigRulesFuture
+	DescribeOrganizationConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) *ConfigServiceDescribeOrganizationConfigRulesFuture
 
 	DescribeOrganizationConformancePackStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) (*configservice.DescribeOrganizationConformancePackStatusesOutput, error)
-	DescribeOrganizationConformancePackStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) *ConfigserviceDescribeOrganizationConformancePackStatusesFuture
+	DescribeOrganizationConformancePackStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) *ConfigServiceDescribeOrganizationConformancePackStatusesFuture
 
 	DescribeOrganizationConformancePacks(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) (*configservice.DescribeOrganizationConformancePacksOutput, error)
-	DescribeOrganizationConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) *ConfigserviceDescribeOrganizationConformancePacksFuture
+	DescribeOrganizationConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) *ConfigServiceDescribeOrganizationConformancePacksFuture
 
 	DescribePendingAggregationRequests(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) (*configservice.DescribePendingAggregationRequestsOutput, error)
-	DescribePendingAggregationRequestsAsync(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) *ConfigserviceDescribePendingAggregationRequestsFuture
+	DescribePendingAggregationRequestsAsync(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) *ConfigServiceDescribePendingAggregationRequestsFuture
 
 	DescribeRemediationConfigurations(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) (*configservice.DescribeRemediationConfigurationsOutput, error)
-	DescribeRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) *ConfigserviceDescribeRemediationConfigurationsFuture
+	DescribeRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) *ConfigServiceDescribeRemediationConfigurationsFuture
 
 	DescribeRemediationExceptions(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) (*configservice.DescribeRemediationExceptionsOutput, error)
-	DescribeRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) *ConfigserviceDescribeRemediationExceptionsFuture
+	DescribeRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) *ConfigServiceDescribeRemediationExceptionsFuture
 
 	DescribeRemediationExecutionStatus(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) (*configservice.DescribeRemediationExecutionStatusOutput, error)
-	DescribeRemediationExecutionStatusAsync(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) *ConfigserviceDescribeRemediationExecutionStatusFuture
+	DescribeRemediationExecutionStatusAsync(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) *ConfigServiceDescribeRemediationExecutionStatusFuture
 
 	DescribeRetentionConfigurations(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) (*configservice.DescribeRetentionConfigurationsOutput, error)
-	DescribeRetentionConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) *ConfigserviceDescribeRetentionConfigurationsFuture
+	DescribeRetentionConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) *ConfigServiceDescribeRetentionConfigurationsFuture
 
 	GetAggregateComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) (*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, error)
-	GetAggregateComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) *ConfigserviceGetAggregateComplianceDetailsByConfigRuleFuture
+	GetAggregateComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) *ConfigServiceGetAggregateComplianceDetailsByConfigRuleFuture
 
 	GetAggregateConfigRuleComplianceSummary(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) (*configservice.GetAggregateConfigRuleComplianceSummaryOutput, error)
-	GetAggregateConfigRuleComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) *ConfigserviceGetAggregateConfigRuleComplianceSummaryFuture
+	GetAggregateConfigRuleComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) *ConfigServiceGetAggregateConfigRuleComplianceSummaryFuture
 
 	GetAggregateDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) (*configservice.GetAggregateDiscoveredResourceCountsOutput, error)
-	GetAggregateDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) *ConfigserviceGetAggregateDiscoveredResourceCountsFuture
+	GetAggregateDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) *ConfigServiceGetAggregateDiscoveredResourceCountsFuture
 
 	GetAggregateResourceConfig(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) (*configservice.GetAggregateResourceConfigOutput, error)
-	GetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) *ConfigserviceGetAggregateResourceConfigFuture
+	GetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) *ConfigServiceGetAggregateResourceConfigFuture
 
 	GetComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) (*configservice.GetComplianceDetailsByConfigRuleOutput, error)
-	GetComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) *ConfigserviceGetComplianceDetailsByConfigRuleFuture
+	GetComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) *ConfigServiceGetComplianceDetailsByConfigRuleFuture
 
 	GetComplianceDetailsByResource(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) (*configservice.GetComplianceDetailsByResourceOutput, error)
-	GetComplianceDetailsByResourceAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) *ConfigserviceGetComplianceDetailsByResourceFuture
+	GetComplianceDetailsByResourceAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) *ConfigServiceGetComplianceDetailsByResourceFuture
 
 	GetComplianceSummaryByConfigRule(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) (*configservice.GetComplianceSummaryByConfigRuleOutput, error)
-	GetComplianceSummaryByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) *ConfigserviceGetComplianceSummaryByConfigRuleFuture
+	GetComplianceSummaryByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) *ConfigServiceGetComplianceSummaryByConfigRuleFuture
 
 	GetComplianceSummaryByResourceType(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) (*configservice.GetComplianceSummaryByResourceTypeOutput, error)
-	GetComplianceSummaryByResourceTypeAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) *ConfigserviceGetComplianceSummaryByResourceTypeFuture
+	GetComplianceSummaryByResourceTypeAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) *ConfigServiceGetComplianceSummaryByResourceTypeFuture
 
 	GetConformancePackComplianceDetails(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) (*configservice.GetConformancePackComplianceDetailsOutput, error)
-	GetConformancePackComplianceDetailsAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) *ConfigserviceGetConformancePackComplianceDetailsFuture
+	GetConformancePackComplianceDetailsAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) *ConfigServiceGetConformancePackComplianceDetailsFuture
 
 	GetConformancePackComplianceSummary(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) (*configservice.GetConformancePackComplianceSummaryOutput, error)
-	GetConformancePackComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) *ConfigserviceGetConformancePackComplianceSummaryFuture
+	GetConformancePackComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) *ConfigServiceGetConformancePackComplianceSummaryFuture
 
 	GetDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) (*configservice.GetDiscoveredResourceCountsOutput, error)
-	GetDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) *ConfigserviceGetDiscoveredResourceCountsFuture
+	GetDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) *ConfigServiceGetDiscoveredResourceCountsFuture
 
 	GetOrganizationConfigRuleDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) (*configservice.GetOrganizationConfigRuleDetailedStatusOutput, error)
-	GetOrganizationConfigRuleDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) *ConfigserviceGetOrganizationConfigRuleDetailedStatusFuture
+	GetOrganizationConfigRuleDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) *ConfigServiceGetOrganizationConfigRuleDetailedStatusFuture
 
 	GetOrganizationConformancePackDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) (*configservice.GetOrganizationConformancePackDetailedStatusOutput, error)
-	GetOrganizationConformancePackDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) *ConfigserviceGetOrganizationConformancePackDetailedStatusFuture
+	GetOrganizationConformancePackDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) *ConfigServiceGetOrganizationConformancePackDetailedStatusFuture
 
 	GetResourceConfigHistory(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) (*configservice.GetResourceConfigHistoryOutput, error)
-	GetResourceConfigHistoryAsync(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) *ConfigserviceGetResourceConfigHistoryFuture
+	GetResourceConfigHistoryAsync(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) *ConfigServiceGetResourceConfigHistoryFuture
 
 	ListAggregateDiscoveredResources(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) (*configservice.ListAggregateDiscoveredResourcesOutput, error)
-	ListAggregateDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) *ConfigserviceListAggregateDiscoveredResourcesFuture
+	ListAggregateDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) *ConfigServiceListAggregateDiscoveredResourcesFuture
 
 	ListDiscoveredResources(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) (*configservice.ListDiscoveredResourcesOutput, error)
-	ListDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) *ConfigserviceListDiscoveredResourcesFuture
+	ListDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) *ConfigServiceListDiscoveredResourcesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *configservice.ListTagsForResourceInput) (*configservice.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *configservice.ListTagsForResourceInput) *ConfigserviceListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *configservice.ListTagsForResourceInput) *ConfigServiceListTagsForResourceFuture
 
 	PutAggregationAuthorization(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) (*configservice.PutAggregationAuthorizationOutput, error)
-	PutAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) *ConfigservicePutAggregationAuthorizationFuture
+	PutAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) *ConfigServicePutAggregationAuthorizationFuture
 
 	PutConfigRule(ctx workflow.Context, input *configservice.PutConfigRuleInput) (*configservice.PutConfigRuleOutput, error)
-	PutConfigRuleAsync(ctx workflow.Context, input *configservice.PutConfigRuleInput) *ConfigservicePutConfigRuleFuture
+	PutConfigRuleAsync(ctx workflow.Context, input *configservice.PutConfigRuleInput) *ConfigServicePutConfigRuleFuture
 
 	PutConfigurationAggregator(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) (*configservice.PutConfigurationAggregatorOutput, error)
-	PutConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) *ConfigservicePutConfigurationAggregatorFuture
+	PutConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) *ConfigServicePutConfigurationAggregatorFuture
 
 	PutConfigurationRecorder(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) (*configservice.PutConfigurationRecorderOutput, error)
-	PutConfigurationRecorderAsync(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) *ConfigservicePutConfigurationRecorderFuture
+	PutConfigurationRecorderAsync(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) *ConfigServicePutConfigurationRecorderFuture
 
 	PutConformancePack(ctx workflow.Context, input *configservice.PutConformancePackInput) (*configservice.PutConformancePackOutput, error)
-	PutConformancePackAsync(ctx workflow.Context, input *configservice.PutConformancePackInput) *ConfigservicePutConformancePackFuture
+	PutConformancePackAsync(ctx workflow.Context, input *configservice.PutConformancePackInput) *ConfigServicePutConformancePackFuture
 
 	PutDeliveryChannel(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) (*configservice.PutDeliveryChannelOutput, error)
-	PutDeliveryChannelAsync(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) *ConfigservicePutDeliveryChannelFuture
+	PutDeliveryChannelAsync(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) *ConfigServicePutDeliveryChannelFuture
 
 	PutEvaluations(ctx workflow.Context, input *configservice.PutEvaluationsInput) (*configservice.PutEvaluationsOutput, error)
-	PutEvaluationsAsync(ctx workflow.Context, input *configservice.PutEvaluationsInput) *ConfigservicePutEvaluationsFuture
+	PutEvaluationsAsync(ctx workflow.Context, input *configservice.PutEvaluationsInput) *ConfigServicePutEvaluationsFuture
 
 	PutOrganizationConfigRule(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) (*configservice.PutOrganizationConfigRuleOutput, error)
-	PutOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) *ConfigservicePutOrganizationConfigRuleFuture
+	PutOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) *ConfigServicePutOrganizationConfigRuleFuture
 
 	PutOrganizationConformancePack(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) (*configservice.PutOrganizationConformancePackOutput, error)
-	PutOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) *ConfigservicePutOrganizationConformancePackFuture
+	PutOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) *ConfigServicePutOrganizationConformancePackFuture
 
 	PutRemediationConfigurations(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) (*configservice.PutRemediationConfigurationsOutput, error)
-	PutRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) *ConfigservicePutRemediationConfigurationsFuture
+	PutRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) *ConfigServicePutRemediationConfigurationsFuture
 
 	PutRemediationExceptions(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) (*configservice.PutRemediationExceptionsOutput, error)
-	PutRemediationExceptionsAsync(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) *ConfigservicePutRemediationExceptionsFuture
+	PutRemediationExceptionsAsync(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) *ConfigServicePutRemediationExceptionsFuture
 
 	PutResourceConfig(ctx workflow.Context, input *configservice.PutResourceConfigInput) (*configservice.PutResourceConfigOutput, error)
-	PutResourceConfigAsync(ctx workflow.Context, input *configservice.PutResourceConfigInput) *ConfigservicePutResourceConfigFuture
+	PutResourceConfigAsync(ctx workflow.Context, input *configservice.PutResourceConfigInput) *ConfigServicePutResourceConfigFuture
 
 	PutRetentionConfiguration(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) (*configservice.PutRetentionConfigurationOutput, error)
-	PutRetentionConfigurationAsync(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) *ConfigservicePutRetentionConfigurationFuture
+	PutRetentionConfigurationAsync(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) *ConfigServicePutRetentionConfigurationFuture
 
 	SelectAggregateResourceConfig(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) (*configservice.SelectAggregateResourceConfigOutput, error)
-	SelectAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) *ConfigserviceSelectAggregateResourceConfigFuture
+	SelectAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) *ConfigServiceSelectAggregateResourceConfigFuture
 
 	SelectResourceConfig(ctx workflow.Context, input *configservice.SelectResourceConfigInput) (*configservice.SelectResourceConfigOutput, error)
-	SelectResourceConfigAsync(ctx workflow.Context, input *configservice.SelectResourceConfigInput) *ConfigserviceSelectResourceConfigFuture
+	SelectResourceConfigAsync(ctx workflow.Context, input *configservice.SelectResourceConfigInput) *ConfigServiceSelectResourceConfigFuture
 
 	StartConfigRulesEvaluation(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) (*configservice.StartConfigRulesEvaluationOutput, error)
-	StartConfigRulesEvaluationAsync(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) *ConfigserviceStartConfigRulesEvaluationFuture
+	StartConfigRulesEvaluationAsync(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) *ConfigServiceStartConfigRulesEvaluationFuture
 
 	StartConfigurationRecorder(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) (*configservice.StartConfigurationRecorderOutput, error)
-	StartConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) *ConfigserviceStartConfigurationRecorderFuture
+	StartConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) *ConfigServiceStartConfigurationRecorderFuture
 
 	StartRemediationExecution(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) (*configservice.StartRemediationExecutionOutput, error)
-	StartRemediationExecutionAsync(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) *ConfigserviceStartRemediationExecutionFuture
+	StartRemediationExecutionAsync(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) *ConfigServiceStartRemediationExecutionFuture
 
 	StopConfigurationRecorder(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) (*configservice.StopConfigurationRecorderOutput, error)
-	StopConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) *ConfigserviceStopConfigurationRecorderFuture
+	StopConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) *ConfigServiceStopConfigurationRecorderFuture
 
 	TagResource(ctx workflow.Context, input *configservice.TagResourceInput) (*configservice.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *configservice.TagResourceInput) *ConfigserviceTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *configservice.TagResourceInput) *ConfigServiceTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *configservice.UntagResourceInput) (*configservice.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *configservice.UntagResourceInput) *ConfigserviceUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *configservice.UntagResourceInput) *ConfigServiceUntagResourceFuture
 }
 
 type ConfigServiceStub struct{}
@@ -251,781 +251,859 @@ func NewConfigServiceStub() ConfigServiceClient {
 	return &ConfigServiceStub{}
 }
 
-type ConfigserviceBatchGetAggregateResourceConfigFuture struct {
+type ConfigServiceBatchGetAggregateResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceBatchGetAggregateResourceConfigFuture) Get(ctx workflow.Context) (*configservice.BatchGetAggregateResourceConfigOutput, error) {
+func (r *ConfigServiceBatchGetAggregateResourceConfigFuture) Get(ctx workflow.Context) (*configservice.BatchGetAggregateResourceConfigOutput, error) {
 	var output configservice.BatchGetAggregateResourceConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceBatchGetResourceConfigFuture struct {
+type ConfigServiceBatchGetResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceBatchGetResourceConfigFuture) Get(ctx workflow.Context) (*configservice.BatchGetResourceConfigOutput, error) {
+func (r *ConfigServiceBatchGetResourceConfigFuture) Get(ctx workflow.Context) (*configservice.BatchGetResourceConfigOutput, error) {
 	var output configservice.BatchGetResourceConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteAggregationAuthorizationFuture struct {
+type ConfigServiceDeleteAggregationAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteAggregationAuthorizationFuture) Get(ctx workflow.Context) (*configservice.DeleteAggregationAuthorizationOutput, error) {
+func (r *ConfigServiceDeleteAggregationAuthorizationFuture) Get(ctx workflow.Context) (*configservice.DeleteAggregationAuthorizationOutput, error) {
 	var output configservice.DeleteAggregationAuthorizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteConfigRuleFuture struct {
+type ConfigServiceDeleteConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteConfigRuleFuture) Get(ctx workflow.Context) (*configservice.DeleteConfigRuleOutput, error) {
+func (r *ConfigServiceDeleteConfigRuleFuture) Get(ctx workflow.Context) (*configservice.DeleteConfigRuleOutput, error) {
 	var output configservice.DeleteConfigRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteConfigurationAggregatorFuture struct {
+type ConfigServiceDeleteConfigurationAggregatorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteConfigurationAggregatorFuture) Get(ctx workflow.Context) (*configservice.DeleteConfigurationAggregatorOutput, error) {
+func (r *ConfigServiceDeleteConfigurationAggregatorFuture) Get(ctx workflow.Context) (*configservice.DeleteConfigurationAggregatorOutput, error) {
 	var output configservice.DeleteConfigurationAggregatorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteConfigurationRecorderFuture struct {
+type ConfigServiceDeleteConfigurationRecorderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteConfigurationRecorderFuture) Get(ctx workflow.Context) (*configservice.DeleteConfigurationRecorderOutput, error) {
+func (r *ConfigServiceDeleteConfigurationRecorderFuture) Get(ctx workflow.Context) (*configservice.DeleteConfigurationRecorderOutput, error) {
 	var output configservice.DeleteConfigurationRecorderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteConformancePackFuture struct {
+type ConfigServiceDeleteConformancePackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteConformancePackFuture) Get(ctx workflow.Context) (*configservice.DeleteConformancePackOutput, error) {
+func (r *ConfigServiceDeleteConformancePackFuture) Get(ctx workflow.Context) (*configservice.DeleteConformancePackOutput, error) {
 	var output configservice.DeleteConformancePackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteDeliveryChannelFuture struct {
+type ConfigServiceDeleteDeliveryChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteDeliveryChannelFuture) Get(ctx workflow.Context) (*configservice.DeleteDeliveryChannelOutput, error) {
+func (r *ConfigServiceDeleteDeliveryChannelFuture) Get(ctx workflow.Context) (*configservice.DeleteDeliveryChannelOutput, error) {
 	var output configservice.DeleteDeliveryChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteEvaluationResultsFuture struct {
+type ConfigServiceDeleteEvaluationResultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteEvaluationResultsFuture) Get(ctx workflow.Context) (*configservice.DeleteEvaluationResultsOutput, error) {
+func (r *ConfigServiceDeleteEvaluationResultsFuture) Get(ctx workflow.Context) (*configservice.DeleteEvaluationResultsOutput, error) {
 	var output configservice.DeleteEvaluationResultsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteOrganizationConfigRuleFuture struct {
+type ConfigServiceDeleteOrganizationConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteOrganizationConfigRuleFuture) Get(ctx workflow.Context) (*configservice.DeleteOrganizationConfigRuleOutput, error) {
+func (r *ConfigServiceDeleteOrganizationConfigRuleFuture) Get(ctx workflow.Context) (*configservice.DeleteOrganizationConfigRuleOutput, error) {
 	var output configservice.DeleteOrganizationConfigRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteOrganizationConformancePackFuture struct {
+type ConfigServiceDeleteOrganizationConformancePackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteOrganizationConformancePackFuture) Get(ctx workflow.Context) (*configservice.DeleteOrganizationConformancePackOutput, error) {
+func (r *ConfigServiceDeleteOrganizationConformancePackFuture) Get(ctx workflow.Context) (*configservice.DeleteOrganizationConformancePackOutput, error) {
 	var output configservice.DeleteOrganizationConformancePackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteRemediationConfigurationFuture struct {
+type ConfigServiceDeleteRemediationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteRemediationConfigurationFuture) Get(ctx workflow.Context) (*configservice.DeleteRemediationConfigurationOutput, error) {
+func (r *ConfigServiceDeleteRemediationConfigurationFuture) Get(ctx workflow.Context) (*configservice.DeleteRemediationConfigurationOutput, error) {
 	var output configservice.DeleteRemediationConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteRemediationExceptionsFuture struct {
+type ConfigServiceDeleteRemediationExceptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteRemediationExceptionsFuture) Get(ctx workflow.Context) (*configservice.DeleteRemediationExceptionsOutput, error) {
+func (r *ConfigServiceDeleteRemediationExceptionsFuture) Get(ctx workflow.Context) (*configservice.DeleteRemediationExceptionsOutput, error) {
 	var output configservice.DeleteRemediationExceptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteResourceConfigFuture struct {
+type ConfigServiceDeleteResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteResourceConfigFuture) Get(ctx workflow.Context) (*configservice.DeleteResourceConfigOutput, error) {
+func (r *ConfigServiceDeleteResourceConfigFuture) Get(ctx workflow.Context) (*configservice.DeleteResourceConfigOutput, error) {
 	var output configservice.DeleteResourceConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeleteRetentionConfigurationFuture struct {
+type ConfigServiceDeleteRetentionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeleteRetentionConfigurationFuture) Get(ctx workflow.Context) (*configservice.DeleteRetentionConfigurationOutput, error) {
+func (r *ConfigServiceDeleteRetentionConfigurationFuture) Get(ctx workflow.Context) (*configservice.DeleteRetentionConfigurationOutput, error) {
 	var output configservice.DeleteRetentionConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDeliverConfigSnapshotFuture struct {
+type ConfigServiceDeliverConfigSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDeliverConfigSnapshotFuture) Get(ctx workflow.Context) (*configservice.DeliverConfigSnapshotOutput, error) {
+func (r *ConfigServiceDeliverConfigSnapshotFuture) Get(ctx workflow.Context) (*configservice.DeliverConfigSnapshotOutput, error) {
 	var output configservice.DeliverConfigSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeAggregateComplianceByConfigRulesFuture struct {
+type ConfigServiceDescribeAggregateComplianceByConfigRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeAggregateComplianceByConfigRulesFuture) Get(ctx workflow.Context) (*configservice.DescribeAggregateComplianceByConfigRulesOutput, error) {
+func (r *ConfigServiceDescribeAggregateComplianceByConfigRulesFuture) Get(ctx workflow.Context) (*configservice.DescribeAggregateComplianceByConfigRulesOutput, error) {
 	var output configservice.DescribeAggregateComplianceByConfigRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeAggregationAuthorizationsFuture struct {
+type ConfigServiceDescribeAggregationAuthorizationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeAggregationAuthorizationsFuture) Get(ctx workflow.Context) (*configservice.DescribeAggregationAuthorizationsOutput, error) {
+func (r *ConfigServiceDescribeAggregationAuthorizationsFuture) Get(ctx workflow.Context) (*configservice.DescribeAggregationAuthorizationsOutput, error) {
 	var output configservice.DescribeAggregationAuthorizationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeComplianceByConfigRuleFuture struct {
+type ConfigServiceDescribeComplianceByConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeComplianceByConfigRuleFuture) Get(ctx workflow.Context) (*configservice.DescribeComplianceByConfigRuleOutput, error) {
+func (r *ConfigServiceDescribeComplianceByConfigRuleFuture) Get(ctx workflow.Context) (*configservice.DescribeComplianceByConfigRuleOutput, error) {
 	var output configservice.DescribeComplianceByConfigRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeComplianceByResourceFuture struct {
+type ConfigServiceDescribeComplianceByResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeComplianceByResourceFuture) Get(ctx workflow.Context) (*configservice.DescribeComplianceByResourceOutput, error) {
+func (r *ConfigServiceDescribeComplianceByResourceFuture) Get(ctx workflow.Context) (*configservice.DescribeComplianceByResourceOutput, error) {
 	var output configservice.DescribeComplianceByResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConfigRuleEvaluationStatusFuture struct {
+type ConfigServiceDescribeConfigRuleEvaluationStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConfigRuleEvaluationStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigRuleEvaluationStatusOutput, error) {
+func (r *ConfigServiceDescribeConfigRuleEvaluationStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigRuleEvaluationStatusOutput, error) {
 	var output configservice.DescribeConfigRuleEvaluationStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConfigRulesFuture struct {
+type ConfigServiceDescribeConfigRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConfigRulesFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigRulesOutput, error) {
+func (r *ConfigServiceDescribeConfigRulesFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigRulesOutput, error) {
 	var output configservice.DescribeConfigRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConfigurationAggregatorSourcesStatusFuture struct {
+type ConfigServiceDescribeConfigurationAggregatorSourcesStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConfigurationAggregatorSourcesStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, error) {
+func (r *ConfigServiceDescribeConfigurationAggregatorSourcesStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, error) {
 	var output configservice.DescribeConfigurationAggregatorSourcesStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConfigurationAggregatorsFuture struct {
+type ConfigServiceDescribeConfigurationAggregatorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConfigurationAggregatorsFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigurationAggregatorsOutput, error) {
+func (r *ConfigServiceDescribeConfigurationAggregatorsFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigurationAggregatorsOutput, error) {
 	var output configservice.DescribeConfigurationAggregatorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConfigurationRecorderStatusFuture struct {
+type ConfigServiceDescribeConfigurationRecorderStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConfigurationRecorderStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigurationRecorderStatusOutput, error) {
+func (r *ConfigServiceDescribeConfigurationRecorderStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigurationRecorderStatusOutput, error) {
 	var output configservice.DescribeConfigurationRecorderStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConfigurationRecordersFuture struct {
+type ConfigServiceDescribeConfigurationRecordersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConfigurationRecordersFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigurationRecordersOutput, error) {
+func (r *ConfigServiceDescribeConfigurationRecordersFuture) Get(ctx workflow.Context) (*configservice.DescribeConfigurationRecordersOutput, error) {
 	var output configservice.DescribeConfigurationRecordersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConformancePackComplianceFuture struct {
+type ConfigServiceDescribeConformancePackComplianceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConformancePackComplianceFuture) Get(ctx workflow.Context) (*configservice.DescribeConformancePackComplianceOutput, error) {
+func (r *ConfigServiceDescribeConformancePackComplianceFuture) Get(ctx workflow.Context) (*configservice.DescribeConformancePackComplianceOutput, error) {
 	var output configservice.DescribeConformancePackComplianceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConformancePackStatusFuture struct {
+type ConfigServiceDescribeConformancePackStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConformancePackStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeConformancePackStatusOutput, error) {
+func (r *ConfigServiceDescribeConformancePackStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeConformancePackStatusOutput, error) {
 	var output configservice.DescribeConformancePackStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeConformancePacksFuture struct {
+type ConfigServiceDescribeConformancePacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeConformancePacksFuture) Get(ctx workflow.Context) (*configservice.DescribeConformancePacksOutput, error) {
+func (r *ConfigServiceDescribeConformancePacksFuture) Get(ctx workflow.Context) (*configservice.DescribeConformancePacksOutput, error) {
 	var output configservice.DescribeConformancePacksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeDeliveryChannelStatusFuture struct {
+type ConfigServiceDescribeDeliveryChannelStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeDeliveryChannelStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeDeliveryChannelStatusOutput, error) {
+func (r *ConfigServiceDescribeDeliveryChannelStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeDeliveryChannelStatusOutput, error) {
 	var output configservice.DescribeDeliveryChannelStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeDeliveryChannelsFuture struct {
+type ConfigServiceDescribeDeliveryChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeDeliveryChannelsFuture) Get(ctx workflow.Context) (*configservice.DescribeDeliveryChannelsOutput, error) {
+func (r *ConfigServiceDescribeDeliveryChannelsFuture) Get(ctx workflow.Context) (*configservice.DescribeDeliveryChannelsOutput, error) {
 	var output configservice.DescribeDeliveryChannelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeOrganizationConfigRuleStatusesFuture struct {
+type ConfigServiceDescribeOrganizationConfigRuleStatusesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeOrganizationConfigRuleStatusesFuture) Get(ctx workflow.Context) (*configservice.DescribeOrganizationConfigRuleStatusesOutput, error) {
+func (r *ConfigServiceDescribeOrganizationConfigRuleStatusesFuture) Get(ctx workflow.Context) (*configservice.DescribeOrganizationConfigRuleStatusesOutput, error) {
 	var output configservice.DescribeOrganizationConfigRuleStatusesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeOrganizationConfigRulesFuture struct {
+type ConfigServiceDescribeOrganizationConfigRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeOrganizationConfigRulesFuture) Get(ctx workflow.Context) (*configservice.DescribeOrganizationConfigRulesOutput, error) {
+func (r *ConfigServiceDescribeOrganizationConfigRulesFuture) Get(ctx workflow.Context) (*configservice.DescribeOrganizationConfigRulesOutput, error) {
 	var output configservice.DescribeOrganizationConfigRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeOrganizationConformancePackStatusesFuture struct {
+type ConfigServiceDescribeOrganizationConformancePackStatusesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeOrganizationConformancePackStatusesFuture) Get(ctx workflow.Context) (*configservice.DescribeOrganizationConformancePackStatusesOutput, error) {
+func (r *ConfigServiceDescribeOrganizationConformancePackStatusesFuture) Get(ctx workflow.Context) (*configservice.DescribeOrganizationConformancePackStatusesOutput, error) {
 	var output configservice.DescribeOrganizationConformancePackStatusesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeOrganizationConformancePacksFuture struct {
+type ConfigServiceDescribeOrganizationConformancePacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeOrganizationConformancePacksFuture) Get(ctx workflow.Context) (*configservice.DescribeOrganizationConformancePacksOutput, error) {
+func (r *ConfigServiceDescribeOrganizationConformancePacksFuture) Get(ctx workflow.Context) (*configservice.DescribeOrganizationConformancePacksOutput, error) {
 	var output configservice.DescribeOrganizationConformancePacksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribePendingAggregationRequestsFuture struct {
+type ConfigServiceDescribePendingAggregationRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribePendingAggregationRequestsFuture) Get(ctx workflow.Context) (*configservice.DescribePendingAggregationRequestsOutput, error) {
+func (r *ConfigServiceDescribePendingAggregationRequestsFuture) Get(ctx workflow.Context) (*configservice.DescribePendingAggregationRequestsOutput, error) {
 	var output configservice.DescribePendingAggregationRequestsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeRemediationConfigurationsFuture struct {
+type ConfigServiceDescribeRemediationConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeRemediationConfigurationsFuture) Get(ctx workflow.Context) (*configservice.DescribeRemediationConfigurationsOutput, error) {
+func (r *ConfigServiceDescribeRemediationConfigurationsFuture) Get(ctx workflow.Context) (*configservice.DescribeRemediationConfigurationsOutput, error) {
 	var output configservice.DescribeRemediationConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeRemediationExceptionsFuture struct {
+type ConfigServiceDescribeRemediationExceptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeRemediationExceptionsFuture) Get(ctx workflow.Context) (*configservice.DescribeRemediationExceptionsOutput, error) {
+func (r *ConfigServiceDescribeRemediationExceptionsFuture) Get(ctx workflow.Context) (*configservice.DescribeRemediationExceptionsOutput, error) {
 	var output configservice.DescribeRemediationExceptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeRemediationExecutionStatusFuture struct {
+type ConfigServiceDescribeRemediationExecutionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeRemediationExecutionStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeRemediationExecutionStatusOutput, error) {
+func (r *ConfigServiceDescribeRemediationExecutionStatusFuture) Get(ctx workflow.Context) (*configservice.DescribeRemediationExecutionStatusOutput, error) {
 	var output configservice.DescribeRemediationExecutionStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceDescribeRetentionConfigurationsFuture struct {
+type ConfigServiceDescribeRetentionConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceDescribeRetentionConfigurationsFuture) Get(ctx workflow.Context) (*configservice.DescribeRetentionConfigurationsOutput, error) {
+func (r *ConfigServiceDescribeRetentionConfigurationsFuture) Get(ctx workflow.Context) (*configservice.DescribeRetentionConfigurationsOutput, error) {
 	var output configservice.DescribeRetentionConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetAggregateComplianceDetailsByConfigRuleFuture struct {
+type ConfigServiceGetAggregateComplianceDetailsByConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetAggregateComplianceDetailsByConfigRuleFuture) Get(ctx workflow.Context) (*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, error) {
+func (r *ConfigServiceGetAggregateComplianceDetailsByConfigRuleFuture) Get(ctx workflow.Context) (*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, error) {
 	var output configservice.GetAggregateComplianceDetailsByConfigRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetAggregateConfigRuleComplianceSummaryFuture struct {
+type ConfigServiceGetAggregateConfigRuleComplianceSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetAggregateConfigRuleComplianceSummaryFuture) Get(ctx workflow.Context) (*configservice.GetAggregateConfigRuleComplianceSummaryOutput, error) {
+func (r *ConfigServiceGetAggregateConfigRuleComplianceSummaryFuture) Get(ctx workflow.Context) (*configservice.GetAggregateConfigRuleComplianceSummaryOutput, error) {
 	var output configservice.GetAggregateConfigRuleComplianceSummaryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetAggregateDiscoveredResourceCountsFuture struct {
+type ConfigServiceGetAggregateDiscoveredResourceCountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetAggregateDiscoveredResourceCountsFuture) Get(ctx workflow.Context) (*configservice.GetAggregateDiscoveredResourceCountsOutput, error) {
+func (r *ConfigServiceGetAggregateDiscoveredResourceCountsFuture) Get(ctx workflow.Context) (*configservice.GetAggregateDiscoveredResourceCountsOutput, error) {
 	var output configservice.GetAggregateDiscoveredResourceCountsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetAggregateResourceConfigFuture struct {
+type ConfigServiceGetAggregateResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetAggregateResourceConfigFuture) Get(ctx workflow.Context) (*configservice.GetAggregateResourceConfigOutput, error) {
+func (r *ConfigServiceGetAggregateResourceConfigFuture) Get(ctx workflow.Context) (*configservice.GetAggregateResourceConfigOutput, error) {
 	var output configservice.GetAggregateResourceConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetComplianceDetailsByConfigRuleFuture struct {
+type ConfigServiceGetComplianceDetailsByConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetComplianceDetailsByConfigRuleFuture) Get(ctx workflow.Context) (*configservice.GetComplianceDetailsByConfigRuleOutput, error) {
+func (r *ConfigServiceGetComplianceDetailsByConfigRuleFuture) Get(ctx workflow.Context) (*configservice.GetComplianceDetailsByConfigRuleOutput, error) {
 	var output configservice.GetComplianceDetailsByConfigRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetComplianceDetailsByResourceFuture struct {
+type ConfigServiceGetComplianceDetailsByResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetComplianceDetailsByResourceFuture) Get(ctx workflow.Context) (*configservice.GetComplianceDetailsByResourceOutput, error) {
+func (r *ConfigServiceGetComplianceDetailsByResourceFuture) Get(ctx workflow.Context) (*configservice.GetComplianceDetailsByResourceOutput, error) {
 	var output configservice.GetComplianceDetailsByResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetComplianceSummaryByConfigRuleFuture struct {
+type ConfigServiceGetComplianceSummaryByConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetComplianceSummaryByConfigRuleFuture) Get(ctx workflow.Context) (*configservice.GetComplianceSummaryByConfigRuleOutput, error) {
+func (r *ConfigServiceGetComplianceSummaryByConfigRuleFuture) Get(ctx workflow.Context) (*configservice.GetComplianceSummaryByConfigRuleOutput, error) {
 	var output configservice.GetComplianceSummaryByConfigRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetComplianceSummaryByResourceTypeFuture struct {
+type ConfigServiceGetComplianceSummaryByResourceTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetComplianceSummaryByResourceTypeFuture) Get(ctx workflow.Context) (*configservice.GetComplianceSummaryByResourceTypeOutput, error) {
+func (r *ConfigServiceGetComplianceSummaryByResourceTypeFuture) Get(ctx workflow.Context) (*configservice.GetComplianceSummaryByResourceTypeOutput, error) {
 	var output configservice.GetComplianceSummaryByResourceTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetConformancePackComplianceDetailsFuture struct {
+type ConfigServiceGetConformancePackComplianceDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetConformancePackComplianceDetailsFuture) Get(ctx workflow.Context) (*configservice.GetConformancePackComplianceDetailsOutput, error) {
+func (r *ConfigServiceGetConformancePackComplianceDetailsFuture) Get(ctx workflow.Context) (*configservice.GetConformancePackComplianceDetailsOutput, error) {
 	var output configservice.GetConformancePackComplianceDetailsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetConformancePackComplianceSummaryFuture struct {
+type ConfigServiceGetConformancePackComplianceSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetConformancePackComplianceSummaryFuture) Get(ctx workflow.Context) (*configservice.GetConformancePackComplianceSummaryOutput, error) {
+func (r *ConfigServiceGetConformancePackComplianceSummaryFuture) Get(ctx workflow.Context) (*configservice.GetConformancePackComplianceSummaryOutput, error) {
 	var output configservice.GetConformancePackComplianceSummaryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetDiscoveredResourceCountsFuture struct {
+type ConfigServiceGetDiscoveredResourceCountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetDiscoveredResourceCountsFuture) Get(ctx workflow.Context) (*configservice.GetDiscoveredResourceCountsOutput, error) {
+func (r *ConfigServiceGetDiscoveredResourceCountsFuture) Get(ctx workflow.Context) (*configservice.GetDiscoveredResourceCountsOutput, error) {
 	var output configservice.GetDiscoveredResourceCountsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetOrganizationConfigRuleDetailedStatusFuture struct {
+type ConfigServiceGetOrganizationConfigRuleDetailedStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetOrganizationConfigRuleDetailedStatusFuture) Get(ctx workflow.Context) (*configservice.GetOrganizationConfigRuleDetailedStatusOutput, error) {
+func (r *ConfigServiceGetOrganizationConfigRuleDetailedStatusFuture) Get(ctx workflow.Context) (*configservice.GetOrganizationConfigRuleDetailedStatusOutput, error) {
 	var output configservice.GetOrganizationConfigRuleDetailedStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetOrganizationConformancePackDetailedStatusFuture struct {
+type ConfigServiceGetOrganizationConformancePackDetailedStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetOrganizationConformancePackDetailedStatusFuture) Get(ctx workflow.Context) (*configservice.GetOrganizationConformancePackDetailedStatusOutput, error) {
+func (r *ConfigServiceGetOrganizationConformancePackDetailedStatusFuture) Get(ctx workflow.Context) (*configservice.GetOrganizationConformancePackDetailedStatusOutput, error) {
 	var output configservice.GetOrganizationConformancePackDetailedStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceGetResourceConfigHistoryFuture struct {
+type ConfigServiceGetResourceConfigHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceGetResourceConfigHistoryFuture) Get(ctx workflow.Context) (*configservice.GetResourceConfigHistoryOutput, error) {
+func (r *ConfigServiceGetResourceConfigHistoryFuture) Get(ctx workflow.Context) (*configservice.GetResourceConfigHistoryOutput, error) {
 	var output configservice.GetResourceConfigHistoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceListAggregateDiscoveredResourcesFuture struct {
+type ConfigServiceListAggregateDiscoveredResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceListAggregateDiscoveredResourcesFuture) Get(ctx workflow.Context) (*configservice.ListAggregateDiscoveredResourcesOutput, error) {
+func (r *ConfigServiceListAggregateDiscoveredResourcesFuture) Get(ctx workflow.Context) (*configservice.ListAggregateDiscoveredResourcesOutput, error) {
 	var output configservice.ListAggregateDiscoveredResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceListDiscoveredResourcesFuture struct {
+type ConfigServiceListDiscoveredResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceListDiscoveredResourcesFuture) Get(ctx workflow.Context) (*configservice.ListDiscoveredResourcesOutput, error) {
+func (r *ConfigServiceListDiscoveredResourcesFuture) Get(ctx workflow.Context) (*configservice.ListDiscoveredResourcesOutput, error) {
 	var output configservice.ListDiscoveredResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceListTagsForResourceFuture struct {
+type ConfigServiceListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceListTagsForResourceFuture) Get(ctx workflow.Context) (*configservice.ListTagsForResourceOutput, error) {
+func (r *ConfigServiceListTagsForResourceFuture) Get(ctx workflow.Context) (*configservice.ListTagsForResourceOutput, error) {
 	var output configservice.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutAggregationAuthorizationFuture struct {
+type ConfigServicePutAggregationAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutAggregationAuthorizationFuture) Get(ctx workflow.Context) (*configservice.PutAggregationAuthorizationOutput, error) {
+func (r *ConfigServicePutAggregationAuthorizationFuture) Get(ctx workflow.Context) (*configservice.PutAggregationAuthorizationOutput, error) {
 	var output configservice.PutAggregationAuthorizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutConfigRuleFuture struct {
+type ConfigServicePutConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutConfigRuleFuture) Get(ctx workflow.Context) (*configservice.PutConfigRuleOutput, error) {
+func (r *ConfigServicePutConfigRuleFuture) Get(ctx workflow.Context) (*configservice.PutConfigRuleOutput, error) {
 	var output configservice.PutConfigRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutConfigurationAggregatorFuture struct {
+type ConfigServicePutConfigurationAggregatorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutConfigurationAggregatorFuture) Get(ctx workflow.Context) (*configservice.PutConfigurationAggregatorOutput, error) {
+func (r *ConfigServicePutConfigurationAggregatorFuture) Get(ctx workflow.Context) (*configservice.PutConfigurationAggregatorOutput, error) {
 	var output configservice.PutConfigurationAggregatorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutConfigurationRecorderFuture struct {
+type ConfigServicePutConfigurationRecorderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutConfigurationRecorderFuture) Get(ctx workflow.Context) (*configservice.PutConfigurationRecorderOutput, error) {
+func (r *ConfigServicePutConfigurationRecorderFuture) Get(ctx workflow.Context) (*configservice.PutConfigurationRecorderOutput, error) {
 	var output configservice.PutConfigurationRecorderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutConformancePackFuture struct {
+type ConfigServicePutConformancePackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutConformancePackFuture) Get(ctx workflow.Context) (*configservice.PutConformancePackOutput, error) {
+func (r *ConfigServicePutConformancePackFuture) Get(ctx workflow.Context) (*configservice.PutConformancePackOutput, error) {
 	var output configservice.PutConformancePackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutDeliveryChannelFuture struct {
+type ConfigServicePutDeliveryChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutDeliveryChannelFuture) Get(ctx workflow.Context) (*configservice.PutDeliveryChannelOutput, error) {
+func (r *ConfigServicePutDeliveryChannelFuture) Get(ctx workflow.Context) (*configservice.PutDeliveryChannelOutput, error) {
 	var output configservice.PutDeliveryChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutEvaluationsFuture struct {
+type ConfigServicePutEvaluationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutEvaluationsFuture) Get(ctx workflow.Context) (*configservice.PutEvaluationsOutput, error) {
+func (r *ConfigServicePutEvaluationsFuture) Get(ctx workflow.Context) (*configservice.PutEvaluationsOutput, error) {
 	var output configservice.PutEvaluationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutOrganizationConfigRuleFuture struct {
+type ConfigServicePutOrganizationConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutOrganizationConfigRuleFuture) Get(ctx workflow.Context) (*configservice.PutOrganizationConfigRuleOutput, error) {
+func (r *ConfigServicePutOrganizationConfigRuleFuture) Get(ctx workflow.Context) (*configservice.PutOrganizationConfigRuleOutput, error) {
 	var output configservice.PutOrganizationConfigRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutOrganizationConformancePackFuture struct {
+type ConfigServicePutOrganizationConformancePackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutOrganizationConformancePackFuture) Get(ctx workflow.Context) (*configservice.PutOrganizationConformancePackOutput, error) {
+func (r *ConfigServicePutOrganizationConformancePackFuture) Get(ctx workflow.Context) (*configservice.PutOrganizationConformancePackOutput, error) {
 	var output configservice.PutOrganizationConformancePackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutRemediationConfigurationsFuture struct {
+type ConfigServicePutRemediationConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutRemediationConfigurationsFuture) Get(ctx workflow.Context) (*configservice.PutRemediationConfigurationsOutput, error) {
+func (r *ConfigServicePutRemediationConfigurationsFuture) Get(ctx workflow.Context) (*configservice.PutRemediationConfigurationsOutput, error) {
 	var output configservice.PutRemediationConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutRemediationExceptionsFuture struct {
+type ConfigServicePutRemediationExceptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutRemediationExceptionsFuture) Get(ctx workflow.Context) (*configservice.PutRemediationExceptionsOutput, error) {
+func (r *ConfigServicePutRemediationExceptionsFuture) Get(ctx workflow.Context) (*configservice.PutRemediationExceptionsOutput, error) {
 	var output configservice.PutRemediationExceptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutResourceConfigFuture struct {
+type ConfigServicePutResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutResourceConfigFuture) Get(ctx workflow.Context) (*configservice.PutResourceConfigOutput, error) {
+func (r *ConfigServicePutResourceConfigFuture) Get(ctx workflow.Context) (*configservice.PutResourceConfigOutput, error) {
 	var output configservice.PutResourceConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigservicePutRetentionConfigurationFuture struct {
+type ConfigServicePutRetentionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigservicePutRetentionConfigurationFuture) Get(ctx workflow.Context) (*configservice.PutRetentionConfigurationOutput, error) {
+func (r *ConfigServicePutRetentionConfigurationFuture) Get(ctx workflow.Context) (*configservice.PutRetentionConfigurationOutput, error) {
 	var output configservice.PutRetentionConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceSelectAggregateResourceConfigFuture struct {
+type ConfigServiceSelectAggregateResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceSelectAggregateResourceConfigFuture) Get(ctx workflow.Context) (*configservice.SelectAggregateResourceConfigOutput, error) {
+func (r *ConfigServiceSelectAggregateResourceConfigFuture) Get(ctx workflow.Context) (*configservice.SelectAggregateResourceConfigOutput, error) {
 	var output configservice.SelectAggregateResourceConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceSelectResourceConfigFuture struct {
+type ConfigServiceSelectResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceSelectResourceConfigFuture) Get(ctx workflow.Context) (*configservice.SelectResourceConfigOutput, error) {
+func (r *ConfigServiceSelectResourceConfigFuture) Get(ctx workflow.Context) (*configservice.SelectResourceConfigOutput, error) {
 	var output configservice.SelectResourceConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceStartConfigRulesEvaluationFuture struct {
+type ConfigServiceStartConfigRulesEvaluationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceStartConfigRulesEvaluationFuture) Get(ctx workflow.Context) (*configservice.StartConfigRulesEvaluationOutput, error) {
+func (r *ConfigServiceStartConfigRulesEvaluationFuture) Get(ctx workflow.Context) (*configservice.StartConfigRulesEvaluationOutput, error) {
 	var output configservice.StartConfigRulesEvaluationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceStartConfigurationRecorderFuture struct {
+type ConfigServiceStartConfigurationRecorderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceStartConfigurationRecorderFuture) Get(ctx workflow.Context) (*configservice.StartConfigurationRecorderOutput, error) {
+func (r *ConfigServiceStartConfigurationRecorderFuture) Get(ctx workflow.Context) (*configservice.StartConfigurationRecorderOutput, error) {
 	var output configservice.StartConfigurationRecorderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceStartRemediationExecutionFuture struct {
+type ConfigServiceStartRemediationExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceStartRemediationExecutionFuture) Get(ctx workflow.Context) (*configservice.StartRemediationExecutionOutput, error) {
+func (r *ConfigServiceStartRemediationExecutionFuture) Get(ctx workflow.Context) (*configservice.StartRemediationExecutionOutput, error) {
 	var output configservice.StartRemediationExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceStopConfigurationRecorderFuture struct {
+type ConfigServiceStopConfigurationRecorderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceStopConfigurationRecorderFuture) Get(ctx workflow.Context) (*configservice.StopConfigurationRecorderOutput, error) {
+func (r *ConfigServiceStopConfigurationRecorderFuture) Get(ctx workflow.Context) (*configservice.StopConfigurationRecorderOutput, error) {
 	var output configservice.StopConfigurationRecorderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceTagResourceFuture struct {
+type ConfigServiceTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceTagResourceFuture) Get(ctx workflow.Context) (*configservice.TagResourceOutput, error) {
+func (r *ConfigServiceTagResourceFuture) Get(ctx workflow.Context) (*configservice.TagResourceOutput, error) {
 	var output configservice.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConfigserviceUntagResourceFuture struct {
+type ConfigServiceUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConfigserviceUntagResourceFuture) Get(ctx workflow.Context) (*configservice.UntagResourceOutput, error) {
+func (r *ConfigServiceUntagResourceFuture) Get(ctx workflow.Context) (*configservice.UntagResourceOutput, error) {
 	var output configservice.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -1037,9 +1115,9 @@ func (a *ConfigServiceStub) BatchGetAggregateResourceConfig(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ConfigServiceStub) BatchGetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) *ConfigserviceBatchGetAggregateResourceConfigFuture {
+func (a *ConfigServiceStub) BatchGetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) *ConfigServiceBatchGetAggregateResourceConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.BatchGetAggregateResourceConfig", input)
-	return &ConfigserviceBatchGetAggregateResourceConfigFuture{Future: future}
+	return &ConfigServiceBatchGetAggregateResourceConfigFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) BatchGetResourceConfig(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) (*configservice.BatchGetResourceConfigOutput, error) {
@@ -1048,9 +1126,9 @@ func (a *ConfigServiceStub) BatchGetResourceConfig(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ConfigServiceStub) BatchGetResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) *ConfigserviceBatchGetResourceConfigFuture {
+func (a *ConfigServiceStub) BatchGetResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) *ConfigServiceBatchGetResourceConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.BatchGetResourceConfig", input)
-	return &ConfigserviceBatchGetResourceConfigFuture{Future: future}
+	return &ConfigServiceBatchGetResourceConfigFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteAggregationAuthorization(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) (*configservice.DeleteAggregationAuthorizationOutput, error) {
@@ -1059,9 +1137,9 @@ func (a *ConfigServiceStub) DeleteAggregationAuthorization(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) *ConfigserviceDeleteAggregationAuthorizationFuture {
+func (a *ConfigServiceStub) DeleteAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) *ConfigServiceDeleteAggregationAuthorizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteAggregationAuthorization", input)
-	return &ConfigserviceDeleteAggregationAuthorizationFuture{Future: future}
+	return &ConfigServiceDeleteAggregationAuthorizationFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteConfigRule(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) (*configservice.DeleteConfigRuleOutput, error) {
@@ -1070,9 +1148,9 @@ func (a *ConfigServiceStub) DeleteConfigRule(ctx workflow.Context, input *config
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) *ConfigserviceDeleteConfigRuleFuture {
+func (a *ConfigServiceStub) DeleteConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) *ConfigServiceDeleteConfigRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteConfigRule", input)
-	return &ConfigserviceDeleteConfigRuleFuture{Future: future}
+	return &ConfigServiceDeleteConfigRuleFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteConfigurationAggregator(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) (*configservice.DeleteConfigurationAggregatorOutput, error) {
@@ -1081,9 +1159,9 @@ func (a *ConfigServiceStub) DeleteConfigurationAggregator(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) *ConfigserviceDeleteConfigurationAggregatorFuture {
+func (a *ConfigServiceStub) DeleteConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) *ConfigServiceDeleteConfigurationAggregatorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteConfigurationAggregator", input)
-	return &ConfigserviceDeleteConfigurationAggregatorFuture{Future: future}
+	return &ConfigServiceDeleteConfigurationAggregatorFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteConfigurationRecorder(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) (*configservice.DeleteConfigurationRecorderOutput, error) {
@@ -1092,9 +1170,9 @@ func (a *ConfigServiceStub) DeleteConfigurationRecorder(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteConfigurationRecorderAsync(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) *ConfigserviceDeleteConfigurationRecorderFuture {
+func (a *ConfigServiceStub) DeleteConfigurationRecorderAsync(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) *ConfigServiceDeleteConfigurationRecorderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteConfigurationRecorder", input)
-	return &ConfigserviceDeleteConfigurationRecorderFuture{Future: future}
+	return &ConfigServiceDeleteConfigurationRecorderFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteConformancePack(ctx workflow.Context, input *configservice.DeleteConformancePackInput) (*configservice.DeleteConformancePackOutput, error) {
@@ -1103,9 +1181,9 @@ func (a *ConfigServiceStub) DeleteConformancePack(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteConformancePackAsync(ctx workflow.Context, input *configservice.DeleteConformancePackInput) *ConfigserviceDeleteConformancePackFuture {
+func (a *ConfigServiceStub) DeleteConformancePackAsync(ctx workflow.Context, input *configservice.DeleteConformancePackInput) *ConfigServiceDeleteConformancePackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteConformancePack", input)
-	return &ConfigserviceDeleteConformancePackFuture{Future: future}
+	return &ConfigServiceDeleteConformancePackFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteDeliveryChannel(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) (*configservice.DeleteDeliveryChannelOutput, error) {
@@ -1114,9 +1192,9 @@ func (a *ConfigServiceStub) DeleteDeliveryChannel(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteDeliveryChannelAsync(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) *ConfigserviceDeleteDeliveryChannelFuture {
+func (a *ConfigServiceStub) DeleteDeliveryChannelAsync(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) *ConfigServiceDeleteDeliveryChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteDeliveryChannel", input)
-	return &ConfigserviceDeleteDeliveryChannelFuture{Future: future}
+	return &ConfigServiceDeleteDeliveryChannelFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteEvaluationResults(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) (*configservice.DeleteEvaluationResultsOutput, error) {
@@ -1125,9 +1203,9 @@ func (a *ConfigServiceStub) DeleteEvaluationResults(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteEvaluationResultsAsync(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) *ConfigserviceDeleteEvaluationResultsFuture {
+func (a *ConfigServiceStub) DeleteEvaluationResultsAsync(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) *ConfigServiceDeleteEvaluationResultsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteEvaluationResults", input)
-	return &ConfigserviceDeleteEvaluationResultsFuture{Future: future}
+	return &ConfigServiceDeleteEvaluationResultsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteOrganizationConfigRule(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) (*configservice.DeleteOrganizationConfigRuleOutput, error) {
@@ -1136,9 +1214,9 @@ func (a *ConfigServiceStub) DeleteOrganizationConfigRule(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) *ConfigserviceDeleteOrganizationConfigRuleFuture {
+func (a *ConfigServiceStub) DeleteOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) *ConfigServiceDeleteOrganizationConfigRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteOrganizationConfigRule", input)
-	return &ConfigserviceDeleteOrganizationConfigRuleFuture{Future: future}
+	return &ConfigServiceDeleteOrganizationConfigRuleFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteOrganizationConformancePack(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) (*configservice.DeleteOrganizationConformancePackOutput, error) {
@@ -1147,9 +1225,9 @@ func (a *ConfigServiceStub) DeleteOrganizationConformancePack(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) *ConfigserviceDeleteOrganizationConformancePackFuture {
+func (a *ConfigServiceStub) DeleteOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) *ConfigServiceDeleteOrganizationConformancePackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteOrganizationConformancePack", input)
-	return &ConfigserviceDeleteOrganizationConformancePackFuture{Future: future}
+	return &ConfigServiceDeleteOrganizationConformancePackFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteRemediationConfiguration(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) (*configservice.DeleteRemediationConfigurationOutput, error) {
@@ -1158,9 +1236,9 @@ func (a *ConfigServiceStub) DeleteRemediationConfiguration(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteRemediationConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) *ConfigserviceDeleteRemediationConfigurationFuture {
+func (a *ConfigServiceStub) DeleteRemediationConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) *ConfigServiceDeleteRemediationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteRemediationConfiguration", input)
-	return &ConfigserviceDeleteRemediationConfigurationFuture{Future: future}
+	return &ConfigServiceDeleteRemediationConfigurationFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteRemediationExceptions(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) (*configservice.DeleteRemediationExceptionsOutput, error) {
@@ -1169,9 +1247,9 @@ func (a *ConfigServiceStub) DeleteRemediationExceptions(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) *ConfigserviceDeleteRemediationExceptionsFuture {
+func (a *ConfigServiceStub) DeleteRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) *ConfigServiceDeleteRemediationExceptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteRemediationExceptions", input)
-	return &ConfigserviceDeleteRemediationExceptionsFuture{Future: future}
+	return &ConfigServiceDeleteRemediationExceptionsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteResourceConfig(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) (*configservice.DeleteResourceConfigOutput, error) {
@@ -1180,9 +1258,9 @@ func (a *ConfigServiceStub) DeleteResourceConfig(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteResourceConfigAsync(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) *ConfigserviceDeleteResourceConfigFuture {
+func (a *ConfigServiceStub) DeleteResourceConfigAsync(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) *ConfigServiceDeleteResourceConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteResourceConfig", input)
-	return &ConfigserviceDeleteResourceConfigFuture{Future: future}
+	return &ConfigServiceDeleteResourceConfigFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeleteRetentionConfiguration(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) (*configservice.DeleteRetentionConfigurationOutput, error) {
@@ -1191,9 +1269,9 @@ func (a *ConfigServiceStub) DeleteRetentionConfiguration(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeleteRetentionConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) *ConfigserviceDeleteRetentionConfigurationFuture {
+func (a *ConfigServiceStub) DeleteRetentionConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) *ConfigServiceDeleteRetentionConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeleteRetentionConfiguration", input)
-	return &ConfigserviceDeleteRetentionConfigurationFuture{Future: future}
+	return &ConfigServiceDeleteRetentionConfigurationFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DeliverConfigSnapshot(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) (*configservice.DeliverConfigSnapshotOutput, error) {
@@ -1202,9 +1280,9 @@ func (a *ConfigServiceStub) DeliverConfigSnapshot(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DeliverConfigSnapshotAsync(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) *ConfigserviceDeliverConfigSnapshotFuture {
+func (a *ConfigServiceStub) DeliverConfigSnapshotAsync(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) *ConfigServiceDeliverConfigSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DeliverConfigSnapshot", input)
-	return &ConfigserviceDeliverConfigSnapshotFuture{Future: future}
+	return &ConfigServiceDeliverConfigSnapshotFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeAggregateComplianceByConfigRules(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) (*configservice.DescribeAggregateComplianceByConfigRulesOutput, error) {
@@ -1213,9 +1291,9 @@ func (a *ConfigServiceStub) DescribeAggregateComplianceByConfigRules(ctx workflo
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeAggregateComplianceByConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) *ConfigserviceDescribeAggregateComplianceByConfigRulesFuture {
+func (a *ConfigServiceStub) DescribeAggregateComplianceByConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) *ConfigServiceDescribeAggregateComplianceByConfigRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeAggregateComplianceByConfigRules", input)
-	return &ConfigserviceDescribeAggregateComplianceByConfigRulesFuture{Future: future}
+	return &ConfigServiceDescribeAggregateComplianceByConfigRulesFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeAggregationAuthorizations(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) (*configservice.DescribeAggregationAuthorizationsOutput, error) {
@@ -1224,9 +1302,9 @@ func (a *ConfigServiceStub) DescribeAggregationAuthorizations(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeAggregationAuthorizationsAsync(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) *ConfigserviceDescribeAggregationAuthorizationsFuture {
+func (a *ConfigServiceStub) DescribeAggregationAuthorizationsAsync(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) *ConfigServiceDescribeAggregationAuthorizationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeAggregationAuthorizations", input)
-	return &ConfigserviceDescribeAggregationAuthorizationsFuture{Future: future}
+	return &ConfigServiceDescribeAggregationAuthorizationsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeComplianceByConfigRule(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) (*configservice.DescribeComplianceByConfigRuleOutput, error) {
@@ -1235,9 +1313,9 @@ func (a *ConfigServiceStub) DescribeComplianceByConfigRule(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeComplianceByConfigRuleAsync(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) *ConfigserviceDescribeComplianceByConfigRuleFuture {
+func (a *ConfigServiceStub) DescribeComplianceByConfigRuleAsync(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) *ConfigServiceDescribeComplianceByConfigRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeComplianceByConfigRule", input)
-	return &ConfigserviceDescribeComplianceByConfigRuleFuture{Future: future}
+	return &ConfigServiceDescribeComplianceByConfigRuleFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeComplianceByResource(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) (*configservice.DescribeComplianceByResourceOutput, error) {
@@ -1246,9 +1324,9 @@ func (a *ConfigServiceStub) DescribeComplianceByResource(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeComplianceByResourceAsync(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) *ConfigserviceDescribeComplianceByResourceFuture {
+func (a *ConfigServiceStub) DescribeComplianceByResourceAsync(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) *ConfigServiceDescribeComplianceByResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeComplianceByResource", input)
-	return &ConfigserviceDescribeComplianceByResourceFuture{Future: future}
+	return &ConfigServiceDescribeComplianceByResourceFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConfigRuleEvaluationStatus(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) (*configservice.DescribeConfigRuleEvaluationStatusOutput, error) {
@@ -1257,9 +1335,9 @@ func (a *ConfigServiceStub) DescribeConfigRuleEvaluationStatus(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConfigRuleEvaluationStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) *ConfigserviceDescribeConfigRuleEvaluationStatusFuture {
+func (a *ConfigServiceStub) DescribeConfigRuleEvaluationStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) *ConfigServiceDescribeConfigRuleEvaluationStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConfigRuleEvaluationStatus", input)
-	return &ConfigserviceDescribeConfigRuleEvaluationStatusFuture{Future: future}
+	return &ConfigServiceDescribeConfigRuleEvaluationStatusFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConfigRules(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) (*configservice.DescribeConfigRulesOutput, error) {
@@ -1268,9 +1346,9 @@ func (a *ConfigServiceStub) DescribeConfigRules(ctx workflow.Context, input *con
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) *ConfigserviceDescribeConfigRulesFuture {
+func (a *ConfigServiceStub) DescribeConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) *ConfigServiceDescribeConfigRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConfigRules", input)
-	return &ConfigserviceDescribeConfigRulesFuture{Future: future}
+	return &ConfigServiceDescribeConfigRulesFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConfigurationAggregatorSourcesStatus(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) (*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, error) {
@@ -1279,9 +1357,9 @@ func (a *ConfigServiceStub) DescribeConfigurationAggregatorSourcesStatus(ctx wor
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConfigurationAggregatorSourcesStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) *ConfigserviceDescribeConfigurationAggregatorSourcesStatusFuture {
+func (a *ConfigServiceStub) DescribeConfigurationAggregatorSourcesStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) *ConfigServiceDescribeConfigurationAggregatorSourcesStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConfigurationAggregatorSourcesStatus", input)
-	return &ConfigserviceDescribeConfigurationAggregatorSourcesStatusFuture{Future: future}
+	return &ConfigServiceDescribeConfigurationAggregatorSourcesStatusFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConfigurationAggregators(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) (*configservice.DescribeConfigurationAggregatorsOutput, error) {
@@ -1290,9 +1368,9 @@ func (a *ConfigServiceStub) DescribeConfigurationAggregators(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConfigurationAggregatorsAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) *ConfigserviceDescribeConfigurationAggregatorsFuture {
+func (a *ConfigServiceStub) DescribeConfigurationAggregatorsAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) *ConfigServiceDescribeConfigurationAggregatorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConfigurationAggregators", input)
-	return &ConfigserviceDescribeConfigurationAggregatorsFuture{Future: future}
+	return &ConfigServiceDescribeConfigurationAggregatorsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConfigurationRecorderStatus(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) (*configservice.DescribeConfigurationRecorderStatusOutput, error) {
@@ -1301,9 +1379,9 @@ func (a *ConfigServiceStub) DescribeConfigurationRecorderStatus(ctx workflow.Con
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConfigurationRecorderStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) *ConfigserviceDescribeConfigurationRecorderStatusFuture {
+func (a *ConfigServiceStub) DescribeConfigurationRecorderStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) *ConfigServiceDescribeConfigurationRecorderStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConfigurationRecorderStatus", input)
-	return &ConfigserviceDescribeConfigurationRecorderStatusFuture{Future: future}
+	return &ConfigServiceDescribeConfigurationRecorderStatusFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConfigurationRecorders(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) (*configservice.DescribeConfigurationRecordersOutput, error) {
@@ -1312,9 +1390,9 @@ func (a *ConfigServiceStub) DescribeConfigurationRecorders(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConfigurationRecordersAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) *ConfigserviceDescribeConfigurationRecordersFuture {
+func (a *ConfigServiceStub) DescribeConfigurationRecordersAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) *ConfigServiceDescribeConfigurationRecordersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConfigurationRecorders", input)
-	return &ConfigserviceDescribeConfigurationRecordersFuture{Future: future}
+	return &ConfigServiceDescribeConfigurationRecordersFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConformancePackCompliance(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) (*configservice.DescribeConformancePackComplianceOutput, error) {
@@ -1323,9 +1401,9 @@ func (a *ConfigServiceStub) DescribeConformancePackCompliance(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConformancePackComplianceAsync(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) *ConfigserviceDescribeConformancePackComplianceFuture {
+func (a *ConfigServiceStub) DescribeConformancePackComplianceAsync(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) *ConfigServiceDescribeConformancePackComplianceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConformancePackCompliance", input)
-	return &ConfigserviceDescribeConformancePackComplianceFuture{Future: future}
+	return &ConfigServiceDescribeConformancePackComplianceFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConformancePackStatus(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) (*configservice.DescribeConformancePackStatusOutput, error) {
@@ -1334,9 +1412,9 @@ func (a *ConfigServiceStub) DescribeConformancePackStatus(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConformancePackStatusAsync(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) *ConfigserviceDescribeConformancePackStatusFuture {
+func (a *ConfigServiceStub) DescribeConformancePackStatusAsync(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) *ConfigServiceDescribeConformancePackStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConformancePackStatus", input)
-	return &ConfigserviceDescribeConformancePackStatusFuture{Future: future}
+	return &ConfigServiceDescribeConformancePackStatusFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeConformancePacks(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) (*configservice.DescribeConformancePacksOutput, error) {
@@ -1345,9 +1423,9 @@ func (a *ConfigServiceStub) DescribeConformancePacks(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) *ConfigserviceDescribeConformancePacksFuture {
+func (a *ConfigServiceStub) DescribeConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) *ConfigServiceDescribeConformancePacksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeConformancePacks", input)
-	return &ConfigserviceDescribeConformancePacksFuture{Future: future}
+	return &ConfigServiceDescribeConformancePacksFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeDeliveryChannelStatus(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) (*configservice.DescribeDeliveryChannelStatusOutput, error) {
@@ -1356,9 +1434,9 @@ func (a *ConfigServiceStub) DescribeDeliveryChannelStatus(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeDeliveryChannelStatusAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) *ConfigserviceDescribeDeliveryChannelStatusFuture {
+func (a *ConfigServiceStub) DescribeDeliveryChannelStatusAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) *ConfigServiceDescribeDeliveryChannelStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeDeliveryChannelStatus", input)
-	return &ConfigserviceDescribeDeliveryChannelStatusFuture{Future: future}
+	return &ConfigServiceDescribeDeliveryChannelStatusFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeDeliveryChannels(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) (*configservice.DescribeDeliveryChannelsOutput, error) {
@@ -1367,9 +1445,9 @@ func (a *ConfigServiceStub) DescribeDeliveryChannels(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeDeliveryChannelsAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) *ConfigserviceDescribeDeliveryChannelsFuture {
+func (a *ConfigServiceStub) DescribeDeliveryChannelsAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) *ConfigServiceDescribeDeliveryChannelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeDeliveryChannels", input)
-	return &ConfigserviceDescribeDeliveryChannelsFuture{Future: future}
+	return &ConfigServiceDescribeDeliveryChannelsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeOrganizationConfigRuleStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) (*configservice.DescribeOrganizationConfigRuleStatusesOutput, error) {
@@ -1378,9 +1456,9 @@ func (a *ConfigServiceStub) DescribeOrganizationConfigRuleStatuses(ctx workflow.
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeOrganizationConfigRuleStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) *ConfigserviceDescribeOrganizationConfigRuleStatusesFuture {
+func (a *ConfigServiceStub) DescribeOrganizationConfigRuleStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) *ConfigServiceDescribeOrganizationConfigRuleStatusesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeOrganizationConfigRuleStatuses", input)
-	return &ConfigserviceDescribeOrganizationConfigRuleStatusesFuture{Future: future}
+	return &ConfigServiceDescribeOrganizationConfigRuleStatusesFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeOrganizationConfigRules(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) (*configservice.DescribeOrganizationConfigRulesOutput, error) {
@@ -1389,9 +1467,9 @@ func (a *ConfigServiceStub) DescribeOrganizationConfigRules(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeOrganizationConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) *ConfigserviceDescribeOrganizationConfigRulesFuture {
+func (a *ConfigServiceStub) DescribeOrganizationConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) *ConfigServiceDescribeOrganizationConfigRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeOrganizationConfigRules", input)
-	return &ConfigserviceDescribeOrganizationConfigRulesFuture{Future: future}
+	return &ConfigServiceDescribeOrganizationConfigRulesFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeOrganizationConformancePackStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) (*configservice.DescribeOrganizationConformancePackStatusesOutput, error) {
@@ -1400,9 +1478,9 @@ func (a *ConfigServiceStub) DescribeOrganizationConformancePackStatuses(ctx work
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeOrganizationConformancePackStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) *ConfigserviceDescribeOrganizationConformancePackStatusesFuture {
+func (a *ConfigServiceStub) DescribeOrganizationConformancePackStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) *ConfigServiceDescribeOrganizationConformancePackStatusesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeOrganizationConformancePackStatuses", input)
-	return &ConfigserviceDescribeOrganizationConformancePackStatusesFuture{Future: future}
+	return &ConfigServiceDescribeOrganizationConformancePackStatusesFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeOrganizationConformancePacks(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) (*configservice.DescribeOrganizationConformancePacksOutput, error) {
@@ -1411,9 +1489,9 @@ func (a *ConfigServiceStub) DescribeOrganizationConformancePacks(ctx workflow.Co
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeOrganizationConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) *ConfigserviceDescribeOrganizationConformancePacksFuture {
+func (a *ConfigServiceStub) DescribeOrganizationConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) *ConfigServiceDescribeOrganizationConformancePacksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeOrganizationConformancePacks", input)
-	return &ConfigserviceDescribeOrganizationConformancePacksFuture{Future: future}
+	return &ConfigServiceDescribeOrganizationConformancePacksFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribePendingAggregationRequests(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) (*configservice.DescribePendingAggregationRequestsOutput, error) {
@@ -1422,9 +1500,9 @@ func (a *ConfigServiceStub) DescribePendingAggregationRequests(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribePendingAggregationRequestsAsync(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) *ConfigserviceDescribePendingAggregationRequestsFuture {
+func (a *ConfigServiceStub) DescribePendingAggregationRequestsAsync(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) *ConfigServiceDescribePendingAggregationRequestsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribePendingAggregationRequests", input)
-	return &ConfigserviceDescribePendingAggregationRequestsFuture{Future: future}
+	return &ConfigServiceDescribePendingAggregationRequestsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeRemediationConfigurations(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) (*configservice.DescribeRemediationConfigurationsOutput, error) {
@@ -1433,9 +1511,9 @@ func (a *ConfigServiceStub) DescribeRemediationConfigurations(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) *ConfigserviceDescribeRemediationConfigurationsFuture {
+func (a *ConfigServiceStub) DescribeRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) *ConfigServiceDescribeRemediationConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeRemediationConfigurations", input)
-	return &ConfigserviceDescribeRemediationConfigurationsFuture{Future: future}
+	return &ConfigServiceDescribeRemediationConfigurationsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeRemediationExceptions(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) (*configservice.DescribeRemediationExceptionsOutput, error) {
@@ -1444,9 +1522,9 @@ func (a *ConfigServiceStub) DescribeRemediationExceptions(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) *ConfigserviceDescribeRemediationExceptionsFuture {
+func (a *ConfigServiceStub) DescribeRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) *ConfigServiceDescribeRemediationExceptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeRemediationExceptions", input)
-	return &ConfigserviceDescribeRemediationExceptionsFuture{Future: future}
+	return &ConfigServiceDescribeRemediationExceptionsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeRemediationExecutionStatus(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) (*configservice.DescribeRemediationExecutionStatusOutput, error) {
@@ -1455,9 +1533,9 @@ func (a *ConfigServiceStub) DescribeRemediationExecutionStatus(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeRemediationExecutionStatusAsync(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) *ConfigserviceDescribeRemediationExecutionStatusFuture {
+func (a *ConfigServiceStub) DescribeRemediationExecutionStatusAsync(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) *ConfigServiceDescribeRemediationExecutionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeRemediationExecutionStatus", input)
-	return &ConfigserviceDescribeRemediationExecutionStatusFuture{Future: future}
+	return &ConfigServiceDescribeRemediationExecutionStatusFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) DescribeRetentionConfigurations(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) (*configservice.DescribeRetentionConfigurationsOutput, error) {
@@ -1466,9 +1544,9 @@ func (a *ConfigServiceStub) DescribeRetentionConfigurations(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ConfigServiceStub) DescribeRetentionConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) *ConfigserviceDescribeRetentionConfigurationsFuture {
+func (a *ConfigServiceStub) DescribeRetentionConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) *ConfigServiceDescribeRetentionConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.DescribeRetentionConfigurations", input)
-	return &ConfigserviceDescribeRetentionConfigurationsFuture{Future: future}
+	return &ConfigServiceDescribeRetentionConfigurationsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetAggregateComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) (*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, error) {
@@ -1477,9 +1555,9 @@ func (a *ConfigServiceStub) GetAggregateComplianceDetailsByConfigRule(ctx workfl
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetAggregateComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) *ConfigserviceGetAggregateComplianceDetailsByConfigRuleFuture {
+func (a *ConfigServiceStub) GetAggregateComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) *ConfigServiceGetAggregateComplianceDetailsByConfigRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetAggregateComplianceDetailsByConfigRule", input)
-	return &ConfigserviceGetAggregateComplianceDetailsByConfigRuleFuture{Future: future}
+	return &ConfigServiceGetAggregateComplianceDetailsByConfigRuleFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetAggregateConfigRuleComplianceSummary(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) (*configservice.GetAggregateConfigRuleComplianceSummaryOutput, error) {
@@ -1488,9 +1566,9 @@ func (a *ConfigServiceStub) GetAggregateConfigRuleComplianceSummary(ctx workflow
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetAggregateConfigRuleComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) *ConfigserviceGetAggregateConfigRuleComplianceSummaryFuture {
+func (a *ConfigServiceStub) GetAggregateConfigRuleComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) *ConfigServiceGetAggregateConfigRuleComplianceSummaryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetAggregateConfigRuleComplianceSummary", input)
-	return &ConfigserviceGetAggregateConfigRuleComplianceSummaryFuture{Future: future}
+	return &ConfigServiceGetAggregateConfigRuleComplianceSummaryFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetAggregateDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) (*configservice.GetAggregateDiscoveredResourceCountsOutput, error) {
@@ -1499,9 +1577,9 @@ func (a *ConfigServiceStub) GetAggregateDiscoveredResourceCounts(ctx workflow.Co
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetAggregateDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) *ConfigserviceGetAggregateDiscoveredResourceCountsFuture {
+func (a *ConfigServiceStub) GetAggregateDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) *ConfigServiceGetAggregateDiscoveredResourceCountsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetAggregateDiscoveredResourceCounts", input)
-	return &ConfigserviceGetAggregateDiscoveredResourceCountsFuture{Future: future}
+	return &ConfigServiceGetAggregateDiscoveredResourceCountsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetAggregateResourceConfig(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) (*configservice.GetAggregateResourceConfigOutput, error) {
@@ -1510,9 +1588,9 @@ func (a *ConfigServiceStub) GetAggregateResourceConfig(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) *ConfigserviceGetAggregateResourceConfigFuture {
+func (a *ConfigServiceStub) GetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) *ConfigServiceGetAggregateResourceConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetAggregateResourceConfig", input)
-	return &ConfigserviceGetAggregateResourceConfigFuture{Future: future}
+	return &ConfigServiceGetAggregateResourceConfigFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) (*configservice.GetComplianceDetailsByConfigRuleOutput, error) {
@@ -1521,9 +1599,9 @@ func (a *ConfigServiceStub) GetComplianceDetailsByConfigRule(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) *ConfigserviceGetComplianceDetailsByConfigRuleFuture {
+func (a *ConfigServiceStub) GetComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) *ConfigServiceGetComplianceDetailsByConfigRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetComplianceDetailsByConfigRule", input)
-	return &ConfigserviceGetComplianceDetailsByConfigRuleFuture{Future: future}
+	return &ConfigServiceGetComplianceDetailsByConfigRuleFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetComplianceDetailsByResource(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) (*configservice.GetComplianceDetailsByResourceOutput, error) {
@@ -1532,9 +1610,9 @@ func (a *ConfigServiceStub) GetComplianceDetailsByResource(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetComplianceDetailsByResourceAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) *ConfigserviceGetComplianceDetailsByResourceFuture {
+func (a *ConfigServiceStub) GetComplianceDetailsByResourceAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) *ConfigServiceGetComplianceDetailsByResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetComplianceDetailsByResource", input)
-	return &ConfigserviceGetComplianceDetailsByResourceFuture{Future: future}
+	return &ConfigServiceGetComplianceDetailsByResourceFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetComplianceSummaryByConfigRule(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) (*configservice.GetComplianceSummaryByConfigRuleOutput, error) {
@@ -1543,9 +1621,9 @@ func (a *ConfigServiceStub) GetComplianceSummaryByConfigRule(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetComplianceSummaryByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) *ConfigserviceGetComplianceSummaryByConfigRuleFuture {
+func (a *ConfigServiceStub) GetComplianceSummaryByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) *ConfigServiceGetComplianceSummaryByConfigRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetComplianceSummaryByConfigRule", input)
-	return &ConfigserviceGetComplianceSummaryByConfigRuleFuture{Future: future}
+	return &ConfigServiceGetComplianceSummaryByConfigRuleFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetComplianceSummaryByResourceType(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) (*configservice.GetComplianceSummaryByResourceTypeOutput, error) {
@@ -1554,9 +1632,9 @@ func (a *ConfigServiceStub) GetComplianceSummaryByResourceType(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetComplianceSummaryByResourceTypeAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) *ConfigserviceGetComplianceSummaryByResourceTypeFuture {
+func (a *ConfigServiceStub) GetComplianceSummaryByResourceTypeAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) *ConfigServiceGetComplianceSummaryByResourceTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetComplianceSummaryByResourceType", input)
-	return &ConfigserviceGetComplianceSummaryByResourceTypeFuture{Future: future}
+	return &ConfigServiceGetComplianceSummaryByResourceTypeFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetConformancePackComplianceDetails(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) (*configservice.GetConformancePackComplianceDetailsOutput, error) {
@@ -1565,9 +1643,9 @@ func (a *ConfigServiceStub) GetConformancePackComplianceDetails(ctx workflow.Con
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetConformancePackComplianceDetailsAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) *ConfigserviceGetConformancePackComplianceDetailsFuture {
+func (a *ConfigServiceStub) GetConformancePackComplianceDetailsAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) *ConfigServiceGetConformancePackComplianceDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetConformancePackComplianceDetails", input)
-	return &ConfigserviceGetConformancePackComplianceDetailsFuture{Future: future}
+	return &ConfigServiceGetConformancePackComplianceDetailsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetConformancePackComplianceSummary(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) (*configservice.GetConformancePackComplianceSummaryOutput, error) {
@@ -1576,9 +1654,9 @@ func (a *ConfigServiceStub) GetConformancePackComplianceSummary(ctx workflow.Con
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetConformancePackComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) *ConfigserviceGetConformancePackComplianceSummaryFuture {
+func (a *ConfigServiceStub) GetConformancePackComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) *ConfigServiceGetConformancePackComplianceSummaryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetConformancePackComplianceSummary", input)
-	return &ConfigserviceGetConformancePackComplianceSummaryFuture{Future: future}
+	return &ConfigServiceGetConformancePackComplianceSummaryFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) (*configservice.GetDiscoveredResourceCountsOutput, error) {
@@ -1587,9 +1665,9 @@ func (a *ConfigServiceStub) GetDiscoveredResourceCounts(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) *ConfigserviceGetDiscoveredResourceCountsFuture {
+func (a *ConfigServiceStub) GetDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) *ConfigServiceGetDiscoveredResourceCountsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetDiscoveredResourceCounts", input)
-	return &ConfigserviceGetDiscoveredResourceCountsFuture{Future: future}
+	return &ConfigServiceGetDiscoveredResourceCountsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetOrganizationConfigRuleDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) (*configservice.GetOrganizationConfigRuleDetailedStatusOutput, error) {
@@ -1598,9 +1676,9 @@ func (a *ConfigServiceStub) GetOrganizationConfigRuleDetailedStatus(ctx workflow
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetOrganizationConfigRuleDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) *ConfigserviceGetOrganizationConfigRuleDetailedStatusFuture {
+func (a *ConfigServiceStub) GetOrganizationConfigRuleDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) *ConfigServiceGetOrganizationConfigRuleDetailedStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetOrganizationConfigRuleDetailedStatus", input)
-	return &ConfigserviceGetOrganizationConfigRuleDetailedStatusFuture{Future: future}
+	return &ConfigServiceGetOrganizationConfigRuleDetailedStatusFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetOrganizationConformancePackDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) (*configservice.GetOrganizationConformancePackDetailedStatusOutput, error) {
@@ -1609,9 +1687,9 @@ func (a *ConfigServiceStub) GetOrganizationConformancePackDetailedStatus(ctx wor
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetOrganizationConformancePackDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) *ConfigserviceGetOrganizationConformancePackDetailedStatusFuture {
+func (a *ConfigServiceStub) GetOrganizationConformancePackDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) *ConfigServiceGetOrganizationConformancePackDetailedStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetOrganizationConformancePackDetailedStatus", input)
-	return &ConfigserviceGetOrganizationConformancePackDetailedStatusFuture{Future: future}
+	return &ConfigServiceGetOrganizationConformancePackDetailedStatusFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) GetResourceConfigHistory(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) (*configservice.GetResourceConfigHistoryOutput, error) {
@@ -1620,9 +1698,9 @@ func (a *ConfigServiceStub) GetResourceConfigHistory(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ConfigServiceStub) GetResourceConfigHistoryAsync(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) *ConfigserviceGetResourceConfigHistoryFuture {
+func (a *ConfigServiceStub) GetResourceConfigHistoryAsync(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) *ConfigServiceGetResourceConfigHistoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.GetResourceConfigHistory", input)
-	return &ConfigserviceGetResourceConfigHistoryFuture{Future: future}
+	return &ConfigServiceGetResourceConfigHistoryFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) ListAggregateDiscoveredResources(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) (*configservice.ListAggregateDiscoveredResourcesOutput, error) {
@@ -1631,9 +1709,9 @@ func (a *ConfigServiceStub) ListAggregateDiscoveredResources(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ConfigServiceStub) ListAggregateDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) *ConfigserviceListAggregateDiscoveredResourcesFuture {
+func (a *ConfigServiceStub) ListAggregateDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) *ConfigServiceListAggregateDiscoveredResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.ListAggregateDiscoveredResources", input)
-	return &ConfigserviceListAggregateDiscoveredResourcesFuture{Future: future}
+	return &ConfigServiceListAggregateDiscoveredResourcesFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) ListDiscoveredResources(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) (*configservice.ListDiscoveredResourcesOutput, error) {
@@ -1642,9 +1720,9 @@ func (a *ConfigServiceStub) ListDiscoveredResources(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ConfigServiceStub) ListDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) *ConfigserviceListDiscoveredResourcesFuture {
+func (a *ConfigServiceStub) ListDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) *ConfigServiceListDiscoveredResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.ListDiscoveredResources", input)
-	return &ConfigserviceListDiscoveredResourcesFuture{Future: future}
+	return &ConfigServiceListDiscoveredResourcesFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) ListTagsForResource(ctx workflow.Context, input *configservice.ListTagsForResourceInput) (*configservice.ListTagsForResourceOutput, error) {
@@ -1653,9 +1731,9 @@ func (a *ConfigServiceStub) ListTagsForResource(ctx workflow.Context, input *con
 	return &output, err
 }
 
-func (a *ConfigServiceStub) ListTagsForResourceAsync(ctx workflow.Context, input *configservice.ListTagsForResourceInput) *ConfigserviceListTagsForResourceFuture {
+func (a *ConfigServiceStub) ListTagsForResourceAsync(ctx workflow.Context, input *configservice.ListTagsForResourceInput) *ConfigServiceListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.ListTagsForResource", input)
-	return &ConfigserviceListTagsForResourceFuture{Future: future}
+	return &ConfigServiceListTagsForResourceFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutAggregationAuthorization(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) (*configservice.PutAggregationAuthorizationOutput, error) {
@@ -1664,9 +1742,9 @@ func (a *ConfigServiceStub) PutAggregationAuthorization(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) *ConfigservicePutAggregationAuthorizationFuture {
+func (a *ConfigServiceStub) PutAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) *ConfigServicePutAggregationAuthorizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutAggregationAuthorization", input)
-	return &ConfigservicePutAggregationAuthorizationFuture{Future: future}
+	return &ConfigServicePutAggregationAuthorizationFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutConfigRule(ctx workflow.Context, input *configservice.PutConfigRuleInput) (*configservice.PutConfigRuleOutput, error) {
@@ -1675,9 +1753,9 @@ func (a *ConfigServiceStub) PutConfigRule(ctx workflow.Context, input *configser
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutConfigRuleAsync(ctx workflow.Context, input *configservice.PutConfigRuleInput) *ConfigservicePutConfigRuleFuture {
+func (a *ConfigServiceStub) PutConfigRuleAsync(ctx workflow.Context, input *configservice.PutConfigRuleInput) *ConfigServicePutConfigRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutConfigRule", input)
-	return &ConfigservicePutConfigRuleFuture{Future: future}
+	return &ConfigServicePutConfigRuleFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutConfigurationAggregator(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) (*configservice.PutConfigurationAggregatorOutput, error) {
@@ -1686,9 +1764,9 @@ func (a *ConfigServiceStub) PutConfigurationAggregator(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) *ConfigservicePutConfigurationAggregatorFuture {
+func (a *ConfigServiceStub) PutConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) *ConfigServicePutConfigurationAggregatorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutConfigurationAggregator", input)
-	return &ConfigservicePutConfigurationAggregatorFuture{Future: future}
+	return &ConfigServicePutConfigurationAggregatorFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutConfigurationRecorder(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) (*configservice.PutConfigurationRecorderOutput, error) {
@@ -1697,9 +1775,9 @@ func (a *ConfigServiceStub) PutConfigurationRecorder(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutConfigurationRecorderAsync(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) *ConfigservicePutConfigurationRecorderFuture {
+func (a *ConfigServiceStub) PutConfigurationRecorderAsync(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) *ConfigServicePutConfigurationRecorderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutConfigurationRecorder", input)
-	return &ConfigservicePutConfigurationRecorderFuture{Future: future}
+	return &ConfigServicePutConfigurationRecorderFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutConformancePack(ctx workflow.Context, input *configservice.PutConformancePackInput) (*configservice.PutConformancePackOutput, error) {
@@ -1708,9 +1786,9 @@ func (a *ConfigServiceStub) PutConformancePack(ctx workflow.Context, input *conf
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutConformancePackAsync(ctx workflow.Context, input *configservice.PutConformancePackInput) *ConfigservicePutConformancePackFuture {
+func (a *ConfigServiceStub) PutConformancePackAsync(ctx workflow.Context, input *configservice.PutConformancePackInput) *ConfigServicePutConformancePackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutConformancePack", input)
-	return &ConfigservicePutConformancePackFuture{Future: future}
+	return &ConfigServicePutConformancePackFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutDeliveryChannel(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) (*configservice.PutDeliveryChannelOutput, error) {
@@ -1719,9 +1797,9 @@ func (a *ConfigServiceStub) PutDeliveryChannel(ctx workflow.Context, input *conf
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutDeliveryChannelAsync(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) *ConfigservicePutDeliveryChannelFuture {
+func (a *ConfigServiceStub) PutDeliveryChannelAsync(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) *ConfigServicePutDeliveryChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutDeliveryChannel", input)
-	return &ConfigservicePutDeliveryChannelFuture{Future: future}
+	return &ConfigServicePutDeliveryChannelFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutEvaluations(ctx workflow.Context, input *configservice.PutEvaluationsInput) (*configservice.PutEvaluationsOutput, error) {
@@ -1730,9 +1808,9 @@ func (a *ConfigServiceStub) PutEvaluations(ctx workflow.Context, input *configse
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutEvaluationsAsync(ctx workflow.Context, input *configservice.PutEvaluationsInput) *ConfigservicePutEvaluationsFuture {
+func (a *ConfigServiceStub) PutEvaluationsAsync(ctx workflow.Context, input *configservice.PutEvaluationsInput) *ConfigServicePutEvaluationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutEvaluations", input)
-	return &ConfigservicePutEvaluationsFuture{Future: future}
+	return &ConfigServicePutEvaluationsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutOrganizationConfigRule(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) (*configservice.PutOrganizationConfigRuleOutput, error) {
@@ -1741,9 +1819,9 @@ func (a *ConfigServiceStub) PutOrganizationConfigRule(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) *ConfigservicePutOrganizationConfigRuleFuture {
+func (a *ConfigServiceStub) PutOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) *ConfigServicePutOrganizationConfigRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutOrganizationConfigRule", input)
-	return &ConfigservicePutOrganizationConfigRuleFuture{Future: future}
+	return &ConfigServicePutOrganizationConfigRuleFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutOrganizationConformancePack(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) (*configservice.PutOrganizationConformancePackOutput, error) {
@@ -1752,9 +1830,9 @@ func (a *ConfigServiceStub) PutOrganizationConformancePack(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) *ConfigservicePutOrganizationConformancePackFuture {
+func (a *ConfigServiceStub) PutOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) *ConfigServicePutOrganizationConformancePackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutOrganizationConformancePack", input)
-	return &ConfigservicePutOrganizationConformancePackFuture{Future: future}
+	return &ConfigServicePutOrganizationConformancePackFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutRemediationConfigurations(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) (*configservice.PutRemediationConfigurationsOutput, error) {
@@ -1763,9 +1841,9 @@ func (a *ConfigServiceStub) PutRemediationConfigurations(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) *ConfigservicePutRemediationConfigurationsFuture {
+func (a *ConfigServiceStub) PutRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) *ConfigServicePutRemediationConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutRemediationConfigurations", input)
-	return &ConfigservicePutRemediationConfigurationsFuture{Future: future}
+	return &ConfigServicePutRemediationConfigurationsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutRemediationExceptions(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) (*configservice.PutRemediationExceptionsOutput, error) {
@@ -1774,9 +1852,9 @@ func (a *ConfigServiceStub) PutRemediationExceptions(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutRemediationExceptionsAsync(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) *ConfigservicePutRemediationExceptionsFuture {
+func (a *ConfigServiceStub) PutRemediationExceptionsAsync(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) *ConfigServicePutRemediationExceptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutRemediationExceptions", input)
-	return &ConfigservicePutRemediationExceptionsFuture{Future: future}
+	return &ConfigServicePutRemediationExceptionsFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutResourceConfig(ctx workflow.Context, input *configservice.PutResourceConfigInput) (*configservice.PutResourceConfigOutput, error) {
@@ -1785,9 +1863,9 @@ func (a *ConfigServiceStub) PutResourceConfig(ctx workflow.Context, input *confi
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutResourceConfigAsync(ctx workflow.Context, input *configservice.PutResourceConfigInput) *ConfigservicePutResourceConfigFuture {
+func (a *ConfigServiceStub) PutResourceConfigAsync(ctx workflow.Context, input *configservice.PutResourceConfigInput) *ConfigServicePutResourceConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutResourceConfig", input)
-	return &ConfigservicePutResourceConfigFuture{Future: future}
+	return &ConfigServicePutResourceConfigFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) PutRetentionConfiguration(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) (*configservice.PutRetentionConfigurationOutput, error) {
@@ -1796,9 +1874,9 @@ func (a *ConfigServiceStub) PutRetentionConfiguration(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ConfigServiceStub) PutRetentionConfigurationAsync(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) *ConfigservicePutRetentionConfigurationFuture {
+func (a *ConfigServiceStub) PutRetentionConfigurationAsync(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) *ConfigServicePutRetentionConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.PutRetentionConfiguration", input)
-	return &ConfigservicePutRetentionConfigurationFuture{Future: future}
+	return &ConfigServicePutRetentionConfigurationFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) SelectAggregateResourceConfig(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) (*configservice.SelectAggregateResourceConfigOutput, error) {
@@ -1807,9 +1885,9 @@ func (a *ConfigServiceStub) SelectAggregateResourceConfig(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *ConfigServiceStub) SelectAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) *ConfigserviceSelectAggregateResourceConfigFuture {
+func (a *ConfigServiceStub) SelectAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) *ConfigServiceSelectAggregateResourceConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.SelectAggregateResourceConfig", input)
-	return &ConfigserviceSelectAggregateResourceConfigFuture{Future: future}
+	return &ConfigServiceSelectAggregateResourceConfigFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) SelectResourceConfig(ctx workflow.Context, input *configservice.SelectResourceConfigInput) (*configservice.SelectResourceConfigOutput, error) {
@@ -1818,9 +1896,9 @@ func (a *ConfigServiceStub) SelectResourceConfig(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *ConfigServiceStub) SelectResourceConfigAsync(ctx workflow.Context, input *configservice.SelectResourceConfigInput) *ConfigserviceSelectResourceConfigFuture {
+func (a *ConfigServiceStub) SelectResourceConfigAsync(ctx workflow.Context, input *configservice.SelectResourceConfigInput) *ConfigServiceSelectResourceConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.SelectResourceConfig", input)
-	return &ConfigserviceSelectResourceConfigFuture{Future: future}
+	return &ConfigServiceSelectResourceConfigFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) StartConfigRulesEvaluation(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) (*configservice.StartConfigRulesEvaluationOutput, error) {
@@ -1829,9 +1907,9 @@ func (a *ConfigServiceStub) StartConfigRulesEvaluation(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ConfigServiceStub) StartConfigRulesEvaluationAsync(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) *ConfigserviceStartConfigRulesEvaluationFuture {
+func (a *ConfigServiceStub) StartConfigRulesEvaluationAsync(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) *ConfigServiceStartConfigRulesEvaluationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.StartConfigRulesEvaluation", input)
-	return &ConfigserviceStartConfigRulesEvaluationFuture{Future: future}
+	return &ConfigServiceStartConfigRulesEvaluationFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) StartConfigurationRecorder(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) (*configservice.StartConfigurationRecorderOutput, error) {
@@ -1840,9 +1918,9 @@ func (a *ConfigServiceStub) StartConfigurationRecorder(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ConfigServiceStub) StartConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) *ConfigserviceStartConfigurationRecorderFuture {
+func (a *ConfigServiceStub) StartConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) *ConfigServiceStartConfigurationRecorderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.StartConfigurationRecorder", input)
-	return &ConfigserviceStartConfigurationRecorderFuture{Future: future}
+	return &ConfigServiceStartConfigurationRecorderFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) StartRemediationExecution(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) (*configservice.StartRemediationExecutionOutput, error) {
@@ -1851,9 +1929,9 @@ func (a *ConfigServiceStub) StartRemediationExecution(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ConfigServiceStub) StartRemediationExecutionAsync(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) *ConfigserviceStartRemediationExecutionFuture {
+func (a *ConfigServiceStub) StartRemediationExecutionAsync(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) *ConfigServiceStartRemediationExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.StartRemediationExecution", input)
-	return &ConfigserviceStartRemediationExecutionFuture{Future: future}
+	return &ConfigServiceStartRemediationExecutionFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) StopConfigurationRecorder(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) (*configservice.StopConfigurationRecorderOutput, error) {
@@ -1862,9 +1940,9 @@ func (a *ConfigServiceStub) StopConfigurationRecorder(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ConfigServiceStub) StopConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) *ConfigserviceStopConfigurationRecorderFuture {
+func (a *ConfigServiceStub) StopConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) *ConfigServiceStopConfigurationRecorderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.StopConfigurationRecorder", input)
-	return &ConfigserviceStopConfigurationRecorderFuture{Future: future}
+	return &ConfigServiceStopConfigurationRecorderFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) TagResource(ctx workflow.Context, input *configservice.TagResourceInput) (*configservice.TagResourceOutput, error) {
@@ -1873,9 +1951,9 @@ func (a *ConfigServiceStub) TagResource(ctx workflow.Context, input *configservi
 	return &output, err
 }
 
-func (a *ConfigServiceStub) TagResourceAsync(ctx workflow.Context, input *configservice.TagResourceInput) *ConfigserviceTagResourceFuture {
+func (a *ConfigServiceStub) TagResourceAsync(ctx workflow.Context, input *configservice.TagResourceInput) *ConfigServiceTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.TagResource", input)
-	return &ConfigserviceTagResourceFuture{Future: future}
+	return &ConfigServiceTagResourceFuture{Future: future}
 }
 
 func (a *ConfigServiceStub) UntagResource(ctx workflow.Context, input *configservice.UntagResourceInput) (*configservice.UntagResourceOutput, error) {
@@ -1884,7 +1962,7 @@ func (a *ConfigServiceStub) UntagResource(ctx workflow.Context, input *configser
 	return &output, err
 }
 
-func (a *ConfigServiceStub) UntagResourceAsync(ctx workflow.Context, input *configservice.UntagResourceInput) *ConfigserviceUntagResourceFuture {
+func (a *ConfigServiceStub) UntagResourceAsync(ctx workflow.Context, input *configservice.UntagResourceInput) *ConfigServiceUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.configservice.UntagResource", input)
-	return &ConfigserviceUntagResourceFuture{Future: future}
+	return &ConfigServiceUntagResourceFuture{Future: future}
 }

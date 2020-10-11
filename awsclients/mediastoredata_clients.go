@@ -11,19 +11,19 @@ import (
 
 type MediaStoreDataClient interface {
 	DeleteObject(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) (*mediastoredata.DeleteObjectOutput, error)
-	DeleteObjectAsync(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) *MediastoredataDeleteObjectFuture
+	DeleteObjectAsync(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) *MediaStoreDataDeleteObjectFuture
 
 	DescribeObject(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) (*mediastoredata.DescribeObjectOutput, error)
-	DescribeObjectAsync(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) *MediastoredataDescribeObjectFuture
+	DescribeObjectAsync(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) *MediaStoreDataDescribeObjectFuture
 
 	GetObject(ctx workflow.Context, input *mediastoredata.GetObjectInput) (*mediastoredata.GetObjectOutput, error)
-	GetObjectAsync(ctx workflow.Context, input *mediastoredata.GetObjectInput) *MediastoredataGetObjectFuture
+	GetObjectAsync(ctx workflow.Context, input *mediastoredata.GetObjectInput) *MediaStoreDataGetObjectFuture
 
 	ListItems(ctx workflow.Context, input *mediastoredata.ListItemsInput) (*mediastoredata.ListItemsOutput, error)
-	ListItemsAsync(ctx workflow.Context, input *mediastoredata.ListItemsInput) *MediastoredataListItemsFuture
+	ListItemsAsync(ctx workflow.Context, input *mediastoredata.ListItemsInput) *MediaStoreDataListItemsFuture
 
 	PutObject(ctx workflow.Context, input *mediastoredata.PutObjectInput) (*mediastoredata.PutObjectOutput, error)
-	PutObjectAsync(ctx workflow.Context, input *mediastoredata.PutObjectInput) *MediastoredataPutObjectFuture
+	PutObjectAsync(ctx workflow.Context, input *mediastoredata.PutObjectInput) *MediaStoreDataPutObjectFuture
 }
 
 type MediaStoreDataStub struct{}
@@ -32,51 +32,56 @@ func NewMediaStoreDataStub() MediaStoreDataClient {
 	return &MediaStoreDataStub{}
 }
 
-type MediastoredataDeleteObjectFuture struct {
+type MediaStoreDataDeleteObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediastoredataDeleteObjectFuture) Get(ctx workflow.Context) (*mediastoredata.DeleteObjectOutput, error) {
+func (r *MediaStoreDataDeleteObjectFuture) Get(ctx workflow.Context) (*mediastoredata.DeleteObjectOutput, error) {
 	var output mediastoredata.DeleteObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoredataDescribeObjectFuture struct {
+type MediaStoreDataDescribeObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediastoredataDescribeObjectFuture) Get(ctx workflow.Context) (*mediastoredata.DescribeObjectOutput, error) {
+func (r *MediaStoreDataDescribeObjectFuture) Get(ctx workflow.Context) (*mediastoredata.DescribeObjectOutput, error) {
 	var output mediastoredata.DescribeObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoredataGetObjectFuture struct {
+type MediaStoreDataGetObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediastoredataGetObjectFuture) Get(ctx workflow.Context) (*mediastoredata.GetObjectOutput, error) {
+func (r *MediaStoreDataGetObjectFuture) Get(ctx workflow.Context) (*mediastoredata.GetObjectOutput, error) {
 	var output mediastoredata.GetObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoredataListItemsFuture struct {
+type MediaStoreDataListItemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediastoredataListItemsFuture) Get(ctx workflow.Context) (*mediastoredata.ListItemsOutput, error) {
+func (r *MediaStoreDataListItemsFuture) Get(ctx workflow.Context) (*mediastoredata.ListItemsOutput, error) {
 	var output mediastoredata.ListItemsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoredataPutObjectFuture struct {
+type MediaStoreDataPutObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediastoredataPutObjectFuture) Get(ctx workflow.Context) (*mediastoredata.PutObjectOutput, error) {
+func (r *MediaStoreDataPutObjectFuture) Get(ctx workflow.Context) (*mediastoredata.PutObjectOutput, error) {
 	var output mediastoredata.PutObjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -88,9 +93,9 @@ func (a *MediaStoreDataStub) DeleteObject(ctx workflow.Context, input *mediastor
 	return &output, err
 }
 
-func (a *MediaStoreDataStub) DeleteObjectAsync(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) *MediastoredataDeleteObjectFuture {
+func (a *MediaStoreDataStub) DeleteObjectAsync(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) *MediaStoreDataDeleteObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.DeleteObject", input)
-	return &MediastoredataDeleteObjectFuture{Future: future}
+	return &MediaStoreDataDeleteObjectFuture{Future: future}
 }
 
 func (a *MediaStoreDataStub) DescribeObject(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) (*mediastoredata.DescribeObjectOutput, error) {
@@ -99,9 +104,9 @@ func (a *MediaStoreDataStub) DescribeObject(ctx workflow.Context, input *mediast
 	return &output, err
 }
 
-func (a *MediaStoreDataStub) DescribeObjectAsync(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) *MediastoredataDescribeObjectFuture {
+func (a *MediaStoreDataStub) DescribeObjectAsync(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) *MediaStoreDataDescribeObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.DescribeObject", input)
-	return &MediastoredataDescribeObjectFuture{Future: future}
+	return &MediaStoreDataDescribeObjectFuture{Future: future}
 }
 
 func (a *MediaStoreDataStub) GetObject(ctx workflow.Context, input *mediastoredata.GetObjectInput) (*mediastoredata.GetObjectOutput, error) {
@@ -110,9 +115,9 @@ func (a *MediaStoreDataStub) GetObject(ctx workflow.Context, input *mediastoreda
 	return &output, err
 }
 
-func (a *MediaStoreDataStub) GetObjectAsync(ctx workflow.Context, input *mediastoredata.GetObjectInput) *MediastoredataGetObjectFuture {
+func (a *MediaStoreDataStub) GetObjectAsync(ctx workflow.Context, input *mediastoredata.GetObjectInput) *MediaStoreDataGetObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.GetObject", input)
-	return &MediastoredataGetObjectFuture{Future: future}
+	return &MediaStoreDataGetObjectFuture{Future: future}
 }
 
 func (a *MediaStoreDataStub) ListItems(ctx workflow.Context, input *mediastoredata.ListItemsInput) (*mediastoredata.ListItemsOutput, error) {
@@ -121,9 +126,9 @@ func (a *MediaStoreDataStub) ListItems(ctx workflow.Context, input *mediastoreda
 	return &output, err
 }
 
-func (a *MediaStoreDataStub) ListItemsAsync(ctx workflow.Context, input *mediastoredata.ListItemsInput) *MediastoredataListItemsFuture {
+func (a *MediaStoreDataStub) ListItemsAsync(ctx workflow.Context, input *mediastoredata.ListItemsInput) *MediaStoreDataListItemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.ListItems", input)
-	return &MediastoredataListItemsFuture{Future: future}
+	return &MediaStoreDataListItemsFuture{Future: future}
 }
 
 func (a *MediaStoreDataStub) PutObject(ctx workflow.Context, input *mediastoredata.PutObjectInput) (*mediastoredata.PutObjectOutput, error) {
@@ -132,7 +137,7 @@ func (a *MediaStoreDataStub) PutObject(ctx workflow.Context, input *mediastoreda
 	return &output, err
 }
 
-func (a *MediaStoreDataStub) PutObjectAsync(ctx workflow.Context, input *mediastoredata.PutObjectInput) *MediastoredataPutObjectFuture {
+func (a *MediaStoreDataStub) PutObjectAsync(ctx workflow.Context, input *mediastoredata.PutObjectInput) *MediaStoreDataPutObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.PutObject", input)
-	return &MediastoredataPutObjectFuture{Future: future}
+	return &MediaStoreDataPutObjectFuture{Future: future}
 }

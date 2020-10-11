@@ -60,6 +60,7 @@ func NewBudgetsStub() BudgetsClient {
 }
 
 type BudgetsCreateBudgetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -70,6 +71,7 @@ func (r *BudgetsCreateBudgetFuture) Get(ctx workflow.Context) (*budgets.CreateBu
 }
 
 type BudgetsCreateNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -80,6 +82,7 @@ func (r *BudgetsCreateNotificationFuture) Get(ctx workflow.Context) (*budgets.Cr
 }
 
 type BudgetsCreateSubscriberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -90,6 +93,7 @@ func (r *BudgetsCreateSubscriberFuture) Get(ctx workflow.Context) (*budgets.Crea
 }
 
 type BudgetsDeleteBudgetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -100,6 +104,7 @@ func (r *BudgetsDeleteBudgetFuture) Get(ctx workflow.Context) (*budgets.DeleteBu
 }
 
 type BudgetsDeleteNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -110,6 +115,7 @@ func (r *BudgetsDeleteNotificationFuture) Get(ctx workflow.Context) (*budgets.De
 }
 
 type BudgetsDeleteSubscriberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -120,6 +126,7 @@ func (r *BudgetsDeleteSubscriberFuture) Get(ctx workflow.Context) (*budgets.Dele
 }
 
 type BudgetsDescribeBudgetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -130,6 +137,7 @@ func (r *BudgetsDescribeBudgetFuture) Get(ctx workflow.Context) (*budgets.Descri
 }
 
 type BudgetsDescribeBudgetPerformanceHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -140,6 +148,7 @@ func (r *BudgetsDescribeBudgetPerformanceHistoryFuture) Get(ctx workflow.Context
 }
 
 type BudgetsDescribeBudgetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -150,6 +159,7 @@ func (r *BudgetsDescribeBudgetsFuture) Get(ctx workflow.Context) (*budgets.Descr
 }
 
 type BudgetsDescribeNotificationsForBudgetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +170,7 @@ func (r *BudgetsDescribeNotificationsForBudgetFuture) Get(ctx workflow.Context) 
 }
 
 type BudgetsDescribeSubscribersForNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +181,7 @@ func (r *BudgetsDescribeSubscribersForNotificationFuture) Get(ctx workflow.Conte
 }
 
 type BudgetsUpdateBudgetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +192,7 @@ func (r *BudgetsUpdateBudgetFuture) Get(ctx workflow.Context) (*budgets.UpdateBu
 }
 
 type BudgetsUpdateNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -190,6 +203,7 @@ func (r *BudgetsUpdateNotificationFuture) Get(ctx workflow.Context) (*budgets.Up
 }
 
 type BudgetsUpdateSubscriberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
