@@ -9,7 +9,7 @@ exposed by [AWS Go SDK](https://github.com/aws/aws-sdk-go).
 Generated activities and stubs are in Go at this point.
 Java SDK has to call them by string name until Java activity interface generation is added.
 
-Contact [Maxim](https://github.com/mfateev) if you want to collaborate on this project.
+This repository relies on the [temporal-aws-sdk-generator](https://github.com/temporalio/temporal-aws-sdk-generator).
 
 ## Generated Code
 
@@ -20,22 +20,20 @@ strongly typed manner.
 
 ## Regenerating Code
 
-Initialize submodule that contains aws-sdk-go
+Update a template in templates directory and run:
 ```
-git submodule update --init --recursive
+make bins
 ```
-Regenerate code for all services:
-```
-make generate
-```
-
+to regenerate and compile the generated code.
 
 ## Templates
 
 Templates that are used for code generation are located in
-[cmd/temporal-aws-sdk-gen/templates](cmd/temporal-aws-sdk-gen/templates) directory.
+[templates](templates) directory.
 They use Go [text/template](https://golang.org/pkg/text/template/) package. Each template is invoked with
-[InterfaceDefinition](cmd/temporal-aws-sdk-gen/internal/parser.go#L31) structure as a parameter.
+AWSSDKDefinition](internal/definitions.go) structure as a parameter. A template file must call `SetFileName`
+function at the beginning to specify the output file name.
+It is allowed to call `SetFileName` multiple times to generate multiple files from the same template.
 
 ## Running Temporal AWS SDK Activities
 

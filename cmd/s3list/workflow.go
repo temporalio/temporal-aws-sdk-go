@@ -2,8 +2,8 @@ package s3list
 
 import (
 	s32 "github.com/aws/aws-sdk-go/service/s3"
+	"go.temporal.io/aws-sdk/awsclients"
 	"go.temporal.io/sdk/workflow"
-	"temporal.io/aws-sdk/awsclients"
 	"time"
 )
 
