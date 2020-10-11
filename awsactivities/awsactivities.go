@@ -14,13 +14,13 @@ import (
 )
 
 // SessionFactory returns an aws.Session based on the activity context.
-type SessionFactory interface{
+type SessionFactory interface {
 	Session(ctx context.Context) (*session.Session, error)
 }
 
 // RegisterAwsActivities registers AWS activities with a single session.
 // Use this registration method if your worker will only use a single set of credentials for authentication.
-func RegisterAwsActivities(worker worker.Worker, sess *session.Session, config... *aws.Config) {
+func RegisterAwsActivities(worker worker.Worker, sess *session.Session, config ...*aws.Config) {
 	worker.RegisterActivity(NewAccessAnalyzerActivities(sess, config...))
 	worker.RegisterActivityWithOptions(NewAccessAnalyzerActivities(sess, config...), activity.RegisterOptions{Name: "aws.accessanalyzer."})
 	worker.RegisterActivity(NewACMActivities(sess, config...))
