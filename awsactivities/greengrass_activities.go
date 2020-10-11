@@ -478,6 +478,14 @@ func (a *GreengrassActivities) GetSubscriptionDefinitionVersion(ctx context.Cont
 	return client.GetSubscriptionDefinitionVersionWithContext(ctx, input)
 }
 
+func (a *GreengrassActivities) GetThingRuntimeConfiguration(ctx context.Context, input *greengrass.GetThingRuntimeConfigurationInput) (*greengrass.GetThingRuntimeConfigurationOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetThingRuntimeConfigurationWithContext(ctx, input)
+}
+
 func (a *GreengrassActivities) ListBulkDeploymentDetailedReports(ctx context.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) (*greengrass.ListBulkDeploymentDetailedReportsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -764,4 +772,12 @@ func (a *GreengrassActivities) UpdateSubscriptionDefinition(ctx context.Context,
 		return nil, err
 	}
 	return client.UpdateSubscriptionDefinitionWithContext(ctx, input)
+}
+
+func (a *GreengrassActivities) UpdateThingRuntimeConfiguration(ctx context.Context, input *greengrass.UpdateThingRuntimeConfigurationInput) (*greengrass.UpdateThingRuntimeConfigurationOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateThingRuntimeConfigurationWithContext(ctx, input)
 }

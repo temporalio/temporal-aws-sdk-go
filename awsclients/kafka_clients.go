@@ -10,6 +10,12 @@ import (
 )
 
 type KafkaClient interface {
+	BatchAssociateScramSecret(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) (*kafka.BatchAssociateScramSecretOutput, error)
+	BatchAssociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) *KafkaBatchAssociateScramSecretResult
+
+	BatchDisassociateScramSecret(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) (*kafka.BatchDisassociateScramSecretOutput, error)
+	BatchDisassociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) *KafkaBatchDisassociateScramSecretResult
+
 	CreateCluster(ctx workflow.Context, input *kafka.CreateClusterInput) (*kafka.CreateClusterOutput, error)
 	CreateClusterAsync(ctx workflow.Context, input *kafka.CreateClusterInput) *KafkaCreateClusterResult
 
@@ -58,6 +64,9 @@ type KafkaClient interface {
 	ListNodes(ctx workflow.Context, input *kafka.ListNodesInput) (*kafka.ListNodesOutput, error)
 	ListNodesAsync(ctx workflow.Context, input *kafka.ListNodesInput) *KafkaListNodesResult
 
+	ListScramSecrets(ctx workflow.Context, input *kafka.ListScramSecretsInput) (*kafka.ListScramSecretsOutput, error)
+	ListScramSecretsAsync(ctx workflow.Context, input *kafka.ListScramSecretsInput) *KafkaListScramSecretsResult
+
 	ListTagsForResource(ctx workflow.Context, input *kafka.ListTagsForResourceInput) (*kafka.ListTagsForResourceOutput, error)
 	ListTagsForResourceAsync(ctx workflow.Context, input *kafka.ListTagsForResourceInput) *KafkaListTagsForResourceResult
 
@@ -93,6 +102,26 @@ type KafkaStub struct{}
 
 func NewKafkaStub() KafkaClient {
 	return &KafkaStub{}
+}
+
+type KafkaBatchAssociateScramSecretResult struct {
+	Result workflow.Future
+}
+
+func (r *KafkaBatchAssociateScramSecretResult) Get(ctx workflow.Context) (*kafka.BatchAssociateScramSecretOutput, error) {
+	var output kafka.BatchAssociateScramSecretOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type KafkaBatchDisassociateScramSecretResult struct {
+	Result workflow.Future
+}
+
+func (r *KafkaBatchDisassociateScramSecretResult) Get(ctx workflow.Context) (*kafka.BatchDisassociateScramSecretOutput, error) {
+	var output kafka.BatchDisassociateScramSecretOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type KafkaCreateClusterResult struct {
@@ -255,6 +284,16 @@ func (r *KafkaListNodesResult) Get(ctx workflow.Context) (*kafka.ListNodesOutput
 	return &output, err
 }
 
+type KafkaListScramSecretsResult struct {
+	Result workflow.Future
+}
+
+func (r *KafkaListScramSecretsResult) Get(ctx workflow.Context) (*kafka.ListScramSecretsOutput, error) {
+	var output kafka.ListScramSecretsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type KafkaListTagsForResourceResult struct {
 	Result workflow.Future
 }
@@ -353,6 +392,28 @@ func (r *KafkaUpdateMonitoringResult) Get(ctx workflow.Context) (*kafka.UpdateMo
 	var output kafka.UpdateMonitoringOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
+}
+
+func (a *KafkaStub) BatchAssociateScramSecret(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) (*kafka.BatchAssociateScramSecretOutput, error) {
+	var output kafka.BatchAssociateScramSecretOutput
+	err := workflow.ExecuteActivity(ctx, "aws.kafka.BatchAssociateScramSecret", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *KafkaStub) BatchAssociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) *KafkaBatchAssociateScramSecretResult {
+	future := workflow.ExecuteActivity(ctx, "aws.kafka.BatchAssociateScramSecret", input)
+	return &KafkaBatchAssociateScramSecretResult{Result: future}
+}
+
+func (a *KafkaStub) BatchDisassociateScramSecret(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) (*kafka.BatchDisassociateScramSecretOutput, error) {
+	var output kafka.BatchDisassociateScramSecretOutput
+	err := workflow.ExecuteActivity(ctx, "aws.kafka.BatchDisassociateScramSecret", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *KafkaStub) BatchDisassociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) *KafkaBatchDisassociateScramSecretResult {
+	future := workflow.ExecuteActivity(ctx, "aws.kafka.BatchDisassociateScramSecret", input)
+	return &KafkaBatchDisassociateScramSecretResult{Result: future}
 }
 
 func (a *KafkaStub) CreateCluster(ctx workflow.Context, input *kafka.CreateClusterInput) (*kafka.CreateClusterOutput, error) {
@@ -529,6 +590,17 @@ func (a *KafkaStub) ListNodes(ctx workflow.Context, input *kafka.ListNodesInput)
 func (a *KafkaStub) ListNodesAsync(ctx workflow.Context, input *kafka.ListNodesInput) *KafkaListNodesResult {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListNodes", input)
 	return &KafkaListNodesResult{Result: future}
+}
+
+func (a *KafkaStub) ListScramSecrets(ctx workflow.Context, input *kafka.ListScramSecretsInput) (*kafka.ListScramSecretsOutput, error) {
+	var output kafka.ListScramSecretsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.kafka.ListScramSecrets", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *KafkaStub) ListScramSecretsAsync(ctx workflow.Context, input *kafka.ListScramSecretsInput) *KafkaListScramSecretsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListScramSecrets", input)
+	return &KafkaListScramSecretsResult{Result: future}
 }
 
 func (a *KafkaStub) ListTagsForResource(ctx workflow.Context, input *kafka.ListTagsForResourceInput) (*kafka.ListTagsForResourceOutput, error) {

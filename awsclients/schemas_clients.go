@@ -46,6 +46,9 @@ type SchemasClient interface {
 	DescribeSchema(ctx workflow.Context, input *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error)
 	DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaResult
 
+	ExportSchema(ctx workflow.Context, input *schemas.ExportSchemaInput) (*schemas.ExportSchemaOutput, error)
+	ExportSchemaAsync(ctx workflow.Context, input *schemas.ExportSchemaInput) *SchemasExportSchemaResult
+
 	GetCodeBindingSource(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error)
 	GetCodeBindingSourceAsync(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) *SchemasGetCodeBindingSourceResult
 
@@ -224,6 +227,16 @@ type SchemasDescribeSchemaResult struct {
 
 func (r *SchemasDescribeSchemaResult) Get(ctx workflow.Context) (*schemas.DescribeSchemaOutput, error) {
 	var output schemas.DescribeSchemaOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type SchemasExportSchemaResult struct {
+	Result workflow.Future
+}
+
+func (r *SchemasExportSchemaResult) Get(ctx workflow.Context) (*schemas.ExportSchemaOutput, error) {
+	var output schemas.ExportSchemaOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -539,6 +552,17 @@ func (a *SchemasStub) DescribeSchema(ctx workflow.Context, input *schemas.Descri
 func (a *SchemasStub) DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaResult {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeSchema", input)
 	return &SchemasDescribeSchemaResult{Result: future}
+}
+
+func (a *SchemasStub) ExportSchema(ctx workflow.Context, input *schemas.ExportSchemaInput) (*schemas.ExportSchemaOutput, error) {
+	var output schemas.ExportSchemaOutput
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.ExportSchema", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *SchemasStub) ExportSchemaAsync(ctx workflow.Context, input *schemas.ExportSchemaInput) *SchemasExportSchemaResult {
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.ExportSchema", input)
+	return &SchemasExportSchemaResult{Result: future}
 }
 
 func (a *SchemasStub) GetCodeBindingSource(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error) {

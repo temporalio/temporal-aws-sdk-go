@@ -10,6 +10,9 @@ import (
 )
 
 type MediaPackageClient interface {
+	ConfigureLogs(ctx workflow.Context, input *mediapackage.ConfigureLogsInput) (*mediapackage.ConfigureLogsOutput, error)
+	ConfigureLogsAsync(ctx workflow.Context, input *mediapackage.ConfigureLogsInput) *MediapackageConfigureLogsResult
+
 	CreateChannel(ctx workflow.Context, input *mediapackage.CreateChannelInput) (*mediapackage.CreateChannelOutput, error)
 	CreateChannelAsync(ctx workflow.Context, input *mediapackage.CreateChannelInput) *MediapackageCreateChannelResult
 
@@ -69,6 +72,16 @@ type MediaPackageStub struct{}
 
 func NewMediaPackageStub() MediaPackageClient {
 	return &MediaPackageStub{}
+}
+
+type MediapackageConfigureLogsResult struct {
+	Result workflow.Future
+}
+
+func (r *MediapackageConfigureLogsResult) Get(ctx workflow.Context) (*mediapackage.ConfigureLogsOutput, error) {
+	var output mediapackage.ConfigureLogsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediapackageCreateChannelResult struct {
@@ -249,6 +262,17 @@ func (r *MediapackageUpdateOriginEndpointResult) Get(ctx workflow.Context) (*med
 	var output mediapackage.UpdateOriginEndpointOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
+}
+
+func (a *MediaPackageStub) ConfigureLogs(ctx workflow.Context, input *mediapackage.ConfigureLogsInput) (*mediapackage.ConfigureLogsOutput, error) {
+	var output mediapackage.ConfigureLogsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.mediapackage.ConfigureLogs", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaPackageStub) ConfigureLogsAsync(ctx workflow.Context, input *mediapackage.ConfigureLogsInput) *MediapackageConfigureLogsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.mediapackage.ConfigureLogs", input)
+	return &MediapackageConfigureLogsResult{Result: future}
 }
 
 func (a *MediaPackageStub) CreateChannel(ctx workflow.Context, input *mediapackage.CreateChannelInput) (*mediapackage.CreateChannelOutput, error) {

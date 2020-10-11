@@ -46,6 +46,14 @@ func (a *MediaPackageActivities) getClient(ctx context.Context) (mediapackageifa
 	return mediapackage.New(sess), nil
 }
 
+func (a *MediaPackageActivities) ConfigureLogs(ctx context.Context, input *mediapackage.ConfigureLogsInput) (*mediapackage.ConfigureLogsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ConfigureLogsWithContext(ctx, input)
+}
+
 func (a *MediaPackageActivities) CreateChannel(ctx context.Context, input *mediapackage.CreateChannelInput) (*mediapackage.CreateChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {

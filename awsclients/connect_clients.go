@@ -10,11 +10,26 @@ import (
 )
 
 type ConnectClient interface {
+	AssociateRoutingProfileQueues(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) (*connect.AssociateRoutingProfileQueuesOutput, error)
+	AssociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) *ConnectAssociateRoutingProfileQueuesResult
+
+	CreateContactFlow(ctx workflow.Context, input *connect.CreateContactFlowInput) (*connect.CreateContactFlowOutput, error)
+	CreateContactFlowAsync(ctx workflow.Context, input *connect.CreateContactFlowInput) *ConnectCreateContactFlowResult
+
+	CreateRoutingProfile(ctx workflow.Context, input *connect.CreateRoutingProfileInput) (*connect.CreateRoutingProfileOutput, error)
+	CreateRoutingProfileAsync(ctx workflow.Context, input *connect.CreateRoutingProfileInput) *ConnectCreateRoutingProfileResult
+
 	CreateUser(ctx workflow.Context, input *connect.CreateUserInput) (*connect.CreateUserOutput, error)
 	CreateUserAsync(ctx workflow.Context, input *connect.CreateUserInput) *ConnectCreateUserResult
 
 	DeleteUser(ctx workflow.Context, input *connect.DeleteUserInput) (*connect.DeleteUserOutput, error)
 	DeleteUserAsync(ctx workflow.Context, input *connect.DeleteUserInput) *ConnectDeleteUserResult
+
+	DescribeContactFlow(ctx workflow.Context, input *connect.DescribeContactFlowInput) (*connect.DescribeContactFlowOutput, error)
+	DescribeContactFlowAsync(ctx workflow.Context, input *connect.DescribeContactFlowInput) *ConnectDescribeContactFlowResult
+
+	DescribeRoutingProfile(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) (*connect.DescribeRoutingProfileOutput, error)
+	DescribeRoutingProfileAsync(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) *ConnectDescribeRoutingProfileResult
 
 	DescribeUser(ctx workflow.Context, input *connect.DescribeUserInput) (*connect.DescribeUserOutput, error)
 	DescribeUserAsync(ctx workflow.Context, input *connect.DescribeUserInput) *ConnectDescribeUserResult
@@ -24,6 +39,9 @@ type ConnectClient interface {
 
 	DescribeUserHierarchyStructure(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) (*connect.DescribeUserHierarchyStructureOutput, error)
 	DescribeUserHierarchyStructureAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) *ConnectDescribeUserHierarchyStructureResult
+
+	DisassociateRoutingProfileQueues(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) (*connect.DisassociateRoutingProfileQueuesOutput, error)
+	DisassociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) *ConnectDisassociateRoutingProfileQueuesResult
 
 	GetContactAttributes(ctx workflow.Context, input *connect.GetContactAttributesInput) (*connect.GetContactAttributesOutput, error)
 	GetContactAttributesAsync(ctx workflow.Context, input *connect.GetContactAttributesInput) *ConnectGetContactAttributesResult
@@ -46,8 +64,14 @@ type ConnectClient interface {
 	ListPhoneNumbers(ctx workflow.Context, input *connect.ListPhoneNumbersInput) (*connect.ListPhoneNumbersOutput, error)
 	ListPhoneNumbersAsync(ctx workflow.Context, input *connect.ListPhoneNumbersInput) *ConnectListPhoneNumbersResult
 
+	ListPrompts(ctx workflow.Context, input *connect.ListPromptsInput) (*connect.ListPromptsOutput, error)
+	ListPromptsAsync(ctx workflow.Context, input *connect.ListPromptsInput) *ConnectListPromptsResult
+
 	ListQueues(ctx workflow.Context, input *connect.ListQueuesInput) (*connect.ListQueuesOutput, error)
 	ListQueuesAsync(ctx workflow.Context, input *connect.ListQueuesInput) *ConnectListQueuesResult
+
+	ListRoutingProfileQueues(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) (*connect.ListRoutingProfileQueuesOutput, error)
+	ListRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) *ConnectListRoutingProfileQueuesResult
 
 	ListRoutingProfiles(ctx workflow.Context, input *connect.ListRoutingProfilesInput) (*connect.ListRoutingProfilesOutput, error)
 	ListRoutingProfilesAsync(ctx workflow.Context, input *connect.ListRoutingProfilesInput) *ConnectListRoutingProfilesResult
@@ -94,6 +118,24 @@ type ConnectClient interface {
 	UpdateContactAttributes(ctx workflow.Context, input *connect.UpdateContactAttributesInput) (*connect.UpdateContactAttributesOutput, error)
 	UpdateContactAttributesAsync(ctx workflow.Context, input *connect.UpdateContactAttributesInput) *ConnectUpdateContactAttributesResult
 
+	UpdateContactFlowContent(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) (*connect.UpdateContactFlowContentOutput, error)
+	UpdateContactFlowContentAsync(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) *ConnectUpdateContactFlowContentResult
+
+	UpdateContactFlowName(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) (*connect.UpdateContactFlowNameOutput, error)
+	UpdateContactFlowNameAsync(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) *ConnectUpdateContactFlowNameResult
+
+	UpdateRoutingProfileConcurrency(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) (*connect.UpdateRoutingProfileConcurrencyOutput, error)
+	UpdateRoutingProfileConcurrencyAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) *ConnectUpdateRoutingProfileConcurrencyResult
+
+	UpdateRoutingProfileDefaultOutboundQueue(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) (*connect.UpdateRoutingProfileDefaultOutboundQueueOutput, error)
+	UpdateRoutingProfileDefaultOutboundQueueAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) *ConnectUpdateRoutingProfileDefaultOutboundQueueResult
+
+	UpdateRoutingProfileName(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) (*connect.UpdateRoutingProfileNameOutput, error)
+	UpdateRoutingProfileNameAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) *ConnectUpdateRoutingProfileNameResult
+
+	UpdateRoutingProfileQueues(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) (*connect.UpdateRoutingProfileQueuesOutput, error)
+	UpdateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) *ConnectUpdateRoutingProfileQueuesResult
+
 	UpdateUserHierarchy(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) (*connect.UpdateUserHierarchyOutput, error)
 	UpdateUserHierarchyAsync(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) *ConnectUpdateUserHierarchyResult
 
@@ -116,6 +158,36 @@ func NewConnectStub() ConnectClient {
 	return &ConnectStub{}
 }
 
+type ConnectAssociateRoutingProfileQueuesResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectAssociateRoutingProfileQueuesResult) Get(ctx workflow.Context) (*connect.AssociateRoutingProfileQueuesOutput, error) {
+	var output connect.AssociateRoutingProfileQueuesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectCreateContactFlowResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectCreateContactFlowResult) Get(ctx workflow.Context) (*connect.CreateContactFlowOutput, error) {
+	var output connect.CreateContactFlowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectCreateRoutingProfileResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectCreateRoutingProfileResult) Get(ctx workflow.Context) (*connect.CreateRoutingProfileOutput, error) {
+	var output connect.CreateRoutingProfileOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type ConnectCreateUserResult struct {
 	Result workflow.Future
 }
@@ -132,6 +204,26 @@ type ConnectDeleteUserResult struct {
 
 func (r *ConnectDeleteUserResult) Get(ctx workflow.Context) (*connect.DeleteUserOutput, error) {
 	var output connect.DeleteUserOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectDescribeContactFlowResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectDescribeContactFlowResult) Get(ctx workflow.Context) (*connect.DescribeContactFlowOutput, error) {
+	var output connect.DescribeContactFlowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectDescribeRoutingProfileResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectDescribeRoutingProfileResult) Get(ctx workflow.Context) (*connect.DescribeRoutingProfileOutput, error) {
+	var output connect.DescribeRoutingProfileOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -162,6 +254,16 @@ type ConnectDescribeUserHierarchyStructureResult struct {
 
 func (r *ConnectDescribeUserHierarchyStructureResult) Get(ctx workflow.Context) (*connect.DescribeUserHierarchyStructureOutput, error) {
 	var output connect.DescribeUserHierarchyStructureOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectDisassociateRoutingProfileQueuesResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectDisassociateRoutingProfileQueuesResult) Get(ctx workflow.Context) (*connect.DisassociateRoutingProfileQueuesOutput, error) {
+	var output connect.DisassociateRoutingProfileQueuesOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -236,12 +338,32 @@ func (r *ConnectListPhoneNumbersResult) Get(ctx workflow.Context) (*connect.List
 	return &output, err
 }
 
+type ConnectListPromptsResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectListPromptsResult) Get(ctx workflow.Context) (*connect.ListPromptsOutput, error) {
+	var output connect.ListPromptsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type ConnectListQueuesResult struct {
 	Result workflow.Future
 }
 
 func (r *ConnectListQueuesResult) Get(ctx workflow.Context) (*connect.ListQueuesOutput, error) {
 	var output connect.ListQueuesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectListRoutingProfileQueuesResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectListRoutingProfileQueuesResult) Get(ctx workflow.Context) (*connect.ListRoutingProfileQueuesOutput, error) {
+	var output connect.ListRoutingProfileQueuesOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -396,6 +518,66 @@ func (r *ConnectUpdateContactAttributesResult) Get(ctx workflow.Context) (*conne
 	return &output, err
 }
 
+type ConnectUpdateContactFlowContentResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectUpdateContactFlowContentResult) Get(ctx workflow.Context) (*connect.UpdateContactFlowContentOutput, error) {
+	var output connect.UpdateContactFlowContentOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectUpdateContactFlowNameResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectUpdateContactFlowNameResult) Get(ctx workflow.Context) (*connect.UpdateContactFlowNameOutput, error) {
+	var output connect.UpdateContactFlowNameOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectUpdateRoutingProfileConcurrencyResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectUpdateRoutingProfileConcurrencyResult) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileConcurrencyOutput, error) {
+	var output connect.UpdateRoutingProfileConcurrencyOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectUpdateRoutingProfileDefaultOutboundQueueResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectUpdateRoutingProfileDefaultOutboundQueueResult) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileDefaultOutboundQueueOutput, error) {
+	var output connect.UpdateRoutingProfileDefaultOutboundQueueOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectUpdateRoutingProfileNameResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectUpdateRoutingProfileNameResult) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileNameOutput, error) {
+	var output connect.UpdateRoutingProfileNameOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ConnectUpdateRoutingProfileQueuesResult struct {
+	Result workflow.Future
+}
+
+func (r *ConnectUpdateRoutingProfileQueuesResult) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileQueuesOutput, error) {
+	var output connect.UpdateRoutingProfileQueuesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type ConnectUpdateUserHierarchyResult struct {
 	Result workflow.Future
 }
@@ -446,6 +628,39 @@ func (r *ConnectUpdateUserSecurityProfilesResult) Get(ctx workflow.Context) (*co
 	return &output, err
 }
 
+func (a *ConnectStub) AssociateRoutingProfileQueues(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) (*connect.AssociateRoutingProfileQueuesOutput, error) {
+	var output connect.AssociateRoutingProfileQueuesOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.AssociateRoutingProfileQueues", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) AssociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) *ConnectAssociateRoutingProfileQueuesResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.AssociateRoutingProfileQueues", input)
+	return &ConnectAssociateRoutingProfileQueuesResult{Result: future}
+}
+
+func (a *ConnectStub) CreateContactFlow(ctx workflow.Context, input *connect.CreateContactFlowInput) (*connect.CreateContactFlowOutput, error) {
+	var output connect.CreateContactFlowOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.CreateContactFlow", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) CreateContactFlowAsync(ctx workflow.Context, input *connect.CreateContactFlowInput) *ConnectCreateContactFlowResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.CreateContactFlow", input)
+	return &ConnectCreateContactFlowResult{Result: future}
+}
+
+func (a *ConnectStub) CreateRoutingProfile(ctx workflow.Context, input *connect.CreateRoutingProfileInput) (*connect.CreateRoutingProfileOutput, error) {
+	var output connect.CreateRoutingProfileOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.CreateRoutingProfile", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) CreateRoutingProfileAsync(ctx workflow.Context, input *connect.CreateRoutingProfileInput) *ConnectCreateRoutingProfileResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.CreateRoutingProfile", input)
+	return &ConnectCreateRoutingProfileResult{Result: future}
+}
+
 func (a *ConnectStub) CreateUser(ctx workflow.Context, input *connect.CreateUserInput) (*connect.CreateUserOutput, error) {
 	var output connect.CreateUserOutput
 	err := workflow.ExecuteActivity(ctx, "aws.connect.CreateUser", input).Get(ctx, &output)
@@ -466,6 +681,28 @@ func (a *ConnectStub) DeleteUser(ctx workflow.Context, input *connect.DeleteUser
 func (a *ConnectStub) DeleteUserAsync(ctx workflow.Context, input *connect.DeleteUserInput) *ConnectDeleteUserResult {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DeleteUser", input)
 	return &ConnectDeleteUserResult{Result: future}
+}
+
+func (a *ConnectStub) DescribeContactFlow(ctx workflow.Context, input *connect.DescribeContactFlowInput) (*connect.DescribeContactFlowOutput, error) {
+	var output connect.DescribeContactFlowOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.DescribeContactFlow", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) DescribeContactFlowAsync(ctx workflow.Context, input *connect.DescribeContactFlowInput) *ConnectDescribeContactFlowResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.DescribeContactFlow", input)
+	return &ConnectDescribeContactFlowResult{Result: future}
+}
+
+func (a *ConnectStub) DescribeRoutingProfile(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) (*connect.DescribeRoutingProfileOutput, error) {
+	var output connect.DescribeRoutingProfileOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.DescribeRoutingProfile", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) DescribeRoutingProfileAsync(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) *ConnectDescribeRoutingProfileResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.DescribeRoutingProfile", input)
+	return &ConnectDescribeRoutingProfileResult{Result: future}
 }
 
 func (a *ConnectStub) DescribeUser(ctx workflow.Context, input *connect.DescribeUserInput) (*connect.DescribeUserOutput, error) {
@@ -499,6 +736,17 @@ func (a *ConnectStub) DescribeUserHierarchyStructure(ctx workflow.Context, input
 func (a *ConnectStub) DescribeUserHierarchyStructureAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) *ConnectDescribeUserHierarchyStructureResult {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DescribeUserHierarchyStructure", input)
 	return &ConnectDescribeUserHierarchyStructureResult{Result: future}
+}
+
+func (a *ConnectStub) DisassociateRoutingProfileQueues(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) (*connect.DisassociateRoutingProfileQueuesOutput, error) {
+	var output connect.DisassociateRoutingProfileQueuesOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.DisassociateRoutingProfileQueues", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) DisassociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) *ConnectDisassociateRoutingProfileQueuesResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.DisassociateRoutingProfileQueues", input)
+	return &ConnectDisassociateRoutingProfileQueuesResult{Result: future}
 }
 
 func (a *ConnectStub) GetContactAttributes(ctx workflow.Context, input *connect.GetContactAttributesInput) (*connect.GetContactAttributesOutput, error) {
@@ -578,6 +826,17 @@ func (a *ConnectStub) ListPhoneNumbersAsync(ctx workflow.Context, input *connect
 	return &ConnectListPhoneNumbersResult{Result: future}
 }
 
+func (a *ConnectStub) ListPrompts(ctx workflow.Context, input *connect.ListPromptsInput) (*connect.ListPromptsOutput, error) {
+	var output connect.ListPromptsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.ListPrompts", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) ListPromptsAsync(ctx workflow.Context, input *connect.ListPromptsInput) *ConnectListPromptsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.ListPrompts", input)
+	return &ConnectListPromptsResult{Result: future}
+}
+
 func (a *ConnectStub) ListQueues(ctx workflow.Context, input *connect.ListQueuesInput) (*connect.ListQueuesOutput, error) {
 	var output connect.ListQueuesOutput
 	err := workflow.ExecuteActivity(ctx, "aws.connect.ListQueues", input).Get(ctx, &output)
@@ -587,6 +846,17 @@ func (a *ConnectStub) ListQueues(ctx workflow.Context, input *connect.ListQueues
 func (a *ConnectStub) ListQueuesAsync(ctx workflow.Context, input *connect.ListQueuesInput) *ConnectListQueuesResult {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListQueues", input)
 	return &ConnectListQueuesResult{Result: future}
+}
+
+func (a *ConnectStub) ListRoutingProfileQueues(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) (*connect.ListRoutingProfileQueuesOutput, error) {
+	var output connect.ListRoutingProfileQueuesOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.ListRoutingProfileQueues", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) ListRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) *ConnectListRoutingProfileQueuesResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.ListRoutingProfileQueues", input)
+	return &ConnectListRoutingProfileQueuesResult{Result: future}
 }
 
 func (a *ConnectStub) ListRoutingProfiles(ctx workflow.Context, input *connect.ListRoutingProfilesInput) (*connect.ListRoutingProfilesOutput, error) {
@@ -752,6 +1022,72 @@ func (a *ConnectStub) UpdateContactAttributes(ctx workflow.Context, input *conne
 func (a *ConnectStub) UpdateContactAttributesAsync(ctx workflow.Context, input *connect.UpdateContactAttributesInput) *ConnectUpdateContactAttributesResult {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateContactAttributes", input)
 	return &ConnectUpdateContactAttributesResult{Result: future}
+}
+
+func (a *ConnectStub) UpdateContactFlowContent(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) (*connect.UpdateContactFlowContentOutput, error) {
+	var output connect.UpdateContactFlowContentOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.UpdateContactFlowContent", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) UpdateContactFlowContentAsync(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) *ConnectUpdateContactFlowContentResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateContactFlowContent", input)
+	return &ConnectUpdateContactFlowContentResult{Result: future}
+}
+
+func (a *ConnectStub) UpdateContactFlowName(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) (*connect.UpdateContactFlowNameOutput, error) {
+	var output connect.UpdateContactFlowNameOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.UpdateContactFlowName", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) UpdateContactFlowNameAsync(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) *ConnectUpdateContactFlowNameResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateContactFlowName", input)
+	return &ConnectUpdateContactFlowNameResult{Result: future}
+}
+
+func (a *ConnectStub) UpdateRoutingProfileConcurrency(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) (*connect.UpdateRoutingProfileConcurrencyOutput, error) {
+	var output connect.UpdateRoutingProfileConcurrencyOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileConcurrency", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) UpdateRoutingProfileConcurrencyAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) *ConnectUpdateRoutingProfileConcurrencyResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileConcurrency", input)
+	return &ConnectUpdateRoutingProfileConcurrencyResult{Result: future}
+}
+
+func (a *ConnectStub) UpdateRoutingProfileDefaultOutboundQueue(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) (*connect.UpdateRoutingProfileDefaultOutboundQueueOutput, error) {
+	var output connect.UpdateRoutingProfileDefaultOutboundQueueOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileDefaultOutboundQueue", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) UpdateRoutingProfileDefaultOutboundQueueAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) *ConnectUpdateRoutingProfileDefaultOutboundQueueResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileDefaultOutboundQueue", input)
+	return &ConnectUpdateRoutingProfileDefaultOutboundQueueResult{Result: future}
+}
+
+func (a *ConnectStub) UpdateRoutingProfileName(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) (*connect.UpdateRoutingProfileNameOutput, error) {
+	var output connect.UpdateRoutingProfileNameOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileName", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) UpdateRoutingProfileNameAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) *ConnectUpdateRoutingProfileNameResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileName", input)
+	return &ConnectUpdateRoutingProfileNameResult{Result: future}
+}
+
+func (a *ConnectStub) UpdateRoutingProfileQueues(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) (*connect.UpdateRoutingProfileQueuesOutput, error) {
+	var output connect.UpdateRoutingProfileQueuesOutput
+	err := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileQueues", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ConnectStub) UpdateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) *ConnectUpdateRoutingProfileQueuesResult {
+	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileQueues", input)
+	return &ConnectUpdateRoutingProfileQueuesResult{Result: future}
 }
 
 func (a *ConnectStub) UpdateUserHierarchy(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) (*connect.UpdateUserHierarchyOutput, error) {

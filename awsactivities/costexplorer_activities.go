@@ -46,12 +46,44 @@ func (a *CostExplorerActivities) getClient(ctx context.Context) (costexplorerifa
 	return costexplorer.New(sess), nil
 }
 
+func (a *CostExplorerActivities) CreateAnomalyMonitor(ctx context.Context, input *costexplorer.CreateAnomalyMonitorInput) (*costexplorer.CreateAnomalyMonitorOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateAnomalyMonitorWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) CreateAnomalySubscription(ctx context.Context, input *costexplorer.CreateAnomalySubscriptionInput) (*costexplorer.CreateAnomalySubscriptionOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateAnomalySubscriptionWithContext(ctx, input)
+}
+
 func (a *CostExplorerActivities) CreateCostCategoryDefinition(ctx context.Context, input *costexplorer.CreateCostCategoryDefinitionInput) (*costexplorer.CreateCostCategoryDefinitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
 		return nil, err
 	}
 	return client.CreateCostCategoryDefinitionWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) DeleteAnomalyMonitor(ctx context.Context, input *costexplorer.DeleteAnomalyMonitorInput) (*costexplorer.DeleteAnomalyMonitorOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteAnomalyMonitorWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) DeleteAnomalySubscription(ctx context.Context, input *costexplorer.DeleteAnomalySubscriptionInput) (*costexplorer.DeleteAnomalySubscriptionOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteAnomalySubscriptionWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) DeleteCostCategoryDefinition(ctx context.Context, input *costexplorer.DeleteCostCategoryDefinitionInput) (*costexplorer.DeleteCostCategoryDefinitionOutput, error) {
@@ -68,6 +100,30 @@ func (a *CostExplorerActivities) DescribeCostCategoryDefinition(ctx context.Cont
 		return nil, err
 	}
 	return client.DescribeCostCategoryDefinitionWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) GetAnomalies(ctx context.Context, input *costexplorer.GetAnomaliesInput) (*costexplorer.GetAnomaliesOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAnomaliesWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) GetAnomalyMonitors(ctx context.Context, input *costexplorer.GetAnomalyMonitorsInput) (*costexplorer.GetAnomalyMonitorsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAnomalyMonitorsWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) GetAnomalySubscriptions(ctx context.Context, input *costexplorer.GetAnomalySubscriptionsInput) (*costexplorer.GetAnomalySubscriptionsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAnomalySubscriptionsWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetCostAndUsage(ctx context.Context, input *costexplorer.GetCostAndUsageInput) (*costexplorer.GetCostAndUsageOutput, error) {
@@ -188,6 +244,30 @@ func (a *CostExplorerActivities) ListCostCategoryDefinitions(ctx context.Context
 		return nil, err
 	}
 	return client.ListCostCategoryDefinitionsWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) ProvideAnomalyFeedback(ctx context.Context, input *costexplorer.ProvideAnomalyFeedbackInput) (*costexplorer.ProvideAnomalyFeedbackOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ProvideAnomalyFeedbackWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) UpdateAnomalyMonitor(ctx context.Context, input *costexplorer.UpdateAnomalyMonitorInput) (*costexplorer.UpdateAnomalyMonitorOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateAnomalyMonitorWithContext(ctx, input)
+}
+
+func (a *CostExplorerActivities) UpdateAnomalySubscription(ctx context.Context, input *costexplorer.UpdateAnomalySubscriptionInput) (*costexplorer.UpdateAnomalySubscriptionOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateAnomalySubscriptionWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) UpdateCostCategoryDefinition(ctx context.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) (*costexplorer.UpdateCostCategoryDefinitionOutput, error) {

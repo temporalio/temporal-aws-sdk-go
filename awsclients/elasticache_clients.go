@@ -49,6 +49,12 @@ type ElastiCacheClient interface {
 	CreateSnapshot(ctx workflow.Context, input *elasticache.CreateSnapshotInput) (*elasticache.CreateSnapshotOutput, error)
 	CreateSnapshotAsync(ctx workflow.Context, input *elasticache.CreateSnapshotInput) *ElasticacheCreateSnapshotResult
 
+	CreateUser(ctx workflow.Context, input *elasticache.CreateUserInput) (*elasticache.CreateUserOutput, error)
+	CreateUserAsync(ctx workflow.Context, input *elasticache.CreateUserInput) *ElasticacheCreateUserResult
+
+	CreateUserGroup(ctx workflow.Context, input *elasticache.CreateUserGroupInput) (*elasticache.CreateUserGroupOutput, error)
+	CreateUserGroupAsync(ctx workflow.Context, input *elasticache.CreateUserGroupInput) *ElasticacheCreateUserGroupResult
+
 	DecreaseNodeGroupsInGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) (*elasticache.DecreaseNodeGroupsInGlobalReplicationGroupOutput, error)
 	DecreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) *ElasticacheDecreaseNodeGroupsInGlobalReplicationGroupResult
 
@@ -75,6 +81,12 @@ type ElastiCacheClient interface {
 
 	DeleteSnapshot(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) (*elasticache.DeleteSnapshotOutput, error)
 	DeleteSnapshotAsync(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) *ElasticacheDeleteSnapshotResult
+
+	DeleteUser(ctx workflow.Context, input *elasticache.DeleteUserInput) (*elasticache.DeleteUserOutput, error)
+	DeleteUserAsync(ctx workflow.Context, input *elasticache.DeleteUserInput) *ElasticacheDeleteUserResult
+
+	DeleteUserGroup(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) (*elasticache.DeleteUserGroupOutput, error)
+	DeleteUserGroupAsync(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) *ElasticacheDeleteUserGroupResult
 
 	DescribeCacheClusters(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) (*elasticache.DescribeCacheClustersOutput, error)
 	DescribeCacheClustersAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *ElasticacheDescribeCacheClustersResult
@@ -121,6 +133,12 @@ type ElastiCacheClient interface {
 	DescribeUpdateActions(ctx workflow.Context, input *elasticache.DescribeUpdateActionsInput) (*elasticache.DescribeUpdateActionsOutput, error)
 	DescribeUpdateActionsAsync(ctx workflow.Context, input *elasticache.DescribeUpdateActionsInput) *ElasticacheDescribeUpdateActionsResult
 
+	DescribeUserGroups(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) (*elasticache.DescribeUserGroupsOutput, error)
+	DescribeUserGroupsAsync(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) *ElasticacheDescribeUserGroupsResult
+
+	DescribeUsers(ctx workflow.Context, input *elasticache.DescribeUsersInput) (*elasticache.DescribeUsersOutput, error)
+	DescribeUsersAsync(ctx workflow.Context, input *elasticache.DescribeUsersInput) *ElasticacheDescribeUsersResult
+
 	DisassociateGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) (*elasticache.DisassociateGlobalReplicationGroupOutput, error)
 	DisassociateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) *ElasticacheDisassociateGlobalReplicationGroupResult
 
@@ -156,6 +174,12 @@ type ElastiCacheClient interface {
 
 	ModifyReplicationGroupShardConfiguration(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) (*elasticache.ModifyReplicationGroupShardConfigurationOutput, error)
 	ModifyReplicationGroupShardConfigurationAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) *ElasticacheModifyReplicationGroupShardConfigurationResult
+
+	ModifyUser(ctx workflow.Context, input *elasticache.ModifyUserInput) (*elasticache.ModifyUserOutput, error)
+	ModifyUserAsync(ctx workflow.Context, input *elasticache.ModifyUserInput) *ElasticacheModifyUserResult
+
+	ModifyUserGroup(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) (*elasticache.ModifyUserGroupOutput, error)
+	ModifyUserGroupAsync(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) *ElasticacheModifyUserGroupResult
 
 	PurchaseReservedCacheNodesOffering(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) (*elasticache.PurchaseReservedCacheNodesOfferingOutput, error)
 	PurchaseReservedCacheNodesOfferingAsync(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) *ElasticachePurchaseReservedCacheNodesOfferingResult
@@ -322,6 +346,26 @@ func (r *ElasticacheCreateSnapshotResult) Get(ctx workflow.Context) (*elasticach
 	return &output, err
 }
 
+type ElasticacheCreateUserResult struct {
+	Result workflow.Future
+}
+
+func (r *ElasticacheCreateUserResult) Get(ctx workflow.Context) (*elasticache.CreateUserOutput, error) {
+	var output elasticache.CreateUserOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ElasticacheCreateUserGroupResult struct {
+	Result workflow.Future
+}
+
+func (r *ElasticacheCreateUserGroupResult) Get(ctx workflow.Context) (*elasticache.CreateUserGroupOutput, error) {
+	var output elasticache.CreateUserGroupOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type ElasticacheDecreaseNodeGroupsInGlobalReplicationGroupResult struct {
 	Result workflow.Future
 }
@@ -408,6 +452,26 @@ type ElasticacheDeleteSnapshotResult struct {
 
 func (r *ElasticacheDeleteSnapshotResult) Get(ctx workflow.Context) (*elasticache.DeleteSnapshotOutput, error) {
 	var output elasticache.DeleteSnapshotOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ElasticacheDeleteUserResult struct {
+	Result workflow.Future
+}
+
+func (r *ElasticacheDeleteUserResult) Get(ctx workflow.Context) (*elasticache.DeleteUserOutput, error) {
+	var output elasticache.DeleteUserOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ElasticacheDeleteUserGroupResult struct {
+	Result workflow.Future
+}
+
+func (r *ElasticacheDeleteUserGroupResult) Get(ctx workflow.Context) (*elasticache.DeleteUserGroupOutput, error) {
+	var output elasticache.DeleteUserGroupOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -562,6 +626,26 @@ func (r *ElasticacheDescribeUpdateActionsResult) Get(ctx workflow.Context) (*ela
 	return &output, err
 }
 
+type ElasticacheDescribeUserGroupsResult struct {
+	Result workflow.Future
+}
+
+func (r *ElasticacheDescribeUserGroupsResult) Get(ctx workflow.Context) (*elasticache.DescribeUserGroupsOutput, error) {
+	var output elasticache.DescribeUserGroupsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ElasticacheDescribeUsersResult struct {
+	Result workflow.Future
+}
+
+func (r *ElasticacheDescribeUsersResult) Get(ctx workflow.Context) (*elasticache.DescribeUsersOutput, error) {
+	var output elasticache.DescribeUsersOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type ElasticacheDisassociateGlobalReplicationGroupResult struct {
 	Result workflow.Future
 }
@@ -678,6 +762,26 @@ type ElasticacheModifyReplicationGroupShardConfigurationResult struct {
 
 func (r *ElasticacheModifyReplicationGroupShardConfigurationResult) Get(ctx workflow.Context) (*elasticache.ModifyReplicationGroupShardConfigurationOutput, error) {
 	var output elasticache.ModifyReplicationGroupShardConfigurationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ElasticacheModifyUserResult struct {
+	Result workflow.Future
+}
+
+func (r *ElasticacheModifyUserResult) Get(ctx workflow.Context) (*elasticache.ModifyUserOutput, error) {
+	var output elasticache.ModifyUserOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ElasticacheModifyUserGroupResult struct {
+	Result workflow.Future
+}
+
+func (r *ElasticacheModifyUserGroupResult) Get(ctx workflow.Context) (*elasticache.ModifyUserGroupOutput, error) {
+	var output elasticache.ModifyUserGroupOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -909,6 +1013,28 @@ func (a *ElastiCacheStub) CreateSnapshotAsync(ctx workflow.Context, input *elast
 	return &ElasticacheCreateSnapshotResult{Result: future}
 }
 
+func (a *ElastiCacheStub) CreateUser(ctx workflow.Context, input *elasticache.CreateUserInput) (*elasticache.CreateUserOutput, error) {
+	var output elasticache.CreateUserOutput
+	err := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateUser", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ElastiCacheStub) CreateUserAsync(ctx workflow.Context, input *elasticache.CreateUserInput) *ElasticacheCreateUserResult {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateUser", input)
+	return &ElasticacheCreateUserResult{Result: future}
+}
+
+func (a *ElastiCacheStub) CreateUserGroup(ctx workflow.Context, input *elasticache.CreateUserGroupInput) (*elasticache.CreateUserGroupOutput, error) {
+	var output elasticache.CreateUserGroupOutput
+	err := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateUserGroup", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ElastiCacheStub) CreateUserGroupAsync(ctx workflow.Context, input *elasticache.CreateUserGroupInput) *ElasticacheCreateUserGroupResult {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateUserGroup", input)
+	return &ElasticacheCreateUserGroupResult{Result: future}
+}
+
 func (a *ElastiCacheStub) DecreaseNodeGroupsInGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) (*elasticache.DecreaseNodeGroupsInGlobalReplicationGroupOutput, error) {
 	var output elasticache.DecreaseNodeGroupsInGlobalReplicationGroupOutput
 	err := workflow.ExecuteActivity(ctx, "aws.elasticache.DecreaseNodeGroupsInGlobalReplicationGroup", input).Get(ctx, &output)
@@ -1006,6 +1132,28 @@ func (a *ElastiCacheStub) DeleteSnapshot(ctx workflow.Context, input *elasticach
 func (a *ElastiCacheStub) DeleteSnapshotAsync(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) *ElasticacheDeleteSnapshotResult {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteSnapshot", input)
 	return &ElasticacheDeleteSnapshotResult{Result: future}
+}
+
+func (a *ElastiCacheStub) DeleteUser(ctx workflow.Context, input *elasticache.DeleteUserInput) (*elasticache.DeleteUserOutput, error) {
+	var output elasticache.DeleteUserOutput
+	err := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteUser", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ElastiCacheStub) DeleteUserAsync(ctx workflow.Context, input *elasticache.DeleteUserInput) *ElasticacheDeleteUserResult {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteUser", input)
+	return &ElasticacheDeleteUserResult{Result: future}
+}
+
+func (a *ElastiCacheStub) DeleteUserGroup(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) (*elasticache.DeleteUserGroupOutput, error) {
+	var output elasticache.DeleteUserGroupOutput
+	err := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteUserGroup", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ElastiCacheStub) DeleteUserGroupAsync(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) *ElasticacheDeleteUserGroupResult {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteUserGroup", input)
+	return &ElasticacheDeleteUserGroupResult{Result: future}
 }
 
 func (a *ElastiCacheStub) DescribeCacheClusters(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) (*elasticache.DescribeCacheClustersOutput, error) {
@@ -1173,6 +1321,28 @@ func (a *ElastiCacheStub) DescribeUpdateActionsAsync(ctx workflow.Context, input
 	return &ElasticacheDescribeUpdateActionsResult{Result: future}
 }
 
+func (a *ElastiCacheStub) DescribeUserGroups(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) (*elasticache.DescribeUserGroupsOutput, error) {
+	var output elasticache.DescribeUserGroupsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeUserGroups", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ElastiCacheStub) DescribeUserGroupsAsync(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) *ElasticacheDescribeUserGroupsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeUserGroups", input)
+	return &ElasticacheDescribeUserGroupsResult{Result: future}
+}
+
+func (a *ElastiCacheStub) DescribeUsers(ctx workflow.Context, input *elasticache.DescribeUsersInput) (*elasticache.DescribeUsersOutput, error) {
+	var output elasticache.DescribeUsersOutput
+	err := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeUsers", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ElastiCacheStub) DescribeUsersAsync(ctx workflow.Context, input *elasticache.DescribeUsersInput) *ElasticacheDescribeUsersResult {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeUsers", input)
+	return &ElasticacheDescribeUsersResult{Result: future}
+}
+
 func (a *ElastiCacheStub) DisassociateGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) (*elasticache.DisassociateGlobalReplicationGroupOutput, error) {
 	var output elasticache.DisassociateGlobalReplicationGroupOutput
 	err := workflow.ExecuteActivity(ctx, "aws.elasticache.DisassociateGlobalReplicationGroup", input).Get(ctx, &output)
@@ -1303,6 +1473,28 @@ func (a *ElastiCacheStub) ModifyReplicationGroupShardConfiguration(ctx workflow.
 func (a *ElastiCacheStub) ModifyReplicationGroupShardConfigurationAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) *ElasticacheModifyReplicationGroupShardConfigurationResult {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyReplicationGroupShardConfiguration", input)
 	return &ElasticacheModifyReplicationGroupShardConfigurationResult{Result: future}
+}
+
+func (a *ElastiCacheStub) ModifyUser(ctx workflow.Context, input *elasticache.ModifyUserInput) (*elasticache.ModifyUserOutput, error) {
+	var output elasticache.ModifyUserOutput
+	err := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyUser", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ElastiCacheStub) ModifyUserAsync(ctx workflow.Context, input *elasticache.ModifyUserInput) *ElasticacheModifyUserResult {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyUser", input)
+	return &ElasticacheModifyUserResult{Result: future}
+}
+
+func (a *ElastiCacheStub) ModifyUserGroup(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) (*elasticache.ModifyUserGroupOutput, error) {
+	var output elasticache.ModifyUserGroupOutput
+	err := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyUserGroup", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ElastiCacheStub) ModifyUserGroupAsync(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) *ElasticacheModifyUserGroupResult {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyUserGroup", input)
+	return &ElasticacheModifyUserGroupResult{Result: future}
 }
 
 func (a *ElastiCacheStub) PurchaseReservedCacheNodesOffering(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) (*elasticache.PurchaseReservedCacheNodesOfferingOutput, error) {

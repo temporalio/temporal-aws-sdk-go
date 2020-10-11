@@ -46,6 +46,22 @@ func (a *KafkaActivities) getClient(ctx context.Context) (kafkaiface.KafkaAPI, e
 	return kafka.New(sess), nil
 }
 
+func (a *KafkaActivities) BatchAssociateScramSecret(ctx context.Context, input *kafka.BatchAssociateScramSecretInput) (*kafka.BatchAssociateScramSecretOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchAssociateScramSecretWithContext(ctx, input)
+}
+
+func (a *KafkaActivities) BatchDisassociateScramSecret(ctx context.Context, input *kafka.BatchDisassociateScramSecretInput) (*kafka.BatchDisassociateScramSecretOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchDisassociateScramSecretWithContext(ctx, input)
+}
+
 func (a *KafkaActivities) CreateCluster(ctx context.Context, input *kafka.CreateClusterInput) (*kafka.CreateClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -172,6 +188,14 @@ func (a *KafkaActivities) ListNodes(ctx context.Context, input *kafka.ListNodesI
 		return nil, err
 	}
 	return client.ListNodesWithContext(ctx, input)
+}
+
+func (a *KafkaActivities) ListScramSecrets(ctx context.Context, input *kafka.ListScramSecretsInput) (*kafka.ListScramSecretsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListScramSecretsWithContext(ctx, input)
 }
 
 func (a *KafkaActivities) ListTagsForResource(ctx context.Context, input *kafka.ListTagsForResourceInput) (*kafka.ListTagsForResourceOutput, error) {

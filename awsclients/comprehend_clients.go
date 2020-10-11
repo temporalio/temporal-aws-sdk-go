@@ -67,6 +67,9 @@ type ComprehendClient interface {
 	DescribeKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) (*comprehend.DescribeKeyPhrasesDetectionJobOutput, error)
 	DescribeKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) *ComprehendDescribeKeyPhrasesDetectionJobResult
 
+	DescribePiiEntitiesDetectionJob(ctx workflow.Context, input *comprehend.DescribePiiEntitiesDetectionJobInput) (*comprehend.DescribePiiEntitiesDetectionJobOutput, error)
+	DescribePiiEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribePiiEntitiesDetectionJobInput) *ComprehendDescribePiiEntitiesDetectionJobResult
+
 	DescribeSentimentDetectionJob(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) (*comprehend.DescribeSentimentDetectionJobOutput, error)
 	DescribeSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) *ComprehendDescribeSentimentDetectionJobResult
 
@@ -81,6 +84,9 @@ type ComprehendClient interface {
 
 	DetectKeyPhrases(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) (*comprehend.DetectKeyPhrasesOutput, error)
 	DetectKeyPhrasesAsync(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) *ComprehendDetectKeyPhrasesResult
+
+	DetectPiiEntities(ctx workflow.Context, input *comprehend.DetectPiiEntitiesInput) (*comprehend.DetectPiiEntitiesOutput, error)
+	DetectPiiEntitiesAsync(ctx workflow.Context, input *comprehend.DetectPiiEntitiesInput) *ComprehendDetectPiiEntitiesResult
 
 	DetectSentiment(ctx workflow.Context, input *comprehend.DetectSentimentInput) (*comprehend.DetectSentimentOutput, error)
 	DetectSentimentAsync(ctx workflow.Context, input *comprehend.DetectSentimentInput) *ComprehendDetectSentimentResult
@@ -109,6 +115,9 @@ type ComprehendClient interface {
 	ListKeyPhrasesDetectionJobs(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) (*comprehend.ListKeyPhrasesDetectionJobsOutput, error)
 	ListKeyPhrasesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) *ComprehendListKeyPhrasesDetectionJobsResult
 
+	ListPiiEntitiesDetectionJobs(ctx workflow.Context, input *comprehend.ListPiiEntitiesDetectionJobsInput) (*comprehend.ListPiiEntitiesDetectionJobsOutput, error)
+	ListPiiEntitiesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListPiiEntitiesDetectionJobsInput) *ComprehendListPiiEntitiesDetectionJobsResult
+
 	ListSentimentDetectionJobs(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) (*comprehend.ListSentimentDetectionJobsOutput, error)
 	ListSentimentDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) *ComprehendListSentimentDetectionJobsResult
 
@@ -130,6 +139,9 @@ type ComprehendClient interface {
 	StartKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) (*comprehend.StartKeyPhrasesDetectionJobOutput, error)
 	StartKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) *ComprehendStartKeyPhrasesDetectionJobResult
 
+	StartPiiEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StartPiiEntitiesDetectionJobInput) (*comprehend.StartPiiEntitiesDetectionJobOutput, error)
+	StartPiiEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartPiiEntitiesDetectionJobInput) *ComprehendStartPiiEntitiesDetectionJobResult
+
 	StartSentimentDetectionJob(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) (*comprehend.StartSentimentDetectionJobOutput, error)
 	StartSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) *ComprehendStartSentimentDetectionJobResult
 
@@ -144,6 +156,9 @@ type ComprehendClient interface {
 
 	StopKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) (*comprehend.StopKeyPhrasesDetectionJobOutput, error)
 	StopKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) *ComprehendStopKeyPhrasesDetectionJobResult
+
+	StopPiiEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StopPiiEntitiesDetectionJobInput) (*comprehend.StopPiiEntitiesDetectionJobOutput, error)
+	StopPiiEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopPiiEntitiesDetectionJobInput) *ComprehendStopPiiEntitiesDetectionJobResult
 
 	StopSentimentDetectionJob(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) (*comprehend.StopSentimentDetectionJobOutput, error)
 	StopSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) *ComprehendStopSentimentDetectionJobResult
@@ -360,6 +375,16 @@ func (r *ComprehendDescribeKeyPhrasesDetectionJobResult) Get(ctx workflow.Contex
 	return &output, err
 }
 
+type ComprehendDescribePiiEntitiesDetectionJobResult struct {
+	Result workflow.Future
+}
+
+func (r *ComprehendDescribePiiEntitiesDetectionJobResult) Get(ctx workflow.Context) (*comprehend.DescribePiiEntitiesDetectionJobOutput, error) {
+	var output comprehend.DescribePiiEntitiesDetectionJobOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type ComprehendDescribeSentimentDetectionJobResult struct {
 	Result workflow.Future
 }
@@ -406,6 +431,16 @@ type ComprehendDetectKeyPhrasesResult struct {
 
 func (r *ComprehendDetectKeyPhrasesResult) Get(ctx workflow.Context) (*comprehend.DetectKeyPhrasesOutput, error) {
 	var output comprehend.DetectKeyPhrasesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ComprehendDetectPiiEntitiesResult struct {
+	Result workflow.Future
+}
+
+func (r *ComprehendDetectPiiEntitiesResult) Get(ctx workflow.Context) (*comprehend.DetectPiiEntitiesOutput, error) {
+	var output comprehend.DetectPiiEntitiesOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -500,6 +535,16 @@ func (r *ComprehendListKeyPhrasesDetectionJobsResult) Get(ctx workflow.Context) 
 	return &output, err
 }
 
+type ComprehendListPiiEntitiesDetectionJobsResult struct {
+	Result workflow.Future
+}
+
+func (r *ComprehendListPiiEntitiesDetectionJobsResult) Get(ctx workflow.Context) (*comprehend.ListPiiEntitiesDetectionJobsOutput, error) {
+	var output comprehend.ListPiiEntitiesDetectionJobsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type ComprehendListSentimentDetectionJobsResult struct {
 	Result workflow.Future
 }
@@ -570,6 +615,16 @@ func (r *ComprehendStartKeyPhrasesDetectionJobResult) Get(ctx workflow.Context) 
 	return &output, err
 }
 
+type ComprehendStartPiiEntitiesDetectionJobResult struct {
+	Result workflow.Future
+}
+
+func (r *ComprehendStartPiiEntitiesDetectionJobResult) Get(ctx workflow.Context) (*comprehend.StartPiiEntitiesDetectionJobOutput, error) {
+	var output comprehend.StartPiiEntitiesDetectionJobOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type ComprehendStartSentimentDetectionJobResult struct {
 	Result workflow.Future
 }
@@ -616,6 +671,16 @@ type ComprehendStopKeyPhrasesDetectionJobResult struct {
 
 func (r *ComprehendStopKeyPhrasesDetectionJobResult) Get(ctx workflow.Context) (*comprehend.StopKeyPhrasesDetectionJobOutput, error) {
 	var output comprehend.StopKeyPhrasesDetectionJobOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ComprehendStopPiiEntitiesDetectionJobResult struct {
+	Result workflow.Future
+}
+
+func (r *ComprehendStopPiiEntitiesDetectionJobResult) Get(ctx workflow.Context) (*comprehend.StopPiiEntitiesDetectionJobOutput, error) {
+	var output comprehend.StopPiiEntitiesDetectionJobOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -889,6 +954,17 @@ func (a *ComprehendStub) DescribeKeyPhrasesDetectionJobAsync(ctx workflow.Contex
 	return &ComprehendDescribeKeyPhrasesDetectionJobResult{Result: future}
 }
 
+func (a *ComprehendStub) DescribePiiEntitiesDetectionJob(ctx workflow.Context, input *comprehend.DescribePiiEntitiesDetectionJobInput) (*comprehend.DescribePiiEntitiesDetectionJobOutput, error) {
+	var output comprehend.DescribePiiEntitiesDetectionJobOutput
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribePiiEntitiesDetectionJob", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ComprehendStub) DescribePiiEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribePiiEntitiesDetectionJobInput) *ComprehendDescribePiiEntitiesDetectionJobResult {
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribePiiEntitiesDetectionJob", input)
+	return &ComprehendDescribePiiEntitiesDetectionJobResult{Result: future}
+}
+
 func (a *ComprehendStub) DescribeSentimentDetectionJob(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) (*comprehend.DescribeSentimentDetectionJobOutput, error) {
 	var output comprehend.DescribeSentimentDetectionJobOutput
 	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeSentimentDetectionJob", input).Get(ctx, &output)
@@ -942,6 +1018,17 @@ func (a *ComprehendStub) DetectKeyPhrases(ctx workflow.Context, input *comprehen
 func (a *ComprehendStub) DetectKeyPhrasesAsync(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) *ComprehendDetectKeyPhrasesResult {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectKeyPhrases", input)
 	return &ComprehendDetectKeyPhrasesResult{Result: future}
+}
+
+func (a *ComprehendStub) DetectPiiEntities(ctx workflow.Context, input *comprehend.DetectPiiEntitiesInput) (*comprehend.DetectPiiEntitiesOutput, error) {
+	var output comprehend.DetectPiiEntitiesOutput
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectPiiEntities", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ComprehendStub) DetectPiiEntitiesAsync(ctx workflow.Context, input *comprehend.DetectPiiEntitiesInput) *ComprehendDetectPiiEntitiesResult {
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectPiiEntities", input)
+	return &ComprehendDetectPiiEntitiesResult{Result: future}
 }
 
 func (a *ComprehendStub) DetectSentiment(ctx workflow.Context, input *comprehend.DetectSentimentInput) (*comprehend.DetectSentimentOutput, error) {
@@ -1043,6 +1130,17 @@ func (a *ComprehendStub) ListKeyPhrasesDetectionJobsAsync(ctx workflow.Context, 
 	return &ComprehendListKeyPhrasesDetectionJobsResult{Result: future}
 }
 
+func (a *ComprehendStub) ListPiiEntitiesDetectionJobs(ctx workflow.Context, input *comprehend.ListPiiEntitiesDetectionJobsInput) (*comprehend.ListPiiEntitiesDetectionJobsOutput, error) {
+	var output comprehend.ListPiiEntitiesDetectionJobsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListPiiEntitiesDetectionJobs", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ComprehendStub) ListPiiEntitiesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListPiiEntitiesDetectionJobsInput) *ComprehendListPiiEntitiesDetectionJobsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListPiiEntitiesDetectionJobs", input)
+	return &ComprehendListPiiEntitiesDetectionJobsResult{Result: future}
+}
+
 func (a *ComprehendStub) ListSentimentDetectionJobs(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) (*comprehend.ListSentimentDetectionJobsOutput, error) {
 	var output comprehend.ListSentimentDetectionJobsOutput
 	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListSentimentDetectionJobs", input).Get(ctx, &output)
@@ -1120,6 +1218,17 @@ func (a *ComprehendStub) StartKeyPhrasesDetectionJobAsync(ctx workflow.Context, 
 	return &ComprehendStartKeyPhrasesDetectionJobResult{Result: future}
 }
 
+func (a *ComprehendStub) StartPiiEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StartPiiEntitiesDetectionJobInput) (*comprehend.StartPiiEntitiesDetectionJobOutput, error) {
+	var output comprehend.StartPiiEntitiesDetectionJobOutput
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StartPiiEntitiesDetectionJob", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ComprehendStub) StartPiiEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartPiiEntitiesDetectionJobInput) *ComprehendStartPiiEntitiesDetectionJobResult {
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StartPiiEntitiesDetectionJob", input)
+	return &ComprehendStartPiiEntitiesDetectionJobResult{Result: future}
+}
+
 func (a *ComprehendStub) StartSentimentDetectionJob(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) (*comprehend.StartSentimentDetectionJobOutput, error) {
 	var output comprehend.StartSentimentDetectionJobOutput
 	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StartSentimentDetectionJob", input).Get(ctx, &output)
@@ -1173,6 +1282,17 @@ func (a *ComprehendStub) StopKeyPhrasesDetectionJob(ctx workflow.Context, input 
 func (a *ComprehendStub) StopKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) *ComprehendStopKeyPhrasesDetectionJobResult {
 	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StopKeyPhrasesDetectionJob", input)
 	return &ComprehendStopKeyPhrasesDetectionJobResult{Result: future}
+}
+
+func (a *ComprehendStub) StopPiiEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StopPiiEntitiesDetectionJobInput) (*comprehend.StopPiiEntitiesDetectionJobOutput, error) {
+	var output comprehend.StopPiiEntitiesDetectionJobOutput
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StopPiiEntitiesDetectionJob", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ComprehendStub) StopPiiEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopPiiEntitiesDetectionJobInput) *ComprehendStopPiiEntitiesDetectionJobResult {
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StopPiiEntitiesDetectionJob", input)
+	return &ComprehendStopPiiEntitiesDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StopSentimentDetectionJob(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) (*comprehend.StopSentimentDetectionJobOutput, error) {

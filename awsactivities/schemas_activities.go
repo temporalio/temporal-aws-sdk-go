@@ -142,6 +142,14 @@ func (a *SchemasActivities) DescribeSchema(ctx context.Context, input *schemas.D
 	return client.DescribeSchemaWithContext(ctx, input)
 }
 
+func (a *SchemasActivities) ExportSchema(ctx context.Context, input *schemas.ExportSchemaInput) (*schemas.ExportSchemaOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ExportSchemaWithContext(ctx, input)
+}
+
 func (a *SchemasActivities) GetCodeBindingSource(ctx context.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {

@@ -4,6 +4,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"go.temporal.io/aws-sdk/awsactivities"
+	_ "go.temporal.io/aws-sdk/awsclients" // force compilation
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
 	"log"

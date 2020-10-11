@@ -446,6 +446,14 @@ func (a *ServiceCatalogActivities) GetAWSOrganizationsAccessStatus(ctx context.C
 	return client.GetAWSOrganizationsAccessStatusWithContext(ctx, input)
 }
 
+func (a *ServiceCatalogActivities) GetProvisionedProductOutputs(ctx context.Context, input *servicecatalog.GetProvisionedProductOutputsInput) (*servicecatalog.GetProvisionedProductOutputsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetProvisionedProductOutputsWithContext(ctx, input)
+}
+
 func (a *ServiceCatalogActivities) ListAcceptedPortfolioShares(ctx context.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) (*servicecatalog.ListAcceptedPortfolioSharesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {

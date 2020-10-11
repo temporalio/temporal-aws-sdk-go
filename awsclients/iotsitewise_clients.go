@@ -40,6 +40,9 @@ type IoTSiteWiseClient interface {
 	CreatePortal(ctx workflow.Context, input *iotsitewise.CreatePortalInput) (*iotsitewise.CreatePortalOutput, error)
 	CreatePortalAsync(ctx workflow.Context, input *iotsitewise.CreatePortalInput) *IotsitewiseCreatePortalResult
 
+	CreatePresignedPortalUrl(ctx workflow.Context, input *iotsitewise.CreatePresignedPortalUrlInput) (*iotsitewise.CreatePresignedPortalUrlOutput, error)
+	CreatePresignedPortalUrlAsync(ctx workflow.Context, input *iotsitewise.CreatePresignedPortalUrlInput) *IotsitewiseCreatePresignedPortalUrlResult
+
 	CreateProject(ctx workflow.Context, input *iotsitewise.CreateProjectInput) (*iotsitewise.CreateProjectOutput, error)
 	CreateProjectAsync(ctx workflow.Context, input *iotsitewise.CreateProjectInput) *IotsitewiseCreateProjectResult
 
@@ -281,6 +284,16 @@ type IotsitewiseCreatePortalResult struct {
 
 func (r *IotsitewiseCreatePortalResult) Get(ctx workflow.Context) (*iotsitewise.CreatePortalOutput, error) {
 	var output iotsitewise.CreatePortalOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type IotsitewiseCreatePresignedPortalUrlResult struct {
+	Result workflow.Future
+}
+
+func (r *IotsitewiseCreatePresignedPortalUrlResult) Get(ctx workflow.Context) (*iotsitewise.CreatePresignedPortalUrlOutput, error) {
+	var output iotsitewise.CreatePresignedPortalUrlOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -839,6 +852,17 @@ func (a *IoTSiteWiseStub) CreatePortal(ctx workflow.Context, input *iotsitewise.
 func (a *IoTSiteWiseStub) CreatePortalAsync(ctx workflow.Context, input *iotsitewise.CreatePortalInput) *IotsitewiseCreatePortalResult {
 	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreatePortal", input)
 	return &IotsitewiseCreatePortalResult{Result: future}
+}
+
+func (a *IoTSiteWiseStub) CreatePresignedPortalUrl(ctx workflow.Context, input *iotsitewise.CreatePresignedPortalUrlInput) (*iotsitewise.CreatePresignedPortalUrlOutput, error) {
+	var output iotsitewise.CreatePresignedPortalUrlOutput
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreatePresignedPortalUrl", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *IoTSiteWiseStub) CreatePresignedPortalUrlAsync(ctx workflow.Context, input *iotsitewise.CreatePresignedPortalUrlInput) *IotsitewiseCreatePresignedPortalUrlResult {
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreatePresignedPortalUrl", input)
+	return &IotsitewiseCreatePresignedPortalUrlResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) CreateProject(ctx workflow.Context, input *iotsitewise.CreateProjectInput) (*iotsitewise.CreateProjectOutput, error) {

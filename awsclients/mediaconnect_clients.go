@@ -28,6 +28,12 @@ type MediaConnectClient interface {
 	DescribeFlow(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) (*mediaconnect.DescribeFlowOutput, error)
 	DescribeFlowAsync(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) *MediaconnectDescribeFlowResult
 
+	DescribeOffering(ctx workflow.Context, input *mediaconnect.DescribeOfferingInput) (*mediaconnect.DescribeOfferingOutput, error)
+	DescribeOfferingAsync(ctx workflow.Context, input *mediaconnect.DescribeOfferingInput) *MediaconnectDescribeOfferingResult
+
+	DescribeReservation(ctx workflow.Context, input *mediaconnect.DescribeReservationInput) (*mediaconnect.DescribeReservationOutput, error)
+	DescribeReservationAsync(ctx workflow.Context, input *mediaconnect.DescribeReservationInput) *MediaconnectDescribeReservationResult
+
 	GrantFlowEntitlements(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) (*mediaconnect.GrantFlowEntitlementsOutput, error)
 	GrantFlowEntitlementsAsync(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) *MediaconnectGrantFlowEntitlementsResult
 
@@ -37,8 +43,17 @@ type MediaConnectClient interface {
 	ListFlows(ctx workflow.Context, input *mediaconnect.ListFlowsInput) (*mediaconnect.ListFlowsOutput, error)
 	ListFlowsAsync(ctx workflow.Context, input *mediaconnect.ListFlowsInput) *MediaconnectListFlowsResult
 
+	ListOfferings(ctx workflow.Context, input *mediaconnect.ListOfferingsInput) (*mediaconnect.ListOfferingsOutput, error)
+	ListOfferingsAsync(ctx workflow.Context, input *mediaconnect.ListOfferingsInput) *MediaconnectListOfferingsResult
+
+	ListReservations(ctx workflow.Context, input *mediaconnect.ListReservationsInput) (*mediaconnect.ListReservationsOutput, error)
+	ListReservationsAsync(ctx workflow.Context, input *mediaconnect.ListReservationsInput) *MediaconnectListReservationsResult
+
 	ListTagsForResource(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) (*mediaconnect.ListTagsForResourceOutput, error)
 	ListTagsForResourceAsync(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) *MediaconnectListTagsForResourceResult
+
+	PurchaseOffering(ctx workflow.Context, input *mediaconnect.PurchaseOfferingInput) (*mediaconnect.PurchaseOfferingOutput, error)
+	PurchaseOfferingAsync(ctx workflow.Context, input *mediaconnect.PurchaseOfferingInput) *MediaconnectPurchaseOfferingResult
 
 	RemoveFlowOutput(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error)
 	RemoveFlowOutputAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) *MediaconnectRemoveFlowOutputResult
@@ -143,6 +158,26 @@ func (r *MediaconnectDescribeFlowResult) Get(ctx workflow.Context) (*mediaconnec
 	return &output, err
 }
 
+type MediaconnectDescribeOfferingResult struct {
+	Result workflow.Future
+}
+
+func (r *MediaconnectDescribeOfferingResult) Get(ctx workflow.Context) (*mediaconnect.DescribeOfferingOutput, error) {
+	var output mediaconnect.DescribeOfferingOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type MediaconnectDescribeReservationResult struct {
+	Result workflow.Future
+}
+
+func (r *MediaconnectDescribeReservationResult) Get(ctx workflow.Context) (*mediaconnect.DescribeReservationOutput, error) {
+	var output mediaconnect.DescribeReservationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type MediaconnectGrantFlowEntitlementsResult struct {
 	Result workflow.Future
 }
@@ -173,12 +208,42 @@ func (r *MediaconnectListFlowsResult) Get(ctx workflow.Context) (*mediaconnect.L
 	return &output, err
 }
 
+type MediaconnectListOfferingsResult struct {
+	Result workflow.Future
+}
+
+func (r *MediaconnectListOfferingsResult) Get(ctx workflow.Context) (*mediaconnect.ListOfferingsOutput, error) {
+	var output mediaconnect.ListOfferingsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type MediaconnectListReservationsResult struct {
+	Result workflow.Future
+}
+
+func (r *MediaconnectListReservationsResult) Get(ctx workflow.Context) (*mediaconnect.ListReservationsOutput, error) {
+	var output mediaconnect.ListReservationsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type MediaconnectListTagsForResourceResult struct {
 	Result workflow.Future
 }
 
 func (r *MediaconnectListTagsForResourceResult) Get(ctx workflow.Context) (*mediaconnect.ListTagsForResourceOutput, error) {
 	var output mediaconnect.ListTagsForResourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type MediaconnectPurchaseOfferingResult struct {
+	Result workflow.Future
+}
+
+func (r *MediaconnectPurchaseOfferingResult) Get(ctx workflow.Context) (*mediaconnect.PurchaseOfferingOutput, error) {
+	var output mediaconnect.PurchaseOfferingOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -369,6 +434,28 @@ func (a *MediaConnectStub) DescribeFlowAsync(ctx workflow.Context, input *mediac
 	return &MediaconnectDescribeFlowResult{Result: future}
 }
 
+func (a *MediaConnectStub) DescribeOffering(ctx workflow.Context, input *mediaconnect.DescribeOfferingInput) (*mediaconnect.DescribeOfferingOutput, error) {
+	var output mediaconnect.DescribeOfferingOutput
+	err := workflow.ExecuteActivity(ctx, "aws.mediaconnect.DescribeOffering", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaConnectStub) DescribeOfferingAsync(ctx workflow.Context, input *mediaconnect.DescribeOfferingInput) *MediaconnectDescribeOfferingResult {
+	future := workflow.ExecuteActivity(ctx, "aws.mediaconnect.DescribeOffering", input)
+	return &MediaconnectDescribeOfferingResult{Result: future}
+}
+
+func (a *MediaConnectStub) DescribeReservation(ctx workflow.Context, input *mediaconnect.DescribeReservationInput) (*mediaconnect.DescribeReservationOutput, error) {
+	var output mediaconnect.DescribeReservationOutput
+	err := workflow.ExecuteActivity(ctx, "aws.mediaconnect.DescribeReservation", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaConnectStub) DescribeReservationAsync(ctx workflow.Context, input *mediaconnect.DescribeReservationInput) *MediaconnectDescribeReservationResult {
+	future := workflow.ExecuteActivity(ctx, "aws.mediaconnect.DescribeReservation", input)
+	return &MediaconnectDescribeReservationResult{Result: future}
+}
+
 func (a *MediaConnectStub) GrantFlowEntitlements(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) (*mediaconnect.GrantFlowEntitlementsOutput, error) {
 	var output mediaconnect.GrantFlowEntitlementsOutput
 	err := workflow.ExecuteActivity(ctx, "aws.mediaconnect.GrantFlowEntitlements", input).Get(ctx, &output)
@@ -402,6 +489,28 @@ func (a *MediaConnectStub) ListFlowsAsync(ctx workflow.Context, input *mediaconn
 	return &MediaconnectListFlowsResult{Result: future}
 }
 
+func (a *MediaConnectStub) ListOfferings(ctx workflow.Context, input *mediaconnect.ListOfferingsInput) (*mediaconnect.ListOfferingsOutput, error) {
+	var output mediaconnect.ListOfferingsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.mediaconnect.ListOfferings", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaConnectStub) ListOfferingsAsync(ctx workflow.Context, input *mediaconnect.ListOfferingsInput) *MediaconnectListOfferingsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.mediaconnect.ListOfferings", input)
+	return &MediaconnectListOfferingsResult{Result: future}
+}
+
+func (a *MediaConnectStub) ListReservations(ctx workflow.Context, input *mediaconnect.ListReservationsInput) (*mediaconnect.ListReservationsOutput, error) {
+	var output mediaconnect.ListReservationsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.mediaconnect.ListReservations", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaConnectStub) ListReservationsAsync(ctx workflow.Context, input *mediaconnect.ListReservationsInput) *MediaconnectListReservationsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.mediaconnect.ListReservations", input)
+	return &MediaconnectListReservationsResult{Result: future}
+}
+
 func (a *MediaConnectStub) ListTagsForResource(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) (*mediaconnect.ListTagsForResourceOutput, error) {
 	var output mediaconnect.ListTagsForResourceOutput
 	err := workflow.ExecuteActivity(ctx, "aws.mediaconnect.ListTagsForResource", input).Get(ctx, &output)
@@ -411,6 +520,17 @@ func (a *MediaConnectStub) ListTagsForResource(ctx workflow.Context, input *medi
 func (a *MediaConnectStub) ListTagsForResourceAsync(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) *MediaconnectListTagsForResourceResult {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconnect.ListTagsForResource", input)
 	return &MediaconnectListTagsForResourceResult{Result: future}
+}
+
+func (a *MediaConnectStub) PurchaseOffering(ctx workflow.Context, input *mediaconnect.PurchaseOfferingInput) (*mediaconnect.PurchaseOfferingOutput, error) {
+	var output mediaconnect.PurchaseOfferingOutput
+	err := workflow.ExecuteActivity(ctx, "aws.mediaconnect.PurchaseOffering", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaConnectStub) PurchaseOfferingAsync(ctx workflow.Context, input *mediaconnect.PurchaseOfferingInput) *MediaconnectPurchaseOfferingResult {
+	future := workflow.ExecuteActivity(ctx, "aws.mediaconnect.PurchaseOffering", input)
+	return &MediaconnectPurchaseOfferingResult{Result: future}
 }
 
 func (a *MediaConnectStub) RemoveFlowOutput(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error) {

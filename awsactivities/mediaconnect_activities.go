@@ -94,6 +94,22 @@ func (a *MediaConnectActivities) DescribeFlow(ctx context.Context, input *mediac
 	return client.DescribeFlowWithContext(ctx, input)
 }
 
+func (a *MediaConnectActivities) DescribeOffering(ctx context.Context, input *mediaconnect.DescribeOfferingInput) (*mediaconnect.DescribeOfferingOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeOfferingWithContext(ctx, input)
+}
+
+func (a *MediaConnectActivities) DescribeReservation(ctx context.Context, input *mediaconnect.DescribeReservationInput) (*mediaconnect.DescribeReservationOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeReservationWithContext(ctx, input)
+}
+
 func (a *MediaConnectActivities) GrantFlowEntitlements(ctx context.Context, input *mediaconnect.GrantFlowEntitlementsInput) (*mediaconnect.GrantFlowEntitlementsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -118,12 +134,36 @@ func (a *MediaConnectActivities) ListFlows(ctx context.Context, input *mediaconn
 	return client.ListFlowsWithContext(ctx, input)
 }
 
+func (a *MediaConnectActivities) ListOfferings(ctx context.Context, input *mediaconnect.ListOfferingsInput) (*mediaconnect.ListOfferingsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListOfferingsWithContext(ctx, input)
+}
+
+func (a *MediaConnectActivities) ListReservations(ctx context.Context, input *mediaconnect.ListReservationsInput) (*mediaconnect.ListReservationsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListReservationsWithContext(ctx, input)
+}
+
 func (a *MediaConnectActivities) ListTagsForResource(ctx context.Context, input *mediaconnect.ListTagsForResourceInput) (*mediaconnect.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
 		return nil, err
 	}
 	return client.ListTagsForResourceWithContext(ctx, input)
+}
+
+func (a *MediaConnectActivities) PurchaseOffering(ctx context.Context, input *mediaconnect.PurchaseOfferingInput) (*mediaconnect.PurchaseOfferingOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PurchaseOfferingWithContext(ctx, input)
 }
 
 func (a *MediaConnectActivities) RemoveFlowOutput(ctx context.Context, input *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error) {

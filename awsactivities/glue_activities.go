@@ -142,6 +142,14 @@ func (a *GlueActivities) BatchStopJobRun(ctx context.Context, input *glue.BatchS
 	return client.BatchStopJobRunWithContext(ctx, input)
 }
 
+func (a *GlueActivities) BatchUpdatePartition(ctx context.Context, input *glue.BatchUpdatePartitionInput) (*glue.BatchUpdatePartitionOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchUpdatePartitionWithContext(ctx, input)
+}
+
 func (a *GlueActivities) CancelMLTaskRun(ctx context.Context, input *glue.CancelMLTaskRunInput) (*glue.CancelMLTaskRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {

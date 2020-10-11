@@ -55,6 +55,14 @@ func (a *SavingsPlansActivities) CreateSavingsPlan(ctx context.Context, input *s
 	return client.CreateSavingsPlanWithContext(ctx, input)
 }
 
+func (a *SavingsPlansActivities) DeleteQueuedSavingsPlan(ctx context.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) (*savingsplans.DeleteQueuedSavingsPlanOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteQueuedSavingsPlanWithContext(ctx, input)
+}
+
 func (a *SavingsPlansActivities) DescribeSavingsPlanRates(ctx context.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {

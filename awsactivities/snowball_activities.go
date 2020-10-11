@@ -86,6 +86,14 @@ func (a *SnowballActivities) CreateJob(ctx context.Context, input *snowball.Crea
 	return client.CreateJobWithContext(ctx, input)
 }
 
+func (a *SnowballActivities) CreateReturnShippingLabel(ctx context.Context, input *snowball.CreateReturnShippingLabelInput) (*snowball.CreateReturnShippingLabelOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateReturnShippingLabelWithContext(ctx, input)
+}
+
 func (a *SnowballActivities) DescribeAddress(ctx context.Context, input *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -116,6 +124,14 @@ func (a *SnowballActivities) DescribeJob(ctx context.Context, input *snowball.De
 		return nil, err
 	}
 	return client.DescribeJobWithContext(ctx, input)
+}
+
+func (a *SnowballActivities) DescribeReturnShippingLabel(ctx context.Context, input *snowball.DescribeReturnShippingLabelInput) (*snowball.DescribeReturnShippingLabelOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeReturnShippingLabelWithContext(ctx, input)
 }
 
 func (a *SnowballActivities) GetJobManifest(ctx context.Context, input *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error) {
@@ -196,4 +212,12 @@ func (a *SnowballActivities) UpdateJob(ctx context.Context, input *snowball.Upda
 		return nil, err
 	}
 	return client.UpdateJobWithContext(ctx, input)
+}
+
+func (a *SnowballActivities) UpdateJobShipmentState(ctx context.Context, input *snowball.UpdateJobShipmentStateInput) (*snowball.UpdateJobShipmentStateOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateJobShipmentStateWithContext(ctx, input)
 }

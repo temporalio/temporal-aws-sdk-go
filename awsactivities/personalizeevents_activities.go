@@ -53,3 +53,19 @@ func (a *PersonalizeEventsActivities) PutEvents(ctx context.Context, input *pers
 	}
 	return client.PutEventsWithContext(ctx, input)
 }
+
+func (a *PersonalizeEventsActivities) PutItems(ctx context.Context, input *personalizeevents.PutItemsInput) (*personalizeevents.PutItemsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutItemsWithContext(ctx, input)
+}
+
+func (a *PersonalizeEventsActivities) PutUsers(ctx context.Context, input *personalizeevents.PutUsersInput) (*personalizeevents.PutUsersOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutUsersWithContext(ctx, input)
+}

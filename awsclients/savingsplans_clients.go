@@ -13,6 +13,9 @@ type SavingsPlansClient interface {
 	CreateSavingsPlan(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error)
 	CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsplansCreateSavingsPlanResult
 
+	DeleteQueuedSavingsPlan(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) (*savingsplans.DeleteQueuedSavingsPlanOutput, error)
+	DeleteQueuedSavingsPlanAsync(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) *SavingsplansDeleteQueuedSavingsPlanResult
+
 	DescribeSavingsPlanRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error)
 	DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsplansDescribeSavingsPlanRatesResult
 
@@ -47,6 +50,16 @@ type SavingsplansCreateSavingsPlanResult struct {
 
 func (r *SavingsplansCreateSavingsPlanResult) Get(ctx workflow.Context) (*savingsplans.CreateSavingsPlanOutput, error) {
 	var output savingsplans.CreateSavingsPlanOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type SavingsplansDeleteQueuedSavingsPlanResult struct {
+	Result workflow.Future
+}
+
+func (r *SavingsplansDeleteQueuedSavingsPlanResult) Get(ctx workflow.Context) (*savingsplans.DeleteQueuedSavingsPlanOutput, error) {
+	var output savingsplans.DeleteQueuedSavingsPlanOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -130,6 +143,17 @@ func (a *SavingsPlansStub) CreateSavingsPlan(ctx workflow.Context, input *saving
 func (a *SavingsPlansStub) CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsplansCreateSavingsPlanResult {
 	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.CreateSavingsPlan", input)
 	return &SavingsplansCreateSavingsPlanResult{Result: future}
+}
+
+func (a *SavingsPlansStub) DeleteQueuedSavingsPlan(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) (*savingsplans.DeleteQueuedSavingsPlanOutput, error) {
+	var output savingsplans.DeleteQueuedSavingsPlanOutput
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.DeleteQueuedSavingsPlan", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *SavingsPlansStub) DeleteQueuedSavingsPlanAsync(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) *SavingsplansDeleteQueuedSavingsPlanResult {
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DeleteQueuedSavingsPlan", input)
+	return &SavingsplansDeleteQueuedSavingsPlanResult{Result: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlanRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {

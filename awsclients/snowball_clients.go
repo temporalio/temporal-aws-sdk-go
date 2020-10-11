@@ -25,6 +25,9 @@ type SnowballClient interface {
 	CreateJob(ctx workflow.Context, input *snowball.CreateJobInput) (*snowball.CreateJobOutput, error)
 	CreateJobAsync(ctx workflow.Context, input *snowball.CreateJobInput) *SnowballCreateJobResult
 
+	CreateReturnShippingLabel(ctx workflow.Context, input *snowball.CreateReturnShippingLabelInput) (*snowball.CreateReturnShippingLabelOutput, error)
+	CreateReturnShippingLabelAsync(ctx workflow.Context, input *snowball.CreateReturnShippingLabelInput) *SnowballCreateReturnShippingLabelResult
+
 	DescribeAddress(ctx workflow.Context, input *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error)
 	DescribeAddressAsync(ctx workflow.Context, input *snowball.DescribeAddressInput) *SnowballDescribeAddressResult
 
@@ -36,6 +39,9 @@ type SnowballClient interface {
 
 	DescribeJob(ctx workflow.Context, input *snowball.DescribeJobInput) (*snowball.DescribeJobOutput, error)
 	DescribeJobAsync(ctx workflow.Context, input *snowball.DescribeJobInput) *SnowballDescribeJobResult
+
+	DescribeReturnShippingLabel(ctx workflow.Context, input *snowball.DescribeReturnShippingLabelInput) (*snowball.DescribeReturnShippingLabelOutput, error)
+	DescribeReturnShippingLabelAsync(ctx workflow.Context, input *snowball.DescribeReturnShippingLabelInput) *SnowballDescribeReturnShippingLabelResult
 
 	GetJobManifest(ctx workflow.Context, input *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error)
 	GetJobManifestAsync(ctx workflow.Context, input *snowball.GetJobManifestInput) *SnowballGetJobManifestResult
@@ -66,6 +72,9 @@ type SnowballClient interface {
 
 	UpdateJob(ctx workflow.Context, input *snowball.UpdateJobInput) (*snowball.UpdateJobOutput, error)
 	UpdateJobAsync(ctx workflow.Context, input *snowball.UpdateJobInput) *SnowballUpdateJobResult
+
+	UpdateJobShipmentState(ctx workflow.Context, input *snowball.UpdateJobShipmentStateInput) (*snowball.UpdateJobShipmentStateOutput, error)
+	UpdateJobShipmentStateAsync(ctx workflow.Context, input *snowball.UpdateJobShipmentStateInput) *SnowballUpdateJobShipmentStateResult
 }
 
 type SnowballStub struct{}
@@ -124,6 +133,16 @@ func (r *SnowballCreateJobResult) Get(ctx workflow.Context) (*snowball.CreateJob
 	return &output, err
 }
 
+type SnowballCreateReturnShippingLabelResult struct {
+	Result workflow.Future
+}
+
+func (r *SnowballCreateReturnShippingLabelResult) Get(ctx workflow.Context) (*snowball.CreateReturnShippingLabelOutput, error) {
+	var output snowball.CreateReturnShippingLabelOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type SnowballDescribeAddressResult struct {
 	Result workflow.Future
 }
@@ -160,6 +179,16 @@ type SnowballDescribeJobResult struct {
 
 func (r *SnowballDescribeJobResult) Get(ctx workflow.Context) (*snowball.DescribeJobOutput, error) {
 	var output snowball.DescribeJobOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type SnowballDescribeReturnShippingLabelResult struct {
+	Result workflow.Future
+}
+
+func (r *SnowballDescribeReturnShippingLabelResult) Get(ctx workflow.Context) (*snowball.DescribeReturnShippingLabelOutput, error) {
+	var output snowball.DescribeReturnShippingLabelOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -264,6 +293,16 @@ func (r *SnowballUpdateJobResult) Get(ctx workflow.Context) (*snowball.UpdateJob
 	return &output, err
 }
 
+type SnowballUpdateJobShipmentStateResult struct {
+	Result workflow.Future
+}
+
+func (r *SnowballUpdateJobShipmentStateResult) Get(ctx workflow.Context) (*snowball.UpdateJobShipmentStateOutput, error) {
+	var output snowball.UpdateJobShipmentStateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 func (a *SnowballStub) CancelCluster(ctx workflow.Context, input *snowball.CancelClusterInput) (*snowball.CancelClusterOutput, error) {
 	var output snowball.CancelClusterOutput
 	err := workflow.ExecuteActivity(ctx, "aws.snowball.CancelCluster", input).Get(ctx, &output)
@@ -319,6 +358,17 @@ func (a *SnowballStub) CreateJobAsync(ctx workflow.Context, input *snowball.Crea
 	return &SnowballCreateJobResult{Result: future}
 }
 
+func (a *SnowballStub) CreateReturnShippingLabel(ctx workflow.Context, input *snowball.CreateReturnShippingLabelInput) (*snowball.CreateReturnShippingLabelOutput, error) {
+	var output snowball.CreateReturnShippingLabelOutput
+	err := workflow.ExecuteActivity(ctx, "aws.snowball.CreateReturnShippingLabel", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *SnowballStub) CreateReturnShippingLabelAsync(ctx workflow.Context, input *snowball.CreateReturnShippingLabelInput) *SnowballCreateReturnShippingLabelResult {
+	future := workflow.ExecuteActivity(ctx, "aws.snowball.CreateReturnShippingLabel", input)
+	return &SnowballCreateReturnShippingLabelResult{Result: future}
+}
+
 func (a *SnowballStub) DescribeAddress(ctx workflow.Context, input *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error) {
 	var output snowball.DescribeAddressOutput
 	err := workflow.ExecuteActivity(ctx, "aws.snowball.DescribeAddress", input).Get(ctx, &output)
@@ -361,6 +411,17 @@ func (a *SnowballStub) DescribeJob(ctx workflow.Context, input *snowball.Describ
 func (a *SnowballStub) DescribeJobAsync(ctx workflow.Context, input *snowball.DescribeJobInput) *SnowballDescribeJobResult {
 	future := workflow.ExecuteActivity(ctx, "aws.snowball.DescribeJob", input)
 	return &SnowballDescribeJobResult{Result: future}
+}
+
+func (a *SnowballStub) DescribeReturnShippingLabel(ctx workflow.Context, input *snowball.DescribeReturnShippingLabelInput) (*snowball.DescribeReturnShippingLabelOutput, error) {
+	var output snowball.DescribeReturnShippingLabelOutput
+	err := workflow.ExecuteActivity(ctx, "aws.snowball.DescribeReturnShippingLabel", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *SnowballStub) DescribeReturnShippingLabelAsync(ctx workflow.Context, input *snowball.DescribeReturnShippingLabelInput) *SnowballDescribeReturnShippingLabelResult {
+	future := workflow.ExecuteActivity(ctx, "aws.snowball.DescribeReturnShippingLabel", input)
+	return &SnowballDescribeReturnShippingLabelResult{Result: future}
 }
 
 func (a *SnowballStub) GetJobManifest(ctx workflow.Context, input *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error) {
@@ -471,4 +532,15 @@ func (a *SnowballStub) UpdateJob(ctx workflow.Context, input *snowball.UpdateJob
 func (a *SnowballStub) UpdateJobAsync(ctx workflow.Context, input *snowball.UpdateJobInput) *SnowballUpdateJobResult {
 	future := workflow.ExecuteActivity(ctx, "aws.snowball.UpdateJob", input)
 	return &SnowballUpdateJobResult{Result: future}
+}
+
+func (a *SnowballStub) UpdateJobShipmentState(ctx workflow.Context, input *snowball.UpdateJobShipmentStateInput) (*snowball.UpdateJobShipmentStateOutput, error) {
+	var output snowball.UpdateJobShipmentStateOutput
+	err := workflow.ExecuteActivity(ctx, "aws.snowball.UpdateJobShipmentState", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *SnowballStub) UpdateJobShipmentStateAsync(ctx workflow.Context, input *snowball.UpdateJobShipmentStateInput) *SnowballUpdateJobShipmentStateResult {
+	future := workflow.ExecuteActivity(ctx, "aws.snowball.UpdateJobShipmentState", input)
+	return &SnowballUpdateJobShipmentStateResult{Result: future}
 }

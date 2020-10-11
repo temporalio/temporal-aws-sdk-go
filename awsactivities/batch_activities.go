@@ -134,6 +134,14 @@ func (a *BatchActivities) ListJobs(ctx context.Context, input *batch.ListJobsInp
 	return client.ListJobsWithContext(ctx, input)
 }
 
+func (a *BatchActivities) ListTagsForResource(ctx context.Context, input *batch.ListTagsForResourceInput) (*batch.ListTagsForResourceOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
+}
+
 func (a *BatchActivities) RegisterJobDefinition(ctx context.Context, input *batch.RegisterJobDefinitionInput) (*batch.RegisterJobDefinitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -150,12 +158,28 @@ func (a *BatchActivities) SubmitJob(ctx context.Context, input *batch.SubmitJobI
 	return client.SubmitJobWithContext(ctx, input)
 }
 
+func (a *BatchActivities) TagResource(ctx context.Context, input *batch.TagResourceInput) (*batch.TagResourceOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
+}
+
 func (a *BatchActivities) TerminateJob(ctx context.Context, input *batch.TerminateJobInput) (*batch.TerminateJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
 		return nil, err
 	}
 	return client.TerminateJobWithContext(ctx, input)
+}
+
+func (a *BatchActivities) UntagResource(ctx context.Context, input *batch.UntagResourceInput) (*batch.UntagResourceOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *BatchActivities) UpdateComputeEnvironment(ctx context.Context, input *batch.UpdateComputeEnvironmentInput) (*batch.UpdateComputeEnvironmentOutput, error) {

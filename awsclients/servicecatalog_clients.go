@@ -160,6 +160,9 @@ type ServiceCatalogClient interface {
 	GetAWSOrganizationsAccessStatus(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) (*servicecatalog.GetAWSOrganizationsAccessStatusOutput, error)
 	GetAWSOrganizationsAccessStatusAsync(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) *ServicecatalogGetAWSOrganizationsAccessStatusResult
 
+	GetProvisionedProductOutputs(ctx workflow.Context, input *servicecatalog.GetProvisionedProductOutputsInput) (*servicecatalog.GetProvisionedProductOutputsOutput, error)
+	GetProvisionedProductOutputsAsync(ctx workflow.Context, input *servicecatalog.GetProvisionedProductOutputsInput) *ServicecatalogGetProvisionedProductOutputsResult
+
 	ListAcceptedPortfolioShares(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) (*servicecatalog.ListAcceptedPortfolioSharesOutput, error)
 	ListAcceptedPortfolioSharesAsync(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) *ServicecatalogListAcceptedPortfolioSharesResult
 
@@ -762,6 +765,16 @@ type ServicecatalogGetAWSOrganizationsAccessStatusResult struct {
 
 func (r *ServicecatalogGetAWSOrganizationsAccessStatusResult) Get(ctx workflow.Context) (*servicecatalog.GetAWSOrganizationsAccessStatusOutput, error) {
 	var output servicecatalog.GetAWSOrganizationsAccessStatusOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type ServicecatalogGetProvisionedProductOutputsResult struct {
+	Result workflow.Future
+}
+
+func (r *ServicecatalogGetProvisionedProductOutputsResult) Get(ctx workflow.Context) (*servicecatalog.GetProvisionedProductOutputsOutput, error) {
+	var output servicecatalog.GetProvisionedProductOutputsOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -1644,6 +1657,17 @@ func (a *ServiceCatalogStub) GetAWSOrganizationsAccessStatus(ctx workflow.Contex
 func (a *ServiceCatalogStub) GetAWSOrganizationsAccessStatusAsync(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) *ServicecatalogGetAWSOrganizationsAccessStatusResult {
 	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.GetAWSOrganizationsAccessStatus", input)
 	return &ServicecatalogGetAWSOrganizationsAccessStatusResult{Result: future}
+}
+
+func (a *ServiceCatalogStub) GetProvisionedProductOutputs(ctx workflow.Context, input *servicecatalog.GetProvisionedProductOutputsInput) (*servicecatalog.GetProvisionedProductOutputsOutput, error) {
+	var output servicecatalog.GetProvisionedProductOutputsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.GetProvisionedProductOutputs", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ServiceCatalogStub) GetProvisionedProductOutputsAsync(ctx workflow.Context, input *servicecatalog.GetProvisionedProductOutputsInput) *ServicecatalogGetProvisionedProductOutputsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.GetProvisionedProductOutputs", input)
+	return &ServicecatalogGetProvisionedProductOutputsResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListAcceptedPortfolioShares(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) (*servicecatalog.ListAcceptedPortfolioSharesOutput, error) {

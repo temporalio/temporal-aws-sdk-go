@@ -172,6 +172,9 @@ type GreengrassClient interface {
 	GetSubscriptionDefinitionVersion(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionVersionInput) (*greengrass.GetSubscriptionDefinitionVersionOutput, error)
 	GetSubscriptionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionVersionInput) *GreengrassGetSubscriptionDefinitionVersionResult
 
+	GetThingRuntimeConfiguration(ctx workflow.Context, input *greengrass.GetThingRuntimeConfigurationInput) (*greengrass.GetThingRuntimeConfigurationOutput, error)
+	GetThingRuntimeConfigurationAsync(ctx workflow.Context, input *greengrass.GetThingRuntimeConfigurationInput) *GreengrassGetThingRuntimeConfigurationResult
+
 	ListBulkDeploymentDetailedReports(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) (*greengrass.ListBulkDeploymentDetailedReportsOutput, error)
 	ListBulkDeploymentDetailedReportsAsync(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) *GreengrassListBulkDeploymentDetailedReportsResult
 
@@ -279,6 +282,9 @@ type GreengrassClient interface {
 
 	UpdateSubscriptionDefinition(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) (*greengrass.UpdateSubscriptionDefinitionOutput, error)
 	UpdateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) *GreengrassUpdateSubscriptionDefinitionResult
+
+	UpdateThingRuntimeConfiguration(ctx workflow.Context, input *greengrass.UpdateThingRuntimeConfigurationInput) (*greengrass.UpdateThingRuntimeConfigurationOutput, error)
+	UpdateThingRuntimeConfigurationAsync(ctx workflow.Context, input *greengrass.UpdateThingRuntimeConfigurationInput) *GreengrassUpdateThingRuntimeConfigurationResult
 }
 
 type GreengrassStub struct{}
@@ -827,6 +833,16 @@ func (r *GreengrassGetSubscriptionDefinitionVersionResult) Get(ctx workflow.Cont
 	return &output, err
 }
 
+type GreengrassGetThingRuntimeConfigurationResult struct {
+	Result workflow.Future
+}
+
+func (r *GreengrassGetThingRuntimeConfigurationResult) Get(ctx workflow.Context) (*greengrass.GetThingRuntimeConfigurationOutput, error) {
+	var output greengrass.GetThingRuntimeConfigurationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type GreengrassListBulkDeploymentDetailedReportsResult struct {
 	Result workflow.Future
 }
@@ -1183,6 +1199,16 @@ type GreengrassUpdateSubscriptionDefinitionResult struct {
 
 func (r *GreengrassUpdateSubscriptionDefinitionResult) Get(ctx workflow.Context) (*greengrass.UpdateSubscriptionDefinitionOutput, error) {
 	var output greengrass.UpdateSubscriptionDefinitionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type GreengrassUpdateThingRuntimeConfigurationResult struct {
+	Result workflow.Future
+}
+
+func (r *GreengrassUpdateThingRuntimeConfigurationResult) Get(ctx workflow.Context) (*greengrass.UpdateThingRuntimeConfigurationOutput, error) {
+	var output greengrass.UpdateThingRuntimeConfigurationOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -1781,6 +1807,17 @@ func (a *GreengrassStub) GetSubscriptionDefinitionVersionAsync(ctx workflow.Cont
 	return &GreengrassGetSubscriptionDefinitionVersionResult{Result: future}
 }
 
+func (a *GreengrassStub) GetThingRuntimeConfiguration(ctx workflow.Context, input *greengrass.GetThingRuntimeConfigurationInput) (*greengrass.GetThingRuntimeConfigurationOutput, error) {
+	var output greengrass.GetThingRuntimeConfigurationOutput
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetThingRuntimeConfiguration", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *GreengrassStub) GetThingRuntimeConfigurationAsync(ctx workflow.Context, input *greengrass.GetThingRuntimeConfigurationInput) *GreengrassGetThingRuntimeConfigurationResult {
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetThingRuntimeConfiguration", input)
+	return &GreengrassGetThingRuntimeConfigurationResult{Result: future}
+}
+
 func (a *GreengrassStub) ListBulkDeploymentDetailedReports(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) (*greengrass.ListBulkDeploymentDetailedReportsOutput, error) {
 	var output greengrass.ListBulkDeploymentDetailedReportsOutput
 	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListBulkDeploymentDetailedReports", input).Get(ctx, &output)
@@ -2175,4 +2212,15 @@ func (a *GreengrassStub) UpdateSubscriptionDefinition(ctx workflow.Context, inpu
 func (a *GreengrassStub) UpdateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) *GreengrassUpdateSubscriptionDefinitionResult {
 	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateSubscriptionDefinition", input)
 	return &GreengrassUpdateSubscriptionDefinitionResult{Result: future}
+}
+
+func (a *GreengrassStub) UpdateThingRuntimeConfiguration(ctx workflow.Context, input *greengrass.UpdateThingRuntimeConfigurationInput) (*greengrass.UpdateThingRuntimeConfigurationOutput, error) {
+	var output greengrass.UpdateThingRuntimeConfigurationOutput
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateThingRuntimeConfiguration", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *GreengrassStub) UpdateThingRuntimeConfigurationAsync(ctx workflow.Context, input *greengrass.UpdateThingRuntimeConfigurationInput) *GreengrassUpdateThingRuntimeConfigurationResult {
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateThingRuntimeConfiguration", input)
+	return &GreengrassUpdateThingRuntimeConfigurationResult{Result: future}
 }

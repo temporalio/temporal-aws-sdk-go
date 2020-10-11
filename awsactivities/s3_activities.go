@@ -142,6 +142,14 @@ func (a *S3Activities) DeleteBucketMetricsConfiguration(ctx context.Context, inp
 	return client.DeleteBucketMetricsConfigurationWithContext(ctx, input)
 }
 
+func (a *S3Activities) DeleteBucketOwnershipControls(ctx context.Context, input *s3.DeleteBucketOwnershipControlsInput) (*s3.DeleteBucketOwnershipControlsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteBucketOwnershipControlsWithContext(ctx, input)
+}
+
 func (a *S3Activities) DeleteBucketPolicy(ctx context.Context, input *s3.DeleteBucketPolicyInput) (*s3.DeleteBucketPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -308,6 +316,14 @@ func (a *S3Activities) GetBucketNotificationConfiguration(ctx context.Context, i
 		return nil, err
 	}
 	return client.GetBucketNotificationConfigurationWithContext(ctx, input)
+}
+
+func (a *S3Activities) GetBucketOwnershipControls(ctx context.Context, input *s3.GetBucketOwnershipControlsInput) (*s3.GetBucketOwnershipControlsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetBucketOwnershipControlsWithContext(ctx, input)
 }
 
 func (a *S3Activities) GetBucketPolicy(ctx context.Context, input *s3.GetBucketPolicyInput) (*s3.GetBucketPolicyOutput, error) {
@@ -612,6 +628,14 @@ func (a *S3Activities) PutBucketNotificationConfiguration(ctx context.Context, i
 		return nil, err
 	}
 	return client.PutBucketNotificationConfigurationWithContext(ctx, input)
+}
+
+func (a *S3Activities) PutBucketOwnershipControls(ctx context.Context, input *s3.PutBucketOwnershipControlsInput) (*s3.PutBucketOwnershipControlsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutBucketOwnershipControlsWithContext(ctx, input)
 }
 
 func (a *S3Activities) PutBucketPolicy(ctx context.Context, input *s3.PutBucketPolicyInput) (*s3.PutBucketPolicyOutput, error) {

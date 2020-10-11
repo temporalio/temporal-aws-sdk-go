@@ -62,6 +62,15 @@ func (a *WorkMailActivities) AssociateMemberToGroup(ctx context.Context, input *
 	return client.AssociateMemberToGroupWithContext(ctx, input)
 }
 
+func (a *WorkMailActivities) CancelMailboxExportJob(ctx context.Context, input *workmail.CancelMailboxExportJobInput) (*workmail.CancelMailboxExportJobOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	internal.SetClientToken(ctx, &input.ClientToken)
+	return client.CancelMailboxExportJobWithContext(ctx, input)
+}
+
 func (a *WorkMailActivities) CreateAlias(ctx context.Context, input *workmail.CreateAliasInput) (*workmail.CreateAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -166,6 +175,14 @@ func (a *WorkMailActivities) DescribeGroup(ctx context.Context, input *workmail.
 	return client.DescribeGroupWithContext(ctx, input)
 }
 
+func (a *WorkMailActivities) DescribeMailboxExportJob(ctx context.Context, input *workmail.DescribeMailboxExportJobInput) (*workmail.DescribeMailboxExportJobOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeMailboxExportJobWithContext(ctx, input)
+}
+
 func (a *WorkMailActivities) DescribeOrganization(ctx context.Context, input *workmail.DescribeOrganizationInput) (*workmail.DescribeOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -262,6 +279,14 @@ func (a *WorkMailActivities) ListGroups(ctx context.Context, input *workmail.Lis
 	return client.ListGroupsWithContext(ctx, input)
 }
 
+func (a *WorkMailActivities) ListMailboxExportJobs(ctx context.Context, input *workmail.ListMailboxExportJobsInput) (*workmail.ListMailboxExportJobsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListMailboxExportJobsWithContext(ctx, input)
+}
+
 func (a *WorkMailActivities) ListMailboxPermissions(ctx context.Context, input *workmail.ListMailboxPermissionsInput) (*workmail.ListMailboxPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -348,6 +373,15 @@ func (a *WorkMailActivities) ResetPassword(ctx context.Context, input *workmail.
 		return nil, err
 	}
 	return client.ResetPasswordWithContext(ctx, input)
+}
+
+func (a *WorkMailActivities) StartMailboxExportJob(ctx context.Context, input *workmail.StartMailboxExportJobInput) (*workmail.StartMailboxExportJobOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	internal.SetClientToken(ctx, &input.ClientToken)
+	return client.StartMailboxExportJobWithContext(ctx, input)
 }
 
 func (a *WorkMailActivities) TagResource(ctx context.Context, input *workmail.TagResourceInput) (*workmail.TagResourceOutput, error) {

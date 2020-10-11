@@ -46,6 +46,14 @@ func (a *WorkSpacesActivities) getClient(ctx context.Context) (workspacesiface.W
 	return workspaces.New(sess), nil
 }
 
+func (a *WorkSpacesActivities) AssociateConnectionAlias(ctx context.Context, input *workspaces.AssociateConnectionAliasInput) (*workspaces.AssociateConnectionAliasOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssociateConnectionAliasWithContext(ctx, input)
+}
+
 func (a *WorkSpacesActivities) AssociateIpGroups(ctx context.Context, input *workspaces.AssociateIpGroupsInput) (*workspaces.AssociateIpGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -70,6 +78,14 @@ func (a *WorkSpacesActivities) CopyWorkspaceImage(ctx context.Context, input *wo
 	return client.CopyWorkspaceImageWithContext(ctx, input)
 }
 
+func (a *WorkSpacesActivities) CreateConnectionAlias(ctx context.Context, input *workspaces.CreateConnectionAliasInput) (*workspaces.CreateConnectionAliasOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateConnectionAliasWithContext(ctx, input)
+}
+
 func (a *WorkSpacesActivities) CreateIpGroup(ctx context.Context, input *workspaces.CreateIpGroupInput) (*workspaces.CreateIpGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -92,6 +108,14 @@ func (a *WorkSpacesActivities) CreateWorkspaces(ctx context.Context, input *work
 		return nil, err
 	}
 	return client.CreateWorkspacesWithContext(ctx, input)
+}
+
+func (a *WorkSpacesActivities) DeleteConnectionAlias(ctx context.Context, input *workspaces.DeleteConnectionAliasInput) (*workspaces.DeleteConnectionAliasOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteConnectionAliasWithContext(ctx, input)
 }
 
 func (a *WorkSpacesActivities) DeleteIpGroup(ctx context.Context, input *workspaces.DeleteIpGroupInput) (*workspaces.DeleteIpGroupOutput, error) {
@@ -148,6 +172,22 @@ func (a *WorkSpacesActivities) DescribeClientProperties(ctx context.Context, inp
 		return nil, err
 	}
 	return client.DescribeClientPropertiesWithContext(ctx, input)
+}
+
+func (a *WorkSpacesActivities) DescribeConnectionAliasPermissions(ctx context.Context, input *workspaces.DescribeConnectionAliasPermissionsInput) (*workspaces.DescribeConnectionAliasPermissionsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeConnectionAliasPermissionsWithContext(ctx, input)
+}
+
+func (a *WorkSpacesActivities) DescribeConnectionAliases(ctx context.Context, input *workspaces.DescribeConnectionAliasesInput) (*workspaces.DescribeConnectionAliasesOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeConnectionAliasesWithContext(ctx, input)
 }
 
 func (a *WorkSpacesActivities) DescribeIpGroups(ctx context.Context, input *workspaces.DescribeIpGroupsInput) (*workspaces.DescribeIpGroupsOutput, error) {
@@ -220,6 +260,14 @@ func (a *WorkSpacesActivities) DescribeWorkspacesConnectionStatus(ctx context.Co
 		return nil, err
 	}
 	return client.DescribeWorkspacesConnectionStatusWithContext(ctx, input)
+}
+
+func (a *WorkSpacesActivities) DisassociateConnectionAlias(ctx context.Context, input *workspaces.DisassociateConnectionAliasInput) (*workspaces.DisassociateConnectionAliasOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateConnectionAliasWithContext(ctx, input)
 }
 
 func (a *WorkSpacesActivities) DisassociateIpGroups(ctx context.Context, input *workspaces.DisassociateIpGroupsInput) (*workspaces.DisassociateIpGroupsOutput, error) {
@@ -372,6 +420,14 @@ func (a *WorkSpacesActivities) TerminateWorkspaces(ctx context.Context, input *w
 		return nil, err
 	}
 	return client.TerminateWorkspacesWithContext(ctx, input)
+}
+
+func (a *WorkSpacesActivities) UpdateConnectionAliasPermission(ctx context.Context, input *workspaces.UpdateConnectionAliasPermissionInput) (*workspaces.UpdateConnectionAliasPermissionOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateConnectionAliasPermissionWithContext(ctx, input)
 }
 
 func (a *WorkSpacesActivities) UpdateRulesOfIpGroup(ctx context.Context, input *workspaces.UpdateRulesOfIpGroupInput) (*workspaces.UpdateRulesOfIpGroupOutput, error) {

@@ -198,6 +198,14 @@ func (a *ComprehendActivities) DescribeKeyPhrasesDetectionJob(ctx context.Contex
 	return client.DescribeKeyPhrasesDetectionJobWithContext(ctx, input)
 }
 
+func (a *ComprehendActivities) DescribePiiEntitiesDetectionJob(ctx context.Context, input *comprehend.DescribePiiEntitiesDetectionJobInput) (*comprehend.DescribePiiEntitiesDetectionJobOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribePiiEntitiesDetectionJobWithContext(ctx, input)
+}
+
 func (a *ComprehendActivities) DescribeSentimentDetectionJob(ctx context.Context, input *comprehend.DescribeSentimentDetectionJobInput) (*comprehend.DescribeSentimentDetectionJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -236,6 +244,14 @@ func (a *ComprehendActivities) DetectKeyPhrases(ctx context.Context, input *comp
 		return nil, err
 	}
 	return client.DetectKeyPhrasesWithContext(ctx, input)
+}
+
+func (a *ComprehendActivities) DetectPiiEntities(ctx context.Context, input *comprehend.DetectPiiEntitiesInput) (*comprehend.DetectPiiEntitiesOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DetectPiiEntitiesWithContext(ctx, input)
 }
 
 func (a *ComprehendActivities) DetectSentiment(ctx context.Context, input *comprehend.DetectSentimentInput) (*comprehend.DetectSentimentOutput, error) {
@@ -310,6 +326,14 @@ func (a *ComprehendActivities) ListKeyPhrasesDetectionJobs(ctx context.Context, 
 	return client.ListKeyPhrasesDetectionJobsWithContext(ctx, input)
 }
 
+func (a *ComprehendActivities) ListPiiEntitiesDetectionJobs(ctx context.Context, input *comprehend.ListPiiEntitiesDetectionJobsInput) (*comprehend.ListPiiEntitiesDetectionJobsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListPiiEntitiesDetectionJobsWithContext(ctx, input)
+}
+
 func (a *ComprehendActivities) ListSentimentDetectionJobs(ctx context.Context, input *comprehend.ListSentimentDetectionJobsInput) (*comprehend.ListSentimentDetectionJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -366,6 +390,14 @@ func (a *ComprehendActivities) StartKeyPhrasesDetectionJob(ctx context.Context, 
 	return client.StartKeyPhrasesDetectionJobWithContext(ctx, input)
 }
 
+func (a *ComprehendActivities) StartPiiEntitiesDetectionJob(ctx context.Context, input *comprehend.StartPiiEntitiesDetectionJobInput) (*comprehend.StartPiiEntitiesDetectionJobOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartPiiEntitiesDetectionJobWithContext(ctx, input)
+}
+
 func (a *ComprehendActivities) StartSentimentDetectionJob(ctx context.Context, input *comprehend.StartSentimentDetectionJobInput) (*comprehend.StartSentimentDetectionJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -404,6 +436,14 @@ func (a *ComprehendActivities) StopKeyPhrasesDetectionJob(ctx context.Context, i
 		return nil, err
 	}
 	return client.StopKeyPhrasesDetectionJobWithContext(ctx, input)
+}
+
+func (a *ComprehendActivities) StopPiiEntitiesDetectionJob(ctx context.Context, input *comprehend.StopPiiEntitiesDetectionJobInput) (*comprehend.StopPiiEntitiesDetectionJobOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopPiiEntitiesDetectionJobWithContext(ctx, input)
 }
 
 func (a *ComprehendActivities) StopSentimentDetectionJob(ctx context.Context, input *comprehend.StopSentimentDetectionJobInput) (*comprehend.StopSentimentDetectionJobOutput, error) {

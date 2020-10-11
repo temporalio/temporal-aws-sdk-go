@@ -10,6 +10,15 @@ import (
 )
 
 type MediaLiveClient interface {
+	BatchDelete(ctx workflow.Context, input *medialive.BatchDeleteInput) (*medialive.BatchDeleteOutput, error)
+	BatchDeleteAsync(ctx workflow.Context, input *medialive.BatchDeleteInput) *MedialiveBatchDeleteResult
+
+	BatchStart(ctx workflow.Context, input *medialive.BatchStartInput) (*medialive.BatchStartOutput, error)
+	BatchStartAsync(ctx workflow.Context, input *medialive.BatchStartInput) *MedialiveBatchStartResult
+
+	BatchStop(ctx workflow.Context, input *medialive.BatchStopInput) (*medialive.BatchStopOutput, error)
+	BatchStopAsync(ctx workflow.Context, input *medialive.BatchStopInput) *MedialiveBatchStopResult
+
 	BatchUpdateSchedule(ctx workflow.Context, input *medialive.BatchUpdateScheduleInput) (*medialive.BatchUpdateScheduleOutput, error)
 	BatchUpdateScheduleAsync(ctx workflow.Context, input *medialive.BatchUpdateScheduleInput) *MedialiveBatchUpdateScheduleResult
 
@@ -167,6 +176,36 @@ type MediaLiveStub struct{}
 
 func NewMediaLiveStub() MediaLiveClient {
 	return &MediaLiveStub{}
+}
+
+type MedialiveBatchDeleteResult struct {
+	Result workflow.Future
+}
+
+func (r *MedialiveBatchDeleteResult) Get(ctx workflow.Context) (*medialive.BatchDeleteOutput, error) {
+	var output medialive.BatchDeleteOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type MedialiveBatchStartResult struct {
+	Result workflow.Future
+}
+
+func (r *MedialiveBatchStartResult) Get(ctx workflow.Context) (*medialive.BatchStartOutput, error) {
+	var output medialive.BatchStartOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type MedialiveBatchStopResult struct {
+	Result workflow.Future
+}
+
+func (r *MedialiveBatchStopResult) Get(ctx workflow.Context) (*medialive.BatchStopOutput, error) {
+	var output medialive.BatchStopOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MedialiveBatchUpdateScheduleResult struct {
@@ -649,6 +688,39 @@ func (r *MedialiveUpdateReservationResult) Get(ctx workflow.Context) (*medialive
 
 
 
+
+func (a *MediaLiveStub) BatchDelete(ctx workflow.Context, input *medialive.BatchDeleteInput) (*medialive.BatchDeleteOutput, error) {
+	var output medialive.BatchDeleteOutput
+	err := workflow.ExecuteActivity(ctx, "aws.medialive.BatchDelete", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaLiveStub) BatchDeleteAsync(ctx workflow.Context, input *medialive.BatchDeleteInput) *MedialiveBatchDeleteResult {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.BatchDelete", input)
+	return &MedialiveBatchDeleteResult{Result: future}
+}
+
+func (a *MediaLiveStub) BatchStart(ctx workflow.Context, input *medialive.BatchStartInput) (*medialive.BatchStartOutput, error) {
+	var output medialive.BatchStartOutput
+	err := workflow.ExecuteActivity(ctx, "aws.medialive.BatchStart", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaLiveStub) BatchStartAsync(ctx workflow.Context, input *medialive.BatchStartInput) *MedialiveBatchStartResult {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.BatchStart", input)
+	return &MedialiveBatchStartResult{Result: future}
+}
+
+func (a *MediaLiveStub) BatchStop(ctx workflow.Context, input *medialive.BatchStopInput) (*medialive.BatchStopOutput, error) {
+	var output medialive.BatchStopOutput
+	err := workflow.ExecuteActivity(ctx, "aws.medialive.BatchStop", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *MediaLiveStub) BatchStopAsync(ctx workflow.Context, input *medialive.BatchStopInput) *MedialiveBatchStopResult {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.BatchStop", input)
+	return &MedialiveBatchStopResult{Result: future}
+}
 
 func (a *MediaLiveStub) BatchUpdateSchedule(ctx workflow.Context, input *medialive.BatchUpdateScheduleInput) (*medialive.BatchUpdateScheduleOutput, error) {
 	var output medialive.BatchUpdateScheduleOutput

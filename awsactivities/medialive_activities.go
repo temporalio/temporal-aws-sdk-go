@@ -46,6 +46,30 @@ func (a *MediaLiveActivities) getClient(ctx context.Context) (medialiveiface.Med
 	return medialive.New(sess), nil
 }
 
+func (a *MediaLiveActivities) BatchDelete(ctx context.Context, input *medialive.BatchDeleteInput) (*medialive.BatchDeleteOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchDeleteWithContext(ctx, input)
+}
+
+func (a *MediaLiveActivities) BatchStart(ctx context.Context, input *medialive.BatchStartInput) (*medialive.BatchStartOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchStartWithContext(ctx, input)
+}
+
+func (a *MediaLiveActivities) BatchStop(ctx context.Context, input *medialive.BatchStopInput) (*medialive.BatchStopOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchStopWithContext(ctx, input)
+}
+
 func (a *MediaLiveActivities) BatchUpdateSchedule(ctx context.Context, input *medialive.BatchUpdateScheduleInput) (*medialive.BatchUpdateScheduleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {

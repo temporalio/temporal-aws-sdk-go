@@ -46,6 +46,30 @@ func (a *ConnectActivities) getClient(ctx context.Context) (connectiface.Connect
 	return connect.New(sess), nil
 }
 
+func (a *ConnectActivities) AssociateRoutingProfileQueues(ctx context.Context, input *connect.AssociateRoutingProfileQueuesInput) (*connect.AssociateRoutingProfileQueuesOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssociateRoutingProfileQueuesWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) CreateContactFlow(ctx context.Context, input *connect.CreateContactFlowInput) (*connect.CreateContactFlowOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateContactFlowWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) CreateRoutingProfile(ctx context.Context, input *connect.CreateRoutingProfileInput) (*connect.CreateRoutingProfileOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateRoutingProfileWithContext(ctx, input)
+}
+
 func (a *ConnectActivities) CreateUser(ctx context.Context, input *connect.CreateUserInput) (*connect.CreateUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
@@ -60,6 +84,22 @@ func (a *ConnectActivities) DeleteUser(ctx context.Context, input *connect.Delet
 		return nil, err
 	}
 	return client.DeleteUserWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) DescribeContactFlow(ctx context.Context, input *connect.DescribeContactFlowInput) (*connect.DescribeContactFlowOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeContactFlowWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) DescribeRoutingProfile(ctx context.Context, input *connect.DescribeRoutingProfileInput) (*connect.DescribeRoutingProfileOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeRoutingProfileWithContext(ctx, input)
 }
 
 func (a *ConnectActivities) DescribeUser(ctx context.Context, input *connect.DescribeUserInput) (*connect.DescribeUserOutput, error) {
@@ -84,6 +124,14 @@ func (a *ConnectActivities) DescribeUserHierarchyStructure(ctx context.Context, 
 		return nil, err
 	}
 	return client.DescribeUserHierarchyStructureWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) DisassociateRoutingProfileQueues(ctx context.Context, input *connect.DisassociateRoutingProfileQueuesInput) (*connect.DisassociateRoutingProfileQueuesOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateRoutingProfileQueuesWithContext(ctx, input)
 }
 
 func (a *ConnectActivities) GetContactAttributes(ctx context.Context, input *connect.GetContactAttributesInput) (*connect.GetContactAttributesOutput, error) {
@@ -142,12 +190,28 @@ func (a *ConnectActivities) ListPhoneNumbers(ctx context.Context, input *connect
 	return client.ListPhoneNumbersWithContext(ctx, input)
 }
 
+func (a *ConnectActivities) ListPrompts(ctx context.Context, input *connect.ListPromptsInput) (*connect.ListPromptsOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListPromptsWithContext(ctx, input)
+}
+
 func (a *ConnectActivities) ListQueues(ctx context.Context, input *connect.ListQueuesInput) (*connect.ListQueuesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
 		return nil, err
 	}
 	return client.ListQueuesWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) ListRoutingProfileQueues(ctx context.Context, input *connect.ListRoutingProfileQueuesInput) (*connect.ListRoutingProfileQueuesOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListRoutingProfileQueuesWithContext(ctx, input)
 }
 
 func (a *ConnectActivities) ListRoutingProfiles(ctx context.Context, input *connect.ListRoutingProfilesInput) (*connect.ListRoutingProfilesOutput, error) {
@@ -270,6 +334,54 @@ func (a *ConnectActivities) UpdateContactAttributes(ctx context.Context, input *
 		return nil, err
 	}
 	return client.UpdateContactAttributesWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) UpdateContactFlowContent(ctx context.Context, input *connect.UpdateContactFlowContentInput) (*connect.UpdateContactFlowContentOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateContactFlowContentWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) UpdateContactFlowName(ctx context.Context, input *connect.UpdateContactFlowNameInput) (*connect.UpdateContactFlowNameOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateContactFlowNameWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) UpdateRoutingProfileConcurrency(ctx context.Context, input *connect.UpdateRoutingProfileConcurrencyInput) (*connect.UpdateRoutingProfileConcurrencyOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateRoutingProfileConcurrencyWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) UpdateRoutingProfileDefaultOutboundQueue(ctx context.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) (*connect.UpdateRoutingProfileDefaultOutboundQueueOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateRoutingProfileDefaultOutboundQueueWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) UpdateRoutingProfileName(ctx context.Context, input *connect.UpdateRoutingProfileNameInput) (*connect.UpdateRoutingProfileNameOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateRoutingProfileNameWithContext(ctx, input)
+}
+
+func (a *ConnectActivities) UpdateRoutingProfileQueues(ctx context.Context, input *connect.UpdateRoutingProfileQueuesInput) (*connect.UpdateRoutingProfileQueuesOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateRoutingProfileQueuesWithContext(ctx, input)
 }
 
 func (a *ConnectActivities) UpdateUserHierarchy(ctx context.Context, input *connect.UpdateUserHierarchyInput) (*connect.UpdateUserHierarchyOutput, error) {

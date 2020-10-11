@@ -134,6 +134,14 @@ func (a *IoTSiteWiseActivities) CreatePortal(ctx context.Context, input *iotsite
 	return client.CreatePortalWithContext(ctx, input)
 }
 
+func (a *IoTSiteWiseActivities) CreatePresignedPortalUrl(ctx context.Context, input *iotsitewise.CreatePresignedPortalUrlInput) (*iotsitewise.CreatePresignedPortalUrlOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreatePresignedPortalUrlWithContext(ctx, input)
+}
+
 func (a *IoTSiteWiseActivities) CreateProject(ctx context.Context, input *iotsitewise.CreateProjectInput) (*iotsitewise.CreateProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {

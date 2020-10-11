@@ -46,6 +46,9 @@ type S3Client interface {
 	DeleteBucketMetricsConfiguration(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) (*s3.DeleteBucketMetricsConfigurationOutput, error)
 	DeleteBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) *S3DeleteBucketMetricsConfigurationResult
 
+	DeleteBucketOwnershipControls(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) (*s3.DeleteBucketOwnershipControlsOutput, error)
+	DeleteBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) *S3DeleteBucketOwnershipControlsResult
+
 	DeleteBucketPolicy(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) (*s3.DeleteBucketPolicyOutput, error)
 	DeleteBucketPolicyAsync(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) *S3DeleteBucketPolicyResult
 
@@ -108,6 +111,9 @@ type S3Client interface {
 
 	GetBucketNotificationConfiguration(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfiguration, error)
 	GetBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationConfigurationResult
+
+	GetBucketOwnershipControls(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) (*s3.GetBucketOwnershipControlsOutput, error)
+	GetBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) *S3GetBucketOwnershipControlsResult
 
 	GetBucketPolicy(ctx workflow.Context, input *s3.GetBucketPolicyInput) (*s3.GetBucketPolicyOutput, error)
 	GetBucketPolicyAsync(ctx workflow.Context, input *s3.GetBucketPolicyInput) *S3GetBucketPolicyResult
@@ -222,6 +228,9 @@ type S3Client interface {
 
 	PutBucketNotificationConfiguration(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) (*s3.PutBucketNotificationConfigurationOutput, error)
 	PutBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) *S3PutBucketNotificationConfigurationResult
+
+	PutBucketOwnershipControls(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) (*s3.PutBucketOwnershipControlsOutput, error)
+	PutBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) *S3PutBucketOwnershipControlsResult
 
 	PutBucketPolicy(ctx workflow.Context, input *s3.PutBucketPolicyInput) (*s3.PutBucketPolicyOutput, error)
 	PutBucketPolicyAsync(ctx workflow.Context, input *s3.PutBucketPolicyInput) *S3PutBucketPolicyResult
@@ -401,6 +410,16 @@ type S3DeleteBucketMetricsConfigurationResult struct {
 
 func (r *S3DeleteBucketMetricsConfigurationResult) Get(ctx workflow.Context) (*s3.DeleteBucketMetricsConfigurationOutput, error) {
 	var output s3.DeleteBucketMetricsConfigurationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type S3DeleteBucketOwnershipControlsResult struct {
+	Result workflow.Future
+}
+
+func (r *S3DeleteBucketOwnershipControlsResult) Get(ctx workflow.Context) (*s3.DeleteBucketOwnershipControlsOutput, error) {
+	var output s3.DeleteBucketOwnershipControlsOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -611,6 +630,16 @@ type S3GetBucketNotificationConfigurationResult struct {
 
 func (r *S3GetBucketNotificationConfigurationResult) Get(ctx workflow.Context) (*s3.NotificationConfiguration, error) {
 	var output s3.NotificationConfiguration
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type S3GetBucketOwnershipControlsResult struct {
+	Result workflow.Future
+}
+
+func (r *S3GetBucketOwnershipControlsResult) Get(ctx workflow.Context) (*s3.GetBucketOwnershipControlsOutput, error) {
+	var output s3.GetBucketOwnershipControlsOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -995,6 +1024,16 @@ func (r *S3PutBucketNotificationConfigurationResult) Get(ctx workflow.Context) (
 	return &output, err
 }
 
+type S3PutBucketOwnershipControlsResult struct {
+	Result workflow.Future
+}
+
+func (r *S3PutBucketOwnershipControlsResult) Get(ctx workflow.Context) (*s3.PutBucketOwnershipControlsOutput, error) {
+	var output s3.PutBucketOwnershipControlsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
 type S3PutBucketPolicyResult struct {
 	Result workflow.Future
 }
@@ -1301,6 +1340,17 @@ func (a *S3Stub) DeleteBucketMetricsConfigurationAsync(ctx workflow.Context, inp
 	return &S3DeleteBucketMetricsConfigurationResult{Result: future}
 }
 
+func (a *S3Stub) DeleteBucketOwnershipControls(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) (*s3.DeleteBucketOwnershipControlsOutput, error) {
+	var output s3.DeleteBucketOwnershipControlsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketOwnershipControls", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *S3Stub) DeleteBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) *S3DeleteBucketOwnershipControlsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketOwnershipControls", input)
+	return &S3DeleteBucketOwnershipControlsResult{Result: future}
+}
+
 func (a *S3Stub) DeleteBucketPolicy(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) (*s3.DeleteBucketPolicyOutput, error) {
 	var output s3.DeleteBucketPolicyOutput
 	err := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketPolicy", input).Get(ctx, &output)
@@ -1530,6 +1580,17 @@ func (a *S3Stub) GetBucketNotificationConfiguration(ctx workflow.Context, input 
 func (a *S3Stub) GetBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationConfigurationResult {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketNotificationConfiguration", input)
 	return &S3GetBucketNotificationConfigurationResult{Result: future}
+}
+
+func (a *S3Stub) GetBucketOwnershipControls(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) (*s3.GetBucketOwnershipControlsOutput, error) {
+	var output s3.GetBucketOwnershipControlsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketOwnershipControls", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *S3Stub) GetBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) *S3GetBucketOwnershipControlsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketOwnershipControls", input)
+	return &S3GetBucketOwnershipControlsResult{Result: future}
 }
 
 func (a *S3Stub) GetBucketPolicy(ctx workflow.Context, input *s3.GetBucketPolicyInput) (*s3.GetBucketPolicyOutput, error) {
@@ -1948,6 +2009,17 @@ func (a *S3Stub) PutBucketNotificationConfiguration(ctx workflow.Context, input 
 func (a *S3Stub) PutBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) *S3PutBucketNotificationConfigurationResult {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketNotificationConfiguration", input)
 	return &S3PutBucketNotificationConfigurationResult{Result: future}
+}
+
+func (a *S3Stub) PutBucketOwnershipControls(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) (*s3.PutBucketOwnershipControlsOutput, error) {
+	var output s3.PutBucketOwnershipControlsOutput
+	err := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketOwnershipControls", input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *S3Stub) PutBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) *S3PutBucketOwnershipControlsResult {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketOwnershipControls", input)
+	return &S3PutBucketOwnershipControlsResult{Result: future}
 }
 
 func (a *S3Stub) PutBucketPolicy(ctx workflow.Context, input *s3.PutBucketPolicyInput) (*s3.PutBucketPolicyOutput, error) {
