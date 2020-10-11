@@ -422,28 +422,28 @@ type SageMakerClient interface {
 	UpdateWorkteamAsync(ctx workflow.Context, input *sagemaker.UpdateWorkteamInput) *SagemakerUpdateWorkteamFuture
 
 	WaitUntilEndpointDeleted(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error
-	WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) workflow.Future
+	WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) *VoidFuture
 
 	WaitUntilEndpointInService(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error
-	WaitUntilEndpointInServiceAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) workflow.Future
+	WaitUntilEndpointInServiceAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) *VoidFuture
 
 	WaitUntilNotebookInstanceDeleted(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
-	WaitUntilNotebookInstanceDeletedAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) workflow.Future
+	WaitUntilNotebookInstanceDeletedAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) *VoidFuture
 
 	WaitUntilNotebookInstanceInService(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
-	WaitUntilNotebookInstanceInServiceAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) workflow.Future
+	WaitUntilNotebookInstanceInServiceAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) *VoidFuture
 
 	WaitUntilNotebookInstanceStopped(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
-	WaitUntilNotebookInstanceStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) workflow.Future
+	WaitUntilNotebookInstanceStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) *VoidFuture
 
 	WaitUntilProcessingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) error
-	WaitUntilProcessingJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) workflow.Future
+	WaitUntilProcessingJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) *VoidFuture
 
 	WaitUntilTrainingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) error
-	WaitUntilTrainingJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) workflow.Future
+	WaitUntilTrainingJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) *VoidFuture
 
 	WaitUntilTransformJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) error
-	WaitUntilTransformJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) workflow.Future
+	WaitUntilTransformJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) *VoidFuture
 }
 
 type SageMakerStub struct{}
@@ -3333,62 +3333,70 @@ func (a *SageMakerStub) WaitUntilEndpointDeleted(ctx workflow.Context, input *sa
 	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilEndpointDeleted", input).Get(ctx, nil)
 }
 
-func (a *SageMakerStub) WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilEndpointDeleted", input)
+func (a *SageMakerStub) WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilEndpointDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *SageMakerStub) WaitUntilEndpointInService(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilEndpointInService", input).Get(ctx, nil)
 }
 
-func (a *SageMakerStub) WaitUntilEndpointInServiceAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilEndpointInService", input)
+func (a *SageMakerStub) WaitUntilEndpointInServiceAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilEndpointInService", input)
+	return NewVoidFuture(future)
 }
 
 func (a *SageMakerStub) WaitUntilNotebookInstanceDeleted(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceDeleted", input).Get(ctx, nil)
 }
 
-func (a *SageMakerStub) WaitUntilNotebookInstanceDeletedAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceDeleted", input)
+func (a *SageMakerStub) WaitUntilNotebookInstanceDeletedAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *SageMakerStub) WaitUntilNotebookInstanceInService(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceInService", input).Get(ctx, nil)
 }
 
-func (a *SageMakerStub) WaitUntilNotebookInstanceInServiceAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceInService", input)
+func (a *SageMakerStub) WaitUntilNotebookInstanceInServiceAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceInService", input)
+	return NewVoidFuture(future)
 }
 
 func (a *SageMakerStub) WaitUntilNotebookInstanceStopped(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceStopped", input).Get(ctx, nil)
 }
 
-func (a *SageMakerStub) WaitUntilNotebookInstanceStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceStopped", input)
+func (a *SageMakerStub) WaitUntilNotebookInstanceStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilNotebookInstanceStopped", input)
+	return NewVoidFuture(future)
 }
 
 func (a *SageMakerStub) WaitUntilProcessingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilProcessingJobCompletedOrStopped", input).Get(ctx, nil)
 }
 
-func (a *SageMakerStub) WaitUntilProcessingJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilProcessingJobCompletedOrStopped", input)
+func (a *SageMakerStub) WaitUntilProcessingJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilProcessingJobCompletedOrStopped", input)
+	return NewVoidFuture(future)
 }
 
 func (a *SageMakerStub) WaitUntilTrainingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilTrainingJobCompletedOrStopped", input).Get(ctx, nil)
 }
 
-func (a *SageMakerStub) WaitUntilTrainingJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilTrainingJobCompletedOrStopped", input)
+func (a *SageMakerStub) WaitUntilTrainingJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilTrainingJobCompletedOrStopped", input)
+	return NewVoidFuture(future)
 }
 
 func (a *SageMakerStub) WaitUntilTransformJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilTransformJobCompletedOrStopped", input).Get(ctx, nil)
 }
 
-func (a *SageMakerStub) WaitUntilTransformJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilTransformJobCompletedOrStopped", input)
+func (a *SageMakerStub) WaitUntilTransformJobCompletedOrStoppedAsync(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.sagemaker.WaitUntilTransformJobCompletedOrStopped", input)
+	return NewVoidFuture(future)
 }

@@ -110,10 +110,10 @@ type GlacierClient interface {
 	UploadMultipartPartAsync(ctx workflow.Context, input *glacier.UploadMultipartPartInput) *GlacierUploadMultipartPartFuture
 
 	WaitUntilVaultExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error
-	WaitUntilVaultExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) workflow.Future
+	WaitUntilVaultExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *VoidFuture
 
 	WaitUntilVaultNotExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error
-	WaitUntilVaultNotExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) workflow.Future
+	WaitUntilVaultNotExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *VoidFuture
 }
 
 type GlacierStub struct{}
@@ -819,14 +819,16 @@ func (a *GlacierStub) WaitUntilVaultExists(ctx workflow.Context, input *glacier.
 	return workflow.ExecuteActivity(ctx, "aws.glacier.WaitUntilVaultExists", input).Get(ctx, nil)
 }
 
-func (a *GlacierStub) WaitUntilVaultExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.glacier.WaitUntilVaultExists", input)
+func (a *GlacierStub) WaitUntilVaultExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.glacier.WaitUntilVaultExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *GlacierStub) WaitUntilVaultNotExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.glacier.WaitUntilVaultNotExists", input).Get(ctx, nil)
 }
 
-func (a *GlacierStub) WaitUntilVaultNotExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.glacier.WaitUntilVaultNotExists", input)
+func (a *GlacierStub) WaitUntilVaultNotExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.glacier.WaitUntilVaultNotExists", input)
+	return NewVoidFuture(future)
 }

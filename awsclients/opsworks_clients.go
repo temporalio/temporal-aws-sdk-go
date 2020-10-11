@@ -233,22 +233,22 @@ type OpsWorksClient interface {
 	UpdateVolumeAsync(ctx workflow.Context, input *opsworks.UpdateVolumeInput) *OpsworksUpdateVolumeFuture
 
 	WaitUntilAppExists(ctx workflow.Context, input *opsworks.DescribeAppsInput) error
-	WaitUntilAppExistsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) workflow.Future
+	WaitUntilAppExistsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) *VoidFuture
 
 	WaitUntilDeploymentSuccessful(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) error
-	WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) workflow.Future
+	WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) *VoidFuture
 
 	WaitUntilInstanceOnline(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-	WaitUntilInstanceOnlineAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future
+	WaitUntilInstanceOnlineAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *VoidFuture
 
 	WaitUntilInstanceRegistered(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-	WaitUntilInstanceRegisteredAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future
+	WaitUntilInstanceRegisteredAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *VoidFuture
 
 	WaitUntilInstanceStopped(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-	WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future
+	WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *VoidFuture
 
 	WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-	WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future
+	WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *VoidFuture
 }
 
 type OpsWorksStub struct{}
@@ -1815,46 +1815,52 @@ func (a *OpsWorksStub) WaitUntilAppExists(ctx workflow.Context, input *opsworks.
 	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilAppExists", input).Get(ctx, nil)
 }
 
-func (a *OpsWorksStub) WaitUntilAppExistsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilAppExists", input)
+func (a *OpsWorksStub) WaitUntilAppExistsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilAppExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *OpsWorksStub) WaitUntilDeploymentSuccessful(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilDeploymentSuccessful", input).Get(ctx, nil)
 }
 
-func (a *OpsWorksStub) WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilDeploymentSuccessful", input)
+func (a *OpsWorksStub) WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilDeploymentSuccessful", input)
+	return NewVoidFuture(future)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceOnline(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceOnline", input).Get(ctx, nil)
 }
 
-func (a *OpsWorksStub) WaitUntilInstanceOnlineAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceOnline", input)
+func (a *OpsWorksStub) WaitUntilInstanceOnlineAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceOnline", input)
+	return NewVoidFuture(future)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceRegistered(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceRegistered", input).Get(ctx, nil)
 }
 
-func (a *OpsWorksStub) WaitUntilInstanceRegisteredAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceRegistered", input)
+func (a *OpsWorksStub) WaitUntilInstanceRegisteredAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceRegistered", input)
+	return NewVoidFuture(future)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceStopped(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceStopped", input).Get(ctx, nil)
 }
 
-func (a *OpsWorksStub) WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceStopped", input)
+func (a *OpsWorksStub) WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceStopped", input)
+	return NewVoidFuture(future)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceTerminated", input).Get(ctx, nil)
 }
 
-func (a *OpsWorksStub) WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceTerminated", input)
+func (a *OpsWorksStub) WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceTerminated", input)
+	return NewVoidFuture(future)
 }

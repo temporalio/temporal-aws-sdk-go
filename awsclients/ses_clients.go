@@ -224,7 +224,7 @@ type SESClient interface {
 	VerifyEmailIdentityAsync(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) *SesVerifyEmailIdentityFuture
 
 	WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error
-	WaitUntilIdentityExistsAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) workflow.Future
+	WaitUntilIdentityExistsAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) *VoidFuture
 }
 
 type SESStub struct{}
@@ -1728,6 +1728,7 @@ func (a *SESStub) WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetId
 	return workflow.ExecuteActivity(ctx, "aws.ses.WaitUntilIdentityExists", input).Get(ctx, nil)
 }
 
-func (a *SESStub) WaitUntilIdentityExistsAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ses.WaitUntilIdentityExists", input)
+func (a *SESStub) WaitUntilIdentityExistsAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ses.WaitUntilIdentityExists", input)
+	return NewVoidFuture(future)
 }

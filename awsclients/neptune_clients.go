@@ -188,10 +188,10 @@ type NeptuneClient interface {
 	StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterFuture
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) workflow.Future
+	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *VoidFuture
 
 	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) workflow.Future
+	WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *VoidFuture
 }
 
 type NeptuneStub struct{}
@@ -1443,14 +1443,16 @@ func (a *NeptuneStub) WaitUntilDBInstanceAvailable(ctx workflow.Context, input *
 	return workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceAvailable", input).Get(ctx, nil)
 }
 
-func (a *NeptuneStub) WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceAvailable", input)
+func (a *NeptuneStub) WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *NeptuneStub) WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceDeleted", input).Get(ctx, nil)
 }
 
-func (a *NeptuneStub) WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceDeleted", input)
+func (a *NeptuneStub) WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceDeleted", input)
+	return NewVoidFuture(future)
 }

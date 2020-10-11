@@ -74,16 +74,16 @@ type EKSClient interface {
 	UpdateNodegroupVersionAsync(ctx workflow.Context, input *eks.UpdateNodegroupVersionInput) *EksUpdateNodegroupVersionFuture
 
 	WaitUntilClusterActive(ctx workflow.Context, input *eks.DescribeClusterInput) error
-	WaitUntilClusterActiveAsync(ctx workflow.Context, input *eks.DescribeClusterInput) workflow.Future
+	WaitUntilClusterActiveAsync(ctx workflow.Context, input *eks.DescribeClusterInput) *VoidFuture
 
 	WaitUntilClusterDeleted(ctx workflow.Context, input *eks.DescribeClusterInput) error
-	WaitUntilClusterDeletedAsync(ctx workflow.Context, input *eks.DescribeClusterInput) workflow.Future
+	WaitUntilClusterDeletedAsync(ctx workflow.Context, input *eks.DescribeClusterInput) *VoidFuture
 
 	WaitUntilNodegroupActive(ctx workflow.Context, input *eks.DescribeNodegroupInput) error
-	WaitUntilNodegroupActiveAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) workflow.Future
+	WaitUntilNodegroupActiveAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) *VoidFuture
 
 	WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.DescribeNodegroupInput) error
-	WaitUntilNodegroupDeletedAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) workflow.Future
+	WaitUntilNodegroupDeletedAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) *VoidFuture
 }
 
 type EKSStub struct{}
@@ -537,30 +537,34 @@ func (a *EKSStub) WaitUntilClusterActive(ctx workflow.Context, input *eks.Descri
 	return workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilClusterActive", input).Get(ctx, nil)
 }
 
-func (a *EKSStub) WaitUntilClusterActiveAsync(ctx workflow.Context, input *eks.DescribeClusterInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilClusterActive", input)
+func (a *EKSStub) WaitUntilClusterActiveAsync(ctx workflow.Context, input *eks.DescribeClusterInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilClusterActive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EKSStub) WaitUntilClusterDeleted(ctx workflow.Context, input *eks.DescribeClusterInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilClusterDeleted", input).Get(ctx, nil)
 }
 
-func (a *EKSStub) WaitUntilClusterDeletedAsync(ctx workflow.Context, input *eks.DescribeClusterInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilClusterDeleted", input)
+func (a *EKSStub) WaitUntilClusterDeletedAsync(ctx workflow.Context, input *eks.DescribeClusterInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilClusterDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EKSStub) WaitUntilNodegroupActive(ctx workflow.Context, input *eks.DescribeNodegroupInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilNodegroupActive", input).Get(ctx, nil)
 }
 
-func (a *EKSStub) WaitUntilNodegroupActiveAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilNodegroupActive", input)
+func (a *EKSStub) WaitUntilNodegroupActiveAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilNodegroupActive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EKSStub) WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.DescribeNodegroupInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilNodegroupDeleted", input).Get(ctx, nil)
 }
 
-func (a *EKSStub) WaitUntilNodegroupDeletedAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilNodegroupDeleted", input)
+func (a *EKSStub) WaitUntilNodegroupDeletedAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.eks.WaitUntilNodegroupDeleted", input)
+	return NewVoidFuture(future)
 }

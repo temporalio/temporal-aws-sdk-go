@@ -152,10 +152,10 @@ type AppStreamClient interface {
 	UpdateStackAsync(ctx workflow.Context, input *appstream.UpdateStackInput) *AppstreamUpdateStackFuture
 
 	WaitUntilFleetStarted(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
-	WaitUntilFleetStartedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) workflow.Future
+	WaitUntilFleetStartedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) *VoidFuture
 
 	WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
-	WaitUntilFleetStoppedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) workflow.Future
+	WaitUntilFleetStoppedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) *VoidFuture
 }
 
 type AppStreamStub struct{}
@@ -1155,14 +1155,16 @@ func (a *AppStreamStub) WaitUntilFleetStarted(ctx workflow.Context, input *appst
 	return workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStarted", input).Get(ctx, nil)
 }
 
-func (a *AppStreamStub) WaitUntilFleetStartedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStarted", input)
+func (a *AppStreamStub) WaitUntilFleetStartedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStarted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *AppStreamStub) WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStopped", input).Get(ctx, nil)
 }
 
-func (a *AppStreamStub) WaitUntilFleetStoppedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStopped", input)
+func (a *AppStreamStub) WaitUntilFleetStoppedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStopped", input)
+	return NewVoidFuture(future)
 }

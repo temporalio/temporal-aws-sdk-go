@@ -182,7 +182,7 @@ type Route53Client interface {
 	UpdateTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) *Route53UpdateTrafficPolicyInstanceFuture
 
 	WaitUntilResourceRecordSetsChanged(ctx workflow.Context, input *route53.GetChangeInput) error
-	WaitUntilResourceRecordSetsChangedAsync(ctx workflow.Context, input *route53.GetChangeInput) workflow.Future
+	WaitUntilResourceRecordSetsChangedAsync(ctx workflow.Context, input *route53.GetChangeInput) *VoidFuture
 }
 
 type Route53Stub struct{}
@@ -1392,6 +1392,7 @@ func (a *Route53Stub) WaitUntilResourceRecordSetsChanged(ctx workflow.Context, i
 	return workflow.ExecuteActivity(ctx, "aws.route53.WaitUntilResourceRecordSetsChanged", input).Get(ctx, nil)
 }
 
-func (a *Route53Stub) WaitUntilResourceRecordSetsChangedAsync(ctx workflow.Context, input *route53.GetChangeInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.route53.WaitUntilResourceRecordSetsChanged", input)
+func (a *Route53Stub) WaitUntilResourceRecordSetsChangedAsync(ctx workflow.Context, input *route53.GetChangeInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.route53.WaitUntilResourceRecordSetsChanged", input)
+	return NewVoidFuture(future)
 }

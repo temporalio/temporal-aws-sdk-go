@@ -122,13 +122,13 @@ type EMRClient interface {
 	TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EmrTerminateJobFlowsFuture
 
 	WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error
-	WaitUntilClusterRunningAsync(ctx workflow.Context, input *emr.DescribeClusterInput) workflow.Future
+	WaitUntilClusterRunningAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *VoidFuture
 
 	WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error
-	WaitUntilClusterTerminatedAsync(ctx workflow.Context, input *emr.DescribeClusterInput) workflow.Future
+	WaitUntilClusterTerminatedAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *VoidFuture
 
 	WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error
-	WaitUntilStepCompleteAsync(ctx workflow.Context, input *emr.DescribeStepInput) workflow.Future
+	WaitUntilStepCompleteAsync(ctx workflow.Context, input *emr.DescribeStepInput) *VoidFuture
 }
 
 type EMRStub struct{}
@@ -918,22 +918,25 @@ func (a *EMRStub) WaitUntilClusterRunning(ctx workflow.Context, input *emr.Descr
 	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterRunning", input).Get(ctx, nil)
 }
 
-func (a *EMRStub) WaitUntilClusterRunningAsync(ctx workflow.Context, input *emr.DescribeClusterInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterRunning", input)
+func (a *EMRStub) WaitUntilClusterRunningAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EMRStub) WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterTerminated", input).Get(ctx, nil)
 }
 
-func (a *EMRStub) WaitUntilClusterTerminatedAsync(ctx workflow.Context, input *emr.DescribeClusterInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterTerminated", input)
+func (a *EMRStub) WaitUntilClusterTerminatedAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterTerminated", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EMRStub) WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilStepComplete", input).Get(ctx, nil)
 }
 
-func (a *EMRStub) WaitUntilStepCompleteAsync(ctx workflow.Context, input *emr.DescribeStepInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilStepComplete", input)
+func (a *EMRStub) WaitUntilStepCompleteAsync(ctx workflow.Context, input *emr.DescribeStepInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilStepComplete", input)
+	return NewVoidFuture(future)
 }

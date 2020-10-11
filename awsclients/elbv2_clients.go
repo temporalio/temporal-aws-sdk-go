@@ -113,19 +113,19 @@ type ELBV2Client interface {
 	SetSubnetsAsync(ctx workflow.Context, input *elbv2.SetSubnetsInput) *Elbv2SetSubnetsFuture
 
 	WaitUntilLoadBalancerAvailable(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
-	WaitUntilLoadBalancerAvailableAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) workflow.Future
+	WaitUntilLoadBalancerAvailableAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *VoidFuture
 
 	WaitUntilLoadBalancerExists(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
-	WaitUntilLoadBalancerExistsAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) workflow.Future
+	WaitUntilLoadBalancerExistsAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *VoidFuture
 
 	WaitUntilLoadBalancersDeleted(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
-	WaitUntilLoadBalancersDeletedAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) workflow.Future
+	WaitUntilLoadBalancersDeletedAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *VoidFuture
 
 	WaitUntilTargetDeregistered(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error
-	WaitUntilTargetDeregisteredAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) workflow.Future
+	WaitUntilTargetDeregisteredAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *VoidFuture
 
 	WaitUntilTargetInService(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error
-	WaitUntilTargetInServiceAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) workflow.Future
+	WaitUntilTargetInServiceAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *VoidFuture
 }
 
 type ELBV2Stub struct{}
@@ -852,38 +852,43 @@ func (a *ELBV2Stub) WaitUntilLoadBalancerAvailable(ctx workflow.Context, input *
 	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancerAvailable", input).Get(ctx, nil)
 }
 
-func (a *ELBV2Stub) WaitUntilLoadBalancerAvailableAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancerAvailable", input)
+func (a *ELBV2Stub) WaitUntilLoadBalancerAvailableAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancerAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ELBV2Stub) WaitUntilLoadBalancerExists(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancerExists", input).Get(ctx, nil)
 }
 
-func (a *ELBV2Stub) WaitUntilLoadBalancerExistsAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancerExists", input)
+func (a *ELBV2Stub) WaitUntilLoadBalancerExistsAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancerExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ELBV2Stub) WaitUntilLoadBalancersDeleted(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancersDeleted", input).Get(ctx, nil)
 }
 
-func (a *ELBV2Stub) WaitUntilLoadBalancersDeletedAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancersDeleted", input)
+func (a *ELBV2Stub) WaitUntilLoadBalancersDeletedAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilLoadBalancersDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ELBV2Stub) WaitUntilTargetDeregistered(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilTargetDeregistered", input).Get(ctx, nil)
 }
 
-func (a *ELBV2Stub) WaitUntilTargetDeregisteredAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilTargetDeregistered", input)
+func (a *ELBV2Stub) WaitUntilTargetDeregisteredAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilTargetDeregistered", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ELBV2Stub) WaitUntilTargetInService(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilTargetInService", input).Get(ctx, nil)
 }
 
-func (a *ELBV2Stub) WaitUntilTargetInServiceAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilTargetInService", input)
+func (a *ELBV2Stub) WaitUntilTargetInServiceAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elbv2.WaitUntilTargetInService", input)
+	return NewVoidFuture(future)
 }

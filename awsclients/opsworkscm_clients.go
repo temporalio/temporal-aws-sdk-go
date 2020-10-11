@@ -68,7 +68,7 @@ type OpsWorksCMClient interface {
 	UpdateServerEngineAttributesAsync(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) *OpsworkscmUpdateServerEngineAttributesFuture
 
 	WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error
-	WaitUntilNodeAssociatedAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) workflow.Future
+	WaitUntilNodeAssociatedAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) *VoidFuture
 }
 
 type OpsWorksCMStub struct{}
@@ -480,6 +480,7 @@ func (a *OpsWorksCMStub) WaitUntilNodeAssociated(ctx workflow.Context, input *op
 	return workflow.ExecuteActivity(ctx, "aws.opsworkscm.WaitUntilNodeAssociated", input).Get(ctx, nil)
 }
 
-func (a *OpsWorksCMStub) WaitUntilNodeAssociatedAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.opsworkscm.WaitUntilNodeAssociated", input)
+func (a *OpsWorksCMStub) WaitUntilNodeAssociatedAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.WaitUntilNodeAssociated", input)
+	return NewVoidFuture(future)
 }

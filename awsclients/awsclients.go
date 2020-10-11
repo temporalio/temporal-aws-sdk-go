@@ -5,9 +5,13 @@ import (
 )
 
 type VoidFuture struct {
-	Result workflow.Future
+	Future workflow.Future
 }
 
 func (r *VoidFuture) Get(ctx workflow.Context) error {
-	return r.Result.Get(ctx, nil)
+	return r.Future.Get(ctx, nil)
+}
+
+func NewVoidFuture(future workflow.Future) *VoidFuture {
+	return &VoidFuture{Future: future}
 }

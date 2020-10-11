@@ -1268,100 +1268,100 @@ type EC2Client interface {
 	WithdrawByoipCidrAsync(ctx workflow.Context, input *ec2.WithdrawByoipCidrInput) *Ec2WithdrawByoipCidrFuture
 
 	WaitUntilBundleTaskComplete(ctx workflow.Context, input *ec2.DescribeBundleTasksInput) error
-	WaitUntilBundleTaskCompleteAsync(ctx workflow.Context, input *ec2.DescribeBundleTasksInput) workflow.Future
+	WaitUntilBundleTaskCompleteAsync(ctx workflow.Context, input *ec2.DescribeBundleTasksInput) *VoidFuture
 
 	WaitUntilConversionTaskCancelled(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error
-	WaitUntilConversionTaskCancelledAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) workflow.Future
+	WaitUntilConversionTaskCancelledAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) *VoidFuture
 
 	WaitUntilConversionTaskCompleted(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error
-	WaitUntilConversionTaskCompletedAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) workflow.Future
+	WaitUntilConversionTaskCompletedAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) *VoidFuture
 
 	WaitUntilConversionTaskDeleted(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error
-	WaitUntilConversionTaskDeletedAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) workflow.Future
+	WaitUntilConversionTaskDeletedAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) *VoidFuture
 
 	WaitUntilCustomerGatewayAvailable(ctx workflow.Context, input *ec2.DescribeCustomerGatewaysInput) error
-	WaitUntilCustomerGatewayAvailableAsync(ctx workflow.Context, input *ec2.DescribeCustomerGatewaysInput) workflow.Future
+	WaitUntilCustomerGatewayAvailableAsync(ctx workflow.Context, input *ec2.DescribeCustomerGatewaysInput) *VoidFuture
 
 	WaitUntilExportTaskCancelled(ctx workflow.Context, input *ec2.DescribeExportTasksInput) error
-	WaitUntilExportTaskCancelledAsync(ctx workflow.Context, input *ec2.DescribeExportTasksInput) workflow.Future
+	WaitUntilExportTaskCancelledAsync(ctx workflow.Context, input *ec2.DescribeExportTasksInput) *VoidFuture
 
 	WaitUntilExportTaskCompleted(ctx workflow.Context, input *ec2.DescribeExportTasksInput) error
-	WaitUntilExportTaskCompletedAsync(ctx workflow.Context, input *ec2.DescribeExportTasksInput) workflow.Future
+	WaitUntilExportTaskCompletedAsync(ctx workflow.Context, input *ec2.DescribeExportTasksInput) *VoidFuture
 
 	WaitUntilImageAvailable(ctx workflow.Context, input *ec2.DescribeImagesInput) error
-	WaitUntilImageAvailableAsync(ctx workflow.Context, input *ec2.DescribeImagesInput) workflow.Future
+	WaitUntilImageAvailableAsync(ctx workflow.Context, input *ec2.DescribeImagesInput) *VoidFuture
 
 	WaitUntilImageExists(ctx workflow.Context, input *ec2.DescribeImagesInput) error
-	WaitUntilImageExistsAsync(ctx workflow.Context, input *ec2.DescribeImagesInput) workflow.Future
+	WaitUntilImageExistsAsync(ctx workflow.Context, input *ec2.DescribeImagesInput) *VoidFuture
 
 	WaitUntilInstanceExists(ctx workflow.Context, input *ec2.DescribeInstancesInput) error
-	WaitUntilInstanceExistsAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) workflow.Future
+	WaitUntilInstanceExistsAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) *VoidFuture
 
 	WaitUntilInstanceRunning(ctx workflow.Context, input *ec2.DescribeInstancesInput) error
-	WaitUntilInstanceRunningAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) workflow.Future
+	WaitUntilInstanceRunningAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) *VoidFuture
 
 	WaitUntilInstanceStatusOk(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) error
-	WaitUntilInstanceStatusOkAsync(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) workflow.Future
+	WaitUntilInstanceStatusOkAsync(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) *VoidFuture
 
 	WaitUntilInstanceStopped(ctx workflow.Context, input *ec2.DescribeInstancesInput) error
-	WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) workflow.Future
+	WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) *VoidFuture
 
 	WaitUntilInstanceTerminated(ctx workflow.Context, input *ec2.DescribeInstancesInput) error
-	WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) workflow.Future
+	WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) *VoidFuture
 
 	WaitUntilKeyPairExists(ctx workflow.Context, input *ec2.DescribeKeyPairsInput) error
-	WaitUntilKeyPairExistsAsync(ctx workflow.Context, input *ec2.DescribeKeyPairsInput) workflow.Future
+	WaitUntilKeyPairExistsAsync(ctx workflow.Context, input *ec2.DescribeKeyPairsInput) *VoidFuture
 
 	WaitUntilNatGatewayAvailable(ctx workflow.Context, input *ec2.DescribeNatGatewaysInput) error
-	WaitUntilNatGatewayAvailableAsync(ctx workflow.Context, input *ec2.DescribeNatGatewaysInput) workflow.Future
+	WaitUntilNatGatewayAvailableAsync(ctx workflow.Context, input *ec2.DescribeNatGatewaysInput) *VoidFuture
 
 	WaitUntilNetworkInterfaceAvailable(ctx workflow.Context, input *ec2.DescribeNetworkInterfacesInput) error
-	WaitUntilNetworkInterfaceAvailableAsync(ctx workflow.Context, input *ec2.DescribeNetworkInterfacesInput) workflow.Future
+	WaitUntilNetworkInterfaceAvailableAsync(ctx workflow.Context, input *ec2.DescribeNetworkInterfacesInput) *VoidFuture
 
 	WaitUntilPasswordDataAvailable(ctx workflow.Context, input *ec2.GetPasswordDataInput) error
-	WaitUntilPasswordDataAvailableAsync(ctx workflow.Context, input *ec2.GetPasswordDataInput) workflow.Future
+	WaitUntilPasswordDataAvailableAsync(ctx workflow.Context, input *ec2.GetPasswordDataInput) *VoidFuture
 
 	WaitUntilSecurityGroupExists(ctx workflow.Context, input *ec2.DescribeSecurityGroupsInput) error
-	WaitUntilSecurityGroupExistsAsync(ctx workflow.Context, input *ec2.DescribeSecurityGroupsInput) workflow.Future
+	WaitUntilSecurityGroupExistsAsync(ctx workflow.Context, input *ec2.DescribeSecurityGroupsInput) *VoidFuture
 
 	WaitUntilSnapshotCompleted(ctx workflow.Context, input *ec2.DescribeSnapshotsInput) error
-	WaitUntilSnapshotCompletedAsync(ctx workflow.Context, input *ec2.DescribeSnapshotsInput) workflow.Future
+	WaitUntilSnapshotCompletedAsync(ctx workflow.Context, input *ec2.DescribeSnapshotsInput) *VoidFuture
 
 	WaitUntilSpotInstanceRequestFulfilled(ctx workflow.Context, input *ec2.DescribeSpotInstanceRequestsInput) error
-	WaitUntilSpotInstanceRequestFulfilledAsync(ctx workflow.Context, input *ec2.DescribeSpotInstanceRequestsInput) workflow.Future
+	WaitUntilSpotInstanceRequestFulfilledAsync(ctx workflow.Context, input *ec2.DescribeSpotInstanceRequestsInput) *VoidFuture
 
 	WaitUntilSubnetAvailable(ctx workflow.Context, input *ec2.DescribeSubnetsInput) error
-	WaitUntilSubnetAvailableAsync(ctx workflow.Context, input *ec2.DescribeSubnetsInput) workflow.Future
+	WaitUntilSubnetAvailableAsync(ctx workflow.Context, input *ec2.DescribeSubnetsInput) *VoidFuture
 
 	WaitUntilSystemStatusOk(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) error
-	WaitUntilSystemStatusOkAsync(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) workflow.Future
+	WaitUntilSystemStatusOkAsync(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) *VoidFuture
 
 	WaitUntilVolumeAvailable(ctx workflow.Context, input *ec2.DescribeVolumesInput) error
-	WaitUntilVolumeAvailableAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) workflow.Future
+	WaitUntilVolumeAvailableAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) *VoidFuture
 
 	WaitUntilVolumeDeleted(ctx workflow.Context, input *ec2.DescribeVolumesInput) error
-	WaitUntilVolumeDeletedAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) workflow.Future
+	WaitUntilVolumeDeletedAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) *VoidFuture
 
 	WaitUntilVolumeInUse(ctx workflow.Context, input *ec2.DescribeVolumesInput) error
-	WaitUntilVolumeInUseAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) workflow.Future
+	WaitUntilVolumeInUseAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) *VoidFuture
 
 	WaitUntilVpcAvailable(ctx workflow.Context, input *ec2.DescribeVpcsInput) error
-	WaitUntilVpcAvailableAsync(ctx workflow.Context, input *ec2.DescribeVpcsInput) workflow.Future
+	WaitUntilVpcAvailableAsync(ctx workflow.Context, input *ec2.DescribeVpcsInput) *VoidFuture
 
 	WaitUntilVpcExists(ctx workflow.Context, input *ec2.DescribeVpcsInput) error
-	WaitUntilVpcExistsAsync(ctx workflow.Context, input *ec2.DescribeVpcsInput) workflow.Future
+	WaitUntilVpcExistsAsync(ctx workflow.Context, input *ec2.DescribeVpcsInput) *VoidFuture
 
 	WaitUntilVpcPeeringConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error
-	WaitUntilVpcPeeringConnectionDeletedAsync(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) workflow.Future
+	WaitUntilVpcPeeringConnectionDeletedAsync(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) *VoidFuture
 
 	WaitUntilVpcPeeringConnectionExists(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error
-	WaitUntilVpcPeeringConnectionExistsAsync(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) workflow.Future
+	WaitUntilVpcPeeringConnectionExistsAsync(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) *VoidFuture
 
 	WaitUntilVpnConnectionAvailable(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error
-	WaitUntilVpnConnectionAvailableAsync(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) workflow.Future
+	WaitUntilVpnConnectionAvailableAsync(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) *VoidFuture
 
 	WaitUntilVpnConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error
-	WaitUntilVpnConnectionDeletedAsync(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) workflow.Future
+	WaitUntilVpnConnectionDeletedAsync(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) *VoidFuture
 }
 
 type EC2Stub struct{}
@@ -10173,254 +10173,286 @@ func (a *EC2Stub) WaitUntilBundleTaskComplete(ctx workflow.Context, input *ec2.D
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilBundleTaskComplete", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilBundleTaskCompleteAsync(ctx workflow.Context, input *ec2.DescribeBundleTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilBundleTaskComplete", input)
+func (a *EC2Stub) WaitUntilBundleTaskCompleteAsync(ctx workflow.Context, input *ec2.DescribeBundleTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilBundleTaskComplete", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilConversionTaskCancelled(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskCancelled", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilConversionTaskCancelledAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskCancelled", input)
+func (a *EC2Stub) WaitUntilConversionTaskCancelledAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskCancelled", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilConversionTaskCompleted(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskCompleted", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilConversionTaskCompletedAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskCompleted", input)
+func (a *EC2Stub) WaitUntilConversionTaskCompletedAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskCompleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilConversionTaskDeleted(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskDeleted", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilConversionTaskDeletedAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskDeleted", input)
+func (a *EC2Stub) WaitUntilConversionTaskDeletedAsync(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilConversionTaskDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilCustomerGatewayAvailable(ctx workflow.Context, input *ec2.DescribeCustomerGatewaysInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilCustomerGatewayAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilCustomerGatewayAvailableAsync(ctx workflow.Context, input *ec2.DescribeCustomerGatewaysInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilCustomerGatewayAvailable", input)
+func (a *EC2Stub) WaitUntilCustomerGatewayAvailableAsync(ctx workflow.Context, input *ec2.DescribeCustomerGatewaysInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilCustomerGatewayAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilExportTaskCancelled(ctx workflow.Context, input *ec2.DescribeExportTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilExportTaskCancelled", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilExportTaskCancelledAsync(ctx workflow.Context, input *ec2.DescribeExportTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilExportTaskCancelled", input)
+func (a *EC2Stub) WaitUntilExportTaskCancelledAsync(ctx workflow.Context, input *ec2.DescribeExportTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilExportTaskCancelled", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilExportTaskCompleted(ctx workflow.Context, input *ec2.DescribeExportTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilExportTaskCompleted", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilExportTaskCompletedAsync(ctx workflow.Context, input *ec2.DescribeExportTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilExportTaskCompleted", input)
+func (a *EC2Stub) WaitUntilExportTaskCompletedAsync(ctx workflow.Context, input *ec2.DescribeExportTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilExportTaskCompleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilImageAvailable(ctx workflow.Context, input *ec2.DescribeImagesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilImageAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilImageAvailableAsync(ctx workflow.Context, input *ec2.DescribeImagesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilImageAvailable", input)
+func (a *EC2Stub) WaitUntilImageAvailableAsync(ctx workflow.Context, input *ec2.DescribeImagesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilImageAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilImageExists(ctx workflow.Context, input *ec2.DescribeImagesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilImageExists", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilImageExistsAsync(ctx workflow.Context, input *ec2.DescribeImagesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilImageExists", input)
+func (a *EC2Stub) WaitUntilImageExistsAsync(ctx workflow.Context, input *ec2.DescribeImagesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilImageExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilInstanceExists(ctx workflow.Context, input *ec2.DescribeInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceExists", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilInstanceExistsAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceExists", input)
+func (a *EC2Stub) WaitUntilInstanceExistsAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilInstanceRunning(ctx workflow.Context, input *ec2.DescribeInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceRunning", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilInstanceRunningAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceRunning", input)
+func (a *EC2Stub) WaitUntilInstanceRunningAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilInstanceStatusOk(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceStatusOk", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilInstanceStatusOkAsync(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceStatusOk", input)
+func (a *EC2Stub) WaitUntilInstanceStatusOkAsync(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceStatusOk", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilInstanceStopped(ctx workflow.Context, input *ec2.DescribeInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceStopped", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceStopped", input)
+func (a *EC2Stub) WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceStopped", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilInstanceTerminated(ctx workflow.Context, input *ec2.DescribeInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceTerminated", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceTerminated", input)
+func (a *EC2Stub) WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *ec2.DescribeInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilInstanceTerminated", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilKeyPairExists(ctx workflow.Context, input *ec2.DescribeKeyPairsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilKeyPairExists", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilKeyPairExistsAsync(ctx workflow.Context, input *ec2.DescribeKeyPairsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilKeyPairExists", input)
+func (a *EC2Stub) WaitUntilKeyPairExistsAsync(ctx workflow.Context, input *ec2.DescribeKeyPairsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilKeyPairExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilNatGatewayAvailable(ctx workflow.Context, input *ec2.DescribeNatGatewaysInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilNatGatewayAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilNatGatewayAvailableAsync(ctx workflow.Context, input *ec2.DescribeNatGatewaysInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilNatGatewayAvailable", input)
+func (a *EC2Stub) WaitUntilNatGatewayAvailableAsync(ctx workflow.Context, input *ec2.DescribeNatGatewaysInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilNatGatewayAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilNetworkInterfaceAvailable(ctx workflow.Context, input *ec2.DescribeNetworkInterfacesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilNetworkInterfaceAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilNetworkInterfaceAvailableAsync(ctx workflow.Context, input *ec2.DescribeNetworkInterfacesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilNetworkInterfaceAvailable", input)
+func (a *EC2Stub) WaitUntilNetworkInterfaceAvailableAsync(ctx workflow.Context, input *ec2.DescribeNetworkInterfacesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilNetworkInterfaceAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilPasswordDataAvailable(ctx workflow.Context, input *ec2.GetPasswordDataInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilPasswordDataAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilPasswordDataAvailableAsync(ctx workflow.Context, input *ec2.GetPasswordDataInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilPasswordDataAvailable", input)
+func (a *EC2Stub) WaitUntilPasswordDataAvailableAsync(ctx workflow.Context, input *ec2.GetPasswordDataInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilPasswordDataAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilSecurityGroupExists(ctx workflow.Context, input *ec2.DescribeSecurityGroupsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSecurityGroupExists", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilSecurityGroupExistsAsync(ctx workflow.Context, input *ec2.DescribeSecurityGroupsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSecurityGroupExists", input)
+func (a *EC2Stub) WaitUntilSecurityGroupExistsAsync(ctx workflow.Context, input *ec2.DescribeSecurityGroupsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSecurityGroupExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilSnapshotCompleted(ctx workflow.Context, input *ec2.DescribeSnapshotsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSnapshotCompleted", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilSnapshotCompletedAsync(ctx workflow.Context, input *ec2.DescribeSnapshotsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSnapshotCompleted", input)
+func (a *EC2Stub) WaitUntilSnapshotCompletedAsync(ctx workflow.Context, input *ec2.DescribeSnapshotsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSnapshotCompleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilSpotInstanceRequestFulfilled(ctx workflow.Context, input *ec2.DescribeSpotInstanceRequestsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSpotInstanceRequestFulfilled", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilSpotInstanceRequestFulfilledAsync(ctx workflow.Context, input *ec2.DescribeSpotInstanceRequestsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSpotInstanceRequestFulfilled", input)
+func (a *EC2Stub) WaitUntilSpotInstanceRequestFulfilledAsync(ctx workflow.Context, input *ec2.DescribeSpotInstanceRequestsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSpotInstanceRequestFulfilled", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilSubnetAvailable(ctx workflow.Context, input *ec2.DescribeSubnetsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSubnetAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilSubnetAvailableAsync(ctx workflow.Context, input *ec2.DescribeSubnetsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSubnetAvailable", input)
+func (a *EC2Stub) WaitUntilSubnetAvailableAsync(ctx workflow.Context, input *ec2.DescribeSubnetsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSubnetAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilSystemStatusOk(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSystemStatusOk", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilSystemStatusOkAsync(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSystemStatusOk", input)
+func (a *EC2Stub) WaitUntilSystemStatusOkAsync(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilSystemStatusOk", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVolumeAvailable(ctx workflow.Context, input *ec2.DescribeVolumesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVolumeAvailableAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeAvailable", input)
+func (a *EC2Stub) WaitUntilVolumeAvailableAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVolumeDeleted(ctx workflow.Context, input *ec2.DescribeVolumesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeDeleted", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVolumeDeletedAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeDeleted", input)
+func (a *EC2Stub) WaitUntilVolumeDeletedAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVolumeInUse(ctx workflow.Context, input *ec2.DescribeVolumesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeInUse", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVolumeInUseAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeInUse", input)
+func (a *EC2Stub) WaitUntilVolumeInUseAsync(ctx workflow.Context, input *ec2.DescribeVolumesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVolumeInUse", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVpcAvailable(ctx workflow.Context, input *ec2.DescribeVpcsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVpcAvailableAsync(ctx workflow.Context, input *ec2.DescribeVpcsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcAvailable", input)
+func (a *EC2Stub) WaitUntilVpcAvailableAsync(ctx workflow.Context, input *ec2.DescribeVpcsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVpcExists(ctx workflow.Context, input *ec2.DescribeVpcsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcExists", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVpcExistsAsync(ctx workflow.Context, input *ec2.DescribeVpcsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcExists", input)
+func (a *EC2Stub) WaitUntilVpcExistsAsync(ctx workflow.Context, input *ec2.DescribeVpcsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVpcPeeringConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcPeeringConnectionDeleted", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVpcPeeringConnectionDeletedAsync(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcPeeringConnectionDeleted", input)
+func (a *EC2Stub) WaitUntilVpcPeeringConnectionDeletedAsync(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcPeeringConnectionDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVpcPeeringConnectionExists(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcPeeringConnectionExists", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVpcPeeringConnectionExistsAsync(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcPeeringConnectionExists", input)
+func (a *EC2Stub) WaitUntilVpcPeeringConnectionExistsAsync(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpcPeeringConnectionExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVpnConnectionAvailable(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpnConnectionAvailable", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVpnConnectionAvailableAsync(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpnConnectionAvailable", input)
+func (a *EC2Stub) WaitUntilVpnConnectionAvailableAsync(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpnConnectionAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EC2Stub) WaitUntilVpnConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpnConnectionDeleted", input).Get(ctx, nil)
 }
 
-func (a *EC2Stub) WaitUntilVpnConnectionDeletedAsync(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpnConnectionDeleted", input)
+func (a *EC2Stub) WaitUntilVpnConnectionDeletedAsync(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ec2.WaitUntilVpnConnectionDeleted", input)
+	return NewVoidFuture(future)
 }

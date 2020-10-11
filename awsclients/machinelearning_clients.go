@@ -95,16 +95,16 @@ type MachineLearningClient interface {
 	UpdateMLModelAsync(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) *MachinelearningUpdateMLModelFuture
 
 	WaitUntilBatchPredictionAvailable(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) error
-	WaitUntilBatchPredictionAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) workflow.Future
+	WaitUntilBatchPredictionAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) *VoidFuture
 
 	WaitUntilDataSourceAvailable(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) error
-	WaitUntilDataSourceAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) workflow.Future
+	WaitUntilDataSourceAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) *VoidFuture
 
 	WaitUntilEvaluationAvailable(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) error
-	WaitUntilEvaluationAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) workflow.Future
+	WaitUntilEvaluationAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) *VoidFuture
 
 	WaitUntilMLModelAvailable(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) error
-	WaitUntilMLModelAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) workflow.Future
+	WaitUntilMLModelAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) *VoidFuture
 }
 
 type MachineLearningStub struct{}
@@ -705,30 +705,34 @@ func (a *MachineLearningStub) WaitUntilBatchPredictionAvailable(ctx workflow.Con
 	return workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilBatchPredictionAvailable", input).Get(ctx, nil)
 }
 
-func (a *MachineLearningStub) WaitUntilBatchPredictionAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilBatchPredictionAvailable", input)
+func (a *MachineLearningStub) WaitUntilBatchPredictionAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilBatchPredictionAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MachineLearningStub) WaitUntilDataSourceAvailable(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilDataSourceAvailable", input).Get(ctx, nil)
 }
 
-func (a *MachineLearningStub) WaitUntilDataSourceAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilDataSourceAvailable", input)
+func (a *MachineLearningStub) WaitUntilDataSourceAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilDataSourceAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MachineLearningStub) WaitUntilEvaluationAvailable(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilEvaluationAvailable", input).Get(ctx, nil)
 }
 
-func (a *MachineLearningStub) WaitUntilEvaluationAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilEvaluationAvailable", input)
+func (a *MachineLearningStub) WaitUntilEvaluationAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilEvaluationAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MachineLearningStub) WaitUntilMLModelAvailable(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilMLModelAvailable", input).Get(ctx, nil)
 }
 
-func (a *MachineLearningStub) WaitUntilMLModelAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilMLModelAvailable", input)
+func (a *MachineLearningStub) WaitUntilMLModelAvailableAsync(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.WaitUntilMLModelAvailable", input)
+	return NewVoidFuture(future)
 }

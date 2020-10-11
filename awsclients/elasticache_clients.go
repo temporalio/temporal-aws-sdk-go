@@ -206,16 +206,16 @@ type ElastiCacheClient interface {
 	TestFailoverAsync(ctx workflow.Context, input *elasticache.TestFailoverInput) *ElasticacheTestFailoverFuture
 
 	WaitUntilCacheClusterAvailable(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error
-	WaitUntilCacheClusterAvailableAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) workflow.Future
+	WaitUntilCacheClusterAvailableAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *VoidFuture
 
 	WaitUntilCacheClusterDeleted(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error
-	WaitUntilCacheClusterDeletedAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) workflow.Future
+	WaitUntilCacheClusterDeletedAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *VoidFuture
 
 	WaitUntilReplicationGroupAvailable(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error
-	WaitUntilReplicationGroupAvailableAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) workflow.Future
+	WaitUntilReplicationGroupAvailableAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) *VoidFuture
 
 	WaitUntilReplicationGroupDeleted(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error
-	WaitUntilReplicationGroupDeletedAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) workflow.Future
+	WaitUntilReplicationGroupDeletedAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) *VoidFuture
 }
 
 type ElastiCacheStub struct{}
@@ -1593,30 +1593,34 @@ func (a *ElastiCacheStub) WaitUntilCacheClusterAvailable(ctx workflow.Context, i
 	return workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilCacheClusterAvailable", input).Get(ctx, nil)
 }
 
-func (a *ElastiCacheStub) WaitUntilCacheClusterAvailableAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilCacheClusterAvailable", input)
+func (a *ElastiCacheStub) WaitUntilCacheClusterAvailableAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilCacheClusterAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ElastiCacheStub) WaitUntilCacheClusterDeleted(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilCacheClusterDeleted", input).Get(ctx, nil)
 }
 
-func (a *ElastiCacheStub) WaitUntilCacheClusterDeletedAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilCacheClusterDeleted", input)
+func (a *ElastiCacheStub) WaitUntilCacheClusterDeletedAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilCacheClusterDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ElastiCacheStub) WaitUntilReplicationGroupAvailable(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilReplicationGroupAvailable", input).Get(ctx, nil)
 }
 
-func (a *ElastiCacheStub) WaitUntilReplicationGroupAvailableAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilReplicationGroupAvailable", input)
+func (a *ElastiCacheStub) WaitUntilReplicationGroupAvailableAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilReplicationGroupAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ElastiCacheStub) WaitUntilReplicationGroupDeleted(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilReplicationGroupDeleted", input).Get(ctx, nil)
 }
 
-func (a *ElastiCacheStub) WaitUntilReplicationGroupDeletedAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilReplicationGroupDeleted", input)
+func (a *ElastiCacheStub) WaitUntilReplicationGroupDeletedAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticache.WaitUntilReplicationGroupDeleted", input)
+	return NewVoidFuture(future)
 }

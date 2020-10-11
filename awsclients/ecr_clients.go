@@ -98,10 +98,10 @@ type ECRClient interface {
 	UploadLayerPartAsync(ctx workflow.Context, input *ecr.UploadLayerPartInput) *EcrUploadLayerPartFuture
 
 	WaitUntilImageScanComplete(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) error
-	WaitUntilImageScanCompleteAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) workflow.Future
+	WaitUntilImageScanCompleteAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) *VoidFuture
 
 	WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error
-	WaitUntilLifecyclePolicyPreviewCompleteAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) workflow.Future
+	WaitUntilLifecyclePolicyPreviewCompleteAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) *VoidFuture
 }
 
 type ECRStub struct{}
@@ -723,14 +723,16 @@ func (a *ECRStub) WaitUntilImageScanComplete(ctx workflow.Context, input *ecr.De
 	return workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilImageScanComplete", input).Get(ctx, nil)
 }
 
-func (a *ECRStub) WaitUntilImageScanCompleteAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilImageScanComplete", input)
+func (a *ECRStub) WaitUntilImageScanCompleteAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilImageScanComplete", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ECRStub) WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilLifecyclePolicyPreviewComplete", input).Get(ctx, nil)
 }
 
-func (a *ECRStub) WaitUntilLifecyclePolicyPreviewCompleteAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilLifecyclePolicyPreviewComplete", input)
+func (a *ECRStub) WaitUntilLifecyclePolicyPreviewCompleteAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilLifecyclePolicyPreviewComplete", input)
+	return NewVoidFuture(future)
 }

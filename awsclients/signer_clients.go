@@ -47,7 +47,7 @@ type SignerClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *signer.UntagResourceInput) *SignerUntagResourceFuture
 
 	WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error
-	WaitUntilSuccessfulSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) workflow.Future
+	WaitUntilSuccessfulSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) *VoidFuture
 }
 
 type SignerStub struct{}
@@ -312,6 +312,7 @@ func (a *SignerStub) WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *
 	return workflow.ExecuteActivity(ctx, "aws.signer.WaitUntilSuccessfulSigningJob", input).Get(ctx, nil)
 }
 
-func (a *SignerStub) WaitUntilSuccessfulSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.signer.WaitUntilSuccessfulSigningJob", input)
+func (a *SignerStub) WaitUntilSuccessfulSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.signer.WaitUntilSuccessfulSigningJob", input)
+	return NewVoidFuture(future)
 }

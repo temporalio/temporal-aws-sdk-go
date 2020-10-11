@@ -50,7 +50,7 @@ type ACMClient interface {
 	UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *AcmUpdateCertificateOptionsFuture
 
 	WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error
-	WaitUntilCertificateValidatedAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) workflow.Future
+	WaitUntilCertificateValidatedAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *VoidFuture
 }
 
 type ACMStub struct{}
@@ -336,6 +336,7 @@ func (a *ACMStub) WaitUntilCertificateValidated(ctx workflow.Context, input *acm
 	return workflow.ExecuteActivity(ctx, "aws.acm.WaitUntilCertificateValidated", input).Get(ctx, nil)
 }
 
-func (a *ACMStub) WaitUntilCertificateValidatedAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.acm.WaitUntilCertificateValidated", input)
+func (a *ACMStub) WaitUntilCertificateValidatedAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.acm.WaitUntilCertificateValidated", input)
+	return NewVoidFuture(future)
 }

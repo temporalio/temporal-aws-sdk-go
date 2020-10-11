@@ -134,10 +134,10 @@ type DynamoDBClient interface {
 	UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *DynamodbUpdateTimeToLiveFuture
 
 	WaitUntilTableExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
-	WaitUntilTableExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) workflow.Future
+	WaitUntilTableExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *VoidFuture
 
 	WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
-	WaitUntilTableNotExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) workflow.Future
+	WaitUntilTableNotExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *VoidFuture
 }
 
 type DynamoDBStub struct{}
@@ -1011,14 +1011,16 @@ func (a *DynamoDBStub) WaitUntilTableExists(ctx workflow.Context, input *dynamod
 	return workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableExists", input).Get(ctx, nil)
 }
 
-func (a *DynamoDBStub) WaitUntilTableExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableExists", input)
+func (a *DynamoDBStub) WaitUntilTableExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DynamoDBStub) WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableNotExists", input).Get(ctx, nil)
 }
 
-func (a *DynamoDBStub) WaitUntilTableNotExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableNotExists", input)
+func (a *DynamoDBStub) WaitUntilTableNotExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableNotExists", input)
+	return NewVoidFuture(future)
 }

@@ -23,7 +23,7 @@ type {{ $name }}Client interface {
 {{- range $i, $method := .Methods }}
 {{- if HasPrefix $method.Name "Wait" }}
 {{"	"}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error
-{{"	"}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) workflow.Future
+{{"	"}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *VoidFuture
 {{ else }}
 {{- $prefix := CapitalizeFirstLetter $method.Output.Package }}
 {{ "	"}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error)
@@ -59,8 +59,9 @@ func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $me
 	return workflow.ExecuteActivity(ctx, "aws.{{ $id }}.{{$method.Name}}", input).Get(ctx, nil)
 }
 
-func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.{{ $id }}.{{$method.Name}}", input)
+func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.{{ $id }}.{{$method.Name}}", input)
+	return NewVoidFuture(future)
 }
 {{ else }}
 {{- $prefix := CapitalizeFirstLetter $method.Output.Package }}

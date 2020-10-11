@@ -176,22 +176,22 @@ type IoTSiteWiseClient interface {
 	UpdateProjectAsync(ctx workflow.Context, input *iotsitewise.UpdateProjectInput) *IotsitewiseUpdateProjectFuture
 
 	WaitUntilAssetActive(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error
-	WaitUntilAssetActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) workflow.Future
+	WaitUntilAssetActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) *VoidFuture
 
 	WaitUntilAssetModelActive(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error
-	WaitUntilAssetModelActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) workflow.Future
+	WaitUntilAssetModelActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) *VoidFuture
 
 	WaitUntilAssetModelNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error
-	WaitUntilAssetModelNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) workflow.Future
+	WaitUntilAssetModelNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) *VoidFuture
 
 	WaitUntilAssetNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error
-	WaitUntilAssetNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) workflow.Future
+	WaitUntilAssetNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) *VoidFuture
 
 	WaitUntilPortalActive(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error
-	WaitUntilPortalActiveAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) workflow.Future
+	WaitUntilPortalActiveAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) *VoidFuture
 
 	WaitUntilPortalNotExists(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error
-	WaitUntilPortalNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) workflow.Future
+	WaitUntilPortalNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) *VoidFuture
 }
 
 type IoTSiteWiseStub struct{}
@@ -1359,46 +1359,52 @@ func (a *IoTSiteWiseStub) WaitUntilAssetActive(ctx workflow.Context, input *iots
 	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetActive", input).Get(ctx, nil)
 }
 
-func (a *IoTSiteWiseStub) WaitUntilAssetActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetActive", input)
+func (a *IoTSiteWiseStub) WaitUntilAssetActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetActive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetModelActive(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelActive", input).Get(ctx, nil)
 }
 
-func (a *IoTSiteWiseStub) WaitUntilAssetModelActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelActive", input)
+func (a *IoTSiteWiseStub) WaitUntilAssetModelActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelActive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetModelNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelNotExists", input).Get(ctx, nil)
 }
 
-func (a *IoTSiteWiseStub) WaitUntilAssetModelNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelNotExists", input)
+func (a *IoTSiteWiseStub) WaitUntilAssetModelNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelNotExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetNotExists", input).Get(ctx, nil)
 }
 
-func (a *IoTSiteWiseStub) WaitUntilAssetNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetNotExists", input)
+func (a *IoTSiteWiseStub) WaitUntilAssetNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetNotExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilPortalActive(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalActive", input).Get(ctx, nil)
 }
 
-func (a *IoTSiteWiseStub) WaitUntilPortalActiveAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalActive", input)
+func (a *IoTSiteWiseStub) WaitUntilPortalActiveAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalActive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilPortalNotExists(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalNotExists", input).Get(ctx, nil)
 }
 
-func (a *IoTSiteWiseStub) WaitUntilPortalNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalNotExists", input)
+func (a *IoTSiteWiseStub) WaitUntilPortalNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalNotExists", input)
+	return NewVoidFuture(future)
 }

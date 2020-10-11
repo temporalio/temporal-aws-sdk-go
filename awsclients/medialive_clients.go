@@ -161,37 +161,37 @@ type MediaLiveClient interface {
 	UpdateReservationAsync(ctx workflow.Context, input *medialive.UpdateReservationInput) *MedialiveUpdateReservationFuture
 
 	WaitUntilChannelCreated(ctx workflow.Context, input *medialive.DescribeChannelInput) error
-	WaitUntilChannelCreatedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future
+	WaitUntilChannelCreatedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *VoidFuture
 
 	WaitUntilChannelDeleted(ctx workflow.Context, input *medialive.DescribeChannelInput) error
-	WaitUntilChannelDeletedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future
+	WaitUntilChannelDeletedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *VoidFuture
 
 	WaitUntilChannelRunning(ctx workflow.Context, input *medialive.DescribeChannelInput) error
-	WaitUntilChannelRunningAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future
+	WaitUntilChannelRunningAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *VoidFuture
 
 	WaitUntilChannelStopped(ctx workflow.Context, input *medialive.DescribeChannelInput) error
-	WaitUntilChannelStoppedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future
+	WaitUntilChannelStoppedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *VoidFuture
 
 	WaitUntilInputAttached(ctx workflow.Context, input *medialive.DescribeInputInput) error
-	WaitUntilInputAttachedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) workflow.Future
+	WaitUntilInputAttachedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) *VoidFuture
 
 	WaitUntilInputDeleted(ctx workflow.Context, input *medialive.DescribeInputInput) error
-	WaitUntilInputDeletedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) workflow.Future
+	WaitUntilInputDeletedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) *VoidFuture
 
 	WaitUntilInputDetached(ctx workflow.Context, input *medialive.DescribeInputInput) error
-	WaitUntilInputDetachedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) workflow.Future
+	WaitUntilInputDetachedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) *VoidFuture
 
 	WaitUntilMultiplexCreated(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
-	WaitUntilMultiplexCreatedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future
+	WaitUntilMultiplexCreatedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *VoidFuture
 
 	WaitUntilMultiplexDeleted(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
-	WaitUntilMultiplexDeletedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future
+	WaitUntilMultiplexDeletedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *VoidFuture
 
 	WaitUntilMultiplexRunning(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
-	WaitUntilMultiplexRunningAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future
+	WaitUntilMultiplexRunningAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *VoidFuture
 
 	WaitUntilMultiplexStopped(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
-	WaitUntilMultiplexStoppedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future
+	WaitUntilMultiplexStoppedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *VoidFuture
 }
 
 type MediaLiveStub struct{}
@@ -1254,86 +1254,97 @@ func (a *MediaLiveStub) WaitUntilChannelCreated(ctx workflow.Context, input *med
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelCreated", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilChannelCreatedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelCreated", input)
+func (a *MediaLiveStub) WaitUntilChannelCreatedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelCreated", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilChannelDeleted(ctx workflow.Context, input *medialive.DescribeChannelInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelDeleted", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilChannelDeletedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelDeleted", input)
+func (a *MediaLiveStub) WaitUntilChannelDeletedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilChannelRunning(ctx workflow.Context, input *medialive.DescribeChannelInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelRunning", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilChannelRunningAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelRunning", input)
+func (a *MediaLiveStub) WaitUntilChannelRunningAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilChannelStopped(ctx workflow.Context, input *medialive.DescribeChannelInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelStopped", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilChannelStoppedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelStopped", input)
+func (a *MediaLiveStub) WaitUntilChannelStoppedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilChannelStopped", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilInputAttached(ctx workflow.Context, input *medialive.DescribeInputInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputAttached", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilInputAttachedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputAttached", input)
+func (a *MediaLiveStub) WaitUntilInputAttachedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputAttached", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilInputDeleted(ctx workflow.Context, input *medialive.DescribeInputInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputDeleted", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilInputDeletedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputDeleted", input)
+func (a *MediaLiveStub) WaitUntilInputDeletedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilInputDetached(ctx workflow.Context, input *medialive.DescribeInputInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputDetached", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilInputDetachedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputDetached", input)
+func (a *MediaLiveStub) WaitUntilInputDetachedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilInputDetached", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilMultiplexCreated(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexCreated", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilMultiplexCreatedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexCreated", input)
+func (a *MediaLiveStub) WaitUntilMultiplexCreatedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexCreated", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilMultiplexDeleted(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexDeleted", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilMultiplexDeletedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexDeleted", input)
+func (a *MediaLiveStub) WaitUntilMultiplexDeletedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilMultiplexRunning(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexRunning", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilMultiplexRunningAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexRunning", input)
+func (a *MediaLiveStub) WaitUntilMultiplexRunningAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *MediaLiveStub) WaitUntilMultiplexStopped(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexStopped", input).Get(ctx, nil)
 }
 
-func (a *MediaLiveStub) WaitUntilMultiplexStoppedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexStopped", input)
+func (a *MediaLiveStub) WaitUntilMultiplexStoppedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.medialive.WaitUntilMultiplexStopped", input)
+	return NewVoidFuture(future)
 }

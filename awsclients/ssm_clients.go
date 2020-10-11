@@ -377,7 +377,7 @@ type SSMClient interface {
 	UpdateServiceSettingAsync(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) *SsmUpdateServiceSettingFuture
 
 	WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error
-	WaitUntilCommandExecutedAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) workflow.Future
+	WaitUntilCommandExecutedAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) *VoidFuture
 }
 
 type SSMStub struct{}
@@ -2952,6 +2952,7 @@ func (a *SSMStub) WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetC
 	return workflow.ExecuteActivity(ctx, "aws.ssm.WaitUntilCommandExecuted", input).Get(ctx, nil)
 }
 
-func (a *SSMStub) WaitUntilCommandExecutedAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ssm.WaitUntilCommandExecuted", input)
+func (a *SSMStub) WaitUntilCommandExecutedAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ssm.WaitUntilCommandExecuted", input)
+	return NewVoidFuture(future)
 }

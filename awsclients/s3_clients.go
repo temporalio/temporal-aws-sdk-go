@@ -284,16 +284,16 @@ type S3Client interface {
 	UploadPartCopyAsync(ctx workflow.Context, input *s3.UploadPartCopyInput) *S3UploadPartCopyFuture
 
 	WaitUntilBucketExists(ctx workflow.Context, input *s3.HeadBucketInput) error
-	WaitUntilBucketExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) workflow.Future
+	WaitUntilBucketExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) *VoidFuture
 
 	WaitUntilBucketNotExists(ctx workflow.Context, input *s3.HeadBucketInput) error
-	WaitUntilBucketNotExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) workflow.Future
+	WaitUntilBucketNotExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) *VoidFuture
 
 	WaitUntilObjectExists(ctx workflow.Context, input *s3.HeadObjectInput) error
-	WaitUntilObjectExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) workflow.Future
+	WaitUntilObjectExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) *VoidFuture
 
 	WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error
-	WaitUntilObjectNotExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) workflow.Future
+	WaitUntilObjectNotExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) *VoidFuture
 }
 
 type S3Stub struct{}
@@ -2217,30 +2217,34 @@ func (a *S3Stub) WaitUntilBucketExists(ctx workflow.Context, input *s3.HeadBucke
 	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketExists", input).Get(ctx, nil)
 }
 
-func (a *S3Stub) WaitUntilBucketExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketExists", input)
+func (a *S3Stub) WaitUntilBucketExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *S3Stub) WaitUntilBucketNotExists(ctx workflow.Context, input *s3.HeadBucketInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketNotExists", input).Get(ctx, nil)
 }
 
-func (a *S3Stub) WaitUntilBucketNotExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketNotExists", input)
+func (a *S3Stub) WaitUntilBucketNotExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketNotExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *S3Stub) WaitUntilObjectExists(ctx workflow.Context, input *s3.HeadObjectInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectExists", input).Get(ctx, nil)
 }
 
-func (a *S3Stub) WaitUntilObjectExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectExists", input)
+func (a *S3Stub) WaitUntilObjectExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *S3Stub) WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectNotExists", input).Get(ctx, nil)
 }
 
-func (a *S3Stub) WaitUntilObjectNotExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectNotExists", input)
+func (a *S3Stub) WaitUntilObjectNotExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectNotExists", input)
+	return NewVoidFuture(future)
 }

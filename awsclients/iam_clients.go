@@ -431,16 +431,16 @@ type IAMClient interface {
 	UploadSigningCertificateAsync(ctx workflow.Context, input *iam.UploadSigningCertificateInput) *IamUploadSigningCertificateFuture
 
 	WaitUntilInstanceProfileExists(ctx workflow.Context, input *iam.GetInstanceProfileInput) error
-	WaitUntilInstanceProfileExistsAsync(ctx workflow.Context, input *iam.GetInstanceProfileInput) workflow.Future
+	WaitUntilInstanceProfileExistsAsync(ctx workflow.Context, input *iam.GetInstanceProfileInput) *VoidFuture
 
 	WaitUntilPolicyExists(ctx workflow.Context, input *iam.GetPolicyInput) error
-	WaitUntilPolicyExistsAsync(ctx workflow.Context, input *iam.GetPolicyInput) workflow.Future
+	WaitUntilPolicyExistsAsync(ctx workflow.Context, input *iam.GetPolicyInput) *VoidFuture
 
 	WaitUntilRoleExists(ctx workflow.Context, input *iam.GetRoleInput) error
-	WaitUntilRoleExistsAsync(ctx workflow.Context, input *iam.GetRoleInput) workflow.Future
+	WaitUntilRoleExistsAsync(ctx workflow.Context, input *iam.GetRoleInput) *VoidFuture
 
 	WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserInput) error
-	WaitUntilUserExistsAsync(ctx workflow.Context, input *iam.GetUserInput) workflow.Future
+	WaitUntilUserExistsAsync(ctx workflow.Context, input *iam.GetUserInput) *VoidFuture
 }
 
 type IAMStub struct{}
@@ -3393,30 +3393,34 @@ func (a *IAMStub) WaitUntilInstanceProfileExists(ctx workflow.Context, input *ia
 	return workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilInstanceProfileExists", input).Get(ctx, nil)
 }
 
-func (a *IAMStub) WaitUntilInstanceProfileExistsAsync(ctx workflow.Context, input *iam.GetInstanceProfileInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilInstanceProfileExists", input)
+func (a *IAMStub) WaitUntilInstanceProfileExistsAsync(ctx workflow.Context, input *iam.GetInstanceProfileInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilInstanceProfileExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *IAMStub) WaitUntilPolicyExists(ctx workflow.Context, input *iam.GetPolicyInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilPolicyExists", input).Get(ctx, nil)
 }
 
-func (a *IAMStub) WaitUntilPolicyExistsAsync(ctx workflow.Context, input *iam.GetPolicyInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilPolicyExists", input)
+func (a *IAMStub) WaitUntilPolicyExistsAsync(ctx workflow.Context, input *iam.GetPolicyInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilPolicyExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *IAMStub) WaitUntilRoleExists(ctx workflow.Context, input *iam.GetRoleInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilRoleExists", input).Get(ctx, nil)
 }
 
-func (a *IAMStub) WaitUntilRoleExistsAsync(ctx workflow.Context, input *iam.GetRoleInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilRoleExists", input)
+func (a *IAMStub) WaitUntilRoleExistsAsync(ctx workflow.Context, input *iam.GetRoleInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilRoleExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *IAMStub) WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilUserExists", input).Get(ctx, nil)
 }
 
-func (a *IAMStub) WaitUntilUserExistsAsync(ctx workflow.Context, input *iam.GetUserInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilUserExists", input)
+func (a *IAMStub) WaitUntilUserExistsAsync(ctx workflow.Context, input *iam.GetUserInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.iam.WaitUntilUserExists", input)
+	return NewVoidFuture(future)
 }

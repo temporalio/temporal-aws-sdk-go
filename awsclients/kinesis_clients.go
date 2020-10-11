@@ -95,10 +95,10 @@ type KinesisClient interface {
 	UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountFuture
 
 	WaitUntilStreamExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
-	WaitUntilStreamExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) workflow.Future
+	WaitUntilStreamExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *VoidFuture
 
 	WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
-	WaitUntilStreamNotExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) workflow.Future
+	WaitUntilStreamNotExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *VoidFuture
 }
 
 type KinesisStub struct{}
@@ -699,14 +699,16 @@ func (a *KinesisStub) WaitUntilStreamExists(ctx workflow.Context, input *kinesis
 	return workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamExists", input).Get(ctx, nil)
 }
 
-func (a *KinesisStub) WaitUntilStreamExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamExists", input)
+func (a *KinesisStub) WaitUntilStreamExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *KinesisStub) WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamNotExists", input).Get(ctx, nil)
 }
 
-func (a *KinesisStub) WaitUntilStreamNotExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamNotExists", input)
+func (a *KinesisStub) WaitUntilStreamNotExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamNotExists", input)
+	return NewVoidFuture(future)
 }

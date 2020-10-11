@@ -104,7 +104,7 @@ type SchemasClient interface {
 	UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaFuture
 
 	WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error
-	WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) workflow.Future
+	WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *VoidFuture
 }
 
 type SchemasStub struct{}
@@ -768,6 +768,7 @@ func (a *SchemasStub) WaitUntilCodeBindingExists(ctx workflow.Context, input *sc
 	return workflow.ExecuteActivity(ctx, "aws.schemas.WaitUntilCodeBindingExists", input).Get(ctx, nil)
 }
 
-func (a *SchemasStub) WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.schemas.WaitUntilCodeBindingExists", input)
+func (a *SchemasStub) WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.WaitUntilCodeBindingExists", input)
+	return NewVoidFuture(future)
 }

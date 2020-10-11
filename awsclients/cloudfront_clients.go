@@ -215,13 +215,13 @@ type CloudFrontClient interface {
 	UpdateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) *CloudfrontUpdateStreamingDistributionFuture
 
 	WaitUntilDistributionDeployed(ctx workflow.Context, input *cloudfront.GetDistributionInput) error
-	WaitUntilDistributionDeployedAsync(ctx workflow.Context, input *cloudfront.GetDistributionInput) workflow.Future
+	WaitUntilDistributionDeployedAsync(ctx workflow.Context, input *cloudfront.GetDistributionInput) *VoidFuture
 
 	WaitUntilInvalidationCompleted(ctx workflow.Context, input *cloudfront.GetInvalidationInput) error
-	WaitUntilInvalidationCompletedAsync(ctx workflow.Context, input *cloudfront.GetInvalidationInput) workflow.Future
+	WaitUntilInvalidationCompletedAsync(ctx workflow.Context, input *cloudfront.GetInvalidationInput) *VoidFuture
 
 	WaitUntilStreamingDistributionDeployed(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) error
-	WaitUntilStreamingDistributionDeployedAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) workflow.Future
+	WaitUntilStreamingDistributionDeployedAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) *VoidFuture
 }
 
 type CloudFrontStub struct{}
@@ -1662,22 +1662,25 @@ func (a *CloudFrontStub) WaitUntilDistributionDeployed(ctx workflow.Context, inp
 	return workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilDistributionDeployed", input).Get(ctx, nil)
 }
 
-func (a *CloudFrontStub) WaitUntilDistributionDeployedAsync(ctx workflow.Context, input *cloudfront.GetDistributionInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilDistributionDeployed", input)
+func (a *CloudFrontStub) WaitUntilDistributionDeployedAsync(ctx workflow.Context, input *cloudfront.GetDistributionInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilDistributionDeployed", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFrontStub) WaitUntilInvalidationCompleted(ctx workflow.Context, input *cloudfront.GetInvalidationInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilInvalidationCompleted", input).Get(ctx, nil)
 }
 
-func (a *CloudFrontStub) WaitUntilInvalidationCompletedAsync(ctx workflow.Context, input *cloudfront.GetInvalidationInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilInvalidationCompleted", input)
+func (a *CloudFrontStub) WaitUntilInvalidationCompletedAsync(ctx workflow.Context, input *cloudfront.GetInvalidationInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilInvalidationCompleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFrontStub) WaitUntilStreamingDistributionDeployed(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilStreamingDistributionDeployed", input).Get(ctx, nil)
 }
 
-func (a *CloudFrontStub) WaitUntilStreamingDistributionDeployedAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilStreamingDistributionDeployed", input)
+func (a *CloudFrontStub) WaitUntilStreamingDistributionDeployedAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.WaitUntilStreamingDistributionDeployed", input)
+	return NewVoidFuture(future)
 }

@@ -152,7 +152,7 @@ type CodeDeployClient interface {
 	UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupFuture
 
 	WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error
-	WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) workflow.Future
+	WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) *VoidFuture
 }
 
 type CodeDeployStub struct{}
@@ -1152,6 +1152,7 @@ func (a *CodeDeployStub) WaitUntilDeploymentSuccessful(ctx workflow.Context, inp
 	return workflow.ExecuteActivity(ctx, "aws.codedeploy.WaitUntilDeploymentSuccessful", input).Get(ctx, nil)
 }
 
-func (a *CodeDeployStub) WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.codedeploy.WaitUntilDeploymentSuccessful", input)
+func (a *CodeDeployStub) WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.WaitUntilDeploymentSuccessful", input)
+	return NewVoidFuture(future)
 }

@@ -98,13 +98,13 @@ type ELBClient interface {
 	SetLoadBalancerPoliciesOfListenerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) *ElbSetLoadBalancerPoliciesOfListenerFuture
 
 	WaitUntilAnyInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
-	WaitUntilAnyInstanceInServiceAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) workflow.Future
+	WaitUntilAnyInstanceInServiceAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *VoidFuture
 
 	WaitUntilInstanceDeregistered(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
-	WaitUntilInstanceDeregisteredAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) workflow.Future
+	WaitUntilInstanceDeregisteredAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *VoidFuture
 
 	WaitUntilInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
-	WaitUntilInstanceInServiceAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) workflow.Future
+	WaitUntilInstanceInServiceAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *VoidFuture
 }
 
 type ELBStub struct{}
@@ -726,22 +726,25 @@ func (a *ELBStub) WaitUntilAnyInstanceInService(ctx workflow.Context, input *elb
 	return workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilAnyInstanceInService", input).Get(ctx, nil)
 }
 
-func (a *ELBStub) WaitUntilAnyInstanceInServiceAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilAnyInstanceInService", input)
+func (a *ELBStub) WaitUntilAnyInstanceInServiceAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilAnyInstanceInService", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ELBStub) WaitUntilInstanceDeregistered(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilInstanceDeregistered", input).Get(ctx, nil)
 }
 
-func (a *ELBStub) WaitUntilInstanceDeregisteredAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilInstanceDeregistered", input)
+func (a *ELBStub) WaitUntilInstanceDeregisteredAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilInstanceDeregistered", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ELBStub) WaitUntilInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilInstanceInService", input).Get(ctx, nil)
 }
 
-func (a *ELBStub) WaitUntilInstanceInServiceAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilInstanceInService", input)
+func (a *ELBStub) WaitUntilInstanceInServiceAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elb.WaitUntilInstanceInService", input)
+	return NewVoidFuture(future)
 }

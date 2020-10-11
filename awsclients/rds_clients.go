@@ -401,22 +401,22 @@ type RDSClient interface {
 	StopDBInstanceAsync(ctx workflow.Context, input *rds.StopDBInstanceInput) *RdsStopDBInstanceFuture
 
 	WaitUntilDBClusterSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error
-	WaitUntilDBClusterSnapshotAvailableAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) workflow.Future
+	WaitUntilDBClusterSnapshotAvailableAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) *VoidFuture
 
 	WaitUntilDBClusterSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error
-	WaitUntilDBClusterSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) workflow.Future
+	WaitUntilDBClusterSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) *VoidFuture
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) workflow.Future
+	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) *VoidFuture
 
 	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) workflow.Future
+	WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) *VoidFuture
 
 	WaitUntilDBSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
-	WaitUntilDBSnapshotAvailableAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) workflow.Future
+	WaitUntilDBSnapshotAvailableAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) *VoidFuture
 
 	WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
-	WaitUntilDBSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) workflow.Future
+	WaitUntilDBSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) *VoidFuture
 }
 
 type RDSStub struct{}
@@ -3159,46 +3159,52 @@ func (a *RDSStub) WaitUntilDBClusterSnapshotAvailable(ctx workflow.Context, inpu
 	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBClusterSnapshotAvailable", input).Get(ctx, nil)
 }
 
-func (a *RDSStub) WaitUntilDBClusterSnapshotAvailableAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBClusterSnapshotAvailable", input)
+func (a *RDSStub) WaitUntilDBClusterSnapshotAvailableAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBClusterSnapshotAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RDSStub) WaitUntilDBClusterSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBClusterSnapshotDeleted", input).Get(ctx, nil)
 }
 
-func (a *RDSStub) WaitUntilDBClusterSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBClusterSnapshotDeleted", input)
+func (a *RDSStub) WaitUntilDBClusterSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBClusterSnapshotDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RDSStub) WaitUntilDBInstanceAvailable(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBInstanceAvailable", input).Get(ctx, nil)
 }
 
-func (a *RDSStub) WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBInstanceAvailable", input)
+func (a *RDSStub) WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBInstanceAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RDSStub) WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBInstanceDeleted", input).Get(ctx, nil)
 }
 
-func (a *RDSStub) WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBInstanceDeleted", input)
+func (a *RDSStub) WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBInstanceDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RDSStub) WaitUntilDBSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBSnapshotAvailable", input).Get(ctx, nil)
 }
 
-func (a *RDSStub) WaitUntilDBSnapshotAvailableAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBSnapshotAvailable", input)
+func (a *RDSStub) WaitUntilDBSnapshotAvailableAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBSnapshotAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RDSStub) WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBSnapshotDeleted", input).Get(ctx, nil)
 }
 
-func (a *RDSStub) WaitUntilDBSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBSnapshotDeleted", input)
+func (a *RDSStub) WaitUntilDBSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.rds.WaitUntilDBSnapshotDeleted", input)
+	return NewVoidFuture(future)
 }

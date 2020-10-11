@@ -152,13 +152,13 @@ type ElasticBeanstalkClient interface {
 	ValidateConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.ValidateConfigurationSettingsInput) *ElasticbeanstalkValidateConfigurationSettingsFuture
 
 	WaitUntilEnvironmentExists(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
-	WaitUntilEnvironmentExistsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future
+	WaitUntilEnvironmentExistsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *VoidFuture
 
 	WaitUntilEnvironmentTerminated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
-	WaitUntilEnvironmentTerminatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future
+	WaitUntilEnvironmentTerminatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *VoidFuture
 
 	WaitUntilEnvironmentUpdated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
-	WaitUntilEnvironmentUpdatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future
+	WaitUntilEnvironmentUpdatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *VoidFuture
 }
 
 type ElasticBeanstalkStub struct{}
@@ -1158,22 +1158,25 @@ func (a *ElasticBeanstalkStub) WaitUntilEnvironmentExists(ctx workflow.Context, 
 	return workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentExists", input).Get(ctx, nil)
 }
 
-func (a *ElasticBeanstalkStub) WaitUntilEnvironmentExistsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentExists", input)
+func (a *ElasticBeanstalkStub) WaitUntilEnvironmentExistsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ElasticBeanstalkStub) WaitUntilEnvironmentTerminated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentTerminated", input).Get(ctx, nil)
 }
 
-func (a *ElasticBeanstalkStub) WaitUntilEnvironmentTerminatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentTerminated", input)
+func (a *ElasticBeanstalkStub) WaitUntilEnvironmentTerminatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentTerminated", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ElasticBeanstalkStub) WaitUntilEnvironmentUpdated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentUpdated", input).Get(ctx, nil)
 }
 
-func (a *ElasticBeanstalkStub) WaitUntilEnvironmentUpdatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentUpdated", input)
+func (a *ElasticBeanstalkStub) WaitUntilEnvironmentUpdatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.WaitUntilEnvironmentUpdated", input)
+	return NewVoidFuture(future)
 }

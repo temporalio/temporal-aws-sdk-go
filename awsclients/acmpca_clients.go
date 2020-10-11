@@ -80,13 +80,13 @@ type ACMPCAClient interface {
 	UpdateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) *AcmpcaUpdateCertificateAuthorityFuture
 
 	WaitUntilAuditReportCreated(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) error
-	WaitUntilAuditReportCreatedAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) workflow.Future
+	WaitUntilAuditReportCreatedAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *VoidFuture
 
 	WaitUntilCertificateAuthorityCSRCreated(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) error
-	WaitUntilCertificateAuthorityCSRCreatedAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) workflow.Future
+	WaitUntilCertificateAuthorityCSRCreatedAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) *VoidFuture
 
 	WaitUntilCertificateIssued(ctx workflow.Context, input *acmpca.GetCertificateInput) error
-	WaitUntilCertificateIssuedAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) workflow.Future
+	WaitUntilCertificateIssuedAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) *VoidFuture
 }
 
 type ACMPCAStub struct{}
@@ -582,22 +582,25 @@ func (a *ACMPCAStub) WaitUntilAuditReportCreated(ctx workflow.Context, input *ac
 	return workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilAuditReportCreated", input).Get(ctx, nil)
 }
 
-func (a *ACMPCAStub) WaitUntilAuditReportCreatedAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilAuditReportCreated", input)
+func (a *ACMPCAStub) WaitUntilAuditReportCreatedAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilAuditReportCreated", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ACMPCAStub) WaitUntilCertificateAuthorityCSRCreated(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilCertificateAuthorityCSRCreated", input).Get(ctx, nil)
 }
 
-func (a *ACMPCAStub) WaitUntilCertificateAuthorityCSRCreatedAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilCertificateAuthorityCSRCreated", input)
+func (a *ACMPCAStub) WaitUntilCertificateAuthorityCSRCreatedAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilCertificateAuthorityCSRCreated", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ACMPCAStub) WaitUntilCertificateIssued(ctx workflow.Context, input *acmpca.GetCertificateInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilCertificateIssued", input).Get(ctx, nil)
 }
 
-func (a *ACMPCAStub) WaitUntilCertificateIssuedAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilCertificateIssued", input)
+func (a *ACMPCAStub) WaitUntilCertificateIssuedAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.acmpca.WaitUntilCertificateIssued", input)
+	return NewVoidFuture(future)
 }

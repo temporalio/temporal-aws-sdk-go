@@ -137,10 +137,10 @@ type DocDBClient interface {
 	StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterFuture
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) workflow.Future
+	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *VoidFuture
 
 	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) workflow.Future
+	WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *VoidFuture
 }
 
 type DocDBStub struct{}
@@ -1035,14 +1035,16 @@ func (a *DocDBStub) WaitUntilDBInstanceAvailable(ctx workflow.Context, input *do
 	return workflow.ExecuteActivity(ctx, "aws.docdb.WaitUntilDBInstanceAvailable", input).Get(ctx, nil)
 }
 
-func (a *DocDBStub) WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.docdb.WaitUntilDBInstanceAvailable", input)
+func (a *DocDBStub) WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.docdb.WaitUntilDBInstanceAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DocDBStub) WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.docdb.WaitUntilDBInstanceDeleted", input).Get(ctx, nil)
 }
 
-func (a *DocDBStub) WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.docdb.WaitUntilDBInstanceDeleted", input)
+func (a *DocDBStub) WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.docdb.WaitUntilDBInstanceDeleted", input)
+	return NewVoidFuture(future)
 }

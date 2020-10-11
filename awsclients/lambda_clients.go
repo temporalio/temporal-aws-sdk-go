@@ -155,13 +155,13 @@ type LambdaClient interface {
 	UpdateFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) *LambdaUpdateFunctionEventInvokeConfigFuture
 
 	WaitUntilFunctionActive(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
-	WaitUntilFunctionActiveAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) workflow.Future
+	WaitUntilFunctionActiveAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *VoidFuture
 
 	WaitUntilFunctionExists(ctx workflow.Context, input *lambda.GetFunctionInput) error
-	WaitUntilFunctionExistsAsync(ctx workflow.Context, input *lambda.GetFunctionInput) workflow.Future
+	WaitUntilFunctionExistsAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *VoidFuture
 
 	WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
-	WaitUntilFunctionUpdatedAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) workflow.Future
+	WaitUntilFunctionUpdatedAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *VoidFuture
 }
 
 type LambdaStub struct{}
@@ -1182,22 +1182,25 @@ func (a *LambdaStub) WaitUntilFunctionActive(ctx workflow.Context, input *lambda
 	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionActive", input).Get(ctx, nil)
 }
 
-func (a *LambdaStub) WaitUntilFunctionActiveAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionActive", input)
+func (a *LambdaStub) WaitUntilFunctionActiveAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionActive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *LambdaStub) WaitUntilFunctionExists(ctx workflow.Context, input *lambda.GetFunctionInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionExists", input).Get(ctx, nil)
 }
 
-func (a *LambdaStub) WaitUntilFunctionExistsAsync(ctx workflow.Context, input *lambda.GetFunctionInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionExists", input)
+func (a *LambdaStub) WaitUntilFunctionExistsAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *LambdaStub) WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionUpdated", input).Get(ctx, nil)
 }
 
-func (a *LambdaStub) WaitUntilFunctionUpdatedAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionUpdated", input)
+func (a *LambdaStub) WaitUntilFunctionUpdatedAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionUpdated", input)
+	return NewVoidFuture(future)
 }

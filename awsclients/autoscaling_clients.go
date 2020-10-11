@@ -182,13 +182,13 @@ type AutoScalingClient interface {
 	UpdateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) *AutoscalingUpdateAutoScalingGroupFuture
 
 	WaitUntilGroupExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
-	WaitUntilGroupExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) workflow.Future
+	WaitUntilGroupExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *VoidFuture
 
 	WaitUntilGroupInService(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
-	WaitUntilGroupInServiceAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) workflow.Future
+	WaitUntilGroupInServiceAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *VoidFuture
 
 	WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
-	WaitUntilGroupNotExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) workflow.Future
+	WaitUntilGroupNotExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *VoidFuture
 }
 
 type AutoScalingStub struct{}
@@ -1398,22 +1398,25 @@ func (a *AutoScalingStub) WaitUntilGroupExists(ctx workflow.Context, input *auto
 	return workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupExists", input).Get(ctx, nil)
 }
 
-func (a *AutoScalingStub) WaitUntilGroupExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupExists", input)
+func (a *AutoScalingStub) WaitUntilGroupExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *AutoScalingStub) WaitUntilGroupInService(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupInService", input).Get(ctx, nil)
 }
 
-func (a *AutoScalingStub) WaitUntilGroupInServiceAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupInService", input)
+func (a *AutoScalingStub) WaitUntilGroupInServiceAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupInService", input)
+	return NewVoidFuture(future)
 }
 
 func (a *AutoScalingStub) WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupNotExists", input).Get(ctx, nil)
 }
 
-func (a *AutoScalingStub) WaitUntilGroupNotExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupNotExists", input)
+func (a *AutoScalingStub) WaitUntilGroupNotExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.WaitUntilGroupNotExists", input)
+	return NewVoidFuture(future)
 }

@@ -176,28 +176,28 @@ type CloudFormationClient interface {
 	ValidateTemplateAsync(ctx workflow.Context, input *cloudformation.ValidateTemplateInput) *CloudformationValidateTemplateFuture
 
 	WaitUntilChangeSetCreateComplete(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) error
-	WaitUntilChangeSetCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) workflow.Future
+	WaitUntilChangeSetCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) *VoidFuture
 
 	WaitUntilStackCreateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilStackCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future
+	WaitUntilStackCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture
 
 	WaitUntilStackDeleteComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilStackDeleteCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future
+	WaitUntilStackDeleteCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture
 
 	WaitUntilStackExists(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilStackExistsAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future
+	WaitUntilStackExistsAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture
 
 	WaitUntilStackImportComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilStackImportCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future
+	WaitUntilStackImportCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture
 
 	WaitUntilStackRollbackComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilStackRollbackCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future
+	WaitUntilStackRollbackCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture
 
 	WaitUntilStackUpdateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilStackUpdateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future
+	WaitUntilStackUpdateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture
 
 	WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error
-	WaitUntilTypeRegistrationCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) workflow.Future
+	WaitUntilTypeRegistrationCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) *VoidFuture
 }
 
 type CloudFormationStub struct{}
@@ -1365,62 +1365,70 @@ func (a *CloudFormationStub) WaitUntilChangeSetCreateComplete(ctx workflow.Conte
 	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilChangeSetCreateComplete", input).Get(ctx, nil)
 }
 
-func (a *CloudFormationStub) WaitUntilChangeSetCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilChangeSetCreateComplete", input)
+func (a *CloudFormationStub) WaitUntilChangeSetCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilChangeSetCreateComplete", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFormationStub) WaitUntilStackCreateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackCreateComplete", input).Get(ctx, nil)
 }
 
-func (a *CloudFormationStub) WaitUntilStackCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackCreateComplete", input)
+func (a *CloudFormationStub) WaitUntilStackCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackCreateComplete", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFormationStub) WaitUntilStackDeleteComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackDeleteComplete", input).Get(ctx, nil)
 }
 
-func (a *CloudFormationStub) WaitUntilStackDeleteCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackDeleteComplete", input)
+func (a *CloudFormationStub) WaitUntilStackDeleteCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackDeleteComplete", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFormationStub) WaitUntilStackExists(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackExists", input).Get(ctx, nil)
 }
 
-func (a *CloudFormationStub) WaitUntilStackExistsAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackExists", input)
+func (a *CloudFormationStub) WaitUntilStackExistsAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFormationStub) WaitUntilStackImportComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackImportComplete", input).Get(ctx, nil)
 }
 
-func (a *CloudFormationStub) WaitUntilStackImportCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackImportComplete", input)
+func (a *CloudFormationStub) WaitUntilStackImportCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackImportComplete", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFormationStub) WaitUntilStackRollbackComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackRollbackComplete", input).Get(ctx, nil)
 }
 
-func (a *CloudFormationStub) WaitUntilStackRollbackCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackRollbackComplete", input)
+func (a *CloudFormationStub) WaitUntilStackRollbackCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackRollbackComplete", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFormationStub) WaitUntilStackUpdateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackUpdateComplete", input).Get(ctx, nil)
 }
 
-func (a *CloudFormationStub) WaitUntilStackUpdateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackUpdateComplete", input)
+func (a *CloudFormationStub) WaitUntilStackUpdateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackUpdateComplete", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudFormationStub) WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilTypeRegistrationComplete", input).Get(ctx, nil)
 }
 
-func (a *CloudFormationStub) WaitUntilTypeRegistrationCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilTypeRegistrationComplete", input)
+func (a *CloudFormationStub) WaitUntilTypeRegistrationCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilTypeRegistrationComplete", input)
+	return NewVoidFuture(future)
 }

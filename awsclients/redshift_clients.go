@@ -287,16 +287,16 @@ type RedshiftClient interface {
 	RotateEncryptionKeyAsync(ctx workflow.Context, input *redshift.RotateEncryptionKeyInput) *RedshiftRotateEncryptionKeyFuture
 
 	WaitUntilClusterAvailable(ctx workflow.Context, input *redshift.DescribeClustersInput) error
-	WaitUntilClusterAvailableAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) workflow.Future
+	WaitUntilClusterAvailableAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) *VoidFuture
 
 	WaitUntilClusterDeleted(ctx workflow.Context, input *redshift.DescribeClustersInput) error
-	WaitUntilClusterDeletedAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) workflow.Future
+	WaitUntilClusterDeletedAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) *VoidFuture
 
 	WaitUntilClusterRestored(ctx workflow.Context, input *redshift.DescribeClustersInput) error
-	WaitUntilClusterRestoredAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) workflow.Future
+	WaitUntilClusterRestoredAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) *VoidFuture
 
 	WaitUntilSnapshotAvailable(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) error
-	WaitUntilSnapshotAvailableAsync(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) workflow.Future
+	WaitUntilSnapshotAvailableAsync(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) *VoidFuture
 }
 
 type RedshiftStub struct{}
@@ -2241,30 +2241,34 @@ func (a *RedshiftStub) WaitUntilClusterAvailable(ctx workflow.Context, input *re
 	return workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterAvailable", input).Get(ctx, nil)
 }
 
-func (a *RedshiftStub) WaitUntilClusterAvailableAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterAvailable", input)
+func (a *RedshiftStub) WaitUntilClusterAvailableAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RedshiftStub) WaitUntilClusterDeleted(ctx workflow.Context, input *redshift.DescribeClustersInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterDeleted", input).Get(ctx, nil)
 }
 
-func (a *RedshiftStub) WaitUntilClusterDeletedAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterDeleted", input)
+func (a *RedshiftStub) WaitUntilClusterDeletedAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RedshiftStub) WaitUntilClusterRestored(ctx workflow.Context, input *redshift.DescribeClustersInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterRestored", input).Get(ctx, nil)
 }
 
-func (a *RedshiftStub) WaitUntilClusterRestoredAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterRestored", input)
+func (a *RedshiftStub) WaitUntilClusterRestoredAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilClusterRestored", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RedshiftStub) WaitUntilSnapshotAvailable(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilSnapshotAvailable", input).Get(ctx, nil)
 }
 
-func (a *RedshiftStub) WaitUntilSnapshotAvailableAsync(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilSnapshotAvailable", input)
+func (a *RedshiftStub) WaitUntilSnapshotAvailableAsync(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.redshift.WaitUntilSnapshotAvailable", input)
+	return NewVoidFuture(future)
 }

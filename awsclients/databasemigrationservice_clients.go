@@ -170,28 +170,28 @@ type DatabaseMigrationServiceClient interface {
 	TestConnectionAsync(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) *DatabasemigrationserviceTestConnectionFuture
 
 	WaitUntilEndpointDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) error
-	WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) workflow.Future
+	WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) *VoidFuture
 
 	WaitUntilReplicationInstanceAvailable(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error
-	WaitUntilReplicationInstanceAvailableAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) workflow.Future
+	WaitUntilReplicationInstanceAvailableAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) *VoidFuture
 
 	WaitUntilReplicationInstanceDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error
-	WaitUntilReplicationInstanceDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) workflow.Future
+	WaitUntilReplicationInstanceDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) *VoidFuture
 
 	WaitUntilReplicationTaskDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-	WaitUntilReplicationTaskDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future
+	WaitUntilReplicationTaskDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *VoidFuture
 
 	WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-	WaitUntilReplicationTaskReadyAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future
+	WaitUntilReplicationTaskReadyAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *VoidFuture
 
 	WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-	WaitUntilReplicationTaskRunningAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future
+	WaitUntilReplicationTaskRunningAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *VoidFuture
 
 	WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-	WaitUntilReplicationTaskStoppedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future
+	WaitUntilReplicationTaskStoppedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *VoidFuture
 
 	WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error
-	WaitUntilTestConnectionSucceedsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) workflow.Future
+	WaitUntilTestConnectionSucceedsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) *VoidFuture
 }
 
 type DatabaseMigrationServiceStub struct{}
@@ -1317,62 +1317,70 @@ func (a *DatabaseMigrationServiceStub) WaitUntilEndpointDeleted(ctx workflow.Con
 	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilEndpointDeleted", input).Get(ctx, nil)
 }
 
-func (a *DatabaseMigrationServiceStub) WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilEndpointDeleted", input)
+func (a *DatabaseMigrationServiceStub) WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilEndpointDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceAvailable(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceAvailable", input).Get(ctx, nil)
 }
 
-func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceAvailableAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceAvailable", input)
+func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceAvailableAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceAvailable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceDeleted", input).Get(ctx, nil)
 }
 
-func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceDeleted", input)
+func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskDeleted", input).Get(ctx, nil)
 }
 
-func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskDeleted", input)
+func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskDeleted", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskReady", input).Get(ctx, nil)
 }
 
-func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskReadyAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskReady", input)
+func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskReadyAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskReady", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskRunning", input).Get(ctx, nil)
 }
 
-func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskRunningAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskRunning", input)
+func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskRunningAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskStopped", input).Get(ctx, nil)
 }
 
-func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskStoppedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskStopped", input)
+func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskStoppedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskStopped", input)
+	return NewVoidFuture(future)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilTestConnectionSucceeds", input).Get(ctx, nil)
 }
 
-func (a *DatabaseMigrationServiceStub) WaitUntilTestConnectionSucceedsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilTestConnectionSucceeds", input)
+func (a *DatabaseMigrationServiceStub) WaitUntilTestConnectionSucceedsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilTestConnectionSucceeds", input)
+	return NewVoidFuture(future)
 }

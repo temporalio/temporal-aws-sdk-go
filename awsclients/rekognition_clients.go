@@ -152,10 +152,10 @@ type RekognitionClient interface {
 	StopStreamProcessorAsync(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) *RekognitionStopStreamProcessorFuture
 
 	WaitUntilProjectVersionRunning(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error
-	WaitUntilProjectVersionRunningAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) workflow.Future
+	WaitUntilProjectVersionRunningAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *VoidFuture
 
 	WaitUntilProjectVersionTrainingCompleted(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error
-	WaitUntilProjectVersionTrainingCompletedAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) workflow.Future
+	WaitUntilProjectVersionTrainingCompletedAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *VoidFuture
 }
 
 type RekognitionStub struct{}
@@ -1155,14 +1155,16 @@ func (a *RekognitionStub) WaitUntilProjectVersionRunning(ctx workflow.Context, i
 	return workflow.ExecuteActivity(ctx, "aws.rekognition.WaitUntilProjectVersionRunning", input).Get(ctx, nil)
 }
 
-func (a *RekognitionStub) WaitUntilProjectVersionRunningAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.rekognition.WaitUntilProjectVersionRunning", input)
+func (a *RekognitionStub) WaitUntilProjectVersionRunningAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.rekognition.WaitUntilProjectVersionRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *RekognitionStub) WaitUntilProjectVersionTrainingCompleted(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.rekognition.WaitUntilProjectVersionTrainingCompleted", input).Get(ctx, nil)
 }
 
-func (a *RekognitionStub) WaitUntilProjectVersionTrainingCompletedAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.rekognition.WaitUntilProjectVersionTrainingCompleted", input)
+func (a *RekognitionStub) WaitUntilProjectVersionTrainingCompletedAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.rekognition.WaitUntilProjectVersionTrainingCompleted", input)
+	return NewVoidFuture(future)
 }

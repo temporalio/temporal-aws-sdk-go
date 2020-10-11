@@ -101,10 +101,10 @@ type CloudWatchClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *cloudwatch.UntagResourceInput) *CloudwatchUntagResourceFuture
 
 	WaitUntilAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
-	WaitUntilAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) workflow.Future
+	WaitUntilAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) *VoidFuture
 
 	WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
-	WaitUntilCompositeAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) workflow.Future
+	WaitUntilCompositeAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) *VoidFuture
 }
 
 type CloudWatchStub struct{}
@@ -747,14 +747,16 @@ func (a *CloudWatchStub) WaitUntilAlarmExists(ctx workflow.Context, input *cloud
 	return workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilAlarmExists", input).Get(ctx, nil)
 }
 
-func (a *CloudWatchStub) WaitUntilAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilAlarmExists", input)
+func (a *CloudWatchStub) WaitUntilAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilAlarmExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *CloudWatchStub) WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilCompositeAlarmExists", input).Get(ctx, nil)
 }
 
-func (a *CloudWatchStub) WaitUntilCompositeAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilCompositeAlarmExists", input)
+func (a *CloudWatchStub) WaitUntilCompositeAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilCompositeAlarmExists", input)
+	return NewVoidFuture(future)
 }

@@ -62,7 +62,7 @@ type ElasticTranscoderClient interface {
 	UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *ElastictranscoderUpdatePipelineStatusFuture
 
 	WaitUntilJobComplete(ctx workflow.Context, input *elastictranscoder.ReadJobInput) error
-	WaitUntilJobCompleteAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) workflow.Future
+	WaitUntilJobCompleteAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *VoidFuture
 }
 
 type ElasticTranscoderStub struct{}
@@ -432,6 +432,7 @@ func (a *ElasticTranscoderStub) WaitUntilJobComplete(ctx workflow.Context, input
 	return workflow.ExecuteActivity(ctx, "aws.elastictranscoder.WaitUntilJobComplete", input).Get(ctx, nil)
 }
 
-func (a *ElasticTranscoderStub) WaitUntilJobCompleteAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.elastictranscoder.WaitUntilJobComplete", input)
+func (a *ElasticTranscoderStub) WaitUntilJobCompleteAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.WaitUntilJobComplete", input)
+	return NewVoidFuture(future)
 }

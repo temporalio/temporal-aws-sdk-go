@@ -158,16 +158,16 @@ type ECSClient interface {
 	UpdateTaskSetAsync(ctx workflow.Context, input *ecs.UpdateTaskSetInput) *EcsUpdateTaskSetFuture
 
 	WaitUntilServicesInactive(ctx workflow.Context, input *ecs.DescribeServicesInput) error
-	WaitUntilServicesInactiveAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) workflow.Future
+	WaitUntilServicesInactiveAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *VoidFuture
 
 	WaitUntilServicesStable(ctx workflow.Context, input *ecs.DescribeServicesInput) error
-	WaitUntilServicesStableAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) workflow.Future
+	WaitUntilServicesStableAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *VoidFuture
 
 	WaitUntilTasksRunning(ctx workflow.Context, input *ecs.DescribeTasksInput) error
-	WaitUntilTasksRunningAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) workflow.Future
+	WaitUntilTasksRunningAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *VoidFuture
 
 	WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error
-	WaitUntilTasksStoppedAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) workflow.Future
+	WaitUntilTasksStoppedAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *VoidFuture
 }
 
 type ECSStub struct{}
@@ -1209,30 +1209,34 @@ func (a *ECSStub) WaitUntilServicesInactive(ctx workflow.Context, input *ecs.Des
 	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesInactive", input).Get(ctx, nil)
 }
 
-func (a *ECSStub) WaitUntilServicesInactiveAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesInactive", input)
+func (a *ECSStub) WaitUntilServicesInactiveAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesInactive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ECSStub) WaitUntilServicesStable(ctx workflow.Context, input *ecs.DescribeServicesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesStable", input).Get(ctx, nil)
 }
 
-func (a *ECSStub) WaitUntilServicesStableAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesStable", input)
+func (a *ECSStub) WaitUntilServicesStableAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesStable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ECSStub) WaitUntilTasksRunning(ctx workflow.Context, input *ecs.DescribeTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksRunning", input).Get(ctx, nil)
 }
 
-func (a *ECSStub) WaitUntilTasksRunningAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksRunning", input)
+func (a *ECSStub) WaitUntilTasksRunningAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ECSStub) WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksStopped", input).Get(ctx, nil)
 }
 
-func (a *ECSStub) WaitUntilTasksStoppedAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksStopped", input)
+func (a *ECSStub) WaitUntilTasksStoppedAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksStopped", input)
+	return NewVoidFuture(future)
 }
