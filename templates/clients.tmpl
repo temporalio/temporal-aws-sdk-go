@@ -38,7 +38,7 @@ func New{{ $name }}Stub() {{ $name }}Client {
 }
 {{ range $i, $method := .Methods }}
 {{- if not (IsNil $method.Output) }}
-{{- if not (IsDuplicate "Output" (print $method.Output.Package $method.Output.Name)) }}
+{{- if not (IsDuplicate "Output" (print $method.Output.Package "." $method.Name)) }}
 {{- $prefix := CapitalizeFirstLetter $method.Output.Package }}
 type {{ $prefix }}{{ $method.Name }}Result struct {
 	Result workflow.Future
