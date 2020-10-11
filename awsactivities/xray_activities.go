@@ -230,4 +230,3 @@ func (a *XRayActivities) UpdateSamplingRule(ctx context.Context, input *xray.Upd
 	}
 	return client.UpdateSamplingRuleWithContext(ctx, input)
 }
-
