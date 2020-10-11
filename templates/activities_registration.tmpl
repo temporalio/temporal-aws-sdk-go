@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	{{- range $services }}
 	{{- $name := .Name }}
-    {{ $lowerName := .Name |ToLower -}}
+    {{- $lowerName := .Name |ToLower }}
 	"go.temporal.io/aws-sdk/awsactivities/{{ $lowerName }}activities"
     {{- end }}
 	"go.temporal.io/aws-sdk/sessionfactory"
