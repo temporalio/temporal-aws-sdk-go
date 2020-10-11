@@ -20,7 +20,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/{{ . }}"
 {{- end }}
 	"github.com/aws/aws-sdk-go/service/{{ $lowerName }}/{{ $lowerName }}iface"
-	"temporal.io/aws-sdk/internal"
+	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code

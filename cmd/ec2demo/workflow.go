@@ -3,9 +3,9 @@ package ec2demo
 import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ec2"
+	"go.temporal.io/aws-sdk/awsclients"
 	"go.temporal.io/sdk/temporal"
 	"go.temporal.io/sdk/workflow"
-	"temporal.io/aws-sdk/awsclients"
 	"time"
 )
 

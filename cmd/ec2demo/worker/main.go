@@ -1,10 +1,10 @@
 package main
 
 import (
+	"go.temporal.io/aws-sdk/cmd/ec2demo"
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
 	"log"
-	"temporal.io/aws-sdk/cmd/ec2demo"
 )
 
 const taskQueue = "ec2demo"
