@@ -11,283 +11,283 @@ import (
 
 type AlexaForBusinessClient interface {
 	ApproveSkill(ctx workflow.Context, input *alexaforbusiness.ApproveSkillInput) (*alexaforbusiness.ApproveSkillOutput, error)
-	ApproveSkillAsync(ctx workflow.Context, input *alexaforbusiness.ApproveSkillInput) *AlexaforbusinessApproveSkillResult
+	ApproveSkillAsync(ctx workflow.Context, input *alexaforbusiness.ApproveSkillInput) *AlexaforbusinessApproveSkillFuture
 
 	AssociateContactWithAddressBook(ctx workflow.Context, input *alexaforbusiness.AssociateContactWithAddressBookInput) (*alexaforbusiness.AssociateContactWithAddressBookOutput, error)
-	AssociateContactWithAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.AssociateContactWithAddressBookInput) *AlexaforbusinessAssociateContactWithAddressBookResult
+	AssociateContactWithAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.AssociateContactWithAddressBookInput) *AlexaforbusinessAssociateContactWithAddressBookFuture
 
 	AssociateDeviceWithNetworkProfile(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithNetworkProfileInput) (*alexaforbusiness.AssociateDeviceWithNetworkProfileOutput, error)
-	AssociateDeviceWithNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithNetworkProfileInput) *AlexaforbusinessAssociateDeviceWithNetworkProfileResult
+	AssociateDeviceWithNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithNetworkProfileInput) *AlexaforbusinessAssociateDeviceWithNetworkProfileFuture
 
 	AssociateDeviceWithRoom(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithRoomInput) (*alexaforbusiness.AssociateDeviceWithRoomOutput, error)
-	AssociateDeviceWithRoomAsync(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithRoomInput) *AlexaforbusinessAssociateDeviceWithRoomResult
+	AssociateDeviceWithRoomAsync(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithRoomInput) *AlexaforbusinessAssociateDeviceWithRoomFuture
 
 	AssociateSkillGroupWithRoom(ctx workflow.Context, input *alexaforbusiness.AssociateSkillGroupWithRoomInput) (*alexaforbusiness.AssociateSkillGroupWithRoomOutput, error)
-	AssociateSkillGroupWithRoomAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillGroupWithRoomInput) *AlexaforbusinessAssociateSkillGroupWithRoomResult
+	AssociateSkillGroupWithRoomAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillGroupWithRoomInput) *AlexaforbusinessAssociateSkillGroupWithRoomFuture
 
 	AssociateSkillWithSkillGroup(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithSkillGroupInput) (*alexaforbusiness.AssociateSkillWithSkillGroupOutput, error)
-	AssociateSkillWithSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithSkillGroupInput) *AlexaforbusinessAssociateSkillWithSkillGroupResult
+	AssociateSkillWithSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithSkillGroupInput) *AlexaforbusinessAssociateSkillWithSkillGroupFuture
 
 	AssociateSkillWithUsers(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithUsersInput) (*alexaforbusiness.AssociateSkillWithUsersOutput, error)
-	AssociateSkillWithUsersAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithUsersInput) *AlexaforbusinessAssociateSkillWithUsersResult
+	AssociateSkillWithUsersAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithUsersInput) *AlexaforbusinessAssociateSkillWithUsersFuture
 
 	CreateAddressBook(ctx workflow.Context, input *alexaforbusiness.CreateAddressBookInput) (*alexaforbusiness.CreateAddressBookOutput, error)
-	CreateAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.CreateAddressBookInput) *AlexaforbusinessCreateAddressBookResult
+	CreateAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.CreateAddressBookInput) *AlexaforbusinessCreateAddressBookFuture
 
 	CreateBusinessReportSchedule(ctx workflow.Context, input *alexaforbusiness.CreateBusinessReportScheduleInput) (*alexaforbusiness.CreateBusinessReportScheduleOutput, error)
-	CreateBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.CreateBusinessReportScheduleInput) *AlexaforbusinessCreateBusinessReportScheduleResult
+	CreateBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.CreateBusinessReportScheduleInput) *AlexaforbusinessCreateBusinessReportScheduleFuture
 
 	CreateConferenceProvider(ctx workflow.Context, input *alexaforbusiness.CreateConferenceProviderInput) (*alexaforbusiness.CreateConferenceProviderOutput, error)
-	CreateConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.CreateConferenceProviderInput) *AlexaforbusinessCreateConferenceProviderResult
+	CreateConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.CreateConferenceProviderInput) *AlexaforbusinessCreateConferenceProviderFuture
 
 	CreateContact(ctx workflow.Context, input *alexaforbusiness.CreateContactInput) (*alexaforbusiness.CreateContactOutput, error)
-	CreateContactAsync(ctx workflow.Context, input *alexaforbusiness.CreateContactInput) *AlexaforbusinessCreateContactResult
+	CreateContactAsync(ctx workflow.Context, input *alexaforbusiness.CreateContactInput) *AlexaforbusinessCreateContactFuture
 
 	CreateGatewayGroup(ctx workflow.Context, input *alexaforbusiness.CreateGatewayGroupInput) (*alexaforbusiness.CreateGatewayGroupOutput, error)
-	CreateGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.CreateGatewayGroupInput) *AlexaforbusinessCreateGatewayGroupResult
+	CreateGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.CreateGatewayGroupInput) *AlexaforbusinessCreateGatewayGroupFuture
 
 	CreateNetworkProfile(ctx workflow.Context, input *alexaforbusiness.CreateNetworkProfileInput) (*alexaforbusiness.CreateNetworkProfileOutput, error)
-	CreateNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.CreateNetworkProfileInput) *AlexaforbusinessCreateNetworkProfileResult
+	CreateNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.CreateNetworkProfileInput) *AlexaforbusinessCreateNetworkProfileFuture
 
 	CreateProfile(ctx workflow.Context, input *alexaforbusiness.CreateProfileInput) (*alexaforbusiness.CreateProfileOutput, error)
-	CreateProfileAsync(ctx workflow.Context, input *alexaforbusiness.CreateProfileInput) *AlexaforbusinessCreateProfileResult
+	CreateProfileAsync(ctx workflow.Context, input *alexaforbusiness.CreateProfileInput) *AlexaforbusinessCreateProfileFuture
 
 	CreateRoom(ctx workflow.Context, input *alexaforbusiness.CreateRoomInput) (*alexaforbusiness.CreateRoomOutput, error)
-	CreateRoomAsync(ctx workflow.Context, input *alexaforbusiness.CreateRoomInput) *AlexaforbusinessCreateRoomResult
+	CreateRoomAsync(ctx workflow.Context, input *alexaforbusiness.CreateRoomInput) *AlexaforbusinessCreateRoomFuture
 
 	CreateSkillGroup(ctx workflow.Context, input *alexaforbusiness.CreateSkillGroupInput) (*alexaforbusiness.CreateSkillGroupOutput, error)
-	CreateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.CreateSkillGroupInput) *AlexaforbusinessCreateSkillGroupResult
+	CreateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.CreateSkillGroupInput) *AlexaforbusinessCreateSkillGroupFuture
 
 	CreateUser(ctx workflow.Context, input *alexaforbusiness.CreateUserInput) (*alexaforbusiness.CreateUserOutput, error)
-	CreateUserAsync(ctx workflow.Context, input *alexaforbusiness.CreateUserInput) *AlexaforbusinessCreateUserResult
+	CreateUserAsync(ctx workflow.Context, input *alexaforbusiness.CreateUserInput) *AlexaforbusinessCreateUserFuture
 
 	DeleteAddressBook(ctx workflow.Context, input *alexaforbusiness.DeleteAddressBookInput) (*alexaforbusiness.DeleteAddressBookOutput, error)
-	DeleteAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.DeleteAddressBookInput) *AlexaforbusinessDeleteAddressBookResult
+	DeleteAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.DeleteAddressBookInput) *AlexaforbusinessDeleteAddressBookFuture
 
 	DeleteBusinessReportSchedule(ctx workflow.Context, input *alexaforbusiness.DeleteBusinessReportScheduleInput) (*alexaforbusiness.DeleteBusinessReportScheduleOutput, error)
-	DeleteBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.DeleteBusinessReportScheduleInput) *AlexaforbusinessDeleteBusinessReportScheduleResult
+	DeleteBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.DeleteBusinessReportScheduleInput) *AlexaforbusinessDeleteBusinessReportScheduleFuture
 
 	DeleteConferenceProvider(ctx workflow.Context, input *alexaforbusiness.DeleteConferenceProviderInput) (*alexaforbusiness.DeleteConferenceProviderOutput, error)
-	DeleteConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.DeleteConferenceProviderInput) *AlexaforbusinessDeleteConferenceProviderResult
+	DeleteConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.DeleteConferenceProviderInput) *AlexaforbusinessDeleteConferenceProviderFuture
 
 	DeleteContact(ctx workflow.Context, input *alexaforbusiness.DeleteContactInput) (*alexaforbusiness.DeleteContactOutput, error)
-	DeleteContactAsync(ctx workflow.Context, input *alexaforbusiness.DeleteContactInput) *AlexaforbusinessDeleteContactResult
+	DeleteContactAsync(ctx workflow.Context, input *alexaforbusiness.DeleteContactInput) *AlexaforbusinessDeleteContactFuture
 
 	DeleteDevice(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceInput) (*alexaforbusiness.DeleteDeviceOutput, error)
-	DeleteDeviceAsync(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceInput) *AlexaforbusinessDeleteDeviceResult
+	DeleteDeviceAsync(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceInput) *AlexaforbusinessDeleteDeviceFuture
 
 	DeleteDeviceUsageData(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceUsageDataInput) (*alexaforbusiness.DeleteDeviceUsageDataOutput, error)
-	DeleteDeviceUsageDataAsync(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceUsageDataInput) *AlexaforbusinessDeleteDeviceUsageDataResult
+	DeleteDeviceUsageDataAsync(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceUsageDataInput) *AlexaforbusinessDeleteDeviceUsageDataFuture
 
 	DeleteGatewayGroup(ctx workflow.Context, input *alexaforbusiness.DeleteGatewayGroupInput) (*alexaforbusiness.DeleteGatewayGroupOutput, error)
-	DeleteGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.DeleteGatewayGroupInput) *AlexaforbusinessDeleteGatewayGroupResult
+	DeleteGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.DeleteGatewayGroupInput) *AlexaforbusinessDeleteGatewayGroupFuture
 
 	DeleteNetworkProfile(ctx workflow.Context, input *alexaforbusiness.DeleteNetworkProfileInput) (*alexaforbusiness.DeleteNetworkProfileOutput, error)
-	DeleteNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.DeleteNetworkProfileInput) *AlexaforbusinessDeleteNetworkProfileResult
+	DeleteNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.DeleteNetworkProfileInput) *AlexaforbusinessDeleteNetworkProfileFuture
 
 	DeleteProfile(ctx workflow.Context, input *alexaforbusiness.DeleteProfileInput) (*alexaforbusiness.DeleteProfileOutput, error)
-	DeleteProfileAsync(ctx workflow.Context, input *alexaforbusiness.DeleteProfileInput) *AlexaforbusinessDeleteProfileResult
+	DeleteProfileAsync(ctx workflow.Context, input *alexaforbusiness.DeleteProfileInput) *AlexaforbusinessDeleteProfileFuture
 
 	DeleteRoom(ctx workflow.Context, input *alexaforbusiness.DeleteRoomInput) (*alexaforbusiness.DeleteRoomOutput, error)
-	DeleteRoomAsync(ctx workflow.Context, input *alexaforbusiness.DeleteRoomInput) *AlexaforbusinessDeleteRoomResult
+	DeleteRoomAsync(ctx workflow.Context, input *alexaforbusiness.DeleteRoomInput) *AlexaforbusinessDeleteRoomFuture
 
 	DeleteRoomSkillParameter(ctx workflow.Context, input *alexaforbusiness.DeleteRoomSkillParameterInput) (*alexaforbusiness.DeleteRoomSkillParameterOutput, error)
-	DeleteRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.DeleteRoomSkillParameterInput) *AlexaforbusinessDeleteRoomSkillParameterResult
+	DeleteRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.DeleteRoomSkillParameterInput) *AlexaforbusinessDeleteRoomSkillParameterFuture
 
 	DeleteSkillAuthorization(ctx workflow.Context, input *alexaforbusiness.DeleteSkillAuthorizationInput) (*alexaforbusiness.DeleteSkillAuthorizationOutput, error)
-	DeleteSkillAuthorizationAsync(ctx workflow.Context, input *alexaforbusiness.DeleteSkillAuthorizationInput) *AlexaforbusinessDeleteSkillAuthorizationResult
+	DeleteSkillAuthorizationAsync(ctx workflow.Context, input *alexaforbusiness.DeleteSkillAuthorizationInput) *AlexaforbusinessDeleteSkillAuthorizationFuture
 
 	DeleteSkillGroup(ctx workflow.Context, input *alexaforbusiness.DeleteSkillGroupInput) (*alexaforbusiness.DeleteSkillGroupOutput, error)
-	DeleteSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.DeleteSkillGroupInput) *AlexaforbusinessDeleteSkillGroupResult
+	DeleteSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.DeleteSkillGroupInput) *AlexaforbusinessDeleteSkillGroupFuture
 
 	DeleteUser(ctx workflow.Context, input *alexaforbusiness.DeleteUserInput) (*alexaforbusiness.DeleteUserOutput, error)
-	DeleteUserAsync(ctx workflow.Context, input *alexaforbusiness.DeleteUserInput) *AlexaforbusinessDeleteUserResult
+	DeleteUserAsync(ctx workflow.Context, input *alexaforbusiness.DeleteUserInput) *AlexaforbusinessDeleteUserFuture
 
 	DisassociateContactFromAddressBook(ctx workflow.Context, input *alexaforbusiness.DisassociateContactFromAddressBookInput) (*alexaforbusiness.DisassociateContactFromAddressBookOutput, error)
-	DisassociateContactFromAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateContactFromAddressBookInput) *AlexaforbusinessDisassociateContactFromAddressBookResult
+	DisassociateContactFromAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateContactFromAddressBookInput) *AlexaforbusinessDisassociateContactFromAddressBookFuture
 
 	DisassociateDeviceFromRoom(ctx workflow.Context, input *alexaforbusiness.DisassociateDeviceFromRoomInput) (*alexaforbusiness.DisassociateDeviceFromRoomOutput, error)
-	DisassociateDeviceFromRoomAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateDeviceFromRoomInput) *AlexaforbusinessDisassociateDeviceFromRoomResult
+	DisassociateDeviceFromRoomAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateDeviceFromRoomInput) *AlexaforbusinessDisassociateDeviceFromRoomFuture
 
 	DisassociateSkillFromSkillGroup(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromSkillGroupInput) (*alexaforbusiness.DisassociateSkillFromSkillGroupOutput, error)
-	DisassociateSkillFromSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromSkillGroupInput) *AlexaforbusinessDisassociateSkillFromSkillGroupResult
+	DisassociateSkillFromSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromSkillGroupInput) *AlexaforbusinessDisassociateSkillFromSkillGroupFuture
 
 	DisassociateSkillFromUsers(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromUsersInput) (*alexaforbusiness.DisassociateSkillFromUsersOutput, error)
-	DisassociateSkillFromUsersAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromUsersInput) *AlexaforbusinessDisassociateSkillFromUsersResult
+	DisassociateSkillFromUsersAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromUsersInput) *AlexaforbusinessDisassociateSkillFromUsersFuture
 
 	DisassociateSkillGroupFromRoom(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillGroupFromRoomInput) (*alexaforbusiness.DisassociateSkillGroupFromRoomOutput, error)
-	DisassociateSkillGroupFromRoomAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillGroupFromRoomInput) *AlexaforbusinessDisassociateSkillGroupFromRoomResult
+	DisassociateSkillGroupFromRoomAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillGroupFromRoomInput) *AlexaforbusinessDisassociateSkillGroupFromRoomFuture
 
 	ForgetSmartHomeAppliances(ctx workflow.Context, input *alexaforbusiness.ForgetSmartHomeAppliancesInput) (*alexaforbusiness.ForgetSmartHomeAppliancesOutput, error)
-	ForgetSmartHomeAppliancesAsync(ctx workflow.Context, input *alexaforbusiness.ForgetSmartHomeAppliancesInput) *AlexaforbusinessForgetSmartHomeAppliancesResult
+	ForgetSmartHomeAppliancesAsync(ctx workflow.Context, input *alexaforbusiness.ForgetSmartHomeAppliancesInput) *AlexaforbusinessForgetSmartHomeAppliancesFuture
 
 	GetAddressBook(ctx workflow.Context, input *alexaforbusiness.GetAddressBookInput) (*alexaforbusiness.GetAddressBookOutput, error)
-	GetAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.GetAddressBookInput) *AlexaforbusinessGetAddressBookResult
+	GetAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.GetAddressBookInput) *AlexaforbusinessGetAddressBookFuture
 
 	GetConferencePreference(ctx workflow.Context, input *alexaforbusiness.GetConferencePreferenceInput) (*alexaforbusiness.GetConferencePreferenceOutput, error)
-	GetConferencePreferenceAsync(ctx workflow.Context, input *alexaforbusiness.GetConferencePreferenceInput) *AlexaforbusinessGetConferencePreferenceResult
+	GetConferencePreferenceAsync(ctx workflow.Context, input *alexaforbusiness.GetConferencePreferenceInput) *AlexaforbusinessGetConferencePreferenceFuture
 
 	GetConferenceProvider(ctx workflow.Context, input *alexaforbusiness.GetConferenceProviderInput) (*alexaforbusiness.GetConferenceProviderOutput, error)
-	GetConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.GetConferenceProviderInput) *AlexaforbusinessGetConferenceProviderResult
+	GetConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.GetConferenceProviderInput) *AlexaforbusinessGetConferenceProviderFuture
 
 	GetContact(ctx workflow.Context, input *alexaforbusiness.GetContactInput) (*alexaforbusiness.GetContactOutput, error)
-	GetContactAsync(ctx workflow.Context, input *alexaforbusiness.GetContactInput) *AlexaforbusinessGetContactResult
+	GetContactAsync(ctx workflow.Context, input *alexaforbusiness.GetContactInput) *AlexaforbusinessGetContactFuture
 
 	GetDevice(ctx workflow.Context, input *alexaforbusiness.GetDeviceInput) (*alexaforbusiness.GetDeviceOutput, error)
-	GetDeviceAsync(ctx workflow.Context, input *alexaforbusiness.GetDeviceInput) *AlexaforbusinessGetDeviceResult
+	GetDeviceAsync(ctx workflow.Context, input *alexaforbusiness.GetDeviceInput) *AlexaforbusinessGetDeviceFuture
 
 	GetGateway(ctx workflow.Context, input *alexaforbusiness.GetGatewayInput) (*alexaforbusiness.GetGatewayOutput, error)
-	GetGatewayAsync(ctx workflow.Context, input *alexaforbusiness.GetGatewayInput) *AlexaforbusinessGetGatewayResult
+	GetGatewayAsync(ctx workflow.Context, input *alexaforbusiness.GetGatewayInput) *AlexaforbusinessGetGatewayFuture
 
 	GetGatewayGroup(ctx workflow.Context, input *alexaforbusiness.GetGatewayGroupInput) (*alexaforbusiness.GetGatewayGroupOutput, error)
-	GetGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.GetGatewayGroupInput) *AlexaforbusinessGetGatewayGroupResult
+	GetGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.GetGatewayGroupInput) *AlexaforbusinessGetGatewayGroupFuture
 
 	GetInvitationConfiguration(ctx workflow.Context, input *alexaforbusiness.GetInvitationConfigurationInput) (*alexaforbusiness.GetInvitationConfigurationOutput, error)
-	GetInvitationConfigurationAsync(ctx workflow.Context, input *alexaforbusiness.GetInvitationConfigurationInput) *AlexaforbusinessGetInvitationConfigurationResult
+	GetInvitationConfigurationAsync(ctx workflow.Context, input *alexaforbusiness.GetInvitationConfigurationInput) *AlexaforbusinessGetInvitationConfigurationFuture
 
 	GetNetworkProfile(ctx workflow.Context, input *alexaforbusiness.GetNetworkProfileInput) (*alexaforbusiness.GetNetworkProfileOutput, error)
-	GetNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.GetNetworkProfileInput) *AlexaforbusinessGetNetworkProfileResult
+	GetNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.GetNetworkProfileInput) *AlexaforbusinessGetNetworkProfileFuture
 
 	GetProfile(ctx workflow.Context, input *alexaforbusiness.GetProfileInput) (*alexaforbusiness.GetProfileOutput, error)
-	GetProfileAsync(ctx workflow.Context, input *alexaforbusiness.GetProfileInput) *AlexaforbusinessGetProfileResult
+	GetProfileAsync(ctx workflow.Context, input *alexaforbusiness.GetProfileInput) *AlexaforbusinessGetProfileFuture
 
 	GetRoom(ctx workflow.Context, input *alexaforbusiness.GetRoomInput) (*alexaforbusiness.GetRoomOutput, error)
-	GetRoomAsync(ctx workflow.Context, input *alexaforbusiness.GetRoomInput) *AlexaforbusinessGetRoomResult
+	GetRoomAsync(ctx workflow.Context, input *alexaforbusiness.GetRoomInput) *AlexaforbusinessGetRoomFuture
 
 	GetRoomSkillParameter(ctx workflow.Context, input *alexaforbusiness.GetRoomSkillParameterInput) (*alexaforbusiness.GetRoomSkillParameterOutput, error)
-	GetRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.GetRoomSkillParameterInput) *AlexaforbusinessGetRoomSkillParameterResult
+	GetRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.GetRoomSkillParameterInput) *AlexaforbusinessGetRoomSkillParameterFuture
 
 	GetSkillGroup(ctx workflow.Context, input *alexaforbusiness.GetSkillGroupInput) (*alexaforbusiness.GetSkillGroupOutput, error)
-	GetSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.GetSkillGroupInput) *AlexaforbusinessGetSkillGroupResult
+	GetSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.GetSkillGroupInput) *AlexaforbusinessGetSkillGroupFuture
 
 	ListBusinessReportSchedules(ctx workflow.Context, input *alexaforbusiness.ListBusinessReportSchedulesInput) (*alexaforbusiness.ListBusinessReportSchedulesOutput, error)
-	ListBusinessReportSchedulesAsync(ctx workflow.Context, input *alexaforbusiness.ListBusinessReportSchedulesInput) *AlexaforbusinessListBusinessReportSchedulesResult
+	ListBusinessReportSchedulesAsync(ctx workflow.Context, input *alexaforbusiness.ListBusinessReportSchedulesInput) *AlexaforbusinessListBusinessReportSchedulesFuture
 
 	ListConferenceProviders(ctx workflow.Context, input *alexaforbusiness.ListConferenceProvidersInput) (*alexaforbusiness.ListConferenceProvidersOutput, error)
-	ListConferenceProvidersAsync(ctx workflow.Context, input *alexaforbusiness.ListConferenceProvidersInput) *AlexaforbusinessListConferenceProvidersResult
+	ListConferenceProvidersAsync(ctx workflow.Context, input *alexaforbusiness.ListConferenceProvidersInput) *AlexaforbusinessListConferenceProvidersFuture
 
 	ListDeviceEvents(ctx workflow.Context, input *alexaforbusiness.ListDeviceEventsInput) (*alexaforbusiness.ListDeviceEventsOutput, error)
-	ListDeviceEventsAsync(ctx workflow.Context, input *alexaforbusiness.ListDeviceEventsInput) *AlexaforbusinessListDeviceEventsResult
+	ListDeviceEventsAsync(ctx workflow.Context, input *alexaforbusiness.ListDeviceEventsInput) *AlexaforbusinessListDeviceEventsFuture
 
 	ListGatewayGroups(ctx workflow.Context, input *alexaforbusiness.ListGatewayGroupsInput) (*alexaforbusiness.ListGatewayGroupsOutput, error)
-	ListGatewayGroupsAsync(ctx workflow.Context, input *alexaforbusiness.ListGatewayGroupsInput) *AlexaforbusinessListGatewayGroupsResult
+	ListGatewayGroupsAsync(ctx workflow.Context, input *alexaforbusiness.ListGatewayGroupsInput) *AlexaforbusinessListGatewayGroupsFuture
 
 	ListGateways(ctx workflow.Context, input *alexaforbusiness.ListGatewaysInput) (*alexaforbusiness.ListGatewaysOutput, error)
-	ListGatewaysAsync(ctx workflow.Context, input *alexaforbusiness.ListGatewaysInput) *AlexaforbusinessListGatewaysResult
+	ListGatewaysAsync(ctx workflow.Context, input *alexaforbusiness.ListGatewaysInput) *AlexaforbusinessListGatewaysFuture
 
 	ListSkills(ctx workflow.Context, input *alexaforbusiness.ListSkillsInput) (*alexaforbusiness.ListSkillsOutput, error)
-	ListSkillsAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsInput) *AlexaforbusinessListSkillsResult
+	ListSkillsAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsInput) *AlexaforbusinessListSkillsFuture
 
 	ListSkillsStoreCategories(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreCategoriesInput) (*alexaforbusiness.ListSkillsStoreCategoriesOutput, error)
-	ListSkillsStoreCategoriesAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreCategoriesInput) *AlexaforbusinessListSkillsStoreCategoriesResult
+	ListSkillsStoreCategoriesAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreCategoriesInput) *AlexaforbusinessListSkillsStoreCategoriesFuture
 
 	ListSkillsStoreSkillsByCategory(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreSkillsByCategoryInput) (*alexaforbusiness.ListSkillsStoreSkillsByCategoryOutput, error)
-	ListSkillsStoreSkillsByCategoryAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreSkillsByCategoryInput) *AlexaforbusinessListSkillsStoreSkillsByCategoryResult
+	ListSkillsStoreSkillsByCategoryAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreSkillsByCategoryInput) *AlexaforbusinessListSkillsStoreSkillsByCategoryFuture
 
 	ListSmartHomeAppliances(ctx workflow.Context, input *alexaforbusiness.ListSmartHomeAppliancesInput) (*alexaforbusiness.ListSmartHomeAppliancesOutput, error)
-	ListSmartHomeAppliancesAsync(ctx workflow.Context, input *alexaforbusiness.ListSmartHomeAppliancesInput) *AlexaforbusinessListSmartHomeAppliancesResult
+	ListSmartHomeAppliancesAsync(ctx workflow.Context, input *alexaforbusiness.ListSmartHomeAppliancesInput) *AlexaforbusinessListSmartHomeAppliancesFuture
 
 	ListTags(ctx workflow.Context, input *alexaforbusiness.ListTagsInput) (*alexaforbusiness.ListTagsOutput, error)
-	ListTagsAsync(ctx workflow.Context, input *alexaforbusiness.ListTagsInput) *AlexaforbusinessListTagsResult
+	ListTagsAsync(ctx workflow.Context, input *alexaforbusiness.ListTagsInput) *AlexaforbusinessListTagsFuture
 
 	PutConferencePreference(ctx workflow.Context, input *alexaforbusiness.PutConferencePreferenceInput) (*alexaforbusiness.PutConferencePreferenceOutput, error)
-	PutConferencePreferenceAsync(ctx workflow.Context, input *alexaforbusiness.PutConferencePreferenceInput) *AlexaforbusinessPutConferencePreferenceResult
+	PutConferencePreferenceAsync(ctx workflow.Context, input *alexaforbusiness.PutConferencePreferenceInput) *AlexaforbusinessPutConferencePreferenceFuture
 
 	PutInvitationConfiguration(ctx workflow.Context, input *alexaforbusiness.PutInvitationConfigurationInput) (*alexaforbusiness.PutInvitationConfigurationOutput, error)
-	PutInvitationConfigurationAsync(ctx workflow.Context, input *alexaforbusiness.PutInvitationConfigurationInput) *AlexaforbusinessPutInvitationConfigurationResult
+	PutInvitationConfigurationAsync(ctx workflow.Context, input *alexaforbusiness.PutInvitationConfigurationInput) *AlexaforbusinessPutInvitationConfigurationFuture
 
 	PutRoomSkillParameter(ctx workflow.Context, input *alexaforbusiness.PutRoomSkillParameterInput) (*alexaforbusiness.PutRoomSkillParameterOutput, error)
-	PutRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.PutRoomSkillParameterInput) *AlexaforbusinessPutRoomSkillParameterResult
+	PutRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.PutRoomSkillParameterInput) *AlexaforbusinessPutRoomSkillParameterFuture
 
 	PutSkillAuthorization(ctx workflow.Context, input *alexaforbusiness.PutSkillAuthorizationInput) (*alexaforbusiness.PutSkillAuthorizationOutput, error)
-	PutSkillAuthorizationAsync(ctx workflow.Context, input *alexaforbusiness.PutSkillAuthorizationInput) *AlexaforbusinessPutSkillAuthorizationResult
+	PutSkillAuthorizationAsync(ctx workflow.Context, input *alexaforbusiness.PutSkillAuthorizationInput) *AlexaforbusinessPutSkillAuthorizationFuture
 
 	RegisterAVSDevice(ctx workflow.Context, input *alexaforbusiness.RegisterAVSDeviceInput) (*alexaforbusiness.RegisterAVSDeviceOutput, error)
-	RegisterAVSDeviceAsync(ctx workflow.Context, input *alexaforbusiness.RegisterAVSDeviceInput) *AlexaforbusinessRegisterAVSDeviceResult
+	RegisterAVSDeviceAsync(ctx workflow.Context, input *alexaforbusiness.RegisterAVSDeviceInput) *AlexaforbusinessRegisterAVSDeviceFuture
 
 	RejectSkill(ctx workflow.Context, input *alexaforbusiness.RejectSkillInput) (*alexaforbusiness.RejectSkillOutput, error)
-	RejectSkillAsync(ctx workflow.Context, input *alexaforbusiness.RejectSkillInput) *AlexaforbusinessRejectSkillResult
+	RejectSkillAsync(ctx workflow.Context, input *alexaforbusiness.RejectSkillInput) *AlexaforbusinessRejectSkillFuture
 
 	ResolveRoom(ctx workflow.Context, input *alexaforbusiness.ResolveRoomInput) (*alexaforbusiness.ResolveRoomOutput, error)
-	ResolveRoomAsync(ctx workflow.Context, input *alexaforbusiness.ResolveRoomInput) *AlexaforbusinessResolveRoomResult
+	ResolveRoomAsync(ctx workflow.Context, input *alexaforbusiness.ResolveRoomInput) *AlexaforbusinessResolveRoomFuture
 
 	RevokeInvitation(ctx workflow.Context, input *alexaforbusiness.RevokeInvitationInput) (*alexaforbusiness.RevokeInvitationOutput, error)
-	RevokeInvitationAsync(ctx workflow.Context, input *alexaforbusiness.RevokeInvitationInput) *AlexaforbusinessRevokeInvitationResult
+	RevokeInvitationAsync(ctx workflow.Context, input *alexaforbusiness.RevokeInvitationInput) *AlexaforbusinessRevokeInvitationFuture
 
 	SearchAddressBooks(ctx workflow.Context, input *alexaforbusiness.SearchAddressBooksInput) (*alexaforbusiness.SearchAddressBooksOutput, error)
-	SearchAddressBooksAsync(ctx workflow.Context, input *alexaforbusiness.SearchAddressBooksInput) *AlexaforbusinessSearchAddressBooksResult
+	SearchAddressBooksAsync(ctx workflow.Context, input *alexaforbusiness.SearchAddressBooksInput) *AlexaforbusinessSearchAddressBooksFuture
 
 	SearchContacts(ctx workflow.Context, input *alexaforbusiness.SearchContactsInput) (*alexaforbusiness.SearchContactsOutput, error)
-	SearchContactsAsync(ctx workflow.Context, input *alexaforbusiness.SearchContactsInput) *AlexaforbusinessSearchContactsResult
+	SearchContactsAsync(ctx workflow.Context, input *alexaforbusiness.SearchContactsInput) *AlexaforbusinessSearchContactsFuture
 
 	SearchDevices(ctx workflow.Context, input *alexaforbusiness.SearchDevicesInput) (*alexaforbusiness.SearchDevicesOutput, error)
-	SearchDevicesAsync(ctx workflow.Context, input *alexaforbusiness.SearchDevicesInput) *AlexaforbusinessSearchDevicesResult
+	SearchDevicesAsync(ctx workflow.Context, input *alexaforbusiness.SearchDevicesInput) *AlexaforbusinessSearchDevicesFuture
 
 	SearchNetworkProfiles(ctx workflow.Context, input *alexaforbusiness.SearchNetworkProfilesInput) (*alexaforbusiness.SearchNetworkProfilesOutput, error)
-	SearchNetworkProfilesAsync(ctx workflow.Context, input *alexaforbusiness.SearchNetworkProfilesInput) *AlexaforbusinessSearchNetworkProfilesResult
+	SearchNetworkProfilesAsync(ctx workflow.Context, input *alexaforbusiness.SearchNetworkProfilesInput) *AlexaforbusinessSearchNetworkProfilesFuture
 
 	SearchProfiles(ctx workflow.Context, input *alexaforbusiness.SearchProfilesInput) (*alexaforbusiness.SearchProfilesOutput, error)
-	SearchProfilesAsync(ctx workflow.Context, input *alexaforbusiness.SearchProfilesInput) *AlexaforbusinessSearchProfilesResult
+	SearchProfilesAsync(ctx workflow.Context, input *alexaforbusiness.SearchProfilesInput) *AlexaforbusinessSearchProfilesFuture
 
 	SearchRooms(ctx workflow.Context, input *alexaforbusiness.SearchRoomsInput) (*alexaforbusiness.SearchRoomsOutput, error)
-	SearchRoomsAsync(ctx workflow.Context, input *alexaforbusiness.SearchRoomsInput) *AlexaforbusinessSearchRoomsResult
+	SearchRoomsAsync(ctx workflow.Context, input *alexaforbusiness.SearchRoomsInput) *AlexaforbusinessSearchRoomsFuture
 
 	SearchSkillGroups(ctx workflow.Context, input *alexaforbusiness.SearchSkillGroupsInput) (*alexaforbusiness.SearchSkillGroupsOutput, error)
-	SearchSkillGroupsAsync(ctx workflow.Context, input *alexaforbusiness.SearchSkillGroupsInput) *AlexaforbusinessSearchSkillGroupsResult
+	SearchSkillGroupsAsync(ctx workflow.Context, input *alexaforbusiness.SearchSkillGroupsInput) *AlexaforbusinessSearchSkillGroupsFuture
 
 	SearchUsers(ctx workflow.Context, input *alexaforbusiness.SearchUsersInput) (*alexaforbusiness.SearchUsersOutput, error)
-	SearchUsersAsync(ctx workflow.Context, input *alexaforbusiness.SearchUsersInput) *AlexaforbusinessSearchUsersResult
+	SearchUsersAsync(ctx workflow.Context, input *alexaforbusiness.SearchUsersInput) *AlexaforbusinessSearchUsersFuture
 
 	SendAnnouncement(ctx workflow.Context, input *alexaforbusiness.SendAnnouncementInput) (*alexaforbusiness.SendAnnouncementOutput, error)
-	SendAnnouncementAsync(ctx workflow.Context, input *alexaforbusiness.SendAnnouncementInput) *AlexaforbusinessSendAnnouncementResult
+	SendAnnouncementAsync(ctx workflow.Context, input *alexaforbusiness.SendAnnouncementInput) *AlexaforbusinessSendAnnouncementFuture
 
 	SendInvitation(ctx workflow.Context, input *alexaforbusiness.SendInvitationInput) (*alexaforbusiness.SendInvitationOutput, error)
-	SendInvitationAsync(ctx workflow.Context, input *alexaforbusiness.SendInvitationInput) *AlexaforbusinessSendInvitationResult
+	SendInvitationAsync(ctx workflow.Context, input *alexaforbusiness.SendInvitationInput) *AlexaforbusinessSendInvitationFuture
 
 	StartDeviceSync(ctx workflow.Context, input *alexaforbusiness.StartDeviceSyncInput) (*alexaforbusiness.StartDeviceSyncOutput, error)
-	StartDeviceSyncAsync(ctx workflow.Context, input *alexaforbusiness.StartDeviceSyncInput) *AlexaforbusinessStartDeviceSyncResult
+	StartDeviceSyncAsync(ctx workflow.Context, input *alexaforbusiness.StartDeviceSyncInput) *AlexaforbusinessStartDeviceSyncFuture
 
 	StartSmartHomeApplianceDiscovery(ctx workflow.Context, input *alexaforbusiness.StartSmartHomeApplianceDiscoveryInput) (*alexaforbusiness.StartSmartHomeApplianceDiscoveryOutput, error)
-	StartSmartHomeApplianceDiscoveryAsync(ctx workflow.Context, input *alexaforbusiness.StartSmartHomeApplianceDiscoveryInput) *AlexaforbusinessStartSmartHomeApplianceDiscoveryResult
+	StartSmartHomeApplianceDiscoveryAsync(ctx workflow.Context, input *alexaforbusiness.StartSmartHomeApplianceDiscoveryInput) *AlexaforbusinessStartSmartHomeApplianceDiscoveryFuture
 
 	TagResource(ctx workflow.Context, input *alexaforbusiness.TagResourceInput) (*alexaforbusiness.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *alexaforbusiness.TagResourceInput) *AlexaforbusinessTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *alexaforbusiness.TagResourceInput) *AlexaforbusinessTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *alexaforbusiness.UntagResourceInput) (*alexaforbusiness.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *alexaforbusiness.UntagResourceInput) *AlexaforbusinessUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *alexaforbusiness.UntagResourceInput) *AlexaforbusinessUntagResourceFuture
 
 	UpdateAddressBook(ctx workflow.Context, input *alexaforbusiness.UpdateAddressBookInput) (*alexaforbusiness.UpdateAddressBookOutput, error)
-	UpdateAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.UpdateAddressBookInput) *AlexaforbusinessUpdateAddressBookResult
+	UpdateAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.UpdateAddressBookInput) *AlexaforbusinessUpdateAddressBookFuture
 
 	UpdateBusinessReportSchedule(ctx workflow.Context, input *alexaforbusiness.UpdateBusinessReportScheduleInput) (*alexaforbusiness.UpdateBusinessReportScheduleOutput, error)
-	UpdateBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.UpdateBusinessReportScheduleInput) *AlexaforbusinessUpdateBusinessReportScheduleResult
+	UpdateBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.UpdateBusinessReportScheduleInput) *AlexaforbusinessUpdateBusinessReportScheduleFuture
 
 	UpdateConferenceProvider(ctx workflow.Context, input *alexaforbusiness.UpdateConferenceProviderInput) (*alexaforbusiness.UpdateConferenceProviderOutput, error)
-	UpdateConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.UpdateConferenceProviderInput) *AlexaforbusinessUpdateConferenceProviderResult
+	UpdateConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.UpdateConferenceProviderInput) *AlexaforbusinessUpdateConferenceProviderFuture
 
 	UpdateContact(ctx workflow.Context, input *alexaforbusiness.UpdateContactInput) (*alexaforbusiness.UpdateContactOutput, error)
-	UpdateContactAsync(ctx workflow.Context, input *alexaforbusiness.UpdateContactInput) *AlexaforbusinessUpdateContactResult
+	UpdateContactAsync(ctx workflow.Context, input *alexaforbusiness.UpdateContactInput) *AlexaforbusinessUpdateContactFuture
 
 	UpdateDevice(ctx workflow.Context, input *alexaforbusiness.UpdateDeviceInput) (*alexaforbusiness.UpdateDeviceOutput, error)
-	UpdateDeviceAsync(ctx workflow.Context, input *alexaforbusiness.UpdateDeviceInput) *AlexaforbusinessUpdateDeviceResult
+	UpdateDeviceAsync(ctx workflow.Context, input *alexaforbusiness.UpdateDeviceInput) *AlexaforbusinessUpdateDeviceFuture
 
 	UpdateGateway(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayInput) (*alexaforbusiness.UpdateGatewayOutput, error)
-	UpdateGatewayAsync(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayInput) *AlexaforbusinessUpdateGatewayResult
+	UpdateGatewayAsync(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayInput) *AlexaforbusinessUpdateGatewayFuture
 
 	UpdateGatewayGroup(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayGroupInput) (*alexaforbusiness.UpdateGatewayGroupOutput, error)
-	UpdateGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayGroupInput) *AlexaforbusinessUpdateGatewayGroupResult
+	UpdateGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayGroupInput) *AlexaforbusinessUpdateGatewayGroupFuture
 
 	UpdateNetworkProfile(ctx workflow.Context, input *alexaforbusiness.UpdateNetworkProfileInput) (*alexaforbusiness.UpdateNetworkProfileOutput, error)
-	UpdateNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.UpdateNetworkProfileInput) *AlexaforbusinessUpdateNetworkProfileResult
+	UpdateNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.UpdateNetworkProfileInput) *AlexaforbusinessUpdateNetworkProfileFuture
 
 	UpdateProfile(ctx workflow.Context, input *alexaforbusiness.UpdateProfileInput) (*alexaforbusiness.UpdateProfileOutput, error)
-	UpdateProfileAsync(ctx workflow.Context, input *alexaforbusiness.UpdateProfileInput) *AlexaforbusinessUpdateProfileResult
+	UpdateProfileAsync(ctx workflow.Context, input *alexaforbusiness.UpdateProfileInput) *AlexaforbusinessUpdateProfileFuture
 
 	UpdateRoom(ctx workflow.Context, input *alexaforbusiness.UpdateRoomInput) (*alexaforbusiness.UpdateRoomOutput, error)
-	UpdateRoomAsync(ctx workflow.Context, input *alexaforbusiness.UpdateRoomInput) *AlexaforbusinessUpdateRoomResult
+	UpdateRoomAsync(ctx workflow.Context, input *alexaforbusiness.UpdateRoomInput) *AlexaforbusinessUpdateRoomFuture
 
 	UpdateSkillGroup(ctx workflow.Context, input *alexaforbusiness.UpdateSkillGroupInput) (*alexaforbusiness.UpdateSkillGroupOutput, error)
-	UpdateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateSkillGroupInput) *AlexaforbusinessUpdateSkillGroupResult
+	UpdateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateSkillGroupInput) *AlexaforbusinessUpdateSkillGroupFuture
 }
 
 type AlexaForBusinessStub struct{}
@@ -296,933 +296,933 @@ func NewAlexaForBusinessStub() AlexaForBusinessClient {
 	return &AlexaForBusinessStub{}
 }
 
-type AlexaforbusinessApproveSkillResult struct {
-	Result workflow.Future
+type AlexaforbusinessApproveSkillFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessApproveSkillResult) Get(ctx workflow.Context) (*alexaforbusiness.ApproveSkillOutput, error) {
+func (r *AlexaforbusinessApproveSkillFuture) Get(ctx workflow.Context) (*alexaforbusiness.ApproveSkillOutput, error) {
 	var output alexaforbusiness.ApproveSkillOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessAssociateContactWithAddressBookResult struct {
-	Result workflow.Future
+type AlexaforbusinessAssociateContactWithAddressBookFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessAssociateContactWithAddressBookResult) Get(ctx workflow.Context) (*alexaforbusiness.AssociateContactWithAddressBookOutput, error) {
+func (r *AlexaforbusinessAssociateContactWithAddressBookFuture) Get(ctx workflow.Context) (*alexaforbusiness.AssociateContactWithAddressBookOutput, error) {
 	var output alexaforbusiness.AssociateContactWithAddressBookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessAssociateDeviceWithNetworkProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessAssociateDeviceWithNetworkProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessAssociateDeviceWithNetworkProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.AssociateDeviceWithNetworkProfileOutput, error) {
+func (r *AlexaforbusinessAssociateDeviceWithNetworkProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.AssociateDeviceWithNetworkProfileOutput, error) {
 	var output alexaforbusiness.AssociateDeviceWithNetworkProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessAssociateDeviceWithRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessAssociateDeviceWithRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessAssociateDeviceWithRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.AssociateDeviceWithRoomOutput, error) {
+func (r *AlexaforbusinessAssociateDeviceWithRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.AssociateDeviceWithRoomOutput, error) {
 	var output alexaforbusiness.AssociateDeviceWithRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessAssociateSkillGroupWithRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessAssociateSkillGroupWithRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessAssociateSkillGroupWithRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.AssociateSkillGroupWithRoomOutput, error) {
+func (r *AlexaforbusinessAssociateSkillGroupWithRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.AssociateSkillGroupWithRoomOutput, error) {
 	var output alexaforbusiness.AssociateSkillGroupWithRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessAssociateSkillWithSkillGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessAssociateSkillWithSkillGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessAssociateSkillWithSkillGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.AssociateSkillWithSkillGroupOutput, error) {
+func (r *AlexaforbusinessAssociateSkillWithSkillGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.AssociateSkillWithSkillGroupOutput, error) {
 	var output alexaforbusiness.AssociateSkillWithSkillGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessAssociateSkillWithUsersResult struct {
-	Result workflow.Future
+type AlexaforbusinessAssociateSkillWithUsersFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessAssociateSkillWithUsersResult) Get(ctx workflow.Context) (*alexaforbusiness.AssociateSkillWithUsersOutput, error) {
+func (r *AlexaforbusinessAssociateSkillWithUsersFuture) Get(ctx workflow.Context) (*alexaforbusiness.AssociateSkillWithUsersOutput, error) {
 	var output alexaforbusiness.AssociateSkillWithUsersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateAddressBookResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateAddressBookFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateAddressBookResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateAddressBookOutput, error) {
+func (r *AlexaforbusinessCreateAddressBookFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateAddressBookOutput, error) {
 	var output alexaforbusiness.CreateAddressBookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateBusinessReportScheduleResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateBusinessReportScheduleFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateBusinessReportScheduleResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateBusinessReportScheduleOutput, error) {
+func (r *AlexaforbusinessCreateBusinessReportScheduleFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateBusinessReportScheduleOutput, error) {
 	var output alexaforbusiness.CreateBusinessReportScheduleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateConferenceProviderResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateConferenceProviderFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateConferenceProviderResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateConferenceProviderOutput, error) {
+func (r *AlexaforbusinessCreateConferenceProviderFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateConferenceProviderOutput, error) {
 	var output alexaforbusiness.CreateConferenceProviderOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateContactResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateContactFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateContactResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateContactOutput, error) {
+func (r *AlexaforbusinessCreateContactFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateContactOutput, error) {
 	var output alexaforbusiness.CreateContactOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateGatewayGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateGatewayGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateGatewayGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateGatewayGroupOutput, error) {
+func (r *AlexaforbusinessCreateGatewayGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateGatewayGroupOutput, error) {
 	var output alexaforbusiness.CreateGatewayGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateNetworkProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateNetworkProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateNetworkProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateNetworkProfileOutput, error) {
+func (r *AlexaforbusinessCreateNetworkProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateNetworkProfileOutput, error) {
 	var output alexaforbusiness.CreateNetworkProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateProfileOutput, error) {
+func (r *AlexaforbusinessCreateProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateProfileOutput, error) {
 	var output alexaforbusiness.CreateProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateRoomOutput, error) {
+func (r *AlexaforbusinessCreateRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateRoomOutput, error) {
 	var output alexaforbusiness.CreateRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateSkillGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateSkillGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateSkillGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateSkillGroupOutput, error) {
+func (r *AlexaforbusinessCreateSkillGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateSkillGroupOutput, error) {
 	var output alexaforbusiness.CreateSkillGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessCreateUserResult struct {
-	Result workflow.Future
+type AlexaforbusinessCreateUserFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessCreateUserResult) Get(ctx workflow.Context) (*alexaforbusiness.CreateUserOutput, error) {
+func (r *AlexaforbusinessCreateUserFuture) Get(ctx workflow.Context) (*alexaforbusiness.CreateUserOutput, error) {
 	var output alexaforbusiness.CreateUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteAddressBookResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteAddressBookFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteAddressBookResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteAddressBookOutput, error) {
+func (r *AlexaforbusinessDeleteAddressBookFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteAddressBookOutput, error) {
 	var output alexaforbusiness.DeleteAddressBookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteBusinessReportScheduleResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteBusinessReportScheduleFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteBusinessReportScheduleResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteBusinessReportScheduleOutput, error) {
+func (r *AlexaforbusinessDeleteBusinessReportScheduleFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteBusinessReportScheduleOutput, error) {
 	var output alexaforbusiness.DeleteBusinessReportScheduleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteConferenceProviderResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteConferenceProviderFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteConferenceProviderResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteConferenceProviderOutput, error) {
+func (r *AlexaforbusinessDeleteConferenceProviderFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteConferenceProviderOutput, error) {
 	var output alexaforbusiness.DeleteConferenceProviderOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteContactResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteContactFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteContactResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteContactOutput, error) {
+func (r *AlexaforbusinessDeleteContactFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteContactOutput, error) {
 	var output alexaforbusiness.DeleteContactOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteDeviceResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteDeviceFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteDeviceResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteDeviceOutput, error) {
+func (r *AlexaforbusinessDeleteDeviceFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteDeviceOutput, error) {
 	var output alexaforbusiness.DeleteDeviceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteDeviceUsageDataResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteDeviceUsageDataFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteDeviceUsageDataResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteDeviceUsageDataOutput, error) {
+func (r *AlexaforbusinessDeleteDeviceUsageDataFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteDeviceUsageDataOutput, error) {
 	var output alexaforbusiness.DeleteDeviceUsageDataOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteGatewayGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteGatewayGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteGatewayGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteGatewayGroupOutput, error) {
+func (r *AlexaforbusinessDeleteGatewayGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteGatewayGroupOutput, error) {
 	var output alexaforbusiness.DeleteGatewayGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteNetworkProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteNetworkProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteNetworkProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteNetworkProfileOutput, error) {
+func (r *AlexaforbusinessDeleteNetworkProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteNetworkProfileOutput, error) {
 	var output alexaforbusiness.DeleteNetworkProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteProfileOutput, error) {
+func (r *AlexaforbusinessDeleteProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteProfileOutput, error) {
 	var output alexaforbusiness.DeleteProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteRoomOutput, error) {
+func (r *AlexaforbusinessDeleteRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteRoomOutput, error) {
 	var output alexaforbusiness.DeleteRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteRoomSkillParameterResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteRoomSkillParameterFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteRoomSkillParameterResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteRoomSkillParameterOutput, error) {
+func (r *AlexaforbusinessDeleteRoomSkillParameterFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteRoomSkillParameterOutput, error) {
 	var output alexaforbusiness.DeleteRoomSkillParameterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteSkillAuthorizationResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteSkillAuthorizationFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteSkillAuthorizationResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteSkillAuthorizationOutput, error) {
+func (r *AlexaforbusinessDeleteSkillAuthorizationFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteSkillAuthorizationOutput, error) {
 	var output alexaforbusiness.DeleteSkillAuthorizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteSkillGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteSkillGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteSkillGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteSkillGroupOutput, error) {
+func (r *AlexaforbusinessDeleteSkillGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteSkillGroupOutput, error) {
 	var output alexaforbusiness.DeleteSkillGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDeleteUserResult struct {
-	Result workflow.Future
+type AlexaforbusinessDeleteUserFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDeleteUserResult) Get(ctx workflow.Context) (*alexaforbusiness.DeleteUserOutput, error) {
+func (r *AlexaforbusinessDeleteUserFuture) Get(ctx workflow.Context) (*alexaforbusiness.DeleteUserOutput, error) {
 	var output alexaforbusiness.DeleteUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDisassociateContactFromAddressBookResult struct {
-	Result workflow.Future
+type AlexaforbusinessDisassociateContactFromAddressBookFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDisassociateContactFromAddressBookResult) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateContactFromAddressBookOutput, error) {
+func (r *AlexaforbusinessDisassociateContactFromAddressBookFuture) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateContactFromAddressBookOutput, error) {
 	var output alexaforbusiness.DisassociateContactFromAddressBookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDisassociateDeviceFromRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessDisassociateDeviceFromRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDisassociateDeviceFromRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateDeviceFromRoomOutput, error) {
+func (r *AlexaforbusinessDisassociateDeviceFromRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateDeviceFromRoomOutput, error) {
 	var output alexaforbusiness.DisassociateDeviceFromRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDisassociateSkillFromSkillGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessDisassociateSkillFromSkillGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDisassociateSkillFromSkillGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateSkillFromSkillGroupOutput, error) {
+func (r *AlexaforbusinessDisassociateSkillFromSkillGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateSkillFromSkillGroupOutput, error) {
 	var output alexaforbusiness.DisassociateSkillFromSkillGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDisassociateSkillFromUsersResult struct {
-	Result workflow.Future
+type AlexaforbusinessDisassociateSkillFromUsersFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDisassociateSkillFromUsersResult) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateSkillFromUsersOutput, error) {
+func (r *AlexaforbusinessDisassociateSkillFromUsersFuture) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateSkillFromUsersOutput, error) {
 	var output alexaforbusiness.DisassociateSkillFromUsersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessDisassociateSkillGroupFromRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessDisassociateSkillGroupFromRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessDisassociateSkillGroupFromRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateSkillGroupFromRoomOutput, error) {
+func (r *AlexaforbusinessDisassociateSkillGroupFromRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.DisassociateSkillGroupFromRoomOutput, error) {
 	var output alexaforbusiness.DisassociateSkillGroupFromRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessForgetSmartHomeAppliancesResult struct {
-	Result workflow.Future
+type AlexaforbusinessForgetSmartHomeAppliancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessForgetSmartHomeAppliancesResult) Get(ctx workflow.Context) (*alexaforbusiness.ForgetSmartHomeAppliancesOutput, error) {
+func (r *AlexaforbusinessForgetSmartHomeAppliancesFuture) Get(ctx workflow.Context) (*alexaforbusiness.ForgetSmartHomeAppliancesOutput, error) {
 	var output alexaforbusiness.ForgetSmartHomeAppliancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetAddressBookResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetAddressBookFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetAddressBookResult) Get(ctx workflow.Context) (*alexaforbusiness.GetAddressBookOutput, error) {
+func (r *AlexaforbusinessGetAddressBookFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetAddressBookOutput, error) {
 	var output alexaforbusiness.GetAddressBookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetConferencePreferenceResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetConferencePreferenceFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetConferencePreferenceResult) Get(ctx workflow.Context) (*alexaforbusiness.GetConferencePreferenceOutput, error) {
+func (r *AlexaforbusinessGetConferencePreferenceFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetConferencePreferenceOutput, error) {
 	var output alexaforbusiness.GetConferencePreferenceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetConferenceProviderResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetConferenceProviderFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetConferenceProviderResult) Get(ctx workflow.Context) (*alexaforbusiness.GetConferenceProviderOutput, error) {
+func (r *AlexaforbusinessGetConferenceProviderFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetConferenceProviderOutput, error) {
 	var output alexaforbusiness.GetConferenceProviderOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetContactResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetContactFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetContactResult) Get(ctx workflow.Context) (*alexaforbusiness.GetContactOutput, error) {
+func (r *AlexaforbusinessGetContactFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetContactOutput, error) {
 	var output alexaforbusiness.GetContactOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetDeviceResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetDeviceFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetDeviceResult) Get(ctx workflow.Context) (*alexaforbusiness.GetDeviceOutput, error) {
+func (r *AlexaforbusinessGetDeviceFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetDeviceOutput, error) {
 	var output alexaforbusiness.GetDeviceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetGatewayResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetGatewayFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetGatewayResult) Get(ctx workflow.Context) (*alexaforbusiness.GetGatewayOutput, error) {
+func (r *AlexaforbusinessGetGatewayFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetGatewayOutput, error) {
 	var output alexaforbusiness.GetGatewayOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetGatewayGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetGatewayGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetGatewayGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.GetGatewayGroupOutput, error) {
+func (r *AlexaforbusinessGetGatewayGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetGatewayGroupOutput, error) {
 	var output alexaforbusiness.GetGatewayGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetInvitationConfigurationResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetInvitationConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetInvitationConfigurationResult) Get(ctx workflow.Context) (*alexaforbusiness.GetInvitationConfigurationOutput, error) {
+func (r *AlexaforbusinessGetInvitationConfigurationFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetInvitationConfigurationOutput, error) {
 	var output alexaforbusiness.GetInvitationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetNetworkProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetNetworkProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetNetworkProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.GetNetworkProfileOutput, error) {
+func (r *AlexaforbusinessGetNetworkProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetNetworkProfileOutput, error) {
 	var output alexaforbusiness.GetNetworkProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.GetProfileOutput, error) {
+func (r *AlexaforbusinessGetProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetProfileOutput, error) {
 	var output alexaforbusiness.GetProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.GetRoomOutput, error) {
+func (r *AlexaforbusinessGetRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetRoomOutput, error) {
 	var output alexaforbusiness.GetRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetRoomSkillParameterResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetRoomSkillParameterFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetRoomSkillParameterResult) Get(ctx workflow.Context) (*alexaforbusiness.GetRoomSkillParameterOutput, error) {
+func (r *AlexaforbusinessGetRoomSkillParameterFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetRoomSkillParameterOutput, error) {
 	var output alexaforbusiness.GetRoomSkillParameterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessGetSkillGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessGetSkillGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessGetSkillGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.GetSkillGroupOutput, error) {
+func (r *AlexaforbusinessGetSkillGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.GetSkillGroupOutput, error) {
 	var output alexaforbusiness.GetSkillGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListBusinessReportSchedulesResult struct {
-	Result workflow.Future
+type AlexaforbusinessListBusinessReportSchedulesFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListBusinessReportSchedulesResult) Get(ctx workflow.Context) (*alexaforbusiness.ListBusinessReportSchedulesOutput, error) {
+func (r *AlexaforbusinessListBusinessReportSchedulesFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListBusinessReportSchedulesOutput, error) {
 	var output alexaforbusiness.ListBusinessReportSchedulesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListConferenceProvidersResult struct {
-	Result workflow.Future
+type AlexaforbusinessListConferenceProvidersFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListConferenceProvidersResult) Get(ctx workflow.Context) (*alexaforbusiness.ListConferenceProvidersOutput, error) {
+func (r *AlexaforbusinessListConferenceProvidersFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListConferenceProvidersOutput, error) {
 	var output alexaforbusiness.ListConferenceProvidersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListDeviceEventsResult struct {
-	Result workflow.Future
+type AlexaforbusinessListDeviceEventsFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListDeviceEventsResult) Get(ctx workflow.Context) (*alexaforbusiness.ListDeviceEventsOutput, error) {
+func (r *AlexaforbusinessListDeviceEventsFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListDeviceEventsOutput, error) {
 	var output alexaforbusiness.ListDeviceEventsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListGatewayGroupsResult struct {
-	Result workflow.Future
+type AlexaforbusinessListGatewayGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListGatewayGroupsResult) Get(ctx workflow.Context) (*alexaforbusiness.ListGatewayGroupsOutput, error) {
+func (r *AlexaforbusinessListGatewayGroupsFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListGatewayGroupsOutput, error) {
 	var output alexaforbusiness.ListGatewayGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListGatewaysResult struct {
-	Result workflow.Future
+type AlexaforbusinessListGatewaysFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListGatewaysResult) Get(ctx workflow.Context) (*alexaforbusiness.ListGatewaysOutput, error) {
+func (r *AlexaforbusinessListGatewaysFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListGatewaysOutput, error) {
 	var output alexaforbusiness.ListGatewaysOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListSkillsResult struct {
-	Result workflow.Future
+type AlexaforbusinessListSkillsFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListSkillsResult) Get(ctx workflow.Context) (*alexaforbusiness.ListSkillsOutput, error) {
+func (r *AlexaforbusinessListSkillsFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListSkillsOutput, error) {
 	var output alexaforbusiness.ListSkillsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListSkillsStoreCategoriesResult struct {
-	Result workflow.Future
+type AlexaforbusinessListSkillsStoreCategoriesFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListSkillsStoreCategoriesResult) Get(ctx workflow.Context) (*alexaforbusiness.ListSkillsStoreCategoriesOutput, error) {
+func (r *AlexaforbusinessListSkillsStoreCategoriesFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListSkillsStoreCategoriesOutput, error) {
 	var output alexaforbusiness.ListSkillsStoreCategoriesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListSkillsStoreSkillsByCategoryResult struct {
-	Result workflow.Future
+type AlexaforbusinessListSkillsStoreSkillsByCategoryFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListSkillsStoreSkillsByCategoryResult) Get(ctx workflow.Context) (*alexaforbusiness.ListSkillsStoreSkillsByCategoryOutput, error) {
+func (r *AlexaforbusinessListSkillsStoreSkillsByCategoryFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListSkillsStoreSkillsByCategoryOutput, error) {
 	var output alexaforbusiness.ListSkillsStoreSkillsByCategoryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListSmartHomeAppliancesResult struct {
-	Result workflow.Future
+type AlexaforbusinessListSmartHomeAppliancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListSmartHomeAppliancesResult) Get(ctx workflow.Context) (*alexaforbusiness.ListSmartHomeAppliancesOutput, error) {
+func (r *AlexaforbusinessListSmartHomeAppliancesFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListSmartHomeAppliancesOutput, error) {
 	var output alexaforbusiness.ListSmartHomeAppliancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessListTagsResult struct {
-	Result workflow.Future
+type AlexaforbusinessListTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessListTagsResult) Get(ctx workflow.Context) (*alexaforbusiness.ListTagsOutput, error) {
+func (r *AlexaforbusinessListTagsFuture) Get(ctx workflow.Context) (*alexaforbusiness.ListTagsOutput, error) {
 	var output alexaforbusiness.ListTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessPutConferencePreferenceResult struct {
-	Result workflow.Future
+type AlexaforbusinessPutConferencePreferenceFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessPutConferencePreferenceResult) Get(ctx workflow.Context) (*alexaforbusiness.PutConferencePreferenceOutput, error) {
+func (r *AlexaforbusinessPutConferencePreferenceFuture) Get(ctx workflow.Context) (*alexaforbusiness.PutConferencePreferenceOutput, error) {
 	var output alexaforbusiness.PutConferencePreferenceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessPutInvitationConfigurationResult struct {
-	Result workflow.Future
+type AlexaforbusinessPutInvitationConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessPutInvitationConfigurationResult) Get(ctx workflow.Context) (*alexaforbusiness.PutInvitationConfigurationOutput, error) {
+func (r *AlexaforbusinessPutInvitationConfigurationFuture) Get(ctx workflow.Context) (*alexaforbusiness.PutInvitationConfigurationOutput, error) {
 	var output alexaforbusiness.PutInvitationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessPutRoomSkillParameterResult struct {
-	Result workflow.Future
+type AlexaforbusinessPutRoomSkillParameterFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessPutRoomSkillParameterResult) Get(ctx workflow.Context) (*alexaforbusiness.PutRoomSkillParameterOutput, error) {
+func (r *AlexaforbusinessPutRoomSkillParameterFuture) Get(ctx workflow.Context) (*alexaforbusiness.PutRoomSkillParameterOutput, error) {
 	var output alexaforbusiness.PutRoomSkillParameterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessPutSkillAuthorizationResult struct {
-	Result workflow.Future
+type AlexaforbusinessPutSkillAuthorizationFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessPutSkillAuthorizationResult) Get(ctx workflow.Context) (*alexaforbusiness.PutSkillAuthorizationOutput, error) {
+func (r *AlexaforbusinessPutSkillAuthorizationFuture) Get(ctx workflow.Context) (*alexaforbusiness.PutSkillAuthorizationOutput, error) {
 	var output alexaforbusiness.PutSkillAuthorizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessRegisterAVSDeviceResult struct {
-	Result workflow.Future
+type AlexaforbusinessRegisterAVSDeviceFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessRegisterAVSDeviceResult) Get(ctx workflow.Context) (*alexaforbusiness.RegisterAVSDeviceOutput, error) {
+func (r *AlexaforbusinessRegisterAVSDeviceFuture) Get(ctx workflow.Context) (*alexaforbusiness.RegisterAVSDeviceOutput, error) {
 	var output alexaforbusiness.RegisterAVSDeviceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessRejectSkillResult struct {
-	Result workflow.Future
+type AlexaforbusinessRejectSkillFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessRejectSkillResult) Get(ctx workflow.Context) (*alexaforbusiness.RejectSkillOutput, error) {
+func (r *AlexaforbusinessRejectSkillFuture) Get(ctx workflow.Context) (*alexaforbusiness.RejectSkillOutput, error) {
 	var output alexaforbusiness.RejectSkillOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessResolveRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessResolveRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessResolveRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.ResolveRoomOutput, error) {
+func (r *AlexaforbusinessResolveRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.ResolveRoomOutput, error) {
 	var output alexaforbusiness.ResolveRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessRevokeInvitationResult struct {
-	Result workflow.Future
+type AlexaforbusinessRevokeInvitationFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessRevokeInvitationResult) Get(ctx workflow.Context) (*alexaforbusiness.RevokeInvitationOutput, error) {
+func (r *AlexaforbusinessRevokeInvitationFuture) Get(ctx workflow.Context) (*alexaforbusiness.RevokeInvitationOutput, error) {
 	var output alexaforbusiness.RevokeInvitationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSearchAddressBooksResult struct {
-	Result workflow.Future
+type AlexaforbusinessSearchAddressBooksFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSearchAddressBooksResult) Get(ctx workflow.Context) (*alexaforbusiness.SearchAddressBooksOutput, error) {
+func (r *AlexaforbusinessSearchAddressBooksFuture) Get(ctx workflow.Context) (*alexaforbusiness.SearchAddressBooksOutput, error) {
 	var output alexaforbusiness.SearchAddressBooksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSearchContactsResult struct {
-	Result workflow.Future
+type AlexaforbusinessSearchContactsFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSearchContactsResult) Get(ctx workflow.Context) (*alexaforbusiness.SearchContactsOutput, error) {
+func (r *AlexaforbusinessSearchContactsFuture) Get(ctx workflow.Context) (*alexaforbusiness.SearchContactsOutput, error) {
 	var output alexaforbusiness.SearchContactsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSearchDevicesResult struct {
-	Result workflow.Future
+type AlexaforbusinessSearchDevicesFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSearchDevicesResult) Get(ctx workflow.Context) (*alexaforbusiness.SearchDevicesOutput, error) {
+func (r *AlexaforbusinessSearchDevicesFuture) Get(ctx workflow.Context) (*alexaforbusiness.SearchDevicesOutput, error) {
 	var output alexaforbusiness.SearchDevicesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSearchNetworkProfilesResult struct {
-	Result workflow.Future
+type AlexaforbusinessSearchNetworkProfilesFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSearchNetworkProfilesResult) Get(ctx workflow.Context) (*alexaforbusiness.SearchNetworkProfilesOutput, error) {
+func (r *AlexaforbusinessSearchNetworkProfilesFuture) Get(ctx workflow.Context) (*alexaforbusiness.SearchNetworkProfilesOutput, error) {
 	var output alexaforbusiness.SearchNetworkProfilesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSearchProfilesResult struct {
-	Result workflow.Future
+type AlexaforbusinessSearchProfilesFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSearchProfilesResult) Get(ctx workflow.Context) (*alexaforbusiness.SearchProfilesOutput, error) {
+func (r *AlexaforbusinessSearchProfilesFuture) Get(ctx workflow.Context) (*alexaforbusiness.SearchProfilesOutput, error) {
 	var output alexaforbusiness.SearchProfilesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSearchRoomsResult struct {
-	Result workflow.Future
+type AlexaforbusinessSearchRoomsFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSearchRoomsResult) Get(ctx workflow.Context) (*alexaforbusiness.SearchRoomsOutput, error) {
+func (r *AlexaforbusinessSearchRoomsFuture) Get(ctx workflow.Context) (*alexaforbusiness.SearchRoomsOutput, error) {
 	var output alexaforbusiness.SearchRoomsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSearchSkillGroupsResult struct {
-	Result workflow.Future
+type AlexaforbusinessSearchSkillGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSearchSkillGroupsResult) Get(ctx workflow.Context) (*alexaforbusiness.SearchSkillGroupsOutput, error) {
+func (r *AlexaforbusinessSearchSkillGroupsFuture) Get(ctx workflow.Context) (*alexaforbusiness.SearchSkillGroupsOutput, error) {
 	var output alexaforbusiness.SearchSkillGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSearchUsersResult struct {
-	Result workflow.Future
+type AlexaforbusinessSearchUsersFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSearchUsersResult) Get(ctx workflow.Context) (*alexaforbusiness.SearchUsersOutput, error) {
+func (r *AlexaforbusinessSearchUsersFuture) Get(ctx workflow.Context) (*alexaforbusiness.SearchUsersOutput, error) {
 	var output alexaforbusiness.SearchUsersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSendAnnouncementResult struct {
-	Result workflow.Future
+type AlexaforbusinessSendAnnouncementFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSendAnnouncementResult) Get(ctx workflow.Context) (*alexaforbusiness.SendAnnouncementOutput, error) {
+func (r *AlexaforbusinessSendAnnouncementFuture) Get(ctx workflow.Context) (*alexaforbusiness.SendAnnouncementOutput, error) {
 	var output alexaforbusiness.SendAnnouncementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessSendInvitationResult struct {
-	Result workflow.Future
+type AlexaforbusinessSendInvitationFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessSendInvitationResult) Get(ctx workflow.Context) (*alexaforbusiness.SendInvitationOutput, error) {
+func (r *AlexaforbusinessSendInvitationFuture) Get(ctx workflow.Context) (*alexaforbusiness.SendInvitationOutput, error) {
 	var output alexaforbusiness.SendInvitationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessStartDeviceSyncResult struct {
-	Result workflow.Future
+type AlexaforbusinessStartDeviceSyncFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessStartDeviceSyncResult) Get(ctx workflow.Context) (*alexaforbusiness.StartDeviceSyncOutput, error) {
+func (r *AlexaforbusinessStartDeviceSyncFuture) Get(ctx workflow.Context) (*alexaforbusiness.StartDeviceSyncOutput, error) {
 	var output alexaforbusiness.StartDeviceSyncOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessStartSmartHomeApplianceDiscoveryResult struct {
-	Result workflow.Future
+type AlexaforbusinessStartSmartHomeApplianceDiscoveryFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessStartSmartHomeApplianceDiscoveryResult) Get(ctx workflow.Context) (*alexaforbusiness.StartSmartHomeApplianceDiscoveryOutput, error) {
+func (r *AlexaforbusinessStartSmartHomeApplianceDiscoveryFuture) Get(ctx workflow.Context) (*alexaforbusiness.StartSmartHomeApplianceDiscoveryOutput, error) {
 	var output alexaforbusiness.StartSmartHomeApplianceDiscoveryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessTagResourceResult struct {
-	Result workflow.Future
+type AlexaforbusinessTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessTagResourceResult) Get(ctx workflow.Context) (*alexaforbusiness.TagResourceOutput, error) {
+func (r *AlexaforbusinessTagResourceFuture) Get(ctx workflow.Context) (*alexaforbusiness.TagResourceOutput, error) {
 	var output alexaforbusiness.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUntagResourceResult struct {
-	Result workflow.Future
+type AlexaforbusinessUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUntagResourceResult) Get(ctx workflow.Context) (*alexaforbusiness.UntagResourceOutput, error) {
+func (r *AlexaforbusinessUntagResourceFuture) Get(ctx workflow.Context) (*alexaforbusiness.UntagResourceOutput, error) {
 	var output alexaforbusiness.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateAddressBookResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateAddressBookFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateAddressBookResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateAddressBookOutput, error) {
+func (r *AlexaforbusinessUpdateAddressBookFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateAddressBookOutput, error) {
 	var output alexaforbusiness.UpdateAddressBookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateBusinessReportScheduleResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateBusinessReportScheduleFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateBusinessReportScheduleResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateBusinessReportScheduleOutput, error) {
+func (r *AlexaforbusinessUpdateBusinessReportScheduleFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateBusinessReportScheduleOutput, error) {
 	var output alexaforbusiness.UpdateBusinessReportScheduleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateConferenceProviderResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateConferenceProviderFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateConferenceProviderResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateConferenceProviderOutput, error) {
+func (r *AlexaforbusinessUpdateConferenceProviderFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateConferenceProviderOutput, error) {
 	var output alexaforbusiness.UpdateConferenceProviderOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateContactResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateContactFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateContactResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateContactOutput, error) {
+func (r *AlexaforbusinessUpdateContactFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateContactOutput, error) {
 	var output alexaforbusiness.UpdateContactOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateDeviceResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateDeviceFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateDeviceResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateDeviceOutput, error) {
+func (r *AlexaforbusinessUpdateDeviceFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateDeviceOutput, error) {
 	var output alexaforbusiness.UpdateDeviceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateGatewayResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateGatewayFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateGatewayResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateGatewayOutput, error) {
+func (r *AlexaforbusinessUpdateGatewayFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateGatewayOutput, error) {
 	var output alexaforbusiness.UpdateGatewayOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateGatewayGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateGatewayGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateGatewayGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateGatewayGroupOutput, error) {
+func (r *AlexaforbusinessUpdateGatewayGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateGatewayGroupOutput, error) {
 	var output alexaforbusiness.UpdateGatewayGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateNetworkProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateNetworkProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateNetworkProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateNetworkProfileOutput, error) {
+func (r *AlexaforbusinessUpdateNetworkProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateNetworkProfileOutput, error) {
 	var output alexaforbusiness.UpdateNetworkProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateProfileResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateProfileResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateProfileOutput, error) {
+func (r *AlexaforbusinessUpdateProfileFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateProfileOutput, error) {
 	var output alexaforbusiness.UpdateProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateRoomResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateRoomFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateRoomResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateRoomOutput, error) {
+func (r *AlexaforbusinessUpdateRoomFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateRoomOutput, error) {
 	var output alexaforbusiness.UpdateRoomOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AlexaforbusinessUpdateSkillGroupResult struct {
-	Result workflow.Future
+type AlexaforbusinessUpdateSkillGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *AlexaforbusinessUpdateSkillGroupResult) Get(ctx workflow.Context) (*alexaforbusiness.UpdateSkillGroupOutput, error) {
+func (r *AlexaforbusinessUpdateSkillGroupFuture) Get(ctx workflow.Context) (*alexaforbusiness.UpdateSkillGroupOutput, error) {
 	var output alexaforbusiness.UpdateSkillGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -1232,9 +1232,9 @@ func (a *AlexaForBusinessStub) ApproveSkill(ctx workflow.Context, input *alexafo
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ApproveSkillAsync(ctx workflow.Context, input *alexaforbusiness.ApproveSkillInput) *AlexaforbusinessApproveSkillResult {
+func (a *AlexaForBusinessStub) ApproveSkillAsync(ctx workflow.Context, input *alexaforbusiness.ApproveSkillInput) *AlexaforbusinessApproveSkillFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ApproveSkill", input)
-	return &AlexaforbusinessApproveSkillResult{Result: future}
+	return &AlexaforbusinessApproveSkillFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) AssociateContactWithAddressBook(ctx workflow.Context, input *alexaforbusiness.AssociateContactWithAddressBookInput) (*alexaforbusiness.AssociateContactWithAddressBookOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *AlexaForBusinessStub) AssociateContactWithAddressBook(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) AssociateContactWithAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.AssociateContactWithAddressBookInput) *AlexaforbusinessAssociateContactWithAddressBookResult {
+func (a *AlexaForBusinessStub) AssociateContactWithAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.AssociateContactWithAddressBookInput) *AlexaforbusinessAssociateContactWithAddressBookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.AssociateContactWithAddressBook", input)
-	return &AlexaforbusinessAssociateContactWithAddressBookResult{Result: future}
+	return &AlexaforbusinessAssociateContactWithAddressBookFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) AssociateDeviceWithNetworkProfile(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithNetworkProfileInput) (*alexaforbusiness.AssociateDeviceWithNetworkProfileOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *AlexaForBusinessStub) AssociateDeviceWithNetworkProfile(ctx workflow.Co
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) AssociateDeviceWithNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithNetworkProfileInput) *AlexaforbusinessAssociateDeviceWithNetworkProfileResult {
+func (a *AlexaForBusinessStub) AssociateDeviceWithNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithNetworkProfileInput) *AlexaforbusinessAssociateDeviceWithNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.AssociateDeviceWithNetworkProfile", input)
-	return &AlexaforbusinessAssociateDeviceWithNetworkProfileResult{Result: future}
+	return &AlexaforbusinessAssociateDeviceWithNetworkProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) AssociateDeviceWithRoom(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithRoomInput) (*alexaforbusiness.AssociateDeviceWithRoomOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *AlexaForBusinessStub) AssociateDeviceWithRoom(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) AssociateDeviceWithRoomAsync(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithRoomInput) *AlexaforbusinessAssociateDeviceWithRoomResult {
+func (a *AlexaForBusinessStub) AssociateDeviceWithRoomAsync(ctx workflow.Context, input *alexaforbusiness.AssociateDeviceWithRoomInput) *AlexaforbusinessAssociateDeviceWithRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.AssociateDeviceWithRoom", input)
-	return &AlexaforbusinessAssociateDeviceWithRoomResult{Result: future}
+	return &AlexaforbusinessAssociateDeviceWithRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) AssociateSkillGroupWithRoom(ctx workflow.Context, input *alexaforbusiness.AssociateSkillGroupWithRoomInput) (*alexaforbusiness.AssociateSkillGroupWithRoomOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *AlexaForBusinessStub) AssociateSkillGroupWithRoom(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) AssociateSkillGroupWithRoomAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillGroupWithRoomInput) *AlexaforbusinessAssociateSkillGroupWithRoomResult {
+func (a *AlexaForBusinessStub) AssociateSkillGroupWithRoomAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillGroupWithRoomInput) *AlexaforbusinessAssociateSkillGroupWithRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.AssociateSkillGroupWithRoom", input)
-	return &AlexaforbusinessAssociateSkillGroupWithRoomResult{Result: future}
+	return &AlexaforbusinessAssociateSkillGroupWithRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) AssociateSkillWithSkillGroup(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithSkillGroupInput) (*alexaforbusiness.AssociateSkillWithSkillGroupOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *AlexaForBusinessStub) AssociateSkillWithSkillGroup(ctx workflow.Context
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) AssociateSkillWithSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithSkillGroupInput) *AlexaforbusinessAssociateSkillWithSkillGroupResult {
+func (a *AlexaForBusinessStub) AssociateSkillWithSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithSkillGroupInput) *AlexaforbusinessAssociateSkillWithSkillGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.AssociateSkillWithSkillGroup", input)
-	return &AlexaforbusinessAssociateSkillWithSkillGroupResult{Result: future}
+	return &AlexaforbusinessAssociateSkillWithSkillGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) AssociateSkillWithUsers(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithUsersInput) (*alexaforbusiness.AssociateSkillWithUsersOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *AlexaForBusinessStub) AssociateSkillWithUsers(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) AssociateSkillWithUsersAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithUsersInput) *AlexaforbusinessAssociateSkillWithUsersResult {
+func (a *AlexaForBusinessStub) AssociateSkillWithUsersAsync(ctx workflow.Context, input *alexaforbusiness.AssociateSkillWithUsersInput) *AlexaforbusinessAssociateSkillWithUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.AssociateSkillWithUsers", input)
-	return &AlexaforbusinessAssociateSkillWithUsersResult{Result: future}
+	return &AlexaforbusinessAssociateSkillWithUsersFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateAddressBook(ctx workflow.Context, input *alexaforbusiness.CreateAddressBookInput) (*alexaforbusiness.CreateAddressBookOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *AlexaForBusinessStub) CreateAddressBook(ctx workflow.Context, input *al
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.CreateAddressBookInput) *AlexaforbusinessCreateAddressBookResult {
+func (a *AlexaForBusinessStub) CreateAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.CreateAddressBookInput) *AlexaforbusinessCreateAddressBookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateAddressBook", input)
-	return &AlexaforbusinessCreateAddressBookResult{Result: future}
+	return &AlexaforbusinessCreateAddressBookFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateBusinessReportSchedule(ctx workflow.Context, input *alexaforbusiness.CreateBusinessReportScheduleInput) (*alexaforbusiness.CreateBusinessReportScheduleOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *AlexaForBusinessStub) CreateBusinessReportSchedule(ctx workflow.Context
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.CreateBusinessReportScheduleInput) *AlexaforbusinessCreateBusinessReportScheduleResult {
+func (a *AlexaForBusinessStub) CreateBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.CreateBusinessReportScheduleInput) *AlexaforbusinessCreateBusinessReportScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateBusinessReportSchedule", input)
-	return &AlexaforbusinessCreateBusinessReportScheduleResult{Result: future}
+	return &AlexaforbusinessCreateBusinessReportScheduleFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateConferenceProvider(ctx workflow.Context, input *alexaforbusiness.CreateConferenceProviderInput) (*alexaforbusiness.CreateConferenceProviderOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *AlexaForBusinessStub) CreateConferenceProvider(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.CreateConferenceProviderInput) *AlexaforbusinessCreateConferenceProviderResult {
+func (a *AlexaForBusinessStub) CreateConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.CreateConferenceProviderInput) *AlexaforbusinessCreateConferenceProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateConferenceProvider", input)
-	return &AlexaforbusinessCreateConferenceProviderResult{Result: future}
+	return &AlexaforbusinessCreateConferenceProviderFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateContact(ctx workflow.Context, input *alexaforbusiness.CreateContactInput) (*alexaforbusiness.CreateContactOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *AlexaForBusinessStub) CreateContact(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateContactAsync(ctx workflow.Context, input *alexaforbusiness.CreateContactInput) *AlexaforbusinessCreateContactResult {
+func (a *AlexaForBusinessStub) CreateContactAsync(ctx workflow.Context, input *alexaforbusiness.CreateContactInput) *AlexaforbusinessCreateContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateContact", input)
-	return &AlexaforbusinessCreateContactResult{Result: future}
+	return &AlexaforbusinessCreateContactFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateGatewayGroup(ctx workflow.Context, input *alexaforbusiness.CreateGatewayGroupInput) (*alexaforbusiness.CreateGatewayGroupOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *AlexaForBusinessStub) CreateGatewayGroup(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.CreateGatewayGroupInput) *AlexaforbusinessCreateGatewayGroupResult {
+func (a *AlexaForBusinessStub) CreateGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.CreateGatewayGroupInput) *AlexaforbusinessCreateGatewayGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateGatewayGroup", input)
-	return &AlexaforbusinessCreateGatewayGroupResult{Result: future}
+	return &AlexaforbusinessCreateGatewayGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateNetworkProfile(ctx workflow.Context, input *alexaforbusiness.CreateNetworkProfileInput) (*alexaforbusiness.CreateNetworkProfileOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *AlexaForBusinessStub) CreateNetworkProfile(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.CreateNetworkProfileInput) *AlexaforbusinessCreateNetworkProfileResult {
+func (a *AlexaForBusinessStub) CreateNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.CreateNetworkProfileInput) *AlexaforbusinessCreateNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateNetworkProfile", input)
-	return &AlexaforbusinessCreateNetworkProfileResult{Result: future}
+	return &AlexaforbusinessCreateNetworkProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateProfile(ctx workflow.Context, input *alexaforbusiness.CreateProfileInput) (*alexaforbusiness.CreateProfileOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *AlexaForBusinessStub) CreateProfile(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateProfileAsync(ctx workflow.Context, input *alexaforbusiness.CreateProfileInput) *AlexaforbusinessCreateProfileResult {
+func (a *AlexaForBusinessStub) CreateProfileAsync(ctx workflow.Context, input *alexaforbusiness.CreateProfileInput) *AlexaforbusinessCreateProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateProfile", input)
-	return &AlexaforbusinessCreateProfileResult{Result: future}
+	return &AlexaforbusinessCreateProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateRoom(ctx workflow.Context, input *alexaforbusiness.CreateRoomInput) (*alexaforbusiness.CreateRoomOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *AlexaForBusinessStub) CreateRoom(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateRoomAsync(ctx workflow.Context, input *alexaforbusiness.CreateRoomInput) *AlexaforbusinessCreateRoomResult {
+func (a *AlexaForBusinessStub) CreateRoomAsync(ctx workflow.Context, input *alexaforbusiness.CreateRoomInput) *AlexaforbusinessCreateRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateRoom", input)
-	return &AlexaforbusinessCreateRoomResult{Result: future}
+	return &AlexaforbusinessCreateRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateSkillGroup(ctx workflow.Context, input *alexaforbusiness.CreateSkillGroupInput) (*alexaforbusiness.CreateSkillGroupOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *AlexaForBusinessStub) CreateSkillGroup(ctx workflow.Context, input *ale
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.CreateSkillGroupInput) *AlexaforbusinessCreateSkillGroupResult {
+func (a *AlexaForBusinessStub) CreateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.CreateSkillGroupInput) *AlexaforbusinessCreateSkillGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateSkillGroup", input)
-	return &AlexaforbusinessCreateSkillGroupResult{Result: future}
+	return &AlexaforbusinessCreateSkillGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) CreateUser(ctx workflow.Context, input *alexaforbusiness.CreateUserInput) (*alexaforbusiness.CreateUserOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *AlexaForBusinessStub) CreateUser(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) CreateUserAsync(ctx workflow.Context, input *alexaforbusiness.CreateUserInput) *AlexaforbusinessCreateUserResult {
+func (a *AlexaForBusinessStub) CreateUserAsync(ctx workflow.Context, input *alexaforbusiness.CreateUserInput) *AlexaforbusinessCreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.CreateUser", input)
-	return &AlexaforbusinessCreateUserResult{Result: future}
+	return &AlexaforbusinessCreateUserFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteAddressBook(ctx workflow.Context, input *alexaforbusiness.DeleteAddressBookInput) (*alexaforbusiness.DeleteAddressBookOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *AlexaForBusinessStub) DeleteAddressBook(ctx workflow.Context, input *al
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.DeleteAddressBookInput) *AlexaforbusinessDeleteAddressBookResult {
+func (a *AlexaForBusinessStub) DeleteAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.DeleteAddressBookInput) *AlexaforbusinessDeleteAddressBookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteAddressBook", input)
-	return &AlexaforbusinessDeleteAddressBookResult{Result: future}
+	return &AlexaforbusinessDeleteAddressBookFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteBusinessReportSchedule(ctx workflow.Context, input *alexaforbusiness.DeleteBusinessReportScheduleInput) (*alexaforbusiness.DeleteBusinessReportScheduleOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *AlexaForBusinessStub) DeleteBusinessReportSchedule(ctx workflow.Context
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.DeleteBusinessReportScheduleInput) *AlexaforbusinessDeleteBusinessReportScheduleResult {
+func (a *AlexaForBusinessStub) DeleteBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.DeleteBusinessReportScheduleInput) *AlexaforbusinessDeleteBusinessReportScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteBusinessReportSchedule", input)
-	return &AlexaforbusinessDeleteBusinessReportScheduleResult{Result: future}
+	return &AlexaforbusinessDeleteBusinessReportScheduleFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteConferenceProvider(ctx workflow.Context, input *alexaforbusiness.DeleteConferenceProviderInput) (*alexaforbusiness.DeleteConferenceProviderOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *AlexaForBusinessStub) DeleteConferenceProvider(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.DeleteConferenceProviderInput) *AlexaforbusinessDeleteConferenceProviderResult {
+func (a *AlexaForBusinessStub) DeleteConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.DeleteConferenceProviderInput) *AlexaforbusinessDeleteConferenceProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteConferenceProvider", input)
-	return &AlexaforbusinessDeleteConferenceProviderResult{Result: future}
+	return &AlexaforbusinessDeleteConferenceProviderFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteContact(ctx workflow.Context, input *alexaforbusiness.DeleteContactInput) (*alexaforbusiness.DeleteContactOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *AlexaForBusinessStub) DeleteContact(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteContactAsync(ctx workflow.Context, input *alexaforbusiness.DeleteContactInput) *AlexaforbusinessDeleteContactResult {
+func (a *AlexaForBusinessStub) DeleteContactAsync(ctx workflow.Context, input *alexaforbusiness.DeleteContactInput) *AlexaforbusinessDeleteContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteContact", input)
-	return &AlexaforbusinessDeleteContactResult{Result: future}
+	return &AlexaforbusinessDeleteContactFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteDevice(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceInput) (*alexaforbusiness.DeleteDeviceOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *AlexaForBusinessStub) DeleteDevice(ctx workflow.Context, input *alexafo
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteDeviceAsync(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceInput) *AlexaforbusinessDeleteDeviceResult {
+func (a *AlexaForBusinessStub) DeleteDeviceAsync(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceInput) *AlexaforbusinessDeleteDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteDevice", input)
-	return &AlexaforbusinessDeleteDeviceResult{Result: future}
+	return &AlexaforbusinessDeleteDeviceFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteDeviceUsageData(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceUsageDataInput) (*alexaforbusiness.DeleteDeviceUsageDataOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *AlexaForBusinessStub) DeleteDeviceUsageData(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteDeviceUsageDataAsync(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceUsageDataInput) *AlexaforbusinessDeleteDeviceUsageDataResult {
+func (a *AlexaForBusinessStub) DeleteDeviceUsageDataAsync(ctx workflow.Context, input *alexaforbusiness.DeleteDeviceUsageDataInput) *AlexaforbusinessDeleteDeviceUsageDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteDeviceUsageData", input)
-	return &AlexaforbusinessDeleteDeviceUsageDataResult{Result: future}
+	return &AlexaforbusinessDeleteDeviceUsageDataFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteGatewayGroup(ctx workflow.Context, input *alexaforbusiness.DeleteGatewayGroupInput) (*alexaforbusiness.DeleteGatewayGroupOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *AlexaForBusinessStub) DeleteGatewayGroup(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.DeleteGatewayGroupInput) *AlexaforbusinessDeleteGatewayGroupResult {
+func (a *AlexaForBusinessStub) DeleteGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.DeleteGatewayGroupInput) *AlexaforbusinessDeleteGatewayGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteGatewayGroup", input)
-	return &AlexaforbusinessDeleteGatewayGroupResult{Result: future}
+	return &AlexaforbusinessDeleteGatewayGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteNetworkProfile(ctx workflow.Context, input *alexaforbusiness.DeleteNetworkProfileInput) (*alexaforbusiness.DeleteNetworkProfileOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *AlexaForBusinessStub) DeleteNetworkProfile(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.DeleteNetworkProfileInput) *AlexaforbusinessDeleteNetworkProfileResult {
+func (a *AlexaForBusinessStub) DeleteNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.DeleteNetworkProfileInput) *AlexaforbusinessDeleteNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteNetworkProfile", input)
-	return &AlexaforbusinessDeleteNetworkProfileResult{Result: future}
+	return &AlexaforbusinessDeleteNetworkProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteProfile(ctx workflow.Context, input *alexaforbusiness.DeleteProfileInput) (*alexaforbusiness.DeleteProfileOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *AlexaForBusinessStub) DeleteProfile(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteProfileAsync(ctx workflow.Context, input *alexaforbusiness.DeleteProfileInput) *AlexaforbusinessDeleteProfileResult {
+func (a *AlexaForBusinessStub) DeleteProfileAsync(ctx workflow.Context, input *alexaforbusiness.DeleteProfileInput) *AlexaforbusinessDeleteProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteProfile", input)
-	return &AlexaforbusinessDeleteProfileResult{Result: future}
+	return &AlexaforbusinessDeleteProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteRoom(ctx workflow.Context, input *alexaforbusiness.DeleteRoomInput) (*alexaforbusiness.DeleteRoomOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *AlexaForBusinessStub) DeleteRoom(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteRoomAsync(ctx workflow.Context, input *alexaforbusiness.DeleteRoomInput) *AlexaforbusinessDeleteRoomResult {
+func (a *AlexaForBusinessStub) DeleteRoomAsync(ctx workflow.Context, input *alexaforbusiness.DeleteRoomInput) *AlexaforbusinessDeleteRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteRoom", input)
-	return &AlexaforbusinessDeleteRoomResult{Result: future}
+	return &AlexaforbusinessDeleteRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteRoomSkillParameter(ctx workflow.Context, input *alexaforbusiness.DeleteRoomSkillParameterInput) (*alexaforbusiness.DeleteRoomSkillParameterOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *AlexaForBusinessStub) DeleteRoomSkillParameter(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.DeleteRoomSkillParameterInput) *AlexaforbusinessDeleteRoomSkillParameterResult {
+func (a *AlexaForBusinessStub) DeleteRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.DeleteRoomSkillParameterInput) *AlexaforbusinessDeleteRoomSkillParameterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteRoomSkillParameter", input)
-	return &AlexaforbusinessDeleteRoomSkillParameterResult{Result: future}
+	return &AlexaforbusinessDeleteRoomSkillParameterFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteSkillAuthorization(ctx workflow.Context, input *alexaforbusiness.DeleteSkillAuthorizationInput) (*alexaforbusiness.DeleteSkillAuthorizationOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *AlexaForBusinessStub) DeleteSkillAuthorization(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteSkillAuthorizationAsync(ctx workflow.Context, input *alexaforbusiness.DeleteSkillAuthorizationInput) *AlexaforbusinessDeleteSkillAuthorizationResult {
+func (a *AlexaForBusinessStub) DeleteSkillAuthorizationAsync(ctx workflow.Context, input *alexaforbusiness.DeleteSkillAuthorizationInput) *AlexaforbusinessDeleteSkillAuthorizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteSkillAuthorization", input)
-	return &AlexaforbusinessDeleteSkillAuthorizationResult{Result: future}
+	return &AlexaforbusinessDeleteSkillAuthorizationFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteSkillGroup(ctx workflow.Context, input *alexaforbusiness.DeleteSkillGroupInput) (*alexaforbusiness.DeleteSkillGroupOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *AlexaForBusinessStub) DeleteSkillGroup(ctx workflow.Context, input *ale
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.DeleteSkillGroupInput) *AlexaforbusinessDeleteSkillGroupResult {
+func (a *AlexaForBusinessStub) DeleteSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.DeleteSkillGroupInput) *AlexaforbusinessDeleteSkillGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteSkillGroup", input)
-	return &AlexaforbusinessDeleteSkillGroupResult{Result: future}
+	return &AlexaforbusinessDeleteSkillGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DeleteUser(ctx workflow.Context, input *alexaforbusiness.DeleteUserInput) (*alexaforbusiness.DeleteUserOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *AlexaForBusinessStub) DeleteUser(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DeleteUserAsync(ctx workflow.Context, input *alexaforbusiness.DeleteUserInput) *AlexaforbusinessDeleteUserResult {
+func (a *AlexaForBusinessStub) DeleteUserAsync(ctx workflow.Context, input *alexaforbusiness.DeleteUserInput) *AlexaforbusinessDeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DeleteUser", input)
-	return &AlexaforbusinessDeleteUserResult{Result: future}
+	return &AlexaforbusinessDeleteUserFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DisassociateContactFromAddressBook(ctx workflow.Context, input *alexaforbusiness.DisassociateContactFromAddressBookInput) (*alexaforbusiness.DisassociateContactFromAddressBookOutput, error) {
@@ -1573,9 +1573,9 @@ func (a *AlexaForBusinessStub) DisassociateContactFromAddressBook(ctx workflow.C
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DisassociateContactFromAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateContactFromAddressBookInput) *AlexaforbusinessDisassociateContactFromAddressBookResult {
+func (a *AlexaForBusinessStub) DisassociateContactFromAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateContactFromAddressBookInput) *AlexaforbusinessDisassociateContactFromAddressBookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DisassociateContactFromAddressBook", input)
-	return &AlexaforbusinessDisassociateContactFromAddressBookResult{Result: future}
+	return &AlexaforbusinessDisassociateContactFromAddressBookFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DisassociateDeviceFromRoom(ctx workflow.Context, input *alexaforbusiness.DisassociateDeviceFromRoomInput) (*alexaforbusiness.DisassociateDeviceFromRoomOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *AlexaForBusinessStub) DisassociateDeviceFromRoom(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DisassociateDeviceFromRoomAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateDeviceFromRoomInput) *AlexaforbusinessDisassociateDeviceFromRoomResult {
+func (a *AlexaForBusinessStub) DisassociateDeviceFromRoomAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateDeviceFromRoomInput) *AlexaforbusinessDisassociateDeviceFromRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DisassociateDeviceFromRoom", input)
-	return &AlexaforbusinessDisassociateDeviceFromRoomResult{Result: future}
+	return &AlexaforbusinessDisassociateDeviceFromRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DisassociateSkillFromSkillGroup(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromSkillGroupInput) (*alexaforbusiness.DisassociateSkillFromSkillGroupOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *AlexaForBusinessStub) DisassociateSkillFromSkillGroup(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DisassociateSkillFromSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromSkillGroupInput) *AlexaforbusinessDisassociateSkillFromSkillGroupResult {
+func (a *AlexaForBusinessStub) DisassociateSkillFromSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromSkillGroupInput) *AlexaforbusinessDisassociateSkillFromSkillGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DisassociateSkillFromSkillGroup", input)
-	return &AlexaforbusinessDisassociateSkillFromSkillGroupResult{Result: future}
+	return &AlexaforbusinessDisassociateSkillFromSkillGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DisassociateSkillFromUsers(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromUsersInput) (*alexaforbusiness.DisassociateSkillFromUsersOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *AlexaForBusinessStub) DisassociateSkillFromUsers(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DisassociateSkillFromUsersAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromUsersInput) *AlexaforbusinessDisassociateSkillFromUsersResult {
+func (a *AlexaForBusinessStub) DisassociateSkillFromUsersAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillFromUsersInput) *AlexaforbusinessDisassociateSkillFromUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DisassociateSkillFromUsers", input)
-	return &AlexaforbusinessDisassociateSkillFromUsersResult{Result: future}
+	return &AlexaforbusinessDisassociateSkillFromUsersFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) DisassociateSkillGroupFromRoom(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillGroupFromRoomInput) (*alexaforbusiness.DisassociateSkillGroupFromRoomOutput, error) {
@@ -1617,9 +1617,9 @@ func (a *AlexaForBusinessStub) DisassociateSkillGroupFromRoom(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) DisassociateSkillGroupFromRoomAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillGroupFromRoomInput) *AlexaforbusinessDisassociateSkillGroupFromRoomResult {
+func (a *AlexaForBusinessStub) DisassociateSkillGroupFromRoomAsync(ctx workflow.Context, input *alexaforbusiness.DisassociateSkillGroupFromRoomInput) *AlexaforbusinessDisassociateSkillGroupFromRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.DisassociateSkillGroupFromRoom", input)
-	return &AlexaforbusinessDisassociateSkillGroupFromRoomResult{Result: future}
+	return &AlexaforbusinessDisassociateSkillGroupFromRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ForgetSmartHomeAppliances(ctx workflow.Context, input *alexaforbusiness.ForgetSmartHomeAppliancesInput) (*alexaforbusiness.ForgetSmartHomeAppliancesOutput, error) {
@@ -1628,9 +1628,9 @@ func (a *AlexaForBusinessStub) ForgetSmartHomeAppliances(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ForgetSmartHomeAppliancesAsync(ctx workflow.Context, input *alexaforbusiness.ForgetSmartHomeAppliancesInput) *AlexaforbusinessForgetSmartHomeAppliancesResult {
+func (a *AlexaForBusinessStub) ForgetSmartHomeAppliancesAsync(ctx workflow.Context, input *alexaforbusiness.ForgetSmartHomeAppliancesInput) *AlexaforbusinessForgetSmartHomeAppliancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ForgetSmartHomeAppliances", input)
-	return &AlexaforbusinessForgetSmartHomeAppliancesResult{Result: future}
+	return &AlexaforbusinessForgetSmartHomeAppliancesFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetAddressBook(ctx workflow.Context, input *alexaforbusiness.GetAddressBookInput) (*alexaforbusiness.GetAddressBookOutput, error) {
@@ -1639,9 +1639,9 @@ func (a *AlexaForBusinessStub) GetAddressBook(ctx workflow.Context, input *alexa
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.GetAddressBookInput) *AlexaforbusinessGetAddressBookResult {
+func (a *AlexaForBusinessStub) GetAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.GetAddressBookInput) *AlexaforbusinessGetAddressBookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetAddressBook", input)
-	return &AlexaforbusinessGetAddressBookResult{Result: future}
+	return &AlexaforbusinessGetAddressBookFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetConferencePreference(ctx workflow.Context, input *alexaforbusiness.GetConferencePreferenceInput) (*alexaforbusiness.GetConferencePreferenceOutput, error) {
@@ -1650,9 +1650,9 @@ func (a *AlexaForBusinessStub) GetConferencePreference(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetConferencePreferenceAsync(ctx workflow.Context, input *alexaforbusiness.GetConferencePreferenceInput) *AlexaforbusinessGetConferencePreferenceResult {
+func (a *AlexaForBusinessStub) GetConferencePreferenceAsync(ctx workflow.Context, input *alexaforbusiness.GetConferencePreferenceInput) *AlexaforbusinessGetConferencePreferenceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetConferencePreference", input)
-	return &AlexaforbusinessGetConferencePreferenceResult{Result: future}
+	return &AlexaforbusinessGetConferencePreferenceFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetConferenceProvider(ctx workflow.Context, input *alexaforbusiness.GetConferenceProviderInput) (*alexaforbusiness.GetConferenceProviderOutput, error) {
@@ -1661,9 +1661,9 @@ func (a *AlexaForBusinessStub) GetConferenceProvider(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.GetConferenceProviderInput) *AlexaforbusinessGetConferenceProviderResult {
+func (a *AlexaForBusinessStub) GetConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.GetConferenceProviderInput) *AlexaforbusinessGetConferenceProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetConferenceProvider", input)
-	return &AlexaforbusinessGetConferenceProviderResult{Result: future}
+	return &AlexaforbusinessGetConferenceProviderFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetContact(ctx workflow.Context, input *alexaforbusiness.GetContactInput) (*alexaforbusiness.GetContactOutput, error) {
@@ -1672,9 +1672,9 @@ func (a *AlexaForBusinessStub) GetContact(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetContactAsync(ctx workflow.Context, input *alexaforbusiness.GetContactInput) *AlexaforbusinessGetContactResult {
+func (a *AlexaForBusinessStub) GetContactAsync(ctx workflow.Context, input *alexaforbusiness.GetContactInput) *AlexaforbusinessGetContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetContact", input)
-	return &AlexaforbusinessGetContactResult{Result: future}
+	return &AlexaforbusinessGetContactFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetDevice(ctx workflow.Context, input *alexaforbusiness.GetDeviceInput) (*alexaforbusiness.GetDeviceOutput, error) {
@@ -1683,9 +1683,9 @@ func (a *AlexaForBusinessStub) GetDevice(ctx workflow.Context, input *alexaforbu
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetDeviceAsync(ctx workflow.Context, input *alexaforbusiness.GetDeviceInput) *AlexaforbusinessGetDeviceResult {
+func (a *AlexaForBusinessStub) GetDeviceAsync(ctx workflow.Context, input *alexaforbusiness.GetDeviceInput) *AlexaforbusinessGetDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetDevice", input)
-	return &AlexaforbusinessGetDeviceResult{Result: future}
+	return &AlexaforbusinessGetDeviceFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetGateway(ctx workflow.Context, input *alexaforbusiness.GetGatewayInput) (*alexaforbusiness.GetGatewayOutput, error) {
@@ -1694,9 +1694,9 @@ func (a *AlexaForBusinessStub) GetGateway(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetGatewayAsync(ctx workflow.Context, input *alexaforbusiness.GetGatewayInput) *AlexaforbusinessGetGatewayResult {
+func (a *AlexaForBusinessStub) GetGatewayAsync(ctx workflow.Context, input *alexaforbusiness.GetGatewayInput) *AlexaforbusinessGetGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetGateway", input)
-	return &AlexaforbusinessGetGatewayResult{Result: future}
+	return &AlexaforbusinessGetGatewayFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetGatewayGroup(ctx workflow.Context, input *alexaforbusiness.GetGatewayGroupInput) (*alexaforbusiness.GetGatewayGroupOutput, error) {
@@ -1705,9 +1705,9 @@ func (a *AlexaForBusinessStub) GetGatewayGroup(ctx workflow.Context, input *alex
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.GetGatewayGroupInput) *AlexaforbusinessGetGatewayGroupResult {
+func (a *AlexaForBusinessStub) GetGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.GetGatewayGroupInput) *AlexaforbusinessGetGatewayGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetGatewayGroup", input)
-	return &AlexaforbusinessGetGatewayGroupResult{Result: future}
+	return &AlexaforbusinessGetGatewayGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetInvitationConfiguration(ctx workflow.Context, input *alexaforbusiness.GetInvitationConfigurationInput) (*alexaforbusiness.GetInvitationConfigurationOutput, error) {
@@ -1716,9 +1716,9 @@ func (a *AlexaForBusinessStub) GetInvitationConfiguration(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetInvitationConfigurationAsync(ctx workflow.Context, input *alexaforbusiness.GetInvitationConfigurationInput) *AlexaforbusinessGetInvitationConfigurationResult {
+func (a *AlexaForBusinessStub) GetInvitationConfigurationAsync(ctx workflow.Context, input *alexaforbusiness.GetInvitationConfigurationInput) *AlexaforbusinessGetInvitationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetInvitationConfiguration", input)
-	return &AlexaforbusinessGetInvitationConfigurationResult{Result: future}
+	return &AlexaforbusinessGetInvitationConfigurationFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetNetworkProfile(ctx workflow.Context, input *alexaforbusiness.GetNetworkProfileInput) (*alexaforbusiness.GetNetworkProfileOutput, error) {
@@ -1727,9 +1727,9 @@ func (a *AlexaForBusinessStub) GetNetworkProfile(ctx workflow.Context, input *al
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.GetNetworkProfileInput) *AlexaforbusinessGetNetworkProfileResult {
+func (a *AlexaForBusinessStub) GetNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.GetNetworkProfileInput) *AlexaforbusinessGetNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetNetworkProfile", input)
-	return &AlexaforbusinessGetNetworkProfileResult{Result: future}
+	return &AlexaforbusinessGetNetworkProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetProfile(ctx workflow.Context, input *alexaforbusiness.GetProfileInput) (*alexaforbusiness.GetProfileOutput, error) {
@@ -1738,9 +1738,9 @@ func (a *AlexaForBusinessStub) GetProfile(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetProfileAsync(ctx workflow.Context, input *alexaforbusiness.GetProfileInput) *AlexaforbusinessGetProfileResult {
+func (a *AlexaForBusinessStub) GetProfileAsync(ctx workflow.Context, input *alexaforbusiness.GetProfileInput) *AlexaforbusinessGetProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetProfile", input)
-	return &AlexaforbusinessGetProfileResult{Result: future}
+	return &AlexaforbusinessGetProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetRoom(ctx workflow.Context, input *alexaforbusiness.GetRoomInput) (*alexaforbusiness.GetRoomOutput, error) {
@@ -1749,9 +1749,9 @@ func (a *AlexaForBusinessStub) GetRoom(ctx workflow.Context, input *alexaforbusi
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetRoomAsync(ctx workflow.Context, input *alexaforbusiness.GetRoomInput) *AlexaforbusinessGetRoomResult {
+func (a *AlexaForBusinessStub) GetRoomAsync(ctx workflow.Context, input *alexaforbusiness.GetRoomInput) *AlexaforbusinessGetRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetRoom", input)
-	return &AlexaforbusinessGetRoomResult{Result: future}
+	return &AlexaforbusinessGetRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetRoomSkillParameter(ctx workflow.Context, input *alexaforbusiness.GetRoomSkillParameterInput) (*alexaforbusiness.GetRoomSkillParameterOutput, error) {
@@ -1760,9 +1760,9 @@ func (a *AlexaForBusinessStub) GetRoomSkillParameter(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.GetRoomSkillParameterInput) *AlexaforbusinessGetRoomSkillParameterResult {
+func (a *AlexaForBusinessStub) GetRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.GetRoomSkillParameterInput) *AlexaforbusinessGetRoomSkillParameterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetRoomSkillParameter", input)
-	return &AlexaforbusinessGetRoomSkillParameterResult{Result: future}
+	return &AlexaforbusinessGetRoomSkillParameterFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) GetSkillGroup(ctx workflow.Context, input *alexaforbusiness.GetSkillGroupInput) (*alexaforbusiness.GetSkillGroupOutput, error) {
@@ -1771,9 +1771,9 @@ func (a *AlexaForBusinessStub) GetSkillGroup(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) GetSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.GetSkillGroupInput) *AlexaforbusinessGetSkillGroupResult {
+func (a *AlexaForBusinessStub) GetSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.GetSkillGroupInput) *AlexaforbusinessGetSkillGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.GetSkillGroup", input)
-	return &AlexaforbusinessGetSkillGroupResult{Result: future}
+	return &AlexaforbusinessGetSkillGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListBusinessReportSchedules(ctx workflow.Context, input *alexaforbusiness.ListBusinessReportSchedulesInput) (*alexaforbusiness.ListBusinessReportSchedulesOutput, error) {
@@ -1782,9 +1782,9 @@ func (a *AlexaForBusinessStub) ListBusinessReportSchedules(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListBusinessReportSchedulesAsync(ctx workflow.Context, input *alexaforbusiness.ListBusinessReportSchedulesInput) *AlexaforbusinessListBusinessReportSchedulesResult {
+func (a *AlexaForBusinessStub) ListBusinessReportSchedulesAsync(ctx workflow.Context, input *alexaforbusiness.ListBusinessReportSchedulesInput) *AlexaforbusinessListBusinessReportSchedulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListBusinessReportSchedules", input)
-	return &AlexaforbusinessListBusinessReportSchedulesResult{Result: future}
+	return &AlexaforbusinessListBusinessReportSchedulesFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListConferenceProviders(ctx workflow.Context, input *alexaforbusiness.ListConferenceProvidersInput) (*alexaforbusiness.ListConferenceProvidersOutput, error) {
@@ -1793,9 +1793,9 @@ func (a *AlexaForBusinessStub) ListConferenceProviders(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListConferenceProvidersAsync(ctx workflow.Context, input *alexaforbusiness.ListConferenceProvidersInput) *AlexaforbusinessListConferenceProvidersResult {
+func (a *AlexaForBusinessStub) ListConferenceProvidersAsync(ctx workflow.Context, input *alexaforbusiness.ListConferenceProvidersInput) *AlexaforbusinessListConferenceProvidersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListConferenceProviders", input)
-	return &AlexaforbusinessListConferenceProvidersResult{Result: future}
+	return &AlexaforbusinessListConferenceProvidersFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListDeviceEvents(ctx workflow.Context, input *alexaforbusiness.ListDeviceEventsInput) (*alexaforbusiness.ListDeviceEventsOutput, error) {
@@ -1804,9 +1804,9 @@ func (a *AlexaForBusinessStub) ListDeviceEvents(ctx workflow.Context, input *ale
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListDeviceEventsAsync(ctx workflow.Context, input *alexaforbusiness.ListDeviceEventsInput) *AlexaforbusinessListDeviceEventsResult {
+func (a *AlexaForBusinessStub) ListDeviceEventsAsync(ctx workflow.Context, input *alexaforbusiness.ListDeviceEventsInput) *AlexaforbusinessListDeviceEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListDeviceEvents", input)
-	return &AlexaforbusinessListDeviceEventsResult{Result: future}
+	return &AlexaforbusinessListDeviceEventsFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListGatewayGroups(ctx workflow.Context, input *alexaforbusiness.ListGatewayGroupsInput) (*alexaforbusiness.ListGatewayGroupsOutput, error) {
@@ -1815,9 +1815,9 @@ func (a *AlexaForBusinessStub) ListGatewayGroups(ctx workflow.Context, input *al
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListGatewayGroupsAsync(ctx workflow.Context, input *alexaforbusiness.ListGatewayGroupsInput) *AlexaforbusinessListGatewayGroupsResult {
+func (a *AlexaForBusinessStub) ListGatewayGroupsAsync(ctx workflow.Context, input *alexaforbusiness.ListGatewayGroupsInput) *AlexaforbusinessListGatewayGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListGatewayGroups", input)
-	return &AlexaforbusinessListGatewayGroupsResult{Result: future}
+	return &AlexaforbusinessListGatewayGroupsFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListGateways(ctx workflow.Context, input *alexaforbusiness.ListGatewaysInput) (*alexaforbusiness.ListGatewaysOutput, error) {
@@ -1826,9 +1826,9 @@ func (a *AlexaForBusinessStub) ListGateways(ctx workflow.Context, input *alexafo
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListGatewaysAsync(ctx workflow.Context, input *alexaforbusiness.ListGatewaysInput) *AlexaforbusinessListGatewaysResult {
+func (a *AlexaForBusinessStub) ListGatewaysAsync(ctx workflow.Context, input *alexaforbusiness.ListGatewaysInput) *AlexaforbusinessListGatewaysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListGateways", input)
-	return &AlexaforbusinessListGatewaysResult{Result: future}
+	return &AlexaforbusinessListGatewaysFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListSkills(ctx workflow.Context, input *alexaforbusiness.ListSkillsInput) (*alexaforbusiness.ListSkillsOutput, error) {
@@ -1837,9 +1837,9 @@ func (a *AlexaForBusinessStub) ListSkills(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListSkillsAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsInput) *AlexaforbusinessListSkillsResult {
+func (a *AlexaForBusinessStub) ListSkillsAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsInput) *AlexaforbusinessListSkillsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListSkills", input)
-	return &AlexaforbusinessListSkillsResult{Result: future}
+	return &AlexaforbusinessListSkillsFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListSkillsStoreCategories(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreCategoriesInput) (*alexaforbusiness.ListSkillsStoreCategoriesOutput, error) {
@@ -1848,9 +1848,9 @@ func (a *AlexaForBusinessStub) ListSkillsStoreCategories(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListSkillsStoreCategoriesAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreCategoriesInput) *AlexaforbusinessListSkillsStoreCategoriesResult {
+func (a *AlexaForBusinessStub) ListSkillsStoreCategoriesAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreCategoriesInput) *AlexaforbusinessListSkillsStoreCategoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListSkillsStoreCategories", input)
-	return &AlexaforbusinessListSkillsStoreCategoriesResult{Result: future}
+	return &AlexaforbusinessListSkillsStoreCategoriesFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListSkillsStoreSkillsByCategory(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreSkillsByCategoryInput) (*alexaforbusiness.ListSkillsStoreSkillsByCategoryOutput, error) {
@@ -1859,9 +1859,9 @@ func (a *AlexaForBusinessStub) ListSkillsStoreSkillsByCategory(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListSkillsStoreSkillsByCategoryAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreSkillsByCategoryInput) *AlexaforbusinessListSkillsStoreSkillsByCategoryResult {
+func (a *AlexaForBusinessStub) ListSkillsStoreSkillsByCategoryAsync(ctx workflow.Context, input *alexaforbusiness.ListSkillsStoreSkillsByCategoryInput) *AlexaforbusinessListSkillsStoreSkillsByCategoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListSkillsStoreSkillsByCategory", input)
-	return &AlexaforbusinessListSkillsStoreSkillsByCategoryResult{Result: future}
+	return &AlexaforbusinessListSkillsStoreSkillsByCategoryFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListSmartHomeAppliances(ctx workflow.Context, input *alexaforbusiness.ListSmartHomeAppliancesInput) (*alexaforbusiness.ListSmartHomeAppliancesOutput, error) {
@@ -1870,9 +1870,9 @@ func (a *AlexaForBusinessStub) ListSmartHomeAppliances(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListSmartHomeAppliancesAsync(ctx workflow.Context, input *alexaforbusiness.ListSmartHomeAppliancesInput) *AlexaforbusinessListSmartHomeAppliancesResult {
+func (a *AlexaForBusinessStub) ListSmartHomeAppliancesAsync(ctx workflow.Context, input *alexaforbusiness.ListSmartHomeAppliancesInput) *AlexaforbusinessListSmartHomeAppliancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListSmartHomeAppliances", input)
-	return &AlexaforbusinessListSmartHomeAppliancesResult{Result: future}
+	return &AlexaforbusinessListSmartHomeAppliancesFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ListTags(ctx workflow.Context, input *alexaforbusiness.ListTagsInput) (*alexaforbusiness.ListTagsOutput, error) {
@@ -1881,9 +1881,9 @@ func (a *AlexaForBusinessStub) ListTags(ctx workflow.Context, input *alexaforbus
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ListTagsAsync(ctx workflow.Context, input *alexaforbusiness.ListTagsInput) *AlexaforbusinessListTagsResult {
+func (a *AlexaForBusinessStub) ListTagsAsync(ctx workflow.Context, input *alexaforbusiness.ListTagsInput) *AlexaforbusinessListTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ListTags", input)
-	return &AlexaforbusinessListTagsResult{Result: future}
+	return &AlexaforbusinessListTagsFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) PutConferencePreference(ctx workflow.Context, input *alexaforbusiness.PutConferencePreferenceInput) (*alexaforbusiness.PutConferencePreferenceOutput, error) {
@@ -1892,9 +1892,9 @@ func (a *AlexaForBusinessStub) PutConferencePreference(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) PutConferencePreferenceAsync(ctx workflow.Context, input *alexaforbusiness.PutConferencePreferenceInput) *AlexaforbusinessPutConferencePreferenceResult {
+func (a *AlexaForBusinessStub) PutConferencePreferenceAsync(ctx workflow.Context, input *alexaforbusiness.PutConferencePreferenceInput) *AlexaforbusinessPutConferencePreferenceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.PutConferencePreference", input)
-	return &AlexaforbusinessPutConferencePreferenceResult{Result: future}
+	return &AlexaforbusinessPutConferencePreferenceFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) PutInvitationConfiguration(ctx workflow.Context, input *alexaforbusiness.PutInvitationConfigurationInput) (*alexaforbusiness.PutInvitationConfigurationOutput, error) {
@@ -1903,9 +1903,9 @@ func (a *AlexaForBusinessStub) PutInvitationConfiguration(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) PutInvitationConfigurationAsync(ctx workflow.Context, input *alexaforbusiness.PutInvitationConfigurationInput) *AlexaforbusinessPutInvitationConfigurationResult {
+func (a *AlexaForBusinessStub) PutInvitationConfigurationAsync(ctx workflow.Context, input *alexaforbusiness.PutInvitationConfigurationInput) *AlexaforbusinessPutInvitationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.PutInvitationConfiguration", input)
-	return &AlexaforbusinessPutInvitationConfigurationResult{Result: future}
+	return &AlexaforbusinessPutInvitationConfigurationFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) PutRoomSkillParameter(ctx workflow.Context, input *alexaforbusiness.PutRoomSkillParameterInput) (*alexaforbusiness.PutRoomSkillParameterOutput, error) {
@@ -1914,9 +1914,9 @@ func (a *AlexaForBusinessStub) PutRoomSkillParameter(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) PutRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.PutRoomSkillParameterInput) *AlexaforbusinessPutRoomSkillParameterResult {
+func (a *AlexaForBusinessStub) PutRoomSkillParameterAsync(ctx workflow.Context, input *alexaforbusiness.PutRoomSkillParameterInput) *AlexaforbusinessPutRoomSkillParameterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.PutRoomSkillParameter", input)
-	return &AlexaforbusinessPutRoomSkillParameterResult{Result: future}
+	return &AlexaforbusinessPutRoomSkillParameterFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) PutSkillAuthorization(ctx workflow.Context, input *alexaforbusiness.PutSkillAuthorizationInput) (*alexaforbusiness.PutSkillAuthorizationOutput, error) {
@@ -1925,9 +1925,9 @@ func (a *AlexaForBusinessStub) PutSkillAuthorization(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) PutSkillAuthorizationAsync(ctx workflow.Context, input *alexaforbusiness.PutSkillAuthorizationInput) *AlexaforbusinessPutSkillAuthorizationResult {
+func (a *AlexaForBusinessStub) PutSkillAuthorizationAsync(ctx workflow.Context, input *alexaforbusiness.PutSkillAuthorizationInput) *AlexaforbusinessPutSkillAuthorizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.PutSkillAuthorization", input)
-	return &AlexaforbusinessPutSkillAuthorizationResult{Result: future}
+	return &AlexaforbusinessPutSkillAuthorizationFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) RegisterAVSDevice(ctx workflow.Context, input *alexaforbusiness.RegisterAVSDeviceInput) (*alexaforbusiness.RegisterAVSDeviceOutput, error) {
@@ -1936,9 +1936,9 @@ func (a *AlexaForBusinessStub) RegisterAVSDevice(ctx workflow.Context, input *al
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) RegisterAVSDeviceAsync(ctx workflow.Context, input *alexaforbusiness.RegisterAVSDeviceInput) *AlexaforbusinessRegisterAVSDeviceResult {
+func (a *AlexaForBusinessStub) RegisterAVSDeviceAsync(ctx workflow.Context, input *alexaforbusiness.RegisterAVSDeviceInput) *AlexaforbusinessRegisterAVSDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.RegisterAVSDevice", input)
-	return &AlexaforbusinessRegisterAVSDeviceResult{Result: future}
+	return &AlexaforbusinessRegisterAVSDeviceFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) RejectSkill(ctx workflow.Context, input *alexaforbusiness.RejectSkillInput) (*alexaforbusiness.RejectSkillOutput, error) {
@@ -1947,9 +1947,9 @@ func (a *AlexaForBusinessStub) RejectSkill(ctx workflow.Context, input *alexafor
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) RejectSkillAsync(ctx workflow.Context, input *alexaforbusiness.RejectSkillInput) *AlexaforbusinessRejectSkillResult {
+func (a *AlexaForBusinessStub) RejectSkillAsync(ctx workflow.Context, input *alexaforbusiness.RejectSkillInput) *AlexaforbusinessRejectSkillFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.RejectSkill", input)
-	return &AlexaforbusinessRejectSkillResult{Result: future}
+	return &AlexaforbusinessRejectSkillFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) ResolveRoom(ctx workflow.Context, input *alexaforbusiness.ResolveRoomInput) (*alexaforbusiness.ResolveRoomOutput, error) {
@@ -1958,9 +1958,9 @@ func (a *AlexaForBusinessStub) ResolveRoom(ctx workflow.Context, input *alexafor
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) ResolveRoomAsync(ctx workflow.Context, input *alexaforbusiness.ResolveRoomInput) *AlexaforbusinessResolveRoomResult {
+func (a *AlexaForBusinessStub) ResolveRoomAsync(ctx workflow.Context, input *alexaforbusiness.ResolveRoomInput) *AlexaforbusinessResolveRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.ResolveRoom", input)
-	return &AlexaforbusinessResolveRoomResult{Result: future}
+	return &AlexaforbusinessResolveRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) RevokeInvitation(ctx workflow.Context, input *alexaforbusiness.RevokeInvitationInput) (*alexaforbusiness.RevokeInvitationOutput, error) {
@@ -1969,9 +1969,9 @@ func (a *AlexaForBusinessStub) RevokeInvitation(ctx workflow.Context, input *ale
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) RevokeInvitationAsync(ctx workflow.Context, input *alexaforbusiness.RevokeInvitationInput) *AlexaforbusinessRevokeInvitationResult {
+func (a *AlexaForBusinessStub) RevokeInvitationAsync(ctx workflow.Context, input *alexaforbusiness.RevokeInvitationInput) *AlexaforbusinessRevokeInvitationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.RevokeInvitation", input)
-	return &AlexaforbusinessRevokeInvitationResult{Result: future}
+	return &AlexaforbusinessRevokeInvitationFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SearchAddressBooks(ctx workflow.Context, input *alexaforbusiness.SearchAddressBooksInput) (*alexaforbusiness.SearchAddressBooksOutput, error) {
@@ -1980,9 +1980,9 @@ func (a *AlexaForBusinessStub) SearchAddressBooks(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SearchAddressBooksAsync(ctx workflow.Context, input *alexaforbusiness.SearchAddressBooksInput) *AlexaforbusinessSearchAddressBooksResult {
+func (a *AlexaForBusinessStub) SearchAddressBooksAsync(ctx workflow.Context, input *alexaforbusiness.SearchAddressBooksInput) *AlexaforbusinessSearchAddressBooksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SearchAddressBooks", input)
-	return &AlexaforbusinessSearchAddressBooksResult{Result: future}
+	return &AlexaforbusinessSearchAddressBooksFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SearchContacts(ctx workflow.Context, input *alexaforbusiness.SearchContactsInput) (*alexaforbusiness.SearchContactsOutput, error) {
@@ -1991,9 +1991,9 @@ func (a *AlexaForBusinessStub) SearchContacts(ctx workflow.Context, input *alexa
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SearchContactsAsync(ctx workflow.Context, input *alexaforbusiness.SearchContactsInput) *AlexaforbusinessSearchContactsResult {
+func (a *AlexaForBusinessStub) SearchContactsAsync(ctx workflow.Context, input *alexaforbusiness.SearchContactsInput) *AlexaforbusinessSearchContactsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SearchContacts", input)
-	return &AlexaforbusinessSearchContactsResult{Result: future}
+	return &AlexaforbusinessSearchContactsFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SearchDevices(ctx workflow.Context, input *alexaforbusiness.SearchDevicesInput) (*alexaforbusiness.SearchDevicesOutput, error) {
@@ -2002,9 +2002,9 @@ func (a *AlexaForBusinessStub) SearchDevices(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SearchDevicesAsync(ctx workflow.Context, input *alexaforbusiness.SearchDevicesInput) *AlexaforbusinessSearchDevicesResult {
+func (a *AlexaForBusinessStub) SearchDevicesAsync(ctx workflow.Context, input *alexaforbusiness.SearchDevicesInput) *AlexaforbusinessSearchDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SearchDevices", input)
-	return &AlexaforbusinessSearchDevicesResult{Result: future}
+	return &AlexaforbusinessSearchDevicesFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SearchNetworkProfiles(ctx workflow.Context, input *alexaforbusiness.SearchNetworkProfilesInput) (*alexaforbusiness.SearchNetworkProfilesOutput, error) {
@@ -2013,9 +2013,9 @@ func (a *AlexaForBusinessStub) SearchNetworkProfiles(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SearchNetworkProfilesAsync(ctx workflow.Context, input *alexaforbusiness.SearchNetworkProfilesInput) *AlexaforbusinessSearchNetworkProfilesResult {
+func (a *AlexaForBusinessStub) SearchNetworkProfilesAsync(ctx workflow.Context, input *alexaforbusiness.SearchNetworkProfilesInput) *AlexaforbusinessSearchNetworkProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SearchNetworkProfiles", input)
-	return &AlexaforbusinessSearchNetworkProfilesResult{Result: future}
+	return &AlexaforbusinessSearchNetworkProfilesFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SearchProfiles(ctx workflow.Context, input *alexaforbusiness.SearchProfilesInput) (*alexaforbusiness.SearchProfilesOutput, error) {
@@ -2024,9 +2024,9 @@ func (a *AlexaForBusinessStub) SearchProfiles(ctx workflow.Context, input *alexa
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SearchProfilesAsync(ctx workflow.Context, input *alexaforbusiness.SearchProfilesInput) *AlexaforbusinessSearchProfilesResult {
+func (a *AlexaForBusinessStub) SearchProfilesAsync(ctx workflow.Context, input *alexaforbusiness.SearchProfilesInput) *AlexaforbusinessSearchProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SearchProfiles", input)
-	return &AlexaforbusinessSearchProfilesResult{Result: future}
+	return &AlexaforbusinessSearchProfilesFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SearchRooms(ctx workflow.Context, input *alexaforbusiness.SearchRoomsInput) (*alexaforbusiness.SearchRoomsOutput, error) {
@@ -2035,9 +2035,9 @@ func (a *AlexaForBusinessStub) SearchRooms(ctx workflow.Context, input *alexafor
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SearchRoomsAsync(ctx workflow.Context, input *alexaforbusiness.SearchRoomsInput) *AlexaforbusinessSearchRoomsResult {
+func (a *AlexaForBusinessStub) SearchRoomsAsync(ctx workflow.Context, input *alexaforbusiness.SearchRoomsInput) *AlexaforbusinessSearchRoomsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SearchRooms", input)
-	return &AlexaforbusinessSearchRoomsResult{Result: future}
+	return &AlexaforbusinessSearchRoomsFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SearchSkillGroups(ctx workflow.Context, input *alexaforbusiness.SearchSkillGroupsInput) (*alexaforbusiness.SearchSkillGroupsOutput, error) {
@@ -2046,9 +2046,9 @@ func (a *AlexaForBusinessStub) SearchSkillGroups(ctx workflow.Context, input *al
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SearchSkillGroupsAsync(ctx workflow.Context, input *alexaforbusiness.SearchSkillGroupsInput) *AlexaforbusinessSearchSkillGroupsResult {
+func (a *AlexaForBusinessStub) SearchSkillGroupsAsync(ctx workflow.Context, input *alexaforbusiness.SearchSkillGroupsInput) *AlexaforbusinessSearchSkillGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SearchSkillGroups", input)
-	return &AlexaforbusinessSearchSkillGroupsResult{Result: future}
+	return &AlexaforbusinessSearchSkillGroupsFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SearchUsers(ctx workflow.Context, input *alexaforbusiness.SearchUsersInput) (*alexaforbusiness.SearchUsersOutput, error) {
@@ -2057,9 +2057,9 @@ func (a *AlexaForBusinessStub) SearchUsers(ctx workflow.Context, input *alexafor
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SearchUsersAsync(ctx workflow.Context, input *alexaforbusiness.SearchUsersInput) *AlexaforbusinessSearchUsersResult {
+func (a *AlexaForBusinessStub) SearchUsersAsync(ctx workflow.Context, input *alexaforbusiness.SearchUsersInput) *AlexaforbusinessSearchUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SearchUsers", input)
-	return &AlexaforbusinessSearchUsersResult{Result: future}
+	return &AlexaforbusinessSearchUsersFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SendAnnouncement(ctx workflow.Context, input *alexaforbusiness.SendAnnouncementInput) (*alexaforbusiness.SendAnnouncementOutput, error) {
@@ -2068,9 +2068,9 @@ func (a *AlexaForBusinessStub) SendAnnouncement(ctx workflow.Context, input *ale
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SendAnnouncementAsync(ctx workflow.Context, input *alexaforbusiness.SendAnnouncementInput) *AlexaforbusinessSendAnnouncementResult {
+func (a *AlexaForBusinessStub) SendAnnouncementAsync(ctx workflow.Context, input *alexaforbusiness.SendAnnouncementInput) *AlexaforbusinessSendAnnouncementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SendAnnouncement", input)
-	return &AlexaforbusinessSendAnnouncementResult{Result: future}
+	return &AlexaforbusinessSendAnnouncementFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) SendInvitation(ctx workflow.Context, input *alexaforbusiness.SendInvitationInput) (*alexaforbusiness.SendInvitationOutput, error) {
@@ -2079,9 +2079,9 @@ func (a *AlexaForBusinessStub) SendInvitation(ctx workflow.Context, input *alexa
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) SendInvitationAsync(ctx workflow.Context, input *alexaforbusiness.SendInvitationInput) *AlexaforbusinessSendInvitationResult {
+func (a *AlexaForBusinessStub) SendInvitationAsync(ctx workflow.Context, input *alexaforbusiness.SendInvitationInput) *AlexaforbusinessSendInvitationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.SendInvitation", input)
-	return &AlexaforbusinessSendInvitationResult{Result: future}
+	return &AlexaforbusinessSendInvitationFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) StartDeviceSync(ctx workflow.Context, input *alexaforbusiness.StartDeviceSyncInput) (*alexaforbusiness.StartDeviceSyncOutput, error) {
@@ -2090,9 +2090,9 @@ func (a *AlexaForBusinessStub) StartDeviceSync(ctx workflow.Context, input *alex
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) StartDeviceSyncAsync(ctx workflow.Context, input *alexaforbusiness.StartDeviceSyncInput) *AlexaforbusinessStartDeviceSyncResult {
+func (a *AlexaForBusinessStub) StartDeviceSyncAsync(ctx workflow.Context, input *alexaforbusiness.StartDeviceSyncInput) *AlexaforbusinessStartDeviceSyncFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.StartDeviceSync", input)
-	return &AlexaforbusinessStartDeviceSyncResult{Result: future}
+	return &AlexaforbusinessStartDeviceSyncFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) StartSmartHomeApplianceDiscovery(ctx workflow.Context, input *alexaforbusiness.StartSmartHomeApplianceDiscoveryInput) (*alexaforbusiness.StartSmartHomeApplianceDiscoveryOutput, error) {
@@ -2101,9 +2101,9 @@ func (a *AlexaForBusinessStub) StartSmartHomeApplianceDiscovery(ctx workflow.Con
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) StartSmartHomeApplianceDiscoveryAsync(ctx workflow.Context, input *alexaforbusiness.StartSmartHomeApplianceDiscoveryInput) *AlexaforbusinessStartSmartHomeApplianceDiscoveryResult {
+func (a *AlexaForBusinessStub) StartSmartHomeApplianceDiscoveryAsync(ctx workflow.Context, input *alexaforbusiness.StartSmartHomeApplianceDiscoveryInput) *AlexaforbusinessStartSmartHomeApplianceDiscoveryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.StartSmartHomeApplianceDiscovery", input)
-	return &AlexaforbusinessStartSmartHomeApplianceDiscoveryResult{Result: future}
+	return &AlexaforbusinessStartSmartHomeApplianceDiscoveryFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) TagResource(ctx workflow.Context, input *alexaforbusiness.TagResourceInput) (*alexaforbusiness.TagResourceOutput, error) {
@@ -2112,9 +2112,9 @@ func (a *AlexaForBusinessStub) TagResource(ctx workflow.Context, input *alexafor
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) TagResourceAsync(ctx workflow.Context, input *alexaforbusiness.TagResourceInput) *AlexaforbusinessTagResourceResult {
+func (a *AlexaForBusinessStub) TagResourceAsync(ctx workflow.Context, input *alexaforbusiness.TagResourceInput) *AlexaforbusinessTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.TagResource", input)
-	return &AlexaforbusinessTagResourceResult{Result: future}
+	return &AlexaforbusinessTagResourceFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UntagResource(ctx workflow.Context, input *alexaforbusiness.UntagResourceInput) (*alexaforbusiness.UntagResourceOutput, error) {
@@ -2123,9 +2123,9 @@ func (a *AlexaForBusinessStub) UntagResource(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UntagResourceAsync(ctx workflow.Context, input *alexaforbusiness.UntagResourceInput) *AlexaforbusinessUntagResourceResult {
+func (a *AlexaForBusinessStub) UntagResourceAsync(ctx workflow.Context, input *alexaforbusiness.UntagResourceInput) *AlexaforbusinessUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UntagResource", input)
-	return &AlexaforbusinessUntagResourceResult{Result: future}
+	return &AlexaforbusinessUntagResourceFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateAddressBook(ctx workflow.Context, input *alexaforbusiness.UpdateAddressBookInput) (*alexaforbusiness.UpdateAddressBookOutput, error) {
@@ -2134,9 +2134,9 @@ func (a *AlexaForBusinessStub) UpdateAddressBook(ctx workflow.Context, input *al
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.UpdateAddressBookInput) *AlexaforbusinessUpdateAddressBookResult {
+func (a *AlexaForBusinessStub) UpdateAddressBookAsync(ctx workflow.Context, input *alexaforbusiness.UpdateAddressBookInput) *AlexaforbusinessUpdateAddressBookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateAddressBook", input)
-	return &AlexaforbusinessUpdateAddressBookResult{Result: future}
+	return &AlexaforbusinessUpdateAddressBookFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateBusinessReportSchedule(ctx workflow.Context, input *alexaforbusiness.UpdateBusinessReportScheduleInput) (*alexaforbusiness.UpdateBusinessReportScheduleOutput, error) {
@@ -2145,9 +2145,9 @@ func (a *AlexaForBusinessStub) UpdateBusinessReportSchedule(ctx workflow.Context
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.UpdateBusinessReportScheduleInput) *AlexaforbusinessUpdateBusinessReportScheduleResult {
+func (a *AlexaForBusinessStub) UpdateBusinessReportScheduleAsync(ctx workflow.Context, input *alexaforbusiness.UpdateBusinessReportScheduleInput) *AlexaforbusinessUpdateBusinessReportScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateBusinessReportSchedule", input)
-	return &AlexaforbusinessUpdateBusinessReportScheduleResult{Result: future}
+	return &AlexaforbusinessUpdateBusinessReportScheduleFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateConferenceProvider(ctx workflow.Context, input *alexaforbusiness.UpdateConferenceProviderInput) (*alexaforbusiness.UpdateConferenceProviderOutput, error) {
@@ -2156,9 +2156,9 @@ func (a *AlexaForBusinessStub) UpdateConferenceProvider(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.UpdateConferenceProviderInput) *AlexaforbusinessUpdateConferenceProviderResult {
+func (a *AlexaForBusinessStub) UpdateConferenceProviderAsync(ctx workflow.Context, input *alexaforbusiness.UpdateConferenceProviderInput) *AlexaforbusinessUpdateConferenceProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateConferenceProvider", input)
-	return &AlexaforbusinessUpdateConferenceProviderResult{Result: future}
+	return &AlexaforbusinessUpdateConferenceProviderFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateContact(ctx workflow.Context, input *alexaforbusiness.UpdateContactInput) (*alexaforbusiness.UpdateContactOutput, error) {
@@ -2167,9 +2167,9 @@ func (a *AlexaForBusinessStub) UpdateContact(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateContactAsync(ctx workflow.Context, input *alexaforbusiness.UpdateContactInput) *AlexaforbusinessUpdateContactResult {
+func (a *AlexaForBusinessStub) UpdateContactAsync(ctx workflow.Context, input *alexaforbusiness.UpdateContactInput) *AlexaforbusinessUpdateContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateContact", input)
-	return &AlexaforbusinessUpdateContactResult{Result: future}
+	return &AlexaforbusinessUpdateContactFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateDevice(ctx workflow.Context, input *alexaforbusiness.UpdateDeviceInput) (*alexaforbusiness.UpdateDeviceOutput, error) {
@@ -2178,9 +2178,9 @@ func (a *AlexaForBusinessStub) UpdateDevice(ctx workflow.Context, input *alexafo
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateDeviceAsync(ctx workflow.Context, input *alexaforbusiness.UpdateDeviceInput) *AlexaforbusinessUpdateDeviceResult {
+func (a *AlexaForBusinessStub) UpdateDeviceAsync(ctx workflow.Context, input *alexaforbusiness.UpdateDeviceInput) *AlexaforbusinessUpdateDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateDevice", input)
-	return &AlexaforbusinessUpdateDeviceResult{Result: future}
+	return &AlexaforbusinessUpdateDeviceFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateGateway(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayInput) (*alexaforbusiness.UpdateGatewayOutput, error) {
@@ -2189,9 +2189,9 @@ func (a *AlexaForBusinessStub) UpdateGateway(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateGatewayAsync(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayInput) *AlexaforbusinessUpdateGatewayResult {
+func (a *AlexaForBusinessStub) UpdateGatewayAsync(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayInput) *AlexaforbusinessUpdateGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateGateway", input)
-	return &AlexaforbusinessUpdateGatewayResult{Result: future}
+	return &AlexaforbusinessUpdateGatewayFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateGatewayGroup(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayGroupInput) (*alexaforbusiness.UpdateGatewayGroupOutput, error) {
@@ -2200,9 +2200,9 @@ func (a *AlexaForBusinessStub) UpdateGatewayGroup(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayGroupInput) *AlexaforbusinessUpdateGatewayGroupResult {
+func (a *AlexaForBusinessStub) UpdateGatewayGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateGatewayGroupInput) *AlexaforbusinessUpdateGatewayGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateGatewayGroup", input)
-	return &AlexaforbusinessUpdateGatewayGroupResult{Result: future}
+	return &AlexaforbusinessUpdateGatewayGroupFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateNetworkProfile(ctx workflow.Context, input *alexaforbusiness.UpdateNetworkProfileInput) (*alexaforbusiness.UpdateNetworkProfileOutput, error) {
@@ -2211,9 +2211,9 @@ func (a *AlexaForBusinessStub) UpdateNetworkProfile(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.UpdateNetworkProfileInput) *AlexaforbusinessUpdateNetworkProfileResult {
+func (a *AlexaForBusinessStub) UpdateNetworkProfileAsync(ctx workflow.Context, input *alexaforbusiness.UpdateNetworkProfileInput) *AlexaforbusinessUpdateNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateNetworkProfile", input)
-	return &AlexaforbusinessUpdateNetworkProfileResult{Result: future}
+	return &AlexaforbusinessUpdateNetworkProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateProfile(ctx workflow.Context, input *alexaforbusiness.UpdateProfileInput) (*alexaforbusiness.UpdateProfileOutput, error) {
@@ -2222,9 +2222,9 @@ func (a *AlexaForBusinessStub) UpdateProfile(ctx workflow.Context, input *alexaf
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateProfileAsync(ctx workflow.Context, input *alexaforbusiness.UpdateProfileInput) *AlexaforbusinessUpdateProfileResult {
+func (a *AlexaForBusinessStub) UpdateProfileAsync(ctx workflow.Context, input *alexaforbusiness.UpdateProfileInput) *AlexaforbusinessUpdateProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateProfile", input)
-	return &AlexaforbusinessUpdateProfileResult{Result: future}
+	return &AlexaforbusinessUpdateProfileFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateRoom(ctx workflow.Context, input *alexaforbusiness.UpdateRoomInput) (*alexaforbusiness.UpdateRoomOutput, error) {
@@ -2233,9 +2233,9 @@ func (a *AlexaForBusinessStub) UpdateRoom(ctx workflow.Context, input *alexaforb
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateRoomAsync(ctx workflow.Context, input *alexaforbusiness.UpdateRoomInput) *AlexaforbusinessUpdateRoomResult {
+func (a *AlexaForBusinessStub) UpdateRoomAsync(ctx workflow.Context, input *alexaforbusiness.UpdateRoomInput) *AlexaforbusinessUpdateRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateRoom", input)
-	return &AlexaforbusinessUpdateRoomResult{Result: future}
+	return &AlexaforbusinessUpdateRoomFuture{Future: future}
 }
 
 func (a *AlexaForBusinessStub) UpdateSkillGroup(ctx workflow.Context, input *alexaforbusiness.UpdateSkillGroupInput) (*alexaforbusiness.UpdateSkillGroupOutput, error) {
@@ -2244,7 +2244,7 @@ func (a *AlexaForBusinessStub) UpdateSkillGroup(ctx workflow.Context, input *ale
 	return &output, err
 }
 
-func (a *AlexaForBusinessStub) UpdateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateSkillGroupInput) *AlexaforbusinessUpdateSkillGroupResult {
+func (a *AlexaForBusinessStub) UpdateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateSkillGroupInput) *AlexaforbusinessUpdateSkillGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.alexaforbusiness.UpdateSkillGroup", input)
-	return &AlexaforbusinessUpdateSkillGroupResult{Result: future}
+	return &AlexaforbusinessUpdateSkillGroupFuture{Future: future}
 }

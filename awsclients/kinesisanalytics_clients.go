@@ -11,64 +11,64 @@ import (
 
 type KinesisAnalyticsClient interface {
 	AddApplicationCloudWatchLoggingOption(ctx workflow.Context, input *kinesisanalytics.AddApplicationCloudWatchLoggingOptionInput) (*kinesisanalytics.AddApplicationCloudWatchLoggingOptionOutput, error)
-	AddApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationCloudWatchLoggingOptionInput) *KinesisanalyticsAddApplicationCloudWatchLoggingOptionResult
+	AddApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationCloudWatchLoggingOptionInput) *KinesisanalyticsAddApplicationCloudWatchLoggingOptionFuture
 
 	AddApplicationInput(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputInput) (*kinesisanalytics.AddApplicationInputOutput, error)
-	AddApplicationInputAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputInput) *KinesisanalyticsAddApplicationInputResult
+	AddApplicationInputAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputInput) *KinesisanalyticsAddApplicationInputFuture
 
 	AddApplicationInputProcessingConfiguration(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputProcessingConfigurationInput) (*kinesisanalytics.AddApplicationInputProcessingConfigurationOutput, error)
-	AddApplicationInputProcessingConfigurationAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputProcessingConfigurationInput) *KinesisanalyticsAddApplicationInputProcessingConfigurationResult
+	AddApplicationInputProcessingConfigurationAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputProcessingConfigurationInput) *KinesisanalyticsAddApplicationInputProcessingConfigurationFuture
 
 	AddApplicationOutput(ctx workflow.Context, input *kinesisanalytics.AddApplicationOutputInput) (*kinesisanalytics.AddApplicationOutputOutput, error)
-	AddApplicationOutputAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationOutputInput) *KinesisanalyticsAddApplicationOutputResult
+	AddApplicationOutputAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationOutputInput) *KinesisanalyticsAddApplicationOutputFuture
 
 	AddApplicationReferenceDataSource(ctx workflow.Context, input *kinesisanalytics.AddApplicationReferenceDataSourceInput) (*kinesisanalytics.AddApplicationReferenceDataSourceOutput, error)
-	AddApplicationReferenceDataSourceAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationReferenceDataSourceInput) *KinesisanalyticsAddApplicationReferenceDataSourceResult
+	AddApplicationReferenceDataSourceAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationReferenceDataSourceInput) *KinesisanalyticsAddApplicationReferenceDataSourceFuture
 
 	CreateApplication(ctx workflow.Context, input *kinesisanalytics.CreateApplicationInput) (*kinesisanalytics.CreateApplicationOutput, error)
-	CreateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.CreateApplicationInput) *KinesisanalyticsCreateApplicationResult
+	CreateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.CreateApplicationInput) *KinesisanalyticsCreateApplicationFuture
 
 	DeleteApplication(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInput) (*kinesisanalytics.DeleteApplicationOutput, error)
-	DeleteApplicationAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInput) *KinesisanalyticsDeleteApplicationResult
+	DeleteApplicationAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInput) *KinesisanalyticsDeleteApplicationFuture
 
 	DeleteApplicationCloudWatchLoggingOption(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput) (*kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionOutput, error)
-	DeleteApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput) *KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionResult
+	DeleteApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput) *KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionFuture
 
 	DeleteApplicationInputProcessingConfiguration(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInputProcessingConfigurationInput) (*kinesisanalytics.DeleteApplicationInputProcessingConfigurationOutput, error)
-	DeleteApplicationInputProcessingConfigurationAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInputProcessingConfigurationInput) *KinesisanalyticsDeleteApplicationInputProcessingConfigurationResult
+	DeleteApplicationInputProcessingConfigurationAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInputProcessingConfigurationInput) *KinesisanalyticsDeleteApplicationInputProcessingConfigurationFuture
 
 	DeleteApplicationOutput(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationOutputInput) (*kinesisanalytics.DeleteApplicationOutputOutput, error)
-	DeleteApplicationOutputAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationOutputInput) *KinesisanalyticsDeleteApplicationOutputResult
+	DeleteApplicationOutputAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationOutputInput) *KinesisanalyticsDeleteApplicationOutputFuture
 
 	DeleteApplicationReferenceDataSource(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationReferenceDataSourceInput) (*kinesisanalytics.DeleteApplicationReferenceDataSourceOutput, error)
-	DeleteApplicationReferenceDataSourceAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationReferenceDataSourceInput) *KinesisanalyticsDeleteApplicationReferenceDataSourceResult
+	DeleteApplicationReferenceDataSourceAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationReferenceDataSourceInput) *KinesisanalyticsDeleteApplicationReferenceDataSourceFuture
 
 	DescribeApplication(ctx workflow.Context, input *kinesisanalytics.DescribeApplicationInput) (*kinesisanalytics.DescribeApplicationOutput, error)
-	DescribeApplicationAsync(ctx workflow.Context, input *kinesisanalytics.DescribeApplicationInput) *KinesisanalyticsDescribeApplicationResult
+	DescribeApplicationAsync(ctx workflow.Context, input *kinesisanalytics.DescribeApplicationInput) *KinesisanalyticsDescribeApplicationFuture
 
 	DiscoverInputSchema(ctx workflow.Context, input *kinesisanalytics.DiscoverInputSchemaInput) (*kinesisanalytics.DiscoverInputSchemaOutput, error)
-	DiscoverInputSchemaAsync(ctx workflow.Context, input *kinesisanalytics.DiscoverInputSchemaInput) *KinesisanalyticsDiscoverInputSchemaResult
+	DiscoverInputSchemaAsync(ctx workflow.Context, input *kinesisanalytics.DiscoverInputSchemaInput) *KinesisanalyticsDiscoverInputSchemaFuture
 
 	ListApplications(ctx workflow.Context, input *kinesisanalytics.ListApplicationsInput) (*kinesisanalytics.ListApplicationsOutput, error)
-	ListApplicationsAsync(ctx workflow.Context, input *kinesisanalytics.ListApplicationsInput) *KinesisanalyticsListApplicationsResult
+	ListApplicationsAsync(ctx workflow.Context, input *kinesisanalytics.ListApplicationsInput) *KinesisanalyticsListApplicationsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *kinesisanalytics.ListTagsForResourceInput) (*kinesisanalytics.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *kinesisanalytics.ListTagsForResourceInput) *KinesisanalyticsListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *kinesisanalytics.ListTagsForResourceInput) *KinesisanalyticsListTagsForResourceFuture
 
 	StartApplication(ctx workflow.Context, input *kinesisanalytics.StartApplicationInput) (*kinesisanalytics.StartApplicationOutput, error)
-	StartApplicationAsync(ctx workflow.Context, input *kinesisanalytics.StartApplicationInput) *KinesisanalyticsStartApplicationResult
+	StartApplicationAsync(ctx workflow.Context, input *kinesisanalytics.StartApplicationInput) *KinesisanalyticsStartApplicationFuture
 
 	StopApplication(ctx workflow.Context, input *kinesisanalytics.StopApplicationInput) (*kinesisanalytics.StopApplicationOutput, error)
-	StopApplicationAsync(ctx workflow.Context, input *kinesisanalytics.StopApplicationInput) *KinesisanalyticsStopApplicationResult
+	StopApplicationAsync(ctx workflow.Context, input *kinesisanalytics.StopApplicationInput) *KinesisanalyticsStopApplicationFuture
 
 	TagResource(ctx workflow.Context, input *kinesisanalytics.TagResourceInput) (*kinesisanalytics.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *kinesisanalytics.TagResourceInput) *KinesisanalyticsTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *kinesisanalytics.TagResourceInput) *KinesisanalyticsTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *kinesisanalytics.UntagResourceInput) (*kinesisanalytics.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *kinesisanalytics.UntagResourceInput) *KinesisanalyticsUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *kinesisanalytics.UntagResourceInput) *KinesisanalyticsUntagResourceFuture
 
 	UpdateApplication(ctx workflow.Context, input *kinesisanalytics.UpdateApplicationInput) (*kinesisanalytics.UpdateApplicationOutput, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.UpdateApplicationInput) *KinesisanalyticsUpdateApplicationResult
+	UpdateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.UpdateApplicationInput) *KinesisanalyticsUpdateApplicationFuture
 }
 
 type KinesisAnalyticsStub struct{}
@@ -77,203 +77,203 @@ func NewKinesisAnalyticsStub() KinesisAnalyticsClient {
 	return &KinesisAnalyticsStub{}
 }
 
-type KinesisanalyticsAddApplicationCloudWatchLoggingOptionResult struct {
-	Result workflow.Future
+type KinesisanalyticsAddApplicationCloudWatchLoggingOptionFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsAddApplicationCloudWatchLoggingOptionResult) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationCloudWatchLoggingOptionOutput, error) {
+func (r *KinesisanalyticsAddApplicationCloudWatchLoggingOptionFuture) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationCloudWatchLoggingOptionOutput, error) {
 	var output kinesisanalytics.AddApplicationCloudWatchLoggingOptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsAddApplicationInputResult struct {
-	Result workflow.Future
+type KinesisanalyticsAddApplicationInputFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsAddApplicationInputResult) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationInputOutput, error) {
+func (r *KinesisanalyticsAddApplicationInputFuture) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationInputOutput, error) {
 	var output kinesisanalytics.AddApplicationInputOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsAddApplicationInputProcessingConfigurationResult struct {
-	Result workflow.Future
+type KinesisanalyticsAddApplicationInputProcessingConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsAddApplicationInputProcessingConfigurationResult) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationInputProcessingConfigurationOutput, error) {
+func (r *KinesisanalyticsAddApplicationInputProcessingConfigurationFuture) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationInputProcessingConfigurationOutput, error) {
 	var output kinesisanalytics.AddApplicationInputProcessingConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsAddApplicationOutputResult struct {
-	Result workflow.Future
+type KinesisanalyticsAddApplicationOutputFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsAddApplicationOutputResult) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationOutputOutput, error) {
+func (r *KinesisanalyticsAddApplicationOutputFuture) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationOutputOutput, error) {
 	var output kinesisanalytics.AddApplicationOutputOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsAddApplicationReferenceDataSourceResult struct {
-	Result workflow.Future
+type KinesisanalyticsAddApplicationReferenceDataSourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsAddApplicationReferenceDataSourceResult) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationReferenceDataSourceOutput, error) {
+func (r *KinesisanalyticsAddApplicationReferenceDataSourceFuture) Get(ctx workflow.Context) (*kinesisanalytics.AddApplicationReferenceDataSourceOutput, error) {
 	var output kinesisanalytics.AddApplicationReferenceDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsCreateApplicationResult struct {
-	Result workflow.Future
+type KinesisanalyticsCreateApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsCreateApplicationResult) Get(ctx workflow.Context) (*kinesisanalytics.CreateApplicationOutput, error) {
+func (r *KinesisanalyticsCreateApplicationFuture) Get(ctx workflow.Context) (*kinesisanalytics.CreateApplicationOutput, error) {
 	var output kinesisanalytics.CreateApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsDeleteApplicationResult struct {
-	Result workflow.Future
+type KinesisanalyticsDeleteApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsDeleteApplicationResult) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationOutput, error) {
+func (r *KinesisanalyticsDeleteApplicationFuture) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationOutput, error) {
 	var output kinesisanalytics.DeleteApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionResult struct {
-	Result workflow.Future
+type KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionResult) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionOutput, error) {
+func (r *KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionFuture) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionOutput, error) {
 	var output kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsDeleteApplicationInputProcessingConfigurationResult struct {
-	Result workflow.Future
+type KinesisanalyticsDeleteApplicationInputProcessingConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsDeleteApplicationInputProcessingConfigurationResult) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationInputProcessingConfigurationOutput, error) {
+func (r *KinesisanalyticsDeleteApplicationInputProcessingConfigurationFuture) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationInputProcessingConfigurationOutput, error) {
 	var output kinesisanalytics.DeleteApplicationInputProcessingConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsDeleteApplicationOutputResult struct {
-	Result workflow.Future
+type KinesisanalyticsDeleteApplicationOutputFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsDeleteApplicationOutputResult) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationOutputOutput, error) {
+func (r *KinesisanalyticsDeleteApplicationOutputFuture) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationOutputOutput, error) {
 	var output kinesisanalytics.DeleteApplicationOutputOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsDeleteApplicationReferenceDataSourceResult struct {
-	Result workflow.Future
+type KinesisanalyticsDeleteApplicationReferenceDataSourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsDeleteApplicationReferenceDataSourceResult) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationReferenceDataSourceOutput, error) {
+func (r *KinesisanalyticsDeleteApplicationReferenceDataSourceFuture) Get(ctx workflow.Context) (*kinesisanalytics.DeleteApplicationReferenceDataSourceOutput, error) {
 	var output kinesisanalytics.DeleteApplicationReferenceDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsDescribeApplicationResult struct {
-	Result workflow.Future
+type KinesisanalyticsDescribeApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsDescribeApplicationResult) Get(ctx workflow.Context) (*kinesisanalytics.DescribeApplicationOutput, error) {
+func (r *KinesisanalyticsDescribeApplicationFuture) Get(ctx workflow.Context) (*kinesisanalytics.DescribeApplicationOutput, error) {
 	var output kinesisanalytics.DescribeApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsDiscoverInputSchemaResult struct {
-	Result workflow.Future
+type KinesisanalyticsDiscoverInputSchemaFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsDiscoverInputSchemaResult) Get(ctx workflow.Context) (*kinesisanalytics.DiscoverInputSchemaOutput, error) {
+func (r *KinesisanalyticsDiscoverInputSchemaFuture) Get(ctx workflow.Context) (*kinesisanalytics.DiscoverInputSchemaOutput, error) {
 	var output kinesisanalytics.DiscoverInputSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsListApplicationsResult struct {
-	Result workflow.Future
+type KinesisanalyticsListApplicationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsListApplicationsResult) Get(ctx workflow.Context) (*kinesisanalytics.ListApplicationsOutput, error) {
+func (r *KinesisanalyticsListApplicationsFuture) Get(ctx workflow.Context) (*kinesisanalytics.ListApplicationsOutput, error) {
 	var output kinesisanalytics.ListApplicationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsListTagsForResourceResult struct {
-	Result workflow.Future
+type KinesisanalyticsListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsListTagsForResourceResult) Get(ctx workflow.Context) (*kinesisanalytics.ListTagsForResourceOutput, error) {
+func (r *KinesisanalyticsListTagsForResourceFuture) Get(ctx workflow.Context) (*kinesisanalytics.ListTagsForResourceOutput, error) {
 	var output kinesisanalytics.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsStartApplicationResult struct {
-	Result workflow.Future
+type KinesisanalyticsStartApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsStartApplicationResult) Get(ctx workflow.Context) (*kinesisanalytics.StartApplicationOutput, error) {
+func (r *KinesisanalyticsStartApplicationFuture) Get(ctx workflow.Context) (*kinesisanalytics.StartApplicationOutput, error) {
 	var output kinesisanalytics.StartApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsStopApplicationResult struct {
-	Result workflow.Future
+type KinesisanalyticsStopApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsStopApplicationResult) Get(ctx workflow.Context) (*kinesisanalytics.StopApplicationOutput, error) {
+func (r *KinesisanalyticsStopApplicationFuture) Get(ctx workflow.Context) (*kinesisanalytics.StopApplicationOutput, error) {
 	var output kinesisanalytics.StopApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsTagResourceResult struct {
-	Result workflow.Future
+type KinesisanalyticsTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsTagResourceResult) Get(ctx workflow.Context) (*kinesisanalytics.TagResourceOutput, error) {
+func (r *KinesisanalyticsTagResourceFuture) Get(ctx workflow.Context) (*kinesisanalytics.TagResourceOutput, error) {
 	var output kinesisanalytics.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsUntagResourceResult struct {
-	Result workflow.Future
+type KinesisanalyticsUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsUntagResourceResult) Get(ctx workflow.Context) (*kinesisanalytics.UntagResourceOutput, error) {
+func (r *KinesisanalyticsUntagResourceFuture) Get(ctx workflow.Context) (*kinesisanalytics.UntagResourceOutput, error) {
 	var output kinesisanalytics.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisanalyticsUpdateApplicationResult struct {
-	Result workflow.Future
+type KinesisanalyticsUpdateApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisanalyticsUpdateApplicationResult) Get(ctx workflow.Context) (*kinesisanalytics.UpdateApplicationOutput, error) {
+func (r *KinesisanalyticsUpdateApplicationFuture) Get(ctx workflow.Context) (*kinesisanalytics.UpdateApplicationOutput, error) {
 	var output kinesisanalytics.UpdateApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -283,9 +283,9 @@ func (a *KinesisAnalyticsStub) AddApplicationCloudWatchLoggingOption(ctx workflo
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) AddApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationCloudWatchLoggingOptionInput) *KinesisanalyticsAddApplicationCloudWatchLoggingOptionResult {
+func (a *KinesisAnalyticsStub) AddApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationCloudWatchLoggingOptionInput) *KinesisanalyticsAddApplicationCloudWatchLoggingOptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.AddApplicationCloudWatchLoggingOption", input)
-	return &KinesisanalyticsAddApplicationCloudWatchLoggingOptionResult{Result: future}
+	return &KinesisanalyticsAddApplicationCloudWatchLoggingOptionFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) AddApplicationInput(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputInput) (*kinesisanalytics.AddApplicationInputOutput, error) {
@@ -294,9 +294,9 @@ func (a *KinesisAnalyticsStub) AddApplicationInput(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) AddApplicationInputAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputInput) *KinesisanalyticsAddApplicationInputResult {
+func (a *KinesisAnalyticsStub) AddApplicationInputAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputInput) *KinesisanalyticsAddApplicationInputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.AddApplicationInput", input)
-	return &KinesisanalyticsAddApplicationInputResult{Result: future}
+	return &KinesisanalyticsAddApplicationInputFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) AddApplicationInputProcessingConfiguration(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputProcessingConfigurationInput) (*kinesisanalytics.AddApplicationInputProcessingConfigurationOutput, error) {
@@ -305,9 +305,9 @@ func (a *KinesisAnalyticsStub) AddApplicationInputProcessingConfiguration(ctx wo
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) AddApplicationInputProcessingConfigurationAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputProcessingConfigurationInput) *KinesisanalyticsAddApplicationInputProcessingConfigurationResult {
+func (a *KinesisAnalyticsStub) AddApplicationInputProcessingConfigurationAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationInputProcessingConfigurationInput) *KinesisanalyticsAddApplicationInputProcessingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.AddApplicationInputProcessingConfiguration", input)
-	return &KinesisanalyticsAddApplicationInputProcessingConfigurationResult{Result: future}
+	return &KinesisanalyticsAddApplicationInputProcessingConfigurationFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) AddApplicationOutput(ctx workflow.Context, input *kinesisanalytics.AddApplicationOutputInput) (*kinesisanalytics.AddApplicationOutputOutput, error) {
@@ -316,9 +316,9 @@ func (a *KinesisAnalyticsStub) AddApplicationOutput(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) AddApplicationOutputAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationOutputInput) *KinesisanalyticsAddApplicationOutputResult {
+func (a *KinesisAnalyticsStub) AddApplicationOutputAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationOutputInput) *KinesisanalyticsAddApplicationOutputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.AddApplicationOutput", input)
-	return &KinesisanalyticsAddApplicationOutputResult{Result: future}
+	return &KinesisanalyticsAddApplicationOutputFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) AddApplicationReferenceDataSource(ctx workflow.Context, input *kinesisanalytics.AddApplicationReferenceDataSourceInput) (*kinesisanalytics.AddApplicationReferenceDataSourceOutput, error) {
@@ -327,9 +327,9 @@ func (a *KinesisAnalyticsStub) AddApplicationReferenceDataSource(ctx workflow.Co
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) AddApplicationReferenceDataSourceAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationReferenceDataSourceInput) *KinesisanalyticsAddApplicationReferenceDataSourceResult {
+func (a *KinesisAnalyticsStub) AddApplicationReferenceDataSourceAsync(ctx workflow.Context, input *kinesisanalytics.AddApplicationReferenceDataSourceInput) *KinesisanalyticsAddApplicationReferenceDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.AddApplicationReferenceDataSource", input)
-	return &KinesisanalyticsAddApplicationReferenceDataSourceResult{Result: future}
+	return &KinesisanalyticsAddApplicationReferenceDataSourceFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) CreateApplication(ctx workflow.Context, input *kinesisanalytics.CreateApplicationInput) (*kinesisanalytics.CreateApplicationOutput, error) {
@@ -338,9 +338,9 @@ func (a *KinesisAnalyticsStub) CreateApplication(ctx workflow.Context, input *ki
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) CreateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.CreateApplicationInput) *KinesisanalyticsCreateApplicationResult {
+func (a *KinesisAnalyticsStub) CreateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.CreateApplicationInput) *KinesisanalyticsCreateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.CreateApplication", input)
-	return &KinesisanalyticsCreateApplicationResult{Result: future}
+	return &KinesisanalyticsCreateApplicationFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) DeleteApplication(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInput) (*kinesisanalytics.DeleteApplicationOutput, error) {
@@ -349,9 +349,9 @@ func (a *KinesisAnalyticsStub) DeleteApplication(ctx workflow.Context, input *ki
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) DeleteApplicationAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInput) *KinesisanalyticsDeleteApplicationResult {
+func (a *KinesisAnalyticsStub) DeleteApplicationAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInput) *KinesisanalyticsDeleteApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.DeleteApplication", input)
-	return &KinesisanalyticsDeleteApplicationResult{Result: future}
+	return &KinesisanalyticsDeleteApplicationFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) DeleteApplicationCloudWatchLoggingOption(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput) (*kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionOutput, error) {
@@ -360,9 +360,9 @@ func (a *KinesisAnalyticsStub) DeleteApplicationCloudWatchLoggingOption(ctx work
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) DeleteApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput) *KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionResult {
+func (a *KinesisAnalyticsStub) DeleteApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput) *KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.DeleteApplicationCloudWatchLoggingOption", input)
-	return &KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionResult{Result: future}
+	return &KinesisanalyticsDeleteApplicationCloudWatchLoggingOptionFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) DeleteApplicationInputProcessingConfiguration(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInputProcessingConfigurationInput) (*kinesisanalytics.DeleteApplicationInputProcessingConfigurationOutput, error) {
@@ -371,9 +371,9 @@ func (a *KinesisAnalyticsStub) DeleteApplicationInputProcessingConfiguration(ctx
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) DeleteApplicationInputProcessingConfigurationAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInputProcessingConfigurationInput) *KinesisanalyticsDeleteApplicationInputProcessingConfigurationResult {
+func (a *KinesisAnalyticsStub) DeleteApplicationInputProcessingConfigurationAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationInputProcessingConfigurationInput) *KinesisanalyticsDeleteApplicationInputProcessingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.DeleteApplicationInputProcessingConfiguration", input)
-	return &KinesisanalyticsDeleteApplicationInputProcessingConfigurationResult{Result: future}
+	return &KinesisanalyticsDeleteApplicationInputProcessingConfigurationFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) DeleteApplicationOutput(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationOutputInput) (*kinesisanalytics.DeleteApplicationOutputOutput, error) {
@@ -382,9 +382,9 @@ func (a *KinesisAnalyticsStub) DeleteApplicationOutput(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) DeleteApplicationOutputAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationOutputInput) *KinesisanalyticsDeleteApplicationOutputResult {
+func (a *KinesisAnalyticsStub) DeleteApplicationOutputAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationOutputInput) *KinesisanalyticsDeleteApplicationOutputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.DeleteApplicationOutput", input)
-	return &KinesisanalyticsDeleteApplicationOutputResult{Result: future}
+	return &KinesisanalyticsDeleteApplicationOutputFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) DeleteApplicationReferenceDataSource(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationReferenceDataSourceInput) (*kinesisanalytics.DeleteApplicationReferenceDataSourceOutput, error) {
@@ -393,9 +393,9 @@ func (a *KinesisAnalyticsStub) DeleteApplicationReferenceDataSource(ctx workflow
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) DeleteApplicationReferenceDataSourceAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationReferenceDataSourceInput) *KinesisanalyticsDeleteApplicationReferenceDataSourceResult {
+func (a *KinesisAnalyticsStub) DeleteApplicationReferenceDataSourceAsync(ctx workflow.Context, input *kinesisanalytics.DeleteApplicationReferenceDataSourceInput) *KinesisanalyticsDeleteApplicationReferenceDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.DeleteApplicationReferenceDataSource", input)
-	return &KinesisanalyticsDeleteApplicationReferenceDataSourceResult{Result: future}
+	return &KinesisanalyticsDeleteApplicationReferenceDataSourceFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) DescribeApplication(ctx workflow.Context, input *kinesisanalytics.DescribeApplicationInput) (*kinesisanalytics.DescribeApplicationOutput, error) {
@@ -404,9 +404,9 @@ func (a *KinesisAnalyticsStub) DescribeApplication(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) DescribeApplicationAsync(ctx workflow.Context, input *kinesisanalytics.DescribeApplicationInput) *KinesisanalyticsDescribeApplicationResult {
+func (a *KinesisAnalyticsStub) DescribeApplicationAsync(ctx workflow.Context, input *kinesisanalytics.DescribeApplicationInput) *KinesisanalyticsDescribeApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.DescribeApplication", input)
-	return &KinesisanalyticsDescribeApplicationResult{Result: future}
+	return &KinesisanalyticsDescribeApplicationFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) DiscoverInputSchema(ctx workflow.Context, input *kinesisanalytics.DiscoverInputSchemaInput) (*kinesisanalytics.DiscoverInputSchemaOutput, error) {
@@ -415,9 +415,9 @@ func (a *KinesisAnalyticsStub) DiscoverInputSchema(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) DiscoverInputSchemaAsync(ctx workflow.Context, input *kinesisanalytics.DiscoverInputSchemaInput) *KinesisanalyticsDiscoverInputSchemaResult {
+func (a *KinesisAnalyticsStub) DiscoverInputSchemaAsync(ctx workflow.Context, input *kinesisanalytics.DiscoverInputSchemaInput) *KinesisanalyticsDiscoverInputSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.DiscoverInputSchema", input)
-	return &KinesisanalyticsDiscoverInputSchemaResult{Result: future}
+	return &KinesisanalyticsDiscoverInputSchemaFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) ListApplications(ctx workflow.Context, input *kinesisanalytics.ListApplicationsInput) (*kinesisanalytics.ListApplicationsOutput, error) {
@@ -426,9 +426,9 @@ func (a *KinesisAnalyticsStub) ListApplications(ctx workflow.Context, input *kin
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) ListApplicationsAsync(ctx workflow.Context, input *kinesisanalytics.ListApplicationsInput) *KinesisanalyticsListApplicationsResult {
+func (a *KinesisAnalyticsStub) ListApplicationsAsync(ctx workflow.Context, input *kinesisanalytics.ListApplicationsInput) *KinesisanalyticsListApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.ListApplications", input)
-	return &KinesisanalyticsListApplicationsResult{Result: future}
+	return &KinesisanalyticsListApplicationsFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) ListTagsForResource(ctx workflow.Context, input *kinesisanalytics.ListTagsForResourceInput) (*kinesisanalytics.ListTagsForResourceOutput, error) {
@@ -437,9 +437,9 @@ func (a *KinesisAnalyticsStub) ListTagsForResource(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) ListTagsForResourceAsync(ctx workflow.Context, input *kinesisanalytics.ListTagsForResourceInput) *KinesisanalyticsListTagsForResourceResult {
+func (a *KinesisAnalyticsStub) ListTagsForResourceAsync(ctx workflow.Context, input *kinesisanalytics.ListTagsForResourceInput) *KinesisanalyticsListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.ListTagsForResource", input)
-	return &KinesisanalyticsListTagsForResourceResult{Result: future}
+	return &KinesisanalyticsListTagsForResourceFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) StartApplication(ctx workflow.Context, input *kinesisanalytics.StartApplicationInput) (*kinesisanalytics.StartApplicationOutput, error) {
@@ -448,9 +448,9 @@ func (a *KinesisAnalyticsStub) StartApplication(ctx workflow.Context, input *kin
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) StartApplicationAsync(ctx workflow.Context, input *kinesisanalytics.StartApplicationInput) *KinesisanalyticsStartApplicationResult {
+func (a *KinesisAnalyticsStub) StartApplicationAsync(ctx workflow.Context, input *kinesisanalytics.StartApplicationInput) *KinesisanalyticsStartApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.StartApplication", input)
-	return &KinesisanalyticsStartApplicationResult{Result: future}
+	return &KinesisanalyticsStartApplicationFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) StopApplication(ctx workflow.Context, input *kinesisanalytics.StopApplicationInput) (*kinesisanalytics.StopApplicationOutput, error) {
@@ -459,9 +459,9 @@ func (a *KinesisAnalyticsStub) StopApplication(ctx workflow.Context, input *kine
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) StopApplicationAsync(ctx workflow.Context, input *kinesisanalytics.StopApplicationInput) *KinesisanalyticsStopApplicationResult {
+func (a *KinesisAnalyticsStub) StopApplicationAsync(ctx workflow.Context, input *kinesisanalytics.StopApplicationInput) *KinesisanalyticsStopApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.StopApplication", input)
-	return &KinesisanalyticsStopApplicationResult{Result: future}
+	return &KinesisanalyticsStopApplicationFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) TagResource(ctx workflow.Context, input *kinesisanalytics.TagResourceInput) (*kinesisanalytics.TagResourceOutput, error) {
@@ -470,9 +470,9 @@ func (a *KinesisAnalyticsStub) TagResource(ctx workflow.Context, input *kinesisa
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) TagResourceAsync(ctx workflow.Context, input *kinesisanalytics.TagResourceInput) *KinesisanalyticsTagResourceResult {
+func (a *KinesisAnalyticsStub) TagResourceAsync(ctx workflow.Context, input *kinesisanalytics.TagResourceInput) *KinesisanalyticsTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.TagResource", input)
-	return &KinesisanalyticsTagResourceResult{Result: future}
+	return &KinesisanalyticsTagResourceFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) UntagResource(ctx workflow.Context, input *kinesisanalytics.UntagResourceInput) (*kinesisanalytics.UntagResourceOutput, error) {
@@ -481,9 +481,9 @@ func (a *KinesisAnalyticsStub) UntagResource(ctx workflow.Context, input *kinesi
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) UntagResourceAsync(ctx workflow.Context, input *kinesisanalytics.UntagResourceInput) *KinesisanalyticsUntagResourceResult {
+func (a *KinesisAnalyticsStub) UntagResourceAsync(ctx workflow.Context, input *kinesisanalytics.UntagResourceInput) *KinesisanalyticsUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.UntagResource", input)
-	return &KinesisanalyticsUntagResourceResult{Result: future}
+	return &KinesisanalyticsUntagResourceFuture{Future: future}
 }
 
 func (a *KinesisAnalyticsStub) UpdateApplication(ctx workflow.Context, input *kinesisanalytics.UpdateApplicationInput) (*kinesisanalytics.UpdateApplicationOutput, error) {
@@ -492,7 +492,7 @@ func (a *KinesisAnalyticsStub) UpdateApplication(ctx workflow.Context, input *ki
 	return &output, err
 }
 
-func (a *KinesisAnalyticsStub) UpdateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.UpdateApplicationInput) *KinesisanalyticsUpdateApplicationResult {
+func (a *KinesisAnalyticsStub) UpdateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.UpdateApplicationInput) *KinesisanalyticsUpdateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisanalytics.UpdateApplication", input)
-	return &KinesisanalyticsUpdateApplicationResult{Result: future}
+	return &KinesisanalyticsUpdateApplicationFuture{Future: future}
 }

@@ -11,7 +11,7 @@ import (
 
 type KinesisVideoMediaClient interface {
 	GetMedia(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) (*kinesisvideomedia.GetMediaOutput, error)
-	GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisvideomediaGetMediaResult
+	GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisvideomediaGetMediaFuture
 }
 
 type KinesisVideoMediaStub struct{}
@@ -20,13 +20,13 @@ func NewKinesisVideoMediaStub() KinesisVideoMediaClient {
 	return &KinesisVideoMediaStub{}
 }
 
-type KinesisvideomediaGetMediaResult struct {
-	Result workflow.Future
+type KinesisvideomediaGetMediaFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisvideomediaGetMediaResult) Get(ctx workflow.Context) (*kinesisvideomedia.GetMediaOutput, error) {
+func (r *KinesisvideomediaGetMediaFuture) Get(ctx workflow.Context) (*kinesisvideomedia.GetMediaOutput, error) {
 	var output kinesisvideomedia.GetMediaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -36,7 +36,7 @@ func (a *KinesisVideoMediaStub) GetMedia(ctx workflow.Context, input *kinesisvid
 	return &output, err
 }
 
-func (a *KinesisVideoMediaStub) GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisvideomediaGetMediaResult {
+func (a *KinesisVideoMediaStub) GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisvideomediaGetMediaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideomedia.GetMedia", input)
-	return &KinesisvideomediaGetMediaResult{Result: future}
+	return &KinesisvideomediaGetMediaFuture{Future: future}
 }

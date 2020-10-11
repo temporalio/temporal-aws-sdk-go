@@ -11,70 +11,70 @@ import (
 
 type DataExchangeClient interface {
 	CancelJob(ctx workflow.Context, input *dataexchange.CancelJobInput) (*dataexchange.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *dataexchange.CancelJobInput) *DataexchangeCancelJobResult
+	CancelJobAsync(ctx workflow.Context, input *dataexchange.CancelJobInput) *DataexchangeCancelJobFuture
 
 	CreateDataSet(ctx workflow.Context, input *dataexchange.CreateDataSetInput) (*dataexchange.CreateDataSetOutput, error)
-	CreateDataSetAsync(ctx workflow.Context, input *dataexchange.CreateDataSetInput) *DataexchangeCreateDataSetResult
+	CreateDataSetAsync(ctx workflow.Context, input *dataexchange.CreateDataSetInput) *DataexchangeCreateDataSetFuture
 
 	CreateJob(ctx workflow.Context, input *dataexchange.CreateJobInput) (*dataexchange.CreateJobOutput, error)
-	CreateJobAsync(ctx workflow.Context, input *dataexchange.CreateJobInput) *DataexchangeCreateJobResult
+	CreateJobAsync(ctx workflow.Context, input *dataexchange.CreateJobInput) *DataexchangeCreateJobFuture
 
 	CreateRevision(ctx workflow.Context, input *dataexchange.CreateRevisionInput) (*dataexchange.CreateRevisionOutput, error)
-	CreateRevisionAsync(ctx workflow.Context, input *dataexchange.CreateRevisionInput) *DataexchangeCreateRevisionResult
+	CreateRevisionAsync(ctx workflow.Context, input *dataexchange.CreateRevisionInput) *DataexchangeCreateRevisionFuture
 
 	DeleteAsset(ctx workflow.Context, input *dataexchange.DeleteAssetInput) (*dataexchange.DeleteAssetOutput, error)
-	DeleteAssetAsync(ctx workflow.Context, input *dataexchange.DeleteAssetInput) *DataexchangeDeleteAssetResult
+	DeleteAssetAsync(ctx workflow.Context, input *dataexchange.DeleteAssetInput) *DataexchangeDeleteAssetFuture
 
 	DeleteDataSet(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) (*dataexchange.DeleteDataSetOutput, error)
-	DeleteDataSetAsync(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) *DataexchangeDeleteDataSetResult
+	DeleteDataSetAsync(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) *DataexchangeDeleteDataSetFuture
 
 	DeleteRevision(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) (*dataexchange.DeleteRevisionOutput, error)
-	DeleteRevisionAsync(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) *DataexchangeDeleteRevisionResult
+	DeleteRevisionAsync(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) *DataexchangeDeleteRevisionFuture
 
 	GetAsset(ctx workflow.Context, input *dataexchange.GetAssetInput) (*dataexchange.GetAssetOutput, error)
-	GetAssetAsync(ctx workflow.Context, input *dataexchange.GetAssetInput) *DataexchangeGetAssetResult
+	GetAssetAsync(ctx workflow.Context, input *dataexchange.GetAssetInput) *DataexchangeGetAssetFuture
 
 	GetDataSet(ctx workflow.Context, input *dataexchange.GetDataSetInput) (*dataexchange.GetDataSetOutput, error)
-	GetDataSetAsync(ctx workflow.Context, input *dataexchange.GetDataSetInput) *DataexchangeGetDataSetResult
+	GetDataSetAsync(ctx workflow.Context, input *dataexchange.GetDataSetInput) *DataexchangeGetDataSetFuture
 
 	GetJob(ctx workflow.Context, input *dataexchange.GetJobInput) (*dataexchange.GetJobOutput, error)
-	GetJobAsync(ctx workflow.Context, input *dataexchange.GetJobInput) *DataexchangeGetJobResult
+	GetJobAsync(ctx workflow.Context, input *dataexchange.GetJobInput) *DataexchangeGetJobFuture
 
 	GetRevision(ctx workflow.Context, input *dataexchange.GetRevisionInput) (*dataexchange.GetRevisionOutput, error)
-	GetRevisionAsync(ctx workflow.Context, input *dataexchange.GetRevisionInput) *DataexchangeGetRevisionResult
+	GetRevisionAsync(ctx workflow.Context, input *dataexchange.GetRevisionInput) *DataexchangeGetRevisionFuture
 
 	ListDataSetRevisions(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) (*dataexchange.ListDataSetRevisionsOutput, error)
-	ListDataSetRevisionsAsync(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) *DataexchangeListDataSetRevisionsResult
+	ListDataSetRevisionsAsync(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) *DataexchangeListDataSetRevisionsFuture
 
 	ListDataSets(ctx workflow.Context, input *dataexchange.ListDataSetsInput) (*dataexchange.ListDataSetsOutput, error)
-	ListDataSetsAsync(ctx workflow.Context, input *dataexchange.ListDataSetsInput) *DataexchangeListDataSetsResult
+	ListDataSetsAsync(ctx workflow.Context, input *dataexchange.ListDataSetsInput) *DataexchangeListDataSetsFuture
 
 	ListJobs(ctx workflow.Context, input *dataexchange.ListJobsInput) (*dataexchange.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *dataexchange.ListJobsInput) *DataexchangeListJobsResult
+	ListJobsAsync(ctx workflow.Context, input *dataexchange.ListJobsInput) *DataexchangeListJobsFuture
 
 	ListRevisionAssets(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) (*dataexchange.ListRevisionAssetsOutput, error)
-	ListRevisionAssetsAsync(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) *DataexchangeListRevisionAssetsResult
+	ListRevisionAssetsAsync(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) *DataexchangeListRevisionAssetsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) (*dataexchange.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) *DataexchangeListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) *DataexchangeListTagsForResourceFuture
 
 	StartJob(ctx workflow.Context, input *dataexchange.StartJobInput) (*dataexchange.StartJobOutput, error)
-	StartJobAsync(ctx workflow.Context, input *dataexchange.StartJobInput) *DataexchangeStartJobResult
+	StartJobAsync(ctx workflow.Context, input *dataexchange.StartJobInput) *DataexchangeStartJobFuture
 
 	TagResource(ctx workflow.Context, input *dataexchange.TagResourceInput) (*dataexchange.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *dataexchange.TagResourceInput) *DataexchangeTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *dataexchange.TagResourceInput) *DataexchangeTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *dataexchange.UntagResourceInput) (*dataexchange.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *dataexchange.UntagResourceInput) *DataexchangeUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *dataexchange.UntagResourceInput) *DataexchangeUntagResourceFuture
 
 	UpdateAsset(ctx workflow.Context, input *dataexchange.UpdateAssetInput) (*dataexchange.UpdateAssetOutput, error)
-	UpdateAssetAsync(ctx workflow.Context, input *dataexchange.UpdateAssetInput) *DataexchangeUpdateAssetResult
+	UpdateAssetAsync(ctx workflow.Context, input *dataexchange.UpdateAssetInput) *DataexchangeUpdateAssetFuture
 
 	UpdateDataSet(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) (*dataexchange.UpdateDataSetOutput, error)
-	UpdateDataSetAsync(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) *DataexchangeUpdateDataSetResult
+	UpdateDataSetAsync(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) *DataexchangeUpdateDataSetFuture
 
 	UpdateRevision(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) (*dataexchange.UpdateRevisionOutput, error)
-	UpdateRevisionAsync(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) *DataexchangeUpdateRevisionResult
+	UpdateRevisionAsync(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) *DataexchangeUpdateRevisionFuture
 }
 
 type DataExchangeStub struct{}
@@ -83,223 +83,223 @@ func NewDataExchangeStub() DataExchangeClient {
 	return &DataExchangeStub{}
 }
 
-type DataexchangeCancelJobResult struct {
-	Result workflow.Future
+type DataexchangeCancelJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeCancelJobResult) Get(ctx workflow.Context) (*dataexchange.CancelJobOutput, error) {
+func (r *DataexchangeCancelJobFuture) Get(ctx workflow.Context) (*dataexchange.CancelJobOutput, error) {
 	var output dataexchange.CancelJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeCreateDataSetResult struct {
-	Result workflow.Future
+type DataexchangeCreateDataSetFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeCreateDataSetResult) Get(ctx workflow.Context) (*dataexchange.CreateDataSetOutput, error) {
+func (r *DataexchangeCreateDataSetFuture) Get(ctx workflow.Context) (*dataexchange.CreateDataSetOutput, error) {
 	var output dataexchange.CreateDataSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeCreateJobResult struct {
-	Result workflow.Future
+type DataexchangeCreateJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeCreateJobResult) Get(ctx workflow.Context) (*dataexchange.CreateJobOutput, error) {
+func (r *DataexchangeCreateJobFuture) Get(ctx workflow.Context) (*dataexchange.CreateJobOutput, error) {
 	var output dataexchange.CreateJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeCreateRevisionResult struct {
-	Result workflow.Future
+type DataexchangeCreateRevisionFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeCreateRevisionResult) Get(ctx workflow.Context) (*dataexchange.CreateRevisionOutput, error) {
+func (r *DataexchangeCreateRevisionFuture) Get(ctx workflow.Context) (*dataexchange.CreateRevisionOutput, error) {
 	var output dataexchange.CreateRevisionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeDeleteAssetResult struct {
-	Result workflow.Future
+type DataexchangeDeleteAssetFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeDeleteAssetResult) Get(ctx workflow.Context) (*dataexchange.DeleteAssetOutput, error) {
+func (r *DataexchangeDeleteAssetFuture) Get(ctx workflow.Context) (*dataexchange.DeleteAssetOutput, error) {
 	var output dataexchange.DeleteAssetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeDeleteDataSetResult struct {
-	Result workflow.Future
+type DataexchangeDeleteDataSetFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeDeleteDataSetResult) Get(ctx workflow.Context) (*dataexchange.DeleteDataSetOutput, error) {
+func (r *DataexchangeDeleteDataSetFuture) Get(ctx workflow.Context) (*dataexchange.DeleteDataSetOutput, error) {
 	var output dataexchange.DeleteDataSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeDeleteRevisionResult struct {
-	Result workflow.Future
+type DataexchangeDeleteRevisionFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeDeleteRevisionResult) Get(ctx workflow.Context) (*dataexchange.DeleteRevisionOutput, error) {
+func (r *DataexchangeDeleteRevisionFuture) Get(ctx workflow.Context) (*dataexchange.DeleteRevisionOutput, error) {
 	var output dataexchange.DeleteRevisionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeGetAssetResult struct {
-	Result workflow.Future
+type DataexchangeGetAssetFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeGetAssetResult) Get(ctx workflow.Context) (*dataexchange.GetAssetOutput, error) {
+func (r *DataexchangeGetAssetFuture) Get(ctx workflow.Context) (*dataexchange.GetAssetOutput, error) {
 	var output dataexchange.GetAssetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeGetDataSetResult struct {
-	Result workflow.Future
+type DataexchangeGetDataSetFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeGetDataSetResult) Get(ctx workflow.Context) (*dataexchange.GetDataSetOutput, error) {
+func (r *DataexchangeGetDataSetFuture) Get(ctx workflow.Context) (*dataexchange.GetDataSetOutput, error) {
 	var output dataexchange.GetDataSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeGetJobResult struct {
-	Result workflow.Future
+type DataexchangeGetJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeGetJobResult) Get(ctx workflow.Context) (*dataexchange.GetJobOutput, error) {
+func (r *DataexchangeGetJobFuture) Get(ctx workflow.Context) (*dataexchange.GetJobOutput, error) {
 	var output dataexchange.GetJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeGetRevisionResult struct {
-	Result workflow.Future
+type DataexchangeGetRevisionFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeGetRevisionResult) Get(ctx workflow.Context) (*dataexchange.GetRevisionOutput, error) {
+func (r *DataexchangeGetRevisionFuture) Get(ctx workflow.Context) (*dataexchange.GetRevisionOutput, error) {
 	var output dataexchange.GetRevisionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeListDataSetRevisionsResult struct {
-	Result workflow.Future
+type DataexchangeListDataSetRevisionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeListDataSetRevisionsResult) Get(ctx workflow.Context) (*dataexchange.ListDataSetRevisionsOutput, error) {
+func (r *DataexchangeListDataSetRevisionsFuture) Get(ctx workflow.Context) (*dataexchange.ListDataSetRevisionsOutput, error) {
 	var output dataexchange.ListDataSetRevisionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeListDataSetsResult struct {
-	Result workflow.Future
+type DataexchangeListDataSetsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeListDataSetsResult) Get(ctx workflow.Context) (*dataexchange.ListDataSetsOutput, error) {
+func (r *DataexchangeListDataSetsFuture) Get(ctx workflow.Context) (*dataexchange.ListDataSetsOutput, error) {
 	var output dataexchange.ListDataSetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeListJobsResult struct {
-	Result workflow.Future
+type DataexchangeListJobsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeListJobsResult) Get(ctx workflow.Context) (*dataexchange.ListJobsOutput, error) {
+func (r *DataexchangeListJobsFuture) Get(ctx workflow.Context) (*dataexchange.ListJobsOutput, error) {
 	var output dataexchange.ListJobsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeListRevisionAssetsResult struct {
-	Result workflow.Future
+type DataexchangeListRevisionAssetsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeListRevisionAssetsResult) Get(ctx workflow.Context) (*dataexchange.ListRevisionAssetsOutput, error) {
+func (r *DataexchangeListRevisionAssetsFuture) Get(ctx workflow.Context) (*dataexchange.ListRevisionAssetsOutput, error) {
 	var output dataexchange.ListRevisionAssetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeListTagsForResourceResult struct {
-	Result workflow.Future
+type DataexchangeListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeListTagsForResourceResult) Get(ctx workflow.Context) (*dataexchange.ListTagsForResourceOutput, error) {
+func (r *DataexchangeListTagsForResourceFuture) Get(ctx workflow.Context) (*dataexchange.ListTagsForResourceOutput, error) {
 	var output dataexchange.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeStartJobResult struct {
-	Result workflow.Future
+type DataexchangeStartJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeStartJobResult) Get(ctx workflow.Context) (*dataexchange.StartJobOutput, error) {
+func (r *DataexchangeStartJobFuture) Get(ctx workflow.Context) (*dataexchange.StartJobOutput, error) {
 	var output dataexchange.StartJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeTagResourceResult struct {
-	Result workflow.Future
+type DataexchangeTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeTagResourceResult) Get(ctx workflow.Context) (*dataexchange.TagResourceOutput, error) {
+func (r *DataexchangeTagResourceFuture) Get(ctx workflow.Context) (*dataexchange.TagResourceOutput, error) {
 	var output dataexchange.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeUntagResourceResult struct {
-	Result workflow.Future
+type DataexchangeUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeUntagResourceResult) Get(ctx workflow.Context) (*dataexchange.UntagResourceOutput, error) {
+func (r *DataexchangeUntagResourceFuture) Get(ctx workflow.Context) (*dataexchange.UntagResourceOutput, error) {
 	var output dataexchange.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeUpdateAssetResult struct {
-	Result workflow.Future
+type DataexchangeUpdateAssetFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeUpdateAssetResult) Get(ctx workflow.Context) (*dataexchange.UpdateAssetOutput, error) {
+func (r *DataexchangeUpdateAssetFuture) Get(ctx workflow.Context) (*dataexchange.UpdateAssetOutput, error) {
 	var output dataexchange.UpdateAssetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeUpdateDataSetResult struct {
-	Result workflow.Future
+type DataexchangeUpdateDataSetFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeUpdateDataSetResult) Get(ctx workflow.Context) (*dataexchange.UpdateDataSetOutput, error) {
+func (r *DataexchangeUpdateDataSetFuture) Get(ctx workflow.Context) (*dataexchange.UpdateDataSetOutput, error) {
 	var output dataexchange.UpdateDataSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DataexchangeUpdateRevisionResult struct {
-	Result workflow.Future
+type DataexchangeUpdateRevisionFuture struct {
+	Future workflow.Future
 }
 
-func (r *DataexchangeUpdateRevisionResult) Get(ctx workflow.Context) (*dataexchange.UpdateRevisionOutput, error) {
+func (r *DataexchangeUpdateRevisionFuture) Get(ctx workflow.Context) (*dataexchange.UpdateRevisionOutput, error) {
 	var output dataexchange.UpdateRevisionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -309,9 +309,9 @@ func (a *DataExchangeStub) CancelJob(ctx workflow.Context, input *dataexchange.C
 	return &output, err
 }
 
-func (a *DataExchangeStub) CancelJobAsync(ctx workflow.Context, input *dataexchange.CancelJobInput) *DataexchangeCancelJobResult {
+func (a *DataExchangeStub) CancelJobAsync(ctx workflow.Context, input *dataexchange.CancelJobInput) *DataexchangeCancelJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.CancelJob", input)
-	return &DataexchangeCancelJobResult{Result: future}
+	return &DataexchangeCancelJobFuture{Future: future}
 }
 
 func (a *DataExchangeStub) CreateDataSet(ctx workflow.Context, input *dataexchange.CreateDataSetInput) (*dataexchange.CreateDataSetOutput, error) {
@@ -320,9 +320,9 @@ func (a *DataExchangeStub) CreateDataSet(ctx workflow.Context, input *dataexchan
 	return &output, err
 }
 
-func (a *DataExchangeStub) CreateDataSetAsync(ctx workflow.Context, input *dataexchange.CreateDataSetInput) *DataexchangeCreateDataSetResult {
+func (a *DataExchangeStub) CreateDataSetAsync(ctx workflow.Context, input *dataexchange.CreateDataSetInput) *DataexchangeCreateDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.CreateDataSet", input)
-	return &DataexchangeCreateDataSetResult{Result: future}
+	return &DataexchangeCreateDataSetFuture{Future: future}
 }
 
 func (a *DataExchangeStub) CreateJob(ctx workflow.Context, input *dataexchange.CreateJobInput) (*dataexchange.CreateJobOutput, error) {
@@ -331,9 +331,9 @@ func (a *DataExchangeStub) CreateJob(ctx workflow.Context, input *dataexchange.C
 	return &output, err
 }
 
-func (a *DataExchangeStub) CreateJobAsync(ctx workflow.Context, input *dataexchange.CreateJobInput) *DataexchangeCreateJobResult {
+func (a *DataExchangeStub) CreateJobAsync(ctx workflow.Context, input *dataexchange.CreateJobInput) *DataexchangeCreateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.CreateJob", input)
-	return &DataexchangeCreateJobResult{Result: future}
+	return &DataexchangeCreateJobFuture{Future: future}
 }
 
 func (a *DataExchangeStub) CreateRevision(ctx workflow.Context, input *dataexchange.CreateRevisionInput) (*dataexchange.CreateRevisionOutput, error) {
@@ -342,9 +342,9 @@ func (a *DataExchangeStub) CreateRevision(ctx workflow.Context, input *dataexcha
 	return &output, err
 }
 
-func (a *DataExchangeStub) CreateRevisionAsync(ctx workflow.Context, input *dataexchange.CreateRevisionInput) *DataexchangeCreateRevisionResult {
+func (a *DataExchangeStub) CreateRevisionAsync(ctx workflow.Context, input *dataexchange.CreateRevisionInput) *DataexchangeCreateRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.CreateRevision", input)
-	return &DataexchangeCreateRevisionResult{Result: future}
+	return &DataexchangeCreateRevisionFuture{Future: future}
 }
 
 func (a *DataExchangeStub) DeleteAsset(ctx workflow.Context, input *dataexchange.DeleteAssetInput) (*dataexchange.DeleteAssetOutput, error) {
@@ -353,9 +353,9 @@ func (a *DataExchangeStub) DeleteAsset(ctx workflow.Context, input *dataexchange
 	return &output, err
 }
 
-func (a *DataExchangeStub) DeleteAssetAsync(ctx workflow.Context, input *dataexchange.DeleteAssetInput) *DataexchangeDeleteAssetResult {
+func (a *DataExchangeStub) DeleteAssetAsync(ctx workflow.Context, input *dataexchange.DeleteAssetInput) *DataexchangeDeleteAssetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.DeleteAsset", input)
-	return &DataexchangeDeleteAssetResult{Result: future}
+	return &DataexchangeDeleteAssetFuture{Future: future}
 }
 
 func (a *DataExchangeStub) DeleteDataSet(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) (*dataexchange.DeleteDataSetOutput, error) {
@@ -364,9 +364,9 @@ func (a *DataExchangeStub) DeleteDataSet(ctx workflow.Context, input *dataexchan
 	return &output, err
 }
 
-func (a *DataExchangeStub) DeleteDataSetAsync(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) *DataexchangeDeleteDataSetResult {
+func (a *DataExchangeStub) DeleteDataSetAsync(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) *DataexchangeDeleteDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.DeleteDataSet", input)
-	return &DataexchangeDeleteDataSetResult{Result: future}
+	return &DataexchangeDeleteDataSetFuture{Future: future}
 }
 
 func (a *DataExchangeStub) DeleteRevision(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) (*dataexchange.DeleteRevisionOutput, error) {
@@ -375,9 +375,9 @@ func (a *DataExchangeStub) DeleteRevision(ctx workflow.Context, input *dataexcha
 	return &output, err
 }
 
-func (a *DataExchangeStub) DeleteRevisionAsync(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) *DataexchangeDeleteRevisionResult {
+func (a *DataExchangeStub) DeleteRevisionAsync(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) *DataexchangeDeleteRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.DeleteRevision", input)
-	return &DataexchangeDeleteRevisionResult{Result: future}
+	return &DataexchangeDeleteRevisionFuture{Future: future}
 }
 
 func (a *DataExchangeStub) GetAsset(ctx workflow.Context, input *dataexchange.GetAssetInput) (*dataexchange.GetAssetOutput, error) {
@@ -386,9 +386,9 @@ func (a *DataExchangeStub) GetAsset(ctx workflow.Context, input *dataexchange.Ge
 	return &output, err
 }
 
-func (a *DataExchangeStub) GetAssetAsync(ctx workflow.Context, input *dataexchange.GetAssetInput) *DataexchangeGetAssetResult {
+func (a *DataExchangeStub) GetAssetAsync(ctx workflow.Context, input *dataexchange.GetAssetInput) *DataexchangeGetAssetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.GetAsset", input)
-	return &DataexchangeGetAssetResult{Result: future}
+	return &DataexchangeGetAssetFuture{Future: future}
 }
 
 func (a *DataExchangeStub) GetDataSet(ctx workflow.Context, input *dataexchange.GetDataSetInput) (*dataexchange.GetDataSetOutput, error) {
@@ -397,9 +397,9 @@ func (a *DataExchangeStub) GetDataSet(ctx workflow.Context, input *dataexchange.
 	return &output, err
 }
 
-func (a *DataExchangeStub) GetDataSetAsync(ctx workflow.Context, input *dataexchange.GetDataSetInput) *DataexchangeGetDataSetResult {
+func (a *DataExchangeStub) GetDataSetAsync(ctx workflow.Context, input *dataexchange.GetDataSetInput) *DataexchangeGetDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.GetDataSet", input)
-	return &DataexchangeGetDataSetResult{Result: future}
+	return &DataexchangeGetDataSetFuture{Future: future}
 }
 
 func (a *DataExchangeStub) GetJob(ctx workflow.Context, input *dataexchange.GetJobInput) (*dataexchange.GetJobOutput, error) {
@@ -408,9 +408,9 @@ func (a *DataExchangeStub) GetJob(ctx workflow.Context, input *dataexchange.GetJ
 	return &output, err
 }
 
-func (a *DataExchangeStub) GetJobAsync(ctx workflow.Context, input *dataexchange.GetJobInput) *DataexchangeGetJobResult {
+func (a *DataExchangeStub) GetJobAsync(ctx workflow.Context, input *dataexchange.GetJobInput) *DataexchangeGetJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.GetJob", input)
-	return &DataexchangeGetJobResult{Result: future}
+	return &DataexchangeGetJobFuture{Future: future}
 }
 
 func (a *DataExchangeStub) GetRevision(ctx workflow.Context, input *dataexchange.GetRevisionInput) (*dataexchange.GetRevisionOutput, error) {
@@ -419,9 +419,9 @@ func (a *DataExchangeStub) GetRevision(ctx workflow.Context, input *dataexchange
 	return &output, err
 }
 
-func (a *DataExchangeStub) GetRevisionAsync(ctx workflow.Context, input *dataexchange.GetRevisionInput) *DataexchangeGetRevisionResult {
+func (a *DataExchangeStub) GetRevisionAsync(ctx workflow.Context, input *dataexchange.GetRevisionInput) *DataexchangeGetRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.GetRevision", input)
-	return &DataexchangeGetRevisionResult{Result: future}
+	return &DataexchangeGetRevisionFuture{Future: future}
 }
 
 func (a *DataExchangeStub) ListDataSetRevisions(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) (*dataexchange.ListDataSetRevisionsOutput, error) {
@@ -430,9 +430,9 @@ func (a *DataExchangeStub) ListDataSetRevisions(ctx workflow.Context, input *dat
 	return &output, err
 }
 
-func (a *DataExchangeStub) ListDataSetRevisionsAsync(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) *DataexchangeListDataSetRevisionsResult {
+func (a *DataExchangeStub) ListDataSetRevisionsAsync(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) *DataexchangeListDataSetRevisionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.ListDataSetRevisions", input)
-	return &DataexchangeListDataSetRevisionsResult{Result: future}
+	return &DataexchangeListDataSetRevisionsFuture{Future: future}
 }
 
 func (a *DataExchangeStub) ListDataSets(ctx workflow.Context, input *dataexchange.ListDataSetsInput) (*dataexchange.ListDataSetsOutput, error) {
@@ -441,9 +441,9 @@ func (a *DataExchangeStub) ListDataSets(ctx workflow.Context, input *dataexchang
 	return &output, err
 }
 
-func (a *DataExchangeStub) ListDataSetsAsync(ctx workflow.Context, input *dataexchange.ListDataSetsInput) *DataexchangeListDataSetsResult {
+func (a *DataExchangeStub) ListDataSetsAsync(ctx workflow.Context, input *dataexchange.ListDataSetsInput) *DataexchangeListDataSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.ListDataSets", input)
-	return &DataexchangeListDataSetsResult{Result: future}
+	return &DataexchangeListDataSetsFuture{Future: future}
 }
 
 func (a *DataExchangeStub) ListJobs(ctx workflow.Context, input *dataexchange.ListJobsInput) (*dataexchange.ListJobsOutput, error) {
@@ -452,9 +452,9 @@ func (a *DataExchangeStub) ListJobs(ctx workflow.Context, input *dataexchange.Li
 	return &output, err
 }
 
-func (a *DataExchangeStub) ListJobsAsync(ctx workflow.Context, input *dataexchange.ListJobsInput) *DataexchangeListJobsResult {
+func (a *DataExchangeStub) ListJobsAsync(ctx workflow.Context, input *dataexchange.ListJobsInput) *DataexchangeListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.ListJobs", input)
-	return &DataexchangeListJobsResult{Result: future}
+	return &DataexchangeListJobsFuture{Future: future}
 }
 
 func (a *DataExchangeStub) ListRevisionAssets(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) (*dataexchange.ListRevisionAssetsOutput, error) {
@@ -463,9 +463,9 @@ func (a *DataExchangeStub) ListRevisionAssets(ctx workflow.Context, input *datae
 	return &output, err
 }
 
-func (a *DataExchangeStub) ListRevisionAssetsAsync(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) *DataexchangeListRevisionAssetsResult {
+func (a *DataExchangeStub) ListRevisionAssetsAsync(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) *DataexchangeListRevisionAssetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.ListRevisionAssets", input)
-	return &DataexchangeListRevisionAssetsResult{Result: future}
+	return &DataexchangeListRevisionAssetsFuture{Future: future}
 }
 
 func (a *DataExchangeStub) ListTagsForResource(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) (*dataexchange.ListTagsForResourceOutput, error) {
@@ -474,9 +474,9 @@ func (a *DataExchangeStub) ListTagsForResource(ctx workflow.Context, input *data
 	return &output, err
 }
 
-func (a *DataExchangeStub) ListTagsForResourceAsync(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) *DataexchangeListTagsForResourceResult {
+func (a *DataExchangeStub) ListTagsForResourceAsync(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) *DataexchangeListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.ListTagsForResource", input)
-	return &DataexchangeListTagsForResourceResult{Result: future}
+	return &DataexchangeListTagsForResourceFuture{Future: future}
 }
 
 func (a *DataExchangeStub) StartJob(ctx workflow.Context, input *dataexchange.StartJobInput) (*dataexchange.StartJobOutput, error) {
@@ -485,9 +485,9 @@ func (a *DataExchangeStub) StartJob(ctx workflow.Context, input *dataexchange.St
 	return &output, err
 }
 
-func (a *DataExchangeStub) StartJobAsync(ctx workflow.Context, input *dataexchange.StartJobInput) *DataexchangeStartJobResult {
+func (a *DataExchangeStub) StartJobAsync(ctx workflow.Context, input *dataexchange.StartJobInput) *DataexchangeStartJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.StartJob", input)
-	return &DataexchangeStartJobResult{Result: future}
+	return &DataexchangeStartJobFuture{Future: future}
 }
 
 func (a *DataExchangeStub) TagResource(ctx workflow.Context, input *dataexchange.TagResourceInput) (*dataexchange.TagResourceOutput, error) {
@@ -496,9 +496,9 @@ func (a *DataExchangeStub) TagResource(ctx workflow.Context, input *dataexchange
 	return &output, err
 }
 
-func (a *DataExchangeStub) TagResourceAsync(ctx workflow.Context, input *dataexchange.TagResourceInput) *DataexchangeTagResourceResult {
+func (a *DataExchangeStub) TagResourceAsync(ctx workflow.Context, input *dataexchange.TagResourceInput) *DataexchangeTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.TagResource", input)
-	return &DataexchangeTagResourceResult{Result: future}
+	return &DataexchangeTagResourceFuture{Future: future}
 }
 
 func (a *DataExchangeStub) UntagResource(ctx workflow.Context, input *dataexchange.UntagResourceInput) (*dataexchange.UntagResourceOutput, error) {
@@ -507,9 +507,9 @@ func (a *DataExchangeStub) UntagResource(ctx workflow.Context, input *dataexchan
 	return &output, err
 }
 
-func (a *DataExchangeStub) UntagResourceAsync(ctx workflow.Context, input *dataexchange.UntagResourceInput) *DataexchangeUntagResourceResult {
+func (a *DataExchangeStub) UntagResourceAsync(ctx workflow.Context, input *dataexchange.UntagResourceInput) *DataexchangeUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.UntagResource", input)
-	return &DataexchangeUntagResourceResult{Result: future}
+	return &DataexchangeUntagResourceFuture{Future: future}
 }
 
 func (a *DataExchangeStub) UpdateAsset(ctx workflow.Context, input *dataexchange.UpdateAssetInput) (*dataexchange.UpdateAssetOutput, error) {
@@ -518,9 +518,9 @@ func (a *DataExchangeStub) UpdateAsset(ctx workflow.Context, input *dataexchange
 	return &output, err
 }
 
-func (a *DataExchangeStub) UpdateAssetAsync(ctx workflow.Context, input *dataexchange.UpdateAssetInput) *DataexchangeUpdateAssetResult {
+func (a *DataExchangeStub) UpdateAssetAsync(ctx workflow.Context, input *dataexchange.UpdateAssetInput) *DataexchangeUpdateAssetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.UpdateAsset", input)
-	return &DataexchangeUpdateAssetResult{Result: future}
+	return &DataexchangeUpdateAssetFuture{Future: future}
 }
 
 func (a *DataExchangeStub) UpdateDataSet(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) (*dataexchange.UpdateDataSetOutput, error) {
@@ -529,9 +529,9 @@ func (a *DataExchangeStub) UpdateDataSet(ctx workflow.Context, input *dataexchan
 	return &output, err
 }
 
-func (a *DataExchangeStub) UpdateDataSetAsync(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) *DataexchangeUpdateDataSetResult {
+func (a *DataExchangeStub) UpdateDataSetAsync(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) *DataexchangeUpdateDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.UpdateDataSet", input)
-	return &DataexchangeUpdateDataSetResult{Result: future}
+	return &DataexchangeUpdateDataSetFuture{Future: future}
 }
 
 func (a *DataExchangeStub) UpdateRevision(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) (*dataexchange.UpdateRevisionOutput, error) {
@@ -540,7 +540,7 @@ func (a *DataExchangeStub) UpdateRevision(ctx workflow.Context, input *dataexcha
 	return &output, err
 }
 
-func (a *DataExchangeStub) UpdateRevisionAsync(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) *DataexchangeUpdateRevisionResult {
+func (a *DataExchangeStub) UpdateRevisionAsync(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) *DataexchangeUpdateRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dataexchange.UpdateRevision", input)
-	return &DataexchangeUpdateRevisionResult{Result: future}
+	return &DataexchangeUpdateRevisionFuture{Future: future}
 }

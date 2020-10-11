@@ -11,13 +11,13 @@ import (
 
 type SSOOIDCClient interface {
 	CreateToken(ctx workflow.Context, input *ssooidc.CreateTokenInput) (*ssooidc.CreateTokenOutput, error)
-	CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SsooidcCreateTokenResult
+	CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SsooidcCreateTokenFuture
 
 	RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error)
-	RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SsooidcRegisterClientResult
+	RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SsooidcRegisterClientFuture
 
 	StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error)
-	StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationResult
+	StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationFuture
 }
 
 type SSOOIDCStub struct{}
@@ -26,33 +26,33 @@ func NewSSOOIDCStub() SSOOIDCClient {
 	return &SSOOIDCStub{}
 }
 
-type SsooidcCreateTokenResult struct {
-	Result workflow.Future
+type SsooidcCreateTokenFuture struct {
+	Future workflow.Future
 }
 
-func (r *SsooidcCreateTokenResult) Get(ctx workflow.Context) (*ssooidc.CreateTokenOutput, error) {
+func (r *SsooidcCreateTokenFuture) Get(ctx workflow.Context) (*ssooidc.CreateTokenOutput, error) {
 	var output ssooidc.CreateTokenOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SsooidcRegisterClientResult struct {
-	Result workflow.Future
+type SsooidcRegisterClientFuture struct {
+	Future workflow.Future
 }
 
-func (r *SsooidcRegisterClientResult) Get(ctx workflow.Context) (*ssooidc.RegisterClientOutput, error) {
+func (r *SsooidcRegisterClientFuture) Get(ctx workflow.Context) (*ssooidc.RegisterClientOutput, error) {
 	var output ssooidc.RegisterClientOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SsooidcStartDeviceAuthorizationResult struct {
-	Result workflow.Future
+type SsooidcStartDeviceAuthorizationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SsooidcStartDeviceAuthorizationResult) Get(ctx workflow.Context) (*ssooidc.StartDeviceAuthorizationOutput, error) {
+func (r *SsooidcStartDeviceAuthorizationFuture) Get(ctx workflow.Context) (*ssooidc.StartDeviceAuthorizationOutput, error) {
 	var output ssooidc.StartDeviceAuthorizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -62,9 +62,9 @@ func (a *SSOOIDCStub) CreateToken(ctx workflow.Context, input *ssooidc.CreateTok
 	return &output, err
 }
 
-func (a *SSOOIDCStub) CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SsooidcCreateTokenResult {
+func (a *SSOOIDCStub) CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SsooidcCreateTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.CreateToken", input)
-	return &SsooidcCreateTokenResult{Result: future}
+	return &SsooidcCreateTokenFuture{Future: future}
 }
 
 func (a *SSOOIDCStub) RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error) {
@@ -73,9 +73,9 @@ func (a *SSOOIDCStub) RegisterClient(ctx workflow.Context, input *ssooidc.Regist
 	return &output, err
 }
 
-func (a *SSOOIDCStub) RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SsooidcRegisterClientResult {
+func (a *SSOOIDCStub) RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SsooidcRegisterClientFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.RegisterClient", input)
-	return &SsooidcRegisterClientResult{Result: future}
+	return &SsooidcRegisterClientFuture{Future: future}
 }
 
 func (a *SSOOIDCStub) StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error) {
@@ -84,7 +84,7 @@ func (a *SSOOIDCStub) StartDeviceAuthorization(ctx workflow.Context, input *ssoo
 	return &output, err
 }
 
-func (a *SSOOIDCStub) StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationResult {
+func (a *SSOOIDCStub) StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.StartDeviceAuthorization", input)
-	return &SsooidcStartDeviceAuthorizationResult{Result: future}
+	return &SsooidcStartDeviceAuthorizationFuture{Future: future}
 }

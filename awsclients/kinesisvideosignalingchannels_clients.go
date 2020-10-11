@@ -11,10 +11,10 @@ import (
 
 type KinesisVideoSignalingChannelsClient interface {
 	GetIceServerConfig(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error)
-	GetIceServerConfigAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) *KinesisvideosignalingchannelsGetIceServerConfigResult
+	GetIceServerConfigAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) *KinesisvideosignalingchannelsGetIceServerConfigFuture
 
 	SendAlexaOfferToMaster(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error)
-	SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *KinesisvideosignalingchannelsSendAlexaOfferToMasterResult
+	SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *KinesisvideosignalingchannelsSendAlexaOfferToMasterFuture
 }
 
 type KinesisVideoSignalingChannelsStub struct{}
@@ -23,23 +23,23 @@ func NewKinesisVideoSignalingChannelsStub() KinesisVideoSignalingChannelsClient 
 	return &KinesisVideoSignalingChannelsStub{}
 }
 
-type KinesisvideosignalingchannelsGetIceServerConfigResult struct {
-	Result workflow.Future
+type KinesisvideosignalingchannelsGetIceServerConfigFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisvideosignalingchannelsGetIceServerConfigResult) Get(ctx workflow.Context) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
+func (r *KinesisvideosignalingchannelsGetIceServerConfigFuture) Get(ctx workflow.Context) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
 	var output kinesisvideosignalingchannels.GetIceServerConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideosignalingchannelsSendAlexaOfferToMasterResult struct {
-	Result workflow.Future
+type KinesisvideosignalingchannelsSendAlexaOfferToMasterFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisvideosignalingchannelsSendAlexaOfferToMasterResult) Get(ctx workflow.Context) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
+func (r *KinesisvideosignalingchannelsSendAlexaOfferToMasterFuture) Get(ctx workflow.Context) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
 	var output kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -49,9 +49,9 @@ func (a *KinesisVideoSignalingChannelsStub) GetIceServerConfig(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *KinesisVideoSignalingChannelsStub) GetIceServerConfigAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) *KinesisvideosignalingchannelsGetIceServerConfigResult {
+func (a *KinesisVideoSignalingChannelsStub) GetIceServerConfigAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) *KinesisvideosignalingchannelsGetIceServerConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideosignalingchannels.GetIceServerConfig", input)
-	return &KinesisvideosignalingchannelsGetIceServerConfigResult{Result: future}
+	return &KinesisvideosignalingchannelsGetIceServerConfigFuture{Future: future}
 }
 
 func (a *KinesisVideoSignalingChannelsStub) SendAlexaOfferToMaster(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
@@ -60,7 +60,7 @@ func (a *KinesisVideoSignalingChannelsStub) SendAlexaOfferToMaster(ctx workflow.
 	return &output, err
 }
 
-func (a *KinesisVideoSignalingChannelsStub) SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *KinesisvideosignalingchannelsSendAlexaOfferToMasterResult {
+func (a *KinesisVideoSignalingChannelsStub) SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *KinesisvideosignalingchannelsSendAlexaOfferToMasterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideosignalingchannels.SendAlexaOfferToMaster", input)
-	return &KinesisvideosignalingchannelsSendAlexaOfferToMasterResult{Result: future}
+	return &KinesisvideosignalingchannelsSendAlexaOfferToMasterFuture{Future: future}
 }

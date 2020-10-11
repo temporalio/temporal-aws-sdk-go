@@ -11,109 +11,109 @@ import (
 
 type SMSClient interface {
 	CreateApp(ctx workflow.Context, input *sms.CreateAppInput) (*sms.CreateAppOutput, error)
-	CreateAppAsync(ctx workflow.Context, input *sms.CreateAppInput) *SmsCreateAppResult
+	CreateAppAsync(ctx workflow.Context, input *sms.CreateAppInput) *SmsCreateAppFuture
 
 	CreateReplicationJob(ctx workflow.Context, input *sms.CreateReplicationJobInput) (*sms.CreateReplicationJobOutput, error)
-	CreateReplicationJobAsync(ctx workflow.Context, input *sms.CreateReplicationJobInput) *SmsCreateReplicationJobResult
+	CreateReplicationJobAsync(ctx workflow.Context, input *sms.CreateReplicationJobInput) *SmsCreateReplicationJobFuture
 
 	DeleteApp(ctx workflow.Context, input *sms.DeleteAppInput) (*sms.DeleteAppOutput, error)
-	DeleteAppAsync(ctx workflow.Context, input *sms.DeleteAppInput) *SmsDeleteAppResult
+	DeleteAppAsync(ctx workflow.Context, input *sms.DeleteAppInput) *SmsDeleteAppFuture
 
 	DeleteAppLaunchConfiguration(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) (*sms.DeleteAppLaunchConfigurationOutput, error)
-	DeleteAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) *SmsDeleteAppLaunchConfigurationResult
+	DeleteAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) *SmsDeleteAppLaunchConfigurationFuture
 
 	DeleteAppReplicationConfiguration(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) (*sms.DeleteAppReplicationConfigurationOutput, error)
-	DeleteAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) *SmsDeleteAppReplicationConfigurationResult
+	DeleteAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) *SmsDeleteAppReplicationConfigurationFuture
 
 	DeleteAppValidationConfiguration(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) (*sms.DeleteAppValidationConfigurationOutput, error)
-	DeleteAppValidationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) *SmsDeleteAppValidationConfigurationResult
+	DeleteAppValidationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) *SmsDeleteAppValidationConfigurationFuture
 
 	DeleteReplicationJob(ctx workflow.Context, input *sms.DeleteReplicationJobInput) (*sms.DeleteReplicationJobOutput, error)
-	DeleteReplicationJobAsync(ctx workflow.Context, input *sms.DeleteReplicationJobInput) *SmsDeleteReplicationJobResult
+	DeleteReplicationJobAsync(ctx workflow.Context, input *sms.DeleteReplicationJobInput) *SmsDeleteReplicationJobFuture
 
 	DeleteServerCatalog(ctx workflow.Context, input *sms.DeleteServerCatalogInput) (*sms.DeleteServerCatalogOutput, error)
-	DeleteServerCatalogAsync(ctx workflow.Context, input *sms.DeleteServerCatalogInput) *SmsDeleteServerCatalogResult
+	DeleteServerCatalogAsync(ctx workflow.Context, input *sms.DeleteServerCatalogInput) *SmsDeleteServerCatalogFuture
 
 	DisassociateConnector(ctx workflow.Context, input *sms.DisassociateConnectorInput) (*sms.DisassociateConnectorOutput, error)
-	DisassociateConnectorAsync(ctx workflow.Context, input *sms.DisassociateConnectorInput) *SmsDisassociateConnectorResult
+	DisassociateConnectorAsync(ctx workflow.Context, input *sms.DisassociateConnectorInput) *SmsDisassociateConnectorFuture
 
 	GenerateChangeSet(ctx workflow.Context, input *sms.GenerateChangeSetInput) (*sms.GenerateChangeSetOutput, error)
-	GenerateChangeSetAsync(ctx workflow.Context, input *sms.GenerateChangeSetInput) *SmsGenerateChangeSetResult
+	GenerateChangeSetAsync(ctx workflow.Context, input *sms.GenerateChangeSetInput) *SmsGenerateChangeSetFuture
 
 	GenerateTemplate(ctx workflow.Context, input *sms.GenerateTemplateInput) (*sms.GenerateTemplateOutput, error)
-	GenerateTemplateAsync(ctx workflow.Context, input *sms.GenerateTemplateInput) *SmsGenerateTemplateResult
+	GenerateTemplateAsync(ctx workflow.Context, input *sms.GenerateTemplateInput) *SmsGenerateTemplateFuture
 
 	GetApp(ctx workflow.Context, input *sms.GetAppInput) (*sms.GetAppOutput, error)
-	GetAppAsync(ctx workflow.Context, input *sms.GetAppInput) *SmsGetAppResult
+	GetAppAsync(ctx workflow.Context, input *sms.GetAppInput) *SmsGetAppFuture
 
 	GetAppLaunchConfiguration(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) (*sms.GetAppLaunchConfigurationOutput, error)
-	GetAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) *SmsGetAppLaunchConfigurationResult
+	GetAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) *SmsGetAppLaunchConfigurationFuture
 
 	GetAppReplicationConfiguration(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) (*sms.GetAppReplicationConfigurationOutput, error)
-	GetAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) *SmsGetAppReplicationConfigurationResult
+	GetAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) *SmsGetAppReplicationConfigurationFuture
 
 	GetAppValidationConfiguration(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) (*sms.GetAppValidationConfigurationOutput, error)
-	GetAppValidationConfigurationAsync(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) *SmsGetAppValidationConfigurationResult
+	GetAppValidationConfigurationAsync(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) *SmsGetAppValidationConfigurationFuture
 
 	GetAppValidationOutput(ctx workflow.Context, input *sms.GetAppValidationOutputInput) (*sms.GetAppValidationOutputOutput, error)
-	GetAppValidationOutputAsync(ctx workflow.Context, input *sms.GetAppValidationOutputInput) *SmsGetAppValidationOutputResult
+	GetAppValidationOutputAsync(ctx workflow.Context, input *sms.GetAppValidationOutputInput) *SmsGetAppValidationOutputFuture
 
 	GetConnectors(ctx workflow.Context, input *sms.GetConnectorsInput) (*sms.GetConnectorsOutput, error)
-	GetConnectorsAsync(ctx workflow.Context, input *sms.GetConnectorsInput) *SmsGetConnectorsResult
+	GetConnectorsAsync(ctx workflow.Context, input *sms.GetConnectorsInput) *SmsGetConnectorsFuture
 
 	GetReplicationJobs(ctx workflow.Context, input *sms.GetReplicationJobsInput) (*sms.GetReplicationJobsOutput, error)
-	GetReplicationJobsAsync(ctx workflow.Context, input *sms.GetReplicationJobsInput) *SmsGetReplicationJobsResult
+	GetReplicationJobsAsync(ctx workflow.Context, input *sms.GetReplicationJobsInput) *SmsGetReplicationJobsFuture
 
 	GetReplicationRuns(ctx workflow.Context, input *sms.GetReplicationRunsInput) (*sms.GetReplicationRunsOutput, error)
-	GetReplicationRunsAsync(ctx workflow.Context, input *sms.GetReplicationRunsInput) *SmsGetReplicationRunsResult
+	GetReplicationRunsAsync(ctx workflow.Context, input *sms.GetReplicationRunsInput) *SmsGetReplicationRunsFuture
 
 	GetServers(ctx workflow.Context, input *sms.GetServersInput) (*sms.GetServersOutput, error)
-	GetServersAsync(ctx workflow.Context, input *sms.GetServersInput) *SmsGetServersResult
+	GetServersAsync(ctx workflow.Context, input *sms.GetServersInput) *SmsGetServersFuture
 
 	ImportAppCatalog(ctx workflow.Context, input *sms.ImportAppCatalogInput) (*sms.ImportAppCatalogOutput, error)
-	ImportAppCatalogAsync(ctx workflow.Context, input *sms.ImportAppCatalogInput) *SmsImportAppCatalogResult
+	ImportAppCatalogAsync(ctx workflow.Context, input *sms.ImportAppCatalogInput) *SmsImportAppCatalogFuture
 
 	ImportServerCatalog(ctx workflow.Context, input *sms.ImportServerCatalogInput) (*sms.ImportServerCatalogOutput, error)
-	ImportServerCatalogAsync(ctx workflow.Context, input *sms.ImportServerCatalogInput) *SmsImportServerCatalogResult
+	ImportServerCatalogAsync(ctx workflow.Context, input *sms.ImportServerCatalogInput) *SmsImportServerCatalogFuture
 
 	LaunchApp(ctx workflow.Context, input *sms.LaunchAppInput) (*sms.LaunchAppOutput, error)
-	LaunchAppAsync(ctx workflow.Context, input *sms.LaunchAppInput) *SmsLaunchAppResult
+	LaunchAppAsync(ctx workflow.Context, input *sms.LaunchAppInput) *SmsLaunchAppFuture
 
 	ListApps(ctx workflow.Context, input *sms.ListAppsInput) (*sms.ListAppsOutput, error)
-	ListAppsAsync(ctx workflow.Context, input *sms.ListAppsInput) *SmsListAppsResult
+	ListAppsAsync(ctx workflow.Context, input *sms.ListAppsInput) *SmsListAppsFuture
 
 	NotifyAppValidationOutput(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) (*sms.NotifyAppValidationOutputOutput, error)
-	NotifyAppValidationOutputAsync(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) *SmsNotifyAppValidationOutputResult
+	NotifyAppValidationOutputAsync(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) *SmsNotifyAppValidationOutputFuture
 
 	PutAppLaunchConfiguration(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) (*sms.PutAppLaunchConfigurationOutput, error)
-	PutAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) *SmsPutAppLaunchConfigurationResult
+	PutAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) *SmsPutAppLaunchConfigurationFuture
 
 	PutAppReplicationConfiguration(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) (*sms.PutAppReplicationConfigurationOutput, error)
-	PutAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) *SmsPutAppReplicationConfigurationResult
+	PutAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) *SmsPutAppReplicationConfigurationFuture
 
 	PutAppValidationConfiguration(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) (*sms.PutAppValidationConfigurationOutput, error)
-	PutAppValidationConfigurationAsync(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) *SmsPutAppValidationConfigurationResult
+	PutAppValidationConfigurationAsync(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) *SmsPutAppValidationConfigurationFuture
 
 	StartAppReplication(ctx workflow.Context, input *sms.StartAppReplicationInput) (*sms.StartAppReplicationOutput, error)
-	StartAppReplicationAsync(ctx workflow.Context, input *sms.StartAppReplicationInput) *SmsStartAppReplicationResult
+	StartAppReplicationAsync(ctx workflow.Context, input *sms.StartAppReplicationInput) *SmsStartAppReplicationFuture
 
 	StartOnDemandAppReplication(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) (*sms.StartOnDemandAppReplicationOutput, error)
-	StartOnDemandAppReplicationAsync(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) *SmsStartOnDemandAppReplicationResult
+	StartOnDemandAppReplicationAsync(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) *SmsStartOnDemandAppReplicationFuture
 
 	StartOnDemandReplicationRun(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) (*sms.StartOnDemandReplicationRunOutput, error)
-	StartOnDemandReplicationRunAsync(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) *SmsStartOnDemandReplicationRunResult
+	StartOnDemandReplicationRunAsync(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) *SmsStartOnDemandReplicationRunFuture
 
 	StopAppReplication(ctx workflow.Context, input *sms.StopAppReplicationInput) (*sms.StopAppReplicationOutput, error)
-	StopAppReplicationAsync(ctx workflow.Context, input *sms.StopAppReplicationInput) *SmsStopAppReplicationResult
+	StopAppReplicationAsync(ctx workflow.Context, input *sms.StopAppReplicationInput) *SmsStopAppReplicationFuture
 
 	TerminateApp(ctx workflow.Context, input *sms.TerminateAppInput) (*sms.TerminateAppOutput, error)
-	TerminateAppAsync(ctx workflow.Context, input *sms.TerminateAppInput) *SmsTerminateAppResult
+	TerminateAppAsync(ctx workflow.Context, input *sms.TerminateAppInput) *SmsTerminateAppFuture
 
 	UpdateApp(ctx workflow.Context, input *sms.UpdateAppInput) (*sms.UpdateAppOutput, error)
-	UpdateAppAsync(ctx workflow.Context, input *sms.UpdateAppInput) *SmsUpdateAppResult
+	UpdateAppAsync(ctx workflow.Context, input *sms.UpdateAppInput) *SmsUpdateAppFuture
 
 	UpdateReplicationJob(ctx workflow.Context, input *sms.UpdateReplicationJobInput) (*sms.UpdateReplicationJobOutput, error)
-	UpdateReplicationJobAsync(ctx workflow.Context, input *sms.UpdateReplicationJobInput) *SmsUpdateReplicationJobResult
+	UpdateReplicationJobAsync(ctx workflow.Context, input *sms.UpdateReplicationJobInput) *SmsUpdateReplicationJobFuture
 }
 
 type SMSStub struct{}
@@ -122,353 +122,353 @@ func NewSMSStub() SMSClient {
 	return &SMSStub{}
 }
 
-type SmsCreateAppResult struct {
-	Result workflow.Future
+type SmsCreateAppFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsCreateAppResult) Get(ctx workflow.Context) (*sms.CreateAppOutput, error) {
+func (r *SmsCreateAppFuture) Get(ctx workflow.Context) (*sms.CreateAppOutput, error) {
 	var output sms.CreateAppOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsCreateReplicationJobResult struct {
-	Result workflow.Future
+type SmsCreateReplicationJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsCreateReplicationJobResult) Get(ctx workflow.Context) (*sms.CreateReplicationJobOutput, error) {
+func (r *SmsCreateReplicationJobFuture) Get(ctx workflow.Context) (*sms.CreateReplicationJobOutput, error) {
 	var output sms.CreateReplicationJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsDeleteAppResult struct {
-	Result workflow.Future
+type SmsDeleteAppFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsDeleteAppResult) Get(ctx workflow.Context) (*sms.DeleteAppOutput, error) {
+func (r *SmsDeleteAppFuture) Get(ctx workflow.Context) (*sms.DeleteAppOutput, error) {
 	var output sms.DeleteAppOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsDeleteAppLaunchConfigurationResult struct {
-	Result workflow.Future
+type SmsDeleteAppLaunchConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsDeleteAppLaunchConfigurationResult) Get(ctx workflow.Context) (*sms.DeleteAppLaunchConfigurationOutput, error) {
+func (r *SmsDeleteAppLaunchConfigurationFuture) Get(ctx workflow.Context) (*sms.DeleteAppLaunchConfigurationOutput, error) {
 	var output sms.DeleteAppLaunchConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsDeleteAppReplicationConfigurationResult struct {
-	Result workflow.Future
+type SmsDeleteAppReplicationConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsDeleteAppReplicationConfigurationResult) Get(ctx workflow.Context) (*sms.DeleteAppReplicationConfigurationOutput, error) {
+func (r *SmsDeleteAppReplicationConfigurationFuture) Get(ctx workflow.Context) (*sms.DeleteAppReplicationConfigurationOutput, error) {
 	var output sms.DeleteAppReplicationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsDeleteAppValidationConfigurationResult struct {
-	Result workflow.Future
+type SmsDeleteAppValidationConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsDeleteAppValidationConfigurationResult) Get(ctx workflow.Context) (*sms.DeleteAppValidationConfigurationOutput, error) {
+func (r *SmsDeleteAppValidationConfigurationFuture) Get(ctx workflow.Context) (*sms.DeleteAppValidationConfigurationOutput, error) {
 	var output sms.DeleteAppValidationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsDeleteReplicationJobResult struct {
-	Result workflow.Future
+type SmsDeleteReplicationJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsDeleteReplicationJobResult) Get(ctx workflow.Context) (*sms.DeleteReplicationJobOutput, error) {
+func (r *SmsDeleteReplicationJobFuture) Get(ctx workflow.Context) (*sms.DeleteReplicationJobOutput, error) {
 	var output sms.DeleteReplicationJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsDeleteServerCatalogResult struct {
-	Result workflow.Future
+type SmsDeleteServerCatalogFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsDeleteServerCatalogResult) Get(ctx workflow.Context) (*sms.DeleteServerCatalogOutput, error) {
+func (r *SmsDeleteServerCatalogFuture) Get(ctx workflow.Context) (*sms.DeleteServerCatalogOutput, error) {
 	var output sms.DeleteServerCatalogOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsDisassociateConnectorResult struct {
-	Result workflow.Future
+type SmsDisassociateConnectorFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsDisassociateConnectorResult) Get(ctx workflow.Context) (*sms.DisassociateConnectorOutput, error) {
+func (r *SmsDisassociateConnectorFuture) Get(ctx workflow.Context) (*sms.DisassociateConnectorOutput, error) {
 	var output sms.DisassociateConnectorOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGenerateChangeSetResult struct {
-	Result workflow.Future
+type SmsGenerateChangeSetFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGenerateChangeSetResult) Get(ctx workflow.Context) (*sms.GenerateChangeSetOutput, error) {
+func (r *SmsGenerateChangeSetFuture) Get(ctx workflow.Context) (*sms.GenerateChangeSetOutput, error) {
 	var output sms.GenerateChangeSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGenerateTemplateResult struct {
-	Result workflow.Future
+type SmsGenerateTemplateFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGenerateTemplateResult) Get(ctx workflow.Context) (*sms.GenerateTemplateOutput, error) {
+func (r *SmsGenerateTemplateFuture) Get(ctx workflow.Context) (*sms.GenerateTemplateOutput, error) {
 	var output sms.GenerateTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetAppResult struct {
-	Result workflow.Future
+type SmsGetAppFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetAppResult) Get(ctx workflow.Context) (*sms.GetAppOutput, error) {
+func (r *SmsGetAppFuture) Get(ctx workflow.Context) (*sms.GetAppOutput, error) {
 	var output sms.GetAppOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetAppLaunchConfigurationResult struct {
-	Result workflow.Future
+type SmsGetAppLaunchConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetAppLaunchConfigurationResult) Get(ctx workflow.Context) (*sms.GetAppLaunchConfigurationOutput, error) {
+func (r *SmsGetAppLaunchConfigurationFuture) Get(ctx workflow.Context) (*sms.GetAppLaunchConfigurationOutput, error) {
 	var output sms.GetAppLaunchConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetAppReplicationConfigurationResult struct {
-	Result workflow.Future
+type SmsGetAppReplicationConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetAppReplicationConfigurationResult) Get(ctx workflow.Context) (*sms.GetAppReplicationConfigurationOutput, error) {
+func (r *SmsGetAppReplicationConfigurationFuture) Get(ctx workflow.Context) (*sms.GetAppReplicationConfigurationOutput, error) {
 	var output sms.GetAppReplicationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetAppValidationConfigurationResult struct {
-	Result workflow.Future
+type SmsGetAppValidationConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetAppValidationConfigurationResult) Get(ctx workflow.Context) (*sms.GetAppValidationConfigurationOutput, error) {
+func (r *SmsGetAppValidationConfigurationFuture) Get(ctx workflow.Context) (*sms.GetAppValidationConfigurationOutput, error) {
 	var output sms.GetAppValidationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetAppValidationOutputResult struct {
-	Result workflow.Future
+type SmsGetAppValidationOutputFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetAppValidationOutputResult) Get(ctx workflow.Context) (*sms.GetAppValidationOutputOutput, error) {
+func (r *SmsGetAppValidationOutputFuture) Get(ctx workflow.Context) (*sms.GetAppValidationOutputOutput, error) {
 	var output sms.GetAppValidationOutputOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetConnectorsResult struct {
-	Result workflow.Future
+type SmsGetConnectorsFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetConnectorsResult) Get(ctx workflow.Context) (*sms.GetConnectorsOutput, error) {
+func (r *SmsGetConnectorsFuture) Get(ctx workflow.Context) (*sms.GetConnectorsOutput, error) {
 	var output sms.GetConnectorsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetReplicationJobsResult struct {
-	Result workflow.Future
+type SmsGetReplicationJobsFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetReplicationJobsResult) Get(ctx workflow.Context) (*sms.GetReplicationJobsOutput, error) {
+func (r *SmsGetReplicationJobsFuture) Get(ctx workflow.Context) (*sms.GetReplicationJobsOutput, error) {
 	var output sms.GetReplicationJobsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetReplicationRunsResult struct {
-	Result workflow.Future
+type SmsGetReplicationRunsFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetReplicationRunsResult) Get(ctx workflow.Context) (*sms.GetReplicationRunsOutput, error) {
+func (r *SmsGetReplicationRunsFuture) Get(ctx workflow.Context) (*sms.GetReplicationRunsOutput, error) {
 	var output sms.GetReplicationRunsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsGetServersResult struct {
-	Result workflow.Future
+type SmsGetServersFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsGetServersResult) Get(ctx workflow.Context) (*sms.GetServersOutput, error) {
+func (r *SmsGetServersFuture) Get(ctx workflow.Context) (*sms.GetServersOutput, error) {
 	var output sms.GetServersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsImportAppCatalogResult struct {
-	Result workflow.Future
+type SmsImportAppCatalogFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsImportAppCatalogResult) Get(ctx workflow.Context) (*sms.ImportAppCatalogOutput, error) {
+func (r *SmsImportAppCatalogFuture) Get(ctx workflow.Context) (*sms.ImportAppCatalogOutput, error) {
 	var output sms.ImportAppCatalogOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsImportServerCatalogResult struct {
-	Result workflow.Future
+type SmsImportServerCatalogFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsImportServerCatalogResult) Get(ctx workflow.Context) (*sms.ImportServerCatalogOutput, error) {
+func (r *SmsImportServerCatalogFuture) Get(ctx workflow.Context) (*sms.ImportServerCatalogOutput, error) {
 	var output sms.ImportServerCatalogOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsLaunchAppResult struct {
-	Result workflow.Future
+type SmsLaunchAppFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsLaunchAppResult) Get(ctx workflow.Context) (*sms.LaunchAppOutput, error) {
+func (r *SmsLaunchAppFuture) Get(ctx workflow.Context) (*sms.LaunchAppOutput, error) {
 	var output sms.LaunchAppOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsListAppsResult struct {
-	Result workflow.Future
+type SmsListAppsFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsListAppsResult) Get(ctx workflow.Context) (*sms.ListAppsOutput, error) {
+func (r *SmsListAppsFuture) Get(ctx workflow.Context) (*sms.ListAppsOutput, error) {
 	var output sms.ListAppsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsNotifyAppValidationOutputResult struct {
-	Result workflow.Future
+type SmsNotifyAppValidationOutputFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsNotifyAppValidationOutputResult) Get(ctx workflow.Context) (*sms.NotifyAppValidationOutputOutput, error) {
+func (r *SmsNotifyAppValidationOutputFuture) Get(ctx workflow.Context) (*sms.NotifyAppValidationOutputOutput, error) {
 	var output sms.NotifyAppValidationOutputOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsPutAppLaunchConfigurationResult struct {
-	Result workflow.Future
+type SmsPutAppLaunchConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsPutAppLaunchConfigurationResult) Get(ctx workflow.Context) (*sms.PutAppLaunchConfigurationOutput, error) {
+func (r *SmsPutAppLaunchConfigurationFuture) Get(ctx workflow.Context) (*sms.PutAppLaunchConfigurationOutput, error) {
 	var output sms.PutAppLaunchConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsPutAppReplicationConfigurationResult struct {
-	Result workflow.Future
+type SmsPutAppReplicationConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsPutAppReplicationConfigurationResult) Get(ctx workflow.Context) (*sms.PutAppReplicationConfigurationOutput, error) {
+func (r *SmsPutAppReplicationConfigurationFuture) Get(ctx workflow.Context) (*sms.PutAppReplicationConfigurationOutput, error) {
 	var output sms.PutAppReplicationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsPutAppValidationConfigurationResult struct {
-	Result workflow.Future
+type SmsPutAppValidationConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsPutAppValidationConfigurationResult) Get(ctx workflow.Context) (*sms.PutAppValidationConfigurationOutput, error) {
+func (r *SmsPutAppValidationConfigurationFuture) Get(ctx workflow.Context) (*sms.PutAppValidationConfigurationOutput, error) {
 	var output sms.PutAppValidationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsStartAppReplicationResult struct {
-	Result workflow.Future
+type SmsStartAppReplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsStartAppReplicationResult) Get(ctx workflow.Context) (*sms.StartAppReplicationOutput, error) {
+func (r *SmsStartAppReplicationFuture) Get(ctx workflow.Context) (*sms.StartAppReplicationOutput, error) {
 	var output sms.StartAppReplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsStartOnDemandAppReplicationResult struct {
-	Result workflow.Future
+type SmsStartOnDemandAppReplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsStartOnDemandAppReplicationResult) Get(ctx workflow.Context) (*sms.StartOnDemandAppReplicationOutput, error) {
+func (r *SmsStartOnDemandAppReplicationFuture) Get(ctx workflow.Context) (*sms.StartOnDemandAppReplicationOutput, error) {
 	var output sms.StartOnDemandAppReplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsStartOnDemandReplicationRunResult struct {
-	Result workflow.Future
+type SmsStartOnDemandReplicationRunFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsStartOnDemandReplicationRunResult) Get(ctx workflow.Context) (*sms.StartOnDemandReplicationRunOutput, error) {
+func (r *SmsStartOnDemandReplicationRunFuture) Get(ctx workflow.Context) (*sms.StartOnDemandReplicationRunOutput, error) {
 	var output sms.StartOnDemandReplicationRunOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsStopAppReplicationResult struct {
-	Result workflow.Future
+type SmsStopAppReplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsStopAppReplicationResult) Get(ctx workflow.Context) (*sms.StopAppReplicationOutput, error) {
+func (r *SmsStopAppReplicationFuture) Get(ctx workflow.Context) (*sms.StopAppReplicationOutput, error) {
 	var output sms.StopAppReplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsTerminateAppResult struct {
-	Result workflow.Future
+type SmsTerminateAppFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsTerminateAppResult) Get(ctx workflow.Context) (*sms.TerminateAppOutput, error) {
+func (r *SmsTerminateAppFuture) Get(ctx workflow.Context) (*sms.TerminateAppOutput, error) {
 	var output sms.TerminateAppOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsUpdateAppResult struct {
-	Result workflow.Future
+type SmsUpdateAppFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsUpdateAppResult) Get(ctx workflow.Context) (*sms.UpdateAppOutput, error) {
+func (r *SmsUpdateAppFuture) Get(ctx workflow.Context) (*sms.UpdateAppOutput, error) {
 	var output sms.UpdateAppOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SmsUpdateReplicationJobResult struct {
-	Result workflow.Future
+type SmsUpdateReplicationJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *SmsUpdateReplicationJobResult) Get(ctx workflow.Context) (*sms.UpdateReplicationJobOutput, error) {
+func (r *SmsUpdateReplicationJobFuture) Get(ctx workflow.Context) (*sms.UpdateReplicationJobOutput, error) {
 	var output sms.UpdateReplicationJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -478,9 +478,9 @@ func (a *SMSStub) CreateApp(ctx workflow.Context, input *sms.CreateAppInput) (*s
 	return &output, err
 }
 
-func (a *SMSStub) CreateAppAsync(ctx workflow.Context, input *sms.CreateAppInput) *SmsCreateAppResult {
+func (a *SMSStub) CreateAppAsync(ctx workflow.Context, input *sms.CreateAppInput) *SmsCreateAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.CreateApp", input)
-	return &SmsCreateAppResult{Result: future}
+	return &SmsCreateAppFuture{Future: future}
 }
 
 func (a *SMSStub) CreateReplicationJob(ctx workflow.Context, input *sms.CreateReplicationJobInput) (*sms.CreateReplicationJobOutput, error) {
@@ -489,9 +489,9 @@ func (a *SMSStub) CreateReplicationJob(ctx workflow.Context, input *sms.CreateRe
 	return &output, err
 }
 
-func (a *SMSStub) CreateReplicationJobAsync(ctx workflow.Context, input *sms.CreateReplicationJobInput) *SmsCreateReplicationJobResult {
+func (a *SMSStub) CreateReplicationJobAsync(ctx workflow.Context, input *sms.CreateReplicationJobInput) *SmsCreateReplicationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.CreateReplicationJob", input)
-	return &SmsCreateReplicationJobResult{Result: future}
+	return &SmsCreateReplicationJobFuture{Future: future}
 }
 
 func (a *SMSStub) DeleteApp(ctx workflow.Context, input *sms.DeleteAppInput) (*sms.DeleteAppOutput, error) {
@@ -500,9 +500,9 @@ func (a *SMSStub) DeleteApp(ctx workflow.Context, input *sms.DeleteAppInput) (*s
 	return &output, err
 }
 
-func (a *SMSStub) DeleteAppAsync(ctx workflow.Context, input *sms.DeleteAppInput) *SmsDeleteAppResult {
+func (a *SMSStub) DeleteAppAsync(ctx workflow.Context, input *sms.DeleteAppInput) *SmsDeleteAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.DeleteApp", input)
-	return &SmsDeleteAppResult{Result: future}
+	return &SmsDeleteAppFuture{Future: future}
 }
 
 func (a *SMSStub) DeleteAppLaunchConfiguration(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) (*sms.DeleteAppLaunchConfigurationOutput, error) {
@@ -511,9 +511,9 @@ func (a *SMSStub) DeleteAppLaunchConfiguration(ctx workflow.Context, input *sms.
 	return &output, err
 }
 
-func (a *SMSStub) DeleteAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) *SmsDeleteAppLaunchConfigurationResult {
+func (a *SMSStub) DeleteAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) *SmsDeleteAppLaunchConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.DeleteAppLaunchConfiguration", input)
-	return &SmsDeleteAppLaunchConfigurationResult{Result: future}
+	return &SmsDeleteAppLaunchConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) DeleteAppReplicationConfiguration(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) (*sms.DeleteAppReplicationConfigurationOutput, error) {
@@ -522,9 +522,9 @@ func (a *SMSStub) DeleteAppReplicationConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *SMSStub) DeleteAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) *SmsDeleteAppReplicationConfigurationResult {
+func (a *SMSStub) DeleteAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) *SmsDeleteAppReplicationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.DeleteAppReplicationConfiguration", input)
-	return &SmsDeleteAppReplicationConfigurationResult{Result: future}
+	return &SmsDeleteAppReplicationConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) DeleteAppValidationConfiguration(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) (*sms.DeleteAppValidationConfigurationOutput, error) {
@@ -533,9 +533,9 @@ func (a *SMSStub) DeleteAppValidationConfiguration(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *SMSStub) DeleteAppValidationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) *SmsDeleteAppValidationConfigurationResult {
+func (a *SMSStub) DeleteAppValidationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) *SmsDeleteAppValidationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.DeleteAppValidationConfiguration", input)
-	return &SmsDeleteAppValidationConfigurationResult{Result: future}
+	return &SmsDeleteAppValidationConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) DeleteReplicationJob(ctx workflow.Context, input *sms.DeleteReplicationJobInput) (*sms.DeleteReplicationJobOutput, error) {
@@ -544,9 +544,9 @@ func (a *SMSStub) DeleteReplicationJob(ctx workflow.Context, input *sms.DeleteRe
 	return &output, err
 }
 
-func (a *SMSStub) DeleteReplicationJobAsync(ctx workflow.Context, input *sms.DeleteReplicationJobInput) *SmsDeleteReplicationJobResult {
+func (a *SMSStub) DeleteReplicationJobAsync(ctx workflow.Context, input *sms.DeleteReplicationJobInput) *SmsDeleteReplicationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.DeleteReplicationJob", input)
-	return &SmsDeleteReplicationJobResult{Result: future}
+	return &SmsDeleteReplicationJobFuture{Future: future}
 }
 
 func (a *SMSStub) DeleteServerCatalog(ctx workflow.Context, input *sms.DeleteServerCatalogInput) (*sms.DeleteServerCatalogOutput, error) {
@@ -555,9 +555,9 @@ func (a *SMSStub) DeleteServerCatalog(ctx workflow.Context, input *sms.DeleteSer
 	return &output, err
 }
 
-func (a *SMSStub) DeleteServerCatalogAsync(ctx workflow.Context, input *sms.DeleteServerCatalogInput) *SmsDeleteServerCatalogResult {
+func (a *SMSStub) DeleteServerCatalogAsync(ctx workflow.Context, input *sms.DeleteServerCatalogInput) *SmsDeleteServerCatalogFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.DeleteServerCatalog", input)
-	return &SmsDeleteServerCatalogResult{Result: future}
+	return &SmsDeleteServerCatalogFuture{Future: future}
 }
 
 func (a *SMSStub) DisassociateConnector(ctx workflow.Context, input *sms.DisassociateConnectorInput) (*sms.DisassociateConnectorOutput, error) {
@@ -566,9 +566,9 @@ func (a *SMSStub) DisassociateConnector(ctx workflow.Context, input *sms.Disasso
 	return &output, err
 }
 
-func (a *SMSStub) DisassociateConnectorAsync(ctx workflow.Context, input *sms.DisassociateConnectorInput) *SmsDisassociateConnectorResult {
+func (a *SMSStub) DisassociateConnectorAsync(ctx workflow.Context, input *sms.DisassociateConnectorInput) *SmsDisassociateConnectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.DisassociateConnector", input)
-	return &SmsDisassociateConnectorResult{Result: future}
+	return &SmsDisassociateConnectorFuture{Future: future}
 }
 
 func (a *SMSStub) GenerateChangeSet(ctx workflow.Context, input *sms.GenerateChangeSetInput) (*sms.GenerateChangeSetOutput, error) {
@@ -577,9 +577,9 @@ func (a *SMSStub) GenerateChangeSet(ctx workflow.Context, input *sms.GenerateCha
 	return &output, err
 }
 
-func (a *SMSStub) GenerateChangeSetAsync(ctx workflow.Context, input *sms.GenerateChangeSetInput) *SmsGenerateChangeSetResult {
+func (a *SMSStub) GenerateChangeSetAsync(ctx workflow.Context, input *sms.GenerateChangeSetInput) *SmsGenerateChangeSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GenerateChangeSet", input)
-	return &SmsGenerateChangeSetResult{Result: future}
+	return &SmsGenerateChangeSetFuture{Future: future}
 }
 
 func (a *SMSStub) GenerateTemplate(ctx workflow.Context, input *sms.GenerateTemplateInput) (*sms.GenerateTemplateOutput, error) {
@@ -588,9 +588,9 @@ func (a *SMSStub) GenerateTemplate(ctx workflow.Context, input *sms.GenerateTemp
 	return &output, err
 }
 
-func (a *SMSStub) GenerateTemplateAsync(ctx workflow.Context, input *sms.GenerateTemplateInput) *SmsGenerateTemplateResult {
+func (a *SMSStub) GenerateTemplateAsync(ctx workflow.Context, input *sms.GenerateTemplateInput) *SmsGenerateTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GenerateTemplate", input)
-	return &SmsGenerateTemplateResult{Result: future}
+	return &SmsGenerateTemplateFuture{Future: future}
 }
 
 func (a *SMSStub) GetApp(ctx workflow.Context, input *sms.GetAppInput) (*sms.GetAppOutput, error) {
@@ -599,9 +599,9 @@ func (a *SMSStub) GetApp(ctx workflow.Context, input *sms.GetAppInput) (*sms.Get
 	return &output, err
 }
 
-func (a *SMSStub) GetAppAsync(ctx workflow.Context, input *sms.GetAppInput) *SmsGetAppResult {
+func (a *SMSStub) GetAppAsync(ctx workflow.Context, input *sms.GetAppInput) *SmsGetAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetApp", input)
-	return &SmsGetAppResult{Result: future}
+	return &SmsGetAppFuture{Future: future}
 }
 
 func (a *SMSStub) GetAppLaunchConfiguration(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) (*sms.GetAppLaunchConfigurationOutput, error) {
@@ -610,9 +610,9 @@ func (a *SMSStub) GetAppLaunchConfiguration(ctx workflow.Context, input *sms.Get
 	return &output, err
 }
 
-func (a *SMSStub) GetAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) *SmsGetAppLaunchConfigurationResult {
+func (a *SMSStub) GetAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) *SmsGetAppLaunchConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetAppLaunchConfiguration", input)
-	return &SmsGetAppLaunchConfigurationResult{Result: future}
+	return &SmsGetAppLaunchConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) GetAppReplicationConfiguration(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) (*sms.GetAppReplicationConfigurationOutput, error) {
@@ -621,9 +621,9 @@ func (a *SMSStub) GetAppReplicationConfiguration(ctx workflow.Context, input *sm
 	return &output, err
 }
 
-func (a *SMSStub) GetAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) *SmsGetAppReplicationConfigurationResult {
+func (a *SMSStub) GetAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) *SmsGetAppReplicationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetAppReplicationConfiguration", input)
-	return &SmsGetAppReplicationConfigurationResult{Result: future}
+	return &SmsGetAppReplicationConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) GetAppValidationConfiguration(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) (*sms.GetAppValidationConfigurationOutput, error) {
@@ -632,9 +632,9 @@ func (a *SMSStub) GetAppValidationConfiguration(ctx workflow.Context, input *sms
 	return &output, err
 }
 
-func (a *SMSStub) GetAppValidationConfigurationAsync(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) *SmsGetAppValidationConfigurationResult {
+func (a *SMSStub) GetAppValidationConfigurationAsync(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) *SmsGetAppValidationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetAppValidationConfiguration", input)
-	return &SmsGetAppValidationConfigurationResult{Result: future}
+	return &SmsGetAppValidationConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) GetAppValidationOutput(ctx workflow.Context, input *sms.GetAppValidationOutputInput) (*sms.GetAppValidationOutputOutput, error) {
@@ -643,9 +643,9 @@ func (a *SMSStub) GetAppValidationOutput(ctx workflow.Context, input *sms.GetApp
 	return &output, err
 }
 
-func (a *SMSStub) GetAppValidationOutputAsync(ctx workflow.Context, input *sms.GetAppValidationOutputInput) *SmsGetAppValidationOutputResult {
+func (a *SMSStub) GetAppValidationOutputAsync(ctx workflow.Context, input *sms.GetAppValidationOutputInput) *SmsGetAppValidationOutputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetAppValidationOutput", input)
-	return &SmsGetAppValidationOutputResult{Result: future}
+	return &SmsGetAppValidationOutputFuture{Future: future}
 }
 
 func (a *SMSStub) GetConnectors(ctx workflow.Context, input *sms.GetConnectorsInput) (*sms.GetConnectorsOutput, error) {
@@ -654,9 +654,9 @@ func (a *SMSStub) GetConnectors(ctx workflow.Context, input *sms.GetConnectorsIn
 	return &output, err
 }
 
-func (a *SMSStub) GetConnectorsAsync(ctx workflow.Context, input *sms.GetConnectorsInput) *SmsGetConnectorsResult {
+func (a *SMSStub) GetConnectorsAsync(ctx workflow.Context, input *sms.GetConnectorsInput) *SmsGetConnectorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetConnectors", input)
-	return &SmsGetConnectorsResult{Result: future}
+	return &SmsGetConnectorsFuture{Future: future}
 }
 
 func (a *SMSStub) GetReplicationJobs(ctx workflow.Context, input *sms.GetReplicationJobsInput) (*sms.GetReplicationJobsOutput, error) {
@@ -665,9 +665,9 @@ func (a *SMSStub) GetReplicationJobs(ctx workflow.Context, input *sms.GetReplica
 	return &output, err
 }
 
-func (a *SMSStub) GetReplicationJobsAsync(ctx workflow.Context, input *sms.GetReplicationJobsInput) *SmsGetReplicationJobsResult {
+func (a *SMSStub) GetReplicationJobsAsync(ctx workflow.Context, input *sms.GetReplicationJobsInput) *SmsGetReplicationJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetReplicationJobs", input)
-	return &SmsGetReplicationJobsResult{Result: future}
+	return &SmsGetReplicationJobsFuture{Future: future}
 }
 
 func (a *SMSStub) GetReplicationRuns(ctx workflow.Context, input *sms.GetReplicationRunsInput) (*sms.GetReplicationRunsOutput, error) {
@@ -676,9 +676,9 @@ func (a *SMSStub) GetReplicationRuns(ctx workflow.Context, input *sms.GetReplica
 	return &output, err
 }
 
-func (a *SMSStub) GetReplicationRunsAsync(ctx workflow.Context, input *sms.GetReplicationRunsInput) *SmsGetReplicationRunsResult {
+func (a *SMSStub) GetReplicationRunsAsync(ctx workflow.Context, input *sms.GetReplicationRunsInput) *SmsGetReplicationRunsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetReplicationRuns", input)
-	return &SmsGetReplicationRunsResult{Result: future}
+	return &SmsGetReplicationRunsFuture{Future: future}
 }
 
 func (a *SMSStub) GetServers(ctx workflow.Context, input *sms.GetServersInput) (*sms.GetServersOutput, error) {
@@ -687,9 +687,9 @@ func (a *SMSStub) GetServers(ctx workflow.Context, input *sms.GetServersInput) (
 	return &output, err
 }
 
-func (a *SMSStub) GetServersAsync(ctx workflow.Context, input *sms.GetServersInput) *SmsGetServersResult {
+func (a *SMSStub) GetServersAsync(ctx workflow.Context, input *sms.GetServersInput) *SmsGetServersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.GetServers", input)
-	return &SmsGetServersResult{Result: future}
+	return &SmsGetServersFuture{Future: future}
 }
 
 func (a *SMSStub) ImportAppCatalog(ctx workflow.Context, input *sms.ImportAppCatalogInput) (*sms.ImportAppCatalogOutput, error) {
@@ -698,9 +698,9 @@ func (a *SMSStub) ImportAppCatalog(ctx workflow.Context, input *sms.ImportAppCat
 	return &output, err
 }
 
-func (a *SMSStub) ImportAppCatalogAsync(ctx workflow.Context, input *sms.ImportAppCatalogInput) *SmsImportAppCatalogResult {
+func (a *SMSStub) ImportAppCatalogAsync(ctx workflow.Context, input *sms.ImportAppCatalogInput) *SmsImportAppCatalogFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.ImportAppCatalog", input)
-	return &SmsImportAppCatalogResult{Result: future}
+	return &SmsImportAppCatalogFuture{Future: future}
 }
 
 func (a *SMSStub) ImportServerCatalog(ctx workflow.Context, input *sms.ImportServerCatalogInput) (*sms.ImportServerCatalogOutput, error) {
@@ -709,9 +709,9 @@ func (a *SMSStub) ImportServerCatalog(ctx workflow.Context, input *sms.ImportSer
 	return &output, err
 }
 
-func (a *SMSStub) ImportServerCatalogAsync(ctx workflow.Context, input *sms.ImportServerCatalogInput) *SmsImportServerCatalogResult {
+func (a *SMSStub) ImportServerCatalogAsync(ctx workflow.Context, input *sms.ImportServerCatalogInput) *SmsImportServerCatalogFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.ImportServerCatalog", input)
-	return &SmsImportServerCatalogResult{Result: future}
+	return &SmsImportServerCatalogFuture{Future: future}
 }
 
 func (a *SMSStub) LaunchApp(ctx workflow.Context, input *sms.LaunchAppInput) (*sms.LaunchAppOutput, error) {
@@ -720,9 +720,9 @@ func (a *SMSStub) LaunchApp(ctx workflow.Context, input *sms.LaunchAppInput) (*s
 	return &output, err
 }
 
-func (a *SMSStub) LaunchAppAsync(ctx workflow.Context, input *sms.LaunchAppInput) *SmsLaunchAppResult {
+func (a *SMSStub) LaunchAppAsync(ctx workflow.Context, input *sms.LaunchAppInput) *SmsLaunchAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.LaunchApp", input)
-	return &SmsLaunchAppResult{Result: future}
+	return &SmsLaunchAppFuture{Future: future}
 }
 
 func (a *SMSStub) ListApps(ctx workflow.Context, input *sms.ListAppsInput) (*sms.ListAppsOutput, error) {
@@ -731,9 +731,9 @@ func (a *SMSStub) ListApps(ctx workflow.Context, input *sms.ListAppsInput) (*sms
 	return &output, err
 }
 
-func (a *SMSStub) ListAppsAsync(ctx workflow.Context, input *sms.ListAppsInput) *SmsListAppsResult {
+func (a *SMSStub) ListAppsAsync(ctx workflow.Context, input *sms.ListAppsInput) *SmsListAppsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.ListApps", input)
-	return &SmsListAppsResult{Result: future}
+	return &SmsListAppsFuture{Future: future}
 }
 
 func (a *SMSStub) NotifyAppValidationOutput(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) (*sms.NotifyAppValidationOutputOutput, error) {
@@ -742,9 +742,9 @@ func (a *SMSStub) NotifyAppValidationOutput(ctx workflow.Context, input *sms.Not
 	return &output, err
 }
 
-func (a *SMSStub) NotifyAppValidationOutputAsync(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) *SmsNotifyAppValidationOutputResult {
+func (a *SMSStub) NotifyAppValidationOutputAsync(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) *SmsNotifyAppValidationOutputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.NotifyAppValidationOutput", input)
-	return &SmsNotifyAppValidationOutputResult{Result: future}
+	return &SmsNotifyAppValidationOutputFuture{Future: future}
 }
 
 func (a *SMSStub) PutAppLaunchConfiguration(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) (*sms.PutAppLaunchConfigurationOutput, error) {
@@ -753,9 +753,9 @@ func (a *SMSStub) PutAppLaunchConfiguration(ctx workflow.Context, input *sms.Put
 	return &output, err
 }
 
-func (a *SMSStub) PutAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) *SmsPutAppLaunchConfigurationResult {
+func (a *SMSStub) PutAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) *SmsPutAppLaunchConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.PutAppLaunchConfiguration", input)
-	return &SmsPutAppLaunchConfigurationResult{Result: future}
+	return &SmsPutAppLaunchConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) PutAppReplicationConfiguration(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) (*sms.PutAppReplicationConfigurationOutput, error) {
@@ -764,9 +764,9 @@ func (a *SMSStub) PutAppReplicationConfiguration(ctx workflow.Context, input *sm
 	return &output, err
 }
 
-func (a *SMSStub) PutAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) *SmsPutAppReplicationConfigurationResult {
+func (a *SMSStub) PutAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) *SmsPutAppReplicationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.PutAppReplicationConfiguration", input)
-	return &SmsPutAppReplicationConfigurationResult{Result: future}
+	return &SmsPutAppReplicationConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) PutAppValidationConfiguration(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) (*sms.PutAppValidationConfigurationOutput, error) {
@@ -775,9 +775,9 @@ func (a *SMSStub) PutAppValidationConfiguration(ctx workflow.Context, input *sms
 	return &output, err
 }
 
-func (a *SMSStub) PutAppValidationConfigurationAsync(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) *SmsPutAppValidationConfigurationResult {
+func (a *SMSStub) PutAppValidationConfigurationAsync(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) *SmsPutAppValidationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.PutAppValidationConfiguration", input)
-	return &SmsPutAppValidationConfigurationResult{Result: future}
+	return &SmsPutAppValidationConfigurationFuture{Future: future}
 }
 
 func (a *SMSStub) StartAppReplication(ctx workflow.Context, input *sms.StartAppReplicationInput) (*sms.StartAppReplicationOutput, error) {
@@ -786,9 +786,9 @@ func (a *SMSStub) StartAppReplication(ctx workflow.Context, input *sms.StartAppR
 	return &output, err
 }
 
-func (a *SMSStub) StartAppReplicationAsync(ctx workflow.Context, input *sms.StartAppReplicationInput) *SmsStartAppReplicationResult {
+func (a *SMSStub) StartAppReplicationAsync(ctx workflow.Context, input *sms.StartAppReplicationInput) *SmsStartAppReplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.StartAppReplication", input)
-	return &SmsStartAppReplicationResult{Result: future}
+	return &SmsStartAppReplicationFuture{Future: future}
 }
 
 func (a *SMSStub) StartOnDemandAppReplication(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) (*sms.StartOnDemandAppReplicationOutput, error) {
@@ -797,9 +797,9 @@ func (a *SMSStub) StartOnDemandAppReplication(ctx workflow.Context, input *sms.S
 	return &output, err
 }
 
-func (a *SMSStub) StartOnDemandAppReplicationAsync(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) *SmsStartOnDemandAppReplicationResult {
+func (a *SMSStub) StartOnDemandAppReplicationAsync(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) *SmsStartOnDemandAppReplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.StartOnDemandAppReplication", input)
-	return &SmsStartOnDemandAppReplicationResult{Result: future}
+	return &SmsStartOnDemandAppReplicationFuture{Future: future}
 }
 
 func (a *SMSStub) StartOnDemandReplicationRun(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) (*sms.StartOnDemandReplicationRunOutput, error) {
@@ -808,9 +808,9 @@ func (a *SMSStub) StartOnDemandReplicationRun(ctx workflow.Context, input *sms.S
 	return &output, err
 }
 
-func (a *SMSStub) StartOnDemandReplicationRunAsync(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) *SmsStartOnDemandReplicationRunResult {
+func (a *SMSStub) StartOnDemandReplicationRunAsync(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) *SmsStartOnDemandReplicationRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.StartOnDemandReplicationRun", input)
-	return &SmsStartOnDemandReplicationRunResult{Result: future}
+	return &SmsStartOnDemandReplicationRunFuture{Future: future}
 }
 
 func (a *SMSStub) StopAppReplication(ctx workflow.Context, input *sms.StopAppReplicationInput) (*sms.StopAppReplicationOutput, error) {
@@ -819,9 +819,9 @@ func (a *SMSStub) StopAppReplication(ctx workflow.Context, input *sms.StopAppRep
 	return &output, err
 }
 
-func (a *SMSStub) StopAppReplicationAsync(ctx workflow.Context, input *sms.StopAppReplicationInput) *SmsStopAppReplicationResult {
+func (a *SMSStub) StopAppReplicationAsync(ctx workflow.Context, input *sms.StopAppReplicationInput) *SmsStopAppReplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.StopAppReplication", input)
-	return &SmsStopAppReplicationResult{Result: future}
+	return &SmsStopAppReplicationFuture{Future: future}
 }
 
 func (a *SMSStub) TerminateApp(ctx workflow.Context, input *sms.TerminateAppInput) (*sms.TerminateAppOutput, error) {
@@ -830,9 +830,9 @@ func (a *SMSStub) TerminateApp(ctx workflow.Context, input *sms.TerminateAppInpu
 	return &output, err
 }
 
-func (a *SMSStub) TerminateAppAsync(ctx workflow.Context, input *sms.TerminateAppInput) *SmsTerminateAppResult {
+func (a *SMSStub) TerminateAppAsync(ctx workflow.Context, input *sms.TerminateAppInput) *SmsTerminateAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.TerminateApp", input)
-	return &SmsTerminateAppResult{Result: future}
+	return &SmsTerminateAppFuture{Future: future}
 }
 
 func (a *SMSStub) UpdateApp(ctx workflow.Context, input *sms.UpdateAppInput) (*sms.UpdateAppOutput, error) {
@@ -841,9 +841,9 @@ func (a *SMSStub) UpdateApp(ctx workflow.Context, input *sms.UpdateAppInput) (*s
 	return &output, err
 }
 
-func (a *SMSStub) UpdateAppAsync(ctx workflow.Context, input *sms.UpdateAppInput) *SmsUpdateAppResult {
+func (a *SMSStub) UpdateAppAsync(ctx workflow.Context, input *sms.UpdateAppInput) *SmsUpdateAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.UpdateApp", input)
-	return &SmsUpdateAppResult{Result: future}
+	return &SmsUpdateAppFuture{Future: future}
 }
 
 func (a *SMSStub) UpdateReplicationJob(ctx workflow.Context, input *sms.UpdateReplicationJobInput) (*sms.UpdateReplicationJobOutput, error) {
@@ -852,7 +852,7 @@ func (a *SMSStub) UpdateReplicationJob(ctx workflow.Context, input *sms.UpdateRe
 	return &output, err
 }
 
-func (a *SMSStub) UpdateReplicationJobAsync(ctx workflow.Context, input *sms.UpdateReplicationJobInput) *SmsUpdateReplicationJobResult {
+func (a *SMSStub) UpdateReplicationJobAsync(ctx workflow.Context, input *sms.UpdateReplicationJobInput) *SmsUpdateReplicationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sms.UpdateReplicationJob", input)
-	return &SmsUpdateReplicationJobResult{Result: future}
+	return &SmsUpdateReplicationJobFuture{Future: future}
 }

@@ -11,154 +11,154 @@ import (
 
 type WorkSpacesClient interface {
 	AssociateConnectionAlias(ctx workflow.Context, input *workspaces.AssociateConnectionAliasInput) (*workspaces.AssociateConnectionAliasOutput, error)
-	AssociateConnectionAliasAsync(ctx workflow.Context, input *workspaces.AssociateConnectionAliasInput) *WorkspacesAssociateConnectionAliasResult
+	AssociateConnectionAliasAsync(ctx workflow.Context, input *workspaces.AssociateConnectionAliasInput) *WorkspacesAssociateConnectionAliasFuture
 
 	AssociateIpGroups(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) (*workspaces.AssociateIpGroupsOutput, error)
-	AssociateIpGroupsAsync(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) *WorkspacesAssociateIpGroupsResult
+	AssociateIpGroupsAsync(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) *WorkspacesAssociateIpGroupsFuture
 
 	AuthorizeIpRules(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) (*workspaces.AuthorizeIpRulesOutput, error)
-	AuthorizeIpRulesAsync(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) *WorkspacesAuthorizeIpRulesResult
+	AuthorizeIpRulesAsync(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) *WorkspacesAuthorizeIpRulesFuture
 
 	CopyWorkspaceImage(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) (*workspaces.CopyWorkspaceImageOutput, error)
-	CopyWorkspaceImageAsync(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) *WorkspacesCopyWorkspaceImageResult
+	CopyWorkspaceImageAsync(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) *WorkspacesCopyWorkspaceImageFuture
 
 	CreateConnectionAlias(ctx workflow.Context, input *workspaces.CreateConnectionAliasInput) (*workspaces.CreateConnectionAliasOutput, error)
-	CreateConnectionAliasAsync(ctx workflow.Context, input *workspaces.CreateConnectionAliasInput) *WorkspacesCreateConnectionAliasResult
+	CreateConnectionAliasAsync(ctx workflow.Context, input *workspaces.CreateConnectionAliasInput) *WorkspacesCreateConnectionAliasFuture
 
 	CreateIpGroup(ctx workflow.Context, input *workspaces.CreateIpGroupInput) (*workspaces.CreateIpGroupOutput, error)
-	CreateIpGroupAsync(ctx workflow.Context, input *workspaces.CreateIpGroupInput) *WorkspacesCreateIpGroupResult
+	CreateIpGroupAsync(ctx workflow.Context, input *workspaces.CreateIpGroupInput) *WorkspacesCreateIpGroupFuture
 
 	CreateTags(ctx workflow.Context, input *workspaces.CreateTagsInput) (*workspaces.CreateTagsOutput, error)
-	CreateTagsAsync(ctx workflow.Context, input *workspaces.CreateTagsInput) *WorkspacesCreateTagsResult
+	CreateTagsAsync(ctx workflow.Context, input *workspaces.CreateTagsInput) *WorkspacesCreateTagsFuture
 
 	CreateWorkspaces(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) (*workspaces.CreateWorkspacesOutput, error)
-	CreateWorkspacesAsync(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) *WorkspacesCreateWorkspacesResult
+	CreateWorkspacesAsync(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) *WorkspacesCreateWorkspacesFuture
 
 	DeleteConnectionAlias(ctx workflow.Context, input *workspaces.DeleteConnectionAliasInput) (*workspaces.DeleteConnectionAliasOutput, error)
-	DeleteConnectionAliasAsync(ctx workflow.Context, input *workspaces.DeleteConnectionAliasInput) *WorkspacesDeleteConnectionAliasResult
+	DeleteConnectionAliasAsync(ctx workflow.Context, input *workspaces.DeleteConnectionAliasInput) *WorkspacesDeleteConnectionAliasFuture
 
 	DeleteIpGroup(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) (*workspaces.DeleteIpGroupOutput, error)
-	DeleteIpGroupAsync(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) *WorkspacesDeleteIpGroupResult
+	DeleteIpGroupAsync(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) *WorkspacesDeleteIpGroupFuture
 
 	DeleteTags(ctx workflow.Context, input *workspaces.DeleteTagsInput) (*workspaces.DeleteTagsOutput, error)
-	DeleteTagsAsync(ctx workflow.Context, input *workspaces.DeleteTagsInput) *WorkspacesDeleteTagsResult
+	DeleteTagsAsync(ctx workflow.Context, input *workspaces.DeleteTagsInput) *WorkspacesDeleteTagsFuture
 
 	DeleteWorkspaceImage(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) (*workspaces.DeleteWorkspaceImageOutput, error)
-	DeleteWorkspaceImageAsync(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) *WorkspacesDeleteWorkspaceImageResult
+	DeleteWorkspaceImageAsync(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) *WorkspacesDeleteWorkspaceImageFuture
 
 	DeregisterWorkspaceDirectory(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) (*workspaces.DeregisterWorkspaceDirectoryOutput, error)
-	DeregisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) *WorkspacesDeregisterWorkspaceDirectoryResult
+	DeregisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) *WorkspacesDeregisterWorkspaceDirectoryFuture
 
 	DescribeAccount(ctx workflow.Context, input *workspaces.DescribeAccountInput) (*workspaces.DescribeAccountOutput, error)
-	DescribeAccountAsync(ctx workflow.Context, input *workspaces.DescribeAccountInput) *WorkspacesDescribeAccountResult
+	DescribeAccountAsync(ctx workflow.Context, input *workspaces.DescribeAccountInput) *WorkspacesDescribeAccountFuture
 
 	DescribeAccountModifications(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) (*workspaces.DescribeAccountModificationsOutput, error)
-	DescribeAccountModificationsAsync(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) *WorkspacesDescribeAccountModificationsResult
+	DescribeAccountModificationsAsync(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) *WorkspacesDescribeAccountModificationsFuture
 
 	DescribeClientProperties(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) (*workspaces.DescribeClientPropertiesOutput, error)
-	DescribeClientPropertiesAsync(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) *WorkspacesDescribeClientPropertiesResult
+	DescribeClientPropertiesAsync(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) *WorkspacesDescribeClientPropertiesFuture
 
 	DescribeConnectionAliasPermissions(ctx workflow.Context, input *workspaces.DescribeConnectionAliasPermissionsInput) (*workspaces.DescribeConnectionAliasPermissionsOutput, error)
-	DescribeConnectionAliasPermissionsAsync(ctx workflow.Context, input *workspaces.DescribeConnectionAliasPermissionsInput) *WorkspacesDescribeConnectionAliasPermissionsResult
+	DescribeConnectionAliasPermissionsAsync(ctx workflow.Context, input *workspaces.DescribeConnectionAliasPermissionsInput) *WorkspacesDescribeConnectionAliasPermissionsFuture
 
 	DescribeConnectionAliases(ctx workflow.Context, input *workspaces.DescribeConnectionAliasesInput) (*workspaces.DescribeConnectionAliasesOutput, error)
-	DescribeConnectionAliasesAsync(ctx workflow.Context, input *workspaces.DescribeConnectionAliasesInput) *WorkspacesDescribeConnectionAliasesResult
+	DescribeConnectionAliasesAsync(ctx workflow.Context, input *workspaces.DescribeConnectionAliasesInput) *WorkspacesDescribeConnectionAliasesFuture
 
 	DescribeIpGroups(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) (*workspaces.DescribeIpGroupsOutput, error)
-	DescribeIpGroupsAsync(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) *WorkspacesDescribeIpGroupsResult
+	DescribeIpGroupsAsync(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) *WorkspacesDescribeIpGroupsFuture
 
 	DescribeTags(ctx workflow.Context, input *workspaces.DescribeTagsInput) (*workspaces.DescribeTagsOutput, error)
-	DescribeTagsAsync(ctx workflow.Context, input *workspaces.DescribeTagsInput) *WorkspacesDescribeTagsResult
+	DescribeTagsAsync(ctx workflow.Context, input *workspaces.DescribeTagsInput) *WorkspacesDescribeTagsFuture
 
 	DescribeWorkspaceBundles(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) (*workspaces.DescribeWorkspaceBundlesOutput, error)
-	DescribeWorkspaceBundlesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) *WorkspacesDescribeWorkspaceBundlesResult
+	DescribeWorkspaceBundlesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) *WorkspacesDescribeWorkspaceBundlesFuture
 
 	DescribeWorkspaceDirectories(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) (*workspaces.DescribeWorkspaceDirectoriesOutput, error)
-	DescribeWorkspaceDirectoriesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) *WorkspacesDescribeWorkspaceDirectoriesResult
+	DescribeWorkspaceDirectoriesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) *WorkspacesDescribeWorkspaceDirectoriesFuture
 
 	DescribeWorkspaceImagePermissions(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) (*workspaces.DescribeWorkspaceImagePermissionsOutput, error)
-	DescribeWorkspaceImagePermissionsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) *WorkspacesDescribeWorkspaceImagePermissionsResult
+	DescribeWorkspaceImagePermissionsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) *WorkspacesDescribeWorkspaceImagePermissionsFuture
 
 	DescribeWorkspaceImages(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) (*workspaces.DescribeWorkspaceImagesOutput, error)
-	DescribeWorkspaceImagesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) *WorkspacesDescribeWorkspaceImagesResult
+	DescribeWorkspaceImagesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) *WorkspacesDescribeWorkspaceImagesFuture
 
 	DescribeWorkspaceSnapshots(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) (*workspaces.DescribeWorkspaceSnapshotsOutput, error)
-	DescribeWorkspaceSnapshotsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) *WorkspacesDescribeWorkspaceSnapshotsResult
+	DescribeWorkspaceSnapshotsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) *WorkspacesDescribeWorkspaceSnapshotsFuture
 
 	DescribeWorkspaces(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) (*workspaces.DescribeWorkspacesOutput, error)
-	DescribeWorkspacesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) *WorkspacesDescribeWorkspacesResult
+	DescribeWorkspacesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) *WorkspacesDescribeWorkspacesFuture
 
 	DescribeWorkspacesConnectionStatus(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) (*workspaces.DescribeWorkspacesConnectionStatusOutput, error)
-	DescribeWorkspacesConnectionStatusAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) *WorkspacesDescribeWorkspacesConnectionStatusResult
+	DescribeWorkspacesConnectionStatusAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) *WorkspacesDescribeWorkspacesConnectionStatusFuture
 
 	DisassociateConnectionAlias(ctx workflow.Context, input *workspaces.DisassociateConnectionAliasInput) (*workspaces.DisassociateConnectionAliasOutput, error)
-	DisassociateConnectionAliasAsync(ctx workflow.Context, input *workspaces.DisassociateConnectionAliasInput) *WorkspacesDisassociateConnectionAliasResult
+	DisassociateConnectionAliasAsync(ctx workflow.Context, input *workspaces.DisassociateConnectionAliasInput) *WorkspacesDisassociateConnectionAliasFuture
 
 	DisassociateIpGroups(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) (*workspaces.DisassociateIpGroupsOutput, error)
-	DisassociateIpGroupsAsync(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) *WorkspacesDisassociateIpGroupsResult
+	DisassociateIpGroupsAsync(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) *WorkspacesDisassociateIpGroupsFuture
 
 	ImportWorkspaceImage(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) (*workspaces.ImportWorkspaceImageOutput, error)
-	ImportWorkspaceImageAsync(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) *WorkspacesImportWorkspaceImageResult
+	ImportWorkspaceImageAsync(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) *WorkspacesImportWorkspaceImageFuture
 
 	ListAvailableManagementCidrRanges(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) (*workspaces.ListAvailableManagementCidrRangesOutput, error)
-	ListAvailableManagementCidrRangesAsync(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) *WorkspacesListAvailableManagementCidrRangesResult
+	ListAvailableManagementCidrRangesAsync(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) *WorkspacesListAvailableManagementCidrRangesFuture
 
 	MigrateWorkspace(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) (*workspaces.MigrateWorkspaceOutput, error)
-	MigrateWorkspaceAsync(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) *WorkspacesMigrateWorkspaceResult
+	MigrateWorkspaceAsync(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) *WorkspacesMigrateWorkspaceFuture
 
 	ModifyAccount(ctx workflow.Context, input *workspaces.ModifyAccountInput) (*workspaces.ModifyAccountOutput, error)
-	ModifyAccountAsync(ctx workflow.Context, input *workspaces.ModifyAccountInput) *WorkspacesModifyAccountResult
+	ModifyAccountAsync(ctx workflow.Context, input *workspaces.ModifyAccountInput) *WorkspacesModifyAccountFuture
 
 	ModifyClientProperties(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) (*workspaces.ModifyClientPropertiesOutput, error)
-	ModifyClientPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) *WorkspacesModifyClientPropertiesResult
+	ModifyClientPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) *WorkspacesModifyClientPropertiesFuture
 
 	ModifySelfservicePermissions(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) (*workspaces.ModifySelfservicePermissionsOutput, error)
-	ModifySelfservicePermissionsAsync(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) *WorkspacesModifySelfservicePermissionsResult
+	ModifySelfservicePermissionsAsync(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) *WorkspacesModifySelfservicePermissionsFuture
 
 	ModifyWorkspaceAccessProperties(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) (*workspaces.ModifyWorkspaceAccessPropertiesOutput, error)
-	ModifyWorkspaceAccessPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) *WorkspacesModifyWorkspaceAccessPropertiesResult
+	ModifyWorkspaceAccessPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) *WorkspacesModifyWorkspaceAccessPropertiesFuture
 
 	ModifyWorkspaceCreationProperties(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) (*workspaces.ModifyWorkspaceCreationPropertiesOutput, error)
-	ModifyWorkspaceCreationPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) *WorkspacesModifyWorkspaceCreationPropertiesResult
+	ModifyWorkspaceCreationPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) *WorkspacesModifyWorkspaceCreationPropertiesFuture
 
 	ModifyWorkspaceProperties(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) (*workspaces.ModifyWorkspacePropertiesOutput, error)
-	ModifyWorkspacePropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) *WorkspacesModifyWorkspacePropertiesResult
+	ModifyWorkspacePropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) *WorkspacesModifyWorkspacePropertiesFuture
 
 	ModifyWorkspaceState(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) (*workspaces.ModifyWorkspaceStateOutput, error)
-	ModifyWorkspaceStateAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) *WorkspacesModifyWorkspaceStateResult
+	ModifyWorkspaceStateAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) *WorkspacesModifyWorkspaceStateFuture
 
 	RebootWorkspaces(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) (*workspaces.RebootWorkspacesOutput, error)
-	RebootWorkspacesAsync(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) *WorkspacesRebootWorkspacesResult
+	RebootWorkspacesAsync(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) *WorkspacesRebootWorkspacesFuture
 
 	RebuildWorkspaces(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) (*workspaces.RebuildWorkspacesOutput, error)
-	RebuildWorkspacesAsync(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) *WorkspacesRebuildWorkspacesResult
+	RebuildWorkspacesAsync(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) *WorkspacesRebuildWorkspacesFuture
 
 	RegisterWorkspaceDirectory(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) (*workspaces.RegisterWorkspaceDirectoryOutput, error)
-	RegisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) *WorkspacesRegisterWorkspaceDirectoryResult
+	RegisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) *WorkspacesRegisterWorkspaceDirectoryFuture
 
 	RestoreWorkspace(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) (*workspaces.RestoreWorkspaceOutput, error)
-	RestoreWorkspaceAsync(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) *WorkspacesRestoreWorkspaceResult
+	RestoreWorkspaceAsync(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) *WorkspacesRestoreWorkspaceFuture
 
 	RevokeIpRules(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) (*workspaces.RevokeIpRulesOutput, error)
-	RevokeIpRulesAsync(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) *WorkspacesRevokeIpRulesResult
+	RevokeIpRulesAsync(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) *WorkspacesRevokeIpRulesFuture
 
 	StartWorkspaces(ctx workflow.Context, input *workspaces.StartWorkspacesInput) (*workspaces.StartWorkspacesOutput, error)
-	StartWorkspacesAsync(ctx workflow.Context, input *workspaces.StartWorkspacesInput) *WorkspacesStartWorkspacesResult
+	StartWorkspacesAsync(ctx workflow.Context, input *workspaces.StartWorkspacesInput) *WorkspacesStartWorkspacesFuture
 
 	StopWorkspaces(ctx workflow.Context, input *workspaces.StopWorkspacesInput) (*workspaces.StopWorkspacesOutput, error)
-	StopWorkspacesAsync(ctx workflow.Context, input *workspaces.StopWorkspacesInput) *WorkspacesStopWorkspacesResult
+	StopWorkspacesAsync(ctx workflow.Context, input *workspaces.StopWorkspacesInput) *WorkspacesStopWorkspacesFuture
 
 	TerminateWorkspaces(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) (*workspaces.TerminateWorkspacesOutput, error)
-	TerminateWorkspacesAsync(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) *WorkspacesTerminateWorkspacesResult
+	TerminateWorkspacesAsync(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) *WorkspacesTerminateWorkspacesFuture
 
 	UpdateConnectionAliasPermission(ctx workflow.Context, input *workspaces.UpdateConnectionAliasPermissionInput) (*workspaces.UpdateConnectionAliasPermissionOutput, error)
-	UpdateConnectionAliasPermissionAsync(ctx workflow.Context, input *workspaces.UpdateConnectionAliasPermissionInput) *WorkspacesUpdateConnectionAliasPermissionResult
+	UpdateConnectionAliasPermissionAsync(ctx workflow.Context, input *workspaces.UpdateConnectionAliasPermissionInput) *WorkspacesUpdateConnectionAliasPermissionFuture
 
 	UpdateRulesOfIpGroup(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) (*workspaces.UpdateRulesOfIpGroupOutput, error)
-	UpdateRulesOfIpGroupAsync(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) *WorkspacesUpdateRulesOfIpGroupResult
+	UpdateRulesOfIpGroupAsync(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) *WorkspacesUpdateRulesOfIpGroupFuture
 
 	UpdateWorkspaceImagePermission(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) (*workspaces.UpdateWorkspaceImagePermissionOutput, error)
-	UpdateWorkspaceImagePermissionAsync(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) *WorkspacesUpdateWorkspaceImagePermissionResult
+	UpdateWorkspaceImagePermissionAsync(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) *WorkspacesUpdateWorkspaceImagePermissionFuture
 }
 
 type WorkSpacesStub struct{}
@@ -167,503 +167,503 @@ func NewWorkSpacesStub() WorkSpacesClient {
 	return &WorkSpacesStub{}
 }
 
-type WorkspacesAssociateConnectionAliasResult struct {
-	Result workflow.Future
+type WorkspacesAssociateConnectionAliasFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesAssociateConnectionAliasResult) Get(ctx workflow.Context) (*workspaces.AssociateConnectionAliasOutput, error) {
+func (r *WorkspacesAssociateConnectionAliasFuture) Get(ctx workflow.Context) (*workspaces.AssociateConnectionAliasOutput, error) {
 	var output workspaces.AssociateConnectionAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesAssociateIpGroupsResult struct {
-	Result workflow.Future
+type WorkspacesAssociateIpGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesAssociateIpGroupsResult) Get(ctx workflow.Context) (*workspaces.AssociateIpGroupsOutput, error) {
+func (r *WorkspacesAssociateIpGroupsFuture) Get(ctx workflow.Context) (*workspaces.AssociateIpGroupsOutput, error) {
 	var output workspaces.AssociateIpGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesAuthorizeIpRulesResult struct {
-	Result workflow.Future
+type WorkspacesAuthorizeIpRulesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesAuthorizeIpRulesResult) Get(ctx workflow.Context) (*workspaces.AuthorizeIpRulesOutput, error) {
+func (r *WorkspacesAuthorizeIpRulesFuture) Get(ctx workflow.Context) (*workspaces.AuthorizeIpRulesOutput, error) {
 	var output workspaces.AuthorizeIpRulesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesCopyWorkspaceImageResult struct {
-	Result workflow.Future
+type WorkspacesCopyWorkspaceImageFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesCopyWorkspaceImageResult) Get(ctx workflow.Context) (*workspaces.CopyWorkspaceImageOutput, error) {
+func (r *WorkspacesCopyWorkspaceImageFuture) Get(ctx workflow.Context) (*workspaces.CopyWorkspaceImageOutput, error) {
 	var output workspaces.CopyWorkspaceImageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesCreateConnectionAliasResult struct {
-	Result workflow.Future
+type WorkspacesCreateConnectionAliasFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesCreateConnectionAliasResult) Get(ctx workflow.Context) (*workspaces.CreateConnectionAliasOutput, error) {
+func (r *WorkspacesCreateConnectionAliasFuture) Get(ctx workflow.Context) (*workspaces.CreateConnectionAliasOutput, error) {
 	var output workspaces.CreateConnectionAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesCreateIpGroupResult struct {
-	Result workflow.Future
+type WorkspacesCreateIpGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesCreateIpGroupResult) Get(ctx workflow.Context) (*workspaces.CreateIpGroupOutput, error) {
+func (r *WorkspacesCreateIpGroupFuture) Get(ctx workflow.Context) (*workspaces.CreateIpGroupOutput, error) {
 	var output workspaces.CreateIpGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesCreateTagsResult struct {
-	Result workflow.Future
+type WorkspacesCreateTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesCreateTagsResult) Get(ctx workflow.Context) (*workspaces.CreateTagsOutput, error) {
+func (r *WorkspacesCreateTagsFuture) Get(ctx workflow.Context) (*workspaces.CreateTagsOutput, error) {
 	var output workspaces.CreateTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesCreateWorkspacesResult struct {
-	Result workflow.Future
+type WorkspacesCreateWorkspacesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesCreateWorkspacesResult) Get(ctx workflow.Context) (*workspaces.CreateWorkspacesOutput, error) {
+func (r *WorkspacesCreateWorkspacesFuture) Get(ctx workflow.Context) (*workspaces.CreateWorkspacesOutput, error) {
 	var output workspaces.CreateWorkspacesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDeleteConnectionAliasResult struct {
-	Result workflow.Future
+type WorkspacesDeleteConnectionAliasFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDeleteConnectionAliasResult) Get(ctx workflow.Context) (*workspaces.DeleteConnectionAliasOutput, error) {
+func (r *WorkspacesDeleteConnectionAliasFuture) Get(ctx workflow.Context) (*workspaces.DeleteConnectionAliasOutput, error) {
 	var output workspaces.DeleteConnectionAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDeleteIpGroupResult struct {
-	Result workflow.Future
+type WorkspacesDeleteIpGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDeleteIpGroupResult) Get(ctx workflow.Context) (*workspaces.DeleteIpGroupOutput, error) {
+func (r *WorkspacesDeleteIpGroupFuture) Get(ctx workflow.Context) (*workspaces.DeleteIpGroupOutput, error) {
 	var output workspaces.DeleteIpGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDeleteTagsResult struct {
-	Result workflow.Future
+type WorkspacesDeleteTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDeleteTagsResult) Get(ctx workflow.Context) (*workspaces.DeleteTagsOutput, error) {
+func (r *WorkspacesDeleteTagsFuture) Get(ctx workflow.Context) (*workspaces.DeleteTagsOutput, error) {
 	var output workspaces.DeleteTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDeleteWorkspaceImageResult struct {
-	Result workflow.Future
+type WorkspacesDeleteWorkspaceImageFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDeleteWorkspaceImageResult) Get(ctx workflow.Context) (*workspaces.DeleteWorkspaceImageOutput, error) {
+func (r *WorkspacesDeleteWorkspaceImageFuture) Get(ctx workflow.Context) (*workspaces.DeleteWorkspaceImageOutput, error) {
 	var output workspaces.DeleteWorkspaceImageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDeregisterWorkspaceDirectoryResult struct {
-	Result workflow.Future
+type WorkspacesDeregisterWorkspaceDirectoryFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDeregisterWorkspaceDirectoryResult) Get(ctx workflow.Context) (*workspaces.DeregisterWorkspaceDirectoryOutput, error) {
+func (r *WorkspacesDeregisterWorkspaceDirectoryFuture) Get(ctx workflow.Context) (*workspaces.DeregisterWorkspaceDirectoryOutput, error) {
 	var output workspaces.DeregisterWorkspaceDirectoryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeAccountResult struct {
-	Result workflow.Future
+type WorkspacesDescribeAccountFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeAccountResult) Get(ctx workflow.Context) (*workspaces.DescribeAccountOutput, error) {
+func (r *WorkspacesDescribeAccountFuture) Get(ctx workflow.Context) (*workspaces.DescribeAccountOutput, error) {
 	var output workspaces.DescribeAccountOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeAccountModificationsResult struct {
-	Result workflow.Future
+type WorkspacesDescribeAccountModificationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeAccountModificationsResult) Get(ctx workflow.Context) (*workspaces.DescribeAccountModificationsOutput, error) {
+func (r *WorkspacesDescribeAccountModificationsFuture) Get(ctx workflow.Context) (*workspaces.DescribeAccountModificationsOutput, error) {
 	var output workspaces.DescribeAccountModificationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeClientPropertiesResult struct {
-	Result workflow.Future
+type WorkspacesDescribeClientPropertiesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeClientPropertiesResult) Get(ctx workflow.Context) (*workspaces.DescribeClientPropertiesOutput, error) {
+func (r *WorkspacesDescribeClientPropertiesFuture) Get(ctx workflow.Context) (*workspaces.DescribeClientPropertiesOutput, error) {
 	var output workspaces.DescribeClientPropertiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeConnectionAliasPermissionsResult struct {
-	Result workflow.Future
+type WorkspacesDescribeConnectionAliasPermissionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeConnectionAliasPermissionsResult) Get(ctx workflow.Context) (*workspaces.DescribeConnectionAliasPermissionsOutput, error) {
+func (r *WorkspacesDescribeConnectionAliasPermissionsFuture) Get(ctx workflow.Context) (*workspaces.DescribeConnectionAliasPermissionsOutput, error) {
 	var output workspaces.DescribeConnectionAliasPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeConnectionAliasesResult struct {
-	Result workflow.Future
+type WorkspacesDescribeConnectionAliasesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeConnectionAliasesResult) Get(ctx workflow.Context) (*workspaces.DescribeConnectionAliasesOutput, error) {
+func (r *WorkspacesDescribeConnectionAliasesFuture) Get(ctx workflow.Context) (*workspaces.DescribeConnectionAliasesOutput, error) {
 	var output workspaces.DescribeConnectionAliasesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeIpGroupsResult struct {
-	Result workflow.Future
+type WorkspacesDescribeIpGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeIpGroupsResult) Get(ctx workflow.Context) (*workspaces.DescribeIpGroupsOutput, error) {
+func (r *WorkspacesDescribeIpGroupsFuture) Get(ctx workflow.Context) (*workspaces.DescribeIpGroupsOutput, error) {
 	var output workspaces.DescribeIpGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeTagsResult struct {
-	Result workflow.Future
+type WorkspacesDescribeTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeTagsResult) Get(ctx workflow.Context) (*workspaces.DescribeTagsOutput, error) {
+func (r *WorkspacesDescribeTagsFuture) Get(ctx workflow.Context) (*workspaces.DescribeTagsOutput, error) {
 	var output workspaces.DescribeTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeWorkspaceBundlesResult struct {
-	Result workflow.Future
+type WorkspacesDescribeWorkspaceBundlesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeWorkspaceBundlesResult) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceBundlesOutput, error) {
+func (r *WorkspacesDescribeWorkspaceBundlesFuture) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceBundlesOutput, error) {
 	var output workspaces.DescribeWorkspaceBundlesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeWorkspaceDirectoriesResult struct {
-	Result workflow.Future
+type WorkspacesDescribeWorkspaceDirectoriesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeWorkspaceDirectoriesResult) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceDirectoriesOutput, error) {
+func (r *WorkspacesDescribeWorkspaceDirectoriesFuture) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceDirectoriesOutput, error) {
 	var output workspaces.DescribeWorkspaceDirectoriesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeWorkspaceImagePermissionsResult struct {
-	Result workflow.Future
+type WorkspacesDescribeWorkspaceImagePermissionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeWorkspaceImagePermissionsResult) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceImagePermissionsOutput, error) {
+func (r *WorkspacesDescribeWorkspaceImagePermissionsFuture) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceImagePermissionsOutput, error) {
 	var output workspaces.DescribeWorkspaceImagePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeWorkspaceImagesResult struct {
-	Result workflow.Future
+type WorkspacesDescribeWorkspaceImagesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeWorkspaceImagesResult) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceImagesOutput, error) {
+func (r *WorkspacesDescribeWorkspaceImagesFuture) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceImagesOutput, error) {
 	var output workspaces.DescribeWorkspaceImagesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeWorkspaceSnapshotsResult struct {
-	Result workflow.Future
+type WorkspacesDescribeWorkspaceSnapshotsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeWorkspaceSnapshotsResult) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceSnapshotsOutput, error) {
+func (r *WorkspacesDescribeWorkspaceSnapshotsFuture) Get(ctx workflow.Context) (*workspaces.DescribeWorkspaceSnapshotsOutput, error) {
 	var output workspaces.DescribeWorkspaceSnapshotsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeWorkspacesResult struct {
-	Result workflow.Future
+type WorkspacesDescribeWorkspacesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeWorkspacesResult) Get(ctx workflow.Context) (*workspaces.DescribeWorkspacesOutput, error) {
+func (r *WorkspacesDescribeWorkspacesFuture) Get(ctx workflow.Context) (*workspaces.DescribeWorkspacesOutput, error) {
 	var output workspaces.DescribeWorkspacesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDescribeWorkspacesConnectionStatusResult struct {
-	Result workflow.Future
+type WorkspacesDescribeWorkspacesConnectionStatusFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDescribeWorkspacesConnectionStatusResult) Get(ctx workflow.Context) (*workspaces.DescribeWorkspacesConnectionStatusOutput, error) {
+func (r *WorkspacesDescribeWorkspacesConnectionStatusFuture) Get(ctx workflow.Context) (*workspaces.DescribeWorkspacesConnectionStatusOutput, error) {
 	var output workspaces.DescribeWorkspacesConnectionStatusOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDisassociateConnectionAliasResult struct {
-	Result workflow.Future
+type WorkspacesDisassociateConnectionAliasFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDisassociateConnectionAliasResult) Get(ctx workflow.Context) (*workspaces.DisassociateConnectionAliasOutput, error) {
+func (r *WorkspacesDisassociateConnectionAliasFuture) Get(ctx workflow.Context) (*workspaces.DisassociateConnectionAliasOutput, error) {
 	var output workspaces.DisassociateConnectionAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesDisassociateIpGroupsResult struct {
-	Result workflow.Future
+type WorkspacesDisassociateIpGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesDisassociateIpGroupsResult) Get(ctx workflow.Context) (*workspaces.DisassociateIpGroupsOutput, error) {
+func (r *WorkspacesDisassociateIpGroupsFuture) Get(ctx workflow.Context) (*workspaces.DisassociateIpGroupsOutput, error) {
 	var output workspaces.DisassociateIpGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesImportWorkspaceImageResult struct {
-	Result workflow.Future
+type WorkspacesImportWorkspaceImageFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesImportWorkspaceImageResult) Get(ctx workflow.Context) (*workspaces.ImportWorkspaceImageOutput, error) {
+func (r *WorkspacesImportWorkspaceImageFuture) Get(ctx workflow.Context) (*workspaces.ImportWorkspaceImageOutput, error) {
 	var output workspaces.ImportWorkspaceImageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesListAvailableManagementCidrRangesResult struct {
-	Result workflow.Future
+type WorkspacesListAvailableManagementCidrRangesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesListAvailableManagementCidrRangesResult) Get(ctx workflow.Context) (*workspaces.ListAvailableManagementCidrRangesOutput, error) {
+func (r *WorkspacesListAvailableManagementCidrRangesFuture) Get(ctx workflow.Context) (*workspaces.ListAvailableManagementCidrRangesOutput, error) {
 	var output workspaces.ListAvailableManagementCidrRangesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesMigrateWorkspaceResult struct {
-	Result workflow.Future
+type WorkspacesMigrateWorkspaceFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesMigrateWorkspaceResult) Get(ctx workflow.Context) (*workspaces.MigrateWorkspaceOutput, error) {
+func (r *WorkspacesMigrateWorkspaceFuture) Get(ctx workflow.Context) (*workspaces.MigrateWorkspaceOutput, error) {
 	var output workspaces.MigrateWorkspaceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesModifyAccountResult struct {
-	Result workflow.Future
+type WorkspacesModifyAccountFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesModifyAccountResult) Get(ctx workflow.Context) (*workspaces.ModifyAccountOutput, error) {
+func (r *WorkspacesModifyAccountFuture) Get(ctx workflow.Context) (*workspaces.ModifyAccountOutput, error) {
 	var output workspaces.ModifyAccountOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesModifyClientPropertiesResult struct {
-	Result workflow.Future
+type WorkspacesModifyClientPropertiesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesModifyClientPropertiesResult) Get(ctx workflow.Context) (*workspaces.ModifyClientPropertiesOutput, error) {
+func (r *WorkspacesModifyClientPropertiesFuture) Get(ctx workflow.Context) (*workspaces.ModifyClientPropertiesOutput, error) {
 	var output workspaces.ModifyClientPropertiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesModifySelfservicePermissionsResult struct {
-	Result workflow.Future
+type WorkspacesModifySelfservicePermissionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesModifySelfservicePermissionsResult) Get(ctx workflow.Context) (*workspaces.ModifySelfservicePermissionsOutput, error) {
+func (r *WorkspacesModifySelfservicePermissionsFuture) Get(ctx workflow.Context) (*workspaces.ModifySelfservicePermissionsOutput, error) {
 	var output workspaces.ModifySelfservicePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesModifyWorkspaceAccessPropertiesResult struct {
-	Result workflow.Future
+type WorkspacesModifyWorkspaceAccessPropertiesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesModifyWorkspaceAccessPropertiesResult) Get(ctx workflow.Context) (*workspaces.ModifyWorkspaceAccessPropertiesOutput, error) {
+func (r *WorkspacesModifyWorkspaceAccessPropertiesFuture) Get(ctx workflow.Context) (*workspaces.ModifyWorkspaceAccessPropertiesOutput, error) {
 	var output workspaces.ModifyWorkspaceAccessPropertiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesModifyWorkspaceCreationPropertiesResult struct {
-	Result workflow.Future
+type WorkspacesModifyWorkspaceCreationPropertiesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesModifyWorkspaceCreationPropertiesResult) Get(ctx workflow.Context) (*workspaces.ModifyWorkspaceCreationPropertiesOutput, error) {
+func (r *WorkspacesModifyWorkspaceCreationPropertiesFuture) Get(ctx workflow.Context) (*workspaces.ModifyWorkspaceCreationPropertiesOutput, error) {
 	var output workspaces.ModifyWorkspaceCreationPropertiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesModifyWorkspacePropertiesResult struct {
-	Result workflow.Future
+type WorkspacesModifyWorkspacePropertiesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesModifyWorkspacePropertiesResult) Get(ctx workflow.Context) (*workspaces.ModifyWorkspacePropertiesOutput, error) {
+func (r *WorkspacesModifyWorkspacePropertiesFuture) Get(ctx workflow.Context) (*workspaces.ModifyWorkspacePropertiesOutput, error) {
 	var output workspaces.ModifyWorkspacePropertiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesModifyWorkspaceStateResult struct {
-	Result workflow.Future
+type WorkspacesModifyWorkspaceStateFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesModifyWorkspaceStateResult) Get(ctx workflow.Context) (*workspaces.ModifyWorkspaceStateOutput, error) {
+func (r *WorkspacesModifyWorkspaceStateFuture) Get(ctx workflow.Context) (*workspaces.ModifyWorkspaceStateOutput, error) {
 	var output workspaces.ModifyWorkspaceStateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesRebootWorkspacesResult struct {
-	Result workflow.Future
+type WorkspacesRebootWorkspacesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesRebootWorkspacesResult) Get(ctx workflow.Context) (*workspaces.RebootWorkspacesOutput, error) {
+func (r *WorkspacesRebootWorkspacesFuture) Get(ctx workflow.Context) (*workspaces.RebootWorkspacesOutput, error) {
 	var output workspaces.RebootWorkspacesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesRebuildWorkspacesResult struct {
-	Result workflow.Future
+type WorkspacesRebuildWorkspacesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesRebuildWorkspacesResult) Get(ctx workflow.Context) (*workspaces.RebuildWorkspacesOutput, error) {
+func (r *WorkspacesRebuildWorkspacesFuture) Get(ctx workflow.Context) (*workspaces.RebuildWorkspacesOutput, error) {
 	var output workspaces.RebuildWorkspacesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesRegisterWorkspaceDirectoryResult struct {
-	Result workflow.Future
+type WorkspacesRegisterWorkspaceDirectoryFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesRegisterWorkspaceDirectoryResult) Get(ctx workflow.Context) (*workspaces.RegisterWorkspaceDirectoryOutput, error) {
+func (r *WorkspacesRegisterWorkspaceDirectoryFuture) Get(ctx workflow.Context) (*workspaces.RegisterWorkspaceDirectoryOutput, error) {
 	var output workspaces.RegisterWorkspaceDirectoryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesRestoreWorkspaceResult struct {
-	Result workflow.Future
+type WorkspacesRestoreWorkspaceFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesRestoreWorkspaceResult) Get(ctx workflow.Context) (*workspaces.RestoreWorkspaceOutput, error) {
+func (r *WorkspacesRestoreWorkspaceFuture) Get(ctx workflow.Context) (*workspaces.RestoreWorkspaceOutput, error) {
 	var output workspaces.RestoreWorkspaceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesRevokeIpRulesResult struct {
-	Result workflow.Future
+type WorkspacesRevokeIpRulesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesRevokeIpRulesResult) Get(ctx workflow.Context) (*workspaces.RevokeIpRulesOutput, error) {
+func (r *WorkspacesRevokeIpRulesFuture) Get(ctx workflow.Context) (*workspaces.RevokeIpRulesOutput, error) {
 	var output workspaces.RevokeIpRulesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesStartWorkspacesResult struct {
-	Result workflow.Future
+type WorkspacesStartWorkspacesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesStartWorkspacesResult) Get(ctx workflow.Context) (*workspaces.StartWorkspacesOutput, error) {
+func (r *WorkspacesStartWorkspacesFuture) Get(ctx workflow.Context) (*workspaces.StartWorkspacesOutput, error) {
 	var output workspaces.StartWorkspacesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesStopWorkspacesResult struct {
-	Result workflow.Future
+type WorkspacesStopWorkspacesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesStopWorkspacesResult) Get(ctx workflow.Context) (*workspaces.StopWorkspacesOutput, error) {
+func (r *WorkspacesStopWorkspacesFuture) Get(ctx workflow.Context) (*workspaces.StopWorkspacesOutput, error) {
 	var output workspaces.StopWorkspacesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesTerminateWorkspacesResult struct {
-	Result workflow.Future
+type WorkspacesTerminateWorkspacesFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesTerminateWorkspacesResult) Get(ctx workflow.Context) (*workspaces.TerminateWorkspacesOutput, error) {
+func (r *WorkspacesTerminateWorkspacesFuture) Get(ctx workflow.Context) (*workspaces.TerminateWorkspacesOutput, error) {
 	var output workspaces.TerminateWorkspacesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesUpdateConnectionAliasPermissionResult struct {
-	Result workflow.Future
+type WorkspacesUpdateConnectionAliasPermissionFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesUpdateConnectionAliasPermissionResult) Get(ctx workflow.Context) (*workspaces.UpdateConnectionAliasPermissionOutput, error) {
+func (r *WorkspacesUpdateConnectionAliasPermissionFuture) Get(ctx workflow.Context) (*workspaces.UpdateConnectionAliasPermissionOutput, error) {
 	var output workspaces.UpdateConnectionAliasPermissionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesUpdateRulesOfIpGroupResult struct {
-	Result workflow.Future
+type WorkspacesUpdateRulesOfIpGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesUpdateRulesOfIpGroupResult) Get(ctx workflow.Context) (*workspaces.UpdateRulesOfIpGroupOutput, error) {
+func (r *WorkspacesUpdateRulesOfIpGroupFuture) Get(ctx workflow.Context) (*workspaces.UpdateRulesOfIpGroupOutput, error) {
 	var output workspaces.UpdateRulesOfIpGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkspacesUpdateWorkspaceImagePermissionResult struct {
-	Result workflow.Future
+type WorkspacesUpdateWorkspaceImagePermissionFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkspacesUpdateWorkspaceImagePermissionResult) Get(ctx workflow.Context) (*workspaces.UpdateWorkspaceImagePermissionOutput, error) {
+func (r *WorkspacesUpdateWorkspaceImagePermissionFuture) Get(ctx workflow.Context) (*workspaces.UpdateWorkspaceImagePermissionOutput, error) {
 	var output workspaces.UpdateWorkspaceImagePermissionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -673,9 +673,9 @@ func (a *WorkSpacesStub) AssociateConnectionAlias(ctx workflow.Context, input *w
 	return &output, err
 }
 
-func (a *WorkSpacesStub) AssociateConnectionAliasAsync(ctx workflow.Context, input *workspaces.AssociateConnectionAliasInput) *WorkspacesAssociateConnectionAliasResult {
+func (a *WorkSpacesStub) AssociateConnectionAliasAsync(ctx workflow.Context, input *workspaces.AssociateConnectionAliasInput) *WorkspacesAssociateConnectionAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.AssociateConnectionAlias", input)
-	return &WorkspacesAssociateConnectionAliasResult{Result: future}
+	return &WorkspacesAssociateConnectionAliasFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) AssociateIpGroups(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) (*workspaces.AssociateIpGroupsOutput, error) {
@@ -684,9 +684,9 @@ func (a *WorkSpacesStub) AssociateIpGroups(ctx workflow.Context, input *workspac
 	return &output, err
 }
 
-func (a *WorkSpacesStub) AssociateIpGroupsAsync(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) *WorkspacesAssociateIpGroupsResult {
+func (a *WorkSpacesStub) AssociateIpGroupsAsync(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) *WorkspacesAssociateIpGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.AssociateIpGroups", input)
-	return &WorkspacesAssociateIpGroupsResult{Result: future}
+	return &WorkspacesAssociateIpGroupsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) AuthorizeIpRules(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) (*workspaces.AuthorizeIpRulesOutput, error) {
@@ -695,9 +695,9 @@ func (a *WorkSpacesStub) AuthorizeIpRules(ctx workflow.Context, input *workspace
 	return &output, err
 }
 
-func (a *WorkSpacesStub) AuthorizeIpRulesAsync(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) *WorkspacesAuthorizeIpRulesResult {
+func (a *WorkSpacesStub) AuthorizeIpRulesAsync(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) *WorkspacesAuthorizeIpRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.AuthorizeIpRules", input)
-	return &WorkspacesAuthorizeIpRulesResult{Result: future}
+	return &WorkspacesAuthorizeIpRulesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) CopyWorkspaceImage(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) (*workspaces.CopyWorkspaceImageOutput, error) {
@@ -706,9 +706,9 @@ func (a *WorkSpacesStub) CopyWorkspaceImage(ctx workflow.Context, input *workspa
 	return &output, err
 }
 
-func (a *WorkSpacesStub) CopyWorkspaceImageAsync(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) *WorkspacesCopyWorkspaceImageResult {
+func (a *WorkSpacesStub) CopyWorkspaceImageAsync(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) *WorkspacesCopyWorkspaceImageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.CopyWorkspaceImage", input)
-	return &WorkspacesCopyWorkspaceImageResult{Result: future}
+	return &WorkspacesCopyWorkspaceImageFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) CreateConnectionAlias(ctx workflow.Context, input *workspaces.CreateConnectionAliasInput) (*workspaces.CreateConnectionAliasOutput, error) {
@@ -717,9 +717,9 @@ func (a *WorkSpacesStub) CreateConnectionAlias(ctx workflow.Context, input *work
 	return &output, err
 }
 
-func (a *WorkSpacesStub) CreateConnectionAliasAsync(ctx workflow.Context, input *workspaces.CreateConnectionAliasInput) *WorkspacesCreateConnectionAliasResult {
+func (a *WorkSpacesStub) CreateConnectionAliasAsync(ctx workflow.Context, input *workspaces.CreateConnectionAliasInput) *WorkspacesCreateConnectionAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.CreateConnectionAlias", input)
-	return &WorkspacesCreateConnectionAliasResult{Result: future}
+	return &WorkspacesCreateConnectionAliasFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) CreateIpGroup(ctx workflow.Context, input *workspaces.CreateIpGroupInput) (*workspaces.CreateIpGroupOutput, error) {
@@ -728,9 +728,9 @@ func (a *WorkSpacesStub) CreateIpGroup(ctx workflow.Context, input *workspaces.C
 	return &output, err
 }
 
-func (a *WorkSpacesStub) CreateIpGroupAsync(ctx workflow.Context, input *workspaces.CreateIpGroupInput) *WorkspacesCreateIpGroupResult {
+func (a *WorkSpacesStub) CreateIpGroupAsync(ctx workflow.Context, input *workspaces.CreateIpGroupInput) *WorkspacesCreateIpGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.CreateIpGroup", input)
-	return &WorkspacesCreateIpGroupResult{Result: future}
+	return &WorkspacesCreateIpGroupFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) CreateTags(ctx workflow.Context, input *workspaces.CreateTagsInput) (*workspaces.CreateTagsOutput, error) {
@@ -739,9 +739,9 @@ func (a *WorkSpacesStub) CreateTags(ctx workflow.Context, input *workspaces.Crea
 	return &output, err
 }
 
-func (a *WorkSpacesStub) CreateTagsAsync(ctx workflow.Context, input *workspaces.CreateTagsInput) *WorkspacesCreateTagsResult {
+func (a *WorkSpacesStub) CreateTagsAsync(ctx workflow.Context, input *workspaces.CreateTagsInput) *WorkspacesCreateTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.CreateTags", input)
-	return &WorkspacesCreateTagsResult{Result: future}
+	return &WorkspacesCreateTagsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) CreateWorkspaces(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) (*workspaces.CreateWorkspacesOutput, error) {
@@ -750,9 +750,9 @@ func (a *WorkSpacesStub) CreateWorkspaces(ctx workflow.Context, input *workspace
 	return &output, err
 }
 
-func (a *WorkSpacesStub) CreateWorkspacesAsync(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) *WorkspacesCreateWorkspacesResult {
+func (a *WorkSpacesStub) CreateWorkspacesAsync(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) *WorkspacesCreateWorkspacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.CreateWorkspaces", input)
-	return &WorkspacesCreateWorkspacesResult{Result: future}
+	return &WorkspacesCreateWorkspacesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DeleteConnectionAlias(ctx workflow.Context, input *workspaces.DeleteConnectionAliasInput) (*workspaces.DeleteConnectionAliasOutput, error) {
@@ -761,9 +761,9 @@ func (a *WorkSpacesStub) DeleteConnectionAlias(ctx workflow.Context, input *work
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DeleteConnectionAliasAsync(ctx workflow.Context, input *workspaces.DeleteConnectionAliasInput) *WorkspacesDeleteConnectionAliasResult {
+func (a *WorkSpacesStub) DeleteConnectionAliasAsync(ctx workflow.Context, input *workspaces.DeleteConnectionAliasInput) *WorkspacesDeleteConnectionAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DeleteConnectionAlias", input)
-	return &WorkspacesDeleteConnectionAliasResult{Result: future}
+	return &WorkspacesDeleteConnectionAliasFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DeleteIpGroup(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) (*workspaces.DeleteIpGroupOutput, error) {
@@ -772,9 +772,9 @@ func (a *WorkSpacesStub) DeleteIpGroup(ctx workflow.Context, input *workspaces.D
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DeleteIpGroupAsync(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) *WorkspacesDeleteIpGroupResult {
+func (a *WorkSpacesStub) DeleteIpGroupAsync(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) *WorkspacesDeleteIpGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DeleteIpGroup", input)
-	return &WorkspacesDeleteIpGroupResult{Result: future}
+	return &WorkspacesDeleteIpGroupFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DeleteTags(ctx workflow.Context, input *workspaces.DeleteTagsInput) (*workspaces.DeleteTagsOutput, error) {
@@ -783,9 +783,9 @@ func (a *WorkSpacesStub) DeleteTags(ctx workflow.Context, input *workspaces.Dele
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DeleteTagsAsync(ctx workflow.Context, input *workspaces.DeleteTagsInput) *WorkspacesDeleteTagsResult {
+func (a *WorkSpacesStub) DeleteTagsAsync(ctx workflow.Context, input *workspaces.DeleteTagsInput) *WorkspacesDeleteTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DeleteTags", input)
-	return &WorkspacesDeleteTagsResult{Result: future}
+	return &WorkspacesDeleteTagsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DeleteWorkspaceImage(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) (*workspaces.DeleteWorkspaceImageOutput, error) {
@@ -794,9 +794,9 @@ func (a *WorkSpacesStub) DeleteWorkspaceImage(ctx workflow.Context, input *works
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DeleteWorkspaceImageAsync(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) *WorkspacesDeleteWorkspaceImageResult {
+func (a *WorkSpacesStub) DeleteWorkspaceImageAsync(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) *WorkspacesDeleteWorkspaceImageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DeleteWorkspaceImage", input)
-	return &WorkspacesDeleteWorkspaceImageResult{Result: future}
+	return &WorkspacesDeleteWorkspaceImageFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DeregisterWorkspaceDirectory(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) (*workspaces.DeregisterWorkspaceDirectoryOutput, error) {
@@ -805,9 +805,9 @@ func (a *WorkSpacesStub) DeregisterWorkspaceDirectory(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DeregisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) *WorkspacesDeregisterWorkspaceDirectoryResult {
+func (a *WorkSpacesStub) DeregisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) *WorkspacesDeregisterWorkspaceDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DeregisterWorkspaceDirectory", input)
-	return &WorkspacesDeregisterWorkspaceDirectoryResult{Result: future}
+	return &WorkspacesDeregisterWorkspaceDirectoryFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeAccount(ctx workflow.Context, input *workspaces.DescribeAccountInput) (*workspaces.DescribeAccountOutput, error) {
@@ -816,9 +816,9 @@ func (a *WorkSpacesStub) DescribeAccount(ctx workflow.Context, input *workspaces
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeAccountAsync(ctx workflow.Context, input *workspaces.DescribeAccountInput) *WorkspacesDescribeAccountResult {
+func (a *WorkSpacesStub) DescribeAccountAsync(ctx workflow.Context, input *workspaces.DescribeAccountInput) *WorkspacesDescribeAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeAccount", input)
-	return &WorkspacesDescribeAccountResult{Result: future}
+	return &WorkspacesDescribeAccountFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeAccountModifications(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) (*workspaces.DescribeAccountModificationsOutput, error) {
@@ -827,9 +827,9 @@ func (a *WorkSpacesStub) DescribeAccountModifications(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeAccountModificationsAsync(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) *WorkspacesDescribeAccountModificationsResult {
+func (a *WorkSpacesStub) DescribeAccountModificationsAsync(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) *WorkspacesDescribeAccountModificationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeAccountModifications", input)
-	return &WorkspacesDescribeAccountModificationsResult{Result: future}
+	return &WorkspacesDescribeAccountModificationsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeClientProperties(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) (*workspaces.DescribeClientPropertiesOutput, error) {
@@ -838,9 +838,9 @@ func (a *WorkSpacesStub) DescribeClientProperties(ctx workflow.Context, input *w
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeClientPropertiesAsync(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) *WorkspacesDescribeClientPropertiesResult {
+func (a *WorkSpacesStub) DescribeClientPropertiesAsync(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) *WorkspacesDescribeClientPropertiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeClientProperties", input)
-	return &WorkspacesDescribeClientPropertiesResult{Result: future}
+	return &WorkspacesDescribeClientPropertiesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeConnectionAliasPermissions(ctx workflow.Context, input *workspaces.DescribeConnectionAliasPermissionsInput) (*workspaces.DescribeConnectionAliasPermissionsOutput, error) {
@@ -849,9 +849,9 @@ func (a *WorkSpacesStub) DescribeConnectionAliasPermissions(ctx workflow.Context
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeConnectionAliasPermissionsAsync(ctx workflow.Context, input *workspaces.DescribeConnectionAliasPermissionsInput) *WorkspacesDescribeConnectionAliasPermissionsResult {
+func (a *WorkSpacesStub) DescribeConnectionAliasPermissionsAsync(ctx workflow.Context, input *workspaces.DescribeConnectionAliasPermissionsInput) *WorkspacesDescribeConnectionAliasPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeConnectionAliasPermissions", input)
-	return &WorkspacesDescribeConnectionAliasPermissionsResult{Result: future}
+	return &WorkspacesDescribeConnectionAliasPermissionsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeConnectionAliases(ctx workflow.Context, input *workspaces.DescribeConnectionAliasesInput) (*workspaces.DescribeConnectionAliasesOutput, error) {
@@ -860,9 +860,9 @@ func (a *WorkSpacesStub) DescribeConnectionAliases(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeConnectionAliasesAsync(ctx workflow.Context, input *workspaces.DescribeConnectionAliasesInput) *WorkspacesDescribeConnectionAliasesResult {
+func (a *WorkSpacesStub) DescribeConnectionAliasesAsync(ctx workflow.Context, input *workspaces.DescribeConnectionAliasesInput) *WorkspacesDescribeConnectionAliasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeConnectionAliases", input)
-	return &WorkspacesDescribeConnectionAliasesResult{Result: future}
+	return &WorkspacesDescribeConnectionAliasesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeIpGroups(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) (*workspaces.DescribeIpGroupsOutput, error) {
@@ -871,9 +871,9 @@ func (a *WorkSpacesStub) DescribeIpGroups(ctx workflow.Context, input *workspace
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeIpGroupsAsync(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) *WorkspacesDescribeIpGroupsResult {
+func (a *WorkSpacesStub) DescribeIpGroupsAsync(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) *WorkspacesDescribeIpGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeIpGroups", input)
-	return &WorkspacesDescribeIpGroupsResult{Result: future}
+	return &WorkspacesDescribeIpGroupsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeTags(ctx workflow.Context, input *workspaces.DescribeTagsInput) (*workspaces.DescribeTagsOutput, error) {
@@ -882,9 +882,9 @@ func (a *WorkSpacesStub) DescribeTags(ctx workflow.Context, input *workspaces.De
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeTagsAsync(ctx workflow.Context, input *workspaces.DescribeTagsInput) *WorkspacesDescribeTagsResult {
+func (a *WorkSpacesStub) DescribeTagsAsync(ctx workflow.Context, input *workspaces.DescribeTagsInput) *WorkspacesDescribeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeTags", input)
-	return &WorkspacesDescribeTagsResult{Result: future}
+	return &WorkspacesDescribeTagsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeWorkspaceBundles(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) (*workspaces.DescribeWorkspaceBundlesOutput, error) {
@@ -893,9 +893,9 @@ func (a *WorkSpacesStub) DescribeWorkspaceBundles(ctx workflow.Context, input *w
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeWorkspaceBundlesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) *WorkspacesDescribeWorkspaceBundlesResult {
+func (a *WorkSpacesStub) DescribeWorkspaceBundlesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) *WorkspacesDescribeWorkspaceBundlesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeWorkspaceBundles", input)
-	return &WorkspacesDescribeWorkspaceBundlesResult{Result: future}
+	return &WorkspacesDescribeWorkspaceBundlesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeWorkspaceDirectories(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) (*workspaces.DescribeWorkspaceDirectoriesOutput, error) {
@@ -904,9 +904,9 @@ func (a *WorkSpacesStub) DescribeWorkspaceDirectories(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeWorkspaceDirectoriesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) *WorkspacesDescribeWorkspaceDirectoriesResult {
+func (a *WorkSpacesStub) DescribeWorkspaceDirectoriesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) *WorkspacesDescribeWorkspaceDirectoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeWorkspaceDirectories", input)
-	return &WorkspacesDescribeWorkspaceDirectoriesResult{Result: future}
+	return &WorkspacesDescribeWorkspaceDirectoriesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeWorkspaceImagePermissions(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) (*workspaces.DescribeWorkspaceImagePermissionsOutput, error) {
@@ -915,9 +915,9 @@ func (a *WorkSpacesStub) DescribeWorkspaceImagePermissions(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeWorkspaceImagePermissionsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) *WorkspacesDescribeWorkspaceImagePermissionsResult {
+func (a *WorkSpacesStub) DescribeWorkspaceImagePermissionsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) *WorkspacesDescribeWorkspaceImagePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeWorkspaceImagePermissions", input)
-	return &WorkspacesDescribeWorkspaceImagePermissionsResult{Result: future}
+	return &WorkspacesDescribeWorkspaceImagePermissionsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeWorkspaceImages(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) (*workspaces.DescribeWorkspaceImagesOutput, error) {
@@ -926,9 +926,9 @@ func (a *WorkSpacesStub) DescribeWorkspaceImages(ctx workflow.Context, input *wo
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeWorkspaceImagesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) *WorkspacesDescribeWorkspaceImagesResult {
+func (a *WorkSpacesStub) DescribeWorkspaceImagesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) *WorkspacesDescribeWorkspaceImagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeWorkspaceImages", input)
-	return &WorkspacesDescribeWorkspaceImagesResult{Result: future}
+	return &WorkspacesDescribeWorkspaceImagesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeWorkspaceSnapshots(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) (*workspaces.DescribeWorkspaceSnapshotsOutput, error) {
@@ -937,9 +937,9 @@ func (a *WorkSpacesStub) DescribeWorkspaceSnapshots(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeWorkspaceSnapshotsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) *WorkspacesDescribeWorkspaceSnapshotsResult {
+func (a *WorkSpacesStub) DescribeWorkspaceSnapshotsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) *WorkspacesDescribeWorkspaceSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeWorkspaceSnapshots", input)
-	return &WorkspacesDescribeWorkspaceSnapshotsResult{Result: future}
+	return &WorkspacesDescribeWorkspaceSnapshotsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeWorkspaces(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) (*workspaces.DescribeWorkspacesOutput, error) {
@@ -948,9 +948,9 @@ func (a *WorkSpacesStub) DescribeWorkspaces(ctx workflow.Context, input *workspa
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeWorkspacesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) *WorkspacesDescribeWorkspacesResult {
+func (a *WorkSpacesStub) DescribeWorkspacesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) *WorkspacesDescribeWorkspacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeWorkspaces", input)
-	return &WorkspacesDescribeWorkspacesResult{Result: future}
+	return &WorkspacesDescribeWorkspacesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DescribeWorkspacesConnectionStatus(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) (*workspaces.DescribeWorkspacesConnectionStatusOutput, error) {
@@ -959,9 +959,9 @@ func (a *WorkSpacesStub) DescribeWorkspacesConnectionStatus(ctx workflow.Context
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DescribeWorkspacesConnectionStatusAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) *WorkspacesDescribeWorkspacesConnectionStatusResult {
+func (a *WorkSpacesStub) DescribeWorkspacesConnectionStatusAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) *WorkspacesDescribeWorkspacesConnectionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DescribeWorkspacesConnectionStatus", input)
-	return &WorkspacesDescribeWorkspacesConnectionStatusResult{Result: future}
+	return &WorkspacesDescribeWorkspacesConnectionStatusFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DisassociateConnectionAlias(ctx workflow.Context, input *workspaces.DisassociateConnectionAliasInput) (*workspaces.DisassociateConnectionAliasOutput, error) {
@@ -970,9 +970,9 @@ func (a *WorkSpacesStub) DisassociateConnectionAlias(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DisassociateConnectionAliasAsync(ctx workflow.Context, input *workspaces.DisassociateConnectionAliasInput) *WorkspacesDisassociateConnectionAliasResult {
+func (a *WorkSpacesStub) DisassociateConnectionAliasAsync(ctx workflow.Context, input *workspaces.DisassociateConnectionAliasInput) *WorkspacesDisassociateConnectionAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DisassociateConnectionAlias", input)
-	return &WorkspacesDisassociateConnectionAliasResult{Result: future}
+	return &WorkspacesDisassociateConnectionAliasFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) DisassociateIpGroups(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) (*workspaces.DisassociateIpGroupsOutput, error) {
@@ -981,9 +981,9 @@ func (a *WorkSpacesStub) DisassociateIpGroups(ctx workflow.Context, input *works
 	return &output, err
 }
 
-func (a *WorkSpacesStub) DisassociateIpGroupsAsync(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) *WorkspacesDisassociateIpGroupsResult {
+func (a *WorkSpacesStub) DisassociateIpGroupsAsync(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) *WorkspacesDisassociateIpGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.DisassociateIpGroups", input)
-	return &WorkspacesDisassociateIpGroupsResult{Result: future}
+	return &WorkspacesDisassociateIpGroupsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ImportWorkspaceImage(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) (*workspaces.ImportWorkspaceImageOutput, error) {
@@ -992,9 +992,9 @@ func (a *WorkSpacesStub) ImportWorkspaceImage(ctx workflow.Context, input *works
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ImportWorkspaceImageAsync(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) *WorkspacesImportWorkspaceImageResult {
+func (a *WorkSpacesStub) ImportWorkspaceImageAsync(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) *WorkspacesImportWorkspaceImageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ImportWorkspaceImage", input)
-	return &WorkspacesImportWorkspaceImageResult{Result: future}
+	return &WorkspacesImportWorkspaceImageFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ListAvailableManagementCidrRanges(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) (*workspaces.ListAvailableManagementCidrRangesOutput, error) {
@@ -1003,9 +1003,9 @@ func (a *WorkSpacesStub) ListAvailableManagementCidrRanges(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ListAvailableManagementCidrRangesAsync(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) *WorkspacesListAvailableManagementCidrRangesResult {
+func (a *WorkSpacesStub) ListAvailableManagementCidrRangesAsync(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) *WorkspacesListAvailableManagementCidrRangesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ListAvailableManagementCidrRanges", input)
-	return &WorkspacesListAvailableManagementCidrRangesResult{Result: future}
+	return &WorkspacesListAvailableManagementCidrRangesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) MigrateWorkspace(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) (*workspaces.MigrateWorkspaceOutput, error) {
@@ -1014,9 +1014,9 @@ func (a *WorkSpacesStub) MigrateWorkspace(ctx workflow.Context, input *workspace
 	return &output, err
 }
 
-func (a *WorkSpacesStub) MigrateWorkspaceAsync(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) *WorkspacesMigrateWorkspaceResult {
+func (a *WorkSpacesStub) MigrateWorkspaceAsync(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) *WorkspacesMigrateWorkspaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.MigrateWorkspace", input)
-	return &WorkspacesMigrateWorkspaceResult{Result: future}
+	return &WorkspacesMigrateWorkspaceFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ModifyAccount(ctx workflow.Context, input *workspaces.ModifyAccountInput) (*workspaces.ModifyAccountOutput, error) {
@@ -1025,9 +1025,9 @@ func (a *WorkSpacesStub) ModifyAccount(ctx workflow.Context, input *workspaces.M
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ModifyAccountAsync(ctx workflow.Context, input *workspaces.ModifyAccountInput) *WorkspacesModifyAccountResult {
+func (a *WorkSpacesStub) ModifyAccountAsync(ctx workflow.Context, input *workspaces.ModifyAccountInput) *WorkspacesModifyAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ModifyAccount", input)
-	return &WorkspacesModifyAccountResult{Result: future}
+	return &WorkspacesModifyAccountFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ModifyClientProperties(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) (*workspaces.ModifyClientPropertiesOutput, error) {
@@ -1036,9 +1036,9 @@ func (a *WorkSpacesStub) ModifyClientProperties(ctx workflow.Context, input *wor
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ModifyClientPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) *WorkspacesModifyClientPropertiesResult {
+func (a *WorkSpacesStub) ModifyClientPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) *WorkspacesModifyClientPropertiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ModifyClientProperties", input)
-	return &WorkspacesModifyClientPropertiesResult{Result: future}
+	return &WorkspacesModifyClientPropertiesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ModifySelfservicePermissions(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) (*workspaces.ModifySelfservicePermissionsOutput, error) {
@@ -1047,9 +1047,9 @@ func (a *WorkSpacesStub) ModifySelfservicePermissions(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ModifySelfservicePermissionsAsync(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) *WorkspacesModifySelfservicePermissionsResult {
+func (a *WorkSpacesStub) ModifySelfservicePermissionsAsync(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) *WorkspacesModifySelfservicePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ModifySelfservicePermissions", input)
-	return &WorkspacesModifySelfservicePermissionsResult{Result: future}
+	return &WorkspacesModifySelfservicePermissionsFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ModifyWorkspaceAccessProperties(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) (*workspaces.ModifyWorkspaceAccessPropertiesOutput, error) {
@@ -1058,9 +1058,9 @@ func (a *WorkSpacesStub) ModifyWorkspaceAccessProperties(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ModifyWorkspaceAccessPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) *WorkspacesModifyWorkspaceAccessPropertiesResult {
+func (a *WorkSpacesStub) ModifyWorkspaceAccessPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) *WorkspacesModifyWorkspaceAccessPropertiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ModifyWorkspaceAccessProperties", input)
-	return &WorkspacesModifyWorkspaceAccessPropertiesResult{Result: future}
+	return &WorkspacesModifyWorkspaceAccessPropertiesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ModifyWorkspaceCreationProperties(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) (*workspaces.ModifyWorkspaceCreationPropertiesOutput, error) {
@@ -1069,9 +1069,9 @@ func (a *WorkSpacesStub) ModifyWorkspaceCreationProperties(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ModifyWorkspaceCreationPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) *WorkspacesModifyWorkspaceCreationPropertiesResult {
+func (a *WorkSpacesStub) ModifyWorkspaceCreationPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) *WorkspacesModifyWorkspaceCreationPropertiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ModifyWorkspaceCreationProperties", input)
-	return &WorkspacesModifyWorkspaceCreationPropertiesResult{Result: future}
+	return &WorkspacesModifyWorkspaceCreationPropertiesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ModifyWorkspaceProperties(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) (*workspaces.ModifyWorkspacePropertiesOutput, error) {
@@ -1080,9 +1080,9 @@ func (a *WorkSpacesStub) ModifyWorkspaceProperties(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ModifyWorkspacePropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) *WorkspacesModifyWorkspacePropertiesResult {
+func (a *WorkSpacesStub) ModifyWorkspacePropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) *WorkspacesModifyWorkspacePropertiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ModifyWorkspaceProperties", input)
-	return &WorkspacesModifyWorkspacePropertiesResult{Result: future}
+	return &WorkspacesModifyWorkspacePropertiesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) ModifyWorkspaceState(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) (*workspaces.ModifyWorkspaceStateOutput, error) {
@@ -1091,9 +1091,9 @@ func (a *WorkSpacesStub) ModifyWorkspaceState(ctx workflow.Context, input *works
 	return &output, err
 }
 
-func (a *WorkSpacesStub) ModifyWorkspaceStateAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) *WorkspacesModifyWorkspaceStateResult {
+func (a *WorkSpacesStub) ModifyWorkspaceStateAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) *WorkspacesModifyWorkspaceStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.ModifyWorkspaceState", input)
-	return &WorkspacesModifyWorkspaceStateResult{Result: future}
+	return &WorkspacesModifyWorkspaceStateFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) RebootWorkspaces(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) (*workspaces.RebootWorkspacesOutput, error) {
@@ -1102,9 +1102,9 @@ func (a *WorkSpacesStub) RebootWorkspaces(ctx workflow.Context, input *workspace
 	return &output, err
 }
 
-func (a *WorkSpacesStub) RebootWorkspacesAsync(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) *WorkspacesRebootWorkspacesResult {
+func (a *WorkSpacesStub) RebootWorkspacesAsync(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) *WorkspacesRebootWorkspacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.RebootWorkspaces", input)
-	return &WorkspacesRebootWorkspacesResult{Result: future}
+	return &WorkspacesRebootWorkspacesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) RebuildWorkspaces(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) (*workspaces.RebuildWorkspacesOutput, error) {
@@ -1113,9 +1113,9 @@ func (a *WorkSpacesStub) RebuildWorkspaces(ctx workflow.Context, input *workspac
 	return &output, err
 }
 
-func (a *WorkSpacesStub) RebuildWorkspacesAsync(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) *WorkspacesRebuildWorkspacesResult {
+func (a *WorkSpacesStub) RebuildWorkspacesAsync(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) *WorkspacesRebuildWorkspacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.RebuildWorkspaces", input)
-	return &WorkspacesRebuildWorkspacesResult{Result: future}
+	return &WorkspacesRebuildWorkspacesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) RegisterWorkspaceDirectory(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) (*workspaces.RegisterWorkspaceDirectoryOutput, error) {
@@ -1124,9 +1124,9 @@ func (a *WorkSpacesStub) RegisterWorkspaceDirectory(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *WorkSpacesStub) RegisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) *WorkspacesRegisterWorkspaceDirectoryResult {
+func (a *WorkSpacesStub) RegisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) *WorkspacesRegisterWorkspaceDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.RegisterWorkspaceDirectory", input)
-	return &WorkspacesRegisterWorkspaceDirectoryResult{Result: future}
+	return &WorkspacesRegisterWorkspaceDirectoryFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) RestoreWorkspace(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) (*workspaces.RestoreWorkspaceOutput, error) {
@@ -1135,9 +1135,9 @@ func (a *WorkSpacesStub) RestoreWorkspace(ctx workflow.Context, input *workspace
 	return &output, err
 }
 
-func (a *WorkSpacesStub) RestoreWorkspaceAsync(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) *WorkspacesRestoreWorkspaceResult {
+func (a *WorkSpacesStub) RestoreWorkspaceAsync(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) *WorkspacesRestoreWorkspaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.RestoreWorkspace", input)
-	return &WorkspacesRestoreWorkspaceResult{Result: future}
+	return &WorkspacesRestoreWorkspaceFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) RevokeIpRules(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) (*workspaces.RevokeIpRulesOutput, error) {
@@ -1146,9 +1146,9 @@ func (a *WorkSpacesStub) RevokeIpRules(ctx workflow.Context, input *workspaces.R
 	return &output, err
 }
 
-func (a *WorkSpacesStub) RevokeIpRulesAsync(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) *WorkspacesRevokeIpRulesResult {
+func (a *WorkSpacesStub) RevokeIpRulesAsync(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) *WorkspacesRevokeIpRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.RevokeIpRules", input)
-	return &WorkspacesRevokeIpRulesResult{Result: future}
+	return &WorkspacesRevokeIpRulesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) StartWorkspaces(ctx workflow.Context, input *workspaces.StartWorkspacesInput) (*workspaces.StartWorkspacesOutput, error) {
@@ -1157,9 +1157,9 @@ func (a *WorkSpacesStub) StartWorkspaces(ctx workflow.Context, input *workspaces
 	return &output, err
 }
 
-func (a *WorkSpacesStub) StartWorkspacesAsync(ctx workflow.Context, input *workspaces.StartWorkspacesInput) *WorkspacesStartWorkspacesResult {
+func (a *WorkSpacesStub) StartWorkspacesAsync(ctx workflow.Context, input *workspaces.StartWorkspacesInput) *WorkspacesStartWorkspacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.StartWorkspaces", input)
-	return &WorkspacesStartWorkspacesResult{Result: future}
+	return &WorkspacesStartWorkspacesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) StopWorkspaces(ctx workflow.Context, input *workspaces.StopWorkspacesInput) (*workspaces.StopWorkspacesOutput, error) {
@@ -1168,9 +1168,9 @@ func (a *WorkSpacesStub) StopWorkspaces(ctx workflow.Context, input *workspaces.
 	return &output, err
 }
 
-func (a *WorkSpacesStub) StopWorkspacesAsync(ctx workflow.Context, input *workspaces.StopWorkspacesInput) *WorkspacesStopWorkspacesResult {
+func (a *WorkSpacesStub) StopWorkspacesAsync(ctx workflow.Context, input *workspaces.StopWorkspacesInput) *WorkspacesStopWorkspacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.StopWorkspaces", input)
-	return &WorkspacesStopWorkspacesResult{Result: future}
+	return &WorkspacesStopWorkspacesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) TerminateWorkspaces(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) (*workspaces.TerminateWorkspacesOutput, error) {
@@ -1179,9 +1179,9 @@ func (a *WorkSpacesStub) TerminateWorkspaces(ctx workflow.Context, input *worksp
 	return &output, err
 }
 
-func (a *WorkSpacesStub) TerminateWorkspacesAsync(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) *WorkspacesTerminateWorkspacesResult {
+func (a *WorkSpacesStub) TerminateWorkspacesAsync(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) *WorkspacesTerminateWorkspacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.TerminateWorkspaces", input)
-	return &WorkspacesTerminateWorkspacesResult{Result: future}
+	return &WorkspacesTerminateWorkspacesFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) UpdateConnectionAliasPermission(ctx workflow.Context, input *workspaces.UpdateConnectionAliasPermissionInput) (*workspaces.UpdateConnectionAliasPermissionOutput, error) {
@@ -1190,9 +1190,9 @@ func (a *WorkSpacesStub) UpdateConnectionAliasPermission(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *WorkSpacesStub) UpdateConnectionAliasPermissionAsync(ctx workflow.Context, input *workspaces.UpdateConnectionAliasPermissionInput) *WorkspacesUpdateConnectionAliasPermissionResult {
+func (a *WorkSpacesStub) UpdateConnectionAliasPermissionAsync(ctx workflow.Context, input *workspaces.UpdateConnectionAliasPermissionInput) *WorkspacesUpdateConnectionAliasPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.UpdateConnectionAliasPermission", input)
-	return &WorkspacesUpdateConnectionAliasPermissionResult{Result: future}
+	return &WorkspacesUpdateConnectionAliasPermissionFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) UpdateRulesOfIpGroup(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) (*workspaces.UpdateRulesOfIpGroupOutput, error) {
@@ -1201,9 +1201,9 @@ func (a *WorkSpacesStub) UpdateRulesOfIpGroup(ctx workflow.Context, input *works
 	return &output, err
 }
 
-func (a *WorkSpacesStub) UpdateRulesOfIpGroupAsync(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) *WorkspacesUpdateRulesOfIpGroupResult {
+func (a *WorkSpacesStub) UpdateRulesOfIpGroupAsync(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) *WorkspacesUpdateRulesOfIpGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.UpdateRulesOfIpGroup", input)
-	return &WorkspacesUpdateRulesOfIpGroupResult{Result: future}
+	return &WorkspacesUpdateRulesOfIpGroupFuture{Future: future}
 }
 
 func (a *WorkSpacesStub) UpdateWorkspaceImagePermission(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) (*workspaces.UpdateWorkspaceImagePermissionOutput, error) {
@@ -1212,7 +1212,7 @@ func (a *WorkSpacesStub) UpdateWorkspaceImagePermission(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *WorkSpacesStub) UpdateWorkspaceImagePermissionAsync(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) *WorkspacesUpdateWorkspaceImagePermissionResult {
+func (a *WorkSpacesStub) UpdateWorkspaceImagePermissionAsync(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) *WorkspacesUpdateWorkspaceImagePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workspaces.UpdateWorkspaceImagePermission", input)
-	return &WorkspacesUpdateWorkspaceImagePermissionResult{Result: future}
+	return &WorkspacesUpdateWorkspaceImagePermissionFuture{Future: future}
 }

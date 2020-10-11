@@ -11,10 +11,10 @@ import (
 
 type PIClient interface {
 	DescribeDimensionKeys(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) (*pi.DescribeDimensionKeysOutput, error)
-	DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PiDescribeDimensionKeysResult
+	DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PiDescribeDimensionKeysFuture
 
 	GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error)
-	GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsResult
+	GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsFuture
 }
 
 type PIStub struct{}
@@ -23,23 +23,23 @@ func NewPIStub() PIClient {
 	return &PIStub{}
 }
 
-type PiDescribeDimensionKeysResult struct {
-	Result workflow.Future
+type PiDescribeDimensionKeysFuture struct {
+	Future workflow.Future
 }
 
-func (r *PiDescribeDimensionKeysResult) Get(ctx workflow.Context) (*pi.DescribeDimensionKeysOutput, error) {
+func (r *PiDescribeDimensionKeysFuture) Get(ctx workflow.Context) (*pi.DescribeDimensionKeysOutput, error) {
 	var output pi.DescribeDimensionKeysOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PiGetResourceMetricsResult struct {
-	Result workflow.Future
+type PiGetResourceMetricsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PiGetResourceMetricsResult) Get(ctx workflow.Context) (*pi.GetResourceMetricsOutput, error) {
+func (r *PiGetResourceMetricsFuture) Get(ctx workflow.Context) (*pi.GetResourceMetricsOutput, error) {
 	var output pi.GetResourceMetricsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -49,9 +49,9 @@ func (a *PIStub) DescribeDimensionKeys(ctx workflow.Context, input *pi.DescribeD
 	return &output, err
 }
 
-func (a *PIStub) DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PiDescribeDimensionKeysResult {
+func (a *PIStub) DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PiDescribeDimensionKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pi.DescribeDimensionKeys", input)
-	return &PiDescribeDimensionKeysResult{Result: future}
+	return &PiDescribeDimensionKeysFuture{Future: future}
 }
 
 func (a *PIStub) GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error) {
@@ -60,7 +60,7 @@ func (a *PIStub) GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceM
 	return &output, err
 }
 
-func (a *PIStub) GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsResult {
+func (a *PIStub) GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pi.GetResourceMetrics", input)
-	return &PiGetResourceMetricsResult{Result: future}
+	return &PiGetResourceMetricsFuture{Future: future}
 }

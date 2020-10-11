@@ -11,79 +11,79 @@ import (
 
 type EFSClient interface {
 	CreateAccessPoint(ctx workflow.Context, input *efs.CreateAccessPointInput) (*efs.CreateAccessPointOutput, error)
-	CreateAccessPointAsync(ctx workflow.Context, input *efs.CreateAccessPointInput) *EfsCreateAccessPointResult
+	CreateAccessPointAsync(ctx workflow.Context, input *efs.CreateAccessPointInput) *EfsCreateAccessPointFuture
 
 	CreateFileSystem(ctx workflow.Context, input *efs.CreateFileSystemInput) (*efs.FileSystemDescription, error)
-	CreateFileSystemAsync(ctx workflow.Context, input *efs.CreateFileSystemInput) *EfsCreateFileSystemResult
+	CreateFileSystemAsync(ctx workflow.Context, input *efs.CreateFileSystemInput) *EfsCreateFileSystemFuture
 
 	CreateMountTarget(ctx workflow.Context, input *efs.CreateMountTargetInput) (*efs.MountTargetDescription, error)
-	CreateMountTargetAsync(ctx workflow.Context, input *efs.CreateMountTargetInput) *EfsCreateMountTargetResult
+	CreateMountTargetAsync(ctx workflow.Context, input *efs.CreateMountTargetInput) *EfsCreateMountTargetFuture
 
 	CreateTags(ctx workflow.Context, input *efs.CreateTagsInput) (*efs.CreateTagsOutput, error)
-	CreateTagsAsync(ctx workflow.Context, input *efs.CreateTagsInput) *EfsCreateTagsResult
+	CreateTagsAsync(ctx workflow.Context, input *efs.CreateTagsInput) *EfsCreateTagsFuture
 
 	DeleteAccessPoint(ctx workflow.Context, input *efs.DeleteAccessPointInput) (*efs.DeleteAccessPointOutput, error)
-	DeleteAccessPointAsync(ctx workflow.Context, input *efs.DeleteAccessPointInput) *EfsDeleteAccessPointResult
+	DeleteAccessPointAsync(ctx workflow.Context, input *efs.DeleteAccessPointInput) *EfsDeleteAccessPointFuture
 
 	DeleteFileSystem(ctx workflow.Context, input *efs.DeleteFileSystemInput) (*efs.DeleteFileSystemOutput, error)
-	DeleteFileSystemAsync(ctx workflow.Context, input *efs.DeleteFileSystemInput) *EfsDeleteFileSystemResult
+	DeleteFileSystemAsync(ctx workflow.Context, input *efs.DeleteFileSystemInput) *EfsDeleteFileSystemFuture
 
 	DeleteFileSystemPolicy(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) (*efs.DeleteFileSystemPolicyOutput, error)
-	DeleteFileSystemPolicyAsync(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) *EfsDeleteFileSystemPolicyResult
+	DeleteFileSystemPolicyAsync(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) *EfsDeleteFileSystemPolicyFuture
 
 	DeleteMountTarget(ctx workflow.Context, input *efs.DeleteMountTargetInput) (*efs.DeleteMountTargetOutput, error)
-	DeleteMountTargetAsync(ctx workflow.Context, input *efs.DeleteMountTargetInput) *EfsDeleteMountTargetResult
+	DeleteMountTargetAsync(ctx workflow.Context, input *efs.DeleteMountTargetInput) *EfsDeleteMountTargetFuture
 
 	DeleteTags(ctx workflow.Context, input *efs.DeleteTagsInput) (*efs.DeleteTagsOutput, error)
-	DeleteTagsAsync(ctx workflow.Context, input *efs.DeleteTagsInput) *EfsDeleteTagsResult
+	DeleteTagsAsync(ctx workflow.Context, input *efs.DeleteTagsInput) *EfsDeleteTagsFuture
 
 	DescribeAccessPoints(ctx workflow.Context, input *efs.DescribeAccessPointsInput) (*efs.DescribeAccessPointsOutput, error)
-	DescribeAccessPointsAsync(ctx workflow.Context, input *efs.DescribeAccessPointsInput) *EfsDescribeAccessPointsResult
+	DescribeAccessPointsAsync(ctx workflow.Context, input *efs.DescribeAccessPointsInput) *EfsDescribeAccessPointsFuture
 
 	DescribeBackupPolicy(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) (*efs.DescribeBackupPolicyOutput, error)
-	DescribeBackupPolicyAsync(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) *EfsDescribeBackupPolicyResult
+	DescribeBackupPolicyAsync(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) *EfsDescribeBackupPolicyFuture
 
 	DescribeFileSystemPolicy(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) (*efs.DescribeFileSystemPolicyOutput, error)
-	DescribeFileSystemPolicyAsync(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) *EfsDescribeFileSystemPolicyResult
+	DescribeFileSystemPolicyAsync(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) *EfsDescribeFileSystemPolicyFuture
 
 	DescribeFileSystems(ctx workflow.Context, input *efs.DescribeFileSystemsInput) (*efs.DescribeFileSystemsOutput, error)
-	DescribeFileSystemsAsync(ctx workflow.Context, input *efs.DescribeFileSystemsInput) *EfsDescribeFileSystemsResult
+	DescribeFileSystemsAsync(ctx workflow.Context, input *efs.DescribeFileSystemsInput) *EfsDescribeFileSystemsFuture
 
 	DescribeLifecycleConfiguration(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) (*efs.DescribeLifecycleConfigurationOutput, error)
-	DescribeLifecycleConfigurationAsync(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) *EfsDescribeLifecycleConfigurationResult
+	DescribeLifecycleConfigurationAsync(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) *EfsDescribeLifecycleConfigurationFuture
 
 	DescribeMountTargetSecurityGroups(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) (*efs.DescribeMountTargetSecurityGroupsOutput, error)
-	DescribeMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) *EfsDescribeMountTargetSecurityGroupsResult
+	DescribeMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) *EfsDescribeMountTargetSecurityGroupsFuture
 
 	DescribeMountTargets(ctx workflow.Context, input *efs.DescribeMountTargetsInput) (*efs.DescribeMountTargetsOutput, error)
-	DescribeMountTargetsAsync(ctx workflow.Context, input *efs.DescribeMountTargetsInput) *EfsDescribeMountTargetsResult
+	DescribeMountTargetsAsync(ctx workflow.Context, input *efs.DescribeMountTargetsInput) *EfsDescribeMountTargetsFuture
 
 	DescribeTags(ctx workflow.Context, input *efs.DescribeTagsInput) (*efs.DescribeTagsOutput, error)
-	DescribeTagsAsync(ctx workflow.Context, input *efs.DescribeTagsInput) *EfsDescribeTagsResult
+	DescribeTagsAsync(ctx workflow.Context, input *efs.DescribeTagsInput) *EfsDescribeTagsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *efs.ListTagsForResourceInput) (*efs.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *efs.ListTagsForResourceInput) *EfsListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *efs.ListTagsForResourceInput) *EfsListTagsForResourceFuture
 
 	ModifyMountTargetSecurityGroups(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) (*efs.ModifyMountTargetSecurityGroupsOutput, error)
-	ModifyMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) *EfsModifyMountTargetSecurityGroupsResult
+	ModifyMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) *EfsModifyMountTargetSecurityGroupsFuture
 
 	PutBackupPolicy(ctx workflow.Context, input *efs.PutBackupPolicyInput) (*efs.PutBackupPolicyOutput, error)
-	PutBackupPolicyAsync(ctx workflow.Context, input *efs.PutBackupPolicyInput) *EfsPutBackupPolicyResult
+	PutBackupPolicyAsync(ctx workflow.Context, input *efs.PutBackupPolicyInput) *EfsPutBackupPolicyFuture
 
 	PutFileSystemPolicy(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) (*efs.PutFileSystemPolicyOutput, error)
-	PutFileSystemPolicyAsync(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) *EfsPutFileSystemPolicyResult
+	PutFileSystemPolicyAsync(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) *EfsPutFileSystemPolicyFuture
 
 	PutLifecycleConfiguration(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) (*efs.PutLifecycleConfigurationOutput, error)
-	PutLifecycleConfigurationAsync(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) *EfsPutLifecycleConfigurationResult
+	PutLifecycleConfigurationAsync(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) *EfsPutLifecycleConfigurationFuture
 
 	TagResource(ctx workflow.Context, input *efs.TagResourceInput) (*efs.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *efs.TagResourceInput) *EfsTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *efs.TagResourceInput) *EfsTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *efs.UntagResourceInput) (*efs.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *efs.UntagResourceInput) *EfsUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *efs.UntagResourceInput) *EfsUntagResourceFuture
 
 	UpdateFileSystem(ctx workflow.Context, input *efs.UpdateFileSystemInput) (*efs.UpdateFileSystemOutput, error)
-	UpdateFileSystemAsync(ctx workflow.Context, input *efs.UpdateFileSystemInput) *EfsUpdateFileSystemResult
+	UpdateFileSystemAsync(ctx workflow.Context, input *efs.UpdateFileSystemInput) *EfsUpdateFileSystemFuture
 }
 
 type EFSStub struct{}
@@ -92,253 +92,253 @@ func NewEFSStub() EFSClient {
 	return &EFSStub{}
 }
 
-type EfsCreateAccessPointResult struct {
-	Result workflow.Future
+type EfsCreateAccessPointFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsCreateAccessPointResult) Get(ctx workflow.Context) (*efs.CreateAccessPointOutput, error) {
+func (r *EfsCreateAccessPointFuture) Get(ctx workflow.Context) (*efs.CreateAccessPointOutput, error) {
 	var output efs.CreateAccessPointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsCreateFileSystemResult struct {
-	Result workflow.Future
+type EfsCreateFileSystemFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsCreateFileSystemResult) Get(ctx workflow.Context) (*efs.FileSystemDescription, error) {
+func (r *EfsCreateFileSystemFuture) Get(ctx workflow.Context) (*efs.FileSystemDescription, error) {
 	var output efs.FileSystemDescription
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsCreateMountTargetResult struct {
-	Result workflow.Future
+type EfsCreateMountTargetFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsCreateMountTargetResult) Get(ctx workflow.Context) (*efs.MountTargetDescription, error) {
+func (r *EfsCreateMountTargetFuture) Get(ctx workflow.Context) (*efs.MountTargetDescription, error) {
 	var output efs.MountTargetDescription
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsCreateTagsResult struct {
-	Result workflow.Future
+type EfsCreateTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsCreateTagsResult) Get(ctx workflow.Context) (*efs.CreateTagsOutput, error) {
+func (r *EfsCreateTagsFuture) Get(ctx workflow.Context) (*efs.CreateTagsOutput, error) {
 	var output efs.CreateTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDeleteAccessPointResult struct {
-	Result workflow.Future
+type EfsDeleteAccessPointFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDeleteAccessPointResult) Get(ctx workflow.Context) (*efs.DeleteAccessPointOutput, error) {
+func (r *EfsDeleteAccessPointFuture) Get(ctx workflow.Context) (*efs.DeleteAccessPointOutput, error) {
 	var output efs.DeleteAccessPointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDeleteFileSystemResult struct {
-	Result workflow.Future
+type EfsDeleteFileSystemFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDeleteFileSystemResult) Get(ctx workflow.Context) (*efs.DeleteFileSystemOutput, error) {
+func (r *EfsDeleteFileSystemFuture) Get(ctx workflow.Context) (*efs.DeleteFileSystemOutput, error) {
 	var output efs.DeleteFileSystemOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDeleteFileSystemPolicyResult struct {
-	Result workflow.Future
+type EfsDeleteFileSystemPolicyFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDeleteFileSystemPolicyResult) Get(ctx workflow.Context) (*efs.DeleteFileSystemPolicyOutput, error) {
+func (r *EfsDeleteFileSystemPolicyFuture) Get(ctx workflow.Context) (*efs.DeleteFileSystemPolicyOutput, error) {
 	var output efs.DeleteFileSystemPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDeleteMountTargetResult struct {
-	Result workflow.Future
+type EfsDeleteMountTargetFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDeleteMountTargetResult) Get(ctx workflow.Context) (*efs.DeleteMountTargetOutput, error) {
+func (r *EfsDeleteMountTargetFuture) Get(ctx workflow.Context) (*efs.DeleteMountTargetOutput, error) {
 	var output efs.DeleteMountTargetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDeleteTagsResult struct {
-	Result workflow.Future
+type EfsDeleteTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDeleteTagsResult) Get(ctx workflow.Context) (*efs.DeleteTagsOutput, error) {
+func (r *EfsDeleteTagsFuture) Get(ctx workflow.Context) (*efs.DeleteTagsOutput, error) {
 	var output efs.DeleteTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDescribeAccessPointsResult struct {
-	Result workflow.Future
+type EfsDescribeAccessPointsFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDescribeAccessPointsResult) Get(ctx workflow.Context) (*efs.DescribeAccessPointsOutput, error) {
+func (r *EfsDescribeAccessPointsFuture) Get(ctx workflow.Context) (*efs.DescribeAccessPointsOutput, error) {
 	var output efs.DescribeAccessPointsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDescribeBackupPolicyResult struct {
-	Result workflow.Future
+type EfsDescribeBackupPolicyFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDescribeBackupPolicyResult) Get(ctx workflow.Context) (*efs.DescribeBackupPolicyOutput, error) {
+func (r *EfsDescribeBackupPolicyFuture) Get(ctx workflow.Context) (*efs.DescribeBackupPolicyOutput, error) {
 	var output efs.DescribeBackupPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDescribeFileSystemPolicyResult struct {
-	Result workflow.Future
+type EfsDescribeFileSystemPolicyFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDescribeFileSystemPolicyResult) Get(ctx workflow.Context) (*efs.DescribeFileSystemPolicyOutput, error) {
+func (r *EfsDescribeFileSystemPolicyFuture) Get(ctx workflow.Context) (*efs.DescribeFileSystemPolicyOutput, error) {
 	var output efs.DescribeFileSystemPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDescribeFileSystemsResult struct {
-	Result workflow.Future
+type EfsDescribeFileSystemsFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDescribeFileSystemsResult) Get(ctx workflow.Context) (*efs.DescribeFileSystemsOutput, error) {
+func (r *EfsDescribeFileSystemsFuture) Get(ctx workflow.Context) (*efs.DescribeFileSystemsOutput, error) {
 	var output efs.DescribeFileSystemsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDescribeLifecycleConfigurationResult struct {
-	Result workflow.Future
+type EfsDescribeLifecycleConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDescribeLifecycleConfigurationResult) Get(ctx workflow.Context) (*efs.DescribeLifecycleConfigurationOutput, error) {
+func (r *EfsDescribeLifecycleConfigurationFuture) Get(ctx workflow.Context) (*efs.DescribeLifecycleConfigurationOutput, error) {
 	var output efs.DescribeLifecycleConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDescribeMountTargetSecurityGroupsResult struct {
-	Result workflow.Future
+type EfsDescribeMountTargetSecurityGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDescribeMountTargetSecurityGroupsResult) Get(ctx workflow.Context) (*efs.DescribeMountTargetSecurityGroupsOutput, error) {
+func (r *EfsDescribeMountTargetSecurityGroupsFuture) Get(ctx workflow.Context) (*efs.DescribeMountTargetSecurityGroupsOutput, error) {
 	var output efs.DescribeMountTargetSecurityGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDescribeMountTargetsResult struct {
-	Result workflow.Future
+type EfsDescribeMountTargetsFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDescribeMountTargetsResult) Get(ctx workflow.Context) (*efs.DescribeMountTargetsOutput, error) {
+func (r *EfsDescribeMountTargetsFuture) Get(ctx workflow.Context) (*efs.DescribeMountTargetsOutput, error) {
 	var output efs.DescribeMountTargetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsDescribeTagsResult struct {
-	Result workflow.Future
+type EfsDescribeTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsDescribeTagsResult) Get(ctx workflow.Context) (*efs.DescribeTagsOutput, error) {
+func (r *EfsDescribeTagsFuture) Get(ctx workflow.Context) (*efs.DescribeTagsOutput, error) {
 	var output efs.DescribeTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsListTagsForResourceResult struct {
-	Result workflow.Future
+type EfsListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsListTagsForResourceResult) Get(ctx workflow.Context) (*efs.ListTagsForResourceOutput, error) {
+func (r *EfsListTagsForResourceFuture) Get(ctx workflow.Context) (*efs.ListTagsForResourceOutput, error) {
 	var output efs.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsModifyMountTargetSecurityGroupsResult struct {
-	Result workflow.Future
+type EfsModifyMountTargetSecurityGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsModifyMountTargetSecurityGroupsResult) Get(ctx workflow.Context) (*efs.ModifyMountTargetSecurityGroupsOutput, error) {
+func (r *EfsModifyMountTargetSecurityGroupsFuture) Get(ctx workflow.Context) (*efs.ModifyMountTargetSecurityGroupsOutput, error) {
 	var output efs.ModifyMountTargetSecurityGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsPutBackupPolicyResult struct {
-	Result workflow.Future
+type EfsPutBackupPolicyFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsPutBackupPolicyResult) Get(ctx workflow.Context) (*efs.PutBackupPolicyOutput, error) {
+func (r *EfsPutBackupPolicyFuture) Get(ctx workflow.Context) (*efs.PutBackupPolicyOutput, error) {
 	var output efs.PutBackupPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsPutFileSystemPolicyResult struct {
-	Result workflow.Future
+type EfsPutFileSystemPolicyFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsPutFileSystemPolicyResult) Get(ctx workflow.Context) (*efs.PutFileSystemPolicyOutput, error) {
+func (r *EfsPutFileSystemPolicyFuture) Get(ctx workflow.Context) (*efs.PutFileSystemPolicyOutput, error) {
 	var output efs.PutFileSystemPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsPutLifecycleConfigurationResult struct {
-	Result workflow.Future
+type EfsPutLifecycleConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsPutLifecycleConfigurationResult) Get(ctx workflow.Context) (*efs.PutLifecycleConfigurationOutput, error) {
+func (r *EfsPutLifecycleConfigurationFuture) Get(ctx workflow.Context) (*efs.PutLifecycleConfigurationOutput, error) {
 	var output efs.PutLifecycleConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsTagResourceResult struct {
-	Result workflow.Future
+type EfsTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsTagResourceResult) Get(ctx workflow.Context) (*efs.TagResourceOutput, error) {
+func (r *EfsTagResourceFuture) Get(ctx workflow.Context) (*efs.TagResourceOutput, error) {
 	var output efs.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsUntagResourceResult struct {
-	Result workflow.Future
+type EfsUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsUntagResourceResult) Get(ctx workflow.Context) (*efs.UntagResourceOutput, error) {
+func (r *EfsUntagResourceFuture) Get(ctx workflow.Context) (*efs.UntagResourceOutput, error) {
 	var output efs.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EfsUpdateFileSystemResult struct {
-	Result workflow.Future
+type EfsUpdateFileSystemFuture struct {
+	Future workflow.Future
 }
 
-func (r *EfsUpdateFileSystemResult) Get(ctx workflow.Context) (*efs.UpdateFileSystemOutput, error) {
+func (r *EfsUpdateFileSystemFuture) Get(ctx workflow.Context) (*efs.UpdateFileSystemOutput, error) {
 	var output efs.UpdateFileSystemOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -348,9 +348,9 @@ func (a *EFSStub) CreateAccessPoint(ctx workflow.Context, input *efs.CreateAcces
 	return &output, err
 }
 
-func (a *EFSStub) CreateAccessPointAsync(ctx workflow.Context, input *efs.CreateAccessPointInput) *EfsCreateAccessPointResult {
+func (a *EFSStub) CreateAccessPointAsync(ctx workflow.Context, input *efs.CreateAccessPointInput) *EfsCreateAccessPointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.CreateAccessPoint", input)
-	return &EfsCreateAccessPointResult{Result: future}
+	return &EfsCreateAccessPointFuture{Future: future}
 }
 
 func (a *EFSStub) CreateFileSystem(ctx workflow.Context, input *efs.CreateFileSystemInput) (*efs.FileSystemDescription, error) {
@@ -359,9 +359,9 @@ func (a *EFSStub) CreateFileSystem(ctx workflow.Context, input *efs.CreateFileSy
 	return &output, err
 }
 
-func (a *EFSStub) CreateFileSystemAsync(ctx workflow.Context, input *efs.CreateFileSystemInput) *EfsCreateFileSystemResult {
+func (a *EFSStub) CreateFileSystemAsync(ctx workflow.Context, input *efs.CreateFileSystemInput) *EfsCreateFileSystemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.CreateFileSystem", input)
-	return &EfsCreateFileSystemResult{Result: future}
+	return &EfsCreateFileSystemFuture{Future: future}
 }
 
 func (a *EFSStub) CreateMountTarget(ctx workflow.Context, input *efs.CreateMountTargetInput) (*efs.MountTargetDescription, error) {
@@ -370,9 +370,9 @@ func (a *EFSStub) CreateMountTarget(ctx workflow.Context, input *efs.CreateMount
 	return &output, err
 }
 
-func (a *EFSStub) CreateMountTargetAsync(ctx workflow.Context, input *efs.CreateMountTargetInput) *EfsCreateMountTargetResult {
+func (a *EFSStub) CreateMountTargetAsync(ctx workflow.Context, input *efs.CreateMountTargetInput) *EfsCreateMountTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.CreateMountTarget", input)
-	return &EfsCreateMountTargetResult{Result: future}
+	return &EfsCreateMountTargetFuture{Future: future}
 }
 
 func (a *EFSStub) CreateTags(ctx workflow.Context, input *efs.CreateTagsInput) (*efs.CreateTagsOutput, error) {
@@ -381,9 +381,9 @@ func (a *EFSStub) CreateTags(ctx workflow.Context, input *efs.CreateTagsInput) (
 	return &output, err
 }
 
-func (a *EFSStub) CreateTagsAsync(ctx workflow.Context, input *efs.CreateTagsInput) *EfsCreateTagsResult {
+func (a *EFSStub) CreateTagsAsync(ctx workflow.Context, input *efs.CreateTagsInput) *EfsCreateTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.CreateTags", input)
-	return &EfsCreateTagsResult{Result: future}
+	return &EfsCreateTagsFuture{Future: future}
 }
 
 func (a *EFSStub) DeleteAccessPoint(ctx workflow.Context, input *efs.DeleteAccessPointInput) (*efs.DeleteAccessPointOutput, error) {
@@ -392,9 +392,9 @@ func (a *EFSStub) DeleteAccessPoint(ctx workflow.Context, input *efs.DeleteAcces
 	return &output, err
 }
 
-func (a *EFSStub) DeleteAccessPointAsync(ctx workflow.Context, input *efs.DeleteAccessPointInput) *EfsDeleteAccessPointResult {
+func (a *EFSStub) DeleteAccessPointAsync(ctx workflow.Context, input *efs.DeleteAccessPointInput) *EfsDeleteAccessPointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DeleteAccessPoint", input)
-	return &EfsDeleteAccessPointResult{Result: future}
+	return &EfsDeleteAccessPointFuture{Future: future}
 }
 
 func (a *EFSStub) DeleteFileSystem(ctx workflow.Context, input *efs.DeleteFileSystemInput) (*efs.DeleteFileSystemOutput, error) {
@@ -403,9 +403,9 @@ func (a *EFSStub) DeleteFileSystem(ctx workflow.Context, input *efs.DeleteFileSy
 	return &output, err
 }
 
-func (a *EFSStub) DeleteFileSystemAsync(ctx workflow.Context, input *efs.DeleteFileSystemInput) *EfsDeleteFileSystemResult {
+func (a *EFSStub) DeleteFileSystemAsync(ctx workflow.Context, input *efs.DeleteFileSystemInput) *EfsDeleteFileSystemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DeleteFileSystem", input)
-	return &EfsDeleteFileSystemResult{Result: future}
+	return &EfsDeleteFileSystemFuture{Future: future}
 }
 
 func (a *EFSStub) DeleteFileSystemPolicy(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) (*efs.DeleteFileSystemPolicyOutput, error) {
@@ -414,9 +414,9 @@ func (a *EFSStub) DeleteFileSystemPolicy(ctx workflow.Context, input *efs.Delete
 	return &output, err
 }
 
-func (a *EFSStub) DeleteFileSystemPolicyAsync(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) *EfsDeleteFileSystemPolicyResult {
+func (a *EFSStub) DeleteFileSystemPolicyAsync(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) *EfsDeleteFileSystemPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DeleteFileSystemPolicy", input)
-	return &EfsDeleteFileSystemPolicyResult{Result: future}
+	return &EfsDeleteFileSystemPolicyFuture{Future: future}
 }
 
 func (a *EFSStub) DeleteMountTarget(ctx workflow.Context, input *efs.DeleteMountTargetInput) (*efs.DeleteMountTargetOutput, error) {
@@ -425,9 +425,9 @@ func (a *EFSStub) DeleteMountTarget(ctx workflow.Context, input *efs.DeleteMount
 	return &output, err
 }
 
-func (a *EFSStub) DeleteMountTargetAsync(ctx workflow.Context, input *efs.DeleteMountTargetInput) *EfsDeleteMountTargetResult {
+func (a *EFSStub) DeleteMountTargetAsync(ctx workflow.Context, input *efs.DeleteMountTargetInput) *EfsDeleteMountTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DeleteMountTarget", input)
-	return &EfsDeleteMountTargetResult{Result: future}
+	return &EfsDeleteMountTargetFuture{Future: future}
 }
 
 func (a *EFSStub) DeleteTags(ctx workflow.Context, input *efs.DeleteTagsInput) (*efs.DeleteTagsOutput, error) {
@@ -436,9 +436,9 @@ func (a *EFSStub) DeleteTags(ctx workflow.Context, input *efs.DeleteTagsInput) (
 	return &output, err
 }
 
-func (a *EFSStub) DeleteTagsAsync(ctx workflow.Context, input *efs.DeleteTagsInput) *EfsDeleteTagsResult {
+func (a *EFSStub) DeleteTagsAsync(ctx workflow.Context, input *efs.DeleteTagsInput) *EfsDeleteTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DeleteTags", input)
-	return &EfsDeleteTagsResult{Result: future}
+	return &EfsDeleteTagsFuture{Future: future}
 }
 
 func (a *EFSStub) DescribeAccessPoints(ctx workflow.Context, input *efs.DescribeAccessPointsInput) (*efs.DescribeAccessPointsOutput, error) {
@@ -447,9 +447,9 @@ func (a *EFSStub) DescribeAccessPoints(ctx workflow.Context, input *efs.Describe
 	return &output, err
 }
 
-func (a *EFSStub) DescribeAccessPointsAsync(ctx workflow.Context, input *efs.DescribeAccessPointsInput) *EfsDescribeAccessPointsResult {
+func (a *EFSStub) DescribeAccessPointsAsync(ctx workflow.Context, input *efs.DescribeAccessPointsInput) *EfsDescribeAccessPointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DescribeAccessPoints", input)
-	return &EfsDescribeAccessPointsResult{Result: future}
+	return &EfsDescribeAccessPointsFuture{Future: future}
 }
 
 func (a *EFSStub) DescribeBackupPolicy(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) (*efs.DescribeBackupPolicyOutput, error) {
@@ -458,9 +458,9 @@ func (a *EFSStub) DescribeBackupPolicy(ctx workflow.Context, input *efs.Describe
 	return &output, err
 }
 
-func (a *EFSStub) DescribeBackupPolicyAsync(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) *EfsDescribeBackupPolicyResult {
+func (a *EFSStub) DescribeBackupPolicyAsync(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) *EfsDescribeBackupPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DescribeBackupPolicy", input)
-	return &EfsDescribeBackupPolicyResult{Result: future}
+	return &EfsDescribeBackupPolicyFuture{Future: future}
 }
 
 func (a *EFSStub) DescribeFileSystemPolicy(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) (*efs.DescribeFileSystemPolicyOutput, error) {
@@ -469,9 +469,9 @@ func (a *EFSStub) DescribeFileSystemPolicy(ctx workflow.Context, input *efs.Desc
 	return &output, err
 }
 
-func (a *EFSStub) DescribeFileSystemPolicyAsync(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) *EfsDescribeFileSystemPolicyResult {
+func (a *EFSStub) DescribeFileSystemPolicyAsync(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) *EfsDescribeFileSystemPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DescribeFileSystemPolicy", input)
-	return &EfsDescribeFileSystemPolicyResult{Result: future}
+	return &EfsDescribeFileSystemPolicyFuture{Future: future}
 }
 
 func (a *EFSStub) DescribeFileSystems(ctx workflow.Context, input *efs.DescribeFileSystemsInput) (*efs.DescribeFileSystemsOutput, error) {
@@ -480,9 +480,9 @@ func (a *EFSStub) DescribeFileSystems(ctx workflow.Context, input *efs.DescribeF
 	return &output, err
 }
 
-func (a *EFSStub) DescribeFileSystemsAsync(ctx workflow.Context, input *efs.DescribeFileSystemsInput) *EfsDescribeFileSystemsResult {
+func (a *EFSStub) DescribeFileSystemsAsync(ctx workflow.Context, input *efs.DescribeFileSystemsInput) *EfsDescribeFileSystemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DescribeFileSystems", input)
-	return &EfsDescribeFileSystemsResult{Result: future}
+	return &EfsDescribeFileSystemsFuture{Future: future}
 }
 
 func (a *EFSStub) DescribeLifecycleConfiguration(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) (*efs.DescribeLifecycleConfigurationOutput, error) {
@@ -491,9 +491,9 @@ func (a *EFSStub) DescribeLifecycleConfiguration(ctx workflow.Context, input *ef
 	return &output, err
 }
 
-func (a *EFSStub) DescribeLifecycleConfigurationAsync(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) *EfsDescribeLifecycleConfigurationResult {
+func (a *EFSStub) DescribeLifecycleConfigurationAsync(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) *EfsDescribeLifecycleConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DescribeLifecycleConfiguration", input)
-	return &EfsDescribeLifecycleConfigurationResult{Result: future}
+	return &EfsDescribeLifecycleConfigurationFuture{Future: future}
 }
 
 func (a *EFSStub) DescribeMountTargetSecurityGroups(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) (*efs.DescribeMountTargetSecurityGroupsOutput, error) {
@@ -502,9 +502,9 @@ func (a *EFSStub) DescribeMountTargetSecurityGroups(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *EFSStub) DescribeMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) *EfsDescribeMountTargetSecurityGroupsResult {
+func (a *EFSStub) DescribeMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) *EfsDescribeMountTargetSecurityGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DescribeMountTargetSecurityGroups", input)
-	return &EfsDescribeMountTargetSecurityGroupsResult{Result: future}
+	return &EfsDescribeMountTargetSecurityGroupsFuture{Future: future}
 }
 
 func (a *EFSStub) DescribeMountTargets(ctx workflow.Context, input *efs.DescribeMountTargetsInput) (*efs.DescribeMountTargetsOutput, error) {
@@ -513,9 +513,9 @@ func (a *EFSStub) DescribeMountTargets(ctx workflow.Context, input *efs.Describe
 	return &output, err
 }
 
-func (a *EFSStub) DescribeMountTargetsAsync(ctx workflow.Context, input *efs.DescribeMountTargetsInput) *EfsDescribeMountTargetsResult {
+func (a *EFSStub) DescribeMountTargetsAsync(ctx workflow.Context, input *efs.DescribeMountTargetsInput) *EfsDescribeMountTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DescribeMountTargets", input)
-	return &EfsDescribeMountTargetsResult{Result: future}
+	return &EfsDescribeMountTargetsFuture{Future: future}
 }
 
 func (a *EFSStub) DescribeTags(ctx workflow.Context, input *efs.DescribeTagsInput) (*efs.DescribeTagsOutput, error) {
@@ -524,9 +524,9 @@ func (a *EFSStub) DescribeTags(ctx workflow.Context, input *efs.DescribeTagsInpu
 	return &output, err
 }
 
-func (a *EFSStub) DescribeTagsAsync(ctx workflow.Context, input *efs.DescribeTagsInput) *EfsDescribeTagsResult {
+func (a *EFSStub) DescribeTagsAsync(ctx workflow.Context, input *efs.DescribeTagsInput) *EfsDescribeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.DescribeTags", input)
-	return &EfsDescribeTagsResult{Result: future}
+	return &EfsDescribeTagsFuture{Future: future}
 }
 
 func (a *EFSStub) ListTagsForResource(ctx workflow.Context, input *efs.ListTagsForResourceInput) (*efs.ListTagsForResourceOutput, error) {
@@ -535,9 +535,9 @@ func (a *EFSStub) ListTagsForResource(ctx workflow.Context, input *efs.ListTagsF
 	return &output, err
 }
 
-func (a *EFSStub) ListTagsForResourceAsync(ctx workflow.Context, input *efs.ListTagsForResourceInput) *EfsListTagsForResourceResult {
+func (a *EFSStub) ListTagsForResourceAsync(ctx workflow.Context, input *efs.ListTagsForResourceInput) *EfsListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.ListTagsForResource", input)
-	return &EfsListTagsForResourceResult{Result: future}
+	return &EfsListTagsForResourceFuture{Future: future}
 }
 
 func (a *EFSStub) ModifyMountTargetSecurityGroups(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) (*efs.ModifyMountTargetSecurityGroupsOutput, error) {
@@ -546,9 +546,9 @@ func (a *EFSStub) ModifyMountTargetSecurityGroups(ctx workflow.Context, input *e
 	return &output, err
 }
 
-func (a *EFSStub) ModifyMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) *EfsModifyMountTargetSecurityGroupsResult {
+func (a *EFSStub) ModifyMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) *EfsModifyMountTargetSecurityGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.ModifyMountTargetSecurityGroups", input)
-	return &EfsModifyMountTargetSecurityGroupsResult{Result: future}
+	return &EfsModifyMountTargetSecurityGroupsFuture{Future: future}
 }
 
 func (a *EFSStub) PutBackupPolicy(ctx workflow.Context, input *efs.PutBackupPolicyInput) (*efs.PutBackupPolicyOutput, error) {
@@ -557,9 +557,9 @@ func (a *EFSStub) PutBackupPolicy(ctx workflow.Context, input *efs.PutBackupPoli
 	return &output, err
 }
 
-func (a *EFSStub) PutBackupPolicyAsync(ctx workflow.Context, input *efs.PutBackupPolicyInput) *EfsPutBackupPolicyResult {
+func (a *EFSStub) PutBackupPolicyAsync(ctx workflow.Context, input *efs.PutBackupPolicyInput) *EfsPutBackupPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.PutBackupPolicy", input)
-	return &EfsPutBackupPolicyResult{Result: future}
+	return &EfsPutBackupPolicyFuture{Future: future}
 }
 
 func (a *EFSStub) PutFileSystemPolicy(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) (*efs.PutFileSystemPolicyOutput, error) {
@@ -568,9 +568,9 @@ func (a *EFSStub) PutFileSystemPolicy(ctx workflow.Context, input *efs.PutFileSy
 	return &output, err
 }
 
-func (a *EFSStub) PutFileSystemPolicyAsync(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) *EfsPutFileSystemPolicyResult {
+func (a *EFSStub) PutFileSystemPolicyAsync(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) *EfsPutFileSystemPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.PutFileSystemPolicy", input)
-	return &EfsPutFileSystemPolicyResult{Result: future}
+	return &EfsPutFileSystemPolicyFuture{Future: future}
 }
 
 func (a *EFSStub) PutLifecycleConfiguration(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) (*efs.PutLifecycleConfigurationOutput, error) {
@@ -579,9 +579,9 @@ func (a *EFSStub) PutLifecycleConfiguration(ctx workflow.Context, input *efs.Put
 	return &output, err
 }
 
-func (a *EFSStub) PutLifecycleConfigurationAsync(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) *EfsPutLifecycleConfigurationResult {
+func (a *EFSStub) PutLifecycleConfigurationAsync(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) *EfsPutLifecycleConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.PutLifecycleConfiguration", input)
-	return &EfsPutLifecycleConfigurationResult{Result: future}
+	return &EfsPutLifecycleConfigurationFuture{Future: future}
 }
 
 func (a *EFSStub) TagResource(ctx workflow.Context, input *efs.TagResourceInput) (*efs.TagResourceOutput, error) {
@@ -590,9 +590,9 @@ func (a *EFSStub) TagResource(ctx workflow.Context, input *efs.TagResourceInput)
 	return &output, err
 }
 
-func (a *EFSStub) TagResourceAsync(ctx workflow.Context, input *efs.TagResourceInput) *EfsTagResourceResult {
+func (a *EFSStub) TagResourceAsync(ctx workflow.Context, input *efs.TagResourceInput) *EfsTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.TagResource", input)
-	return &EfsTagResourceResult{Result: future}
+	return &EfsTagResourceFuture{Future: future}
 }
 
 func (a *EFSStub) UntagResource(ctx workflow.Context, input *efs.UntagResourceInput) (*efs.UntagResourceOutput, error) {
@@ -601,9 +601,9 @@ func (a *EFSStub) UntagResource(ctx workflow.Context, input *efs.UntagResourceIn
 	return &output, err
 }
 
-func (a *EFSStub) UntagResourceAsync(ctx workflow.Context, input *efs.UntagResourceInput) *EfsUntagResourceResult {
+func (a *EFSStub) UntagResourceAsync(ctx workflow.Context, input *efs.UntagResourceInput) *EfsUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.UntagResource", input)
-	return &EfsUntagResourceResult{Result: future}
+	return &EfsUntagResourceFuture{Future: future}
 }
 
 func (a *EFSStub) UpdateFileSystem(ctx workflow.Context, input *efs.UpdateFileSystemInput) (*efs.UpdateFileSystemOutput, error) {
@@ -612,7 +612,7 @@ func (a *EFSStub) UpdateFileSystem(ctx workflow.Context, input *efs.UpdateFileSy
 	return &output, err
 }
 
-func (a *EFSStub) UpdateFileSystemAsync(ctx workflow.Context, input *efs.UpdateFileSystemInput) *EfsUpdateFileSystemResult {
+func (a *EFSStub) UpdateFileSystemAsync(ctx workflow.Context, input *efs.UpdateFileSystemInput) *EfsUpdateFileSystemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.efs.UpdateFileSystem", input)
-	return &EfsUpdateFileSystemResult{Result: future}
+	return &EfsUpdateFileSystemFuture{Future: future}
 }

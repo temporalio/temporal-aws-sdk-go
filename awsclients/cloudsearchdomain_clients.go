@@ -11,13 +11,13 @@ import (
 
 type CloudSearchDomainClient interface {
 	Search(ctx workflow.Context, input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error)
-	SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *CloudsearchdomainSearchResult
+	SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *CloudsearchdomainSearchFuture
 
 	Suggest(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error)
-	SuggestAsync(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) *CloudsearchdomainSuggestResult
+	SuggestAsync(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) *CloudsearchdomainSuggestFuture
 
 	UploadDocuments(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error)
-	UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudsearchdomainUploadDocumentsResult
+	UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudsearchdomainUploadDocumentsFuture
 }
 
 type CloudSearchDomainStub struct{}
@@ -26,33 +26,33 @@ func NewCloudSearchDomainStub() CloudSearchDomainClient {
 	return &CloudSearchDomainStub{}
 }
 
-type CloudsearchdomainSearchResult struct {
-	Result workflow.Future
+type CloudsearchdomainSearchFuture struct {
+	Future workflow.Future
 }
 
-func (r *CloudsearchdomainSearchResult) Get(ctx workflow.Context) (*cloudsearchdomain.SearchOutput, error) {
+func (r *CloudsearchdomainSearchFuture) Get(ctx workflow.Context) (*cloudsearchdomain.SearchOutput, error) {
 	var output cloudsearchdomain.SearchOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudsearchdomainSuggestResult struct {
-	Result workflow.Future
+type CloudsearchdomainSuggestFuture struct {
+	Future workflow.Future
 }
 
-func (r *CloudsearchdomainSuggestResult) Get(ctx workflow.Context) (*cloudsearchdomain.SuggestOutput, error) {
+func (r *CloudsearchdomainSuggestFuture) Get(ctx workflow.Context) (*cloudsearchdomain.SuggestOutput, error) {
 	var output cloudsearchdomain.SuggestOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudsearchdomainUploadDocumentsResult struct {
-	Result workflow.Future
+type CloudsearchdomainUploadDocumentsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CloudsearchdomainUploadDocumentsResult) Get(ctx workflow.Context) (*cloudsearchdomain.UploadDocumentsOutput, error) {
+func (r *CloudsearchdomainUploadDocumentsFuture) Get(ctx workflow.Context) (*cloudsearchdomain.UploadDocumentsOutput, error) {
 	var output cloudsearchdomain.UploadDocumentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -62,9 +62,9 @@ func (a *CloudSearchDomainStub) Search(ctx workflow.Context, input *cloudsearchd
 	return &output, err
 }
 
-func (a *CloudSearchDomainStub) SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *CloudsearchdomainSearchResult {
+func (a *CloudSearchDomainStub) SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *CloudsearchdomainSearchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearchdomain.Search", input)
-	return &CloudsearchdomainSearchResult{Result: future}
+	return &CloudsearchdomainSearchFuture{Future: future}
 }
 
 func (a *CloudSearchDomainStub) Suggest(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error) {
@@ -73,9 +73,9 @@ func (a *CloudSearchDomainStub) Suggest(ctx workflow.Context, input *cloudsearch
 	return &output, err
 }
 
-func (a *CloudSearchDomainStub) SuggestAsync(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) *CloudsearchdomainSuggestResult {
+func (a *CloudSearchDomainStub) SuggestAsync(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) *CloudsearchdomainSuggestFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearchdomain.Suggest", input)
-	return &CloudsearchdomainSuggestResult{Result: future}
+	return &CloudsearchdomainSuggestFuture{Future: future}
 }
 
 func (a *CloudSearchDomainStub) UploadDocuments(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error) {
@@ -84,7 +84,7 @@ func (a *CloudSearchDomainStub) UploadDocuments(ctx workflow.Context, input *clo
 	return &output, err
 }
 
-func (a *CloudSearchDomainStub) UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudsearchdomainUploadDocumentsResult {
+func (a *CloudSearchDomainStub) UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudsearchdomainUploadDocumentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearchdomain.UploadDocuments", input)
-	return &CloudsearchdomainUploadDocumentsResult{Result: future}
+	return &CloudsearchdomainUploadDocumentsFuture{Future: future}
 }

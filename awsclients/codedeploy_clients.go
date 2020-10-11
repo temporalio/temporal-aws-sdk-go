@@ -11,147 +11,148 @@ import (
 
 type CodeDeployClient interface {
 	AddTagsToOnPremisesInstances(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) (*codedeploy.AddTagsToOnPremisesInstancesOutput, error)
-	AddTagsToOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) *CodedeployAddTagsToOnPremisesInstancesResult
+	AddTagsToOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) *CodedeployAddTagsToOnPremisesInstancesFuture
 
 	BatchGetApplicationRevisions(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) (*codedeploy.BatchGetApplicationRevisionsOutput, error)
-	BatchGetApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) *CodedeployBatchGetApplicationRevisionsResult
+	BatchGetApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) *CodedeployBatchGetApplicationRevisionsFuture
 
 	BatchGetApplications(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) (*codedeploy.BatchGetApplicationsOutput, error)
-	BatchGetApplicationsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) *CodedeployBatchGetApplicationsResult
+	BatchGetApplicationsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) *CodedeployBatchGetApplicationsFuture
 
 	BatchGetDeploymentGroups(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) (*codedeploy.BatchGetDeploymentGroupsOutput, error)
-	BatchGetDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) *CodedeployBatchGetDeploymentGroupsResult
+	BatchGetDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) *CodedeployBatchGetDeploymentGroupsFuture
 
 	BatchGetDeploymentInstances(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) (*codedeploy.BatchGetDeploymentInstancesOutput, error)
-	BatchGetDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) *CodedeployBatchGetDeploymentInstancesResult
+	BatchGetDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) *CodedeployBatchGetDeploymentInstancesFuture
 
 	BatchGetDeploymentTargets(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) (*codedeploy.BatchGetDeploymentTargetsOutput, error)
-	BatchGetDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) *CodedeployBatchGetDeploymentTargetsResult
+	BatchGetDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) *CodedeployBatchGetDeploymentTargetsFuture
 
 	BatchGetDeployments(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) (*codedeploy.BatchGetDeploymentsOutput, error)
-	BatchGetDeploymentsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) *CodedeployBatchGetDeploymentsResult
+	BatchGetDeploymentsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) *CodedeployBatchGetDeploymentsFuture
 
 	BatchGetOnPremisesInstances(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) (*codedeploy.BatchGetOnPremisesInstancesOutput, error)
-	BatchGetOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) *CodedeployBatchGetOnPremisesInstancesResult
+	BatchGetOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) *CodedeployBatchGetOnPremisesInstancesFuture
 
 	ContinueDeployment(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) (*codedeploy.ContinueDeploymentOutput, error)
-	ContinueDeploymentAsync(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) *CodedeployContinueDeploymentResult
+	ContinueDeploymentAsync(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) *CodedeployContinueDeploymentFuture
 
 	CreateApplication(ctx workflow.Context, input *codedeploy.CreateApplicationInput) (*codedeploy.CreateApplicationOutput, error)
-	CreateApplicationAsync(ctx workflow.Context, input *codedeploy.CreateApplicationInput) *CodedeployCreateApplicationResult
+	CreateApplicationAsync(ctx workflow.Context, input *codedeploy.CreateApplicationInput) *CodedeployCreateApplicationFuture
 
 	CreateDeployment(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) (*codedeploy.CreateDeploymentOutput, error)
-	CreateDeploymentAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) *CodedeployCreateDeploymentResult
+	CreateDeploymentAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) *CodedeployCreateDeploymentFuture
 
 	CreateDeploymentConfig(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) (*codedeploy.CreateDeploymentConfigOutput, error)
-	CreateDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) *CodedeployCreateDeploymentConfigResult
+	CreateDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) *CodedeployCreateDeploymentConfigFuture
 
 	CreateDeploymentGroup(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) (*codedeploy.CreateDeploymentGroupOutput, error)
-	CreateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) *CodedeployCreateDeploymentGroupResult
+	CreateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) *CodedeployCreateDeploymentGroupFuture
 
 	DeleteApplication(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) (*codedeploy.DeleteApplicationOutput, error)
-	DeleteApplicationAsync(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) *CodedeployDeleteApplicationResult
+	DeleteApplicationAsync(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) *CodedeployDeleteApplicationFuture
 
 	DeleteDeploymentConfig(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) (*codedeploy.DeleteDeploymentConfigOutput, error)
-	DeleteDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) *CodedeployDeleteDeploymentConfigResult
+	DeleteDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) *CodedeployDeleteDeploymentConfigFuture
 
 	DeleteDeploymentGroup(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) (*codedeploy.DeleteDeploymentGroupOutput, error)
-	DeleteDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) *CodedeployDeleteDeploymentGroupResult
+	DeleteDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) *CodedeployDeleteDeploymentGroupFuture
 
 	DeleteGitHubAccountToken(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) (*codedeploy.DeleteGitHubAccountTokenOutput, error)
-	DeleteGitHubAccountTokenAsync(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) *CodedeployDeleteGitHubAccountTokenResult
+	DeleteGitHubAccountTokenAsync(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) *CodedeployDeleteGitHubAccountTokenFuture
 
 	DeleteResourcesByExternalId(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) (*codedeploy.DeleteResourcesByExternalIdOutput, error)
-	DeleteResourcesByExternalIdAsync(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) *CodedeployDeleteResourcesByExternalIdResult
+	DeleteResourcesByExternalIdAsync(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) *CodedeployDeleteResourcesByExternalIdFuture
 
 	DeregisterOnPremisesInstance(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) (*codedeploy.DeregisterOnPremisesInstanceOutput, error)
-	DeregisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) *CodedeployDeregisterOnPremisesInstanceResult
+	DeregisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) *CodedeployDeregisterOnPremisesInstanceFuture
 
 	GetApplication(ctx workflow.Context, input *codedeploy.GetApplicationInput) (*codedeploy.GetApplicationOutput, error)
-	GetApplicationAsync(ctx workflow.Context, input *codedeploy.GetApplicationInput) *CodedeployGetApplicationResult
+	GetApplicationAsync(ctx workflow.Context, input *codedeploy.GetApplicationInput) *CodedeployGetApplicationFuture
 
 	GetApplicationRevision(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) (*codedeploy.GetApplicationRevisionOutput, error)
-	GetApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) *CodedeployGetApplicationRevisionResult
+	GetApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) *CodedeployGetApplicationRevisionFuture
 
 	GetDeployment(ctx workflow.Context, input *codedeploy.GetDeploymentInput) (*codedeploy.GetDeploymentOutput, error)
-	GetDeploymentAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) *CodedeployGetDeploymentResult
+	GetDeploymentAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) *CodedeployGetDeploymentFuture
 
 	GetDeploymentConfig(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) (*codedeploy.GetDeploymentConfigOutput, error)
-	GetDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) *CodedeployGetDeploymentConfigResult
+	GetDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) *CodedeployGetDeploymentConfigFuture
 
 	GetDeploymentGroup(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) (*codedeploy.GetDeploymentGroupOutput, error)
-	GetDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) *CodedeployGetDeploymentGroupResult
+	GetDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) *CodedeployGetDeploymentGroupFuture
 
 	GetDeploymentInstance(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) (*codedeploy.GetDeploymentInstanceOutput, error)
-	GetDeploymentInstanceAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) *CodedeployGetDeploymentInstanceResult
+	GetDeploymentInstanceAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) *CodedeployGetDeploymentInstanceFuture
 
 	GetDeploymentTarget(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) (*codedeploy.GetDeploymentTargetOutput, error)
-	GetDeploymentTargetAsync(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) *CodedeployGetDeploymentTargetResult
+	GetDeploymentTargetAsync(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) *CodedeployGetDeploymentTargetFuture
 
 	GetOnPremisesInstance(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) (*codedeploy.GetOnPremisesInstanceOutput, error)
-	GetOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) *CodedeployGetOnPremisesInstanceResult
+	GetOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) *CodedeployGetOnPremisesInstanceFuture
 
 	ListApplicationRevisions(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) (*codedeploy.ListApplicationRevisionsOutput, error)
-	ListApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) *CodedeployListApplicationRevisionsResult
+	ListApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) *CodedeployListApplicationRevisionsFuture
 
 	ListApplications(ctx workflow.Context, input *codedeploy.ListApplicationsInput) (*codedeploy.ListApplicationsOutput, error)
-	ListApplicationsAsync(ctx workflow.Context, input *codedeploy.ListApplicationsInput) *CodedeployListApplicationsResult
+	ListApplicationsAsync(ctx workflow.Context, input *codedeploy.ListApplicationsInput) *CodedeployListApplicationsFuture
 
 	ListDeploymentConfigs(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) (*codedeploy.ListDeploymentConfigsOutput, error)
-	ListDeploymentConfigsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) *CodedeployListDeploymentConfigsResult
+	ListDeploymentConfigsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) *CodedeployListDeploymentConfigsFuture
 
 	ListDeploymentGroups(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) (*codedeploy.ListDeploymentGroupsOutput, error)
-	ListDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) *CodedeployListDeploymentGroupsResult
+	ListDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) *CodedeployListDeploymentGroupsFuture
 
 	ListDeploymentInstances(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) (*codedeploy.ListDeploymentInstancesOutput, error)
-	ListDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) *CodedeployListDeploymentInstancesResult
+	ListDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) *CodedeployListDeploymentInstancesFuture
 
 	ListDeploymentTargets(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) (*codedeploy.ListDeploymentTargetsOutput, error)
-	ListDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) *CodedeployListDeploymentTargetsResult
+	ListDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) *CodedeployListDeploymentTargetsFuture
 
 	ListDeployments(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) (*codedeploy.ListDeploymentsOutput, error)
-	ListDeploymentsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) *CodedeployListDeploymentsResult
+	ListDeploymentsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) *CodedeployListDeploymentsFuture
 
 	ListGitHubAccountTokenNames(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) (*codedeploy.ListGitHubAccountTokenNamesOutput, error)
-	ListGitHubAccountTokenNamesAsync(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) *CodedeployListGitHubAccountTokenNamesResult
+	ListGitHubAccountTokenNamesAsync(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) *CodedeployListGitHubAccountTokenNamesFuture
 
 	ListOnPremisesInstances(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) (*codedeploy.ListOnPremisesInstancesOutput, error)
-	ListOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) *CodedeployListOnPremisesInstancesResult
+	ListOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) *CodedeployListOnPremisesInstancesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) (*codedeploy.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) *CodedeployListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) *CodedeployListTagsForResourceFuture
 
 	PutLifecycleEventHookExecutionStatus(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) (*codedeploy.PutLifecycleEventHookExecutionStatusOutput, error)
-	PutLifecycleEventHookExecutionStatusAsync(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) *CodedeployPutLifecycleEventHookExecutionStatusResult
+	PutLifecycleEventHookExecutionStatusAsync(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) *CodedeployPutLifecycleEventHookExecutionStatusFuture
 
 	RegisterApplicationRevision(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) (*codedeploy.RegisterApplicationRevisionOutput, error)
-	RegisterApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) *CodedeployRegisterApplicationRevisionResult
+	RegisterApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) *CodedeployRegisterApplicationRevisionFuture
 
 	RegisterOnPremisesInstance(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) (*codedeploy.RegisterOnPremisesInstanceOutput, error)
-	RegisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) *CodedeployRegisterOnPremisesInstanceResult
+	RegisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) *CodedeployRegisterOnPremisesInstanceFuture
 
 	RemoveTagsFromOnPremisesInstances(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) (*codedeploy.RemoveTagsFromOnPremisesInstancesOutput, error)
-	RemoveTagsFromOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) *CodedeployRemoveTagsFromOnPremisesInstancesResult
+	RemoveTagsFromOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) *CodedeployRemoveTagsFromOnPremisesInstancesFuture
 
 	SkipWaitTimeForInstanceTermination(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) (*codedeploy.SkipWaitTimeForInstanceTerminationOutput, error)
-	SkipWaitTimeForInstanceTerminationAsync(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) *CodedeploySkipWaitTimeForInstanceTerminationResult
+	SkipWaitTimeForInstanceTerminationAsync(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) *CodedeploySkipWaitTimeForInstanceTerminationFuture
 
 	StopDeployment(ctx workflow.Context, input *codedeploy.StopDeploymentInput) (*codedeploy.StopDeploymentOutput, error)
-	StopDeploymentAsync(ctx workflow.Context, input *codedeploy.StopDeploymentInput) *CodedeployStopDeploymentResult
+	StopDeploymentAsync(ctx workflow.Context, input *codedeploy.StopDeploymentInput) *CodedeployStopDeploymentFuture
 
 	TagResource(ctx workflow.Context, input *codedeploy.TagResourceInput) (*codedeploy.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *codedeploy.TagResourceInput) *CodedeployTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *codedeploy.TagResourceInput) *CodedeployTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *codedeploy.UntagResourceInput) (*codedeploy.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *codedeploy.UntagResourceInput) *CodedeployUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *codedeploy.UntagResourceInput) *CodedeployUntagResourceFuture
 
 	UpdateApplication(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) (*codedeploy.UpdateApplicationOutput, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) *CodedeployUpdateApplicationResult
+	UpdateApplicationAsync(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) *CodedeployUpdateApplicationFuture
 
 	UpdateDeploymentGroup(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) (*codedeploy.UpdateDeploymentGroupOutput, error)
-	UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupResult
+	UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupFuture
 
 	WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error
+	WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) workflow.Future
 }
 
 type CodeDeployStub struct{}
@@ -160,473 +161,473 @@ func NewCodeDeployStub() CodeDeployClient {
 	return &CodeDeployStub{}
 }
 
-type CodedeployAddTagsToOnPremisesInstancesResult struct {
-	Result workflow.Future
+type CodedeployAddTagsToOnPremisesInstancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployAddTagsToOnPremisesInstancesResult) Get(ctx workflow.Context) (*codedeploy.AddTagsToOnPremisesInstancesOutput, error) {
+func (r *CodedeployAddTagsToOnPremisesInstancesFuture) Get(ctx workflow.Context) (*codedeploy.AddTagsToOnPremisesInstancesOutput, error) {
 	var output codedeploy.AddTagsToOnPremisesInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployBatchGetApplicationRevisionsResult struct {
-	Result workflow.Future
+type CodedeployBatchGetApplicationRevisionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployBatchGetApplicationRevisionsResult) Get(ctx workflow.Context) (*codedeploy.BatchGetApplicationRevisionsOutput, error) {
+func (r *CodedeployBatchGetApplicationRevisionsFuture) Get(ctx workflow.Context) (*codedeploy.BatchGetApplicationRevisionsOutput, error) {
 	var output codedeploy.BatchGetApplicationRevisionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployBatchGetApplicationsResult struct {
-	Result workflow.Future
+type CodedeployBatchGetApplicationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployBatchGetApplicationsResult) Get(ctx workflow.Context) (*codedeploy.BatchGetApplicationsOutput, error) {
+func (r *CodedeployBatchGetApplicationsFuture) Get(ctx workflow.Context) (*codedeploy.BatchGetApplicationsOutput, error) {
 	var output codedeploy.BatchGetApplicationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployBatchGetDeploymentGroupsResult struct {
-	Result workflow.Future
+type CodedeployBatchGetDeploymentGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployBatchGetDeploymentGroupsResult) Get(ctx workflow.Context) (*codedeploy.BatchGetDeploymentGroupsOutput, error) {
+func (r *CodedeployBatchGetDeploymentGroupsFuture) Get(ctx workflow.Context) (*codedeploy.BatchGetDeploymentGroupsOutput, error) {
 	var output codedeploy.BatchGetDeploymentGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployBatchGetDeploymentInstancesResult struct {
-	Result workflow.Future
+type CodedeployBatchGetDeploymentInstancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployBatchGetDeploymentInstancesResult) Get(ctx workflow.Context) (*codedeploy.BatchGetDeploymentInstancesOutput, error) {
+func (r *CodedeployBatchGetDeploymentInstancesFuture) Get(ctx workflow.Context) (*codedeploy.BatchGetDeploymentInstancesOutput, error) {
 	var output codedeploy.BatchGetDeploymentInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployBatchGetDeploymentTargetsResult struct {
-	Result workflow.Future
+type CodedeployBatchGetDeploymentTargetsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployBatchGetDeploymentTargetsResult) Get(ctx workflow.Context) (*codedeploy.BatchGetDeploymentTargetsOutput, error) {
+func (r *CodedeployBatchGetDeploymentTargetsFuture) Get(ctx workflow.Context) (*codedeploy.BatchGetDeploymentTargetsOutput, error) {
 	var output codedeploy.BatchGetDeploymentTargetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployBatchGetDeploymentsResult struct {
-	Result workflow.Future
+type CodedeployBatchGetDeploymentsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployBatchGetDeploymentsResult) Get(ctx workflow.Context) (*codedeploy.BatchGetDeploymentsOutput, error) {
+func (r *CodedeployBatchGetDeploymentsFuture) Get(ctx workflow.Context) (*codedeploy.BatchGetDeploymentsOutput, error) {
 	var output codedeploy.BatchGetDeploymentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployBatchGetOnPremisesInstancesResult struct {
-	Result workflow.Future
+type CodedeployBatchGetOnPremisesInstancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployBatchGetOnPremisesInstancesResult) Get(ctx workflow.Context) (*codedeploy.BatchGetOnPremisesInstancesOutput, error) {
+func (r *CodedeployBatchGetOnPremisesInstancesFuture) Get(ctx workflow.Context) (*codedeploy.BatchGetOnPremisesInstancesOutput, error) {
 	var output codedeploy.BatchGetOnPremisesInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployContinueDeploymentResult struct {
-	Result workflow.Future
+type CodedeployContinueDeploymentFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployContinueDeploymentResult) Get(ctx workflow.Context) (*codedeploy.ContinueDeploymentOutput, error) {
+func (r *CodedeployContinueDeploymentFuture) Get(ctx workflow.Context) (*codedeploy.ContinueDeploymentOutput, error) {
 	var output codedeploy.ContinueDeploymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployCreateApplicationResult struct {
-	Result workflow.Future
+type CodedeployCreateApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployCreateApplicationResult) Get(ctx workflow.Context) (*codedeploy.CreateApplicationOutput, error) {
+func (r *CodedeployCreateApplicationFuture) Get(ctx workflow.Context) (*codedeploy.CreateApplicationOutput, error) {
 	var output codedeploy.CreateApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployCreateDeploymentResult struct {
-	Result workflow.Future
+type CodedeployCreateDeploymentFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployCreateDeploymentResult) Get(ctx workflow.Context) (*codedeploy.CreateDeploymentOutput, error) {
+func (r *CodedeployCreateDeploymentFuture) Get(ctx workflow.Context) (*codedeploy.CreateDeploymentOutput, error) {
 	var output codedeploy.CreateDeploymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployCreateDeploymentConfigResult struct {
-	Result workflow.Future
+type CodedeployCreateDeploymentConfigFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployCreateDeploymentConfigResult) Get(ctx workflow.Context) (*codedeploy.CreateDeploymentConfigOutput, error) {
+func (r *CodedeployCreateDeploymentConfigFuture) Get(ctx workflow.Context) (*codedeploy.CreateDeploymentConfigOutput, error) {
 	var output codedeploy.CreateDeploymentConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployCreateDeploymentGroupResult struct {
-	Result workflow.Future
+type CodedeployCreateDeploymentGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployCreateDeploymentGroupResult) Get(ctx workflow.Context) (*codedeploy.CreateDeploymentGroupOutput, error) {
+func (r *CodedeployCreateDeploymentGroupFuture) Get(ctx workflow.Context) (*codedeploy.CreateDeploymentGroupOutput, error) {
 	var output codedeploy.CreateDeploymentGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployDeleteApplicationResult struct {
-	Result workflow.Future
+type CodedeployDeleteApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployDeleteApplicationResult) Get(ctx workflow.Context) (*codedeploy.DeleteApplicationOutput, error) {
+func (r *CodedeployDeleteApplicationFuture) Get(ctx workflow.Context) (*codedeploy.DeleteApplicationOutput, error) {
 	var output codedeploy.DeleteApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployDeleteDeploymentConfigResult struct {
-	Result workflow.Future
+type CodedeployDeleteDeploymentConfigFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployDeleteDeploymentConfigResult) Get(ctx workflow.Context) (*codedeploy.DeleteDeploymentConfigOutput, error) {
+func (r *CodedeployDeleteDeploymentConfigFuture) Get(ctx workflow.Context) (*codedeploy.DeleteDeploymentConfigOutput, error) {
 	var output codedeploy.DeleteDeploymentConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployDeleteDeploymentGroupResult struct {
-	Result workflow.Future
+type CodedeployDeleteDeploymentGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployDeleteDeploymentGroupResult) Get(ctx workflow.Context) (*codedeploy.DeleteDeploymentGroupOutput, error) {
+func (r *CodedeployDeleteDeploymentGroupFuture) Get(ctx workflow.Context) (*codedeploy.DeleteDeploymentGroupOutput, error) {
 	var output codedeploy.DeleteDeploymentGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployDeleteGitHubAccountTokenResult struct {
-	Result workflow.Future
+type CodedeployDeleteGitHubAccountTokenFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployDeleteGitHubAccountTokenResult) Get(ctx workflow.Context) (*codedeploy.DeleteGitHubAccountTokenOutput, error) {
+func (r *CodedeployDeleteGitHubAccountTokenFuture) Get(ctx workflow.Context) (*codedeploy.DeleteGitHubAccountTokenOutput, error) {
 	var output codedeploy.DeleteGitHubAccountTokenOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployDeleteResourcesByExternalIdResult struct {
-	Result workflow.Future
+type CodedeployDeleteResourcesByExternalIdFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployDeleteResourcesByExternalIdResult) Get(ctx workflow.Context) (*codedeploy.DeleteResourcesByExternalIdOutput, error) {
+func (r *CodedeployDeleteResourcesByExternalIdFuture) Get(ctx workflow.Context) (*codedeploy.DeleteResourcesByExternalIdOutput, error) {
 	var output codedeploy.DeleteResourcesByExternalIdOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployDeregisterOnPremisesInstanceResult struct {
-	Result workflow.Future
+type CodedeployDeregisterOnPremisesInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployDeregisterOnPremisesInstanceResult) Get(ctx workflow.Context) (*codedeploy.DeregisterOnPremisesInstanceOutput, error) {
+func (r *CodedeployDeregisterOnPremisesInstanceFuture) Get(ctx workflow.Context) (*codedeploy.DeregisterOnPremisesInstanceOutput, error) {
 	var output codedeploy.DeregisterOnPremisesInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployGetApplicationResult struct {
-	Result workflow.Future
+type CodedeployGetApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployGetApplicationResult) Get(ctx workflow.Context) (*codedeploy.GetApplicationOutput, error) {
+func (r *CodedeployGetApplicationFuture) Get(ctx workflow.Context) (*codedeploy.GetApplicationOutput, error) {
 	var output codedeploy.GetApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployGetApplicationRevisionResult struct {
-	Result workflow.Future
+type CodedeployGetApplicationRevisionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployGetApplicationRevisionResult) Get(ctx workflow.Context) (*codedeploy.GetApplicationRevisionOutput, error) {
+func (r *CodedeployGetApplicationRevisionFuture) Get(ctx workflow.Context) (*codedeploy.GetApplicationRevisionOutput, error) {
 	var output codedeploy.GetApplicationRevisionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployGetDeploymentResult struct {
-	Result workflow.Future
+type CodedeployGetDeploymentFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployGetDeploymentResult) Get(ctx workflow.Context) (*codedeploy.GetDeploymentOutput, error) {
+func (r *CodedeployGetDeploymentFuture) Get(ctx workflow.Context) (*codedeploy.GetDeploymentOutput, error) {
 	var output codedeploy.GetDeploymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployGetDeploymentConfigResult struct {
-	Result workflow.Future
+type CodedeployGetDeploymentConfigFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployGetDeploymentConfigResult) Get(ctx workflow.Context) (*codedeploy.GetDeploymentConfigOutput, error) {
+func (r *CodedeployGetDeploymentConfigFuture) Get(ctx workflow.Context) (*codedeploy.GetDeploymentConfigOutput, error) {
 	var output codedeploy.GetDeploymentConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployGetDeploymentGroupResult struct {
-	Result workflow.Future
+type CodedeployGetDeploymentGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployGetDeploymentGroupResult) Get(ctx workflow.Context) (*codedeploy.GetDeploymentGroupOutput, error) {
+func (r *CodedeployGetDeploymentGroupFuture) Get(ctx workflow.Context) (*codedeploy.GetDeploymentGroupOutput, error) {
 	var output codedeploy.GetDeploymentGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployGetDeploymentInstanceResult struct {
-	Result workflow.Future
+type CodedeployGetDeploymentInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployGetDeploymentInstanceResult) Get(ctx workflow.Context) (*codedeploy.GetDeploymentInstanceOutput, error) {
+func (r *CodedeployGetDeploymentInstanceFuture) Get(ctx workflow.Context) (*codedeploy.GetDeploymentInstanceOutput, error) {
 	var output codedeploy.GetDeploymentInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployGetDeploymentTargetResult struct {
-	Result workflow.Future
+type CodedeployGetDeploymentTargetFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployGetDeploymentTargetResult) Get(ctx workflow.Context) (*codedeploy.GetDeploymentTargetOutput, error) {
+func (r *CodedeployGetDeploymentTargetFuture) Get(ctx workflow.Context) (*codedeploy.GetDeploymentTargetOutput, error) {
 	var output codedeploy.GetDeploymentTargetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployGetOnPremisesInstanceResult struct {
-	Result workflow.Future
+type CodedeployGetOnPremisesInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployGetOnPremisesInstanceResult) Get(ctx workflow.Context) (*codedeploy.GetOnPremisesInstanceOutput, error) {
+func (r *CodedeployGetOnPremisesInstanceFuture) Get(ctx workflow.Context) (*codedeploy.GetOnPremisesInstanceOutput, error) {
 	var output codedeploy.GetOnPremisesInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListApplicationRevisionsResult struct {
-	Result workflow.Future
+type CodedeployListApplicationRevisionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListApplicationRevisionsResult) Get(ctx workflow.Context) (*codedeploy.ListApplicationRevisionsOutput, error) {
+func (r *CodedeployListApplicationRevisionsFuture) Get(ctx workflow.Context) (*codedeploy.ListApplicationRevisionsOutput, error) {
 	var output codedeploy.ListApplicationRevisionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListApplicationsResult struct {
-	Result workflow.Future
+type CodedeployListApplicationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListApplicationsResult) Get(ctx workflow.Context) (*codedeploy.ListApplicationsOutput, error) {
+func (r *CodedeployListApplicationsFuture) Get(ctx workflow.Context) (*codedeploy.ListApplicationsOutput, error) {
 	var output codedeploy.ListApplicationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListDeploymentConfigsResult struct {
-	Result workflow.Future
+type CodedeployListDeploymentConfigsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListDeploymentConfigsResult) Get(ctx workflow.Context) (*codedeploy.ListDeploymentConfigsOutput, error) {
+func (r *CodedeployListDeploymentConfigsFuture) Get(ctx workflow.Context) (*codedeploy.ListDeploymentConfigsOutput, error) {
 	var output codedeploy.ListDeploymentConfigsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListDeploymentGroupsResult struct {
-	Result workflow.Future
+type CodedeployListDeploymentGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListDeploymentGroupsResult) Get(ctx workflow.Context) (*codedeploy.ListDeploymentGroupsOutput, error) {
+func (r *CodedeployListDeploymentGroupsFuture) Get(ctx workflow.Context) (*codedeploy.ListDeploymentGroupsOutput, error) {
 	var output codedeploy.ListDeploymentGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListDeploymentInstancesResult struct {
-	Result workflow.Future
+type CodedeployListDeploymentInstancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListDeploymentInstancesResult) Get(ctx workflow.Context) (*codedeploy.ListDeploymentInstancesOutput, error) {
+func (r *CodedeployListDeploymentInstancesFuture) Get(ctx workflow.Context) (*codedeploy.ListDeploymentInstancesOutput, error) {
 	var output codedeploy.ListDeploymentInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListDeploymentTargetsResult struct {
-	Result workflow.Future
+type CodedeployListDeploymentTargetsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListDeploymentTargetsResult) Get(ctx workflow.Context) (*codedeploy.ListDeploymentTargetsOutput, error) {
+func (r *CodedeployListDeploymentTargetsFuture) Get(ctx workflow.Context) (*codedeploy.ListDeploymentTargetsOutput, error) {
 	var output codedeploy.ListDeploymentTargetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListDeploymentsResult struct {
-	Result workflow.Future
+type CodedeployListDeploymentsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListDeploymentsResult) Get(ctx workflow.Context) (*codedeploy.ListDeploymentsOutput, error) {
+func (r *CodedeployListDeploymentsFuture) Get(ctx workflow.Context) (*codedeploy.ListDeploymentsOutput, error) {
 	var output codedeploy.ListDeploymentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListGitHubAccountTokenNamesResult struct {
-	Result workflow.Future
+type CodedeployListGitHubAccountTokenNamesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListGitHubAccountTokenNamesResult) Get(ctx workflow.Context) (*codedeploy.ListGitHubAccountTokenNamesOutput, error) {
+func (r *CodedeployListGitHubAccountTokenNamesFuture) Get(ctx workflow.Context) (*codedeploy.ListGitHubAccountTokenNamesOutput, error) {
 	var output codedeploy.ListGitHubAccountTokenNamesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListOnPremisesInstancesResult struct {
-	Result workflow.Future
+type CodedeployListOnPremisesInstancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListOnPremisesInstancesResult) Get(ctx workflow.Context) (*codedeploy.ListOnPremisesInstancesOutput, error) {
+func (r *CodedeployListOnPremisesInstancesFuture) Get(ctx workflow.Context) (*codedeploy.ListOnPremisesInstancesOutput, error) {
 	var output codedeploy.ListOnPremisesInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployListTagsForResourceResult struct {
-	Result workflow.Future
+type CodedeployListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployListTagsForResourceResult) Get(ctx workflow.Context) (*codedeploy.ListTagsForResourceOutput, error) {
+func (r *CodedeployListTagsForResourceFuture) Get(ctx workflow.Context) (*codedeploy.ListTagsForResourceOutput, error) {
 	var output codedeploy.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployPutLifecycleEventHookExecutionStatusResult struct {
-	Result workflow.Future
+type CodedeployPutLifecycleEventHookExecutionStatusFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployPutLifecycleEventHookExecutionStatusResult) Get(ctx workflow.Context) (*codedeploy.PutLifecycleEventHookExecutionStatusOutput, error) {
+func (r *CodedeployPutLifecycleEventHookExecutionStatusFuture) Get(ctx workflow.Context) (*codedeploy.PutLifecycleEventHookExecutionStatusOutput, error) {
 	var output codedeploy.PutLifecycleEventHookExecutionStatusOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployRegisterApplicationRevisionResult struct {
-	Result workflow.Future
+type CodedeployRegisterApplicationRevisionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployRegisterApplicationRevisionResult) Get(ctx workflow.Context) (*codedeploy.RegisterApplicationRevisionOutput, error) {
+func (r *CodedeployRegisterApplicationRevisionFuture) Get(ctx workflow.Context) (*codedeploy.RegisterApplicationRevisionOutput, error) {
 	var output codedeploy.RegisterApplicationRevisionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployRegisterOnPremisesInstanceResult struct {
-	Result workflow.Future
+type CodedeployRegisterOnPremisesInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployRegisterOnPremisesInstanceResult) Get(ctx workflow.Context) (*codedeploy.RegisterOnPremisesInstanceOutput, error) {
+func (r *CodedeployRegisterOnPremisesInstanceFuture) Get(ctx workflow.Context) (*codedeploy.RegisterOnPremisesInstanceOutput, error) {
 	var output codedeploy.RegisterOnPremisesInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployRemoveTagsFromOnPremisesInstancesResult struct {
-	Result workflow.Future
+type CodedeployRemoveTagsFromOnPremisesInstancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployRemoveTagsFromOnPremisesInstancesResult) Get(ctx workflow.Context) (*codedeploy.RemoveTagsFromOnPremisesInstancesOutput, error) {
+func (r *CodedeployRemoveTagsFromOnPremisesInstancesFuture) Get(ctx workflow.Context) (*codedeploy.RemoveTagsFromOnPremisesInstancesOutput, error) {
 	var output codedeploy.RemoveTagsFromOnPremisesInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeploySkipWaitTimeForInstanceTerminationResult struct {
-	Result workflow.Future
+type CodedeploySkipWaitTimeForInstanceTerminationFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeploySkipWaitTimeForInstanceTerminationResult) Get(ctx workflow.Context) (*codedeploy.SkipWaitTimeForInstanceTerminationOutput, error) {
+func (r *CodedeploySkipWaitTimeForInstanceTerminationFuture) Get(ctx workflow.Context) (*codedeploy.SkipWaitTimeForInstanceTerminationOutput, error) {
 	var output codedeploy.SkipWaitTimeForInstanceTerminationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployStopDeploymentResult struct {
-	Result workflow.Future
+type CodedeployStopDeploymentFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployStopDeploymentResult) Get(ctx workflow.Context) (*codedeploy.StopDeploymentOutput, error) {
+func (r *CodedeployStopDeploymentFuture) Get(ctx workflow.Context) (*codedeploy.StopDeploymentOutput, error) {
 	var output codedeploy.StopDeploymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployTagResourceResult struct {
-	Result workflow.Future
+type CodedeployTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployTagResourceResult) Get(ctx workflow.Context) (*codedeploy.TagResourceOutput, error) {
+func (r *CodedeployTagResourceFuture) Get(ctx workflow.Context) (*codedeploy.TagResourceOutput, error) {
 	var output codedeploy.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployUntagResourceResult struct {
-	Result workflow.Future
+type CodedeployUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployUntagResourceResult) Get(ctx workflow.Context) (*codedeploy.UntagResourceOutput, error) {
+func (r *CodedeployUntagResourceFuture) Get(ctx workflow.Context) (*codedeploy.UntagResourceOutput, error) {
 	var output codedeploy.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployUpdateApplicationResult struct {
-	Result workflow.Future
+type CodedeployUpdateApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployUpdateApplicationResult) Get(ctx workflow.Context) (*codedeploy.UpdateApplicationOutput, error) {
+func (r *CodedeployUpdateApplicationFuture) Get(ctx workflow.Context) (*codedeploy.UpdateApplicationOutput, error) {
 	var output codedeploy.UpdateApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodedeployUpdateDeploymentGroupResult struct {
-	Result workflow.Future
+type CodedeployUpdateDeploymentGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodedeployUpdateDeploymentGroupResult) Get(ctx workflow.Context) (*codedeploy.UpdateDeploymentGroupOutput, error) {
+func (r *CodedeployUpdateDeploymentGroupFuture) Get(ctx workflow.Context) (*codedeploy.UpdateDeploymentGroupOutput, error) {
 	var output codedeploy.UpdateDeploymentGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -636,9 +637,9 @@ func (a *CodeDeployStub) AddTagsToOnPremisesInstances(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *CodeDeployStub) AddTagsToOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) *CodedeployAddTagsToOnPremisesInstancesResult {
+func (a *CodeDeployStub) AddTagsToOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) *CodedeployAddTagsToOnPremisesInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.AddTagsToOnPremisesInstances", input)
-	return &CodedeployAddTagsToOnPremisesInstancesResult{Result: future}
+	return &CodedeployAddTagsToOnPremisesInstancesFuture{Future: future}
 }
 
 func (a *CodeDeployStub) BatchGetApplicationRevisions(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) (*codedeploy.BatchGetApplicationRevisionsOutput, error) {
@@ -647,9 +648,9 @@ func (a *CodeDeployStub) BatchGetApplicationRevisions(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *CodeDeployStub) BatchGetApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) *CodedeployBatchGetApplicationRevisionsResult {
+func (a *CodeDeployStub) BatchGetApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) *CodedeployBatchGetApplicationRevisionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.BatchGetApplicationRevisions", input)
-	return &CodedeployBatchGetApplicationRevisionsResult{Result: future}
+	return &CodedeployBatchGetApplicationRevisionsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) BatchGetApplications(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) (*codedeploy.BatchGetApplicationsOutput, error) {
@@ -658,9 +659,9 @@ func (a *CodeDeployStub) BatchGetApplications(ctx workflow.Context, input *coded
 	return &output, err
 }
 
-func (a *CodeDeployStub) BatchGetApplicationsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) *CodedeployBatchGetApplicationsResult {
+func (a *CodeDeployStub) BatchGetApplicationsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) *CodedeployBatchGetApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.BatchGetApplications", input)
-	return &CodedeployBatchGetApplicationsResult{Result: future}
+	return &CodedeployBatchGetApplicationsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) BatchGetDeploymentGroups(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) (*codedeploy.BatchGetDeploymentGroupsOutput, error) {
@@ -669,9 +670,9 @@ func (a *CodeDeployStub) BatchGetDeploymentGroups(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodeDeployStub) BatchGetDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) *CodedeployBatchGetDeploymentGroupsResult {
+func (a *CodeDeployStub) BatchGetDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) *CodedeployBatchGetDeploymentGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.BatchGetDeploymentGroups", input)
-	return &CodedeployBatchGetDeploymentGroupsResult{Result: future}
+	return &CodedeployBatchGetDeploymentGroupsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) BatchGetDeploymentInstances(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) (*codedeploy.BatchGetDeploymentInstancesOutput, error) {
@@ -680,9 +681,9 @@ func (a *CodeDeployStub) BatchGetDeploymentInstances(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CodeDeployStub) BatchGetDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) *CodedeployBatchGetDeploymentInstancesResult {
+func (a *CodeDeployStub) BatchGetDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) *CodedeployBatchGetDeploymentInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.BatchGetDeploymentInstances", input)
-	return &CodedeployBatchGetDeploymentInstancesResult{Result: future}
+	return &CodedeployBatchGetDeploymentInstancesFuture{Future: future}
 }
 
 func (a *CodeDeployStub) BatchGetDeploymentTargets(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) (*codedeploy.BatchGetDeploymentTargetsOutput, error) {
@@ -691,9 +692,9 @@ func (a *CodeDeployStub) BatchGetDeploymentTargets(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CodeDeployStub) BatchGetDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) *CodedeployBatchGetDeploymentTargetsResult {
+func (a *CodeDeployStub) BatchGetDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) *CodedeployBatchGetDeploymentTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.BatchGetDeploymentTargets", input)
-	return &CodedeployBatchGetDeploymentTargetsResult{Result: future}
+	return &CodedeployBatchGetDeploymentTargetsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) BatchGetDeployments(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) (*codedeploy.BatchGetDeploymentsOutput, error) {
@@ -702,9 +703,9 @@ func (a *CodeDeployStub) BatchGetDeployments(ctx workflow.Context, input *codede
 	return &output, err
 }
 
-func (a *CodeDeployStub) BatchGetDeploymentsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) *CodedeployBatchGetDeploymentsResult {
+func (a *CodeDeployStub) BatchGetDeploymentsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) *CodedeployBatchGetDeploymentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.BatchGetDeployments", input)
-	return &CodedeployBatchGetDeploymentsResult{Result: future}
+	return &CodedeployBatchGetDeploymentsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) BatchGetOnPremisesInstances(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) (*codedeploy.BatchGetOnPremisesInstancesOutput, error) {
@@ -713,9 +714,9 @@ func (a *CodeDeployStub) BatchGetOnPremisesInstances(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CodeDeployStub) BatchGetOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) *CodedeployBatchGetOnPremisesInstancesResult {
+func (a *CodeDeployStub) BatchGetOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) *CodedeployBatchGetOnPremisesInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.BatchGetOnPremisesInstances", input)
-	return &CodedeployBatchGetOnPremisesInstancesResult{Result: future}
+	return &CodedeployBatchGetOnPremisesInstancesFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ContinueDeployment(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) (*codedeploy.ContinueDeploymentOutput, error) {
@@ -724,9 +725,9 @@ func (a *CodeDeployStub) ContinueDeployment(ctx workflow.Context, input *codedep
 	return &output, err
 }
 
-func (a *CodeDeployStub) ContinueDeploymentAsync(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) *CodedeployContinueDeploymentResult {
+func (a *CodeDeployStub) ContinueDeploymentAsync(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) *CodedeployContinueDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ContinueDeployment", input)
-	return &CodedeployContinueDeploymentResult{Result: future}
+	return &CodedeployContinueDeploymentFuture{Future: future}
 }
 
 func (a *CodeDeployStub) CreateApplication(ctx workflow.Context, input *codedeploy.CreateApplicationInput) (*codedeploy.CreateApplicationOutput, error) {
@@ -735,9 +736,9 @@ func (a *CodeDeployStub) CreateApplication(ctx workflow.Context, input *codedepl
 	return &output, err
 }
 
-func (a *CodeDeployStub) CreateApplicationAsync(ctx workflow.Context, input *codedeploy.CreateApplicationInput) *CodedeployCreateApplicationResult {
+func (a *CodeDeployStub) CreateApplicationAsync(ctx workflow.Context, input *codedeploy.CreateApplicationInput) *CodedeployCreateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.CreateApplication", input)
-	return &CodedeployCreateApplicationResult{Result: future}
+	return &CodedeployCreateApplicationFuture{Future: future}
 }
 
 func (a *CodeDeployStub) CreateDeployment(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) (*codedeploy.CreateDeploymentOutput, error) {
@@ -746,9 +747,9 @@ func (a *CodeDeployStub) CreateDeployment(ctx workflow.Context, input *codedeplo
 	return &output, err
 }
 
-func (a *CodeDeployStub) CreateDeploymentAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) *CodedeployCreateDeploymentResult {
+func (a *CodeDeployStub) CreateDeploymentAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) *CodedeployCreateDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.CreateDeployment", input)
-	return &CodedeployCreateDeploymentResult{Result: future}
+	return &CodedeployCreateDeploymentFuture{Future: future}
 }
 
 func (a *CodeDeployStub) CreateDeploymentConfig(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) (*codedeploy.CreateDeploymentConfigOutput, error) {
@@ -757,9 +758,9 @@ func (a *CodeDeployStub) CreateDeploymentConfig(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *CodeDeployStub) CreateDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) *CodedeployCreateDeploymentConfigResult {
+func (a *CodeDeployStub) CreateDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) *CodedeployCreateDeploymentConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.CreateDeploymentConfig", input)
-	return &CodedeployCreateDeploymentConfigResult{Result: future}
+	return &CodedeployCreateDeploymentConfigFuture{Future: future}
 }
 
 func (a *CodeDeployStub) CreateDeploymentGroup(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) (*codedeploy.CreateDeploymentGroupOutput, error) {
@@ -768,9 +769,9 @@ func (a *CodeDeployStub) CreateDeploymentGroup(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeDeployStub) CreateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) *CodedeployCreateDeploymentGroupResult {
+func (a *CodeDeployStub) CreateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) *CodedeployCreateDeploymentGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.CreateDeploymentGroup", input)
-	return &CodedeployCreateDeploymentGroupResult{Result: future}
+	return &CodedeployCreateDeploymentGroupFuture{Future: future}
 }
 
 func (a *CodeDeployStub) DeleteApplication(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) (*codedeploy.DeleteApplicationOutput, error) {
@@ -779,9 +780,9 @@ func (a *CodeDeployStub) DeleteApplication(ctx workflow.Context, input *codedepl
 	return &output, err
 }
 
-func (a *CodeDeployStub) DeleteApplicationAsync(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) *CodedeployDeleteApplicationResult {
+func (a *CodeDeployStub) DeleteApplicationAsync(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) *CodedeployDeleteApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.DeleteApplication", input)
-	return &CodedeployDeleteApplicationResult{Result: future}
+	return &CodedeployDeleteApplicationFuture{Future: future}
 }
 
 func (a *CodeDeployStub) DeleteDeploymentConfig(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) (*codedeploy.DeleteDeploymentConfigOutput, error) {
@@ -790,9 +791,9 @@ func (a *CodeDeployStub) DeleteDeploymentConfig(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *CodeDeployStub) DeleteDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) *CodedeployDeleteDeploymentConfigResult {
+func (a *CodeDeployStub) DeleteDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) *CodedeployDeleteDeploymentConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.DeleteDeploymentConfig", input)
-	return &CodedeployDeleteDeploymentConfigResult{Result: future}
+	return &CodedeployDeleteDeploymentConfigFuture{Future: future}
 }
 
 func (a *CodeDeployStub) DeleteDeploymentGroup(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) (*codedeploy.DeleteDeploymentGroupOutput, error) {
@@ -801,9 +802,9 @@ func (a *CodeDeployStub) DeleteDeploymentGroup(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeDeployStub) DeleteDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) *CodedeployDeleteDeploymentGroupResult {
+func (a *CodeDeployStub) DeleteDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) *CodedeployDeleteDeploymentGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.DeleteDeploymentGroup", input)
-	return &CodedeployDeleteDeploymentGroupResult{Result: future}
+	return &CodedeployDeleteDeploymentGroupFuture{Future: future}
 }
 
 func (a *CodeDeployStub) DeleteGitHubAccountToken(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) (*codedeploy.DeleteGitHubAccountTokenOutput, error) {
@@ -812,9 +813,9 @@ func (a *CodeDeployStub) DeleteGitHubAccountToken(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodeDeployStub) DeleteGitHubAccountTokenAsync(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) *CodedeployDeleteGitHubAccountTokenResult {
+func (a *CodeDeployStub) DeleteGitHubAccountTokenAsync(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) *CodedeployDeleteGitHubAccountTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.DeleteGitHubAccountToken", input)
-	return &CodedeployDeleteGitHubAccountTokenResult{Result: future}
+	return &CodedeployDeleteGitHubAccountTokenFuture{Future: future}
 }
 
 func (a *CodeDeployStub) DeleteResourcesByExternalId(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) (*codedeploy.DeleteResourcesByExternalIdOutput, error) {
@@ -823,9 +824,9 @@ func (a *CodeDeployStub) DeleteResourcesByExternalId(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CodeDeployStub) DeleteResourcesByExternalIdAsync(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) *CodedeployDeleteResourcesByExternalIdResult {
+func (a *CodeDeployStub) DeleteResourcesByExternalIdAsync(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) *CodedeployDeleteResourcesByExternalIdFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.DeleteResourcesByExternalId", input)
-	return &CodedeployDeleteResourcesByExternalIdResult{Result: future}
+	return &CodedeployDeleteResourcesByExternalIdFuture{Future: future}
 }
 
 func (a *CodeDeployStub) DeregisterOnPremisesInstance(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) (*codedeploy.DeregisterOnPremisesInstanceOutput, error) {
@@ -834,9 +835,9 @@ func (a *CodeDeployStub) DeregisterOnPremisesInstance(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *CodeDeployStub) DeregisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) *CodedeployDeregisterOnPremisesInstanceResult {
+func (a *CodeDeployStub) DeregisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) *CodedeployDeregisterOnPremisesInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.DeregisterOnPremisesInstance", input)
-	return &CodedeployDeregisterOnPremisesInstanceResult{Result: future}
+	return &CodedeployDeregisterOnPremisesInstanceFuture{Future: future}
 }
 
 func (a *CodeDeployStub) GetApplication(ctx workflow.Context, input *codedeploy.GetApplicationInput) (*codedeploy.GetApplicationOutput, error) {
@@ -845,9 +846,9 @@ func (a *CodeDeployStub) GetApplication(ctx workflow.Context, input *codedeploy.
 	return &output, err
 }
 
-func (a *CodeDeployStub) GetApplicationAsync(ctx workflow.Context, input *codedeploy.GetApplicationInput) *CodedeployGetApplicationResult {
+func (a *CodeDeployStub) GetApplicationAsync(ctx workflow.Context, input *codedeploy.GetApplicationInput) *CodedeployGetApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.GetApplication", input)
-	return &CodedeployGetApplicationResult{Result: future}
+	return &CodedeployGetApplicationFuture{Future: future}
 }
 
 func (a *CodeDeployStub) GetApplicationRevision(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) (*codedeploy.GetApplicationRevisionOutput, error) {
@@ -856,9 +857,9 @@ func (a *CodeDeployStub) GetApplicationRevision(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *CodeDeployStub) GetApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) *CodedeployGetApplicationRevisionResult {
+func (a *CodeDeployStub) GetApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) *CodedeployGetApplicationRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.GetApplicationRevision", input)
-	return &CodedeployGetApplicationRevisionResult{Result: future}
+	return &CodedeployGetApplicationRevisionFuture{Future: future}
 }
 
 func (a *CodeDeployStub) GetDeployment(ctx workflow.Context, input *codedeploy.GetDeploymentInput) (*codedeploy.GetDeploymentOutput, error) {
@@ -867,9 +868,9 @@ func (a *CodeDeployStub) GetDeployment(ctx workflow.Context, input *codedeploy.G
 	return &output, err
 }
 
-func (a *CodeDeployStub) GetDeploymentAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) *CodedeployGetDeploymentResult {
+func (a *CodeDeployStub) GetDeploymentAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) *CodedeployGetDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.GetDeployment", input)
-	return &CodedeployGetDeploymentResult{Result: future}
+	return &CodedeployGetDeploymentFuture{Future: future}
 }
 
 func (a *CodeDeployStub) GetDeploymentConfig(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) (*codedeploy.GetDeploymentConfigOutput, error) {
@@ -878,9 +879,9 @@ func (a *CodeDeployStub) GetDeploymentConfig(ctx workflow.Context, input *codede
 	return &output, err
 }
 
-func (a *CodeDeployStub) GetDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) *CodedeployGetDeploymentConfigResult {
+func (a *CodeDeployStub) GetDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) *CodedeployGetDeploymentConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.GetDeploymentConfig", input)
-	return &CodedeployGetDeploymentConfigResult{Result: future}
+	return &CodedeployGetDeploymentConfigFuture{Future: future}
 }
 
 func (a *CodeDeployStub) GetDeploymentGroup(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) (*codedeploy.GetDeploymentGroupOutput, error) {
@@ -889,9 +890,9 @@ func (a *CodeDeployStub) GetDeploymentGroup(ctx workflow.Context, input *codedep
 	return &output, err
 }
 
-func (a *CodeDeployStub) GetDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) *CodedeployGetDeploymentGroupResult {
+func (a *CodeDeployStub) GetDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) *CodedeployGetDeploymentGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.GetDeploymentGroup", input)
-	return &CodedeployGetDeploymentGroupResult{Result: future}
+	return &CodedeployGetDeploymentGroupFuture{Future: future}
 }
 
 func (a *CodeDeployStub) GetDeploymentInstance(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) (*codedeploy.GetDeploymentInstanceOutput, error) {
@@ -900,9 +901,9 @@ func (a *CodeDeployStub) GetDeploymentInstance(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeDeployStub) GetDeploymentInstanceAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) *CodedeployGetDeploymentInstanceResult {
+func (a *CodeDeployStub) GetDeploymentInstanceAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) *CodedeployGetDeploymentInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.GetDeploymentInstance", input)
-	return &CodedeployGetDeploymentInstanceResult{Result: future}
+	return &CodedeployGetDeploymentInstanceFuture{Future: future}
 }
 
 func (a *CodeDeployStub) GetDeploymentTarget(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) (*codedeploy.GetDeploymentTargetOutput, error) {
@@ -911,9 +912,9 @@ func (a *CodeDeployStub) GetDeploymentTarget(ctx workflow.Context, input *codede
 	return &output, err
 }
 
-func (a *CodeDeployStub) GetDeploymentTargetAsync(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) *CodedeployGetDeploymentTargetResult {
+func (a *CodeDeployStub) GetDeploymentTargetAsync(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) *CodedeployGetDeploymentTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.GetDeploymentTarget", input)
-	return &CodedeployGetDeploymentTargetResult{Result: future}
+	return &CodedeployGetDeploymentTargetFuture{Future: future}
 }
 
 func (a *CodeDeployStub) GetOnPremisesInstance(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) (*codedeploy.GetOnPremisesInstanceOutput, error) {
@@ -922,9 +923,9 @@ func (a *CodeDeployStub) GetOnPremisesInstance(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeDeployStub) GetOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) *CodedeployGetOnPremisesInstanceResult {
+func (a *CodeDeployStub) GetOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) *CodedeployGetOnPremisesInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.GetOnPremisesInstance", input)
-	return &CodedeployGetOnPremisesInstanceResult{Result: future}
+	return &CodedeployGetOnPremisesInstanceFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListApplicationRevisions(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) (*codedeploy.ListApplicationRevisionsOutput, error) {
@@ -933,9 +934,9 @@ func (a *CodeDeployStub) ListApplicationRevisions(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) *CodedeployListApplicationRevisionsResult {
+func (a *CodeDeployStub) ListApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) *CodedeployListApplicationRevisionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListApplicationRevisions", input)
-	return &CodedeployListApplicationRevisionsResult{Result: future}
+	return &CodedeployListApplicationRevisionsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListApplications(ctx workflow.Context, input *codedeploy.ListApplicationsInput) (*codedeploy.ListApplicationsOutput, error) {
@@ -944,9 +945,9 @@ func (a *CodeDeployStub) ListApplications(ctx workflow.Context, input *codedeplo
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListApplicationsAsync(ctx workflow.Context, input *codedeploy.ListApplicationsInput) *CodedeployListApplicationsResult {
+func (a *CodeDeployStub) ListApplicationsAsync(ctx workflow.Context, input *codedeploy.ListApplicationsInput) *CodedeployListApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListApplications", input)
-	return &CodedeployListApplicationsResult{Result: future}
+	return &CodedeployListApplicationsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListDeploymentConfigs(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) (*codedeploy.ListDeploymentConfigsOutput, error) {
@@ -955,9 +956,9 @@ func (a *CodeDeployStub) ListDeploymentConfigs(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListDeploymentConfigsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) *CodedeployListDeploymentConfigsResult {
+func (a *CodeDeployStub) ListDeploymentConfigsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) *CodedeployListDeploymentConfigsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListDeploymentConfigs", input)
-	return &CodedeployListDeploymentConfigsResult{Result: future}
+	return &CodedeployListDeploymentConfigsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListDeploymentGroups(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) (*codedeploy.ListDeploymentGroupsOutput, error) {
@@ -966,9 +967,9 @@ func (a *CodeDeployStub) ListDeploymentGroups(ctx workflow.Context, input *coded
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) *CodedeployListDeploymentGroupsResult {
+func (a *CodeDeployStub) ListDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) *CodedeployListDeploymentGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListDeploymentGroups", input)
-	return &CodedeployListDeploymentGroupsResult{Result: future}
+	return &CodedeployListDeploymentGroupsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListDeploymentInstances(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) (*codedeploy.ListDeploymentInstancesOutput, error) {
@@ -977,9 +978,9 @@ func (a *CodeDeployStub) ListDeploymentInstances(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) *CodedeployListDeploymentInstancesResult {
+func (a *CodeDeployStub) ListDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) *CodedeployListDeploymentInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListDeploymentInstances", input)
-	return &CodedeployListDeploymentInstancesResult{Result: future}
+	return &CodedeployListDeploymentInstancesFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListDeploymentTargets(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) (*codedeploy.ListDeploymentTargetsOutput, error) {
@@ -988,9 +989,9 @@ func (a *CodeDeployStub) ListDeploymentTargets(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) *CodedeployListDeploymentTargetsResult {
+func (a *CodeDeployStub) ListDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) *CodedeployListDeploymentTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListDeploymentTargets", input)
-	return &CodedeployListDeploymentTargetsResult{Result: future}
+	return &CodedeployListDeploymentTargetsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListDeployments(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) (*codedeploy.ListDeploymentsOutput, error) {
@@ -999,9 +1000,9 @@ func (a *CodeDeployStub) ListDeployments(ctx workflow.Context, input *codedeploy
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListDeploymentsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) *CodedeployListDeploymentsResult {
+func (a *CodeDeployStub) ListDeploymentsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) *CodedeployListDeploymentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListDeployments", input)
-	return &CodedeployListDeploymentsResult{Result: future}
+	return &CodedeployListDeploymentsFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListGitHubAccountTokenNames(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) (*codedeploy.ListGitHubAccountTokenNamesOutput, error) {
@@ -1010,9 +1011,9 @@ func (a *CodeDeployStub) ListGitHubAccountTokenNames(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListGitHubAccountTokenNamesAsync(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) *CodedeployListGitHubAccountTokenNamesResult {
+func (a *CodeDeployStub) ListGitHubAccountTokenNamesAsync(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) *CodedeployListGitHubAccountTokenNamesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListGitHubAccountTokenNames", input)
-	return &CodedeployListGitHubAccountTokenNamesResult{Result: future}
+	return &CodedeployListGitHubAccountTokenNamesFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListOnPremisesInstances(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) (*codedeploy.ListOnPremisesInstancesOutput, error) {
@@ -1021,9 +1022,9 @@ func (a *CodeDeployStub) ListOnPremisesInstances(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) *CodedeployListOnPremisesInstancesResult {
+func (a *CodeDeployStub) ListOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) *CodedeployListOnPremisesInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListOnPremisesInstances", input)
-	return &CodedeployListOnPremisesInstancesResult{Result: future}
+	return &CodedeployListOnPremisesInstancesFuture{Future: future}
 }
 
 func (a *CodeDeployStub) ListTagsForResource(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) (*codedeploy.ListTagsForResourceOutput, error) {
@@ -1032,9 +1033,9 @@ func (a *CodeDeployStub) ListTagsForResource(ctx workflow.Context, input *codede
 	return &output, err
 }
 
-func (a *CodeDeployStub) ListTagsForResourceAsync(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) *CodedeployListTagsForResourceResult {
+func (a *CodeDeployStub) ListTagsForResourceAsync(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) *CodedeployListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.ListTagsForResource", input)
-	return &CodedeployListTagsForResourceResult{Result: future}
+	return &CodedeployListTagsForResourceFuture{Future: future}
 }
 
 func (a *CodeDeployStub) PutLifecycleEventHookExecutionStatus(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) (*codedeploy.PutLifecycleEventHookExecutionStatusOutput, error) {
@@ -1043,9 +1044,9 @@ func (a *CodeDeployStub) PutLifecycleEventHookExecutionStatus(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *CodeDeployStub) PutLifecycleEventHookExecutionStatusAsync(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) *CodedeployPutLifecycleEventHookExecutionStatusResult {
+func (a *CodeDeployStub) PutLifecycleEventHookExecutionStatusAsync(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) *CodedeployPutLifecycleEventHookExecutionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.PutLifecycleEventHookExecutionStatus", input)
-	return &CodedeployPutLifecycleEventHookExecutionStatusResult{Result: future}
+	return &CodedeployPutLifecycleEventHookExecutionStatusFuture{Future: future}
 }
 
 func (a *CodeDeployStub) RegisterApplicationRevision(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) (*codedeploy.RegisterApplicationRevisionOutput, error) {
@@ -1054,9 +1055,9 @@ func (a *CodeDeployStub) RegisterApplicationRevision(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CodeDeployStub) RegisterApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) *CodedeployRegisterApplicationRevisionResult {
+func (a *CodeDeployStub) RegisterApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) *CodedeployRegisterApplicationRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.RegisterApplicationRevision", input)
-	return &CodedeployRegisterApplicationRevisionResult{Result: future}
+	return &CodedeployRegisterApplicationRevisionFuture{Future: future}
 }
 
 func (a *CodeDeployStub) RegisterOnPremisesInstance(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) (*codedeploy.RegisterOnPremisesInstanceOutput, error) {
@@ -1065,9 +1066,9 @@ func (a *CodeDeployStub) RegisterOnPremisesInstance(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *CodeDeployStub) RegisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) *CodedeployRegisterOnPremisesInstanceResult {
+func (a *CodeDeployStub) RegisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) *CodedeployRegisterOnPremisesInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.RegisterOnPremisesInstance", input)
-	return &CodedeployRegisterOnPremisesInstanceResult{Result: future}
+	return &CodedeployRegisterOnPremisesInstanceFuture{Future: future}
 }
 
 func (a *CodeDeployStub) RemoveTagsFromOnPremisesInstances(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) (*codedeploy.RemoveTagsFromOnPremisesInstancesOutput, error) {
@@ -1076,9 +1077,9 @@ func (a *CodeDeployStub) RemoveTagsFromOnPremisesInstances(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *CodeDeployStub) RemoveTagsFromOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) *CodedeployRemoveTagsFromOnPremisesInstancesResult {
+func (a *CodeDeployStub) RemoveTagsFromOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) *CodedeployRemoveTagsFromOnPremisesInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.RemoveTagsFromOnPremisesInstances", input)
-	return &CodedeployRemoveTagsFromOnPremisesInstancesResult{Result: future}
+	return &CodedeployRemoveTagsFromOnPremisesInstancesFuture{Future: future}
 }
 
 func (a *CodeDeployStub) SkipWaitTimeForInstanceTermination(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) (*codedeploy.SkipWaitTimeForInstanceTerminationOutput, error) {
@@ -1087,9 +1088,9 @@ func (a *CodeDeployStub) SkipWaitTimeForInstanceTermination(ctx workflow.Context
 	return &output, err
 }
 
-func (a *CodeDeployStub) SkipWaitTimeForInstanceTerminationAsync(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) *CodedeploySkipWaitTimeForInstanceTerminationResult {
+func (a *CodeDeployStub) SkipWaitTimeForInstanceTerminationAsync(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) *CodedeploySkipWaitTimeForInstanceTerminationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.SkipWaitTimeForInstanceTermination", input)
-	return &CodedeploySkipWaitTimeForInstanceTerminationResult{Result: future}
+	return &CodedeploySkipWaitTimeForInstanceTerminationFuture{Future: future}
 }
 
 func (a *CodeDeployStub) StopDeployment(ctx workflow.Context, input *codedeploy.StopDeploymentInput) (*codedeploy.StopDeploymentOutput, error) {
@@ -1098,9 +1099,9 @@ func (a *CodeDeployStub) StopDeployment(ctx workflow.Context, input *codedeploy.
 	return &output, err
 }
 
-func (a *CodeDeployStub) StopDeploymentAsync(ctx workflow.Context, input *codedeploy.StopDeploymentInput) *CodedeployStopDeploymentResult {
+func (a *CodeDeployStub) StopDeploymentAsync(ctx workflow.Context, input *codedeploy.StopDeploymentInput) *CodedeployStopDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.StopDeployment", input)
-	return &CodedeployStopDeploymentResult{Result: future}
+	return &CodedeployStopDeploymentFuture{Future: future}
 }
 
 func (a *CodeDeployStub) TagResource(ctx workflow.Context, input *codedeploy.TagResourceInput) (*codedeploy.TagResourceOutput, error) {
@@ -1109,9 +1110,9 @@ func (a *CodeDeployStub) TagResource(ctx workflow.Context, input *codedeploy.Tag
 	return &output, err
 }
 
-func (a *CodeDeployStub) TagResourceAsync(ctx workflow.Context, input *codedeploy.TagResourceInput) *CodedeployTagResourceResult {
+func (a *CodeDeployStub) TagResourceAsync(ctx workflow.Context, input *codedeploy.TagResourceInput) *CodedeployTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.TagResource", input)
-	return &CodedeployTagResourceResult{Result: future}
+	return &CodedeployTagResourceFuture{Future: future}
 }
 
 func (a *CodeDeployStub) UntagResource(ctx workflow.Context, input *codedeploy.UntagResourceInput) (*codedeploy.UntagResourceOutput, error) {
@@ -1120,9 +1121,9 @@ func (a *CodeDeployStub) UntagResource(ctx workflow.Context, input *codedeploy.U
 	return &output, err
 }
 
-func (a *CodeDeployStub) UntagResourceAsync(ctx workflow.Context, input *codedeploy.UntagResourceInput) *CodedeployUntagResourceResult {
+func (a *CodeDeployStub) UntagResourceAsync(ctx workflow.Context, input *codedeploy.UntagResourceInput) *CodedeployUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.UntagResource", input)
-	return &CodedeployUntagResourceResult{Result: future}
+	return &CodedeployUntagResourceFuture{Future: future}
 }
 
 func (a *CodeDeployStub) UpdateApplication(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) (*codedeploy.UpdateApplicationOutput, error) {
@@ -1131,9 +1132,9 @@ func (a *CodeDeployStub) UpdateApplication(ctx workflow.Context, input *codedepl
 	return &output, err
 }
 
-func (a *CodeDeployStub) UpdateApplicationAsync(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) *CodedeployUpdateApplicationResult {
+func (a *CodeDeployStub) UpdateApplicationAsync(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) *CodedeployUpdateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.UpdateApplication", input)
-	return &CodedeployUpdateApplicationResult{Result: future}
+	return &CodedeployUpdateApplicationFuture{Future: future}
 }
 
 func (a *CodeDeployStub) UpdateDeploymentGroup(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) (*codedeploy.UpdateDeploymentGroupOutput, error) {
@@ -1142,9 +1143,9 @@ func (a *CodeDeployStub) UpdateDeploymentGroup(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeDeployStub) UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupResult {
+func (a *CodeDeployStub) UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codedeploy.UpdateDeploymentGroup", input)
-	return &CodedeployUpdateDeploymentGroupResult{Result: future}
+	return &CodedeployUpdateDeploymentGroupFuture{Future: future}
 }
 
 func (a *CodeDeployStub) WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error {

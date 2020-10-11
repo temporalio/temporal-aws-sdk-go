@@ -11,7 +11,7 @@ import (
 
 type MobileAnalyticsClient interface {
 	PutEvents(ctx workflow.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error)
-	PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsResult
+	PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsFuture
 }
 
 type MobileAnalyticsStub struct{}
@@ -20,13 +20,13 @@ func NewMobileAnalyticsStub() MobileAnalyticsClient {
 	return &MobileAnalyticsStub{}
 }
 
-type MobileanalyticsPutEventsResult struct {
-	Result workflow.Future
+type MobileanalyticsPutEventsFuture struct {
+	Future workflow.Future
 }
 
-func (r *MobileanalyticsPutEventsResult) Get(ctx workflow.Context) (*mobileanalytics.PutEventsOutput, error) {
+func (r *MobileanalyticsPutEventsFuture) Get(ctx workflow.Context) (*mobileanalytics.PutEventsOutput, error) {
 	var output mobileanalytics.PutEventsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -36,7 +36,7 @@ func (a *MobileAnalyticsStub) PutEvents(ctx workflow.Context, input *mobileanaly
 	return &output, err
 }
 
-func (a *MobileAnalyticsStub) PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsResult {
+func (a *MobileAnalyticsStub) PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mobileanalytics.PutEvents", input)
-	return &MobileanalyticsPutEventsResult{Result: future}
+	return &MobileanalyticsPutEventsFuture{Future: future}
 }

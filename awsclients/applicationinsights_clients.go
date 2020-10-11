@@ -11,85 +11,85 @@ import (
 
 type ApplicationInsightsClient interface {
 	CreateApplication(ctx workflow.Context, input *applicationinsights.CreateApplicationInput) (*applicationinsights.CreateApplicationOutput, error)
-	CreateApplicationAsync(ctx workflow.Context, input *applicationinsights.CreateApplicationInput) *ApplicationinsightsCreateApplicationResult
+	CreateApplicationAsync(ctx workflow.Context, input *applicationinsights.CreateApplicationInput) *ApplicationinsightsCreateApplicationFuture
 
 	CreateComponent(ctx workflow.Context, input *applicationinsights.CreateComponentInput) (*applicationinsights.CreateComponentOutput, error)
-	CreateComponentAsync(ctx workflow.Context, input *applicationinsights.CreateComponentInput) *ApplicationinsightsCreateComponentResult
+	CreateComponentAsync(ctx workflow.Context, input *applicationinsights.CreateComponentInput) *ApplicationinsightsCreateComponentFuture
 
 	CreateLogPattern(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) (*applicationinsights.CreateLogPatternOutput, error)
-	CreateLogPatternAsync(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) *ApplicationinsightsCreateLogPatternResult
+	CreateLogPatternAsync(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) *ApplicationinsightsCreateLogPatternFuture
 
 	DeleteApplication(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) (*applicationinsights.DeleteApplicationOutput, error)
-	DeleteApplicationAsync(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) *ApplicationinsightsDeleteApplicationResult
+	DeleteApplicationAsync(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) *ApplicationinsightsDeleteApplicationFuture
 
 	DeleteComponent(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) (*applicationinsights.DeleteComponentOutput, error)
-	DeleteComponentAsync(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) *ApplicationinsightsDeleteComponentResult
+	DeleteComponentAsync(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) *ApplicationinsightsDeleteComponentFuture
 
 	DeleteLogPattern(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) (*applicationinsights.DeleteLogPatternOutput, error)
-	DeleteLogPatternAsync(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) *ApplicationinsightsDeleteLogPatternResult
+	DeleteLogPatternAsync(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) *ApplicationinsightsDeleteLogPatternFuture
 
 	DescribeApplication(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) (*applicationinsights.DescribeApplicationOutput, error)
-	DescribeApplicationAsync(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) *ApplicationinsightsDescribeApplicationResult
+	DescribeApplicationAsync(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) *ApplicationinsightsDescribeApplicationFuture
 
 	DescribeComponent(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) (*applicationinsights.DescribeComponentOutput, error)
-	DescribeComponentAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) *ApplicationinsightsDescribeComponentResult
+	DescribeComponentAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) *ApplicationinsightsDescribeComponentFuture
 
 	DescribeComponentConfiguration(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) (*applicationinsights.DescribeComponentConfigurationOutput, error)
-	DescribeComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) *ApplicationinsightsDescribeComponentConfigurationResult
+	DescribeComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) *ApplicationinsightsDescribeComponentConfigurationFuture
 
 	DescribeComponentConfigurationRecommendation(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) (*applicationinsights.DescribeComponentConfigurationRecommendationOutput, error)
-	DescribeComponentConfigurationRecommendationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) *ApplicationinsightsDescribeComponentConfigurationRecommendationResult
+	DescribeComponentConfigurationRecommendationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) *ApplicationinsightsDescribeComponentConfigurationRecommendationFuture
 
 	DescribeLogPattern(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) (*applicationinsights.DescribeLogPatternOutput, error)
-	DescribeLogPatternAsync(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) *ApplicationinsightsDescribeLogPatternResult
+	DescribeLogPatternAsync(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) *ApplicationinsightsDescribeLogPatternFuture
 
 	DescribeObservation(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) (*applicationinsights.DescribeObservationOutput, error)
-	DescribeObservationAsync(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) *ApplicationinsightsDescribeObservationResult
+	DescribeObservationAsync(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) *ApplicationinsightsDescribeObservationFuture
 
 	DescribeProblem(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) (*applicationinsights.DescribeProblemOutput, error)
-	DescribeProblemAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) *ApplicationinsightsDescribeProblemResult
+	DescribeProblemAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) *ApplicationinsightsDescribeProblemFuture
 
 	DescribeProblemObservations(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) (*applicationinsights.DescribeProblemObservationsOutput, error)
-	DescribeProblemObservationsAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) *ApplicationinsightsDescribeProblemObservationsResult
+	DescribeProblemObservationsAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) *ApplicationinsightsDescribeProblemObservationsFuture
 
 	ListApplications(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) (*applicationinsights.ListApplicationsOutput, error)
-	ListApplicationsAsync(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) *ApplicationinsightsListApplicationsResult
+	ListApplicationsAsync(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) *ApplicationinsightsListApplicationsFuture
 
 	ListComponents(ctx workflow.Context, input *applicationinsights.ListComponentsInput) (*applicationinsights.ListComponentsOutput, error)
-	ListComponentsAsync(ctx workflow.Context, input *applicationinsights.ListComponentsInput) *ApplicationinsightsListComponentsResult
+	ListComponentsAsync(ctx workflow.Context, input *applicationinsights.ListComponentsInput) *ApplicationinsightsListComponentsFuture
 
 	ListConfigurationHistory(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) (*applicationinsights.ListConfigurationHistoryOutput, error)
-	ListConfigurationHistoryAsync(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) *ApplicationinsightsListConfigurationHistoryResult
+	ListConfigurationHistoryAsync(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) *ApplicationinsightsListConfigurationHistoryFuture
 
 	ListLogPatternSets(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) (*applicationinsights.ListLogPatternSetsOutput, error)
-	ListLogPatternSetsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) *ApplicationinsightsListLogPatternSetsResult
+	ListLogPatternSetsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) *ApplicationinsightsListLogPatternSetsFuture
 
 	ListLogPatterns(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) (*applicationinsights.ListLogPatternsOutput, error)
-	ListLogPatternsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) *ApplicationinsightsListLogPatternsResult
+	ListLogPatternsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) *ApplicationinsightsListLogPatternsFuture
 
 	ListProblems(ctx workflow.Context, input *applicationinsights.ListProblemsInput) (*applicationinsights.ListProblemsOutput, error)
-	ListProblemsAsync(ctx workflow.Context, input *applicationinsights.ListProblemsInput) *ApplicationinsightsListProblemsResult
+	ListProblemsAsync(ctx workflow.Context, input *applicationinsights.ListProblemsInput) *ApplicationinsightsListProblemsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) (*applicationinsights.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) *ApplicationinsightsListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) *ApplicationinsightsListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *applicationinsights.TagResourceInput) (*applicationinsights.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *applicationinsights.TagResourceInput) *ApplicationinsightsTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *applicationinsights.TagResourceInput) *ApplicationinsightsTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *applicationinsights.UntagResourceInput) (*applicationinsights.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *applicationinsights.UntagResourceInput) *ApplicationinsightsUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *applicationinsights.UntagResourceInput) *ApplicationinsightsUntagResourceFuture
 
 	UpdateApplication(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) (*applicationinsights.UpdateApplicationOutput, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) *ApplicationinsightsUpdateApplicationResult
+	UpdateApplicationAsync(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) *ApplicationinsightsUpdateApplicationFuture
 
 	UpdateComponent(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) (*applicationinsights.UpdateComponentOutput, error)
-	UpdateComponentAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) *ApplicationinsightsUpdateComponentResult
+	UpdateComponentAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) *ApplicationinsightsUpdateComponentFuture
 
 	UpdateComponentConfiguration(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) (*applicationinsights.UpdateComponentConfigurationOutput, error)
-	UpdateComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) *ApplicationinsightsUpdateComponentConfigurationResult
+	UpdateComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) *ApplicationinsightsUpdateComponentConfigurationFuture
 
 	UpdateLogPattern(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) (*applicationinsights.UpdateLogPatternOutput, error)
-	UpdateLogPatternAsync(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) *ApplicationinsightsUpdateLogPatternResult
+	UpdateLogPatternAsync(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) *ApplicationinsightsUpdateLogPatternFuture
 }
 
 type ApplicationInsightsStub struct{}
@@ -98,273 +98,273 @@ func NewApplicationInsightsStub() ApplicationInsightsClient {
 	return &ApplicationInsightsStub{}
 }
 
-type ApplicationinsightsCreateApplicationResult struct {
-	Result workflow.Future
+type ApplicationinsightsCreateApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsCreateApplicationResult) Get(ctx workflow.Context) (*applicationinsights.CreateApplicationOutput, error) {
+func (r *ApplicationinsightsCreateApplicationFuture) Get(ctx workflow.Context) (*applicationinsights.CreateApplicationOutput, error) {
 	var output applicationinsights.CreateApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsCreateComponentResult struct {
-	Result workflow.Future
+type ApplicationinsightsCreateComponentFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsCreateComponentResult) Get(ctx workflow.Context) (*applicationinsights.CreateComponentOutput, error) {
+func (r *ApplicationinsightsCreateComponentFuture) Get(ctx workflow.Context) (*applicationinsights.CreateComponentOutput, error) {
 	var output applicationinsights.CreateComponentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsCreateLogPatternResult struct {
-	Result workflow.Future
+type ApplicationinsightsCreateLogPatternFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsCreateLogPatternResult) Get(ctx workflow.Context) (*applicationinsights.CreateLogPatternOutput, error) {
+func (r *ApplicationinsightsCreateLogPatternFuture) Get(ctx workflow.Context) (*applicationinsights.CreateLogPatternOutput, error) {
 	var output applicationinsights.CreateLogPatternOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDeleteApplicationResult struct {
-	Result workflow.Future
+type ApplicationinsightsDeleteApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDeleteApplicationResult) Get(ctx workflow.Context) (*applicationinsights.DeleteApplicationOutput, error) {
+func (r *ApplicationinsightsDeleteApplicationFuture) Get(ctx workflow.Context) (*applicationinsights.DeleteApplicationOutput, error) {
 	var output applicationinsights.DeleteApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDeleteComponentResult struct {
-	Result workflow.Future
+type ApplicationinsightsDeleteComponentFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDeleteComponentResult) Get(ctx workflow.Context) (*applicationinsights.DeleteComponentOutput, error) {
+func (r *ApplicationinsightsDeleteComponentFuture) Get(ctx workflow.Context) (*applicationinsights.DeleteComponentOutput, error) {
 	var output applicationinsights.DeleteComponentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDeleteLogPatternResult struct {
-	Result workflow.Future
+type ApplicationinsightsDeleteLogPatternFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDeleteLogPatternResult) Get(ctx workflow.Context) (*applicationinsights.DeleteLogPatternOutput, error) {
+func (r *ApplicationinsightsDeleteLogPatternFuture) Get(ctx workflow.Context) (*applicationinsights.DeleteLogPatternOutput, error) {
 	var output applicationinsights.DeleteLogPatternOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDescribeApplicationResult struct {
-	Result workflow.Future
+type ApplicationinsightsDescribeApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDescribeApplicationResult) Get(ctx workflow.Context) (*applicationinsights.DescribeApplicationOutput, error) {
+func (r *ApplicationinsightsDescribeApplicationFuture) Get(ctx workflow.Context) (*applicationinsights.DescribeApplicationOutput, error) {
 	var output applicationinsights.DescribeApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDescribeComponentResult struct {
-	Result workflow.Future
+type ApplicationinsightsDescribeComponentFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDescribeComponentResult) Get(ctx workflow.Context) (*applicationinsights.DescribeComponentOutput, error) {
+func (r *ApplicationinsightsDescribeComponentFuture) Get(ctx workflow.Context) (*applicationinsights.DescribeComponentOutput, error) {
 	var output applicationinsights.DescribeComponentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDescribeComponentConfigurationResult struct {
-	Result workflow.Future
+type ApplicationinsightsDescribeComponentConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDescribeComponentConfigurationResult) Get(ctx workflow.Context) (*applicationinsights.DescribeComponentConfigurationOutput, error) {
+func (r *ApplicationinsightsDescribeComponentConfigurationFuture) Get(ctx workflow.Context) (*applicationinsights.DescribeComponentConfigurationOutput, error) {
 	var output applicationinsights.DescribeComponentConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDescribeComponentConfigurationRecommendationResult struct {
-	Result workflow.Future
+type ApplicationinsightsDescribeComponentConfigurationRecommendationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDescribeComponentConfigurationRecommendationResult) Get(ctx workflow.Context) (*applicationinsights.DescribeComponentConfigurationRecommendationOutput, error) {
+func (r *ApplicationinsightsDescribeComponentConfigurationRecommendationFuture) Get(ctx workflow.Context) (*applicationinsights.DescribeComponentConfigurationRecommendationOutput, error) {
 	var output applicationinsights.DescribeComponentConfigurationRecommendationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDescribeLogPatternResult struct {
-	Result workflow.Future
+type ApplicationinsightsDescribeLogPatternFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDescribeLogPatternResult) Get(ctx workflow.Context) (*applicationinsights.DescribeLogPatternOutput, error) {
+func (r *ApplicationinsightsDescribeLogPatternFuture) Get(ctx workflow.Context) (*applicationinsights.DescribeLogPatternOutput, error) {
 	var output applicationinsights.DescribeLogPatternOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDescribeObservationResult struct {
-	Result workflow.Future
+type ApplicationinsightsDescribeObservationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDescribeObservationResult) Get(ctx workflow.Context) (*applicationinsights.DescribeObservationOutput, error) {
+func (r *ApplicationinsightsDescribeObservationFuture) Get(ctx workflow.Context) (*applicationinsights.DescribeObservationOutput, error) {
 	var output applicationinsights.DescribeObservationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDescribeProblemResult struct {
-	Result workflow.Future
+type ApplicationinsightsDescribeProblemFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDescribeProblemResult) Get(ctx workflow.Context) (*applicationinsights.DescribeProblemOutput, error) {
+func (r *ApplicationinsightsDescribeProblemFuture) Get(ctx workflow.Context) (*applicationinsights.DescribeProblemOutput, error) {
 	var output applicationinsights.DescribeProblemOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsDescribeProblemObservationsResult struct {
-	Result workflow.Future
+type ApplicationinsightsDescribeProblemObservationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsDescribeProblemObservationsResult) Get(ctx workflow.Context) (*applicationinsights.DescribeProblemObservationsOutput, error) {
+func (r *ApplicationinsightsDescribeProblemObservationsFuture) Get(ctx workflow.Context) (*applicationinsights.DescribeProblemObservationsOutput, error) {
 	var output applicationinsights.DescribeProblemObservationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsListApplicationsResult struct {
-	Result workflow.Future
+type ApplicationinsightsListApplicationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsListApplicationsResult) Get(ctx workflow.Context) (*applicationinsights.ListApplicationsOutput, error) {
+func (r *ApplicationinsightsListApplicationsFuture) Get(ctx workflow.Context) (*applicationinsights.ListApplicationsOutput, error) {
 	var output applicationinsights.ListApplicationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsListComponentsResult struct {
-	Result workflow.Future
+type ApplicationinsightsListComponentsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsListComponentsResult) Get(ctx workflow.Context) (*applicationinsights.ListComponentsOutput, error) {
+func (r *ApplicationinsightsListComponentsFuture) Get(ctx workflow.Context) (*applicationinsights.ListComponentsOutput, error) {
 	var output applicationinsights.ListComponentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsListConfigurationHistoryResult struct {
-	Result workflow.Future
+type ApplicationinsightsListConfigurationHistoryFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsListConfigurationHistoryResult) Get(ctx workflow.Context) (*applicationinsights.ListConfigurationHistoryOutput, error) {
+func (r *ApplicationinsightsListConfigurationHistoryFuture) Get(ctx workflow.Context) (*applicationinsights.ListConfigurationHistoryOutput, error) {
 	var output applicationinsights.ListConfigurationHistoryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsListLogPatternSetsResult struct {
-	Result workflow.Future
+type ApplicationinsightsListLogPatternSetsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsListLogPatternSetsResult) Get(ctx workflow.Context) (*applicationinsights.ListLogPatternSetsOutput, error) {
+func (r *ApplicationinsightsListLogPatternSetsFuture) Get(ctx workflow.Context) (*applicationinsights.ListLogPatternSetsOutput, error) {
 	var output applicationinsights.ListLogPatternSetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsListLogPatternsResult struct {
-	Result workflow.Future
+type ApplicationinsightsListLogPatternsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsListLogPatternsResult) Get(ctx workflow.Context) (*applicationinsights.ListLogPatternsOutput, error) {
+func (r *ApplicationinsightsListLogPatternsFuture) Get(ctx workflow.Context) (*applicationinsights.ListLogPatternsOutput, error) {
 	var output applicationinsights.ListLogPatternsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsListProblemsResult struct {
-	Result workflow.Future
+type ApplicationinsightsListProblemsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsListProblemsResult) Get(ctx workflow.Context) (*applicationinsights.ListProblemsOutput, error) {
+func (r *ApplicationinsightsListProblemsFuture) Get(ctx workflow.Context) (*applicationinsights.ListProblemsOutput, error) {
 	var output applicationinsights.ListProblemsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsListTagsForResourceResult struct {
-	Result workflow.Future
+type ApplicationinsightsListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsListTagsForResourceResult) Get(ctx workflow.Context) (*applicationinsights.ListTagsForResourceOutput, error) {
+func (r *ApplicationinsightsListTagsForResourceFuture) Get(ctx workflow.Context) (*applicationinsights.ListTagsForResourceOutput, error) {
 	var output applicationinsights.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsTagResourceResult struct {
-	Result workflow.Future
+type ApplicationinsightsTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsTagResourceResult) Get(ctx workflow.Context) (*applicationinsights.TagResourceOutput, error) {
+func (r *ApplicationinsightsTagResourceFuture) Get(ctx workflow.Context) (*applicationinsights.TagResourceOutput, error) {
 	var output applicationinsights.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsUntagResourceResult struct {
-	Result workflow.Future
+type ApplicationinsightsUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsUntagResourceResult) Get(ctx workflow.Context) (*applicationinsights.UntagResourceOutput, error) {
+func (r *ApplicationinsightsUntagResourceFuture) Get(ctx workflow.Context) (*applicationinsights.UntagResourceOutput, error) {
 	var output applicationinsights.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsUpdateApplicationResult struct {
-	Result workflow.Future
+type ApplicationinsightsUpdateApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsUpdateApplicationResult) Get(ctx workflow.Context) (*applicationinsights.UpdateApplicationOutput, error) {
+func (r *ApplicationinsightsUpdateApplicationFuture) Get(ctx workflow.Context) (*applicationinsights.UpdateApplicationOutput, error) {
 	var output applicationinsights.UpdateApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsUpdateComponentResult struct {
-	Result workflow.Future
+type ApplicationinsightsUpdateComponentFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsUpdateComponentResult) Get(ctx workflow.Context) (*applicationinsights.UpdateComponentOutput, error) {
+func (r *ApplicationinsightsUpdateComponentFuture) Get(ctx workflow.Context) (*applicationinsights.UpdateComponentOutput, error) {
 	var output applicationinsights.UpdateComponentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsUpdateComponentConfigurationResult struct {
-	Result workflow.Future
+type ApplicationinsightsUpdateComponentConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsUpdateComponentConfigurationResult) Get(ctx workflow.Context) (*applicationinsights.UpdateComponentConfigurationOutput, error) {
+func (r *ApplicationinsightsUpdateComponentConfigurationFuture) Get(ctx workflow.Context) (*applicationinsights.UpdateComponentConfigurationOutput, error) {
 	var output applicationinsights.UpdateComponentConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationinsightsUpdateLogPatternResult struct {
-	Result workflow.Future
+type ApplicationinsightsUpdateLogPatternFuture struct {
+	Future workflow.Future
 }
 
-func (r *ApplicationinsightsUpdateLogPatternResult) Get(ctx workflow.Context) (*applicationinsights.UpdateLogPatternOutput, error) {
+func (r *ApplicationinsightsUpdateLogPatternFuture) Get(ctx workflow.Context) (*applicationinsights.UpdateLogPatternOutput, error) {
 	var output applicationinsights.UpdateLogPatternOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -374,9 +374,9 @@ func (a *ApplicationInsightsStub) CreateApplication(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) CreateApplicationAsync(ctx workflow.Context, input *applicationinsights.CreateApplicationInput) *ApplicationinsightsCreateApplicationResult {
+func (a *ApplicationInsightsStub) CreateApplicationAsync(ctx workflow.Context, input *applicationinsights.CreateApplicationInput) *ApplicationinsightsCreateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.CreateApplication", input)
-	return &ApplicationinsightsCreateApplicationResult{Result: future}
+	return &ApplicationinsightsCreateApplicationFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) CreateComponent(ctx workflow.Context, input *applicationinsights.CreateComponentInput) (*applicationinsights.CreateComponentOutput, error) {
@@ -385,9 +385,9 @@ func (a *ApplicationInsightsStub) CreateComponent(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) CreateComponentAsync(ctx workflow.Context, input *applicationinsights.CreateComponentInput) *ApplicationinsightsCreateComponentResult {
+func (a *ApplicationInsightsStub) CreateComponentAsync(ctx workflow.Context, input *applicationinsights.CreateComponentInput) *ApplicationinsightsCreateComponentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.CreateComponent", input)
-	return &ApplicationinsightsCreateComponentResult{Result: future}
+	return &ApplicationinsightsCreateComponentFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) CreateLogPattern(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) (*applicationinsights.CreateLogPatternOutput, error) {
@@ -396,9 +396,9 @@ func (a *ApplicationInsightsStub) CreateLogPattern(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) CreateLogPatternAsync(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) *ApplicationinsightsCreateLogPatternResult {
+func (a *ApplicationInsightsStub) CreateLogPatternAsync(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) *ApplicationinsightsCreateLogPatternFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.CreateLogPattern", input)
-	return &ApplicationinsightsCreateLogPatternResult{Result: future}
+	return &ApplicationinsightsCreateLogPatternFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DeleteApplication(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) (*applicationinsights.DeleteApplicationOutput, error) {
@@ -407,9 +407,9 @@ func (a *ApplicationInsightsStub) DeleteApplication(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DeleteApplicationAsync(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) *ApplicationinsightsDeleteApplicationResult {
+func (a *ApplicationInsightsStub) DeleteApplicationAsync(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) *ApplicationinsightsDeleteApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DeleteApplication", input)
-	return &ApplicationinsightsDeleteApplicationResult{Result: future}
+	return &ApplicationinsightsDeleteApplicationFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DeleteComponent(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) (*applicationinsights.DeleteComponentOutput, error) {
@@ -418,9 +418,9 @@ func (a *ApplicationInsightsStub) DeleteComponent(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DeleteComponentAsync(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) *ApplicationinsightsDeleteComponentResult {
+func (a *ApplicationInsightsStub) DeleteComponentAsync(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) *ApplicationinsightsDeleteComponentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DeleteComponent", input)
-	return &ApplicationinsightsDeleteComponentResult{Result: future}
+	return &ApplicationinsightsDeleteComponentFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DeleteLogPattern(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) (*applicationinsights.DeleteLogPatternOutput, error) {
@@ -429,9 +429,9 @@ func (a *ApplicationInsightsStub) DeleteLogPattern(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DeleteLogPatternAsync(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) *ApplicationinsightsDeleteLogPatternResult {
+func (a *ApplicationInsightsStub) DeleteLogPatternAsync(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) *ApplicationinsightsDeleteLogPatternFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DeleteLogPattern", input)
-	return &ApplicationinsightsDeleteLogPatternResult{Result: future}
+	return &ApplicationinsightsDeleteLogPatternFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DescribeApplication(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) (*applicationinsights.DescribeApplicationOutput, error) {
@@ -440,9 +440,9 @@ func (a *ApplicationInsightsStub) DescribeApplication(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DescribeApplicationAsync(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) *ApplicationinsightsDescribeApplicationResult {
+func (a *ApplicationInsightsStub) DescribeApplicationAsync(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) *ApplicationinsightsDescribeApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DescribeApplication", input)
-	return &ApplicationinsightsDescribeApplicationResult{Result: future}
+	return &ApplicationinsightsDescribeApplicationFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DescribeComponent(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) (*applicationinsights.DescribeComponentOutput, error) {
@@ -451,9 +451,9 @@ func (a *ApplicationInsightsStub) DescribeComponent(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DescribeComponentAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) *ApplicationinsightsDescribeComponentResult {
+func (a *ApplicationInsightsStub) DescribeComponentAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) *ApplicationinsightsDescribeComponentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DescribeComponent", input)
-	return &ApplicationinsightsDescribeComponentResult{Result: future}
+	return &ApplicationinsightsDescribeComponentFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DescribeComponentConfiguration(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) (*applicationinsights.DescribeComponentConfigurationOutput, error) {
@@ -462,9 +462,9 @@ func (a *ApplicationInsightsStub) DescribeComponentConfiguration(ctx workflow.Co
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DescribeComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) *ApplicationinsightsDescribeComponentConfigurationResult {
+func (a *ApplicationInsightsStub) DescribeComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) *ApplicationinsightsDescribeComponentConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DescribeComponentConfiguration", input)
-	return &ApplicationinsightsDescribeComponentConfigurationResult{Result: future}
+	return &ApplicationinsightsDescribeComponentConfigurationFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DescribeComponentConfigurationRecommendation(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) (*applicationinsights.DescribeComponentConfigurationRecommendationOutput, error) {
@@ -473,9 +473,9 @@ func (a *ApplicationInsightsStub) DescribeComponentConfigurationRecommendation(c
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DescribeComponentConfigurationRecommendationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) *ApplicationinsightsDescribeComponentConfigurationRecommendationResult {
+func (a *ApplicationInsightsStub) DescribeComponentConfigurationRecommendationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) *ApplicationinsightsDescribeComponentConfigurationRecommendationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DescribeComponentConfigurationRecommendation", input)
-	return &ApplicationinsightsDescribeComponentConfigurationRecommendationResult{Result: future}
+	return &ApplicationinsightsDescribeComponentConfigurationRecommendationFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DescribeLogPattern(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) (*applicationinsights.DescribeLogPatternOutput, error) {
@@ -484,9 +484,9 @@ func (a *ApplicationInsightsStub) DescribeLogPattern(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DescribeLogPatternAsync(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) *ApplicationinsightsDescribeLogPatternResult {
+func (a *ApplicationInsightsStub) DescribeLogPatternAsync(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) *ApplicationinsightsDescribeLogPatternFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DescribeLogPattern", input)
-	return &ApplicationinsightsDescribeLogPatternResult{Result: future}
+	return &ApplicationinsightsDescribeLogPatternFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DescribeObservation(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) (*applicationinsights.DescribeObservationOutput, error) {
@@ -495,9 +495,9 @@ func (a *ApplicationInsightsStub) DescribeObservation(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DescribeObservationAsync(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) *ApplicationinsightsDescribeObservationResult {
+func (a *ApplicationInsightsStub) DescribeObservationAsync(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) *ApplicationinsightsDescribeObservationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DescribeObservation", input)
-	return &ApplicationinsightsDescribeObservationResult{Result: future}
+	return &ApplicationinsightsDescribeObservationFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DescribeProblem(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) (*applicationinsights.DescribeProblemOutput, error) {
@@ -506,9 +506,9 @@ func (a *ApplicationInsightsStub) DescribeProblem(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DescribeProblemAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) *ApplicationinsightsDescribeProblemResult {
+func (a *ApplicationInsightsStub) DescribeProblemAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) *ApplicationinsightsDescribeProblemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DescribeProblem", input)
-	return &ApplicationinsightsDescribeProblemResult{Result: future}
+	return &ApplicationinsightsDescribeProblemFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) DescribeProblemObservations(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) (*applicationinsights.DescribeProblemObservationsOutput, error) {
@@ -517,9 +517,9 @@ func (a *ApplicationInsightsStub) DescribeProblemObservations(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) DescribeProblemObservationsAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) *ApplicationinsightsDescribeProblemObservationsResult {
+func (a *ApplicationInsightsStub) DescribeProblemObservationsAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) *ApplicationinsightsDescribeProblemObservationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.DescribeProblemObservations", input)
-	return &ApplicationinsightsDescribeProblemObservationsResult{Result: future}
+	return &ApplicationinsightsDescribeProblemObservationsFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) ListApplications(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) (*applicationinsights.ListApplicationsOutput, error) {
@@ -528,9 +528,9 @@ func (a *ApplicationInsightsStub) ListApplications(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) ListApplicationsAsync(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) *ApplicationinsightsListApplicationsResult {
+func (a *ApplicationInsightsStub) ListApplicationsAsync(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) *ApplicationinsightsListApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.ListApplications", input)
-	return &ApplicationinsightsListApplicationsResult{Result: future}
+	return &ApplicationinsightsListApplicationsFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) ListComponents(ctx workflow.Context, input *applicationinsights.ListComponentsInput) (*applicationinsights.ListComponentsOutput, error) {
@@ -539,9 +539,9 @@ func (a *ApplicationInsightsStub) ListComponents(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) ListComponentsAsync(ctx workflow.Context, input *applicationinsights.ListComponentsInput) *ApplicationinsightsListComponentsResult {
+func (a *ApplicationInsightsStub) ListComponentsAsync(ctx workflow.Context, input *applicationinsights.ListComponentsInput) *ApplicationinsightsListComponentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.ListComponents", input)
-	return &ApplicationinsightsListComponentsResult{Result: future}
+	return &ApplicationinsightsListComponentsFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) ListConfigurationHistory(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) (*applicationinsights.ListConfigurationHistoryOutput, error) {
@@ -550,9 +550,9 @@ func (a *ApplicationInsightsStub) ListConfigurationHistory(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) ListConfigurationHistoryAsync(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) *ApplicationinsightsListConfigurationHistoryResult {
+func (a *ApplicationInsightsStub) ListConfigurationHistoryAsync(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) *ApplicationinsightsListConfigurationHistoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.ListConfigurationHistory", input)
-	return &ApplicationinsightsListConfigurationHistoryResult{Result: future}
+	return &ApplicationinsightsListConfigurationHistoryFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) ListLogPatternSets(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) (*applicationinsights.ListLogPatternSetsOutput, error) {
@@ -561,9 +561,9 @@ func (a *ApplicationInsightsStub) ListLogPatternSets(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) ListLogPatternSetsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) *ApplicationinsightsListLogPatternSetsResult {
+func (a *ApplicationInsightsStub) ListLogPatternSetsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) *ApplicationinsightsListLogPatternSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.ListLogPatternSets", input)
-	return &ApplicationinsightsListLogPatternSetsResult{Result: future}
+	return &ApplicationinsightsListLogPatternSetsFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) ListLogPatterns(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) (*applicationinsights.ListLogPatternsOutput, error) {
@@ -572,9 +572,9 @@ func (a *ApplicationInsightsStub) ListLogPatterns(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) ListLogPatternsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) *ApplicationinsightsListLogPatternsResult {
+func (a *ApplicationInsightsStub) ListLogPatternsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) *ApplicationinsightsListLogPatternsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.ListLogPatterns", input)
-	return &ApplicationinsightsListLogPatternsResult{Result: future}
+	return &ApplicationinsightsListLogPatternsFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) ListProblems(ctx workflow.Context, input *applicationinsights.ListProblemsInput) (*applicationinsights.ListProblemsOutput, error) {
@@ -583,9 +583,9 @@ func (a *ApplicationInsightsStub) ListProblems(ctx workflow.Context, input *appl
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) ListProblemsAsync(ctx workflow.Context, input *applicationinsights.ListProblemsInput) *ApplicationinsightsListProblemsResult {
+func (a *ApplicationInsightsStub) ListProblemsAsync(ctx workflow.Context, input *applicationinsights.ListProblemsInput) *ApplicationinsightsListProblemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.ListProblems", input)
-	return &ApplicationinsightsListProblemsResult{Result: future}
+	return &ApplicationinsightsListProblemsFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) ListTagsForResource(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) (*applicationinsights.ListTagsForResourceOutput, error) {
@@ -594,9 +594,9 @@ func (a *ApplicationInsightsStub) ListTagsForResource(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) ListTagsForResourceAsync(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) *ApplicationinsightsListTagsForResourceResult {
+func (a *ApplicationInsightsStub) ListTagsForResourceAsync(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) *ApplicationinsightsListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.ListTagsForResource", input)
-	return &ApplicationinsightsListTagsForResourceResult{Result: future}
+	return &ApplicationinsightsListTagsForResourceFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) TagResource(ctx workflow.Context, input *applicationinsights.TagResourceInput) (*applicationinsights.TagResourceOutput, error) {
@@ -605,9 +605,9 @@ func (a *ApplicationInsightsStub) TagResource(ctx workflow.Context, input *appli
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) TagResourceAsync(ctx workflow.Context, input *applicationinsights.TagResourceInput) *ApplicationinsightsTagResourceResult {
+func (a *ApplicationInsightsStub) TagResourceAsync(ctx workflow.Context, input *applicationinsights.TagResourceInput) *ApplicationinsightsTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.TagResource", input)
-	return &ApplicationinsightsTagResourceResult{Result: future}
+	return &ApplicationinsightsTagResourceFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) UntagResource(ctx workflow.Context, input *applicationinsights.UntagResourceInput) (*applicationinsights.UntagResourceOutput, error) {
@@ -616,9 +616,9 @@ func (a *ApplicationInsightsStub) UntagResource(ctx workflow.Context, input *app
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) UntagResourceAsync(ctx workflow.Context, input *applicationinsights.UntagResourceInput) *ApplicationinsightsUntagResourceResult {
+func (a *ApplicationInsightsStub) UntagResourceAsync(ctx workflow.Context, input *applicationinsights.UntagResourceInput) *ApplicationinsightsUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.UntagResource", input)
-	return &ApplicationinsightsUntagResourceResult{Result: future}
+	return &ApplicationinsightsUntagResourceFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) UpdateApplication(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) (*applicationinsights.UpdateApplicationOutput, error) {
@@ -627,9 +627,9 @@ func (a *ApplicationInsightsStub) UpdateApplication(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) UpdateApplicationAsync(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) *ApplicationinsightsUpdateApplicationResult {
+func (a *ApplicationInsightsStub) UpdateApplicationAsync(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) *ApplicationinsightsUpdateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.UpdateApplication", input)
-	return &ApplicationinsightsUpdateApplicationResult{Result: future}
+	return &ApplicationinsightsUpdateApplicationFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) UpdateComponent(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) (*applicationinsights.UpdateComponentOutput, error) {
@@ -638,9 +638,9 @@ func (a *ApplicationInsightsStub) UpdateComponent(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) UpdateComponentAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) *ApplicationinsightsUpdateComponentResult {
+func (a *ApplicationInsightsStub) UpdateComponentAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) *ApplicationinsightsUpdateComponentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.UpdateComponent", input)
-	return &ApplicationinsightsUpdateComponentResult{Result: future}
+	return &ApplicationinsightsUpdateComponentFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) UpdateComponentConfiguration(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) (*applicationinsights.UpdateComponentConfigurationOutput, error) {
@@ -649,9 +649,9 @@ func (a *ApplicationInsightsStub) UpdateComponentConfiguration(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) UpdateComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) *ApplicationinsightsUpdateComponentConfigurationResult {
+func (a *ApplicationInsightsStub) UpdateComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) *ApplicationinsightsUpdateComponentConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.UpdateComponentConfiguration", input)
-	return &ApplicationinsightsUpdateComponentConfigurationResult{Result: future}
+	return &ApplicationinsightsUpdateComponentConfigurationFuture{Future: future}
 }
 
 func (a *ApplicationInsightsStub) UpdateLogPattern(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) (*applicationinsights.UpdateLogPatternOutput, error) {
@@ -660,7 +660,7 @@ func (a *ApplicationInsightsStub) UpdateLogPattern(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ApplicationInsightsStub) UpdateLogPatternAsync(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) *ApplicationinsightsUpdateLogPatternResult {
+func (a *ApplicationInsightsStub) UpdateLogPatternAsync(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) *ApplicationinsightsUpdateLogPatternFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationinsights.UpdateLogPattern", input)
-	return &ApplicationinsightsUpdateLogPatternResult{Result: future}
+	return &ApplicationinsightsUpdateLogPatternFuture{Future: future}
 }

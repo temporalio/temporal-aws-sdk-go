@@ -11,10 +11,10 @@ import (
 
 type HoneycodeClient interface {
 	GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error)
-	GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataResult
+	GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataFuture
 
 	InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error)
-	InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult
+	InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationFuture
 }
 
 type HoneycodeStub struct{}
@@ -23,23 +23,23 @@ func NewHoneycodeStub() HoneycodeClient {
 	return &HoneycodeStub{}
 }
 
-type HoneycodeGetScreenDataResult struct {
-	Result workflow.Future
+type HoneycodeGetScreenDataFuture struct {
+	Future workflow.Future
 }
 
-func (r *HoneycodeGetScreenDataResult) Get(ctx workflow.Context) (*honeycode.GetScreenDataOutput, error) {
+func (r *HoneycodeGetScreenDataFuture) Get(ctx workflow.Context) (*honeycode.GetScreenDataOutput, error) {
 	var output honeycode.GetScreenDataOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HoneycodeInvokeScreenAutomationResult struct {
-	Result workflow.Future
+type HoneycodeInvokeScreenAutomationFuture struct {
+	Future workflow.Future
 }
 
-func (r *HoneycodeInvokeScreenAutomationResult) Get(ctx workflow.Context) (*honeycode.InvokeScreenAutomationOutput, error) {
+func (r *HoneycodeInvokeScreenAutomationFuture) Get(ctx workflow.Context) (*honeycode.InvokeScreenAutomationOutput, error) {
 	var output honeycode.InvokeScreenAutomationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -49,9 +49,9 @@ func (a *HoneycodeStub) GetScreenData(ctx workflow.Context, input *honeycode.Get
 	return &output, err
 }
 
-func (a *HoneycodeStub) GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataResult {
+func (a *HoneycodeStub) GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.honeycode.GetScreenData", input)
-	return &HoneycodeGetScreenDataResult{Result: future}
+	return &HoneycodeGetScreenDataFuture{Future: future}
 }
 
 func (a *HoneycodeStub) InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error) {
@@ -60,7 +60,7 @@ func (a *HoneycodeStub) InvokeScreenAutomation(ctx workflow.Context, input *hone
 	return &output, err
 }
 
-func (a *HoneycodeStub) InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult {
+func (a *HoneycodeStub) InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.honeycode.InvokeScreenAutomation", input)
-	return &HoneycodeInvokeScreenAutomationResult{Result: future}
+	return &HoneycodeInvokeScreenAutomationFuture{Future: future}
 }

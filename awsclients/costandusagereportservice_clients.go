@@ -11,16 +11,16 @@ import (
 
 type CostandUsageReportServiceClient interface {
 	DeleteReportDefinition(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) (*costandusagereportservice.DeleteReportDefinitionOutput, error)
-	DeleteReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) *CostandusagereportserviceDeleteReportDefinitionResult
+	DeleteReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) *CostandusagereportserviceDeleteReportDefinitionFuture
 
 	DescribeReportDefinitions(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) (*costandusagereportservice.DescribeReportDefinitionsOutput, error)
-	DescribeReportDefinitionsAsync(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) *CostandusagereportserviceDescribeReportDefinitionsResult
+	DescribeReportDefinitionsAsync(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) *CostandusagereportserviceDescribeReportDefinitionsFuture
 
 	ModifyReportDefinition(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) (*costandusagereportservice.ModifyReportDefinitionOutput, error)
-	ModifyReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) *CostandusagereportserviceModifyReportDefinitionResult
+	ModifyReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) *CostandusagereportserviceModifyReportDefinitionFuture
 
 	PutReportDefinition(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) (*costandusagereportservice.PutReportDefinitionOutput, error)
-	PutReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) *CostandusagereportservicePutReportDefinitionResult
+	PutReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) *CostandusagereportservicePutReportDefinitionFuture
 }
 
 type CostandUsageReportServiceStub struct{}
@@ -29,43 +29,43 @@ func NewCostandUsageReportServiceStub() CostandUsageReportServiceClient {
 	return &CostandUsageReportServiceStub{}
 }
 
-type CostandusagereportserviceDeleteReportDefinitionResult struct {
-	Result workflow.Future
+type CostandusagereportserviceDeleteReportDefinitionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CostandusagereportserviceDeleteReportDefinitionResult) Get(ctx workflow.Context) (*costandusagereportservice.DeleteReportDefinitionOutput, error) {
+func (r *CostandusagereportserviceDeleteReportDefinitionFuture) Get(ctx workflow.Context) (*costandusagereportservice.DeleteReportDefinitionOutput, error) {
 	var output costandusagereportservice.DeleteReportDefinitionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostandusagereportserviceDescribeReportDefinitionsResult struct {
-	Result workflow.Future
+type CostandusagereportserviceDescribeReportDefinitionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CostandusagereportserviceDescribeReportDefinitionsResult) Get(ctx workflow.Context) (*costandusagereportservice.DescribeReportDefinitionsOutput, error) {
+func (r *CostandusagereportserviceDescribeReportDefinitionsFuture) Get(ctx workflow.Context) (*costandusagereportservice.DescribeReportDefinitionsOutput, error) {
 	var output costandusagereportservice.DescribeReportDefinitionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostandusagereportserviceModifyReportDefinitionResult struct {
-	Result workflow.Future
+type CostandusagereportserviceModifyReportDefinitionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CostandusagereportserviceModifyReportDefinitionResult) Get(ctx workflow.Context) (*costandusagereportservice.ModifyReportDefinitionOutput, error) {
+func (r *CostandusagereportserviceModifyReportDefinitionFuture) Get(ctx workflow.Context) (*costandusagereportservice.ModifyReportDefinitionOutput, error) {
 	var output costandusagereportservice.ModifyReportDefinitionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostandusagereportservicePutReportDefinitionResult struct {
-	Result workflow.Future
+type CostandusagereportservicePutReportDefinitionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CostandusagereportservicePutReportDefinitionResult) Get(ctx workflow.Context) (*costandusagereportservice.PutReportDefinitionOutput, error) {
+func (r *CostandusagereportservicePutReportDefinitionFuture) Get(ctx workflow.Context) (*costandusagereportservice.PutReportDefinitionOutput, error) {
 	var output costandusagereportservice.PutReportDefinitionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -75,9 +75,9 @@ func (a *CostandUsageReportServiceStub) DeleteReportDefinition(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *CostandUsageReportServiceStub) DeleteReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) *CostandusagereportserviceDeleteReportDefinitionResult {
+func (a *CostandUsageReportServiceStub) DeleteReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) *CostandusagereportserviceDeleteReportDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costandusagereportservice.DeleteReportDefinition", input)
-	return &CostandusagereportserviceDeleteReportDefinitionResult{Result: future}
+	return &CostandusagereportserviceDeleteReportDefinitionFuture{Future: future}
 }
 
 func (a *CostandUsageReportServiceStub) DescribeReportDefinitions(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) (*costandusagereportservice.DescribeReportDefinitionsOutput, error) {
@@ -86,9 +86,9 @@ func (a *CostandUsageReportServiceStub) DescribeReportDefinitions(ctx workflow.C
 	return &output, err
 }
 
-func (a *CostandUsageReportServiceStub) DescribeReportDefinitionsAsync(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) *CostandusagereportserviceDescribeReportDefinitionsResult {
+func (a *CostandUsageReportServiceStub) DescribeReportDefinitionsAsync(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) *CostandusagereportserviceDescribeReportDefinitionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costandusagereportservice.DescribeReportDefinitions", input)
-	return &CostandusagereportserviceDescribeReportDefinitionsResult{Result: future}
+	return &CostandusagereportserviceDescribeReportDefinitionsFuture{Future: future}
 }
 
 func (a *CostandUsageReportServiceStub) ModifyReportDefinition(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) (*costandusagereportservice.ModifyReportDefinitionOutput, error) {
@@ -97,9 +97,9 @@ func (a *CostandUsageReportServiceStub) ModifyReportDefinition(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *CostandUsageReportServiceStub) ModifyReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) *CostandusagereportserviceModifyReportDefinitionResult {
+func (a *CostandUsageReportServiceStub) ModifyReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) *CostandusagereportserviceModifyReportDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costandusagereportservice.ModifyReportDefinition", input)
-	return &CostandusagereportserviceModifyReportDefinitionResult{Result: future}
+	return &CostandusagereportserviceModifyReportDefinitionFuture{Future: future}
 }
 
 func (a *CostandUsageReportServiceStub) PutReportDefinition(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) (*costandusagereportservice.PutReportDefinitionOutput, error) {
@@ -108,7 +108,7 @@ func (a *CostandUsageReportServiceStub) PutReportDefinition(ctx workflow.Context
 	return &output, err
 }
 
-func (a *CostandUsageReportServiceStub) PutReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) *CostandusagereportservicePutReportDefinitionResult {
+func (a *CostandUsageReportServiceStub) PutReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) *CostandusagereportservicePutReportDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costandusagereportservice.PutReportDefinition", input)
-	return &CostandusagereportservicePutReportDefinitionResult{Result: future}
+	return &CostandusagereportservicePutReportDefinitionFuture{Future: future}
 }

@@ -11,134 +11,136 @@ import (
 
 type DocDBClient interface {
 	AddTagsToResource(ctx workflow.Context, input *docdb.AddTagsToResourceInput) (*docdb.AddTagsToResourceOutput, error)
-	AddTagsToResourceAsync(ctx workflow.Context, input *docdb.AddTagsToResourceInput) *DocdbAddTagsToResourceResult
+	AddTagsToResourceAsync(ctx workflow.Context, input *docdb.AddTagsToResourceInput) *DocdbAddTagsToResourceFuture
 
 	ApplyPendingMaintenanceAction(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) (*docdb.ApplyPendingMaintenanceActionOutput, error)
-	ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) *DocdbApplyPendingMaintenanceActionResult
+	ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) *DocdbApplyPendingMaintenanceActionFuture
 
 	CopyDBClusterParameterGroup(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) (*docdb.CopyDBClusterParameterGroupOutput, error)
-	CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) *DocdbCopyDBClusterParameterGroupResult
+	CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) *DocdbCopyDBClusterParameterGroupFuture
 
 	CopyDBClusterSnapshot(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) (*docdb.CopyDBClusterSnapshotOutput, error)
-	CopyDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) *DocdbCopyDBClusterSnapshotResult
+	CopyDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) *DocdbCopyDBClusterSnapshotFuture
 
 	CreateDBCluster(ctx workflow.Context, input *docdb.CreateDBClusterInput) (*docdb.CreateDBClusterOutput, error)
-	CreateDBClusterAsync(ctx workflow.Context, input *docdb.CreateDBClusterInput) *DocdbCreateDBClusterResult
+	CreateDBClusterAsync(ctx workflow.Context, input *docdb.CreateDBClusterInput) *DocdbCreateDBClusterFuture
 
 	CreateDBClusterParameterGroup(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) (*docdb.CreateDBClusterParameterGroupOutput, error)
-	CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) *DocdbCreateDBClusterParameterGroupResult
+	CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) *DocdbCreateDBClusterParameterGroupFuture
 
 	CreateDBClusterSnapshot(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) (*docdb.CreateDBClusterSnapshotOutput, error)
-	CreateDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) *DocdbCreateDBClusterSnapshotResult
+	CreateDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) *DocdbCreateDBClusterSnapshotFuture
 
 	CreateDBInstance(ctx workflow.Context, input *docdb.CreateDBInstanceInput) (*docdb.CreateDBInstanceOutput, error)
-	CreateDBInstanceAsync(ctx workflow.Context, input *docdb.CreateDBInstanceInput) *DocdbCreateDBInstanceResult
+	CreateDBInstanceAsync(ctx workflow.Context, input *docdb.CreateDBInstanceInput) *DocdbCreateDBInstanceFuture
 
 	CreateDBSubnetGroup(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) (*docdb.CreateDBSubnetGroupOutput, error)
-	CreateDBSubnetGroupAsync(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) *DocdbCreateDBSubnetGroupResult
+	CreateDBSubnetGroupAsync(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) *DocdbCreateDBSubnetGroupFuture
 
 	DeleteDBCluster(ctx workflow.Context, input *docdb.DeleteDBClusterInput) (*docdb.DeleteDBClusterOutput, error)
-	DeleteDBClusterAsync(ctx workflow.Context, input *docdb.DeleteDBClusterInput) *DocdbDeleteDBClusterResult
+	DeleteDBClusterAsync(ctx workflow.Context, input *docdb.DeleteDBClusterInput) *DocdbDeleteDBClusterFuture
 
 	DeleteDBClusterParameterGroup(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) (*docdb.DeleteDBClusterParameterGroupOutput, error)
-	DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) *DocdbDeleteDBClusterParameterGroupResult
+	DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) *DocdbDeleteDBClusterParameterGroupFuture
 
 	DeleteDBClusterSnapshot(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) (*docdb.DeleteDBClusterSnapshotOutput, error)
-	DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) *DocdbDeleteDBClusterSnapshotResult
+	DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) *DocdbDeleteDBClusterSnapshotFuture
 
 	DeleteDBInstance(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) (*docdb.DeleteDBInstanceOutput, error)
-	DeleteDBInstanceAsync(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) *DocdbDeleteDBInstanceResult
+	DeleteDBInstanceAsync(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) *DocdbDeleteDBInstanceFuture
 
 	DeleteDBSubnetGroup(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) (*docdb.DeleteDBSubnetGroupOutput, error)
-	DeleteDBSubnetGroupAsync(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) *DocdbDeleteDBSubnetGroupResult
+	DeleteDBSubnetGroupAsync(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) *DocdbDeleteDBSubnetGroupFuture
 
 	DescribeCertificates(ctx workflow.Context, input *docdb.DescribeCertificatesInput) (*docdb.DescribeCertificatesOutput, error)
-	DescribeCertificatesAsync(ctx workflow.Context, input *docdb.DescribeCertificatesInput) *DocdbDescribeCertificatesResult
+	DescribeCertificatesAsync(ctx workflow.Context, input *docdb.DescribeCertificatesInput) *DocdbDescribeCertificatesFuture
 
 	DescribeDBClusterParameterGroups(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) (*docdb.DescribeDBClusterParameterGroupsOutput, error)
-	DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) *DocdbDescribeDBClusterParameterGroupsResult
+	DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) *DocdbDescribeDBClusterParameterGroupsFuture
 
 	DescribeDBClusterParameters(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) (*docdb.DescribeDBClusterParametersOutput, error)
-	DescribeDBClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) *DocdbDescribeDBClusterParametersResult
+	DescribeDBClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) *DocdbDescribeDBClusterParametersFuture
 
 	DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) (*docdb.DescribeDBClusterSnapshotAttributesOutput, error)
-	DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) *DocdbDescribeDBClusterSnapshotAttributesResult
+	DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) *DocdbDescribeDBClusterSnapshotAttributesFuture
 
 	DescribeDBClusterSnapshots(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) (*docdb.DescribeDBClusterSnapshotsOutput, error)
-	DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) *DocdbDescribeDBClusterSnapshotsResult
+	DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) *DocdbDescribeDBClusterSnapshotsFuture
 
 	DescribeDBClusters(ctx workflow.Context, input *docdb.DescribeDBClustersInput) (*docdb.DescribeDBClustersOutput, error)
-	DescribeDBClustersAsync(ctx workflow.Context, input *docdb.DescribeDBClustersInput) *DocdbDescribeDBClustersResult
+	DescribeDBClustersAsync(ctx workflow.Context, input *docdb.DescribeDBClustersInput) *DocdbDescribeDBClustersFuture
 
 	DescribeDBEngineVersions(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) (*docdb.DescribeDBEngineVersionsOutput, error)
-	DescribeDBEngineVersionsAsync(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) *DocdbDescribeDBEngineVersionsResult
+	DescribeDBEngineVersionsAsync(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) *DocdbDescribeDBEngineVersionsFuture
 
 	DescribeDBInstances(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) (*docdb.DescribeDBInstancesOutput, error)
-	DescribeDBInstancesAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *DocdbDescribeDBInstancesResult
+	DescribeDBInstancesAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *DocdbDescribeDBInstancesFuture
 
 	DescribeDBSubnetGroups(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) (*docdb.DescribeDBSubnetGroupsOutput, error)
-	DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) *DocdbDescribeDBSubnetGroupsResult
+	DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) *DocdbDescribeDBSubnetGroupsFuture
 
 	DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) (*docdb.DescribeEngineDefaultClusterParametersOutput, error)
-	DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) *DocdbDescribeEngineDefaultClusterParametersResult
+	DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) *DocdbDescribeEngineDefaultClusterParametersFuture
 
 	DescribeEventCategories(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) (*docdb.DescribeEventCategoriesOutput, error)
-	DescribeEventCategoriesAsync(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) *DocdbDescribeEventCategoriesResult
+	DescribeEventCategoriesAsync(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) *DocdbDescribeEventCategoriesFuture
 
 	DescribeEvents(ctx workflow.Context, input *docdb.DescribeEventsInput) (*docdb.DescribeEventsOutput, error)
-	DescribeEventsAsync(ctx workflow.Context, input *docdb.DescribeEventsInput) *DocdbDescribeEventsResult
+	DescribeEventsAsync(ctx workflow.Context, input *docdb.DescribeEventsInput) *DocdbDescribeEventsFuture
 
 	DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) (*docdb.DescribeOrderableDBInstanceOptionsOutput, error)
-	DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) *DocdbDescribeOrderableDBInstanceOptionsResult
+	DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) *DocdbDescribeOrderableDBInstanceOptionsFuture
 
 	DescribePendingMaintenanceActions(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) (*docdb.DescribePendingMaintenanceActionsOutput, error)
-	DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) *DocdbDescribePendingMaintenanceActionsResult
+	DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) *DocdbDescribePendingMaintenanceActionsFuture
 
 	FailoverDBCluster(ctx workflow.Context, input *docdb.FailoverDBClusterInput) (*docdb.FailoverDBClusterOutput, error)
-	FailoverDBClusterAsync(ctx workflow.Context, input *docdb.FailoverDBClusterInput) *DocdbFailoverDBClusterResult
+	FailoverDBClusterAsync(ctx workflow.Context, input *docdb.FailoverDBClusterInput) *DocdbFailoverDBClusterFuture
 
 	ListTagsForResource(ctx workflow.Context, input *docdb.ListTagsForResourceInput) (*docdb.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *docdb.ListTagsForResourceInput) *DocdbListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *docdb.ListTagsForResourceInput) *DocdbListTagsForResourceFuture
 
 	ModifyDBCluster(ctx workflow.Context, input *docdb.ModifyDBClusterInput) (*docdb.ModifyDBClusterOutput, error)
-	ModifyDBClusterAsync(ctx workflow.Context, input *docdb.ModifyDBClusterInput) *DocdbModifyDBClusterResult
+	ModifyDBClusterAsync(ctx workflow.Context, input *docdb.ModifyDBClusterInput) *DocdbModifyDBClusterFuture
 
 	ModifyDBClusterParameterGroup(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) (*docdb.ModifyDBClusterParameterGroupOutput, error)
-	ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) *DocdbModifyDBClusterParameterGroupResult
+	ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) *DocdbModifyDBClusterParameterGroupFuture
 
 	ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) (*docdb.ModifyDBClusterSnapshotAttributeOutput, error)
-	ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) *DocdbModifyDBClusterSnapshotAttributeResult
+	ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) *DocdbModifyDBClusterSnapshotAttributeFuture
 
 	ModifyDBInstance(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) (*docdb.ModifyDBInstanceOutput, error)
-	ModifyDBInstanceAsync(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) *DocdbModifyDBInstanceResult
+	ModifyDBInstanceAsync(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) *DocdbModifyDBInstanceFuture
 
 	ModifyDBSubnetGroup(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) (*docdb.ModifyDBSubnetGroupOutput, error)
-	ModifyDBSubnetGroupAsync(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) *DocdbModifyDBSubnetGroupResult
+	ModifyDBSubnetGroupAsync(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) *DocdbModifyDBSubnetGroupFuture
 
 	RebootDBInstance(ctx workflow.Context, input *docdb.RebootDBInstanceInput) (*docdb.RebootDBInstanceOutput, error)
-	RebootDBInstanceAsync(ctx workflow.Context, input *docdb.RebootDBInstanceInput) *DocdbRebootDBInstanceResult
+	RebootDBInstanceAsync(ctx workflow.Context, input *docdb.RebootDBInstanceInput) *DocdbRebootDBInstanceFuture
 
 	RemoveTagsFromResource(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) (*docdb.RemoveTagsFromResourceOutput, error)
-	RemoveTagsFromResourceAsync(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) *DocdbRemoveTagsFromResourceResult
+	RemoveTagsFromResourceAsync(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) *DocdbRemoveTagsFromResourceFuture
 
 	ResetDBClusterParameterGroup(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) (*docdb.ResetDBClusterParameterGroupOutput, error)
-	ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) *DocdbResetDBClusterParameterGroupResult
+	ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) *DocdbResetDBClusterParameterGroupFuture
 
 	RestoreDBClusterFromSnapshot(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) (*docdb.RestoreDBClusterFromSnapshotOutput, error)
-	RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) *DocdbRestoreDBClusterFromSnapshotResult
+	RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) *DocdbRestoreDBClusterFromSnapshotFuture
 
 	RestoreDBClusterToPointInTime(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) (*docdb.RestoreDBClusterToPointInTimeOutput, error)
-	RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) *DocdbRestoreDBClusterToPointInTimeResult
+	RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) *DocdbRestoreDBClusterToPointInTimeFuture
 
 	StartDBCluster(ctx workflow.Context, input *docdb.StartDBClusterInput) (*docdb.StartDBClusterOutput, error)
-	StartDBClusterAsync(ctx workflow.Context, input *docdb.StartDBClusterInput) *DocdbStartDBClusterResult
+	StartDBClusterAsync(ctx workflow.Context, input *docdb.StartDBClusterInput) *DocdbStartDBClusterFuture
 
 	StopDBCluster(ctx workflow.Context, input *docdb.StopDBClusterInput) (*docdb.StopDBClusterOutput, error)
-	StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterResult
+	StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterFuture
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
+	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) workflow.Future
 
 	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
+	WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) workflow.Future
 }
 
 type DocDBStub struct{}
@@ -147,423 +149,423 @@ func NewDocDBStub() DocDBClient {
 	return &DocDBStub{}
 }
 
-type DocdbAddTagsToResourceResult struct {
-	Result workflow.Future
+type DocdbAddTagsToResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbAddTagsToResourceResult) Get(ctx workflow.Context) (*docdb.AddTagsToResourceOutput, error) {
+func (r *DocdbAddTagsToResourceFuture) Get(ctx workflow.Context) (*docdb.AddTagsToResourceOutput, error) {
 	var output docdb.AddTagsToResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbApplyPendingMaintenanceActionResult struct {
-	Result workflow.Future
+type DocdbApplyPendingMaintenanceActionFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbApplyPendingMaintenanceActionResult) Get(ctx workflow.Context) (*docdb.ApplyPendingMaintenanceActionOutput, error) {
+func (r *DocdbApplyPendingMaintenanceActionFuture) Get(ctx workflow.Context) (*docdb.ApplyPendingMaintenanceActionOutput, error) {
 	var output docdb.ApplyPendingMaintenanceActionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbCopyDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type DocdbCopyDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbCopyDBClusterParameterGroupResult) Get(ctx workflow.Context) (*docdb.CopyDBClusterParameterGroupOutput, error) {
+func (r *DocdbCopyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*docdb.CopyDBClusterParameterGroupOutput, error) {
 	var output docdb.CopyDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbCopyDBClusterSnapshotResult struct {
-	Result workflow.Future
+type DocdbCopyDBClusterSnapshotFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbCopyDBClusterSnapshotResult) Get(ctx workflow.Context) (*docdb.CopyDBClusterSnapshotOutput, error) {
+func (r *DocdbCopyDBClusterSnapshotFuture) Get(ctx workflow.Context) (*docdb.CopyDBClusterSnapshotOutput, error) {
 	var output docdb.CopyDBClusterSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbCreateDBClusterResult struct {
-	Result workflow.Future
+type DocdbCreateDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbCreateDBClusterResult) Get(ctx workflow.Context) (*docdb.CreateDBClusterOutput, error) {
+func (r *DocdbCreateDBClusterFuture) Get(ctx workflow.Context) (*docdb.CreateDBClusterOutput, error) {
 	var output docdb.CreateDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbCreateDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type DocdbCreateDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbCreateDBClusterParameterGroupResult) Get(ctx workflow.Context) (*docdb.CreateDBClusterParameterGroupOutput, error) {
+func (r *DocdbCreateDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*docdb.CreateDBClusterParameterGroupOutput, error) {
 	var output docdb.CreateDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbCreateDBClusterSnapshotResult struct {
-	Result workflow.Future
+type DocdbCreateDBClusterSnapshotFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbCreateDBClusterSnapshotResult) Get(ctx workflow.Context) (*docdb.CreateDBClusterSnapshotOutput, error) {
+func (r *DocdbCreateDBClusterSnapshotFuture) Get(ctx workflow.Context) (*docdb.CreateDBClusterSnapshotOutput, error) {
 	var output docdb.CreateDBClusterSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbCreateDBInstanceResult struct {
-	Result workflow.Future
+type DocdbCreateDBInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbCreateDBInstanceResult) Get(ctx workflow.Context) (*docdb.CreateDBInstanceOutput, error) {
+func (r *DocdbCreateDBInstanceFuture) Get(ctx workflow.Context) (*docdb.CreateDBInstanceOutput, error) {
 	var output docdb.CreateDBInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbCreateDBSubnetGroupResult struct {
-	Result workflow.Future
+type DocdbCreateDBSubnetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbCreateDBSubnetGroupResult) Get(ctx workflow.Context) (*docdb.CreateDBSubnetGroupOutput, error) {
+func (r *DocdbCreateDBSubnetGroupFuture) Get(ctx workflow.Context) (*docdb.CreateDBSubnetGroupOutput, error) {
 	var output docdb.CreateDBSubnetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDeleteDBClusterResult struct {
-	Result workflow.Future
+type DocdbDeleteDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDeleteDBClusterResult) Get(ctx workflow.Context) (*docdb.DeleteDBClusterOutput, error) {
+func (r *DocdbDeleteDBClusterFuture) Get(ctx workflow.Context) (*docdb.DeleteDBClusterOutput, error) {
 	var output docdb.DeleteDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDeleteDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type DocdbDeleteDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDeleteDBClusterParameterGroupResult) Get(ctx workflow.Context) (*docdb.DeleteDBClusterParameterGroupOutput, error) {
+func (r *DocdbDeleteDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*docdb.DeleteDBClusterParameterGroupOutput, error) {
 	var output docdb.DeleteDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDeleteDBClusterSnapshotResult struct {
-	Result workflow.Future
+type DocdbDeleteDBClusterSnapshotFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDeleteDBClusterSnapshotResult) Get(ctx workflow.Context) (*docdb.DeleteDBClusterSnapshotOutput, error) {
+func (r *DocdbDeleteDBClusterSnapshotFuture) Get(ctx workflow.Context) (*docdb.DeleteDBClusterSnapshotOutput, error) {
 	var output docdb.DeleteDBClusterSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDeleteDBInstanceResult struct {
-	Result workflow.Future
+type DocdbDeleteDBInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDeleteDBInstanceResult) Get(ctx workflow.Context) (*docdb.DeleteDBInstanceOutput, error) {
+func (r *DocdbDeleteDBInstanceFuture) Get(ctx workflow.Context) (*docdb.DeleteDBInstanceOutput, error) {
 	var output docdb.DeleteDBInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDeleteDBSubnetGroupResult struct {
-	Result workflow.Future
+type DocdbDeleteDBSubnetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDeleteDBSubnetGroupResult) Get(ctx workflow.Context) (*docdb.DeleteDBSubnetGroupOutput, error) {
+func (r *DocdbDeleteDBSubnetGroupFuture) Get(ctx workflow.Context) (*docdb.DeleteDBSubnetGroupOutput, error) {
 	var output docdb.DeleteDBSubnetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeCertificatesResult struct {
-	Result workflow.Future
+type DocdbDescribeCertificatesFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeCertificatesResult) Get(ctx workflow.Context) (*docdb.DescribeCertificatesOutput, error) {
+func (r *DocdbDescribeCertificatesFuture) Get(ctx workflow.Context) (*docdb.DescribeCertificatesOutput, error) {
 	var output docdb.DescribeCertificatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeDBClusterParameterGroupsResult struct {
-	Result workflow.Future
+type DocdbDescribeDBClusterParameterGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeDBClusterParameterGroupsResult) Get(ctx workflow.Context) (*docdb.DescribeDBClusterParameterGroupsOutput, error) {
+func (r *DocdbDescribeDBClusterParameterGroupsFuture) Get(ctx workflow.Context) (*docdb.DescribeDBClusterParameterGroupsOutput, error) {
 	var output docdb.DescribeDBClusterParameterGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeDBClusterParametersResult struct {
-	Result workflow.Future
+type DocdbDescribeDBClusterParametersFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeDBClusterParametersResult) Get(ctx workflow.Context) (*docdb.DescribeDBClusterParametersOutput, error) {
+func (r *DocdbDescribeDBClusterParametersFuture) Get(ctx workflow.Context) (*docdb.DescribeDBClusterParametersOutput, error) {
 	var output docdb.DescribeDBClusterParametersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeDBClusterSnapshotAttributesResult struct {
-	Result workflow.Future
+type DocdbDescribeDBClusterSnapshotAttributesFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeDBClusterSnapshotAttributesResult) Get(ctx workflow.Context) (*docdb.DescribeDBClusterSnapshotAttributesOutput, error) {
+func (r *DocdbDescribeDBClusterSnapshotAttributesFuture) Get(ctx workflow.Context) (*docdb.DescribeDBClusterSnapshotAttributesOutput, error) {
 	var output docdb.DescribeDBClusterSnapshotAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeDBClusterSnapshotsResult struct {
-	Result workflow.Future
+type DocdbDescribeDBClusterSnapshotsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeDBClusterSnapshotsResult) Get(ctx workflow.Context) (*docdb.DescribeDBClusterSnapshotsOutput, error) {
+func (r *DocdbDescribeDBClusterSnapshotsFuture) Get(ctx workflow.Context) (*docdb.DescribeDBClusterSnapshotsOutput, error) {
 	var output docdb.DescribeDBClusterSnapshotsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeDBClustersResult struct {
-	Result workflow.Future
+type DocdbDescribeDBClustersFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeDBClustersResult) Get(ctx workflow.Context) (*docdb.DescribeDBClustersOutput, error) {
+func (r *DocdbDescribeDBClustersFuture) Get(ctx workflow.Context) (*docdb.DescribeDBClustersOutput, error) {
 	var output docdb.DescribeDBClustersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeDBEngineVersionsResult struct {
-	Result workflow.Future
+type DocdbDescribeDBEngineVersionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeDBEngineVersionsResult) Get(ctx workflow.Context) (*docdb.DescribeDBEngineVersionsOutput, error) {
+func (r *DocdbDescribeDBEngineVersionsFuture) Get(ctx workflow.Context) (*docdb.DescribeDBEngineVersionsOutput, error) {
 	var output docdb.DescribeDBEngineVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeDBInstancesResult struct {
-	Result workflow.Future
+type DocdbDescribeDBInstancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeDBInstancesResult) Get(ctx workflow.Context) (*docdb.DescribeDBInstancesOutput, error) {
+func (r *DocdbDescribeDBInstancesFuture) Get(ctx workflow.Context) (*docdb.DescribeDBInstancesOutput, error) {
 	var output docdb.DescribeDBInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeDBSubnetGroupsResult struct {
-	Result workflow.Future
+type DocdbDescribeDBSubnetGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeDBSubnetGroupsResult) Get(ctx workflow.Context) (*docdb.DescribeDBSubnetGroupsOutput, error) {
+func (r *DocdbDescribeDBSubnetGroupsFuture) Get(ctx workflow.Context) (*docdb.DescribeDBSubnetGroupsOutput, error) {
 	var output docdb.DescribeDBSubnetGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeEngineDefaultClusterParametersResult struct {
-	Result workflow.Future
+type DocdbDescribeEngineDefaultClusterParametersFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeEngineDefaultClusterParametersResult) Get(ctx workflow.Context) (*docdb.DescribeEngineDefaultClusterParametersOutput, error) {
+func (r *DocdbDescribeEngineDefaultClusterParametersFuture) Get(ctx workflow.Context) (*docdb.DescribeEngineDefaultClusterParametersOutput, error) {
 	var output docdb.DescribeEngineDefaultClusterParametersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeEventCategoriesResult struct {
-	Result workflow.Future
+type DocdbDescribeEventCategoriesFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeEventCategoriesResult) Get(ctx workflow.Context) (*docdb.DescribeEventCategoriesOutput, error) {
+func (r *DocdbDescribeEventCategoriesFuture) Get(ctx workflow.Context) (*docdb.DescribeEventCategoriesOutput, error) {
 	var output docdb.DescribeEventCategoriesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeEventsResult struct {
-	Result workflow.Future
+type DocdbDescribeEventsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeEventsResult) Get(ctx workflow.Context) (*docdb.DescribeEventsOutput, error) {
+func (r *DocdbDescribeEventsFuture) Get(ctx workflow.Context) (*docdb.DescribeEventsOutput, error) {
 	var output docdb.DescribeEventsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribeOrderableDBInstanceOptionsResult struct {
-	Result workflow.Future
+type DocdbDescribeOrderableDBInstanceOptionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribeOrderableDBInstanceOptionsResult) Get(ctx workflow.Context) (*docdb.DescribeOrderableDBInstanceOptionsOutput, error) {
+func (r *DocdbDescribeOrderableDBInstanceOptionsFuture) Get(ctx workflow.Context) (*docdb.DescribeOrderableDBInstanceOptionsOutput, error) {
 	var output docdb.DescribeOrderableDBInstanceOptionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbDescribePendingMaintenanceActionsResult struct {
-	Result workflow.Future
+type DocdbDescribePendingMaintenanceActionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbDescribePendingMaintenanceActionsResult) Get(ctx workflow.Context) (*docdb.DescribePendingMaintenanceActionsOutput, error) {
+func (r *DocdbDescribePendingMaintenanceActionsFuture) Get(ctx workflow.Context) (*docdb.DescribePendingMaintenanceActionsOutput, error) {
 	var output docdb.DescribePendingMaintenanceActionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbFailoverDBClusterResult struct {
-	Result workflow.Future
+type DocdbFailoverDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbFailoverDBClusterResult) Get(ctx workflow.Context) (*docdb.FailoverDBClusterOutput, error) {
+func (r *DocdbFailoverDBClusterFuture) Get(ctx workflow.Context) (*docdb.FailoverDBClusterOutput, error) {
 	var output docdb.FailoverDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbListTagsForResourceResult struct {
-	Result workflow.Future
+type DocdbListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbListTagsForResourceResult) Get(ctx workflow.Context) (*docdb.ListTagsForResourceOutput, error) {
+func (r *DocdbListTagsForResourceFuture) Get(ctx workflow.Context) (*docdb.ListTagsForResourceOutput, error) {
 	var output docdb.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbModifyDBClusterResult struct {
-	Result workflow.Future
+type DocdbModifyDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbModifyDBClusterResult) Get(ctx workflow.Context) (*docdb.ModifyDBClusterOutput, error) {
+func (r *DocdbModifyDBClusterFuture) Get(ctx workflow.Context) (*docdb.ModifyDBClusterOutput, error) {
 	var output docdb.ModifyDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbModifyDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type DocdbModifyDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbModifyDBClusterParameterGroupResult) Get(ctx workflow.Context) (*docdb.ModifyDBClusterParameterGroupOutput, error) {
+func (r *DocdbModifyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*docdb.ModifyDBClusterParameterGroupOutput, error) {
 	var output docdb.ModifyDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbModifyDBClusterSnapshotAttributeResult struct {
-	Result workflow.Future
+type DocdbModifyDBClusterSnapshotAttributeFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbModifyDBClusterSnapshotAttributeResult) Get(ctx workflow.Context) (*docdb.ModifyDBClusterSnapshotAttributeOutput, error) {
+func (r *DocdbModifyDBClusterSnapshotAttributeFuture) Get(ctx workflow.Context) (*docdb.ModifyDBClusterSnapshotAttributeOutput, error) {
 	var output docdb.ModifyDBClusterSnapshotAttributeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbModifyDBInstanceResult struct {
-	Result workflow.Future
+type DocdbModifyDBInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbModifyDBInstanceResult) Get(ctx workflow.Context) (*docdb.ModifyDBInstanceOutput, error) {
+func (r *DocdbModifyDBInstanceFuture) Get(ctx workflow.Context) (*docdb.ModifyDBInstanceOutput, error) {
 	var output docdb.ModifyDBInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbModifyDBSubnetGroupResult struct {
-	Result workflow.Future
+type DocdbModifyDBSubnetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbModifyDBSubnetGroupResult) Get(ctx workflow.Context) (*docdb.ModifyDBSubnetGroupOutput, error) {
+func (r *DocdbModifyDBSubnetGroupFuture) Get(ctx workflow.Context) (*docdb.ModifyDBSubnetGroupOutput, error) {
 	var output docdb.ModifyDBSubnetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbRebootDBInstanceResult struct {
-	Result workflow.Future
+type DocdbRebootDBInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbRebootDBInstanceResult) Get(ctx workflow.Context) (*docdb.RebootDBInstanceOutput, error) {
+func (r *DocdbRebootDBInstanceFuture) Get(ctx workflow.Context) (*docdb.RebootDBInstanceOutput, error) {
 	var output docdb.RebootDBInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbRemoveTagsFromResourceResult struct {
-	Result workflow.Future
+type DocdbRemoveTagsFromResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbRemoveTagsFromResourceResult) Get(ctx workflow.Context) (*docdb.RemoveTagsFromResourceOutput, error) {
+func (r *DocdbRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*docdb.RemoveTagsFromResourceOutput, error) {
 	var output docdb.RemoveTagsFromResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbResetDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type DocdbResetDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbResetDBClusterParameterGroupResult) Get(ctx workflow.Context) (*docdb.ResetDBClusterParameterGroupOutput, error) {
+func (r *DocdbResetDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*docdb.ResetDBClusterParameterGroupOutput, error) {
 	var output docdb.ResetDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbRestoreDBClusterFromSnapshotResult struct {
-	Result workflow.Future
+type DocdbRestoreDBClusterFromSnapshotFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbRestoreDBClusterFromSnapshotResult) Get(ctx workflow.Context) (*docdb.RestoreDBClusterFromSnapshotOutput, error) {
+func (r *DocdbRestoreDBClusterFromSnapshotFuture) Get(ctx workflow.Context) (*docdb.RestoreDBClusterFromSnapshotOutput, error) {
 	var output docdb.RestoreDBClusterFromSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbRestoreDBClusterToPointInTimeResult struct {
-	Result workflow.Future
+type DocdbRestoreDBClusterToPointInTimeFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbRestoreDBClusterToPointInTimeResult) Get(ctx workflow.Context) (*docdb.RestoreDBClusterToPointInTimeOutput, error) {
+func (r *DocdbRestoreDBClusterToPointInTimeFuture) Get(ctx workflow.Context) (*docdb.RestoreDBClusterToPointInTimeOutput, error) {
 	var output docdb.RestoreDBClusterToPointInTimeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbStartDBClusterResult struct {
-	Result workflow.Future
+type DocdbStartDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbStartDBClusterResult) Get(ctx workflow.Context) (*docdb.StartDBClusterOutput, error) {
+func (r *DocdbStartDBClusterFuture) Get(ctx workflow.Context) (*docdb.StartDBClusterOutput, error) {
 	var output docdb.StartDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DocdbStopDBClusterResult struct {
-	Result workflow.Future
+type DocdbStopDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *DocdbStopDBClusterResult) Get(ctx workflow.Context) (*docdb.StopDBClusterOutput, error) {
+func (r *DocdbStopDBClusterFuture) Get(ctx workflow.Context) (*docdb.StopDBClusterOutput, error) {
 	var output docdb.StopDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -573,9 +575,9 @@ func (a *DocDBStub) AddTagsToResource(ctx workflow.Context, input *docdb.AddTags
 	return &output, err
 }
 
-func (a *DocDBStub) AddTagsToResourceAsync(ctx workflow.Context, input *docdb.AddTagsToResourceInput) *DocdbAddTagsToResourceResult {
+func (a *DocDBStub) AddTagsToResourceAsync(ctx workflow.Context, input *docdb.AddTagsToResourceInput) *DocdbAddTagsToResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.AddTagsToResource", input)
-	return &DocdbAddTagsToResourceResult{Result: future}
+	return &DocdbAddTagsToResourceFuture{Future: future}
 }
 
 func (a *DocDBStub) ApplyPendingMaintenanceAction(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) (*docdb.ApplyPendingMaintenanceActionOutput, error) {
@@ -584,9 +586,9 @@ func (a *DocDBStub) ApplyPendingMaintenanceAction(ctx workflow.Context, input *d
 	return &output, err
 }
 
-func (a *DocDBStub) ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) *DocdbApplyPendingMaintenanceActionResult {
+func (a *DocDBStub) ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) *DocdbApplyPendingMaintenanceActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.ApplyPendingMaintenanceAction", input)
-	return &DocdbApplyPendingMaintenanceActionResult{Result: future}
+	return &DocdbApplyPendingMaintenanceActionFuture{Future: future}
 }
 
 func (a *DocDBStub) CopyDBClusterParameterGroup(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) (*docdb.CopyDBClusterParameterGroupOutput, error) {
@@ -595,9 +597,9 @@ func (a *DocDBStub) CopyDBClusterParameterGroup(ctx workflow.Context, input *doc
 	return &output, err
 }
 
-func (a *DocDBStub) CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) *DocdbCopyDBClusterParameterGroupResult {
+func (a *DocDBStub) CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) *DocdbCopyDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.CopyDBClusterParameterGroup", input)
-	return &DocdbCopyDBClusterParameterGroupResult{Result: future}
+	return &DocdbCopyDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *DocDBStub) CopyDBClusterSnapshot(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) (*docdb.CopyDBClusterSnapshotOutput, error) {
@@ -606,9 +608,9 @@ func (a *DocDBStub) CopyDBClusterSnapshot(ctx workflow.Context, input *docdb.Cop
 	return &output, err
 }
 
-func (a *DocDBStub) CopyDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) *DocdbCopyDBClusterSnapshotResult {
+func (a *DocDBStub) CopyDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) *DocdbCopyDBClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.CopyDBClusterSnapshot", input)
-	return &DocdbCopyDBClusterSnapshotResult{Result: future}
+	return &DocdbCopyDBClusterSnapshotFuture{Future: future}
 }
 
 func (a *DocDBStub) CreateDBCluster(ctx workflow.Context, input *docdb.CreateDBClusterInput) (*docdb.CreateDBClusterOutput, error) {
@@ -617,9 +619,9 @@ func (a *DocDBStub) CreateDBCluster(ctx workflow.Context, input *docdb.CreateDBC
 	return &output, err
 }
 
-func (a *DocDBStub) CreateDBClusterAsync(ctx workflow.Context, input *docdb.CreateDBClusterInput) *DocdbCreateDBClusterResult {
+func (a *DocDBStub) CreateDBClusterAsync(ctx workflow.Context, input *docdb.CreateDBClusterInput) *DocdbCreateDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.CreateDBCluster", input)
-	return &DocdbCreateDBClusterResult{Result: future}
+	return &DocdbCreateDBClusterFuture{Future: future}
 }
 
 func (a *DocDBStub) CreateDBClusterParameterGroup(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) (*docdb.CreateDBClusterParameterGroupOutput, error) {
@@ -628,9 +630,9 @@ func (a *DocDBStub) CreateDBClusterParameterGroup(ctx workflow.Context, input *d
 	return &output, err
 }
 
-func (a *DocDBStub) CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) *DocdbCreateDBClusterParameterGroupResult {
+func (a *DocDBStub) CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) *DocdbCreateDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.CreateDBClusterParameterGroup", input)
-	return &DocdbCreateDBClusterParameterGroupResult{Result: future}
+	return &DocdbCreateDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *DocDBStub) CreateDBClusterSnapshot(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) (*docdb.CreateDBClusterSnapshotOutput, error) {
@@ -639,9 +641,9 @@ func (a *DocDBStub) CreateDBClusterSnapshot(ctx workflow.Context, input *docdb.C
 	return &output, err
 }
 
-func (a *DocDBStub) CreateDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) *DocdbCreateDBClusterSnapshotResult {
+func (a *DocDBStub) CreateDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) *DocdbCreateDBClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.CreateDBClusterSnapshot", input)
-	return &DocdbCreateDBClusterSnapshotResult{Result: future}
+	return &DocdbCreateDBClusterSnapshotFuture{Future: future}
 }
 
 func (a *DocDBStub) CreateDBInstance(ctx workflow.Context, input *docdb.CreateDBInstanceInput) (*docdb.CreateDBInstanceOutput, error) {
@@ -650,9 +652,9 @@ func (a *DocDBStub) CreateDBInstance(ctx workflow.Context, input *docdb.CreateDB
 	return &output, err
 }
 
-func (a *DocDBStub) CreateDBInstanceAsync(ctx workflow.Context, input *docdb.CreateDBInstanceInput) *DocdbCreateDBInstanceResult {
+func (a *DocDBStub) CreateDBInstanceAsync(ctx workflow.Context, input *docdb.CreateDBInstanceInput) *DocdbCreateDBInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.CreateDBInstance", input)
-	return &DocdbCreateDBInstanceResult{Result: future}
+	return &DocdbCreateDBInstanceFuture{Future: future}
 }
 
 func (a *DocDBStub) CreateDBSubnetGroup(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) (*docdb.CreateDBSubnetGroupOutput, error) {
@@ -661,9 +663,9 @@ func (a *DocDBStub) CreateDBSubnetGroup(ctx workflow.Context, input *docdb.Creat
 	return &output, err
 }
 
-func (a *DocDBStub) CreateDBSubnetGroupAsync(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) *DocdbCreateDBSubnetGroupResult {
+func (a *DocDBStub) CreateDBSubnetGroupAsync(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) *DocdbCreateDBSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.CreateDBSubnetGroup", input)
-	return &DocdbCreateDBSubnetGroupResult{Result: future}
+	return &DocdbCreateDBSubnetGroupFuture{Future: future}
 }
 
 func (a *DocDBStub) DeleteDBCluster(ctx workflow.Context, input *docdb.DeleteDBClusterInput) (*docdb.DeleteDBClusterOutput, error) {
@@ -672,9 +674,9 @@ func (a *DocDBStub) DeleteDBCluster(ctx workflow.Context, input *docdb.DeleteDBC
 	return &output, err
 }
 
-func (a *DocDBStub) DeleteDBClusterAsync(ctx workflow.Context, input *docdb.DeleteDBClusterInput) *DocdbDeleteDBClusterResult {
+func (a *DocDBStub) DeleteDBClusterAsync(ctx workflow.Context, input *docdb.DeleteDBClusterInput) *DocdbDeleteDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DeleteDBCluster", input)
-	return &DocdbDeleteDBClusterResult{Result: future}
+	return &DocdbDeleteDBClusterFuture{Future: future}
 }
 
 func (a *DocDBStub) DeleteDBClusterParameterGroup(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) (*docdb.DeleteDBClusterParameterGroupOutput, error) {
@@ -683,9 +685,9 @@ func (a *DocDBStub) DeleteDBClusterParameterGroup(ctx workflow.Context, input *d
 	return &output, err
 }
 
-func (a *DocDBStub) DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) *DocdbDeleteDBClusterParameterGroupResult {
+func (a *DocDBStub) DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) *DocdbDeleteDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DeleteDBClusterParameterGroup", input)
-	return &DocdbDeleteDBClusterParameterGroupResult{Result: future}
+	return &DocdbDeleteDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *DocDBStub) DeleteDBClusterSnapshot(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) (*docdb.DeleteDBClusterSnapshotOutput, error) {
@@ -694,9 +696,9 @@ func (a *DocDBStub) DeleteDBClusterSnapshot(ctx workflow.Context, input *docdb.D
 	return &output, err
 }
 
-func (a *DocDBStub) DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) *DocdbDeleteDBClusterSnapshotResult {
+func (a *DocDBStub) DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) *DocdbDeleteDBClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DeleteDBClusterSnapshot", input)
-	return &DocdbDeleteDBClusterSnapshotResult{Result: future}
+	return &DocdbDeleteDBClusterSnapshotFuture{Future: future}
 }
 
 func (a *DocDBStub) DeleteDBInstance(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) (*docdb.DeleteDBInstanceOutput, error) {
@@ -705,9 +707,9 @@ func (a *DocDBStub) DeleteDBInstance(ctx workflow.Context, input *docdb.DeleteDB
 	return &output, err
 }
 
-func (a *DocDBStub) DeleteDBInstanceAsync(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) *DocdbDeleteDBInstanceResult {
+func (a *DocDBStub) DeleteDBInstanceAsync(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) *DocdbDeleteDBInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DeleteDBInstance", input)
-	return &DocdbDeleteDBInstanceResult{Result: future}
+	return &DocdbDeleteDBInstanceFuture{Future: future}
 }
 
 func (a *DocDBStub) DeleteDBSubnetGroup(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) (*docdb.DeleteDBSubnetGroupOutput, error) {
@@ -716,9 +718,9 @@ func (a *DocDBStub) DeleteDBSubnetGroup(ctx workflow.Context, input *docdb.Delet
 	return &output, err
 }
 
-func (a *DocDBStub) DeleteDBSubnetGroupAsync(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) *DocdbDeleteDBSubnetGroupResult {
+func (a *DocDBStub) DeleteDBSubnetGroupAsync(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) *DocdbDeleteDBSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DeleteDBSubnetGroup", input)
-	return &DocdbDeleteDBSubnetGroupResult{Result: future}
+	return &DocdbDeleteDBSubnetGroupFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeCertificates(ctx workflow.Context, input *docdb.DescribeCertificatesInput) (*docdb.DescribeCertificatesOutput, error) {
@@ -727,9 +729,9 @@ func (a *DocDBStub) DescribeCertificates(ctx workflow.Context, input *docdb.Desc
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeCertificatesAsync(ctx workflow.Context, input *docdb.DescribeCertificatesInput) *DocdbDescribeCertificatesResult {
+func (a *DocDBStub) DescribeCertificatesAsync(ctx workflow.Context, input *docdb.DescribeCertificatesInput) *DocdbDescribeCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeCertificates", input)
-	return &DocdbDescribeCertificatesResult{Result: future}
+	return &DocdbDescribeCertificatesFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeDBClusterParameterGroups(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) (*docdb.DescribeDBClusterParameterGroupsOutput, error) {
@@ -738,9 +740,9 @@ func (a *DocDBStub) DescribeDBClusterParameterGroups(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) *DocdbDescribeDBClusterParameterGroupsResult {
+func (a *DocDBStub) DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) *DocdbDescribeDBClusterParameterGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeDBClusterParameterGroups", input)
-	return &DocdbDescribeDBClusterParameterGroupsResult{Result: future}
+	return &DocdbDescribeDBClusterParameterGroupsFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeDBClusterParameters(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) (*docdb.DescribeDBClusterParametersOutput, error) {
@@ -749,9 +751,9 @@ func (a *DocDBStub) DescribeDBClusterParameters(ctx workflow.Context, input *doc
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeDBClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) *DocdbDescribeDBClusterParametersResult {
+func (a *DocDBStub) DescribeDBClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) *DocdbDescribeDBClusterParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeDBClusterParameters", input)
-	return &DocdbDescribeDBClusterParametersResult{Result: future}
+	return &DocdbDescribeDBClusterParametersFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) (*docdb.DescribeDBClusterSnapshotAttributesOutput, error) {
@@ -760,9 +762,9 @@ func (a *DocDBStub) DescribeDBClusterSnapshotAttributes(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) *DocdbDescribeDBClusterSnapshotAttributesResult {
+func (a *DocDBStub) DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) *DocdbDescribeDBClusterSnapshotAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeDBClusterSnapshotAttributes", input)
-	return &DocdbDescribeDBClusterSnapshotAttributesResult{Result: future}
+	return &DocdbDescribeDBClusterSnapshotAttributesFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeDBClusterSnapshots(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) (*docdb.DescribeDBClusterSnapshotsOutput, error) {
@@ -771,9 +773,9 @@ func (a *DocDBStub) DescribeDBClusterSnapshots(ctx workflow.Context, input *docd
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) *DocdbDescribeDBClusterSnapshotsResult {
+func (a *DocDBStub) DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) *DocdbDescribeDBClusterSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeDBClusterSnapshots", input)
-	return &DocdbDescribeDBClusterSnapshotsResult{Result: future}
+	return &DocdbDescribeDBClusterSnapshotsFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeDBClusters(ctx workflow.Context, input *docdb.DescribeDBClustersInput) (*docdb.DescribeDBClustersOutput, error) {
@@ -782,9 +784,9 @@ func (a *DocDBStub) DescribeDBClusters(ctx workflow.Context, input *docdb.Descri
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeDBClustersAsync(ctx workflow.Context, input *docdb.DescribeDBClustersInput) *DocdbDescribeDBClustersResult {
+func (a *DocDBStub) DescribeDBClustersAsync(ctx workflow.Context, input *docdb.DescribeDBClustersInput) *DocdbDescribeDBClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeDBClusters", input)
-	return &DocdbDescribeDBClustersResult{Result: future}
+	return &DocdbDescribeDBClustersFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeDBEngineVersions(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) (*docdb.DescribeDBEngineVersionsOutput, error) {
@@ -793,9 +795,9 @@ func (a *DocDBStub) DescribeDBEngineVersions(ctx workflow.Context, input *docdb.
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeDBEngineVersionsAsync(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) *DocdbDescribeDBEngineVersionsResult {
+func (a *DocDBStub) DescribeDBEngineVersionsAsync(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) *DocdbDescribeDBEngineVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeDBEngineVersions", input)
-	return &DocdbDescribeDBEngineVersionsResult{Result: future}
+	return &DocdbDescribeDBEngineVersionsFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeDBInstances(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) (*docdb.DescribeDBInstancesOutput, error) {
@@ -804,9 +806,9 @@ func (a *DocDBStub) DescribeDBInstances(ctx workflow.Context, input *docdb.Descr
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeDBInstancesAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *DocdbDescribeDBInstancesResult {
+func (a *DocDBStub) DescribeDBInstancesAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *DocdbDescribeDBInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeDBInstances", input)
-	return &DocdbDescribeDBInstancesResult{Result: future}
+	return &DocdbDescribeDBInstancesFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeDBSubnetGroups(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) (*docdb.DescribeDBSubnetGroupsOutput, error) {
@@ -815,9 +817,9 @@ func (a *DocDBStub) DescribeDBSubnetGroups(ctx workflow.Context, input *docdb.De
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) *DocdbDescribeDBSubnetGroupsResult {
+func (a *DocDBStub) DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) *DocdbDescribeDBSubnetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeDBSubnetGroups", input)
-	return &DocdbDescribeDBSubnetGroupsResult{Result: future}
+	return &DocdbDescribeDBSubnetGroupsFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) (*docdb.DescribeEngineDefaultClusterParametersOutput, error) {
@@ -826,9 +828,9 @@ func (a *DocDBStub) DescribeEngineDefaultClusterParameters(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) *DocdbDescribeEngineDefaultClusterParametersResult {
+func (a *DocDBStub) DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) *DocdbDescribeEngineDefaultClusterParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeEngineDefaultClusterParameters", input)
-	return &DocdbDescribeEngineDefaultClusterParametersResult{Result: future}
+	return &DocdbDescribeEngineDefaultClusterParametersFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeEventCategories(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) (*docdb.DescribeEventCategoriesOutput, error) {
@@ -837,9 +839,9 @@ func (a *DocDBStub) DescribeEventCategories(ctx workflow.Context, input *docdb.D
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeEventCategoriesAsync(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) *DocdbDescribeEventCategoriesResult {
+func (a *DocDBStub) DescribeEventCategoriesAsync(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) *DocdbDescribeEventCategoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeEventCategories", input)
-	return &DocdbDescribeEventCategoriesResult{Result: future}
+	return &DocdbDescribeEventCategoriesFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeEvents(ctx workflow.Context, input *docdb.DescribeEventsInput) (*docdb.DescribeEventsOutput, error) {
@@ -848,9 +850,9 @@ func (a *DocDBStub) DescribeEvents(ctx workflow.Context, input *docdb.DescribeEv
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeEventsAsync(ctx workflow.Context, input *docdb.DescribeEventsInput) *DocdbDescribeEventsResult {
+func (a *DocDBStub) DescribeEventsAsync(ctx workflow.Context, input *docdb.DescribeEventsInput) *DocdbDescribeEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeEvents", input)
-	return &DocdbDescribeEventsResult{Result: future}
+	return &DocdbDescribeEventsFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) (*docdb.DescribeOrderableDBInstanceOptionsOutput, error) {
@@ -859,9 +861,9 @@ func (a *DocDBStub) DescribeOrderableDBInstanceOptions(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *DocDBStub) DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) *DocdbDescribeOrderableDBInstanceOptionsResult {
+func (a *DocDBStub) DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) *DocdbDescribeOrderableDBInstanceOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribeOrderableDBInstanceOptions", input)
-	return &DocdbDescribeOrderableDBInstanceOptionsResult{Result: future}
+	return &DocdbDescribeOrderableDBInstanceOptionsFuture{Future: future}
 }
 
 func (a *DocDBStub) DescribePendingMaintenanceActions(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) (*docdb.DescribePendingMaintenanceActionsOutput, error) {
@@ -870,9 +872,9 @@ func (a *DocDBStub) DescribePendingMaintenanceActions(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *DocDBStub) DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) *DocdbDescribePendingMaintenanceActionsResult {
+func (a *DocDBStub) DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) *DocdbDescribePendingMaintenanceActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.DescribePendingMaintenanceActions", input)
-	return &DocdbDescribePendingMaintenanceActionsResult{Result: future}
+	return &DocdbDescribePendingMaintenanceActionsFuture{Future: future}
 }
 
 func (a *DocDBStub) FailoverDBCluster(ctx workflow.Context, input *docdb.FailoverDBClusterInput) (*docdb.FailoverDBClusterOutput, error) {
@@ -881,9 +883,9 @@ func (a *DocDBStub) FailoverDBCluster(ctx workflow.Context, input *docdb.Failove
 	return &output, err
 }
 
-func (a *DocDBStub) FailoverDBClusterAsync(ctx workflow.Context, input *docdb.FailoverDBClusterInput) *DocdbFailoverDBClusterResult {
+func (a *DocDBStub) FailoverDBClusterAsync(ctx workflow.Context, input *docdb.FailoverDBClusterInput) *DocdbFailoverDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.FailoverDBCluster", input)
-	return &DocdbFailoverDBClusterResult{Result: future}
+	return &DocdbFailoverDBClusterFuture{Future: future}
 }
 
 func (a *DocDBStub) ListTagsForResource(ctx workflow.Context, input *docdb.ListTagsForResourceInput) (*docdb.ListTagsForResourceOutput, error) {
@@ -892,9 +894,9 @@ func (a *DocDBStub) ListTagsForResource(ctx workflow.Context, input *docdb.ListT
 	return &output, err
 }
 
-func (a *DocDBStub) ListTagsForResourceAsync(ctx workflow.Context, input *docdb.ListTagsForResourceInput) *DocdbListTagsForResourceResult {
+func (a *DocDBStub) ListTagsForResourceAsync(ctx workflow.Context, input *docdb.ListTagsForResourceInput) *DocdbListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.ListTagsForResource", input)
-	return &DocdbListTagsForResourceResult{Result: future}
+	return &DocdbListTagsForResourceFuture{Future: future}
 }
 
 func (a *DocDBStub) ModifyDBCluster(ctx workflow.Context, input *docdb.ModifyDBClusterInput) (*docdb.ModifyDBClusterOutput, error) {
@@ -903,9 +905,9 @@ func (a *DocDBStub) ModifyDBCluster(ctx workflow.Context, input *docdb.ModifyDBC
 	return &output, err
 }
 
-func (a *DocDBStub) ModifyDBClusterAsync(ctx workflow.Context, input *docdb.ModifyDBClusterInput) *DocdbModifyDBClusterResult {
+func (a *DocDBStub) ModifyDBClusterAsync(ctx workflow.Context, input *docdb.ModifyDBClusterInput) *DocdbModifyDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.ModifyDBCluster", input)
-	return &DocdbModifyDBClusterResult{Result: future}
+	return &DocdbModifyDBClusterFuture{Future: future}
 }
 
 func (a *DocDBStub) ModifyDBClusterParameterGroup(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) (*docdb.ModifyDBClusterParameterGroupOutput, error) {
@@ -914,9 +916,9 @@ func (a *DocDBStub) ModifyDBClusterParameterGroup(ctx workflow.Context, input *d
 	return &output, err
 }
 
-func (a *DocDBStub) ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) *DocdbModifyDBClusterParameterGroupResult {
+func (a *DocDBStub) ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) *DocdbModifyDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.ModifyDBClusterParameterGroup", input)
-	return &DocdbModifyDBClusterParameterGroupResult{Result: future}
+	return &DocdbModifyDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *DocDBStub) ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) (*docdb.ModifyDBClusterSnapshotAttributeOutput, error) {
@@ -925,9 +927,9 @@ func (a *DocDBStub) ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *DocDBStub) ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) *DocdbModifyDBClusterSnapshotAttributeResult {
+func (a *DocDBStub) ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) *DocdbModifyDBClusterSnapshotAttributeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.ModifyDBClusterSnapshotAttribute", input)
-	return &DocdbModifyDBClusterSnapshotAttributeResult{Result: future}
+	return &DocdbModifyDBClusterSnapshotAttributeFuture{Future: future}
 }
 
 func (a *DocDBStub) ModifyDBInstance(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) (*docdb.ModifyDBInstanceOutput, error) {
@@ -936,9 +938,9 @@ func (a *DocDBStub) ModifyDBInstance(ctx workflow.Context, input *docdb.ModifyDB
 	return &output, err
 }
 
-func (a *DocDBStub) ModifyDBInstanceAsync(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) *DocdbModifyDBInstanceResult {
+func (a *DocDBStub) ModifyDBInstanceAsync(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) *DocdbModifyDBInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.ModifyDBInstance", input)
-	return &DocdbModifyDBInstanceResult{Result: future}
+	return &DocdbModifyDBInstanceFuture{Future: future}
 }
 
 func (a *DocDBStub) ModifyDBSubnetGroup(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) (*docdb.ModifyDBSubnetGroupOutput, error) {
@@ -947,9 +949,9 @@ func (a *DocDBStub) ModifyDBSubnetGroup(ctx workflow.Context, input *docdb.Modif
 	return &output, err
 }
 
-func (a *DocDBStub) ModifyDBSubnetGroupAsync(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) *DocdbModifyDBSubnetGroupResult {
+func (a *DocDBStub) ModifyDBSubnetGroupAsync(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) *DocdbModifyDBSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.ModifyDBSubnetGroup", input)
-	return &DocdbModifyDBSubnetGroupResult{Result: future}
+	return &DocdbModifyDBSubnetGroupFuture{Future: future}
 }
 
 func (a *DocDBStub) RebootDBInstance(ctx workflow.Context, input *docdb.RebootDBInstanceInput) (*docdb.RebootDBInstanceOutput, error) {
@@ -958,9 +960,9 @@ func (a *DocDBStub) RebootDBInstance(ctx workflow.Context, input *docdb.RebootDB
 	return &output, err
 }
 
-func (a *DocDBStub) RebootDBInstanceAsync(ctx workflow.Context, input *docdb.RebootDBInstanceInput) *DocdbRebootDBInstanceResult {
+func (a *DocDBStub) RebootDBInstanceAsync(ctx workflow.Context, input *docdb.RebootDBInstanceInput) *DocdbRebootDBInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.RebootDBInstance", input)
-	return &DocdbRebootDBInstanceResult{Result: future}
+	return &DocdbRebootDBInstanceFuture{Future: future}
 }
 
 func (a *DocDBStub) RemoveTagsFromResource(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) (*docdb.RemoveTagsFromResourceOutput, error) {
@@ -969,9 +971,9 @@ func (a *DocDBStub) RemoveTagsFromResource(ctx workflow.Context, input *docdb.Re
 	return &output, err
 }
 
-func (a *DocDBStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) *DocdbRemoveTagsFromResourceResult {
+func (a *DocDBStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) *DocdbRemoveTagsFromResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.RemoveTagsFromResource", input)
-	return &DocdbRemoveTagsFromResourceResult{Result: future}
+	return &DocdbRemoveTagsFromResourceFuture{Future: future}
 }
 
 func (a *DocDBStub) ResetDBClusterParameterGroup(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) (*docdb.ResetDBClusterParameterGroupOutput, error) {
@@ -980,9 +982,9 @@ func (a *DocDBStub) ResetDBClusterParameterGroup(ctx workflow.Context, input *do
 	return &output, err
 }
 
-func (a *DocDBStub) ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) *DocdbResetDBClusterParameterGroupResult {
+func (a *DocDBStub) ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) *DocdbResetDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.ResetDBClusterParameterGroup", input)
-	return &DocdbResetDBClusterParameterGroupResult{Result: future}
+	return &DocdbResetDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *DocDBStub) RestoreDBClusterFromSnapshot(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) (*docdb.RestoreDBClusterFromSnapshotOutput, error) {
@@ -991,9 +993,9 @@ func (a *DocDBStub) RestoreDBClusterFromSnapshot(ctx workflow.Context, input *do
 	return &output, err
 }
 
-func (a *DocDBStub) RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) *DocdbRestoreDBClusterFromSnapshotResult {
+func (a *DocDBStub) RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) *DocdbRestoreDBClusterFromSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.RestoreDBClusterFromSnapshot", input)
-	return &DocdbRestoreDBClusterFromSnapshotResult{Result: future}
+	return &DocdbRestoreDBClusterFromSnapshotFuture{Future: future}
 }
 
 func (a *DocDBStub) RestoreDBClusterToPointInTime(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) (*docdb.RestoreDBClusterToPointInTimeOutput, error) {
@@ -1002,9 +1004,9 @@ func (a *DocDBStub) RestoreDBClusterToPointInTime(ctx workflow.Context, input *d
 	return &output, err
 }
 
-func (a *DocDBStub) RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) *DocdbRestoreDBClusterToPointInTimeResult {
+func (a *DocDBStub) RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) *DocdbRestoreDBClusterToPointInTimeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.RestoreDBClusterToPointInTime", input)
-	return &DocdbRestoreDBClusterToPointInTimeResult{Result: future}
+	return &DocdbRestoreDBClusterToPointInTimeFuture{Future: future}
 }
 
 func (a *DocDBStub) StartDBCluster(ctx workflow.Context, input *docdb.StartDBClusterInput) (*docdb.StartDBClusterOutput, error) {
@@ -1013,9 +1015,9 @@ func (a *DocDBStub) StartDBCluster(ctx workflow.Context, input *docdb.StartDBClu
 	return &output, err
 }
 
-func (a *DocDBStub) StartDBClusterAsync(ctx workflow.Context, input *docdb.StartDBClusterInput) *DocdbStartDBClusterResult {
+func (a *DocDBStub) StartDBClusterAsync(ctx workflow.Context, input *docdb.StartDBClusterInput) *DocdbStartDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.StartDBCluster", input)
-	return &DocdbStartDBClusterResult{Result: future}
+	return &DocdbStartDBClusterFuture{Future: future}
 }
 
 func (a *DocDBStub) StopDBCluster(ctx workflow.Context, input *docdb.StopDBClusterInput) (*docdb.StopDBClusterOutput, error) {
@@ -1024,9 +1026,9 @@ func (a *DocDBStub) StopDBCluster(ctx workflow.Context, input *docdb.StopDBClust
 	return &output, err
 }
 
-func (a *DocDBStub) StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterResult {
+func (a *DocDBStub) StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.docdb.StopDBCluster", input)
-	return &DocdbStopDBClusterResult{Result: future}
+	return &DocdbStopDBClusterFuture{Future: future}
 }
 
 func (a *DocDBStub) WaitUntilDBInstanceAvailable(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error {

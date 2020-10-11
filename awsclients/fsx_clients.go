@@ -11,46 +11,46 @@ import (
 
 type FSxClient interface {
 	CancelDataRepositoryTask(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) (*fsx.CancelDataRepositoryTaskOutput, error)
-	CancelDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) *FsxCancelDataRepositoryTaskResult
+	CancelDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) *FsxCancelDataRepositoryTaskFuture
 
 	CreateBackup(ctx workflow.Context, input *fsx.CreateBackupInput) (*fsx.CreateBackupOutput, error)
-	CreateBackupAsync(ctx workflow.Context, input *fsx.CreateBackupInput) *FsxCreateBackupResult
+	CreateBackupAsync(ctx workflow.Context, input *fsx.CreateBackupInput) *FsxCreateBackupFuture
 
 	CreateDataRepositoryTask(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) (*fsx.CreateDataRepositoryTaskOutput, error)
-	CreateDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) *FsxCreateDataRepositoryTaskResult
+	CreateDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) *FsxCreateDataRepositoryTaskFuture
 
 	CreateFileSystem(ctx workflow.Context, input *fsx.CreateFileSystemInput) (*fsx.CreateFileSystemOutput, error)
-	CreateFileSystemAsync(ctx workflow.Context, input *fsx.CreateFileSystemInput) *FsxCreateFileSystemResult
+	CreateFileSystemAsync(ctx workflow.Context, input *fsx.CreateFileSystemInput) *FsxCreateFileSystemFuture
 
 	CreateFileSystemFromBackup(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) (*fsx.CreateFileSystemFromBackupOutput, error)
-	CreateFileSystemFromBackupAsync(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) *FsxCreateFileSystemFromBackupResult
+	CreateFileSystemFromBackupAsync(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) *FsxCreateFileSystemFromBackupFuture
 
 	DeleteBackup(ctx workflow.Context, input *fsx.DeleteBackupInput) (*fsx.DeleteBackupOutput, error)
-	DeleteBackupAsync(ctx workflow.Context, input *fsx.DeleteBackupInput) *FsxDeleteBackupResult
+	DeleteBackupAsync(ctx workflow.Context, input *fsx.DeleteBackupInput) *FsxDeleteBackupFuture
 
 	DeleteFileSystem(ctx workflow.Context, input *fsx.DeleteFileSystemInput) (*fsx.DeleteFileSystemOutput, error)
-	DeleteFileSystemAsync(ctx workflow.Context, input *fsx.DeleteFileSystemInput) *FsxDeleteFileSystemResult
+	DeleteFileSystemAsync(ctx workflow.Context, input *fsx.DeleteFileSystemInput) *FsxDeleteFileSystemFuture
 
 	DescribeBackups(ctx workflow.Context, input *fsx.DescribeBackupsInput) (*fsx.DescribeBackupsOutput, error)
-	DescribeBackupsAsync(ctx workflow.Context, input *fsx.DescribeBackupsInput) *FsxDescribeBackupsResult
+	DescribeBackupsAsync(ctx workflow.Context, input *fsx.DescribeBackupsInput) *FsxDescribeBackupsFuture
 
 	DescribeDataRepositoryTasks(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) (*fsx.DescribeDataRepositoryTasksOutput, error)
-	DescribeDataRepositoryTasksAsync(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) *FsxDescribeDataRepositoryTasksResult
+	DescribeDataRepositoryTasksAsync(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) *FsxDescribeDataRepositoryTasksFuture
 
 	DescribeFileSystems(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) (*fsx.DescribeFileSystemsOutput, error)
-	DescribeFileSystemsAsync(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) *FsxDescribeFileSystemsResult
+	DescribeFileSystemsAsync(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) *FsxDescribeFileSystemsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *fsx.ListTagsForResourceInput) (*fsx.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *fsx.ListTagsForResourceInput) *FsxListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *fsx.ListTagsForResourceInput) *FsxListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *fsx.TagResourceInput) (*fsx.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *fsx.TagResourceInput) *FsxTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *fsx.TagResourceInput) *FsxTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *fsx.UntagResourceInput) (*fsx.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *fsx.UntagResourceInput) *FsxUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *fsx.UntagResourceInput) *FsxUntagResourceFuture
 
 	UpdateFileSystem(ctx workflow.Context, input *fsx.UpdateFileSystemInput) (*fsx.UpdateFileSystemOutput, error)
-	UpdateFileSystemAsync(ctx workflow.Context, input *fsx.UpdateFileSystemInput) *FsxUpdateFileSystemResult
+	UpdateFileSystemAsync(ctx workflow.Context, input *fsx.UpdateFileSystemInput) *FsxUpdateFileSystemFuture
 }
 
 type FSxStub struct{}
@@ -59,143 +59,143 @@ func NewFSxStub() FSxClient {
 	return &FSxStub{}
 }
 
-type FsxCancelDataRepositoryTaskResult struct {
-	Result workflow.Future
+type FsxCancelDataRepositoryTaskFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxCancelDataRepositoryTaskResult) Get(ctx workflow.Context) (*fsx.CancelDataRepositoryTaskOutput, error) {
+func (r *FsxCancelDataRepositoryTaskFuture) Get(ctx workflow.Context) (*fsx.CancelDataRepositoryTaskOutput, error) {
 	var output fsx.CancelDataRepositoryTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxCreateBackupResult struct {
-	Result workflow.Future
+type FsxCreateBackupFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxCreateBackupResult) Get(ctx workflow.Context) (*fsx.CreateBackupOutput, error) {
+func (r *FsxCreateBackupFuture) Get(ctx workflow.Context) (*fsx.CreateBackupOutput, error) {
 	var output fsx.CreateBackupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxCreateDataRepositoryTaskResult struct {
-	Result workflow.Future
+type FsxCreateDataRepositoryTaskFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxCreateDataRepositoryTaskResult) Get(ctx workflow.Context) (*fsx.CreateDataRepositoryTaskOutput, error) {
+func (r *FsxCreateDataRepositoryTaskFuture) Get(ctx workflow.Context) (*fsx.CreateDataRepositoryTaskOutput, error) {
 	var output fsx.CreateDataRepositoryTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxCreateFileSystemResult struct {
-	Result workflow.Future
+type FsxCreateFileSystemFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxCreateFileSystemResult) Get(ctx workflow.Context) (*fsx.CreateFileSystemOutput, error) {
+func (r *FsxCreateFileSystemFuture) Get(ctx workflow.Context) (*fsx.CreateFileSystemOutput, error) {
 	var output fsx.CreateFileSystemOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxCreateFileSystemFromBackupResult struct {
-	Result workflow.Future
+type FsxCreateFileSystemFromBackupFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxCreateFileSystemFromBackupResult) Get(ctx workflow.Context) (*fsx.CreateFileSystemFromBackupOutput, error) {
+func (r *FsxCreateFileSystemFromBackupFuture) Get(ctx workflow.Context) (*fsx.CreateFileSystemFromBackupOutput, error) {
 	var output fsx.CreateFileSystemFromBackupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxDeleteBackupResult struct {
-	Result workflow.Future
+type FsxDeleteBackupFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxDeleteBackupResult) Get(ctx workflow.Context) (*fsx.DeleteBackupOutput, error) {
+func (r *FsxDeleteBackupFuture) Get(ctx workflow.Context) (*fsx.DeleteBackupOutput, error) {
 	var output fsx.DeleteBackupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxDeleteFileSystemResult struct {
-	Result workflow.Future
+type FsxDeleteFileSystemFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxDeleteFileSystemResult) Get(ctx workflow.Context) (*fsx.DeleteFileSystemOutput, error) {
+func (r *FsxDeleteFileSystemFuture) Get(ctx workflow.Context) (*fsx.DeleteFileSystemOutput, error) {
 	var output fsx.DeleteFileSystemOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxDescribeBackupsResult struct {
-	Result workflow.Future
+type FsxDescribeBackupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxDescribeBackupsResult) Get(ctx workflow.Context) (*fsx.DescribeBackupsOutput, error) {
+func (r *FsxDescribeBackupsFuture) Get(ctx workflow.Context) (*fsx.DescribeBackupsOutput, error) {
 	var output fsx.DescribeBackupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxDescribeDataRepositoryTasksResult struct {
-	Result workflow.Future
+type FsxDescribeDataRepositoryTasksFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxDescribeDataRepositoryTasksResult) Get(ctx workflow.Context) (*fsx.DescribeDataRepositoryTasksOutput, error) {
+func (r *FsxDescribeDataRepositoryTasksFuture) Get(ctx workflow.Context) (*fsx.DescribeDataRepositoryTasksOutput, error) {
 	var output fsx.DescribeDataRepositoryTasksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxDescribeFileSystemsResult struct {
-	Result workflow.Future
+type FsxDescribeFileSystemsFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxDescribeFileSystemsResult) Get(ctx workflow.Context) (*fsx.DescribeFileSystemsOutput, error) {
+func (r *FsxDescribeFileSystemsFuture) Get(ctx workflow.Context) (*fsx.DescribeFileSystemsOutput, error) {
 	var output fsx.DescribeFileSystemsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxListTagsForResourceResult struct {
-	Result workflow.Future
+type FsxListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxListTagsForResourceResult) Get(ctx workflow.Context) (*fsx.ListTagsForResourceOutput, error) {
+func (r *FsxListTagsForResourceFuture) Get(ctx workflow.Context) (*fsx.ListTagsForResourceOutput, error) {
 	var output fsx.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxTagResourceResult struct {
-	Result workflow.Future
+type FsxTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxTagResourceResult) Get(ctx workflow.Context) (*fsx.TagResourceOutput, error) {
+func (r *FsxTagResourceFuture) Get(ctx workflow.Context) (*fsx.TagResourceOutput, error) {
 	var output fsx.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxUntagResourceResult struct {
-	Result workflow.Future
+type FsxUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxUntagResourceResult) Get(ctx workflow.Context) (*fsx.UntagResourceOutput, error) {
+func (r *FsxUntagResourceFuture) Get(ctx workflow.Context) (*fsx.UntagResourceOutput, error) {
 	var output fsx.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FsxUpdateFileSystemResult struct {
-	Result workflow.Future
+type FsxUpdateFileSystemFuture struct {
+	Future workflow.Future
 }
 
-func (r *FsxUpdateFileSystemResult) Get(ctx workflow.Context) (*fsx.UpdateFileSystemOutput, error) {
+func (r *FsxUpdateFileSystemFuture) Get(ctx workflow.Context) (*fsx.UpdateFileSystemOutput, error) {
 	var output fsx.UpdateFileSystemOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -205,9 +205,9 @@ func (a *FSxStub) CancelDataRepositoryTask(ctx workflow.Context, input *fsx.Canc
 	return &output, err
 }
 
-func (a *FSxStub) CancelDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) *FsxCancelDataRepositoryTaskResult {
+func (a *FSxStub) CancelDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) *FsxCancelDataRepositoryTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.CancelDataRepositoryTask", input)
-	return &FsxCancelDataRepositoryTaskResult{Result: future}
+	return &FsxCancelDataRepositoryTaskFuture{Future: future}
 }
 
 func (a *FSxStub) CreateBackup(ctx workflow.Context, input *fsx.CreateBackupInput) (*fsx.CreateBackupOutput, error) {
@@ -216,9 +216,9 @@ func (a *FSxStub) CreateBackup(ctx workflow.Context, input *fsx.CreateBackupInpu
 	return &output, err
 }
 
-func (a *FSxStub) CreateBackupAsync(ctx workflow.Context, input *fsx.CreateBackupInput) *FsxCreateBackupResult {
+func (a *FSxStub) CreateBackupAsync(ctx workflow.Context, input *fsx.CreateBackupInput) *FsxCreateBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.CreateBackup", input)
-	return &FsxCreateBackupResult{Result: future}
+	return &FsxCreateBackupFuture{Future: future}
 }
 
 func (a *FSxStub) CreateDataRepositoryTask(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) (*fsx.CreateDataRepositoryTaskOutput, error) {
@@ -227,9 +227,9 @@ func (a *FSxStub) CreateDataRepositoryTask(ctx workflow.Context, input *fsx.Crea
 	return &output, err
 }
 
-func (a *FSxStub) CreateDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) *FsxCreateDataRepositoryTaskResult {
+func (a *FSxStub) CreateDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) *FsxCreateDataRepositoryTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.CreateDataRepositoryTask", input)
-	return &FsxCreateDataRepositoryTaskResult{Result: future}
+	return &FsxCreateDataRepositoryTaskFuture{Future: future}
 }
 
 func (a *FSxStub) CreateFileSystem(ctx workflow.Context, input *fsx.CreateFileSystemInput) (*fsx.CreateFileSystemOutput, error) {
@@ -238,9 +238,9 @@ func (a *FSxStub) CreateFileSystem(ctx workflow.Context, input *fsx.CreateFileSy
 	return &output, err
 }
 
-func (a *FSxStub) CreateFileSystemAsync(ctx workflow.Context, input *fsx.CreateFileSystemInput) *FsxCreateFileSystemResult {
+func (a *FSxStub) CreateFileSystemAsync(ctx workflow.Context, input *fsx.CreateFileSystemInput) *FsxCreateFileSystemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.CreateFileSystem", input)
-	return &FsxCreateFileSystemResult{Result: future}
+	return &FsxCreateFileSystemFuture{Future: future}
 }
 
 func (a *FSxStub) CreateFileSystemFromBackup(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) (*fsx.CreateFileSystemFromBackupOutput, error) {
@@ -249,9 +249,9 @@ func (a *FSxStub) CreateFileSystemFromBackup(ctx workflow.Context, input *fsx.Cr
 	return &output, err
 }
 
-func (a *FSxStub) CreateFileSystemFromBackupAsync(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) *FsxCreateFileSystemFromBackupResult {
+func (a *FSxStub) CreateFileSystemFromBackupAsync(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) *FsxCreateFileSystemFromBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.CreateFileSystemFromBackup", input)
-	return &FsxCreateFileSystemFromBackupResult{Result: future}
+	return &FsxCreateFileSystemFromBackupFuture{Future: future}
 }
 
 func (a *FSxStub) DeleteBackup(ctx workflow.Context, input *fsx.DeleteBackupInput) (*fsx.DeleteBackupOutput, error) {
@@ -260,9 +260,9 @@ func (a *FSxStub) DeleteBackup(ctx workflow.Context, input *fsx.DeleteBackupInpu
 	return &output, err
 }
 
-func (a *FSxStub) DeleteBackupAsync(ctx workflow.Context, input *fsx.DeleteBackupInput) *FsxDeleteBackupResult {
+func (a *FSxStub) DeleteBackupAsync(ctx workflow.Context, input *fsx.DeleteBackupInput) *FsxDeleteBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.DeleteBackup", input)
-	return &FsxDeleteBackupResult{Result: future}
+	return &FsxDeleteBackupFuture{Future: future}
 }
 
 func (a *FSxStub) DeleteFileSystem(ctx workflow.Context, input *fsx.DeleteFileSystemInput) (*fsx.DeleteFileSystemOutput, error) {
@@ -271,9 +271,9 @@ func (a *FSxStub) DeleteFileSystem(ctx workflow.Context, input *fsx.DeleteFileSy
 	return &output, err
 }
 
-func (a *FSxStub) DeleteFileSystemAsync(ctx workflow.Context, input *fsx.DeleteFileSystemInput) *FsxDeleteFileSystemResult {
+func (a *FSxStub) DeleteFileSystemAsync(ctx workflow.Context, input *fsx.DeleteFileSystemInput) *FsxDeleteFileSystemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.DeleteFileSystem", input)
-	return &FsxDeleteFileSystemResult{Result: future}
+	return &FsxDeleteFileSystemFuture{Future: future}
 }
 
 func (a *FSxStub) DescribeBackups(ctx workflow.Context, input *fsx.DescribeBackupsInput) (*fsx.DescribeBackupsOutput, error) {
@@ -282,9 +282,9 @@ func (a *FSxStub) DescribeBackups(ctx workflow.Context, input *fsx.DescribeBacku
 	return &output, err
 }
 
-func (a *FSxStub) DescribeBackupsAsync(ctx workflow.Context, input *fsx.DescribeBackupsInput) *FsxDescribeBackupsResult {
+func (a *FSxStub) DescribeBackupsAsync(ctx workflow.Context, input *fsx.DescribeBackupsInput) *FsxDescribeBackupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.DescribeBackups", input)
-	return &FsxDescribeBackupsResult{Result: future}
+	return &FsxDescribeBackupsFuture{Future: future}
 }
 
 func (a *FSxStub) DescribeDataRepositoryTasks(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) (*fsx.DescribeDataRepositoryTasksOutput, error) {
@@ -293,9 +293,9 @@ func (a *FSxStub) DescribeDataRepositoryTasks(ctx workflow.Context, input *fsx.D
 	return &output, err
 }
 
-func (a *FSxStub) DescribeDataRepositoryTasksAsync(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) *FsxDescribeDataRepositoryTasksResult {
+func (a *FSxStub) DescribeDataRepositoryTasksAsync(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) *FsxDescribeDataRepositoryTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.DescribeDataRepositoryTasks", input)
-	return &FsxDescribeDataRepositoryTasksResult{Result: future}
+	return &FsxDescribeDataRepositoryTasksFuture{Future: future}
 }
 
 func (a *FSxStub) DescribeFileSystems(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) (*fsx.DescribeFileSystemsOutput, error) {
@@ -304,9 +304,9 @@ func (a *FSxStub) DescribeFileSystems(ctx workflow.Context, input *fsx.DescribeF
 	return &output, err
 }
 
-func (a *FSxStub) DescribeFileSystemsAsync(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) *FsxDescribeFileSystemsResult {
+func (a *FSxStub) DescribeFileSystemsAsync(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) *FsxDescribeFileSystemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.DescribeFileSystems", input)
-	return &FsxDescribeFileSystemsResult{Result: future}
+	return &FsxDescribeFileSystemsFuture{Future: future}
 }
 
 func (a *FSxStub) ListTagsForResource(ctx workflow.Context, input *fsx.ListTagsForResourceInput) (*fsx.ListTagsForResourceOutput, error) {
@@ -315,9 +315,9 @@ func (a *FSxStub) ListTagsForResource(ctx workflow.Context, input *fsx.ListTagsF
 	return &output, err
 }
 
-func (a *FSxStub) ListTagsForResourceAsync(ctx workflow.Context, input *fsx.ListTagsForResourceInput) *FsxListTagsForResourceResult {
+func (a *FSxStub) ListTagsForResourceAsync(ctx workflow.Context, input *fsx.ListTagsForResourceInput) *FsxListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.ListTagsForResource", input)
-	return &FsxListTagsForResourceResult{Result: future}
+	return &FsxListTagsForResourceFuture{Future: future}
 }
 
 func (a *FSxStub) TagResource(ctx workflow.Context, input *fsx.TagResourceInput) (*fsx.TagResourceOutput, error) {
@@ -326,9 +326,9 @@ func (a *FSxStub) TagResource(ctx workflow.Context, input *fsx.TagResourceInput)
 	return &output, err
 }
 
-func (a *FSxStub) TagResourceAsync(ctx workflow.Context, input *fsx.TagResourceInput) *FsxTagResourceResult {
+func (a *FSxStub) TagResourceAsync(ctx workflow.Context, input *fsx.TagResourceInput) *FsxTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.TagResource", input)
-	return &FsxTagResourceResult{Result: future}
+	return &FsxTagResourceFuture{Future: future}
 }
 
 func (a *FSxStub) UntagResource(ctx workflow.Context, input *fsx.UntagResourceInput) (*fsx.UntagResourceOutput, error) {
@@ -337,9 +337,9 @@ func (a *FSxStub) UntagResource(ctx workflow.Context, input *fsx.UntagResourceIn
 	return &output, err
 }
 
-func (a *FSxStub) UntagResourceAsync(ctx workflow.Context, input *fsx.UntagResourceInput) *FsxUntagResourceResult {
+func (a *FSxStub) UntagResourceAsync(ctx workflow.Context, input *fsx.UntagResourceInput) *FsxUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.UntagResource", input)
-	return &FsxUntagResourceResult{Result: future}
+	return &FsxUntagResourceFuture{Future: future}
 }
 
 func (a *FSxStub) UpdateFileSystem(ctx workflow.Context, input *fsx.UpdateFileSystemInput) (*fsx.UpdateFileSystemOutput, error) {
@@ -348,7 +348,7 @@ func (a *FSxStub) UpdateFileSystem(ctx workflow.Context, input *fsx.UpdateFileSy
 	return &output, err
 }
 
-func (a *FSxStub) UpdateFileSystemAsync(ctx workflow.Context, input *fsx.UpdateFileSystemInput) *FsxUpdateFileSystemResult {
+func (a *FSxStub) UpdateFileSystemAsync(ctx workflow.Context, input *fsx.UpdateFileSystemInput) *FsxUpdateFileSystemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.fsx.UpdateFileSystem", input)
-	return &FsxUpdateFileSystemResult{Result: future}
+	return &FsxUpdateFileSystemFuture{Future: future}
 }

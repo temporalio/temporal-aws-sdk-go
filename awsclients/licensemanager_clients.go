@@ -11,52 +11,52 @@ import (
 
 type LicenseManagerClient interface {
 	CreateLicenseConfiguration(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) (*licensemanager.CreateLicenseConfigurationOutput, error)
-	CreateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) *LicensemanagerCreateLicenseConfigurationResult
+	CreateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) *LicensemanagerCreateLicenseConfigurationFuture
 
 	DeleteLicenseConfiguration(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) (*licensemanager.DeleteLicenseConfigurationOutput, error)
-	DeleteLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) *LicensemanagerDeleteLicenseConfigurationResult
+	DeleteLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) *LicensemanagerDeleteLicenseConfigurationFuture
 
 	GetLicenseConfiguration(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) (*licensemanager.GetLicenseConfigurationOutput, error)
-	GetLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) *LicensemanagerGetLicenseConfigurationResult
+	GetLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) *LicensemanagerGetLicenseConfigurationFuture
 
 	GetServiceSettings(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) (*licensemanager.GetServiceSettingsOutput, error)
-	GetServiceSettingsAsync(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) *LicensemanagerGetServiceSettingsResult
+	GetServiceSettingsAsync(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) *LicensemanagerGetServiceSettingsFuture
 
 	ListAssociationsForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error)
-	ListAssociationsForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) *LicensemanagerListAssociationsForLicenseConfigurationResult
+	ListAssociationsForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) *LicensemanagerListAssociationsForLicenseConfigurationFuture
 
 	ListFailuresForLicenseConfigurationOperations(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) (*licensemanager.ListFailuresForLicenseConfigurationOperationsOutput, error)
-	ListFailuresForLicenseConfigurationOperationsAsync(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) *LicensemanagerListFailuresForLicenseConfigurationOperationsResult
+	ListFailuresForLicenseConfigurationOperationsAsync(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) *LicensemanagerListFailuresForLicenseConfigurationOperationsFuture
 
 	ListLicenseConfigurations(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) (*licensemanager.ListLicenseConfigurationsOutput, error)
-	ListLicenseConfigurationsAsync(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) *LicensemanagerListLicenseConfigurationsResult
+	ListLicenseConfigurationsAsync(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) *LicensemanagerListLicenseConfigurationsFuture
 
 	ListLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) (*licensemanager.ListLicenseSpecificationsForResourceOutput, error)
-	ListLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) *LicensemanagerListLicenseSpecificationsForResourceResult
+	ListLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) *LicensemanagerListLicenseSpecificationsForResourceFuture
 
 	ListResourceInventory(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) (*licensemanager.ListResourceInventoryOutput, error)
-	ListResourceInventoryAsync(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) *LicensemanagerListResourceInventoryResult
+	ListResourceInventoryAsync(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) *LicensemanagerListResourceInventoryFuture
 
 	ListTagsForResource(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) (*licensemanager.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) *LicensemanagerListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) *LicensemanagerListTagsForResourceFuture
 
 	ListUsageForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) (*licensemanager.ListUsageForLicenseConfigurationOutput, error)
-	ListUsageForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) *LicensemanagerListUsageForLicenseConfigurationResult
+	ListUsageForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) *LicensemanagerListUsageForLicenseConfigurationFuture
 
 	TagResource(ctx workflow.Context, input *licensemanager.TagResourceInput) (*licensemanager.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *licensemanager.TagResourceInput) *LicensemanagerTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *licensemanager.TagResourceInput) *LicensemanagerTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *licensemanager.UntagResourceInput) (*licensemanager.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *licensemanager.UntagResourceInput) *LicensemanagerUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *licensemanager.UntagResourceInput) *LicensemanagerUntagResourceFuture
 
 	UpdateLicenseConfiguration(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) (*licensemanager.UpdateLicenseConfigurationOutput, error)
-	UpdateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) *LicensemanagerUpdateLicenseConfigurationResult
+	UpdateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) *LicensemanagerUpdateLicenseConfigurationFuture
 
 	UpdateLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) (*licensemanager.UpdateLicenseSpecificationsForResourceOutput, error)
-	UpdateLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) *LicensemanagerUpdateLicenseSpecificationsForResourceResult
+	UpdateLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) *LicensemanagerUpdateLicenseSpecificationsForResourceFuture
 
 	UpdateServiceSettings(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) (*licensemanager.UpdateServiceSettingsOutput, error)
-	UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsResult
+	UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsFuture
 }
 
 type LicenseManagerStub struct{}
@@ -65,163 +65,163 @@ func NewLicenseManagerStub() LicenseManagerClient {
 	return &LicenseManagerStub{}
 }
 
-type LicensemanagerCreateLicenseConfigurationResult struct {
-	Result workflow.Future
+type LicensemanagerCreateLicenseConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerCreateLicenseConfigurationResult) Get(ctx workflow.Context) (*licensemanager.CreateLicenseConfigurationOutput, error) {
+func (r *LicensemanagerCreateLicenseConfigurationFuture) Get(ctx workflow.Context) (*licensemanager.CreateLicenseConfigurationOutput, error) {
 	var output licensemanager.CreateLicenseConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerDeleteLicenseConfigurationResult struct {
-	Result workflow.Future
+type LicensemanagerDeleteLicenseConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerDeleteLicenseConfigurationResult) Get(ctx workflow.Context) (*licensemanager.DeleteLicenseConfigurationOutput, error) {
+func (r *LicensemanagerDeleteLicenseConfigurationFuture) Get(ctx workflow.Context) (*licensemanager.DeleteLicenseConfigurationOutput, error) {
 	var output licensemanager.DeleteLicenseConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerGetLicenseConfigurationResult struct {
-	Result workflow.Future
+type LicensemanagerGetLicenseConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerGetLicenseConfigurationResult) Get(ctx workflow.Context) (*licensemanager.GetLicenseConfigurationOutput, error) {
+func (r *LicensemanagerGetLicenseConfigurationFuture) Get(ctx workflow.Context) (*licensemanager.GetLicenseConfigurationOutput, error) {
 	var output licensemanager.GetLicenseConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerGetServiceSettingsResult struct {
-	Result workflow.Future
+type LicensemanagerGetServiceSettingsFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerGetServiceSettingsResult) Get(ctx workflow.Context) (*licensemanager.GetServiceSettingsOutput, error) {
+func (r *LicensemanagerGetServiceSettingsFuture) Get(ctx workflow.Context) (*licensemanager.GetServiceSettingsOutput, error) {
 	var output licensemanager.GetServiceSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerListAssociationsForLicenseConfigurationResult struct {
-	Result workflow.Future
+type LicensemanagerListAssociationsForLicenseConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerListAssociationsForLicenseConfigurationResult) Get(ctx workflow.Context) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error) {
+func (r *LicensemanagerListAssociationsForLicenseConfigurationFuture) Get(ctx workflow.Context) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error) {
 	var output licensemanager.ListAssociationsForLicenseConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerListFailuresForLicenseConfigurationOperationsResult struct {
-	Result workflow.Future
+type LicensemanagerListFailuresForLicenseConfigurationOperationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerListFailuresForLicenseConfigurationOperationsResult) Get(ctx workflow.Context) (*licensemanager.ListFailuresForLicenseConfigurationOperationsOutput, error) {
+func (r *LicensemanagerListFailuresForLicenseConfigurationOperationsFuture) Get(ctx workflow.Context) (*licensemanager.ListFailuresForLicenseConfigurationOperationsOutput, error) {
 	var output licensemanager.ListFailuresForLicenseConfigurationOperationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerListLicenseConfigurationsResult struct {
-	Result workflow.Future
+type LicensemanagerListLicenseConfigurationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerListLicenseConfigurationsResult) Get(ctx workflow.Context) (*licensemanager.ListLicenseConfigurationsOutput, error) {
+func (r *LicensemanagerListLicenseConfigurationsFuture) Get(ctx workflow.Context) (*licensemanager.ListLicenseConfigurationsOutput, error) {
 	var output licensemanager.ListLicenseConfigurationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerListLicenseSpecificationsForResourceResult struct {
-	Result workflow.Future
+type LicensemanagerListLicenseSpecificationsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerListLicenseSpecificationsForResourceResult) Get(ctx workflow.Context) (*licensemanager.ListLicenseSpecificationsForResourceOutput, error) {
+func (r *LicensemanagerListLicenseSpecificationsForResourceFuture) Get(ctx workflow.Context) (*licensemanager.ListLicenseSpecificationsForResourceOutput, error) {
 	var output licensemanager.ListLicenseSpecificationsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerListResourceInventoryResult struct {
-	Result workflow.Future
+type LicensemanagerListResourceInventoryFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerListResourceInventoryResult) Get(ctx workflow.Context) (*licensemanager.ListResourceInventoryOutput, error) {
+func (r *LicensemanagerListResourceInventoryFuture) Get(ctx workflow.Context) (*licensemanager.ListResourceInventoryOutput, error) {
 	var output licensemanager.ListResourceInventoryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerListTagsForResourceResult struct {
-	Result workflow.Future
+type LicensemanagerListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerListTagsForResourceResult) Get(ctx workflow.Context) (*licensemanager.ListTagsForResourceOutput, error) {
+func (r *LicensemanagerListTagsForResourceFuture) Get(ctx workflow.Context) (*licensemanager.ListTagsForResourceOutput, error) {
 	var output licensemanager.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerListUsageForLicenseConfigurationResult struct {
-	Result workflow.Future
+type LicensemanagerListUsageForLicenseConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerListUsageForLicenseConfigurationResult) Get(ctx workflow.Context) (*licensemanager.ListUsageForLicenseConfigurationOutput, error) {
+func (r *LicensemanagerListUsageForLicenseConfigurationFuture) Get(ctx workflow.Context) (*licensemanager.ListUsageForLicenseConfigurationOutput, error) {
 	var output licensemanager.ListUsageForLicenseConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerTagResourceResult struct {
-	Result workflow.Future
+type LicensemanagerTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerTagResourceResult) Get(ctx workflow.Context) (*licensemanager.TagResourceOutput, error) {
+func (r *LicensemanagerTagResourceFuture) Get(ctx workflow.Context) (*licensemanager.TagResourceOutput, error) {
 	var output licensemanager.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerUntagResourceResult struct {
-	Result workflow.Future
+type LicensemanagerUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerUntagResourceResult) Get(ctx workflow.Context) (*licensemanager.UntagResourceOutput, error) {
+func (r *LicensemanagerUntagResourceFuture) Get(ctx workflow.Context) (*licensemanager.UntagResourceOutput, error) {
 	var output licensemanager.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerUpdateLicenseConfigurationResult struct {
-	Result workflow.Future
+type LicensemanagerUpdateLicenseConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerUpdateLicenseConfigurationResult) Get(ctx workflow.Context) (*licensemanager.UpdateLicenseConfigurationOutput, error) {
+func (r *LicensemanagerUpdateLicenseConfigurationFuture) Get(ctx workflow.Context) (*licensemanager.UpdateLicenseConfigurationOutput, error) {
 	var output licensemanager.UpdateLicenseConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerUpdateLicenseSpecificationsForResourceResult struct {
-	Result workflow.Future
+type LicensemanagerUpdateLicenseSpecificationsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerUpdateLicenseSpecificationsForResourceResult) Get(ctx workflow.Context) (*licensemanager.UpdateLicenseSpecificationsForResourceOutput, error) {
+func (r *LicensemanagerUpdateLicenseSpecificationsForResourceFuture) Get(ctx workflow.Context) (*licensemanager.UpdateLicenseSpecificationsForResourceOutput, error) {
 	var output licensemanager.UpdateLicenseSpecificationsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LicensemanagerUpdateServiceSettingsResult struct {
-	Result workflow.Future
+type LicensemanagerUpdateServiceSettingsFuture struct {
+	Future workflow.Future
 }
 
-func (r *LicensemanagerUpdateServiceSettingsResult) Get(ctx workflow.Context) (*licensemanager.UpdateServiceSettingsOutput, error) {
+func (r *LicensemanagerUpdateServiceSettingsFuture) Get(ctx workflow.Context) (*licensemanager.UpdateServiceSettingsOutput, error) {
 	var output licensemanager.UpdateServiceSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -231,9 +231,9 @@ func (a *LicenseManagerStub) CreateLicenseConfiguration(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LicenseManagerStub) CreateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) *LicensemanagerCreateLicenseConfigurationResult {
+func (a *LicenseManagerStub) CreateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) *LicensemanagerCreateLicenseConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.CreateLicenseConfiguration", input)
-	return &LicensemanagerCreateLicenseConfigurationResult{Result: future}
+	return &LicensemanagerCreateLicenseConfigurationFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) DeleteLicenseConfiguration(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) (*licensemanager.DeleteLicenseConfigurationOutput, error) {
@@ -242,9 +242,9 @@ func (a *LicenseManagerStub) DeleteLicenseConfiguration(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LicenseManagerStub) DeleteLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) *LicensemanagerDeleteLicenseConfigurationResult {
+func (a *LicenseManagerStub) DeleteLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) *LicensemanagerDeleteLicenseConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.DeleteLicenseConfiguration", input)
-	return &LicensemanagerDeleteLicenseConfigurationResult{Result: future}
+	return &LicensemanagerDeleteLicenseConfigurationFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) GetLicenseConfiguration(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) (*licensemanager.GetLicenseConfigurationOutput, error) {
@@ -253,9 +253,9 @@ func (a *LicenseManagerStub) GetLicenseConfiguration(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *LicenseManagerStub) GetLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) *LicensemanagerGetLicenseConfigurationResult {
+func (a *LicenseManagerStub) GetLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) *LicensemanagerGetLicenseConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.GetLicenseConfiguration", input)
-	return &LicensemanagerGetLicenseConfigurationResult{Result: future}
+	return &LicensemanagerGetLicenseConfigurationFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) GetServiceSettings(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) (*licensemanager.GetServiceSettingsOutput, error) {
@@ -264,9 +264,9 @@ func (a *LicenseManagerStub) GetServiceSettings(ctx workflow.Context, input *lic
 	return &output, err
 }
 
-func (a *LicenseManagerStub) GetServiceSettingsAsync(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) *LicensemanagerGetServiceSettingsResult {
+func (a *LicenseManagerStub) GetServiceSettingsAsync(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) *LicensemanagerGetServiceSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.GetServiceSettings", input)
-	return &LicensemanagerGetServiceSettingsResult{Result: future}
+	return &LicensemanagerGetServiceSettingsFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) ListAssociationsForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error) {
@@ -275,9 +275,9 @@ func (a *LicenseManagerStub) ListAssociationsForLicenseConfiguration(ctx workflo
 	return &output, err
 }
 
-func (a *LicenseManagerStub) ListAssociationsForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) *LicensemanagerListAssociationsForLicenseConfigurationResult {
+func (a *LicenseManagerStub) ListAssociationsForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) *LicensemanagerListAssociationsForLicenseConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListAssociationsForLicenseConfiguration", input)
-	return &LicensemanagerListAssociationsForLicenseConfigurationResult{Result: future}
+	return &LicensemanagerListAssociationsForLicenseConfigurationFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) ListFailuresForLicenseConfigurationOperations(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) (*licensemanager.ListFailuresForLicenseConfigurationOperationsOutput, error) {
@@ -286,9 +286,9 @@ func (a *LicenseManagerStub) ListFailuresForLicenseConfigurationOperations(ctx w
 	return &output, err
 }
 
-func (a *LicenseManagerStub) ListFailuresForLicenseConfigurationOperationsAsync(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) *LicensemanagerListFailuresForLicenseConfigurationOperationsResult {
+func (a *LicenseManagerStub) ListFailuresForLicenseConfigurationOperationsAsync(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) *LicensemanagerListFailuresForLicenseConfigurationOperationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListFailuresForLicenseConfigurationOperations", input)
-	return &LicensemanagerListFailuresForLicenseConfigurationOperationsResult{Result: future}
+	return &LicensemanagerListFailuresForLicenseConfigurationOperationsFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) ListLicenseConfigurations(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) (*licensemanager.ListLicenseConfigurationsOutput, error) {
@@ -297,9 +297,9 @@ func (a *LicenseManagerStub) ListLicenseConfigurations(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *LicenseManagerStub) ListLicenseConfigurationsAsync(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) *LicensemanagerListLicenseConfigurationsResult {
+func (a *LicenseManagerStub) ListLicenseConfigurationsAsync(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) *LicensemanagerListLicenseConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListLicenseConfigurations", input)
-	return &LicensemanagerListLicenseConfigurationsResult{Result: future}
+	return &LicensemanagerListLicenseConfigurationsFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) ListLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) (*licensemanager.ListLicenseSpecificationsForResourceOutput, error) {
@@ -308,9 +308,9 @@ func (a *LicenseManagerStub) ListLicenseSpecificationsForResource(ctx workflow.C
 	return &output, err
 }
 
-func (a *LicenseManagerStub) ListLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) *LicensemanagerListLicenseSpecificationsForResourceResult {
+func (a *LicenseManagerStub) ListLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) *LicensemanagerListLicenseSpecificationsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListLicenseSpecificationsForResource", input)
-	return &LicensemanagerListLicenseSpecificationsForResourceResult{Result: future}
+	return &LicensemanagerListLicenseSpecificationsForResourceFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) ListResourceInventory(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) (*licensemanager.ListResourceInventoryOutput, error) {
@@ -319,9 +319,9 @@ func (a *LicenseManagerStub) ListResourceInventory(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *LicenseManagerStub) ListResourceInventoryAsync(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) *LicensemanagerListResourceInventoryResult {
+func (a *LicenseManagerStub) ListResourceInventoryAsync(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) *LicensemanagerListResourceInventoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListResourceInventory", input)
-	return &LicensemanagerListResourceInventoryResult{Result: future}
+	return &LicensemanagerListResourceInventoryFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) ListTagsForResource(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) (*licensemanager.ListTagsForResourceOutput, error) {
@@ -330,9 +330,9 @@ func (a *LicenseManagerStub) ListTagsForResource(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LicenseManagerStub) ListTagsForResourceAsync(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) *LicensemanagerListTagsForResourceResult {
+func (a *LicenseManagerStub) ListTagsForResourceAsync(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) *LicensemanagerListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListTagsForResource", input)
-	return &LicensemanagerListTagsForResourceResult{Result: future}
+	return &LicensemanagerListTagsForResourceFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) ListUsageForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) (*licensemanager.ListUsageForLicenseConfigurationOutput, error) {
@@ -341,9 +341,9 @@ func (a *LicenseManagerStub) ListUsageForLicenseConfiguration(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *LicenseManagerStub) ListUsageForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) *LicensemanagerListUsageForLicenseConfigurationResult {
+func (a *LicenseManagerStub) ListUsageForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) *LicensemanagerListUsageForLicenseConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListUsageForLicenseConfiguration", input)
-	return &LicensemanagerListUsageForLicenseConfigurationResult{Result: future}
+	return &LicensemanagerListUsageForLicenseConfigurationFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) TagResource(ctx workflow.Context, input *licensemanager.TagResourceInput) (*licensemanager.TagResourceOutput, error) {
@@ -352,9 +352,9 @@ func (a *LicenseManagerStub) TagResource(ctx workflow.Context, input *licenseman
 	return &output, err
 }
 
-func (a *LicenseManagerStub) TagResourceAsync(ctx workflow.Context, input *licensemanager.TagResourceInput) *LicensemanagerTagResourceResult {
+func (a *LicenseManagerStub) TagResourceAsync(ctx workflow.Context, input *licensemanager.TagResourceInput) *LicensemanagerTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.TagResource", input)
-	return &LicensemanagerTagResourceResult{Result: future}
+	return &LicensemanagerTagResourceFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) UntagResource(ctx workflow.Context, input *licensemanager.UntagResourceInput) (*licensemanager.UntagResourceOutput, error) {
@@ -363,9 +363,9 @@ func (a *LicenseManagerStub) UntagResource(ctx workflow.Context, input *licensem
 	return &output, err
 }
 
-func (a *LicenseManagerStub) UntagResourceAsync(ctx workflow.Context, input *licensemanager.UntagResourceInput) *LicensemanagerUntagResourceResult {
+func (a *LicenseManagerStub) UntagResourceAsync(ctx workflow.Context, input *licensemanager.UntagResourceInput) *LicensemanagerUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.UntagResource", input)
-	return &LicensemanagerUntagResourceResult{Result: future}
+	return &LicensemanagerUntagResourceFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) UpdateLicenseConfiguration(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) (*licensemanager.UpdateLicenseConfigurationOutput, error) {
@@ -374,9 +374,9 @@ func (a *LicenseManagerStub) UpdateLicenseConfiguration(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LicenseManagerStub) UpdateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) *LicensemanagerUpdateLicenseConfigurationResult {
+func (a *LicenseManagerStub) UpdateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) *LicensemanagerUpdateLicenseConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateLicenseConfiguration", input)
-	return &LicensemanagerUpdateLicenseConfigurationResult{Result: future}
+	return &LicensemanagerUpdateLicenseConfigurationFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) UpdateLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) (*licensemanager.UpdateLicenseSpecificationsForResourceOutput, error) {
@@ -385,9 +385,9 @@ func (a *LicenseManagerStub) UpdateLicenseSpecificationsForResource(ctx workflow
 	return &output, err
 }
 
-func (a *LicenseManagerStub) UpdateLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) *LicensemanagerUpdateLicenseSpecificationsForResourceResult {
+func (a *LicenseManagerStub) UpdateLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) *LicensemanagerUpdateLicenseSpecificationsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateLicenseSpecificationsForResource", input)
-	return &LicensemanagerUpdateLicenseSpecificationsForResourceResult{Result: future}
+	return &LicensemanagerUpdateLicenseSpecificationsForResourceFuture{Future: future}
 }
 
 func (a *LicenseManagerStub) UpdateServiceSettings(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) (*licensemanager.UpdateServiceSettingsOutput, error) {
@@ -396,7 +396,7 @@ func (a *LicenseManagerStub) UpdateServiceSettings(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *LicenseManagerStub) UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsResult {
+func (a *LicenseManagerStub) UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateServiceSettings", input)
-	return &LicensemanagerUpdateServiceSettingsResult{Result: future}
+	return &LicensemanagerUpdateServiceSettingsFuture{Future: future}
 }

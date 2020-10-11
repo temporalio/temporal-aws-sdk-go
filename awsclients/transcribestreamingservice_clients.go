@@ -11,7 +11,7 @@ import (
 
 type TranscribeStreamingServiceClient interface {
 	StartStreamTranscription(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error)
-	StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionResult
+	StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionFuture
 }
 
 type TranscribeStreamingServiceStub struct{}
@@ -20,13 +20,13 @@ func NewTranscribeStreamingServiceStub() TranscribeStreamingServiceClient {
 	return &TranscribeStreamingServiceStub{}
 }
 
-type TranscribestreamingserviceStartStreamTranscriptionResult struct {
-	Result workflow.Future
+type TranscribestreamingserviceStartStreamTranscriptionFuture struct {
+	Future workflow.Future
 }
 
-func (r *TranscribestreamingserviceStartStreamTranscriptionResult) Get(ctx workflow.Context) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
+func (r *TranscribestreamingserviceStartStreamTranscriptionFuture) Get(ctx workflow.Context) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
 	var output transcribestreamingservice.StartStreamTranscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -36,7 +36,7 @@ func (a *TranscribeStreamingServiceStub) StartStreamTranscription(ctx workflow.C
 	return &output, err
 }
 
-func (a *TranscribeStreamingServiceStub) StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionResult {
+func (a *TranscribeStreamingServiceStub) StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transcribestreamingservice.StartStreamTranscription", input)
-	return &TranscribestreamingserviceStartStreamTranscriptionResult{Result: future}
+	return &TranscribestreamingserviceStartStreamTranscriptionFuture{Future: future}
 }

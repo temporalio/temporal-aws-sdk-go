@@ -11,22 +11,22 @@ import (
 
 type BraketClient interface {
 	CancelQuantumTask(ctx workflow.Context, input *braket.CancelQuantumTaskInput) (*braket.CancelQuantumTaskOutput, error)
-	CancelQuantumTaskAsync(ctx workflow.Context, input *braket.CancelQuantumTaskInput) *BraketCancelQuantumTaskResult
+	CancelQuantumTaskAsync(ctx workflow.Context, input *braket.CancelQuantumTaskInput) *BraketCancelQuantumTaskFuture
 
 	CreateQuantumTask(ctx workflow.Context, input *braket.CreateQuantumTaskInput) (*braket.CreateQuantumTaskOutput, error)
-	CreateQuantumTaskAsync(ctx workflow.Context, input *braket.CreateQuantumTaskInput) *BraketCreateQuantumTaskResult
+	CreateQuantumTaskAsync(ctx workflow.Context, input *braket.CreateQuantumTaskInput) *BraketCreateQuantumTaskFuture
 
 	GetDevice(ctx workflow.Context, input *braket.GetDeviceInput) (*braket.GetDeviceOutput, error)
-	GetDeviceAsync(ctx workflow.Context, input *braket.GetDeviceInput) *BraketGetDeviceResult
+	GetDeviceAsync(ctx workflow.Context, input *braket.GetDeviceInput) *BraketGetDeviceFuture
 
 	GetQuantumTask(ctx workflow.Context, input *braket.GetQuantumTaskInput) (*braket.GetQuantumTaskOutput, error)
-	GetQuantumTaskAsync(ctx workflow.Context, input *braket.GetQuantumTaskInput) *BraketGetQuantumTaskResult
+	GetQuantumTaskAsync(ctx workflow.Context, input *braket.GetQuantumTaskInput) *BraketGetQuantumTaskFuture
 
 	SearchDevices(ctx workflow.Context, input *braket.SearchDevicesInput) (*braket.SearchDevicesOutput, error)
-	SearchDevicesAsync(ctx workflow.Context, input *braket.SearchDevicesInput) *BraketSearchDevicesResult
+	SearchDevicesAsync(ctx workflow.Context, input *braket.SearchDevicesInput) *BraketSearchDevicesFuture
 
 	SearchQuantumTasks(ctx workflow.Context, input *braket.SearchQuantumTasksInput) (*braket.SearchQuantumTasksOutput, error)
-	SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *BraketSearchQuantumTasksResult
+	SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *BraketSearchQuantumTasksFuture
 }
 
 type BraketStub struct{}
@@ -35,63 +35,63 @@ func NewBraketStub() BraketClient {
 	return &BraketStub{}
 }
 
-type BraketCancelQuantumTaskResult struct {
-	Result workflow.Future
+type BraketCancelQuantumTaskFuture struct {
+	Future workflow.Future
 }
 
-func (r *BraketCancelQuantumTaskResult) Get(ctx workflow.Context) (*braket.CancelQuantumTaskOutput, error) {
+func (r *BraketCancelQuantumTaskFuture) Get(ctx workflow.Context) (*braket.CancelQuantumTaskOutput, error) {
 	var output braket.CancelQuantumTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BraketCreateQuantumTaskResult struct {
-	Result workflow.Future
+type BraketCreateQuantumTaskFuture struct {
+	Future workflow.Future
 }
 
-func (r *BraketCreateQuantumTaskResult) Get(ctx workflow.Context) (*braket.CreateQuantumTaskOutput, error) {
+func (r *BraketCreateQuantumTaskFuture) Get(ctx workflow.Context) (*braket.CreateQuantumTaskOutput, error) {
 	var output braket.CreateQuantumTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BraketGetDeviceResult struct {
-	Result workflow.Future
+type BraketGetDeviceFuture struct {
+	Future workflow.Future
 }
 
-func (r *BraketGetDeviceResult) Get(ctx workflow.Context) (*braket.GetDeviceOutput, error) {
+func (r *BraketGetDeviceFuture) Get(ctx workflow.Context) (*braket.GetDeviceOutput, error) {
 	var output braket.GetDeviceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BraketGetQuantumTaskResult struct {
-	Result workflow.Future
+type BraketGetQuantumTaskFuture struct {
+	Future workflow.Future
 }
 
-func (r *BraketGetQuantumTaskResult) Get(ctx workflow.Context) (*braket.GetQuantumTaskOutput, error) {
+func (r *BraketGetQuantumTaskFuture) Get(ctx workflow.Context) (*braket.GetQuantumTaskOutput, error) {
 	var output braket.GetQuantumTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BraketSearchDevicesResult struct {
-	Result workflow.Future
+type BraketSearchDevicesFuture struct {
+	Future workflow.Future
 }
 
-func (r *BraketSearchDevicesResult) Get(ctx workflow.Context) (*braket.SearchDevicesOutput, error) {
+func (r *BraketSearchDevicesFuture) Get(ctx workflow.Context) (*braket.SearchDevicesOutput, error) {
 	var output braket.SearchDevicesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BraketSearchQuantumTasksResult struct {
-	Result workflow.Future
+type BraketSearchQuantumTasksFuture struct {
+	Future workflow.Future
 }
 
-func (r *BraketSearchQuantumTasksResult) Get(ctx workflow.Context) (*braket.SearchQuantumTasksOutput, error) {
+func (r *BraketSearchQuantumTasksFuture) Get(ctx workflow.Context) (*braket.SearchQuantumTasksOutput, error) {
 	var output braket.SearchQuantumTasksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -101,9 +101,9 @@ func (a *BraketStub) CancelQuantumTask(ctx workflow.Context, input *braket.Cance
 	return &output, err
 }
 
-func (a *BraketStub) CancelQuantumTaskAsync(ctx workflow.Context, input *braket.CancelQuantumTaskInput) *BraketCancelQuantumTaskResult {
+func (a *BraketStub) CancelQuantumTaskAsync(ctx workflow.Context, input *braket.CancelQuantumTaskInput) *BraketCancelQuantumTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.braket.CancelQuantumTask", input)
-	return &BraketCancelQuantumTaskResult{Result: future}
+	return &BraketCancelQuantumTaskFuture{Future: future}
 }
 
 func (a *BraketStub) CreateQuantumTask(ctx workflow.Context, input *braket.CreateQuantumTaskInput) (*braket.CreateQuantumTaskOutput, error) {
@@ -112,9 +112,9 @@ func (a *BraketStub) CreateQuantumTask(ctx workflow.Context, input *braket.Creat
 	return &output, err
 }
 
-func (a *BraketStub) CreateQuantumTaskAsync(ctx workflow.Context, input *braket.CreateQuantumTaskInput) *BraketCreateQuantumTaskResult {
+func (a *BraketStub) CreateQuantumTaskAsync(ctx workflow.Context, input *braket.CreateQuantumTaskInput) *BraketCreateQuantumTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.braket.CreateQuantumTask", input)
-	return &BraketCreateQuantumTaskResult{Result: future}
+	return &BraketCreateQuantumTaskFuture{Future: future}
 }
 
 func (a *BraketStub) GetDevice(ctx workflow.Context, input *braket.GetDeviceInput) (*braket.GetDeviceOutput, error) {
@@ -123,9 +123,9 @@ func (a *BraketStub) GetDevice(ctx workflow.Context, input *braket.GetDeviceInpu
 	return &output, err
 }
 
-func (a *BraketStub) GetDeviceAsync(ctx workflow.Context, input *braket.GetDeviceInput) *BraketGetDeviceResult {
+func (a *BraketStub) GetDeviceAsync(ctx workflow.Context, input *braket.GetDeviceInput) *BraketGetDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.braket.GetDevice", input)
-	return &BraketGetDeviceResult{Result: future}
+	return &BraketGetDeviceFuture{Future: future}
 }
 
 func (a *BraketStub) GetQuantumTask(ctx workflow.Context, input *braket.GetQuantumTaskInput) (*braket.GetQuantumTaskOutput, error) {
@@ -134,9 +134,9 @@ func (a *BraketStub) GetQuantumTask(ctx workflow.Context, input *braket.GetQuant
 	return &output, err
 }
 
-func (a *BraketStub) GetQuantumTaskAsync(ctx workflow.Context, input *braket.GetQuantumTaskInput) *BraketGetQuantumTaskResult {
+func (a *BraketStub) GetQuantumTaskAsync(ctx workflow.Context, input *braket.GetQuantumTaskInput) *BraketGetQuantumTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.braket.GetQuantumTask", input)
-	return &BraketGetQuantumTaskResult{Result: future}
+	return &BraketGetQuantumTaskFuture{Future: future}
 }
 
 func (a *BraketStub) SearchDevices(ctx workflow.Context, input *braket.SearchDevicesInput) (*braket.SearchDevicesOutput, error) {
@@ -145,9 +145,9 @@ func (a *BraketStub) SearchDevices(ctx workflow.Context, input *braket.SearchDev
 	return &output, err
 }
 
-func (a *BraketStub) SearchDevicesAsync(ctx workflow.Context, input *braket.SearchDevicesInput) *BraketSearchDevicesResult {
+func (a *BraketStub) SearchDevicesAsync(ctx workflow.Context, input *braket.SearchDevicesInput) *BraketSearchDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.braket.SearchDevices", input)
-	return &BraketSearchDevicesResult{Result: future}
+	return &BraketSearchDevicesFuture{Future: future}
 }
 
 func (a *BraketStub) SearchQuantumTasks(ctx workflow.Context, input *braket.SearchQuantumTasksInput) (*braket.SearchQuantumTasksOutput, error) {
@@ -156,7 +156,7 @@ func (a *BraketStub) SearchQuantumTasks(ctx workflow.Context, input *braket.Sear
 	return &output, err
 }
 
-func (a *BraketStub) SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *BraketSearchQuantumTasksResult {
+func (a *BraketStub) SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *BraketSearchQuantumTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.braket.SearchQuantumTasks", input)
-	return &BraketSearchQuantumTasksResult{Result: future}
+	return &BraketSearchQuantumTasksFuture{Future: future}
 }

@@ -11,115 +11,115 @@ import (
 
 type CodePipelineClient interface {
 	AcknowledgeJob(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) (*codepipeline.AcknowledgeJobOutput, error)
-	AcknowledgeJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) *CodepipelineAcknowledgeJobResult
+	AcknowledgeJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) *CodepipelineAcknowledgeJobFuture
 
 	AcknowledgeThirdPartyJob(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) (*codepipeline.AcknowledgeThirdPartyJobOutput, error)
-	AcknowledgeThirdPartyJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) *CodepipelineAcknowledgeThirdPartyJobResult
+	AcknowledgeThirdPartyJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) *CodepipelineAcknowledgeThirdPartyJobFuture
 
 	CreateCustomActionType(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) (*codepipeline.CreateCustomActionTypeOutput, error)
-	CreateCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) *CodepipelineCreateCustomActionTypeResult
+	CreateCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) *CodepipelineCreateCustomActionTypeFuture
 
 	CreatePipeline(ctx workflow.Context, input *codepipeline.CreatePipelineInput) (*codepipeline.CreatePipelineOutput, error)
-	CreatePipelineAsync(ctx workflow.Context, input *codepipeline.CreatePipelineInput) *CodepipelineCreatePipelineResult
+	CreatePipelineAsync(ctx workflow.Context, input *codepipeline.CreatePipelineInput) *CodepipelineCreatePipelineFuture
 
 	DeleteCustomActionType(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) (*codepipeline.DeleteCustomActionTypeOutput, error)
-	DeleteCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) *CodepipelineDeleteCustomActionTypeResult
+	DeleteCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) *CodepipelineDeleteCustomActionTypeFuture
 
 	DeletePipeline(ctx workflow.Context, input *codepipeline.DeletePipelineInput) (*codepipeline.DeletePipelineOutput, error)
-	DeletePipelineAsync(ctx workflow.Context, input *codepipeline.DeletePipelineInput) *CodepipelineDeletePipelineResult
+	DeletePipelineAsync(ctx workflow.Context, input *codepipeline.DeletePipelineInput) *CodepipelineDeletePipelineFuture
 
 	DeleteWebhook(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) (*codepipeline.DeleteWebhookOutput, error)
-	DeleteWebhookAsync(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) *CodepipelineDeleteWebhookResult
+	DeleteWebhookAsync(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) *CodepipelineDeleteWebhookFuture
 
 	DeregisterWebhookWithThirdParty(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) (*codepipeline.DeregisterWebhookWithThirdPartyOutput, error)
-	DeregisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) *CodepipelineDeregisterWebhookWithThirdPartyResult
+	DeregisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) *CodepipelineDeregisterWebhookWithThirdPartyFuture
 
 	DisableStageTransition(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) (*codepipeline.DisableStageTransitionOutput, error)
-	DisableStageTransitionAsync(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) *CodepipelineDisableStageTransitionResult
+	DisableStageTransitionAsync(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) *CodepipelineDisableStageTransitionFuture
 
 	EnableStageTransition(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) (*codepipeline.EnableStageTransitionOutput, error)
-	EnableStageTransitionAsync(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) *CodepipelineEnableStageTransitionResult
+	EnableStageTransitionAsync(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) *CodepipelineEnableStageTransitionFuture
 
 	GetJobDetails(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) (*codepipeline.GetJobDetailsOutput, error)
-	GetJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) *CodepipelineGetJobDetailsResult
+	GetJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) *CodepipelineGetJobDetailsFuture
 
 	GetPipeline(ctx workflow.Context, input *codepipeline.GetPipelineInput) (*codepipeline.GetPipelineOutput, error)
-	GetPipelineAsync(ctx workflow.Context, input *codepipeline.GetPipelineInput) *CodepipelineGetPipelineResult
+	GetPipelineAsync(ctx workflow.Context, input *codepipeline.GetPipelineInput) *CodepipelineGetPipelineFuture
 
 	GetPipelineExecution(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) (*codepipeline.GetPipelineExecutionOutput, error)
-	GetPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) *CodepipelineGetPipelineExecutionResult
+	GetPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) *CodepipelineGetPipelineExecutionFuture
 
 	GetPipelineState(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) (*codepipeline.GetPipelineStateOutput, error)
-	GetPipelineStateAsync(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) *CodepipelineGetPipelineStateResult
+	GetPipelineStateAsync(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) *CodepipelineGetPipelineStateFuture
 
 	GetThirdPartyJobDetails(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) (*codepipeline.GetThirdPartyJobDetailsOutput, error)
-	GetThirdPartyJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) *CodepipelineGetThirdPartyJobDetailsResult
+	GetThirdPartyJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) *CodepipelineGetThirdPartyJobDetailsFuture
 
 	ListActionExecutions(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) (*codepipeline.ListActionExecutionsOutput, error)
-	ListActionExecutionsAsync(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) *CodepipelineListActionExecutionsResult
+	ListActionExecutionsAsync(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) *CodepipelineListActionExecutionsFuture
 
 	ListActionTypes(ctx workflow.Context, input *codepipeline.ListActionTypesInput) (*codepipeline.ListActionTypesOutput, error)
-	ListActionTypesAsync(ctx workflow.Context, input *codepipeline.ListActionTypesInput) *CodepipelineListActionTypesResult
+	ListActionTypesAsync(ctx workflow.Context, input *codepipeline.ListActionTypesInput) *CodepipelineListActionTypesFuture
 
 	ListPipelineExecutions(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) (*codepipeline.ListPipelineExecutionsOutput, error)
-	ListPipelineExecutionsAsync(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) *CodepipelineListPipelineExecutionsResult
+	ListPipelineExecutionsAsync(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) *CodepipelineListPipelineExecutionsFuture
 
 	ListPipelines(ctx workflow.Context, input *codepipeline.ListPipelinesInput) (*codepipeline.ListPipelinesOutput, error)
-	ListPipelinesAsync(ctx workflow.Context, input *codepipeline.ListPipelinesInput) *CodepipelineListPipelinesResult
+	ListPipelinesAsync(ctx workflow.Context, input *codepipeline.ListPipelinesInput) *CodepipelineListPipelinesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) (*codepipeline.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) *CodepipelineListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) *CodepipelineListTagsForResourceFuture
 
 	ListWebhooks(ctx workflow.Context, input *codepipeline.ListWebhooksInput) (*codepipeline.ListWebhooksOutput, error)
-	ListWebhooksAsync(ctx workflow.Context, input *codepipeline.ListWebhooksInput) *CodepipelineListWebhooksResult
+	ListWebhooksAsync(ctx workflow.Context, input *codepipeline.ListWebhooksInput) *CodepipelineListWebhooksFuture
 
 	PollForJobs(ctx workflow.Context, input *codepipeline.PollForJobsInput) (*codepipeline.PollForJobsOutput, error)
-	PollForJobsAsync(ctx workflow.Context, input *codepipeline.PollForJobsInput) *CodepipelinePollForJobsResult
+	PollForJobsAsync(ctx workflow.Context, input *codepipeline.PollForJobsInput) *CodepipelinePollForJobsFuture
 
 	PollForThirdPartyJobs(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) (*codepipeline.PollForThirdPartyJobsOutput, error)
-	PollForThirdPartyJobsAsync(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) *CodepipelinePollForThirdPartyJobsResult
+	PollForThirdPartyJobsAsync(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) *CodepipelinePollForThirdPartyJobsFuture
 
 	PutActionRevision(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) (*codepipeline.PutActionRevisionOutput, error)
-	PutActionRevisionAsync(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) *CodepipelinePutActionRevisionResult
+	PutActionRevisionAsync(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) *CodepipelinePutActionRevisionFuture
 
 	PutApprovalResult(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) (*codepipeline.PutApprovalResultOutput, error)
-	PutApprovalResultAsync(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) *CodepipelinePutApprovalResultResult
+	PutApprovalResultAsync(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) *CodepipelinePutApprovalResultFuture
 
 	PutJobFailureResult(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) (*codepipeline.PutJobFailureResultOutput, error)
-	PutJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) *CodepipelinePutJobFailureResultResult
+	PutJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) *CodepipelinePutJobFailureResultFuture
 
 	PutJobSuccessResult(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) (*codepipeline.PutJobSuccessResultOutput, error)
-	PutJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) *CodepipelinePutJobSuccessResultResult
+	PutJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) *CodepipelinePutJobSuccessResultFuture
 
 	PutThirdPartyJobFailureResult(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) (*codepipeline.PutThirdPartyJobFailureResultOutput, error)
-	PutThirdPartyJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) *CodepipelinePutThirdPartyJobFailureResultResult
+	PutThirdPartyJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) *CodepipelinePutThirdPartyJobFailureResultFuture
 
 	PutThirdPartyJobSuccessResult(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error)
-	PutThirdPartyJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) *CodepipelinePutThirdPartyJobSuccessResultResult
+	PutThirdPartyJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) *CodepipelinePutThirdPartyJobSuccessResultFuture
 
 	PutWebhook(ctx workflow.Context, input *codepipeline.PutWebhookInput) (*codepipeline.PutWebhookOutput, error)
-	PutWebhookAsync(ctx workflow.Context, input *codepipeline.PutWebhookInput) *CodepipelinePutWebhookResult
+	PutWebhookAsync(ctx workflow.Context, input *codepipeline.PutWebhookInput) *CodepipelinePutWebhookFuture
 
 	RegisterWebhookWithThirdParty(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) (*codepipeline.RegisterWebhookWithThirdPartyOutput, error)
-	RegisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) *CodepipelineRegisterWebhookWithThirdPartyResult
+	RegisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) *CodepipelineRegisterWebhookWithThirdPartyFuture
 
 	RetryStageExecution(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) (*codepipeline.RetryStageExecutionOutput, error)
-	RetryStageExecutionAsync(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) *CodepipelineRetryStageExecutionResult
+	RetryStageExecutionAsync(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) *CodepipelineRetryStageExecutionFuture
 
 	StartPipelineExecution(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) (*codepipeline.StartPipelineExecutionOutput, error)
-	StartPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) *CodepipelineStartPipelineExecutionResult
+	StartPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) *CodepipelineStartPipelineExecutionFuture
 
 	StopPipelineExecution(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) (*codepipeline.StopPipelineExecutionOutput, error)
-	StopPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) *CodepipelineStopPipelineExecutionResult
+	StopPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) *CodepipelineStopPipelineExecutionFuture
 
 	TagResource(ctx workflow.Context, input *codepipeline.TagResourceInput) (*codepipeline.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *codepipeline.TagResourceInput) *CodepipelineTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *codepipeline.TagResourceInput) *CodepipelineTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *codepipeline.UntagResourceInput) (*codepipeline.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *codepipeline.UntagResourceInput) *CodepipelineUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *codepipeline.UntagResourceInput) *CodepipelineUntagResourceFuture
 
 	UpdatePipeline(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) (*codepipeline.UpdatePipelineOutput, error)
-	UpdatePipelineAsync(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) *CodepipelineUpdatePipelineResult
+	UpdatePipelineAsync(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) *CodepipelineUpdatePipelineFuture
 }
 
 type CodePipelineStub struct{}
@@ -128,373 +128,373 @@ func NewCodePipelineStub() CodePipelineClient {
 	return &CodePipelineStub{}
 }
 
-type CodepipelineAcknowledgeJobResult struct {
-	Result workflow.Future
+type CodepipelineAcknowledgeJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineAcknowledgeJobResult) Get(ctx workflow.Context) (*codepipeline.AcknowledgeJobOutput, error) {
+func (r *CodepipelineAcknowledgeJobFuture) Get(ctx workflow.Context) (*codepipeline.AcknowledgeJobOutput, error) {
 	var output codepipeline.AcknowledgeJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineAcknowledgeThirdPartyJobResult struct {
-	Result workflow.Future
+type CodepipelineAcknowledgeThirdPartyJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineAcknowledgeThirdPartyJobResult) Get(ctx workflow.Context) (*codepipeline.AcknowledgeThirdPartyJobOutput, error) {
+func (r *CodepipelineAcknowledgeThirdPartyJobFuture) Get(ctx workflow.Context) (*codepipeline.AcknowledgeThirdPartyJobOutput, error) {
 	var output codepipeline.AcknowledgeThirdPartyJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineCreateCustomActionTypeResult struct {
-	Result workflow.Future
+type CodepipelineCreateCustomActionTypeFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineCreateCustomActionTypeResult) Get(ctx workflow.Context) (*codepipeline.CreateCustomActionTypeOutput, error) {
+func (r *CodepipelineCreateCustomActionTypeFuture) Get(ctx workflow.Context) (*codepipeline.CreateCustomActionTypeOutput, error) {
 	var output codepipeline.CreateCustomActionTypeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineCreatePipelineResult struct {
-	Result workflow.Future
+type CodepipelineCreatePipelineFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineCreatePipelineResult) Get(ctx workflow.Context) (*codepipeline.CreatePipelineOutput, error) {
+func (r *CodepipelineCreatePipelineFuture) Get(ctx workflow.Context) (*codepipeline.CreatePipelineOutput, error) {
 	var output codepipeline.CreatePipelineOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineDeleteCustomActionTypeResult struct {
-	Result workflow.Future
+type CodepipelineDeleteCustomActionTypeFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineDeleteCustomActionTypeResult) Get(ctx workflow.Context) (*codepipeline.DeleteCustomActionTypeOutput, error) {
+func (r *CodepipelineDeleteCustomActionTypeFuture) Get(ctx workflow.Context) (*codepipeline.DeleteCustomActionTypeOutput, error) {
 	var output codepipeline.DeleteCustomActionTypeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineDeletePipelineResult struct {
-	Result workflow.Future
+type CodepipelineDeletePipelineFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineDeletePipelineResult) Get(ctx workflow.Context) (*codepipeline.DeletePipelineOutput, error) {
+func (r *CodepipelineDeletePipelineFuture) Get(ctx workflow.Context) (*codepipeline.DeletePipelineOutput, error) {
 	var output codepipeline.DeletePipelineOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineDeleteWebhookResult struct {
-	Result workflow.Future
+type CodepipelineDeleteWebhookFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineDeleteWebhookResult) Get(ctx workflow.Context) (*codepipeline.DeleteWebhookOutput, error) {
+func (r *CodepipelineDeleteWebhookFuture) Get(ctx workflow.Context) (*codepipeline.DeleteWebhookOutput, error) {
 	var output codepipeline.DeleteWebhookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineDeregisterWebhookWithThirdPartyResult struct {
-	Result workflow.Future
+type CodepipelineDeregisterWebhookWithThirdPartyFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineDeregisterWebhookWithThirdPartyResult) Get(ctx workflow.Context) (*codepipeline.DeregisterWebhookWithThirdPartyOutput, error) {
+func (r *CodepipelineDeregisterWebhookWithThirdPartyFuture) Get(ctx workflow.Context) (*codepipeline.DeregisterWebhookWithThirdPartyOutput, error) {
 	var output codepipeline.DeregisterWebhookWithThirdPartyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineDisableStageTransitionResult struct {
-	Result workflow.Future
+type CodepipelineDisableStageTransitionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineDisableStageTransitionResult) Get(ctx workflow.Context) (*codepipeline.DisableStageTransitionOutput, error) {
+func (r *CodepipelineDisableStageTransitionFuture) Get(ctx workflow.Context) (*codepipeline.DisableStageTransitionOutput, error) {
 	var output codepipeline.DisableStageTransitionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineEnableStageTransitionResult struct {
-	Result workflow.Future
+type CodepipelineEnableStageTransitionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineEnableStageTransitionResult) Get(ctx workflow.Context) (*codepipeline.EnableStageTransitionOutput, error) {
+func (r *CodepipelineEnableStageTransitionFuture) Get(ctx workflow.Context) (*codepipeline.EnableStageTransitionOutput, error) {
 	var output codepipeline.EnableStageTransitionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineGetJobDetailsResult struct {
-	Result workflow.Future
+type CodepipelineGetJobDetailsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineGetJobDetailsResult) Get(ctx workflow.Context) (*codepipeline.GetJobDetailsOutput, error) {
+func (r *CodepipelineGetJobDetailsFuture) Get(ctx workflow.Context) (*codepipeline.GetJobDetailsOutput, error) {
 	var output codepipeline.GetJobDetailsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineGetPipelineResult struct {
-	Result workflow.Future
+type CodepipelineGetPipelineFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineGetPipelineResult) Get(ctx workflow.Context) (*codepipeline.GetPipelineOutput, error) {
+func (r *CodepipelineGetPipelineFuture) Get(ctx workflow.Context) (*codepipeline.GetPipelineOutput, error) {
 	var output codepipeline.GetPipelineOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineGetPipelineExecutionResult struct {
-	Result workflow.Future
+type CodepipelineGetPipelineExecutionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineGetPipelineExecutionResult) Get(ctx workflow.Context) (*codepipeline.GetPipelineExecutionOutput, error) {
+func (r *CodepipelineGetPipelineExecutionFuture) Get(ctx workflow.Context) (*codepipeline.GetPipelineExecutionOutput, error) {
 	var output codepipeline.GetPipelineExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineGetPipelineStateResult struct {
-	Result workflow.Future
+type CodepipelineGetPipelineStateFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineGetPipelineStateResult) Get(ctx workflow.Context) (*codepipeline.GetPipelineStateOutput, error) {
+func (r *CodepipelineGetPipelineStateFuture) Get(ctx workflow.Context) (*codepipeline.GetPipelineStateOutput, error) {
 	var output codepipeline.GetPipelineStateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineGetThirdPartyJobDetailsResult struct {
-	Result workflow.Future
+type CodepipelineGetThirdPartyJobDetailsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineGetThirdPartyJobDetailsResult) Get(ctx workflow.Context) (*codepipeline.GetThirdPartyJobDetailsOutput, error) {
+func (r *CodepipelineGetThirdPartyJobDetailsFuture) Get(ctx workflow.Context) (*codepipeline.GetThirdPartyJobDetailsOutput, error) {
 	var output codepipeline.GetThirdPartyJobDetailsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineListActionExecutionsResult struct {
-	Result workflow.Future
+type CodepipelineListActionExecutionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineListActionExecutionsResult) Get(ctx workflow.Context) (*codepipeline.ListActionExecutionsOutput, error) {
+func (r *CodepipelineListActionExecutionsFuture) Get(ctx workflow.Context) (*codepipeline.ListActionExecutionsOutput, error) {
 	var output codepipeline.ListActionExecutionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineListActionTypesResult struct {
-	Result workflow.Future
+type CodepipelineListActionTypesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineListActionTypesResult) Get(ctx workflow.Context) (*codepipeline.ListActionTypesOutput, error) {
+func (r *CodepipelineListActionTypesFuture) Get(ctx workflow.Context) (*codepipeline.ListActionTypesOutput, error) {
 	var output codepipeline.ListActionTypesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineListPipelineExecutionsResult struct {
-	Result workflow.Future
+type CodepipelineListPipelineExecutionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineListPipelineExecutionsResult) Get(ctx workflow.Context) (*codepipeline.ListPipelineExecutionsOutput, error) {
+func (r *CodepipelineListPipelineExecutionsFuture) Get(ctx workflow.Context) (*codepipeline.ListPipelineExecutionsOutput, error) {
 	var output codepipeline.ListPipelineExecutionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineListPipelinesResult struct {
-	Result workflow.Future
+type CodepipelineListPipelinesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineListPipelinesResult) Get(ctx workflow.Context) (*codepipeline.ListPipelinesOutput, error) {
+func (r *CodepipelineListPipelinesFuture) Get(ctx workflow.Context) (*codepipeline.ListPipelinesOutput, error) {
 	var output codepipeline.ListPipelinesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineListTagsForResourceResult struct {
-	Result workflow.Future
+type CodepipelineListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineListTagsForResourceResult) Get(ctx workflow.Context) (*codepipeline.ListTagsForResourceOutput, error) {
+func (r *CodepipelineListTagsForResourceFuture) Get(ctx workflow.Context) (*codepipeline.ListTagsForResourceOutput, error) {
 	var output codepipeline.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineListWebhooksResult struct {
-	Result workflow.Future
+type CodepipelineListWebhooksFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineListWebhooksResult) Get(ctx workflow.Context) (*codepipeline.ListWebhooksOutput, error) {
+func (r *CodepipelineListWebhooksFuture) Get(ctx workflow.Context) (*codepipeline.ListWebhooksOutput, error) {
 	var output codepipeline.ListWebhooksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePollForJobsResult struct {
-	Result workflow.Future
+type CodepipelinePollForJobsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePollForJobsResult) Get(ctx workflow.Context) (*codepipeline.PollForJobsOutput, error) {
+func (r *CodepipelinePollForJobsFuture) Get(ctx workflow.Context) (*codepipeline.PollForJobsOutput, error) {
 	var output codepipeline.PollForJobsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePollForThirdPartyJobsResult struct {
-	Result workflow.Future
+type CodepipelinePollForThirdPartyJobsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePollForThirdPartyJobsResult) Get(ctx workflow.Context) (*codepipeline.PollForThirdPartyJobsOutput, error) {
+func (r *CodepipelinePollForThirdPartyJobsFuture) Get(ctx workflow.Context) (*codepipeline.PollForThirdPartyJobsOutput, error) {
 	var output codepipeline.PollForThirdPartyJobsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePutActionRevisionResult struct {
-	Result workflow.Future
+type CodepipelinePutActionRevisionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePutActionRevisionResult) Get(ctx workflow.Context) (*codepipeline.PutActionRevisionOutput, error) {
+func (r *CodepipelinePutActionRevisionFuture) Get(ctx workflow.Context) (*codepipeline.PutActionRevisionOutput, error) {
 	var output codepipeline.PutActionRevisionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePutApprovalResultResult struct {
-	Result workflow.Future
+type CodepipelinePutApprovalResultFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePutApprovalResultResult) Get(ctx workflow.Context) (*codepipeline.PutApprovalResultOutput, error) {
+func (r *CodepipelinePutApprovalResultFuture) Get(ctx workflow.Context) (*codepipeline.PutApprovalResultOutput, error) {
 	var output codepipeline.PutApprovalResultOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePutJobFailureResultResult struct {
-	Result workflow.Future
+type CodepipelinePutJobFailureResultFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePutJobFailureResultResult) Get(ctx workflow.Context) (*codepipeline.PutJobFailureResultOutput, error) {
+func (r *CodepipelinePutJobFailureResultFuture) Get(ctx workflow.Context) (*codepipeline.PutJobFailureResultOutput, error) {
 	var output codepipeline.PutJobFailureResultOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePutJobSuccessResultResult struct {
-	Result workflow.Future
+type CodepipelinePutJobSuccessResultFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePutJobSuccessResultResult) Get(ctx workflow.Context) (*codepipeline.PutJobSuccessResultOutput, error) {
+func (r *CodepipelinePutJobSuccessResultFuture) Get(ctx workflow.Context) (*codepipeline.PutJobSuccessResultOutput, error) {
 	var output codepipeline.PutJobSuccessResultOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePutThirdPartyJobFailureResultResult struct {
-	Result workflow.Future
+type CodepipelinePutThirdPartyJobFailureResultFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePutThirdPartyJobFailureResultResult) Get(ctx workflow.Context) (*codepipeline.PutThirdPartyJobFailureResultOutput, error) {
+func (r *CodepipelinePutThirdPartyJobFailureResultFuture) Get(ctx workflow.Context) (*codepipeline.PutThirdPartyJobFailureResultOutput, error) {
 	var output codepipeline.PutThirdPartyJobFailureResultOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePutThirdPartyJobSuccessResultResult struct {
-	Result workflow.Future
+type CodepipelinePutThirdPartyJobSuccessResultFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePutThirdPartyJobSuccessResultResult) Get(ctx workflow.Context) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error) {
+func (r *CodepipelinePutThirdPartyJobSuccessResultFuture) Get(ctx workflow.Context) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error) {
 	var output codepipeline.PutThirdPartyJobSuccessResultOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelinePutWebhookResult struct {
-	Result workflow.Future
+type CodepipelinePutWebhookFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelinePutWebhookResult) Get(ctx workflow.Context) (*codepipeline.PutWebhookOutput, error) {
+func (r *CodepipelinePutWebhookFuture) Get(ctx workflow.Context) (*codepipeline.PutWebhookOutput, error) {
 	var output codepipeline.PutWebhookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineRegisterWebhookWithThirdPartyResult struct {
-	Result workflow.Future
+type CodepipelineRegisterWebhookWithThirdPartyFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineRegisterWebhookWithThirdPartyResult) Get(ctx workflow.Context) (*codepipeline.RegisterWebhookWithThirdPartyOutput, error) {
+func (r *CodepipelineRegisterWebhookWithThirdPartyFuture) Get(ctx workflow.Context) (*codepipeline.RegisterWebhookWithThirdPartyOutput, error) {
 	var output codepipeline.RegisterWebhookWithThirdPartyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineRetryStageExecutionResult struct {
-	Result workflow.Future
+type CodepipelineRetryStageExecutionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineRetryStageExecutionResult) Get(ctx workflow.Context) (*codepipeline.RetryStageExecutionOutput, error) {
+func (r *CodepipelineRetryStageExecutionFuture) Get(ctx workflow.Context) (*codepipeline.RetryStageExecutionOutput, error) {
 	var output codepipeline.RetryStageExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineStartPipelineExecutionResult struct {
-	Result workflow.Future
+type CodepipelineStartPipelineExecutionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineStartPipelineExecutionResult) Get(ctx workflow.Context) (*codepipeline.StartPipelineExecutionOutput, error) {
+func (r *CodepipelineStartPipelineExecutionFuture) Get(ctx workflow.Context) (*codepipeline.StartPipelineExecutionOutput, error) {
 	var output codepipeline.StartPipelineExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineStopPipelineExecutionResult struct {
-	Result workflow.Future
+type CodepipelineStopPipelineExecutionFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineStopPipelineExecutionResult) Get(ctx workflow.Context) (*codepipeline.StopPipelineExecutionOutput, error) {
+func (r *CodepipelineStopPipelineExecutionFuture) Get(ctx workflow.Context) (*codepipeline.StopPipelineExecutionOutput, error) {
 	var output codepipeline.StopPipelineExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineTagResourceResult struct {
-	Result workflow.Future
+type CodepipelineTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineTagResourceResult) Get(ctx workflow.Context) (*codepipeline.TagResourceOutput, error) {
+func (r *CodepipelineTagResourceFuture) Get(ctx workflow.Context) (*codepipeline.TagResourceOutput, error) {
 	var output codepipeline.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineUntagResourceResult struct {
-	Result workflow.Future
+type CodepipelineUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineUntagResourceResult) Get(ctx workflow.Context) (*codepipeline.UntagResourceOutput, error) {
+func (r *CodepipelineUntagResourceFuture) Get(ctx workflow.Context) (*codepipeline.UntagResourceOutput, error) {
 	var output codepipeline.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodepipelineUpdatePipelineResult struct {
-	Result workflow.Future
+type CodepipelineUpdatePipelineFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodepipelineUpdatePipelineResult) Get(ctx workflow.Context) (*codepipeline.UpdatePipelineOutput, error) {
+func (r *CodepipelineUpdatePipelineFuture) Get(ctx workflow.Context) (*codepipeline.UpdatePipelineOutput, error) {
 	var output codepipeline.UpdatePipelineOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -504,9 +504,9 @@ func (a *CodePipelineStub) AcknowledgeJob(ctx workflow.Context, input *codepipel
 	return &output, err
 }
 
-func (a *CodePipelineStub) AcknowledgeJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) *CodepipelineAcknowledgeJobResult {
+func (a *CodePipelineStub) AcknowledgeJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) *CodepipelineAcknowledgeJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.AcknowledgeJob", input)
-	return &CodepipelineAcknowledgeJobResult{Result: future}
+	return &CodepipelineAcknowledgeJobFuture{Future: future}
 }
 
 func (a *CodePipelineStub) AcknowledgeThirdPartyJob(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) (*codepipeline.AcknowledgeThirdPartyJobOutput, error) {
@@ -515,9 +515,9 @@ func (a *CodePipelineStub) AcknowledgeThirdPartyJob(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *CodePipelineStub) AcknowledgeThirdPartyJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) *CodepipelineAcknowledgeThirdPartyJobResult {
+func (a *CodePipelineStub) AcknowledgeThirdPartyJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) *CodepipelineAcknowledgeThirdPartyJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.AcknowledgeThirdPartyJob", input)
-	return &CodepipelineAcknowledgeThirdPartyJobResult{Result: future}
+	return &CodepipelineAcknowledgeThirdPartyJobFuture{Future: future}
 }
 
 func (a *CodePipelineStub) CreateCustomActionType(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) (*codepipeline.CreateCustomActionTypeOutput, error) {
@@ -526,9 +526,9 @@ func (a *CodePipelineStub) CreateCustomActionType(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodePipelineStub) CreateCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) *CodepipelineCreateCustomActionTypeResult {
+func (a *CodePipelineStub) CreateCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) *CodepipelineCreateCustomActionTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.CreateCustomActionType", input)
-	return &CodepipelineCreateCustomActionTypeResult{Result: future}
+	return &CodepipelineCreateCustomActionTypeFuture{Future: future}
 }
 
 func (a *CodePipelineStub) CreatePipeline(ctx workflow.Context, input *codepipeline.CreatePipelineInput) (*codepipeline.CreatePipelineOutput, error) {
@@ -537,9 +537,9 @@ func (a *CodePipelineStub) CreatePipeline(ctx workflow.Context, input *codepipel
 	return &output, err
 }
 
-func (a *CodePipelineStub) CreatePipelineAsync(ctx workflow.Context, input *codepipeline.CreatePipelineInput) *CodepipelineCreatePipelineResult {
+func (a *CodePipelineStub) CreatePipelineAsync(ctx workflow.Context, input *codepipeline.CreatePipelineInput) *CodepipelineCreatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.CreatePipeline", input)
-	return &CodepipelineCreatePipelineResult{Result: future}
+	return &CodepipelineCreatePipelineFuture{Future: future}
 }
 
 func (a *CodePipelineStub) DeleteCustomActionType(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) (*codepipeline.DeleteCustomActionTypeOutput, error) {
@@ -548,9 +548,9 @@ func (a *CodePipelineStub) DeleteCustomActionType(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodePipelineStub) DeleteCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) *CodepipelineDeleteCustomActionTypeResult {
+func (a *CodePipelineStub) DeleteCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) *CodepipelineDeleteCustomActionTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.DeleteCustomActionType", input)
-	return &CodepipelineDeleteCustomActionTypeResult{Result: future}
+	return &CodepipelineDeleteCustomActionTypeFuture{Future: future}
 }
 
 func (a *CodePipelineStub) DeletePipeline(ctx workflow.Context, input *codepipeline.DeletePipelineInput) (*codepipeline.DeletePipelineOutput, error) {
@@ -559,9 +559,9 @@ func (a *CodePipelineStub) DeletePipeline(ctx workflow.Context, input *codepipel
 	return &output, err
 }
 
-func (a *CodePipelineStub) DeletePipelineAsync(ctx workflow.Context, input *codepipeline.DeletePipelineInput) *CodepipelineDeletePipelineResult {
+func (a *CodePipelineStub) DeletePipelineAsync(ctx workflow.Context, input *codepipeline.DeletePipelineInput) *CodepipelineDeletePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.DeletePipeline", input)
-	return &CodepipelineDeletePipelineResult{Result: future}
+	return &CodepipelineDeletePipelineFuture{Future: future}
 }
 
 func (a *CodePipelineStub) DeleteWebhook(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) (*codepipeline.DeleteWebhookOutput, error) {
@@ -570,9 +570,9 @@ func (a *CodePipelineStub) DeleteWebhook(ctx workflow.Context, input *codepipeli
 	return &output, err
 }
 
-func (a *CodePipelineStub) DeleteWebhookAsync(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) *CodepipelineDeleteWebhookResult {
+func (a *CodePipelineStub) DeleteWebhookAsync(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) *CodepipelineDeleteWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.DeleteWebhook", input)
-	return &CodepipelineDeleteWebhookResult{Result: future}
+	return &CodepipelineDeleteWebhookFuture{Future: future}
 }
 
 func (a *CodePipelineStub) DeregisterWebhookWithThirdParty(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) (*codepipeline.DeregisterWebhookWithThirdPartyOutput, error) {
@@ -581,9 +581,9 @@ func (a *CodePipelineStub) DeregisterWebhookWithThirdParty(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *CodePipelineStub) DeregisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) *CodepipelineDeregisterWebhookWithThirdPartyResult {
+func (a *CodePipelineStub) DeregisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) *CodepipelineDeregisterWebhookWithThirdPartyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.DeregisterWebhookWithThirdParty", input)
-	return &CodepipelineDeregisterWebhookWithThirdPartyResult{Result: future}
+	return &CodepipelineDeregisterWebhookWithThirdPartyFuture{Future: future}
 }
 
 func (a *CodePipelineStub) DisableStageTransition(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) (*codepipeline.DisableStageTransitionOutput, error) {
@@ -592,9 +592,9 @@ func (a *CodePipelineStub) DisableStageTransition(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodePipelineStub) DisableStageTransitionAsync(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) *CodepipelineDisableStageTransitionResult {
+func (a *CodePipelineStub) DisableStageTransitionAsync(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) *CodepipelineDisableStageTransitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.DisableStageTransition", input)
-	return &CodepipelineDisableStageTransitionResult{Result: future}
+	return &CodepipelineDisableStageTransitionFuture{Future: future}
 }
 
 func (a *CodePipelineStub) EnableStageTransition(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) (*codepipeline.EnableStageTransitionOutput, error) {
@@ -603,9 +603,9 @@ func (a *CodePipelineStub) EnableStageTransition(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *CodePipelineStub) EnableStageTransitionAsync(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) *CodepipelineEnableStageTransitionResult {
+func (a *CodePipelineStub) EnableStageTransitionAsync(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) *CodepipelineEnableStageTransitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.EnableStageTransition", input)
-	return &CodepipelineEnableStageTransitionResult{Result: future}
+	return &CodepipelineEnableStageTransitionFuture{Future: future}
 }
 
 func (a *CodePipelineStub) GetJobDetails(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) (*codepipeline.GetJobDetailsOutput, error) {
@@ -614,9 +614,9 @@ func (a *CodePipelineStub) GetJobDetails(ctx workflow.Context, input *codepipeli
 	return &output, err
 }
 
-func (a *CodePipelineStub) GetJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) *CodepipelineGetJobDetailsResult {
+func (a *CodePipelineStub) GetJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) *CodepipelineGetJobDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.GetJobDetails", input)
-	return &CodepipelineGetJobDetailsResult{Result: future}
+	return &CodepipelineGetJobDetailsFuture{Future: future}
 }
 
 func (a *CodePipelineStub) GetPipeline(ctx workflow.Context, input *codepipeline.GetPipelineInput) (*codepipeline.GetPipelineOutput, error) {
@@ -625,9 +625,9 @@ func (a *CodePipelineStub) GetPipeline(ctx workflow.Context, input *codepipeline
 	return &output, err
 }
 
-func (a *CodePipelineStub) GetPipelineAsync(ctx workflow.Context, input *codepipeline.GetPipelineInput) *CodepipelineGetPipelineResult {
+func (a *CodePipelineStub) GetPipelineAsync(ctx workflow.Context, input *codepipeline.GetPipelineInput) *CodepipelineGetPipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.GetPipeline", input)
-	return &CodepipelineGetPipelineResult{Result: future}
+	return &CodepipelineGetPipelineFuture{Future: future}
 }
 
 func (a *CodePipelineStub) GetPipelineExecution(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) (*codepipeline.GetPipelineExecutionOutput, error) {
@@ -636,9 +636,9 @@ func (a *CodePipelineStub) GetPipelineExecution(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *CodePipelineStub) GetPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) *CodepipelineGetPipelineExecutionResult {
+func (a *CodePipelineStub) GetPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) *CodepipelineGetPipelineExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.GetPipelineExecution", input)
-	return &CodepipelineGetPipelineExecutionResult{Result: future}
+	return &CodepipelineGetPipelineExecutionFuture{Future: future}
 }
 
 func (a *CodePipelineStub) GetPipelineState(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) (*codepipeline.GetPipelineStateOutput, error) {
@@ -647,9 +647,9 @@ func (a *CodePipelineStub) GetPipelineState(ctx workflow.Context, input *codepip
 	return &output, err
 }
 
-func (a *CodePipelineStub) GetPipelineStateAsync(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) *CodepipelineGetPipelineStateResult {
+func (a *CodePipelineStub) GetPipelineStateAsync(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) *CodepipelineGetPipelineStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.GetPipelineState", input)
-	return &CodepipelineGetPipelineStateResult{Result: future}
+	return &CodepipelineGetPipelineStateFuture{Future: future}
 }
 
 func (a *CodePipelineStub) GetThirdPartyJobDetails(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) (*codepipeline.GetThirdPartyJobDetailsOutput, error) {
@@ -658,9 +658,9 @@ func (a *CodePipelineStub) GetThirdPartyJobDetails(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CodePipelineStub) GetThirdPartyJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) *CodepipelineGetThirdPartyJobDetailsResult {
+func (a *CodePipelineStub) GetThirdPartyJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) *CodepipelineGetThirdPartyJobDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.GetThirdPartyJobDetails", input)
-	return &CodepipelineGetThirdPartyJobDetailsResult{Result: future}
+	return &CodepipelineGetThirdPartyJobDetailsFuture{Future: future}
 }
 
 func (a *CodePipelineStub) ListActionExecutions(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) (*codepipeline.ListActionExecutionsOutput, error) {
@@ -669,9 +669,9 @@ func (a *CodePipelineStub) ListActionExecutions(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *CodePipelineStub) ListActionExecutionsAsync(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) *CodepipelineListActionExecutionsResult {
+func (a *CodePipelineStub) ListActionExecutionsAsync(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) *CodepipelineListActionExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.ListActionExecutions", input)
-	return &CodepipelineListActionExecutionsResult{Result: future}
+	return &CodepipelineListActionExecutionsFuture{Future: future}
 }
 
 func (a *CodePipelineStub) ListActionTypes(ctx workflow.Context, input *codepipeline.ListActionTypesInput) (*codepipeline.ListActionTypesOutput, error) {
@@ -680,9 +680,9 @@ func (a *CodePipelineStub) ListActionTypes(ctx workflow.Context, input *codepipe
 	return &output, err
 }
 
-func (a *CodePipelineStub) ListActionTypesAsync(ctx workflow.Context, input *codepipeline.ListActionTypesInput) *CodepipelineListActionTypesResult {
+func (a *CodePipelineStub) ListActionTypesAsync(ctx workflow.Context, input *codepipeline.ListActionTypesInput) *CodepipelineListActionTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.ListActionTypes", input)
-	return &CodepipelineListActionTypesResult{Result: future}
+	return &CodepipelineListActionTypesFuture{Future: future}
 }
 
 func (a *CodePipelineStub) ListPipelineExecutions(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) (*codepipeline.ListPipelineExecutionsOutput, error) {
@@ -691,9 +691,9 @@ func (a *CodePipelineStub) ListPipelineExecutions(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodePipelineStub) ListPipelineExecutionsAsync(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) *CodepipelineListPipelineExecutionsResult {
+func (a *CodePipelineStub) ListPipelineExecutionsAsync(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) *CodepipelineListPipelineExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.ListPipelineExecutions", input)
-	return &CodepipelineListPipelineExecutionsResult{Result: future}
+	return &CodepipelineListPipelineExecutionsFuture{Future: future}
 }
 
 func (a *CodePipelineStub) ListPipelines(ctx workflow.Context, input *codepipeline.ListPipelinesInput) (*codepipeline.ListPipelinesOutput, error) {
@@ -702,9 +702,9 @@ func (a *CodePipelineStub) ListPipelines(ctx workflow.Context, input *codepipeli
 	return &output, err
 }
 
-func (a *CodePipelineStub) ListPipelinesAsync(ctx workflow.Context, input *codepipeline.ListPipelinesInput) *CodepipelineListPipelinesResult {
+func (a *CodePipelineStub) ListPipelinesAsync(ctx workflow.Context, input *codepipeline.ListPipelinesInput) *CodepipelineListPipelinesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.ListPipelines", input)
-	return &CodepipelineListPipelinesResult{Result: future}
+	return &CodepipelineListPipelinesFuture{Future: future}
 }
 
 func (a *CodePipelineStub) ListTagsForResource(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) (*codepipeline.ListTagsForResourceOutput, error) {
@@ -713,9 +713,9 @@ func (a *CodePipelineStub) ListTagsForResource(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodePipelineStub) ListTagsForResourceAsync(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) *CodepipelineListTagsForResourceResult {
+func (a *CodePipelineStub) ListTagsForResourceAsync(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) *CodepipelineListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.ListTagsForResource", input)
-	return &CodepipelineListTagsForResourceResult{Result: future}
+	return &CodepipelineListTagsForResourceFuture{Future: future}
 }
 
 func (a *CodePipelineStub) ListWebhooks(ctx workflow.Context, input *codepipeline.ListWebhooksInput) (*codepipeline.ListWebhooksOutput, error) {
@@ -724,9 +724,9 @@ func (a *CodePipelineStub) ListWebhooks(ctx workflow.Context, input *codepipelin
 	return &output, err
 }
 
-func (a *CodePipelineStub) ListWebhooksAsync(ctx workflow.Context, input *codepipeline.ListWebhooksInput) *CodepipelineListWebhooksResult {
+func (a *CodePipelineStub) ListWebhooksAsync(ctx workflow.Context, input *codepipeline.ListWebhooksInput) *CodepipelineListWebhooksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.ListWebhooks", input)
-	return &CodepipelineListWebhooksResult{Result: future}
+	return &CodepipelineListWebhooksFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PollForJobs(ctx workflow.Context, input *codepipeline.PollForJobsInput) (*codepipeline.PollForJobsOutput, error) {
@@ -735,9 +735,9 @@ func (a *CodePipelineStub) PollForJobs(ctx workflow.Context, input *codepipeline
 	return &output, err
 }
 
-func (a *CodePipelineStub) PollForJobsAsync(ctx workflow.Context, input *codepipeline.PollForJobsInput) *CodepipelinePollForJobsResult {
+func (a *CodePipelineStub) PollForJobsAsync(ctx workflow.Context, input *codepipeline.PollForJobsInput) *CodepipelinePollForJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PollForJobs", input)
-	return &CodepipelinePollForJobsResult{Result: future}
+	return &CodepipelinePollForJobsFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PollForThirdPartyJobs(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) (*codepipeline.PollForThirdPartyJobsOutput, error) {
@@ -746,9 +746,9 @@ func (a *CodePipelineStub) PollForThirdPartyJobs(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *CodePipelineStub) PollForThirdPartyJobsAsync(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) *CodepipelinePollForThirdPartyJobsResult {
+func (a *CodePipelineStub) PollForThirdPartyJobsAsync(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) *CodepipelinePollForThirdPartyJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PollForThirdPartyJobs", input)
-	return &CodepipelinePollForThirdPartyJobsResult{Result: future}
+	return &CodepipelinePollForThirdPartyJobsFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PutActionRevision(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) (*codepipeline.PutActionRevisionOutput, error) {
@@ -757,9 +757,9 @@ func (a *CodePipelineStub) PutActionRevision(ctx workflow.Context, input *codepi
 	return &output, err
 }
 
-func (a *CodePipelineStub) PutActionRevisionAsync(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) *CodepipelinePutActionRevisionResult {
+func (a *CodePipelineStub) PutActionRevisionAsync(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) *CodepipelinePutActionRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PutActionRevision", input)
-	return &CodepipelinePutActionRevisionResult{Result: future}
+	return &CodepipelinePutActionRevisionFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PutApprovalResult(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) (*codepipeline.PutApprovalResultOutput, error) {
@@ -768,9 +768,9 @@ func (a *CodePipelineStub) PutApprovalResult(ctx workflow.Context, input *codepi
 	return &output, err
 }
 
-func (a *CodePipelineStub) PutApprovalResultAsync(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) *CodepipelinePutApprovalResultResult {
+func (a *CodePipelineStub) PutApprovalResultAsync(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) *CodepipelinePutApprovalResultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PutApprovalResult", input)
-	return &CodepipelinePutApprovalResultResult{Result: future}
+	return &CodepipelinePutApprovalResultFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PutJobFailureResult(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) (*codepipeline.PutJobFailureResultOutput, error) {
@@ -779,9 +779,9 @@ func (a *CodePipelineStub) PutJobFailureResult(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodePipelineStub) PutJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) *CodepipelinePutJobFailureResultResult {
+func (a *CodePipelineStub) PutJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) *CodepipelinePutJobFailureResultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PutJobFailureResult", input)
-	return &CodepipelinePutJobFailureResultResult{Result: future}
+	return &CodepipelinePutJobFailureResultFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PutJobSuccessResult(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) (*codepipeline.PutJobSuccessResultOutput, error) {
@@ -790,9 +790,9 @@ func (a *CodePipelineStub) PutJobSuccessResult(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodePipelineStub) PutJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) *CodepipelinePutJobSuccessResultResult {
+func (a *CodePipelineStub) PutJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) *CodepipelinePutJobSuccessResultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PutJobSuccessResult", input)
-	return &CodepipelinePutJobSuccessResultResult{Result: future}
+	return &CodepipelinePutJobSuccessResultFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PutThirdPartyJobFailureResult(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) (*codepipeline.PutThirdPartyJobFailureResultOutput, error) {
@@ -801,9 +801,9 @@ func (a *CodePipelineStub) PutThirdPartyJobFailureResult(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *CodePipelineStub) PutThirdPartyJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) *CodepipelinePutThirdPartyJobFailureResultResult {
+func (a *CodePipelineStub) PutThirdPartyJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) *CodepipelinePutThirdPartyJobFailureResultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PutThirdPartyJobFailureResult", input)
-	return &CodepipelinePutThirdPartyJobFailureResultResult{Result: future}
+	return &CodepipelinePutThirdPartyJobFailureResultFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PutThirdPartyJobSuccessResult(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error) {
@@ -812,9 +812,9 @@ func (a *CodePipelineStub) PutThirdPartyJobSuccessResult(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *CodePipelineStub) PutThirdPartyJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) *CodepipelinePutThirdPartyJobSuccessResultResult {
+func (a *CodePipelineStub) PutThirdPartyJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) *CodepipelinePutThirdPartyJobSuccessResultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PutThirdPartyJobSuccessResult", input)
-	return &CodepipelinePutThirdPartyJobSuccessResultResult{Result: future}
+	return &CodepipelinePutThirdPartyJobSuccessResultFuture{Future: future}
 }
 
 func (a *CodePipelineStub) PutWebhook(ctx workflow.Context, input *codepipeline.PutWebhookInput) (*codepipeline.PutWebhookOutput, error) {
@@ -823,9 +823,9 @@ func (a *CodePipelineStub) PutWebhook(ctx workflow.Context, input *codepipeline.
 	return &output, err
 }
 
-func (a *CodePipelineStub) PutWebhookAsync(ctx workflow.Context, input *codepipeline.PutWebhookInput) *CodepipelinePutWebhookResult {
+func (a *CodePipelineStub) PutWebhookAsync(ctx workflow.Context, input *codepipeline.PutWebhookInput) *CodepipelinePutWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.PutWebhook", input)
-	return &CodepipelinePutWebhookResult{Result: future}
+	return &CodepipelinePutWebhookFuture{Future: future}
 }
 
 func (a *CodePipelineStub) RegisterWebhookWithThirdParty(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) (*codepipeline.RegisterWebhookWithThirdPartyOutput, error) {
@@ -834,9 +834,9 @@ func (a *CodePipelineStub) RegisterWebhookWithThirdParty(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *CodePipelineStub) RegisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) *CodepipelineRegisterWebhookWithThirdPartyResult {
+func (a *CodePipelineStub) RegisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) *CodepipelineRegisterWebhookWithThirdPartyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.RegisterWebhookWithThirdParty", input)
-	return &CodepipelineRegisterWebhookWithThirdPartyResult{Result: future}
+	return &CodepipelineRegisterWebhookWithThirdPartyFuture{Future: future}
 }
 
 func (a *CodePipelineStub) RetryStageExecution(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) (*codepipeline.RetryStageExecutionOutput, error) {
@@ -845,9 +845,9 @@ func (a *CodePipelineStub) RetryStageExecution(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodePipelineStub) RetryStageExecutionAsync(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) *CodepipelineRetryStageExecutionResult {
+func (a *CodePipelineStub) RetryStageExecutionAsync(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) *CodepipelineRetryStageExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.RetryStageExecution", input)
-	return &CodepipelineRetryStageExecutionResult{Result: future}
+	return &CodepipelineRetryStageExecutionFuture{Future: future}
 }
 
 func (a *CodePipelineStub) StartPipelineExecution(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) (*codepipeline.StartPipelineExecutionOutput, error) {
@@ -856,9 +856,9 @@ func (a *CodePipelineStub) StartPipelineExecution(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodePipelineStub) StartPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) *CodepipelineStartPipelineExecutionResult {
+func (a *CodePipelineStub) StartPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) *CodepipelineStartPipelineExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.StartPipelineExecution", input)
-	return &CodepipelineStartPipelineExecutionResult{Result: future}
+	return &CodepipelineStartPipelineExecutionFuture{Future: future}
 }
 
 func (a *CodePipelineStub) StopPipelineExecution(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) (*codepipeline.StopPipelineExecutionOutput, error) {
@@ -867,9 +867,9 @@ func (a *CodePipelineStub) StopPipelineExecution(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *CodePipelineStub) StopPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) *CodepipelineStopPipelineExecutionResult {
+func (a *CodePipelineStub) StopPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) *CodepipelineStopPipelineExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.StopPipelineExecution", input)
-	return &CodepipelineStopPipelineExecutionResult{Result: future}
+	return &CodepipelineStopPipelineExecutionFuture{Future: future}
 }
 
 func (a *CodePipelineStub) TagResource(ctx workflow.Context, input *codepipeline.TagResourceInput) (*codepipeline.TagResourceOutput, error) {
@@ -878,9 +878,9 @@ func (a *CodePipelineStub) TagResource(ctx workflow.Context, input *codepipeline
 	return &output, err
 }
 
-func (a *CodePipelineStub) TagResourceAsync(ctx workflow.Context, input *codepipeline.TagResourceInput) *CodepipelineTagResourceResult {
+func (a *CodePipelineStub) TagResourceAsync(ctx workflow.Context, input *codepipeline.TagResourceInput) *CodepipelineTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.TagResource", input)
-	return &CodepipelineTagResourceResult{Result: future}
+	return &CodepipelineTagResourceFuture{Future: future}
 }
 
 func (a *CodePipelineStub) UntagResource(ctx workflow.Context, input *codepipeline.UntagResourceInput) (*codepipeline.UntagResourceOutput, error) {
@@ -889,9 +889,9 @@ func (a *CodePipelineStub) UntagResource(ctx workflow.Context, input *codepipeli
 	return &output, err
 }
 
-func (a *CodePipelineStub) UntagResourceAsync(ctx workflow.Context, input *codepipeline.UntagResourceInput) *CodepipelineUntagResourceResult {
+func (a *CodePipelineStub) UntagResourceAsync(ctx workflow.Context, input *codepipeline.UntagResourceInput) *CodepipelineUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.UntagResource", input)
-	return &CodepipelineUntagResourceResult{Result: future}
+	return &CodepipelineUntagResourceFuture{Future: future}
 }
 
 func (a *CodePipelineStub) UpdatePipeline(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) (*codepipeline.UpdatePipelineOutput, error) {
@@ -900,7 +900,7 @@ func (a *CodePipelineStub) UpdatePipeline(ctx workflow.Context, input *codepipel
 	return &output, err
 }
 
-func (a *CodePipelineStub) UpdatePipelineAsync(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) *CodepipelineUpdatePipelineResult {
+func (a *CodePipelineStub) UpdatePipelineAsync(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) *CodepipelineUpdatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codepipeline.UpdatePipeline", input)
-	return &CodepipelineUpdatePipelineResult{Result: future}
+	return &CodepipelineUpdatePipelineFuture{Future: future}
 }

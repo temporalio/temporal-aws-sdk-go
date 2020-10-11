@@ -11,22 +11,22 @@ import (
 
 type ElasticInferenceClient interface {
 	DescribeAcceleratorOfferings(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) (*elasticinference.DescribeAcceleratorOfferingsOutput, error)
-	DescribeAcceleratorOfferingsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) *ElasticinferenceDescribeAcceleratorOfferingsResult
+	DescribeAcceleratorOfferingsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) *ElasticinferenceDescribeAcceleratorOfferingsFuture
 
 	DescribeAcceleratorTypes(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) (*elasticinference.DescribeAcceleratorTypesOutput, error)
-	DescribeAcceleratorTypesAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) *ElasticinferenceDescribeAcceleratorTypesResult
+	DescribeAcceleratorTypesAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) *ElasticinferenceDescribeAcceleratorTypesFuture
 
 	DescribeAccelerators(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) (*elasticinference.DescribeAcceleratorsOutput, error)
-	DescribeAcceleratorsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) *ElasticinferenceDescribeAcceleratorsResult
+	DescribeAcceleratorsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) *ElasticinferenceDescribeAcceleratorsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) (*elasticinference.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) *ElasticinferenceListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) *ElasticinferenceListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *elasticinference.TagResourceInput) (*elasticinference.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *elasticinference.TagResourceInput) *ElasticinferenceTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *elasticinference.TagResourceInput) *ElasticinferenceTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *elasticinference.UntagResourceInput) *ElasticinferenceUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *elasticinference.UntagResourceInput) *ElasticinferenceUntagResourceFuture
 }
 
 type ElasticInferenceStub struct{}
@@ -35,63 +35,63 @@ func NewElasticInferenceStub() ElasticInferenceClient {
 	return &ElasticInferenceStub{}
 }
 
-type ElasticinferenceDescribeAcceleratorOfferingsResult struct {
-	Result workflow.Future
+type ElasticinferenceDescribeAcceleratorOfferingsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticinferenceDescribeAcceleratorOfferingsResult) Get(ctx workflow.Context) (*elasticinference.DescribeAcceleratorOfferingsOutput, error) {
+func (r *ElasticinferenceDescribeAcceleratorOfferingsFuture) Get(ctx workflow.Context) (*elasticinference.DescribeAcceleratorOfferingsOutput, error) {
 	var output elasticinference.DescribeAcceleratorOfferingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticinferenceDescribeAcceleratorTypesResult struct {
-	Result workflow.Future
+type ElasticinferenceDescribeAcceleratorTypesFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticinferenceDescribeAcceleratorTypesResult) Get(ctx workflow.Context) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
+func (r *ElasticinferenceDescribeAcceleratorTypesFuture) Get(ctx workflow.Context) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
 	var output elasticinference.DescribeAcceleratorTypesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticinferenceDescribeAcceleratorsResult struct {
-	Result workflow.Future
+type ElasticinferenceDescribeAcceleratorsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticinferenceDescribeAcceleratorsResult) Get(ctx workflow.Context) (*elasticinference.DescribeAcceleratorsOutput, error) {
+func (r *ElasticinferenceDescribeAcceleratorsFuture) Get(ctx workflow.Context) (*elasticinference.DescribeAcceleratorsOutput, error) {
 	var output elasticinference.DescribeAcceleratorsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticinferenceListTagsForResourceResult struct {
-	Result workflow.Future
+type ElasticinferenceListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticinferenceListTagsForResourceResult) Get(ctx workflow.Context) (*elasticinference.ListTagsForResourceOutput, error) {
+func (r *ElasticinferenceListTagsForResourceFuture) Get(ctx workflow.Context) (*elasticinference.ListTagsForResourceOutput, error) {
 	var output elasticinference.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticinferenceTagResourceResult struct {
-	Result workflow.Future
+type ElasticinferenceTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticinferenceTagResourceResult) Get(ctx workflow.Context) (*elasticinference.TagResourceOutput, error) {
+func (r *ElasticinferenceTagResourceFuture) Get(ctx workflow.Context) (*elasticinference.TagResourceOutput, error) {
 	var output elasticinference.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticinferenceUntagResourceResult struct {
-	Result workflow.Future
+type ElasticinferenceUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticinferenceUntagResourceResult) Get(ctx workflow.Context) (*elasticinference.UntagResourceOutput, error) {
+func (r *ElasticinferenceUntagResourceFuture) Get(ctx workflow.Context) (*elasticinference.UntagResourceOutput, error) {
 	var output elasticinference.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -101,9 +101,9 @@ func (a *ElasticInferenceStub) DescribeAcceleratorOfferings(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ElasticInferenceStub) DescribeAcceleratorOfferingsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) *ElasticinferenceDescribeAcceleratorOfferingsResult {
+func (a *ElasticInferenceStub) DescribeAcceleratorOfferingsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) *ElasticinferenceDescribeAcceleratorOfferingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticinference.DescribeAcceleratorOfferings", input)
-	return &ElasticinferenceDescribeAcceleratorOfferingsResult{Result: future}
+	return &ElasticinferenceDescribeAcceleratorOfferingsFuture{Future: future}
 }
 
 func (a *ElasticInferenceStub) DescribeAcceleratorTypes(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
@@ -112,9 +112,9 @@ func (a *ElasticInferenceStub) DescribeAcceleratorTypes(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ElasticInferenceStub) DescribeAcceleratorTypesAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) *ElasticinferenceDescribeAcceleratorTypesResult {
+func (a *ElasticInferenceStub) DescribeAcceleratorTypesAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) *ElasticinferenceDescribeAcceleratorTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticinference.DescribeAcceleratorTypes", input)
-	return &ElasticinferenceDescribeAcceleratorTypesResult{Result: future}
+	return &ElasticinferenceDescribeAcceleratorTypesFuture{Future: future}
 }
 
 func (a *ElasticInferenceStub) DescribeAccelerators(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) (*elasticinference.DescribeAcceleratorsOutput, error) {
@@ -123,9 +123,9 @@ func (a *ElasticInferenceStub) DescribeAccelerators(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ElasticInferenceStub) DescribeAcceleratorsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) *ElasticinferenceDescribeAcceleratorsResult {
+func (a *ElasticInferenceStub) DescribeAcceleratorsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) *ElasticinferenceDescribeAcceleratorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticinference.DescribeAccelerators", input)
-	return &ElasticinferenceDescribeAcceleratorsResult{Result: future}
+	return &ElasticinferenceDescribeAcceleratorsFuture{Future: future}
 }
 
 func (a *ElasticInferenceStub) ListTagsForResource(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) (*elasticinference.ListTagsForResourceOutput, error) {
@@ -134,9 +134,9 @@ func (a *ElasticInferenceStub) ListTagsForResource(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ElasticInferenceStub) ListTagsForResourceAsync(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) *ElasticinferenceListTagsForResourceResult {
+func (a *ElasticInferenceStub) ListTagsForResourceAsync(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) *ElasticinferenceListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticinference.ListTagsForResource", input)
-	return &ElasticinferenceListTagsForResourceResult{Result: future}
+	return &ElasticinferenceListTagsForResourceFuture{Future: future}
 }
 
 func (a *ElasticInferenceStub) TagResource(ctx workflow.Context, input *elasticinference.TagResourceInput) (*elasticinference.TagResourceOutput, error) {
@@ -145,9 +145,9 @@ func (a *ElasticInferenceStub) TagResource(ctx workflow.Context, input *elastici
 	return &output, err
 }
 
-func (a *ElasticInferenceStub) TagResourceAsync(ctx workflow.Context, input *elasticinference.TagResourceInput) *ElasticinferenceTagResourceResult {
+func (a *ElasticInferenceStub) TagResourceAsync(ctx workflow.Context, input *elasticinference.TagResourceInput) *ElasticinferenceTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticinference.TagResource", input)
-	return &ElasticinferenceTagResourceResult{Result: future}
+	return &ElasticinferenceTagResourceFuture{Future: future}
 }
 
 func (a *ElasticInferenceStub) UntagResource(ctx workflow.Context, input *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error) {
@@ -156,7 +156,7 @@ func (a *ElasticInferenceStub) UntagResource(ctx workflow.Context, input *elasti
 	return &output, err
 }
 
-func (a *ElasticInferenceStub) UntagResourceAsync(ctx workflow.Context, input *elasticinference.UntagResourceInput) *ElasticinferenceUntagResourceResult {
+func (a *ElasticInferenceStub) UntagResourceAsync(ctx workflow.Context, input *elasticinference.UntagResourceInput) *ElasticinferenceUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticinference.UntagResource", input)
-	return &ElasticinferenceUntagResourceResult{Result: future}
+	return &ElasticinferenceUntagResourceFuture{Future: future}
 }

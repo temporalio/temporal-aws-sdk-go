@@ -11,19 +11,19 @@ import (
 
 type KinesisVideoArchivedMediaClient interface {
 	GetClip(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetClipInput) (*kinesisvideoarchivedmedia.GetClipOutput, error)
-	GetClipAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetClipInput) *KinesisvideoarchivedmediaGetClipResult
+	GetClipAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetClipInput) *KinesisvideoarchivedmediaGetClipFuture
 
 	GetDASHStreamingSessionURL(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetDASHStreamingSessionURLInput) (*kinesisvideoarchivedmedia.GetDASHStreamingSessionURLOutput, error)
-	GetDASHStreamingSessionURLAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetDASHStreamingSessionURLInput) *KinesisvideoarchivedmediaGetDASHStreamingSessionURLResult
+	GetDASHStreamingSessionURLAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetDASHStreamingSessionURLInput) *KinesisvideoarchivedmediaGetDASHStreamingSessionURLFuture
 
 	GetHLSStreamingSessionURL(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetHLSStreamingSessionURLInput) (*kinesisvideoarchivedmedia.GetHLSStreamingSessionURLOutput, error)
-	GetHLSStreamingSessionURLAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetHLSStreamingSessionURLInput) *KinesisvideoarchivedmediaGetHLSStreamingSessionURLResult
+	GetHLSStreamingSessionURLAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetHLSStreamingSessionURLInput) *KinesisvideoarchivedmediaGetHLSStreamingSessionURLFuture
 
 	GetMediaForFragmentList(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetMediaForFragmentListInput) (*kinesisvideoarchivedmedia.GetMediaForFragmentListOutput, error)
-	GetMediaForFragmentListAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetMediaForFragmentListInput) *KinesisvideoarchivedmediaGetMediaForFragmentListResult
+	GetMediaForFragmentListAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetMediaForFragmentListInput) *KinesisvideoarchivedmediaGetMediaForFragmentListFuture
 
 	ListFragments(ctx workflow.Context, input *kinesisvideoarchivedmedia.ListFragmentsInput) (*kinesisvideoarchivedmedia.ListFragmentsOutput, error)
-	ListFragmentsAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.ListFragmentsInput) *KinesisvideoarchivedmediaListFragmentsResult
+	ListFragmentsAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.ListFragmentsInput) *KinesisvideoarchivedmediaListFragmentsFuture
 }
 
 type KinesisVideoArchivedMediaStub struct{}
@@ -32,53 +32,53 @@ func NewKinesisVideoArchivedMediaStub() KinesisVideoArchivedMediaClient {
 	return &KinesisVideoArchivedMediaStub{}
 }
 
-type KinesisvideoarchivedmediaGetClipResult struct {
-	Result workflow.Future
+type KinesisvideoarchivedmediaGetClipFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisvideoarchivedmediaGetClipResult) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.GetClipOutput, error) {
+func (r *KinesisvideoarchivedmediaGetClipFuture) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.GetClipOutput, error) {
 	var output kinesisvideoarchivedmedia.GetClipOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoarchivedmediaGetDASHStreamingSessionURLResult struct {
-	Result workflow.Future
+type KinesisvideoarchivedmediaGetDASHStreamingSessionURLFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisvideoarchivedmediaGetDASHStreamingSessionURLResult) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.GetDASHStreamingSessionURLOutput, error) {
+func (r *KinesisvideoarchivedmediaGetDASHStreamingSessionURLFuture) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.GetDASHStreamingSessionURLOutput, error) {
 	var output kinesisvideoarchivedmedia.GetDASHStreamingSessionURLOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoarchivedmediaGetHLSStreamingSessionURLResult struct {
-	Result workflow.Future
+type KinesisvideoarchivedmediaGetHLSStreamingSessionURLFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisvideoarchivedmediaGetHLSStreamingSessionURLResult) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.GetHLSStreamingSessionURLOutput, error) {
+func (r *KinesisvideoarchivedmediaGetHLSStreamingSessionURLFuture) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.GetHLSStreamingSessionURLOutput, error) {
 	var output kinesisvideoarchivedmedia.GetHLSStreamingSessionURLOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoarchivedmediaGetMediaForFragmentListResult struct {
-	Result workflow.Future
+type KinesisvideoarchivedmediaGetMediaForFragmentListFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisvideoarchivedmediaGetMediaForFragmentListResult) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.GetMediaForFragmentListOutput, error) {
+func (r *KinesisvideoarchivedmediaGetMediaForFragmentListFuture) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.GetMediaForFragmentListOutput, error) {
 	var output kinesisvideoarchivedmedia.GetMediaForFragmentListOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoarchivedmediaListFragmentsResult struct {
-	Result workflow.Future
+type KinesisvideoarchivedmediaListFragmentsFuture struct {
+	Future workflow.Future
 }
 
-func (r *KinesisvideoarchivedmediaListFragmentsResult) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.ListFragmentsOutput, error) {
+func (r *KinesisvideoarchivedmediaListFragmentsFuture) Get(ctx workflow.Context) (*kinesisvideoarchivedmedia.ListFragmentsOutput, error) {
 	var output kinesisvideoarchivedmedia.ListFragmentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -88,9 +88,9 @@ func (a *KinesisVideoArchivedMediaStub) GetClip(ctx workflow.Context, input *kin
 	return &output, err
 }
 
-func (a *KinesisVideoArchivedMediaStub) GetClipAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetClipInput) *KinesisvideoarchivedmediaGetClipResult {
+func (a *KinesisVideoArchivedMediaStub) GetClipAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetClipInput) *KinesisvideoarchivedmediaGetClipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideoarchivedmedia.GetClip", input)
-	return &KinesisvideoarchivedmediaGetClipResult{Result: future}
+	return &KinesisvideoarchivedmediaGetClipFuture{Future: future}
 }
 
 func (a *KinesisVideoArchivedMediaStub) GetDASHStreamingSessionURL(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetDASHStreamingSessionURLInput) (*kinesisvideoarchivedmedia.GetDASHStreamingSessionURLOutput, error) {
@@ -99,9 +99,9 @@ func (a *KinesisVideoArchivedMediaStub) GetDASHStreamingSessionURL(ctx workflow.
 	return &output, err
 }
 
-func (a *KinesisVideoArchivedMediaStub) GetDASHStreamingSessionURLAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetDASHStreamingSessionURLInput) *KinesisvideoarchivedmediaGetDASHStreamingSessionURLResult {
+func (a *KinesisVideoArchivedMediaStub) GetDASHStreamingSessionURLAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetDASHStreamingSessionURLInput) *KinesisvideoarchivedmediaGetDASHStreamingSessionURLFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideoarchivedmedia.GetDASHStreamingSessionURL", input)
-	return &KinesisvideoarchivedmediaGetDASHStreamingSessionURLResult{Result: future}
+	return &KinesisvideoarchivedmediaGetDASHStreamingSessionURLFuture{Future: future}
 }
 
 func (a *KinesisVideoArchivedMediaStub) GetHLSStreamingSessionURL(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetHLSStreamingSessionURLInput) (*kinesisvideoarchivedmedia.GetHLSStreamingSessionURLOutput, error) {
@@ -110,9 +110,9 @@ func (a *KinesisVideoArchivedMediaStub) GetHLSStreamingSessionURL(ctx workflow.C
 	return &output, err
 }
 
-func (a *KinesisVideoArchivedMediaStub) GetHLSStreamingSessionURLAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetHLSStreamingSessionURLInput) *KinesisvideoarchivedmediaGetHLSStreamingSessionURLResult {
+func (a *KinesisVideoArchivedMediaStub) GetHLSStreamingSessionURLAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetHLSStreamingSessionURLInput) *KinesisvideoarchivedmediaGetHLSStreamingSessionURLFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideoarchivedmedia.GetHLSStreamingSessionURL", input)
-	return &KinesisvideoarchivedmediaGetHLSStreamingSessionURLResult{Result: future}
+	return &KinesisvideoarchivedmediaGetHLSStreamingSessionURLFuture{Future: future}
 }
 
 func (a *KinesisVideoArchivedMediaStub) GetMediaForFragmentList(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetMediaForFragmentListInput) (*kinesisvideoarchivedmedia.GetMediaForFragmentListOutput, error) {
@@ -121,9 +121,9 @@ func (a *KinesisVideoArchivedMediaStub) GetMediaForFragmentList(ctx workflow.Con
 	return &output, err
 }
 
-func (a *KinesisVideoArchivedMediaStub) GetMediaForFragmentListAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetMediaForFragmentListInput) *KinesisvideoarchivedmediaGetMediaForFragmentListResult {
+func (a *KinesisVideoArchivedMediaStub) GetMediaForFragmentListAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetMediaForFragmentListInput) *KinesisvideoarchivedmediaGetMediaForFragmentListFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideoarchivedmedia.GetMediaForFragmentList", input)
-	return &KinesisvideoarchivedmediaGetMediaForFragmentListResult{Result: future}
+	return &KinesisvideoarchivedmediaGetMediaForFragmentListFuture{Future: future}
 }
 
 func (a *KinesisVideoArchivedMediaStub) ListFragments(ctx workflow.Context, input *kinesisvideoarchivedmedia.ListFragmentsInput) (*kinesisvideoarchivedmedia.ListFragmentsOutput, error) {
@@ -132,7 +132,7 @@ func (a *KinesisVideoArchivedMediaStub) ListFragments(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *KinesisVideoArchivedMediaStub) ListFragmentsAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.ListFragmentsInput) *KinesisvideoarchivedmediaListFragmentsResult {
+func (a *KinesisVideoArchivedMediaStub) ListFragmentsAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.ListFragmentsInput) *KinesisvideoarchivedmediaListFragmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideoarchivedmedia.ListFragments", input)
-	return &KinesisvideoarchivedmediaListFragmentsResult{Result: future}
+	return &KinesisvideoarchivedmediaListFragmentsFuture{Future: future}
 }

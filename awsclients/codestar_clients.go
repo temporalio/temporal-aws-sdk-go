@@ -11,58 +11,58 @@ import (
 
 type CodeStarClient interface {
 	AssociateTeamMember(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) (*codestar.AssociateTeamMemberOutput, error)
-	AssociateTeamMemberAsync(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) *CodestarAssociateTeamMemberResult
+	AssociateTeamMemberAsync(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) *CodestarAssociateTeamMemberFuture
 
 	CreateProject(ctx workflow.Context, input *codestar.CreateProjectInput) (*codestar.CreateProjectOutput, error)
-	CreateProjectAsync(ctx workflow.Context, input *codestar.CreateProjectInput) *CodestarCreateProjectResult
+	CreateProjectAsync(ctx workflow.Context, input *codestar.CreateProjectInput) *CodestarCreateProjectFuture
 
 	CreateUserProfile(ctx workflow.Context, input *codestar.CreateUserProfileInput) (*codestar.CreateUserProfileOutput, error)
-	CreateUserProfileAsync(ctx workflow.Context, input *codestar.CreateUserProfileInput) *CodestarCreateUserProfileResult
+	CreateUserProfileAsync(ctx workflow.Context, input *codestar.CreateUserProfileInput) *CodestarCreateUserProfileFuture
 
 	DeleteProject(ctx workflow.Context, input *codestar.DeleteProjectInput) (*codestar.DeleteProjectOutput, error)
-	DeleteProjectAsync(ctx workflow.Context, input *codestar.DeleteProjectInput) *CodestarDeleteProjectResult
+	DeleteProjectAsync(ctx workflow.Context, input *codestar.DeleteProjectInput) *CodestarDeleteProjectFuture
 
 	DeleteUserProfile(ctx workflow.Context, input *codestar.DeleteUserProfileInput) (*codestar.DeleteUserProfileOutput, error)
-	DeleteUserProfileAsync(ctx workflow.Context, input *codestar.DeleteUserProfileInput) *CodestarDeleteUserProfileResult
+	DeleteUserProfileAsync(ctx workflow.Context, input *codestar.DeleteUserProfileInput) *CodestarDeleteUserProfileFuture
 
 	DescribeProject(ctx workflow.Context, input *codestar.DescribeProjectInput) (*codestar.DescribeProjectOutput, error)
-	DescribeProjectAsync(ctx workflow.Context, input *codestar.DescribeProjectInput) *CodestarDescribeProjectResult
+	DescribeProjectAsync(ctx workflow.Context, input *codestar.DescribeProjectInput) *CodestarDescribeProjectFuture
 
 	DescribeUserProfile(ctx workflow.Context, input *codestar.DescribeUserProfileInput) (*codestar.DescribeUserProfileOutput, error)
-	DescribeUserProfileAsync(ctx workflow.Context, input *codestar.DescribeUserProfileInput) *CodestarDescribeUserProfileResult
+	DescribeUserProfileAsync(ctx workflow.Context, input *codestar.DescribeUserProfileInput) *CodestarDescribeUserProfileFuture
 
 	DisassociateTeamMember(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) (*codestar.DisassociateTeamMemberOutput, error)
-	DisassociateTeamMemberAsync(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) *CodestarDisassociateTeamMemberResult
+	DisassociateTeamMemberAsync(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) *CodestarDisassociateTeamMemberFuture
 
 	ListProjects(ctx workflow.Context, input *codestar.ListProjectsInput) (*codestar.ListProjectsOutput, error)
-	ListProjectsAsync(ctx workflow.Context, input *codestar.ListProjectsInput) *CodestarListProjectsResult
+	ListProjectsAsync(ctx workflow.Context, input *codestar.ListProjectsInput) *CodestarListProjectsFuture
 
 	ListResources(ctx workflow.Context, input *codestar.ListResourcesInput) (*codestar.ListResourcesOutput, error)
-	ListResourcesAsync(ctx workflow.Context, input *codestar.ListResourcesInput) *CodestarListResourcesResult
+	ListResourcesAsync(ctx workflow.Context, input *codestar.ListResourcesInput) *CodestarListResourcesFuture
 
 	ListTagsForProject(ctx workflow.Context, input *codestar.ListTagsForProjectInput) (*codestar.ListTagsForProjectOutput, error)
-	ListTagsForProjectAsync(ctx workflow.Context, input *codestar.ListTagsForProjectInput) *CodestarListTagsForProjectResult
+	ListTagsForProjectAsync(ctx workflow.Context, input *codestar.ListTagsForProjectInput) *CodestarListTagsForProjectFuture
 
 	ListTeamMembers(ctx workflow.Context, input *codestar.ListTeamMembersInput) (*codestar.ListTeamMembersOutput, error)
-	ListTeamMembersAsync(ctx workflow.Context, input *codestar.ListTeamMembersInput) *CodestarListTeamMembersResult
+	ListTeamMembersAsync(ctx workflow.Context, input *codestar.ListTeamMembersInput) *CodestarListTeamMembersFuture
 
 	ListUserProfiles(ctx workflow.Context, input *codestar.ListUserProfilesInput) (*codestar.ListUserProfilesOutput, error)
-	ListUserProfilesAsync(ctx workflow.Context, input *codestar.ListUserProfilesInput) *CodestarListUserProfilesResult
+	ListUserProfilesAsync(ctx workflow.Context, input *codestar.ListUserProfilesInput) *CodestarListUserProfilesFuture
 
 	TagProject(ctx workflow.Context, input *codestar.TagProjectInput) (*codestar.TagProjectOutput, error)
-	TagProjectAsync(ctx workflow.Context, input *codestar.TagProjectInput) *CodestarTagProjectResult
+	TagProjectAsync(ctx workflow.Context, input *codestar.TagProjectInput) *CodestarTagProjectFuture
 
 	UntagProject(ctx workflow.Context, input *codestar.UntagProjectInput) (*codestar.UntagProjectOutput, error)
-	UntagProjectAsync(ctx workflow.Context, input *codestar.UntagProjectInput) *CodestarUntagProjectResult
+	UntagProjectAsync(ctx workflow.Context, input *codestar.UntagProjectInput) *CodestarUntagProjectFuture
 
 	UpdateProject(ctx workflow.Context, input *codestar.UpdateProjectInput) (*codestar.UpdateProjectOutput, error)
-	UpdateProjectAsync(ctx workflow.Context, input *codestar.UpdateProjectInput) *CodestarUpdateProjectResult
+	UpdateProjectAsync(ctx workflow.Context, input *codestar.UpdateProjectInput) *CodestarUpdateProjectFuture
 
 	UpdateTeamMember(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) (*codestar.UpdateTeamMemberOutput, error)
-	UpdateTeamMemberAsync(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) *CodestarUpdateTeamMemberResult
+	UpdateTeamMemberAsync(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) *CodestarUpdateTeamMemberFuture
 
 	UpdateUserProfile(ctx workflow.Context, input *codestar.UpdateUserProfileInput) (*codestar.UpdateUserProfileOutput, error)
-	UpdateUserProfileAsync(ctx workflow.Context, input *codestar.UpdateUserProfileInput) *CodestarUpdateUserProfileResult
+	UpdateUserProfileAsync(ctx workflow.Context, input *codestar.UpdateUserProfileInput) *CodestarUpdateUserProfileFuture
 }
 
 type CodeStarStub struct{}
@@ -71,183 +71,183 @@ func NewCodeStarStub() CodeStarClient {
 	return &CodeStarStub{}
 }
 
-type CodestarAssociateTeamMemberResult struct {
-	Result workflow.Future
+type CodestarAssociateTeamMemberFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarAssociateTeamMemberResult) Get(ctx workflow.Context) (*codestar.AssociateTeamMemberOutput, error) {
+func (r *CodestarAssociateTeamMemberFuture) Get(ctx workflow.Context) (*codestar.AssociateTeamMemberOutput, error) {
 	var output codestar.AssociateTeamMemberOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarCreateProjectResult struct {
-	Result workflow.Future
+type CodestarCreateProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarCreateProjectResult) Get(ctx workflow.Context) (*codestar.CreateProjectOutput, error) {
+func (r *CodestarCreateProjectFuture) Get(ctx workflow.Context) (*codestar.CreateProjectOutput, error) {
 	var output codestar.CreateProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarCreateUserProfileResult struct {
-	Result workflow.Future
+type CodestarCreateUserProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarCreateUserProfileResult) Get(ctx workflow.Context) (*codestar.CreateUserProfileOutput, error) {
+func (r *CodestarCreateUserProfileFuture) Get(ctx workflow.Context) (*codestar.CreateUserProfileOutput, error) {
 	var output codestar.CreateUserProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarDeleteProjectResult struct {
-	Result workflow.Future
+type CodestarDeleteProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarDeleteProjectResult) Get(ctx workflow.Context) (*codestar.DeleteProjectOutput, error) {
+func (r *CodestarDeleteProjectFuture) Get(ctx workflow.Context) (*codestar.DeleteProjectOutput, error) {
 	var output codestar.DeleteProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarDeleteUserProfileResult struct {
-	Result workflow.Future
+type CodestarDeleteUserProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarDeleteUserProfileResult) Get(ctx workflow.Context) (*codestar.DeleteUserProfileOutput, error) {
+func (r *CodestarDeleteUserProfileFuture) Get(ctx workflow.Context) (*codestar.DeleteUserProfileOutput, error) {
 	var output codestar.DeleteUserProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarDescribeProjectResult struct {
-	Result workflow.Future
+type CodestarDescribeProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarDescribeProjectResult) Get(ctx workflow.Context) (*codestar.DescribeProjectOutput, error) {
+func (r *CodestarDescribeProjectFuture) Get(ctx workflow.Context) (*codestar.DescribeProjectOutput, error) {
 	var output codestar.DescribeProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarDescribeUserProfileResult struct {
-	Result workflow.Future
+type CodestarDescribeUserProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarDescribeUserProfileResult) Get(ctx workflow.Context) (*codestar.DescribeUserProfileOutput, error) {
+func (r *CodestarDescribeUserProfileFuture) Get(ctx workflow.Context) (*codestar.DescribeUserProfileOutput, error) {
 	var output codestar.DescribeUserProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarDisassociateTeamMemberResult struct {
-	Result workflow.Future
+type CodestarDisassociateTeamMemberFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarDisassociateTeamMemberResult) Get(ctx workflow.Context) (*codestar.DisassociateTeamMemberOutput, error) {
+func (r *CodestarDisassociateTeamMemberFuture) Get(ctx workflow.Context) (*codestar.DisassociateTeamMemberOutput, error) {
 	var output codestar.DisassociateTeamMemberOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarListProjectsResult struct {
-	Result workflow.Future
+type CodestarListProjectsFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarListProjectsResult) Get(ctx workflow.Context) (*codestar.ListProjectsOutput, error) {
+func (r *CodestarListProjectsFuture) Get(ctx workflow.Context) (*codestar.ListProjectsOutput, error) {
 	var output codestar.ListProjectsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarListResourcesResult struct {
-	Result workflow.Future
+type CodestarListResourcesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarListResourcesResult) Get(ctx workflow.Context) (*codestar.ListResourcesOutput, error) {
+func (r *CodestarListResourcesFuture) Get(ctx workflow.Context) (*codestar.ListResourcesOutput, error) {
 	var output codestar.ListResourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarListTagsForProjectResult struct {
-	Result workflow.Future
+type CodestarListTagsForProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarListTagsForProjectResult) Get(ctx workflow.Context) (*codestar.ListTagsForProjectOutput, error) {
+func (r *CodestarListTagsForProjectFuture) Get(ctx workflow.Context) (*codestar.ListTagsForProjectOutput, error) {
 	var output codestar.ListTagsForProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarListTeamMembersResult struct {
-	Result workflow.Future
+type CodestarListTeamMembersFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarListTeamMembersResult) Get(ctx workflow.Context) (*codestar.ListTeamMembersOutput, error) {
+func (r *CodestarListTeamMembersFuture) Get(ctx workflow.Context) (*codestar.ListTeamMembersOutput, error) {
 	var output codestar.ListTeamMembersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarListUserProfilesResult struct {
-	Result workflow.Future
+type CodestarListUserProfilesFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarListUserProfilesResult) Get(ctx workflow.Context) (*codestar.ListUserProfilesOutput, error) {
+func (r *CodestarListUserProfilesFuture) Get(ctx workflow.Context) (*codestar.ListUserProfilesOutput, error) {
 	var output codestar.ListUserProfilesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarTagProjectResult struct {
-	Result workflow.Future
+type CodestarTagProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarTagProjectResult) Get(ctx workflow.Context) (*codestar.TagProjectOutput, error) {
+func (r *CodestarTagProjectFuture) Get(ctx workflow.Context) (*codestar.TagProjectOutput, error) {
 	var output codestar.TagProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarUntagProjectResult struct {
-	Result workflow.Future
+type CodestarUntagProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarUntagProjectResult) Get(ctx workflow.Context) (*codestar.UntagProjectOutput, error) {
+func (r *CodestarUntagProjectFuture) Get(ctx workflow.Context) (*codestar.UntagProjectOutput, error) {
 	var output codestar.UntagProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarUpdateProjectResult struct {
-	Result workflow.Future
+type CodestarUpdateProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarUpdateProjectResult) Get(ctx workflow.Context) (*codestar.UpdateProjectOutput, error) {
+func (r *CodestarUpdateProjectFuture) Get(ctx workflow.Context) (*codestar.UpdateProjectOutput, error) {
 	var output codestar.UpdateProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarUpdateTeamMemberResult struct {
-	Result workflow.Future
+type CodestarUpdateTeamMemberFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarUpdateTeamMemberResult) Get(ctx workflow.Context) (*codestar.UpdateTeamMemberOutput, error) {
+func (r *CodestarUpdateTeamMemberFuture) Get(ctx workflow.Context) (*codestar.UpdateTeamMemberOutput, error) {
 	var output codestar.UpdateTeamMemberOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodestarUpdateUserProfileResult struct {
-	Result workflow.Future
+type CodestarUpdateUserProfileFuture struct {
+	Future workflow.Future
 }
 
-func (r *CodestarUpdateUserProfileResult) Get(ctx workflow.Context) (*codestar.UpdateUserProfileOutput, error) {
+func (r *CodestarUpdateUserProfileFuture) Get(ctx workflow.Context) (*codestar.UpdateUserProfileOutput, error) {
 	var output codestar.UpdateUserProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -257,9 +257,9 @@ func (a *CodeStarStub) AssociateTeamMember(ctx workflow.Context, input *codestar
 	return &output, err
 }
 
-func (a *CodeStarStub) AssociateTeamMemberAsync(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) *CodestarAssociateTeamMemberResult {
+func (a *CodeStarStub) AssociateTeamMemberAsync(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) *CodestarAssociateTeamMemberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.AssociateTeamMember", input)
-	return &CodestarAssociateTeamMemberResult{Result: future}
+	return &CodestarAssociateTeamMemberFuture{Future: future}
 }
 
 func (a *CodeStarStub) CreateProject(ctx workflow.Context, input *codestar.CreateProjectInput) (*codestar.CreateProjectOutput, error) {
@@ -268,9 +268,9 @@ func (a *CodeStarStub) CreateProject(ctx workflow.Context, input *codestar.Creat
 	return &output, err
 }
 
-func (a *CodeStarStub) CreateProjectAsync(ctx workflow.Context, input *codestar.CreateProjectInput) *CodestarCreateProjectResult {
+func (a *CodeStarStub) CreateProjectAsync(ctx workflow.Context, input *codestar.CreateProjectInput) *CodestarCreateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.CreateProject", input)
-	return &CodestarCreateProjectResult{Result: future}
+	return &CodestarCreateProjectFuture{Future: future}
 }
 
 func (a *CodeStarStub) CreateUserProfile(ctx workflow.Context, input *codestar.CreateUserProfileInput) (*codestar.CreateUserProfileOutput, error) {
@@ -279,9 +279,9 @@ func (a *CodeStarStub) CreateUserProfile(ctx workflow.Context, input *codestar.C
 	return &output, err
 }
 
-func (a *CodeStarStub) CreateUserProfileAsync(ctx workflow.Context, input *codestar.CreateUserProfileInput) *CodestarCreateUserProfileResult {
+func (a *CodeStarStub) CreateUserProfileAsync(ctx workflow.Context, input *codestar.CreateUserProfileInput) *CodestarCreateUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.CreateUserProfile", input)
-	return &CodestarCreateUserProfileResult{Result: future}
+	return &CodestarCreateUserProfileFuture{Future: future}
 }
 
 func (a *CodeStarStub) DeleteProject(ctx workflow.Context, input *codestar.DeleteProjectInput) (*codestar.DeleteProjectOutput, error) {
@@ -290,9 +290,9 @@ func (a *CodeStarStub) DeleteProject(ctx workflow.Context, input *codestar.Delet
 	return &output, err
 }
 
-func (a *CodeStarStub) DeleteProjectAsync(ctx workflow.Context, input *codestar.DeleteProjectInput) *CodestarDeleteProjectResult {
+func (a *CodeStarStub) DeleteProjectAsync(ctx workflow.Context, input *codestar.DeleteProjectInput) *CodestarDeleteProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.DeleteProject", input)
-	return &CodestarDeleteProjectResult{Result: future}
+	return &CodestarDeleteProjectFuture{Future: future}
 }
 
 func (a *CodeStarStub) DeleteUserProfile(ctx workflow.Context, input *codestar.DeleteUserProfileInput) (*codestar.DeleteUserProfileOutput, error) {
@@ -301,9 +301,9 @@ func (a *CodeStarStub) DeleteUserProfile(ctx workflow.Context, input *codestar.D
 	return &output, err
 }
 
-func (a *CodeStarStub) DeleteUserProfileAsync(ctx workflow.Context, input *codestar.DeleteUserProfileInput) *CodestarDeleteUserProfileResult {
+func (a *CodeStarStub) DeleteUserProfileAsync(ctx workflow.Context, input *codestar.DeleteUserProfileInput) *CodestarDeleteUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.DeleteUserProfile", input)
-	return &CodestarDeleteUserProfileResult{Result: future}
+	return &CodestarDeleteUserProfileFuture{Future: future}
 }
 
 func (a *CodeStarStub) DescribeProject(ctx workflow.Context, input *codestar.DescribeProjectInput) (*codestar.DescribeProjectOutput, error) {
@@ -312,9 +312,9 @@ func (a *CodeStarStub) DescribeProject(ctx workflow.Context, input *codestar.Des
 	return &output, err
 }
 
-func (a *CodeStarStub) DescribeProjectAsync(ctx workflow.Context, input *codestar.DescribeProjectInput) *CodestarDescribeProjectResult {
+func (a *CodeStarStub) DescribeProjectAsync(ctx workflow.Context, input *codestar.DescribeProjectInput) *CodestarDescribeProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.DescribeProject", input)
-	return &CodestarDescribeProjectResult{Result: future}
+	return &CodestarDescribeProjectFuture{Future: future}
 }
 
 func (a *CodeStarStub) DescribeUserProfile(ctx workflow.Context, input *codestar.DescribeUserProfileInput) (*codestar.DescribeUserProfileOutput, error) {
@@ -323,9 +323,9 @@ func (a *CodeStarStub) DescribeUserProfile(ctx workflow.Context, input *codestar
 	return &output, err
 }
 
-func (a *CodeStarStub) DescribeUserProfileAsync(ctx workflow.Context, input *codestar.DescribeUserProfileInput) *CodestarDescribeUserProfileResult {
+func (a *CodeStarStub) DescribeUserProfileAsync(ctx workflow.Context, input *codestar.DescribeUserProfileInput) *CodestarDescribeUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.DescribeUserProfile", input)
-	return &CodestarDescribeUserProfileResult{Result: future}
+	return &CodestarDescribeUserProfileFuture{Future: future}
 }
 
 func (a *CodeStarStub) DisassociateTeamMember(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) (*codestar.DisassociateTeamMemberOutput, error) {
@@ -334,9 +334,9 @@ func (a *CodeStarStub) DisassociateTeamMember(ctx workflow.Context, input *codes
 	return &output, err
 }
 
-func (a *CodeStarStub) DisassociateTeamMemberAsync(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) *CodestarDisassociateTeamMemberResult {
+func (a *CodeStarStub) DisassociateTeamMemberAsync(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) *CodestarDisassociateTeamMemberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.DisassociateTeamMember", input)
-	return &CodestarDisassociateTeamMemberResult{Result: future}
+	return &CodestarDisassociateTeamMemberFuture{Future: future}
 }
 
 func (a *CodeStarStub) ListProjects(ctx workflow.Context, input *codestar.ListProjectsInput) (*codestar.ListProjectsOutput, error) {
@@ -345,9 +345,9 @@ func (a *CodeStarStub) ListProjects(ctx workflow.Context, input *codestar.ListPr
 	return &output, err
 }
 
-func (a *CodeStarStub) ListProjectsAsync(ctx workflow.Context, input *codestar.ListProjectsInput) *CodestarListProjectsResult {
+func (a *CodeStarStub) ListProjectsAsync(ctx workflow.Context, input *codestar.ListProjectsInput) *CodestarListProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.ListProjects", input)
-	return &CodestarListProjectsResult{Result: future}
+	return &CodestarListProjectsFuture{Future: future}
 }
 
 func (a *CodeStarStub) ListResources(ctx workflow.Context, input *codestar.ListResourcesInput) (*codestar.ListResourcesOutput, error) {
@@ -356,9 +356,9 @@ func (a *CodeStarStub) ListResources(ctx workflow.Context, input *codestar.ListR
 	return &output, err
 }
 
-func (a *CodeStarStub) ListResourcesAsync(ctx workflow.Context, input *codestar.ListResourcesInput) *CodestarListResourcesResult {
+func (a *CodeStarStub) ListResourcesAsync(ctx workflow.Context, input *codestar.ListResourcesInput) *CodestarListResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.ListResources", input)
-	return &CodestarListResourcesResult{Result: future}
+	return &CodestarListResourcesFuture{Future: future}
 }
 
 func (a *CodeStarStub) ListTagsForProject(ctx workflow.Context, input *codestar.ListTagsForProjectInput) (*codestar.ListTagsForProjectOutput, error) {
@@ -367,9 +367,9 @@ func (a *CodeStarStub) ListTagsForProject(ctx workflow.Context, input *codestar.
 	return &output, err
 }
 
-func (a *CodeStarStub) ListTagsForProjectAsync(ctx workflow.Context, input *codestar.ListTagsForProjectInput) *CodestarListTagsForProjectResult {
+func (a *CodeStarStub) ListTagsForProjectAsync(ctx workflow.Context, input *codestar.ListTagsForProjectInput) *CodestarListTagsForProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.ListTagsForProject", input)
-	return &CodestarListTagsForProjectResult{Result: future}
+	return &CodestarListTagsForProjectFuture{Future: future}
 }
 
 func (a *CodeStarStub) ListTeamMembers(ctx workflow.Context, input *codestar.ListTeamMembersInput) (*codestar.ListTeamMembersOutput, error) {
@@ -378,9 +378,9 @@ func (a *CodeStarStub) ListTeamMembers(ctx workflow.Context, input *codestar.Lis
 	return &output, err
 }
 
-func (a *CodeStarStub) ListTeamMembersAsync(ctx workflow.Context, input *codestar.ListTeamMembersInput) *CodestarListTeamMembersResult {
+func (a *CodeStarStub) ListTeamMembersAsync(ctx workflow.Context, input *codestar.ListTeamMembersInput) *CodestarListTeamMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.ListTeamMembers", input)
-	return &CodestarListTeamMembersResult{Result: future}
+	return &CodestarListTeamMembersFuture{Future: future}
 }
 
 func (a *CodeStarStub) ListUserProfiles(ctx workflow.Context, input *codestar.ListUserProfilesInput) (*codestar.ListUserProfilesOutput, error) {
@@ -389,9 +389,9 @@ func (a *CodeStarStub) ListUserProfiles(ctx workflow.Context, input *codestar.Li
 	return &output, err
 }
 
-func (a *CodeStarStub) ListUserProfilesAsync(ctx workflow.Context, input *codestar.ListUserProfilesInput) *CodestarListUserProfilesResult {
+func (a *CodeStarStub) ListUserProfilesAsync(ctx workflow.Context, input *codestar.ListUserProfilesInput) *CodestarListUserProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.ListUserProfiles", input)
-	return &CodestarListUserProfilesResult{Result: future}
+	return &CodestarListUserProfilesFuture{Future: future}
 }
 
 func (a *CodeStarStub) TagProject(ctx workflow.Context, input *codestar.TagProjectInput) (*codestar.TagProjectOutput, error) {
@@ -400,9 +400,9 @@ func (a *CodeStarStub) TagProject(ctx workflow.Context, input *codestar.TagProje
 	return &output, err
 }
 
-func (a *CodeStarStub) TagProjectAsync(ctx workflow.Context, input *codestar.TagProjectInput) *CodestarTagProjectResult {
+func (a *CodeStarStub) TagProjectAsync(ctx workflow.Context, input *codestar.TagProjectInput) *CodestarTagProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.TagProject", input)
-	return &CodestarTagProjectResult{Result: future}
+	return &CodestarTagProjectFuture{Future: future}
 }
 
 func (a *CodeStarStub) UntagProject(ctx workflow.Context, input *codestar.UntagProjectInput) (*codestar.UntagProjectOutput, error) {
@@ -411,9 +411,9 @@ func (a *CodeStarStub) UntagProject(ctx workflow.Context, input *codestar.UntagP
 	return &output, err
 }
 
-func (a *CodeStarStub) UntagProjectAsync(ctx workflow.Context, input *codestar.UntagProjectInput) *CodestarUntagProjectResult {
+func (a *CodeStarStub) UntagProjectAsync(ctx workflow.Context, input *codestar.UntagProjectInput) *CodestarUntagProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.UntagProject", input)
-	return &CodestarUntagProjectResult{Result: future}
+	return &CodestarUntagProjectFuture{Future: future}
 }
 
 func (a *CodeStarStub) UpdateProject(ctx workflow.Context, input *codestar.UpdateProjectInput) (*codestar.UpdateProjectOutput, error) {
@@ -422,9 +422,9 @@ func (a *CodeStarStub) UpdateProject(ctx workflow.Context, input *codestar.Updat
 	return &output, err
 }
 
-func (a *CodeStarStub) UpdateProjectAsync(ctx workflow.Context, input *codestar.UpdateProjectInput) *CodestarUpdateProjectResult {
+func (a *CodeStarStub) UpdateProjectAsync(ctx workflow.Context, input *codestar.UpdateProjectInput) *CodestarUpdateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.UpdateProject", input)
-	return &CodestarUpdateProjectResult{Result: future}
+	return &CodestarUpdateProjectFuture{Future: future}
 }
 
 func (a *CodeStarStub) UpdateTeamMember(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) (*codestar.UpdateTeamMemberOutput, error) {
@@ -433,9 +433,9 @@ func (a *CodeStarStub) UpdateTeamMember(ctx workflow.Context, input *codestar.Up
 	return &output, err
 }
 
-func (a *CodeStarStub) UpdateTeamMemberAsync(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) *CodestarUpdateTeamMemberResult {
+func (a *CodeStarStub) UpdateTeamMemberAsync(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) *CodestarUpdateTeamMemberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.UpdateTeamMember", input)
-	return &CodestarUpdateTeamMemberResult{Result: future}
+	return &CodestarUpdateTeamMemberFuture{Future: future}
 }
 
 func (a *CodeStarStub) UpdateUserProfile(ctx workflow.Context, input *codestar.UpdateUserProfileInput) (*codestar.UpdateUserProfileOutput, error) {
@@ -444,7 +444,7 @@ func (a *CodeStarStub) UpdateUserProfile(ctx workflow.Context, input *codestar.U
 	return &output, err
 }
 
-func (a *CodeStarStub) UpdateUserProfileAsync(ctx workflow.Context, input *codestar.UpdateUserProfileInput) *CodestarUpdateUserProfileResult {
+func (a *CodeStarStub) UpdateUserProfileAsync(ctx workflow.Context, input *codestar.UpdateUserProfileInput) *CodestarUpdateUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestar.UpdateUserProfile", input)
-	return &CodestarUpdateUserProfileResult{Result: future}
+	return &CodestarUpdateUserProfileFuture{Future: future}
 }

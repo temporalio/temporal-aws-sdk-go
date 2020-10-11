@@ -11,13 +11,13 @@ import (
 
 type MigrationHubConfigClient interface {
 	CreateHomeRegionControl(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) (*migrationhubconfig.CreateHomeRegionControlOutput, error)
-	CreateHomeRegionControlAsync(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) *MigrationhubconfigCreateHomeRegionControlResult
+	CreateHomeRegionControlAsync(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) *MigrationhubconfigCreateHomeRegionControlFuture
 
 	DescribeHomeRegionControls(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) (*migrationhubconfig.DescribeHomeRegionControlsOutput, error)
-	DescribeHomeRegionControlsAsync(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) *MigrationhubconfigDescribeHomeRegionControlsResult
+	DescribeHomeRegionControlsAsync(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) *MigrationhubconfigDescribeHomeRegionControlsFuture
 
 	GetHomeRegion(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) (*migrationhubconfig.GetHomeRegionOutput, error)
-	GetHomeRegionAsync(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) *MigrationhubconfigGetHomeRegionResult
+	GetHomeRegionAsync(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) *MigrationhubconfigGetHomeRegionFuture
 }
 
 type MigrationHubConfigStub struct{}
@@ -26,33 +26,33 @@ func NewMigrationHubConfigStub() MigrationHubConfigClient {
 	return &MigrationHubConfigStub{}
 }
 
-type MigrationhubconfigCreateHomeRegionControlResult struct {
-	Result workflow.Future
+type MigrationhubconfigCreateHomeRegionControlFuture struct {
+	Future workflow.Future
 }
 
-func (r *MigrationhubconfigCreateHomeRegionControlResult) Get(ctx workflow.Context) (*migrationhubconfig.CreateHomeRegionControlOutput, error) {
+func (r *MigrationhubconfigCreateHomeRegionControlFuture) Get(ctx workflow.Context) (*migrationhubconfig.CreateHomeRegionControlOutput, error) {
 	var output migrationhubconfig.CreateHomeRegionControlOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationhubconfigDescribeHomeRegionControlsResult struct {
-	Result workflow.Future
+type MigrationhubconfigDescribeHomeRegionControlsFuture struct {
+	Future workflow.Future
 }
 
-func (r *MigrationhubconfigDescribeHomeRegionControlsResult) Get(ctx workflow.Context) (*migrationhubconfig.DescribeHomeRegionControlsOutput, error) {
+func (r *MigrationhubconfigDescribeHomeRegionControlsFuture) Get(ctx workflow.Context) (*migrationhubconfig.DescribeHomeRegionControlsOutput, error) {
 	var output migrationhubconfig.DescribeHomeRegionControlsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationhubconfigGetHomeRegionResult struct {
-	Result workflow.Future
+type MigrationhubconfigGetHomeRegionFuture struct {
+	Future workflow.Future
 }
 
-func (r *MigrationhubconfigGetHomeRegionResult) Get(ctx workflow.Context) (*migrationhubconfig.GetHomeRegionOutput, error) {
+func (r *MigrationhubconfigGetHomeRegionFuture) Get(ctx workflow.Context) (*migrationhubconfig.GetHomeRegionOutput, error) {
 	var output migrationhubconfig.GetHomeRegionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -62,9 +62,9 @@ func (a *MigrationHubConfigStub) CreateHomeRegionControl(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *MigrationHubConfigStub) CreateHomeRegionControlAsync(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) *MigrationhubconfigCreateHomeRegionControlResult {
+func (a *MigrationHubConfigStub) CreateHomeRegionControlAsync(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) *MigrationhubconfigCreateHomeRegionControlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.CreateHomeRegionControl", input)
-	return &MigrationhubconfigCreateHomeRegionControlResult{Result: future}
+	return &MigrationhubconfigCreateHomeRegionControlFuture{Future: future}
 }
 
 func (a *MigrationHubConfigStub) DescribeHomeRegionControls(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) (*migrationhubconfig.DescribeHomeRegionControlsOutput, error) {
@@ -73,9 +73,9 @@ func (a *MigrationHubConfigStub) DescribeHomeRegionControls(ctx workflow.Context
 	return &output, err
 }
 
-func (a *MigrationHubConfigStub) DescribeHomeRegionControlsAsync(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) *MigrationhubconfigDescribeHomeRegionControlsResult {
+func (a *MigrationHubConfigStub) DescribeHomeRegionControlsAsync(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) *MigrationhubconfigDescribeHomeRegionControlsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.DescribeHomeRegionControls", input)
-	return &MigrationhubconfigDescribeHomeRegionControlsResult{Result: future}
+	return &MigrationhubconfigDescribeHomeRegionControlsFuture{Future: future}
 }
 
 func (a *MigrationHubConfigStub) GetHomeRegion(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) (*migrationhubconfig.GetHomeRegionOutput, error) {
@@ -84,7 +84,7 @@ func (a *MigrationHubConfigStub) GetHomeRegion(ctx workflow.Context, input *migr
 	return &output, err
 }
 
-func (a *MigrationHubConfigStub) GetHomeRegionAsync(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) *MigrationhubconfigGetHomeRegionResult {
+func (a *MigrationHubConfigStub) GetHomeRegionAsync(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) *MigrationhubconfigGetHomeRegionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.GetHomeRegion", input)
-	return &MigrationhubconfigGetHomeRegionResult{Result: future}
+	return &MigrationhubconfigGetHomeRegionFuture{Future: future}
 }

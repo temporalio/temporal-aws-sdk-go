@@ -11,133 +11,133 @@ import (
 
 type PersonalizeClient interface {
 	CreateBatchInferenceJob(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) (*personalize.CreateBatchInferenceJobOutput, error)
-	CreateBatchInferenceJobAsync(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) *PersonalizeCreateBatchInferenceJobResult
+	CreateBatchInferenceJobAsync(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) *PersonalizeCreateBatchInferenceJobFuture
 
 	CreateCampaign(ctx workflow.Context, input *personalize.CreateCampaignInput) (*personalize.CreateCampaignOutput, error)
-	CreateCampaignAsync(ctx workflow.Context, input *personalize.CreateCampaignInput) *PersonalizeCreateCampaignResult
+	CreateCampaignAsync(ctx workflow.Context, input *personalize.CreateCampaignInput) *PersonalizeCreateCampaignFuture
 
 	CreateDataset(ctx workflow.Context, input *personalize.CreateDatasetInput) (*personalize.CreateDatasetOutput, error)
-	CreateDatasetAsync(ctx workflow.Context, input *personalize.CreateDatasetInput) *PersonalizeCreateDatasetResult
+	CreateDatasetAsync(ctx workflow.Context, input *personalize.CreateDatasetInput) *PersonalizeCreateDatasetFuture
 
 	CreateDatasetGroup(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) (*personalize.CreateDatasetGroupOutput, error)
-	CreateDatasetGroupAsync(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) *PersonalizeCreateDatasetGroupResult
+	CreateDatasetGroupAsync(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) *PersonalizeCreateDatasetGroupFuture
 
 	CreateDatasetImportJob(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) (*personalize.CreateDatasetImportJobOutput, error)
-	CreateDatasetImportJobAsync(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) *PersonalizeCreateDatasetImportJobResult
+	CreateDatasetImportJobAsync(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) *PersonalizeCreateDatasetImportJobFuture
 
 	CreateEventTracker(ctx workflow.Context, input *personalize.CreateEventTrackerInput) (*personalize.CreateEventTrackerOutput, error)
-	CreateEventTrackerAsync(ctx workflow.Context, input *personalize.CreateEventTrackerInput) *PersonalizeCreateEventTrackerResult
+	CreateEventTrackerAsync(ctx workflow.Context, input *personalize.CreateEventTrackerInput) *PersonalizeCreateEventTrackerFuture
 
 	CreateFilter(ctx workflow.Context, input *personalize.CreateFilterInput) (*personalize.CreateFilterOutput, error)
-	CreateFilterAsync(ctx workflow.Context, input *personalize.CreateFilterInput) *PersonalizeCreateFilterResult
+	CreateFilterAsync(ctx workflow.Context, input *personalize.CreateFilterInput) *PersonalizeCreateFilterFuture
 
 	CreateSchema(ctx workflow.Context, input *personalize.CreateSchemaInput) (*personalize.CreateSchemaOutput, error)
-	CreateSchemaAsync(ctx workflow.Context, input *personalize.CreateSchemaInput) *PersonalizeCreateSchemaResult
+	CreateSchemaAsync(ctx workflow.Context, input *personalize.CreateSchemaInput) *PersonalizeCreateSchemaFuture
 
 	CreateSolution(ctx workflow.Context, input *personalize.CreateSolutionInput) (*personalize.CreateSolutionOutput, error)
-	CreateSolutionAsync(ctx workflow.Context, input *personalize.CreateSolutionInput) *PersonalizeCreateSolutionResult
+	CreateSolutionAsync(ctx workflow.Context, input *personalize.CreateSolutionInput) *PersonalizeCreateSolutionFuture
 
 	CreateSolutionVersion(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) (*personalize.CreateSolutionVersionOutput, error)
-	CreateSolutionVersionAsync(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) *PersonalizeCreateSolutionVersionResult
+	CreateSolutionVersionAsync(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) *PersonalizeCreateSolutionVersionFuture
 
 	DeleteCampaign(ctx workflow.Context, input *personalize.DeleteCampaignInput) (*personalize.DeleteCampaignOutput, error)
-	DeleteCampaignAsync(ctx workflow.Context, input *personalize.DeleteCampaignInput) *PersonalizeDeleteCampaignResult
+	DeleteCampaignAsync(ctx workflow.Context, input *personalize.DeleteCampaignInput) *PersonalizeDeleteCampaignFuture
 
 	DeleteDataset(ctx workflow.Context, input *personalize.DeleteDatasetInput) (*personalize.DeleteDatasetOutput, error)
-	DeleteDatasetAsync(ctx workflow.Context, input *personalize.DeleteDatasetInput) *PersonalizeDeleteDatasetResult
+	DeleteDatasetAsync(ctx workflow.Context, input *personalize.DeleteDatasetInput) *PersonalizeDeleteDatasetFuture
 
 	DeleteDatasetGroup(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) (*personalize.DeleteDatasetGroupOutput, error)
-	DeleteDatasetGroupAsync(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) *PersonalizeDeleteDatasetGroupResult
+	DeleteDatasetGroupAsync(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) *PersonalizeDeleteDatasetGroupFuture
 
 	DeleteEventTracker(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) (*personalize.DeleteEventTrackerOutput, error)
-	DeleteEventTrackerAsync(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) *PersonalizeDeleteEventTrackerResult
+	DeleteEventTrackerAsync(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) *PersonalizeDeleteEventTrackerFuture
 
 	DeleteFilter(ctx workflow.Context, input *personalize.DeleteFilterInput) (*personalize.DeleteFilterOutput, error)
-	DeleteFilterAsync(ctx workflow.Context, input *personalize.DeleteFilterInput) *PersonalizeDeleteFilterResult
+	DeleteFilterAsync(ctx workflow.Context, input *personalize.DeleteFilterInput) *PersonalizeDeleteFilterFuture
 
 	DeleteSchema(ctx workflow.Context, input *personalize.DeleteSchemaInput) (*personalize.DeleteSchemaOutput, error)
-	DeleteSchemaAsync(ctx workflow.Context, input *personalize.DeleteSchemaInput) *PersonalizeDeleteSchemaResult
+	DeleteSchemaAsync(ctx workflow.Context, input *personalize.DeleteSchemaInput) *PersonalizeDeleteSchemaFuture
 
 	DeleteSolution(ctx workflow.Context, input *personalize.DeleteSolutionInput) (*personalize.DeleteSolutionOutput, error)
-	DeleteSolutionAsync(ctx workflow.Context, input *personalize.DeleteSolutionInput) *PersonalizeDeleteSolutionResult
+	DeleteSolutionAsync(ctx workflow.Context, input *personalize.DeleteSolutionInput) *PersonalizeDeleteSolutionFuture
 
 	DescribeAlgorithm(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) (*personalize.DescribeAlgorithmOutput, error)
-	DescribeAlgorithmAsync(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) *PersonalizeDescribeAlgorithmResult
+	DescribeAlgorithmAsync(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) *PersonalizeDescribeAlgorithmFuture
 
 	DescribeBatchInferenceJob(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) (*personalize.DescribeBatchInferenceJobOutput, error)
-	DescribeBatchInferenceJobAsync(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) *PersonalizeDescribeBatchInferenceJobResult
+	DescribeBatchInferenceJobAsync(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) *PersonalizeDescribeBatchInferenceJobFuture
 
 	DescribeCampaign(ctx workflow.Context, input *personalize.DescribeCampaignInput) (*personalize.DescribeCampaignOutput, error)
-	DescribeCampaignAsync(ctx workflow.Context, input *personalize.DescribeCampaignInput) *PersonalizeDescribeCampaignResult
+	DescribeCampaignAsync(ctx workflow.Context, input *personalize.DescribeCampaignInput) *PersonalizeDescribeCampaignFuture
 
 	DescribeDataset(ctx workflow.Context, input *personalize.DescribeDatasetInput) (*personalize.DescribeDatasetOutput, error)
-	DescribeDatasetAsync(ctx workflow.Context, input *personalize.DescribeDatasetInput) *PersonalizeDescribeDatasetResult
+	DescribeDatasetAsync(ctx workflow.Context, input *personalize.DescribeDatasetInput) *PersonalizeDescribeDatasetFuture
 
 	DescribeDatasetGroup(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) (*personalize.DescribeDatasetGroupOutput, error)
-	DescribeDatasetGroupAsync(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) *PersonalizeDescribeDatasetGroupResult
+	DescribeDatasetGroupAsync(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) *PersonalizeDescribeDatasetGroupFuture
 
 	DescribeDatasetImportJob(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) (*personalize.DescribeDatasetImportJobOutput, error)
-	DescribeDatasetImportJobAsync(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) *PersonalizeDescribeDatasetImportJobResult
+	DescribeDatasetImportJobAsync(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) *PersonalizeDescribeDatasetImportJobFuture
 
 	DescribeEventTracker(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) (*personalize.DescribeEventTrackerOutput, error)
-	DescribeEventTrackerAsync(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) *PersonalizeDescribeEventTrackerResult
+	DescribeEventTrackerAsync(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) *PersonalizeDescribeEventTrackerFuture
 
 	DescribeFeatureTransformation(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) (*personalize.DescribeFeatureTransformationOutput, error)
-	DescribeFeatureTransformationAsync(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) *PersonalizeDescribeFeatureTransformationResult
+	DescribeFeatureTransformationAsync(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) *PersonalizeDescribeFeatureTransformationFuture
 
 	DescribeFilter(ctx workflow.Context, input *personalize.DescribeFilterInput) (*personalize.DescribeFilterOutput, error)
-	DescribeFilterAsync(ctx workflow.Context, input *personalize.DescribeFilterInput) *PersonalizeDescribeFilterResult
+	DescribeFilterAsync(ctx workflow.Context, input *personalize.DescribeFilterInput) *PersonalizeDescribeFilterFuture
 
 	DescribeRecipe(ctx workflow.Context, input *personalize.DescribeRecipeInput) (*personalize.DescribeRecipeOutput, error)
-	DescribeRecipeAsync(ctx workflow.Context, input *personalize.DescribeRecipeInput) *PersonalizeDescribeRecipeResult
+	DescribeRecipeAsync(ctx workflow.Context, input *personalize.DescribeRecipeInput) *PersonalizeDescribeRecipeFuture
 
 	DescribeSchema(ctx workflow.Context, input *personalize.DescribeSchemaInput) (*personalize.DescribeSchemaOutput, error)
-	DescribeSchemaAsync(ctx workflow.Context, input *personalize.DescribeSchemaInput) *PersonalizeDescribeSchemaResult
+	DescribeSchemaAsync(ctx workflow.Context, input *personalize.DescribeSchemaInput) *PersonalizeDescribeSchemaFuture
 
 	DescribeSolution(ctx workflow.Context, input *personalize.DescribeSolutionInput) (*personalize.DescribeSolutionOutput, error)
-	DescribeSolutionAsync(ctx workflow.Context, input *personalize.DescribeSolutionInput) *PersonalizeDescribeSolutionResult
+	DescribeSolutionAsync(ctx workflow.Context, input *personalize.DescribeSolutionInput) *PersonalizeDescribeSolutionFuture
 
 	DescribeSolutionVersion(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) (*personalize.DescribeSolutionVersionOutput, error)
-	DescribeSolutionVersionAsync(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) *PersonalizeDescribeSolutionVersionResult
+	DescribeSolutionVersionAsync(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) *PersonalizeDescribeSolutionVersionFuture
 
 	GetSolutionMetrics(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) (*personalize.GetSolutionMetricsOutput, error)
-	GetSolutionMetricsAsync(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) *PersonalizeGetSolutionMetricsResult
+	GetSolutionMetricsAsync(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) *PersonalizeGetSolutionMetricsFuture
 
 	ListBatchInferenceJobs(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) (*personalize.ListBatchInferenceJobsOutput, error)
-	ListBatchInferenceJobsAsync(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) *PersonalizeListBatchInferenceJobsResult
+	ListBatchInferenceJobsAsync(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) *PersonalizeListBatchInferenceJobsFuture
 
 	ListCampaigns(ctx workflow.Context, input *personalize.ListCampaignsInput) (*personalize.ListCampaignsOutput, error)
-	ListCampaignsAsync(ctx workflow.Context, input *personalize.ListCampaignsInput) *PersonalizeListCampaignsResult
+	ListCampaignsAsync(ctx workflow.Context, input *personalize.ListCampaignsInput) *PersonalizeListCampaignsFuture
 
 	ListDatasetGroups(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) (*personalize.ListDatasetGroupsOutput, error)
-	ListDatasetGroupsAsync(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) *PersonalizeListDatasetGroupsResult
+	ListDatasetGroupsAsync(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) *PersonalizeListDatasetGroupsFuture
 
 	ListDatasetImportJobs(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) (*personalize.ListDatasetImportJobsOutput, error)
-	ListDatasetImportJobsAsync(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) *PersonalizeListDatasetImportJobsResult
+	ListDatasetImportJobsAsync(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) *PersonalizeListDatasetImportJobsFuture
 
 	ListDatasets(ctx workflow.Context, input *personalize.ListDatasetsInput) (*personalize.ListDatasetsOutput, error)
-	ListDatasetsAsync(ctx workflow.Context, input *personalize.ListDatasetsInput) *PersonalizeListDatasetsResult
+	ListDatasetsAsync(ctx workflow.Context, input *personalize.ListDatasetsInput) *PersonalizeListDatasetsFuture
 
 	ListEventTrackers(ctx workflow.Context, input *personalize.ListEventTrackersInput) (*personalize.ListEventTrackersOutput, error)
-	ListEventTrackersAsync(ctx workflow.Context, input *personalize.ListEventTrackersInput) *PersonalizeListEventTrackersResult
+	ListEventTrackersAsync(ctx workflow.Context, input *personalize.ListEventTrackersInput) *PersonalizeListEventTrackersFuture
 
 	ListFilters(ctx workflow.Context, input *personalize.ListFiltersInput) (*personalize.ListFiltersOutput, error)
-	ListFiltersAsync(ctx workflow.Context, input *personalize.ListFiltersInput) *PersonalizeListFiltersResult
+	ListFiltersAsync(ctx workflow.Context, input *personalize.ListFiltersInput) *PersonalizeListFiltersFuture
 
 	ListRecipes(ctx workflow.Context, input *personalize.ListRecipesInput) (*personalize.ListRecipesOutput, error)
-	ListRecipesAsync(ctx workflow.Context, input *personalize.ListRecipesInput) *PersonalizeListRecipesResult
+	ListRecipesAsync(ctx workflow.Context, input *personalize.ListRecipesInput) *PersonalizeListRecipesFuture
 
 	ListSchemas(ctx workflow.Context, input *personalize.ListSchemasInput) (*personalize.ListSchemasOutput, error)
-	ListSchemasAsync(ctx workflow.Context, input *personalize.ListSchemasInput) *PersonalizeListSchemasResult
+	ListSchemasAsync(ctx workflow.Context, input *personalize.ListSchemasInput) *PersonalizeListSchemasFuture
 
 	ListSolutionVersions(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) (*personalize.ListSolutionVersionsOutput, error)
-	ListSolutionVersionsAsync(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) *PersonalizeListSolutionVersionsResult
+	ListSolutionVersionsAsync(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) *PersonalizeListSolutionVersionsFuture
 
 	ListSolutions(ctx workflow.Context, input *personalize.ListSolutionsInput) (*personalize.ListSolutionsOutput, error)
-	ListSolutionsAsync(ctx workflow.Context, input *personalize.ListSolutionsInput) *PersonalizeListSolutionsResult
+	ListSolutionsAsync(ctx workflow.Context, input *personalize.ListSolutionsInput) *PersonalizeListSolutionsFuture
 
 	UpdateCampaign(ctx workflow.Context, input *personalize.UpdateCampaignInput) (*personalize.UpdateCampaignOutput, error)
-	UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignResult
+	UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignFuture
 }
 
 type PersonalizeStub struct{}
@@ -146,433 +146,433 @@ func NewPersonalizeStub() PersonalizeClient {
 	return &PersonalizeStub{}
 }
 
-type PersonalizeCreateBatchInferenceJobResult struct {
-	Result workflow.Future
+type PersonalizeCreateBatchInferenceJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateBatchInferenceJobResult) Get(ctx workflow.Context) (*personalize.CreateBatchInferenceJobOutput, error) {
+func (r *PersonalizeCreateBatchInferenceJobFuture) Get(ctx workflow.Context) (*personalize.CreateBatchInferenceJobOutput, error) {
 	var output personalize.CreateBatchInferenceJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateCampaignResult struct {
-	Result workflow.Future
+type PersonalizeCreateCampaignFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateCampaignResult) Get(ctx workflow.Context) (*personalize.CreateCampaignOutput, error) {
+func (r *PersonalizeCreateCampaignFuture) Get(ctx workflow.Context) (*personalize.CreateCampaignOutput, error) {
 	var output personalize.CreateCampaignOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateDatasetResult struct {
-	Result workflow.Future
+type PersonalizeCreateDatasetFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateDatasetResult) Get(ctx workflow.Context) (*personalize.CreateDatasetOutput, error) {
+func (r *PersonalizeCreateDatasetFuture) Get(ctx workflow.Context) (*personalize.CreateDatasetOutput, error) {
 	var output personalize.CreateDatasetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateDatasetGroupResult struct {
-	Result workflow.Future
+type PersonalizeCreateDatasetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateDatasetGroupResult) Get(ctx workflow.Context) (*personalize.CreateDatasetGroupOutput, error) {
+func (r *PersonalizeCreateDatasetGroupFuture) Get(ctx workflow.Context) (*personalize.CreateDatasetGroupOutput, error) {
 	var output personalize.CreateDatasetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateDatasetImportJobResult struct {
-	Result workflow.Future
+type PersonalizeCreateDatasetImportJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateDatasetImportJobResult) Get(ctx workflow.Context) (*personalize.CreateDatasetImportJobOutput, error) {
+func (r *PersonalizeCreateDatasetImportJobFuture) Get(ctx workflow.Context) (*personalize.CreateDatasetImportJobOutput, error) {
 	var output personalize.CreateDatasetImportJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateEventTrackerResult struct {
-	Result workflow.Future
+type PersonalizeCreateEventTrackerFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateEventTrackerResult) Get(ctx workflow.Context) (*personalize.CreateEventTrackerOutput, error) {
+func (r *PersonalizeCreateEventTrackerFuture) Get(ctx workflow.Context) (*personalize.CreateEventTrackerOutput, error) {
 	var output personalize.CreateEventTrackerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateFilterResult struct {
-	Result workflow.Future
+type PersonalizeCreateFilterFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateFilterResult) Get(ctx workflow.Context) (*personalize.CreateFilterOutput, error) {
+func (r *PersonalizeCreateFilterFuture) Get(ctx workflow.Context) (*personalize.CreateFilterOutput, error) {
 	var output personalize.CreateFilterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateSchemaResult struct {
-	Result workflow.Future
+type PersonalizeCreateSchemaFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateSchemaResult) Get(ctx workflow.Context) (*personalize.CreateSchemaOutput, error) {
+func (r *PersonalizeCreateSchemaFuture) Get(ctx workflow.Context) (*personalize.CreateSchemaOutput, error) {
 	var output personalize.CreateSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateSolutionResult struct {
-	Result workflow.Future
+type PersonalizeCreateSolutionFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateSolutionResult) Get(ctx workflow.Context) (*personalize.CreateSolutionOutput, error) {
+func (r *PersonalizeCreateSolutionFuture) Get(ctx workflow.Context) (*personalize.CreateSolutionOutput, error) {
 	var output personalize.CreateSolutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeCreateSolutionVersionResult struct {
-	Result workflow.Future
+type PersonalizeCreateSolutionVersionFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeCreateSolutionVersionResult) Get(ctx workflow.Context) (*personalize.CreateSolutionVersionOutput, error) {
+func (r *PersonalizeCreateSolutionVersionFuture) Get(ctx workflow.Context) (*personalize.CreateSolutionVersionOutput, error) {
 	var output personalize.CreateSolutionVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDeleteCampaignResult struct {
-	Result workflow.Future
+type PersonalizeDeleteCampaignFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDeleteCampaignResult) Get(ctx workflow.Context) (*personalize.DeleteCampaignOutput, error) {
+func (r *PersonalizeDeleteCampaignFuture) Get(ctx workflow.Context) (*personalize.DeleteCampaignOutput, error) {
 	var output personalize.DeleteCampaignOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDeleteDatasetResult struct {
-	Result workflow.Future
+type PersonalizeDeleteDatasetFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDeleteDatasetResult) Get(ctx workflow.Context) (*personalize.DeleteDatasetOutput, error) {
+func (r *PersonalizeDeleteDatasetFuture) Get(ctx workflow.Context) (*personalize.DeleteDatasetOutput, error) {
 	var output personalize.DeleteDatasetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDeleteDatasetGroupResult struct {
-	Result workflow.Future
+type PersonalizeDeleteDatasetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDeleteDatasetGroupResult) Get(ctx workflow.Context) (*personalize.DeleteDatasetGroupOutput, error) {
+func (r *PersonalizeDeleteDatasetGroupFuture) Get(ctx workflow.Context) (*personalize.DeleteDatasetGroupOutput, error) {
 	var output personalize.DeleteDatasetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDeleteEventTrackerResult struct {
-	Result workflow.Future
+type PersonalizeDeleteEventTrackerFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDeleteEventTrackerResult) Get(ctx workflow.Context) (*personalize.DeleteEventTrackerOutput, error) {
+func (r *PersonalizeDeleteEventTrackerFuture) Get(ctx workflow.Context) (*personalize.DeleteEventTrackerOutput, error) {
 	var output personalize.DeleteEventTrackerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDeleteFilterResult struct {
-	Result workflow.Future
+type PersonalizeDeleteFilterFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDeleteFilterResult) Get(ctx workflow.Context) (*personalize.DeleteFilterOutput, error) {
+func (r *PersonalizeDeleteFilterFuture) Get(ctx workflow.Context) (*personalize.DeleteFilterOutput, error) {
 	var output personalize.DeleteFilterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDeleteSchemaResult struct {
-	Result workflow.Future
+type PersonalizeDeleteSchemaFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDeleteSchemaResult) Get(ctx workflow.Context) (*personalize.DeleteSchemaOutput, error) {
+func (r *PersonalizeDeleteSchemaFuture) Get(ctx workflow.Context) (*personalize.DeleteSchemaOutput, error) {
 	var output personalize.DeleteSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDeleteSolutionResult struct {
-	Result workflow.Future
+type PersonalizeDeleteSolutionFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDeleteSolutionResult) Get(ctx workflow.Context) (*personalize.DeleteSolutionOutput, error) {
+func (r *PersonalizeDeleteSolutionFuture) Get(ctx workflow.Context) (*personalize.DeleteSolutionOutput, error) {
 	var output personalize.DeleteSolutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeAlgorithmResult struct {
-	Result workflow.Future
+type PersonalizeDescribeAlgorithmFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeAlgorithmResult) Get(ctx workflow.Context) (*personalize.DescribeAlgorithmOutput, error) {
+func (r *PersonalizeDescribeAlgorithmFuture) Get(ctx workflow.Context) (*personalize.DescribeAlgorithmOutput, error) {
 	var output personalize.DescribeAlgorithmOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeBatchInferenceJobResult struct {
-	Result workflow.Future
+type PersonalizeDescribeBatchInferenceJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeBatchInferenceJobResult) Get(ctx workflow.Context) (*personalize.DescribeBatchInferenceJobOutput, error) {
+func (r *PersonalizeDescribeBatchInferenceJobFuture) Get(ctx workflow.Context) (*personalize.DescribeBatchInferenceJobOutput, error) {
 	var output personalize.DescribeBatchInferenceJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeCampaignResult struct {
-	Result workflow.Future
+type PersonalizeDescribeCampaignFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeCampaignResult) Get(ctx workflow.Context) (*personalize.DescribeCampaignOutput, error) {
+func (r *PersonalizeDescribeCampaignFuture) Get(ctx workflow.Context) (*personalize.DescribeCampaignOutput, error) {
 	var output personalize.DescribeCampaignOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeDatasetResult struct {
-	Result workflow.Future
+type PersonalizeDescribeDatasetFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeDatasetResult) Get(ctx workflow.Context) (*personalize.DescribeDatasetOutput, error) {
+func (r *PersonalizeDescribeDatasetFuture) Get(ctx workflow.Context) (*personalize.DescribeDatasetOutput, error) {
 	var output personalize.DescribeDatasetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeDatasetGroupResult struct {
-	Result workflow.Future
+type PersonalizeDescribeDatasetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeDatasetGroupResult) Get(ctx workflow.Context) (*personalize.DescribeDatasetGroupOutput, error) {
+func (r *PersonalizeDescribeDatasetGroupFuture) Get(ctx workflow.Context) (*personalize.DescribeDatasetGroupOutput, error) {
 	var output personalize.DescribeDatasetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeDatasetImportJobResult struct {
-	Result workflow.Future
+type PersonalizeDescribeDatasetImportJobFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeDatasetImportJobResult) Get(ctx workflow.Context) (*personalize.DescribeDatasetImportJobOutput, error) {
+func (r *PersonalizeDescribeDatasetImportJobFuture) Get(ctx workflow.Context) (*personalize.DescribeDatasetImportJobOutput, error) {
 	var output personalize.DescribeDatasetImportJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeEventTrackerResult struct {
-	Result workflow.Future
+type PersonalizeDescribeEventTrackerFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeEventTrackerResult) Get(ctx workflow.Context) (*personalize.DescribeEventTrackerOutput, error) {
+func (r *PersonalizeDescribeEventTrackerFuture) Get(ctx workflow.Context) (*personalize.DescribeEventTrackerOutput, error) {
 	var output personalize.DescribeEventTrackerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeFeatureTransformationResult struct {
-	Result workflow.Future
+type PersonalizeDescribeFeatureTransformationFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeFeatureTransformationResult) Get(ctx workflow.Context) (*personalize.DescribeFeatureTransformationOutput, error) {
+func (r *PersonalizeDescribeFeatureTransformationFuture) Get(ctx workflow.Context) (*personalize.DescribeFeatureTransformationOutput, error) {
 	var output personalize.DescribeFeatureTransformationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeFilterResult struct {
-	Result workflow.Future
+type PersonalizeDescribeFilterFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeFilterResult) Get(ctx workflow.Context) (*personalize.DescribeFilterOutput, error) {
+func (r *PersonalizeDescribeFilterFuture) Get(ctx workflow.Context) (*personalize.DescribeFilterOutput, error) {
 	var output personalize.DescribeFilterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeRecipeResult struct {
-	Result workflow.Future
+type PersonalizeDescribeRecipeFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeRecipeResult) Get(ctx workflow.Context) (*personalize.DescribeRecipeOutput, error) {
+func (r *PersonalizeDescribeRecipeFuture) Get(ctx workflow.Context) (*personalize.DescribeRecipeOutput, error) {
 	var output personalize.DescribeRecipeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeSchemaResult struct {
-	Result workflow.Future
+type PersonalizeDescribeSchemaFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeSchemaResult) Get(ctx workflow.Context) (*personalize.DescribeSchemaOutput, error) {
+func (r *PersonalizeDescribeSchemaFuture) Get(ctx workflow.Context) (*personalize.DescribeSchemaOutput, error) {
 	var output personalize.DescribeSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeSolutionResult struct {
-	Result workflow.Future
+type PersonalizeDescribeSolutionFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeSolutionResult) Get(ctx workflow.Context) (*personalize.DescribeSolutionOutput, error) {
+func (r *PersonalizeDescribeSolutionFuture) Get(ctx workflow.Context) (*personalize.DescribeSolutionOutput, error) {
 	var output personalize.DescribeSolutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeDescribeSolutionVersionResult struct {
-	Result workflow.Future
+type PersonalizeDescribeSolutionVersionFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeDescribeSolutionVersionResult) Get(ctx workflow.Context) (*personalize.DescribeSolutionVersionOutput, error) {
+func (r *PersonalizeDescribeSolutionVersionFuture) Get(ctx workflow.Context) (*personalize.DescribeSolutionVersionOutput, error) {
 	var output personalize.DescribeSolutionVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeGetSolutionMetricsResult struct {
-	Result workflow.Future
+type PersonalizeGetSolutionMetricsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeGetSolutionMetricsResult) Get(ctx workflow.Context) (*personalize.GetSolutionMetricsOutput, error) {
+func (r *PersonalizeGetSolutionMetricsFuture) Get(ctx workflow.Context) (*personalize.GetSolutionMetricsOutput, error) {
 	var output personalize.GetSolutionMetricsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListBatchInferenceJobsResult struct {
-	Result workflow.Future
+type PersonalizeListBatchInferenceJobsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListBatchInferenceJobsResult) Get(ctx workflow.Context) (*personalize.ListBatchInferenceJobsOutput, error) {
+func (r *PersonalizeListBatchInferenceJobsFuture) Get(ctx workflow.Context) (*personalize.ListBatchInferenceJobsOutput, error) {
 	var output personalize.ListBatchInferenceJobsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListCampaignsResult struct {
-	Result workflow.Future
+type PersonalizeListCampaignsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListCampaignsResult) Get(ctx workflow.Context) (*personalize.ListCampaignsOutput, error) {
+func (r *PersonalizeListCampaignsFuture) Get(ctx workflow.Context) (*personalize.ListCampaignsOutput, error) {
 	var output personalize.ListCampaignsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListDatasetGroupsResult struct {
-	Result workflow.Future
+type PersonalizeListDatasetGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListDatasetGroupsResult) Get(ctx workflow.Context) (*personalize.ListDatasetGroupsOutput, error) {
+func (r *PersonalizeListDatasetGroupsFuture) Get(ctx workflow.Context) (*personalize.ListDatasetGroupsOutput, error) {
 	var output personalize.ListDatasetGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListDatasetImportJobsResult struct {
-	Result workflow.Future
+type PersonalizeListDatasetImportJobsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListDatasetImportJobsResult) Get(ctx workflow.Context) (*personalize.ListDatasetImportJobsOutput, error) {
+func (r *PersonalizeListDatasetImportJobsFuture) Get(ctx workflow.Context) (*personalize.ListDatasetImportJobsOutput, error) {
 	var output personalize.ListDatasetImportJobsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListDatasetsResult struct {
-	Result workflow.Future
+type PersonalizeListDatasetsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListDatasetsResult) Get(ctx workflow.Context) (*personalize.ListDatasetsOutput, error) {
+func (r *PersonalizeListDatasetsFuture) Get(ctx workflow.Context) (*personalize.ListDatasetsOutput, error) {
 	var output personalize.ListDatasetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListEventTrackersResult struct {
-	Result workflow.Future
+type PersonalizeListEventTrackersFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListEventTrackersResult) Get(ctx workflow.Context) (*personalize.ListEventTrackersOutput, error) {
+func (r *PersonalizeListEventTrackersFuture) Get(ctx workflow.Context) (*personalize.ListEventTrackersOutput, error) {
 	var output personalize.ListEventTrackersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListFiltersResult struct {
-	Result workflow.Future
+type PersonalizeListFiltersFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListFiltersResult) Get(ctx workflow.Context) (*personalize.ListFiltersOutput, error) {
+func (r *PersonalizeListFiltersFuture) Get(ctx workflow.Context) (*personalize.ListFiltersOutput, error) {
 	var output personalize.ListFiltersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListRecipesResult struct {
-	Result workflow.Future
+type PersonalizeListRecipesFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListRecipesResult) Get(ctx workflow.Context) (*personalize.ListRecipesOutput, error) {
+func (r *PersonalizeListRecipesFuture) Get(ctx workflow.Context) (*personalize.ListRecipesOutput, error) {
 	var output personalize.ListRecipesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListSchemasResult struct {
-	Result workflow.Future
+type PersonalizeListSchemasFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListSchemasResult) Get(ctx workflow.Context) (*personalize.ListSchemasOutput, error) {
+func (r *PersonalizeListSchemasFuture) Get(ctx workflow.Context) (*personalize.ListSchemasOutput, error) {
 	var output personalize.ListSchemasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListSolutionVersionsResult struct {
-	Result workflow.Future
+type PersonalizeListSolutionVersionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListSolutionVersionsResult) Get(ctx workflow.Context) (*personalize.ListSolutionVersionsOutput, error) {
+func (r *PersonalizeListSolutionVersionsFuture) Get(ctx workflow.Context) (*personalize.ListSolutionVersionsOutput, error) {
 	var output personalize.ListSolutionVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeListSolutionsResult struct {
-	Result workflow.Future
+type PersonalizeListSolutionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeListSolutionsResult) Get(ctx workflow.Context) (*personalize.ListSolutionsOutput, error) {
+func (r *PersonalizeListSolutionsFuture) Get(ctx workflow.Context) (*personalize.ListSolutionsOutput, error) {
 	var output personalize.ListSolutionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeUpdateCampaignResult struct {
-	Result workflow.Future
+type PersonalizeUpdateCampaignFuture struct {
+	Future workflow.Future
 }
 
-func (r *PersonalizeUpdateCampaignResult) Get(ctx workflow.Context) (*personalize.UpdateCampaignOutput, error) {
+func (r *PersonalizeUpdateCampaignFuture) Get(ctx workflow.Context) (*personalize.UpdateCampaignOutput, error) {
 	var output personalize.UpdateCampaignOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -582,9 +582,9 @@ func (a *PersonalizeStub) CreateBatchInferenceJob(ctx workflow.Context, input *p
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateBatchInferenceJobAsync(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) *PersonalizeCreateBatchInferenceJobResult {
+func (a *PersonalizeStub) CreateBatchInferenceJobAsync(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) *PersonalizeCreateBatchInferenceJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateBatchInferenceJob", input)
-	return &PersonalizeCreateBatchInferenceJobResult{Result: future}
+	return &PersonalizeCreateBatchInferenceJobFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateCampaign(ctx workflow.Context, input *personalize.CreateCampaignInput) (*personalize.CreateCampaignOutput, error) {
@@ -593,9 +593,9 @@ func (a *PersonalizeStub) CreateCampaign(ctx workflow.Context, input *personaliz
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateCampaignAsync(ctx workflow.Context, input *personalize.CreateCampaignInput) *PersonalizeCreateCampaignResult {
+func (a *PersonalizeStub) CreateCampaignAsync(ctx workflow.Context, input *personalize.CreateCampaignInput) *PersonalizeCreateCampaignFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateCampaign", input)
-	return &PersonalizeCreateCampaignResult{Result: future}
+	return &PersonalizeCreateCampaignFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateDataset(ctx workflow.Context, input *personalize.CreateDatasetInput) (*personalize.CreateDatasetOutput, error) {
@@ -604,9 +604,9 @@ func (a *PersonalizeStub) CreateDataset(ctx workflow.Context, input *personalize
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateDatasetAsync(ctx workflow.Context, input *personalize.CreateDatasetInput) *PersonalizeCreateDatasetResult {
+func (a *PersonalizeStub) CreateDatasetAsync(ctx workflow.Context, input *personalize.CreateDatasetInput) *PersonalizeCreateDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDataset", input)
-	return &PersonalizeCreateDatasetResult{Result: future}
+	return &PersonalizeCreateDatasetFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateDatasetGroup(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) (*personalize.CreateDatasetGroupOutput, error) {
@@ -615,9 +615,9 @@ func (a *PersonalizeStub) CreateDatasetGroup(ctx workflow.Context, input *person
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateDatasetGroupAsync(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) *PersonalizeCreateDatasetGroupResult {
+func (a *PersonalizeStub) CreateDatasetGroupAsync(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) *PersonalizeCreateDatasetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDatasetGroup", input)
-	return &PersonalizeCreateDatasetGroupResult{Result: future}
+	return &PersonalizeCreateDatasetGroupFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateDatasetImportJob(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) (*personalize.CreateDatasetImportJobOutput, error) {
@@ -626,9 +626,9 @@ func (a *PersonalizeStub) CreateDatasetImportJob(ctx workflow.Context, input *pe
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateDatasetImportJobAsync(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) *PersonalizeCreateDatasetImportJobResult {
+func (a *PersonalizeStub) CreateDatasetImportJobAsync(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) *PersonalizeCreateDatasetImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDatasetImportJob", input)
-	return &PersonalizeCreateDatasetImportJobResult{Result: future}
+	return &PersonalizeCreateDatasetImportJobFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateEventTracker(ctx workflow.Context, input *personalize.CreateEventTrackerInput) (*personalize.CreateEventTrackerOutput, error) {
@@ -637,9 +637,9 @@ func (a *PersonalizeStub) CreateEventTracker(ctx workflow.Context, input *person
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateEventTrackerAsync(ctx workflow.Context, input *personalize.CreateEventTrackerInput) *PersonalizeCreateEventTrackerResult {
+func (a *PersonalizeStub) CreateEventTrackerAsync(ctx workflow.Context, input *personalize.CreateEventTrackerInput) *PersonalizeCreateEventTrackerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateEventTracker", input)
-	return &PersonalizeCreateEventTrackerResult{Result: future}
+	return &PersonalizeCreateEventTrackerFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateFilter(ctx workflow.Context, input *personalize.CreateFilterInput) (*personalize.CreateFilterOutput, error) {
@@ -648,9 +648,9 @@ func (a *PersonalizeStub) CreateFilter(ctx workflow.Context, input *personalize.
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateFilterAsync(ctx workflow.Context, input *personalize.CreateFilterInput) *PersonalizeCreateFilterResult {
+func (a *PersonalizeStub) CreateFilterAsync(ctx workflow.Context, input *personalize.CreateFilterInput) *PersonalizeCreateFilterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateFilter", input)
-	return &PersonalizeCreateFilterResult{Result: future}
+	return &PersonalizeCreateFilterFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateSchema(ctx workflow.Context, input *personalize.CreateSchemaInput) (*personalize.CreateSchemaOutput, error) {
@@ -659,9 +659,9 @@ func (a *PersonalizeStub) CreateSchema(ctx workflow.Context, input *personalize.
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateSchemaAsync(ctx workflow.Context, input *personalize.CreateSchemaInput) *PersonalizeCreateSchemaResult {
+func (a *PersonalizeStub) CreateSchemaAsync(ctx workflow.Context, input *personalize.CreateSchemaInput) *PersonalizeCreateSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSchema", input)
-	return &PersonalizeCreateSchemaResult{Result: future}
+	return &PersonalizeCreateSchemaFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateSolution(ctx workflow.Context, input *personalize.CreateSolutionInput) (*personalize.CreateSolutionOutput, error) {
@@ -670,9 +670,9 @@ func (a *PersonalizeStub) CreateSolution(ctx workflow.Context, input *personaliz
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateSolutionAsync(ctx workflow.Context, input *personalize.CreateSolutionInput) *PersonalizeCreateSolutionResult {
+func (a *PersonalizeStub) CreateSolutionAsync(ctx workflow.Context, input *personalize.CreateSolutionInput) *PersonalizeCreateSolutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSolution", input)
-	return &PersonalizeCreateSolutionResult{Result: future}
+	return &PersonalizeCreateSolutionFuture{Future: future}
 }
 
 func (a *PersonalizeStub) CreateSolutionVersion(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) (*personalize.CreateSolutionVersionOutput, error) {
@@ -681,9 +681,9 @@ func (a *PersonalizeStub) CreateSolutionVersion(ctx workflow.Context, input *per
 	return &output, err
 }
 
-func (a *PersonalizeStub) CreateSolutionVersionAsync(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) *PersonalizeCreateSolutionVersionResult {
+func (a *PersonalizeStub) CreateSolutionVersionAsync(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) *PersonalizeCreateSolutionVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSolutionVersion", input)
-	return &PersonalizeCreateSolutionVersionResult{Result: future}
+	return &PersonalizeCreateSolutionVersionFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DeleteCampaign(ctx workflow.Context, input *personalize.DeleteCampaignInput) (*personalize.DeleteCampaignOutput, error) {
@@ -692,9 +692,9 @@ func (a *PersonalizeStub) DeleteCampaign(ctx workflow.Context, input *personaliz
 	return &output, err
 }
 
-func (a *PersonalizeStub) DeleteCampaignAsync(ctx workflow.Context, input *personalize.DeleteCampaignInput) *PersonalizeDeleteCampaignResult {
+func (a *PersonalizeStub) DeleteCampaignAsync(ctx workflow.Context, input *personalize.DeleteCampaignInput) *PersonalizeDeleteCampaignFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteCampaign", input)
-	return &PersonalizeDeleteCampaignResult{Result: future}
+	return &PersonalizeDeleteCampaignFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DeleteDataset(ctx workflow.Context, input *personalize.DeleteDatasetInput) (*personalize.DeleteDatasetOutput, error) {
@@ -703,9 +703,9 @@ func (a *PersonalizeStub) DeleteDataset(ctx workflow.Context, input *personalize
 	return &output, err
 }
 
-func (a *PersonalizeStub) DeleteDatasetAsync(ctx workflow.Context, input *personalize.DeleteDatasetInput) *PersonalizeDeleteDatasetResult {
+func (a *PersonalizeStub) DeleteDatasetAsync(ctx workflow.Context, input *personalize.DeleteDatasetInput) *PersonalizeDeleteDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteDataset", input)
-	return &PersonalizeDeleteDatasetResult{Result: future}
+	return &PersonalizeDeleteDatasetFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DeleteDatasetGroup(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) (*personalize.DeleteDatasetGroupOutput, error) {
@@ -714,9 +714,9 @@ func (a *PersonalizeStub) DeleteDatasetGroup(ctx workflow.Context, input *person
 	return &output, err
 }
 
-func (a *PersonalizeStub) DeleteDatasetGroupAsync(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) *PersonalizeDeleteDatasetGroupResult {
+func (a *PersonalizeStub) DeleteDatasetGroupAsync(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) *PersonalizeDeleteDatasetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteDatasetGroup", input)
-	return &PersonalizeDeleteDatasetGroupResult{Result: future}
+	return &PersonalizeDeleteDatasetGroupFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DeleteEventTracker(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) (*personalize.DeleteEventTrackerOutput, error) {
@@ -725,9 +725,9 @@ func (a *PersonalizeStub) DeleteEventTracker(ctx workflow.Context, input *person
 	return &output, err
 }
 
-func (a *PersonalizeStub) DeleteEventTrackerAsync(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) *PersonalizeDeleteEventTrackerResult {
+func (a *PersonalizeStub) DeleteEventTrackerAsync(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) *PersonalizeDeleteEventTrackerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteEventTracker", input)
-	return &PersonalizeDeleteEventTrackerResult{Result: future}
+	return &PersonalizeDeleteEventTrackerFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DeleteFilter(ctx workflow.Context, input *personalize.DeleteFilterInput) (*personalize.DeleteFilterOutput, error) {
@@ -736,9 +736,9 @@ func (a *PersonalizeStub) DeleteFilter(ctx workflow.Context, input *personalize.
 	return &output, err
 }
 
-func (a *PersonalizeStub) DeleteFilterAsync(ctx workflow.Context, input *personalize.DeleteFilterInput) *PersonalizeDeleteFilterResult {
+func (a *PersonalizeStub) DeleteFilterAsync(ctx workflow.Context, input *personalize.DeleteFilterInput) *PersonalizeDeleteFilterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteFilter", input)
-	return &PersonalizeDeleteFilterResult{Result: future}
+	return &PersonalizeDeleteFilterFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DeleteSchema(ctx workflow.Context, input *personalize.DeleteSchemaInput) (*personalize.DeleteSchemaOutput, error) {
@@ -747,9 +747,9 @@ func (a *PersonalizeStub) DeleteSchema(ctx workflow.Context, input *personalize.
 	return &output, err
 }
 
-func (a *PersonalizeStub) DeleteSchemaAsync(ctx workflow.Context, input *personalize.DeleteSchemaInput) *PersonalizeDeleteSchemaResult {
+func (a *PersonalizeStub) DeleteSchemaAsync(ctx workflow.Context, input *personalize.DeleteSchemaInput) *PersonalizeDeleteSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteSchema", input)
-	return &PersonalizeDeleteSchemaResult{Result: future}
+	return &PersonalizeDeleteSchemaFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DeleteSolution(ctx workflow.Context, input *personalize.DeleteSolutionInput) (*personalize.DeleteSolutionOutput, error) {
@@ -758,9 +758,9 @@ func (a *PersonalizeStub) DeleteSolution(ctx workflow.Context, input *personaliz
 	return &output, err
 }
 
-func (a *PersonalizeStub) DeleteSolutionAsync(ctx workflow.Context, input *personalize.DeleteSolutionInput) *PersonalizeDeleteSolutionResult {
+func (a *PersonalizeStub) DeleteSolutionAsync(ctx workflow.Context, input *personalize.DeleteSolutionInput) *PersonalizeDeleteSolutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteSolution", input)
-	return &PersonalizeDeleteSolutionResult{Result: future}
+	return &PersonalizeDeleteSolutionFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeAlgorithm(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) (*personalize.DescribeAlgorithmOutput, error) {
@@ -769,9 +769,9 @@ func (a *PersonalizeStub) DescribeAlgorithm(ctx workflow.Context, input *persona
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeAlgorithmAsync(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) *PersonalizeDescribeAlgorithmResult {
+func (a *PersonalizeStub) DescribeAlgorithmAsync(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) *PersonalizeDescribeAlgorithmFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeAlgorithm", input)
-	return &PersonalizeDescribeAlgorithmResult{Result: future}
+	return &PersonalizeDescribeAlgorithmFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeBatchInferenceJob(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) (*personalize.DescribeBatchInferenceJobOutput, error) {
@@ -780,9 +780,9 @@ func (a *PersonalizeStub) DescribeBatchInferenceJob(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeBatchInferenceJobAsync(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) *PersonalizeDescribeBatchInferenceJobResult {
+func (a *PersonalizeStub) DescribeBatchInferenceJobAsync(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) *PersonalizeDescribeBatchInferenceJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeBatchInferenceJob", input)
-	return &PersonalizeDescribeBatchInferenceJobResult{Result: future}
+	return &PersonalizeDescribeBatchInferenceJobFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeCampaign(ctx workflow.Context, input *personalize.DescribeCampaignInput) (*personalize.DescribeCampaignOutput, error) {
@@ -791,9 +791,9 @@ func (a *PersonalizeStub) DescribeCampaign(ctx workflow.Context, input *personal
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeCampaignAsync(ctx workflow.Context, input *personalize.DescribeCampaignInput) *PersonalizeDescribeCampaignResult {
+func (a *PersonalizeStub) DescribeCampaignAsync(ctx workflow.Context, input *personalize.DescribeCampaignInput) *PersonalizeDescribeCampaignFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeCampaign", input)
-	return &PersonalizeDescribeCampaignResult{Result: future}
+	return &PersonalizeDescribeCampaignFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeDataset(ctx workflow.Context, input *personalize.DescribeDatasetInput) (*personalize.DescribeDatasetOutput, error) {
@@ -802,9 +802,9 @@ func (a *PersonalizeStub) DescribeDataset(ctx workflow.Context, input *personali
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeDatasetAsync(ctx workflow.Context, input *personalize.DescribeDatasetInput) *PersonalizeDescribeDatasetResult {
+func (a *PersonalizeStub) DescribeDatasetAsync(ctx workflow.Context, input *personalize.DescribeDatasetInput) *PersonalizeDescribeDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDataset", input)
-	return &PersonalizeDescribeDatasetResult{Result: future}
+	return &PersonalizeDescribeDatasetFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeDatasetGroup(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) (*personalize.DescribeDatasetGroupOutput, error) {
@@ -813,9 +813,9 @@ func (a *PersonalizeStub) DescribeDatasetGroup(ctx workflow.Context, input *pers
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeDatasetGroupAsync(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) *PersonalizeDescribeDatasetGroupResult {
+func (a *PersonalizeStub) DescribeDatasetGroupAsync(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) *PersonalizeDescribeDatasetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDatasetGroup", input)
-	return &PersonalizeDescribeDatasetGroupResult{Result: future}
+	return &PersonalizeDescribeDatasetGroupFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeDatasetImportJob(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) (*personalize.DescribeDatasetImportJobOutput, error) {
@@ -824,9 +824,9 @@ func (a *PersonalizeStub) DescribeDatasetImportJob(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeDatasetImportJobAsync(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) *PersonalizeDescribeDatasetImportJobResult {
+func (a *PersonalizeStub) DescribeDatasetImportJobAsync(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) *PersonalizeDescribeDatasetImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDatasetImportJob", input)
-	return &PersonalizeDescribeDatasetImportJobResult{Result: future}
+	return &PersonalizeDescribeDatasetImportJobFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeEventTracker(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) (*personalize.DescribeEventTrackerOutput, error) {
@@ -835,9 +835,9 @@ func (a *PersonalizeStub) DescribeEventTracker(ctx workflow.Context, input *pers
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeEventTrackerAsync(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) *PersonalizeDescribeEventTrackerResult {
+func (a *PersonalizeStub) DescribeEventTrackerAsync(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) *PersonalizeDescribeEventTrackerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeEventTracker", input)
-	return &PersonalizeDescribeEventTrackerResult{Result: future}
+	return &PersonalizeDescribeEventTrackerFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeFeatureTransformation(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) (*personalize.DescribeFeatureTransformationOutput, error) {
@@ -846,9 +846,9 @@ func (a *PersonalizeStub) DescribeFeatureTransformation(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeFeatureTransformationAsync(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) *PersonalizeDescribeFeatureTransformationResult {
+func (a *PersonalizeStub) DescribeFeatureTransformationAsync(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) *PersonalizeDescribeFeatureTransformationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeFeatureTransformation", input)
-	return &PersonalizeDescribeFeatureTransformationResult{Result: future}
+	return &PersonalizeDescribeFeatureTransformationFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeFilter(ctx workflow.Context, input *personalize.DescribeFilterInput) (*personalize.DescribeFilterOutput, error) {
@@ -857,9 +857,9 @@ func (a *PersonalizeStub) DescribeFilter(ctx workflow.Context, input *personaliz
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeFilterAsync(ctx workflow.Context, input *personalize.DescribeFilterInput) *PersonalizeDescribeFilterResult {
+func (a *PersonalizeStub) DescribeFilterAsync(ctx workflow.Context, input *personalize.DescribeFilterInput) *PersonalizeDescribeFilterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeFilter", input)
-	return &PersonalizeDescribeFilterResult{Result: future}
+	return &PersonalizeDescribeFilterFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeRecipe(ctx workflow.Context, input *personalize.DescribeRecipeInput) (*personalize.DescribeRecipeOutput, error) {
@@ -868,9 +868,9 @@ func (a *PersonalizeStub) DescribeRecipe(ctx workflow.Context, input *personaliz
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeRecipeAsync(ctx workflow.Context, input *personalize.DescribeRecipeInput) *PersonalizeDescribeRecipeResult {
+func (a *PersonalizeStub) DescribeRecipeAsync(ctx workflow.Context, input *personalize.DescribeRecipeInput) *PersonalizeDescribeRecipeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeRecipe", input)
-	return &PersonalizeDescribeRecipeResult{Result: future}
+	return &PersonalizeDescribeRecipeFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeSchema(ctx workflow.Context, input *personalize.DescribeSchemaInput) (*personalize.DescribeSchemaOutput, error) {
@@ -879,9 +879,9 @@ func (a *PersonalizeStub) DescribeSchema(ctx workflow.Context, input *personaliz
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeSchemaAsync(ctx workflow.Context, input *personalize.DescribeSchemaInput) *PersonalizeDescribeSchemaResult {
+func (a *PersonalizeStub) DescribeSchemaAsync(ctx workflow.Context, input *personalize.DescribeSchemaInput) *PersonalizeDescribeSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSchema", input)
-	return &PersonalizeDescribeSchemaResult{Result: future}
+	return &PersonalizeDescribeSchemaFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeSolution(ctx workflow.Context, input *personalize.DescribeSolutionInput) (*personalize.DescribeSolutionOutput, error) {
@@ -890,9 +890,9 @@ func (a *PersonalizeStub) DescribeSolution(ctx workflow.Context, input *personal
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeSolutionAsync(ctx workflow.Context, input *personalize.DescribeSolutionInput) *PersonalizeDescribeSolutionResult {
+func (a *PersonalizeStub) DescribeSolutionAsync(ctx workflow.Context, input *personalize.DescribeSolutionInput) *PersonalizeDescribeSolutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSolution", input)
-	return &PersonalizeDescribeSolutionResult{Result: future}
+	return &PersonalizeDescribeSolutionFuture{Future: future}
 }
 
 func (a *PersonalizeStub) DescribeSolutionVersion(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) (*personalize.DescribeSolutionVersionOutput, error) {
@@ -901,9 +901,9 @@ func (a *PersonalizeStub) DescribeSolutionVersion(ctx workflow.Context, input *p
 	return &output, err
 }
 
-func (a *PersonalizeStub) DescribeSolutionVersionAsync(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) *PersonalizeDescribeSolutionVersionResult {
+func (a *PersonalizeStub) DescribeSolutionVersionAsync(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) *PersonalizeDescribeSolutionVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSolutionVersion", input)
-	return &PersonalizeDescribeSolutionVersionResult{Result: future}
+	return &PersonalizeDescribeSolutionVersionFuture{Future: future}
 }
 
 func (a *PersonalizeStub) GetSolutionMetrics(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) (*personalize.GetSolutionMetricsOutput, error) {
@@ -912,9 +912,9 @@ func (a *PersonalizeStub) GetSolutionMetrics(ctx workflow.Context, input *person
 	return &output, err
 }
 
-func (a *PersonalizeStub) GetSolutionMetricsAsync(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) *PersonalizeGetSolutionMetricsResult {
+func (a *PersonalizeStub) GetSolutionMetricsAsync(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) *PersonalizeGetSolutionMetricsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.GetSolutionMetrics", input)
-	return &PersonalizeGetSolutionMetricsResult{Result: future}
+	return &PersonalizeGetSolutionMetricsFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListBatchInferenceJobs(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) (*personalize.ListBatchInferenceJobsOutput, error) {
@@ -923,9 +923,9 @@ func (a *PersonalizeStub) ListBatchInferenceJobs(ctx workflow.Context, input *pe
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListBatchInferenceJobsAsync(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) *PersonalizeListBatchInferenceJobsResult {
+func (a *PersonalizeStub) ListBatchInferenceJobsAsync(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) *PersonalizeListBatchInferenceJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListBatchInferenceJobs", input)
-	return &PersonalizeListBatchInferenceJobsResult{Result: future}
+	return &PersonalizeListBatchInferenceJobsFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListCampaigns(ctx workflow.Context, input *personalize.ListCampaignsInput) (*personalize.ListCampaignsOutput, error) {
@@ -934,9 +934,9 @@ func (a *PersonalizeStub) ListCampaigns(ctx workflow.Context, input *personalize
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListCampaignsAsync(ctx workflow.Context, input *personalize.ListCampaignsInput) *PersonalizeListCampaignsResult {
+func (a *PersonalizeStub) ListCampaignsAsync(ctx workflow.Context, input *personalize.ListCampaignsInput) *PersonalizeListCampaignsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListCampaigns", input)
-	return &PersonalizeListCampaignsResult{Result: future}
+	return &PersonalizeListCampaignsFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListDatasetGroups(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) (*personalize.ListDatasetGroupsOutput, error) {
@@ -945,9 +945,9 @@ func (a *PersonalizeStub) ListDatasetGroups(ctx workflow.Context, input *persona
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListDatasetGroupsAsync(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) *PersonalizeListDatasetGroupsResult {
+func (a *PersonalizeStub) ListDatasetGroupsAsync(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) *PersonalizeListDatasetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasetGroups", input)
-	return &PersonalizeListDatasetGroupsResult{Result: future}
+	return &PersonalizeListDatasetGroupsFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListDatasetImportJobs(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) (*personalize.ListDatasetImportJobsOutput, error) {
@@ -956,9 +956,9 @@ func (a *PersonalizeStub) ListDatasetImportJobs(ctx workflow.Context, input *per
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListDatasetImportJobsAsync(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) *PersonalizeListDatasetImportJobsResult {
+func (a *PersonalizeStub) ListDatasetImportJobsAsync(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) *PersonalizeListDatasetImportJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasetImportJobs", input)
-	return &PersonalizeListDatasetImportJobsResult{Result: future}
+	return &PersonalizeListDatasetImportJobsFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListDatasets(ctx workflow.Context, input *personalize.ListDatasetsInput) (*personalize.ListDatasetsOutput, error) {
@@ -967,9 +967,9 @@ func (a *PersonalizeStub) ListDatasets(ctx workflow.Context, input *personalize.
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListDatasetsAsync(ctx workflow.Context, input *personalize.ListDatasetsInput) *PersonalizeListDatasetsResult {
+func (a *PersonalizeStub) ListDatasetsAsync(ctx workflow.Context, input *personalize.ListDatasetsInput) *PersonalizeListDatasetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasets", input)
-	return &PersonalizeListDatasetsResult{Result: future}
+	return &PersonalizeListDatasetsFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListEventTrackers(ctx workflow.Context, input *personalize.ListEventTrackersInput) (*personalize.ListEventTrackersOutput, error) {
@@ -978,9 +978,9 @@ func (a *PersonalizeStub) ListEventTrackers(ctx workflow.Context, input *persona
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListEventTrackersAsync(ctx workflow.Context, input *personalize.ListEventTrackersInput) *PersonalizeListEventTrackersResult {
+func (a *PersonalizeStub) ListEventTrackersAsync(ctx workflow.Context, input *personalize.ListEventTrackersInput) *PersonalizeListEventTrackersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListEventTrackers", input)
-	return &PersonalizeListEventTrackersResult{Result: future}
+	return &PersonalizeListEventTrackersFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListFilters(ctx workflow.Context, input *personalize.ListFiltersInput) (*personalize.ListFiltersOutput, error) {
@@ -989,9 +989,9 @@ func (a *PersonalizeStub) ListFilters(ctx workflow.Context, input *personalize.L
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListFiltersAsync(ctx workflow.Context, input *personalize.ListFiltersInput) *PersonalizeListFiltersResult {
+func (a *PersonalizeStub) ListFiltersAsync(ctx workflow.Context, input *personalize.ListFiltersInput) *PersonalizeListFiltersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListFilters", input)
-	return &PersonalizeListFiltersResult{Result: future}
+	return &PersonalizeListFiltersFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListRecipes(ctx workflow.Context, input *personalize.ListRecipesInput) (*personalize.ListRecipesOutput, error) {
@@ -1000,9 +1000,9 @@ func (a *PersonalizeStub) ListRecipes(ctx workflow.Context, input *personalize.L
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListRecipesAsync(ctx workflow.Context, input *personalize.ListRecipesInput) *PersonalizeListRecipesResult {
+func (a *PersonalizeStub) ListRecipesAsync(ctx workflow.Context, input *personalize.ListRecipesInput) *PersonalizeListRecipesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListRecipes", input)
-	return &PersonalizeListRecipesResult{Result: future}
+	return &PersonalizeListRecipesFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListSchemas(ctx workflow.Context, input *personalize.ListSchemasInput) (*personalize.ListSchemasOutput, error) {
@@ -1011,9 +1011,9 @@ func (a *PersonalizeStub) ListSchemas(ctx workflow.Context, input *personalize.L
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListSchemasAsync(ctx workflow.Context, input *personalize.ListSchemasInput) *PersonalizeListSchemasResult {
+func (a *PersonalizeStub) ListSchemasAsync(ctx workflow.Context, input *personalize.ListSchemasInput) *PersonalizeListSchemasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListSchemas", input)
-	return &PersonalizeListSchemasResult{Result: future}
+	return &PersonalizeListSchemasFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListSolutionVersions(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) (*personalize.ListSolutionVersionsOutput, error) {
@@ -1022,9 +1022,9 @@ func (a *PersonalizeStub) ListSolutionVersions(ctx workflow.Context, input *pers
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListSolutionVersionsAsync(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) *PersonalizeListSolutionVersionsResult {
+func (a *PersonalizeStub) ListSolutionVersionsAsync(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) *PersonalizeListSolutionVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListSolutionVersions", input)
-	return &PersonalizeListSolutionVersionsResult{Result: future}
+	return &PersonalizeListSolutionVersionsFuture{Future: future}
 }
 
 func (a *PersonalizeStub) ListSolutions(ctx workflow.Context, input *personalize.ListSolutionsInput) (*personalize.ListSolutionsOutput, error) {
@@ -1033,9 +1033,9 @@ func (a *PersonalizeStub) ListSolutions(ctx workflow.Context, input *personalize
 	return &output, err
 }
 
-func (a *PersonalizeStub) ListSolutionsAsync(ctx workflow.Context, input *personalize.ListSolutionsInput) *PersonalizeListSolutionsResult {
+func (a *PersonalizeStub) ListSolutionsAsync(ctx workflow.Context, input *personalize.ListSolutionsInput) *PersonalizeListSolutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListSolutions", input)
-	return &PersonalizeListSolutionsResult{Result: future}
+	return &PersonalizeListSolutionsFuture{Future: future}
 }
 
 func (a *PersonalizeStub) UpdateCampaign(ctx workflow.Context, input *personalize.UpdateCampaignInput) (*personalize.UpdateCampaignOutput, error) {
@@ -1044,7 +1044,7 @@ func (a *PersonalizeStub) UpdateCampaign(ctx workflow.Context, input *personaliz
 	return &output, err
 }
 
-func (a *PersonalizeStub) UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignResult {
+func (a *PersonalizeStub) UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalize.UpdateCampaign", input)
-	return &PersonalizeUpdateCampaignResult{Result: future}
+	return &PersonalizeUpdateCampaignFuture{Future: future}
 }

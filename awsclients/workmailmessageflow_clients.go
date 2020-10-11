@@ -11,7 +11,7 @@ import (
 
 type WorkMailMessageFlowClient interface {
 	GetRawMessageContent(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error)
-	GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentResult
+	GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentFuture
 }
 
 type WorkMailMessageFlowStub struct{}
@@ -20,13 +20,13 @@ func NewWorkMailMessageFlowStub() WorkMailMessageFlowClient {
 	return &WorkMailMessageFlowStub{}
 }
 
-type WorkmailmessageflowGetRawMessageContentResult struct {
-	Result workflow.Future
+type WorkmailmessageflowGetRawMessageContentFuture struct {
+	Future workflow.Future
 }
 
-func (r *WorkmailmessageflowGetRawMessageContentResult) Get(ctx workflow.Context) (*workmailmessageflow.GetRawMessageContentOutput, error) {
+func (r *WorkmailmessageflowGetRawMessageContentFuture) Get(ctx workflow.Context) (*workmailmessageflow.GetRawMessageContentOutput, error) {
 	var output workmailmessageflow.GetRawMessageContentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -36,7 +36,7 @@ func (a *WorkMailMessageFlowStub) GetRawMessageContent(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *WorkMailMessageFlowStub) GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentResult {
+func (a *WorkMailMessageFlowStub) GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmailmessageflow.GetRawMessageContent", input)
-	return &WorkmailmessageflowGetRawMessageContentResult{Result: future}
+	return &WorkmailmessageflowGetRawMessageContentFuture{Future: future}
 }

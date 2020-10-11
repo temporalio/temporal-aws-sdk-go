@@ -11,70 +11,70 @@ import (
 
 type MQClient interface {
 	CreateBroker(ctx workflow.Context, input *mq.CreateBrokerRequest) (*mq.CreateBrokerResponse, error)
-	CreateBrokerAsync(ctx workflow.Context, input *mq.CreateBrokerRequest) *MqCreateBrokerResult
+	CreateBrokerAsync(ctx workflow.Context, input *mq.CreateBrokerRequest) *MqCreateBrokerFuture
 
 	CreateConfiguration(ctx workflow.Context, input *mq.CreateConfigurationRequest) (*mq.CreateConfigurationResponse, error)
-	CreateConfigurationAsync(ctx workflow.Context, input *mq.CreateConfigurationRequest) *MqCreateConfigurationResult
+	CreateConfigurationAsync(ctx workflow.Context, input *mq.CreateConfigurationRequest) *MqCreateConfigurationFuture
 
 	CreateTags(ctx workflow.Context, input *mq.CreateTagsInput) (*mq.CreateTagsOutput, error)
-	CreateTagsAsync(ctx workflow.Context, input *mq.CreateTagsInput) *MqCreateTagsResult
+	CreateTagsAsync(ctx workflow.Context, input *mq.CreateTagsInput) *MqCreateTagsFuture
 
 	CreateUser(ctx workflow.Context, input *mq.CreateUserRequest) (*mq.CreateUserOutput, error)
-	CreateUserAsync(ctx workflow.Context, input *mq.CreateUserRequest) *MqCreateUserResult
+	CreateUserAsync(ctx workflow.Context, input *mq.CreateUserRequest) *MqCreateUserFuture
 
 	DeleteBroker(ctx workflow.Context, input *mq.DeleteBrokerInput) (*mq.DeleteBrokerResponse, error)
-	DeleteBrokerAsync(ctx workflow.Context, input *mq.DeleteBrokerInput) *MqDeleteBrokerResult
+	DeleteBrokerAsync(ctx workflow.Context, input *mq.DeleteBrokerInput) *MqDeleteBrokerFuture
 
 	DeleteTags(ctx workflow.Context, input *mq.DeleteTagsInput) (*mq.DeleteTagsOutput, error)
-	DeleteTagsAsync(ctx workflow.Context, input *mq.DeleteTagsInput) *MqDeleteTagsResult
+	DeleteTagsAsync(ctx workflow.Context, input *mq.DeleteTagsInput) *MqDeleteTagsFuture
 
 	DeleteUser(ctx workflow.Context, input *mq.DeleteUserInput) (*mq.DeleteUserOutput, error)
-	DeleteUserAsync(ctx workflow.Context, input *mq.DeleteUserInput) *MqDeleteUserResult
+	DeleteUserAsync(ctx workflow.Context, input *mq.DeleteUserInput) *MqDeleteUserFuture
 
 	DescribeBroker(ctx workflow.Context, input *mq.DescribeBrokerInput) (*mq.DescribeBrokerResponse, error)
-	DescribeBrokerAsync(ctx workflow.Context, input *mq.DescribeBrokerInput) *MqDescribeBrokerResult
+	DescribeBrokerAsync(ctx workflow.Context, input *mq.DescribeBrokerInput) *MqDescribeBrokerFuture
 
 	DescribeBrokerEngineTypes(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) (*mq.DescribeBrokerEngineTypesOutput, error)
-	DescribeBrokerEngineTypesAsync(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) *MqDescribeBrokerEngineTypesResult
+	DescribeBrokerEngineTypesAsync(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) *MqDescribeBrokerEngineTypesFuture
 
 	DescribeBrokerInstanceOptions(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) (*mq.DescribeBrokerInstanceOptionsOutput, error)
-	DescribeBrokerInstanceOptionsAsync(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) *MqDescribeBrokerInstanceOptionsResult
+	DescribeBrokerInstanceOptionsAsync(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) *MqDescribeBrokerInstanceOptionsFuture
 
 	DescribeConfiguration(ctx workflow.Context, input *mq.DescribeConfigurationInput) (*mq.DescribeConfigurationOutput, error)
-	DescribeConfigurationAsync(ctx workflow.Context, input *mq.DescribeConfigurationInput) *MqDescribeConfigurationResult
+	DescribeConfigurationAsync(ctx workflow.Context, input *mq.DescribeConfigurationInput) *MqDescribeConfigurationFuture
 
 	DescribeConfigurationRevision(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) (*mq.DescribeConfigurationRevisionResponse, error)
-	DescribeConfigurationRevisionAsync(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) *MqDescribeConfigurationRevisionResult
+	DescribeConfigurationRevisionAsync(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) *MqDescribeConfigurationRevisionFuture
 
 	DescribeUser(ctx workflow.Context, input *mq.DescribeUserInput) (*mq.DescribeUserResponse, error)
-	DescribeUserAsync(ctx workflow.Context, input *mq.DescribeUserInput) *MqDescribeUserResult
+	DescribeUserAsync(ctx workflow.Context, input *mq.DescribeUserInput) *MqDescribeUserFuture
 
 	ListBrokers(ctx workflow.Context, input *mq.ListBrokersInput) (*mq.ListBrokersResponse, error)
-	ListBrokersAsync(ctx workflow.Context, input *mq.ListBrokersInput) *MqListBrokersResult
+	ListBrokersAsync(ctx workflow.Context, input *mq.ListBrokersInput) *MqListBrokersFuture
 
 	ListConfigurationRevisions(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) (*mq.ListConfigurationRevisionsResponse, error)
-	ListConfigurationRevisionsAsync(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) *MqListConfigurationRevisionsResult
+	ListConfigurationRevisionsAsync(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) *MqListConfigurationRevisionsFuture
 
 	ListConfigurations(ctx workflow.Context, input *mq.ListConfigurationsInput) (*mq.ListConfigurationsResponse, error)
-	ListConfigurationsAsync(ctx workflow.Context, input *mq.ListConfigurationsInput) *MqListConfigurationsResult
+	ListConfigurationsAsync(ctx workflow.Context, input *mq.ListConfigurationsInput) *MqListConfigurationsFuture
 
 	ListTags(ctx workflow.Context, input *mq.ListTagsInput) (*mq.ListTagsOutput, error)
-	ListTagsAsync(ctx workflow.Context, input *mq.ListTagsInput) *MqListTagsResult
+	ListTagsAsync(ctx workflow.Context, input *mq.ListTagsInput) *MqListTagsFuture
 
 	ListUsers(ctx workflow.Context, input *mq.ListUsersInput) (*mq.ListUsersResponse, error)
-	ListUsersAsync(ctx workflow.Context, input *mq.ListUsersInput) *MqListUsersResult
+	ListUsersAsync(ctx workflow.Context, input *mq.ListUsersInput) *MqListUsersFuture
 
 	RebootBroker(ctx workflow.Context, input *mq.RebootBrokerInput) (*mq.RebootBrokerOutput, error)
-	RebootBrokerAsync(ctx workflow.Context, input *mq.RebootBrokerInput) *MqRebootBrokerResult
+	RebootBrokerAsync(ctx workflow.Context, input *mq.RebootBrokerInput) *MqRebootBrokerFuture
 
 	UpdateBroker(ctx workflow.Context, input *mq.UpdateBrokerRequest) (*mq.UpdateBrokerResponse, error)
-	UpdateBrokerAsync(ctx workflow.Context, input *mq.UpdateBrokerRequest) *MqUpdateBrokerResult
+	UpdateBrokerAsync(ctx workflow.Context, input *mq.UpdateBrokerRequest) *MqUpdateBrokerFuture
 
 	UpdateConfiguration(ctx workflow.Context, input *mq.UpdateConfigurationRequest) (*mq.UpdateConfigurationResponse, error)
-	UpdateConfigurationAsync(ctx workflow.Context, input *mq.UpdateConfigurationRequest) *MqUpdateConfigurationResult
+	UpdateConfigurationAsync(ctx workflow.Context, input *mq.UpdateConfigurationRequest) *MqUpdateConfigurationFuture
 
 	UpdateUser(ctx workflow.Context, input *mq.UpdateUserRequest) (*mq.UpdateUserOutput, error)
-	UpdateUserAsync(ctx workflow.Context, input *mq.UpdateUserRequest) *MqUpdateUserResult
+	UpdateUserAsync(ctx workflow.Context, input *mq.UpdateUserRequest) *MqUpdateUserFuture
 }
 
 type MQStub struct{}
@@ -83,223 +83,223 @@ func NewMQStub() MQClient {
 	return &MQStub{}
 }
 
-type MqCreateBrokerResult struct {
-	Result workflow.Future
+type MqCreateBrokerFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqCreateBrokerResult) Get(ctx workflow.Context) (*mq.CreateBrokerResponse, error) {
+func (r *MqCreateBrokerFuture) Get(ctx workflow.Context) (*mq.CreateBrokerResponse, error) {
 	var output mq.CreateBrokerResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqCreateConfigurationResult struct {
-	Result workflow.Future
+type MqCreateConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqCreateConfigurationResult) Get(ctx workflow.Context) (*mq.CreateConfigurationResponse, error) {
+func (r *MqCreateConfigurationFuture) Get(ctx workflow.Context) (*mq.CreateConfigurationResponse, error) {
 	var output mq.CreateConfigurationResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqCreateTagsResult struct {
-	Result workflow.Future
+type MqCreateTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqCreateTagsResult) Get(ctx workflow.Context) (*mq.CreateTagsOutput, error) {
+func (r *MqCreateTagsFuture) Get(ctx workflow.Context) (*mq.CreateTagsOutput, error) {
 	var output mq.CreateTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqCreateUserResult struct {
-	Result workflow.Future
+type MqCreateUserFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqCreateUserResult) Get(ctx workflow.Context) (*mq.CreateUserOutput, error) {
+func (r *MqCreateUserFuture) Get(ctx workflow.Context) (*mq.CreateUserOutput, error) {
 	var output mq.CreateUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDeleteBrokerResult struct {
-	Result workflow.Future
+type MqDeleteBrokerFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDeleteBrokerResult) Get(ctx workflow.Context) (*mq.DeleteBrokerResponse, error) {
+func (r *MqDeleteBrokerFuture) Get(ctx workflow.Context) (*mq.DeleteBrokerResponse, error) {
 	var output mq.DeleteBrokerResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDeleteTagsResult struct {
-	Result workflow.Future
+type MqDeleteTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDeleteTagsResult) Get(ctx workflow.Context) (*mq.DeleteTagsOutput, error) {
+func (r *MqDeleteTagsFuture) Get(ctx workflow.Context) (*mq.DeleteTagsOutput, error) {
 	var output mq.DeleteTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDeleteUserResult struct {
-	Result workflow.Future
+type MqDeleteUserFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDeleteUserResult) Get(ctx workflow.Context) (*mq.DeleteUserOutput, error) {
+func (r *MqDeleteUserFuture) Get(ctx workflow.Context) (*mq.DeleteUserOutput, error) {
 	var output mq.DeleteUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDescribeBrokerResult struct {
-	Result workflow.Future
+type MqDescribeBrokerFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDescribeBrokerResult) Get(ctx workflow.Context) (*mq.DescribeBrokerResponse, error) {
+func (r *MqDescribeBrokerFuture) Get(ctx workflow.Context) (*mq.DescribeBrokerResponse, error) {
 	var output mq.DescribeBrokerResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDescribeBrokerEngineTypesResult struct {
-	Result workflow.Future
+type MqDescribeBrokerEngineTypesFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDescribeBrokerEngineTypesResult) Get(ctx workflow.Context) (*mq.DescribeBrokerEngineTypesOutput, error) {
+func (r *MqDescribeBrokerEngineTypesFuture) Get(ctx workflow.Context) (*mq.DescribeBrokerEngineTypesOutput, error) {
 	var output mq.DescribeBrokerEngineTypesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDescribeBrokerInstanceOptionsResult struct {
-	Result workflow.Future
+type MqDescribeBrokerInstanceOptionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDescribeBrokerInstanceOptionsResult) Get(ctx workflow.Context) (*mq.DescribeBrokerInstanceOptionsOutput, error) {
+func (r *MqDescribeBrokerInstanceOptionsFuture) Get(ctx workflow.Context) (*mq.DescribeBrokerInstanceOptionsOutput, error) {
 	var output mq.DescribeBrokerInstanceOptionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDescribeConfigurationResult struct {
-	Result workflow.Future
+type MqDescribeConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDescribeConfigurationResult) Get(ctx workflow.Context) (*mq.DescribeConfigurationOutput, error) {
+func (r *MqDescribeConfigurationFuture) Get(ctx workflow.Context) (*mq.DescribeConfigurationOutput, error) {
 	var output mq.DescribeConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDescribeConfigurationRevisionResult struct {
-	Result workflow.Future
+type MqDescribeConfigurationRevisionFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDescribeConfigurationRevisionResult) Get(ctx workflow.Context) (*mq.DescribeConfigurationRevisionResponse, error) {
+func (r *MqDescribeConfigurationRevisionFuture) Get(ctx workflow.Context) (*mq.DescribeConfigurationRevisionResponse, error) {
 	var output mq.DescribeConfigurationRevisionResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqDescribeUserResult struct {
-	Result workflow.Future
+type MqDescribeUserFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqDescribeUserResult) Get(ctx workflow.Context) (*mq.DescribeUserResponse, error) {
+func (r *MqDescribeUserFuture) Get(ctx workflow.Context) (*mq.DescribeUserResponse, error) {
 	var output mq.DescribeUserResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqListBrokersResult struct {
-	Result workflow.Future
+type MqListBrokersFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqListBrokersResult) Get(ctx workflow.Context) (*mq.ListBrokersResponse, error) {
+func (r *MqListBrokersFuture) Get(ctx workflow.Context) (*mq.ListBrokersResponse, error) {
 	var output mq.ListBrokersResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqListConfigurationRevisionsResult struct {
-	Result workflow.Future
+type MqListConfigurationRevisionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqListConfigurationRevisionsResult) Get(ctx workflow.Context) (*mq.ListConfigurationRevisionsResponse, error) {
+func (r *MqListConfigurationRevisionsFuture) Get(ctx workflow.Context) (*mq.ListConfigurationRevisionsResponse, error) {
 	var output mq.ListConfigurationRevisionsResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqListConfigurationsResult struct {
-	Result workflow.Future
+type MqListConfigurationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqListConfigurationsResult) Get(ctx workflow.Context) (*mq.ListConfigurationsResponse, error) {
+func (r *MqListConfigurationsFuture) Get(ctx workflow.Context) (*mq.ListConfigurationsResponse, error) {
 	var output mq.ListConfigurationsResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqListTagsResult struct {
-	Result workflow.Future
+type MqListTagsFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqListTagsResult) Get(ctx workflow.Context) (*mq.ListTagsOutput, error) {
+func (r *MqListTagsFuture) Get(ctx workflow.Context) (*mq.ListTagsOutput, error) {
 	var output mq.ListTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqListUsersResult struct {
-	Result workflow.Future
+type MqListUsersFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqListUsersResult) Get(ctx workflow.Context) (*mq.ListUsersResponse, error) {
+func (r *MqListUsersFuture) Get(ctx workflow.Context) (*mq.ListUsersResponse, error) {
 	var output mq.ListUsersResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqRebootBrokerResult struct {
-	Result workflow.Future
+type MqRebootBrokerFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqRebootBrokerResult) Get(ctx workflow.Context) (*mq.RebootBrokerOutput, error) {
+func (r *MqRebootBrokerFuture) Get(ctx workflow.Context) (*mq.RebootBrokerOutput, error) {
 	var output mq.RebootBrokerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqUpdateBrokerResult struct {
-	Result workflow.Future
+type MqUpdateBrokerFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqUpdateBrokerResult) Get(ctx workflow.Context) (*mq.UpdateBrokerResponse, error) {
+func (r *MqUpdateBrokerFuture) Get(ctx workflow.Context) (*mq.UpdateBrokerResponse, error) {
 	var output mq.UpdateBrokerResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqUpdateConfigurationResult struct {
-	Result workflow.Future
+type MqUpdateConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqUpdateConfigurationResult) Get(ctx workflow.Context) (*mq.UpdateConfigurationResponse, error) {
+func (r *MqUpdateConfigurationFuture) Get(ctx workflow.Context) (*mq.UpdateConfigurationResponse, error) {
 	var output mq.UpdateConfigurationResponse
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MqUpdateUserResult struct {
-	Result workflow.Future
+type MqUpdateUserFuture struct {
+	Future workflow.Future
 }
 
-func (r *MqUpdateUserResult) Get(ctx workflow.Context) (*mq.UpdateUserOutput, error) {
+func (r *MqUpdateUserFuture) Get(ctx workflow.Context) (*mq.UpdateUserOutput, error) {
 	var output mq.UpdateUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -309,9 +309,9 @@ func (a *MQStub) CreateBroker(ctx workflow.Context, input *mq.CreateBrokerReques
 	return &output, err
 }
 
-func (a *MQStub) CreateBrokerAsync(ctx workflow.Context, input *mq.CreateBrokerRequest) *MqCreateBrokerResult {
+func (a *MQStub) CreateBrokerAsync(ctx workflow.Context, input *mq.CreateBrokerRequest) *MqCreateBrokerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.CreateBroker", input)
-	return &MqCreateBrokerResult{Result: future}
+	return &MqCreateBrokerFuture{Future: future}
 }
 
 func (a *MQStub) CreateConfiguration(ctx workflow.Context, input *mq.CreateConfigurationRequest) (*mq.CreateConfigurationResponse, error) {
@@ -320,9 +320,9 @@ func (a *MQStub) CreateConfiguration(ctx workflow.Context, input *mq.CreateConfi
 	return &output, err
 }
 
-func (a *MQStub) CreateConfigurationAsync(ctx workflow.Context, input *mq.CreateConfigurationRequest) *MqCreateConfigurationResult {
+func (a *MQStub) CreateConfigurationAsync(ctx workflow.Context, input *mq.CreateConfigurationRequest) *MqCreateConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.CreateConfiguration", input)
-	return &MqCreateConfigurationResult{Result: future}
+	return &MqCreateConfigurationFuture{Future: future}
 }
 
 func (a *MQStub) CreateTags(ctx workflow.Context, input *mq.CreateTagsInput) (*mq.CreateTagsOutput, error) {
@@ -331,9 +331,9 @@ func (a *MQStub) CreateTags(ctx workflow.Context, input *mq.CreateTagsInput) (*m
 	return &output, err
 }
 
-func (a *MQStub) CreateTagsAsync(ctx workflow.Context, input *mq.CreateTagsInput) *MqCreateTagsResult {
+func (a *MQStub) CreateTagsAsync(ctx workflow.Context, input *mq.CreateTagsInput) *MqCreateTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.CreateTags", input)
-	return &MqCreateTagsResult{Result: future}
+	return &MqCreateTagsFuture{Future: future}
 }
 
 func (a *MQStub) CreateUser(ctx workflow.Context, input *mq.CreateUserRequest) (*mq.CreateUserOutput, error) {
@@ -342,9 +342,9 @@ func (a *MQStub) CreateUser(ctx workflow.Context, input *mq.CreateUserRequest) (
 	return &output, err
 }
 
-func (a *MQStub) CreateUserAsync(ctx workflow.Context, input *mq.CreateUserRequest) *MqCreateUserResult {
+func (a *MQStub) CreateUserAsync(ctx workflow.Context, input *mq.CreateUserRequest) *MqCreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.CreateUser", input)
-	return &MqCreateUserResult{Result: future}
+	return &MqCreateUserFuture{Future: future}
 }
 
 func (a *MQStub) DeleteBroker(ctx workflow.Context, input *mq.DeleteBrokerInput) (*mq.DeleteBrokerResponse, error) {
@@ -353,9 +353,9 @@ func (a *MQStub) DeleteBroker(ctx workflow.Context, input *mq.DeleteBrokerInput)
 	return &output, err
 }
 
-func (a *MQStub) DeleteBrokerAsync(ctx workflow.Context, input *mq.DeleteBrokerInput) *MqDeleteBrokerResult {
+func (a *MQStub) DeleteBrokerAsync(ctx workflow.Context, input *mq.DeleteBrokerInput) *MqDeleteBrokerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DeleteBroker", input)
-	return &MqDeleteBrokerResult{Result: future}
+	return &MqDeleteBrokerFuture{Future: future}
 }
 
 func (a *MQStub) DeleteTags(ctx workflow.Context, input *mq.DeleteTagsInput) (*mq.DeleteTagsOutput, error) {
@@ -364,9 +364,9 @@ func (a *MQStub) DeleteTags(ctx workflow.Context, input *mq.DeleteTagsInput) (*m
 	return &output, err
 }
 
-func (a *MQStub) DeleteTagsAsync(ctx workflow.Context, input *mq.DeleteTagsInput) *MqDeleteTagsResult {
+func (a *MQStub) DeleteTagsAsync(ctx workflow.Context, input *mq.DeleteTagsInput) *MqDeleteTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DeleteTags", input)
-	return &MqDeleteTagsResult{Result: future}
+	return &MqDeleteTagsFuture{Future: future}
 }
 
 func (a *MQStub) DeleteUser(ctx workflow.Context, input *mq.DeleteUserInput) (*mq.DeleteUserOutput, error) {
@@ -375,9 +375,9 @@ func (a *MQStub) DeleteUser(ctx workflow.Context, input *mq.DeleteUserInput) (*m
 	return &output, err
 }
 
-func (a *MQStub) DeleteUserAsync(ctx workflow.Context, input *mq.DeleteUserInput) *MqDeleteUserResult {
+func (a *MQStub) DeleteUserAsync(ctx workflow.Context, input *mq.DeleteUserInput) *MqDeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DeleteUser", input)
-	return &MqDeleteUserResult{Result: future}
+	return &MqDeleteUserFuture{Future: future}
 }
 
 func (a *MQStub) DescribeBroker(ctx workflow.Context, input *mq.DescribeBrokerInput) (*mq.DescribeBrokerResponse, error) {
@@ -386,9 +386,9 @@ func (a *MQStub) DescribeBroker(ctx workflow.Context, input *mq.DescribeBrokerIn
 	return &output, err
 }
 
-func (a *MQStub) DescribeBrokerAsync(ctx workflow.Context, input *mq.DescribeBrokerInput) *MqDescribeBrokerResult {
+func (a *MQStub) DescribeBrokerAsync(ctx workflow.Context, input *mq.DescribeBrokerInput) *MqDescribeBrokerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DescribeBroker", input)
-	return &MqDescribeBrokerResult{Result: future}
+	return &MqDescribeBrokerFuture{Future: future}
 }
 
 func (a *MQStub) DescribeBrokerEngineTypes(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) (*mq.DescribeBrokerEngineTypesOutput, error) {
@@ -397,9 +397,9 @@ func (a *MQStub) DescribeBrokerEngineTypes(ctx workflow.Context, input *mq.Descr
 	return &output, err
 }
 
-func (a *MQStub) DescribeBrokerEngineTypesAsync(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) *MqDescribeBrokerEngineTypesResult {
+func (a *MQStub) DescribeBrokerEngineTypesAsync(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) *MqDescribeBrokerEngineTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DescribeBrokerEngineTypes", input)
-	return &MqDescribeBrokerEngineTypesResult{Result: future}
+	return &MqDescribeBrokerEngineTypesFuture{Future: future}
 }
 
 func (a *MQStub) DescribeBrokerInstanceOptions(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) (*mq.DescribeBrokerInstanceOptionsOutput, error) {
@@ -408,9 +408,9 @@ func (a *MQStub) DescribeBrokerInstanceOptions(ctx workflow.Context, input *mq.D
 	return &output, err
 }
 
-func (a *MQStub) DescribeBrokerInstanceOptionsAsync(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) *MqDescribeBrokerInstanceOptionsResult {
+func (a *MQStub) DescribeBrokerInstanceOptionsAsync(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) *MqDescribeBrokerInstanceOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DescribeBrokerInstanceOptions", input)
-	return &MqDescribeBrokerInstanceOptionsResult{Result: future}
+	return &MqDescribeBrokerInstanceOptionsFuture{Future: future}
 }
 
 func (a *MQStub) DescribeConfiguration(ctx workflow.Context, input *mq.DescribeConfigurationInput) (*mq.DescribeConfigurationOutput, error) {
@@ -419,9 +419,9 @@ func (a *MQStub) DescribeConfiguration(ctx workflow.Context, input *mq.DescribeC
 	return &output, err
 }
 
-func (a *MQStub) DescribeConfigurationAsync(ctx workflow.Context, input *mq.DescribeConfigurationInput) *MqDescribeConfigurationResult {
+func (a *MQStub) DescribeConfigurationAsync(ctx workflow.Context, input *mq.DescribeConfigurationInput) *MqDescribeConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DescribeConfiguration", input)
-	return &MqDescribeConfigurationResult{Result: future}
+	return &MqDescribeConfigurationFuture{Future: future}
 }
 
 func (a *MQStub) DescribeConfigurationRevision(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) (*mq.DescribeConfigurationRevisionResponse, error) {
@@ -430,9 +430,9 @@ func (a *MQStub) DescribeConfigurationRevision(ctx workflow.Context, input *mq.D
 	return &output, err
 }
 
-func (a *MQStub) DescribeConfigurationRevisionAsync(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) *MqDescribeConfigurationRevisionResult {
+func (a *MQStub) DescribeConfigurationRevisionAsync(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) *MqDescribeConfigurationRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DescribeConfigurationRevision", input)
-	return &MqDescribeConfigurationRevisionResult{Result: future}
+	return &MqDescribeConfigurationRevisionFuture{Future: future}
 }
 
 func (a *MQStub) DescribeUser(ctx workflow.Context, input *mq.DescribeUserInput) (*mq.DescribeUserResponse, error) {
@@ -441,9 +441,9 @@ func (a *MQStub) DescribeUser(ctx workflow.Context, input *mq.DescribeUserInput)
 	return &output, err
 }
 
-func (a *MQStub) DescribeUserAsync(ctx workflow.Context, input *mq.DescribeUserInput) *MqDescribeUserResult {
+func (a *MQStub) DescribeUserAsync(ctx workflow.Context, input *mq.DescribeUserInput) *MqDescribeUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.DescribeUser", input)
-	return &MqDescribeUserResult{Result: future}
+	return &MqDescribeUserFuture{Future: future}
 }
 
 func (a *MQStub) ListBrokers(ctx workflow.Context, input *mq.ListBrokersInput) (*mq.ListBrokersResponse, error) {
@@ -452,9 +452,9 @@ func (a *MQStub) ListBrokers(ctx workflow.Context, input *mq.ListBrokersInput) (
 	return &output, err
 }
 
-func (a *MQStub) ListBrokersAsync(ctx workflow.Context, input *mq.ListBrokersInput) *MqListBrokersResult {
+func (a *MQStub) ListBrokersAsync(ctx workflow.Context, input *mq.ListBrokersInput) *MqListBrokersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.ListBrokers", input)
-	return &MqListBrokersResult{Result: future}
+	return &MqListBrokersFuture{Future: future}
 }
 
 func (a *MQStub) ListConfigurationRevisions(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) (*mq.ListConfigurationRevisionsResponse, error) {
@@ -463,9 +463,9 @@ func (a *MQStub) ListConfigurationRevisions(ctx workflow.Context, input *mq.List
 	return &output, err
 }
 
-func (a *MQStub) ListConfigurationRevisionsAsync(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) *MqListConfigurationRevisionsResult {
+func (a *MQStub) ListConfigurationRevisionsAsync(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) *MqListConfigurationRevisionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.ListConfigurationRevisions", input)
-	return &MqListConfigurationRevisionsResult{Result: future}
+	return &MqListConfigurationRevisionsFuture{Future: future}
 }
 
 func (a *MQStub) ListConfigurations(ctx workflow.Context, input *mq.ListConfigurationsInput) (*mq.ListConfigurationsResponse, error) {
@@ -474,9 +474,9 @@ func (a *MQStub) ListConfigurations(ctx workflow.Context, input *mq.ListConfigur
 	return &output, err
 }
 
-func (a *MQStub) ListConfigurationsAsync(ctx workflow.Context, input *mq.ListConfigurationsInput) *MqListConfigurationsResult {
+func (a *MQStub) ListConfigurationsAsync(ctx workflow.Context, input *mq.ListConfigurationsInput) *MqListConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.ListConfigurations", input)
-	return &MqListConfigurationsResult{Result: future}
+	return &MqListConfigurationsFuture{Future: future}
 }
 
 func (a *MQStub) ListTags(ctx workflow.Context, input *mq.ListTagsInput) (*mq.ListTagsOutput, error) {
@@ -485,9 +485,9 @@ func (a *MQStub) ListTags(ctx workflow.Context, input *mq.ListTagsInput) (*mq.Li
 	return &output, err
 }
 
-func (a *MQStub) ListTagsAsync(ctx workflow.Context, input *mq.ListTagsInput) *MqListTagsResult {
+func (a *MQStub) ListTagsAsync(ctx workflow.Context, input *mq.ListTagsInput) *MqListTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.ListTags", input)
-	return &MqListTagsResult{Result: future}
+	return &MqListTagsFuture{Future: future}
 }
 
 func (a *MQStub) ListUsers(ctx workflow.Context, input *mq.ListUsersInput) (*mq.ListUsersResponse, error) {
@@ -496,9 +496,9 @@ func (a *MQStub) ListUsers(ctx workflow.Context, input *mq.ListUsersInput) (*mq.
 	return &output, err
 }
 
-func (a *MQStub) ListUsersAsync(ctx workflow.Context, input *mq.ListUsersInput) *MqListUsersResult {
+func (a *MQStub) ListUsersAsync(ctx workflow.Context, input *mq.ListUsersInput) *MqListUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.ListUsers", input)
-	return &MqListUsersResult{Result: future}
+	return &MqListUsersFuture{Future: future}
 }
 
 func (a *MQStub) RebootBroker(ctx workflow.Context, input *mq.RebootBrokerInput) (*mq.RebootBrokerOutput, error) {
@@ -507,9 +507,9 @@ func (a *MQStub) RebootBroker(ctx workflow.Context, input *mq.RebootBrokerInput)
 	return &output, err
 }
 
-func (a *MQStub) RebootBrokerAsync(ctx workflow.Context, input *mq.RebootBrokerInput) *MqRebootBrokerResult {
+func (a *MQStub) RebootBrokerAsync(ctx workflow.Context, input *mq.RebootBrokerInput) *MqRebootBrokerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.RebootBroker", input)
-	return &MqRebootBrokerResult{Result: future}
+	return &MqRebootBrokerFuture{Future: future}
 }
 
 func (a *MQStub) UpdateBroker(ctx workflow.Context, input *mq.UpdateBrokerRequest) (*mq.UpdateBrokerResponse, error) {
@@ -518,9 +518,9 @@ func (a *MQStub) UpdateBroker(ctx workflow.Context, input *mq.UpdateBrokerReques
 	return &output, err
 }
 
-func (a *MQStub) UpdateBrokerAsync(ctx workflow.Context, input *mq.UpdateBrokerRequest) *MqUpdateBrokerResult {
+func (a *MQStub) UpdateBrokerAsync(ctx workflow.Context, input *mq.UpdateBrokerRequest) *MqUpdateBrokerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.UpdateBroker", input)
-	return &MqUpdateBrokerResult{Result: future}
+	return &MqUpdateBrokerFuture{Future: future}
 }
 
 func (a *MQStub) UpdateConfiguration(ctx workflow.Context, input *mq.UpdateConfigurationRequest) (*mq.UpdateConfigurationResponse, error) {
@@ -529,9 +529,9 @@ func (a *MQStub) UpdateConfiguration(ctx workflow.Context, input *mq.UpdateConfi
 	return &output, err
 }
 
-func (a *MQStub) UpdateConfigurationAsync(ctx workflow.Context, input *mq.UpdateConfigurationRequest) *MqUpdateConfigurationResult {
+func (a *MQStub) UpdateConfigurationAsync(ctx workflow.Context, input *mq.UpdateConfigurationRequest) *MqUpdateConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.UpdateConfiguration", input)
-	return &MqUpdateConfigurationResult{Result: future}
+	return &MqUpdateConfigurationFuture{Future: future}
 }
 
 func (a *MQStub) UpdateUser(ctx workflow.Context, input *mq.UpdateUserRequest) (*mq.UpdateUserOutput, error) {
@@ -540,7 +540,7 @@ func (a *MQStub) UpdateUser(ctx workflow.Context, input *mq.UpdateUserRequest) (
 	return &output, err
 }
 
-func (a *MQStub) UpdateUserAsync(ctx workflow.Context, input *mq.UpdateUserRequest) *MqUpdateUserResult {
+func (a *MQStub) UpdateUserAsync(ctx workflow.Context, input *mq.UpdateUserRequest) *MqUpdateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mq.UpdateUser", input)
-	return &MqUpdateUserResult{Result: future}
+	return &MqUpdateUserFuture{Future: future}
 }

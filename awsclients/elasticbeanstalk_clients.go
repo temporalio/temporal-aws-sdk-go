@@ -11,151 +11,154 @@ import (
 
 type ElasticBeanstalkClient interface {
 	AbortEnvironmentUpdate(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) (*elasticbeanstalk.AbortEnvironmentUpdateOutput, error)
-	AbortEnvironmentUpdateAsync(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) *ElasticbeanstalkAbortEnvironmentUpdateResult
+	AbortEnvironmentUpdateAsync(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) *ElasticbeanstalkAbortEnvironmentUpdateFuture
 
 	ApplyEnvironmentManagedAction(ctx workflow.Context, input *elasticbeanstalk.ApplyEnvironmentManagedActionInput) (*elasticbeanstalk.ApplyEnvironmentManagedActionOutput, error)
-	ApplyEnvironmentManagedActionAsync(ctx workflow.Context, input *elasticbeanstalk.ApplyEnvironmentManagedActionInput) *ElasticbeanstalkApplyEnvironmentManagedActionResult
+	ApplyEnvironmentManagedActionAsync(ctx workflow.Context, input *elasticbeanstalk.ApplyEnvironmentManagedActionInput) *ElasticbeanstalkApplyEnvironmentManagedActionFuture
 
 	AssociateEnvironmentOperationsRole(ctx workflow.Context, input *elasticbeanstalk.AssociateEnvironmentOperationsRoleInput) (*elasticbeanstalk.AssociateEnvironmentOperationsRoleOutput, error)
-	AssociateEnvironmentOperationsRoleAsync(ctx workflow.Context, input *elasticbeanstalk.AssociateEnvironmentOperationsRoleInput) *ElasticbeanstalkAssociateEnvironmentOperationsRoleResult
+	AssociateEnvironmentOperationsRoleAsync(ctx workflow.Context, input *elasticbeanstalk.AssociateEnvironmentOperationsRoleInput) *ElasticbeanstalkAssociateEnvironmentOperationsRoleFuture
 
 	CheckDNSAvailability(ctx workflow.Context, input *elasticbeanstalk.CheckDNSAvailabilityInput) (*elasticbeanstalk.CheckDNSAvailabilityOutput, error)
-	CheckDNSAvailabilityAsync(ctx workflow.Context, input *elasticbeanstalk.CheckDNSAvailabilityInput) *ElasticbeanstalkCheckDNSAvailabilityResult
+	CheckDNSAvailabilityAsync(ctx workflow.Context, input *elasticbeanstalk.CheckDNSAvailabilityInput) *ElasticbeanstalkCheckDNSAvailabilityFuture
 
 	ComposeEnvironments(ctx workflow.Context, input *elasticbeanstalk.ComposeEnvironmentsInput) (*elasticbeanstalk.EnvironmentDescriptionsMessage, error)
-	ComposeEnvironmentsAsync(ctx workflow.Context, input *elasticbeanstalk.ComposeEnvironmentsInput) *ElasticbeanstalkComposeEnvironmentsResult
+	ComposeEnvironmentsAsync(ctx workflow.Context, input *elasticbeanstalk.ComposeEnvironmentsInput) *ElasticbeanstalkComposeEnvironmentsFuture
 
 	CreateApplication(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationInput) (*elasticbeanstalk.ApplicationDescriptionMessage, error)
-	CreateApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationInput) *ElasticbeanstalkCreateApplicationResult
+	CreateApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationInput) *ElasticbeanstalkCreateApplicationFuture
 
 	CreateApplicationVersion(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationVersionInput) (*elasticbeanstalk.ApplicationVersionDescriptionMessage, error)
-	CreateApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationVersionInput) *ElasticbeanstalkCreateApplicationVersionResult
+	CreateApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationVersionInput) *ElasticbeanstalkCreateApplicationVersionFuture
 
 	CreateConfigurationTemplate(ctx workflow.Context, input *elasticbeanstalk.CreateConfigurationTemplateInput) (*elasticbeanstalk.ConfigurationSettingsDescription, error)
-	CreateConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.CreateConfigurationTemplateInput) *ElasticbeanstalkCreateConfigurationTemplateResult
+	CreateConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.CreateConfigurationTemplateInput) *ElasticbeanstalkCreateConfigurationTemplateFuture
 
 	CreateEnvironment(ctx workflow.Context, input *elasticbeanstalk.CreateEnvironmentInput) (*elasticbeanstalk.EnvironmentDescription, error)
-	CreateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.CreateEnvironmentInput) *ElasticbeanstalkCreateEnvironmentResult
+	CreateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.CreateEnvironmentInput) *ElasticbeanstalkCreateEnvironmentFuture
 
 	CreatePlatformVersion(ctx workflow.Context, input *elasticbeanstalk.CreatePlatformVersionInput) (*elasticbeanstalk.CreatePlatformVersionOutput, error)
-	CreatePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.CreatePlatformVersionInput) *ElasticbeanstalkCreatePlatformVersionResult
+	CreatePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.CreatePlatformVersionInput) *ElasticbeanstalkCreatePlatformVersionFuture
 
 	CreateStorageLocation(ctx workflow.Context, input *elasticbeanstalk.CreateStorageLocationInput) (*elasticbeanstalk.CreateStorageLocationOutput, error)
-	CreateStorageLocationAsync(ctx workflow.Context, input *elasticbeanstalk.CreateStorageLocationInput) *ElasticbeanstalkCreateStorageLocationResult
+	CreateStorageLocationAsync(ctx workflow.Context, input *elasticbeanstalk.CreateStorageLocationInput) *ElasticbeanstalkCreateStorageLocationFuture
 
 	DeleteApplication(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationInput) (*elasticbeanstalk.DeleteApplicationOutput, error)
-	DeleteApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationInput) *ElasticbeanstalkDeleteApplicationResult
+	DeleteApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationInput) *ElasticbeanstalkDeleteApplicationFuture
 
 	DeleteApplicationVersion(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationVersionInput) (*elasticbeanstalk.DeleteApplicationVersionOutput, error)
-	DeleteApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationVersionInput) *ElasticbeanstalkDeleteApplicationVersionResult
+	DeleteApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationVersionInput) *ElasticbeanstalkDeleteApplicationVersionFuture
 
 	DeleteConfigurationTemplate(ctx workflow.Context, input *elasticbeanstalk.DeleteConfigurationTemplateInput) (*elasticbeanstalk.DeleteConfigurationTemplateOutput, error)
-	DeleteConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteConfigurationTemplateInput) *ElasticbeanstalkDeleteConfigurationTemplateResult
+	DeleteConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteConfigurationTemplateInput) *ElasticbeanstalkDeleteConfigurationTemplateFuture
 
 	DeleteEnvironmentConfiguration(ctx workflow.Context, input *elasticbeanstalk.DeleteEnvironmentConfigurationInput) (*elasticbeanstalk.DeleteEnvironmentConfigurationOutput, error)
-	DeleteEnvironmentConfigurationAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteEnvironmentConfigurationInput) *ElasticbeanstalkDeleteEnvironmentConfigurationResult
+	DeleteEnvironmentConfigurationAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteEnvironmentConfigurationInput) *ElasticbeanstalkDeleteEnvironmentConfigurationFuture
 
 	DeletePlatformVersion(ctx workflow.Context, input *elasticbeanstalk.DeletePlatformVersionInput) (*elasticbeanstalk.DeletePlatformVersionOutput, error)
-	DeletePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DeletePlatformVersionInput) *ElasticbeanstalkDeletePlatformVersionResult
+	DeletePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DeletePlatformVersionInput) *ElasticbeanstalkDeletePlatformVersionFuture
 
 	DescribeAccountAttributes(ctx workflow.Context, input *elasticbeanstalk.DescribeAccountAttributesInput) (*elasticbeanstalk.DescribeAccountAttributesOutput, error)
-	DescribeAccountAttributesAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeAccountAttributesInput) *ElasticbeanstalkDescribeAccountAttributesResult
+	DescribeAccountAttributesAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeAccountAttributesInput) *ElasticbeanstalkDescribeAccountAttributesFuture
 
 	DescribeApplicationVersions(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationVersionsInput) (*elasticbeanstalk.DescribeApplicationVersionsOutput, error)
-	DescribeApplicationVersionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationVersionsInput) *ElasticbeanstalkDescribeApplicationVersionsResult
+	DescribeApplicationVersionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationVersionsInput) *ElasticbeanstalkDescribeApplicationVersionsFuture
 
 	DescribeApplications(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationsInput) (*elasticbeanstalk.DescribeApplicationsOutput, error)
-	DescribeApplicationsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationsInput) *ElasticbeanstalkDescribeApplicationsResult
+	DescribeApplicationsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationsInput) *ElasticbeanstalkDescribeApplicationsFuture
 
 	DescribeConfigurationOptions(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationOptionsInput) (*elasticbeanstalk.DescribeConfigurationOptionsOutput, error)
-	DescribeConfigurationOptionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationOptionsInput) *ElasticbeanstalkDescribeConfigurationOptionsResult
+	DescribeConfigurationOptionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationOptionsInput) *ElasticbeanstalkDescribeConfigurationOptionsFuture
 
 	DescribeConfigurationSettings(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationSettingsInput) (*elasticbeanstalk.DescribeConfigurationSettingsOutput, error)
-	DescribeConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationSettingsInput) *ElasticbeanstalkDescribeConfigurationSettingsResult
+	DescribeConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationSettingsInput) *ElasticbeanstalkDescribeConfigurationSettingsFuture
 
 	DescribeEnvironmentHealth(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentHealthInput) (*elasticbeanstalk.DescribeEnvironmentHealthOutput, error)
-	DescribeEnvironmentHealthAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentHealthInput) *ElasticbeanstalkDescribeEnvironmentHealthResult
+	DescribeEnvironmentHealthAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentHealthInput) *ElasticbeanstalkDescribeEnvironmentHealthFuture
 
 	DescribeEnvironmentManagedActionHistory(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionHistoryInput) (*elasticbeanstalk.DescribeEnvironmentManagedActionHistoryOutput, error)
-	DescribeEnvironmentManagedActionHistoryAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionHistoryInput) *ElasticbeanstalkDescribeEnvironmentManagedActionHistoryResult
+	DescribeEnvironmentManagedActionHistoryAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionHistoryInput) *ElasticbeanstalkDescribeEnvironmentManagedActionHistoryFuture
 
 	DescribeEnvironmentManagedActions(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionsInput) (*elasticbeanstalk.DescribeEnvironmentManagedActionsOutput, error)
-	DescribeEnvironmentManagedActionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionsInput) *ElasticbeanstalkDescribeEnvironmentManagedActionsResult
+	DescribeEnvironmentManagedActionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionsInput) *ElasticbeanstalkDescribeEnvironmentManagedActionsFuture
 
 	DescribeEnvironmentResources(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentResourcesInput) (*elasticbeanstalk.DescribeEnvironmentResourcesOutput, error)
-	DescribeEnvironmentResourcesAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentResourcesInput) *ElasticbeanstalkDescribeEnvironmentResourcesResult
+	DescribeEnvironmentResourcesAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentResourcesInput) *ElasticbeanstalkDescribeEnvironmentResourcesFuture
 
 	DescribeEnvironments(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) (*elasticbeanstalk.EnvironmentDescriptionsMessage, error)
-	DescribeEnvironmentsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *ElasticbeanstalkDescribeEnvironmentsResult
+	DescribeEnvironmentsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *ElasticbeanstalkDescribeEnvironmentsFuture
 
 	DescribeEvents(ctx workflow.Context, input *elasticbeanstalk.DescribeEventsInput) (*elasticbeanstalk.DescribeEventsOutput, error)
-	DescribeEventsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEventsInput) *ElasticbeanstalkDescribeEventsResult
+	DescribeEventsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEventsInput) *ElasticbeanstalkDescribeEventsFuture
 
 	DescribeInstancesHealth(ctx workflow.Context, input *elasticbeanstalk.DescribeInstancesHealthInput) (*elasticbeanstalk.DescribeInstancesHealthOutput, error)
-	DescribeInstancesHealthAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeInstancesHealthInput) *ElasticbeanstalkDescribeInstancesHealthResult
+	DescribeInstancesHealthAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeInstancesHealthInput) *ElasticbeanstalkDescribeInstancesHealthFuture
 
 	DescribePlatformVersion(ctx workflow.Context, input *elasticbeanstalk.DescribePlatformVersionInput) (*elasticbeanstalk.DescribePlatformVersionOutput, error)
-	DescribePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DescribePlatformVersionInput) *ElasticbeanstalkDescribePlatformVersionResult
+	DescribePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DescribePlatformVersionInput) *ElasticbeanstalkDescribePlatformVersionFuture
 
 	DisassociateEnvironmentOperationsRole(ctx workflow.Context, input *elasticbeanstalk.DisassociateEnvironmentOperationsRoleInput) (*elasticbeanstalk.DisassociateEnvironmentOperationsRoleOutput, error)
-	DisassociateEnvironmentOperationsRoleAsync(ctx workflow.Context, input *elasticbeanstalk.DisassociateEnvironmentOperationsRoleInput) *ElasticbeanstalkDisassociateEnvironmentOperationsRoleResult
+	DisassociateEnvironmentOperationsRoleAsync(ctx workflow.Context, input *elasticbeanstalk.DisassociateEnvironmentOperationsRoleInput) *ElasticbeanstalkDisassociateEnvironmentOperationsRoleFuture
 
 	ListAvailableSolutionStacks(ctx workflow.Context, input *elasticbeanstalk.ListAvailableSolutionStacksInput) (*elasticbeanstalk.ListAvailableSolutionStacksOutput, error)
-	ListAvailableSolutionStacksAsync(ctx workflow.Context, input *elasticbeanstalk.ListAvailableSolutionStacksInput) *ElasticbeanstalkListAvailableSolutionStacksResult
+	ListAvailableSolutionStacksAsync(ctx workflow.Context, input *elasticbeanstalk.ListAvailableSolutionStacksInput) *ElasticbeanstalkListAvailableSolutionStacksFuture
 
 	ListPlatformBranches(ctx workflow.Context, input *elasticbeanstalk.ListPlatformBranchesInput) (*elasticbeanstalk.ListPlatformBranchesOutput, error)
-	ListPlatformBranchesAsync(ctx workflow.Context, input *elasticbeanstalk.ListPlatformBranchesInput) *ElasticbeanstalkListPlatformBranchesResult
+	ListPlatformBranchesAsync(ctx workflow.Context, input *elasticbeanstalk.ListPlatformBranchesInput) *ElasticbeanstalkListPlatformBranchesFuture
 
 	ListPlatformVersions(ctx workflow.Context, input *elasticbeanstalk.ListPlatformVersionsInput) (*elasticbeanstalk.ListPlatformVersionsOutput, error)
-	ListPlatformVersionsAsync(ctx workflow.Context, input *elasticbeanstalk.ListPlatformVersionsInput) *ElasticbeanstalkListPlatformVersionsResult
+	ListPlatformVersionsAsync(ctx workflow.Context, input *elasticbeanstalk.ListPlatformVersionsInput) *ElasticbeanstalkListPlatformVersionsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *elasticbeanstalk.ListTagsForResourceInput) (*elasticbeanstalk.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *elasticbeanstalk.ListTagsForResourceInput) *ElasticbeanstalkListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *elasticbeanstalk.ListTagsForResourceInput) *ElasticbeanstalkListTagsForResourceFuture
 
 	RebuildEnvironment(ctx workflow.Context, input *elasticbeanstalk.RebuildEnvironmentInput) (*elasticbeanstalk.RebuildEnvironmentOutput, error)
-	RebuildEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.RebuildEnvironmentInput) *ElasticbeanstalkRebuildEnvironmentResult
+	RebuildEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.RebuildEnvironmentInput) *ElasticbeanstalkRebuildEnvironmentFuture
 
 	RequestEnvironmentInfo(ctx workflow.Context, input *elasticbeanstalk.RequestEnvironmentInfoInput) (*elasticbeanstalk.RequestEnvironmentInfoOutput, error)
-	RequestEnvironmentInfoAsync(ctx workflow.Context, input *elasticbeanstalk.RequestEnvironmentInfoInput) *ElasticbeanstalkRequestEnvironmentInfoResult
+	RequestEnvironmentInfoAsync(ctx workflow.Context, input *elasticbeanstalk.RequestEnvironmentInfoInput) *ElasticbeanstalkRequestEnvironmentInfoFuture
 
 	RestartAppServer(ctx workflow.Context, input *elasticbeanstalk.RestartAppServerInput) (*elasticbeanstalk.RestartAppServerOutput, error)
-	RestartAppServerAsync(ctx workflow.Context, input *elasticbeanstalk.RestartAppServerInput) *ElasticbeanstalkRestartAppServerResult
+	RestartAppServerAsync(ctx workflow.Context, input *elasticbeanstalk.RestartAppServerInput) *ElasticbeanstalkRestartAppServerFuture
 
 	RetrieveEnvironmentInfo(ctx workflow.Context, input *elasticbeanstalk.RetrieveEnvironmentInfoInput) (*elasticbeanstalk.RetrieveEnvironmentInfoOutput, error)
-	RetrieveEnvironmentInfoAsync(ctx workflow.Context, input *elasticbeanstalk.RetrieveEnvironmentInfoInput) *ElasticbeanstalkRetrieveEnvironmentInfoResult
+	RetrieveEnvironmentInfoAsync(ctx workflow.Context, input *elasticbeanstalk.RetrieveEnvironmentInfoInput) *ElasticbeanstalkRetrieveEnvironmentInfoFuture
 
 	SwapEnvironmentCNAMEs(ctx workflow.Context, input *elasticbeanstalk.SwapEnvironmentCNAMEsInput) (*elasticbeanstalk.SwapEnvironmentCNAMEsOutput, error)
-	SwapEnvironmentCNAMEsAsync(ctx workflow.Context, input *elasticbeanstalk.SwapEnvironmentCNAMEsInput) *ElasticbeanstalkSwapEnvironmentCNAMEsResult
+	SwapEnvironmentCNAMEsAsync(ctx workflow.Context, input *elasticbeanstalk.SwapEnvironmentCNAMEsInput) *ElasticbeanstalkSwapEnvironmentCNAMEsFuture
 
 	TerminateEnvironment(ctx workflow.Context, input *elasticbeanstalk.TerminateEnvironmentInput) (*elasticbeanstalk.EnvironmentDescription, error)
-	TerminateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.TerminateEnvironmentInput) *ElasticbeanstalkTerminateEnvironmentResult
+	TerminateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.TerminateEnvironmentInput) *ElasticbeanstalkTerminateEnvironmentFuture
 
 	UpdateApplication(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationInput) (*elasticbeanstalk.ApplicationDescriptionMessage, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationInput) *ElasticbeanstalkUpdateApplicationResult
+	UpdateApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationInput) *ElasticbeanstalkUpdateApplicationFuture
 
 	UpdateApplicationResourceLifecycle(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationResourceLifecycleInput) (*elasticbeanstalk.UpdateApplicationResourceLifecycleOutput, error)
-	UpdateApplicationResourceLifecycleAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationResourceLifecycleInput) *ElasticbeanstalkUpdateApplicationResourceLifecycleResult
+	UpdateApplicationResourceLifecycleAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationResourceLifecycleInput) *ElasticbeanstalkUpdateApplicationResourceLifecycleFuture
 
 	UpdateApplicationVersion(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationVersionInput) (*elasticbeanstalk.ApplicationVersionDescriptionMessage, error)
-	UpdateApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationVersionInput) *ElasticbeanstalkUpdateApplicationVersionResult
+	UpdateApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationVersionInput) *ElasticbeanstalkUpdateApplicationVersionFuture
 
 	UpdateConfigurationTemplate(ctx workflow.Context, input *elasticbeanstalk.UpdateConfigurationTemplateInput) (*elasticbeanstalk.ConfigurationSettingsDescription, error)
-	UpdateConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateConfigurationTemplateInput) *ElasticbeanstalkUpdateConfigurationTemplateResult
+	UpdateConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateConfigurationTemplateInput) *ElasticbeanstalkUpdateConfigurationTemplateFuture
 
 	UpdateEnvironment(ctx workflow.Context, input *elasticbeanstalk.UpdateEnvironmentInput) (*elasticbeanstalk.EnvironmentDescription, error)
-	UpdateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateEnvironmentInput) *ElasticbeanstalkUpdateEnvironmentResult
+	UpdateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateEnvironmentInput) *ElasticbeanstalkUpdateEnvironmentFuture
 
 	UpdateTagsForResource(ctx workflow.Context, input *elasticbeanstalk.UpdateTagsForResourceInput) (*elasticbeanstalk.UpdateTagsForResourceOutput, error)
-	UpdateTagsForResourceAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateTagsForResourceInput) *ElasticbeanstalkUpdateTagsForResourceResult
+	UpdateTagsForResourceAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateTagsForResourceInput) *ElasticbeanstalkUpdateTagsForResourceFuture
 
 	ValidateConfigurationSettings(ctx workflow.Context, input *elasticbeanstalk.ValidateConfigurationSettingsInput) (*elasticbeanstalk.ValidateConfigurationSettingsOutput, error)
-	ValidateConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.ValidateConfigurationSettingsInput) *ElasticbeanstalkValidateConfigurationSettingsResult
+	ValidateConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.ValidateConfigurationSettingsInput) *ElasticbeanstalkValidateConfigurationSettingsFuture
 
 	WaitUntilEnvironmentExists(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
+	WaitUntilEnvironmentExistsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future
 
 	WaitUntilEnvironmentTerminated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
+	WaitUntilEnvironmentTerminatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future
 
 	WaitUntilEnvironmentUpdated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
+	WaitUntilEnvironmentUpdatedAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) workflow.Future
 }
 
 type ElasticBeanstalkStub struct{}
@@ -164,473 +167,473 @@ func NewElasticBeanstalkStub() ElasticBeanstalkClient {
 	return &ElasticBeanstalkStub{}
 }
 
-type ElasticbeanstalkAbortEnvironmentUpdateResult struct {
-	Result workflow.Future
+type ElasticbeanstalkAbortEnvironmentUpdateFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkAbortEnvironmentUpdateResult) Get(ctx workflow.Context) (*elasticbeanstalk.AbortEnvironmentUpdateOutput, error) {
+func (r *ElasticbeanstalkAbortEnvironmentUpdateFuture) Get(ctx workflow.Context) (*elasticbeanstalk.AbortEnvironmentUpdateOutput, error) {
 	var output elasticbeanstalk.AbortEnvironmentUpdateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkApplyEnvironmentManagedActionResult struct {
-	Result workflow.Future
+type ElasticbeanstalkApplyEnvironmentManagedActionFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkApplyEnvironmentManagedActionResult) Get(ctx workflow.Context) (*elasticbeanstalk.ApplyEnvironmentManagedActionOutput, error) {
+func (r *ElasticbeanstalkApplyEnvironmentManagedActionFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ApplyEnvironmentManagedActionOutput, error) {
 	var output elasticbeanstalk.ApplyEnvironmentManagedActionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkAssociateEnvironmentOperationsRoleResult struct {
-	Result workflow.Future
+type ElasticbeanstalkAssociateEnvironmentOperationsRoleFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkAssociateEnvironmentOperationsRoleResult) Get(ctx workflow.Context) (*elasticbeanstalk.AssociateEnvironmentOperationsRoleOutput, error) {
+func (r *ElasticbeanstalkAssociateEnvironmentOperationsRoleFuture) Get(ctx workflow.Context) (*elasticbeanstalk.AssociateEnvironmentOperationsRoleOutput, error) {
 	var output elasticbeanstalk.AssociateEnvironmentOperationsRoleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkCheckDNSAvailabilityResult struct {
-	Result workflow.Future
+type ElasticbeanstalkCheckDNSAvailabilityFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkCheckDNSAvailabilityResult) Get(ctx workflow.Context) (*elasticbeanstalk.CheckDNSAvailabilityOutput, error) {
+func (r *ElasticbeanstalkCheckDNSAvailabilityFuture) Get(ctx workflow.Context) (*elasticbeanstalk.CheckDNSAvailabilityOutput, error) {
 	var output elasticbeanstalk.CheckDNSAvailabilityOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkComposeEnvironmentsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkComposeEnvironmentsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkComposeEnvironmentsResult) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescriptionsMessage, error) {
+func (r *ElasticbeanstalkComposeEnvironmentsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescriptionsMessage, error) {
 	var output elasticbeanstalk.EnvironmentDescriptionsMessage
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkCreateApplicationResult struct {
-	Result workflow.Future
+type ElasticbeanstalkCreateApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkCreateApplicationResult) Get(ctx workflow.Context) (*elasticbeanstalk.ApplicationDescriptionMessage, error) {
+func (r *ElasticbeanstalkCreateApplicationFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ApplicationDescriptionMessage, error) {
 	var output elasticbeanstalk.ApplicationDescriptionMessage
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkCreateApplicationVersionResult struct {
-	Result workflow.Future
+type ElasticbeanstalkCreateApplicationVersionFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkCreateApplicationVersionResult) Get(ctx workflow.Context) (*elasticbeanstalk.ApplicationVersionDescriptionMessage, error) {
+func (r *ElasticbeanstalkCreateApplicationVersionFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ApplicationVersionDescriptionMessage, error) {
 	var output elasticbeanstalk.ApplicationVersionDescriptionMessage
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkCreateConfigurationTemplateResult struct {
-	Result workflow.Future
+type ElasticbeanstalkCreateConfigurationTemplateFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkCreateConfigurationTemplateResult) Get(ctx workflow.Context) (*elasticbeanstalk.ConfigurationSettingsDescription, error) {
+func (r *ElasticbeanstalkCreateConfigurationTemplateFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ConfigurationSettingsDescription, error) {
 	var output elasticbeanstalk.ConfigurationSettingsDescription
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkCreateEnvironmentResult struct {
-	Result workflow.Future
+type ElasticbeanstalkCreateEnvironmentFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkCreateEnvironmentResult) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescription, error) {
+func (r *ElasticbeanstalkCreateEnvironmentFuture) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescription, error) {
 	var output elasticbeanstalk.EnvironmentDescription
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkCreatePlatformVersionResult struct {
-	Result workflow.Future
+type ElasticbeanstalkCreatePlatformVersionFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkCreatePlatformVersionResult) Get(ctx workflow.Context) (*elasticbeanstalk.CreatePlatformVersionOutput, error) {
+func (r *ElasticbeanstalkCreatePlatformVersionFuture) Get(ctx workflow.Context) (*elasticbeanstalk.CreatePlatformVersionOutput, error) {
 	var output elasticbeanstalk.CreatePlatformVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkCreateStorageLocationResult struct {
-	Result workflow.Future
+type ElasticbeanstalkCreateStorageLocationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkCreateStorageLocationResult) Get(ctx workflow.Context) (*elasticbeanstalk.CreateStorageLocationOutput, error) {
+func (r *ElasticbeanstalkCreateStorageLocationFuture) Get(ctx workflow.Context) (*elasticbeanstalk.CreateStorageLocationOutput, error) {
 	var output elasticbeanstalk.CreateStorageLocationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDeleteApplicationResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDeleteApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDeleteApplicationResult) Get(ctx workflow.Context) (*elasticbeanstalk.DeleteApplicationOutput, error) {
+func (r *ElasticbeanstalkDeleteApplicationFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DeleteApplicationOutput, error) {
 	var output elasticbeanstalk.DeleteApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDeleteApplicationVersionResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDeleteApplicationVersionFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDeleteApplicationVersionResult) Get(ctx workflow.Context) (*elasticbeanstalk.DeleteApplicationVersionOutput, error) {
+func (r *ElasticbeanstalkDeleteApplicationVersionFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DeleteApplicationVersionOutput, error) {
 	var output elasticbeanstalk.DeleteApplicationVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDeleteConfigurationTemplateResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDeleteConfigurationTemplateFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDeleteConfigurationTemplateResult) Get(ctx workflow.Context) (*elasticbeanstalk.DeleteConfigurationTemplateOutput, error) {
+func (r *ElasticbeanstalkDeleteConfigurationTemplateFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DeleteConfigurationTemplateOutput, error) {
 	var output elasticbeanstalk.DeleteConfigurationTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDeleteEnvironmentConfigurationResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDeleteEnvironmentConfigurationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDeleteEnvironmentConfigurationResult) Get(ctx workflow.Context) (*elasticbeanstalk.DeleteEnvironmentConfigurationOutput, error) {
+func (r *ElasticbeanstalkDeleteEnvironmentConfigurationFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DeleteEnvironmentConfigurationOutput, error) {
 	var output elasticbeanstalk.DeleteEnvironmentConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDeletePlatformVersionResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDeletePlatformVersionFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDeletePlatformVersionResult) Get(ctx workflow.Context) (*elasticbeanstalk.DeletePlatformVersionOutput, error) {
+func (r *ElasticbeanstalkDeletePlatformVersionFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DeletePlatformVersionOutput, error) {
 	var output elasticbeanstalk.DeletePlatformVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeAccountAttributesResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeAccountAttributesFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeAccountAttributesResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeAccountAttributesOutput, error) {
+func (r *ElasticbeanstalkDescribeAccountAttributesFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeAccountAttributesOutput, error) {
 	var output elasticbeanstalk.DescribeAccountAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeApplicationVersionsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeApplicationVersionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeApplicationVersionsResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeApplicationVersionsOutput, error) {
+func (r *ElasticbeanstalkDescribeApplicationVersionsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeApplicationVersionsOutput, error) {
 	var output elasticbeanstalk.DescribeApplicationVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeApplicationsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeApplicationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeApplicationsResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeApplicationsOutput, error) {
+func (r *ElasticbeanstalkDescribeApplicationsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeApplicationsOutput, error) {
 	var output elasticbeanstalk.DescribeApplicationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeConfigurationOptionsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeConfigurationOptionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeConfigurationOptionsResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeConfigurationOptionsOutput, error) {
+func (r *ElasticbeanstalkDescribeConfigurationOptionsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeConfigurationOptionsOutput, error) {
 	var output elasticbeanstalk.DescribeConfigurationOptionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeConfigurationSettingsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeConfigurationSettingsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeConfigurationSettingsResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeConfigurationSettingsOutput, error) {
+func (r *ElasticbeanstalkDescribeConfigurationSettingsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeConfigurationSettingsOutput, error) {
 	var output elasticbeanstalk.DescribeConfigurationSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeEnvironmentHealthResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeEnvironmentHealthFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeEnvironmentHealthResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEnvironmentHealthOutput, error) {
+func (r *ElasticbeanstalkDescribeEnvironmentHealthFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEnvironmentHealthOutput, error) {
 	var output elasticbeanstalk.DescribeEnvironmentHealthOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeEnvironmentManagedActionHistoryResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeEnvironmentManagedActionHistoryFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeEnvironmentManagedActionHistoryResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEnvironmentManagedActionHistoryOutput, error) {
+func (r *ElasticbeanstalkDescribeEnvironmentManagedActionHistoryFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEnvironmentManagedActionHistoryOutput, error) {
 	var output elasticbeanstalk.DescribeEnvironmentManagedActionHistoryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeEnvironmentManagedActionsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeEnvironmentManagedActionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeEnvironmentManagedActionsResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEnvironmentManagedActionsOutput, error) {
+func (r *ElasticbeanstalkDescribeEnvironmentManagedActionsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEnvironmentManagedActionsOutput, error) {
 	var output elasticbeanstalk.DescribeEnvironmentManagedActionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeEnvironmentResourcesResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeEnvironmentResourcesFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeEnvironmentResourcesResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEnvironmentResourcesOutput, error) {
+func (r *ElasticbeanstalkDescribeEnvironmentResourcesFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEnvironmentResourcesOutput, error) {
 	var output elasticbeanstalk.DescribeEnvironmentResourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeEnvironmentsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeEnvironmentsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeEnvironmentsResult) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescriptionsMessage, error) {
+func (r *ElasticbeanstalkDescribeEnvironmentsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescriptionsMessage, error) {
 	var output elasticbeanstalk.EnvironmentDescriptionsMessage
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeEventsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeEventsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeEventsResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEventsOutput, error) {
+func (r *ElasticbeanstalkDescribeEventsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeEventsOutput, error) {
 	var output elasticbeanstalk.DescribeEventsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribeInstancesHealthResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribeInstancesHealthFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribeInstancesHealthResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeInstancesHealthOutput, error) {
+func (r *ElasticbeanstalkDescribeInstancesHealthFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribeInstancesHealthOutput, error) {
 	var output elasticbeanstalk.DescribeInstancesHealthOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDescribePlatformVersionResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDescribePlatformVersionFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDescribePlatformVersionResult) Get(ctx workflow.Context) (*elasticbeanstalk.DescribePlatformVersionOutput, error) {
+func (r *ElasticbeanstalkDescribePlatformVersionFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DescribePlatformVersionOutput, error) {
 	var output elasticbeanstalk.DescribePlatformVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkDisassociateEnvironmentOperationsRoleResult struct {
-	Result workflow.Future
+type ElasticbeanstalkDisassociateEnvironmentOperationsRoleFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkDisassociateEnvironmentOperationsRoleResult) Get(ctx workflow.Context) (*elasticbeanstalk.DisassociateEnvironmentOperationsRoleOutput, error) {
+func (r *ElasticbeanstalkDisassociateEnvironmentOperationsRoleFuture) Get(ctx workflow.Context) (*elasticbeanstalk.DisassociateEnvironmentOperationsRoleOutput, error) {
 	var output elasticbeanstalk.DisassociateEnvironmentOperationsRoleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkListAvailableSolutionStacksResult struct {
-	Result workflow.Future
+type ElasticbeanstalkListAvailableSolutionStacksFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkListAvailableSolutionStacksResult) Get(ctx workflow.Context) (*elasticbeanstalk.ListAvailableSolutionStacksOutput, error) {
+func (r *ElasticbeanstalkListAvailableSolutionStacksFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ListAvailableSolutionStacksOutput, error) {
 	var output elasticbeanstalk.ListAvailableSolutionStacksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkListPlatformBranchesResult struct {
-	Result workflow.Future
+type ElasticbeanstalkListPlatformBranchesFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkListPlatformBranchesResult) Get(ctx workflow.Context) (*elasticbeanstalk.ListPlatformBranchesOutput, error) {
+func (r *ElasticbeanstalkListPlatformBranchesFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ListPlatformBranchesOutput, error) {
 	var output elasticbeanstalk.ListPlatformBranchesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkListPlatformVersionsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkListPlatformVersionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkListPlatformVersionsResult) Get(ctx workflow.Context) (*elasticbeanstalk.ListPlatformVersionsOutput, error) {
+func (r *ElasticbeanstalkListPlatformVersionsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ListPlatformVersionsOutput, error) {
 	var output elasticbeanstalk.ListPlatformVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkListTagsForResourceResult struct {
-	Result workflow.Future
+type ElasticbeanstalkListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkListTagsForResourceResult) Get(ctx workflow.Context) (*elasticbeanstalk.ListTagsForResourceOutput, error) {
+func (r *ElasticbeanstalkListTagsForResourceFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ListTagsForResourceOutput, error) {
 	var output elasticbeanstalk.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkRebuildEnvironmentResult struct {
-	Result workflow.Future
+type ElasticbeanstalkRebuildEnvironmentFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkRebuildEnvironmentResult) Get(ctx workflow.Context) (*elasticbeanstalk.RebuildEnvironmentOutput, error) {
+func (r *ElasticbeanstalkRebuildEnvironmentFuture) Get(ctx workflow.Context) (*elasticbeanstalk.RebuildEnvironmentOutput, error) {
 	var output elasticbeanstalk.RebuildEnvironmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkRequestEnvironmentInfoResult struct {
-	Result workflow.Future
+type ElasticbeanstalkRequestEnvironmentInfoFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkRequestEnvironmentInfoResult) Get(ctx workflow.Context) (*elasticbeanstalk.RequestEnvironmentInfoOutput, error) {
+func (r *ElasticbeanstalkRequestEnvironmentInfoFuture) Get(ctx workflow.Context) (*elasticbeanstalk.RequestEnvironmentInfoOutput, error) {
 	var output elasticbeanstalk.RequestEnvironmentInfoOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkRestartAppServerResult struct {
-	Result workflow.Future
+type ElasticbeanstalkRestartAppServerFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkRestartAppServerResult) Get(ctx workflow.Context) (*elasticbeanstalk.RestartAppServerOutput, error) {
+func (r *ElasticbeanstalkRestartAppServerFuture) Get(ctx workflow.Context) (*elasticbeanstalk.RestartAppServerOutput, error) {
 	var output elasticbeanstalk.RestartAppServerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkRetrieveEnvironmentInfoResult struct {
-	Result workflow.Future
+type ElasticbeanstalkRetrieveEnvironmentInfoFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkRetrieveEnvironmentInfoResult) Get(ctx workflow.Context) (*elasticbeanstalk.RetrieveEnvironmentInfoOutput, error) {
+func (r *ElasticbeanstalkRetrieveEnvironmentInfoFuture) Get(ctx workflow.Context) (*elasticbeanstalk.RetrieveEnvironmentInfoOutput, error) {
 	var output elasticbeanstalk.RetrieveEnvironmentInfoOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkSwapEnvironmentCNAMEsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkSwapEnvironmentCNAMEsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkSwapEnvironmentCNAMEsResult) Get(ctx workflow.Context) (*elasticbeanstalk.SwapEnvironmentCNAMEsOutput, error) {
+func (r *ElasticbeanstalkSwapEnvironmentCNAMEsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.SwapEnvironmentCNAMEsOutput, error) {
 	var output elasticbeanstalk.SwapEnvironmentCNAMEsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkTerminateEnvironmentResult struct {
-	Result workflow.Future
+type ElasticbeanstalkTerminateEnvironmentFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkTerminateEnvironmentResult) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescription, error) {
+func (r *ElasticbeanstalkTerminateEnvironmentFuture) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescription, error) {
 	var output elasticbeanstalk.EnvironmentDescription
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkUpdateApplicationResult struct {
-	Result workflow.Future
+type ElasticbeanstalkUpdateApplicationFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkUpdateApplicationResult) Get(ctx workflow.Context) (*elasticbeanstalk.ApplicationDescriptionMessage, error) {
+func (r *ElasticbeanstalkUpdateApplicationFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ApplicationDescriptionMessage, error) {
 	var output elasticbeanstalk.ApplicationDescriptionMessage
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkUpdateApplicationResourceLifecycleResult struct {
-	Result workflow.Future
+type ElasticbeanstalkUpdateApplicationResourceLifecycleFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkUpdateApplicationResourceLifecycleResult) Get(ctx workflow.Context) (*elasticbeanstalk.UpdateApplicationResourceLifecycleOutput, error) {
+func (r *ElasticbeanstalkUpdateApplicationResourceLifecycleFuture) Get(ctx workflow.Context) (*elasticbeanstalk.UpdateApplicationResourceLifecycleOutput, error) {
 	var output elasticbeanstalk.UpdateApplicationResourceLifecycleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkUpdateApplicationVersionResult struct {
-	Result workflow.Future
+type ElasticbeanstalkUpdateApplicationVersionFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkUpdateApplicationVersionResult) Get(ctx workflow.Context) (*elasticbeanstalk.ApplicationVersionDescriptionMessage, error) {
+func (r *ElasticbeanstalkUpdateApplicationVersionFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ApplicationVersionDescriptionMessage, error) {
 	var output elasticbeanstalk.ApplicationVersionDescriptionMessage
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkUpdateConfigurationTemplateResult struct {
-	Result workflow.Future
+type ElasticbeanstalkUpdateConfigurationTemplateFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkUpdateConfigurationTemplateResult) Get(ctx workflow.Context) (*elasticbeanstalk.ConfigurationSettingsDescription, error) {
+func (r *ElasticbeanstalkUpdateConfigurationTemplateFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ConfigurationSettingsDescription, error) {
 	var output elasticbeanstalk.ConfigurationSettingsDescription
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkUpdateEnvironmentResult struct {
-	Result workflow.Future
+type ElasticbeanstalkUpdateEnvironmentFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkUpdateEnvironmentResult) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescription, error) {
+func (r *ElasticbeanstalkUpdateEnvironmentFuture) Get(ctx workflow.Context) (*elasticbeanstalk.EnvironmentDescription, error) {
 	var output elasticbeanstalk.EnvironmentDescription
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkUpdateTagsForResourceResult struct {
-	Result workflow.Future
+type ElasticbeanstalkUpdateTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkUpdateTagsForResourceResult) Get(ctx workflow.Context) (*elasticbeanstalk.UpdateTagsForResourceOutput, error) {
+func (r *ElasticbeanstalkUpdateTagsForResourceFuture) Get(ctx workflow.Context) (*elasticbeanstalk.UpdateTagsForResourceOutput, error) {
 	var output elasticbeanstalk.UpdateTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticbeanstalkValidateConfigurationSettingsResult struct {
-	Result workflow.Future
+type ElasticbeanstalkValidateConfigurationSettingsFuture struct {
+	Future workflow.Future
 }
 
-func (r *ElasticbeanstalkValidateConfigurationSettingsResult) Get(ctx workflow.Context) (*elasticbeanstalk.ValidateConfigurationSettingsOutput, error) {
+func (r *ElasticbeanstalkValidateConfigurationSettingsFuture) Get(ctx workflow.Context) (*elasticbeanstalk.ValidateConfigurationSettingsOutput, error) {
 	var output elasticbeanstalk.ValidateConfigurationSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -640,9 +643,9 @@ func (a *ElasticBeanstalkStub) AbortEnvironmentUpdate(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) AbortEnvironmentUpdateAsync(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) *ElasticbeanstalkAbortEnvironmentUpdateResult {
+func (a *ElasticBeanstalkStub) AbortEnvironmentUpdateAsync(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) *ElasticbeanstalkAbortEnvironmentUpdateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.AbortEnvironmentUpdate", input)
-	return &ElasticbeanstalkAbortEnvironmentUpdateResult{Result: future}
+	return &ElasticbeanstalkAbortEnvironmentUpdateFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) ApplyEnvironmentManagedAction(ctx workflow.Context, input *elasticbeanstalk.ApplyEnvironmentManagedActionInput) (*elasticbeanstalk.ApplyEnvironmentManagedActionOutput, error) {
@@ -651,9 +654,9 @@ func (a *ElasticBeanstalkStub) ApplyEnvironmentManagedAction(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) ApplyEnvironmentManagedActionAsync(ctx workflow.Context, input *elasticbeanstalk.ApplyEnvironmentManagedActionInput) *ElasticbeanstalkApplyEnvironmentManagedActionResult {
+func (a *ElasticBeanstalkStub) ApplyEnvironmentManagedActionAsync(ctx workflow.Context, input *elasticbeanstalk.ApplyEnvironmentManagedActionInput) *ElasticbeanstalkApplyEnvironmentManagedActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.ApplyEnvironmentManagedAction", input)
-	return &ElasticbeanstalkApplyEnvironmentManagedActionResult{Result: future}
+	return &ElasticbeanstalkApplyEnvironmentManagedActionFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) AssociateEnvironmentOperationsRole(ctx workflow.Context, input *elasticbeanstalk.AssociateEnvironmentOperationsRoleInput) (*elasticbeanstalk.AssociateEnvironmentOperationsRoleOutput, error) {
@@ -662,9 +665,9 @@ func (a *ElasticBeanstalkStub) AssociateEnvironmentOperationsRole(ctx workflow.C
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) AssociateEnvironmentOperationsRoleAsync(ctx workflow.Context, input *elasticbeanstalk.AssociateEnvironmentOperationsRoleInput) *ElasticbeanstalkAssociateEnvironmentOperationsRoleResult {
+func (a *ElasticBeanstalkStub) AssociateEnvironmentOperationsRoleAsync(ctx workflow.Context, input *elasticbeanstalk.AssociateEnvironmentOperationsRoleInput) *ElasticbeanstalkAssociateEnvironmentOperationsRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.AssociateEnvironmentOperationsRole", input)
-	return &ElasticbeanstalkAssociateEnvironmentOperationsRoleResult{Result: future}
+	return &ElasticbeanstalkAssociateEnvironmentOperationsRoleFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) CheckDNSAvailability(ctx workflow.Context, input *elasticbeanstalk.CheckDNSAvailabilityInput) (*elasticbeanstalk.CheckDNSAvailabilityOutput, error) {
@@ -673,9 +676,9 @@ func (a *ElasticBeanstalkStub) CheckDNSAvailability(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) CheckDNSAvailabilityAsync(ctx workflow.Context, input *elasticbeanstalk.CheckDNSAvailabilityInput) *ElasticbeanstalkCheckDNSAvailabilityResult {
+func (a *ElasticBeanstalkStub) CheckDNSAvailabilityAsync(ctx workflow.Context, input *elasticbeanstalk.CheckDNSAvailabilityInput) *ElasticbeanstalkCheckDNSAvailabilityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.CheckDNSAvailability", input)
-	return &ElasticbeanstalkCheckDNSAvailabilityResult{Result: future}
+	return &ElasticbeanstalkCheckDNSAvailabilityFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) ComposeEnvironments(ctx workflow.Context, input *elasticbeanstalk.ComposeEnvironmentsInput) (*elasticbeanstalk.EnvironmentDescriptionsMessage, error) {
@@ -684,9 +687,9 @@ func (a *ElasticBeanstalkStub) ComposeEnvironments(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) ComposeEnvironmentsAsync(ctx workflow.Context, input *elasticbeanstalk.ComposeEnvironmentsInput) *ElasticbeanstalkComposeEnvironmentsResult {
+func (a *ElasticBeanstalkStub) ComposeEnvironmentsAsync(ctx workflow.Context, input *elasticbeanstalk.ComposeEnvironmentsInput) *ElasticbeanstalkComposeEnvironmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.ComposeEnvironments", input)
-	return &ElasticbeanstalkComposeEnvironmentsResult{Result: future}
+	return &ElasticbeanstalkComposeEnvironmentsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) CreateApplication(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationInput) (*elasticbeanstalk.ApplicationDescriptionMessage, error) {
@@ -695,9 +698,9 @@ func (a *ElasticBeanstalkStub) CreateApplication(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) CreateApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationInput) *ElasticbeanstalkCreateApplicationResult {
+func (a *ElasticBeanstalkStub) CreateApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationInput) *ElasticbeanstalkCreateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.CreateApplication", input)
-	return &ElasticbeanstalkCreateApplicationResult{Result: future}
+	return &ElasticbeanstalkCreateApplicationFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) CreateApplicationVersion(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationVersionInput) (*elasticbeanstalk.ApplicationVersionDescriptionMessage, error) {
@@ -706,9 +709,9 @@ func (a *ElasticBeanstalkStub) CreateApplicationVersion(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) CreateApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationVersionInput) *ElasticbeanstalkCreateApplicationVersionResult {
+func (a *ElasticBeanstalkStub) CreateApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.CreateApplicationVersionInput) *ElasticbeanstalkCreateApplicationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.CreateApplicationVersion", input)
-	return &ElasticbeanstalkCreateApplicationVersionResult{Result: future}
+	return &ElasticbeanstalkCreateApplicationVersionFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) CreateConfigurationTemplate(ctx workflow.Context, input *elasticbeanstalk.CreateConfigurationTemplateInput) (*elasticbeanstalk.ConfigurationSettingsDescription, error) {
@@ -717,9 +720,9 @@ func (a *ElasticBeanstalkStub) CreateConfigurationTemplate(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) CreateConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.CreateConfigurationTemplateInput) *ElasticbeanstalkCreateConfigurationTemplateResult {
+func (a *ElasticBeanstalkStub) CreateConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.CreateConfigurationTemplateInput) *ElasticbeanstalkCreateConfigurationTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.CreateConfigurationTemplate", input)
-	return &ElasticbeanstalkCreateConfigurationTemplateResult{Result: future}
+	return &ElasticbeanstalkCreateConfigurationTemplateFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) CreateEnvironment(ctx workflow.Context, input *elasticbeanstalk.CreateEnvironmentInput) (*elasticbeanstalk.EnvironmentDescription, error) {
@@ -728,9 +731,9 @@ func (a *ElasticBeanstalkStub) CreateEnvironment(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) CreateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.CreateEnvironmentInput) *ElasticbeanstalkCreateEnvironmentResult {
+func (a *ElasticBeanstalkStub) CreateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.CreateEnvironmentInput) *ElasticbeanstalkCreateEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.CreateEnvironment", input)
-	return &ElasticbeanstalkCreateEnvironmentResult{Result: future}
+	return &ElasticbeanstalkCreateEnvironmentFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) CreatePlatformVersion(ctx workflow.Context, input *elasticbeanstalk.CreatePlatformVersionInput) (*elasticbeanstalk.CreatePlatformVersionOutput, error) {
@@ -739,9 +742,9 @@ func (a *ElasticBeanstalkStub) CreatePlatformVersion(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) CreatePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.CreatePlatformVersionInput) *ElasticbeanstalkCreatePlatformVersionResult {
+func (a *ElasticBeanstalkStub) CreatePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.CreatePlatformVersionInput) *ElasticbeanstalkCreatePlatformVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.CreatePlatformVersion", input)
-	return &ElasticbeanstalkCreatePlatformVersionResult{Result: future}
+	return &ElasticbeanstalkCreatePlatformVersionFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) CreateStorageLocation(ctx workflow.Context, input *elasticbeanstalk.CreateStorageLocationInput) (*elasticbeanstalk.CreateStorageLocationOutput, error) {
@@ -750,9 +753,9 @@ func (a *ElasticBeanstalkStub) CreateStorageLocation(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) CreateStorageLocationAsync(ctx workflow.Context, input *elasticbeanstalk.CreateStorageLocationInput) *ElasticbeanstalkCreateStorageLocationResult {
+func (a *ElasticBeanstalkStub) CreateStorageLocationAsync(ctx workflow.Context, input *elasticbeanstalk.CreateStorageLocationInput) *ElasticbeanstalkCreateStorageLocationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.CreateStorageLocation", input)
-	return &ElasticbeanstalkCreateStorageLocationResult{Result: future}
+	return &ElasticbeanstalkCreateStorageLocationFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DeleteApplication(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationInput) (*elasticbeanstalk.DeleteApplicationOutput, error) {
@@ -761,9 +764,9 @@ func (a *ElasticBeanstalkStub) DeleteApplication(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DeleteApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationInput) *ElasticbeanstalkDeleteApplicationResult {
+func (a *ElasticBeanstalkStub) DeleteApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationInput) *ElasticbeanstalkDeleteApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DeleteApplication", input)
-	return &ElasticbeanstalkDeleteApplicationResult{Result: future}
+	return &ElasticbeanstalkDeleteApplicationFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DeleteApplicationVersion(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationVersionInput) (*elasticbeanstalk.DeleteApplicationVersionOutput, error) {
@@ -772,9 +775,9 @@ func (a *ElasticBeanstalkStub) DeleteApplicationVersion(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DeleteApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationVersionInput) *ElasticbeanstalkDeleteApplicationVersionResult {
+func (a *ElasticBeanstalkStub) DeleteApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteApplicationVersionInput) *ElasticbeanstalkDeleteApplicationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DeleteApplicationVersion", input)
-	return &ElasticbeanstalkDeleteApplicationVersionResult{Result: future}
+	return &ElasticbeanstalkDeleteApplicationVersionFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DeleteConfigurationTemplate(ctx workflow.Context, input *elasticbeanstalk.DeleteConfigurationTemplateInput) (*elasticbeanstalk.DeleteConfigurationTemplateOutput, error) {
@@ -783,9 +786,9 @@ func (a *ElasticBeanstalkStub) DeleteConfigurationTemplate(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DeleteConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteConfigurationTemplateInput) *ElasticbeanstalkDeleteConfigurationTemplateResult {
+func (a *ElasticBeanstalkStub) DeleteConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteConfigurationTemplateInput) *ElasticbeanstalkDeleteConfigurationTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DeleteConfigurationTemplate", input)
-	return &ElasticbeanstalkDeleteConfigurationTemplateResult{Result: future}
+	return &ElasticbeanstalkDeleteConfigurationTemplateFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DeleteEnvironmentConfiguration(ctx workflow.Context, input *elasticbeanstalk.DeleteEnvironmentConfigurationInput) (*elasticbeanstalk.DeleteEnvironmentConfigurationOutput, error) {
@@ -794,9 +797,9 @@ func (a *ElasticBeanstalkStub) DeleteEnvironmentConfiguration(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DeleteEnvironmentConfigurationAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteEnvironmentConfigurationInput) *ElasticbeanstalkDeleteEnvironmentConfigurationResult {
+func (a *ElasticBeanstalkStub) DeleteEnvironmentConfigurationAsync(ctx workflow.Context, input *elasticbeanstalk.DeleteEnvironmentConfigurationInput) *ElasticbeanstalkDeleteEnvironmentConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DeleteEnvironmentConfiguration", input)
-	return &ElasticbeanstalkDeleteEnvironmentConfigurationResult{Result: future}
+	return &ElasticbeanstalkDeleteEnvironmentConfigurationFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DeletePlatformVersion(ctx workflow.Context, input *elasticbeanstalk.DeletePlatformVersionInput) (*elasticbeanstalk.DeletePlatformVersionOutput, error) {
@@ -805,9 +808,9 @@ func (a *ElasticBeanstalkStub) DeletePlatformVersion(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DeletePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DeletePlatformVersionInput) *ElasticbeanstalkDeletePlatformVersionResult {
+func (a *ElasticBeanstalkStub) DeletePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DeletePlatformVersionInput) *ElasticbeanstalkDeletePlatformVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DeletePlatformVersion", input)
-	return &ElasticbeanstalkDeletePlatformVersionResult{Result: future}
+	return &ElasticbeanstalkDeletePlatformVersionFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeAccountAttributes(ctx workflow.Context, input *elasticbeanstalk.DescribeAccountAttributesInput) (*elasticbeanstalk.DescribeAccountAttributesOutput, error) {
@@ -816,9 +819,9 @@ func (a *ElasticBeanstalkStub) DescribeAccountAttributes(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeAccountAttributesAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeAccountAttributesInput) *ElasticbeanstalkDescribeAccountAttributesResult {
+func (a *ElasticBeanstalkStub) DescribeAccountAttributesAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeAccountAttributesInput) *ElasticbeanstalkDescribeAccountAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeAccountAttributes", input)
-	return &ElasticbeanstalkDescribeAccountAttributesResult{Result: future}
+	return &ElasticbeanstalkDescribeAccountAttributesFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeApplicationVersions(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationVersionsInput) (*elasticbeanstalk.DescribeApplicationVersionsOutput, error) {
@@ -827,9 +830,9 @@ func (a *ElasticBeanstalkStub) DescribeApplicationVersions(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeApplicationVersionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationVersionsInput) *ElasticbeanstalkDescribeApplicationVersionsResult {
+func (a *ElasticBeanstalkStub) DescribeApplicationVersionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationVersionsInput) *ElasticbeanstalkDescribeApplicationVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeApplicationVersions", input)
-	return &ElasticbeanstalkDescribeApplicationVersionsResult{Result: future}
+	return &ElasticbeanstalkDescribeApplicationVersionsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeApplications(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationsInput) (*elasticbeanstalk.DescribeApplicationsOutput, error) {
@@ -838,9 +841,9 @@ func (a *ElasticBeanstalkStub) DescribeApplications(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeApplicationsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationsInput) *ElasticbeanstalkDescribeApplicationsResult {
+func (a *ElasticBeanstalkStub) DescribeApplicationsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeApplicationsInput) *ElasticbeanstalkDescribeApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeApplications", input)
-	return &ElasticbeanstalkDescribeApplicationsResult{Result: future}
+	return &ElasticbeanstalkDescribeApplicationsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeConfigurationOptions(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationOptionsInput) (*elasticbeanstalk.DescribeConfigurationOptionsOutput, error) {
@@ -849,9 +852,9 @@ func (a *ElasticBeanstalkStub) DescribeConfigurationOptions(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeConfigurationOptionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationOptionsInput) *ElasticbeanstalkDescribeConfigurationOptionsResult {
+func (a *ElasticBeanstalkStub) DescribeConfigurationOptionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationOptionsInput) *ElasticbeanstalkDescribeConfigurationOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeConfigurationOptions", input)
-	return &ElasticbeanstalkDescribeConfigurationOptionsResult{Result: future}
+	return &ElasticbeanstalkDescribeConfigurationOptionsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeConfigurationSettings(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationSettingsInput) (*elasticbeanstalk.DescribeConfigurationSettingsOutput, error) {
@@ -860,9 +863,9 @@ func (a *ElasticBeanstalkStub) DescribeConfigurationSettings(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationSettingsInput) *ElasticbeanstalkDescribeConfigurationSettingsResult {
+func (a *ElasticBeanstalkStub) DescribeConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeConfigurationSettingsInput) *ElasticbeanstalkDescribeConfigurationSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeConfigurationSettings", input)
-	return &ElasticbeanstalkDescribeConfigurationSettingsResult{Result: future}
+	return &ElasticbeanstalkDescribeConfigurationSettingsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeEnvironmentHealth(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentHealthInput) (*elasticbeanstalk.DescribeEnvironmentHealthOutput, error) {
@@ -871,9 +874,9 @@ func (a *ElasticBeanstalkStub) DescribeEnvironmentHealth(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeEnvironmentHealthAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentHealthInput) *ElasticbeanstalkDescribeEnvironmentHealthResult {
+func (a *ElasticBeanstalkStub) DescribeEnvironmentHealthAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentHealthInput) *ElasticbeanstalkDescribeEnvironmentHealthFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeEnvironmentHealth", input)
-	return &ElasticbeanstalkDescribeEnvironmentHealthResult{Result: future}
+	return &ElasticbeanstalkDescribeEnvironmentHealthFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeEnvironmentManagedActionHistory(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionHistoryInput) (*elasticbeanstalk.DescribeEnvironmentManagedActionHistoryOutput, error) {
@@ -882,9 +885,9 @@ func (a *ElasticBeanstalkStub) DescribeEnvironmentManagedActionHistory(ctx workf
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeEnvironmentManagedActionHistoryAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionHistoryInput) *ElasticbeanstalkDescribeEnvironmentManagedActionHistoryResult {
+func (a *ElasticBeanstalkStub) DescribeEnvironmentManagedActionHistoryAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionHistoryInput) *ElasticbeanstalkDescribeEnvironmentManagedActionHistoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeEnvironmentManagedActionHistory", input)
-	return &ElasticbeanstalkDescribeEnvironmentManagedActionHistoryResult{Result: future}
+	return &ElasticbeanstalkDescribeEnvironmentManagedActionHistoryFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeEnvironmentManagedActions(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionsInput) (*elasticbeanstalk.DescribeEnvironmentManagedActionsOutput, error) {
@@ -893,9 +896,9 @@ func (a *ElasticBeanstalkStub) DescribeEnvironmentManagedActions(ctx workflow.Co
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeEnvironmentManagedActionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionsInput) *ElasticbeanstalkDescribeEnvironmentManagedActionsResult {
+func (a *ElasticBeanstalkStub) DescribeEnvironmentManagedActionsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentManagedActionsInput) *ElasticbeanstalkDescribeEnvironmentManagedActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeEnvironmentManagedActions", input)
-	return &ElasticbeanstalkDescribeEnvironmentManagedActionsResult{Result: future}
+	return &ElasticbeanstalkDescribeEnvironmentManagedActionsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeEnvironmentResources(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentResourcesInput) (*elasticbeanstalk.DescribeEnvironmentResourcesOutput, error) {
@@ -904,9 +907,9 @@ func (a *ElasticBeanstalkStub) DescribeEnvironmentResources(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeEnvironmentResourcesAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentResourcesInput) *ElasticbeanstalkDescribeEnvironmentResourcesResult {
+func (a *ElasticBeanstalkStub) DescribeEnvironmentResourcesAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentResourcesInput) *ElasticbeanstalkDescribeEnvironmentResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeEnvironmentResources", input)
-	return &ElasticbeanstalkDescribeEnvironmentResourcesResult{Result: future}
+	return &ElasticbeanstalkDescribeEnvironmentResourcesFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeEnvironments(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) (*elasticbeanstalk.EnvironmentDescriptionsMessage, error) {
@@ -915,9 +918,9 @@ func (a *ElasticBeanstalkStub) DescribeEnvironments(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeEnvironmentsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *ElasticbeanstalkDescribeEnvironmentsResult {
+func (a *ElasticBeanstalkStub) DescribeEnvironmentsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) *ElasticbeanstalkDescribeEnvironmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeEnvironments", input)
-	return &ElasticbeanstalkDescribeEnvironmentsResult{Result: future}
+	return &ElasticbeanstalkDescribeEnvironmentsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeEvents(ctx workflow.Context, input *elasticbeanstalk.DescribeEventsInput) (*elasticbeanstalk.DescribeEventsOutput, error) {
@@ -926,9 +929,9 @@ func (a *ElasticBeanstalkStub) DescribeEvents(ctx workflow.Context, input *elast
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeEventsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEventsInput) *ElasticbeanstalkDescribeEventsResult {
+func (a *ElasticBeanstalkStub) DescribeEventsAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeEventsInput) *ElasticbeanstalkDescribeEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeEvents", input)
-	return &ElasticbeanstalkDescribeEventsResult{Result: future}
+	return &ElasticbeanstalkDescribeEventsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribeInstancesHealth(ctx workflow.Context, input *elasticbeanstalk.DescribeInstancesHealthInput) (*elasticbeanstalk.DescribeInstancesHealthOutput, error) {
@@ -937,9 +940,9 @@ func (a *ElasticBeanstalkStub) DescribeInstancesHealth(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribeInstancesHealthAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeInstancesHealthInput) *ElasticbeanstalkDescribeInstancesHealthResult {
+func (a *ElasticBeanstalkStub) DescribeInstancesHealthAsync(ctx workflow.Context, input *elasticbeanstalk.DescribeInstancesHealthInput) *ElasticbeanstalkDescribeInstancesHealthFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribeInstancesHealth", input)
-	return &ElasticbeanstalkDescribeInstancesHealthResult{Result: future}
+	return &ElasticbeanstalkDescribeInstancesHealthFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DescribePlatformVersion(ctx workflow.Context, input *elasticbeanstalk.DescribePlatformVersionInput) (*elasticbeanstalk.DescribePlatformVersionOutput, error) {
@@ -948,9 +951,9 @@ func (a *ElasticBeanstalkStub) DescribePlatformVersion(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DescribePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DescribePlatformVersionInput) *ElasticbeanstalkDescribePlatformVersionResult {
+func (a *ElasticBeanstalkStub) DescribePlatformVersionAsync(ctx workflow.Context, input *elasticbeanstalk.DescribePlatformVersionInput) *ElasticbeanstalkDescribePlatformVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DescribePlatformVersion", input)
-	return &ElasticbeanstalkDescribePlatformVersionResult{Result: future}
+	return &ElasticbeanstalkDescribePlatformVersionFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) DisassociateEnvironmentOperationsRole(ctx workflow.Context, input *elasticbeanstalk.DisassociateEnvironmentOperationsRoleInput) (*elasticbeanstalk.DisassociateEnvironmentOperationsRoleOutput, error) {
@@ -959,9 +962,9 @@ func (a *ElasticBeanstalkStub) DisassociateEnvironmentOperationsRole(ctx workflo
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) DisassociateEnvironmentOperationsRoleAsync(ctx workflow.Context, input *elasticbeanstalk.DisassociateEnvironmentOperationsRoleInput) *ElasticbeanstalkDisassociateEnvironmentOperationsRoleResult {
+func (a *ElasticBeanstalkStub) DisassociateEnvironmentOperationsRoleAsync(ctx workflow.Context, input *elasticbeanstalk.DisassociateEnvironmentOperationsRoleInput) *ElasticbeanstalkDisassociateEnvironmentOperationsRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.DisassociateEnvironmentOperationsRole", input)
-	return &ElasticbeanstalkDisassociateEnvironmentOperationsRoleResult{Result: future}
+	return &ElasticbeanstalkDisassociateEnvironmentOperationsRoleFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) ListAvailableSolutionStacks(ctx workflow.Context, input *elasticbeanstalk.ListAvailableSolutionStacksInput) (*elasticbeanstalk.ListAvailableSolutionStacksOutput, error) {
@@ -970,9 +973,9 @@ func (a *ElasticBeanstalkStub) ListAvailableSolutionStacks(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) ListAvailableSolutionStacksAsync(ctx workflow.Context, input *elasticbeanstalk.ListAvailableSolutionStacksInput) *ElasticbeanstalkListAvailableSolutionStacksResult {
+func (a *ElasticBeanstalkStub) ListAvailableSolutionStacksAsync(ctx workflow.Context, input *elasticbeanstalk.ListAvailableSolutionStacksInput) *ElasticbeanstalkListAvailableSolutionStacksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.ListAvailableSolutionStacks", input)
-	return &ElasticbeanstalkListAvailableSolutionStacksResult{Result: future}
+	return &ElasticbeanstalkListAvailableSolutionStacksFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) ListPlatformBranches(ctx workflow.Context, input *elasticbeanstalk.ListPlatformBranchesInput) (*elasticbeanstalk.ListPlatformBranchesOutput, error) {
@@ -981,9 +984,9 @@ func (a *ElasticBeanstalkStub) ListPlatformBranches(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) ListPlatformBranchesAsync(ctx workflow.Context, input *elasticbeanstalk.ListPlatformBranchesInput) *ElasticbeanstalkListPlatformBranchesResult {
+func (a *ElasticBeanstalkStub) ListPlatformBranchesAsync(ctx workflow.Context, input *elasticbeanstalk.ListPlatformBranchesInput) *ElasticbeanstalkListPlatformBranchesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.ListPlatformBranches", input)
-	return &ElasticbeanstalkListPlatformBranchesResult{Result: future}
+	return &ElasticbeanstalkListPlatformBranchesFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) ListPlatformVersions(ctx workflow.Context, input *elasticbeanstalk.ListPlatformVersionsInput) (*elasticbeanstalk.ListPlatformVersionsOutput, error) {
@@ -992,9 +995,9 @@ func (a *ElasticBeanstalkStub) ListPlatformVersions(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) ListPlatformVersionsAsync(ctx workflow.Context, input *elasticbeanstalk.ListPlatformVersionsInput) *ElasticbeanstalkListPlatformVersionsResult {
+func (a *ElasticBeanstalkStub) ListPlatformVersionsAsync(ctx workflow.Context, input *elasticbeanstalk.ListPlatformVersionsInput) *ElasticbeanstalkListPlatformVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.ListPlatformVersions", input)
-	return &ElasticbeanstalkListPlatformVersionsResult{Result: future}
+	return &ElasticbeanstalkListPlatformVersionsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) ListTagsForResource(ctx workflow.Context, input *elasticbeanstalk.ListTagsForResourceInput) (*elasticbeanstalk.ListTagsForResourceOutput, error) {
@@ -1003,9 +1006,9 @@ func (a *ElasticBeanstalkStub) ListTagsForResource(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) ListTagsForResourceAsync(ctx workflow.Context, input *elasticbeanstalk.ListTagsForResourceInput) *ElasticbeanstalkListTagsForResourceResult {
+func (a *ElasticBeanstalkStub) ListTagsForResourceAsync(ctx workflow.Context, input *elasticbeanstalk.ListTagsForResourceInput) *ElasticbeanstalkListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.ListTagsForResource", input)
-	return &ElasticbeanstalkListTagsForResourceResult{Result: future}
+	return &ElasticbeanstalkListTagsForResourceFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) RebuildEnvironment(ctx workflow.Context, input *elasticbeanstalk.RebuildEnvironmentInput) (*elasticbeanstalk.RebuildEnvironmentOutput, error) {
@@ -1014,9 +1017,9 @@ func (a *ElasticBeanstalkStub) RebuildEnvironment(ctx workflow.Context, input *e
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) RebuildEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.RebuildEnvironmentInput) *ElasticbeanstalkRebuildEnvironmentResult {
+func (a *ElasticBeanstalkStub) RebuildEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.RebuildEnvironmentInput) *ElasticbeanstalkRebuildEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.RebuildEnvironment", input)
-	return &ElasticbeanstalkRebuildEnvironmentResult{Result: future}
+	return &ElasticbeanstalkRebuildEnvironmentFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) RequestEnvironmentInfo(ctx workflow.Context, input *elasticbeanstalk.RequestEnvironmentInfoInput) (*elasticbeanstalk.RequestEnvironmentInfoOutput, error) {
@@ -1025,9 +1028,9 @@ func (a *ElasticBeanstalkStub) RequestEnvironmentInfo(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) RequestEnvironmentInfoAsync(ctx workflow.Context, input *elasticbeanstalk.RequestEnvironmentInfoInput) *ElasticbeanstalkRequestEnvironmentInfoResult {
+func (a *ElasticBeanstalkStub) RequestEnvironmentInfoAsync(ctx workflow.Context, input *elasticbeanstalk.RequestEnvironmentInfoInput) *ElasticbeanstalkRequestEnvironmentInfoFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.RequestEnvironmentInfo", input)
-	return &ElasticbeanstalkRequestEnvironmentInfoResult{Result: future}
+	return &ElasticbeanstalkRequestEnvironmentInfoFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) RestartAppServer(ctx workflow.Context, input *elasticbeanstalk.RestartAppServerInput) (*elasticbeanstalk.RestartAppServerOutput, error) {
@@ -1036,9 +1039,9 @@ func (a *ElasticBeanstalkStub) RestartAppServer(ctx workflow.Context, input *ela
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) RestartAppServerAsync(ctx workflow.Context, input *elasticbeanstalk.RestartAppServerInput) *ElasticbeanstalkRestartAppServerResult {
+func (a *ElasticBeanstalkStub) RestartAppServerAsync(ctx workflow.Context, input *elasticbeanstalk.RestartAppServerInput) *ElasticbeanstalkRestartAppServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.RestartAppServer", input)
-	return &ElasticbeanstalkRestartAppServerResult{Result: future}
+	return &ElasticbeanstalkRestartAppServerFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) RetrieveEnvironmentInfo(ctx workflow.Context, input *elasticbeanstalk.RetrieveEnvironmentInfoInput) (*elasticbeanstalk.RetrieveEnvironmentInfoOutput, error) {
@@ -1047,9 +1050,9 @@ func (a *ElasticBeanstalkStub) RetrieveEnvironmentInfo(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) RetrieveEnvironmentInfoAsync(ctx workflow.Context, input *elasticbeanstalk.RetrieveEnvironmentInfoInput) *ElasticbeanstalkRetrieveEnvironmentInfoResult {
+func (a *ElasticBeanstalkStub) RetrieveEnvironmentInfoAsync(ctx workflow.Context, input *elasticbeanstalk.RetrieveEnvironmentInfoInput) *ElasticbeanstalkRetrieveEnvironmentInfoFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.RetrieveEnvironmentInfo", input)
-	return &ElasticbeanstalkRetrieveEnvironmentInfoResult{Result: future}
+	return &ElasticbeanstalkRetrieveEnvironmentInfoFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) SwapEnvironmentCNAMEs(ctx workflow.Context, input *elasticbeanstalk.SwapEnvironmentCNAMEsInput) (*elasticbeanstalk.SwapEnvironmentCNAMEsOutput, error) {
@@ -1058,9 +1061,9 @@ func (a *ElasticBeanstalkStub) SwapEnvironmentCNAMEs(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) SwapEnvironmentCNAMEsAsync(ctx workflow.Context, input *elasticbeanstalk.SwapEnvironmentCNAMEsInput) *ElasticbeanstalkSwapEnvironmentCNAMEsResult {
+func (a *ElasticBeanstalkStub) SwapEnvironmentCNAMEsAsync(ctx workflow.Context, input *elasticbeanstalk.SwapEnvironmentCNAMEsInput) *ElasticbeanstalkSwapEnvironmentCNAMEsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.SwapEnvironmentCNAMEs", input)
-	return &ElasticbeanstalkSwapEnvironmentCNAMEsResult{Result: future}
+	return &ElasticbeanstalkSwapEnvironmentCNAMEsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) TerminateEnvironment(ctx workflow.Context, input *elasticbeanstalk.TerminateEnvironmentInput) (*elasticbeanstalk.EnvironmentDescription, error) {
@@ -1069,9 +1072,9 @@ func (a *ElasticBeanstalkStub) TerminateEnvironment(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) TerminateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.TerminateEnvironmentInput) *ElasticbeanstalkTerminateEnvironmentResult {
+func (a *ElasticBeanstalkStub) TerminateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.TerminateEnvironmentInput) *ElasticbeanstalkTerminateEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.TerminateEnvironment", input)
-	return &ElasticbeanstalkTerminateEnvironmentResult{Result: future}
+	return &ElasticbeanstalkTerminateEnvironmentFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) UpdateApplication(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationInput) (*elasticbeanstalk.ApplicationDescriptionMessage, error) {
@@ -1080,9 +1083,9 @@ func (a *ElasticBeanstalkStub) UpdateApplication(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) UpdateApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationInput) *ElasticbeanstalkUpdateApplicationResult {
+func (a *ElasticBeanstalkStub) UpdateApplicationAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationInput) *ElasticbeanstalkUpdateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.UpdateApplication", input)
-	return &ElasticbeanstalkUpdateApplicationResult{Result: future}
+	return &ElasticbeanstalkUpdateApplicationFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) UpdateApplicationResourceLifecycle(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationResourceLifecycleInput) (*elasticbeanstalk.UpdateApplicationResourceLifecycleOutput, error) {
@@ -1091,9 +1094,9 @@ func (a *ElasticBeanstalkStub) UpdateApplicationResourceLifecycle(ctx workflow.C
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) UpdateApplicationResourceLifecycleAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationResourceLifecycleInput) *ElasticbeanstalkUpdateApplicationResourceLifecycleResult {
+func (a *ElasticBeanstalkStub) UpdateApplicationResourceLifecycleAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationResourceLifecycleInput) *ElasticbeanstalkUpdateApplicationResourceLifecycleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.UpdateApplicationResourceLifecycle", input)
-	return &ElasticbeanstalkUpdateApplicationResourceLifecycleResult{Result: future}
+	return &ElasticbeanstalkUpdateApplicationResourceLifecycleFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) UpdateApplicationVersion(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationVersionInput) (*elasticbeanstalk.ApplicationVersionDescriptionMessage, error) {
@@ -1102,9 +1105,9 @@ func (a *ElasticBeanstalkStub) UpdateApplicationVersion(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) UpdateApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationVersionInput) *ElasticbeanstalkUpdateApplicationVersionResult {
+func (a *ElasticBeanstalkStub) UpdateApplicationVersionAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateApplicationVersionInput) *ElasticbeanstalkUpdateApplicationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.UpdateApplicationVersion", input)
-	return &ElasticbeanstalkUpdateApplicationVersionResult{Result: future}
+	return &ElasticbeanstalkUpdateApplicationVersionFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) UpdateConfigurationTemplate(ctx workflow.Context, input *elasticbeanstalk.UpdateConfigurationTemplateInput) (*elasticbeanstalk.ConfigurationSettingsDescription, error) {
@@ -1113,9 +1116,9 @@ func (a *ElasticBeanstalkStub) UpdateConfigurationTemplate(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) UpdateConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateConfigurationTemplateInput) *ElasticbeanstalkUpdateConfigurationTemplateResult {
+func (a *ElasticBeanstalkStub) UpdateConfigurationTemplateAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateConfigurationTemplateInput) *ElasticbeanstalkUpdateConfigurationTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.UpdateConfigurationTemplate", input)
-	return &ElasticbeanstalkUpdateConfigurationTemplateResult{Result: future}
+	return &ElasticbeanstalkUpdateConfigurationTemplateFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) UpdateEnvironment(ctx workflow.Context, input *elasticbeanstalk.UpdateEnvironmentInput) (*elasticbeanstalk.EnvironmentDescription, error) {
@@ -1124,9 +1127,9 @@ func (a *ElasticBeanstalkStub) UpdateEnvironment(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) UpdateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateEnvironmentInput) *ElasticbeanstalkUpdateEnvironmentResult {
+func (a *ElasticBeanstalkStub) UpdateEnvironmentAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateEnvironmentInput) *ElasticbeanstalkUpdateEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.UpdateEnvironment", input)
-	return &ElasticbeanstalkUpdateEnvironmentResult{Result: future}
+	return &ElasticbeanstalkUpdateEnvironmentFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) UpdateTagsForResource(ctx workflow.Context, input *elasticbeanstalk.UpdateTagsForResourceInput) (*elasticbeanstalk.UpdateTagsForResourceOutput, error) {
@@ -1135,9 +1138,9 @@ func (a *ElasticBeanstalkStub) UpdateTagsForResource(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) UpdateTagsForResourceAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateTagsForResourceInput) *ElasticbeanstalkUpdateTagsForResourceResult {
+func (a *ElasticBeanstalkStub) UpdateTagsForResourceAsync(ctx workflow.Context, input *elasticbeanstalk.UpdateTagsForResourceInput) *ElasticbeanstalkUpdateTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.UpdateTagsForResource", input)
-	return &ElasticbeanstalkUpdateTagsForResourceResult{Result: future}
+	return &ElasticbeanstalkUpdateTagsForResourceFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) ValidateConfigurationSettings(ctx workflow.Context, input *elasticbeanstalk.ValidateConfigurationSettingsInput) (*elasticbeanstalk.ValidateConfigurationSettingsOutput, error) {
@@ -1146,9 +1149,9 @@ func (a *ElasticBeanstalkStub) ValidateConfigurationSettings(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ElasticBeanstalkStub) ValidateConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.ValidateConfigurationSettingsInput) *ElasticbeanstalkValidateConfigurationSettingsResult {
+func (a *ElasticBeanstalkStub) ValidateConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.ValidateConfigurationSettingsInput) *ElasticbeanstalkValidateConfigurationSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticbeanstalk.ValidateConfigurationSettings", input)
-	return &ElasticbeanstalkValidateConfigurationSettingsResult{Result: future}
+	return &ElasticbeanstalkValidateConfigurationSettingsFuture{Future: future}
 }
 
 func (a *ElasticBeanstalkStub) WaitUntilEnvironmentExists(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error {

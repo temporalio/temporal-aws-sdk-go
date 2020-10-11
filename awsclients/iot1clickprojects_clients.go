@@ -11,52 +11,52 @@ import (
 
 type IoT1ClickProjectsClient interface {
 	AssociateDeviceWithPlacement(ctx workflow.Context, input *iot1clickprojects.AssociateDeviceWithPlacementInput) (*iot1clickprojects.AssociateDeviceWithPlacementOutput, error)
-	AssociateDeviceWithPlacementAsync(ctx workflow.Context, input *iot1clickprojects.AssociateDeviceWithPlacementInput) *Iot1clickprojectsAssociateDeviceWithPlacementResult
+	AssociateDeviceWithPlacementAsync(ctx workflow.Context, input *iot1clickprojects.AssociateDeviceWithPlacementInput) *Iot1clickprojectsAssociateDeviceWithPlacementFuture
 
 	CreatePlacement(ctx workflow.Context, input *iot1clickprojects.CreatePlacementInput) (*iot1clickprojects.CreatePlacementOutput, error)
-	CreatePlacementAsync(ctx workflow.Context, input *iot1clickprojects.CreatePlacementInput) *Iot1clickprojectsCreatePlacementResult
+	CreatePlacementAsync(ctx workflow.Context, input *iot1clickprojects.CreatePlacementInput) *Iot1clickprojectsCreatePlacementFuture
 
 	CreateProject(ctx workflow.Context, input *iot1clickprojects.CreateProjectInput) (*iot1clickprojects.CreateProjectOutput, error)
-	CreateProjectAsync(ctx workflow.Context, input *iot1clickprojects.CreateProjectInput) *Iot1clickprojectsCreateProjectResult
+	CreateProjectAsync(ctx workflow.Context, input *iot1clickprojects.CreateProjectInput) *Iot1clickprojectsCreateProjectFuture
 
 	DeletePlacement(ctx workflow.Context, input *iot1clickprojects.DeletePlacementInput) (*iot1clickprojects.DeletePlacementOutput, error)
-	DeletePlacementAsync(ctx workflow.Context, input *iot1clickprojects.DeletePlacementInput) *Iot1clickprojectsDeletePlacementResult
+	DeletePlacementAsync(ctx workflow.Context, input *iot1clickprojects.DeletePlacementInput) *Iot1clickprojectsDeletePlacementFuture
 
 	DeleteProject(ctx workflow.Context, input *iot1clickprojects.DeleteProjectInput) (*iot1clickprojects.DeleteProjectOutput, error)
-	DeleteProjectAsync(ctx workflow.Context, input *iot1clickprojects.DeleteProjectInput) *Iot1clickprojectsDeleteProjectResult
+	DeleteProjectAsync(ctx workflow.Context, input *iot1clickprojects.DeleteProjectInput) *Iot1clickprojectsDeleteProjectFuture
 
 	DescribePlacement(ctx workflow.Context, input *iot1clickprojects.DescribePlacementInput) (*iot1clickprojects.DescribePlacementOutput, error)
-	DescribePlacementAsync(ctx workflow.Context, input *iot1clickprojects.DescribePlacementInput) *Iot1clickprojectsDescribePlacementResult
+	DescribePlacementAsync(ctx workflow.Context, input *iot1clickprojects.DescribePlacementInput) *Iot1clickprojectsDescribePlacementFuture
 
 	DescribeProject(ctx workflow.Context, input *iot1clickprojects.DescribeProjectInput) (*iot1clickprojects.DescribeProjectOutput, error)
-	DescribeProjectAsync(ctx workflow.Context, input *iot1clickprojects.DescribeProjectInput) *Iot1clickprojectsDescribeProjectResult
+	DescribeProjectAsync(ctx workflow.Context, input *iot1clickprojects.DescribeProjectInput) *Iot1clickprojectsDescribeProjectFuture
 
 	DisassociateDeviceFromPlacement(ctx workflow.Context, input *iot1clickprojects.DisassociateDeviceFromPlacementInput) (*iot1clickprojects.DisassociateDeviceFromPlacementOutput, error)
-	DisassociateDeviceFromPlacementAsync(ctx workflow.Context, input *iot1clickprojects.DisassociateDeviceFromPlacementInput) *Iot1clickprojectsDisassociateDeviceFromPlacementResult
+	DisassociateDeviceFromPlacementAsync(ctx workflow.Context, input *iot1clickprojects.DisassociateDeviceFromPlacementInput) *Iot1clickprojectsDisassociateDeviceFromPlacementFuture
 
 	GetDevicesInPlacement(ctx workflow.Context, input *iot1clickprojects.GetDevicesInPlacementInput) (*iot1clickprojects.GetDevicesInPlacementOutput, error)
-	GetDevicesInPlacementAsync(ctx workflow.Context, input *iot1clickprojects.GetDevicesInPlacementInput) *Iot1clickprojectsGetDevicesInPlacementResult
+	GetDevicesInPlacementAsync(ctx workflow.Context, input *iot1clickprojects.GetDevicesInPlacementInput) *Iot1clickprojectsGetDevicesInPlacementFuture
 
 	ListPlacements(ctx workflow.Context, input *iot1clickprojects.ListPlacementsInput) (*iot1clickprojects.ListPlacementsOutput, error)
-	ListPlacementsAsync(ctx workflow.Context, input *iot1clickprojects.ListPlacementsInput) *Iot1clickprojectsListPlacementsResult
+	ListPlacementsAsync(ctx workflow.Context, input *iot1clickprojects.ListPlacementsInput) *Iot1clickprojectsListPlacementsFuture
 
 	ListProjects(ctx workflow.Context, input *iot1clickprojects.ListProjectsInput) (*iot1clickprojects.ListProjectsOutput, error)
-	ListProjectsAsync(ctx workflow.Context, input *iot1clickprojects.ListProjectsInput) *Iot1clickprojectsListProjectsResult
+	ListProjectsAsync(ctx workflow.Context, input *iot1clickprojects.ListProjectsInput) *Iot1clickprojectsListProjectsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iot1clickprojects.ListTagsForResourceInput) (*iot1clickprojects.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iot1clickprojects.ListTagsForResourceInput) *Iot1clickprojectsListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *iot1clickprojects.ListTagsForResourceInput) *Iot1clickprojectsListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *iot1clickprojects.TagResourceInput) (*iot1clickprojects.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iot1clickprojects.TagResourceInput) *Iot1clickprojectsTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *iot1clickprojects.TagResourceInput) *Iot1clickprojectsTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *iot1clickprojects.UntagResourceInput) (*iot1clickprojects.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iot1clickprojects.UntagResourceInput) *Iot1clickprojectsUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *iot1clickprojects.UntagResourceInput) *Iot1clickprojectsUntagResourceFuture
 
 	UpdatePlacement(ctx workflow.Context, input *iot1clickprojects.UpdatePlacementInput) (*iot1clickprojects.UpdatePlacementOutput, error)
-	UpdatePlacementAsync(ctx workflow.Context, input *iot1clickprojects.UpdatePlacementInput) *Iot1clickprojectsUpdatePlacementResult
+	UpdatePlacementAsync(ctx workflow.Context, input *iot1clickprojects.UpdatePlacementInput) *Iot1clickprojectsUpdatePlacementFuture
 
 	UpdateProject(ctx workflow.Context, input *iot1clickprojects.UpdateProjectInput) (*iot1clickprojects.UpdateProjectOutput, error)
-	UpdateProjectAsync(ctx workflow.Context, input *iot1clickprojects.UpdateProjectInput) *Iot1clickprojectsUpdateProjectResult
+	UpdateProjectAsync(ctx workflow.Context, input *iot1clickprojects.UpdateProjectInput) *Iot1clickprojectsUpdateProjectFuture
 }
 
 type IoT1ClickProjectsStub struct{}
@@ -65,163 +65,163 @@ func NewIoT1ClickProjectsStub() IoT1ClickProjectsClient {
 	return &IoT1ClickProjectsStub{}
 }
 
-type Iot1clickprojectsAssociateDeviceWithPlacementResult struct {
-	Result workflow.Future
+type Iot1clickprojectsAssociateDeviceWithPlacementFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsAssociateDeviceWithPlacementResult) Get(ctx workflow.Context) (*iot1clickprojects.AssociateDeviceWithPlacementOutput, error) {
+func (r *Iot1clickprojectsAssociateDeviceWithPlacementFuture) Get(ctx workflow.Context) (*iot1clickprojects.AssociateDeviceWithPlacementOutput, error) {
 	var output iot1clickprojects.AssociateDeviceWithPlacementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsCreatePlacementResult struct {
-	Result workflow.Future
+type Iot1clickprojectsCreatePlacementFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsCreatePlacementResult) Get(ctx workflow.Context) (*iot1clickprojects.CreatePlacementOutput, error) {
+func (r *Iot1clickprojectsCreatePlacementFuture) Get(ctx workflow.Context) (*iot1clickprojects.CreatePlacementOutput, error) {
 	var output iot1clickprojects.CreatePlacementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsCreateProjectResult struct {
-	Result workflow.Future
+type Iot1clickprojectsCreateProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsCreateProjectResult) Get(ctx workflow.Context) (*iot1clickprojects.CreateProjectOutput, error) {
+func (r *Iot1clickprojectsCreateProjectFuture) Get(ctx workflow.Context) (*iot1clickprojects.CreateProjectOutput, error) {
 	var output iot1clickprojects.CreateProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsDeletePlacementResult struct {
-	Result workflow.Future
+type Iot1clickprojectsDeletePlacementFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsDeletePlacementResult) Get(ctx workflow.Context) (*iot1clickprojects.DeletePlacementOutput, error) {
+func (r *Iot1clickprojectsDeletePlacementFuture) Get(ctx workflow.Context) (*iot1clickprojects.DeletePlacementOutput, error) {
 	var output iot1clickprojects.DeletePlacementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsDeleteProjectResult struct {
-	Result workflow.Future
+type Iot1clickprojectsDeleteProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsDeleteProjectResult) Get(ctx workflow.Context) (*iot1clickprojects.DeleteProjectOutput, error) {
+func (r *Iot1clickprojectsDeleteProjectFuture) Get(ctx workflow.Context) (*iot1clickprojects.DeleteProjectOutput, error) {
 	var output iot1clickprojects.DeleteProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsDescribePlacementResult struct {
-	Result workflow.Future
+type Iot1clickprojectsDescribePlacementFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsDescribePlacementResult) Get(ctx workflow.Context) (*iot1clickprojects.DescribePlacementOutput, error) {
+func (r *Iot1clickprojectsDescribePlacementFuture) Get(ctx workflow.Context) (*iot1clickprojects.DescribePlacementOutput, error) {
 	var output iot1clickprojects.DescribePlacementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsDescribeProjectResult struct {
-	Result workflow.Future
+type Iot1clickprojectsDescribeProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsDescribeProjectResult) Get(ctx workflow.Context) (*iot1clickprojects.DescribeProjectOutput, error) {
+func (r *Iot1clickprojectsDescribeProjectFuture) Get(ctx workflow.Context) (*iot1clickprojects.DescribeProjectOutput, error) {
 	var output iot1clickprojects.DescribeProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsDisassociateDeviceFromPlacementResult struct {
-	Result workflow.Future
+type Iot1clickprojectsDisassociateDeviceFromPlacementFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsDisassociateDeviceFromPlacementResult) Get(ctx workflow.Context) (*iot1clickprojects.DisassociateDeviceFromPlacementOutput, error) {
+func (r *Iot1clickprojectsDisassociateDeviceFromPlacementFuture) Get(ctx workflow.Context) (*iot1clickprojects.DisassociateDeviceFromPlacementOutput, error) {
 	var output iot1clickprojects.DisassociateDeviceFromPlacementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsGetDevicesInPlacementResult struct {
-	Result workflow.Future
+type Iot1clickprojectsGetDevicesInPlacementFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsGetDevicesInPlacementResult) Get(ctx workflow.Context) (*iot1clickprojects.GetDevicesInPlacementOutput, error) {
+func (r *Iot1clickprojectsGetDevicesInPlacementFuture) Get(ctx workflow.Context) (*iot1clickprojects.GetDevicesInPlacementOutput, error) {
 	var output iot1clickprojects.GetDevicesInPlacementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsListPlacementsResult struct {
-	Result workflow.Future
+type Iot1clickprojectsListPlacementsFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsListPlacementsResult) Get(ctx workflow.Context) (*iot1clickprojects.ListPlacementsOutput, error) {
+func (r *Iot1clickprojectsListPlacementsFuture) Get(ctx workflow.Context) (*iot1clickprojects.ListPlacementsOutput, error) {
 	var output iot1clickprojects.ListPlacementsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsListProjectsResult struct {
-	Result workflow.Future
+type Iot1clickprojectsListProjectsFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsListProjectsResult) Get(ctx workflow.Context) (*iot1clickprojects.ListProjectsOutput, error) {
+func (r *Iot1clickprojectsListProjectsFuture) Get(ctx workflow.Context) (*iot1clickprojects.ListProjectsOutput, error) {
 	var output iot1clickprojects.ListProjectsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsListTagsForResourceResult struct {
-	Result workflow.Future
+type Iot1clickprojectsListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsListTagsForResourceResult) Get(ctx workflow.Context) (*iot1clickprojects.ListTagsForResourceOutput, error) {
+func (r *Iot1clickprojectsListTagsForResourceFuture) Get(ctx workflow.Context) (*iot1clickprojects.ListTagsForResourceOutput, error) {
 	var output iot1clickprojects.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsTagResourceResult struct {
-	Result workflow.Future
+type Iot1clickprojectsTagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsTagResourceResult) Get(ctx workflow.Context) (*iot1clickprojects.TagResourceOutput, error) {
+func (r *Iot1clickprojectsTagResourceFuture) Get(ctx workflow.Context) (*iot1clickprojects.TagResourceOutput, error) {
 	var output iot1clickprojects.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsUntagResourceResult struct {
-	Result workflow.Future
+type Iot1clickprojectsUntagResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsUntagResourceResult) Get(ctx workflow.Context) (*iot1clickprojects.UntagResourceOutput, error) {
+func (r *Iot1clickprojectsUntagResourceFuture) Get(ctx workflow.Context) (*iot1clickprojects.UntagResourceOutput, error) {
 	var output iot1clickprojects.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsUpdatePlacementResult struct {
-	Result workflow.Future
+type Iot1clickprojectsUpdatePlacementFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsUpdatePlacementResult) Get(ctx workflow.Context) (*iot1clickprojects.UpdatePlacementOutput, error) {
+func (r *Iot1clickprojectsUpdatePlacementFuture) Get(ctx workflow.Context) (*iot1clickprojects.UpdatePlacementOutput, error) {
 	var output iot1clickprojects.UpdatePlacementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Iot1clickprojectsUpdateProjectResult struct {
-	Result workflow.Future
+type Iot1clickprojectsUpdateProjectFuture struct {
+	Future workflow.Future
 }
 
-func (r *Iot1clickprojectsUpdateProjectResult) Get(ctx workflow.Context) (*iot1clickprojects.UpdateProjectOutput, error) {
+func (r *Iot1clickprojectsUpdateProjectFuture) Get(ctx workflow.Context) (*iot1clickprojects.UpdateProjectOutput, error) {
 	var output iot1clickprojects.UpdateProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -231,9 +231,9 @@ func (a *IoT1ClickProjectsStub) AssociateDeviceWithPlacement(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) AssociateDeviceWithPlacementAsync(ctx workflow.Context, input *iot1clickprojects.AssociateDeviceWithPlacementInput) *Iot1clickprojectsAssociateDeviceWithPlacementResult {
+func (a *IoT1ClickProjectsStub) AssociateDeviceWithPlacementAsync(ctx workflow.Context, input *iot1clickprojects.AssociateDeviceWithPlacementInput) *Iot1clickprojectsAssociateDeviceWithPlacementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.AssociateDeviceWithPlacement", input)
-	return &Iot1clickprojectsAssociateDeviceWithPlacementResult{Result: future}
+	return &Iot1clickprojectsAssociateDeviceWithPlacementFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) CreatePlacement(ctx workflow.Context, input *iot1clickprojects.CreatePlacementInput) (*iot1clickprojects.CreatePlacementOutput, error) {
@@ -242,9 +242,9 @@ func (a *IoT1ClickProjectsStub) CreatePlacement(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) CreatePlacementAsync(ctx workflow.Context, input *iot1clickprojects.CreatePlacementInput) *Iot1clickprojectsCreatePlacementResult {
+func (a *IoT1ClickProjectsStub) CreatePlacementAsync(ctx workflow.Context, input *iot1clickprojects.CreatePlacementInput) *Iot1clickprojectsCreatePlacementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.CreatePlacement", input)
-	return &Iot1clickprojectsCreatePlacementResult{Result: future}
+	return &Iot1clickprojectsCreatePlacementFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) CreateProject(ctx workflow.Context, input *iot1clickprojects.CreateProjectInput) (*iot1clickprojects.CreateProjectOutput, error) {
@@ -253,9 +253,9 @@ func (a *IoT1ClickProjectsStub) CreateProject(ctx workflow.Context, input *iot1c
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) CreateProjectAsync(ctx workflow.Context, input *iot1clickprojects.CreateProjectInput) *Iot1clickprojectsCreateProjectResult {
+func (a *IoT1ClickProjectsStub) CreateProjectAsync(ctx workflow.Context, input *iot1clickprojects.CreateProjectInput) *Iot1clickprojectsCreateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.CreateProject", input)
-	return &Iot1clickprojectsCreateProjectResult{Result: future}
+	return &Iot1clickprojectsCreateProjectFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) DeletePlacement(ctx workflow.Context, input *iot1clickprojects.DeletePlacementInput) (*iot1clickprojects.DeletePlacementOutput, error) {
@@ -264,9 +264,9 @@ func (a *IoT1ClickProjectsStub) DeletePlacement(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) DeletePlacementAsync(ctx workflow.Context, input *iot1clickprojects.DeletePlacementInput) *Iot1clickprojectsDeletePlacementResult {
+func (a *IoT1ClickProjectsStub) DeletePlacementAsync(ctx workflow.Context, input *iot1clickprojects.DeletePlacementInput) *Iot1clickprojectsDeletePlacementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.DeletePlacement", input)
-	return &Iot1clickprojectsDeletePlacementResult{Result: future}
+	return &Iot1clickprojectsDeletePlacementFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) DeleteProject(ctx workflow.Context, input *iot1clickprojects.DeleteProjectInput) (*iot1clickprojects.DeleteProjectOutput, error) {
@@ -275,9 +275,9 @@ func (a *IoT1ClickProjectsStub) DeleteProject(ctx workflow.Context, input *iot1c
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) DeleteProjectAsync(ctx workflow.Context, input *iot1clickprojects.DeleteProjectInput) *Iot1clickprojectsDeleteProjectResult {
+func (a *IoT1ClickProjectsStub) DeleteProjectAsync(ctx workflow.Context, input *iot1clickprojects.DeleteProjectInput) *Iot1clickprojectsDeleteProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.DeleteProject", input)
-	return &Iot1clickprojectsDeleteProjectResult{Result: future}
+	return &Iot1clickprojectsDeleteProjectFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) DescribePlacement(ctx workflow.Context, input *iot1clickprojects.DescribePlacementInput) (*iot1clickprojects.DescribePlacementOutput, error) {
@@ -286,9 +286,9 @@ func (a *IoT1ClickProjectsStub) DescribePlacement(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) DescribePlacementAsync(ctx workflow.Context, input *iot1clickprojects.DescribePlacementInput) *Iot1clickprojectsDescribePlacementResult {
+func (a *IoT1ClickProjectsStub) DescribePlacementAsync(ctx workflow.Context, input *iot1clickprojects.DescribePlacementInput) *Iot1clickprojectsDescribePlacementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.DescribePlacement", input)
-	return &Iot1clickprojectsDescribePlacementResult{Result: future}
+	return &Iot1clickprojectsDescribePlacementFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) DescribeProject(ctx workflow.Context, input *iot1clickprojects.DescribeProjectInput) (*iot1clickprojects.DescribeProjectOutput, error) {
@@ -297,9 +297,9 @@ func (a *IoT1ClickProjectsStub) DescribeProject(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) DescribeProjectAsync(ctx workflow.Context, input *iot1clickprojects.DescribeProjectInput) *Iot1clickprojectsDescribeProjectResult {
+func (a *IoT1ClickProjectsStub) DescribeProjectAsync(ctx workflow.Context, input *iot1clickprojects.DescribeProjectInput) *Iot1clickprojectsDescribeProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.DescribeProject", input)
-	return &Iot1clickprojectsDescribeProjectResult{Result: future}
+	return &Iot1clickprojectsDescribeProjectFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) DisassociateDeviceFromPlacement(ctx workflow.Context, input *iot1clickprojects.DisassociateDeviceFromPlacementInput) (*iot1clickprojects.DisassociateDeviceFromPlacementOutput, error) {
@@ -308,9 +308,9 @@ func (a *IoT1ClickProjectsStub) DisassociateDeviceFromPlacement(ctx workflow.Con
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) DisassociateDeviceFromPlacementAsync(ctx workflow.Context, input *iot1clickprojects.DisassociateDeviceFromPlacementInput) *Iot1clickprojectsDisassociateDeviceFromPlacementResult {
+func (a *IoT1ClickProjectsStub) DisassociateDeviceFromPlacementAsync(ctx workflow.Context, input *iot1clickprojects.DisassociateDeviceFromPlacementInput) *Iot1clickprojectsDisassociateDeviceFromPlacementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.DisassociateDeviceFromPlacement", input)
-	return &Iot1clickprojectsDisassociateDeviceFromPlacementResult{Result: future}
+	return &Iot1clickprojectsDisassociateDeviceFromPlacementFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) GetDevicesInPlacement(ctx workflow.Context, input *iot1clickprojects.GetDevicesInPlacementInput) (*iot1clickprojects.GetDevicesInPlacementOutput, error) {
@@ -319,9 +319,9 @@ func (a *IoT1ClickProjectsStub) GetDevicesInPlacement(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) GetDevicesInPlacementAsync(ctx workflow.Context, input *iot1clickprojects.GetDevicesInPlacementInput) *Iot1clickprojectsGetDevicesInPlacementResult {
+func (a *IoT1ClickProjectsStub) GetDevicesInPlacementAsync(ctx workflow.Context, input *iot1clickprojects.GetDevicesInPlacementInput) *Iot1clickprojectsGetDevicesInPlacementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.GetDevicesInPlacement", input)
-	return &Iot1clickprojectsGetDevicesInPlacementResult{Result: future}
+	return &Iot1clickprojectsGetDevicesInPlacementFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) ListPlacements(ctx workflow.Context, input *iot1clickprojects.ListPlacementsInput) (*iot1clickprojects.ListPlacementsOutput, error) {
@@ -330,9 +330,9 @@ func (a *IoT1ClickProjectsStub) ListPlacements(ctx workflow.Context, input *iot1
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) ListPlacementsAsync(ctx workflow.Context, input *iot1clickprojects.ListPlacementsInput) *Iot1clickprojectsListPlacementsResult {
+func (a *IoT1ClickProjectsStub) ListPlacementsAsync(ctx workflow.Context, input *iot1clickprojects.ListPlacementsInput) *Iot1clickprojectsListPlacementsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.ListPlacements", input)
-	return &Iot1clickprojectsListPlacementsResult{Result: future}
+	return &Iot1clickprojectsListPlacementsFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) ListProjects(ctx workflow.Context, input *iot1clickprojects.ListProjectsInput) (*iot1clickprojects.ListProjectsOutput, error) {
@@ -341,9 +341,9 @@ func (a *IoT1ClickProjectsStub) ListProjects(ctx workflow.Context, input *iot1cl
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) ListProjectsAsync(ctx workflow.Context, input *iot1clickprojects.ListProjectsInput) *Iot1clickprojectsListProjectsResult {
+func (a *IoT1ClickProjectsStub) ListProjectsAsync(ctx workflow.Context, input *iot1clickprojects.ListProjectsInput) *Iot1clickprojectsListProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.ListProjects", input)
-	return &Iot1clickprojectsListProjectsResult{Result: future}
+	return &Iot1clickprojectsListProjectsFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) ListTagsForResource(ctx workflow.Context, input *iot1clickprojects.ListTagsForResourceInput) (*iot1clickprojects.ListTagsForResourceOutput, error) {
@@ -352,9 +352,9 @@ func (a *IoT1ClickProjectsStub) ListTagsForResource(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) ListTagsForResourceAsync(ctx workflow.Context, input *iot1clickprojects.ListTagsForResourceInput) *Iot1clickprojectsListTagsForResourceResult {
+func (a *IoT1ClickProjectsStub) ListTagsForResourceAsync(ctx workflow.Context, input *iot1clickprojects.ListTagsForResourceInput) *Iot1clickprojectsListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.ListTagsForResource", input)
-	return &Iot1clickprojectsListTagsForResourceResult{Result: future}
+	return &Iot1clickprojectsListTagsForResourceFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) TagResource(ctx workflow.Context, input *iot1clickprojects.TagResourceInput) (*iot1clickprojects.TagResourceOutput, error) {
@@ -363,9 +363,9 @@ func (a *IoT1ClickProjectsStub) TagResource(ctx workflow.Context, input *iot1cli
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) TagResourceAsync(ctx workflow.Context, input *iot1clickprojects.TagResourceInput) *Iot1clickprojectsTagResourceResult {
+func (a *IoT1ClickProjectsStub) TagResourceAsync(ctx workflow.Context, input *iot1clickprojects.TagResourceInput) *Iot1clickprojectsTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.TagResource", input)
-	return &Iot1clickprojectsTagResourceResult{Result: future}
+	return &Iot1clickprojectsTagResourceFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) UntagResource(ctx workflow.Context, input *iot1clickprojects.UntagResourceInput) (*iot1clickprojects.UntagResourceOutput, error) {
@@ -374,9 +374,9 @@ func (a *IoT1ClickProjectsStub) UntagResource(ctx workflow.Context, input *iot1c
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) UntagResourceAsync(ctx workflow.Context, input *iot1clickprojects.UntagResourceInput) *Iot1clickprojectsUntagResourceResult {
+func (a *IoT1ClickProjectsStub) UntagResourceAsync(ctx workflow.Context, input *iot1clickprojects.UntagResourceInput) *Iot1clickprojectsUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.UntagResource", input)
-	return &Iot1clickprojectsUntagResourceResult{Result: future}
+	return &Iot1clickprojectsUntagResourceFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) UpdatePlacement(ctx workflow.Context, input *iot1clickprojects.UpdatePlacementInput) (*iot1clickprojects.UpdatePlacementOutput, error) {
@@ -385,9 +385,9 @@ func (a *IoT1ClickProjectsStub) UpdatePlacement(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) UpdatePlacementAsync(ctx workflow.Context, input *iot1clickprojects.UpdatePlacementInput) *Iot1clickprojectsUpdatePlacementResult {
+func (a *IoT1ClickProjectsStub) UpdatePlacementAsync(ctx workflow.Context, input *iot1clickprojects.UpdatePlacementInput) *Iot1clickprojectsUpdatePlacementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.UpdatePlacement", input)
-	return &Iot1clickprojectsUpdatePlacementResult{Result: future}
+	return &Iot1clickprojectsUpdatePlacementFuture{Future: future}
 }
 
 func (a *IoT1ClickProjectsStub) UpdateProject(ctx workflow.Context, input *iot1clickprojects.UpdateProjectInput) (*iot1clickprojects.UpdateProjectOutput, error) {
@@ -396,7 +396,7 @@ func (a *IoT1ClickProjectsStub) UpdateProject(ctx workflow.Context, input *iot1c
 	return &output, err
 }
 
-func (a *IoT1ClickProjectsStub) UpdateProjectAsync(ctx workflow.Context, input *iot1clickprojects.UpdateProjectInput) *Iot1clickprojectsUpdateProjectResult {
+func (a *IoT1ClickProjectsStub) UpdateProjectAsync(ctx workflow.Context, input *iot1clickprojects.UpdateProjectInput) *Iot1clickprojectsUpdateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickprojects.UpdateProject", input)
-	return &Iot1clickprojectsUpdateProjectResult{Result: future}
+	return &Iot1clickprojectsUpdateProjectFuture{Future: future}
 }

@@ -11,185 +11,187 @@ import (
 
 type NeptuneClient interface {
 	AddRoleToDBCluster(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) (*neptune.AddRoleToDBClusterOutput, error)
-	AddRoleToDBClusterAsync(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) *NeptuneAddRoleToDBClusterResult
+	AddRoleToDBClusterAsync(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) *NeptuneAddRoleToDBClusterFuture
 
 	AddSourceIdentifierToSubscription(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) (*neptune.AddSourceIdentifierToSubscriptionOutput, error)
-	AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) *NeptuneAddSourceIdentifierToSubscriptionResult
+	AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) *NeptuneAddSourceIdentifierToSubscriptionFuture
 
 	AddTagsToResource(ctx workflow.Context, input *neptune.AddTagsToResourceInput) (*neptune.AddTagsToResourceOutput, error)
-	AddTagsToResourceAsync(ctx workflow.Context, input *neptune.AddTagsToResourceInput) *NeptuneAddTagsToResourceResult
+	AddTagsToResourceAsync(ctx workflow.Context, input *neptune.AddTagsToResourceInput) *NeptuneAddTagsToResourceFuture
 
 	ApplyPendingMaintenanceAction(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) (*neptune.ApplyPendingMaintenanceActionOutput, error)
-	ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) *NeptuneApplyPendingMaintenanceActionResult
+	ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) *NeptuneApplyPendingMaintenanceActionFuture
 
 	CopyDBClusterParameterGroup(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) (*neptune.CopyDBClusterParameterGroupOutput, error)
-	CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) *NeptuneCopyDBClusterParameterGroupResult
+	CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) *NeptuneCopyDBClusterParameterGroupFuture
 
 	CopyDBClusterSnapshot(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) (*neptune.CopyDBClusterSnapshotOutput, error)
-	CopyDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) *NeptuneCopyDBClusterSnapshotResult
+	CopyDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) *NeptuneCopyDBClusterSnapshotFuture
 
 	CopyDBParameterGroup(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) (*neptune.CopyDBParameterGroupOutput, error)
-	CopyDBParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) *NeptuneCopyDBParameterGroupResult
+	CopyDBParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) *NeptuneCopyDBParameterGroupFuture
 
 	CreateDBCluster(ctx workflow.Context, input *neptune.CreateDBClusterInput) (*neptune.CreateDBClusterOutput, error)
-	CreateDBClusterAsync(ctx workflow.Context, input *neptune.CreateDBClusterInput) *NeptuneCreateDBClusterResult
+	CreateDBClusterAsync(ctx workflow.Context, input *neptune.CreateDBClusterInput) *NeptuneCreateDBClusterFuture
 
 	CreateDBClusterParameterGroup(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) (*neptune.CreateDBClusterParameterGroupOutput, error)
-	CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) *NeptuneCreateDBClusterParameterGroupResult
+	CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) *NeptuneCreateDBClusterParameterGroupFuture
 
 	CreateDBClusterSnapshot(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) (*neptune.CreateDBClusterSnapshotOutput, error)
-	CreateDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) *NeptuneCreateDBClusterSnapshotResult
+	CreateDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) *NeptuneCreateDBClusterSnapshotFuture
 
 	CreateDBInstance(ctx workflow.Context, input *neptune.CreateDBInstanceInput) (*neptune.CreateDBInstanceOutput, error)
-	CreateDBInstanceAsync(ctx workflow.Context, input *neptune.CreateDBInstanceInput) *NeptuneCreateDBInstanceResult
+	CreateDBInstanceAsync(ctx workflow.Context, input *neptune.CreateDBInstanceInput) *NeptuneCreateDBInstanceFuture
 
 	CreateDBParameterGroup(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) (*neptune.CreateDBParameterGroupOutput, error)
-	CreateDBParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) *NeptuneCreateDBParameterGroupResult
+	CreateDBParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) *NeptuneCreateDBParameterGroupFuture
 
 	CreateDBSubnetGroup(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) (*neptune.CreateDBSubnetGroupOutput, error)
-	CreateDBSubnetGroupAsync(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) *NeptuneCreateDBSubnetGroupResult
+	CreateDBSubnetGroupAsync(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) *NeptuneCreateDBSubnetGroupFuture
 
 	CreateEventSubscription(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) (*neptune.CreateEventSubscriptionOutput, error)
-	CreateEventSubscriptionAsync(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) *NeptuneCreateEventSubscriptionResult
+	CreateEventSubscriptionAsync(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) *NeptuneCreateEventSubscriptionFuture
 
 	DeleteDBCluster(ctx workflow.Context, input *neptune.DeleteDBClusterInput) (*neptune.DeleteDBClusterOutput, error)
-	DeleteDBClusterAsync(ctx workflow.Context, input *neptune.DeleteDBClusterInput) *NeptuneDeleteDBClusterResult
+	DeleteDBClusterAsync(ctx workflow.Context, input *neptune.DeleteDBClusterInput) *NeptuneDeleteDBClusterFuture
 
 	DeleteDBClusterParameterGroup(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) (*neptune.DeleteDBClusterParameterGroupOutput, error)
-	DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) *NeptuneDeleteDBClusterParameterGroupResult
+	DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) *NeptuneDeleteDBClusterParameterGroupFuture
 
 	DeleteDBClusterSnapshot(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) (*neptune.DeleteDBClusterSnapshotOutput, error)
-	DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) *NeptuneDeleteDBClusterSnapshotResult
+	DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) *NeptuneDeleteDBClusterSnapshotFuture
 
 	DeleteDBInstance(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) (*neptune.DeleteDBInstanceOutput, error)
-	DeleteDBInstanceAsync(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) *NeptuneDeleteDBInstanceResult
+	DeleteDBInstanceAsync(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) *NeptuneDeleteDBInstanceFuture
 
 	DeleteDBParameterGroup(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) (*neptune.DeleteDBParameterGroupOutput, error)
-	DeleteDBParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) *NeptuneDeleteDBParameterGroupResult
+	DeleteDBParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) *NeptuneDeleteDBParameterGroupFuture
 
 	DeleteDBSubnetGroup(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) (*neptune.DeleteDBSubnetGroupOutput, error)
-	DeleteDBSubnetGroupAsync(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) *NeptuneDeleteDBSubnetGroupResult
+	DeleteDBSubnetGroupAsync(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) *NeptuneDeleteDBSubnetGroupFuture
 
 	DeleteEventSubscription(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) (*neptune.DeleteEventSubscriptionOutput, error)
-	DeleteEventSubscriptionAsync(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) *NeptuneDeleteEventSubscriptionResult
+	DeleteEventSubscriptionAsync(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) *NeptuneDeleteEventSubscriptionFuture
 
 	DescribeDBClusterParameterGroups(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) (*neptune.DescribeDBClusterParameterGroupsOutput, error)
-	DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) *NeptuneDescribeDBClusterParameterGroupsResult
+	DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) *NeptuneDescribeDBClusterParameterGroupsFuture
 
 	DescribeDBClusterParameters(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) (*neptune.DescribeDBClusterParametersOutput, error)
-	DescribeDBClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) *NeptuneDescribeDBClusterParametersResult
+	DescribeDBClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) *NeptuneDescribeDBClusterParametersFuture
 
 	DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) (*neptune.DescribeDBClusterSnapshotAttributesOutput, error)
-	DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) *NeptuneDescribeDBClusterSnapshotAttributesResult
+	DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) *NeptuneDescribeDBClusterSnapshotAttributesFuture
 
 	DescribeDBClusterSnapshots(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) (*neptune.DescribeDBClusterSnapshotsOutput, error)
-	DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) *NeptuneDescribeDBClusterSnapshotsResult
+	DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) *NeptuneDescribeDBClusterSnapshotsFuture
 
 	DescribeDBClusters(ctx workflow.Context, input *neptune.DescribeDBClustersInput) (*neptune.DescribeDBClustersOutput, error)
-	DescribeDBClustersAsync(ctx workflow.Context, input *neptune.DescribeDBClustersInput) *NeptuneDescribeDBClustersResult
+	DescribeDBClustersAsync(ctx workflow.Context, input *neptune.DescribeDBClustersInput) *NeptuneDescribeDBClustersFuture
 
 	DescribeDBEngineVersions(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) (*neptune.DescribeDBEngineVersionsOutput, error)
-	DescribeDBEngineVersionsAsync(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) *NeptuneDescribeDBEngineVersionsResult
+	DescribeDBEngineVersionsAsync(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) *NeptuneDescribeDBEngineVersionsFuture
 
 	DescribeDBInstances(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) (*neptune.DescribeDBInstancesOutput, error)
-	DescribeDBInstancesAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *NeptuneDescribeDBInstancesResult
+	DescribeDBInstancesAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *NeptuneDescribeDBInstancesFuture
 
 	DescribeDBParameterGroups(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) (*neptune.DescribeDBParameterGroupsOutput, error)
-	DescribeDBParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) *NeptuneDescribeDBParameterGroupsResult
+	DescribeDBParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) *NeptuneDescribeDBParameterGroupsFuture
 
 	DescribeDBParameters(ctx workflow.Context, input *neptune.DescribeDBParametersInput) (*neptune.DescribeDBParametersOutput, error)
-	DescribeDBParametersAsync(ctx workflow.Context, input *neptune.DescribeDBParametersInput) *NeptuneDescribeDBParametersResult
+	DescribeDBParametersAsync(ctx workflow.Context, input *neptune.DescribeDBParametersInput) *NeptuneDescribeDBParametersFuture
 
 	DescribeDBSubnetGroups(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) (*neptune.DescribeDBSubnetGroupsOutput, error)
-	DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) *NeptuneDescribeDBSubnetGroupsResult
+	DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) *NeptuneDescribeDBSubnetGroupsFuture
 
 	DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) (*neptune.DescribeEngineDefaultClusterParametersOutput, error)
-	DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) *NeptuneDescribeEngineDefaultClusterParametersResult
+	DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) *NeptuneDescribeEngineDefaultClusterParametersFuture
 
 	DescribeEngineDefaultParameters(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) (*neptune.DescribeEngineDefaultParametersOutput, error)
-	DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) *NeptuneDescribeEngineDefaultParametersResult
+	DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) *NeptuneDescribeEngineDefaultParametersFuture
 
 	DescribeEventCategories(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) (*neptune.DescribeEventCategoriesOutput, error)
-	DescribeEventCategoriesAsync(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) *NeptuneDescribeEventCategoriesResult
+	DescribeEventCategoriesAsync(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) *NeptuneDescribeEventCategoriesFuture
 
 	DescribeEventSubscriptions(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) (*neptune.DescribeEventSubscriptionsOutput, error)
-	DescribeEventSubscriptionsAsync(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) *NeptuneDescribeEventSubscriptionsResult
+	DescribeEventSubscriptionsAsync(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) *NeptuneDescribeEventSubscriptionsFuture
 
 	DescribeEvents(ctx workflow.Context, input *neptune.DescribeEventsInput) (*neptune.DescribeEventsOutput, error)
-	DescribeEventsAsync(ctx workflow.Context, input *neptune.DescribeEventsInput) *NeptuneDescribeEventsResult
+	DescribeEventsAsync(ctx workflow.Context, input *neptune.DescribeEventsInput) *NeptuneDescribeEventsFuture
 
 	DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) (*neptune.DescribeOrderableDBInstanceOptionsOutput, error)
-	DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) *NeptuneDescribeOrderableDBInstanceOptionsResult
+	DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) *NeptuneDescribeOrderableDBInstanceOptionsFuture
 
 	DescribePendingMaintenanceActions(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) (*neptune.DescribePendingMaintenanceActionsOutput, error)
-	DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) *NeptuneDescribePendingMaintenanceActionsResult
+	DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) *NeptuneDescribePendingMaintenanceActionsFuture
 
 	DescribeValidDBInstanceModifications(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) (*neptune.DescribeValidDBInstanceModificationsOutput, error)
-	DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) *NeptuneDescribeValidDBInstanceModificationsResult
+	DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) *NeptuneDescribeValidDBInstanceModificationsFuture
 
 	FailoverDBCluster(ctx workflow.Context, input *neptune.FailoverDBClusterInput) (*neptune.FailoverDBClusterOutput, error)
-	FailoverDBClusterAsync(ctx workflow.Context, input *neptune.FailoverDBClusterInput) *NeptuneFailoverDBClusterResult
+	FailoverDBClusterAsync(ctx workflow.Context, input *neptune.FailoverDBClusterInput) *NeptuneFailoverDBClusterFuture
 
 	ListTagsForResource(ctx workflow.Context, input *neptune.ListTagsForResourceInput) (*neptune.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *neptune.ListTagsForResourceInput) *NeptuneListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *neptune.ListTagsForResourceInput) *NeptuneListTagsForResourceFuture
 
 	ModifyDBCluster(ctx workflow.Context, input *neptune.ModifyDBClusterInput) (*neptune.ModifyDBClusterOutput, error)
-	ModifyDBClusterAsync(ctx workflow.Context, input *neptune.ModifyDBClusterInput) *NeptuneModifyDBClusterResult
+	ModifyDBClusterAsync(ctx workflow.Context, input *neptune.ModifyDBClusterInput) *NeptuneModifyDBClusterFuture
 
 	ModifyDBClusterParameterGroup(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error)
-	ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) *NeptuneModifyDBClusterParameterGroupResult
+	ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) *NeptuneModifyDBClusterParameterGroupFuture
 
 	ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) (*neptune.ModifyDBClusterSnapshotAttributeOutput, error)
-	ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) *NeptuneModifyDBClusterSnapshotAttributeResult
+	ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) *NeptuneModifyDBClusterSnapshotAttributeFuture
 
 	ModifyDBInstance(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) (*neptune.ModifyDBInstanceOutput, error)
-	ModifyDBInstanceAsync(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) *NeptuneModifyDBInstanceResult
+	ModifyDBInstanceAsync(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) *NeptuneModifyDBInstanceFuture
 
 	ModifyDBParameterGroup(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error)
-	ModifyDBParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) *NeptuneModifyDBParameterGroupResult
+	ModifyDBParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) *NeptuneModifyDBParameterGroupFuture
 
 	ModifyDBSubnetGroup(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) (*neptune.ModifyDBSubnetGroupOutput, error)
-	ModifyDBSubnetGroupAsync(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) *NeptuneModifyDBSubnetGroupResult
+	ModifyDBSubnetGroupAsync(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) *NeptuneModifyDBSubnetGroupFuture
 
 	ModifyEventSubscription(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) (*neptune.ModifyEventSubscriptionOutput, error)
-	ModifyEventSubscriptionAsync(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) *NeptuneModifyEventSubscriptionResult
+	ModifyEventSubscriptionAsync(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) *NeptuneModifyEventSubscriptionFuture
 
 	PromoteReadReplicaDBCluster(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) (*neptune.PromoteReadReplicaDBClusterOutput, error)
-	PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) *NeptunePromoteReadReplicaDBClusterResult
+	PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) *NeptunePromoteReadReplicaDBClusterFuture
 
 	RebootDBInstance(ctx workflow.Context, input *neptune.RebootDBInstanceInput) (*neptune.RebootDBInstanceOutput, error)
-	RebootDBInstanceAsync(ctx workflow.Context, input *neptune.RebootDBInstanceInput) *NeptuneRebootDBInstanceResult
+	RebootDBInstanceAsync(ctx workflow.Context, input *neptune.RebootDBInstanceInput) *NeptuneRebootDBInstanceFuture
 
 	RemoveRoleFromDBCluster(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) (*neptune.RemoveRoleFromDBClusterOutput, error)
-	RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) *NeptuneRemoveRoleFromDBClusterResult
+	RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) *NeptuneRemoveRoleFromDBClusterFuture
 
 	RemoveSourceIdentifierFromSubscription(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) (*neptune.RemoveSourceIdentifierFromSubscriptionOutput, error)
-	RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) *NeptuneRemoveSourceIdentifierFromSubscriptionResult
+	RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) *NeptuneRemoveSourceIdentifierFromSubscriptionFuture
 
 	RemoveTagsFromResource(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) (*neptune.RemoveTagsFromResourceOutput, error)
-	RemoveTagsFromResourceAsync(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) *NeptuneRemoveTagsFromResourceResult
+	RemoveTagsFromResourceAsync(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) *NeptuneRemoveTagsFromResourceFuture
 
 	ResetDBClusterParameterGroup(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error)
-	ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) *NeptuneResetDBClusterParameterGroupResult
+	ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) *NeptuneResetDBClusterParameterGroupFuture
 
 	ResetDBParameterGroup(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error)
-	ResetDBParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) *NeptuneResetDBParameterGroupResult
+	ResetDBParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) *NeptuneResetDBParameterGroupFuture
 
 	RestoreDBClusterFromSnapshot(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) (*neptune.RestoreDBClusterFromSnapshotOutput, error)
-	RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) *NeptuneRestoreDBClusterFromSnapshotResult
+	RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) *NeptuneRestoreDBClusterFromSnapshotFuture
 
 	RestoreDBClusterToPointInTime(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) (*neptune.RestoreDBClusterToPointInTimeOutput, error)
-	RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) *NeptuneRestoreDBClusterToPointInTimeResult
+	RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) *NeptuneRestoreDBClusterToPointInTimeFuture
 
 	StartDBCluster(ctx workflow.Context, input *neptune.StartDBClusterInput) (*neptune.StartDBClusterOutput, error)
-	StartDBClusterAsync(ctx workflow.Context, input *neptune.StartDBClusterInput) *NeptuneStartDBClusterResult
+	StartDBClusterAsync(ctx workflow.Context, input *neptune.StartDBClusterInput) *NeptuneStartDBClusterFuture
 
 	StopDBCluster(ctx workflow.Context, input *neptune.StopDBClusterInput) (*neptune.StopDBClusterOutput, error)
-	StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterResult
+	StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterFuture
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
+	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) workflow.Future
 
 	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
+	WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) workflow.Future
 }
 
 type NeptuneStub struct{}
@@ -198,593 +200,593 @@ func NewNeptuneStub() NeptuneClient {
 	return &NeptuneStub{}
 }
 
-type NeptuneAddRoleToDBClusterResult struct {
-	Result workflow.Future
+type NeptuneAddRoleToDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneAddRoleToDBClusterResult) Get(ctx workflow.Context) (*neptune.AddRoleToDBClusterOutput, error) {
+func (r *NeptuneAddRoleToDBClusterFuture) Get(ctx workflow.Context) (*neptune.AddRoleToDBClusterOutput, error) {
 	var output neptune.AddRoleToDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneAddSourceIdentifierToSubscriptionResult struct {
-	Result workflow.Future
+type NeptuneAddSourceIdentifierToSubscriptionFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneAddSourceIdentifierToSubscriptionResult) Get(ctx workflow.Context) (*neptune.AddSourceIdentifierToSubscriptionOutput, error) {
+func (r *NeptuneAddSourceIdentifierToSubscriptionFuture) Get(ctx workflow.Context) (*neptune.AddSourceIdentifierToSubscriptionOutput, error) {
 	var output neptune.AddSourceIdentifierToSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneAddTagsToResourceResult struct {
-	Result workflow.Future
+type NeptuneAddTagsToResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneAddTagsToResourceResult) Get(ctx workflow.Context) (*neptune.AddTagsToResourceOutput, error) {
+func (r *NeptuneAddTagsToResourceFuture) Get(ctx workflow.Context) (*neptune.AddTagsToResourceOutput, error) {
 	var output neptune.AddTagsToResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneApplyPendingMaintenanceActionResult struct {
-	Result workflow.Future
+type NeptuneApplyPendingMaintenanceActionFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneApplyPendingMaintenanceActionResult) Get(ctx workflow.Context) (*neptune.ApplyPendingMaintenanceActionOutput, error) {
+func (r *NeptuneApplyPendingMaintenanceActionFuture) Get(ctx workflow.Context) (*neptune.ApplyPendingMaintenanceActionOutput, error) {
 	var output neptune.ApplyPendingMaintenanceActionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCopyDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneCopyDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCopyDBClusterParameterGroupResult) Get(ctx workflow.Context) (*neptune.CopyDBClusterParameterGroupOutput, error) {
+func (r *NeptuneCopyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*neptune.CopyDBClusterParameterGroupOutput, error) {
 	var output neptune.CopyDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCopyDBClusterSnapshotResult struct {
-	Result workflow.Future
+type NeptuneCopyDBClusterSnapshotFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCopyDBClusterSnapshotResult) Get(ctx workflow.Context) (*neptune.CopyDBClusterSnapshotOutput, error) {
+func (r *NeptuneCopyDBClusterSnapshotFuture) Get(ctx workflow.Context) (*neptune.CopyDBClusterSnapshotOutput, error) {
 	var output neptune.CopyDBClusterSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCopyDBParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneCopyDBParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCopyDBParameterGroupResult) Get(ctx workflow.Context) (*neptune.CopyDBParameterGroupOutput, error) {
+func (r *NeptuneCopyDBParameterGroupFuture) Get(ctx workflow.Context) (*neptune.CopyDBParameterGroupOutput, error) {
 	var output neptune.CopyDBParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCreateDBClusterResult struct {
-	Result workflow.Future
+type NeptuneCreateDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCreateDBClusterResult) Get(ctx workflow.Context) (*neptune.CreateDBClusterOutput, error) {
+func (r *NeptuneCreateDBClusterFuture) Get(ctx workflow.Context) (*neptune.CreateDBClusterOutput, error) {
 	var output neptune.CreateDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCreateDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneCreateDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCreateDBClusterParameterGroupResult) Get(ctx workflow.Context) (*neptune.CreateDBClusterParameterGroupOutput, error) {
+func (r *NeptuneCreateDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*neptune.CreateDBClusterParameterGroupOutput, error) {
 	var output neptune.CreateDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCreateDBClusterSnapshotResult struct {
-	Result workflow.Future
+type NeptuneCreateDBClusterSnapshotFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCreateDBClusterSnapshotResult) Get(ctx workflow.Context) (*neptune.CreateDBClusterSnapshotOutput, error) {
+func (r *NeptuneCreateDBClusterSnapshotFuture) Get(ctx workflow.Context) (*neptune.CreateDBClusterSnapshotOutput, error) {
 	var output neptune.CreateDBClusterSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCreateDBInstanceResult struct {
-	Result workflow.Future
+type NeptuneCreateDBInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCreateDBInstanceResult) Get(ctx workflow.Context) (*neptune.CreateDBInstanceOutput, error) {
+func (r *NeptuneCreateDBInstanceFuture) Get(ctx workflow.Context) (*neptune.CreateDBInstanceOutput, error) {
 	var output neptune.CreateDBInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCreateDBParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneCreateDBParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCreateDBParameterGroupResult) Get(ctx workflow.Context) (*neptune.CreateDBParameterGroupOutput, error) {
+func (r *NeptuneCreateDBParameterGroupFuture) Get(ctx workflow.Context) (*neptune.CreateDBParameterGroupOutput, error) {
 	var output neptune.CreateDBParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCreateDBSubnetGroupResult struct {
-	Result workflow.Future
+type NeptuneCreateDBSubnetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCreateDBSubnetGroupResult) Get(ctx workflow.Context) (*neptune.CreateDBSubnetGroupOutput, error) {
+func (r *NeptuneCreateDBSubnetGroupFuture) Get(ctx workflow.Context) (*neptune.CreateDBSubnetGroupOutput, error) {
 	var output neptune.CreateDBSubnetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneCreateEventSubscriptionResult struct {
-	Result workflow.Future
+type NeptuneCreateEventSubscriptionFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneCreateEventSubscriptionResult) Get(ctx workflow.Context) (*neptune.CreateEventSubscriptionOutput, error) {
+func (r *NeptuneCreateEventSubscriptionFuture) Get(ctx workflow.Context) (*neptune.CreateEventSubscriptionOutput, error) {
 	var output neptune.CreateEventSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDeleteDBClusterResult struct {
-	Result workflow.Future
+type NeptuneDeleteDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDeleteDBClusterResult) Get(ctx workflow.Context) (*neptune.DeleteDBClusterOutput, error) {
+func (r *NeptuneDeleteDBClusterFuture) Get(ctx workflow.Context) (*neptune.DeleteDBClusterOutput, error) {
 	var output neptune.DeleteDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDeleteDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneDeleteDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDeleteDBClusterParameterGroupResult) Get(ctx workflow.Context) (*neptune.DeleteDBClusterParameterGroupOutput, error) {
+func (r *NeptuneDeleteDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*neptune.DeleteDBClusterParameterGroupOutput, error) {
 	var output neptune.DeleteDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDeleteDBClusterSnapshotResult struct {
-	Result workflow.Future
+type NeptuneDeleteDBClusterSnapshotFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDeleteDBClusterSnapshotResult) Get(ctx workflow.Context) (*neptune.DeleteDBClusterSnapshotOutput, error) {
+func (r *NeptuneDeleteDBClusterSnapshotFuture) Get(ctx workflow.Context) (*neptune.DeleteDBClusterSnapshotOutput, error) {
 	var output neptune.DeleteDBClusterSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDeleteDBInstanceResult struct {
-	Result workflow.Future
+type NeptuneDeleteDBInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDeleteDBInstanceResult) Get(ctx workflow.Context) (*neptune.DeleteDBInstanceOutput, error) {
+func (r *NeptuneDeleteDBInstanceFuture) Get(ctx workflow.Context) (*neptune.DeleteDBInstanceOutput, error) {
 	var output neptune.DeleteDBInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDeleteDBParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneDeleteDBParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDeleteDBParameterGroupResult) Get(ctx workflow.Context) (*neptune.DeleteDBParameterGroupOutput, error) {
+func (r *NeptuneDeleteDBParameterGroupFuture) Get(ctx workflow.Context) (*neptune.DeleteDBParameterGroupOutput, error) {
 	var output neptune.DeleteDBParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDeleteDBSubnetGroupResult struct {
-	Result workflow.Future
+type NeptuneDeleteDBSubnetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDeleteDBSubnetGroupResult) Get(ctx workflow.Context) (*neptune.DeleteDBSubnetGroupOutput, error) {
+func (r *NeptuneDeleteDBSubnetGroupFuture) Get(ctx workflow.Context) (*neptune.DeleteDBSubnetGroupOutput, error) {
 	var output neptune.DeleteDBSubnetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDeleteEventSubscriptionResult struct {
-	Result workflow.Future
+type NeptuneDeleteEventSubscriptionFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDeleteEventSubscriptionResult) Get(ctx workflow.Context) (*neptune.DeleteEventSubscriptionOutput, error) {
+func (r *NeptuneDeleteEventSubscriptionFuture) Get(ctx workflow.Context) (*neptune.DeleteEventSubscriptionOutput, error) {
 	var output neptune.DeleteEventSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBClusterParameterGroupsResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBClusterParameterGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBClusterParameterGroupsResult) Get(ctx workflow.Context) (*neptune.DescribeDBClusterParameterGroupsOutput, error) {
+func (r *NeptuneDescribeDBClusterParameterGroupsFuture) Get(ctx workflow.Context) (*neptune.DescribeDBClusterParameterGroupsOutput, error) {
 	var output neptune.DescribeDBClusterParameterGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBClusterParametersResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBClusterParametersFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBClusterParametersResult) Get(ctx workflow.Context) (*neptune.DescribeDBClusterParametersOutput, error) {
+func (r *NeptuneDescribeDBClusterParametersFuture) Get(ctx workflow.Context) (*neptune.DescribeDBClusterParametersOutput, error) {
 	var output neptune.DescribeDBClusterParametersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBClusterSnapshotAttributesResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBClusterSnapshotAttributesFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBClusterSnapshotAttributesResult) Get(ctx workflow.Context) (*neptune.DescribeDBClusterSnapshotAttributesOutput, error) {
+func (r *NeptuneDescribeDBClusterSnapshotAttributesFuture) Get(ctx workflow.Context) (*neptune.DescribeDBClusterSnapshotAttributesOutput, error) {
 	var output neptune.DescribeDBClusterSnapshotAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBClusterSnapshotsResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBClusterSnapshotsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBClusterSnapshotsResult) Get(ctx workflow.Context) (*neptune.DescribeDBClusterSnapshotsOutput, error) {
+func (r *NeptuneDescribeDBClusterSnapshotsFuture) Get(ctx workflow.Context) (*neptune.DescribeDBClusterSnapshotsOutput, error) {
 	var output neptune.DescribeDBClusterSnapshotsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBClustersResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBClustersFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBClustersResult) Get(ctx workflow.Context) (*neptune.DescribeDBClustersOutput, error) {
+func (r *NeptuneDescribeDBClustersFuture) Get(ctx workflow.Context) (*neptune.DescribeDBClustersOutput, error) {
 	var output neptune.DescribeDBClustersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBEngineVersionsResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBEngineVersionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBEngineVersionsResult) Get(ctx workflow.Context) (*neptune.DescribeDBEngineVersionsOutput, error) {
+func (r *NeptuneDescribeDBEngineVersionsFuture) Get(ctx workflow.Context) (*neptune.DescribeDBEngineVersionsOutput, error) {
 	var output neptune.DescribeDBEngineVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBInstancesResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBInstancesFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBInstancesResult) Get(ctx workflow.Context) (*neptune.DescribeDBInstancesOutput, error) {
+func (r *NeptuneDescribeDBInstancesFuture) Get(ctx workflow.Context) (*neptune.DescribeDBInstancesOutput, error) {
 	var output neptune.DescribeDBInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBParameterGroupsResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBParameterGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBParameterGroupsResult) Get(ctx workflow.Context) (*neptune.DescribeDBParameterGroupsOutput, error) {
+func (r *NeptuneDescribeDBParameterGroupsFuture) Get(ctx workflow.Context) (*neptune.DescribeDBParameterGroupsOutput, error) {
 	var output neptune.DescribeDBParameterGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBParametersResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBParametersFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBParametersResult) Get(ctx workflow.Context) (*neptune.DescribeDBParametersOutput, error) {
+func (r *NeptuneDescribeDBParametersFuture) Get(ctx workflow.Context) (*neptune.DescribeDBParametersOutput, error) {
 	var output neptune.DescribeDBParametersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeDBSubnetGroupsResult struct {
-	Result workflow.Future
+type NeptuneDescribeDBSubnetGroupsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeDBSubnetGroupsResult) Get(ctx workflow.Context) (*neptune.DescribeDBSubnetGroupsOutput, error) {
+func (r *NeptuneDescribeDBSubnetGroupsFuture) Get(ctx workflow.Context) (*neptune.DescribeDBSubnetGroupsOutput, error) {
 	var output neptune.DescribeDBSubnetGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeEngineDefaultClusterParametersResult struct {
-	Result workflow.Future
+type NeptuneDescribeEngineDefaultClusterParametersFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeEngineDefaultClusterParametersResult) Get(ctx workflow.Context) (*neptune.DescribeEngineDefaultClusterParametersOutput, error) {
+func (r *NeptuneDescribeEngineDefaultClusterParametersFuture) Get(ctx workflow.Context) (*neptune.DescribeEngineDefaultClusterParametersOutput, error) {
 	var output neptune.DescribeEngineDefaultClusterParametersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeEngineDefaultParametersResult struct {
-	Result workflow.Future
+type NeptuneDescribeEngineDefaultParametersFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeEngineDefaultParametersResult) Get(ctx workflow.Context) (*neptune.DescribeEngineDefaultParametersOutput, error) {
+func (r *NeptuneDescribeEngineDefaultParametersFuture) Get(ctx workflow.Context) (*neptune.DescribeEngineDefaultParametersOutput, error) {
 	var output neptune.DescribeEngineDefaultParametersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeEventCategoriesResult struct {
-	Result workflow.Future
+type NeptuneDescribeEventCategoriesFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeEventCategoriesResult) Get(ctx workflow.Context) (*neptune.DescribeEventCategoriesOutput, error) {
+func (r *NeptuneDescribeEventCategoriesFuture) Get(ctx workflow.Context) (*neptune.DescribeEventCategoriesOutput, error) {
 	var output neptune.DescribeEventCategoriesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeEventSubscriptionsResult struct {
-	Result workflow.Future
+type NeptuneDescribeEventSubscriptionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeEventSubscriptionsResult) Get(ctx workflow.Context) (*neptune.DescribeEventSubscriptionsOutput, error) {
+func (r *NeptuneDescribeEventSubscriptionsFuture) Get(ctx workflow.Context) (*neptune.DescribeEventSubscriptionsOutput, error) {
 	var output neptune.DescribeEventSubscriptionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeEventsResult struct {
-	Result workflow.Future
+type NeptuneDescribeEventsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeEventsResult) Get(ctx workflow.Context) (*neptune.DescribeEventsOutput, error) {
+func (r *NeptuneDescribeEventsFuture) Get(ctx workflow.Context) (*neptune.DescribeEventsOutput, error) {
 	var output neptune.DescribeEventsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeOrderableDBInstanceOptionsResult struct {
-	Result workflow.Future
+type NeptuneDescribeOrderableDBInstanceOptionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeOrderableDBInstanceOptionsResult) Get(ctx workflow.Context) (*neptune.DescribeOrderableDBInstanceOptionsOutput, error) {
+func (r *NeptuneDescribeOrderableDBInstanceOptionsFuture) Get(ctx workflow.Context) (*neptune.DescribeOrderableDBInstanceOptionsOutput, error) {
 	var output neptune.DescribeOrderableDBInstanceOptionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribePendingMaintenanceActionsResult struct {
-	Result workflow.Future
+type NeptuneDescribePendingMaintenanceActionsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribePendingMaintenanceActionsResult) Get(ctx workflow.Context) (*neptune.DescribePendingMaintenanceActionsOutput, error) {
+func (r *NeptuneDescribePendingMaintenanceActionsFuture) Get(ctx workflow.Context) (*neptune.DescribePendingMaintenanceActionsOutput, error) {
 	var output neptune.DescribePendingMaintenanceActionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneDescribeValidDBInstanceModificationsResult struct {
-	Result workflow.Future
+type NeptuneDescribeValidDBInstanceModificationsFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneDescribeValidDBInstanceModificationsResult) Get(ctx workflow.Context) (*neptune.DescribeValidDBInstanceModificationsOutput, error) {
+func (r *NeptuneDescribeValidDBInstanceModificationsFuture) Get(ctx workflow.Context) (*neptune.DescribeValidDBInstanceModificationsOutput, error) {
 	var output neptune.DescribeValidDBInstanceModificationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneFailoverDBClusterResult struct {
-	Result workflow.Future
+type NeptuneFailoverDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneFailoverDBClusterResult) Get(ctx workflow.Context) (*neptune.FailoverDBClusterOutput, error) {
+func (r *NeptuneFailoverDBClusterFuture) Get(ctx workflow.Context) (*neptune.FailoverDBClusterOutput, error) {
 	var output neptune.FailoverDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneListTagsForResourceResult struct {
-	Result workflow.Future
+type NeptuneListTagsForResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneListTagsForResourceResult) Get(ctx workflow.Context) (*neptune.ListTagsForResourceOutput, error) {
+func (r *NeptuneListTagsForResourceFuture) Get(ctx workflow.Context) (*neptune.ListTagsForResourceOutput, error) {
 	var output neptune.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneModifyDBClusterResult struct {
-	Result workflow.Future
+type NeptuneModifyDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneModifyDBClusterResult) Get(ctx workflow.Context) (*neptune.ModifyDBClusterOutput, error) {
+func (r *NeptuneModifyDBClusterFuture) Get(ctx workflow.Context) (*neptune.ModifyDBClusterOutput, error) {
 	var output neptune.ModifyDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneModifyDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneModifyDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneModifyDBClusterParameterGroupResult) Get(ctx workflow.Context) (*neptune.ResetDBClusterParameterGroupOutput, error) {
+func (r *NeptuneModifyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*neptune.ResetDBClusterParameterGroupOutput, error) {
 	var output neptune.ResetDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneModifyDBClusterSnapshotAttributeResult struct {
-	Result workflow.Future
+type NeptuneModifyDBClusterSnapshotAttributeFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneModifyDBClusterSnapshotAttributeResult) Get(ctx workflow.Context) (*neptune.ModifyDBClusterSnapshotAttributeOutput, error) {
+func (r *NeptuneModifyDBClusterSnapshotAttributeFuture) Get(ctx workflow.Context) (*neptune.ModifyDBClusterSnapshotAttributeOutput, error) {
 	var output neptune.ModifyDBClusterSnapshotAttributeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneModifyDBInstanceResult struct {
-	Result workflow.Future
+type NeptuneModifyDBInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneModifyDBInstanceResult) Get(ctx workflow.Context) (*neptune.ModifyDBInstanceOutput, error) {
+func (r *NeptuneModifyDBInstanceFuture) Get(ctx workflow.Context) (*neptune.ModifyDBInstanceOutput, error) {
 	var output neptune.ModifyDBInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneModifyDBParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneModifyDBParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneModifyDBParameterGroupResult) Get(ctx workflow.Context) (*neptune.ResetDBParameterGroupOutput, error) {
+func (r *NeptuneModifyDBParameterGroupFuture) Get(ctx workflow.Context) (*neptune.ResetDBParameterGroupOutput, error) {
 	var output neptune.ResetDBParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneModifyDBSubnetGroupResult struct {
-	Result workflow.Future
+type NeptuneModifyDBSubnetGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneModifyDBSubnetGroupResult) Get(ctx workflow.Context) (*neptune.ModifyDBSubnetGroupOutput, error) {
+func (r *NeptuneModifyDBSubnetGroupFuture) Get(ctx workflow.Context) (*neptune.ModifyDBSubnetGroupOutput, error) {
 	var output neptune.ModifyDBSubnetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneModifyEventSubscriptionResult struct {
-	Result workflow.Future
+type NeptuneModifyEventSubscriptionFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneModifyEventSubscriptionResult) Get(ctx workflow.Context) (*neptune.ModifyEventSubscriptionOutput, error) {
+func (r *NeptuneModifyEventSubscriptionFuture) Get(ctx workflow.Context) (*neptune.ModifyEventSubscriptionOutput, error) {
 	var output neptune.ModifyEventSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptunePromoteReadReplicaDBClusterResult struct {
-	Result workflow.Future
+type NeptunePromoteReadReplicaDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptunePromoteReadReplicaDBClusterResult) Get(ctx workflow.Context) (*neptune.PromoteReadReplicaDBClusterOutput, error) {
+func (r *NeptunePromoteReadReplicaDBClusterFuture) Get(ctx workflow.Context) (*neptune.PromoteReadReplicaDBClusterOutput, error) {
 	var output neptune.PromoteReadReplicaDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneRebootDBInstanceResult struct {
-	Result workflow.Future
+type NeptuneRebootDBInstanceFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneRebootDBInstanceResult) Get(ctx workflow.Context) (*neptune.RebootDBInstanceOutput, error) {
+func (r *NeptuneRebootDBInstanceFuture) Get(ctx workflow.Context) (*neptune.RebootDBInstanceOutput, error) {
 	var output neptune.RebootDBInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneRemoveRoleFromDBClusterResult struct {
-	Result workflow.Future
+type NeptuneRemoveRoleFromDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneRemoveRoleFromDBClusterResult) Get(ctx workflow.Context) (*neptune.RemoveRoleFromDBClusterOutput, error) {
+func (r *NeptuneRemoveRoleFromDBClusterFuture) Get(ctx workflow.Context) (*neptune.RemoveRoleFromDBClusterOutput, error) {
 	var output neptune.RemoveRoleFromDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneRemoveSourceIdentifierFromSubscriptionResult struct {
-	Result workflow.Future
+type NeptuneRemoveSourceIdentifierFromSubscriptionFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneRemoveSourceIdentifierFromSubscriptionResult) Get(ctx workflow.Context) (*neptune.RemoveSourceIdentifierFromSubscriptionOutput, error) {
+func (r *NeptuneRemoveSourceIdentifierFromSubscriptionFuture) Get(ctx workflow.Context) (*neptune.RemoveSourceIdentifierFromSubscriptionOutput, error) {
 	var output neptune.RemoveSourceIdentifierFromSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneRemoveTagsFromResourceResult struct {
-	Result workflow.Future
+type NeptuneRemoveTagsFromResourceFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneRemoveTagsFromResourceResult) Get(ctx workflow.Context) (*neptune.RemoveTagsFromResourceOutput, error) {
+func (r *NeptuneRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*neptune.RemoveTagsFromResourceOutput, error) {
 	var output neptune.RemoveTagsFromResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneResetDBClusterParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneResetDBClusterParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneResetDBClusterParameterGroupResult) Get(ctx workflow.Context) (*neptune.ResetDBClusterParameterGroupOutput, error) {
+func (r *NeptuneResetDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*neptune.ResetDBClusterParameterGroupOutput, error) {
 	var output neptune.ResetDBClusterParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneResetDBParameterGroupResult struct {
-	Result workflow.Future
+type NeptuneResetDBParameterGroupFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneResetDBParameterGroupResult) Get(ctx workflow.Context) (*neptune.ResetDBParameterGroupOutput, error) {
+func (r *NeptuneResetDBParameterGroupFuture) Get(ctx workflow.Context) (*neptune.ResetDBParameterGroupOutput, error) {
 	var output neptune.ResetDBParameterGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneRestoreDBClusterFromSnapshotResult struct {
-	Result workflow.Future
+type NeptuneRestoreDBClusterFromSnapshotFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneRestoreDBClusterFromSnapshotResult) Get(ctx workflow.Context) (*neptune.RestoreDBClusterFromSnapshotOutput, error) {
+func (r *NeptuneRestoreDBClusterFromSnapshotFuture) Get(ctx workflow.Context) (*neptune.RestoreDBClusterFromSnapshotOutput, error) {
 	var output neptune.RestoreDBClusterFromSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneRestoreDBClusterToPointInTimeResult struct {
-	Result workflow.Future
+type NeptuneRestoreDBClusterToPointInTimeFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneRestoreDBClusterToPointInTimeResult) Get(ctx workflow.Context) (*neptune.RestoreDBClusterToPointInTimeOutput, error) {
+func (r *NeptuneRestoreDBClusterToPointInTimeFuture) Get(ctx workflow.Context) (*neptune.RestoreDBClusterToPointInTimeOutput, error) {
 	var output neptune.RestoreDBClusterToPointInTimeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneStartDBClusterResult struct {
-	Result workflow.Future
+type NeptuneStartDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneStartDBClusterResult) Get(ctx workflow.Context) (*neptune.StartDBClusterOutput, error) {
+func (r *NeptuneStartDBClusterFuture) Get(ctx workflow.Context) (*neptune.StartDBClusterOutput, error) {
 	var output neptune.StartDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type NeptuneStopDBClusterResult struct {
-	Result workflow.Future
+type NeptuneStopDBClusterFuture struct {
+	Future workflow.Future
 }
 
-func (r *NeptuneStopDBClusterResult) Get(ctx workflow.Context) (*neptune.StopDBClusterOutput, error) {
+func (r *NeptuneStopDBClusterFuture) Get(ctx workflow.Context) (*neptune.StopDBClusterOutput, error) {
 	var output neptune.StopDBClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -794,9 +796,9 @@ func (a *NeptuneStub) AddRoleToDBCluster(ctx workflow.Context, input *neptune.Ad
 	return &output, err
 }
 
-func (a *NeptuneStub) AddRoleToDBClusterAsync(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) *NeptuneAddRoleToDBClusterResult {
+func (a *NeptuneStub) AddRoleToDBClusterAsync(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) *NeptuneAddRoleToDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.AddRoleToDBCluster", input)
-	return &NeptuneAddRoleToDBClusterResult{Result: future}
+	return &NeptuneAddRoleToDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) AddSourceIdentifierToSubscription(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) (*neptune.AddSourceIdentifierToSubscriptionOutput, error) {
@@ -805,9 +807,9 @@ func (a *NeptuneStub) AddSourceIdentifierToSubscription(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *NeptuneStub) AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) *NeptuneAddSourceIdentifierToSubscriptionResult {
+func (a *NeptuneStub) AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) *NeptuneAddSourceIdentifierToSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.AddSourceIdentifierToSubscription", input)
-	return &NeptuneAddSourceIdentifierToSubscriptionResult{Result: future}
+	return &NeptuneAddSourceIdentifierToSubscriptionFuture{Future: future}
 }
 
 func (a *NeptuneStub) AddTagsToResource(ctx workflow.Context, input *neptune.AddTagsToResourceInput) (*neptune.AddTagsToResourceOutput, error) {
@@ -816,9 +818,9 @@ func (a *NeptuneStub) AddTagsToResource(ctx workflow.Context, input *neptune.Add
 	return &output, err
 }
 
-func (a *NeptuneStub) AddTagsToResourceAsync(ctx workflow.Context, input *neptune.AddTagsToResourceInput) *NeptuneAddTagsToResourceResult {
+func (a *NeptuneStub) AddTagsToResourceAsync(ctx workflow.Context, input *neptune.AddTagsToResourceInput) *NeptuneAddTagsToResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.AddTagsToResource", input)
-	return &NeptuneAddTagsToResourceResult{Result: future}
+	return &NeptuneAddTagsToResourceFuture{Future: future}
 }
 
 func (a *NeptuneStub) ApplyPendingMaintenanceAction(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) (*neptune.ApplyPendingMaintenanceActionOutput, error) {
@@ -827,9 +829,9 @@ func (a *NeptuneStub) ApplyPendingMaintenanceAction(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *NeptuneStub) ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) *NeptuneApplyPendingMaintenanceActionResult {
+func (a *NeptuneStub) ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) *NeptuneApplyPendingMaintenanceActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ApplyPendingMaintenanceAction", input)
-	return &NeptuneApplyPendingMaintenanceActionResult{Result: future}
+	return &NeptuneApplyPendingMaintenanceActionFuture{Future: future}
 }
 
 func (a *NeptuneStub) CopyDBClusterParameterGroup(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) (*neptune.CopyDBClusterParameterGroupOutput, error) {
@@ -838,9 +840,9 @@ func (a *NeptuneStub) CopyDBClusterParameterGroup(ctx workflow.Context, input *n
 	return &output, err
 }
 
-func (a *NeptuneStub) CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) *NeptuneCopyDBClusterParameterGroupResult {
+func (a *NeptuneStub) CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) *NeptuneCopyDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBClusterParameterGroup", input)
-	return &NeptuneCopyDBClusterParameterGroupResult{Result: future}
+	return &NeptuneCopyDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) CopyDBClusterSnapshot(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) (*neptune.CopyDBClusterSnapshotOutput, error) {
@@ -849,9 +851,9 @@ func (a *NeptuneStub) CopyDBClusterSnapshot(ctx workflow.Context, input *neptune
 	return &output, err
 }
 
-func (a *NeptuneStub) CopyDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) *NeptuneCopyDBClusterSnapshotResult {
+func (a *NeptuneStub) CopyDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) *NeptuneCopyDBClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBClusterSnapshot", input)
-	return &NeptuneCopyDBClusterSnapshotResult{Result: future}
+	return &NeptuneCopyDBClusterSnapshotFuture{Future: future}
 }
 
 func (a *NeptuneStub) CopyDBParameterGroup(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) (*neptune.CopyDBParameterGroupOutput, error) {
@@ -860,9 +862,9 @@ func (a *NeptuneStub) CopyDBParameterGroup(ctx workflow.Context, input *neptune.
 	return &output, err
 }
 
-func (a *NeptuneStub) CopyDBParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) *NeptuneCopyDBParameterGroupResult {
+func (a *NeptuneStub) CopyDBParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) *NeptuneCopyDBParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBParameterGroup", input)
-	return &NeptuneCopyDBParameterGroupResult{Result: future}
+	return &NeptuneCopyDBParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) CreateDBCluster(ctx workflow.Context, input *neptune.CreateDBClusterInput) (*neptune.CreateDBClusterOutput, error) {
@@ -871,9 +873,9 @@ func (a *NeptuneStub) CreateDBCluster(ctx workflow.Context, input *neptune.Creat
 	return &output, err
 }
 
-func (a *NeptuneStub) CreateDBClusterAsync(ctx workflow.Context, input *neptune.CreateDBClusterInput) *NeptuneCreateDBClusterResult {
+func (a *NeptuneStub) CreateDBClusterAsync(ctx workflow.Context, input *neptune.CreateDBClusterInput) *NeptuneCreateDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBCluster", input)
-	return &NeptuneCreateDBClusterResult{Result: future}
+	return &NeptuneCreateDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) CreateDBClusterParameterGroup(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) (*neptune.CreateDBClusterParameterGroupOutput, error) {
@@ -882,9 +884,9 @@ func (a *NeptuneStub) CreateDBClusterParameterGroup(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *NeptuneStub) CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) *NeptuneCreateDBClusterParameterGroupResult {
+func (a *NeptuneStub) CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) *NeptuneCreateDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBClusterParameterGroup", input)
-	return &NeptuneCreateDBClusterParameterGroupResult{Result: future}
+	return &NeptuneCreateDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) CreateDBClusterSnapshot(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) (*neptune.CreateDBClusterSnapshotOutput, error) {
@@ -893,9 +895,9 @@ func (a *NeptuneStub) CreateDBClusterSnapshot(ctx workflow.Context, input *neptu
 	return &output, err
 }
 
-func (a *NeptuneStub) CreateDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) *NeptuneCreateDBClusterSnapshotResult {
+func (a *NeptuneStub) CreateDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) *NeptuneCreateDBClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBClusterSnapshot", input)
-	return &NeptuneCreateDBClusterSnapshotResult{Result: future}
+	return &NeptuneCreateDBClusterSnapshotFuture{Future: future}
 }
 
 func (a *NeptuneStub) CreateDBInstance(ctx workflow.Context, input *neptune.CreateDBInstanceInput) (*neptune.CreateDBInstanceOutput, error) {
@@ -904,9 +906,9 @@ func (a *NeptuneStub) CreateDBInstance(ctx workflow.Context, input *neptune.Crea
 	return &output, err
 }
 
-func (a *NeptuneStub) CreateDBInstanceAsync(ctx workflow.Context, input *neptune.CreateDBInstanceInput) *NeptuneCreateDBInstanceResult {
+func (a *NeptuneStub) CreateDBInstanceAsync(ctx workflow.Context, input *neptune.CreateDBInstanceInput) *NeptuneCreateDBInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBInstance", input)
-	return &NeptuneCreateDBInstanceResult{Result: future}
+	return &NeptuneCreateDBInstanceFuture{Future: future}
 }
 
 func (a *NeptuneStub) CreateDBParameterGroup(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) (*neptune.CreateDBParameterGroupOutput, error) {
@@ -915,9 +917,9 @@ func (a *NeptuneStub) CreateDBParameterGroup(ctx workflow.Context, input *neptun
 	return &output, err
 }
 
-func (a *NeptuneStub) CreateDBParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) *NeptuneCreateDBParameterGroupResult {
+func (a *NeptuneStub) CreateDBParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) *NeptuneCreateDBParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBParameterGroup", input)
-	return &NeptuneCreateDBParameterGroupResult{Result: future}
+	return &NeptuneCreateDBParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) CreateDBSubnetGroup(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) (*neptune.CreateDBSubnetGroupOutput, error) {
@@ -926,9 +928,9 @@ func (a *NeptuneStub) CreateDBSubnetGroup(ctx workflow.Context, input *neptune.C
 	return &output, err
 }
 
-func (a *NeptuneStub) CreateDBSubnetGroupAsync(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) *NeptuneCreateDBSubnetGroupResult {
+func (a *NeptuneStub) CreateDBSubnetGroupAsync(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) *NeptuneCreateDBSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBSubnetGroup", input)
-	return &NeptuneCreateDBSubnetGroupResult{Result: future}
+	return &NeptuneCreateDBSubnetGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) CreateEventSubscription(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) (*neptune.CreateEventSubscriptionOutput, error) {
@@ -937,9 +939,9 @@ func (a *NeptuneStub) CreateEventSubscription(ctx workflow.Context, input *neptu
 	return &output, err
 }
 
-func (a *NeptuneStub) CreateEventSubscriptionAsync(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) *NeptuneCreateEventSubscriptionResult {
+func (a *NeptuneStub) CreateEventSubscriptionAsync(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) *NeptuneCreateEventSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateEventSubscription", input)
-	return &NeptuneCreateEventSubscriptionResult{Result: future}
+	return &NeptuneCreateEventSubscriptionFuture{Future: future}
 }
 
 func (a *NeptuneStub) DeleteDBCluster(ctx workflow.Context, input *neptune.DeleteDBClusterInput) (*neptune.DeleteDBClusterOutput, error) {
@@ -948,9 +950,9 @@ func (a *NeptuneStub) DeleteDBCluster(ctx workflow.Context, input *neptune.Delet
 	return &output, err
 }
 
-func (a *NeptuneStub) DeleteDBClusterAsync(ctx workflow.Context, input *neptune.DeleteDBClusterInput) *NeptuneDeleteDBClusterResult {
+func (a *NeptuneStub) DeleteDBClusterAsync(ctx workflow.Context, input *neptune.DeleteDBClusterInput) *NeptuneDeleteDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBCluster", input)
-	return &NeptuneDeleteDBClusterResult{Result: future}
+	return &NeptuneDeleteDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) DeleteDBClusterParameterGroup(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) (*neptune.DeleteDBClusterParameterGroupOutput, error) {
@@ -959,9 +961,9 @@ func (a *NeptuneStub) DeleteDBClusterParameterGroup(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *NeptuneStub) DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) *NeptuneDeleteDBClusterParameterGroupResult {
+func (a *NeptuneStub) DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) *NeptuneDeleteDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBClusterParameterGroup", input)
-	return &NeptuneDeleteDBClusterParameterGroupResult{Result: future}
+	return &NeptuneDeleteDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) DeleteDBClusterSnapshot(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) (*neptune.DeleteDBClusterSnapshotOutput, error) {
@@ -970,9 +972,9 @@ func (a *NeptuneStub) DeleteDBClusterSnapshot(ctx workflow.Context, input *neptu
 	return &output, err
 }
 
-func (a *NeptuneStub) DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) *NeptuneDeleteDBClusterSnapshotResult {
+func (a *NeptuneStub) DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) *NeptuneDeleteDBClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBClusterSnapshot", input)
-	return &NeptuneDeleteDBClusterSnapshotResult{Result: future}
+	return &NeptuneDeleteDBClusterSnapshotFuture{Future: future}
 }
 
 func (a *NeptuneStub) DeleteDBInstance(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) (*neptune.DeleteDBInstanceOutput, error) {
@@ -981,9 +983,9 @@ func (a *NeptuneStub) DeleteDBInstance(ctx workflow.Context, input *neptune.Dele
 	return &output, err
 }
 
-func (a *NeptuneStub) DeleteDBInstanceAsync(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) *NeptuneDeleteDBInstanceResult {
+func (a *NeptuneStub) DeleteDBInstanceAsync(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) *NeptuneDeleteDBInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBInstance", input)
-	return &NeptuneDeleteDBInstanceResult{Result: future}
+	return &NeptuneDeleteDBInstanceFuture{Future: future}
 }
 
 func (a *NeptuneStub) DeleteDBParameterGroup(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) (*neptune.DeleteDBParameterGroupOutput, error) {
@@ -992,9 +994,9 @@ func (a *NeptuneStub) DeleteDBParameterGroup(ctx workflow.Context, input *neptun
 	return &output, err
 }
 
-func (a *NeptuneStub) DeleteDBParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) *NeptuneDeleteDBParameterGroupResult {
+func (a *NeptuneStub) DeleteDBParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) *NeptuneDeleteDBParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBParameterGroup", input)
-	return &NeptuneDeleteDBParameterGroupResult{Result: future}
+	return &NeptuneDeleteDBParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) DeleteDBSubnetGroup(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) (*neptune.DeleteDBSubnetGroupOutput, error) {
@@ -1003,9 +1005,9 @@ func (a *NeptuneStub) DeleteDBSubnetGroup(ctx workflow.Context, input *neptune.D
 	return &output, err
 }
 
-func (a *NeptuneStub) DeleteDBSubnetGroupAsync(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) *NeptuneDeleteDBSubnetGroupResult {
+func (a *NeptuneStub) DeleteDBSubnetGroupAsync(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) *NeptuneDeleteDBSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBSubnetGroup", input)
-	return &NeptuneDeleteDBSubnetGroupResult{Result: future}
+	return &NeptuneDeleteDBSubnetGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) DeleteEventSubscription(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) (*neptune.DeleteEventSubscriptionOutput, error) {
@@ -1014,9 +1016,9 @@ func (a *NeptuneStub) DeleteEventSubscription(ctx workflow.Context, input *neptu
 	return &output, err
 }
 
-func (a *NeptuneStub) DeleteEventSubscriptionAsync(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) *NeptuneDeleteEventSubscriptionResult {
+func (a *NeptuneStub) DeleteEventSubscriptionAsync(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) *NeptuneDeleteEventSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteEventSubscription", input)
-	return &NeptuneDeleteEventSubscriptionResult{Result: future}
+	return &NeptuneDeleteEventSubscriptionFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusterParameterGroups(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) (*neptune.DescribeDBClusterParameterGroupsOutput, error) {
@@ -1025,9 +1027,9 @@ func (a *NeptuneStub) DescribeDBClusterParameterGroups(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) *NeptuneDescribeDBClusterParameterGroupsResult {
+func (a *NeptuneStub) DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) *NeptuneDescribeDBClusterParameterGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterParameterGroups", input)
-	return &NeptuneDescribeDBClusterParameterGroupsResult{Result: future}
+	return &NeptuneDescribeDBClusterParameterGroupsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusterParameters(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) (*neptune.DescribeDBClusterParametersOutput, error) {
@@ -1036,9 +1038,9 @@ func (a *NeptuneStub) DescribeDBClusterParameters(ctx workflow.Context, input *n
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) *NeptuneDescribeDBClusterParametersResult {
+func (a *NeptuneStub) DescribeDBClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) *NeptuneDescribeDBClusterParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterParameters", input)
-	return &NeptuneDescribeDBClusterParametersResult{Result: future}
+	return &NeptuneDescribeDBClusterParametersFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) (*neptune.DescribeDBClusterSnapshotAttributesOutput, error) {
@@ -1047,9 +1049,9 @@ func (a *NeptuneStub) DescribeDBClusterSnapshotAttributes(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) *NeptuneDescribeDBClusterSnapshotAttributesResult {
+func (a *NeptuneStub) DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) *NeptuneDescribeDBClusterSnapshotAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterSnapshotAttributes", input)
-	return &NeptuneDescribeDBClusterSnapshotAttributesResult{Result: future}
+	return &NeptuneDescribeDBClusterSnapshotAttributesFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusterSnapshots(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) (*neptune.DescribeDBClusterSnapshotsOutput, error) {
@@ -1058,9 +1060,9 @@ func (a *NeptuneStub) DescribeDBClusterSnapshots(ctx workflow.Context, input *ne
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) *NeptuneDescribeDBClusterSnapshotsResult {
+func (a *NeptuneStub) DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) *NeptuneDescribeDBClusterSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterSnapshots", input)
-	return &NeptuneDescribeDBClusterSnapshotsResult{Result: future}
+	return &NeptuneDescribeDBClusterSnapshotsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusters(ctx workflow.Context, input *neptune.DescribeDBClustersInput) (*neptune.DescribeDBClustersOutput, error) {
@@ -1069,9 +1071,9 @@ func (a *NeptuneStub) DescribeDBClusters(ctx workflow.Context, input *neptune.De
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBClustersAsync(ctx workflow.Context, input *neptune.DescribeDBClustersInput) *NeptuneDescribeDBClustersResult {
+func (a *NeptuneStub) DescribeDBClustersAsync(ctx workflow.Context, input *neptune.DescribeDBClustersInput) *NeptuneDescribeDBClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusters", input)
-	return &NeptuneDescribeDBClustersResult{Result: future}
+	return &NeptuneDescribeDBClustersFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBEngineVersions(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) (*neptune.DescribeDBEngineVersionsOutput, error) {
@@ -1080,9 +1082,9 @@ func (a *NeptuneStub) DescribeDBEngineVersions(ctx workflow.Context, input *nept
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBEngineVersionsAsync(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) *NeptuneDescribeDBEngineVersionsResult {
+func (a *NeptuneStub) DescribeDBEngineVersionsAsync(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) *NeptuneDescribeDBEngineVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBEngineVersions", input)
-	return &NeptuneDescribeDBEngineVersionsResult{Result: future}
+	return &NeptuneDescribeDBEngineVersionsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBInstances(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) (*neptune.DescribeDBInstancesOutput, error) {
@@ -1091,9 +1093,9 @@ func (a *NeptuneStub) DescribeDBInstances(ctx workflow.Context, input *neptune.D
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBInstancesAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *NeptuneDescribeDBInstancesResult {
+func (a *NeptuneStub) DescribeDBInstancesAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *NeptuneDescribeDBInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBInstances", input)
-	return &NeptuneDescribeDBInstancesResult{Result: future}
+	return &NeptuneDescribeDBInstancesFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBParameterGroups(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) (*neptune.DescribeDBParameterGroupsOutput, error) {
@@ -1102,9 +1104,9 @@ func (a *NeptuneStub) DescribeDBParameterGroups(ctx workflow.Context, input *nep
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) *NeptuneDescribeDBParameterGroupsResult {
+func (a *NeptuneStub) DescribeDBParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) *NeptuneDescribeDBParameterGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBParameterGroups", input)
-	return &NeptuneDescribeDBParameterGroupsResult{Result: future}
+	return &NeptuneDescribeDBParameterGroupsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBParameters(ctx workflow.Context, input *neptune.DescribeDBParametersInput) (*neptune.DescribeDBParametersOutput, error) {
@@ -1113,9 +1115,9 @@ func (a *NeptuneStub) DescribeDBParameters(ctx workflow.Context, input *neptune.
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBParametersAsync(ctx workflow.Context, input *neptune.DescribeDBParametersInput) *NeptuneDescribeDBParametersResult {
+func (a *NeptuneStub) DescribeDBParametersAsync(ctx workflow.Context, input *neptune.DescribeDBParametersInput) *NeptuneDescribeDBParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBParameters", input)
-	return &NeptuneDescribeDBParametersResult{Result: future}
+	return &NeptuneDescribeDBParametersFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeDBSubnetGroups(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) (*neptune.DescribeDBSubnetGroupsOutput, error) {
@@ -1124,9 +1126,9 @@ func (a *NeptuneStub) DescribeDBSubnetGroups(ctx workflow.Context, input *neptun
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) *NeptuneDescribeDBSubnetGroupsResult {
+func (a *NeptuneStub) DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) *NeptuneDescribeDBSubnetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBSubnetGroups", input)
-	return &NeptuneDescribeDBSubnetGroupsResult{Result: future}
+	return &NeptuneDescribeDBSubnetGroupsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) (*neptune.DescribeEngineDefaultClusterParametersOutput, error) {
@@ -1135,9 +1137,9 @@ func (a *NeptuneStub) DescribeEngineDefaultClusterParameters(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) *NeptuneDescribeEngineDefaultClusterParametersResult {
+func (a *NeptuneStub) DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) *NeptuneDescribeEngineDefaultClusterParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEngineDefaultClusterParameters", input)
-	return &NeptuneDescribeEngineDefaultClusterParametersResult{Result: future}
+	return &NeptuneDescribeEngineDefaultClusterParametersFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeEngineDefaultParameters(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) (*neptune.DescribeEngineDefaultParametersOutput, error) {
@@ -1146,9 +1148,9 @@ func (a *NeptuneStub) DescribeEngineDefaultParameters(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) *NeptuneDescribeEngineDefaultParametersResult {
+func (a *NeptuneStub) DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) *NeptuneDescribeEngineDefaultParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEngineDefaultParameters", input)
-	return &NeptuneDescribeEngineDefaultParametersResult{Result: future}
+	return &NeptuneDescribeEngineDefaultParametersFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeEventCategories(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) (*neptune.DescribeEventCategoriesOutput, error) {
@@ -1157,9 +1159,9 @@ func (a *NeptuneStub) DescribeEventCategories(ctx workflow.Context, input *neptu
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeEventCategoriesAsync(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) *NeptuneDescribeEventCategoriesResult {
+func (a *NeptuneStub) DescribeEventCategoriesAsync(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) *NeptuneDescribeEventCategoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEventCategories", input)
-	return &NeptuneDescribeEventCategoriesResult{Result: future}
+	return &NeptuneDescribeEventCategoriesFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeEventSubscriptions(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) (*neptune.DescribeEventSubscriptionsOutput, error) {
@@ -1168,9 +1170,9 @@ func (a *NeptuneStub) DescribeEventSubscriptions(ctx workflow.Context, input *ne
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeEventSubscriptionsAsync(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) *NeptuneDescribeEventSubscriptionsResult {
+func (a *NeptuneStub) DescribeEventSubscriptionsAsync(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) *NeptuneDescribeEventSubscriptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEventSubscriptions", input)
-	return &NeptuneDescribeEventSubscriptionsResult{Result: future}
+	return &NeptuneDescribeEventSubscriptionsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeEvents(ctx workflow.Context, input *neptune.DescribeEventsInput) (*neptune.DescribeEventsOutput, error) {
@@ -1179,9 +1181,9 @@ func (a *NeptuneStub) DescribeEvents(ctx workflow.Context, input *neptune.Descri
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeEventsAsync(ctx workflow.Context, input *neptune.DescribeEventsInput) *NeptuneDescribeEventsResult {
+func (a *NeptuneStub) DescribeEventsAsync(ctx workflow.Context, input *neptune.DescribeEventsInput) *NeptuneDescribeEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEvents", input)
-	return &NeptuneDescribeEventsResult{Result: future}
+	return &NeptuneDescribeEventsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) (*neptune.DescribeOrderableDBInstanceOptionsOutput, error) {
@@ -1190,9 +1192,9 @@ func (a *NeptuneStub) DescribeOrderableDBInstanceOptions(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) *NeptuneDescribeOrderableDBInstanceOptionsResult {
+func (a *NeptuneStub) DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) *NeptuneDescribeOrderableDBInstanceOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeOrderableDBInstanceOptions", input)
-	return &NeptuneDescribeOrderableDBInstanceOptionsResult{Result: future}
+	return &NeptuneDescribeOrderableDBInstanceOptionsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribePendingMaintenanceActions(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) (*neptune.DescribePendingMaintenanceActionsOutput, error) {
@@ -1201,9 +1203,9 @@ func (a *NeptuneStub) DescribePendingMaintenanceActions(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) *NeptuneDescribePendingMaintenanceActionsResult {
+func (a *NeptuneStub) DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) *NeptuneDescribePendingMaintenanceActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribePendingMaintenanceActions", input)
-	return &NeptuneDescribePendingMaintenanceActionsResult{Result: future}
+	return &NeptuneDescribePendingMaintenanceActionsFuture{Future: future}
 }
 
 func (a *NeptuneStub) DescribeValidDBInstanceModifications(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) (*neptune.DescribeValidDBInstanceModificationsOutput, error) {
@@ -1212,9 +1214,9 @@ func (a *NeptuneStub) DescribeValidDBInstanceModifications(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *NeptuneStub) DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) *NeptuneDescribeValidDBInstanceModificationsResult {
+func (a *NeptuneStub) DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) *NeptuneDescribeValidDBInstanceModificationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeValidDBInstanceModifications", input)
-	return &NeptuneDescribeValidDBInstanceModificationsResult{Result: future}
+	return &NeptuneDescribeValidDBInstanceModificationsFuture{Future: future}
 }
 
 func (a *NeptuneStub) FailoverDBCluster(ctx workflow.Context, input *neptune.FailoverDBClusterInput) (*neptune.FailoverDBClusterOutput, error) {
@@ -1223,9 +1225,9 @@ func (a *NeptuneStub) FailoverDBCluster(ctx workflow.Context, input *neptune.Fai
 	return &output, err
 }
 
-func (a *NeptuneStub) FailoverDBClusterAsync(ctx workflow.Context, input *neptune.FailoverDBClusterInput) *NeptuneFailoverDBClusterResult {
+func (a *NeptuneStub) FailoverDBClusterAsync(ctx workflow.Context, input *neptune.FailoverDBClusterInput) *NeptuneFailoverDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.FailoverDBCluster", input)
-	return &NeptuneFailoverDBClusterResult{Result: future}
+	return &NeptuneFailoverDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) ListTagsForResource(ctx workflow.Context, input *neptune.ListTagsForResourceInput) (*neptune.ListTagsForResourceOutput, error) {
@@ -1234,9 +1236,9 @@ func (a *NeptuneStub) ListTagsForResource(ctx workflow.Context, input *neptune.L
 	return &output, err
 }
 
-func (a *NeptuneStub) ListTagsForResourceAsync(ctx workflow.Context, input *neptune.ListTagsForResourceInput) *NeptuneListTagsForResourceResult {
+func (a *NeptuneStub) ListTagsForResourceAsync(ctx workflow.Context, input *neptune.ListTagsForResourceInput) *NeptuneListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ListTagsForResource", input)
-	return &NeptuneListTagsForResourceResult{Result: future}
+	return &NeptuneListTagsForResourceFuture{Future: future}
 }
 
 func (a *NeptuneStub) ModifyDBCluster(ctx workflow.Context, input *neptune.ModifyDBClusterInput) (*neptune.ModifyDBClusterOutput, error) {
@@ -1245,9 +1247,9 @@ func (a *NeptuneStub) ModifyDBCluster(ctx workflow.Context, input *neptune.Modif
 	return &output, err
 }
 
-func (a *NeptuneStub) ModifyDBClusterAsync(ctx workflow.Context, input *neptune.ModifyDBClusterInput) *NeptuneModifyDBClusterResult {
+func (a *NeptuneStub) ModifyDBClusterAsync(ctx workflow.Context, input *neptune.ModifyDBClusterInput) *NeptuneModifyDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBCluster", input)
-	return &NeptuneModifyDBClusterResult{Result: future}
+	return &NeptuneModifyDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) ModifyDBClusterParameterGroup(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error) {
@@ -1256,9 +1258,9 @@ func (a *NeptuneStub) ModifyDBClusterParameterGroup(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *NeptuneStub) ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) *NeptuneModifyDBClusterParameterGroupResult {
+func (a *NeptuneStub) ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) *NeptuneModifyDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBClusterParameterGroup", input)
-	return &NeptuneModifyDBClusterParameterGroupResult{Result: future}
+	return &NeptuneModifyDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) (*neptune.ModifyDBClusterSnapshotAttributeOutput, error) {
@@ -1267,9 +1269,9 @@ func (a *NeptuneStub) ModifyDBClusterSnapshotAttribute(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *NeptuneStub) ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) *NeptuneModifyDBClusterSnapshotAttributeResult {
+func (a *NeptuneStub) ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) *NeptuneModifyDBClusterSnapshotAttributeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBClusterSnapshotAttribute", input)
-	return &NeptuneModifyDBClusterSnapshotAttributeResult{Result: future}
+	return &NeptuneModifyDBClusterSnapshotAttributeFuture{Future: future}
 }
 
 func (a *NeptuneStub) ModifyDBInstance(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) (*neptune.ModifyDBInstanceOutput, error) {
@@ -1278,9 +1280,9 @@ func (a *NeptuneStub) ModifyDBInstance(ctx workflow.Context, input *neptune.Modi
 	return &output, err
 }
 
-func (a *NeptuneStub) ModifyDBInstanceAsync(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) *NeptuneModifyDBInstanceResult {
+func (a *NeptuneStub) ModifyDBInstanceAsync(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) *NeptuneModifyDBInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBInstance", input)
-	return &NeptuneModifyDBInstanceResult{Result: future}
+	return &NeptuneModifyDBInstanceFuture{Future: future}
 }
 
 func (a *NeptuneStub) ModifyDBParameterGroup(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error) {
@@ -1289,9 +1291,9 @@ func (a *NeptuneStub) ModifyDBParameterGroup(ctx workflow.Context, input *neptun
 	return &output, err
 }
 
-func (a *NeptuneStub) ModifyDBParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) *NeptuneModifyDBParameterGroupResult {
+func (a *NeptuneStub) ModifyDBParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) *NeptuneModifyDBParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBParameterGroup", input)
-	return &NeptuneModifyDBParameterGroupResult{Result: future}
+	return &NeptuneModifyDBParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) ModifyDBSubnetGroup(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) (*neptune.ModifyDBSubnetGroupOutput, error) {
@@ -1300,9 +1302,9 @@ func (a *NeptuneStub) ModifyDBSubnetGroup(ctx workflow.Context, input *neptune.M
 	return &output, err
 }
 
-func (a *NeptuneStub) ModifyDBSubnetGroupAsync(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) *NeptuneModifyDBSubnetGroupResult {
+func (a *NeptuneStub) ModifyDBSubnetGroupAsync(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) *NeptuneModifyDBSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBSubnetGroup", input)
-	return &NeptuneModifyDBSubnetGroupResult{Result: future}
+	return &NeptuneModifyDBSubnetGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) ModifyEventSubscription(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) (*neptune.ModifyEventSubscriptionOutput, error) {
@@ -1311,9 +1313,9 @@ func (a *NeptuneStub) ModifyEventSubscription(ctx workflow.Context, input *neptu
 	return &output, err
 }
 
-func (a *NeptuneStub) ModifyEventSubscriptionAsync(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) *NeptuneModifyEventSubscriptionResult {
+func (a *NeptuneStub) ModifyEventSubscriptionAsync(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) *NeptuneModifyEventSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyEventSubscription", input)
-	return &NeptuneModifyEventSubscriptionResult{Result: future}
+	return &NeptuneModifyEventSubscriptionFuture{Future: future}
 }
 
 func (a *NeptuneStub) PromoteReadReplicaDBCluster(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) (*neptune.PromoteReadReplicaDBClusterOutput, error) {
@@ -1322,9 +1324,9 @@ func (a *NeptuneStub) PromoteReadReplicaDBCluster(ctx workflow.Context, input *n
 	return &output, err
 }
 
-func (a *NeptuneStub) PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) *NeptunePromoteReadReplicaDBClusterResult {
+func (a *NeptuneStub) PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) *NeptunePromoteReadReplicaDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.PromoteReadReplicaDBCluster", input)
-	return &NeptunePromoteReadReplicaDBClusterResult{Result: future}
+	return &NeptunePromoteReadReplicaDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) RebootDBInstance(ctx workflow.Context, input *neptune.RebootDBInstanceInput) (*neptune.RebootDBInstanceOutput, error) {
@@ -1333,9 +1335,9 @@ func (a *NeptuneStub) RebootDBInstance(ctx workflow.Context, input *neptune.Rebo
 	return &output, err
 }
 
-func (a *NeptuneStub) RebootDBInstanceAsync(ctx workflow.Context, input *neptune.RebootDBInstanceInput) *NeptuneRebootDBInstanceResult {
+func (a *NeptuneStub) RebootDBInstanceAsync(ctx workflow.Context, input *neptune.RebootDBInstanceInput) *NeptuneRebootDBInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.RebootDBInstance", input)
-	return &NeptuneRebootDBInstanceResult{Result: future}
+	return &NeptuneRebootDBInstanceFuture{Future: future}
 }
 
 func (a *NeptuneStub) RemoveRoleFromDBCluster(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) (*neptune.RemoveRoleFromDBClusterOutput, error) {
@@ -1344,9 +1346,9 @@ func (a *NeptuneStub) RemoveRoleFromDBCluster(ctx workflow.Context, input *neptu
 	return &output, err
 }
 
-func (a *NeptuneStub) RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) *NeptuneRemoveRoleFromDBClusterResult {
+func (a *NeptuneStub) RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) *NeptuneRemoveRoleFromDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveRoleFromDBCluster", input)
-	return &NeptuneRemoveRoleFromDBClusterResult{Result: future}
+	return &NeptuneRemoveRoleFromDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) RemoveSourceIdentifierFromSubscription(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) (*neptune.RemoveSourceIdentifierFromSubscriptionOutput, error) {
@@ -1355,9 +1357,9 @@ func (a *NeptuneStub) RemoveSourceIdentifierFromSubscription(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *NeptuneStub) RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) *NeptuneRemoveSourceIdentifierFromSubscriptionResult {
+func (a *NeptuneStub) RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) *NeptuneRemoveSourceIdentifierFromSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveSourceIdentifierFromSubscription", input)
-	return &NeptuneRemoveSourceIdentifierFromSubscriptionResult{Result: future}
+	return &NeptuneRemoveSourceIdentifierFromSubscriptionFuture{Future: future}
 }
 
 func (a *NeptuneStub) RemoveTagsFromResource(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) (*neptune.RemoveTagsFromResourceOutput, error) {
@@ -1366,9 +1368,9 @@ func (a *NeptuneStub) RemoveTagsFromResource(ctx workflow.Context, input *neptun
 	return &output, err
 }
 
-func (a *NeptuneStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) *NeptuneRemoveTagsFromResourceResult {
+func (a *NeptuneStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) *NeptuneRemoveTagsFromResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveTagsFromResource", input)
-	return &NeptuneRemoveTagsFromResourceResult{Result: future}
+	return &NeptuneRemoveTagsFromResourceFuture{Future: future}
 }
 
 func (a *NeptuneStub) ResetDBClusterParameterGroup(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error) {
@@ -1377,9 +1379,9 @@ func (a *NeptuneStub) ResetDBClusterParameterGroup(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *NeptuneStub) ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) *NeptuneResetDBClusterParameterGroupResult {
+func (a *NeptuneStub) ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) *NeptuneResetDBClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ResetDBClusterParameterGroup", input)
-	return &NeptuneResetDBClusterParameterGroupResult{Result: future}
+	return &NeptuneResetDBClusterParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) ResetDBParameterGroup(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error) {
@@ -1388,9 +1390,9 @@ func (a *NeptuneStub) ResetDBParameterGroup(ctx workflow.Context, input *neptune
 	return &output, err
 }
 
-func (a *NeptuneStub) ResetDBParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) *NeptuneResetDBParameterGroupResult {
+func (a *NeptuneStub) ResetDBParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) *NeptuneResetDBParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.ResetDBParameterGroup", input)
-	return &NeptuneResetDBParameterGroupResult{Result: future}
+	return &NeptuneResetDBParameterGroupFuture{Future: future}
 }
 
 func (a *NeptuneStub) RestoreDBClusterFromSnapshot(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) (*neptune.RestoreDBClusterFromSnapshotOutput, error) {
@@ -1399,9 +1401,9 @@ func (a *NeptuneStub) RestoreDBClusterFromSnapshot(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *NeptuneStub) RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) *NeptuneRestoreDBClusterFromSnapshotResult {
+func (a *NeptuneStub) RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) *NeptuneRestoreDBClusterFromSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.RestoreDBClusterFromSnapshot", input)
-	return &NeptuneRestoreDBClusterFromSnapshotResult{Result: future}
+	return &NeptuneRestoreDBClusterFromSnapshotFuture{Future: future}
 }
 
 func (a *NeptuneStub) RestoreDBClusterToPointInTime(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) (*neptune.RestoreDBClusterToPointInTimeOutput, error) {
@@ -1410,9 +1412,9 @@ func (a *NeptuneStub) RestoreDBClusterToPointInTime(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *NeptuneStub) RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) *NeptuneRestoreDBClusterToPointInTimeResult {
+func (a *NeptuneStub) RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) *NeptuneRestoreDBClusterToPointInTimeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.RestoreDBClusterToPointInTime", input)
-	return &NeptuneRestoreDBClusterToPointInTimeResult{Result: future}
+	return &NeptuneRestoreDBClusterToPointInTimeFuture{Future: future}
 }
 
 func (a *NeptuneStub) StartDBCluster(ctx workflow.Context, input *neptune.StartDBClusterInput) (*neptune.StartDBClusterOutput, error) {
@@ -1421,9 +1423,9 @@ func (a *NeptuneStub) StartDBCluster(ctx workflow.Context, input *neptune.StartD
 	return &output, err
 }
 
-func (a *NeptuneStub) StartDBClusterAsync(ctx workflow.Context, input *neptune.StartDBClusterInput) *NeptuneStartDBClusterResult {
+func (a *NeptuneStub) StartDBClusterAsync(ctx workflow.Context, input *neptune.StartDBClusterInput) *NeptuneStartDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.StartDBCluster", input)
-	return &NeptuneStartDBClusterResult{Result: future}
+	return &NeptuneStartDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) StopDBCluster(ctx workflow.Context, input *neptune.StopDBClusterInput) (*neptune.StopDBClusterOutput, error) {
@@ -1432,9 +1434,9 @@ func (a *NeptuneStub) StopDBCluster(ctx workflow.Context, input *neptune.StopDBC
 	return &output, err
 }
 
-func (a *NeptuneStub) StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterResult {
+func (a *NeptuneStub) StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.neptune.StopDBCluster", input)
-	return &NeptuneStopDBClusterResult{Result: future}
+	return &NeptuneStopDBClusterFuture{Future: future}
 }
 
 func (a *NeptuneStub) WaitUntilDBInstanceAvailable(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error {

@@ -11,16 +11,16 @@ import (
 
 type MarketplaceMeteringClient interface {
 	BatchMeterUsage(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) (*marketplacemetering.BatchMeterUsageOutput, error)
-	BatchMeterUsageAsync(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) *MarketplacemeteringBatchMeterUsageResult
+	BatchMeterUsageAsync(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) *MarketplacemeteringBatchMeterUsageFuture
 
 	MeterUsage(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) (*marketplacemetering.MeterUsageOutput, error)
-	MeterUsageAsync(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) *MarketplacemeteringMeterUsageResult
+	MeterUsageAsync(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) *MarketplacemeteringMeterUsageFuture
 
 	RegisterUsage(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) (*marketplacemetering.RegisterUsageOutput, error)
-	RegisterUsageAsync(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) *MarketplacemeteringRegisterUsageResult
+	RegisterUsageAsync(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) *MarketplacemeteringRegisterUsageFuture
 
 	ResolveCustomer(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) (*marketplacemetering.ResolveCustomerOutput, error)
-	ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *MarketplacemeteringResolveCustomerResult
+	ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *MarketplacemeteringResolveCustomerFuture
 }
 
 type MarketplaceMeteringStub struct{}
@@ -29,43 +29,43 @@ func NewMarketplaceMeteringStub() MarketplaceMeteringClient {
 	return &MarketplaceMeteringStub{}
 }
 
-type MarketplacemeteringBatchMeterUsageResult struct {
-	Result workflow.Future
+type MarketplacemeteringBatchMeterUsageFuture struct {
+	Future workflow.Future
 }
 
-func (r *MarketplacemeteringBatchMeterUsageResult) Get(ctx workflow.Context) (*marketplacemetering.BatchMeterUsageOutput, error) {
+func (r *MarketplacemeteringBatchMeterUsageFuture) Get(ctx workflow.Context) (*marketplacemetering.BatchMeterUsageOutput, error) {
 	var output marketplacemetering.BatchMeterUsageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplacemeteringMeterUsageResult struct {
-	Result workflow.Future
+type MarketplacemeteringMeterUsageFuture struct {
+	Future workflow.Future
 }
 
-func (r *MarketplacemeteringMeterUsageResult) Get(ctx workflow.Context) (*marketplacemetering.MeterUsageOutput, error) {
+func (r *MarketplacemeteringMeterUsageFuture) Get(ctx workflow.Context) (*marketplacemetering.MeterUsageOutput, error) {
 	var output marketplacemetering.MeterUsageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplacemeteringRegisterUsageResult struct {
-	Result workflow.Future
+type MarketplacemeteringRegisterUsageFuture struct {
+	Future workflow.Future
 }
 
-func (r *MarketplacemeteringRegisterUsageResult) Get(ctx workflow.Context) (*marketplacemetering.RegisterUsageOutput, error) {
+func (r *MarketplacemeteringRegisterUsageFuture) Get(ctx workflow.Context) (*marketplacemetering.RegisterUsageOutput, error) {
 	var output marketplacemetering.RegisterUsageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplacemeteringResolveCustomerResult struct {
-	Result workflow.Future
+type MarketplacemeteringResolveCustomerFuture struct {
+	Future workflow.Future
 }
 
-func (r *MarketplacemeteringResolveCustomerResult) Get(ctx workflow.Context) (*marketplacemetering.ResolveCustomerOutput, error) {
+func (r *MarketplacemeteringResolveCustomerFuture) Get(ctx workflow.Context) (*marketplacemetering.ResolveCustomerOutput, error) {
 	var output marketplacemetering.ResolveCustomerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -75,9 +75,9 @@ func (a *MarketplaceMeteringStub) BatchMeterUsage(ctx workflow.Context, input *m
 	return &output, err
 }
 
-func (a *MarketplaceMeteringStub) BatchMeterUsageAsync(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) *MarketplacemeteringBatchMeterUsageResult {
+func (a *MarketplaceMeteringStub) BatchMeterUsageAsync(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) *MarketplacemeteringBatchMeterUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacemetering.BatchMeterUsage", input)
-	return &MarketplacemeteringBatchMeterUsageResult{Result: future}
+	return &MarketplacemeteringBatchMeterUsageFuture{Future: future}
 }
 
 func (a *MarketplaceMeteringStub) MeterUsage(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) (*marketplacemetering.MeterUsageOutput, error) {
@@ -86,9 +86,9 @@ func (a *MarketplaceMeteringStub) MeterUsage(ctx workflow.Context, input *market
 	return &output, err
 }
 
-func (a *MarketplaceMeteringStub) MeterUsageAsync(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) *MarketplacemeteringMeterUsageResult {
+func (a *MarketplaceMeteringStub) MeterUsageAsync(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) *MarketplacemeteringMeterUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacemetering.MeterUsage", input)
-	return &MarketplacemeteringMeterUsageResult{Result: future}
+	return &MarketplacemeteringMeterUsageFuture{Future: future}
 }
 
 func (a *MarketplaceMeteringStub) RegisterUsage(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) (*marketplacemetering.RegisterUsageOutput, error) {
@@ -97,9 +97,9 @@ func (a *MarketplaceMeteringStub) RegisterUsage(ctx workflow.Context, input *mar
 	return &output, err
 }
 
-func (a *MarketplaceMeteringStub) RegisterUsageAsync(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) *MarketplacemeteringRegisterUsageResult {
+func (a *MarketplaceMeteringStub) RegisterUsageAsync(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) *MarketplacemeteringRegisterUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacemetering.RegisterUsage", input)
-	return &MarketplacemeteringRegisterUsageResult{Result: future}
+	return &MarketplacemeteringRegisterUsageFuture{Future: future}
 }
 
 func (a *MarketplaceMeteringStub) ResolveCustomer(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) (*marketplacemetering.ResolveCustomerOutput, error) {
@@ -108,7 +108,7 @@ func (a *MarketplaceMeteringStub) ResolveCustomer(ctx workflow.Context, input *m
 	return &output, err
 }
 
-func (a *MarketplaceMeteringStub) ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *MarketplacemeteringResolveCustomerResult {
+func (a *MarketplaceMeteringStub) ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *MarketplacemeteringResolveCustomerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacemetering.ResolveCustomer", input)
-	return &MarketplacemeteringResolveCustomerResult{Result: future}
+	return &MarketplacemeteringResolveCustomerFuture{Future: future}
 }

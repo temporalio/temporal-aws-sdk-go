@@ -11,7 +11,7 @@ import (
 
 type ForecastQueryServiceClient interface {
 	QueryForecast(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error)
-	QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastResult
+	QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastFuture
 }
 
 type ForecastQueryServiceStub struct{}
@@ -20,13 +20,13 @@ func NewForecastQueryServiceStub() ForecastQueryServiceClient {
 	return &ForecastQueryServiceStub{}
 }
 
-type ForecastqueryserviceQueryForecastResult struct {
-	Result workflow.Future
+type ForecastqueryserviceQueryForecastFuture struct {
+	Future workflow.Future
 }
 
-func (r *ForecastqueryserviceQueryForecastResult) Get(ctx workflow.Context) (*forecastqueryservice.QueryForecastOutput, error) {
+func (r *ForecastqueryserviceQueryForecastFuture) Get(ctx workflow.Context) (*forecastqueryservice.QueryForecastOutput, error) {
 	var output forecastqueryservice.QueryForecastOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -36,7 +36,7 @@ func (a *ForecastQueryServiceStub) QueryForecast(ctx workflow.Context, input *fo
 	return &output, err
 }
 
-func (a *ForecastQueryServiceStub) QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastResult {
+func (a *ForecastQueryServiceStub) QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastqueryservice.QueryForecast", input)
-	return &ForecastqueryserviceQueryForecastResult{Result: future}
+	return &ForecastqueryserviceQueryForecastFuture{Future: future}
 }
