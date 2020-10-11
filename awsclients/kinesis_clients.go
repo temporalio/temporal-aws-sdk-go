@@ -11,92 +11,94 @@ import (
 
 type KinesisClient interface {
 	AddTagsToStream(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) (*kinesis.AddTagsToStreamOutput, error)
-	AddTagsToStreamAsync(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) *KinesisAddTagsToStreamResult
+	AddTagsToStreamAsync(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) *KinesisAddTagsToStreamFuture
 
 	CreateStream(ctx workflow.Context, input *kinesis.CreateStreamInput) (*kinesis.CreateStreamOutput, error)
-	CreateStreamAsync(ctx workflow.Context, input *kinesis.CreateStreamInput) *KinesisCreateStreamResult
+	CreateStreamAsync(ctx workflow.Context, input *kinesis.CreateStreamInput) *KinesisCreateStreamFuture
 
 	DecreaseStreamRetentionPeriod(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) (*kinesis.DecreaseStreamRetentionPeriodOutput, error)
-	DecreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) *KinesisDecreaseStreamRetentionPeriodResult
+	DecreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) *KinesisDecreaseStreamRetentionPeriodFuture
 
 	DeleteStream(ctx workflow.Context, input *kinesis.DeleteStreamInput) (*kinesis.DeleteStreamOutput, error)
-	DeleteStreamAsync(ctx workflow.Context, input *kinesis.DeleteStreamInput) *KinesisDeleteStreamResult
+	DeleteStreamAsync(ctx workflow.Context, input *kinesis.DeleteStreamInput) *KinesisDeleteStreamFuture
 
 	DeregisterStreamConsumer(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) (*kinesis.DeregisterStreamConsumerOutput, error)
-	DeregisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) *KinesisDeregisterStreamConsumerResult
+	DeregisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) *KinesisDeregisterStreamConsumerFuture
 
 	DescribeLimits(ctx workflow.Context, input *kinesis.DescribeLimitsInput) (*kinesis.DescribeLimitsOutput, error)
-	DescribeLimitsAsync(ctx workflow.Context, input *kinesis.DescribeLimitsInput) *KinesisDescribeLimitsResult
+	DescribeLimitsAsync(ctx workflow.Context, input *kinesis.DescribeLimitsInput) *KinesisDescribeLimitsFuture
 
 	DescribeStream(ctx workflow.Context, input *kinesis.DescribeStreamInput) (*kinesis.DescribeStreamOutput, error)
-	DescribeStreamAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *KinesisDescribeStreamResult
+	DescribeStreamAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *KinesisDescribeStreamFuture
 
 	DescribeStreamConsumer(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) (*kinesis.DescribeStreamConsumerOutput, error)
-	DescribeStreamConsumerAsync(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) *KinesisDescribeStreamConsumerResult
+	DescribeStreamConsumerAsync(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) *KinesisDescribeStreamConsumerFuture
 
 	DescribeStreamSummary(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) (*kinesis.DescribeStreamSummaryOutput, error)
-	DescribeStreamSummaryAsync(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) *KinesisDescribeStreamSummaryResult
+	DescribeStreamSummaryAsync(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) *KinesisDescribeStreamSummaryFuture
 
 	DisableEnhancedMonitoring(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error)
-	DisableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) *KinesisDisableEnhancedMonitoringResult
+	DisableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) *KinesisDisableEnhancedMonitoringFuture
 
 	EnableEnhancedMonitoring(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error)
-	EnableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) *KinesisEnableEnhancedMonitoringResult
+	EnableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) *KinesisEnableEnhancedMonitoringFuture
 
 	GetRecords(ctx workflow.Context, input *kinesis.GetRecordsInput) (*kinesis.GetRecordsOutput, error)
-	GetRecordsAsync(ctx workflow.Context, input *kinesis.GetRecordsInput) *KinesisGetRecordsResult
+	GetRecordsAsync(ctx workflow.Context, input *kinesis.GetRecordsInput) *KinesisGetRecordsFuture
 
 	GetShardIterator(ctx workflow.Context, input *kinesis.GetShardIteratorInput) (*kinesis.GetShardIteratorOutput, error)
-	GetShardIteratorAsync(ctx workflow.Context, input *kinesis.GetShardIteratorInput) *KinesisGetShardIteratorResult
+	GetShardIteratorAsync(ctx workflow.Context, input *kinesis.GetShardIteratorInput) *KinesisGetShardIteratorFuture
 
 	IncreaseStreamRetentionPeriod(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) (*kinesis.IncreaseStreamRetentionPeriodOutput, error)
-	IncreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) *KinesisIncreaseStreamRetentionPeriodResult
+	IncreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) *KinesisIncreaseStreamRetentionPeriodFuture
 
 	ListShards(ctx workflow.Context, input *kinesis.ListShardsInput) (*kinesis.ListShardsOutput, error)
-	ListShardsAsync(ctx workflow.Context, input *kinesis.ListShardsInput) *KinesisListShardsResult
+	ListShardsAsync(ctx workflow.Context, input *kinesis.ListShardsInput) *KinesisListShardsFuture
 
 	ListStreamConsumers(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) (*kinesis.ListStreamConsumersOutput, error)
-	ListStreamConsumersAsync(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) *KinesisListStreamConsumersResult
+	ListStreamConsumersAsync(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) *KinesisListStreamConsumersFuture
 
 	ListStreams(ctx workflow.Context, input *kinesis.ListStreamsInput) (*kinesis.ListStreamsOutput, error)
-	ListStreamsAsync(ctx workflow.Context, input *kinesis.ListStreamsInput) *KinesisListStreamsResult
+	ListStreamsAsync(ctx workflow.Context, input *kinesis.ListStreamsInput) *KinesisListStreamsFuture
 
 	ListTagsForStream(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) (*kinesis.ListTagsForStreamOutput, error)
-	ListTagsForStreamAsync(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) *KinesisListTagsForStreamResult
+	ListTagsForStreamAsync(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) *KinesisListTagsForStreamFuture
 
 	MergeShards(ctx workflow.Context, input *kinesis.MergeShardsInput) (*kinesis.MergeShardsOutput, error)
-	MergeShardsAsync(ctx workflow.Context, input *kinesis.MergeShardsInput) *KinesisMergeShardsResult
+	MergeShardsAsync(ctx workflow.Context, input *kinesis.MergeShardsInput) *KinesisMergeShardsFuture
 
 	PutRecord(ctx workflow.Context, input *kinesis.PutRecordInput) (*kinesis.PutRecordOutput, error)
-	PutRecordAsync(ctx workflow.Context, input *kinesis.PutRecordInput) *KinesisPutRecordResult
+	PutRecordAsync(ctx workflow.Context, input *kinesis.PutRecordInput) *KinesisPutRecordFuture
 
 	PutRecords(ctx workflow.Context, input *kinesis.PutRecordsInput) (*kinesis.PutRecordsOutput, error)
-	PutRecordsAsync(ctx workflow.Context, input *kinesis.PutRecordsInput) *KinesisPutRecordsResult
+	PutRecordsAsync(ctx workflow.Context, input *kinesis.PutRecordsInput) *KinesisPutRecordsFuture
 
 	RegisterStreamConsumer(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) (*kinesis.RegisterStreamConsumerOutput, error)
-	RegisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) *KinesisRegisterStreamConsumerResult
+	RegisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) *KinesisRegisterStreamConsumerFuture
 
 	RemoveTagsFromStream(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) (*kinesis.RemoveTagsFromStreamOutput, error)
-	RemoveTagsFromStreamAsync(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) *KinesisRemoveTagsFromStreamResult
+	RemoveTagsFromStreamAsync(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) *KinesisRemoveTagsFromStreamFuture
 
 	SplitShard(ctx workflow.Context, input *kinesis.SplitShardInput) (*kinesis.SplitShardOutput, error)
-	SplitShardAsync(ctx workflow.Context, input *kinesis.SplitShardInput) *KinesisSplitShardResult
+	SplitShardAsync(ctx workflow.Context, input *kinesis.SplitShardInput) *KinesisSplitShardFuture
 
 	StartStreamEncryption(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) (*kinesis.StartStreamEncryptionOutput, error)
-	StartStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) *KinesisStartStreamEncryptionResult
+	StartStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) *KinesisStartStreamEncryptionFuture
 
 	StopStreamEncryption(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) (*kinesis.StopStreamEncryptionOutput, error)
-	StopStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) *KinesisStopStreamEncryptionResult
+	StopStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) *KinesisStopStreamEncryptionFuture
 
 	SubscribeToShard(ctx workflow.Context, input *kinesis.SubscribeToShardInput) (*kinesis.SubscribeToShardOutput, error)
-	SubscribeToShardAsync(ctx workflow.Context, input *kinesis.SubscribeToShardInput) *KinesisSubscribeToShardResult
+	SubscribeToShardAsync(ctx workflow.Context, input *kinesis.SubscribeToShardInput) *KinesisSubscribeToShardFuture
 
 	UpdateShardCount(ctx workflow.Context, input *kinesis.UpdateShardCountInput) (*kinesis.UpdateShardCountOutput, error)
-	UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountResult
+	UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountFuture
 
 	WaitUntilStreamExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
+	WaitUntilStreamExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *VoidFuture
 
 	WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
+	WaitUntilStreamNotExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *VoidFuture
 }
 
 type KinesisStub struct{}
@@ -105,283 +107,311 @@ func NewKinesisStub() KinesisClient {
 	return &KinesisStub{}
 }
 
-type KinesisAddTagsToStreamResult struct {
-	Result workflow.Future
+type KinesisAddTagsToStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisAddTagsToStreamResult) Get(ctx workflow.Context) (*kinesis.AddTagsToStreamOutput, error) {
+func (r *KinesisAddTagsToStreamFuture) Get(ctx workflow.Context) (*kinesis.AddTagsToStreamOutput, error) {
 	var output kinesis.AddTagsToStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisCreateStreamResult struct {
-	Result workflow.Future
+type KinesisCreateStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisCreateStreamResult) Get(ctx workflow.Context) (*kinesis.CreateStreamOutput, error) {
+func (r *KinesisCreateStreamFuture) Get(ctx workflow.Context) (*kinesis.CreateStreamOutput, error) {
 	var output kinesis.CreateStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisDecreaseStreamRetentionPeriodResult struct {
-	Result workflow.Future
+type KinesisDecreaseStreamRetentionPeriodFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisDecreaseStreamRetentionPeriodResult) Get(ctx workflow.Context) (*kinesis.DecreaseStreamRetentionPeriodOutput, error) {
+func (r *KinesisDecreaseStreamRetentionPeriodFuture) Get(ctx workflow.Context) (*kinesis.DecreaseStreamRetentionPeriodOutput, error) {
 	var output kinesis.DecreaseStreamRetentionPeriodOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisDeleteStreamResult struct {
-	Result workflow.Future
+type KinesisDeleteStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisDeleteStreamResult) Get(ctx workflow.Context) (*kinesis.DeleteStreamOutput, error) {
+func (r *KinesisDeleteStreamFuture) Get(ctx workflow.Context) (*kinesis.DeleteStreamOutput, error) {
 	var output kinesis.DeleteStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisDeregisterStreamConsumerResult struct {
-	Result workflow.Future
+type KinesisDeregisterStreamConsumerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisDeregisterStreamConsumerResult) Get(ctx workflow.Context) (*kinesis.DeregisterStreamConsumerOutput, error) {
+func (r *KinesisDeregisterStreamConsumerFuture) Get(ctx workflow.Context) (*kinesis.DeregisterStreamConsumerOutput, error) {
 	var output kinesis.DeregisterStreamConsumerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisDescribeLimitsResult struct {
-	Result workflow.Future
+type KinesisDescribeLimitsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisDescribeLimitsResult) Get(ctx workflow.Context) (*kinesis.DescribeLimitsOutput, error) {
+func (r *KinesisDescribeLimitsFuture) Get(ctx workflow.Context) (*kinesis.DescribeLimitsOutput, error) {
 	var output kinesis.DescribeLimitsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisDescribeStreamResult struct {
-	Result workflow.Future
+type KinesisDescribeStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisDescribeStreamResult) Get(ctx workflow.Context) (*kinesis.DescribeStreamOutput, error) {
+func (r *KinesisDescribeStreamFuture) Get(ctx workflow.Context) (*kinesis.DescribeStreamOutput, error) {
 	var output kinesis.DescribeStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisDescribeStreamConsumerResult struct {
-	Result workflow.Future
+type KinesisDescribeStreamConsumerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisDescribeStreamConsumerResult) Get(ctx workflow.Context) (*kinesis.DescribeStreamConsumerOutput, error) {
+func (r *KinesisDescribeStreamConsumerFuture) Get(ctx workflow.Context) (*kinesis.DescribeStreamConsumerOutput, error) {
 	var output kinesis.DescribeStreamConsumerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisDescribeStreamSummaryResult struct {
-	Result workflow.Future
+type KinesisDescribeStreamSummaryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisDescribeStreamSummaryResult) Get(ctx workflow.Context) (*kinesis.DescribeStreamSummaryOutput, error) {
+func (r *KinesisDescribeStreamSummaryFuture) Get(ctx workflow.Context) (*kinesis.DescribeStreamSummaryOutput, error) {
 	var output kinesis.DescribeStreamSummaryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisDisableEnhancedMonitoringResult struct {
-	Result workflow.Future
+type KinesisDisableEnhancedMonitoringFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisDisableEnhancedMonitoringResult) Get(ctx workflow.Context) (*kinesis.EnhancedMonitoringOutput, error) {
+func (r *KinesisDisableEnhancedMonitoringFuture) Get(ctx workflow.Context) (*kinesis.EnhancedMonitoringOutput, error) {
 	var output kinesis.EnhancedMonitoringOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisEnableEnhancedMonitoringResult struct {
-	Result workflow.Future
+type KinesisEnableEnhancedMonitoringFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisEnableEnhancedMonitoringResult) Get(ctx workflow.Context) (*kinesis.EnhancedMonitoringOutput, error) {
+func (r *KinesisEnableEnhancedMonitoringFuture) Get(ctx workflow.Context) (*kinesis.EnhancedMonitoringOutput, error) {
 	var output kinesis.EnhancedMonitoringOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisGetRecordsResult struct {
-	Result workflow.Future
+type KinesisGetRecordsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisGetRecordsResult) Get(ctx workflow.Context) (*kinesis.GetRecordsOutput, error) {
+func (r *KinesisGetRecordsFuture) Get(ctx workflow.Context) (*kinesis.GetRecordsOutput, error) {
 	var output kinesis.GetRecordsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisGetShardIteratorResult struct {
-	Result workflow.Future
+type KinesisGetShardIteratorFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisGetShardIteratorResult) Get(ctx workflow.Context) (*kinesis.GetShardIteratorOutput, error) {
+func (r *KinesisGetShardIteratorFuture) Get(ctx workflow.Context) (*kinesis.GetShardIteratorOutput, error) {
 	var output kinesis.GetShardIteratorOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisIncreaseStreamRetentionPeriodResult struct {
-	Result workflow.Future
+type KinesisIncreaseStreamRetentionPeriodFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisIncreaseStreamRetentionPeriodResult) Get(ctx workflow.Context) (*kinesis.IncreaseStreamRetentionPeriodOutput, error) {
+func (r *KinesisIncreaseStreamRetentionPeriodFuture) Get(ctx workflow.Context) (*kinesis.IncreaseStreamRetentionPeriodOutput, error) {
 	var output kinesis.IncreaseStreamRetentionPeriodOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisListShardsResult struct {
-	Result workflow.Future
+type KinesisListShardsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisListShardsResult) Get(ctx workflow.Context) (*kinesis.ListShardsOutput, error) {
+func (r *KinesisListShardsFuture) Get(ctx workflow.Context) (*kinesis.ListShardsOutput, error) {
 	var output kinesis.ListShardsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisListStreamConsumersResult struct {
-	Result workflow.Future
+type KinesisListStreamConsumersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisListStreamConsumersResult) Get(ctx workflow.Context) (*kinesis.ListStreamConsumersOutput, error) {
+func (r *KinesisListStreamConsumersFuture) Get(ctx workflow.Context) (*kinesis.ListStreamConsumersOutput, error) {
 	var output kinesis.ListStreamConsumersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisListStreamsResult struct {
-	Result workflow.Future
+type KinesisListStreamsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisListStreamsResult) Get(ctx workflow.Context) (*kinesis.ListStreamsOutput, error) {
+func (r *KinesisListStreamsFuture) Get(ctx workflow.Context) (*kinesis.ListStreamsOutput, error) {
 	var output kinesis.ListStreamsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisListTagsForStreamResult struct {
-	Result workflow.Future
+type KinesisListTagsForStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisListTagsForStreamResult) Get(ctx workflow.Context) (*kinesis.ListTagsForStreamOutput, error) {
+func (r *KinesisListTagsForStreamFuture) Get(ctx workflow.Context) (*kinesis.ListTagsForStreamOutput, error) {
 	var output kinesis.ListTagsForStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisMergeShardsResult struct {
-	Result workflow.Future
+type KinesisMergeShardsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisMergeShardsResult) Get(ctx workflow.Context) (*kinesis.MergeShardsOutput, error) {
+func (r *KinesisMergeShardsFuture) Get(ctx workflow.Context) (*kinesis.MergeShardsOutput, error) {
 	var output kinesis.MergeShardsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisPutRecordResult struct {
-	Result workflow.Future
+type KinesisPutRecordFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisPutRecordResult) Get(ctx workflow.Context) (*kinesis.PutRecordOutput, error) {
+func (r *KinesisPutRecordFuture) Get(ctx workflow.Context) (*kinesis.PutRecordOutput, error) {
 	var output kinesis.PutRecordOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisPutRecordsResult struct {
-	Result workflow.Future
+type KinesisPutRecordsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisPutRecordsResult) Get(ctx workflow.Context) (*kinesis.PutRecordsOutput, error) {
+func (r *KinesisPutRecordsFuture) Get(ctx workflow.Context) (*kinesis.PutRecordsOutput, error) {
 	var output kinesis.PutRecordsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisRegisterStreamConsumerResult struct {
-	Result workflow.Future
+type KinesisRegisterStreamConsumerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisRegisterStreamConsumerResult) Get(ctx workflow.Context) (*kinesis.RegisterStreamConsumerOutput, error) {
+func (r *KinesisRegisterStreamConsumerFuture) Get(ctx workflow.Context) (*kinesis.RegisterStreamConsumerOutput, error) {
 	var output kinesis.RegisterStreamConsumerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisRemoveTagsFromStreamResult struct {
-	Result workflow.Future
+type KinesisRemoveTagsFromStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisRemoveTagsFromStreamResult) Get(ctx workflow.Context) (*kinesis.RemoveTagsFromStreamOutput, error) {
+func (r *KinesisRemoveTagsFromStreamFuture) Get(ctx workflow.Context) (*kinesis.RemoveTagsFromStreamOutput, error) {
 	var output kinesis.RemoveTagsFromStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisSplitShardResult struct {
-	Result workflow.Future
+type KinesisSplitShardFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisSplitShardResult) Get(ctx workflow.Context) (*kinesis.SplitShardOutput, error) {
+func (r *KinesisSplitShardFuture) Get(ctx workflow.Context) (*kinesis.SplitShardOutput, error) {
 	var output kinesis.SplitShardOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisStartStreamEncryptionResult struct {
-	Result workflow.Future
+type KinesisStartStreamEncryptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisStartStreamEncryptionResult) Get(ctx workflow.Context) (*kinesis.StartStreamEncryptionOutput, error) {
+func (r *KinesisStartStreamEncryptionFuture) Get(ctx workflow.Context) (*kinesis.StartStreamEncryptionOutput, error) {
 	var output kinesis.StartStreamEncryptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisStopStreamEncryptionResult struct {
-	Result workflow.Future
+type KinesisStopStreamEncryptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisStopStreamEncryptionResult) Get(ctx workflow.Context) (*kinesis.StopStreamEncryptionOutput, error) {
+func (r *KinesisStopStreamEncryptionFuture) Get(ctx workflow.Context) (*kinesis.StopStreamEncryptionOutput, error) {
 	var output kinesis.StopStreamEncryptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisSubscribeToShardResult struct {
-	Result workflow.Future
+type KinesisSubscribeToShardFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisSubscribeToShardResult) Get(ctx workflow.Context) (*kinesis.SubscribeToShardOutput, error) {
+func (r *KinesisSubscribeToShardFuture) Get(ctx workflow.Context) (*kinesis.SubscribeToShardOutput, error) {
 	var output kinesis.SubscribeToShardOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisUpdateShardCountResult struct {
-	Result workflow.Future
+type KinesisUpdateShardCountFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisUpdateShardCountResult) Get(ctx workflow.Context) (*kinesis.UpdateShardCountOutput, error) {
+func (r *KinesisUpdateShardCountFuture) Get(ctx workflow.Context) (*kinesis.UpdateShardCountOutput, error) {
 	var output kinesis.UpdateShardCountOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -391,9 +421,9 @@ func (a *KinesisStub) AddTagsToStream(ctx workflow.Context, input *kinesis.AddTa
 	return &output, err
 }
 
-func (a *KinesisStub) AddTagsToStreamAsync(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) *KinesisAddTagsToStreamResult {
+func (a *KinesisStub) AddTagsToStreamAsync(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) *KinesisAddTagsToStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.AddTagsToStream", input)
-	return &KinesisAddTagsToStreamResult{Result: future}
+	return &KinesisAddTagsToStreamFuture{Future: future}
 }
 
 func (a *KinesisStub) CreateStream(ctx workflow.Context, input *kinesis.CreateStreamInput) (*kinesis.CreateStreamOutput, error) {
@@ -402,9 +432,9 @@ func (a *KinesisStub) CreateStream(ctx workflow.Context, input *kinesis.CreateSt
 	return &output, err
 }
 
-func (a *KinesisStub) CreateStreamAsync(ctx workflow.Context, input *kinesis.CreateStreamInput) *KinesisCreateStreamResult {
+func (a *KinesisStub) CreateStreamAsync(ctx workflow.Context, input *kinesis.CreateStreamInput) *KinesisCreateStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.CreateStream", input)
-	return &KinesisCreateStreamResult{Result: future}
+	return &KinesisCreateStreamFuture{Future: future}
 }
 
 func (a *KinesisStub) DecreaseStreamRetentionPeriod(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) (*kinesis.DecreaseStreamRetentionPeriodOutput, error) {
@@ -413,9 +443,9 @@ func (a *KinesisStub) DecreaseStreamRetentionPeriod(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *KinesisStub) DecreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) *KinesisDecreaseStreamRetentionPeriodResult {
+func (a *KinesisStub) DecreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) *KinesisDecreaseStreamRetentionPeriodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.DecreaseStreamRetentionPeriod", input)
-	return &KinesisDecreaseStreamRetentionPeriodResult{Result: future}
+	return &KinesisDecreaseStreamRetentionPeriodFuture{Future: future}
 }
 
 func (a *KinesisStub) DeleteStream(ctx workflow.Context, input *kinesis.DeleteStreamInput) (*kinesis.DeleteStreamOutput, error) {
@@ -424,9 +454,9 @@ func (a *KinesisStub) DeleteStream(ctx workflow.Context, input *kinesis.DeleteSt
 	return &output, err
 }
 
-func (a *KinesisStub) DeleteStreamAsync(ctx workflow.Context, input *kinesis.DeleteStreamInput) *KinesisDeleteStreamResult {
+func (a *KinesisStub) DeleteStreamAsync(ctx workflow.Context, input *kinesis.DeleteStreamInput) *KinesisDeleteStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.DeleteStream", input)
-	return &KinesisDeleteStreamResult{Result: future}
+	return &KinesisDeleteStreamFuture{Future: future}
 }
 
 func (a *KinesisStub) DeregisterStreamConsumer(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) (*kinesis.DeregisterStreamConsumerOutput, error) {
@@ -435,9 +465,9 @@ func (a *KinesisStub) DeregisterStreamConsumer(ctx workflow.Context, input *kine
 	return &output, err
 }
 
-func (a *KinesisStub) DeregisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) *KinesisDeregisterStreamConsumerResult {
+func (a *KinesisStub) DeregisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) *KinesisDeregisterStreamConsumerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.DeregisterStreamConsumer", input)
-	return &KinesisDeregisterStreamConsumerResult{Result: future}
+	return &KinesisDeregisterStreamConsumerFuture{Future: future}
 }
 
 func (a *KinesisStub) DescribeLimits(ctx workflow.Context, input *kinesis.DescribeLimitsInput) (*kinesis.DescribeLimitsOutput, error) {
@@ -446,9 +476,9 @@ func (a *KinesisStub) DescribeLimits(ctx workflow.Context, input *kinesis.Descri
 	return &output, err
 }
 
-func (a *KinesisStub) DescribeLimitsAsync(ctx workflow.Context, input *kinesis.DescribeLimitsInput) *KinesisDescribeLimitsResult {
+func (a *KinesisStub) DescribeLimitsAsync(ctx workflow.Context, input *kinesis.DescribeLimitsInput) *KinesisDescribeLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.DescribeLimits", input)
-	return &KinesisDescribeLimitsResult{Result: future}
+	return &KinesisDescribeLimitsFuture{Future: future}
 }
 
 func (a *KinesisStub) DescribeStream(ctx workflow.Context, input *kinesis.DescribeStreamInput) (*kinesis.DescribeStreamOutput, error) {
@@ -457,9 +487,9 @@ func (a *KinesisStub) DescribeStream(ctx workflow.Context, input *kinesis.Descri
 	return &output, err
 }
 
-func (a *KinesisStub) DescribeStreamAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *KinesisDescribeStreamResult {
+func (a *KinesisStub) DescribeStreamAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *KinesisDescribeStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.DescribeStream", input)
-	return &KinesisDescribeStreamResult{Result: future}
+	return &KinesisDescribeStreamFuture{Future: future}
 }
 
 func (a *KinesisStub) DescribeStreamConsumer(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) (*kinesis.DescribeStreamConsumerOutput, error) {
@@ -468,9 +498,9 @@ func (a *KinesisStub) DescribeStreamConsumer(ctx workflow.Context, input *kinesi
 	return &output, err
 }
 
-func (a *KinesisStub) DescribeStreamConsumerAsync(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) *KinesisDescribeStreamConsumerResult {
+func (a *KinesisStub) DescribeStreamConsumerAsync(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) *KinesisDescribeStreamConsumerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.DescribeStreamConsumer", input)
-	return &KinesisDescribeStreamConsumerResult{Result: future}
+	return &KinesisDescribeStreamConsumerFuture{Future: future}
 }
 
 func (a *KinesisStub) DescribeStreamSummary(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) (*kinesis.DescribeStreamSummaryOutput, error) {
@@ -479,9 +509,9 @@ func (a *KinesisStub) DescribeStreamSummary(ctx workflow.Context, input *kinesis
 	return &output, err
 }
 
-func (a *KinesisStub) DescribeStreamSummaryAsync(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) *KinesisDescribeStreamSummaryResult {
+func (a *KinesisStub) DescribeStreamSummaryAsync(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) *KinesisDescribeStreamSummaryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.DescribeStreamSummary", input)
-	return &KinesisDescribeStreamSummaryResult{Result: future}
+	return &KinesisDescribeStreamSummaryFuture{Future: future}
 }
 
 func (a *KinesisStub) DisableEnhancedMonitoring(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error) {
@@ -490,9 +520,9 @@ func (a *KinesisStub) DisableEnhancedMonitoring(ctx workflow.Context, input *kin
 	return &output, err
 }
 
-func (a *KinesisStub) DisableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) *KinesisDisableEnhancedMonitoringResult {
+func (a *KinesisStub) DisableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) *KinesisDisableEnhancedMonitoringFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.DisableEnhancedMonitoring", input)
-	return &KinesisDisableEnhancedMonitoringResult{Result: future}
+	return &KinesisDisableEnhancedMonitoringFuture{Future: future}
 }
 
 func (a *KinesisStub) EnableEnhancedMonitoring(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error) {
@@ -501,9 +531,9 @@ func (a *KinesisStub) EnableEnhancedMonitoring(ctx workflow.Context, input *kine
 	return &output, err
 }
 
-func (a *KinesisStub) EnableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) *KinesisEnableEnhancedMonitoringResult {
+func (a *KinesisStub) EnableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) *KinesisEnableEnhancedMonitoringFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.EnableEnhancedMonitoring", input)
-	return &KinesisEnableEnhancedMonitoringResult{Result: future}
+	return &KinesisEnableEnhancedMonitoringFuture{Future: future}
 }
 
 func (a *KinesisStub) GetRecords(ctx workflow.Context, input *kinesis.GetRecordsInput) (*kinesis.GetRecordsOutput, error) {
@@ -512,9 +542,9 @@ func (a *KinesisStub) GetRecords(ctx workflow.Context, input *kinesis.GetRecords
 	return &output, err
 }
 
-func (a *KinesisStub) GetRecordsAsync(ctx workflow.Context, input *kinesis.GetRecordsInput) *KinesisGetRecordsResult {
+func (a *KinesisStub) GetRecordsAsync(ctx workflow.Context, input *kinesis.GetRecordsInput) *KinesisGetRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.GetRecords", input)
-	return &KinesisGetRecordsResult{Result: future}
+	return &KinesisGetRecordsFuture{Future: future}
 }
 
 func (a *KinesisStub) GetShardIterator(ctx workflow.Context, input *kinesis.GetShardIteratorInput) (*kinesis.GetShardIteratorOutput, error) {
@@ -523,9 +553,9 @@ func (a *KinesisStub) GetShardIterator(ctx workflow.Context, input *kinesis.GetS
 	return &output, err
 }
 
-func (a *KinesisStub) GetShardIteratorAsync(ctx workflow.Context, input *kinesis.GetShardIteratorInput) *KinesisGetShardIteratorResult {
+func (a *KinesisStub) GetShardIteratorAsync(ctx workflow.Context, input *kinesis.GetShardIteratorInput) *KinesisGetShardIteratorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.GetShardIterator", input)
-	return &KinesisGetShardIteratorResult{Result: future}
+	return &KinesisGetShardIteratorFuture{Future: future}
 }
 
 func (a *KinesisStub) IncreaseStreamRetentionPeriod(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) (*kinesis.IncreaseStreamRetentionPeriodOutput, error) {
@@ -534,9 +564,9 @@ func (a *KinesisStub) IncreaseStreamRetentionPeriod(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *KinesisStub) IncreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) *KinesisIncreaseStreamRetentionPeriodResult {
+func (a *KinesisStub) IncreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) *KinesisIncreaseStreamRetentionPeriodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.IncreaseStreamRetentionPeriod", input)
-	return &KinesisIncreaseStreamRetentionPeriodResult{Result: future}
+	return &KinesisIncreaseStreamRetentionPeriodFuture{Future: future}
 }
 
 func (a *KinesisStub) ListShards(ctx workflow.Context, input *kinesis.ListShardsInput) (*kinesis.ListShardsOutput, error) {
@@ -545,9 +575,9 @@ func (a *KinesisStub) ListShards(ctx workflow.Context, input *kinesis.ListShards
 	return &output, err
 }
 
-func (a *KinesisStub) ListShardsAsync(ctx workflow.Context, input *kinesis.ListShardsInput) *KinesisListShardsResult {
+func (a *KinesisStub) ListShardsAsync(ctx workflow.Context, input *kinesis.ListShardsInput) *KinesisListShardsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.ListShards", input)
-	return &KinesisListShardsResult{Result: future}
+	return &KinesisListShardsFuture{Future: future}
 }
 
 func (a *KinesisStub) ListStreamConsumers(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) (*kinesis.ListStreamConsumersOutput, error) {
@@ -556,9 +586,9 @@ func (a *KinesisStub) ListStreamConsumers(ctx workflow.Context, input *kinesis.L
 	return &output, err
 }
 
-func (a *KinesisStub) ListStreamConsumersAsync(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) *KinesisListStreamConsumersResult {
+func (a *KinesisStub) ListStreamConsumersAsync(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) *KinesisListStreamConsumersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.ListStreamConsumers", input)
-	return &KinesisListStreamConsumersResult{Result: future}
+	return &KinesisListStreamConsumersFuture{Future: future}
 }
 
 func (a *KinesisStub) ListStreams(ctx workflow.Context, input *kinesis.ListStreamsInput) (*kinesis.ListStreamsOutput, error) {
@@ -567,9 +597,9 @@ func (a *KinesisStub) ListStreams(ctx workflow.Context, input *kinesis.ListStrea
 	return &output, err
 }
 
-func (a *KinesisStub) ListStreamsAsync(ctx workflow.Context, input *kinesis.ListStreamsInput) *KinesisListStreamsResult {
+func (a *KinesisStub) ListStreamsAsync(ctx workflow.Context, input *kinesis.ListStreamsInput) *KinesisListStreamsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.ListStreams", input)
-	return &KinesisListStreamsResult{Result: future}
+	return &KinesisListStreamsFuture{Future: future}
 }
 
 func (a *KinesisStub) ListTagsForStream(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) (*kinesis.ListTagsForStreamOutput, error) {
@@ -578,9 +608,9 @@ func (a *KinesisStub) ListTagsForStream(ctx workflow.Context, input *kinesis.Lis
 	return &output, err
 }
 
-func (a *KinesisStub) ListTagsForStreamAsync(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) *KinesisListTagsForStreamResult {
+func (a *KinesisStub) ListTagsForStreamAsync(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) *KinesisListTagsForStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.ListTagsForStream", input)
-	return &KinesisListTagsForStreamResult{Result: future}
+	return &KinesisListTagsForStreamFuture{Future: future}
 }
 
 func (a *KinesisStub) MergeShards(ctx workflow.Context, input *kinesis.MergeShardsInput) (*kinesis.MergeShardsOutput, error) {
@@ -589,9 +619,9 @@ func (a *KinesisStub) MergeShards(ctx workflow.Context, input *kinesis.MergeShar
 	return &output, err
 }
 
-func (a *KinesisStub) MergeShardsAsync(ctx workflow.Context, input *kinesis.MergeShardsInput) *KinesisMergeShardsResult {
+func (a *KinesisStub) MergeShardsAsync(ctx workflow.Context, input *kinesis.MergeShardsInput) *KinesisMergeShardsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.MergeShards", input)
-	return &KinesisMergeShardsResult{Result: future}
+	return &KinesisMergeShardsFuture{Future: future}
 }
 
 func (a *KinesisStub) PutRecord(ctx workflow.Context, input *kinesis.PutRecordInput) (*kinesis.PutRecordOutput, error) {
@@ -600,9 +630,9 @@ func (a *KinesisStub) PutRecord(ctx workflow.Context, input *kinesis.PutRecordIn
 	return &output, err
 }
 
-func (a *KinesisStub) PutRecordAsync(ctx workflow.Context, input *kinesis.PutRecordInput) *KinesisPutRecordResult {
+func (a *KinesisStub) PutRecordAsync(ctx workflow.Context, input *kinesis.PutRecordInput) *KinesisPutRecordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.PutRecord", input)
-	return &KinesisPutRecordResult{Result: future}
+	return &KinesisPutRecordFuture{Future: future}
 }
 
 func (a *KinesisStub) PutRecords(ctx workflow.Context, input *kinesis.PutRecordsInput) (*kinesis.PutRecordsOutput, error) {
@@ -611,9 +641,9 @@ func (a *KinesisStub) PutRecords(ctx workflow.Context, input *kinesis.PutRecords
 	return &output, err
 }
 
-func (a *KinesisStub) PutRecordsAsync(ctx workflow.Context, input *kinesis.PutRecordsInput) *KinesisPutRecordsResult {
+func (a *KinesisStub) PutRecordsAsync(ctx workflow.Context, input *kinesis.PutRecordsInput) *KinesisPutRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.PutRecords", input)
-	return &KinesisPutRecordsResult{Result: future}
+	return &KinesisPutRecordsFuture{Future: future}
 }
 
 func (a *KinesisStub) RegisterStreamConsumer(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) (*kinesis.RegisterStreamConsumerOutput, error) {
@@ -622,9 +652,9 @@ func (a *KinesisStub) RegisterStreamConsumer(ctx workflow.Context, input *kinesi
 	return &output, err
 }
 
-func (a *KinesisStub) RegisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) *KinesisRegisterStreamConsumerResult {
+func (a *KinesisStub) RegisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) *KinesisRegisterStreamConsumerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.RegisterStreamConsumer", input)
-	return &KinesisRegisterStreamConsumerResult{Result: future}
+	return &KinesisRegisterStreamConsumerFuture{Future: future}
 }
 
 func (a *KinesisStub) RemoveTagsFromStream(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) (*kinesis.RemoveTagsFromStreamOutput, error) {
@@ -633,9 +663,9 @@ func (a *KinesisStub) RemoveTagsFromStream(ctx workflow.Context, input *kinesis.
 	return &output, err
 }
 
-func (a *KinesisStub) RemoveTagsFromStreamAsync(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) *KinesisRemoveTagsFromStreamResult {
+func (a *KinesisStub) RemoveTagsFromStreamAsync(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) *KinesisRemoveTagsFromStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.RemoveTagsFromStream", input)
-	return &KinesisRemoveTagsFromStreamResult{Result: future}
+	return &KinesisRemoveTagsFromStreamFuture{Future: future}
 }
 
 func (a *KinesisStub) SplitShard(ctx workflow.Context, input *kinesis.SplitShardInput) (*kinesis.SplitShardOutput, error) {
@@ -644,9 +674,9 @@ func (a *KinesisStub) SplitShard(ctx workflow.Context, input *kinesis.SplitShard
 	return &output, err
 }
 
-func (a *KinesisStub) SplitShardAsync(ctx workflow.Context, input *kinesis.SplitShardInput) *KinesisSplitShardResult {
+func (a *KinesisStub) SplitShardAsync(ctx workflow.Context, input *kinesis.SplitShardInput) *KinesisSplitShardFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.SplitShard", input)
-	return &KinesisSplitShardResult{Result: future}
+	return &KinesisSplitShardFuture{Future: future}
 }
 
 func (a *KinesisStub) StartStreamEncryption(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) (*kinesis.StartStreamEncryptionOutput, error) {
@@ -655,9 +685,9 @@ func (a *KinesisStub) StartStreamEncryption(ctx workflow.Context, input *kinesis
 	return &output, err
 }
 
-func (a *KinesisStub) StartStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) *KinesisStartStreamEncryptionResult {
+func (a *KinesisStub) StartStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) *KinesisStartStreamEncryptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.StartStreamEncryption", input)
-	return &KinesisStartStreamEncryptionResult{Result: future}
+	return &KinesisStartStreamEncryptionFuture{Future: future}
 }
 
 func (a *KinesisStub) StopStreamEncryption(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) (*kinesis.StopStreamEncryptionOutput, error) {
@@ -666,9 +696,9 @@ func (a *KinesisStub) StopStreamEncryption(ctx workflow.Context, input *kinesis.
 	return &output, err
 }
 
-func (a *KinesisStub) StopStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) *KinesisStopStreamEncryptionResult {
+func (a *KinesisStub) StopStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) *KinesisStopStreamEncryptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.StopStreamEncryption", input)
-	return &KinesisStopStreamEncryptionResult{Result: future}
+	return &KinesisStopStreamEncryptionFuture{Future: future}
 }
 
 func (a *KinesisStub) SubscribeToShard(ctx workflow.Context, input *kinesis.SubscribeToShardInput) (*kinesis.SubscribeToShardOutput, error) {
@@ -677,9 +707,9 @@ func (a *KinesisStub) SubscribeToShard(ctx workflow.Context, input *kinesis.Subs
 	return &output, err
 }
 
-func (a *KinesisStub) SubscribeToShardAsync(ctx workflow.Context, input *kinesis.SubscribeToShardInput) *KinesisSubscribeToShardResult {
+func (a *KinesisStub) SubscribeToShardAsync(ctx workflow.Context, input *kinesis.SubscribeToShardInput) *KinesisSubscribeToShardFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.SubscribeToShard", input)
-	return &KinesisSubscribeToShardResult{Result: future}
+	return &KinesisSubscribeToShardFuture{Future: future}
 }
 
 func (a *KinesisStub) UpdateShardCount(ctx workflow.Context, input *kinesis.UpdateShardCountInput) (*kinesis.UpdateShardCountOutput, error) {
@@ -688,23 +718,25 @@ func (a *KinesisStub) UpdateShardCount(ctx workflow.Context, input *kinesis.Upda
 	return &output, err
 }
 
-func (a *KinesisStub) UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountResult {
+func (a *KinesisStub) UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesis.UpdateShardCount", input)
-	return &KinesisUpdateShardCountResult{Result: future}
+	return &KinesisUpdateShardCountFuture{Future: future}
 }
 
 func (a *KinesisStub) WaitUntilStreamExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamExists", input).Get(ctx, nil)
 }
 
-func (a *KinesisStub) WaitUntilStreamExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamExists", input)
+func (a *KinesisStub) WaitUntilStreamExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *KinesisStub) WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamNotExists", input).Get(ctx, nil)
 }
 
-func (a *KinesisStub) WaitUntilStreamNotExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamNotExists", input)
+func (a *KinesisStub) WaitUntilStreamNotExistsAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.kinesis.WaitUntilStreamNotExists", input)
+	return NewVoidFuture(future)
 }

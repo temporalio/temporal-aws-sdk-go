@@ -11,43 +11,43 @@ import (
 
 type LakeFormationClient interface {
 	BatchGrantPermissions(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) (*lakeformation.BatchGrantPermissionsOutput, error)
-	BatchGrantPermissionsAsync(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) *LakeformationBatchGrantPermissionsResult
+	BatchGrantPermissionsAsync(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) *LakeFormationBatchGrantPermissionsFuture
 
 	BatchRevokePermissions(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) (*lakeformation.BatchRevokePermissionsOutput, error)
-	BatchRevokePermissionsAsync(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) *LakeformationBatchRevokePermissionsResult
+	BatchRevokePermissionsAsync(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) *LakeFormationBatchRevokePermissionsFuture
 
 	DeregisterResource(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) (*lakeformation.DeregisterResourceOutput, error)
-	DeregisterResourceAsync(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) *LakeformationDeregisterResourceResult
+	DeregisterResourceAsync(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) *LakeFormationDeregisterResourceFuture
 
 	DescribeResource(ctx workflow.Context, input *lakeformation.DescribeResourceInput) (*lakeformation.DescribeResourceOutput, error)
-	DescribeResourceAsync(ctx workflow.Context, input *lakeformation.DescribeResourceInput) *LakeformationDescribeResourceResult
+	DescribeResourceAsync(ctx workflow.Context, input *lakeformation.DescribeResourceInput) *LakeFormationDescribeResourceFuture
 
 	GetDataLakeSettings(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) (*lakeformation.GetDataLakeSettingsOutput, error)
-	GetDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) *LakeformationGetDataLakeSettingsResult
+	GetDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) *LakeFormationGetDataLakeSettingsFuture
 
 	GetEffectivePermissionsForPath(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) (*lakeformation.GetEffectivePermissionsForPathOutput, error)
-	GetEffectivePermissionsForPathAsync(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) *LakeformationGetEffectivePermissionsForPathResult
+	GetEffectivePermissionsForPathAsync(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) *LakeFormationGetEffectivePermissionsForPathFuture
 
 	GrantPermissions(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) (*lakeformation.GrantPermissionsOutput, error)
-	GrantPermissionsAsync(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) *LakeformationGrantPermissionsResult
+	GrantPermissionsAsync(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) *LakeFormationGrantPermissionsFuture
 
 	ListPermissions(ctx workflow.Context, input *lakeformation.ListPermissionsInput) (*lakeformation.ListPermissionsOutput, error)
-	ListPermissionsAsync(ctx workflow.Context, input *lakeformation.ListPermissionsInput) *LakeformationListPermissionsResult
+	ListPermissionsAsync(ctx workflow.Context, input *lakeformation.ListPermissionsInput) *LakeFormationListPermissionsFuture
 
 	ListResources(ctx workflow.Context, input *lakeformation.ListResourcesInput) (*lakeformation.ListResourcesOutput, error)
-	ListResourcesAsync(ctx workflow.Context, input *lakeformation.ListResourcesInput) *LakeformationListResourcesResult
+	ListResourcesAsync(ctx workflow.Context, input *lakeformation.ListResourcesInput) *LakeFormationListResourcesFuture
 
 	PutDataLakeSettings(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) (*lakeformation.PutDataLakeSettingsOutput, error)
-	PutDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) *LakeformationPutDataLakeSettingsResult
+	PutDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) *LakeFormationPutDataLakeSettingsFuture
 
 	RegisterResource(ctx workflow.Context, input *lakeformation.RegisterResourceInput) (*lakeformation.RegisterResourceOutput, error)
-	RegisterResourceAsync(ctx workflow.Context, input *lakeformation.RegisterResourceInput) *LakeformationRegisterResourceResult
+	RegisterResourceAsync(ctx workflow.Context, input *lakeformation.RegisterResourceInput) *LakeFormationRegisterResourceFuture
 
 	RevokePermissions(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) (*lakeformation.RevokePermissionsOutput, error)
-	RevokePermissionsAsync(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) *LakeformationRevokePermissionsResult
+	RevokePermissionsAsync(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) *LakeFormationRevokePermissionsFuture
 
 	UpdateResource(ctx workflow.Context, input *lakeformation.UpdateResourceInput) (*lakeformation.UpdateResourceOutput, error)
-	UpdateResourceAsync(ctx workflow.Context, input *lakeformation.UpdateResourceInput) *LakeformationUpdateResourceResult
+	UpdateResourceAsync(ctx workflow.Context, input *lakeformation.UpdateResourceInput) *LakeFormationUpdateResourceFuture
 }
 
 type LakeFormationStub struct{}
@@ -56,133 +56,146 @@ func NewLakeFormationStub() LakeFormationClient {
 	return &LakeFormationStub{}
 }
 
-type LakeformationBatchGrantPermissionsResult struct {
-	Result workflow.Future
+type LakeFormationBatchGrantPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationBatchGrantPermissionsResult) Get(ctx workflow.Context) (*lakeformation.BatchGrantPermissionsOutput, error) {
+func (r *LakeFormationBatchGrantPermissionsFuture) Get(ctx workflow.Context) (*lakeformation.BatchGrantPermissionsOutput, error) {
 	var output lakeformation.BatchGrantPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationBatchRevokePermissionsResult struct {
-	Result workflow.Future
+type LakeFormationBatchRevokePermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationBatchRevokePermissionsResult) Get(ctx workflow.Context) (*lakeformation.BatchRevokePermissionsOutput, error) {
+func (r *LakeFormationBatchRevokePermissionsFuture) Get(ctx workflow.Context) (*lakeformation.BatchRevokePermissionsOutput, error) {
 	var output lakeformation.BatchRevokePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationDeregisterResourceResult struct {
-	Result workflow.Future
+type LakeFormationDeregisterResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationDeregisterResourceResult) Get(ctx workflow.Context) (*lakeformation.DeregisterResourceOutput, error) {
+func (r *LakeFormationDeregisterResourceFuture) Get(ctx workflow.Context) (*lakeformation.DeregisterResourceOutput, error) {
 	var output lakeformation.DeregisterResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationDescribeResourceResult struct {
-	Result workflow.Future
+type LakeFormationDescribeResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationDescribeResourceResult) Get(ctx workflow.Context) (*lakeformation.DescribeResourceOutput, error) {
+func (r *LakeFormationDescribeResourceFuture) Get(ctx workflow.Context) (*lakeformation.DescribeResourceOutput, error) {
 	var output lakeformation.DescribeResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationGetDataLakeSettingsResult struct {
-	Result workflow.Future
+type LakeFormationGetDataLakeSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationGetDataLakeSettingsResult) Get(ctx workflow.Context) (*lakeformation.GetDataLakeSettingsOutput, error) {
+func (r *LakeFormationGetDataLakeSettingsFuture) Get(ctx workflow.Context) (*lakeformation.GetDataLakeSettingsOutput, error) {
 	var output lakeformation.GetDataLakeSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationGetEffectivePermissionsForPathResult struct {
-	Result workflow.Future
+type LakeFormationGetEffectivePermissionsForPathFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationGetEffectivePermissionsForPathResult) Get(ctx workflow.Context) (*lakeformation.GetEffectivePermissionsForPathOutput, error) {
+func (r *LakeFormationGetEffectivePermissionsForPathFuture) Get(ctx workflow.Context) (*lakeformation.GetEffectivePermissionsForPathOutput, error) {
 	var output lakeformation.GetEffectivePermissionsForPathOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationGrantPermissionsResult struct {
-	Result workflow.Future
+type LakeFormationGrantPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationGrantPermissionsResult) Get(ctx workflow.Context) (*lakeformation.GrantPermissionsOutput, error) {
+func (r *LakeFormationGrantPermissionsFuture) Get(ctx workflow.Context) (*lakeformation.GrantPermissionsOutput, error) {
 	var output lakeformation.GrantPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationListPermissionsResult struct {
-	Result workflow.Future
+type LakeFormationListPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationListPermissionsResult) Get(ctx workflow.Context) (*lakeformation.ListPermissionsOutput, error) {
+func (r *LakeFormationListPermissionsFuture) Get(ctx workflow.Context) (*lakeformation.ListPermissionsOutput, error) {
 	var output lakeformation.ListPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationListResourcesResult struct {
-	Result workflow.Future
+type LakeFormationListResourcesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationListResourcesResult) Get(ctx workflow.Context) (*lakeformation.ListResourcesOutput, error) {
+func (r *LakeFormationListResourcesFuture) Get(ctx workflow.Context) (*lakeformation.ListResourcesOutput, error) {
 	var output lakeformation.ListResourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationPutDataLakeSettingsResult struct {
-	Result workflow.Future
+type LakeFormationPutDataLakeSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationPutDataLakeSettingsResult) Get(ctx workflow.Context) (*lakeformation.PutDataLakeSettingsOutput, error) {
+func (r *LakeFormationPutDataLakeSettingsFuture) Get(ctx workflow.Context) (*lakeformation.PutDataLakeSettingsOutput, error) {
 	var output lakeformation.PutDataLakeSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationRegisterResourceResult struct {
-	Result workflow.Future
+type LakeFormationRegisterResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationRegisterResourceResult) Get(ctx workflow.Context) (*lakeformation.RegisterResourceOutput, error) {
+func (r *LakeFormationRegisterResourceFuture) Get(ctx workflow.Context) (*lakeformation.RegisterResourceOutput, error) {
 	var output lakeformation.RegisterResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationRevokePermissionsResult struct {
-	Result workflow.Future
+type LakeFormationRevokePermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationRevokePermissionsResult) Get(ctx workflow.Context) (*lakeformation.RevokePermissionsOutput, error) {
+func (r *LakeFormationRevokePermissionsFuture) Get(ctx workflow.Context) (*lakeformation.RevokePermissionsOutput, error) {
 	var output lakeformation.RevokePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LakeformationUpdateResourceResult struct {
-	Result workflow.Future
+type LakeFormationUpdateResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LakeformationUpdateResourceResult) Get(ctx workflow.Context) (*lakeformation.UpdateResourceOutput, error) {
+func (r *LakeFormationUpdateResourceFuture) Get(ctx workflow.Context) (*lakeformation.UpdateResourceOutput, error) {
 	var output lakeformation.UpdateResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -192,9 +205,9 @@ func (a *LakeFormationStub) BatchGrantPermissions(ctx workflow.Context, input *l
 	return &output, err
 }
 
-func (a *LakeFormationStub) BatchGrantPermissionsAsync(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) *LakeformationBatchGrantPermissionsResult {
+func (a *LakeFormationStub) BatchGrantPermissionsAsync(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) *LakeFormationBatchGrantPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.BatchGrantPermissions", input)
-	return &LakeformationBatchGrantPermissionsResult{Result: future}
+	return &LakeFormationBatchGrantPermissionsFuture{Future: future}
 }
 
 func (a *LakeFormationStub) BatchRevokePermissions(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) (*lakeformation.BatchRevokePermissionsOutput, error) {
@@ -203,9 +216,9 @@ func (a *LakeFormationStub) BatchRevokePermissions(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *LakeFormationStub) BatchRevokePermissionsAsync(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) *LakeformationBatchRevokePermissionsResult {
+func (a *LakeFormationStub) BatchRevokePermissionsAsync(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) *LakeFormationBatchRevokePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.BatchRevokePermissions", input)
-	return &LakeformationBatchRevokePermissionsResult{Result: future}
+	return &LakeFormationBatchRevokePermissionsFuture{Future: future}
 }
 
 func (a *LakeFormationStub) DeregisterResource(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) (*lakeformation.DeregisterResourceOutput, error) {
@@ -214,9 +227,9 @@ func (a *LakeFormationStub) DeregisterResource(ctx workflow.Context, input *lake
 	return &output, err
 }
 
-func (a *LakeFormationStub) DeregisterResourceAsync(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) *LakeformationDeregisterResourceResult {
+func (a *LakeFormationStub) DeregisterResourceAsync(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) *LakeFormationDeregisterResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.DeregisterResource", input)
-	return &LakeformationDeregisterResourceResult{Result: future}
+	return &LakeFormationDeregisterResourceFuture{Future: future}
 }
 
 func (a *LakeFormationStub) DescribeResource(ctx workflow.Context, input *lakeformation.DescribeResourceInput) (*lakeformation.DescribeResourceOutput, error) {
@@ -225,9 +238,9 @@ func (a *LakeFormationStub) DescribeResource(ctx workflow.Context, input *lakefo
 	return &output, err
 }
 
-func (a *LakeFormationStub) DescribeResourceAsync(ctx workflow.Context, input *lakeformation.DescribeResourceInput) *LakeformationDescribeResourceResult {
+func (a *LakeFormationStub) DescribeResourceAsync(ctx workflow.Context, input *lakeformation.DescribeResourceInput) *LakeFormationDescribeResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.DescribeResource", input)
-	return &LakeformationDescribeResourceResult{Result: future}
+	return &LakeFormationDescribeResourceFuture{Future: future}
 }
 
 func (a *LakeFormationStub) GetDataLakeSettings(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) (*lakeformation.GetDataLakeSettingsOutput, error) {
@@ -236,9 +249,9 @@ func (a *LakeFormationStub) GetDataLakeSettings(ctx workflow.Context, input *lak
 	return &output, err
 }
 
-func (a *LakeFormationStub) GetDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) *LakeformationGetDataLakeSettingsResult {
+func (a *LakeFormationStub) GetDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) *LakeFormationGetDataLakeSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.GetDataLakeSettings", input)
-	return &LakeformationGetDataLakeSettingsResult{Result: future}
+	return &LakeFormationGetDataLakeSettingsFuture{Future: future}
 }
 
 func (a *LakeFormationStub) GetEffectivePermissionsForPath(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) (*lakeformation.GetEffectivePermissionsForPathOutput, error) {
@@ -247,9 +260,9 @@ func (a *LakeFormationStub) GetEffectivePermissionsForPath(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *LakeFormationStub) GetEffectivePermissionsForPathAsync(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) *LakeformationGetEffectivePermissionsForPathResult {
+func (a *LakeFormationStub) GetEffectivePermissionsForPathAsync(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) *LakeFormationGetEffectivePermissionsForPathFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.GetEffectivePermissionsForPath", input)
-	return &LakeformationGetEffectivePermissionsForPathResult{Result: future}
+	return &LakeFormationGetEffectivePermissionsForPathFuture{Future: future}
 }
 
 func (a *LakeFormationStub) GrantPermissions(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) (*lakeformation.GrantPermissionsOutput, error) {
@@ -258,9 +271,9 @@ func (a *LakeFormationStub) GrantPermissions(ctx workflow.Context, input *lakefo
 	return &output, err
 }
 
-func (a *LakeFormationStub) GrantPermissionsAsync(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) *LakeformationGrantPermissionsResult {
+func (a *LakeFormationStub) GrantPermissionsAsync(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) *LakeFormationGrantPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.GrantPermissions", input)
-	return &LakeformationGrantPermissionsResult{Result: future}
+	return &LakeFormationGrantPermissionsFuture{Future: future}
 }
 
 func (a *LakeFormationStub) ListPermissions(ctx workflow.Context, input *lakeformation.ListPermissionsInput) (*lakeformation.ListPermissionsOutput, error) {
@@ -269,9 +282,9 @@ func (a *LakeFormationStub) ListPermissions(ctx workflow.Context, input *lakefor
 	return &output, err
 }
 
-func (a *LakeFormationStub) ListPermissionsAsync(ctx workflow.Context, input *lakeformation.ListPermissionsInput) *LakeformationListPermissionsResult {
+func (a *LakeFormationStub) ListPermissionsAsync(ctx workflow.Context, input *lakeformation.ListPermissionsInput) *LakeFormationListPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.ListPermissions", input)
-	return &LakeformationListPermissionsResult{Result: future}
+	return &LakeFormationListPermissionsFuture{Future: future}
 }
 
 func (a *LakeFormationStub) ListResources(ctx workflow.Context, input *lakeformation.ListResourcesInput) (*lakeformation.ListResourcesOutput, error) {
@@ -280,9 +293,9 @@ func (a *LakeFormationStub) ListResources(ctx workflow.Context, input *lakeforma
 	return &output, err
 }
 
-func (a *LakeFormationStub) ListResourcesAsync(ctx workflow.Context, input *lakeformation.ListResourcesInput) *LakeformationListResourcesResult {
+func (a *LakeFormationStub) ListResourcesAsync(ctx workflow.Context, input *lakeformation.ListResourcesInput) *LakeFormationListResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.ListResources", input)
-	return &LakeformationListResourcesResult{Result: future}
+	return &LakeFormationListResourcesFuture{Future: future}
 }
 
 func (a *LakeFormationStub) PutDataLakeSettings(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) (*lakeformation.PutDataLakeSettingsOutput, error) {
@@ -291,9 +304,9 @@ func (a *LakeFormationStub) PutDataLakeSettings(ctx workflow.Context, input *lak
 	return &output, err
 }
 
-func (a *LakeFormationStub) PutDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) *LakeformationPutDataLakeSettingsResult {
+func (a *LakeFormationStub) PutDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) *LakeFormationPutDataLakeSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.PutDataLakeSettings", input)
-	return &LakeformationPutDataLakeSettingsResult{Result: future}
+	return &LakeFormationPutDataLakeSettingsFuture{Future: future}
 }
 
 func (a *LakeFormationStub) RegisterResource(ctx workflow.Context, input *lakeformation.RegisterResourceInput) (*lakeformation.RegisterResourceOutput, error) {
@@ -302,9 +315,9 @@ func (a *LakeFormationStub) RegisterResource(ctx workflow.Context, input *lakefo
 	return &output, err
 }
 
-func (a *LakeFormationStub) RegisterResourceAsync(ctx workflow.Context, input *lakeformation.RegisterResourceInput) *LakeformationRegisterResourceResult {
+func (a *LakeFormationStub) RegisterResourceAsync(ctx workflow.Context, input *lakeformation.RegisterResourceInput) *LakeFormationRegisterResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.RegisterResource", input)
-	return &LakeformationRegisterResourceResult{Result: future}
+	return &LakeFormationRegisterResourceFuture{Future: future}
 }
 
 func (a *LakeFormationStub) RevokePermissions(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) (*lakeformation.RevokePermissionsOutput, error) {
@@ -313,9 +326,9 @@ func (a *LakeFormationStub) RevokePermissions(ctx workflow.Context, input *lakef
 	return &output, err
 }
 
-func (a *LakeFormationStub) RevokePermissionsAsync(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) *LakeformationRevokePermissionsResult {
+func (a *LakeFormationStub) RevokePermissionsAsync(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) *LakeFormationRevokePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.RevokePermissions", input)
-	return &LakeformationRevokePermissionsResult{Result: future}
+	return &LakeFormationRevokePermissionsFuture{Future: future}
 }
 
 func (a *LakeFormationStub) UpdateResource(ctx workflow.Context, input *lakeformation.UpdateResourceInput) (*lakeformation.UpdateResourceOutput, error) {
@@ -324,7 +337,7 @@ func (a *LakeFormationStub) UpdateResource(ctx workflow.Context, input *lakeform
 	return &output, err
 }
 
-func (a *LakeFormationStub) UpdateResourceAsync(ctx workflow.Context, input *lakeformation.UpdateResourceInput) *LakeformationUpdateResourceResult {
+func (a *LakeFormationStub) UpdateResourceAsync(ctx workflow.Context, input *lakeformation.UpdateResourceInput) *LakeFormationUpdateResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lakeformation.UpdateResource", input)
-	return &LakeformationUpdateResourceResult{Result: future}
+	return &LakeFormationUpdateResourceFuture{Future: future}
 }

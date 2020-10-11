@@ -11,103 +11,103 @@ import (
 
 type AppConfigClient interface {
 	CreateApplication(ctx workflow.Context, input *appconfig.CreateApplicationInput) (*appconfig.CreateApplicationOutput, error)
-	CreateApplicationAsync(ctx workflow.Context, input *appconfig.CreateApplicationInput) *AppconfigCreateApplicationResult
+	CreateApplicationAsync(ctx workflow.Context, input *appconfig.CreateApplicationInput) *AppConfigCreateApplicationFuture
 
 	CreateConfigurationProfile(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) (*appconfig.CreateConfigurationProfileOutput, error)
-	CreateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) *AppconfigCreateConfigurationProfileResult
+	CreateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) *AppConfigCreateConfigurationProfileFuture
 
 	CreateDeploymentStrategy(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) (*appconfig.CreateDeploymentStrategyOutput, error)
-	CreateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) *AppconfigCreateDeploymentStrategyResult
+	CreateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) *AppConfigCreateDeploymentStrategyFuture
 
 	CreateEnvironment(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) (*appconfig.CreateEnvironmentOutput, error)
-	CreateEnvironmentAsync(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) *AppconfigCreateEnvironmentResult
+	CreateEnvironmentAsync(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) *AppConfigCreateEnvironmentFuture
 
 	CreateHostedConfigurationVersion(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) (*appconfig.CreateHostedConfigurationVersionOutput, error)
-	CreateHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) *AppconfigCreateHostedConfigurationVersionResult
+	CreateHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) *AppConfigCreateHostedConfigurationVersionFuture
 
 	DeleteApplication(ctx workflow.Context, input *appconfig.DeleteApplicationInput) (*appconfig.DeleteApplicationOutput, error)
-	DeleteApplicationAsync(ctx workflow.Context, input *appconfig.DeleteApplicationInput) *AppconfigDeleteApplicationResult
+	DeleteApplicationAsync(ctx workflow.Context, input *appconfig.DeleteApplicationInput) *AppConfigDeleteApplicationFuture
 
 	DeleteConfigurationProfile(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) (*appconfig.DeleteConfigurationProfileOutput, error)
-	DeleteConfigurationProfileAsync(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) *AppconfigDeleteConfigurationProfileResult
+	DeleteConfigurationProfileAsync(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) *AppConfigDeleteConfigurationProfileFuture
 
 	DeleteDeploymentStrategy(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) (*appconfig.DeleteDeploymentStrategyOutput, error)
-	DeleteDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) *AppconfigDeleteDeploymentStrategyResult
+	DeleteDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) *AppConfigDeleteDeploymentStrategyFuture
 
 	DeleteEnvironment(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) (*appconfig.DeleteEnvironmentOutput, error)
-	DeleteEnvironmentAsync(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) *AppconfigDeleteEnvironmentResult
+	DeleteEnvironmentAsync(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) *AppConfigDeleteEnvironmentFuture
 
 	DeleteHostedConfigurationVersion(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) (*appconfig.DeleteHostedConfigurationVersionOutput, error)
-	DeleteHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) *AppconfigDeleteHostedConfigurationVersionResult
+	DeleteHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) *AppConfigDeleteHostedConfigurationVersionFuture
 
 	GetApplication(ctx workflow.Context, input *appconfig.GetApplicationInput) (*appconfig.GetApplicationOutput, error)
-	GetApplicationAsync(ctx workflow.Context, input *appconfig.GetApplicationInput) *AppconfigGetApplicationResult
+	GetApplicationAsync(ctx workflow.Context, input *appconfig.GetApplicationInput) *AppConfigGetApplicationFuture
 
 	GetConfiguration(ctx workflow.Context, input *appconfig.GetConfigurationInput) (*appconfig.GetConfigurationOutput, error)
-	GetConfigurationAsync(ctx workflow.Context, input *appconfig.GetConfigurationInput) *AppconfigGetConfigurationResult
+	GetConfigurationAsync(ctx workflow.Context, input *appconfig.GetConfigurationInput) *AppConfigGetConfigurationFuture
 
 	GetConfigurationProfile(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) (*appconfig.GetConfigurationProfileOutput, error)
-	GetConfigurationProfileAsync(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) *AppconfigGetConfigurationProfileResult
+	GetConfigurationProfileAsync(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) *AppConfigGetConfigurationProfileFuture
 
 	GetDeployment(ctx workflow.Context, input *appconfig.GetDeploymentInput) (*appconfig.GetDeploymentOutput, error)
-	GetDeploymentAsync(ctx workflow.Context, input *appconfig.GetDeploymentInput) *AppconfigGetDeploymentResult
+	GetDeploymentAsync(ctx workflow.Context, input *appconfig.GetDeploymentInput) *AppConfigGetDeploymentFuture
 
 	GetDeploymentStrategy(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) (*appconfig.GetDeploymentStrategyOutput, error)
-	GetDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) *AppconfigGetDeploymentStrategyResult
+	GetDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) *AppConfigGetDeploymentStrategyFuture
 
 	GetEnvironment(ctx workflow.Context, input *appconfig.GetEnvironmentInput) (*appconfig.GetEnvironmentOutput, error)
-	GetEnvironmentAsync(ctx workflow.Context, input *appconfig.GetEnvironmentInput) *AppconfigGetEnvironmentResult
+	GetEnvironmentAsync(ctx workflow.Context, input *appconfig.GetEnvironmentInput) *AppConfigGetEnvironmentFuture
 
 	GetHostedConfigurationVersion(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) (*appconfig.GetHostedConfigurationVersionOutput, error)
-	GetHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) *AppconfigGetHostedConfigurationVersionResult
+	GetHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) *AppConfigGetHostedConfigurationVersionFuture
 
 	ListApplications(ctx workflow.Context, input *appconfig.ListApplicationsInput) (*appconfig.ListApplicationsOutput, error)
-	ListApplicationsAsync(ctx workflow.Context, input *appconfig.ListApplicationsInput) *AppconfigListApplicationsResult
+	ListApplicationsAsync(ctx workflow.Context, input *appconfig.ListApplicationsInput) *AppConfigListApplicationsFuture
 
 	ListConfigurationProfiles(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) (*appconfig.ListConfigurationProfilesOutput, error)
-	ListConfigurationProfilesAsync(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) *AppconfigListConfigurationProfilesResult
+	ListConfigurationProfilesAsync(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) *AppConfigListConfigurationProfilesFuture
 
 	ListDeploymentStrategies(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) (*appconfig.ListDeploymentStrategiesOutput, error)
-	ListDeploymentStrategiesAsync(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) *AppconfigListDeploymentStrategiesResult
+	ListDeploymentStrategiesAsync(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) *AppConfigListDeploymentStrategiesFuture
 
 	ListDeployments(ctx workflow.Context, input *appconfig.ListDeploymentsInput) (*appconfig.ListDeploymentsOutput, error)
-	ListDeploymentsAsync(ctx workflow.Context, input *appconfig.ListDeploymentsInput) *AppconfigListDeploymentsResult
+	ListDeploymentsAsync(ctx workflow.Context, input *appconfig.ListDeploymentsInput) *AppConfigListDeploymentsFuture
 
 	ListEnvironments(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) (*appconfig.ListEnvironmentsOutput, error)
-	ListEnvironmentsAsync(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) *AppconfigListEnvironmentsResult
+	ListEnvironmentsAsync(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) *AppConfigListEnvironmentsFuture
 
 	ListHostedConfigurationVersions(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) (*appconfig.ListHostedConfigurationVersionsOutput, error)
-	ListHostedConfigurationVersionsAsync(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) *AppconfigListHostedConfigurationVersionsResult
+	ListHostedConfigurationVersionsAsync(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) *AppConfigListHostedConfigurationVersionsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) (*appconfig.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) *AppconfigListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) *AppConfigListTagsForResourceFuture
 
 	StartDeployment(ctx workflow.Context, input *appconfig.StartDeploymentInput) (*appconfig.StartDeploymentOutput, error)
-	StartDeploymentAsync(ctx workflow.Context, input *appconfig.StartDeploymentInput) *AppconfigStartDeploymentResult
+	StartDeploymentAsync(ctx workflow.Context, input *appconfig.StartDeploymentInput) *AppConfigStartDeploymentFuture
 
 	StopDeployment(ctx workflow.Context, input *appconfig.StopDeploymentInput) (*appconfig.StopDeploymentOutput, error)
-	StopDeploymentAsync(ctx workflow.Context, input *appconfig.StopDeploymentInput) *AppconfigStopDeploymentResult
+	StopDeploymentAsync(ctx workflow.Context, input *appconfig.StopDeploymentInput) *AppConfigStopDeploymentFuture
 
 	TagResource(ctx workflow.Context, input *appconfig.TagResourceInput) (*appconfig.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *appconfig.TagResourceInput) *AppconfigTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *appconfig.TagResourceInput) *AppConfigTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *appconfig.UntagResourceInput) (*appconfig.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *appconfig.UntagResourceInput) *AppconfigUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *appconfig.UntagResourceInput) *AppConfigUntagResourceFuture
 
 	UpdateApplication(ctx workflow.Context, input *appconfig.UpdateApplicationInput) (*appconfig.UpdateApplicationOutput, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *appconfig.UpdateApplicationInput) *AppconfigUpdateApplicationResult
+	UpdateApplicationAsync(ctx workflow.Context, input *appconfig.UpdateApplicationInput) *AppConfigUpdateApplicationFuture
 
 	UpdateConfigurationProfile(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) (*appconfig.UpdateConfigurationProfileOutput, error)
-	UpdateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) *AppconfigUpdateConfigurationProfileResult
+	UpdateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) *AppConfigUpdateConfigurationProfileFuture
 
 	UpdateDeploymentStrategy(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) (*appconfig.UpdateDeploymentStrategyOutput, error)
-	UpdateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) *AppconfigUpdateDeploymentStrategyResult
+	UpdateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) *AppConfigUpdateDeploymentStrategyFuture
 
 	UpdateEnvironment(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) (*appconfig.UpdateEnvironmentOutput, error)
-	UpdateEnvironmentAsync(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) *AppconfigUpdateEnvironmentResult
+	UpdateEnvironmentAsync(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) *AppConfigUpdateEnvironmentFuture
 
 	ValidateConfiguration(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) (*appconfig.ValidateConfigurationOutput, error)
-	ValidateConfigurationAsync(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) *AppconfigValidateConfigurationResult
+	ValidateConfigurationAsync(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) *AppConfigValidateConfigurationFuture
 }
 
 type AppConfigStub struct{}
@@ -116,333 +116,366 @@ func NewAppConfigStub() AppConfigClient {
 	return &AppConfigStub{}
 }
 
-type AppconfigCreateApplicationResult struct {
-	Result workflow.Future
+type AppConfigCreateApplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigCreateApplicationResult) Get(ctx workflow.Context) (*appconfig.CreateApplicationOutput, error) {
+func (r *AppConfigCreateApplicationFuture) Get(ctx workflow.Context) (*appconfig.CreateApplicationOutput, error) {
 	var output appconfig.CreateApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigCreateConfigurationProfileResult struct {
-	Result workflow.Future
+type AppConfigCreateConfigurationProfileFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigCreateConfigurationProfileResult) Get(ctx workflow.Context) (*appconfig.CreateConfigurationProfileOutput, error) {
+func (r *AppConfigCreateConfigurationProfileFuture) Get(ctx workflow.Context) (*appconfig.CreateConfigurationProfileOutput, error) {
 	var output appconfig.CreateConfigurationProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigCreateDeploymentStrategyResult struct {
-	Result workflow.Future
+type AppConfigCreateDeploymentStrategyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigCreateDeploymentStrategyResult) Get(ctx workflow.Context) (*appconfig.CreateDeploymentStrategyOutput, error) {
+func (r *AppConfigCreateDeploymentStrategyFuture) Get(ctx workflow.Context) (*appconfig.CreateDeploymentStrategyOutput, error) {
 	var output appconfig.CreateDeploymentStrategyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigCreateEnvironmentResult struct {
-	Result workflow.Future
+type AppConfigCreateEnvironmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigCreateEnvironmentResult) Get(ctx workflow.Context) (*appconfig.CreateEnvironmentOutput, error) {
+func (r *AppConfigCreateEnvironmentFuture) Get(ctx workflow.Context) (*appconfig.CreateEnvironmentOutput, error) {
 	var output appconfig.CreateEnvironmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigCreateHostedConfigurationVersionResult struct {
-	Result workflow.Future
+type AppConfigCreateHostedConfigurationVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigCreateHostedConfigurationVersionResult) Get(ctx workflow.Context) (*appconfig.CreateHostedConfigurationVersionOutput, error) {
+func (r *AppConfigCreateHostedConfigurationVersionFuture) Get(ctx workflow.Context) (*appconfig.CreateHostedConfigurationVersionOutput, error) {
 	var output appconfig.CreateHostedConfigurationVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigDeleteApplicationResult struct {
-	Result workflow.Future
+type AppConfigDeleteApplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigDeleteApplicationResult) Get(ctx workflow.Context) (*appconfig.DeleteApplicationOutput, error) {
+func (r *AppConfigDeleteApplicationFuture) Get(ctx workflow.Context) (*appconfig.DeleteApplicationOutput, error) {
 	var output appconfig.DeleteApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigDeleteConfigurationProfileResult struct {
-	Result workflow.Future
+type AppConfigDeleteConfigurationProfileFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigDeleteConfigurationProfileResult) Get(ctx workflow.Context) (*appconfig.DeleteConfigurationProfileOutput, error) {
+func (r *AppConfigDeleteConfigurationProfileFuture) Get(ctx workflow.Context) (*appconfig.DeleteConfigurationProfileOutput, error) {
 	var output appconfig.DeleteConfigurationProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigDeleteDeploymentStrategyResult struct {
-	Result workflow.Future
+type AppConfigDeleteDeploymentStrategyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigDeleteDeploymentStrategyResult) Get(ctx workflow.Context) (*appconfig.DeleteDeploymentStrategyOutput, error) {
+func (r *AppConfigDeleteDeploymentStrategyFuture) Get(ctx workflow.Context) (*appconfig.DeleteDeploymentStrategyOutput, error) {
 	var output appconfig.DeleteDeploymentStrategyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigDeleteEnvironmentResult struct {
-	Result workflow.Future
+type AppConfigDeleteEnvironmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigDeleteEnvironmentResult) Get(ctx workflow.Context) (*appconfig.DeleteEnvironmentOutput, error) {
+func (r *AppConfigDeleteEnvironmentFuture) Get(ctx workflow.Context) (*appconfig.DeleteEnvironmentOutput, error) {
 	var output appconfig.DeleteEnvironmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigDeleteHostedConfigurationVersionResult struct {
-	Result workflow.Future
+type AppConfigDeleteHostedConfigurationVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigDeleteHostedConfigurationVersionResult) Get(ctx workflow.Context) (*appconfig.DeleteHostedConfigurationVersionOutput, error) {
+func (r *AppConfigDeleteHostedConfigurationVersionFuture) Get(ctx workflow.Context) (*appconfig.DeleteHostedConfigurationVersionOutput, error) {
 	var output appconfig.DeleteHostedConfigurationVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigGetApplicationResult struct {
-	Result workflow.Future
+type AppConfigGetApplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigGetApplicationResult) Get(ctx workflow.Context) (*appconfig.GetApplicationOutput, error) {
+func (r *AppConfigGetApplicationFuture) Get(ctx workflow.Context) (*appconfig.GetApplicationOutput, error) {
 	var output appconfig.GetApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigGetConfigurationResult struct {
-	Result workflow.Future
+type AppConfigGetConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigGetConfigurationResult) Get(ctx workflow.Context) (*appconfig.GetConfigurationOutput, error) {
+func (r *AppConfigGetConfigurationFuture) Get(ctx workflow.Context) (*appconfig.GetConfigurationOutput, error) {
 	var output appconfig.GetConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigGetConfigurationProfileResult struct {
-	Result workflow.Future
+type AppConfigGetConfigurationProfileFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigGetConfigurationProfileResult) Get(ctx workflow.Context) (*appconfig.GetConfigurationProfileOutput, error) {
+func (r *AppConfigGetConfigurationProfileFuture) Get(ctx workflow.Context) (*appconfig.GetConfigurationProfileOutput, error) {
 	var output appconfig.GetConfigurationProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigGetDeploymentResult struct {
-	Result workflow.Future
+type AppConfigGetDeploymentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigGetDeploymentResult) Get(ctx workflow.Context) (*appconfig.GetDeploymentOutput, error) {
+func (r *AppConfigGetDeploymentFuture) Get(ctx workflow.Context) (*appconfig.GetDeploymentOutput, error) {
 	var output appconfig.GetDeploymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigGetDeploymentStrategyResult struct {
-	Result workflow.Future
+type AppConfigGetDeploymentStrategyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigGetDeploymentStrategyResult) Get(ctx workflow.Context) (*appconfig.GetDeploymentStrategyOutput, error) {
+func (r *AppConfigGetDeploymentStrategyFuture) Get(ctx workflow.Context) (*appconfig.GetDeploymentStrategyOutput, error) {
 	var output appconfig.GetDeploymentStrategyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigGetEnvironmentResult struct {
-	Result workflow.Future
+type AppConfigGetEnvironmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigGetEnvironmentResult) Get(ctx workflow.Context) (*appconfig.GetEnvironmentOutput, error) {
+func (r *AppConfigGetEnvironmentFuture) Get(ctx workflow.Context) (*appconfig.GetEnvironmentOutput, error) {
 	var output appconfig.GetEnvironmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigGetHostedConfigurationVersionResult struct {
-	Result workflow.Future
+type AppConfigGetHostedConfigurationVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigGetHostedConfigurationVersionResult) Get(ctx workflow.Context) (*appconfig.GetHostedConfigurationVersionOutput, error) {
+func (r *AppConfigGetHostedConfigurationVersionFuture) Get(ctx workflow.Context) (*appconfig.GetHostedConfigurationVersionOutput, error) {
 	var output appconfig.GetHostedConfigurationVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigListApplicationsResult struct {
-	Result workflow.Future
+type AppConfigListApplicationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigListApplicationsResult) Get(ctx workflow.Context) (*appconfig.ListApplicationsOutput, error) {
+func (r *AppConfigListApplicationsFuture) Get(ctx workflow.Context) (*appconfig.ListApplicationsOutput, error) {
 	var output appconfig.ListApplicationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigListConfigurationProfilesResult struct {
-	Result workflow.Future
+type AppConfigListConfigurationProfilesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigListConfigurationProfilesResult) Get(ctx workflow.Context) (*appconfig.ListConfigurationProfilesOutput, error) {
+func (r *AppConfigListConfigurationProfilesFuture) Get(ctx workflow.Context) (*appconfig.ListConfigurationProfilesOutput, error) {
 	var output appconfig.ListConfigurationProfilesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigListDeploymentStrategiesResult struct {
-	Result workflow.Future
+type AppConfigListDeploymentStrategiesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigListDeploymentStrategiesResult) Get(ctx workflow.Context) (*appconfig.ListDeploymentStrategiesOutput, error) {
+func (r *AppConfigListDeploymentStrategiesFuture) Get(ctx workflow.Context) (*appconfig.ListDeploymentStrategiesOutput, error) {
 	var output appconfig.ListDeploymentStrategiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigListDeploymentsResult struct {
-	Result workflow.Future
+type AppConfigListDeploymentsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigListDeploymentsResult) Get(ctx workflow.Context) (*appconfig.ListDeploymentsOutput, error) {
+func (r *AppConfigListDeploymentsFuture) Get(ctx workflow.Context) (*appconfig.ListDeploymentsOutput, error) {
 	var output appconfig.ListDeploymentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigListEnvironmentsResult struct {
-	Result workflow.Future
+type AppConfigListEnvironmentsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigListEnvironmentsResult) Get(ctx workflow.Context) (*appconfig.ListEnvironmentsOutput, error) {
+func (r *AppConfigListEnvironmentsFuture) Get(ctx workflow.Context) (*appconfig.ListEnvironmentsOutput, error) {
 	var output appconfig.ListEnvironmentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigListHostedConfigurationVersionsResult struct {
-	Result workflow.Future
+type AppConfigListHostedConfigurationVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigListHostedConfigurationVersionsResult) Get(ctx workflow.Context) (*appconfig.ListHostedConfigurationVersionsOutput, error) {
+func (r *AppConfigListHostedConfigurationVersionsFuture) Get(ctx workflow.Context) (*appconfig.ListHostedConfigurationVersionsOutput, error) {
 	var output appconfig.ListHostedConfigurationVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigListTagsForResourceResult struct {
-	Result workflow.Future
+type AppConfigListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigListTagsForResourceResult) Get(ctx workflow.Context) (*appconfig.ListTagsForResourceOutput, error) {
+func (r *AppConfigListTagsForResourceFuture) Get(ctx workflow.Context) (*appconfig.ListTagsForResourceOutput, error) {
 	var output appconfig.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigStartDeploymentResult struct {
-	Result workflow.Future
+type AppConfigStartDeploymentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigStartDeploymentResult) Get(ctx workflow.Context) (*appconfig.StartDeploymentOutput, error) {
+func (r *AppConfigStartDeploymentFuture) Get(ctx workflow.Context) (*appconfig.StartDeploymentOutput, error) {
 	var output appconfig.StartDeploymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigStopDeploymentResult struct {
-	Result workflow.Future
+type AppConfigStopDeploymentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigStopDeploymentResult) Get(ctx workflow.Context) (*appconfig.StopDeploymentOutput, error) {
+func (r *AppConfigStopDeploymentFuture) Get(ctx workflow.Context) (*appconfig.StopDeploymentOutput, error) {
 	var output appconfig.StopDeploymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigTagResourceResult struct {
-	Result workflow.Future
+type AppConfigTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigTagResourceResult) Get(ctx workflow.Context) (*appconfig.TagResourceOutput, error) {
+func (r *AppConfigTagResourceFuture) Get(ctx workflow.Context) (*appconfig.TagResourceOutput, error) {
 	var output appconfig.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigUntagResourceResult struct {
-	Result workflow.Future
+type AppConfigUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigUntagResourceResult) Get(ctx workflow.Context) (*appconfig.UntagResourceOutput, error) {
+func (r *AppConfigUntagResourceFuture) Get(ctx workflow.Context) (*appconfig.UntagResourceOutput, error) {
 	var output appconfig.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigUpdateApplicationResult struct {
-	Result workflow.Future
+type AppConfigUpdateApplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigUpdateApplicationResult) Get(ctx workflow.Context) (*appconfig.UpdateApplicationOutput, error) {
+func (r *AppConfigUpdateApplicationFuture) Get(ctx workflow.Context) (*appconfig.UpdateApplicationOutput, error) {
 	var output appconfig.UpdateApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigUpdateConfigurationProfileResult struct {
-	Result workflow.Future
+type AppConfigUpdateConfigurationProfileFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigUpdateConfigurationProfileResult) Get(ctx workflow.Context) (*appconfig.UpdateConfigurationProfileOutput, error) {
+func (r *AppConfigUpdateConfigurationProfileFuture) Get(ctx workflow.Context) (*appconfig.UpdateConfigurationProfileOutput, error) {
 	var output appconfig.UpdateConfigurationProfileOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigUpdateDeploymentStrategyResult struct {
-	Result workflow.Future
+type AppConfigUpdateDeploymentStrategyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigUpdateDeploymentStrategyResult) Get(ctx workflow.Context) (*appconfig.UpdateDeploymentStrategyOutput, error) {
+func (r *AppConfigUpdateDeploymentStrategyFuture) Get(ctx workflow.Context) (*appconfig.UpdateDeploymentStrategyOutput, error) {
 	var output appconfig.UpdateDeploymentStrategyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigUpdateEnvironmentResult struct {
-	Result workflow.Future
+type AppConfigUpdateEnvironmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigUpdateEnvironmentResult) Get(ctx workflow.Context) (*appconfig.UpdateEnvironmentOutput, error) {
+func (r *AppConfigUpdateEnvironmentFuture) Get(ctx workflow.Context) (*appconfig.UpdateEnvironmentOutput, error) {
 	var output appconfig.UpdateEnvironmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppconfigValidateConfigurationResult struct {
-	Result workflow.Future
+type AppConfigValidateConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppconfigValidateConfigurationResult) Get(ctx workflow.Context) (*appconfig.ValidateConfigurationOutput, error) {
+func (r *AppConfigValidateConfigurationFuture) Get(ctx workflow.Context) (*appconfig.ValidateConfigurationOutput, error) {
 	var output appconfig.ValidateConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -452,9 +485,9 @@ func (a *AppConfigStub) CreateApplication(ctx workflow.Context, input *appconfig
 	return &output, err
 }
 
-func (a *AppConfigStub) CreateApplicationAsync(ctx workflow.Context, input *appconfig.CreateApplicationInput) *AppconfigCreateApplicationResult {
+func (a *AppConfigStub) CreateApplicationAsync(ctx workflow.Context, input *appconfig.CreateApplicationInput) *AppConfigCreateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.CreateApplication", input)
-	return &AppconfigCreateApplicationResult{Result: future}
+	return &AppConfigCreateApplicationFuture{Future: future}
 }
 
 func (a *AppConfigStub) CreateConfigurationProfile(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) (*appconfig.CreateConfigurationProfileOutput, error) {
@@ -463,9 +496,9 @@ func (a *AppConfigStub) CreateConfigurationProfile(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *AppConfigStub) CreateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) *AppconfigCreateConfigurationProfileResult {
+func (a *AppConfigStub) CreateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) *AppConfigCreateConfigurationProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.CreateConfigurationProfile", input)
-	return &AppconfigCreateConfigurationProfileResult{Result: future}
+	return &AppConfigCreateConfigurationProfileFuture{Future: future}
 }
 
 func (a *AppConfigStub) CreateDeploymentStrategy(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) (*appconfig.CreateDeploymentStrategyOutput, error) {
@@ -474,9 +507,9 @@ func (a *AppConfigStub) CreateDeploymentStrategy(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *AppConfigStub) CreateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) *AppconfigCreateDeploymentStrategyResult {
+func (a *AppConfigStub) CreateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) *AppConfigCreateDeploymentStrategyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.CreateDeploymentStrategy", input)
-	return &AppconfigCreateDeploymentStrategyResult{Result: future}
+	return &AppConfigCreateDeploymentStrategyFuture{Future: future}
 }
 
 func (a *AppConfigStub) CreateEnvironment(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) (*appconfig.CreateEnvironmentOutput, error) {
@@ -485,9 +518,9 @@ func (a *AppConfigStub) CreateEnvironment(ctx workflow.Context, input *appconfig
 	return &output, err
 }
 
-func (a *AppConfigStub) CreateEnvironmentAsync(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) *AppconfigCreateEnvironmentResult {
+func (a *AppConfigStub) CreateEnvironmentAsync(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) *AppConfigCreateEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.CreateEnvironment", input)
-	return &AppconfigCreateEnvironmentResult{Result: future}
+	return &AppConfigCreateEnvironmentFuture{Future: future}
 }
 
 func (a *AppConfigStub) CreateHostedConfigurationVersion(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) (*appconfig.CreateHostedConfigurationVersionOutput, error) {
@@ -496,9 +529,9 @@ func (a *AppConfigStub) CreateHostedConfigurationVersion(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *AppConfigStub) CreateHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) *AppconfigCreateHostedConfigurationVersionResult {
+func (a *AppConfigStub) CreateHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) *AppConfigCreateHostedConfigurationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.CreateHostedConfigurationVersion", input)
-	return &AppconfigCreateHostedConfigurationVersionResult{Result: future}
+	return &AppConfigCreateHostedConfigurationVersionFuture{Future: future}
 }
 
 func (a *AppConfigStub) DeleteApplication(ctx workflow.Context, input *appconfig.DeleteApplicationInput) (*appconfig.DeleteApplicationOutput, error) {
@@ -507,9 +540,9 @@ func (a *AppConfigStub) DeleteApplication(ctx workflow.Context, input *appconfig
 	return &output, err
 }
 
-func (a *AppConfigStub) DeleteApplicationAsync(ctx workflow.Context, input *appconfig.DeleteApplicationInput) *AppconfigDeleteApplicationResult {
+func (a *AppConfigStub) DeleteApplicationAsync(ctx workflow.Context, input *appconfig.DeleteApplicationInput) *AppConfigDeleteApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.DeleteApplication", input)
-	return &AppconfigDeleteApplicationResult{Result: future}
+	return &AppConfigDeleteApplicationFuture{Future: future}
 }
 
 func (a *AppConfigStub) DeleteConfigurationProfile(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) (*appconfig.DeleteConfigurationProfileOutput, error) {
@@ -518,9 +551,9 @@ func (a *AppConfigStub) DeleteConfigurationProfile(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *AppConfigStub) DeleteConfigurationProfileAsync(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) *AppconfigDeleteConfigurationProfileResult {
+func (a *AppConfigStub) DeleteConfigurationProfileAsync(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) *AppConfigDeleteConfigurationProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.DeleteConfigurationProfile", input)
-	return &AppconfigDeleteConfigurationProfileResult{Result: future}
+	return &AppConfigDeleteConfigurationProfileFuture{Future: future}
 }
 
 func (a *AppConfigStub) DeleteDeploymentStrategy(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) (*appconfig.DeleteDeploymentStrategyOutput, error) {
@@ -529,9 +562,9 @@ func (a *AppConfigStub) DeleteDeploymentStrategy(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *AppConfigStub) DeleteDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) *AppconfigDeleteDeploymentStrategyResult {
+func (a *AppConfigStub) DeleteDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) *AppConfigDeleteDeploymentStrategyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.DeleteDeploymentStrategy", input)
-	return &AppconfigDeleteDeploymentStrategyResult{Result: future}
+	return &AppConfigDeleteDeploymentStrategyFuture{Future: future}
 }
 
 func (a *AppConfigStub) DeleteEnvironment(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) (*appconfig.DeleteEnvironmentOutput, error) {
@@ -540,9 +573,9 @@ func (a *AppConfigStub) DeleteEnvironment(ctx workflow.Context, input *appconfig
 	return &output, err
 }
 
-func (a *AppConfigStub) DeleteEnvironmentAsync(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) *AppconfigDeleteEnvironmentResult {
+func (a *AppConfigStub) DeleteEnvironmentAsync(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) *AppConfigDeleteEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.DeleteEnvironment", input)
-	return &AppconfigDeleteEnvironmentResult{Result: future}
+	return &AppConfigDeleteEnvironmentFuture{Future: future}
 }
 
 func (a *AppConfigStub) DeleteHostedConfigurationVersion(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) (*appconfig.DeleteHostedConfigurationVersionOutput, error) {
@@ -551,9 +584,9 @@ func (a *AppConfigStub) DeleteHostedConfigurationVersion(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *AppConfigStub) DeleteHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) *AppconfigDeleteHostedConfigurationVersionResult {
+func (a *AppConfigStub) DeleteHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) *AppConfigDeleteHostedConfigurationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.DeleteHostedConfigurationVersion", input)
-	return &AppconfigDeleteHostedConfigurationVersionResult{Result: future}
+	return &AppConfigDeleteHostedConfigurationVersionFuture{Future: future}
 }
 
 func (a *AppConfigStub) GetApplication(ctx workflow.Context, input *appconfig.GetApplicationInput) (*appconfig.GetApplicationOutput, error) {
@@ -562,9 +595,9 @@ func (a *AppConfigStub) GetApplication(ctx workflow.Context, input *appconfig.Ge
 	return &output, err
 }
 
-func (a *AppConfigStub) GetApplicationAsync(ctx workflow.Context, input *appconfig.GetApplicationInput) *AppconfigGetApplicationResult {
+func (a *AppConfigStub) GetApplicationAsync(ctx workflow.Context, input *appconfig.GetApplicationInput) *AppConfigGetApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.GetApplication", input)
-	return &AppconfigGetApplicationResult{Result: future}
+	return &AppConfigGetApplicationFuture{Future: future}
 }
 
 func (a *AppConfigStub) GetConfiguration(ctx workflow.Context, input *appconfig.GetConfigurationInput) (*appconfig.GetConfigurationOutput, error) {
@@ -573,9 +606,9 @@ func (a *AppConfigStub) GetConfiguration(ctx workflow.Context, input *appconfig.
 	return &output, err
 }
 
-func (a *AppConfigStub) GetConfigurationAsync(ctx workflow.Context, input *appconfig.GetConfigurationInput) *AppconfigGetConfigurationResult {
+func (a *AppConfigStub) GetConfigurationAsync(ctx workflow.Context, input *appconfig.GetConfigurationInput) *AppConfigGetConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.GetConfiguration", input)
-	return &AppconfigGetConfigurationResult{Result: future}
+	return &AppConfigGetConfigurationFuture{Future: future}
 }
 
 func (a *AppConfigStub) GetConfigurationProfile(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) (*appconfig.GetConfigurationProfileOutput, error) {
@@ -584,9 +617,9 @@ func (a *AppConfigStub) GetConfigurationProfile(ctx workflow.Context, input *app
 	return &output, err
 }
 
-func (a *AppConfigStub) GetConfigurationProfileAsync(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) *AppconfigGetConfigurationProfileResult {
+func (a *AppConfigStub) GetConfigurationProfileAsync(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) *AppConfigGetConfigurationProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.GetConfigurationProfile", input)
-	return &AppconfigGetConfigurationProfileResult{Result: future}
+	return &AppConfigGetConfigurationProfileFuture{Future: future}
 }
 
 func (a *AppConfigStub) GetDeployment(ctx workflow.Context, input *appconfig.GetDeploymentInput) (*appconfig.GetDeploymentOutput, error) {
@@ -595,9 +628,9 @@ func (a *AppConfigStub) GetDeployment(ctx workflow.Context, input *appconfig.Get
 	return &output, err
 }
 
-func (a *AppConfigStub) GetDeploymentAsync(ctx workflow.Context, input *appconfig.GetDeploymentInput) *AppconfigGetDeploymentResult {
+func (a *AppConfigStub) GetDeploymentAsync(ctx workflow.Context, input *appconfig.GetDeploymentInput) *AppConfigGetDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.GetDeployment", input)
-	return &AppconfigGetDeploymentResult{Result: future}
+	return &AppConfigGetDeploymentFuture{Future: future}
 }
 
 func (a *AppConfigStub) GetDeploymentStrategy(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) (*appconfig.GetDeploymentStrategyOutput, error) {
@@ -606,9 +639,9 @@ func (a *AppConfigStub) GetDeploymentStrategy(ctx workflow.Context, input *appco
 	return &output, err
 }
 
-func (a *AppConfigStub) GetDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) *AppconfigGetDeploymentStrategyResult {
+func (a *AppConfigStub) GetDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) *AppConfigGetDeploymentStrategyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.GetDeploymentStrategy", input)
-	return &AppconfigGetDeploymentStrategyResult{Result: future}
+	return &AppConfigGetDeploymentStrategyFuture{Future: future}
 }
 
 func (a *AppConfigStub) GetEnvironment(ctx workflow.Context, input *appconfig.GetEnvironmentInput) (*appconfig.GetEnvironmentOutput, error) {
@@ -617,9 +650,9 @@ func (a *AppConfigStub) GetEnvironment(ctx workflow.Context, input *appconfig.Ge
 	return &output, err
 }
 
-func (a *AppConfigStub) GetEnvironmentAsync(ctx workflow.Context, input *appconfig.GetEnvironmentInput) *AppconfigGetEnvironmentResult {
+func (a *AppConfigStub) GetEnvironmentAsync(ctx workflow.Context, input *appconfig.GetEnvironmentInput) *AppConfigGetEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.GetEnvironment", input)
-	return &AppconfigGetEnvironmentResult{Result: future}
+	return &AppConfigGetEnvironmentFuture{Future: future}
 }
 
 func (a *AppConfigStub) GetHostedConfigurationVersion(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) (*appconfig.GetHostedConfigurationVersionOutput, error) {
@@ -628,9 +661,9 @@ func (a *AppConfigStub) GetHostedConfigurationVersion(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *AppConfigStub) GetHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) *AppconfigGetHostedConfigurationVersionResult {
+func (a *AppConfigStub) GetHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) *AppConfigGetHostedConfigurationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.GetHostedConfigurationVersion", input)
-	return &AppconfigGetHostedConfigurationVersionResult{Result: future}
+	return &AppConfigGetHostedConfigurationVersionFuture{Future: future}
 }
 
 func (a *AppConfigStub) ListApplications(ctx workflow.Context, input *appconfig.ListApplicationsInput) (*appconfig.ListApplicationsOutput, error) {
@@ -639,9 +672,9 @@ func (a *AppConfigStub) ListApplications(ctx workflow.Context, input *appconfig.
 	return &output, err
 }
 
-func (a *AppConfigStub) ListApplicationsAsync(ctx workflow.Context, input *appconfig.ListApplicationsInput) *AppconfigListApplicationsResult {
+func (a *AppConfigStub) ListApplicationsAsync(ctx workflow.Context, input *appconfig.ListApplicationsInput) *AppConfigListApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.ListApplications", input)
-	return &AppconfigListApplicationsResult{Result: future}
+	return &AppConfigListApplicationsFuture{Future: future}
 }
 
 func (a *AppConfigStub) ListConfigurationProfiles(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) (*appconfig.ListConfigurationProfilesOutput, error) {
@@ -650,9 +683,9 @@ func (a *AppConfigStub) ListConfigurationProfiles(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *AppConfigStub) ListConfigurationProfilesAsync(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) *AppconfigListConfigurationProfilesResult {
+func (a *AppConfigStub) ListConfigurationProfilesAsync(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) *AppConfigListConfigurationProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.ListConfigurationProfiles", input)
-	return &AppconfigListConfigurationProfilesResult{Result: future}
+	return &AppConfigListConfigurationProfilesFuture{Future: future}
 }
 
 func (a *AppConfigStub) ListDeploymentStrategies(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) (*appconfig.ListDeploymentStrategiesOutput, error) {
@@ -661,9 +694,9 @@ func (a *AppConfigStub) ListDeploymentStrategies(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *AppConfigStub) ListDeploymentStrategiesAsync(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) *AppconfigListDeploymentStrategiesResult {
+func (a *AppConfigStub) ListDeploymentStrategiesAsync(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) *AppConfigListDeploymentStrategiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.ListDeploymentStrategies", input)
-	return &AppconfigListDeploymentStrategiesResult{Result: future}
+	return &AppConfigListDeploymentStrategiesFuture{Future: future}
 }
 
 func (a *AppConfigStub) ListDeployments(ctx workflow.Context, input *appconfig.ListDeploymentsInput) (*appconfig.ListDeploymentsOutput, error) {
@@ -672,9 +705,9 @@ func (a *AppConfigStub) ListDeployments(ctx workflow.Context, input *appconfig.L
 	return &output, err
 }
 
-func (a *AppConfigStub) ListDeploymentsAsync(ctx workflow.Context, input *appconfig.ListDeploymentsInput) *AppconfigListDeploymentsResult {
+func (a *AppConfigStub) ListDeploymentsAsync(ctx workflow.Context, input *appconfig.ListDeploymentsInput) *AppConfigListDeploymentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.ListDeployments", input)
-	return &AppconfigListDeploymentsResult{Result: future}
+	return &AppConfigListDeploymentsFuture{Future: future}
 }
 
 func (a *AppConfigStub) ListEnvironments(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) (*appconfig.ListEnvironmentsOutput, error) {
@@ -683,9 +716,9 @@ func (a *AppConfigStub) ListEnvironments(ctx workflow.Context, input *appconfig.
 	return &output, err
 }
 
-func (a *AppConfigStub) ListEnvironmentsAsync(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) *AppconfigListEnvironmentsResult {
+func (a *AppConfigStub) ListEnvironmentsAsync(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) *AppConfigListEnvironmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.ListEnvironments", input)
-	return &AppconfigListEnvironmentsResult{Result: future}
+	return &AppConfigListEnvironmentsFuture{Future: future}
 }
 
 func (a *AppConfigStub) ListHostedConfigurationVersions(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) (*appconfig.ListHostedConfigurationVersionsOutput, error) {
@@ -694,9 +727,9 @@ func (a *AppConfigStub) ListHostedConfigurationVersions(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *AppConfigStub) ListHostedConfigurationVersionsAsync(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) *AppconfigListHostedConfigurationVersionsResult {
+func (a *AppConfigStub) ListHostedConfigurationVersionsAsync(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) *AppConfigListHostedConfigurationVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.ListHostedConfigurationVersions", input)
-	return &AppconfigListHostedConfigurationVersionsResult{Result: future}
+	return &AppConfigListHostedConfigurationVersionsFuture{Future: future}
 }
 
 func (a *AppConfigStub) ListTagsForResource(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) (*appconfig.ListTagsForResourceOutput, error) {
@@ -705,9 +738,9 @@ func (a *AppConfigStub) ListTagsForResource(ctx workflow.Context, input *appconf
 	return &output, err
 }
 
-func (a *AppConfigStub) ListTagsForResourceAsync(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) *AppconfigListTagsForResourceResult {
+func (a *AppConfigStub) ListTagsForResourceAsync(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) *AppConfigListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.ListTagsForResource", input)
-	return &AppconfigListTagsForResourceResult{Result: future}
+	return &AppConfigListTagsForResourceFuture{Future: future}
 }
 
 func (a *AppConfigStub) StartDeployment(ctx workflow.Context, input *appconfig.StartDeploymentInput) (*appconfig.StartDeploymentOutput, error) {
@@ -716,9 +749,9 @@ func (a *AppConfigStub) StartDeployment(ctx workflow.Context, input *appconfig.S
 	return &output, err
 }
 
-func (a *AppConfigStub) StartDeploymentAsync(ctx workflow.Context, input *appconfig.StartDeploymentInput) *AppconfigStartDeploymentResult {
+func (a *AppConfigStub) StartDeploymentAsync(ctx workflow.Context, input *appconfig.StartDeploymentInput) *AppConfigStartDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.StartDeployment", input)
-	return &AppconfigStartDeploymentResult{Result: future}
+	return &AppConfigStartDeploymentFuture{Future: future}
 }
 
 func (a *AppConfigStub) StopDeployment(ctx workflow.Context, input *appconfig.StopDeploymentInput) (*appconfig.StopDeploymentOutput, error) {
@@ -727,9 +760,9 @@ func (a *AppConfigStub) StopDeployment(ctx workflow.Context, input *appconfig.St
 	return &output, err
 }
 
-func (a *AppConfigStub) StopDeploymentAsync(ctx workflow.Context, input *appconfig.StopDeploymentInput) *AppconfigStopDeploymentResult {
+func (a *AppConfigStub) StopDeploymentAsync(ctx workflow.Context, input *appconfig.StopDeploymentInput) *AppConfigStopDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.StopDeployment", input)
-	return &AppconfigStopDeploymentResult{Result: future}
+	return &AppConfigStopDeploymentFuture{Future: future}
 }
 
 func (a *AppConfigStub) TagResource(ctx workflow.Context, input *appconfig.TagResourceInput) (*appconfig.TagResourceOutput, error) {
@@ -738,9 +771,9 @@ func (a *AppConfigStub) TagResource(ctx workflow.Context, input *appconfig.TagRe
 	return &output, err
 }
 
-func (a *AppConfigStub) TagResourceAsync(ctx workflow.Context, input *appconfig.TagResourceInput) *AppconfigTagResourceResult {
+func (a *AppConfigStub) TagResourceAsync(ctx workflow.Context, input *appconfig.TagResourceInput) *AppConfigTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.TagResource", input)
-	return &AppconfigTagResourceResult{Result: future}
+	return &AppConfigTagResourceFuture{Future: future}
 }
 
 func (a *AppConfigStub) UntagResource(ctx workflow.Context, input *appconfig.UntagResourceInput) (*appconfig.UntagResourceOutput, error) {
@@ -749,9 +782,9 @@ func (a *AppConfigStub) UntagResource(ctx workflow.Context, input *appconfig.Unt
 	return &output, err
 }
 
-func (a *AppConfigStub) UntagResourceAsync(ctx workflow.Context, input *appconfig.UntagResourceInput) *AppconfigUntagResourceResult {
+func (a *AppConfigStub) UntagResourceAsync(ctx workflow.Context, input *appconfig.UntagResourceInput) *AppConfigUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.UntagResource", input)
-	return &AppconfigUntagResourceResult{Result: future}
+	return &AppConfigUntagResourceFuture{Future: future}
 }
 
 func (a *AppConfigStub) UpdateApplication(ctx workflow.Context, input *appconfig.UpdateApplicationInput) (*appconfig.UpdateApplicationOutput, error) {
@@ -760,9 +793,9 @@ func (a *AppConfigStub) UpdateApplication(ctx workflow.Context, input *appconfig
 	return &output, err
 }
 
-func (a *AppConfigStub) UpdateApplicationAsync(ctx workflow.Context, input *appconfig.UpdateApplicationInput) *AppconfigUpdateApplicationResult {
+func (a *AppConfigStub) UpdateApplicationAsync(ctx workflow.Context, input *appconfig.UpdateApplicationInput) *AppConfigUpdateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.UpdateApplication", input)
-	return &AppconfigUpdateApplicationResult{Result: future}
+	return &AppConfigUpdateApplicationFuture{Future: future}
 }
 
 func (a *AppConfigStub) UpdateConfigurationProfile(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) (*appconfig.UpdateConfigurationProfileOutput, error) {
@@ -771,9 +804,9 @@ func (a *AppConfigStub) UpdateConfigurationProfile(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *AppConfigStub) UpdateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) *AppconfigUpdateConfigurationProfileResult {
+func (a *AppConfigStub) UpdateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) *AppConfigUpdateConfigurationProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.UpdateConfigurationProfile", input)
-	return &AppconfigUpdateConfigurationProfileResult{Result: future}
+	return &AppConfigUpdateConfigurationProfileFuture{Future: future}
 }
 
 func (a *AppConfigStub) UpdateDeploymentStrategy(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) (*appconfig.UpdateDeploymentStrategyOutput, error) {
@@ -782,9 +815,9 @@ func (a *AppConfigStub) UpdateDeploymentStrategy(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *AppConfigStub) UpdateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) *AppconfigUpdateDeploymentStrategyResult {
+func (a *AppConfigStub) UpdateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) *AppConfigUpdateDeploymentStrategyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.UpdateDeploymentStrategy", input)
-	return &AppconfigUpdateDeploymentStrategyResult{Result: future}
+	return &AppConfigUpdateDeploymentStrategyFuture{Future: future}
 }
 
 func (a *AppConfigStub) UpdateEnvironment(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) (*appconfig.UpdateEnvironmentOutput, error) {
@@ -793,9 +826,9 @@ func (a *AppConfigStub) UpdateEnvironment(ctx workflow.Context, input *appconfig
 	return &output, err
 }
 
-func (a *AppConfigStub) UpdateEnvironmentAsync(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) *AppconfigUpdateEnvironmentResult {
+func (a *AppConfigStub) UpdateEnvironmentAsync(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) *AppConfigUpdateEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.UpdateEnvironment", input)
-	return &AppconfigUpdateEnvironmentResult{Result: future}
+	return &AppConfigUpdateEnvironmentFuture{Future: future}
 }
 
 func (a *AppConfigStub) ValidateConfiguration(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) (*appconfig.ValidateConfigurationOutput, error) {
@@ -804,7 +837,7 @@ func (a *AppConfigStub) ValidateConfiguration(ctx workflow.Context, input *appco
 	return &output, err
 }
 
-func (a *AppConfigStub) ValidateConfigurationAsync(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) *AppconfigValidateConfigurationResult {
+func (a *AppConfigStub) ValidateConfigurationAsync(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) *AppConfigValidateConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appconfig.ValidateConfiguration", input)
-	return &AppconfigValidateConfigurationResult{Result: future}
+	return &AppConfigValidateConfigurationFuture{Future: future}
 }

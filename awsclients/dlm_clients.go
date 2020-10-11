@@ -11,28 +11,28 @@ import (
 
 type DLMClient interface {
 	CreateLifecyclePolicy(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) (*dlm.CreateLifecyclePolicyOutput, error)
-	CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *DlmCreateLifecyclePolicyResult
+	CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *DLMCreateLifecyclePolicyFuture
 
 	DeleteLifecyclePolicy(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error)
-	DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DlmDeleteLifecyclePolicyResult
+	DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DLMDeleteLifecyclePolicyFuture
 
 	GetLifecyclePolicies(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error)
-	GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *DlmGetLifecyclePoliciesResult
+	GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *DLMGetLifecyclePoliciesFuture
 
 	GetLifecyclePolicy(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error)
-	GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *DlmGetLifecyclePolicyResult
+	GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *DLMGetLifecyclePolicyFuture
 
 	ListTagsForResource(ctx workflow.Context, input *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *DlmListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *DLMListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *dlm.TagResourceInput) (*dlm.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *DlmTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *DLMTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *DlmUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *DLMUntagResourceFuture
 
 	UpdateLifecyclePolicy(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error)
-	UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DlmUpdateLifecyclePolicyResult
+	UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DLMUpdateLifecyclePolicyFuture
 }
 
 type DLMStub struct{}
@@ -41,83 +41,91 @@ func NewDLMStub() DLMClient {
 	return &DLMStub{}
 }
 
-type DlmCreateLifecyclePolicyResult struct {
-	Result workflow.Future
+type DLMCreateLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DlmCreateLifecyclePolicyResult) Get(ctx workflow.Context) (*dlm.CreateLifecyclePolicyOutput, error) {
+func (r *DLMCreateLifecyclePolicyFuture) Get(ctx workflow.Context) (*dlm.CreateLifecyclePolicyOutput, error) {
 	var output dlm.CreateLifecyclePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DlmDeleteLifecyclePolicyResult struct {
-	Result workflow.Future
+type DLMDeleteLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DlmDeleteLifecyclePolicyResult) Get(ctx workflow.Context) (*dlm.DeleteLifecyclePolicyOutput, error) {
+func (r *DLMDeleteLifecyclePolicyFuture) Get(ctx workflow.Context) (*dlm.DeleteLifecyclePolicyOutput, error) {
 	var output dlm.DeleteLifecyclePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DlmGetLifecyclePoliciesResult struct {
-	Result workflow.Future
+type DLMGetLifecyclePoliciesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DlmGetLifecyclePoliciesResult) Get(ctx workflow.Context) (*dlm.GetLifecyclePoliciesOutput, error) {
+func (r *DLMGetLifecyclePoliciesFuture) Get(ctx workflow.Context) (*dlm.GetLifecyclePoliciesOutput, error) {
 	var output dlm.GetLifecyclePoliciesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DlmGetLifecyclePolicyResult struct {
-	Result workflow.Future
+type DLMGetLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DlmGetLifecyclePolicyResult) Get(ctx workflow.Context) (*dlm.GetLifecyclePolicyOutput, error) {
+func (r *DLMGetLifecyclePolicyFuture) Get(ctx workflow.Context) (*dlm.GetLifecyclePolicyOutput, error) {
 	var output dlm.GetLifecyclePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DlmListTagsForResourceResult struct {
-	Result workflow.Future
+type DLMListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DlmListTagsForResourceResult) Get(ctx workflow.Context) (*dlm.ListTagsForResourceOutput, error) {
+func (r *DLMListTagsForResourceFuture) Get(ctx workflow.Context) (*dlm.ListTagsForResourceOutput, error) {
 	var output dlm.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DlmTagResourceResult struct {
-	Result workflow.Future
+type DLMTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DlmTagResourceResult) Get(ctx workflow.Context) (*dlm.TagResourceOutput, error) {
+func (r *DLMTagResourceFuture) Get(ctx workflow.Context) (*dlm.TagResourceOutput, error) {
 	var output dlm.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DlmUntagResourceResult struct {
-	Result workflow.Future
+type DLMUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DlmUntagResourceResult) Get(ctx workflow.Context) (*dlm.UntagResourceOutput, error) {
+func (r *DLMUntagResourceFuture) Get(ctx workflow.Context) (*dlm.UntagResourceOutput, error) {
 	var output dlm.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DlmUpdateLifecyclePolicyResult struct {
-	Result workflow.Future
+type DLMUpdateLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DlmUpdateLifecyclePolicyResult) Get(ctx workflow.Context) (*dlm.UpdateLifecyclePolicyOutput, error) {
+func (r *DLMUpdateLifecyclePolicyFuture) Get(ctx workflow.Context) (*dlm.UpdateLifecyclePolicyOutput, error) {
 	var output dlm.UpdateLifecyclePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -127,9 +135,9 @@ func (a *DLMStub) CreateLifecyclePolicy(ctx workflow.Context, input *dlm.CreateL
 	return &output, err
 }
 
-func (a *DLMStub) CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *DlmCreateLifecyclePolicyResult {
+func (a *DLMStub) CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *DLMCreateLifecyclePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dlm.CreateLifecyclePolicy", input)
-	return &DlmCreateLifecyclePolicyResult{Result: future}
+	return &DLMCreateLifecyclePolicyFuture{Future: future}
 }
 
 func (a *DLMStub) DeleteLifecyclePolicy(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error) {
@@ -138,9 +146,9 @@ func (a *DLMStub) DeleteLifecyclePolicy(ctx workflow.Context, input *dlm.DeleteL
 	return &output, err
 }
 
-func (a *DLMStub) DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DlmDeleteLifecyclePolicyResult {
+func (a *DLMStub) DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DLMDeleteLifecyclePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dlm.DeleteLifecyclePolicy", input)
-	return &DlmDeleteLifecyclePolicyResult{Result: future}
+	return &DLMDeleteLifecyclePolicyFuture{Future: future}
 }
 
 func (a *DLMStub) GetLifecyclePolicies(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error) {
@@ -149,9 +157,9 @@ func (a *DLMStub) GetLifecyclePolicies(ctx workflow.Context, input *dlm.GetLifec
 	return &output, err
 }
 
-func (a *DLMStub) GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *DlmGetLifecyclePoliciesResult {
+func (a *DLMStub) GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *DLMGetLifecyclePoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dlm.GetLifecyclePolicies", input)
-	return &DlmGetLifecyclePoliciesResult{Result: future}
+	return &DLMGetLifecyclePoliciesFuture{Future: future}
 }
 
 func (a *DLMStub) GetLifecyclePolicy(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error) {
@@ -160,9 +168,9 @@ func (a *DLMStub) GetLifecyclePolicy(ctx workflow.Context, input *dlm.GetLifecyc
 	return &output, err
 }
 
-func (a *DLMStub) GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *DlmGetLifecyclePolicyResult {
+func (a *DLMStub) GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *DLMGetLifecyclePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dlm.GetLifecyclePolicy", input)
-	return &DlmGetLifecyclePolicyResult{Result: future}
+	return &DLMGetLifecyclePolicyFuture{Future: future}
 }
 
 func (a *DLMStub) ListTagsForResource(ctx workflow.Context, input *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error) {
@@ -171,9 +179,9 @@ func (a *DLMStub) ListTagsForResource(ctx workflow.Context, input *dlm.ListTagsF
 	return &output, err
 }
 
-func (a *DLMStub) ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *DlmListTagsForResourceResult {
+func (a *DLMStub) ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *DLMListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dlm.ListTagsForResource", input)
-	return &DlmListTagsForResourceResult{Result: future}
+	return &DLMListTagsForResourceFuture{Future: future}
 }
 
 func (a *DLMStub) TagResource(ctx workflow.Context, input *dlm.TagResourceInput) (*dlm.TagResourceOutput, error) {
@@ -182,9 +190,9 @@ func (a *DLMStub) TagResource(ctx workflow.Context, input *dlm.TagResourceInput)
 	return &output, err
 }
 
-func (a *DLMStub) TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *DlmTagResourceResult {
+func (a *DLMStub) TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *DLMTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dlm.TagResource", input)
-	return &DlmTagResourceResult{Result: future}
+	return &DLMTagResourceFuture{Future: future}
 }
 
 func (a *DLMStub) UntagResource(ctx workflow.Context, input *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error) {
@@ -193,9 +201,9 @@ func (a *DLMStub) UntagResource(ctx workflow.Context, input *dlm.UntagResourceIn
 	return &output, err
 }
 
-func (a *DLMStub) UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *DlmUntagResourceResult {
+func (a *DLMStub) UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *DLMUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dlm.UntagResource", input)
-	return &DlmUntagResourceResult{Result: future}
+	return &DLMUntagResourceFuture{Future: future}
 }
 
 func (a *DLMStub) UpdateLifecyclePolicy(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error) {
@@ -204,7 +212,7 @@ func (a *DLMStub) UpdateLifecyclePolicy(ctx workflow.Context, input *dlm.UpdateL
 	return &output, err
 }
 
-func (a *DLMStub) UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DlmUpdateLifecyclePolicyResult {
+func (a *DLMStub) UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DLMUpdateLifecyclePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dlm.UpdateLifecyclePolicy", input)
-	return &DlmUpdateLifecyclePolicyResult{Result: future}
+	return &DLMUpdateLifecyclePolicyFuture{Future: future}
 }

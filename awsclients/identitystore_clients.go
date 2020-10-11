@@ -11,16 +11,16 @@ import (
 
 type IdentityStoreClient interface {
 	DescribeGroup(ctx workflow.Context, input *identitystore.DescribeGroupInput) (*identitystore.DescribeGroupOutput, error)
-	DescribeGroupAsync(ctx workflow.Context, input *identitystore.DescribeGroupInput) *IdentitystoreDescribeGroupResult
+	DescribeGroupAsync(ctx workflow.Context, input *identitystore.DescribeGroupInput) *IdentityStoreDescribeGroupFuture
 
 	DescribeUser(ctx workflow.Context, input *identitystore.DescribeUserInput) (*identitystore.DescribeUserOutput, error)
-	DescribeUserAsync(ctx workflow.Context, input *identitystore.DescribeUserInput) *IdentitystoreDescribeUserResult
+	DescribeUserAsync(ctx workflow.Context, input *identitystore.DescribeUserInput) *IdentityStoreDescribeUserFuture
 
 	ListGroups(ctx workflow.Context, input *identitystore.ListGroupsInput) (*identitystore.ListGroupsOutput, error)
-	ListGroupsAsync(ctx workflow.Context, input *identitystore.ListGroupsInput) *IdentitystoreListGroupsResult
+	ListGroupsAsync(ctx workflow.Context, input *identitystore.ListGroupsInput) *IdentityStoreListGroupsFuture
 
 	ListUsers(ctx workflow.Context, input *identitystore.ListUsersInput) (*identitystore.ListUsersOutput, error)
-	ListUsersAsync(ctx workflow.Context, input *identitystore.ListUsersInput) *IdentitystoreListUsersResult
+	ListUsersAsync(ctx workflow.Context, input *identitystore.ListUsersInput) *IdentityStoreListUsersFuture
 }
 
 type IdentityStoreStub struct{}
@@ -29,43 +29,47 @@ func NewIdentityStoreStub() IdentityStoreClient {
 	return &IdentityStoreStub{}
 }
 
-type IdentitystoreDescribeGroupResult struct {
-	Result workflow.Future
+type IdentityStoreDescribeGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IdentitystoreDescribeGroupResult) Get(ctx workflow.Context) (*identitystore.DescribeGroupOutput, error) {
+func (r *IdentityStoreDescribeGroupFuture) Get(ctx workflow.Context) (*identitystore.DescribeGroupOutput, error) {
 	var output identitystore.DescribeGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IdentitystoreDescribeUserResult struct {
-	Result workflow.Future
+type IdentityStoreDescribeUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IdentitystoreDescribeUserResult) Get(ctx workflow.Context) (*identitystore.DescribeUserOutput, error) {
+func (r *IdentityStoreDescribeUserFuture) Get(ctx workflow.Context) (*identitystore.DescribeUserOutput, error) {
 	var output identitystore.DescribeUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IdentitystoreListGroupsResult struct {
-	Result workflow.Future
+type IdentityStoreListGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IdentitystoreListGroupsResult) Get(ctx workflow.Context) (*identitystore.ListGroupsOutput, error) {
+func (r *IdentityStoreListGroupsFuture) Get(ctx workflow.Context) (*identitystore.ListGroupsOutput, error) {
 	var output identitystore.ListGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IdentitystoreListUsersResult struct {
-	Result workflow.Future
+type IdentityStoreListUsersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IdentitystoreListUsersResult) Get(ctx workflow.Context) (*identitystore.ListUsersOutput, error) {
+func (r *IdentityStoreListUsersFuture) Get(ctx workflow.Context) (*identitystore.ListUsersOutput, error) {
 	var output identitystore.ListUsersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -75,9 +79,9 @@ func (a *IdentityStoreStub) DescribeGroup(ctx workflow.Context, input *identitys
 	return &output, err
 }
 
-func (a *IdentityStoreStub) DescribeGroupAsync(ctx workflow.Context, input *identitystore.DescribeGroupInput) *IdentitystoreDescribeGroupResult {
+func (a *IdentityStoreStub) DescribeGroupAsync(ctx workflow.Context, input *identitystore.DescribeGroupInput) *IdentityStoreDescribeGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.identitystore.DescribeGroup", input)
-	return &IdentitystoreDescribeGroupResult{Result: future}
+	return &IdentityStoreDescribeGroupFuture{Future: future}
 }
 
 func (a *IdentityStoreStub) DescribeUser(ctx workflow.Context, input *identitystore.DescribeUserInput) (*identitystore.DescribeUserOutput, error) {
@@ -86,9 +90,9 @@ func (a *IdentityStoreStub) DescribeUser(ctx workflow.Context, input *identityst
 	return &output, err
 }
 
-func (a *IdentityStoreStub) DescribeUserAsync(ctx workflow.Context, input *identitystore.DescribeUserInput) *IdentitystoreDescribeUserResult {
+func (a *IdentityStoreStub) DescribeUserAsync(ctx workflow.Context, input *identitystore.DescribeUserInput) *IdentityStoreDescribeUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.identitystore.DescribeUser", input)
-	return &IdentitystoreDescribeUserResult{Result: future}
+	return &IdentityStoreDescribeUserFuture{Future: future}
 }
 
 func (a *IdentityStoreStub) ListGroups(ctx workflow.Context, input *identitystore.ListGroupsInput) (*identitystore.ListGroupsOutput, error) {
@@ -97,9 +101,9 @@ func (a *IdentityStoreStub) ListGroups(ctx workflow.Context, input *identitystor
 	return &output, err
 }
 
-func (a *IdentityStoreStub) ListGroupsAsync(ctx workflow.Context, input *identitystore.ListGroupsInput) *IdentitystoreListGroupsResult {
+func (a *IdentityStoreStub) ListGroupsAsync(ctx workflow.Context, input *identitystore.ListGroupsInput) *IdentityStoreListGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.identitystore.ListGroups", input)
-	return &IdentitystoreListGroupsResult{Result: future}
+	return &IdentityStoreListGroupsFuture{Future: future}
 }
 
 func (a *IdentityStoreStub) ListUsers(ctx workflow.Context, input *identitystore.ListUsersInput) (*identitystore.ListUsersOutput, error) {
@@ -108,7 +112,7 @@ func (a *IdentityStoreStub) ListUsers(ctx workflow.Context, input *identitystore
 	return &output, err
 }
 
-func (a *IdentityStoreStub) ListUsersAsync(ctx workflow.Context, input *identitystore.ListUsersInput) *IdentitystoreListUsersResult {
+func (a *IdentityStoreStub) ListUsersAsync(ctx workflow.Context, input *identitystore.ListUsersInput) *IdentityStoreListUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.identitystore.ListUsers", input)
-	return &IdentitystoreListUsersResult{Result: future}
+	return &IdentityStoreListUsersFuture{Future: future}
 }

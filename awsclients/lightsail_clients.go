@@ -11,385 +11,385 @@ import (
 
 type LightsailClient interface {
 	AllocateStaticIp(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) (*lightsail.AllocateStaticIpOutput, error)
-	AllocateStaticIpAsync(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) *LightsailAllocateStaticIpResult
+	AllocateStaticIpAsync(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) *LightsailAllocateStaticIpFuture
 
 	AttachCertificateToDistribution(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) (*lightsail.AttachCertificateToDistributionOutput, error)
-	AttachCertificateToDistributionAsync(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) *LightsailAttachCertificateToDistributionResult
+	AttachCertificateToDistributionAsync(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) *LightsailAttachCertificateToDistributionFuture
 
 	AttachDisk(ctx workflow.Context, input *lightsail.AttachDiskInput) (*lightsail.AttachDiskOutput, error)
-	AttachDiskAsync(ctx workflow.Context, input *lightsail.AttachDiskInput) *LightsailAttachDiskResult
+	AttachDiskAsync(ctx workflow.Context, input *lightsail.AttachDiskInput) *LightsailAttachDiskFuture
 
 	AttachInstancesToLoadBalancer(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) (*lightsail.AttachInstancesToLoadBalancerOutput, error)
-	AttachInstancesToLoadBalancerAsync(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) *LightsailAttachInstancesToLoadBalancerResult
+	AttachInstancesToLoadBalancerAsync(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) *LightsailAttachInstancesToLoadBalancerFuture
 
 	AttachLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error)
-	AttachLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) *LightsailAttachLoadBalancerTlsCertificateResult
+	AttachLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) *LightsailAttachLoadBalancerTlsCertificateFuture
 
 	AttachStaticIp(ctx workflow.Context, input *lightsail.AttachStaticIpInput) (*lightsail.AttachStaticIpOutput, error)
-	AttachStaticIpAsync(ctx workflow.Context, input *lightsail.AttachStaticIpInput) *LightsailAttachStaticIpResult
+	AttachStaticIpAsync(ctx workflow.Context, input *lightsail.AttachStaticIpInput) *LightsailAttachStaticIpFuture
 
 	CloseInstancePublicPorts(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) (*lightsail.CloseInstancePublicPortsOutput, error)
-	CloseInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) *LightsailCloseInstancePublicPortsResult
+	CloseInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) *LightsailCloseInstancePublicPortsFuture
 
 	CopySnapshot(ctx workflow.Context, input *lightsail.CopySnapshotInput) (*lightsail.CopySnapshotOutput, error)
-	CopySnapshotAsync(ctx workflow.Context, input *lightsail.CopySnapshotInput) *LightsailCopySnapshotResult
+	CopySnapshotAsync(ctx workflow.Context, input *lightsail.CopySnapshotInput) *LightsailCopySnapshotFuture
 
 	CreateCertificate(ctx workflow.Context, input *lightsail.CreateCertificateInput) (*lightsail.CreateCertificateOutput, error)
-	CreateCertificateAsync(ctx workflow.Context, input *lightsail.CreateCertificateInput) *LightsailCreateCertificateResult
+	CreateCertificateAsync(ctx workflow.Context, input *lightsail.CreateCertificateInput) *LightsailCreateCertificateFuture
 
 	CreateCloudFormationStack(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) (*lightsail.CreateCloudFormationStackOutput, error)
-	CreateCloudFormationStackAsync(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) *LightsailCreateCloudFormationStackResult
+	CreateCloudFormationStackAsync(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) *LightsailCreateCloudFormationStackFuture
 
 	CreateContactMethod(ctx workflow.Context, input *lightsail.CreateContactMethodInput) (*lightsail.CreateContactMethodOutput, error)
-	CreateContactMethodAsync(ctx workflow.Context, input *lightsail.CreateContactMethodInput) *LightsailCreateContactMethodResult
+	CreateContactMethodAsync(ctx workflow.Context, input *lightsail.CreateContactMethodInput) *LightsailCreateContactMethodFuture
 
 	CreateDisk(ctx workflow.Context, input *lightsail.CreateDiskInput) (*lightsail.CreateDiskOutput, error)
-	CreateDiskAsync(ctx workflow.Context, input *lightsail.CreateDiskInput) *LightsailCreateDiskResult
+	CreateDiskAsync(ctx workflow.Context, input *lightsail.CreateDiskInput) *LightsailCreateDiskFuture
 
 	CreateDiskFromSnapshot(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) (*lightsail.CreateDiskFromSnapshotOutput, error)
-	CreateDiskFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) *LightsailCreateDiskFromSnapshotResult
+	CreateDiskFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) *LightsailCreateDiskFromSnapshotFuture
 
 	CreateDiskSnapshot(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) (*lightsail.CreateDiskSnapshotOutput, error)
-	CreateDiskSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) *LightsailCreateDiskSnapshotResult
+	CreateDiskSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) *LightsailCreateDiskSnapshotFuture
 
 	CreateDistribution(ctx workflow.Context, input *lightsail.CreateDistributionInput) (*lightsail.CreateDistributionOutput, error)
-	CreateDistributionAsync(ctx workflow.Context, input *lightsail.CreateDistributionInput) *LightsailCreateDistributionResult
+	CreateDistributionAsync(ctx workflow.Context, input *lightsail.CreateDistributionInput) *LightsailCreateDistributionFuture
 
 	CreateDomain(ctx workflow.Context, input *lightsail.CreateDomainInput) (*lightsail.CreateDomainOutput, error)
-	CreateDomainAsync(ctx workflow.Context, input *lightsail.CreateDomainInput) *LightsailCreateDomainResult
+	CreateDomainAsync(ctx workflow.Context, input *lightsail.CreateDomainInput) *LightsailCreateDomainFuture
 
 	CreateDomainEntry(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) (*lightsail.CreateDomainEntryOutput, error)
-	CreateDomainEntryAsync(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) *LightsailCreateDomainEntryResult
+	CreateDomainEntryAsync(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) *LightsailCreateDomainEntryFuture
 
 	CreateInstanceSnapshot(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) (*lightsail.CreateInstanceSnapshotOutput, error)
-	CreateInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) *LightsailCreateInstanceSnapshotResult
+	CreateInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) *LightsailCreateInstanceSnapshotFuture
 
 	CreateInstances(ctx workflow.Context, input *lightsail.CreateInstancesInput) (*lightsail.CreateInstancesOutput, error)
-	CreateInstancesAsync(ctx workflow.Context, input *lightsail.CreateInstancesInput) *LightsailCreateInstancesResult
+	CreateInstancesAsync(ctx workflow.Context, input *lightsail.CreateInstancesInput) *LightsailCreateInstancesFuture
 
 	CreateInstancesFromSnapshot(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) (*lightsail.CreateInstancesFromSnapshotOutput, error)
-	CreateInstancesFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) *LightsailCreateInstancesFromSnapshotResult
+	CreateInstancesFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) *LightsailCreateInstancesFromSnapshotFuture
 
 	CreateKeyPair(ctx workflow.Context, input *lightsail.CreateKeyPairInput) (*lightsail.CreateKeyPairOutput, error)
-	CreateKeyPairAsync(ctx workflow.Context, input *lightsail.CreateKeyPairInput) *LightsailCreateKeyPairResult
+	CreateKeyPairAsync(ctx workflow.Context, input *lightsail.CreateKeyPairInput) *LightsailCreateKeyPairFuture
 
 	CreateLoadBalancer(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) (*lightsail.CreateLoadBalancerOutput, error)
-	CreateLoadBalancerAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) *LightsailCreateLoadBalancerResult
+	CreateLoadBalancerAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) *LightsailCreateLoadBalancerFuture
 
 	CreateLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error)
-	CreateLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) *LightsailCreateLoadBalancerTlsCertificateResult
+	CreateLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) *LightsailCreateLoadBalancerTlsCertificateFuture
 
 	CreateRelationalDatabase(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) (*lightsail.CreateRelationalDatabaseOutput, error)
-	CreateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) *LightsailCreateRelationalDatabaseResult
+	CreateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) *LightsailCreateRelationalDatabaseFuture
 
 	CreateRelationalDatabaseFromSnapshot(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) (*lightsail.CreateRelationalDatabaseFromSnapshotOutput, error)
-	CreateRelationalDatabaseFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) *LightsailCreateRelationalDatabaseFromSnapshotResult
+	CreateRelationalDatabaseFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) *LightsailCreateRelationalDatabaseFromSnapshotFuture
 
 	CreateRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) (*lightsail.CreateRelationalDatabaseSnapshotOutput, error)
-	CreateRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) *LightsailCreateRelationalDatabaseSnapshotResult
+	CreateRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) *LightsailCreateRelationalDatabaseSnapshotFuture
 
 	DeleteAlarm(ctx workflow.Context, input *lightsail.DeleteAlarmInput) (*lightsail.DeleteAlarmOutput, error)
-	DeleteAlarmAsync(ctx workflow.Context, input *lightsail.DeleteAlarmInput) *LightsailDeleteAlarmResult
+	DeleteAlarmAsync(ctx workflow.Context, input *lightsail.DeleteAlarmInput) *LightsailDeleteAlarmFuture
 
 	DeleteAutoSnapshot(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) (*lightsail.DeleteAutoSnapshotOutput, error)
-	DeleteAutoSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) *LightsailDeleteAutoSnapshotResult
+	DeleteAutoSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) *LightsailDeleteAutoSnapshotFuture
 
 	DeleteCertificate(ctx workflow.Context, input *lightsail.DeleteCertificateInput) (*lightsail.DeleteCertificateOutput, error)
-	DeleteCertificateAsync(ctx workflow.Context, input *lightsail.DeleteCertificateInput) *LightsailDeleteCertificateResult
+	DeleteCertificateAsync(ctx workflow.Context, input *lightsail.DeleteCertificateInput) *LightsailDeleteCertificateFuture
 
 	DeleteContactMethod(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) (*lightsail.DeleteContactMethodOutput, error)
-	DeleteContactMethodAsync(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) *LightsailDeleteContactMethodResult
+	DeleteContactMethodAsync(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) *LightsailDeleteContactMethodFuture
 
 	DeleteDisk(ctx workflow.Context, input *lightsail.DeleteDiskInput) (*lightsail.DeleteDiskOutput, error)
-	DeleteDiskAsync(ctx workflow.Context, input *lightsail.DeleteDiskInput) *LightsailDeleteDiskResult
+	DeleteDiskAsync(ctx workflow.Context, input *lightsail.DeleteDiskInput) *LightsailDeleteDiskFuture
 
 	DeleteDiskSnapshot(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) (*lightsail.DeleteDiskSnapshotOutput, error)
-	DeleteDiskSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) *LightsailDeleteDiskSnapshotResult
+	DeleteDiskSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) *LightsailDeleteDiskSnapshotFuture
 
 	DeleteDistribution(ctx workflow.Context, input *lightsail.DeleteDistributionInput) (*lightsail.DeleteDistributionOutput, error)
-	DeleteDistributionAsync(ctx workflow.Context, input *lightsail.DeleteDistributionInput) *LightsailDeleteDistributionResult
+	DeleteDistributionAsync(ctx workflow.Context, input *lightsail.DeleteDistributionInput) *LightsailDeleteDistributionFuture
 
 	DeleteDomain(ctx workflow.Context, input *lightsail.DeleteDomainInput) (*lightsail.DeleteDomainOutput, error)
-	DeleteDomainAsync(ctx workflow.Context, input *lightsail.DeleteDomainInput) *LightsailDeleteDomainResult
+	DeleteDomainAsync(ctx workflow.Context, input *lightsail.DeleteDomainInput) *LightsailDeleteDomainFuture
 
 	DeleteDomainEntry(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) (*lightsail.DeleteDomainEntryOutput, error)
-	DeleteDomainEntryAsync(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) *LightsailDeleteDomainEntryResult
+	DeleteDomainEntryAsync(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) *LightsailDeleteDomainEntryFuture
 
 	DeleteInstance(ctx workflow.Context, input *lightsail.DeleteInstanceInput) (*lightsail.DeleteInstanceOutput, error)
-	DeleteInstanceAsync(ctx workflow.Context, input *lightsail.DeleteInstanceInput) *LightsailDeleteInstanceResult
+	DeleteInstanceAsync(ctx workflow.Context, input *lightsail.DeleteInstanceInput) *LightsailDeleteInstanceFuture
 
 	DeleteInstanceSnapshot(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) (*lightsail.DeleteInstanceSnapshotOutput, error)
-	DeleteInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) *LightsailDeleteInstanceSnapshotResult
+	DeleteInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) *LightsailDeleteInstanceSnapshotFuture
 
 	DeleteKeyPair(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) (*lightsail.DeleteKeyPairOutput, error)
-	DeleteKeyPairAsync(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) *LightsailDeleteKeyPairResult
+	DeleteKeyPairAsync(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) *LightsailDeleteKeyPairFuture
 
 	DeleteKnownHostKeys(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) (*lightsail.DeleteKnownHostKeysOutput, error)
-	DeleteKnownHostKeysAsync(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) *LightsailDeleteKnownHostKeysResult
+	DeleteKnownHostKeysAsync(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) *LightsailDeleteKnownHostKeysFuture
 
 	DeleteLoadBalancer(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) (*lightsail.DeleteLoadBalancerOutput, error)
-	DeleteLoadBalancerAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) *LightsailDeleteLoadBalancerResult
+	DeleteLoadBalancerAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) *LightsailDeleteLoadBalancerFuture
 
 	DeleteLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error)
-	DeleteLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) *LightsailDeleteLoadBalancerTlsCertificateResult
+	DeleteLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) *LightsailDeleteLoadBalancerTlsCertificateFuture
 
 	DeleteRelationalDatabase(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) (*lightsail.DeleteRelationalDatabaseOutput, error)
-	DeleteRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) *LightsailDeleteRelationalDatabaseResult
+	DeleteRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) *LightsailDeleteRelationalDatabaseFuture
 
 	DeleteRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) (*lightsail.DeleteRelationalDatabaseSnapshotOutput, error)
-	DeleteRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) *LightsailDeleteRelationalDatabaseSnapshotResult
+	DeleteRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) *LightsailDeleteRelationalDatabaseSnapshotFuture
 
 	DetachCertificateFromDistribution(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) (*lightsail.DetachCertificateFromDistributionOutput, error)
-	DetachCertificateFromDistributionAsync(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) *LightsailDetachCertificateFromDistributionResult
+	DetachCertificateFromDistributionAsync(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) *LightsailDetachCertificateFromDistributionFuture
 
 	DetachDisk(ctx workflow.Context, input *lightsail.DetachDiskInput) (*lightsail.DetachDiskOutput, error)
-	DetachDiskAsync(ctx workflow.Context, input *lightsail.DetachDiskInput) *LightsailDetachDiskResult
+	DetachDiskAsync(ctx workflow.Context, input *lightsail.DetachDiskInput) *LightsailDetachDiskFuture
 
 	DetachInstancesFromLoadBalancer(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) (*lightsail.DetachInstancesFromLoadBalancerOutput, error)
-	DetachInstancesFromLoadBalancerAsync(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) *LightsailDetachInstancesFromLoadBalancerResult
+	DetachInstancesFromLoadBalancerAsync(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) *LightsailDetachInstancesFromLoadBalancerFuture
 
 	DetachStaticIp(ctx workflow.Context, input *lightsail.DetachStaticIpInput) (*lightsail.DetachStaticIpOutput, error)
-	DetachStaticIpAsync(ctx workflow.Context, input *lightsail.DetachStaticIpInput) *LightsailDetachStaticIpResult
+	DetachStaticIpAsync(ctx workflow.Context, input *lightsail.DetachStaticIpInput) *LightsailDetachStaticIpFuture
 
 	DisableAddOn(ctx workflow.Context, input *lightsail.DisableAddOnInput) (*lightsail.DisableAddOnOutput, error)
-	DisableAddOnAsync(ctx workflow.Context, input *lightsail.DisableAddOnInput) *LightsailDisableAddOnResult
+	DisableAddOnAsync(ctx workflow.Context, input *lightsail.DisableAddOnInput) *LightsailDisableAddOnFuture
 
 	DownloadDefaultKeyPair(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) (*lightsail.DownloadDefaultKeyPairOutput, error)
-	DownloadDefaultKeyPairAsync(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) *LightsailDownloadDefaultKeyPairResult
+	DownloadDefaultKeyPairAsync(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) *LightsailDownloadDefaultKeyPairFuture
 
 	EnableAddOn(ctx workflow.Context, input *lightsail.EnableAddOnInput) (*lightsail.EnableAddOnOutput, error)
-	EnableAddOnAsync(ctx workflow.Context, input *lightsail.EnableAddOnInput) *LightsailEnableAddOnResult
+	EnableAddOnAsync(ctx workflow.Context, input *lightsail.EnableAddOnInput) *LightsailEnableAddOnFuture
 
 	ExportSnapshot(ctx workflow.Context, input *lightsail.ExportSnapshotInput) (*lightsail.ExportSnapshotOutput, error)
-	ExportSnapshotAsync(ctx workflow.Context, input *lightsail.ExportSnapshotInput) *LightsailExportSnapshotResult
+	ExportSnapshotAsync(ctx workflow.Context, input *lightsail.ExportSnapshotInput) *LightsailExportSnapshotFuture
 
 	GetActiveNames(ctx workflow.Context, input *lightsail.GetActiveNamesInput) (*lightsail.GetActiveNamesOutput, error)
-	GetActiveNamesAsync(ctx workflow.Context, input *lightsail.GetActiveNamesInput) *LightsailGetActiveNamesResult
+	GetActiveNamesAsync(ctx workflow.Context, input *lightsail.GetActiveNamesInput) *LightsailGetActiveNamesFuture
 
 	GetAlarms(ctx workflow.Context, input *lightsail.GetAlarmsInput) (*lightsail.GetAlarmsOutput, error)
-	GetAlarmsAsync(ctx workflow.Context, input *lightsail.GetAlarmsInput) *LightsailGetAlarmsResult
+	GetAlarmsAsync(ctx workflow.Context, input *lightsail.GetAlarmsInput) *LightsailGetAlarmsFuture
 
 	GetAutoSnapshots(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) (*lightsail.GetAutoSnapshotsOutput, error)
-	GetAutoSnapshotsAsync(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) *LightsailGetAutoSnapshotsResult
+	GetAutoSnapshotsAsync(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) *LightsailGetAutoSnapshotsFuture
 
 	GetBlueprints(ctx workflow.Context, input *lightsail.GetBlueprintsInput) (*lightsail.GetBlueprintsOutput, error)
-	GetBlueprintsAsync(ctx workflow.Context, input *lightsail.GetBlueprintsInput) *LightsailGetBlueprintsResult
+	GetBlueprintsAsync(ctx workflow.Context, input *lightsail.GetBlueprintsInput) *LightsailGetBlueprintsFuture
 
 	GetBundles(ctx workflow.Context, input *lightsail.GetBundlesInput) (*lightsail.GetBundlesOutput, error)
-	GetBundlesAsync(ctx workflow.Context, input *lightsail.GetBundlesInput) *LightsailGetBundlesResult
+	GetBundlesAsync(ctx workflow.Context, input *lightsail.GetBundlesInput) *LightsailGetBundlesFuture
 
 	GetCertificates(ctx workflow.Context, input *lightsail.GetCertificatesInput) (*lightsail.GetCertificatesOutput, error)
-	GetCertificatesAsync(ctx workflow.Context, input *lightsail.GetCertificatesInput) *LightsailGetCertificatesResult
+	GetCertificatesAsync(ctx workflow.Context, input *lightsail.GetCertificatesInput) *LightsailGetCertificatesFuture
 
 	GetCloudFormationStackRecords(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) (*lightsail.GetCloudFormationStackRecordsOutput, error)
-	GetCloudFormationStackRecordsAsync(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) *LightsailGetCloudFormationStackRecordsResult
+	GetCloudFormationStackRecordsAsync(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) *LightsailGetCloudFormationStackRecordsFuture
 
 	GetContactMethods(ctx workflow.Context, input *lightsail.GetContactMethodsInput) (*lightsail.GetContactMethodsOutput, error)
-	GetContactMethodsAsync(ctx workflow.Context, input *lightsail.GetContactMethodsInput) *LightsailGetContactMethodsResult
+	GetContactMethodsAsync(ctx workflow.Context, input *lightsail.GetContactMethodsInput) *LightsailGetContactMethodsFuture
 
 	GetDisk(ctx workflow.Context, input *lightsail.GetDiskInput) (*lightsail.GetDiskOutput, error)
-	GetDiskAsync(ctx workflow.Context, input *lightsail.GetDiskInput) *LightsailGetDiskResult
+	GetDiskAsync(ctx workflow.Context, input *lightsail.GetDiskInput) *LightsailGetDiskFuture
 
 	GetDiskSnapshot(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) (*lightsail.GetDiskSnapshotOutput, error)
-	GetDiskSnapshotAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) *LightsailGetDiskSnapshotResult
+	GetDiskSnapshotAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) *LightsailGetDiskSnapshotFuture
 
 	GetDiskSnapshots(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) (*lightsail.GetDiskSnapshotsOutput, error)
-	GetDiskSnapshotsAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) *LightsailGetDiskSnapshotsResult
+	GetDiskSnapshotsAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) *LightsailGetDiskSnapshotsFuture
 
 	GetDisks(ctx workflow.Context, input *lightsail.GetDisksInput) (*lightsail.GetDisksOutput, error)
-	GetDisksAsync(ctx workflow.Context, input *lightsail.GetDisksInput) *LightsailGetDisksResult
+	GetDisksAsync(ctx workflow.Context, input *lightsail.GetDisksInput) *LightsailGetDisksFuture
 
 	GetDistributionBundles(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) (*lightsail.GetDistributionBundlesOutput, error)
-	GetDistributionBundlesAsync(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) *LightsailGetDistributionBundlesResult
+	GetDistributionBundlesAsync(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) *LightsailGetDistributionBundlesFuture
 
 	GetDistributionLatestCacheReset(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) (*lightsail.GetDistributionLatestCacheResetOutput, error)
-	GetDistributionLatestCacheResetAsync(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) *LightsailGetDistributionLatestCacheResetResult
+	GetDistributionLatestCacheResetAsync(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) *LightsailGetDistributionLatestCacheResetFuture
 
 	GetDistributionMetricData(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) (*lightsail.GetDistributionMetricDataOutput, error)
-	GetDistributionMetricDataAsync(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) *LightsailGetDistributionMetricDataResult
+	GetDistributionMetricDataAsync(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) *LightsailGetDistributionMetricDataFuture
 
 	GetDistributions(ctx workflow.Context, input *lightsail.GetDistributionsInput) (*lightsail.GetDistributionsOutput, error)
-	GetDistributionsAsync(ctx workflow.Context, input *lightsail.GetDistributionsInput) *LightsailGetDistributionsResult
+	GetDistributionsAsync(ctx workflow.Context, input *lightsail.GetDistributionsInput) *LightsailGetDistributionsFuture
 
 	GetDomain(ctx workflow.Context, input *lightsail.GetDomainInput) (*lightsail.GetDomainOutput, error)
-	GetDomainAsync(ctx workflow.Context, input *lightsail.GetDomainInput) *LightsailGetDomainResult
+	GetDomainAsync(ctx workflow.Context, input *lightsail.GetDomainInput) *LightsailGetDomainFuture
 
 	GetDomains(ctx workflow.Context, input *lightsail.GetDomainsInput) (*lightsail.GetDomainsOutput, error)
-	GetDomainsAsync(ctx workflow.Context, input *lightsail.GetDomainsInput) *LightsailGetDomainsResult
+	GetDomainsAsync(ctx workflow.Context, input *lightsail.GetDomainsInput) *LightsailGetDomainsFuture
 
 	GetExportSnapshotRecords(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) (*lightsail.GetExportSnapshotRecordsOutput, error)
-	GetExportSnapshotRecordsAsync(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) *LightsailGetExportSnapshotRecordsResult
+	GetExportSnapshotRecordsAsync(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) *LightsailGetExportSnapshotRecordsFuture
 
 	GetInstance(ctx workflow.Context, input *lightsail.GetInstanceInput) (*lightsail.GetInstanceOutput, error)
-	GetInstanceAsync(ctx workflow.Context, input *lightsail.GetInstanceInput) *LightsailGetInstanceResult
+	GetInstanceAsync(ctx workflow.Context, input *lightsail.GetInstanceInput) *LightsailGetInstanceFuture
 
 	GetInstanceAccessDetails(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) (*lightsail.GetInstanceAccessDetailsOutput, error)
-	GetInstanceAccessDetailsAsync(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) *LightsailGetInstanceAccessDetailsResult
+	GetInstanceAccessDetailsAsync(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) *LightsailGetInstanceAccessDetailsFuture
 
 	GetInstanceMetricData(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) (*lightsail.GetInstanceMetricDataOutput, error)
-	GetInstanceMetricDataAsync(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) *LightsailGetInstanceMetricDataResult
+	GetInstanceMetricDataAsync(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) *LightsailGetInstanceMetricDataFuture
 
 	GetInstancePortStates(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) (*lightsail.GetInstancePortStatesOutput, error)
-	GetInstancePortStatesAsync(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) *LightsailGetInstancePortStatesResult
+	GetInstancePortStatesAsync(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) *LightsailGetInstancePortStatesFuture
 
 	GetInstanceSnapshot(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) (*lightsail.GetInstanceSnapshotOutput, error)
-	GetInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) *LightsailGetInstanceSnapshotResult
+	GetInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) *LightsailGetInstanceSnapshotFuture
 
 	GetInstanceSnapshots(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) (*lightsail.GetInstanceSnapshotsOutput, error)
-	GetInstanceSnapshotsAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) *LightsailGetInstanceSnapshotsResult
+	GetInstanceSnapshotsAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) *LightsailGetInstanceSnapshotsFuture
 
 	GetInstanceState(ctx workflow.Context, input *lightsail.GetInstanceStateInput) (*lightsail.GetInstanceStateOutput, error)
-	GetInstanceStateAsync(ctx workflow.Context, input *lightsail.GetInstanceStateInput) *LightsailGetInstanceStateResult
+	GetInstanceStateAsync(ctx workflow.Context, input *lightsail.GetInstanceStateInput) *LightsailGetInstanceStateFuture
 
 	GetInstances(ctx workflow.Context, input *lightsail.GetInstancesInput) (*lightsail.GetInstancesOutput, error)
-	GetInstancesAsync(ctx workflow.Context, input *lightsail.GetInstancesInput) *LightsailGetInstancesResult
+	GetInstancesAsync(ctx workflow.Context, input *lightsail.GetInstancesInput) *LightsailGetInstancesFuture
 
 	GetKeyPair(ctx workflow.Context, input *lightsail.GetKeyPairInput) (*lightsail.GetKeyPairOutput, error)
-	GetKeyPairAsync(ctx workflow.Context, input *lightsail.GetKeyPairInput) *LightsailGetKeyPairResult
+	GetKeyPairAsync(ctx workflow.Context, input *lightsail.GetKeyPairInput) *LightsailGetKeyPairFuture
 
 	GetKeyPairs(ctx workflow.Context, input *lightsail.GetKeyPairsInput) (*lightsail.GetKeyPairsOutput, error)
-	GetKeyPairsAsync(ctx workflow.Context, input *lightsail.GetKeyPairsInput) *LightsailGetKeyPairsResult
+	GetKeyPairsAsync(ctx workflow.Context, input *lightsail.GetKeyPairsInput) *LightsailGetKeyPairsFuture
 
 	GetLoadBalancer(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) (*lightsail.GetLoadBalancerOutput, error)
-	GetLoadBalancerAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) *LightsailGetLoadBalancerResult
+	GetLoadBalancerAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) *LightsailGetLoadBalancerFuture
 
 	GetLoadBalancerMetricData(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) (*lightsail.GetLoadBalancerMetricDataOutput, error)
-	GetLoadBalancerMetricDataAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) *LightsailGetLoadBalancerMetricDataResult
+	GetLoadBalancerMetricDataAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) *LightsailGetLoadBalancerMetricDataFuture
 
 	GetLoadBalancerTlsCertificates(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error)
-	GetLoadBalancerTlsCertificatesAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) *LightsailGetLoadBalancerTlsCertificatesResult
+	GetLoadBalancerTlsCertificatesAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) *LightsailGetLoadBalancerTlsCertificatesFuture
 
 	GetLoadBalancers(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) (*lightsail.GetLoadBalancersOutput, error)
-	GetLoadBalancersAsync(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) *LightsailGetLoadBalancersResult
+	GetLoadBalancersAsync(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) *LightsailGetLoadBalancersFuture
 
 	GetOperation(ctx workflow.Context, input *lightsail.GetOperationInput) (*lightsail.GetOperationOutput, error)
-	GetOperationAsync(ctx workflow.Context, input *lightsail.GetOperationInput) *LightsailGetOperationResult
+	GetOperationAsync(ctx workflow.Context, input *lightsail.GetOperationInput) *LightsailGetOperationFuture
 
 	GetOperations(ctx workflow.Context, input *lightsail.GetOperationsInput) (*lightsail.GetOperationsOutput, error)
-	GetOperationsAsync(ctx workflow.Context, input *lightsail.GetOperationsInput) *LightsailGetOperationsResult
+	GetOperationsAsync(ctx workflow.Context, input *lightsail.GetOperationsInput) *LightsailGetOperationsFuture
 
 	GetOperationsForResource(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) (*lightsail.GetOperationsForResourceOutput, error)
-	GetOperationsForResourceAsync(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) *LightsailGetOperationsForResourceResult
+	GetOperationsForResourceAsync(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) *LightsailGetOperationsForResourceFuture
 
 	GetRegions(ctx workflow.Context, input *lightsail.GetRegionsInput) (*lightsail.GetRegionsOutput, error)
-	GetRegionsAsync(ctx workflow.Context, input *lightsail.GetRegionsInput) *LightsailGetRegionsResult
+	GetRegionsAsync(ctx workflow.Context, input *lightsail.GetRegionsInput) *LightsailGetRegionsFuture
 
 	GetRelationalDatabase(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) (*lightsail.GetRelationalDatabaseOutput, error)
-	GetRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) *LightsailGetRelationalDatabaseResult
+	GetRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) *LightsailGetRelationalDatabaseFuture
 
 	GetRelationalDatabaseBlueprints(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) (*lightsail.GetRelationalDatabaseBlueprintsOutput, error)
-	GetRelationalDatabaseBlueprintsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) *LightsailGetRelationalDatabaseBlueprintsResult
+	GetRelationalDatabaseBlueprintsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) *LightsailGetRelationalDatabaseBlueprintsFuture
 
 	GetRelationalDatabaseBundles(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) (*lightsail.GetRelationalDatabaseBundlesOutput, error)
-	GetRelationalDatabaseBundlesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) *LightsailGetRelationalDatabaseBundlesResult
+	GetRelationalDatabaseBundlesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) *LightsailGetRelationalDatabaseBundlesFuture
 
 	GetRelationalDatabaseEvents(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) (*lightsail.GetRelationalDatabaseEventsOutput, error)
-	GetRelationalDatabaseEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) *LightsailGetRelationalDatabaseEventsResult
+	GetRelationalDatabaseEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) *LightsailGetRelationalDatabaseEventsFuture
 
 	GetRelationalDatabaseLogEvents(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) (*lightsail.GetRelationalDatabaseLogEventsOutput, error)
-	GetRelationalDatabaseLogEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) *LightsailGetRelationalDatabaseLogEventsResult
+	GetRelationalDatabaseLogEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) *LightsailGetRelationalDatabaseLogEventsFuture
 
 	GetRelationalDatabaseLogStreams(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) (*lightsail.GetRelationalDatabaseLogStreamsOutput, error)
-	GetRelationalDatabaseLogStreamsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) *LightsailGetRelationalDatabaseLogStreamsResult
+	GetRelationalDatabaseLogStreamsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) *LightsailGetRelationalDatabaseLogStreamsFuture
 
 	GetRelationalDatabaseMasterUserPassword(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) (*lightsail.GetRelationalDatabaseMasterUserPasswordOutput, error)
-	GetRelationalDatabaseMasterUserPasswordAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) *LightsailGetRelationalDatabaseMasterUserPasswordResult
+	GetRelationalDatabaseMasterUserPasswordAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) *LightsailGetRelationalDatabaseMasterUserPasswordFuture
 
 	GetRelationalDatabaseMetricData(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) (*lightsail.GetRelationalDatabaseMetricDataOutput, error)
-	GetRelationalDatabaseMetricDataAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) *LightsailGetRelationalDatabaseMetricDataResult
+	GetRelationalDatabaseMetricDataAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) *LightsailGetRelationalDatabaseMetricDataFuture
 
 	GetRelationalDatabaseParameters(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) (*lightsail.GetRelationalDatabaseParametersOutput, error)
-	GetRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) *LightsailGetRelationalDatabaseParametersResult
+	GetRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) *LightsailGetRelationalDatabaseParametersFuture
 
 	GetRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) (*lightsail.GetRelationalDatabaseSnapshotOutput, error)
-	GetRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) *LightsailGetRelationalDatabaseSnapshotResult
+	GetRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) *LightsailGetRelationalDatabaseSnapshotFuture
 
 	GetRelationalDatabaseSnapshots(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) (*lightsail.GetRelationalDatabaseSnapshotsOutput, error)
-	GetRelationalDatabaseSnapshotsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) *LightsailGetRelationalDatabaseSnapshotsResult
+	GetRelationalDatabaseSnapshotsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) *LightsailGetRelationalDatabaseSnapshotsFuture
 
 	GetRelationalDatabases(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) (*lightsail.GetRelationalDatabasesOutput, error)
-	GetRelationalDatabasesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) *LightsailGetRelationalDatabasesResult
+	GetRelationalDatabasesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) *LightsailGetRelationalDatabasesFuture
 
 	GetStaticIp(ctx workflow.Context, input *lightsail.GetStaticIpInput) (*lightsail.GetStaticIpOutput, error)
-	GetStaticIpAsync(ctx workflow.Context, input *lightsail.GetStaticIpInput) *LightsailGetStaticIpResult
+	GetStaticIpAsync(ctx workflow.Context, input *lightsail.GetStaticIpInput) *LightsailGetStaticIpFuture
 
 	GetStaticIps(ctx workflow.Context, input *lightsail.GetStaticIpsInput) (*lightsail.GetStaticIpsOutput, error)
-	GetStaticIpsAsync(ctx workflow.Context, input *lightsail.GetStaticIpsInput) *LightsailGetStaticIpsResult
+	GetStaticIpsAsync(ctx workflow.Context, input *lightsail.GetStaticIpsInput) *LightsailGetStaticIpsFuture
 
 	ImportKeyPair(ctx workflow.Context, input *lightsail.ImportKeyPairInput) (*lightsail.ImportKeyPairOutput, error)
-	ImportKeyPairAsync(ctx workflow.Context, input *lightsail.ImportKeyPairInput) *LightsailImportKeyPairResult
+	ImportKeyPairAsync(ctx workflow.Context, input *lightsail.ImportKeyPairInput) *LightsailImportKeyPairFuture
 
 	IsVpcPeered(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) (*lightsail.IsVpcPeeredOutput, error)
-	IsVpcPeeredAsync(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) *LightsailIsVpcPeeredResult
+	IsVpcPeeredAsync(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) *LightsailIsVpcPeeredFuture
 
 	OpenInstancePublicPorts(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) (*lightsail.OpenInstancePublicPortsOutput, error)
-	OpenInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) *LightsailOpenInstancePublicPortsResult
+	OpenInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) *LightsailOpenInstancePublicPortsFuture
 
 	PeerVpc(ctx workflow.Context, input *lightsail.PeerVpcInput) (*lightsail.PeerVpcOutput, error)
-	PeerVpcAsync(ctx workflow.Context, input *lightsail.PeerVpcInput) *LightsailPeerVpcResult
+	PeerVpcAsync(ctx workflow.Context, input *lightsail.PeerVpcInput) *LightsailPeerVpcFuture
 
 	PutAlarm(ctx workflow.Context, input *lightsail.PutAlarmInput) (*lightsail.PutAlarmOutput, error)
-	PutAlarmAsync(ctx workflow.Context, input *lightsail.PutAlarmInput) *LightsailPutAlarmResult
+	PutAlarmAsync(ctx workflow.Context, input *lightsail.PutAlarmInput) *LightsailPutAlarmFuture
 
 	PutInstancePublicPorts(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) (*lightsail.PutInstancePublicPortsOutput, error)
-	PutInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) *LightsailPutInstancePublicPortsResult
+	PutInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) *LightsailPutInstancePublicPortsFuture
 
 	RebootInstance(ctx workflow.Context, input *lightsail.RebootInstanceInput) (*lightsail.RebootInstanceOutput, error)
-	RebootInstanceAsync(ctx workflow.Context, input *lightsail.RebootInstanceInput) *LightsailRebootInstanceResult
+	RebootInstanceAsync(ctx workflow.Context, input *lightsail.RebootInstanceInput) *LightsailRebootInstanceFuture
 
 	RebootRelationalDatabase(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) (*lightsail.RebootRelationalDatabaseOutput, error)
-	RebootRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) *LightsailRebootRelationalDatabaseResult
+	RebootRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) *LightsailRebootRelationalDatabaseFuture
 
 	ReleaseStaticIp(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) (*lightsail.ReleaseStaticIpOutput, error)
-	ReleaseStaticIpAsync(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) *LightsailReleaseStaticIpResult
+	ReleaseStaticIpAsync(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) *LightsailReleaseStaticIpFuture
 
 	ResetDistributionCache(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) (*lightsail.ResetDistributionCacheOutput, error)
-	ResetDistributionCacheAsync(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) *LightsailResetDistributionCacheResult
+	ResetDistributionCacheAsync(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) *LightsailResetDistributionCacheFuture
 
 	SendContactMethodVerification(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) (*lightsail.SendContactMethodVerificationOutput, error)
-	SendContactMethodVerificationAsync(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) *LightsailSendContactMethodVerificationResult
+	SendContactMethodVerificationAsync(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) *LightsailSendContactMethodVerificationFuture
 
 	StartInstance(ctx workflow.Context, input *lightsail.StartInstanceInput) (*lightsail.StartInstanceOutput, error)
-	StartInstanceAsync(ctx workflow.Context, input *lightsail.StartInstanceInput) *LightsailStartInstanceResult
+	StartInstanceAsync(ctx workflow.Context, input *lightsail.StartInstanceInput) *LightsailStartInstanceFuture
 
 	StartRelationalDatabase(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) (*lightsail.StartRelationalDatabaseOutput, error)
-	StartRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) *LightsailStartRelationalDatabaseResult
+	StartRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) *LightsailStartRelationalDatabaseFuture
 
 	StopInstance(ctx workflow.Context, input *lightsail.StopInstanceInput) (*lightsail.StopInstanceOutput, error)
-	StopInstanceAsync(ctx workflow.Context, input *lightsail.StopInstanceInput) *LightsailStopInstanceResult
+	StopInstanceAsync(ctx workflow.Context, input *lightsail.StopInstanceInput) *LightsailStopInstanceFuture
 
 	StopRelationalDatabase(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) (*lightsail.StopRelationalDatabaseOutput, error)
-	StopRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) *LightsailStopRelationalDatabaseResult
+	StopRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) *LightsailStopRelationalDatabaseFuture
 
 	TagResource(ctx workflow.Context, input *lightsail.TagResourceInput) (*lightsail.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *lightsail.TagResourceInput) *LightsailTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *lightsail.TagResourceInput) *LightsailTagResourceFuture
 
 	TestAlarm(ctx workflow.Context, input *lightsail.TestAlarmInput) (*lightsail.TestAlarmOutput, error)
-	TestAlarmAsync(ctx workflow.Context, input *lightsail.TestAlarmInput) *LightsailTestAlarmResult
+	TestAlarmAsync(ctx workflow.Context, input *lightsail.TestAlarmInput) *LightsailTestAlarmFuture
 
 	UnpeerVpc(ctx workflow.Context, input *lightsail.UnpeerVpcInput) (*lightsail.UnpeerVpcOutput, error)
-	UnpeerVpcAsync(ctx workflow.Context, input *lightsail.UnpeerVpcInput) *LightsailUnpeerVpcResult
+	UnpeerVpcAsync(ctx workflow.Context, input *lightsail.UnpeerVpcInput) *LightsailUnpeerVpcFuture
 
 	UntagResource(ctx workflow.Context, input *lightsail.UntagResourceInput) (*lightsail.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *lightsail.UntagResourceInput) *LightsailUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *lightsail.UntagResourceInput) *LightsailUntagResourceFuture
 
 	UpdateDistribution(ctx workflow.Context, input *lightsail.UpdateDistributionInput) (*lightsail.UpdateDistributionOutput, error)
-	UpdateDistributionAsync(ctx workflow.Context, input *lightsail.UpdateDistributionInput) *LightsailUpdateDistributionResult
+	UpdateDistributionAsync(ctx workflow.Context, input *lightsail.UpdateDistributionInput) *LightsailUpdateDistributionFuture
 
 	UpdateDistributionBundle(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) (*lightsail.UpdateDistributionBundleOutput, error)
-	UpdateDistributionBundleAsync(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) *LightsailUpdateDistributionBundleResult
+	UpdateDistributionBundleAsync(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) *LightsailUpdateDistributionBundleFuture
 
 	UpdateDomainEntry(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) (*lightsail.UpdateDomainEntryOutput, error)
-	UpdateDomainEntryAsync(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) *LightsailUpdateDomainEntryResult
+	UpdateDomainEntryAsync(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) *LightsailUpdateDomainEntryFuture
 
 	UpdateLoadBalancerAttribute(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) (*lightsail.UpdateLoadBalancerAttributeOutput, error)
-	UpdateLoadBalancerAttributeAsync(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) *LightsailUpdateLoadBalancerAttributeResult
+	UpdateLoadBalancerAttributeAsync(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) *LightsailUpdateLoadBalancerAttributeFuture
 
 	UpdateRelationalDatabase(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) (*lightsail.UpdateRelationalDatabaseOutput, error)
-	UpdateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) *LightsailUpdateRelationalDatabaseResult
+	UpdateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) *LightsailUpdateRelationalDatabaseFuture
 
 	UpdateRelationalDatabaseParameters(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) (*lightsail.UpdateRelationalDatabaseParametersOutput, error)
-	UpdateRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) *LightsailUpdateRelationalDatabaseParametersResult
+	UpdateRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) *LightsailUpdateRelationalDatabaseParametersFuture
 }
 
 type LightsailStub struct{}
@@ -398,1273 +398,1400 @@ func NewLightsailStub() LightsailClient {
 	return &LightsailStub{}
 }
 
-type LightsailAllocateStaticIpResult struct {
-	Result workflow.Future
+type LightsailAllocateStaticIpFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailAllocateStaticIpResult) Get(ctx workflow.Context) (*lightsail.AllocateStaticIpOutput, error) {
+func (r *LightsailAllocateStaticIpFuture) Get(ctx workflow.Context) (*lightsail.AllocateStaticIpOutput, error) {
 	var output lightsail.AllocateStaticIpOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailAttachCertificateToDistributionResult struct {
-	Result workflow.Future
+type LightsailAttachCertificateToDistributionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailAttachCertificateToDistributionResult) Get(ctx workflow.Context) (*lightsail.AttachCertificateToDistributionOutput, error) {
+func (r *LightsailAttachCertificateToDistributionFuture) Get(ctx workflow.Context) (*lightsail.AttachCertificateToDistributionOutput, error) {
 	var output lightsail.AttachCertificateToDistributionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailAttachDiskResult struct {
-	Result workflow.Future
+type LightsailAttachDiskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailAttachDiskResult) Get(ctx workflow.Context) (*lightsail.AttachDiskOutput, error) {
+func (r *LightsailAttachDiskFuture) Get(ctx workflow.Context) (*lightsail.AttachDiskOutput, error) {
 	var output lightsail.AttachDiskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailAttachInstancesToLoadBalancerResult struct {
-	Result workflow.Future
+type LightsailAttachInstancesToLoadBalancerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailAttachInstancesToLoadBalancerResult) Get(ctx workflow.Context) (*lightsail.AttachInstancesToLoadBalancerOutput, error) {
+func (r *LightsailAttachInstancesToLoadBalancerFuture) Get(ctx workflow.Context) (*lightsail.AttachInstancesToLoadBalancerOutput, error) {
 	var output lightsail.AttachInstancesToLoadBalancerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailAttachLoadBalancerTlsCertificateResult struct {
-	Result workflow.Future
+type LightsailAttachLoadBalancerTlsCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailAttachLoadBalancerTlsCertificateResult) Get(ctx workflow.Context) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error) {
+func (r *LightsailAttachLoadBalancerTlsCertificateFuture) Get(ctx workflow.Context) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error) {
 	var output lightsail.AttachLoadBalancerTlsCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailAttachStaticIpResult struct {
-	Result workflow.Future
+type LightsailAttachStaticIpFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailAttachStaticIpResult) Get(ctx workflow.Context) (*lightsail.AttachStaticIpOutput, error) {
+func (r *LightsailAttachStaticIpFuture) Get(ctx workflow.Context) (*lightsail.AttachStaticIpOutput, error) {
 	var output lightsail.AttachStaticIpOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCloseInstancePublicPortsResult struct {
-	Result workflow.Future
+type LightsailCloseInstancePublicPortsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCloseInstancePublicPortsResult) Get(ctx workflow.Context) (*lightsail.CloseInstancePublicPortsOutput, error) {
+func (r *LightsailCloseInstancePublicPortsFuture) Get(ctx workflow.Context) (*lightsail.CloseInstancePublicPortsOutput, error) {
 	var output lightsail.CloseInstancePublicPortsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCopySnapshotResult struct {
-	Result workflow.Future
+type LightsailCopySnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCopySnapshotResult) Get(ctx workflow.Context) (*lightsail.CopySnapshotOutput, error) {
+func (r *LightsailCopySnapshotFuture) Get(ctx workflow.Context) (*lightsail.CopySnapshotOutput, error) {
 	var output lightsail.CopySnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateCertificateResult struct {
-	Result workflow.Future
+type LightsailCreateCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateCertificateResult) Get(ctx workflow.Context) (*lightsail.CreateCertificateOutput, error) {
+func (r *LightsailCreateCertificateFuture) Get(ctx workflow.Context) (*lightsail.CreateCertificateOutput, error) {
 	var output lightsail.CreateCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateCloudFormationStackResult struct {
-	Result workflow.Future
+type LightsailCreateCloudFormationStackFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateCloudFormationStackResult) Get(ctx workflow.Context) (*lightsail.CreateCloudFormationStackOutput, error) {
+func (r *LightsailCreateCloudFormationStackFuture) Get(ctx workflow.Context) (*lightsail.CreateCloudFormationStackOutput, error) {
 	var output lightsail.CreateCloudFormationStackOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateContactMethodResult struct {
-	Result workflow.Future
+type LightsailCreateContactMethodFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateContactMethodResult) Get(ctx workflow.Context) (*lightsail.CreateContactMethodOutput, error) {
+func (r *LightsailCreateContactMethodFuture) Get(ctx workflow.Context) (*lightsail.CreateContactMethodOutput, error) {
 	var output lightsail.CreateContactMethodOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateDiskResult struct {
-	Result workflow.Future
+type LightsailCreateDiskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateDiskResult) Get(ctx workflow.Context) (*lightsail.CreateDiskOutput, error) {
+func (r *LightsailCreateDiskFuture) Get(ctx workflow.Context) (*lightsail.CreateDiskOutput, error) {
 	var output lightsail.CreateDiskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateDiskFromSnapshotResult struct {
-	Result workflow.Future
+type LightsailCreateDiskFromSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateDiskFromSnapshotResult) Get(ctx workflow.Context) (*lightsail.CreateDiskFromSnapshotOutput, error) {
+func (r *LightsailCreateDiskFromSnapshotFuture) Get(ctx workflow.Context) (*lightsail.CreateDiskFromSnapshotOutput, error) {
 	var output lightsail.CreateDiskFromSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateDiskSnapshotResult struct {
-	Result workflow.Future
+type LightsailCreateDiskSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateDiskSnapshotResult) Get(ctx workflow.Context) (*lightsail.CreateDiskSnapshotOutput, error) {
+func (r *LightsailCreateDiskSnapshotFuture) Get(ctx workflow.Context) (*lightsail.CreateDiskSnapshotOutput, error) {
 	var output lightsail.CreateDiskSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateDistributionResult struct {
-	Result workflow.Future
+type LightsailCreateDistributionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateDistributionResult) Get(ctx workflow.Context) (*lightsail.CreateDistributionOutput, error) {
+func (r *LightsailCreateDistributionFuture) Get(ctx workflow.Context) (*lightsail.CreateDistributionOutput, error) {
 	var output lightsail.CreateDistributionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateDomainResult struct {
-	Result workflow.Future
+type LightsailCreateDomainFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateDomainResult) Get(ctx workflow.Context) (*lightsail.CreateDomainOutput, error) {
+func (r *LightsailCreateDomainFuture) Get(ctx workflow.Context) (*lightsail.CreateDomainOutput, error) {
 	var output lightsail.CreateDomainOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateDomainEntryResult struct {
-	Result workflow.Future
+type LightsailCreateDomainEntryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateDomainEntryResult) Get(ctx workflow.Context) (*lightsail.CreateDomainEntryOutput, error) {
+func (r *LightsailCreateDomainEntryFuture) Get(ctx workflow.Context) (*lightsail.CreateDomainEntryOutput, error) {
 	var output lightsail.CreateDomainEntryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateInstanceSnapshotResult struct {
-	Result workflow.Future
+type LightsailCreateInstanceSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateInstanceSnapshotResult) Get(ctx workflow.Context) (*lightsail.CreateInstanceSnapshotOutput, error) {
+func (r *LightsailCreateInstanceSnapshotFuture) Get(ctx workflow.Context) (*lightsail.CreateInstanceSnapshotOutput, error) {
 	var output lightsail.CreateInstanceSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateInstancesResult struct {
-	Result workflow.Future
+type LightsailCreateInstancesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateInstancesResult) Get(ctx workflow.Context) (*lightsail.CreateInstancesOutput, error) {
+func (r *LightsailCreateInstancesFuture) Get(ctx workflow.Context) (*lightsail.CreateInstancesOutput, error) {
 	var output lightsail.CreateInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateInstancesFromSnapshotResult struct {
-	Result workflow.Future
+type LightsailCreateInstancesFromSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateInstancesFromSnapshotResult) Get(ctx workflow.Context) (*lightsail.CreateInstancesFromSnapshotOutput, error) {
+func (r *LightsailCreateInstancesFromSnapshotFuture) Get(ctx workflow.Context) (*lightsail.CreateInstancesFromSnapshotOutput, error) {
 	var output lightsail.CreateInstancesFromSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateKeyPairResult struct {
-	Result workflow.Future
+type LightsailCreateKeyPairFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateKeyPairResult) Get(ctx workflow.Context) (*lightsail.CreateKeyPairOutput, error) {
+func (r *LightsailCreateKeyPairFuture) Get(ctx workflow.Context) (*lightsail.CreateKeyPairOutput, error) {
 	var output lightsail.CreateKeyPairOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateLoadBalancerResult struct {
-	Result workflow.Future
+type LightsailCreateLoadBalancerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateLoadBalancerResult) Get(ctx workflow.Context) (*lightsail.CreateLoadBalancerOutput, error) {
+func (r *LightsailCreateLoadBalancerFuture) Get(ctx workflow.Context) (*lightsail.CreateLoadBalancerOutput, error) {
 	var output lightsail.CreateLoadBalancerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateLoadBalancerTlsCertificateResult struct {
-	Result workflow.Future
+type LightsailCreateLoadBalancerTlsCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateLoadBalancerTlsCertificateResult) Get(ctx workflow.Context) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error) {
+func (r *LightsailCreateLoadBalancerTlsCertificateFuture) Get(ctx workflow.Context) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error) {
 	var output lightsail.CreateLoadBalancerTlsCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateRelationalDatabaseResult struct {
-	Result workflow.Future
+type LightsailCreateRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateRelationalDatabaseResult) Get(ctx workflow.Context) (*lightsail.CreateRelationalDatabaseOutput, error) {
+func (r *LightsailCreateRelationalDatabaseFuture) Get(ctx workflow.Context) (*lightsail.CreateRelationalDatabaseOutput, error) {
 	var output lightsail.CreateRelationalDatabaseOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateRelationalDatabaseFromSnapshotResult struct {
-	Result workflow.Future
+type LightsailCreateRelationalDatabaseFromSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateRelationalDatabaseFromSnapshotResult) Get(ctx workflow.Context) (*lightsail.CreateRelationalDatabaseFromSnapshotOutput, error) {
+func (r *LightsailCreateRelationalDatabaseFromSnapshotFuture) Get(ctx workflow.Context) (*lightsail.CreateRelationalDatabaseFromSnapshotOutput, error) {
 	var output lightsail.CreateRelationalDatabaseFromSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailCreateRelationalDatabaseSnapshotResult struct {
-	Result workflow.Future
+type LightsailCreateRelationalDatabaseSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailCreateRelationalDatabaseSnapshotResult) Get(ctx workflow.Context) (*lightsail.CreateRelationalDatabaseSnapshotOutput, error) {
+func (r *LightsailCreateRelationalDatabaseSnapshotFuture) Get(ctx workflow.Context) (*lightsail.CreateRelationalDatabaseSnapshotOutput, error) {
 	var output lightsail.CreateRelationalDatabaseSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteAlarmResult struct {
-	Result workflow.Future
+type LightsailDeleteAlarmFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteAlarmResult) Get(ctx workflow.Context) (*lightsail.DeleteAlarmOutput, error) {
+func (r *LightsailDeleteAlarmFuture) Get(ctx workflow.Context) (*lightsail.DeleteAlarmOutput, error) {
 	var output lightsail.DeleteAlarmOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteAutoSnapshotResult struct {
-	Result workflow.Future
+type LightsailDeleteAutoSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteAutoSnapshotResult) Get(ctx workflow.Context) (*lightsail.DeleteAutoSnapshotOutput, error) {
+func (r *LightsailDeleteAutoSnapshotFuture) Get(ctx workflow.Context) (*lightsail.DeleteAutoSnapshotOutput, error) {
 	var output lightsail.DeleteAutoSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteCertificateResult struct {
-	Result workflow.Future
+type LightsailDeleteCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteCertificateResult) Get(ctx workflow.Context) (*lightsail.DeleteCertificateOutput, error) {
+func (r *LightsailDeleteCertificateFuture) Get(ctx workflow.Context) (*lightsail.DeleteCertificateOutput, error) {
 	var output lightsail.DeleteCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteContactMethodResult struct {
-	Result workflow.Future
+type LightsailDeleteContactMethodFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteContactMethodResult) Get(ctx workflow.Context) (*lightsail.DeleteContactMethodOutput, error) {
+func (r *LightsailDeleteContactMethodFuture) Get(ctx workflow.Context) (*lightsail.DeleteContactMethodOutput, error) {
 	var output lightsail.DeleteContactMethodOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteDiskResult struct {
-	Result workflow.Future
+type LightsailDeleteDiskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteDiskResult) Get(ctx workflow.Context) (*lightsail.DeleteDiskOutput, error) {
+func (r *LightsailDeleteDiskFuture) Get(ctx workflow.Context) (*lightsail.DeleteDiskOutput, error) {
 	var output lightsail.DeleteDiskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteDiskSnapshotResult struct {
-	Result workflow.Future
+type LightsailDeleteDiskSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteDiskSnapshotResult) Get(ctx workflow.Context) (*lightsail.DeleteDiskSnapshotOutput, error) {
+func (r *LightsailDeleteDiskSnapshotFuture) Get(ctx workflow.Context) (*lightsail.DeleteDiskSnapshotOutput, error) {
 	var output lightsail.DeleteDiskSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteDistributionResult struct {
-	Result workflow.Future
+type LightsailDeleteDistributionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteDistributionResult) Get(ctx workflow.Context) (*lightsail.DeleteDistributionOutput, error) {
+func (r *LightsailDeleteDistributionFuture) Get(ctx workflow.Context) (*lightsail.DeleteDistributionOutput, error) {
 	var output lightsail.DeleteDistributionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteDomainResult struct {
-	Result workflow.Future
+type LightsailDeleteDomainFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteDomainResult) Get(ctx workflow.Context) (*lightsail.DeleteDomainOutput, error) {
+func (r *LightsailDeleteDomainFuture) Get(ctx workflow.Context) (*lightsail.DeleteDomainOutput, error) {
 	var output lightsail.DeleteDomainOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteDomainEntryResult struct {
-	Result workflow.Future
+type LightsailDeleteDomainEntryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteDomainEntryResult) Get(ctx workflow.Context) (*lightsail.DeleteDomainEntryOutput, error) {
+func (r *LightsailDeleteDomainEntryFuture) Get(ctx workflow.Context) (*lightsail.DeleteDomainEntryOutput, error) {
 	var output lightsail.DeleteDomainEntryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteInstanceResult struct {
-	Result workflow.Future
+type LightsailDeleteInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteInstanceResult) Get(ctx workflow.Context) (*lightsail.DeleteInstanceOutput, error) {
+func (r *LightsailDeleteInstanceFuture) Get(ctx workflow.Context) (*lightsail.DeleteInstanceOutput, error) {
 	var output lightsail.DeleteInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteInstanceSnapshotResult struct {
-	Result workflow.Future
+type LightsailDeleteInstanceSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteInstanceSnapshotResult) Get(ctx workflow.Context) (*lightsail.DeleteInstanceSnapshotOutput, error) {
+func (r *LightsailDeleteInstanceSnapshotFuture) Get(ctx workflow.Context) (*lightsail.DeleteInstanceSnapshotOutput, error) {
 	var output lightsail.DeleteInstanceSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteKeyPairResult struct {
-	Result workflow.Future
+type LightsailDeleteKeyPairFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteKeyPairResult) Get(ctx workflow.Context) (*lightsail.DeleteKeyPairOutput, error) {
+func (r *LightsailDeleteKeyPairFuture) Get(ctx workflow.Context) (*lightsail.DeleteKeyPairOutput, error) {
 	var output lightsail.DeleteKeyPairOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteKnownHostKeysResult struct {
-	Result workflow.Future
+type LightsailDeleteKnownHostKeysFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteKnownHostKeysResult) Get(ctx workflow.Context) (*lightsail.DeleteKnownHostKeysOutput, error) {
+func (r *LightsailDeleteKnownHostKeysFuture) Get(ctx workflow.Context) (*lightsail.DeleteKnownHostKeysOutput, error) {
 	var output lightsail.DeleteKnownHostKeysOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteLoadBalancerResult struct {
-	Result workflow.Future
+type LightsailDeleteLoadBalancerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteLoadBalancerResult) Get(ctx workflow.Context) (*lightsail.DeleteLoadBalancerOutput, error) {
+func (r *LightsailDeleteLoadBalancerFuture) Get(ctx workflow.Context) (*lightsail.DeleteLoadBalancerOutput, error) {
 	var output lightsail.DeleteLoadBalancerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteLoadBalancerTlsCertificateResult struct {
-	Result workflow.Future
+type LightsailDeleteLoadBalancerTlsCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteLoadBalancerTlsCertificateResult) Get(ctx workflow.Context) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error) {
+func (r *LightsailDeleteLoadBalancerTlsCertificateFuture) Get(ctx workflow.Context) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error) {
 	var output lightsail.DeleteLoadBalancerTlsCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteRelationalDatabaseResult struct {
-	Result workflow.Future
+type LightsailDeleteRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteRelationalDatabaseResult) Get(ctx workflow.Context) (*lightsail.DeleteRelationalDatabaseOutput, error) {
+func (r *LightsailDeleteRelationalDatabaseFuture) Get(ctx workflow.Context) (*lightsail.DeleteRelationalDatabaseOutput, error) {
 	var output lightsail.DeleteRelationalDatabaseOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDeleteRelationalDatabaseSnapshotResult struct {
-	Result workflow.Future
+type LightsailDeleteRelationalDatabaseSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDeleteRelationalDatabaseSnapshotResult) Get(ctx workflow.Context) (*lightsail.DeleteRelationalDatabaseSnapshotOutput, error) {
+func (r *LightsailDeleteRelationalDatabaseSnapshotFuture) Get(ctx workflow.Context) (*lightsail.DeleteRelationalDatabaseSnapshotOutput, error) {
 	var output lightsail.DeleteRelationalDatabaseSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDetachCertificateFromDistributionResult struct {
-	Result workflow.Future
+type LightsailDetachCertificateFromDistributionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDetachCertificateFromDistributionResult) Get(ctx workflow.Context) (*lightsail.DetachCertificateFromDistributionOutput, error) {
+func (r *LightsailDetachCertificateFromDistributionFuture) Get(ctx workflow.Context) (*lightsail.DetachCertificateFromDistributionOutput, error) {
 	var output lightsail.DetachCertificateFromDistributionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDetachDiskResult struct {
-	Result workflow.Future
+type LightsailDetachDiskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDetachDiskResult) Get(ctx workflow.Context) (*lightsail.DetachDiskOutput, error) {
+func (r *LightsailDetachDiskFuture) Get(ctx workflow.Context) (*lightsail.DetachDiskOutput, error) {
 	var output lightsail.DetachDiskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDetachInstancesFromLoadBalancerResult struct {
-	Result workflow.Future
+type LightsailDetachInstancesFromLoadBalancerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDetachInstancesFromLoadBalancerResult) Get(ctx workflow.Context) (*lightsail.DetachInstancesFromLoadBalancerOutput, error) {
+func (r *LightsailDetachInstancesFromLoadBalancerFuture) Get(ctx workflow.Context) (*lightsail.DetachInstancesFromLoadBalancerOutput, error) {
 	var output lightsail.DetachInstancesFromLoadBalancerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDetachStaticIpResult struct {
-	Result workflow.Future
+type LightsailDetachStaticIpFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDetachStaticIpResult) Get(ctx workflow.Context) (*lightsail.DetachStaticIpOutput, error) {
+func (r *LightsailDetachStaticIpFuture) Get(ctx workflow.Context) (*lightsail.DetachStaticIpOutput, error) {
 	var output lightsail.DetachStaticIpOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDisableAddOnResult struct {
-	Result workflow.Future
+type LightsailDisableAddOnFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDisableAddOnResult) Get(ctx workflow.Context) (*lightsail.DisableAddOnOutput, error) {
+func (r *LightsailDisableAddOnFuture) Get(ctx workflow.Context) (*lightsail.DisableAddOnOutput, error) {
 	var output lightsail.DisableAddOnOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailDownloadDefaultKeyPairResult struct {
-	Result workflow.Future
+type LightsailDownloadDefaultKeyPairFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailDownloadDefaultKeyPairResult) Get(ctx workflow.Context) (*lightsail.DownloadDefaultKeyPairOutput, error) {
+func (r *LightsailDownloadDefaultKeyPairFuture) Get(ctx workflow.Context) (*lightsail.DownloadDefaultKeyPairOutput, error) {
 	var output lightsail.DownloadDefaultKeyPairOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailEnableAddOnResult struct {
-	Result workflow.Future
+type LightsailEnableAddOnFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailEnableAddOnResult) Get(ctx workflow.Context) (*lightsail.EnableAddOnOutput, error) {
+func (r *LightsailEnableAddOnFuture) Get(ctx workflow.Context) (*lightsail.EnableAddOnOutput, error) {
 	var output lightsail.EnableAddOnOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailExportSnapshotResult struct {
-	Result workflow.Future
+type LightsailExportSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailExportSnapshotResult) Get(ctx workflow.Context) (*lightsail.ExportSnapshotOutput, error) {
+func (r *LightsailExportSnapshotFuture) Get(ctx workflow.Context) (*lightsail.ExportSnapshotOutput, error) {
 	var output lightsail.ExportSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetActiveNamesResult struct {
-	Result workflow.Future
+type LightsailGetActiveNamesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetActiveNamesResult) Get(ctx workflow.Context) (*lightsail.GetActiveNamesOutput, error) {
+func (r *LightsailGetActiveNamesFuture) Get(ctx workflow.Context) (*lightsail.GetActiveNamesOutput, error) {
 	var output lightsail.GetActiveNamesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetAlarmsResult struct {
-	Result workflow.Future
+type LightsailGetAlarmsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetAlarmsResult) Get(ctx workflow.Context) (*lightsail.GetAlarmsOutput, error) {
+func (r *LightsailGetAlarmsFuture) Get(ctx workflow.Context) (*lightsail.GetAlarmsOutput, error) {
 	var output lightsail.GetAlarmsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetAutoSnapshotsResult struct {
-	Result workflow.Future
+type LightsailGetAutoSnapshotsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetAutoSnapshotsResult) Get(ctx workflow.Context) (*lightsail.GetAutoSnapshotsOutput, error) {
+func (r *LightsailGetAutoSnapshotsFuture) Get(ctx workflow.Context) (*lightsail.GetAutoSnapshotsOutput, error) {
 	var output lightsail.GetAutoSnapshotsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetBlueprintsResult struct {
-	Result workflow.Future
+type LightsailGetBlueprintsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetBlueprintsResult) Get(ctx workflow.Context) (*lightsail.GetBlueprintsOutput, error) {
+func (r *LightsailGetBlueprintsFuture) Get(ctx workflow.Context) (*lightsail.GetBlueprintsOutput, error) {
 	var output lightsail.GetBlueprintsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetBundlesResult struct {
-	Result workflow.Future
+type LightsailGetBundlesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetBundlesResult) Get(ctx workflow.Context) (*lightsail.GetBundlesOutput, error) {
+func (r *LightsailGetBundlesFuture) Get(ctx workflow.Context) (*lightsail.GetBundlesOutput, error) {
 	var output lightsail.GetBundlesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetCertificatesResult struct {
-	Result workflow.Future
+type LightsailGetCertificatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetCertificatesResult) Get(ctx workflow.Context) (*lightsail.GetCertificatesOutput, error) {
+func (r *LightsailGetCertificatesFuture) Get(ctx workflow.Context) (*lightsail.GetCertificatesOutput, error) {
 	var output lightsail.GetCertificatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetCloudFormationStackRecordsResult struct {
-	Result workflow.Future
+type LightsailGetCloudFormationStackRecordsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetCloudFormationStackRecordsResult) Get(ctx workflow.Context) (*lightsail.GetCloudFormationStackRecordsOutput, error) {
+func (r *LightsailGetCloudFormationStackRecordsFuture) Get(ctx workflow.Context) (*lightsail.GetCloudFormationStackRecordsOutput, error) {
 	var output lightsail.GetCloudFormationStackRecordsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetContactMethodsResult struct {
-	Result workflow.Future
+type LightsailGetContactMethodsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetContactMethodsResult) Get(ctx workflow.Context) (*lightsail.GetContactMethodsOutput, error) {
+func (r *LightsailGetContactMethodsFuture) Get(ctx workflow.Context) (*lightsail.GetContactMethodsOutput, error) {
 	var output lightsail.GetContactMethodsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDiskResult struct {
-	Result workflow.Future
+type LightsailGetDiskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDiskResult) Get(ctx workflow.Context) (*lightsail.GetDiskOutput, error) {
+func (r *LightsailGetDiskFuture) Get(ctx workflow.Context) (*lightsail.GetDiskOutput, error) {
 	var output lightsail.GetDiskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDiskSnapshotResult struct {
-	Result workflow.Future
+type LightsailGetDiskSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDiskSnapshotResult) Get(ctx workflow.Context) (*lightsail.GetDiskSnapshotOutput, error) {
+func (r *LightsailGetDiskSnapshotFuture) Get(ctx workflow.Context) (*lightsail.GetDiskSnapshotOutput, error) {
 	var output lightsail.GetDiskSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDiskSnapshotsResult struct {
-	Result workflow.Future
+type LightsailGetDiskSnapshotsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDiskSnapshotsResult) Get(ctx workflow.Context) (*lightsail.GetDiskSnapshotsOutput, error) {
+func (r *LightsailGetDiskSnapshotsFuture) Get(ctx workflow.Context) (*lightsail.GetDiskSnapshotsOutput, error) {
 	var output lightsail.GetDiskSnapshotsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDisksResult struct {
-	Result workflow.Future
+type LightsailGetDisksFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDisksResult) Get(ctx workflow.Context) (*lightsail.GetDisksOutput, error) {
+func (r *LightsailGetDisksFuture) Get(ctx workflow.Context) (*lightsail.GetDisksOutput, error) {
 	var output lightsail.GetDisksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDistributionBundlesResult struct {
-	Result workflow.Future
+type LightsailGetDistributionBundlesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDistributionBundlesResult) Get(ctx workflow.Context) (*lightsail.GetDistributionBundlesOutput, error) {
+func (r *LightsailGetDistributionBundlesFuture) Get(ctx workflow.Context) (*lightsail.GetDistributionBundlesOutput, error) {
 	var output lightsail.GetDistributionBundlesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDistributionLatestCacheResetResult struct {
-	Result workflow.Future
+type LightsailGetDistributionLatestCacheResetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDistributionLatestCacheResetResult) Get(ctx workflow.Context) (*lightsail.GetDistributionLatestCacheResetOutput, error) {
+func (r *LightsailGetDistributionLatestCacheResetFuture) Get(ctx workflow.Context) (*lightsail.GetDistributionLatestCacheResetOutput, error) {
 	var output lightsail.GetDistributionLatestCacheResetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDistributionMetricDataResult struct {
-	Result workflow.Future
+type LightsailGetDistributionMetricDataFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDistributionMetricDataResult) Get(ctx workflow.Context) (*lightsail.GetDistributionMetricDataOutput, error) {
+func (r *LightsailGetDistributionMetricDataFuture) Get(ctx workflow.Context) (*lightsail.GetDistributionMetricDataOutput, error) {
 	var output lightsail.GetDistributionMetricDataOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDistributionsResult struct {
-	Result workflow.Future
+type LightsailGetDistributionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDistributionsResult) Get(ctx workflow.Context) (*lightsail.GetDistributionsOutput, error) {
+func (r *LightsailGetDistributionsFuture) Get(ctx workflow.Context) (*lightsail.GetDistributionsOutput, error) {
 	var output lightsail.GetDistributionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDomainResult struct {
-	Result workflow.Future
+type LightsailGetDomainFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDomainResult) Get(ctx workflow.Context) (*lightsail.GetDomainOutput, error) {
+func (r *LightsailGetDomainFuture) Get(ctx workflow.Context) (*lightsail.GetDomainOutput, error) {
 	var output lightsail.GetDomainOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetDomainsResult struct {
-	Result workflow.Future
+type LightsailGetDomainsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetDomainsResult) Get(ctx workflow.Context) (*lightsail.GetDomainsOutput, error) {
+func (r *LightsailGetDomainsFuture) Get(ctx workflow.Context) (*lightsail.GetDomainsOutput, error) {
 	var output lightsail.GetDomainsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetExportSnapshotRecordsResult struct {
-	Result workflow.Future
+type LightsailGetExportSnapshotRecordsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetExportSnapshotRecordsResult) Get(ctx workflow.Context) (*lightsail.GetExportSnapshotRecordsOutput, error) {
+func (r *LightsailGetExportSnapshotRecordsFuture) Get(ctx workflow.Context) (*lightsail.GetExportSnapshotRecordsOutput, error) {
 	var output lightsail.GetExportSnapshotRecordsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetInstanceResult struct {
-	Result workflow.Future
+type LightsailGetInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetInstanceResult) Get(ctx workflow.Context) (*lightsail.GetInstanceOutput, error) {
+func (r *LightsailGetInstanceFuture) Get(ctx workflow.Context) (*lightsail.GetInstanceOutput, error) {
 	var output lightsail.GetInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetInstanceAccessDetailsResult struct {
-	Result workflow.Future
+type LightsailGetInstanceAccessDetailsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetInstanceAccessDetailsResult) Get(ctx workflow.Context) (*lightsail.GetInstanceAccessDetailsOutput, error) {
+func (r *LightsailGetInstanceAccessDetailsFuture) Get(ctx workflow.Context) (*lightsail.GetInstanceAccessDetailsOutput, error) {
 	var output lightsail.GetInstanceAccessDetailsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetInstanceMetricDataResult struct {
-	Result workflow.Future
+type LightsailGetInstanceMetricDataFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetInstanceMetricDataResult) Get(ctx workflow.Context) (*lightsail.GetInstanceMetricDataOutput, error) {
+func (r *LightsailGetInstanceMetricDataFuture) Get(ctx workflow.Context) (*lightsail.GetInstanceMetricDataOutput, error) {
 	var output lightsail.GetInstanceMetricDataOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetInstancePortStatesResult struct {
-	Result workflow.Future
+type LightsailGetInstancePortStatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetInstancePortStatesResult) Get(ctx workflow.Context) (*lightsail.GetInstancePortStatesOutput, error) {
+func (r *LightsailGetInstancePortStatesFuture) Get(ctx workflow.Context) (*lightsail.GetInstancePortStatesOutput, error) {
 	var output lightsail.GetInstancePortStatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetInstanceSnapshotResult struct {
-	Result workflow.Future
+type LightsailGetInstanceSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetInstanceSnapshotResult) Get(ctx workflow.Context) (*lightsail.GetInstanceSnapshotOutput, error) {
+func (r *LightsailGetInstanceSnapshotFuture) Get(ctx workflow.Context) (*lightsail.GetInstanceSnapshotOutput, error) {
 	var output lightsail.GetInstanceSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetInstanceSnapshotsResult struct {
-	Result workflow.Future
+type LightsailGetInstanceSnapshotsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetInstanceSnapshotsResult) Get(ctx workflow.Context) (*lightsail.GetInstanceSnapshotsOutput, error) {
+func (r *LightsailGetInstanceSnapshotsFuture) Get(ctx workflow.Context) (*lightsail.GetInstanceSnapshotsOutput, error) {
 	var output lightsail.GetInstanceSnapshotsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetInstanceStateResult struct {
-	Result workflow.Future
+type LightsailGetInstanceStateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetInstanceStateResult) Get(ctx workflow.Context) (*lightsail.GetInstanceStateOutput, error) {
+func (r *LightsailGetInstanceStateFuture) Get(ctx workflow.Context) (*lightsail.GetInstanceStateOutput, error) {
 	var output lightsail.GetInstanceStateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetInstancesResult struct {
-	Result workflow.Future
+type LightsailGetInstancesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetInstancesResult) Get(ctx workflow.Context) (*lightsail.GetInstancesOutput, error) {
+func (r *LightsailGetInstancesFuture) Get(ctx workflow.Context) (*lightsail.GetInstancesOutput, error) {
 	var output lightsail.GetInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetKeyPairResult struct {
-	Result workflow.Future
+type LightsailGetKeyPairFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetKeyPairResult) Get(ctx workflow.Context) (*lightsail.GetKeyPairOutput, error) {
+func (r *LightsailGetKeyPairFuture) Get(ctx workflow.Context) (*lightsail.GetKeyPairOutput, error) {
 	var output lightsail.GetKeyPairOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetKeyPairsResult struct {
-	Result workflow.Future
+type LightsailGetKeyPairsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetKeyPairsResult) Get(ctx workflow.Context) (*lightsail.GetKeyPairsOutput, error) {
+func (r *LightsailGetKeyPairsFuture) Get(ctx workflow.Context) (*lightsail.GetKeyPairsOutput, error) {
 	var output lightsail.GetKeyPairsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetLoadBalancerResult struct {
-	Result workflow.Future
+type LightsailGetLoadBalancerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetLoadBalancerResult) Get(ctx workflow.Context) (*lightsail.GetLoadBalancerOutput, error) {
+func (r *LightsailGetLoadBalancerFuture) Get(ctx workflow.Context) (*lightsail.GetLoadBalancerOutput, error) {
 	var output lightsail.GetLoadBalancerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetLoadBalancerMetricDataResult struct {
-	Result workflow.Future
+type LightsailGetLoadBalancerMetricDataFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetLoadBalancerMetricDataResult) Get(ctx workflow.Context) (*lightsail.GetLoadBalancerMetricDataOutput, error) {
+func (r *LightsailGetLoadBalancerMetricDataFuture) Get(ctx workflow.Context) (*lightsail.GetLoadBalancerMetricDataOutput, error) {
 	var output lightsail.GetLoadBalancerMetricDataOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetLoadBalancerTlsCertificatesResult struct {
-	Result workflow.Future
+type LightsailGetLoadBalancerTlsCertificatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetLoadBalancerTlsCertificatesResult) Get(ctx workflow.Context) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error) {
+func (r *LightsailGetLoadBalancerTlsCertificatesFuture) Get(ctx workflow.Context) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error) {
 	var output lightsail.GetLoadBalancerTlsCertificatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetLoadBalancersResult struct {
-	Result workflow.Future
+type LightsailGetLoadBalancersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetLoadBalancersResult) Get(ctx workflow.Context) (*lightsail.GetLoadBalancersOutput, error) {
+func (r *LightsailGetLoadBalancersFuture) Get(ctx workflow.Context) (*lightsail.GetLoadBalancersOutput, error) {
 	var output lightsail.GetLoadBalancersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetOperationResult struct {
-	Result workflow.Future
+type LightsailGetOperationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetOperationResult) Get(ctx workflow.Context) (*lightsail.GetOperationOutput, error) {
+func (r *LightsailGetOperationFuture) Get(ctx workflow.Context) (*lightsail.GetOperationOutput, error) {
 	var output lightsail.GetOperationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetOperationsResult struct {
-	Result workflow.Future
+type LightsailGetOperationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetOperationsResult) Get(ctx workflow.Context) (*lightsail.GetOperationsOutput, error) {
+func (r *LightsailGetOperationsFuture) Get(ctx workflow.Context) (*lightsail.GetOperationsOutput, error) {
 	var output lightsail.GetOperationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetOperationsForResourceResult struct {
-	Result workflow.Future
+type LightsailGetOperationsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetOperationsForResourceResult) Get(ctx workflow.Context) (*lightsail.GetOperationsForResourceOutput, error) {
+func (r *LightsailGetOperationsForResourceFuture) Get(ctx workflow.Context) (*lightsail.GetOperationsForResourceOutput, error) {
 	var output lightsail.GetOperationsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRegionsResult struct {
-	Result workflow.Future
+type LightsailGetRegionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRegionsResult) Get(ctx workflow.Context) (*lightsail.GetRegionsOutput, error) {
+func (r *LightsailGetRegionsFuture) Get(ctx workflow.Context) (*lightsail.GetRegionsOutput, error) {
 	var output lightsail.GetRegionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseOutput, error) {
+func (r *LightsailGetRelationalDatabaseFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseOutput, error) {
 	var output lightsail.GetRelationalDatabaseOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseBlueprintsResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseBlueprintsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseBlueprintsResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseBlueprintsOutput, error) {
+func (r *LightsailGetRelationalDatabaseBlueprintsFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseBlueprintsOutput, error) {
 	var output lightsail.GetRelationalDatabaseBlueprintsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseBundlesResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseBundlesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseBundlesResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseBundlesOutput, error) {
+func (r *LightsailGetRelationalDatabaseBundlesFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseBundlesOutput, error) {
 	var output lightsail.GetRelationalDatabaseBundlesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseEventsResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseEventsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseEventsResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseEventsOutput, error) {
+func (r *LightsailGetRelationalDatabaseEventsFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseEventsOutput, error) {
 	var output lightsail.GetRelationalDatabaseEventsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseLogEventsResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseLogEventsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseLogEventsResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseLogEventsOutput, error) {
+func (r *LightsailGetRelationalDatabaseLogEventsFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseLogEventsOutput, error) {
 	var output lightsail.GetRelationalDatabaseLogEventsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseLogStreamsResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseLogStreamsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseLogStreamsResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseLogStreamsOutput, error) {
+func (r *LightsailGetRelationalDatabaseLogStreamsFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseLogStreamsOutput, error) {
 	var output lightsail.GetRelationalDatabaseLogStreamsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseMasterUserPasswordResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseMasterUserPasswordFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseMasterUserPasswordResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseMasterUserPasswordOutput, error) {
+func (r *LightsailGetRelationalDatabaseMasterUserPasswordFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseMasterUserPasswordOutput, error) {
 	var output lightsail.GetRelationalDatabaseMasterUserPasswordOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseMetricDataResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseMetricDataFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseMetricDataResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseMetricDataOutput, error) {
+func (r *LightsailGetRelationalDatabaseMetricDataFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseMetricDataOutput, error) {
 	var output lightsail.GetRelationalDatabaseMetricDataOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseParametersResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseParametersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseParametersResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseParametersOutput, error) {
+func (r *LightsailGetRelationalDatabaseParametersFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseParametersOutput, error) {
 	var output lightsail.GetRelationalDatabaseParametersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseSnapshotResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseSnapshotFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseSnapshotResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseSnapshotOutput, error) {
+func (r *LightsailGetRelationalDatabaseSnapshotFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseSnapshotOutput, error) {
 	var output lightsail.GetRelationalDatabaseSnapshotOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabaseSnapshotsResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabaseSnapshotsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabaseSnapshotsResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseSnapshotsOutput, error) {
+func (r *LightsailGetRelationalDatabaseSnapshotsFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabaseSnapshotsOutput, error) {
 	var output lightsail.GetRelationalDatabaseSnapshotsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetRelationalDatabasesResult struct {
-	Result workflow.Future
+type LightsailGetRelationalDatabasesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetRelationalDatabasesResult) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabasesOutput, error) {
+func (r *LightsailGetRelationalDatabasesFuture) Get(ctx workflow.Context) (*lightsail.GetRelationalDatabasesOutput, error) {
 	var output lightsail.GetRelationalDatabasesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetStaticIpResult struct {
-	Result workflow.Future
+type LightsailGetStaticIpFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetStaticIpResult) Get(ctx workflow.Context) (*lightsail.GetStaticIpOutput, error) {
+func (r *LightsailGetStaticIpFuture) Get(ctx workflow.Context) (*lightsail.GetStaticIpOutput, error) {
 	var output lightsail.GetStaticIpOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailGetStaticIpsResult struct {
-	Result workflow.Future
+type LightsailGetStaticIpsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailGetStaticIpsResult) Get(ctx workflow.Context) (*lightsail.GetStaticIpsOutput, error) {
+func (r *LightsailGetStaticIpsFuture) Get(ctx workflow.Context) (*lightsail.GetStaticIpsOutput, error) {
 	var output lightsail.GetStaticIpsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailImportKeyPairResult struct {
-	Result workflow.Future
+type LightsailImportKeyPairFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailImportKeyPairResult) Get(ctx workflow.Context) (*lightsail.ImportKeyPairOutput, error) {
+func (r *LightsailImportKeyPairFuture) Get(ctx workflow.Context) (*lightsail.ImportKeyPairOutput, error) {
 	var output lightsail.ImportKeyPairOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailIsVpcPeeredResult struct {
-	Result workflow.Future
+type LightsailIsVpcPeeredFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailIsVpcPeeredResult) Get(ctx workflow.Context) (*lightsail.IsVpcPeeredOutput, error) {
+func (r *LightsailIsVpcPeeredFuture) Get(ctx workflow.Context) (*lightsail.IsVpcPeeredOutput, error) {
 	var output lightsail.IsVpcPeeredOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailOpenInstancePublicPortsResult struct {
-	Result workflow.Future
+type LightsailOpenInstancePublicPortsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailOpenInstancePublicPortsResult) Get(ctx workflow.Context) (*lightsail.OpenInstancePublicPortsOutput, error) {
+func (r *LightsailOpenInstancePublicPortsFuture) Get(ctx workflow.Context) (*lightsail.OpenInstancePublicPortsOutput, error) {
 	var output lightsail.OpenInstancePublicPortsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailPeerVpcResult struct {
-	Result workflow.Future
+type LightsailPeerVpcFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailPeerVpcResult) Get(ctx workflow.Context) (*lightsail.PeerVpcOutput, error) {
+func (r *LightsailPeerVpcFuture) Get(ctx workflow.Context) (*lightsail.PeerVpcOutput, error) {
 	var output lightsail.PeerVpcOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailPutAlarmResult struct {
-	Result workflow.Future
+type LightsailPutAlarmFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailPutAlarmResult) Get(ctx workflow.Context) (*lightsail.PutAlarmOutput, error) {
+func (r *LightsailPutAlarmFuture) Get(ctx workflow.Context) (*lightsail.PutAlarmOutput, error) {
 	var output lightsail.PutAlarmOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailPutInstancePublicPortsResult struct {
-	Result workflow.Future
+type LightsailPutInstancePublicPortsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailPutInstancePublicPortsResult) Get(ctx workflow.Context) (*lightsail.PutInstancePublicPortsOutput, error) {
+func (r *LightsailPutInstancePublicPortsFuture) Get(ctx workflow.Context) (*lightsail.PutInstancePublicPortsOutput, error) {
 	var output lightsail.PutInstancePublicPortsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailRebootInstanceResult struct {
-	Result workflow.Future
+type LightsailRebootInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailRebootInstanceResult) Get(ctx workflow.Context) (*lightsail.RebootInstanceOutput, error) {
+func (r *LightsailRebootInstanceFuture) Get(ctx workflow.Context) (*lightsail.RebootInstanceOutput, error) {
 	var output lightsail.RebootInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailRebootRelationalDatabaseResult struct {
-	Result workflow.Future
+type LightsailRebootRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailRebootRelationalDatabaseResult) Get(ctx workflow.Context) (*lightsail.RebootRelationalDatabaseOutput, error) {
+func (r *LightsailRebootRelationalDatabaseFuture) Get(ctx workflow.Context) (*lightsail.RebootRelationalDatabaseOutput, error) {
 	var output lightsail.RebootRelationalDatabaseOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailReleaseStaticIpResult struct {
-	Result workflow.Future
+type LightsailReleaseStaticIpFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailReleaseStaticIpResult) Get(ctx workflow.Context) (*lightsail.ReleaseStaticIpOutput, error) {
+func (r *LightsailReleaseStaticIpFuture) Get(ctx workflow.Context) (*lightsail.ReleaseStaticIpOutput, error) {
 	var output lightsail.ReleaseStaticIpOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailResetDistributionCacheResult struct {
-	Result workflow.Future
+type LightsailResetDistributionCacheFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailResetDistributionCacheResult) Get(ctx workflow.Context) (*lightsail.ResetDistributionCacheOutput, error) {
+func (r *LightsailResetDistributionCacheFuture) Get(ctx workflow.Context) (*lightsail.ResetDistributionCacheOutput, error) {
 	var output lightsail.ResetDistributionCacheOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailSendContactMethodVerificationResult struct {
-	Result workflow.Future
+type LightsailSendContactMethodVerificationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailSendContactMethodVerificationResult) Get(ctx workflow.Context) (*lightsail.SendContactMethodVerificationOutput, error) {
+func (r *LightsailSendContactMethodVerificationFuture) Get(ctx workflow.Context) (*lightsail.SendContactMethodVerificationOutput, error) {
 	var output lightsail.SendContactMethodVerificationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailStartInstanceResult struct {
-	Result workflow.Future
+type LightsailStartInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailStartInstanceResult) Get(ctx workflow.Context) (*lightsail.StartInstanceOutput, error) {
+func (r *LightsailStartInstanceFuture) Get(ctx workflow.Context) (*lightsail.StartInstanceOutput, error) {
 	var output lightsail.StartInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailStartRelationalDatabaseResult struct {
-	Result workflow.Future
+type LightsailStartRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailStartRelationalDatabaseResult) Get(ctx workflow.Context) (*lightsail.StartRelationalDatabaseOutput, error) {
+func (r *LightsailStartRelationalDatabaseFuture) Get(ctx workflow.Context) (*lightsail.StartRelationalDatabaseOutput, error) {
 	var output lightsail.StartRelationalDatabaseOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailStopInstanceResult struct {
-	Result workflow.Future
+type LightsailStopInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailStopInstanceResult) Get(ctx workflow.Context) (*lightsail.StopInstanceOutput, error) {
+func (r *LightsailStopInstanceFuture) Get(ctx workflow.Context) (*lightsail.StopInstanceOutput, error) {
 	var output lightsail.StopInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailStopRelationalDatabaseResult struct {
-	Result workflow.Future
+type LightsailStopRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailStopRelationalDatabaseResult) Get(ctx workflow.Context) (*lightsail.StopRelationalDatabaseOutput, error) {
+func (r *LightsailStopRelationalDatabaseFuture) Get(ctx workflow.Context) (*lightsail.StopRelationalDatabaseOutput, error) {
 	var output lightsail.StopRelationalDatabaseOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailTagResourceResult struct {
-	Result workflow.Future
+type LightsailTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailTagResourceResult) Get(ctx workflow.Context) (*lightsail.TagResourceOutput, error) {
+func (r *LightsailTagResourceFuture) Get(ctx workflow.Context) (*lightsail.TagResourceOutput, error) {
 	var output lightsail.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailTestAlarmResult struct {
-	Result workflow.Future
+type LightsailTestAlarmFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailTestAlarmResult) Get(ctx workflow.Context) (*lightsail.TestAlarmOutput, error) {
+func (r *LightsailTestAlarmFuture) Get(ctx workflow.Context) (*lightsail.TestAlarmOutput, error) {
 	var output lightsail.TestAlarmOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailUnpeerVpcResult struct {
-	Result workflow.Future
+type LightsailUnpeerVpcFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailUnpeerVpcResult) Get(ctx workflow.Context) (*lightsail.UnpeerVpcOutput, error) {
+func (r *LightsailUnpeerVpcFuture) Get(ctx workflow.Context) (*lightsail.UnpeerVpcOutput, error) {
 	var output lightsail.UnpeerVpcOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailUntagResourceResult struct {
-	Result workflow.Future
+type LightsailUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailUntagResourceResult) Get(ctx workflow.Context) (*lightsail.UntagResourceOutput, error) {
+func (r *LightsailUntagResourceFuture) Get(ctx workflow.Context) (*lightsail.UntagResourceOutput, error) {
 	var output lightsail.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailUpdateDistributionResult struct {
-	Result workflow.Future
+type LightsailUpdateDistributionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailUpdateDistributionResult) Get(ctx workflow.Context) (*lightsail.UpdateDistributionOutput, error) {
+func (r *LightsailUpdateDistributionFuture) Get(ctx workflow.Context) (*lightsail.UpdateDistributionOutput, error) {
 	var output lightsail.UpdateDistributionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailUpdateDistributionBundleResult struct {
-	Result workflow.Future
+type LightsailUpdateDistributionBundleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailUpdateDistributionBundleResult) Get(ctx workflow.Context) (*lightsail.UpdateDistributionBundleOutput, error) {
+func (r *LightsailUpdateDistributionBundleFuture) Get(ctx workflow.Context) (*lightsail.UpdateDistributionBundleOutput, error) {
 	var output lightsail.UpdateDistributionBundleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailUpdateDomainEntryResult struct {
-	Result workflow.Future
+type LightsailUpdateDomainEntryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailUpdateDomainEntryResult) Get(ctx workflow.Context) (*lightsail.UpdateDomainEntryOutput, error) {
+func (r *LightsailUpdateDomainEntryFuture) Get(ctx workflow.Context) (*lightsail.UpdateDomainEntryOutput, error) {
 	var output lightsail.UpdateDomainEntryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailUpdateLoadBalancerAttributeResult struct {
-	Result workflow.Future
+type LightsailUpdateLoadBalancerAttributeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailUpdateLoadBalancerAttributeResult) Get(ctx workflow.Context) (*lightsail.UpdateLoadBalancerAttributeOutput, error) {
+func (r *LightsailUpdateLoadBalancerAttributeFuture) Get(ctx workflow.Context) (*lightsail.UpdateLoadBalancerAttributeOutput, error) {
 	var output lightsail.UpdateLoadBalancerAttributeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailUpdateRelationalDatabaseResult struct {
-	Result workflow.Future
+type LightsailUpdateRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailUpdateRelationalDatabaseResult) Get(ctx workflow.Context) (*lightsail.UpdateRelationalDatabaseOutput, error) {
+func (r *LightsailUpdateRelationalDatabaseFuture) Get(ctx workflow.Context) (*lightsail.UpdateRelationalDatabaseOutput, error) {
 	var output lightsail.UpdateRelationalDatabaseOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LightsailUpdateRelationalDatabaseParametersResult struct {
-	Result workflow.Future
+type LightsailUpdateRelationalDatabaseParametersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LightsailUpdateRelationalDatabaseParametersResult) Get(ctx workflow.Context) (*lightsail.UpdateRelationalDatabaseParametersOutput, error) {
+func (r *LightsailUpdateRelationalDatabaseParametersFuture) Get(ctx workflow.Context) (*lightsail.UpdateRelationalDatabaseParametersOutput, error) {
 	var output lightsail.UpdateRelationalDatabaseParametersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -1674,9 +1801,9 @@ func (a *LightsailStub) AllocateStaticIp(ctx workflow.Context, input *lightsail.
 	return &output, err
 }
 
-func (a *LightsailStub) AllocateStaticIpAsync(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) *LightsailAllocateStaticIpResult {
+func (a *LightsailStub) AllocateStaticIpAsync(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) *LightsailAllocateStaticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.AllocateStaticIp", input)
-	return &LightsailAllocateStaticIpResult{Result: future}
+	return &LightsailAllocateStaticIpFuture{Future: future}
 }
 
 func (a *LightsailStub) AttachCertificateToDistribution(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) (*lightsail.AttachCertificateToDistributionOutput, error) {
@@ -1685,9 +1812,9 @@ func (a *LightsailStub) AttachCertificateToDistribution(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LightsailStub) AttachCertificateToDistributionAsync(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) *LightsailAttachCertificateToDistributionResult {
+func (a *LightsailStub) AttachCertificateToDistributionAsync(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) *LightsailAttachCertificateToDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.AttachCertificateToDistribution", input)
-	return &LightsailAttachCertificateToDistributionResult{Result: future}
+	return &LightsailAttachCertificateToDistributionFuture{Future: future}
 }
 
 func (a *LightsailStub) AttachDisk(ctx workflow.Context, input *lightsail.AttachDiskInput) (*lightsail.AttachDiskOutput, error) {
@@ -1696,9 +1823,9 @@ func (a *LightsailStub) AttachDisk(ctx workflow.Context, input *lightsail.Attach
 	return &output, err
 }
 
-func (a *LightsailStub) AttachDiskAsync(ctx workflow.Context, input *lightsail.AttachDiskInput) *LightsailAttachDiskResult {
+func (a *LightsailStub) AttachDiskAsync(ctx workflow.Context, input *lightsail.AttachDiskInput) *LightsailAttachDiskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.AttachDisk", input)
-	return &LightsailAttachDiskResult{Result: future}
+	return &LightsailAttachDiskFuture{Future: future}
 }
 
 func (a *LightsailStub) AttachInstancesToLoadBalancer(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) (*lightsail.AttachInstancesToLoadBalancerOutput, error) {
@@ -1707,9 +1834,9 @@ func (a *LightsailStub) AttachInstancesToLoadBalancer(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *LightsailStub) AttachInstancesToLoadBalancerAsync(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) *LightsailAttachInstancesToLoadBalancerResult {
+func (a *LightsailStub) AttachInstancesToLoadBalancerAsync(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) *LightsailAttachInstancesToLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.AttachInstancesToLoadBalancer", input)
-	return &LightsailAttachInstancesToLoadBalancerResult{Result: future}
+	return &LightsailAttachInstancesToLoadBalancerFuture{Future: future}
 }
 
 func (a *LightsailStub) AttachLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error) {
@@ -1718,9 +1845,9 @@ func (a *LightsailStub) AttachLoadBalancerTlsCertificate(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *LightsailStub) AttachLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) *LightsailAttachLoadBalancerTlsCertificateResult {
+func (a *LightsailStub) AttachLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) *LightsailAttachLoadBalancerTlsCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.AttachLoadBalancerTlsCertificate", input)
-	return &LightsailAttachLoadBalancerTlsCertificateResult{Result: future}
+	return &LightsailAttachLoadBalancerTlsCertificateFuture{Future: future}
 }
 
 func (a *LightsailStub) AttachStaticIp(ctx workflow.Context, input *lightsail.AttachStaticIpInput) (*lightsail.AttachStaticIpOutput, error) {
@@ -1729,9 +1856,9 @@ func (a *LightsailStub) AttachStaticIp(ctx workflow.Context, input *lightsail.At
 	return &output, err
 }
 
-func (a *LightsailStub) AttachStaticIpAsync(ctx workflow.Context, input *lightsail.AttachStaticIpInput) *LightsailAttachStaticIpResult {
+func (a *LightsailStub) AttachStaticIpAsync(ctx workflow.Context, input *lightsail.AttachStaticIpInput) *LightsailAttachStaticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.AttachStaticIp", input)
-	return &LightsailAttachStaticIpResult{Result: future}
+	return &LightsailAttachStaticIpFuture{Future: future}
 }
 
 func (a *LightsailStub) CloseInstancePublicPorts(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) (*lightsail.CloseInstancePublicPortsOutput, error) {
@@ -1740,9 +1867,9 @@ func (a *LightsailStub) CloseInstancePublicPorts(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) CloseInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) *LightsailCloseInstancePublicPortsResult {
+func (a *LightsailStub) CloseInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) *LightsailCloseInstancePublicPortsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CloseInstancePublicPorts", input)
-	return &LightsailCloseInstancePublicPortsResult{Result: future}
+	return &LightsailCloseInstancePublicPortsFuture{Future: future}
 }
 
 func (a *LightsailStub) CopySnapshot(ctx workflow.Context, input *lightsail.CopySnapshotInput) (*lightsail.CopySnapshotOutput, error) {
@@ -1751,9 +1878,9 @@ func (a *LightsailStub) CopySnapshot(ctx workflow.Context, input *lightsail.Copy
 	return &output, err
 }
 
-func (a *LightsailStub) CopySnapshotAsync(ctx workflow.Context, input *lightsail.CopySnapshotInput) *LightsailCopySnapshotResult {
+func (a *LightsailStub) CopySnapshotAsync(ctx workflow.Context, input *lightsail.CopySnapshotInput) *LightsailCopySnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CopySnapshot", input)
-	return &LightsailCopySnapshotResult{Result: future}
+	return &LightsailCopySnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateCertificate(ctx workflow.Context, input *lightsail.CreateCertificateInput) (*lightsail.CreateCertificateOutput, error) {
@@ -1762,9 +1889,9 @@ func (a *LightsailStub) CreateCertificate(ctx workflow.Context, input *lightsail
 	return &output, err
 }
 
-func (a *LightsailStub) CreateCertificateAsync(ctx workflow.Context, input *lightsail.CreateCertificateInput) *LightsailCreateCertificateResult {
+func (a *LightsailStub) CreateCertificateAsync(ctx workflow.Context, input *lightsail.CreateCertificateInput) *LightsailCreateCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateCertificate", input)
-	return &LightsailCreateCertificateResult{Result: future}
+	return &LightsailCreateCertificateFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateCloudFormationStack(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) (*lightsail.CreateCloudFormationStackOutput, error) {
@@ -1773,9 +1900,9 @@ func (a *LightsailStub) CreateCloudFormationStack(ctx workflow.Context, input *l
 	return &output, err
 }
 
-func (a *LightsailStub) CreateCloudFormationStackAsync(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) *LightsailCreateCloudFormationStackResult {
+func (a *LightsailStub) CreateCloudFormationStackAsync(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) *LightsailCreateCloudFormationStackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateCloudFormationStack", input)
-	return &LightsailCreateCloudFormationStackResult{Result: future}
+	return &LightsailCreateCloudFormationStackFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateContactMethod(ctx workflow.Context, input *lightsail.CreateContactMethodInput) (*lightsail.CreateContactMethodOutput, error) {
@@ -1784,9 +1911,9 @@ func (a *LightsailStub) CreateContactMethod(ctx workflow.Context, input *lightsa
 	return &output, err
 }
 
-func (a *LightsailStub) CreateContactMethodAsync(ctx workflow.Context, input *lightsail.CreateContactMethodInput) *LightsailCreateContactMethodResult {
+func (a *LightsailStub) CreateContactMethodAsync(ctx workflow.Context, input *lightsail.CreateContactMethodInput) *LightsailCreateContactMethodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateContactMethod", input)
-	return &LightsailCreateContactMethodResult{Result: future}
+	return &LightsailCreateContactMethodFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateDisk(ctx workflow.Context, input *lightsail.CreateDiskInput) (*lightsail.CreateDiskOutput, error) {
@@ -1795,9 +1922,9 @@ func (a *LightsailStub) CreateDisk(ctx workflow.Context, input *lightsail.Create
 	return &output, err
 }
 
-func (a *LightsailStub) CreateDiskAsync(ctx workflow.Context, input *lightsail.CreateDiskInput) *LightsailCreateDiskResult {
+func (a *LightsailStub) CreateDiskAsync(ctx workflow.Context, input *lightsail.CreateDiskInput) *LightsailCreateDiskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateDisk", input)
-	return &LightsailCreateDiskResult{Result: future}
+	return &LightsailCreateDiskFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateDiskFromSnapshot(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) (*lightsail.CreateDiskFromSnapshotOutput, error) {
@@ -1806,9 +1933,9 @@ func (a *LightsailStub) CreateDiskFromSnapshot(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) CreateDiskFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) *LightsailCreateDiskFromSnapshotResult {
+func (a *LightsailStub) CreateDiskFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) *LightsailCreateDiskFromSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateDiskFromSnapshot", input)
-	return &LightsailCreateDiskFromSnapshotResult{Result: future}
+	return &LightsailCreateDiskFromSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateDiskSnapshot(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) (*lightsail.CreateDiskSnapshotOutput, error) {
@@ -1817,9 +1944,9 @@ func (a *LightsailStub) CreateDiskSnapshot(ctx workflow.Context, input *lightsai
 	return &output, err
 }
 
-func (a *LightsailStub) CreateDiskSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) *LightsailCreateDiskSnapshotResult {
+func (a *LightsailStub) CreateDiskSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) *LightsailCreateDiskSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateDiskSnapshot", input)
-	return &LightsailCreateDiskSnapshotResult{Result: future}
+	return &LightsailCreateDiskSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateDistribution(ctx workflow.Context, input *lightsail.CreateDistributionInput) (*lightsail.CreateDistributionOutput, error) {
@@ -1828,9 +1955,9 @@ func (a *LightsailStub) CreateDistribution(ctx workflow.Context, input *lightsai
 	return &output, err
 }
 
-func (a *LightsailStub) CreateDistributionAsync(ctx workflow.Context, input *lightsail.CreateDistributionInput) *LightsailCreateDistributionResult {
+func (a *LightsailStub) CreateDistributionAsync(ctx workflow.Context, input *lightsail.CreateDistributionInput) *LightsailCreateDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateDistribution", input)
-	return &LightsailCreateDistributionResult{Result: future}
+	return &LightsailCreateDistributionFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateDomain(ctx workflow.Context, input *lightsail.CreateDomainInput) (*lightsail.CreateDomainOutput, error) {
@@ -1839,9 +1966,9 @@ func (a *LightsailStub) CreateDomain(ctx workflow.Context, input *lightsail.Crea
 	return &output, err
 }
 
-func (a *LightsailStub) CreateDomainAsync(ctx workflow.Context, input *lightsail.CreateDomainInput) *LightsailCreateDomainResult {
+func (a *LightsailStub) CreateDomainAsync(ctx workflow.Context, input *lightsail.CreateDomainInput) *LightsailCreateDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateDomain", input)
-	return &LightsailCreateDomainResult{Result: future}
+	return &LightsailCreateDomainFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateDomainEntry(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) (*lightsail.CreateDomainEntryOutput, error) {
@@ -1850,9 +1977,9 @@ func (a *LightsailStub) CreateDomainEntry(ctx workflow.Context, input *lightsail
 	return &output, err
 }
 
-func (a *LightsailStub) CreateDomainEntryAsync(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) *LightsailCreateDomainEntryResult {
+func (a *LightsailStub) CreateDomainEntryAsync(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) *LightsailCreateDomainEntryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateDomainEntry", input)
-	return &LightsailCreateDomainEntryResult{Result: future}
+	return &LightsailCreateDomainEntryFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateInstanceSnapshot(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) (*lightsail.CreateInstanceSnapshotOutput, error) {
@@ -1861,9 +1988,9 @@ func (a *LightsailStub) CreateInstanceSnapshot(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) CreateInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) *LightsailCreateInstanceSnapshotResult {
+func (a *LightsailStub) CreateInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) *LightsailCreateInstanceSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateInstanceSnapshot", input)
-	return &LightsailCreateInstanceSnapshotResult{Result: future}
+	return &LightsailCreateInstanceSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateInstances(ctx workflow.Context, input *lightsail.CreateInstancesInput) (*lightsail.CreateInstancesOutput, error) {
@@ -1872,9 +1999,9 @@ func (a *LightsailStub) CreateInstances(ctx workflow.Context, input *lightsail.C
 	return &output, err
 }
 
-func (a *LightsailStub) CreateInstancesAsync(ctx workflow.Context, input *lightsail.CreateInstancesInput) *LightsailCreateInstancesResult {
+func (a *LightsailStub) CreateInstancesAsync(ctx workflow.Context, input *lightsail.CreateInstancesInput) *LightsailCreateInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateInstances", input)
-	return &LightsailCreateInstancesResult{Result: future}
+	return &LightsailCreateInstancesFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateInstancesFromSnapshot(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) (*lightsail.CreateInstancesFromSnapshotOutput, error) {
@@ -1883,9 +2010,9 @@ func (a *LightsailStub) CreateInstancesFromSnapshot(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *LightsailStub) CreateInstancesFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) *LightsailCreateInstancesFromSnapshotResult {
+func (a *LightsailStub) CreateInstancesFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) *LightsailCreateInstancesFromSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateInstancesFromSnapshot", input)
-	return &LightsailCreateInstancesFromSnapshotResult{Result: future}
+	return &LightsailCreateInstancesFromSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateKeyPair(ctx workflow.Context, input *lightsail.CreateKeyPairInput) (*lightsail.CreateKeyPairOutput, error) {
@@ -1894,9 +2021,9 @@ func (a *LightsailStub) CreateKeyPair(ctx workflow.Context, input *lightsail.Cre
 	return &output, err
 }
 
-func (a *LightsailStub) CreateKeyPairAsync(ctx workflow.Context, input *lightsail.CreateKeyPairInput) *LightsailCreateKeyPairResult {
+func (a *LightsailStub) CreateKeyPairAsync(ctx workflow.Context, input *lightsail.CreateKeyPairInput) *LightsailCreateKeyPairFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateKeyPair", input)
-	return &LightsailCreateKeyPairResult{Result: future}
+	return &LightsailCreateKeyPairFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateLoadBalancer(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) (*lightsail.CreateLoadBalancerOutput, error) {
@@ -1905,9 +2032,9 @@ func (a *LightsailStub) CreateLoadBalancer(ctx workflow.Context, input *lightsai
 	return &output, err
 }
 
-func (a *LightsailStub) CreateLoadBalancerAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) *LightsailCreateLoadBalancerResult {
+func (a *LightsailStub) CreateLoadBalancerAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) *LightsailCreateLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateLoadBalancer", input)
-	return &LightsailCreateLoadBalancerResult{Result: future}
+	return &LightsailCreateLoadBalancerFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error) {
@@ -1916,9 +2043,9 @@ func (a *LightsailStub) CreateLoadBalancerTlsCertificate(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *LightsailStub) CreateLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) *LightsailCreateLoadBalancerTlsCertificateResult {
+func (a *LightsailStub) CreateLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) *LightsailCreateLoadBalancerTlsCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateLoadBalancerTlsCertificate", input)
-	return &LightsailCreateLoadBalancerTlsCertificateResult{Result: future}
+	return &LightsailCreateLoadBalancerTlsCertificateFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateRelationalDatabase(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) (*lightsail.CreateRelationalDatabaseOutput, error) {
@@ -1927,9 +2054,9 @@ func (a *LightsailStub) CreateRelationalDatabase(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) CreateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) *LightsailCreateRelationalDatabaseResult {
+func (a *LightsailStub) CreateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) *LightsailCreateRelationalDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateRelationalDatabase", input)
-	return &LightsailCreateRelationalDatabaseResult{Result: future}
+	return &LightsailCreateRelationalDatabaseFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateRelationalDatabaseFromSnapshot(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) (*lightsail.CreateRelationalDatabaseFromSnapshotOutput, error) {
@@ -1938,9 +2065,9 @@ func (a *LightsailStub) CreateRelationalDatabaseFromSnapshot(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *LightsailStub) CreateRelationalDatabaseFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) *LightsailCreateRelationalDatabaseFromSnapshotResult {
+func (a *LightsailStub) CreateRelationalDatabaseFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) *LightsailCreateRelationalDatabaseFromSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateRelationalDatabaseFromSnapshot", input)
-	return &LightsailCreateRelationalDatabaseFromSnapshotResult{Result: future}
+	return &LightsailCreateRelationalDatabaseFromSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) CreateRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) (*lightsail.CreateRelationalDatabaseSnapshotOutput, error) {
@@ -1949,9 +2076,9 @@ func (a *LightsailStub) CreateRelationalDatabaseSnapshot(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *LightsailStub) CreateRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) *LightsailCreateRelationalDatabaseSnapshotResult {
+func (a *LightsailStub) CreateRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) *LightsailCreateRelationalDatabaseSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.CreateRelationalDatabaseSnapshot", input)
-	return &LightsailCreateRelationalDatabaseSnapshotResult{Result: future}
+	return &LightsailCreateRelationalDatabaseSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteAlarm(ctx workflow.Context, input *lightsail.DeleteAlarmInput) (*lightsail.DeleteAlarmOutput, error) {
@@ -1960,9 +2087,9 @@ func (a *LightsailStub) DeleteAlarm(ctx workflow.Context, input *lightsail.Delet
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteAlarmAsync(ctx workflow.Context, input *lightsail.DeleteAlarmInput) *LightsailDeleteAlarmResult {
+func (a *LightsailStub) DeleteAlarmAsync(ctx workflow.Context, input *lightsail.DeleteAlarmInput) *LightsailDeleteAlarmFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteAlarm", input)
-	return &LightsailDeleteAlarmResult{Result: future}
+	return &LightsailDeleteAlarmFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteAutoSnapshot(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) (*lightsail.DeleteAutoSnapshotOutput, error) {
@@ -1971,9 +2098,9 @@ func (a *LightsailStub) DeleteAutoSnapshot(ctx workflow.Context, input *lightsai
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteAutoSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) *LightsailDeleteAutoSnapshotResult {
+func (a *LightsailStub) DeleteAutoSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) *LightsailDeleteAutoSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteAutoSnapshot", input)
-	return &LightsailDeleteAutoSnapshotResult{Result: future}
+	return &LightsailDeleteAutoSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteCertificate(ctx workflow.Context, input *lightsail.DeleteCertificateInput) (*lightsail.DeleteCertificateOutput, error) {
@@ -1982,9 +2109,9 @@ func (a *LightsailStub) DeleteCertificate(ctx workflow.Context, input *lightsail
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteCertificateAsync(ctx workflow.Context, input *lightsail.DeleteCertificateInput) *LightsailDeleteCertificateResult {
+func (a *LightsailStub) DeleteCertificateAsync(ctx workflow.Context, input *lightsail.DeleteCertificateInput) *LightsailDeleteCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteCertificate", input)
-	return &LightsailDeleteCertificateResult{Result: future}
+	return &LightsailDeleteCertificateFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteContactMethod(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) (*lightsail.DeleteContactMethodOutput, error) {
@@ -1993,9 +2120,9 @@ func (a *LightsailStub) DeleteContactMethod(ctx workflow.Context, input *lightsa
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteContactMethodAsync(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) *LightsailDeleteContactMethodResult {
+func (a *LightsailStub) DeleteContactMethodAsync(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) *LightsailDeleteContactMethodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteContactMethod", input)
-	return &LightsailDeleteContactMethodResult{Result: future}
+	return &LightsailDeleteContactMethodFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteDisk(ctx workflow.Context, input *lightsail.DeleteDiskInput) (*lightsail.DeleteDiskOutput, error) {
@@ -2004,9 +2131,9 @@ func (a *LightsailStub) DeleteDisk(ctx workflow.Context, input *lightsail.Delete
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteDiskAsync(ctx workflow.Context, input *lightsail.DeleteDiskInput) *LightsailDeleteDiskResult {
+func (a *LightsailStub) DeleteDiskAsync(ctx workflow.Context, input *lightsail.DeleteDiskInput) *LightsailDeleteDiskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteDisk", input)
-	return &LightsailDeleteDiskResult{Result: future}
+	return &LightsailDeleteDiskFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteDiskSnapshot(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) (*lightsail.DeleteDiskSnapshotOutput, error) {
@@ -2015,9 +2142,9 @@ func (a *LightsailStub) DeleteDiskSnapshot(ctx workflow.Context, input *lightsai
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteDiskSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) *LightsailDeleteDiskSnapshotResult {
+func (a *LightsailStub) DeleteDiskSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) *LightsailDeleteDiskSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteDiskSnapshot", input)
-	return &LightsailDeleteDiskSnapshotResult{Result: future}
+	return &LightsailDeleteDiskSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteDistribution(ctx workflow.Context, input *lightsail.DeleteDistributionInput) (*lightsail.DeleteDistributionOutput, error) {
@@ -2026,9 +2153,9 @@ func (a *LightsailStub) DeleteDistribution(ctx workflow.Context, input *lightsai
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteDistributionAsync(ctx workflow.Context, input *lightsail.DeleteDistributionInput) *LightsailDeleteDistributionResult {
+func (a *LightsailStub) DeleteDistributionAsync(ctx workflow.Context, input *lightsail.DeleteDistributionInput) *LightsailDeleteDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteDistribution", input)
-	return &LightsailDeleteDistributionResult{Result: future}
+	return &LightsailDeleteDistributionFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteDomain(ctx workflow.Context, input *lightsail.DeleteDomainInput) (*lightsail.DeleteDomainOutput, error) {
@@ -2037,9 +2164,9 @@ func (a *LightsailStub) DeleteDomain(ctx workflow.Context, input *lightsail.Dele
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteDomainAsync(ctx workflow.Context, input *lightsail.DeleteDomainInput) *LightsailDeleteDomainResult {
+func (a *LightsailStub) DeleteDomainAsync(ctx workflow.Context, input *lightsail.DeleteDomainInput) *LightsailDeleteDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteDomain", input)
-	return &LightsailDeleteDomainResult{Result: future}
+	return &LightsailDeleteDomainFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteDomainEntry(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) (*lightsail.DeleteDomainEntryOutput, error) {
@@ -2048,9 +2175,9 @@ func (a *LightsailStub) DeleteDomainEntry(ctx workflow.Context, input *lightsail
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteDomainEntryAsync(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) *LightsailDeleteDomainEntryResult {
+func (a *LightsailStub) DeleteDomainEntryAsync(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) *LightsailDeleteDomainEntryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteDomainEntry", input)
-	return &LightsailDeleteDomainEntryResult{Result: future}
+	return &LightsailDeleteDomainEntryFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteInstance(ctx workflow.Context, input *lightsail.DeleteInstanceInput) (*lightsail.DeleteInstanceOutput, error) {
@@ -2059,9 +2186,9 @@ func (a *LightsailStub) DeleteInstance(ctx workflow.Context, input *lightsail.De
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteInstanceAsync(ctx workflow.Context, input *lightsail.DeleteInstanceInput) *LightsailDeleteInstanceResult {
+func (a *LightsailStub) DeleteInstanceAsync(ctx workflow.Context, input *lightsail.DeleteInstanceInput) *LightsailDeleteInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteInstance", input)
-	return &LightsailDeleteInstanceResult{Result: future}
+	return &LightsailDeleteInstanceFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteInstanceSnapshot(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) (*lightsail.DeleteInstanceSnapshotOutput, error) {
@@ -2070,9 +2197,9 @@ func (a *LightsailStub) DeleteInstanceSnapshot(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) *LightsailDeleteInstanceSnapshotResult {
+func (a *LightsailStub) DeleteInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) *LightsailDeleteInstanceSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteInstanceSnapshot", input)
-	return &LightsailDeleteInstanceSnapshotResult{Result: future}
+	return &LightsailDeleteInstanceSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteKeyPair(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) (*lightsail.DeleteKeyPairOutput, error) {
@@ -2081,9 +2208,9 @@ func (a *LightsailStub) DeleteKeyPair(ctx workflow.Context, input *lightsail.Del
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteKeyPairAsync(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) *LightsailDeleteKeyPairResult {
+func (a *LightsailStub) DeleteKeyPairAsync(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) *LightsailDeleteKeyPairFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteKeyPair", input)
-	return &LightsailDeleteKeyPairResult{Result: future}
+	return &LightsailDeleteKeyPairFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteKnownHostKeys(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) (*lightsail.DeleteKnownHostKeysOutput, error) {
@@ -2092,9 +2219,9 @@ func (a *LightsailStub) DeleteKnownHostKeys(ctx workflow.Context, input *lightsa
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteKnownHostKeysAsync(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) *LightsailDeleteKnownHostKeysResult {
+func (a *LightsailStub) DeleteKnownHostKeysAsync(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) *LightsailDeleteKnownHostKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteKnownHostKeys", input)
-	return &LightsailDeleteKnownHostKeysResult{Result: future}
+	return &LightsailDeleteKnownHostKeysFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteLoadBalancer(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) (*lightsail.DeleteLoadBalancerOutput, error) {
@@ -2103,9 +2230,9 @@ func (a *LightsailStub) DeleteLoadBalancer(ctx workflow.Context, input *lightsai
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteLoadBalancerAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) *LightsailDeleteLoadBalancerResult {
+func (a *LightsailStub) DeleteLoadBalancerAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) *LightsailDeleteLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteLoadBalancer", input)
-	return &LightsailDeleteLoadBalancerResult{Result: future}
+	return &LightsailDeleteLoadBalancerFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error) {
@@ -2114,9 +2241,9 @@ func (a *LightsailStub) DeleteLoadBalancerTlsCertificate(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) *LightsailDeleteLoadBalancerTlsCertificateResult {
+func (a *LightsailStub) DeleteLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) *LightsailDeleteLoadBalancerTlsCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteLoadBalancerTlsCertificate", input)
-	return &LightsailDeleteLoadBalancerTlsCertificateResult{Result: future}
+	return &LightsailDeleteLoadBalancerTlsCertificateFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteRelationalDatabase(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) (*lightsail.DeleteRelationalDatabaseOutput, error) {
@@ -2125,9 +2252,9 @@ func (a *LightsailStub) DeleteRelationalDatabase(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) *LightsailDeleteRelationalDatabaseResult {
+func (a *LightsailStub) DeleteRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) *LightsailDeleteRelationalDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteRelationalDatabase", input)
-	return &LightsailDeleteRelationalDatabaseResult{Result: future}
+	return &LightsailDeleteRelationalDatabaseFuture{Future: future}
 }
 
 func (a *LightsailStub) DeleteRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) (*lightsail.DeleteRelationalDatabaseSnapshotOutput, error) {
@@ -2136,9 +2263,9 @@ func (a *LightsailStub) DeleteRelationalDatabaseSnapshot(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *LightsailStub) DeleteRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) *LightsailDeleteRelationalDatabaseSnapshotResult {
+func (a *LightsailStub) DeleteRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) *LightsailDeleteRelationalDatabaseSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DeleteRelationalDatabaseSnapshot", input)
-	return &LightsailDeleteRelationalDatabaseSnapshotResult{Result: future}
+	return &LightsailDeleteRelationalDatabaseSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) DetachCertificateFromDistribution(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) (*lightsail.DetachCertificateFromDistributionOutput, error) {
@@ -2147,9 +2274,9 @@ func (a *LightsailStub) DetachCertificateFromDistribution(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *LightsailStub) DetachCertificateFromDistributionAsync(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) *LightsailDetachCertificateFromDistributionResult {
+func (a *LightsailStub) DetachCertificateFromDistributionAsync(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) *LightsailDetachCertificateFromDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DetachCertificateFromDistribution", input)
-	return &LightsailDetachCertificateFromDistributionResult{Result: future}
+	return &LightsailDetachCertificateFromDistributionFuture{Future: future}
 }
 
 func (a *LightsailStub) DetachDisk(ctx workflow.Context, input *lightsail.DetachDiskInput) (*lightsail.DetachDiskOutput, error) {
@@ -2158,9 +2285,9 @@ func (a *LightsailStub) DetachDisk(ctx workflow.Context, input *lightsail.Detach
 	return &output, err
 }
 
-func (a *LightsailStub) DetachDiskAsync(ctx workflow.Context, input *lightsail.DetachDiskInput) *LightsailDetachDiskResult {
+func (a *LightsailStub) DetachDiskAsync(ctx workflow.Context, input *lightsail.DetachDiskInput) *LightsailDetachDiskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DetachDisk", input)
-	return &LightsailDetachDiskResult{Result: future}
+	return &LightsailDetachDiskFuture{Future: future}
 }
 
 func (a *LightsailStub) DetachInstancesFromLoadBalancer(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) (*lightsail.DetachInstancesFromLoadBalancerOutput, error) {
@@ -2169,9 +2296,9 @@ func (a *LightsailStub) DetachInstancesFromLoadBalancer(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LightsailStub) DetachInstancesFromLoadBalancerAsync(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) *LightsailDetachInstancesFromLoadBalancerResult {
+func (a *LightsailStub) DetachInstancesFromLoadBalancerAsync(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) *LightsailDetachInstancesFromLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DetachInstancesFromLoadBalancer", input)
-	return &LightsailDetachInstancesFromLoadBalancerResult{Result: future}
+	return &LightsailDetachInstancesFromLoadBalancerFuture{Future: future}
 }
 
 func (a *LightsailStub) DetachStaticIp(ctx workflow.Context, input *lightsail.DetachStaticIpInput) (*lightsail.DetachStaticIpOutput, error) {
@@ -2180,9 +2307,9 @@ func (a *LightsailStub) DetachStaticIp(ctx workflow.Context, input *lightsail.De
 	return &output, err
 }
 
-func (a *LightsailStub) DetachStaticIpAsync(ctx workflow.Context, input *lightsail.DetachStaticIpInput) *LightsailDetachStaticIpResult {
+func (a *LightsailStub) DetachStaticIpAsync(ctx workflow.Context, input *lightsail.DetachStaticIpInput) *LightsailDetachStaticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DetachStaticIp", input)
-	return &LightsailDetachStaticIpResult{Result: future}
+	return &LightsailDetachStaticIpFuture{Future: future}
 }
 
 func (a *LightsailStub) DisableAddOn(ctx workflow.Context, input *lightsail.DisableAddOnInput) (*lightsail.DisableAddOnOutput, error) {
@@ -2191,9 +2318,9 @@ func (a *LightsailStub) DisableAddOn(ctx workflow.Context, input *lightsail.Disa
 	return &output, err
 }
 
-func (a *LightsailStub) DisableAddOnAsync(ctx workflow.Context, input *lightsail.DisableAddOnInput) *LightsailDisableAddOnResult {
+func (a *LightsailStub) DisableAddOnAsync(ctx workflow.Context, input *lightsail.DisableAddOnInput) *LightsailDisableAddOnFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DisableAddOn", input)
-	return &LightsailDisableAddOnResult{Result: future}
+	return &LightsailDisableAddOnFuture{Future: future}
 }
 
 func (a *LightsailStub) DownloadDefaultKeyPair(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) (*lightsail.DownloadDefaultKeyPairOutput, error) {
@@ -2202,9 +2329,9 @@ func (a *LightsailStub) DownloadDefaultKeyPair(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) DownloadDefaultKeyPairAsync(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) *LightsailDownloadDefaultKeyPairResult {
+func (a *LightsailStub) DownloadDefaultKeyPairAsync(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) *LightsailDownloadDefaultKeyPairFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.DownloadDefaultKeyPair", input)
-	return &LightsailDownloadDefaultKeyPairResult{Result: future}
+	return &LightsailDownloadDefaultKeyPairFuture{Future: future}
 }
 
 func (a *LightsailStub) EnableAddOn(ctx workflow.Context, input *lightsail.EnableAddOnInput) (*lightsail.EnableAddOnOutput, error) {
@@ -2213,9 +2340,9 @@ func (a *LightsailStub) EnableAddOn(ctx workflow.Context, input *lightsail.Enabl
 	return &output, err
 }
 
-func (a *LightsailStub) EnableAddOnAsync(ctx workflow.Context, input *lightsail.EnableAddOnInput) *LightsailEnableAddOnResult {
+func (a *LightsailStub) EnableAddOnAsync(ctx workflow.Context, input *lightsail.EnableAddOnInput) *LightsailEnableAddOnFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.EnableAddOn", input)
-	return &LightsailEnableAddOnResult{Result: future}
+	return &LightsailEnableAddOnFuture{Future: future}
 }
 
 func (a *LightsailStub) ExportSnapshot(ctx workflow.Context, input *lightsail.ExportSnapshotInput) (*lightsail.ExportSnapshotOutput, error) {
@@ -2224,9 +2351,9 @@ func (a *LightsailStub) ExportSnapshot(ctx workflow.Context, input *lightsail.Ex
 	return &output, err
 }
 
-func (a *LightsailStub) ExportSnapshotAsync(ctx workflow.Context, input *lightsail.ExportSnapshotInput) *LightsailExportSnapshotResult {
+func (a *LightsailStub) ExportSnapshotAsync(ctx workflow.Context, input *lightsail.ExportSnapshotInput) *LightsailExportSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.ExportSnapshot", input)
-	return &LightsailExportSnapshotResult{Result: future}
+	return &LightsailExportSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) GetActiveNames(ctx workflow.Context, input *lightsail.GetActiveNamesInput) (*lightsail.GetActiveNamesOutput, error) {
@@ -2235,9 +2362,9 @@ func (a *LightsailStub) GetActiveNames(ctx workflow.Context, input *lightsail.Ge
 	return &output, err
 }
 
-func (a *LightsailStub) GetActiveNamesAsync(ctx workflow.Context, input *lightsail.GetActiveNamesInput) *LightsailGetActiveNamesResult {
+func (a *LightsailStub) GetActiveNamesAsync(ctx workflow.Context, input *lightsail.GetActiveNamesInput) *LightsailGetActiveNamesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetActiveNames", input)
-	return &LightsailGetActiveNamesResult{Result: future}
+	return &LightsailGetActiveNamesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetAlarms(ctx workflow.Context, input *lightsail.GetAlarmsInput) (*lightsail.GetAlarmsOutput, error) {
@@ -2246,9 +2373,9 @@ func (a *LightsailStub) GetAlarms(ctx workflow.Context, input *lightsail.GetAlar
 	return &output, err
 }
 
-func (a *LightsailStub) GetAlarmsAsync(ctx workflow.Context, input *lightsail.GetAlarmsInput) *LightsailGetAlarmsResult {
+func (a *LightsailStub) GetAlarmsAsync(ctx workflow.Context, input *lightsail.GetAlarmsInput) *LightsailGetAlarmsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetAlarms", input)
-	return &LightsailGetAlarmsResult{Result: future}
+	return &LightsailGetAlarmsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetAutoSnapshots(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) (*lightsail.GetAutoSnapshotsOutput, error) {
@@ -2257,9 +2384,9 @@ func (a *LightsailStub) GetAutoSnapshots(ctx workflow.Context, input *lightsail.
 	return &output, err
 }
 
-func (a *LightsailStub) GetAutoSnapshotsAsync(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) *LightsailGetAutoSnapshotsResult {
+func (a *LightsailStub) GetAutoSnapshotsAsync(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) *LightsailGetAutoSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetAutoSnapshots", input)
-	return &LightsailGetAutoSnapshotsResult{Result: future}
+	return &LightsailGetAutoSnapshotsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetBlueprints(ctx workflow.Context, input *lightsail.GetBlueprintsInput) (*lightsail.GetBlueprintsOutput, error) {
@@ -2268,9 +2395,9 @@ func (a *LightsailStub) GetBlueprints(ctx workflow.Context, input *lightsail.Get
 	return &output, err
 }
 
-func (a *LightsailStub) GetBlueprintsAsync(ctx workflow.Context, input *lightsail.GetBlueprintsInput) *LightsailGetBlueprintsResult {
+func (a *LightsailStub) GetBlueprintsAsync(ctx workflow.Context, input *lightsail.GetBlueprintsInput) *LightsailGetBlueprintsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetBlueprints", input)
-	return &LightsailGetBlueprintsResult{Result: future}
+	return &LightsailGetBlueprintsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetBundles(ctx workflow.Context, input *lightsail.GetBundlesInput) (*lightsail.GetBundlesOutput, error) {
@@ -2279,9 +2406,9 @@ func (a *LightsailStub) GetBundles(ctx workflow.Context, input *lightsail.GetBun
 	return &output, err
 }
 
-func (a *LightsailStub) GetBundlesAsync(ctx workflow.Context, input *lightsail.GetBundlesInput) *LightsailGetBundlesResult {
+func (a *LightsailStub) GetBundlesAsync(ctx workflow.Context, input *lightsail.GetBundlesInput) *LightsailGetBundlesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetBundles", input)
-	return &LightsailGetBundlesResult{Result: future}
+	return &LightsailGetBundlesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetCertificates(ctx workflow.Context, input *lightsail.GetCertificatesInput) (*lightsail.GetCertificatesOutput, error) {
@@ -2290,9 +2417,9 @@ func (a *LightsailStub) GetCertificates(ctx workflow.Context, input *lightsail.G
 	return &output, err
 }
 
-func (a *LightsailStub) GetCertificatesAsync(ctx workflow.Context, input *lightsail.GetCertificatesInput) *LightsailGetCertificatesResult {
+func (a *LightsailStub) GetCertificatesAsync(ctx workflow.Context, input *lightsail.GetCertificatesInput) *LightsailGetCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetCertificates", input)
-	return &LightsailGetCertificatesResult{Result: future}
+	return &LightsailGetCertificatesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetCloudFormationStackRecords(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) (*lightsail.GetCloudFormationStackRecordsOutput, error) {
@@ -2301,9 +2428,9 @@ func (a *LightsailStub) GetCloudFormationStackRecords(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *LightsailStub) GetCloudFormationStackRecordsAsync(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) *LightsailGetCloudFormationStackRecordsResult {
+func (a *LightsailStub) GetCloudFormationStackRecordsAsync(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) *LightsailGetCloudFormationStackRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetCloudFormationStackRecords", input)
-	return &LightsailGetCloudFormationStackRecordsResult{Result: future}
+	return &LightsailGetCloudFormationStackRecordsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetContactMethods(ctx workflow.Context, input *lightsail.GetContactMethodsInput) (*lightsail.GetContactMethodsOutput, error) {
@@ -2312,9 +2439,9 @@ func (a *LightsailStub) GetContactMethods(ctx workflow.Context, input *lightsail
 	return &output, err
 }
 
-func (a *LightsailStub) GetContactMethodsAsync(ctx workflow.Context, input *lightsail.GetContactMethodsInput) *LightsailGetContactMethodsResult {
+func (a *LightsailStub) GetContactMethodsAsync(ctx workflow.Context, input *lightsail.GetContactMethodsInput) *LightsailGetContactMethodsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetContactMethods", input)
-	return &LightsailGetContactMethodsResult{Result: future}
+	return &LightsailGetContactMethodsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDisk(ctx workflow.Context, input *lightsail.GetDiskInput) (*lightsail.GetDiskOutput, error) {
@@ -2323,9 +2450,9 @@ func (a *LightsailStub) GetDisk(ctx workflow.Context, input *lightsail.GetDiskIn
 	return &output, err
 }
 
-func (a *LightsailStub) GetDiskAsync(ctx workflow.Context, input *lightsail.GetDiskInput) *LightsailGetDiskResult {
+func (a *LightsailStub) GetDiskAsync(ctx workflow.Context, input *lightsail.GetDiskInput) *LightsailGetDiskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDisk", input)
-	return &LightsailGetDiskResult{Result: future}
+	return &LightsailGetDiskFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDiskSnapshot(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) (*lightsail.GetDiskSnapshotOutput, error) {
@@ -2334,9 +2461,9 @@ func (a *LightsailStub) GetDiskSnapshot(ctx workflow.Context, input *lightsail.G
 	return &output, err
 }
 
-func (a *LightsailStub) GetDiskSnapshotAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) *LightsailGetDiskSnapshotResult {
+func (a *LightsailStub) GetDiskSnapshotAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) *LightsailGetDiskSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDiskSnapshot", input)
-	return &LightsailGetDiskSnapshotResult{Result: future}
+	return &LightsailGetDiskSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDiskSnapshots(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) (*lightsail.GetDiskSnapshotsOutput, error) {
@@ -2345,9 +2472,9 @@ func (a *LightsailStub) GetDiskSnapshots(ctx workflow.Context, input *lightsail.
 	return &output, err
 }
 
-func (a *LightsailStub) GetDiskSnapshotsAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) *LightsailGetDiskSnapshotsResult {
+func (a *LightsailStub) GetDiskSnapshotsAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) *LightsailGetDiskSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDiskSnapshots", input)
-	return &LightsailGetDiskSnapshotsResult{Result: future}
+	return &LightsailGetDiskSnapshotsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDisks(ctx workflow.Context, input *lightsail.GetDisksInput) (*lightsail.GetDisksOutput, error) {
@@ -2356,9 +2483,9 @@ func (a *LightsailStub) GetDisks(ctx workflow.Context, input *lightsail.GetDisks
 	return &output, err
 }
 
-func (a *LightsailStub) GetDisksAsync(ctx workflow.Context, input *lightsail.GetDisksInput) *LightsailGetDisksResult {
+func (a *LightsailStub) GetDisksAsync(ctx workflow.Context, input *lightsail.GetDisksInput) *LightsailGetDisksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDisks", input)
-	return &LightsailGetDisksResult{Result: future}
+	return &LightsailGetDisksFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDistributionBundles(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) (*lightsail.GetDistributionBundlesOutput, error) {
@@ -2367,9 +2494,9 @@ func (a *LightsailStub) GetDistributionBundles(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) GetDistributionBundlesAsync(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) *LightsailGetDistributionBundlesResult {
+func (a *LightsailStub) GetDistributionBundlesAsync(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) *LightsailGetDistributionBundlesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDistributionBundles", input)
-	return &LightsailGetDistributionBundlesResult{Result: future}
+	return &LightsailGetDistributionBundlesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDistributionLatestCacheReset(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) (*lightsail.GetDistributionLatestCacheResetOutput, error) {
@@ -2378,9 +2505,9 @@ func (a *LightsailStub) GetDistributionLatestCacheReset(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LightsailStub) GetDistributionLatestCacheResetAsync(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) *LightsailGetDistributionLatestCacheResetResult {
+func (a *LightsailStub) GetDistributionLatestCacheResetAsync(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) *LightsailGetDistributionLatestCacheResetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDistributionLatestCacheReset", input)
-	return &LightsailGetDistributionLatestCacheResetResult{Result: future}
+	return &LightsailGetDistributionLatestCacheResetFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDistributionMetricData(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) (*lightsail.GetDistributionMetricDataOutput, error) {
@@ -2389,9 +2516,9 @@ func (a *LightsailStub) GetDistributionMetricData(ctx workflow.Context, input *l
 	return &output, err
 }
 
-func (a *LightsailStub) GetDistributionMetricDataAsync(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) *LightsailGetDistributionMetricDataResult {
+func (a *LightsailStub) GetDistributionMetricDataAsync(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) *LightsailGetDistributionMetricDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDistributionMetricData", input)
-	return &LightsailGetDistributionMetricDataResult{Result: future}
+	return &LightsailGetDistributionMetricDataFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDistributions(ctx workflow.Context, input *lightsail.GetDistributionsInput) (*lightsail.GetDistributionsOutput, error) {
@@ -2400,9 +2527,9 @@ func (a *LightsailStub) GetDistributions(ctx workflow.Context, input *lightsail.
 	return &output, err
 }
 
-func (a *LightsailStub) GetDistributionsAsync(ctx workflow.Context, input *lightsail.GetDistributionsInput) *LightsailGetDistributionsResult {
+func (a *LightsailStub) GetDistributionsAsync(ctx workflow.Context, input *lightsail.GetDistributionsInput) *LightsailGetDistributionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDistributions", input)
-	return &LightsailGetDistributionsResult{Result: future}
+	return &LightsailGetDistributionsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDomain(ctx workflow.Context, input *lightsail.GetDomainInput) (*lightsail.GetDomainOutput, error) {
@@ -2411,9 +2538,9 @@ func (a *LightsailStub) GetDomain(ctx workflow.Context, input *lightsail.GetDoma
 	return &output, err
 }
 
-func (a *LightsailStub) GetDomainAsync(ctx workflow.Context, input *lightsail.GetDomainInput) *LightsailGetDomainResult {
+func (a *LightsailStub) GetDomainAsync(ctx workflow.Context, input *lightsail.GetDomainInput) *LightsailGetDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDomain", input)
-	return &LightsailGetDomainResult{Result: future}
+	return &LightsailGetDomainFuture{Future: future}
 }
 
 func (a *LightsailStub) GetDomains(ctx workflow.Context, input *lightsail.GetDomainsInput) (*lightsail.GetDomainsOutput, error) {
@@ -2422,9 +2549,9 @@ func (a *LightsailStub) GetDomains(ctx workflow.Context, input *lightsail.GetDom
 	return &output, err
 }
 
-func (a *LightsailStub) GetDomainsAsync(ctx workflow.Context, input *lightsail.GetDomainsInput) *LightsailGetDomainsResult {
+func (a *LightsailStub) GetDomainsAsync(ctx workflow.Context, input *lightsail.GetDomainsInput) *LightsailGetDomainsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetDomains", input)
-	return &LightsailGetDomainsResult{Result: future}
+	return &LightsailGetDomainsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetExportSnapshotRecords(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) (*lightsail.GetExportSnapshotRecordsOutput, error) {
@@ -2433,9 +2560,9 @@ func (a *LightsailStub) GetExportSnapshotRecords(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) GetExportSnapshotRecordsAsync(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) *LightsailGetExportSnapshotRecordsResult {
+func (a *LightsailStub) GetExportSnapshotRecordsAsync(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) *LightsailGetExportSnapshotRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetExportSnapshotRecords", input)
-	return &LightsailGetExportSnapshotRecordsResult{Result: future}
+	return &LightsailGetExportSnapshotRecordsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetInstance(ctx workflow.Context, input *lightsail.GetInstanceInput) (*lightsail.GetInstanceOutput, error) {
@@ -2444,9 +2571,9 @@ func (a *LightsailStub) GetInstance(ctx workflow.Context, input *lightsail.GetIn
 	return &output, err
 }
 
-func (a *LightsailStub) GetInstanceAsync(ctx workflow.Context, input *lightsail.GetInstanceInput) *LightsailGetInstanceResult {
+func (a *LightsailStub) GetInstanceAsync(ctx workflow.Context, input *lightsail.GetInstanceInput) *LightsailGetInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetInstance", input)
-	return &LightsailGetInstanceResult{Result: future}
+	return &LightsailGetInstanceFuture{Future: future}
 }
 
 func (a *LightsailStub) GetInstanceAccessDetails(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) (*lightsail.GetInstanceAccessDetailsOutput, error) {
@@ -2455,9 +2582,9 @@ func (a *LightsailStub) GetInstanceAccessDetails(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) GetInstanceAccessDetailsAsync(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) *LightsailGetInstanceAccessDetailsResult {
+func (a *LightsailStub) GetInstanceAccessDetailsAsync(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) *LightsailGetInstanceAccessDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetInstanceAccessDetails", input)
-	return &LightsailGetInstanceAccessDetailsResult{Result: future}
+	return &LightsailGetInstanceAccessDetailsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetInstanceMetricData(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) (*lightsail.GetInstanceMetricDataOutput, error) {
@@ -2466,9 +2593,9 @@ func (a *LightsailStub) GetInstanceMetricData(ctx workflow.Context, input *light
 	return &output, err
 }
 
-func (a *LightsailStub) GetInstanceMetricDataAsync(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) *LightsailGetInstanceMetricDataResult {
+func (a *LightsailStub) GetInstanceMetricDataAsync(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) *LightsailGetInstanceMetricDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetInstanceMetricData", input)
-	return &LightsailGetInstanceMetricDataResult{Result: future}
+	return &LightsailGetInstanceMetricDataFuture{Future: future}
 }
 
 func (a *LightsailStub) GetInstancePortStates(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) (*lightsail.GetInstancePortStatesOutput, error) {
@@ -2477,9 +2604,9 @@ func (a *LightsailStub) GetInstancePortStates(ctx workflow.Context, input *light
 	return &output, err
 }
 
-func (a *LightsailStub) GetInstancePortStatesAsync(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) *LightsailGetInstancePortStatesResult {
+func (a *LightsailStub) GetInstancePortStatesAsync(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) *LightsailGetInstancePortStatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetInstancePortStates", input)
-	return &LightsailGetInstancePortStatesResult{Result: future}
+	return &LightsailGetInstancePortStatesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetInstanceSnapshot(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) (*lightsail.GetInstanceSnapshotOutput, error) {
@@ -2488,9 +2615,9 @@ func (a *LightsailStub) GetInstanceSnapshot(ctx workflow.Context, input *lightsa
 	return &output, err
 }
 
-func (a *LightsailStub) GetInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) *LightsailGetInstanceSnapshotResult {
+func (a *LightsailStub) GetInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) *LightsailGetInstanceSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetInstanceSnapshot", input)
-	return &LightsailGetInstanceSnapshotResult{Result: future}
+	return &LightsailGetInstanceSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) GetInstanceSnapshots(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) (*lightsail.GetInstanceSnapshotsOutput, error) {
@@ -2499,9 +2626,9 @@ func (a *LightsailStub) GetInstanceSnapshots(ctx workflow.Context, input *lights
 	return &output, err
 }
 
-func (a *LightsailStub) GetInstanceSnapshotsAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) *LightsailGetInstanceSnapshotsResult {
+func (a *LightsailStub) GetInstanceSnapshotsAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) *LightsailGetInstanceSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetInstanceSnapshots", input)
-	return &LightsailGetInstanceSnapshotsResult{Result: future}
+	return &LightsailGetInstanceSnapshotsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetInstanceState(ctx workflow.Context, input *lightsail.GetInstanceStateInput) (*lightsail.GetInstanceStateOutput, error) {
@@ -2510,9 +2637,9 @@ func (a *LightsailStub) GetInstanceState(ctx workflow.Context, input *lightsail.
 	return &output, err
 }
 
-func (a *LightsailStub) GetInstanceStateAsync(ctx workflow.Context, input *lightsail.GetInstanceStateInput) *LightsailGetInstanceStateResult {
+func (a *LightsailStub) GetInstanceStateAsync(ctx workflow.Context, input *lightsail.GetInstanceStateInput) *LightsailGetInstanceStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetInstanceState", input)
-	return &LightsailGetInstanceStateResult{Result: future}
+	return &LightsailGetInstanceStateFuture{Future: future}
 }
 
 func (a *LightsailStub) GetInstances(ctx workflow.Context, input *lightsail.GetInstancesInput) (*lightsail.GetInstancesOutput, error) {
@@ -2521,9 +2648,9 @@ func (a *LightsailStub) GetInstances(ctx workflow.Context, input *lightsail.GetI
 	return &output, err
 }
 
-func (a *LightsailStub) GetInstancesAsync(ctx workflow.Context, input *lightsail.GetInstancesInput) *LightsailGetInstancesResult {
+func (a *LightsailStub) GetInstancesAsync(ctx workflow.Context, input *lightsail.GetInstancesInput) *LightsailGetInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetInstances", input)
-	return &LightsailGetInstancesResult{Result: future}
+	return &LightsailGetInstancesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetKeyPair(ctx workflow.Context, input *lightsail.GetKeyPairInput) (*lightsail.GetKeyPairOutput, error) {
@@ -2532,9 +2659,9 @@ func (a *LightsailStub) GetKeyPair(ctx workflow.Context, input *lightsail.GetKey
 	return &output, err
 }
 
-func (a *LightsailStub) GetKeyPairAsync(ctx workflow.Context, input *lightsail.GetKeyPairInput) *LightsailGetKeyPairResult {
+func (a *LightsailStub) GetKeyPairAsync(ctx workflow.Context, input *lightsail.GetKeyPairInput) *LightsailGetKeyPairFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetKeyPair", input)
-	return &LightsailGetKeyPairResult{Result: future}
+	return &LightsailGetKeyPairFuture{Future: future}
 }
 
 func (a *LightsailStub) GetKeyPairs(ctx workflow.Context, input *lightsail.GetKeyPairsInput) (*lightsail.GetKeyPairsOutput, error) {
@@ -2543,9 +2670,9 @@ func (a *LightsailStub) GetKeyPairs(ctx workflow.Context, input *lightsail.GetKe
 	return &output, err
 }
 
-func (a *LightsailStub) GetKeyPairsAsync(ctx workflow.Context, input *lightsail.GetKeyPairsInput) *LightsailGetKeyPairsResult {
+func (a *LightsailStub) GetKeyPairsAsync(ctx workflow.Context, input *lightsail.GetKeyPairsInput) *LightsailGetKeyPairsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetKeyPairs", input)
-	return &LightsailGetKeyPairsResult{Result: future}
+	return &LightsailGetKeyPairsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetLoadBalancer(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) (*lightsail.GetLoadBalancerOutput, error) {
@@ -2554,9 +2681,9 @@ func (a *LightsailStub) GetLoadBalancer(ctx workflow.Context, input *lightsail.G
 	return &output, err
 }
 
-func (a *LightsailStub) GetLoadBalancerAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) *LightsailGetLoadBalancerResult {
+func (a *LightsailStub) GetLoadBalancerAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) *LightsailGetLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetLoadBalancer", input)
-	return &LightsailGetLoadBalancerResult{Result: future}
+	return &LightsailGetLoadBalancerFuture{Future: future}
 }
 
 func (a *LightsailStub) GetLoadBalancerMetricData(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) (*lightsail.GetLoadBalancerMetricDataOutput, error) {
@@ -2565,9 +2692,9 @@ func (a *LightsailStub) GetLoadBalancerMetricData(ctx workflow.Context, input *l
 	return &output, err
 }
 
-func (a *LightsailStub) GetLoadBalancerMetricDataAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) *LightsailGetLoadBalancerMetricDataResult {
+func (a *LightsailStub) GetLoadBalancerMetricDataAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) *LightsailGetLoadBalancerMetricDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetLoadBalancerMetricData", input)
-	return &LightsailGetLoadBalancerMetricDataResult{Result: future}
+	return &LightsailGetLoadBalancerMetricDataFuture{Future: future}
 }
 
 func (a *LightsailStub) GetLoadBalancerTlsCertificates(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error) {
@@ -2576,9 +2703,9 @@ func (a *LightsailStub) GetLoadBalancerTlsCertificates(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *LightsailStub) GetLoadBalancerTlsCertificatesAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) *LightsailGetLoadBalancerTlsCertificatesResult {
+func (a *LightsailStub) GetLoadBalancerTlsCertificatesAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) *LightsailGetLoadBalancerTlsCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetLoadBalancerTlsCertificates", input)
-	return &LightsailGetLoadBalancerTlsCertificatesResult{Result: future}
+	return &LightsailGetLoadBalancerTlsCertificatesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetLoadBalancers(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) (*lightsail.GetLoadBalancersOutput, error) {
@@ -2587,9 +2714,9 @@ func (a *LightsailStub) GetLoadBalancers(ctx workflow.Context, input *lightsail.
 	return &output, err
 }
 
-func (a *LightsailStub) GetLoadBalancersAsync(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) *LightsailGetLoadBalancersResult {
+func (a *LightsailStub) GetLoadBalancersAsync(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) *LightsailGetLoadBalancersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetLoadBalancers", input)
-	return &LightsailGetLoadBalancersResult{Result: future}
+	return &LightsailGetLoadBalancersFuture{Future: future}
 }
 
 func (a *LightsailStub) GetOperation(ctx workflow.Context, input *lightsail.GetOperationInput) (*lightsail.GetOperationOutput, error) {
@@ -2598,9 +2725,9 @@ func (a *LightsailStub) GetOperation(ctx workflow.Context, input *lightsail.GetO
 	return &output, err
 }
 
-func (a *LightsailStub) GetOperationAsync(ctx workflow.Context, input *lightsail.GetOperationInput) *LightsailGetOperationResult {
+func (a *LightsailStub) GetOperationAsync(ctx workflow.Context, input *lightsail.GetOperationInput) *LightsailGetOperationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetOperation", input)
-	return &LightsailGetOperationResult{Result: future}
+	return &LightsailGetOperationFuture{Future: future}
 }
 
 func (a *LightsailStub) GetOperations(ctx workflow.Context, input *lightsail.GetOperationsInput) (*lightsail.GetOperationsOutput, error) {
@@ -2609,9 +2736,9 @@ func (a *LightsailStub) GetOperations(ctx workflow.Context, input *lightsail.Get
 	return &output, err
 }
 
-func (a *LightsailStub) GetOperationsAsync(ctx workflow.Context, input *lightsail.GetOperationsInput) *LightsailGetOperationsResult {
+func (a *LightsailStub) GetOperationsAsync(ctx workflow.Context, input *lightsail.GetOperationsInput) *LightsailGetOperationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetOperations", input)
-	return &LightsailGetOperationsResult{Result: future}
+	return &LightsailGetOperationsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetOperationsForResource(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) (*lightsail.GetOperationsForResourceOutput, error) {
@@ -2620,9 +2747,9 @@ func (a *LightsailStub) GetOperationsForResource(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) GetOperationsForResourceAsync(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) *LightsailGetOperationsForResourceResult {
+func (a *LightsailStub) GetOperationsForResourceAsync(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) *LightsailGetOperationsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetOperationsForResource", input)
-	return &LightsailGetOperationsForResourceResult{Result: future}
+	return &LightsailGetOperationsForResourceFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRegions(ctx workflow.Context, input *lightsail.GetRegionsInput) (*lightsail.GetRegionsOutput, error) {
@@ -2631,9 +2758,9 @@ func (a *LightsailStub) GetRegions(ctx workflow.Context, input *lightsail.GetReg
 	return &output, err
 }
 
-func (a *LightsailStub) GetRegionsAsync(ctx workflow.Context, input *lightsail.GetRegionsInput) *LightsailGetRegionsResult {
+func (a *LightsailStub) GetRegionsAsync(ctx workflow.Context, input *lightsail.GetRegionsInput) *LightsailGetRegionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRegions", input)
-	return &LightsailGetRegionsResult{Result: future}
+	return &LightsailGetRegionsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabase(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) (*lightsail.GetRelationalDatabaseOutput, error) {
@@ -2642,9 +2769,9 @@ func (a *LightsailStub) GetRelationalDatabase(ctx workflow.Context, input *light
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) *LightsailGetRelationalDatabaseResult {
+func (a *LightsailStub) GetRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) *LightsailGetRelationalDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabase", input)
-	return &LightsailGetRelationalDatabaseResult{Result: future}
+	return &LightsailGetRelationalDatabaseFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseBlueprints(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) (*lightsail.GetRelationalDatabaseBlueprintsOutput, error) {
@@ -2653,9 +2780,9 @@ func (a *LightsailStub) GetRelationalDatabaseBlueprints(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseBlueprintsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) *LightsailGetRelationalDatabaseBlueprintsResult {
+func (a *LightsailStub) GetRelationalDatabaseBlueprintsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) *LightsailGetRelationalDatabaseBlueprintsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseBlueprints", input)
-	return &LightsailGetRelationalDatabaseBlueprintsResult{Result: future}
+	return &LightsailGetRelationalDatabaseBlueprintsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseBundles(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) (*lightsail.GetRelationalDatabaseBundlesOutput, error) {
@@ -2664,9 +2791,9 @@ func (a *LightsailStub) GetRelationalDatabaseBundles(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseBundlesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) *LightsailGetRelationalDatabaseBundlesResult {
+func (a *LightsailStub) GetRelationalDatabaseBundlesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) *LightsailGetRelationalDatabaseBundlesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseBundles", input)
-	return &LightsailGetRelationalDatabaseBundlesResult{Result: future}
+	return &LightsailGetRelationalDatabaseBundlesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseEvents(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) (*lightsail.GetRelationalDatabaseEventsOutput, error) {
@@ -2675,9 +2802,9 @@ func (a *LightsailStub) GetRelationalDatabaseEvents(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) *LightsailGetRelationalDatabaseEventsResult {
+func (a *LightsailStub) GetRelationalDatabaseEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) *LightsailGetRelationalDatabaseEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseEvents", input)
-	return &LightsailGetRelationalDatabaseEventsResult{Result: future}
+	return &LightsailGetRelationalDatabaseEventsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseLogEvents(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) (*lightsail.GetRelationalDatabaseLogEventsOutput, error) {
@@ -2686,9 +2813,9 @@ func (a *LightsailStub) GetRelationalDatabaseLogEvents(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseLogEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) *LightsailGetRelationalDatabaseLogEventsResult {
+func (a *LightsailStub) GetRelationalDatabaseLogEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) *LightsailGetRelationalDatabaseLogEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseLogEvents", input)
-	return &LightsailGetRelationalDatabaseLogEventsResult{Result: future}
+	return &LightsailGetRelationalDatabaseLogEventsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseLogStreams(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) (*lightsail.GetRelationalDatabaseLogStreamsOutput, error) {
@@ -2697,9 +2824,9 @@ func (a *LightsailStub) GetRelationalDatabaseLogStreams(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseLogStreamsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) *LightsailGetRelationalDatabaseLogStreamsResult {
+func (a *LightsailStub) GetRelationalDatabaseLogStreamsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) *LightsailGetRelationalDatabaseLogStreamsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseLogStreams", input)
-	return &LightsailGetRelationalDatabaseLogStreamsResult{Result: future}
+	return &LightsailGetRelationalDatabaseLogStreamsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseMasterUserPassword(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) (*lightsail.GetRelationalDatabaseMasterUserPasswordOutput, error) {
@@ -2708,9 +2835,9 @@ func (a *LightsailStub) GetRelationalDatabaseMasterUserPassword(ctx workflow.Con
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseMasterUserPasswordAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) *LightsailGetRelationalDatabaseMasterUserPasswordResult {
+func (a *LightsailStub) GetRelationalDatabaseMasterUserPasswordAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) *LightsailGetRelationalDatabaseMasterUserPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseMasterUserPassword", input)
-	return &LightsailGetRelationalDatabaseMasterUserPasswordResult{Result: future}
+	return &LightsailGetRelationalDatabaseMasterUserPasswordFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseMetricData(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) (*lightsail.GetRelationalDatabaseMetricDataOutput, error) {
@@ -2719,9 +2846,9 @@ func (a *LightsailStub) GetRelationalDatabaseMetricData(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseMetricDataAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) *LightsailGetRelationalDatabaseMetricDataResult {
+func (a *LightsailStub) GetRelationalDatabaseMetricDataAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) *LightsailGetRelationalDatabaseMetricDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseMetricData", input)
-	return &LightsailGetRelationalDatabaseMetricDataResult{Result: future}
+	return &LightsailGetRelationalDatabaseMetricDataFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseParameters(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) (*lightsail.GetRelationalDatabaseParametersOutput, error) {
@@ -2730,9 +2857,9 @@ func (a *LightsailStub) GetRelationalDatabaseParameters(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) *LightsailGetRelationalDatabaseParametersResult {
+func (a *LightsailStub) GetRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) *LightsailGetRelationalDatabaseParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseParameters", input)
-	return &LightsailGetRelationalDatabaseParametersResult{Result: future}
+	return &LightsailGetRelationalDatabaseParametersFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) (*lightsail.GetRelationalDatabaseSnapshotOutput, error) {
@@ -2741,9 +2868,9 @@ func (a *LightsailStub) GetRelationalDatabaseSnapshot(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) *LightsailGetRelationalDatabaseSnapshotResult {
+func (a *LightsailStub) GetRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) *LightsailGetRelationalDatabaseSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseSnapshot", input)
-	return &LightsailGetRelationalDatabaseSnapshotResult{Result: future}
+	return &LightsailGetRelationalDatabaseSnapshotFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabaseSnapshots(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) (*lightsail.GetRelationalDatabaseSnapshotsOutput, error) {
@@ -2752,9 +2879,9 @@ func (a *LightsailStub) GetRelationalDatabaseSnapshots(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabaseSnapshotsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) *LightsailGetRelationalDatabaseSnapshotsResult {
+func (a *LightsailStub) GetRelationalDatabaseSnapshotsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) *LightsailGetRelationalDatabaseSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabaseSnapshots", input)
-	return &LightsailGetRelationalDatabaseSnapshotsResult{Result: future}
+	return &LightsailGetRelationalDatabaseSnapshotsFuture{Future: future}
 }
 
 func (a *LightsailStub) GetRelationalDatabases(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) (*lightsail.GetRelationalDatabasesOutput, error) {
@@ -2763,9 +2890,9 @@ func (a *LightsailStub) GetRelationalDatabases(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) GetRelationalDatabasesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) *LightsailGetRelationalDatabasesResult {
+func (a *LightsailStub) GetRelationalDatabasesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) *LightsailGetRelationalDatabasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetRelationalDatabases", input)
-	return &LightsailGetRelationalDatabasesResult{Result: future}
+	return &LightsailGetRelationalDatabasesFuture{Future: future}
 }
 
 func (a *LightsailStub) GetStaticIp(ctx workflow.Context, input *lightsail.GetStaticIpInput) (*lightsail.GetStaticIpOutput, error) {
@@ -2774,9 +2901,9 @@ func (a *LightsailStub) GetStaticIp(ctx workflow.Context, input *lightsail.GetSt
 	return &output, err
 }
 
-func (a *LightsailStub) GetStaticIpAsync(ctx workflow.Context, input *lightsail.GetStaticIpInput) *LightsailGetStaticIpResult {
+func (a *LightsailStub) GetStaticIpAsync(ctx workflow.Context, input *lightsail.GetStaticIpInput) *LightsailGetStaticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetStaticIp", input)
-	return &LightsailGetStaticIpResult{Result: future}
+	return &LightsailGetStaticIpFuture{Future: future}
 }
 
 func (a *LightsailStub) GetStaticIps(ctx workflow.Context, input *lightsail.GetStaticIpsInput) (*lightsail.GetStaticIpsOutput, error) {
@@ -2785,9 +2912,9 @@ func (a *LightsailStub) GetStaticIps(ctx workflow.Context, input *lightsail.GetS
 	return &output, err
 }
 
-func (a *LightsailStub) GetStaticIpsAsync(ctx workflow.Context, input *lightsail.GetStaticIpsInput) *LightsailGetStaticIpsResult {
+func (a *LightsailStub) GetStaticIpsAsync(ctx workflow.Context, input *lightsail.GetStaticIpsInput) *LightsailGetStaticIpsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.GetStaticIps", input)
-	return &LightsailGetStaticIpsResult{Result: future}
+	return &LightsailGetStaticIpsFuture{Future: future}
 }
 
 func (a *LightsailStub) ImportKeyPair(ctx workflow.Context, input *lightsail.ImportKeyPairInput) (*lightsail.ImportKeyPairOutput, error) {
@@ -2796,9 +2923,9 @@ func (a *LightsailStub) ImportKeyPair(ctx workflow.Context, input *lightsail.Imp
 	return &output, err
 }
 
-func (a *LightsailStub) ImportKeyPairAsync(ctx workflow.Context, input *lightsail.ImportKeyPairInput) *LightsailImportKeyPairResult {
+func (a *LightsailStub) ImportKeyPairAsync(ctx workflow.Context, input *lightsail.ImportKeyPairInput) *LightsailImportKeyPairFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.ImportKeyPair", input)
-	return &LightsailImportKeyPairResult{Result: future}
+	return &LightsailImportKeyPairFuture{Future: future}
 }
 
 func (a *LightsailStub) IsVpcPeered(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) (*lightsail.IsVpcPeeredOutput, error) {
@@ -2807,9 +2934,9 @@ func (a *LightsailStub) IsVpcPeered(ctx workflow.Context, input *lightsail.IsVpc
 	return &output, err
 }
 
-func (a *LightsailStub) IsVpcPeeredAsync(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) *LightsailIsVpcPeeredResult {
+func (a *LightsailStub) IsVpcPeeredAsync(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) *LightsailIsVpcPeeredFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.IsVpcPeered", input)
-	return &LightsailIsVpcPeeredResult{Result: future}
+	return &LightsailIsVpcPeeredFuture{Future: future}
 }
 
 func (a *LightsailStub) OpenInstancePublicPorts(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) (*lightsail.OpenInstancePublicPortsOutput, error) {
@@ -2818,9 +2945,9 @@ func (a *LightsailStub) OpenInstancePublicPorts(ctx workflow.Context, input *lig
 	return &output, err
 }
 
-func (a *LightsailStub) OpenInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) *LightsailOpenInstancePublicPortsResult {
+func (a *LightsailStub) OpenInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) *LightsailOpenInstancePublicPortsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.OpenInstancePublicPorts", input)
-	return &LightsailOpenInstancePublicPortsResult{Result: future}
+	return &LightsailOpenInstancePublicPortsFuture{Future: future}
 }
 
 func (a *LightsailStub) PeerVpc(ctx workflow.Context, input *lightsail.PeerVpcInput) (*lightsail.PeerVpcOutput, error) {
@@ -2829,9 +2956,9 @@ func (a *LightsailStub) PeerVpc(ctx workflow.Context, input *lightsail.PeerVpcIn
 	return &output, err
 }
 
-func (a *LightsailStub) PeerVpcAsync(ctx workflow.Context, input *lightsail.PeerVpcInput) *LightsailPeerVpcResult {
+func (a *LightsailStub) PeerVpcAsync(ctx workflow.Context, input *lightsail.PeerVpcInput) *LightsailPeerVpcFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.PeerVpc", input)
-	return &LightsailPeerVpcResult{Result: future}
+	return &LightsailPeerVpcFuture{Future: future}
 }
 
 func (a *LightsailStub) PutAlarm(ctx workflow.Context, input *lightsail.PutAlarmInput) (*lightsail.PutAlarmOutput, error) {
@@ -2840,9 +2967,9 @@ func (a *LightsailStub) PutAlarm(ctx workflow.Context, input *lightsail.PutAlarm
 	return &output, err
 }
 
-func (a *LightsailStub) PutAlarmAsync(ctx workflow.Context, input *lightsail.PutAlarmInput) *LightsailPutAlarmResult {
+func (a *LightsailStub) PutAlarmAsync(ctx workflow.Context, input *lightsail.PutAlarmInput) *LightsailPutAlarmFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.PutAlarm", input)
-	return &LightsailPutAlarmResult{Result: future}
+	return &LightsailPutAlarmFuture{Future: future}
 }
 
 func (a *LightsailStub) PutInstancePublicPorts(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) (*lightsail.PutInstancePublicPortsOutput, error) {
@@ -2851,9 +2978,9 @@ func (a *LightsailStub) PutInstancePublicPorts(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) PutInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) *LightsailPutInstancePublicPortsResult {
+func (a *LightsailStub) PutInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) *LightsailPutInstancePublicPortsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.PutInstancePublicPorts", input)
-	return &LightsailPutInstancePublicPortsResult{Result: future}
+	return &LightsailPutInstancePublicPortsFuture{Future: future}
 }
 
 func (a *LightsailStub) RebootInstance(ctx workflow.Context, input *lightsail.RebootInstanceInput) (*lightsail.RebootInstanceOutput, error) {
@@ -2862,9 +2989,9 @@ func (a *LightsailStub) RebootInstance(ctx workflow.Context, input *lightsail.Re
 	return &output, err
 }
 
-func (a *LightsailStub) RebootInstanceAsync(ctx workflow.Context, input *lightsail.RebootInstanceInput) *LightsailRebootInstanceResult {
+func (a *LightsailStub) RebootInstanceAsync(ctx workflow.Context, input *lightsail.RebootInstanceInput) *LightsailRebootInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.RebootInstance", input)
-	return &LightsailRebootInstanceResult{Result: future}
+	return &LightsailRebootInstanceFuture{Future: future}
 }
 
 func (a *LightsailStub) RebootRelationalDatabase(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) (*lightsail.RebootRelationalDatabaseOutput, error) {
@@ -2873,9 +3000,9 @@ func (a *LightsailStub) RebootRelationalDatabase(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) RebootRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) *LightsailRebootRelationalDatabaseResult {
+func (a *LightsailStub) RebootRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) *LightsailRebootRelationalDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.RebootRelationalDatabase", input)
-	return &LightsailRebootRelationalDatabaseResult{Result: future}
+	return &LightsailRebootRelationalDatabaseFuture{Future: future}
 }
 
 func (a *LightsailStub) ReleaseStaticIp(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) (*lightsail.ReleaseStaticIpOutput, error) {
@@ -2884,9 +3011,9 @@ func (a *LightsailStub) ReleaseStaticIp(ctx workflow.Context, input *lightsail.R
 	return &output, err
 }
 
-func (a *LightsailStub) ReleaseStaticIpAsync(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) *LightsailReleaseStaticIpResult {
+func (a *LightsailStub) ReleaseStaticIpAsync(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) *LightsailReleaseStaticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.ReleaseStaticIp", input)
-	return &LightsailReleaseStaticIpResult{Result: future}
+	return &LightsailReleaseStaticIpFuture{Future: future}
 }
 
 func (a *LightsailStub) ResetDistributionCache(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) (*lightsail.ResetDistributionCacheOutput, error) {
@@ -2895,9 +3022,9 @@ func (a *LightsailStub) ResetDistributionCache(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) ResetDistributionCacheAsync(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) *LightsailResetDistributionCacheResult {
+func (a *LightsailStub) ResetDistributionCacheAsync(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) *LightsailResetDistributionCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.ResetDistributionCache", input)
-	return &LightsailResetDistributionCacheResult{Result: future}
+	return &LightsailResetDistributionCacheFuture{Future: future}
 }
 
 func (a *LightsailStub) SendContactMethodVerification(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) (*lightsail.SendContactMethodVerificationOutput, error) {
@@ -2906,9 +3033,9 @@ func (a *LightsailStub) SendContactMethodVerification(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *LightsailStub) SendContactMethodVerificationAsync(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) *LightsailSendContactMethodVerificationResult {
+func (a *LightsailStub) SendContactMethodVerificationAsync(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) *LightsailSendContactMethodVerificationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.SendContactMethodVerification", input)
-	return &LightsailSendContactMethodVerificationResult{Result: future}
+	return &LightsailSendContactMethodVerificationFuture{Future: future}
 }
 
 func (a *LightsailStub) StartInstance(ctx workflow.Context, input *lightsail.StartInstanceInput) (*lightsail.StartInstanceOutput, error) {
@@ -2917,9 +3044,9 @@ func (a *LightsailStub) StartInstance(ctx workflow.Context, input *lightsail.Sta
 	return &output, err
 }
 
-func (a *LightsailStub) StartInstanceAsync(ctx workflow.Context, input *lightsail.StartInstanceInput) *LightsailStartInstanceResult {
+func (a *LightsailStub) StartInstanceAsync(ctx workflow.Context, input *lightsail.StartInstanceInput) *LightsailStartInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.StartInstance", input)
-	return &LightsailStartInstanceResult{Result: future}
+	return &LightsailStartInstanceFuture{Future: future}
 }
 
 func (a *LightsailStub) StartRelationalDatabase(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) (*lightsail.StartRelationalDatabaseOutput, error) {
@@ -2928,9 +3055,9 @@ func (a *LightsailStub) StartRelationalDatabase(ctx workflow.Context, input *lig
 	return &output, err
 }
 
-func (a *LightsailStub) StartRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) *LightsailStartRelationalDatabaseResult {
+func (a *LightsailStub) StartRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) *LightsailStartRelationalDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.StartRelationalDatabase", input)
-	return &LightsailStartRelationalDatabaseResult{Result: future}
+	return &LightsailStartRelationalDatabaseFuture{Future: future}
 }
 
 func (a *LightsailStub) StopInstance(ctx workflow.Context, input *lightsail.StopInstanceInput) (*lightsail.StopInstanceOutput, error) {
@@ -2939,9 +3066,9 @@ func (a *LightsailStub) StopInstance(ctx workflow.Context, input *lightsail.Stop
 	return &output, err
 }
 
-func (a *LightsailStub) StopInstanceAsync(ctx workflow.Context, input *lightsail.StopInstanceInput) *LightsailStopInstanceResult {
+func (a *LightsailStub) StopInstanceAsync(ctx workflow.Context, input *lightsail.StopInstanceInput) *LightsailStopInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.StopInstance", input)
-	return &LightsailStopInstanceResult{Result: future}
+	return &LightsailStopInstanceFuture{Future: future}
 }
 
 func (a *LightsailStub) StopRelationalDatabase(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) (*lightsail.StopRelationalDatabaseOutput, error) {
@@ -2950,9 +3077,9 @@ func (a *LightsailStub) StopRelationalDatabase(ctx workflow.Context, input *ligh
 	return &output, err
 }
 
-func (a *LightsailStub) StopRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) *LightsailStopRelationalDatabaseResult {
+func (a *LightsailStub) StopRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) *LightsailStopRelationalDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.StopRelationalDatabase", input)
-	return &LightsailStopRelationalDatabaseResult{Result: future}
+	return &LightsailStopRelationalDatabaseFuture{Future: future}
 }
 
 func (a *LightsailStub) TagResource(ctx workflow.Context, input *lightsail.TagResourceInput) (*lightsail.TagResourceOutput, error) {
@@ -2961,9 +3088,9 @@ func (a *LightsailStub) TagResource(ctx workflow.Context, input *lightsail.TagRe
 	return &output, err
 }
 
-func (a *LightsailStub) TagResourceAsync(ctx workflow.Context, input *lightsail.TagResourceInput) *LightsailTagResourceResult {
+func (a *LightsailStub) TagResourceAsync(ctx workflow.Context, input *lightsail.TagResourceInput) *LightsailTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.TagResource", input)
-	return &LightsailTagResourceResult{Result: future}
+	return &LightsailTagResourceFuture{Future: future}
 }
 
 func (a *LightsailStub) TestAlarm(ctx workflow.Context, input *lightsail.TestAlarmInput) (*lightsail.TestAlarmOutput, error) {
@@ -2972,9 +3099,9 @@ func (a *LightsailStub) TestAlarm(ctx workflow.Context, input *lightsail.TestAla
 	return &output, err
 }
 
-func (a *LightsailStub) TestAlarmAsync(ctx workflow.Context, input *lightsail.TestAlarmInput) *LightsailTestAlarmResult {
+func (a *LightsailStub) TestAlarmAsync(ctx workflow.Context, input *lightsail.TestAlarmInput) *LightsailTestAlarmFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.TestAlarm", input)
-	return &LightsailTestAlarmResult{Result: future}
+	return &LightsailTestAlarmFuture{Future: future}
 }
 
 func (a *LightsailStub) UnpeerVpc(ctx workflow.Context, input *lightsail.UnpeerVpcInput) (*lightsail.UnpeerVpcOutput, error) {
@@ -2983,9 +3110,9 @@ func (a *LightsailStub) UnpeerVpc(ctx workflow.Context, input *lightsail.UnpeerV
 	return &output, err
 }
 
-func (a *LightsailStub) UnpeerVpcAsync(ctx workflow.Context, input *lightsail.UnpeerVpcInput) *LightsailUnpeerVpcResult {
+func (a *LightsailStub) UnpeerVpcAsync(ctx workflow.Context, input *lightsail.UnpeerVpcInput) *LightsailUnpeerVpcFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.UnpeerVpc", input)
-	return &LightsailUnpeerVpcResult{Result: future}
+	return &LightsailUnpeerVpcFuture{Future: future}
 }
 
 func (a *LightsailStub) UntagResource(ctx workflow.Context, input *lightsail.UntagResourceInput) (*lightsail.UntagResourceOutput, error) {
@@ -2994,9 +3121,9 @@ func (a *LightsailStub) UntagResource(ctx workflow.Context, input *lightsail.Unt
 	return &output, err
 }
 
-func (a *LightsailStub) UntagResourceAsync(ctx workflow.Context, input *lightsail.UntagResourceInput) *LightsailUntagResourceResult {
+func (a *LightsailStub) UntagResourceAsync(ctx workflow.Context, input *lightsail.UntagResourceInput) *LightsailUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.UntagResource", input)
-	return &LightsailUntagResourceResult{Result: future}
+	return &LightsailUntagResourceFuture{Future: future}
 }
 
 func (a *LightsailStub) UpdateDistribution(ctx workflow.Context, input *lightsail.UpdateDistributionInput) (*lightsail.UpdateDistributionOutput, error) {
@@ -3005,9 +3132,9 @@ func (a *LightsailStub) UpdateDistribution(ctx workflow.Context, input *lightsai
 	return &output, err
 }
 
-func (a *LightsailStub) UpdateDistributionAsync(ctx workflow.Context, input *lightsail.UpdateDistributionInput) *LightsailUpdateDistributionResult {
+func (a *LightsailStub) UpdateDistributionAsync(ctx workflow.Context, input *lightsail.UpdateDistributionInput) *LightsailUpdateDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.UpdateDistribution", input)
-	return &LightsailUpdateDistributionResult{Result: future}
+	return &LightsailUpdateDistributionFuture{Future: future}
 }
 
 func (a *LightsailStub) UpdateDistributionBundle(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) (*lightsail.UpdateDistributionBundleOutput, error) {
@@ -3016,9 +3143,9 @@ func (a *LightsailStub) UpdateDistributionBundle(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) UpdateDistributionBundleAsync(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) *LightsailUpdateDistributionBundleResult {
+func (a *LightsailStub) UpdateDistributionBundleAsync(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) *LightsailUpdateDistributionBundleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.UpdateDistributionBundle", input)
-	return &LightsailUpdateDistributionBundleResult{Result: future}
+	return &LightsailUpdateDistributionBundleFuture{Future: future}
 }
 
 func (a *LightsailStub) UpdateDomainEntry(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) (*lightsail.UpdateDomainEntryOutput, error) {
@@ -3027,9 +3154,9 @@ func (a *LightsailStub) UpdateDomainEntry(ctx workflow.Context, input *lightsail
 	return &output, err
 }
 
-func (a *LightsailStub) UpdateDomainEntryAsync(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) *LightsailUpdateDomainEntryResult {
+func (a *LightsailStub) UpdateDomainEntryAsync(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) *LightsailUpdateDomainEntryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.UpdateDomainEntry", input)
-	return &LightsailUpdateDomainEntryResult{Result: future}
+	return &LightsailUpdateDomainEntryFuture{Future: future}
 }
 
 func (a *LightsailStub) UpdateLoadBalancerAttribute(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) (*lightsail.UpdateLoadBalancerAttributeOutput, error) {
@@ -3038,9 +3165,9 @@ func (a *LightsailStub) UpdateLoadBalancerAttribute(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *LightsailStub) UpdateLoadBalancerAttributeAsync(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) *LightsailUpdateLoadBalancerAttributeResult {
+func (a *LightsailStub) UpdateLoadBalancerAttributeAsync(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) *LightsailUpdateLoadBalancerAttributeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.UpdateLoadBalancerAttribute", input)
-	return &LightsailUpdateLoadBalancerAttributeResult{Result: future}
+	return &LightsailUpdateLoadBalancerAttributeFuture{Future: future}
 }
 
 func (a *LightsailStub) UpdateRelationalDatabase(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) (*lightsail.UpdateRelationalDatabaseOutput, error) {
@@ -3049,9 +3176,9 @@ func (a *LightsailStub) UpdateRelationalDatabase(ctx workflow.Context, input *li
 	return &output, err
 }
 
-func (a *LightsailStub) UpdateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) *LightsailUpdateRelationalDatabaseResult {
+func (a *LightsailStub) UpdateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) *LightsailUpdateRelationalDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.UpdateRelationalDatabase", input)
-	return &LightsailUpdateRelationalDatabaseResult{Result: future}
+	return &LightsailUpdateRelationalDatabaseFuture{Future: future}
 }
 
 func (a *LightsailStub) UpdateRelationalDatabaseParameters(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) (*lightsail.UpdateRelationalDatabaseParametersOutput, error) {
@@ -3060,7 +3187,7 @@ func (a *LightsailStub) UpdateRelationalDatabaseParameters(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *LightsailStub) UpdateRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) *LightsailUpdateRelationalDatabaseParametersResult {
+func (a *LightsailStub) UpdateRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) *LightsailUpdateRelationalDatabaseParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lightsail.UpdateRelationalDatabaseParameters", input)
-	return &LightsailUpdateRelationalDatabaseParametersResult{Result: future}
+	return &LightsailUpdateRelationalDatabaseParametersFuture{Future: future}
 }

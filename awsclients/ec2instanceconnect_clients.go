@@ -11,7 +11,7 @@ import (
 
 type EC2InstanceConnectClient interface {
 	SendSSHPublicKey(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) (*ec2instanceconnect.SendSSHPublicKeyOutput, error)
-	SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *Ec2instanceconnectSendSSHPublicKeyResult
+	SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *EC2InstanceConnectSendSSHPublicKeyFuture
 }
 
 type EC2InstanceConnectStub struct{}
@@ -20,13 +20,14 @@ func NewEC2InstanceConnectStub() EC2InstanceConnectClient {
 	return &EC2InstanceConnectStub{}
 }
 
-type Ec2instanceconnectSendSSHPublicKeyResult struct {
-	Result workflow.Future
+type EC2InstanceConnectSendSSHPublicKeyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Ec2instanceconnectSendSSHPublicKeyResult) Get(ctx workflow.Context) (*ec2instanceconnect.SendSSHPublicKeyOutput, error) {
+func (r *EC2InstanceConnectSendSSHPublicKeyFuture) Get(ctx workflow.Context) (*ec2instanceconnect.SendSSHPublicKeyOutput, error) {
 	var output ec2instanceconnect.SendSSHPublicKeyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -36,7 +37,7 @@ func (a *EC2InstanceConnectStub) SendSSHPublicKey(ctx workflow.Context, input *e
 	return &output, err
 }
 
-func (a *EC2InstanceConnectStub) SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *Ec2instanceconnectSendSSHPublicKeyResult {
+func (a *EC2InstanceConnectStub) SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *EC2InstanceConnectSendSSHPublicKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ec2instanceconnect.SendSSHPublicKey", input)
-	return &Ec2instanceconnectSendSSHPublicKeyResult{Result: future}
+	return &EC2InstanceConnectSendSSHPublicKeyFuture{Future: future}
 }

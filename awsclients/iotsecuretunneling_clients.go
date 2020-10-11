@@ -11,25 +11,25 @@ import (
 
 type IoTSecureTunnelingClient interface {
 	CloseTunnel(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) (*iotsecuretunneling.CloseTunnelOutput, error)
-	CloseTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) *IotsecuretunnelingCloseTunnelResult
+	CloseTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) *IoTSecureTunnelingCloseTunnelFuture
 
 	DescribeTunnel(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) (*iotsecuretunneling.DescribeTunnelOutput, error)
-	DescribeTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) *IotsecuretunnelingDescribeTunnelResult
+	DescribeTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) *IoTSecureTunnelingDescribeTunnelFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) (*iotsecuretunneling.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) *IotsecuretunnelingListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) *IoTSecureTunnelingListTagsForResourceFuture
 
 	ListTunnels(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) (*iotsecuretunneling.ListTunnelsOutput, error)
-	ListTunnelsAsync(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) *IotsecuretunnelingListTunnelsResult
+	ListTunnelsAsync(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) *IoTSecureTunnelingListTunnelsFuture
 
 	OpenTunnel(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) (*iotsecuretunneling.OpenTunnelOutput, error)
-	OpenTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) *IotsecuretunnelingOpenTunnelResult
+	OpenTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) *IoTSecureTunnelingOpenTunnelFuture
 
 	TagResource(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) (*iotsecuretunneling.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) *IotsecuretunnelingTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) *IoTSecureTunnelingTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) (*iotsecuretunneling.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *IotsecuretunnelingUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *IoTSecureTunnelingUntagResourceFuture
 }
 
 type IoTSecureTunnelingStub struct{}
@@ -38,73 +38,80 @@ func NewIoTSecureTunnelingStub() IoTSecureTunnelingClient {
 	return &IoTSecureTunnelingStub{}
 }
 
-type IotsecuretunnelingCloseTunnelResult struct {
-	Result workflow.Future
+type IoTSecureTunnelingCloseTunnelFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotsecuretunnelingCloseTunnelResult) Get(ctx workflow.Context) (*iotsecuretunneling.CloseTunnelOutput, error) {
+func (r *IoTSecureTunnelingCloseTunnelFuture) Get(ctx workflow.Context) (*iotsecuretunneling.CloseTunnelOutput, error) {
 	var output iotsecuretunneling.CloseTunnelOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotsecuretunnelingDescribeTunnelResult struct {
-	Result workflow.Future
+type IoTSecureTunnelingDescribeTunnelFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotsecuretunnelingDescribeTunnelResult) Get(ctx workflow.Context) (*iotsecuretunneling.DescribeTunnelOutput, error) {
+func (r *IoTSecureTunnelingDescribeTunnelFuture) Get(ctx workflow.Context) (*iotsecuretunneling.DescribeTunnelOutput, error) {
 	var output iotsecuretunneling.DescribeTunnelOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotsecuretunnelingListTagsForResourceResult struct {
-	Result workflow.Future
+type IoTSecureTunnelingListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotsecuretunnelingListTagsForResourceResult) Get(ctx workflow.Context) (*iotsecuretunneling.ListTagsForResourceOutput, error) {
+func (r *IoTSecureTunnelingListTagsForResourceFuture) Get(ctx workflow.Context) (*iotsecuretunneling.ListTagsForResourceOutput, error) {
 	var output iotsecuretunneling.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotsecuretunnelingListTunnelsResult struct {
-	Result workflow.Future
+type IoTSecureTunnelingListTunnelsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotsecuretunnelingListTunnelsResult) Get(ctx workflow.Context) (*iotsecuretunneling.ListTunnelsOutput, error) {
+func (r *IoTSecureTunnelingListTunnelsFuture) Get(ctx workflow.Context) (*iotsecuretunneling.ListTunnelsOutput, error) {
 	var output iotsecuretunneling.ListTunnelsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotsecuretunnelingOpenTunnelResult struct {
-	Result workflow.Future
+type IoTSecureTunnelingOpenTunnelFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotsecuretunnelingOpenTunnelResult) Get(ctx workflow.Context) (*iotsecuretunneling.OpenTunnelOutput, error) {
+func (r *IoTSecureTunnelingOpenTunnelFuture) Get(ctx workflow.Context) (*iotsecuretunneling.OpenTunnelOutput, error) {
 	var output iotsecuretunneling.OpenTunnelOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotsecuretunnelingTagResourceResult struct {
-	Result workflow.Future
+type IoTSecureTunnelingTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotsecuretunnelingTagResourceResult) Get(ctx workflow.Context) (*iotsecuretunneling.TagResourceOutput, error) {
+func (r *IoTSecureTunnelingTagResourceFuture) Get(ctx workflow.Context) (*iotsecuretunneling.TagResourceOutput, error) {
 	var output iotsecuretunneling.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotsecuretunnelingUntagResourceResult struct {
-	Result workflow.Future
+type IoTSecureTunnelingUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotsecuretunnelingUntagResourceResult) Get(ctx workflow.Context) (*iotsecuretunneling.UntagResourceOutput, error) {
+func (r *IoTSecureTunnelingUntagResourceFuture) Get(ctx workflow.Context) (*iotsecuretunneling.UntagResourceOutput, error) {
 	var output iotsecuretunneling.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -114,9 +121,9 @@ func (a *IoTSecureTunnelingStub) CloseTunnel(ctx workflow.Context, input *iotsec
 	return &output, err
 }
 
-func (a *IoTSecureTunnelingStub) CloseTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) *IotsecuretunnelingCloseTunnelResult {
+func (a *IoTSecureTunnelingStub) CloseTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) *IoTSecureTunnelingCloseTunnelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotsecuretunneling.CloseTunnel", input)
-	return &IotsecuretunnelingCloseTunnelResult{Result: future}
+	return &IoTSecureTunnelingCloseTunnelFuture{Future: future}
 }
 
 func (a *IoTSecureTunnelingStub) DescribeTunnel(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) (*iotsecuretunneling.DescribeTunnelOutput, error) {
@@ -125,9 +132,9 @@ func (a *IoTSecureTunnelingStub) DescribeTunnel(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTSecureTunnelingStub) DescribeTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) *IotsecuretunnelingDescribeTunnelResult {
+func (a *IoTSecureTunnelingStub) DescribeTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) *IoTSecureTunnelingDescribeTunnelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotsecuretunneling.DescribeTunnel", input)
-	return &IotsecuretunnelingDescribeTunnelResult{Result: future}
+	return &IoTSecureTunnelingDescribeTunnelFuture{Future: future}
 }
 
 func (a *IoTSecureTunnelingStub) ListTagsForResource(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) (*iotsecuretunneling.ListTagsForResourceOutput, error) {
@@ -136,9 +143,9 @@ func (a *IoTSecureTunnelingStub) ListTagsForResource(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *IoTSecureTunnelingStub) ListTagsForResourceAsync(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) *IotsecuretunnelingListTagsForResourceResult {
+func (a *IoTSecureTunnelingStub) ListTagsForResourceAsync(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) *IoTSecureTunnelingListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotsecuretunneling.ListTagsForResource", input)
-	return &IotsecuretunnelingListTagsForResourceResult{Result: future}
+	return &IoTSecureTunnelingListTagsForResourceFuture{Future: future}
 }
 
 func (a *IoTSecureTunnelingStub) ListTunnels(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) (*iotsecuretunneling.ListTunnelsOutput, error) {
@@ -147,9 +154,9 @@ func (a *IoTSecureTunnelingStub) ListTunnels(ctx workflow.Context, input *iotsec
 	return &output, err
 }
 
-func (a *IoTSecureTunnelingStub) ListTunnelsAsync(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) *IotsecuretunnelingListTunnelsResult {
+func (a *IoTSecureTunnelingStub) ListTunnelsAsync(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) *IoTSecureTunnelingListTunnelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotsecuretunneling.ListTunnels", input)
-	return &IotsecuretunnelingListTunnelsResult{Result: future}
+	return &IoTSecureTunnelingListTunnelsFuture{Future: future}
 }
 
 func (a *IoTSecureTunnelingStub) OpenTunnel(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) (*iotsecuretunneling.OpenTunnelOutput, error) {
@@ -158,9 +165,9 @@ func (a *IoTSecureTunnelingStub) OpenTunnel(ctx workflow.Context, input *iotsecu
 	return &output, err
 }
 
-func (a *IoTSecureTunnelingStub) OpenTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) *IotsecuretunnelingOpenTunnelResult {
+func (a *IoTSecureTunnelingStub) OpenTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) *IoTSecureTunnelingOpenTunnelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotsecuretunneling.OpenTunnel", input)
-	return &IotsecuretunnelingOpenTunnelResult{Result: future}
+	return &IoTSecureTunnelingOpenTunnelFuture{Future: future}
 }
 
 func (a *IoTSecureTunnelingStub) TagResource(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) (*iotsecuretunneling.TagResourceOutput, error) {
@@ -169,9 +176,9 @@ func (a *IoTSecureTunnelingStub) TagResource(ctx workflow.Context, input *iotsec
 	return &output, err
 }
 
-func (a *IoTSecureTunnelingStub) TagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) *IotsecuretunnelingTagResourceResult {
+func (a *IoTSecureTunnelingStub) TagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) *IoTSecureTunnelingTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotsecuretunneling.TagResource", input)
-	return &IotsecuretunnelingTagResourceResult{Result: future}
+	return &IoTSecureTunnelingTagResourceFuture{Future: future}
 }
 
 func (a *IoTSecureTunnelingStub) UntagResource(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) (*iotsecuretunneling.UntagResourceOutput, error) {
@@ -180,7 +187,7 @@ func (a *IoTSecureTunnelingStub) UntagResource(ctx workflow.Context, input *iots
 	return &output, err
 }
 
-func (a *IoTSecureTunnelingStub) UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *IotsecuretunnelingUntagResourceResult {
+func (a *IoTSecureTunnelingStub) UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *IoTSecureTunnelingUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotsecuretunneling.UntagResource", input)
-	return &IotsecuretunnelingUntagResourceResult{Result: future}
+	return &IoTSecureTunnelingUntagResourceFuture{Future: future}
 }

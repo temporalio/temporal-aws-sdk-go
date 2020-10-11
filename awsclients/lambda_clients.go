@@ -11,154 +11,157 @@ import (
 
 type LambdaClient interface {
 	AddLayerVersionPermission(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) (*lambda.AddLayerVersionPermissionOutput, error)
-	AddLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) *LambdaAddLayerVersionPermissionResult
+	AddLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) *LambdaAddLayerVersionPermissionFuture
 
 	AddPermission(ctx workflow.Context, input *lambda.AddPermissionInput) (*lambda.AddPermissionOutput, error)
-	AddPermissionAsync(ctx workflow.Context, input *lambda.AddPermissionInput) *LambdaAddPermissionResult
+	AddPermissionAsync(ctx workflow.Context, input *lambda.AddPermissionInput) *LambdaAddPermissionFuture
 
 	CreateAlias(ctx workflow.Context, input *lambda.CreateAliasInput) (*lambda.AliasConfiguration, error)
-	CreateAliasAsync(ctx workflow.Context, input *lambda.CreateAliasInput) *LambdaCreateAliasResult
+	CreateAliasAsync(ctx workflow.Context, input *lambda.CreateAliasInput) *LambdaCreateAliasFuture
 
 	CreateEventSourceMapping(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
-	CreateEventSourceMappingAsync(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) *LambdaCreateEventSourceMappingResult
+	CreateEventSourceMappingAsync(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) *LambdaCreateEventSourceMappingFuture
 
 	CreateFunction(ctx workflow.Context, input *lambda.CreateFunctionInput) (*lambda.FunctionConfiguration, error)
-	CreateFunctionAsync(ctx workflow.Context, input *lambda.CreateFunctionInput) *LambdaCreateFunctionResult
+	CreateFunctionAsync(ctx workflow.Context, input *lambda.CreateFunctionInput) *LambdaCreateFunctionFuture
 
 	DeleteAlias(ctx workflow.Context, input *lambda.DeleteAliasInput) (*lambda.DeleteAliasOutput, error)
-	DeleteAliasAsync(ctx workflow.Context, input *lambda.DeleteAliasInput) *LambdaDeleteAliasResult
+	DeleteAliasAsync(ctx workflow.Context, input *lambda.DeleteAliasInput) *LambdaDeleteAliasFuture
 
 	DeleteEventSourceMapping(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
-	DeleteEventSourceMappingAsync(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) *LambdaDeleteEventSourceMappingResult
+	DeleteEventSourceMappingAsync(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) *LambdaDeleteEventSourceMappingFuture
 
 	DeleteFunction(ctx workflow.Context, input *lambda.DeleteFunctionInput) (*lambda.DeleteFunctionOutput, error)
-	DeleteFunctionAsync(ctx workflow.Context, input *lambda.DeleteFunctionInput) *LambdaDeleteFunctionResult
+	DeleteFunctionAsync(ctx workflow.Context, input *lambda.DeleteFunctionInput) *LambdaDeleteFunctionFuture
 
 	DeleteFunctionConcurrency(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) (*lambda.DeleteFunctionConcurrencyOutput, error)
-	DeleteFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) *LambdaDeleteFunctionConcurrencyResult
+	DeleteFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) *LambdaDeleteFunctionConcurrencyFuture
 
 	DeleteFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) (*lambda.DeleteFunctionEventInvokeConfigOutput, error)
-	DeleteFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) *LambdaDeleteFunctionEventInvokeConfigResult
+	DeleteFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) *LambdaDeleteFunctionEventInvokeConfigFuture
 
 	DeleteLayerVersion(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) (*lambda.DeleteLayerVersionOutput, error)
-	DeleteLayerVersionAsync(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) *LambdaDeleteLayerVersionResult
+	DeleteLayerVersionAsync(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) *LambdaDeleteLayerVersionFuture
 
 	DeleteProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) (*lambda.DeleteProvisionedConcurrencyConfigOutput, error)
-	DeleteProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) *LambdaDeleteProvisionedConcurrencyConfigResult
+	DeleteProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) *LambdaDeleteProvisionedConcurrencyConfigFuture
 
 	GetAccountSettings(ctx workflow.Context, input *lambda.GetAccountSettingsInput) (*lambda.GetAccountSettingsOutput, error)
-	GetAccountSettingsAsync(ctx workflow.Context, input *lambda.GetAccountSettingsInput) *LambdaGetAccountSettingsResult
+	GetAccountSettingsAsync(ctx workflow.Context, input *lambda.GetAccountSettingsInput) *LambdaGetAccountSettingsFuture
 
 	GetAlias(ctx workflow.Context, input *lambda.GetAliasInput) (*lambda.AliasConfiguration, error)
-	GetAliasAsync(ctx workflow.Context, input *lambda.GetAliasInput) *LambdaGetAliasResult
+	GetAliasAsync(ctx workflow.Context, input *lambda.GetAliasInput) *LambdaGetAliasFuture
 
 	GetEventSourceMapping(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
-	GetEventSourceMappingAsync(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) *LambdaGetEventSourceMappingResult
+	GetEventSourceMappingAsync(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) *LambdaGetEventSourceMappingFuture
 
 	GetFunction(ctx workflow.Context, input *lambda.GetFunctionInput) (*lambda.GetFunctionOutput, error)
-	GetFunctionAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *LambdaGetFunctionResult
+	GetFunctionAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *LambdaGetFunctionFuture
 
 	GetFunctionConcurrency(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) (*lambda.GetFunctionConcurrencyOutput, error)
-	GetFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) *LambdaGetFunctionConcurrencyResult
+	GetFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) *LambdaGetFunctionConcurrencyFuture
 
 	GetFunctionConfiguration(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) (*lambda.FunctionConfiguration, error)
-	GetFunctionConfigurationAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *LambdaGetFunctionConfigurationResult
+	GetFunctionConfigurationAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *LambdaGetFunctionConfigurationFuture
 
 	GetFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) (*lambda.GetFunctionEventInvokeConfigOutput, error)
-	GetFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) *LambdaGetFunctionEventInvokeConfigResult
+	GetFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) *LambdaGetFunctionEventInvokeConfigFuture
 
 	GetLayerVersion(ctx workflow.Context, input *lambda.GetLayerVersionInput) (*lambda.GetLayerVersionOutput, error)
-	GetLayerVersionAsync(ctx workflow.Context, input *lambda.GetLayerVersionInput) *LambdaGetLayerVersionResult
+	GetLayerVersionAsync(ctx workflow.Context, input *lambda.GetLayerVersionInput) *LambdaGetLayerVersionFuture
 
 	GetLayerVersionByArn(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) (*lambda.GetLayerVersionByArnOutput, error)
-	GetLayerVersionByArnAsync(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) *LambdaGetLayerVersionByArnResult
+	GetLayerVersionByArnAsync(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) *LambdaGetLayerVersionByArnFuture
 
 	GetLayerVersionPolicy(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) (*lambda.GetLayerVersionPolicyOutput, error)
-	GetLayerVersionPolicyAsync(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) *LambdaGetLayerVersionPolicyResult
+	GetLayerVersionPolicyAsync(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) *LambdaGetLayerVersionPolicyFuture
 
 	GetPolicy(ctx workflow.Context, input *lambda.GetPolicyInput) (*lambda.GetPolicyOutput, error)
-	GetPolicyAsync(ctx workflow.Context, input *lambda.GetPolicyInput) *LambdaGetPolicyResult
+	GetPolicyAsync(ctx workflow.Context, input *lambda.GetPolicyInput) *LambdaGetPolicyFuture
 
 	GetProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) (*lambda.GetProvisionedConcurrencyConfigOutput, error)
-	GetProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) *LambdaGetProvisionedConcurrencyConfigResult
+	GetProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) *LambdaGetProvisionedConcurrencyConfigFuture
 
 	Invoke(ctx workflow.Context, input *lambda.InvokeInput) (*lambda.InvokeOutput, error)
-	InvokeAsync(ctx workflow.Context, input *lambda.InvokeInput) *LambdaInvokeResult
+	InvokeAsync(ctx workflow.Context, input *lambda.InvokeInput) *LambdaInvokeFuture
 
 	ListAliases(ctx workflow.Context, input *lambda.ListAliasesInput) (*lambda.ListAliasesOutput, error)
-	ListAliasesAsync(ctx workflow.Context, input *lambda.ListAliasesInput) *LambdaListAliasesResult
+	ListAliasesAsync(ctx workflow.Context, input *lambda.ListAliasesInput) *LambdaListAliasesFuture
 
 	ListEventSourceMappings(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) (*lambda.ListEventSourceMappingsOutput, error)
-	ListEventSourceMappingsAsync(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) *LambdaListEventSourceMappingsResult
+	ListEventSourceMappingsAsync(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) *LambdaListEventSourceMappingsFuture
 
 	ListFunctionEventInvokeConfigs(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) (*lambda.ListFunctionEventInvokeConfigsOutput, error)
-	ListFunctionEventInvokeConfigsAsync(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) *LambdaListFunctionEventInvokeConfigsResult
+	ListFunctionEventInvokeConfigsAsync(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) *LambdaListFunctionEventInvokeConfigsFuture
 
 	ListFunctions(ctx workflow.Context, input *lambda.ListFunctionsInput) (*lambda.ListFunctionsOutput, error)
-	ListFunctionsAsync(ctx workflow.Context, input *lambda.ListFunctionsInput) *LambdaListFunctionsResult
+	ListFunctionsAsync(ctx workflow.Context, input *lambda.ListFunctionsInput) *LambdaListFunctionsFuture
 
 	ListLayerVersions(ctx workflow.Context, input *lambda.ListLayerVersionsInput) (*lambda.ListLayerVersionsOutput, error)
-	ListLayerVersionsAsync(ctx workflow.Context, input *lambda.ListLayerVersionsInput) *LambdaListLayerVersionsResult
+	ListLayerVersionsAsync(ctx workflow.Context, input *lambda.ListLayerVersionsInput) *LambdaListLayerVersionsFuture
 
 	ListLayers(ctx workflow.Context, input *lambda.ListLayersInput) (*lambda.ListLayersOutput, error)
-	ListLayersAsync(ctx workflow.Context, input *lambda.ListLayersInput) *LambdaListLayersResult
+	ListLayersAsync(ctx workflow.Context, input *lambda.ListLayersInput) *LambdaListLayersFuture
 
 	ListProvisionedConcurrencyConfigs(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) (*lambda.ListProvisionedConcurrencyConfigsOutput, error)
-	ListProvisionedConcurrencyConfigsAsync(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) *LambdaListProvisionedConcurrencyConfigsResult
+	ListProvisionedConcurrencyConfigsAsync(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) *LambdaListProvisionedConcurrencyConfigsFuture
 
 	ListTags(ctx workflow.Context, input *lambda.ListTagsInput) (*lambda.ListTagsOutput, error)
-	ListTagsAsync(ctx workflow.Context, input *lambda.ListTagsInput) *LambdaListTagsResult
+	ListTagsAsync(ctx workflow.Context, input *lambda.ListTagsInput) *LambdaListTagsFuture
 
 	ListVersionsByFunction(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) (*lambda.ListVersionsByFunctionOutput, error)
-	ListVersionsByFunctionAsync(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) *LambdaListVersionsByFunctionResult
+	ListVersionsByFunctionAsync(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) *LambdaListVersionsByFunctionFuture
 
 	PublishLayerVersion(ctx workflow.Context, input *lambda.PublishLayerVersionInput) (*lambda.PublishLayerVersionOutput, error)
-	PublishLayerVersionAsync(ctx workflow.Context, input *lambda.PublishLayerVersionInput) *LambdaPublishLayerVersionResult
+	PublishLayerVersionAsync(ctx workflow.Context, input *lambda.PublishLayerVersionInput) *LambdaPublishLayerVersionFuture
 
 	PublishVersion(ctx workflow.Context, input *lambda.PublishVersionInput) (*lambda.FunctionConfiguration, error)
-	PublishVersionAsync(ctx workflow.Context, input *lambda.PublishVersionInput) *LambdaPublishVersionResult
+	PublishVersionAsync(ctx workflow.Context, input *lambda.PublishVersionInput) *LambdaPublishVersionFuture
 
 	PutFunctionConcurrency(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) (*lambda.PutFunctionConcurrencyOutput, error)
-	PutFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) *LambdaPutFunctionConcurrencyResult
+	PutFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) *LambdaPutFunctionConcurrencyFuture
 
 	PutFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) (*lambda.PutFunctionEventInvokeConfigOutput, error)
-	PutFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) *LambdaPutFunctionEventInvokeConfigResult
+	PutFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) *LambdaPutFunctionEventInvokeConfigFuture
 
 	PutProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) (*lambda.PutProvisionedConcurrencyConfigOutput, error)
-	PutProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) *LambdaPutProvisionedConcurrencyConfigResult
+	PutProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) *LambdaPutProvisionedConcurrencyConfigFuture
 
 	RemoveLayerVersionPermission(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) (*lambda.RemoveLayerVersionPermissionOutput, error)
-	RemoveLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) *LambdaRemoveLayerVersionPermissionResult
+	RemoveLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) *LambdaRemoveLayerVersionPermissionFuture
 
 	RemovePermission(ctx workflow.Context, input *lambda.RemovePermissionInput) (*lambda.RemovePermissionOutput, error)
-	RemovePermissionAsync(ctx workflow.Context, input *lambda.RemovePermissionInput) *LambdaRemovePermissionResult
+	RemovePermissionAsync(ctx workflow.Context, input *lambda.RemovePermissionInput) *LambdaRemovePermissionFuture
 
 	TagResource(ctx workflow.Context, input *lambda.TagResourceInput) (*lambda.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *lambda.TagResourceInput) *LambdaTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *lambda.TagResourceInput) *LambdaTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *lambda.UntagResourceInput) (*lambda.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *lambda.UntagResourceInput) *LambdaUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *lambda.UntagResourceInput) *LambdaUntagResourceFuture
 
 	UpdateAlias(ctx workflow.Context, input *lambda.UpdateAliasInput) (*lambda.AliasConfiguration, error)
-	UpdateAliasAsync(ctx workflow.Context, input *lambda.UpdateAliasInput) *LambdaUpdateAliasResult
+	UpdateAliasAsync(ctx workflow.Context, input *lambda.UpdateAliasInput) *LambdaUpdateAliasFuture
 
 	UpdateEventSourceMapping(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
-	UpdateEventSourceMappingAsync(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) *LambdaUpdateEventSourceMappingResult
+	UpdateEventSourceMappingAsync(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) *LambdaUpdateEventSourceMappingFuture
 
 	UpdateFunctionCode(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) (*lambda.FunctionConfiguration, error)
-	UpdateFunctionCodeAsync(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) *LambdaUpdateFunctionCodeResult
+	UpdateFunctionCodeAsync(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) *LambdaUpdateFunctionCodeFuture
 
 	UpdateFunctionConfiguration(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) (*lambda.FunctionConfiguration, error)
-	UpdateFunctionConfigurationAsync(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) *LambdaUpdateFunctionConfigurationResult
+	UpdateFunctionConfigurationAsync(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) *LambdaUpdateFunctionConfigurationFuture
 
 	UpdateFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) (*lambda.UpdateFunctionEventInvokeConfigOutput, error)
-	UpdateFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) *LambdaUpdateFunctionEventInvokeConfigResult
+	UpdateFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) *LambdaUpdateFunctionEventInvokeConfigFuture
 
 	WaitUntilFunctionActive(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
+	WaitUntilFunctionActiveAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *VoidFuture
 
 	WaitUntilFunctionExists(ctx workflow.Context, input *lambda.GetFunctionInput) error
+	WaitUntilFunctionExistsAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *VoidFuture
 
 	WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
+	WaitUntilFunctionUpdatedAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *VoidFuture
 }
 
 type LambdaStub struct{}
@@ -167,483 +170,531 @@ func NewLambdaStub() LambdaClient {
 	return &LambdaStub{}
 }
 
-type LambdaAddLayerVersionPermissionResult struct {
-	Result workflow.Future
+type LambdaAddLayerVersionPermissionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaAddLayerVersionPermissionResult) Get(ctx workflow.Context) (*lambda.AddLayerVersionPermissionOutput, error) {
+func (r *LambdaAddLayerVersionPermissionFuture) Get(ctx workflow.Context) (*lambda.AddLayerVersionPermissionOutput, error) {
 	var output lambda.AddLayerVersionPermissionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaAddPermissionResult struct {
-	Result workflow.Future
+type LambdaAddPermissionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaAddPermissionResult) Get(ctx workflow.Context) (*lambda.AddPermissionOutput, error) {
+func (r *LambdaAddPermissionFuture) Get(ctx workflow.Context) (*lambda.AddPermissionOutput, error) {
 	var output lambda.AddPermissionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaCreateAliasResult struct {
-	Result workflow.Future
+type LambdaCreateAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaCreateAliasResult) Get(ctx workflow.Context) (*lambda.AliasConfiguration, error) {
+func (r *LambdaCreateAliasFuture) Get(ctx workflow.Context) (*lambda.AliasConfiguration, error) {
 	var output lambda.AliasConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaCreateEventSourceMappingResult struct {
-	Result workflow.Future
+type LambdaCreateEventSourceMappingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaCreateEventSourceMappingResult) Get(ctx workflow.Context) (*lambda.EventSourceMappingConfiguration, error) {
+func (r *LambdaCreateEventSourceMappingFuture) Get(ctx workflow.Context) (*lambda.EventSourceMappingConfiguration, error) {
 	var output lambda.EventSourceMappingConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaCreateFunctionResult struct {
-	Result workflow.Future
+type LambdaCreateFunctionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaCreateFunctionResult) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
+func (r *LambdaCreateFunctionFuture) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
 	var output lambda.FunctionConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaDeleteAliasResult struct {
-	Result workflow.Future
+type LambdaDeleteAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaDeleteAliasResult) Get(ctx workflow.Context) (*lambda.DeleteAliasOutput, error) {
+func (r *LambdaDeleteAliasFuture) Get(ctx workflow.Context) (*lambda.DeleteAliasOutput, error) {
 	var output lambda.DeleteAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaDeleteEventSourceMappingResult struct {
-	Result workflow.Future
+type LambdaDeleteEventSourceMappingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaDeleteEventSourceMappingResult) Get(ctx workflow.Context) (*lambda.EventSourceMappingConfiguration, error) {
+func (r *LambdaDeleteEventSourceMappingFuture) Get(ctx workflow.Context) (*lambda.EventSourceMappingConfiguration, error) {
 	var output lambda.EventSourceMappingConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaDeleteFunctionResult struct {
-	Result workflow.Future
+type LambdaDeleteFunctionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaDeleteFunctionResult) Get(ctx workflow.Context) (*lambda.DeleteFunctionOutput, error) {
+func (r *LambdaDeleteFunctionFuture) Get(ctx workflow.Context) (*lambda.DeleteFunctionOutput, error) {
 	var output lambda.DeleteFunctionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaDeleteFunctionConcurrencyResult struct {
-	Result workflow.Future
+type LambdaDeleteFunctionConcurrencyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaDeleteFunctionConcurrencyResult) Get(ctx workflow.Context) (*lambda.DeleteFunctionConcurrencyOutput, error) {
+func (r *LambdaDeleteFunctionConcurrencyFuture) Get(ctx workflow.Context) (*lambda.DeleteFunctionConcurrencyOutput, error) {
 	var output lambda.DeleteFunctionConcurrencyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaDeleteFunctionEventInvokeConfigResult struct {
-	Result workflow.Future
+type LambdaDeleteFunctionEventInvokeConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaDeleteFunctionEventInvokeConfigResult) Get(ctx workflow.Context) (*lambda.DeleteFunctionEventInvokeConfigOutput, error) {
+func (r *LambdaDeleteFunctionEventInvokeConfigFuture) Get(ctx workflow.Context) (*lambda.DeleteFunctionEventInvokeConfigOutput, error) {
 	var output lambda.DeleteFunctionEventInvokeConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaDeleteLayerVersionResult struct {
-	Result workflow.Future
+type LambdaDeleteLayerVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaDeleteLayerVersionResult) Get(ctx workflow.Context) (*lambda.DeleteLayerVersionOutput, error) {
+func (r *LambdaDeleteLayerVersionFuture) Get(ctx workflow.Context) (*lambda.DeleteLayerVersionOutput, error) {
 	var output lambda.DeleteLayerVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaDeleteProvisionedConcurrencyConfigResult struct {
-	Result workflow.Future
+type LambdaDeleteProvisionedConcurrencyConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaDeleteProvisionedConcurrencyConfigResult) Get(ctx workflow.Context) (*lambda.DeleteProvisionedConcurrencyConfigOutput, error) {
+func (r *LambdaDeleteProvisionedConcurrencyConfigFuture) Get(ctx workflow.Context) (*lambda.DeleteProvisionedConcurrencyConfigOutput, error) {
 	var output lambda.DeleteProvisionedConcurrencyConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetAccountSettingsResult struct {
-	Result workflow.Future
+type LambdaGetAccountSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetAccountSettingsResult) Get(ctx workflow.Context) (*lambda.GetAccountSettingsOutput, error) {
+func (r *LambdaGetAccountSettingsFuture) Get(ctx workflow.Context) (*lambda.GetAccountSettingsOutput, error) {
 	var output lambda.GetAccountSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetAliasResult struct {
-	Result workflow.Future
+type LambdaGetAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetAliasResult) Get(ctx workflow.Context) (*lambda.AliasConfiguration, error) {
+func (r *LambdaGetAliasFuture) Get(ctx workflow.Context) (*lambda.AliasConfiguration, error) {
 	var output lambda.AliasConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetEventSourceMappingResult struct {
-	Result workflow.Future
+type LambdaGetEventSourceMappingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetEventSourceMappingResult) Get(ctx workflow.Context) (*lambda.EventSourceMappingConfiguration, error) {
+func (r *LambdaGetEventSourceMappingFuture) Get(ctx workflow.Context) (*lambda.EventSourceMappingConfiguration, error) {
 	var output lambda.EventSourceMappingConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetFunctionResult struct {
-	Result workflow.Future
+type LambdaGetFunctionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetFunctionResult) Get(ctx workflow.Context) (*lambda.GetFunctionOutput, error) {
+func (r *LambdaGetFunctionFuture) Get(ctx workflow.Context) (*lambda.GetFunctionOutput, error) {
 	var output lambda.GetFunctionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetFunctionConcurrencyResult struct {
-	Result workflow.Future
+type LambdaGetFunctionConcurrencyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetFunctionConcurrencyResult) Get(ctx workflow.Context) (*lambda.GetFunctionConcurrencyOutput, error) {
+func (r *LambdaGetFunctionConcurrencyFuture) Get(ctx workflow.Context) (*lambda.GetFunctionConcurrencyOutput, error) {
 	var output lambda.GetFunctionConcurrencyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetFunctionConfigurationResult struct {
-	Result workflow.Future
+type LambdaGetFunctionConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetFunctionConfigurationResult) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
+func (r *LambdaGetFunctionConfigurationFuture) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
 	var output lambda.FunctionConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetFunctionEventInvokeConfigResult struct {
-	Result workflow.Future
+type LambdaGetFunctionEventInvokeConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetFunctionEventInvokeConfigResult) Get(ctx workflow.Context) (*lambda.GetFunctionEventInvokeConfigOutput, error) {
+func (r *LambdaGetFunctionEventInvokeConfigFuture) Get(ctx workflow.Context) (*lambda.GetFunctionEventInvokeConfigOutput, error) {
 	var output lambda.GetFunctionEventInvokeConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetLayerVersionResult struct {
-	Result workflow.Future
+type LambdaGetLayerVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetLayerVersionResult) Get(ctx workflow.Context) (*lambda.GetLayerVersionOutput, error) {
+func (r *LambdaGetLayerVersionFuture) Get(ctx workflow.Context) (*lambda.GetLayerVersionOutput, error) {
 	var output lambda.GetLayerVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetLayerVersionByArnResult struct {
-	Result workflow.Future
+type LambdaGetLayerVersionByArnFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetLayerVersionByArnResult) Get(ctx workflow.Context) (*lambda.GetLayerVersionByArnOutput, error) {
+func (r *LambdaGetLayerVersionByArnFuture) Get(ctx workflow.Context) (*lambda.GetLayerVersionByArnOutput, error) {
 	var output lambda.GetLayerVersionByArnOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetLayerVersionPolicyResult struct {
-	Result workflow.Future
+type LambdaGetLayerVersionPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetLayerVersionPolicyResult) Get(ctx workflow.Context) (*lambda.GetLayerVersionPolicyOutput, error) {
+func (r *LambdaGetLayerVersionPolicyFuture) Get(ctx workflow.Context) (*lambda.GetLayerVersionPolicyOutput, error) {
 	var output lambda.GetLayerVersionPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetPolicyResult struct {
-	Result workflow.Future
+type LambdaGetPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetPolicyResult) Get(ctx workflow.Context) (*lambda.GetPolicyOutput, error) {
+func (r *LambdaGetPolicyFuture) Get(ctx workflow.Context) (*lambda.GetPolicyOutput, error) {
 	var output lambda.GetPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaGetProvisionedConcurrencyConfigResult struct {
-	Result workflow.Future
+type LambdaGetProvisionedConcurrencyConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaGetProvisionedConcurrencyConfigResult) Get(ctx workflow.Context) (*lambda.GetProvisionedConcurrencyConfigOutput, error) {
+func (r *LambdaGetProvisionedConcurrencyConfigFuture) Get(ctx workflow.Context) (*lambda.GetProvisionedConcurrencyConfigOutput, error) {
 	var output lambda.GetProvisionedConcurrencyConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaInvokeResult struct {
-	Result workflow.Future
+type LambdaInvokeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaInvokeResult) Get(ctx workflow.Context) (*lambda.InvokeOutput, error) {
+func (r *LambdaInvokeFuture) Get(ctx workflow.Context) (*lambda.InvokeOutput, error) {
 	var output lambda.InvokeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListAliasesResult struct {
-	Result workflow.Future
+type LambdaListAliasesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListAliasesResult) Get(ctx workflow.Context) (*lambda.ListAliasesOutput, error) {
+func (r *LambdaListAliasesFuture) Get(ctx workflow.Context) (*lambda.ListAliasesOutput, error) {
 	var output lambda.ListAliasesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListEventSourceMappingsResult struct {
-	Result workflow.Future
+type LambdaListEventSourceMappingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListEventSourceMappingsResult) Get(ctx workflow.Context) (*lambda.ListEventSourceMappingsOutput, error) {
+func (r *LambdaListEventSourceMappingsFuture) Get(ctx workflow.Context) (*lambda.ListEventSourceMappingsOutput, error) {
 	var output lambda.ListEventSourceMappingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListFunctionEventInvokeConfigsResult struct {
-	Result workflow.Future
+type LambdaListFunctionEventInvokeConfigsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListFunctionEventInvokeConfigsResult) Get(ctx workflow.Context) (*lambda.ListFunctionEventInvokeConfigsOutput, error) {
+func (r *LambdaListFunctionEventInvokeConfigsFuture) Get(ctx workflow.Context) (*lambda.ListFunctionEventInvokeConfigsOutput, error) {
 	var output lambda.ListFunctionEventInvokeConfigsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListFunctionsResult struct {
-	Result workflow.Future
+type LambdaListFunctionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListFunctionsResult) Get(ctx workflow.Context) (*lambda.ListFunctionsOutput, error) {
+func (r *LambdaListFunctionsFuture) Get(ctx workflow.Context) (*lambda.ListFunctionsOutput, error) {
 	var output lambda.ListFunctionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListLayerVersionsResult struct {
-	Result workflow.Future
+type LambdaListLayerVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListLayerVersionsResult) Get(ctx workflow.Context) (*lambda.ListLayerVersionsOutput, error) {
+func (r *LambdaListLayerVersionsFuture) Get(ctx workflow.Context) (*lambda.ListLayerVersionsOutput, error) {
 	var output lambda.ListLayerVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListLayersResult struct {
-	Result workflow.Future
+type LambdaListLayersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListLayersResult) Get(ctx workflow.Context) (*lambda.ListLayersOutput, error) {
+func (r *LambdaListLayersFuture) Get(ctx workflow.Context) (*lambda.ListLayersOutput, error) {
 	var output lambda.ListLayersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListProvisionedConcurrencyConfigsResult struct {
-	Result workflow.Future
+type LambdaListProvisionedConcurrencyConfigsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListProvisionedConcurrencyConfigsResult) Get(ctx workflow.Context) (*lambda.ListProvisionedConcurrencyConfigsOutput, error) {
+func (r *LambdaListProvisionedConcurrencyConfigsFuture) Get(ctx workflow.Context) (*lambda.ListProvisionedConcurrencyConfigsOutput, error) {
 	var output lambda.ListProvisionedConcurrencyConfigsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListTagsResult struct {
-	Result workflow.Future
+type LambdaListTagsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListTagsResult) Get(ctx workflow.Context) (*lambda.ListTagsOutput, error) {
+func (r *LambdaListTagsFuture) Get(ctx workflow.Context) (*lambda.ListTagsOutput, error) {
 	var output lambda.ListTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaListVersionsByFunctionResult struct {
-	Result workflow.Future
+type LambdaListVersionsByFunctionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaListVersionsByFunctionResult) Get(ctx workflow.Context) (*lambda.ListVersionsByFunctionOutput, error) {
+func (r *LambdaListVersionsByFunctionFuture) Get(ctx workflow.Context) (*lambda.ListVersionsByFunctionOutput, error) {
 	var output lambda.ListVersionsByFunctionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaPublishLayerVersionResult struct {
-	Result workflow.Future
+type LambdaPublishLayerVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaPublishLayerVersionResult) Get(ctx workflow.Context) (*lambda.PublishLayerVersionOutput, error) {
+func (r *LambdaPublishLayerVersionFuture) Get(ctx workflow.Context) (*lambda.PublishLayerVersionOutput, error) {
 	var output lambda.PublishLayerVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaPublishVersionResult struct {
-	Result workflow.Future
+type LambdaPublishVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaPublishVersionResult) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
+func (r *LambdaPublishVersionFuture) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
 	var output lambda.FunctionConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaPutFunctionConcurrencyResult struct {
-	Result workflow.Future
+type LambdaPutFunctionConcurrencyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaPutFunctionConcurrencyResult) Get(ctx workflow.Context) (*lambda.PutFunctionConcurrencyOutput, error) {
+func (r *LambdaPutFunctionConcurrencyFuture) Get(ctx workflow.Context) (*lambda.PutFunctionConcurrencyOutput, error) {
 	var output lambda.PutFunctionConcurrencyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaPutFunctionEventInvokeConfigResult struct {
-	Result workflow.Future
+type LambdaPutFunctionEventInvokeConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaPutFunctionEventInvokeConfigResult) Get(ctx workflow.Context) (*lambda.PutFunctionEventInvokeConfigOutput, error) {
+func (r *LambdaPutFunctionEventInvokeConfigFuture) Get(ctx workflow.Context) (*lambda.PutFunctionEventInvokeConfigOutput, error) {
 	var output lambda.PutFunctionEventInvokeConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaPutProvisionedConcurrencyConfigResult struct {
-	Result workflow.Future
+type LambdaPutProvisionedConcurrencyConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaPutProvisionedConcurrencyConfigResult) Get(ctx workflow.Context) (*lambda.PutProvisionedConcurrencyConfigOutput, error) {
+func (r *LambdaPutProvisionedConcurrencyConfigFuture) Get(ctx workflow.Context) (*lambda.PutProvisionedConcurrencyConfigOutput, error) {
 	var output lambda.PutProvisionedConcurrencyConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaRemoveLayerVersionPermissionResult struct {
-	Result workflow.Future
+type LambdaRemoveLayerVersionPermissionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaRemoveLayerVersionPermissionResult) Get(ctx workflow.Context) (*lambda.RemoveLayerVersionPermissionOutput, error) {
+func (r *LambdaRemoveLayerVersionPermissionFuture) Get(ctx workflow.Context) (*lambda.RemoveLayerVersionPermissionOutput, error) {
 	var output lambda.RemoveLayerVersionPermissionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaRemovePermissionResult struct {
-	Result workflow.Future
+type LambdaRemovePermissionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaRemovePermissionResult) Get(ctx workflow.Context) (*lambda.RemovePermissionOutput, error) {
+func (r *LambdaRemovePermissionFuture) Get(ctx workflow.Context) (*lambda.RemovePermissionOutput, error) {
 	var output lambda.RemovePermissionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaTagResourceResult struct {
-	Result workflow.Future
+type LambdaTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaTagResourceResult) Get(ctx workflow.Context) (*lambda.TagResourceOutput, error) {
+func (r *LambdaTagResourceFuture) Get(ctx workflow.Context) (*lambda.TagResourceOutput, error) {
 	var output lambda.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaUntagResourceResult struct {
-	Result workflow.Future
+type LambdaUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaUntagResourceResult) Get(ctx workflow.Context) (*lambda.UntagResourceOutput, error) {
+func (r *LambdaUntagResourceFuture) Get(ctx workflow.Context) (*lambda.UntagResourceOutput, error) {
 	var output lambda.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaUpdateAliasResult struct {
-	Result workflow.Future
+type LambdaUpdateAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaUpdateAliasResult) Get(ctx workflow.Context) (*lambda.AliasConfiguration, error) {
+func (r *LambdaUpdateAliasFuture) Get(ctx workflow.Context) (*lambda.AliasConfiguration, error) {
 	var output lambda.AliasConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaUpdateEventSourceMappingResult struct {
-	Result workflow.Future
+type LambdaUpdateEventSourceMappingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaUpdateEventSourceMappingResult) Get(ctx workflow.Context) (*lambda.EventSourceMappingConfiguration, error) {
+func (r *LambdaUpdateEventSourceMappingFuture) Get(ctx workflow.Context) (*lambda.EventSourceMappingConfiguration, error) {
 	var output lambda.EventSourceMappingConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaUpdateFunctionCodeResult struct {
-	Result workflow.Future
+type LambdaUpdateFunctionCodeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaUpdateFunctionCodeResult) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
+func (r *LambdaUpdateFunctionCodeFuture) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
 	var output lambda.FunctionConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaUpdateFunctionConfigurationResult struct {
-	Result workflow.Future
+type LambdaUpdateFunctionConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaUpdateFunctionConfigurationResult) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
+func (r *LambdaUpdateFunctionConfigurationFuture) Get(ctx workflow.Context) (*lambda.FunctionConfiguration, error) {
 	var output lambda.FunctionConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LambdaUpdateFunctionEventInvokeConfigResult struct {
-	Result workflow.Future
+type LambdaUpdateFunctionEventInvokeConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *LambdaUpdateFunctionEventInvokeConfigResult) Get(ctx workflow.Context) (*lambda.UpdateFunctionEventInvokeConfigOutput, error) {
+func (r *LambdaUpdateFunctionEventInvokeConfigFuture) Get(ctx workflow.Context) (*lambda.UpdateFunctionEventInvokeConfigOutput, error) {
 	var output lambda.UpdateFunctionEventInvokeConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -653,9 +704,9 @@ func (a *LambdaStub) AddLayerVersionPermission(ctx workflow.Context, input *lamb
 	return &output, err
 }
 
-func (a *LambdaStub) AddLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) *LambdaAddLayerVersionPermissionResult {
+func (a *LambdaStub) AddLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) *LambdaAddLayerVersionPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.AddLayerVersionPermission", input)
-	return &LambdaAddLayerVersionPermissionResult{Result: future}
+	return &LambdaAddLayerVersionPermissionFuture{Future: future}
 }
 
 func (a *LambdaStub) AddPermission(ctx workflow.Context, input *lambda.AddPermissionInput) (*lambda.AddPermissionOutput, error) {
@@ -664,9 +715,9 @@ func (a *LambdaStub) AddPermission(ctx workflow.Context, input *lambda.AddPermis
 	return &output, err
 }
 
-func (a *LambdaStub) AddPermissionAsync(ctx workflow.Context, input *lambda.AddPermissionInput) *LambdaAddPermissionResult {
+func (a *LambdaStub) AddPermissionAsync(ctx workflow.Context, input *lambda.AddPermissionInput) *LambdaAddPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.AddPermission", input)
-	return &LambdaAddPermissionResult{Result: future}
+	return &LambdaAddPermissionFuture{Future: future}
 }
 
 func (a *LambdaStub) CreateAlias(ctx workflow.Context, input *lambda.CreateAliasInput) (*lambda.AliasConfiguration, error) {
@@ -675,9 +726,9 @@ func (a *LambdaStub) CreateAlias(ctx workflow.Context, input *lambda.CreateAlias
 	return &output, err
 }
 
-func (a *LambdaStub) CreateAliasAsync(ctx workflow.Context, input *lambda.CreateAliasInput) *LambdaCreateAliasResult {
+func (a *LambdaStub) CreateAliasAsync(ctx workflow.Context, input *lambda.CreateAliasInput) *LambdaCreateAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.CreateAlias", input)
-	return &LambdaCreateAliasResult{Result: future}
+	return &LambdaCreateAliasFuture{Future: future}
 }
 
 func (a *LambdaStub) CreateEventSourceMapping(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error) {
@@ -686,9 +737,9 @@ func (a *LambdaStub) CreateEventSourceMapping(ctx workflow.Context, input *lambd
 	return &output, err
 }
 
-func (a *LambdaStub) CreateEventSourceMappingAsync(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) *LambdaCreateEventSourceMappingResult {
+func (a *LambdaStub) CreateEventSourceMappingAsync(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) *LambdaCreateEventSourceMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.CreateEventSourceMapping", input)
-	return &LambdaCreateEventSourceMappingResult{Result: future}
+	return &LambdaCreateEventSourceMappingFuture{Future: future}
 }
 
 func (a *LambdaStub) CreateFunction(ctx workflow.Context, input *lambda.CreateFunctionInput) (*lambda.FunctionConfiguration, error) {
@@ -697,9 +748,9 @@ func (a *LambdaStub) CreateFunction(ctx workflow.Context, input *lambda.CreateFu
 	return &output, err
 }
 
-func (a *LambdaStub) CreateFunctionAsync(ctx workflow.Context, input *lambda.CreateFunctionInput) *LambdaCreateFunctionResult {
+func (a *LambdaStub) CreateFunctionAsync(ctx workflow.Context, input *lambda.CreateFunctionInput) *LambdaCreateFunctionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.CreateFunction", input)
-	return &LambdaCreateFunctionResult{Result: future}
+	return &LambdaCreateFunctionFuture{Future: future}
 }
 
 func (a *LambdaStub) DeleteAlias(ctx workflow.Context, input *lambda.DeleteAliasInput) (*lambda.DeleteAliasOutput, error) {
@@ -708,9 +759,9 @@ func (a *LambdaStub) DeleteAlias(ctx workflow.Context, input *lambda.DeleteAlias
 	return &output, err
 }
 
-func (a *LambdaStub) DeleteAliasAsync(ctx workflow.Context, input *lambda.DeleteAliasInput) *LambdaDeleteAliasResult {
+func (a *LambdaStub) DeleteAliasAsync(ctx workflow.Context, input *lambda.DeleteAliasInput) *LambdaDeleteAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.DeleteAlias", input)
-	return &LambdaDeleteAliasResult{Result: future}
+	return &LambdaDeleteAliasFuture{Future: future}
 }
 
 func (a *LambdaStub) DeleteEventSourceMapping(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error) {
@@ -719,9 +770,9 @@ func (a *LambdaStub) DeleteEventSourceMapping(ctx workflow.Context, input *lambd
 	return &output, err
 }
 
-func (a *LambdaStub) DeleteEventSourceMappingAsync(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) *LambdaDeleteEventSourceMappingResult {
+func (a *LambdaStub) DeleteEventSourceMappingAsync(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) *LambdaDeleteEventSourceMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.DeleteEventSourceMapping", input)
-	return &LambdaDeleteEventSourceMappingResult{Result: future}
+	return &LambdaDeleteEventSourceMappingFuture{Future: future}
 }
 
 func (a *LambdaStub) DeleteFunction(ctx workflow.Context, input *lambda.DeleteFunctionInput) (*lambda.DeleteFunctionOutput, error) {
@@ -730,9 +781,9 @@ func (a *LambdaStub) DeleteFunction(ctx workflow.Context, input *lambda.DeleteFu
 	return &output, err
 }
 
-func (a *LambdaStub) DeleteFunctionAsync(ctx workflow.Context, input *lambda.DeleteFunctionInput) *LambdaDeleteFunctionResult {
+func (a *LambdaStub) DeleteFunctionAsync(ctx workflow.Context, input *lambda.DeleteFunctionInput) *LambdaDeleteFunctionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.DeleteFunction", input)
-	return &LambdaDeleteFunctionResult{Result: future}
+	return &LambdaDeleteFunctionFuture{Future: future}
 }
 
 func (a *LambdaStub) DeleteFunctionConcurrency(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) (*lambda.DeleteFunctionConcurrencyOutput, error) {
@@ -741,9 +792,9 @@ func (a *LambdaStub) DeleteFunctionConcurrency(ctx workflow.Context, input *lamb
 	return &output, err
 }
 
-func (a *LambdaStub) DeleteFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) *LambdaDeleteFunctionConcurrencyResult {
+func (a *LambdaStub) DeleteFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) *LambdaDeleteFunctionConcurrencyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.DeleteFunctionConcurrency", input)
-	return &LambdaDeleteFunctionConcurrencyResult{Result: future}
+	return &LambdaDeleteFunctionConcurrencyFuture{Future: future}
 }
 
 func (a *LambdaStub) DeleteFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) (*lambda.DeleteFunctionEventInvokeConfigOutput, error) {
@@ -752,9 +803,9 @@ func (a *LambdaStub) DeleteFunctionEventInvokeConfig(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *LambdaStub) DeleteFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) *LambdaDeleteFunctionEventInvokeConfigResult {
+func (a *LambdaStub) DeleteFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) *LambdaDeleteFunctionEventInvokeConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.DeleteFunctionEventInvokeConfig", input)
-	return &LambdaDeleteFunctionEventInvokeConfigResult{Result: future}
+	return &LambdaDeleteFunctionEventInvokeConfigFuture{Future: future}
 }
 
 func (a *LambdaStub) DeleteLayerVersion(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) (*lambda.DeleteLayerVersionOutput, error) {
@@ -763,9 +814,9 @@ func (a *LambdaStub) DeleteLayerVersion(ctx workflow.Context, input *lambda.Dele
 	return &output, err
 }
 
-func (a *LambdaStub) DeleteLayerVersionAsync(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) *LambdaDeleteLayerVersionResult {
+func (a *LambdaStub) DeleteLayerVersionAsync(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) *LambdaDeleteLayerVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.DeleteLayerVersion", input)
-	return &LambdaDeleteLayerVersionResult{Result: future}
+	return &LambdaDeleteLayerVersionFuture{Future: future}
 }
 
 func (a *LambdaStub) DeleteProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) (*lambda.DeleteProvisionedConcurrencyConfigOutput, error) {
@@ -774,9 +825,9 @@ func (a *LambdaStub) DeleteProvisionedConcurrencyConfig(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *LambdaStub) DeleteProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) *LambdaDeleteProvisionedConcurrencyConfigResult {
+func (a *LambdaStub) DeleteProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) *LambdaDeleteProvisionedConcurrencyConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.DeleteProvisionedConcurrencyConfig", input)
-	return &LambdaDeleteProvisionedConcurrencyConfigResult{Result: future}
+	return &LambdaDeleteProvisionedConcurrencyConfigFuture{Future: future}
 }
 
 func (a *LambdaStub) GetAccountSettings(ctx workflow.Context, input *lambda.GetAccountSettingsInput) (*lambda.GetAccountSettingsOutput, error) {
@@ -785,9 +836,9 @@ func (a *LambdaStub) GetAccountSettings(ctx workflow.Context, input *lambda.GetA
 	return &output, err
 }
 
-func (a *LambdaStub) GetAccountSettingsAsync(ctx workflow.Context, input *lambda.GetAccountSettingsInput) *LambdaGetAccountSettingsResult {
+func (a *LambdaStub) GetAccountSettingsAsync(ctx workflow.Context, input *lambda.GetAccountSettingsInput) *LambdaGetAccountSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetAccountSettings", input)
-	return &LambdaGetAccountSettingsResult{Result: future}
+	return &LambdaGetAccountSettingsFuture{Future: future}
 }
 
 func (a *LambdaStub) GetAlias(ctx workflow.Context, input *lambda.GetAliasInput) (*lambda.AliasConfiguration, error) {
@@ -796,9 +847,9 @@ func (a *LambdaStub) GetAlias(ctx workflow.Context, input *lambda.GetAliasInput)
 	return &output, err
 }
 
-func (a *LambdaStub) GetAliasAsync(ctx workflow.Context, input *lambda.GetAliasInput) *LambdaGetAliasResult {
+func (a *LambdaStub) GetAliasAsync(ctx workflow.Context, input *lambda.GetAliasInput) *LambdaGetAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetAlias", input)
-	return &LambdaGetAliasResult{Result: future}
+	return &LambdaGetAliasFuture{Future: future}
 }
 
 func (a *LambdaStub) GetEventSourceMapping(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error) {
@@ -807,9 +858,9 @@ func (a *LambdaStub) GetEventSourceMapping(ctx workflow.Context, input *lambda.G
 	return &output, err
 }
 
-func (a *LambdaStub) GetEventSourceMappingAsync(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) *LambdaGetEventSourceMappingResult {
+func (a *LambdaStub) GetEventSourceMappingAsync(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) *LambdaGetEventSourceMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetEventSourceMapping", input)
-	return &LambdaGetEventSourceMappingResult{Result: future}
+	return &LambdaGetEventSourceMappingFuture{Future: future}
 }
 
 func (a *LambdaStub) GetFunction(ctx workflow.Context, input *lambda.GetFunctionInput) (*lambda.GetFunctionOutput, error) {
@@ -818,9 +869,9 @@ func (a *LambdaStub) GetFunction(ctx workflow.Context, input *lambda.GetFunction
 	return &output, err
 }
 
-func (a *LambdaStub) GetFunctionAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *LambdaGetFunctionResult {
+func (a *LambdaStub) GetFunctionAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *LambdaGetFunctionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetFunction", input)
-	return &LambdaGetFunctionResult{Result: future}
+	return &LambdaGetFunctionFuture{Future: future}
 }
 
 func (a *LambdaStub) GetFunctionConcurrency(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) (*lambda.GetFunctionConcurrencyOutput, error) {
@@ -829,9 +880,9 @@ func (a *LambdaStub) GetFunctionConcurrency(ctx workflow.Context, input *lambda.
 	return &output, err
 }
 
-func (a *LambdaStub) GetFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) *LambdaGetFunctionConcurrencyResult {
+func (a *LambdaStub) GetFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) *LambdaGetFunctionConcurrencyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetFunctionConcurrency", input)
-	return &LambdaGetFunctionConcurrencyResult{Result: future}
+	return &LambdaGetFunctionConcurrencyFuture{Future: future}
 }
 
 func (a *LambdaStub) GetFunctionConfiguration(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) (*lambda.FunctionConfiguration, error) {
@@ -840,9 +891,9 @@ func (a *LambdaStub) GetFunctionConfiguration(ctx workflow.Context, input *lambd
 	return &output, err
 }
 
-func (a *LambdaStub) GetFunctionConfigurationAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *LambdaGetFunctionConfigurationResult {
+func (a *LambdaStub) GetFunctionConfigurationAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *LambdaGetFunctionConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetFunctionConfiguration", input)
-	return &LambdaGetFunctionConfigurationResult{Result: future}
+	return &LambdaGetFunctionConfigurationFuture{Future: future}
 }
 
 func (a *LambdaStub) GetFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) (*lambda.GetFunctionEventInvokeConfigOutput, error) {
@@ -851,9 +902,9 @@ func (a *LambdaStub) GetFunctionEventInvokeConfig(ctx workflow.Context, input *l
 	return &output, err
 }
 
-func (a *LambdaStub) GetFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) *LambdaGetFunctionEventInvokeConfigResult {
+func (a *LambdaStub) GetFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) *LambdaGetFunctionEventInvokeConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetFunctionEventInvokeConfig", input)
-	return &LambdaGetFunctionEventInvokeConfigResult{Result: future}
+	return &LambdaGetFunctionEventInvokeConfigFuture{Future: future}
 }
 
 func (a *LambdaStub) GetLayerVersion(ctx workflow.Context, input *lambda.GetLayerVersionInput) (*lambda.GetLayerVersionOutput, error) {
@@ -862,9 +913,9 @@ func (a *LambdaStub) GetLayerVersion(ctx workflow.Context, input *lambda.GetLaye
 	return &output, err
 }
 
-func (a *LambdaStub) GetLayerVersionAsync(ctx workflow.Context, input *lambda.GetLayerVersionInput) *LambdaGetLayerVersionResult {
+func (a *LambdaStub) GetLayerVersionAsync(ctx workflow.Context, input *lambda.GetLayerVersionInput) *LambdaGetLayerVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetLayerVersion", input)
-	return &LambdaGetLayerVersionResult{Result: future}
+	return &LambdaGetLayerVersionFuture{Future: future}
 }
 
 func (a *LambdaStub) GetLayerVersionByArn(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) (*lambda.GetLayerVersionByArnOutput, error) {
@@ -873,9 +924,9 @@ func (a *LambdaStub) GetLayerVersionByArn(ctx workflow.Context, input *lambda.Ge
 	return &output, err
 }
 
-func (a *LambdaStub) GetLayerVersionByArnAsync(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) *LambdaGetLayerVersionByArnResult {
+func (a *LambdaStub) GetLayerVersionByArnAsync(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) *LambdaGetLayerVersionByArnFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetLayerVersionByArn", input)
-	return &LambdaGetLayerVersionByArnResult{Result: future}
+	return &LambdaGetLayerVersionByArnFuture{Future: future}
 }
 
 func (a *LambdaStub) GetLayerVersionPolicy(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) (*lambda.GetLayerVersionPolicyOutput, error) {
@@ -884,9 +935,9 @@ func (a *LambdaStub) GetLayerVersionPolicy(ctx workflow.Context, input *lambda.G
 	return &output, err
 }
 
-func (a *LambdaStub) GetLayerVersionPolicyAsync(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) *LambdaGetLayerVersionPolicyResult {
+func (a *LambdaStub) GetLayerVersionPolicyAsync(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) *LambdaGetLayerVersionPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetLayerVersionPolicy", input)
-	return &LambdaGetLayerVersionPolicyResult{Result: future}
+	return &LambdaGetLayerVersionPolicyFuture{Future: future}
 }
 
 func (a *LambdaStub) GetPolicy(ctx workflow.Context, input *lambda.GetPolicyInput) (*lambda.GetPolicyOutput, error) {
@@ -895,9 +946,9 @@ func (a *LambdaStub) GetPolicy(ctx workflow.Context, input *lambda.GetPolicyInpu
 	return &output, err
 }
 
-func (a *LambdaStub) GetPolicyAsync(ctx workflow.Context, input *lambda.GetPolicyInput) *LambdaGetPolicyResult {
+func (a *LambdaStub) GetPolicyAsync(ctx workflow.Context, input *lambda.GetPolicyInput) *LambdaGetPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetPolicy", input)
-	return &LambdaGetPolicyResult{Result: future}
+	return &LambdaGetPolicyFuture{Future: future}
 }
 
 func (a *LambdaStub) GetProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) (*lambda.GetProvisionedConcurrencyConfigOutput, error) {
@@ -906,9 +957,9 @@ func (a *LambdaStub) GetProvisionedConcurrencyConfig(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *LambdaStub) GetProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) *LambdaGetProvisionedConcurrencyConfigResult {
+func (a *LambdaStub) GetProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) *LambdaGetProvisionedConcurrencyConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.GetProvisionedConcurrencyConfig", input)
-	return &LambdaGetProvisionedConcurrencyConfigResult{Result: future}
+	return &LambdaGetProvisionedConcurrencyConfigFuture{Future: future}
 }
 
 func (a *LambdaStub) Invoke(ctx workflow.Context, input *lambda.InvokeInput) (*lambda.InvokeOutput, error) {
@@ -917,9 +968,9 @@ func (a *LambdaStub) Invoke(ctx workflow.Context, input *lambda.InvokeInput) (*l
 	return &output, err
 }
 
-func (a *LambdaStub) InvokeAsync(ctx workflow.Context, input *lambda.InvokeInput) *LambdaInvokeResult {
+func (a *LambdaStub) InvokeAsync(ctx workflow.Context, input *lambda.InvokeInput) *LambdaInvokeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.Invoke", input)
-	return &LambdaInvokeResult{Result: future}
+	return &LambdaInvokeFuture{Future: future}
 }
 
 func (a *LambdaStub) ListAliases(ctx workflow.Context, input *lambda.ListAliasesInput) (*lambda.ListAliasesOutput, error) {
@@ -928,9 +979,9 @@ func (a *LambdaStub) ListAliases(ctx workflow.Context, input *lambda.ListAliases
 	return &output, err
 }
 
-func (a *LambdaStub) ListAliasesAsync(ctx workflow.Context, input *lambda.ListAliasesInput) *LambdaListAliasesResult {
+func (a *LambdaStub) ListAliasesAsync(ctx workflow.Context, input *lambda.ListAliasesInput) *LambdaListAliasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListAliases", input)
-	return &LambdaListAliasesResult{Result: future}
+	return &LambdaListAliasesFuture{Future: future}
 }
 
 func (a *LambdaStub) ListEventSourceMappings(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) (*lambda.ListEventSourceMappingsOutput, error) {
@@ -939,9 +990,9 @@ func (a *LambdaStub) ListEventSourceMappings(ctx workflow.Context, input *lambda
 	return &output, err
 }
 
-func (a *LambdaStub) ListEventSourceMappingsAsync(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) *LambdaListEventSourceMappingsResult {
+func (a *LambdaStub) ListEventSourceMappingsAsync(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) *LambdaListEventSourceMappingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListEventSourceMappings", input)
-	return &LambdaListEventSourceMappingsResult{Result: future}
+	return &LambdaListEventSourceMappingsFuture{Future: future}
 }
 
 func (a *LambdaStub) ListFunctionEventInvokeConfigs(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) (*lambda.ListFunctionEventInvokeConfigsOutput, error) {
@@ -950,9 +1001,9 @@ func (a *LambdaStub) ListFunctionEventInvokeConfigs(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *LambdaStub) ListFunctionEventInvokeConfigsAsync(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) *LambdaListFunctionEventInvokeConfigsResult {
+func (a *LambdaStub) ListFunctionEventInvokeConfigsAsync(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) *LambdaListFunctionEventInvokeConfigsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListFunctionEventInvokeConfigs", input)
-	return &LambdaListFunctionEventInvokeConfigsResult{Result: future}
+	return &LambdaListFunctionEventInvokeConfigsFuture{Future: future}
 }
 
 func (a *LambdaStub) ListFunctions(ctx workflow.Context, input *lambda.ListFunctionsInput) (*lambda.ListFunctionsOutput, error) {
@@ -961,9 +1012,9 @@ func (a *LambdaStub) ListFunctions(ctx workflow.Context, input *lambda.ListFunct
 	return &output, err
 }
 
-func (a *LambdaStub) ListFunctionsAsync(ctx workflow.Context, input *lambda.ListFunctionsInput) *LambdaListFunctionsResult {
+func (a *LambdaStub) ListFunctionsAsync(ctx workflow.Context, input *lambda.ListFunctionsInput) *LambdaListFunctionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListFunctions", input)
-	return &LambdaListFunctionsResult{Result: future}
+	return &LambdaListFunctionsFuture{Future: future}
 }
 
 func (a *LambdaStub) ListLayerVersions(ctx workflow.Context, input *lambda.ListLayerVersionsInput) (*lambda.ListLayerVersionsOutput, error) {
@@ -972,9 +1023,9 @@ func (a *LambdaStub) ListLayerVersions(ctx workflow.Context, input *lambda.ListL
 	return &output, err
 }
 
-func (a *LambdaStub) ListLayerVersionsAsync(ctx workflow.Context, input *lambda.ListLayerVersionsInput) *LambdaListLayerVersionsResult {
+func (a *LambdaStub) ListLayerVersionsAsync(ctx workflow.Context, input *lambda.ListLayerVersionsInput) *LambdaListLayerVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListLayerVersions", input)
-	return &LambdaListLayerVersionsResult{Result: future}
+	return &LambdaListLayerVersionsFuture{Future: future}
 }
 
 func (a *LambdaStub) ListLayers(ctx workflow.Context, input *lambda.ListLayersInput) (*lambda.ListLayersOutput, error) {
@@ -983,9 +1034,9 @@ func (a *LambdaStub) ListLayers(ctx workflow.Context, input *lambda.ListLayersIn
 	return &output, err
 }
 
-func (a *LambdaStub) ListLayersAsync(ctx workflow.Context, input *lambda.ListLayersInput) *LambdaListLayersResult {
+func (a *LambdaStub) ListLayersAsync(ctx workflow.Context, input *lambda.ListLayersInput) *LambdaListLayersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListLayers", input)
-	return &LambdaListLayersResult{Result: future}
+	return &LambdaListLayersFuture{Future: future}
 }
 
 func (a *LambdaStub) ListProvisionedConcurrencyConfigs(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) (*lambda.ListProvisionedConcurrencyConfigsOutput, error) {
@@ -994,9 +1045,9 @@ func (a *LambdaStub) ListProvisionedConcurrencyConfigs(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *LambdaStub) ListProvisionedConcurrencyConfigsAsync(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) *LambdaListProvisionedConcurrencyConfigsResult {
+func (a *LambdaStub) ListProvisionedConcurrencyConfigsAsync(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) *LambdaListProvisionedConcurrencyConfigsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListProvisionedConcurrencyConfigs", input)
-	return &LambdaListProvisionedConcurrencyConfigsResult{Result: future}
+	return &LambdaListProvisionedConcurrencyConfigsFuture{Future: future}
 }
 
 func (a *LambdaStub) ListTags(ctx workflow.Context, input *lambda.ListTagsInput) (*lambda.ListTagsOutput, error) {
@@ -1005,9 +1056,9 @@ func (a *LambdaStub) ListTags(ctx workflow.Context, input *lambda.ListTagsInput)
 	return &output, err
 }
 
-func (a *LambdaStub) ListTagsAsync(ctx workflow.Context, input *lambda.ListTagsInput) *LambdaListTagsResult {
+func (a *LambdaStub) ListTagsAsync(ctx workflow.Context, input *lambda.ListTagsInput) *LambdaListTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListTags", input)
-	return &LambdaListTagsResult{Result: future}
+	return &LambdaListTagsFuture{Future: future}
 }
 
 func (a *LambdaStub) ListVersionsByFunction(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) (*lambda.ListVersionsByFunctionOutput, error) {
@@ -1016,9 +1067,9 @@ func (a *LambdaStub) ListVersionsByFunction(ctx workflow.Context, input *lambda.
 	return &output, err
 }
 
-func (a *LambdaStub) ListVersionsByFunctionAsync(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) *LambdaListVersionsByFunctionResult {
+func (a *LambdaStub) ListVersionsByFunctionAsync(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) *LambdaListVersionsByFunctionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.ListVersionsByFunction", input)
-	return &LambdaListVersionsByFunctionResult{Result: future}
+	return &LambdaListVersionsByFunctionFuture{Future: future}
 }
 
 func (a *LambdaStub) PublishLayerVersion(ctx workflow.Context, input *lambda.PublishLayerVersionInput) (*lambda.PublishLayerVersionOutput, error) {
@@ -1027,9 +1078,9 @@ func (a *LambdaStub) PublishLayerVersion(ctx workflow.Context, input *lambda.Pub
 	return &output, err
 }
 
-func (a *LambdaStub) PublishLayerVersionAsync(ctx workflow.Context, input *lambda.PublishLayerVersionInput) *LambdaPublishLayerVersionResult {
+func (a *LambdaStub) PublishLayerVersionAsync(ctx workflow.Context, input *lambda.PublishLayerVersionInput) *LambdaPublishLayerVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.PublishLayerVersion", input)
-	return &LambdaPublishLayerVersionResult{Result: future}
+	return &LambdaPublishLayerVersionFuture{Future: future}
 }
 
 func (a *LambdaStub) PublishVersion(ctx workflow.Context, input *lambda.PublishVersionInput) (*lambda.FunctionConfiguration, error) {
@@ -1038,9 +1089,9 @@ func (a *LambdaStub) PublishVersion(ctx workflow.Context, input *lambda.PublishV
 	return &output, err
 }
 
-func (a *LambdaStub) PublishVersionAsync(ctx workflow.Context, input *lambda.PublishVersionInput) *LambdaPublishVersionResult {
+func (a *LambdaStub) PublishVersionAsync(ctx workflow.Context, input *lambda.PublishVersionInput) *LambdaPublishVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.PublishVersion", input)
-	return &LambdaPublishVersionResult{Result: future}
+	return &LambdaPublishVersionFuture{Future: future}
 }
 
 func (a *LambdaStub) PutFunctionConcurrency(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) (*lambda.PutFunctionConcurrencyOutput, error) {
@@ -1049,9 +1100,9 @@ func (a *LambdaStub) PutFunctionConcurrency(ctx workflow.Context, input *lambda.
 	return &output, err
 }
 
-func (a *LambdaStub) PutFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) *LambdaPutFunctionConcurrencyResult {
+func (a *LambdaStub) PutFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) *LambdaPutFunctionConcurrencyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.PutFunctionConcurrency", input)
-	return &LambdaPutFunctionConcurrencyResult{Result: future}
+	return &LambdaPutFunctionConcurrencyFuture{Future: future}
 }
 
 func (a *LambdaStub) PutFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) (*lambda.PutFunctionEventInvokeConfigOutput, error) {
@@ -1060,9 +1111,9 @@ func (a *LambdaStub) PutFunctionEventInvokeConfig(ctx workflow.Context, input *l
 	return &output, err
 }
 
-func (a *LambdaStub) PutFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) *LambdaPutFunctionEventInvokeConfigResult {
+func (a *LambdaStub) PutFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) *LambdaPutFunctionEventInvokeConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.PutFunctionEventInvokeConfig", input)
-	return &LambdaPutFunctionEventInvokeConfigResult{Result: future}
+	return &LambdaPutFunctionEventInvokeConfigFuture{Future: future}
 }
 
 func (a *LambdaStub) PutProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) (*lambda.PutProvisionedConcurrencyConfigOutput, error) {
@@ -1071,9 +1122,9 @@ func (a *LambdaStub) PutProvisionedConcurrencyConfig(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *LambdaStub) PutProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) *LambdaPutProvisionedConcurrencyConfigResult {
+func (a *LambdaStub) PutProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) *LambdaPutProvisionedConcurrencyConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.PutProvisionedConcurrencyConfig", input)
-	return &LambdaPutProvisionedConcurrencyConfigResult{Result: future}
+	return &LambdaPutProvisionedConcurrencyConfigFuture{Future: future}
 }
 
 func (a *LambdaStub) RemoveLayerVersionPermission(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) (*lambda.RemoveLayerVersionPermissionOutput, error) {
@@ -1082,9 +1133,9 @@ func (a *LambdaStub) RemoveLayerVersionPermission(ctx workflow.Context, input *l
 	return &output, err
 }
 
-func (a *LambdaStub) RemoveLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) *LambdaRemoveLayerVersionPermissionResult {
+func (a *LambdaStub) RemoveLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) *LambdaRemoveLayerVersionPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.RemoveLayerVersionPermission", input)
-	return &LambdaRemoveLayerVersionPermissionResult{Result: future}
+	return &LambdaRemoveLayerVersionPermissionFuture{Future: future}
 }
 
 func (a *LambdaStub) RemovePermission(ctx workflow.Context, input *lambda.RemovePermissionInput) (*lambda.RemovePermissionOutput, error) {
@@ -1093,9 +1144,9 @@ func (a *LambdaStub) RemovePermission(ctx workflow.Context, input *lambda.Remove
 	return &output, err
 }
 
-func (a *LambdaStub) RemovePermissionAsync(ctx workflow.Context, input *lambda.RemovePermissionInput) *LambdaRemovePermissionResult {
+func (a *LambdaStub) RemovePermissionAsync(ctx workflow.Context, input *lambda.RemovePermissionInput) *LambdaRemovePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.RemovePermission", input)
-	return &LambdaRemovePermissionResult{Result: future}
+	return &LambdaRemovePermissionFuture{Future: future}
 }
 
 func (a *LambdaStub) TagResource(ctx workflow.Context, input *lambda.TagResourceInput) (*lambda.TagResourceOutput, error) {
@@ -1104,9 +1155,9 @@ func (a *LambdaStub) TagResource(ctx workflow.Context, input *lambda.TagResource
 	return &output, err
 }
 
-func (a *LambdaStub) TagResourceAsync(ctx workflow.Context, input *lambda.TagResourceInput) *LambdaTagResourceResult {
+func (a *LambdaStub) TagResourceAsync(ctx workflow.Context, input *lambda.TagResourceInput) *LambdaTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.TagResource", input)
-	return &LambdaTagResourceResult{Result: future}
+	return &LambdaTagResourceFuture{Future: future}
 }
 
 func (a *LambdaStub) UntagResource(ctx workflow.Context, input *lambda.UntagResourceInput) (*lambda.UntagResourceOutput, error) {
@@ -1115,9 +1166,9 @@ func (a *LambdaStub) UntagResource(ctx workflow.Context, input *lambda.UntagReso
 	return &output, err
 }
 
-func (a *LambdaStub) UntagResourceAsync(ctx workflow.Context, input *lambda.UntagResourceInput) *LambdaUntagResourceResult {
+func (a *LambdaStub) UntagResourceAsync(ctx workflow.Context, input *lambda.UntagResourceInput) *LambdaUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.UntagResource", input)
-	return &LambdaUntagResourceResult{Result: future}
+	return &LambdaUntagResourceFuture{Future: future}
 }
 
 func (a *LambdaStub) UpdateAlias(ctx workflow.Context, input *lambda.UpdateAliasInput) (*lambda.AliasConfiguration, error) {
@@ -1126,9 +1177,9 @@ func (a *LambdaStub) UpdateAlias(ctx workflow.Context, input *lambda.UpdateAlias
 	return &output, err
 }
 
-func (a *LambdaStub) UpdateAliasAsync(ctx workflow.Context, input *lambda.UpdateAliasInput) *LambdaUpdateAliasResult {
+func (a *LambdaStub) UpdateAliasAsync(ctx workflow.Context, input *lambda.UpdateAliasInput) *LambdaUpdateAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.UpdateAlias", input)
-	return &LambdaUpdateAliasResult{Result: future}
+	return &LambdaUpdateAliasFuture{Future: future}
 }
 
 func (a *LambdaStub) UpdateEventSourceMapping(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error) {
@@ -1137,9 +1188,9 @@ func (a *LambdaStub) UpdateEventSourceMapping(ctx workflow.Context, input *lambd
 	return &output, err
 }
 
-func (a *LambdaStub) UpdateEventSourceMappingAsync(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) *LambdaUpdateEventSourceMappingResult {
+func (a *LambdaStub) UpdateEventSourceMappingAsync(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) *LambdaUpdateEventSourceMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.UpdateEventSourceMapping", input)
-	return &LambdaUpdateEventSourceMappingResult{Result: future}
+	return &LambdaUpdateEventSourceMappingFuture{Future: future}
 }
 
 func (a *LambdaStub) UpdateFunctionCode(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) (*lambda.FunctionConfiguration, error) {
@@ -1148,9 +1199,9 @@ func (a *LambdaStub) UpdateFunctionCode(ctx workflow.Context, input *lambda.Upda
 	return &output, err
 }
 
-func (a *LambdaStub) UpdateFunctionCodeAsync(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) *LambdaUpdateFunctionCodeResult {
+func (a *LambdaStub) UpdateFunctionCodeAsync(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) *LambdaUpdateFunctionCodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.UpdateFunctionCode", input)
-	return &LambdaUpdateFunctionCodeResult{Result: future}
+	return &LambdaUpdateFunctionCodeFuture{Future: future}
 }
 
 func (a *LambdaStub) UpdateFunctionConfiguration(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) (*lambda.FunctionConfiguration, error) {
@@ -1159,9 +1210,9 @@ func (a *LambdaStub) UpdateFunctionConfiguration(ctx workflow.Context, input *la
 	return &output, err
 }
 
-func (a *LambdaStub) UpdateFunctionConfigurationAsync(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) *LambdaUpdateFunctionConfigurationResult {
+func (a *LambdaStub) UpdateFunctionConfigurationAsync(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) *LambdaUpdateFunctionConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.UpdateFunctionConfiguration", input)
-	return &LambdaUpdateFunctionConfigurationResult{Result: future}
+	return &LambdaUpdateFunctionConfigurationFuture{Future: future}
 }
 
 func (a *LambdaStub) UpdateFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) (*lambda.UpdateFunctionEventInvokeConfigOutput, error) {
@@ -1170,31 +1221,34 @@ func (a *LambdaStub) UpdateFunctionEventInvokeConfig(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *LambdaStub) UpdateFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) *LambdaUpdateFunctionEventInvokeConfigResult {
+func (a *LambdaStub) UpdateFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) *LambdaUpdateFunctionEventInvokeConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lambda.UpdateFunctionEventInvokeConfig", input)
-	return &LambdaUpdateFunctionEventInvokeConfigResult{Result: future}
+	return &LambdaUpdateFunctionEventInvokeConfigFuture{Future: future}
 }
 
 func (a *LambdaStub) WaitUntilFunctionActive(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionActive", input).Get(ctx, nil)
 }
 
-func (a *LambdaStub) WaitUntilFunctionActiveAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionActive", input)
+func (a *LambdaStub) WaitUntilFunctionActiveAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionActive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *LambdaStub) WaitUntilFunctionExists(ctx workflow.Context, input *lambda.GetFunctionInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionExists", input).Get(ctx, nil)
 }
 
-func (a *LambdaStub) WaitUntilFunctionExistsAsync(ctx workflow.Context, input *lambda.GetFunctionInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionExists", input)
+func (a *LambdaStub) WaitUntilFunctionExistsAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *LambdaStub) WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionUpdated", input).Get(ctx, nil)
 }
 
-func (a *LambdaStub) WaitUntilFunctionUpdatedAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionUpdated", input)
+func (a *LambdaStub) WaitUntilFunctionUpdatedAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.lambda.WaitUntilFunctionUpdated", input)
+	return NewVoidFuture(future)
 }

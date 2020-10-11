@@ -11,91 +11,91 @@ import (
 
 type KafkaClient interface {
 	BatchAssociateScramSecret(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) (*kafka.BatchAssociateScramSecretOutput, error)
-	BatchAssociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) *KafkaBatchAssociateScramSecretResult
+	BatchAssociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) *KafkaBatchAssociateScramSecretFuture
 
 	BatchDisassociateScramSecret(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) (*kafka.BatchDisassociateScramSecretOutput, error)
-	BatchDisassociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) *KafkaBatchDisassociateScramSecretResult
+	BatchDisassociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) *KafkaBatchDisassociateScramSecretFuture
 
 	CreateCluster(ctx workflow.Context, input *kafka.CreateClusterInput) (*kafka.CreateClusterOutput, error)
-	CreateClusterAsync(ctx workflow.Context, input *kafka.CreateClusterInput) *KafkaCreateClusterResult
+	CreateClusterAsync(ctx workflow.Context, input *kafka.CreateClusterInput) *KafkaCreateClusterFuture
 
 	CreateConfiguration(ctx workflow.Context, input *kafka.CreateConfigurationInput) (*kafka.CreateConfigurationOutput, error)
-	CreateConfigurationAsync(ctx workflow.Context, input *kafka.CreateConfigurationInput) *KafkaCreateConfigurationResult
+	CreateConfigurationAsync(ctx workflow.Context, input *kafka.CreateConfigurationInput) *KafkaCreateConfigurationFuture
 
 	DeleteCluster(ctx workflow.Context, input *kafka.DeleteClusterInput) (*kafka.DeleteClusterOutput, error)
-	DeleteClusterAsync(ctx workflow.Context, input *kafka.DeleteClusterInput) *KafkaDeleteClusterResult
+	DeleteClusterAsync(ctx workflow.Context, input *kafka.DeleteClusterInput) *KafkaDeleteClusterFuture
 
 	DeleteConfiguration(ctx workflow.Context, input *kafka.DeleteConfigurationInput) (*kafka.DeleteConfigurationOutput, error)
-	DeleteConfigurationAsync(ctx workflow.Context, input *kafka.DeleteConfigurationInput) *KafkaDeleteConfigurationResult
+	DeleteConfigurationAsync(ctx workflow.Context, input *kafka.DeleteConfigurationInput) *KafkaDeleteConfigurationFuture
 
 	DescribeCluster(ctx workflow.Context, input *kafka.DescribeClusterInput) (*kafka.DescribeClusterOutput, error)
-	DescribeClusterAsync(ctx workflow.Context, input *kafka.DescribeClusterInput) *KafkaDescribeClusterResult
+	DescribeClusterAsync(ctx workflow.Context, input *kafka.DescribeClusterInput) *KafkaDescribeClusterFuture
 
 	DescribeClusterOperation(ctx workflow.Context, input *kafka.DescribeClusterOperationInput) (*kafka.DescribeClusterOperationOutput, error)
-	DescribeClusterOperationAsync(ctx workflow.Context, input *kafka.DescribeClusterOperationInput) *KafkaDescribeClusterOperationResult
+	DescribeClusterOperationAsync(ctx workflow.Context, input *kafka.DescribeClusterOperationInput) *KafkaDescribeClusterOperationFuture
 
 	DescribeConfiguration(ctx workflow.Context, input *kafka.DescribeConfigurationInput) (*kafka.DescribeConfigurationOutput, error)
-	DescribeConfigurationAsync(ctx workflow.Context, input *kafka.DescribeConfigurationInput) *KafkaDescribeConfigurationResult
+	DescribeConfigurationAsync(ctx workflow.Context, input *kafka.DescribeConfigurationInput) *KafkaDescribeConfigurationFuture
 
 	DescribeConfigurationRevision(ctx workflow.Context, input *kafka.DescribeConfigurationRevisionInput) (*kafka.DescribeConfigurationRevisionOutput, error)
-	DescribeConfigurationRevisionAsync(ctx workflow.Context, input *kafka.DescribeConfigurationRevisionInput) *KafkaDescribeConfigurationRevisionResult
+	DescribeConfigurationRevisionAsync(ctx workflow.Context, input *kafka.DescribeConfigurationRevisionInput) *KafkaDescribeConfigurationRevisionFuture
 
 	GetBootstrapBrokers(ctx workflow.Context, input *kafka.GetBootstrapBrokersInput) (*kafka.GetBootstrapBrokersOutput, error)
-	GetBootstrapBrokersAsync(ctx workflow.Context, input *kafka.GetBootstrapBrokersInput) *KafkaGetBootstrapBrokersResult
+	GetBootstrapBrokersAsync(ctx workflow.Context, input *kafka.GetBootstrapBrokersInput) *KafkaGetBootstrapBrokersFuture
 
 	GetCompatibleKafkaVersions(ctx workflow.Context, input *kafka.GetCompatibleKafkaVersionsInput) (*kafka.GetCompatibleKafkaVersionsOutput, error)
-	GetCompatibleKafkaVersionsAsync(ctx workflow.Context, input *kafka.GetCompatibleKafkaVersionsInput) *KafkaGetCompatibleKafkaVersionsResult
+	GetCompatibleKafkaVersionsAsync(ctx workflow.Context, input *kafka.GetCompatibleKafkaVersionsInput) *KafkaGetCompatibleKafkaVersionsFuture
 
 	ListClusterOperations(ctx workflow.Context, input *kafka.ListClusterOperationsInput) (*kafka.ListClusterOperationsOutput, error)
-	ListClusterOperationsAsync(ctx workflow.Context, input *kafka.ListClusterOperationsInput) *KafkaListClusterOperationsResult
+	ListClusterOperationsAsync(ctx workflow.Context, input *kafka.ListClusterOperationsInput) *KafkaListClusterOperationsFuture
 
 	ListClusters(ctx workflow.Context, input *kafka.ListClustersInput) (*kafka.ListClustersOutput, error)
-	ListClustersAsync(ctx workflow.Context, input *kafka.ListClustersInput) *KafkaListClustersResult
+	ListClustersAsync(ctx workflow.Context, input *kafka.ListClustersInput) *KafkaListClustersFuture
 
 	ListConfigurationRevisions(ctx workflow.Context, input *kafka.ListConfigurationRevisionsInput) (*kafka.ListConfigurationRevisionsOutput, error)
-	ListConfigurationRevisionsAsync(ctx workflow.Context, input *kafka.ListConfigurationRevisionsInput) *KafkaListConfigurationRevisionsResult
+	ListConfigurationRevisionsAsync(ctx workflow.Context, input *kafka.ListConfigurationRevisionsInput) *KafkaListConfigurationRevisionsFuture
 
 	ListConfigurations(ctx workflow.Context, input *kafka.ListConfigurationsInput) (*kafka.ListConfigurationsOutput, error)
-	ListConfigurationsAsync(ctx workflow.Context, input *kafka.ListConfigurationsInput) *KafkaListConfigurationsResult
+	ListConfigurationsAsync(ctx workflow.Context, input *kafka.ListConfigurationsInput) *KafkaListConfigurationsFuture
 
 	ListKafkaVersions(ctx workflow.Context, input *kafka.ListKafkaVersionsInput) (*kafka.ListKafkaVersionsOutput, error)
-	ListKafkaVersionsAsync(ctx workflow.Context, input *kafka.ListKafkaVersionsInput) *KafkaListKafkaVersionsResult
+	ListKafkaVersionsAsync(ctx workflow.Context, input *kafka.ListKafkaVersionsInput) *KafkaListKafkaVersionsFuture
 
 	ListNodes(ctx workflow.Context, input *kafka.ListNodesInput) (*kafka.ListNodesOutput, error)
-	ListNodesAsync(ctx workflow.Context, input *kafka.ListNodesInput) *KafkaListNodesResult
+	ListNodesAsync(ctx workflow.Context, input *kafka.ListNodesInput) *KafkaListNodesFuture
 
 	ListScramSecrets(ctx workflow.Context, input *kafka.ListScramSecretsInput) (*kafka.ListScramSecretsOutput, error)
-	ListScramSecretsAsync(ctx workflow.Context, input *kafka.ListScramSecretsInput) *KafkaListScramSecretsResult
+	ListScramSecretsAsync(ctx workflow.Context, input *kafka.ListScramSecretsInput) *KafkaListScramSecretsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *kafka.ListTagsForResourceInput) (*kafka.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *kafka.ListTagsForResourceInput) *KafkaListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *kafka.ListTagsForResourceInput) *KafkaListTagsForResourceFuture
 
 	RebootBroker(ctx workflow.Context, input *kafka.RebootBrokerInput) (*kafka.RebootBrokerOutput, error)
-	RebootBrokerAsync(ctx workflow.Context, input *kafka.RebootBrokerInput) *KafkaRebootBrokerResult
+	RebootBrokerAsync(ctx workflow.Context, input *kafka.RebootBrokerInput) *KafkaRebootBrokerFuture
 
 	TagResource(ctx workflow.Context, input *kafka.TagResourceInput) (*kafka.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *kafka.TagResourceInput) *KafkaTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *kafka.TagResourceInput) *KafkaTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *kafka.UntagResourceInput) (*kafka.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *kafka.UntagResourceInput) *KafkaUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *kafka.UntagResourceInput) *KafkaUntagResourceFuture
 
 	UpdateBrokerCount(ctx workflow.Context, input *kafka.UpdateBrokerCountInput) (*kafka.UpdateBrokerCountOutput, error)
-	UpdateBrokerCountAsync(ctx workflow.Context, input *kafka.UpdateBrokerCountInput) *KafkaUpdateBrokerCountResult
+	UpdateBrokerCountAsync(ctx workflow.Context, input *kafka.UpdateBrokerCountInput) *KafkaUpdateBrokerCountFuture
 
 	UpdateBrokerStorage(ctx workflow.Context, input *kafka.UpdateBrokerStorageInput) (*kafka.UpdateBrokerStorageOutput, error)
-	UpdateBrokerStorageAsync(ctx workflow.Context, input *kafka.UpdateBrokerStorageInput) *KafkaUpdateBrokerStorageResult
+	UpdateBrokerStorageAsync(ctx workflow.Context, input *kafka.UpdateBrokerStorageInput) *KafkaUpdateBrokerStorageFuture
 
 	UpdateClusterConfiguration(ctx workflow.Context, input *kafka.UpdateClusterConfigurationInput) (*kafka.UpdateClusterConfigurationOutput, error)
-	UpdateClusterConfigurationAsync(ctx workflow.Context, input *kafka.UpdateClusterConfigurationInput) *KafkaUpdateClusterConfigurationResult
+	UpdateClusterConfigurationAsync(ctx workflow.Context, input *kafka.UpdateClusterConfigurationInput) *KafkaUpdateClusterConfigurationFuture
 
 	UpdateClusterKafkaVersion(ctx workflow.Context, input *kafka.UpdateClusterKafkaVersionInput) (*kafka.UpdateClusterKafkaVersionOutput, error)
-	UpdateClusterKafkaVersionAsync(ctx workflow.Context, input *kafka.UpdateClusterKafkaVersionInput) *KafkaUpdateClusterKafkaVersionResult
+	UpdateClusterKafkaVersionAsync(ctx workflow.Context, input *kafka.UpdateClusterKafkaVersionInput) *KafkaUpdateClusterKafkaVersionFuture
 
 	UpdateConfiguration(ctx workflow.Context, input *kafka.UpdateConfigurationInput) (*kafka.UpdateConfigurationOutput, error)
-	UpdateConfigurationAsync(ctx workflow.Context, input *kafka.UpdateConfigurationInput) *KafkaUpdateConfigurationResult
+	UpdateConfigurationAsync(ctx workflow.Context, input *kafka.UpdateConfigurationInput) *KafkaUpdateConfigurationFuture
 
 	UpdateMonitoring(ctx workflow.Context, input *kafka.UpdateMonitoringInput) (*kafka.UpdateMonitoringOutput, error)
-	UpdateMonitoringAsync(ctx workflow.Context, input *kafka.UpdateMonitoringInput) *KafkaUpdateMonitoringResult
+	UpdateMonitoringAsync(ctx workflow.Context, input *kafka.UpdateMonitoringInput) *KafkaUpdateMonitoringFuture
 }
 
 type KafkaStub struct{}
@@ -104,293 +104,322 @@ func NewKafkaStub() KafkaClient {
 	return &KafkaStub{}
 }
 
-type KafkaBatchAssociateScramSecretResult struct {
-	Result workflow.Future
+type KafkaBatchAssociateScramSecretFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaBatchAssociateScramSecretResult) Get(ctx workflow.Context) (*kafka.BatchAssociateScramSecretOutput, error) {
+func (r *KafkaBatchAssociateScramSecretFuture) Get(ctx workflow.Context) (*kafka.BatchAssociateScramSecretOutput, error) {
 	var output kafka.BatchAssociateScramSecretOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaBatchDisassociateScramSecretResult struct {
-	Result workflow.Future
+type KafkaBatchDisassociateScramSecretFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaBatchDisassociateScramSecretResult) Get(ctx workflow.Context) (*kafka.BatchDisassociateScramSecretOutput, error) {
+func (r *KafkaBatchDisassociateScramSecretFuture) Get(ctx workflow.Context) (*kafka.BatchDisassociateScramSecretOutput, error) {
 	var output kafka.BatchDisassociateScramSecretOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaCreateClusterResult struct {
-	Result workflow.Future
+type KafkaCreateClusterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaCreateClusterResult) Get(ctx workflow.Context) (*kafka.CreateClusterOutput, error) {
+func (r *KafkaCreateClusterFuture) Get(ctx workflow.Context) (*kafka.CreateClusterOutput, error) {
 	var output kafka.CreateClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaCreateConfigurationResult struct {
-	Result workflow.Future
+type KafkaCreateConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaCreateConfigurationResult) Get(ctx workflow.Context) (*kafka.CreateConfigurationOutput, error) {
+func (r *KafkaCreateConfigurationFuture) Get(ctx workflow.Context) (*kafka.CreateConfigurationOutput, error) {
 	var output kafka.CreateConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaDeleteClusterResult struct {
-	Result workflow.Future
+type KafkaDeleteClusterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaDeleteClusterResult) Get(ctx workflow.Context) (*kafka.DeleteClusterOutput, error) {
+func (r *KafkaDeleteClusterFuture) Get(ctx workflow.Context) (*kafka.DeleteClusterOutput, error) {
 	var output kafka.DeleteClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaDeleteConfigurationResult struct {
-	Result workflow.Future
+type KafkaDeleteConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaDeleteConfigurationResult) Get(ctx workflow.Context) (*kafka.DeleteConfigurationOutput, error) {
+func (r *KafkaDeleteConfigurationFuture) Get(ctx workflow.Context) (*kafka.DeleteConfigurationOutput, error) {
 	var output kafka.DeleteConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaDescribeClusterResult struct {
-	Result workflow.Future
+type KafkaDescribeClusterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaDescribeClusterResult) Get(ctx workflow.Context) (*kafka.DescribeClusterOutput, error) {
+func (r *KafkaDescribeClusterFuture) Get(ctx workflow.Context) (*kafka.DescribeClusterOutput, error) {
 	var output kafka.DescribeClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaDescribeClusterOperationResult struct {
-	Result workflow.Future
+type KafkaDescribeClusterOperationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaDescribeClusterOperationResult) Get(ctx workflow.Context) (*kafka.DescribeClusterOperationOutput, error) {
+func (r *KafkaDescribeClusterOperationFuture) Get(ctx workflow.Context) (*kafka.DescribeClusterOperationOutput, error) {
 	var output kafka.DescribeClusterOperationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaDescribeConfigurationResult struct {
-	Result workflow.Future
+type KafkaDescribeConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaDescribeConfigurationResult) Get(ctx workflow.Context) (*kafka.DescribeConfigurationOutput, error) {
+func (r *KafkaDescribeConfigurationFuture) Get(ctx workflow.Context) (*kafka.DescribeConfigurationOutput, error) {
 	var output kafka.DescribeConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaDescribeConfigurationRevisionResult struct {
-	Result workflow.Future
+type KafkaDescribeConfigurationRevisionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaDescribeConfigurationRevisionResult) Get(ctx workflow.Context) (*kafka.DescribeConfigurationRevisionOutput, error) {
+func (r *KafkaDescribeConfigurationRevisionFuture) Get(ctx workflow.Context) (*kafka.DescribeConfigurationRevisionOutput, error) {
 	var output kafka.DescribeConfigurationRevisionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaGetBootstrapBrokersResult struct {
-	Result workflow.Future
+type KafkaGetBootstrapBrokersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaGetBootstrapBrokersResult) Get(ctx workflow.Context) (*kafka.GetBootstrapBrokersOutput, error) {
+func (r *KafkaGetBootstrapBrokersFuture) Get(ctx workflow.Context) (*kafka.GetBootstrapBrokersOutput, error) {
 	var output kafka.GetBootstrapBrokersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaGetCompatibleKafkaVersionsResult struct {
-	Result workflow.Future
+type KafkaGetCompatibleKafkaVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaGetCompatibleKafkaVersionsResult) Get(ctx workflow.Context) (*kafka.GetCompatibleKafkaVersionsOutput, error) {
+func (r *KafkaGetCompatibleKafkaVersionsFuture) Get(ctx workflow.Context) (*kafka.GetCompatibleKafkaVersionsOutput, error) {
 	var output kafka.GetCompatibleKafkaVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaListClusterOperationsResult struct {
-	Result workflow.Future
+type KafkaListClusterOperationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaListClusterOperationsResult) Get(ctx workflow.Context) (*kafka.ListClusterOperationsOutput, error) {
+func (r *KafkaListClusterOperationsFuture) Get(ctx workflow.Context) (*kafka.ListClusterOperationsOutput, error) {
 	var output kafka.ListClusterOperationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaListClustersResult struct {
-	Result workflow.Future
+type KafkaListClustersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaListClustersResult) Get(ctx workflow.Context) (*kafka.ListClustersOutput, error) {
+func (r *KafkaListClustersFuture) Get(ctx workflow.Context) (*kafka.ListClustersOutput, error) {
 	var output kafka.ListClustersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaListConfigurationRevisionsResult struct {
-	Result workflow.Future
+type KafkaListConfigurationRevisionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaListConfigurationRevisionsResult) Get(ctx workflow.Context) (*kafka.ListConfigurationRevisionsOutput, error) {
+func (r *KafkaListConfigurationRevisionsFuture) Get(ctx workflow.Context) (*kafka.ListConfigurationRevisionsOutput, error) {
 	var output kafka.ListConfigurationRevisionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaListConfigurationsResult struct {
-	Result workflow.Future
+type KafkaListConfigurationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaListConfigurationsResult) Get(ctx workflow.Context) (*kafka.ListConfigurationsOutput, error) {
+func (r *KafkaListConfigurationsFuture) Get(ctx workflow.Context) (*kafka.ListConfigurationsOutput, error) {
 	var output kafka.ListConfigurationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaListKafkaVersionsResult struct {
-	Result workflow.Future
+type KafkaListKafkaVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaListKafkaVersionsResult) Get(ctx workflow.Context) (*kafka.ListKafkaVersionsOutput, error) {
+func (r *KafkaListKafkaVersionsFuture) Get(ctx workflow.Context) (*kafka.ListKafkaVersionsOutput, error) {
 	var output kafka.ListKafkaVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaListNodesResult struct {
-	Result workflow.Future
+type KafkaListNodesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaListNodesResult) Get(ctx workflow.Context) (*kafka.ListNodesOutput, error) {
+func (r *KafkaListNodesFuture) Get(ctx workflow.Context) (*kafka.ListNodesOutput, error) {
 	var output kafka.ListNodesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaListScramSecretsResult struct {
-	Result workflow.Future
+type KafkaListScramSecretsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaListScramSecretsResult) Get(ctx workflow.Context) (*kafka.ListScramSecretsOutput, error) {
+func (r *KafkaListScramSecretsFuture) Get(ctx workflow.Context) (*kafka.ListScramSecretsOutput, error) {
 	var output kafka.ListScramSecretsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaListTagsForResourceResult struct {
-	Result workflow.Future
+type KafkaListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaListTagsForResourceResult) Get(ctx workflow.Context) (*kafka.ListTagsForResourceOutput, error) {
+func (r *KafkaListTagsForResourceFuture) Get(ctx workflow.Context) (*kafka.ListTagsForResourceOutput, error) {
 	var output kafka.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaRebootBrokerResult struct {
-	Result workflow.Future
+type KafkaRebootBrokerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaRebootBrokerResult) Get(ctx workflow.Context) (*kafka.RebootBrokerOutput, error) {
+func (r *KafkaRebootBrokerFuture) Get(ctx workflow.Context) (*kafka.RebootBrokerOutput, error) {
 	var output kafka.RebootBrokerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaTagResourceResult struct {
-	Result workflow.Future
+type KafkaTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaTagResourceResult) Get(ctx workflow.Context) (*kafka.TagResourceOutput, error) {
+func (r *KafkaTagResourceFuture) Get(ctx workflow.Context) (*kafka.TagResourceOutput, error) {
 	var output kafka.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaUntagResourceResult struct {
-	Result workflow.Future
+type KafkaUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaUntagResourceResult) Get(ctx workflow.Context) (*kafka.UntagResourceOutput, error) {
+func (r *KafkaUntagResourceFuture) Get(ctx workflow.Context) (*kafka.UntagResourceOutput, error) {
 	var output kafka.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaUpdateBrokerCountResult struct {
-	Result workflow.Future
+type KafkaUpdateBrokerCountFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaUpdateBrokerCountResult) Get(ctx workflow.Context) (*kafka.UpdateBrokerCountOutput, error) {
+func (r *KafkaUpdateBrokerCountFuture) Get(ctx workflow.Context) (*kafka.UpdateBrokerCountOutput, error) {
 	var output kafka.UpdateBrokerCountOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaUpdateBrokerStorageResult struct {
-	Result workflow.Future
+type KafkaUpdateBrokerStorageFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaUpdateBrokerStorageResult) Get(ctx workflow.Context) (*kafka.UpdateBrokerStorageOutput, error) {
+func (r *KafkaUpdateBrokerStorageFuture) Get(ctx workflow.Context) (*kafka.UpdateBrokerStorageOutput, error) {
 	var output kafka.UpdateBrokerStorageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaUpdateClusterConfigurationResult struct {
-	Result workflow.Future
+type KafkaUpdateClusterConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaUpdateClusterConfigurationResult) Get(ctx workflow.Context) (*kafka.UpdateClusterConfigurationOutput, error) {
+func (r *KafkaUpdateClusterConfigurationFuture) Get(ctx workflow.Context) (*kafka.UpdateClusterConfigurationOutput, error) {
 	var output kafka.UpdateClusterConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaUpdateClusterKafkaVersionResult struct {
-	Result workflow.Future
+type KafkaUpdateClusterKafkaVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaUpdateClusterKafkaVersionResult) Get(ctx workflow.Context) (*kafka.UpdateClusterKafkaVersionOutput, error) {
+func (r *KafkaUpdateClusterKafkaVersionFuture) Get(ctx workflow.Context) (*kafka.UpdateClusterKafkaVersionOutput, error) {
 	var output kafka.UpdateClusterKafkaVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaUpdateConfigurationResult struct {
-	Result workflow.Future
+type KafkaUpdateConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaUpdateConfigurationResult) Get(ctx workflow.Context) (*kafka.UpdateConfigurationOutput, error) {
+func (r *KafkaUpdateConfigurationFuture) Get(ctx workflow.Context) (*kafka.UpdateConfigurationOutput, error) {
 	var output kafka.UpdateConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KafkaUpdateMonitoringResult struct {
-	Result workflow.Future
+type KafkaUpdateMonitoringFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KafkaUpdateMonitoringResult) Get(ctx workflow.Context) (*kafka.UpdateMonitoringOutput, error) {
+func (r *KafkaUpdateMonitoringFuture) Get(ctx workflow.Context) (*kafka.UpdateMonitoringOutput, error) {
 	var output kafka.UpdateMonitoringOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -400,9 +429,9 @@ func (a *KafkaStub) BatchAssociateScramSecret(ctx workflow.Context, input *kafka
 	return &output, err
 }
 
-func (a *KafkaStub) BatchAssociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) *KafkaBatchAssociateScramSecretResult {
+func (a *KafkaStub) BatchAssociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchAssociateScramSecretInput) *KafkaBatchAssociateScramSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.BatchAssociateScramSecret", input)
-	return &KafkaBatchAssociateScramSecretResult{Result: future}
+	return &KafkaBatchAssociateScramSecretFuture{Future: future}
 }
 
 func (a *KafkaStub) BatchDisassociateScramSecret(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) (*kafka.BatchDisassociateScramSecretOutput, error) {
@@ -411,9 +440,9 @@ func (a *KafkaStub) BatchDisassociateScramSecret(ctx workflow.Context, input *ka
 	return &output, err
 }
 
-func (a *KafkaStub) BatchDisassociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) *KafkaBatchDisassociateScramSecretResult {
+func (a *KafkaStub) BatchDisassociateScramSecretAsync(ctx workflow.Context, input *kafka.BatchDisassociateScramSecretInput) *KafkaBatchDisassociateScramSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.BatchDisassociateScramSecret", input)
-	return &KafkaBatchDisassociateScramSecretResult{Result: future}
+	return &KafkaBatchDisassociateScramSecretFuture{Future: future}
 }
 
 func (a *KafkaStub) CreateCluster(ctx workflow.Context, input *kafka.CreateClusterInput) (*kafka.CreateClusterOutput, error) {
@@ -422,9 +451,9 @@ func (a *KafkaStub) CreateCluster(ctx workflow.Context, input *kafka.CreateClust
 	return &output, err
 }
 
-func (a *KafkaStub) CreateClusterAsync(ctx workflow.Context, input *kafka.CreateClusterInput) *KafkaCreateClusterResult {
+func (a *KafkaStub) CreateClusterAsync(ctx workflow.Context, input *kafka.CreateClusterInput) *KafkaCreateClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.CreateCluster", input)
-	return &KafkaCreateClusterResult{Result: future}
+	return &KafkaCreateClusterFuture{Future: future}
 }
 
 func (a *KafkaStub) CreateConfiguration(ctx workflow.Context, input *kafka.CreateConfigurationInput) (*kafka.CreateConfigurationOutput, error) {
@@ -433,9 +462,9 @@ func (a *KafkaStub) CreateConfiguration(ctx workflow.Context, input *kafka.Creat
 	return &output, err
 }
 
-func (a *KafkaStub) CreateConfigurationAsync(ctx workflow.Context, input *kafka.CreateConfigurationInput) *KafkaCreateConfigurationResult {
+func (a *KafkaStub) CreateConfigurationAsync(ctx workflow.Context, input *kafka.CreateConfigurationInput) *KafkaCreateConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.CreateConfiguration", input)
-	return &KafkaCreateConfigurationResult{Result: future}
+	return &KafkaCreateConfigurationFuture{Future: future}
 }
 
 func (a *KafkaStub) DeleteCluster(ctx workflow.Context, input *kafka.DeleteClusterInput) (*kafka.DeleteClusterOutput, error) {
@@ -444,9 +473,9 @@ func (a *KafkaStub) DeleteCluster(ctx workflow.Context, input *kafka.DeleteClust
 	return &output, err
 }
 
-func (a *KafkaStub) DeleteClusterAsync(ctx workflow.Context, input *kafka.DeleteClusterInput) *KafkaDeleteClusterResult {
+func (a *KafkaStub) DeleteClusterAsync(ctx workflow.Context, input *kafka.DeleteClusterInput) *KafkaDeleteClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.DeleteCluster", input)
-	return &KafkaDeleteClusterResult{Result: future}
+	return &KafkaDeleteClusterFuture{Future: future}
 }
 
 func (a *KafkaStub) DeleteConfiguration(ctx workflow.Context, input *kafka.DeleteConfigurationInput) (*kafka.DeleteConfigurationOutput, error) {
@@ -455,9 +484,9 @@ func (a *KafkaStub) DeleteConfiguration(ctx workflow.Context, input *kafka.Delet
 	return &output, err
 }
 
-func (a *KafkaStub) DeleteConfigurationAsync(ctx workflow.Context, input *kafka.DeleteConfigurationInput) *KafkaDeleteConfigurationResult {
+func (a *KafkaStub) DeleteConfigurationAsync(ctx workflow.Context, input *kafka.DeleteConfigurationInput) *KafkaDeleteConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.DeleteConfiguration", input)
-	return &KafkaDeleteConfigurationResult{Result: future}
+	return &KafkaDeleteConfigurationFuture{Future: future}
 }
 
 func (a *KafkaStub) DescribeCluster(ctx workflow.Context, input *kafka.DescribeClusterInput) (*kafka.DescribeClusterOutput, error) {
@@ -466,9 +495,9 @@ func (a *KafkaStub) DescribeCluster(ctx workflow.Context, input *kafka.DescribeC
 	return &output, err
 }
 
-func (a *KafkaStub) DescribeClusterAsync(ctx workflow.Context, input *kafka.DescribeClusterInput) *KafkaDescribeClusterResult {
+func (a *KafkaStub) DescribeClusterAsync(ctx workflow.Context, input *kafka.DescribeClusterInput) *KafkaDescribeClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.DescribeCluster", input)
-	return &KafkaDescribeClusterResult{Result: future}
+	return &KafkaDescribeClusterFuture{Future: future}
 }
 
 func (a *KafkaStub) DescribeClusterOperation(ctx workflow.Context, input *kafka.DescribeClusterOperationInput) (*kafka.DescribeClusterOperationOutput, error) {
@@ -477,9 +506,9 @@ func (a *KafkaStub) DescribeClusterOperation(ctx workflow.Context, input *kafka.
 	return &output, err
 }
 
-func (a *KafkaStub) DescribeClusterOperationAsync(ctx workflow.Context, input *kafka.DescribeClusterOperationInput) *KafkaDescribeClusterOperationResult {
+func (a *KafkaStub) DescribeClusterOperationAsync(ctx workflow.Context, input *kafka.DescribeClusterOperationInput) *KafkaDescribeClusterOperationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.DescribeClusterOperation", input)
-	return &KafkaDescribeClusterOperationResult{Result: future}
+	return &KafkaDescribeClusterOperationFuture{Future: future}
 }
 
 func (a *KafkaStub) DescribeConfiguration(ctx workflow.Context, input *kafka.DescribeConfigurationInput) (*kafka.DescribeConfigurationOutput, error) {
@@ -488,9 +517,9 @@ func (a *KafkaStub) DescribeConfiguration(ctx workflow.Context, input *kafka.Des
 	return &output, err
 }
 
-func (a *KafkaStub) DescribeConfigurationAsync(ctx workflow.Context, input *kafka.DescribeConfigurationInput) *KafkaDescribeConfigurationResult {
+func (a *KafkaStub) DescribeConfigurationAsync(ctx workflow.Context, input *kafka.DescribeConfigurationInput) *KafkaDescribeConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.DescribeConfiguration", input)
-	return &KafkaDescribeConfigurationResult{Result: future}
+	return &KafkaDescribeConfigurationFuture{Future: future}
 }
 
 func (a *KafkaStub) DescribeConfigurationRevision(ctx workflow.Context, input *kafka.DescribeConfigurationRevisionInput) (*kafka.DescribeConfigurationRevisionOutput, error) {
@@ -499,9 +528,9 @@ func (a *KafkaStub) DescribeConfigurationRevision(ctx workflow.Context, input *k
 	return &output, err
 }
 
-func (a *KafkaStub) DescribeConfigurationRevisionAsync(ctx workflow.Context, input *kafka.DescribeConfigurationRevisionInput) *KafkaDescribeConfigurationRevisionResult {
+func (a *KafkaStub) DescribeConfigurationRevisionAsync(ctx workflow.Context, input *kafka.DescribeConfigurationRevisionInput) *KafkaDescribeConfigurationRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.DescribeConfigurationRevision", input)
-	return &KafkaDescribeConfigurationRevisionResult{Result: future}
+	return &KafkaDescribeConfigurationRevisionFuture{Future: future}
 }
 
 func (a *KafkaStub) GetBootstrapBrokers(ctx workflow.Context, input *kafka.GetBootstrapBrokersInput) (*kafka.GetBootstrapBrokersOutput, error) {
@@ -510,9 +539,9 @@ func (a *KafkaStub) GetBootstrapBrokers(ctx workflow.Context, input *kafka.GetBo
 	return &output, err
 }
 
-func (a *KafkaStub) GetBootstrapBrokersAsync(ctx workflow.Context, input *kafka.GetBootstrapBrokersInput) *KafkaGetBootstrapBrokersResult {
+func (a *KafkaStub) GetBootstrapBrokersAsync(ctx workflow.Context, input *kafka.GetBootstrapBrokersInput) *KafkaGetBootstrapBrokersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.GetBootstrapBrokers", input)
-	return &KafkaGetBootstrapBrokersResult{Result: future}
+	return &KafkaGetBootstrapBrokersFuture{Future: future}
 }
 
 func (a *KafkaStub) GetCompatibleKafkaVersions(ctx workflow.Context, input *kafka.GetCompatibleKafkaVersionsInput) (*kafka.GetCompatibleKafkaVersionsOutput, error) {
@@ -521,9 +550,9 @@ func (a *KafkaStub) GetCompatibleKafkaVersions(ctx workflow.Context, input *kafk
 	return &output, err
 }
 
-func (a *KafkaStub) GetCompatibleKafkaVersionsAsync(ctx workflow.Context, input *kafka.GetCompatibleKafkaVersionsInput) *KafkaGetCompatibleKafkaVersionsResult {
+func (a *KafkaStub) GetCompatibleKafkaVersionsAsync(ctx workflow.Context, input *kafka.GetCompatibleKafkaVersionsInput) *KafkaGetCompatibleKafkaVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.GetCompatibleKafkaVersions", input)
-	return &KafkaGetCompatibleKafkaVersionsResult{Result: future}
+	return &KafkaGetCompatibleKafkaVersionsFuture{Future: future}
 }
 
 func (a *KafkaStub) ListClusterOperations(ctx workflow.Context, input *kafka.ListClusterOperationsInput) (*kafka.ListClusterOperationsOutput, error) {
@@ -532,9 +561,9 @@ func (a *KafkaStub) ListClusterOperations(ctx workflow.Context, input *kafka.Lis
 	return &output, err
 }
 
-func (a *KafkaStub) ListClusterOperationsAsync(ctx workflow.Context, input *kafka.ListClusterOperationsInput) *KafkaListClusterOperationsResult {
+func (a *KafkaStub) ListClusterOperationsAsync(ctx workflow.Context, input *kafka.ListClusterOperationsInput) *KafkaListClusterOperationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListClusterOperations", input)
-	return &KafkaListClusterOperationsResult{Result: future}
+	return &KafkaListClusterOperationsFuture{Future: future}
 }
 
 func (a *KafkaStub) ListClusters(ctx workflow.Context, input *kafka.ListClustersInput) (*kafka.ListClustersOutput, error) {
@@ -543,9 +572,9 @@ func (a *KafkaStub) ListClusters(ctx workflow.Context, input *kafka.ListClusters
 	return &output, err
 }
 
-func (a *KafkaStub) ListClustersAsync(ctx workflow.Context, input *kafka.ListClustersInput) *KafkaListClustersResult {
+func (a *KafkaStub) ListClustersAsync(ctx workflow.Context, input *kafka.ListClustersInput) *KafkaListClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListClusters", input)
-	return &KafkaListClustersResult{Result: future}
+	return &KafkaListClustersFuture{Future: future}
 }
 
 func (a *KafkaStub) ListConfigurationRevisions(ctx workflow.Context, input *kafka.ListConfigurationRevisionsInput) (*kafka.ListConfigurationRevisionsOutput, error) {
@@ -554,9 +583,9 @@ func (a *KafkaStub) ListConfigurationRevisions(ctx workflow.Context, input *kafk
 	return &output, err
 }
 
-func (a *KafkaStub) ListConfigurationRevisionsAsync(ctx workflow.Context, input *kafka.ListConfigurationRevisionsInput) *KafkaListConfigurationRevisionsResult {
+func (a *KafkaStub) ListConfigurationRevisionsAsync(ctx workflow.Context, input *kafka.ListConfigurationRevisionsInput) *KafkaListConfigurationRevisionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListConfigurationRevisions", input)
-	return &KafkaListConfigurationRevisionsResult{Result: future}
+	return &KafkaListConfigurationRevisionsFuture{Future: future}
 }
 
 func (a *KafkaStub) ListConfigurations(ctx workflow.Context, input *kafka.ListConfigurationsInput) (*kafka.ListConfigurationsOutput, error) {
@@ -565,9 +594,9 @@ func (a *KafkaStub) ListConfigurations(ctx workflow.Context, input *kafka.ListCo
 	return &output, err
 }
 
-func (a *KafkaStub) ListConfigurationsAsync(ctx workflow.Context, input *kafka.ListConfigurationsInput) *KafkaListConfigurationsResult {
+func (a *KafkaStub) ListConfigurationsAsync(ctx workflow.Context, input *kafka.ListConfigurationsInput) *KafkaListConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListConfigurations", input)
-	return &KafkaListConfigurationsResult{Result: future}
+	return &KafkaListConfigurationsFuture{Future: future}
 }
 
 func (a *KafkaStub) ListKafkaVersions(ctx workflow.Context, input *kafka.ListKafkaVersionsInput) (*kafka.ListKafkaVersionsOutput, error) {
@@ -576,9 +605,9 @@ func (a *KafkaStub) ListKafkaVersions(ctx workflow.Context, input *kafka.ListKaf
 	return &output, err
 }
 
-func (a *KafkaStub) ListKafkaVersionsAsync(ctx workflow.Context, input *kafka.ListKafkaVersionsInput) *KafkaListKafkaVersionsResult {
+func (a *KafkaStub) ListKafkaVersionsAsync(ctx workflow.Context, input *kafka.ListKafkaVersionsInput) *KafkaListKafkaVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListKafkaVersions", input)
-	return &KafkaListKafkaVersionsResult{Result: future}
+	return &KafkaListKafkaVersionsFuture{Future: future}
 }
 
 func (a *KafkaStub) ListNodes(ctx workflow.Context, input *kafka.ListNodesInput) (*kafka.ListNodesOutput, error) {
@@ -587,9 +616,9 @@ func (a *KafkaStub) ListNodes(ctx workflow.Context, input *kafka.ListNodesInput)
 	return &output, err
 }
 
-func (a *KafkaStub) ListNodesAsync(ctx workflow.Context, input *kafka.ListNodesInput) *KafkaListNodesResult {
+func (a *KafkaStub) ListNodesAsync(ctx workflow.Context, input *kafka.ListNodesInput) *KafkaListNodesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListNodes", input)
-	return &KafkaListNodesResult{Result: future}
+	return &KafkaListNodesFuture{Future: future}
 }
 
 func (a *KafkaStub) ListScramSecrets(ctx workflow.Context, input *kafka.ListScramSecretsInput) (*kafka.ListScramSecretsOutput, error) {
@@ -598,9 +627,9 @@ func (a *KafkaStub) ListScramSecrets(ctx workflow.Context, input *kafka.ListScra
 	return &output, err
 }
 
-func (a *KafkaStub) ListScramSecretsAsync(ctx workflow.Context, input *kafka.ListScramSecretsInput) *KafkaListScramSecretsResult {
+func (a *KafkaStub) ListScramSecretsAsync(ctx workflow.Context, input *kafka.ListScramSecretsInput) *KafkaListScramSecretsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListScramSecrets", input)
-	return &KafkaListScramSecretsResult{Result: future}
+	return &KafkaListScramSecretsFuture{Future: future}
 }
 
 func (a *KafkaStub) ListTagsForResource(ctx workflow.Context, input *kafka.ListTagsForResourceInput) (*kafka.ListTagsForResourceOutput, error) {
@@ -609,9 +638,9 @@ func (a *KafkaStub) ListTagsForResource(ctx workflow.Context, input *kafka.ListT
 	return &output, err
 }
 
-func (a *KafkaStub) ListTagsForResourceAsync(ctx workflow.Context, input *kafka.ListTagsForResourceInput) *KafkaListTagsForResourceResult {
+func (a *KafkaStub) ListTagsForResourceAsync(ctx workflow.Context, input *kafka.ListTagsForResourceInput) *KafkaListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.ListTagsForResource", input)
-	return &KafkaListTagsForResourceResult{Result: future}
+	return &KafkaListTagsForResourceFuture{Future: future}
 }
 
 func (a *KafkaStub) RebootBroker(ctx workflow.Context, input *kafka.RebootBrokerInput) (*kafka.RebootBrokerOutput, error) {
@@ -620,9 +649,9 @@ func (a *KafkaStub) RebootBroker(ctx workflow.Context, input *kafka.RebootBroker
 	return &output, err
 }
 
-func (a *KafkaStub) RebootBrokerAsync(ctx workflow.Context, input *kafka.RebootBrokerInput) *KafkaRebootBrokerResult {
+func (a *KafkaStub) RebootBrokerAsync(ctx workflow.Context, input *kafka.RebootBrokerInput) *KafkaRebootBrokerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.RebootBroker", input)
-	return &KafkaRebootBrokerResult{Result: future}
+	return &KafkaRebootBrokerFuture{Future: future}
 }
 
 func (a *KafkaStub) TagResource(ctx workflow.Context, input *kafka.TagResourceInput) (*kafka.TagResourceOutput, error) {
@@ -631,9 +660,9 @@ func (a *KafkaStub) TagResource(ctx workflow.Context, input *kafka.TagResourceIn
 	return &output, err
 }
 
-func (a *KafkaStub) TagResourceAsync(ctx workflow.Context, input *kafka.TagResourceInput) *KafkaTagResourceResult {
+func (a *KafkaStub) TagResourceAsync(ctx workflow.Context, input *kafka.TagResourceInput) *KafkaTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.TagResource", input)
-	return &KafkaTagResourceResult{Result: future}
+	return &KafkaTagResourceFuture{Future: future}
 }
 
 func (a *KafkaStub) UntagResource(ctx workflow.Context, input *kafka.UntagResourceInput) (*kafka.UntagResourceOutput, error) {
@@ -642,9 +671,9 @@ func (a *KafkaStub) UntagResource(ctx workflow.Context, input *kafka.UntagResour
 	return &output, err
 }
 
-func (a *KafkaStub) UntagResourceAsync(ctx workflow.Context, input *kafka.UntagResourceInput) *KafkaUntagResourceResult {
+func (a *KafkaStub) UntagResourceAsync(ctx workflow.Context, input *kafka.UntagResourceInput) *KafkaUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.UntagResource", input)
-	return &KafkaUntagResourceResult{Result: future}
+	return &KafkaUntagResourceFuture{Future: future}
 }
 
 func (a *KafkaStub) UpdateBrokerCount(ctx workflow.Context, input *kafka.UpdateBrokerCountInput) (*kafka.UpdateBrokerCountOutput, error) {
@@ -653,9 +682,9 @@ func (a *KafkaStub) UpdateBrokerCount(ctx workflow.Context, input *kafka.UpdateB
 	return &output, err
 }
 
-func (a *KafkaStub) UpdateBrokerCountAsync(ctx workflow.Context, input *kafka.UpdateBrokerCountInput) *KafkaUpdateBrokerCountResult {
+func (a *KafkaStub) UpdateBrokerCountAsync(ctx workflow.Context, input *kafka.UpdateBrokerCountInput) *KafkaUpdateBrokerCountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.UpdateBrokerCount", input)
-	return &KafkaUpdateBrokerCountResult{Result: future}
+	return &KafkaUpdateBrokerCountFuture{Future: future}
 }
 
 func (a *KafkaStub) UpdateBrokerStorage(ctx workflow.Context, input *kafka.UpdateBrokerStorageInput) (*kafka.UpdateBrokerStorageOutput, error) {
@@ -664,9 +693,9 @@ func (a *KafkaStub) UpdateBrokerStorage(ctx workflow.Context, input *kafka.Updat
 	return &output, err
 }
 
-func (a *KafkaStub) UpdateBrokerStorageAsync(ctx workflow.Context, input *kafka.UpdateBrokerStorageInput) *KafkaUpdateBrokerStorageResult {
+func (a *KafkaStub) UpdateBrokerStorageAsync(ctx workflow.Context, input *kafka.UpdateBrokerStorageInput) *KafkaUpdateBrokerStorageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.UpdateBrokerStorage", input)
-	return &KafkaUpdateBrokerStorageResult{Result: future}
+	return &KafkaUpdateBrokerStorageFuture{Future: future}
 }
 
 func (a *KafkaStub) UpdateClusterConfiguration(ctx workflow.Context, input *kafka.UpdateClusterConfigurationInput) (*kafka.UpdateClusterConfigurationOutput, error) {
@@ -675,9 +704,9 @@ func (a *KafkaStub) UpdateClusterConfiguration(ctx workflow.Context, input *kafk
 	return &output, err
 }
 
-func (a *KafkaStub) UpdateClusterConfigurationAsync(ctx workflow.Context, input *kafka.UpdateClusterConfigurationInput) *KafkaUpdateClusterConfigurationResult {
+func (a *KafkaStub) UpdateClusterConfigurationAsync(ctx workflow.Context, input *kafka.UpdateClusterConfigurationInput) *KafkaUpdateClusterConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.UpdateClusterConfiguration", input)
-	return &KafkaUpdateClusterConfigurationResult{Result: future}
+	return &KafkaUpdateClusterConfigurationFuture{Future: future}
 }
 
 func (a *KafkaStub) UpdateClusterKafkaVersion(ctx workflow.Context, input *kafka.UpdateClusterKafkaVersionInput) (*kafka.UpdateClusterKafkaVersionOutput, error) {
@@ -686,9 +715,9 @@ func (a *KafkaStub) UpdateClusterKafkaVersion(ctx workflow.Context, input *kafka
 	return &output, err
 }
 
-func (a *KafkaStub) UpdateClusterKafkaVersionAsync(ctx workflow.Context, input *kafka.UpdateClusterKafkaVersionInput) *KafkaUpdateClusterKafkaVersionResult {
+func (a *KafkaStub) UpdateClusterKafkaVersionAsync(ctx workflow.Context, input *kafka.UpdateClusterKafkaVersionInput) *KafkaUpdateClusterKafkaVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.UpdateClusterKafkaVersion", input)
-	return &KafkaUpdateClusterKafkaVersionResult{Result: future}
+	return &KafkaUpdateClusterKafkaVersionFuture{Future: future}
 }
 
 func (a *KafkaStub) UpdateConfiguration(ctx workflow.Context, input *kafka.UpdateConfigurationInput) (*kafka.UpdateConfigurationOutput, error) {
@@ -697,9 +726,9 @@ func (a *KafkaStub) UpdateConfiguration(ctx workflow.Context, input *kafka.Updat
 	return &output, err
 }
 
-func (a *KafkaStub) UpdateConfigurationAsync(ctx workflow.Context, input *kafka.UpdateConfigurationInput) *KafkaUpdateConfigurationResult {
+func (a *KafkaStub) UpdateConfigurationAsync(ctx workflow.Context, input *kafka.UpdateConfigurationInput) *KafkaUpdateConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.UpdateConfiguration", input)
-	return &KafkaUpdateConfigurationResult{Result: future}
+	return &KafkaUpdateConfigurationFuture{Future: future}
 }
 
 func (a *KafkaStub) UpdateMonitoring(ctx workflow.Context, input *kafka.UpdateMonitoringInput) (*kafka.UpdateMonitoringOutput, error) {
@@ -708,7 +737,7 @@ func (a *KafkaStub) UpdateMonitoring(ctx workflow.Context, input *kafka.UpdateMo
 	return &output, err
 }
 
-func (a *KafkaStub) UpdateMonitoringAsync(ctx workflow.Context, input *kafka.UpdateMonitoringInput) *KafkaUpdateMonitoringResult {
+func (a *KafkaStub) UpdateMonitoringAsync(ctx workflow.Context, input *kafka.UpdateMonitoringInput) *KafkaUpdateMonitoringFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kafka.UpdateMonitoring", input)
-	return &KafkaUpdateMonitoringResult{Result: future}
+	return &KafkaUpdateMonitoringFuture{Future: future}
 }

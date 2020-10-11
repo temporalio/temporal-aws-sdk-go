@@ -11,159 +11,163 @@ import (
 
 type ECSClient interface {
 	CreateCapacityProvider(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) (*ecs.CreateCapacityProviderOutput, error)
-	CreateCapacityProviderAsync(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) *EcsCreateCapacityProviderResult
+	CreateCapacityProviderAsync(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) *ECSCreateCapacityProviderFuture
 
 	CreateCluster(ctx workflow.Context, input *ecs.CreateClusterInput) (*ecs.CreateClusterOutput, error)
-	CreateClusterAsync(ctx workflow.Context, input *ecs.CreateClusterInput) *EcsCreateClusterResult
+	CreateClusterAsync(ctx workflow.Context, input *ecs.CreateClusterInput) *ECSCreateClusterFuture
 
 	CreateService(ctx workflow.Context, input *ecs.CreateServiceInput) (*ecs.CreateServiceOutput, error)
-	CreateServiceAsync(ctx workflow.Context, input *ecs.CreateServiceInput) *EcsCreateServiceResult
+	CreateServiceAsync(ctx workflow.Context, input *ecs.CreateServiceInput) *ECSCreateServiceFuture
 
 	CreateTaskSet(ctx workflow.Context, input *ecs.CreateTaskSetInput) (*ecs.CreateTaskSetOutput, error)
-	CreateTaskSetAsync(ctx workflow.Context, input *ecs.CreateTaskSetInput) *EcsCreateTaskSetResult
+	CreateTaskSetAsync(ctx workflow.Context, input *ecs.CreateTaskSetInput) *ECSCreateTaskSetFuture
 
 	DeleteAccountSetting(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) (*ecs.DeleteAccountSettingOutput, error)
-	DeleteAccountSettingAsync(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) *EcsDeleteAccountSettingResult
+	DeleteAccountSettingAsync(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) *ECSDeleteAccountSettingFuture
 
 	DeleteAttributes(ctx workflow.Context, input *ecs.DeleteAttributesInput) (*ecs.DeleteAttributesOutput, error)
-	DeleteAttributesAsync(ctx workflow.Context, input *ecs.DeleteAttributesInput) *EcsDeleteAttributesResult
+	DeleteAttributesAsync(ctx workflow.Context, input *ecs.DeleteAttributesInput) *ECSDeleteAttributesFuture
 
 	DeleteCapacityProvider(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) (*ecs.DeleteCapacityProviderOutput, error)
-	DeleteCapacityProviderAsync(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) *EcsDeleteCapacityProviderResult
+	DeleteCapacityProviderAsync(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) *ECSDeleteCapacityProviderFuture
 
 	DeleteCluster(ctx workflow.Context, input *ecs.DeleteClusterInput) (*ecs.DeleteClusterOutput, error)
-	DeleteClusterAsync(ctx workflow.Context, input *ecs.DeleteClusterInput) *EcsDeleteClusterResult
+	DeleteClusterAsync(ctx workflow.Context, input *ecs.DeleteClusterInput) *ECSDeleteClusterFuture
 
 	DeleteService(ctx workflow.Context, input *ecs.DeleteServiceInput) (*ecs.DeleteServiceOutput, error)
-	DeleteServiceAsync(ctx workflow.Context, input *ecs.DeleteServiceInput) *EcsDeleteServiceResult
+	DeleteServiceAsync(ctx workflow.Context, input *ecs.DeleteServiceInput) *ECSDeleteServiceFuture
 
 	DeleteTaskSet(ctx workflow.Context, input *ecs.DeleteTaskSetInput) (*ecs.DeleteTaskSetOutput, error)
-	DeleteTaskSetAsync(ctx workflow.Context, input *ecs.DeleteTaskSetInput) *EcsDeleteTaskSetResult
+	DeleteTaskSetAsync(ctx workflow.Context, input *ecs.DeleteTaskSetInput) *ECSDeleteTaskSetFuture
 
 	DeregisterContainerInstance(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) (*ecs.DeregisterContainerInstanceOutput, error)
-	DeregisterContainerInstanceAsync(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) *EcsDeregisterContainerInstanceResult
+	DeregisterContainerInstanceAsync(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) *ECSDeregisterContainerInstanceFuture
 
 	DeregisterTaskDefinition(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) (*ecs.DeregisterTaskDefinitionOutput, error)
-	DeregisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) *EcsDeregisterTaskDefinitionResult
+	DeregisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) *ECSDeregisterTaskDefinitionFuture
 
 	DescribeCapacityProviders(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) (*ecs.DescribeCapacityProvidersOutput, error)
-	DescribeCapacityProvidersAsync(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) *EcsDescribeCapacityProvidersResult
+	DescribeCapacityProvidersAsync(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) *ECSDescribeCapacityProvidersFuture
 
 	DescribeClusters(ctx workflow.Context, input *ecs.DescribeClustersInput) (*ecs.DescribeClustersOutput, error)
-	DescribeClustersAsync(ctx workflow.Context, input *ecs.DescribeClustersInput) *EcsDescribeClustersResult
+	DescribeClustersAsync(ctx workflow.Context, input *ecs.DescribeClustersInput) *ECSDescribeClustersFuture
 
 	DescribeContainerInstances(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) (*ecs.DescribeContainerInstancesOutput, error)
-	DescribeContainerInstancesAsync(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) *EcsDescribeContainerInstancesResult
+	DescribeContainerInstancesAsync(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) *ECSDescribeContainerInstancesFuture
 
 	DescribeServices(ctx workflow.Context, input *ecs.DescribeServicesInput) (*ecs.DescribeServicesOutput, error)
-	DescribeServicesAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *EcsDescribeServicesResult
+	DescribeServicesAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *ECSDescribeServicesFuture
 
 	DescribeTaskDefinition(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) (*ecs.DescribeTaskDefinitionOutput, error)
-	DescribeTaskDefinitionAsync(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) *EcsDescribeTaskDefinitionResult
+	DescribeTaskDefinitionAsync(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) *ECSDescribeTaskDefinitionFuture
 
 	DescribeTaskSets(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) (*ecs.DescribeTaskSetsOutput, error)
-	DescribeTaskSetsAsync(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) *EcsDescribeTaskSetsResult
+	DescribeTaskSetsAsync(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) *ECSDescribeTaskSetsFuture
 
 	DescribeTasks(ctx workflow.Context, input *ecs.DescribeTasksInput) (*ecs.DescribeTasksOutput, error)
-	DescribeTasksAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *EcsDescribeTasksResult
+	DescribeTasksAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *ECSDescribeTasksFuture
 
 	DiscoverPollEndpoint(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) (*ecs.DiscoverPollEndpointOutput, error)
-	DiscoverPollEndpointAsync(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) *EcsDiscoverPollEndpointResult
+	DiscoverPollEndpointAsync(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) *ECSDiscoverPollEndpointFuture
 
 	ListAccountSettings(ctx workflow.Context, input *ecs.ListAccountSettingsInput) (*ecs.ListAccountSettingsOutput, error)
-	ListAccountSettingsAsync(ctx workflow.Context, input *ecs.ListAccountSettingsInput) *EcsListAccountSettingsResult
+	ListAccountSettingsAsync(ctx workflow.Context, input *ecs.ListAccountSettingsInput) *ECSListAccountSettingsFuture
 
 	ListAttributes(ctx workflow.Context, input *ecs.ListAttributesInput) (*ecs.ListAttributesOutput, error)
-	ListAttributesAsync(ctx workflow.Context, input *ecs.ListAttributesInput) *EcsListAttributesResult
+	ListAttributesAsync(ctx workflow.Context, input *ecs.ListAttributesInput) *ECSListAttributesFuture
 
 	ListClusters(ctx workflow.Context, input *ecs.ListClustersInput) (*ecs.ListClustersOutput, error)
-	ListClustersAsync(ctx workflow.Context, input *ecs.ListClustersInput) *EcsListClustersResult
+	ListClustersAsync(ctx workflow.Context, input *ecs.ListClustersInput) *ECSListClustersFuture
 
 	ListContainerInstances(ctx workflow.Context, input *ecs.ListContainerInstancesInput) (*ecs.ListContainerInstancesOutput, error)
-	ListContainerInstancesAsync(ctx workflow.Context, input *ecs.ListContainerInstancesInput) *EcsListContainerInstancesResult
+	ListContainerInstancesAsync(ctx workflow.Context, input *ecs.ListContainerInstancesInput) *ECSListContainerInstancesFuture
 
 	ListServices(ctx workflow.Context, input *ecs.ListServicesInput) (*ecs.ListServicesOutput, error)
-	ListServicesAsync(ctx workflow.Context, input *ecs.ListServicesInput) *EcsListServicesResult
+	ListServicesAsync(ctx workflow.Context, input *ecs.ListServicesInput) *ECSListServicesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *ecs.ListTagsForResourceInput) (*ecs.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *ecs.ListTagsForResourceInput) *EcsListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *ecs.ListTagsForResourceInput) *ECSListTagsForResourceFuture
 
 	ListTaskDefinitionFamilies(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) (*ecs.ListTaskDefinitionFamiliesOutput, error)
-	ListTaskDefinitionFamiliesAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) *EcsListTaskDefinitionFamiliesResult
+	ListTaskDefinitionFamiliesAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) *ECSListTaskDefinitionFamiliesFuture
 
 	ListTaskDefinitions(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) (*ecs.ListTaskDefinitionsOutput, error)
-	ListTaskDefinitionsAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) *EcsListTaskDefinitionsResult
+	ListTaskDefinitionsAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) *ECSListTaskDefinitionsFuture
 
 	ListTasks(ctx workflow.Context, input *ecs.ListTasksInput) (*ecs.ListTasksOutput, error)
-	ListTasksAsync(ctx workflow.Context, input *ecs.ListTasksInput) *EcsListTasksResult
+	ListTasksAsync(ctx workflow.Context, input *ecs.ListTasksInput) *ECSListTasksFuture
 
 	PutAccountSetting(ctx workflow.Context, input *ecs.PutAccountSettingInput) (*ecs.PutAccountSettingOutput, error)
-	PutAccountSettingAsync(ctx workflow.Context, input *ecs.PutAccountSettingInput) *EcsPutAccountSettingResult
+	PutAccountSettingAsync(ctx workflow.Context, input *ecs.PutAccountSettingInput) *ECSPutAccountSettingFuture
 
 	PutAccountSettingDefault(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) (*ecs.PutAccountSettingDefaultOutput, error)
-	PutAccountSettingDefaultAsync(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) *EcsPutAccountSettingDefaultResult
+	PutAccountSettingDefaultAsync(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) *ECSPutAccountSettingDefaultFuture
 
 	PutAttributes(ctx workflow.Context, input *ecs.PutAttributesInput) (*ecs.PutAttributesOutput, error)
-	PutAttributesAsync(ctx workflow.Context, input *ecs.PutAttributesInput) *EcsPutAttributesResult
+	PutAttributesAsync(ctx workflow.Context, input *ecs.PutAttributesInput) *ECSPutAttributesFuture
 
 	PutClusterCapacityProviders(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) (*ecs.PutClusterCapacityProvidersOutput, error)
-	PutClusterCapacityProvidersAsync(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) *EcsPutClusterCapacityProvidersResult
+	PutClusterCapacityProvidersAsync(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) *ECSPutClusterCapacityProvidersFuture
 
 	RegisterContainerInstance(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) (*ecs.RegisterContainerInstanceOutput, error)
-	RegisterContainerInstanceAsync(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) *EcsRegisterContainerInstanceResult
+	RegisterContainerInstanceAsync(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) *ECSRegisterContainerInstanceFuture
 
 	RegisterTaskDefinition(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) (*ecs.RegisterTaskDefinitionOutput, error)
-	RegisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) *EcsRegisterTaskDefinitionResult
+	RegisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) *ECSRegisterTaskDefinitionFuture
 
 	RunTask(ctx workflow.Context, input *ecs.RunTaskInput) (*ecs.RunTaskOutput, error)
-	RunTaskAsync(ctx workflow.Context, input *ecs.RunTaskInput) *EcsRunTaskResult
+	RunTaskAsync(ctx workflow.Context, input *ecs.RunTaskInput) *ECSRunTaskFuture
 
 	StartTask(ctx workflow.Context, input *ecs.StartTaskInput) (*ecs.StartTaskOutput, error)
-	StartTaskAsync(ctx workflow.Context, input *ecs.StartTaskInput) *EcsStartTaskResult
+	StartTaskAsync(ctx workflow.Context, input *ecs.StartTaskInput) *ECSStartTaskFuture
 
 	StopTask(ctx workflow.Context, input *ecs.StopTaskInput) (*ecs.StopTaskOutput, error)
-	StopTaskAsync(ctx workflow.Context, input *ecs.StopTaskInput) *EcsStopTaskResult
+	StopTaskAsync(ctx workflow.Context, input *ecs.StopTaskInput) *ECSStopTaskFuture
 
 	SubmitAttachmentStateChanges(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) (*ecs.SubmitAttachmentStateChangesOutput, error)
-	SubmitAttachmentStateChangesAsync(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) *EcsSubmitAttachmentStateChangesResult
+	SubmitAttachmentStateChangesAsync(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) *ECSSubmitAttachmentStateChangesFuture
 
 	SubmitContainerStateChange(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) (*ecs.SubmitContainerStateChangeOutput, error)
-	SubmitContainerStateChangeAsync(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) *EcsSubmitContainerStateChangeResult
+	SubmitContainerStateChangeAsync(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) *ECSSubmitContainerStateChangeFuture
 
 	SubmitTaskStateChange(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) (*ecs.SubmitTaskStateChangeOutput, error)
-	SubmitTaskStateChangeAsync(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) *EcsSubmitTaskStateChangeResult
+	SubmitTaskStateChangeAsync(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) *ECSSubmitTaskStateChangeFuture
 
 	TagResource(ctx workflow.Context, input *ecs.TagResourceInput) (*ecs.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *ecs.TagResourceInput) *EcsTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *ecs.TagResourceInput) *ECSTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *ecs.UntagResourceInput) (*ecs.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *ecs.UntagResourceInput) *EcsUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *ecs.UntagResourceInput) *ECSUntagResourceFuture
 
 	UpdateClusterSettings(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) (*ecs.UpdateClusterSettingsOutput, error)
-	UpdateClusterSettingsAsync(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) *EcsUpdateClusterSettingsResult
+	UpdateClusterSettingsAsync(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) *ECSUpdateClusterSettingsFuture
 
 	UpdateContainerAgent(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) (*ecs.UpdateContainerAgentOutput, error)
-	UpdateContainerAgentAsync(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) *EcsUpdateContainerAgentResult
+	UpdateContainerAgentAsync(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) *ECSUpdateContainerAgentFuture
 
 	UpdateContainerInstancesState(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) (*ecs.UpdateContainerInstancesStateOutput, error)
-	UpdateContainerInstancesStateAsync(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) *EcsUpdateContainerInstancesStateResult
+	UpdateContainerInstancesStateAsync(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) *ECSUpdateContainerInstancesStateFuture
 
 	UpdateService(ctx workflow.Context, input *ecs.UpdateServiceInput) (*ecs.UpdateServiceOutput, error)
-	UpdateServiceAsync(ctx workflow.Context, input *ecs.UpdateServiceInput) *EcsUpdateServiceResult
+	UpdateServiceAsync(ctx workflow.Context, input *ecs.UpdateServiceInput) *ECSUpdateServiceFuture
 
 	UpdateServicePrimaryTaskSet(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) (*ecs.UpdateServicePrimaryTaskSetOutput, error)
-	UpdateServicePrimaryTaskSetAsync(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) *EcsUpdateServicePrimaryTaskSetResult
+	UpdateServicePrimaryTaskSetAsync(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) *ECSUpdateServicePrimaryTaskSetFuture
 
 	UpdateTaskSet(ctx workflow.Context, input *ecs.UpdateTaskSetInput) (*ecs.UpdateTaskSetOutput, error)
-	UpdateTaskSetAsync(ctx workflow.Context, input *ecs.UpdateTaskSetInput) *EcsUpdateTaskSetResult
+	UpdateTaskSetAsync(ctx workflow.Context, input *ecs.UpdateTaskSetInput) *ECSUpdateTaskSetFuture
 
 	WaitUntilServicesInactive(ctx workflow.Context, input *ecs.DescribeServicesInput) error
+	WaitUntilServicesInactiveAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *VoidFuture
 
 	WaitUntilServicesStable(ctx workflow.Context, input *ecs.DescribeServicesInput) error
+	WaitUntilServicesStableAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *VoidFuture
 
 	WaitUntilTasksRunning(ctx workflow.Context, input *ecs.DescribeTasksInput) error
+	WaitUntilTasksRunningAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *VoidFuture
 
 	WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error
+	WaitUntilTasksStoppedAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *VoidFuture
 }
 
 type ECSStub struct{}
@@ -172,493 +176,542 @@ func NewECSStub() ECSClient {
 	return &ECSStub{}
 }
 
-type EcsCreateCapacityProviderResult struct {
-	Result workflow.Future
+type ECSCreateCapacityProviderFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsCreateCapacityProviderResult) Get(ctx workflow.Context) (*ecs.CreateCapacityProviderOutput, error) {
+func (r *ECSCreateCapacityProviderFuture) Get(ctx workflow.Context) (*ecs.CreateCapacityProviderOutput, error) {
 	var output ecs.CreateCapacityProviderOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsCreateClusterResult struct {
-	Result workflow.Future
+type ECSCreateClusterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsCreateClusterResult) Get(ctx workflow.Context) (*ecs.CreateClusterOutput, error) {
+func (r *ECSCreateClusterFuture) Get(ctx workflow.Context) (*ecs.CreateClusterOutput, error) {
 	var output ecs.CreateClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsCreateServiceResult struct {
-	Result workflow.Future
+type ECSCreateServiceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsCreateServiceResult) Get(ctx workflow.Context) (*ecs.CreateServiceOutput, error) {
+func (r *ECSCreateServiceFuture) Get(ctx workflow.Context) (*ecs.CreateServiceOutput, error) {
 	var output ecs.CreateServiceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsCreateTaskSetResult struct {
-	Result workflow.Future
+type ECSCreateTaskSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsCreateTaskSetResult) Get(ctx workflow.Context) (*ecs.CreateTaskSetOutput, error) {
+func (r *ECSCreateTaskSetFuture) Get(ctx workflow.Context) (*ecs.CreateTaskSetOutput, error) {
 	var output ecs.CreateTaskSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDeleteAccountSettingResult struct {
-	Result workflow.Future
+type ECSDeleteAccountSettingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDeleteAccountSettingResult) Get(ctx workflow.Context) (*ecs.DeleteAccountSettingOutput, error) {
+func (r *ECSDeleteAccountSettingFuture) Get(ctx workflow.Context) (*ecs.DeleteAccountSettingOutput, error) {
 	var output ecs.DeleteAccountSettingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDeleteAttributesResult struct {
-	Result workflow.Future
+type ECSDeleteAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDeleteAttributesResult) Get(ctx workflow.Context) (*ecs.DeleteAttributesOutput, error) {
+func (r *ECSDeleteAttributesFuture) Get(ctx workflow.Context) (*ecs.DeleteAttributesOutput, error) {
 	var output ecs.DeleteAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDeleteCapacityProviderResult struct {
-	Result workflow.Future
+type ECSDeleteCapacityProviderFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDeleteCapacityProviderResult) Get(ctx workflow.Context) (*ecs.DeleteCapacityProviderOutput, error) {
+func (r *ECSDeleteCapacityProviderFuture) Get(ctx workflow.Context) (*ecs.DeleteCapacityProviderOutput, error) {
 	var output ecs.DeleteCapacityProviderOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDeleteClusterResult struct {
-	Result workflow.Future
+type ECSDeleteClusterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDeleteClusterResult) Get(ctx workflow.Context) (*ecs.DeleteClusterOutput, error) {
+func (r *ECSDeleteClusterFuture) Get(ctx workflow.Context) (*ecs.DeleteClusterOutput, error) {
 	var output ecs.DeleteClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDeleteServiceResult struct {
-	Result workflow.Future
+type ECSDeleteServiceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDeleteServiceResult) Get(ctx workflow.Context) (*ecs.DeleteServiceOutput, error) {
+func (r *ECSDeleteServiceFuture) Get(ctx workflow.Context) (*ecs.DeleteServiceOutput, error) {
 	var output ecs.DeleteServiceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDeleteTaskSetResult struct {
-	Result workflow.Future
+type ECSDeleteTaskSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDeleteTaskSetResult) Get(ctx workflow.Context) (*ecs.DeleteTaskSetOutput, error) {
+func (r *ECSDeleteTaskSetFuture) Get(ctx workflow.Context) (*ecs.DeleteTaskSetOutput, error) {
 	var output ecs.DeleteTaskSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDeregisterContainerInstanceResult struct {
-	Result workflow.Future
+type ECSDeregisterContainerInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDeregisterContainerInstanceResult) Get(ctx workflow.Context) (*ecs.DeregisterContainerInstanceOutput, error) {
+func (r *ECSDeregisterContainerInstanceFuture) Get(ctx workflow.Context) (*ecs.DeregisterContainerInstanceOutput, error) {
 	var output ecs.DeregisterContainerInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDeregisterTaskDefinitionResult struct {
-	Result workflow.Future
+type ECSDeregisterTaskDefinitionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDeregisterTaskDefinitionResult) Get(ctx workflow.Context) (*ecs.DeregisterTaskDefinitionOutput, error) {
+func (r *ECSDeregisterTaskDefinitionFuture) Get(ctx workflow.Context) (*ecs.DeregisterTaskDefinitionOutput, error) {
 	var output ecs.DeregisterTaskDefinitionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDescribeCapacityProvidersResult struct {
-	Result workflow.Future
+type ECSDescribeCapacityProvidersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDescribeCapacityProvidersResult) Get(ctx workflow.Context) (*ecs.DescribeCapacityProvidersOutput, error) {
+func (r *ECSDescribeCapacityProvidersFuture) Get(ctx workflow.Context) (*ecs.DescribeCapacityProvidersOutput, error) {
 	var output ecs.DescribeCapacityProvidersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDescribeClustersResult struct {
-	Result workflow.Future
+type ECSDescribeClustersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDescribeClustersResult) Get(ctx workflow.Context) (*ecs.DescribeClustersOutput, error) {
+func (r *ECSDescribeClustersFuture) Get(ctx workflow.Context) (*ecs.DescribeClustersOutput, error) {
 	var output ecs.DescribeClustersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDescribeContainerInstancesResult struct {
-	Result workflow.Future
+type ECSDescribeContainerInstancesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDescribeContainerInstancesResult) Get(ctx workflow.Context) (*ecs.DescribeContainerInstancesOutput, error) {
+func (r *ECSDescribeContainerInstancesFuture) Get(ctx workflow.Context) (*ecs.DescribeContainerInstancesOutput, error) {
 	var output ecs.DescribeContainerInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDescribeServicesResult struct {
-	Result workflow.Future
+type ECSDescribeServicesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDescribeServicesResult) Get(ctx workflow.Context) (*ecs.DescribeServicesOutput, error) {
+func (r *ECSDescribeServicesFuture) Get(ctx workflow.Context) (*ecs.DescribeServicesOutput, error) {
 	var output ecs.DescribeServicesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDescribeTaskDefinitionResult struct {
-	Result workflow.Future
+type ECSDescribeTaskDefinitionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDescribeTaskDefinitionResult) Get(ctx workflow.Context) (*ecs.DescribeTaskDefinitionOutput, error) {
+func (r *ECSDescribeTaskDefinitionFuture) Get(ctx workflow.Context) (*ecs.DescribeTaskDefinitionOutput, error) {
 	var output ecs.DescribeTaskDefinitionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDescribeTaskSetsResult struct {
-	Result workflow.Future
+type ECSDescribeTaskSetsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDescribeTaskSetsResult) Get(ctx workflow.Context) (*ecs.DescribeTaskSetsOutput, error) {
+func (r *ECSDescribeTaskSetsFuture) Get(ctx workflow.Context) (*ecs.DescribeTaskSetsOutput, error) {
 	var output ecs.DescribeTaskSetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDescribeTasksResult struct {
-	Result workflow.Future
+type ECSDescribeTasksFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDescribeTasksResult) Get(ctx workflow.Context) (*ecs.DescribeTasksOutput, error) {
+func (r *ECSDescribeTasksFuture) Get(ctx workflow.Context) (*ecs.DescribeTasksOutput, error) {
 	var output ecs.DescribeTasksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsDiscoverPollEndpointResult struct {
-	Result workflow.Future
+type ECSDiscoverPollEndpointFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsDiscoverPollEndpointResult) Get(ctx workflow.Context) (*ecs.DiscoverPollEndpointOutput, error) {
+func (r *ECSDiscoverPollEndpointFuture) Get(ctx workflow.Context) (*ecs.DiscoverPollEndpointOutput, error) {
 	var output ecs.DiscoverPollEndpointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListAccountSettingsResult struct {
-	Result workflow.Future
+type ECSListAccountSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListAccountSettingsResult) Get(ctx workflow.Context) (*ecs.ListAccountSettingsOutput, error) {
+func (r *ECSListAccountSettingsFuture) Get(ctx workflow.Context) (*ecs.ListAccountSettingsOutput, error) {
 	var output ecs.ListAccountSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListAttributesResult struct {
-	Result workflow.Future
+type ECSListAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListAttributesResult) Get(ctx workflow.Context) (*ecs.ListAttributesOutput, error) {
+func (r *ECSListAttributesFuture) Get(ctx workflow.Context) (*ecs.ListAttributesOutput, error) {
 	var output ecs.ListAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListClustersResult struct {
-	Result workflow.Future
+type ECSListClustersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListClustersResult) Get(ctx workflow.Context) (*ecs.ListClustersOutput, error) {
+func (r *ECSListClustersFuture) Get(ctx workflow.Context) (*ecs.ListClustersOutput, error) {
 	var output ecs.ListClustersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListContainerInstancesResult struct {
-	Result workflow.Future
+type ECSListContainerInstancesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListContainerInstancesResult) Get(ctx workflow.Context) (*ecs.ListContainerInstancesOutput, error) {
+func (r *ECSListContainerInstancesFuture) Get(ctx workflow.Context) (*ecs.ListContainerInstancesOutput, error) {
 	var output ecs.ListContainerInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListServicesResult struct {
-	Result workflow.Future
+type ECSListServicesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListServicesResult) Get(ctx workflow.Context) (*ecs.ListServicesOutput, error) {
+func (r *ECSListServicesFuture) Get(ctx workflow.Context) (*ecs.ListServicesOutput, error) {
 	var output ecs.ListServicesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListTagsForResourceResult struct {
-	Result workflow.Future
+type ECSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListTagsForResourceResult) Get(ctx workflow.Context) (*ecs.ListTagsForResourceOutput, error) {
+func (r *ECSListTagsForResourceFuture) Get(ctx workflow.Context) (*ecs.ListTagsForResourceOutput, error) {
 	var output ecs.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListTaskDefinitionFamiliesResult struct {
-	Result workflow.Future
+type ECSListTaskDefinitionFamiliesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListTaskDefinitionFamiliesResult) Get(ctx workflow.Context) (*ecs.ListTaskDefinitionFamiliesOutput, error) {
+func (r *ECSListTaskDefinitionFamiliesFuture) Get(ctx workflow.Context) (*ecs.ListTaskDefinitionFamiliesOutput, error) {
 	var output ecs.ListTaskDefinitionFamiliesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListTaskDefinitionsResult struct {
-	Result workflow.Future
+type ECSListTaskDefinitionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListTaskDefinitionsResult) Get(ctx workflow.Context) (*ecs.ListTaskDefinitionsOutput, error) {
+func (r *ECSListTaskDefinitionsFuture) Get(ctx workflow.Context) (*ecs.ListTaskDefinitionsOutput, error) {
 	var output ecs.ListTaskDefinitionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsListTasksResult struct {
-	Result workflow.Future
+type ECSListTasksFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsListTasksResult) Get(ctx workflow.Context) (*ecs.ListTasksOutput, error) {
+func (r *ECSListTasksFuture) Get(ctx workflow.Context) (*ecs.ListTasksOutput, error) {
 	var output ecs.ListTasksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsPutAccountSettingResult struct {
-	Result workflow.Future
+type ECSPutAccountSettingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsPutAccountSettingResult) Get(ctx workflow.Context) (*ecs.PutAccountSettingOutput, error) {
+func (r *ECSPutAccountSettingFuture) Get(ctx workflow.Context) (*ecs.PutAccountSettingOutput, error) {
 	var output ecs.PutAccountSettingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsPutAccountSettingDefaultResult struct {
-	Result workflow.Future
+type ECSPutAccountSettingDefaultFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsPutAccountSettingDefaultResult) Get(ctx workflow.Context) (*ecs.PutAccountSettingDefaultOutput, error) {
+func (r *ECSPutAccountSettingDefaultFuture) Get(ctx workflow.Context) (*ecs.PutAccountSettingDefaultOutput, error) {
 	var output ecs.PutAccountSettingDefaultOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsPutAttributesResult struct {
-	Result workflow.Future
+type ECSPutAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsPutAttributesResult) Get(ctx workflow.Context) (*ecs.PutAttributesOutput, error) {
+func (r *ECSPutAttributesFuture) Get(ctx workflow.Context) (*ecs.PutAttributesOutput, error) {
 	var output ecs.PutAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsPutClusterCapacityProvidersResult struct {
-	Result workflow.Future
+type ECSPutClusterCapacityProvidersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsPutClusterCapacityProvidersResult) Get(ctx workflow.Context) (*ecs.PutClusterCapacityProvidersOutput, error) {
+func (r *ECSPutClusterCapacityProvidersFuture) Get(ctx workflow.Context) (*ecs.PutClusterCapacityProvidersOutput, error) {
 	var output ecs.PutClusterCapacityProvidersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsRegisterContainerInstanceResult struct {
-	Result workflow.Future
+type ECSRegisterContainerInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsRegisterContainerInstanceResult) Get(ctx workflow.Context) (*ecs.RegisterContainerInstanceOutput, error) {
+func (r *ECSRegisterContainerInstanceFuture) Get(ctx workflow.Context) (*ecs.RegisterContainerInstanceOutput, error) {
 	var output ecs.RegisterContainerInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsRegisterTaskDefinitionResult struct {
-	Result workflow.Future
+type ECSRegisterTaskDefinitionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsRegisterTaskDefinitionResult) Get(ctx workflow.Context) (*ecs.RegisterTaskDefinitionOutput, error) {
+func (r *ECSRegisterTaskDefinitionFuture) Get(ctx workflow.Context) (*ecs.RegisterTaskDefinitionOutput, error) {
 	var output ecs.RegisterTaskDefinitionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsRunTaskResult struct {
-	Result workflow.Future
+type ECSRunTaskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsRunTaskResult) Get(ctx workflow.Context) (*ecs.RunTaskOutput, error) {
+func (r *ECSRunTaskFuture) Get(ctx workflow.Context) (*ecs.RunTaskOutput, error) {
 	var output ecs.RunTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsStartTaskResult struct {
-	Result workflow.Future
+type ECSStartTaskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsStartTaskResult) Get(ctx workflow.Context) (*ecs.StartTaskOutput, error) {
+func (r *ECSStartTaskFuture) Get(ctx workflow.Context) (*ecs.StartTaskOutput, error) {
 	var output ecs.StartTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsStopTaskResult struct {
-	Result workflow.Future
+type ECSStopTaskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsStopTaskResult) Get(ctx workflow.Context) (*ecs.StopTaskOutput, error) {
+func (r *ECSStopTaskFuture) Get(ctx workflow.Context) (*ecs.StopTaskOutput, error) {
 	var output ecs.StopTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsSubmitAttachmentStateChangesResult struct {
-	Result workflow.Future
+type ECSSubmitAttachmentStateChangesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsSubmitAttachmentStateChangesResult) Get(ctx workflow.Context) (*ecs.SubmitAttachmentStateChangesOutput, error) {
+func (r *ECSSubmitAttachmentStateChangesFuture) Get(ctx workflow.Context) (*ecs.SubmitAttachmentStateChangesOutput, error) {
 	var output ecs.SubmitAttachmentStateChangesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsSubmitContainerStateChangeResult struct {
-	Result workflow.Future
+type ECSSubmitContainerStateChangeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsSubmitContainerStateChangeResult) Get(ctx workflow.Context) (*ecs.SubmitContainerStateChangeOutput, error) {
+func (r *ECSSubmitContainerStateChangeFuture) Get(ctx workflow.Context) (*ecs.SubmitContainerStateChangeOutput, error) {
 	var output ecs.SubmitContainerStateChangeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsSubmitTaskStateChangeResult struct {
-	Result workflow.Future
+type ECSSubmitTaskStateChangeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsSubmitTaskStateChangeResult) Get(ctx workflow.Context) (*ecs.SubmitTaskStateChangeOutput, error) {
+func (r *ECSSubmitTaskStateChangeFuture) Get(ctx workflow.Context) (*ecs.SubmitTaskStateChangeOutput, error) {
 	var output ecs.SubmitTaskStateChangeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsTagResourceResult struct {
-	Result workflow.Future
+type ECSTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsTagResourceResult) Get(ctx workflow.Context) (*ecs.TagResourceOutput, error) {
+func (r *ECSTagResourceFuture) Get(ctx workflow.Context) (*ecs.TagResourceOutput, error) {
 	var output ecs.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsUntagResourceResult struct {
-	Result workflow.Future
+type ECSUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsUntagResourceResult) Get(ctx workflow.Context) (*ecs.UntagResourceOutput, error) {
+func (r *ECSUntagResourceFuture) Get(ctx workflow.Context) (*ecs.UntagResourceOutput, error) {
 	var output ecs.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsUpdateClusterSettingsResult struct {
-	Result workflow.Future
+type ECSUpdateClusterSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsUpdateClusterSettingsResult) Get(ctx workflow.Context) (*ecs.UpdateClusterSettingsOutput, error) {
+func (r *ECSUpdateClusterSettingsFuture) Get(ctx workflow.Context) (*ecs.UpdateClusterSettingsOutput, error) {
 	var output ecs.UpdateClusterSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsUpdateContainerAgentResult struct {
-	Result workflow.Future
+type ECSUpdateContainerAgentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsUpdateContainerAgentResult) Get(ctx workflow.Context) (*ecs.UpdateContainerAgentOutput, error) {
+func (r *ECSUpdateContainerAgentFuture) Get(ctx workflow.Context) (*ecs.UpdateContainerAgentOutput, error) {
 	var output ecs.UpdateContainerAgentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsUpdateContainerInstancesStateResult struct {
-	Result workflow.Future
+type ECSUpdateContainerInstancesStateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsUpdateContainerInstancesStateResult) Get(ctx workflow.Context) (*ecs.UpdateContainerInstancesStateOutput, error) {
+func (r *ECSUpdateContainerInstancesStateFuture) Get(ctx workflow.Context) (*ecs.UpdateContainerInstancesStateOutput, error) {
 	var output ecs.UpdateContainerInstancesStateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsUpdateServiceResult struct {
-	Result workflow.Future
+type ECSUpdateServiceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsUpdateServiceResult) Get(ctx workflow.Context) (*ecs.UpdateServiceOutput, error) {
+func (r *ECSUpdateServiceFuture) Get(ctx workflow.Context) (*ecs.UpdateServiceOutput, error) {
 	var output ecs.UpdateServiceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsUpdateServicePrimaryTaskSetResult struct {
-	Result workflow.Future
+type ECSUpdateServicePrimaryTaskSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsUpdateServicePrimaryTaskSetResult) Get(ctx workflow.Context) (*ecs.UpdateServicePrimaryTaskSetOutput, error) {
+func (r *ECSUpdateServicePrimaryTaskSetFuture) Get(ctx workflow.Context) (*ecs.UpdateServicePrimaryTaskSetOutput, error) {
 	var output ecs.UpdateServicePrimaryTaskSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EcsUpdateTaskSetResult struct {
-	Result workflow.Future
+type ECSUpdateTaskSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EcsUpdateTaskSetResult) Get(ctx workflow.Context) (*ecs.UpdateTaskSetOutput, error) {
+func (r *ECSUpdateTaskSetFuture) Get(ctx workflow.Context) (*ecs.UpdateTaskSetOutput, error) {
 	var output ecs.UpdateTaskSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -668,9 +721,9 @@ func (a *ECSStub) CreateCapacityProvider(ctx workflow.Context, input *ecs.Create
 	return &output, err
 }
 
-func (a *ECSStub) CreateCapacityProviderAsync(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) *EcsCreateCapacityProviderResult {
+func (a *ECSStub) CreateCapacityProviderAsync(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) *ECSCreateCapacityProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.CreateCapacityProvider", input)
-	return &EcsCreateCapacityProviderResult{Result: future}
+	return &ECSCreateCapacityProviderFuture{Future: future}
 }
 
 func (a *ECSStub) CreateCluster(ctx workflow.Context, input *ecs.CreateClusterInput) (*ecs.CreateClusterOutput, error) {
@@ -679,9 +732,9 @@ func (a *ECSStub) CreateCluster(ctx workflow.Context, input *ecs.CreateClusterIn
 	return &output, err
 }
 
-func (a *ECSStub) CreateClusterAsync(ctx workflow.Context, input *ecs.CreateClusterInput) *EcsCreateClusterResult {
+func (a *ECSStub) CreateClusterAsync(ctx workflow.Context, input *ecs.CreateClusterInput) *ECSCreateClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.CreateCluster", input)
-	return &EcsCreateClusterResult{Result: future}
+	return &ECSCreateClusterFuture{Future: future}
 }
 
 func (a *ECSStub) CreateService(ctx workflow.Context, input *ecs.CreateServiceInput) (*ecs.CreateServiceOutput, error) {
@@ -690,9 +743,9 @@ func (a *ECSStub) CreateService(ctx workflow.Context, input *ecs.CreateServiceIn
 	return &output, err
 }
 
-func (a *ECSStub) CreateServiceAsync(ctx workflow.Context, input *ecs.CreateServiceInput) *EcsCreateServiceResult {
+func (a *ECSStub) CreateServiceAsync(ctx workflow.Context, input *ecs.CreateServiceInput) *ECSCreateServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.CreateService", input)
-	return &EcsCreateServiceResult{Result: future}
+	return &ECSCreateServiceFuture{Future: future}
 }
 
 func (a *ECSStub) CreateTaskSet(ctx workflow.Context, input *ecs.CreateTaskSetInput) (*ecs.CreateTaskSetOutput, error) {
@@ -701,9 +754,9 @@ func (a *ECSStub) CreateTaskSet(ctx workflow.Context, input *ecs.CreateTaskSetIn
 	return &output, err
 }
 
-func (a *ECSStub) CreateTaskSetAsync(ctx workflow.Context, input *ecs.CreateTaskSetInput) *EcsCreateTaskSetResult {
+func (a *ECSStub) CreateTaskSetAsync(ctx workflow.Context, input *ecs.CreateTaskSetInput) *ECSCreateTaskSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.CreateTaskSet", input)
-	return &EcsCreateTaskSetResult{Result: future}
+	return &ECSCreateTaskSetFuture{Future: future}
 }
 
 func (a *ECSStub) DeleteAccountSetting(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) (*ecs.DeleteAccountSettingOutput, error) {
@@ -712,9 +765,9 @@ func (a *ECSStub) DeleteAccountSetting(ctx workflow.Context, input *ecs.DeleteAc
 	return &output, err
 }
 
-func (a *ECSStub) DeleteAccountSettingAsync(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) *EcsDeleteAccountSettingResult {
+func (a *ECSStub) DeleteAccountSettingAsync(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) *ECSDeleteAccountSettingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DeleteAccountSetting", input)
-	return &EcsDeleteAccountSettingResult{Result: future}
+	return &ECSDeleteAccountSettingFuture{Future: future}
 }
 
 func (a *ECSStub) DeleteAttributes(ctx workflow.Context, input *ecs.DeleteAttributesInput) (*ecs.DeleteAttributesOutput, error) {
@@ -723,9 +776,9 @@ func (a *ECSStub) DeleteAttributes(ctx workflow.Context, input *ecs.DeleteAttrib
 	return &output, err
 }
 
-func (a *ECSStub) DeleteAttributesAsync(ctx workflow.Context, input *ecs.DeleteAttributesInput) *EcsDeleteAttributesResult {
+func (a *ECSStub) DeleteAttributesAsync(ctx workflow.Context, input *ecs.DeleteAttributesInput) *ECSDeleteAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DeleteAttributes", input)
-	return &EcsDeleteAttributesResult{Result: future}
+	return &ECSDeleteAttributesFuture{Future: future}
 }
 
 func (a *ECSStub) DeleteCapacityProvider(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) (*ecs.DeleteCapacityProviderOutput, error) {
@@ -734,9 +787,9 @@ func (a *ECSStub) DeleteCapacityProvider(ctx workflow.Context, input *ecs.Delete
 	return &output, err
 }
 
-func (a *ECSStub) DeleteCapacityProviderAsync(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) *EcsDeleteCapacityProviderResult {
+func (a *ECSStub) DeleteCapacityProviderAsync(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) *ECSDeleteCapacityProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DeleteCapacityProvider", input)
-	return &EcsDeleteCapacityProviderResult{Result: future}
+	return &ECSDeleteCapacityProviderFuture{Future: future}
 }
 
 func (a *ECSStub) DeleteCluster(ctx workflow.Context, input *ecs.DeleteClusterInput) (*ecs.DeleteClusterOutput, error) {
@@ -745,9 +798,9 @@ func (a *ECSStub) DeleteCluster(ctx workflow.Context, input *ecs.DeleteClusterIn
 	return &output, err
 }
 
-func (a *ECSStub) DeleteClusterAsync(ctx workflow.Context, input *ecs.DeleteClusterInput) *EcsDeleteClusterResult {
+func (a *ECSStub) DeleteClusterAsync(ctx workflow.Context, input *ecs.DeleteClusterInput) *ECSDeleteClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DeleteCluster", input)
-	return &EcsDeleteClusterResult{Result: future}
+	return &ECSDeleteClusterFuture{Future: future}
 }
 
 func (a *ECSStub) DeleteService(ctx workflow.Context, input *ecs.DeleteServiceInput) (*ecs.DeleteServiceOutput, error) {
@@ -756,9 +809,9 @@ func (a *ECSStub) DeleteService(ctx workflow.Context, input *ecs.DeleteServiceIn
 	return &output, err
 }
 
-func (a *ECSStub) DeleteServiceAsync(ctx workflow.Context, input *ecs.DeleteServiceInput) *EcsDeleteServiceResult {
+func (a *ECSStub) DeleteServiceAsync(ctx workflow.Context, input *ecs.DeleteServiceInput) *ECSDeleteServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DeleteService", input)
-	return &EcsDeleteServiceResult{Result: future}
+	return &ECSDeleteServiceFuture{Future: future}
 }
 
 func (a *ECSStub) DeleteTaskSet(ctx workflow.Context, input *ecs.DeleteTaskSetInput) (*ecs.DeleteTaskSetOutput, error) {
@@ -767,9 +820,9 @@ func (a *ECSStub) DeleteTaskSet(ctx workflow.Context, input *ecs.DeleteTaskSetIn
 	return &output, err
 }
 
-func (a *ECSStub) DeleteTaskSetAsync(ctx workflow.Context, input *ecs.DeleteTaskSetInput) *EcsDeleteTaskSetResult {
+func (a *ECSStub) DeleteTaskSetAsync(ctx workflow.Context, input *ecs.DeleteTaskSetInput) *ECSDeleteTaskSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DeleteTaskSet", input)
-	return &EcsDeleteTaskSetResult{Result: future}
+	return &ECSDeleteTaskSetFuture{Future: future}
 }
 
 func (a *ECSStub) DeregisterContainerInstance(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) (*ecs.DeregisterContainerInstanceOutput, error) {
@@ -778,9 +831,9 @@ func (a *ECSStub) DeregisterContainerInstance(ctx workflow.Context, input *ecs.D
 	return &output, err
 }
 
-func (a *ECSStub) DeregisterContainerInstanceAsync(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) *EcsDeregisterContainerInstanceResult {
+func (a *ECSStub) DeregisterContainerInstanceAsync(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) *ECSDeregisterContainerInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DeregisterContainerInstance", input)
-	return &EcsDeregisterContainerInstanceResult{Result: future}
+	return &ECSDeregisterContainerInstanceFuture{Future: future}
 }
 
 func (a *ECSStub) DeregisterTaskDefinition(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) (*ecs.DeregisterTaskDefinitionOutput, error) {
@@ -789,9 +842,9 @@ func (a *ECSStub) DeregisterTaskDefinition(ctx workflow.Context, input *ecs.Dere
 	return &output, err
 }
 
-func (a *ECSStub) DeregisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) *EcsDeregisterTaskDefinitionResult {
+func (a *ECSStub) DeregisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) *ECSDeregisterTaskDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DeregisterTaskDefinition", input)
-	return &EcsDeregisterTaskDefinitionResult{Result: future}
+	return &ECSDeregisterTaskDefinitionFuture{Future: future}
 }
 
 func (a *ECSStub) DescribeCapacityProviders(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) (*ecs.DescribeCapacityProvidersOutput, error) {
@@ -800,9 +853,9 @@ func (a *ECSStub) DescribeCapacityProviders(ctx workflow.Context, input *ecs.Des
 	return &output, err
 }
 
-func (a *ECSStub) DescribeCapacityProvidersAsync(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) *EcsDescribeCapacityProvidersResult {
+func (a *ECSStub) DescribeCapacityProvidersAsync(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) *ECSDescribeCapacityProvidersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DescribeCapacityProviders", input)
-	return &EcsDescribeCapacityProvidersResult{Result: future}
+	return &ECSDescribeCapacityProvidersFuture{Future: future}
 }
 
 func (a *ECSStub) DescribeClusters(ctx workflow.Context, input *ecs.DescribeClustersInput) (*ecs.DescribeClustersOutput, error) {
@@ -811,9 +864,9 @@ func (a *ECSStub) DescribeClusters(ctx workflow.Context, input *ecs.DescribeClus
 	return &output, err
 }
 
-func (a *ECSStub) DescribeClustersAsync(ctx workflow.Context, input *ecs.DescribeClustersInput) *EcsDescribeClustersResult {
+func (a *ECSStub) DescribeClustersAsync(ctx workflow.Context, input *ecs.DescribeClustersInput) *ECSDescribeClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DescribeClusters", input)
-	return &EcsDescribeClustersResult{Result: future}
+	return &ECSDescribeClustersFuture{Future: future}
 }
 
 func (a *ECSStub) DescribeContainerInstances(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) (*ecs.DescribeContainerInstancesOutput, error) {
@@ -822,9 +875,9 @@ func (a *ECSStub) DescribeContainerInstances(ctx workflow.Context, input *ecs.De
 	return &output, err
 }
 
-func (a *ECSStub) DescribeContainerInstancesAsync(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) *EcsDescribeContainerInstancesResult {
+func (a *ECSStub) DescribeContainerInstancesAsync(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) *ECSDescribeContainerInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DescribeContainerInstances", input)
-	return &EcsDescribeContainerInstancesResult{Result: future}
+	return &ECSDescribeContainerInstancesFuture{Future: future}
 }
 
 func (a *ECSStub) DescribeServices(ctx workflow.Context, input *ecs.DescribeServicesInput) (*ecs.DescribeServicesOutput, error) {
@@ -833,9 +886,9 @@ func (a *ECSStub) DescribeServices(ctx workflow.Context, input *ecs.DescribeServ
 	return &output, err
 }
 
-func (a *ECSStub) DescribeServicesAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *EcsDescribeServicesResult {
+func (a *ECSStub) DescribeServicesAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *ECSDescribeServicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DescribeServices", input)
-	return &EcsDescribeServicesResult{Result: future}
+	return &ECSDescribeServicesFuture{Future: future}
 }
 
 func (a *ECSStub) DescribeTaskDefinition(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) (*ecs.DescribeTaskDefinitionOutput, error) {
@@ -844,9 +897,9 @@ func (a *ECSStub) DescribeTaskDefinition(ctx workflow.Context, input *ecs.Descri
 	return &output, err
 }
 
-func (a *ECSStub) DescribeTaskDefinitionAsync(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) *EcsDescribeTaskDefinitionResult {
+func (a *ECSStub) DescribeTaskDefinitionAsync(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) *ECSDescribeTaskDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DescribeTaskDefinition", input)
-	return &EcsDescribeTaskDefinitionResult{Result: future}
+	return &ECSDescribeTaskDefinitionFuture{Future: future}
 }
 
 func (a *ECSStub) DescribeTaskSets(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) (*ecs.DescribeTaskSetsOutput, error) {
@@ -855,9 +908,9 @@ func (a *ECSStub) DescribeTaskSets(ctx workflow.Context, input *ecs.DescribeTask
 	return &output, err
 }
 
-func (a *ECSStub) DescribeTaskSetsAsync(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) *EcsDescribeTaskSetsResult {
+func (a *ECSStub) DescribeTaskSetsAsync(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) *ECSDescribeTaskSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DescribeTaskSets", input)
-	return &EcsDescribeTaskSetsResult{Result: future}
+	return &ECSDescribeTaskSetsFuture{Future: future}
 }
 
 func (a *ECSStub) DescribeTasks(ctx workflow.Context, input *ecs.DescribeTasksInput) (*ecs.DescribeTasksOutput, error) {
@@ -866,9 +919,9 @@ func (a *ECSStub) DescribeTasks(ctx workflow.Context, input *ecs.DescribeTasksIn
 	return &output, err
 }
 
-func (a *ECSStub) DescribeTasksAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *EcsDescribeTasksResult {
+func (a *ECSStub) DescribeTasksAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *ECSDescribeTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DescribeTasks", input)
-	return &EcsDescribeTasksResult{Result: future}
+	return &ECSDescribeTasksFuture{Future: future}
 }
 
 func (a *ECSStub) DiscoverPollEndpoint(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) (*ecs.DiscoverPollEndpointOutput, error) {
@@ -877,9 +930,9 @@ func (a *ECSStub) DiscoverPollEndpoint(ctx workflow.Context, input *ecs.Discover
 	return &output, err
 }
 
-func (a *ECSStub) DiscoverPollEndpointAsync(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) *EcsDiscoverPollEndpointResult {
+func (a *ECSStub) DiscoverPollEndpointAsync(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) *ECSDiscoverPollEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.DiscoverPollEndpoint", input)
-	return &EcsDiscoverPollEndpointResult{Result: future}
+	return &ECSDiscoverPollEndpointFuture{Future: future}
 }
 
 func (a *ECSStub) ListAccountSettings(ctx workflow.Context, input *ecs.ListAccountSettingsInput) (*ecs.ListAccountSettingsOutput, error) {
@@ -888,9 +941,9 @@ func (a *ECSStub) ListAccountSettings(ctx workflow.Context, input *ecs.ListAccou
 	return &output, err
 }
 
-func (a *ECSStub) ListAccountSettingsAsync(ctx workflow.Context, input *ecs.ListAccountSettingsInput) *EcsListAccountSettingsResult {
+func (a *ECSStub) ListAccountSettingsAsync(ctx workflow.Context, input *ecs.ListAccountSettingsInput) *ECSListAccountSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListAccountSettings", input)
-	return &EcsListAccountSettingsResult{Result: future}
+	return &ECSListAccountSettingsFuture{Future: future}
 }
 
 func (a *ECSStub) ListAttributes(ctx workflow.Context, input *ecs.ListAttributesInput) (*ecs.ListAttributesOutput, error) {
@@ -899,9 +952,9 @@ func (a *ECSStub) ListAttributes(ctx workflow.Context, input *ecs.ListAttributes
 	return &output, err
 }
 
-func (a *ECSStub) ListAttributesAsync(ctx workflow.Context, input *ecs.ListAttributesInput) *EcsListAttributesResult {
+func (a *ECSStub) ListAttributesAsync(ctx workflow.Context, input *ecs.ListAttributesInput) *ECSListAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListAttributes", input)
-	return &EcsListAttributesResult{Result: future}
+	return &ECSListAttributesFuture{Future: future}
 }
 
 func (a *ECSStub) ListClusters(ctx workflow.Context, input *ecs.ListClustersInput) (*ecs.ListClustersOutput, error) {
@@ -910,9 +963,9 @@ func (a *ECSStub) ListClusters(ctx workflow.Context, input *ecs.ListClustersInpu
 	return &output, err
 }
 
-func (a *ECSStub) ListClustersAsync(ctx workflow.Context, input *ecs.ListClustersInput) *EcsListClustersResult {
+func (a *ECSStub) ListClustersAsync(ctx workflow.Context, input *ecs.ListClustersInput) *ECSListClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListClusters", input)
-	return &EcsListClustersResult{Result: future}
+	return &ECSListClustersFuture{Future: future}
 }
 
 func (a *ECSStub) ListContainerInstances(ctx workflow.Context, input *ecs.ListContainerInstancesInput) (*ecs.ListContainerInstancesOutput, error) {
@@ -921,9 +974,9 @@ func (a *ECSStub) ListContainerInstances(ctx workflow.Context, input *ecs.ListCo
 	return &output, err
 }
 
-func (a *ECSStub) ListContainerInstancesAsync(ctx workflow.Context, input *ecs.ListContainerInstancesInput) *EcsListContainerInstancesResult {
+func (a *ECSStub) ListContainerInstancesAsync(ctx workflow.Context, input *ecs.ListContainerInstancesInput) *ECSListContainerInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListContainerInstances", input)
-	return &EcsListContainerInstancesResult{Result: future}
+	return &ECSListContainerInstancesFuture{Future: future}
 }
 
 func (a *ECSStub) ListServices(ctx workflow.Context, input *ecs.ListServicesInput) (*ecs.ListServicesOutput, error) {
@@ -932,9 +985,9 @@ func (a *ECSStub) ListServices(ctx workflow.Context, input *ecs.ListServicesInpu
 	return &output, err
 }
 
-func (a *ECSStub) ListServicesAsync(ctx workflow.Context, input *ecs.ListServicesInput) *EcsListServicesResult {
+func (a *ECSStub) ListServicesAsync(ctx workflow.Context, input *ecs.ListServicesInput) *ECSListServicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListServices", input)
-	return &EcsListServicesResult{Result: future}
+	return &ECSListServicesFuture{Future: future}
 }
 
 func (a *ECSStub) ListTagsForResource(ctx workflow.Context, input *ecs.ListTagsForResourceInput) (*ecs.ListTagsForResourceOutput, error) {
@@ -943,9 +996,9 @@ func (a *ECSStub) ListTagsForResource(ctx workflow.Context, input *ecs.ListTagsF
 	return &output, err
 }
 
-func (a *ECSStub) ListTagsForResourceAsync(ctx workflow.Context, input *ecs.ListTagsForResourceInput) *EcsListTagsForResourceResult {
+func (a *ECSStub) ListTagsForResourceAsync(ctx workflow.Context, input *ecs.ListTagsForResourceInput) *ECSListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListTagsForResource", input)
-	return &EcsListTagsForResourceResult{Result: future}
+	return &ECSListTagsForResourceFuture{Future: future}
 }
 
 func (a *ECSStub) ListTaskDefinitionFamilies(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) (*ecs.ListTaskDefinitionFamiliesOutput, error) {
@@ -954,9 +1007,9 @@ func (a *ECSStub) ListTaskDefinitionFamilies(ctx workflow.Context, input *ecs.Li
 	return &output, err
 }
 
-func (a *ECSStub) ListTaskDefinitionFamiliesAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) *EcsListTaskDefinitionFamiliesResult {
+func (a *ECSStub) ListTaskDefinitionFamiliesAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) *ECSListTaskDefinitionFamiliesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListTaskDefinitionFamilies", input)
-	return &EcsListTaskDefinitionFamiliesResult{Result: future}
+	return &ECSListTaskDefinitionFamiliesFuture{Future: future}
 }
 
 func (a *ECSStub) ListTaskDefinitions(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) (*ecs.ListTaskDefinitionsOutput, error) {
@@ -965,9 +1018,9 @@ func (a *ECSStub) ListTaskDefinitions(ctx workflow.Context, input *ecs.ListTaskD
 	return &output, err
 }
 
-func (a *ECSStub) ListTaskDefinitionsAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) *EcsListTaskDefinitionsResult {
+func (a *ECSStub) ListTaskDefinitionsAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) *ECSListTaskDefinitionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListTaskDefinitions", input)
-	return &EcsListTaskDefinitionsResult{Result: future}
+	return &ECSListTaskDefinitionsFuture{Future: future}
 }
 
 func (a *ECSStub) ListTasks(ctx workflow.Context, input *ecs.ListTasksInput) (*ecs.ListTasksOutput, error) {
@@ -976,9 +1029,9 @@ func (a *ECSStub) ListTasks(ctx workflow.Context, input *ecs.ListTasksInput) (*e
 	return &output, err
 }
 
-func (a *ECSStub) ListTasksAsync(ctx workflow.Context, input *ecs.ListTasksInput) *EcsListTasksResult {
+func (a *ECSStub) ListTasksAsync(ctx workflow.Context, input *ecs.ListTasksInput) *ECSListTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.ListTasks", input)
-	return &EcsListTasksResult{Result: future}
+	return &ECSListTasksFuture{Future: future}
 }
 
 func (a *ECSStub) PutAccountSetting(ctx workflow.Context, input *ecs.PutAccountSettingInput) (*ecs.PutAccountSettingOutput, error) {
@@ -987,9 +1040,9 @@ func (a *ECSStub) PutAccountSetting(ctx workflow.Context, input *ecs.PutAccountS
 	return &output, err
 }
 
-func (a *ECSStub) PutAccountSettingAsync(ctx workflow.Context, input *ecs.PutAccountSettingInput) *EcsPutAccountSettingResult {
+func (a *ECSStub) PutAccountSettingAsync(ctx workflow.Context, input *ecs.PutAccountSettingInput) *ECSPutAccountSettingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.PutAccountSetting", input)
-	return &EcsPutAccountSettingResult{Result: future}
+	return &ECSPutAccountSettingFuture{Future: future}
 }
 
 func (a *ECSStub) PutAccountSettingDefault(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) (*ecs.PutAccountSettingDefaultOutput, error) {
@@ -998,9 +1051,9 @@ func (a *ECSStub) PutAccountSettingDefault(ctx workflow.Context, input *ecs.PutA
 	return &output, err
 }
 
-func (a *ECSStub) PutAccountSettingDefaultAsync(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) *EcsPutAccountSettingDefaultResult {
+func (a *ECSStub) PutAccountSettingDefaultAsync(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) *ECSPutAccountSettingDefaultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.PutAccountSettingDefault", input)
-	return &EcsPutAccountSettingDefaultResult{Result: future}
+	return &ECSPutAccountSettingDefaultFuture{Future: future}
 }
 
 func (a *ECSStub) PutAttributes(ctx workflow.Context, input *ecs.PutAttributesInput) (*ecs.PutAttributesOutput, error) {
@@ -1009,9 +1062,9 @@ func (a *ECSStub) PutAttributes(ctx workflow.Context, input *ecs.PutAttributesIn
 	return &output, err
 }
 
-func (a *ECSStub) PutAttributesAsync(ctx workflow.Context, input *ecs.PutAttributesInput) *EcsPutAttributesResult {
+func (a *ECSStub) PutAttributesAsync(ctx workflow.Context, input *ecs.PutAttributesInput) *ECSPutAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.PutAttributes", input)
-	return &EcsPutAttributesResult{Result: future}
+	return &ECSPutAttributesFuture{Future: future}
 }
 
 func (a *ECSStub) PutClusterCapacityProviders(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) (*ecs.PutClusterCapacityProvidersOutput, error) {
@@ -1020,9 +1073,9 @@ func (a *ECSStub) PutClusterCapacityProviders(ctx workflow.Context, input *ecs.P
 	return &output, err
 }
 
-func (a *ECSStub) PutClusterCapacityProvidersAsync(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) *EcsPutClusterCapacityProvidersResult {
+func (a *ECSStub) PutClusterCapacityProvidersAsync(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) *ECSPutClusterCapacityProvidersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.PutClusterCapacityProviders", input)
-	return &EcsPutClusterCapacityProvidersResult{Result: future}
+	return &ECSPutClusterCapacityProvidersFuture{Future: future}
 }
 
 func (a *ECSStub) RegisterContainerInstance(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) (*ecs.RegisterContainerInstanceOutput, error) {
@@ -1031,9 +1084,9 @@ func (a *ECSStub) RegisterContainerInstance(ctx workflow.Context, input *ecs.Reg
 	return &output, err
 }
 
-func (a *ECSStub) RegisterContainerInstanceAsync(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) *EcsRegisterContainerInstanceResult {
+func (a *ECSStub) RegisterContainerInstanceAsync(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) *ECSRegisterContainerInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.RegisterContainerInstance", input)
-	return &EcsRegisterContainerInstanceResult{Result: future}
+	return &ECSRegisterContainerInstanceFuture{Future: future}
 }
 
 func (a *ECSStub) RegisterTaskDefinition(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) (*ecs.RegisterTaskDefinitionOutput, error) {
@@ -1042,9 +1095,9 @@ func (a *ECSStub) RegisterTaskDefinition(ctx workflow.Context, input *ecs.Regist
 	return &output, err
 }
 
-func (a *ECSStub) RegisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) *EcsRegisterTaskDefinitionResult {
+func (a *ECSStub) RegisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) *ECSRegisterTaskDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.RegisterTaskDefinition", input)
-	return &EcsRegisterTaskDefinitionResult{Result: future}
+	return &ECSRegisterTaskDefinitionFuture{Future: future}
 }
 
 func (a *ECSStub) RunTask(ctx workflow.Context, input *ecs.RunTaskInput) (*ecs.RunTaskOutput, error) {
@@ -1053,9 +1106,9 @@ func (a *ECSStub) RunTask(ctx workflow.Context, input *ecs.RunTaskInput) (*ecs.R
 	return &output, err
 }
 
-func (a *ECSStub) RunTaskAsync(ctx workflow.Context, input *ecs.RunTaskInput) *EcsRunTaskResult {
+func (a *ECSStub) RunTaskAsync(ctx workflow.Context, input *ecs.RunTaskInput) *ECSRunTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.RunTask", input)
-	return &EcsRunTaskResult{Result: future}
+	return &ECSRunTaskFuture{Future: future}
 }
 
 func (a *ECSStub) StartTask(ctx workflow.Context, input *ecs.StartTaskInput) (*ecs.StartTaskOutput, error) {
@@ -1064,9 +1117,9 @@ func (a *ECSStub) StartTask(ctx workflow.Context, input *ecs.StartTaskInput) (*e
 	return &output, err
 }
 
-func (a *ECSStub) StartTaskAsync(ctx workflow.Context, input *ecs.StartTaskInput) *EcsStartTaskResult {
+func (a *ECSStub) StartTaskAsync(ctx workflow.Context, input *ecs.StartTaskInput) *ECSStartTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.StartTask", input)
-	return &EcsStartTaskResult{Result: future}
+	return &ECSStartTaskFuture{Future: future}
 }
 
 func (a *ECSStub) StopTask(ctx workflow.Context, input *ecs.StopTaskInput) (*ecs.StopTaskOutput, error) {
@@ -1075,9 +1128,9 @@ func (a *ECSStub) StopTask(ctx workflow.Context, input *ecs.StopTaskInput) (*ecs
 	return &output, err
 }
 
-func (a *ECSStub) StopTaskAsync(ctx workflow.Context, input *ecs.StopTaskInput) *EcsStopTaskResult {
+func (a *ECSStub) StopTaskAsync(ctx workflow.Context, input *ecs.StopTaskInput) *ECSStopTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.StopTask", input)
-	return &EcsStopTaskResult{Result: future}
+	return &ECSStopTaskFuture{Future: future}
 }
 
 func (a *ECSStub) SubmitAttachmentStateChanges(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) (*ecs.SubmitAttachmentStateChangesOutput, error) {
@@ -1086,9 +1139,9 @@ func (a *ECSStub) SubmitAttachmentStateChanges(ctx workflow.Context, input *ecs.
 	return &output, err
 }
 
-func (a *ECSStub) SubmitAttachmentStateChangesAsync(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) *EcsSubmitAttachmentStateChangesResult {
+func (a *ECSStub) SubmitAttachmentStateChangesAsync(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) *ECSSubmitAttachmentStateChangesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.SubmitAttachmentStateChanges", input)
-	return &EcsSubmitAttachmentStateChangesResult{Result: future}
+	return &ECSSubmitAttachmentStateChangesFuture{Future: future}
 }
 
 func (a *ECSStub) SubmitContainerStateChange(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) (*ecs.SubmitContainerStateChangeOutput, error) {
@@ -1097,9 +1150,9 @@ func (a *ECSStub) SubmitContainerStateChange(ctx workflow.Context, input *ecs.Su
 	return &output, err
 }
 
-func (a *ECSStub) SubmitContainerStateChangeAsync(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) *EcsSubmitContainerStateChangeResult {
+func (a *ECSStub) SubmitContainerStateChangeAsync(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) *ECSSubmitContainerStateChangeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.SubmitContainerStateChange", input)
-	return &EcsSubmitContainerStateChangeResult{Result: future}
+	return &ECSSubmitContainerStateChangeFuture{Future: future}
 }
 
 func (a *ECSStub) SubmitTaskStateChange(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) (*ecs.SubmitTaskStateChangeOutput, error) {
@@ -1108,9 +1161,9 @@ func (a *ECSStub) SubmitTaskStateChange(ctx workflow.Context, input *ecs.SubmitT
 	return &output, err
 }
 
-func (a *ECSStub) SubmitTaskStateChangeAsync(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) *EcsSubmitTaskStateChangeResult {
+func (a *ECSStub) SubmitTaskStateChangeAsync(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) *ECSSubmitTaskStateChangeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.SubmitTaskStateChange", input)
-	return &EcsSubmitTaskStateChangeResult{Result: future}
+	return &ECSSubmitTaskStateChangeFuture{Future: future}
 }
 
 func (a *ECSStub) TagResource(ctx workflow.Context, input *ecs.TagResourceInput) (*ecs.TagResourceOutput, error) {
@@ -1119,9 +1172,9 @@ func (a *ECSStub) TagResource(ctx workflow.Context, input *ecs.TagResourceInput)
 	return &output, err
 }
 
-func (a *ECSStub) TagResourceAsync(ctx workflow.Context, input *ecs.TagResourceInput) *EcsTagResourceResult {
+func (a *ECSStub) TagResourceAsync(ctx workflow.Context, input *ecs.TagResourceInput) *ECSTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.TagResource", input)
-	return &EcsTagResourceResult{Result: future}
+	return &ECSTagResourceFuture{Future: future}
 }
 
 func (a *ECSStub) UntagResource(ctx workflow.Context, input *ecs.UntagResourceInput) (*ecs.UntagResourceOutput, error) {
@@ -1130,9 +1183,9 @@ func (a *ECSStub) UntagResource(ctx workflow.Context, input *ecs.UntagResourceIn
 	return &output, err
 }
 
-func (a *ECSStub) UntagResourceAsync(ctx workflow.Context, input *ecs.UntagResourceInput) *EcsUntagResourceResult {
+func (a *ECSStub) UntagResourceAsync(ctx workflow.Context, input *ecs.UntagResourceInput) *ECSUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.UntagResource", input)
-	return &EcsUntagResourceResult{Result: future}
+	return &ECSUntagResourceFuture{Future: future}
 }
 
 func (a *ECSStub) UpdateClusterSettings(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) (*ecs.UpdateClusterSettingsOutput, error) {
@@ -1141,9 +1194,9 @@ func (a *ECSStub) UpdateClusterSettings(ctx workflow.Context, input *ecs.UpdateC
 	return &output, err
 }
 
-func (a *ECSStub) UpdateClusterSettingsAsync(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) *EcsUpdateClusterSettingsResult {
+func (a *ECSStub) UpdateClusterSettingsAsync(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) *ECSUpdateClusterSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.UpdateClusterSettings", input)
-	return &EcsUpdateClusterSettingsResult{Result: future}
+	return &ECSUpdateClusterSettingsFuture{Future: future}
 }
 
 func (a *ECSStub) UpdateContainerAgent(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) (*ecs.UpdateContainerAgentOutput, error) {
@@ -1152,9 +1205,9 @@ func (a *ECSStub) UpdateContainerAgent(ctx workflow.Context, input *ecs.UpdateCo
 	return &output, err
 }
 
-func (a *ECSStub) UpdateContainerAgentAsync(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) *EcsUpdateContainerAgentResult {
+func (a *ECSStub) UpdateContainerAgentAsync(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) *ECSUpdateContainerAgentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.UpdateContainerAgent", input)
-	return &EcsUpdateContainerAgentResult{Result: future}
+	return &ECSUpdateContainerAgentFuture{Future: future}
 }
 
 func (a *ECSStub) UpdateContainerInstancesState(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) (*ecs.UpdateContainerInstancesStateOutput, error) {
@@ -1163,9 +1216,9 @@ func (a *ECSStub) UpdateContainerInstancesState(ctx workflow.Context, input *ecs
 	return &output, err
 }
 
-func (a *ECSStub) UpdateContainerInstancesStateAsync(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) *EcsUpdateContainerInstancesStateResult {
+func (a *ECSStub) UpdateContainerInstancesStateAsync(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) *ECSUpdateContainerInstancesStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.UpdateContainerInstancesState", input)
-	return &EcsUpdateContainerInstancesStateResult{Result: future}
+	return &ECSUpdateContainerInstancesStateFuture{Future: future}
 }
 
 func (a *ECSStub) UpdateService(ctx workflow.Context, input *ecs.UpdateServiceInput) (*ecs.UpdateServiceOutput, error) {
@@ -1174,9 +1227,9 @@ func (a *ECSStub) UpdateService(ctx workflow.Context, input *ecs.UpdateServiceIn
 	return &output, err
 }
 
-func (a *ECSStub) UpdateServiceAsync(ctx workflow.Context, input *ecs.UpdateServiceInput) *EcsUpdateServiceResult {
+func (a *ECSStub) UpdateServiceAsync(ctx workflow.Context, input *ecs.UpdateServiceInput) *ECSUpdateServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.UpdateService", input)
-	return &EcsUpdateServiceResult{Result: future}
+	return &ECSUpdateServiceFuture{Future: future}
 }
 
 func (a *ECSStub) UpdateServicePrimaryTaskSet(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) (*ecs.UpdateServicePrimaryTaskSetOutput, error) {
@@ -1185,9 +1238,9 @@ func (a *ECSStub) UpdateServicePrimaryTaskSet(ctx workflow.Context, input *ecs.U
 	return &output, err
 }
 
-func (a *ECSStub) UpdateServicePrimaryTaskSetAsync(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) *EcsUpdateServicePrimaryTaskSetResult {
+func (a *ECSStub) UpdateServicePrimaryTaskSetAsync(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) *ECSUpdateServicePrimaryTaskSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.UpdateServicePrimaryTaskSet", input)
-	return &EcsUpdateServicePrimaryTaskSetResult{Result: future}
+	return &ECSUpdateServicePrimaryTaskSetFuture{Future: future}
 }
 
 func (a *ECSStub) UpdateTaskSet(ctx workflow.Context, input *ecs.UpdateTaskSetInput) (*ecs.UpdateTaskSetOutput, error) {
@@ -1196,39 +1249,43 @@ func (a *ECSStub) UpdateTaskSet(ctx workflow.Context, input *ecs.UpdateTaskSetIn
 	return &output, err
 }
 
-func (a *ECSStub) UpdateTaskSetAsync(ctx workflow.Context, input *ecs.UpdateTaskSetInput) *EcsUpdateTaskSetResult {
+func (a *ECSStub) UpdateTaskSetAsync(ctx workflow.Context, input *ecs.UpdateTaskSetInput) *ECSUpdateTaskSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ecs.UpdateTaskSet", input)
-	return &EcsUpdateTaskSetResult{Result: future}
+	return &ECSUpdateTaskSetFuture{Future: future}
 }
 
 func (a *ECSStub) WaitUntilServicesInactive(ctx workflow.Context, input *ecs.DescribeServicesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesInactive", input).Get(ctx, nil)
 }
 
-func (a *ECSStub) WaitUntilServicesInactiveAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesInactive", input)
+func (a *ECSStub) WaitUntilServicesInactiveAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesInactive", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ECSStub) WaitUntilServicesStable(ctx workflow.Context, input *ecs.DescribeServicesInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesStable", input).Get(ctx, nil)
 }
 
-func (a *ECSStub) WaitUntilServicesStableAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesStable", input)
+func (a *ECSStub) WaitUntilServicesStableAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilServicesStable", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ECSStub) WaitUntilTasksRunning(ctx workflow.Context, input *ecs.DescribeTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksRunning", input).Get(ctx, nil)
 }
 
-func (a *ECSStub) WaitUntilTasksRunningAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksRunning", input)
+func (a *ECSStub) WaitUntilTasksRunningAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *ECSStub) WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksStopped", input).Get(ctx, nil)
 }
 
-func (a *ECSStub) WaitUntilTasksStoppedAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksStopped", input)
+func (a *ECSStub) WaitUntilTasksStoppedAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.ecs.WaitUntilTasksStopped", input)
+	return NewVoidFuture(future)
 }

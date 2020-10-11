@@ -11,31 +11,31 @@ import (
 
 type RedshiftDataAPIServiceClient interface {
 	CancelStatement(ctx workflow.Context, input *redshiftdataapiservice.CancelStatementInput) (*redshiftdataapiservice.CancelStatementOutput, error)
-	CancelStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.CancelStatementInput) *RedshiftdataapiserviceCancelStatementResult
+	CancelStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.CancelStatementInput) *RedshiftDataAPIServiceCancelStatementFuture
 
 	DescribeStatement(ctx workflow.Context, input *redshiftdataapiservice.DescribeStatementInput) (*redshiftdataapiservice.DescribeStatementOutput, error)
-	DescribeStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.DescribeStatementInput) *RedshiftdataapiserviceDescribeStatementResult
+	DescribeStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.DescribeStatementInput) *RedshiftDataAPIServiceDescribeStatementFuture
 
 	DescribeTable(ctx workflow.Context, input *redshiftdataapiservice.DescribeTableInput) (*redshiftdataapiservice.DescribeTableOutput, error)
-	DescribeTableAsync(ctx workflow.Context, input *redshiftdataapiservice.DescribeTableInput) *RedshiftdataapiserviceDescribeTableResult
+	DescribeTableAsync(ctx workflow.Context, input *redshiftdataapiservice.DescribeTableInput) *RedshiftDataAPIServiceDescribeTableFuture
 
 	ExecuteStatement(ctx workflow.Context, input *redshiftdataapiservice.ExecuteStatementInput) (*redshiftdataapiservice.ExecuteStatementOutput, error)
-	ExecuteStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.ExecuteStatementInput) *RedshiftdataapiserviceExecuteStatementResult
+	ExecuteStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.ExecuteStatementInput) *RedshiftDataAPIServiceExecuteStatementFuture
 
 	GetStatementResult(ctx workflow.Context, input *redshiftdataapiservice.GetStatementResultInput) (*redshiftdataapiservice.GetStatementResultOutput, error)
-	GetStatementResultAsync(ctx workflow.Context, input *redshiftdataapiservice.GetStatementResultInput) *RedshiftdataapiserviceGetStatementResultResult
+	GetStatementResultAsync(ctx workflow.Context, input *redshiftdataapiservice.GetStatementResultInput) *RedshiftDataAPIServiceGetStatementResultFuture
 
 	ListDatabases(ctx workflow.Context, input *redshiftdataapiservice.ListDatabasesInput) (*redshiftdataapiservice.ListDatabasesOutput, error)
-	ListDatabasesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListDatabasesInput) *RedshiftdataapiserviceListDatabasesResult
+	ListDatabasesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListDatabasesInput) *RedshiftDataAPIServiceListDatabasesFuture
 
 	ListSchemas(ctx workflow.Context, input *redshiftdataapiservice.ListSchemasInput) (*redshiftdataapiservice.ListSchemasOutput, error)
-	ListSchemasAsync(ctx workflow.Context, input *redshiftdataapiservice.ListSchemasInput) *RedshiftdataapiserviceListSchemasResult
+	ListSchemasAsync(ctx workflow.Context, input *redshiftdataapiservice.ListSchemasInput) *RedshiftDataAPIServiceListSchemasFuture
 
 	ListStatements(ctx workflow.Context, input *redshiftdataapiservice.ListStatementsInput) (*redshiftdataapiservice.ListStatementsOutput, error)
-	ListStatementsAsync(ctx workflow.Context, input *redshiftdataapiservice.ListStatementsInput) *RedshiftdataapiserviceListStatementsResult
+	ListStatementsAsync(ctx workflow.Context, input *redshiftdataapiservice.ListStatementsInput) *RedshiftDataAPIServiceListStatementsFuture
 
 	ListTables(ctx workflow.Context, input *redshiftdataapiservice.ListTablesInput) (*redshiftdataapiservice.ListTablesOutput, error)
-	ListTablesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListTablesInput) *RedshiftdataapiserviceListTablesResult
+	ListTablesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListTablesInput) *RedshiftDataAPIServiceListTablesFuture
 }
 
 type RedshiftDataAPIServiceStub struct{}
@@ -44,93 +44,102 @@ func NewRedshiftDataAPIServiceStub() RedshiftDataAPIServiceClient {
 	return &RedshiftDataAPIServiceStub{}
 }
 
-type RedshiftdataapiserviceCancelStatementResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceCancelStatementFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceCancelStatementResult) Get(ctx workflow.Context) (*redshiftdataapiservice.CancelStatementOutput, error) {
+func (r *RedshiftDataAPIServiceCancelStatementFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.CancelStatementOutput, error) {
 	var output redshiftdataapiservice.CancelStatementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftdataapiserviceDescribeStatementResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceDescribeStatementFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceDescribeStatementResult) Get(ctx workflow.Context) (*redshiftdataapiservice.DescribeStatementOutput, error) {
+func (r *RedshiftDataAPIServiceDescribeStatementFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.DescribeStatementOutput, error) {
 	var output redshiftdataapiservice.DescribeStatementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftdataapiserviceDescribeTableResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceDescribeTableFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceDescribeTableResult) Get(ctx workflow.Context) (*redshiftdataapiservice.DescribeTableOutput, error) {
+func (r *RedshiftDataAPIServiceDescribeTableFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.DescribeTableOutput, error) {
 	var output redshiftdataapiservice.DescribeTableOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftdataapiserviceExecuteStatementResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceExecuteStatementFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceExecuteStatementResult) Get(ctx workflow.Context) (*redshiftdataapiservice.ExecuteStatementOutput, error) {
+func (r *RedshiftDataAPIServiceExecuteStatementFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.ExecuteStatementOutput, error) {
 	var output redshiftdataapiservice.ExecuteStatementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftdataapiserviceGetStatementResultResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceGetStatementResultFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceGetStatementResultResult) Get(ctx workflow.Context) (*redshiftdataapiservice.GetStatementResultOutput, error) {
+func (r *RedshiftDataAPIServiceGetStatementResultFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.GetStatementResultOutput, error) {
 	var output redshiftdataapiservice.GetStatementResultOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftdataapiserviceListDatabasesResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceListDatabasesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceListDatabasesResult) Get(ctx workflow.Context) (*redshiftdataapiservice.ListDatabasesOutput, error) {
+func (r *RedshiftDataAPIServiceListDatabasesFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.ListDatabasesOutput, error) {
 	var output redshiftdataapiservice.ListDatabasesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftdataapiserviceListSchemasResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceListSchemasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceListSchemasResult) Get(ctx workflow.Context) (*redshiftdataapiservice.ListSchemasOutput, error) {
+func (r *RedshiftDataAPIServiceListSchemasFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.ListSchemasOutput, error) {
 	var output redshiftdataapiservice.ListSchemasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftdataapiserviceListStatementsResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceListStatementsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceListStatementsResult) Get(ctx workflow.Context) (*redshiftdataapiservice.ListStatementsOutput, error) {
+func (r *RedshiftDataAPIServiceListStatementsFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.ListStatementsOutput, error) {
 	var output redshiftdataapiservice.ListStatementsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftdataapiserviceListTablesResult struct {
-	Result workflow.Future
+type RedshiftDataAPIServiceListTablesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *RedshiftdataapiserviceListTablesResult) Get(ctx workflow.Context) (*redshiftdataapiservice.ListTablesOutput, error) {
+func (r *RedshiftDataAPIServiceListTablesFuture) Get(ctx workflow.Context) (*redshiftdataapiservice.ListTablesOutput, error) {
 	var output redshiftdataapiservice.ListTablesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -140,9 +149,9 @@ func (a *RedshiftDataAPIServiceStub) CancelStatement(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) CancelStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.CancelStatementInput) *RedshiftdataapiserviceCancelStatementResult {
+func (a *RedshiftDataAPIServiceStub) CancelStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.CancelStatementInput) *RedshiftDataAPIServiceCancelStatementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.CancelStatement", input)
-	return &RedshiftdataapiserviceCancelStatementResult{Result: future}
+	return &RedshiftDataAPIServiceCancelStatementFuture{Future: future}
 }
 
 func (a *RedshiftDataAPIServiceStub) DescribeStatement(ctx workflow.Context, input *redshiftdataapiservice.DescribeStatementInput) (*redshiftdataapiservice.DescribeStatementOutput, error) {
@@ -151,9 +160,9 @@ func (a *RedshiftDataAPIServiceStub) DescribeStatement(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) DescribeStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.DescribeStatementInput) *RedshiftdataapiserviceDescribeStatementResult {
+func (a *RedshiftDataAPIServiceStub) DescribeStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.DescribeStatementInput) *RedshiftDataAPIServiceDescribeStatementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.DescribeStatement", input)
-	return &RedshiftdataapiserviceDescribeStatementResult{Result: future}
+	return &RedshiftDataAPIServiceDescribeStatementFuture{Future: future}
 }
 
 func (a *RedshiftDataAPIServiceStub) DescribeTable(ctx workflow.Context, input *redshiftdataapiservice.DescribeTableInput) (*redshiftdataapiservice.DescribeTableOutput, error) {
@@ -162,9 +171,9 @@ func (a *RedshiftDataAPIServiceStub) DescribeTable(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) DescribeTableAsync(ctx workflow.Context, input *redshiftdataapiservice.DescribeTableInput) *RedshiftdataapiserviceDescribeTableResult {
+func (a *RedshiftDataAPIServiceStub) DescribeTableAsync(ctx workflow.Context, input *redshiftdataapiservice.DescribeTableInput) *RedshiftDataAPIServiceDescribeTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.DescribeTable", input)
-	return &RedshiftdataapiserviceDescribeTableResult{Result: future}
+	return &RedshiftDataAPIServiceDescribeTableFuture{Future: future}
 }
 
 func (a *RedshiftDataAPIServiceStub) ExecuteStatement(ctx workflow.Context, input *redshiftdataapiservice.ExecuteStatementInput) (*redshiftdataapiservice.ExecuteStatementOutput, error) {
@@ -173,9 +182,9 @@ func (a *RedshiftDataAPIServiceStub) ExecuteStatement(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) ExecuteStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.ExecuteStatementInput) *RedshiftdataapiserviceExecuteStatementResult {
+func (a *RedshiftDataAPIServiceStub) ExecuteStatementAsync(ctx workflow.Context, input *redshiftdataapiservice.ExecuteStatementInput) *RedshiftDataAPIServiceExecuteStatementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.ExecuteStatement", input)
-	return &RedshiftdataapiserviceExecuteStatementResult{Result: future}
+	return &RedshiftDataAPIServiceExecuteStatementFuture{Future: future}
 }
 
 func (a *RedshiftDataAPIServiceStub) GetStatementResult(ctx workflow.Context, input *redshiftdataapiservice.GetStatementResultInput) (*redshiftdataapiservice.GetStatementResultOutput, error) {
@@ -184,9 +193,9 @@ func (a *RedshiftDataAPIServiceStub) GetStatementResult(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) GetStatementResultAsync(ctx workflow.Context, input *redshiftdataapiservice.GetStatementResultInput) *RedshiftdataapiserviceGetStatementResultResult {
+func (a *RedshiftDataAPIServiceStub) GetStatementResultAsync(ctx workflow.Context, input *redshiftdataapiservice.GetStatementResultInput) *RedshiftDataAPIServiceGetStatementResultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.GetStatementResult", input)
-	return &RedshiftdataapiserviceGetStatementResultResult{Result: future}
+	return &RedshiftDataAPIServiceGetStatementResultFuture{Future: future}
 }
 
 func (a *RedshiftDataAPIServiceStub) ListDatabases(ctx workflow.Context, input *redshiftdataapiservice.ListDatabasesInput) (*redshiftdataapiservice.ListDatabasesOutput, error) {
@@ -195,9 +204,9 @@ func (a *RedshiftDataAPIServiceStub) ListDatabases(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) ListDatabasesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListDatabasesInput) *RedshiftdataapiserviceListDatabasesResult {
+func (a *RedshiftDataAPIServiceStub) ListDatabasesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListDatabasesInput) *RedshiftDataAPIServiceListDatabasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.ListDatabases", input)
-	return &RedshiftdataapiserviceListDatabasesResult{Result: future}
+	return &RedshiftDataAPIServiceListDatabasesFuture{Future: future}
 }
 
 func (a *RedshiftDataAPIServiceStub) ListSchemas(ctx workflow.Context, input *redshiftdataapiservice.ListSchemasInput) (*redshiftdataapiservice.ListSchemasOutput, error) {
@@ -206,9 +215,9 @@ func (a *RedshiftDataAPIServiceStub) ListSchemas(ctx workflow.Context, input *re
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) ListSchemasAsync(ctx workflow.Context, input *redshiftdataapiservice.ListSchemasInput) *RedshiftdataapiserviceListSchemasResult {
+func (a *RedshiftDataAPIServiceStub) ListSchemasAsync(ctx workflow.Context, input *redshiftdataapiservice.ListSchemasInput) *RedshiftDataAPIServiceListSchemasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.ListSchemas", input)
-	return &RedshiftdataapiserviceListSchemasResult{Result: future}
+	return &RedshiftDataAPIServiceListSchemasFuture{Future: future}
 }
 
 func (a *RedshiftDataAPIServiceStub) ListStatements(ctx workflow.Context, input *redshiftdataapiservice.ListStatementsInput) (*redshiftdataapiservice.ListStatementsOutput, error) {
@@ -217,9 +226,9 @@ func (a *RedshiftDataAPIServiceStub) ListStatements(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) ListStatementsAsync(ctx workflow.Context, input *redshiftdataapiservice.ListStatementsInput) *RedshiftdataapiserviceListStatementsResult {
+func (a *RedshiftDataAPIServiceStub) ListStatementsAsync(ctx workflow.Context, input *redshiftdataapiservice.ListStatementsInput) *RedshiftDataAPIServiceListStatementsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.ListStatements", input)
-	return &RedshiftdataapiserviceListStatementsResult{Result: future}
+	return &RedshiftDataAPIServiceListStatementsFuture{Future: future}
 }
 
 func (a *RedshiftDataAPIServiceStub) ListTables(ctx workflow.Context, input *redshiftdataapiservice.ListTablesInput) (*redshiftdataapiservice.ListTablesOutput, error) {
@@ -228,7 +237,7 @@ func (a *RedshiftDataAPIServiceStub) ListTables(ctx workflow.Context, input *red
 	return &output, err
 }
 
-func (a *RedshiftDataAPIServiceStub) ListTablesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListTablesInput) *RedshiftdataapiserviceListTablesResult {
+func (a *RedshiftDataAPIServiceStub) ListTablesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListTablesInput) *RedshiftDataAPIServiceListTablesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshiftdataapiservice.ListTables", input)
-	return &RedshiftdataapiserviceListTablesResult{Result: future}
+	return &RedshiftDataAPIServiceListTablesFuture{Future: future}
 }

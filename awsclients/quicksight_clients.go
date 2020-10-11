@@ -11,301 +11,301 @@ import (
 
 type QuickSightClient interface {
 	CancelIngestion(ctx workflow.Context, input *quicksight.CancelIngestionInput) (*quicksight.CancelIngestionOutput, error)
-	CancelIngestionAsync(ctx workflow.Context, input *quicksight.CancelIngestionInput) *QuicksightCancelIngestionResult
+	CancelIngestionAsync(ctx workflow.Context, input *quicksight.CancelIngestionInput) *QuickSightCancelIngestionFuture
 
 	CreateAccountCustomization(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) (*quicksight.CreateAccountCustomizationOutput, error)
-	CreateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) *QuicksightCreateAccountCustomizationResult
+	CreateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) *QuickSightCreateAccountCustomizationFuture
 
 	CreateAnalysis(ctx workflow.Context, input *quicksight.CreateAnalysisInput) (*quicksight.CreateAnalysisOutput, error)
-	CreateAnalysisAsync(ctx workflow.Context, input *quicksight.CreateAnalysisInput) *QuicksightCreateAnalysisResult
+	CreateAnalysisAsync(ctx workflow.Context, input *quicksight.CreateAnalysisInput) *QuickSightCreateAnalysisFuture
 
 	CreateDashboard(ctx workflow.Context, input *quicksight.CreateDashboardInput) (*quicksight.CreateDashboardOutput, error)
-	CreateDashboardAsync(ctx workflow.Context, input *quicksight.CreateDashboardInput) *QuicksightCreateDashboardResult
+	CreateDashboardAsync(ctx workflow.Context, input *quicksight.CreateDashboardInput) *QuickSightCreateDashboardFuture
 
 	CreateDataSet(ctx workflow.Context, input *quicksight.CreateDataSetInput) (*quicksight.CreateDataSetOutput, error)
-	CreateDataSetAsync(ctx workflow.Context, input *quicksight.CreateDataSetInput) *QuicksightCreateDataSetResult
+	CreateDataSetAsync(ctx workflow.Context, input *quicksight.CreateDataSetInput) *QuickSightCreateDataSetFuture
 
 	CreateDataSource(ctx workflow.Context, input *quicksight.CreateDataSourceInput) (*quicksight.CreateDataSourceOutput, error)
-	CreateDataSourceAsync(ctx workflow.Context, input *quicksight.CreateDataSourceInput) *QuicksightCreateDataSourceResult
+	CreateDataSourceAsync(ctx workflow.Context, input *quicksight.CreateDataSourceInput) *QuickSightCreateDataSourceFuture
 
 	CreateGroup(ctx workflow.Context, input *quicksight.CreateGroupInput) (*quicksight.CreateGroupOutput, error)
-	CreateGroupAsync(ctx workflow.Context, input *quicksight.CreateGroupInput) *QuicksightCreateGroupResult
+	CreateGroupAsync(ctx workflow.Context, input *quicksight.CreateGroupInput) *QuickSightCreateGroupFuture
 
 	CreateGroupMembership(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) (*quicksight.CreateGroupMembershipOutput, error)
-	CreateGroupMembershipAsync(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) *QuicksightCreateGroupMembershipResult
+	CreateGroupMembershipAsync(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) *QuickSightCreateGroupMembershipFuture
 
 	CreateIAMPolicyAssignment(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) (*quicksight.CreateIAMPolicyAssignmentOutput, error)
-	CreateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) *QuicksightCreateIAMPolicyAssignmentResult
+	CreateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) *QuickSightCreateIAMPolicyAssignmentFuture
 
 	CreateIngestion(ctx workflow.Context, input *quicksight.CreateIngestionInput) (*quicksight.CreateIngestionOutput, error)
-	CreateIngestionAsync(ctx workflow.Context, input *quicksight.CreateIngestionInput) *QuicksightCreateIngestionResult
+	CreateIngestionAsync(ctx workflow.Context, input *quicksight.CreateIngestionInput) *QuickSightCreateIngestionFuture
 
 	CreateNamespace(ctx workflow.Context, input *quicksight.CreateNamespaceInput) (*quicksight.CreateNamespaceOutput, error)
-	CreateNamespaceAsync(ctx workflow.Context, input *quicksight.CreateNamespaceInput) *QuicksightCreateNamespaceResult
+	CreateNamespaceAsync(ctx workflow.Context, input *quicksight.CreateNamespaceInput) *QuickSightCreateNamespaceFuture
 
 	CreateTemplate(ctx workflow.Context, input *quicksight.CreateTemplateInput) (*quicksight.CreateTemplateOutput, error)
-	CreateTemplateAsync(ctx workflow.Context, input *quicksight.CreateTemplateInput) *QuicksightCreateTemplateResult
+	CreateTemplateAsync(ctx workflow.Context, input *quicksight.CreateTemplateInput) *QuickSightCreateTemplateFuture
 
 	CreateTemplateAlias(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) (*quicksight.CreateTemplateAliasOutput, error)
-	CreateTemplateAliasAsync(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) *QuicksightCreateTemplateAliasResult
+	CreateTemplateAliasAsync(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) *QuickSightCreateTemplateAliasFuture
 
 	CreateTheme(ctx workflow.Context, input *quicksight.CreateThemeInput) (*quicksight.CreateThemeOutput, error)
-	CreateThemeAsync(ctx workflow.Context, input *quicksight.CreateThemeInput) *QuicksightCreateThemeResult
+	CreateThemeAsync(ctx workflow.Context, input *quicksight.CreateThemeInput) *QuickSightCreateThemeFuture
 
 	CreateThemeAlias(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) (*quicksight.CreateThemeAliasOutput, error)
-	CreateThemeAliasAsync(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) *QuicksightCreateThemeAliasResult
+	CreateThemeAliasAsync(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) *QuickSightCreateThemeAliasFuture
 
 	DeleteAccountCustomization(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) (*quicksight.DeleteAccountCustomizationOutput, error)
-	DeleteAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) *QuicksightDeleteAccountCustomizationResult
+	DeleteAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) *QuickSightDeleteAccountCustomizationFuture
 
 	DeleteAnalysis(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) (*quicksight.DeleteAnalysisOutput, error)
-	DeleteAnalysisAsync(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) *QuicksightDeleteAnalysisResult
+	DeleteAnalysisAsync(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) *QuickSightDeleteAnalysisFuture
 
 	DeleteDashboard(ctx workflow.Context, input *quicksight.DeleteDashboardInput) (*quicksight.DeleteDashboardOutput, error)
-	DeleteDashboardAsync(ctx workflow.Context, input *quicksight.DeleteDashboardInput) *QuicksightDeleteDashboardResult
+	DeleteDashboardAsync(ctx workflow.Context, input *quicksight.DeleteDashboardInput) *QuickSightDeleteDashboardFuture
 
 	DeleteDataSet(ctx workflow.Context, input *quicksight.DeleteDataSetInput) (*quicksight.DeleteDataSetOutput, error)
-	DeleteDataSetAsync(ctx workflow.Context, input *quicksight.DeleteDataSetInput) *QuicksightDeleteDataSetResult
+	DeleteDataSetAsync(ctx workflow.Context, input *quicksight.DeleteDataSetInput) *QuickSightDeleteDataSetFuture
 
 	DeleteDataSource(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) (*quicksight.DeleteDataSourceOutput, error)
-	DeleteDataSourceAsync(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) *QuicksightDeleteDataSourceResult
+	DeleteDataSourceAsync(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) *QuickSightDeleteDataSourceFuture
 
 	DeleteGroup(ctx workflow.Context, input *quicksight.DeleteGroupInput) (*quicksight.DeleteGroupOutput, error)
-	DeleteGroupAsync(ctx workflow.Context, input *quicksight.DeleteGroupInput) *QuicksightDeleteGroupResult
+	DeleteGroupAsync(ctx workflow.Context, input *quicksight.DeleteGroupInput) *QuickSightDeleteGroupFuture
 
 	DeleteGroupMembership(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) (*quicksight.DeleteGroupMembershipOutput, error)
-	DeleteGroupMembershipAsync(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) *QuicksightDeleteGroupMembershipResult
+	DeleteGroupMembershipAsync(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) *QuickSightDeleteGroupMembershipFuture
 
 	DeleteIAMPolicyAssignment(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) (*quicksight.DeleteIAMPolicyAssignmentOutput, error)
-	DeleteIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) *QuicksightDeleteIAMPolicyAssignmentResult
+	DeleteIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) *QuickSightDeleteIAMPolicyAssignmentFuture
 
 	DeleteNamespace(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) (*quicksight.DeleteNamespaceOutput, error)
-	DeleteNamespaceAsync(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) *QuicksightDeleteNamespaceResult
+	DeleteNamespaceAsync(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) *QuickSightDeleteNamespaceFuture
 
 	DeleteTemplate(ctx workflow.Context, input *quicksight.DeleteTemplateInput) (*quicksight.DeleteTemplateOutput, error)
-	DeleteTemplateAsync(ctx workflow.Context, input *quicksight.DeleteTemplateInput) *QuicksightDeleteTemplateResult
+	DeleteTemplateAsync(ctx workflow.Context, input *quicksight.DeleteTemplateInput) *QuickSightDeleteTemplateFuture
 
 	DeleteTemplateAlias(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) (*quicksight.DeleteTemplateAliasOutput, error)
-	DeleteTemplateAliasAsync(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) *QuicksightDeleteTemplateAliasResult
+	DeleteTemplateAliasAsync(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) *QuickSightDeleteTemplateAliasFuture
 
 	DeleteTheme(ctx workflow.Context, input *quicksight.DeleteThemeInput) (*quicksight.DeleteThemeOutput, error)
-	DeleteThemeAsync(ctx workflow.Context, input *quicksight.DeleteThemeInput) *QuicksightDeleteThemeResult
+	DeleteThemeAsync(ctx workflow.Context, input *quicksight.DeleteThemeInput) *QuickSightDeleteThemeFuture
 
 	DeleteThemeAlias(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) (*quicksight.DeleteThemeAliasOutput, error)
-	DeleteThemeAliasAsync(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) *QuicksightDeleteThemeAliasResult
+	DeleteThemeAliasAsync(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) *QuickSightDeleteThemeAliasFuture
 
 	DeleteUser(ctx workflow.Context, input *quicksight.DeleteUserInput) (*quicksight.DeleteUserOutput, error)
-	DeleteUserAsync(ctx workflow.Context, input *quicksight.DeleteUserInput) *QuicksightDeleteUserResult
+	DeleteUserAsync(ctx workflow.Context, input *quicksight.DeleteUserInput) *QuickSightDeleteUserFuture
 
 	DeleteUserByPrincipalId(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) (*quicksight.DeleteUserByPrincipalIdOutput, error)
-	DeleteUserByPrincipalIdAsync(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) *QuicksightDeleteUserByPrincipalIdResult
+	DeleteUserByPrincipalIdAsync(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) *QuickSightDeleteUserByPrincipalIdFuture
 
 	DescribeAccountCustomization(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) (*quicksight.DescribeAccountCustomizationOutput, error)
-	DescribeAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) *QuicksightDescribeAccountCustomizationResult
+	DescribeAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) *QuickSightDescribeAccountCustomizationFuture
 
 	DescribeAccountSettings(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) (*quicksight.DescribeAccountSettingsOutput, error)
-	DescribeAccountSettingsAsync(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) *QuicksightDescribeAccountSettingsResult
+	DescribeAccountSettingsAsync(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) *QuickSightDescribeAccountSettingsFuture
 
 	DescribeAnalysis(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) (*quicksight.DescribeAnalysisOutput, error)
-	DescribeAnalysisAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) *QuicksightDescribeAnalysisResult
+	DescribeAnalysisAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) *QuickSightDescribeAnalysisFuture
 
 	DescribeAnalysisPermissions(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) (*quicksight.DescribeAnalysisPermissionsOutput, error)
-	DescribeAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) *QuicksightDescribeAnalysisPermissionsResult
+	DescribeAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) *QuickSightDescribeAnalysisPermissionsFuture
 
 	DescribeDashboard(ctx workflow.Context, input *quicksight.DescribeDashboardInput) (*quicksight.DescribeDashboardOutput, error)
-	DescribeDashboardAsync(ctx workflow.Context, input *quicksight.DescribeDashboardInput) *QuicksightDescribeDashboardResult
+	DescribeDashboardAsync(ctx workflow.Context, input *quicksight.DescribeDashboardInput) *QuickSightDescribeDashboardFuture
 
 	DescribeDashboardPermissions(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) (*quicksight.DescribeDashboardPermissionsOutput, error)
-	DescribeDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) *QuicksightDescribeDashboardPermissionsResult
+	DescribeDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) *QuickSightDescribeDashboardPermissionsFuture
 
 	DescribeDataSet(ctx workflow.Context, input *quicksight.DescribeDataSetInput) (*quicksight.DescribeDataSetOutput, error)
-	DescribeDataSetAsync(ctx workflow.Context, input *quicksight.DescribeDataSetInput) *QuicksightDescribeDataSetResult
+	DescribeDataSetAsync(ctx workflow.Context, input *quicksight.DescribeDataSetInput) *QuickSightDescribeDataSetFuture
 
 	DescribeDataSetPermissions(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) (*quicksight.DescribeDataSetPermissionsOutput, error)
-	DescribeDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) *QuicksightDescribeDataSetPermissionsResult
+	DescribeDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) *QuickSightDescribeDataSetPermissionsFuture
 
 	DescribeDataSource(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) (*quicksight.DescribeDataSourceOutput, error)
-	DescribeDataSourceAsync(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) *QuicksightDescribeDataSourceResult
+	DescribeDataSourceAsync(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) *QuickSightDescribeDataSourceFuture
 
 	DescribeDataSourcePermissions(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) (*quicksight.DescribeDataSourcePermissionsOutput, error)
-	DescribeDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) *QuicksightDescribeDataSourcePermissionsResult
+	DescribeDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) *QuickSightDescribeDataSourcePermissionsFuture
 
 	DescribeGroup(ctx workflow.Context, input *quicksight.DescribeGroupInput) (*quicksight.DescribeGroupOutput, error)
-	DescribeGroupAsync(ctx workflow.Context, input *quicksight.DescribeGroupInput) *QuicksightDescribeGroupResult
+	DescribeGroupAsync(ctx workflow.Context, input *quicksight.DescribeGroupInput) *QuickSightDescribeGroupFuture
 
 	DescribeIAMPolicyAssignment(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) (*quicksight.DescribeIAMPolicyAssignmentOutput, error)
-	DescribeIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) *QuicksightDescribeIAMPolicyAssignmentResult
+	DescribeIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) *QuickSightDescribeIAMPolicyAssignmentFuture
 
 	DescribeIngestion(ctx workflow.Context, input *quicksight.DescribeIngestionInput) (*quicksight.DescribeIngestionOutput, error)
-	DescribeIngestionAsync(ctx workflow.Context, input *quicksight.DescribeIngestionInput) *QuicksightDescribeIngestionResult
+	DescribeIngestionAsync(ctx workflow.Context, input *quicksight.DescribeIngestionInput) *QuickSightDescribeIngestionFuture
 
 	DescribeNamespace(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) (*quicksight.DescribeNamespaceOutput, error)
-	DescribeNamespaceAsync(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) *QuicksightDescribeNamespaceResult
+	DescribeNamespaceAsync(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) *QuickSightDescribeNamespaceFuture
 
 	DescribeTemplate(ctx workflow.Context, input *quicksight.DescribeTemplateInput) (*quicksight.DescribeTemplateOutput, error)
-	DescribeTemplateAsync(ctx workflow.Context, input *quicksight.DescribeTemplateInput) *QuicksightDescribeTemplateResult
+	DescribeTemplateAsync(ctx workflow.Context, input *quicksight.DescribeTemplateInput) *QuickSightDescribeTemplateFuture
 
 	DescribeTemplateAlias(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) (*quicksight.DescribeTemplateAliasOutput, error)
-	DescribeTemplateAliasAsync(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) *QuicksightDescribeTemplateAliasResult
+	DescribeTemplateAliasAsync(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) *QuickSightDescribeTemplateAliasFuture
 
 	DescribeTemplatePermissions(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) (*quicksight.DescribeTemplatePermissionsOutput, error)
-	DescribeTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) *QuicksightDescribeTemplatePermissionsResult
+	DescribeTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) *QuickSightDescribeTemplatePermissionsFuture
 
 	DescribeTheme(ctx workflow.Context, input *quicksight.DescribeThemeInput) (*quicksight.DescribeThemeOutput, error)
-	DescribeThemeAsync(ctx workflow.Context, input *quicksight.DescribeThemeInput) *QuicksightDescribeThemeResult
+	DescribeThemeAsync(ctx workflow.Context, input *quicksight.DescribeThemeInput) *QuickSightDescribeThemeFuture
 
 	DescribeThemeAlias(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) (*quicksight.DescribeThemeAliasOutput, error)
-	DescribeThemeAliasAsync(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) *QuicksightDescribeThemeAliasResult
+	DescribeThemeAliasAsync(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) *QuickSightDescribeThemeAliasFuture
 
 	DescribeThemePermissions(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) (*quicksight.DescribeThemePermissionsOutput, error)
-	DescribeThemePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) *QuicksightDescribeThemePermissionsResult
+	DescribeThemePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) *QuickSightDescribeThemePermissionsFuture
 
 	DescribeUser(ctx workflow.Context, input *quicksight.DescribeUserInput) (*quicksight.DescribeUserOutput, error)
-	DescribeUserAsync(ctx workflow.Context, input *quicksight.DescribeUserInput) *QuicksightDescribeUserResult
+	DescribeUserAsync(ctx workflow.Context, input *quicksight.DescribeUserInput) *QuickSightDescribeUserFuture
 
 	GetDashboardEmbedUrl(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) (*quicksight.GetDashboardEmbedUrlOutput, error)
-	GetDashboardEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) *QuicksightGetDashboardEmbedUrlResult
+	GetDashboardEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) *QuickSightGetDashboardEmbedUrlFuture
 
 	GetSessionEmbedUrl(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) (*quicksight.GetSessionEmbedUrlOutput, error)
-	GetSessionEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) *QuicksightGetSessionEmbedUrlResult
+	GetSessionEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) *QuickSightGetSessionEmbedUrlFuture
 
 	ListAnalyses(ctx workflow.Context, input *quicksight.ListAnalysesInput) (*quicksight.ListAnalysesOutput, error)
-	ListAnalysesAsync(ctx workflow.Context, input *quicksight.ListAnalysesInput) *QuicksightListAnalysesResult
+	ListAnalysesAsync(ctx workflow.Context, input *quicksight.ListAnalysesInput) *QuickSightListAnalysesFuture
 
 	ListDashboardVersions(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) (*quicksight.ListDashboardVersionsOutput, error)
-	ListDashboardVersionsAsync(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) *QuicksightListDashboardVersionsResult
+	ListDashboardVersionsAsync(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) *QuickSightListDashboardVersionsFuture
 
 	ListDashboards(ctx workflow.Context, input *quicksight.ListDashboardsInput) (*quicksight.ListDashboardsOutput, error)
-	ListDashboardsAsync(ctx workflow.Context, input *quicksight.ListDashboardsInput) *QuicksightListDashboardsResult
+	ListDashboardsAsync(ctx workflow.Context, input *quicksight.ListDashboardsInput) *QuickSightListDashboardsFuture
 
 	ListDataSets(ctx workflow.Context, input *quicksight.ListDataSetsInput) (*quicksight.ListDataSetsOutput, error)
-	ListDataSetsAsync(ctx workflow.Context, input *quicksight.ListDataSetsInput) *QuicksightListDataSetsResult
+	ListDataSetsAsync(ctx workflow.Context, input *quicksight.ListDataSetsInput) *QuickSightListDataSetsFuture
 
 	ListDataSources(ctx workflow.Context, input *quicksight.ListDataSourcesInput) (*quicksight.ListDataSourcesOutput, error)
-	ListDataSourcesAsync(ctx workflow.Context, input *quicksight.ListDataSourcesInput) *QuicksightListDataSourcesResult
+	ListDataSourcesAsync(ctx workflow.Context, input *quicksight.ListDataSourcesInput) *QuickSightListDataSourcesFuture
 
 	ListGroupMemberships(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) (*quicksight.ListGroupMembershipsOutput, error)
-	ListGroupMembershipsAsync(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) *QuicksightListGroupMembershipsResult
+	ListGroupMembershipsAsync(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) *QuickSightListGroupMembershipsFuture
 
 	ListGroups(ctx workflow.Context, input *quicksight.ListGroupsInput) (*quicksight.ListGroupsOutput, error)
-	ListGroupsAsync(ctx workflow.Context, input *quicksight.ListGroupsInput) *QuicksightListGroupsResult
+	ListGroupsAsync(ctx workflow.Context, input *quicksight.ListGroupsInput) *QuickSightListGroupsFuture
 
 	ListIAMPolicyAssignments(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) (*quicksight.ListIAMPolicyAssignmentsOutput, error)
-	ListIAMPolicyAssignmentsAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) *QuicksightListIAMPolicyAssignmentsResult
+	ListIAMPolicyAssignmentsAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) *QuickSightListIAMPolicyAssignmentsFuture
 
 	ListIAMPolicyAssignmentsForUser(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) (*quicksight.ListIAMPolicyAssignmentsForUserOutput, error)
-	ListIAMPolicyAssignmentsForUserAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) *QuicksightListIAMPolicyAssignmentsForUserResult
+	ListIAMPolicyAssignmentsForUserAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) *QuickSightListIAMPolicyAssignmentsForUserFuture
 
 	ListIngestions(ctx workflow.Context, input *quicksight.ListIngestionsInput) (*quicksight.ListIngestionsOutput, error)
-	ListIngestionsAsync(ctx workflow.Context, input *quicksight.ListIngestionsInput) *QuicksightListIngestionsResult
+	ListIngestionsAsync(ctx workflow.Context, input *quicksight.ListIngestionsInput) *QuickSightListIngestionsFuture
 
 	ListNamespaces(ctx workflow.Context, input *quicksight.ListNamespacesInput) (*quicksight.ListNamespacesOutput, error)
-	ListNamespacesAsync(ctx workflow.Context, input *quicksight.ListNamespacesInput) *QuicksightListNamespacesResult
+	ListNamespacesAsync(ctx workflow.Context, input *quicksight.ListNamespacesInput) *QuickSightListNamespacesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) (*quicksight.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) *QuicksightListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) *QuickSightListTagsForResourceFuture
 
 	ListTemplateAliases(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) (*quicksight.ListTemplateAliasesOutput, error)
-	ListTemplateAliasesAsync(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) *QuicksightListTemplateAliasesResult
+	ListTemplateAliasesAsync(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) *QuickSightListTemplateAliasesFuture
 
 	ListTemplateVersions(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) (*quicksight.ListTemplateVersionsOutput, error)
-	ListTemplateVersionsAsync(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) *QuicksightListTemplateVersionsResult
+	ListTemplateVersionsAsync(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) *QuickSightListTemplateVersionsFuture
 
 	ListTemplates(ctx workflow.Context, input *quicksight.ListTemplatesInput) (*quicksight.ListTemplatesOutput, error)
-	ListTemplatesAsync(ctx workflow.Context, input *quicksight.ListTemplatesInput) *QuicksightListTemplatesResult
+	ListTemplatesAsync(ctx workflow.Context, input *quicksight.ListTemplatesInput) *QuickSightListTemplatesFuture
 
 	ListThemeAliases(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) (*quicksight.ListThemeAliasesOutput, error)
-	ListThemeAliasesAsync(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) *QuicksightListThemeAliasesResult
+	ListThemeAliasesAsync(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) *QuickSightListThemeAliasesFuture
 
 	ListThemeVersions(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) (*quicksight.ListThemeVersionsOutput, error)
-	ListThemeVersionsAsync(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) *QuicksightListThemeVersionsResult
+	ListThemeVersionsAsync(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) *QuickSightListThemeVersionsFuture
 
 	ListThemes(ctx workflow.Context, input *quicksight.ListThemesInput) (*quicksight.ListThemesOutput, error)
-	ListThemesAsync(ctx workflow.Context, input *quicksight.ListThemesInput) *QuicksightListThemesResult
+	ListThemesAsync(ctx workflow.Context, input *quicksight.ListThemesInput) *QuickSightListThemesFuture
 
 	ListUserGroups(ctx workflow.Context, input *quicksight.ListUserGroupsInput) (*quicksight.ListUserGroupsOutput, error)
-	ListUserGroupsAsync(ctx workflow.Context, input *quicksight.ListUserGroupsInput) *QuicksightListUserGroupsResult
+	ListUserGroupsAsync(ctx workflow.Context, input *quicksight.ListUserGroupsInput) *QuickSightListUserGroupsFuture
 
 	ListUsers(ctx workflow.Context, input *quicksight.ListUsersInput) (*quicksight.ListUsersOutput, error)
-	ListUsersAsync(ctx workflow.Context, input *quicksight.ListUsersInput) *QuicksightListUsersResult
+	ListUsersAsync(ctx workflow.Context, input *quicksight.ListUsersInput) *QuickSightListUsersFuture
 
 	RegisterUser(ctx workflow.Context, input *quicksight.RegisterUserInput) (*quicksight.RegisterUserOutput, error)
-	RegisterUserAsync(ctx workflow.Context, input *quicksight.RegisterUserInput) *QuicksightRegisterUserResult
+	RegisterUserAsync(ctx workflow.Context, input *quicksight.RegisterUserInput) *QuickSightRegisterUserFuture
 
 	RestoreAnalysis(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) (*quicksight.RestoreAnalysisOutput, error)
-	RestoreAnalysisAsync(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) *QuicksightRestoreAnalysisResult
+	RestoreAnalysisAsync(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) *QuickSightRestoreAnalysisFuture
 
 	SearchAnalyses(ctx workflow.Context, input *quicksight.SearchAnalysesInput) (*quicksight.SearchAnalysesOutput, error)
-	SearchAnalysesAsync(ctx workflow.Context, input *quicksight.SearchAnalysesInput) *QuicksightSearchAnalysesResult
+	SearchAnalysesAsync(ctx workflow.Context, input *quicksight.SearchAnalysesInput) *QuickSightSearchAnalysesFuture
 
 	SearchDashboards(ctx workflow.Context, input *quicksight.SearchDashboardsInput) (*quicksight.SearchDashboardsOutput, error)
-	SearchDashboardsAsync(ctx workflow.Context, input *quicksight.SearchDashboardsInput) *QuicksightSearchDashboardsResult
+	SearchDashboardsAsync(ctx workflow.Context, input *quicksight.SearchDashboardsInput) *QuickSightSearchDashboardsFuture
 
 	TagResource(ctx workflow.Context, input *quicksight.TagResourceInput) (*quicksight.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *quicksight.TagResourceInput) *QuicksightTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *quicksight.TagResourceInput) *QuickSightTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *quicksight.UntagResourceInput) (*quicksight.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *quicksight.UntagResourceInput) *QuicksightUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *quicksight.UntagResourceInput) *QuickSightUntagResourceFuture
 
 	UpdateAccountCustomization(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) (*quicksight.UpdateAccountCustomizationOutput, error)
-	UpdateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) *QuicksightUpdateAccountCustomizationResult
+	UpdateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) *QuickSightUpdateAccountCustomizationFuture
 
 	UpdateAccountSettings(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) (*quicksight.UpdateAccountSettingsOutput, error)
-	UpdateAccountSettingsAsync(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) *QuicksightUpdateAccountSettingsResult
+	UpdateAccountSettingsAsync(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) *QuickSightUpdateAccountSettingsFuture
 
 	UpdateAnalysis(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) (*quicksight.UpdateAnalysisOutput, error)
-	UpdateAnalysisAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) *QuicksightUpdateAnalysisResult
+	UpdateAnalysisAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) *QuickSightUpdateAnalysisFuture
 
 	UpdateAnalysisPermissions(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) (*quicksight.UpdateAnalysisPermissionsOutput, error)
-	UpdateAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) *QuicksightUpdateAnalysisPermissionsResult
+	UpdateAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) *QuickSightUpdateAnalysisPermissionsFuture
 
 	UpdateDashboard(ctx workflow.Context, input *quicksight.UpdateDashboardInput) (*quicksight.UpdateDashboardOutput, error)
-	UpdateDashboardAsync(ctx workflow.Context, input *quicksight.UpdateDashboardInput) *QuicksightUpdateDashboardResult
+	UpdateDashboardAsync(ctx workflow.Context, input *quicksight.UpdateDashboardInput) *QuickSightUpdateDashboardFuture
 
 	UpdateDashboardPermissions(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) (*quicksight.UpdateDashboardPermissionsOutput, error)
-	UpdateDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) *QuicksightUpdateDashboardPermissionsResult
+	UpdateDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) *QuickSightUpdateDashboardPermissionsFuture
 
 	UpdateDashboardPublishedVersion(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) (*quicksight.UpdateDashboardPublishedVersionOutput, error)
-	UpdateDashboardPublishedVersionAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) *QuicksightUpdateDashboardPublishedVersionResult
+	UpdateDashboardPublishedVersionAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) *QuickSightUpdateDashboardPublishedVersionFuture
 
 	UpdateDataSet(ctx workflow.Context, input *quicksight.UpdateDataSetInput) (*quicksight.UpdateDataSetOutput, error)
-	UpdateDataSetAsync(ctx workflow.Context, input *quicksight.UpdateDataSetInput) *QuicksightUpdateDataSetResult
+	UpdateDataSetAsync(ctx workflow.Context, input *quicksight.UpdateDataSetInput) *QuickSightUpdateDataSetFuture
 
 	UpdateDataSetPermissions(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) (*quicksight.UpdateDataSetPermissionsOutput, error)
-	UpdateDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) *QuicksightUpdateDataSetPermissionsResult
+	UpdateDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) *QuickSightUpdateDataSetPermissionsFuture
 
 	UpdateDataSource(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) (*quicksight.UpdateDataSourceOutput, error)
-	UpdateDataSourceAsync(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) *QuicksightUpdateDataSourceResult
+	UpdateDataSourceAsync(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) *QuickSightUpdateDataSourceFuture
 
 	UpdateDataSourcePermissions(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) (*quicksight.UpdateDataSourcePermissionsOutput, error)
-	UpdateDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) *QuicksightUpdateDataSourcePermissionsResult
+	UpdateDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) *QuickSightUpdateDataSourcePermissionsFuture
 
 	UpdateGroup(ctx workflow.Context, input *quicksight.UpdateGroupInput) (*quicksight.UpdateGroupOutput, error)
-	UpdateGroupAsync(ctx workflow.Context, input *quicksight.UpdateGroupInput) *QuicksightUpdateGroupResult
+	UpdateGroupAsync(ctx workflow.Context, input *quicksight.UpdateGroupInput) *QuickSightUpdateGroupFuture
 
 	UpdateIAMPolicyAssignment(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) (*quicksight.UpdateIAMPolicyAssignmentOutput, error)
-	UpdateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) *QuicksightUpdateIAMPolicyAssignmentResult
+	UpdateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) *QuickSightUpdateIAMPolicyAssignmentFuture
 
 	UpdateTemplate(ctx workflow.Context, input *quicksight.UpdateTemplateInput) (*quicksight.UpdateTemplateOutput, error)
-	UpdateTemplateAsync(ctx workflow.Context, input *quicksight.UpdateTemplateInput) *QuicksightUpdateTemplateResult
+	UpdateTemplateAsync(ctx workflow.Context, input *quicksight.UpdateTemplateInput) *QuickSightUpdateTemplateFuture
 
 	UpdateTemplateAlias(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) (*quicksight.UpdateTemplateAliasOutput, error)
-	UpdateTemplateAliasAsync(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) *QuicksightUpdateTemplateAliasResult
+	UpdateTemplateAliasAsync(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) *QuickSightUpdateTemplateAliasFuture
 
 	UpdateTemplatePermissions(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) (*quicksight.UpdateTemplatePermissionsOutput, error)
-	UpdateTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) *QuicksightUpdateTemplatePermissionsResult
+	UpdateTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) *QuickSightUpdateTemplatePermissionsFuture
 
 	UpdateTheme(ctx workflow.Context, input *quicksight.UpdateThemeInput) (*quicksight.UpdateThemeOutput, error)
-	UpdateThemeAsync(ctx workflow.Context, input *quicksight.UpdateThemeInput) *QuicksightUpdateThemeResult
+	UpdateThemeAsync(ctx workflow.Context, input *quicksight.UpdateThemeInput) *QuickSightUpdateThemeFuture
 
 	UpdateThemeAlias(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) (*quicksight.UpdateThemeAliasOutput, error)
-	UpdateThemeAliasAsync(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) *QuicksightUpdateThemeAliasResult
+	UpdateThemeAliasAsync(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) *QuickSightUpdateThemeAliasFuture
 
 	UpdateThemePermissions(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) (*quicksight.UpdateThemePermissionsOutput, error)
-	UpdateThemePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) *QuicksightUpdateThemePermissionsResult
+	UpdateThemePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) *QuickSightUpdateThemePermissionsFuture
 
 	UpdateUser(ctx workflow.Context, input *quicksight.UpdateUserInput) (*quicksight.UpdateUserOutput, error)
-	UpdateUserAsync(ctx workflow.Context, input *quicksight.UpdateUserInput) *QuicksightUpdateUserResult
+	UpdateUserAsync(ctx workflow.Context, input *quicksight.UpdateUserInput) *QuickSightUpdateUserFuture
 }
 
 type QuickSightStub struct{}
@@ -314,993 +314,1092 @@ func NewQuickSightStub() QuickSightClient {
 	return &QuickSightStub{}
 }
 
-type QuicksightCancelIngestionResult struct {
-	Result workflow.Future
+type QuickSightCancelIngestionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCancelIngestionResult) Get(ctx workflow.Context) (*quicksight.CancelIngestionOutput, error) {
+func (r *QuickSightCancelIngestionFuture) Get(ctx workflow.Context) (*quicksight.CancelIngestionOutput, error) {
 	var output quicksight.CancelIngestionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateAccountCustomizationResult struct {
-	Result workflow.Future
+type QuickSightCreateAccountCustomizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateAccountCustomizationResult) Get(ctx workflow.Context) (*quicksight.CreateAccountCustomizationOutput, error) {
+func (r *QuickSightCreateAccountCustomizationFuture) Get(ctx workflow.Context) (*quicksight.CreateAccountCustomizationOutput, error) {
 	var output quicksight.CreateAccountCustomizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateAnalysisResult struct {
-	Result workflow.Future
+type QuickSightCreateAnalysisFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateAnalysisResult) Get(ctx workflow.Context) (*quicksight.CreateAnalysisOutput, error) {
+func (r *QuickSightCreateAnalysisFuture) Get(ctx workflow.Context) (*quicksight.CreateAnalysisOutput, error) {
 	var output quicksight.CreateAnalysisOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateDashboardResult struct {
-	Result workflow.Future
+type QuickSightCreateDashboardFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateDashboardResult) Get(ctx workflow.Context) (*quicksight.CreateDashboardOutput, error) {
+func (r *QuickSightCreateDashboardFuture) Get(ctx workflow.Context) (*quicksight.CreateDashboardOutput, error) {
 	var output quicksight.CreateDashboardOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateDataSetResult struct {
-	Result workflow.Future
+type QuickSightCreateDataSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateDataSetResult) Get(ctx workflow.Context) (*quicksight.CreateDataSetOutput, error) {
+func (r *QuickSightCreateDataSetFuture) Get(ctx workflow.Context) (*quicksight.CreateDataSetOutput, error) {
 	var output quicksight.CreateDataSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateDataSourceResult struct {
-	Result workflow.Future
+type QuickSightCreateDataSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateDataSourceResult) Get(ctx workflow.Context) (*quicksight.CreateDataSourceOutput, error) {
+func (r *QuickSightCreateDataSourceFuture) Get(ctx workflow.Context) (*quicksight.CreateDataSourceOutput, error) {
 	var output quicksight.CreateDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateGroupResult struct {
-	Result workflow.Future
+type QuickSightCreateGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateGroupResult) Get(ctx workflow.Context) (*quicksight.CreateGroupOutput, error) {
+func (r *QuickSightCreateGroupFuture) Get(ctx workflow.Context) (*quicksight.CreateGroupOutput, error) {
 	var output quicksight.CreateGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateGroupMembershipResult struct {
-	Result workflow.Future
+type QuickSightCreateGroupMembershipFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateGroupMembershipResult) Get(ctx workflow.Context) (*quicksight.CreateGroupMembershipOutput, error) {
+func (r *QuickSightCreateGroupMembershipFuture) Get(ctx workflow.Context) (*quicksight.CreateGroupMembershipOutput, error) {
 	var output quicksight.CreateGroupMembershipOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateIAMPolicyAssignmentResult struct {
-	Result workflow.Future
+type QuickSightCreateIAMPolicyAssignmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateIAMPolicyAssignmentResult) Get(ctx workflow.Context) (*quicksight.CreateIAMPolicyAssignmentOutput, error) {
+func (r *QuickSightCreateIAMPolicyAssignmentFuture) Get(ctx workflow.Context) (*quicksight.CreateIAMPolicyAssignmentOutput, error) {
 	var output quicksight.CreateIAMPolicyAssignmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateIngestionResult struct {
-	Result workflow.Future
+type QuickSightCreateIngestionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateIngestionResult) Get(ctx workflow.Context) (*quicksight.CreateIngestionOutput, error) {
+func (r *QuickSightCreateIngestionFuture) Get(ctx workflow.Context) (*quicksight.CreateIngestionOutput, error) {
 	var output quicksight.CreateIngestionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateNamespaceResult struct {
-	Result workflow.Future
+type QuickSightCreateNamespaceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateNamespaceResult) Get(ctx workflow.Context) (*quicksight.CreateNamespaceOutput, error) {
+func (r *QuickSightCreateNamespaceFuture) Get(ctx workflow.Context) (*quicksight.CreateNamespaceOutput, error) {
 	var output quicksight.CreateNamespaceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateTemplateResult struct {
-	Result workflow.Future
+type QuickSightCreateTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateTemplateResult) Get(ctx workflow.Context) (*quicksight.CreateTemplateOutput, error) {
+func (r *QuickSightCreateTemplateFuture) Get(ctx workflow.Context) (*quicksight.CreateTemplateOutput, error) {
 	var output quicksight.CreateTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateTemplateAliasResult struct {
-	Result workflow.Future
+type QuickSightCreateTemplateAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateTemplateAliasResult) Get(ctx workflow.Context) (*quicksight.CreateTemplateAliasOutput, error) {
+func (r *QuickSightCreateTemplateAliasFuture) Get(ctx workflow.Context) (*quicksight.CreateTemplateAliasOutput, error) {
 	var output quicksight.CreateTemplateAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateThemeResult struct {
-	Result workflow.Future
+type QuickSightCreateThemeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateThemeResult) Get(ctx workflow.Context) (*quicksight.CreateThemeOutput, error) {
+func (r *QuickSightCreateThemeFuture) Get(ctx workflow.Context) (*quicksight.CreateThemeOutput, error) {
 	var output quicksight.CreateThemeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightCreateThemeAliasResult struct {
-	Result workflow.Future
+type QuickSightCreateThemeAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightCreateThemeAliasResult) Get(ctx workflow.Context) (*quicksight.CreateThemeAliasOutput, error) {
+func (r *QuickSightCreateThemeAliasFuture) Get(ctx workflow.Context) (*quicksight.CreateThemeAliasOutput, error) {
 	var output quicksight.CreateThemeAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteAccountCustomizationResult struct {
-	Result workflow.Future
+type QuickSightDeleteAccountCustomizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteAccountCustomizationResult) Get(ctx workflow.Context) (*quicksight.DeleteAccountCustomizationOutput, error) {
+func (r *QuickSightDeleteAccountCustomizationFuture) Get(ctx workflow.Context) (*quicksight.DeleteAccountCustomizationOutput, error) {
 	var output quicksight.DeleteAccountCustomizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteAnalysisResult struct {
-	Result workflow.Future
+type QuickSightDeleteAnalysisFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteAnalysisResult) Get(ctx workflow.Context) (*quicksight.DeleteAnalysisOutput, error) {
+func (r *QuickSightDeleteAnalysisFuture) Get(ctx workflow.Context) (*quicksight.DeleteAnalysisOutput, error) {
 	var output quicksight.DeleteAnalysisOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteDashboardResult struct {
-	Result workflow.Future
+type QuickSightDeleteDashboardFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteDashboardResult) Get(ctx workflow.Context) (*quicksight.DeleteDashboardOutput, error) {
+func (r *QuickSightDeleteDashboardFuture) Get(ctx workflow.Context) (*quicksight.DeleteDashboardOutput, error) {
 	var output quicksight.DeleteDashboardOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteDataSetResult struct {
-	Result workflow.Future
+type QuickSightDeleteDataSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteDataSetResult) Get(ctx workflow.Context) (*quicksight.DeleteDataSetOutput, error) {
+func (r *QuickSightDeleteDataSetFuture) Get(ctx workflow.Context) (*quicksight.DeleteDataSetOutput, error) {
 	var output quicksight.DeleteDataSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteDataSourceResult struct {
-	Result workflow.Future
+type QuickSightDeleteDataSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteDataSourceResult) Get(ctx workflow.Context) (*quicksight.DeleteDataSourceOutput, error) {
+func (r *QuickSightDeleteDataSourceFuture) Get(ctx workflow.Context) (*quicksight.DeleteDataSourceOutput, error) {
 	var output quicksight.DeleteDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteGroupResult struct {
-	Result workflow.Future
+type QuickSightDeleteGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteGroupResult) Get(ctx workflow.Context) (*quicksight.DeleteGroupOutput, error) {
+func (r *QuickSightDeleteGroupFuture) Get(ctx workflow.Context) (*quicksight.DeleteGroupOutput, error) {
 	var output quicksight.DeleteGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteGroupMembershipResult struct {
-	Result workflow.Future
+type QuickSightDeleteGroupMembershipFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteGroupMembershipResult) Get(ctx workflow.Context) (*quicksight.DeleteGroupMembershipOutput, error) {
+func (r *QuickSightDeleteGroupMembershipFuture) Get(ctx workflow.Context) (*quicksight.DeleteGroupMembershipOutput, error) {
 	var output quicksight.DeleteGroupMembershipOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteIAMPolicyAssignmentResult struct {
-	Result workflow.Future
+type QuickSightDeleteIAMPolicyAssignmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteIAMPolicyAssignmentResult) Get(ctx workflow.Context) (*quicksight.DeleteIAMPolicyAssignmentOutput, error) {
+func (r *QuickSightDeleteIAMPolicyAssignmentFuture) Get(ctx workflow.Context) (*quicksight.DeleteIAMPolicyAssignmentOutput, error) {
 	var output quicksight.DeleteIAMPolicyAssignmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteNamespaceResult struct {
-	Result workflow.Future
+type QuickSightDeleteNamespaceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteNamespaceResult) Get(ctx workflow.Context) (*quicksight.DeleteNamespaceOutput, error) {
+func (r *QuickSightDeleteNamespaceFuture) Get(ctx workflow.Context) (*quicksight.DeleteNamespaceOutput, error) {
 	var output quicksight.DeleteNamespaceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteTemplateResult struct {
-	Result workflow.Future
+type QuickSightDeleteTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteTemplateResult) Get(ctx workflow.Context) (*quicksight.DeleteTemplateOutput, error) {
+func (r *QuickSightDeleteTemplateFuture) Get(ctx workflow.Context) (*quicksight.DeleteTemplateOutput, error) {
 	var output quicksight.DeleteTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteTemplateAliasResult struct {
-	Result workflow.Future
+type QuickSightDeleteTemplateAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteTemplateAliasResult) Get(ctx workflow.Context) (*quicksight.DeleteTemplateAliasOutput, error) {
+func (r *QuickSightDeleteTemplateAliasFuture) Get(ctx workflow.Context) (*quicksight.DeleteTemplateAliasOutput, error) {
 	var output quicksight.DeleteTemplateAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteThemeResult struct {
-	Result workflow.Future
+type QuickSightDeleteThemeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteThemeResult) Get(ctx workflow.Context) (*quicksight.DeleteThemeOutput, error) {
+func (r *QuickSightDeleteThemeFuture) Get(ctx workflow.Context) (*quicksight.DeleteThemeOutput, error) {
 	var output quicksight.DeleteThemeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteThemeAliasResult struct {
-	Result workflow.Future
+type QuickSightDeleteThemeAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteThemeAliasResult) Get(ctx workflow.Context) (*quicksight.DeleteThemeAliasOutput, error) {
+func (r *QuickSightDeleteThemeAliasFuture) Get(ctx workflow.Context) (*quicksight.DeleteThemeAliasOutput, error) {
 	var output quicksight.DeleteThemeAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteUserResult struct {
-	Result workflow.Future
+type QuickSightDeleteUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteUserResult) Get(ctx workflow.Context) (*quicksight.DeleteUserOutput, error) {
+func (r *QuickSightDeleteUserFuture) Get(ctx workflow.Context) (*quicksight.DeleteUserOutput, error) {
 	var output quicksight.DeleteUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDeleteUserByPrincipalIdResult struct {
-	Result workflow.Future
+type QuickSightDeleteUserByPrincipalIdFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDeleteUserByPrincipalIdResult) Get(ctx workflow.Context) (*quicksight.DeleteUserByPrincipalIdOutput, error) {
+func (r *QuickSightDeleteUserByPrincipalIdFuture) Get(ctx workflow.Context) (*quicksight.DeleteUserByPrincipalIdOutput, error) {
 	var output quicksight.DeleteUserByPrincipalIdOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeAccountCustomizationResult struct {
-	Result workflow.Future
+type QuickSightDescribeAccountCustomizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeAccountCustomizationResult) Get(ctx workflow.Context) (*quicksight.DescribeAccountCustomizationOutput, error) {
+func (r *QuickSightDescribeAccountCustomizationFuture) Get(ctx workflow.Context) (*quicksight.DescribeAccountCustomizationOutput, error) {
 	var output quicksight.DescribeAccountCustomizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeAccountSettingsResult struct {
-	Result workflow.Future
+type QuickSightDescribeAccountSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeAccountSettingsResult) Get(ctx workflow.Context) (*quicksight.DescribeAccountSettingsOutput, error) {
+func (r *QuickSightDescribeAccountSettingsFuture) Get(ctx workflow.Context) (*quicksight.DescribeAccountSettingsOutput, error) {
 	var output quicksight.DescribeAccountSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeAnalysisResult struct {
-	Result workflow.Future
+type QuickSightDescribeAnalysisFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeAnalysisResult) Get(ctx workflow.Context) (*quicksight.DescribeAnalysisOutput, error) {
+func (r *QuickSightDescribeAnalysisFuture) Get(ctx workflow.Context) (*quicksight.DescribeAnalysisOutput, error) {
 	var output quicksight.DescribeAnalysisOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeAnalysisPermissionsResult struct {
-	Result workflow.Future
+type QuickSightDescribeAnalysisPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeAnalysisPermissionsResult) Get(ctx workflow.Context) (*quicksight.DescribeAnalysisPermissionsOutput, error) {
+func (r *QuickSightDescribeAnalysisPermissionsFuture) Get(ctx workflow.Context) (*quicksight.DescribeAnalysisPermissionsOutput, error) {
 	var output quicksight.DescribeAnalysisPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeDashboardResult struct {
-	Result workflow.Future
+type QuickSightDescribeDashboardFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeDashboardResult) Get(ctx workflow.Context) (*quicksight.DescribeDashboardOutput, error) {
+func (r *QuickSightDescribeDashboardFuture) Get(ctx workflow.Context) (*quicksight.DescribeDashboardOutput, error) {
 	var output quicksight.DescribeDashboardOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeDashboardPermissionsResult struct {
-	Result workflow.Future
+type QuickSightDescribeDashboardPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeDashboardPermissionsResult) Get(ctx workflow.Context) (*quicksight.DescribeDashboardPermissionsOutput, error) {
+func (r *QuickSightDescribeDashboardPermissionsFuture) Get(ctx workflow.Context) (*quicksight.DescribeDashboardPermissionsOutput, error) {
 	var output quicksight.DescribeDashboardPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeDataSetResult struct {
-	Result workflow.Future
+type QuickSightDescribeDataSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeDataSetResult) Get(ctx workflow.Context) (*quicksight.DescribeDataSetOutput, error) {
+func (r *QuickSightDescribeDataSetFuture) Get(ctx workflow.Context) (*quicksight.DescribeDataSetOutput, error) {
 	var output quicksight.DescribeDataSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeDataSetPermissionsResult struct {
-	Result workflow.Future
+type QuickSightDescribeDataSetPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeDataSetPermissionsResult) Get(ctx workflow.Context) (*quicksight.DescribeDataSetPermissionsOutput, error) {
+func (r *QuickSightDescribeDataSetPermissionsFuture) Get(ctx workflow.Context) (*quicksight.DescribeDataSetPermissionsOutput, error) {
 	var output quicksight.DescribeDataSetPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeDataSourceResult struct {
-	Result workflow.Future
+type QuickSightDescribeDataSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeDataSourceResult) Get(ctx workflow.Context) (*quicksight.DescribeDataSourceOutput, error) {
+func (r *QuickSightDescribeDataSourceFuture) Get(ctx workflow.Context) (*quicksight.DescribeDataSourceOutput, error) {
 	var output quicksight.DescribeDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeDataSourcePermissionsResult struct {
-	Result workflow.Future
+type QuickSightDescribeDataSourcePermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeDataSourcePermissionsResult) Get(ctx workflow.Context) (*quicksight.DescribeDataSourcePermissionsOutput, error) {
+func (r *QuickSightDescribeDataSourcePermissionsFuture) Get(ctx workflow.Context) (*quicksight.DescribeDataSourcePermissionsOutput, error) {
 	var output quicksight.DescribeDataSourcePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeGroupResult struct {
-	Result workflow.Future
+type QuickSightDescribeGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeGroupResult) Get(ctx workflow.Context) (*quicksight.DescribeGroupOutput, error) {
+func (r *QuickSightDescribeGroupFuture) Get(ctx workflow.Context) (*quicksight.DescribeGroupOutput, error) {
 	var output quicksight.DescribeGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeIAMPolicyAssignmentResult struct {
-	Result workflow.Future
+type QuickSightDescribeIAMPolicyAssignmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeIAMPolicyAssignmentResult) Get(ctx workflow.Context) (*quicksight.DescribeIAMPolicyAssignmentOutput, error) {
+func (r *QuickSightDescribeIAMPolicyAssignmentFuture) Get(ctx workflow.Context) (*quicksight.DescribeIAMPolicyAssignmentOutput, error) {
 	var output quicksight.DescribeIAMPolicyAssignmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeIngestionResult struct {
-	Result workflow.Future
+type QuickSightDescribeIngestionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeIngestionResult) Get(ctx workflow.Context) (*quicksight.DescribeIngestionOutput, error) {
+func (r *QuickSightDescribeIngestionFuture) Get(ctx workflow.Context) (*quicksight.DescribeIngestionOutput, error) {
 	var output quicksight.DescribeIngestionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeNamespaceResult struct {
-	Result workflow.Future
+type QuickSightDescribeNamespaceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeNamespaceResult) Get(ctx workflow.Context) (*quicksight.DescribeNamespaceOutput, error) {
+func (r *QuickSightDescribeNamespaceFuture) Get(ctx workflow.Context) (*quicksight.DescribeNamespaceOutput, error) {
 	var output quicksight.DescribeNamespaceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeTemplateResult struct {
-	Result workflow.Future
+type QuickSightDescribeTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeTemplateResult) Get(ctx workflow.Context) (*quicksight.DescribeTemplateOutput, error) {
+func (r *QuickSightDescribeTemplateFuture) Get(ctx workflow.Context) (*quicksight.DescribeTemplateOutput, error) {
 	var output quicksight.DescribeTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeTemplateAliasResult struct {
-	Result workflow.Future
+type QuickSightDescribeTemplateAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeTemplateAliasResult) Get(ctx workflow.Context) (*quicksight.DescribeTemplateAliasOutput, error) {
+func (r *QuickSightDescribeTemplateAliasFuture) Get(ctx workflow.Context) (*quicksight.DescribeTemplateAliasOutput, error) {
 	var output quicksight.DescribeTemplateAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeTemplatePermissionsResult struct {
-	Result workflow.Future
+type QuickSightDescribeTemplatePermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeTemplatePermissionsResult) Get(ctx workflow.Context) (*quicksight.DescribeTemplatePermissionsOutput, error) {
+func (r *QuickSightDescribeTemplatePermissionsFuture) Get(ctx workflow.Context) (*quicksight.DescribeTemplatePermissionsOutput, error) {
 	var output quicksight.DescribeTemplatePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeThemeResult struct {
-	Result workflow.Future
+type QuickSightDescribeThemeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeThemeResult) Get(ctx workflow.Context) (*quicksight.DescribeThemeOutput, error) {
+func (r *QuickSightDescribeThemeFuture) Get(ctx workflow.Context) (*quicksight.DescribeThemeOutput, error) {
 	var output quicksight.DescribeThemeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeThemeAliasResult struct {
-	Result workflow.Future
+type QuickSightDescribeThemeAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeThemeAliasResult) Get(ctx workflow.Context) (*quicksight.DescribeThemeAliasOutput, error) {
+func (r *QuickSightDescribeThemeAliasFuture) Get(ctx workflow.Context) (*quicksight.DescribeThemeAliasOutput, error) {
 	var output quicksight.DescribeThemeAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeThemePermissionsResult struct {
-	Result workflow.Future
+type QuickSightDescribeThemePermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeThemePermissionsResult) Get(ctx workflow.Context) (*quicksight.DescribeThemePermissionsOutput, error) {
+func (r *QuickSightDescribeThemePermissionsFuture) Get(ctx workflow.Context) (*quicksight.DescribeThemePermissionsOutput, error) {
 	var output quicksight.DescribeThemePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightDescribeUserResult struct {
-	Result workflow.Future
+type QuickSightDescribeUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightDescribeUserResult) Get(ctx workflow.Context) (*quicksight.DescribeUserOutput, error) {
+func (r *QuickSightDescribeUserFuture) Get(ctx workflow.Context) (*quicksight.DescribeUserOutput, error) {
 	var output quicksight.DescribeUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightGetDashboardEmbedUrlResult struct {
-	Result workflow.Future
+type QuickSightGetDashboardEmbedUrlFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightGetDashboardEmbedUrlResult) Get(ctx workflow.Context) (*quicksight.GetDashboardEmbedUrlOutput, error) {
+func (r *QuickSightGetDashboardEmbedUrlFuture) Get(ctx workflow.Context) (*quicksight.GetDashboardEmbedUrlOutput, error) {
 	var output quicksight.GetDashboardEmbedUrlOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightGetSessionEmbedUrlResult struct {
-	Result workflow.Future
+type QuickSightGetSessionEmbedUrlFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightGetSessionEmbedUrlResult) Get(ctx workflow.Context) (*quicksight.GetSessionEmbedUrlOutput, error) {
+func (r *QuickSightGetSessionEmbedUrlFuture) Get(ctx workflow.Context) (*quicksight.GetSessionEmbedUrlOutput, error) {
 	var output quicksight.GetSessionEmbedUrlOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListAnalysesResult struct {
-	Result workflow.Future
+type QuickSightListAnalysesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListAnalysesResult) Get(ctx workflow.Context) (*quicksight.ListAnalysesOutput, error) {
+func (r *QuickSightListAnalysesFuture) Get(ctx workflow.Context) (*quicksight.ListAnalysesOutput, error) {
 	var output quicksight.ListAnalysesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListDashboardVersionsResult struct {
-	Result workflow.Future
+type QuickSightListDashboardVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListDashboardVersionsResult) Get(ctx workflow.Context) (*quicksight.ListDashboardVersionsOutput, error) {
+func (r *QuickSightListDashboardVersionsFuture) Get(ctx workflow.Context) (*quicksight.ListDashboardVersionsOutput, error) {
 	var output quicksight.ListDashboardVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListDashboardsResult struct {
-	Result workflow.Future
+type QuickSightListDashboardsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListDashboardsResult) Get(ctx workflow.Context) (*quicksight.ListDashboardsOutput, error) {
+func (r *QuickSightListDashboardsFuture) Get(ctx workflow.Context) (*quicksight.ListDashboardsOutput, error) {
 	var output quicksight.ListDashboardsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListDataSetsResult struct {
-	Result workflow.Future
+type QuickSightListDataSetsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListDataSetsResult) Get(ctx workflow.Context) (*quicksight.ListDataSetsOutput, error) {
+func (r *QuickSightListDataSetsFuture) Get(ctx workflow.Context) (*quicksight.ListDataSetsOutput, error) {
 	var output quicksight.ListDataSetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListDataSourcesResult struct {
-	Result workflow.Future
+type QuickSightListDataSourcesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListDataSourcesResult) Get(ctx workflow.Context) (*quicksight.ListDataSourcesOutput, error) {
+func (r *QuickSightListDataSourcesFuture) Get(ctx workflow.Context) (*quicksight.ListDataSourcesOutput, error) {
 	var output quicksight.ListDataSourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListGroupMembershipsResult struct {
-	Result workflow.Future
+type QuickSightListGroupMembershipsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListGroupMembershipsResult) Get(ctx workflow.Context) (*quicksight.ListGroupMembershipsOutput, error) {
+func (r *QuickSightListGroupMembershipsFuture) Get(ctx workflow.Context) (*quicksight.ListGroupMembershipsOutput, error) {
 	var output quicksight.ListGroupMembershipsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListGroupsResult struct {
-	Result workflow.Future
+type QuickSightListGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListGroupsResult) Get(ctx workflow.Context) (*quicksight.ListGroupsOutput, error) {
+func (r *QuickSightListGroupsFuture) Get(ctx workflow.Context) (*quicksight.ListGroupsOutput, error) {
 	var output quicksight.ListGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListIAMPolicyAssignmentsResult struct {
-	Result workflow.Future
+type QuickSightListIAMPolicyAssignmentsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListIAMPolicyAssignmentsResult) Get(ctx workflow.Context) (*quicksight.ListIAMPolicyAssignmentsOutput, error) {
+func (r *QuickSightListIAMPolicyAssignmentsFuture) Get(ctx workflow.Context) (*quicksight.ListIAMPolicyAssignmentsOutput, error) {
 	var output quicksight.ListIAMPolicyAssignmentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListIAMPolicyAssignmentsForUserResult struct {
-	Result workflow.Future
+type QuickSightListIAMPolicyAssignmentsForUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListIAMPolicyAssignmentsForUserResult) Get(ctx workflow.Context) (*quicksight.ListIAMPolicyAssignmentsForUserOutput, error) {
+func (r *QuickSightListIAMPolicyAssignmentsForUserFuture) Get(ctx workflow.Context) (*quicksight.ListIAMPolicyAssignmentsForUserOutput, error) {
 	var output quicksight.ListIAMPolicyAssignmentsForUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListIngestionsResult struct {
-	Result workflow.Future
+type QuickSightListIngestionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListIngestionsResult) Get(ctx workflow.Context) (*quicksight.ListIngestionsOutput, error) {
+func (r *QuickSightListIngestionsFuture) Get(ctx workflow.Context) (*quicksight.ListIngestionsOutput, error) {
 	var output quicksight.ListIngestionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListNamespacesResult struct {
-	Result workflow.Future
+type QuickSightListNamespacesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListNamespacesResult) Get(ctx workflow.Context) (*quicksight.ListNamespacesOutput, error) {
+func (r *QuickSightListNamespacesFuture) Get(ctx workflow.Context) (*quicksight.ListNamespacesOutput, error) {
 	var output quicksight.ListNamespacesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListTagsForResourceResult struct {
-	Result workflow.Future
+type QuickSightListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListTagsForResourceResult) Get(ctx workflow.Context) (*quicksight.ListTagsForResourceOutput, error) {
+func (r *QuickSightListTagsForResourceFuture) Get(ctx workflow.Context) (*quicksight.ListTagsForResourceOutput, error) {
 	var output quicksight.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListTemplateAliasesResult struct {
-	Result workflow.Future
+type QuickSightListTemplateAliasesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListTemplateAliasesResult) Get(ctx workflow.Context) (*quicksight.ListTemplateAliasesOutput, error) {
+func (r *QuickSightListTemplateAliasesFuture) Get(ctx workflow.Context) (*quicksight.ListTemplateAliasesOutput, error) {
 	var output quicksight.ListTemplateAliasesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListTemplateVersionsResult struct {
-	Result workflow.Future
+type QuickSightListTemplateVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListTemplateVersionsResult) Get(ctx workflow.Context) (*quicksight.ListTemplateVersionsOutput, error) {
+func (r *QuickSightListTemplateVersionsFuture) Get(ctx workflow.Context) (*quicksight.ListTemplateVersionsOutput, error) {
 	var output quicksight.ListTemplateVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListTemplatesResult struct {
-	Result workflow.Future
+type QuickSightListTemplatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListTemplatesResult) Get(ctx workflow.Context) (*quicksight.ListTemplatesOutput, error) {
+func (r *QuickSightListTemplatesFuture) Get(ctx workflow.Context) (*quicksight.ListTemplatesOutput, error) {
 	var output quicksight.ListTemplatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListThemeAliasesResult struct {
-	Result workflow.Future
+type QuickSightListThemeAliasesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListThemeAliasesResult) Get(ctx workflow.Context) (*quicksight.ListThemeAliasesOutput, error) {
+func (r *QuickSightListThemeAliasesFuture) Get(ctx workflow.Context) (*quicksight.ListThemeAliasesOutput, error) {
 	var output quicksight.ListThemeAliasesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListThemeVersionsResult struct {
-	Result workflow.Future
+type QuickSightListThemeVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListThemeVersionsResult) Get(ctx workflow.Context) (*quicksight.ListThemeVersionsOutput, error) {
+func (r *QuickSightListThemeVersionsFuture) Get(ctx workflow.Context) (*quicksight.ListThemeVersionsOutput, error) {
 	var output quicksight.ListThemeVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListThemesResult struct {
-	Result workflow.Future
+type QuickSightListThemesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListThemesResult) Get(ctx workflow.Context) (*quicksight.ListThemesOutput, error) {
+func (r *QuickSightListThemesFuture) Get(ctx workflow.Context) (*quicksight.ListThemesOutput, error) {
 	var output quicksight.ListThemesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListUserGroupsResult struct {
-	Result workflow.Future
+type QuickSightListUserGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListUserGroupsResult) Get(ctx workflow.Context) (*quicksight.ListUserGroupsOutput, error) {
+func (r *QuickSightListUserGroupsFuture) Get(ctx workflow.Context) (*quicksight.ListUserGroupsOutput, error) {
 	var output quicksight.ListUserGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightListUsersResult struct {
-	Result workflow.Future
+type QuickSightListUsersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightListUsersResult) Get(ctx workflow.Context) (*quicksight.ListUsersOutput, error) {
+func (r *QuickSightListUsersFuture) Get(ctx workflow.Context) (*quicksight.ListUsersOutput, error) {
 	var output quicksight.ListUsersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightRegisterUserResult struct {
-	Result workflow.Future
+type QuickSightRegisterUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightRegisterUserResult) Get(ctx workflow.Context) (*quicksight.RegisterUserOutput, error) {
+func (r *QuickSightRegisterUserFuture) Get(ctx workflow.Context) (*quicksight.RegisterUserOutput, error) {
 	var output quicksight.RegisterUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightRestoreAnalysisResult struct {
-	Result workflow.Future
+type QuickSightRestoreAnalysisFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightRestoreAnalysisResult) Get(ctx workflow.Context) (*quicksight.RestoreAnalysisOutput, error) {
+func (r *QuickSightRestoreAnalysisFuture) Get(ctx workflow.Context) (*quicksight.RestoreAnalysisOutput, error) {
 	var output quicksight.RestoreAnalysisOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightSearchAnalysesResult struct {
-	Result workflow.Future
+type QuickSightSearchAnalysesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightSearchAnalysesResult) Get(ctx workflow.Context) (*quicksight.SearchAnalysesOutput, error) {
+func (r *QuickSightSearchAnalysesFuture) Get(ctx workflow.Context) (*quicksight.SearchAnalysesOutput, error) {
 	var output quicksight.SearchAnalysesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightSearchDashboardsResult struct {
-	Result workflow.Future
+type QuickSightSearchDashboardsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightSearchDashboardsResult) Get(ctx workflow.Context) (*quicksight.SearchDashboardsOutput, error) {
+func (r *QuickSightSearchDashboardsFuture) Get(ctx workflow.Context) (*quicksight.SearchDashboardsOutput, error) {
 	var output quicksight.SearchDashboardsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightTagResourceResult struct {
-	Result workflow.Future
+type QuickSightTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightTagResourceResult) Get(ctx workflow.Context) (*quicksight.TagResourceOutput, error) {
+func (r *QuickSightTagResourceFuture) Get(ctx workflow.Context) (*quicksight.TagResourceOutput, error) {
 	var output quicksight.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUntagResourceResult struct {
-	Result workflow.Future
+type QuickSightUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUntagResourceResult) Get(ctx workflow.Context) (*quicksight.UntagResourceOutput, error) {
+func (r *QuickSightUntagResourceFuture) Get(ctx workflow.Context) (*quicksight.UntagResourceOutput, error) {
 	var output quicksight.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateAccountCustomizationResult struct {
-	Result workflow.Future
+type QuickSightUpdateAccountCustomizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateAccountCustomizationResult) Get(ctx workflow.Context) (*quicksight.UpdateAccountCustomizationOutput, error) {
+func (r *QuickSightUpdateAccountCustomizationFuture) Get(ctx workflow.Context) (*quicksight.UpdateAccountCustomizationOutput, error) {
 	var output quicksight.UpdateAccountCustomizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateAccountSettingsResult struct {
-	Result workflow.Future
+type QuickSightUpdateAccountSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateAccountSettingsResult) Get(ctx workflow.Context) (*quicksight.UpdateAccountSettingsOutput, error) {
+func (r *QuickSightUpdateAccountSettingsFuture) Get(ctx workflow.Context) (*quicksight.UpdateAccountSettingsOutput, error) {
 	var output quicksight.UpdateAccountSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateAnalysisResult struct {
-	Result workflow.Future
+type QuickSightUpdateAnalysisFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateAnalysisResult) Get(ctx workflow.Context) (*quicksight.UpdateAnalysisOutput, error) {
+func (r *QuickSightUpdateAnalysisFuture) Get(ctx workflow.Context) (*quicksight.UpdateAnalysisOutput, error) {
 	var output quicksight.UpdateAnalysisOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateAnalysisPermissionsResult struct {
-	Result workflow.Future
+type QuickSightUpdateAnalysisPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateAnalysisPermissionsResult) Get(ctx workflow.Context) (*quicksight.UpdateAnalysisPermissionsOutput, error) {
+func (r *QuickSightUpdateAnalysisPermissionsFuture) Get(ctx workflow.Context) (*quicksight.UpdateAnalysisPermissionsOutput, error) {
 	var output quicksight.UpdateAnalysisPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateDashboardResult struct {
-	Result workflow.Future
+type QuickSightUpdateDashboardFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateDashboardResult) Get(ctx workflow.Context) (*quicksight.UpdateDashboardOutput, error) {
+func (r *QuickSightUpdateDashboardFuture) Get(ctx workflow.Context) (*quicksight.UpdateDashboardOutput, error) {
 	var output quicksight.UpdateDashboardOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateDashboardPermissionsResult struct {
-	Result workflow.Future
+type QuickSightUpdateDashboardPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateDashboardPermissionsResult) Get(ctx workflow.Context) (*quicksight.UpdateDashboardPermissionsOutput, error) {
+func (r *QuickSightUpdateDashboardPermissionsFuture) Get(ctx workflow.Context) (*quicksight.UpdateDashboardPermissionsOutput, error) {
 	var output quicksight.UpdateDashboardPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateDashboardPublishedVersionResult struct {
-	Result workflow.Future
+type QuickSightUpdateDashboardPublishedVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateDashboardPublishedVersionResult) Get(ctx workflow.Context) (*quicksight.UpdateDashboardPublishedVersionOutput, error) {
+func (r *QuickSightUpdateDashboardPublishedVersionFuture) Get(ctx workflow.Context) (*quicksight.UpdateDashboardPublishedVersionOutput, error) {
 	var output quicksight.UpdateDashboardPublishedVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateDataSetResult struct {
-	Result workflow.Future
+type QuickSightUpdateDataSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateDataSetResult) Get(ctx workflow.Context) (*quicksight.UpdateDataSetOutput, error) {
+func (r *QuickSightUpdateDataSetFuture) Get(ctx workflow.Context) (*quicksight.UpdateDataSetOutput, error) {
 	var output quicksight.UpdateDataSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateDataSetPermissionsResult struct {
-	Result workflow.Future
+type QuickSightUpdateDataSetPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateDataSetPermissionsResult) Get(ctx workflow.Context) (*quicksight.UpdateDataSetPermissionsOutput, error) {
+func (r *QuickSightUpdateDataSetPermissionsFuture) Get(ctx workflow.Context) (*quicksight.UpdateDataSetPermissionsOutput, error) {
 	var output quicksight.UpdateDataSetPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateDataSourceResult struct {
-	Result workflow.Future
+type QuickSightUpdateDataSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateDataSourceResult) Get(ctx workflow.Context) (*quicksight.UpdateDataSourceOutput, error) {
+func (r *QuickSightUpdateDataSourceFuture) Get(ctx workflow.Context) (*quicksight.UpdateDataSourceOutput, error) {
 	var output quicksight.UpdateDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateDataSourcePermissionsResult struct {
-	Result workflow.Future
+type QuickSightUpdateDataSourcePermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateDataSourcePermissionsResult) Get(ctx workflow.Context) (*quicksight.UpdateDataSourcePermissionsOutput, error) {
+func (r *QuickSightUpdateDataSourcePermissionsFuture) Get(ctx workflow.Context) (*quicksight.UpdateDataSourcePermissionsOutput, error) {
 	var output quicksight.UpdateDataSourcePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateGroupResult struct {
-	Result workflow.Future
+type QuickSightUpdateGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateGroupResult) Get(ctx workflow.Context) (*quicksight.UpdateGroupOutput, error) {
+func (r *QuickSightUpdateGroupFuture) Get(ctx workflow.Context) (*quicksight.UpdateGroupOutput, error) {
 	var output quicksight.UpdateGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateIAMPolicyAssignmentResult struct {
-	Result workflow.Future
+type QuickSightUpdateIAMPolicyAssignmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateIAMPolicyAssignmentResult) Get(ctx workflow.Context) (*quicksight.UpdateIAMPolicyAssignmentOutput, error) {
+func (r *QuickSightUpdateIAMPolicyAssignmentFuture) Get(ctx workflow.Context) (*quicksight.UpdateIAMPolicyAssignmentOutput, error) {
 	var output quicksight.UpdateIAMPolicyAssignmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateTemplateResult struct {
-	Result workflow.Future
+type QuickSightUpdateTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateTemplateResult) Get(ctx workflow.Context) (*quicksight.UpdateTemplateOutput, error) {
+func (r *QuickSightUpdateTemplateFuture) Get(ctx workflow.Context) (*quicksight.UpdateTemplateOutput, error) {
 	var output quicksight.UpdateTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateTemplateAliasResult struct {
-	Result workflow.Future
+type QuickSightUpdateTemplateAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateTemplateAliasResult) Get(ctx workflow.Context) (*quicksight.UpdateTemplateAliasOutput, error) {
+func (r *QuickSightUpdateTemplateAliasFuture) Get(ctx workflow.Context) (*quicksight.UpdateTemplateAliasOutput, error) {
 	var output quicksight.UpdateTemplateAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateTemplatePermissionsResult struct {
-	Result workflow.Future
+type QuickSightUpdateTemplatePermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateTemplatePermissionsResult) Get(ctx workflow.Context) (*quicksight.UpdateTemplatePermissionsOutput, error) {
+func (r *QuickSightUpdateTemplatePermissionsFuture) Get(ctx workflow.Context) (*quicksight.UpdateTemplatePermissionsOutput, error) {
 	var output quicksight.UpdateTemplatePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateThemeResult struct {
-	Result workflow.Future
+type QuickSightUpdateThemeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateThemeResult) Get(ctx workflow.Context) (*quicksight.UpdateThemeOutput, error) {
+func (r *QuickSightUpdateThemeFuture) Get(ctx workflow.Context) (*quicksight.UpdateThemeOutput, error) {
 	var output quicksight.UpdateThemeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateThemeAliasResult struct {
-	Result workflow.Future
+type QuickSightUpdateThemeAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateThemeAliasResult) Get(ctx workflow.Context) (*quicksight.UpdateThemeAliasOutput, error) {
+func (r *QuickSightUpdateThemeAliasFuture) Get(ctx workflow.Context) (*quicksight.UpdateThemeAliasOutput, error) {
 	var output quicksight.UpdateThemeAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateThemePermissionsResult struct {
-	Result workflow.Future
+type QuickSightUpdateThemePermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateThemePermissionsResult) Get(ctx workflow.Context) (*quicksight.UpdateThemePermissionsOutput, error) {
+func (r *QuickSightUpdateThemePermissionsFuture) Get(ctx workflow.Context) (*quicksight.UpdateThemePermissionsOutput, error) {
 	var output quicksight.UpdateThemePermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QuicksightUpdateUserResult struct {
-	Result workflow.Future
+type QuickSightUpdateUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QuicksightUpdateUserResult) Get(ctx workflow.Context) (*quicksight.UpdateUserOutput, error) {
+func (r *QuickSightUpdateUserFuture) Get(ctx workflow.Context) (*quicksight.UpdateUserOutput, error) {
 	var output quicksight.UpdateUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -1310,9 +1409,9 @@ func (a *QuickSightStub) CancelIngestion(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) CancelIngestionAsync(ctx workflow.Context, input *quicksight.CancelIngestionInput) *QuicksightCancelIngestionResult {
+func (a *QuickSightStub) CancelIngestionAsync(ctx workflow.Context, input *quicksight.CancelIngestionInput) *QuickSightCancelIngestionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CancelIngestion", input)
-	return &QuicksightCancelIngestionResult{Result: future}
+	return &QuickSightCancelIngestionFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateAccountCustomization(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) (*quicksight.CreateAccountCustomizationOutput, error) {
@@ -1321,9 +1420,9 @@ func (a *QuickSightStub) CreateAccountCustomization(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) *QuicksightCreateAccountCustomizationResult {
+func (a *QuickSightStub) CreateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) *QuickSightCreateAccountCustomizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateAccountCustomization", input)
-	return &QuicksightCreateAccountCustomizationResult{Result: future}
+	return &QuickSightCreateAccountCustomizationFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateAnalysis(ctx workflow.Context, input *quicksight.CreateAnalysisInput) (*quicksight.CreateAnalysisOutput, error) {
@@ -1332,9 +1431,9 @@ func (a *QuickSightStub) CreateAnalysis(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateAnalysisAsync(ctx workflow.Context, input *quicksight.CreateAnalysisInput) *QuicksightCreateAnalysisResult {
+func (a *QuickSightStub) CreateAnalysisAsync(ctx workflow.Context, input *quicksight.CreateAnalysisInput) *QuickSightCreateAnalysisFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateAnalysis", input)
-	return &QuicksightCreateAnalysisResult{Result: future}
+	return &QuickSightCreateAnalysisFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateDashboard(ctx workflow.Context, input *quicksight.CreateDashboardInput) (*quicksight.CreateDashboardOutput, error) {
@@ -1343,9 +1442,9 @@ func (a *QuickSightStub) CreateDashboard(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateDashboardAsync(ctx workflow.Context, input *quicksight.CreateDashboardInput) *QuicksightCreateDashboardResult {
+func (a *QuickSightStub) CreateDashboardAsync(ctx workflow.Context, input *quicksight.CreateDashboardInput) *QuickSightCreateDashboardFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateDashboard", input)
-	return &QuicksightCreateDashboardResult{Result: future}
+	return &QuickSightCreateDashboardFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateDataSet(ctx workflow.Context, input *quicksight.CreateDataSetInput) (*quicksight.CreateDataSetOutput, error) {
@@ -1354,9 +1453,9 @@ func (a *QuickSightStub) CreateDataSet(ctx workflow.Context, input *quicksight.C
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateDataSetAsync(ctx workflow.Context, input *quicksight.CreateDataSetInput) *QuicksightCreateDataSetResult {
+func (a *QuickSightStub) CreateDataSetAsync(ctx workflow.Context, input *quicksight.CreateDataSetInput) *QuickSightCreateDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateDataSet", input)
-	return &QuicksightCreateDataSetResult{Result: future}
+	return &QuickSightCreateDataSetFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateDataSource(ctx workflow.Context, input *quicksight.CreateDataSourceInput) (*quicksight.CreateDataSourceOutput, error) {
@@ -1365,9 +1464,9 @@ func (a *QuickSightStub) CreateDataSource(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateDataSourceAsync(ctx workflow.Context, input *quicksight.CreateDataSourceInput) *QuicksightCreateDataSourceResult {
+func (a *QuickSightStub) CreateDataSourceAsync(ctx workflow.Context, input *quicksight.CreateDataSourceInput) *QuickSightCreateDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateDataSource", input)
-	return &QuicksightCreateDataSourceResult{Result: future}
+	return &QuickSightCreateDataSourceFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateGroup(ctx workflow.Context, input *quicksight.CreateGroupInput) (*quicksight.CreateGroupOutput, error) {
@@ -1376,9 +1475,9 @@ func (a *QuickSightStub) CreateGroup(ctx workflow.Context, input *quicksight.Cre
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateGroupAsync(ctx workflow.Context, input *quicksight.CreateGroupInput) *QuicksightCreateGroupResult {
+func (a *QuickSightStub) CreateGroupAsync(ctx workflow.Context, input *quicksight.CreateGroupInput) *QuickSightCreateGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateGroup", input)
-	return &QuicksightCreateGroupResult{Result: future}
+	return &QuickSightCreateGroupFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateGroupMembership(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) (*quicksight.CreateGroupMembershipOutput, error) {
@@ -1387,9 +1486,9 @@ func (a *QuickSightStub) CreateGroupMembership(ctx workflow.Context, input *quic
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateGroupMembershipAsync(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) *QuicksightCreateGroupMembershipResult {
+func (a *QuickSightStub) CreateGroupMembershipAsync(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) *QuickSightCreateGroupMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateGroupMembership", input)
-	return &QuicksightCreateGroupMembershipResult{Result: future}
+	return &QuickSightCreateGroupMembershipFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateIAMPolicyAssignment(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) (*quicksight.CreateIAMPolicyAssignmentOutput, error) {
@@ -1398,9 +1497,9 @@ func (a *QuickSightStub) CreateIAMPolicyAssignment(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) *QuicksightCreateIAMPolicyAssignmentResult {
+func (a *QuickSightStub) CreateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) *QuickSightCreateIAMPolicyAssignmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateIAMPolicyAssignment", input)
-	return &QuicksightCreateIAMPolicyAssignmentResult{Result: future}
+	return &QuickSightCreateIAMPolicyAssignmentFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateIngestion(ctx workflow.Context, input *quicksight.CreateIngestionInput) (*quicksight.CreateIngestionOutput, error) {
@@ -1409,9 +1508,9 @@ func (a *QuickSightStub) CreateIngestion(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateIngestionAsync(ctx workflow.Context, input *quicksight.CreateIngestionInput) *QuicksightCreateIngestionResult {
+func (a *QuickSightStub) CreateIngestionAsync(ctx workflow.Context, input *quicksight.CreateIngestionInput) *QuickSightCreateIngestionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateIngestion", input)
-	return &QuicksightCreateIngestionResult{Result: future}
+	return &QuickSightCreateIngestionFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateNamespace(ctx workflow.Context, input *quicksight.CreateNamespaceInput) (*quicksight.CreateNamespaceOutput, error) {
@@ -1420,9 +1519,9 @@ func (a *QuickSightStub) CreateNamespace(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateNamespaceAsync(ctx workflow.Context, input *quicksight.CreateNamespaceInput) *QuicksightCreateNamespaceResult {
+func (a *QuickSightStub) CreateNamespaceAsync(ctx workflow.Context, input *quicksight.CreateNamespaceInput) *QuickSightCreateNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateNamespace", input)
-	return &QuicksightCreateNamespaceResult{Result: future}
+	return &QuickSightCreateNamespaceFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateTemplate(ctx workflow.Context, input *quicksight.CreateTemplateInput) (*quicksight.CreateTemplateOutput, error) {
@@ -1431,9 +1530,9 @@ func (a *QuickSightStub) CreateTemplate(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateTemplateAsync(ctx workflow.Context, input *quicksight.CreateTemplateInput) *QuicksightCreateTemplateResult {
+func (a *QuickSightStub) CreateTemplateAsync(ctx workflow.Context, input *quicksight.CreateTemplateInput) *QuickSightCreateTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateTemplate", input)
-	return &QuicksightCreateTemplateResult{Result: future}
+	return &QuickSightCreateTemplateFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateTemplateAlias(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) (*quicksight.CreateTemplateAliasOutput, error) {
@@ -1442,9 +1541,9 @@ func (a *QuickSightStub) CreateTemplateAlias(ctx workflow.Context, input *quicks
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateTemplateAliasAsync(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) *QuicksightCreateTemplateAliasResult {
+func (a *QuickSightStub) CreateTemplateAliasAsync(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) *QuickSightCreateTemplateAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateTemplateAlias", input)
-	return &QuicksightCreateTemplateAliasResult{Result: future}
+	return &QuickSightCreateTemplateAliasFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateTheme(ctx workflow.Context, input *quicksight.CreateThemeInput) (*quicksight.CreateThemeOutput, error) {
@@ -1453,9 +1552,9 @@ func (a *QuickSightStub) CreateTheme(ctx workflow.Context, input *quicksight.Cre
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateThemeAsync(ctx workflow.Context, input *quicksight.CreateThemeInput) *QuicksightCreateThemeResult {
+func (a *QuickSightStub) CreateThemeAsync(ctx workflow.Context, input *quicksight.CreateThemeInput) *QuickSightCreateThemeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateTheme", input)
-	return &QuicksightCreateThemeResult{Result: future}
+	return &QuickSightCreateThemeFuture{Future: future}
 }
 
 func (a *QuickSightStub) CreateThemeAlias(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) (*quicksight.CreateThemeAliasOutput, error) {
@@ -1464,9 +1563,9 @@ func (a *QuickSightStub) CreateThemeAlias(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) CreateThemeAliasAsync(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) *QuicksightCreateThemeAliasResult {
+func (a *QuickSightStub) CreateThemeAliasAsync(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) *QuickSightCreateThemeAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.CreateThemeAlias", input)
-	return &QuicksightCreateThemeAliasResult{Result: future}
+	return &QuickSightCreateThemeAliasFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteAccountCustomization(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) (*quicksight.DeleteAccountCustomizationOutput, error) {
@@ -1475,9 +1574,9 @@ func (a *QuickSightStub) DeleteAccountCustomization(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) *QuicksightDeleteAccountCustomizationResult {
+func (a *QuickSightStub) DeleteAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) *QuickSightDeleteAccountCustomizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteAccountCustomization", input)
-	return &QuicksightDeleteAccountCustomizationResult{Result: future}
+	return &QuickSightDeleteAccountCustomizationFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteAnalysis(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) (*quicksight.DeleteAnalysisOutput, error) {
@@ -1486,9 +1585,9 @@ func (a *QuickSightStub) DeleteAnalysis(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteAnalysisAsync(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) *QuicksightDeleteAnalysisResult {
+func (a *QuickSightStub) DeleteAnalysisAsync(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) *QuickSightDeleteAnalysisFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteAnalysis", input)
-	return &QuicksightDeleteAnalysisResult{Result: future}
+	return &QuickSightDeleteAnalysisFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteDashboard(ctx workflow.Context, input *quicksight.DeleteDashboardInput) (*quicksight.DeleteDashboardOutput, error) {
@@ -1497,9 +1596,9 @@ func (a *QuickSightStub) DeleteDashboard(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteDashboardAsync(ctx workflow.Context, input *quicksight.DeleteDashboardInput) *QuicksightDeleteDashboardResult {
+func (a *QuickSightStub) DeleteDashboardAsync(ctx workflow.Context, input *quicksight.DeleteDashboardInput) *QuickSightDeleteDashboardFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteDashboard", input)
-	return &QuicksightDeleteDashboardResult{Result: future}
+	return &QuickSightDeleteDashboardFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteDataSet(ctx workflow.Context, input *quicksight.DeleteDataSetInput) (*quicksight.DeleteDataSetOutput, error) {
@@ -1508,9 +1607,9 @@ func (a *QuickSightStub) DeleteDataSet(ctx workflow.Context, input *quicksight.D
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteDataSetAsync(ctx workflow.Context, input *quicksight.DeleteDataSetInput) *QuicksightDeleteDataSetResult {
+func (a *QuickSightStub) DeleteDataSetAsync(ctx workflow.Context, input *quicksight.DeleteDataSetInput) *QuickSightDeleteDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteDataSet", input)
-	return &QuicksightDeleteDataSetResult{Result: future}
+	return &QuickSightDeleteDataSetFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteDataSource(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) (*quicksight.DeleteDataSourceOutput, error) {
@@ -1519,9 +1618,9 @@ func (a *QuickSightStub) DeleteDataSource(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteDataSourceAsync(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) *QuicksightDeleteDataSourceResult {
+func (a *QuickSightStub) DeleteDataSourceAsync(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) *QuickSightDeleteDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteDataSource", input)
-	return &QuicksightDeleteDataSourceResult{Result: future}
+	return &QuickSightDeleteDataSourceFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteGroup(ctx workflow.Context, input *quicksight.DeleteGroupInput) (*quicksight.DeleteGroupOutput, error) {
@@ -1530,9 +1629,9 @@ func (a *QuickSightStub) DeleteGroup(ctx workflow.Context, input *quicksight.Del
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteGroupAsync(ctx workflow.Context, input *quicksight.DeleteGroupInput) *QuicksightDeleteGroupResult {
+func (a *QuickSightStub) DeleteGroupAsync(ctx workflow.Context, input *quicksight.DeleteGroupInput) *QuickSightDeleteGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteGroup", input)
-	return &QuicksightDeleteGroupResult{Result: future}
+	return &QuickSightDeleteGroupFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteGroupMembership(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) (*quicksight.DeleteGroupMembershipOutput, error) {
@@ -1541,9 +1640,9 @@ func (a *QuickSightStub) DeleteGroupMembership(ctx workflow.Context, input *quic
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteGroupMembershipAsync(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) *QuicksightDeleteGroupMembershipResult {
+func (a *QuickSightStub) DeleteGroupMembershipAsync(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) *QuickSightDeleteGroupMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteGroupMembership", input)
-	return &QuicksightDeleteGroupMembershipResult{Result: future}
+	return &QuickSightDeleteGroupMembershipFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteIAMPolicyAssignment(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) (*quicksight.DeleteIAMPolicyAssignmentOutput, error) {
@@ -1552,9 +1651,9 @@ func (a *QuickSightStub) DeleteIAMPolicyAssignment(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) *QuicksightDeleteIAMPolicyAssignmentResult {
+func (a *QuickSightStub) DeleteIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) *QuickSightDeleteIAMPolicyAssignmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteIAMPolicyAssignment", input)
-	return &QuicksightDeleteIAMPolicyAssignmentResult{Result: future}
+	return &QuickSightDeleteIAMPolicyAssignmentFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteNamespace(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) (*quicksight.DeleteNamespaceOutput, error) {
@@ -1563,9 +1662,9 @@ func (a *QuickSightStub) DeleteNamespace(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteNamespaceAsync(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) *QuicksightDeleteNamespaceResult {
+func (a *QuickSightStub) DeleteNamespaceAsync(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) *QuickSightDeleteNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteNamespace", input)
-	return &QuicksightDeleteNamespaceResult{Result: future}
+	return &QuickSightDeleteNamespaceFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteTemplate(ctx workflow.Context, input *quicksight.DeleteTemplateInput) (*quicksight.DeleteTemplateOutput, error) {
@@ -1574,9 +1673,9 @@ func (a *QuickSightStub) DeleteTemplate(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteTemplateAsync(ctx workflow.Context, input *quicksight.DeleteTemplateInput) *QuicksightDeleteTemplateResult {
+func (a *QuickSightStub) DeleteTemplateAsync(ctx workflow.Context, input *quicksight.DeleteTemplateInput) *QuickSightDeleteTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteTemplate", input)
-	return &QuicksightDeleteTemplateResult{Result: future}
+	return &QuickSightDeleteTemplateFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteTemplateAlias(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) (*quicksight.DeleteTemplateAliasOutput, error) {
@@ -1585,9 +1684,9 @@ func (a *QuickSightStub) DeleteTemplateAlias(ctx workflow.Context, input *quicks
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteTemplateAliasAsync(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) *QuicksightDeleteTemplateAliasResult {
+func (a *QuickSightStub) DeleteTemplateAliasAsync(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) *QuickSightDeleteTemplateAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteTemplateAlias", input)
-	return &QuicksightDeleteTemplateAliasResult{Result: future}
+	return &QuickSightDeleteTemplateAliasFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteTheme(ctx workflow.Context, input *quicksight.DeleteThemeInput) (*quicksight.DeleteThemeOutput, error) {
@@ -1596,9 +1695,9 @@ func (a *QuickSightStub) DeleteTheme(ctx workflow.Context, input *quicksight.Del
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteThemeAsync(ctx workflow.Context, input *quicksight.DeleteThemeInput) *QuicksightDeleteThemeResult {
+func (a *QuickSightStub) DeleteThemeAsync(ctx workflow.Context, input *quicksight.DeleteThemeInput) *QuickSightDeleteThemeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteTheme", input)
-	return &QuicksightDeleteThemeResult{Result: future}
+	return &QuickSightDeleteThemeFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteThemeAlias(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) (*quicksight.DeleteThemeAliasOutput, error) {
@@ -1607,9 +1706,9 @@ func (a *QuickSightStub) DeleteThemeAlias(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteThemeAliasAsync(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) *QuicksightDeleteThemeAliasResult {
+func (a *QuickSightStub) DeleteThemeAliasAsync(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) *QuickSightDeleteThemeAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteThemeAlias", input)
-	return &QuicksightDeleteThemeAliasResult{Result: future}
+	return &QuickSightDeleteThemeAliasFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteUser(ctx workflow.Context, input *quicksight.DeleteUserInput) (*quicksight.DeleteUserOutput, error) {
@@ -1618,9 +1717,9 @@ func (a *QuickSightStub) DeleteUser(ctx workflow.Context, input *quicksight.Dele
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteUserAsync(ctx workflow.Context, input *quicksight.DeleteUserInput) *QuicksightDeleteUserResult {
+func (a *QuickSightStub) DeleteUserAsync(ctx workflow.Context, input *quicksight.DeleteUserInput) *QuickSightDeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteUser", input)
-	return &QuicksightDeleteUserResult{Result: future}
+	return &QuickSightDeleteUserFuture{Future: future}
 }
 
 func (a *QuickSightStub) DeleteUserByPrincipalId(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) (*quicksight.DeleteUserByPrincipalIdOutput, error) {
@@ -1629,9 +1728,9 @@ func (a *QuickSightStub) DeleteUserByPrincipalId(ctx workflow.Context, input *qu
 	return &output, err
 }
 
-func (a *QuickSightStub) DeleteUserByPrincipalIdAsync(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) *QuicksightDeleteUserByPrincipalIdResult {
+func (a *QuickSightStub) DeleteUserByPrincipalIdAsync(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) *QuickSightDeleteUserByPrincipalIdFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DeleteUserByPrincipalId", input)
-	return &QuicksightDeleteUserByPrincipalIdResult{Result: future}
+	return &QuickSightDeleteUserByPrincipalIdFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeAccountCustomization(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) (*quicksight.DescribeAccountCustomizationOutput, error) {
@@ -1640,9 +1739,9 @@ func (a *QuickSightStub) DescribeAccountCustomization(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) *QuicksightDescribeAccountCustomizationResult {
+func (a *QuickSightStub) DescribeAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) *QuickSightDescribeAccountCustomizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeAccountCustomization", input)
-	return &QuicksightDescribeAccountCustomizationResult{Result: future}
+	return &QuickSightDescribeAccountCustomizationFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeAccountSettings(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) (*quicksight.DescribeAccountSettingsOutput, error) {
@@ -1651,9 +1750,9 @@ func (a *QuickSightStub) DescribeAccountSettings(ctx workflow.Context, input *qu
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeAccountSettingsAsync(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) *QuicksightDescribeAccountSettingsResult {
+func (a *QuickSightStub) DescribeAccountSettingsAsync(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) *QuickSightDescribeAccountSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeAccountSettings", input)
-	return &QuicksightDescribeAccountSettingsResult{Result: future}
+	return &QuickSightDescribeAccountSettingsFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeAnalysis(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) (*quicksight.DescribeAnalysisOutput, error) {
@@ -1662,9 +1761,9 @@ func (a *QuickSightStub) DescribeAnalysis(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeAnalysisAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) *QuicksightDescribeAnalysisResult {
+func (a *QuickSightStub) DescribeAnalysisAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) *QuickSightDescribeAnalysisFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeAnalysis", input)
-	return &QuicksightDescribeAnalysisResult{Result: future}
+	return &QuickSightDescribeAnalysisFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeAnalysisPermissions(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) (*quicksight.DescribeAnalysisPermissionsOutput, error) {
@@ -1673,9 +1772,9 @@ func (a *QuickSightStub) DescribeAnalysisPermissions(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) *QuicksightDescribeAnalysisPermissionsResult {
+func (a *QuickSightStub) DescribeAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) *QuickSightDescribeAnalysisPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeAnalysisPermissions", input)
-	return &QuicksightDescribeAnalysisPermissionsResult{Result: future}
+	return &QuickSightDescribeAnalysisPermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeDashboard(ctx workflow.Context, input *quicksight.DescribeDashboardInput) (*quicksight.DescribeDashboardOutput, error) {
@@ -1684,9 +1783,9 @@ func (a *QuickSightStub) DescribeDashboard(ctx workflow.Context, input *quicksig
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeDashboardAsync(ctx workflow.Context, input *quicksight.DescribeDashboardInput) *QuicksightDescribeDashboardResult {
+func (a *QuickSightStub) DescribeDashboardAsync(ctx workflow.Context, input *quicksight.DescribeDashboardInput) *QuickSightDescribeDashboardFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeDashboard", input)
-	return &QuicksightDescribeDashboardResult{Result: future}
+	return &QuickSightDescribeDashboardFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeDashboardPermissions(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) (*quicksight.DescribeDashboardPermissionsOutput, error) {
@@ -1695,9 +1794,9 @@ func (a *QuickSightStub) DescribeDashboardPermissions(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) *QuicksightDescribeDashboardPermissionsResult {
+func (a *QuickSightStub) DescribeDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) *QuickSightDescribeDashboardPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeDashboardPermissions", input)
-	return &QuicksightDescribeDashboardPermissionsResult{Result: future}
+	return &QuickSightDescribeDashboardPermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeDataSet(ctx workflow.Context, input *quicksight.DescribeDataSetInput) (*quicksight.DescribeDataSetOutput, error) {
@@ -1706,9 +1805,9 @@ func (a *QuickSightStub) DescribeDataSet(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeDataSetAsync(ctx workflow.Context, input *quicksight.DescribeDataSetInput) *QuicksightDescribeDataSetResult {
+func (a *QuickSightStub) DescribeDataSetAsync(ctx workflow.Context, input *quicksight.DescribeDataSetInput) *QuickSightDescribeDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeDataSet", input)
-	return &QuicksightDescribeDataSetResult{Result: future}
+	return &QuickSightDescribeDataSetFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeDataSetPermissions(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) (*quicksight.DescribeDataSetPermissionsOutput, error) {
@@ -1717,9 +1816,9 @@ func (a *QuickSightStub) DescribeDataSetPermissions(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) *QuicksightDescribeDataSetPermissionsResult {
+func (a *QuickSightStub) DescribeDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) *QuickSightDescribeDataSetPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeDataSetPermissions", input)
-	return &QuicksightDescribeDataSetPermissionsResult{Result: future}
+	return &QuickSightDescribeDataSetPermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeDataSource(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) (*quicksight.DescribeDataSourceOutput, error) {
@@ -1728,9 +1827,9 @@ func (a *QuickSightStub) DescribeDataSource(ctx workflow.Context, input *quicksi
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeDataSourceAsync(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) *QuicksightDescribeDataSourceResult {
+func (a *QuickSightStub) DescribeDataSourceAsync(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) *QuickSightDescribeDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeDataSource", input)
-	return &QuicksightDescribeDataSourceResult{Result: future}
+	return &QuickSightDescribeDataSourceFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeDataSourcePermissions(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) (*quicksight.DescribeDataSourcePermissionsOutput, error) {
@@ -1739,9 +1838,9 @@ func (a *QuickSightStub) DescribeDataSourcePermissions(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) *QuicksightDescribeDataSourcePermissionsResult {
+func (a *QuickSightStub) DescribeDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) *QuickSightDescribeDataSourcePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeDataSourcePermissions", input)
-	return &QuicksightDescribeDataSourcePermissionsResult{Result: future}
+	return &QuickSightDescribeDataSourcePermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeGroup(ctx workflow.Context, input *quicksight.DescribeGroupInput) (*quicksight.DescribeGroupOutput, error) {
@@ -1750,9 +1849,9 @@ func (a *QuickSightStub) DescribeGroup(ctx workflow.Context, input *quicksight.D
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeGroupAsync(ctx workflow.Context, input *quicksight.DescribeGroupInput) *QuicksightDescribeGroupResult {
+func (a *QuickSightStub) DescribeGroupAsync(ctx workflow.Context, input *quicksight.DescribeGroupInput) *QuickSightDescribeGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeGroup", input)
-	return &QuicksightDescribeGroupResult{Result: future}
+	return &QuickSightDescribeGroupFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeIAMPolicyAssignment(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) (*quicksight.DescribeIAMPolicyAssignmentOutput, error) {
@@ -1761,9 +1860,9 @@ func (a *QuickSightStub) DescribeIAMPolicyAssignment(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) *QuicksightDescribeIAMPolicyAssignmentResult {
+func (a *QuickSightStub) DescribeIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) *QuickSightDescribeIAMPolicyAssignmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeIAMPolicyAssignment", input)
-	return &QuicksightDescribeIAMPolicyAssignmentResult{Result: future}
+	return &QuickSightDescribeIAMPolicyAssignmentFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeIngestion(ctx workflow.Context, input *quicksight.DescribeIngestionInput) (*quicksight.DescribeIngestionOutput, error) {
@@ -1772,9 +1871,9 @@ func (a *QuickSightStub) DescribeIngestion(ctx workflow.Context, input *quicksig
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeIngestionAsync(ctx workflow.Context, input *quicksight.DescribeIngestionInput) *QuicksightDescribeIngestionResult {
+func (a *QuickSightStub) DescribeIngestionAsync(ctx workflow.Context, input *quicksight.DescribeIngestionInput) *QuickSightDescribeIngestionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeIngestion", input)
-	return &QuicksightDescribeIngestionResult{Result: future}
+	return &QuickSightDescribeIngestionFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeNamespace(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) (*quicksight.DescribeNamespaceOutput, error) {
@@ -1783,9 +1882,9 @@ func (a *QuickSightStub) DescribeNamespace(ctx workflow.Context, input *quicksig
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeNamespaceAsync(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) *QuicksightDescribeNamespaceResult {
+func (a *QuickSightStub) DescribeNamespaceAsync(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) *QuickSightDescribeNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeNamespace", input)
-	return &QuicksightDescribeNamespaceResult{Result: future}
+	return &QuickSightDescribeNamespaceFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeTemplate(ctx workflow.Context, input *quicksight.DescribeTemplateInput) (*quicksight.DescribeTemplateOutput, error) {
@@ -1794,9 +1893,9 @@ func (a *QuickSightStub) DescribeTemplate(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeTemplateAsync(ctx workflow.Context, input *quicksight.DescribeTemplateInput) *QuicksightDescribeTemplateResult {
+func (a *QuickSightStub) DescribeTemplateAsync(ctx workflow.Context, input *quicksight.DescribeTemplateInput) *QuickSightDescribeTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeTemplate", input)
-	return &QuicksightDescribeTemplateResult{Result: future}
+	return &QuickSightDescribeTemplateFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeTemplateAlias(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) (*quicksight.DescribeTemplateAliasOutput, error) {
@@ -1805,9 +1904,9 @@ func (a *QuickSightStub) DescribeTemplateAlias(ctx workflow.Context, input *quic
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeTemplateAliasAsync(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) *QuicksightDescribeTemplateAliasResult {
+func (a *QuickSightStub) DescribeTemplateAliasAsync(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) *QuickSightDescribeTemplateAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeTemplateAlias", input)
-	return &QuicksightDescribeTemplateAliasResult{Result: future}
+	return &QuickSightDescribeTemplateAliasFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeTemplatePermissions(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) (*quicksight.DescribeTemplatePermissionsOutput, error) {
@@ -1816,9 +1915,9 @@ func (a *QuickSightStub) DescribeTemplatePermissions(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) *QuicksightDescribeTemplatePermissionsResult {
+func (a *QuickSightStub) DescribeTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) *QuickSightDescribeTemplatePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeTemplatePermissions", input)
-	return &QuicksightDescribeTemplatePermissionsResult{Result: future}
+	return &QuickSightDescribeTemplatePermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeTheme(ctx workflow.Context, input *quicksight.DescribeThemeInput) (*quicksight.DescribeThemeOutput, error) {
@@ -1827,9 +1926,9 @@ func (a *QuickSightStub) DescribeTheme(ctx workflow.Context, input *quicksight.D
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeThemeAsync(ctx workflow.Context, input *quicksight.DescribeThemeInput) *QuicksightDescribeThemeResult {
+func (a *QuickSightStub) DescribeThemeAsync(ctx workflow.Context, input *quicksight.DescribeThemeInput) *QuickSightDescribeThemeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeTheme", input)
-	return &QuicksightDescribeThemeResult{Result: future}
+	return &QuickSightDescribeThemeFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeThemeAlias(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) (*quicksight.DescribeThemeAliasOutput, error) {
@@ -1838,9 +1937,9 @@ func (a *QuickSightStub) DescribeThemeAlias(ctx workflow.Context, input *quicksi
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeThemeAliasAsync(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) *QuicksightDescribeThemeAliasResult {
+func (a *QuickSightStub) DescribeThemeAliasAsync(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) *QuickSightDescribeThemeAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeThemeAlias", input)
-	return &QuicksightDescribeThemeAliasResult{Result: future}
+	return &QuickSightDescribeThemeAliasFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeThemePermissions(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) (*quicksight.DescribeThemePermissionsOutput, error) {
@@ -1849,9 +1948,9 @@ func (a *QuickSightStub) DescribeThemePermissions(ctx workflow.Context, input *q
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeThemePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) *QuicksightDescribeThemePermissionsResult {
+func (a *QuickSightStub) DescribeThemePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) *QuickSightDescribeThemePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeThemePermissions", input)
-	return &QuicksightDescribeThemePermissionsResult{Result: future}
+	return &QuickSightDescribeThemePermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) DescribeUser(ctx workflow.Context, input *quicksight.DescribeUserInput) (*quicksight.DescribeUserOutput, error) {
@@ -1860,9 +1959,9 @@ func (a *QuickSightStub) DescribeUser(ctx workflow.Context, input *quicksight.De
 	return &output, err
 }
 
-func (a *QuickSightStub) DescribeUserAsync(ctx workflow.Context, input *quicksight.DescribeUserInput) *QuicksightDescribeUserResult {
+func (a *QuickSightStub) DescribeUserAsync(ctx workflow.Context, input *quicksight.DescribeUserInput) *QuickSightDescribeUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.DescribeUser", input)
-	return &QuicksightDescribeUserResult{Result: future}
+	return &QuickSightDescribeUserFuture{Future: future}
 }
 
 func (a *QuickSightStub) GetDashboardEmbedUrl(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) (*quicksight.GetDashboardEmbedUrlOutput, error) {
@@ -1871,9 +1970,9 @@ func (a *QuickSightStub) GetDashboardEmbedUrl(ctx workflow.Context, input *quick
 	return &output, err
 }
 
-func (a *QuickSightStub) GetDashboardEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) *QuicksightGetDashboardEmbedUrlResult {
+func (a *QuickSightStub) GetDashboardEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) *QuickSightGetDashboardEmbedUrlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.GetDashboardEmbedUrl", input)
-	return &QuicksightGetDashboardEmbedUrlResult{Result: future}
+	return &QuickSightGetDashboardEmbedUrlFuture{Future: future}
 }
 
 func (a *QuickSightStub) GetSessionEmbedUrl(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) (*quicksight.GetSessionEmbedUrlOutput, error) {
@@ -1882,9 +1981,9 @@ func (a *QuickSightStub) GetSessionEmbedUrl(ctx workflow.Context, input *quicksi
 	return &output, err
 }
 
-func (a *QuickSightStub) GetSessionEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) *QuicksightGetSessionEmbedUrlResult {
+func (a *QuickSightStub) GetSessionEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) *QuickSightGetSessionEmbedUrlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.GetSessionEmbedUrl", input)
-	return &QuicksightGetSessionEmbedUrlResult{Result: future}
+	return &QuickSightGetSessionEmbedUrlFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListAnalyses(ctx workflow.Context, input *quicksight.ListAnalysesInput) (*quicksight.ListAnalysesOutput, error) {
@@ -1893,9 +1992,9 @@ func (a *QuickSightStub) ListAnalyses(ctx workflow.Context, input *quicksight.Li
 	return &output, err
 }
 
-func (a *QuickSightStub) ListAnalysesAsync(ctx workflow.Context, input *quicksight.ListAnalysesInput) *QuicksightListAnalysesResult {
+func (a *QuickSightStub) ListAnalysesAsync(ctx workflow.Context, input *quicksight.ListAnalysesInput) *QuickSightListAnalysesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListAnalyses", input)
-	return &QuicksightListAnalysesResult{Result: future}
+	return &QuickSightListAnalysesFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListDashboardVersions(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) (*quicksight.ListDashboardVersionsOutput, error) {
@@ -1904,9 +2003,9 @@ func (a *QuickSightStub) ListDashboardVersions(ctx workflow.Context, input *quic
 	return &output, err
 }
 
-func (a *QuickSightStub) ListDashboardVersionsAsync(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) *QuicksightListDashboardVersionsResult {
+func (a *QuickSightStub) ListDashboardVersionsAsync(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) *QuickSightListDashboardVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListDashboardVersions", input)
-	return &QuicksightListDashboardVersionsResult{Result: future}
+	return &QuickSightListDashboardVersionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListDashboards(ctx workflow.Context, input *quicksight.ListDashboardsInput) (*quicksight.ListDashboardsOutput, error) {
@@ -1915,9 +2014,9 @@ func (a *QuickSightStub) ListDashboards(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) ListDashboardsAsync(ctx workflow.Context, input *quicksight.ListDashboardsInput) *QuicksightListDashboardsResult {
+func (a *QuickSightStub) ListDashboardsAsync(ctx workflow.Context, input *quicksight.ListDashboardsInput) *QuickSightListDashboardsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListDashboards", input)
-	return &QuicksightListDashboardsResult{Result: future}
+	return &QuickSightListDashboardsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListDataSets(ctx workflow.Context, input *quicksight.ListDataSetsInput) (*quicksight.ListDataSetsOutput, error) {
@@ -1926,9 +2025,9 @@ func (a *QuickSightStub) ListDataSets(ctx workflow.Context, input *quicksight.Li
 	return &output, err
 }
 
-func (a *QuickSightStub) ListDataSetsAsync(ctx workflow.Context, input *quicksight.ListDataSetsInput) *QuicksightListDataSetsResult {
+func (a *QuickSightStub) ListDataSetsAsync(ctx workflow.Context, input *quicksight.ListDataSetsInput) *QuickSightListDataSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListDataSets", input)
-	return &QuicksightListDataSetsResult{Result: future}
+	return &QuickSightListDataSetsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListDataSources(ctx workflow.Context, input *quicksight.ListDataSourcesInput) (*quicksight.ListDataSourcesOutput, error) {
@@ -1937,9 +2036,9 @@ func (a *QuickSightStub) ListDataSources(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) ListDataSourcesAsync(ctx workflow.Context, input *quicksight.ListDataSourcesInput) *QuicksightListDataSourcesResult {
+func (a *QuickSightStub) ListDataSourcesAsync(ctx workflow.Context, input *quicksight.ListDataSourcesInput) *QuickSightListDataSourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListDataSources", input)
-	return &QuicksightListDataSourcesResult{Result: future}
+	return &QuickSightListDataSourcesFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListGroupMemberships(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) (*quicksight.ListGroupMembershipsOutput, error) {
@@ -1948,9 +2047,9 @@ func (a *QuickSightStub) ListGroupMemberships(ctx workflow.Context, input *quick
 	return &output, err
 }
 
-func (a *QuickSightStub) ListGroupMembershipsAsync(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) *QuicksightListGroupMembershipsResult {
+func (a *QuickSightStub) ListGroupMembershipsAsync(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) *QuickSightListGroupMembershipsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListGroupMemberships", input)
-	return &QuicksightListGroupMembershipsResult{Result: future}
+	return &QuickSightListGroupMembershipsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListGroups(ctx workflow.Context, input *quicksight.ListGroupsInput) (*quicksight.ListGroupsOutput, error) {
@@ -1959,9 +2058,9 @@ func (a *QuickSightStub) ListGroups(ctx workflow.Context, input *quicksight.List
 	return &output, err
 }
 
-func (a *QuickSightStub) ListGroupsAsync(ctx workflow.Context, input *quicksight.ListGroupsInput) *QuicksightListGroupsResult {
+func (a *QuickSightStub) ListGroupsAsync(ctx workflow.Context, input *quicksight.ListGroupsInput) *QuickSightListGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListGroups", input)
-	return &QuicksightListGroupsResult{Result: future}
+	return &QuickSightListGroupsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListIAMPolicyAssignments(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) (*quicksight.ListIAMPolicyAssignmentsOutput, error) {
@@ -1970,9 +2069,9 @@ func (a *QuickSightStub) ListIAMPolicyAssignments(ctx workflow.Context, input *q
 	return &output, err
 }
 
-func (a *QuickSightStub) ListIAMPolicyAssignmentsAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) *QuicksightListIAMPolicyAssignmentsResult {
+func (a *QuickSightStub) ListIAMPolicyAssignmentsAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) *QuickSightListIAMPolicyAssignmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListIAMPolicyAssignments", input)
-	return &QuicksightListIAMPolicyAssignmentsResult{Result: future}
+	return &QuickSightListIAMPolicyAssignmentsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListIAMPolicyAssignmentsForUser(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) (*quicksight.ListIAMPolicyAssignmentsForUserOutput, error) {
@@ -1981,9 +2080,9 @@ func (a *QuickSightStub) ListIAMPolicyAssignmentsForUser(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *QuickSightStub) ListIAMPolicyAssignmentsForUserAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) *QuicksightListIAMPolicyAssignmentsForUserResult {
+func (a *QuickSightStub) ListIAMPolicyAssignmentsForUserAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) *QuickSightListIAMPolicyAssignmentsForUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListIAMPolicyAssignmentsForUser", input)
-	return &QuicksightListIAMPolicyAssignmentsForUserResult{Result: future}
+	return &QuickSightListIAMPolicyAssignmentsForUserFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListIngestions(ctx workflow.Context, input *quicksight.ListIngestionsInput) (*quicksight.ListIngestionsOutput, error) {
@@ -1992,9 +2091,9 @@ func (a *QuickSightStub) ListIngestions(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) ListIngestionsAsync(ctx workflow.Context, input *quicksight.ListIngestionsInput) *QuicksightListIngestionsResult {
+func (a *QuickSightStub) ListIngestionsAsync(ctx workflow.Context, input *quicksight.ListIngestionsInput) *QuickSightListIngestionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListIngestions", input)
-	return &QuicksightListIngestionsResult{Result: future}
+	return &QuickSightListIngestionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListNamespaces(ctx workflow.Context, input *quicksight.ListNamespacesInput) (*quicksight.ListNamespacesOutput, error) {
@@ -2003,9 +2102,9 @@ func (a *QuickSightStub) ListNamespaces(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) ListNamespacesAsync(ctx workflow.Context, input *quicksight.ListNamespacesInput) *QuicksightListNamespacesResult {
+func (a *QuickSightStub) ListNamespacesAsync(ctx workflow.Context, input *quicksight.ListNamespacesInput) *QuickSightListNamespacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListNamespaces", input)
-	return &QuicksightListNamespacesResult{Result: future}
+	return &QuickSightListNamespacesFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListTagsForResource(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) (*quicksight.ListTagsForResourceOutput, error) {
@@ -2014,9 +2113,9 @@ func (a *QuickSightStub) ListTagsForResource(ctx workflow.Context, input *quicks
 	return &output, err
 }
 
-func (a *QuickSightStub) ListTagsForResourceAsync(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) *QuicksightListTagsForResourceResult {
+func (a *QuickSightStub) ListTagsForResourceAsync(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) *QuickSightListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListTagsForResource", input)
-	return &QuicksightListTagsForResourceResult{Result: future}
+	return &QuickSightListTagsForResourceFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListTemplateAliases(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) (*quicksight.ListTemplateAliasesOutput, error) {
@@ -2025,9 +2124,9 @@ func (a *QuickSightStub) ListTemplateAliases(ctx workflow.Context, input *quicks
 	return &output, err
 }
 
-func (a *QuickSightStub) ListTemplateAliasesAsync(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) *QuicksightListTemplateAliasesResult {
+func (a *QuickSightStub) ListTemplateAliasesAsync(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) *QuickSightListTemplateAliasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListTemplateAliases", input)
-	return &QuicksightListTemplateAliasesResult{Result: future}
+	return &QuickSightListTemplateAliasesFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListTemplateVersions(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) (*quicksight.ListTemplateVersionsOutput, error) {
@@ -2036,9 +2135,9 @@ func (a *QuickSightStub) ListTemplateVersions(ctx workflow.Context, input *quick
 	return &output, err
 }
 
-func (a *QuickSightStub) ListTemplateVersionsAsync(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) *QuicksightListTemplateVersionsResult {
+func (a *QuickSightStub) ListTemplateVersionsAsync(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) *QuickSightListTemplateVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListTemplateVersions", input)
-	return &QuicksightListTemplateVersionsResult{Result: future}
+	return &QuickSightListTemplateVersionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListTemplates(ctx workflow.Context, input *quicksight.ListTemplatesInput) (*quicksight.ListTemplatesOutput, error) {
@@ -2047,9 +2146,9 @@ func (a *QuickSightStub) ListTemplates(ctx workflow.Context, input *quicksight.L
 	return &output, err
 }
 
-func (a *QuickSightStub) ListTemplatesAsync(ctx workflow.Context, input *quicksight.ListTemplatesInput) *QuicksightListTemplatesResult {
+func (a *QuickSightStub) ListTemplatesAsync(ctx workflow.Context, input *quicksight.ListTemplatesInput) *QuickSightListTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListTemplates", input)
-	return &QuicksightListTemplatesResult{Result: future}
+	return &QuickSightListTemplatesFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListThemeAliases(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) (*quicksight.ListThemeAliasesOutput, error) {
@@ -2058,9 +2157,9 @@ func (a *QuickSightStub) ListThemeAliases(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) ListThemeAliasesAsync(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) *QuicksightListThemeAliasesResult {
+func (a *QuickSightStub) ListThemeAliasesAsync(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) *QuickSightListThemeAliasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListThemeAliases", input)
-	return &QuicksightListThemeAliasesResult{Result: future}
+	return &QuickSightListThemeAliasesFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListThemeVersions(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) (*quicksight.ListThemeVersionsOutput, error) {
@@ -2069,9 +2168,9 @@ func (a *QuickSightStub) ListThemeVersions(ctx workflow.Context, input *quicksig
 	return &output, err
 }
 
-func (a *QuickSightStub) ListThemeVersionsAsync(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) *QuicksightListThemeVersionsResult {
+func (a *QuickSightStub) ListThemeVersionsAsync(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) *QuickSightListThemeVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListThemeVersions", input)
-	return &QuicksightListThemeVersionsResult{Result: future}
+	return &QuickSightListThemeVersionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListThemes(ctx workflow.Context, input *quicksight.ListThemesInput) (*quicksight.ListThemesOutput, error) {
@@ -2080,9 +2179,9 @@ func (a *QuickSightStub) ListThemes(ctx workflow.Context, input *quicksight.List
 	return &output, err
 }
 
-func (a *QuickSightStub) ListThemesAsync(ctx workflow.Context, input *quicksight.ListThemesInput) *QuicksightListThemesResult {
+func (a *QuickSightStub) ListThemesAsync(ctx workflow.Context, input *quicksight.ListThemesInput) *QuickSightListThemesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListThemes", input)
-	return &QuicksightListThemesResult{Result: future}
+	return &QuickSightListThemesFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListUserGroups(ctx workflow.Context, input *quicksight.ListUserGroupsInput) (*quicksight.ListUserGroupsOutput, error) {
@@ -2091,9 +2190,9 @@ func (a *QuickSightStub) ListUserGroups(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) ListUserGroupsAsync(ctx workflow.Context, input *quicksight.ListUserGroupsInput) *QuicksightListUserGroupsResult {
+func (a *QuickSightStub) ListUserGroupsAsync(ctx workflow.Context, input *quicksight.ListUserGroupsInput) *QuickSightListUserGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListUserGroups", input)
-	return &QuicksightListUserGroupsResult{Result: future}
+	return &QuickSightListUserGroupsFuture{Future: future}
 }
 
 func (a *QuickSightStub) ListUsers(ctx workflow.Context, input *quicksight.ListUsersInput) (*quicksight.ListUsersOutput, error) {
@@ -2102,9 +2201,9 @@ func (a *QuickSightStub) ListUsers(ctx workflow.Context, input *quicksight.ListU
 	return &output, err
 }
 
-func (a *QuickSightStub) ListUsersAsync(ctx workflow.Context, input *quicksight.ListUsersInput) *QuicksightListUsersResult {
+func (a *QuickSightStub) ListUsersAsync(ctx workflow.Context, input *quicksight.ListUsersInput) *QuickSightListUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.ListUsers", input)
-	return &QuicksightListUsersResult{Result: future}
+	return &QuickSightListUsersFuture{Future: future}
 }
 
 func (a *QuickSightStub) RegisterUser(ctx workflow.Context, input *quicksight.RegisterUserInput) (*quicksight.RegisterUserOutput, error) {
@@ -2113,9 +2212,9 @@ func (a *QuickSightStub) RegisterUser(ctx workflow.Context, input *quicksight.Re
 	return &output, err
 }
 
-func (a *QuickSightStub) RegisterUserAsync(ctx workflow.Context, input *quicksight.RegisterUserInput) *QuicksightRegisterUserResult {
+func (a *QuickSightStub) RegisterUserAsync(ctx workflow.Context, input *quicksight.RegisterUserInput) *QuickSightRegisterUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.RegisterUser", input)
-	return &QuicksightRegisterUserResult{Result: future}
+	return &QuickSightRegisterUserFuture{Future: future}
 }
 
 func (a *QuickSightStub) RestoreAnalysis(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) (*quicksight.RestoreAnalysisOutput, error) {
@@ -2124,9 +2223,9 @@ func (a *QuickSightStub) RestoreAnalysis(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) RestoreAnalysisAsync(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) *QuicksightRestoreAnalysisResult {
+func (a *QuickSightStub) RestoreAnalysisAsync(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) *QuickSightRestoreAnalysisFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.RestoreAnalysis", input)
-	return &QuicksightRestoreAnalysisResult{Result: future}
+	return &QuickSightRestoreAnalysisFuture{Future: future}
 }
 
 func (a *QuickSightStub) SearchAnalyses(ctx workflow.Context, input *quicksight.SearchAnalysesInput) (*quicksight.SearchAnalysesOutput, error) {
@@ -2135,9 +2234,9 @@ func (a *QuickSightStub) SearchAnalyses(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) SearchAnalysesAsync(ctx workflow.Context, input *quicksight.SearchAnalysesInput) *QuicksightSearchAnalysesResult {
+func (a *QuickSightStub) SearchAnalysesAsync(ctx workflow.Context, input *quicksight.SearchAnalysesInput) *QuickSightSearchAnalysesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.SearchAnalyses", input)
-	return &QuicksightSearchAnalysesResult{Result: future}
+	return &QuickSightSearchAnalysesFuture{Future: future}
 }
 
 func (a *QuickSightStub) SearchDashboards(ctx workflow.Context, input *quicksight.SearchDashboardsInput) (*quicksight.SearchDashboardsOutput, error) {
@@ -2146,9 +2245,9 @@ func (a *QuickSightStub) SearchDashboards(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) SearchDashboardsAsync(ctx workflow.Context, input *quicksight.SearchDashboardsInput) *QuicksightSearchDashboardsResult {
+func (a *QuickSightStub) SearchDashboardsAsync(ctx workflow.Context, input *quicksight.SearchDashboardsInput) *QuickSightSearchDashboardsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.SearchDashboards", input)
-	return &QuicksightSearchDashboardsResult{Result: future}
+	return &QuickSightSearchDashboardsFuture{Future: future}
 }
 
 func (a *QuickSightStub) TagResource(ctx workflow.Context, input *quicksight.TagResourceInput) (*quicksight.TagResourceOutput, error) {
@@ -2157,9 +2256,9 @@ func (a *QuickSightStub) TagResource(ctx workflow.Context, input *quicksight.Tag
 	return &output, err
 }
 
-func (a *QuickSightStub) TagResourceAsync(ctx workflow.Context, input *quicksight.TagResourceInput) *QuicksightTagResourceResult {
+func (a *QuickSightStub) TagResourceAsync(ctx workflow.Context, input *quicksight.TagResourceInput) *QuickSightTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.TagResource", input)
-	return &QuicksightTagResourceResult{Result: future}
+	return &QuickSightTagResourceFuture{Future: future}
 }
 
 func (a *QuickSightStub) UntagResource(ctx workflow.Context, input *quicksight.UntagResourceInput) (*quicksight.UntagResourceOutput, error) {
@@ -2168,9 +2267,9 @@ func (a *QuickSightStub) UntagResource(ctx workflow.Context, input *quicksight.U
 	return &output, err
 }
 
-func (a *QuickSightStub) UntagResourceAsync(ctx workflow.Context, input *quicksight.UntagResourceInput) *QuicksightUntagResourceResult {
+func (a *QuickSightStub) UntagResourceAsync(ctx workflow.Context, input *quicksight.UntagResourceInput) *QuickSightUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UntagResource", input)
-	return &QuicksightUntagResourceResult{Result: future}
+	return &QuickSightUntagResourceFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateAccountCustomization(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) (*quicksight.UpdateAccountCustomizationOutput, error) {
@@ -2179,9 +2278,9 @@ func (a *QuickSightStub) UpdateAccountCustomization(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) *QuicksightUpdateAccountCustomizationResult {
+func (a *QuickSightStub) UpdateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) *QuickSightUpdateAccountCustomizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateAccountCustomization", input)
-	return &QuicksightUpdateAccountCustomizationResult{Result: future}
+	return &QuickSightUpdateAccountCustomizationFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateAccountSettings(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) (*quicksight.UpdateAccountSettingsOutput, error) {
@@ -2190,9 +2289,9 @@ func (a *QuickSightStub) UpdateAccountSettings(ctx workflow.Context, input *quic
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateAccountSettingsAsync(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) *QuicksightUpdateAccountSettingsResult {
+func (a *QuickSightStub) UpdateAccountSettingsAsync(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) *QuickSightUpdateAccountSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateAccountSettings", input)
-	return &QuicksightUpdateAccountSettingsResult{Result: future}
+	return &QuickSightUpdateAccountSettingsFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateAnalysis(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) (*quicksight.UpdateAnalysisOutput, error) {
@@ -2201,9 +2300,9 @@ func (a *QuickSightStub) UpdateAnalysis(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateAnalysisAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) *QuicksightUpdateAnalysisResult {
+func (a *QuickSightStub) UpdateAnalysisAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) *QuickSightUpdateAnalysisFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateAnalysis", input)
-	return &QuicksightUpdateAnalysisResult{Result: future}
+	return &QuickSightUpdateAnalysisFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateAnalysisPermissions(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) (*quicksight.UpdateAnalysisPermissionsOutput, error) {
@@ -2212,9 +2311,9 @@ func (a *QuickSightStub) UpdateAnalysisPermissions(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) *QuicksightUpdateAnalysisPermissionsResult {
+func (a *QuickSightStub) UpdateAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) *QuickSightUpdateAnalysisPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateAnalysisPermissions", input)
-	return &QuicksightUpdateAnalysisPermissionsResult{Result: future}
+	return &QuickSightUpdateAnalysisPermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateDashboard(ctx workflow.Context, input *quicksight.UpdateDashboardInput) (*quicksight.UpdateDashboardOutput, error) {
@@ -2223,9 +2322,9 @@ func (a *QuickSightStub) UpdateDashboard(ctx workflow.Context, input *quicksight
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateDashboardAsync(ctx workflow.Context, input *quicksight.UpdateDashboardInput) *QuicksightUpdateDashboardResult {
+func (a *QuickSightStub) UpdateDashboardAsync(ctx workflow.Context, input *quicksight.UpdateDashboardInput) *QuickSightUpdateDashboardFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateDashboard", input)
-	return &QuicksightUpdateDashboardResult{Result: future}
+	return &QuickSightUpdateDashboardFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateDashboardPermissions(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) (*quicksight.UpdateDashboardPermissionsOutput, error) {
@@ -2234,9 +2333,9 @@ func (a *QuickSightStub) UpdateDashboardPermissions(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) *QuicksightUpdateDashboardPermissionsResult {
+func (a *QuickSightStub) UpdateDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) *QuickSightUpdateDashboardPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateDashboardPermissions", input)
-	return &QuicksightUpdateDashboardPermissionsResult{Result: future}
+	return &QuickSightUpdateDashboardPermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateDashboardPublishedVersion(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) (*quicksight.UpdateDashboardPublishedVersionOutput, error) {
@@ -2245,9 +2344,9 @@ func (a *QuickSightStub) UpdateDashboardPublishedVersion(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateDashboardPublishedVersionAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) *QuicksightUpdateDashboardPublishedVersionResult {
+func (a *QuickSightStub) UpdateDashboardPublishedVersionAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) *QuickSightUpdateDashboardPublishedVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateDashboardPublishedVersion", input)
-	return &QuicksightUpdateDashboardPublishedVersionResult{Result: future}
+	return &QuickSightUpdateDashboardPublishedVersionFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateDataSet(ctx workflow.Context, input *quicksight.UpdateDataSetInput) (*quicksight.UpdateDataSetOutput, error) {
@@ -2256,9 +2355,9 @@ func (a *QuickSightStub) UpdateDataSet(ctx workflow.Context, input *quicksight.U
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateDataSetAsync(ctx workflow.Context, input *quicksight.UpdateDataSetInput) *QuicksightUpdateDataSetResult {
+func (a *QuickSightStub) UpdateDataSetAsync(ctx workflow.Context, input *quicksight.UpdateDataSetInput) *QuickSightUpdateDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateDataSet", input)
-	return &QuicksightUpdateDataSetResult{Result: future}
+	return &QuickSightUpdateDataSetFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateDataSetPermissions(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) (*quicksight.UpdateDataSetPermissionsOutput, error) {
@@ -2267,9 +2366,9 @@ func (a *QuickSightStub) UpdateDataSetPermissions(ctx workflow.Context, input *q
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) *QuicksightUpdateDataSetPermissionsResult {
+func (a *QuickSightStub) UpdateDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) *QuickSightUpdateDataSetPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateDataSetPermissions", input)
-	return &QuicksightUpdateDataSetPermissionsResult{Result: future}
+	return &QuickSightUpdateDataSetPermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateDataSource(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) (*quicksight.UpdateDataSourceOutput, error) {
@@ -2278,9 +2377,9 @@ func (a *QuickSightStub) UpdateDataSource(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateDataSourceAsync(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) *QuicksightUpdateDataSourceResult {
+func (a *QuickSightStub) UpdateDataSourceAsync(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) *QuickSightUpdateDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateDataSource", input)
-	return &QuicksightUpdateDataSourceResult{Result: future}
+	return &QuickSightUpdateDataSourceFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateDataSourcePermissions(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) (*quicksight.UpdateDataSourcePermissionsOutput, error) {
@@ -2289,9 +2388,9 @@ func (a *QuickSightStub) UpdateDataSourcePermissions(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) *QuicksightUpdateDataSourcePermissionsResult {
+func (a *QuickSightStub) UpdateDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) *QuickSightUpdateDataSourcePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateDataSourcePermissions", input)
-	return &QuicksightUpdateDataSourcePermissionsResult{Result: future}
+	return &QuickSightUpdateDataSourcePermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateGroup(ctx workflow.Context, input *quicksight.UpdateGroupInput) (*quicksight.UpdateGroupOutput, error) {
@@ -2300,9 +2399,9 @@ func (a *QuickSightStub) UpdateGroup(ctx workflow.Context, input *quicksight.Upd
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateGroupAsync(ctx workflow.Context, input *quicksight.UpdateGroupInput) *QuicksightUpdateGroupResult {
+func (a *QuickSightStub) UpdateGroupAsync(ctx workflow.Context, input *quicksight.UpdateGroupInput) *QuickSightUpdateGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateGroup", input)
-	return &QuicksightUpdateGroupResult{Result: future}
+	return &QuickSightUpdateGroupFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateIAMPolicyAssignment(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) (*quicksight.UpdateIAMPolicyAssignmentOutput, error) {
@@ -2311,9 +2410,9 @@ func (a *QuickSightStub) UpdateIAMPolicyAssignment(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) *QuicksightUpdateIAMPolicyAssignmentResult {
+func (a *QuickSightStub) UpdateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) *QuickSightUpdateIAMPolicyAssignmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateIAMPolicyAssignment", input)
-	return &QuicksightUpdateIAMPolicyAssignmentResult{Result: future}
+	return &QuickSightUpdateIAMPolicyAssignmentFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateTemplate(ctx workflow.Context, input *quicksight.UpdateTemplateInput) (*quicksight.UpdateTemplateOutput, error) {
@@ -2322,9 +2421,9 @@ func (a *QuickSightStub) UpdateTemplate(ctx workflow.Context, input *quicksight.
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateTemplateAsync(ctx workflow.Context, input *quicksight.UpdateTemplateInput) *QuicksightUpdateTemplateResult {
+func (a *QuickSightStub) UpdateTemplateAsync(ctx workflow.Context, input *quicksight.UpdateTemplateInput) *QuickSightUpdateTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateTemplate", input)
-	return &QuicksightUpdateTemplateResult{Result: future}
+	return &QuickSightUpdateTemplateFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateTemplateAlias(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) (*quicksight.UpdateTemplateAliasOutput, error) {
@@ -2333,9 +2432,9 @@ func (a *QuickSightStub) UpdateTemplateAlias(ctx workflow.Context, input *quicks
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateTemplateAliasAsync(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) *QuicksightUpdateTemplateAliasResult {
+func (a *QuickSightStub) UpdateTemplateAliasAsync(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) *QuickSightUpdateTemplateAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateTemplateAlias", input)
-	return &QuicksightUpdateTemplateAliasResult{Result: future}
+	return &QuickSightUpdateTemplateAliasFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateTemplatePermissions(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) (*quicksight.UpdateTemplatePermissionsOutput, error) {
@@ -2344,9 +2443,9 @@ func (a *QuickSightStub) UpdateTemplatePermissions(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) *QuicksightUpdateTemplatePermissionsResult {
+func (a *QuickSightStub) UpdateTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) *QuickSightUpdateTemplatePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateTemplatePermissions", input)
-	return &QuicksightUpdateTemplatePermissionsResult{Result: future}
+	return &QuickSightUpdateTemplatePermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateTheme(ctx workflow.Context, input *quicksight.UpdateThemeInput) (*quicksight.UpdateThemeOutput, error) {
@@ -2355,9 +2454,9 @@ func (a *QuickSightStub) UpdateTheme(ctx workflow.Context, input *quicksight.Upd
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateThemeAsync(ctx workflow.Context, input *quicksight.UpdateThemeInput) *QuicksightUpdateThemeResult {
+func (a *QuickSightStub) UpdateThemeAsync(ctx workflow.Context, input *quicksight.UpdateThemeInput) *QuickSightUpdateThemeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateTheme", input)
-	return &QuicksightUpdateThemeResult{Result: future}
+	return &QuickSightUpdateThemeFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateThemeAlias(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) (*quicksight.UpdateThemeAliasOutput, error) {
@@ -2366,9 +2465,9 @@ func (a *QuickSightStub) UpdateThemeAlias(ctx workflow.Context, input *quicksigh
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateThemeAliasAsync(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) *QuicksightUpdateThemeAliasResult {
+func (a *QuickSightStub) UpdateThemeAliasAsync(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) *QuickSightUpdateThemeAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateThemeAlias", input)
-	return &QuicksightUpdateThemeAliasResult{Result: future}
+	return &QuickSightUpdateThemeAliasFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateThemePermissions(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) (*quicksight.UpdateThemePermissionsOutput, error) {
@@ -2377,9 +2476,9 @@ func (a *QuickSightStub) UpdateThemePermissions(ctx workflow.Context, input *qui
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateThemePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) *QuicksightUpdateThemePermissionsResult {
+func (a *QuickSightStub) UpdateThemePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) *QuickSightUpdateThemePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateThemePermissions", input)
-	return &QuicksightUpdateThemePermissionsResult{Result: future}
+	return &QuickSightUpdateThemePermissionsFuture{Future: future}
 }
 
 func (a *QuickSightStub) UpdateUser(ctx workflow.Context, input *quicksight.UpdateUserInput) (*quicksight.UpdateUserOutput, error) {
@@ -2388,7 +2487,7 @@ func (a *QuickSightStub) UpdateUser(ctx workflow.Context, input *quicksight.Upda
 	return &output, err
 }
 
-func (a *QuickSightStub) UpdateUserAsync(ctx workflow.Context, input *quicksight.UpdateUserInput) *QuicksightUpdateUserResult {
+func (a *QuickSightStub) UpdateUserAsync(ctx workflow.Context, input *quicksight.UpdateUserInput) *QuickSightUpdateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.quicksight.UpdateUser", input)
-	return &QuicksightUpdateUserResult{Result: future}
+	return &QuickSightUpdateUserFuture{Future: future}
 }

@@ -11,43 +11,43 @@ import (
 
 type HealthClient interface {
 	DescribeAffectedAccountsForOrganization(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) (*health.DescribeAffectedAccountsForOrganizationOutput, error)
-	DescribeAffectedAccountsForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) *HealthDescribeAffectedAccountsForOrganizationResult
+	DescribeAffectedAccountsForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) *HealthDescribeAffectedAccountsForOrganizationFuture
 
 	DescribeAffectedEntities(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) (*health.DescribeAffectedEntitiesOutput, error)
-	DescribeAffectedEntitiesAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) *HealthDescribeAffectedEntitiesResult
+	DescribeAffectedEntitiesAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) *HealthDescribeAffectedEntitiesFuture
 
 	DescribeAffectedEntitiesForOrganization(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) (*health.DescribeAffectedEntitiesForOrganizationOutput, error)
-	DescribeAffectedEntitiesForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) *HealthDescribeAffectedEntitiesForOrganizationResult
+	DescribeAffectedEntitiesForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) *HealthDescribeAffectedEntitiesForOrganizationFuture
 
 	DescribeEntityAggregates(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) (*health.DescribeEntityAggregatesOutput, error)
-	DescribeEntityAggregatesAsync(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) *HealthDescribeEntityAggregatesResult
+	DescribeEntityAggregatesAsync(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) *HealthDescribeEntityAggregatesFuture
 
 	DescribeEventAggregates(ctx workflow.Context, input *health.DescribeEventAggregatesInput) (*health.DescribeEventAggregatesOutput, error)
-	DescribeEventAggregatesAsync(ctx workflow.Context, input *health.DescribeEventAggregatesInput) *HealthDescribeEventAggregatesResult
+	DescribeEventAggregatesAsync(ctx workflow.Context, input *health.DescribeEventAggregatesInput) *HealthDescribeEventAggregatesFuture
 
 	DescribeEventDetails(ctx workflow.Context, input *health.DescribeEventDetailsInput) (*health.DescribeEventDetailsOutput, error)
-	DescribeEventDetailsAsync(ctx workflow.Context, input *health.DescribeEventDetailsInput) *HealthDescribeEventDetailsResult
+	DescribeEventDetailsAsync(ctx workflow.Context, input *health.DescribeEventDetailsInput) *HealthDescribeEventDetailsFuture
 
 	DescribeEventDetailsForOrganization(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) (*health.DescribeEventDetailsForOrganizationOutput, error)
-	DescribeEventDetailsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) *HealthDescribeEventDetailsForOrganizationResult
+	DescribeEventDetailsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) *HealthDescribeEventDetailsForOrganizationFuture
 
 	DescribeEventTypes(ctx workflow.Context, input *health.DescribeEventTypesInput) (*health.DescribeEventTypesOutput, error)
-	DescribeEventTypesAsync(ctx workflow.Context, input *health.DescribeEventTypesInput) *HealthDescribeEventTypesResult
+	DescribeEventTypesAsync(ctx workflow.Context, input *health.DescribeEventTypesInput) *HealthDescribeEventTypesFuture
 
 	DescribeEvents(ctx workflow.Context, input *health.DescribeEventsInput) (*health.DescribeEventsOutput, error)
-	DescribeEventsAsync(ctx workflow.Context, input *health.DescribeEventsInput) *HealthDescribeEventsResult
+	DescribeEventsAsync(ctx workflow.Context, input *health.DescribeEventsInput) *HealthDescribeEventsFuture
 
 	DescribeEventsForOrganization(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) (*health.DescribeEventsForOrganizationOutput, error)
-	DescribeEventsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) *HealthDescribeEventsForOrganizationResult
+	DescribeEventsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) *HealthDescribeEventsForOrganizationFuture
 
 	DescribeHealthServiceStatusForOrganization(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) (*health.DescribeHealthServiceStatusForOrganizationOutput, error)
-	DescribeHealthServiceStatusForOrganizationAsync(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) *HealthDescribeHealthServiceStatusForOrganizationResult
+	DescribeHealthServiceStatusForOrganizationAsync(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) *HealthDescribeHealthServiceStatusForOrganizationFuture
 
 	DisableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) (*health.DisableHealthServiceAccessForOrganizationOutput, error)
-	DisableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) *HealthDisableHealthServiceAccessForOrganizationResult
+	DisableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) *HealthDisableHealthServiceAccessForOrganizationFuture
 
 	EnableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) (*health.EnableHealthServiceAccessForOrganizationOutput, error)
-	EnableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) *HealthEnableHealthServiceAccessForOrganizationResult
+	EnableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) *HealthEnableHealthServiceAccessForOrganizationFuture
 }
 
 type HealthStub struct{}
@@ -56,133 +56,146 @@ func NewHealthStub() HealthClient {
 	return &HealthStub{}
 }
 
-type HealthDescribeAffectedAccountsForOrganizationResult struct {
-	Result workflow.Future
+type HealthDescribeAffectedAccountsForOrganizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeAffectedAccountsForOrganizationResult) Get(ctx workflow.Context) (*health.DescribeAffectedAccountsForOrganizationOutput, error) {
+func (r *HealthDescribeAffectedAccountsForOrganizationFuture) Get(ctx workflow.Context) (*health.DescribeAffectedAccountsForOrganizationOutput, error) {
 	var output health.DescribeAffectedAccountsForOrganizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeAffectedEntitiesResult struct {
-	Result workflow.Future
+type HealthDescribeAffectedEntitiesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeAffectedEntitiesResult) Get(ctx workflow.Context) (*health.DescribeAffectedEntitiesOutput, error) {
+func (r *HealthDescribeAffectedEntitiesFuture) Get(ctx workflow.Context) (*health.DescribeAffectedEntitiesOutput, error) {
 	var output health.DescribeAffectedEntitiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeAffectedEntitiesForOrganizationResult struct {
-	Result workflow.Future
+type HealthDescribeAffectedEntitiesForOrganizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeAffectedEntitiesForOrganizationResult) Get(ctx workflow.Context) (*health.DescribeAffectedEntitiesForOrganizationOutput, error) {
+func (r *HealthDescribeAffectedEntitiesForOrganizationFuture) Get(ctx workflow.Context) (*health.DescribeAffectedEntitiesForOrganizationOutput, error) {
 	var output health.DescribeAffectedEntitiesForOrganizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeEntityAggregatesResult struct {
-	Result workflow.Future
+type HealthDescribeEntityAggregatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeEntityAggregatesResult) Get(ctx workflow.Context) (*health.DescribeEntityAggregatesOutput, error) {
+func (r *HealthDescribeEntityAggregatesFuture) Get(ctx workflow.Context) (*health.DescribeEntityAggregatesOutput, error) {
 	var output health.DescribeEntityAggregatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeEventAggregatesResult struct {
-	Result workflow.Future
+type HealthDescribeEventAggregatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeEventAggregatesResult) Get(ctx workflow.Context) (*health.DescribeEventAggregatesOutput, error) {
+func (r *HealthDescribeEventAggregatesFuture) Get(ctx workflow.Context) (*health.DescribeEventAggregatesOutput, error) {
 	var output health.DescribeEventAggregatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeEventDetailsResult struct {
-	Result workflow.Future
+type HealthDescribeEventDetailsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeEventDetailsResult) Get(ctx workflow.Context) (*health.DescribeEventDetailsOutput, error) {
+func (r *HealthDescribeEventDetailsFuture) Get(ctx workflow.Context) (*health.DescribeEventDetailsOutput, error) {
 	var output health.DescribeEventDetailsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeEventDetailsForOrganizationResult struct {
-	Result workflow.Future
+type HealthDescribeEventDetailsForOrganizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeEventDetailsForOrganizationResult) Get(ctx workflow.Context) (*health.DescribeEventDetailsForOrganizationOutput, error) {
+func (r *HealthDescribeEventDetailsForOrganizationFuture) Get(ctx workflow.Context) (*health.DescribeEventDetailsForOrganizationOutput, error) {
 	var output health.DescribeEventDetailsForOrganizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeEventTypesResult struct {
-	Result workflow.Future
+type HealthDescribeEventTypesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeEventTypesResult) Get(ctx workflow.Context) (*health.DescribeEventTypesOutput, error) {
+func (r *HealthDescribeEventTypesFuture) Get(ctx workflow.Context) (*health.DescribeEventTypesOutput, error) {
 	var output health.DescribeEventTypesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeEventsResult struct {
-	Result workflow.Future
+type HealthDescribeEventsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeEventsResult) Get(ctx workflow.Context) (*health.DescribeEventsOutput, error) {
+func (r *HealthDescribeEventsFuture) Get(ctx workflow.Context) (*health.DescribeEventsOutput, error) {
 	var output health.DescribeEventsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeEventsForOrganizationResult struct {
-	Result workflow.Future
+type HealthDescribeEventsForOrganizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeEventsForOrganizationResult) Get(ctx workflow.Context) (*health.DescribeEventsForOrganizationOutput, error) {
+func (r *HealthDescribeEventsForOrganizationFuture) Get(ctx workflow.Context) (*health.DescribeEventsForOrganizationOutput, error) {
 	var output health.DescribeEventsForOrganizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDescribeHealthServiceStatusForOrganizationResult struct {
-	Result workflow.Future
+type HealthDescribeHealthServiceStatusForOrganizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDescribeHealthServiceStatusForOrganizationResult) Get(ctx workflow.Context) (*health.DescribeHealthServiceStatusForOrganizationOutput, error) {
+func (r *HealthDescribeHealthServiceStatusForOrganizationFuture) Get(ctx workflow.Context) (*health.DescribeHealthServiceStatusForOrganizationOutput, error) {
 	var output health.DescribeHealthServiceStatusForOrganizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthDisableHealthServiceAccessForOrganizationResult struct {
-	Result workflow.Future
+type HealthDisableHealthServiceAccessForOrganizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthDisableHealthServiceAccessForOrganizationResult) Get(ctx workflow.Context) (*health.DisableHealthServiceAccessForOrganizationOutput, error) {
+func (r *HealthDisableHealthServiceAccessForOrganizationFuture) Get(ctx workflow.Context) (*health.DisableHealthServiceAccessForOrganizationOutput, error) {
 	var output health.DisableHealthServiceAccessForOrganizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HealthEnableHealthServiceAccessForOrganizationResult struct {
-	Result workflow.Future
+type HealthEnableHealthServiceAccessForOrganizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *HealthEnableHealthServiceAccessForOrganizationResult) Get(ctx workflow.Context) (*health.EnableHealthServiceAccessForOrganizationOutput, error) {
+func (r *HealthEnableHealthServiceAccessForOrganizationFuture) Get(ctx workflow.Context) (*health.EnableHealthServiceAccessForOrganizationOutput, error) {
 	var output health.EnableHealthServiceAccessForOrganizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -192,9 +205,9 @@ func (a *HealthStub) DescribeAffectedAccountsForOrganization(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *HealthStub) DescribeAffectedAccountsForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) *HealthDescribeAffectedAccountsForOrganizationResult {
+func (a *HealthStub) DescribeAffectedAccountsForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) *HealthDescribeAffectedAccountsForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedAccountsForOrganization", input)
-	return &HealthDescribeAffectedAccountsForOrganizationResult{Result: future}
+	return &HealthDescribeAffectedAccountsForOrganizationFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeAffectedEntities(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) (*health.DescribeAffectedEntitiesOutput, error) {
@@ -203,9 +216,9 @@ func (a *HealthStub) DescribeAffectedEntities(ctx workflow.Context, input *healt
 	return &output, err
 }
 
-func (a *HealthStub) DescribeAffectedEntitiesAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) *HealthDescribeAffectedEntitiesResult {
+func (a *HealthStub) DescribeAffectedEntitiesAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) *HealthDescribeAffectedEntitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedEntities", input)
-	return &HealthDescribeAffectedEntitiesResult{Result: future}
+	return &HealthDescribeAffectedEntitiesFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeAffectedEntitiesForOrganization(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) (*health.DescribeAffectedEntitiesForOrganizationOutput, error) {
@@ -214,9 +227,9 @@ func (a *HealthStub) DescribeAffectedEntitiesForOrganization(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *HealthStub) DescribeAffectedEntitiesForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) *HealthDescribeAffectedEntitiesForOrganizationResult {
+func (a *HealthStub) DescribeAffectedEntitiesForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) *HealthDescribeAffectedEntitiesForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedEntitiesForOrganization", input)
-	return &HealthDescribeAffectedEntitiesForOrganizationResult{Result: future}
+	return &HealthDescribeAffectedEntitiesForOrganizationFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeEntityAggregates(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) (*health.DescribeEntityAggregatesOutput, error) {
@@ -225,9 +238,9 @@ func (a *HealthStub) DescribeEntityAggregates(ctx workflow.Context, input *healt
 	return &output, err
 }
 
-func (a *HealthStub) DescribeEntityAggregatesAsync(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) *HealthDescribeEntityAggregatesResult {
+func (a *HealthStub) DescribeEntityAggregatesAsync(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) *HealthDescribeEntityAggregatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEntityAggregates", input)
-	return &HealthDescribeEntityAggregatesResult{Result: future}
+	return &HealthDescribeEntityAggregatesFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeEventAggregates(ctx workflow.Context, input *health.DescribeEventAggregatesInput) (*health.DescribeEventAggregatesOutput, error) {
@@ -236,9 +249,9 @@ func (a *HealthStub) DescribeEventAggregates(ctx workflow.Context, input *health
 	return &output, err
 }
 
-func (a *HealthStub) DescribeEventAggregatesAsync(ctx workflow.Context, input *health.DescribeEventAggregatesInput) *HealthDescribeEventAggregatesResult {
+func (a *HealthStub) DescribeEventAggregatesAsync(ctx workflow.Context, input *health.DescribeEventAggregatesInput) *HealthDescribeEventAggregatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventAggregates", input)
-	return &HealthDescribeEventAggregatesResult{Result: future}
+	return &HealthDescribeEventAggregatesFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeEventDetails(ctx workflow.Context, input *health.DescribeEventDetailsInput) (*health.DescribeEventDetailsOutput, error) {
@@ -247,9 +260,9 @@ func (a *HealthStub) DescribeEventDetails(ctx workflow.Context, input *health.De
 	return &output, err
 }
 
-func (a *HealthStub) DescribeEventDetailsAsync(ctx workflow.Context, input *health.DescribeEventDetailsInput) *HealthDescribeEventDetailsResult {
+func (a *HealthStub) DescribeEventDetailsAsync(ctx workflow.Context, input *health.DescribeEventDetailsInput) *HealthDescribeEventDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventDetails", input)
-	return &HealthDescribeEventDetailsResult{Result: future}
+	return &HealthDescribeEventDetailsFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeEventDetailsForOrganization(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) (*health.DescribeEventDetailsForOrganizationOutput, error) {
@@ -258,9 +271,9 @@ func (a *HealthStub) DescribeEventDetailsForOrganization(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *HealthStub) DescribeEventDetailsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) *HealthDescribeEventDetailsForOrganizationResult {
+func (a *HealthStub) DescribeEventDetailsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) *HealthDescribeEventDetailsForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventDetailsForOrganization", input)
-	return &HealthDescribeEventDetailsForOrganizationResult{Result: future}
+	return &HealthDescribeEventDetailsForOrganizationFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeEventTypes(ctx workflow.Context, input *health.DescribeEventTypesInput) (*health.DescribeEventTypesOutput, error) {
@@ -269,9 +282,9 @@ func (a *HealthStub) DescribeEventTypes(ctx workflow.Context, input *health.Desc
 	return &output, err
 }
 
-func (a *HealthStub) DescribeEventTypesAsync(ctx workflow.Context, input *health.DescribeEventTypesInput) *HealthDescribeEventTypesResult {
+func (a *HealthStub) DescribeEventTypesAsync(ctx workflow.Context, input *health.DescribeEventTypesInput) *HealthDescribeEventTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventTypes", input)
-	return &HealthDescribeEventTypesResult{Result: future}
+	return &HealthDescribeEventTypesFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeEvents(ctx workflow.Context, input *health.DescribeEventsInput) (*health.DescribeEventsOutput, error) {
@@ -280,9 +293,9 @@ func (a *HealthStub) DescribeEvents(ctx workflow.Context, input *health.Describe
 	return &output, err
 }
 
-func (a *HealthStub) DescribeEventsAsync(ctx workflow.Context, input *health.DescribeEventsInput) *HealthDescribeEventsResult {
+func (a *HealthStub) DescribeEventsAsync(ctx workflow.Context, input *health.DescribeEventsInput) *HealthDescribeEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEvents", input)
-	return &HealthDescribeEventsResult{Result: future}
+	return &HealthDescribeEventsFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeEventsForOrganization(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) (*health.DescribeEventsForOrganizationOutput, error) {
@@ -291,9 +304,9 @@ func (a *HealthStub) DescribeEventsForOrganization(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *HealthStub) DescribeEventsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) *HealthDescribeEventsForOrganizationResult {
+func (a *HealthStub) DescribeEventsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) *HealthDescribeEventsForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventsForOrganization", input)
-	return &HealthDescribeEventsForOrganizationResult{Result: future}
+	return &HealthDescribeEventsForOrganizationFuture{Future: future}
 }
 
 func (a *HealthStub) DescribeHealthServiceStatusForOrganization(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) (*health.DescribeHealthServiceStatusForOrganizationOutput, error) {
@@ -302,9 +315,9 @@ func (a *HealthStub) DescribeHealthServiceStatusForOrganization(ctx workflow.Con
 	return &output, err
 }
 
-func (a *HealthStub) DescribeHealthServiceStatusForOrganizationAsync(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) *HealthDescribeHealthServiceStatusForOrganizationResult {
+func (a *HealthStub) DescribeHealthServiceStatusForOrganizationAsync(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) *HealthDescribeHealthServiceStatusForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeHealthServiceStatusForOrganization", input)
-	return &HealthDescribeHealthServiceStatusForOrganizationResult{Result: future}
+	return &HealthDescribeHealthServiceStatusForOrganizationFuture{Future: future}
 }
 
 func (a *HealthStub) DisableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) (*health.DisableHealthServiceAccessForOrganizationOutput, error) {
@@ -313,9 +326,9 @@ func (a *HealthStub) DisableHealthServiceAccessForOrganization(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *HealthStub) DisableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) *HealthDisableHealthServiceAccessForOrganizationResult {
+func (a *HealthStub) DisableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) *HealthDisableHealthServiceAccessForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.DisableHealthServiceAccessForOrganization", input)
-	return &HealthDisableHealthServiceAccessForOrganizationResult{Result: future}
+	return &HealthDisableHealthServiceAccessForOrganizationFuture{Future: future}
 }
 
 func (a *HealthStub) EnableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) (*health.EnableHealthServiceAccessForOrganizationOutput, error) {
@@ -324,7 +337,7 @@ func (a *HealthStub) EnableHealthServiceAccessForOrganization(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *HealthStub) EnableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) *HealthEnableHealthServiceAccessForOrganizationResult {
+func (a *HealthStub) EnableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) *HealthEnableHealthServiceAccessForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.health.EnableHealthServiceAccessForOrganization", input)
-	return &HealthEnableHealthServiceAccessForOrganizationResult{Result: future}
+	return &HealthEnableHealthServiceAccessForOrganizationFuture{Future: future}
 }

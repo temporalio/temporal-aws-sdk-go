@@ -11,22 +11,22 @@ import (
 
 type MarketplaceCatalogClient interface {
 	CancelChangeSet(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) (*marketplacecatalog.CancelChangeSetOutput, error)
-	CancelChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) *MarketplacecatalogCancelChangeSetResult
+	CancelChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) *MarketplaceCatalogCancelChangeSetFuture
 
 	DescribeChangeSet(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error)
-	DescribeChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) *MarketplacecatalogDescribeChangeSetResult
+	DescribeChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) *MarketplaceCatalogDescribeChangeSetFuture
 
 	DescribeEntity(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error)
-	DescribeEntityAsync(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) *MarketplacecatalogDescribeEntityResult
+	DescribeEntityAsync(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) *MarketplaceCatalogDescribeEntityFuture
 
 	ListChangeSets(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error)
-	ListChangeSetsAsync(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) *MarketplacecatalogListChangeSetsResult
+	ListChangeSetsAsync(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) *MarketplaceCatalogListChangeSetsFuture
 
 	ListEntities(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error)
-	ListEntitiesAsync(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) *MarketplacecatalogListEntitiesResult
+	ListEntitiesAsync(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) *MarketplaceCatalogListEntitiesFuture
 
 	StartChangeSet(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error)
-	StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *MarketplacecatalogStartChangeSetResult
+	StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *MarketplaceCatalogStartChangeSetFuture
 }
 
 type MarketplaceCatalogStub struct{}
@@ -35,63 +35,69 @@ func NewMarketplaceCatalogStub() MarketplaceCatalogClient {
 	return &MarketplaceCatalogStub{}
 }
 
-type MarketplacecatalogCancelChangeSetResult struct {
-	Result workflow.Future
+type MarketplaceCatalogCancelChangeSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MarketplacecatalogCancelChangeSetResult) Get(ctx workflow.Context) (*marketplacecatalog.CancelChangeSetOutput, error) {
+func (r *MarketplaceCatalogCancelChangeSetFuture) Get(ctx workflow.Context) (*marketplacecatalog.CancelChangeSetOutput, error) {
 	var output marketplacecatalog.CancelChangeSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplacecatalogDescribeChangeSetResult struct {
-	Result workflow.Future
+type MarketplaceCatalogDescribeChangeSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MarketplacecatalogDescribeChangeSetResult) Get(ctx workflow.Context) (*marketplacecatalog.DescribeChangeSetOutput, error) {
+func (r *MarketplaceCatalogDescribeChangeSetFuture) Get(ctx workflow.Context) (*marketplacecatalog.DescribeChangeSetOutput, error) {
 	var output marketplacecatalog.DescribeChangeSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplacecatalogDescribeEntityResult struct {
-	Result workflow.Future
+type MarketplaceCatalogDescribeEntityFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MarketplacecatalogDescribeEntityResult) Get(ctx workflow.Context) (*marketplacecatalog.DescribeEntityOutput, error) {
+func (r *MarketplaceCatalogDescribeEntityFuture) Get(ctx workflow.Context) (*marketplacecatalog.DescribeEntityOutput, error) {
 	var output marketplacecatalog.DescribeEntityOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplacecatalogListChangeSetsResult struct {
-	Result workflow.Future
+type MarketplaceCatalogListChangeSetsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MarketplacecatalogListChangeSetsResult) Get(ctx workflow.Context) (*marketplacecatalog.ListChangeSetsOutput, error) {
+func (r *MarketplaceCatalogListChangeSetsFuture) Get(ctx workflow.Context) (*marketplacecatalog.ListChangeSetsOutput, error) {
 	var output marketplacecatalog.ListChangeSetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplacecatalogListEntitiesResult struct {
-	Result workflow.Future
+type MarketplaceCatalogListEntitiesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MarketplacecatalogListEntitiesResult) Get(ctx workflow.Context) (*marketplacecatalog.ListEntitiesOutput, error) {
+func (r *MarketplaceCatalogListEntitiesFuture) Get(ctx workflow.Context) (*marketplacecatalog.ListEntitiesOutput, error) {
 	var output marketplacecatalog.ListEntitiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplacecatalogStartChangeSetResult struct {
-	Result workflow.Future
+type MarketplaceCatalogStartChangeSetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MarketplacecatalogStartChangeSetResult) Get(ctx workflow.Context) (*marketplacecatalog.StartChangeSetOutput, error) {
+func (r *MarketplaceCatalogStartChangeSetFuture) Get(ctx workflow.Context) (*marketplacecatalog.StartChangeSetOutput, error) {
 	var output marketplacecatalog.StartChangeSetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -101,9 +107,9 @@ func (a *MarketplaceCatalogStub) CancelChangeSet(ctx workflow.Context, input *ma
 	return &output, err
 }
 
-func (a *MarketplaceCatalogStub) CancelChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) *MarketplacecatalogCancelChangeSetResult {
+func (a *MarketplaceCatalogStub) CancelChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) *MarketplaceCatalogCancelChangeSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacecatalog.CancelChangeSet", input)
-	return &MarketplacecatalogCancelChangeSetResult{Result: future}
+	return &MarketplaceCatalogCancelChangeSetFuture{Future: future}
 }
 
 func (a *MarketplaceCatalogStub) DescribeChangeSet(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error) {
@@ -112,9 +118,9 @@ func (a *MarketplaceCatalogStub) DescribeChangeSet(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *MarketplaceCatalogStub) DescribeChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) *MarketplacecatalogDescribeChangeSetResult {
+func (a *MarketplaceCatalogStub) DescribeChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) *MarketplaceCatalogDescribeChangeSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacecatalog.DescribeChangeSet", input)
-	return &MarketplacecatalogDescribeChangeSetResult{Result: future}
+	return &MarketplaceCatalogDescribeChangeSetFuture{Future: future}
 }
 
 func (a *MarketplaceCatalogStub) DescribeEntity(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error) {
@@ -123,9 +129,9 @@ func (a *MarketplaceCatalogStub) DescribeEntity(ctx workflow.Context, input *mar
 	return &output, err
 }
 
-func (a *MarketplaceCatalogStub) DescribeEntityAsync(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) *MarketplacecatalogDescribeEntityResult {
+func (a *MarketplaceCatalogStub) DescribeEntityAsync(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) *MarketplaceCatalogDescribeEntityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacecatalog.DescribeEntity", input)
-	return &MarketplacecatalogDescribeEntityResult{Result: future}
+	return &MarketplaceCatalogDescribeEntityFuture{Future: future}
 }
 
 func (a *MarketplaceCatalogStub) ListChangeSets(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error) {
@@ -134,9 +140,9 @@ func (a *MarketplaceCatalogStub) ListChangeSets(ctx workflow.Context, input *mar
 	return &output, err
 }
 
-func (a *MarketplaceCatalogStub) ListChangeSetsAsync(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) *MarketplacecatalogListChangeSetsResult {
+func (a *MarketplaceCatalogStub) ListChangeSetsAsync(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) *MarketplaceCatalogListChangeSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacecatalog.ListChangeSets", input)
-	return &MarketplacecatalogListChangeSetsResult{Result: future}
+	return &MarketplaceCatalogListChangeSetsFuture{Future: future}
 }
 
 func (a *MarketplaceCatalogStub) ListEntities(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error) {
@@ -145,9 +151,9 @@ func (a *MarketplaceCatalogStub) ListEntities(ctx workflow.Context, input *marke
 	return &output, err
 }
 
-func (a *MarketplaceCatalogStub) ListEntitiesAsync(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) *MarketplacecatalogListEntitiesResult {
+func (a *MarketplaceCatalogStub) ListEntitiesAsync(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) *MarketplaceCatalogListEntitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacecatalog.ListEntities", input)
-	return &MarketplacecatalogListEntitiesResult{Result: future}
+	return &MarketplaceCatalogListEntitiesFuture{Future: future}
 }
 
 func (a *MarketplaceCatalogStub) StartChangeSet(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error) {
@@ -156,7 +162,7 @@ func (a *MarketplaceCatalogStub) StartChangeSet(ctx workflow.Context, input *mar
 	return &output, err
 }
 
-func (a *MarketplaceCatalogStub) StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *MarketplacecatalogStartChangeSetResult {
+func (a *MarketplaceCatalogStub) StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *MarketplaceCatalogStartChangeSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacecatalog.StartChangeSet", input)
-	return &MarketplacecatalogStartChangeSetResult{Result: future}
+	return &MarketplaceCatalogStartChangeSetFuture{Future: future}
 }

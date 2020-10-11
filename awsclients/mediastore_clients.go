@@ -11,67 +11,67 @@ import (
 
 type MediaStoreClient interface {
 	CreateContainer(ctx workflow.Context, input *mediastore.CreateContainerInput) (*mediastore.CreateContainerOutput, error)
-	CreateContainerAsync(ctx workflow.Context, input *mediastore.CreateContainerInput) *MediastoreCreateContainerResult
+	CreateContainerAsync(ctx workflow.Context, input *mediastore.CreateContainerInput) *MediaStoreCreateContainerFuture
 
 	DeleteContainer(ctx workflow.Context, input *mediastore.DeleteContainerInput) (*mediastore.DeleteContainerOutput, error)
-	DeleteContainerAsync(ctx workflow.Context, input *mediastore.DeleteContainerInput) *MediastoreDeleteContainerResult
+	DeleteContainerAsync(ctx workflow.Context, input *mediastore.DeleteContainerInput) *MediaStoreDeleteContainerFuture
 
 	DeleteContainerPolicy(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) (*mediastore.DeleteContainerPolicyOutput, error)
-	DeleteContainerPolicyAsync(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) *MediastoreDeleteContainerPolicyResult
+	DeleteContainerPolicyAsync(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) *MediaStoreDeleteContainerPolicyFuture
 
 	DeleteCorsPolicy(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error)
-	DeleteCorsPolicyAsync(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) *MediastoreDeleteCorsPolicyResult
+	DeleteCorsPolicyAsync(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) *MediaStoreDeleteCorsPolicyFuture
 
 	DeleteLifecyclePolicy(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) (*mediastore.DeleteLifecyclePolicyOutput, error)
-	DeleteLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) *MediastoreDeleteLifecyclePolicyResult
+	DeleteLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) *MediaStoreDeleteLifecyclePolicyFuture
 
 	DeleteMetricPolicy(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) (*mediastore.DeleteMetricPolicyOutput, error)
-	DeleteMetricPolicyAsync(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) *MediastoreDeleteMetricPolicyResult
+	DeleteMetricPolicyAsync(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) *MediaStoreDeleteMetricPolicyFuture
 
 	DescribeContainer(ctx workflow.Context, input *mediastore.DescribeContainerInput) (*mediastore.DescribeContainerOutput, error)
-	DescribeContainerAsync(ctx workflow.Context, input *mediastore.DescribeContainerInput) *MediastoreDescribeContainerResult
+	DescribeContainerAsync(ctx workflow.Context, input *mediastore.DescribeContainerInput) *MediaStoreDescribeContainerFuture
 
 	GetContainerPolicy(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) (*mediastore.GetContainerPolicyOutput, error)
-	GetContainerPolicyAsync(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) *MediastoreGetContainerPolicyResult
+	GetContainerPolicyAsync(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) *MediaStoreGetContainerPolicyFuture
 
 	GetCorsPolicy(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error)
-	GetCorsPolicyAsync(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) *MediastoreGetCorsPolicyResult
+	GetCorsPolicyAsync(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) *MediaStoreGetCorsPolicyFuture
 
 	GetLifecyclePolicy(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) (*mediastore.GetLifecyclePolicyOutput, error)
-	GetLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) *MediastoreGetLifecyclePolicyResult
+	GetLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) *MediaStoreGetLifecyclePolicyFuture
 
 	GetMetricPolicy(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) (*mediastore.GetMetricPolicyOutput, error)
-	GetMetricPolicyAsync(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) *MediastoreGetMetricPolicyResult
+	GetMetricPolicyAsync(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) *MediaStoreGetMetricPolicyFuture
 
 	ListContainers(ctx workflow.Context, input *mediastore.ListContainersInput) (*mediastore.ListContainersOutput, error)
-	ListContainersAsync(ctx workflow.Context, input *mediastore.ListContainersInput) *MediastoreListContainersResult
+	ListContainersAsync(ctx workflow.Context, input *mediastore.ListContainersInput) *MediaStoreListContainersFuture
 
 	ListTagsForResource(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) (*mediastore.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) *MediastoreListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) *MediaStoreListTagsForResourceFuture
 
 	PutContainerPolicy(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) (*mediastore.PutContainerPolicyOutput, error)
-	PutContainerPolicyAsync(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) *MediastorePutContainerPolicyResult
+	PutContainerPolicyAsync(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) *MediaStorePutContainerPolicyFuture
 
 	PutCorsPolicy(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error)
-	PutCorsPolicyAsync(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) *MediastorePutCorsPolicyResult
+	PutCorsPolicyAsync(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) *MediaStorePutCorsPolicyFuture
 
 	PutLifecyclePolicy(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) (*mediastore.PutLifecyclePolicyOutput, error)
-	PutLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) *MediastorePutLifecyclePolicyResult
+	PutLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) *MediaStorePutLifecyclePolicyFuture
 
 	PutMetricPolicy(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) (*mediastore.PutMetricPolicyOutput, error)
-	PutMetricPolicyAsync(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) *MediastorePutMetricPolicyResult
+	PutMetricPolicyAsync(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) *MediaStorePutMetricPolicyFuture
 
 	StartAccessLogging(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) (*mediastore.StartAccessLoggingOutput, error)
-	StartAccessLoggingAsync(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) *MediastoreStartAccessLoggingResult
+	StartAccessLoggingAsync(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) *MediaStoreStartAccessLoggingFuture
 
 	StopAccessLogging(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) (*mediastore.StopAccessLoggingOutput, error)
-	StopAccessLoggingAsync(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) *MediastoreStopAccessLoggingResult
+	StopAccessLoggingAsync(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) *MediaStoreStopAccessLoggingFuture
 
 	TagResource(ctx workflow.Context, input *mediastore.TagResourceInput) (*mediastore.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *mediastore.TagResourceInput) *MediastoreTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *mediastore.TagResourceInput) *MediaStoreTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *mediastore.UntagResourceInput) (*mediastore.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *mediastore.UntagResourceInput) *MediastoreUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *mediastore.UntagResourceInput) *MediaStoreUntagResourceFuture
 }
 
 type MediaStoreStub struct{}
@@ -80,213 +80,234 @@ func NewMediaStoreStub() MediaStoreClient {
 	return &MediaStoreStub{}
 }
 
-type MediastoreCreateContainerResult struct {
-	Result workflow.Future
+type MediaStoreCreateContainerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreCreateContainerResult) Get(ctx workflow.Context) (*mediastore.CreateContainerOutput, error) {
+func (r *MediaStoreCreateContainerFuture) Get(ctx workflow.Context) (*mediastore.CreateContainerOutput, error) {
 	var output mediastore.CreateContainerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreDeleteContainerResult struct {
-	Result workflow.Future
+type MediaStoreDeleteContainerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreDeleteContainerResult) Get(ctx workflow.Context) (*mediastore.DeleteContainerOutput, error) {
+func (r *MediaStoreDeleteContainerFuture) Get(ctx workflow.Context) (*mediastore.DeleteContainerOutput, error) {
 	var output mediastore.DeleteContainerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreDeleteContainerPolicyResult struct {
-	Result workflow.Future
+type MediaStoreDeleteContainerPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreDeleteContainerPolicyResult) Get(ctx workflow.Context) (*mediastore.DeleteContainerPolicyOutput, error) {
+func (r *MediaStoreDeleteContainerPolicyFuture) Get(ctx workflow.Context) (*mediastore.DeleteContainerPolicyOutput, error) {
 	var output mediastore.DeleteContainerPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreDeleteCorsPolicyResult struct {
-	Result workflow.Future
+type MediaStoreDeleteCorsPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreDeleteCorsPolicyResult) Get(ctx workflow.Context) (*mediastore.DeleteCorsPolicyOutput, error) {
+func (r *MediaStoreDeleteCorsPolicyFuture) Get(ctx workflow.Context) (*mediastore.DeleteCorsPolicyOutput, error) {
 	var output mediastore.DeleteCorsPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreDeleteLifecyclePolicyResult struct {
-	Result workflow.Future
+type MediaStoreDeleteLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreDeleteLifecyclePolicyResult) Get(ctx workflow.Context) (*mediastore.DeleteLifecyclePolicyOutput, error) {
+func (r *MediaStoreDeleteLifecyclePolicyFuture) Get(ctx workflow.Context) (*mediastore.DeleteLifecyclePolicyOutput, error) {
 	var output mediastore.DeleteLifecyclePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreDeleteMetricPolicyResult struct {
-	Result workflow.Future
+type MediaStoreDeleteMetricPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreDeleteMetricPolicyResult) Get(ctx workflow.Context) (*mediastore.DeleteMetricPolicyOutput, error) {
+func (r *MediaStoreDeleteMetricPolicyFuture) Get(ctx workflow.Context) (*mediastore.DeleteMetricPolicyOutput, error) {
 	var output mediastore.DeleteMetricPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreDescribeContainerResult struct {
-	Result workflow.Future
+type MediaStoreDescribeContainerFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreDescribeContainerResult) Get(ctx workflow.Context) (*mediastore.DescribeContainerOutput, error) {
+func (r *MediaStoreDescribeContainerFuture) Get(ctx workflow.Context) (*mediastore.DescribeContainerOutput, error) {
 	var output mediastore.DescribeContainerOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreGetContainerPolicyResult struct {
-	Result workflow.Future
+type MediaStoreGetContainerPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreGetContainerPolicyResult) Get(ctx workflow.Context) (*mediastore.GetContainerPolicyOutput, error) {
+func (r *MediaStoreGetContainerPolicyFuture) Get(ctx workflow.Context) (*mediastore.GetContainerPolicyOutput, error) {
 	var output mediastore.GetContainerPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreGetCorsPolicyResult struct {
-	Result workflow.Future
+type MediaStoreGetCorsPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreGetCorsPolicyResult) Get(ctx workflow.Context) (*mediastore.GetCorsPolicyOutput, error) {
+func (r *MediaStoreGetCorsPolicyFuture) Get(ctx workflow.Context) (*mediastore.GetCorsPolicyOutput, error) {
 	var output mediastore.GetCorsPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreGetLifecyclePolicyResult struct {
-	Result workflow.Future
+type MediaStoreGetLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreGetLifecyclePolicyResult) Get(ctx workflow.Context) (*mediastore.GetLifecyclePolicyOutput, error) {
+func (r *MediaStoreGetLifecyclePolicyFuture) Get(ctx workflow.Context) (*mediastore.GetLifecyclePolicyOutput, error) {
 	var output mediastore.GetLifecyclePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreGetMetricPolicyResult struct {
-	Result workflow.Future
+type MediaStoreGetMetricPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreGetMetricPolicyResult) Get(ctx workflow.Context) (*mediastore.GetMetricPolicyOutput, error) {
+func (r *MediaStoreGetMetricPolicyFuture) Get(ctx workflow.Context) (*mediastore.GetMetricPolicyOutput, error) {
 	var output mediastore.GetMetricPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreListContainersResult struct {
-	Result workflow.Future
+type MediaStoreListContainersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreListContainersResult) Get(ctx workflow.Context) (*mediastore.ListContainersOutput, error) {
+func (r *MediaStoreListContainersFuture) Get(ctx workflow.Context) (*mediastore.ListContainersOutput, error) {
 	var output mediastore.ListContainersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreListTagsForResourceResult struct {
-	Result workflow.Future
+type MediaStoreListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreListTagsForResourceResult) Get(ctx workflow.Context) (*mediastore.ListTagsForResourceOutput, error) {
+func (r *MediaStoreListTagsForResourceFuture) Get(ctx workflow.Context) (*mediastore.ListTagsForResourceOutput, error) {
 	var output mediastore.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastorePutContainerPolicyResult struct {
-	Result workflow.Future
+type MediaStorePutContainerPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastorePutContainerPolicyResult) Get(ctx workflow.Context) (*mediastore.PutContainerPolicyOutput, error) {
+func (r *MediaStorePutContainerPolicyFuture) Get(ctx workflow.Context) (*mediastore.PutContainerPolicyOutput, error) {
 	var output mediastore.PutContainerPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastorePutCorsPolicyResult struct {
-	Result workflow.Future
+type MediaStorePutCorsPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastorePutCorsPolicyResult) Get(ctx workflow.Context) (*mediastore.PutCorsPolicyOutput, error) {
+func (r *MediaStorePutCorsPolicyFuture) Get(ctx workflow.Context) (*mediastore.PutCorsPolicyOutput, error) {
 	var output mediastore.PutCorsPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastorePutLifecyclePolicyResult struct {
-	Result workflow.Future
+type MediaStorePutLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastorePutLifecyclePolicyResult) Get(ctx workflow.Context) (*mediastore.PutLifecyclePolicyOutput, error) {
+func (r *MediaStorePutLifecyclePolicyFuture) Get(ctx workflow.Context) (*mediastore.PutLifecyclePolicyOutput, error) {
 	var output mediastore.PutLifecyclePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastorePutMetricPolicyResult struct {
-	Result workflow.Future
+type MediaStorePutMetricPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastorePutMetricPolicyResult) Get(ctx workflow.Context) (*mediastore.PutMetricPolicyOutput, error) {
+func (r *MediaStorePutMetricPolicyFuture) Get(ctx workflow.Context) (*mediastore.PutMetricPolicyOutput, error) {
 	var output mediastore.PutMetricPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreStartAccessLoggingResult struct {
-	Result workflow.Future
+type MediaStoreStartAccessLoggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreStartAccessLoggingResult) Get(ctx workflow.Context) (*mediastore.StartAccessLoggingOutput, error) {
+func (r *MediaStoreStartAccessLoggingFuture) Get(ctx workflow.Context) (*mediastore.StartAccessLoggingOutput, error) {
 	var output mediastore.StartAccessLoggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreStopAccessLoggingResult struct {
-	Result workflow.Future
+type MediaStoreStopAccessLoggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreStopAccessLoggingResult) Get(ctx workflow.Context) (*mediastore.StopAccessLoggingOutput, error) {
+func (r *MediaStoreStopAccessLoggingFuture) Get(ctx workflow.Context) (*mediastore.StopAccessLoggingOutput, error) {
 	var output mediastore.StopAccessLoggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreTagResourceResult struct {
-	Result workflow.Future
+type MediaStoreTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreTagResourceResult) Get(ctx workflow.Context) (*mediastore.TagResourceOutput, error) {
+func (r *MediaStoreTagResourceFuture) Get(ctx workflow.Context) (*mediastore.TagResourceOutput, error) {
 	var output mediastore.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediastoreUntagResourceResult struct {
-	Result workflow.Future
+type MediaStoreUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *MediastoreUntagResourceResult) Get(ctx workflow.Context) (*mediastore.UntagResourceOutput, error) {
+func (r *MediaStoreUntagResourceFuture) Get(ctx workflow.Context) (*mediastore.UntagResourceOutput, error) {
 	var output mediastore.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -296,9 +317,9 @@ func (a *MediaStoreStub) CreateContainer(ctx workflow.Context, input *mediastore
 	return &output, err
 }
 
-func (a *MediaStoreStub) CreateContainerAsync(ctx workflow.Context, input *mediastore.CreateContainerInput) *MediastoreCreateContainerResult {
+func (a *MediaStoreStub) CreateContainerAsync(ctx workflow.Context, input *mediastore.CreateContainerInput) *MediaStoreCreateContainerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.CreateContainer", input)
-	return &MediastoreCreateContainerResult{Result: future}
+	return &MediaStoreCreateContainerFuture{Future: future}
 }
 
 func (a *MediaStoreStub) DeleteContainer(ctx workflow.Context, input *mediastore.DeleteContainerInput) (*mediastore.DeleteContainerOutput, error) {
@@ -307,9 +328,9 @@ func (a *MediaStoreStub) DeleteContainer(ctx workflow.Context, input *mediastore
 	return &output, err
 }
 
-func (a *MediaStoreStub) DeleteContainerAsync(ctx workflow.Context, input *mediastore.DeleteContainerInput) *MediastoreDeleteContainerResult {
+func (a *MediaStoreStub) DeleteContainerAsync(ctx workflow.Context, input *mediastore.DeleteContainerInput) *MediaStoreDeleteContainerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.DeleteContainer", input)
-	return &MediastoreDeleteContainerResult{Result: future}
+	return &MediaStoreDeleteContainerFuture{Future: future}
 }
 
 func (a *MediaStoreStub) DeleteContainerPolicy(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) (*mediastore.DeleteContainerPolicyOutput, error) {
@@ -318,9 +339,9 @@ func (a *MediaStoreStub) DeleteContainerPolicy(ctx workflow.Context, input *medi
 	return &output, err
 }
 
-func (a *MediaStoreStub) DeleteContainerPolicyAsync(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) *MediastoreDeleteContainerPolicyResult {
+func (a *MediaStoreStub) DeleteContainerPolicyAsync(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) *MediaStoreDeleteContainerPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.DeleteContainerPolicy", input)
-	return &MediastoreDeleteContainerPolicyResult{Result: future}
+	return &MediaStoreDeleteContainerPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) DeleteCorsPolicy(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error) {
@@ -329,9 +350,9 @@ func (a *MediaStoreStub) DeleteCorsPolicy(ctx workflow.Context, input *mediastor
 	return &output, err
 }
 
-func (a *MediaStoreStub) DeleteCorsPolicyAsync(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) *MediastoreDeleteCorsPolicyResult {
+func (a *MediaStoreStub) DeleteCorsPolicyAsync(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) *MediaStoreDeleteCorsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.DeleteCorsPolicy", input)
-	return &MediastoreDeleteCorsPolicyResult{Result: future}
+	return &MediaStoreDeleteCorsPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) DeleteLifecyclePolicy(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) (*mediastore.DeleteLifecyclePolicyOutput, error) {
@@ -340,9 +361,9 @@ func (a *MediaStoreStub) DeleteLifecyclePolicy(ctx workflow.Context, input *medi
 	return &output, err
 }
 
-func (a *MediaStoreStub) DeleteLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) *MediastoreDeleteLifecyclePolicyResult {
+func (a *MediaStoreStub) DeleteLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) *MediaStoreDeleteLifecyclePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.DeleteLifecyclePolicy", input)
-	return &MediastoreDeleteLifecyclePolicyResult{Result: future}
+	return &MediaStoreDeleteLifecyclePolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) DeleteMetricPolicy(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) (*mediastore.DeleteMetricPolicyOutput, error) {
@@ -351,9 +372,9 @@ func (a *MediaStoreStub) DeleteMetricPolicy(ctx workflow.Context, input *mediast
 	return &output, err
 }
 
-func (a *MediaStoreStub) DeleteMetricPolicyAsync(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) *MediastoreDeleteMetricPolicyResult {
+func (a *MediaStoreStub) DeleteMetricPolicyAsync(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) *MediaStoreDeleteMetricPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.DeleteMetricPolicy", input)
-	return &MediastoreDeleteMetricPolicyResult{Result: future}
+	return &MediaStoreDeleteMetricPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) DescribeContainer(ctx workflow.Context, input *mediastore.DescribeContainerInput) (*mediastore.DescribeContainerOutput, error) {
@@ -362,9 +383,9 @@ func (a *MediaStoreStub) DescribeContainer(ctx workflow.Context, input *mediasto
 	return &output, err
 }
 
-func (a *MediaStoreStub) DescribeContainerAsync(ctx workflow.Context, input *mediastore.DescribeContainerInput) *MediastoreDescribeContainerResult {
+func (a *MediaStoreStub) DescribeContainerAsync(ctx workflow.Context, input *mediastore.DescribeContainerInput) *MediaStoreDescribeContainerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.DescribeContainer", input)
-	return &MediastoreDescribeContainerResult{Result: future}
+	return &MediaStoreDescribeContainerFuture{Future: future}
 }
 
 func (a *MediaStoreStub) GetContainerPolicy(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) (*mediastore.GetContainerPolicyOutput, error) {
@@ -373,9 +394,9 @@ func (a *MediaStoreStub) GetContainerPolicy(ctx workflow.Context, input *mediast
 	return &output, err
 }
 
-func (a *MediaStoreStub) GetContainerPolicyAsync(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) *MediastoreGetContainerPolicyResult {
+func (a *MediaStoreStub) GetContainerPolicyAsync(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) *MediaStoreGetContainerPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.GetContainerPolicy", input)
-	return &MediastoreGetContainerPolicyResult{Result: future}
+	return &MediaStoreGetContainerPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) GetCorsPolicy(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error) {
@@ -384,9 +405,9 @@ func (a *MediaStoreStub) GetCorsPolicy(ctx workflow.Context, input *mediastore.G
 	return &output, err
 }
 
-func (a *MediaStoreStub) GetCorsPolicyAsync(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) *MediastoreGetCorsPolicyResult {
+func (a *MediaStoreStub) GetCorsPolicyAsync(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) *MediaStoreGetCorsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.GetCorsPolicy", input)
-	return &MediastoreGetCorsPolicyResult{Result: future}
+	return &MediaStoreGetCorsPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) GetLifecyclePolicy(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) (*mediastore.GetLifecyclePolicyOutput, error) {
@@ -395,9 +416,9 @@ func (a *MediaStoreStub) GetLifecyclePolicy(ctx workflow.Context, input *mediast
 	return &output, err
 }
 
-func (a *MediaStoreStub) GetLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) *MediastoreGetLifecyclePolicyResult {
+func (a *MediaStoreStub) GetLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) *MediaStoreGetLifecyclePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.GetLifecyclePolicy", input)
-	return &MediastoreGetLifecyclePolicyResult{Result: future}
+	return &MediaStoreGetLifecyclePolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) GetMetricPolicy(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) (*mediastore.GetMetricPolicyOutput, error) {
@@ -406,9 +427,9 @@ func (a *MediaStoreStub) GetMetricPolicy(ctx workflow.Context, input *mediastore
 	return &output, err
 }
 
-func (a *MediaStoreStub) GetMetricPolicyAsync(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) *MediastoreGetMetricPolicyResult {
+func (a *MediaStoreStub) GetMetricPolicyAsync(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) *MediaStoreGetMetricPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.GetMetricPolicy", input)
-	return &MediastoreGetMetricPolicyResult{Result: future}
+	return &MediaStoreGetMetricPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) ListContainers(ctx workflow.Context, input *mediastore.ListContainersInput) (*mediastore.ListContainersOutput, error) {
@@ -417,9 +438,9 @@ func (a *MediaStoreStub) ListContainers(ctx workflow.Context, input *mediastore.
 	return &output, err
 }
 
-func (a *MediaStoreStub) ListContainersAsync(ctx workflow.Context, input *mediastore.ListContainersInput) *MediastoreListContainersResult {
+func (a *MediaStoreStub) ListContainersAsync(ctx workflow.Context, input *mediastore.ListContainersInput) *MediaStoreListContainersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.ListContainers", input)
-	return &MediastoreListContainersResult{Result: future}
+	return &MediaStoreListContainersFuture{Future: future}
 }
 
 func (a *MediaStoreStub) ListTagsForResource(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) (*mediastore.ListTagsForResourceOutput, error) {
@@ -428,9 +449,9 @@ func (a *MediaStoreStub) ListTagsForResource(ctx workflow.Context, input *medias
 	return &output, err
 }
 
-func (a *MediaStoreStub) ListTagsForResourceAsync(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) *MediastoreListTagsForResourceResult {
+func (a *MediaStoreStub) ListTagsForResourceAsync(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) *MediaStoreListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.ListTagsForResource", input)
-	return &MediastoreListTagsForResourceResult{Result: future}
+	return &MediaStoreListTagsForResourceFuture{Future: future}
 }
 
 func (a *MediaStoreStub) PutContainerPolicy(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) (*mediastore.PutContainerPolicyOutput, error) {
@@ -439,9 +460,9 @@ func (a *MediaStoreStub) PutContainerPolicy(ctx workflow.Context, input *mediast
 	return &output, err
 }
 
-func (a *MediaStoreStub) PutContainerPolicyAsync(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) *MediastorePutContainerPolicyResult {
+func (a *MediaStoreStub) PutContainerPolicyAsync(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) *MediaStorePutContainerPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.PutContainerPolicy", input)
-	return &MediastorePutContainerPolicyResult{Result: future}
+	return &MediaStorePutContainerPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) PutCorsPolicy(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error) {
@@ -450,9 +471,9 @@ func (a *MediaStoreStub) PutCorsPolicy(ctx workflow.Context, input *mediastore.P
 	return &output, err
 }
 
-func (a *MediaStoreStub) PutCorsPolicyAsync(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) *MediastorePutCorsPolicyResult {
+func (a *MediaStoreStub) PutCorsPolicyAsync(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) *MediaStorePutCorsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.PutCorsPolicy", input)
-	return &MediastorePutCorsPolicyResult{Result: future}
+	return &MediaStorePutCorsPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) PutLifecyclePolicy(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) (*mediastore.PutLifecyclePolicyOutput, error) {
@@ -461,9 +482,9 @@ func (a *MediaStoreStub) PutLifecyclePolicy(ctx workflow.Context, input *mediast
 	return &output, err
 }
 
-func (a *MediaStoreStub) PutLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) *MediastorePutLifecyclePolicyResult {
+func (a *MediaStoreStub) PutLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) *MediaStorePutLifecyclePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.PutLifecyclePolicy", input)
-	return &MediastorePutLifecyclePolicyResult{Result: future}
+	return &MediaStorePutLifecyclePolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) PutMetricPolicy(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) (*mediastore.PutMetricPolicyOutput, error) {
@@ -472,9 +493,9 @@ func (a *MediaStoreStub) PutMetricPolicy(ctx workflow.Context, input *mediastore
 	return &output, err
 }
 
-func (a *MediaStoreStub) PutMetricPolicyAsync(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) *MediastorePutMetricPolicyResult {
+func (a *MediaStoreStub) PutMetricPolicyAsync(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) *MediaStorePutMetricPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.PutMetricPolicy", input)
-	return &MediastorePutMetricPolicyResult{Result: future}
+	return &MediaStorePutMetricPolicyFuture{Future: future}
 }
 
 func (a *MediaStoreStub) StartAccessLogging(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) (*mediastore.StartAccessLoggingOutput, error) {
@@ -483,9 +504,9 @@ func (a *MediaStoreStub) StartAccessLogging(ctx workflow.Context, input *mediast
 	return &output, err
 }
 
-func (a *MediaStoreStub) StartAccessLoggingAsync(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) *MediastoreStartAccessLoggingResult {
+func (a *MediaStoreStub) StartAccessLoggingAsync(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) *MediaStoreStartAccessLoggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.StartAccessLogging", input)
-	return &MediastoreStartAccessLoggingResult{Result: future}
+	return &MediaStoreStartAccessLoggingFuture{Future: future}
 }
 
 func (a *MediaStoreStub) StopAccessLogging(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) (*mediastore.StopAccessLoggingOutput, error) {
@@ -494,9 +515,9 @@ func (a *MediaStoreStub) StopAccessLogging(ctx workflow.Context, input *mediasto
 	return &output, err
 }
 
-func (a *MediaStoreStub) StopAccessLoggingAsync(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) *MediastoreStopAccessLoggingResult {
+func (a *MediaStoreStub) StopAccessLoggingAsync(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) *MediaStoreStopAccessLoggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.StopAccessLogging", input)
-	return &MediastoreStopAccessLoggingResult{Result: future}
+	return &MediaStoreStopAccessLoggingFuture{Future: future}
 }
 
 func (a *MediaStoreStub) TagResource(ctx workflow.Context, input *mediastore.TagResourceInput) (*mediastore.TagResourceOutput, error) {
@@ -505,9 +526,9 @@ func (a *MediaStoreStub) TagResource(ctx workflow.Context, input *mediastore.Tag
 	return &output, err
 }
 
-func (a *MediaStoreStub) TagResourceAsync(ctx workflow.Context, input *mediastore.TagResourceInput) *MediastoreTagResourceResult {
+func (a *MediaStoreStub) TagResourceAsync(ctx workflow.Context, input *mediastore.TagResourceInput) *MediaStoreTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.TagResource", input)
-	return &MediastoreTagResourceResult{Result: future}
+	return &MediaStoreTagResourceFuture{Future: future}
 }
 
 func (a *MediaStoreStub) UntagResource(ctx workflow.Context, input *mediastore.UntagResourceInput) (*mediastore.UntagResourceOutput, error) {
@@ -516,7 +537,7 @@ func (a *MediaStoreStub) UntagResource(ctx workflow.Context, input *mediastore.U
 	return &output, err
 }
 
-func (a *MediaStoreStub) UntagResourceAsync(ctx workflow.Context, input *mediastore.UntagResourceInput) *MediastoreUntagResourceResult {
+func (a *MediaStoreStub) UntagResourceAsync(ctx workflow.Context, input *mediastore.UntagResourceInput) *MediaStoreUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediastore.UntagResource", input)
-	return &MediastoreUntagResourceResult{Result: future}
+	return &MediaStoreUntagResourceFuture{Future: future}
 }

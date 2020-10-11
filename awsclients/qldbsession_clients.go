@@ -11,7 +11,7 @@ import (
 
 type QLDBSessionClient interface {
 	SendCommand(ctx workflow.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error)
-	SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QldbsessionSendCommandResult
+	SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QLDBSessionSendCommandFuture
 }
 
 type QLDBSessionStub struct{}
@@ -20,13 +20,14 @@ func NewQLDBSessionStub() QLDBSessionClient {
 	return &QLDBSessionStub{}
 }
 
-type QldbsessionSendCommandResult struct {
-	Result workflow.Future
+type QLDBSessionSendCommandFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *QldbsessionSendCommandResult) Get(ctx workflow.Context) (*qldbsession.SendCommandOutput, error) {
+func (r *QLDBSessionSendCommandFuture) Get(ctx workflow.Context) (*qldbsession.SendCommandOutput, error) {
 	var output qldbsession.SendCommandOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -36,7 +37,7 @@ func (a *QLDBSessionStub) SendCommand(ctx workflow.Context, input *qldbsession.S
 	return &output, err
 }
 
-func (a *QLDBSessionStub) SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QldbsessionSendCommandResult {
+func (a *QLDBSessionStub) SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QLDBSessionSendCommandFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldbsession.SendCommand", input)
-	return &QldbsessionSendCommandResult{Result: future}
+	return &QLDBSessionSendCommandFuture{Future: future}
 }

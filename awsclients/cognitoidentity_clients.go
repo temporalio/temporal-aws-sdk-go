@@ -11,67 +11,67 @@ import (
 
 type CognitoIdentityClient interface {
 	CreateIdentityPool(ctx workflow.Context, input *cognitoidentity.CreateIdentityPoolInput) (*cognitoidentity.IdentityPool, error)
-	CreateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.CreateIdentityPoolInput) *CognitoidentityCreateIdentityPoolResult
+	CreateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.CreateIdentityPoolInput) *CognitoIdentityCreateIdentityPoolFuture
 
 	DeleteIdentities(ctx workflow.Context, input *cognitoidentity.DeleteIdentitiesInput) (*cognitoidentity.DeleteIdentitiesOutput, error)
-	DeleteIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.DeleteIdentitiesInput) *CognitoidentityDeleteIdentitiesResult
+	DeleteIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.DeleteIdentitiesInput) *CognitoIdentityDeleteIdentitiesFuture
 
 	DeleteIdentityPool(ctx workflow.Context, input *cognitoidentity.DeleteIdentityPoolInput) (*cognitoidentity.DeleteIdentityPoolOutput, error)
-	DeleteIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.DeleteIdentityPoolInput) *CognitoidentityDeleteIdentityPoolResult
+	DeleteIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.DeleteIdentityPoolInput) *CognitoIdentityDeleteIdentityPoolFuture
 
 	DescribeIdentity(ctx workflow.Context, input *cognitoidentity.DescribeIdentityInput) (*cognitoidentity.IdentityDescription, error)
-	DescribeIdentityAsync(ctx workflow.Context, input *cognitoidentity.DescribeIdentityInput) *CognitoidentityDescribeIdentityResult
+	DescribeIdentityAsync(ctx workflow.Context, input *cognitoidentity.DescribeIdentityInput) *CognitoIdentityDescribeIdentityFuture
 
 	DescribeIdentityPool(ctx workflow.Context, input *cognitoidentity.DescribeIdentityPoolInput) (*cognitoidentity.IdentityPool, error)
-	DescribeIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.DescribeIdentityPoolInput) *CognitoidentityDescribeIdentityPoolResult
+	DescribeIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.DescribeIdentityPoolInput) *CognitoIdentityDescribeIdentityPoolFuture
 
 	GetCredentialsForIdentity(ctx workflow.Context, input *cognitoidentity.GetCredentialsForIdentityInput) (*cognitoidentity.GetCredentialsForIdentityOutput, error)
-	GetCredentialsForIdentityAsync(ctx workflow.Context, input *cognitoidentity.GetCredentialsForIdentityInput) *CognitoidentityGetCredentialsForIdentityResult
+	GetCredentialsForIdentityAsync(ctx workflow.Context, input *cognitoidentity.GetCredentialsForIdentityInput) *CognitoIdentityGetCredentialsForIdentityFuture
 
 	GetId(ctx workflow.Context, input *cognitoidentity.GetIdInput) (*cognitoidentity.GetIdOutput, error)
-	GetIdAsync(ctx workflow.Context, input *cognitoidentity.GetIdInput) *CognitoidentityGetIdResult
+	GetIdAsync(ctx workflow.Context, input *cognitoidentity.GetIdInput) *CognitoIdentityGetIdFuture
 
 	GetIdentityPoolRoles(ctx workflow.Context, input *cognitoidentity.GetIdentityPoolRolesInput) (*cognitoidentity.GetIdentityPoolRolesOutput, error)
-	GetIdentityPoolRolesAsync(ctx workflow.Context, input *cognitoidentity.GetIdentityPoolRolesInput) *CognitoidentityGetIdentityPoolRolesResult
+	GetIdentityPoolRolesAsync(ctx workflow.Context, input *cognitoidentity.GetIdentityPoolRolesInput) *CognitoIdentityGetIdentityPoolRolesFuture
 
 	GetOpenIdToken(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenInput) (*cognitoidentity.GetOpenIdTokenOutput, error)
-	GetOpenIdTokenAsync(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenInput) *CognitoidentityGetOpenIdTokenResult
+	GetOpenIdTokenAsync(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenInput) *CognitoIdentityGetOpenIdTokenFuture
 
 	GetOpenIdTokenForDeveloperIdentity(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenForDeveloperIdentityInput) (*cognitoidentity.GetOpenIdTokenForDeveloperIdentityOutput, error)
-	GetOpenIdTokenForDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenForDeveloperIdentityInput) *CognitoidentityGetOpenIdTokenForDeveloperIdentityResult
+	GetOpenIdTokenForDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenForDeveloperIdentityInput) *CognitoIdentityGetOpenIdTokenForDeveloperIdentityFuture
 
 	ListIdentities(ctx workflow.Context, input *cognitoidentity.ListIdentitiesInput) (*cognitoidentity.ListIdentitiesOutput, error)
-	ListIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.ListIdentitiesInput) *CognitoidentityListIdentitiesResult
+	ListIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.ListIdentitiesInput) *CognitoIdentityListIdentitiesFuture
 
 	ListIdentityPools(ctx workflow.Context, input *cognitoidentity.ListIdentityPoolsInput) (*cognitoidentity.ListIdentityPoolsOutput, error)
-	ListIdentityPoolsAsync(ctx workflow.Context, input *cognitoidentity.ListIdentityPoolsInput) *CognitoidentityListIdentityPoolsResult
+	ListIdentityPoolsAsync(ctx workflow.Context, input *cognitoidentity.ListIdentityPoolsInput) *CognitoIdentityListIdentityPoolsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *cognitoidentity.ListTagsForResourceInput) (*cognitoidentity.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *cognitoidentity.ListTagsForResourceInput) *CognitoidentityListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *cognitoidentity.ListTagsForResourceInput) *CognitoIdentityListTagsForResourceFuture
 
 	LookupDeveloperIdentity(ctx workflow.Context, input *cognitoidentity.LookupDeveloperIdentityInput) (*cognitoidentity.LookupDeveloperIdentityOutput, error)
-	LookupDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.LookupDeveloperIdentityInput) *CognitoidentityLookupDeveloperIdentityResult
+	LookupDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.LookupDeveloperIdentityInput) *CognitoIdentityLookupDeveloperIdentityFuture
 
 	MergeDeveloperIdentities(ctx workflow.Context, input *cognitoidentity.MergeDeveloperIdentitiesInput) (*cognitoidentity.MergeDeveloperIdentitiesOutput, error)
-	MergeDeveloperIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.MergeDeveloperIdentitiesInput) *CognitoidentityMergeDeveloperIdentitiesResult
+	MergeDeveloperIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.MergeDeveloperIdentitiesInput) *CognitoIdentityMergeDeveloperIdentitiesFuture
 
 	SetIdentityPoolRoles(ctx workflow.Context, input *cognitoidentity.SetIdentityPoolRolesInput) (*cognitoidentity.SetIdentityPoolRolesOutput, error)
-	SetIdentityPoolRolesAsync(ctx workflow.Context, input *cognitoidentity.SetIdentityPoolRolesInput) *CognitoidentitySetIdentityPoolRolesResult
+	SetIdentityPoolRolesAsync(ctx workflow.Context, input *cognitoidentity.SetIdentityPoolRolesInput) *CognitoIdentitySetIdentityPoolRolesFuture
 
 	TagResource(ctx workflow.Context, input *cognitoidentity.TagResourceInput) (*cognitoidentity.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *cognitoidentity.TagResourceInput) *CognitoidentityTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *cognitoidentity.TagResourceInput) *CognitoIdentityTagResourceFuture
 
 	UnlinkDeveloperIdentity(ctx workflow.Context, input *cognitoidentity.UnlinkDeveloperIdentityInput) (*cognitoidentity.UnlinkDeveloperIdentityOutput, error)
-	UnlinkDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.UnlinkDeveloperIdentityInput) *CognitoidentityUnlinkDeveloperIdentityResult
+	UnlinkDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.UnlinkDeveloperIdentityInput) *CognitoIdentityUnlinkDeveloperIdentityFuture
 
 	UnlinkIdentity(ctx workflow.Context, input *cognitoidentity.UnlinkIdentityInput) (*cognitoidentity.UnlinkIdentityOutput, error)
-	UnlinkIdentityAsync(ctx workflow.Context, input *cognitoidentity.UnlinkIdentityInput) *CognitoidentityUnlinkIdentityResult
+	UnlinkIdentityAsync(ctx workflow.Context, input *cognitoidentity.UnlinkIdentityInput) *CognitoIdentityUnlinkIdentityFuture
 
 	UntagResource(ctx workflow.Context, input *cognitoidentity.UntagResourceInput) (*cognitoidentity.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *cognitoidentity.UntagResourceInput) *CognitoidentityUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *cognitoidentity.UntagResourceInput) *CognitoIdentityUntagResourceFuture
 
 	UpdateIdentityPool(ctx workflow.Context, input *cognitoidentity.IdentityPool) (*cognitoidentity.IdentityPool, error)
-	UpdateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.IdentityPool) *CognitoidentityUpdateIdentityPoolResult
+	UpdateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.IdentityPool) *CognitoIdentityUpdateIdentityPoolFuture
 }
 
 type CognitoIdentityStub struct{}
@@ -80,213 +80,234 @@ func NewCognitoIdentityStub() CognitoIdentityClient {
 	return &CognitoIdentityStub{}
 }
 
-type CognitoidentityCreateIdentityPoolResult struct {
-	Result workflow.Future
+type CognitoIdentityCreateIdentityPoolFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityCreateIdentityPoolResult) Get(ctx workflow.Context) (*cognitoidentity.IdentityPool, error) {
+func (r *CognitoIdentityCreateIdentityPoolFuture) Get(ctx workflow.Context) (*cognitoidentity.IdentityPool, error) {
 	var output cognitoidentity.IdentityPool
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityDeleteIdentitiesResult struct {
-	Result workflow.Future
+type CognitoIdentityDeleteIdentitiesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityDeleteIdentitiesResult) Get(ctx workflow.Context) (*cognitoidentity.DeleteIdentitiesOutput, error) {
+func (r *CognitoIdentityDeleteIdentitiesFuture) Get(ctx workflow.Context) (*cognitoidentity.DeleteIdentitiesOutput, error) {
 	var output cognitoidentity.DeleteIdentitiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityDeleteIdentityPoolResult struct {
-	Result workflow.Future
+type CognitoIdentityDeleteIdentityPoolFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityDeleteIdentityPoolResult) Get(ctx workflow.Context) (*cognitoidentity.DeleteIdentityPoolOutput, error) {
+func (r *CognitoIdentityDeleteIdentityPoolFuture) Get(ctx workflow.Context) (*cognitoidentity.DeleteIdentityPoolOutput, error) {
 	var output cognitoidentity.DeleteIdentityPoolOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityDescribeIdentityResult struct {
-	Result workflow.Future
+type CognitoIdentityDescribeIdentityFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityDescribeIdentityResult) Get(ctx workflow.Context) (*cognitoidentity.IdentityDescription, error) {
+func (r *CognitoIdentityDescribeIdentityFuture) Get(ctx workflow.Context) (*cognitoidentity.IdentityDescription, error) {
 	var output cognitoidentity.IdentityDescription
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityDescribeIdentityPoolResult struct {
-	Result workflow.Future
+type CognitoIdentityDescribeIdentityPoolFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityDescribeIdentityPoolResult) Get(ctx workflow.Context) (*cognitoidentity.IdentityPool, error) {
+func (r *CognitoIdentityDescribeIdentityPoolFuture) Get(ctx workflow.Context) (*cognitoidentity.IdentityPool, error) {
 	var output cognitoidentity.IdentityPool
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityGetCredentialsForIdentityResult struct {
-	Result workflow.Future
+type CognitoIdentityGetCredentialsForIdentityFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityGetCredentialsForIdentityResult) Get(ctx workflow.Context) (*cognitoidentity.GetCredentialsForIdentityOutput, error) {
+func (r *CognitoIdentityGetCredentialsForIdentityFuture) Get(ctx workflow.Context) (*cognitoidentity.GetCredentialsForIdentityOutput, error) {
 	var output cognitoidentity.GetCredentialsForIdentityOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityGetIdResult struct {
-	Result workflow.Future
+type CognitoIdentityGetIdFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityGetIdResult) Get(ctx workflow.Context) (*cognitoidentity.GetIdOutput, error) {
+func (r *CognitoIdentityGetIdFuture) Get(ctx workflow.Context) (*cognitoidentity.GetIdOutput, error) {
 	var output cognitoidentity.GetIdOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityGetIdentityPoolRolesResult struct {
-	Result workflow.Future
+type CognitoIdentityGetIdentityPoolRolesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityGetIdentityPoolRolesResult) Get(ctx workflow.Context) (*cognitoidentity.GetIdentityPoolRolesOutput, error) {
+func (r *CognitoIdentityGetIdentityPoolRolesFuture) Get(ctx workflow.Context) (*cognitoidentity.GetIdentityPoolRolesOutput, error) {
 	var output cognitoidentity.GetIdentityPoolRolesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityGetOpenIdTokenResult struct {
-	Result workflow.Future
+type CognitoIdentityGetOpenIdTokenFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityGetOpenIdTokenResult) Get(ctx workflow.Context) (*cognitoidentity.GetOpenIdTokenOutput, error) {
+func (r *CognitoIdentityGetOpenIdTokenFuture) Get(ctx workflow.Context) (*cognitoidentity.GetOpenIdTokenOutput, error) {
 	var output cognitoidentity.GetOpenIdTokenOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityGetOpenIdTokenForDeveloperIdentityResult struct {
-	Result workflow.Future
+type CognitoIdentityGetOpenIdTokenForDeveloperIdentityFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityGetOpenIdTokenForDeveloperIdentityResult) Get(ctx workflow.Context) (*cognitoidentity.GetOpenIdTokenForDeveloperIdentityOutput, error) {
+func (r *CognitoIdentityGetOpenIdTokenForDeveloperIdentityFuture) Get(ctx workflow.Context) (*cognitoidentity.GetOpenIdTokenForDeveloperIdentityOutput, error) {
 	var output cognitoidentity.GetOpenIdTokenForDeveloperIdentityOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityListIdentitiesResult struct {
-	Result workflow.Future
+type CognitoIdentityListIdentitiesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityListIdentitiesResult) Get(ctx workflow.Context) (*cognitoidentity.ListIdentitiesOutput, error) {
+func (r *CognitoIdentityListIdentitiesFuture) Get(ctx workflow.Context) (*cognitoidentity.ListIdentitiesOutput, error) {
 	var output cognitoidentity.ListIdentitiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityListIdentityPoolsResult struct {
-	Result workflow.Future
+type CognitoIdentityListIdentityPoolsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityListIdentityPoolsResult) Get(ctx workflow.Context) (*cognitoidentity.ListIdentityPoolsOutput, error) {
+func (r *CognitoIdentityListIdentityPoolsFuture) Get(ctx workflow.Context) (*cognitoidentity.ListIdentityPoolsOutput, error) {
 	var output cognitoidentity.ListIdentityPoolsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityListTagsForResourceResult struct {
-	Result workflow.Future
+type CognitoIdentityListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityListTagsForResourceResult) Get(ctx workflow.Context) (*cognitoidentity.ListTagsForResourceOutput, error) {
+func (r *CognitoIdentityListTagsForResourceFuture) Get(ctx workflow.Context) (*cognitoidentity.ListTagsForResourceOutput, error) {
 	var output cognitoidentity.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityLookupDeveloperIdentityResult struct {
-	Result workflow.Future
+type CognitoIdentityLookupDeveloperIdentityFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityLookupDeveloperIdentityResult) Get(ctx workflow.Context) (*cognitoidentity.LookupDeveloperIdentityOutput, error) {
+func (r *CognitoIdentityLookupDeveloperIdentityFuture) Get(ctx workflow.Context) (*cognitoidentity.LookupDeveloperIdentityOutput, error) {
 	var output cognitoidentity.LookupDeveloperIdentityOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityMergeDeveloperIdentitiesResult struct {
-	Result workflow.Future
+type CognitoIdentityMergeDeveloperIdentitiesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityMergeDeveloperIdentitiesResult) Get(ctx workflow.Context) (*cognitoidentity.MergeDeveloperIdentitiesOutput, error) {
+func (r *CognitoIdentityMergeDeveloperIdentitiesFuture) Get(ctx workflow.Context) (*cognitoidentity.MergeDeveloperIdentitiesOutput, error) {
 	var output cognitoidentity.MergeDeveloperIdentitiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentitySetIdentityPoolRolesResult struct {
-	Result workflow.Future
+type CognitoIdentitySetIdentityPoolRolesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentitySetIdentityPoolRolesResult) Get(ctx workflow.Context) (*cognitoidentity.SetIdentityPoolRolesOutput, error) {
+func (r *CognitoIdentitySetIdentityPoolRolesFuture) Get(ctx workflow.Context) (*cognitoidentity.SetIdentityPoolRolesOutput, error) {
 	var output cognitoidentity.SetIdentityPoolRolesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityTagResourceResult struct {
-	Result workflow.Future
+type CognitoIdentityTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityTagResourceResult) Get(ctx workflow.Context) (*cognitoidentity.TagResourceOutput, error) {
+func (r *CognitoIdentityTagResourceFuture) Get(ctx workflow.Context) (*cognitoidentity.TagResourceOutput, error) {
 	var output cognitoidentity.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityUnlinkDeveloperIdentityResult struct {
-	Result workflow.Future
+type CognitoIdentityUnlinkDeveloperIdentityFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityUnlinkDeveloperIdentityResult) Get(ctx workflow.Context) (*cognitoidentity.UnlinkDeveloperIdentityOutput, error) {
+func (r *CognitoIdentityUnlinkDeveloperIdentityFuture) Get(ctx workflow.Context) (*cognitoidentity.UnlinkDeveloperIdentityOutput, error) {
 	var output cognitoidentity.UnlinkDeveloperIdentityOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityUnlinkIdentityResult struct {
-	Result workflow.Future
+type CognitoIdentityUnlinkIdentityFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityUnlinkIdentityResult) Get(ctx workflow.Context) (*cognitoidentity.UnlinkIdentityOutput, error) {
+func (r *CognitoIdentityUnlinkIdentityFuture) Get(ctx workflow.Context) (*cognitoidentity.UnlinkIdentityOutput, error) {
 	var output cognitoidentity.UnlinkIdentityOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityUntagResourceResult struct {
-	Result workflow.Future
+type CognitoIdentityUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityUntagResourceResult) Get(ctx workflow.Context) (*cognitoidentity.UntagResourceOutput, error) {
+func (r *CognitoIdentityUntagResourceFuture) Get(ctx workflow.Context) (*cognitoidentity.UntagResourceOutput, error) {
 	var output cognitoidentity.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoidentityUpdateIdentityPoolResult struct {
-	Result workflow.Future
+type CognitoIdentityUpdateIdentityPoolFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CognitoidentityUpdateIdentityPoolResult) Get(ctx workflow.Context) (*cognitoidentity.IdentityPool, error) {
+func (r *CognitoIdentityUpdateIdentityPoolFuture) Get(ctx workflow.Context) (*cognitoidentity.IdentityPool, error) {
 	var output cognitoidentity.IdentityPool
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -296,9 +317,9 @@ func (a *CognitoIdentityStub) CreateIdentityPool(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) CreateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.CreateIdentityPoolInput) *CognitoidentityCreateIdentityPoolResult {
+func (a *CognitoIdentityStub) CreateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.CreateIdentityPoolInput) *CognitoIdentityCreateIdentityPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.CreateIdentityPool", input)
-	return &CognitoidentityCreateIdentityPoolResult{Result: future}
+	return &CognitoIdentityCreateIdentityPoolFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) DeleteIdentities(ctx workflow.Context, input *cognitoidentity.DeleteIdentitiesInput) (*cognitoidentity.DeleteIdentitiesOutput, error) {
@@ -307,9 +328,9 @@ func (a *CognitoIdentityStub) DeleteIdentities(ctx workflow.Context, input *cogn
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) DeleteIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.DeleteIdentitiesInput) *CognitoidentityDeleteIdentitiesResult {
+func (a *CognitoIdentityStub) DeleteIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.DeleteIdentitiesInput) *CognitoIdentityDeleteIdentitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.DeleteIdentities", input)
-	return &CognitoidentityDeleteIdentitiesResult{Result: future}
+	return &CognitoIdentityDeleteIdentitiesFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) DeleteIdentityPool(ctx workflow.Context, input *cognitoidentity.DeleteIdentityPoolInput) (*cognitoidentity.DeleteIdentityPoolOutput, error) {
@@ -318,9 +339,9 @@ func (a *CognitoIdentityStub) DeleteIdentityPool(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) DeleteIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.DeleteIdentityPoolInput) *CognitoidentityDeleteIdentityPoolResult {
+func (a *CognitoIdentityStub) DeleteIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.DeleteIdentityPoolInput) *CognitoIdentityDeleteIdentityPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.DeleteIdentityPool", input)
-	return &CognitoidentityDeleteIdentityPoolResult{Result: future}
+	return &CognitoIdentityDeleteIdentityPoolFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) DescribeIdentity(ctx workflow.Context, input *cognitoidentity.DescribeIdentityInput) (*cognitoidentity.IdentityDescription, error) {
@@ -329,9 +350,9 @@ func (a *CognitoIdentityStub) DescribeIdentity(ctx workflow.Context, input *cogn
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) DescribeIdentityAsync(ctx workflow.Context, input *cognitoidentity.DescribeIdentityInput) *CognitoidentityDescribeIdentityResult {
+func (a *CognitoIdentityStub) DescribeIdentityAsync(ctx workflow.Context, input *cognitoidentity.DescribeIdentityInput) *CognitoIdentityDescribeIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.DescribeIdentity", input)
-	return &CognitoidentityDescribeIdentityResult{Result: future}
+	return &CognitoIdentityDescribeIdentityFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) DescribeIdentityPool(ctx workflow.Context, input *cognitoidentity.DescribeIdentityPoolInput) (*cognitoidentity.IdentityPool, error) {
@@ -340,9 +361,9 @@ func (a *CognitoIdentityStub) DescribeIdentityPool(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) DescribeIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.DescribeIdentityPoolInput) *CognitoidentityDescribeIdentityPoolResult {
+func (a *CognitoIdentityStub) DescribeIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.DescribeIdentityPoolInput) *CognitoIdentityDescribeIdentityPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.DescribeIdentityPool", input)
-	return &CognitoidentityDescribeIdentityPoolResult{Result: future}
+	return &CognitoIdentityDescribeIdentityPoolFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) GetCredentialsForIdentity(ctx workflow.Context, input *cognitoidentity.GetCredentialsForIdentityInput) (*cognitoidentity.GetCredentialsForIdentityOutput, error) {
@@ -351,9 +372,9 @@ func (a *CognitoIdentityStub) GetCredentialsForIdentity(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) GetCredentialsForIdentityAsync(ctx workflow.Context, input *cognitoidentity.GetCredentialsForIdentityInput) *CognitoidentityGetCredentialsForIdentityResult {
+func (a *CognitoIdentityStub) GetCredentialsForIdentityAsync(ctx workflow.Context, input *cognitoidentity.GetCredentialsForIdentityInput) *CognitoIdentityGetCredentialsForIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.GetCredentialsForIdentity", input)
-	return &CognitoidentityGetCredentialsForIdentityResult{Result: future}
+	return &CognitoIdentityGetCredentialsForIdentityFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) GetId(ctx workflow.Context, input *cognitoidentity.GetIdInput) (*cognitoidentity.GetIdOutput, error) {
@@ -362,9 +383,9 @@ func (a *CognitoIdentityStub) GetId(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) GetIdAsync(ctx workflow.Context, input *cognitoidentity.GetIdInput) *CognitoidentityGetIdResult {
+func (a *CognitoIdentityStub) GetIdAsync(ctx workflow.Context, input *cognitoidentity.GetIdInput) *CognitoIdentityGetIdFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.GetId", input)
-	return &CognitoidentityGetIdResult{Result: future}
+	return &CognitoIdentityGetIdFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) GetIdentityPoolRoles(ctx workflow.Context, input *cognitoidentity.GetIdentityPoolRolesInput) (*cognitoidentity.GetIdentityPoolRolesOutput, error) {
@@ -373,9 +394,9 @@ func (a *CognitoIdentityStub) GetIdentityPoolRoles(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) GetIdentityPoolRolesAsync(ctx workflow.Context, input *cognitoidentity.GetIdentityPoolRolesInput) *CognitoidentityGetIdentityPoolRolesResult {
+func (a *CognitoIdentityStub) GetIdentityPoolRolesAsync(ctx workflow.Context, input *cognitoidentity.GetIdentityPoolRolesInput) *CognitoIdentityGetIdentityPoolRolesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.GetIdentityPoolRoles", input)
-	return &CognitoidentityGetIdentityPoolRolesResult{Result: future}
+	return &CognitoIdentityGetIdentityPoolRolesFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) GetOpenIdToken(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenInput) (*cognitoidentity.GetOpenIdTokenOutput, error) {
@@ -384,9 +405,9 @@ func (a *CognitoIdentityStub) GetOpenIdToken(ctx workflow.Context, input *cognit
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) GetOpenIdTokenAsync(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenInput) *CognitoidentityGetOpenIdTokenResult {
+func (a *CognitoIdentityStub) GetOpenIdTokenAsync(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenInput) *CognitoIdentityGetOpenIdTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.GetOpenIdToken", input)
-	return &CognitoidentityGetOpenIdTokenResult{Result: future}
+	return &CognitoIdentityGetOpenIdTokenFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) GetOpenIdTokenForDeveloperIdentity(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenForDeveloperIdentityInput) (*cognitoidentity.GetOpenIdTokenForDeveloperIdentityOutput, error) {
@@ -395,9 +416,9 @@ func (a *CognitoIdentityStub) GetOpenIdTokenForDeveloperIdentity(ctx workflow.Co
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) GetOpenIdTokenForDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenForDeveloperIdentityInput) *CognitoidentityGetOpenIdTokenForDeveloperIdentityResult {
+func (a *CognitoIdentityStub) GetOpenIdTokenForDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.GetOpenIdTokenForDeveloperIdentityInput) *CognitoIdentityGetOpenIdTokenForDeveloperIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.GetOpenIdTokenForDeveloperIdentity", input)
-	return &CognitoidentityGetOpenIdTokenForDeveloperIdentityResult{Result: future}
+	return &CognitoIdentityGetOpenIdTokenForDeveloperIdentityFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) ListIdentities(ctx workflow.Context, input *cognitoidentity.ListIdentitiesInput) (*cognitoidentity.ListIdentitiesOutput, error) {
@@ -406,9 +427,9 @@ func (a *CognitoIdentityStub) ListIdentities(ctx workflow.Context, input *cognit
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) ListIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.ListIdentitiesInput) *CognitoidentityListIdentitiesResult {
+func (a *CognitoIdentityStub) ListIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.ListIdentitiesInput) *CognitoIdentityListIdentitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.ListIdentities", input)
-	return &CognitoidentityListIdentitiesResult{Result: future}
+	return &CognitoIdentityListIdentitiesFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) ListIdentityPools(ctx workflow.Context, input *cognitoidentity.ListIdentityPoolsInput) (*cognitoidentity.ListIdentityPoolsOutput, error) {
@@ -417,9 +438,9 @@ func (a *CognitoIdentityStub) ListIdentityPools(ctx workflow.Context, input *cog
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) ListIdentityPoolsAsync(ctx workflow.Context, input *cognitoidentity.ListIdentityPoolsInput) *CognitoidentityListIdentityPoolsResult {
+func (a *CognitoIdentityStub) ListIdentityPoolsAsync(ctx workflow.Context, input *cognitoidentity.ListIdentityPoolsInput) *CognitoIdentityListIdentityPoolsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.ListIdentityPools", input)
-	return &CognitoidentityListIdentityPoolsResult{Result: future}
+	return &CognitoIdentityListIdentityPoolsFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) ListTagsForResource(ctx workflow.Context, input *cognitoidentity.ListTagsForResourceInput) (*cognitoidentity.ListTagsForResourceOutput, error) {
@@ -428,9 +449,9 @@ func (a *CognitoIdentityStub) ListTagsForResource(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) ListTagsForResourceAsync(ctx workflow.Context, input *cognitoidentity.ListTagsForResourceInput) *CognitoidentityListTagsForResourceResult {
+func (a *CognitoIdentityStub) ListTagsForResourceAsync(ctx workflow.Context, input *cognitoidentity.ListTagsForResourceInput) *CognitoIdentityListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.ListTagsForResource", input)
-	return &CognitoidentityListTagsForResourceResult{Result: future}
+	return &CognitoIdentityListTagsForResourceFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) LookupDeveloperIdentity(ctx workflow.Context, input *cognitoidentity.LookupDeveloperIdentityInput) (*cognitoidentity.LookupDeveloperIdentityOutput, error) {
@@ -439,9 +460,9 @@ func (a *CognitoIdentityStub) LookupDeveloperIdentity(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) LookupDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.LookupDeveloperIdentityInput) *CognitoidentityLookupDeveloperIdentityResult {
+func (a *CognitoIdentityStub) LookupDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.LookupDeveloperIdentityInput) *CognitoIdentityLookupDeveloperIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.LookupDeveloperIdentity", input)
-	return &CognitoidentityLookupDeveloperIdentityResult{Result: future}
+	return &CognitoIdentityLookupDeveloperIdentityFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) MergeDeveloperIdentities(ctx workflow.Context, input *cognitoidentity.MergeDeveloperIdentitiesInput) (*cognitoidentity.MergeDeveloperIdentitiesOutput, error) {
@@ -450,9 +471,9 @@ func (a *CognitoIdentityStub) MergeDeveloperIdentities(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) MergeDeveloperIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.MergeDeveloperIdentitiesInput) *CognitoidentityMergeDeveloperIdentitiesResult {
+func (a *CognitoIdentityStub) MergeDeveloperIdentitiesAsync(ctx workflow.Context, input *cognitoidentity.MergeDeveloperIdentitiesInput) *CognitoIdentityMergeDeveloperIdentitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.MergeDeveloperIdentities", input)
-	return &CognitoidentityMergeDeveloperIdentitiesResult{Result: future}
+	return &CognitoIdentityMergeDeveloperIdentitiesFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) SetIdentityPoolRoles(ctx workflow.Context, input *cognitoidentity.SetIdentityPoolRolesInput) (*cognitoidentity.SetIdentityPoolRolesOutput, error) {
@@ -461,9 +482,9 @@ func (a *CognitoIdentityStub) SetIdentityPoolRoles(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) SetIdentityPoolRolesAsync(ctx workflow.Context, input *cognitoidentity.SetIdentityPoolRolesInput) *CognitoidentitySetIdentityPoolRolesResult {
+func (a *CognitoIdentityStub) SetIdentityPoolRolesAsync(ctx workflow.Context, input *cognitoidentity.SetIdentityPoolRolesInput) *CognitoIdentitySetIdentityPoolRolesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.SetIdentityPoolRoles", input)
-	return &CognitoidentitySetIdentityPoolRolesResult{Result: future}
+	return &CognitoIdentitySetIdentityPoolRolesFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) TagResource(ctx workflow.Context, input *cognitoidentity.TagResourceInput) (*cognitoidentity.TagResourceOutput, error) {
@@ -472,9 +493,9 @@ func (a *CognitoIdentityStub) TagResource(ctx workflow.Context, input *cognitoid
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) TagResourceAsync(ctx workflow.Context, input *cognitoidentity.TagResourceInput) *CognitoidentityTagResourceResult {
+func (a *CognitoIdentityStub) TagResourceAsync(ctx workflow.Context, input *cognitoidentity.TagResourceInput) *CognitoIdentityTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.TagResource", input)
-	return &CognitoidentityTagResourceResult{Result: future}
+	return &CognitoIdentityTagResourceFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) UnlinkDeveloperIdentity(ctx workflow.Context, input *cognitoidentity.UnlinkDeveloperIdentityInput) (*cognitoidentity.UnlinkDeveloperIdentityOutput, error) {
@@ -483,9 +504,9 @@ func (a *CognitoIdentityStub) UnlinkDeveloperIdentity(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) UnlinkDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.UnlinkDeveloperIdentityInput) *CognitoidentityUnlinkDeveloperIdentityResult {
+func (a *CognitoIdentityStub) UnlinkDeveloperIdentityAsync(ctx workflow.Context, input *cognitoidentity.UnlinkDeveloperIdentityInput) *CognitoIdentityUnlinkDeveloperIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.UnlinkDeveloperIdentity", input)
-	return &CognitoidentityUnlinkDeveloperIdentityResult{Result: future}
+	return &CognitoIdentityUnlinkDeveloperIdentityFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) UnlinkIdentity(ctx workflow.Context, input *cognitoidentity.UnlinkIdentityInput) (*cognitoidentity.UnlinkIdentityOutput, error) {
@@ -494,9 +515,9 @@ func (a *CognitoIdentityStub) UnlinkIdentity(ctx workflow.Context, input *cognit
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) UnlinkIdentityAsync(ctx workflow.Context, input *cognitoidentity.UnlinkIdentityInput) *CognitoidentityUnlinkIdentityResult {
+func (a *CognitoIdentityStub) UnlinkIdentityAsync(ctx workflow.Context, input *cognitoidentity.UnlinkIdentityInput) *CognitoIdentityUnlinkIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.UnlinkIdentity", input)
-	return &CognitoidentityUnlinkIdentityResult{Result: future}
+	return &CognitoIdentityUnlinkIdentityFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) UntagResource(ctx workflow.Context, input *cognitoidentity.UntagResourceInput) (*cognitoidentity.UntagResourceOutput, error) {
@@ -505,9 +526,9 @@ func (a *CognitoIdentityStub) UntagResource(ctx workflow.Context, input *cognito
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) UntagResourceAsync(ctx workflow.Context, input *cognitoidentity.UntagResourceInput) *CognitoidentityUntagResourceResult {
+func (a *CognitoIdentityStub) UntagResourceAsync(ctx workflow.Context, input *cognitoidentity.UntagResourceInput) *CognitoIdentityUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.UntagResource", input)
-	return &CognitoidentityUntagResourceResult{Result: future}
+	return &CognitoIdentityUntagResourceFuture{Future: future}
 }
 
 func (a *CognitoIdentityStub) UpdateIdentityPool(ctx workflow.Context, input *cognitoidentity.IdentityPool) (*cognitoidentity.IdentityPool, error) {
@@ -516,7 +537,7 @@ func (a *CognitoIdentityStub) UpdateIdentityPool(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *CognitoIdentityStub) UpdateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.IdentityPool) *CognitoidentityUpdateIdentityPoolResult {
+func (a *CognitoIdentityStub) UpdateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.IdentityPool) *CognitoIdentityUpdateIdentityPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentity.UpdateIdentityPool", input)
-	return &CognitoidentityUpdateIdentityPoolResult{Result: future}
+	return &CognitoIdentityUpdateIdentityPoolFuture{Future: future}
 }

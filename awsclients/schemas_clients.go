@@ -11,99 +11,100 @@ import (
 
 type SchemasClient interface {
 	CreateDiscoverer(ctx workflow.Context, input *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error)
-	CreateDiscovererAsync(ctx workflow.Context, input *schemas.CreateDiscovererInput) *SchemasCreateDiscovererResult
+	CreateDiscovererAsync(ctx workflow.Context, input *schemas.CreateDiscovererInput) *SchemasCreateDiscovererFuture
 
 	CreateRegistry(ctx workflow.Context, input *schemas.CreateRegistryInput) (*schemas.CreateRegistryOutput, error)
-	CreateRegistryAsync(ctx workflow.Context, input *schemas.CreateRegistryInput) *SchemasCreateRegistryResult
+	CreateRegistryAsync(ctx workflow.Context, input *schemas.CreateRegistryInput) *SchemasCreateRegistryFuture
 
 	CreateSchema(ctx workflow.Context, input *schemas.CreateSchemaInput) (*schemas.CreateSchemaOutput, error)
-	CreateSchemaAsync(ctx workflow.Context, input *schemas.CreateSchemaInput) *SchemasCreateSchemaResult
+	CreateSchemaAsync(ctx workflow.Context, input *schemas.CreateSchemaInput) *SchemasCreateSchemaFuture
 
 	DeleteDiscoverer(ctx workflow.Context, input *schemas.DeleteDiscovererInput) (*schemas.DeleteDiscovererOutput, error)
-	DeleteDiscovererAsync(ctx workflow.Context, input *schemas.DeleteDiscovererInput) *SchemasDeleteDiscovererResult
+	DeleteDiscovererAsync(ctx workflow.Context, input *schemas.DeleteDiscovererInput) *SchemasDeleteDiscovererFuture
 
 	DeleteRegistry(ctx workflow.Context, input *schemas.DeleteRegistryInput) (*schemas.DeleteRegistryOutput, error)
-	DeleteRegistryAsync(ctx workflow.Context, input *schemas.DeleteRegistryInput) *SchemasDeleteRegistryResult
+	DeleteRegistryAsync(ctx workflow.Context, input *schemas.DeleteRegistryInput) *SchemasDeleteRegistryFuture
 
 	DeleteResourcePolicy(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) (*schemas.DeleteResourcePolicyOutput, error)
-	DeleteResourcePolicyAsync(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) *SchemasDeleteResourcePolicyResult
+	DeleteResourcePolicyAsync(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) *SchemasDeleteResourcePolicyFuture
 
 	DeleteSchema(ctx workflow.Context, input *schemas.DeleteSchemaInput) (*schemas.DeleteSchemaOutput, error)
-	DeleteSchemaAsync(ctx workflow.Context, input *schemas.DeleteSchemaInput) *SchemasDeleteSchemaResult
+	DeleteSchemaAsync(ctx workflow.Context, input *schemas.DeleteSchemaInput) *SchemasDeleteSchemaFuture
 
 	DeleteSchemaVersion(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) (*schemas.DeleteSchemaVersionOutput, error)
-	DeleteSchemaVersionAsync(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) *SchemasDeleteSchemaVersionResult
+	DeleteSchemaVersionAsync(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) *SchemasDeleteSchemaVersionFuture
 
 	DescribeCodeBinding(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) (*schemas.DescribeCodeBindingOutput, error)
-	DescribeCodeBindingAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *SchemasDescribeCodeBindingResult
+	DescribeCodeBindingAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *SchemasDescribeCodeBindingFuture
 
 	DescribeDiscoverer(ctx workflow.Context, input *schemas.DescribeDiscovererInput) (*schemas.DescribeDiscovererOutput, error)
-	DescribeDiscovererAsync(ctx workflow.Context, input *schemas.DescribeDiscovererInput) *SchemasDescribeDiscovererResult
+	DescribeDiscovererAsync(ctx workflow.Context, input *schemas.DescribeDiscovererInput) *SchemasDescribeDiscovererFuture
 
 	DescribeRegistry(ctx workflow.Context, input *schemas.DescribeRegistryInput) (*schemas.DescribeRegistryOutput, error)
-	DescribeRegistryAsync(ctx workflow.Context, input *schemas.DescribeRegistryInput) *SchemasDescribeRegistryResult
+	DescribeRegistryAsync(ctx workflow.Context, input *schemas.DescribeRegistryInput) *SchemasDescribeRegistryFuture
 
 	DescribeSchema(ctx workflow.Context, input *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error)
-	DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaResult
+	DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaFuture
 
 	ExportSchema(ctx workflow.Context, input *schemas.ExportSchemaInput) (*schemas.ExportSchemaOutput, error)
-	ExportSchemaAsync(ctx workflow.Context, input *schemas.ExportSchemaInput) *SchemasExportSchemaResult
+	ExportSchemaAsync(ctx workflow.Context, input *schemas.ExportSchemaInput) *SchemasExportSchemaFuture
 
 	GetCodeBindingSource(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error)
-	GetCodeBindingSourceAsync(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) *SchemasGetCodeBindingSourceResult
+	GetCodeBindingSourceAsync(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) *SchemasGetCodeBindingSourceFuture
 
 	GetDiscoveredSchema(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) (*schemas.GetDiscoveredSchemaOutput, error)
-	GetDiscoveredSchemaAsync(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) *SchemasGetDiscoveredSchemaResult
+	GetDiscoveredSchemaAsync(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) *SchemasGetDiscoveredSchemaFuture
 
 	GetResourcePolicy(ctx workflow.Context, input *schemas.GetResourcePolicyInput) (*schemas.GetResourcePolicyOutput, error)
-	GetResourcePolicyAsync(ctx workflow.Context, input *schemas.GetResourcePolicyInput) *SchemasGetResourcePolicyResult
+	GetResourcePolicyAsync(ctx workflow.Context, input *schemas.GetResourcePolicyInput) *SchemasGetResourcePolicyFuture
 
 	ListDiscoverers(ctx workflow.Context, input *schemas.ListDiscoverersInput) (*schemas.ListDiscoverersOutput, error)
-	ListDiscoverersAsync(ctx workflow.Context, input *schemas.ListDiscoverersInput) *SchemasListDiscoverersResult
+	ListDiscoverersAsync(ctx workflow.Context, input *schemas.ListDiscoverersInput) *SchemasListDiscoverersFuture
 
 	ListRegistries(ctx workflow.Context, input *schemas.ListRegistriesInput) (*schemas.ListRegistriesOutput, error)
-	ListRegistriesAsync(ctx workflow.Context, input *schemas.ListRegistriesInput) *SchemasListRegistriesResult
+	ListRegistriesAsync(ctx workflow.Context, input *schemas.ListRegistriesInput) *SchemasListRegistriesFuture
 
 	ListSchemaVersions(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) (*schemas.ListSchemaVersionsOutput, error)
-	ListSchemaVersionsAsync(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) *SchemasListSchemaVersionsResult
+	ListSchemaVersionsAsync(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) *SchemasListSchemaVersionsFuture
 
 	ListSchemas(ctx workflow.Context, input *schemas.ListSchemasInput) (*schemas.ListSchemasOutput, error)
-	ListSchemasAsync(ctx workflow.Context, input *schemas.ListSchemasInput) *SchemasListSchemasResult
+	ListSchemasAsync(ctx workflow.Context, input *schemas.ListSchemasInput) *SchemasListSchemasFuture
 
 	ListTagsForResource(ctx workflow.Context, input *schemas.ListTagsForResourceInput) (*schemas.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *schemas.ListTagsForResourceInput) *SchemasListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *schemas.ListTagsForResourceInput) *SchemasListTagsForResourceFuture
 
 	PutCodeBinding(ctx workflow.Context, input *schemas.PutCodeBindingInput) (*schemas.PutCodeBindingOutput, error)
-	PutCodeBindingAsync(ctx workflow.Context, input *schemas.PutCodeBindingInput) *SchemasPutCodeBindingResult
+	PutCodeBindingAsync(ctx workflow.Context, input *schemas.PutCodeBindingInput) *SchemasPutCodeBindingFuture
 
 	PutResourcePolicy(ctx workflow.Context, input *schemas.PutResourcePolicyInput) (*schemas.PutResourcePolicyOutput, error)
-	PutResourcePolicyAsync(ctx workflow.Context, input *schemas.PutResourcePolicyInput) *SchemasPutResourcePolicyResult
+	PutResourcePolicyAsync(ctx workflow.Context, input *schemas.PutResourcePolicyInput) *SchemasPutResourcePolicyFuture
 
 	SearchSchemas(ctx workflow.Context, input *schemas.SearchSchemasInput) (*schemas.SearchSchemasOutput, error)
-	SearchSchemasAsync(ctx workflow.Context, input *schemas.SearchSchemasInput) *SchemasSearchSchemasResult
+	SearchSchemasAsync(ctx workflow.Context, input *schemas.SearchSchemasInput) *SchemasSearchSchemasFuture
 
 	StartDiscoverer(ctx workflow.Context, input *schemas.StartDiscovererInput) (*schemas.StartDiscovererOutput, error)
-	StartDiscovererAsync(ctx workflow.Context, input *schemas.StartDiscovererInput) *SchemasStartDiscovererResult
+	StartDiscovererAsync(ctx workflow.Context, input *schemas.StartDiscovererInput) *SchemasStartDiscovererFuture
 
 	StopDiscoverer(ctx workflow.Context, input *schemas.StopDiscovererInput) (*schemas.StopDiscovererOutput, error)
-	StopDiscovererAsync(ctx workflow.Context, input *schemas.StopDiscovererInput) *SchemasStopDiscovererResult
+	StopDiscovererAsync(ctx workflow.Context, input *schemas.StopDiscovererInput) *SchemasStopDiscovererFuture
 
 	TagResource(ctx workflow.Context, input *schemas.TagResourceInput) (*schemas.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *schemas.TagResourceInput) *SchemasTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *schemas.TagResourceInput) *SchemasTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *schemas.UntagResourceInput) (*schemas.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *schemas.UntagResourceInput) *SchemasUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *schemas.UntagResourceInput) *SchemasUntagResourceFuture
 
 	UpdateDiscoverer(ctx workflow.Context, input *schemas.UpdateDiscovererInput) (*schemas.UpdateDiscovererOutput, error)
-	UpdateDiscovererAsync(ctx workflow.Context, input *schemas.UpdateDiscovererInput) *SchemasUpdateDiscovererResult
+	UpdateDiscovererAsync(ctx workflow.Context, input *schemas.UpdateDiscovererInput) *SchemasUpdateDiscovererFuture
 
 	UpdateRegistry(ctx workflow.Context, input *schemas.UpdateRegistryInput) (*schemas.UpdateRegistryOutput, error)
-	UpdateRegistryAsync(ctx workflow.Context, input *schemas.UpdateRegistryInput) *SchemasUpdateRegistryResult
+	UpdateRegistryAsync(ctx workflow.Context, input *schemas.UpdateRegistryInput) *SchemasUpdateRegistryFuture
 
 	UpdateSchema(ctx workflow.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error)
-	UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaResult
+	UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaFuture
 
 	WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error
+	WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *VoidFuture
 }
 
 type SchemasStub struct{}
@@ -112,313 +113,344 @@ func NewSchemasStub() SchemasClient {
 	return &SchemasStub{}
 }
 
-type SchemasCreateDiscovererResult struct {
-	Result workflow.Future
+type SchemasCreateDiscovererFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasCreateDiscovererResult) Get(ctx workflow.Context) (*schemas.CreateDiscovererOutput, error) {
+func (r *SchemasCreateDiscovererFuture) Get(ctx workflow.Context) (*schemas.CreateDiscovererOutput, error) {
 	var output schemas.CreateDiscovererOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasCreateRegistryResult struct {
-	Result workflow.Future
+type SchemasCreateRegistryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasCreateRegistryResult) Get(ctx workflow.Context) (*schemas.CreateRegistryOutput, error) {
+func (r *SchemasCreateRegistryFuture) Get(ctx workflow.Context) (*schemas.CreateRegistryOutput, error) {
 	var output schemas.CreateRegistryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasCreateSchemaResult struct {
-	Result workflow.Future
+type SchemasCreateSchemaFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasCreateSchemaResult) Get(ctx workflow.Context) (*schemas.CreateSchemaOutput, error) {
+func (r *SchemasCreateSchemaFuture) Get(ctx workflow.Context) (*schemas.CreateSchemaOutput, error) {
 	var output schemas.CreateSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDeleteDiscovererResult struct {
-	Result workflow.Future
+type SchemasDeleteDiscovererFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDeleteDiscovererResult) Get(ctx workflow.Context) (*schemas.DeleteDiscovererOutput, error) {
+func (r *SchemasDeleteDiscovererFuture) Get(ctx workflow.Context) (*schemas.DeleteDiscovererOutput, error) {
 	var output schemas.DeleteDiscovererOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDeleteRegistryResult struct {
-	Result workflow.Future
+type SchemasDeleteRegistryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDeleteRegistryResult) Get(ctx workflow.Context) (*schemas.DeleteRegistryOutput, error) {
+func (r *SchemasDeleteRegistryFuture) Get(ctx workflow.Context) (*schemas.DeleteRegistryOutput, error) {
 	var output schemas.DeleteRegistryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDeleteResourcePolicyResult struct {
-	Result workflow.Future
+type SchemasDeleteResourcePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDeleteResourcePolicyResult) Get(ctx workflow.Context) (*schemas.DeleteResourcePolicyOutput, error) {
+func (r *SchemasDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*schemas.DeleteResourcePolicyOutput, error) {
 	var output schemas.DeleteResourcePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDeleteSchemaResult struct {
-	Result workflow.Future
+type SchemasDeleteSchemaFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDeleteSchemaResult) Get(ctx workflow.Context) (*schemas.DeleteSchemaOutput, error) {
+func (r *SchemasDeleteSchemaFuture) Get(ctx workflow.Context) (*schemas.DeleteSchemaOutput, error) {
 	var output schemas.DeleteSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDeleteSchemaVersionResult struct {
-	Result workflow.Future
+type SchemasDeleteSchemaVersionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDeleteSchemaVersionResult) Get(ctx workflow.Context) (*schemas.DeleteSchemaVersionOutput, error) {
+func (r *SchemasDeleteSchemaVersionFuture) Get(ctx workflow.Context) (*schemas.DeleteSchemaVersionOutput, error) {
 	var output schemas.DeleteSchemaVersionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDescribeCodeBindingResult struct {
-	Result workflow.Future
+type SchemasDescribeCodeBindingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDescribeCodeBindingResult) Get(ctx workflow.Context) (*schemas.DescribeCodeBindingOutput, error) {
+func (r *SchemasDescribeCodeBindingFuture) Get(ctx workflow.Context) (*schemas.DescribeCodeBindingOutput, error) {
 	var output schemas.DescribeCodeBindingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDescribeDiscovererResult struct {
-	Result workflow.Future
+type SchemasDescribeDiscovererFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDescribeDiscovererResult) Get(ctx workflow.Context) (*schemas.DescribeDiscovererOutput, error) {
+func (r *SchemasDescribeDiscovererFuture) Get(ctx workflow.Context) (*schemas.DescribeDiscovererOutput, error) {
 	var output schemas.DescribeDiscovererOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDescribeRegistryResult struct {
-	Result workflow.Future
+type SchemasDescribeRegistryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDescribeRegistryResult) Get(ctx workflow.Context) (*schemas.DescribeRegistryOutput, error) {
+func (r *SchemasDescribeRegistryFuture) Get(ctx workflow.Context) (*schemas.DescribeRegistryOutput, error) {
 	var output schemas.DescribeRegistryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasDescribeSchemaResult struct {
-	Result workflow.Future
+type SchemasDescribeSchemaFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasDescribeSchemaResult) Get(ctx workflow.Context) (*schemas.DescribeSchemaOutput, error) {
+func (r *SchemasDescribeSchemaFuture) Get(ctx workflow.Context) (*schemas.DescribeSchemaOutput, error) {
 	var output schemas.DescribeSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasExportSchemaResult struct {
-	Result workflow.Future
+type SchemasExportSchemaFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasExportSchemaResult) Get(ctx workflow.Context) (*schemas.ExportSchemaOutput, error) {
+func (r *SchemasExportSchemaFuture) Get(ctx workflow.Context) (*schemas.ExportSchemaOutput, error) {
 	var output schemas.ExportSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasGetCodeBindingSourceResult struct {
-	Result workflow.Future
+type SchemasGetCodeBindingSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasGetCodeBindingSourceResult) Get(ctx workflow.Context) (*schemas.GetCodeBindingSourceOutput, error) {
+func (r *SchemasGetCodeBindingSourceFuture) Get(ctx workflow.Context) (*schemas.GetCodeBindingSourceOutput, error) {
 	var output schemas.GetCodeBindingSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasGetDiscoveredSchemaResult struct {
-	Result workflow.Future
+type SchemasGetDiscoveredSchemaFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasGetDiscoveredSchemaResult) Get(ctx workflow.Context) (*schemas.GetDiscoveredSchemaOutput, error) {
+func (r *SchemasGetDiscoveredSchemaFuture) Get(ctx workflow.Context) (*schemas.GetDiscoveredSchemaOutput, error) {
 	var output schemas.GetDiscoveredSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasGetResourcePolicyResult struct {
-	Result workflow.Future
+type SchemasGetResourcePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasGetResourcePolicyResult) Get(ctx workflow.Context) (*schemas.GetResourcePolicyOutput, error) {
+func (r *SchemasGetResourcePolicyFuture) Get(ctx workflow.Context) (*schemas.GetResourcePolicyOutput, error) {
 	var output schemas.GetResourcePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasListDiscoverersResult struct {
-	Result workflow.Future
+type SchemasListDiscoverersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasListDiscoverersResult) Get(ctx workflow.Context) (*schemas.ListDiscoverersOutput, error) {
+func (r *SchemasListDiscoverersFuture) Get(ctx workflow.Context) (*schemas.ListDiscoverersOutput, error) {
 	var output schemas.ListDiscoverersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasListRegistriesResult struct {
-	Result workflow.Future
+type SchemasListRegistriesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasListRegistriesResult) Get(ctx workflow.Context) (*schemas.ListRegistriesOutput, error) {
+func (r *SchemasListRegistriesFuture) Get(ctx workflow.Context) (*schemas.ListRegistriesOutput, error) {
 	var output schemas.ListRegistriesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasListSchemaVersionsResult struct {
-	Result workflow.Future
+type SchemasListSchemaVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasListSchemaVersionsResult) Get(ctx workflow.Context) (*schemas.ListSchemaVersionsOutput, error) {
+func (r *SchemasListSchemaVersionsFuture) Get(ctx workflow.Context) (*schemas.ListSchemaVersionsOutput, error) {
 	var output schemas.ListSchemaVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasListSchemasResult struct {
-	Result workflow.Future
+type SchemasListSchemasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasListSchemasResult) Get(ctx workflow.Context) (*schemas.ListSchemasOutput, error) {
+func (r *SchemasListSchemasFuture) Get(ctx workflow.Context) (*schemas.ListSchemasOutput, error) {
 	var output schemas.ListSchemasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasListTagsForResourceResult struct {
-	Result workflow.Future
+type SchemasListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasListTagsForResourceResult) Get(ctx workflow.Context) (*schemas.ListTagsForResourceOutput, error) {
+func (r *SchemasListTagsForResourceFuture) Get(ctx workflow.Context) (*schemas.ListTagsForResourceOutput, error) {
 	var output schemas.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasPutCodeBindingResult struct {
-	Result workflow.Future
+type SchemasPutCodeBindingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasPutCodeBindingResult) Get(ctx workflow.Context) (*schemas.PutCodeBindingOutput, error) {
+func (r *SchemasPutCodeBindingFuture) Get(ctx workflow.Context) (*schemas.PutCodeBindingOutput, error) {
 	var output schemas.PutCodeBindingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasPutResourcePolicyResult struct {
-	Result workflow.Future
+type SchemasPutResourcePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasPutResourcePolicyResult) Get(ctx workflow.Context) (*schemas.PutResourcePolicyOutput, error) {
+func (r *SchemasPutResourcePolicyFuture) Get(ctx workflow.Context) (*schemas.PutResourcePolicyOutput, error) {
 	var output schemas.PutResourcePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasSearchSchemasResult struct {
-	Result workflow.Future
+type SchemasSearchSchemasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasSearchSchemasResult) Get(ctx workflow.Context) (*schemas.SearchSchemasOutput, error) {
+func (r *SchemasSearchSchemasFuture) Get(ctx workflow.Context) (*schemas.SearchSchemasOutput, error) {
 	var output schemas.SearchSchemasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasStartDiscovererResult struct {
-	Result workflow.Future
+type SchemasStartDiscovererFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasStartDiscovererResult) Get(ctx workflow.Context) (*schemas.StartDiscovererOutput, error) {
+func (r *SchemasStartDiscovererFuture) Get(ctx workflow.Context) (*schemas.StartDiscovererOutput, error) {
 	var output schemas.StartDiscovererOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasStopDiscovererResult struct {
-	Result workflow.Future
+type SchemasStopDiscovererFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasStopDiscovererResult) Get(ctx workflow.Context) (*schemas.StopDiscovererOutput, error) {
+func (r *SchemasStopDiscovererFuture) Get(ctx workflow.Context) (*schemas.StopDiscovererOutput, error) {
 	var output schemas.StopDiscovererOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasTagResourceResult struct {
-	Result workflow.Future
+type SchemasTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasTagResourceResult) Get(ctx workflow.Context) (*schemas.TagResourceOutput, error) {
+func (r *SchemasTagResourceFuture) Get(ctx workflow.Context) (*schemas.TagResourceOutput, error) {
 	var output schemas.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasUntagResourceResult struct {
-	Result workflow.Future
+type SchemasUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasUntagResourceResult) Get(ctx workflow.Context) (*schemas.UntagResourceOutput, error) {
+func (r *SchemasUntagResourceFuture) Get(ctx workflow.Context) (*schemas.UntagResourceOutput, error) {
 	var output schemas.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasUpdateDiscovererResult struct {
-	Result workflow.Future
+type SchemasUpdateDiscovererFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasUpdateDiscovererResult) Get(ctx workflow.Context) (*schemas.UpdateDiscovererOutput, error) {
+func (r *SchemasUpdateDiscovererFuture) Get(ctx workflow.Context) (*schemas.UpdateDiscovererOutput, error) {
 	var output schemas.UpdateDiscovererOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasUpdateRegistryResult struct {
-	Result workflow.Future
+type SchemasUpdateRegistryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasUpdateRegistryResult) Get(ctx workflow.Context) (*schemas.UpdateRegistryOutput, error) {
+func (r *SchemasUpdateRegistryFuture) Get(ctx workflow.Context) (*schemas.UpdateRegistryOutput, error) {
 	var output schemas.UpdateRegistryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SchemasUpdateSchemaResult struct {
-	Result workflow.Future
+type SchemasUpdateSchemaFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SchemasUpdateSchemaResult) Get(ctx workflow.Context) (*schemas.UpdateSchemaOutput, error) {
+func (r *SchemasUpdateSchemaFuture) Get(ctx workflow.Context) (*schemas.UpdateSchemaOutput, error) {
 	var output schemas.UpdateSchemaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -428,9 +460,9 @@ func (a *SchemasStub) CreateDiscoverer(ctx workflow.Context, input *schemas.Crea
 	return &output, err
 }
 
-func (a *SchemasStub) CreateDiscovererAsync(ctx workflow.Context, input *schemas.CreateDiscovererInput) *SchemasCreateDiscovererResult {
+func (a *SchemasStub) CreateDiscovererAsync(ctx workflow.Context, input *schemas.CreateDiscovererInput) *SchemasCreateDiscovererFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.CreateDiscoverer", input)
-	return &SchemasCreateDiscovererResult{Result: future}
+	return &SchemasCreateDiscovererFuture{Future: future}
 }
 
 func (a *SchemasStub) CreateRegistry(ctx workflow.Context, input *schemas.CreateRegistryInput) (*schemas.CreateRegistryOutput, error) {
@@ -439,9 +471,9 @@ func (a *SchemasStub) CreateRegistry(ctx workflow.Context, input *schemas.Create
 	return &output, err
 }
 
-func (a *SchemasStub) CreateRegistryAsync(ctx workflow.Context, input *schemas.CreateRegistryInput) *SchemasCreateRegistryResult {
+func (a *SchemasStub) CreateRegistryAsync(ctx workflow.Context, input *schemas.CreateRegistryInput) *SchemasCreateRegistryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.CreateRegistry", input)
-	return &SchemasCreateRegistryResult{Result: future}
+	return &SchemasCreateRegistryFuture{Future: future}
 }
 
 func (a *SchemasStub) CreateSchema(ctx workflow.Context, input *schemas.CreateSchemaInput) (*schemas.CreateSchemaOutput, error) {
@@ -450,9 +482,9 @@ func (a *SchemasStub) CreateSchema(ctx workflow.Context, input *schemas.CreateSc
 	return &output, err
 }
 
-func (a *SchemasStub) CreateSchemaAsync(ctx workflow.Context, input *schemas.CreateSchemaInput) *SchemasCreateSchemaResult {
+func (a *SchemasStub) CreateSchemaAsync(ctx workflow.Context, input *schemas.CreateSchemaInput) *SchemasCreateSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.CreateSchema", input)
-	return &SchemasCreateSchemaResult{Result: future}
+	return &SchemasCreateSchemaFuture{Future: future}
 }
 
 func (a *SchemasStub) DeleteDiscoverer(ctx workflow.Context, input *schemas.DeleteDiscovererInput) (*schemas.DeleteDiscovererOutput, error) {
@@ -461,9 +493,9 @@ func (a *SchemasStub) DeleteDiscoverer(ctx workflow.Context, input *schemas.Dele
 	return &output, err
 }
 
-func (a *SchemasStub) DeleteDiscovererAsync(ctx workflow.Context, input *schemas.DeleteDiscovererInput) *SchemasDeleteDiscovererResult {
+func (a *SchemasStub) DeleteDiscovererAsync(ctx workflow.Context, input *schemas.DeleteDiscovererInput) *SchemasDeleteDiscovererFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteDiscoverer", input)
-	return &SchemasDeleteDiscovererResult{Result: future}
+	return &SchemasDeleteDiscovererFuture{Future: future}
 }
 
 func (a *SchemasStub) DeleteRegistry(ctx workflow.Context, input *schemas.DeleteRegistryInput) (*schemas.DeleteRegistryOutput, error) {
@@ -472,9 +504,9 @@ func (a *SchemasStub) DeleteRegistry(ctx workflow.Context, input *schemas.Delete
 	return &output, err
 }
 
-func (a *SchemasStub) DeleteRegistryAsync(ctx workflow.Context, input *schemas.DeleteRegistryInput) *SchemasDeleteRegistryResult {
+func (a *SchemasStub) DeleteRegistryAsync(ctx workflow.Context, input *schemas.DeleteRegistryInput) *SchemasDeleteRegistryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteRegistry", input)
-	return &SchemasDeleteRegistryResult{Result: future}
+	return &SchemasDeleteRegistryFuture{Future: future}
 }
 
 func (a *SchemasStub) DeleteResourcePolicy(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) (*schemas.DeleteResourcePolicyOutput, error) {
@@ -483,9 +515,9 @@ func (a *SchemasStub) DeleteResourcePolicy(ctx workflow.Context, input *schemas.
 	return &output, err
 }
 
-func (a *SchemasStub) DeleteResourcePolicyAsync(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) *SchemasDeleteResourcePolicyResult {
+func (a *SchemasStub) DeleteResourcePolicyAsync(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) *SchemasDeleteResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteResourcePolicy", input)
-	return &SchemasDeleteResourcePolicyResult{Result: future}
+	return &SchemasDeleteResourcePolicyFuture{Future: future}
 }
 
 func (a *SchemasStub) DeleteSchema(ctx workflow.Context, input *schemas.DeleteSchemaInput) (*schemas.DeleteSchemaOutput, error) {
@@ -494,9 +526,9 @@ func (a *SchemasStub) DeleteSchema(ctx workflow.Context, input *schemas.DeleteSc
 	return &output, err
 }
 
-func (a *SchemasStub) DeleteSchemaAsync(ctx workflow.Context, input *schemas.DeleteSchemaInput) *SchemasDeleteSchemaResult {
+func (a *SchemasStub) DeleteSchemaAsync(ctx workflow.Context, input *schemas.DeleteSchemaInput) *SchemasDeleteSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteSchema", input)
-	return &SchemasDeleteSchemaResult{Result: future}
+	return &SchemasDeleteSchemaFuture{Future: future}
 }
 
 func (a *SchemasStub) DeleteSchemaVersion(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) (*schemas.DeleteSchemaVersionOutput, error) {
@@ -505,9 +537,9 @@ func (a *SchemasStub) DeleteSchemaVersion(ctx workflow.Context, input *schemas.D
 	return &output, err
 }
 
-func (a *SchemasStub) DeleteSchemaVersionAsync(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) *SchemasDeleteSchemaVersionResult {
+func (a *SchemasStub) DeleteSchemaVersionAsync(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) *SchemasDeleteSchemaVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteSchemaVersion", input)
-	return &SchemasDeleteSchemaVersionResult{Result: future}
+	return &SchemasDeleteSchemaVersionFuture{Future: future}
 }
 
 func (a *SchemasStub) DescribeCodeBinding(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) (*schemas.DescribeCodeBindingOutput, error) {
@@ -516,9 +548,9 @@ func (a *SchemasStub) DescribeCodeBinding(ctx workflow.Context, input *schemas.D
 	return &output, err
 }
 
-func (a *SchemasStub) DescribeCodeBindingAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *SchemasDescribeCodeBindingResult {
+func (a *SchemasStub) DescribeCodeBindingAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *SchemasDescribeCodeBindingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeCodeBinding", input)
-	return &SchemasDescribeCodeBindingResult{Result: future}
+	return &SchemasDescribeCodeBindingFuture{Future: future}
 }
 
 func (a *SchemasStub) DescribeDiscoverer(ctx workflow.Context, input *schemas.DescribeDiscovererInput) (*schemas.DescribeDiscovererOutput, error) {
@@ -527,9 +559,9 @@ func (a *SchemasStub) DescribeDiscoverer(ctx workflow.Context, input *schemas.De
 	return &output, err
 }
 
-func (a *SchemasStub) DescribeDiscovererAsync(ctx workflow.Context, input *schemas.DescribeDiscovererInput) *SchemasDescribeDiscovererResult {
+func (a *SchemasStub) DescribeDiscovererAsync(ctx workflow.Context, input *schemas.DescribeDiscovererInput) *SchemasDescribeDiscovererFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeDiscoverer", input)
-	return &SchemasDescribeDiscovererResult{Result: future}
+	return &SchemasDescribeDiscovererFuture{Future: future}
 }
 
 func (a *SchemasStub) DescribeRegistry(ctx workflow.Context, input *schemas.DescribeRegistryInput) (*schemas.DescribeRegistryOutput, error) {
@@ -538,9 +570,9 @@ func (a *SchemasStub) DescribeRegistry(ctx workflow.Context, input *schemas.Desc
 	return &output, err
 }
 
-func (a *SchemasStub) DescribeRegistryAsync(ctx workflow.Context, input *schemas.DescribeRegistryInput) *SchemasDescribeRegistryResult {
+func (a *SchemasStub) DescribeRegistryAsync(ctx workflow.Context, input *schemas.DescribeRegistryInput) *SchemasDescribeRegistryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeRegistry", input)
-	return &SchemasDescribeRegistryResult{Result: future}
+	return &SchemasDescribeRegistryFuture{Future: future}
 }
 
 func (a *SchemasStub) DescribeSchema(ctx workflow.Context, input *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error) {
@@ -549,9 +581,9 @@ func (a *SchemasStub) DescribeSchema(ctx workflow.Context, input *schemas.Descri
 	return &output, err
 }
 
-func (a *SchemasStub) DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaResult {
+func (a *SchemasStub) DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeSchema", input)
-	return &SchemasDescribeSchemaResult{Result: future}
+	return &SchemasDescribeSchemaFuture{Future: future}
 }
 
 func (a *SchemasStub) ExportSchema(ctx workflow.Context, input *schemas.ExportSchemaInput) (*schemas.ExportSchemaOutput, error) {
@@ -560,9 +592,9 @@ func (a *SchemasStub) ExportSchema(ctx workflow.Context, input *schemas.ExportSc
 	return &output, err
 }
 
-func (a *SchemasStub) ExportSchemaAsync(ctx workflow.Context, input *schemas.ExportSchemaInput) *SchemasExportSchemaResult {
+func (a *SchemasStub) ExportSchemaAsync(ctx workflow.Context, input *schemas.ExportSchemaInput) *SchemasExportSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.ExportSchema", input)
-	return &SchemasExportSchemaResult{Result: future}
+	return &SchemasExportSchemaFuture{Future: future}
 }
 
 func (a *SchemasStub) GetCodeBindingSource(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error) {
@@ -571,9 +603,9 @@ func (a *SchemasStub) GetCodeBindingSource(ctx workflow.Context, input *schemas.
 	return &output, err
 }
 
-func (a *SchemasStub) GetCodeBindingSourceAsync(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) *SchemasGetCodeBindingSourceResult {
+func (a *SchemasStub) GetCodeBindingSourceAsync(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) *SchemasGetCodeBindingSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.GetCodeBindingSource", input)
-	return &SchemasGetCodeBindingSourceResult{Result: future}
+	return &SchemasGetCodeBindingSourceFuture{Future: future}
 }
 
 func (a *SchemasStub) GetDiscoveredSchema(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) (*schemas.GetDiscoveredSchemaOutput, error) {
@@ -582,9 +614,9 @@ func (a *SchemasStub) GetDiscoveredSchema(ctx workflow.Context, input *schemas.G
 	return &output, err
 }
 
-func (a *SchemasStub) GetDiscoveredSchemaAsync(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) *SchemasGetDiscoveredSchemaResult {
+func (a *SchemasStub) GetDiscoveredSchemaAsync(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) *SchemasGetDiscoveredSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.GetDiscoveredSchema", input)
-	return &SchemasGetDiscoveredSchemaResult{Result: future}
+	return &SchemasGetDiscoveredSchemaFuture{Future: future}
 }
 
 func (a *SchemasStub) GetResourcePolicy(ctx workflow.Context, input *schemas.GetResourcePolicyInput) (*schemas.GetResourcePolicyOutput, error) {
@@ -593,9 +625,9 @@ func (a *SchemasStub) GetResourcePolicy(ctx workflow.Context, input *schemas.Get
 	return &output, err
 }
 
-func (a *SchemasStub) GetResourcePolicyAsync(ctx workflow.Context, input *schemas.GetResourcePolicyInput) *SchemasGetResourcePolicyResult {
+func (a *SchemasStub) GetResourcePolicyAsync(ctx workflow.Context, input *schemas.GetResourcePolicyInput) *SchemasGetResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.GetResourcePolicy", input)
-	return &SchemasGetResourcePolicyResult{Result: future}
+	return &SchemasGetResourcePolicyFuture{Future: future}
 }
 
 func (a *SchemasStub) ListDiscoverers(ctx workflow.Context, input *schemas.ListDiscoverersInput) (*schemas.ListDiscoverersOutput, error) {
@@ -604,9 +636,9 @@ func (a *SchemasStub) ListDiscoverers(ctx workflow.Context, input *schemas.ListD
 	return &output, err
 }
 
-func (a *SchemasStub) ListDiscoverersAsync(ctx workflow.Context, input *schemas.ListDiscoverersInput) *SchemasListDiscoverersResult {
+func (a *SchemasStub) ListDiscoverersAsync(ctx workflow.Context, input *schemas.ListDiscoverersInput) *SchemasListDiscoverersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListDiscoverers", input)
-	return &SchemasListDiscoverersResult{Result: future}
+	return &SchemasListDiscoverersFuture{Future: future}
 }
 
 func (a *SchemasStub) ListRegistries(ctx workflow.Context, input *schemas.ListRegistriesInput) (*schemas.ListRegistriesOutput, error) {
@@ -615,9 +647,9 @@ func (a *SchemasStub) ListRegistries(ctx workflow.Context, input *schemas.ListRe
 	return &output, err
 }
 
-func (a *SchemasStub) ListRegistriesAsync(ctx workflow.Context, input *schemas.ListRegistriesInput) *SchemasListRegistriesResult {
+func (a *SchemasStub) ListRegistriesAsync(ctx workflow.Context, input *schemas.ListRegistriesInput) *SchemasListRegistriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListRegistries", input)
-	return &SchemasListRegistriesResult{Result: future}
+	return &SchemasListRegistriesFuture{Future: future}
 }
 
 func (a *SchemasStub) ListSchemaVersions(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) (*schemas.ListSchemaVersionsOutput, error) {
@@ -626,9 +658,9 @@ func (a *SchemasStub) ListSchemaVersions(ctx workflow.Context, input *schemas.Li
 	return &output, err
 }
 
-func (a *SchemasStub) ListSchemaVersionsAsync(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) *SchemasListSchemaVersionsResult {
+func (a *SchemasStub) ListSchemaVersionsAsync(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) *SchemasListSchemaVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListSchemaVersions", input)
-	return &SchemasListSchemaVersionsResult{Result: future}
+	return &SchemasListSchemaVersionsFuture{Future: future}
 }
 
 func (a *SchemasStub) ListSchemas(ctx workflow.Context, input *schemas.ListSchemasInput) (*schemas.ListSchemasOutput, error) {
@@ -637,9 +669,9 @@ func (a *SchemasStub) ListSchemas(ctx workflow.Context, input *schemas.ListSchem
 	return &output, err
 }
 
-func (a *SchemasStub) ListSchemasAsync(ctx workflow.Context, input *schemas.ListSchemasInput) *SchemasListSchemasResult {
+func (a *SchemasStub) ListSchemasAsync(ctx workflow.Context, input *schemas.ListSchemasInput) *SchemasListSchemasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListSchemas", input)
-	return &SchemasListSchemasResult{Result: future}
+	return &SchemasListSchemasFuture{Future: future}
 }
 
 func (a *SchemasStub) ListTagsForResource(ctx workflow.Context, input *schemas.ListTagsForResourceInput) (*schemas.ListTagsForResourceOutput, error) {
@@ -648,9 +680,9 @@ func (a *SchemasStub) ListTagsForResource(ctx workflow.Context, input *schemas.L
 	return &output, err
 }
 
-func (a *SchemasStub) ListTagsForResourceAsync(ctx workflow.Context, input *schemas.ListTagsForResourceInput) *SchemasListTagsForResourceResult {
+func (a *SchemasStub) ListTagsForResourceAsync(ctx workflow.Context, input *schemas.ListTagsForResourceInput) *SchemasListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListTagsForResource", input)
-	return &SchemasListTagsForResourceResult{Result: future}
+	return &SchemasListTagsForResourceFuture{Future: future}
 }
 
 func (a *SchemasStub) PutCodeBinding(ctx workflow.Context, input *schemas.PutCodeBindingInput) (*schemas.PutCodeBindingOutput, error) {
@@ -659,9 +691,9 @@ func (a *SchemasStub) PutCodeBinding(ctx workflow.Context, input *schemas.PutCod
 	return &output, err
 }
 
-func (a *SchemasStub) PutCodeBindingAsync(ctx workflow.Context, input *schemas.PutCodeBindingInput) *SchemasPutCodeBindingResult {
+func (a *SchemasStub) PutCodeBindingAsync(ctx workflow.Context, input *schemas.PutCodeBindingInput) *SchemasPutCodeBindingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.PutCodeBinding", input)
-	return &SchemasPutCodeBindingResult{Result: future}
+	return &SchemasPutCodeBindingFuture{Future: future}
 }
 
 func (a *SchemasStub) PutResourcePolicy(ctx workflow.Context, input *schemas.PutResourcePolicyInput) (*schemas.PutResourcePolicyOutput, error) {
@@ -670,9 +702,9 @@ func (a *SchemasStub) PutResourcePolicy(ctx workflow.Context, input *schemas.Put
 	return &output, err
 }
 
-func (a *SchemasStub) PutResourcePolicyAsync(ctx workflow.Context, input *schemas.PutResourcePolicyInput) *SchemasPutResourcePolicyResult {
+func (a *SchemasStub) PutResourcePolicyAsync(ctx workflow.Context, input *schemas.PutResourcePolicyInput) *SchemasPutResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.PutResourcePolicy", input)
-	return &SchemasPutResourcePolicyResult{Result: future}
+	return &SchemasPutResourcePolicyFuture{Future: future}
 }
 
 func (a *SchemasStub) SearchSchemas(ctx workflow.Context, input *schemas.SearchSchemasInput) (*schemas.SearchSchemasOutput, error) {
@@ -681,9 +713,9 @@ func (a *SchemasStub) SearchSchemas(ctx workflow.Context, input *schemas.SearchS
 	return &output, err
 }
 
-func (a *SchemasStub) SearchSchemasAsync(ctx workflow.Context, input *schemas.SearchSchemasInput) *SchemasSearchSchemasResult {
+func (a *SchemasStub) SearchSchemasAsync(ctx workflow.Context, input *schemas.SearchSchemasInput) *SchemasSearchSchemasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.SearchSchemas", input)
-	return &SchemasSearchSchemasResult{Result: future}
+	return &SchemasSearchSchemasFuture{Future: future}
 }
 
 func (a *SchemasStub) StartDiscoverer(ctx workflow.Context, input *schemas.StartDiscovererInput) (*schemas.StartDiscovererOutput, error) {
@@ -692,9 +724,9 @@ func (a *SchemasStub) StartDiscoverer(ctx workflow.Context, input *schemas.Start
 	return &output, err
 }
 
-func (a *SchemasStub) StartDiscovererAsync(ctx workflow.Context, input *schemas.StartDiscovererInput) *SchemasStartDiscovererResult {
+func (a *SchemasStub) StartDiscovererAsync(ctx workflow.Context, input *schemas.StartDiscovererInput) *SchemasStartDiscovererFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.StartDiscoverer", input)
-	return &SchemasStartDiscovererResult{Result: future}
+	return &SchemasStartDiscovererFuture{Future: future}
 }
 
 func (a *SchemasStub) StopDiscoverer(ctx workflow.Context, input *schemas.StopDiscovererInput) (*schemas.StopDiscovererOutput, error) {
@@ -703,9 +735,9 @@ func (a *SchemasStub) StopDiscoverer(ctx workflow.Context, input *schemas.StopDi
 	return &output, err
 }
 
-func (a *SchemasStub) StopDiscovererAsync(ctx workflow.Context, input *schemas.StopDiscovererInput) *SchemasStopDiscovererResult {
+func (a *SchemasStub) StopDiscovererAsync(ctx workflow.Context, input *schemas.StopDiscovererInput) *SchemasStopDiscovererFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.StopDiscoverer", input)
-	return &SchemasStopDiscovererResult{Result: future}
+	return &SchemasStopDiscovererFuture{Future: future}
 }
 
 func (a *SchemasStub) TagResource(ctx workflow.Context, input *schemas.TagResourceInput) (*schemas.TagResourceOutput, error) {
@@ -714,9 +746,9 @@ func (a *SchemasStub) TagResource(ctx workflow.Context, input *schemas.TagResour
 	return &output, err
 }
 
-func (a *SchemasStub) TagResourceAsync(ctx workflow.Context, input *schemas.TagResourceInput) *SchemasTagResourceResult {
+func (a *SchemasStub) TagResourceAsync(ctx workflow.Context, input *schemas.TagResourceInput) *SchemasTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.TagResource", input)
-	return &SchemasTagResourceResult{Result: future}
+	return &SchemasTagResourceFuture{Future: future}
 }
 
 func (a *SchemasStub) UntagResource(ctx workflow.Context, input *schemas.UntagResourceInput) (*schemas.UntagResourceOutput, error) {
@@ -725,9 +757,9 @@ func (a *SchemasStub) UntagResource(ctx workflow.Context, input *schemas.UntagRe
 	return &output, err
 }
 
-func (a *SchemasStub) UntagResourceAsync(ctx workflow.Context, input *schemas.UntagResourceInput) *SchemasUntagResourceResult {
+func (a *SchemasStub) UntagResourceAsync(ctx workflow.Context, input *schemas.UntagResourceInput) *SchemasUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.UntagResource", input)
-	return &SchemasUntagResourceResult{Result: future}
+	return &SchemasUntagResourceFuture{Future: future}
 }
 
 func (a *SchemasStub) UpdateDiscoverer(ctx workflow.Context, input *schemas.UpdateDiscovererInput) (*schemas.UpdateDiscovererOutput, error) {
@@ -736,9 +768,9 @@ func (a *SchemasStub) UpdateDiscoverer(ctx workflow.Context, input *schemas.Upda
 	return &output, err
 }
 
-func (a *SchemasStub) UpdateDiscovererAsync(ctx workflow.Context, input *schemas.UpdateDiscovererInput) *SchemasUpdateDiscovererResult {
+func (a *SchemasStub) UpdateDiscovererAsync(ctx workflow.Context, input *schemas.UpdateDiscovererInput) *SchemasUpdateDiscovererFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateDiscoverer", input)
-	return &SchemasUpdateDiscovererResult{Result: future}
+	return &SchemasUpdateDiscovererFuture{Future: future}
 }
 
 func (a *SchemasStub) UpdateRegistry(ctx workflow.Context, input *schemas.UpdateRegistryInput) (*schemas.UpdateRegistryOutput, error) {
@@ -747,9 +779,9 @@ func (a *SchemasStub) UpdateRegistry(ctx workflow.Context, input *schemas.Update
 	return &output, err
 }
 
-func (a *SchemasStub) UpdateRegistryAsync(ctx workflow.Context, input *schemas.UpdateRegistryInput) *SchemasUpdateRegistryResult {
+func (a *SchemasStub) UpdateRegistryAsync(ctx workflow.Context, input *schemas.UpdateRegistryInput) *SchemasUpdateRegistryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateRegistry", input)
-	return &SchemasUpdateRegistryResult{Result: future}
+	return &SchemasUpdateRegistryFuture{Future: future}
 }
 
 func (a *SchemasStub) UpdateSchema(ctx workflow.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error) {
@@ -758,15 +790,16 @@ func (a *SchemasStub) UpdateSchema(ctx workflow.Context, input *schemas.UpdateSc
 	return &output, err
 }
 
-func (a *SchemasStub) UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaResult {
+func (a *SchemasStub) UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateSchema", input)
-	return &SchemasUpdateSchemaResult{Result: future}
+	return &SchemasUpdateSchemaFuture{Future: future}
 }
 
 func (a *SchemasStub) WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.schemas.WaitUntilCodeBindingExists", input).Get(ctx, nil)
 }
 
-func (a *SchemasStub) WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.schemas.WaitUntilCodeBindingExists", input)
+func (a *SchemasStub) WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.WaitUntilCodeBindingExists", input)
+	return NewVoidFuture(future)
 }

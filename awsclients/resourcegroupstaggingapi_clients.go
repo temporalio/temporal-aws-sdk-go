@@ -11,28 +11,28 @@ import (
 
 type ResourceGroupsTaggingAPIClient interface {
 	DescribeReportCreation(ctx workflow.Context, input *resourcegroupstaggingapi.DescribeReportCreationInput) (*resourcegroupstaggingapi.DescribeReportCreationOutput, error)
-	DescribeReportCreationAsync(ctx workflow.Context, input *resourcegroupstaggingapi.DescribeReportCreationInput) *ResourcegroupstaggingapiDescribeReportCreationResult
+	DescribeReportCreationAsync(ctx workflow.Context, input *resourcegroupstaggingapi.DescribeReportCreationInput) *ResourceGroupsTaggingAPIDescribeReportCreationFuture
 
 	GetComplianceSummary(ctx workflow.Context, input *resourcegroupstaggingapi.GetComplianceSummaryInput) (*resourcegroupstaggingapi.GetComplianceSummaryOutput, error)
-	GetComplianceSummaryAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetComplianceSummaryInput) *ResourcegroupstaggingapiGetComplianceSummaryResult
+	GetComplianceSummaryAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetComplianceSummaryInput) *ResourceGroupsTaggingAPIGetComplianceSummaryFuture
 
 	GetResources(ctx workflow.Context, input *resourcegroupstaggingapi.GetResourcesInput) (*resourcegroupstaggingapi.GetResourcesOutput, error)
-	GetResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetResourcesInput) *ResourcegroupstaggingapiGetResourcesResult
+	GetResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetResourcesInput) *ResourceGroupsTaggingAPIGetResourcesFuture
 
 	GetTagKeys(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagKeysInput) (*resourcegroupstaggingapi.GetTagKeysOutput, error)
-	GetTagKeysAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagKeysInput) *ResourcegroupstaggingapiGetTagKeysResult
+	GetTagKeysAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagKeysInput) *ResourceGroupsTaggingAPIGetTagKeysFuture
 
 	GetTagValues(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagValuesInput) (*resourcegroupstaggingapi.GetTagValuesOutput, error)
-	GetTagValuesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagValuesInput) *ResourcegroupstaggingapiGetTagValuesResult
+	GetTagValuesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagValuesInput) *ResourceGroupsTaggingAPIGetTagValuesFuture
 
 	StartReportCreation(ctx workflow.Context, input *resourcegroupstaggingapi.StartReportCreationInput) (*resourcegroupstaggingapi.StartReportCreationOutput, error)
-	StartReportCreationAsync(ctx workflow.Context, input *resourcegroupstaggingapi.StartReportCreationInput) *ResourcegroupstaggingapiStartReportCreationResult
+	StartReportCreationAsync(ctx workflow.Context, input *resourcegroupstaggingapi.StartReportCreationInput) *ResourceGroupsTaggingAPIStartReportCreationFuture
 
 	TagResources(ctx workflow.Context, input *resourcegroupstaggingapi.TagResourcesInput) (*resourcegroupstaggingapi.TagResourcesOutput, error)
-	TagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.TagResourcesInput) *ResourcegroupstaggingapiTagResourcesResult
+	TagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.TagResourcesInput) *ResourceGroupsTaggingAPITagResourcesFuture
 
 	UntagResources(ctx workflow.Context, input *resourcegroupstaggingapi.UntagResourcesInput) (*resourcegroupstaggingapi.UntagResourcesOutput, error)
-	UntagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.UntagResourcesInput) *ResourcegroupstaggingapiUntagResourcesResult
+	UntagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.UntagResourcesInput) *ResourceGroupsTaggingAPIUntagResourcesFuture
 }
 
 type ResourceGroupsTaggingAPIStub struct{}
@@ -41,83 +41,91 @@ func NewResourceGroupsTaggingAPIStub() ResourceGroupsTaggingAPIClient {
 	return &ResourceGroupsTaggingAPIStub{}
 }
 
-type ResourcegroupstaggingapiDescribeReportCreationResult struct {
-	Result workflow.Future
+type ResourceGroupsTaggingAPIDescribeReportCreationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ResourcegroupstaggingapiDescribeReportCreationResult) Get(ctx workflow.Context) (*resourcegroupstaggingapi.DescribeReportCreationOutput, error) {
+func (r *ResourceGroupsTaggingAPIDescribeReportCreationFuture) Get(ctx workflow.Context) (*resourcegroupstaggingapi.DescribeReportCreationOutput, error) {
 	var output resourcegroupstaggingapi.DescribeReportCreationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ResourcegroupstaggingapiGetComplianceSummaryResult struct {
-	Result workflow.Future
+type ResourceGroupsTaggingAPIGetComplianceSummaryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ResourcegroupstaggingapiGetComplianceSummaryResult) Get(ctx workflow.Context) (*resourcegroupstaggingapi.GetComplianceSummaryOutput, error) {
+func (r *ResourceGroupsTaggingAPIGetComplianceSummaryFuture) Get(ctx workflow.Context) (*resourcegroupstaggingapi.GetComplianceSummaryOutput, error) {
 	var output resourcegroupstaggingapi.GetComplianceSummaryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ResourcegroupstaggingapiGetResourcesResult struct {
-	Result workflow.Future
+type ResourceGroupsTaggingAPIGetResourcesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ResourcegroupstaggingapiGetResourcesResult) Get(ctx workflow.Context) (*resourcegroupstaggingapi.GetResourcesOutput, error) {
+func (r *ResourceGroupsTaggingAPIGetResourcesFuture) Get(ctx workflow.Context) (*resourcegroupstaggingapi.GetResourcesOutput, error) {
 	var output resourcegroupstaggingapi.GetResourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ResourcegroupstaggingapiGetTagKeysResult struct {
-	Result workflow.Future
+type ResourceGroupsTaggingAPIGetTagKeysFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ResourcegroupstaggingapiGetTagKeysResult) Get(ctx workflow.Context) (*resourcegroupstaggingapi.GetTagKeysOutput, error) {
+func (r *ResourceGroupsTaggingAPIGetTagKeysFuture) Get(ctx workflow.Context) (*resourcegroupstaggingapi.GetTagKeysOutput, error) {
 	var output resourcegroupstaggingapi.GetTagKeysOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ResourcegroupstaggingapiGetTagValuesResult struct {
-	Result workflow.Future
+type ResourceGroupsTaggingAPIGetTagValuesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ResourcegroupstaggingapiGetTagValuesResult) Get(ctx workflow.Context) (*resourcegroupstaggingapi.GetTagValuesOutput, error) {
+func (r *ResourceGroupsTaggingAPIGetTagValuesFuture) Get(ctx workflow.Context) (*resourcegroupstaggingapi.GetTagValuesOutput, error) {
 	var output resourcegroupstaggingapi.GetTagValuesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ResourcegroupstaggingapiStartReportCreationResult struct {
-	Result workflow.Future
+type ResourceGroupsTaggingAPIStartReportCreationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ResourcegroupstaggingapiStartReportCreationResult) Get(ctx workflow.Context) (*resourcegroupstaggingapi.StartReportCreationOutput, error) {
+func (r *ResourceGroupsTaggingAPIStartReportCreationFuture) Get(ctx workflow.Context) (*resourcegroupstaggingapi.StartReportCreationOutput, error) {
 	var output resourcegroupstaggingapi.StartReportCreationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ResourcegroupstaggingapiTagResourcesResult struct {
-	Result workflow.Future
+type ResourceGroupsTaggingAPITagResourcesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ResourcegroupstaggingapiTagResourcesResult) Get(ctx workflow.Context) (*resourcegroupstaggingapi.TagResourcesOutput, error) {
+func (r *ResourceGroupsTaggingAPITagResourcesFuture) Get(ctx workflow.Context) (*resourcegroupstaggingapi.TagResourcesOutput, error) {
 	var output resourcegroupstaggingapi.TagResourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ResourcegroupstaggingapiUntagResourcesResult struct {
-	Result workflow.Future
+type ResourceGroupsTaggingAPIUntagResourcesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ResourcegroupstaggingapiUntagResourcesResult) Get(ctx workflow.Context) (*resourcegroupstaggingapi.UntagResourcesOutput, error) {
+func (r *ResourceGroupsTaggingAPIUntagResourcesFuture) Get(ctx workflow.Context) (*resourcegroupstaggingapi.UntagResourcesOutput, error) {
 	var output resourcegroupstaggingapi.UntagResourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -127,9 +135,9 @@ func (a *ResourceGroupsTaggingAPIStub) DescribeReportCreation(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ResourceGroupsTaggingAPIStub) DescribeReportCreationAsync(ctx workflow.Context, input *resourcegroupstaggingapi.DescribeReportCreationInput) *ResourcegroupstaggingapiDescribeReportCreationResult {
+func (a *ResourceGroupsTaggingAPIStub) DescribeReportCreationAsync(ctx workflow.Context, input *resourcegroupstaggingapi.DescribeReportCreationInput) *ResourceGroupsTaggingAPIDescribeReportCreationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.resourcegroupstaggingapi.DescribeReportCreation", input)
-	return &ResourcegroupstaggingapiDescribeReportCreationResult{Result: future}
+	return &ResourceGroupsTaggingAPIDescribeReportCreationFuture{Future: future}
 }
 
 func (a *ResourceGroupsTaggingAPIStub) GetComplianceSummary(ctx workflow.Context, input *resourcegroupstaggingapi.GetComplianceSummaryInput) (*resourcegroupstaggingapi.GetComplianceSummaryOutput, error) {
@@ -138,9 +146,9 @@ func (a *ResourceGroupsTaggingAPIStub) GetComplianceSummary(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ResourceGroupsTaggingAPIStub) GetComplianceSummaryAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetComplianceSummaryInput) *ResourcegroupstaggingapiGetComplianceSummaryResult {
+func (a *ResourceGroupsTaggingAPIStub) GetComplianceSummaryAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetComplianceSummaryInput) *ResourceGroupsTaggingAPIGetComplianceSummaryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.resourcegroupstaggingapi.GetComplianceSummary", input)
-	return &ResourcegroupstaggingapiGetComplianceSummaryResult{Result: future}
+	return &ResourceGroupsTaggingAPIGetComplianceSummaryFuture{Future: future}
 }
 
 func (a *ResourceGroupsTaggingAPIStub) GetResources(ctx workflow.Context, input *resourcegroupstaggingapi.GetResourcesInput) (*resourcegroupstaggingapi.GetResourcesOutput, error) {
@@ -149,9 +157,9 @@ func (a *ResourceGroupsTaggingAPIStub) GetResources(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ResourceGroupsTaggingAPIStub) GetResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetResourcesInput) *ResourcegroupstaggingapiGetResourcesResult {
+func (a *ResourceGroupsTaggingAPIStub) GetResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetResourcesInput) *ResourceGroupsTaggingAPIGetResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.resourcegroupstaggingapi.GetResources", input)
-	return &ResourcegroupstaggingapiGetResourcesResult{Result: future}
+	return &ResourceGroupsTaggingAPIGetResourcesFuture{Future: future}
 }
 
 func (a *ResourceGroupsTaggingAPIStub) GetTagKeys(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagKeysInput) (*resourcegroupstaggingapi.GetTagKeysOutput, error) {
@@ -160,9 +168,9 @@ func (a *ResourceGroupsTaggingAPIStub) GetTagKeys(ctx workflow.Context, input *r
 	return &output, err
 }
 
-func (a *ResourceGroupsTaggingAPIStub) GetTagKeysAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagKeysInput) *ResourcegroupstaggingapiGetTagKeysResult {
+func (a *ResourceGroupsTaggingAPIStub) GetTagKeysAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagKeysInput) *ResourceGroupsTaggingAPIGetTagKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.resourcegroupstaggingapi.GetTagKeys", input)
-	return &ResourcegroupstaggingapiGetTagKeysResult{Result: future}
+	return &ResourceGroupsTaggingAPIGetTagKeysFuture{Future: future}
 }
 
 func (a *ResourceGroupsTaggingAPIStub) GetTagValues(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagValuesInput) (*resourcegroupstaggingapi.GetTagValuesOutput, error) {
@@ -171,9 +179,9 @@ func (a *ResourceGroupsTaggingAPIStub) GetTagValues(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ResourceGroupsTaggingAPIStub) GetTagValuesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagValuesInput) *ResourcegroupstaggingapiGetTagValuesResult {
+func (a *ResourceGroupsTaggingAPIStub) GetTagValuesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.GetTagValuesInput) *ResourceGroupsTaggingAPIGetTagValuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.resourcegroupstaggingapi.GetTagValues", input)
-	return &ResourcegroupstaggingapiGetTagValuesResult{Result: future}
+	return &ResourceGroupsTaggingAPIGetTagValuesFuture{Future: future}
 }
 
 func (a *ResourceGroupsTaggingAPIStub) StartReportCreation(ctx workflow.Context, input *resourcegroupstaggingapi.StartReportCreationInput) (*resourcegroupstaggingapi.StartReportCreationOutput, error) {
@@ -182,9 +190,9 @@ func (a *ResourceGroupsTaggingAPIStub) StartReportCreation(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ResourceGroupsTaggingAPIStub) StartReportCreationAsync(ctx workflow.Context, input *resourcegroupstaggingapi.StartReportCreationInput) *ResourcegroupstaggingapiStartReportCreationResult {
+func (a *ResourceGroupsTaggingAPIStub) StartReportCreationAsync(ctx workflow.Context, input *resourcegroupstaggingapi.StartReportCreationInput) *ResourceGroupsTaggingAPIStartReportCreationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.resourcegroupstaggingapi.StartReportCreation", input)
-	return &ResourcegroupstaggingapiStartReportCreationResult{Result: future}
+	return &ResourceGroupsTaggingAPIStartReportCreationFuture{Future: future}
 }
 
 func (a *ResourceGroupsTaggingAPIStub) TagResources(ctx workflow.Context, input *resourcegroupstaggingapi.TagResourcesInput) (*resourcegroupstaggingapi.TagResourcesOutput, error) {
@@ -193,9 +201,9 @@ func (a *ResourceGroupsTaggingAPIStub) TagResources(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ResourceGroupsTaggingAPIStub) TagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.TagResourcesInput) *ResourcegroupstaggingapiTagResourcesResult {
+func (a *ResourceGroupsTaggingAPIStub) TagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.TagResourcesInput) *ResourceGroupsTaggingAPITagResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.resourcegroupstaggingapi.TagResources", input)
-	return &ResourcegroupstaggingapiTagResourcesResult{Result: future}
+	return &ResourceGroupsTaggingAPITagResourcesFuture{Future: future}
 }
 
 func (a *ResourceGroupsTaggingAPIStub) UntagResources(ctx workflow.Context, input *resourcegroupstaggingapi.UntagResourcesInput) (*resourcegroupstaggingapi.UntagResourcesOutput, error) {
@@ -204,7 +212,7 @@ func (a *ResourceGroupsTaggingAPIStub) UntagResources(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ResourceGroupsTaggingAPIStub) UntagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.UntagResourcesInput) *ResourcegroupstaggingapiUntagResourcesResult {
+func (a *ResourceGroupsTaggingAPIStub) UntagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.UntagResourcesInput) *ResourceGroupsTaggingAPIUntagResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.resourcegroupstaggingapi.UntagResources", input)
-	return &ResourcegroupstaggingapiUntagResourcesResult{Result: future}
+	return &ResourceGroupsTaggingAPIUntagResourcesFuture{Future: future}
 }

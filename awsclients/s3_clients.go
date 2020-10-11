@@ -11,285 +11,289 @@ import (
 
 type S3Client interface {
 	AbortMultipartUpload(ctx workflow.Context, input *s3.AbortMultipartUploadInput) (*s3.AbortMultipartUploadOutput, error)
-	AbortMultipartUploadAsync(ctx workflow.Context, input *s3.AbortMultipartUploadInput) *S3AbortMultipartUploadResult
+	AbortMultipartUploadAsync(ctx workflow.Context, input *s3.AbortMultipartUploadInput) *S3AbortMultipartUploadFuture
 
 	CompleteMultipartUpload(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) (*s3.CompleteMultipartUploadOutput, error)
-	CompleteMultipartUploadAsync(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) *S3CompleteMultipartUploadResult
+	CompleteMultipartUploadAsync(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) *S3CompleteMultipartUploadFuture
 
 	CopyObject(ctx workflow.Context, input *s3.CopyObjectInput) (*s3.CopyObjectOutput, error)
-	CopyObjectAsync(ctx workflow.Context, input *s3.CopyObjectInput) *S3CopyObjectResult
+	CopyObjectAsync(ctx workflow.Context, input *s3.CopyObjectInput) *S3CopyObjectFuture
 
 	CreateBucket(ctx workflow.Context, input *s3.CreateBucketInput) (*s3.CreateBucketOutput, error)
-	CreateBucketAsync(ctx workflow.Context, input *s3.CreateBucketInput) *S3CreateBucketResult
+	CreateBucketAsync(ctx workflow.Context, input *s3.CreateBucketInput) *S3CreateBucketFuture
 
 	CreateMultipartUpload(ctx workflow.Context, input *s3.CreateMultipartUploadInput) (*s3.CreateMultipartUploadOutput, error)
-	CreateMultipartUploadAsync(ctx workflow.Context, input *s3.CreateMultipartUploadInput) *S3CreateMultipartUploadResult
+	CreateMultipartUploadAsync(ctx workflow.Context, input *s3.CreateMultipartUploadInput) *S3CreateMultipartUploadFuture
 
 	DeleteBucket(ctx workflow.Context, input *s3.DeleteBucketInput) (*s3.DeleteBucketOutput, error)
-	DeleteBucketAsync(ctx workflow.Context, input *s3.DeleteBucketInput) *S3DeleteBucketResult
+	DeleteBucketAsync(ctx workflow.Context, input *s3.DeleteBucketInput) *S3DeleteBucketFuture
 
 	DeleteBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) (*s3.DeleteBucketAnalyticsConfigurationOutput, error)
-	DeleteBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) *S3DeleteBucketAnalyticsConfigurationResult
+	DeleteBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) *S3DeleteBucketAnalyticsConfigurationFuture
 
 	DeleteBucketCors(ctx workflow.Context, input *s3.DeleteBucketCorsInput) (*s3.DeleteBucketCorsOutput, error)
-	DeleteBucketCorsAsync(ctx workflow.Context, input *s3.DeleteBucketCorsInput) *S3DeleteBucketCorsResult
+	DeleteBucketCorsAsync(ctx workflow.Context, input *s3.DeleteBucketCorsInput) *S3DeleteBucketCorsFuture
 
 	DeleteBucketEncryption(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) (*s3.DeleteBucketEncryptionOutput, error)
-	DeleteBucketEncryptionAsync(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) *S3DeleteBucketEncryptionResult
+	DeleteBucketEncryptionAsync(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) *S3DeleteBucketEncryptionFuture
 
 	DeleteBucketInventoryConfiguration(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) (*s3.DeleteBucketInventoryConfigurationOutput, error)
-	DeleteBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) *S3DeleteBucketInventoryConfigurationResult
+	DeleteBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) *S3DeleteBucketInventoryConfigurationFuture
 
 	DeleteBucketLifecycle(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) (*s3.DeleteBucketLifecycleOutput, error)
-	DeleteBucketLifecycleAsync(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) *S3DeleteBucketLifecycleResult
+	DeleteBucketLifecycleAsync(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) *S3DeleteBucketLifecycleFuture
 
 	DeleteBucketMetricsConfiguration(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) (*s3.DeleteBucketMetricsConfigurationOutput, error)
-	DeleteBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) *S3DeleteBucketMetricsConfigurationResult
+	DeleteBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) *S3DeleteBucketMetricsConfigurationFuture
 
 	DeleteBucketOwnershipControls(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) (*s3.DeleteBucketOwnershipControlsOutput, error)
-	DeleteBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) *S3DeleteBucketOwnershipControlsResult
+	DeleteBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) *S3DeleteBucketOwnershipControlsFuture
 
 	DeleteBucketPolicy(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) (*s3.DeleteBucketPolicyOutput, error)
-	DeleteBucketPolicyAsync(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) *S3DeleteBucketPolicyResult
+	DeleteBucketPolicyAsync(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) *S3DeleteBucketPolicyFuture
 
 	DeleteBucketReplication(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) (*s3.DeleteBucketReplicationOutput, error)
-	DeleteBucketReplicationAsync(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) *S3DeleteBucketReplicationResult
+	DeleteBucketReplicationAsync(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) *S3DeleteBucketReplicationFuture
 
 	DeleteBucketTagging(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) (*s3.DeleteBucketTaggingOutput, error)
-	DeleteBucketTaggingAsync(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) *S3DeleteBucketTaggingResult
+	DeleteBucketTaggingAsync(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) *S3DeleteBucketTaggingFuture
 
 	DeleteBucketWebsite(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) (*s3.DeleteBucketWebsiteOutput, error)
-	DeleteBucketWebsiteAsync(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) *S3DeleteBucketWebsiteResult
+	DeleteBucketWebsiteAsync(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) *S3DeleteBucketWebsiteFuture
 
 	DeleteObject(ctx workflow.Context, input *s3.DeleteObjectInput) (*s3.DeleteObjectOutput, error)
-	DeleteObjectAsync(ctx workflow.Context, input *s3.DeleteObjectInput) *S3DeleteObjectResult
+	DeleteObjectAsync(ctx workflow.Context, input *s3.DeleteObjectInput) *S3DeleteObjectFuture
 
 	DeleteObjectTagging(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) (*s3.DeleteObjectTaggingOutput, error)
-	DeleteObjectTaggingAsync(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) *S3DeleteObjectTaggingResult
+	DeleteObjectTaggingAsync(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) *S3DeleteObjectTaggingFuture
 
 	DeleteObjects(ctx workflow.Context, input *s3.DeleteObjectsInput) (*s3.DeleteObjectsOutput, error)
-	DeleteObjectsAsync(ctx workflow.Context, input *s3.DeleteObjectsInput) *S3DeleteObjectsResult
+	DeleteObjectsAsync(ctx workflow.Context, input *s3.DeleteObjectsInput) *S3DeleteObjectsFuture
 
 	DeletePublicAccessBlock(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) (*s3.DeletePublicAccessBlockOutput, error)
-	DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) *S3DeletePublicAccessBlockResult
+	DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) *S3DeletePublicAccessBlockFuture
 
 	GetBucketAccelerateConfiguration(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) (*s3.GetBucketAccelerateConfigurationOutput, error)
-	GetBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) *S3GetBucketAccelerateConfigurationResult
+	GetBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) *S3GetBucketAccelerateConfigurationFuture
 
 	GetBucketAcl(ctx workflow.Context, input *s3.GetBucketAclInput) (*s3.GetBucketAclOutput, error)
-	GetBucketAclAsync(ctx workflow.Context, input *s3.GetBucketAclInput) *S3GetBucketAclResult
+	GetBucketAclAsync(ctx workflow.Context, input *s3.GetBucketAclInput) *S3GetBucketAclFuture
 
 	GetBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) (*s3.GetBucketAnalyticsConfigurationOutput, error)
-	GetBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) *S3GetBucketAnalyticsConfigurationResult
+	GetBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) *S3GetBucketAnalyticsConfigurationFuture
 
 	GetBucketCors(ctx workflow.Context, input *s3.GetBucketCorsInput) (*s3.GetBucketCorsOutput, error)
-	GetBucketCorsAsync(ctx workflow.Context, input *s3.GetBucketCorsInput) *S3GetBucketCorsResult
+	GetBucketCorsAsync(ctx workflow.Context, input *s3.GetBucketCorsInput) *S3GetBucketCorsFuture
 
 	GetBucketEncryption(ctx workflow.Context, input *s3.GetBucketEncryptionInput) (*s3.GetBucketEncryptionOutput, error)
-	GetBucketEncryptionAsync(ctx workflow.Context, input *s3.GetBucketEncryptionInput) *S3GetBucketEncryptionResult
+	GetBucketEncryptionAsync(ctx workflow.Context, input *s3.GetBucketEncryptionInput) *S3GetBucketEncryptionFuture
 
 	GetBucketInventoryConfiguration(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) (*s3.GetBucketInventoryConfigurationOutput, error)
-	GetBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) *S3GetBucketInventoryConfigurationResult
+	GetBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) *S3GetBucketInventoryConfigurationFuture
 
 	GetBucketLifecycle(ctx workflow.Context, input *s3.GetBucketLifecycleInput) (*s3.GetBucketLifecycleOutput, error)
-	GetBucketLifecycleAsync(ctx workflow.Context, input *s3.GetBucketLifecycleInput) *S3GetBucketLifecycleResult
+	GetBucketLifecycleAsync(ctx workflow.Context, input *s3.GetBucketLifecycleInput) *S3GetBucketLifecycleFuture
 
 	GetBucketLifecycleConfiguration(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) (*s3.GetBucketLifecycleConfigurationOutput, error)
-	GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) *S3GetBucketLifecycleConfigurationResult
+	GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) *S3GetBucketLifecycleConfigurationFuture
 
 	GetBucketLocation(ctx workflow.Context, input *s3.GetBucketLocationInput) (*s3.GetBucketLocationOutput, error)
-	GetBucketLocationAsync(ctx workflow.Context, input *s3.GetBucketLocationInput) *S3GetBucketLocationResult
+	GetBucketLocationAsync(ctx workflow.Context, input *s3.GetBucketLocationInput) *S3GetBucketLocationFuture
 
 	GetBucketLogging(ctx workflow.Context, input *s3.GetBucketLoggingInput) (*s3.GetBucketLoggingOutput, error)
-	GetBucketLoggingAsync(ctx workflow.Context, input *s3.GetBucketLoggingInput) *S3GetBucketLoggingResult
+	GetBucketLoggingAsync(ctx workflow.Context, input *s3.GetBucketLoggingInput) *S3GetBucketLoggingFuture
 
 	GetBucketMetricsConfiguration(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) (*s3.GetBucketMetricsConfigurationOutput, error)
-	GetBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) *S3GetBucketMetricsConfigurationResult
+	GetBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) *S3GetBucketMetricsConfigurationFuture
 
 	GetBucketNotification(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfigurationDeprecated, error)
-	GetBucketNotificationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationResult
+	GetBucketNotificationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationFuture
 
 	GetBucketNotificationConfiguration(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfiguration, error)
-	GetBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationConfigurationResult
+	GetBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationConfigurationFuture
 
 	GetBucketOwnershipControls(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) (*s3.GetBucketOwnershipControlsOutput, error)
-	GetBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) *S3GetBucketOwnershipControlsResult
+	GetBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) *S3GetBucketOwnershipControlsFuture
 
 	GetBucketPolicy(ctx workflow.Context, input *s3.GetBucketPolicyInput) (*s3.GetBucketPolicyOutput, error)
-	GetBucketPolicyAsync(ctx workflow.Context, input *s3.GetBucketPolicyInput) *S3GetBucketPolicyResult
+	GetBucketPolicyAsync(ctx workflow.Context, input *s3.GetBucketPolicyInput) *S3GetBucketPolicyFuture
 
 	GetBucketPolicyStatus(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) (*s3.GetBucketPolicyStatusOutput, error)
-	GetBucketPolicyStatusAsync(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) *S3GetBucketPolicyStatusResult
+	GetBucketPolicyStatusAsync(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) *S3GetBucketPolicyStatusFuture
 
 	GetBucketReplication(ctx workflow.Context, input *s3.GetBucketReplicationInput) (*s3.GetBucketReplicationOutput, error)
-	GetBucketReplicationAsync(ctx workflow.Context, input *s3.GetBucketReplicationInput) *S3GetBucketReplicationResult
+	GetBucketReplicationAsync(ctx workflow.Context, input *s3.GetBucketReplicationInput) *S3GetBucketReplicationFuture
 
 	GetBucketRequestPayment(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) (*s3.GetBucketRequestPaymentOutput, error)
-	GetBucketRequestPaymentAsync(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) *S3GetBucketRequestPaymentResult
+	GetBucketRequestPaymentAsync(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) *S3GetBucketRequestPaymentFuture
 
 	GetBucketTagging(ctx workflow.Context, input *s3.GetBucketTaggingInput) (*s3.GetBucketTaggingOutput, error)
-	GetBucketTaggingAsync(ctx workflow.Context, input *s3.GetBucketTaggingInput) *S3GetBucketTaggingResult
+	GetBucketTaggingAsync(ctx workflow.Context, input *s3.GetBucketTaggingInput) *S3GetBucketTaggingFuture
 
 	GetBucketVersioning(ctx workflow.Context, input *s3.GetBucketVersioningInput) (*s3.GetBucketVersioningOutput, error)
-	GetBucketVersioningAsync(ctx workflow.Context, input *s3.GetBucketVersioningInput) *S3GetBucketVersioningResult
+	GetBucketVersioningAsync(ctx workflow.Context, input *s3.GetBucketVersioningInput) *S3GetBucketVersioningFuture
 
 	GetBucketWebsite(ctx workflow.Context, input *s3.GetBucketWebsiteInput) (*s3.GetBucketWebsiteOutput, error)
-	GetBucketWebsiteAsync(ctx workflow.Context, input *s3.GetBucketWebsiteInput) *S3GetBucketWebsiteResult
+	GetBucketWebsiteAsync(ctx workflow.Context, input *s3.GetBucketWebsiteInput) *S3GetBucketWebsiteFuture
 
 	GetObject(ctx workflow.Context, input *s3.GetObjectInput) (*s3.GetObjectOutput, error)
-	GetObjectAsync(ctx workflow.Context, input *s3.GetObjectInput) *S3GetObjectResult
+	GetObjectAsync(ctx workflow.Context, input *s3.GetObjectInput) *S3GetObjectFuture
 
 	GetObjectAcl(ctx workflow.Context, input *s3.GetObjectAclInput) (*s3.GetObjectAclOutput, error)
-	GetObjectAclAsync(ctx workflow.Context, input *s3.GetObjectAclInput) *S3GetObjectAclResult
+	GetObjectAclAsync(ctx workflow.Context, input *s3.GetObjectAclInput) *S3GetObjectAclFuture
 
 	GetObjectLegalHold(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) (*s3.GetObjectLegalHoldOutput, error)
-	GetObjectLegalHoldAsync(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) *S3GetObjectLegalHoldResult
+	GetObjectLegalHoldAsync(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) *S3GetObjectLegalHoldFuture
 
 	GetObjectLockConfiguration(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) (*s3.GetObjectLockConfigurationOutput, error)
-	GetObjectLockConfigurationAsync(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) *S3GetObjectLockConfigurationResult
+	GetObjectLockConfigurationAsync(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) *S3GetObjectLockConfigurationFuture
 
 	GetObjectRetention(ctx workflow.Context, input *s3.GetObjectRetentionInput) (*s3.GetObjectRetentionOutput, error)
-	GetObjectRetentionAsync(ctx workflow.Context, input *s3.GetObjectRetentionInput) *S3GetObjectRetentionResult
+	GetObjectRetentionAsync(ctx workflow.Context, input *s3.GetObjectRetentionInput) *S3GetObjectRetentionFuture
 
 	GetObjectTagging(ctx workflow.Context, input *s3.GetObjectTaggingInput) (*s3.GetObjectTaggingOutput, error)
-	GetObjectTaggingAsync(ctx workflow.Context, input *s3.GetObjectTaggingInput) *S3GetObjectTaggingResult
+	GetObjectTaggingAsync(ctx workflow.Context, input *s3.GetObjectTaggingInput) *S3GetObjectTaggingFuture
 
 	GetObjectTorrent(ctx workflow.Context, input *s3.GetObjectTorrentInput) (*s3.GetObjectTorrentOutput, error)
-	GetObjectTorrentAsync(ctx workflow.Context, input *s3.GetObjectTorrentInput) *S3GetObjectTorrentResult
+	GetObjectTorrentAsync(ctx workflow.Context, input *s3.GetObjectTorrentInput) *S3GetObjectTorrentFuture
 
 	GetPublicAccessBlock(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) (*s3.GetPublicAccessBlockOutput, error)
-	GetPublicAccessBlockAsync(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) *S3GetPublicAccessBlockResult
+	GetPublicAccessBlockAsync(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) *S3GetPublicAccessBlockFuture
 
 	HeadBucket(ctx workflow.Context, input *s3.HeadBucketInput) (*s3.HeadBucketOutput, error)
-	HeadBucketAsync(ctx workflow.Context, input *s3.HeadBucketInput) *S3HeadBucketResult
+	HeadBucketAsync(ctx workflow.Context, input *s3.HeadBucketInput) *S3HeadBucketFuture
 
 	HeadObject(ctx workflow.Context, input *s3.HeadObjectInput) (*s3.HeadObjectOutput, error)
-	HeadObjectAsync(ctx workflow.Context, input *s3.HeadObjectInput) *S3HeadObjectResult
+	HeadObjectAsync(ctx workflow.Context, input *s3.HeadObjectInput) *S3HeadObjectFuture
 
 	ListBucketAnalyticsConfigurations(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) (*s3.ListBucketAnalyticsConfigurationsOutput, error)
-	ListBucketAnalyticsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) *S3ListBucketAnalyticsConfigurationsResult
+	ListBucketAnalyticsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) *S3ListBucketAnalyticsConfigurationsFuture
 
 	ListBucketInventoryConfigurations(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) (*s3.ListBucketInventoryConfigurationsOutput, error)
-	ListBucketInventoryConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) *S3ListBucketInventoryConfigurationsResult
+	ListBucketInventoryConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) *S3ListBucketInventoryConfigurationsFuture
 
 	ListBucketMetricsConfigurations(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) (*s3.ListBucketMetricsConfigurationsOutput, error)
-	ListBucketMetricsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) *S3ListBucketMetricsConfigurationsResult
+	ListBucketMetricsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) *S3ListBucketMetricsConfigurationsFuture
 
 	ListBuckets(ctx workflow.Context, input *s3.ListBucketsInput) (*s3.ListBucketsOutput, error)
-	ListBucketsAsync(ctx workflow.Context, input *s3.ListBucketsInput) *S3ListBucketsResult
+	ListBucketsAsync(ctx workflow.Context, input *s3.ListBucketsInput) *S3ListBucketsFuture
 
 	ListMultipartUploads(ctx workflow.Context, input *s3.ListMultipartUploadsInput) (*s3.ListMultipartUploadsOutput, error)
-	ListMultipartUploadsAsync(ctx workflow.Context, input *s3.ListMultipartUploadsInput) *S3ListMultipartUploadsResult
+	ListMultipartUploadsAsync(ctx workflow.Context, input *s3.ListMultipartUploadsInput) *S3ListMultipartUploadsFuture
 
 	ListObjectVersions(ctx workflow.Context, input *s3.ListObjectVersionsInput) (*s3.ListObjectVersionsOutput, error)
-	ListObjectVersionsAsync(ctx workflow.Context, input *s3.ListObjectVersionsInput) *S3ListObjectVersionsResult
+	ListObjectVersionsAsync(ctx workflow.Context, input *s3.ListObjectVersionsInput) *S3ListObjectVersionsFuture
 
 	ListObjects(ctx workflow.Context, input *s3.ListObjectsInput) (*s3.ListObjectsOutput, error)
-	ListObjectsAsync(ctx workflow.Context, input *s3.ListObjectsInput) *S3ListObjectsResult
+	ListObjectsAsync(ctx workflow.Context, input *s3.ListObjectsInput) *S3ListObjectsFuture
 
 	ListObjectsV2(ctx workflow.Context, input *s3.ListObjectsV2Input) (*s3.ListObjectsV2Output, error)
-	ListObjectsV2Async(ctx workflow.Context, input *s3.ListObjectsV2Input) *S3ListObjectsV2Result
+	ListObjectsV2Async(ctx workflow.Context, input *s3.ListObjectsV2Input) *S3ListObjectsV2Future
 
 	ListParts(ctx workflow.Context, input *s3.ListPartsInput) (*s3.ListPartsOutput, error)
-	ListPartsAsync(ctx workflow.Context, input *s3.ListPartsInput) *S3ListPartsResult
+	ListPartsAsync(ctx workflow.Context, input *s3.ListPartsInput) *S3ListPartsFuture
 
 	PutBucketAccelerateConfiguration(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) (*s3.PutBucketAccelerateConfigurationOutput, error)
-	PutBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) *S3PutBucketAccelerateConfigurationResult
+	PutBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) *S3PutBucketAccelerateConfigurationFuture
 
 	PutBucketAcl(ctx workflow.Context, input *s3.PutBucketAclInput) (*s3.PutBucketAclOutput, error)
-	PutBucketAclAsync(ctx workflow.Context, input *s3.PutBucketAclInput) *S3PutBucketAclResult
+	PutBucketAclAsync(ctx workflow.Context, input *s3.PutBucketAclInput) *S3PutBucketAclFuture
 
 	PutBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) (*s3.PutBucketAnalyticsConfigurationOutput, error)
-	PutBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) *S3PutBucketAnalyticsConfigurationResult
+	PutBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) *S3PutBucketAnalyticsConfigurationFuture
 
 	PutBucketCors(ctx workflow.Context, input *s3.PutBucketCorsInput) (*s3.PutBucketCorsOutput, error)
-	PutBucketCorsAsync(ctx workflow.Context, input *s3.PutBucketCorsInput) *S3PutBucketCorsResult
+	PutBucketCorsAsync(ctx workflow.Context, input *s3.PutBucketCorsInput) *S3PutBucketCorsFuture
 
 	PutBucketEncryption(ctx workflow.Context, input *s3.PutBucketEncryptionInput) (*s3.PutBucketEncryptionOutput, error)
-	PutBucketEncryptionAsync(ctx workflow.Context, input *s3.PutBucketEncryptionInput) *S3PutBucketEncryptionResult
+	PutBucketEncryptionAsync(ctx workflow.Context, input *s3.PutBucketEncryptionInput) *S3PutBucketEncryptionFuture
 
 	PutBucketInventoryConfiguration(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) (*s3.PutBucketInventoryConfigurationOutput, error)
-	PutBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) *S3PutBucketInventoryConfigurationResult
+	PutBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) *S3PutBucketInventoryConfigurationFuture
 
 	PutBucketLifecycle(ctx workflow.Context, input *s3.PutBucketLifecycleInput) (*s3.PutBucketLifecycleOutput, error)
-	PutBucketLifecycleAsync(ctx workflow.Context, input *s3.PutBucketLifecycleInput) *S3PutBucketLifecycleResult
+	PutBucketLifecycleAsync(ctx workflow.Context, input *s3.PutBucketLifecycleInput) *S3PutBucketLifecycleFuture
 
 	PutBucketLifecycleConfiguration(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) (*s3.PutBucketLifecycleConfigurationOutput, error)
-	PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) *S3PutBucketLifecycleConfigurationResult
+	PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) *S3PutBucketLifecycleConfigurationFuture
 
 	PutBucketLogging(ctx workflow.Context, input *s3.PutBucketLoggingInput) (*s3.PutBucketLoggingOutput, error)
-	PutBucketLoggingAsync(ctx workflow.Context, input *s3.PutBucketLoggingInput) *S3PutBucketLoggingResult
+	PutBucketLoggingAsync(ctx workflow.Context, input *s3.PutBucketLoggingInput) *S3PutBucketLoggingFuture
 
 	PutBucketMetricsConfiguration(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) (*s3.PutBucketMetricsConfigurationOutput, error)
-	PutBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) *S3PutBucketMetricsConfigurationResult
+	PutBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) *S3PutBucketMetricsConfigurationFuture
 
 	PutBucketNotification(ctx workflow.Context, input *s3.PutBucketNotificationInput) (*s3.PutBucketNotificationOutput, error)
-	PutBucketNotificationAsync(ctx workflow.Context, input *s3.PutBucketNotificationInput) *S3PutBucketNotificationResult
+	PutBucketNotificationAsync(ctx workflow.Context, input *s3.PutBucketNotificationInput) *S3PutBucketNotificationFuture
 
 	PutBucketNotificationConfiguration(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) (*s3.PutBucketNotificationConfigurationOutput, error)
-	PutBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) *S3PutBucketNotificationConfigurationResult
+	PutBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) *S3PutBucketNotificationConfigurationFuture
 
 	PutBucketOwnershipControls(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) (*s3.PutBucketOwnershipControlsOutput, error)
-	PutBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) *S3PutBucketOwnershipControlsResult
+	PutBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) *S3PutBucketOwnershipControlsFuture
 
 	PutBucketPolicy(ctx workflow.Context, input *s3.PutBucketPolicyInput) (*s3.PutBucketPolicyOutput, error)
-	PutBucketPolicyAsync(ctx workflow.Context, input *s3.PutBucketPolicyInput) *S3PutBucketPolicyResult
+	PutBucketPolicyAsync(ctx workflow.Context, input *s3.PutBucketPolicyInput) *S3PutBucketPolicyFuture
 
 	PutBucketReplication(ctx workflow.Context, input *s3.PutBucketReplicationInput) (*s3.PutBucketReplicationOutput, error)
-	PutBucketReplicationAsync(ctx workflow.Context, input *s3.PutBucketReplicationInput) *S3PutBucketReplicationResult
+	PutBucketReplicationAsync(ctx workflow.Context, input *s3.PutBucketReplicationInput) *S3PutBucketReplicationFuture
 
 	PutBucketRequestPayment(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) (*s3.PutBucketRequestPaymentOutput, error)
-	PutBucketRequestPaymentAsync(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) *S3PutBucketRequestPaymentResult
+	PutBucketRequestPaymentAsync(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) *S3PutBucketRequestPaymentFuture
 
 	PutBucketTagging(ctx workflow.Context, input *s3.PutBucketTaggingInput) (*s3.PutBucketTaggingOutput, error)
-	PutBucketTaggingAsync(ctx workflow.Context, input *s3.PutBucketTaggingInput) *S3PutBucketTaggingResult
+	PutBucketTaggingAsync(ctx workflow.Context, input *s3.PutBucketTaggingInput) *S3PutBucketTaggingFuture
 
 	PutBucketVersioning(ctx workflow.Context, input *s3.PutBucketVersioningInput) (*s3.PutBucketVersioningOutput, error)
-	PutBucketVersioningAsync(ctx workflow.Context, input *s3.PutBucketVersioningInput) *S3PutBucketVersioningResult
+	PutBucketVersioningAsync(ctx workflow.Context, input *s3.PutBucketVersioningInput) *S3PutBucketVersioningFuture
 
 	PutBucketWebsite(ctx workflow.Context, input *s3.PutBucketWebsiteInput) (*s3.PutBucketWebsiteOutput, error)
-	PutBucketWebsiteAsync(ctx workflow.Context, input *s3.PutBucketWebsiteInput) *S3PutBucketWebsiteResult
+	PutBucketWebsiteAsync(ctx workflow.Context, input *s3.PutBucketWebsiteInput) *S3PutBucketWebsiteFuture
 
 	PutObject(ctx workflow.Context, input *s3.PutObjectInput) (*s3.PutObjectOutput, error)
-	PutObjectAsync(ctx workflow.Context, input *s3.PutObjectInput) *S3PutObjectResult
+	PutObjectAsync(ctx workflow.Context, input *s3.PutObjectInput) *S3PutObjectFuture
 
 	PutObjectAcl(ctx workflow.Context, input *s3.PutObjectAclInput) (*s3.PutObjectAclOutput, error)
-	PutObjectAclAsync(ctx workflow.Context, input *s3.PutObjectAclInput) *S3PutObjectAclResult
+	PutObjectAclAsync(ctx workflow.Context, input *s3.PutObjectAclInput) *S3PutObjectAclFuture
 
 	PutObjectLegalHold(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) (*s3.PutObjectLegalHoldOutput, error)
-	PutObjectLegalHoldAsync(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) *S3PutObjectLegalHoldResult
+	PutObjectLegalHoldAsync(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) *S3PutObjectLegalHoldFuture
 
 	PutObjectLockConfiguration(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) (*s3.PutObjectLockConfigurationOutput, error)
-	PutObjectLockConfigurationAsync(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) *S3PutObjectLockConfigurationResult
+	PutObjectLockConfigurationAsync(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) *S3PutObjectLockConfigurationFuture
 
 	PutObjectRetention(ctx workflow.Context, input *s3.PutObjectRetentionInput) (*s3.PutObjectRetentionOutput, error)
-	PutObjectRetentionAsync(ctx workflow.Context, input *s3.PutObjectRetentionInput) *S3PutObjectRetentionResult
+	PutObjectRetentionAsync(ctx workflow.Context, input *s3.PutObjectRetentionInput) *S3PutObjectRetentionFuture
 
 	PutObjectTagging(ctx workflow.Context, input *s3.PutObjectTaggingInput) (*s3.PutObjectTaggingOutput, error)
-	PutObjectTaggingAsync(ctx workflow.Context, input *s3.PutObjectTaggingInput) *S3PutObjectTaggingResult
+	PutObjectTaggingAsync(ctx workflow.Context, input *s3.PutObjectTaggingInput) *S3PutObjectTaggingFuture
 
 	PutPublicAccessBlock(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) (*s3.PutPublicAccessBlockOutput, error)
-	PutPublicAccessBlockAsync(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) *S3PutPublicAccessBlockResult
+	PutPublicAccessBlockAsync(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) *S3PutPublicAccessBlockFuture
 
 	RestoreObject(ctx workflow.Context, input *s3.RestoreObjectInput) (*s3.RestoreObjectOutput, error)
-	RestoreObjectAsync(ctx workflow.Context, input *s3.RestoreObjectInput) *S3RestoreObjectResult
+	RestoreObjectAsync(ctx workflow.Context, input *s3.RestoreObjectInput) *S3RestoreObjectFuture
 
 	SelectObjectContent(ctx workflow.Context, input *s3.SelectObjectContentInput) (*s3.SelectObjectContentOutput, error)
-	SelectObjectContentAsync(ctx workflow.Context, input *s3.SelectObjectContentInput) *S3SelectObjectContentResult
+	SelectObjectContentAsync(ctx workflow.Context, input *s3.SelectObjectContentInput) *S3SelectObjectContentFuture
 
 	UploadPart(ctx workflow.Context, input *s3.UploadPartInput) (*s3.UploadPartOutput, error)
-	UploadPartAsync(ctx workflow.Context, input *s3.UploadPartInput) *S3UploadPartResult
+	UploadPartAsync(ctx workflow.Context, input *s3.UploadPartInput) *S3UploadPartFuture
 
 	UploadPartCopy(ctx workflow.Context, input *s3.UploadPartCopyInput) (*s3.UploadPartCopyOutput, error)
-	UploadPartCopyAsync(ctx workflow.Context, input *s3.UploadPartCopyInput) *S3UploadPartCopyResult
+	UploadPartCopyAsync(ctx workflow.Context, input *s3.UploadPartCopyInput) *S3UploadPartCopyFuture
 
 	WaitUntilBucketExists(ctx workflow.Context, input *s3.HeadBucketInput) error
+	WaitUntilBucketExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) *VoidFuture
 
 	WaitUntilBucketNotExists(ctx workflow.Context, input *s3.HeadBucketInput) error
+	WaitUntilBucketNotExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) *VoidFuture
 
 	WaitUntilObjectExists(ctx workflow.Context, input *s3.HeadObjectInput) error
+	WaitUntilObjectExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) *VoidFuture
 
 	WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error
+	WaitUntilObjectNotExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) *VoidFuture
 }
 
 type S3Stub struct{}
@@ -298,913 +302,1004 @@ func NewS3Stub() S3Client {
 	return &S3Stub{}
 }
 
-type S3AbortMultipartUploadResult struct {
-	Result workflow.Future
+type S3AbortMultipartUploadFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3AbortMultipartUploadResult) Get(ctx workflow.Context) (*s3.AbortMultipartUploadOutput, error) {
+func (r *S3AbortMultipartUploadFuture) Get(ctx workflow.Context) (*s3.AbortMultipartUploadOutput, error) {
 	var output s3.AbortMultipartUploadOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3CompleteMultipartUploadResult struct {
-	Result workflow.Future
+type S3CompleteMultipartUploadFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3CompleteMultipartUploadResult) Get(ctx workflow.Context) (*s3.CompleteMultipartUploadOutput, error) {
+func (r *S3CompleteMultipartUploadFuture) Get(ctx workflow.Context) (*s3.CompleteMultipartUploadOutput, error) {
 	var output s3.CompleteMultipartUploadOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3CopyObjectResult struct {
-	Result workflow.Future
+type S3CopyObjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3CopyObjectResult) Get(ctx workflow.Context) (*s3.CopyObjectOutput, error) {
+func (r *S3CopyObjectFuture) Get(ctx workflow.Context) (*s3.CopyObjectOutput, error) {
 	var output s3.CopyObjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3CreateBucketResult struct {
-	Result workflow.Future
+type S3CreateBucketFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3CreateBucketResult) Get(ctx workflow.Context) (*s3.CreateBucketOutput, error) {
+func (r *S3CreateBucketFuture) Get(ctx workflow.Context) (*s3.CreateBucketOutput, error) {
 	var output s3.CreateBucketOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3CreateMultipartUploadResult struct {
-	Result workflow.Future
+type S3CreateMultipartUploadFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3CreateMultipartUploadResult) Get(ctx workflow.Context) (*s3.CreateMultipartUploadOutput, error) {
+func (r *S3CreateMultipartUploadFuture) Get(ctx workflow.Context) (*s3.CreateMultipartUploadOutput, error) {
 	var output s3.CreateMultipartUploadOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketResult struct {
-	Result workflow.Future
+type S3DeleteBucketFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketResult) Get(ctx workflow.Context) (*s3.DeleteBucketOutput, error) {
+func (r *S3DeleteBucketFuture) Get(ctx workflow.Context) (*s3.DeleteBucketOutput, error) {
 	var output s3.DeleteBucketOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketAnalyticsConfigurationResult struct {
-	Result workflow.Future
+type S3DeleteBucketAnalyticsConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketAnalyticsConfigurationResult) Get(ctx workflow.Context) (*s3.DeleteBucketAnalyticsConfigurationOutput, error) {
+func (r *S3DeleteBucketAnalyticsConfigurationFuture) Get(ctx workflow.Context) (*s3.DeleteBucketAnalyticsConfigurationOutput, error) {
 	var output s3.DeleteBucketAnalyticsConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketCorsResult struct {
-	Result workflow.Future
+type S3DeleteBucketCorsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketCorsResult) Get(ctx workflow.Context) (*s3.DeleteBucketCorsOutput, error) {
+func (r *S3DeleteBucketCorsFuture) Get(ctx workflow.Context) (*s3.DeleteBucketCorsOutput, error) {
 	var output s3.DeleteBucketCorsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketEncryptionResult struct {
-	Result workflow.Future
+type S3DeleteBucketEncryptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketEncryptionResult) Get(ctx workflow.Context) (*s3.DeleteBucketEncryptionOutput, error) {
+func (r *S3DeleteBucketEncryptionFuture) Get(ctx workflow.Context) (*s3.DeleteBucketEncryptionOutput, error) {
 	var output s3.DeleteBucketEncryptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketInventoryConfigurationResult struct {
-	Result workflow.Future
+type S3DeleteBucketInventoryConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketInventoryConfigurationResult) Get(ctx workflow.Context) (*s3.DeleteBucketInventoryConfigurationOutput, error) {
+func (r *S3DeleteBucketInventoryConfigurationFuture) Get(ctx workflow.Context) (*s3.DeleteBucketInventoryConfigurationOutput, error) {
 	var output s3.DeleteBucketInventoryConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketLifecycleResult struct {
-	Result workflow.Future
+type S3DeleteBucketLifecycleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketLifecycleResult) Get(ctx workflow.Context) (*s3.DeleteBucketLifecycleOutput, error) {
+func (r *S3DeleteBucketLifecycleFuture) Get(ctx workflow.Context) (*s3.DeleteBucketLifecycleOutput, error) {
 	var output s3.DeleteBucketLifecycleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketMetricsConfigurationResult struct {
-	Result workflow.Future
+type S3DeleteBucketMetricsConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketMetricsConfigurationResult) Get(ctx workflow.Context) (*s3.DeleteBucketMetricsConfigurationOutput, error) {
+func (r *S3DeleteBucketMetricsConfigurationFuture) Get(ctx workflow.Context) (*s3.DeleteBucketMetricsConfigurationOutput, error) {
 	var output s3.DeleteBucketMetricsConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketOwnershipControlsResult struct {
-	Result workflow.Future
+type S3DeleteBucketOwnershipControlsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketOwnershipControlsResult) Get(ctx workflow.Context) (*s3.DeleteBucketOwnershipControlsOutput, error) {
+func (r *S3DeleteBucketOwnershipControlsFuture) Get(ctx workflow.Context) (*s3.DeleteBucketOwnershipControlsOutput, error) {
 	var output s3.DeleteBucketOwnershipControlsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketPolicyResult struct {
-	Result workflow.Future
+type S3DeleteBucketPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketPolicyResult) Get(ctx workflow.Context) (*s3.DeleteBucketPolicyOutput, error) {
+func (r *S3DeleteBucketPolicyFuture) Get(ctx workflow.Context) (*s3.DeleteBucketPolicyOutput, error) {
 	var output s3.DeleteBucketPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketReplicationResult struct {
-	Result workflow.Future
+type S3DeleteBucketReplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketReplicationResult) Get(ctx workflow.Context) (*s3.DeleteBucketReplicationOutput, error) {
+func (r *S3DeleteBucketReplicationFuture) Get(ctx workflow.Context) (*s3.DeleteBucketReplicationOutput, error) {
 	var output s3.DeleteBucketReplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketTaggingResult struct {
-	Result workflow.Future
+type S3DeleteBucketTaggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketTaggingResult) Get(ctx workflow.Context) (*s3.DeleteBucketTaggingOutput, error) {
+func (r *S3DeleteBucketTaggingFuture) Get(ctx workflow.Context) (*s3.DeleteBucketTaggingOutput, error) {
 	var output s3.DeleteBucketTaggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteBucketWebsiteResult struct {
-	Result workflow.Future
+type S3DeleteBucketWebsiteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteBucketWebsiteResult) Get(ctx workflow.Context) (*s3.DeleteBucketWebsiteOutput, error) {
+func (r *S3DeleteBucketWebsiteFuture) Get(ctx workflow.Context) (*s3.DeleteBucketWebsiteOutput, error) {
 	var output s3.DeleteBucketWebsiteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteObjectResult struct {
-	Result workflow.Future
+type S3DeleteObjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteObjectResult) Get(ctx workflow.Context) (*s3.DeleteObjectOutput, error) {
+func (r *S3DeleteObjectFuture) Get(ctx workflow.Context) (*s3.DeleteObjectOutput, error) {
 	var output s3.DeleteObjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteObjectTaggingResult struct {
-	Result workflow.Future
+type S3DeleteObjectTaggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteObjectTaggingResult) Get(ctx workflow.Context) (*s3.DeleteObjectTaggingOutput, error) {
+func (r *S3DeleteObjectTaggingFuture) Get(ctx workflow.Context) (*s3.DeleteObjectTaggingOutput, error) {
 	var output s3.DeleteObjectTaggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeleteObjectsResult struct {
-	Result workflow.Future
+type S3DeleteObjectsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeleteObjectsResult) Get(ctx workflow.Context) (*s3.DeleteObjectsOutput, error) {
+func (r *S3DeleteObjectsFuture) Get(ctx workflow.Context) (*s3.DeleteObjectsOutput, error) {
 	var output s3.DeleteObjectsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3DeletePublicAccessBlockResult struct {
-	Result workflow.Future
+type S3DeletePublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3DeletePublicAccessBlockResult) Get(ctx workflow.Context) (*s3.DeletePublicAccessBlockOutput, error) {
+func (r *S3DeletePublicAccessBlockFuture) Get(ctx workflow.Context) (*s3.DeletePublicAccessBlockOutput, error) {
 	var output s3.DeletePublicAccessBlockOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketAccelerateConfigurationResult struct {
-	Result workflow.Future
+type S3GetBucketAccelerateConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketAccelerateConfigurationResult) Get(ctx workflow.Context) (*s3.GetBucketAccelerateConfigurationOutput, error) {
+func (r *S3GetBucketAccelerateConfigurationFuture) Get(ctx workflow.Context) (*s3.GetBucketAccelerateConfigurationOutput, error) {
 	var output s3.GetBucketAccelerateConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketAclResult struct {
-	Result workflow.Future
+type S3GetBucketAclFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketAclResult) Get(ctx workflow.Context) (*s3.GetBucketAclOutput, error) {
+func (r *S3GetBucketAclFuture) Get(ctx workflow.Context) (*s3.GetBucketAclOutput, error) {
 	var output s3.GetBucketAclOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketAnalyticsConfigurationResult struct {
-	Result workflow.Future
+type S3GetBucketAnalyticsConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketAnalyticsConfigurationResult) Get(ctx workflow.Context) (*s3.GetBucketAnalyticsConfigurationOutput, error) {
+func (r *S3GetBucketAnalyticsConfigurationFuture) Get(ctx workflow.Context) (*s3.GetBucketAnalyticsConfigurationOutput, error) {
 	var output s3.GetBucketAnalyticsConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketCorsResult struct {
-	Result workflow.Future
+type S3GetBucketCorsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketCorsResult) Get(ctx workflow.Context) (*s3.GetBucketCorsOutput, error) {
+func (r *S3GetBucketCorsFuture) Get(ctx workflow.Context) (*s3.GetBucketCorsOutput, error) {
 	var output s3.GetBucketCorsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketEncryptionResult struct {
-	Result workflow.Future
+type S3GetBucketEncryptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketEncryptionResult) Get(ctx workflow.Context) (*s3.GetBucketEncryptionOutput, error) {
+func (r *S3GetBucketEncryptionFuture) Get(ctx workflow.Context) (*s3.GetBucketEncryptionOutput, error) {
 	var output s3.GetBucketEncryptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketInventoryConfigurationResult struct {
-	Result workflow.Future
+type S3GetBucketInventoryConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketInventoryConfigurationResult) Get(ctx workflow.Context) (*s3.GetBucketInventoryConfigurationOutput, error) {
+func (r *S3GetBucketInventoryConfigurationFuture) Get(ctx workflow.Context) (*s3.GetBucketInventoryConfigurationOutput, error) {
 	var output s3.GetBucketInventoryConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketLifecycleResult struct {
-	Result workflow.Future
+type S3GetBucketLifecycleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketLifecycleResult) Get(ctx workflow.Context) (*s3.GetBucketLifecycleOutput, error) {
+func (r *S3GetBucketLifecycleFuture) Get(ctx workflow.Context) (*s3.GetBucketLifecycleOutput, error) {
 	var output s3.GetBucketLifecycleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketLifecycleConfigurationResult struct {
-	Result workflow.Future
+type S3GetBucketLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketLifecycleConfigurationResult) Get(ctx workflow.Context) (*s3.GetBucketLifecycleConfigurationOutput, error) {
+func (r *S3GetBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3.GetBucketLifecycleConfigurationOutput, error) {
 	var output s3.GetBucketLifecycleConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketLocationResult struct {
-	Result workflow.Future
+type S3GetBucketLocationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketLocationResult) Get(ctx workflow.Context) (*s3.GetBucketLocationOutput, error) {
+func (r *S3GetBucketLocationFuture) Get(ctx workflow.Context) (*s3.GetBucketLocationOutput, error) {
 	var output s3.GetBucketLocationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketLoggingResult struct {
-	Result workflow.Future
+type S3GetBucketLoggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketLoggingResult) Get(ctx workflow.Context) (*s3.GetBucketLoggingOutput, error) {
+func (r *S3GetBucketLoggingFuture) Get(ctx workflow.Context) (*s3.GetBucketLoggingOutput, error) {
 	var output s3.GetBucketLoggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketMetricsConfigurationResult struct {
-	Result workflow.Future
+type S3GetBucketMetricsConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketMetricsConfigurationResult) Get(ctx workflow.Context) (*s3.GetBucketMetricsConfigurationOutput, error) {
+func (r *S3GetBucketMetricsConfigurationFuture) Get(ctx workflow.Context) (*s3.GetBucketMetricsConfigurationOutput, error) {
 	var output s3.GetBucketMetricsConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketNotificationResult struct {
-	Result workflow.Future
+type S3GetBucketNotificationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketNotificationResult) Get(ctx workflow.Context) (*s3.NotificationConfigurationDeprecated, error) {
+func (r *S3GetBucketNotificationFuture) Get(ctx workflow.Context) (*s3.NotificationConfigurationDeprecated, error) {
 	var output s3.NotificationConfigurationDeprecated
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketNotificationConfigurationResult struct {
-	Result workflow.Future
+type S3GetBucketNotificationConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketNotificationConfigurationResult) Get(ctx workflow.Context) (*s3.NotificationConfiguration, error) {
+func (r *S3GetBucketNotificationConfigurationFuture) Get(ctx workflow.Context) (*s3.NotificationConfiguration, error) {
 	var output s3.NotificationConfiguration
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketOwnershipControlsResult struct {
-	Result workflow.Future
+type S3GetBucketOwnershipControlsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketOwnershipControlsResult) Get(ctx workflow.Context) (*s3.GetBucketOwnershipControlsOutput, error) {
+func (r *S3GetBucketOwnershipControlsFuture) Get(ctx workflow.Context) (*s3.GetBucketOwnershipControlsOutput, error) {
 	var output s3.GetBucketOwnershipControlsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketPolicyResult struct {
-	Result workflow.Future
+type S3GetBucketPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketPolicyResult) Get(ctx workflow.Context) (*s3.GetBucketPolicyOutput, error) {
+func (r *S3GetBucketPolicyFuture) Get(ctx workflow.Context) (*s3.GetBucketPolicyOutput, error) {
 	var output s3.GetBucketPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketPolicyStatusResult struct {
-	Result workflow.Future
+type S3GetBucketPolicyStatusFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketPolicyStatusResult) Get(ctx workflow.Context) (*s3.GetBucketPolicyStatusOutput, error) {
+func (r *S3GetBucketPolicyStatusFuture) Get(ctx workflow.Context) (*s3.GetBucketPolicyStatusOutput, error) {
 	var output s3.GetBucketPolicyStatusOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketReplicationResult struct {
-	Result workflow.Future
+type S3GetBucketReplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketReplicationResult) Get(ctx workflow.Context) (*s3.GetBucketReplicationOutput, error) {
+func (r *S3GetBucketReplicationFuture) Get(ctx workflow.Context) (*s3.GetBucketReplicationOutput, error) {
 	var output s3.GetBucketReplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketRequestPaymentResult struct {
-	Result workflow.Future
+type S3GetBucketRequestPaymentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketRequestPaymentResult) Get(ctx workflow.Context) (*s3.GetBucketRequestPaymentOutput, error) {
+func (r *S3GetBucketRequestPaymentFuture) Get(ctx workflow.Context) (*s3.GetBucketRequestPaymentOutput, error) {
 	var output s3.GetBucketRequestPaymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketTaggingResult struct {
-	Result workflow.Future
+type S3GetBucketTaggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketTaggingResult) Get(ctx workflow.Context) (*s3.GetBucketTaggingOutput, error) {
+func (r *S3GetBucketTaggingFuture) Get(ctx workflow.Context) (*s3.GetBucketTaggingOutput, error) {
 	var output s3.GetBucketTaggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketVersioningResult struct {
-	Result workflow.Future
+type S3GetBucketVersioningFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketVersioningResult) Get(ctx workflow.Context) (*s3.GetBucketVersioningOutput, error) {
+func (r *S3GetBucketVersioningFuture) Get(ctx workflow.Context) (*s3.GetBucketVersioningOutput, error) {
 	var output s3.GetBucketVersioningOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetBucketWebsiteResult struct {
-	Result workflow.Future
+type S3GetBucketWebsiteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetBucketWebsiteResult) Get(ctx workflow.Context) (*s3.GetBucketWebsiteOutput, error) {
+func (r *S3GetBucketWebsiteFuture) Get(ctx workflow.Context) (*s3.GetBucketWebsiteOutput, error) {
 	var output s3.GetBucketWebsiteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetObjectResult struct {
-	Result workflow.Future
+type S3GetObjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetObjectResult) Get(ctx workflow.Context) (*s3.GetObjectOutput, error) {
+func (r *S3GetObjectFuture) Get(ctx workflow.Context) (*s3.GetObjectOutput, error) {
 	var output s3.GetObjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetObjectAclResult struct {
-	Result workflow.Future
+type S3GetObjectAclFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetObjectAclResult) Get(ctx workflow.Context) (*s3.GetObjectAclOutput, error) {
+func (r *S3GetObjectAclFuture) Get(ctx workflow.Context) (*s3.GetObjectAclOutput, error) {
 	var output s3.GetObjectAclOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetObjectLegalHoldResult struct {
-	Result workflow.Future
+type S3GetObjectLegalHoldFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetObjectLegalHoldResult) Get(ctx workflow.Context) (*s3.GetObjectLegalHoldOutput, error) {
+func (r *S3GetObjectLegalHoldFuture) Get(ctx workflow.Context) (*s3.GetObjectLegalHoldOutput, error) {
 	var output s3.GetObjectLegalHoldOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetObjectLockConfigurationResult struct {
-	Result workflow.Future
+type S3GetObjectLockConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetObjectLockConfigurationResult) Get(ctx workflow.Context) (*s3.GetObjectLockConfigurationOutput, error) {
+func (r *S3GetObjectLockConfigurationFuture) Get(ctx workflow.Context) (*s3.GetObjectLockConfigurationOutput, error) {
 	var output s3.GetObjectLockConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetObjectRetentionResult struct {
-	Result workflow.Future
+type S3GetObjectRetentionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetObjectRetentionResult) Get(ctx workflow.Context) (*s3.GetObjectRetentionOutput, error) {
+func (r *S3GetObjectRetentionFuture) Get(ctx workflow.Context) (*s3.GetObjectRetentionOutput, error) {
 	var output s3.GetObjectRetentionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetObjectTaggingResult struct {
-	Result workflow.Future
+type S3GetObjectTaggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetObjectTaggingResult) Get(ctx workflow.Context) (*s3.GetObjectTaggingOutput, error) {
+func (r *S3GetObjectTaggingFuture) Get(ctx workflow.Context) (*s3.GetObjectTaggingOutput, error) {
 	var output s3.GetObjectTaggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetObjectTorrentResult struct {
-	Result workflow.Future
+type S3GetObjectTorrentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetObjectTorrentResult) Get(ctx workflow.Context) (*s3.GetObjectTorrentOutput, error) {
+func (r *S3GetObjectTorrentFuture) Get(ctx workflow.Context) (*s3.GetObjectTorrentOutput, error) {
 	var output s3.GetObjectTorrentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3GetPublicAccessBlockResult struct {
-	Result workflow.Future
+type S3GetPublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3GetPublicAccessBlockResult) Get(ctx workflow.Context) (*s3.GetPublicAccessBlockOutput, error) {
+func (r *S3GetPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3.GetPublicAccessBlockOutput, error) {
 	var output s3.GetPublicAccessBlockOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3HeadBucketResult struct {
-	Result workflow.Future
+type S3HeadBucketFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3HeadBucketResult) Get(ctx workflow.Context) (*s3.HeadBucketOutput, error) {
+func (r *S3HeadBucketFuture) Get(ctx workflow.Context) (*s3.HeadBucketOutput, error) {
 	var output s3.HeadBucketOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3HeadObjectResult struct {
-	Result workflow.Future
+type S3HeadObjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3HeadObjectResult) Get(ctx workflow.Context) (*s3.HeadObjectOutput, error) {
+func (r *S3HeadObjectFuture) Get(ctx workflow.Context) (*s3.HeadObjectOutput, error) {
 	var output s3.HeadObjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListBucketAnalyticsConfigurationsResult struct {
-	Result workflow.Future
+type S3ListBucketAnalyticsConfigurationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListBucketAnalyticsConfigurationsResult) Get(ctx workflow.Context) (*s3.ListBucketAnalyticsConfigurationsOutput, error) {
+func (r *S3ListBucketAnalyticsConfigurationsFuture) Get(ctx workflow.Context) (*s3.ListBucketAnalyticsConfigurationsOutput, error) {
 	var output s3.ListBucketAnalyticsConfigurationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListBucketInventoryConfigurationsResult struct {
-	Result workflow.Future
+type S3ListBucketInventoryConfigurationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListBucketInventoryConfigurationsResult) Get(ctx workflow.Context) (*s3.ListBucketInventoryConfigurationsOutput, error) {
+func (r *S3ListBucketInventoryConfigurationsFuture) Get(ctx workflow.Context) (*s3.ListBucketInventoryConfigurationsOutput, error) {
 	var output s3.ListBucketInventoryConfigurationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListBucketMetricsConfigurationsResult struct {
-	Result workflow.Future
+type S3ListBucketMetricsConfigurationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListBucketMetricsConfigurationsResult) Get(ctx workflow.Context) (*s3.ListBucketMetricsConfigurationsOutput, error) {
+func (r *S3ListBucketMetricsConfigurationsFuture) Get(ctx workflow.Context) (*s3.ListBucketMetricsConfigurationsOutput, error) {
 	var output s3.ListBucketMetricsConfigurationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListBucketsResult struct {
-	Result workflow.Future
+type S3ListBucketsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListBucketsResult) Get(ctx workflow.Context) (*s3.ListBucketsOutput, error) {
+func (r *S3ListBucketsFuture) Get(ctx workflow.Context) (*s3.ListBucketsOutput, error) {
 	var output s3.ListBucketsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListMultipartUploadsResult struct {
-	Result workflow.Future
+type S3ListMultipartUploadsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListMultipartUploadsResult) Get(ctx workflow.Context) (*s3.ListMultipartUploadsOutput, error) {
+func (r *S3ListMultipartUploadsFuture) Get(ctx workflow.Context) (*s3.ListMultipartUploadsOutput, error) {
 	var output s3.ListMultipartUploadsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListObjectVersionsResult struct {
-	Result workflow.Future
+type S3ListObjectVersionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListObjectVersionsResult) Get(ctx workflow.Context) (*s3.ListObjectVersionsOutput, error) {
+func (r *S3ListObjectVersionsFuture) Get(ctx workflow.Context) (*s3.ListObjectVersionsOutput, error) {
 	var output s3.ListObjectVersionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListObjectsResult struct {
-	Result workflow.Future
+type S3ListObjectsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListObjectsResult) Get(ctx workflow.Context) (*s3.ListObjectsOutput, error) {
+func (r *S3ListObjectsFuture) Get(ctx workflow.Context) (*s3.ListObjectsOutput, error) {
 	var output s3.ListObjectsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListObjectsV2Result struct {
-	Result workflow.Future
+type S3ListObjectsV2Future struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListObjectsV2Result) Get(ctx workflow.Context) (*s3.ListObjectsV2Output, error) {
+func (r *S3ListObjectsV2Future) Get(ctx workflow.Context) (*s3.ListObjectsV2Output, error) {
 	var output s3.ListObjectsV2Output
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ListPartsResult struct {
-	Result workflow.Future
+type S3ListPartsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3ListPartsResult) Get(ctx workflow.Context) (*s3.ListPartsOutput, error) {
+func (r *S3ListPartsFuture) Get(ctx workflow.Context) (*s3.ListPartsOutput, error) {
 	var output s3.ListPartsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketAccelerateConfigurationResult struct {
-	Result workflow.Future
+type S3PutBucketAccelerateConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketAccelerateConfigurationResult) Get(ctx workflow.Context) (*s3.PutBucketAccelerateConfigurationOutput, error) {
+func (r *S3PutBucketAccelerateConfigurationFuture) Get(ctx workflow.Context) (*s3.PutBucketAccelerateConfigurationOutput, error) {
 	var output s3.PutBucketAccelerateConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketAclResult struct {
-	Result workflow.Future
+type S3PutBucketAclFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketAclResult) Get(ctx workflow.Context) (*s3.PutBucketAclOutput, error) {
+func (r *S3PutBucketAclFuture) Get(ctx workflow.Context) (*s3.PutBucketAclOutput, error) {
 	var output s3.PutBucketAclOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketAnalyticsConfigurationResult struct {
-	Result workflow.Future
+type S3PutBucketAnalyticsConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketAnalyticsConfigurationResult) Get(ctx workflow.Context) (*s3.PutBucketAnalyticsConfigurationOutput, error) {
+func (r *S3PutBucketAnalyticsConfigurationFuture) Get(ctx workflow.Context) (*s3.PutBucketAnalyticsConfigurationOutput, error) {
 	var output s3.PutBucketAnalyticsConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketCorsResult struct {
-	Result workflow.Future
+type S3PutBucketCorsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketCorsResult) Get(ctx workflow.Context) (*s3.PutBucketCorsOutput, error) {
+func (r *S3PutBucketCorsFuture) Get(ctx workflow.Context) (*s3.PutBucketCorsOutput, error) {
 	var output s3.PutBucketCorsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketEncryptionResult struct {
-	Result workflow.Future
+type S3PutBucketEncryptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketEncryptionResult) Get(ctx workflow.Context) (*s3.PutBucketEncryptionOutput, error) {
+func (r *S3PutBucketEncryptionFuture) Get(ctx workflow.Context) (*s3.PutBucketEncryptionOutput, error) {
 	var output s3.PutBucketEncryptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketInventoryConfigurationResult struct {
-	Result workflow.Future
+type S3PutBucketInventoryConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketInventoryConfigurationResult) Get(ctx workflow.Context) (*s3.PutBucketInventoryConfigurationOutput, error) {
+func (r *S3PutBucketInventoryConfigurationFuture) Get(ctx workflow.Context) (*s3.PutBucketInventoryConfigurationOutput, error) {
 	var output s3.PutBucketInventoryConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketLifecycleResult struct {
-	Result workflow.Future
+type S3PutBucketLifecycleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketLifecycleResult) Get(ctx workflow.Context) (*s3.PutBucketLifecycleOutput, error) {
+func (r *S3PutBucketLifecycleFuture) Get(ctx workflow.Context) (*s3.PutBucketLifecycleOutput, error) {
 	var output s3.PutBucketLifecycleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketLifecycleConfigurationResult struct {
-	Result workflow.Future
+type S3PutBucketLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketLifecycleConfigurationResult) Get(ctx workflow.Context) (*s3.PutBucketLifecycleConfigurationOutput, error) {
+func (r *S3PutBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3.PutBucketLifecycleConfigurationOutput, error) {
 	var output s3.PutBucketLifecycleConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketLoggingResult struct {
-	Result workflow.Future
+type S3PutBucketLoggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketLoggingResult) Get(ctx workflow.Context) (*s3.PutBucketLoggingOutput, error) {
+func (r *S3PutBucketLoggingFuture) Get(ctx workflow.Context) (*s3.PutBucketLoggingOutput, error) {
 	var output s3.PutBucketLoggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketMetricsConfigurationResult struct {
-	Result workflow.Future
+type S3PutBucketMetricsConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketMetricsConfigurationResult) Get(ctx workflow.Context) (*s3.PutBucketMetricsConfigurationOutput, error) {
+func (r *S3PutBucketMetricsConfigurationFuture) Get(ctx workflow.Context) (*s3.PutBucketMetricsConfigurationOutput, error) {
 	var output s3.PutBucketMetricsConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketNotificationResult struct {
-	Result workflow.Future
+type S3PutBucketNotificationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketNotificationResult) Get(ctx workflow.Context) (*s3.PutBucketNotificationOutput, error) {
+func (r *S3PutBucketNotificationFuture) Get(ctx workflow.Context) (*s3.PutBucketNotificationOutput, error) {
 	var output s3.PutBucketNotificationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketNotificationConfigurationResult struct {
-	Result workflow.Future
+type S3PutBucketNotificationConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketNotificationConfigurationResult) Get(ctx workflow.Context) (*s3.PutBucketNotificationConfigurationOutput, error) {
+func (r *S3PutBucketNotificationConfigurationFuture) Get(ctx workflow.Context) (*s3.PutBucketNotificationConfigurationOutput, error) {
 	var output s3.PutBucketNotificationConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketOwnershipControlsResult struct {
-	Result workflow.Future
+type S3PutBucketOwnershipControlsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketOwnershipControlsResult) Get(ctx workflow.Context) (*s3.PutBucketOwnershipControlsOutput, error) {
+func (r *S3PutBucketOwnershipControlsFuture) Get(ctx workflow.Context) (*s3.PutBucketOwnershipControlsOutput, error) {
 	var output s3.PutBucketOwnershipControlsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketPolicyResult struct {
-	Result workflow.Future
+type S3PutBucketPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketPolicyResult) Get(ctx workflow.Context) (*s3.PutBucketPolicyOutput, error) {
+func (r *S3PutBucketPolicyFuture) Get(ctx workflow.Context) (*s3.PutBucketPolicyOutput, error) {
 	var output s3.PutBucketPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketReplicationResult struct {
-	Result workflow.Future
+type S3PutBucketReplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketReplicationResult) Get(ctx workflow.Context) (*s3.PutBucketReplicationOutput, error) {
+func (r *S3PutBucketReplicationFuture) Get(ctx workflow.Context) (*s3.PutBucketReplicationOutput, error) {
 	var output s3.PutBucketReplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketRequestPaymentResult struct {
-	Result workflow.Future
+type S3PutBucketRequestPaymentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketRequestPaymentResult) Get(ctx workflow.Context) (*s3.PutBucketRequestPaymentOutput, error) {
+func (r *S3PutBucketRequestPaymentFuture) Get(ctx workflow.Context) (*s3.PutBucketRequestPaymentOutput, error) {
 	var output s3.PutBucketRequestPaymentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketTaggingResult struct {
-	Result workflow.Future
+type S3PutBucketTaggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketTaggingResult) Get(ctx workflow.Context) (*s3.PutBucketTaggingOutput, error) {
+func (r *S3PutBucketTaggingFuture) Get(ctx workflow.Context) (*s3.PutBucketTaggingOutput, error) {
 	var output s3.PutBucketTaggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketVersioningResult struct {
-	Result workflow.Future
+type S3PutBucketVersioningFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketVersioningResult) Get(ctx workflow.Context) (*s3.PutBucketVersioningOutput, error) {
+func (r *S3PutBucketVersioningFuture) Get(ctx workflow.Context) (*s3.PutBucketVersioningOutput, error) {
 	var output s3.PutBucketVersioningOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutBucketWebsiteResult struct {
-	Result workflow.Future
+type S3PutBucketWebsiteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutBucketWebsiteResult) Get(ctx workflow.Context) (*s3.PutBucketWebsiteOutput, error) {
+func (r *S3PutBucketWebsiteFuture) Get(ctx workflow.Context) (*s3.PutBucketWebsiteOutput, error) {
 	var output s3.PutBucketWebsiteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutObjectResult struct {
-	Result workflow.Future
+type S3PutObjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutObjectResult) Get(ctx workflow.Context) (*s3.PutObjectOutput, error) {
+func (r *S3PutObjectFuture) Get(ctx workflow.Context) (*s3.PutObjectOutput, error) {
 	var output s3.PutObjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutObjectAclResult struct {
-	Result workflow.Future
+type S3PutObjectAclFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutObjectAclResult) Get(ctx workflow.Context) (*s3.PutObjectAclOutput, error) {
+func (r *S3PutObjectAclFuture) Get(ctx workflow.Context) (*s3.PutObjectAclOutput, error) {
 	var output s3.PutObjectAclOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutObjectLegalHoldResult struct {
-	Result workflow.Future
+type S3PutObjectLegalHoldFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutObjectLegalHoldResult) Get(ctx workflow.Context) (*s3.PutObjectLegalHoldOutput, error) {
+func (r *S3PutObjectLegalHoldFuture) Get(ctx workflow.Context) (*s3.PutObjectLegalHoldOutput, error) {
 	var output s3.PutObjectLegalHoldOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutObjectLockConfigurationResult struct {
-	Result workflow.Future
+type S3PutObjectLockConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutObjectLockConfigurationResult) Get(ctx workflow.Context) (*s3.PutObjectLockConfigurationOutput, error) {
+func (r *S3PutObjectLockConfigurationFuture) Get(ctx workflow.Context) (*s3.PutObjectLockConfigurationOutput, error) {
 	var output s3.PutObjectLockConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutObjectRetentionResult struct {
-	Result workflow.Future
+type S3PutObjectRetentionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutObjectRetentionResult) Get(ctx workflow.Context) (*s3.PutObjectRetentionOutput, error) {
+func (r *S3PutObjectRetentionFuture) Get(ctx workflow.Context) (*s3.PutObjectRetentionOutput, error) {
 	var output s3.PutObjectRetentionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutObjectTaggingResult struct {
-	Result workflow.Future
+type S3PutObjectTaggingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutObjectTaggingResult) Get(ctx workflow.Context) (*s3.PutObjectTaggingOutput, error) {
+func (r *S3PutObjectTaggingFuture) Get(ctx workflow.Context) (*s3.PutObjectTaggingOutput, error) {
 	var output s3.PutObjectTaggingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3PutPublicAccessBlockResult struct {
-	Result workflow.Future
+type S3PutPublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3PutPublicAccessBlockResult) Get(ctx workflow.Context) (*s3.PutPublicAccessBlockOutput, error) {
+func (r *S3PutPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3.PutPublicAccessBlockOutput, error) {
 	var output s3.PutPublicAccessBlockOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3RestoreObjectResult struct {
-	Result workflow.Future
+type S3RestoreObjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3RestoreObjectResult) Get(ctx workflow.Context) (*s3.RestoreObjectOutput, error) {
+func (r *S3RestoreObjectFuture) Get(ctx workflow.Context) (*s3.RestoreObjectOutput, error) {
 	var output s3.RestoreObjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3SelectObjectContentResult struct {
-	Result workflow.Future
+type S3SelectObjectContentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3SelectObjectContentResult) Get(ctx workflow.Context) (*s3.SelectObjectContentOutput, error) {
+func (r *S3SelectObjectContentFuture) Get(ctx workflow.Context) (*s3.SelectObjectContentOutput, error) {
 	var output s3.SelectObjectContentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3UploadPartResult struct {
-	Result workflow.Future
+type S3UploadPartFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3UploadPartResult) Get(ctx workflow.Context) (*s3.UploadPartOutput, error) {
+func (r *S3UploadPartFuture) Get(ctx workflow.Context) (*s3.UploadPartOutput, error) {
 	var output s3.UploadPartOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3UploadPartCopyResult struct {
-	Result workflow.Future
+type S3UploadPartCopyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3UploadPartCopyResult) Get(ctx workflow.Context) (*s3.UploadPartCopyOutput, error) {
+func (r *S3UploadPartCopyFuture) Get(ctx workflow.Context) (*s3.UploadPartCopyOutput, error) {
 	var output s3.UploadPartCopyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -1214,9 +1309,9 @@ func (a *S3Stub) AbortMultipartUpload(ctx workflow.Context, input *s3.AbortMulti
 	return &output, err
 }
 
-func (a *S3Stub) AbortMultipartUploadAsync(ctx workflow.Context, input *s3.AbortMultipartUploadInput) *S3AbortMultipartUploadResult {
+func (a *S3Stub) AbortMultipartUploadAsync(ctx workflow.Context, input *s3.AbortMultipartUploadInput) *S3AbortMultipartUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.AbortMultipartUpload", input)
-	return &S3AbortMultipartUploadResult{Result: future}
+	return &S3AbortMultipartUploadFuture{Future: future}
 }
 
 func (a *S3Stub) CompleteMultipartUpload(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) (*s3.CompleteMultipartUploadOutput, error) {
@@ -1225,9 +1320,9 @@ func (a *S3Stub) CompleteMultipartUpload(ctx workflow.Context, input *s3.Complet
 	return &output, err
 }
 
-func (a *S3Stub) CompleteMultipartUploadAsync(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) *S3CompleteMultipartUploadResult {
+func (a *S3Stub) CompleteMultipartUploadAsync(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) *S3CompleteMultipartUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.CompleteMultipartUpload", input)
-	return &S3CompleteMultipartUploadResult{Result: future}
+	return &S3CompleteMultipartUploadFuture{Future: future}
 }
 
 func (a *S3Stub) CopyObject(ctx workflow.Context, input *s3.CopyObjectInput) (*s3.CopyObjectOutput, error) {
@@ -1236,9 +1331,9 @@ func (a *S3Stub) CopyObject(ctx workflow.Context, input *s3.CopyObjectInput) (*s
 	return &output, err
 }
 
-func (a *S3Stub) CopyObjectAsync(ctx workflow.Context, input *s3.CopyObjectInput) *S3CopyObjectResult {
+func (a *S3Stub) CopyObjectAsync(ctx workflow.Context, input *s3.CopyObjectInput) *S3CopyObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.CopyObject", input)
-	return &S3CopyObjectResult{Result: future}
+	return &S3CopyObjectFuture{Future: future}
 }
 
 func (a *S3Stub) CreateBucket(ctx workflow.Context, input *s3.CreateBucketInput) (*s3.CreateBucketOutput, error) {
@@ -1247,9 +1342,9 @@ func (a *S3Stub) CreateBucket(ctx workflow.Context, input *s3.CreateBucketInput)
 	return &output, err
 }
 
-func (a *S3Stub) CreateBucketAsync(ctx workflow.Context, input *s3.CreateBucketInput) *S3CreateBucketResult {
+func (a *S3Stub) CreateBucketAsync(ctx workflow.Context, input *s3.CreateBucketInput) *S3CreateBucketFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.CreateBucket", input)
-	return &S3CreateBucketResult{Result: future}
+	return &S3CreateBucketFuture{Future: future}
 }
 
 func (a *S3Stub) CreateMultipartUpload(ctx workflow.Context, input *s3.CreateMultipartUploadInput) (*s3.CreateMultipartUploadOutput, error) {
@@ -1258,9 +1353,9 @@ func (a *S3Stub) CreateMultipartUpload(ctx workflow.Context, input *s3.CreateMul
 	return &output, err
 }
 
-func (a *S3Stub) CreateMultipartUploadAsync(ctx workflow.Context, input *s3.CreateMultipartUploadInput) *S3CreateMultipartUploadResult {
+func (a *S3Stub) CreateMultipartUploadAsync(ctx workflow.Context, input *s3.CreateMultipartUploadInput) *S3CreateMultipartUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.CreateMultipartUpload", input)
-	return &S3CreateMultipartUploadResult{Result: future}
+	return &S3CreateMultipartUploadFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucket(ctx workflow.Context, input *s3.DeleteBucketInput) (*s3.DeleteBucketOutput, error) {
@@ -1269,9 +1364,9 @@ func (a *S3Stub) DeleteBucket(ctx workflow.Context, input *s3.DeleteBucketInput)
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketAsync(ctx workflow.Context, input *s3.DeleteBucketInput) *S3DeleteBucketResult {
+func (a *S3Stub) DeleteBucketAsync(ctx workflow.Context, input *s3.DeleteBucketInput) *S3DeleteBucketFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucket", input)
-	return &S3DeleteBucketResult{Result: future}
+	return &S3DeleteBucketFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) (*s3.DeleteBucketAnalyticsConfigurationOutput, error) {
@@ -1280,9 +1375,9 @@ func (a *S3Stub) DeleteBucketAnalyticsConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) *S3DeleteBucketAnalyticsConfigurationResult {
+func (a *S3Stub) DeleteBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) *S3DeleteBucketAnalyticsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketAnalyticsConfiguration", input)
-	return &S3DeleteBucketAnalyticsConfigurationResult{Result: future}
+	return &S3DeleteBucketAnalyticsConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketCors(ctx workflow.Context, input *s3.DeleteBucketCorsInput) (*s3.DeleteBucketCorsOutput, error) {
@@ -1291,9 +1386,9 @@ func (a *S3Stub) DeleteBucketCors(ctx workflow.Context, input *s3.DeleteBucketCo
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketCorsAsync(ctx workflow.Context, input *s3.DeleteBucketCorsInput) *S3DeleteBucketCorsResult {
+func (a *S3Stub) DeleteBucketCorsAsync(ctx workflow.Context, input *s3.DeleteBucketCorsInput) *S3DeleteBucketCorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketCors", input)
-	return &S3DeleteBucketCorsResult{Result: future}
+	return &S3DeleteBucketCorsFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketEncryption(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) (*s3.DeleteBucketEncryptionOutput, error) {
@@ -1302,9 +1397,9 @@ func (a *S3Stub) DeleteBucketEncryption(ctx workflow.Context, input *s3.DeleteBu
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketEncryptionAsync(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) *S3DeleteBucketEncryptionResult {
+func (a *S3Stub) DeleteBucketEncryptionAsync(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) *S3DeleteBucketEncryptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketEncryption", input)
-	return &S3DeleteBucketEncryptionResult{Result: future}
+	return &S3DeleteBucketEncryptionFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketInventoryConfiguration(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) (*s3.DeleteBucketInventoryConfigurationOutput, error) {
@@ -1313,9 +1408,9 @@ func (a *S3Stub) DeleteBucketInventoryConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) *S3DeleteBucketInventoryConfigurationResult {
+func (a *S3Stub) DeleteBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) *S3DeleteBucketInventoryConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketInventoryConfiguration", input)
-	return &S3DeleteBucketInventoryConfigurationResult{Result: future}
+	return &S3DeleteBucketInventoryConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketLifecycle(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) (*s3.DeleteBucketLifecycleOutput, error) {
@@ -1324,9 +1419,9 @@ func (a *S3Stub) DeleteBucketLifecycle(ctx workflow.Context, input *s3.DeleteBuc
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketLifecycleAsync(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) *S3DeleteBucketLifecycleResult {
+func (a *S3Stub) DeleteBucketLifecycleAsync(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) *S3DeleteBucketLifecycleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketLifecycle", input)
-	return &S3DeleteBucketLifecycleResult{Result: future}
+	return &S3DeleteBucketLifecycleFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketMetricsConfiguration(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) (*s3.DeleteBucketMetricsConfigurationOutput, error) {
@@ -1335,9 +1430,9 @@ func (a *S3Stub) DeleteBucketMetricsConfiguration(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) *S3DeleteBucketMetricsConfigurationResult {
+func (a *S3Stub) DeleteBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) *S3DeleteBucketMetricsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketMetricsConfiguration", input)
-	return &S3DeleteBucketMetricsConfigurationResult{Result: future}
+	return &S3DeleteBucketMetricsConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketOwnershipControls(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) (*s3.DeleteBucketOwnershipControlsOutput, error) {
@@ -1346,9 +1441,9 @@ func (a *S3Stub) DeleteBucketOwnershipControls(ctx workflow.Context, input *s3.D
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) *S3DeleteBucketOwnershipControlsResult {
+func (a *S3Stub) DeleteBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.DeleteBucketOwnershipControlsInput) *S3DeleteBucketOwnershipControlsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketOwnershipControls", input)
-	return &S3DeleteBucketOwnershipControlsResult{Result: future}
+	return &S3DeleteBucketOwnershipControlsFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketPolicy(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) (*s3.DeleteBucketPolicyOutput, error) {
@@ -1357,9 +1452,9 @@ func (a *S3Stub) DeleteBucketPolicy(ctx workflow.Context, input *s3.DeleteBucket
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketPolicyAsync(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) *S3DeleteBucketPolicyResult {
+func (a *S3Stub) DeleteBucketPolicyAsync(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) *S3DeleteBucketPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketPolicy", input)
-	return &S3DeleteBucketPolicyResult{Result: future}
+	return &S3DeleteBucketPolicyFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketReplication(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) (*s3.DeleteBucketReplicationOutput, error) {
@@ -1368,9 +1463,9 @@ func (a *S3Stub) DeleteBucketReplication(ctx workflow.Context, input *s3.DeleteB
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketReplicationAsync(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) *S3DeleteBucketReplicationResult {
+func (a *S3Stub) DeleteBucketReplicationAsync(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) *S3DeleteBucketReplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketReplication", input)
-	return &S3DeleteBucketReplicationResult{Result: future}
+	return &S3DeleteBucketReplicationFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketTagging(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) (*s3.DeleteBucketTaggingOutput, error) {
@@ -1379,9 +1474,9 @@ func (a *S3Stub) DeleteBucketTagging(ctx workflow.Context, input *s3.DeleteBucke
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketTaggingAsync(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) *S3DeleteBucketTaggingResult {
+func (a *S3Stub) DeleteBucketTaggingAsync(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) *S3DeleteBucketTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketTagging", input)
-	return &S3DeleteBucketTaggingResult{Result: future}
+	return &S3DeleteBucketTaggingFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteBucketWebsite(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) (*s3.DeleteBucketWebsiteOutput, error) {
@@ -1390,9 +1485,9 @@ func (a *S3Stub) DeleteBucketWebsite(ctx workflow.Context, input *s3.DeleteBucke
 	return &output, err
 }
 
-func (a *S3Stub) DeleteBucketWebsiteAsync(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) *S3DeleteBucketWebsiteResult {
+func (a *S3Stub) DeleteBucketWebsiteAsync(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) *S3DeleteBucketWebsiteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteBucketWebsite", input)
-	return &S3DeleteBucketWebsiteResult{Result: future}
+	return &S3DeleteBucketWebsiteFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteObject(ctx workflow.Context, input *s3.DeleteObjectInput) (*s3.DeleteObjectOutput, error) {
@@ -1401,9 +1496,9 @@ func (a *S3Stub) DeleteObject(ctx workflow.Context, input *s3.DeleteObjectInput)
 	return &output, err
 }
 
-func (a *S3Stub) DeleteObjectAsync(ctx workflow.Context, input *s3.DeleteObjectInput) *S3DeleteObjectResult {
+func (a *S3Stub) DeleteObjectAsync(ctx workflow.Context, input *s3.DeleteObjectInput) *S3DeleteObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteObject", input)
-	return &S3DeleteObjectResult{Result: future}
+	return &S3DeleteObjectFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteObjectTagging(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) (*s3.DeleteObjectTaggingOutput, error) {
@@ -1412,9 +1507,9 @@ func (a *S3Stub) DeleteObjectTagging(ctx workflow.Context, input *s3.DeleteObjec
 	return &output, err
 }
 
-func (a *S3Stub) DeleteObjectTaggingAsync(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) *S3DeleteObjectTaggingResult {
+func (a *S3Stub) DeleteObjectTaggingAsync(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) *S3DeleteObjectTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteObjectTagging", input)
-	return &S3DeleteObjectTaggingResult{Result: future}
+	return &S3DeleteObjectTaggingFuture{Future: future}
 }
 
 func (a *S3Stub) DeleteObjects(ctx workflow.Context, input *s3.DeleteObjectsInput) (*s3.DeleteObjectsOutput, error) {
@@ -1423,9 +1518,9 @@ func (a *S3Stub) DeleteObjects(ctx workflow.Context, input *s3.DeleteObjectsInpu
 	return &output, err
 }
 
-func (a *S3Stub) DeleteObjectsAsync(ctx workflow.Context, input *s3.DeleteObjectsInput) *S3DeleteObjectsResult {
+func (a *S3Stub) DeleteObjectsAsync(ctx workflow.Context, input *s3.DeleteObjectsInput) *S3DeleteObjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeleteObjects", input)
-	return &S3DeleteObjectsResult{Result: future}
+	return &S3DeleteObjectsFuture{Future: future}
 }
 
 func (a *S3Stub) DeletePublicAccessBlock(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) (*s3.DeletePublicAccessBlockOutput, error) {
@@ -1434,9 +1529,9 @@ func (a *S3Stub) DeletePublicAccessBlock(ctx workflow.Context, input *s3.DeleteP
 	return &output, err
 }
 
-func (a *S3Stub) DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) *S3DeletePublicAccessBlockResult {
+func (a *S3Stub) DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) *S3DeletePublicAccessBlockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.DeletePublicAccessBlock", input)
-	return &S3DeletePublicAccessBlockResult{Result: future}
+	return &S3DeletePublicAccessBlockFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketAccelerateConfiguration(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) (*s3.GetBucketAccelerateConfigurationOutput, error) {
@@ -1445,9 +1540,9 @@ func (a *S3Stub) GetBucketAccelerateConfiguration(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) *S3GetBucketAccelerateConfigurationResult {
+func (a *S3Stub) GetBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) *S3GetBucketAccelerateConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketAccelerateConfiguration", input)
-	return &S3GetBucketAccelerateConfigurationResult{Result: future}
+	return &S3GetBucketAccelerateConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketAcl(ctx workflow.Context, input *s3.GetBucketAclInput) (*s3.GetBucketAclOutput, error) {
@@ -1456,9 +1551,9 @@ func (a *S3Stub) GetBucketAcl(ctx workflow.Context, input *s3.GetBucketAclInput)
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketAclAsync(ctx workflow.Context, input *s3.GetBucketAclInput) *S3GetBucketAclResult {
+func (a *S3Stub) GetBucketAclAsync(ctx workflow.Context, input *s3.GetBucketAclInput) *S3GetBucketAclFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketAcl", input)
-	return &S3GetBucketAclResult{Result: future}
+	return &S3GetBucketAclFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) (*s3.GetBucketAnalyticsConfigurationOutput, error) {
@@ -1467,9 +1562,9 @@ func (a *S3Stub) GetBucketAnalyticsConfiguration(ctx workflow.Context, input *s3
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) *S3GetBucketAnalyticsConfigurationResult {
+func (a *S3Stub) GetBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) *S3GetBucketAnalyticsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketAnalyticsConfiguration", input)
-	return &S3GetBucketAnalyticsConfigurationResult{Result: future}
+	return &S3GetBucketAnalyticsConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketCors(ctx workflow.Context, input *s3.GetBucketCorsInput) (*s3.GetBucketCorsOutput, error) {
@@ -1478,9 +1573,9 @@ func (a *S3Stub) GetBucketCors(ctx workflow.Context, input *s3.GetBucketCorsInpu
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketCorsAsync(ctx workflow.Context, input *s3.GetBucketCorsInput) *S3GetBucketCorsResult {
+func (a *S3Stub) GetBucketCorsAsync(ctx workflow.Context, input *s3.GetBucketCorsInput) *S3GetBucketCorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketCors", input)
-	return &S3GetBucketCorsResult{Result: future}
+	return &S3GetBucketCorsFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketEncryption(ctx workflow.Context, input *s3.GetBucketEncryptionInput) (*s3.GetBucketEncryptionOutput, error) {
@@ -1489,9 +1584,9 @@ func (a *S3Stub) GetBucketEncryption(ctx workflow.Context, input *s3.GetBucketEn
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketEncryptionAsync(ctx workflow.Context, input *s3.GetBucketEncryptionInput) *S3GetBucketEncryptionResult {
+func (a *S3Stub) GetBucketEncryptionAsync(ctx workflow.Context, input *s3.GetBucketEncryptionInput) *S3GetBucketEncryptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketEncryption", input)
-	return &S3GetBucketEncryptionResult{Result: future}
+	return &S3GetBucketEncryptionFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketInventoryConfiguration(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) (*s3.GetBucketInventoryConfigurationOutput, error) {
@@ -1500,9 +1595,9 @@ func (a *S3Stub) GetBucketInventoryConfiguration(ctx workflow.Context, input *s3
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) *S3GetBucketInventoryConfigurationResult {
+func (a *S3Stub) GetBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) *S3GetBucketInventoryConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketInventoryConfiguration", input)
-	return &S3GetBucketInventoryConfigurationResult{Result: future}
+	return &S3GetBucketInventoryConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketLifecycle(ctx workflow.Context, input *s3.GetBucketLifecycleInput) (*s3.GetBucketLifecycleOutput, error) {
@@ -1511,9 +1606,9 @@ func (a *S3Stub) GetBucketLifecycle(ctx workflow.Context, input *s3.GetBucketLif
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketLifecycleAsync(ctx workflow.Context, input *s3.GetBucketLifecycleInput) *S3GetBucketLifecycleResult {
+func (a *S3Stub) GetBucketLifecycleAsync(ctx workflow.Context, input *s3.GetBucketLifecycleInput) *S3GetBucketLifecycleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketLifecycle", input)
-	return &S3GetBucketLifecycleResult{Result: future}
+	return &S3GetBucketLifecycleFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketLifecycleConfiguration(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) (*s3.GetBucketLifecycleConfigurationOutput, error) {
@@ -1522,9 +1617,9 @@ func (a *S3Stub) GetBucketLifecycleConfiguration(ctx workflow.Context, input *s3
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) *S3GetBucketLifecycleConfigurationResult {
+func (a *S3Stub) GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) *S3GetBucketLifecycleConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketLifecycleConfiguration", input)
-	return &S3GetBucketLifecycleConfigurationResult{Result: future}
+	return &S3GetBucketLifecycleConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketLocation(ctx workflow.Context, input *s3.GetBucketLocationInput) (*s3.GetBucketLocationOutput, error) {
@@ -1533,9 +1628,9 @@ func (a *S3Stub) GetBucketLocation(ctx workflow.Context, input *s3.GetBucketLoca
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketLocationAsync(ctx workflow.Context, input *s3.GetBucketLocationInput) *S3GetBucketLocationResult {
+func (a *S3Stub) GetBucketLocationAsync(ctx workflow.Context, input *s3.GetBucketLocationInput) *S3GetBucketLocationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketLocation", input)
-	return &S3GetBucketLocationResult{Result: future}
+	return &S3GetBucketLocationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketLogging(ctx workflow.Context, input *s3.GetBucketLoggingInput) (*s3.GetBucketLoggingOutput, error) {
@@ -1544,9 +1639,9 @@ func (a *S3Stub) GetBucketLogging(ctx workflow.Context, input *s3.GetBucketLoggi
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketLoggingAsync(ctx workflow.Context, input *s3.GetBucketLoggingInput) *S3GetBucketLoggingResult {
+func (a *S3Stub) GetBucketLoggingAsync(ctx workflow.Context, input *s3.GetBucketLoggingInput) *S3GetBucketLoggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketLogging", input)
-	return &S3GetBucketLoggingResult{Result: future}
+	return &S3GetBucketLoggingFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketMetricsConfiguration(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) (*s3.GetBucketMetricsConfigurationOutput, error) {
@@ -1555,9 +1650,9 @@ func (a *S3Stub) GetBucketMetricsConfiguration(ctx workflow.Context, input *s3.G
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) *S3GetBucketMetricsConfigurationResult {
+func (a *S3Stub) GetBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) *S3GetBucketMetricsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketMetricsConfiguration", input)
-	return &S3GetBucketMetricsConfigurationResult{Result: future}
+	return &S3GetBucketMetricsConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketNotification(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfigurationDeprecated, error) {
@@ -1566,9 +1661,9 @@ func (a *S3Stub) GetBucketNotification(ctx workflow.Context, input *s3.GetBucket
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketNotificationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationResult {
+func (a *S3Stub) GetBucketNotificationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketNotification", input)
-	return &S3GetBucketNotificationResult{Result: future}
+	return &S3GetBucketNotificationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketNotificationConfiguration(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfiguration, error) {
@@ -1577,9 +1672,9 @@ func (a *S3Stub) GetBucketNotificationConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationConfigurationResult {
+func (a *S3Stub) GetBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketNotificationConfiguration", input)
-	return &S3GetBucketNotificationConfigurationResult{Result: future}
+	return &S3GetBucketNotificationConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketOwnershipControls(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) (*s3.GetBucketOwnershipControlsOutput, error) {
@@ -1588,9 +1683,9 @@ func (a *S3Stub) GetBucketOwnershipControls(ctx workflow.Context, input *s3.GetB
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) *S3GetBucketOwnershipControlsResult {
+func (a *S3Stub) GetBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.GetBucketOwnershipControlsInput) *S3GetBucketOwnershipControlsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketOwnershipControls", input)
-	return &S3GetBucketOwnershipControlsResult{Result: future}
+	return &S3GetBucketOwnershipControlsFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketPolicy(ctx workflow.Context, input *s3.GetBucketPolicyInput) (*s3.GetBucketPolicyOutput, error) {
@@ -1599,9 +1694,9 @@ func (a *S3Stub) GetBucketPolicy(ctx workflow.Context, input *s3.GetBucketPolicy
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketPolicyAsync(ctx workflow.Context, input *s3.GetBucketPolicyInput) *S3GetBucketPolicyResult {
+func (a *S3Stub) GetBucketPolicyAsync(ctx workflow.Context, input *s3.GetBucketPolicyInput) *S3GetBucketPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketPolicy", input)
-	return &S3GetBucketPolicyResult{Result: future}
+	return &S3GetBucketPolicyFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketPolicyStatus(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) (*s3.GetBucketPolicyStatusOutput, error) {
@@ -1610,9 +1705,9 @@ func (a *S3Stub) GetBucketPolicyStatus(ctx workflow.Context, input *s3.GetBucket
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketPolicyStatusAsync(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) *S3GetBucketPolicyStatusResult {
+func (a *S3Stub) GetBucketPolicyStatusAsync(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) *S3GetBucketPolicyStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketPolicyStatus", input)
-	return &S3GetBucketPolicyStatusResult{Result: future}
+	return &S3GetBucketPolicyStatusFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketReplication(ctx workflow.Context, input *s3.GetBucketReplicationInput) (*s3.GetBucketReplicationOutput, error) {
@@ -1621,9 +1716,9 @@ func (a *S3Stub) GetBucketReplication(ctx workflow.Context, input *s3.GetBucketR
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketReplicationAsync(ctx workflow.Context, input *s3.GetBucketReplicationInput) *S3GetBucketReplicationResult {
+func (a *S3Stub) GetBucketReplicationAsync(ctx workflow.Context, input *s3.GetBucketReplicationInput) *S3GetBucketReplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketReplication", input)
-	return &S3GetBucketReplicationResult{Result: future}
+	return &S3GetBucketReplicationFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketRequestPayment(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) (*s3.GetBucketRequestPaymentOutput, error) {
@@ -1632,9 +1727,9 @@ func (a *S3Stub) GetBucketRequestPayment(ctx workflow.Context, input *s3.GetBuck
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketRequestPaymentAsync(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) *S3GetBucketRequestPaymentResult {
+func (a *S3Stub) GetBucketRequestPaymentAsync(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) *S3GetBucketRequestPaymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketRequestPayment", input)
-	return &S3GetBucketRequestPaymentResult{Result: future}
+	return &S3GetBucketRequestPaymentFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketTagging(ctx workflow.Context, input *s3.GetBucketTaggingInput) (*s3.GetBucketTaggingOutput, error) {
@@ -1643,9 +1738,9 @@ func (a *S3Stub) GetBucketTagging(ctx workflow.Context, input *s3.GetBucketTaggi
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketTaggingAsync(ctx workflow.Context, input *s3.GetBucketTaggingInput) *S3GetBucketTaggingResult {
+func (a *S3Stub) GetBucketTaggingAsync(ctx workflow.Context, input *s3.GetBucketTaggingInput) *S3GetBucketTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketTagging", input)
-	return &S3GetBucketTaggingResult{Result: future}
+	return &S3GetBucketTaggingFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketVersioning(ctx workflow.Context, input *s3.GetBucketVersioningInput) (*s3.GetBucketVersioningOutput, error) {
@@ -1654,9 +1749,9 @@ func (a *S3Stub) GetBucketVersioning(ctx workflow.Context, input *s3.GetBucketVe
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketVersioningAsync(ctx workflow.Context, input *s3.GetBucketVersioningInput) *S3GetBucketVersioningResult {
+func (a *S3Stub) GetBucketVersioningAsync(ctx workflow.Context, input *s3.GetBucketVersioningInput) *S3GetBucketVersioningFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketVersioning", input)
-	return &S3GetBucketVersioningResult{Result: future}
+	return &S3GetBucketVersioningFuture{Future: future}
 }
 
 func (a *S3Stub) GetBucketWebsite(ctx workflow.Context, input *s3.GetBucketWebsiteInput) (*s3.GetBucketWebsiteOutput, error) {
@@ -1665,9 +1760,9 @@ func (a *S3Stub) GetBucketWebsite(ctx workflow.Context, input *s3.GetBucketWebsi
 	return &output, err
 }
 
-func (a *S3Stub) GetBucketWebsiteAsync(ctx workflow.Context, input *s3.GetBucketWebsiteInput) *S3GetBucketWebsiteResult {
+func (a *S3Stub) GetBucketWebsiteAsync(ctx workflow.Context, input *s3.GetBucketWebsiteInput) *S3GetBucketWebsiteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetBucketWebsite", input)
-	return &S3GetBucketWebsiteResult{Result: future}
+	return &S3GetBucketWebsiteFuture{Future: future}
 }
 
 func (a *S3Stub) GetObject(ctx workflow.Context, input *s3.GetObjectInput) (*s3.GetObjectOutput, error) {
@@ -1676,9 +1771,9 @@ func (a *S3Stub) GetObject(ctx workflow.Context, input *s3.GetObjectInput) (*s3.
 	return &output, err
 }
 
-func (a *S3Stub) GetObjectAsync(ctx workflow.Context, input *s3.GetObjectInput) *S3GetObjectResult {
+func (a *S3Stub) GetObjectAsync(ctx workflow.Context, input *s3.GetObjectInput) *S3GetObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetObject", input)
-	return &S3GetObjectResult{Result: future}
+	return &S3GetObjectFuture{Future: future}
 }
 
 func (a *S3Stub) GetObjectAcl(ctx workflow.Context, input *s3.GetObjectAclInput) (*s3.GetObjectAclOutput, error) {
@@ -1687,9 +1782,9 @@ func (a *S3Stub) GetObjectAcl(ctx workflow.Context, input *s3.GetObjectAclInput)
 	return &output, err
 }
 
-func (a *S3Stub) GetObjectAclAsync(ctx workflow.Context, input *s3.GetObjectAclInput) *S3GetObjectAclResult {
+func (a *S3Stub) GetObjectAclAsync(ctx workflow.Context, input *s3.GetObjectAclInput) *S3GetObjectAclFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetObjectAcl", input)
-	return &S3GetObjectAclResult{Result: future}
+	return &S3GetObjectAclFuture{Future: future}
 }
 
 func (a *S3Stub) GetObjectLegalHold(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) (*s3.GetObjectLegalHoldOutput, error) {
@@ -1698,9 +1793,9 @@ func (a *S3Stub) GetObjectLegalHold(ctx workflow.Context, input *s3.GetObjectLeg
 	return &output, err
 }
 
-func (a *S3Stub) GetObjectLegalHoldAsync(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) *S3GetObjectLegalHoldResult {
+func (a *S3Stub) GetObjectLegalHoldAsync(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) *S3GetObjectLegalHoldFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetObjectLegalHold", input)
-	return &S3GetObjectLegalHoldResult{Result: future}
+	return &S3GetObjectLegalHoldFuture{Future: future}
 }
 
 func (a *S3Stub) GetObjectLockConfiguration(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) (*s3.GetObjectLockConfigurationOutput, error) {
@@ -1709,9 +1804,9 @@ func (a *S3Stub) GetObjectLockConfiguration(ctx workflow.Context, input *s3.GetO
 	return &output, err
 }
 
-func (a *S3Stub) GetObjectLockConfigurationAsync(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) *S3GetObjectLockConfigurationResult {
+func (a *S3Stub) GetObjectLockConfigurationAsync(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) *S3GetObjectLockConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetObjectLockConfiguration", input)
-	return &S3GetObjectLockConfigurationResult{Result: future}
+	return &S3GetObjectLockConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) GetObjectRetention(ctx workflow.Context, input *s3.GetObjectRetentionInput) (*s3.GetObjectRetentionOutput, error) {
@@ -1720,9 +1815,9 @@ func (a *S3Stub) GetObjectRetention(ctx workflow.Context, input *s3.GetObjectRet
 	return &output, err
 }
 
-func (a *S3Stub) GetObjectRetentionAsync(ctx workflow.Context, input *s3.GetObjectRetentionInput) *S3GetObjectRetentionResult {
+func (a *S3Stub) GetObjectRetentionAsync(ctx workflow.Context, input *s3.GetObjectRetentionInput) *S3GetObjectRetentionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetObjectRetention", input)
-	return &S3GetObjectRetentionResult{Result: future}
+	return &S3GetObjectRetentionFuture{Future: future}
 }
 
 func (a *S3Stub) GetObjectTagging(ctx workflow.Context, input *s3.GetObjectTaggingInput) (*s3.GetObjectTaggingOutput, error) {
@@ -1731,9 +1826,9 @@ func (a *S3Stub) GetObjectTagging(ctx workflow.Context, input *s3.GetObjectTaggi
 	return &output, err
 }
 
-func (a *S3Stub) GetObjectTaggingAsync(ctx workflow.Context, input *s3.GetObjectTaggingInput) *S3GetObjectTaggingResult {
+func (a *S3Stub) GetObjectTaggingAsync(ctx workflow.Context, input *s3.GetObjectTaggingInput) *S3GetObjectTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetObjectTagging", input)
-	return &S3GetObjectTaggingResult{Result: future}
+	return &S3GetObjectTaggingFuture{Future: future}
 }
 
 func (a *S3Stub) GetObjectTorrent(ctx workflow.Context, input *s3.GetObjectTorrentInput) (*s3.GetObjectTorrentOutput, error) {
@@ -1742,9 +1837,9 @@ func (a *S3Stub) GetObjectTorrent(ctx workflow.Context, input *s3.GetObjectTorre
 	return &output, err
 }
 
-func (a *S3Stub) GetObjectTorrentAsync(ctx workflow.Context, input *s3.GetObjectTorrentInput) *S3GetObjectTorrentResult {
+func (a *S3Stub) GetObjectTorrentAsync(ctx workflow.Context, input *s3.GetObjectTorrentInput) *S3GetObjectTorrentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetObjectTorrent", input)
-	return &S3GetObjectTorrentResult{Result: future}
+	return &S3GetObjectTorrentFuture{Future: future}
 }
 
 func (a *S3Stub) GetPublicAccessBlock(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) (*s3.GetPublicAccessBlockOutput, error) {
@@ -1753,9 +1848,9 @@ func (a *S3Stub) GetPublicAccessBlock(ctx workflow.Context, input *s3.GetPublicA
 	return &output, err
 }
 
-func (a *S3Stub) GetPublicAccessBlockAsync(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) *S3GetPublicAccessBlockResult {
+func (a *S3Stub) GetPublicAccessBlockAsync(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) *S3GetPublicAccessBlockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.GetPublicAccessBlock", input)
-	return &S3GetPublicAccessBlockResult{Result: future}
+	return &S3GetPublicAccessBlockFuture{Future: future}
 }
 
 func (a *S3Stub) HeadBucket(ctx workflow.Context, input *s3.HeadBucketInput) (*s3.HeadBucketOutput, error) {
@@ -1764,9 +1859,9 @@ func (a *S3Stub) HeadBucket(ctx workflow.Context, input *s3.HeadBucketInput) (*s
 	return &output, err
 }
 
-func (a *S3Stub) HeadBucketAsync(ctx workflow.Context, input *s3.HeadBucketInput) *S3HeadBucketResult {
+func (a *S3Stub) HeadBucketAsync(ctx workflow.Context, input *s3.HeadBucketInput) *S3HeadBucketFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.HeadBucket", input)
-	return &S3HeadBucketResult{Result: future}
+	return &S3HeadBucketFuture{Future: future}
 }
 
 func (a *S3Stub) HeadObject(ctx workflow.Context, input *s3.HeadObjectInput) (*s3.HeadObjectOutput, error) {
@@ -1775,9 +1870,9 @@ func (a *S3Stub) HeadObject(ctx workflow.Context, input *s3.HeadObjectInput) (*s
 	return &output, err
 }
 
-func (a *S3Stub) HeadObjectAsync(ctx workflow.Context, input *s3.HeadObjectInput) *S3HeadObjectResult {
+func (a *S3Stub) HeadObjectAsync(ctx workflow.Context, input *s3.HeadObjectInput) *S3HeadObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.HeadObject", input)
-	return &S3HeadObjectResult{Result: future}
+	return &S3HeadObjectFuture{Future: future}
 }
 
 func (a *S3Stub) ListBucketAnalyticsConfigurations(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) (*s3.ListBucketAnalyticsConfigurationsOutput, error) {
@@ -1786,9 +1881,9 @@ func (a *S3Stub) ListBucketAnalyticsConfigurations(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *S3Stub) ListBucketAnalyticsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) *S3ListBucketAnalyticsConfigurationsResult {
+func (a *S3Stub) ListBucketAnalyticsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) *S3ListBucketAnalyticsConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListBucketAnalyticsConfigurations", input)
-	return &S3ListBucketAnalyticsConfigurationsResult{Result: future}
+	return &S3ListBucketAnalyticsConfigurationsFuture{Future: future}
 }
 
 func (a *S3Stub) ListBucketInventoryConfigurations(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) (*s3.ListBucketInventoryConfigurationsOutput, error) {
@@ -1797,9 +1892,9 @@ func (a *S3Stub) ListBucketInventoryConfigurations(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *S3Stub) ListBucketInventoryConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) *S3ListBucketInventoryConfigurationsResult {
+func (a *S3Stub) ListBucketInventoryConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) *S3ListBucketInventoryConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListBucketInventoryConfigurations", input)
-	return &S3ListBucketInventoryConfigurationsResult{Result: future}
+	return &S3ListBucketInventoryConfigurationsFuture{Future: future}
 }
 
 func (a *S3Stub) ListBucketMetricsConfigurations(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) (*s3.ListBucketMetricsConfigurationsOutput, error) {
@@ -1808,9 +1903,9 @@ func (a *S3Stub) ListBucketMetricsConfigurations(ctx workflow.Context, input *s3
 	return &output, err
 }
 
-func (a *S3Stub) ListBucketMetricsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) *S3ListBucketMetricsConfigurationsResult {
+func (a *S3Stub) ListBucketMetricsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) *S3ListBucketMetricsConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListBucketMetricsConfigurations", input)
-	return &S3ListBucketMetricsConfigurationsResult{Result: future}
+	return &S3ListBucketMetricsConfigurationsFuture{Future: future}
 }
 
 func (a *S3Stub) ListBuckets(ctx workflow.Context, input *s3.ListBucketsInput) (*s3.ListBucketsOutput, error) {
@@ -1819,9 +1914,9 @@ func (a *S3Stub) ListBuckets(ctx workflow.Context, input *s3.ListBucketsInput) (
 	return &output, err
 }
 
-func (a *S3Stub) ListBucketsAsync(ctx workflow.Context, input *s3.ListBucketsInput) *S3ListBucketsResult {
+func (a *S3Stub) ListBucketsAsync(ctx workflow.Context, input *s3.ListBucketsInput) *S3ListBucketsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListBuckets", input)
-	return &S3ListBucketsResult{Result: future}
+	return &S3ListBucketsFuture{Future: future}
 }
 
 func (a *S3Stub) ListMultipartUploads(ctx workflow.Context, input *s3.ListMultipartUploadsInput) (*s3.ListMultipartUploadsOutput, error) {
@@ -1830,9 +1925,9 @@ func (a *S3Stub) ListMultipartUploads(ctx workflow.Context, input *s3.ListMultip
 	return &output, err
 }
 
-func (a *S3Stub) ListMultipartUploadsAsync(ctx workflow.Context, input *s3.ListMultipartUploadsInput) *S3ListMultipartUploadsResult {
+func (a *S3Stub) ListMultipartUploadsAsync(ctx workflow.Context, input *s3.ListMultipartUploadsInput) *S3ListMultipartUploadsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListMultipartUploads", input)
-	return &S3ListMultipartUploadsResult{Result: future}
+	return &S3ListMultipartUploadsFuture{Future: future}
 }
 
 func (a *S3Stub) ListObjectVersions(ctx workflow.Context, input *s3.ListObjectVersionsInput) (*s3.ListObjectVersionsOutput, error) {
@@ -1841,9 +1936,9 @@ func (a *S3Stub) ListObjectVersions(ctx workflow.Context, input *s3.ListObjectVe
 	return &output, err
 }
 
-func (a *S3Stub) ListObjectVersionsAsync(ctx workflow.Context, input *s3.ListObjectVersionsInput) *S3ListObjectVersionsResult {
+func (a *S3Stub) ListObjectVersionsAsync(ctx workflow.Context, input *s3.ListObjectVersionsInput) *S3ListObjectVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListObjectVersions", input)
-	return &S3ListObjectVersionsResult{Result: future}
+	return &S3ListObjectVersionsFuture{Future: future}
 }
 
 func (a *S3Stub) ListObjects(ctx workflow.Context, input *s3.ListObjectsInput) (*s3.ListObjectsOutput, error) {
@@ -1852,9 +1947,9 @@ func (a *S3Stub) ListObjects(ctx workflow.Context, input *s3.ListObjectsInput) (
 	return &output, err
 }
 
-func (a *S3Stub) ListObjectsAsync(ctx workflow.Context, input *s3.ListObjectsInput) *S3ListObjectsResult {
+func (a *S3Stub) ListObjectsAsync(ctx workflow.Context, input *s3.ListObjectsInput) *S3ListObjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListObjects", input)
-	return &S3ListObjectsResult{Result: future}
+	return &S3ListObjectsFuture{Future: future}
 }
 
 func (a *S3Stub) ListObjectsV2(ctx workflow.Context, input *s3.ListObjectsV2Input) (*s3.ListObjectsV2Output, error) {
@@ -1863,9 +1958,9 @@ func (a *S3Stub) ListObjectsV2(ctx workflow.Context, input *s3.ListObjectsV2Inpu
 	return &output, err
 }
 
-func (a *S3Stub) ListObjectsV2Async(ctx workflow.Context, input *s3.ListObjectsV2Input) *S3ListObjectsV2Result {
+func (a *S3Stub) ListObjectsV2Async(ctx workflow.Context, input *s3.ListObjectsV2Input) *S3ListObjectsV2Future {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListObjectsV2", input)
-	return &S3ListObjectsV2Result{Result: future}
+	return &S3ListObjectsV2Future{Future: future}
 }
 
 func (a *S3Stub) ListParts(ctx workflow.Context, input *s3.ListPartsInput) (*s3.ListPartsOutput, error) {
@@ -1874,9 +1969,9 @@ func (a *S3Stub) ListParts(ctx workflow.Context, input *s3.ListPartsInput) (*s3.
 	return &output, err
 }
 
-func (a *S3Stub) ListPartsAsync(ctx workflow.Context, input *s3.ListPartsInput) *S3ListPartsResult {
+func (a *S3Stub) ListPartsAsync(ctx workflow.Context, input *s3.ListPartsInput) *S3ListPartsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.ListParts", input)
-	return &S3ListPartsResult{Result: future}
+	return &S3ListPartsFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketAccelerateConfiguration(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) (*s3.PutBucketAccelerateConfigurationOutput, error) {
@@ -1885,9 +1980,9 @@ func (a *S3Stub) PutBucketAccelerateConfiguration(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) *S3PutBucketAccelerateConfigurationResult {
+func (a *S3Stub) PutBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) *S3PutBucketAccelerateConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketAccelerateConfiguration", input)
-	return &S3PutBucketAccelerateConfigurationResult{Result: future}
+	return &S3PutBucketAccelerateConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketAcl(ctx workflow.Context, input *s3.PutBucketAclInput) (*s3.PutBucketAclOutput, error) {
@@ -1896,9 +1991,9 @@ func (a *S3Stub) PutBucketAcl(ctx workflow.Context, input *s3.PutBucketAclInput)
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketAclAsync(ctx workflow.Context, input *s3.PutBucketAclInput) *S3PutBucketAclResult {
+func (a *S3Stub) PutBucketAclAsync(ctx workflow.Context, input *s3.PutBucketAclInput) *S3PutBucketAclFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketAcl", input)
-	return &S3PutBucketAclResult{Result: future}
+	return &S3PutBucketAclFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) (*s3.PutBucketAnalyticsConfigurationOutput, error) {
@@ -1907,9 +2002,9 @@ func (a *S3Stub) PutBucketAnalyticsConfiguration(ctx workflow.Context, input *s3
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) *S3PutBucketAnalyticsConfigurationResult {
+func (a *S3Stub) PutBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) *S3PutBucketAnalyticsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketAnalyticsConfiguration", input)
-	return &S3PutBucketAnalyticsConfigurationResult{Result: future}
+	return &S3PutBucketAnalyticsConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketCors(ctx workflow.Context, input *s3.PutBucketCorsInput) (*s3.PutBucketCorsOutput, error) {
@@ -1918,9 +2013,9 @@ func (a *S3Stub) PutBucketCors(ctx workflow.Context, input *s3.PutBucketCorsInpu
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketCorsAsync(ctx workflow.Context, input *s3.PutBucketCorsInput) *S3PutBucketCorsResult {
+func (a *S3Stub) PutBucketCorsAsync(ctx workflow.Context, input *s3.PutBucketCorsInput) *S3PutBucketCorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketCors", input)
-	return &S3PutBucketCorsResult{Result: future}
+	return &S3PutBucketCorsFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketEncryption(ctx workflow.Context, input *s3.PutBucketEncryptionInput) (*s3.PutBucketEncryptionOutput, error) {
@@ -1929,9 +2024,9 @@ func (a *S3Stub) PutBucketEncryption(ctx workflow.Context, input *s3.PutBucketEn
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketEncryptionAsync(ctx workflow.Context, input *s3.PutBucketEncryptionInput) *S3PutBucketEncryptionResult {
+func (a *S3Stub) PutBucketEncryptionAsync(ctx workflow.Context, input *s3.PutBucketEncryptionInput) *S3PutBucketEncryptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketEncryption", input)
-	return &S3PutBucketEncryptionResult{Result: future}
+	return &S3PutBucketEncryptionFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketInventoryConfiguration(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) (*s3.PutBucketInventoryConfigurationOutput, error) {
@@ -1940,9 +2035,9 @@ func (a *S3Stub) PutBucketInventoryConfiguration(ctx workflow.Context, input *s3
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) *S3PutBucketInventoryConfigurationResult {
+func (a *S3Stub) PutBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) *S3PutBucketInventoryConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketInventoryConfiguration", input)
-	return &S3PutBucketInventoryConfigurationResult{Result: future}
+	return &S3PutBucketInventoryConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketLifecycle(ctx workflow.Context, input *s3.PutBucketLifecycleInput) (*s3.PutBucketLifecycleOutput, error) {
@@ -1951,9 +2046,9 @@ func (a *S3Stub) PutBucketLifecycle(ctx workflow.Context, input *s3.PutBucketLif
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketLifecycleAsync(ctx workflow.Context, input *s3.PutBucketLifecycleInput) *S3PutBucketLifecycleResult {
+func (a *S3Stub) PutBucketLifecycleAsync(ctx workflow.Context, input *s3.PutBucketLifecycleInput) *S3PutBucketLifecycleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketLifecycle", input)
-	return &S3PutBucketLifecycleResult{Result: future}
+	return &S3PutBucketLifecycleFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketLifecycleConfiguration(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) (*s3.PutBucketLifecycleConfigurationOutput, error) {
@@ -1962,9 +2057,9 @@ func (a *S3Stub) PutBucketLifecycleConfiguration(ctx workflow.Context, input *s3
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) *S3PutBucketLifecycleConfigurationResult {
+func (a *S3Stub) PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) *S3PutBucketLifecycleConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketLifecycleConfiguration", input)
-	return &S3PutBucketLifecycleConfigurationResult{Result: future}
+	return &S3PutBucketLifecycleConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketLogging(ctx workflow.Context, input *s3.PutBucketLoggingInput) (*s3.PutBucketLoggingOutput, error) {
@@ -1973,9 +2068,9 @@ func (a *S3Stub) PutBucketLogging(ctx workflow.Context, input *s3.PutBucketLoggi
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketLoggingAsync(ctx workflow.Context, input *s3.PutBucketLoggingInput) *S3PutBucketLoggingResult {
+func (a *S3Stub) PutBucketLoggingAsync(ctx workflow.Context, input *s3.PutBucketLoggingInput) *S3PutBucketLoggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketLogging", input)
-	return &S3PutBucketLoggingResult{Result: future}
+	return &S3PutBucketLoggingFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketMetricsConfiguration(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) (*s3.PutBucketMetricsConfigurationOutput, error) {
@@ -1984,9 +2079,9 @@ func (a *S3Stub) PutBucketMetricsConfiguration(ctx workflow.Context, input *s3.P
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) *S3PutBucketMetricsConfigurationResult {
+func (a *S3Stub) PutBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) *S3PutBucketMetricsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketMetricsConfiguration", input)
-	return &S3PutBucketMetricsConfigurationResult{Result: future}
+	return &S3PutBucketMetricsConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketNotification(ctx workflow.Context, input *s3.PutBucketNotificationInput) (*s3.PutBucketNotificationOutput, error) {
@@ -1995,9 +2090,9 @@ func (a *S3Stub) PutBucketNotification(ctx workflow.Context, input *s3.PutBucket
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketNotificationAsync(ctx workflow.Context, input *s3.PutBucketNotificationInput) *S3PutBucketNotificationResult {
+func (a *S3Stub) PutBucketNotificationAsync(ctx workflow.Context, input *s3.PutBucketNotificationInput) *S3PutBucketNotificationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketNotification", input)
-	return &S3PutBucketNotificationResult{Result: future}
+	return &S3PutBucketNotificationFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketNotificationConfiguration(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) (*s3.PutBucketNotificationConfigurationOutput, error) {
@@ -2006,9 +2101,9 @@ func (a *S3Stub) PutBucketNotificationConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) *S3PutBucketNotificationConfigurationResult {
+func (a *S3Stub) PutBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) *S3PutBucketNotificationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketNotificationConfiguration", input)
-	return &S3PutBucketNotificationConfigurationResult{Result: future}
+	return &S3PutBucketNotificationConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketOwnershipControls(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) (*s3.PutBucketOwnershipControlsOutput, error) {
@@ -2017,9 +2112,9 @@ func (a *S3Stub) PutBucketOwnershipControls(ctx workflow.Context, input *s3.PutB
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) *S3PutBucketOwnershipControlsResult {
+func (a *S3Stub) PutBucketOwnershipControlsAsync(ctx workflow.Context, input *s3.PutBucketOwnershipControlsInput) *S3PutBucketOwnershipControlsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketOwnershipControls", input)
-	return &S3PutBucketOwnershipControlsResult{Result: future}
+	return &S3PutBucketOwnershipControlsFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketPolicy(ctx workflow.Context, input *s3.PutBucketPolicyInput) (*s3.PutBucketPolicyOutput, error) {
@@ -2028,9 +2123,9 @@ func (a *S3Stub) PutBucketPolicy(ctx workflow.Context, input *s3.PutBucketPolicy
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketPolicyAsync(ctx workflow.Context, input *s3.PutBucketPolicyInput) *S3PutBucketPolicyResult {
+func (a *S3Stub) PutBucketPolicyAsync(ctx workflow.Context, input *s3.PutBucketPolicyInput) *S3PutBucketPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketPolicy", input)
-	return &S3PutBucketPolicyResult{Result: future}
+	return &S3PutBucketPolicyFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketReplication(ctx workflow.Context, input *s3.PutBucketReplicationInput) (*s3.PutBucketReplicationOutput, error) {
@@ -2039,9 +2134,9 @@ func (a *S3Stub) PutBucketReplication(ctx workflow.Context, input *s3.PutBucketR
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketReplicationAsync(ctx workflow.Context, input *s3.PutBucketReplicationInput) *S3PutBucketReplicationResult {
+func (a *S3Stub) PutBucketReplicationAsync(ctx workflow.Context, input *s3.PutBucketReplicationInput) *S3PutBucketReplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketReplication", input)
-	return &S3PutBucketReplicationResult{Result: future}
+	return &S3PutBucketReplicationFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketRequestPayment(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) (*s3.PutBucketRequestPaymentOutput, error) {
@@ -2050,9 +2145,9 @@ func (a *S3Stub) PutBucketRequestPayment(ctx workflow.Context, input *s3.PutBuck
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketRequestPaymentAsync(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) *S3PutBucketRequestPaymentResult {
+func (a *S3Stub) PutBucketRequestPaymentAsync(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) *S3PutBucketRequestPaymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketRequestPayment", input)
-	return &S3PutBucketRequestPaymentResult{Result: future}
+	return &S3PutBucketRequestPaymentFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketTagging(ctx workflow.Context, input *s3.PutBucketTaggingInput) (*s3.PutBucketTaggingOutput, error) {
@@ -2061,9 +2156,9 @@ func (a *S3Stub) PutBucketTagging(ctx workflow.Context, input *s3.PutBucketTaggi
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketTaggingAsync(ctx workflow.Context, input *s3.PutBucketTaggingInput) *S3PutBucketTaggingResult {
+func (a *S3Stub) PutBucketTaggingAsync(ctx workflow.Context, input *s3.PutBucketTaggingInput) *S3PutBucketTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketTagging", input)
-	return &S3PutBucketTaggingResult{Result: future}
+	return &S3PutBucketTaggingFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketVersioning(ctx workflow.Context, input *s3.PutBucketVersioningInput) (*s3.PutBucketVersioningOutput, error) {
@@ -2072,9 +2167,9 @@ func (a *S3Stub) PutBucketVersioning(ctx workflow.Context, input *s3.PutBucketVe
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketVersioningAsync(ctx workflow.Context, input *s3.PutBucketVersioningInput) *S3PutBucketVersioningResult {
+func (a *S3Stub) PutBucketVersioningAsync(ctx workflow.Context, input *s3.PutBucketVersioningInput) *S3PutBucketVersioningFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketVersioning", input)
-	return &S3PutBucketVersioningResult{Result: future}
+	return &S3PutBucketVersioningFuture{Future: future}
 }
 
 func (a *S3Stub) PutBucketWebsite(ctx workflow.Context, input *s3.PutBucketWebsiteInput) (*s3.PutBucketWebsiteOutput, error) {
@@ -2083,9 +2178,9 @@ func (a *S3Stub) PutBucketWebsite(ctx workflow.Context, input *s3.PutBucketWebsi
 	return &output, err
 }
 
-func (a *S3Stub) PutBucketWebsiteAsync(ctx workflow.Context, input *s3.PutBucketWebsiteInput) *S3PutBucketWebsiteResult {
+func (a *S3Stub) PutBucketWebsiteAsync(ctx workflow.Context, input *s3.PutBucketWebsiteInput) *S3PutBucketWebsiteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutBucketWebsite", input)
-	return &S3PutBucketWebsiteResult{Result: future}
+	return &S3PutBucketWebsiteFuture{Future: future}
 }
 
 func (a *S3Stub) PutObject(ctx workflow.Context, input *s3.PutObjectInput) (*s3.PutObjectOutput, error) {
@@ -2094,9 +2189,9 @@ func (a *S3Stub) PutObject(ctx workflow.Context, input *s3.PutObjectInput) (*s3.
 	return &output, err
 }
 
-func (a *S3Stub) PutObjectAsync(ctx workflow.Context, input *s3.PutObjectInput) *S3PutObjectResult {
+func (a *S3Stub) PutObjectAsync(ctx workflow.Context, input *s3.PutObjectInput) *S3PutObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutObject", input)
-	return &S3PutObjectResult{Result: future}
+	return &S3PutObjectFuture{Future: future}
 }
 
 func (a *S3Stub) PutObjectAcl(ctx workflow.Context, input *s3.PutObjectAclInput) (*s3.PutObjectAclOutput, error) {
@@ -2105,9 +2200,9 @@ func (a *S3Stub) PutObjectAcl(ctx workflow.Context, input *s3.PutObjectAclInput)
 	return &output, err
 }
 
-func (a *S3Stub) PutObjectAclAsync(ctx workflow.Context, input *s3.PutObjectAclInput) *S3PutObjectAclResult {
+func (a *S3Stub) PutObjectAclAsync(ctx workflow.Context, input *s3.PutObjectAclInput) *S3PutObjectAclFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutObjectAcl", input)
-	return &S3PutObjectAclResult{Result: future}
+	return &S3PutObjectAclFuture{Future: future}
 }
 
 func (a *S3Stub) PutObjectLegalHold(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) (*s3.PutObjectLegalHoldOutput, error) {
@@ -2116,9 +2211,9 @@ func (a *S3Stub) PutObjectLegalHold(ctx workflow.Context, input *s3.PutObjectLeg
 	return &output, err
 }
 
-func (a *S3Stub) PutObjectLegalHoldAsync(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) *S3PutObjectLegalHoldResult {
+func (a *S3Stub) PutObjectLegalHoldAsync(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) *S3PutObjectLegalHoldFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutObjectLegalHold", input)
-	return &S3PutObjectLegalHoldResult{Result: future}
+	return &S3PutObjectLegalHoldFuture{Future: future}
 }
 
 func (a *S3Stub) PutObjectLockConfiguration(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) (*s3.PutObjectLockConfigurationOutput, error) {
@@ -2127,9 +2222,9 @@ func (a *S3Stub) PutObjectLockConfiguration(ctx workflow.Context, input *s3.PutO
 	return &output, err
 }
 
-func (a *S3Stub) PutObjectLockConfigurationAsync(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) *S3PutObjectLockConfigurationResult {
+func (a *S3Stub) PutObjectLockConfigurationAsync(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) *S3PutObjectLockConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutObjectLockConfiguration", input)
-	return &S3PutObjectLockConfigurationResult{Result: future}
+	return &S3PutObjectLockConfigurationFuture{Future: future}
 }
 
 func (a *S3Stub) PutObjectRetention(ctx workflow.Context, input *s3.PutObjectRetentionInput) (*s3.PutObjectRetentionOutput, error) {
@@ -2138,9 +2233,9 @@ func (a *S3Stub) PutObjectRetention(ctx workflow.Context, input *s3.PutObjectRet
 	return &output, err
 }
 
-func (a *S3Stub) PutObjectRetentionAsync(ctx workflow.Context, input *s3.PutObjectRetentionInput) *S3PutObjectRetentionResult {
+func (a *S3Stub) PutObjectRetentionAsync(ctx workflow.Context, input *s3.PutObjectRetentionInput) *S3PutObjectRetentionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutObjectRetention", input)
-	return &S3PutObjectRetentionResult{Result: future}
+	return &S3PutObjectRetentionFuture{Future: future}
 }
 
 func (a *S3Stub) PutObjectTagging(ctx workflow.Context, input *s3.PutObjectTaggingInput) (*s3.PutObjectTaggingOutput, error) {
@@ -2149,9 +2244,9 @@ func (a *S3Stub) PutObjectTagging(ctx workflow.Context, input *s3.PutObjectTaggi
 	return &output, err
 }
 
-func (a *S3Stub) PutObjectTaggingAsync(ctx workflow.Context, input *s3.PutObjectTaggingInput) *S3PutObjectTaggingResult {
+func (a *S3Stub) PutObjectTaggingAsync(ctx workflow.Context, input *s3.PutObjectTaggingInput) *S3PutObjectTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutObjectTagging", input)
-	return &S3PutObjectTaggingResult{Result: future}
+	return &S3PutObjectTaggingFuture{Future: future}
 }
 
 func (a *S3Stub) PutPublicAccessBlock(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) (*s3.PutPublicAccessBlockOutput, error) {
@@ -2160,9 +2255,9 @@ func (a *S3Stub) PutPublicAccessBlock(ctx workflow.Context, input *s3.PutPublicA
 	return &output, err
 }
 
-func (a *S3Stub) PutPublicAccessBlockAsync(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) *S3PutPublicAccessBlockResult {
+func (a *S3Stub) PutPublicAccessBlockAsync(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) *S3PutPublicAccessBlockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.PutPublicAccessBlock", input)
-	return &S3PutPublicAccessBlockResult{Result: future}
+	return &S3PutPublicAccessBlockFuture{Future: future}
 }
 
 func (a *S3Stub) RestoreObject(ctx workflow.Context, input *s3.RestoreObjectInput) (*s3.RestoreObjectOutput, error) {
@@ -2171,9 +2266,9 @@ func (a *S3Stub) RestoreObject(ctx workflow.Context, input *s3.RestoreObjectInpu
 	return &output, err
 }
 
-func (a *S3Stub) RestoreObjectAsync(ctx workflow.Context, input *s3.RestoreObjectInput) *S3RestoreObjectResult {
+func (a *S3Stub) RestoreObjectAsync(ctx workflow.Context, input *s3.RestoreObjectInput) *S3RestoreObjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.RestoreObject", input)
-	return &S3RestoreObjectResult{Result: future}
+	return &S3RestoreObjectFuture{Future: future}
 }
 
 func (a *S3Stub) SelectObjectContent(ctx workflow.Context, input *s3.SelectObjectContentInput) (*s3.SelectObjectContentOutput, error) {
@@ -2182,9 +2277,9 @@ func (a *S3Stub) SelectObjectContent(ctx workflow.Context, input *s3.SelectObjec
 	return &output, err
 }
 
-func (a *S3Stub) SelectObjectContentAsync(ctx workflow.Context, input *s3.SelectObjectContentInput) *S3SelectObjectContentResult {
+func (a *S3Stub) SelectObjectContentAsync(ctx workflow.Context, input *s3.SelectObjectContentInput) *S3SelectObjectContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.SelectObjectContent", input)
-	return &S3SelectObjectContentResult{Result: future}
+	return &S3SelectObjectContentFuture{Future: future}
 }
 
 func (a *S3Stub) UploadPart(ctx workflow.Context, input *s3.UploadPartInput) (*s3.UploadPartOutput, error) {
@@ -2193,9 +2288,9 @@ func (a *S3Stub) UploadPart(ctx workflow.Context, input *s3.UploadPartInput) (*s
 	return &output, err
 }
 
-func (a *S3Stub) UploadPartAsync(ctx workflow.Context, input *s3.UploadPartInput) *S3UploadPartResult {
+func (a *S3Stub) UploadPartAsync(ctx workflow.Context, input *s3.UploadPartInput) *S3UploadPartFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.UploadPart", input)
-	return &S3UploadPartResult{Result: future}
+	return &S3UploadPartFuture{Future: future}
 }
 
 func (a *S3Stub) UploadPartCopy(ctx workflow.Context, input *s3.UploadPartCopyInput) (*s3.UploadPartCopyOutput, error) {
@@ -2204,39 +2299,43 @@ func (a *S3Stub) UploadPartCopy(ctx workflow.Context, input *s3.UploadPartCopyIn
 	return &output, err
 }
 
-func (a *S3Stub) UploadPartCopyAsync(ctx workflow.Context, input *s3.UploadPartCopyInput) *S3UploadPartCopyResult {
+func (a *S3Stub) UploadPartCopyAsync(ctx workflow.Context, input *s3.UploadPartCopyInput) *S3UploadPartCopyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3.UploadPartCopy", input)
-	return &S3UploadPartCopyResult{Result: future}
+	return &S3UploadPartCopyFuture{Future: future}
 }
 
 func (a *S3Stub) WaitUntilBucketExists(ctx workflow.Context, input *s3.HeadBucketInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketExists", input).Get(ctx, nil)
 }
 
-func (a *S3Stub) WaitUntilBucketExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketExists", input)
+func (a *S3Stub) WaitUntilBucketExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *S3Stub) WaitUntilBucketNotExists(ctx workflow.Context, input *s3.HeadBucketInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketNotExists", input).Get(ctx, nil)
 }
 
-func (a *S3Stub) WaitUntilBucketNotExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketNotExists", input)
+func (a *S3Stub) WaitUntilBucketNotExistsAsync(ctx workflow.Context, input *s3.HeadBucketInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilBucketNotExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *S3Stub) WaitUntilObjectExists(ctx workflow.Context, input *s3.HeadObjectInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectExists", input).Get(ctx, nil)
 }
 
-func (a *S3Stub) WaitUntilObjectExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectExists", input)
+func (a *S3Stub) WaitUntilObjectExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectExists", input)
+	return NewVoidFuture(future)
 }
 
 func (a *S3Stub) WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectNotExists", input).Get(ctx, nil)
 }
 
-func (a *S3Stub) WaitUntilObjectNotExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectNotExists", input)
+func (a *S3Stub) WaitUntilObjectNotExistsAsync(ctx workflow.Context, input *s3.HeadObjectInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.s3.WaitUntilObjectNotExists", input)
+	return NewVoidFuture(future)
 }

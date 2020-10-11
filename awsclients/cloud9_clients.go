@@ -11,43 +11,43 @@ import (
 
 type Cloud9Client interface {
 	CreateEnvironmentEC2(ctx workflow.Context, input *cloud9.CreateEnvironmentEC2Input) (*cloud9.CreateEnvironmentEC2Output, error)
-	CreateEnvironmentEC2Async(ctx workflow.Context, input *cloud9.CreateEnvironmentEC2Input) *Cloud9CreateEnvironmentEC2Result
+	CreateEnvironmentEC2Async(ctx workflow.Context, input *cloud9.CreateEnvironmentEC2Input) *Cloud9CreateEnvironmentEC2Future
 
 	CreateEnvironmentMembership(ctx workflow.Context, input *cloud9.CreateEnvironmentMembershipInput) (*cloud9.CreateEnvironmentMembershipOutput, error)
-	CreateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.CreateEnvironmentMembershipInput) *Cloud9CreateEnvironmentMembershipResult
+	CreateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.CreateEnvironmentMembershipInput) *Cloud9CreateEnvironmentMembershipFuture
 
 	DeleteEnvironment(ctx workflow.Context, input *cloud9.DeleteEnvironmentInput) (*cloud9.DeleteEnvironmentOutput, error)
-	DeleteEnvironmentAsync(ctx workflow.Context, input *cloud9.DeleteEnvironmentInput) *Cloud9DeleteEnvironmentResult
+	DeleteEnvironmentAsync(ctx workflow.Context, input *cloud9.DeleteEnvironmentInput) *Cloud9DeleteEnvironmentFuture
 
 	DeleteEnvironmentMembership(ctx workflow.Context, input *cloud9.DeleteEnvironmentMembershipInput) (*cloud9.DeleteEnvironmentMembershipOutput, error)
-	DeleteEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.DeleteEnvironmentMembershipInput) *Cloud9DeleteEnvironmentMembershipResult
+	DeleteEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.DeleteEnvironmentMembershipInput) *Cloud9DeleteEnvironmentMembershipFuture
 
 	DescribeEnvironmentMemberships(ctx workflow.Context, input *cloud9.DescribeEnvironmentMembershipsInput) (*cloud9.DescribeEnvironmentMembershipsOutput, error)
-	DescribeEnvironmentMembershipsAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentMembershipsInput) *Cloud9DescribeEnvironmentMembershipsResult
+	DescribeEnvironmentMembershipsAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentMembershipsInput) *Cloud9DescribeEnvironmentMembershipsFuture
 
 	DescribeEnvironmentStatus(ctx workflow.Context, input *cloud9.DescribeEnvironmentStatusInput) (*cloud9.DescribeEnvironmentStatusOutput, error)
-	DescribeEnvironmentStatusAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentStatusInput) *Cloud9DescribeEnvironmentStatusResult
+	DescribeEnvironmentStatusAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentStatusInput) *Cloud9DescribeEnvironmentStatusFuture
 
 	DescribeEnvironments(ctx workflow.Context, input *cloud9.DescribeEnvironmentsInput) (*cloud9.DescribeEnvironmentsOutput, error)
-	DescribeEnvironmentsAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentsInput) *Cloud9DescribeEnvironmentsResult
+	DescribeEnvironmentsAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentsInput) *Cloud9DescribeEnvironmentsFuture
 
 	ListEnvironments(ctx workflow.Context, input *cloud9.ListEnvironmentsInput) (*cloud9.ListEnvironmentsOutput, error)
-	ListEnvironmentsAsync(ctx workflow.Context, input *cloud9.ListEnvironmentsInput) *Cloud9ListEnvironmentsResult
+	ListEnvironmentsAsync(ctx workflow.Context, input *cloud9.ListEnvironmentsInput) *Cloud9ListEnvironmentsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *cloud9.ListTagsForResourceInput) (*cloud9.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *cloud9.ListTagsForResourceInput) *Cloud9ListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *cloud9.ListTagsForResourceInput) *Cloud9ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *cloud9.TagResourceInput) (*cloud9.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *cloud9.TagResourceInput) *Cloud9TagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *cloud9.TagResourceInput) *Cloud9TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *cloud9.UntagResourceInput) (*cloud9.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *cloud9.UntagResourceInput) *Cloud9UntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *cloud9.UntagResourceInput) *Cloud9UntagResourceFuture
 
 	UpdateEnvironment(ctx workflow.Context, input *cloud9.UpdateEnvironmentInput) (*cloud9.UpdateEnvironmentOutput, error)
-	UpdateEnvironmentAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentInput) *Cloud9UpdateEnvironmentResult
+	UpdateEnvironmentAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentInput) *Cloud9UpdateEnvironmentFuture
 
 	UpdateEnvironmentMembership(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) (*cloud9.UpdateEnvironmentMembershipOutput, error)
-	UpdateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) *Cloud9UpdateEnvironmentMembershipResult
+	UpdateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) *Cloud9UpdateEnvironmentMembershipFuture
 }
 
 type Cloud9Stub struct{}
@@ -56,133 +56,146 @@ func NewCloud9Stub() Cloud9Client {
 	return &Cloud9Stub{}
 }
 
-type Cloud9CreateEnvironmentEC2Result struct {
-	Result workflow.Future
+type Cloud9CreateEnvironmentEC2Future struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9CreateEnvironmentEC2Result) Get(ctx workflow.Context) (*cloud9.CreateEnvironmentEC2Output, error) {
+func (r *Cloud9CreateEnvironmentEC2Future) Get(ctx workflow.Context) (*cloud9.CreateEnvironmentEC2Output, error) {
 	var output cloud9.CreateEnvironmentEC2Output
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9CreateEnvironmentMembershipResult struct {
-	Result workflow.Future
+type Cloud9CreateEnvironmentMembershipFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9CreateEnvironmentMembershipResult) Get(ctx workflow.Context) (*cloud9.CreateEnvironmentMembershipOutput, error) {
+func (r *Cloud9CreateEnvironmentMembershipFuture) Get(ctx workflow.Context) (*cloud9.CreateEnvironmentMembershipOutput, error) {
 	var output cloud9.CreateEnvironmentMembershipOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9DeleteEnvironmentResult struct {
-	Result workflow.Future
+type Cloud9DeleteEnvironmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9DeleteEnvironmentResult) Get(ctx workflow.Context) (*cloud9.DeleteEnvironmentOutput, error) {
+func (r *Cloud9DeleteEnvironmentFuture) Get(ctx workflow.Context) (*cloud9.DeleteEnvironmentOutput, error) {
 	var output cloud9.DeleteEnvironmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9DeleteEnvironmentMembershipResult struct {
-	Result workflow.Future
+type Cloud9DeleteEnvironmentMembershipFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9DeleteEnvironmentMembershipResult) Get(ctx workflow.Context) (*cloud9.DeleteEnvironmentMembershipOutput, error) {
+func (r *Cloud9DeleteEnvironmentMembershipFuture) Get(ctx workflow.Context) (*cloud9.DeleteEnvironmentMembershipOutput, error) {
 	var output cloud9.DeleteEnvironmentMembershipOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9DescribeEnvironmentMembershipsResult struct {
-	Result workflow.Future
+type Cloud9DescribeEnvironmentMembershipsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9DescribeEnvironmentMembershipsResult) Get(ctx workflow.Context) (*cloud9.DescribeEnvironmentMembershipsOutput, error) {
+func (r *Cloud9DescribeEnvironmentMembershipsFuture) Get(ctx workflow.Context) (*cloud9.DescribeEnvironmentMembershipsOutput, error) {
 	var output cloud9.DescribeEnvironmentMembershipsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9DescribeEnvironmentStatusResult struct {
-	Result workflow.Future
+type Cloud9DescribeEnvironmentStatusFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9DescribeEnvironmentStatusResult) Get(ctx workflow.Context) (*cloud9.DescribeEnvironmentStatusOutput, error) {
+func (r *Cloud9DescribeEnvironmentStatusFuture) Get(ctx workflow.Context) (*cloud9.DescribeEnvironmentStatusOutput, error) {
 	var output cloud9.DescribeEnvironmentStatusOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9DescribeEnvironmentsResult struct {
-	Result workflow.Future
+type Cloud9DescribeEnvironmentsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9DescribeEnvironmentsResult) Get(ctx workflow.Context) (*cloud9.DescribeEnvironmentsOutput, error) {
+func (r *Cloud9DescribeEnvironmentsFuture) Get(ctx workflow.Context) (*cloud9.DescribeEnvironmentsOutput, error) {
 	var output cloud9.DescribeEnvironmentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9ListEnvironmentsResult struct {
-	Result workflow.Future
+type Cloud9ListEnvironmentsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9ListEnvironmentsResult) Get(ctx workflow.Context) (*cloud9.ListEnvironmentsOutput, error) {
+func (r *Cloud9ListEnvironmentsFuture) Get(ctx workflow.Context) (*cloud9.ListEnvironmentsOutput, error) {
 	var output cloud9.ListEnvironmentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9ListTagsForResourceResult struct {
-	Result workflow.Future
+type Cloud9ListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9ListTagsForResourceResult) Get(ctx workflow.Context) (*cloud9.ListTagsForResourceOutput, error) {
+func (r *Cloud9ListTagsForResourceFuture) Get(ctx workflow.Context) (*cloud9.ListTagsForResourceOutput, error) {
 	var output cloud9.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9TagResourceResult struct {
-	Result workflow.Future
+type Cloud9TagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9TagResourceResult) Get(ctx workflow.Context) (*cloud9.TagResourceOutput, error) {
+func (r *Cloud9TagResourceFuture) Get(ctx workflow.Context) (*cloud9.TagResourceOutput, error) {
 	var output cloud9.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9UntagResourceResult struct {
-	Result workflow.Future
+type Cloud9UntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9UntagResourceResult) Get(ctx workflow.Context) (*cloud9.UntagResourceOutput, error) {
+func (r *Cloud9UntagResourceFuture) Get(ctx workflow.Context) (*cloud9.UntagResourceOutput, error) {
 	var output cloud9.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9UpdateEnvironmentResult struct {
-	Result workflow.Future
+type Cloud9UpdateEnvironmentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9UpdateEnvironmentResult) Get(ctx workflow.Context) (*cloud9.UpdateEnvironmentOutput, error) {
+func (r *Cloud9UpdateEnvironmentFuture) Get(ctx workflow.Context) (*cloud9.UpdateEnvironmentOutput, error) {
 	var output cloud9.UpdateEnvironmentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Cloud9UpdateEnvironmentMembershipResult struct {
-	Result workflow.Future
+type Cloud9UpdateEnvironmentMembershipFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *Cloud9UpdateEnvironmentMembershipResult) Get(ctx workflow.Context) (*cloud9.UpdateEnvironmentMembershipOutput, error) {
+func (r *Cloud9UpdateEnvironmentMembershipFuture) Get(ctx workflow.Context) (*cloud9.UpdateEnvironmentMembershipOutput, error) {
 	var output cloud9.UpdateEnvironmentMembershipOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -192,9 +205,9 @@ func (a *Cloud9Stub) CreateEnvironmentEC2(ctx workflow.Context, input *cloud9.Cr
 	return &output, err
 }
 
-func (a *Cloud9Stub) CreateEnvironmentEC2Async(ctx workflow.Context, input *cloud9.CreateEnvironmentEC2Input) *Cloud9CreateEnvironmentEC2Result {
+func (a *Cloud9Stub) CreateEnvironmentEC2Async(ctx workflow.Context, input *cloud9.CreateEnvironmentEC2Input) *Cloud9CreateEnvironmentEC2Future {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.CreateEnvironmentEC2", input)
-	return &Cloud9CreateEnvironmentEC2Result{Result: future}
+	return &Cloud9CreateEnvironmentEC2Future{Future: future}
 }
 
 func (a *Cloud9Stub) CreateEnvironmentMembership(ctx workflow.Context, input *cloud9.CreateEnvironmentMembershipInput) (*cloud9.CreateEnvironmentMembershipOutput, error) {
@@ -203,9 +216,9 @@ func (a *Cloud9Stub) CreateEnvironmentMembership(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *Cloud9Stub) CreateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.CreateEnvironmentMembershipInput) *Cloud9CreateEnvironmentMembershipResult {
+func (a *Cloud9Stub) CreateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.CreateEnvironmentMembershipInput) *Cloud9CreateEnvironmentMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.CreateEnvironmentMembership", input)
-	return &Cloud9CreateEnvironmentMembershipResult{Result: future}
+	return &Cloud9CreateEnvironmentMembershipFuture{Future: future}
 }
 
 func (a *Cloud9Stub) DeleteEnvironment(ctx workflow.Context, input *cloud9.DeleteEnvironmentInput) (*cloud9.DeleteEnvironmentOutput, error) {
@@ -214,9 +227,9 @@ func (a *Cloud9Stub) DeleteEnvironment(ctx workflow.Context, input *cloud9.Delet
 	return &output, err
 }
 
-func (a *Cloud9Stub) DeleteEnvironmentAsync(ctx workflow.Context, input *cloud9.DeleteEnvironmentInput) *Cloud9DeleteEnvironmentResult {
+func (a *Cloud9Stub) DeleteEnvironmentAsync(ctx workflow.Context, input *cloud9.DeleteEnvironmentInput) *Cloud9DeleteEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.DeleteEnvironment", input)
-	return &Cloud9DeleteEnvironmentResult{Result: future}
+	return &Cloud9DeleteEnvironmentFuture{Future: future}
 }
 
 func (a *Cloud9Stub) DeleteEnvironmentMembership(ctx workflow.Context, input *cloud9.DeleteEnvironmentMembershipInput) (*cloud9.DeleteEnvironmentMembershipOutput, error) {
@@ -225,9 +238,9 @@ func (a *Cloud9Stub) DeleteEnvironmentMembership(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *Cloud9Stub) DeleteEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.DeleteEnvironmentMembershipInput) *Cloud9DeleteEnvironmentMembershipResult {
+func (a *Cloud9Stub) DeleteEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.DeleteEnvironmentMembershipInput) *Cloud9DeleteEnvironmentMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.DeleteEnvironmentMembership", input)
-	return &Cloud9DeleteEnvironmentMembershipResult{Result: future}
+	return &Cloud9DeleteEnvironmentMembershipFuture{Future: future}
 }
 
 func (a *Cloud9Stub) DescribeEnvironmentMemberships(ctx workflow.Context, input *cloud9.DescribeEnvironmentMembershipsInput) (*cloud9.DescribeEnvironmentMembershipsOutput, error) {
@@ -236,9 +249,9 @@ func (a *Cloud9Stub) DescribeEnvironmentMemberships(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *Cloud9Stub) DescribeEnvironmentMembershipsAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentMembershipsInput) *Cloud9DescribeEnvironmentMembershipsResult {
+func (a *Cloud9Stub) DescribeEnvironmentMembershipsAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentMembershipsInput) *Cloud9DescribeEnvironmentMembershipsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.DescribeEnvironmentMemberships", input)
-	return &Cloud9DescribeEnvironmentMembershipsResult{Result: future}
+	return &Cloud9DescribeEnvironmentMembershipsFuture{Future: future}
 }
 
 func (a *Cloud9Stub) DescribeEnvironmentStatus(ctx workflow.Context, input *cloud9.DescribeEnvironmentStatusInput) (*cloud9.DescribeEnvironmentStatusOutput, error) {
@@ -247,9 +260,9 @@ func (a *Cloud9Stub) DescribeEnvironmentStatus(ctx workflow.Context, input *clou
 	return &output, err
 }
 
-func (a *Cloud9Stub) DescribeEnvironmentStatusAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentStatusInput) *Cloud9DescribeEnvironmentStatusResult {
+func (a *Cloud9Stub) DescribeEnvironmentStatusAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentStatusInput) *Cloud9DescribeEnvironmentStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.DescribeEnvironmentStatus", input)
-	return &Cloud9DescribeEnvironmentStatusResult{Result: future}
+	return &Cloud9DescribeEnvironmentStatusFuture{Future: future}
 }
 
 func (a *Cloud9Stub) DescribeEnvironments(ctx workflow.Context, input *cloud9.DescribeEnvironmentsInput) (*cloud9.DescribeEnvironmentsOutput, error) {
@@ -258,9 +271,9 @@ func (a *Cloud9Stub) DescribeEnvironments(ctx workflow.Context, input *cloud9.De
 	return &output, err
 }
 
-func (a *Cloud9Stub) DescribeEnvironmentsAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentsInput) *Cloud9DescribeEnvironmentsResult {
+func (a *Cloud9Stub) DescribeEnvironmentsAsync(ctx workflow.Context, input *cloud9.DescribeEnvironmentsInput) *Cloud9DescribeEnvironmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.DescribeEnvironments", input)
-	return &Cloud9DescribeEnvironmentsResult{Result: future}
+	return &Cloud9DescribeEnvironmentsFuture{Future: future}
 }
 
 func (a *Cloud9Stub) ListEnvironments(ctx workflow.Context, input *cloud9.ListEnvironmentsInput) (*cloud9.ListEnvironmentsOutput, error) {
@@ -269,9 +282,9 @@ func (a *Cloud9Stub) ListEnvironments(ctx workflow.Context, input *cloud9.ListEn
 	return &output, err
 }
 
-func (a *Cloud9Stub) ListEnvironmentsAsync(ctx workflow.Context, input *cloud9.ListEnvironmentsInput) *Cloud9ListEnvironmentsResult {
+func (a *Cloud9Stub) ListEnvironmentsAsync(ctx workflow.Context, input *cloud9.ListEnvironmentsInput) *Cloud9ListEnvironmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.ListEnvironments", input)
-	return &Cloud9ListEnvironmentsResult{Result: future}
+	return &Cloud9ListEnvironmentsFuture{Future: future}
 }
 
 func (a *Cloud9Stub) ListTagsForResource(ctx workflow.Context, input *cloud9.ListTagsForResourceInput) (*cloud9.ListTagsForResourceOutput, error) {
@@ -280,9 +293,9 @@ func (a *Cloud9Stub) ListTagsForResource(ctx workflow.Context, input *cloud9.Lis
 	return &output, err
 }
 
-func (a *Cloud9Stub) ListTagsForResourceAsync(ctx workflow.Context, input *cloud9.ListTagsForResourceInput) *Cloud9ListTagsForResourceResult {
+func (a *Cloud9Stub) ListTagsForResourceAsync(ctx workflow.Context, input *cloud9.ListTagsForResourceInput) *Cloud9ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.ListTagsForResource", input)
-	return &Cloud9ListTagsForResourceResult{Result: future}
+	return &Cloud9ListTagsForResourceFuture{Future: future}
 }
 
 func (a *Cloud9Stub) TagResource(ctx workflow.Context, input *cloud9.TagResourceInput) (*cloud9.TagResourceOutput, error) {
@@ -291,9 +304,9 @@ func (a *Cloud9Stub) TagResource(ctx workflow.Context, input *cloud9.TagResource
 	return &output, err
 }
 
-func (a *Cloud9Stub) TagResourceAsync(ctx workflow.Context, input *cloud9.TagResourceInput) *Cloud9TagResourceResult {
+func (a *Cloud9Stub) TagResourceAsync(ctx workflow.Context, input *cloud9.TagResourceInput) *Cloud9TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.TagResource", input)
-	return &Cloud9TagResourceResult{Result: future}
+	return &Cloud9TagResourceFuture{Future: future}
 }
 
 func (a *Cloud9Stub) UntagResource(ctx workflow.Context, input *cloud9.UntagResourceInput) (*cloud9.UntagResourceOutput, error) {
@@ -302,9 +315,9 @@ func (a *Cloud9Stub) UntagResource(ctx workflow.Context, input *cloud9.UntagReso
 	return &output, err
 }
 
-func (a *Cloud9Stub) UntagResourceAsync(ctx workflow.Context, input *cloud9.UntagResourceInput) *Cloud9UntagResourceResult {
+func (a *Cloud9Stub) UntagResourceAsync(ctx workflow.Context, input *cloud9.UntagResourceInput) *Cloud9UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.UntagResource", input)
-	return &Cloud9UntagResourceResult{Result: future}
+	return &Cloud9UntagResourceFuture{Future: future}
 }
 
 func (a *Cloud9Stub) UpdateEnvironment(ctx workflow.Context, input *cloud9.UpdateEnvironmentInput) (*cloud9.UpdateEnvironmentOutput, error) {
@@ -313,9 +326,9 @@ func (a *Cloud9Stub) UpdateEnvironment(ctx workflow.Context, input *cloud9.Updat
 	return &output, err
 }
 
-func (a *Cloud9Stub) UpdateEnvironmentAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentInput) *Cloud9UpdateEnvironmentResult {
+func (a *Cloud9Stub) UpdateEnvironmentAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentInput) *Cloud9UpdateEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.UpdateEnvironment", input)
-	return &Cloud9UpdateEnvironmentResult{Result: future}
+	return &Cloud9UpdateEnvironmentFuture{Future: future}
 }
 
 func (a *Cloud9Stub) UpdateEnvironmentMembership(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) (*cloud9.UpdateEnvironmentMembershipOutput, error) {
@@ -324,7 +337,7 @@ func (a *Cloud9Stub) UpdateEnvironmentMembership(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *Cloud9Stub) UpdateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) *Cloud9UpdateEnvironmentMembershipResult {
+func (a *Cloud9Stub) UpdateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) *Cloud9UpdateEnvironmentMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloud9.UpdateEnvironmentMembership", input)
-	return &Cloud9UpdateEnvironmentMembershipResult{Result: future}
+	return &Cloud9UpdateEnvironmentMembershipFuture{Future: future}
 }

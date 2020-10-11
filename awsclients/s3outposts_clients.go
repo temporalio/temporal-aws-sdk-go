@@ -11,13 +11,13 @@ import (
 
 type S3OutpostsClient interface {
 	CreateEndpoint(ctx workflow.Context, input *s3outposts.CreateEndpointInput) (*s3outposts.CreateEndpointOutput, error)
-	CreateEndpointAsync(ctx workflow.Context, input *s3outposts.CreateEndpointInput) *S3outpostsCreateEndpointResult
+	CreateEndpointAsync(ctx workflow.Context, input *s3outposts.CreateEndpointInput) *S3OutpostsCreateEndpointFuture
 
 	DeleteEndpoint(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) (*s3outposts.DeleteEndpointOutput, error)
-	DeleteEndpointAsync(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) *S3outpostsDeleteEndpointResult
+	DeleteEndpointAsync(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) *S3OutpostsDeleteEndpointFuture
 
 	ListEndpoints(ctx workflow.Context, input *s3outposts.ListEndpointsInput) (*s3outposts.ListEndpointsOutput, error)
-	ListEndpointsAsync(ctx workflow.Context, input *s3outposts.ListEndpointsInput) *S3outpostsListEndpointsResult
+	ListEndpointsAsync(ctx workflow.Context, input *s3outposts.ListEndpointsInput) *S3OutpostsListEndpointsFuture
 }
 
 type S3OutpostsStub struct{}
@@ -26,33 +26,36 @@ func NewS3OutpostsStub() S3OutpostsClient {
 	return &S3OutpostsStub{}
 }
 
-type S3outpostsCreateEndpointResult struct {
-	Result workflow.Future
+type S3OutpostsCreateEndpointFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3outpostsCreateEndpointResult) Get(ctx workflow.Context) (*s3outposts.CreateEndpointOutput, error) {
+func (r *S3OutpostsCreateEndpointFuture) Get(ctx workflow.Context) (*s3outposts.CreateEndpointOutput, error) {
 	var output s3outposts.CreateEndpointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3outpostsDeleteEndpointResult struct {
-	Result workflow.Future
+type S3OutpostsDeleteEndpointFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3outpostsDeleteEndpointResult) Get(ctx workflow.Context) (*s3outposts.DeleteEndpointOutput, error) {
+func (r *S3OutpostsDeleteEndpointFuture) Get(ctx workflow.Context) (*s3outposts.DeleteEndpointOutput, error) {
 	var output s3outposts.DeleteEndpointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3outpostsListEndpointsResult struct {
-	Result workflow.Future
+type S3OutpostsListEndpointsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *S3outpostsListEndpointsResult) Get(ctx workflow.Context) (*s3outposts.ListEndpointsOutput, error) {
+func (r *S3OutpostsListEndpointsFuture) Get(ctx workflow.Context) (*s3outposts.ListEndpointsOutput, error) {
 	var output s3outposts.ListEndpointsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -62,9 +65,9 @@ func (a *S3OutpostsStub) CreateEndpoint(ctx workflow.Context, input *s3outposts.
 	return &output, err
 }
 
-func (a *S3OutpostsStub) CreateEndpointAsync(ctx workflow.Context, input *s3outposts.CreateEndpointInput) *S3outpostsCreateEndpointResult {
+func (a *S3OutpostsStub) CreateEndpointAsync(ctx workflow.Context, input *s3outposts.CreateEndpointInput) *S3OutpostsCreateEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3outposts.CreateEndpoint", input)
-	return &S3outpostsCreateEndpointResult{Result: future}
+	return &S3OutpostsCreateEndpointFuture{Future: future}
 }
 
 func (a *S3OutpostsStub) DeleteEndpoint(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) (*s3outposts.DeleteEndpointOutput, error) {
@@ -73,9 +76,9 @@ func (a *S3OutpostsStub) DeleteEndpoint(ctx workflow.Context, input *s3outposts.
 	return &output, err
 }
 
-func (a *S3OutpostsStub) DeleteEndpointAsync(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) *S3outpostsDeleteEndpointResult {
+func (a *S3OutpostsStub) DeleteEndpointAsync(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) *S3OutpostsDeleteEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3outposts.DeleteEndpoint", input)
-	return &S3outpostsDeleteEndpointResult{Result: future}
+	return &S3OutpostsDeleteEndpointFuture{Future: future}
 }
 
 func (a *S3OutpostsStub) ListEndpoints(ctx workflow.Context, input *s3outposts.ListEndpointsInput) (*s3outposts.ListEndpointsOutput, error) {
@@ -84,7 +87,7 @@ func (a *S3OutpostsStub) ListEndpoints(ctx workflow.Context, input *s3outposts.L
 	return &output, err
 }
 
-func (a *S3OutpostsStub) ListEndpointsAsync(ctx workflow.Context, input *s3outposts.ListEndpointsInput) *S3outpostsListEndpointsResult {
+func (a *S3OutpostsStub) ListEndpointsAsync(ctx workflow.Context, input *s3outposts.ListEndpointsInput) *S3OutpostsListEndpointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3outposts.ListEndpoints", input)
-	return &S3outpostsListEndpointsResult{Result: future}
+	return &S3OutpostsListEndpointsFuture{Future: future}
 }

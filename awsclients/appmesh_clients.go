@@ -11,118 +11,118 @@ import (
 
 type AppMeshClient interface {
 	CreateGatewayRoute(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) (*appmesh.CreateGatewayRouteOutput, error)
-	CreateGatewayRouteAsync(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) *AppmeshCreateGatewayRouteResult
+	CreateGatewayRouteAsync(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) *AppMeshCreateGatewayRouteFuture
 
 	CreateMesh(ctx workflow.Context, input *appmesh.CreateMeshInput) (*appmesh.CreateMeshOutput, error)
-	CreateMeshAsync(ctx workflow.Context, input *appmesh.CreateMeshInput) *AppmeshCreateMeshResult
+	CreateMeshAsync(ctx workflow.Context, input *appmesh.CreateMeshInput) *AppMeshCreateMeshFuture
 
 	CreateRoute(ctx workflow.Context, input *appmesh.CreateRouteInput) (*appmesh.CreateRouteOutput, error)
-	CreateRouteAsync(ctx workflow.Context, input *appmesh.CreateRouteInput) *AppmeshCreateRouteResult
+	CreateRouteAsync(ctx workflow.Context, input *appmesh.CreateRouteInput) *AppMeshCreateRouteFuture
 
 	CreateVirtualGateway(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) (*appmesh.CreateVirtualGatewayOutput, error)
-	CreateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) *AppmeshCreateVirtualGatewayResult
+	CreateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) *AppMeshCreateVirtualGatewayFuture
 
 	CreateVirtualNode(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) (*appmesh.CreateVirtualNodeOutput, error)
-	CreateVirtualNodeAsync(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) *AppmeshCreateVirtualNodeResult
+	CreateVirtualNodeAsync(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) *AppMeshCreateVirtualNodeFuture
 
 	CreateVirtualRouter(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) (*appmesh.CreateVirtualRouterOutput, error)
-	CreateVirtualRouterAsync(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) *AppmeshCreateVirtualRouterResult
+	CreateVirtualRouterAsync(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) *AppMeshCreateVirtualRouterFuture
 
 	CreateVirtualService(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) (*appmesh.CreateVirtualServiceOutput, error)
-	CreateVirtualServiceAsync(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) *AppmeshCreateVirtualServiceResult
+	CreateVirtualServiceAsync(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) *AppMeshCreateVirtualServiceFuture
 
 	DeleteGatewayRoute(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) (*appmesh.DeleteGatewayRouteOutput, error)
-	DeleteGatewayRouteAsync(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) *AppmeshDeleteGatewayRouteResult
+	DeleteGatewayRouteAsync(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) *AppMeshDeleteGatewayRouteFuture
 
 	DeleteMesh(ctx workflow.Context, input *appmesh.DeleteMeshInput) (*appmesh.DeleteMeshOutput, error)
-	DeleteMeshAsync(ctx workflow.Context, input *appmesh.DeleteMeshInput) *AppmeshDeleteMeshResult
+	DeleteMeshAsync(ctx workflow.Context, input *appmesh.DeleteMeshInput) *AppMeshDeleteMeshFuture
 
 	DeleteRoute(ctx workflow.Context, input *appmesh.DeleteRouteInput) (*appmesh.DeleteRouteOutput, error)
-	DeleteRouteAsync(ctx workflow.Context, input *appmesh.DeleteRouteInput) *AppmeshDeleteRouteResult
+	DeleteRouteAsync(ctx workflow.Context, input *appmesh.DeleteRouteInput) *AppMeshDeleteRouteFuture
 
 	DeleteVirtualGateway(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) (*appmesh.DeleteVirtualGatewayOutput, error)
-	DeleteVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) *AppmeshDeleteVirtualGatewayResult
+	DeleteVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) *AppMeshDeleteVirtualGatewayFuture
 
 	DeleteVirtualNode(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) (*appmesh.DeleteVirtualNodeOutput, error)
-	DeleteVirtualNodeAsync(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) *AppmeshDeleteVirtualNodeResult
+	DeleteVirtualNodeAsync(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) *AppMeshDeleteVirtualNodeFuture
 
 	DeleteVirtualRouter(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) (*appmesh.DeleteVirtualRouterOutput, error)
-	DeleteVirtualRouterAsync(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) *AppmeshDeleteVirtualRouterResult
+	DeleteVirtualRouterAsync(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) *AppMeshDeleteVirtualRouterFuture
 
 	DeleteVirtualService(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) (*appmesh.DeleteVirtualServiceOutput, error)
-	DeleteVirtualServiceAsync(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) *AppmeshDeleteVirtualServiceResult
+	DeleteVirtualServiceAsync(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) *AppMeshDeleteVirtualServiceFuture
 
 	DescribeGatewayRoute(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) (*appmesh.DescribeGatewayRouteOutput, error)
-	DescribeGatewayRouteAsync(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) *AppmeshDescribeGatewayRouteResult
+	DescribeGatewayRouteAsync(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) *AppMeshDescribeGatewayRouteFuture
 
 	DescribeMesh(ctx workflow.Context, input *appmesh.DescribeMeshInput) (*appmesh.DescribeMeshOutput, error)
-	DescribeMeshAsync(ctx workflow.Context, input *appmesh.DescribeMeshInput) *AppmeshDescribeMeshResult
+	DescribeMeshAsync(ctx workflow.Context, input *appmesh.DescribeMeshInput) *AppMeshDescribeMeshFuture
 
 	DescribeRoute(ctx workflow.Context, input *appmesh.DescribeRouteInput) (*appmesh.DescribeRouteOutput, error)
-	DescribeRouteAsync(ctx workflow.Context, input *appmesh.DescribeRouteInput) *AppmeshDescribeRouteResult
+	DescribeRouteAsync(ctx workflow.Context, input *appmesh.DescribeRouteInput) *AppMeshDescribeRouteFuture
 
 	DescribeVirtualGateway(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) (*appmesh.DescribeVirtualGatewayOutput, error)
-	DescribeVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) *AppmeshDescribeVirtualGatewayResult
+	DescribeVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) *AppMeshDescribeVirtualGatewayFuture
 
 	DescribeVirtualNode(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) (*appmesh.DescribeVirtualNodeOutput, error)
-	DescribeVirtualNodeAsync(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) *AppmeshDescribeVirtualNodeResult
+	DescribeVirtualNodeAsync(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) *AppMeshDescribeVirtualNodeFuture
 
 	DescribeVirtualRouter(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) (*appmesh.DescribeVirtualRouterOutput, error)
-	DescribeVirtualRouterAsync(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) *AppmeshDescribeVirtualRouterResult
+	DescribeVirtualRouterAsync(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) *AppMeshDescribeVirtualRouterFuture
 
 	DescribeVirtualService(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) (*appmesh.DescribeVirtualServiceOutput, error)
-	DescribeVirtualServiceAsync(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) *AppmeshDescribeVirtualServiceResult
+	DescribeVirtualServiceAsync(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) *AppMeshDescribeVirtualServiceFuture
 
 	ListGatewayRoutes(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) (*appmesh.ListGatewayRoutesOutput, error)
-	ListGatewayRoutesAsync(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) *AppmeshListGatewayRoutesResult
+	ListGatewayRoutesAsync(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) *AppMeshListGatewayRoutesFuture
 
 	ListMeshes(ctx workflow.Context, input *appmesh.ListMeshesInput) (*appmesh.ListMeshesOutput, error)
-	ListMeshesAsync(ctx workflow.Context, input *appmesh.ListMeshesInput) *AppmeshListMeshesResult
+	ListMeshesAsync(ctx workflow.Context, input *appmesh.ListMeshesInput) *AppMeshListMeshesFuture
 
 	ListRoutes(ctx workflow.Context, input *appmesh.ListRoutesInput) (*appmesh.ListRoutesOutput, error)
-	ListRoutesAsync(ctx workflow.Context, input *appmesh.ListRoutesInput) *AppmeshListRoutesResult
+	ListRoutesAsync(ctx workflow.Context, input *appmesh.ListRoutesInput) *AppMeshListRoutesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) (*appmesh.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) *AppmeshListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) *AppMeshListTagsForResourceFuture
 
 	ListVirtualGateways(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) (*appmesh.ListVirtualGatewaysOutput, error)
-	ListVirtualGatewaysAsync(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) *AppmeshListVirtualGatewaysResult
+	ListVirtualGatewaysAsync(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) *AppMeshListVirtualGatewaysFuture
 
 	ListVirtualNodes(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) (*appmesh.ListVirtualNodesOutput, error)
-	ListVirtualNodesAsync(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) *AppmeshListVirtualNodesResult
+	ListVirtualNodesAsync(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) *AppMeshListVirtualNodesFuture
 
 	ListVirtualRouters(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) (*appmesh.ListVirtualRoutersOutput, error)
-	ListVirtualRoutersAsync(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) *AppmeshListVirtualRoutersResult
+	ListVirtualRoutersAsync(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) *AppMeshListVirtualRoutersFuture
 
 	ListVirtualServices(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) (*appmesh.ListVirtualServicesOutput, error)
-	ListVirtualServicesAsync(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) *AppmeshListVirtualServicesResult
+	ListVirtualServicesAsync(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) *AppMeshListVirtualServicesFuture
 
 	TagResource(ctx workflow.Context, input *appmesh.TagResourceInput) (*appmesh.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *appmesh.TagResourceInput) *AppmeshTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *appmesh.TagResourceInput) *AppMeshTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *appmesh.UntagResourceInput) (*appmesh.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *appmesh.UntagResourceInput) *AppmeshUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *appmesh.UntagResourceInput) *AppMeshUntagResourceFuture
 
 	UpdateGatewayRoute(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) (*appmesh.UpdateGatewayRouteOutput, error)
-	UpdateGatewayRouteAsync(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) *AppmeshUpdateGatewayRouteResult
+	UpdateGatewayRouteAsync(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) *AppMeshUpdateGatewayRouteFuture
 
 	UpdateMesh(ctx workflow.Context, input *appmesh.UpdateMeshInput) (*appmesh.UpdateMeshOutput, error)
-	UpdateMeshAsync(ctx workflow.Context, input *appmesh.UpdateMeshInput) *AppmeshUpdateMeshResult
+	UpdateMeshAsync(ctx workflow.Context, input *appmesh.UpdateMeshInput) *AppMeshUpdateMeshFuture
 
 	UpdateRoute(ctx workflow.Context, input *appmesh.UpdateRouteInput) (*appmesh.UpdateRouteOutput, error)
-	UpdateRouteAsync(ctx workflow.Context, input *appmesh.UpdateRouteInput) *AppmeshUpdateRouteResult
+	UpdateRouteAsync(ctx workflow.Context, input *appmesh.UpdateRouteInput) *AppMeshUpdateRouteFuture
 
 	UpdateVirtualGateway(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) (*appmesh.UpdateVirtualGatewayOutput, error)
-	UpdateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) *AppmeshUpdateVirtualGatewayResult
+	UpdateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) *AppMeshUpdateVirtualGatewayFuture
 
 	UpdateVirtualNode(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) (*appmesh.UpdateVirtualNodeOutput, error)
-	UpdateVirtualNodeAsync(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) *AppmeshUpdateVirtualNodeResult
+	UpdateVirtualNodeAsync(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) *AppMeshUpdateVirtualNodeFuture
 
 	UpdateVirtualRouter(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) (*appmesh.UpdateVirtualRouterOutput, error)
-	UpdateVirtualRouterAsync(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) *AppmeshUpdateVirtualRouterResult
+	UpdateVirtualRouterAsync(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) *AppMeshUpdateVirtualRouterFuture
 
 	UpdateVirtualService(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) (*appmesh.UpdateVirtualServiceOutput, error)
-	UpdateVirtualServiceAsync(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) *AppmeshUpdateVirtualServiceResult
+	UpdateVirtualServiceAsync(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) *AppMeshUpdateVirtualServiceFuture
 }
 
 type AppMeshStub struct{}
@@ -131,383 +131,421 @@ func NewAppMeshStub() AppMeshClient {
 	return &AppMeshStub{}
 }
 
-type AppmeshCreateGatewayRouteResult struct {
-	Result workflow.Future
+type AppMeshCreateGatewayRouteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshCreateGatewayRouteResult) Get(ctx workflow.Context) (*appmesh.CreateGatewayRouteOutput, error) {
+func (r *AppMeshCreateGatewayRouteFuture) Get(ctx workflow.Context) (*appmesh.CreateGatewayRouteOutput, error) {
 	var output appmesh.CreateGatewayRouteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshCreateMeshResult struct {
-	Result workflow.Future
+type AppMeshCreateMeshFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshCreateMeshResult) Get(ctx workflow.Context) (*appmesh.CreateMeshOutput, error) {
+func (r *AppMeshCreateMeshFuture) Get(ctx workflow.Context) (*appmesh.CreateMeshOutput, error) {
 	var output appmesh.CreateMeshOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshCreateRouteResult struct {
-	Result workflow.Future
+type AppMeshCreateRouteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshCreateRouteResult) Get(ctx workflow.Context) (*appmesh.CreateRouteOutput, error) {
+func (r *AppMeshCreateRouteFuture) Get(ctx workflow.Context) (*appmesh.CreateRouteOutput, error) {
 	var output appmesh.CreateRouteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshCreateVirtualGatewayResult struct {
-	Result workflow.Future
+type AppMeshCreateVirtualGatewayFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshCreateVirtualGatewayResult) Get(ctx workflow.Context) (*appmesh.CreateVirtualGatewayOutput, error) {
+func (r *AppMeshCreateVirtualGatewayFuture) Get(ctx workflow.Context) (*appmesh.CreateVirtualGatewayOutput, error) {
 	var output appmesh.CreateVirtualGatewayOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshCreateVirtualNodeResult struct {
-	Result workflow.Future
+type AppMeshCreateVirtualNodeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshCreateVirtualNodeResult) Get(ctx workflow.Context) (*appmesh.CreateVirtualNodeOutput, error) {
+func (r *AppMeshCreateVirtualNodeFuture) Get(ctx workflow.Context) (*appmesh.CreateVirtualNodeOutput, error) {
 	var output appmesh.CreateVirtualNodeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshCreateVirtualRouterResult struct {
-	Result workflow.Future
+type AppMeshCreateVirtualRouterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshCreateVirtualRouterResult) Get(ctx workflow.Context) (*appmesh.CreateVirtualRouterOutput, error) {
+func (r *AppMeshCreateVirtualRouterFuture) Get(ctx workflow.Context) (*appmesh.CreateVirtualRouterOutput, error) {
 	var output appmesh.CreateVirtualRouterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshCreateVirtualServiceResult struct {
-	Result workflow.Future
+type AppMeshCreateVirtualServiceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshCreateVirtualServiceResult) Get(ctx workflow.Context) (*appmesh.CreateVirtualServiceOutput, error) {
+func (r *AppMeshCreateVirtualServiceFuture) Get(ctx workflow.Context) (*appmesh.CreateVirtualServiceOutput, error) {
 	var output appmesh.CreateVirtualServiceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDeleteGatewayRouteResult struct {
-	Result workflow.Future
+type AppMeshDeleteGatewayRouteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDeleteGatewayRouteResult) Get(ctx workflow.Context) (*appmesh.DeleteGatewayRouteOutput, error) {
+func (r *AppMeshDeleteGatewayRouteFuture) Get(ctx workflow.Context) (*appmesh.DeleteGatewayRouteOutput, error) {
 	var output appmesh.DeleteGatewayRouteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDeleteMeshResult struct {
-	Result workflow.Future
+type AppMeshDeleteMeshFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDeleteMeshResult) Get(ctx workflow.Context) (*appmesh.DeleteMeshOutput, error) {
+func (r *AppMeshDeleteMeshFuture) Get(ctx workflow.Context) (*appmesh.DeleteMeshOutput, error) {
 	var output appmesh.DeleteMeshOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDeleteRouteResult struct {
-	Result workflow.Future
+type AppMeshDeleteRouteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDeleteRouteResult) Get(ctx workflow.Context) (*appmesh.DeleteRouteOutput, error) {
+func (r *AppMeshDeleteRouteFuture) Get(ctx workflow.Context) (*appmesh.DeleteRouteOutput, error) {
 	var output appmesh.DeleteRouteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDeleteVirtualGatewayResult struct {
-	Result workflow.Future
+type AppMeshDeleteVirtualGatewayFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDeleteVirtualGatewayResult) Get(ctx workflow.Context) (*appmesh.DeleteVirtualGatewayOutput, error) {
+func (r *AppMeshDeleteVirtualGatewayFuture) Get(ctx workflow.Context) (*appmesh.DeleteVirtualGatewayOutput, error) {
 	var output appmesh.DeleteVirtualGatewayOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDeleteVirtualNodeResult struct {
-	Result workflow.Future
+type AppMeshDeleteVirtualNodeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDeleteVirtualNodeResult) Get(ctx workflow.Context) (*appmesh.DeleteVirtualNodeOutput, error) {
+func (r *AppMeshDeleteVirtualNodeFuture) Get(ctx workflow.Context) (*appmesh.DeleteVirtualNodeOutput, error) {
 	var output appmesh.DeleteVirtualNodeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDeleteVirtualRouterResult struct {
-	Result workflow.Future
+type AppMeshDeleteVirtualRouterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDeleteVirtualRouterResult) Get(ctx workflow.Context) (*appmesh.DeleteVirtualRouterOutput, error) {
+func (r *AppMeshDeleteVirtualRouterFuture) Get(ctx workflow.Context) (*appmesh.DeleteVirtualRouterOutput, error) {
 	var output appmesh.DeleteVirtualRouterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDeleteVirtualServiceResult struct {
-	Result workflow.Future
+type AppMeshDeleteVirtualServiceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDeleteVirtualServiceResult) Get(ctx workflow.Context) (*appmesh.DeleteVirtualServiceOutput, error) {
+func (r *AppMeshDeleteVirtualServiceFuture) Get(ctx workflow.Context) (*appmesh.DeleteVirtualServiceOutput, error) {
 	var output appmesh.DeleteVirtualServiceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDescribeGatewayRouteResult struct {
-	Result workflow.Future
+type AppMeshDescribeGatewayRouteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDescribeGatewayRouteResult) Get(ctx workflow.Context) (*appmesh.DescribeGatewayRouteOutput, error) {
+func (r *AppMeshDescribeGatewayRouteFuture) Get(ctx workflow.Context) (*appmesh.DescribeGatewayRouteOutput, error) {
 	var output appmesh.DescribeGatewayRouteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDescribeMeshResult struct {
-	Result workflow.Future
+type AppMeshDescribeMeshFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDescribeMeshResult) Get(ctx workflow.Context) (*appmesh.DescribeMeshOutput, error) {
+func (r *AppMeshDescribeMeshFuture) Get(ctx workflow.Context) (*appmesh.DescribeMeshOutput, error) {
 	var output appmesh.DescribeMeshOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDescribeRouteResult struct {
-	Result workflow.Future
+type AppMeshDescribeRouteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDescribeRouteResult) Get(ctx workflow.Context) (*appmesh.DescribeRouteOutput, error) {
+func (r *AppMeshDescribeRouteFuture) Get(ctx workflow.Context) (*appmesh.DescribeRouteOutput, error) {
 	var output appmesh.DescribeRouteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDescribeVirtualGatewayResult struct {
-	Result workflow.Future
+type AppMeshDescribeVirtualGatewayFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDescribeVirtualGatewayResult) Get(ctx workflow.Context) (*appmesh.DescribeVirtualGatewayOutput, error) {
+func (r *AppMeshDescribeVirtualGatewayFuture) Get(ctx workflow.Context) (*appmesh.DescribeVirtualGatewayOutput, error) {
 	var output appmesh.DescribeVirtualGatewayOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDescribeVirtualNodeResult struct {
-	Result workflow.Future
+type AppMeshDescribeVirtualNodeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDescribeVirtualNodeResult) Get(ctx workflow.Context) (*appmesh.DescribeVirtualNodeOutput, error) {
+func (r *AppMeshDescribeVirtualNodeFuture) Get(ctx workflow.Context) (*appmesh.DescribeVirtualNodeOutput, error) {
 	var output appmesh.DescribeVirtualNodeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDescribeVirtualRouterResult struct {
-	Result workflow.Future
+type AppMeshDescribeVirtualRouterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDescribeVirtualRouterResult) Get(ctx workflow.Context) (*appmesh.DescribeVirtualRouterOutput, error) {
+func (r *AppMeshDescribeVirtualRouterFuture) Get(ctx workflow.Context) (*appmesh.DescribeVirtualRouterOutput, error) {
 	var output appmesh.DescribeVirtualRouterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshDescribeVirtualServiceResult struct {
-	Result workflow.Future
+type AppMeshDescribeVirtualServiceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshDescribeVirtualServiceResult) Get(ctx workflow.Context) (*appmesh.DescribeVirtualServiceOutput, error) {
+func (r *AppMeshDescribeVirtualServiceFuture) Get(ctx workflow.Context) (*appmesh.DescribeVirtualServiceOutput, error) {
 	var output appmesh.DescribeVirtualServiceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshListGatewayRoutesResult struct {
-	Result workflow.Future
+type AppMeshListGatewayRoutesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshListGatewayRoutesResult) Get(ctx workflow.Context) (*appmesh.ListGatewayRoutesOutput, error) {
+func (r *AppMeshListGatewayRoutesFuture) Get(ctx workflow.Context) (*appmesh.ListGatewayRoutesOutput, error) {
 	var output appmesh.ListGatewayRoutesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshListMeshesResult struct {
-	Result workflow.Future
+type AppMeshListMeshesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshListMeshesResult) Get(ctx workflow.Context) (*appmesh.ListMeshesOutput, error) {
+func (r *AppMeshListMeshesFuture) Get(ctx workflow.Context) (*appmesh.ListMeshesOutput, error) {
 	var output appmesh.ListMeshesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshListRoutesResult struct {
-	Result workflow.Future
+type AppMeshListRoutesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshListRoutesResult) Get(ctx workflow.Context) (*appmesh.ListRoutesOutput, error) {
+func (r *AppMeshListRoutesFuture) Get(ctx workflow.Context) (*appmesh.ListRoutesOutput, error) {
 	var output appmesh.ListRoutesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshListTagsForResourceResult struct {
-	Result workflow.Future
+type AppMeshListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshListTagsForResourceResult) Get(ctx workflow.Context) (*appmesh.ListTagsForResourceOutput, error) {
+func (r *AppMeshListTagsForResourceFuture) Get(ctx workflow.Context) (*appmesh.ListTagsForResourceOutput, error) {
 	var output appmesh.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshListVirtualGatewaysResult struct {
-	Result workflow.Future
+type AppMeshListVirtualGatewaysFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshListVirtualGatewaysResult) Get(ctx workflow.Context) (*appmesh.ListVirtualGatewaysOutput, error) {
+func (r *AppMeshListVirtualGatewaysFuture) Get(ctx workflow.Context) (*appmesh.ListVirtualGatewaysOutput, error) {
 	var output appmesh.ListVirtualGatewaysOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshListVirtualNodesResult struct {
-	Result workflow.Future
+type AppMeshListVirtualNodesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshListVirtualNodesResult) Get(ctx workflow.Context) (*appmesh.ListVirtualNodesOutput, error) {
+func (r *AppMeshListVirtualNodesFuture) Get(ctx workflow.Context) (*appmesh.ListVirtualNodesOutput, error) {
 	var output appmesh.ListVirtualNodesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshListVirtualRoutersResult struct {
-	Result workflow.Future
+type AppMeshListVirtualRoutersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshListVirtualRoutersResult) Get(ctx workflow.Context) (*appmesh.ListVirtualRoutersOutput, error) {
+func (r *AppMeshListVirtualRoutersFuture) Get(ctx workflow.Context) (*appmesh.ListVirtualRoutersOutput, error) {
 	var output appmesh.ListVirtualRoutersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshListVirtualServicesResult struct {
-	Result workflow.Future
+type AppMeshListVirtualServicesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshListVirtualServicesResult) Get(ctx workflow.Context) (*appmesh.ListVirtualServicesOutput, error) {
+func (r *AppMeshListVirtualServicesFuture) Get(ctx workflow.Context) (*appmesh.ListVirtualServicesOutput, error) {
 	var output appmesh.ListVirtualServicesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshTagResourceResult struct {
-	Result workflow.Future
+type AppMeshTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshTagResourceResult) Get(ctx workflow.Context) (*appmesh.TagResourceOutput, error) {
+func (r *AppMeshTagResourceFuture) Get(ctx workflow.Context) (*appmesh.TagResourceOutput, error) {
 	var output appmesh.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshUntagResourceResult struct {
-	Result workflow.Future
+type AppMeshUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshUntagResourceResult) Get(ctx workflow.Context) (*appmesh.UntagResourceOutput, error) {
+func (r *AppMeshUntagResourceFuture) Get(ctx workflow.Context) (*appmesh.UntagResourceOutput, error) {
 	var output appmesh.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshUpdateGatewayRouteResult struct {
-	Result workflow.Future
+type AppMeshUpdateGatewayRouteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshUpdateGatewayRouteResult) Get(ctx workflow.Context) (*appmesh.UpdateGatewayRouteOutput, error) {
+func (r *AppMeshUpdateGatewayRouteFuture) Get(ctx workflow.Context) (*appmesh.UpdateGatewayRouteOutput, error) {
 	var output appmesh.UpdateGatewayRouteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshUpdateMeshResult struct {
-	Result workflow.Future
+type AppMeshUpdateMeshFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshUpdateMeshResult) Get(ctx workflow.Context) (*appmesh.UpdateMeshOutput, error) {
+func (r *AppMeshUpdateMeshFuture) Get(ctx workflow.Context) (*appmesh.UpdateMeshOutput, error) {
 	var output appmesh.UpdateMeshOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshUpdateRouteResult struct {
-	Result workflow.Future
+type AppMeshUpdateRouteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshUpdateRouteResult) Get(ctx workflow.Context) (*appmesh.UpdateRouteOutput, error) {
+func (r *AppMeshUpdateRouteFuture) Get(ctx workflow.Context) (*appmesh.UpdateRouteOutput, error) {
 	var output appmesh.UpdateRouteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshUpdateVirtualGatewayResult struct {
-	Result workflow.Future
+type AppMeshUpdateVirtualGatewayFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshUpdateVirtualGatewayResult) Get(ctx workflow.Context) (*appmesh.UpdateVirtualGatewayOutput, error) {
+func (r *AppMeshUpdateVirtualGatewayFuture) Get(ctx workflow.Context) (*appmesh.UpdateVirtualGatewayOutput, error) {
 	var output appmesh.UpdateVirtualGatewayOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshUpdateVirtualNodeResult struct {
-	Result workflow.Future
+type AppMeshUpdateVirtualNodeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshUpdateVirtualNodeResult) Get(ctx workflow.Context) (*appmesh.UpdateVirtualNodeOutput, error) {
+func (r *AppMeshUpdateVirtualNodeFuture) Get(ctx workflow.Context) (*appmesh.UpdateVirtualNodeOutput, error) {
 	var output appmesh.UpdateVirtualNodeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshUpdateVirtualRouterResult struct {
-	Result workflow.Future
+type AppMeshUpdateVirtualRouterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshUpdateVirtualRouterResult) Get(ctx workflow.Context) (*appmesh.UpdateVirtualRouterOutput, error) {
+func (r *AppMeshUpdateVirtualRouterFuture) Get(ctx workflow.Context) (*appmesh.UpdateVirtualRouterOutput, error) {
 	var output appmesh.UpdateVirtualRouterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppmeshUpdateVirtualServiceResult struct {
-	Result workflow.Future
+type AppMeshUpdateVirtualServiceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AppmeshUpdateVirtualServiceResult) Get(ctx workflow.Context) (*appmesh.UpdateVirtualServiceOutput, error) {
+func (r *AppMeshUpdateVirtualServiceFuture) Get(ctx workflow.Context) (*appmesh.UpdateVirtualServiceOutput, error) {
 	var output appmesh.UpdateVirtualServiceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -517,9 +555,9 @@ func (a *AppMeshStub) CreateGatewayRoute(ctx workflow.Context, input *appmesh.Cr
 	return &output, err
 }
 
-func (a *AppMeshStub) CreateGatewayRouteAsync(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) *AppmeshCreateGatewayRouteResult {
+func (a *AppMeshStub) CreateGatewayRouteAsync(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) *AppMeshCreateGatewayRouteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.CreateGatewayRoute", input)
-	return &AppmeshCreateGatewayRouteResult{Result: future}
+	return &AppMeshCreateGatewayRouteFuture{Future: future}
 }
 
 func (a *AppMeshStub) CreateMesh(ctx workflow.Context, input *appmesh.CreateMeshInput) (*appmesh.CreateMeshOutput, error) {
@@ -528,9 +566,9 @@ func (a *AppMeshStub) CreateMesh(ctx workflow.Context, input *appmesh.CreateMesh
 	return &output, err
 }
 
-func (a *AppMeshStub) CreateMeshAsync(ctx workflow.Context, input *appmesh.CreateMeshInput) *AppmeshCreateMeshResult {
+func (a *AppMeshStub) CreateMeshAsync(ctx workflow.Context, input *appmesh.CreateMeshInput) *AppMeshCreateMeshFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.CreateMesh", input)
-	return &AppmeshCreateMeshResult{Result: future}
+	return &AppMeshCreateMeshFuture{Future: future}
 }
 
 func (a *AppMeshStub) CreateRoute(ctx workflow.Context, input *appmesh.CreateRouteInput) (*appmesh.CreateRouteOutput, error) {
@@ -539,9 +577,9 @@ func (a *AppMeshStub) CreateRoute(ctx workflow.Context, input *appmesh.CreateRou
 	return &output, err
 }
 
-func (a *AppMeshStub) CreateRouteAsync(ctx workflow.Context, input *appmesh.CreateRouteInput) *AppmeshCreateRouteResult {
+func (a *AppMeshStub) CreateRouteAsync(ctx workflow.Context, input *appmesh.CreateRouteInput) *AppMeshCreateRouteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.CreateRoute", input)
-	return &AppmeshCreateRouteResult{Result: future}
+	return &AppMeshCreateRouteFuture{Future: future}
 }
 
 func (a *AppMeshStub) CreateVirtualGateway(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) (*appmesh.CreateVirtualGatewayOutput, error) {
@@ -550,9 +588,9 @@ func (a *AppMeshStub) CreateVirtualGateway(ctx workflow.Context, input *appmesh.
 	return &output, err
 }
 
-func (a *AppMeshStub) CreateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) *AppmeshCreateVirtualGatewayResult {
+func (a *AppMeshStub) CreateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) *AppMeshCreateVirtualGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.CreateVirtualGateway", input)
-	return &AppmeshCreateVirtualGatewayResult{Result: future}
+	return &AppMeshCreateVirtualGatewayFuture{Future: future}
 }
 
 func (a *AppMeshStub) CreateVirtualNode(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) (*appmesh.CreateVirtualNodeOutput, error) {
@@ -561,9 +599,9 @@ func (a *AppMeshStub) CreateVirtualNode(ctx workflow.Context, input *appmesh.Cre
 	return &output, err
 }
 
-func (a *AppMeshStub) CreateVirtualNodeAsync(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) *AppmeshCreateVirtualNodeResult {
+func (a *AppMeshStub) CreateVirtualNodeAsync(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) *AppMeshCreateVirtualNodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.CreateVirtualNode", input)
-	return &AppmeshCreateVirtualNodeResult{Result: future}
+	return &AppMeshCreateVirtualNodeFuture{Future: future}
 }
 
 func (a *AppMeshStub) CreateVirtualRouter(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) (*appmesh.CreateVirtualRouterOutput, error) {
@@ -572,9 +610,9 @@ func (a *AppMeshStub) CreateVirtualRouter(ctx workflow.Context, input *appmesh.C
 	return &output, err
 }
 
-func (a *AppMeshStub) CreateVirtualRouterAsync(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) *AppmeshCreateVirtualRouterResult {
+func (a *AppMeshStub) CreateVirtualRouterAsync(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) *AppMeshCreateVirtualRouterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.CreateVirtualRouter", input)
-	return &AppmeshCreateVirtualRouterResult{Result: future}
+	return &AppMeshCreateVirtualRouterFuture{Future: future}
 }
 
 func (a *AppMeshStub) CreateVirtualService(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) (*appmesh.CreateVirtualServiceOutput, error) {
@@ -583,9 +621,9 @@ func (a *AppMeshStub) CreateVirtualService(ctx workflow.Context, input *appmesh.
 	return &output, err
 }
 
-func (a *AppMeshStub) CreateVirtualServiceAsync(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) *AppmeshCreateVirtualServiceResult {
+func (a *AppMeshStub) CreateVirtualServiceAsync(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) *AppMeshCreateVirtualServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.CreateVirtualService", input)
-	return &AppmeshCreateVirtualServiceResult{Result: future}
+	return &AppMeshCreateVirtualServiceFuture{Future: future}
 }
 
 func (a *AppMeshStub) DeleteGatewayRoute(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) (*appmesh.DeleteGatewayRouteOutput, error) {
@@ -594,9 +632,9 @@ func (a *AppMeshStub) DeleteGatewayRoute(ctx workflow.Context, input *appmesh.De
 	return &output, err
 }
 
-func (a *AppMeshStub) DeleteGatewayRouteAsync(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) *AppmeshDeleteGatewayRouteResult {
+func (a *AppMeshStub) DeleteGatewayRouteAsync(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) *AppMeshDeleteGatewayRouteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DeleteGatewayRoute", input)
-	return &AppmeshDeleteGatewayRouteResult{Result: future}
+	return &AppMeshDeleteGatewayRouteFuture{Future: future}
 }
 
 func (a *AppMeshStub) DeleteMesh(ctx workflow.Context, input *appmesh.DeleteMeshInput) (*appmesh.DeleteMeshOutput, error) {
@@ -605,9 +643,9 @@ func (a *AppMeshStub) DeleteMesh(ctx workflow.Context, input *appmesh.DeleteMesh
 	return &output, err
 }
 
-func (a *AppMeshStub) DeleteMeshAsync(ctx workflow.Context, input *appmesh.DeleteMeshInput) *AppmeshDeleteMeshResult {
+func (a *AppMeshStub) DeleteMeshAsync(ctx workflow.Context, input *appmesh.DeleteMeshInput) *AppMeshDeleteMeshFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DeleteMesh", input)
-	return &AppmeshDeleteMeshResult{Result: future}
+	return &AppMeshDeleteMeshFuture{Future: future}
 }
 
 func (a *AppMeshStub) DeleteRoute(ctx workflow.Context, input *appmesh.DeleteRouteInput) (*appmesh.DeleteRouteOutput, error) {
@@ -616,9 +654,9 @@ func (a *AppMeshStub) DeleteRoute(ctx workflow.Context, input *appmesh.DeleteRou
 	return &output, err
 }
 
-func (a *AppMeshStub) DeleteRouteAsync(ctx workflow.Context, input *appmesh.DeleteRouteInput) *AppmeshDeleteRouteResult {
+func (a *AppMeshStub) DeleteRouteAsync(ctx workflow.Context, input *appmesh.DeleteRouteInput) *AppMeshDeleteRouteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DeleteRoute", input)
-	return &AppmeshDeleteRouteResult{Result: future}
+	return &AppMeshDeleteRouteFuture{Future: future}
 }
 
 func (a *AppMeshStub) DeleteVirtualGateway(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) (*appmesh.DeleteVirtualGatewayOutput, error) {
@@ -627,9 +665,9 @@ func (a *AppMeshStub) DeleteVirtualGateway(ctx workflow.Context, input *appmesh.
 	return &output, err
 }
 
-func (a *AppMeshStub) DeleteVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) *AppmeshDeleteVirtualGatewayResult {
+func (a *AppMeshStub) DeleteVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) *AppMeshDeleteVirtualGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DeleteVirtualGateway", input)
-	return &AppmeshDeleteVirtualGatewayResult{Result: future}
+	return &AppMeshDeleteVirtualGatewayFuture{Future: future}
 }
 
 func (a *AppMeshStub) DeleteVirtualNode(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) (*appmesh.DeleteVirtualNodeOutput, error) {
@@ -638,9 +676,9 @@ func (a *AppMeshStub) DeleteVirtualNode(ctx workflow.Context, input *appmesh.Del
 	return &output, err
 }
 
-func (a *AppMeshStub) DeleteVirtualNodeAsync(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) *AppmeshDeleteVirtualNodeResult {
+func (a *AppMeshStub) DeleteVirtualNodeAsync(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) *AppMeshDeleteVirtualNodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DeleteVirtualNode", input)
-	return &AppmeshDeleteVirtualNodeResult{Result: future}
+	return &AppMeshDeleteVirtualNodeFuture{Future: future}
 }
 
 func (a *AppMeshStub) DeleteVirtualRouter(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) (*appmesh.DeleteVirtualRouterOutput, error) {
@@ -649,9 +687,9 @@ func (a *AppMeshStub) DeleteVirtualRouter(ctx workflow.Context, input *appmesh.D
 	return &output, err
 }
 
-func (a *AppMeshStub) DeleteVirtualRouterAsync(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) *AppmeshDeleteVirtualRouterResult {
+func (a *AppMeshStub) DeleteVirtualRouterAsync(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) *AppMeshDeleteVirtualRouterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DeleteVirtualRouter", input)
-	return &AppmeshDeleteVirtualRouterResult{Result: future}
+	return &AppMeshDeleteVirtualRouterFuture{Future: future}
 }
 
 func (a *AppMeshStub) DeleteVirtualService(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) (*appmesh.DeleteVirtualServiceOutput, error) {
@@ -660,9 +698,9 @@ func (a *AppMeshStub) DeleteVirtualService(ctx workflow.Context, input *appmesh.
 	return &output, err
 }
 
-func (a *AppMeshStub) DeleteVirtualServiceAsync(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) *AppmeshDeleteVirtualServiceResult {
+func (a *AppMeshStub) DeleteVirtualServiceAsync(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) *AppMeshDeleteVirtualServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DeleteVirtualService", input)
-	return &AppmeshDeleteVirtualServiceResult{Result: future}
+	return &AppMeshDeleteVirtualServiceFuture{Future: future}
 }
 
 func (a *AppMeshStub) DescribeGatewayRoute(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) (*appmesh.DescribeGatewayRouteOutput, error) {
@@ -671,9 +709,9 @@ func (a *AppMeshStub) DescribeGatewayRoute(ctx workflow.Context, input *appmesh.
 	return &output, err
 }
 
-func (a *AppMeshStub) DescribeGatewayRouteAsync(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) *AppmeshDescribeGatewayRouteResult {
+func (a *AppMeshStub) DescribeGatewayRouteAsync(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) *AppMeshDescribeGatewayRouteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DescribeGatewayRoute", input)
-	return &AppmeshDescribeGatewayRouteResult{Result: future}
+	return &AppMeshDescribeGatewayRouteFuture{Future: future}
 }
 
 func (a *AppMeshStub) DescribeMesh(ctx workflow.Context, input *appmesh.DescribeMeshInput) (*appmesh.DescribeMeshOutput, error) {
@@ -682,9 +720,9 @@ func (a *AppMeshStub) DescribeMesh(ctx workflow.Context, input *appmesh.Describe
 	return &output, err
 }
 
-func (a *AppMeshStub) DescribeMeshAsync(ctx workflow.Context, input *appmesh.DescribeMeshInput) *AppmeshDescribeMeshResult {
+func (a *AppMeshStub) DescribeMeshAsync(ctx workflow.Context, input *appmesh.DescribeMeshInput) *AppMeshDescribeMeshFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DescribeMesh", input)
-	return &AppmeshDescribeMeshResult{Result: future}
+	return &AppMeshDescribeMeshFuture{Future: future}
 }
 
 func (a *AppMeshStub) DescribeRoute(ctx workflow.Context, input *appmesh.DescribeRouteInput) (*appmesh.DescribeRouteOutput, error) {
@@ -693,9 +731,9 @@ func (a *AppMeshStub) DescribeRoute(ctx workflow.Context, input *appmesh.Describ
 	return &output, err
 }
 
-func (a *AppMeshStub) DescribeRouteAsync(ctx workflow.Context, input *appmesh.DescribeRouteInput) *AppmeshDescribeRouteResult {
+func (a *AppMeshStub) DescribeRouteAsync(ctx workflow.Context, input *appmesh.DescribeRouteInput) *AppMeshDescribeRouteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DescribeRoute", input)
-	return &AppmeshDescribeRouteResult{Result: future}
+	return &AppMeshDescribeRouteFuture{Future: future}
 }
 
 func (a *AppMeshStub) DescribeVirtualGateway(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) (*appmesh.DescribeVirtualGatewayOutput, error) {
@@ -704,9 +742,9 @@ func (a *AppMeshStub) DescribeVirtualGateway(ctx workflow.Context, input *appmes
 	return &output, err
 }
 
-func (a *AppMeshStub) DescribeVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) *AppmeshDescribeVirtualGatewayResult {
+func (a *AppMeshStub) DescribeVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) *AppMeshDescribeVirtualGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DescribeVirtualGateway", input)
-	return &AppmeshDescribeVirtualGatewayResult{Result: future}
+	return &AppMeshDescribeVirtualGatewayFuture{Future: future}
 }
 
 func (a *AppMeshStub) DescribeVirtualNode(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) (*appmesh.DescribeVirtualNodeOutput, error) {
@@ -715,9 +753,9 @@ func (a *AppMeshStub) DescribeVirtualNode(ctx workflow.Context, input *appmesh.D
 	return &output, err
 }
 
-func (a *AppMeshStub) DescribeVirtualNodeAsync(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) *AppmeshDescribeVirtualNodeResult {
+func (a *AppMeshStub) DescribeVirtualNodeAsync(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) *AppMeshDescribeVirtualNodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DescribeVirtualNode", input)
-	return &AppmeshDescribeVirtualNodeResult{Result: future}
+	return &AppMeshDescribeVirtualNodeFuture{Future: future}
 }
 
 func (a *AppMeshStub) DescribeVirtualRouter(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) (*appmesh.DescribeVirtualRouterOutput, error) {
@@ -726,9 +764,9 @@ func (a *AppMeshStub) DescribeVirtualRouter(ctx workflow.Context, input *appmesh
 	return &output, err
 }
 
-func (a *AppMeshStub) DescribeVirtualRouterAsync(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) *AppmeshDescribeVirtualRouterResult {
+func (a *AppMeshStub) DescribeVirtualRouterAsync(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) *AppMeshDescribeVirtualRouterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DescribeVirtualRouter", input)
-	return &AppmeshDescribeVirtualRouterResult{Result: future}
+	return &AppMeshDescribeVirtualRouterFuture{Future: future}
 }
 
 func (a *AppMeshStub) DescribeVirtualService(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) (*appmesh.DescribeVirtualServiceOutput, error) {
@@ -737,9 +775,9 @@ func (a *AppMeshStub) DescribeVirtualService(ctx workflow.Context, input *appmes
 	return &output, err
 }
 
-func (a *AppMeshStub) DescribeVirtualServiceAsync(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) *AppmeshDescribeVirtualServiceResult {
+func (a *AppMeshStub) DescribeVirtualServiceAsync(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) *AppMeshDescribeVirtualServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.DescribeVirtualService", input)
-	return &AppmeshDescribeVirtualServiceResult{Result: future}
+	return &AppMeshDescribeVirtualServiceFuture{Future: future}
 }
 
 func (a *AppMeshStub) ListGatewayRoutes(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) (*appmesh.ListGatewayRoutesOutput, error) {
@@ -748,9 +786,9 @@ func (a *AppMeshStub) ListGatewayRoutes(ctx workflow.Context, input *appmesh.Lis
 	return &output, err
 }
 
-func (a *AppMeshStub) ListGatewayRoutesAsync(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) *AppmeshListGatewayRoutesResult {
+func (a *AppMeshStub) ListGatewayRoutesAsync(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) *AppMeshListGatewayRoutesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.ListGatewayRoutes", input)
-	return &AppmeshListGatewayRoutesResult{Result: future}
+	return &AppMeshListGatewayRoutesFuture{Future: future}
 }
 
 func (a *AppMeshStub) ListMeshes(ctx workflow.Context, input *appmesh.ListMeshesInput) (*appmesh.ListMeshesOutput, error) {
@@ -759,9 +797,9 @@ func (a *AppMeshStub) ListMeshes(ctx workflow.Context, input *appmesh.ListMeshes
 	return &output, err
 }
 
-func (a *AppMeshStub) ListMeshesAsync(ctx workflow.Context, input *appmesh.ListMeshesInput) *AppmeshListMeshesResult {
+func (a *AppMeshStub) ListMeshesAsync(ctx workflow.Context, input *appmesh.ListMeshesInput) *AppMeshListMeshesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.ListMeshes", input)
-	return &AppmeshListMeshesResult{Result: future}
+	return &AppMeshListMeshesFuture{Future: future}
 }
 
 func (a *AppMeshStub) ListRoutes(ctx workflow.Context, input *appmesh.ListRoutesInput) (*appmesh.ListRoutesOutput, error) {
@@ -770,9 +808,9 @@ func (a *AppMeshStub) ListRoutes(ctx workflow.Context, input *appmesh.ListRoutes
 	return &output, err
 }
 
-func (a *AppMeshStub) ListRoutesAsync(ctx workflow.Context, input *appmesh.ListRoutesInput) *AppmeshListRoutesResult {
+func (a *AppMeshStub) ListRoutesAsync(ctx workflow.Context, input *appmesh.ListRoutesInput) *AppMeshListRoutesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.ListRoutes", input)
-	return &AppmeshListRoutesResult{Result: future}
+	return &AppMeshListRoutesFuture{Future: future}
 }
 
 func (a *AppMeshStub) ListTagsForResource(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) (*appmesh.ListTagsForResourceOutput, error) {
@@ -781,9 +819,9 @@ func (a *AppMeshStub) ListTagsForResource(ctx workflow.Context, input *appmesh.L
 	return &output, err
 }
 
-func (a *AppMeshStub) ListTagsForResourceAsync(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) *AppmeshListTagsForResourceResult {
+func (a *AppMeshStub) ListTagsForResourceAsync(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) *AppMeshListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.ListTagsForResource", input)
-	return &AppmeshListTagsForResourceResult{Result: future}
+	return &AppMeshListTagsForResourceFuture{Future: future}
 }
 
 func (a *AppMeshStub) ListVirtualGateways(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) (*appmesh.ListVirtualGatewaysOutput, error) {
@@ -792,9 +830,9 @@ func (a *AppMeshStub) ListVirtualGateways(ctx workflow.Context, input *appmesh.L
 	return &output, err
 }
 
-func (a *AppMeshStub) ListVirtualGatewaysAsync(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) *AppmeshListVirtualGatewaysResult {
+func (a *AppMeshStub) ListVirtualGatewaysAsync(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) *AppMeshListVirtualGatewaysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.ListVirtualGateways", input)
-	return &AppmeshListVirtualGatewaysResult{Result: future}
+	return &AppMeshListVirtualGatewaysFuture{Future: future}
 }
 
 func (a *AppMeshStub) ListVirtualNodes(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) (*appmesh.ListVirtualNodesOutput, error) {
@@ -803,9 +841,9 @@ func (a *AppMeshStub) ListVirtualNodes(ctx workflow.Context, input *appmesh.List
 	return &output, err
 }
 
-func (a *AppMeshStub) ListVirtualNodesAsync(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) *AppmeshListVirtualNodesResult {
+func (a *AppMeshStub) ListVirtualNodesAsync(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) *AppMeshListVirtualNodesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.ListVirtualNodes", input)
-	return &AppmeshListVirtualNodesResult{Result: future}
+	return &AppMeshListVirtualNodesFuture{Future: future}
 }
 
 func (a *AppMeshStub) ListVirtualRouters(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) (*appmesh.ListVirtualRoutersOutput, error) {
@@ -814,9 +852,9 @@ func (a *AppMeshStub) ListVirtualRouters(ctx workflow.Context, input *appmesh.Li
 	return &output, err
 }
 
-func (a *AppMeshStub) ListVirtualRoutersAsync(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) *AppmeshListVirtualRoutersResult {
+func (a *AppMeshStub) ListVirtualRoutersAsync(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) *AppMeshListVirtualRoutersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.ListVirtualRouters", input)
-	return &AppmeshListVirtualRoutersResult{Result: future}
+	return &AppMeshListVirtualRoutersFuture{Future: future}
 }
 
 func (a *AppMeshStub) ListVirtualServices(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) (*appmesh.ListVirtualServicesOutput, error) {
@@ -825,9 +863,9 @@ func (a *AppMeshStub) ListVirtualServices(ctx workflow.Context, input *appmesh.L
 	return &output, err
 }
 
-func (a *AppMeshStub) ListVirtualServicesAsync(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) *AppmeshListVirtualServicesResult {
+func (a *AppMeshStub) ListVirtualServicesAsync(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) *AppMeshListVirtualServicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.ListVirtualServices", input)
-	return &AppmeshListVirtualServicesResult{Result: future}
+	return &AppMeshListVirtualServicesFuture{Future: future}
 }
 
 func (a *AppMeshStub) TagResource(ctx workflow.Context, input *appmesh.TagResourceInput) (*appmesh.TagResourceOutput, error) {
@@ -836,9 +874,9 @@ func (a *AppMeshStub) TagResource(ctx workflow.Context, input *appmesh.TagResour
 	return &output, err
 }
 
-func (a *AppMeshStub) TagResourceAsync(ctx workflow.Context, input *appmesh.TagResourceInput) *AppmeshTagResourceResult {
+func (a *AppMeshStub) TagResourceAsync(ctx workflow.Context, input *appmesh.TagResourceInput) *AppMeshTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.TagResource", input)
-	return &AppmeshTagResourceResult{Result: future}
+	return &AppMeshTagResourceFuture{Future: future}
 }
 
 func (a *AppMeshStub) UntagResource(ctx workflow.Context, input *appmesh.UntagResourceInput) (*appmesh.UntagResourceOutput, error) {
@@ -847,9 +885,9 @@ func (a *AppMeshStub) UntagResource(ctx workflow.Context, input *appmesh.UntagRe
 	return &output, err
 }
 
-func (a *AppMeshStub) UntagResourceAsync(ctx workflow.Context, input *appmesh.UntagResourceInput) *AppmeshUntagResourceResult {
+func (a *AppMeshStub) UntagResourceAsync(ctx workflow.Context, input *appmesh.UntagResourceInput) *AppMeshUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.UntagResource", input)
-	return &AppmeshUntagResourceResult{Result: future}
+	return &AppMeshUntagResourceFuture{Future: future}
 }
 
 func (a *AppMeshStub) UpdateGatewayRoute(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) (*appmesh.UpdateGatewayRouteOutput, error) {
@@ -858,9 +896,9 @@ func (a *AppMeshStub) UpdateGatewayRoute(ctx workflow.Context, input *appmesh.Up
 	return &output, err
 }
 
-func (a *AppMeshStub) UpdateGatewayRouteAsync(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) *AppmeshUpdateGatewayRouteResult {
+func (a *AppMeshStub) UpdateGatewayRouteAsync(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) *AppMeshUpdateGatewayRouteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.UpdateGatewayRoute", input)
-	return &AppmeshUpdateGatewayRouteResult{Result: future}
+	return &AppMeshUpdateGatewayRouteFuture{Future: future}
 }
 
 func (a *AppMeshStub) UpdateMesh(ctx workflow.Context, input *appmesh.UpdateMeshInput) (*appmesh.UpdateMeshOutput, error) {
@@ -869,9 +907,9 @@ func (a *AppMeshStub) UpdateMesh(ctx workflow.Context, input *appmesh.UpdateMesh
 	return &output, err
 }
 
-func (a *AppMeshStub) UpdateMeshAsync(ctx workflow.Context, input *appmesh.UpdateMeshInput) *AppmeshUpdateMeshResult {
+func (a *AppMeshStub) UpdateMeshAsync(ctx workflow.Context, input *appmesh.UpdateMeshInput) *AppMeshUpdateMeshFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.UpdateMesh", input)
-	return &AppmeshUpdateMeshResult{Result: future}
+	return &AppMeshUpdateMeshFuture{Future: future}
 }
 
 func (a *AppMeshStub) UpdateRoute(ctx workflow.Context, input *appmesh.UpdateRouteInput) (*appmesh.UpdateRouteOutput, error) {
@@ -880,9 +918,9 @@ func (a *AppMeshStub) UpdateRoute(ctx workflow.Context, input *appmesh.UpdateRou
 	return &output, err
 }
 
-func (a *AppMeshStub) UpdateRouteAsync(ctx workflow.Context, input *appmesh.UpdateRouteInput) *AppmeshUpdateRouteResult {
+func (a *AppMeshStub) UpdateRouteAsync(ctx workflow.Context, input *appmesh.UpdateRouteInput) *AppMeshUpdateRouteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.UpdateRoute", input)
-	return &AppmeshUpdateRouteResult{Result: future}
+	return &AppMeshUpdateRouteFuture{Future: future}
 }
 
 func (a *AppMeshStub) UpdateVirtualGateway(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) (*appmesh.UpdateVirtualGatewayOutput, error) {
@@ -891,9 +929,9 @@ func (a *AppMeshStub) UpdateVirtualGateway(ctx workflow.Context, input *appmesh.
 	return &output, err
 }
 
-func (a *AppMeshStub) UpdateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) *AppmeshUpdateVirtualGatewayResult {
+func (a *AppMeshStub) UpdateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) *AppMeshUpdateVirtualGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.UpdateVirtualGateway", input)
-	return &AppmeshUpdateVirtualGatewayResult{Result: future}
+	return &AppMeshUpdateVirtualGatewayFuture{Future: future}
 }
 
 func (a *AppMeshStub) UpdateVirtualNode(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) (*appmesh.UpdateVirtualNodeOutput, error) {
@@ -902,9 +940,9 @@ func (a *AppMeshStub) UpdateVirtualNode(ctx workflow.Context, input *appmesh.Upd
 	return &output, err
 }
 
-func (a *AppMeshStub) UpdateVirtualNodeAsync(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) *AppmeshUpdateVirtualNodeResult {
+func (a *AppMeshStub) UpdateVirtualNodeAsync(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) *AppMeshUpdateVirtualNodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.UpdateVirtualNode", input)
-	return &AppmeshUpdateVirtualNodeResult{Result: future}
+	return &AppMeshUpdateVirtualNodeFuture{Future: future}
 }
 
 func (a *AppMeshStub) UpdateVirtualRouter(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) (*appmesh.UpdateVirtualRouterOutput, error) {
@@ -913,9 +951,9 @@ func (a *AppMeshStub) UpdateVirtualRouter(ctx workflow.Context, input *appmesh.U
 	return &output, err
 }
 
-func (a *AppMeshStub) UpdateVirtualRouterAsync(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) *AppmeshUpdateVirtualRouterResult {
+func (a *AppMeshStub) UpdateVirtualRouterAsync(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) *AppMeshUpdateVirtualRouterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.UpdateVirtualRouter", input)
-	return &AppmeshUpdateVirtualRouterResult{Result: future}
+	return &AppMeshUpdateVirtualRouterFuture{Future: future}
 }
 
 func (a *AppMeshStub) UpdateVirtualService(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) (*appmesh.UpdateVirtualServiceOutput, error) {
@@ -924,7 +962,7 @@ func (a *AppMeshStub) UpdateVirtualService(ctx workflow.Context, input *appmesh.
 	return &output, err
 }
 
-func (a *AppMeshStub) UpdateVirtualServiceAsync(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) *AppmeshUpdateVirtualServiceResult {
+func (a *AppMeshStub) UpdateVirtualServiceAsync(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) *AppMeshUpdateVirtualServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appmesh.UpdateVirtualService", input)
-	return &AppmeshUpdateVirtualServiceResult{Result: future}
+	return &AppMeshUpdateVirtualServiceFuture{Future: future}
 }

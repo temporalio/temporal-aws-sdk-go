@@ -11,145 +11,145 @@ import (
 
 type WorkMailClient interface {
 	AssociateDelegateToResource(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) (*workmail.AssociateDelegateToResourceOutput, error)
-	AssociateDelegateToResourceAsync(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) *WorkmailAssociateDelegateToResourceResult
+	AssociateDelegateToResourceAsync(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) *WorkMailAssociateDelegateToResourceFuture
 
 	AssociateMemberToGroup(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) (*workmail.AssociateMemberToGroupOutput, error)
-	AssociateMemberToGroupAsync(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) *WorkmailAssociateMemberToGroupResult
+	AssociateMemberToGroupAsync(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) *WorkMailAssociateMemberToGroupFuture
 
 	CancelMailboxExportJob(ctx workflow.Context, input *workmail.CancelMailboxExportJobInput) (*workmail.CancelMailboxExportJobOutput, error)
-	CancelMailboxExportJobAsync(ctx workflow.Context, input *workmail.CancelMailboxExportJobInput) *WorkmailCancelMailboxExportJobResult
+	CancelMailboxExportJobAsync(ctx workflow.Context, input *workmail.CancelMailboxExportJobInput) *WorkMailCancelMailboxExportJobFuture
 
 	CreateAlias(ctx workflow.Context, input *workmail.CreateAliasInput) (*workmail.CreateAliasOutput, error)
-	CreateAliasAsync(ctx workflow.Context, input *workmail.CreateAliasInput) *WorkmailCreateAliasResult
+	CreateAliasAsync(ctx workflow.Context, input *workmail.CreateAliasInput) *WorkMailCreateAliasFuture
 
 	CreateGroup(ctx workflow.Context, input *workmail.CreateGroupInput) (*workmail.CreateGroupOutput, error)
-	CreateGroupAsync(ctx workflow.Context, input *workmail.CreateGroupInput) *WorkmailCreateGroupResult
+	CreateGroupAsync(ctx workflow.Context, input *workmail.CreateGroupInput) *WorkMailCreateGroupFuture
 
 	CreateResource(ctx workflow.Context, input *workmail.CreateResourceInput) (*workmail.CreateResourceOutput, error)
-	CreateResourceAsync(ctx workflow.Context, input *workmail.CreateResourceInput) *WorkmailCreateResourceResult
+	CreateResourceAsync(ctx workflow.Context, input *workmail.CreateResourceInput) *WorkMailCreateResourceFuture
 
 	CreateUser(ctx workflow.Context, input *workmail.CreateUserInput) (*workmail.CreateUserOutput, error)
-	CreateUserAsync(ctx workflow.Context, input *workmail.CreateUserInput) *WorkmailCreateUserResult
+	CreateUserAsync(ctx workflow.Context, input *workmail.CreateUserInput) *WorkMailCreateUserFuture
 
 	DeleteAccessControlRule(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) (*workmail.DeleteAccessControlRuleOutput, error)
-	DeleteAccessControlRuleAsync(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) *WorkmailDeleteAccessControlRuleResult
+	DeleteAccessControlRuleAsync(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) *WorkMailDeleteAccessControlRuleFuture
 
 	DeleteAlias(ctx workflow.Context, input *workmail.DeleteAliasInput) (*workmail.DeleteAliasOutput, error)
-	DeleteAliasAsync(ctx workflow.Context, input *workmail.DeleteAliasInput) *WorkmailDeleteAliasResult
+	DeleteAliasAsync(ctx workflow.Context, input *workmail.DeleteAliasInput) *WorkMailDeleteAliasFuture
 
 	DeleteGroup(ctx workflow.Context, input *workmail.DeleteGroupInput) (*workmail.DeleteGroupOutput, error)
-	DeleteGroupAsync(ctx workflow.Context, input *workmail.DeleteGroupInput) *WorkmailDeleteGroupResult
+	DeleteGroupAsync(ctx workflow.Context, input *workmail.DeleteGroupInput) *WorkMailDeleteGroupFuture
 
 	DeleteMailboxPermissions(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) (*workmail.DeleteMailboxPermissionsOutput, error)
-	DeleteMailboxPermissionsAsync(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) *WorkmailDeleteMailboxPermissionsResult
+	DeleteMailboxPermissionsAsync(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) *WorkMailDeleteMailboxPermissionsFuture
 
 	DeleteResource(ctx workflow.Context, input *workmail.DeleteResourceInput) (*workmail.DeleteResourceOutput, error)
-	DeleteResourceAsync(ctx workflow.Context, input *workmail.DeleteResourceInput) *WorkmailDeleteResourceResult
+	DeleteResourceAsync(ctx workflow.Context, input *workmail.DeleteResourceInput) *WorkMailDeleteResourceFuture
 
 	DeleteRetentionPolicy(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) (*workmail.DeleteRetentionPolicyOutput, error)
-	DeleteRetentionPolicyAsync(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) *WorkmailDeleteRetentionPolicyResult
+	DeleteRetentionPolicyAsync(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) *WorkMailDeleteRetentionPolicyFuture
 
 	DeleteUser(ctx workflow.Context, input *workmail.DeleteUserInput) (*workmail.DeleteUserOutput, error)
-	DeleteUserAsync(ctx workflow.Context, input *workmail.DeleteUserInput) *WorkmailDeleteUserResult
+	DeleteUserAsync(ctx workflow.Context, input *workmail.DeleteUserInput) *WorkMailDeleteUserFuture
 
 	DeregisterFromWorkMail(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) (*workmail.DeregisterFromWorkMailOutput, error)
-	DeregisterFromWorkMailAsync(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) *WorkmailDeregisterFromWorkMailResult
+	DeregisterFromWorkMailAsync(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) *WorkMailDeregisterFromWorkMailFuture
 
 	DescribeGroup(ctx workflow.Context, input *workmail.DescribeGroupInput) (*workmail.DescribeGroupOutput, error)
-	DescribeGroupAsync(ctx workflow.Context, input *workmail.DescribeGroupInput) *WorkmailDescribeGroupResult
+	DescribeGroupAsync(ctx workflow.Context, input *workmail.DescribeGroupInput) *WorkMailDescribeGroupFuture
 
 	DescribeMailboxExportJob(ctx workflow.Context, input *workmail.DescribeMailboxExportJobInput) (*workmail.DescribeMailboxExportJobOutput, error)
-	DescribeMailboxExportJobAsync(ctx workflow.Context, input *workmail.DescribeMailboxExportJobInput) *WorkmailDescribeMailboxExportJobResult
+	DescribeMailboxExportJobAsync(ctx workflow.Context, input *workmail.DescribeMailboxExportJobInput) *WorkMailDescribeMailboxExportJobFuture
 
 	DescribeOrganization(ctx workflow.Context, input *workmail.DescribeOrganizationInput) (*workmail.DescribeOrganizationOutput, error)
-	DescribeOrganizationAsync(ctx workflow.Context, input *workmail.DescribeOrganizationInput) *WorkmailDescribeOrganizationResult
+	DescribeOrganizationAsync(ctx workflow.Context, input *workmail.DescribeOrganizationInput) *WorkMailDescribeOrganizationFuture
 
 	DescribeResource(ctx workflow.Context, input *workmail.DescribeResourceInput) (*workmail.DescribeResourceOutput, error)
-	DescribeResourceAsync(ctx workflow.Context, input *workmail.DescribeResourceInput) *WorkmailDescribeResourceResult
+	DescribeResourceAsync(ctx workflow.Context, input *workmail.DescribeResourceInput) *WorkMailDescribeResourceFuture
 
 	DescribeUser(ctx workflow.Context, input *workmail.DescribeUserInput) (*workmail.DescribeUserOutput, error)
-	DescribeUserAsync(ctx workflow.Context, input *workmail.DescribeUserInput) *WorkmailDescribeUserResult
+	DescribeUserAsync(ctx workflow.Context, input *workmail.DescribeUserInput) *WorkMailDescribeUserFuture
 
 	DisassociateDelegateFromResource(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) (*workmail.DisassociateDelegateFromResourceOutput, error)
-	DisassociateDelegateFromResourceAsync(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) *WorkmailDisassociateDelegateFromResourceResult
+	DisassociateDelegateFromResourceAsync(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) *WorkMailDisassociateDelegateFromResourceFuture
 
 	DisassociateMemberFromGroup(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) (*workmail.DisassociateMemberFromGroupOutput, error)
-	DisassociateMemberFromGroupAsync(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) *WorkmailDisassociateMemberFromGroupResult
+	DisassociateMemberFromGroupAsync(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) *WorkMailDisassociateMemberFromGroupFuture
 
 	GetAccessControlEffect(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) (*workmail.GetAccessControlEffectOutput, error)
-	GetAccessControlEffectAsync(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) *WorkmailGetAccessControlEffectResult
+	GetAccessControlEffectAsync(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) *WorkMailGetAccessControlEffectFuture
 
 	GetDefaultRetentionPolicy(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) (*workmail.GetDefaultRetentionPolicyOutput, error)
-	GetDefaultRetentionPolicyAsync(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) *WorkmailGetDefaultRetentionPolicyResult
+	GetDefaultRetentionPolicyAsync(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) *WorkMailGetDefaultRetentionPolicyFuture
 
 	GetMailboxDetails(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) (*workmail.GetMailboxDetailsOutput, error)
-	GetMailboxDetailsAsync(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) *WorkmailGetMailboxDetailsResult
+	GetMailboxDetailsAsync(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) *WorkMailGetMailboxDetailsFuture
 
 	ListAccessControlRules(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) (*workmail.ListAccessControlRulesOutput, error)
-	ListAccessControlRulesAsync(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) *WorkmailListAccessControlRulesResult
+	ListAccessControlRulesAsync(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) *WorkMailListAccessControlRulesFuture
 
 	ListAliases(ctx workflow.Context, input *workmail.ListAliasesInput) (*workmail.ListAliasesOutput, error)
-	ListAliasesAsync(ctx workflow.Context, input *workmail.ListAliasesInput) *WorkmailListAliasesResult
+	ListAliasesAsync(ctx workflow.Context, input *workmail.ListAliasesInput) *WorkMailListAliasesFuture
 
 	ListGroupMembers(ctx workflow.Context, input *workmail.ListGroupMembersInput) (*workmail.ListGroupMembersOutput, error)
-	ListGroupMembersAsync(ctx workflow.Context, input *workmail.ListGroupMembersInput) *WorkmailListGroupMembersResult
+	ListGroupMembersAsync(ctx workflow.Context, input *workmail.ListGroupMembersInput) *WorkMailListGroupMembersFuture
 
 	ListGroups(ctx workflow.Context, input *workmail.ListGroupsInput) (*workmail.ListGroupsOutput, error)
-	ListGroupsAsync(ctx workflow.Context, input *workmail.ListGroupsInput) *WorkmailListGroupsResult
+	ListGroupsAsync(ctx workflow.Context, input *workmail.ListGroupsInput) *WorkMailListGroupsFuture
 
 	ListMailboxExportJobs(ctx workflow.Context, input *workmail.ListMailboxExportJobsInput) (*workmail.ListMailboxExportJobsOutput, error)
-	ListMailboxExportJobsAsync(ctx workflow.Context, input *workmail.ListMailboxExportJobsInput) *WorkmailListMailboxExportJobsResult
+	ListMailboxExportJobsAsync(ctx workflow.Context, input *workmail.ListMailboxExportJobsInput) *WorkMailListMailboxExportJobsFuture
 
 	ListMailboxPermissions(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) (*workmail.ListMailboxPermissionsOutput, error)
-	ListMailboxPermissionsAsync(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) *WorkmailListMailboxPermissionsResult
+	ListMailboxPermissionsAsync(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) *WorkMailListMailboxPermissionsFuture
 
 	ListOrganizations(ctx workflow.Context, input *workmail.ListOrganizationsInput) (*workmail.ListOrganizationsOutput, error)
-	ListOrganizationsAsync(ctx workflow.Context, input *workmail.ListOrganizationsInput) *WorkmailListOrganizationsResult
+	ListOrganizationsAsync(ctx workflow.Context, input *workmail.ListOrganizationsInput) *WorkMailListOrganizationsFuture
 
 	ListResourceDelegates(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) (*workmail.ListResourceDelegatesOutput, error)
-	ListResourceDelegatesAsync(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) *WorkmailListResourceDelegatesResult
+	ListResourceDelegatesAsync(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) *WorkMailListResourceDelegatesFuture
 
 	ListResources(ctx workflow.Context, input *workmail.ListResourcesInput) (*workmail.ListResourcesOutput, error)
-	ListResourcesAsync(ctx workflow.Context, input *workmail.ListResourcesInput) *WorkmailListResourcesResult
+	ListResourcesAsync(ctx workflow.Context, input *workmail.ListResourcesInput) *WorkMailListResourcesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *workmail.ListTagsForResourceInput) (*workmail.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *workmail.ListTagsForResourceInput) *WorkmailListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *workmail.ListTagsForResourceInput) *WorkMailListTagsForResourceFuture
 
 	ListUsers(ctx workflow.Context, input *workmail.ListUsersInput) (*workmail.ListUsersOutput, error)
-	ListUsersAsync(ctx workflow.Context, input *workmail.ListUsersInput) *WorkmailListUsersResult
+	ListUsersAsync(ctx workflow.Context, input *workmail.ListUsersInput) *WorkMailListUsersFuture
 
 	PutAccessControlRule(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) (*workmail.PutAccessControlRuleOutput, error)
-	PutAccessControlRuleAsync(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) *WorkmailPutAccessControlRuleResult
+	PutAccessControlRuleAsync(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) *WorkMailPutAccessControlRuleFuture
 
 	PutMailboxPermissions(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) (*workmail.PutMailboxPermissionsOutput, error)
-	PutMailboxPermissionsAsync(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) *WorkmailPutMailboxPermissionsResult
+	PutMailboxPermissionsAsync(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) *WorkMailPutMailboxPermissionsFuture
 
 	PutRetentionPolicy(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) (*workmail.PutRetentionPolicyOutput, error)
-	PutRetentionPolicyAsync(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) *WorkmailPutRetentionPolicyResult
+	PutRetentionPolicyAsync(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) *WorkMailPutRetentionPolicyFuture
 
 	RegisterToWorkMail(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) (*workmail.RegisterToWorkMailOutput, error)
-	RegisterToWorkMailAsync(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) *WorkmailRegisterToWorkMailResult
+	RegisterToWorkMailAsync(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) *WorkMailRegisterToWorkMailFuture
 
 	ResetPassword(ctx workflow.Context, input *workmail.ResetPasswordInput) (*workmail.ResetPasswordOutput, error)
-	ResetPasswordAsync(ctx workflow.Context, input *workmail.ResetPasswordInput) *WorkmailResetPasswordResult
+	ResetPasswordAsync(ctx workflow.Context, input *workmail.ResetPasswordInput) *WorkMailResetPasswordFuture
 
 	StartMailboxExportJob(ctx workflow.Context, input *workmail.StartMailboxExportJobInput) (*workmail.StartMailboxExportJobOutput, error)
-	StartMailboxExportJobAsync(ctx workflow.Context, input *workmail.StartMailboxExportJobInput) *WorkmailStartMailboxExportJobResult
+	StartMailboxExportJobAsync(ctx workflow.Context, input *workmail.StartMailboxExportJobInput) *WorkMailStartMailboxExportJobFuture
 
 	TagResource(ctx workflow.Context, input *workmail.TagResourceInput) (*workmail.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *workmail.TagResourceInput) *WorkmailTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *workmail.TagResourceInput) *WorkMailTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *workmail.UntagResourceInput) (*workmail.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *workmail.UntagResourceInput) *WorkmailUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *workmail.UntagResourceInput) *WorkMailUntagResourceFuture
 
 	UpdateMailboxQuota(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) (*workmail.UpdateMailboxQuotaOutput, error)
-	UpdateMailboxQuotaAsync(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) *WorkmailUpdateMailboxQuotaResult
+	UpdateMailboxQuotaAsync(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) *WorkMailUpdateMailboxQuotaFuture
 
 	UpdatePrimaryEmailAddress(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) (*workmail.UpdatePrimaryEmailAddressOutput, error)
-	UpdatePrimaryEmailAddressAsync(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) *WorkmailUpdatePrimaryEmailAddressResult
+	UpdatePrimaryEmailAddressAsync(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) *WorkMailUpdatePrimaryEmailAddressFuture
 
 	UpdateResource(ctx workflow.Context, input *workmail.UpdateResourceInput) (*workmail.UpdateResourceOutput, error)
-	UpdateResourceAsync(ctx workflow.Context, input *workmail.UpdateResourceInput) *WorkmailUpdateResourceResult
+	UpdateResourceAsync(ctx workflow.Context, input *workmail.UpdateResourceInput) *WorkMailUpdateResourceFuture
 }
 
 type WorkMailStub struct{}
@@ -158,473 +158,520 @@ func NewWorkMailStub() WorkMailClient {
 	return &WorkMailStub{}
 }
 
-type WorkmailAssociateDelegateToResourceResult struct {
-	Result workflow.Future
+type WorkMailAssociateDelegateToResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailAssociateDelegateToResourceResult) Get(ctx workflow.Context) (*workmail.AssociateDelegateToResourceOutput, error) {
+func (r *WorkMailAssociateDelegateToResourceFuture) Get(ctx workflow.Context) (*workmail.AssociateDelegateToResourceOutput, error) {
 	var output workmail.AssociateDelegateToResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailAssociateMemberToGroupResult struct {
-	Result workflow.Future
+type WorkMailAssociateMemberToGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailAssociateMemberToGroupResult) Get(ctx workflow.Context) (*workmail.AssociateMemberToGroupOutput, error) {
+func (r *WorkMailAssociateMemberToGroupFuture) Get(ctx workflow.Context) (*workmail.AssociateMemberToGroupOutput, error) {
 	var output workmail.AssociateMemberToGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailCancelMailboxExportJobResult struct {
-	Result workflow.Future
+type WorkMailCancelMailboxExportJobFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailCancelMailboxExportJobResult) Get(ctx workflow.Context) (*workmail.CancelMailboxExportJobOutput, error) {
+func (r *WorkMailCancelMailboxExportJobFuture) Get(ctx workflow.Context) (*workmail.CancelMailboxExportJobOutput, error) {
 	var output workmail.CancelMailboxExportJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailCreateAliasResult struct {
-	Result workflow.Future
+type WorkMailCreateAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailCreateAliasResult) Get(ctx workflow.Context) (*workmail.CreateAliasOutput, error) {
+func (r *WorkMailCreateAliasFuture) Get(ctx workflow.Context) (*workmail.CreateAliasOutput, error) {
 	var output workmail.CreateAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailCreateGroupResult struct {
-	Result workflow.Future
+type WorkMailCreateGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailCreateGroupResult) Get(ctx workflow.Context) (*workmail.CreateGroupOutput, error) {
+func (r *WorkMailCreateGroupFuture) Get(ctx workflow.Context) (*workmail.CreateGroupOutput, error) {
 	var output workmail.CreateGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailCreateResourceResult struct {
-	Result workflow.Future
+type WorkMailCreateResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailCreateResourceResult) Get(ctx workflow.Context) (*workmail.CreateResourceOutput, error) {
+func (r *WorkMailCreateResourceFuture) Get(ctx workflow.Context) (*workmail.CreateResourceOutput, error) {
 	var output workmail.CreateResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailCreateUserResult struct {
-	Result workflow.Future
+type WorkMailCreateUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailCreateUserResult) Get(ctx workflow.Context) (*workmail.CreateUserOutput, error) {
+func (r *WorkMailCreateUserFuture) Get(ctx workflow.Context) (*workmail.CreateUserOutput, error) {
 	var output workmail.CreateUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDeleteAccessControlRuleResult struct {
-	Result workflow.Future
+type WorkMailDeleteAccessControlRuleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDeleteAccessControlRuleResult) Get(ctx workflow.Context) (*workmail.DeleteAccessControlRuleOutput, error) {
+func (r *WorkMailDeleteAccessControlRuleFuture) Get(ctx workflow.Context) (*workmail.DeleteAccessControlRuleOutput, error) {
 	var output workmail.DeleteAccessControlRuleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDeleteAliasResult struct {
-	Result workflow.Future
+type WorkMailDeleteAliasFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDeleteAliasResult) Get(ctx workflow.Context) (*workmail.DeleteAliasOutput, error) {
+func (r *WorkMailDeleteAliasFuture) Get(ctx workflow.Context) (*workmail.DeleteAliasOutput, error) {
 	var output workmail.DeleteAliasOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDeleteGroupResult struct {
-	Result workflow.Future
+type WorkMailDeleteGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDeleteGroupResult) Get(ctx workflow.Context) (*workmail.DeleteGroupOutput, error) {
+func (r *WorkMailDeleteGroupFuture) Get(ctx workflow.Context) (*workmail.DeleteGroupOutput, error) {
 	var output workmail.DeleteGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDeleteMailboxPermissionsResult struct {
-	Result workflow.Future
+type WorkMailDeleteMailboxPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDeleteMailboxPermissionsResult) Get(ctx workflow.Context) (*workmail.DeleteMailboxPermissionsOutput, error) {
+func (r *WorkMailDeleteMailboxPermissionsFuture) Get(ctx workflow.Context) (*workmail.DeleteMailboxPermissionsOutput, error) {
 	var output workmail.DeleteMailboxPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDeleteResourceResult struct {
-	Result workflow.Future
+type WorkMailDeleteResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDeleteResourceResult) Get(ctx workflow.Context) (*workmail.DeleteResourceOutput, error) {
+func (r *WorkMailDeleteResourceFuture) Get(ctx workflow.Context) (*workmail.DeleteResourceOutput, error) {
 	var output workmail.DeleteResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDeleteRetentionPolicyResult struct {
-	Result workflow.Future
+type WorkMailDeleteRetentionPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDeleteRetentionPolicyResult) Get(ctx workflow.Context) (*workmail.DeleteRetentionPolicyOutput, error) {
+func (r *WorkMailDeleteRetentionPolicyFuture) Get(ctx workflow.Context) (*workmail.DeleteRetentionPolicyOutput, error) {
 	var output workmail.DeleteRetentionPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDeleteUserResult struct {
-	Result workflow.Future
+type WorkMailDeleteUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDeleteUserResult) Get(ctx workflow.Context) (*workmail.DeleteUserOutput, error) {
+func (r *WorkMailDeleteUserFuture) Get(ctx workflow.Context) (*workmail.DeleteUserOutput, error) {
 	var output workmail.DeleteUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDeregisterFromWorkMailResult struct {
-	Result workflow.Future
+type WorkMailDeregisterFromWorkMailFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDeregisterFromWorkMailResult) Get(ctx workflow.Context) (*workmail.DeregisterFromWorkMailOutput, error) {
+func (r *WorkMailDeregisterFromWorkMailFuture) Get(ctx workflow.Context) (*workmail.DeregisterFromWorkMailOutput, error) {
 	var output workmail.DeregisterFromWorkMailOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDescribeGroupResult struct {
-	Result workflow.Future
+type WorkMailDescribeGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDescribeGroupResult) Get(ctx workflow.Context) (*workmail.DescribeGroupOutput, error) {
+func (r *WorkMailDescribeGroupFuture) Get(ctx workflow.Context) (*workmail.DescribeGroupOutput, error) {
 	var output workmail.DescribeGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDescribeMailboxExportJobResult struct {
-	Result workflow.Future
+type WorkMailDescribeMailboxExportJobFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDescribeMailboxExportJobResult) Get(ctx workflow.Context) (*workmail.DescribeMailboxExportJobOutput, error) {
+func (r *WorkMailDescribeMailboxExportJobFuture) Get(ctx workflow.Context) (*workmail.DescribeMailboxExportJobOutput, error) {
 	var output workmail.DescribeMailboxExportJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDescribeOrganizationResult struct {
-	Result workflow.Future
+type WorkMailDescribeOrganizationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDescribeOrganizationResult) Get(ctx workflow.Context) (*workmail.DescribeOrganizationOutput, error) {
+func (r *WorkMailDescribeOrganizationFuture) Get(ctx workflow.Context) (*workmail.DescribeOrganizationOutput, error) {
 	var output workmail.DescribeOrganizationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDescribeResourceResult struct {
-	Result workflow.Future
+type WorkMailDescribeResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDescribeResourceResult) Get(ctx workflow.Context) (*workmail.DescribeResourceOutput, error) {
+func (r *WorkMailDescribeResourceFuture) Get(ctx workflow.Context) (*workmail.DescribeResourceOutput, error) {
 	var output workmail.DescribeResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDescribeUserResult struct {
-	Result workflow.Future
+type WorkMailDescribeUserFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDescribeUserResult) Get(ctx workflow.Context) (*workmail.DescribeUserOutput, error) {
+func (r *WorkMailDescribeUserFuture) Get(ctx workflow.Context) (*workmail.DescribeUserOutput, error) {
 	var output workmail.DescribeUserOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDisassociateDelegateFromResourceResult struct {
-	Result workflow.Future
+type WorkMailDisassociateDelegateFromResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDisassociateDelegateFromResourceResult) Get(ctx workflow.Context) (*workmail.DisassociateDelegateFromResourceOutput, error) {
+func (r *WorkMailDisassociateDelegateFromResourceFuture) Get(ctx workflow.Context) (*workmail.DisassociateDelegateFromResourceOutput, error) {
 	var output workmail.DisassociateDelegateFromResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailDisassociateMemberFromGroupResult struct {
-	Result workflow.Future
+type WorkMailDisassociateMemberFromGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailDisassociateMemberFromGroupResult) Get(ctx workflow.Context) (*workmail.DisassociateMemberFromGroupOutput, error) {
+func (r *WorkMailDisassociateMemberFromGroupFuture) Get(ctx workflow.Context) (*workmail.DisassociateMemberFromGroupOutput, error) {
 	var output workmail.DisassociateMemberFromGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailGetAccessControlEffectResult struct {
-	Result workflow.Future
+type WorkMailGetAccessControlEffectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailGetAccessControlEffectResult) Get(ctx workflow.Context) (*workmail.GetAccessControlEffectOutput, error) {
+func (r *WorkMailGetAccessControlEffectFuture) Get(ctx workflow.Context) (*workmail.GetAccessControlEffectOutput, error) {
 	var output workmail.GetAccessControlEffectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailGetDefaultRetentionPolicyResult struct {
-	Result workflow.Future
+type WorkMailGetDefaultRetentionPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailGetDefaultRetentionPolicyResult) Get(ctx workflow.Context) (*workmail.GetDefaultRetentionPolicyOutput, error) {
+func (r *WorkMailGetDefaultRetentionPolicyFuture) Get(ctx workflow.Context) (*workmail.GetDefaultRetentionPolicyOutput, error) {
 	var output workmail.GetDefaultRetentionPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailGetMailboxDetailsResult struct {
-	Result workflow.Future
+type WorkMailGetMailboxDetailsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailGetMailboxDetailsResult) Get(ctx workflow.Context) (*workmail.GetMailboxDetailsOutput, error) {
+func (r *WorkMailGetMailboxDetailsFuture) Get(ctx workflow.Context) (*workmail.GetMailboxDetailsOutput, error) {
 	var output workmail.GetMailboxDetailsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListAccessControlRulesResult struct {
-	Result workflow.Future
+type WorkMailListAccessControlRulesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListAccessControlRulesResult) Get(ctx workflow.Context) (*workmail.ListAccessControlRulesOutput, error) {
+func (r *WorkMailListAccessControlRulesFuture) Get(ctx workflow.Context) (*workmail.ListAccessControlRulesOutput, error) {
 	var output workmail.ListAccessControlRulesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListAliasesResult struct {
-	Result workflow.Future
+type WorkMailListAliasesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListAliasesResult) Get(ctx workflow.Context) (*workmail.ListAliasesOutput, error) {
+func (r *WorkMailListAliasesFuture) Get(ctx workflow.Context) (*workmail.ListAliasesOutput, error) {
 	var output workmail.ListAliasesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListGroupMembersResult struct {
-	Result workflow.Future
+type WorkMailListGroupMembersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListGroupMembersResult) Get(ctx workflow.Context) (*workmail.ListGroupMembersOutput, error) {
+func (r *WorkMailListGroupMembersFuture) Get(ctx workflow.Context) (*workmail.ListGroupMembersOutput, error) {
 	var output workmail.ListGroupMembersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListGroupsResult struct {
-	Result workflow.Future
+type WorkMailListGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListGroupsResult) Get(ctx workflow.Context) (*workmail.ListGroupsOutput, error) {
+func (r *WorkMailListGroupsFuture) Get(ctx workflow.Context) (*workmail.ListGroupsOutput, error) {
 	var output workmail.ListGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListMailboxExportJobsResult struct {
-	Result workflow.Future
+type WorkMailListMailboxExportJobsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListMailboxExportJobsResult) Get(ctx workflow.Context) (*workmail.ListMailboxExportJobsOutput, error) {
+func (r *WorkMailListMailboxExportJobsFuture) Get(ctx workflow.Context) (*workmail.ListMailboxExportJobsOutput, error) {
 	var output workmail.ListMailboxExportJobsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListMailboxPermissionsResult struct {
-	Result workflow.Future
+type WorkMailListMailboxPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListMailboxPermissionsResult) Get(ctx workflow.Context) (*workmail.ListMailboxPermissionsOutput, error) {
+func (r *WorkMailListMailboxPermissionsFuture) Get(ctx workflow.Context) (*workmail.ListMailboxPermissionsOutput, error) {
 	var output workmail.ListMailboxPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListOrganizationsResult struct {
-	Result workflow.Future
+type WorkMailListOrganizationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListOrganizationsResult) Get(ctx workflow.Context) (*workmail.ListOrganizationsOutput, error) {
+func (r *WorkMailListOrganizationsFuture) Get(ctx workflow.Context) (*workmail.ListOrganizationsOutput, error) {
 	var output workmail.ListOrganizationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListResourceDelegatesResult struct {
-	Result workflow.Future
+type WorkMailListResourceDelegatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListResourceDelegatesResult) Get(ctx workflow.Context) (*workmail.ListResourceDelegatesOutput, error) {
+func (r *WorkMailListResourceDelegatesFuture) Get(ctx workflow.Context) (*workmail.ListResourceDelegatesOutput, error) {
 	var output workmail.ListResourceDelegatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListResourcesResult struct {
-	Result workflow.Future
+type WorkMailListResourcesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListResourcesResult) Get(ctx workflow.Context) (*workmail.ListResourcesOutput, error) {
+func (r *WorkMailListResourcesFuture) Get(ctx workflow.Context) (*workmail.ListResourcesOutput, error) {
 	var output workmail.ListResourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListTagsForResourceResult struct {
-	Result workflow.Future
+type WorkMailListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListTagsForResourceResult) Get(ctx workflow.Context) (*workmail.ListTagsForResourceOutput, error) {
+func (r *WorkMailListTagsForResourceFuture) Get(ctx workflow.Context) (*workmail.ListTagsForResourceOutput, error) {
 	var output workmail.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailListUsersResult struct {
-	Result workflow.Future
+type WorkMailListUsersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailListUsersResult) Get(ctx workflow.Context) (*workmail.ListUsersOutput, error) {
+func (r *WorkMailListUsersFuture) Get(ctx workflow.Context) (*workmail.ListUsersOutput, error) {
 	var output workmail.ListUsersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailPutAccessControlRuleResult struct {
-	Result workflow.Future
+type WorkMailPutAccessControlRuleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailPutAccessControlRuleResult) Get(ctx workflow.Context) (*workmail.PutAccessControlRuleOutput, error) {
+func (r *WorkMailPutAccessControlRuleFuture) Get(ctx workflow.Context) (*workmail.PutAccessControlRuleOutput, error) {
 	var output workmail.PutAccessControlRuleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailPutMailboxPermissionsResult struct {
-	Result workflow.Future
+type WorkMailPutMailboxPermissionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailPutMailboxPermissionsResult) Get(ctx workflow.Context) (*workmail.PutMailboxPermissionsOutput, error) {
+func (r *WorkMailPutMailboxPermissionsFuture) Get(ctx workflow.Context) (*workmail.PutMailboxPermissionsOutput, error) {
 	var output workmail.PutMailboxPermissionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailPutRetentionPolicyResult struct {
-	Result workflow.Future
+type WorkMailPutRetentionPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailPutRetentionPolicyResult) Get(ctx workflow.Context) (*workmail.PutRetentionPolicyOutput, error) {
+func (r *WorkMailPutRetentionPolicyFuture) Get(ctx workflow.Context) (*workmail.PutRetentionPolicyOutput, error) {
 	var output workmail.PutRetentionPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailRegisterToWorkMailResult struct {
-	Result workflow.Future
+type WorkMailRegisterToWorkMailFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailRegisterToWorkMailResult) Get(ctx workflow.Context) (*workmail.RegisterToWorkMailOutput, error) {
+func (r *WorkMailRegisterToWorkMailFuture) Get(ctx workflow.Context) (*workmail.RegisterToWorkMailOutput, error) {
 	var output workmail.RegisterToWorkMailOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailResetPasswordResult struct {
-	Result workflow.Future
+type WorkMailResetPasswordFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailResetPasswordResult) Get(ctx workflow.Context) (*workmail.ResetPasswordOutput, error) {
+func (r *WorkMailResetPasswordFuture) Get(ctx workflow.Context) (*workmail.ResetPasswordOutput, error) {
 	var output workmail.ResetPasswordOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailStartMailboxExportJobResult struct {
-	Result workflow.Future
+type WorkMailStartMailboxExportJobFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailStartMailboxExportJobResult) Get(ctx workflow.Context) (*workmail.StartMailboxExportJobOutput, error) {
+func (r *WorkMailStartMailboxExportJobFuture) Get(ctx workflow.Context) (*workmail.StartMailboxExportJobOutput, error) {
 	var output workmail.StartMailboxExportJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailTagResourceResult struct {
-	Result workflow.Future
+type WorkMailTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailTagResourceResult) Get(ctx workflow.Context) (*workmail.TagResourceOutput, error) {
+func (r *WorkMailTagResourceFuture) Get(ctx workflow.Context) (*workmail.TagResourceOutput, error) {
 	var output workmail.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailUntagResourceResult struct {
-	Result workflow.Future
+type WorkMailUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailUntagResourceResult) Get(ctx workflow.Context) (*workmail.UntagResourceOutput, error) {
+func (r *WorkMailUntagResourceFuture) Get(ctx workflow.Context) (*workmail.UntagResourceOutput, error) {
 	var output workmail.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailUpdateMailboxQuotaResult struct {
-	Result workflow.Future
+type WorkMailUpdateMailboxQuotaFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailUpdateMailboxQuotaResult) Get(ctx workflow.Context) (*workmail.UpdateMailboxQuotaOutput, error) {
+func (r *WorkMailUpdateMailboxQuotaFuture) Get(ctx workflow.Context) (*workmail.UpdateMailboxQuotaOutput, error) {
 	var output workmail.UpdateMailboxQuotaOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailUpdatePrimaryEmailAddressResult struct {
-	Result workflow.Future
+type WorkMailUpdatePrimaryEmailAddressFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailUpdatePrimaryEmailAddressResult) Get(ctx workflow.Context) (*workmail.UpdatePrimaryEmailAddressOutput, error) {
+func (r *WorkMailUpdatePrimaryEmailAddressFuture) Get(ctx workflow.Context) (*workmail.UpdatePrimaryEmailAddressOutput, error) {
 	var output workmail.UpdatePrimaryEmailAddressOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkmailUpdateResourceResult struct {
-	Result workflow.Future
+type WorkMailUpdateResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *WorkmailUpdateResourceResult) Get(ctx workflow.Context) (*workmail.UpdateResourceOutput, error) {
+func (r *WorkMailUpdateResourceFuture) Get(ctx workflow.Context) (*workmail.UpdateResourceOutput, error) {
 	var output workmail.UpdateResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -634,9 +681,9 @@ func (a *WorkMailStub) AssociateDelegateToResource(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *WorkMailStub) AssociateDelegateToResourceAsync(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) *WorkmailAssociateDelegateToResourceResult {
+func (a *WorkMailStub) AssociateDelegateToResourceAsync(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) *WorkMailAssociateDelegateToResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.AssociateDelegateToResource", input)
-	return &WorkmailAssociateDelegateToResourceResult{Result: future}
+	return &WorkMailAssociateDelegateToResourceFuture{Future: future}
 }
 
 func (a *WorkMailStub) AssociateMemberToGroup(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) (*workmail.AssociateMemberToGroupOutput, error) {
@@ -645,9 +692,9 @@ func (a *WorkMailStub) AssociateMemberToGroup(ctx workflow.Context, input *workm
 	return &output, err
 }
 
-func (a *WorkMailStub) AssociateMemberToGroupAsync(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) *WorkmailAssociateMemberToGroupResult {
+func (a *WorkMailStub) AssociateMemberToGroupAsync(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) *WorkMailAssociateMemberToGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.AssociateMemberToGroup", input)
-	return &WorkmailAssociateMemberToGroupResult{Result: future}
+	return &WorkMailAssociateMemberToGroupFuture{Future: future}
 }
 
 func (a *WorkMailStub) CancelMailboxExportJob(ctx workflow.Context, input *workmail.CancelMailboxExportJobInput) (*workmail.CancelMailboxExportJobOutput, error) {
@@ -656,9 +703,9 @@ func (a *WorkMailStub) CancelMailboxExportJob(ctx workflow.Context, input *workm
 	return &output, err
 }
 
-func (a *WorkMailStub) CancelMailboxExportJobAsync(ctx workflow.Context, input *workmail.CancelMailboxExportJobInput) *WorkmailCancelMailboxExportJobResult {
+func (a *WorkMailStub) CancelMailboxExportJobAsync(ctx workflow.Context, input *workmail.CancelMailboxExportJobInput) *WorkMailCancelMailboxExportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.CancelMailboxExportJob", input)
-	return &WorkmailCancelMailboxExportJobResult{Result: future}
+	return &WorkMailCancelMailboxExportJobFuture{Future: future}
 }
 
 func (a *WorkMailStub) CreateAlias(ctx workflow.Context, input *workmail.CreateAliasInput) (*workmail.CreateAliasOutput, error) {
@@ -667,9 +714,9 @@ func (a *WorkMailStub) CreateAlias(ctx workflow.Context, input *workmail.CreateA
 	return &output, err
 }
 
-func (a *WorkMailStub) CreateAliasAsync(ctx workflow.Context, input *workmail.CreateAliasInput) *WorkmailCreateAliasResult {
+func (a *WorkMailStub) CreateAliasAsync(ctx workflow.Context, input *workmail.CreateAliasInput) *WorkMailCreateAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.CreateAlias", input)
-	return &WorkmailCreateAliasResult{Result: future}
+	return &WorkMailCreateAliasFuture{Future: future}
 }
 
 func (a *WorkMailStub) CreateGroup(ctx workflow.Context, input *workmail.CreateGroupInput) (*workmail.CreateGroupOutput, error) {
@@ -678,9 +725,9 @@ func (a *WorkMailStub) CreateGroup(ctx workflow.Context, input *workmail.CreateG
 	return &output, err
 }
 
-func (a *WorkMailStub) CreateGroupAsync(ctx workflow.Context, input *workmail.CreateGroupInput) *WorkmailCreateGroupResult {
+func (a *WorkMailStub) CreateGroupAsync(ctx workflow.Context, input *workmail.CreateGroupInput) *WorkMailCreateGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.CreateGroup", input)
-	return &WorkmailCreateGroupResult{Result: future}
+	return &WorkMailCreateGroupFuture{Future: future}
 }
 
 func (a *WorkMailStub) CreateResource(ctx workflow.Context, input *workmail.CreateResourceInput) (*workmail.CreateResourceOutput, error) {
@@ -689,9 +736,9 @@ func (a *WorkMailStub) CreateResource(ctx workflow.Context, input *workmail.Crea
 	return &output, err
 }
 
-func (a *WorkMailStub) CreateResourceAsync(ctx workflow.Context, input *workmail.CreateResourceInput) *WorkmailCreateResourceResult {
+func (a *WorkMailStub) CreateResourceAsync(ctx workflow.Context, input *workmail.CreateResourceInput) *WorkMailCreateResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.CreateResource", input)
-	return &WorkmailCreateResourceResult{Result: future}
+	return &WorkMailCreateResourceFuture{Future: future}
 }
 
 func (a *WorkMailStub) CreateUser(ctx workflow.Context, input *workmail.CreateUserInput) (*workmail.CreateUserOutput, error) {
@@ -700,9 +747,9 @@ func (a *WorkMailStub) CreateUser(ctx workflow.Context, input *workmail.CreateUs
 	return &output, err
 }
 
-func (a *WorkMailStub) CreateUserAsync(ctx workflow.Context, input *workmail.CreateUserInput) *WorkmailCreateUserResult {
+func (a *WorkMailStub) CreateUserAsync(ctx workflow.Context, input *workmail.CreateUserInput) *WorkMailCreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.CreateUser", input)
-	return &WorkmailCreateUserResult{Result: future}
+	return &WorkMailCreateUserFuture{Future: future}
 }
 
 func (a *WorkMailStub) DeleteAccessControlRule(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) (*workmail.DeleteAccessControlRuleOutput, error) {
@@ -711,9 +758,9 @@ func (a *WorkMailStub) DeleteAccessControlRule(ctx workflow.Context, input *work
 	return &output, err
 }
 
-func (a *WorkMailStub) DeleteAccessControlRuleAsync(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) *WorkmailDeleteAccessControlRuleResult {
+func (a *WorkMailStub) DeleteAccessControlRuleAsync(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) *WorkMailDeleteAccessControlRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DeleteAccessControlRule", input)
-	return &WorkmailDeleteAccessControlRuleResult{Result: future}
+	return &WorkMailDeleteAccessControlRuleFuture{Future: future}
 }
 
 func (a *WorkMailStub) DeleteAlias(ctx workflow.Context, input *workmail.DeleteAliasInput) (*workmail.DeleteAliasOutput, error) {
@@ -722,9 +769,9 @@ func (a *WorkMailStub) DeleteAlias(ctx workflow.Context, input *workmail.DeleteA
 	return &output, err
 }
 
-func (a *WorkMailStub) DeleteAliasAsync(ctx workflow.Context, input *workmail.DeleteAliasInput) *WorkmailDeleteAliasResult {
+func (a *WorkMailStub) DeleteAliasAsync(ctx workflow.Context, input *workmail.DeleteAliasInput) *WorkMailDeleteAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DeleteAlias", input)
-	return &WorkmailDeleteAliasResult{Result: future}
+	return &WorkMailDeleteAliasFuture{Future: future}
 }
 
 func (a *WorkMailStub) DeleteGroup(ctx workflow.Context, input *workmail.DeleteGroupInput) (*workmail.DeleteGroupOutput, error) {
@@ -733,9 +780,9 @@ func (a *WorkMailStub) DeleteGroup(ctx workflow.Context, input *workmail.DeleteG
 	return &output, err
 }
 
-func (a *WorkMailStub) DeleteGroupAsync(ctx workflow.Context, input *workmail.DeleteGroupInput) *WorkmailDeleteGroupResult {
+func (a *WorkMailStub) DeleteGroupAsync(ctx workflow.Context, input *workmail.DeleteGroupInput) *WorkMailDeleteGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DeleteGroup", input)
-	return &WorkmailDeleteGroupResult{Result: future}
+	return &WorkMailDeleteGroupFuture{Future: future}
 }
 
 func (a *WorkMailStub) DeleteMailboxPermissions(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) (*workmail.DeleteMailboxPermissionsOutput, error) {
@@ -744,9 +791,9 @@ func (a *WorkMailStub) DeleteMailboxPermissions(ctx workflow.Context, input *wor
 	return &output, err
 }
 
-func (a *WorkMailStub) DeleteMailboxPermissionsAsync(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) *WorkmailDeleteMailboxPermissionsResult {
+func (a *WorkMailStub) DeleteMailboxPermissionsAsync(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) *WorkMailDeleteMailboxPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DeleteMailboxPermissions", input)
-	return &WorkmailDeleteMailboxPermissionsResult{Result: future}
+	return &WorkMailDeleteMailboxPermissionsFuture{Future: future}
 }
 
 func (a *WorkMailStub) DeleteResource(ctx workflow.Context, input *workmail.DeleteResourceInput) (*workmail.DeleteResourceOutput, error) {
@@ -755,9 +802,9 @@ func (a *WorkMailStub) DeleteResource(ctx workflow.Context, input *workmail.Dele
 	return &output, err
 }
 
-func (a *WorkMailStub) DeleteResourceAsync(ctx workflow.Context, input *workmail.DeleteResourceInput) *WorkmailDeleteResourceResult {
+func (a *WorkMailStub) DeleteResourceAsync(ctx workflow.Context, input *workmail.DeleteResourceInput) *WorkMailDeleteResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DeleteResource", input)
-	return &WorkmailDeleteResourceResult{Result: future}
+	return &WorkMailDeleteResourceFuture{Future: future}
 }
 
 func (a *WorkMailStub) DeleteRetentionPolicy(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) (*workmail.DeleteRetentionPolicyOutput, error) {
@@ -766,9 +813,9 @@ func (a *WorkMailStub) DeleteRetentionPolicy(ctx workflow.Context, input *workma
 	return &output, err
 }
 
-func (a *WorkMailStub) DeleteRetentionPolicyAsync(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) *WorkmailDeleteRetentionPolicyResult {
+func (a *WorkMailStub) DeleteRetentionPolicyAsync(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) *WorkMailDeleteRetentionPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DeleteRetentionPolicy", input)
-	return &WorkmailDeleteRetentionPolicyResult{Result: future}
+	return &WorkMailDeleteRetentionPolicyFuture{Future: future}
 }
 
 func (a *WorkMailStub) DeleteUser(ctx workflow.Context, input *workmail.DeleteUserInput) (*workmail.DeleteUserOutput, error) {
@@ -777,9 +824,9 @@ func (a *WorkMailStub) DeleteUser(ctx workflow.Context, input *workmail.DeleteUs
 	return &output, err
 }
 
-func (a *WorkMailStub) DeleteUserAsync(ctx workflow.Context, input *workmail.DeleteUserInput) *WorkmailDeleteUserResult {
+func (a *WorkMailStub) DeleteUserAsync(ctx workflow.Context, input *workmail.DeleteUserInput) *WorkMailDeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DeleteUser", input)
-	return &WorkmailDeleteUserResult{Result: future}
+	return &WorkMailDeleteUserFuture{Future: future}
 }
 
 func (a *WorkMailStub) DeregisterFromWorkMail(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) (*workmail.DeregisterFromWorkMailOutput, error) {
@@ -788,9 +835,9 @@ func (a *WorkMailStub) DeregisterFromWorkMail(ctx workflow.Context, input *workm
 	return &output, err
 }
 
-func (a *WorkMailStub) DeregisterFromWorkMailAsync(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) *WorkmailDeregisterFromWorkMailResult {
+func (a *WorkMailStub) DeregisterFromWorkMailAsync(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) *WorkMailDeregisterFromWorkMailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DeregisterFromWorkMail", input)
-	return &WorkmailDeregisterFromWorkMailResult{Result: future}
+	return &WorkMailDeregisterFromWorkMailFuture{Future: future}
 }
 
 func (a *WorkMailStub) DescribeGroup(ctx workflow.Context, input *workmail.DescribeGroupInput) (*workmail.DescribeGroupOutput, error) {
@@ -799,9 +846,9 @@ func (a *WorkMailStub) DescribeGroup(ctx workflow.Context, input *workmail.Descr
 	return &output, err
 }
 
-func (a *WorkMailStub) DescribeGroupAsync(ctx workflow.Context, input *workmail.DescribeGroupInput) *WorkmailDescribeGroupResult {
+func (a *WorkMailStub) DescribeGroupAsync(ctx workflow.Context, input *workmail.DescribeGroupInput) *WorkMailDescribeGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DescribeGroup", input)
-	return &WorkmailDescribeGroupResult{Result: future}
+	return &WorkMailDescribeGroupFuture{Future: future}
 }
 
 func (a *WorkMailStub) DescribeMailboxExportJob(ctx workflow.Context, input *workmail.DescribeMailboxExportJobInput) (*workmail.DescribeMailboxExportJobOutput, error) {
@@ -810,9 +857,9 @@ func (a *WorkMailStub) DescribeMailboxExportJob(ctx workflow.Context, input *wor
 	return &output, err
 }
 
-func (a *WorkMailStub) DescribeMailboxExportJobAsync(ctx workflow.Context, input *workmail.DescribeMailboxExportJobInput) *WorkmailDescribeMailboxExportJobResult {
+func (a *WorkMailStub) DescribeMailboxExportJobAsync(ctx workflow.Context, input *workmail.DescribeMailboxExportJobInput) *WorkMailDescribeMailboxExportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DescribeMailboxExportJob", input)
-	return &WorkmailDescribeMailboxExportJobResult{Result: future}
+	return &WorkMailDescribeMailboxExportJobFuture{Future: future}
 }
 
 func (a *WorkMailStub) DescribeOrganization(ctx workflow.Context, input *workmail.DescribeOrganizationInput) (*workmail.DescribeOrganizationOutput, error) {
@@ -821,9 +868,9 @@ func (a *WorkMailStub) DescribeOrganization(ctx workflow.Context, input *workmai
 	return &output, err
 }
 
-func (a *WorkMailStub) DescribeOrganizationAsync(ctx workflow.Context, input *workmail.DescribeOrganizationInput) *WorkmailDescribeOrganizationResult {
+func (a *WorkMailStub) DescribeOrganizationAsync(ctx workflow.Context, input *workmail.DescribeOrganizationInput) *WorkMailDescribeOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DescribeOrganization", input)
-	return &WorkmailDescribeOrganizationResult{Result: future}
+	return &WorkMailDescribeOrganizationFuture{Future: future}
 }
 
 func (a *WorkMailStub) DescribeResource(ctx workflow.Context, input *workmail.DescribeResourceInput) (*workmail.DescribeResourceOutput, error) {
@@ -832,9 +879,9 @@ func (a *WorkMailStub) DescribeResource(ctx workflow.Context, input *workmail.De
 	return &output, err
 }
 
-func (a *WorkMailStub) DescribeResourceAsync(ctx workflow.Context, input *workmail.DescribeResourceInput) *WorkmailDescribeResourceResult {
+func (a *WorkMailStub) DescribeResourceAsync(ctx workflow.Context, input *workmail.DescribeResourceInput) *WorkMailDescribeResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DescribeResource", input)
-	return &WorkmailDescribeResourceResult{Result: future}
+	return &WorkMailDescribeResourceFuture{Future: future}
 }
 
 func (a *WorkMailStub) DescribeUser(ctx workflow.Context, input *workmail.DescribeUserInput) (*workmail.DescribeUserOutput, error) {
@@ -843,9 +890,9 @@ func (a *WorkMailStub) DescribeUser(ctx workflow.Context, input *workmail.Descri
 	return &output, err
 }
 
-func (a *WorkMailStub) DescribeUserAsync(ctx workflow.Context, input *workmail.DescribeUserInput) *WorkmailDescribeUserResult {
+func (a *WorkMailStub) DescribeUserAsync(ctx workflow.Context, input *workmail.DescribeUserInput) *WorkMailDescribeUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DescribeUser", input)
-	return &WorkmailDescribeUserResult{Result: future}
+	return &WorkMailDescribeUserFuture{Future: future}
 }
 
 func (a *WorkMailStub) DisassociateDelegateFromResource(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) (*workmail.DisassociateDelegateFromResourceOutput, error) {
@@ -854,9 +901,9 @@ func (a *WorkMailStub) DisassociateDelegateFromResource(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *WorkMailStub) DisassociateDelegateFromResourceAsync(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) *WorkmailDisassociateDelegateFromResourceResult {
+func (a *WorkMailStub) DisassociateDelegateFromResourceAsync(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) *WorkMailDisassociateDelegateFromResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DisassociateDelegateFromResource", input)
-	return &WorkmailDisassociateDelegateFromResourceResult{Result: future}
+	return &WorkMailDisassociateDelegateFromResourceFuture{Future: future}
 }
 
 func (a *WorkMailStub) DisassociateMemberFromGroup(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) (*workmail.DisassociateMemberFromGroupOutput, error) {
@@ -865,9 +912,9 @@ func (a *WorkMailStub) DisassociateMemberFromGroup(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *WorkMailStub) DisassociateMemberFromGroupAsync(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) *WorkmailDisassociateMemberFromGroupResult {
+func (a *WorkMailStub) DisassociateMemberFromGroupAsync(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) *WorkMailDisassociateMemberFromGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.DisassociateMemberFromGroup", input)
-	return &WorkmailDisassociateMemberFromGroupResult{Result: future}
+	return &WorkMailDisassociateMemberFromGroupFuture{Future: future}
 }
 
 func (a *WorkMailStub) GetAccessControlEffect(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) (*workmail.GetAccessControlEffectOutput, error) {
@@ -876,9 +923,9 @@ func (a *WorkMailStub) GetAccessControlEffect(ctx workflow.Context, input *workm
 	return &output, err
 }
 
-func (a *WorkMailStub) GetAccessControlEffectAsync(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) *WorkmailGetAccessControlEffectResult {
+func (a *WorkMailStub) GetAccessControlEffectAsync(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) *WorkMailGetAccessControlEffectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.GetAccessControlEffect", input)
-	return &WorkmailGetAccessControlEffectResult{Result: future}
+	return &WorkMailGetAccessControlEffectFuture{Future: future}
 }
 
 func (a *WorkMailStub) GetDefaultRetentionPolicy(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) (*workmail.GetDefaultRetentionPolicyOutput, error) {
@@ -887,9 +934,9 @@ func (a *WorkMailStub) GetDefaultRetentionPolicy(ctx workflow.Context, input *wo
 	return &output, err
 }
 
-func (a *WorkMailStub) GetDefaultRetentionPolicyAsync(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) *WorkmailGetDefaultRetentionPolicyResult {
+func (a *WorkMailStub) GetDefaultRetentionPolicyAsync(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) *WorkMailGetDefaultRetentionPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.GetDefaultRetentionPolicy", input)
-	return &WorkmailGetDefaultRetentionPolicyResult{Result: future}
+	return &WorkMailGetDefaultRetentionPolicyFuture{Future: future}
 }
 
 func (a *WorkMailStub) GetMailboxDetails(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) (*workmail.GetMailboxDetailsOutput, error) {
@@ -898,9 +945,9 @@ func (a *WorkMailStub) GetMailboxDetails(ctx workflow.Context, input *workmail.G
 	return &output, err
 }
 
-func (a *WorkMailStub) GetMailboxDetailsAsync(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) *WorkmailGetMailboxDetailsResult {
+func (a *WorkMailStub) GetMailboxDetailsAsync(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) *WorkMailGetMailboxDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.GetMailboxDetails", input)
-	return &WorkmailGetMailboxDetailsResult{Result: future}
+	return &WorkMailGetMailboxDetailsFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListAccessControlRules(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) (*workmail.ListAccessControlRulesOutput, error) {
@@ -909,9 +956,9 @@ func (a *WorkMailStub) ListAccessControlRules(ctx workflow.Context, input *workm
 	return &output, err
 }
 
-func (a *WorkMailStub) ListAccessControlRulesAsync(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) *WorkmailListAccessControlRulesResult {
+func (a *WorkMailStub) ListAccessControlRulesAsync(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) *WorkMailListAccessControlRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListAccessControlRules", input)
-	return &WorkmailListAccessControlRulesResult{Result: future}
+	return &WorkMailListAccessControlRulesFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListAliases(ctx workflow.Context, input *workmail.ListAliasesInput) (*workmail.ListAliasesOutput, error) {
@@ -920,9 +967,9 @@ func (a *WorkMailStub) ListAliases(ctx workflow.Context, input *workmail.ListAli
 	return &output, err
 }
 
-func (a *WorkMailStub) ListAliasesAsync(ctx workflow.Context, input *workmail.ListAliasesInput) *WorkmailListAliasesResult {
+func (a *WorkMailStub) ListAliasesAsync(ctx workflow.Context, input *workmail.ListAliasesInput) *WorkMailListAliasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListAliases", input)
-	return &WorkmailListAliasesResult{Result: future}
+	return &WorkMailListAliasesFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListGroupMembers(ctx workflow.Context, input *workmail.ListGroupMembersInput) (*workmail.ListGroupMembersOutput, error) {
@@ -931,9 +978,9 @@ func (a *WorkMailStub) ListGroupMembers(ctx workflow.Context, input *workmail.Li
 	return &output, err
 }
 
-func (a *WorkMailStub) ListGroupMembersAsync(ctx workflow.Context, input *workmail.ListGroupMembersInput) *WorkmailListGroupMembersResult {
+func (a *WorkMailStub) ListGroupMembersAsync(ctx workflow.Context, input *workmail.ListGroupMembersInput) *WorkMailListGroupMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListGroupMembers", input)
-	return &WorkmailListGroupMembersResult{Result: future}
+	return &WorkMailListGroupMembersFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListGroups(ctx workflow.Context, input *workmail.ListGroupsInput) (*workmail.ListGroupsOutput, error) {
@@ -942,9 +989,9 @@ func (a *WorkMailStub) ListGroups(ctx workflow.Context, input *workmail.ListGrou
 	return &output, err
 }
 
-func (a *WorkMailStub) ListGroupsAsync(ctx workflow.Context, input *workmail.ListGroupsInput) *WorkmailListGroupsResult {
+func (a *WorkMailStub) ListGroupsAsync(ctx workflow.Context, input *workmail.ListGroupsInput) *WorkMailListGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListGroups", input)
-	return &WorkmailListGroupsResult{Result: future}
+	return &WorkMailListGroupsFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListMailboxExportJobs(ctx workflow.Context, input *workmail.ListMailboxExportJobsInput) (*workmail.ListMailboxExportJobsOutput, error) {
@@ -953,9 +1000,9 @@ func (a *WorkMailStub) ListMailboxExportJobs(ctx workflow.Context, input *workma
 	return &output, err
 }
 
-func (a *WorkMailStub) ListMailboxExportJobsAsync(ctx workflow.Context, input *workmail.ListMailboxExportJobsInput) *WorkmailListMailboxExportJobsResult {
+func (a *WorkMailStub) ListMailboxExportJobsAsync(ctx workflow.Context, input *workmail.ListMailboxExportJobsInput) *WorkMailListMailboxExportJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListMailboxExportJobs", input)
-	return &WorkmailListMailboxExportJobsResult{Result: future}
+	return &WorkMailListMailboxExportJobsFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListMailboxPermissions(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) (*workmail.ListMailboxPermissionsOutput, error) {
@@ -964,9 +1011,9 @@ func (a *WorkMailStub) ListMailboxPermissions(ctx workflow.Context, input *workm
 	return &output, err
 }
 
-func (a *WorkMailStub) ListMailboxPermissionsAsync(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) *WorkmailListMailboxPermissionsResult {
+func (a *WorkMailStub) ListMailboxPermissionsAsync(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) *WorkMailListMailboxPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListMailboxPermissions", input)
-	return &WorkmailListMailboxPermissionsResult{Result: future}
+	return &WorkMailListMailboxPermissionsFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListOrganizations(ctx workflow.Context, input *workmail.ListOrganizationsInput) (*workmail.ListOrganizationsOutput, error) {
@@ -975,9 +1022,9 @@ func (a *WorkMailStub) ListOrganizations(ctx workflow.Context, input *workmail.L
 	return &output, err
 }
 
-func (a *WorkMailStub) ListOrganizationsAsync(ctx workflow.Context, input *workmail.ListOrganizationsInput) *WorkmailListOrganizationsResult {
+func (a *WorkMailStub) ListOrganizationsAsync(ctx workflow.Context, input *workmail.ListOrganizationsInput) *WorkMailListOrganizationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListOrganizations", input)
-	return &WorkmailListOrganizationsResult{Result: future}
+	return &WorkMailListOrganizationsFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListResourceDelegates(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) (*workmail.ListResourceDelegatesOutput, error) {
@@ -986,9 +1033,9 @@ func (a *WorkMailStub) ListResourceDelegates(ctx workflow.Context, input *workma
 	return &output, err
 }
 
-func (a *WorkMailStub) ListResourceDelegatesAsync(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) *WorkmailListResourceDelegatesResult {
+func (a *WorkMailStub) ListResourceDelegatesAsync(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) *WorkMailListResourceDelegatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListResourceDelegates", input)
-	return &WorkmailListResourceDelegatesResult{Result: future}
+	return &WorkMailListResourceDelegatesFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListResources(ctx workflow.Context, input *workmail.ListResourcesInput) (*workmail.ListResourcesOutput, error) {
@@ -997,9 +1044,9 @@ func (a *WorkMailStub) ListResources(ctx workflow.Context, input *workmail.ListR
 	return &output, err
 }
 
-func (a *WorkMailStub) ListResourcesAsync(ctx workflow.Context, input *workmail.ListResourcesInput) *WorkmailListResourcesResult {
+func (a *WorkMailStub) ListResourcesAsync(ctx workflow.Context, input *workmail.ListResourcesInput) *WorkMailListResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListResources", input)
-	return &WorkmailListResourcesResult{Result: future}
+	return &WorkMailListResourcesFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListTagsForResource(ctx workflow.Context, input *workmail.ListTagsForResourceInput) (*workmail.ListTagsForResourceOutput, error) {
@@ -1008,9 +1055,9 @@ func (a *WorkMailStub) ListTagsForResource(ctx workflow.Context, input *workmail
 	return &output, err
 }
 
-func (a *WorkMailStub) ListTagsForResourceAsync(ctx workflow.Context, input *workmail.ListTagsForResourceInput) *WorkmailListTagsForResourceResult {
+func (a *WorkMailStub) ListTagsForResourceAsync(ctx workflow.Context, input *workmail.ListTagsForResourceInput) *WorkMailListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListTagsForResource", input)
-	return &WorkmailListTagsForResourceResult{Result: future}
+	return &WorkMailListTagsForResourceFuture{Future: future}
 }
 
 func (a *WorkMailStub) ListUsers(ctx workflow.Context, input *workmail.ListUsersInput) (*workmail.ListUsersOutput, error) {
@@ -1019,9 +1066,9 @@ func (a *WorkMailStub) ListUsers(ctx workflow.Context, input *workmail.ListUsers
 	return &output, err
 }
 
-func (a *WorkMailStub) ListUsersAsync(ctx workflow.Context, input *workmail.ListUsersInput) *WorkmailListUsersResult {
+func (a *WorkMailStub) ListUsersAsync(ctx workflow.Context, input *workmail.ListUsersInput) *WorkMailListUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ListUsers", input)
-	return &WorkmailListUsersResult{Result: future}
+	return &WorkMailListUsersFuture{Future: future}
 }
 
 func (a *WorkMailStub) PutAccessControlRule(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) (*workmail.PutAccessControlRuleOutput, error) {
@@ -1030,9 +1077,9 @@ func (a *WorkMailStub) PutAccessControlRule(ctx workflow.Context, input *workmai
 	return &output, err
 }
 
-func (a *WorkMailStub) PutAccessControlRuleAsync(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) *WorkmailPutAccessControlRuleResult {
+func (a *WorkMailStub) PutAccessControlRuleAsync(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) *WorkMailPutAccessControlRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.PutAccessControlRule", input)
-	return &WorkmailPutAccessControlRuleResult{Result: future}
+	return &WorkMailPutAccessControlRuleFuture{Future: future}
 }
 
 func (a *WorkMailStub) PutMailboxPermissions(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) (*workmail.PutMailboxPermissionsOutput, error) {
@@ -1041,9 +1088,9 @@ func (a *WorkMailStub) PutMailboxPermissions(ctx workflow.Context, input *workma
 	return &output, err
 }
 
-func (a *WorkMailStub) PutMailboxPermissionsAsync(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) *WorkmailPutMailboxPermissionsResult {
+func (a *WorkMailStub) PutMailboxPermissionsAsync(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) *WorkMailPutMailboxPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.PutMailboxPermissions", input)
-	return &WorkmailPutMailboxPermissionsResult{Result: future}
+	return &WorkMailPutMailboxPermissionsFuture{Future: future}
 }
 
 func (a *WorkMailStub) PutRetentionPolicy(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) (*workmail.PutRetentionPolicyOutput, error) {
@@ -1052,9 +1099,9 @@ func (a *WorkMailStub) PutRetentionPolicy(ctx workflow.Context, input *workmail.
 	return &output, err
 }
 
-func (a *WorkMailStub) PutRetentionPolicyAsync(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) *WorkmailPutRetentionPolicyResult {
+func (a *WorkMailStub) PutRetentionPolicyAsync(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) *WorkMailPutRetentionPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.PutRetentionPolicy", input)
-	return &WorkmailPutRetentionPolicyResult{Result: future}
+	return &WorkMailPutRetentionPolicyFuture{Future: future}
 }
 
 func (a *WorkMailStub) RegisterToWorkMail(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) (*workmail.RegisterToWorkMailOutput, error) {
@@ -1063,9 +1110,9 @@ func (a *WorkMailStub) RegisterToWorkMail(ctx workflow.Context, input *workmail.
 	return &output, err
 }
 
-func (a *WorkMailStub) RegisterToWorkMailAsync(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) *WorkmailRegisterToWorkMailResult {
+func (a *WorkMailStub) RegisterToWorkMailAsync(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) *WorkMailRegisterToWorkMailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.RegisterToWorkMail", input)
-	return &WorkmailRegisterToWorkMailResult{Result: future}
+	return &WorkMailRegisterToWorkMailFuture{Future: future}
 }
 
 func (a *WorkMailStub) ResetPassword(ctx workflow.Context, input *workmail.ResetPasswordInput) (*workmail.ResetPasswordOutput, error) {
@@ -1074,9 +1121,9 @@ func (a *WorkMailStub) ResetPassword(ctx workflow.Context, input *workmail.Reset
 	return &output, err
 }
 
-func (a *WorkMailStub) ResetPasswordAsync(ctx workflow.Context, input *workmail.ResetPasswordInput) *WorkmailResetPasswordResult {
+func (a *WorkMailStub) ResetPasswordAsync(ctx workflow.Context, input *workmail.ResetPasswordInput) *WorkMailResetPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.ResetPassword", input)
-	return &WorkmailResetPasswordResult{Result: future}
+	return &WorkMailResetPasswordFuture{Future: future}
 }
 
 func (a *WorkMailStub) StartMailboxExportJob(ctx workflow.Context, input *workmail.StartMailboxExportJobInput) (*workmail.StartMailboxExportJobOutput, error) {
@@ -1085,9 +1132,9 @@ func (a *WorkMailStub) StartMailboxExportJob(ctx workflow.Context, input *workma
 	return &output, err
 }
 
-func (a *WorkMailStub) StartMailboxExportJobAsync(ctx workflow.Context, input *workmail.StartMailboxExportJobInput) *WorkmailStartMailboxExportJobResult {
+func (a *WorkMailStub) StartMailboxExportJobAsync(ctx workflow.Context, input *workmail.StartMailboxExportJobInput) *WorkMailStartMailboxExportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.StartMailboxExportJob", input)
-	return &WorkmailStartMailboxExportJobResult{Result: future}
+	return &WorkMailStartMailboxExportJobFuture{Future: future}
 }
 
 func (a *WorkMailStub) TagResource(ctx workflow.Context, input *workmail.TagResourceInput) (*workmail.TagResourceOutput, error) {
@@ -1096,9 +1143,9 @@ func (a *WorkMailStub) TagResource(ctx workflow.Context, input *workmail.TagReso
 	return &output, err
 }
 
-func (a *WorkMailStub) TagResourceAsync(ctx workflow.Context, input *workmail.TagResourceInput) *WorkmailTagResourceResult {
+func (a *WorkMailStub) TagResourceAsync(ctx workflow.Context, input *workmail.TagResourceInput) *WorkMailTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.TagResource", input)
-	return &WorkmailTagResourceResult{Result: future}
+	return &WorkMailTagResourceFuture{Future: future}
 }
 
 func (a *WorkMailStub) UntagResource(ctx workflow.Context, input *workmail.UntagResourceInput) (*workmail.UntagResourceOutput, error) {
@@ -1107,9 +1154,9 @@ func (a *WorkMailStub) UntagResource(ctx workflow.Context, input *workmail.Untag
 	return &output, err
 }
 
-func (a *WorkMailStub) UntagResourceAsync(ctx workflow.Context, input *workmail.UntagResourceInput) *WorkmailUntagResourceResult {
+func (a *WorkMailStub) UntagResourceAsync(ctx workflow.Context, input *workmail.UntagResourceInput) *WorkMailUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.UntagResource", input)
-	return &WorkmailUntagResourceResult{Result: future}
+	return &WorkMailUntagResourceFuture{Future: future}
 }
 
 func (a *WorkMailStub) UpdateMailboxQuota(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) (*workmail.UpdateMailboxQuotaOutput, error) {
@@ -1118,9 +1165,9 @@ func (a *WorkMailStub) UpdateMailboxQuota(ctx workflow.Context, input *workmail.
 	return &output, err
 }
 
-func (a *WorkMailStub) UpdateMailboxQuotaAsync(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) *WorkmailUpdateMailboxQuotaResult {
+func (a *WorkMailStub) UpdateMailboxQuotaAsync(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) *WorkMailUpdateMailboxQuotaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.UpdateMailboxQuota", input)
-	return &WorkmailUpdateMailboxQuotaResult{Result: future}
+	return &WorkMailUpdateMailboxQuotaFuture{Future: future}
 }
 
 func (a *WorkMailStub) UpdatePrimaryEmailAddress(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) (*workmail.UpdatePrimaryEmailAddressOutput, error) {
@@ -1129,9 +1176,9 @@ func (a *WorkMailStub) UpdatePrimaryEmailAddress(ctx workflow.Context, input *wo
 	return &output, err
 }
 
-func (a *WorkMailStub) UpdatePrimaryEmailAddressAsync(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) *WorkmailUpdatePrimaryEmailAddressResult {
+func (a *WorkMailStub) UpdatePrimaryEmailAddressAsync(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) *WorkMailUpdatePrimaryEmailAddressFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.UpdatePrimaryEmailAddress", input)
-	return &WorkmailUpdatePrimaryEmailAddressResult{Result: future}
+	return &WorkMailUpdatePrimaryEmailAddressFuture{Future: future}
 }
 
 func (a *WorkMailStub) UpdateResource(ctx workflow.Context, input *workmail.UpdateResourceInput) (*workmail.UpdateResourceOutput, error) {
@@ -1140,7 +1187,7 @@ func (a *WorkMailStub) UpdateResource(ctx workflow.Context, input *workmail.Upda
 	return &output, err
 }
 
-func (a *WorkMailStub) UpdateResourceAsync(ctx workflow.Context, input *workmail.UpdateResourceInput) *WorkmailUpdateResourceResult {
+func (a *WorkMailStub) UpdateResourceAsync(ctx workflow.Context, input *workmail.UpdateResourceInput) *WorkMailUpdateResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmail.UpdateResource", input)
-	return &WorkmailUpdateResourceResult{Result: future}
+	return &WorkMailUpdateResourceFuture{Future: future}
 }

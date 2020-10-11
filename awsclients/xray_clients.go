@@ -11,73 +11,73 @@ import (
 
 type XRayClient interface {
 	BatchGetTraces(ctx workflow.Context, input *xray.BatchGetTracesInput) (*xray.BatchGetTracesOutput, error)
-	BatchGetTracesAsync(ctx workflow.Context, input *xray.BatchGetTracesInput) *XrayBatchGetTracesResult
+	BatchGetTracesAsync(ctx workflow.Context, input *xray.BatchGetTracesInput) *XRayBatchGetTracesFuture
 
 	CreateGroup(ctx workflow.Context, input *xray.CreateGroupInput) (*xray.CreateGroupOutput, error)
-	CreateGroupAsync(ctx workflow.Context, input *xray.CreateGroupInput) *XrayCreateGroupResult
+	CreateGroupAsync(ctx workflow.Context, input *xray.CreateGroupInput) *XRayCreateGroupFuture
 
 	CreateSamplingRule(ctx workflow.Context, input *xray.CreateSamplingRuleInput) (*xray.CreateSamplingRuleOutput, error)
-	CreateSamplingRuleAsync(ctx workflow.Context, input *xray.CreateSamplingRuleInput) *XrayCreateSamplingRuleResult
+	CreateSamplingRuleAsync(ctx workflow.Context, input *xray.CreateSamplingRuleInput) *XRayCreateSamplingRuleFuture
 
 	DeleteGroup(ctx workflow.Context, input *xray.DeleteGroupInput) (*xray.DeleteGroupOutput, error)
-	DeleteGroupAsync(ctx workflow.Context, input *xray.DeleteGroupInput) *XrayDeleteGroupResult
+	DeleteGroupAsync(ctx workflow.Context, input *xray.DeleteGroupInput) *XRayDeleteGroupFuture
 
 	DeleteSamplingRule(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) (*xray.DeleteSamplingRuleOutput, error)
-	DeleteSamplingRuleAsync(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) *XrayDeleteSamplingRuleResult
+	DeleteSamplingRuleAsync(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) *XRayDeleteSamplingRuleFuture
 
 	GetEncryptionConfig(ctx workflow.Context, input *xray.GetEncryptionConfigInput) (*xray.GetEncryptionConfigOutput, error)
-	GetEncryptionConfigAsync(ctx workflow.Context, input *xray.GetEncryptionConfigInput) *XrayGetEncryptionConfigResult
+	GetEncryptionConfigAsync(ctx workflow.Context, input *xray.GetEncryptionConfigInput) *XRayGetEncryptionConfigFuture
 
 	GetGroup(ctx workflow.Context, input *xray.GetGroupInput) (*xray.GetGroupOutput, error)
-	GetGroupAsync(ctx workflow.Context, input *xray.GetGroupInput) *XrayGetGroupResult
+	GetGroupAsync(ctx workflow.Context, input *xray.GetGroupInput) *XRayGetGroupFuture
 
 	GetGroups(ctx workflow.Context, input *xray.GetGroupsInput) (*xray.GetGroupsOutput, error)
-	GetGroupsAsync(ctx workflow.Context, input *xray.GetGroupsInput) *XrayGetGroupsResult
+	GetGroupsAsync(ctx workflow.Context, input *xray.GetGroupsInput) *XRayGetGroupsFuture
 
 	GetSamplingRules(ctx workflow.Context, input *xray.GetSamplingRulesInput) (*xray.GetSamplingRulesOutput, error)
-	GetSamplingRulesAsync(ctx workflow.Context, input *xray.GetSamplingRulesInput) *XrayGetSamplingRulesResult
+	GetSamplingRulesAsync(ctx workflow.Context, input *xray.GetSamplingRulesInput) *XRayGetSamplingRulesFuture
 
 	GetSamplingStatisticSummaries(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) (*xray.GetSamplingStatisticSummariesOutput, error)
-	GetSamplingStatisticSummariesAsync(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) *XrayGetSamplingStatisticSummariesResult
+	GetSamplingStatisticSummariesAsync(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) *XRayGetSamplingStatisticSummariesFuture
 
 	GetSamplingTargets(ctx workflow.Context, input *xray.GetSamplingTargetsInput) (*xray.GetSamplingTargetsOutput, error)
-	GetSamplingTargetsAsync(ctx workflow.Context, input *xray.GetSamplingTargetsInput) *XrayGetSamplingTargetsResult
+	GetSamplingTargetsAsync(ctx workflow.Context, input *xray.GetSamplingTargetsInput) *XRayGetSamplingTargetsFuture
 
 	GetServiceGraph(ctx workflow.Context, input *xray.GetServiceGraphInput) (*xray.GetServiceGraphOutput, error)
-	GetServiceGraphAsync(ctx workflow.Context, input *xray.GetServiceGraphInput) *XrayGetServiceGraphResult
+	GetServiceGraphAsync(ctx workflow.Context, input *xray.GetServiceGraphInput) *XRayGetServiceGraphFuture
 
 	GetTimeSeriesServiceStatistics(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) (*xray.GetTimeSeriesServiceStatisticsOutput, error)
-	GetTimeSeriesServiceStatisticsAsync(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) *XrayGetTimeSeriesServiceStatisticsResult
+	GetTimeSeriesServiceStatisticsAsync(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) *XRayGetTimeSeriesServiceStatisticsFuture
 
 	GetTraceGraph(ctx workflow.Context, input *xray.GetTraceGraphInput) (*xray.GetTraceGraphOutput, error)
-	GetTraceGraphAsync(ctx workflow.Context, input *xray.GetTraceGraphInput) *XrayGetTraceGraphResult
+	GetTraceGraphAsync(ctx workflow.Context, input *xray.GetTraceGraphInput) *XRayGetTraceGraphFuture
 
 	GetTraceSummaries(ctx workflow.Context, input *xray.GetTraceSummariesInput) (*xray.GetTraceSummariesOutput, error)
-	GetTraceSummariesAsync(ctx workflow.Context, input *xray.GetTraceSummariesInput) *XrayGetTraceSummariesResult
+	GetTraceSummariesAsync(ctx workflow.Context, input *xray.GetTraceSummariesInput) *XRayGetTraceSummariesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *xray.ListTagsForResourceInput) (*xray.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *xray.ListTagsForResourceInput) *XrayListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *xray.ListTagsForResourceInput) *XRayListTagsForResourceFuture
 
 	PutEncryptionConfig(ctx workflow.Context, input *xray.PutEncryptionConfigInput) (*xray.PutEncryptionConfigOutput, error)
-	PutEncryptionConfigAsync(ctx workflow.Context, input *xray.PutEncryptionConfigInput) *XrayPutEncryptionConfigResult
+	PutEncryptionConfigAsync(ctx workflow.Context, input *xray.PutEncryptionConfigInput) *XRayPutEncryptionConfigFuture
 
 	PutTelemetryRecords(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) (*xray.PutTelemetryRecordsOutput, error)
-	PutTelemetryRecordsAsync(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) *XrayPutTelemetryRecordsResult
+	PutTelemetryRecordsAsync(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) *XRayPutTelemetryRecordsFuture
 
 	PutTraceSegments(ctx workflow.Context, input *xray.PutTraceSegmentsInput) (*xray.PutTraceSegmentsOutput, error)
-	PutTraceSegmentsAsync(ctx workflow.Context, input *xray.PutTraceSegmentsInput) *XrayPutTraceSegmentsResult
+	PutTraceSegmentsAsync(ctx workflow.Context, input *xray.PutTraceSegmentsInput) *XRayPutTraceSegmentsFuture
 
 	TagResource(ctx workflow.Context, input *xray.TagResourceInput) (*xray.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *xray.TagResourceInput) *XrayTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *xray.TagResourceInput) *XRayTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *xray.UntagResourceInput) (*xray.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *xray.UntagResourceInput) *XrayUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *xray.UntagResourceInput) *XRayUntagResourceFuture
 
 	UpdateGroup(ctx workflow.Context, input *xray.UpdateGroupInput) (*xray.UpdateGroupOutput, error)
-	UpdateGroupAsync(ctx workflow.Context, input *xray.UpdateGroupInput) *XrayUpdateGroupResult
+	UpdateGroupAsync(ctx workflow.Context, input *xray.UpdateGroupInput) *XRayUpdateGroupFuture
 
 	UpdateSamplingRule(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) (*xray.UpdateSamplingRuleOutput, error)
-	UpdateSamplingRuleAsync(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) *XrayUpdateSamplingRuleResult
+	UpdateSamplingRuleAsync(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) *XRayUpdateSamplingRuleFuture
 }
 
 type XRayStub struct{}
@@ -86,233 +86,256 @@ func NewXRayStub() XRayClient {
 	return &XRayStub{}
 }
 
-type XrayBatchGetTracesResult struct {
-	Result workflow.Future
+type XRayBatchGetTracesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayBatchGetTracesResult) Get(ctx workflow.Context) (*xray.BatchGetTracesOutput, error) {
+func (r *XRayBatchGetTracesFuture) Get(ctx workflow.Context) (*xray.BatchGetTracesOutput, error) {
 	var output xray.BatchGetTracesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayCreateGroupResult struct {
-	Result workflow.Future
+type XRayCreateGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayCreateGroupResult) Get(ctx workflow.Context) (*xray.CreateGroupOutput, error) {
+func (r *XRayCreateGroupFuture) Get(ctx workflow.Context) (*xray.CreateGroupOutput, error) {
 	var output xray.CreateGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayCreateSamplingRuleResult struct {
-	Result workflow.Future
+type XRayCreateSamplingRuleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayCreateSamplingRuleResult) Get(ctx workflow.Context) (*xray.CreateSamplingRuleOutput, error) {
+func (r *XRayCreateSamplingRuleFuture) Get(ctx workflow.Context) (*xray.CreateSamplingRuleOutput, error) {
 	var output xray.CreateSamplingRuleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayDeleteGroupResult struct {
-	Result workflow.Future
+type XRayDeleteGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayDeleteGroupResult) Get(ctx workflow.Context) (*xray.DeleteGroupOutput, error) {
+func (r *XRayDeleteGroupFuture) Get(ctx workflow.Context) (*xray.DeleteGroupOutput, error) {
 	var output xray.DeleteGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayDeleteSamplingRuleResult struct {
-	Result workflow.Future
+type XRayDeleteSamplingRuleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayDeleteSamplingRuleResult) Get(ctx workflow.Context) (*xray.DeleteSamplingRuleOutput, error) {
+func (r *XRayDeleteSamplingRuleFuture) Get(ctx workflow.Context) (*xray.DeleteSamplingRuleOutput, error) {
 	var output xray.DeleteSamplingRuleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetEncryptionConfigResult struct {
-	Result workflow.Future
+type XRayGetEncryptionConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetEncryptionConfigResult) Get(ctx workflow.Context) (*xray.GetEncryptionConfigOutput, error) {
+func (r *XRayGetEncryptionConfigFuture) Get(ctx workflow.Context) (*xray.GetEncryptionConfigOutput, error) {
 	var output xray.GetEncryptionConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetGroupResult struct {
-	Result workflow.Future
+type XRayGetGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetGroupResult) Get(ctx workflow.Context) (*xray.GetGroupOutput, error) {
+func (r *XRayGetGroupFuture) Get(ctx workflow.Context) (*xray.GetGroupOutput, error) {
 	var output xray.GetGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetGroupsResult struct {
-	Result workflow.Future
+type XRayGetGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetGroupsResult) Get(ctx workflow.Context) (*xray.GetGroupsOutput, error) {
+func (r *XRayGetGroupsFuture) Get(ctx workflow.Context) (*xray.GetGroupsOutput, error) {
 	var output xray.GetGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetSamplingRulesResult struct {
-	Result workflow.Future
+type XRayGetSamplingRulesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetSamplingRulesResult) Get(ctx workflow.Context) (*xray.GetSamplingRulesOutput, error) {
+func (r *XRayGetSamplingRulesFuture) Get(ctx workflow.Context) (*xray.GetSamplingRulesOutput, error) {
 	var output xray.GetSamplingRulesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetSamplingStatisticSummariesResult struct {
-	Result workflow.Future
+type XRayGetSamplingStatisticSummariesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetSamplingStatisticSummariesResult) Get(ctx workflow.Context) (*xray.GetSamplingStatisticSummariesOutput, error) {
+func (r *XRayGetSamplingStatisticSummariesFuture) Get(ctx workflow.Context) (*xray.GetSamplingStatisticSummariesOutput, error) {
 	var output xray.GetSamplingStatisticSummariesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetSamplingTargetsResult struct {
-	Result workflow.Future
+type XRayGetSamplingTargetsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetSamplingTargetsResult) Get(ctx workflow.Context) (*xray.GetSamplingTargetsOutput, error) {
+func (r *XRayGetSamplingTargetsFuture) Get(ctx workflow.Context) (*xray.GetSamplingTargetsOutput, error) {
 	var output xray.GetSamplingTargetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetServiceGraphResult struct {
-	Result workflow.Future
+type XRayGetServiceGraphFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetServiceGraphResult) Get(ctx workflow.Context) (*xray.GetServiceGraphOutput, error) {
+func (r *XRayGetServiceGraphFuture) Get(ctx workflow.Context) (*xray.GetServiceGraphOutput, error) {
 	var output xray.GetServiceGraphOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetTimeSeriesServiceStatisticsResult struct {
-	Result workflow.Future
+type XRayGetTimeSeriesServiceStatisticsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetTimeSeriesServiceStatisticsResult) Get(ctx workflow.Context) (*xray.GetTimeSeriesServiceStatisticsOutput, error) {
+func (r *XRayGetTimeSeriesServiceStatisticsFuture) Get(ctx workflow.Context) (*xray.GetTimeSeriesServiceStatisticsOutput, error) {
 	var output xray.GetTimeSeriesServiceStatisticsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetTraceGraphResult struct {
-	Result workflow.Future
+type XRayGetTraceGraphFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetTraceGraphResult) Get(ctx workflow.Context) (*xray.GetTraceGraphOutput, error) {
+func (r *XRayGetTraceGraphFuture) Get(ctx workflow.Context) (*xray.GetTraceGraphOutput, error) {
 	var output xray.GetTraceGraphOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayGetTraceSummariesResult struct {
-	Result workflow.Future
+type XRayGetTraceSummariesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayGetTraceSummariesResult) Get(ctx workflow.Context) (*xray.GetTraceSummariesOutput, error) {
+func (r *XRayGetTraceSummariesFuture) Get(ctx workflow.Context) (*xray.GetTraceSummariesOutput, error) {
 	var output xray.GetTraceSummariesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayListTagsForResourceResult struct {
-	Result workflow.Future
+type XRayListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayListTagsForResourceResult) Get(ctx workflow.Context) (*xray.ListTagsForResourceOutput, error) {
+func (r *XRayListTagsForResourceFuture) Get(ctx workflow.Context) (*xray.ListTagsForResourceOutput, error) {
 	var output xray.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayPutEncryptionConfigResult struct {
-	Result workflow.Future
+type XRayPutEncryptionConfigFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayPutEncryptionConfigResult) Get(ctx workflow.Context) (*xray.PutEncryptionConfigOutput, error) {
+func (r *XRayPutEncryptionConfigFuture) Get(ctx workflow.Context) (*xray.PutEncryptionConfigOutput, error) {
 	var output xray.PutEncryptionConfigOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayPutTelemetryRecordsResult struct {
-	Result workflow.Future
+type XRayPutTelemetryRecordsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayPutTelemetryRecordsResult) Get(ctx workflow.Context) (*xray.PutTelemetryRecordsOutput, error) {
+func (r *XRayPutTelemetryRecordsFuture) Get(ctx workflow.Context) (*xray.PutTelemetryRecordsOutput, error) {
 	var output xray.PutTelemetryRecordsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayPutTraceSegmentsResult struct {
-	Result workflow.Future
+type XRayPutTraceSegmentsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayPutTraceSegmentsResult) Get(ctx workflow.Context) (*xray.PutTraceSegmentsOutput, error) {
+func (r *XRayPutTraceSegmentsFuture) Get(ctx workflow.Context) (*xray.PutTraceSegmentsOutput, error) {
 	var output xray.PutTraceSegmentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayTagResourceResult struct {
-	Result workflow.Future
+type XRayTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayTagResourceResult) Get(ctx workflow.Context) (*xray.TagResourceOutput, error) {
+func (r *XRayTagResourceFuture) Get(ctx workflow.Context) (*xray.TagResourceOutput, error) {
 	var output xray.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayUntagResourceResult struct {
-	Result workflow.Future
+type XRayUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayUntagResourceResult) Get(ctx workflow.Context) (*xray.UntagResourceOutput, error) {
+func (r *XRayUntagResourceFuture) Get(ctx workflow.Context) (*xray.UntagResourceOutput, error) {
 	var output xray.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayUpdateGroupResult struct {
-	Result workflow.Future
+type XRayUpdateGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayUpdateGroupResult) Get(ctx workflow.Context) (*xray.UpdateGroupOutput, error) {
+func (r *XRayUpdateGroupFuture) Get(ctx workflow.Context) (*xray.UpdateGroupOutput, error) {
 	var output xray.UpdateGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type XrayUpdateSamplingRuleResult struct {
-	Result workflow.Future
+type XRayUpdateSamplingRuleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *XrayUpdateSamplingRuleResult) Get(ctx workflow.Context) (*xray.UpdateSamplingRuleOutput, error) {
+func (r *XRayUpdateSamplingRuleFuture) Get(ctx workflow.Context) (*xray.UpdateSamplingRuleOutput, error) {
 	var output xray.UpdateSamplingRuleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -322,9 +345,9 @@ func (a *XRayStub) BatchGetTraces(ctx workflow.Context, input *xray.BatchGetTrac
 	return &output, err
 }
 
-func (a *XRayStub) BatchGetTracesAsync(ctx workflow.Context, input *xray.BatchGetTracesInput) *XrayBatchGetTracesResult {
+func (a *XRayStub) BatchGetTracesAsync(ctx workflow.Context, input *xray.BatchGetTracesInput) *XRayBatchGetTracesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.BatchGetTraces", input)
-	return &XrayBatchGetTracesResult{Result: future}
+	return &XRayBatchGetTracesFuture{Future: future}
 }
 
 func (a *XRayStub) CreateGroup(ctx workflow.Context, input *xray.CreateGroupInput) (*xray.CreateGroupOutput, error) {
@@ -333,9 +356,9 @@ func (a *XRayStub) CreateGroup(ctx workflow.Context, input *xray.CreateGroupInpu
 	return &output, err
 }
 
-func (a *XRayStub) CreateGroupAsync(ctx workflow.Context, input *xray.CreateGroupInput) *XrayCreateGroupResult {
+func (a *XRayStub) CreateGroupAsync(ctx workflow.Context, input *xray.CreateGroupInput) *XRayCreateGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.CreateGroup", input)
-	return &XrayCreateGroupResult{Result: future}
+	return &XRayCreateGroupFuture{Future: future}
 }
 
 func (a *XRayStub) CreateSamplingRule(ctx workflow.Context, input *xray.CreateSamplingRuleInput) (*xray.CreateSamplingRuleOutput, error) {
@@ -344,9 +367,9 @@ func (a *XRayStub) CreateSamplingRule(ctx workflow.Context, input *xray.CreateSa
 	return &output, err
 }
 
-func (a *XRayStub) CreateSamplingRuleAsync(ctx workflow.Context, input *xray.CreateSamplingRuleInput) *XrayCreateSamplingRuleResult {
+func (a *XRayStub) CreateSamplingRuleAsync(ctx workflow.Context, input *xray.CreateSamplingRuleInput) *XRayCreateSamplingRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.CreateSamplingRule", input)
-	return &XrayCreateSamplingRuleResult{Result: future}
+	return &XRayCreateSamplingRuleFuture{Future: future}
 }
 
 func (a *XRayStub) DeleteGroup(ctx workflow.Context, input *xray.DeleteGroupInput) (*xray.DeleteGroupOutput, error) {
@@ -355,9 +378,9 @@ func (a *XRayStub) DeleteGroup(ctx workflow.Context, input *xray.DeleteGroupInpu
 	return &output, err
 }
 
-func (a *XRayStub) DeleteGroupAsync(ctx workflow.Context, input *xray.DeleteGroupInput) *XrayDeleteGroupResult {
+func (a *XRayStub) DeleteGroupAsync(ctx workflow.Context, input *xray.DeleteGroupInput) *XRayDeleteGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.DeleteGroup", input)
-	return &XrayDeleteGroupResult{Result: future}
+	return &XRayDeleteGroupFuture{Future: future}
 }
 
 func (a *XRayStub) DeleteSamplingRule(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) (*xray.DeleteSamplingRuleOutput, error) {
@@ -366,9 +389,9 @@ func (a *XRayStub) DeleteSamplingRule(ctx workflow.Context, input *xray.DeleteSa
 	return &output, err
 }
 
-func (a *XRayStub) DeleteSamplingRuleAsync(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) *XrayDeleteSamplingRuleResult {
+func (a *XRayStub) DeleteSamplingRuleAsync(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) *XRayDeleteSamplingRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.DeleteSamplingRule", input)
-	return &XrayDeleteSamplingRuleResult{Result: future}
+	return &XRayDeleteSamplingRuleFuture{Future: future}
 }
 
 func (a *XRayStub) GetEncryptionConfig(ctx workflow.Context, input *xray.GetEncryptionConfigInput) (*xray.GetEncryptionConfigOutput, error) {
@@ -377,9 +400,9 @@ func (a *XRayStub) GetEncryptionConfig(ctx workflow.Context, input *xray.GetEncr
 	return &output, err
 }
 
-func (a *XRayStub) GetEncryptionConfigAsync(ctx workflow.Context, input *xray.GetEncryptionConfigInput) *XrayGetEncryptionConfigResult {
+func (a *XRayStub) GetEncryptionConfigAsync(ctx workflow.Context, input *xray.GetEncryptionConfigInput) *XRayGetEncryptionConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetEncryptionConfig", input)
-	return &XrayGetEncryptionConfigResult{Result: future}
+	return &XRayGetEncryptionConfigFuture{Future: future}
 }
 
 func (a *XRayStub) GetGroup(ctx workflow.Context, input *xray.GetGroupInput) (*xray.GetGroupOutput, error) {
@@ -388,9 +411,9 @@ func (a *XRayStub) GetGroup(ctx workflow.Context, input *xray.GetGroupInput) (*x
 	return &output, err
 }
 
-func (a *XRayStub) GetGroupAsync(ctx workflow.Context, input *xray.GetGroupInput) *XrayGetGroupResult {
+func (a *XRayStub) GetGroupAsync(ctx workflow.Context, input *xray.GetGroupInput) *XRayGetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetGroup", input)
-	return &XrayGetGroupResult{Result: future}
+	return &XRayGetGroupFuture{Future: future}
 }
 
 func (a *XRayStub) GetGroups(ctx workflow.Context, input *xray.GetGroupsInput) (*xray.GetGroupsOutput, error) {
@@ -399,9 +422,9 @@ func (a *XRayStub) GetGroups(ctx workflow.Context, input *xray.GetGroupsInput) (
 	return &output, err
 }
 
-func (a *XRayStub) GetGroupsAsync(ctx workflow.Context, input *xray.GetGroupsInput) *XrayGetGroupsResult {
+func (a *XRayStub) GetGroupsAsync(ctx workflow.Context, input *xray.GetGroupsInput) *XRayGetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetGroups", input)
-	return &XrayGetGroupsResult{Result: future}
+	return &XRayGetGroupsFuture{Future: future}
 }
 
 func (a *XRayStub) GetSamplingRules(ctx workflow.Context, input *xray.GetSamplingRulesInput) (*xray.GetSamplingRulesOutput, error) {
@@ -410,9 +433,9 @@ func (a *XRayStub) GetSamplingRules(ctx workflow.Context, input *xray.GetSamplin
 	return &output, err
 }
 
-func (a *XRayStub) GetSamplingRulesAsync(ctx workflow.Context, input *xray.GetSamplingRulesInput) *XrayGetSamplingRulesResult {
+func (a *XRayStub) GetSamplingRulesAsync(ctx workflow.Context, input *xray.GetSamplingRulesInput) *XRayGetSamplingRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetSamplingRules", input)
-	return &XrayGetSamplingRulesResult{Result: future}
+	return &XRayGetSamplingRulesFuture{Future: future}
 }
 
 func (a *XRayStub) GetSamplingStatisticSummaries(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) (*xray.GetSamplingStatisticSummariesOutput, error) {
@@ -421,9 +444,9 @@ func (a *XRayStub) GetSamplingStatisticSummaries(ctx workflow.Context, input *xr
 	return &output, err
 }
 
-func (a *XRayStub) GetSamplingStatisticSummariesAsync(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) *XrayGetSamplingStatisticSummariesResult {
+func (a *XRayStub) GetSamplingStatisticSummariesAsync(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) *XRayGetSamplingStatisticSummariesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetSamplingStatisticSummaries", input)
-	return &XrayGetSamplingStatisticSummariesResult{Result: future}
+	return &XRayGetSamplingStatisticSummariesFuture{Future: future}
 }
 
 func (a *XRayStub) GetSamplingTargets(ctx workflow.Context, input *xray.GetSamplingTargetsInput) (*xray.GetSamplingTargetsOutput, error) {
@@ -432,9 +455,9 @@ func (a *XRayStub) GetSamplingTargets(ctx workflow.Context, input *xray.GetSampl
 	return &output, err
 }
 
-func (a *XRayStub) GetSamplingTargetsAsync(ctx workflow.Context, input *xray.GetSamplingTargetsInput) *XrayGetSamplingTargetsResult {
+func (a *XRayStub) GetSamplingTargetsAsync(ctx workflow.Context, input *xray.GetSamplingTargetsInput) *XRayGetSamplingTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetSamplingTargets", input)
-	return &XrayGetSamplingTargetsResult{Result: future}
+	return &XRayGetSamplingTargetsFuture{Future: future}
 }
 
 func (a *XRayStub) GetServiceGraph(ctx workflow.Context, input *xray.GetServiceGraphInput) (*xray.GetServiceGraphOutput, error) {
@@ -443,9 +466,9 @@ func (a *XRayStub) GetServiceGraph(ctx workflow.Context, input *xray.GetServiceG
 	return &output, err
 }
 
-func (a *XRayStub) GetServiceGraphAsync(ctx workflow.Context, input *xray.GetServiceGraphInput) *XrayGetServiceGraphResult {
+func (a *XRayStub) GetServiceGraphAsync(ctx workflow.Context, input *xray.GetServiceGraphInput) *XRayGetServiceGraphFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetServiceGraph", input)
-	return &XrayGetServiceGraphResult{Result: future}
+	return &XRayGetServiceGraphFuture{Future: future}
 }
 
 func (a *XRayStub) GetTimeSeriesServiceStatistics(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) (*xray.GetTimeSeriesServiceStatisticsOutput, error) {
@@ -454,9 +477,9 @@ func (a *XRayStub) GetTimeSeriesServiceStatistics(ctx workflow.Context, input *x
 	return &output, err
 }
 
-func (a *XRayStub) GetTimeSeriesServiceStatisticsAsync(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) *XrayGetTimeSeriesServiceStatisticsResult {
+func (a *XRayStub) GetTimeSeriesServiceStatisticsAsync(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) *XRayGetTimeSeriesServiceStatisticsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetTimeSeriesServiceStatistics", input)
-	return &XrayGetTimeSeriesServiceStatisticsResult{Result: future}
+	return &XRayGetTimeSeriesServiceStatisticsFuture{Future: future}
 }
 
 func (a *XRayStub) GetTraceGraph(ctx workflow.Context, input *xray.GetTraceGraphInput) (*xray.GetTraceGraphOutput, error) {
@@ -465,9 +488,9 @@ func (a *XRayStub) GetTraceGraph(ctx workflow.Context, input *xray.GetTraceGraph
 	return &output, err
 }
 
-func (a *XRayStub) GetTraceGraphAsync(ctx workflow.Context, input *xray.GetTraceGraphInput) *XrayGetTraceGraphResult {
+func (a *XRayStub) GetTraceGraphAsync(ctx workflow.Context, input *xray.GetTraceGraphInput) *XRayGetTraceGraphFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetTraceGraph", input)
-	return &XrayGetTraceGraphResult{Result: future}
+	return &XRayGetTraceGraphFuture{Future: future}
 }
 
 func (a *XRayStub) GetTraceSummaries(ctx workflow.Context, input *xray.GetTraceSummariesInput) (*xray.GetTraceSummariesOutput, error) {
@@ -476,9 +499,9 @@ func (a *XRayStub) GetTraceSummaries(ctx workflow.Context, input *xray.GetTraceS
 	return &output, err
 }
 
-func (a *XRayStub) GetTraceSummariesAsync(ctx workflow.Context, input *xray.GetTraceSummariesInput) *XrayGetTraceSummariesResult {
+func (a *XRayStub) GetTraceSummariesAsync(ctx workflow.Context, input *xray.GetTraceSummariesInput) *XRayGetTraceSummariesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.GetTraceSummaries", input)
-	return &XrayGetTraceSummariesResult{Result: future}
+	return &XRayGetTraceSummariesFuture{Future: future}
 }
 
 func (a *XRayStub) ListTagsForResource(ctx workflow.Context, input *xray.ListTagsForResourceInput) (*xray.ListTagsForResourceOutput, error) {
@@ -487,9 +510,9 @@ func (a *XRayStub) ListTagsForResource(ctx workflow.Context, input *xray.ListTag
 	return &output, err
 }
 
-func (a *XRayStub) ListTagsForResourceAsync(ctx workflow.Context, input *xray.ListTagsForResourceInput) *XrayListTagsForResourceResult {
+func (a *XRayStub) ListTagsForResourceAsync(ctx workflow.Context, input *xray.ListTagsForResourceInput) *XRayListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.ListTagsForResource", input)
-	return &XrayListTagsForResourceResult{Result: future}
+	return &XRayListTagsForResourceFuture{Future: future}
 }
 
 func (a *XRayStub) PutEncryptionConfig(ctx workflow.Context, input *xray.PutEncryptionConfigInput) (*xray.PutEncryptionConfigOutput, error) {
@@ -498,9 +521,9 @@ func (a *XRayStub) PutEncryptionConfig(ctx workflow.Context, input *xray.PutEncr
 	return &output, err
 }
 
-func (a *XRayStub) PutEncryptionConfigAsync(ctx workflow.Context, input *xray.PutEncryptionConfigInput) *XrayPutEncryptionConfigResult {
+func (a *XRayStub) PutEncryptionConfigAsync(ctx workflow.Context, input *xray.PutEncryptionConfigInput) *XRayPutEncryptionConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.PutEncryptionConfig", input)
-	return &XrayPutEncryptionConfigResult{Result: future}
+	return &XRayPutEncryptionConfigFuture{Future: future}
 }
 
 func (a *XRayStub) PutTelemetryRecords(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) (*xray.PutTelemetryRecordsOutput, error) {
@@ -509,9 +532,9 @@ func (a *XRayStub) PutTelemetryRecords(ctx workflow.Context, input *xray.PutTele
 	return &output, err
 }
 
-func (a *XRayStub) PutTelemetryRecordsAsync(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) *XrayPutTelemetryRecordsResult {
+func (a *XRayStub) PutTelemetryRecordsAsync(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) *XRayPutTelemetryRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.PutTelemetryRecords", input)
-	return &XrayPutTelemetryRecordsResult{Result: future}
+	return &XRayPutTelemetryRecordsFuture{Future: future}
 }
 
 func (a *XRayStub) PutTraceSegments(ctx workflow.Context, input *xray.PutTraceSegmentsInput) (*xray.PutTraceSegmentsOutput, error) {
@@ -520,9 +543,9 @@ func (a *XRayStub) PutTraceSegments(ctx workflow.Context, input *xray.PutTraceSe
 	return &output, err
 }
 
-func (a *XRayStub) PutTraceSegmentsAsync(ctx workflow.Context, input *xray.PutTraceSegmentsInput) *XrayPutTraceSegmentsResult {
+func (a *XRayStub) PutTraceSegmentsAsync(ctx workflow.Context, input *xray.PutTraceSegmentsInput) *XRayPutTraceSegmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.PutTraceSegments", input)
-	return &XrayPutTraceSegmentsResult{Result: future}
+	return &XRayPutTraceSegmentsFuture{Future: future}
 }
 
 func (a *XRayStub) TagResource(ctx workflow.Context, input *xray.TagResourceInput) (*xray.TagResourceOutput, error) {
@@ -531,9 +554,9 @@ func (a *XRayStub) TagResource(ctx workflow.Context, input *xray.TagResourceInpu
 	return &output, err
 }
 
-func (a *XRayStub) TagResourceAsync(ctx workflow.Context, input *xray.TagResourceInput) *XrayTagResourceResult {
+func (a *XRayStub) TagResourceAsync(ctx workflow.Context, input *xray.TagResourceInput) *XRayTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.TagResource", input)
-	return &XrayTagResourceResult{Result: future}
+	return &XRayTagResourceFuture{Future: future}
 }
 
 func (a *XRayStub) UntagResource(ctx workflow.Context, input *xray.UntagResourceInput) (*xray.UntagResourceOutput, error) {
@@ -542,9 +565,9 @@ func (a *XRayStub) UntagResource(ctx workflow.Context, input *xray.UntagResource
 	return &output, err
 }
 
-func (a *XRayStub) UntagResourceAsync(ctx workflow.Context, input *xray.UntagResourceInput) *XrayUntagResourceResult {
+func (a *XRayStub) UntagResourceAsync(ctx workflow.Context, input *xray.UntagResourceInput) *XRayUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.UntagResource", input)
-	return &XrayUntagResourceResult{Result: future}
+	return &XRayUntagResourceFuture{Future: future}
 }
 
 func (a *XRayStub) UpdateGroup(ctx workflow.Context, input *xray.UpdateGroupInput) (*xray.UpdateGroupOutput, error) {
@@ -553,9 +576,9 @@ func (a *XRayStub) UpdateGroup(ctx workflow.Context, input *xray.UpdateGroupInpu
 	return &output, err
 }
 
-func (a *XRayStub) UpdateGroupAsync(ctx workflow.Context, input *xray.UpdateGroupInput) *XrayUpdateGroupResult {
+func (a *XRayStub) UpdateGroupAsync(ctx workflow.Context, input *xray.UpdateGroupInput) *XRayUpdateGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.UpdateGroup", input)
-	return &XrayUpdateGroupResult{Result: future}
+	return &XRayUpdateGroupFuture{Future: future}
 }
 
 func (a *XRayStub) UpdateSamplingRule(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) (*xray.UpdateSamplingRuleOutput, error) {
@@ -564,7 +587,7 @@ func (a *XRayStub) UpdateSamplingRule(ctx workflow.Context, input *xray.UpdateSa
 	return &output, err
 }
 
-func (a *XRayStub) UpdateSamplingRuleAsync(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) *XrayUpdateSamplingRuleResult {
+func (a *XRayStub) UpdateSamplingRuleAsync(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) *XRayUpdateSamplingRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.xray.UpdateSamplingRule", input)
-	return &XrayUpdateSamplingRuleResult{Result: future}
+	return &XRayUpdateSamplingRuleFuture{Future: future}
 }

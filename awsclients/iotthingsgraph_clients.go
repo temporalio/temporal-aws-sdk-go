@@ -11,109 +11,109 @@ import (
 
 type IoTThingsGraphClient interface {
 	AssociateEntityToThing(ctx workflow.Context, input *iotthingsgraph.AssociateEntityToThingInput) (*iotthingsgraph.AssociateEntityToThingOutput, error)
-	AssociateEntityToThingAsync(ctx workflow.Context, input *iotthingsgraph.AssociateEntityToThingInput) *IotthingsgraphAssociateEntityToThingResult
+	AssociateEntityToThingAsync(ctx workflow.Context, input *iotthingsgraph.AssociateEntityToThingInput) *IoTThingsGraphAssociateEntityToThingFuture
 
 	CreateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.CreateFlowTemplateInput) (*iotthingsgraph.CreateFlowTemplateOutput, error)
-	CreateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.CreateFlowTemplateInput) *IotthingsgraphCreateFlowTemplateResult
+	CreateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.CreateFlowTemplateInput) *IoTThingsGraphCreateFlowTemplateFuture
 
 	CreateSystemInstance(ctx workflow.Context, input *iotthingsgraph.CreateSystemInstanceInput) (*iotthingsgraph.CreateSystemInstanceOutput, error)
-	CreateSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.CreateSystemInstanceInput) *IotthingsgraphCreateSystemInstanceResult
+	CreateSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.CreateSystemInstanceInput) *IoTThingsGraphCreateSystemInstanceFuture
 
 	CreateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.CreateSystemTemplateInput) (*iotthingsgraph.CreateSystemTemplateOutput, error)
-	CreateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.CreateSystemTemplateInput) *IotthingsgraphCreateSystemTemplateResult
+	CreateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.CreateSystemTemplateInput) *IoTThingsGraphCreateSystemTemplateFuture
 
 	DeleteFlowTemplate(ctx workflow.Context, input *iotthingsgraph.DeleteFlowTemplateInput) (*iotthingsgraph.DeleteFlowTemplateOutput, error)
-	DeleteFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeleteFlowTemplateInput) *IotthingsgraphDeleteFlowTemplateResult
+	DeleteFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeleteFlowTemplateInput) *IoTThingsGraphDeleteFlowTemplateFuture
 
 	DeleteNamespace(ctx workflow.Context, input *iotthingsgraph.DeleteNamespaceInput) (*iotthingsgraph.DeleteNamespaceOutput, error)
-	DeleteNamespaceAsync(ctx workflow.Context, input *iotthingsgraph.DeleteNamespaceInput) *IotthingsgraphDeleteNamespaceResult
+	DeleteNamespaceAsync(ctx workflow.Context, input *iotthingsgraph.DeleteNamespaceInput) *IoTThingsGraphDeleteNamespaceFuture
 
 	DeleteSystemInstance(ctx workflow.Context, input *iotthingsgraph.DeleteSystemInstanceInput) (*iotthingsgraph.DeleteSystemInstanceOutput, error)
-	DeleteSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.DeleteSystemInstanceInput) *IotthingsgraphDeleteSystemInstanceResult
+	DeleteSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.DeleteSystemInstanceInput) *IoTThingsGraphDeleteSystemInstanceFuture
 
 	DeleteSystemTemplate(ctx workflow.Context, input *iotthingsgraph.DeleteSystemTemplateInput) (*iotthingsgraph.DeleteSystemTemplateOutput, error)
-	DeleteSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeleteSystemTemplateInput) *IotthingsgraphDeleteSystemTemplateResult
+	DeleteSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeleteSystemTemplateInput) *IoTThingsGraphDeleteSystemTemplateFuture
 
 	DeploySystemInstance(ctx workflow.Context, input *iotthingsgraph.DeploySystemInstanceInput) (*iotthingsgraph.DeploySystemInstanceOutput, error)
-	DeploySystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.DeploySystemInstanceInput) *IotthingsgraphDeploySystemInstanceResult
+	DeploySystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.DeploySystemInstanceInput) *IoTThingsGraphDeploySystemInstanceFuture
 
 	DeprecateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.DeprecateFlowTemplateInput) (*iotthingsgraph.DeprecateFlowTemplateOutput, error)
-	DeprecateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeprecateFlowTemplateInput) *IotthingsgraphDeprecateFlowTemplateResult
+	DeprecateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeprecateFlowTemplateInput) *IoTThingsGraphDeprecateFlowTemplateFuture
 
 	DeprecateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.DeprecateSystemTemplateInput) (*iotthingsgraph.DeprecateSystemTemplateOutput, error)
-	DeprecateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeprecateSystemTemplateInput) *IotthingsgraphDeprecateSystemTemplateResult
+	DeprecateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeprecateSystemTemplateInput) *IoTThingsGraphDeprecateSystemTemplateFuture
 
 	DescribeNamespace(ctx workflow.Context, input *iotthingsgraph.DescribeNamespaceInput) (*iotthingsgraph.DescribeNamespaceOutput, error)
-	DescribeNamespaceAsync(ctx workflow.Context, input *iotthingsgraph.DescribeNamespaceInput) *IotthingsgraphDescribeNamespaceResult
+	DescribeNamespaceAsync(ctx workflow.Context, input *iotthingsgraph.DescribeNamespaceInput) *IoTThingsGraphDescribeNamespaceFuture
 
 	DissociateEntityFromThing(ctx workflow.Context, input *iotthingsgraph.DissociateEntityFromThingInput) (*iotthingsgraph.DissociateEntityFromThingOutput, error)
-	DissociateEntityFromThingAsync(ctx workflow.Context, input *iotthingsgraph.DissociateEntityFromThingInput) *IotthingsgraphDissociateEntityFromThingResult
+	DissociateEntityFromThingAsync(ctx workflow.Context, input *iotthingsgraph.DissociateEntityFromThingInput) *IoTThingsGraphDissociateEntityFromThingFuture
 
 	GetEntities(ctx workflow.Context, input *iotthingsgraph.GetEntitiesInput) (*iotthingsgraph.GetEntitiesOutput, error)
-	GetEntitiesAsync(ctx workflow.Context, input *iotthingsgraph.GetEntitiesInput) *IotthingsgraphGetEntitiesResult
+	GetEntitiesAsync(ctx workflow.Context, input *iotthingsgraph.GetEntitiesInput) *IoTThingsGraphGetEntitiesFuture
 
 	GetFlowTemplate(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateInput) (*iotthingsgraph.GetFlowTemplateOutput, error)
-	GetFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateInput) *IotthingsgraphGetFlowTemplateResult
+	GetFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateInput) *IoTThingsGraphGetFlowTemplateFuture
 
 	GetFlowTemplateRevisions(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateRevisionsInput) (*iotthingsgraph.GetFlowTemplateRevisionsOutput, error)
-	GetFlowTemplateRevisionsAsync(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateRevisionsInput) *IotthingsgraphGetFlowTemplateRevisionsResult
+	GetFlowTemplateRevisionsAsync(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateRevisionsInput) *IoTThingsGraphGetFlowTemplateRevisionsFuture
 
 	GetNamespaceDeletionStatus(ctx workflow.Context, input *iotthingsgraph.GetNamespaceDeletionStatusInput) (*iotthingsgraph.GetNamespaceDeletionStatusOutput, error)
-	GetNamespaceDeletionStatusAsync(ctx workflow.Context, input *iotthingsgraph.GetNamespaceDeletionStatusInput) *IotthingsgraphGetNamespaceDeletionStatusResult
+	GetNamespaceDeletionStatusAsync(ctx workflow.Context, input *iotthingsgraph.GetNamespaceDeletionStatusInput) *IoTThingsGraphGetNamespaceDeletionStatusFuture
 
 	GetSystemInstance(ctx workflow.Context, input *iotthingsgraph.GetSystemInstanceInput) (*iotthingsgraph.GetSystemInstanceOutput, error)
-	GetSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemInstanceInput) *IotthingsgraphGetSystemInstanceResult
+	GetSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemInstanceInput) *IoTThingsGraphGetSystemInstanceFuture
 
 	GetSystemTemplate(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateInput) (*iotthingsgraph.GetSystemTemplateOutput, error)
-	GetSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateInput) *IotthingsgraphGetSystemTemplateResult
+	GetSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateInput) *IoTThingsGraphGetSystemTemplateFuture
 
 	GetSystemTemplateRevisions(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateRevisionsInput) (*iotthingsgraph.GetSystemTemplateRevisionsOutput, error)
-	GetSystemTemplateRevisionsAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateRevisionsInput) *IotthingsgraphGetSystemTemplateRevisionsResult
+	GetSystemTemplateRevisionsAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateRevisionsInput) *IoTThingsGraphGetSystemTemplateRevisionsFuture
 
 	GetUploadStatus(ctx workflow.Context, input *iotthingsgraph.GetUploadStatusInput) (*iotthingsgraph.GetUploadStatusOutput, error)
-	GetUploadStatusAsync(ctx workflow.Context, input *iotthingsgraph.GetUploadStatusInput) *IotthingsgraphGetUploadStatusResult
+	GetUploadStatusAsync(ctx workflow.Context, input *iotthingsgraph.GetUploadStatusInput) *IoTThingsGraphGetUploadStatusFuture
 
 	ListFlowExecutionMessages(ctx workflow.Context, input *iotthingsgraph.ListFlowExecutionMessagesInput) (*iotthingsgraph.ListFlowExecutionMessagesOutput, error)
-	ListFlowExecutionMessagesAsync(ctx workflow.Context, input *iotthingsgraph.ListFlowExecutionMessagesInput) *IotthingsgraphListFlowExecutionMessagesResult
+	ListFlowExecutionMessagesAsync(ctx workflow.Context, input *iotthingsgraph.ListFlowExecutionMessagesInput) *IoTThingsGraphListFlowExecutionMessagesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iotthingsgraph.ListTagsForResourceInput) (*iotthingsgraph.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iotthingsgraph.ListTagsForResourceInput) *IotthingsgraphListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *iotthingsgraph.ListTagsForResourceInput) *IoTThingsGraphListTagsForResourceFuture
 
 	SearchEntities(ctx workflow.Context, input *iotthingsgraph.SearchEntitiesInput) (*iotthingsgraph.SearchEntitiesOutput, error)
-	SearchEntitiesAsync(ctx workflow.Context, input *iotthingsgraph.SearchEntitiesInput) *IotthingsgraphSearchEntitiesResult
+	SearchEntitiesAsync(ctx workflow.Context, input *iotthingsgraph.SearchEntitiesInput) *IoTThingsGraphSearchEntitiesFuture
 
 	SearchFlowExecutions(ctx workflow.Context, input *iotthingsgraph.SearchFlowExecutionsInput) (*iotthingsgraph.SearchFlowExecutionsOutput, error)
-	SearchFlowExecutionsAsync(ctx workflow.Context, input *iotthingsgraph.SearchFlowExecutionsInput) *IotthingsgraphSearchFlowExecutionsResult
+	SearchFlowExecutionsAsync(ctx workflow.Context, input *iotthingsgraph.SearchFlowExecutionsInput) *IoTThingsGraphSearchFlowExecutionsFuture
 
 	SearchFlowTemplates(ctx workflow.Context, input *iotthingsgraph.SearchFlowTemplatesInput) (*iotthingsgraph.SearchFlowTemplatesOutput, error)
-	SearchFlowTemplatesAsync(ctx workflow.Context, input *iotthingsgraph.SearchFlowTemplatesInput) *IotthingsgraphSearchFlowTemplatesResult
+	SearchFlowTemplatesAsync(ctx workflow.Context, input *iotthingsgraph.SearchFlowTemplatesInput) *IoTThingsGraphSearchFlowTemplatesFuture
 
 	SearchSystemInstances(ctx workflow.Context, input *iotthingsgraph.SearchSystemInstancesInput) (*iotthingsgraph.SearchSystemInstancesOutput, error)
-	SearchSystemInstancesAsync(ctx workflow.Context, input *iotthingsgraph.SearchSystemInstancesInput) *IotthingsgraphSearchSystemInstancesResult
+	SearchSystemInstancesAsync(ctx workflow.Context, input *iotthingsgraph.SearchSystemInstancesInput) *IoTThingsGraphSearchSystemInstancesFuture
 
 	SearchSystemTemplates(ctx workflow.Context, input *iotthingsgraph.SearchSystemTemplatesInput) (*iotthingsgraph.SearchSystemTemplatesOutput, error)
-	SearchSystemTemplatesAsync(ctx workflow.Context, input *iotthingsgraph.SearchSystemTemplatesInput) *IotthingsgraphSearchSystemTemplatesResult
+	SearchSystemTemplatesAsync(ctx workflow.Context, input *iotthingsgraph.SearchSystemTemplatesInput) *IoTThingsGraphSearchSystemTemplatesFuture
 
 	SearchThings(ctx workflow.Context, input *iotthingsgraph.SearchThingsInput) (*iotthingsgraph.SearchThingsOutput, error)
-	SearchThingsAsync(ctx workflow.Context, input *iotthingsgraph.SearchThingsInput) *IotthingsgraphSearchThingsResult
+	SearchThingsAsync(ctx workflow.Context, input *iotthingsgraph.SearchThingsInput) *IoTThingsGraphSearchThingsFuture
 
 	TagResource(ctx workflow.Context, input *iotthingsgraph.TagResourceInput) (*iotthingsgraph.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iotthingsgraph.TagResourceInput) *IotthingsgraphTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *iotthingsgraph.TagResourceInput) *IoTThingsGraphTagResourceFuture
 
 	UndeploySystemInstance(ctx workflow.Context, input *iotthingsgraph.UndeploySystemInstanceInput) (*iotthingsgraph.UndeploySystemInstanceOutput, error)
-	UndeploySystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.UndeploySystemInstanceInput) *IotthingsgraphUndeploySystemInstanceResult
+	UndeploySystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.UndeploySystemInstanceInput) *IoTThingsGraphUndeploySystemInstanceFuture
 
 	UntagResource(ctx workflow.Context, input *iotthingsgraph.UntagResourceInput) (*iotthingsgraph.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iotthingsgraph.UntagResourceInput) *IotthingsgraphUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *iotthingsgraph.UntagResourceInput) *IoTThingsGraphUntagResourceFuture
 
 	UpdateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.UpdateFlowTemplateInput) (*iotthingsgraph.UpdateFlowTemplateOutput, error)
-	UpdateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.UpdateFlowTemplateInput) *IotthingsgraphUpdateFlowTemplateResult
+	UpdateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.UpdateFlowTemplateInput) *IoTThingsGraphUpdateFlowTemplateFuture
 
 	UpdateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.UpdateSystemTemplateInput) (*iotthingsgraph.UpdateSystemTemplateOutput, error)
-	UpdateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.UpdateSystemTemplateInput) *IotthingsgraphUpdateSystemTemplateResult
+	UpdateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.UpdateSystemTemplateInput) *IoTThingsGraphUpdateSystemTemplateFuture
 
 	UploadEntityDefinitions(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) (*iotthingsgraph.UploadEntityDefinitionsOutput, error)
-	UploadEntityDefinitionsAsync(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) *IotthingsgraphUploadEntityDefinitionsResult
+	UploadEntityDefinitionsAsync(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) *IoTThingsGraphUploadEntityDefinitionsFuture
 }
 
 type IoTThingsGraphStub struct{}
@@ -122,353 +122,388 @@ func NewIoTThingsGraphStub() IoTThingsGraphClient {
 	return &IoTThingsGraphStub{}
 }
 
-type IotthingsgraphAssociateEntityToThingResult struct {
-	Result workflow.Future
+type IoTThingsGraphAssociateEntityToThingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphAssociateEntityToThingResult) Get(ctx workflow.Context) (*iotthingsgraph.AssociateEntityToThingOutput, error) {
+func (r *IoTThingsGraphAssociateEntityToThingFuture) Get(ctx workflow.Context) (*iotthingsgraph.AssociateEntityToThingOutput, error) {
 	var output iotthingsgraph.AssociateEntityToThingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphCreateFlowTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphCreateFlowTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphCreateFlowTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.CreateFlowTemplateOutput, error) {
+func (r *IoTThingsGraphCreateFlowTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.CreateFlowTemplateOutput, error) {
 	var output iotthingsgraph.CreateFlowTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphCreateSystemInstanceResult struct {
-	Result workflow.Future
+type IoTThingsGraphCreateSystemInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphCreateSystemInstanceResult) Get(ctx workflow.Context) (*iotthingsgraph.CreateSystemInstanceOutput, error) {
+func (r *IoTThingsGraphCreateSystemInstanceFuture) Get(ctx workflow.Context) (*iotthingsgraph.CreateSystemInstanceOutput, error) {
 	var output iotthingsgraph.CreateSystemInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphCreateSystemTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphCreateSystemTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphCreateSystemTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.CreateSystemTemplateOutput, error) {
+func (r *IoTThingsGraphCreateSystemTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.CreateSystemTemplateOutput, error) {
 	var output iotthingsgraph.CreateSystemTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDeleteFlowTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphDeleteFlowTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDeleteFlowTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.DeleteFlowTemplateOutput, error) {
+func (r *IoTThingsGraphDeleteFlowTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.DeleteFlowTemplateOutput, error) {
 	var output iotthingsgraph.DeleteFlowTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDeleteNamespaceResult struct {
-	Result workflow.Future
+type IoTThingsGraphDeleteNamespaceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDeleteNamespaceResult) Get(ctx workflow.Context) (*iotthingsgraph.DeleteNamespaceOutput, error) {
+func (r *IoTThingsGraphDeleteNamespaceFuture) Get(ctx workflow.Context) (*iotthingsgraph.DeleteNamespaceOutput, error) {
 	var output iotthingsgraph.DeleteNamespaceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDeleteSystemInstanceResult struct {
-	Result workflow.Future
+type IoTThingsGraphDeleteSystemInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDeleteSystemInstanceResult) Get(ctx workflow.Context) (*iotthingsgraph.DeleteSystemInstanceOutput, error) {
+func (r *IoTThingsGraphDeleteSystemInstanceFuture) Get(ctx workflow.Context) (*iotthingsgraph.DeleteSystemInstanceOutput, error) {
 	var output iotthingsgraph.DeleteSystemInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDeleteSystemTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphDeleteSystemTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDeleteSystemTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.DeleteSystemTemplateOutput, error) {
+func (r *IoTThingsGraphDeleteSystemTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.DeleteSystemTemplateOutput, error) {
 	var output iotthingsgraph.DeleteSystemTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDeploySystemInstanceResult struct {
-	Result workflow.Future
+type IoTThingsGraphDeploySystemInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDeploySystemInstanceResult) Get(ctx workflow.Context) (*iotthingsgraph.DeploySystemInstanceOutput, error) {
+func (r *IoTThingsGraphDeploySystemInstanceFuture) Get(ctx workflow.Context) (*iotthingsgraph.DeploySystemInstanceOutput, error) {
 	var output iotthingsgraph.DeploySystemInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDeprecateFlowTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphDeprecateFlowTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDeprecateFlowTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.DeprecateFlowTemplateOutput, error) {
+func (r *IoTThingsGraphDeprecateFlowTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.DeprecateFlowTemplateOutput, error) {
 	var output iotthingsgraph.DeprecateFlowTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDeprecateSystemTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphDeprecateSystemTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDeprecateSystemTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.DeprecateSystemTemplateOutput, error) {
+func (r *IoTThingsGraphDeprecateSystemTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.DeprecateSystemTemplateOutput, error) {
 	var output iotthingsgraph.DeprecateSystemTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDescribeNamespaceResult struct {
-	Result workflow.Future
+type IoTThingsGraphDescribeNamespaceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDescribeNamespaceResult) Get(ctx workflow.Context) (*iotthingsgraph.DescribeNamespaceOutput, error) {
+func (r *IoTThingsGraphDescribeNamespaceFuture) Get(ctx workflow.Context) (*iotthingsgraph.DescribeNamespaceOutput, error) {
 	var output iotthingsgraph.DescribeNamespaceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphDissociateEntityFromThingResult struct {
-	Result workflow.Future
+type IoTThingsGraphDissociateEntityFromThingFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphDissociateEntityFromThingResult) Get(ctx workflow.Context) (*iotthingsgraph.DissociateEntityFromThingOutput, error) {
+func (r *IoTThingsGraphDissociateEntityFromThingFuture) Get(ctx workflow.Context) (*iotthingsgraph.DissociateEntityFromThingOutput, error) {
 	var output iotthingsgraph.DissociateEntityFromThingOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphGetEntitiesResult struct {
-	Result workflow.Future
+type IoTThingsGraphGetEntitiesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphGetEntitiesResult) Get(ctx workflow.Context) (*iotthingsgraph.GetEntitiesOutput, error) {
+func (r *IoTThingsGraphGetEntitiesFuture) Get(ctx workflow.Context) (*iotthingsgraph.GetEntitiesOutput, error) {
 	var output iotthingsgraph.GetEntitiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphGetFlowTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphGetFlowTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphGetFlowTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.GetFlowTemplateOutput, error) {
+func (r *IoTThingsGraphGetFlowTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.GetFlowTemplateOutput, error) {
 	var output iotthingsgraph.GetFlowTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphGetFlowTemplateRevisionsResult struct {
-	Result workflow.Future
+type IoTThingsGraphGetFlowTemplateRevisionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphGetFlowTemplateRevisionsResult) Get(ctx workflow.Context) (*iotthingsgraph.GetFlowTemplateRevisionsOutput, error) {
+func (r *IoTThingsGraphGetFlowTemplateRevisionsFuture) Get(ctx workflow.Context) (*iotthingsgraph.GetFlowTemplateRevisionsOutput, error) {
 	var output iotthingsgraph.GetFlowTemplateRevisionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphGetNamespaceDeletionStatusResult struct {
-	Result workflow.Future
+type IoTThingsGraphGetNamespaceDeletionStatusFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphGetNamespaceDeletionStatusResult) Get(ctx workflow.Context) (*iotthingsgraph.GetNamespaceDeletionStatusOutput, error) {
+func (r *IoTThingsGraphGetNamespaceDeletionStatusFuture) Get(ctx workflow.Context) (*iotthingsgraph.GetNamespaceDeletionStatusOutput, error) {
 	var output iotthingsgraph.GetNamespaceDeletionStatusOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphGetSystemInstanceResult struct {
-	Result workflow.Future
+type IoTThingsGraphGetSystemInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphGetSystemInstanceResult) Get(ctx workflow.Context) (*iotthingsgraph.GetSystemInstanceOutput, error) {
+func (r *IoTThingsGraphGetSystemInstanceFuture) Get(ctx workflow.Context) (*iotthingsgraph.GetSystemInstanceOutput, error) {
 	var output iotthingsgraph.GetSystemInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphGetSystemTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphGetSystemTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphGetSystemTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.GetSystemTemplateOutput, error) {
+func (r *IoTThingsGraphGetSystemTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.GetSystemTemplateOutput, error) {
 	var output iotthingsgraph.GetSystemTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphGetSystemTemplateRevisionsResult struct {
-	Result workflow.Future
+type IoTThingsGraphGetSystemTemplateRevisionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphGetSystemTemplateRevisionsResult) Get(ctx workflow.Context) (*iotthingsgraph.GetSystemTemplateRevisionsOutput, error) {
+func (r *IoTThingsGraphGetSystemTemplateRevisionsFuture) Get(ctx workflow.Context) (*iotthingsgraph.GetSystemTemplateRevisionsOutput, error) {
 	var output iotthingsgraph.GetSystemTemplateRevisionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphGetUploadStatusResult struct {
-	Result workflow.Future
+type IoTThingsGraphGetUploadStatusFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphGetUploadStatusResult) Get(ctx workflow.Context) (*iotthingsgraph.GetUploadStatusOutput, error) {
+func (r *IoTThingsGraphGetUploadStatusFuture) Get(ctx workflow.Context) (*iotthingsgraph.GetUploadStatusOutput, error) {
 	var output iotthingsgraph.GetUploadStatusOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphListFlowExecutionMessagesResult struct {
-	Result workflow.Future
+type IoTThingsGraphListFlowExecutionMessagesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphListFlowExecutionMessagesResult) Get(ctx workflow.Context) (*iotthingsgraph.ListFlowExecutionMessagesOutput, error) {
+func (r *IoTThingsGraphListFlowExecutionMessagesFuture) Get(ctx workflow.Context) (*iotthingsgraph.ListFlowExecutionMessagesOutput, error) {
 	var output iotthingsgraph.ListFlowExecutionMessagesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphListTagsForResourceResult struct {
-	Result workflow.Future
+type IoTThingsGraphListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphListTagsForResourceResult) Get(ctx workflow.Context) (*iotthingsgraph.ListTagsForResourceOutput, error) {
+func (r *IoTThingsGraphListTagsForResourceFuture) Get(ctx workflow.Context) (*iotthingsgraph.ListTagsForResourceOutput, error) {
 	var output iotthingsgraph.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphSearchEntitiesResult struct {
-	Result workflow.Future
+type IoTThingsGraphSearchEntitiesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphSearchEntitiesResult) Get(ctx workflow.Context) (*iotthingsgraph.SearchEntitiesOutput, error) {
+func (r *IoTThingsGraphSearchEntitiesFuture) Get(ctx workflow.Context) (*iotthingsgraph.SearchEntitiesOutput, error) {
 	var output iotthingsgraph.SearchEntitiesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphSearchFlowExecutionsResult struct {
-	Result workflow.Future
+type IoTThingsGraphSearchFlowExecutionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphSearchFlowExecutionsResult) Get(ctx workflow.Context) (*iotthingsgraph.SearchFlowExecutionsOutput, error) {
+func (r *IoTThingsGraphSearchFlowExecutionsFuture) Get(ctx workflow.Context) (*iotthingsgraph.SearchFlowExecutionsOutput, error) {
 	var output iotthingsgraph.SearchFlowExecutionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphSearchFlowTemplatesResult struct {
-	Result workflow.Future
+type IoTThingsGraphSearchFlowTemplatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphSearchFlowTemplatesResult) Get(ctx workflow.Context) (*iotthingsgraph.SearchFlowTemplatesOutput, error) {
+func (r *IoTThingsGraphSearchFlowTemplatesFuture) Get(ctx workflow.Context) (*iotthingsgraph.SearchFlowTemplatesOutput, error) {
 	var output iotthingsgraph.SearchFlowTemplatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphSearchSystemInstancesResult struct {
-	Result workflow.Future
+type IoTThingsGraphSearchSystemInstancesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphSearchSystemInstancesResult) Get(ctx workflow.Context) (*iotthingsgraph.SearchSystemInstancesOutput, error) {
+func (r *IoTThingsGraphSearchSystemInstancesFuture) Get(ctx workflow.Context) (*iotthingsgraph.SearchSystemInstancesOutput, error) {
 	var output iotthingsgraph.SearchSystemInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphSearchSystemTemplatesResult struct {
-	Result workflow.Future
+type IoTThingsGraphSearchSystemTemplatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphSearchSystemTemplatesResult) Get(ctx workflow.Context) (*iotthingsgraph.SearchSystemTemplatesOutput, error) {
+func (r *IoTThingsGraphSearchSystemTemplatesFuture) Get(ctx workflow.Context) (*iotthingsgraph.SearchSystemTemplatesOutput, error) {
 	var output iotthingsgraph.SearchSystemTemplatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphSearchThingsResult struct {
-	Result workflow.Future
+type IoTThingsGraphSearchThingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphSearchThingsResult) Get(ctx workflow.Context) (*iotthingsgraph.SearchThingsOutput, error) {
+func (r *IoTThingsGraphSearchThingsFuture) Get(ctx workflow.Context) (*iotthingsgraph.SearchThingsOutput, error) {
 	var output iotthingsgraph.SearchThingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphTagResourceResult struct {
-	Result workflow.Future
+type IoTThingsGraphTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphTagResourceResult) Get(ctx workflow.Context) (*iotthingsgraph.TagResourceOutput, error) {
+func (r *IoTThingsGraphTagResourceFuture) Get(ctx workflow.Context) (*iotthingsgraph.TagResourceOutput, error) {
 	var output iotthingsgraph.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphUndeploySystemInstanceResult struct {
-	Result workflow.Future
+type IoTThingsGraphUndeploySystemInstanceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphUndeploySystemInstanceResult) Get(ctx workflow.Context) (*iotthingsgraph.UndeploySystemInstanceOutput, error) {
+func (r *IoTThingsGraphUndeploySystemInstanceFuture) Get(ctx workflow.Context) (*iotthingsgraph.UndeploySystemInstanceOutput, error) {
 	var output iotthingsgraph.UndeploySystemInstanceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphUntagResourceResult struct {
-	Result workflow.Future
+type IoTThingsGraphUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphUntagResourceResult) Get(ctx workflow.Context) (*iotthingsgraph.UntagResourceOutput, error) {
+func (r *IoTThingsGraphUntagResourceFuture) Get(ctx workflow.Context) (*iotthingsgraph.UntagResourceOutput, error) {
 	var output iotthingsgraph.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphUpdateFlowTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphUpdateFlowTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphUpdateFlowTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.UpdateFlowTemplateOutput, error) {
+func (r *IoTThingsGraphUpdateFlowTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.UpdateFlowTemplateOutput, error) {
 	var output iotthingsgraph.UpdateFlowTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphUpdateSystemTemplateResult struct {
-	Result workflow.Future
+type IoTThingsGraphUpdateSystemTemplateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphUpdateSystemTemplateResult) Get(ctx workflow.Context) (*iotthingsgraph.UpdateSystemTemplateOutput, error) {
+func (r *IoTThingsGraphUpdateSystemTemplateFuture) Get(ctx workflow.Context) (*iotthingsgraph.UpdateSystemTemplateOutput, error) {
 	var output iotthingsgraph.UpdateSystemTemplateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotthingsgraphUploadEntityDefinitionsResult struct {
-	Result workflow.Future
+type IoTThingsGraphUploadEntityDefinitionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *IotthingsgraphUploadEntityDefinitionsResult) Get(ctx workflow.Context) (*iotthingsgraph.UploadEntityDefinitionsOutput, error) {
+func (r *IoTThingsGraphUploadEntityDefinitionsFuture) Get(ctx workflow.Context) (*iotthingsgraph.UploadEntityDefinitionsOutput, error) {
 	var output iotthingsgraph.UploadEntityDefinitionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -478,9 +513,9 @@ func (a *IoTThingsGraphStub) AssociateEntityToThing(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) AssociateEntityToThingAsync(ctx workflow.Context, input *iotthingsgraph.AssociateEntityToThingInput) *IotthingsgraphAssociateEntityToThingResult {
+func (a *IoTThingsGraphStub) AssociateEntityToThingAsync(ctx workflow.Context, input *iotthingsgraph.AssociateEntityToThingInput) *IoTThingsGraphAssociateEntityToThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.AssociateEntityToThing", input)
-	return &IotthingsgraphAssociateEntityToThingResult{Result: future}
+	return &IoTThingsGraphAssociateEntityToThingFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) CreateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.CreateFlowTemplateInput) (*iotthingsgraph.CreateFlowTemplateOutput, error) {
@@ -489,9 +524,9 @@ func (a *IoTThingsGraphStub) CreateFlowTemplate(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) CreateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.CreateFlowTemplateInput) *IotthingsgraphCreateFlowTemplateResult {
+func (a *IoTThingsGraphStub) CreateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.CreateFlowTemplateInput) *IoTThingsGraphCreateFlowTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.CreateFlowTemplate", input)
-	return &IotthingsgraphCreateFlowTemplateResult{Result: future}
+	return &IoTThingsGraphCreateFlowTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) CreateSystemInstance(ctx workflow.Context, input *iotthingsgraph.CreateSystemInstanceInput) (*iotthingsgraph.CreateSystemInstanceOutput, error) {
@@ -500,9 +535,9 @@ func (a *IoTThingsGraphStub) CreateSystemInstance(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) CreateSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.CreateSystemInstanceInput) *IotthingsgraphCreateSystemInstanceResult {
+func (a *IoTThingsGraphStub) CreateSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.CreateSystemInstanceInput) *IoTThingsGraphCreateSystemInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.CreateSystemInstance", input)
-	return &IotthingsgraphCreateSystemInstanceResult{Result: future}
+	return &IoTThingsGraphCreateSystemInstanceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) CreateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.CreateSystemTemplateInput) (*iotthingsgraph.CreateSystemTemplateOutput, error) {
@@ -511,9 +546,9 @@ func (a *IoTThingsGraphStub) CreateSystemTemplate(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) CreateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.CreateSystemTemplateInput) *IotthingsgraphCreateSystemTemplateResult {
+func (a *IoTThingsGraphStub) CreateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.CreateSystemTemplateInput) *IoTThingsGraphCreateSystemTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.CreateSystemTemplate", input)
-	return &IotthingsgraphCreateSystemTemplateResult{Result: future}
+	return &IoTThingsGraphCreateSystemTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DeleteFlowTemplate(ctx workflow.Context, input *iotthingsgraph.DeleteFlowTemplateInput) (*iotthingsgraph.DeleteFlowTemplateOutput, error) {
@@ -522,9 +557,9 @@ func (a *IoTThingsGraphStub) DeleteFlowTemplate(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DeleteFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeleteFlowTemplateInput) *IotthingsgraphDeleteFlowTemplateResult {
+func (a *IoTThingsGraphStub) DeleteFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeleteFlowTemplateInput) *IoTThingsGraphDeleteFlowTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DeleteFlowTemplate", input)
-	return &IotthingsgraphDeleteFlowTemplateResult{Result: future}
+	return &IoTThingsGraphDeleteFlowTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DeleteNamespace(ctx workflow.Context, input *iotthingsgraph.DeleteNamespaceInput) (*iotthingsgraph.DeleteNamespaceOutput, error) {
@@ -533,9 +568,9 @@ func (a *IoTThingsGraphStub) DeleteNamespace(ctx workflow.Context, input *iotthi
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DeleteNamespaceAsync(ctx workflow.Context, input *iotthingsgraph.DeleteNamespaceInput) *IotthingsgraphDeleteNamespaceResult {
+func (a *IoTThingsGraphStub) DeleteNamespaceAsync(ctx workflow.Context, input *iotthingsgraph.DeleteNamespaceInput) *IoTThingsGraphDeleteNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DeleteNamespace", input)
-	return &IotthingsgraphDeleteNamespaceResult{Result: future}
+	return &IoTThingsGraphDeleteNamespaceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DeleteSystemInstance(ctx workflow.Context, input *iotthingsgraph.DeleteSystemInstanceInput) (*iotthingsgraph.DeleteSystemInstanceOutput, error) {
@@ -544,9 +579,9 @@ func (a *IoTThingsGraphStub) DeleteSystemInstance(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DeleteSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.DeleteSystemInstanceInput) *IotthingsgraphDeleteSystemInstanceResult {
+func (a *IoTThingsGraphStub) DeleteSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.DeleteSystemInstanceInput) *IoTThingsGraphDeleteSystemInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DeleteSystemInstance", input)
-	return &IotthingsgraphDeleteSystemInstanceResult{Result: future}
+	return &IoTThingsGraphDeleteSystemInstanceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DeleteSystemTemplate(ctx workflow.Context, input *iotthingsgraph.DeleteSystemTemplateInput) (*iotthingsgraph.DeleteSystemTemplateOutput, error) {
@@ -555,9 +590,9 @@ func (a *IoTThingsGraphStub) DeleteSystemTemplate(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DeleteSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeleteSystemTemplateInput) *IotthingsgraphDeleteSystemTemplateResult {
+func (a *IoTThingsGraphStub) DeleteSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeleteSystemTemplateInput) *IoTThingsGraphDeleteSystemTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DeleteSystemTemplate", input)
-	return &IotthingsgraphDeleteSystemTemplateResult{Result: future}
+	return &IoTThingsGraphDeleteSystemTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DeploySystemInstance(ctx workflow.Context, input *iotthingsgraph.DeploySystemInstanceInput) (*iotthingsgraph.DeploySystemInstanceOutput, error) {
@@ -566,9 +601,9 @@ func (a *IoTThingsGraphStub) DeploySystemInstance(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DeploySystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.DeploySystemInstanceInput) *IotthingsgraphDeploySystemInstanceResult {
+func (a *IoTThingsGraphStub) DeploySystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.DeploySystemInstanceInput) *IoTThingsGraphDeploySystemInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DeploySystemInstance", input)
-	return &IotthingsgraphDeploySystemInstanceResult{Result: future}
+	return &IoTThingsGraphDeploySystemInstanceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DeprecateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.DeprecateFlowTemplateInput) (*iotthingsgraph.DeprecateFlowTemplateOutput, error) {
@@ -577,9 +612,9 @@ func (a *IoTThingsGraphStub) DeprecateFlowTemplate(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DeprecateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeprecateFlowTemplateInput) *IotthingsgraphDeprecateFlowTemplateResult {
+func (a *IoTThingsGraphStub) DeprecateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeprecateFlowTemplateInput) *IoTThingsGraphDeprecateFlowTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DeprecateFlowTemplate", input)
-	return &IotthingsgraphDeprecateFlowTemplateResult{Result: future}
+	return &IoTThingsGraphDeprecateFlowTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DeprecateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.DeprecateSystemTemplateInput) (*iotthingsgraph.DeprecateSystemTemplateOutput, error) {
@@ -588,9 +623,9 @@ func (a *IoTThingsGraphStub) DeprecateSystemTemplate(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DeprecateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeprecateSystemTemplateInput) *IotthingsgraphDeprecateSystemTemplateResult {
+func (a *IoTThingsGraphStub) DeprecateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.DeprecateSystemTemplateInput) *IoTThingsGraphDeprecateSystemTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DeprecateSystemTemplate", input)
-	return &IotthingsgraphDeprecateSystemTemplateResult{Result: future}
+	return &IoTThingsGraphDeprecateSystemTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DescribeNamespace(ctx workflow.Context, input *iotthingsgraph.DescribeNamespaceInput) (*iotthingsgraph.DescribeNamespaceOutput, error) {
@@ -599,9 +634,9 @@ func (a *IoTThingsGraphStub) DescribeNamespace(ctx workflow.Context, input *iott
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DescribeNamespaceAsync(ctx workflow.Context, input *iotthingsgraph.DescribeNamespaceInput) *IotthingsgraphDescribeNamespaceResult {
+func (a *IoTThingsGraphStub) DescribeNamespaceAsync(ctx workflow.Context, input *iotthingsgraph.DescribeNamespaceInput) *IoTThingsGraphDescribeNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DescribeNamespace", input)
-	return &IotthingsgraphDescribeNamespaceResult{Result: future}
+	return &IoTThingsGraphDescribeNamespaceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) DissociateEntityFromThing(ctx workflow.Context, input *iotthingsgraph.DissociateEntityFromThingInput) (*iotthingsgraph.DissociateEntityFromThingOutput, error) {
@@ -610,9 +645,9 @@ func (a *IoTThingsGraphStub) DissociateEntityFromThing(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) DissociateEntityFromThingAsync(ctx workflow.Context, input *iotthingsgraph.DissociateEntityFromThingInput) *IotthingsgraphDissociateEntityFromThingResult {
+func (a *IoTThingsGraphStub) DissociateEntityFromThingAsync(ctx workflow.Context, input *iotthingsgraph.DissociateEntityFromThingInput) *IoTThingsGraphDissociateEntityFromThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.DissociateEntityFromThing", input)
-	return &IotthingsgraphDissociateEntityFromThingResult{Result: future}
+	return &IoTThingsGraphDissociateEntityFromThingFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) GetEntities(ctx workflow.Context, input *iotthingsgraph.GetEntitiesInput) (*iotthingsgraph.GetEntitiesOutput, error) {
@@ -621,9 +656,9 @@ func (a *IoTThingsGraphStub) GetEntities(ctx workflow.Context, input *iotthingsg
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) GetEntitiesAsync(ctx workflow.Context, input *iotthingsgraph.GetEntitiesInput) *IotthingsgraphGetEntitiesResult {
+func (a *IoTThingsGraphStub) GetEntitiesAsync(ctx workflow.Context, input *iotthingsgraph.GetEntitiesInput) *IoTThingsGraphGetEntitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.GetEntities", input)
-	return &IotthingsgraphGetEntitiesResult{Result: future}
+	return &IoTThingsGraphGetEntitiesFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) GetFlowTemplate(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateInput) (*iotthingsgraph.GetFlowTemplateOutput, error) {
@@ -632,9 +667,9 @@ func (a *IoTThingsGraphStub) GetFlowTemplate(ctx workflow.Context, input *iotthi
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) GetFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateInput) *IotthingsgraphGetFlowTemplateResult {
+func (a *IoTThingsGraphStub) GetFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateInput) *IoTThingsGraphGetFlowTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.GetFlowTemplate", input)
-	return &IotthingsgraphGetFlowTemplateResult{Result: future}
+	return &IoTThingsGraphGetFlowTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) GetFlowTemplateRevisions(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateRevisionsInput) (*iotthingsgraph.GetFlowTemplateRevisionsOutput, error) {
@@ -643,9 +678,9 @@ func (a *IoTThingsGraphStub) GetFlowTemplateRevisions(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) GetFlowTemplateRevisionsAsync(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateRevisionsInput) *IotthingsgraphGetFlowTemplateRevisionsResult {
+func (a *IoTThingsGraphStub) GetFlowTemplateRevisionsAsync(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateRevisionsInput) *IoTThingsGraphGetFlowTemplateRevisionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.GetFlowTemplateRevisions", input)
-	return &IotthingsgraphGetFlowTemplateRevisionsResult{Result: future}
+	return &IoTThingsGraphGetFlowTemplateRevisionsFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) GetNamespaceDeletionStatus(ctx workflow.Context, input *iotthingsgraph.GetNamespaceDeletionStatusInput) (*iotthingsgraph.GetNamespaceDeletionStatusOutput, error) {
@@ -654,9 +689,9 @@ func (a *IoTThingsGraphStub) GetNamespaceDeletionStatus(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) GetNamespaceDeletionStatusAsync(ctx workflow.Context, input *iotthingsgraph.GetNamespaceDeletionStatusInput) *IotthingsgraphGetNamespaceDeletionStatusResult {
+func (a *IoTThingsGraphStub) GetNamespaceDeletionStatusAsync(ctx workflow.Context, input *iotthingsgraph.GetNamespaceDeletionStatusInput) *IoTThingsGraphGetNamespaceDeletionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.GetNamespaceDeletionStatus", input)
-	return &IotthingsgraphGetNamespaceDeletionStatusResult{Result: future}
+	return &IoTThingsGraphGetNamespaceDeletionStatusFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) GetSystemInstance(ctx workflow.Context, input *iotthingsgraph.GetSystemInstanceInput) (*iotthingsgraph.GetSystemInstanceOutput, error) {
@@ -665,9 +700,9 @@ func (a *IoTThingsGraphStub) GetSystemInstance(ctx workflow.Context, input *iott
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) GetSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemInstanceInput) *IotthingsgraphGetSystemInstanceResult {
+func (a *IoTThingsGraphStub) GetSystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemInstanceInput) *IoTThingsGraphGetSystemInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.GetSystemInstance", input)
-	return &IotthingsgraphGetSystemInstanceResult{Result: future}
+	return &IoTThingsGraphGetSystemInstanceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) GetSystemTemplate(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateInput) (*iotthingsgraph.GetSystemTemplateOutput, error) {
@@ -676,9 +711,9 @@ func (a *IoTThingsGraphStub) GetSystemTemplate(ctx workflow.Context, input *iott
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) GetSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateInput) *IotthingsgraphGetSystemTemplateResult {
+func (a *IoTThingsGraphStub) GetSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateInput) *IoTThingsGraphGetSystemTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.GetSystemTemplate", input)
-	return &IotthingsgraphGetSystemTemplateResult{Result: future}
+	return &IoTThingsGraphGetSystemTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) GetSystemTemplateRevisions(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateRevisionsInput) (*iotthingsgraph.GetSystemTemplateRevisionsOutput, error) {
@@ -687,9 +722,9 @@ func (a *IoTThingsGraphStub) GetSystemTemplateRevisions(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) GetSystemTemplateRevisionsAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateRevisionsInput) *IotthingsgraphGetSystemTemplateRevisionsResult {
+func (a *IoTThingsGraphStub) GetSystemTemplateRevisionsAsync(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateRevisionsInput) *IoTThingsGraphGetSystemTemplateRevisionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.GetSystemTemplateRevisions", input)
-	return &IotthingsgraphGetSystemTemplateRevisionsResult{Result: future}
+	return &IoTThingsGraphGetSystemTemplateRevisionsFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) GetUploadStatus(ctx workflow.Context, input *iotthingsgraph.GetUploadStatusInput) (*iotthingsgraph.GetUploadStatusOutput, error) {
@@ -698,9 +733,9 @@ func (a *IoTThingsGraphStub) GetUploadStatus(ctx workflow.Context, input *iotthi
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) GetUploadStatusAsync(ctx workflow.Context, input *iotthingsgraph.GetUploadStatusInput) *IotthingsgraphGetUploadStatusResult {
+func (a *IoTThingsGraphStub) GetUploadStatusAsync(ctx workflow.Context, input *iotthingsgraph.GetUploadStatusInput) *IoTThingsGraphGetUploadStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.GetUploadStatus", input)
-	return &IotthingsgraphGetUploadStatusResult{Result: future}
+	return &IoTThingsGraphGetUploadStatusFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) ListFlowExecutionMessages(ctx workflow.Context, input *iotthingsgraph.ListFlowExecutionMessagesInput) (*iotthingsgraph.ListFlowExecutionMessagesOutput, error) {
@@ -709,9 +744,9 @@ func (a *IoTThingsGraphStub) ListFlowExecutionMessages(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) ListFlowExecutionMessagesAsync(ctx workflow.Context, input *iotthingsgraph.ListFlowExecutionMessagesInput) *IotthingsgraphListFlowExecutionMessagesResult {
+func (a *IoTThingsGraphStub) ListFlowExecutionMessagesAsync(ctx workflow.Context, input *iotthingsgraph.ListFlowExecutionMessagesInput) *IoTThingsGraphListFlowExecutionMessagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.ListFlowExecutionMessages", input)
-	return &IotthingsgraphListFlowExecutionMessagesResult{Result: future}
+	return &IoTThingsGraphListFlowExecutionMessagesFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) ListTagsForResource(ctx workflow.Context, input *iotthingsgraph.ListTagsForResourceInput) (*iotthingsgraph.ListTagsForResourceOutput, error) {
@@ -720,9 +755,9 @@ func (a *IoTThingsGraphStub) ListTagsForResource(ctx workflow.Context, input *io
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) ListTagsForResourceAsync(ctx workflow.Context, input *iotthingsgraph.ListTagsForResourceInput) *IotthingsgraphListTagsForResourceResult {
+func (a *IoTThingsGraphStub) ListTagsForResourceAsync(ctx workflow.Context, input *iotthingsgraph.ListTagsForResourceInput) *IoTThingsGraphListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.ListTagsForResource", input)
-	return &IotthingsgraphListTagsForResourceResult{Result: future}
+	return &IoTThingsGraphListTagsForResourceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) SearchEntities(ctx workflow.Context, input *iotthingsgraph.SearchEntitiesInput) (*iotthingsgraph.SearchEntitiesOutput, error) {
@@ -731,9 +766,9 @@ func (a *IoTThingsGraphStub) SearchEntities(ctx workflow.Context, input *iotthin
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) SearchEntitiesAsync(ctx workflow.Context, input *iotthingsgraph.SearchEntitiesInput) *IotthingsgraphSearchEntitiesResult {
+func (a *IoTThingsGraphStub) SearchEntitiesAsync(ctx workflow.Context, input *iotthingsgraph.SearchEntitiesInput) *IoTThingsGraphSearchEntitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.SearchEntities", input)
-	return &IotthingsgraphSearchEntitiesResult{Result: future}
+	return &IoTThingsGraphSearchEntitiesFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) SearchFlowExecutions(ctx workflow.Context, input *iotthingsgraph.SearchFlowExecutionsInput) (*iotthingsgraph.SearchFlowExecutionsOutput, error) {
@@ -742,9 +777,9 @@ func (a *IoTThingsGraphStub) SearchFlowExecutions(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) SearchFlowExecutionsAsync(ctx workflow.Context, input *iotthingsgraph.SearchFlowExecutionsInput) *IotthingsgraphSearchFlowExecutionsResult {
+func (a *IoTThingsGraphStub) SearchFlowExecutionsAsync(ctx workflow.Context, input *iotthingsgraph.SearchFlowExecutionsInput) *IoTThingsGraphSearchFlowExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.SearchFlowExecutions", input)
-	return &IotthingsgraphSearchFlowExecutionsResult{Result: future}
+	return &IoTThingsGraphSearchFlowExecutionsFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) SearchFlowTemplates(ctx workflow.Context, input *iotthingsgraph.SearchFlowTemplatesInput) (*iotthingsgraph.SearchFlowTemplatesOutput, error) {
@@ -753,9 +788,9 @@ func (a *IoTThingsGraphStub) SearchFlowTemplates(ctx workflow.Context, input *io
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) SearchFlowTemplatesAsync(ctx workflow.Context, input *iotthingsgraph.SearchFlowTemplatesInput) *IotthingsgraphSearchFlowTemplatesResult {
+func (a *IoTThingsGraphStub) SearchFlowTemplatesAsync(ctx workflow.Context, input *iotthingsgraph.SearchFlowTemplatesInput) *IoTThingsGraphSearchFlowTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.SearchFlowTemplates", input)
-	return &IotthingsgraphSearchFlowTemplatesResult{Result: future}
+	return &IoTThingsGraphSearchFlowTemplatesFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) SearchSystemInstances(ctx workflow.Context, input *iotthingsgraph.SearchSystemInstancesInput) (*iotthingsgraph.SearchSystemInstancesOutput, error) {
@@ -764,9 +799,9 @@ func (a *IoTThingsGraphStub) SearchSystemInstances(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) SearchSystemInstancesAsync(ctx workflow.Context, input *iotthingsgraph.SearchSystemInstancesInput) *IotthingsgraphSearchSystemInstancesResult {
+func (a *IoTThingsGraphStub) SearchSystemInstancesAsync(ctx workflow.Context, input *iotthingsgraph.SearchSystemInstancesInput) *IoTThingsGraphSearchSystemInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.SearchSystemInstances", input)
-	return &IotthingsgraphSearchSystemInstancesResult{Result: future}
+	return &IoTThingsGraphSearchSystemInstancesFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) SearchSystemTemplates(ctx workflow.Context, input *iotthingsgraph.SearchSystemTemplatesInput) (*iotthingsgraph.SearchSystemTemplatesOutput, error) {
@@ -775,9 +810,9 @@ func (a *IoTThingsGraphStub) SearchSystemTemplates(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) SearchSystemTemplatesAsync(ctx workflow.Context, input *iotthingsgraph.SearchSystemTemplatesInput) *IotthingsgraphSearchSystemTemplatesResult {
+func (a *IoTThingsGraphStub) SearchSystemTemplatesAsync(ctx workflow.Context, input *iotthingsgraph.SearchSystemTemplatesInput) *IoTThingsGraphSearchSystemTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.SearchSystemTemplates", input)
-	return &IotthingsgraphSearchSystemTemplatesResult{Result: future}
+	return &IoTThingsGraphSearchSystemTemplatesFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) SearchThings(ctx workflow.Context, input *iotthingsgraph.SearchThingsInput) (*iotthingsgraph.SearchThingsOutput, error) {
@@ -786,9 +821,9 @@ func (a *IoTThingsGraphStub) SearchThings(ctx workflow.Context, input *iotthings
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) SearchThingsAsync(ctx workflow.Context, input *iotthingsgraph.SearchThingsInput) *IotthingsgraphSearchThingsResult {
+func (a *IoTThingsGraphStub) SearchThingsAsync(ctx workflow.Context, input *iotthingsgraph.SearchThingsInput) *IoTThingsGraphSearchThingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.SearchThings", input)
-	return &IotthingsgraphSearchThingsResult{Result: future}
+	return &IoTThingsGraphSearchThingsFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) TagResource(ctx workflow.Context, input *iotthingsgraph.TagResourceInput) (*iotthingsgraph.TagResourceOutput, error) {
@@ -797,9 +832,9 @@ func (a *IoTThingsGraphStub) TagResource(ctx workflow.Context, input *iotthingsg
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) TagResourceAsync(ctx workflow.Context, input *iotthingsgraph.TagResourceInput) *IotthingsgraphTagResourceResult {
+func (a *IoTThingsGraphStub) TagResourceAsync(ctx workflow.Context, input *iotthingsgraph.TagResourceInput) *IoTThingsGraphTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.TagResource", input)
-	return &IotthingsgraphTagResourceResult{Result: future}
+	return &IoTThingsGraphTagResourceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) UndeploySystemInstance(ctx workflow.Context, input *iotthingsgraph.UndeploySystemInstanceInput) (*iotthingsgraph.UndeploySystemInstanceOutput, error) {
@@ -808,9 +843,9 @@ func (a *IoTThingsGraphStub) UndeploySystemInstance(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) UndeploySystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.UndeploySystemInstanceInput) *IotthingsgraphUndeploySystemInstanceResult {
+func (a *IoTThingsGraphStub) UndeploySystemInstanceAsync(ctx workflow.Context, input *iotthingsgraph.UndeploySystemInstanceInput) *IoTThingsGraphUndeploySystemInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.UndeploySystemInstance", input)
-	return &IotthingsgraphUndeploySystemInstanceResult{Result: future}
+	return &IoTThingsGraphUndeploySystemInstanceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) UntagResource(ctx workflow.Context, input *iotthingsgraph.UntagResourceInput) (*iotthingsgraph.UntagResourceOutput, error) {
@@ -819,9 +854,9 @@ func (a *IoTThingsGraphStub) UntagResource(ctx workflow.Context, input *iotthing
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) UntagResourceAsync(ctx workflow.Context, input *iotthingsgraph.UntagResourceInput) *IotthingsgraphUntagResourceResult {
+func (a *IoTThingsGraphStub) UntagResourceAsync(ctx workflow.Context, input *iotthingsgraph.UntagResourceInput) *IoTThingsGraphUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.UntagResource", input)
-	return &IotthingsgraphUntagResourceResult{Result: future}
+	return &IoTThingsGraphUntagResourceFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) UpdateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.UpdateFlowTemplateInput) (*iotthingsgraph.UpdateFlowTemplateOutput, error) {
@@ -830,9 +865,9 @@ func (a *IoTThingsGraphStub) UpdateFlowTemplate(ctx workflow.Context, input *iot
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) UpdateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.UpdateFlowTemplateInput) *IotthingsgraphUpdateFlowTemplateResult {
+func (a *IoTThingsGraphStub) UpdateFlowTemplateAsync(ctx workflow.Context, input *iotthingsgraph.UpdateFlowTemplateInput) *IoTThingsGraphUpdateFlowTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.UpdateFlowTemplate", input)
-	return &IotthingsgraphUpdateFlowTemplateResult{Result: future}
+	return &IoTThingsGraphUpdateFlowTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) UpdateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.UpdateSystemTemplateInput) (*iotthingsgraph.UpdateSystemTemplateOutput, error) {
@@ -841,9 +876,9 @@ func (a *IoTThingsGraphStub) UpdateSystemTemplate(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) UpdateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.UpdateSystemTemplateInput) *IotthingsgraphUpdateSystemTemplateResult {
+func (a *IoTThingsGraphStub) UpdateSystemTemplateAsync(ctx workflow.Context, input *iotthingsgraph.UpdateSystemTemplateInput) *IoTThingsGraphUpdateSystemTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.UpdateSystemTemplate", input)
-	return &IotthingsgraphUpdateSystemTemplateResult{Result: future}
+	return &IoTThingsGraphUpdateSystemTemplateFuture{Future: future}
 }
 
 func (a *IoTThingsGraphStub) UploadEntityDefinitions(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) (*iotthingsgraph.UploadEntityDefinitionsOutput, error) {
@@ -852,7 +887,7 @@ func (a *IoTThingsGraphStub) UploadEntityDefinitions(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *IoTThingsGraphStub) UploadEntityDefinitionsAsync(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) *IotthingsgraphUploadEntityDefinitionsResult {
+func (a *IoTThingsGraphStub) UploadEntityDefinitionsAsync(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) *IoTThingsGraphUploadEntityDefinitionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotthingsgraph.UploadEntityDefinitions", input)
-	return &IotthingsgraphUploadEntityDefinitionsResult{Result: future}
+	return &IoTThingsGraphUploadEntityDefinitionsFuture{Future: future}
 }

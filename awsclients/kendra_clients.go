@@ -11,76 +11,76 @@ import (
 
 type KendraClient interface {
 	BatchDeleteDocument(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) (*kendra.BatchDeleteDocumentOutput, error)
-	BatchDeleteDocumentAsync(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) *KendraBatchDeleteDocumentResult
+	BatchDeleteDocumentAsync(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) *KendraBatchDeleteDocumentFuture
 
 	BatchPutDocument(ctx workflow.Context, input *kendra.BatchPutDocumentInput) (*kendra.BatchPutDocumentOutput, error)
-	BatchPutDocumentAsync(ctx workflow.Context, input *kendra.BatchPutDocumentInput) *KendraBatchPutDocumentResult
+	BatchPutDocumentAsync(ctx workflow.Context, input *kendra.BatchPutDocumentInput) *KendraBatchPutDocumentFuture
 
 	CreateDataSource(ctx workflow.Context, input *kendra.CreateDataSourceInput) (*kendra.CreateDataSourceOutput, error)
-	CreateDataSourceAsync(ctx workflow.Context, input *kendra.CreateDataSourceInput) *KendraCreateDataSourceResult
+	CreateDataSourceAsync(ctx workflow.Context, input *kendra.CreateDataSourceInput) *KendraCreateDataSourceFuture
 
 	CreateFaq(ctx workflow.Context, input *kendra.CreateFaqInput) (*kendra.CreateFaqOutput, error)
-	CreateFaqAsync(ctx workflow.Context, input *kendra.CreateFaqInput) *KendraCreateFaqResult
+	CreateFaqAsync(ctx workflow.Context, input *kendra.CreateFaqInput) *KendraCreateFaqFuture
 
 	CreateIndex(ctx workflow.Context, input *kendra.CreateIndexInput) (*kendra.CreateIndexOutput, error)
-	CreateIndexAsync(ctx workflow.Context, input *kendra.CreateIndexInput) *KendraCreateIndexResult
+	CreateIndexAsync(ctx workflow.Context, input *kendra.CreateIndexInput) *KendraCreateIndexFuture
 
 	DeleteDataSource(ctx workflow.Context, input *kendra.DeleteDataSourceInput) (*kendra.DeleteDataSourceOutput, error)
-	DeleteDataSourceAsync(ctx workflow.Context, input *kendra.DeleteDataSourceInput) *KendraDeleteDataSourceResult
+	DeleteDataSourceAsync(ctx workflow.Context, input *kendra.DeleteDataSourceInput) *KendraDeleteDataSourceFuture
 
 	DeleteFaq(ctx workflow.Context, input *kendra.DeleteFaqInput) (*kendra.DeleteFaqOutput, error)
-	DeleteFaqAsync(ctx workflow.Context, input *kendra.DeleteFaqInput) *KendraDeleteFaqResult
+	DeleteFaqAsync(ctx workflow.Context, input *kendra.DeleteFaqInput) *KendraDeleteFaqFuture
 
 	DeleteIndex(ctx workflow.Context, input *kendra.DeleteIndexInput) (*kendra.DeleteIndexOutput, error)
-	DeleteIndexAsync(ctx workflow.Context, input *kendra.DeleteIndexInput) *KendraDeleteIndexResult
+	DeleteIndexAsync(ctx workflow.Context, input *kendra.DeleteIndexInput) *KendraDeleteIndexFuture
 
 	DescribeDataSource(ctx workflow.Context, input *kendra.DescribeDataSourceInput) (*kendra.DescribeDataSourceOutput, error)
-	DescribeDataSourceAsync(ctx workflow.Context, input *kendra.DescribeDataSourceInput) *KendraDescribeDataSourceResult
+	DescribeDataSourceAsync(ctx workflow.Context, input *kendra.DescribeDataSourceInput) *KendraDescribeDataSourceFuture
 
 	DescribeFaq(ctx workflow.Context, input *kendra.DescribeFaqInput) (*kendra.DescribeFaqOutput, error)
-	DescribeFaqAsync(ctx workflow.Context, input *kendra.DescribeFaqInput) *KendraDescribeFaqResult
+	DescribeFaqAsync(ctx workflow.Context, input *kendra.DescribeFaqInput) *KendraDescribeFaqFuture
 
 	DescribeIndex(ctx workflow.Context, input *kendra.DescribeIndexInput) (*kendra.DescribeIndexOutput, error)
-	DescribeIndexAsync(ctx workflow.Context, input *kendra.DescribeIndexInput) *KendraDescribeIndexResult
+	DescribeIndexAsync(ctx workflow.Context, input *kendra.DescribeIndexInput) *KendraDescribeIndexFuture
 
 	ListDataSourceSyncJobs(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) (*kendra.ListDataSourceSyncJobsOutput, error)
-	ListDataSourceSyncJobsAsync(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) *KendraListDataSourceSyncJobsResult
+	ListDataSourceSyncJobsAsync(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) *KendraListDataSourceSyncJobsFuture
 
 	ListDataSources(ctx workflow.Context, input *kendra.ListDataSourcesInput) (*kendra.ListDataSourcesOutput, error)
-	ListDataSourcesAsync(ctx workflow.Context, input *kendra.ListDataSourcesInput) *KendraListDataSourcesResult
+	ListDataSourcesAsync(ctx workflow.Context, input *kendra.ListDataSourcesInput) *KendraListDataSourcesFuture
 
 	ListFaqs(ctx workflow.Context, input *kendra.ListFaqsInput) (*kendra.ListFaqsOutput, error)
-	ListFaqsAsync(ctx workflow.Context, input *kendra.ListFaqsInput) *KendraListFaqsResult
+	ListFaqsAsync(ctx workflow.Context, input *kendra.ListFaqsInput) *KendraListFaqsFuture
 
 	ListIndices(ctx workflow.Context, input *kendra.ListIndicesInput) (*kendra.ListIndicesOutput, error)
-	ListIndicesAsync(ctx workflow.Context, input *kendra.ListIndicesInput) *KendraListIndicesResult
+	ListIndicesAsync(ctx workflow.Context, input *kendra.ListIndicesInput) *KendraListIndicesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *kendra.ListTagsForResourceInput) (*kendra.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *kendra.ListTagsForResourceInput) *KendraListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *kendra.ListTagsForResourceInput) *KendraListTagsForResourceFuture
 
 	Query(ctx workflow.Context, input *kendra.QueryInput) (*kendra.QueryOutput, error)
-	QueryAsync(ctx workflow.Context, input *kendra.QueryInput) *KendraQueryResult
+	QueryAsync(ctx workflow.Context, input *kendra.QueryInput) *KendraQueryFuture
 
 	StartDataSourceSyncJob(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) (*kendra.StartDataSourceSyncJobOutput, error)
-	StartDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) *KendraStartDataSourceSyncJobResult
+	StartDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) *KendraStartDataSourceSyncJobFuture
 
 	StopDataSourceSyncJob(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) (*kendra.StopDataSourceSyncJobOutput, error)
-	StopDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) *KendraStopDataSourceSyncJobResult
+	StopDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) *KendraStopDataSourceSyncJobFuture
 
 	SubmitFeedback(ctx workflow.Context, input *kendra.SubmitFeedbackInput) (*kendra.SubmitFeedbackOutput, error)
-	SubmitFeedbackAsync(ctx workflow.Context, input *kendra.SubmitFeedbackInput) *KendraSubmitFeedbackResult
+	SubmitFeedbackAsync(ctx workflow.Context, input *kendra.SubmitFeedbackInput) *KendraSubmitFeedbackFuture
 
 	TagResource(ctx workflow.Context, input *kendra.TagResourceInput) (*kendra.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *kendra.TagResourceInput) *KendraTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *kendra.TagResourceInput) *KendraTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *kendra.UntagResourceInput) (*kendra.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *kendra.UntagResourceInput) *KendraUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *kendra.UntagResourceInput) *KendraUntagResourceFuture
 
 	UpdateDataSource(ctx workflow.Context, input *kendra.UpdateDataSourceInput) (*kendra.UpdateDataSourceOutput, error)
-	UpdateDataSourceAsync(ctx workflow.Context, input *kendra.UpdateDataSourceInput) *KendraUpdateDataSourceResult
+	UpdateDataSourceAsync(ctx workflow.Context, input *kendra.UpdateDataSourceInput) *KendraUpdateDataSourceFuture
 
 	UpdateIndex(ctx workflow.Context, input *kendra.UpdateIndexInput) (*kendra.UpdateIndexOutput, error)
-	UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexResult
+	UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexFuture
 }
 
 type KendraStub struct{}
@@ -89,243 +89,267 @@ func NewKendraStub() KendraClient {
 	return &KendraStub{}
 }
 
-type KendraBatchDeleteDocumentResult struct {
-	Result workflow.Future
+type KendraBatchDeleteDocumentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraBatchDeleteDocumentResult) Get(ctx workflow.Context) (*kendra.BatchDeleteDocumentOutput, error) {
+func (r *KendraBatchDeleteDocumentFuture) Get(ctx workflow.Context) (*kendra.BatchDeleteDocumentOutput, error) {
 	var output kendra.BatchDeleteDocumentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraBatchPutDocumentResult struct {
-	Result workflow.Future
+type KendraBatchPutDocumentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraBatchPutDocumentResult) Get(ctx workflow.Context) (*kendra.BatchPutDocumentOutput, error) {
+func (r *KendraBatchPutDocumentFuture) Get(ctx workflow.Context) (*kendra.BatchPutDocumentOutput, error) {
 	var output kendra.BatchPutDocumentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraCreateDataSourceResult struct {
-	Result workflow.Future
+type KendraCreateDataSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraCreateDataSourceResult) Get(ctx workflow.Context) (*kendra.CreateDataSourceOutput, error) {
+func (r *KendraCreateDataSourceFuture) Get(ctx workflow.Context) (*kendra.CreateDataSourceOutput, error) {
 	var output kendra.CreateDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraCreateFaqResult struct {
-	Result workflow.Future
+type KendraCreateFaqFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraCreateFaqResult) Get(ctx workflow.Context) (*kendra.CreateFaqOutput, error) {
+func (r *KendraCreateFaqFuture) Get(ctx workflow.Context) (*kendra.CreateFaqOutput, error) {
 	var output kendra.CreateFaqOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraCreateIndexResult struct {
-	Result workflow.Future
+type KendraCreateIndexFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraCreateIndexResult) Get(ctx workflow.Context) (*kendra.CreateIndexOutput, error) {
+func (r *KendraCreateIndexFuture) Get(ctx workflow.Context) (*kendra.CreateIndexOutput, error) {
 	var output kendra.CreateIndexOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraDeleteDataSourceResult struct {
-	Result workflow.Future
+type KendraDeleteDataSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraDeleteDataSourceResult) Get(ctx workflow.Context) (*kendra.DeleteDataSourceOutput, error) {
+func (r *KendraDeleteDataSourceFuture) Get(ctx workflow.Context) (*kendra.DeleteDataSourceOutput, error) {
 	var output kendra.DeleteDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraDeleteFaqResult struct {
-	Result workflow.Future
+type KendraDeleteFaqFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraDeleteFaqResult) Get(ctx workflow.Context) (*kendra.DeleteFaqOutput, error) {
+func (r *KendraDeleteFaqFuture) Get(ctx workflow.Context) (*kendra.DeleteFaqOutput, error) {
 	var output kendra.DeleteFaqOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraDeleteIndexResult struct {
-	Result workflow.Future
+type KendraDeleteIndexFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraDeleteIndexResult) Get(ctx workflow.Context) (*kendra.DeleteIndexOutput, error) {
+func (r *KendraDeleteIndexFuture) Get(ctx workflow.Context) (*kendra.DeleteIndexOutput, error) {
 	var output kendra.DeleteIndexOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraDescribeDataSourceResult struct {
-	Result workflow.Future
+type KendraDescribeDataSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraDescribeDataSourceResult) Get(ctx workflow.Context) (*kendra.DescribeDataSourceOutput, error) {
+func (r *KendraDescribeDataSourceFuture) Get(ctx workflow.Context) (*kendra.DescribeDataSourceOutput, error) {
 	var output kendra.DescribeDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraDescribeFaqResult struct {
-	Result workflow.Future
+type KendraDescribeFaqFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraDescribeFaqResult) Get(ctx workflow.Context) (*kendra.DescribeFaqOutput, error) {
+func (r *KendraDescribeFaqFuture) Get(ctx workflow.Context) (*kendra.DescribeFaqOutput, error) {
 	var output kendra.DescribeFaqOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraDescribeIndexResult struct {
-	Result workflow.Future
+type KendraDescribeIndexFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraDescribeIndexResult) Get(ctx workflow.Context) (*kendra.DescribeIndexOutput, error) {
+func (r *KendraDescribeIndexFuture) Get(ctx workflow.Context) (*kendra.DescribeIndexOutput, error) {
 	var output kendra.DescribeIndexOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraListDataSourceSyncJobsResult struct {
-	Result workflow.Future
+type KendraListDataSourceSyncJobsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraListDataSourceSyncJobsResult) Get(ctx workflow.Context) (*kendra.ListDataSourceSyncJobsOutput, error) {
+func (r *KendraListDataSourceSyncJobsFuture) Get(ctx workflow.Context) (*kendra.ListDataSourceSyncJobsOutput, error) {
 	var output kendra.ListDataSourceSyncJobsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraListDataSourcesResult struct {
-	Result workflow.Future
+type KendraListDataSourcesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraListDataSourcesResult) Get(ctx workflow.Context) (*kendra.ListDataSourcesOutput, error) {
+func (r *KendraListDataSourcesFuture) Get(ctx workflow.Context) (*kendra.ListDataSourcesOutput, error) {
 	var output kendra.ListDataSourcesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraListFaqsResult struct {
-	Result workflow.Future
+type KendraListFaqsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraListFaqsResult) Get(ctx workflow.Context) (*kendra.ListFaqsOutput, error) {
+func (r *KendraListFaqsFuture) Get(ctx workflow.Context) (*kendra.ListFaqsOutput, error) {
 	var output kendra.ListFaqsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraListIndicesResult struct {
-	Result workflow.Future
+type KendraListIndicesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraListIndicesResult) Get(ctx workflow.Context) (*kendra.ListIndicesOutput, error) {
+func (r *KendraListIndicesFuture) Get(ctx workflow.Context) (*kendra.ListIndicesOutput, error) {
 	var output kendra.ListIndicesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraListTagsForResourceResult struct {
-	Result workflow.Future
+type KendraListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraListTagsForResourceResult) Get(ctx workflow.Context) (*kendra.ListTagsForResourceOutput, error) {
+func (r *KendraListTagsForResourceFuture) Get(ctx workflow.Context) (*kendra.ListTagsForResourceOutput, error) {
 	var output kendra.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraQueryResult struct {
-	Result workflow.Future
+type KendraQueryFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraQueryResult) Get(ctx workflow.Context) (*kendra.QueryOutput, error) {
+func (r *KendraQueryFuture) Get(ctx workflow.Context) (*kendra.QueryOutput, error) {
 	var output kendra.QueryOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraStartDataSourceSyncJobResult struct {
-	Result workflow.Future
+type KendraStartDataSourceSyncJobFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraStartDataSourceSyncJobResult) Get(ctx workflow.Context) (*kendra.StartDataSourceSyncJobOutput, error) {
+func (r *KendraStartDataSourceSyncJobFuture) Get(ctx workflow.Context) (*kendra.StartDataSourceSyncJobOutput, error) {
 	var output kendra.StartDataSourceSyncJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraStopDataSourceSyncJobResult struct {
-	Result workflow.Future
+type KendraStopDataSourceSyncJobFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraStopDataSourceSyncJobResult) Get(ctx workflow.Context) (*kendra.StopDataSourceSyncJobOutput, error) {
+func (r *KendraStopDataSourceSyncJobFuture) Get(ctx workflow.Context) (*kendra.StopDataSourceSyncJobOutput, error) {
 	var output kendra.StopDataSourceSyncJobOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraSubmitFeedbackResult struct {
-	Result workflow.Future
+type KendraSubmitFeedbackFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraSubmitFeedbackResult) Get(ctx workflow.Context) (*kendra.SubmitFeedbackOutput, error) {
+func (r *KendraSubmitFeedbackFuture) Get(ctx workflow.Context) (*kendra.SubmitFeedbackOutput, error) {
 	var output kendra.SubmitFeedbackOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraTagResourceResult struct {
-	Result workflow.Future
+type KendraTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraTagResourceResult) Get(ctx workflow.Context) (*kendra.TagResourceOutput, error) {
+func (r *KendraTagResourceFuture) Get(ctx workflow.Context) (*kendra.TagResourceOutput, error) {
 	var output kendra.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraUntagResourceResult struct {
-	Result workflow.Future
+type KendraUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraUntagResourceResult) Get(ctx workflow.Context) (*kendra.UntagResourceOutput, error) {
+func (r *KendraUntagResourceFuture) Get(ctx workflow.Context) (*kendra.UntagResourceOutput, error) {
 	var output kendra.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraUpdateDataSourceResult struct {
-	Result workflow.Future
+type KendraUpdateDataSourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraUpdateDataSourceResult) Get(ctx workflow.Context) (*kendra.UpdateDataSourceOutput, error) {
+func (r *KendraUpdateDataSourceFuture) Get(ctx workflow.Context) (*kendra.UpdateDataSourceOutput, error) {
 	var output kendra.UpdateDataSourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KendraUpdateIndexResult struct {
-	Result workflow.Future
+type KendraUpdateIndexFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KendraUpdateIndexResult) Get(ctx workflow.Context) (*kendra.UpdateIndexOutput, error) {
+func (r *KendraUpdateIndexFuture) Get(ctx workflow.Context) (*kendra.UpdateIndexOutput, error) {
 	var output kendra.UpdateIndexOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -335,9 +359,9 @@ func (a *KendraStub) BatchDeleteDocument(ctx workflow.Context, input *kendra.Bat
 	return &output, err
 }
 
-func (a *KendraStub) BatchDeleteDocumentAsync(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) *KendraBatchDeleteDocumentResult {
+func (a *KendraStub) BatchDeleteDocumentAsync(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) *KendraBatchDeleteDocumentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.BatchDeleteDocument", input)
-	return &KendraBatchDeleteDocumentResult{Result: future}
+	return &KendraBatchDeleteDocumentFuture{Future: future}
 }
 
 func (a *KendraStub) BatchPutDocument(ctx workflow.Context, input *kendra.BatchPutDocumentInput) (*kendra.BatchPutDocumentOutput, error) {
@@ -346,9 +370,9 @@ func (a *KendraStub) BatchPutDocument(ctx workflow.Context, input *kendra.BatchP
 	return &output, err
 }
 
-func (a *KendraStub) BatchPutDocumentAsync(ctx workflow.Context, input *kendra.BatchPutDocumentInput) *KendraBatchPutDocumentResult {
+func (a *KendraStub) BatchPutDocumentAsync(ctx workflow.Context, input *kendra.BatchPutDocumentInput) *KendraBatchPutDocumentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.BatchPutDocument", input)
-	return &KendraBatchPutDocumentResult{Result: future}
+	return &KendraBatchPutDocumentFuture{Future: future}
 }
 
 func (a *KendraStub) CreateDataSource(ctx workflow.Context, input *kendra.CreateDataSourceInput) (*kendra.CreateDataSourceOutput, error) {
@@ -357,9 +381,9 @@ func (a *KendraStub) CreateDataSource(ctx workflow.Context, input *kendra.Create
 	return &output, err
 }
 
-func (a *KendraStub) CreateDataSourceAsync(ctx workflow.Context, input *kendra.CreateDataSourceInput) *KendraCreateDataSourceResult {
+func (a *KendraStub) CreateDataSourceAsync(ctx workflow.Context, input *kendra.CreateDataSourceInput) *KendraCreateDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.CreateDataSource", input)
-	return &KendraCreateDataSourceResult{Result: future}
+	return &KendraCreateDataSourceFuture{Future: future}
 }
 
 func (a *KendraStub) CreateFaq(ctx workflow.Context, input *kendra.CreateFaqInput) (*kendra.CreateFaqOutput, error) {
@@ -368,9 +392,9 @@ func (a *KendraStub) CreateFaq(ctx workflow.Context, input *kendra.CreateFaqInpu
 	return &output, err
 }
 
-func (a *KendraStub) CreateFaqAsync(ctx workflow.Context, input *kendra.CreateFaqInput) *KendraCreateFaqResult {
+func (a *KendraStub) CreateFaqAsync(ctx workflow.Context, input *kendra.CreateFaqInput) *KendraCreateFaqFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.CreateFaq", input)
-	return &KendraCreateFaqResult{Result: future}
+	return &KendraCreateFaqFuture{Future: future}
 }
 
 func (a *KendraStub) CreateIndex(ctx workflow.Context, input *kendra.CreateIndexInput) (*kendra.CreateIndexOutput, error) {
@@ -379,9 +403,9 @@ func (a *KendraStub) CreateIndex(ctx workflow.Context, input *kendra.CreateIndex
 	return &output, err
 }
 
-func (a *KendraStub) CreateIndexAsync(ctx workflow.Context, input *kendra.CreateIndexInput) *KendraCreateIndexResult {
+func (a *KendraStub) CreateIndexAsync(ctx workflow.Context, input *kendra.CreateIndexInput) *KendraCreateIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.CreateIndex", input)
-	return &KendraCreateIndexResult{Result: future}
+	return &KendraCreateIndexFuture{Future: future}
 }
 
 func (a *KendraStub) DeleteDataSource(ctx workflow.Context, input *kendra.DeleteDataSourceInput) (*kendra.DeleteDataSourceOutput, error) {
@@ -390,9 +414,9 @@ func (a *KendraStub) DeleteDataSource(ctx workflow.Context, input *kendra.Delete
 	return &output, err
 }
 
-func (a *KendraStub) DeleteDataSourceAsync(ctx workflow.Context, input *kendra.DeleteDataSourceInput) *KendraDeleteDataSourceResult {
+func (a *KendraStub) DeleteDataSourceAsync(ctx workflow.Context, input *kendra.DeleteDataSourceInput) *KendraDeleteDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteDataSource", input)
-	return &KendraDeleteDataSourceResult{Result: future}
+	return &KendraDeleteDataSourceFuture{Future: future}
 }
 
 func (a *KendraStub) DeleteFaq(ctx workflow.Context, input *kendra.DeleteFaqInput) (*kendra.DeleteFaqOutput, error) {
@@ -401,9 +425,9 @@ func (a *KendraStub) DeleteFaq(ctx workflow.Context, input *kendra.DeleteFaqInpu
 	return &output, err
 }
 
-func (a *KendraStub) DeleteFaqAsync(ctx workflow.Context, input *kendra.DeleteFaqInput) *KendraDeleteFaqResult {
+func (a *KendraStub) DeleteFaqAsync(ctx workflow.Context, input *kendra.DeleteFaqInput) *KendraDeleteFaqFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteFaq", input)
-	return &KendraDeleteFaqResult{Result: future}
+	return &KendraDeleteFaqFuture{Future: future}
 }
 
 func (a *KendraStub) DeleteIndex(ctx workflow.Context, input *kendra.DeleteIndexInput) (*kendra.DeleteIndexOutput, error) {
@@ -412,9 +436,9 @@ func (a *KendraStub) DeleteIndex(ctx workflow.Context, input *kendra.DeleteIndex
 	return &output, err
 }
 
-func (a *KendraStub) DeleteIndexAsync(ctx workflow.Context, input *kendra.DeleteIndexInput) *KendraDeleteIndexResult {
+func (a *KendraStub) DeleteIndexAsync(ctx workflow.Context, input *kendra.DeleteIndexInput) *KendraDeleteIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteIndex", input)
-	return &KendraDeleteIndexResult{Result: future}
+	return &KendraDeleteIndexFuture{Future: future}
 }
 
 func (a *KendraStub) DescribeDataSource(ctx workflow.Context, input *kendra.DescribeDataSourceInput) (*kendra.DescribeDataSourceOutput, error) {
@@ -423,9 +447,9 @@ func (a *KendraStub) DescribeDataSource(ctx workflow.Context, input *kendra.Desc
 	return &output, err
 }
 
-func (a *KendraStub) DescribeDataSourceAsync(ctx workflow.Context, input *kendra.DescribeDataSourceInput) *KendraDescribeDataSourceResult {
+func (a *KendraStub) DescribeDataSourceAsync(ctx workflow.Context, input *kendra.DescribeDataSourceInput) *KendraDescribeDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeDataSource", input)
-	return &KendraDescribeDataSourceResult{Result: future}
+	return &KendraDescribeDataSourceFuture{Future: future}
 }
 
 func (a *KendraStub) DescribeFaq(ctx workflow.Context, input *kendra.DescribeFaqInput) (*kendra.DescribeFaqOutput, error) {
@@ -434,9 +458,9 @@ func (a *KendraStub) DescribeFaq(ctx workflow.Context, input *kendra.DescribeFaq
 	return &output, err
 }
 
-func (a *KendraStub) DescribeFaqAsync(ctx workflow.Context, input *kendra.DescribeFaqInput) *KendraDescribeFaqResult {
+func (a *KendraStub) DescribeFaqAsync(ctx workflow.Context, input *kendra.DescribeFaqInput) *KendraDescribeFaqFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeFaq", input)
-	return &KendraDescribeFaqResult{Result: future}
+	return &KendraDescribeFaqFuture{Future: future}
 }
 
 func (a *KendraStub) DescribeIndex(ctx workflow.Context, input *kendra.DescribeIndexInput) (*kendra.DescribeIndexOutput, error) {
@@ -445,9 +469,9 @@ func (a *KendraStub) DescribeIndex(ctx workflow.Context, input *kendra.DescribeI
 	return &output, err
 }
 
-func (a *KendraStub) DescribeIndexAsync(ctx workflow.Context, input *kendra.DescribeIndexInput) *KendraDescribeIndexResult {
+func (a *KendraStub) DescribeIndexAsync(ctx workflow.Context, input *kendra.DescribeIndexInput) *KendraDescribeIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeIndex", input)
-	return &KendraDescribeIndexResult{Result: future}
+	return &KendraDescribeIndexFuture{Future: future}
 }
 
 func (a *KendraStub) ListDataSourceSyncJobs(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) (*kendra.ListDataSourceSyncJobsOutput, error) {
@@ -456,9 +480,9 @@ func (a *KendraStub) ListDataSourceSyncJobs(ctx workflow.Context, input *kendra.
 	return &output, err
 }
 
-func (a *KendraStub) ListDataSourceSyncJobsAsync(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) *KendraListDataSourceSyncJobsResult {
+func (a *KendraStub) ListDataSourceSyncJobsAsync(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) *KendraListDataSourceSyncJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListDataSourceSyncJobs", input)
-	return &KendraListDataSourceSyncJobsResult{Result: future}
+	return &KendraListDataSourceSyncJobsFuture{Future: future}
 }
 
 func (a *KendraStub) ListDataSources(ctx workflow.Context, input *kendra.ListDataSourcesInput) (*kendra.ListDataSourcesOutput, error) {
@@ -467,9 +491,9 @@ func (a *KendraStub) ListDataSources(ctx workflow.Context, input *kendra.ListDat
 	return &output, err
 }
 
-func (a *KendraStub) ListDataSourcesAsync(ctx workflow.Context, input *kendra.ListDataSourcesInput) *KendraListDataSourcesResult {
+func (a *KendraStub) ListDataSourcesAsync(ctx workflow.Context, input *kendra.ListDataSourcesInput) *KendraListDataSourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListDataSources", input)
-	return &KendraListDataSourcesResult{Result: future}
+	return &KendraListDataSourcesFuture{Future: future}
 }
 
 func (a *KendraStub) ListFaqs(ctx workflow.Context, input *kendra.ListFaqsInput) (*kendra.ListFaqsOutput, error) {
@@ -478,9 +502,9 @@ func (a *KendraStub) ListFaqs(ctx workflow.Context, input *kendra.ListFaqsInput)
 	return &output, err
 }
 
-func (a *KendraStub) ListFaqsAsync(ctx workflow.Context, input *kendra.ListFaqsInput) *KendraListFaqsResult {
+func (a *KendraStub) ListFaqsAsync(ctx workflow.Context, input *kendra.ListFaqsInput) *KendraListFaqsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListFaqs", input)
-	return &KendraListFaqsResult{Result: future}
+	return &KendraListFaqsFuture{Future: future}
 }
 
 func (a *KendraStub) ListIndices(ctx workflow.Context, input *kendra.ListIndicesInput) (*kendra.ListIndicesOutput, error) {
@@ -489,9 +513,9 @@ func (a *KendraStub) ListIndices(ctx workflow.Context, input *kendra.ListIndices
 	return &output, err
 }
 
-func (a *KendraStub) ListIndicesAsync(ctx workflow.Context, input *kendra.ListIndicesInput) *KendraListIndicesResult {
+func (a *KendraStub) ListIndicesAsync(ctx workflow.Context, input *kendra.ListIndicesInput) *KendraListIndicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListIndices", input)
-	return &KendraListIndicesResult{Result: future}
+	return &KendraListIndicesFuture{Future: future}
 }
 
 func (a *KendraStub) ListTagsForResource(ctx workflow.Context, input *kendra.ListTagsForResourceInput) (*kendra.ListTagsForResourceOutput, error) {
@@ -500,9 +524,9 @@ func (a *KendraStub) ListTagsForResource(ctx workflow.Context, input *kendra.Lis
 	return &output, err
 }
 
-func (a *KendraStub) ListTagsForResourceAsync(ctx workflow.Context, input *kendra.ListTagsForResourceInput) *KendraListTagsForResourceResult {
+func (a *KendraStub) ListTagsForResourceAsync(ctx workflow.Context, input *kendra.ListTagsForResourceInput) *KendraListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListTagsForResource", input)
-	return &KendraListTagsForResourceResult{Result: future}
+	return &KendraListTagsForResourceFuture{Future: future}
 }
 
 func (a *KendraStub) Query(ctx workflow.Context, input *kendra.QueryInput) (*kendra.QueryOutput, error) {
@@ -511,9 +535,9 @@ func (a *KendraStub) Query(ctx workflow.Context, input *kendra.QueryInput) (*ken
 	return &output, err
 }
 
-func (a *KendraStub) QueryAsync(ctx workflow.Context, input *kendra.QueryInput) *KendraQueryResult {
+func (a *KendraStub) QueryAsync(ctx workflow.Context, input *kendra.QueryInput) *KendraQueryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.Query", input)
-	return &KendraQueryResult{Result: future}
+	return &KendraQueryFuture{Future: future}
 }
 
 func (a *KendraStub) StartDataSourceSyncJob(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) (*kendra.StartDataSourceSyncJobOutput, error) {
@@ -522,9 +546,9 @@ func (a *KendraStub) StartDataSourceSyncJob(ctx workflow.Context, input *kendra.
 	return &output, err
 }
 
-func (a *KendraStub) StartDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) *KendraStartDataSourceSyncJobResult {
+func (a *KendraStub) StartDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) *KendraStartDataSourceSyncJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.StartDataSourceSyncJob", input)
-	return &KendraStartDataSourceSyncJobResult{Result: future}
+	return &KendraStartDataSourceSyncJobFuture{Future: future}
 }
 
 func (a *KendraStub) StopDataSourceSyncJob(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) (*kendra.StopDataSourceSyncJobOutput, error) {
@@ -533,9 +557,9 @@ func (a *KendraStub) StopDataSourceSyncJob(ctx workflow.Context, input *kendra.S
 	return &output, err
 }
 
-func (a *KendraStub) StopDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) *KendraStopDataSourceSyncJobResult {
+func (a *KendraStub) StopDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) *KendraStopDataSourceSyncJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.StopDataSourceSyncJob", input)
-	return &KendraStopDataSourceSyncJobResult{Result: future}
+	return &KendraStopDataSourceSyncJobFuture{Future: future}
 }
 
 func (a *KendraStub) SubmitFeedback(ctx workflow.Context, input *kendra.SubmitFeedbackInput) (*kendra.SubmitFeedbackOutput, error) {
@@ -544,9 +568,9 @@ func (a *KendraStub) SubmitFeedback(ctx workflow.Context, input *kendra.SubmitFe
 	return &output, err
 }
 
-func (a *KendraStub) SubmitFeedbackAsync(ctx workflow.Context, input *kendra.SubmitFeedbackInput) *KendraSubmitFeedbackResult {
+func (a *KendraStub) SubmitFeedbackAsync(ctx workflow.Context, input *kendra.SubmitFeedbackInput) *KendraSubmitFeedbackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.SubmitFeedback", input)
-	return &KendraSubmitFeedbackResult{Result: future}
+	return &KendraSubmitFeedbackFuture{Future: future}
 }
 
 func (a *KendraStub) TagResource(ctx workflow.Context, input *kendra.TagResourceInput) (*kendra.TagResourceOutput, error) {
@@ -555,9 +579,9 @@ func (a *KendraStub) TagResource(ctx workflow.Context, input *kendra.TagResource
 	return &output, err
 }
 
-func (a *KendraStub) TagResourceAsync(ctx workflow.Context, input *kendra.TagResourceInput) *KendraTagResourceResult {
+func (a *KendraStub) TagResourceAsync(ctx workflow.Context, input *kendra.TagResourceInput) *KendraTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.TagResource", input)
-	return &KendraTagResourceResult{Result: future}
+	return &KendraTagResourceFuture{Future: future}
 }
 
 func (a *KendraStub) UntagResource(ctx workflow.Context, input *kendra.UntagResourceInput) (*kendra.UntagResourceOutput, error) {
@@ -566,9 +590,9 @@ func (a *KendraStub) UntagResource(ctx workflow.Context, input *kendra.UntagReso
 	return &output, err
 }
 
-func (a *KendraStub) UntagResourceAsync(ctx workflow.Context, input *kendra.UntagResourceInput) *KendraUntagResourceResult {
+func (a *KendraStub) UntagResourceAsync(ctx workflow.Context, input *kendra.UntagResourceInput) *KendraUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.UntagResource", input)
-	return &KendraUntagResourceResult{Result: future}
+	return &KendraUntagResourceFuture{Future: future}
 }
 
 func (a *KendraStub) UpdateDataSource(ctx workflow.Context, input *kendra.UpdateDataSourceInput) (*kendra.UpdateDataSourceOutput, error) {
@@ -577,9 +601,9 @@ func (a *KendraStub) UpdateDataSource(ctx workflow.Context, input *kendra.Update
 	return &output, err
 }
 
-func (a *KendraStub) UpdateDataSourceAsync(ctx workflow.Context, input *kendra.UpdateDataSourceInput) *KendraUpdateDataSourceResult {
+func (a *KendraStub) UpdateDataSourceAsync(ctx workflow.Context, input *kendra.UpdateDataSourceInput) *KendraUpdateDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.UpdateDataSource", input)
-	return &KendraUpdateDataSourceResult{Result: future}
+	return &KendraUpdateDataSourceFuture{Future: future}
 }
 
 func (a *KendraStub) UpdateIndex(ctx workflow.Context, input *kendra.UpdateIndexInput) (*kendra.UpdateIndexOutput, error) {
@@ -588,7 +612,7 @@ func (a *KendraStub) UpdateIndex(ctx workflow.Context, input *kendra.UpdateIndex
 	return &output, err
 }
 
-func (a *KendraStub) UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexResult {
+func (a *KendraStub) UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kendra.UpdateIndex", input)
-	return &KendraUpdateIndexResult{Result: future}
+	return &KendraUpdateIndexFuture{Future: future}
 }

@@ -11,133 +11,133 @@ import (
 
 type CodeBuildClient interface {
 	BatchDeleteBuilds(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) (*codebuild.BatchDeleteBuildsOutput, error)
-	BatchDeleteBuildsAsync(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) *CodebuildBatchDeleteBuildsResult
+	BatchDeleteBuildsAsync(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) *CodeBuildBatchDeleteBuildsFuture
 
 	BatchGetBuildBatches(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) (*codebuild.BatchGetBuildBatchesOutput, error)
-	BatchGetBuildBatchesAsync(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) *CodebuildBatchGetBuildBatchesResult
+	BatchGetBuildBatchesAsync(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) *CodeBuildBatchGetBuildBatchesFuture
 
 	BatchGetBuilds(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) (*codebuild.BatchGetBuildsOutput, error)
-	BatchGetBuildsAsync(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) *CodebuildBatchGetBuildsResult
+	BatchGetBuildsAsync(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) *CodeBuildBatchGetBuildsFuture
 
 	BatchGetProjects(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) (*codebuild.BatchGetProjectsOutput, error)
-	BatchGetProjectsAsync(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) *CodebuildBatchGetProjectsResult
+	BatchGetProjectsAsync(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) *CodeBuildBatchGetProjectsFuture
 
 	BatchGetReportGroups(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) (*codebuild.BatchGetReportGroupsOutput, error)
-	BatchGetReportGroupsAsync(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) *CodebuildBatchGetReportGroupsResult
+	BatchGetReportGroupsAsync(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) *CodeBuildBatchGetReportGroupsFuture
 
 	BatchGetReports(ctx workflow.Context, input *codebuild.BatchGetReportsInput) (*codebuild.BatchGetReportsOutput, error)
-	BatchGetReportsAsync(ctx workflow.Context, input *codebuild.BatchGetReportsInput) *CodebuildBatchGetReportsResult
+	BatchGetReportsAsync(ctx workflow.Context, input *codebuild.BatchGetReportsInput) *CodeBuildBatchGetReportsFuture
 
 	CreateProject(ctx workflow.Context, input *codebuild.CreateProjectInput) (*codebuild.CreateProjectOutput, error)
-	CreateProjectAsync(ctx workflow.Context, input *codebuild.CreateProjectInput) *CodebuildCreateProjectResult
+	CreateProjectAsync(ctx workflow.Context, input *codebuild.CreateProjectInput) *CodeBuildCreateProjectFuture
 
 	CreateReportGroup(ctx workflow.Context, input *codebuild.CreateReportGroupInput) (*codebuild.CreateReportGroupOutput, error)
-	CreateReportGroupAsync(ctx workflow.Context, input *codebuild.CreateReportGroupInput) *CodebuildCreateReportGroupResult
+	CreateReportGroupAsync(ctx workflow.Context, input *codebuild.CreateReportGroupInput) *CodeBuildCreateReportGroupFuture
 
 	CreateWebhook(ctx workflow.Context, input *codebuild.CreateWebhookInput) (*codebuild.CreateWebhookOutput, error)
-	CreateWebhookAsync(ctx workflow.Context, input *codebuild.CreateWebhookInput) *CodebuildCreateWebhookResult
+	CreateWebhookAsync(ctx workflow.Context, input *codebuild.CreateWebhookInput) *CodeBuildCreateWebhookFuture
 
 	DeleteBuildBatch(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) (*codebuild.DeleteBuildBatchOutput, error)
-	DeleteBuildBatchAsync(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) *CodebuildDeleteBuildBatchResult
+	DeleteBuildBatchAsync(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) *CodeBuildDeleteBuildBatchFuture
 
 	DeleteProject(ctx workflow.Context, input *codebuild.DeleteProjectInput) (*codebuild.DeleteProjectOutput, error)
-	DeleteProjectAsync(ctx workflow.Context, input *codebuild.DeleteProjectInput) *CodebuildDeleteProjectResult
+	DeleteProjectAsync(ctx workflow.Context, input *codebuild.DeleteProjectInput) *CodeBuildDeleteProjectFuture
 
 	DeleteReport(ctx workflow.Context, input *codebuild.DeleteReportInput) (*codebuild.DeleteReportOutput, error)
-	DeleteReportAsync(ctx workflow.Context, input *codebuild.DeleteReportInput) *CodebuildDeleteReportResult
+	DeleteReportAsync(ctx workflow.Context, input *codebuild.DeleteReportInput) *CodeBuildDeleteReportFuture
 
 	DeleteReportGroup(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) (*codebuild.DeleteReportGroupOutput, error)
-	DeleteReportGroupAsync(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) *CodebuildDeleteReportGroupResult
+	DeleteReportGroupAsync(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) *CodeBuildDeleteReportGroupFuture
 
 	DeleteResourcePolicy(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) (*codebuild.DeleteResourcePolicyOutput, error)
-	DeleteResourcePolicyAsync(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) *CodebuildDeleteResourcePolicyResult
+	DeleteResourcePolicyAsync(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) *CodeBuildDeleteResourcePolicyFuture
 
 	DeleteSourceCredentials(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) (*codebuild.DeleteSourceCredentialsOutput, error)
-	DeleteSourceCredentialsAsync(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) *CodebuildDeleteSourceCredentialsResult
+	DeleteSourceCredentialsAsync(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) *CodeBuildDeleteSourceCredentialsFuture
 
 	DeleteWebhook(ctx workflow.Context, input *codebuild.DeleteWebhookInput) (*codebuild.DeleteWebhookOutput, error)
-	DeleteWebhookAsync(ctx workflow.Context, input *codebuild.DeleteWebhookInput) *CodebuildDeleteWebhookResult
+	DeleteWebhookAsync(ctx workflow.Context, input *codebuild.DeleteWebhookInput) *CodeBuildDeleteWebhookFuture
 
 	DescribeCodeCoverages(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) (*codebuild.DescribeCodeCoveragesOutput, error)
-	DescribeCodeCoveragesAsync(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) *CodebuildDescribeCodeCoveragesResult
+	DescribeCodeCoveragesAsync(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) *CodeBuildDescribeCodeCoveragesFuture
 
 	DescribeTestCases(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) (*codebuild.DescribeTestCasesOutput, error)
-	DescribeTestCasesAsync(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) *CodebuildDescribeTestCasesResult
+	DescribeTestCasesAsync(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) *CodeBuildDescribeTestCasesFuture
 
 	GetResourcePolicy(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) (*codebuild.GetResourcePolicyOutput, error)
-	GetResourcePolicyAsync(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) *CodebuildGetResourcePolicyResult
+	GetResourcePolicyAsync(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) *CodeBuildGetResourcePolicyFuture
 
 	ImportSourceCredentials(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) (*codebuild.ImportSourceCredentialsOutput, error)
-	ImportSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) *CodebuildImportSourceCredentialsResult
+	ImportSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) *CodeBuildImportSourceCredentialsFuture
 
 	InvalidateProjectCache(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) (*codebuild.InvalidateProjectCacheOutput, error)
-	InvalidateProjectCacheAsync(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) *CodebuildInvalidateProjectCacheResult
+	InvalidateProjectCacheAsync(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) *CodeBuildInvalidateProjectCacheFuture
 
 	ListBuildBatches(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) (*codebuild.ListBuildBatchesOutput, error)
-	ListBuildBatchesAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) *CodebuildListBuildBatchesResult
+	ListBuildBatchesAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) *CodeBuildListBuildBatchesFuture
 
 	ListBuildBatchesForProject(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) (*codebuild.ListBuildBatchesForProjectOutput, error)
-	ListBuildBatchesForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) *CodebuildListBuildBatchesForProjectResult
+	ListBuildBatchesForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) *CodeBuildListBuildBatchesForProjectFuture
 
 	ListBuilds(ctx workflow.Context, input *codebuild.ListBuildsInput) (*codebuild.ListBuildsOutput, error)
-	ListBuildsAsync(ctx workflow.Context, input *codebuild.ListBuildsInput) *CodebuildListBuildsResult
+	ListBuildsAsync(ctx workflow.Context, input *codebuild.ListBuildsInput) *CodeBuildListBuildsFuture
 
 	ListBuildsForProject(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) (*codebuild.ListBuildsForProjectOutput, error)
-	ListBuildsForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) *CodebuildListBuildsForProjectResult
+	ListBuildsForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) *CodeBuildListBuildsForProjectFuture
 
 	ListCuratedEnvironmentImages(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) (*codebuild.ListCuratedEnvironmentImagesOutput, error)
-	ListCuratedEnvironmentImagesAsync(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) *CodebuildListCuratedEnvironmentImagesResult
+	ListCuratedEnvironmentImagesAsync(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) *CodeBuildListCuratedEnvironmentImagesFuture
 
 	ListProjects(ctx workflow.Context, input *codebuild.ListProjectsInput) (*codebuild.ListProjectsOutput, error)
-	ListProjectsAsync(ctx workflow.Context, input *codebuild.ListProjectsInput) *CodebuildListProjectsResult
+	ListProjectsAsync(ctx workflow.Context, input *codebuild.ListProjectsInput) *CodeBuildListProjectsFuture
 
 	ListReportGroups(ctx workflow.Context, input *codebuild.ListReportGroupsInput) (*codebuild.ListReportGroupsOutput, error)
-	ListReportGroupsAsync(ctx workflow.Context, input *codebuild.ListReportGroupsInput) *CodebuildListReportGroupsResult
+	ListReportGroupsAsync(ctx workflow.Context, input *codebuild.ListReportGroupsInput) *CodeBuildListReportGroupsFuture
 
 	ListReports(ctx workflow.Context, input *codebuild.ListReportsInput) (*codebuild.ListReportsOutput, error)
-	ListReportsAsync(ctx workflow.Context, input *codebuild.ListReportsInput) *CodebuildListReportsResult
+	ListReportsAsync(ctx workflow.Context, input *codebuild.ListReportsInput) *CodeBuildListReportsFuture
 
 	ListReportsForReportGroup(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) (*codebuild.ListReportsForReportGroupOutput, error)
-	ListReportsForReportGroupAsync(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) *CodebuildListReportsForReportGroupResult
+	ListReportsForReportGroupAsync(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) *CodeBuildListReportsForReportGroupFuture
 
 	ListSharedProjects(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) (*codebuild.ListSharedProjectsOutput, error)
-	ListSharedProjectsAsync(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) *CodebuildListSharedProjectsResult
+	ListSharedProjectsAsync(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) *CodeBuildListSharedProjectsFuture
 
 	ListSharedReportGroups(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) (*codebuild.ListSharedReportGroupsOutput, error)
-	ListSharedReportGroupsAsync(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) *CodebuildListSharedReportGroupsResult
+	ListSharedReportGroupsAsync(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) *CodeBuildListSharedReportGroupsFuture
 
 	ListSourceCredentials(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) (*codebuild.ListSourceCredentialsOutput, error)
-	ListSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) *CodebuildListSourceCredentialsResult
+	ListSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) *CodeBuildListSourceCredentialsFuture
 
 	PutResourcePolicy(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) (*codebuild.PutResourcePolicyOutput, error)
-	PutResourcePolicyAsync(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) *CodebuildPutResourcePolicyResult
+	PutResourcePolicyAsync(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) *CodeBuildPutResourcePolicyFuture
 
 	RetryBuild(ctx workflow.Context, input *codebuild.RetryBuildInput) (*codebuild.RetryBuildOutput, error)
-	RetryBuildAsync(ctx workflow.Context, input *codebuild.RetryBuildInput) *CodebuildRetryBuildResult
+	RetryBuildAsync(ctx workflow.Context, input *codebuild.RetryBuildInput) *CodeBuildRetryBuildFuture
 
 	RetryBuildBatch(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) (*codebuild.RetryBuildBatchOutput, error)
-	RetryBuildBatchAsync(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) *CodebuildRetryBuildBatchResult
+	RetryBuildBatchAsync(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) *CodeBuildRetryBuildBatchFuture
 
 	StartBuild(ctx workflow.Context, input *codebuild.StartBuildInput) (*codebuild.StartBuildOutput, error)
-	StartBuildAsync(ctx workflow.Context, input *codebuild.StartBuildInput) *CodebuildStartBuildResult
+	StartBuildAsync(ctx workflow.Context, input *codebuild.StartBuildInput) *CodeBuildStartBuildFuture
 
 	StartBuildBatch(ctx workflow.Context, input *codebuild.StartBuildBatchInput) (*codebuild.StartBuildBatchOutput, error)
-	StartBuildBatchAsync(ctx workflow.Context, input *codebuild.StartBuildBatchInput) *CodebuildStartBuildBatchResult
+	StartBuildBatchAsync(ctx workflow.Context, input *codebuild.StartBuildBatchInput) *CodeBuildStartBuildBatchFuture
 
 	StopBuild(ctx workflow.Context, input *codebuild.StopBuildInput) (*codebuild.StopBuildOutput, error)
-	StopBuildAsync(ctx workflow.Context, input *codebuild.StopBuildInput) *CodebuildStopBuildResult
+	StopBuildAsync(ctx workflow.Context, input *codebuild.StopBuildInput) *CodeBuildStopBuildFuture
 
 	StopBuildBatch(ctx workflow.Context, input *codebuild.StopBuildBatchInput) (*codebuild.StopBuildBatchOutput, error)
-	StopBuildBatchAsync(ctx workflow.Context, input *codebuild.StopBuildBatchInput) *CodebuildStopBuildBatchResult
+	StopBuildBatchAsync(ctx workflow.Context, input *codebuild.StopBuildBatchInput) *CodeBuildStopBuildBatchFuture
 
 	UpdateProject(ctx workflow.Context, input *codebuild.UpdateProjectInput) (*codebuild.UpdateProjectOutput, error)
-	UpdateProjectAsync(ctx workflow.Context, input *codebuild.UpdateProjectInput) *CodebuildUpdateProjectResult
+	UpdateProjectAsync(ctx workflow.Context, input *codebuild.UpdateProjectInput) *CodeBuildUpdateProjectFuture
 
 	UpdateReportGroup(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) (*codebuild.UpdateReportGroupOutput, error)
-	UpdateReportGroupAsync(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) *CodebuildUpdateReportGroupResult
+	UpdateReportGroupAsync(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) *CodeBuildUpdateReportGroupFuture
 
 	UpdateWebhook(ctx workflow.Context, input *codebuild.UpdateWebhookInput) (*codebuild.UpdateWebhookOutput, error)
-	UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *CodebuildUpdateWebhookResult
+	UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *CodeBuildUpdateWebhookFuture
 }
 
 type CodeBuildStub struct{}
@@ -146,433 +146,476 @@ func NewCodeBuildStub() CodeBuildClient {
 	return &CodeBuildStub{}
 }
 
-type CodebuildBatchDeleteBuildsResult struct {
-	Result workflow.Future
+type CodeBuildBatchDeleteBuildsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildBatchDeleteBuildsResult) Get(ctx workflow.Context) (*codebuild.BatchDeleteBuildsOutput, error) {
+func (r *CodeBuildBatchDeleteBuildsFuture) Get(ctx workflow.Context) (*codebuild.BatchDeleteBuildsOutput, error) {
 	var output codebuild.BatchDeleteBuildsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildBatchGetBuildBatchesResult struct {
-	Result workflow.Future
+type CodeBuildBatchGetBuildBatchesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildBatchGetBuildBatchesResult) Get(ctx workflow.Context) (*codebuild.BatchGetBuildBatchesOutput, error) {
+func (r *CodeBuildBatchGetBuildBatchesFuture) Get(ctx workflow.Context) (*codebuild.BatchGetBuildBatchesOutput, error) {
 	var output codebuild.BatchGetBuildBatchesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildBatchGetBuildsResult struct {
-	Result workflow.Future
+type CodeBuildBatchGetBuildsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildBatchGetBuildsResult) Get(ctx workflow.Context) (*codebuild.BatchGetBuildsOutput, error) {
+func (r *CodeBuildBatchGetBuildsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetBuildsOutput, error) {
 	var output codebuild.BatchGetBuildsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildBatchGetProjectsResult struct {
-	Result workflow.Future
+type CodeBuildBatchGetProjectsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildBatchGetProjectsResult) Get(ctx workflow.Context) (*codebuild.BatchGetProjectsOutput, error) {
+func (r *CodeBuildBatchGetProjectsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetProjectsOutput, error) {
 	var output codebuild.BatchGetProjectsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildBatchGetReportGroupsResult struct {
-	Result workflow.Future
+type CodeBuildBatchGetReportGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildBatchGetReportGroupsResult) Get(ctx workflow.Context) (*codebuild.BatchGetReportGroupsOutput, error) {
+func (r *CodeBuildBatchGetReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetReportGroupsOutput, error) {
 	var output codebuild.BatchGetReportGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildBatchGetReportsResult struct {
-	Result workflow.Future
+type CodeBuildBatchGetReportsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildBatchGetReportsResult) Get(ctx workflow.Context) (*codebuild.BatchGetReportsOutput, error) {
+func (r *CodeBuildBatchGetReportsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetReportsOutput, error) {
 	var output codebuild.BatchGetReportsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildCreateProjectResult struct {
-	Result workflow.Future
+type CodeBuildCreateProjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildCreateProjectResult) Get(ctx workflow.Context) (*codebuild.CreateProjectOutput, error) {
+func (r *CodeBuildCreateProjectFuture) Get(ctx workflow.Context) (*codebuild.CreateProjectOutput, error) {
 	var output codebuild.CreateProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildCreateReportGroupResult struct {
-	Result workflow.Future
+type CodeBuildCreateReportGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildCreateReportGroupResult) Get(ctx workflow.Context) (*codebuild.CreateReportGroupOutput, error) {
+func (r *CodeBuildCreateReportGroupFuture) Get(ctx workflow.Context) (*codebuild.CreateReportGroupOutput, error) {
 	var output codebuild.CreateReportGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildCreateWebhookResult struct {
-	Result workflow.Future
+type CodeBuildCreateWebhookFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildCreateWebhookResult) Get(ctx workflow.Context) (*codebuild.CreateWebhookOutput, error) {
+func (r *CodeBuildCreateWebhookFuture) Get(ctx workflow.Context) (*codebuild.CreateWebhookOutput, error) {
 	var output codebuild.CreateWebhookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDeleteBuildBatchResult struct {
-	Result workflow.Future
+type CodeBuildDeleteBuildBatchFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDeleteBuildBatchResult) Get(ctx workflow.Context) (*codebuild.DeleteBuildBatchOutput, error) {
+func (r *CodeBuildDeleteBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.DeleteBuildBatchOutput, error) {
 	var output codebuild.DeleteBuildBatchOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDeleteProjectResult struct {
-	Result workflow.Future
+type CodeBuildDeleteProjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDeleteProjectResult) Get(ctx workflow.Context) (*codebuild.DeleteProjectOutput, error) {
+func (r *CodeBuildDeleteProjectFuture) Get(ctx workflow.Context) (*codebuild.DeleteProjectOutput, error) {
 	var output codebuild.DeleteProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDeleteReportResult struct {
-	Result workflow.Future
+type CodeBuildDeleteReportFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDeleteReportResult) Get(ctx workflow.Context) (*codebuild.DeleteReportOutput, error) {
+func (r *CodeBuildDeleteReportFuture) Get(ctx workflow.Context) (*codebuild.DeleteReportOutput, error) {
 	var output codebuild.DeleteReportOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDeleteReportGroupResult struct {
-	Result workflow.Future
+type CodeBuildDeleteReportGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDeleteReportGroupResult) Get(ctx workflow.Context) (*codebuild.DeleteReportGroupOutput, error) {
+func (r *CodeBuildDeleteReportGroupFuture) Get(ctx workflow.Context) (*codebuild.DeleteReportGroupOutput, error) {
 	var output codebuild.DeleteReportGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDeleteResourcePolicyResult struct {
-	Result workflow.Future
+type CodeBuildDeleteResourcePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDeleteResourcePolicyResult) Get(ctx workflow.Context) (*codebuild.DeleteResourcePolicyOutput, error) {
+func (r *CodeBuildDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.DeleteResourcePolicyOutput, error) {
 	var output codebuild.DeleteResourcePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDeleteSourceCredentialsResult struct {
-	Result workflow.Future
+type CodeBuildDeleteSourceCredentialsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDeleteSourceCredentialsResult) Get(ctx workflow.Context) (*codebuild.DeleteSourceCredentialsOutput, error) {
+func (r *CodeBuildDeleteSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.DeleteSourceCredentialsOutput, error) {
 	var output codebuild.DeleteSourceCredentialsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDeleteWebhookResult struct {
-	Result workflow.Future
+type CodeBuildDeleteWebhookFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDeleteWebhookResult) Get(ctx workflow.Context) (*codebuild.DeleteWebhookOutput, error) {
+func (r *CodeBuildDeleteWebhookFuture) Get(ctx workflow.Context) (*codebuild.DeleteWebhookOutput, error) {
 	var output codebuild.DeleteWebhookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDescribeCodeCoveragesResult struct {
-	Result workflow.Future
+type CodeBuildDescribeCodeCoveragesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDescribeCodeCoveragesResult) Get(ctx workflow.Context) (*codebuild.DescribeCodeCoveragesOutput, error) {
+func (r *CodeBuildDescribeCodeCoveragesFuture) Get(ctx workflow.Context) (*codebuild.DescribeCodeCoveragesOutput, error) {
 	var output codebuild.DescribeCodeCoveragesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildDescribeTestCasesResult struct {
-	Result workflow.Future
+type CodeBuildDescribeTestCasesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildDescribeTestCasesResult) Get(ctx workflow.Context) (*codebuild.DescribeTestCasesOutput, error) {
+func (r *CodeBuildDescribeTestCasesFuture) Get(ctx workflow.Context) (*codebuild.DescribeTestCasesOutput, error) {
 	var output codebuild.DescribeTestCasesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildGetResourcePolicyResult struct {
-	Result workflow.Future
+type CodeBuildGetResourcePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildGetResourcePolicyResult) Get(ctx workflow.Context) (*codebuild.GetResourcePolicyOutput, error) {
+func (r *CodeBuildGetResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.GetResourcePolicyOutput, error) {
 	var output codebuild.GetResourcePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildImportSourceCredentialsResult struct {
-	Result workflow.Future
+type CodeBuildImportSourceCredentialsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildImportSourceCredentialsResult) Get(ctx workflow.Context) (*codebuild.ImportSourceCredentialsOutput, error) {
+func (r *CodeBuildImportSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.ImportSourceCredentialsOutput, error) {
 	var output codebuild.ImportSourceCredentialsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildInvalidateProjectCacheResult struct {
-	Result workflow.Future
+type CodeBuildInvalidateProjectCacheFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildInvalidateProjectCacheResult) Get(ctx workflow.Context) (*codebuild.InvalidateProjectCacheOutput, error) {
+func (r *CodeBuildInvalidateProjectCacheFuture) Get(ctx workflow.Context) (*codebuild.InvalidateProjectCacheOutput, error) {
 	var output codebuild.InvalidateProjectCacheOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListBuildBatchesResult struct {
-	Result workflow.Future
+type CodeBuildListBuildBatchesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListBuildBatchesResult) Get(ctx workflow.Context) (*codebuild.ListBuildBatchesOutput, error) {
+func (r *CodeBuildListBuildBatchesFuture) Get(ctx workflow.Context) (*codebuild.ListBuildBatchesOutput, error) {
 	var output codebuild.ListBuildBatchesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListBuildBatchesForProjectResult struct {
-	Result workflow.Future
+type CodeBuildListBuildBatchesForProjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListBuildBatchesForProjectResult) Get(ctx workflow.Context) (*codebuild.ListBuildBatchesForProjectOutput, error) {
+func (r *CodeBuildListBuildBatchesForProjectFuture) Get(ctx workflow.Context) (*codebuild.ListBuildBatchesForProjectOutput, error) {
 	var output codebuild.ListBuildBatchesForProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListBuildsResult struct {
-	Result workflow.Future
+type CodeBuildListBuildsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListBuildsResult) Get(ctx workflow.Context) (*codebuild.ListBuildsOutput, error) {
+func (r *CodeBuildListBuildsFuture) Get(ctx workflow.Context) (*codebuild.ListBuildsOutput, error) {
 	var output codebuild.ListBuildsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListBuildsForProjectResult struct {
-	Result workflow.Future
+type CodeBuildListBuildsForProjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListBuildsForProjectResult) Get(ctx workflow.Context) (*codebuild.ListBuildsForProjectOutput, error) {
+func (r *CodeBuildListBuildsForProjectFuture) Get(ctx workflow.Context) (*codebuild.ListBuildsForProjectOutput, error) {
 	var output codebuild.ListBuildsForProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListCuratedEnvironmentImagesResult struct {
-	Result workflow.Future
+type CodeBuildListCuratedEnvironmentImagesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListCuratedEnvironmentImagesResult) Get(ctx workflow.Context) (*codebuild.ListCuratedEnvironmentImagesOutput, error) {
+func (r *CodeBuildListCuratedEnvironmentImagesFuture) Get(ctx workflow.Context) (*codebuild.ListCuratedEnvironmentImagesOutput, error) {
 	var output codebuild.ListCuratedEnvironmentImagesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListProjectsResult struct {
-	Result workflow.Future
+type CodeBuildListProjectsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListProjectsResult) Get(ctx workflow.Context) (*codebuild.ListProjectsOutput, error) {
+func (r *CodeBuildListProjectsFuture) Get(ctx workflow.Context) (*codebuild.ListProjectsOutput, error) {
 	var output codebuild.ListProjectsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListReportGroupsResult struct {
-	Result workflow.Future
+type CodeBuildListReportGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListReportGroupsResult) Get(ctx workflow.Context) (*codebuild.ListReportGroupsOutput, error) {
+func (r *CodeBuildListReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.ListReportGroupsOutput, error) {
 	var output codebuild.ListReportGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListReportsResult struct {
-	Result workflow.Future
+type CodeBuildListReportsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListReportsResult) Get(ctx workflow.Context) (*codebuild.ListReportsOutput, error) {
+func (r *CodeBuildListReportsFuture) Get(ctx workflow.Context) (*codebuild.ListReportsOutput, error) {
 	var output codebuild.ListReportsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListReportsForReportGroupResult struct {
-	Result workflow.Future
+type CodeBuildListReportsForReportGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListReportsForReportGroupResult) Get(ctx workflow.Context) (*codebuild.ListReportsForReportGroupOutput, error) {
+func (r *CodeBuildListReportsForReportGroupFuture) Get(ctx workflow.Context) (*codebuild.ListReportsForReportGroupOutput, error) {
 	var output codebuild.ListReportsForReportGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListSharedProjectsResult struct {
-	Result workflow.Future
+type CodeBuildListSharedProjectsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListSharedProjectsResult) Get(ctx workflow.Context) (*codebuild.ListSharedProjectsOutput, error) {
+func (r *CodeBuildListSharedProjectsFuture) Get(ctx workflow.Context) (*codebuild.ListSharedProjectsOutput, error) {
 	var output codebuild.ListSharedProjectsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListSharedReportGroupsResult struct {
-	Result workflow.Future
+type CodeBuildListSharedReportGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListSharedReportGroupsResult) Get(ctx workflow.Context) (*codebuild.ListSharedReportGroupsOutput, error) {
+func (r *CodeBuildListSharedReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.ListSharedReportGroupsOutput, error) {
 	var output codebuild.ListSharedReportGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildListSourceCredentialsResult struct {
-	Result workflow.Future
+type CodeBuildListSourceCredentialsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildListSourceCredentialsResult) Get(ctx workflow.Context) (*codebuild.ListSourceCredentialsOutput, error) {
+func (r *CodeBuildListSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.ListSourceCredentialsOutput, error) {
 	var output codebuild.ListSourceCredentialsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildPutResourcePolicyResult struct {
-	Result workflow.Future
+type CodeBuildPutResourcePolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildPutResourcePolicyResult) Get(ctx workflow.Context) (*codebuild.PutResourcePolicyOutput, error) {
+func (r *CodeBuildPutResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.PutResourcePolicyOutput, error) {
 	var output codebuild.PutResourcePolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildRetryBuildResult struct {
-	Result workflow.Future
+type CodeBuildRetryBuildFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildRetryBuildResult) Get(ctx workflow.Context) (*codebuild.RetryBuildOutput, error) {
+func (r *CodeBuildRetryBuildFuture) Get(ctx workflow.Context) (*codebuild.RetryBuildOutput, error) {
 	var output codebuild.RetryBuildOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildRetryBuildBatchResult struct {
-	Result workflow.Future
+type CodeBuildRetryBuildBatchFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildRetryBuildBatchResult) Get(ctx workflow.Context) (*codebuild.RetryBuildBatchOutput, error) {
+func (r *CodeBuildRetryBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.RetryBuildBatchOutput, error) {
 	var output codebuild.RetryBuildBatchOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildStartBuildResult struct {
-	Result workflow.Future
+type CodeBuildStartBuildFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildStartBuildResult) Get(ctx workflow.Context) (*codebuild.StartBuildOutput, error) {
+func (r *CodeBuildStartBuildFuture) Get(ctx workflow.Context) (*codebuild.StartBuildOutput, error) {
 	var output codebuild.StartBuildOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildStartBuildBatchResult struct {
-	Result workflow.Future
+type CodeBuildStartBuildBatchFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildStartBuildBatchResult) Get(ctx workflow.Context) (*codebuild.StartBuildBatchOutput, error) {
+func (r *CodeBuildStartBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.StartBuildBatchOutput, error) {
 	var output codebuild.StartBuildBatchOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildStopBuildResult struct {
-	Result workflow.Future
+type CodeBuildStopBuildFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildStopBuildResult) Get(ctx workflow.Context) (*codebuild.StopBuildOutput, error) {
+func (r *CodeBuildStopBuildFuture) Get(ctx workflow.Context) (*codebuild.StopBuildOutput, error) {
 	var output codebuild.StopBuildOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildStopBuildBatchResult struct {
-	Result workflow.Future
+type CodeBuildStopBuildBatchFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildStopBuildBatchResult) Get(ctx workflow.Context) (*codebuild.StopBuildBatchOutput, error) {
+func (r *CodeBuildStopBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.StopBuildBatchOutput, error) {
 	var output codebuild.StopBuildBatchOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildUpdateProjectResult struct {
-	Result workflow.Future
+type CodeBuildUpdateProjectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildUpdateProjectResult) Get(ctx workflow.Context) (*codebuild.UpdateProjectOutput, error) {
+func (r *CodeBuildUpdateProjectFuture) Get(ctx workflow.Context) (*codebuild.UpdateProjectOutput, error) {
 	var output codebuild.UpdateProjectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildUpdateReportGroupResult struct {
-	Result workflow.Future
+type CodeBuildUpdateReportGroupFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildUpdateReportGroupResult) Get(ctx workflow.Context) (*codebuild.UpdateReportGroupOutput, error) {
+func (r *CodeBuildUpdateReportGroupFuture) Get(ctx workflow.Context) (*codebuild.UpdateReportGroupOutput, error) {
 	var output codebuild.UpdateReportGroupOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodebuildUpdateWebhookResult struct {
-	Result workflow.Future
+type CodeBuildUpdateWebhookFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *CodebuildUpdateWebhookResult) Get(ctx workflow.Context) (*codebuild.UpdateWebhookOutput, error) {
+func (r *CodeBuildUpdateWebhookFuture) Get(ctx workflow.Context) (*codebuild.UpdateWebhookOutput, error) {
 	var output codebuild.UpdateWebhookOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -582,9 +625,9 @@ func (a *CodeBuildStub) BatchDeleteBuilds(ctx workflow.Context, input *codebuild
 	return &output, err
 }
 
-func (a *CodeBuildStub) BatchDeleteBuildsAsync(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) *CodebuildBatchDeleteBuildsResult {
+func (a *CodeBuildStub) BatchDeleteBuildsAsync(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) *CodeBuildBatchDeleteBuildsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchDeleteBuilds", input)
-	return &CodebuildBatchDeleteBuildsResult{Result: future}
+	return &CodeBuildBatchDeleteBuildsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) BatchGetBuildBatches(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) (*codebuild.BatchGetBuildBatchesOutput, error) {
@@ -593,9 +636,9 @@ func (a *CodeBuildStub) BatchGetBuildBatches(ctx workflow.Context, input *codebu
 	return &output, err
 }
 
-func (a *CodeBuildStub) BatchGetBuildBatchesAsync(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) *CodebuildBatchGetBuildBatchesResult {
+func (a *CodeBuildStub) BatchGetBuildBatchesAsync(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) *CodeBuildBatchGetBuildBatchesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetBuildBatches", input)
-	return &CodebuildBatchGetBuildBatchesResult{Result: future}
+	return &CodeBuildBatchGetBuildBatchesFuture{Future: future}
 }
 
 func (a *CodeBuildStub) BatchGetBuilds(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) (*codebuild.BatchGetBuildsOutput, error) {
@@ -604,9 +647,9 @@ func (a *CodeBuildStub) BatchGetBuilds(ctx workflow.Context, input *codebuild.Ba
 	return &output, err
 }
 
-func (a *CodeBuildStub) BatchGetBuildsAsync(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) *CodebuildBatchGetBuildsResult {
+func (a *CodeBuildStub) BatchGetBuildsAsync(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) *CodeBuildBatchGetBuildsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetBuilds", input)
-	return &CodebuildBatchGetBuildsResult{Result: future}
+	return &CodeBuildBatchGetBuildsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) BatchGetProjects(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) (*codebuild.BatchGetProjectsOutput, error) {
@@ -615,9 +658,9 @@ func (a *CodeBuildStub) BatchGetProjects(ctx workflow.Context, input *codebuild.
 	return &output, err
 }
 
-func (a *CodeBuildStub) BatchGetProjectsAsync(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) *CodebuildBatchGetProjectsResult {
+func (a *CodeBuildStub) BatchGetProjectsAsync(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) *CodeBuildBatchGetProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetProjects", input)
-	return &CodebuildBatchGetProjectsResult{Result: future}
+	return &CodeBuildBatchGetProjectsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) BatchGetReportGroups(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) (*codebuild.BatchGetReportGroupsOutput, error) {
@@ -626,9 +669,9 @@ func (a *CodeBuildStub) BatchGetReportGroups(ctx workflow.Context, input *codebu
 	return &output, err
 }
 
-func (a *CodeBuildStub) BatchGetReportGroupsAsync(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) *CodebuildBatchGetReportGroupsResult {
+func (a *CodeBuildStub) BatchGetReportGroupsAsync(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) *CodeBuildBatchGetReportGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetReportGroups", input)
-	return &CodebuildBatchGetReportGroupsResult{Result: future}
+	return &CodeBuildBatchGetReportGroupsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) BatchGetReports(ctx workflow.Context, input *codebuild.BatchGetReportsInput) (*codebuild.BatchGetReportsOutput, error) {
@@ -637,9 +680,9 @@ func (a *CodeBuildStub) BatchGetReports(ctx workflow.Context, input *codebuild.B
 	return &output, err
 }
 
-func (a *CodeBuildStub) BatchGetReportsAsync(ctx workflow.Context, input *codebuild.BatchGetReportsInput) *CodebuildBatchGetReportsResult {
+func (a *CodeBuildStub) BatchGetReportsAsync(ctx workflow.Context, input *codebuild.BatchGetReportsInput) *CodeBuildBatchGetReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetReports", input)
-	return &CodebuildBatchGetReportsResult{Result: future}
+	return &CodeBuildBatchGetReportsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) CreateProject(ctx workflow.Context, input *codebuild.CreateProjectInput) (*codebuild.CreateProjectOutput, error) {
@@ -648,9 +691,9 @@ func (a *CodeBuildStub) CreateProject(ctx workflow.Context, input *codebuild.Cre
 	return &output, err
 }
 
-func (a *CodeBuildStub) CreateProjectAsync(ctx workflow.Context, input *codebuild.CreateProjectInput) *CodebuildCreateProjectResult {
+func (a *CodeBuildStub) CreateProjectAsync(ctx workflow.Context, input *codebuild.CreateProjectInput) *CodeBuildCreateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.CreateProject", input)
-	return &CodebuildCreateProjectResult{Result: future}
+	return &CodeBuildCreateProjectFuture{Future: future}
 }
 
 func (a *CodeBuildStub) CreateReportGroup(ctx workflow.Context, input *codebuild.CreateReportGroupInput) (*codebuild.CreateReportGroupOutput, error) {
@@ -659,9 +702,9 @@ func (a *CodeBuildStub) CreateReportGroup(ctx workflow.Context, input *codebuild
 	return &output, err
 }
 
-func (a *CodeBuildStub) CreateReportGroupAsync(ctx workflow.Context, input *codebuild.CreateReportGroupInput) *CodebuildCreateReportGroupResult {
+func (a *CodeBuildStub) CreateReportGroupAsync(ctx workflow.Context, input *codebuild.CreateReportGroupInput) *CodeBuildCreateReportGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.CreateReportGroup", input)
-	return &CodebuildCreateReportGroupResult{Result: future}
+	return &CodeBuildCreateReportGroupFuture{Future: future}
 }
 
 func (a *CodeBuildStub) CreateWebhook(ctx workflow.Context, input *codebuild.CreateWebhookInput) (*codebuild.CreateWebhookOutput, error) {
@@ -670,9 +713,9 @@ func (a *CodeBuildStub) CreateWebhook(ctx workflow.Context, input *codebuild.Cre
 	return &output, err
 }
 
-func (a *CodeBuildStub) CreateWebhookAsync(ctx workflow.Context, input *codebuild.CreateWebhookInput) *CodebuildCreateWebhookResult {
+func (a *CodeBuildStub) CreateWebhookAsync(ctx workflow.Context, input *codebuild.CreateWebhookInput) *CodeBuildCreateWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.CreateWebhook", input)
-	return &CodebuildCreateWebhookResult{Result: future}
+	return &CodeBuildCreateWebhookFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DeleteBuildBatch(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) (*codebuild.DeleteBuildBatchOutput, error) {
@@ -681,9 +724,9 @@ func (a *CodeBuildStub) DeleteBuildBatch(ctx workflow.Context, input *codebuild.
 	return &output, err
 }
 
-func (a *CodeBuildStub) DeleteBuildBatchAsync(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) *CodebuildDeleteBuildBatchResult {
+func (a *CodeBuildStub) DeleteBuildBatchAsync(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) *CodeBuildDeleteBuildBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteBuildBatch", input)
-	return &CodebuildDeleteBuildBatchResult{Result: future}
+	return &CodeBuildDeleteBuildBatchFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DeleteProject(ctx workflow.Context, input *codebuild.DeleteProjectInput) (*codebuild.DeleteProjectOutput, error) {
@@ -692,9 +735,9 @@ func (a *CodeBuildStub) DeleteProject(ctx workflow.Context, input *codebuild.Del
 	return &output, err
 }
 
-func (a *CodeBuildStub) DeleteProjectAsync(ctx workflow.Context, input *codebuild.DeleteProjectInput) *CodebuildDeleteProjectResult {
+func (a *CodeBuildStub) DeleteProjectAsync(ctx workflow.Context, input *codebuild.DeleteProjectInput) *CodeBuildDeleteProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteProject", input)
-	return &CodebuildDeleteProjectResult{Result: future}
+	return &CodeBuildDeleteProjectFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DeleteReport(ctx workflow.Context, input *codebuild.DeleteReportInput) (*codebuild.DeleteReportOutput, error) {
@@ -703,9 +746,9 @@ func (a *CodeBuildStub) DeleteReport(ctx workflow.Context, input *codebuild.Dele
 	return &output, err
 }
 
-func (a *CodeBuildStub) DeleteReportAsync(ctx workflow.Context, input *codebuild.DeleteReportInput) *CodebuildDeleteReportResult {
+func (a *CodeBuildStub) DeleteReportAsync(ctx workflow.Context, input *codebuild.DeleteReportInput) *CodeBuildDeleteReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteReport", input)
-	return &CodebuildDeleteReportResult{Result: future}
+	return &CodeBuildDeleteReportFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DeleteReportGroup(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) (*codebuild.DeleteReportGroupOutput, error) {
@@ -714,9 +757,9 @@ func (a *CodeBuildStub) DeleteReportGroup(ctx workflow.Context, input *codebuild
 	return &output, err
 }
 
-func (a *CodeBuildStub) DeleteReportGroupAsync(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) *CodebuildDeleteReportGroupResult {
+func (a *CodeBuildStub) DeleteReportGroupAsync(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) *CodeBuildDeleteReportGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteReportGroup", input)
-	return &CodebuildDeleteReportGroupResult{Result: future}
+	return &CodeBuildDeleteReportGroupFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DeleteResourcePolicy(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) (*codebuild.DeleteResourcePolicyOutput, error) {
@@ -725,9 +768,9 @@ func (a *CodeBuildStub) DeleteResourcePolicy(ctx workflow.Context, input *codebu
 	return &output, err
 }
 
-func (a *CodeBuildStub) DeleteResourcePolicyAsync(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) *CodebuildDeleteResourcePolicyResult {
+func (a *CodeBuildStub) DeleteResourcePolicyAsync(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) *CodeBuildDeleteResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteResourcePolicy", input)
-	return &CodebuildDeleteResourcePolicyResult{Result: future}
+	return &CodeBuildDeleteResourcePolicyFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DeleteSourceCredentials(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) (*codebuild.DeleteSourceCredentialsOutput, error) {
@@ -736,9 +779,9 @@ func (a *CodeBuildStub) DeleteSourceCredentials(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *CodeBuildStub) DeleteSourceCredentialsAsync(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) *CodebuildDeleteSourceCredentialsResult {
+func (a *CodeBuildStub) DeleteSourceCredentialsAsync(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) *CodeBuildDeleteSourceCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteSourceCredentials", input)
-	return &CodebuildDeleteSourceCredentialsResult{Result: future}
+	return &CodeBuildDeleteSourceCredentialsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DeleteWebhook(ctx workflow.Context, input *codebuild.DeleteWebhookInput) (*codebuild.DeleteWebhookOutput, error) {
@@ -747,9 +790,9 @@ func (a *CodeBuildStub) DeleteWebhook(ctx workflow.Context, input *codebuild.Del
 	return &output, err
 }
 
-func (a *CodeBuildStub) DeleteWebhookAsync(ctx workflow.Context, input *codebuild.DeleteWebhookInput) *CodebuildDeleteWebhookResult {
+func (a *CodeBuildStub) DeleteWebhookAsync(ctx workflow.Context, input *codebuild.DeleteWebhookInput) *CodeBuildDeleteWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteWebhook", input)
-	return &CodebuildDeleteWebhookResult{Result: future}
+	return &CodeBuildDeleteWebhookFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DescribeCodeCoverages(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) (*codebuild.DescribeCodeCoveragesOutput, error) {
@@ -758,9 +801,9 @@ func (a *CodeBuildStub) DescribeCodeCoverages(ctx workflow.Context, input *codeb
 	return &output, err
 }
 
-func (a *CodeBuildStub) DescribeCodeCoveragesAsync(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) *CodebuildDescribeCodeCoveragesResult {
+func (a *CodeBuildStub) DescribeCodeCoveragesAsync(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) *CodeBuildDescribeCodeCoveragesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DescribeCodeCoverages", input)
-	return &CodebuildDescribeCodeCoveragesResult{Result: future}
+	return &CodeBuildDescribeCodeCoveragesFuture{Future: future}
 }
 
 func (a *CodeBuildStub) DescribeTestCases(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) (*codebuild.DescribeTestCasesOutput, error) {
@@ -769,9 +812,9 @@ func (a *CodeBuildStub) DescribeTestCases(ctx workflow.Context, input *codebuild
 	return &output, err
 }
 
-func (a *CodeBuildStub) DescribeTestCasesAsync(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) *CodebuildDescribeTestCasesResult {
+func (a *CodeBuildStub) DescribeTestCasesAsync(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) *CodeBuildDescribeTestCasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DescribeTestCases", input)
-	return &CodebuildDescribeTestCasesResult{Result: future}
+	return &CodeBuildDescribeTestCasesFuture{Future: future}
 }
 
 func (a *CodeBuildStub) GetResourcePolicy(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) (*codebuild.GetResourcePolicyOutput, error) {
@@ -780,9 +823,9 @@ func (a *CodeBuildStub) GetResourcePolicy(ctx workflow.Context, input *codebuild
 	return &output, err
 }
 
-func (a *CodeBuildStub) GetResourcePolicyAsync(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) *CodebuildGetResourcePolicyResult {
+func (a *CodeBuildStub) GetResourcePolicyAsync(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) *CodeBuildGetResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.GetResourcePolicy", input)
-	return &CodebuildGetResourcePolicyResult{Result: future}
+	return &CodeBuildGetResourcePolicyFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ImportSourceCredentials(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) (*codebuild.ImportSourceCredentialsOutput, error) {
@@ -791,9 +834,9 @@ func (a *CodeBuildStub) ImportSourceCredentials(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *CodeBuildStub) ImportSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) *CodebuildImportSourceCredentialsResult {
+func (a *CodeBuildStub) ImportSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) *CodeBuildImportSourceCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ImportSourceCredentials", input)
-	return &CodebuildImportSourceCredentialsResult{Result: future}
+	return &CodeBuildImportSourceCredentialsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) InvalidateProjectCache(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) (*codebuild.InvalidateProjectCacheOutput, error) {
@@ -802,9 +845,9 @@ func (a *CodeBuildStub) InvalidateProjectCache(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeBuildStub) InvalidateProjectCacheAsync(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) *CodebuildInvalidateProjectCacheResult {
+func (a *CodeBuildStub) InvalidateProjectCacheAsync(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) *CodeBuildInvalidateProjectCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.InvalidateProjectCache", input)
-	return &CodebuildInvalidateProjectCacheResult{Result: future}
+	return &CodeBuildInvalidateProjectCacheFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListBuildBatches(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) (*codebuild.ListBuildBatchesOutput, error) {
@@ -813,9 +856,9 @@ func (a *CodeBuildStub) ListBuildBatches(ctx workflow.Context, input *codebuild.
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListBuildBatchesAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) *CodebuildListBuildBatchesResult {
+func (a *CodeBuildStub) ListBuildBatchesAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) *CodeBuildListBuildBatchesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListBuildBatches", input)
-	return &CodebuildListBuildBatchesResult{Result: future}
+	return &CodeBuildListBuildBatchesFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListBuildBatchesForProject(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) (*codebuild.ListBuildBatchesForProjectOutput, error) {
@@ -824,9 +867,9 @@ func (a *CodeBuildStub) ListBuildBatchesForProject(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListBuildBatchesForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) *CodebuildListBuildBatchesForProjectResult {
+func (a *CodeBuildStub) ListBuildBatchesForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) *CodeBuildListBuildBatchesForProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListBuildBatchesForProject", input)
-	return &CodebuildListBuildBatchesForProjectResult{Result: future}
+	return &CodeBuildListBuildBatchesForProjectFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListBuilds(ctx workflow.Context, input *codebuild.ListBuildsInput) (*codebuild.ListBuildsOutput, error) {
@@ -835,9 +878,9 @@ func (a *CodeBuildStub) ListBuilds(ctx workflow.Context, input *codebuild.ListBu
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListBuildsAsync(ctx workflow.Context, input *codebuild.ListBuildsInput) *CodebuildListBuildsResult {
+func (a *CodeBuildStub) ListBuildsAsync(ctx workflow.Context, input *codebuild.ListBuildsInput) *CodeBuildListBuildsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListBuilds", input)
-	return &CodebuildListBuildsResult{Result: future}
+	return &CodeBuildListBuildsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListBuildsForProject(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) (*codebuild.ListBuildsForProjectOutput, error) {
@@ -846,9 +889,9 @@ func (a *CodeBuildStub) ListBuildsForProject(ctx workflow.Context, input *codebu
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListBuildsForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) *CodebuildListBuildsForProjectResult {
+func (a *CodeBuildStub) ListBuildsForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) *CodeBuildListBuildsForProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListBuildsForProject", input)
-	return &CodebuildListBuildsForProjectResult{Result: future}
+	return &CodeBuildListBuildsForProjectFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListCuratedEnvironmentImages(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) (*codebuild.ListCuratedEnvironmentImagesOutput, error) {
@@ -857,9 +900,9 @@ func (a *CodeBuildStub) ListCuratedEnvironmentImages(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListCuratedEnvironmentImagesAsync(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) *CodebuildListCuratedEnvironmentImagesResult {
+func (a *CodeBuildStub) ListCuratedEnvironmentImagesAsync(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) *CodeBuildListCuratedEnvironmentImagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListCuratedEnvironmentImages", input)
-	return &CodebuildListCuratedEnvironmentImagesResult{Result: future}
+	return &CodeBuildListCuratedEnvironmentImagesFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListProjects(ctx workflow.Context, input *codebuild.ListProjectsInput) (*codebuild.ListProjectsOutput, error) {
@@ -868,9 +911,9 @@ func (a *CodeBuildStub) ListProjects(ctx workflow.Context, input *codebuild.List
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListProjectsAsync(ctx workflow.Context, input *codebuild.ListProjectsInput) *CodebuildListProjectsResult {
+func (a *CodeBuildStub) ListProjectsAsync(ctx workflow.Context, input *codebuild.ListProjectsInput) *CodeBuildListProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListProjects", input)
-	return &CodebuildListProjectsResult{Result: future}
+	return &CodeBuildListProjectsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListReportGroups(ctx workflow.Context, input *codebuild.ListReportGroupsInput) (*codebuild.ListReportGroupsOutput, error) {
@@ -879,9 +922,9 @@ func (a *CodeBuildStub) ListReportGroups(ctx workflow.Context, input *codebuild.
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListReportGroupsAsync(ctx workflow.Context, input *codebuild.ListReportGroupsInput) *CodebuildListReportGroupsResult {
+func (a *CodeBuildStub) ListReportGroupsAsync(ctx workflow.Context, input *codebuild.ListReportGroupsInput) *CodeBuildListReportGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListReportGroups", input)
-	return &CodebuildListReportGroupsResult{Result: future}
+	return &CodeBuildListReportGroupsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListReports(ctx workflow.Context, input *codebuild.ListReportsInput) (*codebuild.ListReportsOutput, error) {
@@ -890,9 +933,9 @@ func (a *CodeBuildStub) ListReports(ctx workflow.Context, input *codebuild.ListR
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListReportsAsync(ctx workflow.Context, input *codebuild.ListReportsInput) *CodebuildListReportsResult {
+func (a *CodeBuildStub) ListReportsAsync(ctx workflow.Context, input *codebuild.ListReportsInput) *CodeBuildListReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListReports", input)
-	return &CodebuildListReportsResult{Result: future}
+	return &CodeBuildListReportsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListReportsForReportGroup(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) (*codebuild.ListReportsForReportGroupOutput, error) {
@@ -901,9 +944,9 @@ func (a *CodeBuildStub) ListReportsForReportGroup(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListReportsForReportGroupAsync(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) *CodebuildListReportsForReportGroupResult {
+func (a *CodeBuildStub) ListReportsForReportGroupAsync(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) *CodeBuildListReportsForReportGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListReportsForReportGroup", input)
-	return &CodebuildListReportsForReportGroupResult{Result: future}
+	return &CodeBuildListReportsForReportGroupFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListSharedProjects(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) (*codebuild.ListSharedProjectsOutput, error) {
@@ -912,9 +955,9 @@ func (a *CodeBuildStub) ListSharedProjects(ctx workflow.Context, input *codebuil
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListSharedProjectsAsync(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) *CodebuildListSharedProjectsResult {
+func (a *CodeBuildStub) ListSharedProjectsAsync(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) *CodeBuildListSharedProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListSharedProjects", input)
-	return &CodebuildListSharedProjectsResult{Result: future}
+	return &CodeBuildListSharedProjectsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListSharedReportGroups(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) (*codebuild.ListSharedReportGroupsOutput, error) {
@@ -923,9 +966,9 @@ func (a *CodeBuildStub) ListSharedReportGroups(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListSharedReportGroupsAsync(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) *CodebuildListSharedReportGroupsResult {
+func (a *CodeBuildStub) ListSharedReportGroupsAsync(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) *CodeBuildListSharedReportGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListSharedReportGroups", input)
-	return &CodebuildListSharedReportGroupsResult{Result: future}
+	return &CodeBuildListSharedReportGroupsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) ListSourceCredentials(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) (*codebuild.ListSourceCredentialsOutput, error) {
@@ -934,9 +977,9 @@ func (a *CodeBuildStub) ListSourceCredentials(ctx workflow.Context, input *codeb
 	return &output, err
 }
 
-func (a *CodeBuildStub) ListSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) *CodebuildListSourceCredentialsResult {
+func (a *CodeBuildStub) ListSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) *CodeBuildListSourceCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListSourceCredentials", input)
-	return &CodebuildListSourceCredentialsResult{Result: future}
+	return &CodeBuildListSourceCredentialsFuture{Future: future}
 }
 
 func (a *CodeBuildStub) PutResourcePolicy(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) (*codebuild.PutResourcePolicyOutput, error) {
@@ -945,9 +988,9 @@ func (a *CodeBuildStub) PutResourcePolicy(ctx workflow.Context, input *codebuild
 	return &output, err
 }
 
-func (a *CodeBuildStub) PutResourcePolicyAsync(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) *CodebuildPutResourcePolicyResult {
+func (a *CodeBuildStub) PutResourcePolicyAsync(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) *CodeBuildPutResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.PutResourcePolicy", input)
-	return &CodebuildPutResourcePolicyResult{Result: future}
+	return &CodeBuildPutResourcePolicyFuture{Future: future}
 }
 
 func (a *CodeBuildStub) RetryBuild(ctx workflow.Context, input *codebuild.RetryBuildInput) (*codebuild.RetryBuildOutput, error) {
@@ -956,9 +999,9 @@ func (a *CodeBuildStub) RetryBuild(ctx workflow.Context, input *codebuild.RetryB
 	return &output, err
 }
 
-func (a *CodeBuildStub) RetryBuildAsync(ctx workflow.Context, input *codebuild.RetryBuildInput) *CodebuildRetryBuildResult {
+func (a *CodeBuildStub) RetryBuildAsync(ctx workflow.Context, input *codebuild.RetryBuildInput) *CodeBuildRetryBuildFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.RetryBuild", input)
-	return &CodebuildRetryBuildResult{Result: future}
+	return &CodeBuildRetryBuildFuture{Future: future}
 }
 
 func (a *CodeBuildStub) RetryBuildBatch(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) (*codebuild.RetryBuildBatchOutput, error) {
@@ -967,9 +1010,9 @@ func (a *CodeBuildStub) RetryBuildBatch(ctx workflow.Context, input *codebuild.R
 	return &output, err
 }
 
-func (a *CodeBuildStub) RetryBuildBatchAsync(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) *CodebuildRetryBuildBatchResult {
+func (a *CodeBuildStub) RetryBuildBatchAsync(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) *CodeBuildRetryBuildBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.RetryBuildBatch", input)
-	return &CodebuildRetryBuildBatchResult{Result: future}
+	return &CodeBuildRetryBuildBatchFuture{Future: future}
 }
 
 func (a *CodeBuildStub) StartBuild(ctx workflow.Context, input *codebuild.StartBuildInput) (*codebuild.StartBuildOutput, error) {
@@ -978,9 +1021,9 @@ func (a *CodeBuildStub) StartBuild(ctx workflow.Context, input *codebuild.StartB
 	return &output, err
 }
 
-func (a *CodeBuildStub) StartBuildAsync(ctx workflow.Context, input *codebuild.StartBuildInput) *CodebuildStartBuildResult {
+func (a *CodeBuildStub) StartBuildAsync(ctx workflow.Context, input *codebuild.StartBuildInput) *CodeBuildStartBuildFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.StartBuild", input)
-	return &CodebuildStartBuildResult{Result: future}
+	return &CodeBuildStartBuildFuture{Future: future}
 }
 
 func (a *CodeBuildStub) StartBuildBatch(ctx workflow.Context, input *codebuild.StartBuildBatchInput) (*codebuild.StartBuildBatchOutput, error) {
@@ -989,9 +1032,9 @@ func (a *CodeBuildStub) StartBuildBatch(ctx workflow.Context, input *codebuild.S
 	return &output, err
 }
 
-func (a *CodeBuildStub) StartBuildBatchAsync(ctx workflow.Context, input *codebuild.StartBuildBatchInput) *CodebuildStartBuildBatchResult {
+func (a *CodeBuildStub) StartBuildBatchAsync(ctx workflow.Context, input *codebuild.StartBuildBatchInput) *CodeBuildStartBuildBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.StartBuildBatch", input)
-	return &CodebuildStartBuildBatchResult{Result: future}
+	return &CodeBuildStartBuildBatchFuture{Future: future}
 }
 
 func (a *CodeBuildStub) StopBuild(ctx workflow.Context, input *codebuild.StopBuildInput) (*codebuild.StopBuildOutput, error) {
@@ -1000,9 +1043,9 @@ func (a *CodeBuildStub) StopBuild(ctx workflow.Context, input *codebuild.StopBui
 	return &output, err
 }
 
-func (a *CodeBuildStub) StopBuildAsync(ctx workflow.Context, input *codebuild.StopBuildInput) *CodebuildStopBuildResult {
+func (a *CodeBuildStub) StopBuildAsync(ctx workflow.Context, input *codebuild.StopBuildInput) *CodeBuildStopBuildFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.StopBuild", input)
-	return &CodebuildStopBuildResult{Result: future}
+	return &CodeBuildStopBuildFuture{Future: future}
 }
 
 func (a *CodeBuildStub) StopBuildBatch(ctx workflow.Context, input *codebuild.StopBuildBatchInput) (*codebuild.StopBuildBatchOutput, error) {
@@ -1011,9 +1054,9 @@ func (a *CodeBuildStub) StopBuildBatch(ctx workflow.Context, input *codebuild.St
 	return &output, err
 }
 
-func (a *CodeBuildStub) StopBuildBatchAsync(ctx workflow.Context, input *codebuild.StopBuildBatchInput) *CodebuildStopBuildBatchResult {
+func (a *CodeBuildStub) StopBuildBatchAsync(ctx workflow.Context, input *codebuild.StopBuildBatchInput) *CodeBuildStopBuildBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.StopBuildBatch", input)
-	return &CodebuildStopBuildBatchResult{Result: future}
+	return &CodeBuildStopBuildBatchFuture{Future: future}
 }
 
 func (a *CodeBuildStub) UpdateProject(ctx workflow.Context, input *codebuild.UpdateProjectInput) (*codebuild.UpdateProjectOutput, error) {
@@ -1022,9 +1065,9 @@ func (a *CodeBuildStub) UpdateProject(ctx workflow.Context, input *codebuild.Upd
 	return &output, err
 }
 
-func (a *CodeBuildStub) UpdateProjectAsync(ctx workflow.Context, input *codebuild.UpdateProjectInput) *CodebuildUpdateProjectResult {
+func (a *CodeBuildStub) UpdateProjectAsync(ctx workflow.Context, input *codebuild.UpdateProjectInput) *CodeBuildUpdateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.UpdateProject", input)
-	return &CodebuildUpdateProjectResult{Result: future}
+	return &CodeBuildUpdateProjectFuture{Future: future}
 }
 
 func (a *CodeBuildStub) UpdateReportGroup(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) (*codebuild.UpdateReportGroupOutput, error) {
@@ -1033,9 +1076,9 @@ func (a *CodeBuildStub) UpdateReportGroup(ctx workflow.Context, input *codebuild
 	return &output, err
 }
 
-func (a *CodeBuildStub) UpdateReportGroupAsync(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) *CodebuildUpdateReportGroupResult {
+func (a *CodeBuildStub) UpdateReportGroupAsync(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) *CodeBuildUpdateReportGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.UpdateReportGroup", input)
-	return &CodebuildUpdateReportGroupResult{Result: future}
+	return &CodeBuildUpdateReportGroupFuture{Future: future}
 }
 
 func (a *CodeBuildStub) UpdateWebhook(ctx workflow.Context, input *codebuild.UpdateWebhookInput) (*codebuild.UpdateWebhookOutput, error) {
@@ -1044,7 +1087,7 @@ func (a *CodeBuildStub) UpdateWebhook(ctx workflow.Context, input *codebuild.Upd
 	return &output, err
 }
 
-func (a *CodeBuildStub) UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *CodebuildUpdateWebhookResult {
+func (a *CodeBuildStub) UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *CodeBuildUpdateWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.UpdateWebhook", input)
-	return &CodebuildUpdateWebhookResult{Result: future}
+	return &CodeBuildUpdateWebhookFuture{Future: future}
 }

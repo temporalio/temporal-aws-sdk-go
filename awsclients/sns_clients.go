@@ -11,103 +11,103 @@ import (
 
 type SNSClient interface {
 	AddPermission(ctx workflow.Context, input *sns.AddPermissionInput) (*sns.AddPermissionOutput, error)
-	AddPermissionAsync(ctx workflow.Context, input *sns.AddPermissionInput) *SnsAddPermissionResult
+	AddPermissionAsync(ctx workflow.Context, input *sns.AddPermissionInput) *SNSAddPermissionFuture
 
 	CheckIfPhoneNumberIsOptedOut(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) (*sns.CheckIfPhoneNumberIsOptedOutOutput, error)
-	CheckIfPhoneNumberIsOptedOutAsync(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) *SnsCheckIfPhoneNumberIsOptedOutResult
+	CheckIfPhoneNumberIsOptedOutAsync(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) *SNSCheckIfPhoneNumberIsOptedOutFuture
 
 	ConfirmSubscription(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) (*sns.ConfirmSubscriptionOutput, error)
-	ConfirmSubscriptionAsync(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) *SnsConfirmSubscriptionResult
+	ConfirmSubscriptionAsync(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) *SNSConfirmSubscriptionFuture
 
 	CreatePlatformApplication(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) (*sns.CreatePlatformApplicationOutput, error)
-	CreatePlatformApplicationAsync(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) *SnsCreatePlatformApplicationResult
+	CreatePlatformApplicationAsync(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) *SNSCreatePlatformApplicationFuture
 
 	CreatePlatformEndpoint(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) (*sns.CreatePlatformEndpointOutput, error)
-	CreatePlatformEndpointAsync(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) *SnsCreatePlatformEndpointResult
+	CreatePlatformEndpointAsync(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) *SNSCreatePlatformEndpointFuture
 
 	CreateTopic(ctx workflow.Context, input *sns.CreateTopicInput) (*sns.CreateTopicOutput, error)
-	CreateTopicAsync(ctx workflow.Context, input *sns.CreateTopicInput) *SnsCreateTopicResult
+	CreateTopicAsync(ctx workflow.Context, input *sns.CreateTopicInput) *SNSCreateTopicFuture
 
 	DeleteEndpoint(ctx workflow.Context, input *sns.DeleteEndpointInput) (*sns.DeleteEndpointOutput, error)
-	DeleteEndpointAsync(ctx workflow.Context, input *sns.DeleteEndpointInput) *SnsDeleteEndpointResult
+	DeleteEndpointAsync(ctx workflow.Context, input *sns.DeleteEndpointInput) *SNSDeleteEndpointFuture
 
 	DeletePlatformApplication(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) (*sns.DeletePlatformApplicationOutput, error)
-	DeletePlatformApplicationAsync(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) *SnsDeletePlatformApplicationResult
+	DeletePlatformApplicationAsync(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) *SNSDeletePlatformApplicationFuture
 
 	DeleteTopic(ctx workflow.Context, input *sns.DeleteTopicInput) (*sns.DeleteTopicOutput, error)
-	DeleteTopicAsync(ctx workflow.Context, input *sns.DeleteTopicInput) *SnsDeleteTopicResult
+	DeleteTopicAsync(ctx workflow.Context, input *sns.DeleteTopicInput) *SNSDeleteTopicFuture
 
 	GetEndpointAttributes(ctx workflow.Context, input *sns.GetEndpointAttributesInput) (*sns.GetEndpointAttributesOutput, error)
-	GetEndpointAttributesAsync(ctx workflow.Context, input *sns.GetEndpointAttributesInput) *SnsGetEndpointAttributesResult
+	GetEndpointAttributesAsync(ctx workflow.Context, input *sns.GetEndpointAttributesInput) *SNSGetEndpointAttributesFuture
 
 	GetPlatformApplicationAttributes(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) (*sns.GetPlatformApplicationAttributesOutput, error)
-	GetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) *SnsGetPlatformApplicationAttributesResult
+	GetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) *SNSGetPlatformApplicationAttributesFuture
 
 	GetSMSAttributes(ctx workflow.Context, input *sns.GetSMSAttributesInput) (*sns.GetSMSAttributesOutput, error)
-	GetSMSAttributesAsync(ctx workflow.Context, input *sns.GetSMSAttributesInput) *SnsGetSMSAttributesResult
+	GetSMSAttributesAsync(ctx workflow.Context, input *sns.GetSMSAttributesInput) *SNSGetSMSAttributesFuture
 
 	GetSubscriptionAttributes(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) (*sns.GetSubscriptionAttributesOutput, error)
-	GetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) *SnsGetSubscriptionAttributesResult
+	GetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) *SNSGetSubscriptionAttributesFuture
 
 	GetTopicAttributes(ctx workflow.Context, input *sns.GetTopicAttributesInput) (*sns.GetTopicAttributesOutput, error)
-	GetTopicAttributesAsync(ctx workflow.Context, input *sns.GetTopicAttributesInput) *SnsGetTopicAttributesResult
+	GetTopicAttributesAsync(ctx workflow.Context, input *sns.GetTopicAttributesInput) *SNSGetTopicAttributesFuture
 
 	ListEndpointsByPlatformApplication(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) (*sns.ListEndpointsByPlatformApplicationOutput, error)
-	ListEndpointsByPlatformApplicationAsync(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) *SnsListEndpointsByPlatformApplicationResult
+	ListEndpointsByPlatformApplicationAsync(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) *SNSListEndpointsByPlatformApplicationFuture
 
 	ListPhoneNumbersOptedOut(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) (*sns.ListPhoneNumbersOptedOutOutput, error)
-	ListPhoneNumbersOptedOutAsync(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) *SnsListPhoneNumbersOptedOutResult
+	ListPhoneNumbersOptedOutAsync(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) *SNSListPhoneNumbersOptedOutFuture
 
 	ListPlatformApplications(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) (*sns.ListPlatformApplicationsOutput, error)
-	ListPlatformApplicationsAsync(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) *SnsListPlatformApplicationsResult
+	ListPlatformApplicationsAsync(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) *SNSListPlatformApplicationsFuture
 
 	ListSubscriptions(ctx workflow.Context, input *sns.ListSubscriptionsInput) (*sns.ListSubscriptionsOutput, error)
-	ListSubscriptionsAsync(ctx workflow.Context, input *sns.ListSubscriptionsInput) *SnsListSubscriptionsResult
+	ListSubscriptionsAsync(ctx workflow.Context, input *sns.ListSubscriptionsInput) *SNSListSubscriptionsFuture
 
 	ListSubscriptionsByTopic(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) (*sns.ListSubscriptionsByTopicOutput, error)
-	ListSubscriptionsByTopicAsync(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) *SnsListSubscriptionsByTopicResult
+	ListSubscriptionsByTopicAsync(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) *SNSListSubscriptionsByTopicFuture
 
 	ListTagsForResource(ctx workflow.Context, input *sns.ListTagsForResourceInput) (*sns.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *sns.ListTagsForResourceInput) *SnsListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *sns.ListTagsForResourceInput) *SNSListTagsForResourceFuture
 
 	ListTopics(ctx workflow.Context, input *sns.ListTopicsInput) (*sns.ListTopicsOutput, error)
-	ListTopicsAsync(ctx workflow.Context, input *sns.ListTopicsInput) *SnsListTopicsResult
+	ListTopicsAsync(ctx workflow.Context, input *sns.ListTopicsInput) *SNSListTopicsFuture
 
 	OptInPhoneNumber(ctx workflow.Context, input *sns.OptInPhoneNumberInput) (*sns.OptInPhoneNumberOutput, error)
-	OptInPhoneNumberAsync(ctx workflow.Context, input *sns.OptInPhoneNumberInput) *SnsOptInPhoneNumberResult
+	OptInPhoneNumberAsync(ctx workflow.Context, input *sns.OptInPhoneNumberInput) *SNSOptInPhoneNumberFuture
 
 	Publish(ctx workflow.Context, input *sns.PublishInput) (*sns.PublishOutput, error)
-	PublishAsync(ctx workflow.Context, input *sns.PublishInput) *SnsPublishResult
+	PublishAsync(ctx workflow.Context, input *sns.PublishInput) *SNSPublishFuture
 
 	RemovePermission(ctx workflow.Context, input *sns.RemovePermissionInput) (*sns.RemovePermissionOutput, error)
-	RemovePermissionAsync(ctx workflow.Context, input *sns.RemovePermissionInput) *SnsRemovePermissionResult
+	RemovePermissionAsync(ctx workflow.Context, input *sns.RemovePermissionInput) *SNSRemovePermissionFuture
 
 	SetEndpointAttributes(ctx workflow.Context, input *sns.SetEndpointAttributesInput) (*sns.SetEndpointAttributesOutput, error)
-	SetEndpointAttributesAsync(ctx workflow.Context, input *sns.SetEndpointAttributesInput) *SnsSetEndpointAttributesResult
+	SetEndpointAttributesAsync(ctx workflow.Context, input *sns.SetEndpointAttributesInput) *SNSSetEndpointAttributesFuture
 
 	SetPlatformApplicationAttributes(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) (*sns.SetPlatformApplicationAttributesOutput, error)
-	SetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) *SnsSetPlatformApplicationAttributesResult
+	SetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) *SNSSetPlatformApplicationAttributesFuture
 
 	SetSMSAttributes(ctx workflow.Context, input *sns.SetSMSAttributesInput) (*sns.SetSMSAttributesOutput, error)
-	SetSMSAttributesAsync(ctx workflow.Context, input *sns.SetSMSAttributesInput) *SnsSetSMSAttributesResult
+	SetSMSAttributesAsync(ctx workflow.Context, input *sns.SetSMSAttributesInput) *SNSSetSMSAttributesFuture
 
 	SetSubscriptionAttributes(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) (*sns.SetSubscriptionAttributesOutput, error)
-	SetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) *SnsSetSubscriptionAttributesResult
+	SetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) *SNSSetSubscriptionAttributesFuture
 
 	SetTopicAttributes(ctx workflow.Context, input *sns.SetTopicAttributesInput) (*sns.SetTopicAttributesOutput, error)
-	SetTopicAttributesAsync(ctx workflow.Context, input *sns.SetTopicAttributesInput) *SnsSetTopicAttributesResult
+	SetTopicAttributesAsync(ctx workflow.Context, input *sns.SetTopicAttributesInput) *SNSSetTopicAttributesFuture
 
 	Subscribe(ctx workflow.Context, input *sns.SubscribeInput) (*sns.SubscribeOutput, error)
-	SubscribeAsync(ctx workflow.Context, input *sns.SubscribeInput) *SnsSubscribeResult
+	SubscribeAsync(ctx workflow.Context, input *sns.SubscribeInput) *SNSSubscribeFuture
 
 	TagResource(ctx workflow.Context, input *sns.TagResourceInput) (*sns.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *sns.TagResourceInput) *SnsTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *sns.TagResourceInput) *SNSTagResourceFuture
 
 	Unsubscribe(ctx workflow.Context, input *sns.UnsubscribeInput) (*sns.UnsubscribeOutput, error)
-	UnsubscribeAsync(ctx workflow.Context, input *sns.UnsubscribeInput) *SnsUnsubscribeResult
+	UnsubscribeAsync(ctx workflow.Context, input *sns.UnsubscribeInput) *SNSUnsubscribeFuture
 
 	UntagResource(ctx workflow.Context, input *sns.UntagResourceInput) (*sns.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *sns.UntagResourceInput) *SnsUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *sns.UntagResourceInput) *SNSUntagResourceFuture
 }
 
 type SNSStub struct{}
@@ -116,333 +116,366 @@ func NewSNSStub() SNSClient {
 	return &SNSStub{}
 }
 
-type SnsAddPermissionResult struct {
-	Result workflow.Future
+type SNSAddPermissionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsAddPermissionResult) Get(ctx workflow.Context) (*sns.AddPermissionOutput, error) {
+func (r *SNSAddPermissionFuture) Get(ctx workflow.Context) (*sns.AddPermissionOutput, error) {
 	var output sns.AddPermissionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsCheckIfPhoneNumberIsOptedOutResult struct {
-	Result workflow.Future
+type SNSCheckIfPhoneNumberIsOptedOutFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsCheckIfPhoneNumberIsOptedOutResult) Get(ctx workflow.Context) (*sns.CheckIfPhoneNumberIsOptedOutOutput, error) {
+func (r *SNSCheckIfPhoneNumberIsOptedOutFuture) Get(ctx workflow.Context) (*sns.CheckIfPhoneNumberIsOptedOutOutput, error) {
 	var output sns.CheckIfPhoneNumberIsOptedOutOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsConfirmSubscriptionResult struct {
-	Result workflow.Future
+type SNSConfirmSubscriptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsConfirmSubscriptionResult) Get(ctx workflow.Context) (*sns.ConfirmSubscriptionOutput, error) {
+func (r *SNSConfirmSubscriptionFuture) Get(ctx workflow.Context) (*sns.ConfirmSubscriptionOutput, error) {
 	var output sns.ConfirmSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsCreatePlatformApplicationResult struct {
-	Result workflow.Future
+type SNSCreatePlatformApplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsCreatePlatformApplicationResult) Get(ctx workflow.Context) (*sns.CreatePlatformApplicationOutput, error) {
+func (r *SNSCreatePlatformApplicationFuture) Get(ctx workflow.Context) (*sns.CreatePlatformApplicationOutput, error) {
 	var output sns.CreatePlatformApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsCreatePlatformEndpointResult struct {
-	Result workflow.Future
+type SNSCreatePlatformEndpointFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsCreatePlatformEndpointResult) Get(ctx workflow.Context) (*sns.CreatePlatformEndpointOutput, error) {
+func (r *SNSCreatePlatformEndpointFuture) Get(ctx workflow.Context) (*sns.CreatePlatformEndpointOutput, error) {
 	var output sns.CreatePlatformEndpointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsCreateTopicResult struct {
-	Result workflow.Future
+type SNSCreateTopicFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsCreateTopicResult) Get(ctx workflow.Context) (*sns.CreateTopicOutput, error) {
+func (r *SNSCreateTopicFuture) Get(ctx workflow.Context) (*sns.CreateTopicOutput, error) {
 	var output sns.CreateTopicOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsDeleteEndpointResult struct {
-	Result workflow.Future
+type SNSDeleteEndpointFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsDeleteEndpointResult) Get(ctx workflow.Context) (*sns.DeleteEndpointOutput, error) {
+func (r *SNSDeleteEndpointFuture) Get(ctx workflow.Context) (*sns.DeleteEndpointOutput, error) {
 	var output sns.DeleteEndpointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsDeletePlatformApplicationResult struct {
-	Result workflow.Future
+type SNSDeletePlatformApplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsDeletePlatformApplicationResult) Get(ctx workflow.Context) (*sns.DeletePlatformApplicationOutput, error) {
+func (r *SNSDeletePlatformApplicationFuture) Get(ctx workflow.Context) (*sns.DeletePlatformApplicationOutput, error) {
 	var output sns.DeletePlatformApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsDeleteTopicResult struct {
-	Result workflow.Future
+type SNSDeleteTopicFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsDeleteTopicResult) Get(ctx workflow.Context) (*sns.DeleteTopicOutput, error) {
+func (r *SNSDeleteTopicFuture) Get(ctx workflow.Context) (*sns.DeleteTopicOutput, error) {
 	var output sns.DeleteTopicOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsGetEndpointAttributesResult struct {
-	Result workflow.Future
+type SNSGetEndpointAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsGetEndpointAttributesResult) Get(ctx workflow.Context) (*sns.GetEndpointAttributesOutput, error) {
+func (r *SNSGetEndpointAttributesFuture) Get(ctx workflow.Context) (*sns.GetEndpointAttributesOutput, error) {
 	var output sns.GetEndpointAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsGetPlatformApplicationAttributesResult struct {
-	Result workflow.Future
+type SNSGetPlatformApplicationAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsGetPlatformApplicationAttributesResult) Get(ctx workflow.Context) (*sns.GetPlatformApplicationAttributesOutput, error) {
+func (r *SNSGetPlatformApplicationAttributesFuture) Get(ctx workflow.Context) (*sns.GetPlatformApplicationAttributesOutput, error) {
 	var output sns.GetPlatformApplicationAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsGetSMSAttributesResult struct {
-	Result workflow.Future
+type SNSGetSMSAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsGetSMSAttributesResult) Get(ctx workflow.Context) (*sns.GetSMSAttributesOutput, error) {
+func (r *SNSGetSMSAttributesFuture) Get(ctx workflow.Context) (*sns.GetSMSAttributesOutput, error) {
 	var output sns.GetSMSAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsGetSubscriptionAttributesResult struct {
-	Result workflow.Future
+type SNSGetSubscriptionAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsGetSubscriptionAttributesResult) Get(ctx workflow.Context) (*sns.GetSubscriptionAttributesOutput, error) {
+func (r *SNSGetSubscriptionAttributesFuture) Get(ctx workflow.Context) (*sns.GetSubscriptionAttributesOutput, error) {
 	var output sns.GetSubscriptionAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsGetTopicAttributesResult struct {
-	Result workflow.Future
+type SNSGetTopicAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsGetTopicAttributesResult) Get(ctx workflow.Context) (*sns.GetTopicAttributesOutput, error) {
+func (r *SNSGetTopicAttributesFuture) Get(ctx workflow.Context) (*sns.GetTopicAttributesOutput, error) {
 	var output sns.GetTopicAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsListEndpointsByPlatformApplicationResult struct {
-	Result workflow.Future
+type SNSListEndpointsByPlatformApplicationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsListEndpointsByPlatformApplicationResult) Get(ctx workflow.Context) (*sns.ListEndpointsByPlatformApplicationOutput, error) {
+func (r *SNSListEndpointsByPlatformApplicationFuture) Get(ctx workflow.Context) (*sns.ListEndpointsByPlatformApplicationOutput, error) {
 	var output sns.ListEndpointsByPlatformApplicationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsListPhoneNumbersOptedOutResult struct {
-	Result workflow.Future
+type SNSListPhoneNumbersOptedOutFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsListPhoneNumbersOptedOutResult) Get(ctx workflow.Context) (*sns.ListPhoneNumbersOptedOutOutput, error) {
+func (r *SNSListPhoneNumbersOptedOutFuture) Get(ctx workflow.Context) (*sns.ListPhoneNumbersOptedOutOutput, error) {
 	var output sns.ListPhoneNumbersOptedOutOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsListPlatformApplicationsResult struct {
-	Result workflow.Future
+type SNSListPlatformApplicationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsListPlatformApplicationsResult) Get(ctx workflow.Context) (*sns.ListPlatformApplicationsOutput, error) {
+func (r *SNSListPlatformApplicationsFuture) Get(ctx workflow.Context) (*sns.ListPlatformApplicationsOutput, error) {
 	var output sns.ListPlatformApplicationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsListSubscriptionsResult struct {
-	Result workflow.Future
+type SNSListSubscriptionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsListSubscriptionsResult) Get(ctx workflow.Context) (*sns.ListSubscriptionsOutput, error) {
+func (r *SNSListSubscriptionsFuture) Get(ctx workflow.Context) (*sns.ListSubscriptionsOutput, error) {
 	var output sns.ListSubscriptionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsListSubscriptionsByTopicResult struct {
-	Result workflow.Future
+type SNSListSubscriptionsByTopicFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsListSubscriptionsByTopicResult) Get(ctx workflow.Context) (*sns.ListSubscriptionsByTopicOutput, error) {
+func (r *SNSListSubscriptionsByTopicFuture) Get(ctx workflow.Context) (*sns.ListSubscriptionsByTopicOutput, error) {
 	var output sns.ListSubscriptionsByTopicOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsListTagsForResourceResult struct {
-	Result workflow.Future
+type SNSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsListTagsForResourceResult) Get(ctx workflow.Context) (*sns.ListTagsForResourceOutput, error) {
+func (r *SNSListTagsForResourceFuture) Get(ctx workflow.Context) (*sns.ListTagsForResourceOutput, error) {
 	var output sns.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsListTopicsResult struct {
-	Result workflow.Future
+type SNSListTopicsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsListTopicsResult) Get(ctx workflow.Context) (*sns.ListTopicsOutput, error) {
+func (r *SNSListTopicsFuture) Get(ctx workflow.Context) (*sns.ListTopicsOutput, error) {
 	var output sns.ListTopicsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsOptInPhoneNumberResult struct {
-	Result workflow.Future
+type SNSOptInPhoneNumberFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsOptInPhoneNumberResult) Get(ctx workflow.Context) (*sns.OptInPhoneNumberOutput, error) {
+func (r *SNSOptInPhoneNumberFuture) Get(ctx workflow.Context) (*sns.OptInPhoneNumberOutput, error) {
 	var output sns.OptInPhoneNumberOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsPublishResult struct {
-	Result workflow.Future
+type SNSPublishFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsPublishResult) Get(ctx workflow.Context) (*sns.PublishOutput, error) {
+func (r *SNSPublishFuture) Get(ctx workflow.Context) (*sns.PublishOutput, error) {
 	var output sns.PublishOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsRemovePermissionResult struct {
-	Result workflow.Future
+type SNSRemovePermissionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsRemovePermissionResult) Get(ctx workflow.Context) (*sns.RemovePermissionOutput, error) {
+func (r *SNSRemovePermissionFuture) Get(ctx workflow.Context) (*sns.RemovePermissionOutput, error) {
 	var output sns.RemovePermissionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsSetEndpointAttributesResult struct {
-	Result workflow.Future
+type SNSSetEndpointAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsSetEndpointAttributesResult) Get(ctx workflow.Context) (*sns.SetEndpointAttributesOutput, error) {
+func (r *SNSSetEndpointAttributesFuture) Get(ctx workflow.Context) (*sns.SetEndpointAttributesOutput, error) {
 	var output sns.SetEndpointAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsSetPlatformApplicationAttributesResult struct {
-	Result workflow.Future
+type SNSSetPlatformApplicationAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsSetPlatformApplicationAttributesResult) Get(ctx workflow.Context) (*sns.SetPlatformApplicationAttributesOutput, error) {
+func (r *SNSSetPlatformApplicationAttributesFuture) Get(ctx workflow.Context) (*sns.SetPlatformApplicationAttributesOutput, error) {
 	var output sns.SetPlatformApplicationAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsSetSMSAttributesResult struct {
-	Result workflow.Future
+type SNSSetSMSAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsSetSMSAttributesResult) Get(ctx workflow.Context) (*sns.SetSMSAttributesOutput, error) {
+func (r *SNSSetSMSAttributesFuture) Get(ctx workflow.Context) (*sns.SetSMSAttributesOutput, error) {
 	var output sns.SetSMSAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsSetSubscriptionAttributesResult struct {
-	Result workflow.Future
+type SNSSetSubscriptionAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsSetSubscriptionAttributesResult) Get(ctx workflow.Context) (*sns.SetSubscriptionAttributesOutput, error) {
+func (r *SNSSetSubscriptionAttributesFuture) Get(ctx workflow.Context) (*sns.SetSubscriptionAttributesOutput, error) {
 	var output sns.SetSubscriptionAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsSetTopicAttributesResult struct {
-	Result workflow.Future
+type SNSSetTopicAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsSetTopicAttributesResult) Get(ctx workflow.Context) (*sns.SetTopicAttributesOutput, error) {
+func (r *SNSSetTopicAttributesFuture) Get(ctx workflow.Context) (*sns.SetTopicAttributesOutput, error) {
 	var output sns.SetTopicAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsSubscribeResult struct {
-	Result workflow.Future
+type SNSSubscribeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsSubscribeResult) Get(ctx workflow.Context) (*sns.SubscribeOutput, error) {
+func (r *SNSSubscribeFuture) Get(ctx workflow.Context) (*sns.SubscribeOutput, error) {
 	var output sns.SubscribeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsTagResourceResult struct {
-	Result workflow.Future
+type SNSTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsTagResourceResult) Get(ctx workflow.Context) (*sns.TagResourceOutput, error) {
+func (r *SNSTagResourceFuture) Get(ctx workflow.Context) (*sns.TagResourceOutput, error) {
 	var output sns.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsUnsubscribeResult struct {
-	Result workflow.Future
+type SNSUnsubscribeFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsUnsubscribeResult) Get(ctx workflow.Context) (*sns.UnsubscribeOutput, error) {
+func (r *SNSUnsubscribeFuture) Get(ctx workflow.Context) (*sns.UnsubscribeOutput, error) {
 	var output sns.UnsubscribeOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SnsUntagResourceResult struct {
-	Result workflow.Future
+type SNSUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SnsUntagResourceResult) Get(ctx workflow.Context) (*sns.UntagResourceOutput, error) {
+func (r *SNSUntagResourceFuture) Get(ctx workflow.Context) (*sns.UntagResourceOutput, error) {
 	var output sns.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -452,9 +485,9 @@ func (a *SNSStub) AddPermission(ctx workflow.Context, input *sns.AddPermissionIn
 	return &output, err
 }
 
-func (a *SNSStub) AddPermissionAsync(ctx workflow.Context, input *sns.AddPermissionInput) *SnsAddPermissionResult {
+func (a *SNSStub) AddPermissionAsync(ctx workflow.Context, input *sns.AddPermissionInput) *SNSAddPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.AddPermission", input)
-	return &SnsAddPermissionResult{Result: future}
+	return &SNSAddPermissionFuture{Future: future}
 }
 
 func (a *SNSStub) CheckIfPhoneNumberIsOptedOut(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) (*sns.CheckIfPhoneNumberIsOptedOutOutput, error) {
@@ -463,9 +496,9 @@ func (a *SNSStub) CheckIfPhoneNumberIsOptedOut(ctx workflow.Context, input *sns.
 	return &output, err
 }
 
-func (a *SNSStub) CheckIfPhoneNumberIsOptedOutAsync(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) *SnsCheckIfPhoneNumberIsOptedOutResult {
+func (a *SNSStub) CheckIfPhoneNumberIsOptedOutAsync(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) *SNSCheckIfPhoneNumberIsOptedOutFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.CheckIfPhoneNumberIsOptedOut", input)
-	return &SnsCheckIfPhoneNumberIsOptedOutResult{Result: future}
+	return &SNSCheckIfPhoneNumberIsOptedOutFuture{Future: future}
 }
 
 func (a *SNSStub) ConfirmSubscription(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) (*sns.ConfirmSubscriptionOutput, error) {
@@ -474,9 +507,9 @@ func (a *SNSStub) ConfirmSubscription(ctx workflow.Context, input *sns.ConfirmSu
 	return &output, err
 }
 
-func (a *SNSStub) ConfirmSubscriptionAsync(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) *SnsConfirmSubscriptionResult {
+func (a *SNSStub) ConfirmSubscriptionAsync(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) *SNSConfirmSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.ConfirmSubscription", input)
-	return &SnsConfirmSubscriptionResult{Result: future}
+	return &SNSConfirmSubscriptionFuture{Future: future}
 }
 
 func (a *SNSStub) CreatePlatformApplication(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) (*sns.CreatePlatformApplicationOutput, error) {
@@ -485,9 +518,9 @@ func (a *SNSStub) CreatePlatformApplication(ctx workflow.Context, input *sns.Cre
 	return &output, err
 }
 
-func (a *SNSStub) CreatePlatformApplicationAsync(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) *SnsCreatePlatformApplicationResult {
+func (a *SNSStub) CreatePlatformApplicationAsync(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) *SNSCreatePlatformApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.CreatePlatformApplication", input)
-	return &SnsCreatePlatformApplicationResult{Result: future}
+	return &SNSCreatePlatformApplicationFuture{Future: future}
 }
 
 func (a *SNSStub) CreatePlatformEndpoint(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) (*sns.CreatePlatformEndpointOutput, error) {
@@ -496,9 +529,9 @@ func (a *SNSStub) CreatePlatformEndpoint(ctx workflow.Context, input *sns.Create
 	return &output, err
 }
 
-func (a *SNSStub) CreatePlatformEndpointAsync(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) *SnsCreatePlatformEndpointResult {
+func (a *SNSStub) CreatePlatformEndpointAsync(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) *SNSCreatePlatformEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.CreatePlatformEndpoint", input)
-	return &SnsCreatePlatformEndpointResult{Result: future}
+	return &SNSCreatePlatformEndpointFuture{Future: future}
 }
 
 func (a *SNSStub) CreateTopic(ctx workflow.Context, input *sns.CreateTopicInput) (*sns.CreateTopicOutput, error) {
@@ -507,9 +540,9 @@ func (a *SNSStub) CreateTopic(ctx workflow.Context, input *sns.CreateTopicInput)
 	return &output, err
 }
 
-func (a *SNSStub) CreateTopicAsync(ctx workflow.Context, input *sns.CreateTopicInput) *SnsCreateTopicResult {
+func (a *SNSStub) CreateTopicAsync(ctx workflow.Context, input *sns.CreateTopicInput) *SNSCreateTopicFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.CreateTopic", input)
-	return &SnsCreateTopicResult{Result: future}
+	return &SNSCreateTopicFuture{Future: future}
 }
 
 func (a *SNSStub) DeleteEndpoint(ctx workflow.Context, input *sns.DeleteEndpointInput) (*sns.DeleteEndpointOutput, error) {
@@ -518,9 +551,9 @@ func (a *SNSStub) DeleteEndpoint(ctx workflow.Context, input *sns.DeleteEndpoint
 	return &output, err
 }
 
-func (a *SNSStub) DeleteEndpointAsync(ctx workflow.Context, input *sns.DeleteEndpointInput) *SnsDeleteEndpointResult {
+func (a *SNSStub) DeleteEndpointAsync(ctx workflow.Context, input *sns.DeleteEndpointInput) *SNSDeleteEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.DeleteEndpoint", input)
-	return &SnsDeleteEndpointResult{Result: future}
+	return &SNSDeleteEndpointFuture{Future: future}
 }
 
 func (a *SNSStub) DeletePlatformApplication(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) (*sns.DeletePlatformApplicationOutput, error) {
@@ -529,9 +562,9 @@ func (a *SNSStub) DeletePlatformApplication(ctx workflow.Context, input *sns.Del
 	return &output, err
 }
 
-func (a *SNSStub) DeletePlatformApplicationAsync(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) *SnsDeletePlatformApplicationResult {
+func (a *SNSStub) DeletePlatformApplicationAsync(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) *SNSDeletePlatformApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.DeletePlatformApplication", input)
-	return &SnsDeletePlatformApplicationResult{Result: future}
+	return &SNSDeletePlatformApplicationFuture{Future: future}
 }
 
 func (a *SNSStub) DeleteTopic(ctx workflow.Context, input *sns.DeleteTopicInput) (*sns.DeleteTopicOutput, error) {
@@ -540,9 +573,9 @@ func (a *SNSStub) DeleteTopic(ctx workflow.Context, input *sns.DeleteTopicInput)
 	return &output, err
 }
 
-func (a *SNSStub) DeleteTopicAsync(ctx workflow.Context, input *sns.DeleteTopicInput) *SnsDeleteTopicResult {
+func (a *SNSStub) DeleteTopicAsync(ctx workflow.Context, input *sns.DeleteTopicInput) *SNSDeleteTopicFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.DeleteTopic", input)
-	return &SnsDeleteTopicResult{Result: future}
+	return &SNSDeleteTopicFuture{Future: future}
 }
 
 func (a *SNSStub) GetEndpointAttributes(ctx workflow.Context, input *sns.GetEndpointAttributesInput) (*sns.GetEndpointAttributesOutput, error) {
@@ -551,9 +584,9 @@ func (a *SNSStub) GetEndpointAttributes(ctx workflow.Context, input *sns.GetEndp
 	return &output, err
 }
 
-func (a *SNSStub) GetEndpointAttributesAsync(ctx workflow.Context, input *sns.GetEndpointAttributesInput) *SnsGetEndpointAttributesResult {
+func (a *SNSStub) GetEndpointAttributesAsync(ctx workflow.Context, input *sns.GetEndpointAttributesInput) *SNSGetEndpointAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.GetEndpointAttributes", input)
-	return &SnsGetEndpointAttributesResult{Result: future}
+	return &SNSGetEndpointAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) GetPlatformApplicationAttributes(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) (*sns.GetPlatformApplicationAttributesOutput, error) {
@@ -562,9 +595,9 @@ func (a *SNSStub) GetPlatformApplicationAttributes(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *SNSStub) GetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) *SnsGetPlatformApplicationAttributesResult {
+func (a *SNSStub) GetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) *SNSGetPlatformApplicationAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.GetPlatformApplicationAttributes", input)
-	return &SnsGetPlatformApplicationAttributesResult{Result: future}
+	return &SNSGetPlatformApplicationAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) GetSMSAttributes(ctx workflow.Context, input *sns.GetSMSAttributesInput) (*sns.GetSMSAttributesOutput, error) {
@@ -573,9 +606,9 @@ func (a *SNSStub) GetSMSAttributes(ctx workflow.Context, input *sns.GetSMSAttrib
 	return &output, err
 }
 
-func (a *SNSStub) GetSMSAttributesAsync(ctx workflow.Context, input *sns.GetSMSAttributesInput) *SnsGetSMSAttributesResult {
+func (a *SNSStub) GetSMSAttributesAsync(ctx workflow.Context, input *sns.GetSMSAttributesInput) *SNSGetSMSAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.GetSMSAttributes", input)
-	return &SnsGetSMSAttributesResult{Result: future}
+	return &SNSGetSMSAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) GetSubscriptionAttributes(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) (*sns.GetSubscriptionAttributesOutput, error) {
@@ -584,9 +617,9 @@ func (a *SNSStub) GetSubscriptionAttributes(ctx workflow.Context, input *sns.Get
 	return &output, err
 }
 
-func (a *SNSStub) GetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) *SnsGetSubscriptionAttributesResult {
+func (a *SNSStub) GetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) *SNSGetSubscriptionAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.GetSubscriptionAttributes", input)
-	return &SnsGetSubscriptionAttributesResult{Result: future}
+	return &SNSGetSubscriptionAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) GetTopicAttributes(ctx workflow.Context, input *sns.GetTopicAttributesInput) (*sns.GetTopicAttributesOutput, error) {
@@ -595,9 +628,9 @@ func (a *SNSStub) GetTopicAttributes(ctx workflow.Context, input *sns.GetTopicAt
 	return &output, err
 }
 
-func (a *SNSStub) GetTopicAttributesAsync(ctx workflow.Context, input *sns.GetTopicAttributesInput) *SnsGetTopicAttributesResult {
+func (a *SNSStub) GetTopicAttributesAsync(ctx workflow.Context, input *sns.GetTopicAttributesInput) *SNSGetTopicAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.GetTopicAttributes", input)
-	return &SnsGetTopicAttributesResult{Result: future}
+	return &SNSGetTopicAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) ListEndpointsByPlatformApplication(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) (*sns.ListEndpointsByPlatformApplicationOutput, error) {
@@ -606,9 +639,9 @@ func (a *SNSStub) ListEndpointsByPlatformApplication(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *SNSStub) ListEndpointsByPlatformApplicationAsync(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) *SnsListEndpointsByPlatformApplicationResult {
+func (a *SNSStub) ListEndpointsByPlatformApplicationAsync(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) *SNSListEndpointsByPlatformApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.ListEndpointsByPlatformApplication", input)
-	return &SnsListEndpointsByPlatformApplicationResult{Result: future}
+	return &SNSListEndpointsByPlatformApplicationFuture{Future: future}
 }
 
 func (a *SNSStub) ListPhoneNumbersOptedOut(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) (*sns.ListPhoneNumbersOptedOutOutput, error) {
@@ -617,9 +650,9 @@ func (a *SNSStub) ListPhoneNumbersOptedOut(ctx workflow.Context, input *sns.List
 	return &output, err
 }
 
-func (a *SNSStub) ListPhoneNumbersOptedOutAsync(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) *SnsListPhoneNumbersOptedOutResult {
+func (a *SNSStub) ListPhoneNumbersOptedOutAsync(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) *SNSListPhoneNumbersOptedOutFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.ListPhoneNumbersOptedOut", input)
-	return &SnsListPhoneNumbersOptedOutResult{Result: future}
+	return &SNSListPhoneNumbersOptedOutFuture{Future: future}
 }
 
 func (a *SNSStub) ListPlatformApplications(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) (*sns.ListPlatformApplicationsOutput, error) {
@@ -628,9 +661,9 @@ func (a *SNSStub) ListPlatformApplications(ctx workflow.Context, input *sns.List
 	return &output, err
 }
 
-func (a *SNSStub) ListPlatformApplicationsAsync(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) *SnsListPlatformApplicationsResult {
+func (a *SNSStub) ListPlatformApplicationsAsync(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) *SNSListPlatformApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.ListPlatformApplications", input)
-	return &SnsListPlatformApplicationsResult{Result: future}
+	return &SNSListPlatformApplicationsFuture{Future: future}
 }
 
 func (a *SNSStub) ListSubscriptions(ctx workflow.Context, input *sns.ListSubscriptionsInput) (*sns.ListSubscriptionsOutput, error) {
@@ -639,9 +672,9 @@ func (a *SNSStub) ListSubscriptions(ctx workflow.Context, input *sns.ListSubscri
 	return &output, err
 }
 
-func (a *SNSStub) ListSubscriptionsAsync(ctx workflow.Context, input *sns.ListSubscriptionsInput) *SnsListSubscriptionsResult {
+func (a *SNSStub) ListSubscriptionsAsync(ctx workflow.Context, input *sns.ListSubscriptionsInput) *SNSListSubscriptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.ListSubscriptions", input)
-	return &SnsListSubscriptionsResult{Result: future}
+	return &SNSListSubscriptionsFuture{Future: future}
 }
 
 func (a *SNSStub) ListSubscriptionsByTopic(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) (*sns.ListSubscriptionsByTopicOutput, error) {
@@ -650,9 +683,9 @@ func (a *SNSStub) ListSubscriptionsByTopic(ctx workflow.Context, input *sns.List
 	return &output, err
 }
 
-func (a *SNSStub) ListSubscriptionsByTopicAsync(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) *SnsListSubscriptionsByTopicResult {
+func (a *SNSStub) ListSubscriptionsByTopicAsync(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) *SNSListSubscriptionsByTopicFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.ListSubscriptionsByTopic", input)
-	return &SnsListSubscriptionsByTopicResult{Result: future}
+	return &SNSListSubscriptionsByTopicFuture{Future: future}
 }
 
 func (a *SNSStub) ListTagsForResource(ctx workflow.Context, input *sns.ListTagsForResourceInput) (*sns.ListTagsForResourceOutput, error) {
@@ -661,9 +694,9 @@ func (a *SNSStub) ListTagsForResource(ctx workflow.Context, input *sns.ListTagsF
 	return &output, err
 }
 
-func (a *SNSStub) ListTagsForResourceAsync(ctx workflow.Context, input *sns.ListTagsForResourceInput) *SnsListTagsForResourceResult {
+func (a *SNSStub) ListTagsForResourceAsync(ctx workflow.Context, input *sns.ListTagsForResourceInput) *SNSListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.ListTagsForResource", input)
-	return &SnsListTagsForResourceResult{Result: future}
+	return &SNSListTagsForResourceFuture{Future: future}
 }
 
 func (a *SNSStub) ListTopics(ctx workflow.Context, input *sns.ListTopicsInput) (*sns.ListTopicsOutput, error) {
@@ -672,9 +705,9 @@ func (a *SNSStub) ListTopics(ctx workflow.Context, input *sns.ListTopicsInput) (
 	return &output, err
 }
 
-func (a *SNSStub) ListTopicsAsync(ctx workflow.Context, input *sns.ListTopicsInput) *SnsListTopicsResult {
+func (a *SNSStub) ListTopicsAsync(ctx workflow.Context, input *sns.ListTopicsInput) *SNSListTopicsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.ListTopics", input)
-	return &SnsListTopicsResult{Result: future}
+	return &SNSListTopicsFuture{Future: future}
 }
 
 func (a *SNSStub) OptInPhoneNumber(ctx workflow.Context, input *sns.OptInPhoneNumberInput) (*sns.OptInPhoneNumberOutput, error) {
@@ -683,9 +716,9 @@ func (a *SNSStub) OptInPhoneNumber(ctx workflow.Context, input *sns.OptInPhoneNu
 	return &output, err
 }
 
-func (a *SNSStub) OptInPhoneNumberAsync(ctx workflow.Context, input *sns.OptInPhoneNumberInput) *SnsOptInPhoneNumberResult {
+func (a *SNSStub) OptInPhoneNumberAsync(ctx workflow.Context, input *sns.OptInPhoneNumberInput) *SNSOptInPhoneNumberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.OptInPhoneNumber", input)
-	return &SnsOptInPhoneNumberResult{Result: future}
+	return &SNSOptInPhoneNumberFuture{Future: future}
 }
 
 func (a *SNSStub) Publish(ctx workflow.Context, input *sns.PublishInput) (*sns.PublishOutput, error) {
@@ -694,9 +727,9 @@ func (a *SNSStub) Publish(ctx workflow.Context, input *sns.PublishInput) (*sns.P
 	return &output, err
 }
 
-func (a *SNSStub) PublishAsync(ctx workflow.Context, input *sns.PublishInput) *SnsPublishResult {
+func (a *SNSStub) PublishAsync(ctx workflow.Context, input *sns.PublishInput) *SNSPublishFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.Publish", input)
-	return &SnsPublishResult{Result: future}
+	return &SNSPublishFuture{Future: future}
 }
 
 func (a *SNSStub) RemovePermission(ctx workflow.Context, input *sns.RemovePermissionInput) (*sns.RemovePermissionOutput, error) {
@@ -705,9 +738,9 @@ func (a *SNSStub) RemovePermission(ctx workflow.Context, input *sns.RemovePermis
 	return &output, err
 }
 
-func (a *SNSStub) RemovePermissionAsync(ctx workflow.Context, input *sns.RemovePermissionInput) *SnsRemovePermissionResult {
+func (a *SNSStub) RemovePermissionAsync(ctx workflow.Context, input *sns.RemovePermissionInput) *SNSRemovePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.RemovePermission", input)
-	return &SnsRemovePermissionResult{Result: future}
+	return &SNSRemovePermissionFuture{Future: future}
 }
 
 func (a *SNSStub) SetEndpointAttributes(ctx workflow.Context, input *sns.SetEndpointAttributesInput) (*sns.SetEndpointAttributesOutput, error) {
@@ -716,9 +749,9 @@ func (a *SNSStub) SetEndpointAttributes(ctx workflow.Context, input *sns.SetEndp
 	return &output, err
 }
 
-func (a *SNSStub) SetEndpointAttributesAsync(ctx workflow.Context, input *sns.SetEndpointAttributesInput) *SnsSetEndpointAttributesResult {
+func (a *SNSStub) SetEndpointAttributesAsync(ctx workflow.Context, input *sns.SetEndpointAttributesInput) *SNSSetEndpointAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.SetEndpointAttributes", input)
-	return &SnsSetEndpointAttributesResult{Result: future}
+	return &SNSSetEndpointAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) SetPlatformApplicationAttributes(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) (*sns.SetPlatformApplicationAttributesOutput, error) {
@@ -727,9 +760,9 @@ func (a *SNSStub) SetPlatformApplicationAttributes(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *SNSStub) SetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) *SnsSetPlatformApplicationAttributesResult {
+func (a *SNSStub) SetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) *SNSSetPlatformApplicationAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.SetPlatformApplicationAttributes", input)
-	return &SnsSetPlatformApplicationAttributesResult{Result: future}
+	return &SNSSetPlatformApplicationAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) SetSMSAttributes(ctx workflow.Context, input *sns.SetSMSAttributesInput) (*sns.SetSMSAttributesOutput, error) {
@@ -738,9 +771,9 @@ func (a *SNSStub) SetSMSAttributes(ctx workflow.Context, input *sns.SetSMSAttrib
 	return &output, err
 }
 
-func (a *SNSStub) SetSMSAttributesAsync(ctx workflow.Context, input *sns.SetSMSAttributesInput) *SnsSetSMSAttributesResult {
+func (a *SNSStub) SetSMSAttributesAsync(ctx workflow.Context, input *sns.SetSMSAttributesInput) *SNSSetSMSAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.SetSMSAttributes", input)
-	return &SnsSetSMSAttributesResult{Result: future}
+	return &SNSSetSMSAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) SetSubscriptionAttributes(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) (*sns.SetSubscriptionAttributesOutput, error) {
@@ -749,9 +782,9 @@ func (a *SNSStub) SetSubscriptionAttributes(ctx workflow.Context, input *sns.Set
 	return &output, err
 }
 
-func (a *SNSStub) SetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) *SnsSetSubscriptionAttributesResult {
+func (a *SNSStub) SetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) *SNSSetSubscriptionAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.SetSubscriptionAttributes", input)
-	return &SnsSetSubscriptionAttributesResult{Result: future}
+	return &SNSSetSubscriptionAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) SetTopicAttributes(ctx workflow.Context, input *sns.SetTopicAttributesInput) (*sns.SetTopicAttributesOutput, error) {
@@ -760,9 +793,9 @@ func (a *SNSStub) SetTopicAttributes(ctx workflow.Context, input *sns.SetTopicAt
 	return &output, err
 }
 
-func (a *SNSStub) SetTopicAttributesAsync(ctx workflow.Context, input *sns.SetTopicAttributesInput) *SnsSetTopicAttributesResult {
+func (a *SNSStub) SetTopicAttributesAsync(ctx workflow.Context, input *sns.SetTopicAttributesInput) *SNSSetTopicAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.SetTopicAttributes", input)
-	return &SnsSetTopicAttributesResult{Result: future}
+	return &SNSSetTopicAttributesFuture{Future: future}
 }
 
 func (a *SNSStub) Subscribe(ctx workflow.Context, input *sns.SubscribeInput) (*sns.SubscribeOutput, error) {
@@ -771,9 +804,9 @@ func (a *SNSStub) Subscribe(ctx workflow.Context, input *sns.SubscribeInput) (*s
 	return &output, err
 }
 
-func (a *SNSStub) SubscribeAsync(ctx workflow.Context, input *sns.SubscribeInput) *SnsSubscribeResult {
+func (a *SNSStub) SubscribeAsync(ctx workflow.Context, input *sns.SubscribeInput) *SNSSubscribeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.Subscribe", input)
-	return &SnsSubscribeResult{Result: future}
+	return &SNSSubscribeFuture{Future: future}
 }
 
 func (a *SNSStub) TagResource(ctx workflow.Context, input *sns.TagResourceInput) (*sns.TagResourceOutput, error) {
@@ -782,9 +815,9 @@ func (a *SNSStub) TagResource(ctx workflow.Context, input *sns.TagResourceInput)
 	return &output, err
 }
 
-func (a *SNSStub) TagResourceAsync(ctx workflow.Context, input *sns.TagResourceInput) *SnsTagResourceResult {
+func (a *SNSStub) TagResourceAsync(ctx workflow.Context, input *sns.TagResourceInput) *SNSTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.TagResource", input)
-	return &SnsTagResourceResult{Result: future}
+	return &SNSTagResourceFuture{Future: future}
 }
 
 func (a *SNSStub) Unsubscribe(ctx workflow.Context, input *sns.UnsubscribeInput) (*sns.UnsubscribeOutput, error) {
@@ -793,9 +826,9 @@ func (a *SNSStub) Unsubscribe(ctx workflow.Context, input *sns.UnsubscribeInput)
 	return &output, err
 }
 
-func (a *SNSStub) UnsubscribeAsync(ctx workflow.Context, input *sns.UnsubscribeInput) *SnsUnsubscribeResult {
+func (a *SNSStub) UnsubscribeAsync(ctx workflow.Context, input *sns.UnsubscribeInput) *SNSUnsubscribeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.Unsubscribe", input)
-	return &SnsUnsubscribeResult{Result: future}
+	return &SNSUnsubscribeFuture{Future: future}
 }
 
 func (a *SNSStub) UntagResource(ctx workflow.Context, input *sns.UntagResourceInput) (*sns.UntagResourceOutput, error) {
@@ -804,7 +837,7 @@ func (a *SNSStub) UntagResource(ctx workflow.Context, input *sns.UntagResourceIn
 	return &output, err
 }
 
-func (a *SNSStub) UntagResourceAsync(ctx workflow.Context, input *sns.UntagResourceInput) *SnsUntagResourceResult {
+func (a *SNSStub) UntagResourceAsync(ctx workflow.Context, input *sns.UntagResourceInput) *SNSUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sns.UntagResource", input)
-	return &SnsUntagResourceResult{Result: future}
+	return &SNSUntagResourceFuture{Future: future}
 }

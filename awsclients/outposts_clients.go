@@ -11,25 +11,25 @@ import (
 
 type OutpostsClient interface {
 	CreateOutpost(ctx workflow.Context, input *outposts.CreateOutpostInput) (*outposts.CreateOutpostOutput, error)
-	CreateOutpostAsync(ctx workflow.Context, input *outposts.CreateOutpostInput) *OutpostsCreateOutpostResult
+	CreateOutpostAsync(ctx workflow.Context, input *outposts.CreateOutpostInput) *OutpostsCreateOutpostFuture
 
 	DeleteOutpost(ctx workflow.Context, input *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error)
-	DeleteOutpostAsync(ctx workflow.Context, input *outposts.DeleteOutpostInput) *OutpostsDeleteOutpostResult
+	DeleteOutpostAsync(ctx workflow.Context, input *outposts.DeleteOutpostInput) *OutpostsDeleteOutpostFuture
 
 	DeleteSite(ctx workflow.Context, input *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error)
-	DeleteSiteAsync(ctx workflow.Context, input *outposts.DeleteSiteInput) *OutpostsDeleteSiteResult
+	DeleteSiteAsync(ctx workflow.Context, input *outposts.DeleteSiteInput) *OutpostsDeleteSiteFuture
 
 	GetOutpost(ctx workflow.Context, input *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error)
-	GetOutpostAsync(ctx workflow.Context, input *outposts.GetOutpostInput) *OutpostsGetOutpostResult
+	GetOutpostAsync(ctx workflow.Context, input *outposts.GetOutpostInput) *OutpostsGetOutpostFuture
 
 	GetOutpostInstanceTypes(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error)
-	GetOutpostInstanceTypesAsync(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) *OutpostsGetOutpostInstanceTypesResult
+	GetOutpostInstanceTypesAsync(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) *OutpostsGetOutpostInstanceTypesFuture
 
 	ListOutposts(ctx workflow.Context, input *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error)
-	ListOutpostsAsync(ctx workflow.Context, input *outposts.ListOutpostsInput) *OutpostsListOutpostsResult
+	ListOutpostsAsync(ctx workflow.Context, input *outposts.ListOutpostsInput) *OutpostsListOutpostsFuture
 
 	ListSites(ctx workflow.Context, input *outposts.ListSitesInput) (*outposts.ListSitesOutput, error)
-	ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *OutpostsListSitesResult
+	ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *OutpostsListSitesFuture
 }
 
 type OutpostsStub struct{}
@@ -38,73 +38,80 @@ func NewOutpostsStub() OutpostsClient {
 	return &OutpostsStub{}
 }
 
-type OutpostsCreateOutpostResult struct {
-	Result workflow.Future
+type OutpostsCreateOutpostFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *OutpostsCreateOutpostResult) Get(ctx workflow.Context) (*outposts.CreateOutpostOutput, error) {
+func (r *OutpostsCreateOutpostFuture) Get(ctx workflow.Context) (*outposts.CreateOutpostOutput, error) {
 	var output outposts.CreateOutpostOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OutpostsDeleteOutpostResult struct {
-	Result workflow.Future
+type OutpostsDeleteOutpostFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *OutpostsDeleteOutpostResult) Get(ctx workflow.Context) (*outposts.DeleteOutpostOutput, error) {
+func (r *OutpostsDeleteOutpostFuture) Get(ctx workflow.Context) (*outposts.DeleteOutpostOutput, error) {
 	var output outposts.DeleteOutpostOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OutpostsDeleteSiteResult struct {
-	Result workflow.Future
+type OutpostsDeleteSiteFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *OutpostsDeleteSiteResult) Get(ctx workflow.Context) (*outposts.DeleteSiteOutput, error) {
+func (r *OutpostsDeleteSiteFuture) Get(ctx workflow.Context) (*outposts.DeleteSiteOutput, error) {
 	var output outposts.DeleteSiteOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OutpostsGetOutpostResult struct {
-	Result workflow.Future
+type OutpostsGetOutpostFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *OutpostsGetOutpostResult) Get(ctx workflow.Context) (*outposts.GetOutpostOutput, error) {
+func (r *OutpostsGetOutpostFuture) Get(ctx workflow.Context) (*outposts.GetOutpostOutput, error) {
 	var output outposts.GetOutpostOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OutpostsGetOutpostInstanceTypesResult struct {
-	Result workflow.Future
+type OutpostsGetOutpostInstanceTypesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *OutpostsGetOutpostInstanceTypesResult) Get(ctx workflow.Context) (*outposts.GetOutpostInstanceTypesOutput, error) {
+func (r *OutpostsGetOutpostInstanceTypesFuture) Get(ctx workflow.Context) (*outposts.GetOutpostInstanceTypesOutput, error) {
 	var output outposts.GetOutpostInstanceTypesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OutpostsListOutpostsResult struct {
-	Result workflow.Future
+type OutpostsListOutpostsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *OutpostsListOutpostsResult) Get(ctx workflow.Context) (*outposts.ListOutpostsOutput, error) {
+func (r *OutpostsListOutpostsFuture) Get(ctx workflow.Context) (*outposts.ListOutpostsOutput, error) {
 	var output outposts.ListOutpostsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OutpostsListSitesResult struct {
-	Result workflow.Future
+type OutpostsListSitesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *OutpostsListSitesResult) Get(ctx workflow.Context) (*outposts.ListSitesOutput, error) {
+func (r *OutpostsListSitesFuture) Get(ctx workflow.Context) (*outposts.ListSitesOutput, error) {
 	var output outposts.ListSitesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -114,9 +121,9 @@ func (a *OutpostsStub) CreateOutpost(ctx workflow.Context, input *outposts.Creat
 	return &output, err
 }
 
-func (a *OutpostsStub) CreateOutpostAsync(ctx workflow.Context, input *outposts.CreateOutpostInput) *OutpostsCreateOutpostResult {
+func (a *OutpostsStub) CreateOutpostAsync(ctx workflow.Context, input *outposts.CreateOutpostInput) *OutpostsCreateOutpostFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.outposts.CreateOutpost", input)
-	return &OutpostsCreateOutpostResult{Result: future}
+	return &OutpostsCreateOutpostFuture{Future: future}
 }
 
 func (a *OutpostsStub) DeleteOutpost(ctx workflow.Context, input *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error) {
@@ -125,9 +132,9 @@ func (a *OutpostsStub) DeleteOutpost(ctx workflow.Context, input *outposts.Delet
 	return &output, err
 }
 
-func (a *OutpostsStub) DeleteOutpostAsync(ctx workflow.Context, input *outposts.DeleteOutpostInput) *OutpostsDeleteOutpostResult {
+func (a *OutpostsStub) DeleteOutpostAsync(ctx workflow.Context, input *outposts.DeleteOutpostInput) *OutpostsDeleteOutpostFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.outposts.DeleteOutpost", input)
-	return &OutpostsDeleteOutpostResult{Result: future}
+	return &OutpostsDeleteOutpostFuture{Future: future}
 }
 
 func (a *OutpostsStub) DeleteSite(ctx workflow.Context, input *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error) {
@@ -136,9 +143,9 @@ func (a *OutpostsStub) DeleteSite(ctx workflow.Context, input *outposts.DeleteSi
 	return &output, err
 }
 
-func (a *OutpostsStub) DeleteSiteAsync(ctx workflow.Context, input *outposts.DeleteSiteInput) *OutpostsDeleteSiteResult {
+func (a *OutpostsStub) DeleteSiteAsync(ctx workflow.Context, input *outposts.DeleteSiteInput) *OutpostsDeleteSiteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.outposts.DeleteSite", input)
-	return &OutpostsDeleteSiteResult{Result: future}
+	return &OutpostsDeleteSiteFuture{Future: future}
 }
 
 func (a *OutpostsStub) GetOutpost(ctx workflow.Context, input *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error) {
@@ -147,9 +154,9 @@ func (a *OutpostsStub) GetOutpost(ctx workflow.Context, input *outposts.GetOutpo
 	return &output, err
 }
 
-func (a *OutpostsStub) GetOutpostAsync(ctx workflow.Context, input *outposts.GetOutpostInput) *OutpostsGetOutpostResult {
+func (a *OutpostsStub) GetOutpostAsync(ctx workflow.Context, input *outposts.GetOutpostInput) *OutpostsGetOutpostFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.outposts.GetOutpost", input)
-	return &OutpostsGetOutpostResult{Result: future}
+	return &OutpostsGetOutpostFuture{Future: future}
 }
 
 func (a *OutpostsStub) GetOutpostInstanceTypes(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error) {
@@ -158,9 +165,9 @@ func (a *OutpostsStub) GetOutpostInstanceTypes(ctx workflow.Context, input *outp
 	return &output, err
 }
 
-func (a *OutpostsStub) GetOutpostInstanceTypesAsync(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) *OutpostsGetOutpostInstanceTypesResult {
+func (a *OutpostsStub) GetOutpostInstanceTypesAsync(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) *OutpostsGetOutpostInstanceTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.outposts.GetOutpostInstanceTypes", input)
-	return &OutpostsGetOutpostInstanceTypesResult{Result: future}
+	return &OutpostsGetOutpostInstanceTypesFuture{Future: future}
 }
 
 func (a *OutpostsStub) ListOutposts(ctx workflow.Context, input *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error) {
@@ -169,9 +176,9 @@ func (a *OutpostsStub) ListOutposts(ctx workflow.Context, input *outposts.ListOu
 	return &output, err
 }
 
-func (a *OutpostsStub) ListOutpostsAsync(ctx workflow.Context, input *outposts.ListOutpostsInput) *OutpostsListOutpostsResult {
+func (a *OutpostsStub) ListOutpostsAsync(ctx workflow.Context, input *outposts.ListOutpostsInput) *OutpostsListOutpostsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.outposts.ListOutposts", input)
-	return &OutpostsListOutpostsResult{Result: future}
+	return &OutpostsListOutpostsFuture{Future: future}
 }
 
 func (a *OutpostsStub) ListSites(ctx workflow.Context, input *outposts.ListSitesInput) (*outposts.ListSitesOutput, error) {
@@ -180,7 +187,7 @@ func (a *OutpostsStub) ListSites(ctx workflow.Context, input *outposts.ListSites
 	return &output, err
 }
 
-func (a *OutpostsStub) ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *OutpostsListSitesResult {
+func (a *OutpostsStub) ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *OutpostsListSitesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.outposts.ListSites", input)
-	return &OutpostsListSitesResult{Result: future}
+	return &OutpostsListSitesFuture{Future: future}
 }

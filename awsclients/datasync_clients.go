@@ -11,97 +11,97 @@ import (
 
 type DataSyncClient interface {
 	CancelTaskExecution(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) (*datasync.CancelTaskExecutionOutput, error)
-	CancelTaskExecutionAsync(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) *DatasyncCancelTaskExecutionResult
+	CancelTaskExecutionAsync(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) *DataSyncCancelTaskExecutionFuture
 
 	CreateAgent(ctx workflow.Context, input *datasync.CreateAgentInput) (*datasync.CreateAgentOutput, error)
-	CreateAgentAsync(ctx workflow.Context, input *datasync.CreateAgentInput) *DatasyncCreateAgentResult
+	CreateAgentAsync(ctx workflow.Context, input *datasync.CreateAgentInput) *DataSyncCreateAgentFuture
 
 	CreateLocationEfs(ctx workflow.Context, input *datasync.CreateLocationEfsInput) (*datasync.CreateLocationEfsOutput, error)
-	CreateLocationEfsAsync(ctx workflow.Context, input *datasync.CreateLocationEfsInput) *DatasyncCreateLocationEfsResult
+	CreateLocationEfsAsync(ctx workflow.Context, input *datasync.CreateLocationEfsInput) *DataSyncCreateLocationEfsFuture
 
 	CreateLocationFsxWindows(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) (*datasync.CreateLocationFsxWindowsOutput, error)
-	CreateLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) *DatasyncCreateLocationFsxWindowsResult
+	CreateLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) *DataSyncCreateLocationFsxWindowsFuture
 
 	CreateLocationNfs(ctx workflow.Context, input *datasync.CreateLocationNfsInput) (*datasync.CreateLocationNfsOutput, error)
-	CreateLocationNfsAsync(ctx workflow.Context, input *datasync.CreateLocationNfsInput) *DatasyncCreateLocationNfsResult
+	CreateLocationNfsAsync(ctx workflow.Context, input *datasync.CreateLocationNfsInput) *DataSyncCreateLocationNfsFuture
 
 	CreateLocationObjectStorage(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) (*datasync.CreateLocationObjectStorageOutput, error)
-	CreateLocationObjectStorageAsync(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) *DatasyncCreateLocationObjectStorageResult
+	CreateLocationObjectStorageAsync(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) *DataSyncCreateLocationObjectStorageFuture
 
 	CreateLocationS3(ctx workflow.Context, input *datasync.CreateLocationS3Input) (*datasync.CreateLocationS3Output, error)
-	CreateLocationS3Async(ctx workflow.Context, input *datasync.CreateLocationS3Input) *DatasyncCreateLocationS3Result
+	CreateLocationS3Async(ctx workflow.Context, input *datasync.CreateLocationS3Input) *DataSyncCreateLocationS3Future
 
 	CreateLocationSmb(ctx workflow.Context, input *datasync.CreateLocationSmbInput) (*datasync.CreateLocationSmbOutput, error)
-	CreateLocationSmbAsync(ctx workflow.Context, input *datasync.CreateLocationSmbInput) *DatasyncCreateLocationSmbResult
+	CreateLocationSmbAsync(ctx workflow.Context, input *datasync.CreateLocationSmbInput) *DataSyncCreateLocationSmbFuture
 
 	CreateTask(ctx workflow.Context, input *datasync.CreateTaskInput) (*datasync.CreateTaskOutput, error)
-	CreateTaskAsync(ctx workflow.Context, input *datasync.CreateTaskInput) *DatasyncCreateTaskResult
+	CreateTaskAsync(ctx workflow.Context, input *datasync.CreateTaskInput) *DataSyncCreateTaskFuture
 
 	DeleteAgent(ctx workflow.Context, input *datasync.DeleteAgentInput) (*datasync.DeleteAgentOutput, error)
-	DeleteAgentAsync(ctx workflow.Context, input *datasync.DeleteAgentInput) *DatasyncDeleteAgentResult
+	DeleteAgentAsync(ctx workflow.Context, input *datasync.DeleteAgentInput) *DataSyncDeleteAgentFuture
 
 	DeleteLocation(ctx workflow.Context, input *datasync.DeleteLocationInput) (*datasync.DeleteLocationOutput, error)
-	DeleteLocationAsync(ctx workflow.Context, input *datasync.DeleteLocationInput) *DatasyncDeleteLocationResult
+	DeleteLocationAsync(ctx workflow.Context, input *datasync.DeleteLocationInput) *DataSyncDeleteLocationFuture
 
 	DeleteTask(ctx workflow.Context, input *datasync.DeleteTaskInput) (*datasync.DeleteTaskOutput, error)
-	DeleteTaskAsync(ctx workflow.Context, input *datasync.DeleteTaskInput) *DatasyncDeleteTaskResult
+	DeleteTaskAsync(ctx workflow.Context, input *datasync.DeleteTaskInput) *DataSyncDeleteTaskFuture
 
 	DescribeAgent(ctx workflow.Context, input *datasync.DescribeAgentInput) (*datasync.DescribeAgentOutput, error)
-	DescribeAgentAsync(ctx workflow.Context, input *datasync.DescribeAgentInput) *DatasyncDescribeAgentResult
+	DescribeAgentAsync(ctx workflow.Context, input *datasync.DescribeAgentInput) *DataSyncDescribeAgentFuture
 
 	DescribeLocationEfs(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) (*datasync.DescribeLocationEfsOutput, error)
-	DescribeLocationEfsAsync(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) *DatasyncDescribeLocationEfsResult
+	DescribeLocationEfsAsync(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) *DataSyncDescribeLocationEfsFuture
 
 	DescribeLocationFsxWindows(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) (*datasync.DescribeLocationFsxWindowsOutput, error)
-	DescribeLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) *DatasyncDescribeLocationFsxWindowsResult
+	DescribeLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) *DataSyncDescribeLocationFsxWindowsFuture
 
 	DescribeLocationNfs(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) (*datasync.DescribeLocationNfsOutput, error)
-	DescribeLocationNfsAsync(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) *DatasyncDescribeLocationNfsResult
+	DescribeLocationNfsAsync(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) *DataSyncDescribeLocationNfsFuture
 
 	DescribeLocationObjectStorage(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) (*datasync.DescribeLocationObjectStorageOutput, error)
-	DescribeLocationObjectStorageAsync(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) *DatasyncDescribeLocationObjectStorageResult
+	DescribeLocationObjectStorageAsync(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) *DataSyncDescribeLocationObjectStorageFuture
 
 	DescribeLocationS3(ctx workflow.Context, input *datasync.DescribeLocationS3Input) (*datasync.DescribeLocationS3Output, error)
-	DescribeLocationS3Async(ctx workflow.Context, input *datasync.DescribeLocationS3Input) *DatasyncDescribeLocationS3Result
+	DescribeLocationS3Async(ctx workflow.Context, input *datasync.DescribeLocationS3Input) *DataSyncDescribeLocationS3Future
 
 	DescribeLocationSmb(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) (*datasync.DescribeLocationSmbOutput, error)
-	DescribeLocationSmbAsync(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) *DatasyncDescribeLocationSmbResult
+	DescribeLocationSmbAsync(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) *DataSyncDescribeLocationSmbFuture
 
 	DescribeTask(ctx workflow.Context, input *datasync.DescribeTaskInput) (*datasync.DescribeTaskOutput, error)
-	DescribeTaskAsync(ctx workflow.Context, input *datasync.DescribeTaskInput) *DatasyncDescribeTaskResult
+	DescribeTaskAsync(ctx workflow.Context, input *datasync.DescribeTaskInput) *DataSyncDescribeTaskFuture
 
 	DescribeTaskExecution(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) (*datasync.DescribeTaskExecutionOutput, error)
-	DescribeTaskExecutionAsync(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) *DatasyncDescribeTaskExecutionResult
+	DescribeTaskExecutionAsync(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) *DataSyncDescribeTaskExecutionFuture
 
 	ListAgents(ctx workflow.Context, input *datasync.ListAgentsInput) (*datasync.ListAgentsOutput, error)
-	ListAgentsAsync(ctx workflow.Context, input *datasync.ListAgentsInput) *DatasyncListAgentsResult
+	ListAgentsAsync(ctx workflow.Context, input *datasync.ListAgentsInput) *DataSyncListAgentsFuture
 
 	ListLocations(ctx workflow.Context, input *datasync.ListLocationsInput) (*datasync.ListLocationsOutput, error)
-	ListLocationsAsync(ctx workflow.Context, input *datasync.ListLocationsInput) *DatasyncListLocationsResult
+	ListLocationsAsync(ctx workflow.Context, input *datasync.ListLocationsInput) *DataSyncListLocationsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *datasync.ListTagsForResourceInput) (*datasync.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *datasync.ListTagsForResourceInput) *DatasyncListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *datasync.ListTagsForResourceInput) *DataSyncListTagsForResourceFuture
 
 	ListTaskExecutions(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) (*datasync.ListTaskExecutionsOutput, error)
-	ListTaskExecutionsAsync(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) *DatasyncListTaskExecutionsResult
+	ListTaskExecutionsAsync(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) *DataSyncListTaskExecutionsFuture
 
 	ListTasks(ctx workflow.Context, input *datasync.ListTasksInput) (*datasync.ListTasksOutput, error)
-	ListTasksAsync(ctx workflow.Context, input *datasync.ListTasksInput) *DatasyncListTasksResult
+	ListTasksAsync(ctx workflow.Context, input *datasync.ListTasksInput) *DataSyncListTasksFuture
 
 	StartTaskExecution(ctx workflow.Context, input *datasync.StartTaskExecutionInput) (*datasync.StartTaskExecutionOutput, error)
-	StartTaskExecutionAsync(ctx workflow.Context, input *datasync.StartTaskExecutionInput) *DatasyncStartTaskExecutionResult
+	StartTaskExecutionAsync(ctx workflow.Context, input *datasync.StartTaskExecutionInput) *DataSyncStartTaskExecutionFuture
 
 	TagResource(ctx workflow.Context, input *datasync.TagResourceInput) (*datasync.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *datasync.TagResourceInput) *DatasyncTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *datasync.TagResourceInput) *DataSyncTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *datasync.UntagResourceInput) (*datasync.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *datasync.UntagResourceInput) *DatasyncUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *datasync.UntagResourceInput) *DataSyncUntagResourceFuture
 
 	UpdateAgent(ctx workflow.Context, input *datasync.UpdateAgentInput) (*datasync.UpdateAgentOutput, error)
-	UpdateAgentAsync(ctx workflow.Context, input *datasync.UpdateAgentInput) *DatasyncUpdateAgentResult
+	UpdateAgentAsync(ctx workflow.Context, input *datasync.UpdateAgentInput) *DataSyncUpdateAgentFuture
 
 	UpdateTask(ctx workflow.Context, input *datasync.UpdateTaskInput) (*datasync.UpdateTaskOutput, error)
-	UpdateTaskAsync(ctx workflow.Context, input *datasync.UpdateTaskInput) *DatasyncUpdateTaskResult
+	UpdateTaskAsync(ctx workflow.Context, input *datasync.UpdateTaskInput) *DataSyncUpdateTaskFuture
 }
 
 type DataSyncStub struct{}
@@ -110,313 +110,344 @@ func NewDataSyncStub() DataSyncClient {
 	return &DataSyncStub{}
 }
 
-type DatasyncCancelTaskExecutionResult struct {
-	Result workflow.Future
+type DataSyncCancelTaskExecutionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCancelTaskExecutionResult) Get(ctx workflow.Context) (*datasync.CancelTaskExecutionOutput, error) {
+func (r *DataSyncCancelTaskExecutionFuture) Get(ctx workflow.Context) (*datasync.CancelTaskExecutionOutput, error) {
 	var output datasync.CancelTaskExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncCreateAgentResult struct {
-	Result workflow.Future
+type DataSyncCreateAgentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCreateAgentResult) Get(ctx workflow.Context) (*datasync.CreateAgentOutput, error) {
+func (r *DataSyncCreateAgentFuture) Get(ctx workflow.Context) (*datasync.CreateAgentOutput, error) {
 	var output datasync.CreateAgentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncCreateLocationEfsResult struct {
-	Result workflow.Future
+type DataSyncCreateLocationEfsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCreateLocationEfsResult) Get(ctx workflow.Context) (*datasync.CreateLocationEfsOutput, error) {
+func (r *DataSyncCreateLocationEfsFuture) Get(ctx workflow.Context) (*datasync.CreateLocationEfsOutput, error) {
 	var output datasync.CreateLocationEfsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncCreateLocationFsxWindowsResult struct {
-	Result workflow.Future
+type DataSyncCreateLocationFsxWindowsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCreateLocationFsxWindowsResult) Get(ctx workflow.Context) (*datasync.CreateLocationFsxWindowsOutput, error) {
+func (r *DataSyncCreateLocationFsxWindowsFuture) Get(ctx workflow.Context) (*datasync.CreateLocationFsxWindowsOutput, error) {
 	var output datasync.CreateLocationFsxWindowsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncCreateLocationNfsResult struct {
-	Result workflow.Future
+type DataSyncCreateLocationNfsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCreateLocationNfsResult) Get(ctx workflow.Context) (*datasync.CreateLocationNfsOutput, error) {
+func (r *DataSyncCreateLocationNfsFuture) Get(ctx workflow.Context) (*datasync.CreateLocationNfsOutput, error) {
 	var output datasync.CreateLocationNfsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncCreateLocationObjectStorageResult struct {
-	Result workflow.Future
+type DataSyncCreateLocationObjectStorageFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCreateLocationObjectStorageResult) Get(ctx workflow.Context) (*datasync.CreateLocationObjectStorageOutput, error) {
+func (r *DataSyncCreateLocationObjectStorageFuture) Get(ctx workflow.Context) (*datasync.CreateLocationObjectStorageOutput, error) {
 	var output datasync.CreateLocationObjectStorageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncCreateLocationS3Result struct {
-	Result workflow.Future
+type DataSyncCreateLocationS3Future struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCreateLocationS3Result) Get(ctx workflow.Context) (*datasync.CreateLocationS3Output, error) {
+func (r *DataSyncCreateLocationS3Future) Get(ctx workflow.Context) (*datasync.CreateLocationS3Output, error) {
 	var output datasync.CreateLocationS3Output
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncCreateLocationSmbResult struct {
-	Result workflow.Future
+type DataSyncCreateLocationSmbFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCreateLocationSmbResult) Get(ctx workflow.Context) (*datasync.CreateLocationSmbOutput, error) {
+func (r *DataSyncCreateLocationSmbFuture) Get(ctx workflow.Context) (*datasync.CreateLocationSmbOutput, error) {
 	var output datasync.CreateLocationSmbOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncCreateTaskResult struct {
-	Result workflow.Future
+type DataSyncCreateTaskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncCreateTaskResult) Get(ctx workflow.Context) (*datasync.CreateTaskOutput, error) {
+func (r *DataSyncCreateTaskFuture) Get(ctx workflow.Context) (*datasync.CreateTaskOutput, error) {
 	var output datasync.CreateTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDeleteAgentResult struct {
-	Result workflow.Future
+type DataSyncDeleteAgentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDeleteAgentResult) Get(ctx workflow.Context) (*datasync.DeleteAgentOutput, error) {
+func (r *DataSyncDeleteAgentFuture) Get(ctx workflow.Context) (*datasync.DeleteAgentOutput, error) {
 	var output datasync.DeleteAgentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDeleteLocationResult struct {
-	Result workflow.Future
+type DataSyncDeleteLocationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDeleteLocationResult) Get(ctx workflow.Context) (*datasync.DeleteLocationOutput, error) {
+func (r *DataSyncDeleteLocationFuture) Get(ctx workflow.Context) (*datasync.DeleteLocationOutput, error) {
 	var output datasync.DeleteLocationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDeleteTaskResult struct {
-	Result workflow.Future
+type DataSyncDeleteTaskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDeleteTaskResult) Get(ctx workflow.Context) (*datasync.DeleteTaskOutput, error) {
+func (r *DataSyncDeleteTaskFuture) Get(ctx workflow.Context) (*datasync.DeleteTaskOutput, error) {
 	var output datasync.DeleteTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeAgentResult struct {
-	Result workflow.Future
+type DataSyncDescribeAgentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeAgentResult) Get(ctx workflow.Context) (*datasync.DescribeAgentOutput, error) {
+func (r *DataSyncDescribeAgentFuture) Get(ctx workflow.Context) (*datasync.DescribeAgentOutput, error) {
 	var output datasync.DescribeAgentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeLocationEfsResult struct {
-	Result workflow.Future
+type DataSyncDescribeLocationEfsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeLocationEfsResult) Get(ctx workflow.Context) (*datasync.DescribeLocationEfsOutput, error) {
+func (r *DataSyncDescribeLocationEfsFuture) Get(ctx workflow.Context) (*datasync.DescribeLocationEfsOutput, error) {
 	var output datasync.DescribeLocationEfsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeLocationFsxWindowsResult struct {
-	Result workflow.Future
+type DataSyncDescribeLocationFsxWindowsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeLocationFsxWindowsResult) Get(ctx workflow.Context) (*datasync.DescribeLocationFsxWindowsOutput, error) {
+func (r *DataSyncDescribeLocationFsxWindowsFuture) Get(ctx workflow.Context) (*datasync.DescribeLocationFsxWindowsOutput, error) {
 	var output datasync.DescribeLocationFsxWindowsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeLocationNfsResult struct {
-	Result workflow.Future
+type DataSyncDescribeLocationNfsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeLocationNfsResult) Get(ctx workflow.Context) (*datasync.DescribeLocationNfsOutput, error) {
+func (r *DataSyncDescribeLocationNfsFuture) Get(ctx workflow.Context) (*datasync.DescribeLocationNfsOutput, error) {
 	var output datasync.DescribeLocationNfsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeLocationObjectStorageResult struct {
-	Result workflow.Future
+type DataSyncDescribeLocationObjectStorageFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeLocationObjectStorageResult) Get(ctx workflow.Context) (*datasync.DescribeLocationObjectStorageOutput, error) {
+func (r *DataSyncDescribeLocationObjectStorageFuture) Get(ctx workflow.Context) (*datasync.DescribeLocationObjectStorageOutput, error) {
 	var output datasync.DescribeLocationObjectStorageOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeLocationS3Result struct {
-	Result workflow.Future
+type DataSyncDescribeLocationS3Future struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeLocationS3Result) Get(ctx workflow.Context) (*datasync.DescribeLocationS3Output, error) {
+func (r *DataSyncDescribeLocationS3Future) Get(ctx workflow.Context) (*datasync.DescribeLocationS3Output, error) {
 	var output datasync.DescribeLocationS3Output
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeLocationSmbResult struct {
-	Result workflow.Future
+type DataSyncDescribeLocationSmbFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeLocationSmbResult) Get(ctx workflow.Context) (*datasync.DescribeLocationSmbOutput, error) {
+func (r *DataSyncDescribeLocationSmbFuture) Get(ctx workflow.Context) (*datasync.DescribeLocationSmbOutput, error) {
 	var output datasync.DescribeLocationSmbOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeTaskResult struct {
-	Result workflow.Future
+type DataSyncDescribeTaskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeTaskResult) Get(ctx workflow.Context) (*datasync.DescribeTaskOutput, error) {
+func (r *DataSyncDescribeTaskFuture) Get(ctx workflow.Context) (*datasync.DescribeTaskOutput, error) {
 	var output datasync.DescribeTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncDescribeTaskExecutionResult struct {
-	Result workflow.Future
+type DataSyncDescribeTaskExecutionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncDescribeTaskExecutionResult) Get(ctx workflow.Context) (*datasync.DescribeTaskExecutionOutput, error) {
+func (r *DataSyncDescribeTaskExecutionFuture) Get(ctx workflow.Context) (*datasync.DescribeTaskExecutionOutput, error) {
 	var output datasync.DescribeTaskExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncListAgentsResult struct {
-	Result workflow.Future
+type DataSyncListAgentsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncListAgentsResult) Get(ctx workflow.Context) (*datasync.ListAgentsOutput, error) {
+func (r *DataSyncListAgentsFuture) Get(ctx workflow.Context) (*datasync.ListAgentsOutput, error) {
 	var output datasync.ListAgentsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncListLocationsResult struct {
-	Result workflow.Future
+type DataSyncListLocationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncListLocationsResult) Get(ctx workflow.Context) (*datasync.ListLocationsOutput, error) {
+func (r *DataSyncListLocationsFuture) Get(ctx workflow.Context) (*datasync.ListLocationsOutput, error) {
 	var output datasync.ListLocationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncListTagsForResourceResult struct {
-	Result workflow.Future
+type DataSyncListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncListTagsForResourceResult) Get(ctx workflow.Context) (*datasync.ListTagsForResourceOutput, error) {
+func (r *DataSyncListTagsForResourceFuture) Get(ctx workflow.Context) (*datasync.ListTagsForResourceOutput, error) {
 	var output datasync.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncListTaskExecutionsResult struct {
-	Result workflow.Future
+type DataSyncListTaskExecutionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncListTaskExecutionsResult) Get(ctx workflow.Context) (*datasync.ListTaskExecutionsOutput, error) {
+func (r *DataSyncListTaskExecutionsFuture) Get(ctx workflow.Context) (*datasync.ListTaskExecutionsOutput, error) {
 	var output datasync.ListTaskExecutionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncListTasksResult struct {
-	Result workflow.Future
+type DataSyncListTasksFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncListTasksResult) Get(ctx workflow.Context) (*datasync.ListTasksOutput, error) {
+func (r *DataSyncListTasksFuture) Get(ctx workflow.Context) (*datasync.ListTasksOutput, error) {
 	var output datasync.ListTasksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncStartTaskExecutionResult struct {
-	Result workflow.Future
+type DataSyncStartTaskExecutionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncStartTaskExecutionResult) Get(ctx workflow.Context) (*datasync.StartTaskExecutionOutput, error) {
+func (r *DataSyncStartTaskExecutionFuture) Get(ctx workflow.Context) (*datasync.StartTaskExecutionOutput, error) {
 	var output datasync.StartTaskExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncTagResourceResult struct {
-	Result workflow.Future
+type DataSyncTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncTagResourceResult) Get(ctx workflow.Context) (*datasync.TagResourceOutput, error) {
+func (r *DataSyncTagResourceFuture) Get(ctx workflow.Context) (*datasync.TagResourceOutput, error) {
 	var output datasync.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncUntagResourceResult struct {
-	Result workflow.Future
+type DataSyncUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncUntagResourceResult) Get(ctx workflow.Context) (*datasync.UntagResourceOutput, error) {
+func (r *DataSyncUntagResourceFuture) Get(ctx workflow.Context) (*datasync.UntagResourceOutput, error) {
 	var output datasync.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncUpdateAgentResult struct {
-	Result workflow.Future
+type DataSyncUpdateAgentFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncUpdateAgentResult) Get(ctx workflow.Context) (*datasync.UpdateAgentOutput, error) {
+func (r *DataSyncUpdateAgentFuture) Get(ctx workflow.Context) (*datasync.UpdateAgentOutput, error) {
 	var output datasync.UpdateAgentOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatasyncUpdateTaskResult struct {
-	Result workflow.Future
+type DataSyncUpdateTaskFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *DatasyncUpdateTaskResult) Get(ctx workflow.Context) (*datasync.UpdateTaskOutput, error) {
+func (r *DataSyncUpdateTaskFuture) Get(ctx workflow.Context) (*datasync.UpdateTaskOutput, error) {
 	var output datasync.UpdateTaskOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -426,9 +457,9 @@ func (a *DataSyncStub) CancelTaskExecution(ctx workflow.Context, input *datasync
 	return &output, err
 }
 
-func (a *DataSyncStub) CancelTaskExecutionAsync(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) *DatasyncCancelTaskExecutionResult {
+func (a *DataSyncStub) CancelTaskExecutionAsync(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) *DataSyncCancelTaskExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CancelTaskExecution", input)
-	return &DatasyncCancelTaskExecutionResult{Result: future}
+	return &DataSyncCancelTaskExecutionFuture{Future: future}
 }
 
 func (a *DataSyncStub) CreateAgent(ctx workflow.Context, input *datasync.CreateAgentInput) (*datasync.CreateAgentOutput, error) {
@@ -437,9 +468,9 @@ func (a *DataSyncStub) CreateAgent(ctx workflow.Context, input *datasync.CreateA
 	return &output, err
 }
 
-func (a *DataSyncStub) CreateAgentAsync(ctx workflow.Context, input *datasync.CreateAgentInput) *DatasyncCreateAgentResult {
+func (a *DataSyncStub) CreateAgentAsync(ctx workflow.Context, input *datasync.CreateAgentInput) *DataSyncCreateAgentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateAgent", input)
-	return &DatasyncCreateAgentResult{Result: future}
+	return &DataSyncCreateAgentFuture{Future: future}
 }
 
 func (a *DataSyncStub) CreateLocationEfs(ctx workflow.Context, input *datasync.CreateLocationEfsInput) (*datasync.CreateLocationEfsOutput, error) {
@@ -448,9 +479,9 @@ func (a *DataSyncStub) CreateLocationEfs(ctx workflow.Context, input *datasync.C
 	return &output, err
 }
 
-func (a *DataSyncStub) CreateLocationEfsAsync(ctx workflow.Context, input *datasync.CreateLocationEfsInput) *DatasyncCreateLocationEfsResult {
+func (a *DataSyncStub) CreateLocationEfsAsync(ctx workflow.Context, input *datasync.CreateLocationEfsInput) *DataSyncCreateLocationEfsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationEfs", input)
-	return &DatasyncCreateLocationEfsResult{Result: future}
+	return &DataSyncCreateLocationEfsFuture{Future: future}
 }
 
 func (a *DataSyncStub) CreateLocationFsxWindows(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) (*datasync.CreateLocationFsxWindowsOutput, error) {
@@ -459,9 +490,9 @@ func (a *DataSyncStub) CreateLocationFsxWindows(ctx workflow.Context, input *dat
 	return &output, err
 }
 
-func (a *DataSyncStub) CreateLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) *DatasyncCreateLocationFsxWindowsResult {
+func (a *DataSyncStub) CreateLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) *DataSyncCreateLocationFsxWindowsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationFsxWindows", input)
-	return &DatasyncCreateLocationFsxWindowsResult{Result: future}
+	return &DataSyncCreateLocationFsxWindowsFuture{Future: future}
 }
 
 func (a *DataSyncStub) CreateLocationNfs(ctx workflow.Context, input *datasync.CreateLocationNfsInput) (*datasync.CreateLocationNfsOutput, error) {
@@ -470,9 +501,9 @@ func (a *DataSyncStub) CreateLocationNfs(ctx workflow.Context, input *datasync.C
 	return &output, err
 }
 
-func (a *DataSyncStub) CreateLocationNfsAsync(ctx workflow.Context, input *datasync.CreateLocationNfsInput) *DatasyncCreateLocationNfsResult {
+func (a *DataSyncStub) CreateLocationNfsAsync(ctx workflow.Context, input *datasync.CreateLocationNfsInput) *DataSyncCreateLocationNfsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationNfs", input)
-	return &DatasyncCreateLocationNfsResult{Result: future}
+	return &DataSyncCreateLocationNfsFuture{Future: future}
 }
 
 func (a *DataSyncStub) CreateLocationObjectStorage(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) (*datasync.CreateLocationObjectStorageOutput, error) {
@@ -481,9 +512,9 @@ func (a *DataSyncStub) CreateLocationObjectStorage(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *DataSyncStub) CreateLocationObjectStorageAsync(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) *DatasyncCreateLocationObjectStorageResult {
+func (a *DataSyncStub) CreateLocationObjectStorageAsync(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) *DataSyncCreateLocationObjectStorageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationObjectStorage", input)
-	return &DatasyncCreateLocationObjectStorageResult{Result: future}
+	return &DataSyncCreateLocationObjectStorageFuture{Future: future}
 }
 
 func (a *DataSyncStub) CreateLocationS3(ctx workflow.Context, input *datasync.CreateLocationS3Input) (*datasync.CreateLocationS3Output, error) {
@@ -492,9 +523,9 @@ func (a *DataSyncStub) CreateLocationS3(ctx workflow.Context, input *datasync.Cr
 	return &output, err
 }
 
-func (a *DataSyncStub) CreateLocationS3Async(ctx workflow.Context, input *datasync.CreateLocationS3Input) *DatasyncCreateLocationS3Result {
+func (a *DataSyncStub) CreateLocationS3Async(ctx workflow.Context, input *datasync.CreateLocationS3Input) *DataSyncCreateLocationS3Future {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationS3", input)
-	return &DatasyncCreateLocationS3Result{Result: future}
+	return &DataSyncCreateLocationS3Future{Future: future}
 }
 
 func (a *DataSyncStub) CreateLocationSmb(ctx workflow.Context, input *datasync.CreateLocationSmbInput) (*datasync.CreateLocationSmbOutput, error) {
@@ -503,9 +534,9 @@ func (a *DataSyncStub) CreateLocationSmb(ctx workflow.Context, input *datasync.C
 	return &output, err
 }
 
-func (a *DataSyncStub) CreateLocationSmbAsync(ctx workflow.Context, input *datasync.CreateLocationSmbInput) *DatasyncCreateLocationSmbResult {
+func (a *DataSyncStub) CreateLocationSmbAsync(ctx workflow.Context, input *datasync.CreateLocationSmbInput) *DataSyncCreateLocationSmbFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationSmb", input)
-	return &DatasyncCreateLocationSmbResult{Result: future}
+	return &DataSyncCreateLocationSmbFuture{Future: future}
 }
 
 func (a *DataSyncStub) CreateTask(ctx workflow.Context, input *datasync.CreateTaskInput) (*datasync.CreateTaskOutput, error) {
@@ -514,9 +545,9 @@ func (a *DataSyncStub) CreateTask(ctx workflow.Context, input *datasync.CreateTa
 	return &output, err
 }
 
-func (a *DataSyncStub) CreateTaskAsync(ctx workflow.Context, input *datasync.CreateTaskInput) *DatasyncCreateTaskResult {
+func (a *DataSyncStub) CreateTaskAsync(ctx workflow.Context, input *datasync.CreateTaskInput) *DataSyncCreateTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateTask", input)
-	return &DatasyncCreateTaskResult{Result: future}
+	return &DataSyncCreateTaskFuture{Future: future}
 }
 
 func (a *DataSyncStub) DeleteAgent(ctx workflow.Context, input *datasync.DeleteAgentInput) (*datasync.DeleteAgentOutput, error) {
@@ -525,9 +556,9 @@ func (a *DataSyncStub) DeleteAgent(ctx workflow.Context, input *datasync.DeleteA
 	return &output, err
 }
 
-func (a *DataSyncStub) DeleteAgentAsync(ctx workflow.Context, input *datasync.DeleteAgentInput) *DatasyncDeleteAgentResult {
+func (a *DataSyncStub) DeleteAgentAsync(ctx workflow.Context, input *datasync.DeleteAgentInput) *DataSyncDeleteAgentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteAgent", input)
-	return &DatasyncDeleteAgentResult{Result: future}
+	return &DataSyncDeleteAgentFuture{Future: future}
 }
 
 func (a *DataSyncStub) DeleteLocation(ctx workflow.Context, input *datasync.DeleteLocationInput) (*datasync.DeleteLocationOutput, error) {
@@ -536,9 +567,9 @@ func (a *DataSyncStub) DeleteLocation(ctx workflow.Context, input *datasync.Dele
 	return &output, err
 }
 
-func (a *DataSyncStub) DeleteLocationAsync(ctx workflow.Context, input *datasync.DeleteLocationInput) *DatasyncDeleteLocationResult {
+func (a *DataSyncStub) DeleteLocationAsync(ctx workflow.Context, input *datasync.DeleteLocationInput) *DataSyncDeleteLocationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteLocation", input)
-	return &DatasyncDeleteLocationResult{Result: future}
+	return &DataSyncDeleteLocationFuture{Future: future}
 }
 
 func (a *DataSyncStub) DeleteTask(ctx workflow.Context, input *datasync.DeleteTaskInput) (*datasync.DeleteTaskOutput, error) {
@@ -547,9 +578,9 @@ func (a *DataSyncStub) DeleteTask(ctx workflow.Context, input *datasync.DeleteTa
 	return &output, err
 }
 
-func (a *DataSyncStub) DeleteTaskAsync(ctx workflow.Context, input *datasync.DeleteTaskInput) *DatasyncDeleteTaskResult {
+func (a *DataSyncStub) DeleteTaskAsync(ctx workflow.Context, input *datasync.DeleteTaskInput) *DataSyncDeleteTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteTask", input)
-	return &DatasyncDeleteTaskResult{Result: future}
+	return &DataSyncDeleteTaskFuture{Future: future}
 }
 
 func (a *DataSyncStub) DescribeAgent(ctx workflow.Context, input *datasync.DescribeAgentInput) (*datasync.DescribeAgentOutput, error) {
@@ -558,9 +589,9 @@ func (a *DataSyncStub) DescribeAgent(ctx workflow.Context, input *datasync.Descr
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeAgentAsync(ctx workflow.Context, input *datasync.DescribeAgentInput) *DatasyncDescribeAgentResult {
+func (a *DataSyncStub) DescribeAgentAsync(ctx workflow.Context, input *datasync.DescribeAgentInput) *DataSyncDescribeAgentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeAgent", input)
-	return &DatasyncDescribeAgentResult{Result: future}
+	return &DataSyncDescribeAgentFuture{Future: future}
 }
 
 func (a *DataSyncStub) DescribeLocationEfs(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) (*datasync.DescribeLocationEfsOutput, error) {
@@ -569,9 +600,9 @@ func (a *DataSyncStub) DescribeLocationEfs(ctx workflow.Context, input *datasync
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeLocationEfsAsync(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) *DatasyncDescribeLocationEfsResult {
+func (a *DataSyncStub) DescribeLocationEfsAsync(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) *DataSyncDescribeLocationEfsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationEfs", input)
-	return &DatasyncDescribeLocationEfsResult{Result: future}
+	return &DataSyncDescribeLocationEfsFuture{Future: future}
 }
 
 func (a *DataSyncStub) DescribeLocationFsxWindows(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) (*datasync.DescribeLocationFsxWindowsOutput, error) {
@@ -580,9 +611,9 @@ func (a *DataSyncStub) DescribeLocationFsxWindows(ctx workflow.Context, input *d
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) *DatasyncDescribeLocationFsxWindowsResult {
+func (a *DataSyncStub) DescribeLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) *DataSyncDescribeLocationFsxWindowsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationFsxWindows", input)
-	return &DatasyncDescribeLocationFsxWindowsResult{Result: future}
+	return &DataSyncDescribeLocationFsxWindowsFuture{Future: future}
 }
 
 func (a *DataSyncStub) DescribeLocationNfs(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) (*datasync.DescribeLocationNfsOutput, error) {
@@ -591,9 +622,9 @@ func (a *DataSyncStub) DescribeLocationNfs(ctx workflow.Context, input *datasync
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeLocationNfsAsync(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) *DatasyncDescribeLocationNfsResult {
+func (a *DataSyncStub) DescribeLocationNfsAsync(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) *DataSyncDescribeLocationNfsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationNfs", input)
-	return &DatasyncDescribeLocationNfsResult{Result: future}
+	return &DataSyncDescribeLocationNfsFuture{Future: future}
 }
 
 func (a *DataSyncStub) DescribeLocationObjectStorage(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) (*datasync.DescribeLocationObjectStorageOutput, error) {
@@ -602,9 +633,9 @@ func (a *DataSyncStub) DescribeLocationObjectStorage(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeLocationObjectStorageAsync(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) *DatasyncDescribeLocationObjectStorageResult {
+func (a *DataSyncStub) DescribeLocationObjectStorageAsync(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) *DataSyncDescribeLocationObjectStorageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationObjectStorage", input)
-	return &DatasyncDescribeLocationObjectStorageResult{Result: future}
+	return &DataSyncDescribeLocationObjectStorageFuture{Future: future}
 }
 
 func (a *DataSyncStub) DescribeLocationS3(ctx workflow.Context, input *datasync.DescribeLocationS3Input) (*datasync.DescribeLocationS3Output, error) {
@@ -613,9 +644,9 @@ func (a *DataSyncStub) DescribeLocationS3(ctx workflow.Context, input *datasync.
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeLocationS3Async(ctx workflow.Context, input *datasync.DescribeLocationS3Input) *DatasyncDescribeLocationS3Result {
+func (a *DataSyncStub) DescribeLocationS3Async(ctx workflow.Context, input *datasync.DescribeLocationS3Input) *DataSyncDescribeLocationS3Future {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationS3", input)
-	return &DatasyncDescribeLocationS3Result{Result: future}
+	return &DataSyncDescribeLocationS3Future{Future: future}
 }
 
 func (a *DataSyncStub) DescribeLocationSmb(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) (*datasync.DescribeLocationSmbOutput, error) {
@@ -624,9 +655,9 @@ func (a *DataSyncStub) DescribeLocationSmb(ctx workflow.Context, input *datasync
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeLocationSmbAsync(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) *DatasyncDescribeLocationSmbResult {
+func (a *DataSyncStub) DescribeLocationSmbAsync(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) *DataSyncDescribeLocationSmbFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationSmb", input)
-	return &DatasyncDescribeLocationSmbResult{Result: future}
+	return &DataSyncDescribeLocationSmbFuture{Future: future}
 }
 
 func (a *DataSyncStub) DescribeTask(ctx workflow.Context, input *datasync.DescribeTaskInput) (*datasync.DescribeTaskOutput, error) {
@@ -635,9 +666,9 @@ func (a *DataSyncStub) DescribeTask(ctx workflow.Context, input *datasync.Descri
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeTaskAsync(ctx workflow.Context, input *datasync.DescribeTaskInput) *DatasyncDescribeTaskResult {
+func (a *DataSyncStub) DescribeTaskAsync(ctx workflow.Context, input *datasync.DescribeTaskInput) *DataSyncDescribeTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeTask", input)
-	return &DatasyncDescribeTaskResult{Result: future}
+	return &DataSyncDescribeTaskFuture{Future: future}
 }
 
 func (a *DataSyncStub) DescribeTaskExecution(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) (*datasync.DescribeTaskExecutionOutput, error) {
@@ -646,9 +677,9 @@ func (a *DataSyncStub) DescribeTaskExecution(ctx workflow.Context, input *datasy
 	return &output, err
 }
 
-func (a *DataSyncStub) DescribeTaskExecutionAsync(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) *DatasyncDescribeTaskExecutionResult {
+func (a *DataSyncStub) DescribeTaskExecutionAsync(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) *DataSyncDescribeTaskExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeTaskExecution", input)
-	return &DatasyncDescribeTaskExecutionResult{Result: future}
+	return &DataSyncDescribeTaskExecutionFuture{Future: future}
 }
 
 func (a *DataSyncStub) ListAgents(ctx workflow.Context, input *datasync.ListAgentsInput) (*datasync.ListAgentsOutput, error) {
@@ -657,9 +688,9 @@ func (a *DataSyncStub) ListAgents(ctx workflow.Context, input *datasync.ListAgen
 	return &output, err
 }
 
-func (a *DataSyncStub) ListAgentsAsync(ctx workflow.Context, input *datasync.ListAgentsInput) *DatasyncListAgentsResult {
+func (a *DataSyncStub) ListAgentsAsync(ctx workflow.Context, input *datasync.ListAgentsInput) *DataSyncListAgentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListAgents", input)
-	return &DatasyncListAgentsResult{Result: future}
+	return &DataSyncListAgentsFuture{Future: future}
 }
 
 func (a *DataSyncStub) ListLocations(ctx workflow.Context, input *datasync.ListLocationsInput) (*datasync.ListLocationsOutput, error) {
@@ -668,9 +699,9 @@ func (a *DataSyncStub) ListLocations(ctx workflow.Context, input *datasync.ListL
 	return &output, err
 }
 
-func (a *DataSyncStub) ListLocationsAsync(ctx workflow.Context, input *datasync.ListLocationsInput) *DatasyncListLocationsResult {
+func (a *DataSyncStub) ListLocationsAsync(ctx workflow.Context, input *datasync.ListLocationsInput) *DataSyncListLocationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListLocations", input)
-	return &DatasyncListLocationsResult{Result: future}
+	return &DataSyncListLocationsFuture{Future: future}
 }
 
 func (a *DataSyncStub) ListTagsForResource(ctx workflow.Context, input *datasync.ListTagsForResourceInput) (*datasync.ListTagsForResourceOutput, error) {
@@ -679,9 +710,9 @@ func (a *DataSyncStub) ListTagsForResource(ctx workflow.Context, input *datasync
 	return &output, err
 }
 
-func (a *DataSyncStub) ListTagsForResourceAsync(ctx workflow.Context, input *datasync.ListTagsForResourceInput) *DatasyncListTagsForResourceResult {
+func (a *DataSyncStub) ListTagsForResourceAsync(ctx workflow.Context, input *datasync.ListTagsForResourceInput) *DataSyncListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListTagsForResource", input)
-	return &DatasyncListTagsForResourceResult{Result: future}
+	return &DataSyncListTagsForResourceFuture{Future: future}
 }
 
 func (a *DataSyncStub) ListTaskExecutions(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) (*datasync.ListTaskExecutionsOutput, error) {
@@ -690,9 +721,9 @@ func (a *DataSyncStub) ListTaskExecutions(ctx workflow.Context, input *datasync.
 	return &output, err
 }
 
-func (a *DataSyncStub) ListTaskExecutionsAsync(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) *DatasyncListTaskExecutionsResult {
+func (a *DataSyncStub) ListTaskExecutionsAsync(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) *DataSyncListTaskExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListTaskExecutions", input)
-	return &DatasyncListTaskExecutionsResult{Result: future}
+	return &DataSyncListTaskExecutionsFuture{Future: future}
 }
 
 func (a *DataSyncStub) ListTasks(ctx workflow.Context, input *datasync.ListTasksInput) (*datasync.ListTasksOutput, error) {
@@ -701,9 +732,9 @@ func (a *DataSyncStub) ListTasks(ctx workflow.Context, input *datasync.ListTasks
 	return &output, err
 }
 
-func (a *DataSyncStub) ListTasksAsync(ctx workflow.Context, input *datasync.ListTasksInput) *DatasyncListTasksResult {
+func (a *DataSyncStub) ListTasksAsync(ctx workflow.Context, input *datasync.ListTasksInput) *DataSyncListTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListTasks", input)
-	return &DatasyncListTasksResult{Result: future}
+	return &DataSyncListTasksFuture{Future: future}
 }
 
 func (a *DataSyncStub) StartTaskExecution(ctx workflow.Context, input *datasync.StartTaskExecutionInput) (*datasync.StartTaskExecutionOutput, error) {
@@ -712,9 +743,9 @@ func (a *DataSyncStub) StartTaskExecution(ctx workflow.Context, input *datasync.
 	return &output, err
 }
 
-func (a *DataSyncStub) StartTaskExecutionAsync(ctx workflow.Context, input *datasync.StartTaskExecutionInput) *DatasyncStartTaskExecutionResult {
+func (a *DataSyncStub) StartTaskExecutionAsync(ctx workflow.Context, input *datasync.StartTaskExecutionInput) *DataSyncStartTaskExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.StartTaskExecution", input)
-	return &DatasyncStartTaskExecutionResult{Result: future}
+	return &DataSyncStartTaskExecutionFuture{Future: future}
 }
 
 func (a *DataSyncStub) TagResource(ctx workflow.Context, input *datasync.TagResourceInput) (*datasync.TagResourceOutput, error) {
@@ -723,9 +754,9 @@ func (a *DataSyncStub) TagResource(ctx workflow.Context, input *datasync.TagReso
 	return &output, err
 }
 
-func (a *DataSyncStub) TagResourceAsync(ctx workflow.Context, input *datasync.TagResourceInput) *DatasyncTagResourceResult {
+func (a *DataSyncStub) TagResourceAsync(ctx workflow.Context, input *datasync.TagResourceInput) *DataSyncTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.TagResource", input)
-	return &DatasyncTagResourceResult{Result: future}
+	return &DataSyncTagResourceFuture{Future: future}
 }
 
 func (a *DataSyncStub) UntagResource(ctx workflow.Context, input *datasync.UntagResourceInput) (*datasync.UntagResourceOutput, error) {
@@ -734,9 +765,9 @@ func (a *DataSyncStub) UntagResource(ctx workflow.Context, input *datasync.Untag
 	return &output, err
 }
 
-func (a *DataSyncStub) UntagResourceAsync(ctx workflow.Context, input *datasync.UntagResourceInput) *DatasyncUntagResourceResult {
+func (a *DataSyncStub) UntagResourceAsync(ctx workflow.Context, input *datasync.UntagResourceInput) *DataSyncUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.UntagResource", input)
-	return &DatasyncUntagResourceResult{Result: future}
+	return &DataSyncUntagResourceFuture{Future: future}
 }
 
 func (a *DataSyncStub) UpdateAgent(ctx workflow.Context, input *datasync.UpdateAgentInput) (*datasync.UpdateAgentOutput, error) {
@@ -745,9 +776,9 @@ func (a *DataSyncStub) UpdateAgent(ctx workflow.Context, input *datasync.UpdateA
 	return &output, err
 }
 
-func (a *DataSyncStub) UpdateAgentAsync(ctx workflow.Context, input *datasync.UpdateAgentInput) *DatasyncUpdateAgentResult {
+func (a *DataSyncStub) UpdateAgentAsync(ctx workflow.Context, input *datasync.UpdateAgentInput) *DataSyncUpdateAgentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.UpdateAgent", input)
-	return &DatasyncUpdateAgentResult{Result: future}
+	return &DataSyncUpdateAgentFuture{Future: future}
 }
 
 func (a *DataSyncStub) UpdateTask(ctx workflow.Context, input *datasync.UpdateTaskInput) (*datasync.UpdateTaskOutput, error) {
@@ -756,7 +787,7 @@ func (a *DataSyncStub) UpdateTask(ctx workflow.Context, input *datasync.UpdateTa
 	return &output, err
 }
 
-func (a *DataSyncStub) UpdateTaskAsync(ctx workflow.Context, input *datasync.UpdateTaskInput) *DatasyncUpdateTaskResult {
+func (a *DataSyncStub) UpdateTaskAsync(ctx workflow.Context, input *datasync.UpdateTaskInput) *DataSyncUpdateTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datasync.UpdateTask", input)
-	return &DatasyncUpdateTaskResult{Result: future}
+	return &DataSyncUpdateTaskFuture{Future: future}
 }

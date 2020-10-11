@@ -11,45 +11,46 @@ import (
 
 type ACMClient interface {
 	AddTagsToCertificate(ctx workflow.Context, input *acm.AddTagsToCertificateInput) (*acm.AddTagsToCertificateOutput, error)
-	AddTagsToCertificateAsync(ctx workflow.Context, input *acm.AddTagsToCertificateInput) *AcmAddTagsToCertificateResult
+	AddTagsToCertificateAsync(ctx workflow.Context, input *acm.AddTagsToCertificateInput) *ACMAddTagsToCertificateFuture
 
 	DeleteCertificate(ctx workflow.Context, input *acm.DeleteCertificateInput) (*acm.DeleteCertificateOutput, error)
-	DeleteCertificateAsync(ctx workflow.Context, input *acm.DeleteCertificateInput) *AcmDeleteCertificateResult
+	DeleteCertificateAsync(ctx workflow.Context, input *acm.DeleteCertificateInput) *ACMDeleteCertificateFuture
 
 	DescribeCertificate(ctx workflow.Context, input *acm.DescribeCertificateInput) (*acm.DescribeCertificateOutput, error)
-	DescribeCertificateAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *AcmDescribeCertificateResult
+	DescribeCertificateAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *ACMDescribeCertificateFuture
 
 	ExportCertificate(ctx workflow.Context, input *acm.ExportCertificateInput) (*acm.ExportCertificateOutput, error)
-	ExportCertificateAsync(ctx workflow.Context, input *acm.ExportCertificateInput) *AcmExportCertificateResult
+	ExportCertificateAsync(ctx workflow.Context, input *acm.ExportCertificateInput) *ACMExportCertificateFuture
 
 	GetCertificate(ctx workflow.Context, input *acm.GetCertificateInput) (*acm.GetCertificateOutput, error)
-	GetCertificateAsync(ctx workflow.Context, input *acm.GetCertificateInput) *AcmGetCertificateResult
+	GetCertificateAsync(ctx workflow.Context, input *acm.GetCertificateInput) *ACMGetCertificateFuture
 
 	ImportCertificate(ctx workflow.Context, input *acm.ImportCertificateInput) (*acm.ImportCertificateOutput, error)
-	ImportCertificateAsync(ctx workflow.Context, input *acm.ImportCertificateInput) *AcmImportCertificateResult
+	ImportCertificateAsync(ctx workflow.Context, input *acm.ImportCertificateInput) *ACMImportCertificateFuture
 
 	ListCertificates(ctx workflow.Context, input *acm.ListCertificatesInput) (*acm.ListCertificatesOutput, error)
-	ListCertificatesAsync(ctx workflow.Context, input *acm.ListCertificatesInput) *AcmListCertificatesResult
+	ListCertificatesAsync(ctx workflow.Context, input *acm.ListCertificatesInput) *ACMListCertificatesFuture
 
 	ListTagsForCertificate(ctx workflow.Context, input *acm.ListTagsForCertificateInput) (*acm.ListTagsForCertificateOutput, error)
-	ListTagsForCertificateAsync(ctx workflow.Context, input *acm.ListTagsForCertificateInput) *AcmListTagsForCertificateResult
+	ListTagsForCertificateAsync(ctx workflow.Context, input *acm.ListTagsForCertificateInput) *ACMListTagsForCertificateFuture
 
 	RemoveTagsFromCertificate(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) (*acm.RemoveTagsFromCertificateOutput, error)
-	RemoveTagsFromCertificateAsync(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) *AcmRemoveTagsFromCertificateResult
+	RemoveTagsFromCertificateAsync(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) *ACMRemoveTagsFromCertificateFuture
 
 	RenewCertificate(ctx workflow.Context, input *acm.RenewCertificateInput) (*acm.RenewCertificateOutput, error)
-	RenewCertificateAsync(ctx workflow.Context, input *acm.RenewCertificateInput) *AcmRenewCertificateResult
+	RenewCertificateAsync(ctx workflow.Context, input *acm.RenewCertificateInput) *ACMRenewCertificateFuture
 
 	RequestCertificate(ctx workflow.Context, input *acm.RequestCertificateInput) (*acm.RequestCertificateOutput, error)
-	RequestCertificateAsync(ctx workflow.Context, input *acm.RequestCertificateInput) *AcmRequestCertificateResult
+	RequestCertificateAsync(ctx workflow.Context, input *acm.RequestCertificateInput) *ACMRequestCertificateFuture
 
 	ResendValidationEmail(ctx workflow.Context, input *acm.ResendValidationEmailInput) (*acm.ResendValidationEmailOutput, error)
-	ResendValidationEmailAsync(ctx workflow.Context, input *acm.ResendValidationEmailInput) *AcmResendValidationEmailResult
+	ResendValidationEmailAsync(ctx workflow.Context, input *acm.ResendValidationEmailInput) *ACMResendValidationEmailFuture
 
 	UpdateCertificateOptions(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) (*acm.UpdateCertificateOptionsOutput, error)
-	UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *AcmUpdateCertificateOptionsResult
+	UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *ACMUpdateCertificateOptionsFuture
 
 	WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error
+	WaitUntilCertificateValidatedAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *VoidFuture
 }
 
 type ACMStub struct{}
@@ -58,133 +59,146 @@ func NewACMStub() ACMClient {
 	return &ACMStub{}
 }
 
-type AcmAddTagsToCertificateResult struct {
-	Result workflow.Future
+type ACMAddTagsToCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmAddTagsToCertificateResult) Get(ctx workflow.Context) (*acm.AddTagsToCertificateOutput, error) {
+func (r *ACMAddTagsToCertificateFuture) Get(ctx workflow.Context) (*acm.AddTagsToCertificateOutput, error) {
 	var output acm.AddTagsToCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmDeleteCertificateResult struct {
-	Result workflow.Future
+type ACMDeleteCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmDeleteCertificateResult) Get(ctx workflow.Context) (*acm.DeleteCertificateOutput, error) {
+func (r *ACMDeleteCertificateFuture) Get(ctx workflow.Context) (*acm.DeleteCertificateOutput, error) {
 	var output acm.DeleteCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmDescribeCertificateResult struct {
-	Result workflow.Future
+type ACMDescribeCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmDescribeCertificateResult) Get(ctx workflow.Context) (*acm.DescribeCertificateOutput, error) {
+func (r *ACMDescribeCertificateFuture) Get(ctx workflow.Context) (*acm.DescribeCertificateOutput, error) {
 	var output acm.DescribeCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmExportCertificateResult struct {
-	Result workflow.Future
+type ACMExportCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmExportCertificateResult) Get(ctx workflow.Context) (*acm.ExportCertificateOutput, error) {
+func (r *ACMExportCertificateFuture) Get(ctx workflow.Context) (*acm.ExportCertificateOutput, error) {
 	var output acm.ExportCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmGetCertificateResult struct {
-	Result workflow.Future
+type ACMGetCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmGetCertificateResult) Get(ctx workflow.Context) (*acm.GetCertificateOutput, error) {
+func (r *ACMGetCertificateFuture) Get(ctx workflow.Context) (*acm.GetCertificateOutput, error) {
 	var output acm.GetCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmImportCertificateResult struct {
-	Result workflow.Future
+type ACMImportCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmImportCertificateResult) Get(ctx workflow.Context) (*acm.ImportCertificateOutput, error) {
+func (r *ACMImportCertificateFuture) Get(ctx workflow.Context) (*acm.ImportCertificateOutput, error) {
 	var output acm.ImportCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmListCertificatesResult struct {
-	Result workflow.Future
+type ACMListCertificatesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmListCertificatesResult) Get(ctx workflow.Context) (*acm.ListCertificatesOutput, error) {
+func (r *ACMListCertificatesFuture) Get(ctx workflow.Context) (*acm.ListCertificatesOutput, error) {
 	var output acm.ListCertificatesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmListTagsForCertificateResult struct {
-	Result workflow.Future
+type ACMListTagsForCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmListTagsForCertificateResult) Get(ctx workflow.Context) (*acm.ListTagsForCertificateOutput, error) {
+func (r *ACMListTagsForCertificateFuture) Get(ctx workflow.Context) (*acm.ListTagsForCertificateOutput, error) {
 	var output acm.ListTagsForCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmRemoveTagsFromCertificateResult struct {
-	Result workflow.Future
+type ACMRemoveTagsFromCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmRemoveTagsFromCertificateResult) Get(ctx workflow.Context) (*acm.RemoveTagsFromCertificateOutput, error) {
+func (r *ACMRemoveTagsFromCertificateFuture) Get(ctx workflow.Context) (*acm.RemoveTagsFromCertificateOutput, error) {
 	var output acm.RemoveTagsFromCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmRenewCertificateResult struct {
-	Result workflow.Future
+type ACMRenewCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmRenewCertificateResult) Get(ctx workflow.Context) (*acm.RenewCertificateOutput, error) {
+func (r *ACMRenewCertificateFuture) Get(ctx workflow.Context) (*acm.RenewCertificateOutput, error) {
 	var output acm.RenewCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmRequestCertificateResult struct {
-	Result workflow.Future
+type ACMRequestCertificateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmRequestCertificateResult) Get(ctx workflow.Context) (*acm.RequestCertificateOutput, error) {
+func (r *ACMRequestCertificateFuture) Get(ctx workflow.Context) (*acm.RequestCertificateOutput, error) {
 	var output acm.RequestCertificateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmResendValidationEmailResult struct {
-	Result workflow.Future
+type ACMResendValidationEmailFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmResendValidationEmailResult) Get(ctx workflow.Context) (*acm.ResendValidationEmailOutput, error) {
+func (r *ACMResendValidationEmailFuture) Get(ctx workflow.Context) (*acm.ResendValidationEmailOutput, error) {
 	var output acm.ResendValidationEmailOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmUpdateCertificateOptionsResult struct {
-	Result workflow.Future
+type ACMUpdateCertificateOptionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *AcmUpdateCertificateOptionsResult) Get(ctx workflow.Context) (*acm.UpdateCertificateOptionsOutput, error) {
+func (r *ACMUpdateCertificateOptionsFuture) Get(ctx workflow.Context) (*acm.UpdateCertificateOptionsOutput, error) {
 	var output acm.UpdateCertificateOptionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -194,9 +208,9 @@ func (a *ACMStub) AddTagsToCertificate(ctx workflow.Context, input *acm.AddTagsT
 	return &output, err
 }
 
-func (a *ACMStub) AddTagsToCertificateAsync(ctx workflow.Context, input *acm.AddTagsToCertificateInput) *AcmAddTagsToCertificateResult {
+func (a *ACMStub) AddTagsToCertificateAsync(ctx workflow.Context, input *acm.AddTagsToCertificateInput) *ACMAddTagsToCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.AddTagsToCertificate", input)
-	return &AcmAddTagsToCertificateResult{Result: future}
+	return &ACMAddTagsToCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) DeleteCertificate(ctx workflow.Context, input *acm.DeleteCertificateInput) (*acm.DeleteCertificateOutput, error) {
@@ -205,9 +219,9 @@ func (a *ACMStub) DeleteCertificate(ctx workflow.Context, input *acm.DeleteCerti
 	return &output, err
 }
 
-func (a *ACMStub) DeleteCertificateAsync(ctx workflow.Context, input *acm.DeleteCertificateInput) *AcmDeleteCertificateResult {
+func (a *ACMStub) DeleteCertificateAsync(ctx workflow.Context, input *acm.DeleteCertificateInput) *ACMDeleteCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.DeleteCertificate", input)
-	return &AcmDeleteCertificateResult{Result: future}
+	return &ACMDeleteCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) DescribeCertificate(ctx workflow.Context, input *acm.DescribeCertificateInput) (*acm.DescribeCertificateOutput, error) {
@@ -216,9 +230,9 @@ func (a *ACMStub) DescribeCertificate(ctx workflow.Context, input *acm.DescribeC
 	return &output, err
 }
 
-func (a *ACMStub) DescribeCertificateAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *AcmDescribeCertificateResult {
+func (a *ACMStub) DescribeCertificateAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *ACMDescribeCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.DescribeCertificate", input)
-	return &AcmDescribeCertificateResult{Result: future}
+	return &ACMDescribeCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) ExportCertificate(ctx workflow.Context, input *acm.ExportCertificateInput) (*acm.ExportCertificateOutput, error) {
@@ -227,9 +241,9 @@ func (a *ACMStub) ExportCertificate(ctx workflow.Context, input *acm.ExportCerti
 	return &output, err
 }
 
-func (a *ACMStub) ExportCertificateAsync(ctx workflow.Context, input *acm.ExportCertificateInput) *AcmExportCertificateResult {
+func (a *ACMStub) ExportCertificateAsync(ctx workflow.Context, input *acm.ExportCertificateInput) *ACMExportCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.ExportCertificate", input)
-	return &AcmExportCertificateResult{Result: future}
+	return &ACMExportCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) GetCertificate(ctx workflow.Context, input *acm.GetCertificateInput) (*acm.GetCertificateOutput, error) {
@@ -238,9 +252,9 @@ func (a *ACMStub) GetCertificate(ctx workflow.Context, input *acm.GetCertificate
 	return &output, err
 }
 
-func (a *ACMStub) GetCertificateAsync(ctx workflow.Context, input *acm.GetCertificateInput) *AcmGetCertificateResult {
+func (a *ACMStub) GetCertificateAsync(ctx workflow.Context, input *acm.GetCertificateInput) *ACMGetCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.GetCertificate", input)
-	return &AcmGetCertificateResult{Result: future}
+	return &ACMGetCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) ImportCertificate(ctx workflow.Context, input *acm.ImportCertificateInput) (*acm.ImportCertificateOutput, error) {
@@ -249,9 +263,9 @@ func (a *ACMStub) ImportCertificate(ctx workflow.Context, input *acm.ImportCerti
 	return &output, err
 }
 
-func (a *ACMStub) ImportCertificateAsync(ctx workflow.Context, input *acm.ImportCertificateInput) *AcmImportCertificateResult {
+func (a *ACMStub) ImportCertificateAsync(ctx workflow.Context, input *acm.ImportCertificateInput) *ACMImportCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.ImportCertificate", input)
-	return &AcmImportCertificateResult{Result: future}
+	return &ACMImportCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) ListCertificates(ctx workflow.Context, input *acm.ListCertificatesInput) (*acm.ListCertificatesOutput, error) {
@@ -260,9 +274,9 @@ func (a *ACMStub) ListCertificates(ctx workflow.Context, input *acm.ListCertific
 	return &output, err
 }
 
-func (a *ACMStub) ListCertificatesAsync(ctx workflow.Context, input *acm.ListCertificatesInput) *AcmListCertificatesResult {
+func (a *ACMStub) ListCertificatesAsync(ctx workflow.Context, input *acm.ListCertificatesInput) *ACMListCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.ListCertificates", input)
-	return &AcmListCertificatesResult{Result: future}
+	return &ACMListCertificatesFuture{Future: future}
 }
 
 func (a *ACMStub) ListTagsForCertificate(ctx workflow.Context, input *acm.ListTagsForCertificateInput) (*acm.ListTagsForCertificateOutput, error) {
@@ -271,9 +285,9 @@ func (a *ACMStub) ListTagsForCertificate(ctx workflow.Context, input *acm.ListTa
 	return &output, err
 }
 
-func (a *ACMStub) ListTagsForCertificateAsync(ctx workflow.Context, input *acm.ListTagsForCertificateInput) *AcmListTagsForCertificateResult {
+func (a *ACMStub) ListTagsForCertificateAsync(ctx workflow.Context, input *acm.ListTagsForCertificateInput) *ACMListTagsForCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.ListTagsForCertificate", input)
-	return &AcmListTagsForCertificateResult{Result: future}
+	return &ACMListTagsForCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) RemoveTagsFromCertificate(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) (*acm.RemoveTagsFromCertificateOutput, error) {
@@ -282,9 +296,9 @@ func (a *ACMStub) RemoveTagsFromCertificate(ctx workflow.Context, input *acm.Rem
 	return &output, err
 }
 
-func (a *ACMStub) RemoveTagsFromCertificateAsync(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) *AcmRemoveTagsFromCertificateResult {
+func (a *ACMStub) RemoveTagsFromCertificateAsync(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) *ACMRemoveTagsFromCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.RemoveTagsFromCertificate", input)
-	return &AcmRemoveTagsFromCertificateResult{Result: future}
+	return &ACMRemoveTagsFromCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) RenewCertificate(ctx workflow.Context, input *acm.RenewCertificateInput) (*acm.RenewCertificateOutput, error) {
@@ -293,9 +307,9 @@ func (a *ACMStub) RenewCertificate(ctx workflow.Context, input *acm.RenewCertifi
 	return &output, err
 }
 
-func (a *ACMStub) RenewCertificateAsync(ctx workflow.Context, input *acm.RenewCertificateInput) *AcmRenewCertificateResult {
+func (a *ACMStub) RenewCertificateAsync(ctx workflow.Context, input *acm.RenewCertificateInput) *ACMRenewCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.RenewCertificate", input)
-	return &AcmRenewCertificateResult{Result: future}
+	return &ACMRenewCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) RequestCertificate(ctx workflow.Context, input *acm.RequestCertificateInput) (*acm.RequestCertificateOutput, error) {
@@ -304,9 +318,9 @@ func (a *ACMStub) RequestCertificate(ctx workflow.Context, input *acm.RequestCer
 	return &output, err
 }
 
-func (a *ACMStub) RequestCertificateAsync(ctx workflow.Context, input *acm.RequestCertificateInput) *AcmRequestCertificateResult {
+func (a *ACMStub) RequestCertificateAsync(ctx workflow.Context, input *acm.RequestCertificateInput) *ACMRequestCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.RequestCertificate", input)
-	return &AcmRequestCertificateResult{Result: future}
+	return &ACMRequestCertificateFuture{Future: future}
 }
 
 func (a *ACMStub) ResendValidationEmail(ctx workflow.Context, input *acm.ResendValidationEmailInput) (*acm.ResendValidationEmailOutput, error) {
@@ -315,9 +329,9 @@ func (a *ACMStub) ResendValidationEmail(ctx workflow.Context, input *acm.ResendV
 	return &output, err
 }
 
-func (a *ACMStub) ResendValidationEmailAsync(ctx workflow.Context, input *acm.ResendValidationEmailInput) *AcmResendValidationEmailResult {
+func (a *ACMStub) ResendValidationEmailAsync(ctx workflow.Context, input *acm.ResendValidationEmailInput) *ACMResendValidationEmailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.ResendValidationEmail", input)
-	return &AcmResendValidationEmailResult{Result: future}
+	return &ACMResendValidationEmailFuture{Future: future}
 }
 
 func (a *ACMStub) UpdateCertificateOptions(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) (*acm.UpdateCertificateOptionsOutput, error) {
@@ -326,15 +340,16 @@ func (a *ACMStub) UpdateCertificateOptions(ctx workflow.Context, input *acm.Upda
 	return &output, err
 }
 
-func (a *ACMStub) UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *AcmUpdateCertificateOptionsResult {
+func (a *ACMStub) UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *ACMUpdateCertificateOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acm.UpdateCertificateOptions", input)
-	return &AcmUpdateCertificateOptionsResult{Result: future}
+	return &ACMUpdateCertificateOptionsFuture{Future: future}
 }
 
 func (a *ACMStub) WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.acm.WaitUntilCertificateValidated", input).Get(ctx, nil)
 }
 
-func (a *ACMStub) WaitUntilCertificateValidatedAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.acm.WaitUntilCertificateValidated", input)
+func (a *ACMStub) WaitUntilCertificateValidatedAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.acm.WaitUntilCertificateValidated", input)
+	return NewVoidFuture(future)
 }

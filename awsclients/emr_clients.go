@@ -11,121 +11,124 @@ import (
 
 type EMRClient interface {
 	AddInstanceFleet(ctx workflow.Context, input *emr.AddInstanceFleetInput) (*emr.AddInstanceFleetOutput, error)
-	AddInstanceFleetAsync(ctx workflow.Context, input *emr.AddInstanceFleetInput) *EmrAddInstanceFleetResult
+	AddInstanceFleetAsync(ctx workflow.Context, input *emr.AddInstanceFleetInput) *EMRAddInstanceFleetFuture
 
 	AddInstanceGroups(ctx workflow.Context, input *emr.AddInstanceGroupsInput) (*emr.AddInstanceGroupsOutput, error)
-	AddInstanceGroupsAsync(ctx workflow.Context, input *emr.AddInstanceGroupsInput) *EmrAddInstanceGroupsResult
+	AddInstanceGroupsAsync(ctx workflow.Context, input *emr.AddInstanceGroupsInput) *EMRAddInstanceGroupsFuture
 
 	AddJobFlowSteps(ctx workflow.Context, input *emr.AddJobFlowStepsInput) (*emr.AddJobFlowStepsOutput, error)
-	AddJobFlowStepsAsync(ctx workflow.Context, input *emr.AddJobFlowStepsInput) *EmrAddJobFlowStepsResult
+	AddJobFlowStepsAsync(ctx workflow.Context, input *emr.AddJobFlowStepsInput) *EMRAddJobFlowStepsFuture
 
 	AddTags(ctx workflow.Context, input *emr.AddTagsInput) (*emr.AddTagsOutput, error)
-	AddTagsAsync(ctx workflow.Context, input *emr.AddTagsInput) *EmrAddTagsResult
+	AddTagsAsync(ctx workflow.Context, input *emr.AddTagsInput) *EMRAddTagsFuture
 
 	CancelSteps(ctx workflow.Context, input *emr.CancelStepsInput) (*emr.CancelStepsOutput, error)
-	CancelStepsAsync(ctx workflow.Context, input *emr.CancelStepsInput) *EmrCancelStepsResult
+	CancelStepsAsync(ctx workflow.Context, input *emr.CancelStepsInput) *EMRCancelStepsFuture
 
 	CreateSecurityConfiguration(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) (*emr.CreateSecurityConfigurationOutput, error)
-	CreateSecurityConfigurationAsync(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) *EmrCreateSecurityConfigurationResult
+	CreateSecurityConfigurationAsync(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) *EMRCreateSecurityConfigurationFuture
 
 	DeleteSecurityConfiguration(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) (*emr.DeleteSecurityConfigurationOutput, error)
-	DeleteSecurityConfigurationAsync(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) *EmrDeleteSecurityConfigurationResult
+	DeleteSecurityConfigurationAsync(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) *EMRDeleteSecurityConfigurationFuture
 
 	DescribeCluster(ctx workflow.Context, input *emr.DescribeClusterInput) (*emr.DescribeClusterOutput, error)
-	DescribeClusterAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *EmrDescribeClusterResult
+	DescribeClusterAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *EMRDescribeClusterFuture
 
 	DescribeJobFlows(ctx workflow.Context, input *emr.DescribeJobFlowsInput) (*emr.DescribeJobFlowsOutput, error)
-	DescribeJobFlowsAsync(ctx workflow.Context, input *emr.DescribeJobFlowsInput) *EmrDescribeJobFlowsResult
+	DescribeJobFlowsAsync(ctx workflow.Context, input *emr.DescribeJobFlowsInput) *EMRDescribeJobFlowsFuture
 
 	DescribeNotebookExecution(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) (*emr.DescribeNotebookExecutionOutput, error)
-	DescribeNotebookExecutionAsync(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) *EmrDescribeNotebookExecutionResult
+	DescribeNotebookExecutionAsync(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) *EMRDescribeNotebookExecutionFuture
 
 	DescribeSecurityConfiguration(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) (*emr.DescribeSecurityConfigurationOutput, error)
-	DescribeSecurityConfigurationAsync(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) *EmrDescribeSecurityConfigurationResult
+	DescribeSecurityConfigurationAsync(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) *EMRDescribeSecurityConfigurationFuture
 
 	DescribeStep(ctx workflow.Context, input *emr.DescribeStepInput) (*emr.DescribeStepOutput, error)
-	DescribeStepAsync(ctx workflow.Context, input *emr.DescribeStepInput) *EmrDescribeStepResult
+	DescribeStepAsync(ctx workflow.Context, input *emr.DescribeStepInput) *EMRDescribeStepFuture
 
 	GetBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) (*emr.GetBlockPublicAccessConfigurationOutput, error)
-	GetBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) *EmrGetBlockPublicAccessConfigurationResult
+	GetBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) *EMRGetBlockPublicAccessConfigurationFuture
 
 	GetManagedScalingPolicy(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) (*emr.GetManagedScalingPolicyOutput, error)
-	GetManagedScalingPolicyAsync(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) *EmrGetManagedScalingPolicyResult
+	GetManagedScalingPolicyAsync(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) *EMRGetManagedScalingPolicyFuture
 
 	ListBootstrapActions(ctx workflow.Context, input *emr.ListBootstrapActionsInput) (*emr.ListBootstrapActionsOutput, error)
-	ListBootstrapActionsAsync(ctx workflow.Context, input *emr.ListBootstrapActionsInput) *EmrListBootstrapActionsResult
+	ListBootstrapActionsAsync(ctx workflow.Context, input *emr.ListBootstrapActionsInput) *EMRListBootstrapActionsFuture
 
 	ListClusters(ctx workflow.Context, input *emr.ListClustersInput) (*emr.ListClustersOutput, error)
-	ListClustersAsync(ctx workflow.Context, input *emr.ListClustersInput) *EmrListClustersResult
+	ListClustersAsync(ctx workflow.Context, input *emr.ListClustersInput) *EMRListClustersFuture
 
 	ListInstanceFleets(ctx workflow.Context, input *emr.ListInstanceFleetsInput) (*emr.ListInstanceFleetsOutput, error)
-	ListInstanceFleetsAsync(ctx workflow.Context, input *emr.ListInstanceFleetsInput) *EmrListInstanceFleetsResult
+	ListInstanceFleetsAsync(ctx workflow.Context, input *emr.ListInstanceFleetsInput) *EMRListInstanceFleetsFuture
 
 	ListInstanceGroups(ctx workflow.Context, input *emr.ListInstanceGroupsInput) (*emr.ListInstanceGroupsOutput, error)
-	ListInstanceGroupsAsync(ctx workflow.Context, input *emr.ListInstanceGroupsInput) *EmrListInstanceGroupsResult
+	ListInstanceGroupsAsync(ctx workflow.Context, input *emr.ListInstanceGroupsInput) *EMRListInstanceGroupsFuture
 
 	ListInstances(ctx workflow.Context, input *emr.ListInstancesInput) (*emr.ListInstancesOutput, error)
-	ListInstancesAsync(ctx workflow.Context, input *emr.ListInstancesInput) *EmrListInstancesResult
+	ListInstancesAsync(ctx workflow.Context, input *emr.ListInstancesInput) *EMRListInstancesFuture
 
 	ListNotebookExecutions(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) (*emr.ListNotebookExecutionsOutput, error)
-	ListNotebookExecutionsAsync(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) *EmrListNotebookExecutionsResult
+	ListNotebookExecutionsAsync(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) *EMRListNotebookExecutionsFuture
 
 	ListSecurityConfigurations(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) (*emr.ListSecurityConfigurationsOutput, error)
-	ListSecurityConfigurationsAsync(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) *EmrListSecurityConfigurationsResult
+	ListSecurityConfigurationsAsync(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) *EMRListSecurityConfigurationsFuture
 
 	ListSteps(ctx workflow.Context, input *emr.ListStepsInput) (*emr.ListStepsOutput, error)
-	ListStepsAsync(ctx workflow.Context, input *emr.ListStepsInput) *EmrListStepsResult
+	ListStepsAsync(ctx workflow.Context, input *emr.ListStepsInput) *EMRListStepsFuture
 
 	ModifyCluster(ctx workflow.Context, input *emr.ModifyClusterInput) (*emr.ModifyClusterOutput, error)
-	ModifyClusterAsync(ctx workflow.Context, input *emr.ModifyClusterInput) *EmrModifyClusterResult
+	ModifyClusterAsync(ctx workflow.Context, input *emr.ModifyClusterInput) *EMRModifyClusterFuture
 
 	ModifyInstanceFleet(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) (*emr.ModifyInstanceFleetOutput, error)
-	ModifyInstanceFleetAsync(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) *EmrModifyInstanceFleetResult
+	ModifyInstanceFleetAsync(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) *EMRModifyInstanceFleetFuture
 
 	ModifyInstanceGroups(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) (*emr.ModifyInstanceGroupsOutput, error)
-	ModifyInstanceGroupsAsync(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) *EmrModifyInstanceGroupsResult
+	ModifyInstanceGroupsAsync(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) *EMRModifyInstanceGroupsFuture
 
 	PutAutoScalingPolicy(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) (*emr.PutAutoScalingPolicyOutput, error)
-	PutAutoScalingPolicyAsync(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) *EmrPutAutoScalingPolicyResult
+	PutAutoScalingPolicyAsync(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) *EMRPutAutoScalingPolicyFuture
 
 	PutBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) (*emr.PutBlockPublicAccessConfigurationOutput, error)
-	PutBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) *EmrPutBlockPublicAccessConfigurationResult
+	PutBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) *EMRPutBlockPublicAccessConfigurationFuture
 
 	PutManagedScalingPolicy(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) (*emr.PutManagedScalingPolicyOutput, error)
-	PutManagedScalingPolicyAsync(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) *EmrPutManagedScalingPolicyResult
+	PutManagedScalingPolicyAsync(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) *EMRPutManagedScalingPolicyFuture
 
 	RemoveAutoScalingPolicy(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) (*emr.RemoveAutoScalingPolicyOutput, error)
-	RemoveAutoScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) *EmrRemoveAutoScalingPolicyResult
+	RemoveAutoScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) *EMRRemoveAutoScalingPolicyFuture
 
 	RemoveManagedScalingPolicy(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) (*emr.RemoveManagedScalingPolicyOutput, error)
-	RemoveManagedScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) *EmrRemoveManagedScalingPolicyResult
+	RemoveManagedScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) *EMRRemoveManagedScalingPolicyFuture
 
 	RemoveTags(ctx workflow.Context, input *emr.RemoveTagsInput) (*emr.RemoveTagsOutput, error)
-	RemoveTagsAsync(ctx workflow.Context, input *emr.RemoveTagsInput) *EmrRemoveTagsResult
+	RemoveTagsAsync(ctx workflow.Context, input *emr.RemoveTagsInput) *EMRRemoveTagsFuture
 
 	RunJobFlow(ctx workflow.Context, input *emr.RunJobFlowInput) (*emr.RunJobFlowOutput, error)
-	RunJobFlowAsync(ctx workflow.Context, input *emr.RunJobFlowInput) *EmrRunJobFlowResult
+	RunJobFlowAsync(ctx workflow.Context, input *emr.RunJobFlowInput) *EMRRunJobFlowFuture
 
 	SetTerminationProtection(ctx workflow.Context, input *emr.SetTerminationProtectionInput) (*emr.SetTerminationProtectionOutput, error)
-	SetTerminationProtectionAsync(ctx workflow.Context, input *emr.SetTerminationProtectionInput) *EmrSetTerminationProtectionResult
+	SetTerminationProtectionAsync(ctx workflow.Context, input *emr.SetTerminationProtectionInput) *EMRSetTerminationProtectionFuture
 
 	SetVisibleToAllUsers(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) (*emr.SetVisibleToAllUsersOutput, error)
-	SetVisibleToAllUsersAsync(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) *EmrSetVisibleToAllUsersResult
+	SetVisibleToAllUsersAsync(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) *EMRSetVisibleToAllUsersFuture
 
 	StartNotebookExecution(ctx workflow.Context, input *emr.StartNotebookExecutionInput) (*emr.StartNotebookExecutionOutput, error)
-	StartNotebookExecutionAsync(ctx workflow.Context, input *emr.StartNotebookExecutionInput) *EmrStartNotebookExecutionResult
+	StartNotebookExecutionAsync(ctx workflow.Context, input *emr.StartNotebookExecutionInput) *EMRStartNotebookExecutionFuture
 
 	StopNotebookExecution(ctx workflow.Context, input *emr.StopNotebookExecutionInput) (*emr.StopNotebookExecutionOutput, error)
-	StopNotebookExecutionAsync(ctx workflow.Context, input *emr.StopNotebookExecutionInput) *EmrStopNotebookExecutionResult
+	StopNotebookExecutionAsync(ctx workflow.Context, input *emr.StopNotebookExecutionInput) *EMRStopNotebookExecutionFuture
 
 	TerminateJobFlows(ctx workflow.Context, input *emr.TerminateJobFlowsInput) (*emr.TerminateJobFlowsOutput, error)
-	TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EmrTerminateJobFlowsResult
+	TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EMRTerminateJobFlowsFuture
 
 	WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error
+	WaitUntilClusterRunningAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *VoidFuture
 
 	WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error
+	WaitUntilClusterTerminatedAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *VoidFuture
 
 	WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error
+	WaitUntilStepCompleteAsync(ctx workflow.Context, input *emr.DescribeStepInput) *VoidFuture
 }
 
 type EMRStub struct{}
@@ -134,373 +137,410 @@ func NewEMRStub() EMRClient {
 	return &EMRStub{}
 }
 
-type EmrAddInstanceFleetResult struct {
-	Result workflow.Future
+type EMRAddInstanceFleetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrAddInstanceFleetResult) Get(ctx workflow.Context) (*emr.AddInstanceFleetOutput, error) {
+func (r *EMRAddInstanceFleetFuture) Get(ctx workflow.Context) (*emr.AddInstanceFleetOutput, error) {
 	var output emr.AddInstanceFleetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrAddInstanceGroupsResult struct {
-	Result workflow.Future
+type EMRAddInstanceGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrAddInstanceGroupsResult) Get(ctx workflow.Context) (*emr.AddInstanceGroupsOutput, error) {
+func (r *EMRAddInstanceGroupsFuture) Get(ctx workflow.Context) (*emr.AddInstanceGroupsOutput, error) {
 	var output emr.AddInstanceGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrAddJobFlowStepsResult struct {
-	Result workflow.Future
+type EMRAddJobFlowStepsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrAddJobFlowStepsResult) Get(ctx workflow.Context) (*emr.AddJobFlowStepsOutput, error) {
+func (r *EMRAddJobFlowStepsFuture) Get(ctx workflow.Context) (*emr.AddJobFlowStepsOutput, error) {
 	var output emr.AddJobFlowStepsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrAddTagsResult struct {
-	Result workflow.Future
+type EMRAddTagsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrAddTagsResult) Get(ctx workflow.Context) (*emr.AddTagsOutput, error) {
+func (r *EMRAddTagsFuture) Get(ctx workflow.Context) (*emr.AddTagsOutput, error) {
 	var output emr.AddTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrCancelStepsResult struct {
-	Result workflow.Future
+type EMRCancelStepsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrCancelStepsResult) Get(ctx workflow.Context) (*emr.CancelStepsOutput, error) {
+func (r *EMRCancelStepsFuture) Get(ctx workflow.Context) (*emr.CancelStepsOutput, error) {
 	var output emr.CancelStepsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrCreateSecurityConfigurationResult struct {
-	Result workflow.Future
+type EMRCreateSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrCreateSecurityConfigurationResult) Get(ctx workflow.Context) (*emr.CreateSecurityConfigurationOutput, error) {
+func (r *EMRCreateSecurityConfigurationFuture) Get(ctx workflow.Context) (*emr.CreateSecurityConfigurationOutput, error) {
 	var output emr.CreateSecurityConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrDeleteSecurityConfigurationResult struct {
-	Result workflow.Future
+type EMRDeleteSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrDeleteSecurityConfigurationResult) Get(ctx workflow.Context) (*emr.DeleteSecurityConfigurationOutput, error) {
+func (r *EMRDeleteSecurityConfigurationFuture) Get(ctx workflow.Context) (*emr.DeleteSecurityConfigurationOutput, error) {
 	var output emr.DeleteSecurityConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrDescribeClusterResult struct {
-	Result workflow.Future
+type EMRDescribeClusterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrDescribeClusterResult) Get(ctx workflow.Context) (*emr.DescribeClusterOutput, error) {
+func (r *EMRDescribeClusterFuture) Get(ctx workflow.Context) (*emr.DescribeClusterOutput, error) {
 	var output emr.DescribeClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrDescribeJobFlowsResult struct {
-	Result workflow.Future
+type EMRDescribeJobFlowsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrDescribeJobFlowsResult) Get(ctx workflow.Context) (*emr.DescribeJobFlowsOutput, error) {
+func (r *EMRDescribeJobFlowsFuture) Get(ctx workflow.Context) (*emr.DescribeJobFlowsOutput, error) {
 	var output emr.DescribeJobFlowsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrDescribeNotebookExecutionResult struct {
-	Result workflow.Future
+type EMRDescribeNotebookExecutionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrDescribeNotebookExecutionResult) Get(ctx workflow.Context) (*emr.DescribeNotebookExecutionOutput, error) {
+func (r *EMRDescribeNotebookExecutionFuture) Get(ctx workflow.Context) (*emr.DescribeNotebookExecutionOutput, error) {
 	var output emr.DescribeNotebookExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrDescribeSecurityConfigurationResult struct {
-	Result workflow.Future
+type EMRDescribeSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrDescribeSecurityConfigurationResult) Get(ctx workflow.Context) (*emr.DescribeSecurityConfigurationOutput, error) {
+func (r *EMRDescribeSecurityConfigurationFuture) Get(ctx workflow.Context) (*emr.DescribeSecurityConfigurationOutput, error) {
 	var output emr.DescribeSecurityConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrDescribeStepResult struct {
-	Result workflow.Future
+type EMRDescribeStepFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrDescribeStepResult) Get(ctx workflow.Context) (*emr.DescribeStepOutput, error) {
+func (r *EMRDescribeStepFuture) Get(ctx workflow.Context) (*emr.DescribeStepOutput, error) {
 	var output emr.DescribeStepOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrGetBlockPublicAccessConfigurationResult struct {
-	Result workflow.Future
+type EMRGetBlockPublicAccessConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrGetBlockPublicAccessConfigurationResult) Get(ctx workflow.Context) (*emr.GetBlockPublicAccessConfigurationOutput, error) {
+func (r *EMRGetBlockPublicAccessConfigurationFuture) Get(ctx workflow.Context) (*emr.GetBlockPublicAccessConfigurationOutput, error) {
 	var output emr.GetBlockPublicAccessConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrGetManagedScalingPolicyResult struct {
-	Result workflow.Future
+type EMRGetManagedScalingPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrGetManagedScalingPolicyResult) Get(ctx workflow.Context) (*emr.GetManagedScalingPolicyOutput, error) {
+func (r *EMRGetManagedScalingPolicyFuture) Get(ctx workflow.Context) (*emr.GetManagedScalingPolicyOutput, error) {
 	var output emr.GetManagedScalingPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrListBootstrapActionsResult struct {
-	Result workflow.Future
+type EMRListBootstrapActionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrListBootstrapActionsResult) Get(ctx workflow.Context) (*emr.ListBootstrapActionsOutput, error) {
+func (r *EMRListBootstrapActionsFuture) Get(ctx workflow.Context) (*emr.ListBootstrapActionsOutput, error) {
 	var output emr.ListBootstrapActionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrListClustersResult struct {
-	Result workflow.Future
+type EMRListClustersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrListClustersResult) Get(ctx workflow.Context) (*emr.ListClustersOutput, error) {
+func (r *EMRListClustersFuture) Get(ctx workflow.Context) (*emr.ListClustersOutput, error) {
 	var output emr.ListClustersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrListInstanceFleetsResult struct {
-	Result workflow.Future
+type EMRListInstanceFleetsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrListInstanceFleetsResult) Get(ctx workflow.Context) (*emr.ListInstanceFleetsOutput, error) {
+func (r *EMRListInstanceFleetsFuture) Get(ctx workflow.Context) (*emr.ListInstanceFleetsOutput, error) {
 	var output emr.ListInstanceFleetsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrListInstanceGroupsResult struct {
-	Result workflow.Future
+type EMRListInstanceGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrListInstanceGroupsResult) Get(ctx workflow.Context) (*emr.ListInstanceGroupsOutput, error) {
+func (r *EMRListInstanceGroupsFuture) Get(ctx workflow.Context) (*emr.ListInstanceGroupsOutput, error) {
 	var output emr.ListInstanceGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrListInstancesResult struct {
-	Result workflow.Future
+type EMRListInstancesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrListInstancesResult) Get(ctx workflow.Context) (*emr.ListInstancesOutput, error) {
+func (r *EMRListInstancesFuture) Get(ctx workflow.Context) (*emr.ListInstancesOutput, error) {
 	var output emr.ListInstancesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrListNotebookExecutionsResult struct {
-	Result workflow.Future
+type EMRListNotebookExecutionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrListNotebookExecutionsResult) Get(ctx workflow.Context) (*emr.ListNotebookExecutionsOutput, error) {
+func (r *EMRListNotebookExecutionsFuture) Get(ctx workflow.Context) (*emr.ListNotebookExecutionsOutput, error) {
 	var output emr.ListNotebookExecutionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrListSecurityConfigurationsResult struct {
-	Result workflow.Future
+type EMRListSecurityConfigurationsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrListSecurityConfigurationsResult) Get(ctx workflow.Context) (*emr.ListSecurityConfigurationsOutput, error) {
+func (r *EMRListSecurityConfigurationsFuture) Get(ctx workflow.Context) (*emr.ListSecurityConfigurationsOutput, error) {
 	var output emr.ListSecurityConfigurationsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrListStepsResult struct {
-	Result workflow.Future
+type EMRListStepsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrListStepsResult) Get(ctx workflow.Context) (*emr.ListStepsOutput, error) {
+func (r *EMRListStepsFuture) Get(ctx workflow.Context) (*emr.ListStepsOutput, error) {
 	var output emr.ListStepsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrModifyClusterResult struct {
-	Result workflow.Future
+type EMRModifyClusterFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrModifyClusterResult) Get(ctx workflow.Context) (*emr.ModifyClusterOutput, error) {
+func (r *EMRModifyClusterFuture) Get(ctx workflow.Context) (*emr.ModifyClusterOutput, error) {
 	var output emr.ModifyClusterOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrModifyInstanceFleetResult struct {
-	Result workflow.Future
+type EMRModifyInstanceFleetFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrModifyInstanceFleetResult) Get(ctx workflow.Context) (*emr.ModifyInstanceFleetOutput, error) {
+func (r *EMRModifyInstanceFleetFuture) Get(ctx workflow.Context) (*emr.ModifyInstanceFleetOutput, error) {
 	var output emr.ModifyInstanceFleetOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrModifyInstanceGroupsResult struct {
-	Result workflow.Future
+type EMRModifyInstanceGroupsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrModifyInstanceGroupsResult) Get(ctx workflow.Context) (*emr.ModifyInstanceGroupsOutput, error) {
+func (r *EMRModifyInstanceGroupsFuture) Get(ctx workflow.Context) (*emr.ModifyInstanceGroupsOutput, error) {
 	var output emr.ModifyInstanceGroupsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrPutAutoScalingPolicyResult struct {
-	Result workflow.Future
+type EMRPutAutoScalingPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrPutAutoScalingPolicyResult) Get(ctx workflow.Context) (*emr.PutAutoScalingPolicyOutput, error) {
+func (r *EMRPutAutoScalingPolicyFuture) Get(ctx workflow.Context) (*emr.PutAutoScalingPolicyOutput, error) {
 	var output emr.PutAutoScalingPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrPutBlockPublicAccessConfigurationResult struct {
-	Result workflow.Future
+type EMRPutBlockPublicAccessConfigurationFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrPutBlockPublicAccessConfigurationResult) Get(ctx workflow.Context) (*emr.PutBlockPublicAccessConfigurationOutput, error) {
+func (r *EMRPutBlockPublicAccessConfigurationFuture) Get(ctx workflow.Context) (*emr.PutBlockPublicAccessConfigurationOutput, error) {
 	var output emr.PutBlockPublicAccessConfigurationOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrPutManagedScalingPolicyResult struct {
-	Result workflow.Future
+type EMRPutManagedScalingPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrPutManagedScalingPolicyResult) Get(ctx workflow.Context) (*emr.PutManagedScalingPolicyOutput, error) {
+func (r *EMRPutManagedScalingPolicyFuture) Get(ctx workflow.Context) (*emr.PutManagedScalingPolicyOutput, error) {
 	var output emr.PutManagedScalingPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrRemoveAutoScalingPolicyResult struct {
-	Result workflow.Future
+type EMRRemoveAutoScalingPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrRemoveAutoScalingPolicyResult) Get(ctx workflow.Context) (*emr.RemoveAutoScalingPolicyOutput, error) {
+func (r *EMRRemoveAutoScalingPolicyFuture) Get(ctx workflow.Context) (*emr.RemoveAutoScalingPolicyOutput, error) {
 	var output emr.RemoveAutoScalingPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrRemoveManagedScalingPolicyResult struct {
-	Result workflow.Future
+type EMRRemoveManagedScalingPolicyFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrRemoveManagedScalingPolicyResult) Get(ctx workflow.Context) (*emr.RemoveManagedScalingPolicyOutput, error) {
+func (r *EMRRemoveManagedScalingPolicyFuture) Get(ctx workflow.Context) (*emr.RemoveManagedScalingPolicyOutput, error) {
 	var output emr.RemoveManagedScalingPolicyOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrRemoveTagsResult struct {
-	Result workflow.Future
+type EMRRemoveTagsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrRemoveTagsResult) Get(ctx workflow.Context) (*emr.RemoveTagsOutput, error) {
+func (r *EMRRemoveTagsFuture) Get(ctx workflow.Context) (*emr.RemoveTagsOutput, error) {
 	var output emr.RemoveTagsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrRunJobFlowResult struct {
-	Result workflow.Future
+type EMRRunJobFlowFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrRunJobFlowResult) Get(ctx workflow.Context) (*emr.RunJobFlowOutput, error) {
+func (r *EMRRunJobFlowFuture) Get(ctx workflow.Context) (*emr.RunJobFlowOutput, error) {
 	var output emr.RunJobFlowOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrSetTerminationProtectionResult struct {
-	Result workflow.Future
+type EMRSetTerminationProtectionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrSetTerminationProtectionResult) Get(ctx workflow.Context) (*emr.SetTerminationProtectionOutput, error) {
+func (r *EMRSetTerminationProtectionFuture) Get(ctx workflow.Context) (*emr.SetTerminationProtectionOutput, error) {
 	var output emr.SetTerminationProtectionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrSetVisibleToAllUsersResult struct {
-	Result workflow.Future
+type EMRSetVisibleToAllUsersFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrSetVisibleToAllUsersResult) Get(ctx workflow.Context) (*emr.SetVisibleToAllUsersOutput, error) {
+func (r *EMRSetVisibleToAllUsersFuture) Get(ctx workflow.Context) (*emr.SetVisibleToAllUsersOutput, error) {
 	var output emr.SetVisibleToAllUsersOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrStartNotebookExecutionResult struct {
-	Result workflow.Future
+type EMRStartNotebookExecutionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrStartNotebookExecutionResult) Get(ctx workflow.Context) (*emr.StartNotebookExecutionOutput, error) {
+func (r *EMRStartNotebookExecutionFuture) Get(ctx workflow.Context) (*emr.StartNotebookExecutionOutput, error) {
 	var output emr.StartNotebookExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrStopNotebookExecutionResult struct {
-	Result workflow.Future
+type EMRStopNotebookExecutionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrStopNotebookExecutionResult) Get(ctx workflow.Context) (*emr.StopNotebookExecutionOutput, error) {
+func (r *EMRStopNotebookExecutionFuture) Get(ctx workflow.Context) (*emr.StopNotebookExecutionOutput, error) {
 	var output emr.StopNotebookExecutionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EmrTerminateJobFlowsResult struct {
-	Result workflow.Future
+type EMRTerminateJobFlowsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *EmrTerminateJobFlowsResult) Get(ctx workflow.Context) (*emr.TerminateJobFlowsOutput, error) {
+func (r *EMRTerminateJobFlowsFuture) Get(ctx workflow.Context) (*emr.TerminateJobFlowsOutput, error) {
 	var output emr.TerminateJobFlowsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -510,9 +550,9 @@ func (a *EMRStub) AddInstanceFleet(ctx workflow.Context, input *emr.AddInstanceF
 	return &output, err
 }
 
-func (a *EMRStub) AddInstanceFleetAsync(ctx workflow.Context, input *emr.AddInstanceFleetInput) *EmrAddInstanceFleetResult {
+func (a *EMRStub) AddInstanceFleetAsync(ctx workflow.Context, input *emr.AddInstanceFleetInput) *EMRAddInstanceFleetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.AddInstanceFleet", input)
-	return &EmrAddInstanceFleetResult{Result: future}
+	return &EMRAddInstanceFleetFuture{Future: future}
 }
 
 func (a *EMRStub) AddInstanceGroups(ctx workflow.Context, input *emr.AddInstanceGroupsInput) (*emr.AddInstanceGroupsOutput, error) {
@@ -521,9 +561,9 @@ func (a *EMRStub) AddInstanceGroups(ctx workflow.Context, input *emr.AddInstance
 	return &output, err
 }
 
-func (a *EMRStub) AddInstanceGroupsAsync(ctx workflow.Context, input *emr.AddInstanceGroupsInput) *EmrAddInstanceGroupsResult {
+func (a *EMRStub) AddInstanceGroupsAsync(ctx workflow.Context, input *emr.AddInstanceGroupsInput) *EMRAddInstanceGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.AddInstanceGroups", input)
-	return &EmrAddInstanceGroupsResult{Result: future}
+	return &EMRAddInstanceGroupsFuture{Future: future}
 }
 
 func (a *EMRStub) AddJobFlowSteps(ctx workflow.Context, input *emr.AddJobFlowStepsInput) (*emr.AddJobFlowStepsOutput, error) {
@@ -532,9 +572,9 @@ func (a *EMRStub) AddJobFlowSteps(ctx workflow.Context, input *emr.AddJobFlowSte
 	return &output, err
 }
 
-func (a *EMRStub) AddJobFlowStepsAsync(ctx workflow.Context, input *emr.AddJobFlowStepsInput) *EmrAddJobFlowStepsResult {
+func (a *EMRStub) AddJobFlowStepsAsync(ctx workflow.Context, input *emr.AddJobFlowStepsInput) *EMRAddJobFlowStepsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.AddJobFlowSteps", input)
-	return &EmrAddJobFlowStepsResult{Result: future}
+	return &EMRAddJobFlowStepsFuture{Future: future}
 }
 
 func (a *EMRStub) AddTags(ctx workflow.Context, input *emr.AddTagsInput) (*emr.AddTagsOutput, error) {
@@ -543,9 +583,9 @@ func (a *EMRStub) AddTags(ctx workflow.Context, input *emr.AddTagsInput) (*emr.A
 	return &output, err
 }
 
-func (a *EMRStub) AddTagsAsync(ctx workflow.Context, input *emr.AddTagsInput) *EmrAddTagsResult {
+func (a *EMRStub) AddTagsAsync(ctx workflow.Context, input *emr.AddTagsInput) *EMRAddTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.AddTags", input)
-	return &EmrAddTagsResult{Result: future}
+	return &EMRAddTagsFuture{Future: future}
 }
 
 func (a *EMRStub) CancelSteps(ctx workflow.Context, input *emr.CancelStepsInput) (*emr.CancelStepsOutput, error) {
@@ -554,9 +594,9 @@ func (a *EMRStub) CancelSteps(ctx workflow.Context, input *emr.CancelStepsInput)
 	return &output, err
 }
 
-func (a *EMRStub) CancelStepsAsync(ctx workflow.Context, input *emr.CancelStepsInput) *EmrCancelStepsResult {
+func (a *EMRStub) CancelStepsAsync(ctx workflow.Context, input *emr.CancelStepsInput) *EMRCancelStepsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.CancelSteps", input)
-	return &EmrCancelStepsResult{Result: future}
+	return &EMRCancelStepsFuture{Future: future}
 }
 
 func (a *EMRStub) CreateSecurityConfiguration(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) (*emr.CreateSecurityConfigurationOutput, error) {
@@ -565,9 +605,9 @@ func (a *EMRStub) CreateSecurityConfiguration(ctx workflow.Context, input *emr.C
 	return &output, err
 }
 
-func (a *EMRStub) CreateSecurityConfigurationAsync(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) *EmrCreateSecurityConfigurationResult {
+func (a *EMRStub) CreateSecurityConfigurationAsync(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) *EMRCreateSecurityConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.CreateSecurityConfiguration", input)
-	return &EmrCreateSecurityConfigurationResult{Result: future}
+	return &EMRCreateSecurityConfigurationFuture{Future: future}
 }
 
 func (a *EMRStub) DeleteSecurityConfiguration(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) (*emr.DeleteSecurityConfigurationOutput, error) {
@@ -576,9 +616,9 @@ func (a *EMRStub) DeleteSecurityConfiguration(ctx workflow.Context, input *emr.D
 	return &output, err
 }
 
-func (a *EMRStub) DeleteSecurityConfigurationAsync(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) *EmrDeleteSecurityConfigurationResult {
+func (a *EMRStub) DeleteSecurityConfigurationAsync(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) *EMRDeleteSecurityConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.DeleteSecurityConfiguration", input)
-	return &EmrDeleteSecurityConfigurationResult{Result: future}
+	return &EMRDeleteSecurityConfigurationFuture{Future: future}
 }
 
 func (a *EMRStub) DescribeCluster(ctx workflow.Context, input *emr.DescribeClusterInput) (*emr.DescribeClusterOutput, error) {
@@ -587,9 +627,9 @@ func (a *EMRStub) DescribeCluster(ctx workflow.Context, input *emr.DescribeClust
 	return &output, err
 }
 
-func (a *EMRStub) DescribeClusterAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *EmrDescribeClusterResult {
+func (a *EMRStub) DescribeClusterAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *EMRDescribeClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeCluster", input)
-	return &EmrDescribeClusterResult{Result: future}
+	return &EMRDescribeClusterFuture{Future: future}
 }
 
 func (a *EMRStub) DescribeJobFlows(ctx workflow.Context, input *emr.DescribeJobFlowsInput) (*emr.DescribeJobFlowsOutput, error) {
@@ -598,9 +638,9 @@ func (a *EMRStub) DescribeJobFlows(ctx workflow.Context, input *emr.DescribeJobF
 	return &output, err
 }
 
-func (a *EMRStub) DescribeJobFlowsAsync(ctx workflow.Context, input *emr.DescribeJobFlowsInput) *EmrDescribeJobFlowsResult {
+func (a *EMRStub) DescribeJobFlowsAsync(ctx workflow.Context, input *emr.DescribeJobFlowsInput) *EMRDescribeJobFlowsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeJobFlows", input)
-	return &EmrDescribeJobFlowsResult{Result: future}
+	return &EMRDescribeJobFlowsFuture{Future: future}
 }
 
 func (a *EMRStub) DescribeNotebookExecution(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) (*emr.DescribeNotebookExecutionOutput, error) {
@@ -609,9 +649,9 @@ func (a *EMRStub) DescribeNotebookExecution(ctx workflow.Context, input *emr.Des
 	return &output, err
 }
 
-func (a *EMRStub) DescribeNotebookExecutionAsync(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) *EmrDescribeNotebookExecutionResult {
+func (a *EMRStub) DescribeNotebookExecutionAsync(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) *EMRDescribeNotebookExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeNotebookExecution", input)
-	return &EmrDescribeNotebookExecutionResult{Result: future}
+	return &EMRDescribeNotebookExecutionFuture{Future: future}
 }
 
 func (a *EMRStub) DescribeSecurityConfiguration(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) (*emr.DescribeSecurityConfigurationOutput, error) {
@@ -620,9 +660,9 @@ func (a *EMRStub) DescribeSecurityConfiguration(ctx workflow.Context, input *emr
 	return &output, err
 }
 
-func (a *EMRStub) DescribeSecurityConfigurationAsync(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) *EmrDescribeSecurityConfigurationResult {
+func (a *EMRStub) DescribeSecurityConfigurationAsync(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) *EMRDescribeSecurityConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeSecurityConfiguration", input)
-	return &EmrDescribeSecurityConfigurationResult{Result: future}
+	return &EMRDescribeSecurityConfigurationFuture{Future: future}
 }
 
 func (a *EMRStub) DescribeStep(ctx workflow.Context, input *emr.DescribeStepInput) (*emr.DescribeStepOutput, error) {
@@ -631,9 +671,9 @@ func (a *EMRStub) DescribeStep(ctx workflow.Context, input *emr.DescribeStepInpu
 	return &output, err
 }
 
-func (a *EMRStub) DescribeStepAsync(ctx workflow.Context, input *emr.DescribeStepInput) *EmrDescribeStepResult {
+func (a *EMRStub) DescribeStepAsync(ctx workflow.Context, input *emr.DescribeStepInput) *EMRDescribeStepFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeStep", input)
-	return &EmrDescribeStepResult{Result: future}
+	return &EMRDescribeStepFuture{Future: future}
 }
 
 func (a *EMRStub) GetBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) (*emr.GetBlockPublicAccessConfigurationOutput, error) {
@@ -642,9 +682,9 @@ func (a *EMRStub) GetBlockPublicAccessConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *EMRStub) GetBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) *EmrGetBlockPublicAccessConfigurationResult {
+func (a *EMRStub) GetBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) *EMRGetBlockPublicAccessConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.GetBlockPublicAccessConfiguration", input)
-	return &EmrGetBlockPublicAccessConfigurationResult{Result: future}
+	return &EMRGetBlockPublicAccessConfigurationFuture{Future: future}
 }
 
 func (a *EMRStub) GetManagedScalingPolicy(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) (*emr.GetManagedScalingPolicyOutput, error) {
@@ -653,9 +693,9 @@ func (a *EMRStub) GetManagedScalingPolicy(ctx workflow.Context, input *emr.GetMa
 	return &output, err
 }
 
-func (a *EMRStub) GetManagedScalingPolicyAsync(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) *EmrGetManagedScalingPolicyResult {
+func (a *EMRStub) GetManagedScalingPolicyAsync(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) *EMRGetManagedScalingPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.GetManagedScalingPolicy", input)
-	return &EmrGetManagedScalingPolicyResult{Result: future}
+	return &EMRGetManagedScalingPolicyFuture{Future: future}
 }
 
 func (a *EMRStub) ListBootstrapActions(ctx workflow.Context, input *emr.ListBootstrapActionsInput) (*emr.ListBootstrapActionsOutput, error) {
@@ -664,9 +704,9 @@ func (a *EMRStub) ListBootstrapActions(ctx workflow.Context, input *emr.ListBoot
 	return &output, err
 }
 
-func (a *EMRStub) ListBootstrapActionsAsync(ctx workflow.Context, input *emr.ListBootstrapActionsInput) *EmrListBootstrapActionsResult {
+func (a *EMRStub) ListBootstrapActionsAsync(ctx workflow.Context, input *emr.ListBootstrapActionsInput) *EMRListBootstrapActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ListBootstrapActions", input)
-	return &EmrListBootstrapActionsResult{Result: future}
+	return &EMRListBootstrapActionsFuture{Future: future}
 }
 
 func (a *EMRStub) ListClusters(ctx workflow.Context, input *emr.ListClustersInput) (*emr.ListClustersOutput, error) {
@@ -675,9 +715,9 @@ func (a *EMRStub) ListClusters(ctx workflow.Context, input *emr.ListClustersInpu
 	return &output, err
 }
 
-func (a *EMRStub) ListClustersAsync(ctx workflow.Context, input *emr.ListClustersInput) *EmrListClustersResult {
+func (a *EMRStub) ListClustersAsync(ctx workflow.Context, input *emr.ListClustersInput) *EMRListClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ListClusters", input)
-	return &EmrListClustersResult{Result: future}
+	return &EMRListClustersFuture{Future: future}
 }
 
 func (a *EMRStub) ListInstanceFleets(ctx workflow.Context, input *emr.ListInstanceFleetsInput) (*emr.ListInstanceFleetsOutput, error) {
@@ -686,9 +726,9 @@ func (a *EMRStub) ListInstanceFleets(ctx workflow.Context, input *emr.ListInstan
 	return &output, err
 }
 
-func (a *EMRStub) ListInstanceFleetsAsync(ctx workflow.Context, input *emr.ListInstanceFleetsInput) *EmrListInstanceFleetsResult {
+func (a *EMRStub) ListInstanceFleetsAsync(ctx workflow.Context, input *emr.ListInstanceFleetsInput) *EMRListInstanceFleetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ListInstanceFleets", input)
-	return &EmrListInstanceFleetsResult{Result: future}
+	return &EMRListInstanceFleetsFuture{Future: future}
 }
 
 func (a *EMRStub) ListInstanceGroups(ctx workflow.Context, input *emr.ListInstanceGroupsInput) (*emr.ListInstanceGroupsOutput, error) {
@@ -697,9 +737,9 @@ func (a *EMRStub) ListInstanceGroups(ctx workflow.Context, input *emr.ListInstan
 	return &output, err
 }
 
-func (a *EMRStub) ListInstanceGroupsAsync(ctx workflow.Context, input *emr.ListInstanceGroupsInput) *EmrListInstanceGroupsResult {
+func (a *EMRStub) ListInstanceGroupsAsync(ctx workflow.Context, input *emr.ListInstanceGroupsInput) *EMRListInstanceGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ListInstanceGroups", input)
-	return &EmrListInstanceGroupsResult{Result: future}
+	return &EMRListInstanceGroupsFuture{Future: future}
 }
 
 func (a *EMRStub) ListInstances(ctx workflow.Context, input *emr.ListInstancesInput) (*emr.ListInstancesOutput, error) {
@@ -708,9 +748,9 @@ func (a *EMRStub) ListInstances(ctx workflow.Context, input *emr.ListInstancesIn
 	return &output, err
 }
 
-func (a *EMRStub) ListInstancesAsync(ctx workflow.Context, input *emr.ListInstancesInput) *EmrListInstancesResult {
+func (a *EMRStub) ListInstancesAsync(ctx workflow.Context, input *emr.ListInstancesInput) *EMRListInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ListInstances", input)
-	return &EmrListInstancesResult{Result: future}
+	return &EMRListInstancesFuture{Future: future}
 }
 
 func (a *EMRStub) ListNotebookExecutions(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) (*emr.ListNotebookExecutionsOutput, error) {
@@ -719,9 +759,9 @@ func (a *EMRStub) ListNotebookExecutions(ctx workflow.Context, input *emr.ListNo
 	return &output, err
 }
 
-func (a *EMRStub) ListNotebookExecutionsAsync(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) *EmrListNotebookExecutionsResult {
+func (a *EMRStub) ListNotebookExecutionsAsync(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) *EMRListNotebookExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ListNotebookExecutions", input)
-	return &EmrListNotebookExecutionsResult{Result: future}
+	return &EMRListNotebookExecutionsFuture{Future: future}
 }
 
 func (a *EMRStub) ListSecurityConfigurations(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) (*emr.ListSecurityConfigurationsOutput, error) {
@@ -730,9 +770,9 @@ func (a *EMRStub) ListSecurityConfigurations(ctx workflow.Context, input *emr.Li
 	return &output, err
 }
 
-func (a *EMRStub) ListSecurityConfigurationsAsync(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) *EmrListSecurityConfigurationsResult {
+func (a *EMRStub) ListSecurityConfigurationsAsync(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) *EMRListSecurityConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ListSecurityConfigurations", input)
-	return &EmrListSecurityConfigurationsResult{Result: future}
+	return &EMRListSecurityConfigurationsFuture{Future: future}
 }
 
 func (a *EMRStub) ListSteps(ctx workflow.Context, input *emr.ListStepsInput) (*emr.ListStepsOutput, error) {
@@ -741,9 +781,9 @@ func (a *EMRStub) ListSteps(ctx workflow.Context, input *emr.ListStepsInput) (*e
 	return &output, err
 }
 
-func (a *EMRStub) ListStepsAsync(ctx workflow.Context, input *emr.ListStepsInput) *EmrListStepsResult {
+func (a *EMRStub) ListStepsAsync(ctx workflow.Context, input *emr.ListStepsInput) *EMRListStepsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ListSteps", input)
-	return &EmrListStepsResult{Result: future}
+	return &EMRListStepsFuture{Future: future}
 }
 
 func (a *EMRStub) ModifyCluster(ctx workflow.Context, input *emr.ModifyClusterInput) (*emr.ModifyClusterOutput, error) {
@@ -752,9 +792,9 @@ func (a *EMRStub) ModifyCluster(ctx workflow.Context, input *emr.ModifyClusterIn
 	return &output, err
 }
 
-func (a *EMRStub) ModifyClusterAsync(ctx workflow.Context, input *emr.ModifyClusterInput) *EmrModifyClusterResult {
+func (a *EMRStub) ModifyClusterAsync(ctx workflow.Context, input *emr.ModifyClusterInput) *EMRModifyClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ModifyCluster", input)
-	return &EmrModifyClusterResult{Result: future}
+	return &EMRModifyClusterFuture{Future: future}
 }
 
 func (a *EMRStub) ModifyInstanceFleet(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) (*emr.ModifyInstanceFleetOutput, error) {
@@ -763,9 +803,9 @@ func (a *EMRStub) ModifyInstanceFleet(ctx workflow.Context, input *emr.ModifyIns
 	return &output, err
 }
 
-func (a *EMRStub) ModifyInstanceFleetAsync(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) *EmrModifyInstanceFleetResult {
+func (a *EMRStub) ModifyInstanceFleetAsync(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) *EMRModifyInstanceFleetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ModifyInstanceFleet", input)
-	return &EmrModifyInstanceFleetResult{Result: future}
+	return &EMRModifyInstanceFleetFuture{Future: future}
 }
 
 func (a *EMRStub) ModifyInstanceGroups(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) (*emr.ModifyInstanceGroupsOutput, error) {
@@ -774,9 +814,9 @@ func (a *EMRStub) ModifyInstanceGroups(ctx workflow.Context, input *emr.ModifyIn
 	return &output, err
 }
 
-func (a *EMRStub) ModifyInstanceGroupsAsync(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) *EmrModifyInstanceGroupsResult {
+func (a *EMRStub) ModifyInstanceGroupsAsync(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) *EMRModifyInstanceGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.ModifyInstanceGroups", input)
-	return &EmrModifyInstanceGroupsResult{Result: future}
+	return &EMRModifyInstanceGroupsFuture{Future: future}
 }
 
 func (a *EMRStub) PutAutoScalingPolicy(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) (*emr.PutAutoScalingPolicyOutput, error) {
@@ -785,9 +825,9 @@ func (a *EMRStub) PutAutoScalingPolicy(ctx workflow.Context, input *emr.PutAutoS
 	return &output, err
 }
 
-func (a *EMRStub) PutAutoScalingPolicyAsync(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) *EmrPutAutoScalingPolicyResult {
+func (a *EMRStub) PutAutoScalingPolicyAsync(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) *EMRPutAutoScalingPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.PutAutoScalingPolicy", input)
-	return &EmrPutAutoScalingPolicyResult{Result: future}
+	return &EMRPutAutoScalingPolicyFuture{Future: future}
 }
 
 func (a *EMRStub) PutBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) (*emr.PutBlockPublicAccessConfigurationOutput, error) {
@@ -796,9 +836,9 @@ func (a *EMRStub) PutBlockPublicAccessConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *EMRStub) PutBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) *EmrPutBlockPublicAccessConfigurationResult {
+func (a *EMRStub) PutBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) *EMRPutBlockPublicAccessConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.PutBlockPublicAccessConfiguration", input)
-	return &EmrPutBlockPublicAccessConfigurationResult{Result: future}
+	return &EMRPutBlockPublicAccessConfigurationFuture{Future: future}
 }
 
 func (a *EMRStub) PutManagedScalingPolicy(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) (*emr.PutManagedScalingPolicyOutput, error) {
@@ -807,9 +847,9 @@ func (a *EMRStub) PutManagedScalingPolicy(ctx workflow.Context, input *emr.PutMa
 	return &output, err
 }
 
-func (a *EMRStub) PutManagedScalingPolicyAsync(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) *EmrPutManagedScalingPolicyResult {
+func (a *EMRStub) PutManagedScalingPolicyAsync(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) *EMRPutManagedScalingPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.PutManagedScalingPolicy", input)
-	return &EmrPutManagedScalingPolicyResult{Result: future}
+	return &EMRPutManagedScalingPolicyFuture{Future: future}
 }
 
 func (a *EMRStub) RemoveAutoScalingPolicy(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) (*emr.RemoveAutoScalingPolicyOutput, error) {
@@ -818,9 +858,9 @@ func (a *EMRStub) RemoveAutoScalingPolicy(ctx workflow.Context, input *emr.Remov
 	return &output, err
 }
 
-func (a *EMRStub) RemoveAutoScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) *EmrRemoveAutoScalingPolicyResult {
+func (a *EMRStub) RemoveAutoScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) *EMRRemoveAutoScalingPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.RemoveAutoScalingPolicy", input)
-	return &EmrRemoveAutoScalingPolicyResult{Result: future}
+	return &EMRRemoveAutoScalingPolicyFuture{Future: future}
 }
 
 func (a *EMRStub) RemoveManagedScalingPolicy(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) (*emr.RemoveManagedScalingPolicyOutput, error) {
@@ -829,9 +869,9 @@ func (a *EMRStub) RemoveManagedScalingPolicy(ctx workflow.Context, input *emr.Re
 	return &output, err
 }
 
-func (a *EMRStub) RemoveManagedScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) *EmrRemoveManagedScalingPolicyResult {
+func (a *EMRStub) RemoveManagedScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) *EMRRemoveManagedScalingPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.RemoveManagedScalingPolicy", input)
-	return &EmrRemoveManagedScalingPolicyResult{Result: future}
+	return &EMRRemoveManagedScalingPolicyFuture{Future: future}
 }
 
 func (a *EMRStub) RemoveTags(ctx workflow.Context, input *emr.RemoveTagsInput) (*emr.RemoveTagsOutput, error) {
@@ -840,9 +880,9 @@ func (a *EMRStub) RemoveTags(ctx workflow.Context, input *emr.RemoveTagsInput) (
 	return &output, err
 }
 
-func (a *EMRStub) RemoveTagsAsync(ctx workflow.Context, input *emr.RemoveTagsInput) *EmrRemoveTagsResult {
+func (a *EMRStub) RemoveTagsAsync(ctx workflow.Context, input *emr.RemoveTagsInput) *EMRRemoveTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.RemoveTags", input)
-	return &EmrRemoveTagsResult{Result: future}
+	return &EMRRemoveTagsFuture{Future: future}
 }
 
 func (a *EMRStub) RunJobFlow(ctx workflow.Context, input *emr.RunJobFlowInput) (*emr.RunJobFlowOutput, error) {
@@ -851,9 +891,9 @@ func (a *EMRStub) RunJobFlow(ctx workflow.Context, input *emr.RunJobFlowInput) (
 	return &output, err
 }
 
-func (a *EMRStub) RunJobFlowAsync(ctx workflow.Context, input *emr.RunJobFlowInput) *EmrRunJobFlowResult {
+func (a *EMRStub) RunJobFlowAsync(ctx workflow.Context, input *emr.RunJobFlowInput) *EMRRunJobFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.RunJobFlow", input)
-	return &EmrRunJobFlowResult{Result: future}
+	return &EMRRunJobFlowFuture{Future: future}
 }
 
 func (a *EMRStub) SetTerminationProtection(ctx workflow.Context, input *emr.SetTerminationProtectionInput) (*emr.SetTerminationProtectionOutput, error) {
@@ -862,9 +902,9 @@ func (a *EMRStub) SetTerminationProtection(ctx workflow.Context, input *emr.SetT
 	return &output, err
 }
 
-func (a *EMRStub) SetTerminationProtectionAsync(ctx workflow.Context, input *emr.SetTerminationProtectionInput) *EmrSetTerminationProtectionResult {
+func (a *EMRStub) SetTerminationProtectionAsync(ctx workflow.Context, input *emr.SetTerminationProtectionInput) *EMRSetTerminationProtectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.SetTerminationProtection", input)
-	return &EmrSetTerminationProtectionResult{Result: future}
+	return &EMRSetTerminationProtectionFuture{Future: future}
 }
 
 func (a *EMRStub) SetVisibleToAllUsers(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) (*emr.SetVisibleToAllUsersOutput, error) {
@@ -873,9 +913,9 @@ func (a *EMRStub) SetVisibleToAllUsers(ctx workflow.Context, input *emr.SetVisib
 	return &output, err
 }
 
-func (a *EMRStub) SetVisibleToAllUsersAsync(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) *EmrSetVisibleToAllUsersResult {
+func (a *EMRStub) SetVisibleToAllUsersAsync(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) *EMRSetVisibleToAllUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.SetVisibleToAllUsers", input)
-	return &EmrSetVisibleToAllUsersResult{Result: future}
+	return &EMRSetVisibleToAllUsersFuture{Future: future}
 }
 
 func (a *EMRStub) StartNotebookExecution(ctx workflow.Context, input *emr.StartNotebookExecutionInput) (*emr.StartNotebookExecutionOutput, error) {
@@ -884,9 +924,9 @@ func (a *EMRStub) StartNotebookExecution(ctx workflow.Context, input *emr.StartN
 	return &output, err
 }
 
-func (a *EMRStub) StartNotebookExecutionAsync(ctx workflow.Context, input *emr.StartNotebookExecutionInput) *EmrStartNotebookExecutionResult {
+func (a *EMRStub) StartNotebookExecutionAsync(ctx workflow.Context, input *emr.StartNotebookExecutionInput) *EMRStartNotebookExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.StartNotebookExecution", input)
-	return &EmrStartNotebookExecutionResult{Result: future}
+	return &EMRStartNotebookExecutionFuture{Future: future}
 }
 
 func (a *EMRStub) StopNotebookExecution(ctx workflow.Context, input *emr.StopNotebookExecutionInput) (*emr.StopNotebookExecutionOutput, error) {
@@ -895,9 +935,9 @@ func (a *EMRStub) StopNotebookExecution(ctx workflow.Context, input *emr.StopNot
 	return &output, err
 }
 
-func (a *EMRStub) StopNotebookExecutionAsync(ctx workflow.Context, input *emr.StopNotebookExecutionInput) *EmrStopNotebookExecutionResult {
+func (a *EMRStub) StopNotebookExecutionAsync(ctx workflow.Context, input *emr.StopNotebookExecutionInput) *EMRStopNotebookExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.StopNotebookExecution", input)
-	return &EmrStopNotebookExecutionResult{Result: future}
+	return &EMRStopNotebookExecutionFuture{Future: future}
 }
 
 func (a *EMRStub) TerminateJobFlows(ctx workflow.Context, input *emr.TerminateJobFlowsInput) (*emr.TerminateJobFlowsOutput, error) {
@@ -906,31 +946,34 @@ func (a *EMRStub) TerminateJobFlows(ctx workflow.Context, input *emr.TerminateJo
 	return &output, err
 }
 
-func (a *EMRStub) TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EmrTerminateJobFlowsResult {
+func (a *EMRStub) TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EMRTerminateJobFlowsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.emr.TerminateJobFlows", input)
-	return &EmrTerminateJobFlowsResult{Result: future}
+	return &EMRTerminateJobFlowsFuture{Future: future}
 }
 
 func (a *EMRStub) WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterRunning", input).Get(ctx, nil)
 }
 
-func (a *EMRStub) WaitUntilClusterRunningAsync(ctx workflow.Context, input *emr.DescribeClusterInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterRunning", input)
+func (a *EMRStub) WaitUntilClusterRunningAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterRunning", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EMRStub) WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterTerminated", input).Get(ctx, nil)
 }
 
-func (a *EMRStub) WaitUntilClusterTerminatedAsync(ctx workflow.Context, input *emr.DescribeClusterInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterTerminated", input)
+func (a *EMRStub) WaitUntilClusterTerminatedAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterTerminated", input)
+	return NewVoidFuture(future)
 }
 
 func (a *EMRStub) WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error {
 	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilStepComplete", input).Get(ctx, nil)
 }
 
-func (a *EMRStub) WaitUntilStepCompleteAsync(ctx workflow.Context, input *emr.DescribeStepInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilStepComplete", input)
+func (a *EMRStub) WaitUntilStepCompleteAsync(ctx workflow.Context, input *emr.DescribeStepInput) *VoidFuture {
+	future := workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilStepComplete", input)
+	return NewVoidFuture(future)
 }

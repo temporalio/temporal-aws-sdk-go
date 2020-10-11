@@ -11,61 +11,61 @@ import (
 
 type KinesisVideoClient interface {
 	CreateSignalingChannel(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) (*kinesisvideo.CreateSignalingChannelOutput, error)
-	CreateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) *KinesisvideoCreateSignalingChannelResult
+	CreateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) *KinesisVideoCreateSignalingChannelFuture
 
 	CreateStream(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) (*kinesisvideo.CreateStreamOutput, error)
-	CreateStreamAsync(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) *KinesisvideoCreateStreamResult
+	CreateStreamAsync(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) *KinesisVideoCreateStreamFuture
 
 	DeleteSignalingChannel(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) (*kinesisvideo.DeleteSignalingChannelOutput, error)
-	DeleteSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) *KinesisvideoDeleteSignalingChannelResult
+	DeleteSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) *KinesisVideoDeleteSignalingChannelFuture
 
 	DeleteStream(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) (*kinesisvideo.DeleteStreamOutput, error)
-	DeleteStreamAsync(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) *KinesisvideoDeleteStreamResult
+	DeleteStreamAsync(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) *KinesisVideoDeleteStreamFuture
 
 	DescribeSignalingChannel(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) (*kinesisvideo.DescribeSignalingChannelOutput, error)
-	DescribeSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) *KinesisvideoDescribeSignalingChannelResult
+	DescribeSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) *KinesisVideoDescribeSignalingChannelFuture
 
 	DescribeStream(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) (*kinesisvideo.DescribeStreamOutput, error)
-	DescribeStreamAsync(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) *KinesisvideoDescribeStreamResult
+	DescribeStreamAsync(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) *KinesisVideoDescribeStreamFuture
 
 	GetDataEndpoint(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) (*kinesisvideo.GetDataEndpointOutput, error)
-	GetDataEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) *KinesisvideoGetDataEndpointResult
+	GetDataEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) *KinesisVideoGetDataEndpointFuture
 
 	GetSignalingChannelEndpoint(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) (*kinesisvideo.GetSignalingChannelEndpointOutput, error)
-	GetSignalingChannelEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) *KinesisvideoGetSignalingChannelEndpointResult
+	GetSignalingChannelEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) *KinesisVideoGetSignalingChannelEndpointFuture
 
 	ListSignalingChannels(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) (*kinesisvideo.ListSignalingChannelsOutput, error)
-	ListSignalingChannelsAsync(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) *KinesisvideoListSignalingChannelsResult
+	ListSignalingChannelsAsync(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) *KinesisVideoListSignalingChannelsFuture
 
 	ListStreams(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) (*kinesisvideo.ListStreamsOutput, error)
-	ListStreamsAsync(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) *KinesisvideoListStreamsResult
+	ListStreamsAsync(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) *KinesisVideoListStreamsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) (*kinesisvideo.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) *KinesisvideoListTagsForResourceResult
+	ListTagsForResourceAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) *KinesisVideoListTagsForResourceFuture
 
 	ListTagsForStream(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) (*kinesisvideo.ListTagsForStreamOutput, error)
-	ListTagsForStreamAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) *KinesisvideoListTagsForStreamResult
+	ListTagsForStreamAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) *KinesisVideoListTagsForStreamFuture
 
 	TagResource(ctx workflow.Context, input *kinesisvideo.TagResourceInput) (*kinesisvideo.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *kinesisvideo.TagResourceInput) *KinesisvideoTagResourceResult
+	TagResourceAsync(ctx workflow.Context, input *kinesisvideo.TagResourceInput) *KinesisVideoTagResourceFuture
 
 	TagStream(ctx workflow.Context, input *kinesisvideo.TagStreamInput) (*kinesisvideo.TagStreamOutput, error)
-	TagStreamAsync(ctx workflow.Context, input *kinesisvideo.TagStreamInput) *KinesisvideoTagStreamResult
+	TagStreamAsync(ctx workflow.Context, input *kinesisvideo.TagStreamInput) *KinesisVideoTagStreamFuture
 
 	UntagResource(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) (*kinesisvideo.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) *KinesisvideoUntagResourceResult
+	UntagResourceAsync(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) *KinesisVideoUntagResourceFuture
 
 	UntagStream(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) (*kinesisvideo.UntagStreamOutput, error)
-	UntagStreamAsync(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) *KinesisvideoUntagStreamResult
+	UntagStreamAsync(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) *KinesisVideoUntagStreamFuture
 
 	UpdateDataRetention(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) (*kinesisvideo.UpdateDataRetentionOutput, error)
-	UpdateDataRetentionAsync(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) *KinesisvideoUpdateDataRetentionResult
+	UpdateDataRetentionAsync(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) *KinesisVideoUpdateDataRetentionFuture
 
 	UpdateSignalingChannel(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) (*kinesisvideo.UpdateSignalingChannelOutput, error)
-	UpdateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) *KinesisvideoUpdateSignalingChannelResult
+	UpdateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) *KinesisVideoUpdateSignalingChannelFuture
 
 	UpdateStream(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) (*kinesisvideo.UpdateStreamOutput, error)
-	UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *KinesisvideoUpdateStreamResult
+	UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *KinesisVideoUpdateStreamFuture
 }
 
 type KinesisVideoStub struct{}
@@ -74,193 +74,212 @@ func NewKinesisVideoStub() KinesisVideoClient {
 	return &KinesisVideoStub{}
 }
 
-type KinesisvideoCreateSignalingChannelResult struct {
-	Result workflow.Future
+type KinesisVideoCreateSignalingChannelFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoCreateSignalingChannelResult) Get(ctx workflow.Context) (*kinesisvideo.CreateSignalingChannelOutput, error) {
+func (r *KinesisVideoCreateSignalingChannelFuture) Get(ctx workflow.Context) (*kinesisvideo.CreateSignalingChannelOutput, error) {
 	var output kinesisvideo.CreateSignalingChannelOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoCreateStreamResult struct {
-	Result workflow.Future
+type KinesisVideoCreateStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoCreateStreamResult) Get(ctx workflow.Context) (*kinesisvideo.CreateStreamOutput, error) {
+func (r *KinesisVideoCreateStreamFuture) Get(ctx workflow.Context) (*kinesisvideo.CreateStreamOutput, error) {
 	var output kinesisvideo.CreateStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoDeleteSignalingChannelResult struct {
-	Result workflow.Future
+type KinesisVideoDeleteSignalingChannelFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoDeleteSignalingChannelResult) Get(ctx workflow.Context) (*kinesisvideo.DeleteSignalingChannelOutput, error) {
+func (r *KinesisVideoDeleteSignalingChannelFuture) Get(ctx workflow.Context) (*kinesisvideo.DeleteSignalingChannelOutput, error) {
 	var output kinesisvideo.DeleteSignalingChannelOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoDeleteStreamResult struct {
-	Result workflow.Future
+type KinesisVideoDeleteStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoDeleteStreamResult) Get(ctx workflow.Context) (*kinesisvideo.DeleteStreamOutput, error) {
+func (r *KinesisVideoDeleteStreamFuture) Get(ctx workflow.Context) (*kinesisvideo.DeleteStreamOutput, error) {
 	var output kinesisvideo.DeleteStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoDescribeSignalingChannelResult struct {
-	Result workflow.Future
+type KinesisVideoDescribeSignalingChannelFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoDescribeSignalingChannelResult) Get(ctx workflow.Context) (*kinesisvideo.DescribeSignalingChannelOutput, error) {
+func (r *KinesisVideoDescribeSignalingChannelFuture) Get(ctx workflow.Context) (*kinesisvideo.DescribeSignalingChannelOutput, error) {
 	var output kinesisvideo.DescribeSignalingChannelOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoDescribeStreamResult struct {
-	Result workflow.Future
+type KinesisVideoDescribeStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoDescribeStreamResult) Get(ctx workflow.Context) (*kinesisvideo.DescribeStreamOutput, error) {
+func (r *KinesisVideoDescribeStreamFuture) Get(ctx workflow.Context) (*kinesisvideo.DescribeStreamOutput, error) {
 	var output kinesisvideo.DescribeStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoGetDataEndpointResult struct {
-	Result workflow.Future
+type KinesisVideoGetDataEndpointFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoGetDataEndpointResult) Get(ctx workflow.Context) (*kinesisvideo.GetDataEndpointOutput, error) {
+func (r *KinesisVideoGetDataEndpointFuture) Get(ctx workflow.Context) (*kinesisvideo.GetDataEndpointOutput, error) {
 	var output kinesisvideo.GetDataEndpointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoGetSignalingChannelEndpointResult struct {
-	Result workflow.Future
+type KinesisVideoGetSignalingChannelEndpointFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoGetSignalingChannelEndpointResult) Get(ctx workflow.Context) (*kinesisvideo.GetSignalingChannelEndpointOutput, error) {
+func (r *KinesisVideoGetSignalingChannelEndpointFuture) Get(ctx workflow.Context) (*kinesisvideo.GetSignalingChannelEndpointOutput, error) {
 	var output kinesisvideo.GetSignalingChannelEndpointOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoListSignalingChannelsResult struct {
-	Result workflow.Future
+type KinesisVideoListSignalingChannelsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoListSignalingChannelsResult) Get(ctx workflow.Context) (*kinesisvideo.ListSignalingChannelsOutput, error) {
+func (r *KinesisVideoListSignalingChannelsFuture) Get(ctx workflow.Context) (*kinesisvideo.ListSignalingChannelsOutput, error) {
 	var output kinesisvideo.ListSignalingChannelsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoListStreamsResult struct {
-	Result workflow.Future
+type KinesisVideoListStreamsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoListStreamsResult) Get(ctx workflow.Context) (*kinesisvideo.ListStreamsOutput, error) {
+func (r *KinesisVideoListStreamsFuture) Get(ctx workflow.Context) (*kinesisvideo.ListStreamsOutput, error) {
 	var output kinesisvideo.ListStreamsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoListTagsForResourceResult struct {
-	Result workflow.Future
+type KinesisVideoListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoListTagsForResourceResult) Get(ctx workflow.Context) (*kinesisvideo.ListTagsForResourceOutput, error) {
+func (r *KinesisVideoListTagsForResourceFuture) Get(ctx workflow.Context) (*kinesisvideo.ListTagsForResourceOutput, error) {
 	var output kinesisvideo.ListTagsForResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoListTagsForStreamResult struct {
-	Result workflow.Future
+type KinesisVideoListTagsForStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoListTagsForStreamResult) Get(ctx workflow.Context) (*kinesisvideo.ListTagsForStreamOutput, error) {
+func (r *KinesisVideoListTagsForStreamFuture) Get(ctx workflow.Context) (*kinesisvideo.ListTagsForStreamOutput, error) {
 	var output kinesisvideo.ListTagsForStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoTagResourceResult struct {
-	Result workflow.Future
+type KinesisVideoTagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoTagResourceResult) Get(ctx workflow.Context) (*kinesisvideo.TagResourceOutput, error) {
+func (r *KinesisVideoTagResourceFuture) Get(ctx workflow.Context) (*kinesisvideo.TagResourceOutput, error) {
 	var output kinesisvideo.TagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoTagStreamResult struct {
-	Result workflow.Future
+type KinesisVideoTagStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoTagStreamResult) Get(ctx workflow.Context) (*kinesisvideo.TagStreamOutput, error) {
+func (r *KinesisVideoTagStreamFuture) Get(ctx workflow.Context) (*kinesisvideo.TagStreamOutput, error) {
 	var output kinesisvideo.TagStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoUntagResourceResult struct {
-	Result workflow.Future
+type KinesisVideoUntagResourceFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoUntagResourceResult) Get(ctx workflow.Context) (*kinesisvideo.UntagResourceOutput, error) {
+func (r *KinesisVideoUntagResourceFuture) Get(ctx workflow.Context) (*kinesisvideo.UntagResourceOutput, error) {
 	var output kinesisvideo.UntagResourceOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoUntagStreamResult struct {
-	Result workflow.Future
+type KinesisVideoUntagStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoUntagStreamResult) Get(ctx workflow.Context) (*kinesisvideo.UntagStreamOutput, error) {
+func (r *KinesisVideoUntagStreamFuture) Get(ctx workflow.Context) (*kinesisvideo.UntagStreamOutput, error) {
 	var output kinesisvideo.UntagStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoUpdateDataRetentionResult struct {
-	Result workflow.Future
+type KinesisVideoUpdateDataRetentionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoUpdateDataRetentionResult) Get(ctx workflow.Context) (*kinesisvideo.UpdateDataRetentionOutput, error) {
+func (r *KinesisVideoUpdateDataRetentionFuture) Get(ctx workflow.Context) (*kinesisvideo.UpdateDataRetentionOutput, error) {
 	var output kinesisvideo.UpdateDataRetentionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoUpdateSignalingChannelResult struct {
-	Result workflow.Future
+type KinesisVideoUpdateSignalingChannelFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoUpdateSignalingChannelResult) Get(ctx workflow.Context) (*kinesisvideo.UpdateSignalingChannelOutput, error) {
+func (r *KinesisVideoUpdateSignalingChannelFuture) Get(ctx workflow.Context) (*kinesisvideo.UpdateSignalingChannelOutput, error) {
 	var output kinesisvideo.UpdateSignalingChannelOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type KinesisvideoUpdateStreamResult struct {
-	Result workflow.Future
+type KinesisVideoUpdateStreamFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *KinesisvideoUpdateStreamResult) Get(ctx workflow.Context) (*kinesisvideo.UpdateStreamOutput, error) {
+func (r *KinesisVideoUpdateStreamFuture) Get(ctx workflow.Context) (*kinesisvideo.UpdateStreamOutput, error) {
 	var output kinesisvideo.UpdateStreamOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -270,9 +289,9 @@ func (a *KinesisVideoStub) CreateSignalingChannel(ctx workflow.Context, input *k
 	return &output, err
 }
 
-func (a *KinesisVideoStub) CreateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) *KinesisvideoCreateSignalingChannelResult {
+func (a *KinesisVideoStub) CreateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) *KinesisVideoCreateSignalingChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.CreateSignalingChannel", input)
-	return &KinesisvideoCreateSignalingChannelResult{Result: future}
+	return &KinesisVideoCreateSignalingChannelFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) CreateStream(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) (*kinesisvideo.CreateStreamOutput, error) {
@@ -281,9 +300,9 @@ func (a *KinesisVideoStub) CreateStream(ctx workflow.Context, input *kinesisvide
 	return &output, err
 }
 
-func (a *KinesisVideoStub) CreateStreamAsync(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) *KinesisvideoCreateStreamResult {
+func (a *KinesisVideoStub) CreateStreamAsync(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) *KinesisVideoCreateStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.CreateStream", input)
-	return &KinesisvideoCreateStreamResult{Result: future}
+	return &KinesisVideoCreateStreamFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) DeleteSignalingChannel(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) (*kinesisvideo.DeleteSignalingChannelOutput, error) {
@@ -292,9 +311,9 @@ func (a *KinesisVideoStub) DeleteSignalingChannel(ctx workflow.Context, input *k
 	return &output, err
 }
 
-func (a *KinesisVideoStub) DeleteSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) *KinesisvideoDeleteSignalingChannelResult {
+func (a *KinesisVideoStub) DeleteSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) *KinesisVideoDeleteSignalingChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.DeleteSignalingChannel", input)
-	return &KinesisvideoDeleteSignalingChannelResult{Result: future}
+	return &KinesisVideoDeleteSignalingChannelFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) DeleteStream(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) (*kinesisvideo.DeleteStreamOutput, error) {
@@ -303,9 +322,9 @@ func (a *KinesisVideoStub) DeleteStream(ctx workflow.Context, input *kinesisvide
 	return &output, err
 }
 
-func (a *KinesisVideoStub) DeleteStreamAsync(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) *KinesisvideoDeleteStreamResult {
+func (a *KinesisVideoStub) DeleteStreamAsync(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) *KinesisVideoDeleteStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.DeleteStream", input)
-	return &KinesisvideoDeleteStreamResult{Result: future}
+	return &KinesisVideoDeleteStreamFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) DescribeSignalingChannel(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) (*kinesisvideo.DescribeSignalingChannelOutput, error) {
@@ -314,9 +333,9 @@ func (a *KinesisVideoStub) DescribeSignalingChannel(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *KinesisVideoStub) DescribeSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) *KinesisvideoDescribeSignalingChannelResult {
+func (a *KinesisVideoStub) DescribeSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) *KinesisVideoDescribeSignalingChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.DescribeSignalingChannel", input)
-	return &KinesisvideoDescribeSignalingChannelResult{Result: future}
+	return &KinesisVideoDescribeSignalingChannelFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) DescribeStream(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) (*kinesisvideo.DescribeStreamOutput, error) {
@@ -325,9 +344,9 @@ func (a *KinesisVideoStub) DescribeStream(ctx workflow.Context, input *kinesisvi
 	return &output, err
 }
 
-func (a *KinesisVideoStub) DescribeStreamAsync(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) *KinesisvideoDescribeStreamResult {
+func (a *KinesisVideoStub) DescribeStreamAsync(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) *KinesisVideoDescribeStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.DescribeStream", input)
-	return &KinesisvideoDescribeStreamResult{Result: future}
+	return &KinesisVideoDescribeStreamFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) GetDataEndpoint(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) (*kinesisvideo.GetDataEndpointOutput, error) {
@@ -336,9 +355,9 @@ func (a *KinesisVideoStub) GetDataEndpoint(ctx workflow.Context, input *kinesisv
 	return &output, err
 }
 
-func (a *KinesisVideoStub) GetDataEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) *KinesisvideoGetDataEndpointResult {
+func (a *KinesisVideoStub) GetDataEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) *KinesisVideoGetDataEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.GetDataEndpoint", input)
-	return &KinesisvideoGetDataEndpointResult{Result: future}
+	return &KinesisVideoGetDataEndpointFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) GetSignalingChannelEndpoint(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) (*kinesisvideo.GetSignalingChannelEndpointOutput, error) {
@@ -347,9 +366,9 @@ func (a *KinesisVideoStub) GetSignalingChannelEndpoint(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *KinesisVideoStub) GetSignalingChannelEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) *KinesisvideoGetSignalingChannelEndpointResult {
+func (a *KinesisVideoStub) GetSignalingChannelEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) *KinesisVideoGetSignalingChannelEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.GetSignalingChannelEndpoint", input)
-	return &KinesisvideoGetSignalingChannelEndpointResult{Result: future}
+	return &KinesisVideoGetSignalingChannelEndpointFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) ListSignalingChannels(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) (*kinesisvideo.ListSignalingChannelsOutput, error) {
@@ -358,9 +377,9 @@ func (a *KinesisVideoStub) ListSignalingChannels(ctx workflow.Context, input *ki
 	return &output, err
 }
 
-func (a *KinesisVideoStub) ListSignalingChannelsAsync(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) *KinesisvideoListSignalingChannelsResult {
+func (a *KinesisVideoStub) ListSignalingChannelsAsync(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) *KinesisVideoListSignalingChannelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.ListSignalingChannels", input)
-	return &KinesisvideoListSignalingChannelsResult{Result: future}
+	return &KinesisVideoListSignalingChannelsFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) ListStreams(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) (*kinesisvideo.ListStreamsOutput, error) {
@@ -369,9 +388,9 @@ func (a *KinesisVideoStub) ListStreams(ctx workflow.Context, input *kinesisvideo
 	return &output, err
 }
 
-func (a *KinesisVideoStub) ListStreamsAsync(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) *KinesisvideoListStreamsResult {
+func (a *KinesisVideoStub) ListStreamsAsync(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) *KinesisVideoListStreamsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.ListStreams", input)
-	return &KinesisvideoListStreamsResult{Result: future}
+	return &KinesisVideoListStreamsFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) ListTagsForResource(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) (*kinesisvideo.ListTagsForResourceOutput, error) {
@@ -380,9 +399,9 @@ func (a *KinesisVideoStub) ListTagsForResource(ctx workflow.Context, input *kine
 	return &output, err
 }
 
-func (a *KinesisVideoStub) ListTagsForResourceAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) *KinesisvideoListTagsForResourceResult {
+func (a *KinesisVideoStub) ListTagsForResourceAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) *KinesisVideoListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.ListTagsForResource", input)
-	return &KinesisvideoListTagsForResourceResult{Result: future}
+	return &KinesisVideoListTagsForResourceFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) ListTagsForStream(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) (*kinesisvideo.ListTagsForStreamOutput, error) {
@@ -391,9 +410,9 @@ func (a *KinesisVideoStub) ListTagsForStream(ctx workflow.Context, input *kinesi
 	return &output, err
 }
 
-func (a *KinesisVideoStub) ListTagsForStreamAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) *KinesisvideoListTagsForStreamResult {
+func (a *KinesisVideoStub) ListTagsForStreamAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) *KinesisVideoListTagsForStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.ListTagsForStream", input)
-	return &KinesisvideoListTagsForStreamResult{Result: future}
+	return &KinesisVideoListTagsForStreamFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) TagResource(ctx workflow.Context, input *kinesisvideo.TagResourceInput) (*kinesisvideo.TagResourceOutput, error) {
@@ -402,9 +421,9 @@ func (a *KinesisVideoStub) TagResource(ctx workflow.Context, input *kinesisvideo
 	return &output, err
 }
 
-func (a *KinesisVideoStub) TagResourceAsync(ctx workflow.Context, input *kinesisvideo.TagResourceInput) *KinesisvideoTagResourceResult {
+func (a *KinesisVideoStub) TagResourceAsync(ctx workflow.Context, input *kinesisvideo.TagResourceInput) *KinesisVideoTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.TagResource", input)
-	return &KinesisvideoTagResourceResult{Result: future}
+	return &KinesisVideoTagResourceFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) TagStream(ctx workflow.Context, input *kinesisvideo.TagStreamInput) (*kinesisvideo.TagStreamOutput, error) {
@@ -413,9 +432,9 @@ func (a *KinesisVideoStub) TagStream(ctx workflow.Context, input *kinesisvideo.T
 	return &output, err
 }
 
-func (a *KinesisVideoStub) TagStreamAsync(ctx workflow.Context, input *kinesisvideo.TagStreamInput) *KinesisvideoTagStreamResult {
+func (a *KinesisVideoStub) TagStreamAsync(ctx workflow.Context, input *kinesisvideo.TagStreamInput) *KinesisVideoTagStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.TagStream", input)
-	return &KinesisvideoTagStreamResult{Result: future}
+	return &KinesisVideoTagStreamFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) UntagResource(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) (*kinesisvideo.UntagResourceOutput, error) {
@@ -424,9 +443,9 @@ func (a *KinesisVideoStub) UntagResource(ctx workflow.Context, input *kinesisvid
 	return &output, err
 }
 
-func (a *KinesisVideoStub) UntagResourceAsync(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) *KinesisvideoUntagResourceResult {
+func (a *KinesisVideoStub) UntagResourceAsync(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) *KinesisVideoUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.UntagResource", input)
-	return &KinesisvideoUntagResourceResult{Result: future}
+	return &KinesisVideoUntagResourceFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) UntagStream(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) (*kinesisvideo.UntagStreamOutput, error) {
@@ -435,9 +454,9 @@ func (a *KinesisVideoStub) UntagStream(ctx workflow.Context, input *kinesisvideo
 	return &output, err
 }
 
-func (a *KinesisVideoStub) UntagStreamAsync(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) *KinesisvideoUntagStreamResult {
+func (a *KinesisVideoStub) UntagStreamAsync(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) *KinesisVideoUntagStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.UntagStream", input)
-	return &KinesisvideoUntagStreamResult{Result: future}
+	return &KinesisVideoUntagStreamFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) UpdateDataRetention(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) (*kinesisvideo.UpdateDataRetentionOutput, error) {
@@ -446,9 +465,9 @@ func (a *KinesisVideoStub) UpdateDataRetention(ctx workflow.Context, input *kine
 	return &output, err
 }
 
-func (a *KinesisVideoStub) UpdateDataRetentionAsync(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) *KinesisvideoUpdateDataRetentionResult {
+func (a *KinesisVideoStub) UpdateDataRetentionAsync(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) *KinesisVideoUpdateDataRetentionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.UpdateDataRetention", input)
-	return &KinesisvideoUpdateDataRetentionResult{Result: future}
+	return &KinesisVideoUpdateDataRetentionFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) UpdateSignalingChannel(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) (*kinesisvideo.UpdateSignalingChannelOutput, error) {
@@ -457,9 +476,9 @@ func (a *KinesisVideoStub) UpdateSignalingChannel(ctx workflow.Context, input *k
 	return &output, err
 }
 
-func (a *KinesisVideoStub) UpdateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) *KinesisvideoUpdateSignalingChannelResult {
+func (a *KinesisVideoStub) UpdateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) *KinesisVideoUpdateSignalingChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.UpdateSignalingChannel", input)
-	return &KinesisvideoUpdateSignalingChannelResult{Result: future}
+	return &KinesisVideoUpdateSignalingChannelFuture{Future: future}
 }
 
 func (a *KinesisVideoStub) UpdateStream(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) (*kinesisvideo.UpdateStreamOutput, error) {
@@ -468,7 +487,7 @@ func (a *KinesisVideoStub) UpdateStream(ctx workflow.Context, input *kinesisvide
 	return &output, err
 }
 
-func (a *KinesisVideoStub) UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *KinesisvideoUpdateStreamResult {
+func (a *KinesisVideoStub) UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *KinesisVideoUpdateStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideo.UpdateStream", input)
-	return &KinesisvideoUpdateStreamResult{Result: future}
+	return &KinesisVideoUpdateStreamFuture{Future: future}
 }

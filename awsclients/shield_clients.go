@@ -11,73 +11,73 @@ import (
 
 type ShieldClient interface {
 	AssociateDRTLogBucket(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) (*shield.AssociateDRTLogBucketOutput, error)
-	AssociateDRTLogBucketAsync(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) *ShieldAssociateDRTLogBucketResult
+	AssociateDRTLogBucketAsync(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) *ShieldAssociateDRTLogBucketFuture
 
 	AssociateDRTRole(ctx workflow.Context, input *shield.AssociateDRTRoleInput) (*shield.AssociateDRTRoleOutput, error)
-	AssociateDRTRoleAsync(ctx workflow.Context, input *shield.AssociateDRTRoleInput) *ShieldAssociateDRTRoleResult
+	AssociateDRTRoleAsync(ctx workflow.Context, input *shield.AssociateDRTRoleInput) *ShieldAssociateDRTRoleFuture
 
 	AssociateHealthCheck(ctx workflow.Context, input *shield.AssociateHealthCheckInput) (*shield.AssociateHealthCheckOutput, error)
-	AssociateHealthCheckAsync(ctx workflow.Context, input *shield.AssociateHealthCheckInput) *ShieldAssociateHealthCheckResult
+	AssociateHealthCheckAsync(ctx workflow.Context, input *shield.AssociateHealthCheckInput) *ShieldAssociateHealthCheckFuture
 
 	AssociateProactiveEngagementDetails(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) (*shield.AssociateProactiveEngagementDetailsOutput, error)
-	AssociateProactiveEngagementDetailsAsync(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) *ShieldAssociateProactiveEngagementDetailsResult
+	AssociateProactiveEngagementDetailsAsync(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) *ShieldAssociateProactiveEngagementDetailsFuture
 
 	CreateProtection(ctx workflow.Context, input *shield.CreateProtectionInput) (*shield.CreateProtectionOutput, error)
-	CreateProtectionAsync(ctx workflow.Context, input *shield.CreateProtectionInput) *ShieldCreateProtectionResult
+	CreateProtectionAsync(ctx workflow.Context, input *shield.CreateProtectionInput) *ShieldCreateProtectionFuture
 
 	CreateSubscription(ctx workflow.Context, input *shield.CreateSubscriptionInput) (*shield.CreateSubscriptionOutput, error)
-	CreateSubscriptionAsync(ctx workflow.Context, input *shield.CreateSubscriptionInput) *ShieldCreateSubscriptionResult
+	CreateSubscriptionAsync(ctx workflow.Context, input *shield.CreateSubscriptionInput) *ShieldCreateSubscriptionFuture
 
 	DeleteProtection(ctx workflow.Context, input *shield.DeleteProtectionInput) (*shield.DeleteProtectionOutput, error)
-	DeleteProtectionAsync(ctx workflow.Context, input *shield.DeleteProtectionInput) *ShieldDeleteProtectionResult
+	DeleteProtectionAsync(ctx workflow.Context, input *shield.DeleteProtectionInput) *ShieldDeleteProtectionFuture
 
 	DeleteSubscription(ctx workflow.Context, input *shield.DeleteSubscriptionInput) (*shield.DeleteSubscriptionOutput, error)
-	DeleteSubscriptionAsync(ctx workflow.Context, input *shield.DeleteSubscriptionInput) *ShieldDeleteSubscriptionResult
+	DeleteSubscriptionAsync(ctx workflow.Context, input *shield.DeleteSubscriptionInput) *ShieldDeleteSubscriptionFuture
 
 	DescribeAttack(ctx workflow.Context, input *shield.DescribeAttackInput) (*shield.DescribeAttackOutput, error)
-	DescribeAttackAsync(ctx workflow.Context, input *shield.DescribeAttackInput) *ShieldDescribeAttackResult
+	DescribeAttackAsync(ctx workflow.Context, input *shield.DescribeAttackInput) *ShieldDescribeAttackFuture
 
 	DescribeDRTAccess(ctx workflow.Context, input *shield.DescribeDRTAccessInput) (*shield.DescribeDRTAccessOutput, error)
-	DescribeDRTAccessAsync(ctx workflow.Context, input *shield.DescribeDRTAccessInput) *ShieldDescribeDRTAccessResult
+	DescribeDRTAccessAsync(ctx workflow.Context, input *shield.DescribeDRTAccessInput) *ShieldDescribeDRTAccessFuture
 
 	DescribeEmergencyContactSettings(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) (*shield.DescribeEmergencyContactSettingsOutput, error)
-	DescribeEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) *ShieldDescribeEmergencyContactSettingsResult
+	DescribeEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) *ShieldDescribeEmergencyContactSettingsFuture
 
 	DescribeProtection(ctx workflow.Context, input *shield.DescribeProtectionInput) (*shield.DescribeProtectionOutput, error)
-	DescribeProtectionAsync(ctx workflow.Context, input *shield.DescribeProtectionInput) *ShieldDescribeProtectionResult
+	DescribeProtectionAsync(ctx workflow.Context, input *shield.DescribeProtectionInput) *ShieldDescribeProtectionFuture
 
 	DescribeSubscription(ctx workflow.Context, input *shield.DescribeSubscriptionInput) (*shield.DescribeSubscriptionOutput, error)
-	DescribeSubscriptionAsync(ctx workflow.Context, input *shield.DescribeSubscriptionInput) *ShieldDescribeSubscriptionResult
+	DescribeSubscriptionAsync(ctx workflow.Context, input *shield.DescribeSubscriptionInput) *ShieldDescribeSubscriptionFuture
 
 	DisableProactiveEngagement(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) (*shield.DisableProactiveEngagementOutput, error)
-	DisableProactiveEngagementAsync(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) *ShieldDisableProactiveEngagementResult
+	DisableProactiveEngagementAsync(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) *ShieldDisableProactiveEngagementFuture
 
 	DisassociateDRTLogBucket(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) (*shield.DisassociateDRTLogBucketOutput, error)
-	DisassociateDRTLogBucketAsync(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) *ShieldDisassociateDRTLogBucketResult
+	DisassociateDRTLogBucketAsync(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) *ShieldDisassociateDRTLogBucketFuture
 
 	DisassociateDRTRole(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) (*shield.DisassociateDRTRoleOutput, error)
-	DisassociateDRTRoleAsync(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) *ShieldDisassociateDRTRoleResult
+	DisassociateDRTRoleAsync(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) *ShieldDisassociateDRTRoleFuture
 
 	DisassociateHealthCheck(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) (*shield.DisassociateHealthCheckOutput, error)
-	DisassociateHealthCheckAsync(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) *ShieldDisassociateHealthCheckResult
+	DisassociateHealthCheckAsync(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) *ShieldDisassociateHealthCheckFuture
 
 	EnableProactiveEngagement(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) (*shield.EnableProactiveEngagementOutput, error)
-	EnableProactiveEngagementAsync(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) *ShieldEnableProactiveEngagementResult
+	EnableProactiveEngagementAsync(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) *ShieldEnableProactiveEngagementFuture
 
 	GetSubscriptionState(ctx workflow.Context, input *shield.GetSubscriptionStateInput) (*shield.GetSubscriptionStateOutput, error)
-	GetSubscriptionStateAsync(ctx workflow.Context, input *shield.GetSubscriptionStateInput) *ShieldGetSubscriptionStateResult
+	GetSubscriptionStateAsync(ctx workflow.Context, input *shield.GetSubscriptionStateInput) *ShieldGetSubscriptionStateFuture
 
 	ListAttacks(ctx workflow.Context, input *shield.ListAttacksInput) (*shield.ListAttacksOutput, error)
-	ListAttacksAsync(ctx workflow.Context, input *shield.ListAttacksInput) *ShieldListAttacksResult
+	ListAttacksAsync(ctx workflow.Context, input *shield.ListAttacksInput) *ShieldListAttacksFuture
 
 	ListProtections(ctx workflow.Context, input *shield.ListProtectionsInput) (*shield.ListProtectionsOutput, error)
-	ListProtectionsAsync(ctx workflow.Context, input *shield.ListProtectionsInput) *ShieldListProtectionsResult
+	ListProtectionsAsync(ctx workflow.Context, input *shield.ListProtectionsInput) *ShieldListProtectionsFuture
 
 	UpdateEmergencyContactSettings(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) (*shield.UpdateEmergencyContactSettingsOutput, error)
-	UpdateEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) *ShieldUpdateEmergencyContactSettingsResult
+	UpdateEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) *ShieldUpdateEmergencyContactSettingsFuture
 
 	UpdateSubscription(ctx workflow.Context, input *shield.UpdateSubscriptionInput) (*shield.UpdateSubscriptionOutput, error)
-	UpdateSubscriptionAsync(ctx workflow.Context, input *shield.UpdateSubscriptionInput) *ShieldUpdateSubscriptionResult
+	UpdateSubscriptionAsync(ctx workflow.Context, input *shield.UpdateSubscriptionInput) *ShieldUpdateSubscriptionFuture
 }
 
 type ShieldStub struct{}
@@ -86,233 +86,256 @@ func NewShieldStub() ShieldClient {
 	return &ShieldStub{}
 }
 
-type ShieldAssociateDRTLogBucketResult struct {
-	Result workflow.Future
+type ShieldAssociateDRTLogBucketFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldAssociateDRTLogBucketResult) Get(ctx workflow.Context) (*shield.AssociateDRTLogBucketOutput, error) {
+func (r *ShieldAssociateDRTLogBucketFuture) Get(ctx workflow.Context) (*shield.AssociateDRTLogBucketOutput, error) {
 	var output shield.AssociateDRTLogBucketOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldAssociateDRTRoleResult struct {
-	Result workflow.Future
+type ShieldAssociateDRTRoleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldAssociateDRTRoleResult) Get(ctx workflow.Context) (*shield.AssociateDRTRoleOutput, error) {
+func (r *ShieldAssociateDRTRoleFuture) Get(ctx workflow.Context) (*shield.AssociateDRTRoleOutput, error) {
 	var output shield.AssociateDRTRoleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldAssociateHealthCheckResult struct {
-	Result workflow.Future
+type ShieldAssociateHealthCheckFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldAssociateHealthCheckResult) Get(ctx workflow.Context) (*shield.AssociateHealthCheckOutput, error) {
+func (r *ShieldAssociateHealthCheckFuture) Get(ctx workflow.Context) (*shield.AssociateHealthCheckOutput, error) {
 	var output shield.AssociateHealthCheckOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldAssociateProactiveEngagementDetailsResult struct {
-	Result workflow.Future
+type ShieldAssociateProactiveEngagementDetailsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldAssociateProactiveEngagementDetailsResult) Get(ctx workflow.Context) (*shield.AssociateProactiveEngagementDetailsOutput, error) {
+func (r *ShieldAssociateProactiveEngagementDetailsFuture) Get(ctx workflow.Context) (*shield.AssociateProactiveEngagementDetailsOutput, error) {
 	var output shield.AssociateProactiveEngagementDetailsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldCreateProtectionResult struct {
-	Result workflow.Future
+type ShieldCreateProtectionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldCreateProtectionResult) Get(ctx workflow.Context) (*shield.CreateProtectionOutput, error) {
+func (r *ShieldCreateProtectionFuture) Get(ctx workflow.Context) (*shield.CreateProtectionOutput, error) {
 	var output shield.CreateProtectionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldCreateSubscriptionResult struct {
-	Result workflow.Future
+type ShieldCreateSubscriptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldCreateSubscriptionResult) Get(ctx workflow.Context) (*shield.CreateSubscriptionOutput, error) {
+func (r *ShieldCreateSubscriptionFuture) Get(ctx workflow.Context) (*shield.CreateSubscriptionOutput, error) {
 	var output shield.CreateSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDeleteProtectionResult struct {
-	Result workflow.Future
+type ShieldDeleteProtectionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDeleteProtectionResult) Get(ctx workflow.Context) (*shield.DeleteProtectionOutput, error) {
+func (r *ShieldDeleteProtectionFuture) Get(ctx workflow.Context) (*shield.DeleteProtectionOutput, error) {
 	var output shield.DeleteProtectionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDeleteSubscriptionResult struct {
-	Result workflow.Future
+type ShieldDeleteSubscriptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDeleteSubscriptionResult) Get(ctx workflow.Context) (*shield.DeleteSubscriptionOutput, error) {
+func (r *ShieldDeleteSubscriptionFuture) Get(ctx workflow.Context) (*shield.DeleteSubscriptionOutput, error) {
 	var output shield.DeleteSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDescribeAttackResult struct {
-	Result workflow.Future
+type ShieldDescribeAttackFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDescribeAttackResult) Get(ctx workflow.Context) (*shield.DescribeAttackOutput, error) {
+func (r *ShieldDescribeAttackFuture) Get(ctx workflow.Context) (*shield.DescribeAttackOutput, error) {
 	var output shield.DescribeAttackOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDescribeDRTAccessResult struct {
-	Result workflow.Future
+type ShieldDescribeDRTAccessFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDescribeDRTAccessResult) Get(ctx workflow.Context) (*shield.DescribeDRTAccessOutput, error) {
+func (r *ShieldDescribeDRTAccessFuture) Get(ctx workflow.Context) (*shield.DescribeDRTAccessOutput, error) {
 	var output shield.DescribeDRTAccessOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDescribeEmergencyContactSettingsResult struct {
-	Result workflow.Future
+type ShieldDescribeEmergencyContactSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDescribeEmergencyContactSettingsResult) Get(ctx workflow.Context) (*shield.DescribeEmergencyContactSettingsOutput, error) {
+func (r *ShieldDescribeEmergencyContactSettingsFuture) Get(ctx workflow.Context) (*shield.DescribeEmergencyContactSettingsOutput, error) {
 	var output shield.DescribeEmergencyContactSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDescribeProtectionResult struct {
-	Result workflow.Future
+type ShieldDescribeProtectionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDescribeProtectionResult) Get(ctx workflow.Context) (*shield.DescribeProtectionOutput, error) {
+func (r *ShieldDescribeProtectionFuture) Get(ctx workflow.Context) (*shield.DescribeProtectionOutput, error) {
 	var output shield.DescribeProtectionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDescribeSubscriptionResult struct {
-	Result workflow.Future
+type ShieldDescribeSubscriptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDescribeSubscriptionResult) Get(ctx workflow.Context) (*shield.DescribeSubscriptionOutput, error) {
+func (r *ShieldDescribeSubscriptionFuture) Get(ctx workflow.Context) (*shield.DescribeSubscriptionOutput, error) {
 	var output shield.DescribeSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDisableProactiveEngagementResult struct {
-	Result workflow.Future
+type ShieldDisableProactiveEngagementFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDisableProactiveEngagementResult) Get(ctx workflow.Context) (*shield.DisableProactiveEngagementOutput, error) {
+func (r *ShieldDisableProactiveEngagementFuture) Get(ctx workflow.Context) (*shield.DisableProactiveEngagementOutput, error) {
 	var output shield.DisableProactiveEngagementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDisassociateDRTLogBucketResult struct {
-	Result workflow.Future
+type ShieldDisassociateDRTLogBucketFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDisassociateDRTLogBucketResult) Get(ctx workflow.Context) (*shield.DisassociateDRTLogBucketOutput, error) {
+func (r *ShieldDisassociateDRTLogBucketFuture) Get(ctx workflow.Context) (*shield.DisassociateDRTLogBucketOutput, error) {
 	var output shield.DisassociateDRTLogBucketOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDisassociateDRTRoleResult struct {
-	Result workflow.Future
+type ShieldDisassociateDRTRoleFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDisassociateDRTRoleResult) Get(ctx workflow.Context) (*shield.DisassociateDRTRoleOutput, error) {
+func (r *ShieldDisassociateDRTRoleFuture) Get(ctx workflow.Context) (*shield.DisassociateDRTRoleOutput, error) {
 	var output shield.DisassociateDRTRoleOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldDisassociateHealthCheckResult struct {
-	Result workflow.Future
+type ShieldDisassociateHealthCheckFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldDisassociateHealthCheckResult) Get(ctx workflow.Context) (*shield.DisassociateHealthCheckOutput, error) {
+func (r *ShieldDisassociateHealthCheckFuture) Get(ctx workflow.Context) (*shield.DisassociateHealthCheckOutput, error) {
 	var output shield.DisassociateHealthCheckOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldEnableProactiveEngagementResult struct {
-	Result workflow.Future
+type ShieldEnableProactiveEngagementFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldEnableProactiveEngagementResult) Get(ctx workflow.Context) (*shield.EnableProactiveEngagementOutput, error) {
+func (r *ShieldEnableProactiveEngagementFuture) Get(ctx workflow.Context) (*shield.EnableProactiveEngagementOutput, error) {
 	var output shield.EnableProactiveEngagementOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldGetSubscriptionStateResult struct {
-	Result workflow.Future
+type ShieldGetSubscriptionStateFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldGetSubscriptionStateResult) Get(ctx workflow.Context) (*shield.GetSubscriptionStateOutput, error) {
+func (r *ShieldGetSubscriptionStateFuture) Get(ctx workflow.Context) (*shield.GetSubscriptionStateOutput, error) {
 	var output shield.GetSubscriptionStateOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldListAttacksResult struct {
-	Result workflow.Future
+type ShieldListAttacksFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldListAttacksResult) Get(ctx workflow.Context) (*shield.ListAttacksOutput, error) {
+func (r *ShieldListAttacksFuture) Get(ctx workflow.Context) (*shield.ListAttacksOutput, error) {
 	var output shield.ListAttacksOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldListProtectionsResult struct {
-	Result workflow.Future
+type ShieldListProtectionsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldListProtectionsResult) Get(ctx workflow.Context) (*shield.ListProtectionsOutput, error) {
+func (r *ShieldListProtectionsFuture) Get(ctx workflow.Context) (*shield.ListProtectionsOutput, error) {
 	var output shield.ListProtectionsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldUpdateEmergencyContactSettingsResult struct {
-	Result workflow.Future
+type ShieldUpdateEmergencyContactSettingsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldUpdateEmergencyContactSettingsResult) Get(ctx workflow.Context) (*shield.UpdateEmergencyContactSettingsOutput, error) {
+func (r *ShieldUpdateEmergencyContactSettingsFuture) Get(ctx workflow.Context) (*shield.UpdateEmergencyContactSettingsOutput, error) {
 	var output shield.UpdateEmergencyContactSettingsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ShieldUpdateSubscriptionResult struct {
-	Result workflow.Future
+type ShieldUpdateSubscriptionFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *ShieldUpdateSubscriptionResult) Get(ctx workflow.Context) (*shield.UpdateSubscriptionOutput, error) {
+func (r *ShieldUpdateSubscriptionFuture) Get(ctx workflow.Context) (*shield.UpdateSubscriptionOutput, error) {
 	var output shield.UpdateSubscriptionOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -322,9 +345,9 @@ func (a *ShieldStub) AssociateDRTLogBucket(ctx workflow.Context, input *shield.A
 	return &output, err
 }
 
-func (a *ShieldStub) AssociateDRTLogBucketAsync(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) *ShieldAssociateDRTLogBucketResult {
+func (a *ShieldStub) AssociateDRTLogBucketAsync(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) *ShieldAssociateDRTLogBucketFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.AssociateDRTLogBucket", input)
-	return &ShieldAssociateDRTLogBucketResult{Result: future}
+	return &ShieldAssociateDRTLogBucketFuture{Future: future}
 }
 
 func (a *ShieldStub) AssociateDRTRole(ctx workflow.Context, input *shield.AssociateDRTRoleInput) (*shield.AssociateDRTRoleOutput, error) {
@@ -333,9 +356,9 @@ func (a *ShieldStub) AssociateDRTRole(ctx workflow.Context, input *shield.Associ
 	return &output, err
 }
 
-func (a *ShieldStub) AssociateDRTRoleAsync(ctx workflow.Context, input *shield.AssociateDRTRoleInput) *ShieldAssociateDRTRoleResult {
+func (a *ShieldStub) AssociateDRTRoleAsync(ctx workflow.Context, input *shield.AssociateDRTRoleInput) *ShieldAssociateDRTRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.AssociateDRTRole", input)
-	return &ShieldAssociateDRTRoleResult{Result: future}
+	return &ShieldAssociateDRTRoleFuture{Future: future}
 }
 
 func (a *ShieldStub) AssociateHealthCheck(ctx workflow.Context, input *shield.AssociateHealthCheckInput) (*shield.AssociateHealthCheckOutput, error) {
@@ -344,9 +367,9 @@ func (a *ShieldStub) AssociateHealthCheck(ctx workflow.Context, input *shield.As
 	return &output, err
 }
 
-func (a *ShieldStub) AssociateHealthCheckAsync(ctx workflow.Context, input *shield.AssociateHealthCheckInput) *ShieldAssociateHealthCheckResult {
+func (a *ShieldStub) AssociateHealthCheckAsync(ctx workflow.Context, input *shield.AssociateHealthCheckInput) *ShieldAssociateHealthCheckFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.AssociateHealthCheck", input)
-	return &ShieldAssociateHealthCheckResult{Result: future}
+	return &ShieldAssociateHealthCheckFuture{Future: future}
 }
 
 func (a *ShieldStub) AssociateProactiveEngagementDetails(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) (*shield.AssociateProactiveEngagementDetailsOutput, error) {
@@ -355,9 +378,9 @@ func (a *ShieldStub) AssociateProactiveEngagementDetails(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ShieldStub) AssociateProactiveEngagementDetailsAsync(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) *ShieldAssociateProactiveEngagementDetailsResult {
+func (a *ShieldStub) AssociateProactiveEngagementDetailsAsync(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) *ShieldAssociateProactiveEngagementDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.AssociateProactiveEngagementDetails", input)
-	return &ShieldAssociateProactiveEngagementDetailsResult{Result: future}
+	return &ShieldAssociateProactiveEngagementDetailsFuture{Future: future}
 }
 
 func (a *ShieldStub) CreateProtection(ctx workflow.Context, input *shield.CreateProtectionInput) (*shield.CreateProtectionOutput, error) {
@@ -366,9 +389,9 @@ func (a *ShieldStub) CreateProtection(ctx workflow.Context, input *shield.Create
 	return &output, err
 }
 
-func (a *ShieldStub) CreateProtectionAsync(ctx workflow.Context, input *shield.CreateProtectionInput) *ShieldCreateProtectionResult {
+func (a *ShieldStub) CreateProtectionAsync(ctx workflow.Context, input *shield.CreateProtectionInput) *ShieldCreateProtectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.CreateProtection", input)
-	return &ShieldCreateProtectionResult{Result: future}
+	return &ShieldCreateProtectionFuture{Future: future}
 }
 
 func (a *ShieldStub) CreateSubscription(ctx workflow.Context, input *shield.CreateSubscriptionInput) (*shield.CreateSubscriptionOutput, error) {
@@ -377,9 +400,9 @@ func (a *ShieldStub) CreateSubscription(ctx workflow.Context, input *shield.Crea
 	return &output, err
 }
 
-func (a *ShieldStub) CreateSubscriptionAsync(ctx workflow.Context, input *shield.CreateSubscriptionInput) *ShieldCreateSubscriptionResult {
+func (a *ShieldStub) CreateSubscriptionAsync(ctx workflow.Context, input *shield.CreateSubscriptionInput) *ShieldCreateSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.CreateSubscription", input)
-	return &ShieldCreateSubscriptionResult{Result: future}
+	return &ShieldCreateSubscriptionFuture{Future: future}
 }
 
 func (a *ShieldStub) DeleteProtection(ctx workflow.Context, input *shield.DeleteProtectionInput) (*shield.DeleteProtectionOutput, error) {
@@ -388,9 +411,9 @@ func (a *ShieldStub) DeleteProtection(ctx workflow.Context, input *shield.Delete
 	return &output, err
 }
 
-func (a *ShieldStub) DeleteProtectionAsync(ctx workflow.Context, input *shield.DeleteProtectionInput) *ShieldDeleteProtectionResult {
+func (a *ShieldStub) DeleteProtectionAsync(ctx workflow.Context, input *shield.DeleteProtectionInput) *ShieldDeleteProtectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DeleteProtection", input)
-	return &ShieldDeleteProtectionResult{Result: future}
+	return &ShieldDeleteProtectionFuture{Future: future}
 }
 
 func (a *ShieldStub) DeleteSubscription(ctx workflow.Context, input *shield.DeleteSubscriptionInput) (*shield.DeleteSubscriptionOutput, error) {
@@ -399,9 +422,9 @@ func (a *ShieldStub) DeleteSubscription(ctx workflow.Context, input *shield.Dele
 	return &output, err
 }
 
-func (a *ShieldStub) DeleteSubscriptionAsync(ctx workflow.Context, input *shield.DeleteSubscriptionInput) *ShieldDeleteSubscriptionResult {
+func (a *ShieldStub) DeleteSubscriptionAsync(ctx workflow.Context, input *shield.DeleteSubscriptionInput) *ShieldDeleteSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DeleteSubscription", input)
-	return &ShieldDeleteSubscriptionResult{Result: future}
+	return &ShieldDeleteSubscriptionFuture{Future: future}
 }
 
 func (a *ShieldStub) DescribeAttack(ctx workflow.Context, input *shield.DescribeAttackInput) (*shield.DescribeAttackOutput, error) {
@@ -410,9 +433,9 @@ func (a *ShieldStub) DescribeAttack(ctx workflow.Context, input *shield.Describe
 	return &output, err
 }
 
-func (a *ShieldStub) DescribeAttackAsync(ctx workflow.Context, input *shield.DescribeAttackInput) *ShieldDescribeAttackResult {
+func (a *ShieldStub) DescribeAttackAsync(ctx workflow.Context, input *shield.DescribeAttackInput) *ShieldDescribeAttackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DescribeAttack", input)
-	return &ShieldDescribeAttackResult{Result: future}
+	return &ShieldDescribeAttackFuture{Future: future}
 }
 
 func (a *ShieldStub) DescribeDRTAccess(ctx workflow.Context, input *shield.DescribeDRTAccessInput) (*shield.DescribeDRTAccessOutput, error) {
@@ -421,9 +444,9 @@ func (a *ShieldStub) DescribeDRTAccess(ctx workflow.Context, input *shield.Descr
 	return &output, err
 }
 
-func (a *ShieldStub) DescribeDRTAccessAsync(ctx workflow.Context, input *shield.DescribeDRTAccessInput) *ShieldDescribeDRTAccessResult {
+func (a *ShieldStub) DescribeDRTAccessAsync(ctx workflow.Context, input *shield.DescribeDRTAccessInput) *ShieldDescribeDRTAccessFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DescribeDRTAccess", input)
-	return &ShieldDescribeDRTAccessResult{Result: future}
+	return &ShieldDescribeDRTAccessFuture{Future: future}
 }
 
 func (a *ShieldStub) DescribeEmergencyContactSettings(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) (*shield.DescribeEmergencyContactSettingsOutput, error) {
@@ -432,9 +455,9 @@ func (a *ShieldStub) DescribeEmergencyContactSettings(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *ShieldStub) DescribeEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) *ShieldDescribeEmergencyContactSettingsResult {
+func (a *ShieldStub) DescribeEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) *ShieldDescribeEmergencyContactSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DescribeEmergencyContactSettings", input)
-	return &ShieldDescribeEmergencyContactSettingsResult{Result: future}
+	return &ShieldDescribeEmergencyContactSettingsFuture{Future: future}
 }
 
 func (a *ShieldStub) DescribeProtection(ctx workflow.Context, input *shield.DescribeProtectionInput) (*shield.DescribeProtectionOutput, error) {
@@ -443,9 +466,9 @@ func (a *ShieldStub) DescribeProtection(ctx workflow.Context, input *shield.Desc
 	return &output, err
 }
 
-func (a *ShieldStub) DescribeProtectionAsync(ctx workflow.Context, input *shield.DescribeProtectionInput) *ShieldDescribeProtectionResult {
+func (a *ShieldStub) DescribeProtectionAsync(ctx workflow.Context, input *shield.DescribeProtectionInput) *ShieldDescribeProtectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DescribeProtection", input)
-	return &ShieldDescribeProtectionResult{Result: future}
+	return &ShieldDescribeProtectionFuture{Future: future}
 }
 
 func (a *ShieldStub) DescribeSubscription(ctx workflow.Context, input *shield.DescribeSubscriptionInput) (*shield.DescribeSubscriptionOutput, error) {
@@ -454,9 +477,9 @@ func (a *ShieldStub) DescribeSubscription(ctx workflow.Context, input *shield.De
 	return &output, err
 }
 
-func (a *ShieldStub) DescribeSubscriptionAsync(ctx workflow.Context, input *shield.DescribeSubscriptionInput) *ShieldDescribeSubscriptionResult {
+func (a *ShieldStub) DescribeSubscriptionAsync(ctx workflow.Context, input *shield.DescribeSubscriptionInput) *ShieldDescribeSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DescribeSubscription", input)
-	return &ShieldDescribeSubscriptionResult{Result: future}
+	return &ShieldDescribeSubscriptionFuture{Future: future}
 }
 
 func (a *ShieldStub) DisableProactiveEngagement(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) (*shield.DisableProactiveEngagementOutput, error) {
@@ -465,9 +488,9 @@ func (a *ShieldStub) DisableProactiveEngagement(ctx workflow.Context, input *shi
 	return &output, err
 }
 
-func (a *ShieldStub) DisableProactiveEngagementAsync(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) *ShieldDisableProactiveEngagementResult {
+func (a *ShieldStub) DisableProactiveEngagementAsync(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) *ShieldDisableProactiveEngagementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DisableProactiveEngagement", input)
-	return &ShieldDisableProactiveEngagementResult{Result: future}
+	return &ShieldDisableProactiveEngagementFuture{Future: future}
 }
 
 func (a *ShieldStub) DisassociateDRTLogBucket(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) (*shield.DisassociateDRTLogBucketOutput, error) {
@@ -476,9 +499,9 @@ func (a *ShieldStub) DisassociateDRTLogBucket(ctx workflow.Context, input *shiel
 	return &output, err
 }
 
-func (a *ShieldStub) DisassociateDRTLogBucketAsync(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) *ShieldDisassociateDRTLogBucketResult {
+func (a *ShieldStub) DisassociateDRTLogBucketAsync(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) *ShieldDisassociateDRTLogBucketFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DisassociateDRTLogBucket", input)
-	return &ShieldDisassociateDRTLogBucketResult{Result: future}
+	return &ShieldDisassociateDRTLogBucketFuture{Future: future}
 }
 
 func (a *ShieldStub) DisassociateDRTRole(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) (*shield.DisassociateDRTRoleOutput, error) {
@@ -487,9 +510,9 @@ func (a *ShieldStub) DisassociateDRTRole(ctx workflow.Context, input *shield.Dis
 	return &output, err
 }
 
-func (a *ShieldStub) DisassociateDRTRoleAsync(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) *ShieldDisassociateDRTRoleResult {
+func (a *ShieldStub) DisassociateDRTRoleAsync(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) *ShieldDisassociateDRTRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DisassociateDRTRole", input)
-	return &ShieldDisassociateDRTRoleResult{Result: future}
+	return &ShieldDisassociateDRTRoleFuture{Future: future}
 }
 
 func (a *ShieldStub) DisassociateHealthCheck(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) (*shield.DisassociateHealthCheckOutput, error) {
@@ -498,9 +521,9 @@ func (a *ShieldStub) DisassociateHealthCheck(ctx workflow.Context, input *shield
 	return &output, err
 }
 
-func (a *ShieldStub) DisassociateHealthCheckAsync(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) *ShieldDisassociateHealthCheckResult {
+func (a *ShieldStub) DisassociateHealthCheckAsync(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) *ShieldDisassociateHealthCheckFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.DisassociateHealthCheck", input)
-	return &ShieldDisassociateHealthCheckResult{Result: future}
+	return &ShieldDisassociateHealthCheckFuture{Future: future}
 }
 
 func (a *ShieldStub) EnableProactiveEngagement(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) (*shield.EnableProactiveEngagementOutput, error) {
@@ -509,9 +532,9 @@ func (a *ShieldStub) EnableProactiveEngagement(ctx workflow.Context, input *shie
 	return &output, err
 }
 
-func (a *ShieldStub) EnableProactiveEngagementAsync(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) *ShieldEnableProactiveEngagementResult {
+func (a *ShieldStub) EnableProactiveEngagementAsync(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) *ShieldEnableProactiveEngagementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.EnableProactiveEngagement", input)
-	return &ShieldEnableProactiveEngagementResult{Result: future}
+	return &ShieldEnableProactiveEngagementFuture{Future: future}
 }
 
 func (a *ShieldStub) GetSubscriptionState(ctx workflow.Context, input *shield.GetSubscriptionStateInput) (*shield.GetSubscriptionStateOutput, error) {
@@ -520,9 +543,9 @@ func (a *ShieldStub) GetSubscriptionState(ctx workflow.Context, input *shield.Ge
 	return &output, err
 }
 
-func (a *ShieldStub) GetSubscriptionStateAsync(ctx workflow.Context, input *shield.GetSubscriptionStateInput) *ShieldGetSubscriptionStateResult {
+func (a *ShieldStub) GetSubscriptionStateAsync(ctx workflow.Context, input *shield.GetSubscriptionStateInput) *ShieldGetSubscriptionStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.GetSubscriptionState", input)
-	return &ShieldGetSubscriptionStateResult{Result: future}
+	return &ShieldGetSubscriptionStateFuture{Future: future}
 }
 
 func (a *ShieldStub) ListAttacks(ctx workflow.Context, input *shield.ListAttacksInput) (*shield.ListAttacksOutput, error) {
@@ -531,9 +554,9 @@ func (a *ShieldStub) ListAttacks(ctx workflow.Context, input *shield.ListAttacks
 	return &output, err
 }
 
-func (a *ShieldStub) ListAttacksAsync(ctx workflow.Context, input *shield.ListAttacksInput) *ShieldListAttacksResult {
+func (a *ShieldStub) ListAttacksAsync(ctx workflow.Context, input *shield.ListAttacksInput) *ShieldListAttacksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.ListAttacks", input)
-	return &ShieldListAttacksResult{Result: future}
+	return &ShieldListAttacksFuture{Future: future}
 }
 
 func (a *ShieldStub) ListProtections(ctx workflow.Context, input *shield.ListProtectionsInput) (*shield.ListProtectionsOutput, error) {
@@ -542,9 +565,9 @@ func (a *ShieldStub) ListProtections(ctx workflow.Context, input *shield.ListPro
 	return &output, err
 }
 
-func (a *ShieldStub) ListProtectionsAsync(ctx workflow.Context, input *shield.ListProtectionsInput) *ShieldListProtectionsResult {
+func (a *ShieldStub) ListProtectionsAsync(ctx workflow.Context, input *shield.ListProtectionsInput) *ShieldListProtectionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.ListProtections", input)
-	return &ShieldListProtectionsResult{Result: future}
+	return &ShieldListProtectionsFuture{Future: future}
 }
 
 func (a *ShieldStub) UpdateEmergencyContactSettings(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) (*shield.UpdateEmergencyContactSettingsOutput, error) {
@@ -553,9 +576,9 @@ func (a *ShieldStub) UpdateEmergencyContactSettings(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *ShieldStub) UpdateEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) *ShieldUpdateEmergencyContactSettingsResult {
+func (a *ShieldStub) UpdateEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) *ShieldUpdateEmergencyContactSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.UpdateEmergencyContactSettings", input)
-	return &ShieldUpdateEmergencyContactSettingsResult{Result: future}
+	return &ShieldUpdateEmergencyContactSettingsFuture{Future: future}
 }
 
 func (a *ShieldStub) UpdateSubscription(ctx workflow.Context, input *shield.UpdateSubscriptionInput) (*shield.UpdateSubscriptionOutput, error) {
@@ -564,7 +587,7 @@ func (a *ShieldStub) UpdateSubscription(ctx workflow.Context, input *shield.Upda
 	return &output, err
 }
 
-func (a *ShieldStub) UpdateSubscriptionAsync(ctx workflow.Context, input *shield.UpdateSubscriptionInput) *ShieldUpdateSubscriptionResult {
+func (a *ShieldStub) UpdateSubscriptionAsync(ctx workflow.Context, input *shield.UpdateSubscriptionInput) *ShieldUpdateSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.shield.UpdateSubscription", input)
-	return &ShieldUpdateSubscriptionResult{Result: future}
+	return &ShieldUpdateSubscriptionFuture{Future: future}
 }

@@ -11,34 +11,34 @@ import (
 
 type SimpleDBClient interface {
 	BatchDeleteAttributes(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) (*simpledb.BatchDeleteAttributesOutput, error)
-	BatchDeleteAttributesAsync(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) *SimpledbBatchDeleteAttributesResult
+	BatchDeleteAttributesAsync(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) *SimpleDBBatchDeleteAttributesFuture
 
 	BatchPutAttributes(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) (*simpledb.BatchPutAttributesOutput, error)
-	BatchPutAttributesAsync(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) *SimpledbBatchPutAttributesResult
+	BatchPutAttributesAsync(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) *SimpleDBBatchPutAttributesFuture
 
 	CreateDomain(ctx workflow.Context, input *simpledb.CreateDomainInput) (*simpledb.CreateDomainOutput, error)
-	CreateDomainAsync(ctx workflow.Context, input *simpledb.CreateDomainInput) *SimpledbCreateDomainResult
+	CreateDomainAsync(ctx workflow.Context, input *simpledb.CreateDomainInput) *SimpleDBCreateDomainFuture
 
 	DeleteAttributes(ctx workflow.Context, input *simpledb.DeleteAttributesInput) (*simpledb.DeleteAttributesOutput, error)
-	DeleteAttributesAsync(ctx workflow.Context, input *simpledb.DeleteAttributesInput) *SimpledbDeleteAttributesResult
+	DeleteAttributesAsync(ctx workflow.Context, input *simpledb.DeleteAttributesInput) *SimpleDBDeleteAttributesFuture
 
 	DeleteDomain(ctx workflow.Context, input *simpledb.DeleteDomainInput) (*simpledb.DeleteDomainOutput, error)
-	DeleteDomainAsync(ctx workflow.Context, input *simpledb.DeleteDomainInput) *SimpledbDeleteDomainResult
+	DeleteDomainAsync(ctx workflow.Context, input *simpledb.DeleteDomainInput) *SimpleDBDeleteDomainFuture
 
 	DomainMetadata(ctx workflow.Context, input *simpledb.DomainMetadataInput) (*simpledb.DomainMetadataOutput, error)
-	DomainMetadataAsync(ctx workflow.Context, input *simpledb.DomainMetadataInput) *SimpledbDomainMetadataResult
+	DomainMetadataAsync(ctx workflow.Context, input *simpledb.DomainMetadataInput) *SimpleDBDomainMetadataFuture
 
 	GetAttributes(ctx workflow.Context, input *simpledb.GetAttributesInput) (*simpledb.GetAttributesOutput, error)
-	GetAttributesAsync(ctx workflow.Context, input *simpledb.GetAttributesInput) *SimpledbGetAttributesResult
+	GetAttributesAsync(ctx workflow.Context, input *simpledb.GetAttributesInput) *SimpleDBGetAttributesFuture
 
 	ListDomains(ctx workflow.Context, input *simpledb.ListDomainsInput) (*simpledb.ListDomainsOutput, error)
-	ListDomainsAsync(ctx workflow.Context, input *simpledb.ListDomainsInput) *SimpledbListDomainsResult
+	ListDomainsAsync(ctx workflow.Context, input *simpledb.ListDomainsInput) *SimpleDBListDomainsFuture
 
 	PutAttributes(ctx workflow.Context, input *simpledb.PutAttributesInput) (*simpledb.PutAttributesOutput, error)
-	PutAttributesAsync(ctx workflow.Context, input *simpledb.PutAttributesInput) *SimpledbPutAttributesResult
+	PutAttributesAsync(ctx workflow.Context, input *simpledb.PutAttributesInput) *SimpleDBPutAttributesFuture
 
 	Select(ctx workflow.Context, input *simpledb.SelectInput) (*simpledb.SelectOutput, error)
-	SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SimpledbSelectResult
+	SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SimpleDBSelectFuture
 }
 
 type SimpleDBStub struct{}
@@ -47,103 +47,113 @@ func NewSimpleDBStub() SimpleDBClient {
 	return &SimpleDBStub{}
 }
 
-type SimpledbBatchDeleteAttributesResult struct {
-	Result workflow.Future
+type SimpleDBBatchDeleteAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbBatchDeleteAttributesResult) Get(ctx workflow.Context) (*simpledb.BatchDeleteAttributesOutput, error) {
+func (r *SimpleDBBatchDeleteAttributesFuture) Get(ctx workflow.Context) (*simpledb.BatchDeleteAttributesOutput, error) {
 	var output simpledb.BatchDeleteAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbBatchPutAttributesResult struct {
-	Result workflow.Future
+type SimpleDBBatchPutAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbBatchPutAttributesResult) Get(ctx workflow.Context) (*simpledb.BatchPutAttributesOutput, error) {
+func (r *SimpleDBBatchPutAttributesFuture) Get(ctx workflow.Context) (*simpledb.BatchPutAttributesOutput, error) {
 	var output simpledb.BatchPutAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbCreateDomainResult struct {
-	Result workflow.Future
+type SimpleDBCreateDomainFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbCreateDomainResult) Get(ctx workflow.Context) (*simpledb.CreateDomainOutput, error) {
+func (r *SimpleDBCreateDomainFuture) Get(ctx workflow.Context) (*simpledb.CreateDomainOutput, error) {
 	var output simpledb.CreateDomainOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbDeleteAttributesResult struct {
-	Result workflow.Future
+type SimpleDBDeleteAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbDeleteAttributesResult) Get(ctx workflow.Context) (*simpledb.DeleteAttributesOutput, error) {
+func (r *SimpleDBDeleteAttributesFuture) Get(ctx workflow.Context) (*simpledb.DeleteAttributesOutput, error) {
 	var output simpledb.DeleteAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbDeleteDomainResult struct {
-	Result workflow.Future
+type SimpleDBDeleteDomainFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbDeleteDomainResult) Get(ctx workflow.Context) (*simpledb.DeleteDomainOutput, error) {
+func (r *SimpleDBDeleteDomainFuture) Get(ctx workflow.Context) (*simpledb.DeleteDomainOutput, error) {
 	var output simpledb.DeleteDomainOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbDomainMetadataResult struct {
-	Result workflow.Future
+type SimpleDBDomainMetadataFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbDomainMetadataResult) Get(ctx workflow.Context) (*simpledb.DomainMetadataOutput, error) {
+func (r *SimpleDBDomainMetadataFuture) Get(ctx workflow.Context) (*simpledb.DomainMetadataOutput, error) {
 	var output simpledb.DomainMetadataOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbGetAttributesResult struct {
-	Result workflow.Future
+type SimpleDBGetAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbGetAttributesResult) Get(ctx workflow.Context) (*simpledb.GetAttributesOutput, error) {
+func (r *SimpleDBGetAttributesFuture) Get(ctx workflow.Context) (*simpledb.GetAttributesOutput, error) {
 	var output simpledb.GetAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbListDomainsResult struct {
-	Result workflow.Future
+type SimpleDBListDomainsFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbListDomainsResult) Get(ctx workflow.Context) (*simpledb.ListDomainsOutput, error) {
+func (r *SimpleDBListDomainsFuture) Get(ctx workflow.Context) (*simpledb.ListDomainsOutput, error) {
 	var output simpledb.ListDomainsOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbPutAttributesResult struct {
-	Result workflow.Future
+type SimpleDBPutAttributesFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbPutAttributesResult) Get(ctx workflow.Context) (*simpledb.PutAttributesOutput, error) {
+func (r *SimpleDBPutAttributesFuture) Get(ctx workflow.Context) (*simpledb.PutAttributesOutput, error) {
 	var output simpledb.PutAttributesOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SimpledbSelectResult struct {
-	Result workflow.Future
+type SimpleDBSelectFuture struct {
+	// public to support Selector.addFuture
+	Future workflow.Future
 }
 
-func (r *SimpledbSelectResult) Get(ctx workflow.Context) (*simpledb.SelectOutput, error) {
+func (r *SimpleDBSelectFuture) Get(ctx workflow.Context) (*simpledb.SelectOutput, error) {
 	var output simpledb.SelectOutput
-	err := r.Result.Get(ctx, &output)
+	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
@@ -153,9 +163,9 @@ func (a *SimpleDBStub) BatchDeleteAttributes(ctx workflow.Context, input *simple
 	return &output, err
 }
 
-func (a *SimpleDBStub) BatchDeleteAttributesAsync(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) *SimpledbBatchDeleteAttributesResult {
+func (a *SimpleDBStub) BatchDeleteAttributesAsync(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) *SimpleDBBatchDeleteAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.BatchDeleteAttributes", input)
-	return &SimpledbBatchDeleteAttributesResult{Result: future}
+	return &SimpleDBBatchDeleteAttributesFuture{Future: future}
 }
 
 func (a *SimpleDBStub) BatchPutAttributes(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) (*simpledb.BatchPutAttributesOutput, error) {
@@ -164,9 +174,9 @@ func (a *SimpleDBStub) BatchPutAttributes(ctx workflow.Context, input *simpledb.
 	return &output, err
 }
 
-func (a *SimpleDBStub) BatchPutAttributesAsync(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) *SimpledbBatchPutAttributesResult {
+func (a *SimpleDBStub) BatchPutAttributesAsync(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) *SimpleDBBatchPutAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.BatchPutAttributes", input)
-	return &SimpledbBatchPutAttributesResult{Result: future}
+	return &SimpleDBBatchPutAttributesFuture{Future: future}
 }
 
 func (a *SimpleDBStub) CreateDomain(ctx workflow.Context, input *simpledb.CreateDomainInput) (*simpledb.CreateDomainOutput, error) {
@@ -175,9 +185,9 @@ func (a *SimpleDBStub) CreateDomain(ctx workflow.Context, input *simpledb.Create
 	return &output, err
 }
 
-func (a *SimpleDBStub) CreateDomainAsync(ctx workflow.Context, input *simpledb.CreateDomainInput) *SimpledbCreateDomainResult {
+func (a *SimpleDBStub) CreateDomainAsync(ctx workflow.Context, input *simpledb.CreateDomainInput) *SimpleDBCreateDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.CreateDomain", input)
-	return &SimpledbCreateDomainResult{Result: future}
+	return &SimpleDBCreateDomainFuture{Future: future}
 }
 
 func (a *SimpleDBStub) DeleteAttributes(ctx workflow.Context, input *simpledb.DeleteAttributesInput) (*simpledb.DeleteAttributesOutput, error) {
@@ -186,9 +196,9 @@ func (a *SimpleDBStub) DeleteAttributes(ctx workflow.Context, input *simpledb.De
 	return &output, err
 }
 
-func (a *SimpleDBStub) DeleteAttributesAsync(ctx workflow.Context, input *simpledb.DeleteAttributesInput) *SimpledbDeleteAttributesResult {
+func (a *SimpleDBStub) DeleteAttributesAsync(ctx workflow.Context, input *simpledb.DeleteAttributesInput) *SimpleDBDeleteAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.DeleteAttributes", input)
-	return &SimpledbDeleteAttributesResult{Result: future}
+	return &SimpleDBDeleteAttributesFuture{Future: future}
 }
 
 func (a *SimpleDBStub) DeleteDomain(ctx workflow.Context, input *simpledb.DeleteDomainInput) (*simpledb.DeleteDomainOutput, error) {
@@ -197,9 +207,9 @@ func (a *SimpleDBStub) DeleteDomain(ctx workflow.Context, input *simpledb.Delete
 	return &output, err
 }
 
-func (a *SimpleDBStub) DeleteDomainAsync(ctx workflow.Context, input *simpledb.DeleteDomainInput) *SimpledbDeleteDomainResult {
+func (a *SimpleDBStub) DeleteDomainAsync(ctx workflow.Context, input *simpledb.DeleteDomainInput) *SimpleDBDeleteDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.DeleteDomain", input)
-	return &SimpledbDeleteDomainResult{Result: future}
+	return &SimpleDBDeleteDomainFuture{Future: future}
 }
 
 func (a *SimpleDBStub) DomainMetadata(ctx workflow.Context, input *simpledb.DomainMetadataInput) (*simpledb.DomainMetadataOutput, error) {
@@ -208,9 +218,9 @@ func (a *SimpleDBStub) DomainMetadata(ctx workflow.Context, input *simpledb.Doma
 	return &output, err
 }
 
-func (a *SimpleDBStub) DomainMetadataAsync(ctx workflow.Context, input *simpledb.DomainMetadataInput) *SimpledbDomainMetadataResult {
+func (a *SimpleDBStub) DomainMetadataAsync(ctx workflow.Context, input *simpledb.DomainMetadataInput) *SimpleDBDomainMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.DomainMetadata", input)
-	return &SimpledbDomainMetadataResult{Result: future}
+	return &SimpleDBDomainMetadataFuture{Future: future}
 }
 
 func (a *SimpleDBStub) GetAttributes(ctx workflow.Context, input *simpledb.GetAttributesInput) (*simpledb.GetAttributesOutput, error) {
@@ -219,9 +229,9 @@ func (a *SimpleDBStub) GetAttributes(ctx workflow.Context, input *simpledb.GetAt
 	return &output, err
 }
 
-func (a *SimpleDBStub) GetAttributesAsync(ctx workflow.Context, input *simpledb.GetAttributesInput) *SimpledbGetAttributesResult {
+func (a *SimpleDBStub) GetAttributesAsync(ctx workflow.Context, input *simpledb.GetAttributesInput) *SimpleDBGetAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.GetAttributes", input)
-	return &SimpledbGetAttributesResult{Result: future}
+	return &SimpleDBGetAttributesFuture{Future: future}
 }
 
 func (a *SimpleDBStub) ListDomains(ctx workflow.Context, input *simpledb.ListDomainsInput) (*simpledb.ListDomainsOutput, error) {
@@ -230,9 +240,9 @@ func (a *SimpleDBStub) ListDomains(ctx workflow.Context, input *simpledb.ListDom
 	return &output, err
 }
 
-func (a *SimpleDBStub) ListDomainsAsync(ctx workflow.Context, input *simpledb.ListDomainsInput) *SimpledbListDomainsResult {
+func (a *SimpleDBStub) ListDomainsAsync(ctx workflow.Context, input *simpledb.ListDomainsInput) *SimpleDBListDomainsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.ListDomains", input)
-	return &SimpledbListDomainsResult{Result: future}
+	return &SimpleDBListDomainsFuture{Future: future}
 }
 
 func (a *SimpleDBStub) PutAttributes(ctx workflow.Context, input *simpledb.PutAttributesInput) (*simpledb.PutAttributesOutput, error) {
@@ -241,9 +251,9 @@ func (a *SimpleDBStub) PutAttributes(ctx workflow.Context, input *simpledb.PutAt
 	return &output, err
 }
 
-func (a *SimpleDBStub) PutAttributesAsync(ctx workflow.Context, input *simpledb.PutAttributesInput) *SimpledbPutAttributesResult {
+func (a *SimpleDBStub) PutAttributesAsync(ctx workflow.Context, input *simpledb.PutAttributesInput) *SimpleDBPutAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.PutAttributes", input)
-	return &SimpledbPutAttributesResult{Result: future}
+	return &SimpleDBPutAttributesFuture{Future: future}
 }
 
 func (a *SimpleDBStub) Select(ctx workflow.Context, input *simpledb.SelectInput) (*simpledb.SelectOutput, error) {
@@ -252,7 +262,7 @@ func (a *SimpleDBStub) Select(ctx workflow.Context, input *simpledb.SelectInput)
 	return &output, err
 }
 
-func (a *SimpleDBStub) SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SimpledbSelectResult {
+func (a *SimpleDBStub) SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SimpleDBSelectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.simpledb.Select", input)
-	return &SimpledbSelectResult{Result: future}
+	return &SimpleDBSelectFuture{Future: future}
 }
