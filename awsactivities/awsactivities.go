@@ -5,6 +5,7 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"go.temporal.io/aws-sdk/awsactivities/accessanalyzer"
@@ -241,10 +242,14 @@ import (
 	"go.temporal.io/aws-sdk/awsactivities/workmailmessageflow"
 	"go.temporal.io/aws-sdk/awsactivities/workspaces"
 	"go.temporal.io/aws-sdk/awsactivities/xray"
-	"go.temporal.io/aws-sdk/sessionfactory"
 	"go.temporal.io/sdk/activity"
 	"go.temporal.io/sdk/worker"
 )
+
+// SessionFactory returns an aws.Session based on the activity context.
+type SessionFactory interface {
+	Session(ctx context.Context) (*session.Session, error)
+}
 
 // RegisterAwsActivities registers AWS activities with a single session.
 // Use this registration method if your worker will only use a single set of credentials for authentication.
@@ -955,7 +960,7 @@ func RegisterAwsActivities(worker worker.Worker, sess *session.Session, config .
 
 // RegisterAwsActivitiesWithSessionFactory registers AWS activities with a session factory that creates a session for every activity execution.
 // Use this registration method if your activities will receive credentials in the context for each activity execution.
-func RegisterAwsActivitiesWithSessionFactory(worker worker.Worker, sessionFactory sessionfactory.SessionFactory) {
+func RegisterAwsActivitiesWithSessionFactory(worker worker.Worker, sessionFactory SessionFactory) {
 
 	worker.RegisterActivity(accessanalyzer.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(accessanalyzer.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.accessanalyzer."})

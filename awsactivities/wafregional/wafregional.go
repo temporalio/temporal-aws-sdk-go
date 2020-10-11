@@ -13,7 +13,6 @@ import (
 	"github.com/aws/aws-sdk-go/service/wafregional"
 	"github.com/aws/aws-sdk-go/service/wafregional/wafregionaliface"
 	"go.temporal.io/aws-sdk/internal"
-	"go.temporal.io/aws-sdk/sessionfactory"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -21,10 +20,15 @@ var _ = internal.SetClientToken
 
 type _ request.Option
 
+// SessionFactory returns an aws.Session based on the activity context.
+type SessionFactory interface {
+	Session(ctx context.Context) (*session.Session, error)
+}
+
 type Activities struct {
 	client wafregionaliface.WAFRegionalAPI
 
-	sessionFactory sessionfactory.SessionFactory
+	sessionFactory SessionFactory
 }
 
 func NewActivities(sess *session.Session, config ...*aws.Config) *Activities {
@@ -32,7 +36,7 @@ func NewActivities(sess *session.Session, config ...*aws.Config) *Activities {
 	return &Activities{client: client}
 }
 
-func NewActivitiesWithSessionFactory(sessionFactory sessionfactory.SessionFactory) *Activities {
+func NewActivitiesWithSessionFactory(sessionFactory SessionFactory) *Activities {
 	return &Activities{sessionFactory: sessionFactory}
 }
 
