@@ -17,11 +17,11 @@ $(BUILD)/generate: $(BUILD) $(ALL_TEMPLATES) ## generate code based on templates
 	touch $(BUILD)/generate
 
 $(BUILD)/clients: $(BUILD)/generate
-	go build ./awsclients/...
+	go build ./clients/...
 	touch $(BUILD)/clients
 
-$(BUILD)/awsactivities: $(BUILD)/generate
-	go build -o $@ cmd/awsactivities/main.go
+$(BUILD)/activities: $(BUILD)/generate
+	go build -o $@ cmd/activities/main.go
 
 $(BUILD)/ec2demo/starter: $(BUILD)/generate
 	go build -o $@ cmd/ec2demo/starter/main.go
@@ -36,7 +36,7 @@ $(BUILD)/s3list/worker: $(BUILD)/generate
 
 generate: $(BUILD)/generate ## Regenerate code if templates changed
 
-bins: $(BUILD)/clients $(BUILD)/awsactivities $(BUILD)/ec2demo/worker $(BUILD)/ec2demo/starter $(BUILD)/s3list/worker ## Build binaries
+bins: $(BUILD)/clients $(BUILD)/activities $(BUILD)/ec2demo/worker $(BUILD)/ec2demo/starter $(BUILD)/s3list/worker ## Build binaries
 
 clean: ## Remove .build directory. Doesn't revert generated code changes.
 	rm -rf $(BUILD)

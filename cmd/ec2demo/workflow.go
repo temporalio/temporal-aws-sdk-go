@@ -3,7 +3,7 @@ package ec2demo
 import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ec2"
-	"go.temporal.io/aws-sdk/awsclients/ec2stub"
+	"go.temporal.io/aws-sdk/clients/ec2stub"
 	"go.temporal.io/sdk/temporal"
 	"go.temporal.io/sdk/workflow"
 	"time"
