@@ -6,7 +6,7 @@ package pricingstub
 
 import (
 	"github.com/aws/aws-sdk-go/service/pricing"
-    "go.temporal.io/aws-sdk/awsclients"
+	"go.temporal.io/aws-sdk/awsclients"
 	"go.temporal.io/sdk/workflow"
 )
 
@@ -27,4 +27,3 @@ type Client interface {
 func NewClient() Client {
 	return &stub{}
 }
-

@@ -6,7 +6,7 @@ package sagemakerstub
 
 import (
 	"github.com/aws/aws-sdk-go/service/sagemaker"
-    "go.temporal.io/aws-sdk/awsclients"
+	"go.temporal.io/aws-sdk/awsclients"
 	"go.temporal.io/sdk/workflow"
 )
 
@@ -453,4 +453,3 @@ type Client interface {
 func NewClient() Client {
 	return &stub{}
 }
-

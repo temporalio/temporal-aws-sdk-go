@@ -6,7 +6,7 @@ package emrstub
 
 import (
 	"github.com/aws/aws-sdk-go/service/emr"
-    "go.temporal.io/aws-sdk/awsclients"
+	"go.temporal.io/aws-sdk/awsclients"
 	"go.temporal.io/sdk/workflow"
 )
 
@@ -138,4 +138,3 @@ type Client interface {
 func NewClient() Client {
 	return &stub{}
 }
-

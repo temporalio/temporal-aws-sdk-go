@@ -6,7 +6,7 @@ package medialivestub
 
 import (
 	"github.com/aws/aws-sdk-go/service/medialive"
-    "go.temporal.io/aws-sdk/awsclients"
+	"go.temporal.io/aws-sdk/awsclients"
 	"go.temporal.io/sdk/workflow"
 )
 
@@ -201,4 +201,3 @@ type Client interface {
 func NewClient() Client {
 	return &stub{}
 }
-

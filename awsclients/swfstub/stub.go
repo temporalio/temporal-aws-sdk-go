@@ -6,9 +6,8 @@ package swfstub
 
 import (
 	"github.com/aws/aws-sdk-go/service/swf"
-    "go.temporal.io/aws-sdk/awsclients"
+	"go.temporal.io/aws-sdk/awsclients"
 	"go.temporal.io/sdk/workflow"
-
 )
 
 // ensure that imports are valid even if not used by the generated code
