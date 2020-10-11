@@ -111,7 +111,6 @@ func NewCloudWatchStub() CloudWatchClient {
 	return &CloudWatchStub{}
 }
 
-
 type CloudwatchDeleteAlarmsResult struct {
 	Result workflow.Future
 }

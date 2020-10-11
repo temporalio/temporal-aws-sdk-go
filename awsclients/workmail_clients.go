@@ -158,7 +158,6 @@ func NewWorkMailStub() WorkMailClient {
 	return &WorkMailStub{}
 }
 
-
 type WorkmailAssociateDelegateToResourceResult struct {
 	Result workflow.Future
 }

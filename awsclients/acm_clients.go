@@ -58,7 +58,6 @@ func NewACMStub() ACMClient {
 	return &ACMStub{}
 }
 
-
 type AcmAddTagsToCertificateResult struct {
 	Result workflow.Future
 }

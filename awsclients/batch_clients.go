@@ -74,7 +74,6 @@ func NewBatchStub() BatchClient {
 	return &BatchStub{}
 }
 
-
 type BatchCancelJobResult struct {
 	Result workflow.Future
 }

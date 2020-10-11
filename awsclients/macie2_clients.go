@@ -170,7 +170,6 @@ func NewMacie2Stub() Macie2Client {
 	return &Macie2Stub{}
 }
 
-
 type Macie2AcceptInvitationResult struct {
 	Result workflow.Future
 }

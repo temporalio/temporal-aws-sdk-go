@@ -29,7 +29,6 @@ func NewSSOStub() SSOClient {
 	return &SSOStub{}
 }
 
-
 type SsoGetRoleCredentialsResult struct {
 	Result workflow.Future
 }

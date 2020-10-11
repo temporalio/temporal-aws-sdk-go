@@ -131,7 +131,6 @@ func NewAppMeshStub() AppMeshClient {
 	return &AppMeshStub{}
 }
 
-
 type AppmeshCreateGatewayRouteResult struct {
 	Result workflow.Future
 }

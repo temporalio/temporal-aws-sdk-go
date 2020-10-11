@@ -74,7 +74,6 @@ func NewMediaPackageStub() MediaPackageClient {
 	return &MediaPackageStub{}
 }
 
-
 type MediapackageConfigureLogsResult struct {
 	Result workflow.Future
 }

@@ -101,7 +101,6 @@ func NewNetworkManagerStub() NetworkManagerClient {
 	return &NetworkManagerStub{}
 }
 
-
 type NetworkmanagerAssociateCustomerGatewayResult struct {
 	Result workflow.Future
 }

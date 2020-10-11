@@ -32,7 +32,6 @@ func NewAugmentedAIRuntimeStub() AugmentedAIRuntimeClient {
 	return &AugmentedAIRuntimeStub{}
 }
 
-
 type AugmentedairuntimeDeleteHumanLoopResult struct {
 	Result workflow.Future
 }

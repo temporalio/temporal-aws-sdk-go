@@ -56,7 +56,6 @@ func NewHealthStub() HealthClient {
 	return &HealthStub{}
 }
 
-
 type HealthDescribeAffectedAccountsForOrganizationResult struct {
 	Result workflow.Future
 }

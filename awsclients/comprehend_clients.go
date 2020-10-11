@@ -185,7 +185,6 @@ func NewComprehendStub() ComprehendClient {
 	return &ComprehendStub{}
 }
 
-
 type ComprehendBatchDetectDominantLanguageResult struct {
 	Result workflow.Future
 }

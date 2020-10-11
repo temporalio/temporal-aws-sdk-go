@@ -83,7 +83,6 @@ func NewIVSStub() IVSClient {
 	return &IVSStub{}
 }
 
-
 type IvsBatchGetChannelResult struct {
 	Result workflow.Future
 }

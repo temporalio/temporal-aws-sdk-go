@@ -65,7 +65,6 @@ func NewServiceQuotasStub() ServiceQuotasClient {
 	return &ServiceQuotasStub{}
 }
 
-
 type ServicequotasAssociateServiceQuotaTemplateResult struct {
 	Result workflow.Future
 }

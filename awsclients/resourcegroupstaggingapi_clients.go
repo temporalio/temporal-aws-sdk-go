@@ -41,7 +41,6 @@ func NewResourceGroupsTaggingAPIStub() ResourceGroupsTaggingAPIClient {
 	return &ResourceGroupsTaggingAPIStub{}
 }
 
-
 type ResourcegroupstaggingapiDescribeReportCreationResult struct {
 	Result workflow.Future
 }

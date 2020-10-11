@@ -445,7 +445,6 @@ func NewIAMStub() IAMClient {
 	return &IAMStub{}
 }
 
-
 type IamAddClientIDToOpenIDConnectProviderResult struct {
 	Result workflow.Future
 }

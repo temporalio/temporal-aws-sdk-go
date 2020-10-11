@@ -110,7 +110,6 @@ func NewDataSyncStub() DataSyncClient {
 	return &DataSyncStub{}
 }
 
-
 type DatasyncCancelTaskExecutionResult struct {
 	Result workflow.Future
 }

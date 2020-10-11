@@ -101,7 +101,6 @@ func NewAthenaStub() AthenaClient {
 	return &AthenaStub{}
 }
 
-
 type AthenaBatchGetNamedQueryResult struct {
 	Result workflow.Future
 }

@@ -192,7 +192,6 @@ func NewDatabaseMigrationServiceStub() DatabaseMigrationServiceClient {
 	return &DatabaseMigrationServiceStub{}
 }
 
-
 type DatabasemigrationserviceAddTagsToResourceResult struct {
 	Result workflow.Future
 }

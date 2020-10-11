@@ -227,7 +227,6 @@ func NewSESV2Stub() SESV2Client {
 	return &SESV2Stub{}
 }
 
-
 type Sesv2CreateConfigurationSetResult struct {
 	Result workflow.Future
 }

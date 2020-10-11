@@ -116,7 +116,6 @@ func NewWorkLinkStub() WorkLinkClient {
 	return &WorkLinkStub{}
 }
 
-
 type WorklinkAssociateDomainResult struct {
 	Result workflow.Future
 }

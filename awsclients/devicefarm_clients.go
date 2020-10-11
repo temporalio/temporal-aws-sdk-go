@@ -248,7 +248,6 @@ func NewDeviceFarmStub() DeviceFarmClient {
 	return &DeviceFarmStub{}
 }
 
-
 type DevicefarmCreateDevicePoolResult struct {
 	Result workflow.Future
 }

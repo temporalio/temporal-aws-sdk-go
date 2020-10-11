@@ -227,7 +227,6 @@ func NewCloudFrontStub() CloudFrontClient {
 	return &CloudFrontStub{}
 }
 
-
 type CloudfrontCreateCachePolicyResult struct {
 	Result workflow.Future
 }

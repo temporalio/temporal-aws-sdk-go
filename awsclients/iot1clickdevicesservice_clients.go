@@ -56,7 +56,6 @@ func NewIoT1ClickDevicesServiceStub() IoT1ClickDevicesServiceClient {
 	return &IoT1ClickDevicesServiceStub{}
 }
 
-
 type Iot1clickdevicesserviceClaimDevicesByClaimCodeResult struct {
 	Result workflow.Future
 }

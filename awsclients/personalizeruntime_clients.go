@@ -23,7 +23,6 @@ func NewPersonalizeRuntimeStub() PersonalizeRuntimeClient {
 	return &PersonalizeRuntimeStub{}
 }
 
-
 type PersonalizeruntimeGetPersonalizedRankingResult struct {
 	Result workflow.Future
 }

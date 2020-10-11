@@ -92,7 +92,6 @@ func NewGlobalAcceleratorStub() GlobalAcceleratorClient {
 	return &GlobalAcceleratorStub{}
 }
 
-
 type GlobalacceleratorAdvertiseByoipCidrResult struct {
 	Result workflow.Future
 }

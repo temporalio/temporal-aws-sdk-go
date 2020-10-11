@@ -314,7 +314,6 @@ func NewQuickSightStub() QuickSightClient {
 	return &QuickSightStub{}
 }
 
-
 type QuicksightCancelIngestionResult struct {
 	Result workflow.Future
 }

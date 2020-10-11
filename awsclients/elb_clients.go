@@ -110,7 +110,6 @@ func NewELBStub() ELBClient {
 	return &ELBStub{}
 }
 
-
 type ElbAddTagsResult struct {
 	Result workflow.Future
 }

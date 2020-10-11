@@ -112,7 +112,6 @@ func NewSchemasStub() SchemasClient {
 	return &SchemasStub{}
 }
 
-
 type SchemasCreateDiscovererResult struct {
 	Result workflow.Future
 }

@@ -260,7 +260,6 @@ func NewStorageGatewayStub() StorageGatewayClient {
 	return &StorageGatewayStub{}
 }
 
-
 type StoragegatewayActivateGatewayResult struct {
 	Result workflow.Future
 }

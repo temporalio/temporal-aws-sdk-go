@@ -146,7 +146,6 @@ func NewPersonalizeStub() PersonalizeClient {
 	return &PersonalizeStub{}
 }
 
-
 type PersonalizeCreateBatchInferenceJobResult struct {
 	Result workflow.Future
 }

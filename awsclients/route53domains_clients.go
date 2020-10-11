@@ -101,7 +101,6 @@ func NewRoute53DomainsStub() Route53DomainsClient {
 	return &Route53DomainsStub{}
 }
 
-
 type Route53domainsAcceptDomainTransferFromAnotherAwsAccountResult struct {
 	Result workflow.Future
 }

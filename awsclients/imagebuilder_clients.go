@@ -143,7 +143,6 @@ func NewImagebuilderStub() ImagebuilderClient {
 	return &ImagebuilderStub{}
 }
 
-
 type ImagebuilderCancelImageCreationResult struct {
 	Result workflow.Future
 }

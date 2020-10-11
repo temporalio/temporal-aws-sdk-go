@@ -77,7 +77,6 @@ func NewManagedBlockchainStub() ManagedBlockchainClient {
 	return &ManagedBlockchainStub{}
 }
 
-
 type ManagedblockchainCreateMemberResult struct {
 	Result workflow.Future
 }

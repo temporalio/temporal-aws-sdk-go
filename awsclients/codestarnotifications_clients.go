@@ -56,7 +56,6 @@ func NewCodeStarNotificationsStub() CodeStarNotificationsClient {
 	return &CodeStarNotificationsStub{}
 }
 
-
 type CodestarnotificationsCreateNotificationRuleResult struct {
 	Result workflow.Future
 }

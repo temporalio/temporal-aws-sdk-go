@@ -232,7 +232,6 @@ func NewSESStub() SESClient {
 	return &SESStub{}
 }
 
-
 type SesCloneReceiptRuleSetResult struct {
 	Result workflow.Future
 }

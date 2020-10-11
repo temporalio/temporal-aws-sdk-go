@@ -76,7 +76,6 @@ func NewOpsWorksCMStub() OpsWorksCMClient {
 	return &OpsWorksCMStub{}
 }
 
-
 type OpsworkscmAssociateNodeResult struct {
 	Result workflow.Future
 }

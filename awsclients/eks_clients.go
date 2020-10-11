@@ -88,7 +88,6 @@ func NewEKSStub() EKSClient {
 	return &EKSStub{}
 }
 
-
 type EksCreateClusterResult struct {
 	Result workflow.Future
 }

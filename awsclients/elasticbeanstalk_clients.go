@@ -164,7 +164,6 @@ func NewElasticBeanstalkStub() ElasticBeanstalkClient {
 	return &ElasticBeanstalkStub{}
 }
 
-
 type ElasticbeanstalkAbortEnvironmentUpdateResult struct {
 	Result workflow.Future
 }

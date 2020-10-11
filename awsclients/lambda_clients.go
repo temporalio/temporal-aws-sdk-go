@@ -167,7 +167,6 @@ func NewLambdaStub() LambdaClient {
 	return &LambdaStub{}
 }
 
-
 type LambdaAddLayerVersionPermissionResult struct {
 	Result workflow.Future
 }

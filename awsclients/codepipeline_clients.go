@@ -128,7 +128,6 @@ func NewCodePipelineStub() CodePipelineClient {
 	return &CodePipelineStub{}
 }
 
-
 type CodepipelineAcknowledgeJobResult struct {
 	Result workflow.Future
 }

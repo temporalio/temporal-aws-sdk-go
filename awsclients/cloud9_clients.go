@@ -56,7 +56,6 @@ func NewCloud9Stub() Cloud9Client {
 	return &Cloud9Stub{}
 }
 
-
 type Cloud9CreateEnvironmentEC2Result struct {
 	Result workflow.Future
 }

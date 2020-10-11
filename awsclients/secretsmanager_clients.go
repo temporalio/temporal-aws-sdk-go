@@ -74,7 +74,6 @@ func NewSecretsManagerStub() SecretsManagerClient {
 	return &SecretsManagerStub{}
 }
 
-
 type SecretsmanagerCancelRotateSecretResult struct {
 	Result workflow.Future
 }

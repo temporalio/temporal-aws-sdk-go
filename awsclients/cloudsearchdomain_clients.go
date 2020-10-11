@@ -26,7 +26,6 @@ func NewCloudSearchDomainStub() CloudSearchDomainClient {
 	return &CloudSearchDomainStub{}
 }
 
-
 type CloudsearchdomainSearchResult struct {
 	Result workflow.Future
 }

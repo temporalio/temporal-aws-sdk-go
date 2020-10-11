@@ -189,7 +189,6 @@ func NewMediaLiveStub() MediaLiveClient {
 	return &MediaLiveStub{}
 }
 
-
 type MedialiveBatchDeleteResult struct {
 	Result workflow.Future
 }

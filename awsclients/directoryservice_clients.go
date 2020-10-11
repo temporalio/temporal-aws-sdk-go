@@ -188,7 +188,6 @@ func NewDirectoryServiceStub() DirectoryServiceClient {
 	return &DirectoryServiceStub{}
 }
 
-
 type DirectoryserviceAcceptSharedDirectoryResult struct {
 	Result workflow.Future
 }

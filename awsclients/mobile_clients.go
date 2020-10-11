@@ -44,7 +44,6 @@ func NewMobileStub() MobileClient {
 	return &MobileStub{}
 }
 
-
 type MobileCreateProjectResult struct {
 	Result workflow.Future
 }

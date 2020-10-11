@@ -198,7 +198,6 @@ func NewNeptuneStub() NeptuneClient {
 	return &NeptuneStub{}
 }
 
-
 type NeptuneAddRoleToDBClusterResult struct {
 	Result workflow.Future
 }

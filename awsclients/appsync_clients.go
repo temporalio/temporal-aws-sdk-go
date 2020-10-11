@@ -140,7 +140,6 @@ func NewAppSyncStub() AppSyncClient {
 	return &AppSyncStub{}
 }
 
-
 type AppsyncCreateApiCacheResult struct {
 	Result workflow.Future
 }

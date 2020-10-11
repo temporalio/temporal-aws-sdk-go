@@ -20,7 +20,6 @@ func NewEC2InstanceConnectStub() EC2InstanceConnectClient {
 	return &EC2InstanceConnectStub{}
 }
 
-
 type Ec2instanceconnectSendSSHPublicKeyResult struct {
 	Result workflow.Future
 }

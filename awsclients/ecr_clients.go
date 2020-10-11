@@ -108,7 +108,6 @@ func NewECRStub() ECRClient {
 	return &ECRStub{}
 }
 
-
 type EcrBatchCheckLayerAvailabilityResult struct {
 	Result workflow.Future
 }

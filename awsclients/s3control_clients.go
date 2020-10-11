@@ -113,7 +113,6 @@ func NewS3ControlStub() S3ControlClient {
 	return &S3ControlStub{}
 }
 
-
 type S3controlCreateAccessPointResult struct {
 	Result workflow.Future
 }

@@ -160,7 +160,6 @@ func NewCodeDeployStub() CodeDeployClient {
 	return &CodeDeployStub{}
 }
 
-
 type CodedeployAddTagsToOnPremisesInstancesResult struct {
 	Result workflow.Future
 }

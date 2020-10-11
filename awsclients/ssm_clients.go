@@ -385,7 +385,6 @@ func NewSSMStub() SSMClient {
 	return &SSMStub{}
 }
 
-
 type SsmAddTagsToResourceResult struct {
 	Result workflow.Future
 }

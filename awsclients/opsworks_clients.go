@@ -251,7 +251,6 @@ func NewOpsWorksStub() OpsWorksClient {
 	return &OpsWorksStub{}
 }
 
-
 type OpsworksAssignInstanceResult struct {
 	Result workflow.Future
 }

@@ -215,7 +215,6 @@ func NewCloudDirectoryStub() CloudDirectoryClient {
 	return &CloudDirectoryStub{}
 }
 
-
 type ClouddirectoryAddFacetToObjectResult struct {
 	Result workflow.Future
 }

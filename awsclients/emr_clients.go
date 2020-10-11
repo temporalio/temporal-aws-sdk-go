@@ -134,7 +134,6 @@ func NewEMRStub() EMRClient {
 	return &EMRStub{}
 }
 
-
 type EmrAddInstanceFleetResult struct {
 	Result workflow.Future
 }

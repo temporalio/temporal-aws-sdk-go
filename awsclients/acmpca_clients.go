@@ -92,7 +92,6 @@ func NewACMPCAStub() ACMPCAClient {
 	return &ACMPCAStub{}
 }
 
-
 type AcmpcaCreateCertificateAuthorityResult struct {
 	Result workflow.Future
 }

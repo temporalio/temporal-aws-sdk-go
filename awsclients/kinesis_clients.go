@@ -105,7 +105,6 @@ func NewKinesisStub() KinesisClient {
 	return &KinesisStub{}
 }
 
-
 type KinesisAddTagsToStreamResult struct {
 	Result workflow.Future
 }

@@ -35,7 +35,6 @@ func NewTextractStub() TextractClient {
 	return &TextractStub{}
 }
 
-
 type TextractAnalyzeDocumentResult struct {
 	Result workflow.Future
 }

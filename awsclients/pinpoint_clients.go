@@ -353,7 +353,6 @@ func NewPinpointStub() PinpointClient {
 	return &PinpointStub{}
 }
 
-
 type PinpointCreateAppResult struct {
 	Result workflow.Future
 }

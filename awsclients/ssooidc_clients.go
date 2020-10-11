@@ -26,7 +26,6 @@ func NewSSOOIDCStub() SSOOIDCClient {
 	return &SSOOIDCStub{}
 }
 
-
 type SsooidcCreateTokenResult struct {
 	Result workflow.Future
 }

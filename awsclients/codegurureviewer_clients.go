@@ -50,7 +50,6 @@ func NewCodeGuruReviewerStub() CodeGuruReviewerClient {
 	return &CodeGuruReviewerStub{}
 }
 
-
 type CodegurureviewerAssociateRepositoryResult struct {
 	Result workflow.Future
 }

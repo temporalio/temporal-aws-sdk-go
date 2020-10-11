@@ -36,7 +36,7 @@ type {{ $name }}Stub struct{}
 func New{{ $name }}Stub() {{ $name }}Client {
 	return &{{ $name }}Stub{}
 }
-{{ range $i, $method := .Methods }}
+{{- range $i, $method := .Methods }}
 {{- if not (IsNil $method.Output) }}
 {{- if not (IsDuplicate "Output" (print $method.Output.Package "." $method.Name)) }}
 {{ $prefix := CapitalizeFirstLetter $method.Output.Package }}

@@ -20,7 +20,6 @@ func NewQLDBSessionStub() QLDBSessionClient {
 	return &QLDBSessionStub{}
 }
 
-
 type QldbsessionSendCommandResult struct {
 	Result workflow.Future
 }

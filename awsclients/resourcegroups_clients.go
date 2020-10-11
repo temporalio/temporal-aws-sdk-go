@@ -62,7 +62,6 @@ func NewResourceGroupsStub() ResourceGroupsClient {
 	return &ResourceGroupsStub{}
 }
 
-
 type ResourcegroupsCreateGroupResult struct {
 	Result workflow.Future
 }

@@ -233,7 +233,6 @@ func NewApiGatewayV2Stub() ApiGatewayV2Client {
 	return &ApiGatewayV2Stub{}
 }
 
-
 type Apigatewayv2CreateApiResult struct {
 	Result workflow.Future
 }

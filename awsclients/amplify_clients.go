@@ -128,7 +128,6 @@ func NewAmplifyStub() AmplifyClient {
 	return &AmplifyStub{}
 }
 
-
 type AmplifyCreateAppResult struct {
 	Result workflow.Future
 }

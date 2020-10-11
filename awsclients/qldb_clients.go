@@ -74,7 +74,6 @@ func NewQLDBStub() QLDBClient {
 	return &QLDBStub{}
 }
 
-
 type QldbCancelJournalKinesisStreamResult struct {
 	Result workflow.Future
 }

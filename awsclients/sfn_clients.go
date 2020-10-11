@@ -83,7 +83,6 @@ func NewSFNStub() SFNClient {
 	return &SFNStub{}
 }
 
-
 type SfnCreateActivityResult struct {
 	Result workflow.Future
 }

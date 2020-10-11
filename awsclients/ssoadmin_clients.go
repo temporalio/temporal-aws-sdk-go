@@ -98,7 +98,6 @@ func NewSSOAdminStub() SSOAdminClient {
 	return &SSOAdminStub{}
 }
 
-
 type SsoadminAttachManagedPolicyToPermissionSetResult struct {
 	Result workflow.Future
 }

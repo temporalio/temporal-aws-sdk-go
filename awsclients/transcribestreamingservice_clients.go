@@ -20,7 +20,6 @@ func NewTranscribeStreamingServiceStub() TranscribeStreamingServiceClient {
 	return &TranscribeStreamingServiceStub{}
 }
 
-
 type TranscribestreamingserviceStartStreamTranscriptionResult struct {
 	Result workflow.Future
 }

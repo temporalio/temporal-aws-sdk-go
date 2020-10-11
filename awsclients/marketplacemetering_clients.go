@@ -29,7 +29,6 @@ func NewMarketplaceMeteringStub() MarketplaceMeteringClient {
 	return &MarketplaceMeteringStub{}
 }
 
-
 type MarketplacemeteringBatchMeterUsageResult struct {
 	Result workflow.Future
 }

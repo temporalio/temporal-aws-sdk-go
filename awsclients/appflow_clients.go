@@ -71,7 +71,6 @@ func NewAppflowStub() AppflowClient {
 	return &AppflowStub{}
 }
 
-
 type AppflowCreateConnectorProfileResult struct {
 	Result workflow.Future
 }

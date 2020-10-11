@@ -220,7 +220,6 @@ func NewElastiCacheStub() ElastiCacheClient {
 	return &ElastiCacheStub{}
 }
 
-
 type ElasticacheAddTagsToResourceResult struct {
 	Result workflow.Future
 }

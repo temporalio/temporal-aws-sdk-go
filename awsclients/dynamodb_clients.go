@@ -144,7 +144,6 @@ func NewDynamoDBStub() DynamoDBClient {
 	return &DynamoDBStub{}
 }
 
-
 type DynamodbBatchGetItemResult struct {
 	Result workflow.Future
 }

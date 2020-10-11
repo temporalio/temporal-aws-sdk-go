@@ -95,7 +95,6 @@ func NewFMSStub() FMSClient {
 	return &FMSStub{}
 }
 
-
 type FmsAssociateAdminAccountResult struct {
 	Result workflow.Future
 }

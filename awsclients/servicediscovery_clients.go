@@ -86,7 +86,6 @@ func NewServiceDiscoveryStub() ServiceDiscoveryClient {
 	return &ServiceDiscoveryStub{}
 }
 
-
 type ServicediscoveryCreateHttpNamespaceResult struct {
 	Result workflow.Future
 }

@@ -261,7 +261,6 @@ func NewWAFRegionalStub() WAFRegionalClient {
 	return &WAFRegionalStub{}
 }
 
-
 type WafregionalAssociateWebACLResult struct {
 	Result workflow.Future
 }

@@ -98,7 +98,6 @@ func NewTranscribeServiceStub() TranscribeServiceClient {
 	return &TranscribeServiceStub{}
 }
 
-
 type TranscribeserviceCreateLanguageModelResult struct {
 	Result workflow.Future
 }

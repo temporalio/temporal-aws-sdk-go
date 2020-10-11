@@ -194,7 +194,6 @@ func NewAutoScalingStub() AutoScalingClient {
 	return &AutoScalingStub{}
 }
 
-
 type AutoscalingAttachInstancesResult struct {
 	Result workflow.Future
 }

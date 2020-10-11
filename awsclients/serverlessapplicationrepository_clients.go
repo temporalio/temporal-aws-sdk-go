@@ -59,7 +59,6 @@ func NewServerlessApplicationRepositoryStub() ServerlessApplicationRepositoryCli
 	return &ServerlessApplicationRepositoryStub{}
 }
 
-
 type ServerlessapplicationrepositoryCreateApplicationResult struct {
 	Result workflow.Future
 }

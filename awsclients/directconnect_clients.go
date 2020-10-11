@@ -185,7 +185,6 @@ func NewDirectConnectStub() DirectConnectClient {
 	return &DirectConnectStub{}
 }
 
-
 type DirectconnectAcceptDirectConnectGatewayAssociationProposalResult struct {
 	Result workflow.Future
 }

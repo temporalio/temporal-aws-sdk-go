@@ -32,7 +32,6 @@ func NewMediaStoreDataStub() MediaStoreDataClient {
 	return &MediaStoreDataStub{}
 }
 
-
 type MediastoredataDeleteObjectResult struct {
 	Result workflow.Future
 }

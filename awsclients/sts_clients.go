@@ -41,7 +41,6 @@ func NewSTSStub() STSClient {
 	return &STSStub{}
 }
 
-
 type StsAssumeRoleResult struct {
 	Result workflow.Future
 }

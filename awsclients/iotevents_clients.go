@@ -65,7 +65,6 @@ func NewIoTEventsStub() IoTEventsClient {
 	return &IoTEventsStub{}
 }
 
-
 type IoteventsCreateDetectorModelResult struct {
 	Result workflow.Future
 }

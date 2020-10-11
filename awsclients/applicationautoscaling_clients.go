@@ -47,7 +47,6 @@ func NewApplicationAutoScalingStub() ApplicationAutoScalingClient {
 	return &ApplicationAutoScalingStub{}
 }
 
-
 type ApplicationautoscalingDeleteScalingPolicyResult struct {
 	Result workflow.Future
 }

@@ -59,7 +59,6 @@ func NewBudgetsStub() BudgetsClient {
 	return &BudgetsStub{}
 }
 
-
 type BudgetsCreateBudgetResult struct {
 	Result workflow.Future
 }

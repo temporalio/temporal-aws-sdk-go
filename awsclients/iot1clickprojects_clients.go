@@ -65,7 +65,6 @@ func NewIoT1ClickProjectsStub() IoT1ClickProjectsClient {
 	return &IoT1ClickProjectsStub{}
 }
 
-
 type Iot1clickprojectsAssociateDeviceWithPlacementResult struct {
 	Result workflow.Future
 }

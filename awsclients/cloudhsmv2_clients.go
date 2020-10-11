@@ -56,7 +56,6 @@ func NewCloudHSMV2Stub() CloudHSMV2Client {
 	return &CloudHSMV2Stub{}
 }
 
-
 type Cloudhsmv2CopyBackupToRegionResult struct {
 	Result workflow.Future
 }

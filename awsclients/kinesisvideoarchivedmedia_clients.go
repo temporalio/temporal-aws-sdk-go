@@ -32,7 +32,6 @@ func NewKinesisVideoArchivedMediaStub() KinesisVideoArchivedMediaClient {
 	return &KinesisVideoArchivedMediaStub{}
 }
 
-
 type KinesisvideoarchivedmediaGetClipResult struct {
 	Result workflow.Future
 }

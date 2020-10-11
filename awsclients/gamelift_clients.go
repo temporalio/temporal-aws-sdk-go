@@ -287,7 +287,6 @@ func NewGameLiftStub() GameLiftClient {
 	return &GameLiftStub{}
 }
 
-
 type GameliftAcceptMatchResult struct {
 	Result workflow.Future
 }

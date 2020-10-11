@@ -35,7 +35,6 @@ func NewBraketStub() BraketClient {
 	return &BraketStub{}
 }
 
-
 type BraketCancelQuantumTaskResult struct {
 	Result workflow.Future
 }

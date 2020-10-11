@@ -55,7 +55,6 @@ func NewSignerStub() SignerClient {
 	return &SignerStub{}
 }
 
-
 type SignerCancelSigningProfileResult struct {
 	Result workflow.Future
 }

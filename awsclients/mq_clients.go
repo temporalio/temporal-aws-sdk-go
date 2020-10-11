@@ -83,7 +83,6 @@ func NewMQStub() MQClient {
 	return &MQStub{}
 }
 
-
 type MqCreateBrokerResult struct {
 	Result workflow.Future
 }

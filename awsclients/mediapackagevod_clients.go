@@ -65,7 +65,6 @@ func NewMediaPackageVodStub() MediaPackageVodClient {
 	return &MediaPackageVodStub{}
 }
 
-
 type MediapackagevodCreateAssetResult struct {
 	Result workflow.Future
 }

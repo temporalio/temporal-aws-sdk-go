@@ -68,7 +68,6 @@ func NewMigrationHubStub() MigrationHubClient {
 	return &MigrationHubStub{}
 }
 
-
 type MigrationhubAssociateCreatedArtifactResult struct {
 	Result workflow.Future
 }

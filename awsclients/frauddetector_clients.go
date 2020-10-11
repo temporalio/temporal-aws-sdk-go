@@ -152,7 +152,6 @@ func NewFraudDetectorStub() FraudDetectorClient {
 	return &FraudDetectorStub{}
 }
 
-
 type FrauddetectorBatchCreateVariableResult struct {
 	Result workflow.Future
 }

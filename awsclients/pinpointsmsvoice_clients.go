@@ -41,7 +41,6 @@ func NewPinpointSMSVoiceStub() PinpointSMSVoiceClient {
 	return &PinpointSMSVoiceStub{}
 }
 
-
 type PinpointsmsvoiceCreateConfigurationSetResult struct {
 	Result workflow.Future
 }

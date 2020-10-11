@@ -317,7 +317,6 @@ func NewCognitoIdentityProviderStub() CognitoIdentityProviderClient {
 	return &CognitoIdentityProviderStub{}
 }
 
-
 type CognitoidentityproviderAddCustomAttributesResult struct {
 	Result workflow.Future
 }

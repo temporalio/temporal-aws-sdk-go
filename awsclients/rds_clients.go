@@ -419,7 +419,6 @@ func NewRDSStub() RDSClient {
 	return &RDSStub{}
 }
 
-
 type RdsAddRoleToDBClusterResult struct {
 	Result workflow.Future
 }

@@ -23,7 +23,6 @@ func NewPIStub() PIClient {
 	return &PIStub{}
 }
 
-
 type PiDescribeDimensionKeysResult struct {
 	Result workflow.Future
 }

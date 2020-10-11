@@ -104,7 +104,6 @@ func NewKafkaStub() KafkaClient {
 	return &KafkaStub{}
 }
 
-
 type KafkaBatchAssociateScramSecretResult struct {
 	Result workflow.Future
 }

@@ -146,7 +146,6 @@ func NewCodeBuildStub() CodeBuildClient {
 	return &CodeBuildStub{}
 }
 
-
 type CodebuildBatchDeleteBuildsResult struct {
 	Result workflow.Future
 }

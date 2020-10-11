@@ -32,7 +32,6 @@ func NewConnectParticipantStub() ConnectParticipantClient {
 	return &ConnectParticipantStub{}
 }
 
-
 type ConnectparticipantCreateParticipantConnectionResult struct {
 	Result workflow.Future
 }

@@ -143,7 +143,6 @@ func NewPinpointEmailStub() PinpointEmailClient {
 	return &PinpointEmailStub{}
 }
 
-
 type PinpointemailCreateConfigurationSetResult struct {
 	Result workflow.Future
 }

@@ -172,7 +172,6 @@ func NewECSStub() ECSClient {
 	return &ECSStub{}
 }
 
-
 type EcsCreateCapacityProviderResult struct {
 	Result workflow.Future
 }

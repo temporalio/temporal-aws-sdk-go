@@ -194,7 +194,6 @@ func NewIoTSiteWiseStub() IoTSiteWiseClient {
 	return &IoTSiteWiseStub{}
 }
 
-
 type IotsitewiseAssociateAssetsResult struct {
 	Result workflow.Future
 }

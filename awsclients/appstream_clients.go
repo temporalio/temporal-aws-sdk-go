@@ -162,7 +162,6 @@ func NewAppStreamStub() AppStreamClient {
 	return &AppStreamStub{}
 }
 
-
 type AppstreamAssociateFleetResult struct {
 	Result workflow.Future
 }

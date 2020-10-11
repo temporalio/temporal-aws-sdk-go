@@ -198,7 +198,6 @@ func NewCloudFormationStub() CloudFormationClient {
 	return &CloudFormationStub{}
 }
 
-
 type CloudformationCancelUpdateStackResult struct {
 	Result workflow.Future
 }

@@ -129,7 +129,6 @@ func NewELBV2Stub() ELBV2Client {
 	return &ELBV2Stub{}
 }
 
-
 type Elbv2AddListenerCertificatesResult struct {
 	Result workflow.Future
 }

@@ -422,7 +422,6 @@ func NewGlueStub() GlueClient {
 	return &GlueStub{}
 }
 
-
 type GlueBatchCreatePartitionResult struct {
 	Result workflow.Future
 }

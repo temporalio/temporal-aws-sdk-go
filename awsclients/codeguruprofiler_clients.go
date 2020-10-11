@@ -86,7 +86,6 @@ func NewCodeGuruProfilerStub() CodeGuruProfilerClient {
 	return &CodeGuruProfilerStub{}
 }
 
-
 type CodeguruprofilerAddNotificationChannelsResult struct {
 	Result workflow.Future
 }

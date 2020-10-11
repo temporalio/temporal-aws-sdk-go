@@ -1338,7 +1338,6 @@ func NewEC2Stub() EC2Client {
 	return &EC2Stub{}
 }
 
-
 type Ec2AcceptReservedInstancesExchangeQuoteResult struct {
 	Result workflow.Future
 }

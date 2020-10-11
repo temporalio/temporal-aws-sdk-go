@@ -35,7 +35,6 @@ func NewAutoScalingPlansStub() AutoScalingPlansClient {
 	return &AutoScalingPlansStub{}
 }
 
-
 type AutoscalingplansCreateScalingPlanResult struct {
 	Result workflow.Future
 }

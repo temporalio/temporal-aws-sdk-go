@@ -236,7 +236,6 @@ func NewCodeCommitStub() CodeCommitClient {
 	return &CodeCommitStub{}
 }
 
-
 type CodecommitAssociateApprovalRuleTemplateWithRepositoryResult struct {
 	Result workflow.Future
 }

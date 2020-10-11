@@ -23,7 +23,6 @@ func NewKinesisVideoSignalingChannelsStub() KinesisVideoSignalingChannelsClient 
 	return &KinesisVideoSignalingChannelsStub{}
 }
 
-
 type KinesisvideosignalingchannelsGetIceServerConfigResult struct {
 	Result workflow.Future
 }

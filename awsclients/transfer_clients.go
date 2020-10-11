@@ -77,7 +77,6 @@ func NewTransferStub() TransferClient {
 	return &TransferStub{}
 }
 
-
 type TransferCreateServerResult struct {
 	Result workflow.Future
 }

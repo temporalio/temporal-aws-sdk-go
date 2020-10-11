@@ -301,7 +301,6 @@ func NewRedshiftStub() RedshiftClient {
 	return &RedshiftStub{}
 }
 
-
 type RedshiftAcceptReservedNodeExchangeResult struct {
 	Result workflow.Future
 }

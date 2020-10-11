@@ -147,7 +147,6 @@ func NewDocDBStub() DocDBClient {
 	return &DocDBStub{}
 }
 
-
 type DocdbAddTagsToResourceResult struct {
 	Result workflow.Future
 }

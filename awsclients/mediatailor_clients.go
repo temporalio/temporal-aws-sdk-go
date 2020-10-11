@@ -38,7 +38,6 @@ func NewMediaTailorStub() MediaTailorClient {
 	return &MediaTailorStub{}
 }
 
-
 type MediatailorDeletePlaybackConfigurationResult struct {
 	Result workflow.Future
 }

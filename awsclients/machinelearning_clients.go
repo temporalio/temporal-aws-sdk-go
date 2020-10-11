@@ -109,7 +109,6 @@ func NewMachineLearningStub() MachineLearningClient {
 	return &MachineLearningStub{}
 }
 
-
 type MachinelearningAddTagsResult struct {
 	Result workflow.Future
 }

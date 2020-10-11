@@ -20,7 +20,6 @@ func NewKinesisVideoMediaStub() KinesisVideoMediaClient {
 	return &KinesisVideoMediaStub{}
 }
 
-
 type KinesisvideomediaGetMediaResult struct {
 	Result workflow.Future
 }

@@ -29,7 +29,6 @@ func NewIoTEventsDataStub() IoTEventsDataClient {
 	return &IoTEventsDataStub{}
 }
 
-
 type IoteventsdataBatchPutMessageResult struct {
 	Result workflow.Future
 }

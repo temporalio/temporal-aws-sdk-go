@@ -23,7 +23,6 @@ func NewMarketplaceCommerceAnalyticsStub() MarketplaceCommerceAnalyticsClient {
 	return &MarketplaceCommerceAnalyticsStub{}
 }
 
-
 type MarketplacecommerceanalyticsGenerateDataSetResult struct {
 	Result workflow.Future
 }

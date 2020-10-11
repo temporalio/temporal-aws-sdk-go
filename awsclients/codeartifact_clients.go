@@ -110,7 +110,6 @@ func NewCodeArtifactStub() CodeArtifactClient {
 	return &CodeArtifactStub{}
 }
 
-
 type CodeartifactAssociateExternalConnectionResult struct {
 	Result workflow.Future
 }

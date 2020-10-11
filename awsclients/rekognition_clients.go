@@ -162,7 +162,6 @@ func NewRekognitionStub() RekognitionClient {
 	return &RekognitionStub{}
 }
 
-
 type RekognitionCompareFacesResult struct {
 	Result workflow.Future
 }

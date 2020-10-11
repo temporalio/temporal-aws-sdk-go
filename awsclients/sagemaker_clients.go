@@ -444,7 +444,6 @@ func NewSageMakerStub() SageMakerClient {
 	return &SageMakerStub{}
 }
 
-
 type SagemakerAddTagsResult struct {
 	Result workflow.Future
 }

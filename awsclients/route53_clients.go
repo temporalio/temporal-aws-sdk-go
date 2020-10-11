@@ -190,7 +190,6 @@ func NewRoute53Stub() Route53Client {
 	return &Route53Stub{}
 }
 
-
 type Route53AssociateVPCWithHostedZoneResult struct {
 	Result workflow.Future
 }

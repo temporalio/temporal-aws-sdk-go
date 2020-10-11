@@ -71,7 +71,6 @@ func NewCodeStarStub() CodeStarClient {
 	return &CodeStarStub{}
 }
 
-
 type CodestarAssociateTeamMemberResult struct {
 	Result workflow.Future
 }

@@ -188,7 +188,6 @@ func NewRoboMakerStub() RoboMakerClient {
 	return &RoboMakerStub{}
 }
 
-
 type RobomakerBatchDeleteWorldsResult struct {
 	Result workflow.Future
 }

@@ -20,7 +20,6 @@ func NewForecastQueryServiceStub() ForecastQueryServiceClient {
 	return &ForecastQueryServiceStub{}
 }
 
-
 type ForecastqueryserviceQueryForecastResult struct {
 	Result workflow.Future
 }

@@ -128,7 +128,6 @@ func NewMTurkStub() MTurkClient {
 	return &MTurkStub{}
 }
 
-
 type MturkApproveAssignmentResult struct {
 	Result workflow.Future
 }

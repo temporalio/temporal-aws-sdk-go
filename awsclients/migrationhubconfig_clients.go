@@ -26,7 +26,6 @@ func NewMigrationHubConfigStub() MigrationHubConfigClient {
 	return &MigrationHubConfigStub{}
 }
 
-
 type MigrationhubconfigCreateHomeRegionControlResult struct {
 	Result workflow.Future
 }

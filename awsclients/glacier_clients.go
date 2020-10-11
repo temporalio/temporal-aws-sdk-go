@@ -120,7 +120,6 @@ func NewGlacierStub() GlacierClient {
 	return &GlacierStub{}
 }
 
-
 type GlacierAbortMultipartUploadResult struct {
 	Result workflow.Future
 }

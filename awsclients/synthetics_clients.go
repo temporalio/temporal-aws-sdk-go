@@ -56,7 +56,6 @@ func NewSyntheticsStub() SyntheticsClient {
 	return &SyntheticsStub{}
 }
 
-
 type SyntheticsCreateCanaryResult struct {
 	Result workflow.Future
 }

@@ -71,7 +71,6 @@ func NewCloudTrailStub() CloudTrailClient {
 	return &CloudTrailStub{}
 }
 
-
 type CloudtrailAddTagsResult struct {
 	Result workflow.Future
 }

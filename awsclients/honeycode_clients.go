@@ -23,7 +23,6 @@ func NewHoneycodeStub() HoneycodeClient {
 	return &HoneycodeStub{}
 }
 
-
 type HoneycodeGetScreenDataResult struct {
 	Result workflow.Future
 }

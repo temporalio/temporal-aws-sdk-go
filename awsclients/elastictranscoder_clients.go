@@ -70,7 +70,6 @@ func NewElasticTranscoderStub() ElasticTranscoderClient {
 	return &ElasticTranscoderStub{}
 }
 
-
 type ElastictranscoderCancelJobResult struct {
 	Result workflow.Future
 }

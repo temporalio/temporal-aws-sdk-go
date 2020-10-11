@@ -116,7 +116,6 @@ func NewSNSStub() SNSClient {
 	return &SNSStub{}
 }
 
-
 type SnsAddPermissionResult struct {
 	Result workflow.Future
 }

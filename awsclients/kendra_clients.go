@@ -89,7 +89,6 @@ func NewKendraStub() KendraClient {
 	return &KendraStub{}
 }
 
-
 type KendraBatchDeleteDocumentResult struct {
 	Result workflow.Future
 }

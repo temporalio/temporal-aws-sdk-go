@@ -56,7 +56,6 @@ func NewLakeFormationStub() LakeFormationClient {
 	return &LakeFormationStub{}
 }
 
-
 type LakeformationBatchGrantPermissionsResult struct {
 	Result workflow.Future
 }

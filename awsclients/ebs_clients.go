@@ -35,7 +35,6 @@ func NewEBSStub() EBSClient {
 	return &EBSStub{}
 }
 
-
 type EbsCompleteSnapshotResult struct {
 	Result workflow.Future
 }

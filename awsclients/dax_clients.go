@@ -80,7 +80,6 @@ func NewDAXStub() DAXClient {
 	return &DAXStub{}
 }
 
-
 type DaxCreateClusterResult struct {
 	Result workflow.Future
 }

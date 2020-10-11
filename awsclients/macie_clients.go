@@ -38,7 +38,6 @@ func NewMacieStub() MacieClient {
 	return &MacieStub{}
 }
 
-
 type MacieAssociateMemberAccountResult struct {
 	Result workflow.Future
 }

@@ -298,7 +298,6 @@ func NewS3Stub() S3Client {
 	return &S3Stub{}
 }
 
-
 type S3AbortMultipartUploadResult struct {
 	Result workflow.Future
 }
