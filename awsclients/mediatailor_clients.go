@@ -11,25 +11,25 @@ import (
 
 type MediaTailorClient interface {
 	DeletePlaybackConfiguration(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) (*mediatailor.DeletePlaybackConfigurationOutput, error)
-	DeletePlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) *MediatailorDeletePlaybackConfigurationFuture
+	DeletePlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) *MediaTailorDeletePlaybackConfigurationFuture
 
 	GetPlaybackConfiguration(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) (*mediatailor.GetPlaybackConfigurationOutput, error)
-	GetPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) *MediatailorGetPlaybackConfigurationFuture
+	GetPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) *MediaTailorGetPlaybackConfigurationFuture
 
 	ListPlaybackConfigurations(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) (*mediatailor.ListPlaybackConfigurationsOutput, error)
-	ListPlaybackConfigurationsAsync(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) *MediatailorListPlaybackConfigurationsFuture
+	ListPlaybackConfigurationsAsync(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) *MediaTailorListPlaybackConfigurationsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) (*mediatailor.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) *MediatailorListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) *MediaTailorListTagsForResourceFuture
 
 	PutPlaybackConfiguration(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) (*mediatailor.PutPlaybackConfigurationOutput, error)
-	PutPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) *MediatailorPutPlaybackConfigurationFuture
+	PutPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) *MediaTailorPutPlaybackConfigurationFuture
 
 	TagResource(ctx workflow.Context, input *mediatailor.TagResourceInput) (*mediatailor.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *mediatailor.TagResourceInput) *MediatailorTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *mediatailor.TagResourceInput) *MediaTailorTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *mediatailor.UntagResourceInput) (*mediatailor.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *mediatailor.UntagResourceInput) *MediatailorUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *mediatailor.UntagResourceInput) *MediaTailorUntagResourceFuture
 }
 
 type MediaTailorStub struct{}
@@ -38,71 +38,71 @@ func NewMediaTailorStub() MediaTailorClient {
 	return &MediaTailorStub{}
 }
 
-type MediatailorDeletePlaybackConfigurationFuture struct {
+type MediaTailorDeletePlaybackConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediatailorDeletePlaybackConfigurationFuture) Get(ctx workflow.Context) (*mediatailor.DeletePlaybackConfigurationOutput, error) {
+func (r *MediaTailorDeletePlaybackConfigurationFuture) Get(ctx workflow.Context) (*mediatailor.DeletePlaybackConfigurationOutput, error) {
 	var output mediatailor.DeletePlaybackConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediatailorGetPlaybackConfigurationFuture struct {
+type MediaTailorGetPlaybackConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediatailorGetPlaybackConfigurationFuture) Get(ctx workflow.Context) (*mediatailor.GetPlaybackConfigurationOutput, error) {
+func (r *MediaTailorGetPlaybackConfigurationFuture) Get(ctx workflow.Context) (*mediatailor.GetPlaybackConfigurationOutput, error) {
 	var output mediatailor.GetPlaybackConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediatailorListPlaybackConfigurationsFuture struct {
+type MediaTailorListPlaybackConfigurationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediatailorListPlaybackConfigurationsFuture) Get(ctx workflow.Context) (*mediatailor.ListPlaybackConfigurationsOutput, error) {
+func (r *MediaTailorListPlaybackConfigurationsFuture) Get(ctx workflow.Context) (*mediatailor.ListPlaybackConfigurationsOutput, error) {
 	var output mediatailor.ListPlaybackConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediatailorListTagsForResourceFuture struct {
+type MediaTailorListTagsForResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediatailorListTagsForResourceFuture) Get(ctx workflow.Context) (*mediatailor.ListTagsForResourceOutput, error) {
+func (r *MediaTailorListTagsForResourceFuture) Get(ctx workflow.Context) (*mediatailor.ListTagsForResourceOutput, error) {
 	var output mediatailor.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediatailorPutPlaybackConfigurationFuture struct {
+type MediaTailorPutPlaybackConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediatailorPutPlaybackConfigurationFuture) Get(ctx workflow.Context) (*mediatailor.PutPlaybackConfigurationOutput, error) {
+func (r *MediaTailorPutPlaybackConfigurationFuture) Get(ctx workflow.Context) (*mediatailor.PutPlaybackConfigurationOutput, error) {
 	var output mediatailor.PutPlaybackConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediatailorTagResourceFuture struct {
+type MediaTailorTagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediatailorTagResourceFuture) Get(ctx workflow.Context) (*mediatailor.TagResourceOutput, error) {
+func (r *MediaTailorTagResourceFuture) Get(ctx workflow.Context) (*mediatailor.TagResourceOutput, error) {
 	var output mediatailor.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediatailorUntagResourceFuture struct {
+type MediaTailorUntagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediatailorUntagResourceFuture) Get(ctx workflow.Context) (*mediatailor.UntagResourceOutput, error) {
+func (r *MediaTailorUntagResourceFuture) Get(ctx workflow.Context) (*mediatailor.UntagResourceOutput, error) {
 	var output mediatailor.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -114,9 +114,9 @@ func (a *MediaTailorStub) DeletePlaybackConfiguration(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *MediaTailorStub) DeletePlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) *MediatailorDeletePlaybackConfigurationFuture {
+func (a *MediaTailorStub) DeletePlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) *MediaTailorDeletePlaybackConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediatailor.DeletePlaybackConfiguration", input)
-	return &MediatailorDeletePlaybackConfigurationFuture{Future: future}
+	return &MediaTailorDeletePlaybackConfigurationFuture{Future: future}
 }
 
 func (a *MediaTailorStub) GetPlaybackConfiguration(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) (*mediatailor.GetPlaybackConfigurationOutput, error) {
@@ -125,9 +125,9 @@ func (a *MediaTailorStub) GetPlaybackConfiguration(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *MediaTailorStub) GetPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) *MediatailorGetPlaybackConfigurationFuture {
+func (a *MediaTailorStub) GetPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) *MediaTailorGetPlaybackConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediatailor.GetPlaybackConfiguration", input)
-	return &MediatailorGetPlaybackConfigurationFuture{Future: future}
+	return &MediaTailorGetPlaybackConfigurationFuture{Future: future}
 }
 
 func (a *MediaTailorStub) ListPlaybackConfigurations(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) (*mediatailor.ListPlaybackConfigurationsOutput, error) {
@@ -136,9 +136,9 @@ func (a *MediaTailorStub) ListPlaybackConfigurations(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *MediaTailorStub) ListPlaybackConfigurationsAsync(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) *MediatailorListPlaybackConfigurationsFuture {
+func (a *MediaTailorStub) ListPlaybackConfigurationsAsync(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) *MediaTailorListPlaybackConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediatailor.ListPlaybackConfigurations", input)
-	return &MediatailorListPlaybackConfigurationsFuture{Future: future}
+	return &MediaTailorListPlaybackConfigurationsFuture{Future: future}
 }
 
 func (a *MediaTailorStub) ListTagsForResource(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) (*mediatailor.ListTagsForResourceOutput, error) {
@@ -147,9 +147,9 @@ func (a *MediaTailorStub) ListTagsForResource(ctx workflow.Context, input *media
 	return &output, err
 }
 
-func (a *MediaTailorStub) ListTagsForResourceAsync(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) *MediatailorListTagsForResourceFuture {
+func (a *MediaTailorStub) ListTagsForResourceAsync(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) *MediaTailorListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediatailor.ListTagsForResource", input)
-	return &MediatailorListTagsForResourceFuture{Future: future}
+	return &MediaTailorListTagsForResourceFuture{Future: future}
 }
 
 func (a *MediaTailorStub) PutPlaybackConfiguration(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) (*mediatailor.PutPlaybackConfigurationOutput, error) {
@@ -158,9 +158,9 @@ func (a *MediaTailorStub) PutPlaybackConfiguration(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *MediaTailorStub) PutPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) *MediatailorPutPlaybackConfigurationFuture {
+func (a *MediaTailorStub) PutPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) *MediaTailorPutPlaybackConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediatailor.PutPlaybackConfiguration", input)
-	return &MediatailorPutPlaybackConfigurationFuture{Future: future}
+	return &MediaTailorPutPlaybackConfigurationFuture{Future: future}
 }
 
 func (a *MediaTailorStub) TagResource(ctx workflow.Context, input *mediatailor.TagResourceInput) (*mediatailor.TagResourceOutput, error) {
@@ -169,9 +169,9 @@ func (a *MediaTailorStub) TagResource(ctx workflow.Context, input *mediatailor.T
 	return &output, err
 }
 
-func (a *MediaTailorStub) TagResourceAsync(ctx workflow.Context, input *mediatailor.TagResourceInput) *MediatailorTagResourceFuture {
+func (a *MediaTailorStub) TagResourceAsync(ctx workflow.Context, input *mediatailor.TagResourceInput) *MediaTailorTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediatailor.TagResource", input)
-	return &MediatailorTagResourceFuture{Future: future}
+	return &MediaTailorTagResourceFuture{Future: future}
 }
 
 func (a *MediaTailorStub) UntagResource(ctx workflow.Context, input *mediatailor.UntagResourceInput) (*mediatailor.UntagResourceOutput, error) {
@@ -180,7 +180,7 @@ func (a *MediaTailorStub) UntagResource(ctx workflow.Context, input *mediatailor
 	return &output, err
 }
 
-func (a *MediaTailorStub) UntagResourceAsync(ctx workflow.Context, input *mediatailor.UntagResourceInput) *MediatailorUntagResourceFuture {
+func (a *MediaTailorStub) UntagResourceAsync(ctx workflow.Context, input *mediatailor.UntagResourceInput) *MediaTailorUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediatailor.UntagResource", input)
-	return &MediatailorUntagResourceFuture{Future: future}
+	return &MediaTailorUntagResourceFuture{Future: future}
 }

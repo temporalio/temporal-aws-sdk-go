@@ -11,22 +11,22 @@ import (
 
 type AutoScalingPlansClient interface {
 	CreateScalingPlan(ctx workflow.Context, input *autoscalingplans.CreateScalingPlanInput) (*autoscalingplans.CreateScalingPlanOutput, error)
-	CreateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.CreateScalingPlanInput) *AutoscalingplansCreateScalingPlanFuture
+	CreateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.CreateScalingPlanInput) *AutoScalingPlansCreateScalingPlanFuture
 
 	DeleteScalingPlan(ctx workflow.Context, input *autoscalingplans.DeleteScalingPlanInput) (*autoscalingplans.DeleteScalingPlanOutput, error)
-	DeleteScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.DeleteScalingPlanInput) *AutoscalingplansDeleteScalingPlanFuture
+	DeleteScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.DeleteScalingPlanInput) *AutoScalingPlansDeleteScalingPlanFuture
 
 	DescribeScalingPlanResources(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlanResourcesInput) (*autoscalingplans.DescribeScalingPlanResourcesOutput, error)
-	DescribeScalingPlanResourcesAsync(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlanResourcesInput) *AutoscalingplansDescribeScalingPlanResourcesFuture
+	DescribeScalingPlanResourcesAsync(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlanResourcesInput) *AutoScalingPlansDescribeScalingPlanResourcesFuture
 
 	DescribeScalingPlans(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlansInput) (*autoscalingplans.DescribeScalingPlansOutput, error)
-	DescribeScalingPlansAsync(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlansInput) *AutoscalingplansDescribeScalingPlansFuture
+	DescribeScalingPlansAsync(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlansInput) *AutoScalingPlansDescribeScalingPlansFuture
 
 	GetScalingPlanResourceForecastData(ctx workflow.Context, input *autoscalingplans.GetScalingPlanResourceForecastDataInput) (*autoscalingplans.GetScalingPlanResourceForecastDataOutput, error)
-	GetScalingPlanResourceForecastDataAsync(ctx workflow.Context, input *autoscalingplans.GetScalingPlanResourceForecastDataInput) *AutoscalingplansGetScalingPlanResourceForecastDataFuture
+	GetScalingPlanResourceForecastDataAsync(ctx workflow.Context, input *autoscalingplans.GetScalingPlanResourceForecastDataInput) *AutoScalingPlansGetScalingPlanResourceForecastDataFuture
 
 	UpdateScalingPlan(ctx workflow.Context, input *autoscalingplans.UpdateScalingPlanInput) (*autoscalingplans.UpdateScalingPlanOutput, error)
-	UpdateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.UpdateScalingPlanInput) *AutoscalingplansUpdateScalingPlanFuture
+	UpdateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.UpdateScalingPlanInput) *AutoScalingPlansUpdateScalingPlanFuture
 }
 
 type AutoScalingPlansStub struct{}
@@ -35,61 +35,61 @@ func NewAutoScalingPlansStub() AutoScalingPlansClient {
 	return &AutoScalingPlansStub{}
 }
 
-type AutoscalingplansCreateScalingPlanFuture struct {
+type AutoScalingPlansCreateScalingPlanFuture struct {
 	Future workflow.Future
 }
 
-func (r *AutoscalingplansCreateScalingPlanFuture) Get(ctx workflow.Context) (*autoscalingplans.CreateScalingPlanOutput, error) {
+func (r *AutoScalingPlansCreateScalingPlanFuture) Get(ctx workflow.Context) (*autoscalingplans.CreateScalingPlanOutput, error) {
 	var output autoscalingplans.CreateScalingPlanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoscalingplansDeleteScalingPlanFuture struct {
+type AutoScalingPlansDeleteScalingPlanFuture struct {
 	Future workflow.Future
 }
 
-func (r *AutoscalingplansDeleteScalingPlanFuture) Get(ctx workflow.Context) (*autoscalingplans.DeleteScalingPlanOutput, error) {
+func (r *AutoScalingPlansDeleteScalingPlanFuture) Get(ctx workflow.Context) (*autoscalingplans.DeleteScalingPlanOutput, error) {
 	var output autoscalingplans.DeleteScalingPlanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoscalingplansDescribeScalingPlanResourcesFuture struct {
+type AutoScalingPlansDescribeScalingPlanResourcesFuture struct {
 	Future workflow.Future
 }
 
-func (r *AutoscalingplansDescribeScalingPlanResourcesFuture) Get(ctx workflow.Context) (*autoscalingplans.DescribeScalingPlanResourcesOutput, error) {
+func (r *AutoScalingPlansDescribeScalingPlanResourcesFuture) Get(ctx workflow.Context) (*autoscalingplans.DescribeScalingPlanResourcesOutput, error) {
 	var output autoscalingplans.DescribeScalingPlanResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoscalingplansDescribeScalingPlansFuture struct {
+type AutoScalingPlansDescribeScalingPlansFuture struct {
 	Future workflow.Future
 }
 
-func (r *AutoscalingplansDescribeScalingPlansFuture) Get(ctx workflow.Context) (*autoscalingplans.DescribeScalingPlansOutput, error) {
+func (r *AutoScalingPlansDescribeScalingPlansFuture) Get(ctx workflow.Context) (*autoscalingplans.DescribeScalingPlansOutput, error) {
 	var output autoscalingplans.DescribeScalingPlansOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoscalingplansGetScalingPlanResourceForecastDataFuture struct {
+type AutoScalingPlansGetScalingPlanResourceForecastDataFuture struct {
 	Future workflow.Future
 }
 
-func (r *AutoscalingplansGetScalingPlanResourceForecastDataFuture) Get(ctx workflow.Context) (*autoscalingplans.GetScalingPlanResourceForecastDataOutput, error) {
+func (r *AutoScalingPlansGetScalingPlanResourceForecastDataFuture) Get(ctx workflow.Context) (*autoscalingplans.GetScalingPlanResourceForecastDataOutput, error) {
 	var output autoscalingplans.GetScalingPlanResourceForecastDataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoscalingplansUpdateScalingPlanFuture struct {
+type AutoScalingPlansUpdateScalingPlanFuture struct {
 	Future workflow.Future
 }
 
-func (r *AutoscalingplansUpdateScalingPlanFuture) Get(ctx workflow.Context) (*autoscalingplans.UpdateScalingPlanOutput, error) {
+func (r *AutoScalingPlansUpdateScalingPlanFuture) Get(ctx workflow.Context) (*autoscalingplans.UpdateScalingPlanOutput, error) {
 	var output autoscalingplans.UpdateScalingPlanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -101,9 +101,9 @@ func (a *AutoScalingPlansStub) CreateScalingPlan(ctx workflow.Context, input *au
 	return &output, err
 }
 
-func (a *AutoScalingPlansStub) CreateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.CreateScalingPlanInput) *AutoscalingplansCreateScalingPlanFuture {
+func (a *AutoScalingPlansStub) CreateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.CreateScalingPlanInput) *AutoScalingPlansCreateScalingPlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscalingplans.CreateScalingPlan", input)
-	return &AutoscalingplansCreateScalingPlanFuture{Future: future}
+	return &AutoScalingPlansCreateScalingPlanFuture{Future: future}
 }
 
 func (a *AutoScalingPlansStub) DeleteScalingPlan(ctx workflow.Context, input *autoscalingplans.DeleteScalingPlanInput) (*autoscalingplans.DeleteScalingPlanOutput, error) {
@@ -112,9 +112,9 @@ func (a *AutoScalingPlansStub) DeleteScalingPlan(ctx workflow.Context, input *au
 	return &output, err
 }
 
-func (a *AutoScalingPlansStub) DeleteScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.DeleteScalingPlanInput) *AutoscalingplansDeleteScalingPlanFuture {
+func (a *AutoScalingPlansStub) DeleteScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.DeleteScalingPlanInput) *AutoScalingPlansDeleteScalingPlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscalingplans.DeleteScalingPlan", input)
-	return &AutoscalingplansDeleteScalingPlanFuture{Future: future}
+	return &AutoScalingPlansDeleteScalingPlanFuture{Future: future}
 }
 
 func (a *AutoScalingPlansStub) DescribeScalingPlanResources(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlanResourcesInput) (*autoscalingplans.DescribeScalingPlanResourcesOutput, error) {
@@ -123,9 +123,9 @@ func (a *AutoScalingPlansStub) DescribeScalingPlanResources(ctx workflow.Context
 	return &output, err
 }
 
-func (a *AutoScalingPlansStub) DescribeScalingPlanResourcesAsync(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlanResourcesInput) *AutoscalingplansDescribeScalingPlanResourcesFuture {
+func (a *AutoScalingPlansStub) DescribeScalingPlanResourcesAsync(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlanResourcesInput) *AutoScalingPlansDescribeScalingPlanResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscalingplans.DescribeScalingPlanResources", input)
-	return &AutoscalingplansDescribeScalingPlanResourcesFuture{Future: future}
+	return &AutoScalingPlansDescribeScalingPlanResourcesFuture{Future: future}
 }
 
 func (a *AutoScalingPlansStub) DescribeScalingPlans(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlansInput) (*autoscalingplans.DescribeScalingPlansOutput, error) {
@@ -134,9 +134,9 @@ func (a *AutoScalingPlansStub) DescribeScalingPlans(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *AutoScalingPlansStub) DescribeScalingPlansAsync(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlansInput) *AutoscalingplansDescribeScalingPlansFuture {
+func (a *AutoScalingPlansStub) DescribeScalingPlansAsync(ctx workflow.Context, input *autoscalingplans.DescribeScalingPlansInput) *AutoScalingPlansDescribeScalingPlansFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscalingplans.DescribeScalingPlans", input)
-	return &AutoscalingplansDescribeScalingPlansFuture{Future: future}
+	return &AutoScalingPlansDescribeScalingPlansFuture{Future: future}
 }
 
 func (a *AutoScalingPlansStub) GetScalingPlanResourceForecastData(ctx workflow.Context, input *autoscalingplans.GetScalingPlanResourceForecastDataInput) (*autoscalingplans.GetScalingPlanResourceForecastDataOutput, error) {
@@ -145,9 +145,9 @@ func (a *AutoScalingPlansStub) GetScalingPlanResourceForecastData(ctx workflow.C
 	return &output, err
 }
 
-func (a *AutoScalingPlansStub) GetScalingPlanResourceForecastDataAsync(ctx workflow.Context, input *autoscalingplans.GetScalingPlanResourceForecastDataInput) *AutoscalingplansGetScalingPlanResourceForecastDataFuture {
+func (a *AutoScalingPlansStub) GetScalingPlanResourceForecastDataAsync(ctx workflow.Context, input *autoscalingplans.GetScalingPlanResourceForecastDataInput) *AutoScalingPlansGetScalingPlanResourceForecastDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscalingplans.GetScalingPlanResourceForecastData", input)
-	return &AutoscalingplansGetScalingPlanResourceForecastDataFuture{Future: future}
+	return &AutoScalingPlansGetScalingPlanResourceForecastDataFuture{Future: future}
 }
 
 func (a *AutoScalingPlansStub) UpdateScalingPlan(ctx workflow.Context, input *autoscalingplans.UpdateScalingPlanInput) (*autoscalingplans.UpdateScalingPlanOutput, error) {
@@ -156,7 +156,7 @@ func (a *AutoScalingPlansStub) UpdateScalingPlan(ctx workflow.Context, input *au
 	return &output, err
 }
 
-func (a *AutoScalingPlansStub) UpdateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.UpdateScalingPlanInput) *AutoscalingplansUpdateScalingPlanFuture {
+func (a *AutoScalingPlansStub) UpdateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.UpdateScalingPlanInput) *AutoScalingPlansUpdateScalingPlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscalingplans.UpdateScalingPlan", input)
-	return &AutoscalingplansUpdateScalingPlanFuture{Future: future}
+	return &AutoScalingPlansUpdateScalingPlanFuture{Future: future}
 }

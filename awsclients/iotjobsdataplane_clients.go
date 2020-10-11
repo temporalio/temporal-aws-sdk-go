@@ -11,16 +11,16 @@ import (
 
 type IoTJobsDataPlaneClient interface {
 	DescribeJobExecution(ctx workflow.Context, input *iotjobsdataplane.DescribeJobExecutionInput) (*iotjobsdataplane.DescribeJobExecutionOutput, error)
-	DescribeJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.DescribeJobExecutionInput) *IotjobsdataplaneDescribeJobExecutionFuture
+	DescribeJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.DescribeJobExecutionInput) *IoTJobsDataPlaneDescribeJobExecutionFuture
 
 	GetPendingJobExecutions(ctx workflow.Context, input *iotjobsdataplane.GetPendingJobExecutionsInput) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error)
-	GetPendingJobExecutionsAsync(ctx workflow.Context, input *iotjobsdataplane.GetPendingJobExecutionsInput) *IotjobsdataplaneGetPendingJobExecutionsFuture
+	GetPendingJobExecutionsAsync(ctx workflow.Context, input *iotjobsdataplane.GetPendingJobExecutionsInput) *IoTJobsDataPlaneGetPendingJobExecutionsFuture
 
 	StartNextPendingJobExecution(ctx workflow.Context, input *iotjobsdataplane.StartNextPendingJobExecutionInput) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error)
-	StartNextPendingJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.StartNextPendingJobExecutionInput) *IotjobsdataplaneStartNextPendingJobExecutionFuture
+	StartNextPendingJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.StartNextPendingJobExecutionInput) *IoTJobsDataPlaneStartNextPendingJobExecutionFuture
 
 	UpdateJobExecution(ctx workflow.Context, input *iotjobsdataplane.UpdateJobExecutionInput) (*iotjobsdataplane.UpdateJobExecutionOutput, error)
-	UpdateJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.UpdateJobExecutionInput) *IotjobsdataplaneUpdateJobExecutionFuture
+	UpdateJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.UpdateJobExecutionInput) *IoTJobsDataPlaneUpdateJobExecutionFuture
 }
 
 type IoTJobsDataPlaneStub struct{}
@@ -29,41 +29,41 @@ func NewIoTJobsDataPlaneStub() IoTJobsDataPlaneClient {
 	return &IoTJobsDataPlaneStub{}
 }
 
-type IotjobsdataplaneDescribeJobExecutionFuture struct {
+type IoTJobsDataPlaneDescribeJobExecutionFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotjobsdataplaneDescribeJobExecutionFuture) Get(ctx workflow.Context) (*iotjobsdataplane.DescribeJobExecutionOutput, error) {
+func (r *IoTJobsDataPlaneDescribeJobExecutionFuture) Get(ctx workflow.Context) (*iotjobsdataplane.DescribeJobExecutionOutput, error) {
 	var output iotjobsdataplane.DescribeJobExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotjobsdataplaneGetPendingJobExecutionsFuture struct {
+type IoTJobsDataPlaneGetPendingJobExecutionsFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotjobsdataplaneGetPendingJobExecutionsFuture) Get(ctx workflow.Context) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error) {
+func (r *IoTJobsDataPlaneGetPendingJobExecutionsFuture) Get(ctx workflow.Context) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error) {
 	var output iotjobsdataplane.GetPendingJobExecutionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotjobsdataplaneStartNextPendingJobExecutionFuture struct {
+type IoTJobsDataPlaneStartNextPendingJobExecutionFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotjobsdataplaneStartNextPendingJobExecutionFuture) Get(ctx workflow.Context) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error) {
+func (r *IoTJobsDataPlaneStartNextPendingJobExecutionFuture) Get(ctx workflow.Context) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error) {
 	var output iotjobsdataplane.StartNextPendingJobExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotjobsdataplaneUpdateJobExecutionFuture struct {
+type IoTJobsDataPlaneUpdateJobExecutionFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotjobsdataplaneUpdateJobExecutionFuture) Get(ctx workflow.Context) (*iotjobsdataplane.UpdateJobExecutionOutput, error) {
+func (r *IoTJobsDataPlaneUpdateJobExecutionFuture) Get(ctx workflow.Context) (*iotjobsdataplane.UpdateJobExecutionOutput, error) {
 	var output iotjobsdataplane.UpdateJobExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -75,9 +75,9 @@ func (a *IoTJobsDataPlaneStub) DescribeJobExecution(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *IoTJobsDataPlaneStub) DescribeJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.DescribeJobExecutionInput) *IotjobsdataplaneDescribeJobExecutionFuture {
+func (a *IoTJobsDataPlaneStub) DescribeJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.DescribeJobExecutionInput) *IoTJobsDataPlaneDescribeJobExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotjobsdataplane.DescribeJobExecution", input)
-	return &IotjobsdataplaneDescribeJobExecutionFuture{Future: future}
+	return &IoTJobsDataPlaneDescribeJobExecutionFuture{Future: future}
 }
 
 func (a *IoTJobsDataPlaneStub) GetPendingJobExecutions(ctx workflow.Context, input *iotjobsdataplane.GetPendingJobExecutionsInput) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error) {
@@ -86,9 +86,9 @@ func (a *IoTJobsDataPlaneStub) GetPendingJobExecutions(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *IoTJobsDataPlaneStub) GetPendingJobExecutionsAsync(ctx workflow.Context, input *iotjobsdataplane.GetPendingJobExecutionsInput) *IotjobsdataplaneGetPendingJobExecutionsFuture {
+func (a *IoTJobsDataPlaneStub) GetPendingJobExecutionsAsync(ctx workflow.Context, input *iotjobsdataplane.GetPendingJobExecutionsInput) *IoTJobsDataPlaneGetPendingJobExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotjobsdataplane.GetPendingJobExecutions", input)
-	return &IotjobsdataplaneGetPendingJobExecutionsFuture{Future: future}
+	return &IoTJobsDataPlaneGetPendingJobExecutionsFuture{Future: future}
 }
 
 func (a *IoTJobsDataPlaneStub) StartNextPendingJobExecution(ctx workflow.Context, input *iotjobsdataplane.StartNextPendingJobExecutionInput) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error) {
@@ -97,9 +97,9 @@ func (a *IoTJobsDataPlaneStub) StartNextPendingJobExecution(ctx workflow.Context
 	return &output, err
 }
 
-func (a *IoTJobsDataPlaneStub) StartNextPendingJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.StartNextPendingJobExecutionInput) *IotjobsdataplaneStartNextPendingJobExecutionFuture {
+func (a *IoTJobsDataPlaneStub) StartNextPendingJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.StartNextPendingJobExecutionInput) *IoTJobsDataPlaneStartNextPendingJobExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotjobsdataplane.StartNextPendingJobExecution", input)
-	return &IotjobsdataplaneStartNextPendingJobExecutionFuture{Future: future}
+	return &IoTJobsDataPlaneStartNextPendingJobExecutionFuture{Future: future}
 }
 
 func (a *IoTJobsDataPlaneStub) UpdateJobExecution(ctx workflow.Context, input *iotjobsdataplane.UpdateJobExecutionInput) (*iotjobsdataplane.UpdateJobExecutionOutput, error) {
@@ -108,7 +108,7 @@ func (a *IoTJobsDataPlaneStub) UpdateJobExecution(ctx workflow.Context, input *i
 	return &output, err
 }
 
-func (a *IoTJobsDataPlaneStub) UpdateJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.UpdateJobExecutionInput) *IotjobsdataplaneUpdateJobExecutionFuture {
+func (a *IoTJobsDataPlaneStub) UpdateJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.UpdateJobExecutionInput) *IoTJobsDataPlaneUpdateJobExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotjobsdataplane.UpdateJobExecution", input)
-	return &IotjobsdataplaneUpdateJobExecutionFuture{Future: future}
+	return &IoTJobsDataPlaneUpdateJobExecutionFuture{Future: future}
 }

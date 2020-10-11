@@ -11,22 +11,22 @@ import (
 
 type RDSDataServiceClient interface {
 	BatchExecuteStatement(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) (*rdsdataservice.BatchExecuteStatementOutput, error)
-	BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *RdsdataserviceBatchExecuteStatementFuture
+	BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *RDSDataServiceBatchExecuteStatementFuture
 
 	BeginTransaction(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) (*rdsdataservice.BeginTransactionOutput, error)
-	BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *RdsdataserviceBeginTransactionFuture
+	BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *RDSDataServiceBeginTransactionFuture
 
 	CommitTransaction(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) (*rdsdataservice.CommitTransactionOutput, error)
-	CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *RdsdataserviceCommitTransactionFuture
+	CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *RDSDataServiceCommitTransactionFuture
 
 	ExecuteSql(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) (*rdsdataservice.ExecuteSqlOutput, error)
-	ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *RdsdataserviceExecuteSqlFuture
+	ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *RDSDataServiceExecuteSqlFuture
 
 	ExecuteStatement(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) (*rdsdataservice.ExecuteStatementOutput, error)
-	ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *RdsdataserviceExecuteStatementFuture
+	ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *RDSDataServiceExecuteStatementFuture
 
 	RollbackTransaction(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) (*rdsdataservice.RollbackTransactionOutput, error)
-	RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RdsdataserviceRollbackTransactionFuture
+	RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RDSDataServiceRollbackTransactionFuture
 }
 
 type RDSDataServiceStub struct{}
@@ -35,61 +35,61 @@ func NewRDSDataServiceStub() RDSDataServiceClient {
 	return &RDSDataServiceStub{}
 }
 
-type RdsdataserviceBatchExecuteStatementFuture struct {
+type RDSDataServiceBatchExecuteStatementFuture struct {
 	Future workflow.Future
 }
 
-func (r *RdsdataserviceBatchExecuteStatementFuture) Get(ctx workflow.Context) (*rdsdataservice.BatchExecuteStatementOutput, error) {
+func (r *RDSDataServiceBatchExecuteStatementFuture) Get(ctx workflow.Context) (*rdsdataservice.BatchExecuteStatementOutput, error) {
 	var output rdsdataservice.BatchExecuteStatementOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RdsdataserviceBeginTransactionFuture struct {
+type RDSDataServiceBeginTransactionFuture struct {
 	Future workflow.Future
 }
 
-func (r *RdsdataserviceBeginTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.BeginTransactionOutput, error) {
+func (r *RDSDataServiceBeginTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.BeginTransactionOutput, error) {
 	var output rdsdataservice.BeginTransactionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RdsdataserviceCommitTransactionFuture struct {
+type RDSDataServiceCommitTransactionFuture struct {
 	Future workflow.Future
 }
 
-func (r *RdsdataserviceCommitTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.CommitTransactionOutput, error) {
+func (r *RDSDataServiceCommitTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.CommitTransactionOutput, error) {
 	var output rdsdataservice.CommitTransactionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RdsdataserviceExecuteSqlFuture struct {
+type RDSDataServiceExecuteSqlFuture struct {
 	Future workflow.Future
 }
 
-func (r *RdsdataserviceExecuteSqlFuture) Get(ctx workflow.Context) (*rdsdataservice.ExecuteSqlOutput, error) {
+func (r *RDSDataServiceExecuteSqlFuture) Get(ctx workflow.Context) (*rdsdataservice.ExecuteSqlOutput, error) {
 	var output rdsdataservice.ExecuteSqlOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RdsdataserviceExecuteStatementFuture struct {
+type RDSDataServiceExecuteStatementFuture struct {
 	Future workflow.Future
 }
 
-func (r *RdsdataserviceExecuteStatementFuture) Get(ctx workflow.Context) (*rdsdataservice.ExecuteStatementOutput, error) {
+func (r *RDSDataServiceExecuteStatementFuture) Get(ctx workflow.Context) (*rdsdataservice.ExecuteStatementOutput, error) {
 	var output rdsdataservice.ExecuteStatementOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RdsdataserviceRollbackTransactionFuture struct {
+type RDSDataServiceRollbackTransactionFuture struct {
 	Future workflow.Future
 }
 
-func (r *RdsdataserviceRollbackTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.RollbackTransactionOutput, error) {
+func (r *RDSDataServiceRollbackTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.RollbackTransactionOutput, error) {
 	var output rdsdataservice.RollbackTransactionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -101,9 +101,9 @@ func (a *RDSDataServiceStub) BatchExecuteStatement(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *RDSDataServiceStub) BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *RdsdataserviceBatchExecuteStatementFuture {
+func (a *RDSDataServiceStub) BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *RDSDataServiceBatchExecuteStatementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.BatchExecuteStatement", input)
-	return &RdsdataserviceBatchExecuteStatementFuture{Future: future}
+	return &RDSDataServiceBatchExecuteStatementFuture{Future: future}
 }
 
 func (a *RDSDataServiceStub) BeginTransaction(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) (*rdsdataservice.BeginTransactionOutput, error) {
@@ -112,9 +112,9 @@ func (a *RDSDataServiceStub) BeginTransaction(ctx workflow.Context, input *rdsda
 	return &output, err
 }
 
-func (a *RDSDataServiceStub) BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *RdsdataserviceBeginTransactionFuture {
+func (a *RDSDataServiceStub) BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *RDSDataServiceBeginTransactionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.BeginTransaction", input)
-	return &RdsdataserviceBeginTransactionFuture{Future: future}
+	return &RDSDataServiceBeginTransactionFuture{Future: future}
 }
 
 func (a *RDSDataServiceStub) CommitTransaction(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) (*rdsdataservice.CommitTransactionOutput, error) {
@@ -123,9 +123,9 @@ func (a *RDSDataServiceStub) CommitTransaction(ctx workflow.Context, input *rdsd
 	return &output, err
 }
 
-func (a *RDSDataServiceStub) CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *RdsdataserviceCommitTransactionFuture {
+func (a *RDSDataServiceStub) CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *RDSDataServiceCommitTransactionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.CommitTransaction", input)
-	return &RdsdataserviceCommitTransactionFuture{Future: future}
+	return &RDSDataServiceCommitTransactionFuture{Future: future}
 }
 
 func (a *RDSDataServiceStub) ExecuteSql(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) (*rdsdataservice.ExecuteSqlOutput, error) {
@@ -134,9 +134,9 @@ func (a *RDSDataServiceStub) ExecuteSql(ctx workflow.Context, input *rdsdataserv
 	return &output, err
 }
 
-func (a *RDSDataServiceStub) ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *RdsdataserviceExecuteSqlFuture {
+func (a *RDSDataServiceStub) ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *RDSDataServiceExecuteSqlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.ExecuteSql", input)
-	return &RdsdataserviceExecuteSqlFuture{Future: future}
+	return &RDSDataServiceExecuteSqlFuture{Future: future}
 }
 
 func (a *RDSDataServiceStub) ExecuteStatement(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) (*rdsdataservice.ExecuteStatementOutput, error) {
@@ -145,9 +145,9 @@ func (a *RDSDataServiceStub) ExecuteStatement(ctx workflow.Context, input *rdsda
 	return &output, err
 }
 
-func (a *RDSDataServiceStub) ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *RdsdataserviceExecuteStatementFuture {
+func (a *RDSDataServiceStub) ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *RDSDataServiceExecuteStatementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.ExecuteStatement", input)
-	return &RdsdataserviceExecuteStatementFuture{Future: future}
+	return &RDSDataServiceExecuteStatementFuture{Future: future}
 }
 
 func (a *RDSDataServiceStub) RollbackTransaction(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) (*rdsdataservice.RollbackTransactionOutput, error) {
@@ -156,7 +156,7 @@ func (a *RDSDataServiceStub) RollbackTransaction(ctx workflow.Context, input *rd
 	return &output, err
 }
 
-func (a *RDSDataServiceStub) RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RdsdataserviceRollbackTransactionFuture {
+func (a *RDSDataServiceStub) RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RDSDataServiceRollbackTransactionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.RollbackTransaction", input)
-	return &RdsdataserviceRollbackTransactionFuture{Future: future}
+	return &RDSDataServiceRollbackTransactionFuture{Future: future}
 }

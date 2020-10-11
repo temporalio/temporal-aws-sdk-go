@@ -11,28 +11,28 @@ import (
 
 type STSClient interface {
 	AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error)
-	AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *StsAssumeRoleFuture
+	AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *STSAssumeRoleFuture
 
 	AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error)
-	AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *StsAssumeRoleWithSAMLFuture
+	AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *STSAssumeRoleWithSAMLFuture
 
 	AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error)
-	AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *StsAssumeRoleWithWebIdentityFuture
+	AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *STSAssumeRoleWithWebIdentityFuture
 
 	DecodeAuthorizationMessage(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error)
-	DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *StsDecodeAuthorizationMessageFuture
+	DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *STSDecodeAuthorizationMessageFuture
 
 	GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error)
-	GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *StsGetAccessKeyInfoFuture
+	GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *STSGetAccessKeyInfoFuture
 
 	GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error)
-	GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *StsGetCallerIdentityFuture
+	GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *STSGetCallerIdentityFuture
 
 	GetFederationToken(ctx workflow.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error)
-	GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *StsGetFederationTokenFuture
+	GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *STSGetFederationTokenFuture
 
 	GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error)
-	GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *StsGetSessionTokenFuture
+	GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *STSGetSessionTokenFuture
 }
 
 type STSStub struct{}
@@ -41,81 +41,81 @@ func NewSTSStub() STSClient {
 	return &STSStub{}
 }
 
-type StsAssumeRoleFuture struct {
+type STSAssumeRoleFuture struct {
 	Future workflow.Future
 }
 
-func (r *StsAssumeRoleFuture) Get(ctx workflow.Context) (*sts.AssumeRoleOutput, error) {
+func (r *STSAssumeRoleFuture) Get(ctx workflow.Context) (*sts.AssumeRoleOutput, error) {
 	var output sts.AssumeRoleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StsAssumeRoleWithSAMLFuture struct {
+type STSAssumeRoleWithSAMLFuture struct {
 	Future workflow.Future
 }
 
-func (r *StsAssumeRoleWithSAMLFuture) Get(ctx workflow.Context) (*sts.AssumeRoleWithSAMLOutput, error) {
+func (r *STSAssumeRoleWithSAMLFuture) Get(ctx workflow.Context) (*sts.AssumeRoleWithSAMLOutput, error) {
 	var output sts.AssumeRoleWithSAMLOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StsAssumeRoleWithWebIdentityFuture struct {
+type STSAssumeRoleWithWebIdentityFuture struct {
 	Future workflow.Future
 }
 
-func (r *StsAssumeRoleWithWebIdentityFuture) Get(ctx workflow.Context) (*sts.AssumeRoleWithWebIdentityOutput, error) {
+func (r *STSAssumeRoleWithWebIdentityFuture) Get(ctx workflow.Context) (*sts.AssumeRoleWithWebIdentityOutput, error) {
 	var output sts.AssumeRoleWithWebIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StsDecodeAuthorizationMessageFuture struct {
+type STSDecodeAuthorizationMessageFuture struct {
 	Future workflow.Future
 }
 
-func (r *StsDecodeAuthorizationMessageFuture) Get(ctx workflow.Context) (*sts.DecodeAuthorizationMessageOutput, error) {
+func (r *STSDecodeAuthorizationMessageFuture) Get(ctx workflow.Context) (*sts.DecodeAuthorizationMessageOutput, error) {
 	var output sts.DecodeAuthorizationMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StsGetAccessKeyInfoFuture struct {
+type STSGetAccessKeyInfoFuture struct {
 	Future workflow.Future
 }
 
-func (r *StsGetAccessKeyInfoFuture) Get(ctx workflow.Context) (*sts.GetAccessKeyInfoOutput, error) {
+func (r *STSGetAccessKeyInfoFuture) Get(ctx workflow.Context) (*sts.GetAccessKeyInfoOutput, error) {
 	var output sts.GetAccessKeyInfoOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StsGetCallerIdentityFuture struct {
+type STSGetCallerIdentityFuture struct {
 	Future workflow.Future
 }
 
-func (r *StsGetCallerIdentityFuture) Get(ctx workflow.Context) (*sts.GetCallerIdentityOutput, error) {
+func (r *STSGetCallerIdentityFuture) Get(ctx workflow.Context) (*sts.GetCallerIdentityOutput, error) {
 	var output sts.GetCallerIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StsGetFederationTokenFuture struct {
+type STSGetFederationTokenFuture struct {
 	Future workflow.Future
 }
 
-func (r *StsGetFederationTokenFuture) Get(ctx workflow.Context) (*sts.GetFederationTokenOutput, error) {
+func (r *STSGetFederationTokenFuture) Get(ctx workflow.Context) (*sts.GetFederationTokenOutput, error) {
 	var output sts.GetFederationTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StsGetSessionTokenFuture struct {
+type STSGetSessionTokenFuture struct {
 	Future workflow.Future
 }
 
-func (r *StsGetSessionTokenFuture) Get(ctx workflow.Context) (*sts.GetSessionTokenOutput, error) {
+func (r *STSGetSessionTokenFuture) Get(ctx workflow.Context) (*sts.GetSessionTokenOutput, error) {
 	var output sts.GetSessionTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -127,9 +127,9 @@ func (a *STSStub) AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (
 	return &output, err
 }
 
-func (a *STSStub) AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *StsAssumeRoleFuture {
+func (a *STSStub) AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *STSAssumeRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRole", input)
-	return &StsAssumeRoleFuture{Future: future}
+	return &STSAssumeRoleFuture{Future: future}
 }
 
 func (a *STSStub) AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error) {
@@ -138,9 +138,9 @@ func (a *STSStub) AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRole
 	return &output, err
 }
 
-func (a *STSStub) AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *StsAssumeRoleWithSAMLFuture {
+func (a *STSStub) AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *STSAssumeRoleWithSAMLFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRoleWithSAML", input)
-	return &StsAssumeRoleWithSAMLFuture{Future: future}
+	return &STSAssumeRoleWithSAMLFuture{Future: future}
 }
 
 func (a *STSStub) AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error) {
@@ -149,9 +149,9 @@ func (a *STSStub) AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.Ass
 	return &output, err
 }
 
-func (a *STSStub) AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *StsAssumeRoleWithWebIdentityFuture {
+func (a *STSStub) AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *STSAssumeRoleWithWebIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRoleWithWebIdentity", input)
-	return &StsAssumeRoleWithWebIdentityFuture{Future: future}
+	return &STSAssumeRoleWithWebIdentityFuture{Future: future}
 }
 
 func (a *STSStub) DecodeAuthorizationMessage(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error) {
@@ -160,9 +160,9 @@ func (a *STSStub) DecodeAuthorizationMessage(ctx workflow.Context, input *sts.De
 	return &output, err
 }
 
-func (a *STSStub) DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *StsDecodeAuthorizationMessageFuture {
+func (a *STSStub) DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *STSDecodeAuthorizationMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.DecodeAuthorizationMessage", input)
-	return &StsDecodeAuthorizationMessageFuture{Future: future}
+	return &STSDecodeAuthorizationMessageFuture{Future: future}
 }
 
 func (a *STSStub) GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error) {
@@ -171,9 +171,9 @@ func (a *STSStub) GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKey
 	return &output, err
 }
 
-func (a *STSStub) GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *StsGetAccessKeyInfoFuture {
+func (a *STSStub) GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *STSGetAccessKeyInfoFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.GetAccessKeyInfo", input)
-	return &StsGetAccessKeyInfoFuture{Future: future}
+	return &STSGetAccessKeyInfoFuture{Future: future}
 }
 
 func (a *STSStub) GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error) {
@@ -182,9 +182,9 @@ func (a *STSStub) GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerId
 	return &output, err
 }
 
-func (a *STSStub) GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *StsGetCallerIdentityFuture {
+func (a *STSStub) GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *STSGetCallerIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.GetCallerIdentity", input)
-	return &StsGetCallerIdentityFuture{Future: future}
+	return &STSGetCallerIdentityFuture{Future: future}
 }
 
 func (a *STSStub) GetFederationToken(ctx workflow.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error) {
@@ -193,9 +193,9 @@ func (a *STSStub) GetFederationToken(ctx workflow.Context, input *sts.GetFederat
 	return &output, err
 }
 
-func (a *STSStub) GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *StsGetFederationTokenFuture {
+func (a *STSStub) GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *STSGetFederationTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.GetFederationToken", input)
-	return &StsGetFederationTokenFuture{Future: future}
+	return &STSGetFederationTokenFuture{Future: future}
 }
 
 func (a *STSStub) GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error) {
@@ -204,7 +204,7 @@ func (a *STSStub) GetSessionToken(ctx workflow.Context, input *sts.GetSessionTok
 	return &output, err
 }
 
-func (a *STSStub) GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *StsGetSessionTokenFuture {
+func (a *STSStub) GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *STSGetSessionTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.GetSessionToken", input)
-	return &StsGetSessionTokenFuture{Future: future}
+	return &STSGetSessionTokenFuture{Future: future}
 }

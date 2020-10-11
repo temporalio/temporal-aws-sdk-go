@@ -11,19 +11,19 @@ import (
 
 type IoTDataPlaneClient interface {
 	DeleteThingShadow(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) (*iotdataplane.DeleteThingShadowOutput, error)
-	DeleteThingShadowAsync(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) *IotdataplaneDeleteThingShadowFuture
+	DeleteThingShadowAsync(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) *IoTDataPlaneDeleteThingShadowFuture
 
 	GetThingShadow(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) (*iotdataplane.GetThingShadowOutput, error)
-	GetThingShadowAsync(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) *IotdataplaneGetThingShadowFuture
+	GetThingShadowAsync(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) *IoTDataPlaneGetThingShadowFuture
 
 	ListNamedShadowsForThing(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) (*iotdataplane.ListNamedShadowsForThingOutput, error)
-	ListNamedShadowsForThingAsync(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) *IotdataplaneListNamedShadowsForThingFuture
+	ListNamedShadowsForThingAsync(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) *IoTDataPlaneListNamedShadowsForThingFuture
 
 	Publish(ctx workflow.Context, input *iotdataplane.PublishInput) (*iotdataplane.PublishOutput, error)
-	PublishAsync(ctx workflow.Context, input *iotdataplane.PublishInput) *IotdataplanePublishFuture
+	PublishAsync(ctx workflow.Context, input *iotdataplane.PublishInput) *IoTDataPlanePublishFuture
 
 	UpdateThingShadow(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) (*iotdataplane.UpdateThingShadowOutput, error)
-	UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *IotdataplaneUpdateThingShadowFuture
+	UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *IoTDataPlaneUpdateThingShadowFuture
 }
 
 type IoTDataPlaneStub struct{}
@@ -32,51 +32,51 @@ func NewIoTDataPlaneStub() IoTDataPlaneClient {
 	return &IoTDataPlaneStub{}
 }
 
-type IotdataplaneDeleteThingShadowFuture struct {
+type IoTDataPlaneDeleteThingShadowFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotdataplaneDeleteThingShadowFuture) Get(ctx workflow.Context) (*iotdataplane.DeleteThingShadowOutput, error) {
+func (r *IoTDataPlaneDeleteThingShadowFuture) Get(ctx workflow.Context) (*iotdataplane.DeleteThingShadowOutput, error) {
 	var output iotdataplane.DeleteThingShadowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotdataplaneGetThingShadowFuture struct {
+type IoTDataPlaneGetThingShadowFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotdataplaneGetThingShadowFuture) Get(ctx workflow.Context) (*iotdataplane.GetThingShadowOutput, error) {
+func (r *IoTDataPlaneGetThingShadowFuture) Get(ctx workflow.Context) (*iotdataplane.GetThingShadowOutput, error) {
 	var output iotdataplane.GetThingShadowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotdataplaneListNamedShadowsForThingFuture struct {
+type IoTDataPlaneListNamedShadowsForThingFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotdataplaneListNamedShadowsForThingFuture) Get(ctx workflow.Context) (*iotdataplane.ListNamedShadowsForThingOutput, error) {
+func (r *IoTDataPlaneListNamedShadowsForThingFuture) Get(ctx workflow.Context) (*iotdataplane.ListNamedShadowsForThingOutput, error) {
 	var output iotdataplane.ListNamedShadowsForThingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotdataplanePublishFuture struct {
+type IoTDataPlanePublishFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotdataplanePublishFuture) Get(ctx workflow.Context) (*iotdataplane.PublishOutput, error) {
+func (r *IoTDataPlanePublishFuture) Get(ctx workflow.Context) (*iotdataplane.PublishOutput, error) {
 	var output iotdataplane.PublishOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IotdataplaneUpdateThingShadowFuture struct {
+type IoTDataPlaneUpdateThingShadowFuture struct {
 	Future workflow.Future
 }
 
-func (r *IotdataplaneUpdateThingShadowFuture) Get(ctx workflow.Context) (*iotdataplane.UpdateThingShadowOutput, error) {
+func (r *IoTDataPlaneUpdateThingShadowFuture) Get(ctx workflow.Context) (*iotdataplane.UpdateThingShadowOutput, error) {
 	var output iotdataplane.UpdateThingShadowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -88,9 +88,9 @@ func (a *IoTDataPlaneStub) DeleteThingShadow(ctx workflow.Context, input *iotdat
 	return &output, err
 }
 
-func (a *IoTDataPlaneStub) DeleteThingShadowAsync(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) *IotdataplaneDeleteThingShadowFuture {
+func (a *IoTDataPlaneStub) DeleteThingShadowAsync(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) *IoTDataPlaneDeleteThingShadowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotdataplane.DeleteThingShadow", input)
-	return &IotdataplaneDeleteThingShadowFuture{Future: future}
+	return &IoTDataPlaneDeleteThingShadowFuture{Future: future}
 }
 
 func (a *IoTDataPlaneStub) GetThingShadow(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) (*iotdataplane.GetThingShadowOutput, error) {
@@ -99,9 +99,9 @@ func (a *IoTDataPlaneStub) GetThingShadow(ctx workflow.Context, input *iotdatapl
 	return &output, err
 }
 
-func (a *IoTDataPlaneStub) GetThingShadowAsync(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) *IotdataplaneGetThingShadowFuture {
+func (a *IoTDataPlaneStub) GetThingShadowAsync(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) *IoTDataPlaneGetThingShadowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotdataplane.GetThingShadow", input)
-	return &IotdataplaneGetThingShadowFuture{Future: future}
+	return &IoTDataPlaneGetThingShadowFuture{Future: future}
 }
 
 func (a *IoTDataPlaneStub) ListNamedShadowsForThing(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) (*iotdataplane.ListNamedShadowsForThingOutput, error) {
@@ -110,9 +110,9 @@ func (a *IoTDataPlaneStub) ListNamedShadowsForThing(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *IoTDataPlaneStub) ListNamedShadowsForThingAsync(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) *IotdataplaneListNamedShadowsForThingFuture {
+func (a *IoTDataPlaneStub) ListNamedShadowsForThingAsync(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) *IoTDataPlaneListNamedShadowsForThingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotdataplane.ListNamedShadowsForThing", input)
-	return &IotdataplaneListNamedShadowsForThingFuture{Future: future}
+	return &IoTDataPlaneListNamedShadowsForThingFuture{Future: future}
 }
 
 func (a *IoTDataPlaneStub) Publish(ctx workflow.Context, input *iotdataplane.PublishInput) (*iotdataplane.PublishOutput, error) {
@@ -121,9 +121,9 @@ func (a *IoTDataPlaneStub) Publish(ctx workflow.Context, input *iotdataplane.Pub
 	return &output, err
 }
 
-func (a *IoTDataPlaneStub) PublishAsync(ctx workflow.Context, input *iotdataplane.PublishInput) *IotdataplanePublishFuture {
+func (a *IoTDataPlaneStub) PublishAsync(ctx workflow.Context, input *iotdataplane.PublishInput) *IoTDataPlanePublishFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotdataplane.Publish", input)
-	return &IotdataplanePublishFuture{Future: future}
+	return &IoTDataPlanePublishFuture{Future: future}
 }
 
 func (a *IoTDataPlaneStub) UpdateThingShadow(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) (*iotdataplane.UpdateThingShadowOutput, error) {
@@ -132,7 +132,7 @@ func (a *IoTDataPlaneStub) UpdateThingShadow(ctx workflow.Context, input *iotdat
 	return &output, err
 }
 
-func (a *IoTDataPlaneStub) UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *IotdataplaneUpdateThingShadowFuture {
+func (a *IoTDataPlaneStub) UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *IoTDataPlaneUpdateThingShadowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotdataplane.UpdateThingShadow", input)
-	return &IotdataplaneUpdateThingShadowFuture{Future: future}
+	return &IoTDataPlaneUpdateThingShadowFuture{Future: future}
 }

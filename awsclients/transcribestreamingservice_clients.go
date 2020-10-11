@@ -11,7 +11,7 @@ import (
 
 type TranscribeStreamingServiceClient interface {
 	StartStreamTranscription(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error)
-	StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionFuture
+	StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribeStreamingServiceStartStreamTranscriptionFuture
 }
 
 type TranscribeStreamingServiceStub struct{}
@@ -20,11 +20,11 @@ func NewTranscribeStreamingServiceStub() TranscribeStreamingServiceClient {
 	return &TranscribeStreamingServiceStub{}
 }
 
-type TranscribestreamingserviceStartStreamTranscriptionFuture struct {
+type TranscribeStreamingServiceStartStreamTranscriptionFuture struct {
 	Future workflow.Future
 }
 
-func (r *TranscribestreamingserviceStartStreamTranscriptionFuture) Get(ctx workflow.Context) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
+func (r *TranscribeStreamingServiceStartStreamTranscriptionFuture) Get(ctx workflow.Context) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
 	var output transcribestreamingservice.StartStreamTranscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -36,7 +36,7 @@ func (a *TranscribeStreamingServiceStub) StartStreamTranscription(ctx workflow.C
 	return &output, err
 }
 
-func (a *TranscribeStreamingServiceStub) StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionFuture {
+func (a *TranscribeStreamingServiceStub) StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribeStreamingServiceStartStreamTranscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transcribestreamingservice.StartStreamTranscription", input)
-	return &TranscribestreamingserviceStartStreamTranscriptionFuture{Future: future}
+	return &TranscribeStreamingServiceStartStreamTranscriptionFuture{Future: future}
 }

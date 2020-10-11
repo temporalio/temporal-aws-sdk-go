@@ -11,133 +11,133 @@ import (
 
 type SecurityHubClient interface {
 	AcceptInvitation(ctx workflow.Context, input *securityhub.AcceptInvitationInput) (*securityhub.AcceptInvitationOutput, error)
-	AcceptInvitationAsync(ctx workflow.Context, input *securityhub.AcceptInvitationInput) *SecurityhubAcceptInvitationFuture
+	AcceptInvitationAsync(ctx workflow.Context, input *securityhub.AcceptInvitationInput) *SecurityHubAcceptInvitationFuture
 
 	BatchDisableStandards(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) (*securityhub.BatchDisableStandardsOutput, error)
-	BatchDisableStandardsAsync(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) *SecurityhubBatchDisableStandardsFuture
+	BatchDisableStandardsAsync(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) *SecurityHubBatchDisableStandardsFuture
 
 	BatchEnableStandards(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) (*securityhub.BatchEnableStandardsOutput, error)
-	BatchEnableStandardsAsync(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) *SecurityhubBatchEnableStandardsFuture
+	BatchEnableStandardsAsync(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) *SecurityHubBatchEnableStandardsFuture
 
 	BatchImportFindings(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) (*securityhub.BatchImportFindingsOutput, error)
-	BatchImportFindingsAsync(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) *SecurityhubBatchImportFindingsFuture
+	BatchImportFindingsAsync(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) *SecurityHubBatchImportFindingsFuture
 
 	BatchUpdateFindings(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) (*securityhub.BatchUpdateFindingsOutput, error)
-	BatchUpdateFindingsAsync(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) *SecurityhubBatchUpdateFindingsFuture
+	BatchUpdateFindingsAsync(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) *SecurityHubBatchUpdateFindingsFuture
 
 	CreateActionTarget(ctx workflow.Context, input *securityhub.CreateActionTargetInput) (*securityhub.CreateActionTargetOutput, error)
-	CreateActionTargetAsync(ctx workflow.Context, input *securityhub.CreateActionTargetInput) *SecurityhubCreateActionTargetFuture
+	CreateActionTargetAsync(ctx workflow.Context, input *securityhub.CreateActionTargetInput) *SecurityHubCreateActionTargetFuture
 
 	CreateInsight(ctx workflow.Context, input *securityhub.CreateInsightInput) (*securityhub.CreateInsightOutput, error)
-	CreateInsightAsync(ctx workflow.Context, input *securityhub.CreateInsightInput) *SecurityhubCreateInsightFuture
+	CreateInsightAsync(ctx workflow.Context, input *securityhub.CreateInsightInput) *SecurityHubCreateInsightFuture
 
 	CreateMembers(ctx workflow.Context, input *securityhub.CreateMembersInput) (*securityhub.CreateMembersOutput, error)
-	CreateMembersAsync(ctx workflow.Context, input *securityhub.CreateMembersInput) *SecurityhubCreateMembersFuture
+	CreateMembersAsync(ctx workflow.Context, input *securityhub.CreateMembersInput) *SecurityHubCreateMembersFuture
 
 	DeclineInvitations(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) (*securityhub.DeclineInvitationsOutput, error)
-	DeclineInvitationsAsync(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) *SecurityhubDeclineInvitationsFuture
+	DeclineInvitationsAsync(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) *SecurityHubDeclineInvitationsFuture
 
 	DeleteActionTarget(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) (*securityhub.DeleteActionTargetOutput, error)
-	DeleteActionTargetAsync(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) *SecurityhubDeleteActionTargetFuture
+	DeleteActionTargetAsync(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) *SecurityHubDeleteActionTargetFuture
 
 	DeleteInsight(ctx workflow.Context, input *securityhub.DeleteInsightInput) (*securityhub.DeleteInsightOutput, error)
-	DeleteInsightAsync(ctx workflow.Context, input *securityhub.DeleteInsightInput) *SecurityhubDeleteInsightFuture
+	DeleteInsightAsync(ctx workflow.Context, input *securityhub.DeleteInsightInput) *SecurityHubDeleteInsightFuture
 
 	DeleteInvitations(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) (*securityhub.DeleteInvitationsOutput, error)
-	DeleteInvitationsAsync(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) *SecurityhubDeleteInvitationsFuture
+	DeleteInvitationsAsync(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) *SecurityHubDeleteInvitationsFuture
 
 	DeleteMembers(ctx workflow.Context, input *securityhub.DeleteMembersInput) (*securityhub.DeleteMembersOutput, error)
-	DeleteMembersAsync(ctx workflow.Context, input *securityhub.DeleteMembersInput) *SecurityhubDeleteMembersFuture
+	DeleteMembersAsync(ctx workflow.Context, input *securityhub.DeleteMembersInput) *SecurityHubDeleteMembersFuture
 
 	DescribeActionTargets(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) (*securityhub.DescribeActionTargetsOutput, error)
-	DescribeActionTargetsAsync(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) *SecurityhubDescribeActionTargetsFuture
+	DescribeActionTargetsAsync(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) *SecurityHubDescribeActionTargetsFuture
 
 	DescribeHub(ctx workflow.Context, input *securityhub.DescribeHubInput) (*securityhub.DescribeHubOutput, error)
-	DescribeHubAsync(ctx workflow.Context, input *securityhub.DescribeHubInput) *SecurityhubDescribeHubFuture
+	DescribeHubAsync(ctx workflow.Context, input *securityhub.DescribeHubInput) *SecurityHubDescribeHubFuture
 
 	DescribeProducts(ctx workflow.Context, input *securityhub.DescribeProductsInput) (*securityhub.DescribeProductsOutput, error)
-	DescribeProductsAsync(ctx workflow.Context, input *securityhub.DescribeProductsInput) *SecurityhubDescribeProductsFuture
+	DescribeProductsAsync(ctx workflow.Context, input *securityhub.DescribeProductsInput) *SecurityHubDescribeProductsFuture
 
 	DescribeStandards(ctx workflow.Context, input *securityhub.DescribeStandardsInput) (*securityhub.DescribeStandardsOutput, error)
-	DescribeStandardsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsInput) *SecurityhubDescribeStandardsFuture
+	DescribeStandardsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsInput) *SecurityHubDescribeStandardsFuture
 
 	DescribeStandardsControls(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) (*securityhub.DescribeStandardsControlsOutput, error)
-	DescribeStandardsControlsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) *SecurityhubDescribeStandardsControlsFuture
+	DescribeStandardsControlsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) *SecurityHubDescribeStandardsControlsFuture
 
 	DisableImportFindingsForProduct(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) (*securityhub.DisableImportFindingsForProductOutput, error)
-	DisableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) *SecurityhubDisableImportFindingsForProductFuture
+	DisableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) *SecurityHubDisableImportFindingsForProductFuture
 
 	DisableSecurityHub(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) (*securityhub.DisableSecurityHubOutput, error)
-	DisableSecurityHubAsync(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) *SecurityhubDisableSecurityHubFuture
+	DisableSecurityHubAsync(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) *SecurityHubDisableSecurityHubFuture
 
 	DisassociateFromMasterAccount(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) (*securityhub.DisassociateFromMasterAccountOutput, error)
-	DisassociateFromMasterAccountAsync(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) *SecurityhubDisassociateFromMasterAccountFuture
+	DisassociateFromMasterAccountAsync(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) *SecurityHubDisassociateFromMasterAccountFuture
 
 	DisassociateMembers(ctx workflow.Context, input *securityhub.DisassociateMembersInput) (*securityhub.DisassociateMembersOutput, error)
-	DisassociateMembersAsync(ctx workflow.Context, input *securityhub.DisassociateMembersInput) *SecurityhubDisassociateMembersFuture
+	DisassociateMembersAsync(ctx workflow.Context, input *securityhub.DisassociateMembersInput) *SecurityHubDisassociateMembersFuture
 
 	EnableImportFindingsForProduct(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) (*securityhub.EnableImportFindingsForProductOutput, error)
-	EnableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) *SecurityhubEnableImportFindingsForProductFuture
+	EnableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) *SecurityHubEnableImportFindingsForProductFuture
 
 	EnableSecurityHub(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) (*securityhub.EnableSecurityHubOutput, error)
-	EnableSecurityHubAsync(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) *SecurityhubEnableSecurityHubFuture
+	EnableSecurityHubAsync(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) *SecurityHubEnableSecurityHubFuture
 
 	GetEnabledStandards(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) (*securityhub.GetEnabledStandardsOutput, error)
-	GetEnabledStandardsAsync(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) *SecurityhubGetEnabledStandardsFuture
+	GetEnabledStandardsAsync(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) *SecurityHubGetEnabledStandardsFuture
 
 	GetFindings(ctx workflow.Context, input *securityhub.GetFindingsInput) (*securityhub.GetFindingsOutput, error)
-	GetFindingsAsync(ctx workflow.Context, input *securityhub.GetFindingsInput) *SecurityhubGetFindingsFuture
+	GetFindingsAsync(ctx workflow.Context, input *securityhub.GetFindingsInput) *SecurityHubGetFindingsFuture
 
 	GetInsightResults(ctx workflow.Context, input *securityhub.GetInsightResultsInput) (*securityhub.GetInsightResultsOutput, error)
-	GetInsightResultsAsync(ctx workflow.Context, input *securityhub.GetInsightResultsInput) *SecurityhubGetInsightResultsFuture
+	GetInsightResultsAsync(ctx workflow.Context, input *securityhub.GetInsightResultsInput) *SecurityHubGetInsightResultsFuture
 
 	GetInsights(ctx workflow.Context, input *securityhub.GetInsightsInput) (*securityhub.GetInsightsOutput, error)
-	GetInsightsAsync(ctx workflow.Context, input *securityhub.GetInsightsInput) *SecurityhubGetInsightsFuture
+	GetInsightsAsync(ctx workflow.Context, input *securityhub.GetInsightsInput) *SecurityHubGetInsightsFuture
 
 	GetInvitationsCount(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) (*securityhub.GetInvitationsCountOutput, error)
-	GetInvitationsCountAsync(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) *SecurityhubGetInvitationsCountFuture
+	GetInvitationsCountAsync(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) *SecurityHubGetInvitationsCountFuture
 
 	GetMasterAccount(ctx workflow.Context, input *securityhub.GetMasterAccountInput) (*securityhub.GetMasterAccountOutput, error)
-	GetMasterAccountAsync(ctx workflow.Context, input *securityhub.GetMasterAccountInput) *SecurityhubGetMasterAccountFuture
+	GetMasterAccountAsync(ctx workflow.Context, input *securityhub.GetMasterAccountInput) *SecurityHubGetMasterAccountFuture
 
 	GetMembers(ctx workflow.Context, input *securityhub.GetMembersInput) (*securityhub.GetMembersOutput, error)
-	GetMembersAsync(ctx workflow.Context, input *securityhub.GetMembersInput) *SecurityhubGetMembersFuture
+	GetMembersAsync(ctx workflow.Context, input *securityhub.GetMembersInput) *SecurityHubGetMembersFuture
 
 	InviteMembers(ctx workflow.Context, input *securityhub.InviteMembersInput) (*securityhub.InviteMembersOutput, error)
-	InviteMembersAsync(ctx workflow.Context, input *securityhub.InviteMembersInput) *SecurityhubInviteMembersFuture
+	InviteMembersAsync(ctx workflow.Context, input *securityhub.InviteMembersInput) *SecurityHubInviteMembersFuture
 
 	ListEnabledProductsForImport(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) (*securityhub.ListEnabledProductsForImportOutput, error)
-	ListEnabledProductsForImportAsync(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) *SecurityhubListEnabledProductsForImportFuture
+	ListEnabledProductsForImportAsync(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) *SecurityHubListEnabledProductsForImportFuture
 
 	ListInvitations(ctx workflow.Context, input *securityhub.ListInvitationsInput) (*securityhub.ListInvitationsOutput, error)
-	ListInvitationsAsync(ctx workflow.Context, input *securityhub.ListInvitationsInput) *SecurityhubListInvitationsFuture
+	ListInvitationsAsync(ctx workflow.Context, input *securityhub.ListInvitationsInput) *SecurityHubListInvitationsFuture
 
 	ListMembers(ctx workflow.Context, input *securityhub.ListMembersInput) (*securityhub.ListMembersOutput, error)
-	ListMembersAsync(ctx workflow.Context, input *securityhub.ListMembersInput) *SecurityhubListMembersFuture
+	ListMembersAsync(ctx workflow.Context, input *securityhub.ListMembersInput) *SecurityHubListMembersFuture
 
 	ListTagsForResource(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) (*securityhub.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) *SecurityhubListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) *SecurityHubListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *securityhub.TagResourceInput) (*securityhub.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *securityhub.TagResourceInput) *SecurityhubTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *securityhub.TagResourceInput) *SecurityHubTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *securityhub.UntagResourceInput) (*securityhub.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *securityhub.UntagResourceInput) *SecurityhubUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *securityhub.UntagResourceInput) *SecurityHubUntagResourceFuture
 
 	UpdateActionTarget(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) (*securityhub.UpdateActionTargetOutput, error)
-	UpdateActionTargetAsync(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) *SecurityhubUpdateActionTargetFuture
+	UpdateActionTargetAsync(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) *SecurityHubUpdateActionTargetFuture
 
 	UpdateFindings(ctx workflow.Context, input *securityhub.UpdateFindingsInput) (*securityhub.UpdateFindingsOutput, error)
-	UpdateFindingsAsync(ctx workflow.Context, input *securityhub.UpdateFindingsInput) *SecurityhubUpdateFindingsFuture
+	UpdateFindingsAsync(ctx workflow.Context, input *securityhub.UpdateFindingsInput) *SecurityHubUpdateFindingsFuture
 
 	UpdateInsight(ctx workflow.Context, input *securityhub.UpdateInsightInput) (*securityhub.UpdateInsightOutput, error)
-	UpdateInsightAsync(ctx workflow.Context, input *securityhub.UpdateInsightInput) *SecurityhubUpdateInsightFuture
+	UpdateInsightAsync(ctx workflow.Context, input *securityhub.UpdateInsightInput) *SecurityHubUpdateInsightFuture
 
 	UpdateSecurityHubConfiguration(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) (*securityhub.UpdateSecurityHubConfigurationOutput, error)
-	UpdateSecurityHubConfigurationAsync(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) *SecurityhubUpdateSecurityHubConfigurationFuture
+	UpdateSecurityHubConfigurationAsync(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) *SecurityHubUpdateSecurityHubConfigurationFuture
 
 	UpdateStandardsControl(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) (*securityhub.UpdateStandardsControlOutput, error)
-	UpdateStandardsControlAsync(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) *SecurityhubUpdateStandardsControlFuture
+	UpdateStandardsControlAsync(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) *SecurityHubUpdateStandardsControlFuture
 }
 
 type SecurityHubStub struct{}
@@ -146,431 +146,431 @@ func NewSecurityHubStub() SecurityHubClient {
 	return &SecurityHubStub{}
 }
 
-type SecurityhubAcceptInvitationFuture struct {
+type SecurityHubAcceptInvitationFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubAcceptInvitationFuture) Get(ctx workflow.Context) (*securityhub.AcceptInvitationOutput, error) {
+func (r *SecurityHubAcceptInvitationFuture) Get(ctx workflow.Context) (*securityhub.AcceptInvitationOutput, error) {
 	var output securityhub.AcceptInvitationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubBatchDisableStandardsFuture struct {
+type SecurityHubBatchDisableStandardsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubBatchDisableStandardsFuture) Get(ctx workflow.Context) (*securityhub.BatchDisableStandardsOutput, error) {
+func (r *SecurityHubBatchDisableStandardsFuture) Get(ctx workflow.Context) (*securityhub.BatchDisableStandardsOutput, error) {
 	var output securityhub.BatchDisableStandardsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubBatchEnableStandardsFuture struct {
+type SecurityHubBatchEnableStandardsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubBatchEnableStandardsFuture) Get(ctx workflow.Context) (*securityhub.BatchEnableStandardsOutput, error) {
+func (r *SecurityHubBatchEnableStandardsFuture) Get(ctx workflow.Context) (*securityhub.BatchEnableStandardsOutput, error) {
 	var output securityhub.BatchEnableStandardsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubBatchImportFindingsFuture struct {
+type SecurityHubBatchImportFindingsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubBatchImportFindingsFuture) Get(ctx workflow.Context) (*securityhub.BatchImportFindingsOutput, error) {
+func (r *SecurityHubBatchImportFindingsFuture) Get(ctx workflow.Context) (*securityhub.BatchImportFindingsOutput, error) {
 	var output securityhub.BatchImportFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubBatchUpdateFindingsFuture struct {
+type SecurityHubBatchUpdateFindingsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubBatchUpdateFindingsFuture) Get(ctx workflow.Context) (*securityhub.BatchUpdateFindingsOutput, error) {
+func (r *SecurityHubBatchUpdateFindingsFuture) Get(ctx workflow.Context) (*securityhub.BatchUpdateFindingsOutput, error) {
 	var output securityhub.BatchUpdateFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubCreateActionTargetFuture struct {
+type SecurityHubCreateActionTargetFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubCreateActionTargetFuture) Get(ctx workflow.Context) (*securityhub.CreateActionTargetOutput, error) {
+func (r *SecurityHubCreateActionTargetFuture) Get(ctx workflow.Context) (*securityhub.CreateActionTargetOutput, error) {
 	var output securityhub.CreateActionTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubCreateInsightFuture struct {
+type SecurityHubCreateInsightFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubCreateInsightFuture) Get(ctx workflow.Context) (*securityhub.CreateInsightOutput, error) {
+func (r *SecurityHubCreateInsightFuture) Get(ctx workflow.Context) (*securityhub.CreateInsightOutput, error) {
 	var output securityhub.CreateInsightOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubCreateMembersFuture struct {
+type SecurityHubCreateMembersFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubCreateMembersFuture) Get(ctx workflow.Context) (*securityhub.CreateMembersOutput, error) {
+func (r *SecurityHubCreateMembersFuture) Get(ctx workflow.Context) (*securityhub.CreateMembersOutput, error) {
 	var output securityhub.CreateMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDeclineInvitationsFuture struct {
+type SecurityHubDeclineInvitationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDeclineInvitationsFuture) Get(ctx workflow.Context) (*securityhub.DeclineInvitationsOutput, error) {
+func (r *SecurityHubDeclineInvitationsFuture) Get(ctx workflow.Context) (*securityhub.DeclineInvitationsOutput, error) {
 	var output securityhub.DeclineInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDeleteActionTargetFuture struct {
+type SecurityHubDeleteActionTargetFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDeleteActionTargetFuture) Get(ctx workflow.Context) (*securityhub.DeleteActionTargetOutput, error) {
+func (r *SecurityHubDeleteActionTargetFuture) Get(ctx workflow.Context) (*securityhub.DeleteActionTargetOutput, error) {
 	var output securityhub.DeleteActionTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDeleteInsightFuture struct {
+type SecurityHubDeleteInsightFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDeleteInsightFuture) Get(ctx workflow.Context) (*securityhub.DeleteInsightOutput, error) {
+func (r *SecurityHubDeleteInsightFuture) Get(ctx workflow.Context) (*securityhub.DeleteInsightOutput, error) {
 	var output securityhub.DeleteInsightOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDeleteInvitationsFuture struct {
+type SecurityHubDeleteInvitationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDeleteInvitationsFuture) Get(ctx workflow.Context) (*securityhub.DeleteInvitationsOutput, error) {
+func (r *SecurityHubDeleteInvitationsFuture) Get(ctx workflow.Context) (*securityhub.DeleteInvitationsOutput, error) {
 	var output securityhub.DeleteInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDeleteMembersFuture struct {
+type SecurityHubDeleteMembersFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDeleteMembersFuture) Get(ctx workflow.Context) (*securityhub.DeleteMembersOutput, error) {
+func (r *SecurityHubDeleteMembersFuture) Get(ctx workflow.Context) (*securityhub.DeleteMembersOutput, error) {
 	var output securityhub.DeleteMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDescribeActionTargetsFuture struct {
+type SecurityHubDescribeActionTargetsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDescribeActionTargetsFuture) Get(ctx workflow.Context) (*securityhub.DescribeActionTargetsOutput, error) {
+func (r *SecurityHubDescribeActionTargetsFuture) Get(ctx workflow.Context) (*securityhub.DescribeActionTargetsOutput, error) {
 	var output securityhub.DescribeActionTargetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDescribeHubFuture struct {
+type SecurityHubDescribeHubFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDescribeHubFuture) Get(ctx workflow.Context) (*securityhub.DescribeHubOutput, error) {
+func (r *SecurityHubDescribeHubFuture) Get(ctx workflow.Context) (*securityhub.DescribeHubOutput, error) {
 	var output securityhub.DescribeHubOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDescribeProductsFuture struct {
+type SecurityHubDescribeProductsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDescribeProductsFuture) Get(ctx workflow.Context) (*securityhub.DescribeProductsOutput, error) {
+func (r *SecurityHubDescribeProductsFuture) Get(ctx workflow.Context) (*securityhub.DescribeProductsOutput, error) {
 	var output securityhub.DescribeProductsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDescribeStandardsFuture struct {
+type SecurityHubDescribeStandardsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDescribeStandardsFuture) Get(ctx workflow.Context) (*securityhub.DescribeStandardsOutput, error) {
+func (r *SecurityHubDescribeStandardsFuture) Get(ctx workflow.Context) (*securityhub.DescribeStandardsOutput, error) {
 	var output securityhub.DescribeStandardsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDescribeStandardsControlsFuture struct {
+type SecurityHubDescribeStandardsControlsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDescribeStandardsControlsFuture) Get(ctx workflow.Context) (*securityhub.DescribeStandardsControlsOutput, error) {
+func (r *SecurityHubDescribeStandardsControlsFuture) Get(ctx workflow.Context) (*securityhub.DescribeStandardsControlsOutput, error) {
 	var output securityhub.DescribeStandardsControlsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDisableImportFindingsForProductFuture struct {
+type SecurityHubDisableImportFindingsForProductFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDisableImportFindingsForProductFuture) Get(ctx workflow.Context) (*securityhub.DisableImportFindingsForProductOutput, error) {
+func (r *SecurityHubDisableImportFindingsForProductFuture) Get(ctx workflow.Context) (*securityhub.DisableImportFindingsForProductOutput, error) {
 	var output securityhub.DisableImportFindingsForProductOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDisableSecurityHubFuture struct {
+type SecurityHubDisableSecurityHubFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDisableSecurityHubFuture) Get(ctx workflow.Context) (*securityhub.DisableSecurityHubOutput, error) {
+func (r *SecurityHubDisableSecurityHubFuture) Get(ctx workflow.Context) (*securityhub.DisableSecurityHubOutput, error) {
 	var output securityhub.DisableSecurityHubOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDisassociateFromMasterAccountFuture struct {
+type SecurityHubDisassociateFromMasterAccountFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDisassociateFromMasterAccountFuture) Get(ctx workflow.Context) (*securityhub.DisassociateFromMasterAccountOutput, error) {
+func (r *SecurityHubDisassociateFromMasterAccountFuture) Get(ctx workflow.Context) (*securityhub.DisassociateFromMasterAccountOutput, error) {
 	var output securityhub.DisassociateFromMasterAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubDisassociateMembersFuture struct {
+type SecurityHubDisassociateMembersFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubDisassociateMembersFuture) Get(ctx workflow.Context) (*securityhub.DisassociateMembersOutput, error) {
+func (r *SecurityHubDisassociateMembersFuture) Get(ctx workflow.Context) (*securityhub.DisassociateMembersOutput, error) {
 	var output securityhub.DisassociateMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubEnableImportFindingsForProductFuture struct {
+type SecurityHubEnableImportFindingsForProductFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubEnableImportFindingsForProductFuture) Get(ctx workflow.Context) (*securityhub.EnableImportFindingsForProductOutput, error) {
+func (r *SecurityHubEnableImportFindingsForProductFuture) Get(ctx workflow.Context) (*securityhub.EnableImportFindingsForProductOutput, error) {
 	var output securityhub.EnableImportFindingsForProductOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubEnableSecurityHubFuture struct {
+type SecurityHubEnableSecurityHubFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubEnableSecurityHubFuture) Get(ctx workflow.Context) (*securityhub.EnableSecurityHubOutput, error) {
+func (r *SecurityHubEnableSecurityHubFuture) Get(ctx workflow.Context) (*securityhub.EnableSecurityHubOutput, error) {
 	var output securityhub.EnableSecurityHubOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubGetEnabledStandardsFuture struct {
+type SecurityHubGetEnabledStandardsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubGetEnabledStandardsFuture) Get(ctx workflow.Context) (*securityhub.GetEnabledStandardsOutput, error) {
+func (r *SecurityHubGetEnabledStandardsFuture) Get(ctx workflow.Context) (*securityhub.GetEnabledStandardsOutput, error) {
 	var output securityhub.GetEnabledStandardsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubGetFindingsFuture struct {
+type SecurityHubGetFindingsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubGetFindingsFuture) Get(ctx workflow.Context) (*securityhub.GetFindingsOutput, error) {
+func (r *SecurityHubGetFindingsFuture) Get(ctx workflow.Context) (*securityhub.GetFindingsOutput, error) {
 	var output securityhub.GetFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubGetInsightResultsFuture struct {
+type SecurityHubGetInsightResultsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubGetInsightResultsFuture) Get(ctx workflow.Context) (*securityhub.GetInsightResultsOutput, error) {
+func (r *SecurityHubGetInsightResultsFuture) Get(ctx workflow.Context) (*securityhub.GetInsightResultsOutput, error) {
 	var output securityhub.GetInsightResultsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubGetInsightsFuture struct {
+type SecurityHubGetInsightsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubGetInsightsFuture) Get(ctx workflow.Context) (*securityhub.GetInsightsOutput, error) {
+func (r *SecurityHubGetInsightsFuture) Get(ctx workflow.Context) (*securityhub.GetInsightsOutput, error) {
 	var output securityhub.GetInsightsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubGetInvitationsCountFuture struct {
+type SecurityHubGetInvitationsCountFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubGetInvitationsCountFuture) Get(ctx workflow.Context) (*securityhub.GetInvitationsCountOutput, error) {
+func (r *SecurityHubGetInvitationsCountFuture) Get(ctx workflow.Context) (*securityhub.GetInvitationsCountOutput, error) {
 	var output securityhub.GetInvitationsCountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubGetMasterAccountFuture struct {
+type SecurityHubGetMasterAccountFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubGetMasterAccountFuture) Get(ctx workflow.Context) (*securityhub.GetMasterAccountOutput, error) {
+func (r *SecurityHubGetMasterAccountFuture) Get(ctx workflow.Context) (*securityhub.GetMasterAccountOutput, error) {
 	var output securityhub.GetMasterAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubGetMembersFuture struct {
+type SecurityHubGetMembersFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubGetMembersFuture) Get(ctx workflow.Context) (*securityhub.GetMembersOutput, error) {
+func (r *SecurityHubGetMembersFuture) Get(ctx workflow.Context) (*securityhub.GetMembersOutput, error) {
 	var output securityhub.GetMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubInviteMembersFuture struct {
+type SecurityHubInviteMembersFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubInviteMembersFuture) Get(ctx workflow.Context) (*securityhub.InviteMembersOutput, error) {
+func (r *SecurityHubInviteMembersFuture) Get(ctx workflow.Context) (*securityhub.InviteMembersOutput, error) {
 	var output securityhub.InviteMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubListEnabledProductsForImportFuture struct {
+type SecurityHubListEnabledProductsForImportFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubListEnabledProductsForImportFuture) Get(ctx workflow.Context) (*securityhub.ListEnabledProductsForImportOutput, error) {
+func (r *SecurityHubListEnabledProductsForImportFuture) Get(ctx workflow.Context) (*securityhub.ListEnabledProductsForImportOutput, error) {
 	var output securityhub.ListEnabledProductsForImportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubListInvitationsFuture struct {
+type SecurityHubListInvitationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubListInvitationsFuture) Get(ctx workflow.Context) (*securityhub.ListInvitationsOutput, error) {
+func (r *SecurityHubListInvitationsFuture) Get(ctx workflow.Context) (*securityhub.ListInvitationsOutput, error) {
 	var output securityhub.ListInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubListMembersFuture struct {
+type SecurityHubListMembersFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubListMembersFuture) Get(ctx workflow.Context) (*securityhub.ListMembersOutput, error) {
+func (r *SecurityHubListMembersFuture) Get(ctx workflow.Context) (*securityhub.ListMembersOutput, error) {
 	var output securityhub.ListMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubListTagsForResourceFuture struct {
+type SecurityHubListTagsForResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubListTagsForResourceFuture) Get(ctx workflow.Context) (*securityhub.ListTagsForResourceOutput, error) {
+func (r *SecurityHubListTagsForResourceFuture) Get(ctx workflow.Context) (*securityhub.ListTagsForResourceOutput, error) {
 	var output securityhub.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubTagResourceFuture struct {
+type SecurityHubTagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubTagResourceFuture) Get(ctx workflow.Context) (*securityhub.TagResourceOutput, error) {
+func (r *SecurityHubTagResourceFuture) Get(ctx workflow.Context) (*securityhub.TagResourceOutput, error) {
 	var output securityhub.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubUntagResourceFuture struct {
+type SecurityHubUntagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubUntagResourceFuture) Get(ctx workflow.Context) (*securityhub.UntagResourceOutput, error) {
+func (r *SecurityHubUntagResourceFuture) Get(ctx workflow.Context) (*securityhub.UntagResourceOutput, error) {
 	var output securityhub.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubUpdateActionTargetFuture struct {
+type SecurityHubUpdateActionTargetFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubUpdateActionTargetFuture) Get(ctx workflow.Context) (*securityhub.UpdateActionTargetOutput, error) {
+func (r *SecurityHubUpdateActionTargetFuture) Get(ctx workflow.Context) (*securityhub.UpdateActionTargetOutput, error) {
 	var output securityhub.UpdateActionTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubUpdateFindingsFuture struct {
+type SecurityHubUpdateFindingsFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubUpdateFindingsFuture) Get(ctx workflow.Context) (*securityhub.UpdateFindingsOutput, error) {
+func (r *SecurityHubUpdateFindingsFuture) Get(ctx workflow.Context) (*securityhub.UpdateFindingsOutput, error) {
 	var output securityhub.UpdateFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubUpdateInsightFuture struct {
+type SecurityHubUpdateInsightFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubUpdateInsightFuture) Get(ctx workflow.Context) (*securityhub.UpdateInsightOutput, error) {
+func (r *SecurityHubUpdateInsightFuture) Get(ctx workflow.Context) (*securityhub.UpdateInsightOutput, error) {
 	var output securityhub.UpdateInsightOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubUpdateSecurityHubConfigurationFuture struct {
+type SecurityHubUpdateSecurityHubConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubUpdateSecurityHubConfigurationFuture) Get(ctx workflow.Context) (*securityhub.UpdateSecurityHubConfigurationOutput, error) {
+func (r *SecurityHubUpdateSecurityHubConfigurationFuture) Get(ctx workflow.Context) (*securityhub.UpdateSecurityHubConfigurationOutput, error) {
 	var output securityhub.UpdateSecurityHubConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecurityhubUpdateStandardsControlFuture struct {
+type SecurityHubUpdateStandardsControlFuture struct {
 	Future workflow.Future
 }
 
-func (r *SecurityhubUpdateStandardsControlFuture) Get(ctx workflow.Context) (*securityhub.UpdateStandardsControlOutput, error) {
+func (r *SecurityHubUpdateStandardsControlFuture) Get(ctx workflow.Context) (*securityhub.UpdateStandardsControlOutput, error) {
 	var output securityhub.UpdateStandardsControlOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -582,9 +582,9 @@ func (a *SecurityHubStub) AcceptInvitation(ctx workflow.Context, input *security
 	return &output, err
 }
 
-func (a *SecurityHubStub) AcceptInvitationAsync(ctx workflow.Context, input *securityhub.AcceptInvitationInput) *SecurityhubAcceptInvitationFuture {
+func (a *SecurityHubStub) AcceptInvitationAsync(ctx workflow.Context, input *securityhub.AcceptInvitationInput) *SecurityHubAcceptInvitationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.AcceptInvitation", input)
-	return &SecurityhubAcceptInvitationFuture{Future: future}
+	return &SecurityHubAcceptInvitationFuture{Future: future}
 }
 
 func (a *SecurityHubStub) BatchDisableStandards(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) (*securityhub.BatchDisableStandardsOutput, error) {
@@ -593,9 +593,9 @@ func (a *SecurityHubStub) BatchDisableStandards(ctx workflow.Context, input *sec
 	return &output, err
 }
 
-func (a *SecurityHubStub) BatchDisableStandardsAsync(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) *SecurityhubBatchDisableStandardsFuture {
+func (a *SecurityHubStub) BatchDisableStandardsAsync(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) *SecurityHubBatchDisableStandardsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.BatchDisableStandards", input)
-	return &SecurityhubBatchDisableStandardsFuture{Future: future}
+	return &SecurityHubBatchDisableStandardsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) BatchEnableStandards(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) (*securityhub.BatchEnableStandardsOutput, error) {
@@ -604,9 +604,9 @@ func (a *SecurityHubStub) BatchEnableStandards(ctx workflow.Context, input *secu
 	return &output, err
 }
 
-func (a *SecurityHubStub) BatchEnableStandardsAsync(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) *SecurityhubBatchEnableStandardsFuture {
+func (a *SecurityHubStub) BatchEnableStandardsAsync(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) *SecurityHubBatchEnableStandardsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.BatchEnableStandards", input)
-	return &SecurityhubBatchEnableStandardsFuture{Future: future}
+	return &SecurityHubBatchEnableStandardsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) BatchImportFindings(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) (*securityhub.BatchImportFindingsOutput, error) {
@@ -615,9 +615,9 @@ func (a *SecurityHubStub) BatchImportFindings(ctx workflow.Context, input *secur
 	return &output, err
 }
 
-func (a *SecurityHubStub) BatchImportFindingsAsync(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) *SecurityhubBatchImportFindingsFuture {
+func (a *SecurityHubStub) BatchImportFindingsAsync(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) *SecurityHubBatchImportFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.BatchImportFindings", input)
-	return &SecurityhubBatchImportFindingsFuture{Future: future}
+	return &SecurityHubBatchImportFindingsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) BatchUpdateFindings(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) (*securityhub.BatchUpdateFindingsOutput, error) {
@@ -626,9 +626,9 @@ func (a *SecurityHubStub) BatchUpdateFindings(ctx workflow.Context, input *secur
 	return &output, err
 }
 
-func (a *SecurityHubStub) BatchUpdateFindingsAsync(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) *SecurityhubBatchUpdateFindingsFuture {
+func (a *SecurityHubStub) BatchUpdateFindingsAsync(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) *SecurityHubBatchUpdateFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.BatchUpdateFindings", input)
-	return &SecurityhubBatchUpdateFindingsFuture{Future: future}
+	return &SecurityHubBatchUpdateFindingsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) CreateActionTarget(ctx workflow.Context, input *securityhub.CreateActionTargetInput) (*securityhub.CreateActionTargetOutput, error) {
@@ -637,9 +637,9 @@ func (a *SecurityHubStub) CreateActionTarget(ctx workflow.Context, input *securi
 	return &output, err
 }
 
-func (a *SecurityHubStub) CreateActionTargetAsync(ctx workflow.Context, input *securityhub.CreateActionTargetInput) *SecurityhubCreateActionTargetFuture {
+func (a *SecurityHubStub) CreateActionTargetAsync(ctx workflow.Context, input *securityhub.CreateActionTargetInput) *SecurityHubCreateActionTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.CreateActionTarget", input)
-	return &SecurityhubCreateActionTargetFuture{Future: future}
+	return &SecurityHubCreateActionTargetFuture{Future: future}
 }
 
 func (a *SecurityHubStub) CreateInsight(ctx workflow.Context, input *securityhub.CreateInsightInput) (*securityhub.CreateInsightOutput, error) {
@@ -648,9 +648,9 @@ func (a *SecurityHubStub) CreateInsight(ctx workflow.Context, input *securityhub
 	return &output, err
 }
 
-func (a *SecurityHubStub) CreateInsightAsync(ctx workflow.Context, input *securityhub.CreateInsightInput) *SecurityhubCreateInsightFuture {
+func (a *SecurityHubStub) CreateInsightAsync(ctx workflow.Context, input *securityhub.CreateInsightInput) *SecurityHubCreateInsightFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.CreateInsight", input)
-	return &SecurityhubCreateInsightFuture{Future: future}
+	return &SecurityHubCreateInsightFuture{Future: future}
 }
 
 func (a *SecurityHubStub) CreateMembers(ctx workflow.Context, input *securityhub.CreateMembersInput) (*securityhub.CreateMembersOutput, error) {
@@ -659,9 +659,9 @@ func (a *SecurityHubStub) CreateMembers(ctx workflow.Context, input *securityhub
 	return &output, err
 }
 
-func (a *SecurityHubStub) CreateMembersAsync(ctx workflow.Context, input *securityhub.CreateMembersInput) *SecurityhubCreateMembersFuture {
+func (a *SecurityHubStub) CreateMembersAsync(ctx workflow.Context, input *securityhub.CreateMembersInput) *SecurityHubCreateMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.CreateMembers", input)
-	return &SecurityhubCreateMembersFuture{Future: future}
+	return &SecurityHubCreateMembersFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DeclineInvitations(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) (*securityhub.DeclineInvitationsOutput, error) {
@@ -670,9 +670,9 @@ func (a *SecurityHubStub) DeclineInvitations(ctx workflow.Context, input *securi
 	return &output, err
 }
 
-func (a *SecurityHubStub) DeclineInvitationsAsync(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) *SecurityhubDeclineInvitationsFuture {
+func (a *SecurityHubStub) DeclineInvitationsAsync(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) *SecurityHubDeclineInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DeclineInvitations", input)
-	return &SecurityhubDeclineInvitationsFuture{Future: future}
+	return &SecurityHubDeclineInvitationsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DeleteActionTarget(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) (*securityhub.DeleteActionTargetOutput, error) {
@@ -681,9 +681,9 @@ func (a *SecurityHubStub) DeleteActionTarget(ctx workflow.Context, input *securi
 	return &output, err
 }
 
-func (a *SecurityHubStub) DeleteActionTargetAsync(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) *SecurityhubDeleteActionTargetFuture {
+func (a *SecurityHubStub) DeleteActionTargetAsync(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) *SecurityHubDeleteActionTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DeleteActionTarget", input)
-	return &SecurityhubDeleteActionTargetFuture{Future: future}
+	return &SecurityHubDeleteActionTargetFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DeleteInsight(ctx workflow.Context, input *securityhub.DeleteInsightInput) (*securityhub.DeleteInsightOutput, error) {
@@ -692,9 +692,9 @@ func (a *SecurityHubStub) DeleteInsight(ctx workflow.Context, input *securityhub
 	return &output, err
 }
 
-func (a *SecurityHubStub) DeleteInsightAsync(ctx workflow.Context, input *securityhub.DeleteInsightInput) *SecurityhubDeleteInsightFuture {
+func (a *SecurityHubStub) DeleteInsightAsync(ctx workflow.Context, input *securityhub.DeleteInsightInput) *SecurityHubDeleteInsightFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DeleteInsight", input)
-	return &SecurityhubDeleteInsightFuture{Future: future}
+	return &SecurityHubDeleteInsightFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DeleteInvitations(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) (*securityhub.DeleteInvitationsOutput, error) {
@@ -703,9 +703,9 @@ func (a *SecurityHubStub) DeleteInvitations(ctx workflow.Context, input *securit
 	return &output, err
 }
 
-func (a *SecurityHubStub) DeleteInvitationsAsync(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) *SecurityhubDeleteInvitationsFuture {
+func (a *SecurityHubStub) DeleteInvitationsAsync(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) *SecurityHubDeleteInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DeleteInvitations", input)
-	return &SecurityhubDeleteInvitationsFuture{Future: future}
+	return &SecurityHubDeleteInvitationsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DeleteMembers(ctx workflow.Context, input *securityhub.DeleteMembersInput) (*securityhub.DeleteMembersOutput, error) {
@@ -714,9 +714,9 @@ func (a *SecurityHubStub) DeleteMembers(ctx workflow.Context, input *securityhub
 	return &output, err
 }
 
-func (a *SecurityHubStub) DeleteMembersAsync(ctx workflow.Context, input *securityhub.DeleteMembersInput) *SecurityhubDeleteMembersFuture {
+func (a *SecurityHubStub) DeleteMembersAsync(ctx workflow.Context, input *securityhub.DeleteMembersInput) *SecurityHubDeleteMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DeleteMembers", input)
-	return &SecurityhubDeleteMembersFuture{Future: future}
+	return &SecurityHubDeleteMembersFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DescribeActionTargets(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) (*securityhub.DescribeActionTargetsOutput, error) {
@@ -725,9 +725,9 @@ func (a *SecurityHubStub) DescribeActionTargets(ctx workflow.Context, input *sec
 	return &output, err
 }
 
-func (a *SecurityHubStub) DescribeActionTargetsAsync(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) *SecurityhubDescribeActionTargetsFuture {
+func (a *SecurityHubStub) DescribeActionTargetsAsync(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) *SecurityHubDescribeActionTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DescribeActionTargets", input)
-	return &SecurityhubDescribeActionTargetsFuture{Future: future}
+	return &SecurityHubDescribeActionTargetsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DescribeHub(ctx workflow.Context, input *securityhub.DescribeHubInput) (*securityhub.DescribeHubOutput, error) {
@@ -736,9 +736,9 @@ func (a *SecurityHubStub) DescribeHub(ctx workflow.Context, input *securityhub.D
 	return &output, err
 }
 
-func (a *SecurityHubStub) DescribeHubAsync(ctx workflow.Context, input *securityhub.DescribeHubInput) *SecurityhubDescribeHubFuture {
+func (a *SecurityHubStub) DescribeHubAsync(ctx workflow.Context, input *securityhub.DescribeHubInput) *SecurityHubDescribeHubFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DescribeHub", input)
-	return &SecurityhubDescribeHubFuture{Future: future}
+	return &SecurityHubDescribeHubFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DescribeProducts(ctx workflow.Context, input *securityhub.DescribeProductsInput) (*securityhub.DescribeProductsOutput, error) {
@@ -747,9 +747,9 @@ func (a *SecurityHubStub) DescribeProducts(ctx workflow.Context, input *security
 	return &output, err
 }
 
-func (a *SecurityHubStub) DescribeProductsAsync(ctx workflow.Context, input *securityhub.DescribeProductsInput) *SecurityhubDescribeProductsFuture {
+func (a *SecurityHubStub) DescribeProductsAsync(ctx workflow.Context, input *securityhub.DescribeProductsInput) *SecurityHubDescribeProductsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DescribeProducts", input)
-	return &SecurityhubDescribeProductsFuture{Future: future}
+	return &SecurityHubDescribeProductsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DescribeStandards(ctx workflow.Context, input *securityhub.DescribeStandardsInput) (*securityhub.DescribeStandardsOutput, error) {
@@ -758,9 +758,9 @@ func (a *SecurityHubStub) DescribeStandards(ctx workflow.Context, input *securit
 	return &output, err
 }
 
-func (a *SecurityHubStub) DescribeStandardsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsInput) *SecurityhubDescribeStandardsFuture {
+func (a *SecurityHubStub) DescribeStandardsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsInput) *SecurityHubDescribeStandardsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DescribeStandards", input)
-	return &SecurityhubDescribeStandardsFuture{Future: future}
+	return &SecurityHubDescribeStandardsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DescribeStandardsControls(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) (*securityhub.DescribeStandardsControlsOutput, error) {
@@ -769,9 +769,9 @@ func (a *SecurityHubStub) DescribeStandardsControls(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *SecurityHubStub) DescribeStandardsControlsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) *SecurityhubDescribeStandardsControlsFuture {
+func (a *SecurityHubStub) DescribeStandardsControlsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) *SecurityHubDescribeStandardsControlsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DescribeStandardsControls", input)
-	return &SecurityhubDescribeStandardsControlsFuture{Future: future}
+	return &SecurityHubDescribeStandardsControlsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DisableImportFindingsForProduct(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) (*securityhub.DisableImportFindingsForProductOutput, error) {
@@ -780,9 +780,9 @@ func (a *SecurityHubStub) DisableImportFindingsForProduct(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *SecurityHubStub) DisableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) *SecurityhubDisableImportFindingsForProductFuture {
+func (a *SecurityHubStub) DisableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) *SecurityHubDisableImportFindingsForProductFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DisableImportFindingsForProduct", input)
-	return &SecurityhubDisableImportFindingsForProductFuture{Future: future}
+	return &SecurityHubDisableImportFindingsForProductFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DisableSecurityHub(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) (*securityhub.DisableSecurityHubOutput, error) {
@@ -791,9 +791,9 @@ func (a *SecurityHubStub) DisableSecurityHub(ctx workflow.Context, input *securi
 	return &output, err
 }
 
-func (a *SecurityHubStub) DisableSecurityHubAsync(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) *SecurityhubDisableSecurityHubFuture {
+func (a *SecurityHubStub) DisableSecurityHubAsync(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) *SecurityHubDisableSecurityHubFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DisableSecurityHub", input)
-	return &SecurityhubDisableSecurityHubFuture{Future: future}
+	return &SecurityHubDisableSecurityHubFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DisassociateFromMasterAccount(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) (*securityhub.DisassociateFromMasterAccountOutput, error) {
@@ -802,9 +802,9 @@ func (a *SecurityHubStub) DisassociateFromMasterAccount(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *SecurityHubStub) DisassociateFromMasterAccountAsync(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) *SecurityhubDisassociateFromMasterAccountFuture {
+func (a *SecurityHubStub) DisassociateFromMasterAccountAsync(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) *SecurityHubDisassociateFromMasterAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DisassociateFromMasterAccount", input)
-	return &SecurityhubDisassociateFromMasterAccountFuture{Future: future}
+	return &SecurityHubDisassociateFromMasterAccountFuture{Future: future}
 }
 
 func (a *SecurityHubStub) DisassociateMembers(ctx workflow.Context, input *securityhub.DisassociateMembersInput) (*securityhub.DisassociateMembersOutput, error) {
@@ -813,9 +813,9 @@ func (a *SecurityHubStub) DisassociateMembers(ctx workflow.Context, input *secur
 	return &output, err
 }
 
-func (a *SecurityHubStub) DisassociateMembersAsync(ctx workflow.Context, input *securityhub.DisassociateMembersInput) *SecurityhubDisassociateMembersFuture {
+func (a *SecurityHubStub) DisassociateMembersAsync(ctx workflow.Context, input *securityhub.DisassociateMembersInput) *SecurityHubDisassociateMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.DisassociateMembers", input)
-	return &SecurityhubDisassociateMembersFuture{Future: future}
+	return &SecurityHubDisassociateMembersFuture{Future: future}
 }
 
 func (a *SecurityHubStub) EnableImportFindingsForProduct(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) (*securityhub.EnableImportFindingsForProductOutput, error) {
@@ -824,9 +824,9 @@ func (a *SecurityHubStub) EnableImportFindingsForProduct(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *SecurityHubStub) EnableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) *SecurityhubEnableImportFindingsForProductFuture {
+func (a *SecurityHubStub) EnableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) *SecurityHubEnableImportFindingsForProductFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.EnableImportFindingsForProduct", input)
-	return &SecurityhubEnableImportFindingsForProductFuture{Future: future}
+	return &SecurityHubEnableImportFindingsForProductFuture{Future: future}
 }
 
 func (a *SecurityHubStub) EnableSecurityHub(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) (*securityhub.EnableSecurityHubOutput, error) {
@@ -835,9 +835,9 @@ func (a *SecurityHubStub) EnableSecurityHub(ctx workflow.Context, input *securit
 	return &output, err
 }
 
-func (a *SecurityHubStub) EnableSecurityHubAsync(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) *SecurityhubEnableSecurityHubFuture {
+func (a *SecurityHubStub) EnableSecurityHubAsync(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) *SecurityHubEnableSecurityHubFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.EnableSecurityHub", input)
-	return &SecurityhubEnableSecurityHubFuture{Future: future}
+	return &SecurityHubEnableSecurityHubFuture{Future: future}
 }
 
 func (a *SecurityHubStub) GetEnabledStandards(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) (*securityhub.GetEnabledStandardsOutput, error) {
@@ -846,9 +846,9 @@ func (a *SecurityHubStub) GetEnabledStandards(ctx workflow.Context, input *secur
 	return &output, err
 }
 
-func (a *SecurityHubStub) GetEnabledStandardsAsync(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) *SecurityhubGetEnabledStandardsFuture {
+func (a *SecurityHubStub) GetEnabledStandardsAsync(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) *SecurityHubGetEnabledStandardsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.GetEnabledStandards", input)
-	return &SecurityhubGetEnabledStandardsFuture{Future: future}
+	return &SecurityHubGetEnabledStandardsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) GetFindings(ctx workflow.Context, input *securityhub.GetFindingsInput) (*securityhub.GetFindingsOutput, error) {
@@ -857,9 +857,9 @@ func (a *SecurityHubStub) GetFindings(ctx workflow.Context, input *securityhub.G
 	return &output, err
 }
 
-func (a *SecurityHubStub) GetFindingsAsync(ctx workflow.Context, input *securityhub.GetFindingsInput) *SecurityhubGetFindingsFuture {
+func (a *SecurityHubStub) GetFindingsAsync(ctx workflow.Context, input *securityhub.GetFindingsInput) *SecurityHubGetFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.GetFindings", input)
-	return &SecurityhubGetFindingsFuture{Future: future}
+	return &SecurityHubGetFindingsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) GetInsightResults(ctx workflow.Context, input *securityhub.GetInsightResultsInput) (*securityhub.GetInsightResultsOutput, error) {
@@ -868,9 +868,9 @@ func (a *SecurityHubStub) GetInsightResults(ctx workflow.Context, input *securit
 	return &output, err
 }
 
-func (a *SecurityHubStub) GetInsightResultsAsync(ctx workflow.Context, input *securityhub.GetInsightResultsInput) *SecurityhubGetInsightResultsFuture {
+func (a *SecurityHubStub) GetInsightResultsAsync(ctx workflow.Context, input *securityhub.GetInsightResultsInput) *SecurityHubGetInsightResultsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.GetInsightResults", input)
-	return &SecurityhubGetInsightResultsFuture{Future: future}
+	return &SecurityHubGetInsightResultsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) GetInsights(ctx workflow.Context, input *securityhub.GetInsightsInput) (*securityhub.GetInsightsOutput, error) {
@@ -879,9 +879,9 @@ func (a *SecurityHubStub) GetInsights(ctx workflow.Context, input *securityhub.G
 	return &output, err
 }
 
-func (a *SecurityHubStub) GetInsightsAsync(ctx workflow.Context, input *securityhub.GetInsightsInput) *SecurityhubGetInsightsFuture {
+func (a *SecurityHubStub) GetInsightsAsync(ctx workflow.Context, input *securityhub.GetInsightsInput) *SecurityHubGetInsightsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.GetInsights", input)
-	return &SecurityhubGetInsightsFuture{Future: future}
+	return &SecurityHubGetInsightsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) GetInvitationsCount(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) (*securityhub.GetInvitationsCountOutput, error) {
@@ -890,9 +890,9 @@ func (a *SecurityHubStub) GetInvitationsCount(ctx workflow.Context, input *secur
 	return &output, err
 }
 
-func (a *SecurityHubStub) GetInvitationsCountAsync(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) *SecurityhubGetInvitationsCountFuture {
+func (a *SecurityHubStub) GetInvitationsCountAsync(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) *SecurityHubGetInvitationsCountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.GetInvitationsCount", input)
-	return &SecurityhubGetInvitationsCountFuture{Future: future}
+	return &SecurityHubGetInvitationsCountFuture{Future: future}
 }
 
 func (a *SecurityHubStub) GetMasterAccount(ctx workflow.Context, input *securityhub.GetMasterAccountInput) (*securityhub.GetMasterAccountOutput, error) {
@@ -901,9 +901,9 @@ func (a *SecurityHubStub) GetMasterAccount(ctx workflow.Context, input *security
 	return &output, err
 }
 
-func (a *SecurityHubStub) GetMasterAccountAsync(ctx workflow.Context, input *securityhub.GetMasterAccountInput) *SecurityhubGetMasterAccountFuture {
+func (a *SecurityHubStub) GetMasterAccountAsync(ctx workflow.Context, input *securityhub.GetMasterAccountInput) *SecurityHubGetMasterAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.GetMasterAccount", input)
-	return &SecurityhubGetMasterAccountFuture{Future: future}
+	return &SecurityHubGetMasterAccountFuture{Future: future}
 }
 
 func (a *SecurityHubStub) GetMembers(ctx workflow.Context, input *securityhub.GetMembersInput) (*securityhub.GetMembersOutput, error) {
@@ -912,9 +912,9 @@ func (a *SecurityHubStub) GetMembers(ctx workflow.Context, input *securityhub.Ge
 	return &output, err
 }
 
-func (a *SecurityHubStub) GetMembersAsync(ctx workflow.Context, input *securityhub.GetMembersInput) *SecurityhubGetMembersFuture {
+func (a *SecurityHubStub) GetMembersAsync(ctx workflow.Context, input *securityhub.GetMembersInput) *SecurityHubGetMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.GetMembers", input)
-	return &SecurityhubGetMembersFuture{Future: future}
+	return &SecurityHubGetMembersFuture{Future: future}
 }
 
 func (a *SecurityHubStub) InviteMembers(ctx workflow.Context, input *securityhub.InviteMembersInput) (*securityhub.InviteMembersOutput, error) {
@@ -923,9 +923,9 @@ func (a *SecurityHubStub) InviteMembers(ctx workflow.Context, input *securityhub
 	return &output, err
 }
 
-func (a *SecurityHubStub) InviteMembersAsync(ctx workflow.Context, input *securityhub.InviteMembersInput) *SecurityhubInviteMembersFuture {
+func (a *SecurityHubStub) InviteMembersAsync(ctx workflow.Context, input *securityhub.InviteMembersInput) *SecurityHubInviteMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.InviteMembers", input)
-	return &SecurityhubInviteMembersFuture{Future: future}
+	return &SecurityHubInviteMembersFuture{Future: future}
 }
 
 func (a *SecurityHubStub) ListEnabledProductsForImport(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) (*securityhub.ListEnabledProductsForImportOutput, error) {
@@ -934,9 +934,9 @@ func (a *SecurityHubStub) ListEnabledProductsForImport(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *SecurityHubStub) ListEnabledProductsForImportAsync(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) *SecurityhubListEnabledProductsForImportFuture {
+func (a *SecurityHubStub) ListEnabledProductsForImportAsync(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) *SecurityHubListEnabledProductsForImportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.ListEnabledProductsForImport", input)
-	return &SecurityhubListEnabledProductsForImportFuture{Future: future}
+	return &SecurityHubListEnabledProductsForImportFuture{Future: future}
 }
 
 func (a *SecurityHubStub) ListInvitations(ctx workflow.Context, input *securityhub.ListInvitationsInput) (*securityhub.ListInvitationsOutput, error) {
@@ -945,9 +945,9 @@ func (a *SecurityHubStub) ListInvitations(ctx workflow.Context, input *securityh
 	return &output, err
 }
 
-func (a *SecurityHubStub) ListInvitationsAsync(ctx workflow.Context, input *securityhub.ListInvitationsInput) *SecurityhubListInvitationsFuture {
+func (a *SecurityHubStub) ListInvitationsAsync(ctx workflow.Context, input *securityhub.ListInvitationsInput) *SecurityHubListInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.ListInvitations", input)
-	return &SecurityhubListInvitationsFuture{Future: future}
+	return &SecurityHubListInvitationsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) ListMembers(ctx workflow.Context, input *securityhub.ListMembersInput) (*securityhub.ListMembersOutput, error) {
@@ -956,9 +956,9 @@ func (a *SecurityHubStub) ListMembers(ctx workflow.Context, input *securityhub.L
 	return &output, err
 }
 
-func (a *SecurityHubStub) ListMembersAsync(ctx workflow.Context, input *securityhub.ListMembersInput) *SecurityhubListMembersFuture {
+func (a *SecurityHubStub) ListMembersAsync(ctx workflow.Context, input *securityhub.ListMembersInput) *SecurityHubListMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.ListMembers", input)
-	return &SecurityhubListMembersFuture{Future: future}
+	return &SecurityHubListMembersFuture{Future: future}
 }
 
 func (a *SecurityHubStub) ListTagsForResource(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) (*securityhub.ListTagsForResourceOutput, error) {
@@ -967,9 +967,9 @@ func (a *SecurityHubStub) ListTagsForResource(ctx workflow.Context, input *secur
 	return &output, err
 }
 
-func (a *SecurityHubStub) ListTagsForResourceAsync(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) *SecurityhubListTagsForResourceFuture {
+func (a *SecurityHubStub) ListTagsForResourceAsync(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) *SecurityHubListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.ListTagsForResource", input)
-	return &SecurityhubListTagsForResourceFuture{Future: future}
+	return &SecurityHubListTagsForResourceFuture{Future: future}
 }
 
 func (a *SecurityHubStub) TagResource(ctx workflow.Context, input *securityhub.TagResourceInput) (*securityhub.TagResourceOutput, error) {
@@ -978,9 +978,9 @@ func (a *SecurityHubStub) TagResource(ctx workflow.Context, input *securityhub.T
 	return &output, err
 }
 
-func (a *SecurityHubStub) TagResourceAsync(ctx workflow.Context, input *securityhub.TagResourceInput) *SecurityhubTagResourceFuture {
+func (a *SecurityHubStub) TagResourceAsync(ctx workflow.Context, input *securityhub.TagResourceInput) *SecurityHubTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.TagResource", input)
-	return &SecurityhubTagResourceFuture{Future: future}
+	return &SecurityHubTagResourceFuture{Future: future}
 }
 
 func (a *SecurityHubStub) UntagResource(ctx workflow.Context, input *securityhub.UntagResourceInput) (*securityhub.UntagResourceOutput, error) {
@@ -989,9 +989,9 @@ func (a *SecurityHubStub) UntagResource(ctx workflow.Context, input *securityhub
 	return &output, err
 }
 
-func (a *SecurityHubStub) UntagResourceAsync(ctx workflow.Context, input *securityhub.UntagResourceInput) *SecurityhubUntagResourceFuture {
+func (a *SecurityHubStub) UntagResourceAsync(ctx workflow.Context, input *securityhub.UntagResourceInput) *SecurityHubUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.UntagResource", input)
-	return &SecurityhubUntagResourceFuture{Future: future}
+	return &SecurityHubUntagResourceFuture{Future: future}
 }
 
 func (a *SecurityHubStub) UpdateActionTarget(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) (*securityhub.UpdateActionTargetOutput, error) {
@@ -1000,9 +1000,9 @@ func (a *SecurityHubStub) UpdateActionTarget(ctx workflow.Context, input *securi
 	return &output, err
 }
 
-func (a *SecurityHubStub) UpdateActionTargetAsync(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) *SecurityhubUpdateActionTargetFuture {
+func (a *SecurityHubStub) UpdateActionTargetAsync(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) *SecurityHubUpdateActionTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.UpdateActionTarget", input)
-	return &SecurityhubUpdateActionTargetFuture{Future: future}
+	return &SecurityHubUpdateActionTargetFuture{Future: future}
 }
 
 func (a *SecurityHubStub) UpdateFindings(ctx workflow.Context, input *securityhub.UpdateFindingsInput) (*securityhub.UpdateFindingsOutput, error) {
@@ -1011,9 +1011,9 @@ func (a *SecurityHubStub) UpdateFindings(ctx workflow.Context, input *securityhu
 	return &output, err
 }
 
-func (a *SecurityHubStub) UpdateFindingsAsync(ctx workflow.Context, input *securityhub.UpdateFindingsInput) *SecurityhubUpdateFindingsFuture {
+func (a *SecurityHubStub) UpdateFindingsAsync(ctx workflow.Context, input *securityhub.UpdateFindingsInput) *SecurityHubUpdateFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.UpdateFindings", input)
-	return &SecurityhubUpdateFindingsFuture{Future: future}
+	return &SecurityHubUpdateFindingsFuture{Future: future}
 }
 
 func (a *SecurityHubStub) UpdateInsight(ctx workflow.Context, input *securityhub.UpdateInsightInput) (*securityhub.UpdateInsightOutput, error) {
@@ -1022,9 +1022,9 @@ func (a *SecurityHubStub) UpdateInsight(ctx workflow.Context, input *securityhub
 	return &output, err
 }
 
-func (a *SecurityHubStub) UpdateInsightAsync(ctx workflow.Context, input *securityhub.UpdateInsightInput) *SecurityhubUpdateInsightFuture {
+func (a *SecurityHubStub) UpdateInsightAsync(ctx workflow.Context, input *securityhub.UpdateInsightInput) *SecurityHubUpdateInsightFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.UpdateInsight", input)
-	return &SecurityhubUpdateInsightFuture{Future: future}
+	return &SecurityHubUpdateInsightFuture{Future: future}
 }
 
 func (a *SecurityHubStub) UpdateSecurityHubConfiguration(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) (*securityhub.UpdateSecurityHubConfigurationOutput, error) {
@@ -1033,9 +1033,9 @@ func (a *SecurityHubStub) UpdateSecurityHubConfiguration(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *SecurityHubStub) UpdateSecurityHubConfigurationAsync(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) *SecurityhubUpdateSecurityHubConfigurationFuture {
+func (a *SecurityHubStub) UpdateSecurityHubConfigurationAsync(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) *SecurityHubUpdateSecurityHubConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.UpdateSecurityHubConfiguration", input)
-	return &SecurityhubUpdateSecurityHubConfigurationFuture{Future: future}
+	return &SecurityHubUpdateSecurityHubConfigurationFuture{Future: future}
 }
 
 func (a *SecurityHubStub) UpdateStandardsControl(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) (*securityhub.UpdateStandardsControlOutput, error) {
@@ -1044,7 +1044,7 @@ func (a *SecurityHubStub) UpdateStandardsControl(ctx workflow.Context, input *se
 	return &output, err
 }
 
-func (a *SecurityHubStub) UpdateStandardsControlAsync(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) *SecurityhubUpdateStandardsControlFuture {
+func (a *SecurityHubStub) UpdateStandardsControlAsync(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) *SecurityHubUpdateStandardsControlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.securityhub.UpdateStandardsControl", input)
-	return &SecurityhubUpdateStandardsControlFuture{Future: future}
+	return &SecurityHubUpdateStandardsControlFuture{Future: future}
 }

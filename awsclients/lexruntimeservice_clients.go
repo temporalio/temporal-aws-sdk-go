@@ -11,19 +11,19 @@ import (
 
 type LexRuntimeServiceClient interface {
 	DeleteSession(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) (*lexruntimeservice.DeleteSessionOutput, error)
-	DeleteSessionAsync(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) *LexruntimeserviceDeleteSessionFuture
+	DeleteSessionAsync(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) *LexRuntimeServiceDeleteSessionFuture
 
 	GetSession(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error)
-	GetSessionAsync(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) *LexruntimeserviceGetSessionFuture
+	GetSessionAsync(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) *LexRuntimeServiceGetSessionFuture
 
 	PostContent(ctx workflow.Context, input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error)
-	PostContentAsync(ctx workflow.Context, input *lexruntimeservice.PostContentInput) *LexruntimeservicePostContentFuture
+	PostContentAsync(ctx workflow.Context, input *lexruntimeservice.PostContentInput) *LexRuntimeServicePostContentFuture
 
 	PostText(ctx workflow.Context, input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error)
-	PostTextAsync(ctx workflow.Context, input *lexruntimeservice.PostTextInput) *LexruntimeservicePostTextFuture
+	PostTextAsync(ctx workflow.Context, input *lexruntimeservice.PostTextInput) *LexRuntimeServicePostTextFuture
 
 	PutSession(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error)
-	PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexruntimeservicePutSessionFuture
+	PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexRuntimeServicePutSessionFuture
 }
 
 type LexRuntimeServiceStub struct{}
@@ -32,51 +32,51 @@ func NewLexRuntimeServiceStub() LexRuntimeServiceClient {
 	return &LexRuntimeServiceStub{}
 }
 
-type LexruntimeserviceDeleteSessionFuture struct {
+type LexRuntimeServiceDeleteSessionFuture struct {
 	Future workflow.Future
 }
 
-func (r *LexruntimeserviceDeleteSessionFuture) Get(ctx workflow.Context) (*lexruntimeservice.DeleteSessionOutput, error) {
+func (r *LexRuntimeServiceDeleteSessionFuture) Get(ctx workflow.Context) (*lexruntimeservice.DeleteSessionOutput, error) {
 	var output lexruntimeservice.DeleteSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LexruntimeserviceGetSessionFuture struct {
+type LexRuntimeServiceGetSessionFuture struct {
 	Future workflow.Future
 }
 
-func (r *LexruntimeserviceGetSessionFuture) Get(ctx workflow.Context) (*lexruntimeservice.GetSessionOutput, error) {
+func (r *LexRuntimeServiceGetSessionFuture) Get(ctx workflow.Context) (*lexruntimeservice.GetSessionOutput, error) {
 	var output lexruntimeservice.GetSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LexruntimeservicePostContentFuture struct {
+type LexRuntimeServicePostContentFuture struct {
 	Future workflow.Future
 }
 
-func (r *LexruntimeservicePostContentFuture) Get(ctx workflow.Context) (*lexruntimeservice.PostContentOutput, error) {
+func (r *LexRuntimeServicePostContentFuture) Get(ctx workflow.Context) (*lexruntimeservice.PostContentOutput, error) {
 	var output lexruntimeservice.PostContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LexruntimeservicePostTextFuture struct {
+type LexRuntimeServicePostTextFuture struct {
 	Future workflow.Future
 }
 
-func (r *LexruntimeservicePostTextFuture) Get(ctx workflow.Context) (*lexruntimeservice.PostTextOutput, error) {
+func (r *LexRuntimeServicePostTextFuture) Get(ctx workflow.Context) (*lexruntimeservice.PostTextOutput, error) {
 	var output lexruntimeservice.PostTextOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type LexruntimeservicePutSessionFuture struct {
+type LexRuntimeServicePutSessionFuture struct {
 	Future workflow.Future
 }
 
-func (r *LexruntimeservicePutSessionFuture) Get(ctx workflow.Context) (*lexruntimeservice.PutSessionOutput, error) {
+func (r *LexRuntimeServicePutSessionFuture) Get(ctx workflow.Context) (*lexruntimeservice.PutSessionOutput, error) {
 	var output lexruntimeservice.PutSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -88,9 +88,9 @@ func (a *LexRuntimeServiceStub) DeleteSession(ctx workflow.Context, input *lexru
 	return &output, err
 }
 
-func (a *LexRuntimeServiceStub) DeleteSessionAsync(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) *LexruntimeserviceDeleteSessionFuture {
+func (a *LexRuntimeServiceStub) DeleteSessionAsync(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) *LexRuntimeServiceDeleteSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lexruntimeservice.DeleteSession", input)
-	return &LexruntimeserviceDeleteSessionFuture{Future: future}
+	return &LexRuntimeServiceDeleteSessionFuture{Future: future}
 }
 
 func (a *LexRuntimeServiceStub) GetSession(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error) {
@@ -99,9 +99,9 @@ func (a *LexRuntimeServiceStub) GetSession(ctx workflow.Context, input *lexrunti
 	return &output, err
 }
 
-func (a *LexRuntimeServiceStub) GetSessionAsync(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) *LexruntimeserviceGetSessionFuture {
+func (a *LexRuntimeServiceStub) GetSessionAsync(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) *LexRuntimeServiceGetSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lexruntimeservice.GetSession", input)
-	return &LexruntimeserviceGetSessionFuture{Future: future}
+	return &LexRuntimeServiceGetSessionFuture{Future: future}
 }
 
 func (a *LexRuntimeServiceStub) PostContent(ctx workflow.Context, input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error) {
@@ -110,9 +110,9 @@ func (a *LexRuntimeServiceStub) PostContent(ctx workflow.Context, input *lexrunt
 	return &output, err
 }
 
-func (a *LexRuntimeServiceStub) PostContentAsync(ctx workflow.Context, input *lexruntimeservice.PostContentInput) *LexruntimeservicePostContentFuture {
+func (a *LexRuntimeServiceStub) PostContentAsync(ctx workflow.Context, input *lexruntimeservice.PostContentInput) *LexRuntimeServicePostContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lexruntimeservice.PostContent", input)
-	return &LexruntimeservicePostContentFuture{Future: future}
+	return &LexRuntimeServicePostContentFuture{Future: future}
 }
 
 func (a *LexRuntimeServiceStub) PostText(ctx workflow.Context, input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error) {
@@ -121,9 +121,9 @@ func (a *LexRuntimeServiceStub) PostText(ctx workflow.Context, input *lexruntime
 	return &output, err
 }
 
-func (a *LexRuntimeServiceStub) PostTextAsync(ctx workflow.Context, input *lexruntimeservice.PostTextInput) *LexruntimeservicePostTextFuture {
+func (a *LexRuntimeServiceStub) PostTextAsync(ctx workflow.Context, input *lexruntimeservice.PostTextInput) *LexRuntimeServicePostTextFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lexruntimeservice.PostText", input)
-	return &LexruntimeservicePostTextFuture{Future: future}
+	return &LexRuntimeServicePostTextFuture{Future: future}
 }
 
 func (a *LexRuntimeServiceStub) PutSession(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error) {
@@ -132,7 +132,7 @@ func (a *LexRuntimeServiceStub) PutSession(ctx workflow.Context, input *lexrunti
 	return &output, err
 }
 
-func (a *LexRuntimeServiceStub) PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexruntimeservicePutSessionFuture {
+func (a *LexRuntimeServiceStub) PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexRuntimeServicePutSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.lexruntimeservice.PutSession", input)
-	return &LexruntimeservicePutSessionFuture{Future: future}
+	return &LexRuntimeServicePutSessionFuture{Future: future}
 }

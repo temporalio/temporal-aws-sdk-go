@@ -11,37 +11,37 @@ import (
 
 type CodeGuruReviewerClient interface {
 	AssociateRepository(ctx workflow.Context, input *codegurureviewer.AssociateRepositoryInput) (*codegurureviewer.AssociateRepositoryOutput, error)
-	AssociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.AssociateRepositoryInput) *CodegurureviewerAssociateRepositoryFuture
+	AssociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.AssociateRepositoryInput) *CodeGuruReviewerAssociateRepositoryFuture
 
 	CreateCodeReview(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) (*codegurureviewer.CreateCodeReviewOutput, error)
-	CreateCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) *CodegurureviewerCreateCodeReviewFuture
+	CreateCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) *CodeGuruReviewerCreateCodeReviewFuture
 
 	DescribeCodeReview(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) (*codegurureviewer.DescribeCodeReviewOutput, error)
-	DescribeCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) *CodegurureviewerDescribeCodeReviewFuture
+	DescribeCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) *CodeGuruReviewerDescribeCodeReviewFuture
 
 	DescribeRecommendationFeedback(ctx workflow.Context, input *codegurureviewer.DescribeRecommendationFeedbackInput) (*codegurureviewer.DescribeRecommendationFeedbackOutput, error)
-	DescribeRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.DescribeRecommendationFeedbackInput) *CodegurureviewerDescribeRecommendationFeedbackFuture
+	DescribeRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.DescribeRecommendationFeedbackInput) *CodeGuruReviewerDescribeRecommendationFeedbackFuture
 
 	DescribeRepositoryAssociation(ctx workflow.Context, input *codegurureviewer.DescribeRepositoryAssociationInput) (*codegurureviewer.DescribeRepositoryAssociationOutput, error)
-	DescribeRepositoryAssociationAsync(ctx workflow.Context, input *codegurureviewer.DescribeRepositoryAssociationInput) *CodegurureviewerDescribeRepositoryAssociationFuture
+	DescribeRepositoryAssociationAsync(ctx workflow.Context, input *codegurureviewer.DescribeRepositoryAssociationInput) *CodeGuruReviewerDescribeRepositoryAssociationFuture
 
 	DisassociateRepository(ctx workflow.Context, input *codegurureviewer.DisassociateRepositoryInput) (*codegurureviewer.DisassociateRepositoryOutput, error)
-	DisassociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.DisassociateRepositoryInput) *CodegurureviewerDisassociateRepositoryFuture
+	DisassociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.DisassociateRepositoryInput) *CodeGuruReviewerDisassociateRepositoryFuture
 
 	ListCodeReviews(ctx workflow.Context, input *codegurureviewer.ListCodeReviewsInput) (*codegurureviewer.ListCodeReviewsOutput, error)
-	ListCodeReviewsAsync(ctx workflow.Context, input *codegurureviewer.ListCodeReviewsInput) *CodegurureviewerListCodeReviewsFuture
+	ListCodeReviewsAsync(ctx workflow.Context, input *codegurureviewer.ListCodeReviewsInput) *CodeGuruReviewerListCodeReviewsFuture
 
 	ListRecommendationFeedback(ctx workflow.Context, input *codegurureviewer.ListRecommendationFeedbackInput) (*codegurureviewer.ListRecommendationFeedbackOutput, error)
-	ListRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.ListRecommendationFeedbackInput) *CodegurureviewerListRecommendationFeedbackFuture
+	ListRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.ListRecommendationFeedbackInput) *CodeGuruReviewerListRecommendationFeedbackFuture
 
 	ListRecommendations(ctx workflow.Context, input *codegurureviewer.ListRecommendationsInput) (*codegurureviewer.ListRecommendationsOutput, error)
-	ListRecommendationsAsync(ctx workflow.Context, input *codegurureviewer.ListRecommendationsInput) *CodegurureviewerListRecommendationsFuture
+	ListRecommendationsAsync(ctx workflow.Context, input *codegurureviewer.ListRecommendationsInput) *CodeGuruReviewerListRecommendationsFuture
 
 	ListRepositoryAssociations(ctx workflow.Context, input *codegurureviewer.ListRepositoryAssociationsInput) (*codegurureviewer.ListRepositoryAssociationsOutput, error)
-	ListRepositoryAssociationsAsync(ctx workflow.Context, input *codegurureviewer.ListRepositoryAssociationsInput) *CodegurureviewerListRepositoryAssociationsFuture
+	ListRepositoryAssociationsAsync(ctx workflow.Context, input *codegurureviewer.ListRepositoryAssociationsInput) *CodeGuruReviewerListRepositoryAssociationsFuture
 
 	PutRecommendationFeedback(ctx workflow.Context, input *codegurureviewer.PutRecommendationFeedbackInput) (*codegurureviewer.PutRecommendationFeedbackOutput, error)
-	PutRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.PutRecommendationFeedbackInput) *CodegurureviewerPutRecommendationFeedbackFuture
+	PutRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.PutRecommendationFeedbackInput) *CodeGuruReviewerPutRecommendationFeedbackFuture
 }
 
 type CodeGuruReviewerStub struct{}
@@ -50,111 +50,111 @@ func NewCodeGuruReviewerStub() CodeGuruReviewerClient {
 	return &CodeGuruReviewerStub{}
 }
 
-type CodegurureviewerAssociateRepositoryFuture struct {
+type CodeGuruReviewerAssociateRepositoryFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerAssociateRepositoryFuture) Get(ctx workflow.Context) (*codegurureviewer.AssociateRepositoryOutput, error) {
+func (r *CodeGuruReviewerAssociateRepositoryFuture) Get(ctx workflow.Context) (*codegurureviewer.AssociateRepositoryOutput, error) {
 	var output codegurureviewer.AssociateRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerCreateCodeReviewFuture struct {
+type CodeGuruReviewerCreateCodeReviewFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerCreateCodeReviewFuture) Get(ctx workflow.Context) (*codegurureviewer.CreateCodeReviewOutput, error) {
+func (r *CodeGuruReviewerCreateCodeReviewFuture) Get(ctx workflow.Context) (*codegurureviewer.CreateCodeReviewOutput, error) {
 	var output codegurureviewer.CreateCodeReviewOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerDescribeCodeReviewFuture struct {
+type CodeGuruReviewerDescribeCodeReviewFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerDescribeCodeReviewFuture) Get(ctx workflow.Context) (*codegurureviewer.DescribeCodeReviewOutput, error) {
+func (r *CodeGuruReviewerDescribeCodeReviewFuture) Get(ctx workflow.Context) (*codegurureviewer.DescribeCodeReviewOutput, error) {
 	var output codegurureviewer.DescribeCodeReviewOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerDescribeRecommendationFeedbackFuture struct {
+type CodeGuruReviewerDescribeRecommendationFeedbackFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerDescribeRecommendationFeedbackFuture) Get(ctx workflow.Context) (*codegurureviewer.DescribeRecommendationFeedbackOutput, error) {
+func (r *CodeGuruReviewerDescribeRecommendationFeedbackFuture) Get(ctx workflow.Context) (*codegurureviewer.DescribeRecommendationFeedbackOutput, error) {
 	var output codegurureviewer.DescribeRecommendationFeedbackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerDescribeRepositoryAssociationFuture struct {
+type CodeGuruReviewerDescribeRepositoryAssociationFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerDescribeRepositoryAssociationFuture) Get(ctx workflow.Context) (*codegurureviewer.DescribeRepositoryAssociationOutput, error) {
+func (r *CodeGuruReviewerDescribeRepositoryAssociationFuture) Get(ctx workflow.Context) (*codegurureviewer.DescribeRepositoryAssociationOutput, error) {
 	var output codegurureviewer.DescribeRepositoryAssociationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerDisassociateRepositoryFuture struct {
+type CodeGuruReviewerDisassociateRepositoryFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerDisassociateRepositoryFuture) Get(ctx workflow.Context) (*codegurureviewer.DisassociateRepositoryOutput, error) {
+func (r *CodeGuruReviewerDisassociateRepositoryFuture) Get(ctx workflow.Context) (*codegurureviewer.DisassociateRepositoryOutput, error) {
 	var output codegurureviewer.DisassociateRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerListCodeReviewsFuture struct {
+type CodeGuruReviewerListCodeReviewsFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerListCodeReviewsFuture) Get(ctx workflow.Context) (*codegurureviewer.ListCodeReviewsOutput, error) {
+func (r *CodeGuruReviewerListCodeReviewsFuture) Get(ctx workflow.Context) (*codegurureviewer.ListCodeReviewsOutput, error) {
 	var output codegurureviewer.ListCodeReviewsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerListRecommendationFeedbackFuture struct {
+type CodeGuruReviewerListRecommendationFeedbackFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerListRecommendationFeedbackFuture) Get(ctx workflow.Context) (*codegurureviewer.ListRecommendationFeedbackOutput, error) {
+func (r *CodeGuruReviewerListRecommendationFeedbackFuture) Get(ctx workflow.Context) (*codegurureviewer.ListRecommendationFeedbackOutput, error) {
 	var output codegurureviewer.ListRecommendationFeedbackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerListRecommendationsFuture struct {
+type CodeGuruReviewerListRecommendationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerListRecommendationsFuture) Get(ctx workflow.Context) (*codegurureviewer.ListRecommendationsOutput, error) {
+func (r *CodeGuruReviewerListRecommendationsFuture) Get(ctx workflow.Context) (*codegurureviewer.ListRecommendationsOutput, error) {
 	var output codegurureviewer.ListRecommendationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerListRepositoryAssociationsFuture struct {
+type CodeGuruReviewerListRepositoryAssociationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerListRepositoryAssociationsFuture) Get(ctx workflow.Context) (*codegurureviewer.ListRepositoryAssociationsOutput, error) {
+func (r *CodeGuruReviewerListRepositoryAssociationsFuture) Get(ctx workflow.Context) (*codegurureviewer.ListRepositoryAssociationsOutput, error) {
 	var output codegurureviewer.ListRepositoryAssociationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodegurureviewerPutRecommendationFeedbackFuture struct {
+type CodeGuruReviewerPutRecommendationFeedbackFuture struct {
 	Future workflow.Future
 }
 
-func (r *CodegurureviewerPutRecommendationFeedbackFuture) Get(ctx workflow.Context) (*codegurureviewer.PutRecommendationFeedbackOutput, error) {
+func (r *CodeGuruReviewerPutRecommendationFeedbackFuture) Get(ctx workflow.Context) (*codegurureviewer.PutRecommendationFeedbackOutput, error) {
 	var output codegurureviewer.PutRecommendationFeedbackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -166,9 +166,9 @@ func (a *CodeGuruReviewerStub) AssociateRepository(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) AssociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.AssociateRepositoryInput) *CodegurureviewerAssociateRepositoryFuture {
+func (a *CodeGuruReviewerStub) AssociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.AssociateRepositoryInput) *CodeGuruReviewerAssociateRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.AssociateRepository", input)
-	return &CodegurureviewerAssociateRepositoryFuture{Future: future}
+	return &CodeGuruReviewerAssociateRepositoryFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) CreateCodeReview(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) (*codegurureviewer.CreateCodeReviewOutput, error) {
@@ -177,9 +177,9 @@ func (a *CodeGuruReviewerStub) CreateCodeReview(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) CreateCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) *CodegurureviewerCreateCodeReviewFuture {
+func (a *CodeGuruReviewerStub) CreateCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) *CodeGuruReviewerCreateCodeReviewFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.CreateCodeReview", input)
-	return &CodegurureviewerCreateCodeReviewFuture{Future: future}
+	return &CodeGuruReviewerCreateCodeReviewFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) DescribeCodeReview(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) (*codegurureviewer.DescribeCodeReviewOutput, error) {
@@ -188,9 +188,9 @@ func (a *CodeGuruReviewerStub) DescribeCodeReview(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) DescribeCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) *CodegurureviewerDescribeCodeReviewFuture {
+func (a *CodeGuruReviewerStub) DescribeCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) *CodeGuruReviewerDescribeCodeReviewFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.DescribeCodeReview", input)
-	return &CodegurureviewerDescribeCodeReviewFuture{Future: future}
+	return &CodeGuruReviewerDescribeCodeReviewFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) DescribeRecommendationFeedback(ctx workflow.Context, input *codegurureviewer.DescribeRecommendationFeedbackInput) (*codegurureviewer.DescribeRecommendationFeedbackOutput, error) {
@@ -199,9 +199,9 @@ func (a *CodeGuruReviewerStub) DescribeRecommendationFeedback(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) DescribeRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.DescribeRecommendationFeedbackInput) *CodegurureviewerDescribeRecommendationFeedbackFuture {
+func (a *CodeGuruReviewerStub) DescribeRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.DescribeRecommendationFeedbackInput) *CodeGuruReviewerDescribeRecommendationFeedbackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.DescribeRecommendationFeedback", input)
-	return &CodegurureviewerDescribeRecommendationFeedbackFuture{Future: future}
+	return &CodeGuruReviewerDescribeRecommendationFeedbackFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) DescribeRepositoryAssociation(ctx workflow.Context, input *codegurureviewer.DescribeRepositoryAssociationInput) (*codegurureviewer.DescribeRepositoryAssociationOutput, error) {
@@ -210,9 +210,9 @@ func (a *CodeGuruReviewerStub) DescribeRepositoryAssociation(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) DescribeRepositoryAssociationAsync(ctx workflow.Context, input *codegurureviewer.DescribeRepositoryAssociationInput) *CodegurureviewerDescribeRepositoryAssociationFuture {
+func (a *CodeGuruReviewerStub) DescribeRepositoryAssociationAsync(ctx workflow.Context, input *codegurureviewer.DescribeRepositoryAssociationInput) *CodeGuruReviewerDescribeRepositoryAssociationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.DescribeRepositoryAssociation", input)
-	return &CodegurureviewerDescribeRepositoryAssociationFuture{Future: future}
+	return &CodeGuruReviewerDescribeRepositoryAssociationFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) DisassociateRepository(ctx workflow.Context, input *codegurureviewer.DisassociateRepositoryInput) (*codegurureviewer.DisassociateRepositoryOutput, error) {
@@ -221,9 +221,9 @@ func (a *CodeGuruReviewerStub) DisassociateRepository(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) DisassociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.DisassociateRepositoryInput) *CodegurureviewerDisassociateRepositoryFuture {
+func (a *CodeGuruReviewerStub) DisassociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.DisassociateRepositoryInput) *CodeGuruReviewerDisassociateRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.DisassociateRepository", input)
-	return &CodegurureviewerDisassociateRepositoryFuture{Future: future}
+	return &CodeGuruReviewerDisassociateRepositoryFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) ListCodeReviews(ctx workflow.Context, input *codegurureviewer.ListCodeReviewsInput) (*codegurureviewer.ListCodeReviewsOutput, error) {
@@ -232,9 +232,9 @@ func (a *CodeGuruReviewerStub) ListCodeReviews(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) ListCodeReviewsAsync(ctx workflow.Context, input *codegurureviewer.ListCodeReviewsInput) *CodegurureviewerListCodeReviewsFuture {
+func (a *CodeGuruReviewerStub) ListCodeReviewsAsync(ctx workflow.Context, input *codegurureviewer.ListCodeReviewsInput) *CodeGuruReviewerListCodeReviewsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.ListCodeReviews", input)
-	return &CodegurureviewerListCodeReviewsFuture{Future: future}
+	return &CodeGuruReviewerListCodeReviewsFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) ListRecommendationFeedback(ctx workflow.Context, input *codegurureviewer.ListRecommendationFeedbackInput) (*codegurureviewer.ListRecommendationFeedbackOutput, error) {
@@ -243,9 +243,9 @@ func (a *CodeGuruReviewerStub) ListRecommendationFeedback(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) ListRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.ListRecommendationFeedbackInput) *CodegurureviewerListRecommendationFeedbackFuture {
+func (a *CodeGuruReviewerStub) ListRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.ListRecommendationFeedbackInput) *CodeGuruReviewerListRecommendationFeedbackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.ListRecommendationFeedback", input)
-	return &CodegurureviewerListRecommendationFeedbackFuture{Future: future}
+	return &CodeGuruReviewerListRecommendationFeedbackFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) ListRecommendations(ctx workflow.Context, input *codegurureviewer.ListRecommendationsInput) (*codegurureviewer.ListRecommendationsOutput, error) {
@@ -254,9 +254,9 @@ func (a *CodeGuruReviewerStub) ListRecommendations(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) ListRecommendationsAsync(ctx workflow.Context, input *codegurureviewer.ListRecommendationsInput) *CodegurureviewerListRecommendationsFuture {
+func (a *CodeGuruReviewerStub) ListRecommendationsAsync(ctx workflow.Context, input *codegurureviewer.ListRecommendationsInput) *CodeGuruReviewerListRecommendationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.ListRecommendations", input)
-	return &CodegurureviewerListRecommendationsFuture{Future: future}
+	return &CodeGuruReviewerListRecommendationsFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) ListRepositoryAssociations(ctx workflow.Context, input *codegurureviewer.ListRepositoryAssociationsInput) (*codegurureviewer.ListRepositoryAssociationsOutput, error) {
@@ -265,9 +265,9 @@ func (a *CodeGuruReviewerStub) ListRepositoryAssociations(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) ListRepositoryAssociationsAsync(ctx workflow.Context, input *codegurureviewer.ListRepositoryAssociationsInput) *CodegurureviewerListRepositoryAssociationsFuture {
+func (a *CodeGuruReviewerStub) ListRepositoryAssociationsAsync(ctx workflow.Context, input *codegurureviewer.ListRepositoryAssociationsInput) *CodeGuruReviewerListRepositoryAssociationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.ListRepositoryAssociations", input)
-	return &CodegurureviewerListRepositoryAssociationsFuture{Future: future}
+	return &CodeGuruReviewerListRepositoryAssociationsFuture{Future: future}
 }
 
 func (a *CodeGuruReviewerStub) PutRecommendationFeedback(ctx workflow.Context, input *codegurureviewer.PutRecommendationFeedbackInput) (*codegurureviewer.PutRecommendationFeedbackOutput, error) {
@@ -276,7 +276,7 @@ func (a *CodeGuruReviewerStub) PutRecommendationFeedback(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *CodeGuruReviewerStub) PutRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.PutRecommendationFeedbackInput) *CodegurureviewerPutRecommendationFeedbackFuture {
+func (a *CodeGuruReviewerStub) PutRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.PutRecommendationFeedbackInput) *CodeGuruReviewerPutRecommendationFeedbackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codegurureviewer.PutRecommendationFeedback", input)
-	return &CodegurureviewerPutRecommendationFeedbackFuture{Future: future}
+	return &CodeGuruReviewerPutRecommendationFeedbackFuture{Future: future}
 }

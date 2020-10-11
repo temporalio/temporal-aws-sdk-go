@@ -11,79 +11,79 @@ import (
 
 type ApplicationDiscoveryServiceClient interface {
 	AssociateConfigurationItemsToApplication(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) (*applicationdiscoveryservice.AssociateConfigurationItemsToApplicationOutput, error)
-	AssociateConfigurationItemsToApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) *ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationFuture
+	AssociateConfigurationItemsToApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) *ApplicationDiscoveryServiceAssociateConfigurationItemsToApplicationFuture
 
 	BatchDeleteImportData(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) (*applicationdiscoveryservice.BatchDeleteImportDataOutput, error)
-	BatchDeleteImportDataAsync(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) *ApplicationdiscoveryserviceBatchDeleteImportDataFuture
+	BatchDeleteImportDataAsync(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) *ApplicationDiscoveryServiceBatchDeleteImportDataFuture
 
 	CreateApplication(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) (*applicationdiscoveryservice.CreateApplicationOutput, error)
-	CreateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) *ApplicationdiscoveryserviceCreateApplicationFuture
+	CreateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) *ApplicationDiscoveryServiceCreateApplicationFuture
 
 	CreateTags(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) (*applicationdiscoveryservice.CreateTagsOutput, error)
-	CreateTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) *ApplicationdiscoveryserviceCreateTagsFuture
+	CreateTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) *ApplicationDiscoveryServiceCreateTagsFuture
 
 	DeleteApplications(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) (*applicationdiscoveryservice.DeleteApplicationsOutput, error)
-	DeleteApplicationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) *ApplicationdiscoveryserviceDeleteApplicationsFuture
+	DeleteApplicationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) *ApplicationDiscoveryServiceDeleteApplicationsFuture
 
 	DeleteTags(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) (*applicationdiscoveryservice.DeleteTagsOutput, error)
-	DeleteTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) *ApplicationdiscoveryserviceDeleteTagsFuture
+	DeleteTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) *ApplicationDiscoveryServiceDeleteTagsFuture
 
 	DescribeAgents(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) (*applicationdiscoveryservice.DescribeAgentsOutput, error)
-	DescribeAgentsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) *ApplicationdiscoveryserviceDescribeAgentsFuture
+	DescribeAgentsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) *ApplicationDiscoveryServiceDescribeAgentsFuture
 
 	DescribeConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) (*applicationdiscoveryservice.DescribeConfigurationsOutput, error)
-	DescribeConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) *ApplicationdiscoveryserviceDescribeConfigurationsFuture
+	DescribeConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) *ApplicationDiscoveryServiceDescribeConfigurationsFuture
 
 	DescribeContinuousExports(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) (*applicationdiscoveryservice.DescribeContinuousExportsOutput, error)
-	DescribeContinuousExportsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) *ApplicationdiscoveryserviceDescribeContinuousExportsFuture
+	DescribeContinuousExportsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) *ApplicationDiscoveryServiceDescribeContinuousExportsFuture
 
 	DescribeExportConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) (*applicationdiscoveryservice.DescribeExportConfigurationsOutput, error)
-	DescribeExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) *ApplicationdiscoveryserviceDescribeExportConfigurationsFuture
+	DescribeExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) *ApplicationDiscoveryServiceDescribeExportConfigurationsFuture
 
 	DescribeExportTasks(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) (*applicationdiscoveryservice.DescribeExportTasksOutput, error)
-	DescribeExportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) *ApplicationdiscoveryserviceDescribeExportTasksFuture
+	DescribeExportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) *ApplicationDiscoveryServiceDescribeExportTasksFuture
 
 	DescribeImportTasks(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) (*applicationdiscoveryservice.DescribeImportTasksOutput, error)
-	DescribeImportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) *ApplicationdiscoveryserviceDescribeImportTasksFuture
+	DescribeImportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) *ApplicationDiscoveryServiceDescribeImportTasksFuture
 
 	DescribeTags(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) (*applicationdiscoveryservice.DescribeTagsOutput, error)
-	DescribeTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) *ApplicationdiscoveryserviceDescribeTagsFuture
+	DescribeTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) *ApplicationDiscoveryServiceDescribeTagsFuture
 
 	DisassociateConfigurationItemsFromApplication(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) (*applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationOutput, error)
-	DisassociateConfigurationItemsFromApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) *ApplicationdiscoveryserviceDisassociateConfigurationItemsFromApplicationFuture
+	DisassociateConfigurationItemsFromApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) *ApplicationDiscoveryServiceDisassociateConfigurationItemsFromApplicationFuture
 
 	ExportConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) (*applicationdiscoveryservice.ExportConfigurationsOutput, error)
-	ExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) *ApplicationdiscoveryserviceExportConfigurationsFuture
+	ExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) *ApplicationDiscoveryServiceExportConfigurationsFuture
 
 	GetDiscoverySummary(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) (*applicationdiscoveryservice.GetDiscoverySummaryOutput, error)
-	GetDiscoverySummaryAsync(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) *ApplicationdiscoveryserviceGetDiscoverySummaryFuture
+	GetDiscoverySummaryAsync(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) *ApplicationDiscoveryServiceGetDiscoverySummaryFuture
 
 	ListConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) (*applicationdiscoveryservice.ListConfigurationsOutput, error)
-	ListConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) *ApplicationdiscoveryserviceListConfigurationsFuture
+	ListConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) *ApplicationDiscoveryServiceListConfigurationsFuture
 
 	ListServerNeighbors(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) (*applicationdiscoveryservice.ListServerNeighborsOutput, error)
-	ListServerNeighborsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) *ApplicationdiscoveryserviceListServerNeighborsFuture
+	ListServerNeighborsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) *ApplicationDiscoveryServiceListServerNeighborsFuture
 
 	StartContinuousExport(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) (*applicationdiscoveryservice.StartContinuousExportOutput, error)
-	StartContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) *ApplicationdiscoveryserviceStartContinuousExportFuture
+	StartContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) *ApplicationDiscoveryServiceStartContinuousExportFuture
 
 	StartDataCollectionByAgentIds(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) (*applicationdiscoveryservice.StartDataCollectionByAgentIdsOutput, error)
-	StartDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) *ApplicationdiscoveryserviceStartDataCollectionByAgentIdsFuture
+	StartDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) *ApplicationDiscoveryServiceStartDataCollectionByAgentIdsFuture
 
 	StartExportTask(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) (*applicationdiscoveryservice.StartExportTaskOutput, error)
-	StartExportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) *ApplicationdiscoveryserviceStartExportTaskFuture
+	StartExportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) *ApplicationDiscoveryServiceStartExportTaskFuture
 
 	StartImportTask(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) (*applicationdiscoveryservice.StartImportTaskOutput, error)
-	StartImportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) *ApplicationdiscoveryserviceStartImportTaskFuture
+	StartImportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) *ApplicationDiscoveryServiceStartImportTaskFuture
 
 	StopContinuousExport(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) (*applicationdiscoveryservice.StopContinuousExportOutput, error)
-	StopContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) *ApplicationdiscoveryserviceStopContinuousExportFuture
+	StopContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) *ApplicationDiscoveryServiceStopContinuousExportFuture
 
 	StopDataCollectionByAgentIds(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) (*applicationdiscoveryservice.StopDataCollectionByAgentIdsOutput, error)
-	StopDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) *ApplicationdiscoveryserviceStopDataCollectionByAgentIdsFuture
+	StopDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) *ApplicationDiscoveryServiceStopDataCollectionByAgentIdsFuture
 
 	UpdateApplication(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) (*applicationdiscoveryservice.UpdateApplicationOutput, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) *ApplicationdiscoveryserviceUpdateApplicationFuture
+	UpdateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) *ApplicationDiscoveryServiceUpdateApplicationFuture
 }
 
 type ApplicationDiscoveryServiceStub struct{}
@@ -92,251 +92,251 @@ func NewApplicationDiscoveryServiceStub() ApplicationDiscoveryServiceClient {
 	return &ApplicationDiscoveryServiceStub{}
 }
 
-type ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationFuture struct {
+type ApplicationDiscoveryServiceAssociateConfigurationItemsToApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.AssociateConfigurationItemsToApplicationOutput, error) {
+func (r *ApplicationDiscoveryServiceAssociateConfigurationItemsToApplicationFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.AssociateConfigurationItemsToApplicationOutput, error) {
 	var output applicationdiscoveryservice.AssociateConfigurationItemsToApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceBatchDeleteImportDataFuture struct {
+type ApplicationDiscoveryServiceBatchDeleteImportDataFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceBatchDeleteImportDataFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.BatchDeleteImportDataOutput, error) {
+func (r *ApplicationDiscoveryServiceBatchDeleteImportDataFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.BatchDeleteImportDataOutput, error) {
 	var output applicationdiscoveryservice.BatchDeleteImportDataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceCreateApplicationFuture struct {
+type ApplicationDiscoveryServiceCreateApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceCreateApplicationFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.CreateApplicationOutput, error) {
+func (r *ApplicationDiscoveryServiceCreateApplicationFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.CreateApplicationOutput, error) {
 	var output applicationdiscoveryservice.CreateApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceCreateTagsFuture struct {
+type ApplicationDiscoveryServiceCreateTagsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceCreateTagsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.CreateTagsOutput, error) {
+func (r *ApplicationDiscoveryServiceCreateTagsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.CreateTagsOutput, error) {
 	var output applicationdiscoveryservice.CreateTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDeleteApplicationsFuture struct {
+type ApplicationDiscoveryServiceDeleteApplicationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDeleteApplicationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DeleteApplicationsOutput, error) {
+func (r *ApplicationDiscoveryServiceDeleteApplicationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DeleteApplicationsOutput, error) {
 	var output applicationdiscoveryservice.DeleteApplicationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDeleteTagsFuture struct {
+type ApplicationDiscoveryServiceDeleteTagsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDeleteTagsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DeleteTagsOutput, error) {
+func (r *ApplicationDiscoveryServiceDeleteTagsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DeleteTagsOutput, error) {
 	var output applicationdiscoveryservice.DeleteTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDescribeAgentsFuture struct {
+type ApplicationDiscoveryServiceDescribeAgentsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDescribeAgentsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeAgentsOutput, error) {
+func (r *ApplicationDiscoveryServiceDescribeAgentsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeAgentsOutput, error) {
 	var output applicationdiscoveryservice.DescribeAgentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDescribeConfigurationsFuture struct {
+type ApplicationDiscoveryServiceDescribeConfigurationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDescribeConfigurationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeConfigurationsOutput, error) {
+func (r *ApplicationDiscoveryServiceDescribeConfigurationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeConfigurationsOutput, error) {
 	var output applicationdiscoveryservice.DescribeConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDescribeContinuousExportsFuture struct {
+type ApplicationDiscoveryServiceDescribeContinuousExportsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDescribeContinuousExportsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeContinuousExportsOutput, error) {
+func (r *ApplicationDiscoveryServiceDescribeContinuousExportsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeContinuousExportsOutput, error) {
 	var output applicationdiscoveryservice.DescribeContinuousExportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDescribeExportConfigurationsFuture struct {
+type ApplicationDiscoveryServiceDescribeExportConfigurationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDescribeExportConfigurationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeExportConfigurationsOutput, error) {
+func (r *ApplicationDiscoveryServiceDescribeExportConfigurationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeExportConfigurationsOutput, error) {
 	var output applicationdiscoveryservice.DescribeExportConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDescribeExportTasksFuture struct {
+type ApplicationDiscoveryServiceDescribeExportTasksFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDescribeExportTasksFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeExportTasksOutput, error) {
+func (r *ApplicationDiscoveryServiceDescribeExportTasksFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeExportTasksOutput, error) {
 	var output applicationdiscoveryservice.DescribeExportTasksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDescribeImportTasksFuture struct {
+type ApplicationDiscoveryServiceDescribeImportTasksFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDescribeImportTasksFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeImportTasksOutput, error) {
+func (r *ApplicationDiscoveryServiceDescribeImportTasksFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeImportTasksOutput, error) {
 	var output applicationdiscoveryservice.DescribeImportTasksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDescribeTagsFuture struct {
+type ApplicationDiscoveryServiceDescribeTagsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDescribeTagsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeTagsOutput, error) {
+func (r *ApplicationDiscoveryServiceDescribeTagsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DescribeTagsOutput, error) {
 	var output applicationdiscoveryservice.DescribeTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceDisassociateConfigurationItemsFromApplicationFuture struct {
+type ApplicationDiscoveryServiceDisassociateConfigurationItemsFromApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceDisassociateConfigurationItemsFromApplicationFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationOutput, error) {
+func (r *ApplicationDiscoveryServiceDisassociateConfigurationItemsFromApplicationFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationOutput, error) {
 	var output applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceExportConfigurationsFuture struct {
+type ApplicationDiscoveryServiceExportConfigurationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceExportConfigurationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.ExportConfigurationsOutput, error) {
+func (r *ApplicationDiscoveryServiceExportConfigurationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.ExportConfigurationsOutput, error) {
 	var output applicationdiscoveryservice.ExportConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceGetDiscoverySummaryFuture struct {
+type ApplicationDiscoveryServiceGetDiscoverySummaryFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceGetDiscoverySummaryFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.GetDiscoverySummaryOutput, error) {
+func (r *ApplicationDiscoveryServiceGetDiscoverySummaryFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.GetDiscoverySummaryOutput, error) {
 	var output applicationdiscoveryservice.GetDiscoverySummaryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceListConfigurationsFuture struct {
+type ApplicationDiscoveryServiceListConfigurationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceListConfigurationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.ListConfigurationsOutput, error) {
+func (r *ApplicationDiscoveryServiceListConfigurationsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.ListConfigurationsOutput, error) {
 	var output applicationdiscoveryservice.ListConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceListServerNeighborsFuture struct {
+type ApplicationDiscoveryServiceListServerNeighborsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceListServerNeighborsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.ListServerNeighborsOutput, error) {
+func (r *ApplicationDiscoveryServiceListServerNeighborsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.ListServerNeighborsOutput, error) {
 	var output applicationdiscoveryservice.ListServerNeighborsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceStartContinuousExportFuture struct {
+type ApplicationDiscoveryServiceStartContinuousExportFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceStartContinuousExportFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StartContinuousExportOutput, error) {
+func (r *ApplicationDiscoveryServiceStartContinuousExportFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StartContinuousExportOutput, error) {
 	var output applicationdiscoveryservice.StartContinuousExportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceStartDataCollectionByAgentIdsFuture struct {
+type ApplicationDiscoveryServiceStartDataCollectionByAgentIdsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceStartDataCollectionByAgentIdsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StartDataCollectionByAgentIdsOutput, error) {
+func (r *ApplicationDiscoveryServiceStartDataCollectionByAgentIdsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StartDataCollectionByAgentIdsOutput, error) {
 	var output applicationdiscoveryservice.StartDataCollectionByAgentIdsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceStartExportTaskFuture struct {
+type ApplicationDiscoveryServiceStartExportTaskFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceStartExportTaskFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StartExportTaskOutput, error) {
+func (r *ApplicationDiscoveryServiceStartExportTaskFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StartExportTaskOutput, error) {
 	var output applicationdiscoveryservice.StartExportTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceStartImportTaskFuture struct {
+type ApplicationDiscoveryServiceStartImportTaskFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceStartImportTaskFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StartImportTaskOutput, error) {
+func (r *ApplicationDiscoveryServiceStartImportTaskFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StartImportTaskOutput, error) {
 	var output applicationdiscoveryservice.StartImportTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceStopContinuousExportFuture struct {
+type ApplicationDiscoveryServiceStopContinuousExportFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceStopContinuousExportFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StopContinuousExportOutput, error) {
+func (r *ApplicationDiscoveryServiceStopContinuousExportFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StopContinuousExportOutput, error) {
 	var output applicationdiscoveryservice.StopContinuousExportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceStopDataCollectionByAgentIdsFuture struct {
+type ApplicationDiscoveryServiceStopDataCollectionByAgentIdsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceStopDataCollectionByAgentIdsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StopDataCollectionByAgentIdsOutput, error) {
+func (r *ApplicationDiscoveryServiceStopDataCollectionByAgentIdsFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.StopDataCollectionByAgentIdsOutput, error) {
 	var output applicationdiscoveryservice.StopDataCollectionByAgentIdsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApplicationdiscoveryserviceUpdateApplicationFuture struct {
+type ApplicationDiscoveryServiceUpdateApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApplicationdiscoveryserviceUpdateApplicationFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.UpdateApplicationOutput, error) {
+func (r *ApplicationDiscoveryServiceUpdateApplicationFuture) Get(ctx workflow.Context) (*applicationdiscoveryservice.UpdateApplicationOutput, error) {
 	var output applicationdiscoveryservice.UpdateApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -348,9 +348,9 @@ func (a *ApplicationDiscoveryServiceStub) AssociateConfigurationItemsToApplicati
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) AssociateConfigurationItemsToApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) *ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationFuture {
+func (a *ApplicationDiscoveryServiceStub) AssociateConfigurationItemsToApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) *ApplicationDiscoveryServiceAssociateConfigurationItemsToApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.AssociateConfigurationItemsToApplication", input)
-	return &ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationFuture{Future: future}
+	return &ApplicationDiscoveryServiceAssociateConfigurationItemsToApplicationFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) BatchDeleteImportData(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) (*applicationdiscoveryservice.BatchDeleteImportDataOutput, error) {
@@ -359,9 +359,9 @@ func (a *ApplicationDiscoveryServiceStub) BatchDeleteImportData(ctx workflow.Con
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) BatchDeleteImportDataAsync(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) *ApplicationdiscoveryserviceBatchDeleteImportDataFuture {
+func (a *ApplicationDiscoveryServiceStub) BatchDeleteImportDataAsync(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) *ApplicationDiscoveryServiceBatchDeleteImportDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.BatchDeleteImportData", input)
-	return &ApplicationdiscoveryserviceBatchDeleteImportDataFuture{Future: future}
+	return &ApplicationDiscoveryServiceBatchDeleteImportDataFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) CreateApplication(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) (*applicationdiscoveryservice.CreateApplicationOutput, error) {
@@ -370,9 +370,9 @@ func (a *ApplicationDiscoveryServiceStub) CreateApplication(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) CreateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) *ApplicationdiscoveryserviceCreateApplicationFuture {
+func (a *ApplicationDiscoveryServiceStub) CreateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) *ApplicationDiscoveryServiceCreateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.CreateApplication", input)
-	return &ApplicationdiscoveryserviceCreateApplicationFuture{Future: future}
+	return &ApplicationDiscoveryServiceCreateApplicationFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) CreateTags(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) (*applicationdiscoveryservice.CreateTagsOutput, error) {
@@ -381,9 +381,9 @@ func (a *ApplicationDiscoveryServiceStub) CreateTags(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) CreateTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) *ApplicationdiscoveryserviceCreateTagsFuture {
+func (a *ApplicationDiscoveryServiceStub) CreateTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) *ApplicationDiscoveryServiceCreateTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.CreateTags", input)
-	return &ApplicationdiscoveryserviceCreateTagsFuture{Future: future}
+	return &ApplicationDiscoveryServiceCreateTagsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DeleteApplications(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) (*applicationdiscoveryservice.DeleteApplicationsOutput, error) {
@@ -392,9 +392,9 @@ func (a *ApplicationDiscoveryServiceStub) DeleteApplications(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DeleteApplicationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) *ApplicationdiscoveryserviceDeleteApplicationsFuture {
+func (a *ApplicationDiscoveryServiceStub) DeleteApplicationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) *ApplicationDiscoveryServiceDeleteApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DeleteApplications", input)
-	return &ApplicationdiscoveryserviceDeleteApplicationsFuture{Future: future}
+	return &ApplicationDiscoveryServiceDeleteApplicationsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DeleteTags(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) (*applicationdiscoveryservice.DeleteTagsOutput, error) {
@@ -403,9 +403,9 @@ func (a *ApplicationDiscoveryServiceStub) DeleteTags(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DeleteTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) *ApplicationdiscoveryserviceDeleteTagsFuture {
+func (a *ApplicationDiscoveryServiceStub) DeleteTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) *ApplicationDiscoveryServiceDeleteTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DeleteTags", input)
-	return &ApplicationdiscoveryserviceDeleteTagsFuture{Future: future}
+	return &ApplicationDiscoveryServiceDeleteTagsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DescribeAgents(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) (*applicationdiscoveryservice.DescribeAgentsOutput, error) {
@@ -414,9 +414,9 @@ func (a *ApplicationDiscoveryServiceStub) DescribeAgents(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DescribeAgentsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) *ApplicationdiscoveryserviceDescribeAgentsFuture {
+func (a *ApplicationDiscoveryServiceStub) DescribeAgentsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) *ApplicationDiscoveryServiceDescribeAgentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DescribeAgents", input)
-	return &ApplicationdiscoveryserviceDescribeAgentsFuture{Future: future}
+	return &ApplicationDiscoveryServiceDescribeAgentsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DescribeConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) (*applicationdiscoveryservice.DescribeConfigurationsOutput, error) {
@@ -425,9 +425,9 @@ func (a *ApplicationDiscoveryServiceStub) DescribeConfigurations(ctx workflow.Co
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DescribeConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) *ApplicationdiscoveryserviceDescribeConfigurationsFuture {
+func (a *ApplicationDiscoveryServiceStub) DescribeConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) *ApplicationDiscoveryServiceDescribeConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DescribeConfigurations", input)
-	return &ApplicationdiscoveryserviceDescribeConfigurationsFuture{Future: future}
+	return &ApplicationDiscoveryServiceDescribeConfigurationsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DescribeContinuousExports(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) (*applicationdiscoveryservice.DescribeContinuousExportsOutput, error) {
@@ -436,9 +436,9 @@ func (a *ApplicationDiscoveryServiceStub) DescribeContinuousExports(ctx workflow
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DescribeContinuousExportsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) *ApplicationdiscoveryserviceDescribeContinuousExportsFuture {
+func (a *ApplicationDiscoveryServiceStub) DescribeContinuousExportsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) *ApplicationDiscoveryServiceDescribeContinuousExportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DescribeContinuousExports", input)
-	return &ApplicationdiscoveryserviceDescribeContinuousExportsFuture{Future: future}
+	return &ApplicationDiscoveryServiceDescribeContinuousExportsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DescribeExportConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) (*applicationdiscoveryservice.DescribeExportConfigurationsOutput, error) {
@@ -447,9 +447,9 @@ func (a *ApplicationDiscoveryServiceStub) DescribeExportConfigurations(ctx workf
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DescribeExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) *ApplicationdiscoveryserviceDescribeExportConfigurationsFuture {
+func (a *ApplicationDiscoveryServiceStub) DescribeExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) *ApplicationDiscoveryServiceDescribeExportConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DescribeExportConfigurations", input)
-	return &ApplicationdiscoveryserviceDescribeExportConfigurationsFuture{Future: future}
+	return &ApplicationDiscoveryServiceDescribeExportConfigurationsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DescribeExportTasks(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) (*applicationdiscoveryservice.DescribeExportTasksOutput, error) {
@@ -458,9 +458,9 @@ func (a *ApplicationDiscoveryServiceStub) DescribeExportTasks(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DescribeExportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) *ApplicationdiscoveryserviceDescribeExportTasksFuture {
+func (a *ApplicationDiscoveryServiceStub) DescribeExportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) *ApplicationDiscoveryServiceDescribeExportTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DescribeExportTasks", input)
-	return &ApplicationdiscoveryserviceDescribeExportTasksFuture{Future: future}
+	return &ApplicationDiscoveryServiceDescribeExportTasksFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DescribeImportTasks(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) (*applicationdiscoveryservice.DescribeImportTasksOutput, error) {
@@ -469,9 +469,9 @@ func (a *ApplicationDiscoveryServiceStub) DescribeImportTasks(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DescribeImportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) *ApplicationdiscoveryserviceDescribeImportTasksFuture {
+func (a *ApplicationDiscoveryServiceStub) DescribeImportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) *ApplicationDiscoveryServiceDescribeImportTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DescribeImportTasks", input)
-	return &ApplicationdiscoveryserviceDescribeImportTasksFuture{Future: future}
+	return &ApplicationDiscoveryServiceDescribeImportTasksFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DescribeTags(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) (*applicationdiscoveryservice.DescribeTagsOutput, error) {
@@ -480,9 +480,9 @@ func (a *ApplicationDiscoveryServiceStub) DescribeTags(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DescribeTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) *ApplicationdiscoveryserviceDescribeTagsFuture {
+func (a *ApplicationDiscoveryServiceStub) DescribeTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) *ApplicationDiscoveryServiceDescribeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DescribeTags", input)
-	return &ApplicationdiscoveryserviceDescribeTagsFuture{Future: future}
+	return &ApplicationDiscoveryServiceDescribeTagsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) DisassociateConfigurationItemsFromApplication(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) (*applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationOutput, error) {
@@ -491,9 +491,9 @@ func (a *ApplicationDiscoveryServiceStub) DisassociateConfigurationItemsFromAppl
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) DisassociateConfigurationItemsFromApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) *ApplicationdiscoveryserviceDisassociateConfigurationItemsFromApplicationFuture {
+func (a *ApplicationDiscoveryServiceStub) DisassociateConfigurationItemsFromApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) *ApplicationDiscoveryServiceDisassociateConfigurationItemsFromApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.DisassociateConfigurationItemsFromApplication", input)
-	return &ApplicationdiscoveryserviceDisassociateConfigurationItemsFromApplicationFuture{Future: future}
+	return &ApplicationDiscoveryServiceDisassociateConfigurationItemsFromApplicationFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) ExportConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) (*applicationdiscoveryservice.ExportConfigurationsOutput, error) {
@@ -502,9 +502,9 @@ func (a *ApplicationDiscoveryServiceStub) ExportConfigurations(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) ExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) *ApplicationdiscoveryserviceExportConfigurationsFuture {
+func (a *ApplicationDiscoveryServiceStub) ExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) *ApplicationDiscoveryServiceExportConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.ExportConfigurations", input)
-	return &ApplicationdiscoveryserviceExportConfigurationsFuture{Future: future}
+	return &ApplicationDiscoveryServiceExportConfigurationsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) GetDiscoverySummary(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) (*applicationdiscoveryservice.GetDiscoverySummaryOutput, error) {
@@ -513,9 +513,9 @@ func (a *ApplicationDiscoveryServiceStub) GetDiscoverySummary(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) GetDiscoverySummaryAsync(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) *ApplicationdiscoveryserviceGetDiscoverySummaryFuture {
+func (a *ApplicationDiscoveryServiceStub) GetDiscoverySummaryAsync(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) *ApplicationDiscoveryServiceGetDiscoverySummaryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.GetDiscoverySummary", input)
-	return &ApplicationdiscoveryserviceGetDiscoverySummaryFuture{Future: future}
+	return &ApplicationDiscoveryServiceGetDiscoverySummaryFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) ListConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) (*applicationdiscoveryservice.ListConfigurationsOutput, error) {
@@ -524,9 +524,9 @@ func (a *ApplicationDiscoveryServiceStub) ListConfigurations(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) ListConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) *ApplicationdiscoveryserviceListConfigurationsFuture {
+func (a *ApplicationDiscoveryServiceStub) ListConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) *ApplicationDiscoveryServiceListConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.ListConfigurations", input)
-	return &ApplicationdiscoveryserviceListConfigurationsFuture{Future: future}
+	return &ApplicationDiscoveryServiceListConfigurationsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) ListServerNeighbors(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) (*applicationdiscoveryservice.ListServerNeighborsOutput, error) {
@@ -535,9 +535,9 @@ func (a *ApplicationDiscoveryServiceStub) ListServerNeighbors(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) ListServerNeighborsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) *ApplicationdiscoveryserviceListServerNeighborsFuture {
+func (a *ApplicationDiscoveryServiceStub) ListServerNeighborsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) *ApplicationDiscoveryServiceListServerNeighborsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.ListServerNeighbors", input)
-	return &ApplicationdiscoveryserviceListServerNeighborsFuture{Future: future}
+	return &ApplicationDiscoveryServiceListServerNeighborsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) StartContinuousExport(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) (*applicationdiscoveryservice.StartContinuousExportOutput, error) {
@@ -546,9 +546,9 @@ func (a *ApplicationDiscoveryServiceStub) StartContinuousExport(ctx workflow.Con
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) StartContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) *ApplicationdiscoveryserviceStartContinuousExportFuture {
+func (a *ApplicationDiscoveryServiceStub) StartContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) *ApplicationDiscoveryServiceStartContinuousExportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.StartContinuousExport", input)
-	return &ApplicationdiscoveryserviceStartContinuousExportFuture{Future: future}
+	return &ApplicationDiscoveryServiceStartContinuousExportFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) StartDataCollectionByAgentIds(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) (*applicationdiscoveryservice.StartDataCollectionByAgentIdsOutput, error) {
@@ -557,9 +557,9 @@ func (a *ApplicationDiscoveryServiceStub) StartDataCollectionByAgentIds(ctx work
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) StartDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) *ApplicationdiscoveryserviceStartDataCollectionByAgentIdsFuture {
+func (a *ApplicationDiscoveryServiceStub) StartDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) *ApplicationDiscoveryServiceStartDataCollectionByAgentIdsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.StartDataCollectionByAgentIds", input)
-	return &ApplicationdiscoveryserviceStartDataCollectionByAgentIdsFuture{Future: future}
+	return &ApplicationDiscoveryServiceStartDataCollectionByAgentIdsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) StartExportTask(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) (*applicationdiscoveryservice.StartExportTaskOutput, error) {
@@ -568,9 +568,9 @@ func (a *ApplicationDiscoveryServiceStub) StartExportTask(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) StartExportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) *ApplicationdiscoveryserviceStartExportTaskFuture {
+func (a *ApplicationDiscoveryServiceStub) StartExportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) *ApplicationDiscoveryServiceStartExportTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.StartExportTask", input)
-	return &ApplicationdiscoveryserviceStartExportTaskFuture{Future: future}
+	return &ApplicationDiscoveryServiceStartExportTaskFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) StartImportTask(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) (*applicationdiscoveryservice.StartImportTaskOutput, error) {
@@ -579,9 +579,9 @@ func (a *ApplicationDiscoveryServiceStub) StartImportTask(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) StartImportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) *ApplicationdiscoveryserviceStartImportTaskFuture {
+func (a *ApplicationDiscoveryServiceStub) StartImportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) *ApplicationDiscoveryServiceStartImportTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.StartImportTask", input)
-	return &ApplicationdiscoveryserviceStartImportTaskFuture{Future: future}
+	return &ApplicationDiscoveryServiceStartImportTaskFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) StopContinuousExport(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) (*applicationdiscoveryservice.StopContinuousExportOutput, error) {
@@ -590,9 +590,9 @@ func (a *ApplicationDiscoveryServiceStub) StopContinuousExport(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) StopContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) *ApplicationdiscoveryserviceStopContinuousExportFuture {
+func (a *ApplicationDiscoveryServiceStub) StopContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) *ApplicationDiscoveryServiceStopContinuousExportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.StopContinuousExport", input)
-	return &ApplicationdiscoveryserviceStopContinuousExportFuture{Future: future}
+	return &ApplicationDiscoveryServiceStopContinuousExportFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) StopDataCollectionByAgentIds(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) (*applicationdiscoveryservice.StopDataCollectionByAgentIdsOutput, error) {
@@ -601,9 +601,9 @@ func (a *ApplicationDiscoveryServiceStub) StopDataCollectionByAgentIds(ctx workf
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) StopDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) *ApplicationdiscoveryserviceStopDataCollectionByAgentIdsFuture {
+func (a *ApplicationDiscoveryServiceStub) StopDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) *ApplicationDiscoveryServiceStopDataCollectionByAgentIdsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.StopDataCollectionByAgentIds", input)
-	return &ApplicationdiscoveryserviceStopDataCollectionByAgentIdsFuture{Future: future}
+	return &ApplicationDiscoveryServiceStopDataCollectionByAgentIdsFuture{Future: future}
 }
 
 func (a *ApplicationDiscoveryServiceStub) UpdateApplication(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) (*applicationdiscoveryservice.UpdateApplicationOutput, error) {
@@ -612,7 +612,7 @@ func (a *ApplicationDiscoveryServiceStub) UpdateApplication(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ApplicationDiscoveryServiceStub) UpdateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) *ApplicationdiscoveryserviceUpdateApplicationFuture {
+func (a *ApplicationDiscoveryServiceStub) UpdateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) *ApplicationDiscoveryServiceUpdateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.applicationdiscoveryservice.UpdateApplication", input)
-	return &ApplicationdiscoveryserviceUpdateApplicationFuture{Future: future}
+	return &ApplicationDiscoveryServiceUpdateApplicationFuture{Future: future}
 }

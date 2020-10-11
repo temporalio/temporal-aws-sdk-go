@@ -11,79 +11,79 @@ import (
 
 type MediaConvertClient interface {
 	AssociateCertificate(ctx workflow.Context, input *mediaconvert.AssociateCertificateInput) (*mediaconvert.AssociateCertificateOutput, error)
-	AssociateCertificateAsync(ctx workflow.Context, input *mediaconvert.AssociateCertificateInput) *MediaconvertAssociateCertificateFuture
+	AssociateCertificateAsync(ctx workflow.Context, input *mediaconvert.AssociateCertificateInput) *MediaConvertAssociateCertificateFuture
 
 	CancelJob(ctx workflow.Context, input *mediaconvert.CancelJobInput) (*mediaconvert.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *mediaconvert.CancelJobInput) *MediaconvertCancelJobFuture
+	CancelJobAsync(ctx workflow.Context, input *mediaconvert.CancelJobInput) *MediaConvertCancelJobFuture
 
 	CreateJob(ctx workflow.Context, input *mediaconvert.CreateJobInput) (*mediaconvert.CreateJobOutput, error)
-	CreateJobAsync(ctx workflow.Context, input *mediaconvert.CreateJobInput) *MediaconvertCreateJobFuture
+	CreateJobAsync(ctx workflow.Context, input *mediaconvert.CreateJobInput) *MediaConvertCreateJobFuture
 
 	CreateJobTemplate(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) (*mediaconvert.CreateJobTemplateOutput, error)
-	CreateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) *MediaconvertCreateJobTemplateFuture
+	CreateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) *MediaConvertCreateJobTemplateFuture
 
 	CreatePreset(ctx workflow.Context, input *mediaconvert.CreatePresetInput) (*mediaconvert.CreatePresetOutput, error)
-	CreatePresetAsync(ctx workflow.Context, input *mediaconvert.CreatePresetInput) *MediaconvertCreatePresetFuture
+	CreatePresetAsync(ctx workflow.Context, input *mediaconvert.CreatePresetInput) *MediaConvertCreatePresetFuture
 
 	CreateQueue(ctx workflow.Context, input *mediaconvert.CreateQueueInput) (*mediaconvert.CreateQueueOutput, error)
-	CreateQueueAsync(ctx workflow.Context, input *mediaconvert.CreateQueueInput) *MediaconvertCreateQueueFuture
+	CreateQueueAsync(ctx workflow.Context, input *mediaconvert.CreateQueueInput) *MediaConvertCreateQueueFuture
 
 	DeleteJobTemplate(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) (*mediaconvert.DeleteJobTemplateOutput, error)
-	DeleteJobTemplateAsync(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) *MediaconvertDeleteJobTemplateFuture
+	DeleteJobTemplateAsync(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) *MediaConvertDeleteJobTemplateFuture
 
 	DeletePreset(ctx workflow.Context, input *mediaconvert.DeletePresetInput) (*mediaconvert.DeletePresetOutput, error)
-	DeletePresetAsync(ctx workflow.Context, input *mediaconvert.DeletePresetInput) *MediaconvertDeletePresetFuture
+	DeletePresetAsync(ctx workflow.Context, input *mediaconvert.DeletePresetInput) *MediaConvertDeletePresetFuture
 
 	DeleteQueue(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) (*mediaconvert.DeleteQueueOutput, error)
-	DeleteQueueAsync(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) *MediaconvertDeleteQueueFuture
+	DeleteQueueAsync(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) *MediaConvertDeleteQueueFuture
 
 	DescribeEndpoints(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) (*mediaconvert.DescribeEndpointsOutput, error)
-	DescribeEndpointsAsync(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) *MediaconvertDescribeEndpointsFuture
+	DescribeEndpointsAsync(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) *MediaConvertDescribeEndpointsFuture
 
 	DisassociateCertificate(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) (*mediaconvert.DisassociateCertificateOutput, error)
-	DisassociateCertificateAsync(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) *MediaconvertDisassociateCertificateFuture
+	DisassociateCertificateAsync(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) *MediaConvertDisassociateCertificateFuture
 
 	GetJob(ctx workflow.Context, input *mediaconvert.GetJobInput) (*mediaconvert.GetJobOutput, error)
-	GetJobAsync(ctx workflow.Context, input *mediaconvert.GetJobInput) *MediaconvertGetJobFuture
+	GetJobAsync(ctx workflow.Context, input *mediaconvert.GetJobInput) *MediaConvertGetJobFuture
 
 	GetJobTemplate(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) (*mediaconvert.GetJobTemplateOutput, error)
-	GetJobTemplateAsync(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) *MediaconvertGetJobTemplateFuture
+	GetJobTemplateAsync(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) *MediaConvertGetJobTemplateFuture
 
 	GetPreset(ctx workflow.Context, input *mediaconvert.GetPresetInput) (*mediaconvert.GetPresetOutput, error)
-	GetPresetAsync(ctx workflow.Context, input *mediaconvert.GetPresetInput) *MediaconvertGetPresetFuture
+	GetPresetAsync(ctx workflow.Context, input *mediaconvert.GetPresetInput) *MediaConvertGetPresetFuture
 
 	GetQueue(ctx workflow.Context, input *mediaconvert.GetQueueInput) (*mediaconvert.GetQueueOutput, error)
-	GetQueueAsync(ctx workflow.Context, input *mediaconvert.GetQueueInput) *MediaconvertGetQueueFuture
+	GetQueueAsync(ctx workflow.Context, input *mediaconvert.GetQueueInput) *MediaConvertGetQueueFuture
 
 	ListJobTemplates(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) (*mediaconvert.ListJobTemplatesOutput, error)
-	ListJobTemplatesAsync(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) *MediaconvertListJobTemplatesFuture
+	ListJobTemplatesAsync(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) *MediaConvertListJobTemplatesFuture
 
 	ListJobs(ctx workflow.Context, input *mediaconvert.ListJobsInput) (*mediaconvert.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *mediaconvert.ListJobsInput) *MediaconvertListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *mediaconvert.ListJobsInput) *MediaConvertListJobsFuture
 
 	ListPresets(ctx workflow.Context, input *mediaconvert.ListPresetsInput) (*mediaconvert.ListPresetsOutput, error)
-	ListPresetsAsync(ctx workflow.Context, input *mediaconvert.ListPresetsInput) *MediaconvertListPresetsFuture
+	ListPresetsAsync(ctx workflow.Context, input *mediaconvert.ListPresetsInput) *MediaConvertListPresetsFuture
 
 	ListQueues(ctx workflow.Context, input *mediaconvert.ListQueuesInput) (*mediaconvert.ListQueuesOutput, error)
-	ListQueuesAsync(ctx workflow.Context, input *mediaconvert.ListQueuesInput) *MediaconvertListQueuesFuture
+	ListQueuesAsync(ctx workflow.Context, input *mediaconvert.ListQueuesInput) *MediaConvertListQueuesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) (*mediaconvert.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) *MediaconvertListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) *MediaConvertListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *mediaconvert.TagResourceInput) (*mediaconvert.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *mediaconvert.TagResourceInput) *MediaconvertTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *mediaconvert.TagResourceInput) *MediaConvertTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *mediaconvert.UntagResourceInput) (*mediaconvert.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *mediaconvert.UntagResourceInput) *MediaconvertUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *mediaconvert.UntagResourceInput) *MediaConvertUntagResourceFuture
 
 	UpdateJobTemplate(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) (*mediaconvert.UpdateJobTemplateOutput, error)
-	UpdateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) *MediaconvertUpdateJobTemplateFuture
+	UpdateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) *MediaConvertUpdateJobTemplateFuture
 
 	UpdatePreset(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) (*mediaconvert.UpdatePresetOutput, error)
-	UpdatePresetAsync(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) *MediaconvertUpdatePresetFuture
+	UpdatePresetAsync(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) *MediaConvertUpdatePresetFuture
 
 	UpdateQueue(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) (*mediaconvert.UpdateQueueOutput, error)
-	UpdateQueueAsync(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) *MediaconvertUpdateQueueFuture
+	UpdateQueueAsync(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) *MediaConvertUpdateQueueFuture
 }
 
 type MediaConvertStub struct{}
@@ -92,251 +92,251 @@ func NewMediaConvertStub() MediaConvertClient {
 	return &MediaConvertStub{}
 }
 
-type MediaconvertAssociateCertificateFuture struct {
+type MediaConvertAssociateCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertAssociateCertificateFuture) Get(ctx workflow.Context) (*mediaconvert.AssociateCertificateOutput, error) {
+func (r *MediaConvertAssociateCertificateFuture) Get(ctx workflow.Context) (*mediaconvert.AssociateCertificateOutput, error) {
 	var output mediaconvert.AssociateCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertCancelJobFuture struct {
+type MediaConvertCancelJobFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertCancelJobFuture) Get(ctx workflow.Context) (*mediaconvert.CancelJobOutput, error) {
+func (r *MediaConvertCancelJobFuture) Get(ctx workflow.Context) (*mediaconvert.CancelJobOutput, error) {
 	var output mediaconvert.CancelJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertCreateJobFuture struct {
+type MediaConvertCreateJobFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertCreateJobFuture) Get(ctx workflow.Context) (*mediaconvert.CreateJobOutput, error) {
+func (r *MediaConvertCreateJobFuture) Get(ctx workflow.Context) (*mediaconvert.CreateJobOutput, error) {
 	var output mediaconvert.CreateJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertCreateJobTemplateFuture struct {
+type MediaConvertCreateJobTemplateFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertCreateJobTemplateFuture) Get(ctx workflow.Context) (*mediaconvert.CreateJobTemplateOutput, error) {
+func (r *MediaConvertCreateJobTemplateFuture) Get(ctx workflow.Context) (*mediaconvert.CreateJobTemplateOutput, error) {
 	var output mediaconvert.CreateJobTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertCreatePresetFuture struct {
+type MediaConvertCreatePresetFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertCreatePresetFuture) Get(ctx workflow.Context) (*mediaconvert.CreatePresetOutput, error) {
+func (r *MediaConvertCreatePresetFuture) Get(ctx workflow.Context) (*mediaconvert.CreatePresetOutput, error) {
 	var output mediaconvert.CreatePresetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertCreateQueueFuture struct {
+type MediaConvertCreateQueueFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertCreateQueueFuture) Get(ctx workflow.Context) (*mediaconvert.CreateQueueOutput, error) {
+func (r *MediaConvertCreateQueueFuture) Get(ctx workflow.Context) (*mediaconvert.CreateQueueOutput, error) {
 	var output mediaconvert.CreateQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertDeleteJobTemplateFuture struct {
+type MediaConvertDeleteJobTemplateFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertDeleteJobTemplateFuture) Get(ctx workflow.Context) (*mediaconvert.DeleteJobTemplateOutput, error) {
+func (r *MediaConvertDeleteJobTemplateFuture) Get(ctx workflow.Context) (*mediaconvert.DeleteJobTemplateOutput, error) {
 	var output mediaconvert.DeleteJobTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertDeletePresetFuture struct {
+type MediaConvertDeletePresetFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertDeletePresetFuture) Get(ctx workflow.Context) (*mediaconvert.DeletePresetOutput, error) {
+func (r *MediaConvertDeletePresetFuture) Get(ctx workflow.Context) (*mediaconvert.DeletePresetOutput, error) {
 	var output mediaconvert.DeletePresetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertDeleteQueueFuture struct {
+type MediaConvertDeleteQueueFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertDeleteQueueFuture) Get(ctx workflow.Context) (*mediaconvert.DeleteQueueOutput, error) {
+func (r *MediaConvertDeleteQueueFuture) Get(ctx workflow.Context) (*mediaconvert.DeleteQueueOutput, error) {
 	var output mediaconvert.DeleteQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertDescribeEndpointsFuture struct {
+type MediaConvertDescribeEndpointsFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertDescribeEndpointsFuture) Get(ctx workflow.Context) (*mediaconvert.DescribeEndpointsOutput, error) {
+func (r *MediaConvertDescribeEndpointsFuture) Get(ctx workflow.Context) (*mediaconvert.DescribeEndpointsOutput, error) {
 	var output mediaconvert.DescribeEndpointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertDisassociateCertificateFuture struct {
+type MediaConvertDisassociateCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertDisassociateCertificateFuture) Get(ctx workflow.Context) (*mediaconvert.DisassociateCertificateOutput, error) {
+func (r *MediaConvertDisassociateCertificateFuture) Get(ctx workflow.Context) (*mediaconvert.DisassociateCertificateOutput, error) {
 	var output mediaconvert.DisassociateCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertGetJobFuture struct {
+type MediaConvertGetJobFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertGetJobFuture) Get(ctx workflow.Context) (*mediaconvert.GetJobOutput, error) {
+func (r *MediaConvertGetJobFuture) Get(ctx workflow.Context) (*mediaconvert.GetJobOutput, error) {
 	var output mediaconvert.GetJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertGetJobTemplateFuture struct {
+type MediaConvertGetJobTemplateFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertGetJobTemplateFuture) Get(ctx workflow.Context) (*mediaconvert.GetJobTemplateOutput, error) {
+func (r *MediaConvertGetJobTemplateFuture) Get(ctx workflow.Context) (*mediaconvert.GetJobTemplateOutput, error) {
 	var output mediaconvert.GetJobTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertGetPresetFuture struct {
+type MediaConvertGetPresetFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertGetPresetFuture) Get(ctx workflow.Context) (*mediaconvert.GetPresetOutput, error) {
+func (r *MediaConvertGetPresetFuture) Get(ctx workflow.Context) (*mediaconvert.GetPresetOutput, error) {
 	var output mediaconvert.GetPresetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertGetQueueFuture struct {
+type MediaConvertGetQueueFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertGetQueueFuture) Get(ctx workflow.Context) (*mediaconvert.GetQueueOutput, error) {
+func (r *MediaConvertGetQueueFuture) Get(ctx workflow.Context) (*mediaconvert.GetQueueOutput, error) {
 	var output mediaconvert.GetQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertListJobTemplatesFuture struct {
+type MediaConvertListJobTemplatesFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertListJobTemplatesFuture) Get(ctx workflow.Context) (*mediaconvert.ListJobTemplatesOutput, error) {
+func (r *MediaConvertListJobTemplatesFuture) Get(ctx workflow.Context) (*mediaconvert.ListJobTemplatesOutput, error) {
 	var output mediaconvert.ListJobTemplatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertListJobsFuture struct {
+type MediaConvertListJobsFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertListJobsFuture) Get(ctx workflow.Context) (*mediaconvert.ListJobsOutput, error) {
+func (r *MediaConvertListJobsFuture) Get(ctx workflow.Context) (*mediaconvert.ListJobsOutput, error) {
 	var output mediaconvert.ListJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertListPresetsFuture struct {
+type MediaConvertListPresetsFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertListPresetsFuture) Get(ctx workflow.Context) (*mediaconvert.ListPresetsOutput, error) {
+func (r *MediaConvertListPresetsFuture) Get(ctx workflow.Context) (*mediaconvert.ListPresetsOutput, error) {
 	var output mediaconvert.ListPresetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertListQueuesFuture struct {
+type MediaConvertListQueuesFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertListQueuesFuture) Get(ctx workflow.Context) (*mediaconvert.ListQueuesOutput, error) {
+func (r *MediaConvertListQueuesFuture) Get(ctx workflow.Context) (*mediaconvert.ListQueuesOutput, error) {
 	var output mediaconvert.ListQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertListTagsForResourceFuture struct {
+type MediaConvertListTagsForResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertListTagsForResourceFuture) Get(ctx workflow.Context) (*mediaconvert.ListTagsForResourceOutput, error) {
+func (r *MediaConvertListTagsForResourceFuture) Get(ctx workflow.Context) (*mediaconvert.ListTagsForResourceOutput, error) {
 	var output mediaconvert.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertTagResourceFuture struct {
+type MediaConvertTagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertTagResourceFuture) Get(ctx workflow.Context) (*mediaconvert.TagResourceOutput, error) {
+func (r *MediaConvertTagResourceFuture) Get(ctx workflow.Context) (*mediaconvert.TagResourceOutput, error) {
 	var output mediaconvert.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertUntagResourceFuture struct {
+type MediaConvertUntagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertUntagResourceFuture) Get(ctx workflow.Context) (*mediaconvert.UntagResourceOutput, error) {
+func (r *MediaConvertUntagResourceFuture) Get(ctx workflow.Context) (*mediaconvert.UntagResourceOutput, error) {
 	var output mediaconvert.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertUpdateJobTemplateFuture struct {
+type MediaConvertUpdateJobTemplateFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertUpdateJobTemplateFuture) Get(ctx workflow.Context) (*mediaconvert.UpdateJobTemplateOutput, error) {
+func (r *MediaConvertUpdateJobTemplateFuture) Get(ctx workflow.Context) (*mediaconvert.UpdateJobTemplateOutput, error) {
 	var output mediaconvert.UpdateJobTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertUpdatePresetFuture struct {
+type MediaConvertUpdatePresetFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertUpdatePresetFuture) Get(ctx workflow.Context) (*mediaconvert.UpdatePresetOutput, error) {
+func (r *MediaConvertUpdatePresetFuture) Get(ctx workflow.Context) (*mediaconvert.UpdatePresetOutput, error) {
 	var output mediaconvert.UpdatePresetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaconvertUpdateQueueFuture struct {
+type MediaConvertUpdateQueueFuture struct {
 	Future workflow.Future
 }
 
-func (r *MediaconvertUpdateQueueFuture) Get(ctx workflow.Context) (*mediaconvert.UpdateQueueOutput, error) {
+func (r *MediaConvertUpdateQueueFuture) Get(ctx workflow.Context) (*mediaconvert.UpdateQueueOutput, error) {
 	var output mediaconvert.UpdateQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -348,9 +348,9 @@ func (a *MediaConvertStub) AssociateCertificate(ctx workflow.Context, input *med
 	return &output, err
 }
 
-func (a *MediaConvertStub) AssociateCertificateAsync(ctx workflow.Context, input *mediaconvert.AssociateCertificateInput) *MediaconvertAssociateCertificateFuture {
+func (a *MediaConvertStub) AssociateCertificateAsync(ctx workflow.Context, input *mediaconvert.AssociateCertificateInput) *MediaConvertAssociateCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.AssociateCertificate", input)
-	return &MediaconvertAssociateCertificateFuture{Future: future}
+	return &MediaConvertAssociateCertificateFuture{Future: future}
 }
 
 func (a *MediaConvertStub) CancelJob(ctx workflow.Context, input *mediaconvert.CancelJobInput) (*mediaconvert.CancelJobOutput, error) {
@@ -359,9 +359,9 @@ func (a *MediaConvertStub) CancelJob(ctx workflow.Context, input *mediaconvert.C
 	return &output, err
 }
 
-func (a *MediaConvertStub) CancelJobAsync(ctx workflow.Context, input *mediaconvert.CancelJobInput) *MediaconvertCancelJobFuture {
+func (a *MediaConvertStub) CancelJobAsync(ctx workflow.Context, input *mediaconvert.CancelJobInput) *MediaConvertCancelJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.CancelJob", input)
-	return &MediaconvertCancelJobFuture{Future: future}
+	return &MediaConvertCancelJobFuture{Future: future}
 }
 
 func (a *MediaConvertStub) CreateJob(ctx workflow.Context, input *mediaconvert.CreateJobInput) (*mediaconvert.CreateJobOutput, error) {
@@ -370,9 +370,9 @@ func (a *MediaConvertStub) CreateJob(ctx workflow.Context, input *mediaconvert.C
 	return &output, err
 }
 
-func (a *MediaConvertStub) CreateJobAsync(ctx workflow.Context, input *mediaconvert.CreateJobInput) *MediaconvertCreateJobFuture {
+func (a *MediaConvertStub) CreateJobAsync(ctx workflow.Context, input *mediaconvert.CreateJobInput) *MediaConvertCreateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.CreateJob", input)
-	return &MediaconvertCreateJobFuture{Future: future}
+	return &MediaConvertCreateJobFuture{Future: future}
 }
 
 func (a *MediaConvertStub) CreateJobTemplate(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) (*mediaconvert.CreateJobTemplateOutput, error) {
@@ -381,9 +381,9 @@ func (a *MediaConvertStub) CreateJobTemplate(ctx workflow.Context, input *mediac
 	return &output, err
 }
 
-func (a *MediaConvertStub) CreateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) *MediaconvertCreateJobTemplateFuture {
+func (a *MediaConvertStub) CreateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) *MediaConvertCreateJobTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.CreateJobTemplate", input)
-	return &MediaconvertCreateJobTemplateFuture{Future: future}
+	return &MediaConvertCreateJobTemplateFuture{Future: future}
 }
 
 func (a *MediaConvertStub) CreatePreset(ctx workflow.Context, input *mediaconvert.CreatePresetInput) (*mediaconvert.CreatePresetOutput, error) {
@@ -392,9 +392,9 @@ func (a *MediaConvertStub) CreatePreset(ctx workflow.Context, input *mediaconver
 	return &output, err
 }
 
-func (a *MediaConvertStub) CreatePresetAsync(ctx workflow.Context, input *mediaconvert.CreatePresetInput) *MediaconvertCreatePresetFuture {
+func (a *MediaConvertStub) CreatePresetAsync(ctx workflow.Context, input *mediaconvert.CreatePresetInput) *MediaConvertCreatePresetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.CreatePreset", input)
-	return &MediaconvertCreatePresetFuture{Future: future}
+	return &MediaConvertCreatePresetFuture{Future: future}
 }
 
 func (a *MediaConvertStub) CreateQueue(ctx workflow.Context, input *mediaconvert.CreateQueueInput) (*mediaconvert.CreateQueueOutput, error) {
@@ -403,9 +403,9 @@ func (a *MediaConvertStub) CreateQueue(ctx workflow.Context, input *mediaconvert
 	return &output, err
 }
 
-func (a *MediaConvertStub) CreateQueueAsync(ctx workflow.Context, input *mediaconvert.CreateQueueInput) *MediaconvertCreateQueueFuture {
+func (a *MediaConvertStub) CreateQueueAsync(ctx workflow.Context, input *mediaconvert.CreateQueueInput) *MediaConvertCreateQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.CreateQueue", input)
-	return &MediaconvertCreateQueueFuture{Future: future}
+	return &MediaConvertCreateQueueFuture{Future: future}
 }
 
 func (a *MediaConvertStub) DeleteJobTemplate(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) (*mediaconvert.DeleteJobTemplateOutput, error) {
@@ -414,9 +414,9 @@ func (a *MediaConvertStub) DeleteJobTemplate(ctx workflow.Context, input *mediac
 	return &output, err
 }
 
-func (a *MediaConvertStub) DeleteJobTemplateAsync(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) *MediaconvertDeleteJobTemplateFuture {
+func (a *MediaConvertStub) DeleteJobTemplateAsync(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) *MediaConvertDeleteJobTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.DeleteJobTemplate", input)
-	return &MediaconvertDeleteJobTemplateFuture{Future: future}
+	return &MediaConvertDeleteJobTemplateFuture{Future: future}
 }
 
 func (a *MediaConvertStub) DeletePreset(ctx workflow.Context, input *mediaconvert.DeletePresetInput) (*mediaconvert.DeletePresetOutput, error) {
@@ -425,9 +425,9 @@ func (a *MediaConvertStub) DeletePreset(ctx workflow.Context, input *mediaconver
 	return &output, err
 }
 
-func (a *MediaConvertStub) DeletePresetAsync(ctx workflow.Context, input *mediaconvert.DeletePresetInput) *MediaconvertDeletePresetFuture {
+func (a *MediaConvertStub) DeletePresetAsync(ctx workflow.Context, input *mediaconvert.DeletePresetInput) *MediaConvertDeletePresetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.DeletePreset", input)
-	return &MediaconvertDeletePresetFuture{Future: future}
+	return &MediaConvertDeletePresetFuture{Future: future}
 }
 
 func (a *MediaConvertStub) DeleteQueue(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) (*mediaconvert.DeleteQueueOutput, error) {
@@ -436,9 +436,9 @@ func (a *MediaConvertStub) DeleteQueue(ctx workflow.Context, input *mediaconvert
 	return &output, err
 }
 
-func (a *MediaConvertStub) DeleteQueueAsync(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) *MediaconvertDeleteQueueFuture {
+func (a *MediaConvertStub) DeleteQueueAsync(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) *MediaConvertDeleteQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.DeleteQueue", input)
-	return &MediaconvertDeleteQueueFuture{Future: future}
+	return &MediaConvertDeleteQueueFuture{Future: future}
 }
 
 func (a *MediaConvertStub) DescribeEndpoints(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) (*mediaconvert.DescribeEndpointsOutput, error) {
@@ -447,9 +447,9 @@ func (a *MediaConvertStub) DescribeEndpoints(ctx workflow.Context, input *mediac
 	return &output, err
 }
 
-func (a *MediaConvertStub) DescribeEndpointsAsync(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) *MediaconvertDescribeEndpointsFuture {
+func (a *MediaConvertStub) DescribeEndpointsAsync(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) *MediaConvertDescribeEndpointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.DescribeEndpoints", input)
-	return &MediaconvertDescribeEndpointsFuture{Future: future}
+	return &MediaConvertDescribeEndpointsFuture{Future: future}
 }
 
 func (a *MediaConvertStub) DisassociateCertificate(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) (*mediaconvert.DisassociateCertificateOutput, error) {
@@ -458,9 +458,9 @@ func (a *MediaConvertStub) DisassociateCertificate(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *MediaConvertStub) DisassociateCertificateAsync(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) *MediaconvertDisassociateCertificateFuture {
+func (a *MediaConvertStub) DisassociateCertificateAsync(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) *MediaConvertDisassociateCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.DisassociateCertificate", input)
-	return &MediaconvertDisassociateCertificateFuture{Future: future}
+	return &MediaConvertDisassociateCertificateFuture{Future: future}
 }
 
 func (a *MediaConvertStub) GetJob(ctx workflow.Context, input *mediaconvert.GetJobInput) (*mediaconvert.GetJobOutput, error) {
@@ -469,9 +469,9 @@ func (a *MediaConvertStub) GetJob(ctx workflow.Context, input *mediaconvert.GetJ
 	return &output, err
 }
 
-func (a *MediaConvertStub) GetJobAsync(ctx workflow.Context, input *mediaconvert.GetJobInput) *MediaconvertGetJobFuture {
+func (a *MediaConvertStub) GetJobAsync(ctx workflow.Context, input *mediaconvert.GetJobInput) *MediaConvertGetJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.GetJob", input)
-	return &MediaconvertGetJobFuture{Future: future}
+	return &MediaConvertGetJobFuture{Future: future}
 }
 
 func (a *MediaConvertStub) GetJobTemplate(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) (*mediaconvert.GetJobTemplateOutput, error) {
@@ -480,9 +480,9 @@ func (a *MediaConvertStub) GetJobTemplate(ctx workflow.Context, input *mediaconv
 	return &output, err
 }
 
-func (a *MediaConvertStub) GetJobTemplateAsync(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) *MediaconvertGetJobTemplateFuture {
+func (a *MediaConvertStub) GetJobTemplateAsync(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) *MediaConvertGetJobTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.GetJobTemplate", input)
-	return &MediaconvertGetJobTemplateFuture{Future: future}
+	return &MediaConvertGetJobTemplateFuture{Future: future}
 }
 
 func (a *MediaConvertStub) GetPreset(ctx workflow.Context, input *mediaconvert.GetPresetInput) (*mediaconvert.GetPresetOutput, error) {
@@ -491,9 +491,9 @@ func (a *MediaConvertStub) GetPreset(ctx workflow.Context, input *mediaconvert.G
 	return &output, err
 }
 
-func (a *MediaConvertStub) GetPresetAsync(ctx workflow.Context, input *mediaconvert.GetPresetInput) *MediaconvertGetPresetFuture {
+func (a *MediaConvertStub) GetPresetAsync(ctx workflow.Context, input *mediaconvert.GetPresetInput) *MediaConvertGetPresetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.GetPreset", input)
-	return &MediaconvertGetPresetFuture{Future: future}
+	return &MediaConvertGetPresetFuture{Future: future}
 }
 
 func (a *MediaConvertStub) GetQueue(ctx workflow.Context, input *mediaconvert.GetQueueInput) (*mediaconvert.GetQueueOutput, error) {
@@ -502,9 +502,9 @@ func (a *MediaConvertStub) GetQueue(ctx workflow.Context, input *mediaconvert.Ge
 	return &output, err
 }
 
-func (a *MediaConvertStub) GetQueueAsync(ctx workflow.Context, input *mediaconvert.GetQueueInput) *MediaconvertGetQueueFuture {
+func (a *MediaConvertStub) GetQueueAsync(ctx workflow.Context, input *mediaconvert.GetQueueInput) *MediaConvertGetQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.GetQueue", input)
-	return &MediaconvertGetQueueFuture{Future: future}
+	return &MediaConvertGetQueueFuture{Future: future}
 }
 
 func (a *MediaConvertStub) ListJobTemplates(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) (*mediaconvert.ListJobTemplatesOutput, error) {
@@ -513,9 +513,9 @@ func (a *MediaConvertStub) ListJobTemplates(ctx workflow.Context, input *mediaco
 	return &output, err
 }
 
-func (a *MediaConvertStub) ListJobTemplatesAsync(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) *MediaconvertListJobTemplatesFuture {
+func (a *MediaConvertStub) ListJobTemplatesAsync(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) *MediaConvertListJobTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.ListJobTemplates", input)
-	return &MediaconvertListJobTemplatesFuture{Future: future}
+	return &MediaConvertListJobTemplatesFuture{Future: future}
 }
 
 func (a *MediaConvertStub) ListJobs(ctx workflow.Context, input *mediaconvert.ListJobsInput) (*mediaconvert.ListJobsOutput, error) {
@@ -524,9 +524,9 @@ func (a *MediaConvertStub) ListJobs(ctx workflow.Context, input *mediaconvert.Li
 	return &output, err
 }
 
-func (a *MediaConvertStub) ListJobsAsync(ctx workflow.Context, input *mediaconvert.ListJobsInput) *MediaconvertListJobsFuture {
+func (a *MediaConvertStub) ListJobsAsync(ctx workflow.Context, input *mediaconvert.ListJobsInput) *MediaConvertListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.ListJobs", input)
-	return &MediaconvertListJobsFuture{Future: future}
+	return &MediaConvertListJobsFuture{Future: future}
 }
 
 func (a *MediaConvertStub) ListPresets(ctx workflow.Context, input *mediaconvert.ListPresetsInput) (*mediaconvert.ListPresetsOutput, error) {
@@ -535,9 +535,9 @@ func (a *MediaConvertStub) ListPresets(ctx workflow.Context, input *mediaconvert
 	return &output, err
 }
 
-func (a *MediaConvertStub) ListPresetsAsync(ctx workflow.Context, input *mediaconvert.ListPresetsInput) *MediaconvertListPresetsFuture {
+func (a *MediaConvertStub) ListPresetsAsync(ctx workflow.Context, input *mediaconvert.ListPresetsInput) *MediaConvertListPresetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.ListPresets", input)
-	return &MediaconvertListPresetsFuture{Future: future}
+	return &MediaConvertListPresetsFuture{Future: future}
 }
 
 func (a *MediaConvertStub) ListQueues(ctx workflow.Context, input *mediaconvert.ListQueuesInput) (*mediaconvert.ListQueuesOutput, error) {
@@ -546,9 +546,9 @@ func (a *MediaConvertStub) ListQueues(ctx workflow.Context, input *mediaconvert.
 	return &output, err
 }
 
-func (a *MediaConvertStub) ListQueuesAsync(ctx workflow.Context, input *mediaconvert.ListQueuesInput) *MediaconvertListQueuesFuture {
+func (a *MediaConvertStub) ListQueuesAsync(ctx workflow.Context, input *mediaconvert.ListQueuesInput) *MediaConvertListQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.ListQueues", input)
-	return &MediaconvertListQueuesFuture{Future: future}
+	return &MediaConvertListQueuesFuture{Future: future}
 }
 
 func (a *MediaConvertStub) ListTagsForResource(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) (*mediaconvert.ListTagsForResourceOutput, error) {
@@ -557,9 +557,9 @@ func (a *MediaConvertStub) ListTagsForResource(ctx workflow.Context, input *medi
 	return &output, err
 }
 
-func (a *MediaConvertStub) ListTagsForResourceAsync(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) *MediaconvertListTagsForResourceFuture {
+func (a *MediaConvertStub) ListTagsForResourceAsync(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) *MediaConvertListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.ListTagsForResource", input)
-	return &MediaconvertListTagsForResourceFuture{Future: future}
+	return &MediaConvertListTagsForResourceFuture{Future: future}
 }
 
 func (a *MediaConvertStub) TagResource(ctx workflow.Context, input *mediaconvert.TagResourceInput) (*mediaconvert.TagResourceOutput, error) {
@@ -568,9 +568,9 @@ func (a *MediaConvertStub) TagResource(ctx workflow.Context, input *mediaconvert
 	return &output, err
 }
 
-func (a *MediaConvertStub) TagResourceAsync(ctx workflow.Context, input *mediaconvert.TagResourceInput) *MediaconvertTagResourceFuture {
+func (a *MediaConvertStub) TagResourceAsync(ctx workflow.Context, input *mediaconvert.TagResourceInput) *MediaConvertTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.TagResource", input)
-	return &MediaconvertTagResourceFuture{Future: future}
+	return &MediaConvertTagResourceFuture{Future: future}
 }
 
 func (a *MediaConvertStub) UntagResource(ctx workflow.Context, input *mediaconvert.UntagResourceInput) (*mediaconvert.UntagResourceOutput, error) {
@@ -579,9 +579,9 @@ func (a *MediaConvertStub) UntagResource(ctx workflow.Context, input *mediaconve
 	return &output, err
 }
 
-func (a *MediaConvertStub) UntagResourceAsync(ctx workflow.Context, input *mediaconvert.UntagResourceInput) *MediaconvertUntagResourceFuture {
+func (a *MediaConvertStub) UntagResourceAsync(ctx workflow.Context, input *mediaconvert.UntagResourceInput) *MediaConvertUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.UntagResource", input)
-	return &MediaconvertUntagResourceFuture{Future: future}
+	return &MediaConvertUntagResourceFuture{Future: future}
 }
 
 func (a *MediaConvertStub) UpdateJobTemplate(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) (*mediaconvert.UpdateJobTemplateOutput, error) {
@@ -590,9 +590,9 @@ func (a *MediaConvertStub) UpdateJobTemplate(ctx workflow.Context, input *mediac
 	return &output, err
 }
 
-func (a *MediaConvertStub) UpdateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) *MediaconvertUpdateJobTemplateFuture {
+func (a *MediaConvertStub) UpdateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) *MediaConvertUpdateJobTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.UpdateJobTemplate", input)
-	return &MediaconvertUpdateJobTemplateFuture{Future: future}
+	return &MediaConvertUpdateJobTemplateFuture{Future: future}
 }
 
 func (a *MediaConvertStub) UpdatePreset(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) (*mediaconvert.UpdatePresetOutput, error) {
@@ -601,9 +601,9 @@ func (a *MediaConvertStub) UpdatePreset(ctx workflow.Context, input *mediaconver
 	return &output, err
 }
 
-func (a *MediaConvertStub) UpdatePresetAsync(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) *MediaconvertUpdatePresetFuture {
+func (a *MediaConvertStub) UpdatePresetAsync(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) *MediaConvertUpdatePresetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.UpdatePreset", input)
-	return &MediaconvertUpdatePresetFuture{Future: future}
+	return &MediaConvertUpdatePresetFuture{Future: future}
 }
 
 func (a *MediaConvertStub) UpdateQueue(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) (*mediaconvert.UpdateQueueOutput, error) {
@@ -612,7 +612,7 @@ func (a *MediaConvertStub) UpdateQueue(ctx workflow.Context, input *mediaconvert
 	return &output, err
 }
 
-func (a *MediaConvertStub) UpdateQueueAsync(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) *MediaconvertUpdateQueueFuture {
+func (a *MediaConvertStub) UpdateQueueAsync(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) *MediaConvertUpdateQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediaconvert.UpdateQueue", input)
-	return &MediaconvertUpdateQueueFuture{Future: future}
+	return &MediaConvertUpdateQueueFuture{Future: future}
 }

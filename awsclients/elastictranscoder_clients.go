@@ -11,55 +11,55 @@ import (
 
 type ElasticTranscoderClient interface {
 	CancelJob(ctx workflow.Context, input *elastictranscoder.CancelJobInput) (*elastictranscoder.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *elastictranscoder.CancelJobInput) *ElastictranscoderCancelJobFuture
+	CancelJobAsync(ctx workflow.Context, input *elastictranscoder.CancelJobInput) *ElasticTranscoderCancelJobFuture
 
 	CreateJob(ctx workflow.Context, input *elastictranscoder.CreateJobInput) (*elastictranscoder.CreateJobResponse, error)
-	CreateJobAsync(ctx workflow.Context, input *elastictranscoder.CreateJobInput) *ElastictranscoderCreateJobFuture
+	CreateJobAsync(ctx workflow.Context, input *elastictranscoder.CreateJobInput) *ElasticTranscoderCreateJobFuture
 
 	CreatePipeline(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) (*elastictranscoder.CreatePipelineOutput, error)
-	CreatePipelineAsync(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) *ElastictranscoderCreatePipelineFuture
+	CreatePipelineAsync(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) *ElasticTranscoderCreatePipelineFuture
 
 	CreatePreset(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) (*elastictranscoder.CreatePresetOutput, error)
-	CreatePresetAsync(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) *ElastictranscoderCreatePresetFuture
+	CreatePresetAsync(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) *ElasticTranscoderCreatePresetFuture
 
 	DeletePipeline(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) (*elastictranscoder.DeletePipelineOutput, error)
-	DeletePipelineAsync(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) *ElastictranscoderDeletePipelineFuture
+	DeletePipelineAsync(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) *ElasticTranscoderDeletePipelineFuture
 
 	DeletePreset(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) (*elastictranscoder.DeletePresetOutput, error)
-	DeletePresetAsync(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) *ElastictranscoderDeletePresetFuture
+	DeletePresetAsync(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) *ElasticTranscoderDeletePresetFuture
 
 	ListJobsByPipeline(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) (*elastictranscoder.ListJobsByPipelineOutput, error)
-	ListJobsByPipelineAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) *ElastictranscoderListJobsByPipelineFuture
+	ListJobsByPipelineAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) *ElasticTranscoderListJobsByPipelineFuture
 
 	ListJobsByStatus(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) (*elastictranscoder.ListJobsByStatusOutput, error)
-	ListJobsByStatusAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) *ElastictranscoderListJobsByStatusFuture
+	ListJobsByStatusAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) *ElasticTranscoderListJobsByStatusFuture
 
 	ListPipelines(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) (*elastictranscoder.ListPipelinesOutput, error)
-	ListPipelinesAsync(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) *ElastictranscoderListPipelinesFuture
+	ListPipelinesAsync(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) *ElasticTranscoderListPipelinesFuture
 
 	ListPresets(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) (*elastictranscoder.ListPresetsOutput, error)
-	ListPresetsAsync(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) *ElastictranscoderListPresetsFuture
+	ListPresetsAsync(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) *ElasticTranscoderListPresetsFuture
 
 	ReadJob(ctx workflow.Context, input *elastictranscoder.ReadJobInput) (*elastictranscoder.ReadJobOutput, error)
-	ReadJobAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *ElastictranscoderReadJobFuture
+	ReadJobAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *ElasticTranscoderReadJobFuture
 
 	ReadPipeline(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) (*elastictranscoder.ReadPipelineOutput, error)
-	ReadPipelineAsync(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) *ElastictranscoderReadPipelineFuture
+	ReadPipelineAsync(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) *ElasticTranscoderReadPipelineFuture
 
 	ReadPreset(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) (*elastictranscoder.ReadPresetOutput, error)
-	ReadPresetAsync(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) *ElastictranscoderReadPresetFuture
+	ReadPresetAsync(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) *ElasticTranscoderReadPresetFuture
 
 	TestRole(ctx workflow.Context, input *elastictranscoder.TestRoleInput) (*elastictranscoder.TestRoleOutput, error)
-	TestRoleAsync(ctx workflow.Context, input *elastictranscoder.TestRoleInput) *ElastictranscoderTestRoleFuture
+	TestRoleAsync(ctx workflow.Context, input *elastictranscoder.TestRoleInput) *ElasticTranscoderTestRoleFuture
 
 	UpdatePipeline(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) (*elastictranscoder.UpdatePipelineOutput, error)
-	UpdatePipelineAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) *ElastictranscoderUpdatePipelineFuture
+	UpdatePipelineAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) *ElasticTranscoderUpdatePipelineFuture
 
 	UpdatePipelineNotifications(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) (*elastictranscoder.UpdatePipelineNotificationsOutput, error)
-	UpdatePipelineNotificationsAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) *ElastictranscoderUpdatePipelineNotificationsFuture
+	UpdatePipelineNotificationsAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) *ElasticTranscoderUpdatePipelineNotificationsFuture
 
 	UpdatePipelineStatus(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) (*elastictranscoder.UpdatePipelineStatusOutput, error)
-	UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *ElastictranscoderUpdatePipelineStatusFuture
+	UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *ElasticTranscoderUpdatePipelineStatusFuture
 
 	WaitUntilJobComplete(ctx workflow.Context, input *elastictranscoder.ReadJobInput) error
 	WaitUntilJobCompleteAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *VoidFuture
@@ -71,171 +71,171 @@ func NewElasticTranscoderStub() ElasticTranscoderClient {
 	return &ElasticTranscoderStub{}
 }
 
-type ElastictranscoderCancelJobFuture struct {
+type ElasticTranscoderCancelJobFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderCancelJobFuture) Get(ctx workflow.Context) (*elastictranscoder.CancelJobOutput, error) {
+func (r *ElasticTranscoderCancelJobFuture) Get(ctx workflow.Context) (*elastictranscoder.CancelJobOutput, error) {
 	var output elastictranscoder.CancelJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderCreateJobFuture struct {
+type ElasticTranscoderCreateJobFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderCreateJobFuture) Get(ctx workflow.Context) (*elastictranscoder.CreateJobResponse, error) {
+func (r *ElasticTranscoderCreateJobFuture) Get(ctx workflow.Context) (*elastictranscoder.CreateJobResponse, error) {
 	var output elastictranscoder.CreateJobResponse
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderCreatePipelineFuture struct {
+type ElasticTranscoderCreatePipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderCreatePipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.CreatePipelineOutput, error) {
+func (r *ElasticTranscoderCreatePipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.CreatePipelineOutput, error) {
 	var output elastictranscoder.CreatePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderCreatePresetFuture struct {
+type ElasticTranscoderCreatePresetFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderCreatePresetFuture) Get(ctx workflow.Context) (*elastictranscoder.CreatePresetOutput, error) {
+func (r *ElasticTranscoderCreatePresetFuture) Get(ctx workflow.Context) (*elastictranscoder.CreatePresetOutput, error) {
 	var output elastictranscoder.CreatePresetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderDeletePipelineFuture struct {
+type ElasticTranscoderDeletePipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderDeletePipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.DeletePipelineOutput, error) {
+func (r *ElasticTranscoderDeletePipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.DeletePipelineOutput, error) {
 	var output elastictranscoder.DeletePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderDeletePresetFuture struct {
+type ElasticTranscoderDeletePresetFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderDeletePresetFuture) Get(ctx workflow.Context) (*elastictranscoder.DeletePresetOutput, error) {
+func (r *ElasticTranscoderDeletePresetFuture) Get(ctx workflow.Context) (*elastictranscoder.DeletePresetOutput, error) {
 	var output elastictranscoder.DeletePresetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderListJobsByPipelineFuture struct {
+type ElasticTranscoderListJobsByPipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderListJobsByPipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.ListJobsByPipelineOutput, error) {
+func (r *ElasticTranscoderListJobsByPipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.ListJobsByPipelineOutput, error) {
 	var output elastictranscoder.ListJobsByPipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderListJobsByStatusFuture struct {
+type ElasticTranscoderListJobsByStatusFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderListJobsByStatusFuture) Get(ctx workflow.Context) (*elastictranscoder.ListJobsByStatusOutput, error) {
+func (r *ElasticTranscoderListJobsByStatusFuture) Get(ctx workflow.Context) (*elastictranscoder.ListJobsByStatusOutput, error) {
 	var output elastictranscoder.ListJobsByStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderListPipelinesFuture struct {
+type ElasticTranscoderListPipelinesFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderListPipelinesFuture) Get(ctx workflow.Context) (*elastictranscoder.ListPipelinesOutput, error) {
+func (r *ElasticTranscoderListPipelinesFuture) Get(ctx workflow.Context) (*elastictranscoder.ListPipelinesOutput, error) {
 	var output elastictranscoder.ListPipelinesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderListPresetsFuture struct {
+type ElasticTranscoderListPresetsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderListPresetsFuture) Get(ctx workflow.Context) (*elastictranscoder.ListPresetsOutput, error) {
+func (r *ElasticTranscoderListPresetsFuture) Get(ctx workflow.Context) (*elastictranscoder.ListPresetsOutput, error) {
 	var output elastictranscoder.ListPresetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderReadJobFuture struct {
+type ElasticTranscoderReadJobFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderReadJobFuture) Get(ctx workflow.Context) (*elastictranscoder.ReadJobOutput, error) {
+func (r *ElasticTranscoderReadJobFuture) Get(ctx workflow.Context) (*elastictranscoder.ReadJobOutput, error) {
 	var output elastictranscoder.ReadJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderReadPipelineFuture struct {
+type ElasticTranscoderReadPipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderReadPipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.ReadPipelineOutput, error) {
+func (r *ElasticTranscoderReadPipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.ReadPipelineOutput, error) {
 	var output elastictranscoder.ReadPipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderReadPresetFuture struct {
+type ElasticTranscoderReadPresetFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderReadPresetFuture) Get(ctx workflow.Context) (*elastictranscoder.ReadPresetOutput, error) {
+func (r *ElasticTranscoderReadPresetFuture) Get(ctx workflow.Context) (*elastictranscoder.ReadPresetOutput, error) {
 	var output elastictranscoder.ReadPresetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderTestRoleFuture struct {
+type ElasticTranscoderTestRoleFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderTestRoleFuture) Get(ctx workflow.Context) (*elastictranscoder.TestRoleOutput, error) {
+func (r *ElasticTranscoderTestRoleFuture) Get(ctx workflow.Context) (*elastictranscoder.TestRoleOutput, error) {
 	var output elastictranscoder.TestRoleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderUpdatePipelineFuture struct {
+type ElasticTranscoderUpdatePipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderUpdatePipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.UpdatePipelineOutput, error) {
+func (r *ElasticTranscoderUpdatePipelineFuture) Get(ctx workflow.Context) (*elastictranscoder.UpdatePipelineOutput, error) {
 	var output elastictranscoder.UpdatePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderUpdatePipelineNotificationsFuture struct {
+type ElasticTranscoderUpdatePipelineNotificationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderUpdatePipelineNotificationsFuture) Get(ctx workflow.Context) (*elastictranscoder.UpdatePipelineNotificationsOutput, error) {
+func (r *ElasticTranscoderUpdatePipelineNotificationsFuture) Get(ctx workflow.Context) (*elastictranscoder.UpdatePipelineNotificationsOutput, error) {
 	var output elastictranscoder.UpdatePipelineNotificationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastictranscoderUpdatePipelineStatusFuture struct {
+type ElasticTranscoderUpdatePipelineStatusFuture struct {
 	Future workflow.Future
 }
 
-func (r *ElastictranscoderUpdatePipelineStatusFuture) Get(ctx workflow.Context) (*elastictranscoder.UpdatePipelineStatusOutput, error) {
+func (r *ElasticTranscoderUpdatePipelineStatusFuture) Get(ctx workflow.Context) (*elastictranscoder.UpdatePipelineStatusOutput, error) {
 	var output elastictranscoder.UpdatePipelineStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -247,9 +247,9 @@ func (a *ElasticTranscoderStub) CancelJob(ctx workflow.Context, input *elastictr
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) CancelJobAsync(ctx workflow.Context, input *elastictranscoder.CancelJobInput) *ElastictranscoderCancelJobFuture {
+func (a *ElasticTranscoderStub) CancelJobAsync(ctx workflow.Context, input *elastictranscoder.CancelJobInput) *ElasticTranscoderCancelJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.CancelJob", input)
-	return &ElastictranscoderCancelJobFuture{Future: future}
+	return &ElasticTranscoderCancelJobFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) CreateJob(ctx workflow.Context, input *elastictranscoder.CreateJobInput) (*elastictranscoder.CreateJobResponse, error) {
@@ -258,9 +258,9 @@ func (a *ElasticTranscoderStub) CreateJob(ctx workflow.Context, input *elastictr
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) CreateJobAsync(ctx workflow.Context, input *elastictranscoder.CreateJobInput) *ElastictranscoderCreateJobFuture {
+func (a *ElasticTranscoderStub) CreateJobAsync(ctx workflow.Context, input *elastictranscoder.CreateJobInput) *ElasticTranscoderCreateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.CreateJob", input)
-	return &ElastictranscoderCreateJobFuture{Future: future}
+	return &ElasticTranscoderCreateJobFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) CreatePipeline(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) (*elastictranscoder.CreatePipelineOutput, error) {
@@ -269,9 +269,9 @@ func (a *ElasticTranscoderStub) CreatePipeline(ctx workflow.Context, input *elas
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) CreatePipelineAsync(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) *ElastictranscoderCreatePipelineFuture {
+func (a *ElasticTranscoderStub) CreatePipelineAsync(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) *ElasticTranscoderCreatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.CreatePipeline", input)
-	return &ElastictranscoderCreatePipelineFuture{Future: future}
+	return &ElasticTranscoderCreatePipelineFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) CreatePreset(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) (*elastictranscoder.CreatePresetOutput, error) {
@@ -280,9 +280,9 @@ func (a *ElasticTranscoderStub) CreatePreset(ctx workflow.Context, input *elasti
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) CreatePresetAsync(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) *ElastictranscoderCreatePresetFuture {
+func (a *ElasticTranscoderStub) CreatePresetAsync(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) *ElasticTranscoderCreatePresetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.CreatePreset", input)
-	return &ElastictranscoderCreatePresetFuture{Future: future}
+	return &ElasticTranscoderCreatePresetFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) DeletePipeline(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) (*elastictranscoder.DeletePipelineOutput, error) {
@@ -291,9 +291,9 @@ func (a *ElasticTranscoderStub) DeletePipeline(ctx workflow.Context, input *elas
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) DeletePipelineAsync(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) *ElastictranscoderDeletePipelineFuture {
+func (a *ElasticTranscoderStub) DeletePipelineAsync(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) *ElasticTranscoderDeletePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.DeletePipeline", input)
-	return &ElastictranscoderDeletePipelineFuture{Future: future}
+	return &ElasticTranscoderDeletePipelineFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) DeletePreset(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) (*elastictranscoder.DeletePresetOutput, error) {
@@ -302,9 +302,9 @@ func (a *ElasticTranscoderStub) DeletePreset(ctx workflow.Context, input *elasti
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) DeletePresetAsync(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) *ElastictranscoderDeletePresetFuture {
+func (a *ElasticTranscoderStub) DeletePresetAsync(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) *ElasticTranscoderDeletePresetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.DeletePreset", input)
-	return &ElastictranscoderDeletePresetFuture{Future: future}
+	return &ElasticTranscoderDeletePresetFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) ListJobsByPipeline(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) (*elastictranscoder.ListJobsByPipelineOutput, error) {
@@ -313,9 +313,9 @@ func (a *ElasticTranscoderStub) ListJobsByPipeline(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) ListJobsByPipelineAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) *ElastictranscoderListJobsByPipelineFuture {
+func (a *ElasticTranscoderStub) ListJobsByPipelineAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) *ElasticTranscoderListJobsByPipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.ListJobsByPipeline", input)
-	return &ElastictranscoderListJobsByPipelineFuture{Future: future}
+	return &ElasticTranscoderListJobsByPipelineFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) ListJobsByStatus(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) (*elastictranscoder.ListJobsByStatusOutput, error) {
@@ -324,9 +324,9 @@ func (a *ElasticTranscoderStub) ListJobsByStatus(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) ListJobsByStatusAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) *ElastictranscoderListJobsByStatusFuture {
+func (a *ElasticTranscoderStub) ListJobsByStatusAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) *ElasticTranscoderListJobsByStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.ListJobsByStatus", input)
-	return &ElastictranscoderListJobsByStatusFuture{Future: future}
+	return &ElasticTranscoderListJobsByStatusFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) ListPipelines(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) (*elastictranscoder.ListPipelinesOutput, error) {
@@ -335,9 +335,9 @@ func (a *ElasticTranscoderStub) ListPipelines(ctx workflow.Context, input *elast
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) ListPipelinesAsync(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) *ElastictranscoderListPipelinesFuture {
+func (a *ElasticTranscoderStub) ListPipelinesAsync(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) *ElasticTranscoderListPipelinesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.ListPipelines", input)
-	return &ElastictranscoderListPipelinesFuture{Future: future}
+	return &ElasticTranscoderListPipelinesFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) ListPresets(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) (*elastictranscoder.ListPresetsOutput, error) {
@@ -346,9 +346,9 @@ func (a *ElasticTranscoderStub) ListPresets(ctx workflow.Context, input *elastic
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) ListPresetsAsync(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) *ElastictranscoderListPresetsFuture {
+func (a *ElasticTranscoderStub) ListPresetsAsync(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) *ElasticTranscoderListPresetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.ListPresets", input)
-	return &ElastictranscoderListPresetsFuture{Future: future}
+	return &ElasticTranscoderListPresetsFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) ReadJob(ctx workflow.Context, input *elastictranscoder.ReadJobInput) (*elastictranscoder.ReadJobOutput, error) {
@@ -357,9 +357,9 @@ func (a *ElasticTranscoderStub) ReadJob(ctx workflow.Context, input *elastictran
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) ReadJobAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *ElastictranscoderReadJobFuture {
+func (a *ElasticTranscoderStub) ReadJobAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *ElasticTranscoderReadJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.ReadJob", input)
-	return &ElastictranscoderReadJobFuture{Future: future}
+	return &ElasticTranscoderReadJobFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) ReadPipeline(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) (*elastictranscoder.ReadPipelineOutput, error) {
@@ -368,9 +368,9 @@ func (a *ElasticTranscoderStub) ReadPipeline(ctx workflow.Context, input *elasti
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) ReadPipelineAsync(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) *ElastictranscoderReadPipelineFuture {
+func (a *ElasticTranscoderStub) ReadPipelineAsync(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) *ElasticTranscoderReadPipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.ReadPipeline", input)
-	return &ElastictranscoderReadPipelineFuture{Future: future}
+	return &ElasticTranscoderReadPipelineFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) ReadPreset(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) (*elastictranscoder.ReadPresetOutput, error) {
@@ -379,9 +379,9 @@ func (a *ElasticTranscoderStub) ReadPreset(ctx workflow.Context, input *elastict
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) ReadPresetAsync(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) *ElastictranscoderReadPresetFuture {
+func (a *ElasticTranscoderStub) ReadPresetAsync(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) *ElasticTranscoderReadPresetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.ReadPreset", input)
-	return &ElastictranscoderReadPresetFuture{Future: future}
+	return &ElasticTranscoderReadPresetFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) TestRole(ctx workflow.Context, input *elastictranscoder.TestRoleInput) (*elastictranscoder.TestRoleOutput, error) {
@@ -390,9 +390,9 @@ func (a *ElasticTranscoderStub) TestRole(ctx workflow.Context, input *elastictra
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) TestRoleAsync(ctx workflow.Context, input *elastictranscoder.TestRoleInput) *ElastictranscoderTestRoleFuture {
+func (a *ElasticTranscoderStub) TestRoleAsync(ctx workflow.Context, input *elastictranscoder.TestRoleInput) *ElasticTranscoderTestRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.TestRole", input)
-	return &ElastictranscoderTestRoleFuture{Future: future}
+	return &ElasticTranscoderTestRoleFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) UpdatePipeline(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) (*elastictranscoder.UpdatePipelineOutput, error) {
@@ -401,9 +401,9 @@ func (a *ElasticTranscoderStub) UpdatePipeline(ctx workflow.Context, input *elas
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) UpdatePipelineAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) *ElastictranscoderUpdatePipelineFuture {
+func (a *ElasticTranscoderStub) UpdatePipelineAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) *ElasticTranscoderUpdatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.UpdatePipeline", input)
-	return &ElastictranscoderUpdatePipelineFuture{Future: future}
+	return &ElasticTranscoderUpdatePipelineFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) UpdatePipelineNotifications(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) (*elastictranscoder.UpdatePipelineNotificationsOutput, error) {
@@ -412,9 +412,9 @@ func (a *ElasticTranscoderStub) UpdatePipelineNotifications(ctx workflow.Context
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) UpdatePipelineNotificationsAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) *ElastictranscoderUpdatePipelineNotificationsFuture {
+func (a *ElasticTranscoderStub) UpdatePipelineNotificationsAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) *ElasticTranscoderUpdatePipelineNotificationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.UpdatePipelineNotifications", input)
-	return &ElastictranscoderUpdatePipelineNotificationsFuture{Future: future}
+	return &ElasticTranscoderUpdatePipelineNotificationsFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) UpdatePipelineStatus(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) (*elastictranscoder.UpdatePipelineStatusOutput, error) {
@@ -423,9 +423,9 @@ func (a *ElasticTranscoderStub) UpdatePipelineStatus(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *ElasticTranscoderStub) UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *ElastictranscoderUpdatePipelineStatusFuture {
+func (a *ElasticTranscoderStub) UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *ElasticTranscoderUpdatePipelineStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elastictranscoder.UpdatePipelineStatus", input)
-	return &ElastictranscoderUpdatePipelineStatusFuture{Future: future}
+	return &ElasticTranscoderUpdatePipelineStatusFuture{Future: future}
 }
 
 func (a *ElasticTranscoderStub) WaitUntilJobComplete(ctx workflow.Context, input *elastictranscoder.ReadJobInput) error {

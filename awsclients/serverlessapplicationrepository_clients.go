@@ -11,46 +11,46 @@ import (
 
 type ServerlessApplicationRepositoryClient interface {
 	CreateApplication(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) (*serverlessapplicationrepository.CreateApplicationOutput, error)
-	CreateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) *ServerlessapplicationrepositoryCreateApplicationFuture
+	CreateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) *ServerlessApplicationRepositoryCreateApplicationFuture
 
 	CreateApplicationVersion(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error)
-	CreateApplicationVersionAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) *ServerlessapplicationrepositoryCreateApplicationVersionFuture
+	CreateApplicationVersionAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) *ServerlessApplicationRepositoryCreateApplicationVersionFuture
 
 	CreateCloudFormationChangeSet(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error)
-	CreateCloudFormationChangeSetAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) *ServerlessapplicationrepositoryCreateCloudFormationChangeSetFuture
+	CreateCloudFormationChangeSetAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) *ServerlessApplicationRepositoryCreateCloudFormationChangeSetFuture
 
 	CreateCloudFormationTemplate(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error)
-	CreateCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) *ServerlessapplicationrepositoryCreateCloudFormationTemplateFuture
+	CreateCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) *ServerlessApplicationRepositoryCreateCloudFormationTemplateFuture
 
 	DeleteApplication(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) (*serverlessapplicationrepository.DeleteApplicationOutput, error)
-	DeleteApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) *ServerlessapplicationrepositoryDeleteApplicationFuture
+	DeleteApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) *ServerlessApplicationRepositoryDeleteApplicationFuture
 
 	GetApplication(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) (*serverlessapplicationrepository.GetApplicationOutput, error)
-	GetApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) *ServerlessapplicationrepositoryGetApplicationFuture
+	GetApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) *ServerlessApplicationRepositoryGetApplicationFuture
 
 	GetApplicationPolicy(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error)
-	GetApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) *ServerlessapplicationrepositoryGetApplicationPolicyFuture
+	GetApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) *ServerlessApplicationRepositoryGetApplicationPolicyFuture
 
 	GetCloudFormationTemplate(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error)
-	GetCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) *ServerlessapplicationrepositoryGetCloudFormationTemplateFuture
+	GetCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) *ServerlessApplicationRepositoryGetCloudFormationTemplateFuture
 
 	ListApplicationDependencies(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error)
-	ListApplicationDependenciesAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) *ServerlessapplicationrepositoryListApplicationDependenciesFuture
+	ListApplicationDependenciesAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) *ServerlessApplicationRepositoryListApplicationDependenciesFuture
 
 	ListApplicationVersions(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error)
-	ListApplicationVersionsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) *ServerlessapplicationrepositoryListApplicationVersionsFuture
+	ListApplicationVersionsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) *ServerlessApplicationRepositoryListApplicationVersionsFuture
 
 	ListApplications(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) (*serverlessapplicationrepository.ListApplicationsOutput, error)
-	ListApplicationsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) *ServerlessapplicationrepositoryListApplicationsFuture
+	ListApplicationsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) *ServerlessApplicationRepositoryListApplicationsFuture
 
 	PutApplicationPolicy(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error)
-	PutApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) *ServerlessapplicationrepositoryPutApplicationPolicyFuture
+	PutApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) *ServerlessApplicationRepositoryPutApplicationPolicyFuture
 
 	UnshareApplication(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) (*serverlessapplicationrepository.UnshareApplicationOutput, error)
-	UnshareApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) *ServerlessapplicationrepositoryUnshareApplicationFuture
+	UnshareApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) *ServerlessApplicationRepositoryUnshareApplicationFuture
 
 	UpdateApplication(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) (*serverlessapplicationrepository.UpdateApplicationOutput, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) *ServerlessapplicationrepositoryUpdateApplicationFuture
+	UpdateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) *ServerlessApplicationRepositoryUpdateApplicationFuture
 }
 
 type ServerlessApplicationRepositoryStub struct{}
@@ -59,141 +59,141 @@ func NewServerlessApplicationRepositoryStub() ServerlessApplicationRepositoryCli
 	return &ServerlessApplicationRepositoryStub{}
 }
 
-type ServerlessapplicationrepositoryCreateApplicationFuture struct {
+type ServerlessApplicationRepositoryCreateApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryCreateApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.CreateApplicationOutput, error) {
+func (r *ServerlessApplicationRepositoryCreateApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.CreateApplicationOutput, error) {
 	var output serverlessapplicationrepository.CreateApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryCreateApplicationVersionFuture struct {
+type ServerlessApplicationRepositoryCreateApplicationVersionFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryCreateApplicationVersionFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error) {
+func (r *ServerlessApplicationRepositoryCreateApplicationVersionFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error) {
 	var output serverlessapplicationrepository.CreateApplicationVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryCreateCloudFormationChangeSetFuture struct {
+type ServerlessApplicationRepositoryCreateCloudFormationChangeSetFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryCreateCloudFormationChangeSetFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error) {
+func (r *ServerlessApplicationRepositoryCreateCloudFormationChangeSetFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error) {
 	var output serverlessapplicationrepository.CreateCloudFormationChangeSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryCreateCloudFormationTemplateFuture struct {
+type ServerlessApplicationRepositoryCreateCloudFormationTemplateFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryCreateCloudFormationTemplateFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error) {
+func (r *ServerlessApplicationRepositoryCreateCloudFormationTemplateFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error) {
 	var output serverlessapplicationrepository.CreateCloudFormationTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryDeleteApplicationFuture struct {
+type ServerlessApplicationRepositoryDeleteApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryDeleteApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.DeleteApplicationOutput, error) {
+func (r *ServerlessApplicationRepositoryDeleteApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.DeleteApplicationOutput, error) {
 	var output serverlessapplicationrepository.DeleteApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryGetApplicationFuture struct {
+type ServerlessApplicationRepositoryGetApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryGetApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.GetApplicationOutput, error) {
+func (r *ServerlessApplicationRepositoryGetApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.GetApplicationOutput, error) {
 	var output serverlessapplicationrepository.GetApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryGetApplicationPolicyFuture struct {
+type ServerlessApplicationRepositoryGetApplicationPolicyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryGetApplicationPolicyFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error) {
+func (r *ServerlessApplicationRepositoryGetApplicationPolicyFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error) {
 	var output serverlessapplicationrepository.GetApplicationPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryGetCloudFormationTemplateFuture struct {
+type ServerlessApplicationRepositoryGetCloudFormationTemplateFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryGetCloudFormationTemplateFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error) {
+func (r *ServerlessApplicationRepositoryGetCloudFormationTemplateFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error) {
 	var output serverlessapplicationrepository.GetCloudFormationTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryListApplicationDependenciesFuture struct {
+type ServerlessApplicationRepositoryListApplicationDependenciesFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryListApplicationDependenciesFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error) {
+func (r *ServerlessApplicationRepositoryListApplicationDependenciesFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error) {
 	var output serverlessapplicationrepository.ListApplicationDependenciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryListApplicationVersionsFuture struct {
+type ServerlessApplicationRepositoryListApplicationVersionsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryListApplicationVersionsFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error) {
+func (r *ServerlessApplicationRepositoryListApplicationVersionsFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error) {
 	var output serverlessapplicationrepository.ListApplicationVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryListApplicationsFuture struct {
+type ServerlessApplicationRepositoryListApplicationsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryListApplicationsFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.ListApplicationsOutput, error) {
+func (r *ServerlessApplicationRepositoryListApplicationsFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.ListApplicationsOutput, error) {
 	var output serverlessapplicationrepository.ListApplicationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryPutApplicationPolicyFuture struct {
+type ServerlessApplicationRepositoryPutApplicationPolicyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryPutApplicationPolicyFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error) {
+func (r *ServerlessApplicationRepositoryPutApplicationPolicyFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error) {
 	var output serverlessapplicationrepository.PutApplicationPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryUnshareApplicationFuture struct {
+type ServerlessApplicationRepositoryUnshareApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryUnshareApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.UnshareApplicationOutput, error) {
+func (r *ServerlessApplicationRepositoryUnshareApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.UnshareApplicationOutput, error) {
 	var output serverlessapplicationrepository.UnshareApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServerlessapplicationrepositoryUpdateApplicationFuture struct {
+type ServerlessApplicationRepositoryUpdateApplicationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ServerlessapplicationrepositoryUpdateApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.UpdateApplicationOutput, error) {
+func (r *ServerlessApplicationRepositoryUpdateApplicationFuture) Get(ctx workflow.Context) (*serverlessapplicationrepository.UpdateApplicationOutput, error) {
 	var output serverlessapplicationrepository.UpdateApplicationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -205,9 +205,9 @@ func (a *ServerlessApplicationRepositoryStub) CreateApplication(ctx workflow.Con
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) CreateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) *ServerlessapplicationrepositoryCreateApplicationFuture {
+func (a *ServerlessApplicationRepositoryStub) CreateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) *ServerlessApplicationRepositoryCreateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.CreateApplication", input)
-	return &ServerlessapplicationrepositoryCreateApplicationFuture{Future: future}
+	return &ServerlessApplicationRepositoryCreateApplicationFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) CreateApplicationVersion(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error) {
@@ -216,9 +216,9 @@ func (a *ServerlessApplicationRepositoryStub) CreateApplicationVersion(ctx workf
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) CreateApplicationVersionAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) *ServerlessapplicationrepositoryCreateApplicationVersionFuture {
+func (a *ServerlessApplicationRepositoryStub) CreateApplicationVersionAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) *ServerlessApplicationRepositoryCreateApplicationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.CreateApplicationVersion", input)
-	return &ServerlessapplicationrepositoryCreateApplicationVersionFuture{Future: future}
+	return &ServerlessApplicationRepositoryCreateApplicationVersionFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) CreateCloudFormationChangeSet(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error) {
@@ -227,9 +227,9 @@ func (a *ServerlessApplicationRepositoryStub) CreateCloudFormationChangeSet(ctx 
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) CreateCloudFormationChangeSetAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) *ServerlessapplicationrepositoryCreateCloudFormationChangeSetFuture {
+func (a *ServerlessApplicationRepositoryStub) CreateCloudFormationChangeSetAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) *ServerlessApplicationRepositoryCreateCloudFormationChangeSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.CreateCloudFormationChangeSet", input)
-	return &ServerlessapplicationrepositoryCreateCloudFormationChangeSetFuture{Future: future}
+	return &ServerlessApplicationRepositoryCreateCloudFormationChangeSetFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) CreateCloudFormationTemplate(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error) {
@@ -238,9 +238,9 @@ func (a *ServerlessApplicationRepositoryStub) CreateCloudFormationTemplate(ctx w
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) CreateCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) *ServerlessapplicationrepositoryCreateCloudFormationTemplateFuture {
+func (a *ServerlessApplicationRepositoryStub) CreateCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) *ServerlessApplicationRepositoryCreateCloudFormationTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.CreateCloudFormationTemplate", input)
-	return &ServerlessapplicationrepositoryCreateCloudFormationTemplateFuture{Future: future}
+	return &ServerlessApplicationRepositoryCreateCloudFormationTemplateFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) DeleteApplication(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) (*serverlessapplicationrepository.DeleteApplicationOutput, error) {
@@ -249,9 +249,9 @@ func (a *ServerlessApplicationRepositoryStub) DeleteApplication(ctx workflow.Con
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) DeleteApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) *ServerlessapplicationrepositoryDeleteApplicationFuture {
+func (a *ServerlessApplicationRepositoryStub) DeleteApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) *ServerlessApplicationRepositoryDeleteApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.DeleteApplication", input)
-	return &ServerlessapplicationrepositoryDeleteApplicationFuture{Future: future}
+	return &ServerlessApplicationRepositoryDeleteApplicationFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) GetApplication(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) (*serverlessapplicationrepository.GetApplicationOutput, error) {
@@ -260,9 +260,9 @@ func (a *ServerlessApplicationRepositoryStub) GetApplication(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) GetApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) *ServerlessapplicationrepositoryGetApplicationFuture {
+func (a *ServerlessApplicationRepositoryStub) GetApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) *ServerlessApplicationRepositoryGetApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.GetApplication", input)
-	return &ServerlessapplicationrepositoryGetApplicationFuture{Future: future}
+	return &ServerlessApplicationRepositoryGetApplicationFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) GetApplicationPolicy(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error) {
@@ -271,9 +271,9 @@ func (a *ServerlessApplicationRepositoryStub) GetApplicationPolicy(ctx workflow.
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) GetApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) *ServerlessapplicationrepositoryGetApplicationPolicyFuture {
+func (a *ServerlessApplicationRepositoryStub) GetApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) *ServerlessApplicationRepositoryGetApplicationPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.GetApplicationPolicy", input)
-	return &ServerlessapplicationrepositoryGetApplicationPolicyFuture{Future: future}
+	return &ServerlessApplicationRepositoryGetApplicationPolicyFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) GetCloudFormationTemplate(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error) {
@@ -282,9 +282,9 @@ func (a *ServerlessApplicationRepositoryStub) GetCloudFormationTemplate(ctx work
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) GetCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) *ServerlessapplicationrepositoryGetCloudFormationTemplateFuture {
+func (a *ServerlessApplicationRepositoryStub) GetCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) *ServerlessApplicationRepositoryGetCloudFormationTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.GetCloudFormationTemplate", input)
-	return &ServerlessapplicationrepositoryGetCloudFormationTemplateFuture{Future: future}
+	return &ServerlessApplicationRepositoryGetCloudFormationTemplateFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) ListApplicationDependencies(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error) {
@@ -293,9 +293,9 @@ func (a *ServerlessApplicationRepositoryStub) ListApplicationDependencies(ctx wo
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) ListApplicationDependenciesAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) *ServerlessapplicationrepositoryListApplicationDependenciesFuture {
+func (a *ServerlessApplicationRepositoryStub) ListApplicationDependenciesAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) *ServerlessApplicationRepositoryListApplicationDependenciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.ListApplicationDependencies", input)
-	return &ServerlessapplicationrepositoryListApplicationDependenciesFuture{Future: future}
+	return &ServerlessApplicationRepositoryListApplicationDependenciesFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) ListApplicationVersions(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error) {
@@ -304,9 +304,9 @@ func (a *ServerlessApplicationRepositoryStub) ListApplicationVersions(ctx workfl
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) ListApplicationVersionsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) *ServerlessapplicationrepositoryListApplicationVersionsFuture {
+func (a *ServerlessApplicationRepositoryStub) ListApplicationVersionsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) *ServerlessApplicationRepositoryListApplicationVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.ListApplicationVersions", input)
-	return &ServerlessapplicationrepositoryListApplicationVersionsFuture{Future: future}
+	return &ServerlessApplicationRepositoryListApplicationVersionsFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) ListApplications(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) (*serverlessapplicationrepository.ListApplicationsOutput, error) {
@@ -315,9 +315,9 @@ func (a *ServerlessApplicationRepositoryStub) ListApplications(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) ListApplicationsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) *ServerlessapplicationrepositoryListApplicationsFuture {
+func (a *ServerlessApplicationRepositoryStub) ListApplicationsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) *ServerlessApplicationRepositoryListApplicationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.ListApplications", input)
-	return &ServerlessapplicationrepositoryListApplicationsFuture{Future: future}
+	return &ServerlessApplicationRepositoryListApplicationsFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) PutApplicationPolicy(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error) {
@@ -326,9 +326,9 @@ func (a *ServerlessApplicationRepositoryStub) PutApplicationPolicy(ctx workflow.
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) PutApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) *ServerlessapplicationrepositoryPutApplicationPolicyFuture {
+func (a *ServerlessApplicationRepositoryStub) PutApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) *ServerlessApplicationRepositoryPutApplicationPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.PutApplicationPolicy", input)
-	return &ServerlessapplicationrepositoryPutApplicationPolicyFuture{Future: future}
+	return &ServerlessApplicationRepositoryPutApplicationPolicyFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) UnshareApplication(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) (*serverlessapplicationrepository.UnshareApplicationOutput, error) {
@@ -337,9 +337,9 @@ func (a *ServerlessApplicationRepositoryStub) UnshareApplication(ctx workflow.Co
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) UnshareApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) *ServerlessapplicationrepositoryUnshareApplicationFuture {
+func (a *ServerlessApplicationRepositoryStub) UnshareApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) *ServerlessApplicationRepositoryUnshareApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.UnshareApplication", input)
-	return &ServerlessapplicationrepositoryUnshareApplicationFuture{Future: future}
+	return &ServerlessApplicationRepositoryUnshareApplicationFuture{Future: future}
 }
 
 func (a *ServerlessApplicationRepositoryStub) UpdateApplication(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) (*serverlessapplicationrepository.UpdateApplicationOutput, error) {
@@ -348,7 +348,7 @@ func (a *ServerlessApplicationRepositoryStub) UpdateApplication(ctx workflow.Con
 	return &output, err
 }
 
-func (a *ServerlessApplicationRepositoryStub) UpdateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) *ServerlessapplicationrepositoryUpdateApplicationFuture {
+func (a *ServerlessApplicationRepositoryStub) UpdateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) *ServerlessApplicationRepositoryUpdateApplicationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.serverlessapplicationrepository.UpdateApplication", input)
-	return &ServerlessapplicationrepositoryUpdateApplicationFuture{Future: future}
+	return &ServerlessApplicationRepositoryUpdateApplicationFuture{Future: future}
 }

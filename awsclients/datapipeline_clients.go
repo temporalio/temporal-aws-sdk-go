@@ -11,61 +11,61 @@ import (
 
 type DataPipelineClient interface {
 	ActivatePipeline(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) (*datapipeline.ActivatePipelineOutput, error)
-	ActivatePipelineAsync(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) *DatapipelineActivatePipelineFuture
+	ActivatePipelineAsync(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) *DataPipelineActivatePipelineFuture
 
 	AddTags(ctx workflow.Context, input *datapipeline.AddTagsInput) (*datapipeline.AddTagsOutput, error)
-	AddTagsAsync(ctx workflow.Context, input *datapipeline.AddTagsInput) *DatapipelineAddTagsFuture
+	AddTagsAsync(ctx workflow.Context, input *datapipeline.AddTagsInput) *DataPipelineAddTagsFuture
 
 	CreatePipeline(ctx workflow.Context, input *datapipeline.CreatePipelineInput) (*datapipeline.CreatePipelineOutput, error)
-	CreatePipelineAsync(ctx workflow.Context, input *datapipeline.CreatePipelineInput) *DatapipelineCreatePipelineFuture
+	CreatePipelineAsync(ctx workflow.Context, input *datapipeline.CreatePipelineInput) *DataPipelineCreatePipelineFuture
 
 	DeactivatePipeline(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) (*datapipeline.DeactivatePipelineOutput, error)
-	DeactivatePipelineAsync(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) *DatapipelineDeactivatePipelineFuture
+	DeactivatePipelineAsync(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) *DataPipelineDeactivatePipelineFuture
 
 	DeletePipeline(ctx workflow.Context, input *datapipeline.DeletePipelineInput) (*datapipeline.DeletePipelineOutput, error)
-	DeletePipelineAsync(ctx workflow.Context, input *datapipeline.DeletePipelineInput) *DatapipelineDeletePipelineFuture
+	DeletePipelineAsync(ctx workflow.Context, input *datapipeline.DeletePipelineInput) *DataPipelineDeletePipelineFuture
 
 	DescribeObjects(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) (*datapipeline.DescribeObjectsOutput, error)
-	DescribeObjectsAsync(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) *DatapipelineDescribeObjectsFuture
+	DescribeObjectsAsync(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) *DataPipelineDescribeObjectsFuture
 
 	DescribePipelines(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) (*datapipeline.DescribePipelinesOutput, error)
-	DescribePipelinesAsync(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) *DatapipelineDescribePipelinesFuture
+	DescribePipelinesAsync(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) *DataPipelineDescribePipelinesFuture
 
 	EvaluateExpression(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) (*datapipeline.EvaluateExpressionOutput, error)
-	EvaluateExpressionAsync(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) *DatapipelineEvaluateExpressionFuture
+	EvaluateExpressionAsync(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) *DataPipelineEvaluateExpressionFuture
 
 	GetPipelineDefinition(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) (*datapipeline.GetPipelineDefinitionOutput, error)
-	GetPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) *DatapipelineGetPipelineDefinitionFuture
+	GetPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) *DataPipelineGetPipelineDefinitionFuture
 
 	ListPipelines(ctx workflow.Context, input *datapipeline.ListPipelinesInput) (*datapipeline.ListPipelinesOutput, error)
-	ListPipelinesAsync(ctx workflow.Context, input *datapipeline.ListPipelinesInput) *DatapipelineListPipelinesFuture
+	ListPipelinesAsync(ctx workflow.Context, input *datapipeline.ListPipelinesInput) *DataPipelineListPipelinesFuture
 
 	PollForTask(ctx workflow.Context, input *datapipeline.PollForTaskInput) (*datapipeline.PollForTaskOutput, error)
-	PollForTaskAsync(ctx workflow.Context, input *datapipeline.PollForTaskInput) *DatapipelinePollForTaskFuture
+	PollForTaskAsync(ctx workflow.Context, input *datapipeline.PollForTaskInput) *DataPipelinePollForTaskFuture
 
 	PutPipelineDefinition(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) (*datapipeline.PutPipelineDefinitionOutput, error)
-	PutPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) *DatapipelinePutPipelineDefinitionFuture
+	PutPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) *DataPipelinePutPipelineDefinitionFuture
 
 	QueryObjects(ctx workflow.Context, input *datapipeline.QueryObjectsInput) (*datapipeline.QueryObjectsOutput, error)
-	QueryObjectsAsync(ctx workflow.Context, input *datapipeline.QueryObjectsInput) *DatapipelineQueryObjectsFuture
+	QueryObjectsAsync(ctx workflow.Context, input *datapipeline.QueryObjectsInput) *DataPipelineQueryObjectsFuture
 
 	RemoveTags(ctx workflow.Context, input *datapipeline.RemoveTagsInput) (*datapipeline.RemoveTagsOutput, error)
-	RemoveTagsAsync(ctx workflow.Context, input *datapipeline.RemoveTagsInput) *DatapipelineRemoveTagsFuture
+	RemoveTagsAsync(ctx workflow.Context, input *datapipeline.RemoveTagsInput) *DataPipelineRemoveTagsFuture
 
 	ReportTaskProgress(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) (*datapipeline.ReportTaskProgressOutput, error)
-	ReportTaskProgressAsync(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) *DatapipelineReportTaskProgressFuture
+	ReportTaskProgressAsync(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) *DataPipelineReportTaskProgressFuture
 
 	ReportTaskRunnerHeartbeat(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) (*datapipeline.ReportTaskRunnerHeartbeatOutput, error)
-	ReportTaskRunnerHeartbeatAsync(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) *DatapipelineReportTaskRunnerHeartbeatFuture
+	ReportTaskRunnerHeartbeatAsync(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) *DataPipelineReportTaskRunnerHeartbeatFuture
 
 	SetStatus(ctx workflow.Context, input *datapipeline.SetStatusInput) (*datapipeline.SetStatusOutput, error)
-	SetStatusAsync(ctx workflow.Context, input *datapipeline.SetStatusInput) *DatapipelineSetStatusFuture
+	SetStatusAsync(ctx workflow.Context, input *datapipeline.SetStatusInput) *DataPipelineSetStatusFuture
 
 	SetTaskStatus(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) (*datapipeline.SetTaskStatusOutput, error)
-	SetTaskStatusAsync(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) *DatapipelineSetTaskStatusFuture
+	SetTaskStatusAsync(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) *DataPipelineSetTaskStatusFuture
 
 	ValidatePipelineDefinition(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) (*datapipeline.ValidatePipelineDefinitionOutput, error)
-	ValidatePipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) *DatapipelineValidatePipelineDefinitionFuture
+	ValidatePipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) *DataPipelineValidatePipelineDefinitionFuture
 }
 
 type DataPipelineStub struct{}
@@ -74,191 +74,191 @@ func NewDataPipelineStub() DataPipelineClient {
 	return &DataPipelineStub{}
 }
 
-type DatapipelineActivatePipelineFuture struct {
+type DataPipelineActivatePipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineActivatePipelineFuture) Get(ctx workflow.Context) (*datapipeline.ActivatePipelineOutput, error) {
+func (r *DataPipelineActivatePipelineFuture) Get(ctx workflow.Context) (*datapipeline.ActivatePipelineOutput, error) {
 	var output datapipeline.ActivatePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineAddTagsFuture struct {
+type DataPipelineAddTagsFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineAddTagsFuture) Get(ctx workflow.Context) (*datapipeline.AddTagsOutput, error) {
+func (r *DataPipelineAddTagsFuture) Get(ctx workflow.Context) (*datapipeline.AddTagsOutput, error) {
 	var output datapipeline.AddTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineCreatePipelineFuture struct {
+type DataPipelineCreatePipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineCreatePipelineFuture) Get(ctx workflow.Context) (*datapipeline.CreatePipelineOutput, error) {
+func (r *DataPipelineCreatePipelineFuture) Get(ctx workflow.Context) (*datapipeline.CreatePipelineOutput, error) {
 	var output datapipeline.CreatePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineDeactivatePipelineFuture struct {
+type DataPipelineDeactivatePipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineDeactivatePipelineFuture) Get(ctx workflow.Context) (*datapipeline.DeactivatePipelineOutput, error) {
+func (r *DataPipelineDeactivatePipelineFuture) Get(ctx workflow.Context) (*datapipeline.DeactivatePipelineOutput, error) {
 	var output datapipeline.DeactivatePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineDeletePipelineFuture struct {
+type DataPipelineDeletePipelineFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineDeletePipelineFuture) Get(ctx workflow.Context) (*datapipeline.DeletePipelineOutput, error) {
+func (r *DataPipelineDeletePipelineFuture) Get(ctx workflow.Context) (*datapipeline.DeletePipelineOutput, error) {
 	var output datapipeline.DeletePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineDescribeObjectsFuture struct {
+type DataPipelineDescribeObjectsFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineDescribeObjectsFuture) Get(ctx workflow.Context) (*datapipeline.DescribeObjectsOutput, error) {
+func (r *DataPipelineDescribeObjectsFuture) Get(ctx workflow.Context) (*datapipeline.DescribeObjectsOutput, error) {
 	var output datapipeline.DescribeObjectsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineDescribePipelinesFuture struct {
+type DataPipelineDescribePipelinesFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineDescribePipelinesFuture) Get(ctx workflow.Context) (*datapipeline.DescribePipelinesOutput, error) {
+func (r *DataPipelineDescribePipelinesFuture) Get(ctx workflow.Context) (*datapipeline.DescribePipelinesOutput, error) {
 	var output datapipeline.DescribePipelinesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineEvaluateExpressionFuture struct {
+type DataPipelineEvaluateExpressionFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineEvaluateExpressionFuture) Get(ctx workflow.Context) (*datapipeline.EvaluateExpressionOutput, error) {
+func (r *DataPipelineEvaluateExpressionFuture) Get(ctx workflow.Context) (*datapipeline.EvaluateExpressionOutput, error) {
 	var output datapipeline.EvaluateExpressionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineGetPipelineDefinitionFuture struct {
+type DataPipelineGetPipelineDefinitionFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineGetPipelineDefinitionFuture) Get(ctx workflow.Context) (*datapipeline.GetPipelineDefinitionOutput, error) {
+func (r *DataPipelineGetPipelineDefinitionFuture) Get(ctx workflow.Context) (*datapipeline.GetPipelineDefinitionOutput, error) {
 	var output datapipeline.GetPipelineDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineListPipelinesFuture struct {
+type DataPipelineListPipelinesFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineListPipelinesFuture) Get(ctx workflow.Context) (*datapipeline.ListPipelinesOutput, error) {
+func (r *DataPipelineListPipelinesFuture) Get(ctx workflow.Context) (*datapipeline.ListPipelinesOutput, error) {
 	var output datapipeline.ListPipelinesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelinePollForTaskFuture struct {
+type DataPipelinePollForTaskFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelinePollForTaskFuture) Get(ctx workflow.Context) (*datapipeline.PollForTaskOutput, error) {
+func (r *DataPipelinePollForTaskFuture) Get(ctx workflow.Context) (*datapipeline.PollForTaskOutput, error) {
 	var output datapipeline.PollForTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelinePutPipelineDefinitionFuture struct {
+type DataPipelinePutPipelineDefinitionFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelinePutPipelineDefinitionFuture) Get(ctx workflow.Context) (*datapipeline.PutPipelineDefinitionOutput, error) {
+func (r *DataPipelinePutPipelineDefinitionFuture) Get(ctx workflow.Context) (*datapipeline.PutPipelineDefinitionOutput, error) {
 	var output datapipeline.PutPipelineDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineQueryObjectsFuture struct {
+type DataPipelineQueryObjectsFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineQueryObjectsFuture) Get(ctx workflow.Context) (*datapipeline.QueryObjectsOutput, error) {
+func (r *DataPipelineQueryObjectsFuture) Get(ctx workflow.Context) (*datapipeline.QueryObjectsOutput, error) {
 	var output datapipeline.QueryObjectsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineRemoveTagsFuture struct {
+type DataPipelineRemoveTagsFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineRemoveTagsFuture) Get(ctx workflow.Context) (*datapipeline.RemoveTagsOutput, error) {
+func (r *DataPipelineRemoveTagsFuture) Get(ctx workflow.Context) (*datapipeline.RemoveTagsOutput, error) {
 	var output datapipeline.RemoveTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineReportTaskProgressFuture struct {
+type DataPipelineReportTaskProgressFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineReportTaskProgressFuture) Get(ctx workflow.Context) (*datapipeline.ReportTaskProgressOutput, error) {
+func (r *DataPipelineReportTaskProgressFuture) Get(ctx workflow.Context) (*datapipeline.ReportTaskProgressOutput, error) {
 	var output datapipeline.ReportTaskProgressOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineReportTaskRunnerHeartbeatFuture struct {
+type DataPipelineReportTaskRunnerHeartbeatFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineReportTaskRunnerHeartbeatFuture) Get(ctx workflow.Context) (*datapipeline.ReportTaskRunnerHeartbeatOutput, error) {
+func (r *DataPipelineReportTaskRunnerHeartbeatFuture) Get(ctx workflow.Context) (*datapipeline.ReportTaskRunnerHeartbeatOutput, error) {
 	var output datapipeline.ReportTaskRunnerHeartbeatOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineSetStatusFuture struct {
+type DataPipelineSetStatusFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineSetStatusFuture) Get(ctx workflow.Context) (*datapipeline.SetStatusOutput, error) {
+func (r *DataPipelineSetStatusFuture) Get(ctx workflow.Context) (*datapipeline.SetStatusOutput, error) {
 	var output datapipeline.SetStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineSetTaskStatusFuture struct {
+type DataPipelineSetTaskStatusFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineSetTaskStatusFuture) Get(ctx workflow.Context) (*datapipeline.SetTaskStatusOutput, error) {
+func (r *DataPipelineSetTaskStatusFuture) Get(ctx workflow.Context) (*datapipeline.SetTaskStatusOutput, error) {
 	var output datapipeline.SetTaskStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DatapipelineValidatePipelineDefinitionFuture struct {
+type DataPipelineValidatePipelineDefinitionFuture struct {
 	Future workflow.Future
 }
 
-func (r *DatapipelineValidatePipelineDefinitionFuture) Get(ctx workflow.Context) (*datapipeline.ValidatePipelineDefinitionOutput, error) {
+func (r *DataPipelineValidatePipelineDefinitionFuture) Get(ctx workflow.Context) (*datapipeline.ValidatePipelineDefinitionOutput, error) {
 	var output datapipeline.ValidatePipelineDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -270,9 +270,9 @@ func (a *DataPipelineStub) ActivatePipeline(ctx workflow.Context, input *datapip
 	return &output, err
 }
 
-func (a *DataPipelineStub) ActivatePipelineAsync(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) *DatapipelineActivatePipelineFuture {
+func (a *DataPipelineStub) ActivatePipelineAsync(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) *DataPipelineActivatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.ActivatePipeline", input)
-	return &DatapipelineActivatePipelineFuture{Future: future}
+	return &DataPipelineActivatePipelineFuture{Future: future}
 }
 
 func (a *DataPipelineStub) AddTags(ctx workflow.Context, input *datapipeline.AddTagsInput) (*datapipeline.AddTagsOutput, error) {
@@ -281,9 +281,9 @@ func (a *DataPipelineStub) AddTags(ctx workflow.Context, input *datapipeline.Add
 	return &output, err
 }
 
-func (a *DataPipelineStub) AddTagsAsync(ctx workflow.Context, input *datapipeline.AddTagsInput) *DatapipelineAddTagsFuture {
+func (a *DataPipelineStub) AddTagsAsync(ctx workflow.Context, input *datapipeline.AddTagsInput) *DataPipelineAddTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.AddTags", input)
-	return &DatapipelineAddTagsFuture{Future: future}
+	return &DataPipelineAddTagsFuture{Future: future}
 }
 
 func (a *DataPipelineStub) CreatePipeline(ctx workflow.Context, input *datapipeline.CreatePipelineInput) (*datapipeline.CreatePipelineOutput, error) {
@@ -292,9 +292,9 @@ func (a *DataPipelineStub) CreatePipeline(ctx workflow.Context, input *datapipel
 	return &output, err
 }
 
-func (a *DataPipelineStub) CreatePipelineAsync(ctx workflow.Context, input *datapipeline.CreatePipelineInput) *DatapipelineCreatePipelineFuture {
+func (a *DataPipelineStub) CreatePipelineAsync(ctx workflow.Context, input *datapipeline.CreatePipelineInput) *DataPipelineCreatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.CreatePipeline", input)
-	return &DatapipelineCreatePipelineFuture{Future: future}
+	return &DataPipelineCreatePipelineFuture{Future: future}
 }
 
 func (a *DataPipelineStub) DeactivatePipeline(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) (*datapipeline.DeactivatePipelineOutput, error) {
@@ -303,9 +303,9 @@ func (a *DataPipelineStub) DeactivatePipeline(ctx workflow.Context, input *datap
 	return &output, err
 }
 
-func (a *DataPipelineStub) DeactivatePipelineAsync(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) *DatapipelineDeactivatePipelineFuture {
+func (a *DataPipelineStub) DeactivatePipelineAsync(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) *DataPipelineDeactivatePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.DeactivatePipeline", input)
-	return &DatapipelineDeactivatePipelineFuture{Future: future}
+	return &DataPipelineDeactivatePipelineFuture{Future: future}
 }
 
 func (a *DataPipelineStub) DeletePipeline(ctx workflow.Context, input *datapipeline.DeletePipelineInput) (*datapipeline.DeletePipelineOutput, error) {
@@ -314,9 +314,9 @@ func (a *DataPipelineStub) DeletePipeline(ctx workflow.Context, input *datapipel
 	return &output, err
 }
 
-func (a *DataPipelineStub) DeletePipelineAsync(ctx workflow.Context, input *datapipeline.DeletePipelineInput) *DatapipelineDeletePipelineFuture {
+func (a *DataPipelineStub) DeletePipelineAsync(ctx workflow.Context, input *datapipeline.DeletePipelineInput) *DataPipelineDeletePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.DeletePipeline", input)
-	return &DatapipelineDeletePipelineFuture{Future: future}
+	return &DataPipelineDeletePipelineFuture{Future: future}
 }
 
 func (a *DataPipelineStub) DescribeObjects(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) (*datapipeline.DescribeObjectsOutput, error) {
@@ -325,9 +325,9 @@ func (a *DataPipelineStub) DescribeObjects(ctx workflow.Context, input *datapipe
 	return &output, err
 }
 
-func (a *DataPipelineStub) DescribeObjectsAsync(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) *DatapipelineDescribeObjectsFuture {
+func (a *DataPipelineStub) DescribeObjectsAsync(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) *DataPipelineDescribeObjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.DescribeObjects", input)
-	return &DatapipelineDescribeObjectsFuture{Future: future}
+	return &DataPipelineDescribeObjectsFuture{Future: future}
 }
 
 func (a *DataPipelineStub) DescribePipelines(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) (*datapipeline.DescribePipelinesOutput, error) {
@@ -336,9 +336,9 @@ func (a *DataPipelineStub) DescribePipelines(ctx workflow.Context, input *datapi
 	return &output, err
 }
 
-func (a *DataPipelineStub) DescribePipelinesAsync(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) *DatapipelineDescribePipelinesFuture {
+func (a *DataPipelineStub) DescribePipelinesAsync(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) *DataPipelineDescribePipelinesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.DescribePipelines", input)
-	return &DatapipelineDescribePipelinesFuture{Future: future}
+	return &DataPipelineDescribePipelinesFuture{Future: future}
 }
 
 func (a *DataPipelineStub) EvaluateExpression(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) (*datapipeline.EvaluateExpressionOutput, error) {
@@ -347,9 +347,9 @@ func (a *DataPipelineStub) EvaluateExpression(ctx workflow.Context, input *datap
 	return &output, err
 }
 
-func (a *DataPipelineStub) EvaluateExpressionAsync(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) *DatapipelineEvaluateExpressionFuture {
+func (a *DataPipelineStub) EvaluateExpressionAsync(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) *DataPipelineEvaluateExpressionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.EvaluateExpression", input)
-	return &DatapipelineEvaluateExpressionFuture{Future: future}
+	return &DataPipelineEvaluateExpressionFuture{Future: future}
 }
 
 func (a *DataPipelineStub) GetPipelineDefinition(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) (*datapipeline.GetPipelineDefinitionOutput, error) {
@@ -358,9 +358,9 @@ func (a *DataPipelineStub) GetPipelineDefinition(ctx workflow.Context, input *da
 	return &output, err
 }
 
-func (a *DataPipelineStub) GetPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) *DatapipelineGetPipelineDefinitionFuture {
+func (a *DataPipelineStub) GetPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) *DataPipelineGetPipelineDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.GetPipelineDefinition", input)
-	return &DatapipelineGetPipelineDefinitionFuture{Future: future}
+	return &DataPipelineGetPipelineDefinitionFuture{Future: future}
 }
 
 func (a *DataPipelineStub) ListPipelines(ctx workflow.Context, input *datapipeline.ListPipelinesInput) (*datapipeline.ListPipelinesOutput, error) {
@@ -369,9 +369,9 @@ func (a *DataPipelineStub) ListPipelines(ctx workflow.Context, input *datapipeli
 	return &output, err
 }
 
-func (a *DataPipelineStub) ListPipelinesAsync(ctx workflow.Context, input *datapipeline.ListPipelinesInput) *DatapipelineListPipelinesFuture {
+func (a *DataPipelineStub) ListPipelinesAsync(ctx workflow.Context, input *datapipeline.ListPipelinesInput) *DataPipelineListPipelinesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.ListPipelines", input)
-	return &DatapipelineListPipelinesFuture{Future: future}
+	return &DataPipelineListPipelinesFuture{Future: future}
 }
 
 func (a *DataPipelineStub) PollForTask(ctx workflow.Context, input *datapipeline.PollForTaskInput) (*datapipeline.PollForTaskOutput, error) {
@@ -380,9 +380,9 @@ func (a *DataPipelineStub) PollForTask(ctx workflow.Context, input *datapipeline
 	return &output, err
 }
 
-func (a *DataPipelineStub) PollForTaskAsync(ctx workflow.Context, input *datapipeline.PollForTaskInput) *DatapipelinePollForTaskFuture {
+func (a *DataPipelineStub) PollForTaskAsync(ctx workflow.Context, input *datapipeline.PollForTaskInput) *DataPipelinePollForTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.PollForTask", input)
-	return &DatapipelinePollForTaskFuture{Future: future}
+	return &DataPipelinePollForTaskFuture{Future: future}
 }
 
 func (a *DataPipelineStub) PutPipelineDefinition(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) (*datapipeline.PutPipelineDefinitionOutput, error) {
@@ -391,9 +391,9 @@ func (a *DataPipelineStub) PutPipelineDefinition(ctx workflow.Context, input *da
 	return &output, err
 }
 
-func (a *DataPipelineStub) PutPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) *DatapipelinePutPipelineDefinitionFuture {
+func (a *DataPipelineStub) PutPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) *DataPipelinePutPipelineDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.PutPipelineDefinition", input)
-	return &DatapipelinePutPipelineDefinitionFuture{Future: future}
+	return &DataPipelinePutPipelineDefinitionFuture{Future: future}
 }
 
 func (a *DataPipelineStub) QueryObjects(ctx workflow.Context, input *datapipeline.QueryObjectsInput) (*datapipeline.QueryObjectsOutput, error) {
@@ -402,9 +402,9 @@ func (a *DataPipelineStub) QueryObjects(ctx workflow.Context, input *datapipelin
 	return &output, err
 }
 
-func (a *DataPipelineStub) QueryObjectsAsync(ctx workflow.Context, input *datapipeline.QueryObjectsInput) *DatapipelineQueryObjectsFuture {
+func (a *DataPipelineStub) QueryObjectsAsync(ctx workflow.Context, input *datapipeline.QueryObjectsInput) *DataPipelineQueryObjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.QueryObjects", input)
-	return &DatapipelineQueryObjectsFuture{Future: future}
+	return &DataPipelineQueryObjectsFuture{Future: future}
 }
 
 func (a *DataPipelineStub) RemoveTags(ctx workflow.Context, input *datapipeline.RemoveTagsInput) (*datapipeline.RemoveTagsOutput, error) {
@@ -413,9 +413,9 @@ func (a *DataPipelineStub) RemoveTags(ctx workflow.Context, input *datapipeline.
 	return &output, err
 }
 
-func (a *DataPipelineStub) RemoveTagsAsync(ctx workflow.Context, input *datapipeline.RemoveTagsInput) *DatapipelineRemoveTagsFuture {
+func (a *DataPipelineStub) RemoveTagsAsync(ctx workflow.Context, input *datapipeline.RemoveTagsInput) *DataPipelineRemoveTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.RemoveTags", input)
-	return &DatapipelineRemoveTagsFuture{Future: future}
+	return &DataPipelineRemoveTagsFuture{Future: future}
 }
 
 func (a *DataPipelineStub) ReportTaskProgress(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) (*datapipeline.ReportTaskProgressOutput, error) {
@@ -424,9 +424,9 @@ func (a *DataPipelineStub) ReportTaskProgress(ctx workflow.Context, input *datap
 	return &output, err
 }
 
-func (a *DataPipelineStub) ReportTaskProgressAsync(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) *DatapipelineReportTaskProgressFuture {
+func (a *DataPipelineStub) ReportTaskProgressAsync(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) *DataPipelineReportTaskProgressFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.ReportTaskProgress", input)
-	return &DatapipelineReportTaskProgressFuture{Future: future}
+	return &DataPipelineReportTaskProgressFuture{Future: future}
 }
 
 func (a *DataPipelineStub) ReportTaskRunnerHeartbeat(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) (*datapipeline.ReportTaskRunnerHeartbeatOutput, error) {
@@ -435,9 +435,9 @@ func (a *DataPipelineStub) ReportTaskRunnerHeartbeat(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *DataPipelineStub) ReportTaskRunnerHeartbeatAsync(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) *DatapipelineReportTaskRunnerHeartbeatFuture {
+func (a *DataPipelineStub) ReportTaskRunnerHeartbeatAsync(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) *DataPipelineReportTaskRunnerHeartbeatFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.ReportTaskRunnerHeartbeat", input)
-	return &DatapipelineReportTaskRunnerHeartbeatFuture{Future: future}
+	return &DataPipelineReportTaskRunnerHeartbeatFuture{Future: future}
 }
 
 func (a *DataPipelineStub) SetStatus(ctx workflow.Context, input *datapipeline.SetStatusInput) (*datapipeline.SetStatusOutput, error) {
@@ -446,9 +446,9 @@ func (a *DataPipelineStub) SetStatus(ctx workflow.Context, input *datapipeline.S
 	return &output, err
 }
 
-func (a *DataPipelineStub) SetStatusAsync(ctx workflow.Context, input *datapipeline.SetStatusInput) *DatapipelineSetStatusFuture {
+func (a *DataPipelineStub) SetStatusAsync(ctx workflow.Context, input *datapipeline.SetStatusInput) *DataPipelineSetStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.SetStatus", input)
-	return &DatapipelineSetStatusFuture{Future: future}
+	return &DataPipelineSetStatusFuture{Future: future}
 }
 
 func (a *DataPipelineStub) SetTaskStatus(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) (*datapipeline.SetTaskStatusOutput, error) {
@@ -457,9 +457,9 @@ func (a *DataPipelineStub) SetTaskStatus(ctx workflow.Context, input *datapipeli
 	return &output, err
 }
 
-func (a *DataPipelineStub) SetTaskStatusAsync(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) *DatapipelineSetTaskStatusFuture {
+func (a *DataPipelineStub) SetTaskStatusAsync(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) *DataPipelineSetTaskStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.SetTaskStatus", input)
-	return &DatapipelineSetTaskStatusFuture{Future: future}
+	return &DataPipelineSetTaskStatusFuture{Future: future}
 }
 
 func (a *DataPipelineStub) ValidatePipelineDefinition(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) (*datapipeline.ValidatePipelineDefinitionOutput, error) {
@@ -468,7 +468,7 @@ func (a *DataPipelineStub) ValidatePipelineDefinition(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *DataPipelineStub) ValidatePipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) *DatapipelineValidatePipelineDefinitionFuture {
+func (a *DataPipelineStub) ValidatePipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) *DataPipelineValidatePipelineDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.datapipeline.ValidatePipelineDefinition", input)
-	return &DatapipelineValidatePipelineDefinitionFuture{Future: future}
+	return &DataPipelineValidatePipelineDefinitionFuture{Future: future}
 }

@@ -11,103 +11,103 @@ import (
 
 type WorkLinkClient interface {
 	AssociateDomain(ctx workflow.Context, input *worklink.AssociateDomainInput) (*worklink.AssociateDomainOutput, error)
-	AssociateDomainAsync(ctx workflow.Context, input *worklink.AssociateDomainInput) *WorklinkAssociateDomainFuture
+	AssociateDomainAsync(ctx workflow.Context, input *worklink.AssociateDomainInput) *WorkLinkAssociateDomainFuture
 
 	AssociateWebsiteAuthorizationProvider(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) (*worklink.AssociateWebsiteAuthorizationProviderOutput, error)
-	AssociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) *WorklinkAssociateWebsiteAuthorizationProviderFuture
+	AssociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) *WorkLinkAssociateWebsiteAuthorizationProviderFuture
 
 	AssociateWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) (*worklink.AssociateWebsiteCertificateAuthorityOutput, error)
-	AssociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) *WorklinkAssociateWebsiteCertificateAuthorityFuture
+	AssociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) *WorkLinkAssociateWebsiteCertificateAuthorityFuture
 
 	CreateFleet(ctx workflow.Context, input *worklink.CreateFleetInput) (*worklink.CreateFleetOutput, error)
-	CreateFleetAsync(ctx workflow.Context, input *worklink.CreateFleetInput) *WorklinkCreateFleetFuture
+	CreateFleetAsync(ctx workflow.Context, input *worklink.CreateFleetInput) *WorkLinkCreateFleetFuture
 
 	DeleteFleet(ctx workflow.Context, input *worklink.DeleteFleetInput) (*worklink.DeleteFleetOutput, error)
-	DeleteFleetAsync(ctx workflow.Context, input *worklink.DeleteFleetInput) *WorklinkDeleteFleetFuture
+	DeleteFleetAsync(ctx workflow.Context, input *worklink.DeleteFleetInput) *WorkLinkDeleteFleetFuture
 
 	DescribeAuditStreamConfiguration(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) (*worklink.DescribeAuditStreamConfigurationOutput, error)
-	DescribeAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) *WorklinkDescribeAuditStreamConfigurationFuture
+	DescribeAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) *WorkLinkDescribeAuditStreamConfigurationFuture
 
 	DescribeCompanyNetworkConfiguration(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) (*worklink.DescribeCompanyNetworkConfigurationOutput, error)
-	DescribeCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) *WorklinkDescribeCompanyNetworkConfigurationFuture
+	DescribeCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) *WorkLinkDescribeCompanyNetworkConfigurationFuture
 
 	DescribeDevice(ctx workflow.Context, input *worklink.DescribeDeviceInput) (*worklink.DescribeDeviceOutput, error)
-	DescribeDeviceAsync(ctx workflow.Context, input *worklink.DescribeDeviceInput) *WorklinkDescribeDeviceFuture
+	DescribeDeviceAsync(ctx workflow.Context, input *worklink.DescribeDeviceInput) *WorkLinkDescribeDeviceFuture
 
 	DescribeDevicePolicyConfiguration(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) (*worklink.DescribeDevicePolicyConfigurationOutput, error)
-	DescribeDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) *WorklinkDescribeDevicePolicyConfigurationFuture
+	DescribeDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) *WorkLinkDescribeDevicePolicyConfigurationFuture
 
 	DescribeDomain(ctx workflow.Context, input *worklink.DescribeDomainInput) (*worklink.DescribeDomainOutput, error)
-	DescribeDomainAsync(ctx workflow.Context, input *worklink.DescribeDomainInput) *WorklinkDescribeDomainFuture
+	DescribeDomainAsync(ctx workflow.Context, input *worklink.DescribeDomainInput) *WorkLinkDescribeDomainFuture
 
 	DescribeFleetMetadata(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) (*worklink.DescribeFleetMetadataOutput, error)
-	DescribeFleetMetadataAsync(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) *WorklinkDescribeFleetMetadataFuture
+	DescribeFleetMetadataAsync(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) *WorkLinkDescribeFleetMetadataFuture
 
 	DescribeIdentityProviderConfiguration(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) (*worklink.DescribeIdentityProviderConfigurationOutput, error)
-	DescribeIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) *WorklinkDescribeIdentityProviderConfigurationFuture
+	DescribeIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) *WorkLinkDescribeIdentityProviderConfigurationFuture
 
 	DescribeWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) (*worklink.DescribeWebsiteCertificateAuthorityOutput, error)
-	DescribeWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) *WorklinkDescribeWebsiteCertificateAuthorityFuture
+	DescribeWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) *WorkLinkDescribeWebsiteCertificateAuthorityFuture
 
 	DisassociateDomain(ctx workflow.Context, input *worklink.DisassociateDomainInput) (*worklink.DisassociateDomainOutput, error)
-	DisassociateDomainAsync(ctx workflow.Context, input *worklink.DisassociateDomainInput) *WorklinkDisassociateDomainFuture
+	DisassociateDomainAsync(ctx workflow.Context, input *worklink.DisassociateDomainInput) *WorkLinkDisassociateDomainFuture
 
 	DisassociateWebsiteAuthorizationProvider(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) (*worklink.DisassociateWebsiteAuthorizationProviderOutput, error)
-	DisassociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) *WorklinkDisassociateWebsiteAuthorizationProviderFuture
+	DisassociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) *WorkLinkDisassociateWebsiteAuthorizationProviderFuture
 
 	DisassociateWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) (*worklink.DisassociateWebsiteCertificateAuthorityOutput, error)
-	DisassociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) *WorklinkDisassociateWebsiteCertificateAuthorityFuture
+	DisassociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) *WorkLinkDisassociateWebsiteCertificateAuthorityFuture
 
 	ListDevices(ctx workflow.Context, input *worklink.ListDevicesInput) (*worklink.ListDevicesOutput, error)
-	ListDevicesAsync(ctx workflow.Context, input *worklink.ListDevicesInput) *WorklinkListDevicesFuture
+	ListDevicesAsync(ctx workflow.Context, input *worklink.ListDevicesInput) *WorkLinkListDevicesFuture
 
 	ListDomains(ctx workflow.Context, input *worklink.ListDomainsInput) (*worklink.ListDomainsOutput, error)
-	ListDomainsAsync(ctx workflow.Context, input *worklink.ListDomainsInput) *WorklinkListDomainsFuture
+	ListDomainsAsync(ctx workflow.Context, input *worklink.ListDomainsInput) *WorkLinkListDomainsFuture
 
 	ListFleets(ctx workflow.Context, input *worklink.ListFleetsInput) (*worklink.ListFleetsOutput, error)
-	ListFleetsAsync(ctx workflow.Context, input *worklink.ListFleetsInput) *WorklinkListFleetsFuture
+	ListFleetsAsync(ctx workflow.Context, input *worklink.ListFleetsInput) *WorkLinkListFleetsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *worklink.ListTagsForResourceInput) (*worklink.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *worklink.ListTagsForResourceInput) *WorklinkListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *worklink.ListTagsForResourceInput) *WorkLinkListTagsForResourceFuture
 
 	ListWebsiteAuthorizationProviders(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) (*worklink.ListWebsiteAuthorizationProvidersOutput, error)
-	ListWebsiteAuthorizationProvidersAsync(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) *WorklinkListWebsiteAuthorizationProvidersFuture
+	ListWebsiteAuthorizationProvidersAsync(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) *WorkLinkListWebsiteAuthorizationProvidersFuture
 
 	ListWebsiteCertificateAuthorities(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) (*worklink.ListWebsiteCertificateAuthoritiesOutput, error)
-	ListWebsiteCertificateAuthoritiesAsync(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) *WorklinkListWebsiteCertificateAuthoritiesFuture
+	ListWebsiteCertificateAuthoritiesAsync(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) *WorkLinkListWebsiteCertificateAuthoritiesFuture
 
 	RestoreDomainAccess(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) (*worklink.RestoreDomainAccessOutput, error)
-	RestoreDomainAccessAsync(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) *WorklinkRestoreDomainAccessFuture
+	RestoreDomainAccessAsync(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) *WorkLinkRestoreDomainAccessFuture
 
 	RevokeDomainAccess(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) (*worklink.RevokeDomainAccessOutput, error)
-	RevokeDomainAccessAsync(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) *WorklinkRevokeDomainAccessFuture
+	RevokeDomainAccessAsync(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) *WorkLinkRevokeDomainAccessFuture
 
 	SignOutUser(ctx workflow.Context, input *worklink.SignOutUserInput) (*worklink.SignOutUserOutput, error)
-	SignOutUserAsync(ctx workflow.Context, input *worklink.SignOutUserInput) *WorklinkSignOutUserFuture
+	SignOutUserAsync(ctx workflow.Context, input *worklink.SignOutUserInput) *WorkLinkSignOutUserFuture
 
 	TagResource(ctx workflow.Context, input *worklink.TagResourceInput) (*worklink.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *worklink.TagResourceInput) *WorklinkTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *worklink.TagResourceInput) *WorkLinkTagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *worklink.UntagResourceInput) (*worklink.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *worklink.UntagResourceInput) *WorklinkUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *worklink.UntagResourceInput) *WorkLinkUntagResourceFuture
 
 	UpdateAuditStreamConfiguration(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) (*worklink.UpdateAuditStreamConfigurationOutput, error)
-	UpdateAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) *WorklinkUpdateAuditStreamConfigurationFuture
+	UpdateAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) *WorkLinkUpdateAuditStreamConfigurationFuture
 
 	UpdateCompanyNetworkConfiguration(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) (*worklink.UpdateCompanyNetworkConfigurationOutput, error)
-	UpdateCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) *WorklinkUpdateCompanyNetworkConfigurationFuture
+	UpdateCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) *WorkLinkUpdateCompanyNetworkConfigurationFuture
 
 	UpdateDevicePolicyConfiguration(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) (*worklink.UpdateDevicePolicyConfigurationOutput, error)
-	UpdateDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) *WorklinkUpdateDevicePolicyConfigurationFuture
+	UpdateDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) *WorkLinkUpdateDevicePolicyConfigurationFuture
 
 	UpdateDomainMetadata(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) (*worklink.UpdateDomainMetadataOutput, error)
-	UpdateDomainMetadataAsync(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) *WorklinkUpdateDomainMetadataFuture
+	UpdateDomainMetadataAsync(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) *WorkLinkUpdateDomainMetadataFuture
 
 	UpdateFleetMetadata(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) (*worklink.UpdateFleetMetadataOutput, error)
-	UpdateFleetMetadataAsync(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) *WorklinkUpdateFleetMetadataFuture
+	UpdateFleetMetadataAsync(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) *WorkLinkUpdateFleetMetadataFuture
 
 	UpdateIdentityProviderConfiguration(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) (*worklink.UpdateIdentityProviderConfigurationOutput, error)
-	UpdateIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) *WorklinkUpdateIdentityProviderConfigurationFuture
+	UpdateIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) *WorkLinkUpdateIdentityProviderConfigurationFuture
 }
 
 type WorkLinkStub struct{}
@@ -116,331 +116,331 @@ func NewWorkLinkStub() WorkLinkClient {
 	return &WorkLinkStub{}
 }
 
-type WorklinkAssociateDomainFuture struct {
+type WorkLinkAssociateDomainFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkAssociateDomainFuture) Get(ctx workflow.Context) (*worklink.AssociateDomainOutput, error) {
+func (r *WorkLinkAssociateDomainFuture) Get(ctx workflow.Context) (*worklink.AssociateDomainOutput, error) {
 	var output worklink.AssociateDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkAssociateWebsiteAuthorizationProviderFuture struct {
+type WorkLinkAssociateWebsiteAuthorizationProviderFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkAssociateWebsiteAuthorizationProviderFuture) Get(ctx workflow.Context) (*worklink.AssociateWebsiteAuthorizationProviderOutput, error) {
+func (r *WorkLinkAssociateWebsiteAuthorizationProviderFuture) Get(ctx workflow.Context) (*worklink.AssociateWebsiteAuthorizationProviderOutput, error) {
 	var output worklink.AssociateWebsiteAuthorizationProviderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkAssociateWebsiteCertificateAuthorityFuture struct {
+type WorkLinkAssociateWebsiteCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkAssociateWebsiteCertificateAuthorityFuture) Get(ctx workflow.Context) (*worklink.AssociateWebsiteCertificateAuthorityOutput, error) {
+func (r *WorkLinkAssociateWebsiteCertificateAuthorityFuture) Get(ctx workflow.Context) (*worklink.AssociateWebsiteCertificateAuthorityOutput, error) {
 	var output worklink.AssociateWebsiteCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkCreateFleetFuture struct {
+type WorkLinkCreateFleetFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkCreateFleetFuture) Get(ctx workflow.Context) (*worklink.CreateFleetOutput, error) {
+func (r *WorkLinkCreateFleetFuture) Get(ctx workflow.Context) (*worklink.CreateFleetOutput, error) {
 	var output worklink.CreateFleetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDeleteFleetFuture struct {
+type WorkLinkDeleteFleetFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDeleteFleetFuture) Get(ctx workflow.Context) (*worklink.DeleteFleetOutput, error) {
+func (r *WorkLinkDeleteFleetFuture) Get(ctx workflow.Context) (*worklink.DeleteFleetOutput, error) {
 	var output worklink.DeleteFleetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDescribeAuditStreamConfigurationFuture struct {
+type WorkLinkDescribeAuditStreamConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDescribeAuditStreamConfigurationFuture) Get(ctx workflow.Context) (*worklink.DescribeAuditStreamConfigurationOutput, error) {
+func (r *WorkLinkDescribeAuditStreamConfigurationFuture) Get(ctx workflow.Context) (*worklink.DescribeAuditStreamConfigurationOutput, error) {
 	var output worklink.DescribeAuditStreamConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDescribeCompanyNetworkConfigurationFuture struct {
+type WorkLinkDescribeCompanyNetworkConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDescribeCompanyNetworkConfigurationFuture) Get(ctx workflow.Context) (*worklink.DescribeCompanyNetworkConfigurationOutput, error) {
+func (r *WorkLinkDescribeCompanyNetworkConfigurationFuture) Get(ctx workflow.Context) (*worklink.DescribeCompanyNetworkConfigurationOutput, error) {
 	var output worklink.DescribeCompanyNetworkConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDescribeDeviceFuture struct {
+type WorkLinkDescribeDeviceFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDescribeDeviceFuture) Get(ctx workflow.Context) (*worklink.DescribeDeviceOutput, error) {
+func (r *WorkLinkDescribeDeviceFuture) Get(ctx workflow.Context) (*worklink.DescribeDeviceOutput, error) {
 	var output worklink.DescribeDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDescribeDevicePolicyConfigurationFuture struct {
+type WorkLinkDescribeDevicePolicyConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDescribeDevicePolicyConfigurationFuture) Get(ctx workflow.Context) (*worklink.DescribeDevicePolicyConfigurationOutput, error) {
+func (r *WorkLinkDescribeDevicePolicyConfigurationFuture) Get(ctx workflow.Context) (*worklink.DescribeDevicePolicyConfigurationOutput, error) {
 	var output worklink.DescribeDevicePolicyConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDescribeDomainFuture struct {
+type WorkLinkDescribeDomainFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDescribeDomainFuture) Get(ctx workflow.Context) (*worklink.DescribeDomainOutput, error) {
+func (r *WorkLinkDescribeDomainFuture) Get(ctx workflow.Context) (*worklink.DescribeDomainOutput, error) {
 	var output worklink.DescribeDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDescribeFleetMetadataFuture struct {
+type WorkLinkDescribeFleetMetadataFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDescribeFleetMetadataFuture) Get(ctx workflow.Context) (*worklink.DescribeFleetMetadataOutput, error) {
+func (r *WorkLinkDescribeFleetMetadataFuture) Get(ctx workflow.Context) (*worklink.DescribeFleetMetadataOutput, error) {
 	var output worklink.DescribeFleetMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDescribeIdentityProviderConfigurationFuture struct {
+type WorkLinkDescribeIdentityProviderConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDescribeIdentityProviderConfigurationFuture) Get(ctx workflow.Context) (*worklink.DescribeIdentityProviderConfigurationOutput, error) {
+func (r *WorkLinkDescribeIdentityProviderConfigurationFuture) Get(ctx workflow.Context) (*worklink.DescribeIdentityProviderConfigurationOutput, error) {
 	var output worklink.DescribeIdentityProviderConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDescribeWebsiteCertificateAuthorityFuture struct {
+type WorkLinkDescribeWebsiteCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDescribeWebsiteCertificateAuthorityFuture) Get(ctx workflow.Context) (*worklink.DescribeWebsiteCertificateAuthorityOutput, error) {
+func (r *WorkLinkDescribeWebsiteCertificateAuthorityFuture) Get(ctx workflow.Context) (*worklink.DescribeWebsiteCertificateAuthorityOutput, error) {
 	var output worklink.DescribeWebsiteCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDisassociateDomainFuture struct {
+type WorkLinkDisassociateDomainFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDisassociateDomainFuture) Get(ctx workflow.Context) (*worklink.DisassociateDomainOutput, error) {
+func (r *WorkLinkDisassociateDomainFuture) Get(ctx workflow.Context) (*worklink.DisassociateDomainOutput, error) {
 	var output worklink.DisassociateDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDisassociateWebsiteAuthorizationProviderFuture struct {
+type WorkLinkDisassociateWebsiteAuthorizationProviderFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDisassociateWebsiteAuthorizationProviderFuture) Get(ctx workflow.Context) (*worklink.DisassociateWebsiteAuthorizationProviderOutput, error) {
+func (r *WorkLinkDisassociateWebsiteAuthorizationProviderFuture) Get(ctx workflow.Context) (*worklink.DisassociateWebsiteAuthorizationProviderOutput, error) {
 	var output worklink.DisassociateWebsiteAuthorizationProviderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkDisassociateWebsiteCertificateAuthorityFuture struct {
+type WorkLinkDisassociateWebsiteCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkDisassociateWebsiteCertificateAuthorityFuture) Get(ctx workflow.Context) (*worklink.DisassociateWebsiteCertificateAuthorityOutput, error) {
+func (r *WorkLinkDisassociateWebsiteCertificateAuthorityFuture) Get(ctx workflow.Context) (*worklink.DisassociateWebsiteCertificateAuthorityOutput, error) {
 	var output worklink.DisassociateWebsiteCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkListDevicesFuture struct {
+type WorkLinkListDevicesFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkListDevicesFuture) Get(ctx workflow.Context) (*worklink.ListDevicesOutput, error) {
+func (r *WorkLinkListDevicesFuture) Get(ctx workflow.Context) (*worklink.ListDevicesOutput, error) {
 	var output worklink.ListDevicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkListDomainsFuture struct {
+type WorkLinkListDomainsFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkListDomainsFuture) Get(ctx workflow.Context) (*worklink.ListDomainsOutput, error) {
+func (r *WorkLinkListDomainsFuture) Get(ctx workflow.Context) (*worklink.ListDomainsOutput, error) {
 	var output worklink.ListDomainsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkListFleetsFuture struct {
+type WorkLinkListFleetsFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkListFleetsFuture) Get(ctx workflow.Context) (*worklink.ListFleetsOutput, error) {
+func (r *WorkLinkListFleetsFuture) Get(ctx workflow.Context) (*worklink.ListFleetsOutput, error) {
 	var output worklink.ListFleetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkListTagsForResourceFuture struct {
+type WorkLinkListTagsForResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkListTagsForResourceFuture) Get(ctx workflow.Context) (*worklink.ListTagsForResourceOutput, error) {
+func (r *WorkLinkListTagsForResourceFuture) Get(ctx workflow.Context) (*worklink.ListTagsForResourceOutput, error) {
 	var output worklink.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkListWebsiteAuthorizationProvidersFuture struct {
+type WorkLinkListWebsiteAuthorizationProvidersFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkListWebsiteAuthorizationProvidersFuture) Get(ctx workflow.Context) (*worklink.ListWebsiteAuthorizationProvidersOutput, error) {
+func (r *WorkLinkListWebsiteAuthorizationProvidersFuture) Get(ctx workflow.Context) (*worklink.ListWebsiteAuthorizationProvidersOutput, error) {
 	var output worklink.ListWebsiteAuthorizationProvidersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkListWebsiteCertificateAuthoritiesFuture struct {
+type WorkLinkListWebsiteCertificateAuthoritiesFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkListWebsiteCertificateAuthoritiesFuture) Get(ctx workflow.Context) (*worklink.ListWebsiteCertificateAuthoritiesOutput, error) {
+func (r *WorkLinkListWebsiteCertificateAuthoritiesFuture) Get(ctx workflow.Context) (*worklink.ListWebsiteCertificateAuthoritiesOutput, error) {
 	var output worklink.ListWebsiteCertificateAuthoritiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkRestoreDomainAccessFuture struct {
+type WorkLinkRestoreDomainAccessFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkRestoreDomainAccessFuture) Get(ctx workflow.Context) (*worklink.RestoreDomainAccessOutput, error) {
+func (r *WorkLinkRestoreDomainAccessFuture) Get(ctx workflow.Context) (*worklink.RestoreDomainAccessOutput, error) {
 	var output worklink.RestoreDomainAccessOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkRevokeDomainAccessFuture struct {
+type WorkLinkRevokeDomainAccessFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkRevokeDomainAccessFuture) Get(ctx workflow.Context) (*worklink.RevokeDomainAccessOutput, error) {
+func (r *WorkLinkRevokeDomainAccessFuture) Get(ctx workflow.Context) (*worklink.RevokeDomainAccessOutput, error) {
 	var output worklink.RevokeDomainAccessOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkSignOutUserFuture struct {
+type WorkLinkSignOutUserFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkSignOutUserFuture) Get(ctx workflow.Context) (*worklink.SignOutUserOutput, error) {
+func (r *WorkLinkSignOutUserFuture) Get(ctx workflow.Context) (*worklink.SignOutUserOutput, error) {
 	var output worklink.SignOutUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkTagResourceFuture struct {
+type WorkLinkTagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkTagResourceFuture) Get(ctx workflow.Context) (*worklink.TagResourceOutput, error) {
+func (r *WorkLinkTagResourceFuture) Get(ctx workflow.Context) (*worklink.TagResourceOutput, error) {
 	var output worklink.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkUntagResourceFuture struct {
+type WorkLinkUntagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkUntagResourceFuture) Get(ctx workflow.Context) (*worklink.UntagResourceOutput, error) {
+func (r *WorkLinkUntagResourceFuture) Get(ctx workflow.Context) (*worklink.UntagResourceOutput, error) {
 	var output worklink.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkUpdateAuditStreamConfigurationFuture struct {
+type WorkLinkUpdateAuditStreamConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkUpdateAuditStreamConfigurationFuture) Get(ctx workflow.Context) (*worklink.UpdateAuditStreamConfigurationOutput, error) {
+func (r *WorkLinkUpdateAuditStreamConfigurationFuture) Get(ctx workflow.Context) (*worklink.UpdateAuditStreamConfigurationOutput, error) {
 	var output worklink.UpdateAuditStreamConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkUpdateCompanyNetworkConfigurationFuture struct {
+type WorkLinkUpdateCompanyNetworkConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkUpdateCompanyNetworkConfigurationFuture) Get(ctx workflow.Context) (*worklink.UpdateCompanyNetworkConfigurationOutput, error) {
+func (r *WorkLinkUpdateCompanyNetworkConfigurationFuture) Get(ctx workflow.Context) (*worklink.UpdateCompanyNetworkConfigurationOutput, error) {
 	var output worklink.UpdateCompanyNetworkConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkUpdateDevicePolicyConfigurationFuture struct {
+type WorkLinkUpdateDevicePolicyConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkUpdateDevicePolicyConfigurationFuture) Get(ctx workflow.Context) (*worklink.UpdateDevicePolicyConfigurationOutput, error) {
+func (r *WorkLinkUpdateDevicePolicyConfigurationFuture) Get(ctx workflow.Context) (*worklink.UpdateDevicePolicyConfigurationOutput, error) {
 	var output worklink.UpdateDevicePolicyConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkUpdateDomainMetadataFuture struct {
+type WorkLinkUpdateDomainMetadataFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkUpdateDomainMetadataFuture) Get(ctx workflow.Context) (*worklink.UpdateDomainMetadataOutput, error) {
+func (r *WorkLinkUpdateDomainMetadataFuture) Get(ctx workflow.Context) (*worklink.UpdateDomainMetadataOutput, error) {
 	var output worklink.UpdateDomainMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkUpdateFleetMetadataFuture struct {
+type WorkLinkUpdateFleetMetadataFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkUpdateFleetMetadataFuture) Get(ctx workflow.Context) (*worklink.UpdateFleetMetadataOutput, error) {
+func (r *WorkLinkUpdateFleetMetadataFuture) Get(ctx workflow.Context) (*worklink.UpdateFleetMetadataOutput, error) {
 	var output worklink.UpdateFleetMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorklinkUpdateIdentityProviderConfigurationFuture struct {
+type WorkLinkUpdateIdentityProviderConfigurationFuture struct {
 	Future workflow.Future
 }
 
-func (r *WorklinkUpdateIdentityProviderConfigurationFuture) Get(ctx workflow.Context) (*worklink.UpdateIdentityProviderConfigurationOutput, error) {
+func (r *WorkLinkUpdateIdentityProviderConfigurationFuture) Get(ctx workflow.Context) (*worklink.UpdateIdentityProviderConfigurationOutput, error) {
 	var output worklink.UpdateIdentityProviderConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -452,9 +452,9 @@ func (a *WorkLinkStub) AssociateDomain(ctx workflow.Context, input *worklink.Ass
 	return &output, err
 }
 
-func (a *WorkLinkStub) AssociateDomainAsync(ctx workflow.Context, input *worklink.AssociateDomainInput) *WorklinkAssociateDomainFuture {
+func (a *WorkLinkStub) AssociateDomainAsync(ctx workflow.Context, input *worklink.AssociateDomainInput) *WorkLinkAssociateDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.AssociateDomain", input)
-	return &WorklinkAssociateDomainFuture{Future: future}
+	return &WorkLinkAssociateDomainFuture{Future: future}
 }
 
 func (a *WorkLinkStub) AssociateWebsiteAuthorizationProvider(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) (*worklink.AssociateWebsiteAuthorizationProviderOutput, error) {
@@ -463,9 +463,9 @@ func (a *WorkLinkStub) AssociateWebsiteAuthorizationProvider(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *WorkLinkStub) AssociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) *WorklinkAssociateWebsiteAuthorizationProviderFuture {
+func (a *WorkLinkStub) AssociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) *WorkLinkAssociateWebsiteAuthorizationProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.AssociateWebsiteAuthorizationProvider", input)
-	return &WorklinkAssociateWebsiteAuthorizationProviderFuture{Future: future}
+	return &WorkLinkAssociateWebsiteAuthorizationProviderFuture{Future: future}
 }
 
 func (a *WorkLinkStub) AssociateWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) (*worklink.AssociateWebsiteCertificateAuthorityOutput, error) {
@@ -474,9 +474,9 @@ func (a *WorkLinkStub) AssociateWebsiteCertificateAuthority(ctx workflow.Context
 	return &output, err
 }
 
-func (a *WorkLinkStub) AssociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) *WorklinkAssociateWebsiteCertificateAuthorityFuture {
+func (a *WorkLinkStub) AssociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) *WorkLinkAssociateWebsiteCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.AssociateWebsiteCertificateAuthority", input)
-	return &WorklinkAssociateWebsiteCertificateAuthorityFuture{Future: future}
+	return &WorkLinkAssociateWebsiteCertificateAuthorityFuture{Future: future}
 }
 
 func (a *WorkLinkStub) CreateFleet(ctx workflow.Context, input *worklink.CreateFleetInput) (*worklink.CreateFleetOutput, error) {
@@ -485,9 +485,9 @@ func (a *WorkLinkStub) CreateFleet(ctx workflow.Context, input *worklink.CreateF
 	return &output, err
 }
 
-func (a *WorkLinkStub) CreateFleetAsync(ctx workflow.Context, input *worklink.CreateFleetInput) *WorklinkCreateFleetFuture {
+func (a *WorkLinkStub) CreateFleetAsync(ctx workflow.Context, input *worklink.CreateFleetInput) *WorkLinkCreateFleetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.CreateFleet", input)
-	return &WorklinkCreateFleetFuture{Future: future}
+	return &WorkLinkCreateFleetFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DeleteFleet(ctx workflow.Context, input *worklink.DeleteFleetInput) (*worklink.DeleteFleetOutput, error) {
@@ -496,9 +496,9 @@ func (a *WorkLinkStub) DeleteFleet(ctx workflow.Context, input *worklink.DeleteF
 	return &output, err
 }
 
-func (a *WorkLinkStub) DeleteFleetAsync(ctx workflow.Context, input *worklink.DeleteFleetInput) *WorklinkDeleteFleetFuture {
+func (a *WorkLinkStub) DeleteFleetAsync(ctx workflow.Context, input *worklink.DeleteFleetInput) *WorkLinkDeleteFleetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DeleteFleet", input)
-	return &WorklinkDeleteFleetFuture{Future: future}
+	return &WorkLinkDeleteFleetFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DescribeAuditStreamConfiguration(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) (*worklink.DescribeAuditStreamConfigurationOutput, error) {
@@ -507,9 +507,9 @@ func (a *WorkLinkStub) DescribeAuditStreamConfiguration(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *WorkLinkStub) DescribeAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) *WorklinkDescribeAuditStreamConfigurationFuture {
+func (a *WorkLinkStub) DescribeAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) *WorkLinkDescribeAuditStreamConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DescribeAuditStreamConfiguration", input)
-	return &WorklinkDescribeAuditStreamConfigurationFuture{Future: future}
+	return &WorkLinkDescribeAuditStreamConfigurationFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DescribeCompanyNetworkConfiguration(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) (*worklink.DescribeCompanyNetworkConfigurationOutput, error) {
@@ -518,9 +518,9 @@ func (a *WorkLinkStub) DescribeCompanyNetworkConfiguration(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *WorkLinkStub) DescribeCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) *WorklinkDescribeCompanyNetworkConfigurationFuture {
+func (a *WorkLinkStub) DescribeCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) *WorkLinkDescribeCompanyNetworkConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DescribeCompanyNetworkConfiguration", input)
-	return &WorklinkDescribeCompanyNetworkConfigurationFuture{Future: future}
+	return &WorkLinkDescribeCompanyNetworkConfigurationFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DescribeDevice(ctx workflow.Context, input *worklink.DescribeDeviceInput) (*worklink.DescribeDeviceOutput, error) {
@@ -529,9 +529,9 @@ func (a *WorkLinkStub) DescribeDevice(ctx workflow.Context, input *worklink.Desc
 	return &output, err
 }
 
-func (a *WorkLinkStub) DescribeDeviceAsync(ctx workflow.Context, input *worklink.DescribeDeviceInput) *WorklinkDescribeDeviceFuture {
+func (a *WorkLinkStub) DescribeDeviceAsync(ctx workflow.Context, input *worklink.DescribeDeviceInput) *WorkLinkDescribeDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DescribeDevice", input)
-	return &WorklinkDescribeDeviceFuture{Future: future}
+	return &WorkLinkDescribeDeviceFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DescribeDevicePolicyConfiguration(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) (*worklink.DescribeDevicePolicyConfigurationOutput, error) {
@@ -540,9 +540,9 @@ func (a *WorkLinkStub) DescribeDevicePolicyConfiguration(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *WorkLinkStub) DescribeDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) *WorklinkDescribeDevicePolicyConfigurationFuture {
+func (a *WorkLinkStub) DescribeDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) *WorkLinkDescribeDevicePolicyConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DescribeDevicePolicyConfiguration", input)
-	return &WorklinkDescribeDevicePolicyConfigurationFuture{Future: future}
+	return &WorkLinkDescribeDevicePolicyConfigurationFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DescribeDomain(ctx workflow.Context, input *worklink.DescribeDomainInput) (*worklink.DescribeDomainOutput, error) {
@@ -551,9 +551,9 @@ func (a *WorkLinkStub) DescribeDomain(ctx workflow.Context, input *worklink.Desc
 	return &output, err
 }
 
-func (a *WorkLinkStub) DescribeDomainAsync(ctx workflow.Context, input *worklink.DescribeDomainInput) *WorklinkDescribeDomainFuture {
+func (a *WorkLinkStub) DescribeDomainAsync(ctx workflow.Context, input *worklink.DescribeDomainInput) *WorkLinkDescribeDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DescribeDomain", input)
-	return &WorklinkDescribeDomainFuture{Future: future}
+	return &WorkLinkDescribeDomainFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DescribeFleetMetadata(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) (*worklink.DescribeFleetMetadataOutput, error) {
@@ -562,9 +562,9 @@ func (a *WorkLinkStub) DescribeFleetMetadata(ctx workflow.Context, input *workli
 	return &output, err
 }
 
-func (a *WorkLinkStub) DescribeFleetMetadataAsync(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) *WorklinkDescribeFleetMetadataFuture {
+func (a *WorkLinkStub) DescribeFleetMetadataAsync(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) *WorkLinkDescribeFleetMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DescribeFleetMetadata", input)
-	return &WorklinkDescribeFleetMetadataFuture{Future: future}
+	return &WorkLinkDescribeFleetMetadataFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DescribeIdentityProviderConfiguration(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) (*worklink.DescribeIdentityProviderConfigurationOutput, error) {
@@ -573,9 +573,9 @@ func (a *WorkLinkStub) DescribeIdentityProviderConfiguration(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *WorkLinkStub) DescribeIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) *WorklinkDescribeIdentityProviderConfigurationFuture {
+func (a *WorkLinkStub) DescribeIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) *WorkLinkDescribeIdentityProviderConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DescribeIdentityProviderConfiguration", input)
-	return &WorklinkDescribeIdentityProviderConfigurationFuture{Future: future}
+	return &WorkLinkDescribeIdentityProviderConfigurationFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DescribeWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) (*worklink.DescribeWebsiteCertificateAuthorityOutput, error) {
@@ -584,9 +584,9 @@ func (a *WorkLinkStub) DescribeWebsiteCertificateAuthority(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *WorkLinkStub) DescribeWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) *WorklinkDescribeWebsiteCertificateAuthorityFuture {
+func (a *WorkLinkStub) DescribeWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) *WorkLinkDescribeWebsiteCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DescribeWebsiteCertificateAuthority", input)
-	return &WorklinkDescribeWebsiteCertificateAuthorityFuture{Future: future}
+	return &WorkLinkDescribeWebsiteCertificateAuthorityFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DisassociateDomain(ctx workflow.Context, input *worklink.DisassociateDomainInput) (*worklink.DisassociateDomainOutput, error) {
@@ -595,9 +595,9 @@ func (a *WorkLinkStub) DisassociateDomain(ctx workflow.Context, input *worklink.
 	return &output, err
 }
 
-func (a *WorkLinkStub) DisassociateDomainAsync(ctx workflow.Context, input *worklink.DisassociateDomainInput) *WorklinkDisassociateDomainFuture {
+func (a *WorkLinkStub) DisassociateDomainAsync(ctx workflow.Context, input *worklink.DisassociateDomainInput) *WorkLinkDisassociateDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DisassociateDomain", input)
-	return &WorklinkDisassociateDomainFuture{Future: future}
+	return &WorkLinkDisassociateDomainFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DisassociateWebsiteAuthorizationProvider(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) (*worklink.DisassociateWebsiteAuthorizationProviderOutput, error) {
@@ -606,9 +606,9 @@ func (a *WorkLinkStub) DisassociateWebsiteAuthorizationProvider(ctx workflow.Con
 	return &output, err
 }
 
-func (a *WorkLinkStub) DisassociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) *WorklinkDisassociateWebsiteAuthorizationProviderFuture {
+func (a *WorkLinkStub) DisassociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) *WorkLinkDisassociateWebsiteAuthorizationProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DisassociateWebsiteAuthorizationProvider", input)
-	return &WorklinkDisassociateWebsiteAuthorizationProviderFuture{Future: future}
+	return &WorkLinkDisassociateWebsiteAuthorizationProviderFuture{Future: future}
 }
 
 func (a *WorkLinkStub) DisassociateWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) (*worklink.DisassociateWebsiteCertificateAuthorityOutput, error) {
@@ -617,9 +617,9 @@ func (a *WorkLinkStub) DisassociateWebsiteCertificateAuthority(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *WorkLinkStub) DisassociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) *WorklinkDisassociateWebsiteCertificateAuthorityFuture {
+func (a *WorkLinkStub) DisassociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) *WorkLinkDisassociateWebsiteCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.DisassociateWebsiteCertificateAuthority", input)
-	return &WorklinkDisassociateWebsiteCertificateAuthorityFuture{Future: future}
+	return &WorkLinkDisassociateWebsiteCertificateAuthorityFuture{Future: future}
 }
 
 func (a *WorkLinkStub) ListDevices(ctx workflow.Context, input *worklink.ListDevicesInput) (*worklink.ListDevicesOutput, error) {
@@ -628,9 +628,9 @@ func (a *WorkLinkStub) ListDevices(ctx workflow.Context, input *worklink.ListDev
 	return &output, err
 }
 
-func (a *WorkLinkStub) ListDevicesAsync(ctx workflow.Context, input *worklink.ListDevicesInput) *WorklinkListDevicesFuture {
+func (a *WorkLinkStub) ListDevicesAsync(ctx workflow.Context, input *worklink.ListDevicesInput) *WorkLinkListDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.ListDevices", input)
-	return &WorklinkListDevicesFuture{Future: future}
+	return &WorkLinkListDevicesFuture{Future: future}
 }
 
 func (a *WorkLinkStub) ListDomains(ctx workflow.Context, input *worklink.ListDomainsInput) (*worklink.ListDomainsOutput, error) {
@@ -639,9 +639,9 @@ func (a *WorkLinkStub) ListDomains(ctx workflow.Context, input *worklink.ListDom
 	return &output, err
 }
 
-func (a *WorkLinkStub) ListDomainsAsync(ctx workflow.Context, input *worklink.ListDomainsInput) *WorklinkListDomainsFuture {
+func (a *WorkLinkStub) ListDomainsAsync(ctx workflow.Context, input *worklink.ListDomainsInput) *WorkLinkListDomainsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.ListDomains", input)
-	return &WorklinkListDomainsFuture{Future: future}
+	return &WorkLinkListDomainsFuture{Future: future}
 }
 
 func (a *WorkLinkStub) ListFleets(ctx workflow.Context, input *worklink.ListFleetsInput) (*worklink.ListFleetsOutput, error) {
@@ -650,9 +650,9 @@ func (a *WorkLinkStub) ListFleets(ctx workflow.Context, input *worklink.ListFlee
 	return &output, err
 }
 
-func (a *WorkLinkStub) ListFleetsAsync(ctx workflow.Context, input *worklink.ListFleetsInput) *WorklinkListFleetsFuture {
+func (a *WorkLinkStub) ListFleetsAsync(ctx workflow.Context, input *worklink.ListFleetsInput) *WorkLinkListFleetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.ListFleets", input)
-	return &WorklinkListFleetsFuture{Future: future}
+	return &WorkLinkListFleetsFuture{Future: future}
 }
 
 func (a *WorkLinkStub) ListTagsForResource(ctx workflow.Context, input *worklink.ListTagsForResourceInput) (*worklink.ListTagsForResourceOutput, error) {
@@ -661,9 +661,9 @@ func (a *WorkLinkStub) ListTagsForResource(ctx workflow.Context, input *worklink
 	return &output, err
 }
 
-func (a *WorkLinkStub) ListTagsForResourceAsync(ctx workflow.Context, input *worklink.ListTagsForResourceInput) *WorklinkListTagsForResourceFuture {
+func (a *WorkLinkStub) ListTagsForResourceAsync(ctx workflow.Context, input *worklink.ListTagsForResourceInput) *WorkLinkListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.ListTagsForResource", input)
-	return &WorklinkListTagsForResourceFuture{Future: future}
+	return &WorkLinkListTagsForResourceFuture{Future: future}
 }
 
 func (a *WorkLinkStub) ListWebsiteAuthorizationProviders(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) (*worklink.ListWebsiteAuthorizationProvidersOutput, error) {
@@ -672,9 +672,9 @@ func (a *WorkLinkStub) ListWebsiteAuthorizationProviders(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *WorkLinkStub) ListWebsiteAuthorizationProvidersAsync(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) *WorklinkListWebsiteAuthorizationProvidersFuture {
+func (a *WorkLinkStub) ListWebsiteAuthorizationProvidersAsync(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) *WorkLinkListWebsiteAuthorizationProvidersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.ListWebsiteAuthorizationProviders", input)
-	return &WorklinkListWebsiteAuthorizationProvidersFuture{Future: future}
+	return &WorkLinkListWebsiteAuthorizationProvidersFuture{Future: future}
 }
 
 func (a *WorkLinkStub) ListWebsiteCertificateAuthorities(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) (*worklink.ListWebsiteCertificateAuthoritiesOutput, error) {
@@ -683,9 +683,9 @@ func (a *WorkLinkStub) ListWebsiteCertificateAuthorities(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *WorkLinkStub) ListWebsiteCertificateAuthoritiesAsync(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) *WorklinkListWebsiteCertificateAuthoritiesFuture {
+func (a *WorkLinkStub) ListWebsiteCertificateAuthoritiesAsync(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) *WorkLinkListWebsiteCertificateAuthoritiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.ListWebsiteCertificateAuthorities", input)
-	return &WorklinkListWebsiteCertificateAuthoritiesFuture{Future: future}
+	return &WorkLinkListWebsiteCertificateAuthoritiesFuture{Future: future}
 }
 
 func (a *WorkLinkStub) RestoreDomainAccess(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) (*worklink.RestoreDomainAccessOutput, error) {
@@ -694,9 +694,9 @@ func (a *WorkLinkStub) RestoreDomainAccess(ctx workflow.Context, input *worklink
 	return &output, err
 }
 
-func (a *WorkLinkStub) RestoreDomainAccessAsync(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) *WorklinkRestoreDomainAccessFuture {
+func (a *WorkLinkStub) RestoreDomainAccessAsync(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) *WorkLinkRestoreDomainAccessFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.RestoreDomainAccess", input)
-	return &WorklinkRestoreDomainAccessFuture{Future: future}
+	return &WorkLinkRestoreDomainAccessFuture{Future: future}
 }
 
 func (a *WorkLinkStub) RevokeDomainAccess(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) (*worklink.RevokeDomainAccessOutput, error) {
@@ -705,9 +705,9 @@ func (a *WorkLinkStub) RevokeDomainAccess(ctx workflow.Context, input *worklink.
 	return &output, err
 }
 
-func (a *WorkLinkStub) RevokeDomainAccessAsync(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) *WorklinkRevokeDomainAccessFuture {
+func (a *WorkLinkStub) RevokeDomainAccessAsync(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) *WorkLinkRevokeDomainAccessFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.RevokeDomainAccess", input)
-	return &WorklinkRevokeDomainAccessFuture{Future: future}
+	return &WorkLinkRevokeDomainAccessFuture{Future: future}
 }
 
 func (a *WorkLinkStub) SignOutUser(ctx workflow.Context, input *worklink.SignOutUserInput) (*worklink.SignOutUserOutput, error) {
@@ -716,9 +716,9 @@ func (a *WorkLinkStub) SignOutUser(ctx workflow.Context, input *worklink.SignOut
 	return &output, err
 }
 
-func (a *WorkLinkStub) SignOutUserAsync(ctx workflow.Context, input *worklink.SignOutUserInput) *WorklinkSignOutUserFuture {
+func (a *WorkLinkStub) SignOutUserAsync(ctx workflow.Context, input *worklink.SignOutUserInput) *WorkLinkSignOutUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.SignOutUser", input)
-	return &WorklinkSignOutUserFuture{Future: future}
+	return &WorkLinkSignOutUserFuture{Future: future}
 }
 
 func (a *WorkLinkStub) TagResource(ctx workflow.Context, input *worklink.TagResourceInput) (*worklink.TagResourceOutput, error) {
@@ -727,9 +727,9 @@ func (a *WorkLinkStub) TagResource(ctx workflow.Context, input *worklink.TagReso
 	return &output, err
 }
 
-func (a *WorkLinkStub) TagResourceAsync(ctx workflow.Context, input *worklink.TagResourceInput) *WorklinkTagResourceFuture {
+func (a *WorkLinkStub) TagResourceAsync(ctx workflow.Context, input *worklink.TagResourceInput) *WorkLinkTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.TagResource", input)
-	return &WorklinkTagResourceFuture{Future: future}
+	return &WorkLinkTagResourceFuture{Future: future}
 }
 
 func (a *WorkLinkStub) UntagResource(ctx workflow.Context, input *worklink.UntagResourceInput) (*worklink.UntagResourceOutput, error) {
@@ -738,9 +738,9 @@ func (a *WorkLinkStub) UntagResource(ctx workflow.Context, input *worklink.Untag
 	return &output, err
 }
 
-func (a *WorkLinkStub) UntagResourceAsync(ctx workflow.Context, input *worklink.UntagResourceInput) *WorklinkUntagResourceFuture {
+func (a *WorkLinkStub) UntagResourceAsync(ctx workflow.Context, input *worklink.UntagResourceInput) *WorkLinkUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.UntagResource", input)
-	return &WorklinkUntagResourceFuture{Future: future}
+	return &WorkLinkUntagResourceFuture{Future: future}
 }
 
 func (a *WorkLinkStub) UpdateAuditStreamConfiguration(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) (*worklink.UpdateAuditStreamConfigurationOutput, error) {
@@ -749,9 +749,9 @@ func (a *WorkLinkStub) UpdateAuditStreamConfiguration(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *WorkLinkStub) UpdateAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) *WorklinkUpdateAuditStreamConfigurationFuture {
+func (a *WorkLinkStub) UpdateAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) *WorkLinkUpdateAuditStreamConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.UpdateAuditStreamConfiguration", input)
-	return &WorklinkUpdateAuditStreamConfigurationFuture{Future: future}
+	return &WorkLinkUpdateAuditStreamConfigurationFuture{Future: future}
 }
 
 func (a *WorkLinkStub) UpdateCompanyNetworkConfiguration(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) (*worklink.UpdateCompanyNetworkConfigurationOutput, error) {
@@ -760,9 +760,9 @@ func (a *WorkLinkStub) UpdateCompanyNetworkConfiguration(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *WorkLinkStub) UpdateCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) *WorklinkUpdateCompanyNetworkConfigurationFuture {
+func (a *WorkLinkStub) UpdateCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) *WorkLinkUpdateCompanyNetworkConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.UpdateCompanyNetworkConfiguration", input)
-	return &WorklinkUpdateCompanyNetworkConfigurationFuture{Future: future}
+	return &WorkLinkUpdateCompanyNetworkConfigurationFuture{Future: future}
 }
 
 func (a *WorkLinkStub) UpdateDevicePolicyConfiguration(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) (*worklink.UpdateDevicePolicyConfigurationOutput, error) {
@@ -771,9 +771,9 @@ func (a *WorkLinkStub) UpdateDevicePolicyConfiguration(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *WorkLinkStub) UpdateDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) *WorklinkUpdateDevicePolicyConfigurationFuture {
+func (a *WorkLinkStub) UpdateDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) *WorkLinkUpdateDevicePolicyConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.UpdateDevicePolicyConfiguration", input)
-	return &WorklinkUpdateDevicePolicyConfigurationFuture{Future: future}
+	return &WorkLinkUpdateDevicePolicyConfigurationFuture{Future: future}
 }
 
 func (a *WorkLinkStub) UpdateDomainMetadata(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) (*worklink.UpdateDomainMetadataOutput, error) {
@@ -782,9 +782,9 @@ func (a *WorkLinkStub) UpdateDomainMetadata(ctx workflow.Context, input *worklin
 	return &output, err
 }
 
-func (a *WorkLinkStub) UpdateDomainMetadataAsync(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) *WorklinkUpdateDomainMetadataFuture {
+func (a *WorkLinkStub) UpdateDomainMetadataAsync(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) *WorkLinkUpdateDomainMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.UpdateDomainMetadata", input)
-	return &WorklinkUpdateDomainMetadataFuture{Future: future}
+	return &WorkLinkUpdateDomainMetadataFuture{Future: future}
 }
 
 func (a *WorkLinkStub) UpdateFleetMetadata(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) (*worklink.UpdateFleetMetadataOutput, error) {
@@ -793,9 +793,9 @@ func (a *WorkLinkStub) UpdateFleetMetadata(ctx workflow.Context, input *worklink
 	return &output, err
 }
 
-func (a *WorkLinkStub) UpdateFleetMetadataAsync(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) *WorklinkUpdateFleetMetadataFuture {
+func (a *WorkLinkStub) UpdateFleetMetadataAsync(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) *WorkLinkUpdateFleetMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.UpdateFleetMetadata", input)
-	return &WorklinkUpdateFleetMetadataFuture{Future: future}
+	return &WorkLinkUpdateFleetMetadataFuture{Future: future}
 }
 
 func (a *WorkLinkStub) UpdateIdentityProviderConfiguration(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) (*worklink.UpdateIdentityProviderConfigurationOutput, error) {
@@ -804,7 +804,7 @@ func (a *WorkLinkStub) UpdateIdentityProviderConfiguration(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *WorkLinkStub) UpdateIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) *WorklinkUpdateIdentityProviderConfigurationFuture {
+func (a *WorkLinkStub) UpdateIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) *WorkLinkUpdateIdentityProviderConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.worklink.UpdateIdentityProviderConfiguration", input)
-	return &WorklinkUpdateIdentityProviderConfigurationFuture{Future: future}
+	return &WorkLinkUpdateIdentityProviderConfigurationFuture{Future: future}
 }

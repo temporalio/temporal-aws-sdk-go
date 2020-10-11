@@ -11,364 +11,364 @@ import (
 
 type APIGatewayClient interface {
 	CreateApiKey(ctx workflow.Context, input *apigateway.CreateApiKeyInput) (*apigateway.ApiKey, error)
-	CreateApiKeyAsync(ctx workflow.Context, input *apigateway.CreateApiKeyInput) *ApigatewayCreateApiKeyFuture
+	CreateApiKeyAsync(ctx workflow.Context, input *apigateway.CreateApiKeyInput) *APIGatewayCreateApiKeyFuture
 
 	CreateAuthorizer(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) (*apigateway.Authorizer, error)
-	CreateAuthorizerAsync(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) *ApigatewayCreateAuthorizerFuture
+	CreateAuthorizerAsync(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) *APIGatewayCreateAuthorizerFuture
 
 	CreateBasePathMapping(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) (*apigateway.BasePathMapping, error)
-	CreateBasePathMappingAsync(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) *ApigatewayCreateBasePathMappingFuture
+	CreateBasePathMappingAsync(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) *APIGatewayCreateBasePathMappingFuture
 
 	CreateDeployment(ctx workflow.Context, input *apigateway.CreateDeploymentInput) (*apigateway.Deployment, error)
-	CreateDeploymentAsync(ctx workflow.Context, input *apigateway.CreateDeploymentInput) *ApigatewayCreateDeploymentFuture
+	CreateDeploymentAsync(ctx workflow.Context, input *apigateway.CreateDeploymentInput) *APIGatewayCreateDeploymentFuture
 
 	CreateDocumentationPart(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) (*apigateway.DocumentationPart, error)
-	CreateDocumentationPartAsync(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) *ApigatewayCreateDocumentationPartFuture
+	CreateDocumentationPartAsync(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) *APIGatewayCreateDocumentationPartFuture
 
 	CreateDocumentationVersion(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
-	CreateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) *ApigatewayCreateDocumentationVersionFuture
+	CreateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) *APIGatewayCreateDocumentationVersionFuture
 
 	CreateDomainName(ctx workflow.Context, input *apigateway.CreateDomainNameInput) (*apigateway.DomainName, error)
-	CreateDomainNameAsync(ctx workflow.Context, input *apigateway.CreateDomainNameInput) *ApigatewayCreateDomainNameFuture
+	CreateDomainNameAsync(ctx workflow.Context, input *apigateway.CreateDomainNameInput) *APIGatewayCreateDomainNameFuture
 
 	CreateModel(ctx workflow.Context, input *apigateway.CreateModelInput) (*apigateway.Model, error)
-	CreateModelAsync(ctx workflow.Context, input *apigateway.CreateModelInput) *ApigatewayCreateModelFuture
+	CreateModelAsync(ctx workflow.Context, input *apigateway.CreateModelInput) *APIGatewayCreateModelFuture
 
 	CreateRequestValidator(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
-	CreateRequestValidatorAsync(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) *ApigatewayCreateRequestValidatorFuture
+	CreateRequestValidatorAsync(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) *APIGatewayCreateRequestValidatorFuture
 
 	CreateResource(ctx workflow.Context, input *apigateway.CreateResourceInput) (*apigateway.Resource, error)
-	CreateResourceAsync(ctx workflow.Context, input *apigateway.CreateResourceInput) *ApigatewayCreateResourceFuture
+	CreateResourceAsync(ctx workflow.Context, input *apigateway.CreateResourceInput) *APIGatewayCreateResourceFuture
 
 	CreateRestApi(ctx workflow.Context, input *apigateway.CreateRestApiInput) (*apigateway.RestApi, error)
-	CreateRestApiAsync(ctx workflow.Context, input *apigateway.CreateRestApiInput) *ApigatewayCreateRestApiFuture
+	CreateRestApiAsync(ctx workflow.Context, input *apigateway.CreateRestApiInput) *APIGatewayCreateRestApiFuture
 
 	CreateStage(ctx workflow.Context, input *apigateway.CreateStageInput) (*apigateway.Stage, error)
-	CreateStageAsync(ctx workflow.Context, input *apigateway.CreateStageInput) *ApigatewayCreateStageFuture
+	CreateStageAsync(ctx workflow.Context, input *apigateway.CreateStageInput) *APIGatewayCreateStageFuture
 
 	CreateUsagePlan(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) (*apigateway.UsagePlan, error)
-	CreateUsagePlanAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) *ApigatewayCreateUsagePlanFuture
+	CreateUsagePlanAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) *APIGatewayCreateUsagePlanFuture
 
 	CreateUsagePlanKey(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) (*apigateway.UsagePlanKey, error)
-	CreateUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) *ApigatewayCreateUsagePlanKeyFuture
+	CreateUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) *APIGatewayCreateUsagePlanKeyFuture
 
 	CreateVpcLink(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
-	CreateVpcLinkAsync(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) *ApigatewayCreateVpcLinkFuture
+	CreateVpcLinkAsync(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) *APIGatewayCreateVpcLinkFuture
 
 	DeleteApiKey(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) (*apigateway.DeleteApiKeyOutput, error)
-	DeleteApiKeyAsync(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) *ApigatewayDeleteApiKeyFuture
+	DeleteApiKeyAsync(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) *APIGatewayDeleteApiKeyFuture
 
 	DeleteAuthorizer(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) (*apigateway.DeleteAuthorizerOutput, error)
-	DeleteAuthorizerAsync(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) *ApigatewayDeleteAuthorizerFuture
+	DeleteAuthorizerAsync(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) *APIGatewayDeleteAuthorizerFuture
 
 	DeleteBasePathMapping(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) (*apigateway.DeleteBasePathMappingOutput, error)
-	DeleteBasePathMappingAsync(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) *ApigatewayDeleteBasePathMappingFuture
+	DeleteBasePathMappingAsync(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) *APIGatewayDeleteBasePathMappingFuture
 
 	DeleteClientCertificate(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) (*apigateway.DeleteClientCertificateOutput, error)
-	DeleteClientCertificateAsync(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) *ApigatewayDeleteClientCertificateFuture
+	DeleteClientCertificateAsync(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) *APIGatewayDeleteClientCertificateFuture
 
 	DeleteDeployment(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) (*apigateway.DeleteDeploymentOutput, error)
-	DeleteDeploymentAsync(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) *ApigatewayDeleteDeploymentFuture
+	DeleteDeploymentAsync(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) *APIGatewayDeleteDeploymentFuture
 
 	DeleteDocumentationPart(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) (*apigateway.DeleteDocumentationPartOutput, error)
-	DeleteDocumentationPartAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) *ApigatewayDeleteDocumentationPartFuture
+	DeleteDocumentationPartAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) *APIGatewayDeleteDocumentationPartFuture
 
 	DeleteDocumentationVersion(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) (*apigateway.DeleteDocumentationVersionOutput, error)
-	DeleteDocumentationVersionAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) *ApigatewayDeleteDocumentationVersionFuture
+	DeleteDocumentationVersionAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) *APIGatewayDeleteDocumentationVersionFuture
 
 	DeleteDomainName(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) (*apigateway.DeleteDomainNameOutput, error)
-	DeleteDomainNameAsync(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) *ApigatewayDeleteDomainNameFuture
+	DeleteDomainNameAsync(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) *APIGatewayDeleteDomainNameFuture
 
 	DeleteGatewayResponse(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) (*apigateway.DeleteGatewayResponseOutput, error)
-	DeleteGatewayResponseAsync(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) *ApigatewayDeleteGatewayResponseFuture
+	DeleteGatewayResponseAsync(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) *APIGatewayDeleteGatewayResponseFuture
 
 	DeleteIntegration(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) (*apigateway.DeleteIntegrationOutput, error)
-	DeleteIntegrationAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) *ApigatewayDeleteIntegrationFuture
+	DeleteIntegrationAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) *APIGatewayDeleteIntegrationFuture
 
 	DeleteIntegrationResponse(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) (*apigateway.DeleteIntegrationResponseOutput, error)
-	DeleteIntegrationResponseAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) *ApigatewayDeleteIntegrationResponseFuture
+	DeleteIntegrationResponseAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) *APIGatewayDeleteIntegrationResponseFuture
 
 	DeleteMethod(ctx workflow.Context, input *apigateway.DeleteMethodInput) (*apigateway.DeleteMethodOutput, error)
-	DeleteMethodAsync(ctx workflow.Context, input *apigateway.DeleteMethodInput) *ApigatewayDeleteMethodFuture
+	DeleteMethodAsync(ctx workflow.Context, input *apigateway.DeleteMethodInput) *APIGatewayDeleteMethodFuture
 
 	DeleteMethodResponse(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) (*apigateway.DeleteMethodResponseOutput, error)
-	DeleteMethodResponseAsync(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) *ApigatewayDeleteMethodResponseFuture
+	DeleteMethodResponseAsync(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) *APIGatewayDeleteMethodResponseFuture
 
 	DeleteModel(ctx workflow.Context, input *apigateway.DeleteModelInput) (*apigateway.DeleteModelOutput, error)
-	DeleteModelAsync(ctx workflow.Context, input *apigateway.DeleteModelInput) *ApigatewayDeleteModelFuture
+	DeleteModelAsync(ctx workflow.Context, input *apigateway.DeleteModelInput) *APIGatewayDeleteModelFuture
 
 	DeleteRequestValidator(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) (*apigateway.DeleteRequestValidatorOutput, error)
-	DeleteRequestValidatorAsync(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) *ApigatewayDeleteRequestValidatorFuture
+	DeleteRequestValidatorAsync(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) *APIGatewayDeleteRequestValidatorFuture
 
 	DeleteResource(ctx workflow.Context, input *apigateway.DeleteResourceInput) (*apigateway.DeleteResourceOutput, error)
-	DeleteResourceAsync(ctx workflow.Context, input *apigateway.DeleteResourceInput) *ApigatewayDeleteResourceFuture
+	DeleteResourceAsync(ctx workflow.Context, input *apigateway.DeleteResourceInput) *APIGatewayDeleteResourceFuture
 
 	DeleteRestApi(ctx workflow.Context, input *apigateway.DeleteRestApiInput) (*apigateway.DeleteRestApiOutput, error)
-	DeleteRestApiAsync(ctx workflow.Context, input *apigateway.DeleteRestApiInput) *ApigatewayDeleteRestApiFuture
+	DeleteRestApiAsync(ctx workflow.Context, input *apigateway.DeleteRestApiInput) *APIGatewayDeleteRestApiFuture
 
 	DeleteStage(ctx workflow.Context, input *apigateway.DeleteStageInput) (*apigateway.DeleteStageOutput, error)
-	DeleteStageAsync(ctx workflow.Context, input *apigateway.DeleteStageInput) *ApigatewayDeleteStageFuture
+	DeleteStageAsync(ctx workflow.Context, input *apigateway.DeleteStageInput) *APIGatewayDeleteStageFuture
 
 	DeleteUsagePlan(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) (*apigateway.DeleteUsagePlanOutput, error)
-	DeleteUsagePlanAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) *ApigatewayDeleteUsagePlanFuture
+	DeleteUsagePlanAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) *APIGatewayDeleteUsagePlanFuture
 
 	DeleteUsagePlanKey(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) (*apigateway.DeleteUsagePlanKeyOutput, error)
-	DeleteUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) *ApigatewayDeleteUsagePlanKeyFuture
+	DeleteUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) *APIGatewayDeleteUsagePlanKeyFuture
 
 	DeleteVpcLink(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) (*apigateway.DeleteVpcLinkOutput, error)
-	DeleteVpcLinkAsync(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) *ApigatewayDeleteVpcLinkFuture
+	DeleteVpcLinkAsync(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) *APIGatewayDeleteVpcLinkFuture
 
 	FlushStageAuthorizersCache(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) (*apigateway.FlushStageAuthorizersCacheOutput, error)
-	FlushStageAuthorizersCacheAsync(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) *ApigatewayFlushStageAuthorizersCacheFuture
+	FlushStageAuthorizersCacheAsync(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) *APIGatewayFlushStageAuthorizersCacheFuture
 
 	FlushStageCache(ctx workflow.Context, input *apigateway.FlushStageCacheInput) (*apigateway.FlushStageCacheOutput, error)
-	FlushStageCacheAsync(ctx workflow.Context, input *apigateway.FlushStageCacheInput) *ApigatewayFlushStageCacheFuture
+	FlushStageCacheAsync(ctx workflow.Context, input *apigateway.FlushStageCacheInput) *APIGatewayFlushStageCacheFuture
 
 	GenerateClientCertificate(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) (*apigateway.ClientCertificate, error)
-	GenerateClientCertificateAsync(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) *ApigatewayGenerateClientCertificateFuture
+	GenerateClientCertificateAsync(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) *APIGatewayGenerateClientCertificateFuture
 
 	GetAccount(ctx workflow.Context, input *apigateway.GetAccountInput) (*apigateway.Account, error)
-	GetAccountAsync(ctx workflow.Context, input *apigateway.GetAccountInput) *ApigatewayGetAccountFuture
+	GetAccountAsync(ctx workflow.Context, input *apigateway.GetAccountInput) *APIGatewayGetAccountFuture
 
 	GetApiKey(ctx workflow.Context, input *apigateway.GetApiKeyInput) (*apigateway.ApiKey, error)
-	GetApiKeyAsync(ctx workflow.Context, input *apigateway.GetApiKeyInput) *ApigatewayGetApiKeyFuture
+	GetApiKeyAsync(ctx workflow.Context, input *apigateway.GetApiKeyInput) *APIGatewayGetApiKeyFuture
 
 	GetApiKeys(ctx workflow.Context, input *apigateway.GetApiKeysInput) (*apigateway.GetApiKeysOutput, error)
-	GetApiKeysAsync(ctx workflow.Context, input *apigateway.GetApiKeysInput) *ApigatewayGetApiKeysFuture
+	GetApiKeysAsync(ctx workflow.Context, input *apigateway.GetApiKeysInput) *APIGatewayGetApiKeysFuture
 
 	GetAuthorizer(ctx workflow.Context, input *apigateway.GetAuthorizerInput) (*apigateway.Authorizer, error)
-	GetAuthorizerAsync(ctx workflow.Context, input *apigateway.GetAuthorizerInput) *ApigatewayGetAuthorizerFuture
+	GetAuthorizerAsync(ctx workflow.Context, input *apigateway.GetAuthorizerInput) *APIGatewayGetAuthorizerFuture
 
 	GetAuthorizers(ctx workflow.Context, input *apigateway.GetAuthorizersInput) (*apigateway.GetAuthorizersOutput, error)
-	GetAuthorizersAsync(ctx workflow.Context, input *apigateway.GetAuthorizersInput) *ApigatewayGetAuthorizersFuture
+	GetAuthorizersAsync(ctx workflow.Context, input *apigateway.GetAuthorizersInput) *APIGatewayGetAuthorizersFuture
 
 	GetBasePathMapping(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) (*apigateway.BasePathMapping, error)
-	GetBasePathMappingAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) *ApigatewayGetBasePathMappingFuture
+	GetBasePathMappingAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) *APIGatewayGetBasePathMappingFuture
 
 	GetBasePathMappings(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) (*apigateway.GetBasePathMappingsOutput, error)
-	GetBasePathMappingsAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) *ApigatewayGetBasePathMappingsFuture
+	GetBasePathMappingsAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) *APIGatewayGetBasePathMappingsFuture
 
 	GetClientCertificate(ctx workflow.Context, input *apigateway.GetClientCertificateInput) (*apigateway.ClientCertificate, error)
-	GetClientCertificateAsync(ctx workflow.Context, input *apigateway.GetClientCertificateInput) *ApigatewayGetClientCertificateFuture
+	GetClientCertificateAsync(ctx workflow.Context, input *apigateway.GetClientCertificateInput) *APIGatewayGetClientCertificateFuture
 
 	GetClientCertificates(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) (*apigateway.GetClientCertificatesOutput, error)
-	GetClientCertificatesAsync(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) *ApigatewayGetClientCertificatesFuture
+	GetClientCertificatesAsync(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) *APIGatewayGetClientCertificatesFuture
 
 	GetDeployment(ctx workflow.Context, input *apigateway.GetDeploymentInput) (*apigateway.Deployment, error)
-	GetDeploymentAsync(ctx workflow.Context, input *apigateway.GetDeploymentInput) *ApigatewayGetDeploymentFuture
+	GetDeploymentAsync(ctx workflow.Context, input *apigateway.GetDeploymentInput) *APIGatewayGetDeploymentFuture
 
 	GetDeployments(ctx workflow.Context, input *apigateway.GetDeploymentsInput) (*apigateway.GetDeploymentsOutput, error)
-	GetDeploymentsAsync(ctx workflow.Context, input *apigateway.GetDeploymentsInput) *ApigatewayGetDeploymentsFuture
+	GetDeploymentsAsync(ctx workflow.Context, input *apigateway.GetDeploymentsInput) *APIGatewayGetDeploymentsFuture
 
 	GetDocumentationPart(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) (*apigateway.DocumentationPart, error)
-	GetDocumentationPartAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) *ApigatewayGetDocumentationPartFuture
+	GetDocumentationPartAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) *APIGatewayGetDocumentationPartFuture
 
 	GetDocumentationParts(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) (*apigateway.GetDocumentationPartsOutput, error)
-	GetDocumentationPartsAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) *ApigatewayGetDocumentationPartsFuture
+	GetDocumentationPartsAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) *APIGatewayGetDocumentationPartsFuture
 
 	GetDocumentationVersion(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
-	GetDocumentationVersionAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) *ApigatewayGetDocumentationVersionFuture
+	GetDocumentationVersionAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) *APIGatewayGetDocumentationVersionFuture
 
 	GetDocumentationVersions(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) (*apigateway.GetDocumentationVersionsOutput, error)
-	GetDocumentationVersionsAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) *ApigatewayGetDocumentationVersionsFuture
+	GetDocumentationVersionsAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) *APIGatewayGetDocumentationVersionsFuture
 
 	GetDomainName(ctx workflow.Context, input *apigateway.GetDomainNameInput) (*apigateway.DomainName, error)
-	GetDomainNameAsync(ctx workflow.Context, input *apigateway.GetDomainNameInput) *ApigatewayGetDomainNameFuture
+	GetDomainNameAsync(ctx workflow.Context, input *apigateway.GetDomainNameInput) *APIGatewayGetDomainNameFuture
 
 	GetDomainNames(ctx workflow.Context, input *apigateway.GetDomainNamesInput) (*apigateway.GetDomainNamesOutput, error)
-	GetDomainNamesAsync(ctx workflow.Context, input *apigateway.GetDomainNamesInput) *ApigatewayGetDomainNamesFuture
+	GetDomainNamesAsync(ctx workflow.Context, input *apigateway.GetDomainNamesInput) *APIGatewayGetDomainNamesFuture
 
 	GetExport(ctx workflow.Context, input *apigateway.GetExportInput) (*apigateway.GetExportOutput, error)
-	GetExportAsync(ctx workflow.Context, input *apigateway.GetExportInput) *ApigatewayGetExportFuture
+	GetExportAsync(ctx workflow.Context, input *apigateway.GetExportInput) *APIGatewayGetExportFuture
 
 	GetGatewayResponse(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
-	GetGatewayResponseAsync(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) *ApigatewayGetGatewayResponseFuture
+	GetGatewayResponseAsync(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) *APIGatewayGetGatewayResponseFuture
 
 	GetGatewayResponses(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) (*apigateway.GetGatewayResponsesOutput, error)
-	GetGatewayResponsesAsync(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) *ApigatewayGetGatewayResponsesFuture
+	GetGatewayResponsesAsync(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) *APIGatewayGetGatewayResponsesFuture
 
 	GetIntegration(ctx workflow.Context, input *apigateway.GetIntegrationInput) (*apigateway.Integration, error)
-	GetIntegrationAsync(ctx workflow.Context, input *apigateway.GetIntegrationInput) *ApigatewayGetIntegrationFuture
+	GetIntegrationAsync(ctx workflow.Context, input *apigateway.GetIntegrationInput) *APIGatewayGetIntegrationFuture
 
 	GetIntegrationResponse(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
-	GetIntegrationResponseAsync(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) *ApigatewayGetIntegrationResponseFuture
+	GetIntegrationResponseAsync(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) *APIGatewayGetIntegrationResponseFuture
 
 	GetMethod(ctx workflow.Context, input *apigateway.GetMethodInput) (*apigateway.Method, error)
-	GetMethodAsync(ctx workflow.Context, input *apigateway.GetMethodInput) *ApigatewayGetMethodFuture
+	GetMethodAsync(ctx workflow.Context, input *apigateway.GetMethodInput) *APIGatewayGetMethodFuture
 
 	GetMethodResponse(ctx workflow.Context, input *apigateway.GetMethodResponseInput) (*apigateway.MethodResponse, error)
-	GetMethodResponseAsync(ctx workflow.Context, input *apigateway.GetMethodResponseInput) *ApigatewayGetMethodResponseFuture
+	GetMethodResponseAsync(ctx workflow.Context, input *apigateway.GetMethodResponseInput) *APIGatewayGetMethodResponseFuture
 
 	GetModel(ctx workflow.Context, input *apigateway.GetModelInput) (*apigateway.Model, error)
-	GetModelAsync(ctx workflow.Context, input *apigateway.GetModelInput) *ApigatewayGetModelFuture
+	GetModelAsync(ctx workflow.Context, input *apigateway.GetModelInput) *APIGatewayGetModelFuture
 
 	GetModelTemplate(ctx workflow.Context, input *apigateway.GetModelTemplateInput) (*apigateway.GetModelTemplateOutput, error)
-	GetModelTemplateAsync(ctx workflow.Context, input *apigateway.GetModelTemplateInput) *ApigatewayGetModelTemplateFuture
+	GetModelTemplateAsync(ctx workflow.Context, input *apigateway.GetModelTemplateInput) *APIGatewayGetModelTemplateFuture
 
 	GetModels(ctx workflow.Context, input *apigateway.GetModelsInput) (*apigateway.GetModelsOutput, error)
-	GetModelsAsync(ctx workflow.Context, input *apigateway.GetModelsInput) *ApigatewayGetModelsFuture
+	GetModelsAsync(ctx workflow.Context, input *apigateway.GetModelsInput) *APIGatewayGetModelsFuture
 
 	GetRequestValidator(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
-	GetRequestValidatorAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) *ApigatewayGetRequestValidatorFuture
+	GetRequestValidatorAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) *APIGatewayGetRequestValidatorFuture
 
 	GetRequestValidators(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) (*apigateway.GetRequestValidatorsOutput, error)
-	GetRequestValidatorsAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) *ApigatewayGetRequestValidatorsFuture
+	GetRequestValidatorsAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) *APIGatewayGetRequestValidatorsFuture
 
 	GetResource(ctx workflow.Context, input *apigateway.GetResourceInput) (*apigateway.Resource, error)
-	GetResourceAsync(ctx workflow.Context, input *apigateway.GetResourceInput) *ApigatewayGetResourceFuture
+	GetResourceAsync(ctx workflow.Context, input *apigateway.GetResourceInput) *APIGatewayGetResourceFuture
 
 	GetResources(ctx workflow.Context, input *apigateway.GetResourcesInput) (*apigateway.GetResourcesOutput, error)
-	GetResourcesAsync(ctx workflow.Context, input *apigateway.GetResourcesInput) *ApigatewayGetResourcesFuture
+	GetResourcesAsync(ctx workflow.Context, input *apigateway.GetResourcesInput) *APIGatewayGetResourcesFuture
 
 	GetRestApi(ctx workflow.Context, input *apigateway.GetRestApiInput) (*apigateway.RestApi, error)
-	GetRestApiAsync(ctx workflow.Context, input *apigateway.GetRestApiInput) *ApigatewayGetRestApiFuture
+	GetRestApiAsync(ctx workflow.Context, input *apigateway.GetRestApiInput) *APIGatewayGetRestApiFuture
 
 	GetRestApis(ctx workflow.Context, input *apigateway.GetRestApisInput) (*apigateway.GetRestApisOutput, error)
-	GetRestApisAsync(ctx workflow.Context, input *apigateway.GetRestApisInput) *ApigatewayGetRestApisFuture
+	GetRestApisAsync(ctx workflow.Context, input *apigateway.GetRestApisInput) *APIGatewayGetRestApisFuture
 
 	GetSdk(ctx workflow.Context, input *apigateway.GetSdkInput) (*apigateway.GetSdkOutput, error)
-	GetSdkAsync(ctx workflow.Context, input *apigateway.GetSdkInput) *ApigatewayGetSdkFuture
+	GetSdkAsync(ctx workflow.Context, input *apigateway.GetSdkInput) *APIGatewayGetSdkFuture
 
 	GetSdkType(ctx workflow.Context, input *apigateway.GetSdkTypeInput) (*apigateway.SdkType, error)
-	GetSdkTypeAsync(ctx workflow.Context, input *apigateway.GetSdkTypeInput) *ApigatewayGetSdkTypeFuture
+	GetSdkTypeAsync(ctx workflow.Context, input *apigateway.GetSdkTypeInput) *APIGatewayGetSdkTypeFuture
 
 	GetSdkTypes(ctx workflow.Context, input *apigateway.GetSdkTypesInput) (*apigateway.GetSdkTypesOutput, error)
-	GetSdkTypesAsync(ctx workflow.Context, input *apigateway.GetSdkTypesInput) *ApigatewayGetSdkTypesFuture
+	GetSdkTypesAsync(ctx workflow.Context, input *apigateway.GetSdkTypesInput) *APIGatewayGetSdkTypesFuture
 
 	GetStage(ctx workflow.Context, input *apigateway.GetStageInput) (*apigateway.Stage, error)
-	GetStageAsync(ctx workflow.Context, input *apigateway.GetStageInput) *ApigatewayGetStageFuture
+	GetStageAsync(ctx workflow.Context, input *apigateway.GetStageInput) *APIGatewayGetStageFuture
 
 	GetStages(ctx workflow.Context, input *apigateway.GetStagesInput) (*apigateway.GetStagesOutput, error)
-	GetStagesAsync(ctx workflow.Context, input *apigateway.GetStagesInput) *ApigatewayGetStagesFuture
+	GetStagesAsync(ctx workflow.Context, input *apigateway.GetStagesInput) *APIGatewayGetStagesFuture
 
 	GetTags(ctx workflow.Context, input *apigateway.GetTagsInput) (*apigateway.GetTagsOutput, error)
-	GetTagsAsync(ctx workflow.Context, input *apigateway.GetTagsInput) *ApigatewayGetTagsFuture
+	GetTagsAsync(ctx workflow.Context, input *apigateway.GetTagsInput) *APIGatewayGetTagsFuture
 
 	GetUsage(ctx workflow.Context, input *apigateway.GetUsageInput) (*apigateway.Usage, error)
-	GetUsageAsync(ctx workflow.Context, input *apigateway.GetUsageInput) *ApigatewayGetUsageFuture
+	GetUsageAsync(ctx workflow.Context, input *apigateway.GetUsageInput) *APIGatewayGetUsageFuture
 
 	GetUsagePlan(ctx workflow.Context, input *apigateway.GetUsagePlanInput) (*apigateway.UsagePlan, error)
-	GetUsagePlanAsync(ctx workflow.Context, input *apigateway.GetUsagePlanInput) *ApigatewayGetUsagePlanFuture
+	GetUsagePlanAsync(ctx workflow.Context, input *apigateway.GetUsagePlanInput) *APIGatewayGetUsagePlanFuture
 
 	GetUsagePlanKey(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) (*apigateway.UsagePlanKey, error)
-	GetUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) *ApigatewayGetUsagePlanKeyFuture
+	GetUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) *APIGatewayGetUsagePlanKeyFuture
 
 	GetUsagePlanKeys(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) (*apigateway.GetUsagePlanKeysOutput, error)
-	GetUsagePlanKeysAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) *ApigatewayGetUsagePlanKeysFuture
+	GetUsagePlanKeysAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) *APIGatewayGetUsagePlanKeysFuture
 
 	GetUsagePlans(ctx workflow.Context, input *apigateway.GetUsagePlansInput) (*apigateway.GetUsagePlansOutput, error)
-	GetUsagePlansAsync(ctx workflow.Context, input *apigateway.GetUsagePlansInput) *ApigatewayGetUsagePlansFuture
+	GetUsagePlansAsync(ctx workflow.Context, input *apigateway.GetUsagePlansInput) *APIGatewayGetUsagePlansFuture
 
 	GetVpcLink(ctx workflow.Context, input *apigateway.GetVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
-	GetVpcLinkAsync(ctx workflow.Context, input *apigateway.GetVpcLinkInput) *ApigatewayGetVpcLinkFuture
+	GetVpcLinkAsync(ctx workflow.Context, input *apigateway.GetVpcLinkInput) *APIGatewayGetVpcLinkFuture
 
 	GetVpcLinks(ctx workflow.Context, input *apigateway.GetVpcLinksInput) (*apigateway.GetVpcLinksOutput, error)
-	GetVpcLinksAsync(ctx workflow.Context, input *apigateway.GetVpcLinksInput) *ApigatewayGetVpcLinksFuture
+	GetVpcLinksAsync(ctx workflow.Context, input *apigateway.GetVpcLinksInput) *APIGatewayGetVpcLinksFuture
 
 	ImportApiKeys(ctx workflow.Context, input *apigateway.ImportApiKeysInput) (*apigateway.ImportApiKeysOutput, error)
-	ImportApiKeysAsync(ctx workflow.Context, input *apigateway.ImportApiKeysInput) *ApigatewayImportApiKeysFuture
+	ImportApiKeysAsync(ctx workflow.Context, input *apigateway.ImportApiKeysInput) *APIGatewayImportApiKeysFuture
 
 	ImportDocumentationParts(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) (*apigateway.ImportDocumentationPartsOutput, error)
-	ImportDocumentationPartsAsync(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) *ApigatewayImportDocumentationPartsFuture
+	ImportDocumentationPartsAsync(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) *APIGatewayImportDocumentationPartsFuture
 
 	ImportRestApi(ctx workflow.Context, input *apigateway.ImportRestApiInput) (*apigateway.RestApi, error)
-	ImportRestApiAsync(ctx workflow.Context, input *apigateway.ImportRestApiInput) *ApigatewayImportRestApiFuture
+	ImportRestApiAsync(ctx workflow.Context, input *apigateway.ImportRestApiInput) *APIGatewayImportRestApiFuture
 
 	PutGatewayResponse(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
-	PutGatewayResponseAsync(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) *ApigatewayPutGatewayResponseFuture
+	PutGatewayResponseAsync(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) *APIGatewayPutGatewayResponseFuture
 
 	PutIntegration(ctx workflow.Context, input *apigateway.PutIntegrationInput) (*apigateway.Integration, error)
-	PutIntegrationAsync(ctx workflow.Context, input *apigateway.PutIntegrationInput) *ApigatewayPutIntegrationFuture
+	PutIntegrationAsync(ctx workflow.Context, input *apigateway.PutIntegrationInput) *APIGatewayPutIntegrationFuture
 
 	PutIntegrationResponse(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
-	PutIntegrationResponseAsync(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) *ApigatewayPutIntegrationResponseFuture
+	PutIntegrationResponseAsync(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) *APIGatewayPutIntegrationResponseFuture
 
 	PutMethod(ctx workflow.Context, input *apigateway.PutMethodInput) (*apigateway.Method, error)
-	PutMethodAsync(ctx workflow.Context, input *apigateway.PutMethodInput) *ApigatewayPutMethodFuture
+	PutMethodAsync(ctx workflow.Context, input *apigateway.PutMethodInput) *APIGatewayPutMethodFuture
 
 	PutMethodResponse(ctx workflow.Context, input *apigateway.PutMethodResponseInput) (*apigateway.MethodResponse, error)
-	PutMethodResponseAsync(ctx workflow.Context, input *apigateway.PutMethodResponseInput) *ApigatewayPutMethodResponseFuture
+	PutMethodResponseAsync(ctx workflow.Context, input *apigateway.PutMethodResponseInput) *APIGatewayPutMethodResponseFuture
 
 	PutRestApi(ctx workflow.Context, input *apigateway.PutRestApiInput) (*apigateway.RestApi, error)
-	PutRestApiAsync(ctx workflow.Context, input *apigateway.PutRestApiInput) *ApigatewayPutRestApiFuture
+	PutRestApiAsync(ctx workflow.Context, input *apigateway.PutRestApiInput) *APIGatewayPutRestApiFuture
 
 	TagResource(ctx workflow.Context, input *apigateway.TagResourceInput) (*apigateway.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *apigateway.TagResourceInput) *ApigatewayTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *apigateway.TagResourceInput) *APIGatewayTagResourceFuture
 
 	TestInvokeAuthorizer(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) (*apigateway.TestInvokeAuthorizerOutput, error)
-	TestInvokeAuthorizerAsync(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) *ApigatewayTestInvokeAuthorizerFuture
+	TestInvokeAuthorizerAsync(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) *APIGatewayTestInvokeAuthorizerFuture
 
 	TestInvokeMethod(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) (*apigateway.TestInvokeMethodOutput, error)
-	TestInvokeMethodAsync(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) *ApigatewayTestInvokeMethodFuture
+	TestInvokeMethodAsync(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) *APIGatewayTestInvokeMethodFuture
 
 	UntagResource(ctx workflow.Context, input *apigateway.UntagResourceInput) (*apigateway.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *apigateway.UntagResourceInput) *ApigatewayUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *apigateway.UntagResourceInput) *APIGatewayUntagResourceFuture
 
 	UpdateAccount(ctx workflow.Context, input *apigateway.UpdateAccountInput) (*apigateway.Account, error)
-	UpdateAccountAsync(ctx workflow.Context, input *apigateway.UpdateAccountInput) *ApigatewayUpdateAccountFuture
+	UpdateAccountAsync(ctx workflow.Context, input *apigateway.UpdateAccountInput) *APIGatewayUpdateAccountFuture
 
 	UpdateApiKey(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) (*apigateway.ApiKey, error)
-	UpdateApiKeyAsync(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) *ApigatewayUpdateApiKeyFuture
+	UpdateApiKeyAsync(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) *APIGatewayUpdateApiKeyFuture
 
 	UpdateAuthorizer(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) (*apigateway.Authorizer, error)
-	UpdateAuthorizerAsync(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) *ApigatewayUpdateAuthorizerFuture
+	UpdateAuthorizerAsync(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) *APIGatewayUpdateAuthorizerFuture
 
 	UpdateBasePathMapping(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) (*apigateway.BasePathMapping, error)
-	UpdateBasePathMappingAsync(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) *ApigatewayUpdateBasePathMappingFuture
+	UpdateBasePathMappingAsync(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) *APIGatewayUpdateBasePathMappingFuture
 
 	UpdateClientCertificate(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) (*apigateway.ClientCertificate, error)
-	UpdateClientCertificateAsync(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) *ApigatewayUpdateClientCertificateFuture
+	UpdateClientCertificateAsync(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) *APIGatewayUpdateClientCertificateFuture
 
 	UpdateDeployment(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) (*apigateway.Deployment, error)
-	UpdateDeploymentAsync(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) *ApigatewayUpdateDeploymentFuture
+	UpdateDeploymentAsync(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) *APIGatewayUpdateDeploymentFuture
 
 	UpdateDocumentationPart(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) (*apigateway.DocumentationPart, error)
-	UpdateDocumentationPartAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) *ApigatewayUpdateDocumentationPartFuture
+	UpdateDocumentationPartAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) *APIGatewayUpdateDocumentationPartFuture
 
 	UpdateDocumentationVersion(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
-	UpdateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) *ApigatewayUpdateDocumentationVersionFuture
+	UpdateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) *APIGatewayUpdateDocumentationVersionFuture
 
 	UpdateDomainName(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) (*apigateway.DomainName, error)
-	UpdateDomainNameAsync(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) *ApigatewayUpdateDomainNameFuture
+	UpdateDomainNameAsync(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) *APIGatewayUpdateDomainNameFuture
 
 	UpdateGatewayResponse(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
-	UpdateGatewayResponseAsync(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) *ApigatewayUpdateGatewayResponseFuture
+	UpdateGatewayResponseAsync(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) *APIGatewayUpdateGatewayResponseFuture
 
 	UpdateIntegration(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) (*apigateway.Integration, error)
-	UpdateIntegrationAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) *ApigatewayUpdateIntegrationFuture
+	UpdateIntegrationAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) *APIGatewayUpdateIntegrationFuture
 
 	UpdateIntegrationResponse(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
-	UpdateIntegrationResponseAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) *ApigatewayUpdateIntegrationResponseFuture
+	UpdateIntegrationResponseAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) *APIGatewayUpdateIntegrationResponseFuture
 
 	UpdateMethod(ctx workflow.Context, input *apigateway.UpdateMethodInput) (*apigateway.Method, error)
-	UpdateMethodAsync(ctx workflow.Context, input *apigateway.UpdateMethodInput) *ApigatewayUpdateMethodFuture
+	UpdateMethodAsync(ctx workflow.Context, input *apigateway.UpdateMethodInput) *APIGatewayUpdateMethodFuture
 
 	UpdateMethodResponse(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) (*apigateway.MethodResponse, error)
-	UpdateMethodResponseAsync(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) *ApigatewayUpdateMethodResponseFuture
+	UpdateMethodResponseAsync(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) *APIGatewayUpdateMethodResponseFuture
 
 	UpdateModel(ctx workflow.Context, input *apigateway.UpdateModelInput) (*apigateway.Model, error)
-	UpdateModelAsync(ctx workflow.Context, input *apigateway.UpdateModelInput) *ApigatewayUpdateModelFuture
+	UpdateModelAsync(ctx workflow.Context, input *apigateway.UpdateModelInput) *APIGatewayUpdateModelFuture
 
 	UpdateRequestValidator(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
-	UpdateRequestValidatorAsync(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) *ApigatewayUpdateRequestValidatorFuture
+	UpdateRequestValidatorAsync(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) *APIGatewayUpdateRequestValidatorFuture
 
 	UpdateResource(ctx workflow.Context, input *apigateway.UpdateResourceInput) (*apigateway.Resource, error)
-	UpdateResourceAsync(ctx workflow.Context, input *apigateway.UpdateResourceInput) *ApigatewayUpdateResourceFuture
+	UpdateResourceAsync(ctx workflow.Context, input *apigateway.UpdateResourceInput) *APIGatewayUpdateResourceFuture
 
 	UpdateRestApi(ctx workflow.Context, input *apigateway.UpdateRestApiInput) (*apigateway.RestApi, error)
-	UpdateRestApiAsync(ctx workflow.Context, input *apigateway.UpdateRestApiInput) *ApigatewayUpdateRestApiFuture
+	UpdateRestApiAsync(ctx workflow.Context, input *apigateway.UpdateRestApiInput) *APIGatewayUpdateRestApiFuture
 
 	UpdateStage(ctx workflow.Context, input *apigateway.UpdateStageInput) (*apigateway.Stage, error)
-	UpdateStageAsync(ctx workflow.Context, input *apigateway.UpdateStageInput) *ApigatewayUpdateStageFuture
+	UpdateStageAsync(ctx workflow.Context, input *apigateway.UpdateStageInput) *APIGatewayUpdateStageFuture
 
 	UpdateUsage(ctx workflow.Context, input *apigateway.UpdateUsageInput) (*apigateway.Usage, error)
-	UpdateUsageAsync(ctx workflow.Context, input *apigateway.UpdateUsageInput) *ApigatewayUpdateUsageFuture
+	UpdateUsageAsync(ctx workflow.Context, input *apigateway.UpdateUsageInput) *APIGatewayUpdateUsageFuture
 
 	UpdateUsagePlan(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) (*apigateway.UsagePlan, error)
-	UpdateUsagePlanAsync(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) *ApigatewayUpdateUsagePlanFuture
+	UpdateUsagePlanAsync(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) *APIGatewayUpdateUsagePlanFuture
 
 	UpdateVpcLink(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
-	UpdateVpcLinkAsync(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) *ApigatewayUpdateVpcLinkFuture
+	UpdateVpcLinkAsync(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) *APIGatewayUpdateVpcLinkFuture
 }
 
 type APIGatewayStub struct{}
@@ -377,1201 +377,1201 @@ func NewAPIGatewayStub() APIGatewayClient {
 	return &APIGatewayStub{}
 }
 
-type ApigatewayCreateApiKeyFuture struct {
+type APIGatewayCreateApiKeyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateApiKeyFuture) Get(ctx workflow.Context) (*apigateway.ApiKey, error) {
+func (r *APIGatewayCreateApiKeyFuture) Get(ctx workflow.Context) (*apigateway.ApiKey, error) {
 	var output apigateway.ApiKey
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateAuthorizerFuture struct {
+type APIGatewayCreateAuthorizerFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.Authorizer, error) {
+func (r *APIGatewayCreateAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.Authorizer, error) {
 	var output apigateway.Authorizer
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateBasePathMappingFuture struct {
+type APIGatewayCreateBasePathMappingFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateBasePathMappingFuture) Get(ctx workflow.Context) (*apigateway.BasePathMapping, error) {
+func (r *APIGatewayCreateBasePathMappingFuture) Get(ctx workflow.Context) (*apigateway.BasePathMapping, error) {
 	var output apigateway.BasePathMapping
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateDeploymentFuture struct {
+type APIGatewayCreateDeploymentFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateDeploymentFuture) Get(ctx workflow.Context) (*apigateway.Deployment, error) {
+func (r *APIGatewayCreateDeploymentFuture) Get(ctx workflow.Context) (*apigateway.Deployment, error) {
 	var output apigateway.Deployment
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateDocumentationPartFuture struct {
+type APIGatewayCreateDocumentationPartFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateDocumentationPartFuture) Get(ctx workflow.Context) (*apigateway.DocumentationPart, error) {
+func (r *APIGatewayCreateDocumentationPartFuture) Get(ctx workflow.Context) (*apigateway.DocumentationPart, error) {
 	var output apigateway.DocumentationPart
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateDocumentationVersionFuture struct {
+type APIGatewayCreateDocumentationVersionFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateDocumentationVersionFuture) Get(ctx workflow.Context) (*apigateway.DocumentationVersion, error) {
+func (r *APIGatewayCreateDocumentationVersionFuture) Get(ctx workflow.Context) (*apigateway.DocumentationVersion, error) {
 	var output apigateway.DocumentationVersion
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateDomainNameFuture struct {
+type APIGatewayCreateDomainNameFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateDomainNameFuture) Get(ctx workflow.Context) (*apigateway.DomainName, error) {
+func (r *APIGatewayCreateDomainNameFuture) Get(ctx workflow.Context) (*apigateway.DomainName, error) {
 	var output apigateway.DomainName
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateModelFuture struct {
+type APIGatewayCreateModelFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateModelFuture) Get(ctx workflow.Context) (*apigateway.Model, error) {
+func (r *APIGatewayCreateModelFuture) Get(ctx workflow.Context) (*apigateway.Model, error) {
 	var output apigateway.Model
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateRequestValidatorFuture struct {
+type APIGatewayCreateRequestValidatorFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateRequestValidatorFuture) Get(ctx workflow.Context) (*apigateway.UpdateRequestValidatorOutput, error) {
+func (r *APIGatewayCreateRequestValidatorFuture) Get(ctx workflow.Context) (*apigateway.UpdateRequestValidatorOutput, error) {
 	var output apigateway.UpdateRequestValidatorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateResourceFuture struct {
+type APIGatewayCreateResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateResourceFuture) Get(ctx workflow.Context) (*apigateway.Resource, error) {
+func (r *APIGatewayCreateResourceFuture) Get(ctx workflow.Context) (*apigateway.Resource, error) {
 	var output apigateway.Resource
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateRestApiFuture struct {
+type APIGatewayCreateRestApiFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
+func (r *APIGatewayCreateRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
 	var output apigateway.RestApi
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateStageFuture struct {
+type APIGatewayCreateStageFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateStageFuture) Get(ctx workflow.Context) (*apigateway.Stage, error) {
+func (r *APIGatewayCreateStageFuture) Get(ctx workflow.Context) (*apigateway.Stage, error) {
 	var output apigateway.Stage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateUsagePlanFuture struct {
+type APIGatewayCreateUsagePlanFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateUsagePlanFuture) Get(ctx workflow.Context) (*apigateway.UsagePlan, error) {
+func (r *APIGatewayCreateUsagePlanFuture) Get(ctx workflow.Context) (*apigateway.UsagePlan, error) {
 	var output apigateway.UsagePlan
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateUsagePlanKeyFuture struct {
+type APIGatewayCreateUsagePlanKeyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateUsagePlanKeyFuture) Get(ctx workflow.Context) (*apigateway.UsagePlanKey, error) {
+func (r *APIGatewayCreateUsagePlanKeyFuture) Get(ctx workflow.Context) (*apigateway.UsagePlanKey, error) {
 	var output apigateway.UsagePlanKey
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayCreateVpcLinkFuture struct {
+type APIGatewayCreateVpcLinkFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayCreateVpcLinkFuture) Get(ctx workflow.Context) (*apigateway.UpdateVpcLinkOutput, error) {
+func (r *APIGatewayCreateVpcLinkFuture) Get(ctx workflow.Context) (*apigateway.UpdateVpcLinkOutput, error) {
 	var output apigateway.UpdateVpcLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteApiKeyFuture struct {
+type APIGatewayDeleteApiKeyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteApiKeyFuture) Get(ctx workflow.Context) (*apigateway.DeleteApiKeyOutput, error) {
+func (r *APIGatewayDeleteApiKeyFuture) Get(ctx workflow.Context) (*apigateway.DeleteApiKeyOutput, error) {
 	var output apigateway.DeleteApiKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteAuthorizerFuture struct {
+type APIGatewayDeleteAuthorizerFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.DeleteAuthorizerOutput, error) {
+func (r *APIGatewayDeleteAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.DeleteAuthorizerOutput, error) {
 	var output apigateway.DeleteAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteBasePathMappingFuture struct {
+type APIGatewayDeleteBasePathMappingFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteBasePathMappingFuture) Get(ctx workflow.Context) (*apigateway.DeleteBasePathMappingOutput, error) {
+func (r *APIGatewayDeleteBasePathMappingFuture) Get(ctx workflow.Context) (*apigateway.DeleteBasePathMappingOutput, error) {
 	var output apigateway.DeleteBasePathMappingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteClientCertificateFuture struct {
+type APIGatewayDeleteClientCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteClientCertificateFuture) Get(ctx workflow.Context) (*apigateway.DeleteClientCertificateOutput, error) {
+func (r *APIGatewayDeleteClientCertificateFuture) Get(ctx workflow.Context) (*apigateway.DeleteClientCertificateOutput, error) {
 	var output apigateway.DeleteClientCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteDeploymentFuture struct {
+type APIGatewayDeleteDeploymentFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteDeploymentFuture) Get(ctx workflow.Context) (*apigateway.DeleteDeploymentOutput, error) {
+func (r *APIGatewayDeleteDeploymentFuture) Get(ctx workflow.Context) (*apigateway.DeleteDeploymentOutput, error) {
 	var output apigateway.DeleteDeploymentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteDocumentationPartFuture struct {
+type APIGatewayDeleteDocumentationPartFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteDocumentationPartFuture) Get(ctx workflow.Context) (*apigateway.DeleteDocumentationPartOutput, error) {
+func (r *APIGatewayDeleteDocumentationPartFuture) Get(ctx workflow.Context) (*apigateway.DeleteDocumentationPartOutput, error) {
 	var output apigateway.DeleteDocumentationPartOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteDocumentationVersionFuture struct {
+type APIGatewayDeleteDocumentationVersionFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteDocumentationVersionFuture) Get(ctx workflow.Context) (*apigateway.DeleteDocumentationVersionOutput, error) {
+func (r *APIGatewayDeleteDocumentationVersionFuture) Get(ctx workflow.Context) (*apigateway.DeleteDocumentationVersionOutput, error) {
 	var output apigateway.DeleteDocumentationVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteDomainNameFuture struct {
+type APIGatewayDeleteDomainNameFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteDomainNameFuture) Get(ctx workflow.Context) (*apigateway.DeleteDomainNameOutput, error) {
+func (r *APIGatewayDeleteDomainNameFuture) Get(ctx workflow.Context) (*apigateway.DeleteDomainNameOutput, error) {
 	var output apigateway.DeleteDomainNameOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteGatewayResponseFuture struct {
+type APIGatewayDeleteGatewayResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteGatewayResponseFuture) Get(ctx workflow.Context) (*apigateway.DeleteGatewayResponseOutput, error) {
+func (r *APIGatewayDeleteGatewayResponseFuture) Get(ctx workflow.Context) (*apigateway.DeleteGatewayResponseOutput, error) {
 	var output apigateway.DeleteGatewayResponseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteIntegrationFuture struct {
+type APIGatewayDeleteIntegrationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteIntegrationFuture) Get(ctx workflow.Context) (*apigateway.DeleteIntegrationOutput, error) {
+func (r *APIGatewayDeleteIntegrationFuture) Get(ctx workflow.Context) (*apigateway.DeleteIntegrationOutput, error) {
 	var output apigateway.DeleteIntegrationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteIntegrationResponseFuture struct {
+type APIGatewayDeleteIntegrationResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteIntegrationResponseFuture) Get(ctx workflow.Context) (*apigateway.DeleteIntegrationResponseOutput, error) {
+func (r *APIGatewayDeleteIntegrationResponseFuture) Get(ctx workflow.Context) (*apigateway.DeleteIntegrationResponseOutput, error) {
 	var output apigateway.DeleteIntegrationResponseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteMethodFuture struct {
+type APIGatewayDeleteMethodFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteMethodFuture) Get(ctx workflow.Context) (*apigateway.DeleteMethodOutput, error) {
+func (r *APIGatewayDeleteMethodFuture) Get(ctx workflow.Context) (*apigateway.DeleteMethodOutput, error) {
 	var output apigateway.DeleteMethodOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteMethodResponseFuture struct {
+type APIGatewayDeleteMethodResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteMethodResponseFuture) Get(ctx workflow.Context) (*apigateway.DeleteMethodResponseOutput, error) {
+func (r *APIGatewayDeleteMethodResponseFuture) Get(ctx workflow.Context) (*apigateway.DeleteMethodResponseOutput, error) {
 	var output apigateway.DeleteMethodResponseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteModelFuture struct {
+type APIGatewayDeleteModelFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteModelFuture) Get(ctx workflow.Context) (*apigateway.DeleteModelOutput, error) {
+func (r *APIGatewayDeleteModelFuture) Get(ctx workflow.Context) (*apigateway.DeleteModelOutput, error) {
 	var output apigateway.DeleteModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteRequestValidatorFuture struct {
+type APIGatewayDeleteRequestValidatorFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteRequestValidatorFuture) Get(ctx workflow.Context) (*apigateway.DeleteRequestValidatorOutput, error) {
+func (r *APIGatewayDeleteRequestValidatorFuture) Get(ctx workflow.Context) (*apigateway.DeleteRequestValidatorOutput, error) {
 	var output apigateway.DeleteRequestValidatorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteResourceFuture struct {
+type APIGatewayDeleteResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteResourceFuture) Get(ctx workflow.Context) (*apigateway.DeleteResourceOutput, error) {
+func (r *APIGatewayDeleteResourceFuture) Get(ctx workflow.Context) (*apigateway.DeleteResourceOutput, error) {
 	var output apigateway.DeleteResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteRestApiFuture struct {
+type APIGatewayDeleteRestApiFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteRestApiFuture) Get(ctx workflow.Context) (*apigateway.DeleteRestApiOutput, error) {
+func (r *APIGatewayDeleteRestApiFuture) Get(ctx workflow.Context) (*apigateway.DeleteRestApiOutput, error) {
 	var output apigateway.DeleteRestApiOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteStageFuture struct {
+type APIGatewayDeleteStageFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteStageFuture) Get(ctx workflow.Context) (*apigateway.DeleteStageOutput, error) {
+func (r *APIGatewayDeleteStageFuture) Get(ctx workflow.Context) (*apigateway.DeleteStageOutput, error) {
 	var output apigateway.DeleteStageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteUsagePlanFuture struct {
+type APIGatewayDeleteUsagePlanFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteUsagePlanFuture) Get(ctx workflow.Context) (*apigateway.DeleteUsagePlanOutput, error) {
+func (r *APIGatewayDeleteUsagePlanFuture) Get(ctx workflow.Context) (*apigateway.DeleteUsagePlanOutput, error) {
 	var output apigateway.DeleteUsagePlanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteUsagePlanKeyFuture struct {
+type APIGatewayDeleteUsagePlanKeyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteUsagePlanKeyFuture) Get(ctx workflow.Context) (*apigateway.DeleteUsagePlanKeyOutput, error) {
+func (r *APIGatewayDeleteUsagePlanKeyFuture) Get(ctx workflow.Context) (*apigateway.DeleteUsagePlanKeyOutput, error) {
 	var output apigateway.DeleteUsagePlanKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayDeleteVpcLinkFuture struct {
+type APIGatewayDeleteVpcLinkFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayDeleteVpcLinkFuture) Get(ctx workflow.Context) (*apigateway.DeleteVpcLinkOutput, error) {
+func (r *APIGatewayDeleteVpcLinkFuture) Get(ctx workflow.Context) (*apigateway.DeleteVpcLinkOutput, error) {
 	var output apigateway.DeleteVpcLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayFlushStageAuthorizersCacheFuture struct {
+type APIGatewayFlushStageAuthorizersCacheFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayFlushStageAuthorizersCacheFuture) Get(ctx workflow.Context) (*apigateway.FlushStageAuthorizersCacheOutput, error) {
+func (r *APIGatewayFlushStageAuthorizersCacheFuture) Get(ctx workflow.Context) (*apigateway.FlushStageAuthorizersCacheOutput, error) {
 	var output apigateway.FlushStageAuthorizersCacheOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayFlushStageCacheFuture struct {
+type APIGatewayFlushStageCacheFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayFlushStageCacheFuture) Get(ctx workflow.Context) (*apigateway.FlushStageCacheOutput, error) {
+func (r *APIGatewayFlushStageCacheFuture) Get(ctx workflow.Context) (*apigateway.FlushStageCacheOutput, error) {
 	var output apigateway.FlushStageCacheOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGenerateClientCertificateFuture struct {
+type APIGatewayGenerateClientCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGenerateClientCertificateFuture) Get(ctx workflow.Context) (*apigateway.ClientCertificate, error) {
+func (r *APIGatewayGenerateClientCertificateFuture) Get(ctx workflow.Context) (*apigateway.ClientCertificate, error) {
 	var output apigateway.ClientCertificate
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetAccountFuture struct {
+type APIGatewayGetAccountFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetAccountFuture) Get(ctx workflow.Context) (*apigateway.Account, error) {
+func (r *APIGatewayGetAccountFuture) Get(ctx workflow.Context) (*apigateway.Account, error) {
 	var output apigateway.Account
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetApiKeyFuture struct {
+type APIGatewayGetApiKeyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetApiKeyFuture) Get(ctx workflow.Context) (*apigateway.ApiKey, error) {
+func (r *APIGatewayGetApiKeyFuture) Get(ctx workflow.Context) (*apigateway.ApiKey, error) {
 	var output apigateway.ApiKey
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetApiKeysFuture struct {
+type APIGatewayGetApiKeysFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetApiKeysFuture) Get(ctx workflow.Context) (*apigateway.GetApiKeysOutput, error) {
+func (r *APIGatewayGetApiKeysFuture) Get(ctx workflow.Context) (*apigateway.GetApiKeysOutput, error) {
 	var output apigateway.GetApiKeysOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetAuthorizerFuture struct {
+type APIGatewayGetAuthorizerFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.Authorizer, error) {
+func (r *APIGatewayGetAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.Authorizer, error) {
 	var output apigateway.Authorizer
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetAuthorizersFuture struct {
+type APIGatewayGetAuthorizersFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetAuthorizersFuture) Get(ctx workflow.Context) (*apigateway.GetAuthorizersOutput, error) {
+func (r *APIGatewayGetAuthorizersFuture) Get(ctx workflow.Context) (*apigateway.GetAuthorizersOutput, error) {
 	var output apigateway.GetAuthorizersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetBasePathMappingFuture struct {
+type APIGatewayGetBasePathMappingFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetBasePathMappingFuture) Get(ctx workflow.Context) (*apigateway.BasePathMapping, error) {
+func (r *APIGatewayGetBasePathMappingFuture) Get(ctx workflow.Context) (*apigateway.BasePathMapping, error) {
 	var output apigateway.BasePathMapping
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetBasePathMappingsFuture struct {
+type APIGatewayGetBasePathMappingsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetBasePathMappingsFuture) Get(ctx workflow.Context) (*apigateway.GetBasePathMappingsOutput, error) {
+func (r *APIGatewayGetBasePathMappingsFuture) Get(ctx workflow.Context) (*apigateway.GetBasePathMappingsOutput, error) {
 	var output apigateway.GetBasePathMappingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetClientCertificateFuture struct {
+type APIGatewayGetClientCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetClientCertificateFuture) Get(ctx workflow.Context) (*apigateway.ClientCertificate, error) {
+func (r *APIGatewayGetClientCertificateFuture) Get(ctx workflow.Context) (*apigateway.ClientCertificate, error) {
 	var output apigateway.ClientCertificate
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetClientCertificatesFuture struct {
+type APIGatewayGetClientCertificatesFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetClientCertificatesFuture) Get(ctx workflow.Context) (*apigateway.GetClientCertificatesOutput, error) {
+func (r *APIGatewayGetClientCertificatesFuture) Get(ctx workflow.Context) (*apigateway.GetClientCertificatesOutput, error) {
 	var output apigateway.GetClientCertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetDeploymentFuture struct {
+type APIGatewayGetDeploymentFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetDeploymentFuture) Get(ctx workflow.Context) (*apigateway.Deployment, error) {
+func (r *APIGatewayGetDeploymentFuture) Get(ctx workflow.Context) (*apigateway.Deployment, error) {
 	var output apigateway.Deployment
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetDeploymentsFuture struct {
+type APIGatewayGetDeploymentsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetDeploymentsFuture) Get(ctx workflow.Context) (*apigateway.GetDeploymentsOutput, error) {
+func (r *APIGatewayGetDeploymentsFuture) Get(ctx workflow.Context) (*apigateway.GetDeploymentsOutput, error) {
 	var output apigateway.GetDeploymentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetDocumentationPartFuture struct {
+type APIGatewayGetDocumentationPartFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetDocumentationPartFuture) Get(ctx workflow.Context) (*apigateway.DocumentationPart, error) {
+func (r *APIGatewayGetDocumentationPartFuture) Get(ctx workflow.Context) (*apigateway.DocumentationPart, error) {
 	var output apigateway.DocumentationPart
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetDocumentationPartsFuture struct {
+type APIGatewayGetDocumentationPartsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetDocumentationPartsFuture) Get(ctx workflow.Context) (*apigateway.GetDocumentationPartsOutput, error) {
+func (r *APIGatewayGetDocumentationPartsFuture) Get(ctx workflow.Context) (*apigateway.GetDocumentationPartsOutput, error) {
 	var output apigateway.GetDocumentationPartsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetDocumentationVersionFuture struct {
+type APIGatewayGetDocumentationVersionFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetDocumentationVersionFuture) Get(ctx workflow.Context) (*apigateway.DocumentationVersion, error) {
+func (r *APIGatewayGetDocumentationVersionFuture) Get(ctx workflow.Context) (*apigateway.DocumentationVersion, error) {
 	var output apigateway.DocumentationVersion
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetDocumentationVersionsFuture struct {
+type APIGatewayGetDocumentationVersionsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetDocumentationVersionsFuture) Get(ctx workflow.Context) (*apigateway.GetDocumentationVersionsOutput, error) {
+func (r *APIGatewayGetDocumentationVersionsFuture) Get(ctx workflow.Context) (*apigateway.GetDocumentationVersionsOutput, error) {
 	var output apigateway.GetDocumentationVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetDomainNameFuture struct {
+type APIGatewayGetDomainNameFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetDomainNameFuture) Get(ctx workflow.Context) (*apigateway.DomainName, error) {
+func (r *APIGatewayGetDomainNameFuture) Get(ctx workflow.Context) (*apigateway.DomainName, error) {
 	var output apigateway.DomainName
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetDomainNamesFuture struct {
+type APIGatewayGetDomainNamesFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetDomainNamesFuture) Get(ctx workflow.Context) (*apigateway.GetDomainNamesOutput, error) {
+func (r *APIGatewayGetDomainNamesFuture) Get(ctx workflow.Context) (*apigateway.GetDomainNamesOutput, error) {
 	var output apigateway.GetDomainNamesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetExportFuture struct {
+type APIGatewayGetExportFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetExportFuture) Get(ctx workflow.Context) (*apigateway.GetExportOutput, error) {
+func (r *APIGatewayGetExportFuture) Get(ctx workflow.Context) (*apigateway.GetExportOutput, error) {
 	var output apigateway.GetExportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetGatewayResponseFuture struct {
+type APIGatewayGetGatewayResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetGatewayResponseFuture) Get(ctx workflow.Context) (*apigateway.UpdateGatewayResponseOutput, error) {
+func (r *APIGatewayGetGatewayResponseFuture) Get(ctx workflow.Context) (*apigateway.UpdateGatewayResponseOutput, error) {
 	var output apigateway.UpdateGatewayResponseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetGatewayResponsesFuture struct {
+type APIGatewayGetGatewayResponsesFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetGatewayResponsesFuture) Get(ctx workflow.Context) (*apigateway.GetGatewayResponsesOutput, error) {
+func (r *APIGatewayGetGatewayResponsesFuture) Get(ctx workflow.Context) (*apigateway.GetGatewayResponsesOutput, error) {
 	var output apigateway.GetGatewayResponsesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetIntegrationFuture struct {
+type APIGatewayGetIntegrationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetIntegrationFuture) Get(ctx workflow.Context) (*apigateway.Integration, error) {
+func (r *APIGatewayGetIntegrationFuture) Get(ctx workflow.Context) (*apigateway.Integration, error) {
 	var output apigateway.Integration
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetIntegrationResponseFuture struct {
+type APIGatewayGetIntegrationResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetIntegrationResponseFuture) Get(ctx workflow.Context) (*apigateway.IntegrationResponse, error) {
+func (r *APIGatewayGetIntegrationResponseFuture) Get(ctx workflow.Context) (*apigateway.IntegrationResponse, error) {
 	var output apigateway.IntegrationResponse
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetMethodFuture struct {
+type APIGatewayGetMethodFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetMethodFuture) Get(ctx workflow.Context) (*apigateway.Method, error) {
+func (r *APIGatewayGetMethodFuture) Get(ctx workflow.Context) (*apigateway.Method, error) {
 	var output apigateway.Method
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetMethodResponseFuture struct {
+type APIGatewayGetMethodResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetMethodResponseFuture) Get(ctx workflow.Context) (*apigateway.MethodResponse, error) {
+func (r *APIGatewayGetMethodResponseFuture) Get(ctx workflow.Context) (*apigateway.MethodResponse, error) {
 	var output apigateway.MethodResponse
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetModelFuture struct {
+type APIGatewayGetModelFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetModelFuture) Get(ctx workflow.Context) (*apigateway.Model, error) {
+func (r *APIGatewayGetModelFuture) Get(ctx workflow.Context) (*apigateway.Model, error) {
 	var output apigateway.Model
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetModelTemplateFuture struct {
+type APIGatewayGetModelTemplateFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetModelTemplateFuture) Get(ctx workflow.Context) (*apigateway.GetModelTemplateOutput, error) {
+func (r *APIGatewayGetModelTemplateFuture) Get(ctx workflow.Context) (*apigateway.GetModelTemplateOutput, error) {
 	var output apigateway.GetModelTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetModelsFuture struct {
+type APIGatewayGetModelsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetModelsFuture) Get(ctx workflow.Context) (*apigateway.GetModelsOutput, error) {
+func (r *APIGatewayGetModelsFuture) Get(ctx workflow.Context) (*apigateway.GetModelsOutput, error) {
 	var output apigateway.GetModelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetRequestValidatorFuture struct {
+type APIGatewayGetRequestValidatorFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetRequestValidatorFuture) Get(ctx workflow.Context) (*apigateway.UpdateRequestValidatorOutput, error) {
+func (r *APIGatewayGetRequestValidatorFuture) Get(ctx workflow.Context) (*apigateway.UpdateRequestValidatorOutput, error) {
 	var output apigateway.UpdateRequestValidatorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetRequestValidatorsFuture struct {
+type APIGatewayGetRequestValidatorsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetRequestValidatorsFuture) Get(ctx workflow.Context) (*apigateway.GetRequestValidatorsOutput, error) {
+func (r *APIGatewayGetRequestValidatorsFuture) Get(ctx workflow.Context) (*apigateway.GetRequestValidatorsOutput, error) {
 	var output apigateway.GetRequestValidatorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetResourceFuture struct {
+type APIGatewayGetResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetResourceFuture) Get(ctx workflow.Context) (*apigateway.Resource, error) {
+func (r *APIGatewayGetResourceFuture) Get(ctx workflow.Context) (*apigateway.Resource, error) {
 	var output apigateway.Resource
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetResourcesFuture struct {
+type APIGatewayGetResourcesFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetResourcesFuture) Get(ctx workflow.Context) (*apigateway.GetResourcesOutput, error) {
+func (r *APIGatewayGetResourcesFuture) Get(ctx workflow.Context) (*apigateway.GetResourcesOutput, error) {
 	var output apigateway.GetResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetRestApiFuture struct {
+type APIGatewayGetRestApiFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
+func (r *APIGatewayGetRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
 	var output apigateway.RestApi
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetRestApisFuture struct {
+type APIGatewayGetRestApisFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetRestApisFuture) Get(ctx workflow.Context) (*apigateway.GetRestApisOutput, error) {
+func (r *APIGatewayGetRestApisFuture) Get(ctx workflow.Context) (*apigateway.GetRestApisOutput, error) {
 	var output apigateway.GetRestApisOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetSdkFuture struct {
+type APIGatewayGetSdkFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetSdkFuture) Get(ctx workflow.Context) (*apigateway.GetSdkOutput, error) {
+func (r *APIGatewayGetSdkFuture) Get(ctx workflow.Context) (*apigateway.GetSdkOutput, error) {
 	var output apigateway.GetSdkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetSdkTypeFuture struct {
+type APIGatewayGetSdkTypeFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetSdkTypeFuture) Get(ctx workflow.Context) (*apigateway.SdkType, error) {
+func (r *APIGatewayGetSdkTypeFuture) Get(ctx workflow.Context) (*apigateway.SdkType, error) {
 	var output apigateway.SdkType
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetSdkTypesFuture struct {
+type APIGatewayGetSdkTypesFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetSdkTypesFuture) Get(ctx workflow.Context) (*apigateway.GetSdkTypesOutput, error) {
+func (r *APIGatewayGetSdkTypesFuture) Get(ctx workflow.Context) (*apigateway.GetSdkTypesOutput, error) {
 	var output apigateway.GetSdkTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetStageFuture struct {
+type APIGatewayGetStageFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetStageFuture) Get(ctx workflow.Context) (*apigateway.Stage, error) {
+func (r *APIGatewayGetStageFuture) Get(ctx workflow.Context) (*apigateway.Stage, error) {
 	var output apigateway.Stage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetStagesFuture struct {
+type APIGatewayGetStagesFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetStagesFuture) Get(ctx workflow.Context) (*apigateway.GetStagesOutput, error) {
+func (r *APIGatewayGetStagesFuture) Get(ctx workflow.Context) (*apigateway.GetStagesOutput, error) {
 	var output apigateway.GetStagesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetTagsFuture struct {
+type APIGatewayGetTagsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetTagsFuture) Get(ctx workflow.Context) (*apigateway.GetTagsOutput, error) {
+func (r *APIGatewayGetTagsFuture) Get(ctx workflow.Context) (*apigateway.GetTagsOutput, error) {
 	var output apigateway.GetTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetUsageFuture struct {
+type APIGatewayGetUsageFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetUsageFuture) Get(ctx workflow.Context) (*apigateway.Usage, error) {
+func (r *APIGatewayGetUsageFuture) Get(ctx workflow.Context) (*apigateway.Usage, error) {
 	var output apigateway.Usage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetUsagePlanFuture struct {
+type APIGatewayGetUsagePlanFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetUsagePlanFuture) Get(ctx workflow.Context) (*apigateway.UsagePlan, error) {
+func (r *APIGatewayGetUsagePlanFuture) Get(ctx workflow.Context) (*apigateway.UsagePlan, error) {
 	var output apigateway.UsagePlan
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetUsagePlanKeyFuture struct {
+type APIGatewayGetUsagePlanKeyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetUsagePlanKeyFuture) Get(ctx workflow.Context) (*apigateway.UsagePlanKey, error) {
+func (r *APIGatewayGetUsagePlanKeyFuture) Get(ctx workflow.Context) (*apigateway.UsagePlanKey, error) {
 	var output apigateway.UsagePlanKey
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetUsagePlanKeysFuture struct {
+type APIGatewayGetUsagePlanKeysFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetUsagePlanKeysFuture) Get(ctx workflow.Context) (*apigateway.GetUsagePlanKeysOutput, error) {
+func (r *APIGatewayGetUsagePlanKeysFuture) Get(ctx workflow.Context) (*apigateway.GetUsagePlanKeysOutput, error) {
 	var output apigateway.GetUsagePlanKeysOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetUsagePlansFuture struct {
+type APIGatewayGetUsagePlansFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetUsagePlansFuture) Get(ctx workflow.Context) (*apigateway.GetUsagePlansOutput, error) {
+func (r *APIGatewayGetUsagePlansFuture) Get(ctx workflow.Context) (*apigateway.GetUsagePlansOutput, error) {
 	var output apigateway.GetUsagePlansOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetVpcLinkFuture struct {
+type APIGatewayGetVpcLinkFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetVpcLinkFuture) Get(ctx workflow.Context) (*apigateway.UpdateVpcLinkOutput, error) {
+func (r *APIGatewayGetVpcLinkFuture) Get(ctx workflow.Context) (*apigateway.UpdateVpcLinkOutput, error) {
 	var output apigateway.UpdateVpcLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayGetVpcLinksFuture struct {
+type APIGatewayGetVpcLinksFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayGetVpcLinksFuture) Get(ctx workflow.Context) (*apigateway.GetVpcLinksOutput, error) {
+func (r *APIGatewayGetVpcLinksFuture) Get(ctx workflow.Context) (*apigateway.GetVpcLinksOutput, error) {
 	var output apigateway.GetVpcLinksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayImportApiKeysFuture struct {
+type APIGatewayImportApiKeysFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayImportApiKeysFuture) Get(ctx workflow.Context) (*apigateway.ImportApiKeysOutput, error) {
+func (r *APIGatewayImportApiKeysFuture) Get(ctx workflow.Context) (*apigateway.ImportApiKeysOutput, error) {
 	var output apigateway.ImportApiKeysOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayImportDocumentationPartsFuture struct {
+type APIGatewayImportDocumentationPartsFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayImportDocumentationPartsFuture) Get(ctx workflow.Context) (*apigateway.ImportDocumentationPartsOutput, error) {
+func (r *APIGatewayImportDocumentationPartsFuture) Get(ctx workflow.Context) (*apigateway.ImportDocumentationPartsOutput, error) {
 	var output apigateway.ImportDocumentationPartsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayImportRestApiFuture struct {
+type APIGatewayImportRestApiFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayImportRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
+func (r *APIGatewayImportRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
 	var output apigateway.RestApi
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayPutGatewayResponseFuture struct {
+type APIGatewayPutGatewayResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayPutGatewayResponseFuture) Get(ctx workflow.Context) (*apigateway.UpdateGatewayResponseOutput, error) {
+func (r *APIGatewayPutGatewayResponseFuture) Get(ctx workflow.Context) (*apigateway.UpdateGatewayResponseOutput, error) {
 	var output apigateway.UpdateGatewayResponseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayPutIntegrationFuture struct {
+type APIGatewayPutIntegrationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayPutIntegrationFuture) Get(ctx workflow.Context) (*apigateway.Integration, error) {
+func (r *APIGatewayPutIntegrationFuture) Get(ctx workflow.Context) (*apigateway.Integration, error) {
 	var output apigateway.Integration
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayPutIntegrationResponseFuture struct {
+type APIGatewayPutIntegrationResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayPutIntegrationResponseFuture) Get(ctx workflow.Context) (*apigateway.IntegrationResponse, error) {
+func (r *APIGatewayPutIntegrationResponseFuture) Get(ctx workflow.Context) (*apigateway.IntegrationResponse, error) {
 	var output apigateway.IntegrationResponse
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayPutMethodFuture struct {
+type APIGatewayPutMethodFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayPutMethodFuture) Get(ctx workflow.Context) (*apigateway.Method, error) {
+func (r *APIGatewayPutMethodFuture) Get(ctx workflow.Context) (*apigateway.Method, error) {
 	var output apigateway.Method
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayPutMethodResponseFuture struct {
+type APIGatewayPutMethodResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayPutMethodResponseFuture) Get(ctx workflow.Context) (*apigateway.MethodResponse, error) {
+func (r *APIGatewayPutMethodResponseFuture) Get(ctx workflow.Context) (*apigateway.MethodResponse, error) {
 	var output apigateway.MethodResponse
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayPutRestApiFuture struct {
+type APIGatewayPutRestApiFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayPutRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
+func (r *APIGatewayPutRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
 	var output apigateway.RestApi
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayTagResourceFuture struct {
+type APIGatewayTagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayTagResourceFuture) Get(ctx workflow.Context) (*apigateway.TagResourceOutput, error) {
+func (r *APIGatewayTagResourceFuture) Get(ctx workflow.Context) (*apigateway.TagResourceOutput, error) {
 	var output apigateway.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayTestInvokeAuthorizerFuture struct {
+type APIGatewayTestInvokeAuthorizerFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayTestInvokeAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.TestInvokeAuthorizerOutput, error) {
+func (r *APIGatewayTestInvokeAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.TestInvokeAuthorizerOutput, error) {
 	var output apigateway.TestInvokeAuthorizerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayTestInvokeMethodFuture struct {
+type APIGatewayTestInvokeMethodFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayTestInvokeMethodFuture) Get(ctx workflow.Context) (*apigateway.TestInvokeMethodOutput, error) {
+func (r *APIGatewayTestInvokeMethodFuture) Get(ctx workflow.Context) (*apigateway.TestInvokeMethodOutput, error) {
 	var output apigateway.TestInvokeMethodOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUntagResourceFuture struct {
+type APIGatewayUntagResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUntagResourceFuture) Get(ctx workflow.Context) (*apigateway.UntagResourceOutput, error) {
+func (r *APIGatewayUntagResourceFuture) Get(ctx workflow.Context) (*apigateway.UntagResourceOutput, error) {
 	var output apigateway.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateAccountFuture struct {
+type APIGatewayUpdateAccountFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateAccountFuture) Get(ctx workflow.Context) (*apigateway.Account, error) {
+func (r *APIGatewayUpdateAccountFuture) Get(ctx workflow.Context) (*apigateway.Account, error) {
 	var output apigateway.Account
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateApiKeyFuture struct {
+type APIGatewayUpdateApiKeyFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateApiKeyFuture) Get(ctx workflow.Context) (*apigateway.ApiKey, error) {
+func (r *APIGatewayUpdateApiKeyFuture) Get(ctx workflow.Context) (*apigateway.ApiKey, error) {
 	var output apigateway.ApiKey
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateAuthorizerFuture struct {
+type APIGatewayUpdateAuthorizerFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.Authorizer, error) {
+func (r *APIGatewayUpdateAuthorizerFuture) Get(ctx workflow.Context) (*apigateway.Authorizer, error) {
 	var output apigateway.Authorizer
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateBasePathMappingFuture struct {
+type APIGatewayUpdateBasePathMappingFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateBasePathMappingFuture) Get(ctx workflow.Context) (*apigateway.BasePathMapping, error) {
+func (r *APIGatewayUpdateBasePathMappingFuture) Get(ctx workflow.Context) (*apigateway.BasePathMapping, error) {
 	var output apigateway.BasePathMapping
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateClientCertificateFuture struct {
+type APIGatewayUpdateClientCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateClientCertificateFuture) Get(ctx workflow.Context) (*apigateway.ClientCertificate, error) {
+func (r *APIGatewayUpdateClientCertificateFuture) Get(ctx workflow.Context) (*apigateway.ClientCertificate, error) {
 	var output apigateway.ClientCertificate
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateDeploymentFuture struct {
+type APIGatewayUpdateDeploymentFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateDeploymentFuture) Get(ctx workflow.Context) (*apigateway.Deployment, error) {
+func (r *APIGatewayUpdateDeploymentFuture) Get(ctx workflow.Context) (*apigateway.Deployment, error) {
 	var output apigateway.Deployment
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateDocumentationPartFuture struct {
+type APIGatewayUpdateDocumentationPartFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateDocumentationPartFuture) Get(ctx workflow.Context) (*apigateway.DocumentationPart, error) {
+func (r *APIGatewayUpdateDocumentationPartFuture) Get(ctx workflow.Context) (*apigateway.DocumentationPart, error) {
 	var output apigateway.DocumentationPart
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateDocumentationVersionFuture struct {
+type APIGatewayUpdateDocumentationVersionFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateDocumentationVersionFuture) Get(ctx workflow.Context) (*apigateway.DocumentationVersion, error) {
+func (r *APIGatewayUpdateDocumentationVersionFuture) Get(ctx workflow.Context) (*apigateway.DocumentationVersion, error) {
 	var output apigateway.DocumentationVersion
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateDomainNameFuture struct {
+type APIGatewayUpdateDomainNameFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateDomainNameFuture) Get(ctx workflow.Context) (*apigateway.DomainName, error) {
+func (r *APIGatewayUpdateDomainNameFuture) Get(ctx workflow.Context) (*apigateway.DomainName, error) {
 	var output apigateway.DomainName
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateGatewayResponseFuture struct {
+type APIGatewayUpdateGatewayResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateGatewayResponseFuture) Get(ctx workflow.Context) (*apigateway.UpdateGatewayResponseOutput, error) {
+func (r *APIGatewayUpdateGatewayResponseFuture) Get(ctx workflow.Context) (*apigateway.UpdateGatewayResponseOutput, error) {
 	var output apigateway.UpdateGatewayResponseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateIntegrationFuture struct {
+type APIGatewayUpdateIntegrationFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateIntegrationFuture) Get(ctx workflow.Context) (*apigateway.Integration, error) {
+func (r *APIGatewayUpdateIntegrationFuture) Get(ctx workflow.Context) (*apigateway.Integration, error) {
 	var output apigateway.Integration
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateIntegrationResponseFuture struct {
+type APIGatewayUpdateIntegrationResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateIntegrationResponseFuture) Get(ctx workflow.Context) (*apigateway.IntegrationResponse, error) {
+func (r *APIGatewayUpdateIntegrationResponseFuture) Get(ctx workflow.Context) (*apigateway.IntegrationResponse, error) {
 	var output apigateway.IntegrationResponse
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateMethodFuture struct {
+type APIGatewayUpdateMethodFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateMethodFuture) Get(ctx workflow.Context) (*apigateway.Method, error) {
+func (r *APIGatewayUpdateMethodFuture) Get(ctx workflow.Context) (*apigateway.Method, error) {
 	var output apigateway.Method
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateMethodResponseFuture struct {
+type APIGatewayUpdateMethodResponseFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateMethodResponseFuture) Get(ctx workflow.Context) (*apigateway.MethodResponse, error) {
+func (r *APIGatewayUpdateMethodResponseFuture) Get(ctx workflow.Context) (*apigateway.MethodResponse, error) {
 	var output apigateway.MethodResponse
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateModelFuture struct {
+type APIGatewayUpdateModelFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateModelFuture) Get(ctx workflow.Context) (*apigateway.Model, error) {
+func (r *APIGatewayUpdateModelFuture) Get(ctx workflow.Context) (*apigateway.Model, error) {
 	var output apigateway.Model
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateRequestValidatorFuture struct {
+type APIGatewayUpdateRequestValidatorFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateRequestValidatorFuture) Get(ctx workflow.Context) (*apigateway.UpdateRequestValidatorOutput, error) {
+func (r *APIGatewayUpdateRequestValidatorFuture) Get(ctx workflow.Context) (*apigateway.UpdateRequestValidatorOutput, error) {
 	var output apigateway.UpdateRequestValidatorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateResourceFuture struct {
+type APIGatewayUpdateResourceFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateResourceFuture) Get(ctx workflow.Context) (*apigateway.Resource, error) {
+func (r *APIGatewayUpdateResourceFuture) Get(ctx workflow.Context) (*apigateway.Resource, error) {
 	var output apigateway.Resource
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateRestApiFuture struct {
+type APIGatewayUpdateRestApiFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
+func (r *APIGatewayUpdateRestApiFuture) Get(ctx workflow.Context) (*apigateway.RestApi, error) {
 	var output apigateway.RestApi
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateStageFuture struct {
+type APIGatewayUpdateStageFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateStageFuture) Get(ctx workflow.Context) (*apigateway.Stage, error) {
+func (r *APIGatewayUpdateStageFuture) Get(ctx workflow.Context) (*apigateway.Stage, error) {
 	var output apigateway.Stage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateUsageFuture struct {
+type APIGatewayUpdateUsageFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateUsageFuture) Get(ctx workflow.Context) (*apigateway.Usage, error) {
+func (r *APIGatewayUpdateUsageFuture) Get(ctx workflow.Context) (*apigateway.Usage, error) {
 	var output apigateway.Usage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateUsagePlanFuture struct {
+type APIGatewayUpdateUsagePlanFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateUsagePlanFuture) Get(ctx workflow.Context) (*apigateway.UsagePlan, error) {
+func (r *APIGatewayUpdateUsagePlanFuture) Get(ctx workflow.Context) (*apigateway.UsagePlan, error) {
 	var output apigateway.UsagePlan
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ApigatewayUpdateVpcLinkFuture struct {
+type APIGatewayUpdateVpcLinkFuture struct {
 	Future workflow.Future
 }
 
-func (r *ApigatewayUpdateVpcLinkFuture) Get(ctx workflow.Context) (*apigateway.UpdateVpcLinkOutput, error) {
+func (r *APIGatewayUpdateVpcLinkFuture) Get(ctx workflow.Context) (*apigateway.UpdateVpcLinkOutput, error) {
 	var output apigateway.UpdateVpcLinkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -1583,9 +1583,9 @@ func (a *APIGatewayStub) CreateApiKey(ctx workflow.Context, input *apigateway.Cr
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateApiKeyAsync(ctx workflow.Context, input *apigateway.CreateApiKeyInput) *ApigatewayCreateApiKeyFuture {
+func (a *APIGatewayStub) CreateApiKeyAsync(ctx workflow.Context, input *apigateway.CreateApiKeyInput) *APIGatewayCreateApiKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateApiKey", input)
-	return &ApigatewayCreateApiKeyFuture{Future: future}
+	return &APIGatewayCreateApiKeyFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateAuthorizer(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) (*apigateway.Authorizer, error) {
@@ -1594,9 +1594,9 @@ func (a *APIGatewayStub) CreateAuthorizer(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateAuthorizerAsync(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) *ApigatewayCreateAuthorizerFuture {
+func (a *APIGatewayStub) CreateAuthorizerAsync(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) *APIGatewayCreateAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateAuthorizer", input)
-	return &ApigatewayCreateAuthorizerFuture{Future: future}
+	return &APIGatewayCreateAuthorizerFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateBasePathMapping(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) (*apigateway.BasePathMapping, error) {
@@ -1605,9 +1605,9 @@ func (a *APIGatewayStub) CreateBasePathMapping(ctx workflow.Context, input *apig
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateBasePathMappingAsync(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) *ApigatewayCreateBasePathMappingFuture {
+func (a *APIGatewayStub) CreateBasePathMappingAsync(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) *APIGatewayCreateBasePathMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateBasePathMapping", input)
-	return &ApigatewayCreateBasePathMappingFuture{Future: future}
+	return &APIGatewayCreateBasePathMappingFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateDeployment(ctx workflow.Context, input *apigateway.CreateDeploymentInput) (*apigateway.Deployment, error) {
@@ -1616,9 +1616,9 @@ func (a *APIGatewayStub) CreateDeployment(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateDeploymentAsync(ctx workflow.Context, input *apigateway.CreateDeploymentInput) *ApigatewayCreateDeploymentFuture {
+func (a *APIGatewayStub) CreateDeploymentAsync(ctx workflow.Context, input *apigateway.CreateDeploymentInput) *APIGatewayCreateDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateDeployment", input)
-	return &ApigatewayCreateDeploymentFuture{Future: future}
+	return &APIGatewayCreateDeploymentFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateDocumentationPart(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) (*apigateway.DocumentationPart, error) {
@@ -1627,9 +1627,9 @@ func (a *APIGatewayStub) CreateDocumentationPart(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateDocumentationPartAsync(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) *ApigatewayCreateDocumentationPartFuture {
+func (a *APIGatewayStub) CreateDocumentationPartAsync(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) *APIGatewayCreateDocumentationPartFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateDocumentationPart", input)
-	return &ApigatewayCreateDocumentationPartFuture{Future: future}
+	return &APIGatewayCreateDocumentationPartFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateDocumentationVersion(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) (*apigateway.DocumentationVersion, error) {
@@ -1638,9 +1638,9 @@ func (a *APIGatewayStub) CreateDocumentationVersion(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) *ApigatewayCreateDocumentationVersionFuture {
+func (a *APIGatewayStub) CreateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) *APIGatewayCreateDocumentationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateDocumentationVersion", input)
-	return &ApigatewayCreateDocumentationVersionFuture{Future: future}
+	return &APIGatewayCreateDocumentationVersionFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateDomainName(ctx workflow.Context, input *apigateway.CreateDomainNameInput) (*apigateway.DomainName, error) {
@@ -1649,9 +1649,9 @@ func (a *APIGatewayStub) CreateDomainName(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateDomainNameAsync(ctx workflow.Context, input *apigateway.CreateDomainNameInput) *ApigatewayCreateDomainNameFuture {
+func (a *APIGatewayStub) CreateDomainNameAsync(ctx workflow.Context, input *apigateway.CreateDomainNameInput) *APIGatewayCreateDomainNameFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateDomainName", input)
-	return &ApigatewayCreateDomainNameFuture{Future: future}
+	return &APIGatewayCreateDomainNameFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateModel(ctx workflow.Context, input *apigateway.CreateModelInput) (*apigateway.Model, error) {
@@ -1660,9 +1660,9 @@ func (a *APIGatewayStub) CreateModel(ctx workflow.Context, input *apigateway.Cre
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateModelAsync(ctx workflow.Context, input *apigateway.CreateModelInput) *ApigatewayCreateModelFuture {
+func (a *APIGatewayStub) CreateModelAsync(ctx workflow.Context, input *apigateway.CreateModelInput) *APIGatewayCreateModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateModel", input)
-	return &ApigatewayCreateModelFuture{Future: future}
+	return &APIGatewayCreateModelFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateRequestValidator(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error) {
@@ -1671,9 +1671,9 @@ func (a *APIGatewayStub) CreateRequestValidator(ctx workflow.Context, input *api
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateRequestValidatorAsync(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) *ApigatewayCreateRequestValidatorFuture {
+func (a *APIGatewayStub) CreateRequestValidatorAsync(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) *APIGatewayCreateRequestValidatorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateRequestValidator", input)
-	return &ApigatewayCreateRequestValidatorFuture{Future: future}
+	return &APIGatewayCreateRequestValidatorFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateResource(ctx workflow.Context, input *apigateway.CreateResourceInput) (*apigateway.Resource, error) {
@@ -1682,9 +1682,9 @@ func (a *APIGatewayStub) CreateResource(ctx workflow.Context, input *apigateway.
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateResourceAsync(ctx workflow.Context, input *apigateway.CreateResourceInput) *ApigatewayCreateResourceFuture {
+func (a *APIGatewayStub) CreateResourceAsync(ctx workflow.Context, input *apigateway.CreateResourceInput) *APIGatewayCreateResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateResource", input)
-	return &ApigatewayCreateResourceFuture{Future: future}
+	return &APIGatewayCreateResourceFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateRestApi(ctx workflow.Context, input *apigateway.CreateRestApiInput) (*apigateway.RestApi, error) {
@@ -1693,9 +1693,9 @@ func (a *APIGatewayStub) CreateRestApi(ctx workflow.Context, input *apigateway.C
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateRestApiAsync(ctx workflow.Context, input *apigateway.CreateRestApiInput) *ApigatewayCreateRestApiFuture {
+func (a *APIGatewayStub) CreateRestApiAsync(ctx workflow.Context, input *apigateway.CreateRestApiInput) *APIGatewayCreateRestApiFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateRestApi", input)
-	return &ApigatewayCreateRestApiFuture{Future: future}
+	return &APIGatewayCreateRestApiFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateStage(ctx workflow.Context, input *apigateway.CreateStageInput) (*apigateway.Stage, error) {
@@ -1704,9 +1704,9 @@ func (a *APIGatewayStub) CreateStage(ctx workflow.Context, input *apigateway.Cre
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateStageAsync(ctx workflow.Context, input *apigateway.CreateStageInput) *ApigatewayCreateStageFuture {
+func (a *APIGatewayStub) CreateStageAsync(ctx workflow.Context, input *apigateway.CreateStageInput) *APIGatewayCreateStageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateStage", input)
-	return &ApigatewayCreateStageFuture{Future: future}
+	return &APIGatewayCreateStageFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateUsagePlan(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) (*apigateway.UsagePlan, error) {
@@ -1715,9 +1715,9 @@ func (a *APIGatewayStub) CreateUsagePlan(ctx workflow.Context, input *apigateway
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateUsagePlanAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) *ApigatewayCreateUsagePlanFuture {
+func (a *APIGatewayStub) CreateUsagePlanAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) *APIGatewayCreateUsagePlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateUsagePlan", input)
-	return &ApigatewayCreateUsagePlanFuture{Future: future}
+	return &APIGatewayCreateUsagePlanFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateUsagePlanKey(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) (*apigateway.UsagePlanKey, error) {
@@ -1726,9 +1726,9 @@ func (a *APIGatewayStub) CreateUsagePlanKey(ctx workflow.Context, input *apigate
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) *ApigatewayCreateUsagePlanKeyFuture {
+func (a *APIGatewayStub) CreateUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) *APIGatewayCreateUsagePlanKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateUsagePlanKey", input)
-	return &ApigatewayCreateUsagePlanKeyFuture{Future: future}
+	return &APIGatewayCreateUsagePlanKeyFuture{Future: future}
 }
 
 func (a *APIGatewayStub) CreateVpcLink(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
@@ -1737,9 +1737,9 @@ func (a *APIGatewayStub) CreateVpcLink(ctx workflow.Context, input *apigateway.C
 	return &output, err
 }
 
-func (a *APIGatewayStub) CreateVpcLinkAsync(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) *ApigatewayCreateVpcLinkFuture {
+func (a *APIGatewayStub) CreateVpcLinkAsync(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) *APIGatewayCreateVpcLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.CreateVpcLink", input)
-	return &ApigatewayCreateVpcLinkFuture{Future: future}
+	return &APIGatewayCreateVpcLinkFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteApiKey(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) (*apigateway.DeleteApiKeyOutput, error) {
@@ -1748,9 +1748,9 @@ func (a *APIGatewayStub) DeleteApiKey(ctx workflow.Context, input *apigateway.De
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteApiKeyAsync(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) *ApigatewayDeleteApiKeyFuture {
+func (a *APIGatewayStub) DeleteApiKeyAsync(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) *APIGatewayDeleteApiKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteApiKey", input)
-	return &ApigatewayDeleteApiKeyFuture{Future: future}
+	return &APIGatewayDeleteApiKeyFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteAuthorizer(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) (*apigateway.DeleteAuthorizerOutput, error) {
@@ -1759,9 +1759,9 @@ func (a *APIGatewayStub) DeleteAuthorizer(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteAuthorizerAsync(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) *ApigatewayDeleteAuthorizerFuture {
+func (a *APIGatewayStub) DeleteAuthorizerAsync(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) *APIGatewayDeleteAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteAuthorizer", input)
-	return &ApigatewayDeleteAuthorizerFuture{Future: future}
+	return &APIGatewayDeleteAuthorizerFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteBasePathMapping(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) (*apigateway.DeleteBasePathMappingOutput, error) {
@@ -1770,9 +1770,9 @@ func (a *APIGatewayStub) DeleteBasePathMapping(ctx workflow.Context, input *apig
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteBasePathMappingAsync(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) *ApigatewayDeleteBasePathMappingFuture {
+func (a *APIGatewayStub) DeleteBasePathMappingAsync(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) *APIGatewayDeleteBasePathMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteBasePathMapping", input)
-	return &ApigatewayDeleteBasePathMappingFuture{Future: future}
+	return &APIGatewayDeleteBasePathMappingFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteClientCertificate(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) (*apigateway.DeleteClientCertificateOutput, error) {
@@ -1781,9 +1781,9 @@ func (a *APIGatewayStub) DeleteClientCertificate(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteClientCertificateAsync(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) *ApigatewayDeleteClientCertificateFuture {
+func (a *APIGatewayStub) DeleteClientCertificateAsync(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) *APIGatewayDeleteClientCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteClientCertificate", input)
-	return &ApigatewayDeleteClientCertificateFuture{Future: future}
+	return &APIGatewayDeleteClientCertificateFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteDeployment(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) (*apigateway.DeleteDeploymentOutput, error) {
@@ -1792,9 +1792,9 @@ func (a *APIGatewayStub) DeleteDeployment(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteDeploymentAsync(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) *ApigatewayDeleteDeploymentFuture {
+func (a *APIGatewayStub) DeleteDeploymentAsync(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) *APIGatewayDeleteDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteDeployment", input)
-	return &ApigatewayDeleteDeploymentFuture{Future: future}
+	return &APIGatewayDeleteDeploymentFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteDocumentationPart(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) (*apigateway.DeleteDocumentationPartOutput, error) {
@@ -1803,9 +1803,9 @@ func (a *APIGatewayStub) DeleteDocumentationPart(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteDocumentationPartAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) *ApigatewayDeleteDocumentationPartFuture {
+func (a *APIGatewayStub) DeleteDocumentationPartAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) *APIGatewayDeleteDocumentationPartFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteDocumentationPart", input)
-	return &ApigatewayDeleteDocumentationPartFuture{Future: future}
+	return &APIGatewayDeleteDocumentationPartFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteDocumentationVersion(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) (*apigateway.DeleteDocumentationVersionOutput, error) {
@@ -1814,9 +1814,9 @@ func (a *APIGatewayStub) DeleteDocumentationVersion(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteDocumentationVersionAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) *ApigatewayDeleteDocumentationVersionFuture {
+func (a *APIGatewayStub) DeleteDocumentationVersionAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) *APIGatewayDeleteDocumentationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteDocumentationVersion", input)
-	return &ApigatewayDeleteDocumentationVersionFuture{Future: future}
+	return &APIGatewayDeleteDocumentationVersionFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteDomainName(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) (*apigateway.DeleteDomainNameOutput, error) {
@@ -1825,9 +1825,9 @@ func (a *APIGatewayStub) DeleteDomainName(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteDomainNameAsync(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) *ApigatewayDeleteDomainNameFuture {
+func (a *APIGatewayStub) DeleteDomainNameAsync(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) *APIGatewayDeleteDomainNameFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteDomainName", input)
-	return &ApigatewayDeleteDomainNameFuture{Future: future}
+	return &APIGatewayDeleteDomainNameFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteGatewayResponse(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) (*apigateway.DeleteGatewayResponseOutput, error) {
@@ -1836,9 +1836,9 @@ func (a *APIGatewayStub) DeleteGatewayResponse(ctx workflow.Context, input *apig
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteGatewayResponseAsync(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) *ApigatewayDeleteGatewayResponseFuture {
+func (a *APIGatewayStub) DeleteGatewayResponseAsync(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) *APIGatewayDeleteGatewayResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteGatewayResponse", input)
-	return &ApigatewayDeleteGatewayResponseFuture{Future: future}
+	return &APIGatewayDeleteGatewayResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteIntegration(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) (*apigateway.DeleteIntegrationOutput, error) {
@@ -1847,9 +1847,9 @@ func (a *APIGatewayStub) DeleteIntegration(ctx workflow.Context, input *apigatew
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteIntegrationAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) *ApigatewayDeleteIntegrationFuture {
+func (a *APIGatewayStub) DeleteIntegrationAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) *APIGatewayDeleteIntegrationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteIntegration", input)
-	return &ApigatewayDeleteIntegrationFuture{Future: future}
+	return &APIGatewayDeleteIntegrationFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteIntegrationResponse(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) (*apigateway.DeleteIntegrationResponseOutput, error) {
@@ -1858,9 +1858,9 @@ func (a *APIGatewayStub) DeleteIntegrationResponse(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteIntegrationResponseAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) *ApigatewayDeleteIntegrationResponseFuture {
+func (a *APIGatewayStub) DeleteIntegrationResponseAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) *APIGatewayDeleteIntegrationResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteIntegrationResponse", input)
-	return &ApigatewayDeleteIntegrationResponseFuture{Future: future}
+	return &APIGatewayDeleteIntegrationResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteMethod(ctx workflow.Context, input *apigateway.DeleteMethodInput) (*apigateway.DeleteMethodOutput, error) {
@@ -1869,9 +1869,9 @@ func (a *APIGatewayStub) DeleteMethod(ctx workflow.Context, input *apigateway.De
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteMethodAsync(ctx workflow.Context, input *apigateway.DeleteMethodInput) *ApigatewayDeleteMethodFuture {
+func (a *APIGatewayStub) DeleteMethodAsync(ctx workflow.Context, input *apigateway.DeleteMethodInput) *APIGatewayDeleteMethodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteMethod", input)
-	return &ApigatewayDeleteMethodFuture{Future: future}
+	return &APIGatewayDeleteMethodFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteMethodResponse(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) (*apigateway.DeleteMethodResponseOutput, error) {
@@ -1880,9 +1880,9 @@ func (a *APIGatewayStub) DeleteMethodResponse(ctx workflow.Context, input *apiga
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteMethodResponseAsync(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) *ApigatewayDeleteMethodResponseFuture {
+func (a *APIGatewayStub) DeleteMethodResponseAsync(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) *APIGatewayDeleteMethodResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteMethodResponse", input)
-	return &ApigatewayDeleteMethodResponseFuture{Future: future}
+	return &APIGatewayDeleteMethodResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteModel(ctx workflow.Context, input *apigateway.DeleteModelInput) (*apigateway.DeleteModelOutput, error) {
@@ -1891,9 +1891,9 @@ func (a *APIGatewayStub) DeleteModel(ctx workflow.Context, input *apigateway.Del
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteModelAsync(ctx workflow.Context, input *apigateway.DeleteModelInput) *ApigatewayDeleteModelFuture {
+func (a *APIGatewayStub) DeleteModelAsync(ctx workflow.Context, input *apigateway.DeleteModelInput) *APIGatewayDeleteModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteModel", input)
-	return &ApigatewayDeleteModelFuture{Future: future}
+	return &APIGatewayDeleteModelFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteRequestValidator(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) (*apigateway.DeleteRequestValidatorOutput, error) {
@@ -1902,9 +1902,9 @@ func (a *APIGatewayStub) DeleteRequestValidator(ctx workflow.Context, input *api
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteRequestValidatorAsync(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) *ApigatewayDeleteRequestValidatorFuture {
+func (a *APIGatewayStub) DeleteRequestValidatorAsync(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) *APIGatewayDeleteRequestValidatorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteRequestValidator", input)
-	return &ApigatewayDeleteRequestValidatorFuture{Future: future}
+	return &APIGatewayDeleteRequestValidatorFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteResource(ctx workflow.Context, input *apigateway.DeleteResourceInput) (*apigateway.DeleteResourceOutput, error) {
@@ -1913,9 +1913,9 @@ func (a *APIGatewayStub) DeleteResource(ctx workflow.Context, input *apigateway.
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteResourceAsync(ctx workflow.Context, input *apigateway.DeleteResourceInput) *ApigatewayDeleteResourceFuture {
+func (a *APIGatewayStub) DeleteResourceAsync(ctx workflow.Context, input *apigateway.DeleteResourceInput) *APIGatewayDeleteResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteResource", input)
-	return &ApigatewayDeleteResourceFuture{Future: future}
+	return &APIGatewayDeleteResourceFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteRestApi(ctx workflow.Context, input *apigateway.DeleteRestApiInput) (*apigateway.DeleteRestApiOutput, error) {
@@ -1924,9 +1924,9 @@ func (a *APIGatewayStub) DeleteRestApi(ctx workflow.Context, input *apigateway.D
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteRestApiAsync(ctx workflow.Context, input *apigateway.DeleteRestApiInput) *ApigatewayDeleteRestApiFuture {
+func (a *APIGatewayStub) DeleteRestApiAsync(ctx workflow.Context, input *apigateway.DeleteRestApiInput) *APIGatewayDeleteRestApiFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteRestApi", input)
-	return &ApigatewayDeleteRestApiFuture{Future: future}
+	return &APIGatewayDeleteRestApiFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteStage(ctx workflow.Context, input *apigateway.DeleteStageInput) (*apigateway.DeleteStageOutput, error) {
@@ -1935,9 +1935,9 @@ func (a *APIGatewayStub) DeleteStage(ctx workflow.Context, input *apigateway.Del
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteStageAsync(ctx workflow.Context, input *apigateway.DeleteStageInput) *ApigatewayDeleteStageFuture {
+func (a *APIGatewayStub) DeleteStageAsync(ctx workflow.Context, input *apigateway.DeleteStageInput) *APIGatewayDeleteStageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteStage", input)
-	return &ApigatewayDeleteStageFuture{Future: future}
+	return &APIGatewayDeleteStageFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteUsagePlan(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) (*apigateway.DeleteUsagePlanOutput, error) {
@@ -1946,9 +1946,9 @@ func (a *APIGatewayStub) DeleteUsagePlan(ctx workflow.Context, input *apigateway
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteUsagePlanAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) *ApigatewayDeleteUsagePlanFuture {
+func (a *APIGatewayStub) DeleteUsagePlanAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) *APIGatewayDeleteUsagePlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteUsagePlan", input)
-	return &ApigatewayDeleteUsagePlanFuture{Future: future}
+	return &APIGatewayDeleteUsagePlanFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteUsagePlanKey(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) (*apigateway.DeleteUsagePlanKeyOutput, error) {
@@ -1957,9 +1957,9 @@ func (a *APIGatewayStub) DeleteUsagePlanKey(ctx workflow.Context, input *apigate
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) *ApigatewayDeleteUsagePlanKeyFuture {
+func (a *APIGatewayStub) DeleteUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) *APIGatewayDeleteUsagePlanKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteUsagePlanKey", input)
-	return &ApigatewayDeleteUsagePlanKeyFuture{Future: future}
+	return &APIGatewayDeleteUsagePlanKeyFuture{Future: future}
 }
 
 func (a *APIGatewayStub) DeleteVpcLink(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) (*apigateway.DeleteVpcLinkOutput, error) {
@@ -1968,9 +1968,9 @@ func (a *APIGatewayStub) DeleteVpcLink(ctx workflow.Context, input *apigateway.D
 	return &output, err
 }
 
-func (a *APIGatewayStub) DeleteVpcLinkAsync(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) *ApigatewayDeleteVpcLinkFuture {
+func (a *APIGatewayStub) DeleteVpcLinkAsync(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) *APIGatewayDeleteVpcLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.DeleteVpcLink", input)
-	return &ApigatewayDeleteVpcLinkFuture{Future: future}
+	return &APIGatewayDeleteVpcLinkFuture{Future: future}
 }
 
 func (a *APIGatewayStub) FlushStageAuthorizersCache(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) (*apigateway.FlushStageAuthorizersCacheOutput, error) {
@@ -1979,9 +1979,9 @@ func (a *APIGatewayStub) FlushStageAuthorizersCache(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *APIGatewayStub) FlushStageAuthorizersCacheAsync(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) *ApigatewayFlushStageAuthorizersCacheFuture {
+func (a *APIGatewayStub) FlushStageAuthorizersCacheAsync(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) *APIGatewayFlushStageAuthorizersCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.FlushStageAuthorizersCache", input)
-	return &ApigatewayFlushStageAuthorizersCacheFuture{Future: future}
+	return &APIGatewayFlushStageAuthorizersCacheFuture{Future: future}
 }
 
 func (a *APIGatewayStub) FlushStageCache(ctx workflow.Context, input *apigateway.FlushStageCacheInput) (*apigateway.FlushStageCacheOutput, error) {
@@ -1990,9 +1990,9 @@ func (a *APIGatewayStub) FlushStageCache(ctx workflow.Context, input *apigateway
 	return &output, err
 }
 
-func (a *APIGatewayStub) FlushStageCacheAsync(ctx workflow.Context, input *apigateway.FlushStageCacheInput) *ApigatewayFlushStageCacheFuture {
+func (a *APIGatewayStub) FlushStageCacheAsync(ctx workflow.Context, input *apigateway.FlushStageCacheInput) *APIGatewayFlushStageCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.FlushStageCache", input)
-	return &ApigatewayFlushStageCacheFuture{Future: future}
+	return &APIGatewayFlushStageCacheFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GenerateClientCertificate(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) (*apigateway.ClientCertificate, error) {
@@ -2001,9 +2001,9 @@ func (a *APIGatewayStub) GenerateClientCertificate(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *APIGatewayStub) GenerateClientCertificateAsync(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) *ApigatewayGenerateClientCertificateFuture {
+func (a *APIGatewayStub) GenerateClientCertificateAsync(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) *APIGatewayGenerateClientCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GenerateClientCertificate", input)
-	return &ApigatewayGenerateClientCertificateFuture{Future: future}
+	return &APIGatewayGenerateClientCertificateFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetAccount(ctx workflow.Context, input *apigateway.GetAccountInput) (*apigateway.Account, error) {
@@ -2012,9 +2012,9 @@ func (a *APIGatewayStub) GetAccount(ctx workflow.Context, input *apigateway.GetA
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetAccountAsync(ctx workflow.Context, input *apigateway.GetAccountInput) *ApigatewayGetAccountFuture {
+func (a *APIGatewayStub) GetAccountAsync(ctx workflow.Context, input *apigateway.GetAccountInput) *APIGatewayGetAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetAccount", input)
-	return &ApigatewayGetAccountFuture{Future: future}
+	return &APIGatewayGetAccountFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetApiKey(ctx workflow.Context, input *apigateway.GetApiKeyInput) (*apigateway.ApiKey, error) {
@@ -2023,9 +2023,9 @@ func (a *APIGatewayStub) GetApiKey(ctx workflow.Context, input *apigateway.GetAp
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetApiKeyAsync(ctx workflow.Context, input *apigateway.GetApiKeyInput) *ApigatewayGetApiKeyFuture {
+func (a *APIGatewayStub) GetApiKeyAsync(ctx workflow.Context, input *apigateway.GetApiKeyInput) *APIGatewayGetApiKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetApiKey", input)
-	return &ApigatewayGetApiKeyFuture{Future: future}
+	return &APIGatewayGetApiKeyFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetApiKeys(ctx workflow.Context, input *apigateway.GetApiKeysInput) (*apigateway.GetApiKeysOutput, error) {
@@ -2034,9 +2034,9 @@ func (a *APIGatewayStub) GetApiKeys(ctx workflow.Context, input *apigateway.GetA
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetApiKeysAsync(ctx workflow.Context, input *apigateway.GetApiKeysInput) *ApigatewayGetApiKeysFuture {
+func (a *APIGatewayStub) GetApiKeysAsync(ctx workflow.Context, input *apigateway.GetApiKeysInput) *APIGatewayGetApiKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetApiKeys", input)
-	return &ApigatewayGetApiKeysFuture{Future: future}
+	return &APIGatewayGetApiKeysFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetAuthorizer(ctx workflow.Context, input *apigateway.GetAuthorizerInput) (*apigateway.Authorizer, error) {
@@ -2045,9 +2045,9 @@ func (a *APIGatewayStub) GetAuthorizer(ctx workflow.Context, input *apigateway.G
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetAuthorizerAsync(ctx workflow.Context, input *apigateway.GetAuthorizerInput) *ApigatewayGetAuthorizerFuture {
+func (a *APIGatewayStub) GetAuthorizerAsync(ctx workflow.Context, input *apigateway.GetAuthorizerInput) *APIGatewayGetAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetAuthorizer", input)
-	return &ApigatewayGetAuthorizerFuture{Future: future}
+	return &APIGatewayGetAuthorizerFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetAuthorizers(ctx workflow.Context, input *apigateway.GetAuthorizersInput) (*apigateway.GetAuthorizersOutput, error) {
@@ -2056,9 +2056,9 @@ func (a *APIGatewayStub) GetAuthorizers(ctx workflow.Context, input *apigateway.
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetAuthorizersAsync(ctx workflow.Context, input *apigateway.GetAuthorizersInput) *ApigatewayGetAuthorizersFuture {
+func (a *APIGatewayStub) GetAuthorizersAsync(ctx workflow.Context, input *apigateway.GetAuthorizersInput) *APIGatewayGetAuthorizersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetAuthorizers", input)
-	return &ApigatewayGetAuthorizersFuture{Future: future}
+	return &APIGatewayGetAuthorizersFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetBasePathMapping(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) (*apigateway.BasePathMapping, error) {
@@ -2067,9 +2067,9 @@ func (a *APIGatewayStub) GetBasePathMapping(ctx workflow.Context, input *apigate
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetBasePathMappingAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) *ApigatewayGetBasePathMappingFuture {
+func (a *APIGatewayStub) GetBasePathMappingAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) *APIGatewayGetBasePathMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetBasePathMapping", input)
-	return &ApigatewayGetBasePathMappingFuture{Future: future}
+	return &APIGatewayGetBasePathMappingFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetBasePathMappings(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) (*apigateway.GetBasePathMappingsOutput, error) {
@@ -2078,9 +2078,9 @@ func (a *APIGatewayStub) GetBasePathMappings(ctx workflow.Context, input *apigat
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetBasePathMappingsAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) *ApigatewayGetBasePathMappingsFuture {
+func (a *APIGatewayStub) GetBasePathMappingsAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) *APIGatewayGetBasePathMappingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetBasePathMappings", input)
-	return &ApigatewayGetBasePathMappingsFuture{Future: future}
+	return &APIGatewayGetBasePathMappingsFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetClientCertificate(ctx workflow.Context, input *apigateway.GetClientCertificateInput) (*apigateway.ClientCertificate, error) {
@@ -2089,9 +2089,9 @@ func (a *APIGatewayStub) GetClientCertificate(ctx workflow.Context, input *apiga
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetClientCertificateAsync(ctx workflow.Context, input *apigateway.GetClientCertificateInput) *ApigatewayGetClientCertificateFuture {
+func (a *APIGatewayStub) GetClientCertificateAsync(ctx workflow.Context, input *apigateway.GetClientCertificateInput) *APIGatewayGetClientCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetClientCertificate", input)
-	return &ApigatewayGetClientCertificateFuture{Future: future}
+	return &APIGatewayGetClientCertificateFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetClientCertificates(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) (*apigateway.GetClientCertificatesOutput, error) {
@@ -2100,9 +2100,9 @@ func (a *APIGatewayStub) GetClientCertificates(ctx workflow.Context, input *apig
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetClientCertificatesAsync(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) *ApigatewayGetClientCertificatesFuture {
+func (a *APIGatewayStub) GetClientCertificatesAsync(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) *APIGatewayGetClientCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetClientCertificates", input)
-	return &ApigatewayGetClientCertificatesFuture{Future: future}
+	return &APIGatewayGetClientCertificatesFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetDeployment(ctx workflow.Context, input *apigateway.GetDeploymentInput) (*apigateway.Deployment, error) {
@@ -2111,9 +2111,9 @@ func (a *APIGatewayStub) GetDeployment(ctx workflow.Context, input *apigateway.G
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetDeploymentAsync(ctx workflow.Context, input *apigateway.GetDeploymentInput) *ApigatewayGetDeploymentFuture {
+func (a *APIGatewayStub) GetDeploymentAsync(ctx workflow.Context, input *apigateway.GetDeploymentInput) *APIGatewayGetDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetDeployment", input)
-	return &ApigatewayGetDeploymentFuture{Future: future}
+	return &APIGatewayGetDeploymentFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetDeployments(ctx workflow.Context, input *apigateway.GetDeploymentsInput) (*apigateway.GetDeploymentsOutput, error) {
@@ -2122,9 +2122,9 @@ func (a *APIGatewayStub) GetDeployments(ctx workflow.Context, input *apigateway.
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetDeploymentsAsync(ctx workflow.Context, input *apigateway.GetDeploymentsInput) *ApigatewayGetDeploymentsFuture {
+func (a *APIGatewayStub) GetDeploymentsAsync(ctx workflow.Context, input *apigateway.GetDeploymentsInput) *APIGatewayGetDeploymentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetDeployments", input)
-	return &ApigatewayGetDeploymentsFuture{Future: future}
+	return &APIGatewayGetDeploymentsFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetDocumentationPart(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) (*apigateway.DocumentationPart, error) {
@@ -2133,9 +2133,9 @@ func (a *APIGatewayStub) GetDocumentationPart(ctx workflow.Context, input *apiga
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetDocumentationPartAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) *ApigatewayGetDocumentationPartFuture {
+func (a *APIGatewayStub) GetDocumentationPartAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) *APIGatewayGetDocumentationPartFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetDocumentationPart", input)
-	return &ApigatewayGetDocumentationPartFuture{Future: future}
+	return &APIGatewayGetDocumentationPartFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetDocumentationParts(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) (*apigateway.GetDocumentationPartsOutput, error) {
@@ -2144,9 +2144,9 @@ func (a *APIGatewayStub) GetDocumentationParts(ctx workflow.Context, input *apig
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetDocumentationPartsAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) *ApigatewayGetDocumentationPartsFuture {
+func (a *APIGatewayStub) GetDocumentationPartsAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) *APIGatewayGetDocumentationPartsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetDocumentationParts", input)
-	return &ApigatewayGetDocumentationPartsFuture{Future: future}
+	return &APIGatewayGetDocumentationPartsFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetDocumentationVersion(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) (*apigateway.DocumentationVersion, error) {
@@ -2155,9 +2155,9 @@ func (a *APIGatewayStub) GetDocumentationVersion(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetDocumentationVersionAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) *ApigatewayGetDocumentationVersionFuture {
+func (a *APIGatewayStub) GetDocumentationVersionAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) *APIGatewayGetDocumentationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetDocumentationVersion", input)
-	return &ApigatewayGetDocumentationVersionFuture{Future: future}
+	return &APIGatewayGetDocumentationVersionFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetDocumentationVersions(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) (*apigateway.GetDocumentationVersionsOutput, error) {
@@ -2166,9 +2166,9 @@ func (a *APIGatewayStub) GetDocumentationVersions(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetDocumentationVersionsAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) *ApigatewayGetDocumentationVersionsFuture {
+func (a *APIGatewayStub) GetDocumentationVersionsAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) *APIGatewayGetDocumentationVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetDocumentationVersions", input)
-	return &ApigatewayGetDocumentationVersionsFuture{Future: future}
+	return &APIGatewayGetDocumentationVersionsFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetDomainName(ctx workflow.Context, input *apigateway.GetDomainNameInput) (*apigateway.DomainName, error) {
@@ -2177,9 +2177,9 @@ func (a *APIGatewayStub) GetDomainName(ctx workflow.Context, input *apigateway.G
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetDomainNameAsync(ctx workflow.Context, input *apigateway.GetDomainNameInput) *ApigatewayGetDomainNameFuture {
+func (a *APIGatewayStub) GetDomainNameAsync(ctx workflow.Context, input *apigateway.GetDomainNameInput) *APIGatewayGetDomainNameFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetDomainName", input)
-	return &ApigatewayGetDomainNameFuture{Future: future}
+	return &APIGatewayGetDomainNameFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetDomainNames(ctx workflow.Context, input *apigateway.GetDomainNamesInput) (*apigateway.GetDomainNamesOutput, error) {
@@ -2188,9 +2188,9 @@ func (a *APIGatewayStub) GetDomainNames(ctx workflow.Context, input *apigateway.
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetDomainNamesAsync(ctx workflow.Context, input *apigateway.GetDomainNamesInput) *ApigatewayGetDomainNamesFuture {
+func (a *APIGatewayStub) GetDomainNamesAsync(ctx workflow.Context, input *apigateway.GetDomainNamesInput) *APIGatewayGetDomainNamesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetDomainNames", input)
-	return &ApigatewayGetDomainNamesFuture{Future: future}
+	return &APIGatewayGetDomainNamesFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetExport(ctx workflow.Context, input *apigateway.GetExportInput) (*apigateway.GetExportOutput, error) {
@@ -2199,9 +2199,9 @@ func (a *APIGatewayStub) GetExport(ctx workflow.Context, input *apigateway.GetEx
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetExportAsync(ctx workflow.Context, input *apigateway.GetExportInput) *ApigatewayGetExportFuture {
+func (a *APIGatewayStub) GetExportAsync(ctx workflow.Context, input *apigateway.GetExportInput) *APIGatewayGetExportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetExport", input)
-	return &ApigatewayGetExportFuture{Future: future}
+	return &APIGatewayGetExportFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetGatewayResponse(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error) {
@@ -2210,9 +2210,9 @@ func (a *APIGatewayStub) GetGatewayResponse(ctx workflow.Context, input *apigate
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetGatewayResponseAsync(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) *ApigatewayGetGatewayResponseFuture {
+func (a *APIGatewayStub) GetGatewayResponseAsync(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) *APIGatewayGetGatewayResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetGatewayResponse", input)
-	return &ApigatewayGetGatewayResponseFuture{Future: future}
+	return &APIGatewayGetGatewayResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetGatewayResponses(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) (*apigateway.GetGatewayResponsesOutput, error) {
@@ -2221,9 +2221,9 @@ func (a *APIGatewayStub) GetGatewayResponses(ctx workflow.Context, input *apigat
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetGatewayResponsesAsync(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) *ApigatewayGetGatewayResponsesFuture {
+func (a *APIGatewayStub) GetGatewayResponsesAsync(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) *APIGatewayGetGatewayResponsesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetGatewayResponses", input)
-	return &ApigatewayGetGatewayResponsesFuture{Future: future}
+	return &APIGatewayGetGatewayResponsesFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetIntegration(ctx workflow.Context, input *apigateway.GetIntegrationInput) (*apigateway.Integration, error) {
@@ -2232,9 +2232,9 @@ func (a *APIGatewayStub) GetIntegration(ctx workflow.Context, input *apigateway.
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetIntegrationAsync(ctx workflow.Context, input *apigateway.GetIntegrationInput) *ApigatewayGetIntegrationFuture {
+func (a *APIGatewayStub) GetIntegrationAsync(ctx workflow.Context, input *apigateway.GetIntegrationInput) *APIGatewayGetIntegrationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetIntegration", input)
-	return &ApigatewayGetIntegrationFuture{Future: future}
+	return &APIGatewayGetIntegrationFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetIntegrationResponse(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) (*apigateway.IntegrationResponse, error) {
@@ -2243,9 +2243,9 @@ func (a *APIGatewayStub) GetIntegrationResponse(ctx workflow.Context, input *api
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetIntegrationResponseAsync(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) *ApigatewayGetIntegrationResponseFuture {
+func (a *APIGatewayStub) GetIntegrationResponseAsync(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) *APIGatewayGetIntegrationResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetIntegrationResponse", input)
-	return &ApigatewayGetIntegrationResponseFuture{Future: future}
+	return &APIGatewayGetIntegrationResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetMethod(ctx workflow.Context, input *apigateway.GetMethodInput) (*apigateway.Method, error) {
@@ -2254,9 +2254,9 @@ func (a *APIGatewayStub) GetMethod(ctx workflow.Context, input *apigateway.GetMe
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetMethodAsync(ctx workflow.Context, input *apigateway.GetMethodInput) *ApigatewayGetMethodFuture {
+func (a *APIGatewayStub) GetMethodAsync(ctx workflow.Context, input *apigateway.GetMethodInput) *APIGatewayGetMethodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetMethod", input)
-	return &ApigatewayGetMethodFuture{Future: future}
+	return &APIGatewayGetMethodFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetMethodResponse(ctx workflow.Context, input *apigateway.GetMethodResponseInput) (*apigateway.MethodResponse, error) {
@@ -2265,9 +2265,9 @@ func (a *APIGatewayStub) GetMethodResponse(ctx workflow.Context, input *apigatew
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetMethodResponseAsync(ctx workflow.Context, input *apigateway.GetMethodResponseInput) *ApigatewayGetMethodResponseFuture {
+func (a *APIGatewayStub) GetMethodResponseAsync(ctx workflow.Context, input *apigateway.GetMethodResponseInput) *APIGatewayGetMethodResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetMethodResponse", input)
-	return &ApigatewayGetMethodResponseFuture{Future: future}
+	return &APIGatewayGetMethodResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetModel(ctx workflow.Context, input *apigateway.GetModelInput) (*apigateway.Model, error) {
@@ -2276,9 +2276,9 @@ func (a *APIGatewayStub) GetModel(ctx workflow.Context, input *apigateway.GetMod
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetModelAsync(ctx workflow.Context, input *apigateway.GetModelInput) *ApigatewayGetModelFuture {
+func (a *APIGatewayStub) GetModelAsync(ctx workflow.Context, input *apigateway.GetModelInput) *APIGatewayGetModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetModel", input)
-	return &ApigatewayGetModelFuture{Future: future}
+	return &APIGatewayGetModelFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetModelTemplate(ctx workflow.Context, input *apigateway.GetModelTemplateInput) (*apigateway.GetModelTemplateOutput, error) {
@@ -2287,9 +2287,9 @@ func (a *APIGatewayStub) GetModelTemplate(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetModelTemplateAsync(ctx workflow.Context, input *apigateway.GetModelTemplateInput) *ApigatewayGetModelTemplateFuture {
+func (a *APIGatewayStub) GetModelTemplateAsync(ctx workflow.Context, input *apigateway.GetModelTemplateInput) *APIGatewayGetModelTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetModelTemplate", input)
-	return &ApigatewayGetModelTemplateFuture{Future: future}
+	return &APIGatewayGetModelTemplateFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetModels(ctx workflow.Context, input *apigateway.GetModelsInput) (*apigateway.GetModelsOutput, error) {
@@ -2298,9 +2298,9 @@ func (a *APIGatewayStub) GetModels(ctx workflow.Context, input *apigateway.GetMo
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetModelsAsync(ctx workflow.Context, input *apigateway.GetModelsInput) *ApigatewayGetModelsFuture {
+func (a *APIGatewayStub) GetModelsAsync(ctx workflow.Context, input *apigateway.GetModelsInput) *APIGatewayGetModelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetModels", input)
-	return &ApigatewayGetModelsFuture{Future: future}
+	return &APIGatewayGetModelsFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetRequestValidator(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error) {
@@ -2309,9 +2309,9 @@ func (a *APIGatewayStub) GetRequestValidator(ctx workflow.Context, input *apigat
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetRequestValidatorAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) *ApigatewayGetRequestValidatorFuture {
+func (a *APIGatewayStub) GetRequestValidatorAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) *APIGatewayGetRequestValidatorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetRequestValidator", input)
-	return &ApigatewayGetRequestValidatorFuture{Future: future}
+	return &APIGatewayGetRequestValidatorFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetRequestValidators(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) (*apigateway.GetRequestValidatorsOutput, error) {
@@ -2320,9 +2320,9 @@ func (a *APIGatewayStub) GetRequestValidators(ctx workflow.Context, input *apiga
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetRequestValidatorsAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) *ApigatewayGetRequestValidatorsFuture {
+func (a *APIGatewayStub) GetRequestValidatorsAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) *APIGatewayGetRequestValidatorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetRequestValidators", input)
-	return &ApigatewayGetRequestValidatorsFuture{Future: future}
+	return &APIGatewayGetRequestValidatorsFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetResource(ctx workflow.Context, input *apigateway.GetResourceInput) (*apigateway.Resource, error) {
@@ -2331,9 +2331,9 @@ func (a *APIGatewayStub) GetResource(ctx workflow.Context, input *apigateway.Get
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetResourceAsync(ctx workflow.Context, input *apigateway.GetResourceInput) *ApigatewayGetResourceFuture {
+func (a *APIGatewayStub) GetResourceAsync(ctx workflow.Context, input *apigateway.GetResourceInput) *APIGatewayGetResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetResource", input)
-	return &ApigatewayGetResourceFuture{Future: future}
+	return &APIGatewayGetResourceFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetResources(ctx workflow.Context, input *apigateway.GetResourcesInput) (*apigateway.GetResourcesOutput, error) {
@@ -2342,9 +2342,9 @@ func (a *APIGatewayStub) GetResources(ctx workflow.Context, input *apigateway.Ge
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetResourcesAsync(ctx workflow.Context, input *apigateway.GetResourcesInput) *ApigatewayGetResourcesFuture {
+func (a *APIGatewayStub) GetResourcesAsync(ctx workflow.Context, input *apigateway.GetResourcesInput) *APIGatewayGetResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetResources", input)
-	return &ApigatewayGetResourcesFuture{Future: future}
+	return &APIGatewayGetResourcesFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetRestApi(ctx workflow.Context, input *apigateway.GetRestApiInput) (*apigateway.RestApi, error) {
@@ -2353,9 +2353,9 @@ func (a *APIGatewayStub) GetRestApi(ctx workflow.Context, input *apigateway.GetR
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetRestApiAsync(ctx workflow.Context, input *apigateway.GetRestApiInput) *ApigatewayGetRestApiFuture {
+func (a *APIGatewayStub) GetRestApiAsync(ctx workflow.Context, input *apigateway.GetRestApiInput) *APIGatewayGetRestApiFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetRestApi", input)
-	return &ApigatewayGetRestApiFuture{Future: future}
+	return &APIGatewayGetRestApiFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetRestApis(ctx workflow.Context, input *apigateway.GetRestApisInput) (*apigateway.GetRestApisOutput, error) {
@@ -2364,9 +2364,9 @@ func (a *APIGatewayStub) GetRestApis(ctx workflow.Context, input *apigateway.Get
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetRestApisAsync(ctx workflow.Context, input *apigateway.GetRestApisInput) *ApigatewayGetRestApisFuture {
+func (a *APIGatewayStub) GetRestApisAsync(ctx workflow.Context, input *apigateway.GetRestApisInput) *APIGatewayGetRestApisFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetRestApis", input)
-	return &ApigatewayGetRestApisFuture{Future: future}
+	return &APIGatewayGetRestApisFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetSdk(ctx workflow.Context, input *apigateway.GetSdkInput) (*apigateway.GetSdkOutput, error) {
@@ -2375,9 +2375,9 @@ func (a *APIGatewayStub) GetSdk(ctx workflow.Context, input *apigateway.GetSdkIn
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetSdkAsync(ctx workflow.Context, input *apigateway.GetSdkInput) *ApigatewayGetSdkFuture {
+func (a *APIGatewayStub) GetSdkAsync(ctx workflow.Context, input *apigateway.GetSdkInput) *APIGatewayGetSdkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetSdk", input)
-	return &ApigatewayGetSdkFuture{Future: future}
+	return &APIGatewayGetSdkFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetSdkType(ctx workflow.Context, input *apigateway.GetSdkTypeInput) (*apigateway.SdkType, error) {
@@ -2386,9 +2386,9 @@ func (a *APIGatewayStub) GetSdkType(ctx workflow.Context, input *apigateway.GetS
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetSdkTypeAsync(ctx workflow.Context, input *apigateway.GetSdkTypeInput) *ApigatewayGetSdkTypeFuture {
+func (a *APIGatewayStub) GetSdkTypeAsync(ctx workflow.Context, input *apigateway.GetSdkTypeInput) *APIGatewayGetSdkTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetSdkType", input)
-	return &ApigatewayGetSdkTypeFuture{Future: future}
+	return &APIGatewayGetSdkTypeFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetSdkTypes(ctx workflow.Context, input *apigateway.GetSdkTypesInput) (*apigateway.GetSdkTypesOutput, error) {
@@ -2397,9 +2397,9 @@ func (a *APIGatewayStub) GetSdkTypes(ctx workflow.Context, input *apigateway.Get
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetSdkTypesAsync(ctx workflow.Context, input *apigateway.GetSdkTypesInput) *ApigatewayGetSdkTypesFuture {
+func (a *APIGatewayStub) GetSdkTypesAsync(ctx workflow.Context, input *apigateway.GetSdkTypesInput) *APIGatewayGetSdkTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetSdkTypes", input)
-	return &ApigatewayGetSdkTypesFuture{Future: future}
+	return &APIGatewayGetSdkTypesFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetStage(ctx workflow.Context, input *apigateway.GetStageInput) (*apigateway.Stage, error) {
@@ -2408,9 +2408,9 @@ func (a *APIGatewayStub) GetStage(ctx workflow.Context, input *apigateway.GetSta
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetStageAsync(ctx workflow.Context, input *apigateway.GetStageInput) *ApigatewayGetStageFuture {
+func (a *APIGatewayStub) GetStageAsync(ctx workflow.Context, input *apigateway.GetStageInput) *APIGatewayGetStageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetStage", input)
-	return &ApigatewayGetStageFuture{Future: future}
+	return &APIGatewayGetStageFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetStages(ctx workflow.Context, input *apigateway.GetStagesInput) (*apigateway.GetStagesOutput, error) {
@@ -2419,9 +2419,9 @@ func (a *APIGatewayStub) GetStages(ctx workflow.Context, input *apigateway.GetSt
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetStagesAsync(ctx workflow.Context, input *apigateway.GetStagesInput) *ApigatewayGetStagesFuture {
+func (a *APIGatewayStub) GetStagesAsync(ctx workflow.Context, input *apigateway.GetStagesInput) *APIGatewayGetStagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetStages", input)
-	return &ApigatewayGetStagesFuture{Future: future}
+	return &APIGatewayGetStagesFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetTags(ctx workflow.Context, input *apigateway.GetTagsInput) (*apigateway.GetTagsOutput, error) {
@@ -2430,9 +2430,9 @@ func (a *APIGatewayStub) GetTags(ctx workflow.Context, input *apigateway.GetTags
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetTagsAsync(ctx workflow.Context, input *apigateway.GetTagsInput) *ApigatewayGetTagsFuture {
+func (a *APIGatewayStub) GetTagsAsync(ctx workflow.Context, input *apigateway.GetTagsInput) *APIGatewayGetTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetTags", input)
-	return &ApigatewayGetTagsFuture{Future: future}
+	return &APIGatewayGetTagsFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetUsage(ctx workflow.Context, input *apigateway.GetUsageInput) (*apigateway.Usage, error) {
@@ -2441,9 +2441,9 @@ func (a *APIGatewayStub) GetUsage(ctx workflow.Context, input *apigateway.GetUsa
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetUsageAsync(ctx workflow.Context, input *apigateway.GetUsageInput) *ApigatewayGetUsageFuture {
+func (a *APIGatewayStub) GetUsageAsync(ctx workflow.Context, input *apigateway.GetUsageInput) *APIGatewayGetUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetUsage", input)
-	return &ApigatewayGetUsageFuture{Future: future}
+	return &APIGatewayGetUsageFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetUsagePlan(ctx workflow.Context, input *apigateway.GetUsagePlanInput) (*apigateway.UsagePlan, error) {
@@ -2452,9 +2452,9 @@ func (a *APIGatewayStub) GetUsagePlan(ctx workflow.Context, input *apigateway.Ge
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetUsagePlanAsync(ctx workflow.Context, input *apigateway.GetUsagePlanInput) *ApigatewayGetUsagePlanFuture {
+func (a *APIGatewayStub) GetUsagePlanAsync(ctx workflow.Context, input *apigateway.GetUsagePlanInput) *APIGatewayGetUsagePlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetUsagePlan", input)
-	return &ApigatewayGetUsagePlanFuture{Future: future}
+	return &APIGatewayGetUsagePlanFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetUsagePlanKey(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) (*apigateway.UsagePlanKey, error) {
@@ -2463,9 +2463,9 @@ func (a *APIGatewayStub) GetUsagePlanKey(ctx workflow.Context, input *apigateway
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) *ApigatewayGetUsagePlanKeyFuture {
+func (a *APIGatewayStub) GetUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) *APIGatewayGetUsagePlanKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetUsagePlanKey", input)
-	return &ApigatewayGetUsagePlanKeyFuture{Future: future}
+	return &APIGatewayGetUsagePlanKeyFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetUsagePlanKeys(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) (*apigateway.GetUsagePlanKeysOutput, error) {
@@ -2474,9 +2474,9 @@ func (a *APIGatewayStub) GetUsagePlanKeys(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetUsagePlanKeysAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) *ApigatewayGetUsagePlanKeysFuture {
+func (a *APIGatewayStub) GetUsagePlanKeysAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) *APIGatewayGetUsagePlanKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetUsagePlanKeys", input)
-	return &ApigatewayGetUsagePlanKeysFuture{Future: future}
+	return &APIGatewayGetUsagePlanKeysFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetUsagePlans(ctx workflow.Context, input *apigateway.GetUsagePlansInput) (*apigateway.GetUsagePlansOutput, error) {
@@ -2485,9 +2485,9 @@ func (a *APIGatewayStub) GetUsagePlans(ctx workflow.Context, input *apigateway.G
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetUsagePlansAsync(ctx workflow.Context, input *apigateway.GetUsagePlansInput) *ApigatewayGetUsagePlansFuture {
+func (a *APIGatewayStub) GetUsagePlansAsync(ctx workflow.Context, input *apigateway.GetUsagePlansInput) *APIGatewayGetUsagePlansFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetUsagePlans", input)
-	return &ApigatewayGetUsagePlansFuture{Future: future}
+	return &APIGatewayGetUsagePlansFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetVpcLink(ctx workflow.Context, input *apigateway.GetVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
@@ -2496,9 +2496,9 @@ func (a *APIGatewayStub) GetVpcLink(ctx workflow.Context, input *apigateway.GetV
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetVpcLinkAsync(ctx workflow.Context, input *apigateway.GetVpcLinkInput) *ApigatewayGetVpcLinkFuture {
+func (a *APIGatewayStub) GetVpcLinkAsync(ctx workflow.Context, input *apigateway.GetVpcLinkInput) *APIGatewayGetVpcLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetVpcLink", input)
-	return &ApigatewayGetVpcLinkFuture{Future: future}
+	return &APIGatewayGetVpcLinkFuture{Future: future}
 }
 
 func (a *APIGatewayStub) GetVpcLinks(ctx workflow.Context, input *apigateway.GetVpcLinksInput) (*apigateway.GetVpcLinksOutput, error) {
@@ -2507,9 +2507,9 @@ func (a *APIGatewayStub) GetVpcLinks(ctx workflow.Context, input *apigateway.Get
 	return &output, err
 }
 
-func (a *APIGatewayStub) GetVpcLinksAsync(ctx workflow.Context, input *apigateway.GetVpcLinksInput) *ApigatewayGetVpcLinksFuture {
+func (a *APIGatewayStub) GetVpcLinksAsync(ctx workflow.Context, input *apigateway.GetVpcLinksInput) *APIGatewayGetVpcLinksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.GetVpcLinks", input)
-	return &ApigatewayGetVpcLinksFuture{Future: future}
+	return &APIGatewayGetVpcLinksFuture{Future: future}
 }
 
 func (a *APIGatewayStub) ImportApiKeys(ctx workflow.Context, input *apigateway.ImportApiKeysInput) (*apigateway.ImportApiKeysOutput, error) {
@@ -2518,9 +2518,9 @@ func (a *APIGatewayStub) ImportApiKeys(ctx workflow.Context, input *apigateway.I
 	return &output, err
 }
 
-func (a *APIGatewayStub) ImportApiKeysAsync(ctx workflow.Context, input *apigateway.ImportApiKeysInput) *ApigatewayImportApiKeysFuture {
+func (a *APIGatewayStub) ImportApiKeysAsync(ctx workflow.Context, input *apigateway.ImportApiKeysInput) *APIGatewayImportApiKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.ImportApiKeys", input)
-	return &ApigatewayImportApiKeysFuture{Future: future}
+	return &APIGatewayImportApiKeysFuture{Future: future}
 }
 
 func (a *APIGatewayStub) ImportDocumentationParts(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) (*apigateway.ImportDocumentationPartsOutput, error) {
@@ -2529,9 +2529,9 @@ func (a *APIGatewayStub) ImportDocumentationParts(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *APIGatewayStub) ImportDocumentationPartsAsync(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) *ApigatewayImportDocumentationPartsFuture {
+func (a *APIGatewayStub) ImportDocumentationPartsAsync(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) *APIGatewayImportDocumentationPartsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.ImportDocumentationParts", input)
-	return &ApigatewayImportDocumentationPartsFuture{Future: future}
+	return &APIGatewayImportDocumentationPartsFuture{Future: future}
 }
 
 func (a *APIGatewayStub) ImportRestApi(ctx workflow.Context, input *apigateway.ImportRestApiInput) (*apigateway.RestApi, error) {
@@ -2540,9 +2540,9 @@ func (a *APIGatewayStub) ImportRestApi(ctx workflow.Context, input *apigateway.I
 	return &output, err
 }
 
-func (a *APIGatewayStub) ImportRestApiAsync(ctx workflow.Context, input *apigateway.ImportRestApiInput) *ApigatewayImportRestApiFuture {
+func (a *APIGatewayStub) ImportRestApiAsync(ctx workflow.Context, input *apigateway.ImportRestApiInput) *APIGatewayImportRestApiFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.ImportRestApi", input)
-	return &ApigatewayImportRestApiFuture{Future: future}
+	return &APIGatewayImportRestApiFuture{Future: future}
 }
 
 func (a *APIGatewayStub) PutGatewayResponse(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error) {
@@ -2551,9 +2551,9 @@ func (a *APIGatewayStub) PutGatewayResponse(ctx workflow.Context, input *apigate
 	return &output, err
 }
 
-func (a *APIGatewayStub) PutGatewayResponseAsync(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) *ApigatewayPutGatewayResponseFuture {
+func (a *APIGatewayStub) PutGatewayResponseAsync(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) *APIGatewayPutGatewayResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.PutGatewayResponse", input)
-	return &ApigatewayPutGatewayResponseFuture{Future: future}
+	return &APIGatewayPutGatewayResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) PutIntegration(ctx workflow.Context, input *apigateway.PutIntegrationInput) (*apigateway.Integration, error) {
@@ -2562,9 +2562,9 @@ func (a *APIGatewayStub) PutIntegration(ctx workflow.Context, input *apigateway.
 	return &output, err
 }
 
-func (a *APIGatewayStub) PutIntegrationAsync(ctx workflow.Context, input *apigateway.PutIntegrationInput) *ApigatewayPutIntegrationFuture {
+func (a *APIGatewayStub) PutIntegrationAsync(ctx workflow.Context, input *apigateway.PutIntegrationInput) *APIGatewayPutIntegrationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.PutIntegration", input)
-	return &ApigatewayPutIntegrationFuture{Future: future}
+	return &APIGatewayPutIntegrationFuture{Future: future}
 }
 
 func (a *APIGatewayStub) PutIntegrationResponse(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) (*apigateway.IntegrationResponse, error) {
@@ -2573,9 +2573,9 @@ func (a *APIGatewayStub) PutIntegrationResponse(ctx workflow.Context, input *api
 	return &output, err
 }
 
-func (a *APIGatewayStub) PutIntegrationResponseAsync(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) *ApigatewayPutIntegrationResponseFuture {
+func (a *APIGatewayStub) PutIntegrationResponseAsync(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) *APIGatewayPutIntegrationResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.PutIntegrationResponse", input)
-	return &ApigatewayPutIntegrationResponseFuture{Future: future}
+	return &APIGatewayPutIntegrationResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) PutMethod(ctx workflow.Context, input *apigateway.PutMethodInput) (*apigateway.Method, error) {
@@ -2584,9 +2584,9 @@ func (a *APIGatewayStub) PutMethod(ctx workflow.Context, input *apigateway.PutMe
 	return &output, err
 }
 
-func (a *APIGatewayStub) PutMethodAsync(ctx workflow.Context, input *apigateway.PutMethodInput) *ApigatewayPutMethodFuture {
+func (a *APIGatewayStub) PutMethodAsync(ctx workflow.Context, input *apigateway.PutMethodInput) *APIGatewayPutMethodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.PutMethod", input)
-	return &ApigatewayPutMethodFuture{Future: future}
+	return &APIGatewayPutMethodFuture{Future: future}
 }
 
 func (a *APIGatewayStub) PutMethodResponse(ctx workflow.Context, input *apigateway.PutMethodResponseInput) (*apigateway.MethodResponse, error) {
@@ -2595,9 +2595,9 @@ func (a *APIGatewayStub) PutMethodResponse(ctx workflow.Context, input *apigatew
 	return &output, err
 }
 
-func (a *APIGatewayStub) PutMethodResponseAsync(ctx workflow.Context, input *apigateway.PutMethodResponseInput) *ApigatewayPutMethodResponseFuture {
+func (a *APIGatewayStub) PutMethodResponseAsync(ctx workflow.Context, input *apigateway.PutMethodResponseInput) *APIGatewayPutMethodResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.PutMethodResponse", input)
-	return &ApigatewayPutMethodResponseFuture{Future: future}
+	return &APIGatewayPutMethodResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) PutRestApi(ctx workflow.Context, input *apigateway.PutRestApiInput) (*apigateway.RestApi, error) {
@@ -2606,9 +2606,9 @@ func (a *APIGatewayStub) PutRestApi(ctx workflow.Context, input *apigateway.PutR
 	return &output, err
 }
 
-func (a *APIGatewayStub) PutRestApiAsync(ctx workflow.Context, input *apigateway.PutRestApiInput) *ApigatewayPutRestApiFuture {
+func (a *APIGatewayStub) PutRestApiAsync(ctx workflow.Context, input *apigateway.PutRestApiInput) *APIGatewayPutRestApiFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.PutRestApi", input)
-	return &ApigatewayPutRestApiFuture{Future: future}
+	return &APIGatewayPutRestApiFuture{Future: future}
 }
 
 func (a *APIGatewayStub) TagResource(ctx workflow.Context, input *apigateway.TagResourceInput) (*apigateway.TagResourceOutput, error) {
@@ -2617,9 +2617,9 @@ func (a *APIGatewayStub) TagResource(ctx workflow.Context, input *apigateway.Tag
 	return &output, err
 }
 
-func (a *APIGatewayStub) TagResourceAsync(ctx workflow.Context, input *apigateway.TagResourceInput) *ApigatewayTagResourceFuture {
+func (a *APIGatewayStub) TagResourceAsync(ctx workflow.Context, input *apigateway.TagResourceInput) *APIGatewayTagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.TagResource", input)
-	return &ApigatewayTagResourceFuture{Future: future}
+	return &APIGatewayTagResourceFuture{Future: future}
 }
 
 func (a *APIGatewayStub) TestInvokeAuthorizer(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) (*apigateway.TestInvokeAuthorizerOutput, error) {
@@ -2628,9 +2628,9 @@ func (a *APIGatewayStub) TestInvokeAuthorizer(ctx workflow.Context, input *apiga
 	return &output, err
 }
 
-func (a *APIGatewayStub) TestInvokeAuthorizerAsync(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) *ApigatewayTestInvokeAuthorizerFuture {
+func (a *APIGatewayStub) TestInvokeAuthorizerAsync(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) *APIGatewayTestInvokeAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.TestInvokeAuthorizer", input)
-	return &ApigatewayTestInvokeAuthorizerFuture{Future: future}
+	return &APIGatewayTestInvokeAuthorizerFuture{Future: future}
 }
 
 func (a *APIGatewayStub) TestInvokeMethod(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) (*apigateway.TestInvokeMethodOutput, error) {
@@ -2639,9 +2639,9 @@ func (a *APIGatewayStub) TestInvokeMethod(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) TestInvokeMethodAsync(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) *ApigatewayTestInvokeMethodFuture {
+func (a *APIGatewayStub) TestInvokeMethodAsync(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) *APIGatewayTestInvokeMethodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.TestInvokeMethod", input)
-	return &ApigatewayTestInvokeMethodFuture{Future: future}
+	return &APIGatewayTestInvokeMethodFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UntagResource(ctx workflow.Context, input *apigateway.UntagResourceInput) (*apigateway.UntagResourceOutput, error) {
@@ -2650,9 +2650,9 @@ func (a *APIGatewayStub) UntagResource(ctx workflow.Context, input *apigateway.U
 	return &output, err
 }
 
-func (a *APIGatewayStub) UntagResourceAsync(ctx workflow.Context, input *apigateway.UntagResourceInput) *ApigatewayUntagResourceFuture {
+func (a *APIGatewayStub) UntagResourceAsync(ctx workflow.Context, input *apigateway.UntagResourceInput) *APIGatewayUntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UntagResource", input)
-	return &ApigatewayUntagResourceFuture{Future: future}
+	return &APIGatewayUntagResourceFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateAccount(ctx workflow.Context, input *apigateway.UpdateAccountInput) (*apigateway.Account, error) {
@@ -2661,9 +2661,9 @@ func (a *APIGatewayStub) UpdateAccount(ctx workflow.Context, input *apigateway.U
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateAccountAsync(ctx workflow.Context, input *apigateway.UpdateAccountInput) *ApigatewayUpdateAccountFuture {
+func (a *APIGatewayStub) UpdateAccountAsync(ctx workflow.Context, input *apigateway.UpdateAccountInput) *APIGatewayUpdateAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateAccount", input)
-	return &ApigatewayUpdateAccountFuture{Future: future}
+	return &APIGatewayUpdateAccountFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateApiKey(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) (*apigateway.ApiKey, error) {
@@ -2672,9 +2672,9 @@ func (a *APIGatewayStub) UpdateApiKey(ctx workflow.Context, input *apigateway.Up
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateApiKeyAsync(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) *ApigatewayUpdateApiKeyFuture {
+func (a *APIGatewayStub) UpdateApiKeyAsync(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) *APIGatewayUpdateApiKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateApiKey", input)
-	return &ApigatewayUpdateApiKeyFuture{Future: future}
+	return &APIGatewayUpdateApiKeyFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateAuthorizer(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) (*apigateway.Authorizer, error) {
@@ -2683,9 +2683,9 @@ func (a *APIGatewayStub) UpdateAuthorizer(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateAuthorizerAsync(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) *ApigatewayUpdateAuthorizerFuture {
+func (a *APIGatewayStub) UpdateAuthorizerAsync(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) *APIGatewayUpdateAuthorizerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateAuthorizer", input)
-	return &ApigatewayUpdateAuthorizerFuture{Future: future}
+	return &APIGatewayUpdateAuthorizerFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateBasePathMapping(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) (*apigateway.BasePathMapping, error) {
@@ -2694,9 +2694,9 @@ func (a *APIGatewayStub) UpdateBasePathMapping(ctx workflow.Context, input *apig
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateBasePathMappingAsync(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) *ApigatewayUpdateBasePathMappingFuture {
+func (a *APIGatewayStub) UpdateBasePathMappingAsync(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) *APIGatewayUpdateBasePathMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateBasePathMapping", input)
-	return &ApigatewayUpdateBasePathMappingFuture{Future: future}
+	return &APIGatewayUpdateBasePathMappingFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateClientCertificate(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) (*apigateway.ClientCertificate, error) {
@@ -2705,9 +2705,9 @@ func (a *APIGatewayStub) UpdateClientCertificate(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateClientCertificateAsync(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) *ApigatewayUpdateClientCertificateFuture {
+func (a *APIGatewayStub) UpdateClientCertificateAsync(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) *APIGatewayUpdateClientCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateClientCertificate", input)
-	return &ApigatewayUpdateClientCertificateFuture{Future: future}
+	return &APIGatewayUpdateClientCertificateFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateDeployment(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) (*apigateway.Deployment, error) {
@@ -2716,9 +2716,9 @@ func (a *APIGatewayStub) UpdateDeployment(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateDeploymentAsync(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) *ApigatewayUpdateDeploymentFuture {
+func (a *APIGatewayStub) UpdateDeploymentAsync(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) *APIGatewayUpdateDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateDeployment", input)
-	return &ApigatewayUpdateDeploymentFuture{Future: future}
+	return &APIGatewayUpdateDeploymentFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateDocumentationPart(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) (*apigateway.DocumentationPart, error) {
@@ -2727,9 +2727,9 @@ func (a *APIGatewayStub) UpdateDocumentationPart(ctx workflow.Context, input *ap
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateDocumentationPartAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) *ApigatewayUpdateDocumentationPartFuture {
+func (a *APIGatewayStub) UpdateDocumentationPartAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) *APIGatewayUpdateDocumentationPartFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateDocumentationPart", input)
-	return &ApigatewayUpdateDocumentationPartFuture{Future: future}
+	return &APIGatewayUpdateDocumentationPartFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateDocumentationVersion(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) (*apigateway.DocumentationVersion, error) {
@@ -2738,9 +2738,9 @@ func (a *APIGatewayStub) UpdateDocumentationVersion(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) *ApigatewayUpdateDocumentationVersionFuture {
+func (a *APIGatewayStub) UpdateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) *APIGatewayUpdateDocumentationVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateDocumentationVersion", input)
-	return &ApigatewayUpdateDocumentationVersionFuture{Future: future}
+	return &APIGatewayUpdateDocumentationVersionFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateDomainName(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) (*apigateway.DomainName, error) {
@@ -2749,9 +2749,9 @@ func (a *APIGatewayStub) UpdateDomainName(ctx workflow.Context, input *apigatewa
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateDomainNameAsync(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) *ApigatewayUpdateDomainNameFuture {
+func (a *APIGatewayStub) UpdateDomainNameAsync(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) *APIGatewayUpdateDomainNameFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateDomainName", input)
-	return &ApigatewayUpdateDomainNameFuture{Future: future}
+	return &APIGatewayUpdateDomainNameFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateGatewayResponse(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error) {
@@ -2760,9 +2760,9 @@ func (a *APIGatewayStub) UpdateGatewayResponse(ctx workflow.Context, input *apig
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateGatewayResponseAsync(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) *ApigatewayUpdateGatewayResponseFuture {
+func (a *APIGatewayStub) UpdateGatewayResponseAsync(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) *APIGatewayUpdateGatewayResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateGatewayResponse", input)
-	return &ApigatewayUpdateGatewayResponseFuture{Future: future}
+	return &APIGatewayUpdateGatewayResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateIntegration(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) (*apigateway.Integration, error) {
@@ -2771,9 +2771,9 @@ func (a *APIGatewayStub) UpdateIntegration(ctx workflow.Context, input *apigatew
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateIntegrationAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) *ApigatewayUpdateIntegrationFuture {
+func (a *APIGatewayStub) UpdateIntegrationAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) *APIGatewayUpdateIntegrationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateIntegration", input)
-	return &ApigatewayUpdateIntegrationFuture{Future: future}
+	return &APIGatewayUpdateIntegrationFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateIntegrationResponse(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) (*apigateway.IntegrationResponse, error) {
@@ -2782,9 +2782,9 @@ func (a *APIGatewayStub) UpdateIntegrationResponse(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateIntegrationResponseAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) *ApigatewayUpdateIntegrationResponseFuture {
+func (a *APIGatewayStub) UpdateIntegrationResponseAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) *APIGatewayUpdateIntegrationResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateIntegrationResponse", input)
-	return &ApigatewayUpdateIntegrationResponseFuture{Future: future}
+	return &APIGatewayUpdateIntegrationResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateMethod(ctx workflow.Context, input *apigateway.UpdateMethodInput) (*apigateway.Method, error) {
@@ -2793,9 +2793,9 @@ func (a *APIGatewayStub) UpdateMethod(ctx workflow.Context, input *apigateway.Up
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateMethodAsync(ctx workflow.Context, input *apigateway.UpdateMethodInput) *ApigatewayUpdateMethodFuture {
+func (a *APIGatewayStub) UpdateMethodAsync(ctx workflow.Context, input *apigateway.UpdateMethodInput) *APIGatewayUpdateMethodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateMethod", input)
-	return &ApigatewayUpdateMethodFuture{Future: future}
+	return &APIGatewayUpdateMethodFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateMethodResponse(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) (*apigateway.MethodResponse, error) {
@@ -2804,9 +2804,9 @@ func (a *APIGatewayStub) UpdateMethodResponse(ctx workflow.Context, input *apiga
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateMethodResponseAsync(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) *ApigatewayUpdateMethodResponseFuture {
+func (a *APIGatewayStub) UpdateMethodResponseAsync(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) *APIGatewayUpdateMethodResponseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateMethodResponse", input)
-	return &ApigatewayUpdateMethodResponseFuture{Future: future}
+	return &APIGatewayUpdateMethodResponseFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateModel(ctx workflow.Context, input *apigateway.UpdateModelInput) (*apigateway.Model, error) {
@@ -2815,9 +2815,9 @@ func (a *APIGatewayStub) UpdateModel(ctx workflow.Context, input *apigateway.Upd
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateModelAsync(ctx workflow.Context, input *apigateway.UpdateModelInput) *ApigatewayUpdateModelFuture {
+func (a *APIGatewayStub) UpdateModelAsync(ctx workflow.Context, input *apigateway.UpdateModelInput) *APIGatewayUpdateModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateModel", input)
-	return &ApigatewayUpdateModelFuture{Future: future}
+	return &APIGatewayUpdateModelFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateRequestValidator(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error) {
@@ -2826,9 +2826,9 @@ func (a *APIGatewayStub) UpdateRequestValidator(ctx workflow.Context, input *api
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateRequestValidatorAsync(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) *ApigatewayUpdateRequestValidatorFuture {
+func (a *APIGatewayStub) UpdateRequestValidatorAsync(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) *APIGatewayUpdateRequestValidatorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateRequestValidator", input)
-	return &ApigatewayUpdateRequestValidatorFuture{Future: future}
+	return &APIGatewayUpdateRequestValidatorFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateResource(ctx workflow.Context, input *apigateway.UpdateResourceInput) (*apigateway.Resource, error) {
@@ -2837,9 +2837,9 @@ func (a *APIGatewayStub) UpdateResource(ctx workflow.Context, input *apigateway.
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateResourceAsync(ctx workflow.Context, input *apigateway.UpdateResourceInput) *ApigatewayUpdateResourceFuture {
+func (a *APIGatewayStub) UpdateResourceAsync(ctx workflow.Context, input *apigateway.UpdateResourceInput) *APIGatewayUpdateResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateResource", input)
-	return &ApigatewayUpdateResourceFuture{Future: future}
+	return &APIGatewayUpdateResourceFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateRestApi(ctx workflow.Context, input *apigateway.UpdateRestApiInput) (*apigateway.RestApi, error) {
@@ -2848,9 +2848,9 @@ func (a *APIGatewayStub) UpdateRestApi(ctx workflow.Context, input *apigateway.U
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateRestApiAsync(ctx workflow.Context, input *apigateway.UpdateRestApiInput) *ApigatewayUpdateRestApiFuture {
+func (a *APIGatewayStub) UpdateRestApiAsync(ctx workflow.Context, input *apigateway.UpdateRestApiInput) *APIGatewayUpdateRestApiFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateRestApi", input)
-	return &ApigatewayUpdateRestApiFuture{Future: future}
+	return &APIGatewayUpdateRestApiFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateStage(ctx workflow.Context, input *apigateway.UpdateStageInput) (*apigateway.Stage, error) {
@@ -2859,9 +2859,9 @@ func (a *APIGatewayStub) UpdateStage(ctx workflow.Context, input *apigateway.Upd
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateStageAsync(ctx workflow.Context, input *apigateway.UpdateStageInput) *ApigatewayUpdateStageFuture {
+func (a *APIGatewayStub) UpdateStageAsync(ctx workflow.Context, input *apigateway.UpdateStageInput) *APIGatewayUpdateStageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateStage", input)
-	return &ApigatewayUpdateStageFuture{Future: future}
+	return &APIGatewayUpdateStageFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateUsage(ctx workflow.Context, input *apigateway.UpdateUsageInput) (*apigateway.Usage, error) {
@@ -2870,9 +2870,9 @@ func (a *APIGatewayStub) UpdateUsage(ctx workflow.Context, input *apigateway.Upd
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateUsageAsync(ctx workflow.Context, input *apigateway.UpdateUsageInput) *ApigatewayUpdateUsageFuture {
+func (a *APIGatewayStub) UpdateUsageAsync(ctx workflow.Context, input *apigateway.UpdateUsageInput) *APIGatewayUpdateUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateUsage", input)
-	return &ApigatewayUpdateUsageFuture{Future: future}
+	return &APIGatewayUpdateUsageFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateUsagePlan(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) (*apigateway.UsagePlan, error) {
@@ -2881,9 +2881,9 @@ func (a *APIGatewayStub) UpdateUsagePlan(ctx workflow.Context, input *apigateway
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateUsagePlanAsync(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) *ApigatewayUpdateUsagePlanFuture {
+func (a *APIGatewayStub) UpdateUsagePlanAsync(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) *APIGatewayUpdateUsagePlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateUsagePlan", input)
-	return &ApigatewayUpdateUsagePlanFuture{Future: future}
+	return &APIGatewayUpdateUsagePlanFuture{Future: future}
 }
 
 func (a *APIGatewayStub) UpdateVpcLink(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
@@ -2892,7 +2892,7 @@ func (a *APIGatewayStub) UpdateVpcLink(ctx workflow.Context, input *apigateway.U
 	return &output, err
 }
 
-func (a *APIGatewayStub) UpdateVpcLinkAsync(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) *ApigatewayUpdateVpcLinkFuture {
+func (a *APIGatewayStub) UpdateVpcLinkAsync(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) *APIGatewayUpdateVpcLinkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.apigateway.UpdateVpcLink", input)
-	return &ApigatewayUpdateVpcLinkFuture{Future: future}
+	return &APIGatewayUpdateVpcLinkFuture{Future: future}
 }

@@ -11,7 +11,7 @@ import (
 
 type MarketplaceEntitlementServiceClient interface {
 	GetEntitlements(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) (*marketplaceentitlementservice.GetEntitlementsOutput, error)
-	GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceentitlementserviceGetEntitlementsFuture
+	GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceEntitlementServiceGetEntitlementsFuture
 }
 
 type MarketplaceEntitlementServiceStub struct{}
@@ -20,11 +20,11 @@ func NewMarketplaceEntitlementServiceStub() MarketplaceEntitlementServiceClient 
 	return &MarketplaceEntitlementServiceStub{}
 }
 
-type MarketplaceentitlementserviceGetEntitlementsFuture struct {
+type MarketplaceEntitlementServiceGetEntitlementsFuture struct {
 	Future workflow.Future
 }
 
-func (r *MarketplaceentitlementserviceGetEntitlementsFuture) Get(ctx workflow.Context) (*marketplaceentitlementservice.GetEntitlementsOutput, error) {
+func (r *MarketplaceEntitlementServiceGetEntitlementsFuture) Get(ctx workflow.Context) (*marketplaceentitlementservice.GetEntitlementsOutput, error) {
 	var output marketplaceentitlementservice.GetEntitlementsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -36,7 +36,7 @@ func (a *MarketplaceEntitlementServiceStub) GetEntitlements(ctx workflow.Context
 	return &output, err
 }
 
-func (a *MarketplaceEntitlementServiceStub) GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceentitlementserviceGetEntitlementsFuture {
+func (a *MarketplaceEntitlementServiceStub) GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceEntitlementServiceGetEntitlementsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplaceentitlementservice.GetEntitlements", input)
-	return &MarketplaceentitlementserviceGetEntitlementsFuture{Future: future}
+	return &MarketplaceEntitlementServiceGetEntitlementsFuture{Future: future}
 }

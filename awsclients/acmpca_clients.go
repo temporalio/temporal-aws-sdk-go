@@ -11,73 +11,73 @@ import (
 
 type ACMPCAClient interface {
 	CreateCertificateAuthority(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) (*acmpca.CreateCertificateAuthorityOutput, error)
-	CreateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) *AcmpcaCreateCertificateAuthorityFuture
+	CreateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) *ACMPCACreateCertificateAuthorityFuture
 
 	CreateCertificateAuthorityAuditReport(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) (*acmpca.CreateCertificateAuthorityAuditReportOutput, error)
-	CreateCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) *AcmpcaCreateCertificateAuthorityAuditReportFuture
+	CreateCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) *ACMPCACreateCertificateAuthorityAuditReportFuture
 
 	CreatePermission(ctx workflow.Context, input *acmpca.CreatePermissionInput) (*acmpca.CreatePermissionOutput, error)
-	CreatePermissionAsync(ctx workflow.Context, input *acmpca.CreatePermissionInput) *AcmpcaCreatePermissionFuture
+	CreatePermissionAsync(ctx workflow.Context, input *acmpca.CreatePermissionInput) *ACMPCACreatePermissionFuture
 
 	DeleteCertificateAuthority(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) (*acmpca.DeleteCertificateAuthorityOutput, error)
-	DeleteCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) *AcmpcaDeleteCertificateAuthorityFuture
+	DeleteCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) *ACMPCADeleteCertificateAuthorityFuture
 
 	DeletePermission(ctx workflow.Context, input *acmpca.DeletePermissionInput) (*acmpca.DeletePermissionOutput, error)
-	DeletePermissionAsync(ctx workflow.Context, input *acmpca.DeletePermissionInput) *AcmpcaDeletePermissionFuture
+	DeletePermissionAsync(ctx workflow.Context, input *acmpca.DeletePermissionInput) *ACMPCADeletePermissionFuture
 
 	DeletePolicy(ctx workflow.Context, input *acmpca.DeletePolicyInput) (*acmpca.DeletePolicyOutput, error)
-	DeletePolicyAsync(ctx workflow.Context, input *acmpca.DeletePolicyInput) *AcmpcaDeletePolicyFuture
+	DeletePolicyAsync(ctx workflow.Context, input *acmpca.DeletePolicyInput) *ACMPCADeletePolicyFuture
 
 	DescribeCertificateAuthority(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) (*acmpca.DescribeCertificateAuthorityOutput, error)
-	DescribeCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) *AcmpcaDescribeCertificateAuthorityFuture
+	DescribeCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) *ACMPCADescribeCertificateAuthorityFuture
 
 	DescribeCertificateAuthorityAuditReport(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) (*acmpca.DescribeCertificateAuthorityAuditReportOutput, error)
-	DescribeCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *AcmpcaDescribeCertificateAuthorityAuditReportFuture
+	DescribeCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *ACMPCADescribeCertificateAuthorityAuditReportFuture
 
 	GetCertificate(ctx workflow.Context, input *acmpca.GetCertificateInput) (*acmpca.GetCertificateOutput, error)
-	GetCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) *AcmpcaGetCertificateFuture
+	GetCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) *ACMPCAGetCertificateFuture
 
 	GetCertificateAuthorityCertificate(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) (*acmpca.GetCertificateAuthorityCertificateOutput, error)
-	GetCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) *AcmpcaGetCertificateAuthorityCertificateFuture
+	GetCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) *ACMPCAGetCertificateAuthorityCertificateFuture
 
 	GetCertificateAuthorityCsr(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) (*acmpca.GetCertificateAuthorityCsrOutput, error)
-	GetCertificateAuthorityCsrAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) *AcmpcaGetCertificateAuthorityCsrFuture
+	GetCertificateAuthorityCsrAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) *ACMPCAGetCertificateAuthorityCsrFuture
 
 	GetPolicy(ctx workflow.Context, input *acmpca.GetPolicyInput) (*acmpca.GetPolicyOutput, error)
-	GetPolicyAsync(ctx workflow.Context, input *acmpca.GetPolicyInput) *AcmpcaGetPolicyFuture
+	GetPolicyAsync(ctx workflow.Context, input *acmpca.GetPolicyInput) *ACMPCAGetPolicyFuture
 
 	ImportCertificateAuthorityCertificate(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) (*acmpca.ImportCertificateAuthorityCertificateOutput, error)
-	ImportCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) *AcmpcaImportCertificateAuthorityCertificateFuture
+	ImportCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) *ACMPCAImportCertificateAuthorityCertificateFuture
 
 	IssueCertificate(ctx workflow.Context, input *acmpca.IssueCertificateInput) (*acmpca.IssueCertificateOutput, error)
-	IssueCertificateAsync(ctx workflow.Context, input *acmpca.IssueCertificateInput) *AcmpcaIssueCertificateFuture
+	IssueCertificateAsync(ctx workflow.Context, input *acmpca.IssueCertificateInput) *ACMPCAIssueCertificateFuture
 
 	ListCertificateAuthorities(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) (*acmpca.ListCertificateAuthoritiesOutput, error)
-	ListCertificateAuthoritiesAsync(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) *AcmpcaListCertificateAuthoritiesFuture
+	ListCertificateAuthoritiesAsync(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) *ACMPCAListCertificateAuthoritiesFuture
 
 	ListPermissions(ctx workflow.Context, input *acmpca.ListPermissionsInput) (*acmpca.ListPermissionsOutput, error)
-	ListPermissionsAsync(ctx workflow.Context, input *acmpca.ListPermissionsInput) *AcmpcaListPermissionsFuture
+	ListPermissionsAsync(ctx workflow.Context, input *acmpca.ListPermissionsInput) *ACMPCAListPermissionsFuture
 
 	ListTags(ctx workflow.Context, input *acmpca.ListTagsInput) (*acmpca.ListTagsOutput, error)
-	ListTagsAsync(ctx workflow.Context, input *acmpca.ListTagsInput) *AcmpcaListTagsFuture
+	ListTagsAsync(ctx workflow.Context, input *acmpca.ListTagsInput) *ACMPCAListTagsFuture
 
 	PutPolicy(ctx workflow.Context, input *acmpca.PutPolicyInput) (*acmpca.PutPolicyOutput, error)
-	PutPolicyAsync(ctx workflow.Context, input *acmpca.PutPolicyInput) *AcmpcaPutPolicyFuture
+	PutPolicyAsync(ctx workflow.Context, input *acmpca.PutPolicyInput) *ACMPCAPutPolicyFuture
 
 	RestoreCertificateAuthority(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) (*acmpca.RestoreCertificateAuthorityOutput, error)
-	RestoreCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) *AcmpcaRestoreCertificateAuthorityFuture
+	RestoreCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) *ACMPCARestoreCertificateAuthorityFuture
 
 	RevokeCertificate(ctx workflow.Context, input *acmpca.RevokeCertificateInput) (*acmpca.RevokeCertificateOutput, error)
-	RevokeCertificateAsync(ctx workflow.Context, input *acmpca.RevokeCertificateInput) *AcmpcaRevokeCertificateFuture
+	RevokeCertificateAsync(ctx workflow.Context, input *acmpca.RevokeCertificateInput) *ACMPCARevokeCertificateFuture
 
 	TagCertificateAuthority(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) (*acmpca.TagCertificateAuthorityOutput, error)
-	TagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) *AcmpcaTagCertificateAuthorityFuture
+	TagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) *ACMPCATagCertificateAuthorityFuture
 
 	UntagCertificateAuthority(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) (*acmpca.UntagCertificateAuthorityOutput, error)
-	UntagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) *AcmpcaUntagCertificateAuthorityFuture
+	UntagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) *ACMPCAUntagCertificateAuthorityFuture
 
 	UpdateCertificateAuthority(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) (*acmpca.UpdateCertificateAuthorityOutput, error)
-	UpdateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) *AcmpcaUpdateCertificateAuthorityFuture
+	UpdateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) *ACMPCAUpdateCertificateAuthorityFuture
 
 	WaitUntilAuditReportCreated(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) error
 	WaitUntilAuditReportCreatedAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *VoidFuture
@@ -95,231 +95,231 @@ func NewACMPCAStub() ACMPCAClient {
 	return &ACMPCAStub{}
 }
 
-type AcmpcaCreateCertificateAuthorityFuture struct {
+type ACMPCACreateCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaCreateCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.CreateCertificateAuthorityOutput, error) {
+func (r *ACMPCACreateCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.CreateCertificateAuthorityOutput, error) {
 	var output acmpca.CreateCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaCreateCertificateAuthorityAuditReportFuture struct {
+type ACMPCACreateCertificateAuthorityAuditReportFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaCreateCertificateAuthorityAuditReportFuture) Get(ctx workflow.Context) (*acmpca.CreateCertificateAuthorityAuditReportOutput, error) {
+func (r *ACMPCACreateCertificateAuthorityAuditReportFuture) Get(ctx workflow.Context) (*acmpca.CreateCertificateAuthorityAuditReportOutput, error) {
 	var output acmpca.CreateCertificateAuthorityAuditReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaCreatePermissionFuture struct {
+type ACMPCACreatePermissionFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaCreatePermissionFuture) Get(ctx workflow.Context) (*acmpca.CreatePermissionOutput, error) {
+func (r *ACMPCACreatePermissionFuture) Get(ctx workflow.Context) (*acmpca.CreatePermissionOutput, error) {
 	var output acmpca.CreatePermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaDeleteCertificateAuthorityFuture struct {
+type ACMPCADeleteCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaDeleteCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.DeleteCertificateAuthorityOutput, error) {
+func (r *ACMPCADeleteCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.DeleteCertificateAuthorityOutput, error) {
 	var output acmpca.DeleteCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaDeletePermissionFuture struct {
+type ACMPCADeletePermissionFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaDeletePermissionFuture) Get(ctx workflow.Context) (*acmpca.DeletePermissionOutput, error) {
+func (r *ACMPCADeletePermissionFuture) Get(ctx workflow.Context) (*acmpca.DeletePermissionOutput, error) {
 	var output acmpca.DeletePermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaDeletePolicyFuture struct {
+type ACMPCADeletePolicyFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaDeletePolicyFuture) Get(ctx workflow.Context) (*acmpca.DeletePolicyOutput, error) {
+func (r *ACMPCADeletePolicyFuture) Get(ctx workflow.Context) (*acmpca.DeletePolicyOutput, error) {
 	var output acmpca.DeletePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaDescribeCertificateAuthorityFuture struct {
+type ACMPCADescribeCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaDescribeCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.DescribeCertificateAuthorityOutput, error) {
+func (r *ACMPCADescribeCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.DescribeCertificateAuthorityOutput, error) {
 	var output acmpca.DescribeCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaDescribeCertificateAuthorityAuditReportFuture struct {
+type ACMPCADescribeCertificateAuthorityAuditReportFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaDescribeCertificateAuthorityAuditReportFuture) Get(ctx workflow.Context) (*acmpca.DescribeCertificateAuthorityAuditReportOutput, error) {
+func (r *ACMPCADescribeCertificateAuthorityAuditReportFuture) Get(ctx workflow.Context) (*acmpca.DescribeCertificateAuthorityAuditReportOutput, error) {
 	var output acmpca.DescribeCertificateAuthorityAuditReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaGetCertificateFuture struct {
+type ACMPCAGetCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaGetCertificateFuture) Get(ctx workflow.Context) (*acmpca.GetCertificateOutput, error) {
+func (r *ACMPCAGetCertificateFuture) Get(ctx workflow.Context) (*acmpca.GetCertificateOutput, error) {
 	var output acmpca.GetCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaGetCertificateAuthorityCertificateFuture struct {
+type ACMPCAGetCertificateAuthorityCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaGetCertificateAuthorityCertificateFuture) Get(ctx workflow.Context) (*acmpca.GetCertificateAuthorityCertificateOutput, error) {
+func (r *ACMPCAGetCertificateAuthorityCertificateFuture) Get(ctx workflow.Context) (*acmpca.GetCertificateAuthorityCertificateOutput, error) {
 	var output acmpca.GetCertificateAuthorityCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaGetCertificateAuthorityCsrFuture struct {
+type ACMPCAGetCertificateAuthorityCsrFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaGetCertificateAuthorityCsrFuture) Get(ctx workflow.Context) (*acmpca.GetCertificateAuthorityCsrOutput, error) {
+func (r *ACMPCAGetCertificateAuthorityCsrFuture) Get(ctx workflow.Context) (*acmpca.GetCertificateAuthorityCsrOutput, error) {
 	var output acmpca.GetCertificateAuthorityCsrOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaGetPolicyFuture struct {
+type ACMPCAGetPolicyFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaGetPolicyFuture) Get(ctx workflow.Context) (*acmpca.GetPolicyOutput, error) {
+func (r *ACMPCAGetPolicyFuture) Get(ctx workflow.Context) (*acmpca.GetPolicyOutput, error) {
 	var output acmpca.GetPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaImportCertificateAuthorityCertificateFuture struct {
+type ACMPCAImportCertificateAuthorityCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaImportCertificateAuthorityCertificateFuture) Get(ctx workflow.Context) (*acmpca.ImportCertificateAuthorityCertificateOutput, error) {
+func (r *ACMPCAImportCertificateAuthorityCertificateFuture) Get(ctx workflow.Context) (*acmpca.ImportCertificateAuthorityCertificateOutput, error) {
 	var output acmpca.ImportCertificateAuthorityCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaIssueCertificateFuture struct {
+type ACMPCAIssueCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaIssueCertificateFuture) Get(ctx workflow.Context) (*acmpca.IssueCertificateOutput, error) {
+func (r *ACMPCAIssueCertificateFuture) Get(ctx workflow.Context) (*acmpca.IssueCertificateOutput, error) {
 	var output acmpca.IssueCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaListCertificateAuthoritiesFuture struct {
+type ACMPCAListCertificateAuthoritiesFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaListCertificateAuthoritiesFuture) Get(ctx workflow.Context) (*acmpca.ListCertificateAuthoritiesOutput, error) {
+func (r *ACMPCAListCertificateAuthoritiesFuture) Get(ctx workflow.Context) (*acmpca.ListCertificateAuthoritiesOutput, error) {
 	var output acmpca.ListCertificateAuthoritiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaListPermissionsFuture struct {
+type ACMPCAListPermissionsFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaListPermissionsFuture) Get(ctx workflow.Context) (*acmpca.ListPermissionsOutput, error) {
+func (r *ACMPCAListPermissionsFuture) Get(ctx workflow.Context) (*acmpca.ListPermissionsOutput, error) {
 	var output acmpca.ListPermissionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaListTagsFuture struct {
+type ACMPCAListTagsFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaListTagsFuture) Get(ctx workflow.Context) (*acmpca.ListTagsOutput, error) {
+func (r *ACMPCAListTagsFuture) Get(ctx workflow.Context) (*acmpca.ListTagsOutput, error) {
 	var output acmpca.ListTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaPutPolicyFuture struct {
+type ACMPCAPutPolicyFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaPutPolicyFuture) Get(ctx workflow.Context) (*acmpca.PutPolicyOutput, error) {
+func (r *ACMPCAPutPolicyFuture) Get(ctx workflow.Context) (*acmpca.PutPolicyOutput, error) {
 	var output acmpca.PutPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaRestoreCertificateAuthorityFuture struct {
+type ACMPCARestoreCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaRestoreCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.RestoreCertificateAuthorityOutput, error) {
+func (r *ACMPCARestoreCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.RestoreCertificateAuthorityOutput, error) {
 	var output acmpca.RestoreCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaRevokeCertificateFuture struct {
+type ACMPCARevokeCertificateFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaRevokeCertificateFuture) Get(ctx workflow.Context) (*acmpca.RevokeCertificateOutput, error) {
+func (r *ACMPCARevokeCertificateFuture) Get(ctx workflow.Context) (*acmpca.RevokeCertificateOutput, error) {
 	var output acmpca.RevokeCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaTagCertificateAuthorityFuture struct {
+type ACMPCATagCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaTagCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.TagCertificateAuthorityOutput, error) {
+func (r *ACMPCATagCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.TagCertificateAuthorityOutput, error) {
 	var output acmpca.TagCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaUntagCertificateAuthorityFuture struct {
+type ACMPCAUntagCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaUntagCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.UntagCertificateAuthorityOutput, error) {
+func (r *ACMPCAUntagCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.UntagCertificateAuthorityOutput, error) {
 	var output acmpca.UntagCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AcmpcaUpdateCertificateAuthorityFuture struct {
+type ACMPCAUpdateCertificateAuthorityFuture struct {
 	Future workflow.Future
 }
 
-func (r *AcmpcaUpdateCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.UpdateCertificateAuthorityOutput, error) {
+func (r *ACMPCAUpdateCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca.UpdateCertificateAuthorityOutput, error) {
 	var output acmpca.UpdateCertificateAuthorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -331,9 +331,9 @@ func (a *ACMPCAStub) CreateCertificateAuthority(ctx workflow.Context, input *acm
 	return &output, err
 }
 
-func (a *ACMPCAStub) CreateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) *AcmpcaCreateCertificateAuthorityFuture {
+func (a *ACMPCAStub) CreateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) *ACMPCACreateCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.CreateCertificateAuthority", input)
-	return &AcmpcaCreateCertificateAuthorityFuture{Future: future}
+	return &ACMPCACreateCertificateAuthorityFuture{Future: future}
 }
 
 func (a *ACMPCAStub) CreateCertificateAuthorityAuditReport(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) (*acmpca.CreateCertificateAuthorityAuditReportOutput, error) {
@@ -342,9 +342,9 @@ func (a *ACMPCAStub) CreateCertificateAuthorityAuditReport(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ACMPCAStub) CreateCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) *AcmpcaCreateCertificateAuthorityAuditReportFuture {
+func (a *ACMPCAStub) CreateCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) *ACMPCACreateCertificateAuthorityAuditReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.CreateCertificateAuthorityAuditReport", input)
-	return &AcmpcaCreateCertificateAuthorityAuditReportFuture{Future: future}
+	return &ACMPCACreateCertificateAuthorityAuditReportFuture{Future: future}
 }
 
 func (a *ACMPCAStub) CreatePermission(ctx workflow.Context, input *acmpca.CreatePermissionInput) (*acmpca.CreatePermissionOutput, error) {
@@ -353,9 +353,9 @@ func (a *ACMPCAStub) CreatePermission(ctx workflow.Context, input *acmpca.Create
 	return &output, err
 }
 
-func (a *ACMPCAStub) CreatePermissionAsync(ctx workflow.Context, input *acmpca.CreatePermissionInput) *AcmpcaCreatePermissionFuture {
+func (a *ACMPCAStub) CreatePermissionAsync(ctx workflow.Context, input *acmpca.CreatePermissionInput) *ACMPCACreatePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.CreatePermission", input)
-	return &AcmpcaCreatePermissionFuture{Future: future}
+	return &ACMPCACreatePermissionFuture{Future: future}
 }
 
 func (a *ACMPCAStub) DeleteCertificateAuthority(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) (*acmpca.DeleteCertificateAuthorityOutput, error) {
@@ -364,9 +364,9 @@ func (a *ACMPCAStub) DeleteCertificateAuthority(ctx workflow.Context, input *acm
 	return &output, err
 }
 
-func (a *ACMPCAStub) DeleteCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) *AcmpcaDeleteCertificateAuthorityFuture {
+func (a *ACMPCAStub) DeleteCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) *ACMPCADeleteCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.DeleteCertificateAuthority", input)
-	return &AcmpcaDeleteCertificateAuthorityFuture{Future: future}
+	return &ACMPCADeleteCertificateAuthorityFuture{Future: future}
 }
 
 func (a *ACMPCAStub) DeletePermission(ctx workflow.Context, input *acmpca.DeletePermissionInput) (*acmpca.DeletePermissionOutput, error) {
@@ -375,9 +375,9 @@ func (a *ACMPCAStub) DeletePermission(ctx workflow.Context, input *acmpca.Delete
 	return &output, err
 }
 
-func (a *ACMPCAStub) DeletePermissionAsync(ctx workflow.Context, input *acmpca.DeletePermissionInput) *AcmpcaDeletePermissionFuture {
+func (a *ACMPCAStub) DeletePermissionAsync(ctx workflow.Context, input *acmpca.DeletePermissionInput) *ACMPCADeletePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.DeletePermission", input)
-	return &AcmpcaDeletePermissionFuture{Future: future}
+	return &ACMPCADeletePermissionFuture{Future: future}
 }
 
 func (a *ACMPCAStub) DeletePolicy(ctx workflow.Context, input *acmpca.DeletePolicyInput) (*acmpca.DeletePolicyOutput, error) {
@@ -386,9 +386,9 @@ func (a *ACMPCAStub) DeletePolicy(ctx workflow.Context, input *acmpca.DeletePoli
 	return &output, err
 }
 
-func (a *ACMPCAStub) DeletePolicyAsync(ctx workflow.Context, input *acmpca.DeletePolicyInput) *AcmpcaDeletePolicyFuture {
+func (a *ACMPCAStub) DeletePolicyAsync(ctx workflow.Context, input *acmpca.DeletePolicyInput) *ACMPCADeletePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.DeletePolicy", input)
-	return &AcmpcaDeletePolicyFuture{Future: future}
+	return &ACMPCADeletePolicyFuture{Future: future}
 }
 
 func (a *ACMPCAStub) DescribeCertificateAuthority(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) (*acmpca.DescribeCertificateAuthorityOutput, error) {
@@ -397,9 +397,9 @@ func (a *ACMPCAStub) DescribeCertificateAuthority(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *ACMPCAStub) DescribeCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) *AcmpcaDescribeCertificateAuthorityFuture {
+func (a *ACMPCAStub) DescribeCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) *ACMPCADescribeCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.DescribeCertificateAuthority", input)
-	return &AcmpcaDescribeCertificateAuthorityFuture{Future: future}
+	return &ACMPCADescribeCertificateAuthorityFuture{Future: future}
 }
 
 func (a *ACMPCAStub) DescribeCertificateAuthorityAuditReport(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) (*acmpca.DescribeCertificateAuthorityAuditReportOutput, error) {
@@ -408,9 +408,9 @@ func (a *ACMPCAStub) DescribeCertificateAuthorityAuditReport(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *ACMPCAStub) DescribeCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *AcmpcaDescribeCertificateAuthorityAuditReportFuture {
+func (a *ACMPCAStub) DescribeCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *ACMPCADescribeCertificateAuthorityAuditReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.DescribeCertificateAuthorityAuditReport", input)
-	return &AcmpcaDescribeCertificateAuthorityAuditReportFuture{Future: future}
+	return &ACMPCADescribeCertificateAuthorityAuditReportFuture{Future: future}
 }
 
 func (a *ACMPCAStub) GetCertificate(ctx workflow.Context, input *acmpca.GetCertificateInput) (*acmpca.GetCertificateOutput, error) {
@@ -419,9 +419,9 @@ func (a *ACMPCAStub) GetCertificate(ctx workflow.Context, input *acmpca.GetCerti
 	return &output, err
 }
 
-func (a *ACMPCAStub) GetCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) *AcmpcaGetCertificateFuture {
+func (a *ACMPCAStub) GetCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) *ACMPCAGetCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.GetCertificate", input)
-	return &AcmpcaGetCertificateFuture{Future: future}
+	return &ACMPCAGetCertificateFuture{Future: future}
 }
 
 func (a *ACMPCAStub) GetCertificateAuthorityCertificate(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) (*acmpca.GetCertificateAuthorityCertificateOutput, error) {
@@ -430,9 +430,9 @@ func (a *ACMPCAStub) GetCertificateAuthorityCertificate(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *ACMPCAStub) GetCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) *AcmpcaGetCertificateAuthorityCertificateFuture {
+func (a *ACMPCAStub) GetCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) *ACMPCAGetCertificateAuthorityCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.GetCertificateAuthorityCertificate", input)
-	return &AcmpcaGetCertificateAuthorityCertificateFuture{Future: future}
+	return &ACMPCAGetCertificateAuthorityCertificateFuture{Future: future}
 }
 
 func (a *ACMPCAStub) GetCertificateAuthorityCsr(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) (*acmpca.GetCertificateAuthorityCsrOutput, error) {
@@ -441,9 +441,9 @@ func (a *ACMPCAStub) GetCertificateAuthorityCsr(ctx workflow.Context, input *acm
 	return &output, err
 }
 
-func (a *ACMPCAStub) GetCertificateAuthorityCsrAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) *AcmpcaGetCertificateAuthorityCsrFuture {
+func (a *ACMPCAStub) GetCertificateAuthorityCsrAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) *ACMPCAGetCertificateAuthorityCsrFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.GetCertificateAuthorityCsr", input)
-	return &AcmpcaGetCertificateAuthorityCsrFuture{Future: future}
+	return &ACMPCAGetCertificateAuthorityCsrFuture{Future: future}
 }
 
 func (a *ACMPCAStub) GetPolicy(ctx workflow.Context, input *acmpca.GetPolicyInput) (*acmpca.GetPolicyOutput, error) {
@@ -452,9 +452,9 @@ func (a *ACMPCAStub) GetPolicy(ctx workflow.Context, input *acmpca.GetPolicyInpu
 	return &output, err
 }
 
-func (a *ACMPCAStub) GetPolicyAsync(ctx workflow.Context, input *acmpca.GetPolicyInput) *AcmpcaGetPolicyFuture {
+func (a *ACMPCAStub) GetPolicyAsync(ctx workflow.Context, input *acmpca.GetPolicyInput) *ACMPCAGetPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.GetPolicy", input)
-	return &AcmpcaGetPolicyFuture{Future: future}
+	return &ACMPCAGetPolicyFuture{Future: future}
 }
 
 func (a *ACMPCAStub) ImportCertificateAuthorityCertificate(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) (*acmpca.ImportCertificateAuthorityCertificateOutput, error) {
@@ -463,9 +463,9 @@ func (a *ACMPCAStub) ImportCertificateAuthorityCertificate(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *ACMPCAStub) ImportCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) *AcmpcaImportCertificateAuthorityCertificateFuture {
+func (a *ACMPCAStub) ImportCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) *ACMPCAImportCertificateAuthorityCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.ImportCertificateAuthorityCertificate", input)
-	return &AcmpcaImportCertificateAuthorityCertificateFuture{Future: future}
+	return &ACMPCAImportCertificateAuthorityCertificateFuture{Future: future}
 }
 
 func (a *ACMPCAStub) IssueCertificate(ctx workflow.Context, input *acmpca.IssueCertificateInput) (*acmpca.IssueCertificateOutput, error) {
@@ -474,9 +474,9 @@ func (a *ACMPCAStub) IssueCertificate(ctx workflow.Context, input *acmpca.IssueC
 	return &output, err
 }
 
-func (a *ACMPCAStub) IssueCertificateAsync(ctx workflow.Context, input *acmpca.IssueCertificateInput) *AcmpcaIssueCertificateFuture {
+func (a *ACMPCAStub) IssueCertificateAsync(ctx workflow.Context, input *acmpca.IssueCertificateInput) *ACMPCAIssueCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.IssueCertificate", input)
-	return &AcmpcaIssueCertificateFuture{Future: future}
+	return &ACMPCAIssueCertificateFuture{Future: future}
 }
 
 func (a *ACMPCAStub) ListCertificateAuthorities(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) (*acmpca.ListCertificateAuthoritiesOutput, error) {
@@ -485,9 +485,9 @@ func (a *ACMPCAStub) ListCertificateAuthorities(ctx workflow.Context, input *acm
 	return &output, err
 }
 
-func (a *ACMPCAStub) ListCertificateAuthoritiesAsync(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) *AcmpcaListCertificateAuthoritiesFuture {
+func (a *ACMPCAStub) ListCertificateAuthoritiesAsync(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) *ACMPCAListCertificateAuthoritiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.ListCertificateAuthorities", input)
-	return &AcmpcaListCertificateAuthoritiesFuture{Future: future}
+	return &ACMPCAListCertificateAuthoritiesFuture{Future: future}
 }
 
 func (a *ACMPCAStub) ListPermissions(ctx workflow.Context, input *acmpca.ListPermissionsInput) (*acmpca.ListPermissionsOutput, error) {
@@ -496,9 +496,9 @@ func (a *ACMPCAStub) ListPermissions(ctx workflow.Context, input *acmpca.ListPer
 	return &output, err
 }
 
-func (a *ACMPCAStub) ListPermissionsAsync(ctx workflow.Context, input *acmpca.ListPermissionsInput) *AcmpcaListPermissionsFuture {
+func (a *ACMPCAStub) ListPermissionsAsync(ctx workflow.Context, input *acmpca.ListPermissionsInput) *ACMPCAListPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.ListPermissions", input)
-	return &AcmpcaListPermissionsFuture{Future: future}
+	return &ACMPCAListPermissionsFuture{Future: future}
 }
 
 func (a *ACMPCAStub) ListTags(ctx workflow.Context, input *acmpca.ListTagsInput) (*acmpca.ListTagsOutput, error) {
@@ -507,9 +507,9 @@ func (a *ACMPCAStub) ListTags(ctx workflow.Context, input *acmpca.ListTagsInput)
 	return &output, err
 }
 
-func (a *ACMPCAStub) ListTagsAsync(ctx workflow.Context, input *acmpca.ListTagsInput) *AcmpcaListTagsFuture {
+func (a *ACMPCAStub) ListTagsAsync(ctx workflow.Context, input *acmpca.ListTagsInput) *ACMPCAListTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.ListTags", input)
-	return &AcmpcaListTagsFuture{Future: future}
+	return &ACMPCAListTagsFuture{Future: future}
 }
 
 func (a *ACMPCAStub) PutPolicy(ctx workflow.Context, input *acmpca.PutPolicyInput) (*acmpca.PutPolicyOutput, error) {
@@ -518,9 +518,9 @@ func (a *ACMPCAStub) PutPolicy(ctx workflow.Context, input *acmpca.PutPolicyInpu
 	return &output, err
 }
 
-func (a *ACMPCAStub) PutPolicyAsync(ctx workflow.Context, input *acmpca.PutPolicyInput) *AcmpcaPutPolicyFuture {
+func (a *ACMPCAStub) PutPolicyAsync(ctx workflow.Context, input *acmpca.PutPolicyInput) *ACMPCAPutPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.PutPolicy", input)
-	return &AcmpcaPutPolicyFuture{Future: future}
+	return &ACMPCAPutPolicyFuture{Future: future}
 }
 
 func (a *ACMPCAStub) RestoreCertificateAuthority(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) (*acmpca.RestoreCertificateAuthorityOutput, error) {
@@ -529,9 +529,9 @@ func (a *ACMPCAStub) RestoreCertificateAuthority(ctx workflow.Context, input *ac
 	return &output, err
 }
 
-func (a *ACMPCAStub) RestoreCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) *AcmpcaRestoreCertificateAuthorityFuture {
+func (a *ACMPCAStub) RestoreCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) *ACMPCARestoreCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.RestoreCertificateAuthority", input)
-	return &AcmpcaRestoreCertificateAuthorityFuture{Future: future}
+	return &ACMPCARestoreCertificateAuthorityFuture{Future: future}
 }
 
 func (a *ACMPCAStub) RevokeCertificate(ctx workflow.Context, input *acmpca.RevokeCertificateInput) (*acmpca.RevokeCertificateOutput, error) {
@@ -540,9 +540,9 @@ func (a *ACMPCAStub) RevokeCertificate(ctx workflow.Context, input *acmpca.Revok
 	return &output, err
 }
 
-func (a *ACMPCAStub) RevokeCertificateAsync(ctx workflow.Context, input *acmpca.RevokeCertificateInput) *AcmpcaRevokeCertificateFuture {
+func (a *ACMPCAStub) RevokeCertificateAsync(ctx workflow.Context, input *acmpca.RevokeCertificateInput) *ACMPCARevokeCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.RevokeCertificate", input)
-	return &AcmpcaRevokeCertificateFuture{Future: future}
+	return &ACMPCARevokeCertificateFuture{Future: future}
 }
 
 func (a *ACMPCAStub) TagCertificateAuthority(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) (*acmpca.TagCertificateAuthorityOutput, error) {
@@ -551,9 +551,9 @@ func (a *ACMPCAStub) TagCertificateAuthority(ctx workflow.Context, input *acmpca
 	return &output, err
 }
 
-func (a *ACMPCAStub) TagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) *AcmpcaTagCertificateAuthorityFuture {
+func (a *ACMPCAStub) TagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) *ACMPCATagCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.TagCertificateAuthority", input)
-	return &AcmpcaTagCertificateAuthorityFuture{Future: future}
+	return &ACMPCATagCertificateAuthorityFuture{Future: future}
 }
 
 func (a *ACMPCAStub) UntagCertificateAuthority(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) (*acmpca.UntagCertificateAuthorityOutput, error) {
@@ -562,9 +562,9 @@ func (a *ACMPCAStub) UntagCertificateAuthority(ctx workflow.Context, input *acmp
 	return &output, err
 }
 
-func (a *ACMPCAStub) UntagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) *AcmpcaUntagCertificateAuthorityFuture {
+func (a *ACMPCAStub) UntagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) *ACMPCAUntagCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.UntagCertificateAuthority", input)
-	return &AcmpcaUntagCertificateAuthorityFuture{Future: future}
+	return &ACMPCAUntagCertificateAuthorityFuture{Future: future}
 }
 
 func (a *ACMPCAStub) UpdateCertificateAuthority(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) (*acmpca.UpdateCertificateAuthorityOutput, error) {
@@ -573,9 +573,9 @@ func (a *ACMPCAStub) UpdateCertificateAuthority(ctx workflow.Context, input *acm
 	return &output, err
 }
 
-func (a *ACMPCAStub) UpdateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) *AcmpcaUpdateCertificateAuthorityFuture {
+func (a *ACMPCAStub) UpdateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) *ACMPCAUpdateCertificateAuthorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.acmpca.UpdateCertificateAuthority", input)
-	return &AcmpcaUpdateCertificateAuthorityFuture{Future: future}
+	return &ACMPCAUpdateCertificateAuthorityFuture{Future: future}
 }
 
 func (a *ACMPCAStub) WaitUntilAuditReportCreated(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) error {
