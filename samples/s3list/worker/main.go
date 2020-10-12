@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/aws/aws-sdk-go/aws"
 	s32 "github.com/aws/aws-sdk-go/service/s3"
-	"go.temporal.io/aws-sdk/cmd/s3list"
+	"go.temporal.io/aws-sdk/samples/s3list"
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
 	"log"
