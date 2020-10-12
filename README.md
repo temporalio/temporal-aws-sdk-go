@@ -47,8 +47,9 @@ aws_access_key_id = <ID>
 aws_secret_access_key = <SECRET>
 ```
 See [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html) for details.
+Set AWS_REGION environment variable. Another option is to set AWS_SDK_LOAD_CONFIG variable to true and set Region config value.
 ```bash
-go run aws-sdk-worker.go
+AWS_REGION=us-west-2 bin/aws-sdk-worker
 ```
 
 ## Samples
@@ -59,7 +60,7 @@ go run aws-sdk-worker.go
 assumes that AWS SDK activities are already running.
 
 ```bash
-go run samples/s3list/worker/main.go
+bin/samples/s3list
 ```
 
 ### EC2 Instance
@@ -69,10 +70,10 @@ restarting it when terminated. The sample assumes that AWS SDK activities are al
 
 To start workflow worker:
 ```bash
-go run samples/ec2demo/worker/main.go
+bin/samples/ec2demo-worker
 ```
 
 To initiate workflow
 ```bash
-go run samples/ec2demo/starter/main.go
+bin/samples/ec2demo-starter
 ```

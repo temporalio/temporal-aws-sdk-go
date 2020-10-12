@@ -48,13 +48,6 @@ func run(args []string) error {
 			Value:       "aws-sdk",
 			Destination: &taskQueue,
 		},
-		&cli.StringFlag{
-			Name:        "region",
-			Usage:       "aws-region to send requests to",
-			Required:    true,
-			Destination: &region,
-			EnvVars:     []string{"AWS_REGION"},
-		},
 		&cli.BoolFlag{
 			Name:        "verbose",
 			Usage:       "Enables LogDebug level of AWS SDK",
@@ -86,7 +79,6 @@ func runWorker(address, namespace, taskQueue string, verbose bool, region string
 		logLevel = aws.LogOff
 	}
 	sess, err := session.NewSession(&aws.Config{
-		Region:   aws.String(region),
 		LogLevel: &logLevel,
 	})
 	if err != nil {
