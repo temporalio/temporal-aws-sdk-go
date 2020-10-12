@@ -4,6 +4,7 @@
 
 # general build-product folder, cleaned as part of `make clean`
 BUILD := .build
+BIN := bin
 
 # Gather all templates
 ALL_TEMPLATES :=  $(shell find templates -name "*.tmpl")
@@ -20,26 +21,25 @@ $(BUILD)/clients: $(BUILD)/generate
 	go build ./clients/...
 	touch $(BUILD)/clients
 
-$(BUILD)/activities: $(BUILD)/generate
-	go build -o $@ cmd/activities/main.go
+$(BIN)/aws-sdk-worker: $(BUILD)/generate
+	go build -o $@ aws-sdk-worker.go
 
-$(BUILD)/ec2demo/starter: $(BUILD)/generate
-	go build -o $@ cmd/ec2demo/starter/main.go
+$(BIN)/samples/ec2demo-starter: $(BUILD)/generate
+	go build -o $@ samples/ec2demo/starter/main.go
 
-$(BUILD)/ec2demo/worker: $(BUILD)/generate
-	go build -o $@ cmd/ec2demo/worker/main.go
+$(BIN)/samples/ec2demo-worker: $(BUILD)/generate
+	go build -o $@ samples/ec2demo/worker/main.go
 
-$(BUILD)/s3list/worker: $(BUILD)/generate
-	go build -o $@ cmd/s3list/worker/main.go
-
-
+$(BIN)/samples/s3list: $(BUILD)/generate
+	go build -o $@ samples/s3list/worker/main.go
 
 generate: $(BUILD)/generate ## Regenerate code if templates changed
 
-bins: $(BUILD)/clients $(BUILD)/activities $(BUILD)/ec2demo/worker $(BUILD)/ec2demo/starter $(BUILD)/s3list/worker ## Build binaries
+bins: $(BUILD)/clients $(BIN)/aws-sdk-worker $(BIN)/samples/ec2demo-worker $(BIN)/samples/ec2demo-starter $(BIN)/samples/s3list ## Build binaries
 
 clean: ## Remove .build directory. Doesn't revert generated code changes.
 	rm -rf $(BUILD)
+	rm -rf $(BIN)
 
 help:
 	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

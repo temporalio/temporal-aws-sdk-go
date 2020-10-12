@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go.temporal.io/aws-sdk/cmd/ec2demo"
+	"go.temporal.io/aws-sdk/samples/ec2demo"
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
 	"log"
