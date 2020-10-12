@@ -21,8 +21,8 @@ $(BUILD)/clients: $(BUILD)/generate
 	go build ./clients/...
 	touch $(BUILD)/clients
 
-$(BIN)/awsactivities: $(BUILD)/generate
-	go build -o $@ awsactivities.go
+$(BIN)/aws-sdk-worker: $(BUILD)/generate
+	go build -o $@ aws-sdk-worker.go
 
 $(BIN)/samples/ec2demo-starter: $(BUILD)/generate
 	go build -o $@ samples/ec2demo/starter/main.go
@@ -35,7 +35,7 @@ $(BIN)/samples/s3list: $(BUILD)/generate
 
 generate: $(BUILD)/generate ## Regenerate code if templates changed
 
-bins: $(BUILD)/clients $(BIN)/awsactivities $(BIN)/samples/ec2demo-worker $(BIN)/samples/ec2demo-starter $(BIN)/samples/s3list ## Build binaries
+bins: $(BUILD)/clients $(BIN)/aws-sdk-worker $(BIN)/samples/ec2demo-worker $(BIN)/samples/ec2demo-starter $(BIN)/samples/s3list ## Build binaries
 
 clean: ## Remove .build directory. Doesn't revert generated code changes.
 	rm -rf $(BUILD)

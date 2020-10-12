@@ -48,7 +48,7 @@ aws_secret_access_key = <SECRET>
 ```
 See [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html) for details.
 ```bash
-go run awsactivities.go
+go run aws-sdk-worker.go
 ```
 
 ## Samples
