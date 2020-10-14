@@ -6,12 +6,14 @@ package acmpca
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/acmpca"
 	"github.com/aws/aws-sdk-go/service/acmpca/acmpcaiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (acmpcaiface.ACMPCAAPI, erro
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return acmpca.New(sess), nil
@@ -55,213 +57,259 @@ func (a *Activities) getClient(ctx context.Context) (acmpcaiface.ACMPCAAPI, erro
 func (a *Activities) CreateCertificateAuthority(ctx context.Context, input *acmpca.CreateCertificateAuthorityInput) (*acmpca.CreateCertificateAuthorityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCertificateAuthorityWithContext(ctx, input)
+	output, err := client.CreateCertificateAuthorityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCertificateAuthorityAuditReport(ctx context.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) (*acmpca.CreateCertificateAuthorityAuditReportOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCertificateAuthorityAuditReportWithContext(ctx, input)
+	output, err := client.CreateCertificateAuthorityAuditReportWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePermission(ctx context.Context, input *acmpca.CreatePermissionInput) (*acmpca.CreatePermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePermissionWithContext(ctx, input)
+	output, err := client.CreatePermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCertificateAuthority(ctx context.Context, input *acmpca.DeleteCertificateAuthorityInput) (*acmpca.DeleteCertificateAuthorityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCertificateAuthorityWithContext(ctx, input)
+	output, err := client.DeleteCertificateAuthorityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePermission(ctx context.Context, input *acmpca.DeletePermissionInput) (*acmpca.DeletePermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePermissionWithContext(ctx, input)
+	output, err := client.DeletePermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePolicy(ctx context.Context, input *acmpca.DeletePolicyInput) (*acmpca.DeletePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePolicyWithContext(ctx, input)
+	output, err := client.DeletePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCertificateAuthority(ctx context.Context, input *acmpca.DescribeCertificateAuthorityInput) (*acmpca.DescribeCertificateAuthorityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCertificateAuthorityWithContext(ctx, input)
+	output, err := client.DescribeCertificateAuthorityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCertificateAuthorityAuditReport(ctx context.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) (*acmpca.DescribeCertificateAuthorityAuditReportOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCertificateAuthorityAuditReportWithContext(ctx, input)
+	output, err := client.DescribeCertificateAuthorityAuditReportWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCertificate(ctx context.Context, input *acmpca.GetCertificateInput) (*acmpca.GetCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCertificateWithContext(ctx, input)
+	output, err := client.GetCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCertificateAuthorityCertificate(ctx context.Context, input *acmpca.GetCertificateAuthorityCertificateInput) (*acmpca.GetCertificateAuthorityCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCertificateAuthorityCertificateWithContext(ctx, input)
+	output, err := client.GetCertificateAuthorityCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCertificateAuthorityCsr(ctx context.Context, input *acmpca.GetCertificateAuthorityCsrInput) (*acmpca.GetCertificateAuthorityCsrOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCertificateAuthorityCsrWithContext(ctx, input)
+	output, err := client.GetCertificateAuthorityCsrWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPolicy(ctx context.Context, input *acmpca.GetPolicyInput) (*acmpca.GetPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPolicyWithContext(ctx, input)
+	output, err := client.GetPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportCertificateAuthorityCertificate(ctx context.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) (*acmpca.ImportCertificateAuthorityCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportCertificateAuthorityCertificateWithContext(ctx, input)
+	output, err := client.ImportCertificateAuthorityCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) IssueCertificate(ctx context.Context, input *acmpca.IssueCertificateInput) (*acmpca.IssueCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.IssueCertificateWithContext(ctx, input)
+	output, err := client.IssueCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCertificateAuthorities(ctx context.Context, input *acmpca.ListCertificateAuthoritiesInput) (*acmpca.ListCertificateAuthoritiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCertificateAuthoritiesWithContext(ctx, input)
+	output, err := client.ListCertificateAuthoritiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPermissions(ctx context.Context, input *acmpca.ListPermissionsInput) (*acmpca.ListPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPermissionsWithContext(ctx, input)
+	output, err := client.ListPermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTags(ctx context.Context, input *acmpca.ListTagsInput) (*acmpca.ListTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsWithContext(ctx, input)
+	output, err := client.ListTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutPolicy(ctx context.Context, input *acmpca.PutPolicyInput) (*acmpca.PutPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutPolicyWithContext(ctx, input)
+	output, err := client.PutPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreCertificateAuthority(ctx context.Context, input *acmpca.RestoreCertificateAuthorityInput) (*acmpca.RestoreCertificateAuthorityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreCertificateAuthorityWithContext(ctx, input)
+	output, err := client.RestoreCertificateAuthorityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RevokeCertificate(ctx context.Context, input *acmpca.RevokeCertificateInput) (*acmpca.RevokeCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RevokeCertificateWithContext(ctx, input)
+	output, err := client.RevokeCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagCertificateAuthority(ctx context.Context, input *acmpca.TagCertificateAuthorityInput) (*acmpca.TagCertificateAuthorityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagCertificateAuthorityWithContext(ctx, input)
+	output, err := client.TagCertificateAuthorityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagCertificateAuthority(ctx context.Context, input *acmpca.UntagCertificateAuthorityInput) (*acmpca.UntagCertificateAuthorityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagCertificateAuthorityWithContext(ctx, input)
+	output, err := client.UntagCertificateAuthorityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCertificateAuthority(ctx context.Context, input *acmpca.UpdateCertificateAuthorityInput) (*acmpca.UpdateCertificateAuthorityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCertificateAuthorityWithContext(ctx, input)
+	output, err := client.UpdateCertificateAuthorityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilAuditReportCreated(ctx context.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilAuditReportCreatedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilAuditReportCreatedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilCertificateAuthorityCSRCreated(ctx context.Context, input *acmpca.GetCertificateAuthorityCsrInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilCertificateAuthorityCSRCreatedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilCertificateAuthorityCSRCreatedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilCertificateIssued(ctx context.Context, input *acmpca.GetCertificateInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilCertificateIssuedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilCertificateIssuedWithContext(ctx, input, options...))
 	})
 }

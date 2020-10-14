@@ -6,12 +6,14 @@ package glue
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/glue"
 	"github.com/aws/aws-sdk-go/service/glue/glueiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (glueiface.GlueAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return glue.New(sess), nil
@@ -55,1079 +57,1349 @@ func (a *Activities) getClient(ctx context.Context) (glueiface.GlueAPI, error) {
 func (a *Activities) BatchCreatePartition(ctx context.Context, input *glue.BatchCreatePartitionInput) (*glue.BatchCreatePartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchCreatePartitionWithContext(ctx, input)
+	output, err := client.BatchCreatePartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchDeleteConnection(ctx context.Context, input *glue.BatchDeleteConnectionInput) (*glue.BatchDeleteConnectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchDeleteConnectionWithContext(ctx, input)
+	output, err := client.BatchDeleteConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchDeletePartition(ctx context.Context, input *glue.BatchDeletePartitionInput) (*glue.BatchDeletePartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchDeletePartitionWithContext(ctx, input)
+	output, err := client.BatchDeletePartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchDeleteTable(ctx context.Context, input *glue.BatchDeleteTableInput) (*glue.BatchDeleteTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchDeleteTableWithContext(ctx, input)
+	output, err := client.BatchDeleteTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchDeleteTableVersion(ctx context.Context, input *glue.BatchDeleteTableVersionInput) (*glue.BatchDeleteTableVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchDeleteTableVersionWithContext(ctx, input)
+	output, err := client.BatchDeleteTableVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetCrawlers(ctx context.Context, input *glue.BatchGetCrawlersInput) (*glue.BatchGetCrawlersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetCrawlersWithContext(ctx, input)
+	output, err := client.BatchGetCrawlersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetDevEndpoints(ctx context.Context, input *glue.BatchGetDevEndpointsInput) (*glue.BatchGetDevEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetDevEndpointsWithContext(ctx, input)
+	output, err := client.BatchGetDevEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetJobs(ctx context.Context, input *glue.BatchGetJobsInput) (*glue.BatchGetJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetJobsWithContext(ctx, input)
+	output, err := client.BatchGetJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetPartition(ctx context.Context, input *glue.BatchGetPartitionInput) (*glue.BatchGetPartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetPartitionWithContext(ctx, input)
+	output, err := client.BatchGetPartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetTriggers(ctx context.Context, input *glue.BatchGetTriggersInput) (*glue.BatchGetTriggersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetTriggersWithContext(ctx, input)
+	output, err := client.BatchGetTriggersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetWorkflows(ctx context.Context, input *glue.BatchGetWorkflowsInput) (*glue.BatchGetWorkflowsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetWorkflowsWithContext(ctx, input)
+	output, err := client.BatchGetWorkflowsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchStopJobRun(ctx context.Context, input *glue.BatchStopJobRunInput) (*glue.BatchStopJobRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchStopJobRunWithContext(ctx, input)
+	output, err := client.BatchStopJobRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchUpdatePartition(ctx context.Context, input *glue.BatchUpdatePartitionInput) (*glue.BatchUpdatePartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchUpdatePartitionWithContext(ctx, input)
+	output, err := client.BatchUpdatePartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelMLTaskRun(ctx context.Context, input *glue.CancelMLTaskRunInput) (*glue.CancelMLTaskRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelMLTaskRunWithContext(ctx, input)
+	output, err := client.CancelMLTaskRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateClassifier(ctx context.Context, input *glue.CreateClassifierInput) (*glue.CreateClassifierOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateClassifierWithContext(ctx, input)
+	output, err := client.CreateClassifierWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateConnection(ctx context.Context, input *glue.CreateConnectionInput) (*glue.CreateConnectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateConnectionWithContext(ctx, input)
+	output, err := client.CreateConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCrawler(ctx context.Context, input *glue.CreateCrawlerInput) (*glue.CreateCrawlerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCrawlerWithContext(ctx, input)
+	output, err := client.CreateCrawlerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDatabase(ctx context.Context, input *glue.CreateDatabaseInput) (*glue.CreateDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDatabaseWithContext(ctx, input)
+	output, err := client.CreateDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDevEndpoint(ctx context.Context, input *glue.CreateDevEndpointInput) (*glue.CreateDevEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDevEndpointWithContext(ctx, input)
+	output, err := client.CreateDevEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateJob(ctx context.Context, input *glue.CreateJobInput) (*glue.CreateJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateJobWithContext(ctx, input)
+	output, err := client.CreateJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateMLTransform(ctx context.Context, input *glue.CreateMLTransformInput) (*glue.CreateMLTransformOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateMLTransformWithContext(ctx, input)
+	output, err := client.CreateMLTransformWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePartition(ctx context.Context, input *glue.CreatePartitionInput) (*glue.CreatePartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePartitionWithContext(ctx, input)
+	output, err := client.CreatePartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateScript(ctx context.Context, input *glue.CreateScriptInput) (*glue.CreateScriptOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateScriptWithContext(ctx, input)
+	output, err := client.CreateScriptWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSecurityConfiguration(ctx context.Context, input *glue.CreateSecurityConfigurationInput) (*glue.CreateSecurityConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSecurityConfigurationWithContext(ctx, input)
+	output, err := client.CreateSecurityConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTable(ctx context.Context, input *glue.CreateTableInput) (*glue.CreateTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTableWithContext(ctx, input)
+	output, err := client.CreateTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTrigger(ctx context.Context, input *glue.CreateTriggerInput) (*glue.CreateTriggerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTriggerWithContext(ctx, input)
+	output, err := client.CreateTriggerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateUserDefinedFunction(ctx context.Context, input *glue.CreateUserDefinedFunctionInput) (*glue.CreateUserDefinedFunctionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateUserDefinedFunctionWithContext(ctx, input)
+	output, err := client.CreateUserDefinedFunctionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateWorkflow(ctx context.Context, input *glue.CreateWorkflowInput) (*glue.CreateWorkflowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateWorkflowWithContext(ctx, input)
+	output, err := client.CreateWorkflowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteClassifier(ctx context.Context, input *glue.DeleteClassifierInput) (*glue.DeleteClassifierOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteClassifierWithContext(ctx, input)
+	output, err := client.DeleteClassifierWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteColumnStatisticsForPartition(ctx context.Context, input *glue.DeleteColumnStatisticsForPartitionInput) (*glue.DeleteColumnStatisticsForPartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteColumnStatisticsForPartitionWithContext(ctx, input)
+	output, err := client.DeleteColumnStatisticsForPartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteColumnStatisticsForTable(ctx context.Context, input *glue.DeleteColumnStatisticsForTableInput) (*glue.DeleteColumnStatisticsForTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteColumnStatisticsForTableWithContext(ctx, input)
+	output, err := client.DeleteColumnStatisticsForTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteConnection(ctx context.Context, input *glue.DeleteConnectionInput) (*glue.DeleteConnectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteConnectionWithContext(ctx, input)
+	output, err := client.DeleteConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCrawler(ctx context.Context, input *glue.DeleteCrawlerInput) (*glue.DeleteCrawlerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCrawlerWithContext(ctx, input)
+	output, err := client.DeleteCrawlerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDatabase(ctx context.Context, input *glue.DeleteDatabaseInput) (*glue.DeleteDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDatabaseWithContext(ctx, input)
+	output, err := client.DeleteDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDevEndpoint(ctx context.Context, input *glue.DeleteDevEndpointInput) (*glue.DeleteDevEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDevEndpointWithContext(ctx, input)
+	output, err := client.DeleteDevEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteJob(ctx context.Context, input *glue.DeleteJobInput) (*glue.DeleteJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteJobWithContext(ctx, input)
+	output, err := client.DeleteJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMLTransform(ctx context.Context, input *glue.DeleteMLTransformInput) (*glue.DeleteMLTransformOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMLTransformWithContext(ctx, input)
+	output, err := client.DeleteMLTransformWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePartition(ctx context.Context, input *glue.DeletePartitionInput) (*glue.DeletePartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePartitionWithContext(ctx, input)
+	output, err := client.DeletePartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteResourcePolicy(ctx context.Context, input *glue.DeleteResourcePolicyInput) (*glue.DeleteResourcePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteResourcePolicyWithContext(ctx, input)
+	output, err := client.DeleteResourcePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSecurityConfiguration(ctx context.Context, input *glue.DeleteSecurityConfigurationInput) (*glue.DeleteSecurityConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSecurityConfigurationWithContext(ctx, input)
+	output, err := client.DeleteSecurityConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTable(ctx context.Context, input *glue.DeleteTableInput) (*glue.DeleteTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTableWithContext(ctx, input)
+	output, err := client.DeleteTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTableVersion(ctx context.Context, input *glue.DeleteTableVersionInput) (*glue.DeleteTableVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTableVersionWithContext(ctx, input)
+	output, err := client.DeleteTableVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTrigger(ctx context.Context, input *glue.DeleteTriggerInput) (*glue.DeleteTriggerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTriggerWithContext(ctx, input)
+	output, err := client.DeleteTriggerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUserDefinedFunction(ctx context.Context, input *glue.DeleteUserDefinedFunctionInput) (*glue.DeleteUserDefinedFunctionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUserDefinedFunctionWithContext(ctx, input)
+	output, err := client.DeleteUserDefinedFunctionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteWorkflow(ctx context.Context, input *glue.DeleteWorkflowInput) (*glue.DeleteWorkflowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteWorkflowWithContext(ctx, input)
+	output, err := client.DeleteWorkflowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCatalogImportStatus(ctx context.Context, input *glue.GetCatalogImportStatusInput) (*glue.GetCatalogImportStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCatalogImportStatusWithContext(ctx, input)
+	output, err := client.GetCatalogImportStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetClassifier(ctx context.Context, input *glue.GetClassifierInput) (*glue.GetClassifierOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetClassifierWithContext(ctx, input)
+	output, err := client.GetClassifierWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetClassifiers(ctx context.Context, input *glue.GetClassifiersInput) (*glue.GetClassifiersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetClassifiersWithContext(ctx, input)
+	output, err := client.GetClassifiersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetColumnStatisticsForPartition(ctx context.Context, input *glue.GetColumnStatisticsForPartitionInput) (*glue.GetColumnStatisticsForPartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetColumnStatisticsForPartitionWithContext(ctx, input)
+	output, err := client.GetColumnStatisticsForPartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetColumnStatisticsForTable(ctx context.Context, input *glue.GetColumnStatisticsForTableInput) (*glue.GetColumnStatisticsForTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetColumnStatisticsForTableWithContext(ctx, input)
+	output, err := client.GetColumnStatisticsForTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetConnection(ctx context.Context, input *glue.GetConnectionInput) (*glue.GetConnectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetConnectionWithContext(ctx, input)
+	output, err := client.GetConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetConnections(ctx context.Context, input *glue.GetConnectionsInput) (*glue.GetConnectionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetConnectionsWithContext(ctx, input)
+	output, err := client.GetConnectionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCrawler(ctx context.Context, input *glue.GetCrawlerInput) (*glue.GetCrawlerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCrawlerWithContext(ctx, input)
+	output, err := client.GetCrawlerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCrawlerMetrics(ctx context.Context, input *glue.GetCrawlerMetricsInput) (*glue.GetCrawlerMetricsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCrawlerMetricsWithContext(ctx, input)
+	output, err := client.GetCrawlerMetricsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCrawlers(ctx context.Context, input *glue.GetCrawlersInput) (*glue.GetCrawlersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCrawlersWithContext(ctx, input)
+	output, err := client.GetCrawlersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDataCatalogEncryptionSettings(ctx context.Context, input *glue.GetDataCatalogEncryptionSettingsInput) (*glue.GetDataCatalogEncryptionSettingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDataCatalogEncryptionSettingsWithContext(ctx, input)
+	output, err := client.GetDataCatalogEncryptionSettingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDatabase(ctx context.Context, input *glue.GetDatabaseInput) (*glue.GetDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDatabaseWithContext(ctx, input)
+	output, err := client.GetDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDatabases(ctx context.Context, input *glue.GetDatabasesInput) (*glue.GetDatabasesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDatabasesWithContext(ctx, input)
+	output, err := client.GetDatabasesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDataflowGraph(ctx context.Context, input *glue.GetDataflowGraphInput) (*glue.GetDataflowGraphOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDataflowGraphWithContext(ctx, input)
+	output, err := client.GetDataflowGraphWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDevEndpoint(ctx context.Context, input *glue.GetDevEndpointInput) (*glue.GetDevEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDevEndpointWithContext(ctx, input)
+	output, err := client.GetDevEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDevEndpoints(ctx context.Context, input *glue.GetDevEndpointsInput) (*glue.GetDevEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDevEndpointsWithContext(ctx, input)
+	output, err := client.GetDevEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJob(ctx context.Context, input *glue.GetJobInput) (*glue.GetJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJobWithContext(ctx, input)
+	output, err := client.GetJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJobBookmark(ctx context.Context, input *glue.GetJobBookmarkInput) (*glue.GetJobBookmarkOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJobBookmarkWithContext(ctx, input)
+	output, err := client.GetJobBookmarkWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJobRun(ctx context.Context, input *glue.GetJobRunInput) (*glue.GetJobRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJobRunWithContext(ctx, input)
+	output, err := client.GetJobRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJobRuns(ctx context.Context, input *glue.GetJobRunsInput) (*glue.GetJobRunsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJobRunsWithContext(ctx, input)
+	output, err := client.GetJobRunsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJobs(ctx context.Context, input *glue.GetJobsInput) (*glue.GetJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJobsWithContext(ctx, input)
+	output, err := client.GetJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMLTaskRun(ctx context.Context, input *glue.GetMLTaskRunInput) (*glue.GetMLTaskRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMLTaskRunWithContext(ctx, input)
+	output, err := client.GetMLTaskRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMLTaskRuns(ctx context.Context, input *glue.GetMLTaskRunsInput) (*glue.GetMLTaskRunsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMLTaskRunsWithContext(ctx, input)
+	output, err := client.GetMLTaskRunsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMLTransform(ctx context.Context, input *glue.GetMLTransformInput) (*glue.GetMLTransformOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMLTransformWithContext(ctx, input)
+	output, err := client.GetMLTransformWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMLTransforms(ctx context.Context, input *glue.GetMLTransformsInput) (*glue.GetMLTransformsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMLTransformsWithContext(ctx, input)
+	output, err := client.GetMLTransformsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMapping(ctx context.Context, input *glue.GetMappingInput) (*glue.GetMappingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMappingWithContext(ctx, input)
+	output, err := client.GetMappingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPartition(ctx context.Context, input *glue.GetPartitionInput) (*glue.GetPartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPartitionWithContext(ctx, input)
+	output, err := client.GetPartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPartitionIndexes(ctx context.Context, input *glue.GetPartitionIndexesInput) (*glue.GetPartitionIndexesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPartitionIndexesWithContext(ctx, input)
+	output, err := client.GetPartitionIndexesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPartitions(ctx context.Context, input *glue.GetPartitionsInput) (*glue.GetPartitionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPartitionsWithContext(ctx, input)
+	output, err := client.GetPartitionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPlan(ctx context.Context, input *glue.GetPlanInput) (*glue.GetPlanOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPlanWithContext(ctx, input)
+	output, err := client.GetPlanWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResourcePolicies(ctx context.Context, input *glue.GetResourcePoliciesInput) (*glue.GetResourcePoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourcePoliciesWithContext(ctx, input)
+	output, err := client.GetResourcePoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResourcePolicy(ctx context.Context, input *glue.GetResourcePolicyInput) (*glue.GetResourcePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourcePolicyWithContext(ctx, input)
+	output, err := client.GetResourcePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSecurityConfiguration(ctx context.Context, input *glue.GetSecurityConfigurationInput) (*glue.GetSecurityConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSecurityConfigurationWithContext(ctx, input)
+	output, err := client.GetSecurityConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSecurityConfigurations(ctx context.Context, input *glue.GetSecurityConfigurationsInput) (*glue.GetSecurityConfigurationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSecurityConfigurationsWithContext(ctx, input)
+	output, err := client.GetSecurityConfigurationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTable(ctx context.Context, input *glue.GetTableInput) (*glue.GetTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTableWithContext(ctx, input)
+	output, err := client.GetTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTableVersion(ctx context.Context, input *glue.GetTableVersionInput) (*glue.GetTableVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTableVersionWithContext(ctx, input)
+	output, err := client.GetTableVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTableVersions(ctx context.Context, input *glue.GetTableVersionsInput) (*glue.GetTableVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTableVersionsWithContext(ctx, input)
+	output, err := client.GetTableVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTables(ctx context.Context, input *glue.GetTablesInput) (*glue.GetTablesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTablesWithContext(ctx, input)
+	output, err := client.GetTablesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTags(ctx context.Context, input *glue.GetTagsInput) (*glue.GetTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTagsWithContext(ctx, input)
+	output, err := client.GetTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTrigger(ctx context.Context, input *glue.GetTriggerInput) (*glue.GetTriggerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTriggerWithContext(ctx, input)
+	output, err := client.GetTriggerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTriggers(ctx context.Context, input *glue.GetTriggersInput) (*glue.GetTriggersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTriggersWithContext(ctx, input)
+	output, err := client.GetTriggersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetUserDefinedFunction(ctx context.Context, input *glue.GetUserDefinedFunctionInput) (*glue.GetUserDefinedFunctionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetUserDefinedFunctionWithContext(ctx, input)
+	output, err := client.GetUserDefinedFunctionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetUserDefinedFunctions(ctx context.Context, input *glue.GetUserDefinedFunctionsInput) (*glue.GetUserDefinedFunctionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetUserDefinedFunctionsWithContext(ctx, input)
+	output, err := client.GetUserDefinedFunctionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetWorkflow(ctx context.Context, input *glue.GetWorkflowInput) (*glue.GetWorkflowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetWorkflowWithContext(ctx, input)
+	output, err := client.GetWorkflowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetWorkflowRun(ctx context.Context, input *glue.GetWorkflowRunInput) (*glue.GetWorkflowRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetWorkflowRunWithContext(ctx, input)
+	output, err := client.GetWorkflowRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetWorkflowRunProperties(ctx context.Context, input *glue.GetWorkflowRunPropertiesInput) (*glue.GetWorkflowRunPropertiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetWorkflowRunPropertiesWithContext(ctx, input)
+	output, err := client.GetWorkflowRunPropertiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetWorkflowRuns(ctx context.Context, input *glue.GetWorkflowRunsInput) (*glue.GetWorkflowRunsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetWorkflowRunsWithContext(ctx, input)
+	output, err := client.GetWorkflowRunsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportCatalogToGlue(ctx context.Context, input *glue.ImportCatalogToGlueInput) (*glue.ImportCatalogToGlueOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportCatalogToGlueWithContext(ctx, input)
+	output, err := client.ImportCatalogToGlueWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCrawlers(ctx context.Context, input *glue.ListCrawlersInput) (*glue.ListCrawlersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCrawlersWithContext(ctx, input)
+	output, err := client.ListCrawlersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDevEndpoints(ctx context.Context, input *glue.ListDevEndpointsInput) (*glue.ListDevEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDevEndpointsWithContext(ctx, input)
+	output, err := client.ListDevEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListJobs(ctx context.Context, input *glue.ListJobsInput) (*glue.ListJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListJobsWithContext(ctx, input)
+	output, err := client.ListJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListMLTransforms(ctx context.Context, input *glue.ListMLTransformsInput) (*glue.ListMLTransformsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListMLTransformsWithContext(ctx, input)
+	output, err := client.ListMLTransformsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTriggers(ctx context.Context, input *glue.ListTriggersInput) (*glue.ListTriggersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTriggersWithContext(ctx, input)
+	output, err := client.ListTriggersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListWorkflows(ctx context.Context, input *glue.ListWorkflowsInput) (*glue.ListWorkflowsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListWorkflowsWithContext(ctx, input)
+	output, err := client.ListWorkflowsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutDataCatalogEncryptionSettings(ctx context.Context, input *glue.PutDataCatalogEncryptionSettingsInput) (*glue.PutDataCatalogEncryptionSettingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutDataCatalogEncryptionSettingsWithContext(ctx, input)
+	output, err := client.PutDataCatalogEncryptionSettingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutResourcePolicy(ctx context.Context, input *glue.PutResourcePolicyInput) (*glue.PutResourcePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutResourcePolicyWithContext(ctx, input)
+	output, err := client.PutResourcePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutWorkflowRunProperties(ctx context.Context, input *glue.PutWorkflowRunPropertiesInput) (*glue.PutWorkflowRunPropertiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutWorkflowRunPropertiesWithContext(ctx, input)
+	output, err := client.PutWorkflowRunPropertiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResetJobBookmark(ctx context.Context, input *glue.ResetJobBookmarkInput) (*glue.ResetJobBookmarkOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResetJobBookmarkWithContext(ctx, input)
+	output, err := client.ResetJobBookmarkWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResumeWorkflowRun(ctx context.Context, input *glue.ResumeWorkflowRunInput) (*glue.ResumeWorkflowRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResumeWorkflowRunWithContext(ctx, input)
+	output, err := client.ResumeWorkflowRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SearchTables(ctx context.Context, input *glue.SearchTablesInput) (*glue.SearchTablesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SearchTablesWithContext(ctx, input)
+	output, err := client.SearchTablesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartCrawler(ctx context.Context, input *glue.StartCrawlerInput) (*glue.StartCrawlerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartCrawlerWithContext(ctx, input)
+	output, err := client.StartCrawlerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartCrawlerSchedule(ctx context.Context, input *glue.StartCrawlerScheduleInput) (*glue.StartCrawlerScheduleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartCrawlerScheduleWithContext(ctx, input)
+	output, err := client.StartCrawlerScheduleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartExportLabelsTaskRun(ctx context.Context, input *glue.StartExportLabelsTaskRunInput) (*glue.StartExportLabelsTaskRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartExportLabelsTaskRunWithContext(ctx, input)
+	output, err := client.StartExportLabelsTaskRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartImportLabelsTaskRun(ctx context.Context, input *glue.StartImportLabelsTaskRunInput) (*glue.StartImportLabelsTaskRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartImportLabelsTaskRunWithContext(ctx, input)
+	output, err := client.StartImportLabelsTaskRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartJobRun(ctx context.Context, input *glue.StartJobRunInput) (*glue.StartJobRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartJobRunWithContext(ctx, input)
+	output, err := client.StartJobRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartMLEvaluationTaskRun(ctx context.Context, input *glue.StartMLEvaluationTaskRunInput) (*glue.StartMLEvaluationTaskRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartMLEvaluationTaskRunWithContext(ctx, input)
+	output, err := client.StartMLEvaluationTaskRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartMLLabelingSetGenerationTaskRun(ctx context.Context, input *glue.StartMLLabelingSetGenerationTaskRunInput) (*glue.StartMLLabelingSetGenerationTaskRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartMLLabelingSetGenerationTaskRunWithContext(ctx, input)
+	output, err := client.StartMLLabelingSetGenerationTaskRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartTrigger(ctx context.Context, input *glue.StartTriggerInput) (*glue.StartTriggerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartTriggerWithContext(ctx, input)
+	output, err := client.StartTriggerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartWorkflowRun(ctx context.Context, input *glue.StartWorkflowRunInput) (*glue.StartWorkflowRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartWorkflowRunWithContext(ctx, input)
+	output, err := client.StartWorkflowRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopCrawler(ctx context.Context, input *glue.StopCrawlerInput) (*glue.StopCrawlerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopCrawlerWithContext(ctx, input)
+	output, err := client.StopCrawlerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopCrawlerSchedule(ctx context.Context, input *glue.StopCrawlerScheduleInput) (*glue.StopCrawlerScheduleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopCrawlerScheduleWithContext(ctx, input)
+	output, err := client.StopCrawlerScheduleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopTrigger(ctx context.Context, input *glue.StopTriggerInput) (*glue.StopTriggerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopTriggerWithContext(ctx, input)
+	output, err := client.StopTriggerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopWorkflowRun(ctx context.Context, input *glue.StopWorkflowRunInput) (*glue.StopWorkflowRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopWorkflowRunWithContext(ctx, input)
+	output, err := client.StopWorkflowRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *glue.TagResourceInput) (*glue.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *glue.UntagResourceInput) (*glue.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateClassifier(ctx context.Context, input *glue.UpdateClassifierInput) (*glue.UpdateClassifierOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateClassifierWithContext(ctx, input)
+	output, err := client.UpdateClassifierWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateColumnStatisticsForPartition(ctx context.Context, input *glue.UpdateColumnStatisticsForPartitionInput) (*glue.UpdateColumnStatisticsForPartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateColumnStatisticsForPartitionWithContext(ctx, input)
+	output, err := client.UpdateColumnStatisticsForPartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateColumnStatisticsForTable(ctx context.Context, input *glue.UpdateColumnStatisticsForTableInput) (*glue.UpdateColumnStatisticsForTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateColumnStatisticsForTableWithContext(ctx, input)
+	output, err := client.UpdateColumnStatisticsForTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateConnection(ctx context.Context, input *glue.UpdateConnectionInput) (*glue.UpdateConnectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateConnectionWithContext(ctx, input)
+	output, err := client.UpdateConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCrawler(ctx context.Context, input *glue.UpdateCrawlerInput) (*glue.UpdateCrawlerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCrawlerWithContext(ctx, input)
+	output, err := client.UpdateCrawlerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCrawlerSchedule(ctx context.Context, input *glue.UpdateCrawlerScheduleInput) (*glue.UpdateCrawlerScheduleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCrawlerScheduleWithContext(ctx, input)
+	output, err := client.UpdateCrawlerScheduleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDatabase(ctx context.Context, input *glue.UpdateDatabaseInput) (*glue.UpdateDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDatabaseWithContext(ctx, input)
+	output, err := client.UpdateDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDevEndpoint(ctx context.Context, input *glue.UpdateDevEndpointInput) (*glue.UpdateDevEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDevEndpointWithContext(ctx, input)
+	output, err := client.UpdateDevEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateJob(ctx context.Context, input *glue.UpdateJobInput) (*glue.UpdateJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateJobWithContext(ctx, input)
+	output, err := client.UpdateJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMLTransform(ctx context.Context, input *glue.UpdateMLTransformInput) (*glue.UpdateMLTransformOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMLTransformWithContext(ctx, input)
+	output, err := client.UpdateMLTransformWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePartition(ctx context.Context, input *glue.UpdatePartitionInput) (*glue.UpdatePartitionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePartitionWithContext(ctx, input)
+	output, err := client.UpdatePartitionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTable(ctx context.Context, input *glue.UpdateTableInput) (*glue.UpdateTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTableWithContext(ctx, input)
+	output, err := client.UpdateTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTrigger(ctx context.Context, input *glue.UpdateTriggerInput) (*glue.UpdateTriggerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTriggerWithContext(ctx, input)
+	output, err := client.UpdateTriggerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateUserDefinedFunction(ctx context.Context, input *glue.UpdateUserDefinedFunctionInput) (*glue.UpdateUserDefinedFunctionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateUserDefinedFunctionWithContext(ctx, input)
+	output, err := client.UpdateUserDefinedFunctionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateWorkflow(ctx context.Context, input *glue.UpdateWorkflowInput) (*glue.UpdateWorkflowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateWorkflowWithContext(ctx, input)
+	output, err := client.UpdateWorkflowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

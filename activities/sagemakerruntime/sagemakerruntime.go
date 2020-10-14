@@ -6,12 +6,14 @@ package sagemakerruntime
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/sagemakerruntime"
 	"github.com/aws/aws-sdk-go/service/sagemakerruntime/sagemakerruntimeiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (sagemakerruntimeiface.SageM
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return sagemakerruntime.New(sess), nil
@@ -55,7 +57,9 @@ func (a *Activities) getClient(ctx context.Context) (sagemakerruntimeiface.SageM
 func (a *Activities) InvokeEndpoint(ctx context.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.InvokeEndpointWithContext(ctx, input)
+	output, err := client.InvokeEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

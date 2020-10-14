@@ -6,12 +6,14 @@ package kinesisvideosignalingchannels
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/kinesisvideosignalingchannels"
 	"github.com/aws/aws-sdk-go/service/kinesisvideosignalingchannels/kinesisvideosignalingchannelsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (kinesisvideosignalingchanne
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return kinesisvideosignalingchannels.New(sess), nil
@@ -55,15 +57,19 @@ func (a *Activities) getClient(ctx context.Context) (kinesisvideosignalingchanne
 func (a *Activities) GetIceServerConfig(ctx context.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetIceServerConfigWithContext(ctx, input)
+	output, err := client.GetIceServerConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SendAlexaOfferToMaster(ctx context.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SendAlexaOfferToMasterWithContext(ctx, input)
+	output, err := client.SendAlexaOfferToMasterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

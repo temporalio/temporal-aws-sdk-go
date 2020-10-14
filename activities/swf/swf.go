@@ -6,12 +6,14 @@ package swf
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/swf"
 	"github.com/aws/aws-sdk-go/service/swf/swfiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (swfiface.SWFAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return swf.New(sess), nil
@@ -55,295 +57,369 @@ func (a *Activities) getClient(ctx context.Context) (swfiface.SWFAPI, error) {
 func (a *Activities) CountClosedWorkflowExecutions(ctx context.Context, input *swf.CountClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CountClosedWorkflowExecutionsWithContext(ctx, input)
+	output, err := client.CountClosedWorkflowExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CountOpenWorkflowExecutions(ctx context.Context, input *swf.CountOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CountOpenWorkflowExecutionsWithContext(ctx, input)
+	output, err := client.CountOpenWorkflowExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CountPendingActivityTasks(ctx context.Context, input *swf.CountPendingActivityTasksInput) (*swf.PendingTaskCount, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CountPendingActivityTasksWithContext(ctx, input)
+	output, err := client.CountPendingActivityTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CountPendingDecisionTasks(ctx context.Context, input *swf.CountPendingDecisionTasksInput) (*swf.PendingTaskCount, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CountPendingDecisionTasksWithContext(ctx, input)
+	output, err := client.CountPendingDecisionTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeprecateActivityType(ctx context.Context, input *swf.DeprecateActivityTypeInput) (*swf.DeprecateActivityTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeprecateActivityTypeWithContext(ctx, input)
+	output, err := client.DeprecateActivityTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeprecateDomain(ctx context.Context, input *swf.DeprecateDomainInput) (*swf.DeprecateDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeprecateDomainWithContext(ctx, input)
+	output, err := client.DeprecateDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeprecateWorkflowType(ctx context.Context, input *swf.DeprecateWorkflowTypeInput) (*swf.DeprecateWorkflowTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeprecateWorkflowTypeWithContext(ctx, input)
+	output, err := client.DeprecateWorkflowTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeActivityType(ctx context.Context, input *swf.DescribeActivityTypeInput) (*swf.DescribeActivityTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeActivityTypeWithContext(ctx, input)
+	output, err := client.DescribeActivityTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDomain(ctx context.Context, input *swf.DescribeDomainInput) (*swf.DescribeDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDomainWithContext(ctx, input)
+	output, err := client.DescribeDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeWorkflowExecution(ctx context.Context, input *swf.DescribeWorkflowExecutionInput) (*swf.DescribeWorkflowExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeWorkflowExecutionWithContext(ctx, input)
+	output, err := client.DescribeWorkflowExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeWorkflowType(ctx context.Context, input *swf.DescribeWorkflowTypeInput) (*swf.DescribeWorkflowTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeWorkflowTypeWithContext(ctx, input)
+	output, err := client.DescribeWorkflowTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetWorkflowExecutionHistory(ctx context.Context, input *swf.GetWorkflowExecutionHistoryInput) (*swf.GetWorkflowExecutionHistoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetWorkflowExecutionHistoryWithContext(ctx, input)
+	output, err := client.GetWorkflowExecutionHistoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListActivityTypes(ctx context.Context, input *swf.ListActivityTypesInput) (*swf.ListActivityTypesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListActivityTypesWithContext(ctx, input)
+	output, err := client.ListActivityTypesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListClosedWorkflowExecutions(ctx context.Context, input *swf.ListClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListClosedWorkflowExecutionsWithContext(ctx, input)
+	output, err := client.ListClosedWorkflowExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDomains(ctx context.Context, input *swf.ListDomainsInput) (*swf.ListDomainsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDomainsWithContext(ctx, input)
+	output, err := client.ListDomainsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListOpenWorkflowExecutions(ctx context.Context, input *swf.ListOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListOpenWorkflowExecutionsWithContext(ctx, input)
+	output, err := client.ListOpenWorkflowExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *swf.ListTagsForResourceInput) (*swf.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListWorkflowTypes(ctx context.Context, input *swf.ListWorkflowTypesInput) (*swf.ListWorkflowTypesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListWorkflowTypesWithContext(ctx, input)
+	output, err := client.ListWorkflowTypesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PollForActivityTask(ctx context.Context, input *swf.PollForActivityTaskInput) (*swf.PollForActivityTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PollForActivityTaskWithContext(ctx, input)
+	output, err := client.PollForActivityTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PollForDecisionTask(ctx context.Context, input *swf.PollForDecisionTaskInput) (*swf.PollForDecisionTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PollForDecisionTaskWithContext(ctx, input)
+	output, err := client.PollForDecisionTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RecordActivityTaskHeartbeat(ctx context.Context, input *swf.RecordActivityTaskHeartbeatInput) (*swf.RecordActivityTaskHeartbeatOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RecordActivityTaskHeartbeatWithContext(ctx, input)
+	output, err := client.RecordActivityTaskHeartbeatWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterActivityType(ctx context.Context, input *swf.RegisterActivityTypeInput) (*swf.RegisterActivityTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterActivityTypeWithContext(ctx, input)
+	output, err := client.RegisterActivityTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterDomain(ctx context.Context, input *swf.RegisterDomainInput) (*swf.RegisterDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterDomainWithContext(ctx, input)
+	output, err := client.RegisterDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterWorkflowType(ctx context.Context, input *swf.RegisterWorkflowTypeInput) (*swf.RegisterWorkflowTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterWorkflowTypeWithContext(ctx, input)
+	output, err := client.RegisterWorkflowTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RequestCancelWorkflowExecution(ctx context.Context, input *swf.RequestCancelWorkflowExecutionInput) (*swf.RequestCancelWorkflowExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RequestCancelWorkflowExecutionWithContext(ctx, input)
+	output, err := client.RequestCancelWorkflowExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RespondActivityTaskCanceled(ctx context.Context, input *swf.RespondActivityTaskCanceledInput) (*swf.RespondActivityTaskCanceledOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RespondActivityTaskCanceledWithContext(ctx, input)
+	output, err := client.RespondActivityTaskCanceledWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RespondActivityTaskCompleted(ctx context.Context, input *swf.RespondActivityTaskCompletedInput) (*swf.RespondActivityTaskCompletedOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RespondActivityTaskCompletedWithContext(ctx, input)
+	output, err := client.RespondActivityTaskCompletedWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RespondActivityTaskFailed(ctx context.Context, input *swf.RespondActivityTaskFailedInput) (*swf.RespondActivityTaskFailedOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RespondActivityTaskFailedWithContext(ctx, input)
+	output, err := client.RespondActivityTaskFailedWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RespondDecisionTaskCompleted(ctx context.Context, input *swf.RespondDecisionTaskCompletedInput) (*swf.RespondDecisionTaskCompletedOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RespondDecisionTaskCompletedWithContext(ctx, input)
+	output, err := client.RespondDecisionTaskCompletedWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SignalWorkflowExecution(ctx context.Context, input *swf.SignalWorkflowExecutionInput) (*swf.SignalWorkflowExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SignalWorkflowExecutionWithContext(ctx, input)
+	output, err := client.SignalWorkflowExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartWorkflowExecution(ctx context.Context, input *swf.StartWorkflowExecutionInput) (*swf.StartWorkflowExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartWorkflowExecutionWithContext(ctx, input)
+	output, err := client.StartWorkflowExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *swf.TagResourceInput) (*swf.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TerminateWorkflowExecution(ctx context.Context, input *swf.TerminateWorkflowExecutionInput) (*swf.TerminateWorkflowExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TerminateWorkflowExecutionWithContext(ctx, input)
+	output, err := client.TerminateWorkflowExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UndeprecateActivityType(ctx context.Context, input *swf.UndeprecateActivityTypeInput) (*swf.UndeprecateActivityTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UndeprecateActivityTypeWithContext(ctx, input)
+	output, err := client.UndeprecateActivityTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UndeprecateDomain(ctx context.Context, input *swf.UndeprecateDomainInput) (*swf.UndeprecateDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UndeprecateDomainWithContext(ctx, input)
+	output, err := client.UndeprecateDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UndeprecateWorkflowType(ctx context.Context, input *swf.UndeprecateWorkflowTypeInput) (*swf.UndeprecateWorkflowTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UndeprecateWorkflowTypeWithContext(ctx, input)
+	output, err := client.UndeprecateWorkflowTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *swf.UntagResourceInput) (*swf.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

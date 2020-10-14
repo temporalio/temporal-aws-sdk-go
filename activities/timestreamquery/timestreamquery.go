@@ -6,12 +6,14 @@ package timestreamquery
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/timestreamquery"
 	"github.com/aws/aws-sdk-go/service/timestreamquery/timestreamqueryiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (timestreamqueryiface.Timest
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return timestreamquery.New(sess), nil
@@ -55,24 +57,30 @@ func (a *Activities) getClient(ctx context.Context) (timestreamqueryiface.Timest
 func (a *Activities) CancelQuery(ctx context.Context, input *timestreamquery.CancelQueryInput) (*timestreamquery.CancelQueryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelQueryWithContext(ctx, input)
+	output, err := client.CancelQueryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEndpoints(ctx context.Context, input *timestreamquery.DescribeEndpointsInput) (*timestreamquery.DescribeEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEndpointsWithContext(ctx, input)
+	output, err := client.DescribeEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) Query(ctx context.Context, input *timestreamquery.QueryInput) (*timestreamquery.QueryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.QueryWithContext(ctx, input)
+	output, err := client.QueryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

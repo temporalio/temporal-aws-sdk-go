@@ -6,12 +6,14 @@ package s3outposts
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/s3outposts"
 	"github.com/aws/aws-sdk-go/service/s3outposts/s3outpostsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (s3outpostsiface.S3OutpostsA
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return s3outposts.New(sess), nil
@@ -55,23 +57,29 @@ func (a *Activities) getClient(ctx context.Context) (s3outpostsiface.S3OutpostsA
 func (a *Activities) CreateEndpoint(ctx context.Context, input *s3outposts.CreateEndpointInput) (*s3outposts.CreateEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateEndpointWithContext(ctx, input)
+	output, err := client.CreateEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteEndpoint(ctx context.Context, input *s3outposts.DeleteEndpointInput) (*s3outposts.DeleteEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteEndpointWithContext(ctx, input)
+	output, err := client.DeleteEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListEndpoints(ctx context.Context, input *s3outposts.ListEndpointsInput) (*s3outposts.ListEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListEndpointsWithContext(ctx, input)
+	output, err := client.ListEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

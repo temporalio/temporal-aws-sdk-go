@@ -6,12 +6,14 @@ package emr
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/emr"
 	"github.com/aws/aws-sdk-go/service/emr/emriface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (emriface.EMRAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return emr.New(sess), nil
@@ -55,325 +57,399 @@ func (a *Activities) getClient(ctx context.Context) (emriface.EMRAPI, error) {
 func (a *Activities) AddInstanceFleet(ctx context.Context, input *emr.AddInstanceFleetInput) (*emr.AddInstanceFleetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddInstanceFleetWithContext(ctx, input)
+	output, err := client.AddInstanceFleetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddInstanceGroups(ctx context.Context, input *emr.AddInstanceGroupsInput) (*emr.AddInstanceGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddInstanceGroupsWithContext(ctx, input)
+	output, err := client.AddInstanceGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddJobFlowSteps(ctx context.Context, input *emr.AddJobFlowStepsInput) (*emr.AddJobFlowStepsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddJobFlowStepsWithContext(ctx, input)
+	output, err := client.AddJobFlowStepsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddTags(ctx context.Context, input *emr.AddTagsInput) (*emr.AddTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddTagsWithContext(ctx, input)
+	output, err := client.AddTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelSteps(ctx context.Context, input *emr.CancelStepsInput) (*emr.CancelStepsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelStepsWithContext(ctx, input)
+	output, err := client.CancelStepsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSecurityConfiguration(ctx context.Context, input *emr.CreateSecurityConfigurationInput) (*emr.CreateSecurityConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSecurityConfigurationWithContext(ctx, input)
+	output, err := client.CreateSecurityConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSecurityConfiguration(ctx context.Context, input *emr.DeleteSecurityConfigurationInput) (*emr.DeleteSecurityConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSecurityConfigurationWithContext(ctx, input)
+	output, err := client.DeleteSecurityConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCluster(ctx context.Context, input *emr.DescribeClusterInput) (*emr.DescribeClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeClusterWithContext(ctx, input)
+	output, err := client.DescribeClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeJobFlows(ctx context.Context, input *emr.DescribeJobFlowsInput) (*emr.DescribeJobFlowsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeJobFlowsWithContext(ctx, input)
+	output, err := client.DescribeJobFlowsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeNotebookExecution(ctx context.Context, input *emr.DescribeNotebookExecutionInput) (*emr.DescribeNotebookExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeNotebookExecutionWithContext(ctx, input)
+	output, err := client.DescribeNotebookExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSecurityConfiguration(ctx context.Context, input *emr.DescribeSecurityConfigurationInput) (*emr.DescribeSecurityConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSecurityConfigurationWithContext(ctx, input)
+	output, err := client.DescribeSecurityConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeStep(ctx context.Context, input *emr.DescribeStepInput) (*emr.DescribeStepOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeStepWithContext(ctx, input)
+	output, err := client.DescribeStepWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetBlockPublicAccessConfiguration(ctx context.Context, input *emr.GetBlockPublicAccessConfigurationInput) (*emr.GetBlockPublicAccessConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetBlockPublicAccessConfigurationWithContext(ctx, input)
+	output, err := client.GetBlockPublicAccessConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetManagedScalingPolicy(ctx context.Context, input *emr.GetManagedScalingPolicyInput) (*emr.GetManagedScalingPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetManagedScalingPolicyWithContext(ctx, input)
+	output, err := client.GetManagedScalingPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListBootstrapActions(ctx context.Context, input *emr.ListBootstrapActionsInput) (*emr.ListBootstrapActionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListBootstrapActionsWithContext(ctx, input)
+	output, err := client.ListBootstrapActionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListClusters(ctx context.Context, input *emr.ListClustersInput) (*emr.ListClustersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListClustersWithContext(ctx, input)
+	output, err := client.ListClustersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInstanceFleets(ctx context.Context, input *emr.ListInstanceFleetsInput) (*emr.ListInstanceFleetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInstanceFleetsWithContext(ctx, input)
+	output, err := client.ListInstanceFleetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInstanceGroups(ctx context.Context, input *emr.ListInstanceGroupsInput) (*emr.ListInstanceGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInstanceGroupsWithContext(ctx, input)
+	output, err := client.ListInstanceGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInstances(ctx context.Context, input *emr.ListInstancesInput) (*emr.ListInstancesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInstancesWithContext(ctx, input)
+	output, err := client.ListInstancesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListNotebookExecutions(ctx context.Context, input *emr.ListNotebookExecutionsInput) (*emr.ListNotebookExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListNotebookExecutionsWithContext(ctx, input)
+	output, err := client.ListNotebookExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSecurityConfigurations(ctx context.Context, input *emr.ListSecurityConfigurationsInput) (*emr.ListSecurityConfigurationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSecurityConfigurationsWithContext(ctx, input)
+	output, err := client.ListSecurityConfigurationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSteps(ctx context.Context, input *emr.ListStepsInput) (*emr.ListStepsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListStepsWithContext(ctx, input)
+	output, err := client.ListStepsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyCluster(ctx context.Context, input *emr.ModifyClusterInput) (*emr.ModifyClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyClusterWithContext(ctx, input)
+	output, err := client.ModifyClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyInstanceFleet(ctx context.Context, input *emr.ModifyInstanceFleetInput) (*emr.ModifyInstanceFleetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyInstanceFleetWithContext(ctx, input)
+	output, err := client.ModifyInstanceFleetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyInstanceGroups(ctx context.Context, input *emr.ModifyInstanceGroupsInput) (*emr.ModifyInstanceGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyInstanceGroupsWithContext(ctx, input)
+	output, err := client.ModifyInstanceGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutAutoScalingPolicy(ctx context.Context, input *emr.PutAutoScalingPolicyInput) (*emr.PutAutoScalingPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutAutoScalingPolicyWithContext(ctx, input)
+	output, err := client.PutAutoScalingPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutBlockPublicAccessConfiguration(ctx context.Context, input *emr.PutBlockPublicAccessConfigurationInput) (*emr.PutBlockPublicAccessConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutBlockPublicAccessConfigurationWithContext(ctx, input)
+	output, err := client.PutBlockPublicAccessConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutManagedScalingPolicy(ctx context.Context, input *emr.PutManagedScalingPolicyInput) (*emr.PutManagedScalingPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutManagedScalingPolicyWithContext(ctx, input)
+	output, err := client.PutManagedScalingPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveAutoScalingPolicy(ctx context.Context, input *emr.RemoveAutoScalingPolicyInput) (*emr.RemoveAutoScalingPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveAutoScalingPolicyWithContext(ctx, input)
+	output, err := client.RemoveAutoScalingPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveManagedScalingPolicy(ctx context.Context, input *emr.RemoveManagedScalingPolicyInput) (*emr.RemoveManagedScalingPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveManagedScalingPolicyWithContext(ctx, input)
+	output, err := client.RemoveManagedScalingPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveTags(ctx context.Context, input *emr.RemoveTagsInput) (*emr.RemoveTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveTagsWithContext(ctx, input)
+	output, err := client.RemoveTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RunJobFlow(ctx context.Context, input *emr.RunJobFlowInput) (*emr.RunJobFlowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RunJobFlowWithContext(ctx, input)
+	output, err := client.RunJobFlowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetTerminationProtection(ctx context.Context, input *emr.SetTerminationProtectionInput) (*emr.SetTerminationProtectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetTerminationProtectionWithContext(ctx, input)
+	output, err := client.SetTerminationProtectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetVisibleToAllUsers(ctx context.Context, input *emr.SetVisibleToAllUsersInput) (*emr.SetVisibleToAllUsersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetVisibleToAllUsersWithContext(ctx, input)
+	output, err := client.SetVisibleToAllUsersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartNotebookExecution(ctx context.Context, input *emr.StartNotebookExecutionInput) (*emr.StartNotebookExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartNotebookExecutionWithContext(ctx, input)
+	output, err := client.StartNotebookExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopNotebookExecution(ctx context.Context, input *emr.StopNotebookExecutionInput) (*emr.StopNotebookExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopNotebookExecutionWithContext(ctx, input)
+	output, err := client.StopNotebookExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TerminateJobFlows(ctx context.Context, input *emr.TerminateJobFlowsInput) (*emr.TerminateJobFlowsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TerminateJobFlowsWithContext(ctx, input)
+	output, err := client.TerminateJobFlowsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilClusterRunning(ctx context.Context, input *emr.DescribeClusterInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilClusterRunningWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilClusterRunningWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilClusterTerminated(ctx context.Context, input *emr.DescribeClusterInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilClusterTerminatedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilClusterTerminatedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilStepComplete(ctx context.Context, input *emr.DescribeStepInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilStepCompleteWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilStepCompleteWithContext(ctx, input, options...))
 	})
 }

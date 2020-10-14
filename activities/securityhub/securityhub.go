@@ -6,12 +6,14 @@ package securityhub
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/securityhub"
 	"github.com/aws/aws-sdk-go/service/securityhub/securityhubiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (securityhubiface.SecurityHu
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return securityhub.New(sess), nil
@@ -55,343 +57,429 @@ func (a *Activities) getClient(ctx context.Context) (securityhubiface.SecurityHu
 func (a *Activities) AcceptInvitation(ctx context.Context, input *securityhub.AcceptInvitationInput) (*securityhub.AcceptInvitationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AcceptInvitationWithContext(ctx, input)
+	output, err := client.AcceptInvitationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchDisableStandards(ctx context.Context, input *securityhub.BatchDisableStandardsInput) (*securityhub.BatchDisableStandardsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchDisableStandardsWithContext(ctx, input)
+	output, err := client.BatchDisableStandardsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchEnableStandards(ctx context.Context, input *securityhub.BatchEnableStandardsInput) (*securityhub.BatchEnableStandardsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchEnableStandardsWithContext(ctx, input)
+	output, err := client.BatchEnableStandardsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchImportFindings(ctx context.Context, input *securityhub.BatchImportFindingsInput) (*securityhub.BatchImportFindingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchImportFindingsWithContext(ctx, input)
+	output, err := client.BatchImportFindingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchUpdateFindings(ctx context.Context, input *securityhub.BatchUpdateFindingsInput) (*securityhub.BatchUpdateFindingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchUpdateFindingsWithContext(ctx, input)
+	output, err := client.BatchUpdateFindingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateActionTarget(ctx context.Context, input *securityhub.CreateActionTargetInput) (*securityhub.CreateActionTargetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateActionTargetWithContext(ctx, input)
+	output, err := client.CreateActionTargetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateInsight(ctx context.Context, input *securityhub.CreateInsightInput) (*securityhub.CreateInsightOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateInsightWithContext(ctx, input)
+	output, err := client.CreateInsightWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateMembers(ctx context.Context, input *securityhub.CreateMembersInput) (*securityhub.CreateMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateMembersWithContext(ctx, input)
+	output, err := client.CreateMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeclineInvitations(ctx context.Context, input *securityhub.DeclineInvitationsInput) (*securityhub.DeclineInvitationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeclineInvitationsWithContext(ctx, input)
+	output, err := client.DeclineInvitationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteActionTarget(ctx context.Context, input *securityhub.DeleteActionTargetInput) (*securityhub.DeleteActionTargetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteActionTargetWithContext(ctx, input)
+	output, err := client.DeleteActionTargetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteInsight(ctx context.Context, input *securityhub.DeleteInsightInput) (*securityhub.DeleteInsightOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteInsightWithContext(ctx, input)
+	output, err := client.DeleteInsightWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteInvitations(ctx context.Context, input *securityhub.DeleteInvitationsInput) (*securityhub.DeleteInvitationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteInvitationsWithContext(ctx, input)
+	output, err := client.DeleteInvitationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMembers(ctx context.Context, input *securityhub.DeleteMembersInput) (*securityhub.DeleteMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMembersWithContext(ctx, input)
+	output, err := client.DeleteMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeActionTargets(ctx context.Context, input *securityhub.DescribeActionTargetsInput) (*securityhub.DescribeActionTargetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeActionTargetsWithContext(ctx, input)
+	output, err := client.DescribeActionTargetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeHub(ctx context.Context, input *securityhub.DescribeHubInput) (*securityhub.DescribeHubOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeHubWithContext(ctx, input)
+	output, err := client.DescribeHubWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeProducts(ctx context.Context, input *securityhub.DescribeProductsInput) (*securityhub.DescribeProductsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeProductsWithContext(ctx, input)
+	output, err := client.DescribeProductsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeStandards(ctx context.Context, input *securityhub.DescribeStandardsInput) (*securityhub.DescribeStandardsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeStandardsWithContext(ctx, input)
+	output, err := client.DescribeStandardsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeStandardsControls(ctx context.Context, input *securityhub.DescribeStandardsControlsInput) (*securityhub.DescribeStandardsControlsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeStandardsControlsWithContext(ctx, input)
+	output, err := client.DescribeStandardsControlsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisableImportFindingsForProduct(ctx context.Context, input *securityhub.DisableImportFindingsForProductInput) (*securityhub.DisableImportFindingsForProductOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisableImportFindingsForProductWithContext(ctx, input)
+	output, err := client.DisableImportFindingsForProductWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisableSecurityHub(ctx context.Context, input *securityhub.DisableSecurityHubInput) (*securityhub.DisableSecurityHubOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisableSecurityHubWithContext(ctx, input)
+	output, err := client.DisableSecurityHubWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateFromMasterAccount(ctx context.Context, input *securityhub.DisassociateFromMasterAccountInput) (*securityhub.DisassociateFromMasterAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateFromMasterAccountWithContext(ctx, input)
+	output, err := client.DisassociateFromMasterAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateMembers(ctx context.Context, input *securityhub.DisassociateMembersInput) (*securityhub.DisassociateMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateMembersWithContext(ctx, input)
+	output, err := client.DisassociateMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableImportFindingsForProduct(ctx context.Context, input *securityhub.EnableImportFindingsForProductInput) (*securityhub.EnableImportFindingsForProductOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableImportFindingsForProductWithContext(ctx, input)
+	output, err := client.EnableImportFindingsForProductWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableSecurityHub(ctx context.Context, input *securityhub.EnableSecurityHubInput) (*securityhub.EnableSecurityHubOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableSecurityHubWithContext(ctx, input)
+	output, err := client.EnableSecurityHubWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetEnabledStandards(ctx context.Context, input *securityhub.GetEnabledStandardsInput) (*securityhub.GetEnabledStandardsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetEnabledStandardsWithContext(ctx, input)
+	output, err := client.GetEnabledStandardsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFindings(ctx context.Context, input *securityhub.GetFindingsInput) (*securityhub.GetFindingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFindingsWithContext(ctx, input)
+	output, err := client.GetFindingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetInsightResults(ctx context.Context, input *securityhub.GetInsightResultsInput) (*securityhub.GetInsightResultsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetInsightResultsWithContext(ctx, input)
+	output, err := client.GetInsightResultsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetInsights(ctx context.Context, input *securityhub.GetInsightsInput) (*securityhub.GetInsightsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetInsightsWithContext(ctx, input)
+	output, err := client.GetInsightsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetInvitationsCount(ctx context.Context, input *securityhub.GetInvitationsCountInput) (*securityhub.GetInvitationsCountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetInvitationsCountWithContext(ctx, input)
+	output, err := client.GetInvitationsCountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMasterAccount(ctx context.Context, input *securityhub.GetMasterAccountInput) (*securityhub.GetMasterAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMasterAccountWithContext(ctx, input)
+	output, err := client.GetMasterAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMembers(ctx context.Context, input *securityhub.GetMembersInput) (*securityhub.GetMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMembersWithContext(ctx, input)
+	output, err := client.GetMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) InviteMembers(ctx context.Context, input *securityhub.InviteMembersInput) (*securityhub.InviteMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.InviteMembersWithContext(ctx, input)
+	output, err := client.InviteMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListEnabledProductsForImport(ctx context.Context, input *securityhub.ListEnabledProductsForImportInput) (*securityhub.ListEnabledProductsForImportOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListEnabledProductsForImportWithContext(ctx, input)
+	output, err := client.ListEnabledProductsForImportWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInvitations(ctx context.Context, input *securityhub.ListInvitationsInput) (*securityhub.ListInvitationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInvitationsWithContext(ctx, input)
+	output, err := client.ListInvitationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListMembers(ctx context.Context, input *securityhub.ListMembersInput) (*securityhub.ListMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListMembersWithContext(ctx, input)
+	output, err := client.ListMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *securityhub.ListTagsForResourceInput) (*securityhub.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *securityhub.TagResourceInput) (*securityhub.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *securityhub.UntagResourceInput) (*securityhub.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateActionTarget(ctx context.Context, input *securityhub.UpdateActionTargetInput) (*securityhub.UpdateActionTargetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateActionTargetWithContext(ctx, input)
+	output, err := client.UpdateActionTargetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateFindings(ctx context.Context, input *securityhub.UpdateFindingsInput) (*securityhub.UpdateFindingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateFindingsWithContext(ctx, input)
+	output, err := client.UpdateFindingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateInsight(ctx context.Context, input *securityhub.UpdateInsightInput) (*securityhub.UpdateInsightOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateInsightWithContext(ctx, input)
+	output, err := client.UpdateInsightWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateSecurityHubConfiguration(ctx context.Context, input *securityhub.UpdateSecurityHubConfigurationInput) (*securityhub.UpdateSecurityHubConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateSecurityHubConfigurationWithContext(ctx, input)
+	output, err := client.UpdateSecurityHubConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateStandardsControl(ctx context.Context, input *securityhub.UpdateStandardsControlInput) (*securityhub.UpdateStandardsControlOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateStandardsControlWithContext(ctx, input)
+	output, err := client.UpdateStandardsControlWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

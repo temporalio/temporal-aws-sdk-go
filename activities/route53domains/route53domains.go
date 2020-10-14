@@ -6,12 +6,14 @@ package route53domains
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/route53domains"
 	"github.com/aws/aws-sdk-go/service/route53domains/route53domainsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (route53domainsiface.Route53
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return route53domains.New(sess), nil
@@ -55,223 +57,279 @@ func (a *Activities) getClient(ctx context.Context) (route53domainsiface.Route53
 func (a *Activities) AcceptDomainTransferFromAnotherAwsAccount(ctx context.Context, input *route53domains.AcceptDomainTransferFromAnotherAwsAccountInput) (*route53domains.AcceptDomainTransferFromAnotherAwsAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AcceptDomainTransferFromAnotherAwsAccountWithContext(ctx, input)
+	output, err := client.AcceptDomainTransferFromAnotherAwsAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelDomainTransferToAnotherAwsAccount(ctx context.Context, input *route53domains.CancelDomainTransferToAnotherAwsAccountInput) (*route53domains.CancelDomainTransferToAnotherAwsAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelDomainTransferToAnotherAwsAccountWithContext(ctx, input)
+	output, err := client.CancelDomainTransferToAnotherAwsAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CheckDomainAvailability(ctx context.Context, input *route53domains.CheckDomainAvailabilityInput) (*route53domains.CheckDomainAvailabilityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CheckDomainAvailabilityWithContext(ctx, input)
+	output, err := client.CheckDomainAvailabilityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CheckDomainTransferability(ctx context.Context, input *route53domains.CheckDomainTransferabilityInput) (*route53domains.CheckDomainTransferabilityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CheckDomainTransferabilityWithContext(ctx, input)
+	output, err := client.CheckDomainTransferabilityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTagsForDomain(ctx context.Context, input *route53domains.DeleteTagsForDomainInput) (*route53domains.DeleteTagsForDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTagsForDomainWithContext(ctx, input)
+	output, err := client.DeleteTagsForDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisableDomainAutoRenew(ctx context.Context, input *route53domains.DisableDomainAutoRenewInput) (*route53domains.DisableDomainAutoRenewOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisableDomainAutoRenewWithContext(ctx, input)
+	output, err := client.DisableDomainAutoRenewWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisableDomainTransferLock(ctx context.Context, input *route53domains.DisableDomainTransferLockInput) (*route53domains.DisableDomainTransferLockOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisableDomainTransferLockWithContext(ctx, input)
+	output, err := client.DisableDomainTransferLockWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableDomainAutoRenew(ctx context.Context, input *route53domains.EnableDomainAutoRenewInput) (*route53domains.EnableDomainAutoRenewOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableDomainAutoRenewWithContext(ctx, input)
+	output, err := client.EnableDomainAutoRenewWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableDomainTransferLock(ctx context.Context, input *route53domains.EnableDomainTransferLockInput) (*route53domains.EnableDomainTransferLockOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableDomainTransferLockWithContext(ctx, input)
+	output, err := client.EnableDomainTransferLockWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetContactReachabilityStatus(ctx context.Context, input *route53domains.GetContactReachabilityStatusInput) (*route53domains.GetContactReachabilityStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetContactReachabilityStatusWithContext(ctx, input)
+	output, err := client.GetContactReachabilityStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDomainDetail(ctx context.Context, input *route53domains.GetDomainDetailInput) (*route53domains.GetDomainDetailOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDomainDetailWithContext(ctx, input)
+	output, err := client.GetDomainDetailWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDomainSuggestions(ctx context.Context, input *route53domains.GetDomainSuggestionsInput) (*route53domains.GetDomainSuggestionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDomainSuggestionsWithContext(ctx, input)
+	output, err := client.GetDomainSuggestionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetOperationDetail(ctx context.Context, input *route53domains.GetOperationDetailInput) (*route53domains.GetOperationDetailOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetOperationDetailWithContext(ctx, input)
+	output, err := client.GetOperationDetailWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDomains(ctx context.Context, input *route53domains.ListDomainsInput) (*route53domains.ListDomainsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDomainsWithContext(ctx, input)
+	output, err := client.ListDomainsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListOperations(ctx context.Context, input *route53domains.ListOperationsInput) (*route53domains.ListOperationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListOperationsWithContext(ctx, input)
+	output, err := client.ListOperationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForDomain(ctx context.Context, input *route53domains.ListTagsForDomainInput) (*route53domains.ListTagsForDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForDomainWithContext(ctx, input)
+	output, err := client.ListTagsForDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterDomain(ctx context.Context, input *route53domains.RegisterDomainInput) (*route53domains.RegisterDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterDomainWithContext(ctx, input)
+	output, err := client.RegisterDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RejectDomainTransferFromAnotherAwsAccount(ctx context.Context, input *route53domains.RejectDomainTransferFromAnotherAwsAccountInput) (*route53domains.RejectDomainTransferFromAnotherAwsAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RejectDomainTransferFromAnotherAwsAccountWithContext(ctx, input)
+	output, err := client.RejectDomainTransferFromAnotherAwsAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RenewDomain(ctx context.Context, input *route53domains.RenewDomainInput) (*route53domains.RenewDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RenewDomainWithContext(ctx, input)
+	output, err := client.RenewDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResendContactReachabilityEmail(ctx context.Context, input *route53domains.ResendContactReachabilityEmailInput) (*route53domains.ResendContactReachabilityEmailOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResendContactReachabilityEmailWithContext(ctx, input)
+	output, err := client.ResendContactReachabilityEmailWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RetrieveDomainAuthCode(ctx context.Context, input *route53domains.RetrieveDomainAuthCodeInput) (*route53domains.RetrieveDomainAuthCodeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RetrieveDomainAuthCodeWithContext(ctx, input)
+	output, err := client.RetrieveDomainAuthCodeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TransferDomain(ctx context.Context, input *route53domains.TransferDomainInput) (*route53domains.TransferDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TransferDomainWithContext(ctx, input)
+	output, err := client.TransferDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TransferDomainToAnotherAwsAccount(ctx context.Context, input *route53domains.TransferDomainToAnotherAwsAccountInput) (*route53domains.TransferDomainToAnotherAwsAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TransferDomainToAnotherAwsAccountWithContext(ctx, input)
+	output, err := client.TransferDomainToAnotherAwsAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDomainContact(ctx context.Context, input *route53domains.UpdateDomainContactInput) (*route53domains.UpdateDomainContactOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDomainContactWithContext(ctx, input)
+	output, err := client.UpdateDomainContactWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDomainContactPrivacy(ctx context.Context, input *route53domains.UpdateDomainContactPrivacyInput) (*route53domains.UpdateDomainContactPrivacyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDomainContactPrivacyWithContext(ctx, input)
+	output, err := client.UpdateDomainContactPrivacyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDomainNameservers(ctx context.Context, input *route53domains.UpdateDomainNameserversInput) (*route53domains.UpdateDomainNameserversOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDomainNameserversWithContext(ctx, input)
+	output, err := client.UpdateDomainNameserversWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTagsForDomain(ctx context.Context, input *route53domains.UpdateTagsForDomainInput) (*route53domains.UpdateTagsForDomainOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTagsForDomainWithContext(ctx, input)
+	output, err := client.UpdateTagsForDomainWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ViewBilling(ctx context.Context, input *route53domains.ViewBillingInput) (*route53domains.ViewBillingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ViewBillingWithContext(ctx, input)
+	output, err := client.ViewBillingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

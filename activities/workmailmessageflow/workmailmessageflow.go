@@ -6,12 +6,14 @@ package workmailmessageflow
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/workmailmessageflow"
 	"github.com/aws/aws-sdk-go/service/workmailmessageflow/workmailmessageflowiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (workmailmessageflowiface.Wo
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return workmailmessageflow.New(sess), nil
@@ -55,7 +57,9 @@ func (a *Activities) getClient(ctx context.Context) (workmailmessageflowiface.Wo
 func (a *Activities) GetRawMessageContent(ctx context.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRawMessageContentWithContext(ctx, input)
+	output, err := client.GetRawMessageContentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

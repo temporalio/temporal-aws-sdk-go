@@ -6,12 +6,14 @@ package rds
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/rds"
 	"github.com/aws/aws-sdk-go/service/rds/rdsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (rdsiface.RDSAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return rds.New(sess), nil
@@ -55,1099 +57,1359 @@ func (a *Activities) getClient(ctx context.Context) (rdsiface.RDSAPI, error) {
 func (a *Activities) AddRoleToDBCluster(ctx context.Context, input *rds.AddRoleToDBClusterInput) (*rds.AddRoleToDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddRoleToDBClusterWithContext(ctx, input)
+	output, err := client.AddRoleToDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddRoleToDBInstance(ctx context.Context, input *rds.AddRoleToDBInstanceInput) (*rds.AddRoleToDBInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddRoleToDBInstanceWithContext(ctx, input)
+	output, err := client.AddRoleToDBInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddSourceIdentifierToSubscription(ctx context.Context, input *rds.AddSourceIdentifierToSubscriptionInput) (*rds.AddSourceIdentifierToSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddSourceIdentifierToSubscriptionWithContext(ctx, input)
+	output, err := client.AddSourceIdentifierToSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddTagsToResource(ctx context.Context, input *rds.AddTagsToResourceInput) (*rds.AddTagsToResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddTagsToResourceWithContext(ctx, input)
+	output, err := client.AddTagsToResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ApplyPendingMaintenanceAction(ctx context.Context, input *rds.ApplyPendingMaintenanceActionInput) (*rds.ApplyPendingMaintenanceActionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ApplyPendingMaintenanceActionWithContext(ctx, input)
+	output, err := client.ApplyPendingMaintenanceActionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AuthorizeDBSecurityGroupIngress(ctx context.Context, input *rds.AuthorizeDBSecurityGroupIngressInput) (*rds.AuthorizeDBSecurityGroupIngressOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AuthorizeDBSecurityGroupIngressWithContext(ctx, input)
+	output, err := client.AuthorizeDBSecurityGroupIngressWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BacktrackDBCluster(ctx context.Context, input *rds.BacktrackDBClusterInput) (*rds.BacktrackDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BacktrackDBClusterWithContext(ctx, input)
+	output, err := client.BacktrackDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelExportTask(ctx context.Context, input *rds.CancelExportTaskInput) (*rds.CancelExportTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelExportTaskWithContext(ctx, input)
+	output, err := client.CancelExportTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CopyDBClusterParameterGroup(ctx context.Context, input *rds.CopyDBClusterParameterGroupInput) (*rds.CopyDBClusterParameterGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CopyDBClusterParameterGroupWithContext(ctx, input)
+	output, err := client.CopyDBClusterParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CopyDBClusterSnapshot(ctx context.Context, input *rds.CopyDBClusterSnapshotInput) (*rds.CopyDBClusterSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CopyDBClusterSnapshotWithContext(ctx, input)
+	output, err := client.CopyDBClusterSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CopyDBParameterGroup(ctx context.Context, input *rds.CopyDBParameterGroupInput) (*rds.CopyDBParameterGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CopyDBParameterGroupWithContext(ctx, input)
+	output, err := client.CopyDBParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CopyDBSnapshot(ctx context.Context, input *rds.CopyDBSnapshotInput) (*rds.CopyDBSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CopyDBSnapshotWithContext(ctx, input)
+	output, err := client.CopyDBSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CopyOptionGroup(ctx context.Context, input *rds.CopyOptionGroupInput) (*rds.CopyOptionGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CopyOptionGroupWithContext(ctx, input)
+	output, err := client.CopyOptionGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCustomAvailabilityZone(ctx context.Context, input *rds.CreateCustomAvailabilityZoneInput) (*rds.CreateCustomAvailabilityZoneOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCustomAvailabilityZoneWithContext(ctx, input)
+	output, err := client.CreateCustomAvailabilityZoneWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBCluster(ctx context.Context, input *rds.CreateDBClusterInput) (*rds.CreateDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBClusterWithContext(ctx, input)
+	output, err := client.CreateDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBClusterEndpoint(ctx context.Context, input *rds.CreateDBClusterEndpointInput) (*rds.CreateDBClusterEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBClusterEndpointWithContext(ctx, input)
+	output, err := client.CreateDBClusterEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBClusterParameterGroup(ctx context.Context, input *rds.CreateDBClusterParameterGroupInput) (*rds.CreateDBClusterParameterGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBClusterParameterGroupWithContext(ctx, input)
+	output, err := client.CreateDBClusterParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBClusterSnapshot(ctx context.Context, input *rds.CreateDBClusterSnapshotInput) (*rds.CreateDBClusterSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBClusterSnapshotWithContext(ctx, input)
+	output, err := client.CreateDBClusterSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBInstance(ctx context.Context, input *rds.CreateDBInstanceInput) (*rds.CreateDBInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBInstanceWithContext(ctx, input)
+	output, err := client.CreateDBInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBInstanceReadReplica(ctx context.Context, input *rds.CreateDBInstanceReadReplicaInput) (*rds.CreateDBInstanceReadReplicaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBInstanceReadReplicaWithContext(ctx, input)
+	output, err := client.CreateDBInstanceReadReplicaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBParameterGroup(ctx context.Context, input *rds.CreateDBParameterGroupInput) (*rds.CreateDBParameterGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBParameterGroupWithContext(ctx, input)
+	output, err := client.CreateDBParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBProxy(ctx context.Context, input *rds.CreateDBProxyInput) (*rds.CreateDBProxyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBProxyWithContext(ctx, input)
+	output, err := client.CreateDBProxyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBSecurityGroup(ctx context.Context, input *rds.CreateDBSecurityGroupInput) (*rds.CreateDBSecurityGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBSecurityGroupWithContext(ctx, input)
+	output, err := client.CreateDBSecurityGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBSnapshot(ctx context.Context, input *rds.CreateDBSnapshotInput) (*rds.CreateDBSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBSnapshotWithContext(ctx, input)
+	output, err := client.CreateDBSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDBSubnetGroup(ctx context.Context, input *rds.CreateDBSubnetGroupInput) (*rds.CreateDBSubnetGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDBSubnetGroupWithContext(ctx, input)
+	output, err := client.CreateDBSubnetGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateEventSubscription(ctx context.Context, input *rds.CreateEventSubscriptionInput) (*rds.CreateEventSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateEventSubscriptionWithContext(ctx, input)
+	output, err := client.CreateEventSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateGlobalCluster(ctx context.Context, input *rds.CreateGlobalClusterInput) (*rds.CreateGlobalClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateGlobalClusterWithContext(ctx, input)
+	output, err := client.CreateGlobalClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateOptionGroup(ctx context.Context, input *rds.CreateOptionGroupInput) (*rds.CreateOptionGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateOptionGroupWithContext(ctx, input)
+	output, err := client.CreateOptionGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCustomAvailabilityZone(ctx context.Context, input *rds.DeleteCustomAvailabilityZoneInput) (*rds.DeleteCustomAvailabilityZoneOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCustomAvailabilityZoneWithContext(ctx, input)
+	output, err := client.DeleteCustomAvailabilityZoneWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBCluster(ctx context.Context, input *rds.DeleteDBClusterInput) (*rds.DeleteDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBClusterWithContext(ctx, input)
+	output, err := client.DeleteDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBClusterEndpoint(ctx context.Context, input *rds.DeleteDBClusterEndpointInput) (*rds.DeleteDBClusterEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBClusterEndpointWithContext(ctx, input)
+	output, err := client.DeleteDBClusterEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBClusterParameterGroup(ctx context.Context, input *rds.DeleteDBClusterParameterGroupInput) (*rds.DeleteDBClusterParameterGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBClusterParameterGroupWithContext(ctx, input)
+	output, err := client.DeleteDBClusterParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBClusterSnapshot(ctx context.Context, input *rds.DeleteDBClusterSnapshotInput) (*rds.DeleteDBClusterSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBClusterSnapshotWithContext(ctx, input)
+	output, err := client.DeleteDBClusterSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBInstance(ctx context.Context, input *rds.DeleteDBInstanceInput) (*rds.DeleteDBInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBInstanceWithContext(ctx, input)
+	output, err := client.DeleteDBInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBInstanceAutomatedBackup(ctx context.Context, input *rds.DeleteDBInstanceAutomatedBackupInput) (*rds.DeleteDBInstanceAutomatedBackupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBInstanceAutomatedBackupWithContext(ctx, input)
+	output, err := client.DeleteDBInstanceAutomatedBackupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBParameterGroup(ctx context.Context, input *rds.DeleteDBParameterGroupInput) (*rds.DeleteDBParameterGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBParameterGroupWithContext(ctx, input)
+	output, err := client.DeleteDBParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBProxy(ctx context.Context, input *rds.DeleteDBProxyInput) (*rds.DeleteDBProxyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBProxyWithContext(ctx, input)
+	output, err := client.DeleteDBProxyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBSecurityGroup(ctx context.Context, input *rds.DeleteDBSecurityGroupInput) (*rds.DeleteDBSecurityGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBSecurityGroupWithContext(ctx, input)
+	output, err := client.DeleteDBSecurityGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBSnapshot(ctx context.Context, input *rds.DeleteDBSnapshotInput) (*rds.DeleteDBSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBSnapshotWithContext(ctx, input)
+	output, err := client.DeleteDBSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDBSubnetGroup(ctx context.Context, input *rds.DeleteDBSubnetGroupInput) (*rds.DeleteDBSubnetGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDBSubnetGroupWithContext(ctx, input)
+	output, err := client.DeleteDBSubnetGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteEventSubscription(ctx context.Context, input *rds.DeleteEventSubscriptionInput) (*rds.DeleteEventSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteEventSubscriptionWithContext(ctx, input)
+	output, err := client.DeleteEventSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteGlobalCluster(ctx context.Context, input *rds.DeleteGlobalClusterInput) (*rds.DeleteGlobalClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteGlobalClusterWithContext(ctx, input)
+	output, err := client.DeleteGlobalClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteInstallationMedia(ctx context.Context, input *rds.DeleteInstallationMediaInput) (*rds.DeleteInstallationMediaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteInstallationMediaWithContext(ctx, input)
+	output, err := client.DeleteInstallationMediaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteOptionGroup(ctx context.Context, input *rds.DeleteOptionGroupInput) (*rds.DeleteOptionGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteOptionGroupWithContext(ctx, input)
+	output, err := client.DeleteOptionGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterDBProxyTargets(ctx context.Context, input *rds.DeregisterDBProxyTargetsInput) (*rds.DeregisterDBProxyTargetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterDBProxyTargetsWithContext(ctx, input)
+	output, err := client.DeregisterDBProxyTargetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAccountAttributes(ctx context.Context, input *rds.DescribeAccountAttributesInput) (*rds.DescribeAccountAttributesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAccountAttributesWithContext(ctx, input)
+	output, err := client.DescribeAccountAttributesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCertificates(ctx context.Context, input *rds.DescribeCertificatesInput) (*rds.DescribeCertificatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCertificatesWithContext(ctx, input)
+	output, err := client.DescribeCertificatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCustomAvailabilityZones(ctx context.Context, input *rds.DescribeCustomAvailabilityZonesInput) (*rds.DescribeCustomAvailabilityZonesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCustomAvailabilityZonesWithContext(ctx, input)
+	output, err := client.DescribeCustomAvailabilityZonesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBClusterBacktracks(ctx context.Context, input *rds.DescribeDBClusterBacktracksInput) (*rds.DescribeDBClusterBacktracksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBClusterBacktracksWithContext(ctx, input)
+	output, err := client.DescribeDBClusterBacktracksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBClusterEndpoints(ctx context.Context, input *rds.DescribeDBClusterEndpointsInput) (*rds.DescribeDBClusterEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBClusterEndpointsWithContext(ctx, input)
+	output, err := client.DescribeDBClusterEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBClusterParameterGroups(ctx context.Context, input *rds.DescribeDBClusterParameterGroupsInput) (*rds.DescribeDBClusterParameterGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBClusterParameterGroupsWithContext(ctx, input)
+	output, err := client.DescribeDBClusterParameterGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBClusterParameters(ctx context.Context, input *rds.DescribeDBClusterParametersInput) (*rds.DescribeDBClusterParametersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBClusterParametersWithContext(ctx, input)
+	output, err := client.DescribeDBClusterParametersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBClusterSnapshotAttributes(ctx context.Context, input *rds.DescribeDBClusterSnapshotAttributesInput) (*rds.DescribeDBClusterSnapshotAttributesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBClusterSnapshotAttributesWithContext(ctx, input)
+	output, err := client.DescribeDBClusterSnapshotAttributesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBClusterSnapshots(ctx context.Context, input *rds.DescribeDBClusterSnapshotsInput) (*rds.DescribeDBClusterSnapshotsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBClusterSnapshotsWithContext(ctx, input)
+	output, err := client.DescribeDBClusterSnapshotsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBClusters(ctx context.Context, input *rds.DescribeDBClustersInput) (*rds.DescribeDBClustersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBClustersWithContext(ctx, input)
+	output, err := client.DescribeDBClustersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBEngineVersions(ctx context.Context, input *rds.DescribeDBEngineVersionsInput) (*rds.DescribeDBEngineVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBEngineVersionsWithContext(ctx, input)
+	output, err := client.DescribeDBEngineVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBInstanceAutomatedBackups(ctx context.Context, input *rds.DescribeDBInstanceAutomatedBackupsInput) (*rds.DescribeDBInstanceAutomatedBackupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBInstanceAutomatedBackupsWithContext(ctx, input)
+	output, err := client.DescribeDBInstanceAutomatedBackupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBInstances(ctx context.Context, input *rds.DescribeDBInstancesInput) (*rds.DescribeDBInstancesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBInstancesWithContext(ctx, input)
+	output, err := client.DescribeDBInstancesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBLogFiles(ctx context.Context, input *rds.DescribeDBLogFilesInput) (*rds.DescribeDBLogFilesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBLogFilesWithContext(ctx, input)
+	output, err := client.DescribeDBLogFilesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBParameterGroups(ctx context.Context, input *rds.DescribeDBParameterGroupsInput) (*rds.DescribeDBParameterGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBParameterGroupsWithContext(ctx, input)
+	output, err := client.DescribeDBParameterGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBParameters(ctx context.Context, input *rds.DescribeDBParametersInput) (*rds.DescribeDBParametersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBParametersWithContext(ctx, input)
+	output, err := client.DescribeDBParametersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBProxies(ctx context.Context, input *rds.DescribeDBProxiesInput) (*rds.DescribeDBProxiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBProxiesWithContext(ctx, input)
+	output, err := client.DescribeDBProxiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBProxyTargetGroups(ctx context.Context, input *rds.DescribeDBProxyTargetGroupsInput) (*rds.DescribeDBProxyTargetGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBProxyTargetGroupsWithContext(ctx, input)
+	output, err := client.DescribeDBProxyTargetGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBProxyTargets(ctx context.Context, input *rds.DescribeDBProxyTargetsInput) (*rds.DescribeDBProxyTargetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBProxyTargetsWithContext(ctx, input)
+	output, err := client.DescribeDBProxyTargetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBSecurityGroups(ctx context.Context, input *rds.DescribeDBSecurityGroupsInput) (*rds.DescribeDBSecurityGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBSecurityGroupsWithContext(ctx, input)
+	output, err := client.DescribeDBSecurityGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBSnapshotAttributes(ctx context.Context, input *rds.DescribeDBSnapshotAttributesInput) (*rds.DescribeDBSnapshotAttributesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBSnapshotAttributesWithContext(ctx, input)
+	output, err := client.DescribeDBSnapshotAttributesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBSnapshots(ctx context.Context, input *rds.DescribeDBSnapshotsInput) (*rds.DescribeDBSnapshotsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBSnapshotsWithContext(ctx, input)
+	output, err := client.DescribeDBSnapshotsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDBSubnetGroups(ctx context.Context, input *rds.DescribeDBSubnetGroupsInput) (*rds.DescribeDBSubnetGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDBSubnetGroupsWithContext(ctx, input)
+	output, err := client.DescribeDBSubnetGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEngineDefaultClusterParameters(ctx context.Context, input *rds.DescribeEngineDefaultClusterParametersInput) (*rds.DescribeEngineDefaultClusterParametersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEngineDefaultClusterParametersWithContext(ctx, input)
+	output, err := client.DescribeEngineDefaultClusterParametersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEngineDefaultParameters(ctx context.Context, input *rds.DescribeEngineDefaultParametersInput) (*rds.DescribeEngineDefaultParametersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEngineDefaultParametersWithContext(ctx, input)
+	output, err := client.DescribeEngineDefaultParametersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEventCategories(ctx context.Context, input *rds.DescribeEventCategoriesInput) (*rds.DescribeEventCategoriesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEventCategoriesWithContext(ctx, input)
+	output, err := client.DescribeEventCategoriesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEventSubscriptions(ctx context.Context, input *rds.DescribeEventSubscriptionsInput) (*rds.DescribeEventSubscriptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEventSubscriptionsWithContext(ctx, input)
+	output, err := client.DescribeEventSubscriptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEvents(ctx context.Context, input *rds.DescribeEventsInput) (*rds.DescribeEventsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEventsWithContext(ctx, input)
+	output, err := client.DescribeEventsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeExportTasks(ctx context.Context, input *rds.DescribeExportTasksInput) (*rds.DescribeExportTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeExportTasksWithContext(ctx, input)
+	output, err := client.DescribeExportTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeGlobalClusters(ctx context.Context, input *rds.DescribeGlobalClustersInput) (*rds.DescribeGlobalClustersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeGlobalClustersWithContext(ctx, input)
+	output, err := client.DescribeGlobalClustersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInstallationMedia(ctx context.Context, input *rds.DescribeInstallationMediaInput) (*rds.DescribeInstallationMediaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInstallationMediaWithContext(ctx, input)
+	output, err := client.DescribeInstallationMediaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeOptionGroupOptions(ctx context.Context, input *rds.DescribeOptionGroupOptionsInput) (*rds.DescribeOptionGroupOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeOptionGroupOptionsWithContext(ctx, input)
+	output, err := client.DescribeOptionGroupOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeOptionGroups(ctx context.Context, input *rds.DescribeOptionGroupsInput) (*rds.DescribeOptionGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeOptionGroupsWithContext(ctx, input)
+	output, err := client.DescribeOptionGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeOrderableDBInstanceOptions(ctx context.Context, input *rds.DescribeOrderableDBInstanceOptionsInput) (*rds.DescribeOrderableDBInstanceOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeOrderableDBInstanceOptionsWithContext(ctx, input)
+	output, err := client.DescribeOrderableDBInstanceOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePendingMaintenanceActions(ctx context.Context, input *rds.DescribePendingMaintenanceActionsInput) (*rds.DescribePendingMaintenanceActionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePendingMaintenanceActionsWithContext(ctx, input)
+	output, err := client.DescribePendingMaintenanceActionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeReservedDBInstances(ctx context.Context, input *rds.DescribeReservedDBInstancesInput) (*rds.DescribeReservedDBInstancesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeReservedDBInstancesWithContext(ctx, input)
+	output, err := client.DescribeReservedDBInstancesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeReservedDBInstancesOfferings(ctx context.Context, input *rds.DescribeReservedDBInstancesOfferingsInput) (*rds.DescribeReservedDBInstancesOfferingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeReservedDBInstancesOfferingsWithContext(ctx, input)
+	output, err := client.DescribeReservedDBInstancesOfferingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSourceRegions(ctx context.Context, input *rds.DescribeSourceRegionsInput) (*rds.DescribeSourceRegionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSourceRegionsWithContext(ctx, input)
+	output, err := client.DescribeSourceRegionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeValidDBInstanceModifications(ctx context.Context, input *rds.DescribeValidDBInstanceModificationsInput) (*rds.DescribeValidDBInstanceModificationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeValidDBInstanceModificationsWithContext(ctx, input)
+	output, err := client.DescribeValidDBInstanceModificationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DownloadDBLogFilePortion(ctx context.Context, input *rds.DownloadDBLogFilePortionInput) (*rds.DownloadDBLogFilePortionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DownloadDBLogFilePortionWithContext(ctx, input)
+	output, err := client.DownloadDBLogFilePortionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) FailoverDBCluster(ctx context.Context, input *rds.FailoverDBClusterInput) (*rds.FailoverDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.FailoverDBClusterWithContext(ctx, input)
+	output, err := client.FailoverDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportInstallationMedia(ctx context.Context, input *rds.ImportInstallationMediaInput) (*rds.ImportInstallationMediaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportInstallationMediaWithContext(ctx, input)
+	output, err := client.ImportInstallationMediaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *rds.ListTagsForResourceInput) (*rds.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyCertificates(ctx context.Context, input *rds.ModifyCertificatesInput) (*rds.ModifyCertificatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyCertificatesWithContext(ctx, input)
+	output, err := client.ModifyCertificatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyCurrentDBClusterCapacity(ctx context.Context, input *rds.ModifyCurrentDBClusterCapacityInput) (*rds.ModifyCurrentDBClusterCapacityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyCurrentDBClusterCapacityWithContext(ctx, input)
+	output, err := client.ModifyCurrentDBClusterCapacityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBCluster(ctx context.Context, input *rds.ModifyDBClusterInput) (*rds.ModifyDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBClusterWithContext(ctx, input)
+	output, err := client.ModifyDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBClusterEndpoint(ctx context.Context, input *rds.ModifyDBClusterEndpointInput) (*rds.ModifyDBClusterEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBClusterEndpointWithContext(ctx, input)
+	output, err := client.ModifyDBClusterEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBClusterParameterGroup(ctx context.Context, input *rds.ModifyDBClusterParameterGroupInput) (*rds.DBClusterParameterGroupNameMessage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBClusterParameterGroupWithContext(ctx, input)
+	output, err := client.ModifyDBClusterParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBClusterSnapshotAttribute(ctx context.Context, input *rds.ModifyDBClusterSnapshotAttributeInput) (*rds.ModifyDBClusterSnapshotAttributeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBClusterSnapshotAttributeWithContext(ctx, input)
+	output, err := client.ModifyDBClusterSnapshotAttributeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBInstance(ctx context.Context, input *rds.ModifyDBInstanceInput) (*rds.ModifyDBInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBInstanceWithContext(ctx, input)
+	output, err := client.ModifyDBInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBParameterGroup(ctx context.Context, input *rds.ModifyDBParameterGroupInput) (*rds.DBParameterGroupNameMessage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBParameterGroupWithContext(ctx, input)
+	output, err := client.ModifyDBParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBProxy(ctx context.Context, input *rds.ModifyDBProxyInput) (*rds.ModifyDBProxyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBProxyWithContext(ctx, input)
+	output, err := client.ModifyDBProxyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBProxyTargetGroup(ctx context.Context, input *rds.ModifyDBProxyTargetGroupInput) (*rds.ModifyDBProxyTargetGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBProxyTargetGroupWithContext(ctx, input)
+	output, err := client.ModifyDBProxyTargetGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBSnapshot(ctx context.Context, input *rds.ModifyDBSnapshotInput) (*rds.ModifyDBSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBSnapshotWithContext(ctx, input)
+	output, err := client.ModifyDBSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBSnapshotAttribute(ctx context.Context, input *rds.ModifyDBSnapshotAttributeInput) (*rds.ModifyDBSnapshotAttributeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBSnapshotAttributeWithContext(ctx, input)
+	output, err := client.ModifyDBSnapshotAttributeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDBSubnetGroup(ctx context.Context, input *rds.ModifyDBSubnetGroupInput) (*rds.ModifyDBSubnetGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDBSubnetGroupWithContext(ctx, input)
+	output, err := client.ModifyDBSubnetGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyEventSubscription(ctx context.Context, input *rds.ModifyEventSubscriptionInput) (*rds.ModifyEventSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyEventSubscriptionWithContext(ctx, input)
+	output, err := client.ModifyEventSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyGlobalCluster(ctx context.Context, input *rds.ModifyGlobalClusterInput) (*rds.ModifyGlobalClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyGlobalClusterWithContext(ctx, input)
+	output, err := client.ModifyGlobalClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyOptionGroup(ctx context.Context, input *rds.ModifyOptionGroupInput) (*rds.ModifyOptionGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyOptionGroupWithContext(ctx, input)
+	output, err := client.ModifyOptionGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PromoteReadReplica(ctx context.Context, input *rds.PromoteReadReplicaInput) (*rds.PromoteReadReplicaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PromoteReadReplicaWithContext(ctx, input)
+	output, err := client.PromoteReadReplicaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PromoteReadReplicaDBCluster(ctx context.Context, input *rds.PromoteReadReplicaDBClusterInput) (*rds.PromoteReadReplicaDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PromoteReadReplicaDBClusterWithContext(ctx, input)
+	output, err := client.PromoteReadReplicaDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PurchaseReservedDBInstancesOffering(ctx context.Context, input *rds.PurchaseReservedDBInstancesOfferingInput) (*rds.PurchaseReservedDBInstancesOfferingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PurchaseReservedDBInstancesOfferingWithContext(ctx, input)
+	output, err := client.PurchaseReservedDBInstancesOfferingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RebootDBInstance(ctx context.Context, input *rds.RebootDBInstanceInput) (*rds.RebootDBInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RebootDBInstanceWithContext(ctx, input)
+	output, err := client.RebootDBInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterDBProxyTargets(ctx context.Context, input *rds.RegisterDBProxyTargetsInput) (*rds.RegisterDBProxyTargetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterDBProxyTargetsWithContext(ctx, input)
+	output, err := client.RegisterDBProxyTargetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveFromGlobalCluster(ctx context.Context, input *rds.RemoveFromGlobalClusterInput) (*rds.RemoveFromGlobalClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveFromGlobalClusterWithContext(ctx, input)
+	output, err := client.RemoveFromGlobalClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveRoleFromDBCluster(ctx context.Context, input *rds.RemoveRoleFromDBClusterInput) (*rds.RemoveRoleFromDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveRoleFromDBClusterWithContext(ctx, input)
+	output, err := client.RemoveRoleFromDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveRoleFromDBInstance(ctx context.Context, input *rds.RemoveRoleFromDBInstanceInput) (*rds.RemoveRoleFromDBInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveRoleFromDBInstanceWithContext(ctx, input)
+	output, err := client.RemoveRoleFromDBInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveSourceIdentifierFromSubscription(ctx context.Context, input *rds.RemoveSourceIdentifierFromSubscriptionInput) (*rds.RemoveSourceIdentifierFromSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveSourceIdentifierFromSubscriptionWithContext(ctx, input)
+	output, err := client.RemoveSourceIdentifierFromSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveTagsFromResource(ctx context.Context, input *rds.RemoveTagsFromResourceInput) (*rds.RemoveTagsFromResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveTagsFromResourceWithContext(ctx, input)
+	output, err := client.RemoveTagsFromResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResetDBClusterParameterGroup(ctx context.Context, input *rds.ResetDBClusterParameterGroupInput) (*rds.DBClusterParameterGroupNameMessage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResetDBClusterParameterGroupWithContext(ctx, input)
+	output, err := client.ResetDBClusterParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResetDBParameterGroup(ctx context.Context, input *rds.ResetDBParameterGroupInput) (*rds.DBParameterGroupNameMessage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResetDBParameterGroupWithContext(ctx, input)
+	output, err := client.ResetDBParameterGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreDBClusterFromS3(ctx context.Context, input *rds.RestoreDBClusterFromS3Input) (*rds.RestoreDBClusterFromS3Output, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreDBClusterFromS3WithContext(ctx, input)
+	output, err := client.RestoreDBClusterFromS3WithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreDBClusterFromSnapshot(ctx context.Context, input *rds.RestoreDBClusterFromSnapshotInput) (*rds.RestoreDBClusterFromSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreDBClusterFromSnapshotWithContext(ctx, input)
+	output, err := client.RestoreDBClusterFromSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreDBClusterToPointInTime(ctx context.Context, input *rds.RestoreDBClusterToPointInTimeInput) (*rds.RestoreDBClusterToPointInTimeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreDBClusterToPointInTimeWithContext(ctx, input)
+	output, err := client.RestoreDBClusterToPointInTimeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreDBInstanceFromDBSnapshot(ctx context.Context, input *rds.RestoreDBInstanceFromDBSnapshotInput) (*rds.RestoreDBInstanceFromDBSnapshotOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreDBInstanceFromDBSnapshotWithContext(ctx, input)
+	output, err := client.RestoreDBInstanceFromDBSnapshotWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreDBInstanceFromS3(ctx context.Context, input *rds.RestoreDBInstanceFromS3Input) (*rds.RestoreDBInstanceFromS3Output, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreDBInstanceFromS3WithContext(ctx, input)
+	output, err := client.RestoreDBInstanceFromS3WithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreDBInstanceToPointInTime(ctx context.Context, input *rds.RestoreDBInstanceToPointInTimeInput) (*rds.RestoreDBInstanceToPointInTimeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreDBInstanceToPointInTimeWithContext(ctx, input)
+	output, err := client.RestoreDBInstanceToPointInTimeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RevokeDBSecurityGroupIngress(ctx context.Context, input *rds.RevokeDBSecurityGroupIngressInput) (*rds.RevokeDBSecurityGroupIngressOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RevokeDBSecurityGroupIngressWithContext(ctx, input)
+	output, err := client.RevokeDBSecurityGroupIngressWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartActivityStream(ctx context.Context, input *rds.StartActivityStreamInput) (*rds.StartActivityStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartActivityStreamWithContext(ctx, input)
+	output, err := client.StartActivityStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartDBCluster(ctx context.Context, input *rds.StartDBClusterInput) (*rds.StartDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartDBClusterWithContext(ctx, input)
+	output, err := client.StartDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartDBInstance(ctx context.Context, input *rds.StartDBInstanceInput) (*rds.StartDBInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartDBInstanceWithContext(ctx, input)
+	output, err := client.StartDBInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartExportTask(ctx context.Context, input *rds.StartExportTaskInput) (*rds.StartExportTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartExportTaskWithContext(ctx, input)
+	output, err := client.StartExportTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopActivityStream(ctx context.Context, input *rds.StopActivityStreamInput) (*rds.StopActivityStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopActivityStreamWithContext(ctx, input)
+	output, err := client.StopActivityStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopDBCluster(ctx context.Context, input *rds.StopDBClusterInput) (*rds.StopDBClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopDBClusterWithContext(ctx, input)
+	output, err := client.StopDBClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopDBInstance(ctx context.Context, input *rds.StopDBInstanceInput) (*rds.StopDBInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopDBInstanceWithContext(ctx, input)
+	output, err := client.StopDBInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilDBClusterSnapshotAvailable(ctx context.Context, input *rds.DescribeDBClusterSnapshotsInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilDBClusterSnapshotAvailableWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilDBClusterSnapshotAvailableWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilDBClusterSnapshotDeleted(ctx context.Context, input *rds.DescribeDBClusterSnapshotsInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilDBClusterSnapshotDeletedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilDBClusterSnapshotDeletedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilDBInstanceAvailable(ctx context.Context, input *rds.DescribeDBInstancesInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilDBInstanceAvailableWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilDBInstanceAvailableWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilDBInstanceDeleted(ctx context.Context, input *rds.DescribeDBInstancesInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilDBInstanceDeletedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilDBInstanceDeletedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilDBSnapshotAvailable(ctx context.Context, input *rds.DescribeDBSnapshotsInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilDBSnapshotAvailableWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilDBSnapshotAvailableWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilDBSnapshotDeleted(ctx context.Context, input *rds.DescribeDBSnapshotsInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilDBSnapshotDeletedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilDBSnapshotDeletedWithContext(ctx, input, options...))
 	})
 }

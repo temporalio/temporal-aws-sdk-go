@@ -6,12 +6,14 @@ package outposts
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/outposts"
 	"github.com/aws/aws-sdk-go/service/outposts/outpostsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (outpostsiface.OutpostsAPI, 
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return outposts.New(sess), nil
@@ -55,55 +57,69 @@ func (a *Activities) getClient(ctx context.Context) (outpostsiface.OutpostsAPI, 
 func (a *Activities) CreateOutpost(ctx context.Context, input *outposts.CreateOutpostInput) (*outposts.CreateOutpostOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateOutpostWithContext(ctx, input)
+	output, err := client.CreateOutpostWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteOutpost(ctx context.Context, input *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteOutpostWithContext(ctx, input)
+	output, err := client.DeleteOutpostWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSite(ctx context.Context, input *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSiteWithContext(ctx, input)
+	output, err := client.DeleteSiteWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetOutpost(ctx context.Context, input *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetOutpostWithContext(ctx, input)
+	output, err := client.GetOutpostWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetOutpostInstanceTypes(ctx context.Context, input *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetOutpostInstanceTypesWithContext(ctx, input)
+	output, err := client.GetOutpostInstanceTypesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListOutposts(ctx context.Context, input *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListOutpostsWithContext(ctx, input)
+	output, err := client.ListOutpostsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSites(ctx context.Context, input *outposts.ListSitesInput) (*outposts.ListSitesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSitesWithContext(ctx, input)
+	output, err := client.ListSitesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

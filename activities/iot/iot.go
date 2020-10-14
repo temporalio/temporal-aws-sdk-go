@@ -6,12 +6,14 @@ package iot
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/iot"
 	"github.com/aws/aws-sdk-go/service/iot/iotiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (iotiface.IoTAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return iot.New(sess), nil
@@ -55,1695 +57,2119 @@ func (a *Activities) getClient(ctx context.Context) (iotiface.IoTAPI, error) {
 func (a *Activities) AcceptCertificateTransfer(ctx context.Context, input *iot.AcceptCertificateTransferInput) (*iot.AcceptCertificateTransferOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AcceptCertificateTransferWithContext(ctx, input)
+	output, err := client.AcceptCertificateTransferWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddThingToBillingGroup(ctx context.Context, input *iot.AddThingToBillingGroupInput) (*iot.AddThingToBillingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddThingToBillingGroupWithContext(ctx, input)
+	output, err := client.AddThingToBillingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddThingToThingGroup(ctx context.Context, input *iot.AddThingToThingGroupInput) (*iot.AddThingToThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddThingToThingGroupWithContext(ctx, input)
+	output, err := client.AddThingToThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateTargetsWithJob(ctx context.Context, input *iot.AssociateTargetsWithJobInput) (*iot.AssociateTargetsWithJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateTargetsWithJobWithContext(ctx, input)
+	output, err := client.AssociateTargetsWithJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AttachPolicy(ctx context.Context, input *iot.AttachPolicyInput) (*iot.AttachPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AttachPolicyWithContext(ctx, input)
+	output, err := client.AttachPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AttachPrincipalPolicy(ctx context.Context, input *iot.AttachPrincipalPolicyInput) (*iot.AttachPrincipalPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AttachPrincipalPolicyWithContext(ctx, input)
+	output, err := client.AttachPrincipalPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AttachSecurityProfile(ctx context.Context, input *iot.AttachSecurityProfileInput) (*iot.AttachSecurityProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AttachSecurityProfileWithContext(ctx, input)
+	output, err := client.AttachSecurityProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AttachThingPrincipal(ctx context.Context, input *iot.AttachThingPrincipalInput) (*iot.AttachThingPrincipalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AttachThingPrincipalWithContext(ctx, input)
+	output, err := client.AttachThingPrincipalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelAuditMitigationActionsTask(ctx context.Context, input *iot.CancelAuditMitigationActionsTaskInput) (*iot.CancelAuditMitigationActionsTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelAuditMitigationActionsTaskWithContext(ctx, input)
+	output, err := client.CancelAuditMitigationActionsTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelAuditTask(ctx context.Context, input *iot.CancelAuditTaskInput) (*iot.CancelAuditTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelAuditTaskWithContext(ctx, input)
+	output, err := client.CancelAuditTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelCertificateTransfer(ctx context.Context, input *iot.CancelCertificateTransferInput) (*iot.CancelCertificateTransferOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelCertificateTransferWithContext(ctx, input)
+	output, err := client.CancelCertificateTransferWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelJob(ctx context.Context, input *iot.CancelJobInput) (*iot.CancelJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelJobWithContext(ctx, input)
+	output, err := client.CancelJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelJobExecution(ctx context.Context, input *iot.CancelJobExecutionInput) (*iot.CancelJobExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelJobExecutionWithContext(ctx, input)
+	output, err := client.CancelJobExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ClearDefaultAuthorizer(ctx context.Context, input *iot.ClearDefaultAuthorizerInput) (*iot.ClearDefaultAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ClearDefaultAuthorizerWithContext(ctx, input)
+	output, err := client.ClearDefaultAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ConfirmTopicRuleDestination(ctx context.Context, input *iot.ConfirmTopicRuleDestinationInput) (*iot.ConfirmTopicRuleDestinationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ConfirmTopicRuleDestinationWithContext(ctx, input)
+	output, err := client.ConfirmTopicRuleDestinationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAuditSuppression(ctx context.Context, input *iot.CreateAuditSuppressionInput) (*iot.CreateAuditSuppressionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAuditSuppressionWithContext(ctx, input)
+	output, err := client.CreateAuditSuppressionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAuthorizer(ctx context.Context, input *iot.CreateAuthorizerInput) (*iot.CreateAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAuthorizerWithContext(ctx, input)
+	output, err := client.CreateAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateBillingGroup(ctx context.Context, input *iot.CreateBillingGroupInput) (*iot.CreateBillingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateBillingGroupWithContext(ctx, input)
+	output, err := client.CreateBillingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCertificateFromCsr(ctx context.Context, input *iot.CreateCertificateFromCsrInput) (*iot.CreateCertificateFromCsrOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCertificateFromCsrWithContext(ctx, input)
+	output, err := client.CreateCertificateFromCsrWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDimension(ctx context.Context, input *iot.CreateDimensionInput) (*iot.CreateDimensionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDimensionWithContext(ctx, input)
+	output, err := client.CreateDimensionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDomainConfiguration(ctx context.Context, input *iot.CreateDomainConfigurationInput) (*iot.CreateDomainConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDomainConfigurationWithContext(ctx, input)
+	output, err := client.CreateDomainConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDynamicThingGroup(ctx context.Context, input *iot.CreateDynamicThingGroupInput) (*iot.CreateDynamicThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDynamicThingGroupWithContext(ctx, input)
+	output, err := client.CreateDynamicThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateJob(ctx context.Context, input *iot.CreateJobInput) (*iot.CreateJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateJobWithContext(ctx, input)
+	output, err := client.CreateJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateKeysAndCertificate(ctx context.Context, input *iot.CreateKeysAndCertificateInput) (*iot.CreateKeysAndCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateKeysAndCertificateWithContext(ctx, input)
+	output, err := client.CreateKeysAndCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateMitigationAction(ctx context.Context, input *iot.CreateMitigationActionInput) (*iot.CreateMitigationActionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateMitigationActionWithContext(ctx, input)
+	output, err := client.CreateMitigationActionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateOTAUpdate(ctx context.Context, input *iot.CreateOTAUpdateInput) (*iot.CreateOTAUpdateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateOTAUpdateWithContext(ctx, input)
+	output, err := client.CreateOTAUpdateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePolicy(ctx context.Context, input *iot.CreatePolicyInput) (*iot.CreatePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePolicyWithContext(ctx, input)
+	output, err := client.CreatePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePolicyVersion(ctx context.Context, input *iot.CreatePolicyVersionInput) (*iot.CreatePolicyVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePolicyVersionWithContext(ctx, input)
+	output, err := client.CreatePolicyVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateProvisioningClaim(ctx context.Context, input *iot.CreateProvisioningClaimInput) (*iot.CreateProvisioningClaimOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateProvisioningClaimWithContext(ctx, input)
+	output, err := client.CreateProvisioningClaimWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateProvisioningTemplate(ctx context.Context, input *iot.CreateProvisioningTemplateInput) (*iot.CreateProvisioningTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateProvisioningTemplateWithContext(ctx, input)
+	output, err := client.CreateProvisioningTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateProvisioningTemplateVersion(ctx context.Context, input *iot.CreateProvisioningTemplateVersionInput) (*iot.CreateProvisioningTemplateVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateProvisioningTemplateVersionWithContext(ctx, input)
+	output, err := client.CreateProvisioningTemplateVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateRoleAlias(ctx context.Context, input *iot.CreateRoleAliasInput) (*iot.CreateRoleAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateRoleAliasWithContext(ctx, input)
+	output, err := client.CreateRoleAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateScheduledAudit(ctx context.Context, input *iot.CreateScheduledAuditInput) (*iot.CreateScheduledAuditOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateScheduledAuditWithContext(ctx, input)
+	output, err := client.CreateScheduledAuditWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSecurityProfile(ctx context.Context, input *iot.CreateSecurityProfileInput) (*iot.CreateSecurityProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSecurityProfileWithContext(ctx, input)
+	output, err := client.CreateSecurityProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateStream(ctx context.Context, input *iot.CreateStreamInput) (*iot.CreateStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateStreamWithContext(ctx, input)
+	output, err := client.CreateStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateThing(ctx context.Context, input *iot.CreateThingInput) (*iot.CreateThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateThingWithContext(ctx, input)
+	output, err := client.CreateThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateThingGroup(ctx context.Context, input *iot.CreateThingGroupInput) (*iot.CreateThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateThingGroupWithContext(ctx, input)
+	output, err := client.CreateThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateThingType(ctx context.Context, input *iot.CreateThingTypeInput) (*iot.CreateThingTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateThingTypeWithContext(ctx, input)
+	output, err := client.CreateThingTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTopicRule(ctx context.Context, input *iot.CreateTopicRuleInput) (*iot.CreateTopicRuleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTopicRuleWithContext(ctx, input)
+	output, err := client.CreateTopicRuleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTopicRuleDestination(ctx context.Context, input *iot.CreateTopicRuleDestinationInput) (*iot.CreateTopicRuleDestinationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTopicRuleDestinationWithContext(ctx, input)
+	output, err := client.CreateTopicRuleDestinationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAccountAuditConfiguration(ctx context.Context, input *iot.DeleteAccountAuditConfigurationInput) (*iot.DeleteAccountAuditConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAccountAuditConfigurationWithContext(ctx, input)
+	output, err := client.DeleteAccountAuditConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAuditSuppression(ctx context.Context, input *iot.DeleteAuditSuppressionInput) (*iot.DeleteAuditSuppressionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAuditSuppressionWithContext(ctx, input)
+	output, err := client.DeleteAuditSuppressionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAuthorizer(ctx context.Context, input *iot.DeleteAuthorizerInput) (*iot.DeleteAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAuthorizerWithContext(ctx, input)
+	output, err := client.DeleteAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteBillingGroup(ctx context.Context, input *iot.DeleteBillingGroupInput) (*iot.DeleteBillingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteBillingGroupWithContext(ctx, input)
+	output, err := client.DeleteBillingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCACertificate(ctx context.Context, input *iot.DeleteCACertificateInput) (*iot.DeleteCACertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCACertificateWithContext(ctx, input)
+	output, err := client.DeleteCACertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCertificate(ctx context.Context, input *iot.DeleteCertificateInput) (*iot.DeleteCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCertificateWithContext(ctx, input)
+	output, err := client.DeleteCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDimension(ctx context.Context, input *iot.DeleteDimensionInput) (*iot.DeleteDimensionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDimensionWithContext(ctx, input)
+	output, err := client.DeleteDimensionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDomainConfiguration(ctx context.Context, input *iot.DeleteDomainConfigurationInput) (*iot.DeleteDomainConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDomainConfigurationWithContext(ctx, input)
+	output, err := client.DeleteDomainConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDynamicThingGroup(ctx context.Context, input *iot.DeleteDynamicThingGroupInput) (*iot.DeleteDynamicThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDynamicThingGroupWithContext(ctx, input)
+	output, err := client.DeleteDynamicThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteJob(ctx context.Context, input *iot.DeleteJobInput) (*iot.DeleteJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteJobWithContext(ctx, input)
+	output, err := client.DeleteJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteJobExecution(ctx context.Context, input *iot.DeleteJobExecutionInput) (*iot.DeleteJobExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteJobExecutionWithContext(ctx, input)
+	output, err := client.DeleteJobExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMitigationAction(ctx context.Context, input *iot.DeleteMitigationActionInput) (*iot.DeleteMitigationActionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMitigationActionWithContext(ctx, input)
+	output, err := client.DeleteMitigationActionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteOTAUpdate(ctx context.Context, input *iot.DeleteOTAUpdateInput) (*iot.DeleteOTAUpdateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteOTAUpdateWithContext(ctx, input)
+	output, err := client.DeleteOTAUpdateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePolicy(ctx context.Context, input *iot.DeletePolicyInput) (*iot.DeletePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePolicyWithContext(ctx, input)
+	output, err := client.DeletePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePolicyVersion(ctx context.Context, input *iot.DeletePolicyVersionInput) (*iot.DeletePolicyVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePolicyVersionWithContext(ctx, input)
+	output, err := client.DeletePolicyVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteProvisioningTemplate(ctx context.Context, input *iot.DeleteProvisioningTemplateInput) (*iot.DeleteProvisioningTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteProvisioningTemplateWithContext(ctx, input)
+	output, err := client.DeleteProvisioningTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteProvisioningTemplateVersion(ctx context.Context, input *iot.DeleteProvisioningTemplateVersionInput) (*iot.DeleteProvisioningTemplateVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteProvisioningTemplateVersionWithContext(ctx, input)
+	output, err := client.DeleteProvisioningTemplateVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteRegistrationCode(ctx context.Context, input *iot.DeleteRegistrationCodeInput) (*iot.DeleteRegistrationCodeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteRegistrationCodeWithContext(ctx, input)
+	output, err := client.DeleteRegistrationCodeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteRoleAlias(ctx context.Context, input *iot.DeleteRoleAliasInput) (*iot.DeleteRoleAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteRoleAliasWithContext(ctx, input)
+	output, err := client.DeleteRoleAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteScheduledAudit(ctx context.Context, input *iot.DeleteScheduledAuditInput) (*iot.DeleteScheduledAuditOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteScheduledAuditWithContext(ctx, input)
+	output, err := client.DeleteScheduledAuditWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSecurityProfile(ctx context.Context, input *iot.DeleteSecurityProfileInput) (*iot.DeleteSecurityProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSecurityProfileWithContext(ctx, input)
+	output, err := client.DeleteSecurityProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteStream(ctx context.Context, input *iot.DeleteStreamInput) (*iot.DeleteStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteStreamWithContext(ctx, input)
+	output, err := client.DeleteStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteThing(ctx context.Context, input *iot.DeleteThingInput) (*iot.DeleteThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteThingWithContext(ctx, input)
+	output, err := client.DeleteThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteThingGroup(ctx context.Context, input *iot.DeleteThingGroupInput) (*iot.DeleteThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteThingGroupWithContext(ctx, input)
+	output, err := client.DeleteThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteThingType(ctx context.Context, input *iot.DeleteThingTypeInput) (*iot.DeleteThingTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteThingTypeWithContext(ctx, input)
+	output, err := client.DeleteThingTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTopicRule(ctx context.Context, input *iot.DeleteTopicRuleInput) (*iot.DeleteTopicRuleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTopicRuleWithContext(ctx, input)
+	output, err := client.DeleteTopicRuleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTopicRuleDestination(ctx context.Context, input *iot.DeleteTopicRuleDestinationInput) (*iot.DeleteTopicRuleDestinationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTopicRuleDestinationWithContext(ctx, input)
+	output, err := client.DeleteTopicRuleDestinationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteV2LoggingLevel(ctx context.Context, input *iot.DeleteV2LoggingLevelInput) (*iot.DeleteV2LoggingLevelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteV2LoggingLevelWithContext(ctx, input)
+	output, err := client.DeleteV2LoggingLevelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeprecateThingType(ctx context.Context, input *iot.DeprecateThingTypeInput) (*iot.DeprecateThingTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeprecateThingTypeWithContext(ctx, input)
+	output, err := client.DeprecateThingTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAccountAuditConfiguration(ctx context.Context, input *iot.DescribeAccountAuditConfigurationInput) (*iot.DescribeAccountAuditConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAccountAuditConfigurationWithContext(ctx, input)
+	output, err := client.DescribeAccountAuditConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAuditFinding(ctx context.Context, input *iot.DescribeAuditFindingInput) (*iot.DescribeAuditFindingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAuditFindingWithContext(ctx, input)
+	output, err := client.DescribeAuditFindingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAuditMitigationActionsTask(ctx context.Context, input *iot.DescribeAuditMitigationActionsTaskInput) (*iot.DescribeAuditMitigationActionsTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAuditMitigationActionsTaskWithContext(ctx, input)
+	output, err := client.DescribeAuditMitigationActionsTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAuditSuppression(ctx context.Context, input *iot.DescribeAuditSuppressionInput) (*iot.DescribeAuditSuppressionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAuditSuppressionWithContext(ctx, input)
+	output, err := client.DescribeAuditSuppressionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAuditTask(ctx context.Context, input *iot.DescribeAuditTaskInput) (*iot.DescribeAuditTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAuditTaskWithContext(ctx, input)
+	output, err := client.DescribeAuditTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAuthorizer(ctx context.Context, input *iot.DescribeAuthorizerInput) (*iot.DescribeAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAuthorizerWithContext(ctx, input)
+	output, err := client.DescribeAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBillingGroup(ctx context.Context, input *iot.DescribeBillingGroupInput) (*iot.DescribeBillingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBillingGroupWithContext(ctx, input)
+	output, err := client.DescribeBillingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCACertificate(ctx context.Context, input *iot.DescribeCACertificateInput) (*iot.DescribeCACertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCACertificateWithContext(ctx, input)
+	output, err := client.DescribeCACertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCertificate(ctx context.Context, input *iot.DescribeCertificateInput) (*iot.DescribeCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCertificateWithContext(ctx, input)
+	output, err := client.DescribeCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDefaultAuthorizer(ctx context.Context, input *iot.DescribeDefaultAuthorizerInput) (*iot.DescribeDefaultAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDefaultAuthorizerWithContext(ctx, input)
+	output, err := client.DescribeDefaultAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDimension(ctx context.Context, input *iot.DescribeDimensionInput) (*iot.DescribeDimensionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDimensionWithContext(ctx, input)
+	output, err := client.DescribeDimensionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDomainConfiguration(ctx context.Context, input *iot.DescribeDomainConfigurationInput) (*iot.DescribeDomainConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDomainConfigurationWithContext(ctx, input)
+	output, err := client.DescribeDomainConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEndpoint(ctx context.Context, input *iot.DescribeEndpointInput) (*iot.DescribeEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEndpointWithContext(ctx, input)
+	output, err := client.DescribeEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEventConfigurations(ctx context.Context, input *iot.DescribeEventConfigurationsInput) (*iot.DescribeEventConfigurationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEventConfigurationsWithContext(ctx, input)
+	output, err := client.DescribeEventConfigurationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeIndex(ctx context.Context, input *iot.DescribeIndexInput) (*iot.DescribeIndexOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeIndexWithContext(ctx, input)
+	output, err := client.DescribeIndexWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeJob(ctx context.Context, input *iot.DescribeJobInput) (*iot.DescribeJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeJobWithContext(ctx, input)
+	output, err := client.DescribeJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeJobExecution(ctx context.Context, input *iot.DescribeJobExecutionInput) (*iot.DescribeJobExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeJobExecutionWithContext(ctx, input)
+	output, err := client.DescribeJobExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMitigationAction(ctx context.Context, input *iot.DescribeMitigationActionInput) (*iot.DescribeMitigationActionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMitigationActionWithContext(ctx, input)
+	output, err := client.DescribeMitigationActionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeProvisioningTemplate(ctx context.Context, input *iot.DescribeProvisioningTemplateInput) (*iot.DescribeProvisioningTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeProvisioningTemplateWithContext(ctx, input)
+	output, err := client.DescribeProvisioningTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeProvisioningTemplateVersion(ctx context.Context, input *iot.DescribeProvisioningTemplateVersionInput) (*iot.DescribeProvisioningTemplateVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeProvisioningTemplateVersionWithContext(ctx, input)
+	output, err := client.DescribeProvisioningTemplateVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeRoleAlias(ctx context.Context, input *iot.DescribeRoleAliasInput) (*iot.DescribeRoleAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeRoleAliasWithContext(ctx, input)
+	output, err := client.DescribeRoleAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeScheduledAudit(ctx context.Context, input *iot.DescribeScheduledAuditInput) (*iot.DescribeScheduledAuditOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeScheduledAuditWithContext(ctx, input)
+	output, err := client.DescribeScheduledAuditWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSecurityProfile(ctx context.Context, input *iot.DescribeSecurityProfileInput) (*iot.DescribeSecurityProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSecurityProfileWithContext(ctx, input)
+	output, err := client.DescribeSecurityProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeStream(ctx context.Context, input *iot.DescribeStreamInput) (*iot.DescribeStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeStreamWithContext(ctx, input)
+	output, err := client.DescribeStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeThing(ctx context.Context, input *iot.DescribeThingInput) (*iot.DescribeThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeThingWithContext(ctx, input)
+	output, err := client.DescribeThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeThingGroup(ctx context.Context, input *iot.DescribeThingGroupInput) (*iot.DescribeThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeThingGroupWithContext(ctx, input)
+	output, err := client.DescribeThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeThingRegistrationTask(ctx context.Context, input *iot.DescribeThingRegistrationTaskInput) (*iot.DescribeThingRegistrationTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeThingRegistrationTaskWithContext(ctx, input)
+	output, err := client.DescribeThingRegistrationTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeThingType(ctx context.Context, input *iot.DescribeThingTypeInput) (*iot.DescribeThingTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeThingTypeWithContext(ctx, input)
+	output, err := client.DescribeThingTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DetachPolicy(ctx context.Context, input *iot.DetachPolicyInput) (*iot.DetachPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DetachPolicyWithContext(ctx, input)
+	output, err := client.DetachPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DetachPrincipalPolicy(ctx context.Context, input *iot.DetachPrincipalPolicyInput) (*iot.DetachPrincipalPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DetachPrincipalPolicyWithContext(ctx, input)
+	output, err := client.DetachPrincipalPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DetachSecurityProfile(ctx context.Context, input *iot.DetachSecurityProfileInput) (*iot.DetachSecurityProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DetachSecurityProfileWithContext(ctx, input)
+	output, err := client.DetachSecurityProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DetachThingPrincipal(ctx context.Context, input *iot.DetachThingPrincipalInput) (*iot.DetachThingPrincipalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DetachThingPrincipalWithContext(ctx, input)
+	output, err := client.DetachThingPrincipalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisableTopicRule(ctx context.Context, input *iot.DisableTopicRuleInput) (*iot.DisableTopicRuleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisableTopicRuleWithContext(ctx, input)
+	output, err := client.DisableTopicRuleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableTopicRule(ctx context.Context, input *iot.EnableTopicRuleInput) (*iot.EnableTopicRuleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableTopicRuleWithContext(ctx, input)
+	output, err := client.EnableTopicRuleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCardinality(ctx context.Context, input *iot.GetCardinalityInput) (*iot.GetCardinalityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCardinalityWithContext(ctx, input)
+	output, err := client.GetCardinalityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetEffectivePolicies(ctx context.Context, input *iot.GetEffectivePoliciesInput) (*iot.GetEffectivePoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetEffectivePoliciesWithContext(ctx, input)
+	output, err := client.GetEffectivePoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetIndexingConfiguration(ctx context.Context, input *iot.GetIndexingConfigurationInput) (*iot.GetIndexingConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetIndexingConfigurationWithContext(ctx, input)
+	output, err := client.GetIndexingConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJobDocument(ctx context.Context, input *iot.GetJobDocumentInput) (*iot.GetJobDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJobDocumentWithContext(ctx, input)
+	output, err := client.GetJobDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetLoggingOptions(ctx context.Context, input *iot.GetLoggingOptionsInput) (*iot.GetLoggingOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetLoggingOptionsWithContext(ctx, input)
+	output, err := client.GetLoggingOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetOTAUpdate(ctx context.Context, input *iot.GetOTAUpdateInput) (*iot.GetOTAUpdateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetOTAUpdateWithContext(ctx, input)
+	output, err := client.GetOTAUpdateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPercentiles(ctx context.Context, input *iot.GetPercentilesInput) (*iot.GetPercentilesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPercentilesWithContext(ctx, input)
+	output, err := client.GetPercentilesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPolicy(ctx context.Context, input *iot.GetPolicyInput) (*iot.GetPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPolicyWithContext(ctx, input)
+	output, err := client.GetPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPolicyVersion(ctx context.Context, input *iot.GetPolicyVersionInput) (*iot.GetPolicyVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPolicyVersionWithContext(ctx, input)
+	output, err := client.GetPolicyVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRegistrationCode(ctx context.Context, input *iot.GetRegistrationCodeInput) (*iot.GetRegistrationCodeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRegistrationCodeWithContext(ctx, input)
+	output, err := client.GetRegistrationCodeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetStatistics(ctx context.Context, input *iot.GetStatisticsInput) (*iot.GetStatisticsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetStatisticsWithContext(ctx, input)
+	output, err := client.GetStatisticsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTopicRule(ctx context.Context, input *iot.GetTopicRuleInput) (*iot.GetTopicRuleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTopicRuleWithContext(ctx, input)
+	output, err := client.GetTopicRuleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTopicRuleDestination(ctx context.Context, input *iot.GetTopicRuleDestinationInput) (*iot.GetTopicRuleDestinationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTopicRuleDestinationWithContext(ctx, input)
+	output, err := client.GetTopicRuleDestinationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetV2LoggingOptions(ctx context.Context, input *iot.GetV2LoggingOptionsInput) (*iot.GetV2LoggingOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetV2LoggingOptionsWithContext(ctx, input)
+	output, err := client.GetV2LoggingOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListActiveViolations(ctx context.Context, input *iot.ListActiveViolationsInput) (*iot.ListActiveViolationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListActiveViolationsWithContext(ctx, input)
+	output, err := client.ListActiveViolationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAttachedPolicies(ctx context.Context, input *iot.ListAttachedPoliciesInput) (*iot.ListAttachedPoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAttachedPoliciesWithContext(ctx, input)
+	output, err := client.ListAttachedPoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAuditFindings(ctx context.Context, input *iot.ListAuditFindingsInput) (*iot.ListAuditFindingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAuditFindingsWithContext(ctx, input)
+	output, err := client.ListAuditFindingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAuditMitigationActionsExecutions(ctx context.Context, input *iot.ListAuditMitigationActionsExecutionsInput) (*iot.ListAuditMitigationActionsExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAuditMitigationActionsExecutionsWithContext(ctx, input)
+	output, err := client.ListAuditMitigationActionsExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAuditMitigationActionsTasks(ctx context.Context, input *iot.ListAuditMitigationActionsTasksInput) (*iot.ListAuditMitigationActionsTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAuditMitigationActionsTasksWithContext(ctx, input)
+	output, err := client.ListAuditMitigationActionsTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAuditSuppressions(ctx context.Context, input *iot.ListAuditSuppressionsInput) (*iot.ListAuditSuppressionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAuditSuppressionsWithContext(ctx, input)
+	output, err := client.ListAuditSuppressionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAuditTasks(ctx context.Context, input *iot.ListAuditTasksInput) (*iot.ListAuditTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAuditTasksWithContext(ctx, input)
+	output, err := client.ListAuditTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAuthorizers(ctx context.Context, input *iot.ListAuthorizersInput) (*iot.ListAuthorizersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAuthorizersWithContext(ctx, input)
+	output, err := client.ListAuthorizersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListBillingGroups(ctx context.Context, input *iot.ListBillingGroupsInput) (*iot.ListBillingGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListBillingGroupsWithContext(ctx, input)
+	output, err := client.ListBillingGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCACertificates(ctx context.Context, input *iot.ListCACertificatesInput) (*iot.ListCACertificatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCACertificatesWithContext(ctx, input)
+	output, err := client.ListCACertificatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCertificates(ctx context.Context, input *iot.ListCertificatesInput) (*iot.ListCertificatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCertificatesWithContext(ctx, input)
+	output, err := client.ListCertificatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCertificatesByCA(ctx context.Context, input *iot.ListCertificatesByCAInput) (*iot.ListCertificatesByCAOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCertificatesByCAWithContext(ctx, input)
+	output, err := client.ListCertificatesByCAWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDimensions(ctx context.Context, input *iot.ListDimensionsInput) (*iot.ListDimensionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDimensionsWithContext(ctx, input)
+	output, err := client.ListDimensionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDomainConfigurations(ctx context.Context, input *iot.ListDomainConfigurationsInput) (*iot.ListDomainConfigurationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDomainConfigurationsWithContext(ctx, input)
+	output, err := client.ListDomainConfigurationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListIndices(ctx context.Context, input *iot.ListIndicesInput) (*iot.ListIndicesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListIndicesWithContext(ctx, input)
+	output, err := client.ListIndicesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListJobExecutionsForJob(ctx context.Context, input *iot.ListJobExecutionsForJobInput) (*iot.ListJobExecutionsForJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListJobExecutionsForJobWithContext(ctx, input)
+	output, err := client.ListJobExecutionsForJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListJobExecutionsForThing(ctx context.Context, input *iot.ListJobExecutionsForThingInput) (*iot.ListJobExecutionsForThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListJobExecutionsForThingWithContext(ctx, input)
+	output, err := client.ListJobExecutionsForThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListJobs(ctx context.Context, input *iot.ListJobsInput) (*iot.ListJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListJobsWithContext(ctx, input)
+	output, err := client.ListJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListMitigationActions(ctx context.Context, input *iot.ListMitigationActionsInput) (*iot.ListMitigationActionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListMitigationActionsWithContext(ctx, input)
+	output, err := client.ListMitigationActionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListOTAUpdates(ctx context.Context, input *iot.ListOTAUpdatesInput) (*iot.ListOTAUpdatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListOTAUpdatesWithContext(ctx, input)
+	output, err := client.ListOTAUpdatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListOutgoingCertificates(ctx context.Context, input *iot.ListOutgoingCertificatesInput) (*iot.ListOutgoingCertificatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListOutgoingCertificatesWithContext(ctx, input)
+	output, err := client.ListOutgoingCertificatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPolicies(ctx context.Context, input *iot.ListPoliciesInput) (*iot.ListPoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPoliciesWithContext(ctx, input)
+	output, err := client.ListPoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPolicyPrincipals(ctx context.Context, input *iot.ListPolicyPrincipalsInput) (*iot.ListPolicyPrincipalsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPolicyPrincipalsWithContext(ctx, input)
+	output, err := client.ListPolicyPrincipalsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPolicyVersions(ctx context.Context, input *iot.ListPolicyVersionsInput) (*iot.ListPolicyVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPolicyVersionsWithContext(ctx, input)
+	output, err := client.ListPolicyVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPrincipalPolicies(ctx context.Context, input *iot.ListPrincipalPoliciesInput) (*iot.ListPrincipalPoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPrincipalPoliciesWithContext(ctx, input)
+	output, err := client.ListPrincipalPoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPrincipalThings(ctx context.Context, input *iot.ListPrincipalThingsInput) (*iot.ListPrincipalThingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPrincipalThingsWithContext(ctx, input)
+	output, err := client.ListPrincipalThingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListProvisioningTemplateVersions(ctx context.Context, input *iot.ListProvisioningTemplateVersionsInput) (*iot.ListProvisioningTemplateVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListProvisioningTemplateVersionsWithContext(ctx, input)
+	output, err := client.ListProvisioningTemplateVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListProvisioningTemplates(ctx context.Context, input *iot.ListProvisioningTemplatesInput) (*iot.ListProvisioningTemplatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListProvisioningTemplatesWithContext(ctx, input)
+	output, err := client.ListProvisioningTemplatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListRoleAliases(ctx context.Context, input *iot.ListRoleAliasesInput) (*iot.ListRoleAliasesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListRoleAliasesWithContext(ctx, input)
+	output, err := client.ListRoleAliasesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListScheduledAudits(ctx context.Context, input *iot.ListScheduledAuditsInput) (*iot.ListScheduledAuditsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListScheduledAuditsWithContext(ctx, input)
+	output, err := client.ListScheduledAuditsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSecurityProfiles(ctx context.Context, input *iot.ListSecurityProfilesInput) (*iot.ListSecurityProfilesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSecurityProfilesWithContext(ctx, input)
+	output, err := client.ListSecurityProfilesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSecurityProfilesForTarget(ctx context.Context, input *iot.ListSecurityProfilesForTargetInput) (*iot.ListSecurityProfilesForTargetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSecurityProfilesForTargetWithContext(ctx, input)
+	output, err := client.ListSecurityProfilesForTargetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListStreams(ctx context.Context, input *iot.ListStreamsInput) (*iot.ListStreamsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListStreamsWithContext(ctx, input)
+	output, err := client.ListStreamsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *iot.ListTagsForResourceInput) (*iot.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTargetsForPolicy(ctx context.Context, input *iot.ListTargetsForPolicyInput) (*iot.ListTargetsForPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTargetsForPolicyWithContext(ctx, input)
+	output, err := client.ListTargetsForPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTargetsForSecurityProfile(ctx context.Context, input *iot.ListTargetsForSecurityProfileInput) (*iot.ListTargetsForSecurityProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTargetsForSecurityProfileWithContext(ctx, input)
+	output, err := client.ListTargetsForSecurityProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThingGroups(ctx context.Context, input *iot.ListThingGroupsInput) (*iot.ListThingGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingGroupsWithContext(ctx, input)
+	output, err := client.ListThingGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThingGroupsForThing(ctx context.Context, input *iot.ListThingGroupsForThingInput) (*iot.ListThingGroupsForThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingGroupsForThingWithContext(ctx, input)
+	output, err := client.ListThingGroupsForThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThingPrincipals(ctx context.Context, input *iot.ListThingPrincipalsInput) (*iot.ListThingPrincipalsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingPrincipalsWithContext(ctx, input)
+	output, err := client.ListThingPrincipalsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThingRegistrationTaskReports(ctx context.Context, input *iot.ListThingRegistrationTaskReportsInput) (*iot.ListThingRegistrationTaskReportsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingRegistrationTaskReportsWithContext(ctx, input)
+	output, err := client.ListThingRegistrationTaskReportsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThingRegistrationTasks(ctx context.Context, input *iot.ListThingRegistrationTasksInput) (*iot.ListThingRegistrationTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingRegistrationTasksWithContext(ctx, input)
+	output, err := client.ListThingRegistrationTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThingTypes(ctx context.Context, input *iot.ListThingTypesInput) (*iot.ListThingTypesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingTypesWithContext(ctx, input)
+	output, err := client.ListThingTypesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThings(ctx context.Context, input *iot.ListThingsInput) (*iot.ListThingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingsWithContext(ctx, input)
+	output, err := client.ListThingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThingsInBillingGroup(ctx context.Context, input *iot.ListThingsInBillingGroupInput) (*iot.ListThingsInBillingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingsInBillingGroupWithContext(ctx, input)
+	output, err := client.ListThingsInBillingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThingsInThingGroup(ctx context.Context, input *iot.ListThingsInThingGroupInput) (*iot.ListThingsInThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThingsInThingGroupWithContext(ctx, input)
+	output, err := client.ListThingsInThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTopicRuleDestinations(ctx context.Context, input *iot.ListTopicRuleDestinationsInput) (*iot.ListTopicRuleDestinationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTopicRuleDestinationsWithContext(ctx, input)
+	output, err := client.ListTopicRuleDestinationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTopicRules(ctx context.Context, input *iot.ListTopicRulesInput) (*iot.ListTopicRulesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTopicRulesWithContext(ctx, input)
+	output, err := client.ListTopicRulesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListV2LoggingLevels(ctx context.Context, input *iot.ListV2LoggingLevelsInput) (*iot.ListV2LoggingLevelsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListV2LoggingLevelsWithContext(ctx, input)
+	output, err := client.ListV2LoggingLevelsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListViolationEvents(ctx context.Context, input *iot.ListViolationEventsInput) (*iot.ListViolationEventsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListViolationEventsWithContext(ctx, input)
+	output, err := client.ListViolationEventsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterCACertificate(ctx context.Context, input *iot.RegisterCACertificateInput) (*iot.RegisterCACertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterCACertificateWithContext(ctx, input)
+	output, err := client.RegisterCACertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterCertificate(ctx context.Context, input *iot.RegisterCertificateInput) (*iot.RegisterCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterCertificateWithContext(ctx, input)
+	output, err := client.RegisterCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterCertificateWithoutCA(ctx context.Context, input *iot.RegisterCertificateWithoutCAInput) (*iot.RegisterCertificateWithoutCAOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterCertificateWithoutCAWithContext(ctx, input)
+	output, err := client.RegisterCertificateWithoutCAWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterThing(ctx context.Context, input *iot.RegisterThingInput) (*iot.RegisterThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterThingWithContext(ctx, input)
+	output, err := client.RegisterThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RejectCertificateTransfer(ctx context.Context, input *iot.RejectCertificateTransferInput) (*iot.RejectCertificateTransferOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RejectCertificateTransferWithContext(ctx, input)
+	output, err := client.RejectCertificateTransferWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveThingFromBillingGroup(ctx context.Context, input *iot.RemoveThingFromBillingGroupInput) (*iot.RemoveThingFromBillingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveThingFromBillingGroupWithContext(ctx, input)
+	output, err := client.RemoveThingFromBillingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveThingFromThingGroup(ctx context.Context, input *iot.RemoveThingFromThingGroupInput) (*iot.RemoveThingFromThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveThingFromThingGroupWithContext(ctx, input)
+	output, err := client.RemoveThingFromThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ReplaceTopicRule(ctx context.Context, input *iot.ReplaceTopicRuleInput) (*iot.ReplaceTopicRuleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ReplaceTopicRuleWithContext(ctx, input)
+	output, err := client.ReplaceTopicRuleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SearchIndex(ctx context.Context, input *iot.SearchIndexInput) (*iot.SearchIndexOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SearchIndexWithContext(ctx, input)
+	output, err := client.SearchIndexWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetDefaultAuthorizer(ctx context.Context, input *iot.SetDefaultAuthorizerInput) (*iot.SetDefaultAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetDefaultAuthorizerWithContext(ctx, input)
+	output, err := client.SetDefaultAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetDefaultPolicyVersion(ctx context.Context, input *iot.SetDefaultPolicyVersionInput) (*iot.SetDefaultPolicyVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetDefaultPolicyVersionWithContext(ctx, input)
+	output, err := client.SetDefaultPolicyVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetLoggingOptions(ctx context.Context, input *iot.SetLoggingOptionsInput) (*iot.SetLoggingOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetLoggingOptionsWithContext(ctx, input)
+	output, err := client.SetLoggingOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetV2LoggingLevel(ctx context.Context, input *iot.SetV2LoggingLevelInput) (*iot.SetV2LoggingLevelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetV2LoggingLevelWithContext(ctx, input)
+	output, err := client.SetV2LoggingLevelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetV2LoggingOptions(ctx context.Context, input *iot.SetV2LoggingOptionsInput) (*iot.SetV2LoggingOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetV2LoggingOptionsWithContext(ctx, input)
+	output, err := client.SetV2LoggingOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartAuditMitigationActionsTask(ctx context.Context, input *iot.StartAuditMitigationActionsTaskInput) (*iot.StartAuditMitigationActionsTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartAuditMitigationActionsTaskWithContext(ctx, input)
+	output, err := client.StartAuditMitigationActionsTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartOnDemandAuditTask(ctx context.Context, input *iot.StartOnDemandAuditTaskInput) (*iot.StartOnDemandAuditTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartOnDemandAuditTaskWithContext(ctx, input)
+	output, err := client.StartOnDemandAuditTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartThingRegistrationTask(ctx context.Context, input *iot.StartThingRegistrationTaskInput) (*iot.StartThingRegistrationTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartThingRegistrationTaskWithContext(ctx, input)
+	output, err := client.StartThingRegistrationTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopThingRegistrationTask(ctx context.Context, input *iot.StopThingRegistrationTaskInput) (*iot.StopThingRegistrationTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopThingRegistrationTaskWithContext(ctx, input)
+	output, err := client.StopThingRegistrationTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *iot.TagResourceInput) (*iot.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TestAuthorization(ctx context.Context, input *iot.TestAuthorizationInput) (*iot.TestAuthorizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TestAuthorizationWithContext(ctx, input)
+	output, err := client.TestAuthorizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TestInvokeAuthorizer(ctx context.Context, input *iot.TestInvokeAuthorizerInput) (*iot.TestInvokeAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TestInvokeAuthorizerWithContext(ctx, input)
+	output, err := client.TestInvokeAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TransferCertificate(ctx context.Context, input *iot.TransferCertificateInput) (*iot.TransferCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TransferCertificateWithContext(ctx, input)
+	output, err := client.TransferCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *iot.UntagResourceInput) (*iot.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAccountAuditConfiguration(ctx context.Context, input *iot.UpdateAccountAuditConfigurationInput) (*iot.UpdateAccountAuditConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAccountAuditConfigurationWithContext(ctx, input)
+	output, err := client.UpdateAccountAuditConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAuditSuppression(ctx context.Context, input *iot.UpdateAuditSuppressionInput) (*iot.UpdateAuditSuppressionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAuditSuppressionWithContext(ctx, input)
+	output, err := client.UpdateAuditSuppressionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAuthorizer(ctx context.Context, input *iot.UpdateAuthorizerInput) (*iot.UpdateAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAuthorizerWithContext(ctx, input)
+	output, err := client.UpdateAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateBillingGroup(ctx context.Context, input *iot.UpdateBillingGroupInput) (*iot.UpdateBillingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateBillingGroupWithContext(ctx, input)
+	output, err := client.UpdateBillingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCACertificate(ctx context.Context, input *iot.UpdateCACertificateInput) (*iot.UpdateCACertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCACertificateWithContext(ctx, input)
+	output, err := client.UpdateCACertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCertificate(ctx context.Context, input *iot.UpdateCertificateInput) (*iot.UpdateCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCertificateWithContext(ctx, input)
+	output, err := client.UpdateCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDimension(ctx context.Context, input *iot.UpdateDimensionInput) (*iot.UpdateDimensionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDimensionWithContext(ctx, input)
+	output, err := client.UpdateDimensionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDomainConfiguration(ctx context.Context, input *iot.UpdateDomainConfigurationInput) (*iot.UpdateDomainConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDomainConfigurationWithContext(ctx, input)
+	output, err := client.UpdateDomainConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDynamicThingGroup(ctx context.Context, input *iot.UpdateDynamicThingGroupInput) (*iot.UpdateDynamicThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDynamicThingGroupWithContext(ctx, input)
+	output, err := client.UpdateDynamicThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateEventConfigurations(ctx context.Context, input *iot.UpdateEventConfigurationsInput) (*iot.UpdateEventConfigurationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateEventConfigurationsWithContext(ctx, input)
+	output, err := client.UpdateEventConfigurationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateIndexingConfiguration(ctx context.Context, input *iot.UpdateIndexingConfigurationInput) (*iot.UpdateIndexingConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateIndexingConfigurationWithContext(ctx, input)
+	output, err := client.UpdateIndexingConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateJob(ctx context.Context, input *iot.UpdateJobInput) (*iot.UpdateJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateJobWithContext(ctx, input)
+	output, err := client.UpdateJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMitigationAction(ctx context.Context, input *iot.UpdateMitigationActionInput) (*iot.UpdateMitigationActionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMitigationActionWithContext(ctx, input)
+	output, err := client.UpdateMitigationActionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateProvisioningTemplate(ctx context.Context, input *iot.UpdateProvisioningTemplateInput) (*iot.UpdateProvisioningTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateProvisioningTemplateWithContext(ctx, input)
+	output, err := client.UpdateProvisioningTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRoleAlias(ctx context.Context, input *iot.UpdateRoleAliasInput) (*iot.UpdateRoleAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRoleAliasWithContext(ctx, input)
+	output, err := client.UpdateRoleAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateScheduledAudit(ctx context.Context, input *iot.UpdateScheduledAuditInput) (*iot.UpdateScheduledAuditOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateScheduledAuditWithContext(ctx, input)
+	output, err := client.UpdateScheduledAuditWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateSecurityProfile(ctx context.Context, input *iot.UpdateSecurityProfileInput) (*iot.UpdateSecurityProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateSecurityProfileWithContext(ctx, input)
+	output, err := client.UpdateSecurityProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateStream(ctx context.Context, input *iot.UpdateStreamInput) (*iot.UpdateStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateStreamWithContext(ctx, input)
+	output, err := client.UpdateStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateThing(ctx context.Context, input *iot.UpdateThingInput) (*iot.UpdateThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateThingWithContext(ctx, input)
+	output, err := client.UpdateThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateThingGroup(ctx context.Context, input *iot.UpdateThingGroupInput) (*iot.UpdateThingGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateThingGroupWithContext(ctx, input)
+	output, err := client.UpdateThingGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateThingGroupsForThing(ctx context.Context, input *iot.UpdateThingGroupsForThingInput) (*iot.UpdateThingGroupsForThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateThingGroupsForThingWithContext(ctx, input)
+	output, err := client.UpdateThingGroupsForThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTopicRuleDestination(ctx context.Context, input *iot.UpdateTopicRuleDestinationInput) (*iot.UpdateTopicRuleDestinationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTopicRuleDestinationWithContext(ctx, input)
+	output, err := client.UpdateTopicRuleDestinationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ValidateSecurityProfileBehaviors(ctx context.Context, input *iot.ValidateSecurityProfileBehaviorsInput) (*iot.ValidateSecurityProfileBehaviorsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ValidateSecurityProfileBehaviorsWithContext(ctx, input)
+	output, err := client.ValidateSecurityProfileBehaviorsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

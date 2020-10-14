@@ -6,12 +6,14 @@ package budgets
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/budgets"
 	"github.com/aws/aws-sdk-go/service/budgets/budgetsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (budgetsiface.BudgetsAPI, er
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return budgets.New(sess), nil
@@ -55,111 +57,139 @@ func (a *Activities) getClient(ctx context.Context) (budgetsiface.BudgetsAPI, er
 func (a *Activities) CreateBudget(ctx context.Context, input *budgets.CreateBudgetInput) (*budgets.CreateBudgetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateBudgetWithContext(ctx, input)
+	output, err := client.CreateBudgetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateNotification(ctx context.Context, input *budgets.CreateNotificationInput) (*budgets.CreateNotificationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateNotificationWithContext(ctx, input)
+	output, err := client.CreateNotificationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSubscriber(ctx context.Context, input *budgets.CreateSubscriberInput) (*budgets.CreateSubscriberOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSubscriberWithContext(ctx, input)
+	output, err := client.CreateSubscriberWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteBudget(ctx context.Context, input *budgets.DeleteBudgetInput) (*budgets.DeleteBudgetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteBudgetWithContext(ctx, input)
+	output, err := client.DeleteBudgetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteNotification(ctx context.Context, input *budgets.DeleteNotificationInput) (*budgets.DeleteNotificationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteNotificationWithContext(ctx, input)
+	output, err := client.DeleteNotificationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSubscriber(ctx context.Context, input *budgets.DeleteSubscriberInput) (*budgets.DeleteSubscriberOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSubscriberWithContext(ctx, input)
+	output, err := client.DeleteSubscriberWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBudget(ctx context.Context, input *budgets.DescribeBudgetInput) (*budgets.DescribeBudgetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBudgetWithContext(ctx, input)
+	output, err := client.DescribeBudgetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBudgetPerformanceHistory(ctx context.Context, input *budgets.DescribeBudgetPerformanceHistoryInput) (*budgets.DescribeBudgetPerformanceHistoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBudgetPerformanceHistoryWithContext(ctx, input)
+	output, err := client.DescribeBudgetPerformanceHistoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBudgets(ctx context.Context, input *budgets.DescribeBudgetsInput) (*budgets.DescribeBudgetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBudgetsWithContext(ctx, input)
+	output, err := client.DescribeBudgetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeNotificationsForBudget(ctx context.Context, input *budgets.DescribeNotificationsForBudgetInput) (*budgets.DescribeNotificationsForBudgetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeNotificationsForBudgetWithContext(ctx, input)
+	output, err := client.DescribeNotificationsForBudgetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSubscribersForNotification(ctx context.Context, input *budgets.DescribeSubscribersForNotificationInput) (*budgets.DescribeSubscribersForNotificationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSubscribersForNotificationWithContext(ctx, input)
+	output, err := client.DescribeSubscribersForNotificationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateBudget(ctx context.Context, input *budgets.UpdateBudgetInput) (*budgets.UpdateBudgetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateBudgetWithContext(ctx, input)
+	output, err := client.UpdateBudgetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateNotification(ctx context.Context, input *budgets.UpdateNotificationInput) (*budgets.UpdateNotificationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateNotificationWithContext(ctx, input)
+	output, err := client.UpdateNotificationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateSubscriber(ctx context.Context, input *budgets.UpdateSubscriberInput) (*budgets.UpdateSubscriberOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateSubscriberWithContext(ctx, input)
+	output, err := client.UpdateSubscriberWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

@@ -6,12 +6,14 @@ package snowball
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/snowball"
 	"github.com/aws/aws-sdk-go/service/snowball/snowballiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (snowballiface.SnowballAPI, 
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return snowball.New(sess), nil
@@ -55,175 +57,219 @@ func (a *Activities) getClient(ctx context.Context) (snowballiface.SnowballAPI, 
 func (a *Activities) CancelCluster(ctx context.Context, input *snowball.CancelClusterInput) (*snowball.CancelClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelClusterWithContext(ctx, input)
+	output, err := client.CancelClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelJob(ctx context.Context, input *snowball.CancelJobInput) (*snowball.CancelJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelJobWithContext(ctx, input)
+	output, err := client.CancelJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAddress(ctx context.Context, input *snowball.CreateAddressInput) (*snowball.CreateAddressOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAddressWithContext(ctx, input)
+	output, err := client.CreateAddressWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCluster(ctx context.Context, input *snowball.CreateClusterInput) (*snowball.CreateClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateClusterWithContext(ctx, input)
+	output, err := client.CreateClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateJob(ctx context.Context, input *snowball.CreateJobInput) (*snowball.CreateJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateJobWithContext(ctx, input)
+	output, err := client.CreateJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateReturnShippingLabel(ctx context.Context, input *snowball.CreateReturnShippingLabelInput) (*snowball.CreateReturnShippingLabelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateReturnShippingLabelWithContext(ctx, input)
+	output, err := client.CreateReturnShippingLabelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAddress(ctx context.Context, input *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAddressWithContext(ctx, input)
+	output, err := client.DescribeAddressWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAddresses(ctx context.Context, input *snowball.DescribeAddressesInput) (*snowball.DescribeAddressesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAddressesWithContext(ctx, input)
+	output, err := client.DescribeAddressesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCluster(ctx context.Context, input *snowball.DescribeClusterInput) (*snowball.DescribeClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeClusterWithContext(ctx, input)
+	output, err := client.DescribeClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeJob(ctx context.Context, input *snowball.DescribeJobInput) (*snowball.DescribeJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeJobWithContext(ctx, input)
+	output, err := client.DescribeJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeReturnShippingLabel(ctx context.Context, input *snowball.DescribeReturnShippingLabelInput) (*snowball.DescribeReturnShippingLabelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeReturnShippingLabelWithContext(ctx, input)
+	output, err := client.DescribeReturnShippingLabelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJobManifest(ctx context.Context, input *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJobManifestWithContext(ctx, input)
+	output, err := client.GetJobManifestWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJobUnlockCode(ctx context.Context, input *snowball.GetJobUnlockCodeInput) (*snowball.GetJobUnlockCodeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJobUnlockCodeWithContext(ctx, input)
+	output, err := client.GetJobUnlockCodeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSnowballUsage(ctx context.Context, input *snowball.GetSnowballUsageInput) (*snowball.GetSnowballUsageOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSnowballUsageWithContext(ctx, input)
+	output, err := client.GetSnowballUsageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSoftwareUpdates(ctx context.Context, input *snowball.GetSoftwareUpdatesInput) (*snowball.GetSoftwareUpdatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSoftwareUpdatesWithContext(ctx, input)
+	output, err := client.GetSoftwareUpdatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListClusterJobs(ctx context.Context, input *snowball.ListClusterJobsInput) (*snowball.ListClusterJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListClusterJobsWithContext(ctx, input)
+	output, err := client.ListClusterJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListClusters(ctx context.Context, input *snowball.ListClustersInput) (*snowball.ListClustersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListClustersWithContext(ctx, input)
+	output, err := client.ListClustersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCompatibleImages(ctx context.Context, input *snowball.ListCompatibleImagesInput) (*snowball.ListCompatibleImagesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCompatibleImagesWithContext(ctx, input)
+	output, err := client.ListCompatibleImagesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListJobs(ctx context.Context, input *snowball.ListJobsInput) (*snowball.ListJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListJobsWithContext(ctx, input)
+	output, err := client.ListJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCluster(ctx context.Context, input *snowball.UpdateClusterInput) (*snowball.UpdateClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateClusterWithContext(ctx, input)
+	output, err := client.UpdateClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateJob(ctx context.Context, input *snowball.UpdateJobInput) (*snowball.UpdateJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateJobWithContext(ctx, input)
+	output, err := client.UpdateJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateJobShipmentState(ctx context.Context, input *snowball.UpdateJobShipmentStateInput) (*snowball.UpdateJobShipmentStateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateJobShipmentStateWithContext(ctx, input)
+	output, err := client.UpdateJobShipmentStateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

@@ -6,12 +6,14 @@ package support
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/support"
 	"github.com/aws/aws-sdk-go/service/support/supportiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (supportiface.SupportAPI, er
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return support.New(sess), nil
@@ -55,111 +57,139 @@ func (a *Activities) getClient(ctx context.Context) (supportiface.SupportAPI, er
 func (a *Activities) AddAttachmentsToSet(ctx context.Context, input *support.AddAttachmentsToSetInput) (*support.AddAttachmentsToSetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddAttachmentsToSetWithContext(ctx, input)
+	output, err := client.AddAttachmentsToSetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddCommunicationToCase(ctx context.Context, input *support.AddCommunicationToCaseInput) (*support.AddCommunicationToCaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddCommunicationToCaseWithContext(ctx, input)
+	output, err := client.AddCommunicationToCaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCase(ctx context.Context, input *support.CreateCaseInput) (*support.CreateCaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCaseWithContext(ctx, input)
+	output, err := client.CreateCaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAttachment(ctx context.Context, input *support.DescribeAttachmentInput) (*support.DescribeAttachmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAttachmentWithContext(ctx, input)
+	output, err := client.DescribeAttachmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCases(ctx context.Context, input *support.DescribeCasesInput) (*support.DescribeCasesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCasesWithContext(ctx, input)
+	output, err := client.DescribeCasesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCommunications(ctx context.Context, input *support.DescribeCommunicationsInput) (*support.DescribeCommunicationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCommunicationsWithContext(ctx, input)
+	output, err := client.DescribeCommunicationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeServices(ctx context.Context, input *support.DescribeServicesInput) (*support.DescribeServicesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeServicesWithContext(ctx, input)
+	output, err := client.DescribeServicesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSeverityLevels(ctx context.Context, input *support.DescribeSeverityLevelsInput) (*support.DescribeSeverityLevelsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSeverityLevelsWithContext(ctx, input)
+	output, err := client.DescribeSeverityLevelsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTrustedAdvisorCheckRefreshStatuses(ctx context.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) (*support.DescribeTrustedAdvisorCheckRefreshStatusesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTrustedAdvisorCheckRefreshStatusesWithContext(ctx, input)
+	output, err := client.DescribeTrustedAdvisorCheckRefreshStatusesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTrustedAdvisorCheckResult(ctx context.Context, input *support.DescribeTrustedAdvisorCheckResultInput) (*support.DescribeTrustedAdvisorCheckResultOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTrustedAdvisorCheckResultWithContext(ctx, input)
+	output, err := client.DescribeTrustedAdvisorCheckResultWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTrustedAdvisorCheckSummaries(ctx context.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) (*support.DescribeTrustedAdvisorCheckSummariesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTrustedAdvisorCheckSummariesWithContext(ctx, input)
+	output, err := client.DescribeTrustedAdvisorCheckSummariesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTrustedAdvisorChecks(ctx context.Context, input *support.DescribeTrustedAdvisorChecksInput) (*support.DescribeTrustedAdvisorChecksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTrustedAdvisorChecksWithContext(ctx, input)
+	output, err := client.DescribeTrustedAdvisorChecksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RefreshTrustedAdvisorCheck(ctx context.Context, input *support.RefreshTrustedAdvisorCheckInput) (*support.RefreshTrustedAdvisorCheckOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RefreshTrustedAdvisorCheckWithContext(ctx, input)
+	output, err := client.RefreshTrustedAdvisorCheckWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResolveCase(ctx context.Context, input *support.ResolveCaseInput) (*support.ResolveCaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResolveCaseWithContext(ctx, input)
+	output, err := client.ResolveCaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

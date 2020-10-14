@@ -6,12 +6,14 @@ package schemas
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/schemas"
 	"github.com/aws/aws-sdk-go/service/schemas/schemasiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (schemasiface.SchemasAPI, er
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return schemas.New(sess), nil
@@ -55,257 +57,319 @@ func (a *Activities) getClient(ctx context.Context) (schemasiface.SchemasAPI, er
 func (a *Activities) CreateDiscoverer(ctx context.Context, input *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDiscovererWithContext(ctx, input)
+	output, err := client.CreateDiscovererWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateRegistry(ctx context.Context, input *schemas.CreateRegistryInput) (*schemas.CreateRegistryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateRegistryWithContext(ctx, input)
+	output, err := client.CreateRegistryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSchema(ctx context.Context, input *schemas.CreateSchemaInput) (*schemas.CreateSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSchemaWithContext(ctx, input)
+	output, err := client.CreateSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDiscoverer(ctx context.Context, input *schemas.DeleteDiscovererInput) (*schemas.DeleteDiscovererOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDiscovererWithContext(ctx, input)
+	output, err := client.DeleteDiscovererWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteRegistry(ctx context.Context, input *schemas.DeleteRegistryInput) (*schemas.DeleteRegistryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteRegistryWithContext(ctx, input)
+	output, err := client.DeleteRegistryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteResourcePolicy(ctx context.Context, input *schemas.DeleteResourcePolicyInput) (*schemas.DeleteResourcePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteResourcePolicyWithContext(ctx, input)
+	output, err := client.DeleteResourcePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSchema(ctx context.Context, input *schemas.DeleteSchemaInput) (*schemas.DeleteSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSchemaWithContext(ctx, input)
+	output, err := client.DeleteSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSchemaVersion(ctx context.Context, input *schemas.DeleteSchemaVersionInput) (*schemas.DeleteSchemaVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSchemaVersionWithContext(ctx, input)
+	output, err := client.DeleteSchemaVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCodeBinding(ctx context.Context, input *schemas.DescribeCodeBindingInput) (*schemas.DescribeCodeBindingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCodeBindingWithContext(ctx, input)
+	output, err := client.DescribeCodeBindingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDiscoverer(ctx context.Context, input *schemas.DescribeDiscovererInput) (*schemas.DescribeDiscovererOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDiscovererWithContext(ctx, input)
+	output, err := client.DescribeDiscovererWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeRegistry(ctx context.Context, input *schemas.DescribeRegistryInput) (*schemas.DescribeRegistryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeRegistryWithContext(ctx, input)
+	output, err := client.DescribeRegistryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSchema(ctx context.Context, input *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSchemaWithContext(ctx, input)
+	output, err := client.DescribeSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ExportSchema(ctx context.Context, input *schemas.ExportSchemaInput) (*schemas.ExportSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ExportSchemaWithContext(ctx, input)
+	output, err := client.ExportSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCodeBindingSource(ctx context.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCodeBindingSourceWithContext(ctx, input)
+	output, err := client.GetCodeBindingSourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDiscoveredSchema(ctx context.Context, input *schemas.GetDiscoveredSchemaInput) (*schemas.GetDiscoveredSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDiscoveredSchemaWithContext(ctx, input)
+	output, err := client.GetDiscoveredSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResourcePolicy(ctx context.Context, input *schemas.GetResourcePolicyInput) (*schemas.GetResourcePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourcePolicyWithContext(ctx, input)
+	output, err := client.GetResourcePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDiscoverers(ctx context.Context, input *schemas.ListDiscoverersInput) (*schemas.ListDiscoverersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDiscoverersWithContext(ctx, input)
+	output, err := client.ListDiscoverersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListRegistries(ctx context.Context, input *schemas.ListRegistriesInput) (*schemas.ListRegistriesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListRegistriesWithContext(ctx, input)
+	output, err := client.ListRegistriesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSchemaVersions(ctx context.Context, input *schemas.ListSchemaVersionsInput) (*schemas.ListSchemaVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSchemaVersionsWithContext(ctx, input)
+	output, err := client.ListSchemaVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSchemas(ctx context.Context, input *schemas.ListSchemasInput) (*schemas.ListSchemasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSchemasWithContext(ctx, input)
+	output, err := client.ListSchemasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *schemas.ListTagsForResourceInput) (*schemas.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutCodeBinding(ctx context.Context, input *schemas.PutCodeBindingInput) (*schemas.PutCodeBindingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutCodeBindingWithContext(ctx, input)
+	output, err := client.PutCodeBindingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutResourcePolicy(ctx context.Context, input *schemas.PutResourcePolicyInput) (*schemas.PutResourcePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutResourcePolicyWithContext(ctx, input)
+	output, err := client.PutResourcePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SearchSchemas(ctx context.Context, input *schemas.SearchSchemasInput) (*schemas.SearchSchemasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SearchSchemasWithContext(ctx, input)
+	output, err := client.SearchSchemasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartDiscoverer(ctx context.Context, input *schemas.StartDiscovererInput) (*schemas.StartDiscovererOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartDiscovererWithContext(ctx, input)
+	output, err := client.StartDiscovererWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopDiscoverer(ctx context.Context, input *schemas.StopDiscovererInput) (*schemas.StopDiscovererOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopDiscovererWithContext(ctx, input)
+	output, err := client.StopDiscovererWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *schemas.TagResourceInput) (*schemas.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *schemas.UntagResourceInput) (*schemas.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDiscoverer(ctx context.Context, input *schemas.UpdateDiscovererInput) (*schemas.UpdateDiscovererOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDiscovererWithContext(ctx, input)
+	output, err := client.UpdateDiscovererWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRegistry(ctx context.Context, input *schemas.UpdateRegistryInput) (*schemas.UpdateRegistryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRegistryWithContext(ctx, input)
+	output, err := client.UpdateRegistryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateSchema(ctx context.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateSchemaWithContext(ctx, input)
+	output, err := client.UpdateSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilCodeBindingExists(ctx context.Context, input *schemas.DescribeCodeBindingInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilCodeBindingExistsWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilCodeBindingExistsWithContext(ctx, input, options...))
 	})
 }

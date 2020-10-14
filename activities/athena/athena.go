@@ -6,12 +6,14 @@ package athena
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/athena"
 	"github.com/aws/aws-sdk-go/service/athena/athenaiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (athenaiface.AthenaAPI, erro
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return athena.New(sess), nil
@@ -55,223 +57,279 @@ func (a *Activities) getClient(ctx context.Context) (athenaiface.AthenaAPI, erro
 func (a *Activities) BatchGetNamedQuery(ctx context.Context, input *athena.BatchGetNamedQueryInput) (*athena.BatchGetNamedQueryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetNamedQueryWithContext(ctx, input)
+	output, err := client.BatchGetNamedQueryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetQueryExecution(ctx context.Context, input *athena.BatchGetQueryExecutionInput) (*athena.BatchGetQueryExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetQueryExecutionWithContext(ctx, input)
+	output, err := client.BatchGetQueryExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDataCatalog(ctx context.Context, input *athena.CreateDataCatalogInput) (*athena.CreateDataCatalogOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDataCatalogWithContext(ctx, input)
+	output, err := client.CreateDataCatalogWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateNamedQuery(ctx context.Context, input *athena.CreateNamedQueryInput) (*athena.CreateNamedQueryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateNamedQueryWithContext(ctx, input)
+	output, err := client.CreateNamedQueryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateWorkGroup(ctx context.Context, input *athena.CreateWorkGroupInput) (*athena.CreateWorkGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateWorkGroupWithContext(ctx, input)
+	output, err := client.CreateWorkGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDataCatalog(ctx context.Context, input *athena.DeleteDataCatalogInput) (*athena.DeleteDataCatalogOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDataCatalogWithContext(ctx, input)
+	output, err := client.DeleteDataCatalogWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteNamedQuery(ctx context.Context, input *athena.DeleteNamedQueryInput) (*athena.DeleteNamedQueryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteNamedQueryWithContext(ctx, input)
+	output, err := client.DeleteNamedQueryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteWorkGroup(ctx context.Context, input *athena.DeleteWorkGroupInput) (*athena.DeleteWorkGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteWorkGroupWithContext(ctx, input)
+	output, err := client.DeleteWorkGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDataCatalog(ctx context.Context, input *athena.GetDataCatalogInput) (*athena.GetDataCatalogOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDataCatalogWithContext(ctx, input)
+	output, err := client.GetDataCatalogWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDatabase(ctx context.Context, input *athena.GetDatabaseInput) (*athena.GetDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDatabaseWithContext(ctx, input)
+	output, err := client.GetDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetNamedQuery(ctx context.Context, input *athena.GetNamedQueryInput) (*athena.GetNamedQueryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetNamedQueryWithContext(ctx, input)
+	output, err := client.GetNamedQueryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetQueryExecution(ctx context.Context, input *athena.GetQueryExecutionInput) (*athena.GetQueryExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetQueryExecutionWithContext(ctx, input)
+	output, err := client.GetQueryExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetQueryResults(ctx context.Context, input *athena.GetQueryResultsInput) (*athena.GetQueryResultsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetQueryResultsWithContext(ctx, input)
+	output, err := client.GetQueryResultsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTableMetadata(ctx context.Context, input *athena.GetTableMetadataInput) (*athena.GetTableMetadataOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTableMetadataWithContext(ctx, input)
+	output, err := client.GetTableMetadataWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetWorkGroup(ctx context.Context, input *athena.GetWorkGroupInput) (*athena.GetWorkGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetWorkGroupWithContext(ctx, input)
+	output, err := client.GetWorkGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDataCatalogs(ctx context.Context, input *athena.ListDataCatalogsInput) (*athena.ListDataCatalogsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDataCatalogsWithContext(ctx, input)
+	output, err := client.ListDataCatalogsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDatabases(ctx context.Context, input *athena.ListDatabasesInput) (*athena.ListDatabasesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDatabasesWithContext(ctx, input)
+	output, err := client.ListDatabasesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListNamedQueries(ctx context.Context, input *athena.ListNamedQueriesInput) (*athena.ListNamedQueriesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListNamedQueriesWithContext(ctx, input)
+	output, err := client.ListNamedQueriesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListQueryExecutions(ctx context.Context, input *athena.ListQueryExecutionsInput) (*athena.ListQueryExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListQueryExecutionsWithContext(ctx, input)
+	output, err := client.ListQueryExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTableMetadata(ctx context.Context, input *athena.ListTableMetadataInput) (*athena.ListTableMetadataOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTableMetadataWithContext(ctx, input)
+	output, err := client.ListTableMetadataWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *athena.ListTagsForResourceInput) (*athena.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListWorkGroups(ctx context.Context, input *athena.ListWorkGroupsInput) (*athena.ListWorkGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListWorkGroupsWithContext(ctx, input)
+	output, err := client.ListWorkGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartQueryExecution(ctx context.Context, input *athena.StartQueryExecutionInput) (*athena.StartQueryExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartQueryExecutionWithContext(ctx, input)
+	output, err := client.StartQueryExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopQueryExecution(ctx context.Context, input *athena.StopQueryExecutionInput) (*athena.StopQueryExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopQueryExecutionWithContext(ctx, input)
+	output, err := client.StopQueryExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *athena.TagResourceInput) (*athena.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *athena.UntagResourceInput) (*athena.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDataCatalog(ctx context.Context, input *athena.UpdateDataCatalogInput) (*athena.UpdateDataCatalogOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDataCatalogWithContext(ctx, input)
+	output, err := client.UpdateDataCatalogWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateWorkGroup(ctx context.Context, input *athena.UpdateWorkGroupInput) (*athena.UpdateWorkGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateWorkGroupWithContext(ctx, input)
+	output, err := client.UpdateWorkGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

@@ -6,8 +6,9 @@ package elasticsearchservicestub
 
 import (
 	"github.com/aws/aws-sdk-go/service/elasticsearchservice"
-	"go.temporal.io/aws-sdk/clients"
 	"go.temporal.io/sdk/workflow"
+
+	"go.temporal.io/aws-sdk/clients"
 )
 
 // ensure that imports are valid even if not used by the generated code

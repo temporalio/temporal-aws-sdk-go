@@ -6,12 +6,14 @@ package personalizeruntime
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/personalizeruntime"
 	"github.com/aws/aws-sdk-go/service/personalizeruntime/personalizeruntimeiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (personalizeruntimeiface.Per
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return personalizeruntime.New(sess), nil
@@ -55,15 +57,19 @@ func (a *Activities) getClient(ctx context.Context) (personalizeruntimeiface.Per
 func (a *Activities) GetPersonalizedRanking(ctx context.Context, input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPersonalizedRankingWithContext(ctx, input)
+	output, err := client.GetPersonalizedRankingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRecommendations(ctx context.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRecommendationsWithContext(ctx, input)
+	output, err := client.GetRecommendationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

@@ -6,12 +6,14 @@ package mobileanalytics
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/mobileanalytics"
 	"github.com/aws/aws-sdk-go/service/mobileanalytics/mobileanalyticsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (mobileanalyticsiface.Mobile
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return mobileanalytics.New(sess), nil
@@ -55,7 +57,9 @@ func (a *Activities) getClient(ctx context.Context) (mobileanalyticsiface.Mobile
 func (a *Activities) PutEvents(ctx context.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutEventsWithContext(ctx, input)
+	output, err := client.PutEventsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

@@ -6,12 +6,14 @@ package braket
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/braket"
 	"github.com/aws/aws-sdk-go/service/braket/braketiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (braketiface.BraketAPI, erro
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return braket.New(sess), nil
@@ -55,49 +57,61 @@ func (a *Activities) getClient(ctx context.Context) (braketiface.BraketAPI, erro
 func (a *Activities) CancelQuantumTask(ctx context.Context, input *braket.CancelQuantumTaskInput) (*braket.CancelQuantumTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CancelQuantumTaskWithContext(ctx, input)
+	output, err := client.CancelQuantumTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateQuantumTask(ctx context.Context, input *braket.CreateQuantumTaskInput) (*braket.CreateQuantumTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateQuantumTaskWithContext(ctx, input)
+	output, err := client.CreateQuantumTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDevice(ctx context.Context, input *braket.GetDeviceInput) (*braket.GetDeviceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDeviceWithContext(ctx, input)
+	output, err := client.GetDeviceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetQuantumTask(ctx context.Context, input *braket.GetQuantumTaskInput) (*braket.GetQuantumTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetQuantumTaskWithContext(ctx, input)
+	output, err := client.GetQuantumTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SearchDevices(ctx context.Context, input *braket.SearchDevicesInput) (*braket.SearchDevicesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SearchDevicesWithContext(ctx, input)
+	output, err := client.SearchDevicesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SearchQuantumTasks(ctx context.Context, input *braket.SearchQuantumTasksInput) (*braket.SearchQuantumTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SearchQuantumTasksWithContext(ctx, input)
+	output, err := client.SearchQuantumTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

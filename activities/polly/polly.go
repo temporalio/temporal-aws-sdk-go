@@ -6,12 +6,14 @@ package polly
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/polly"
 	"github.com/aws/aws-sdk-go/service/polly/pollyiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (pollyiface.PollyAPI, error)
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return polly.New(sess), nil
@@ -55,71 +57,89 @@ func (a *Activities) getClient(ctx context.Context) (pollyiface.PollyAPI, error)
 func (a *Activities) DeleteLexicon(ctx context.Context, input *polly.DeleteLexiconInput) (*polly.DeleteLexiconOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteLexiconWithContext(ctx, input)
+	output, err := client.DeleteLexiconWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeVoices(ctx context.Context, input *polly.DescribeVoicesInput) (*polly.DescribeVoicesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeVoicesWithContext(ctx, input)
+	output, err := client.DescribeVoicesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetLexicon(ctx context.Context, input *polly.GetLexiconInput) (*polly.GetLexiconOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetLexiconWithContext(ctx, input)
+	output, err := client.GetLexiconWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSpeechSynthesisTask(ctx context.Context, input *polly.GetSpeechSynthesisTaskInput) (*polly.GetSpeechSynthesisTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSpeechSynthesisTaskWithContext(ctx, input)
+	output, err := client.GetSpeechSynthesisTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListLexicons(ctx context.Context, input *polly.ListLexiconsInput) (*polly.ListLexiconsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListLexiconsWithContext(ctx, input)
+	output, err := client.ListLexiconsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSpeechSynthesisTasks(ctx context.Context, input *polly.ListSpeechSynthesisTasksInput) (*polly.ListSpeechSynthesisTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSpeechSynthesisTasksWithContext(ctx, input)
+	output, err := client.ListSpeechSynthesisTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutLexicon(ctx context.Context, input *polly.PutLexiconInput) (*polly.PutLexiconOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutLexiconWithContext(ctx, input)
+	output, err := client.PutLexiconWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartSpeechSynthesisTask(ctx context.Context, input *polly.StartSpeechSynthesisTaskInput) (*polly.StartSpeechSynthesisTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartSpeechSynthesisTaskWithContext(ctx, input)
+	output, err := client.StartSpeechSynthesisTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SynthesizeSpeech(ctx context.Context, input *polly.SynthesizeSpeechInput) (*polly.SynthesizeSpeechOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SynthesizeSpeechWithContext(ctx, input)
+	output, err := client.SynthesizeSpeechWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
