@@ -13,8 +13,9 @@ $(BUILD):
 	@mkdir -p $(BUILD)
 
 $(BUILD)/generate: $(BUILD) $(ALL_TEMPLATES) ## generate code based on templates in templates directory
-	go get go.temporal.io/aws-sdk-generator
-	aws-sdk-generator --template-dir templates --output-dir .
+	mkdir -p bin/
+	GOBIN=$$PWD/bin go get -modfile generator.mod go.temporal.io/aws-sdk-generator
+	bin/aws-sdk-generator --template-dir templates --output-dir .
 	touch $(BUILD)/generate
 
 $(BUILD)/clients: $(BUILD)/generate
