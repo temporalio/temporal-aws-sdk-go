@@ -6,12 +6,14 @@ package mobile
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/mobile"
 	"github.com/aws/aws-sdk-go/service/mobile/mobileiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (mobileiface.MobileAPI, erro
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return mobile.New(sess), nil
@@ -55,71 +57,89 @@ func (a *Activities) getClient(ctx context.Context) (mobileiface.MobileAPI, erro
 func (a *Activities) CreateProject(ctx context.Context, input *mobile.CreateProjectInput) (*mobile.CreateProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateProjectWithContext(ctx, input)
+	output, err := client.CreateProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteProject(ctx context.Context, input *mobile.DeleteProjectInput) (*mobile.DeleteProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteProjectWithContext(ctx, input)
+	output, err := client.DeleteProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBundle(ctx context.Context, input *mobile.DescribeBundleInput) (*mobile.DescribeBundleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBundleWithContext(ctx, input)
+	output, err := client.DescribeBundleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeProject(ctx context.Context, input *mobile.DescribeProjectInput) (*mobile.DescribeProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeProjectWithContext(ctx, input)
+	output, err := client.DescribeProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ExportBundle(ctx context.Context, input *mobile.ExportBundleInput) (*mobile.ExportBundleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ExportBundleWithContext(ctx, input)
+	output, err := client.ExportBundleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ExportProject(ctx context.Context, input *mobile.ExportProjectInput) (*mobile.ExportProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ExportProjectWithContext(ctx, input)
+	output, err := client.ExportProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListBundles(ctx context.Context, input *mobile.ListBundlesInput) (*mobile.ListBundlesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListBundlesWithContext(ctx, input)
+	output, err := client.ListBundlesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListProjects(ctx context.Context, input *mobile.ListProjectsInput) (*mobile.ListProjectsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListProjectsWithContext(ctx, input)
+	output, err := client.ListProjectsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateProject(ctx context.Context, input *mobile.UpdateProjectInput) (*mobile.UpdateProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateProjectWithContext(ctx, input)
+	output, err := client.UpdateProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

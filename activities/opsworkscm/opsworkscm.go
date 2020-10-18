@@ -6,12 +6,14 @@ package opsworkscm
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/opsworkscm"
 	"github.com/aws/aws-sdk-go/service/opsworkscm/opsworkscmiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (opsworkscmiface.OpsWorksCMA
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return opsworkscm.New(sess), nil
@@ -55,161 +57,199 @@ func (a *Activities) getClient(ctx context.Context) (opsworkscmiface.OpsWorksCMA
 func (a *Activities) AssociateNode(ctx context.Context, input *opsworkscm.AssociateNodeInput) (*opsworkscm.AssociateNodeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateNodeWithContext(ctx, input)
+	output, err := client.AssociateNodeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateBackup(ctx context.Context, input *opsworkscm.CreateBackupInput) (*opsworkscm.CreateBackupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateBackupWithContext(ctx, input)
+	output, err := client.CreateBackupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateServer(ctx context.Context, input *opsworkscm.CreateServerInput) (*opsworkscm.CreateServerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateServerWithContext(ctx, input)
+	output, err := client.CreateServerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteBackup(ctx context.Context, input *opsworkscm.DeleteBackupInput) (*opsworkscm.DeleteBackupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteBackupWithContext(ctx, input)
+	output, err := client.DeleteBackupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteServer(ctx context.Context, input *opsworkscm.DeleteServerInput) (*opsworkscm.DeleteServerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteServerWithContext(ctx, input)
+	output, err := client.DeleteServerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAccountAttributes(ctx context.Context, input *opsworkscm.DescribeAccountAttributesInput) (*opsworkscm.DescribeAccountAttributesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAccountAttributesWithContext(ctx, input)
+	output, err := client.DescribeAccountAttributesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBackups(ctx context.Context, input *opsworkscm.DescribeBackupsInput) (*opsworkscm.DescribeBackupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBackupsWithContext(ctx, input)
+	output, err := client.DescribeBackupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEvents(ctx context.Context, input *opsworkscm.DescribeEventsInput) (*opsworkscm.DescribeEventsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEventsWithContext(ctx, input)
+	output, err := client.DescribeEventsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeNodeAssociationStatus(ctx context.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) (*opsworkscm.DescribeNodeAssociationStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeNodeAssociationStatusWithContext(ctx, input)
+	output, err := client.DescribeNodeAssociationStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeServers(ctx context.Context, input *opsworkscm.DescribeServersInput) (*opsworkscm.DescribeServersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeServersWithContext(ctx, input)
+	output, err := client.DescribeServersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateNode(ctx context.Context, input *opsworkscm.DisassociateNodeInput) (*opsworkscm.DisassociateNodeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateNodeWithContext(ctx, input)
+	output, err := client.DisassociateNodeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ExportServerEngineAttribute(ctx context.Context, input *opsworkscm.ExportServerEngineAttributeInput) (*opsworkscm.ExportServerEngineAttributeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ExportServerEngineAttributeWithContext(ctx, input)
+	output, err := client.ExportServerEngineAttributeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *opsworkscm.ListTagsForResourceInput) (*opsworkscm.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreServer(ctx context.Context, input *opsworkscm.RestoreServerInput) (*opsworkscm.RestoreServerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreServerWithContext(ctx, input)
+	output, err := client.RestoreServerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartMaintenance(ctx context.Context, input *opsworkscm.StartMaintenanceInput) (*opsworkscm.StartMaintenanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartMaintenanceWithContext(ctx, input)
+	output, err := client.StartMaintenanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *opsworkscm.TagResourceInput) (*opsworkscm.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *opsworkscm.UntagResourceInput) (*opsworkscm.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateServer(ctx context.Context, input *opsworkscm.UpdateServerInput) (*opsworkscm.UpdateServerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateServerWithContext(ctx, input)
+	output, err := client.UpdateServerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateServerEngineAttributes(ctx context.Context, input *opsworkscm.UpdateServerEngineAttributesInput) (*opsworkscm.UpdateServerEngineAttributesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateServerEngineAttributesWithContext(ctx, input)
+	output, err := client.UpdateServerEngineAttributesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilNodeAssociated(ctx context.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilNodeAssociatedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilNodeAssociatedWithContext(ctx, input, options...))
 	})
 }

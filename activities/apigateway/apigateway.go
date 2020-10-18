@@ -6,12 +6,14 @@ package apigateway
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/apigateway"
 	"github.com/aws/aws-sdk-go/service/apigateway/apigatewayiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (apigatewayiface.APIGatewayA
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return apigateway.New(sess), nil
@@ -55,959 +57,1199 @@ func (a *Activities) getClient(ctx context.Context) (apigatewayiface.APIGatewayA
 func (a *Activities) CreateApiKey(ctx context.Context, input *apigateway.CreateApiKeyInput) (*apigateway.ApiKey, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateApiKeyWithContext(ctx, input)
+	output, err := client.CreateApiKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAuthorizer(ctx context.Context, input *apigateway.CreateAuthorizerInput) (*apigateway.Authorizer, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAuthorizerWithContext(ctx, input)
+	output, err := client.CreateAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateBasePathMapping(ctx context.Context, input *apigateway.CreateBasePathMappingInput) (*apigateway.BasePathMapping, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateBasePathMappingWithContext(ctx, input)
+	output, err := client.CreateBasePathMappingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDeployment(ctx context.Context, input *apigateway.CreateDeploymentInput) (*apigateway.Deployment, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDeploymentWithContext(ctx, input)
+	output, err := client.CreateDeploymentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDocumentationPart(ctx context.Context, input *apigateway.CreateDocumentationPartInput) (*apigateway.DocumentationPart, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDocumentationPartWithContext(ctx, input)
+	output, err := client.CreateDocumentationPartWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDocumentationVersion(ctx context.Context, input *apigateway.CreateDocumentationVersionInput) (*apigateway.DocumentationVersion, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDocumentationVersionWithContext(ctx, input)
+	output, err := client.CreateDocumentationVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDomainName(ctx context.Context, input *apigateway.CreateDomainNameInput) (*apigateway.DomainName, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDomainNameWithContext(ctx, input)
+	output, err := client.CreateDomainNameWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateModel(ctx context.Context, input *apigateway.CreateModelInput) (*apigateway.Model, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateModelWithContext(ctx, input)
+	output, err := client.CreateModelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateRequestValidator(ctx context.Context, input *apigateway.CreateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateRequestValidatorWithContext(ctx, input)
+	output, err := client.CreateRequestValidatorWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateResource(ctx context.Context, input *apigateway.CreateResourceInput) (*apigateway.Resource, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateResourceWithContext(ctx, input)
+	output, err := client.CreateResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateRestApi(ctx context.Context, input *apigateway.CreateRestApiInput) (*apigateway.RestApi, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateRestApiWithContext(ctx, input)
+	output, err := client.CreateRestApiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateStage(ctx context.Context, input *apigateway.CreateStageInput) (*apigateway.Stage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateStageWithContext(ctx, input)
+	output, err := client.CreateStageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateUsagePlan(ctx context.Context, input *apigateway.CreateUsagePlanInput) (*apigateway.UsagePlan, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateUsagePlanWithContext(ctx, input)
+	output, err := client.CreateUsagePlanWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateUsagePlanKey(ctx context.Context, input *apigateway.CreateUsagePlanKeyInput) (*apigateway.UsagePlanKey, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateUsagePlanKeyWithContext(ctx, input)
+	output, err := client.CreateUsagePlanKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateVpcLink(ctx context.Context, input *apigateway.CreateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateVpcLinkWithContext(ctx, input)
+	output, err := client.CreateVpcLinkWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApiKey(ctx context.Context, input *apigateway.DeleteApiKeyInput) (*apigateway.DeleteApiKeyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteApiKeyWithContext(ctx, input)
+	output, err := client.DeleteApiKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAuthorizer(ctx context.Context, input *apigateway.DeleteAuthorizerInput) (*apigateway.DeleteAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAuthorizerWithContext(ctx, input)
+	output, err := client.DeleteAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteBasePathMapping(ctx context.Context, input *apigateway.DeleteBasePathMappingInput) (*apigateway.DeleteBasePathMappingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteBasePathMappingWithContext(ctx, input)
+	output, err := client.DeleteBasePathMappingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteClientCertificate(ctx context.Context, input *apigateway.DeleteClientCertificateInput) (*apigateway.DeleteClientCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteClientCertificateWithContext(ctx, input)
+	output, err := client.DeleteClientCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDeployment(ctx context.Context, input *apigateway.DeleteDeploymentInput) (*apigateway.DeleteDeploymentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDeploymentWithContext(ctx, input)
+	output, err := client.DeleteDeploymentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDocumentationPart(ctx context.Context, input *apigateway.DeleteDocumentationPartInput) (*apigateway.DeleteDocumentationPartOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDocumentationPartWithContext(ctx, input)
+	output, err := client.DeleteDocumentationPartWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDocumentationVersion(ctx context.Context, input *apigateway.DeleteDocumentationVersionInput) (*apigateway.DeleteDocumentationVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDocumentationVersionWithContext(ctx, input)
+	output, err := client.DeleteDocumentationVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDomainName(ctx context.Context, input *apigateway.DeleteDomainNameInput) (*apigateway.DeleteDomainNameOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDomainNameWithContext(ctx, input)
+	output, err := client.DeleteDomainNameWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteGatewayResponse(ctx context.Context, input *apigateway.DeleteGatewayResponseInput) (*apigateway.DeleteGatewayResponseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteGatewayResponseWithContext(ctx, input)
+	output, err := client.DeleteGatewayResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteIntegration(ctx context.Context, input *apigateway.DeleteIntegrationInput) (*apigateway.DeleteIntegrationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteIntegrationWithContext(ctx, input)
+	output, err := client.DeleteIntegrationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteIntegrationResponse(ctx context.Context, input *apigateway.DeleteIntegrationResponseInput) (*apigateway.DeleteIntegrationResponseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteIntegrationResponseWithContext(ctx, input)
+	output, err := client.DeleteIntegrationResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMethod(ctx context.Context, input *apigateway.DeleteMethodInput) (*apigateway.DeleteMethodOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMethodWithContext(ctx, input)
+	output, err := client.DeleteMethodWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMethodResponse(ctx context.Context, input *apigateway.DeleteMethodResponseInput) (*apigateway.DeleteMethodResponseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMethodResponseWithContext(ctx, input)
+	output, err := client.DeleteMethodResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteModel(ctx context.Context, input *apigateway.DeleteModelInput) (*apigateway.DeleteModelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteModelWithContext(ctx, input)
+	output, err := client.DeleteModelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteRequestValidator(ctx context.Context, input *apigateway.DeleteRequestValidatorInput) (*apigateway.DeleteRequestValidatorOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteRequestValidatorWithContext(ctx, input)
+	output, err := client.DeleteRequestValidatorWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteResource(ctx context.Context, input *apigateway.DeleteResourceInput) (*apigateway.DeleteResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteResourceWithContext(ctx, input)
+	output, err := client.DeleteResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteRestApi(ctx context.Context, input *apigateway.DeleteRestApiInput) (*apigateway.DeleteRestApiOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteRestApiWithContext(ctx, input)
+	output, err := client.DeleteRestApiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteStage(ctx context.Context, input *apigateway.DeleteStageInput) (*apigateway.DeleteStageOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteStageWithContext(ctx, input)
+	output, err := client.DeleteStageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUsagePlan(ctx context.Context, input *apigateway.DeleteUsagePlanInput) (*apigateway.DeleteUsagePlanOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUsagePlanWithContext(ctx, input)
+	output, err := client.DeleteUsagePlanWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUsagePlanKey(ctx context.Context, input *apigateway.DeleteUsagePlanKeyInput) (*apigateway.DeleteUsagePlanKeyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUsagePlanKeyWithContext(ctx, input)
+	output, err := client.DeleteUsagePlanKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteVpcLink(ctx context.Context, input *apigateway.DeleteVpcLinkInput) (*apigateway.DeleteVpcLinkOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteVpcLinkWithContext(ctx, input)
+	output, err := client.DeleteVpcLinkWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) FlushStageAuthorizersCache(ctx context.Context, input *apigateway.FlushStageAuthorizersCacheInput) (*apigateway.FlushStageAuthorizersCacheOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.FlushStageAuthorizersCacheWithContext(ctx, input)
+	output, err := client.FlushStageAuthorizersCacheWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) FlushStageCache(ctx context.Context, input *apigateway.FlushStageCacheInput) (*apigateway.FlushStageCacheOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.FlushStageCacheWithContext(ctx, input)
+	output, err := client.FlushStageCacheWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GenerateClientCertificate(ctx context.Context, input *apigateway.GenerateClientCertificateInput) (*apigateway.ClientCertificate, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GenerateClientCertificateWithContext(ctx, input)
+	output, err := client.GenerateClientCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAccount(ctx context.Context, input *apigateway.GetAccountInput) (*apigateway.Account, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAccountWithContext(ctx, input)
+	output, err := client.GetAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApiKey(ctx context.Context, input *apigateway.GetApiKeyInput) (*apigateway.ApiKey, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApiKeyWithContext(ctx, input)
+	output, err := client.GetApiKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApiKeys(ctx context.Context, input *apigateway.GetApiKeysInput) (*apigateway.GetApiKeysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApiKeysWithContext(ctx, input)
+	output, err := client.GetApiKeysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAuthorizer(ctx context.Context, input *apigateway.GetAuthorizerInput) (*apigateway.Authorizer, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAuthorizerWithContext(ctx, input)
+	output, err := client.GetAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAuthorizers(ctx context.Context, input *apigateway.GetAuthorizersInput) (*apigateway.GetAuthorizersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAuthorizersWithContext(ctx, input)
+	output, err := client.GetAuthorizersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetBasePathMapping(ctx context.Context, input *apigateway.GetBasePathMappingInput) (*apigateway.BasePathMapping, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetBasePathMappingWithContext(ctx, input)
+	output, err := client.GetBasePathMappingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetBasePathMappings(ctx context.Context, input *apigateway.GetBasePathMappingsInput) (*apigateway.GetBasePathMappingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetBasePathMappingsWithContext(ctx, input)
+	output, err := client.GetBasePathMappingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetClientCertificate(ctx context.Context, input *apigateway.GetClientCertificateInput) (*apigateway.ClientCertificate, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetClientCertificateWithContext(ctx, input)
+	output, err := client.GetClientCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetClientCertificates(ctx context.Context, input *apigateway.GetClientCertificatesInput) (*apigateway.GetClientCertificatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetClientCertificatesWithContext(ctx, input)
+	output, err := client.GetClientCertificatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDeployment(ctx context.Context, input *apigateway.GetDeploymentInput) (*apigateway.Deployment, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDeploymentWithContext(ctx, input)
+	output, err := client.GetDeploymentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDeployments(ctx context.Context, input *apigateway.GetDeploymentsInput) (*apigateway.GetDeploymentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDeploymentsWithContext(ctx, input)
+	output, err := client.GetDeploymentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocumentationPart(ctx context.Context, input *apigateway.GetDocumentationPartInput) (*apigateway.DocumentationPart, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentationPartWithContext(ctx, input)
+	output, err := client.GetDocumentationPartWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocumentationParts(ctx context.Context, input *apigateway.GetDocumentationPartsInput) (*apigateway.GetDocumentationPartsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentationPartsWithContext(ctx, input)
+	output, err := client.GetDocumentationPartsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocumentationVersion(ctx context.Context, input *apigateway.GetDocumentationVersionInput) (*apigateway.DocumentationVersion, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentationVersionWithContext(ctx, input)
+	output, err := client.GetDocumentationVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocumentationVersions(ctx context.Context, input *apigateway.GetDocumentationVersionsInput) (*apigateway.GetDocumentationVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentationVersionsWithContext(ctx, input)
+	output, err := client.GetDocumentationVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDomainName(ctx context.Context, input *apigateway.GetDomainNameInput) (*apigateway.DomainName, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDomainNameWithContext(ctx, input)
+	output, err := client.GetDomainNameWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDomainNames(ctx context.Context, input *apigateway.GetDomainNamesInput) (*apigateway.GetDomainNamesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDomainNamesWithContext(ctx, input)
+	output, err := client.GetDomainNamesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetExport(ctx context.Context, input *apigateway.GetExportInput) (*apigateway.GetExportOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetExportWithContext(ctx, input)
+	output, err := client.GetExportWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetGatewayResponse(ctx context.Context, input *apigateway.GetGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetGatewayResponseWithContext(ctx, input)
+	output, err := client.GetGatewayResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetGatewayResponses(ctx context.Context, input *apigateway.GetGatewayResponsesInput) (*apigateway.GetGatewayResponsesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetGatewayResponsesWithContext(ctx, input)
+	output, err := client.GetGatewayResponsesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetIntegration(ctx context.Context, input *apigateway.GetIntegrationInput) (*apigateway.Integration, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetIntegrationWithContext(ctx, input)
+	output, err := client.GetIntegrationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetIntegrationResponse(ctx context.Context, input *apigateway.GetIntegrationResponseInput) (*apigateway.IntegrationResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetIntegrationResponseWithContext(ctx, input)
+	output, err := client.GetIntegrationResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMethod(ctx context.Context, input *apigateway.GetMethodInput) (*apigateway.Method, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMethodWithContext(ctx, input)
+	output, err := client.GetMethodWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMethodResponse(ctx context.Context, input *apigateway.GetMethodResponseInput) (*apigateway.MethodResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMethodResponseWithContext(ctx, input)
+	output, err := client.GetMethodResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetModel(ctx context.Context, input *apigateway.GetModelInput) (*apigateway.Model, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetModelWithContext(ctx, input)
+	output, err := client.GetModelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetModelTemplate(ctx context.Context, input *apigateway.GetModelTemplateInput) (*apigateway.GetModelTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetModelTemplateWithContext(ctx, input)
+	output, err := client.GetModelTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetModels(ctx context.Context, input *apigateway.GetModelsInput) (*apigateway.GetModelsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetModelsWithContext(ctx, input)
+	output, err := client.GetModelsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRequestValidator(ctx context.Context, input *apigateway.GetRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRequestValidatorWithContext(ctx, input)
+	output, err := client.GetRequestValidatorWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRequestValidators(ctx context.Context, input *apigateway.GetRequestValidatorsInput) (*apigateway.GetRequestValidatorsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRequestValidatorsWithContext(ctx, input)
+	output, err := client.GetRequestValidatorsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResource(ctx context.Context, input *apigateway.GetResourceInput) (*apigateway.Resource, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourceWithContext(ctx, input)
+	output, err := client.GetResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResources(ctx context.Context, input *apigateway.GetResourcesInput) (*apigateway.GetResourcesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourcesWithContext(ctx, input)
+	output, err := client.GetResourcesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRestApi(ctx context.Context, input *apigateway.GetRestApiInput) (*apigateway.RestApi, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRestApiWithContext(ctx, input)
+	output, err := client.GetRestApiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRestApis(ctx context.Context, input *apigateway.GetRestApisInput) (*apigateway.GetRestApisOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRestApisWithContext(ctx, input)
+	output, err := client.GetRestApisWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSdk(ctx context.Context, input *apigateway.GetSdkInput) (*apigateway.GetSdkOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSdkWithContext(ctx, input)
+	output, err := client.GetSdkWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSdkType(ctx context.Context, input *apigateway.GetSdkTypeInput) (*apigateway.SdkType, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSdkTypeWithContext(ctx, input)
+	output, err := client.GetSdkTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSdkTypes(ctx context.Context, input *apigateway.GetSdkTypesInput) (*apigateway.GetSdkTypesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSdkTypesWithContext(ctx, input)
+	output, err := client.GetSdkTypesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetStage(ctx context.Context, input *apigateway.GetStageInput) (*apigateway.Stage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetStageWithContext(ctx, input)
+	output, err := client.GetStageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetStages(ctx context.Context, input *apigateway.GetStagesInput) (*apigateway.GetStagesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetStagesWithContext(ctx, input)
+	output, err := client.GetStagesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTags(ctx context.Context, input *apigateway.GetTagsInput) (*apigateway.GetTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTagsWithContext(ctx, input)
+	output, err := client.GetTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetUsage(ctx context.Context, input *apigateway.GetUsageInput) (*apigateway.Usage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetUsageWithContext(ctx, input)
+	output, err := client.GetUsageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetUsagePlan(ctx context.Context, input *apigateway.GetUsagePlanInput) (*apigateway.UsagePlan, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetUsagePlanWithContext(ctx, input)
+	output, err := client.GetUsagePlanWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetUsagePlanKey(ctx context.Context, input *apigateway.GetUsagePlanKeyInput) (*apigateway.UsagePlanKey, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetUsagePlanKeyWithContext(ctx, input)
+	output, err := client.GetUsagePlanKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetUsagePlanKeys(ctx context.Context, input *apigateway.GetUsagePlanKeysInput) (*apigateway.GetUsagePlanKeysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetUsagePlanKeysWithContext(ctx, input)
+	output, err := client.GetUsagePlanKeysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetUsagePlans(ctx context.Context, input *apigateway.GetUsagePlansInput) (*apigateway.GetUsagePlansOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetUsagePlansWithContext(ctx, input)
+	output, err := client.GetUsagePlansWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetVpcLink(ctx context.Context, input *apigateway.GetVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetVpcLinkWithContext(ctx, input)
+	output, err := client.GetVpcLinkWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetVpcLinks(ctx context.Context, input *apigateway.GetVpcLinksInput) (*apigateway.GetVpcLinksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetVpcLinksWithContext(ctx, input)
+	output, err := client.GetVpcLinksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportApiKeys(ctx context.Context, input *apigateway.ImportApiKeysInput) (*apigateway.ImportApiKeysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportApiKeysWithContext(ctx, input)
+	output, err := client.ImportApiKeysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportDocumentationParts(ctx context.Context, input *apigateway.ImportDocumentationPartsInput) (*apigateway.ImportDocumentationPartsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportDocumentationPartsWithContext(ctx, input)
+	output, err := client.ImportDocumentationPartsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportRestApi(ctx context.Context, input *apigateway.ImportRestApiInput) (*apigateway.RestApi, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportRestApiWithContext(ctx, input)
+	output, err := client.ImportRestApiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutGatewayResponse(ctx context.Context, input *apigateway.PutGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutGatewayResponseWithContext(ctx, input)
+	output, err := client.PutGatewayResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutIntegration(ctx context.Context, input *apigateway.PutIntegrationInput) (*apigateway.Integration, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutIntegrationWithContext(ctx, input)
+	output, err := client.PutIntegrationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutIntegrationResponse(ctx context.Context, input *apigateway.PutIntegrationResponseInput) (*apigateway.IntegrationResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutIntegrationResponseWithContext(ctx, input)
+	output, err := client.PutIntegrationResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutMethod(ctx context.Context, input *apigateway.PutMethodInput) (*apigateway.Method, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutMethodWithContext(ctx, input)
+	output, err := client.PutMethodWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutMethodResponse(ctx context.Context, input *apigateway.PutMethodResponseInput) (*apigateway.MethodResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutMethodResponseWithContext(ctx, input)
+	output, err := client.PutMethodResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutRestApi(ctx context.Context, input *apigateway.PutRestApiInput) (*apigateway.RestApi, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutRestApiWithContext(ctx, input)
+	output, err := client.PutRestApiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *apigateway.TagResourceInput) (*apigateway.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TestInvokeAuthorizer(ctx context.Context, input *apigateway.TestInvokeAuthorizerInput) (*apigateway.TestInvokeAuthorizerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TestInvokeAuthorizerWithContext(ctx, input)
+	output, err := client.TestInvokeAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TestInvokeMethod(ctx context.Context, input *apigateway.TestInvokeMethodInput) (*apigateway.TestInvokeMethodOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TestInvokeMethodWithContext(ctx, input)
+	output, err := client.TestInvokeMethodWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *apigateway.UntagResourceInput) (*apigateway.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAccount(ctx context.Context, input *apigateway.UpdateAccountInput) (*apigateway.Account, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAccountWithContext(ctx, input)
+	output, err := client.UpdateAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApiKey(ctx context.Context, input *apigateway.UpdateApiKeyInput) (*apigateway.ApiKey, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApiKeyWithContext(ctx, input)
+	output, err := client.UpdateApiKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAuthorizer(ctx context.Context, input *apigateway.UpdateAuthorizerInput) (*apigateway.Authorizer, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAuthorizerWithContext(ctx, input)
+	output, err := client.UpdateAuthorizerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateBasePathMapping(ctx context.Context, input *apigateway.UpdateBasePathMappingInput) (*apigateway.BasePathMapping, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateBasePathMappingWithContext(ctx, input)
+	output, err := client.UpdateBasePathMappingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateClientCertificate(ctx context.Context, input *apigateway.UpdateClientCertificateInput) (*apigateway.ClientCertificate, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateClientCertificateWithContext(ctx, input)
+	output, err := client.UpdateClientCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDeployment(ctx context.Context, input *apigateway.UpdateDeploymentInput) (*apigateway.Deployment, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDeploymentWithContext(ctx, input)
+	output, err := client.UpdateDeploymentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDocumentationPart(ctx context.Context, input *apigateway.UpdateDocumentationPartInput) (*apigateway.DocumentationPart, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDocumentationPartWithContext(ctx, input)
+	output, err := client.UpdateDocumentationPartWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDocumentationVersion(ctx context.Context, input *apigateway.UpdateDocumentationVersionInput) (*apigateway.DocumentationVersion, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDocumentationVersionWithContext(ctx, input)
+	output, err := client.UpdateDocumentationVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDomainName(ctx context.Context, input *apigateway.UpdateDomainNameInput) (*apigateway.DomainName, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDomainNameWithContext(ctx, input)
+	output, err := client.UpdateDomainNameWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateGatewayResponse(ctx context.Context, input *apigateway.UpdateGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateGatewayResponseWithContext(ctx, input)
+	output, err := client.UpdateGatewayResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateIntegration(ctx context.Context, input *apigateway.UpdateIntegrationInput) (*apigateway.Integration, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateIntegrationWithContext(ctx, input)
+	output, err := client.UpdateIntegrationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateIntegrationResponse(ctx context.Context, input *apigateway.UpdateIntegrationResponseInput) (*apigateway.IntegrationResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateIntegrationResponseWithContext(ctx, input)
+	output, err := client.UpdateIntegrationResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMethod(ctx context.Context, input *apigateway.UpdateMethodInput) (*apigateway.Method, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMethodWithContext(ctx, input)
+	output, err := client.UpdateMethodWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMethodResponse(ctx context.Context, input *apigateway.UpdateMethodResponseInput) (*apigateway.MethodResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMethodResponseWithContext(ctx, input)
+	output, err := client.UpdateMethodResponseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateModel(ctx context.Context, input *apigateway.UpdateModelInput) (*apigateway.Model, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateModelWithContext(ctx, input)
+	output, err := client.UpdateModelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRequestValidator(ctx context.Context, input *apigateway.UpdateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRequestValidatorWithContext(ctx, input)
+	output, err := client.UpdateRequestValidatorWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateResource(ctx context.Context, input *apigateway.UpdateResourceInput) (*apigateway.Resource, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateResourceWithContext(ctx, input)
+	output, err := client.UpdateResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRestApi(ctx context.Context, input *apigateway.UpdateRestApiInput) (*apigateway.RestApi, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRestApiWithContext(ctx, input)
+	output, err := client.UpdateRestApiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateStage(ctx context.Context, input *apigateway.UpdateStageInput) (*apigateway.Stage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateStageWithContext(ctx, input)
+	output, err := client.UpdateStageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateUsage(ctx context.Context, input *apigateway.UpdateUsageInput) (*apigateway.Usage, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateUsageWithContext(ctx, input)
+	output, err := client.UpdateUsageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateUsagePlan(ctx context.Context, input *apigateway.UpdateUsagePlanInput) (*apigateway.UsagePlan, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateUsagePlanWithContext(ctx, input)
+	output, err := client.UpdateUsagePlanWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateVpcLink(ctx context.Context, input *apigateway.UpdateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateVpcLinkWithContext(ctx, input)
+	output, err := client.UpdateVpcLinkWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

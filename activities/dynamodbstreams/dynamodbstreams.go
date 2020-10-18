@@ -6,12 +6,14 @@ package dynamodbstreams
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/dynamodbstreams"
 	"github.com/aws/aws-sdk-go/service/dynamodbstreams/dynamodbstreamsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (dynamodbstreamsiface.Dynamo
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return dynamodbstreams.New(sess), nil
@@ -55,31 +57,39 @@ func (a *Activities) getClient(ctx context.Context) (dynamodbstreamsiface.Dynamo
 func (a *Activities) DescribeStream(ctx context.Context, input *dynamodbstreams.DescribeStreamInput) (*dynamodbstreams.DescribeStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeStreamWithContext(ctx, input)
+	output, err := client.DescribeStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRecords(ctx context.Context, input *dynamodbstreams.GetRecordsInput) (*dynamodbstreams.GetRecordsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRecordsWithContext(ctx, input)
+	output, err := client.GetRecordsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetShardIterator(ctx context.Context, input *dynamodbstreams.GetShardIteratorInput) (*dynamodbstreams.GetShardIteratorOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetShardIteratorWithContext(ctx, input)
+	output, err := client.GetShardIteratorWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListStreams(ctx context.Context, input *dynamodbstreams.ListStreamsInput) (*dynamodbstreams.ListStreamsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListStreamsWithContext(ctx, input)
+	output, err := client.ListStreamsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

@@ -6,12 +6,14 @@ package mediastoredata
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/mediastoredata"
 	"github.com/aws/aws-sdk-go/service/mediastoredata/mediastoredataiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (mediastoredataiface.MediaSt
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return mediastoredata.New(sess), nil
@@ -55,39 +57,49 @@ func (a *Activities) getClient(ctx context.Context) (mediastoredataiface.MediaSt
 func (a *Activities) DeleteObject(ctx context.Context, input *mediastoredata.DeleteObjectInput) (*mediastoredata.DeleteObjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteObjectWithContext(ctx, input)
+	output, err := client.DeleteObjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeObject(ctx context.Context, input *mediastoredata.DescribeObjectInput) (*mediastoredata.DescribeObjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeObjectWithContext(ctx, input)
+	output, err := client.DescribeObjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetObject(ctx context.Context, input *mediastoredata.GetObjectInput) (*mediastoredata.GetObjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetObjectWithContext(ctx, input)
+	output, err := client.GetObjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListItems(ctx context.Context, input *mediastoredata.ListItemsInput) (*mediastoredata.ListItemsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListItemsWithContext(ctx, input)
+	output, err := client.ListItemsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutObject(ctx context.Context, input *mediastoredata.PutObjectInput) (*mediastoredata.PutObjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutObjectWithContext(ctx, input)
+	output, err := client.PutObjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

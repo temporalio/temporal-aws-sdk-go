@@ -6,12 +6,14 @@ package sms
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/sms"
 	"github.com/aws/aws-sdk-go/service/sms/smsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (smsiface.SMSAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return sms.New(sess), nil
@@ -55,280 +57,350 @@ func (a *Activities) getClient(ctx context.Context) (smsiface.SMSAPI, error) {
 func (a *Activities) CreateApp(ctx context.Context, input *sms.CreateAppInput) (*sms.CreateAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateAppWithContext(ctx, input)
+	output, err := client.CreateAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateReplicationJob(ctx context.Context, input *sms.CreateReplicationJobInput) (*sms.CreateReplicationJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateReplicationJobWithContext(ctx, input)
+	output, err := client.CreateReplicationJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApp(ctx context.Context, input *sms.DeleteAppInput) (*sms.DeleteAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAppWithContext(ctx, input)
+	output, err := client.DeleteAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAppLaunchConfiguration(ctx context.Context, input *sms.DeleteAppLaunchConfigurationInput) (*sms.DeleteAppLaunchConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAppLaunchConfigurationWithContext(ctx, input)
+	output, err := client.DeleteAppLaunchConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAppReplicationConfiguration(ctx context.Context, input *sms.DeleteAppReplicationConfigurationInput) (*sms.DeleteAppReplicationConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAppReplicationConfigurationWithContext(ctx, input)
+	output, err := client.DeleteAppReplicationConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAppValidationConfiguration(ctx context.Context, input *sms.DeleteAppValidationConfigurationInput) (*sms.DeleteAppValidationConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAppValidationConfigurationWithContext(ctx, input)
+	output, err := client.DeleteAppValidationConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteReplicationJob(ctx context.Context, input *sms.DeleteReplicationJobInput) (*sms.DeleteReplicationJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteReplicationJobWithContext(ctx, input)
+	output, err := client.DeleteReplicationJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteServerCatalog(ctx context.Context, input *sms.DeleteServerCatalogInput) (*sms.DeleteServerCatalogOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteServerCatalogWithContext(ctx, input)
+	output, err := client.DeleteServerCatalogWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateConnector(ctx context.Context, input *sms.DisassociateConnectorInput) (*sms.DisassociateConnectorOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateConnectorWithContext(ctx, input)
+	output, err := client.DisassociateConnectorWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GenerateChangeSet(ctx context.Context, input *sms.GenerateChangeSetInput) (*sms.GenerateChangeSetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GenerateChangeSetWithContext(ctx, input)
+	output, err := client.GenerateChangeSetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GenerateTemplate(ctx context.Context, input *sms.GenerateTemplateInput) (*sms.GenerateTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GenerateTemplateWithContext(ctx, input)
+	output, err := client.GenerateTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApp(ctx context.Context, input *sms.GetAppInput) (*sms.GetAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAppWithContext(ctx, input)
+	output, err := client.GetAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAppLaunchConfiguration(ctx context.Context, input *sms.GetAppLaunchConfigurationInput) (*sms.GetAppLaunchConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAppLaunchConfigurationWithContext(ctx, input)
+	output, err := client.GetAppLaunchConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAppReplicationConfiguration(ctx context.Context, input *sms.GetAppReplicationConfigurationInput) (*sms.GetAppReplicationConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAppReplicationConfigurationWithContext(ctx, input)
+	output, err := client.GetAppReplicationConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAppValidationConfiguration(ctx context.Context, input *sms.GetAppValidationConfigurationInput) (*sms.GetAppValidationConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAppValidationConfigurationWithContext(ctx, input)
+	output, err := client.GetAppValidationConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAppValidationOutput(ctx context.Context, input *sms.GetAppValidationOutputInput) (*sms.GetAppValidationOutputOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAppValidationOutputWithContext(ctx, input)
+	output, err := client.GetAppValidationOutputWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetConnectors(ctx context.Context, input *sms.GetConnectorsInput) (*sms.GetConnectorsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetConnectorsWithContext(ctx, input)
+	output, err := client.GetConnectorsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetReplicationJobs(ctx context.Context, input *sms.GetReplicationJobsInput) (*sms.GetReplicationJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetReplicationJobsWithContext(ctx, input)
+	output, err := client.GetReplicationJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetReplicationRuns(ctx context.Context, input *sms.GetReplicationRunsInput) (*sms.GetReplicationRunsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetReplicationRunsWithContext(ctx, input)
+	output, err := client.GetReplicationRunsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetServers(ctx context.Context, input *sms.GetServersInput) (*sms.GetServersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetServersWithContext(ctx, input)
+	output, err := client.GetServersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportAppCatalog(ctx context.Context, input *sms.ImportAppCatalogInput) (*sms.ImportAppCatalogOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportAppCatalogWithContext(ctx, input)
+	output, err := client.ImportAppCatalogWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportServerCatalog(ctx context.Context, input *sms.ImportServerCatalogInput) (*sms.ImportServerCatalogOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportServerCatalogWithContext(ctx, input)
+	output, err := client.ImportServerCatalogWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) LaunchApp(ctx context.Context, input *sms.LaunchAppInput) (*sms.LaunchAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.LaunchAppWithContext(ctx, input)
+	output, err := client.LaunchAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListApps(ctx context.Context, input *sms.ListAppsInput) (*sms.ListAppsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAppsWithContext(ctx, input)
+	output, err := client.ListAppsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) NotifyAppValidationOutput(ctx context.Context, input *sms.NotifyAppValidationOutputInput) (*sms.NotifyAppValidationOutputOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.NotifyAppValidationOutputWithContext(ctx, input)
+	output, err := client.NotifyAppValidationOutputWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutAppLaunchConfiguration(ctx context.Context, input *sms.PutAppLaunchConfigurationInput) (*sms.PutAppLaunchConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutAppLaunchConfigurationWithContext(ctx, input)
+	output, err := client.PutAppLaunchConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutAppReplicationConfiguration(ctx context.Context, input *sms.PutAppReplicationConfigurationInput) (*sms.PutAppReplicationConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutAppReplicationConfigurationWithContext(ctx, input)
+	output, err := client.PutAppReplicationConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutAppValidationConfiguration(ctx context.Context, input *sms.PutAppValidationConfigurationInput) (*sms.PutAppValidationConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutAppValidationConfigurationWithContext(ctx, input)
+	output, err := client.PutAppValidationConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartAppReplication(ctx context.Context, input *sms.StartAppReplicationInput) (*sms.StartAppReplicationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartAppReplicationWithContext(ctx, input)
+	output, err := client.StartAppReplicationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartOnDemandAppReplication(ctx context.Context, input *sms.StartOnDemandAppReplicationInput) (*sms.StartOnDemandAppReplicationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartOnDemandAppReplicationWithContext(ctx, input)
+	output, err := client.StartOnDemandAppReplicationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartOnDemandReplicationRun(ctx context.Context, input *sms.StartOnDemandReplicationRunInput) (*sms.StartOnDemandReplicationRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartOnDemandReplicationRunWithContext(ctx, input)
+	output, err := client.StartOnDemandReplicationRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopAppReplication(ctx context.Context, input *sms.StopAppReplicationInput) (*sms.StopAppReplicationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopAppReplicationWithContext(ctx, input)
+	output, err := client.StopAppReplicationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TerminateApp(ctx context.Context, input *sms.TerminateAppInput) (*sms.TerminateAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TerminateAppWithContext(ctx, input)
+	output, err := client.TerminateAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApp(ctx context.Context, input *sms.UpdateAppInput) (*sms.UpdateAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAppWithContext(ctx, input)
+	output, err := client.UpdateAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateReplicationJob(ctx context.Context, input *sms.UpdateReplicationJobInput) (*sms.UpdateReplicationJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateReplicationJobWithContext(ctx, input)
+	output, err := client.UpdateReplicationJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

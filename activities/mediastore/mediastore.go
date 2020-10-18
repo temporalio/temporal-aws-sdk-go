@@ -6,12 +6,14 @@ package mediastore
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/mediastore"
 	"github.com/aws/aws-sdk-go/service/mediastore/mediastoreiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (mediastoreiface.MediaStoreA
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return mediastore.New(sess), nil
@@ -55,167 +57,209 @@ func (a *Activities) getClient(ctx context.Context) (mediastoreiface.MediaStoreA
 func (a *Activities) CreateContainer(ctx context.Context, input *mediastore.CreateContainerInput) (*mediastore.CreateContainerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateContainerWithContext(ctx, input)
+	output, err := client.CreateContainerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteContainer(ctx context.Context, input *mediastore.DeleteContainerInput) (*mediastore.DeleteContainerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteContainerWithContext(ctx, input)
+	output, err := client.DeleteContainerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteContainerPolicy(ctx context.Context, input *mediastore.DeleteContainerPolicyInput) (*mediastore.DeleteContainerPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteContainerPolicyWithContext(ctx, input)
+	output, err := client.DeleteContainerPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCorsPolicy(ctx context.Context, input *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCorsPolicyWithContext(ctx, input)
+	output, err := client.DeleteCorsPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteLifecyclePolicy(ctx context.Context, input *mediastore.DeleteLifecyclePolicyInput) (*mediastore.DeleteLifecyclePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteLifecyclePolicyWithContext(ctx, input)
+	output, err := client.DeleteLifecyclePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMetricPolicy(ctx context.Context, input *mediastore.DeleteMetricPolicyInput) (*mediastore.DeleteMetricPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMetricPolicyWithContext(ctx, input)
+	output, err := client.DeleteMetricPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeContainer(ctx context.Context, input *mediastore.DescribeContainerInput) (*mediastore.DescribeContainerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeContainerWithContext(ctx, input)
+	output, err := client.DescribeContainerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetContainerPolicy(ctx context.Context, input *mediastore.GetContainerPolicyInput) (*mediastore.GetContainerPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetContainerPolicyWithContext(ctx, input)
+	output, err := client.GetContainerPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCorsPolicy(ctx context.Context, input *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCorsPolicyWithContext(ctx, input)
+	output, err := client.GetCorsPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetLifecyclePolicy(ctx context.Context, input *mediastore.GetLifecyclePolicyInput) (*mediastore.GetLifecyclePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetLifecyclePolicyWithContext(ctx, input)
+	output, err := client.GetLifecyclePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMetricPolicy(ctx context.Context, input *mediastore.GetMetricPolicyInput) (*mediastore.GetMetricPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMetricPolicyWithContext(ctx, input)
+	output, err := client.GetMetricPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListContainers(ctx context.Context, input *mediastore.ListContainersInput) (*mediastore.ListContainersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListContainersWithContext(ctx, input)
+	output, err := client.ListContainersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *mediastore.ListTagsForResourceInput) (*mediastore.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutContainerPolicy(ctx context.Context, input *mediastore.PutContainerPolicyInput) (*mediastore.PutContainerPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutContainerPolicyWithContext(ctx, input)
+	output, err := client.PutContainerPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutCorsPolicy(ctx context.Context, input *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutCorsPolicyWithContext(ctx, input)
+	output, err := client.PutCorsPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutLifecyclePolicy(ctx context.Context, input *mediastore.PutLifecyclePolicyInput) (*mediastore.PutLifecyclePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutLifecyclePolicyWithContext(ctx, input)
+	output, err := client.PutLifecyclePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutMetricPolicy(ctx context.Context, input *mediastore.PutMetricPolicyInput) (*mediastore.PutMetricPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutMetricPolicyWithContext(ctx, input)
+	output, err := client.PutMetricPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartAccessLogging(ctx context.Context, input *mediastore.StartAccessLoggingInput) (*mediastore.StartAccessLoggingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartAccessLoggingWithContext(ctx, input)
+	output, err := client.StartAccessLoggingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopAccessLogging(ctx context.Context, input *mediastore.StopAccessLoggingInput) (*mediastore.StopAccessLoggingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopAccessLoggingWithContext(ctx, input)
+	output, err := client.StopAccessLoggingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *mediastore.TagResourceInput) (*mediastore.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *mediastore.UntagResourceInput) (*mediastore.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

@@ -13,14 +13,16 @@ package {{ $lowerName }}
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 {{- range .Imports }}
 	"github.com/aws/aws-sdk-go/service/{{ . }}"
 {{- end }}
 	"github.com/aws/aws-sdk-go/service/{{ $lowerName }}/{{ $lowerName }}iface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -55,7 +57,7 @@ func (a *Activities) getClient(ctx context.Context) ({{ $lowerName }}iface.{{ $n
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return {{ $lowerName }}.New(sess), nil
@@ -67,29 +69,31 @@ func (a *Activities) getClient(ctx context.Context) ({{ $lowerName }}iface.{{ $n
 func (a *Activities) {{ $method.Name }}(ctx context.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 
 {{- if HasPrefix $method.Name "WaitUntil" }}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.{{ $method.Name }}WithContext(ctx, input, options...)
+		return internal.EncodeError(client.{{ $method.Name }}WithContext(ctx, input, options...))
 	})
 {{- else }}
 	{{- if $method.Input.HasField "ClientToken" }}
 		internal.SetClientToken(ctx, &input.ClientToken)
 	{{- end }}
-	return client.{{ $method.Name }}WithContext(ctx, input)
+	return internal.EncodeError(client.{{ $method.Name }}WithContext(ctx, input))
 {{- end }}
 }
 {{- else -}}
 func (a *Activities) {{ $method.Name }}(ctx context.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}{{- if $method.Input.HasField "ClientToken" }}
 	internal.SetClientToken(ctx, &input.ClientToken)
 	{{- end }}
-	return client.{{ $method.Name }}WithContext(ctx, input)
+	output, err := client.{{ $method.Name }}WithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 {{- end }}
 {{- end }}

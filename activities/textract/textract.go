@@ -6,12 +6,14 @@ package textract
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/textract"
 	"github.com/aws/aws-sdk-go/service/textract/textractiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (textractiface.TextractAPI, 
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return textract.New(sess), nil
@@ -55,47 +57,59 @@ func (a *Activities) getClient(ctx context.Context) (textractiface.TextractAPI, 
 func (a *Activities) AnalyzeDocument(ctx context.Context, input *textract.AnalyzeDocumentInput) (*textract.AnalyzeDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AnalyzeDocumentWithContext(ctx, input)
+	output, err := client.AnalyzeDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DetectDocumentText(ctx context.Context, input *textract.DetectDocumentTextInput) (*textract.DetectDocumentTextOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DetectDocumentTextWithContext(ctx, input)
+	output, err := client.DetectDocumentTextWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocumentAnalysis(ctx context.Context, input *textract.GetDocumentAnalysisInput) (*textract.GetDocumentAnalysisOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentAnalysisWithContext(ctx, input)
+	output, err := client.GetDocumentAnalysisWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocumentTextDetection(ctx context.Context, input *textract.GetDocumentTextDetectionInput) (*textract.GetDocumentTextDetectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentTextDetectionWithContext(ctx, input)
+	output, err := client.GetDocumentTextDetectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartDocumentAnalysis(ctx context.Context, input *textract.StartDocumentAnalysisInput) (*textract.StartDocumentAnalysisOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartDocumentAnalysisWithContext(ctx, input)
+	output, err := client.StartDocumentAnalysisWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartDocumentTextDetection(ctx context.Context, input *textract.StartDocumentTextDetectionInput) (*textract.StartDocumentTextDetectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartDocumentTextDetectionWithContext(ctx, input)
+	output, err := client.StartDocumentTextDetectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

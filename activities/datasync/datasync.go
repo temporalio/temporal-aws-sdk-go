@@ -6,12 +6,14 @@ package datasync
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/datasync"
 	"github.com/aws/aws-sdk-go/service/datasync/datasynciface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (datasynciface.DataSyncAPI, 
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return datasync.New(sess), nil
@@ -55,247 +57,309 @@ func (a *Activities) getClient(ctx context.Context) (datasynciface.DataSyncAPI, 
 func (a *Activities) CancelTaskExecution(ctx context.Context, input *datasync.CancelTaskExecutionInput) (*datasync.CancelTaskExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelTaskExecutionWithContext(ctx, input)
+	output, err := client.CancelTaskExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAgent(ctx context.Context, input *datasync.CreateAgentInput) (*datasync.CreateAgentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAgentWithContext(ctx, input)
+	output, err := client.CreateAgentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLocationEfs(ctx context.Context, input *datasync.CreateLocationEfsInput) (*datasync.CreateLocationEfsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLocationEfsWithContext(ctx, input)
+	output, err := client.CreateLocationEfsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLocationFsxWindows(ctx context.Context, input *datasync.CreateLocationFsxWindowsInput) (*datasync.CreateLocationFsxWindowsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLocationFsxWindowsWithContext(ctx, input)
+	output, err := client.CreateLocationFsxWindowsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLocationNfs(ctx context.Context, input *datasync.CreateLocationNfsInput) (*datasync.CreateLocationNfsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLocationNfsWithContext(ctx, input)
+	output, err := client.CreateLocationNfsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLocationObjectStorage(ctx context.Context, input *datasync.CreateLocationObjectStorageInput) (*datasync.CreateLocationObjectStorageOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLocationObjectStorageWithContext(ctx, input)
+	output, err := client.CreateLocationObjectStorageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLocationS3(ctx context.Context, input *datasync.CreateLocationS3Input) (*datasync.CreateLocationS3Output, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLocationS3WithContext(ctx, input)
+	output, err := client.CreateLocationS3WithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLocationSmb(ctx context.Context, input *datasync.CreateLocationSmbInput) (*datasync.CreateLocationSmbOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLocationSmbWithContext(ctx, input)
+	output, err := client.CreateLocationSmbWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTask(ctx context.Context, input *datasync.CreateTaskInput) (*datasync.CreateTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTaskWithContext(ctx, input)
+	output, err := client.CreateTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAgent(ctx context.Context, input *datasync.DeleteAgentInput) (*datasync.DeleteAgentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAgentWithContext(ctx, input)
+	output, err := client.DeleteAgentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteLocation(ctx context.Context, input *datasync.DeleteLocationInput) (*datasync.DeleteLocationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteLocationWithContext(ctx, input)
+	output, err := client.DeleteLocationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTask(ctx context.Context, input *datasync.DeleteTaskInput) (*datasync.DeleteTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTaskWithContext(ctx, input)
+	output, err := client.DeleteTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAgent(ctx context.Context, input *datasync.DescribeAgentInput) (*datasync.DescribeAgentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAgentWithContext(ctx, input)
+	output, err := client.DescribeAgentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLocationEfs(ctx context.Context, input *datasync.DescribeLocationEfsInput) (*datasync.DescribeLocationEfsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLocationEfsWithContext(ctx, input)
+	output, err := client.DescribeLocationEfsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLocationFsxWindows(ctx context.Context, input *datasync.DescribeLocationFsxWindowsInput) (*datasync.DescribeLocationFsxWindowsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLocationFsxWindowsWithContext(ctx, input)
+	output, err := client.DescribeLocationFsxWindowsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLocationNfs(ctx context.Context, input *datasync.DescribeLocationNfsInput) (*datasync.DescribeLocationNfsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLocationNfsWithContext(ctx, input)
+	output, err := client.DescribeLocationNfsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLocationObjectStorage(ctx context.Context, input *datasync.DescribeLocationObjectStorageInput) (*datasync.DescribeLocationObjectStorageOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLocationObjectStorageWithContext(ctx, input)
+	output, err := client.DescribeLocationObjectStorageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLocationS3(ctx context.Context, input *datasync.DescribeLocationS3Input) (*datasync.DescribeLocationS3Output, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLocationS3WithContext(ctx, input)
+	output, err := client.DescribeLocationS3WithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLocationSmb(ctx context.Context, input *datasync.DescribeLocationSmbInput) (*datasync.DescribeLocationSmbOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLocationSmbWithContext(ctx, input)
+	output, err := client.DescribeLocationSmbWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTask(ctx context.Context, input *datasync.DescribeTaskInput) (*datasync.DescribeTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTaskWithContext(ctx, input)
+	output, err := client.DescribeTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTaskExecution(ctx context.Context, input *datasync.DescribeTaskExecutionInput) (*datasync.DescribeTaskExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTaskExecutionWithContext(ctx, input)
+	output, err := client.DescribeTaskExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAgents(ctx context.Context, input *datasync.ListAgentsInput) (*datasync.ListAgentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAgentsWithContext(ctx, input)
+	output, err := client.ListAgentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListLocations(ctx context.Context, input *datasync.ListLocationsInput) (*datasync.ListLocationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListLocationsWithContext(ctx, input)
+	output, err := client.ListLocationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *datasync.ListTagsForResourceInput) (*datasync.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTaskExecutions(ctx context.Context, input *datasync.ListTaskExecutionsInput) (*datasync.ListTaskExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTaskExecutionsWithContext(ctx, input)
+	output, err := client.ListTaskExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTasks(ctx context.Context, input *datasync.ListTasksInput) (*datasync.ListTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTasksWithContext(ctx, input)
+	output, err := client.ListTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartTaskExecution(ctx context.Context, input *datasync.StartTaskExecutionInput) (*datasync.StartTaskExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartTaskExecutionWithContext(ctx, input)
+	output, err := client.StartTaskExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *datasync.TagResourceInput) (*datasync.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *datasync.UntagResourceInput) (*datasync.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAgent(ctx context.Context, input *datasync.UpdateAgentInput) (*datasync.UpdateAgentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAgentWithContext(ctx, input)
+	output, err := client.UpdateAgentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTask(ctx context.Context, input *datasync.UpdateTaskInput) (*datasync.UpdateTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTaskWithContext(ctx, input)
+	output, err := client.UpdateTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

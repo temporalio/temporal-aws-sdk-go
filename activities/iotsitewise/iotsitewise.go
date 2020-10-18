@@ -6,12 +6,14 @@ package iotsitewise
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/iotsitewise"
 	"github.com/aws/aws-sdk-go/service/iotsitewise/iotsitewiseiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (iotsitewiseiface.IoTSiteWis
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return iotsitewise.New(sess), nil
@@ -55,522 +57,632 @@ func (a *Activities) getClient(ctx context.Context) (iotsitewiseiface.IoTSiteWis
 func (a *Activities) AssociateAssets(ctx context.Context, input *iotsitewise.AssociateAssetsInput) (*iotsitewise.AssociateAssetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.AssociateAssetsWithContext(ctx, input)
+	output, err := client.AssociateAssetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchAssociateProjectAssets(ctx context.Context, input *iotsitewise.BatchAssociateProjectAssetsInput) (*iotsitewise.BatchAssociateProjectAssetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.BatchAssociateProjectAssetsWithContext(ctx, input)
+	output, err := client.BatchAssociateProjectAssetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchDisassociateProjectAssets(ctx context.Context, input *iotsitewise.BatchDisassociateProjectAssetsInput) (*iotsitewise.BatchDisassociateProjectAssetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.BatchDisassociateProjectAssetsWithContext(ctx, input)
+	output, err := client.BatchDisassociateProjectAssetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchPutAssetPropertyValue(ctx context.Context, input *iotsitewise.BatchPutAssetPropertyValueInput) (*iotsitewise.BatchPutAssetPropertyValueOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchPutAssetPropertyValueWithContext(ctx, input)
+	output, err := client.BatchPutAssetPropertyValueWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAccessPolicy(ctx context.Context, input *iotsitewise.CreateAccessPolicyInput) (*iotsitewise.CreateAccessPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateAccessPolicyWithContext(ctx, input)
+	output, err := client.CreateAccessPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAsset(ctx context.Context, input *iotsitewise.CreateAssetInput) (*iotsitewise.CreateAssetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateAssetWithContext(ctx, input)
+	output, err := client.CreateAssetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAssetModel(ctx context.Context, input *iotsitewise.CreateAssetModelInput) (*iotsitewise.CreateAssetModelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateAssetModelWithContext(ctx, input)
+	output, err := client.CreateAssetModelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDashboard(ctx context.Context, input *iotsitewise.CreateDashboardInput) (*iotsitewise.CreateDashboardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateDashboardWithContext(ctx, input)
+	output, err := client.CreateDashboardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateGateway(ctx context.Context, input *iotsitewise.CreateGatewayInput) (*iotsitewise.CreateGatewayOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateGatewayWithContext(ctx, input)
+	output, err := client.CreateGatewayWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePortal(ctx context.Context, input *iotsitewise.CreatePortalInput) (*iotsitewise.CreatePortalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreatePortalWithContext(ctx, input)
+	output, err := client.CreatePortalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePresignedPortalUrl(ctx context.Context, input *iotsitewise.CreatePresignedPortalUrlInput) (*iotsitewise.CreatePresignedPortalUrlOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePresignedPortalUrlWithContext(ctx, input)
+	output, err := client.CreatePresignedPortalUrlWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateProject(ctx context.Context, input *iotsitewise.CreateProjectInput) (*iotsitewise.CreateProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateProjectWithContext(ctx, input)
+	output, err := client.CreateProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAccessPolicy(ctx context.Context, input *iotsitewise.DeleteAccessPolicyInput) (*iotsitewise.DeleteAccessPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DeleteAccessPolicyWithContext(ctx, input)
+	output, err := client.DeleteAccessPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAsset(ctx context.Context, input *iotsitewise.DeleteAssetInput) (*iotsitewise.DeleteAssetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DeleteAssetWithContext(ctx, input)
+	output, err := client.DeleteAssetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAssetModel(ctx context.Context, input *iotsitewise.DeleteAssetModelInput) (*iotsitewise.DeleteAssetModelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DeleteAssetModelWithContext(ctx, input)
+	output, err := client.DeleteAssetModelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDashboard(ctx context.Context, input *iotsitewise.DeleteDashboardInput) (*iotsitewise.DeleteDashboardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DeleteDashboardWithContext(ctx, input)
+	output, err := client.DeleteDashboardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteGateway(ctx context.Context, input *iotsitewise.DeleteGatewayInput) (*iotsitewise.DeleteGatewayOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteGatewayWithContext(ctx, input)
+	output, err := client.DeleteGatewayWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePortal(ctx context.Context, input *iotsitewise.DeletePortalInput) (*iotsitewise.DeletePortalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DeletePortalWithContext(ctx, input)
+	output, err := client.DeletePortalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteProject(ctx context.Context, input *iotsitewise.DeleteProjectInput) (*iotsitewise.DeleteProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DeleteProjectWithContext(ctx, input)
+	output, err := client.DeleteProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAccessPolicy(ctx context.Context, input *iotsitewise.DescribeAccessPolicyInput) (*iotsitewise.DescribeAccessPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAccessPolicyWithContext(ctx, input)
+	output, err := client.DescribeAccessPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAsset(ctx context.Context, input *iotsitewise.DescribeAssetInput) (*iotsitewise.DescribeAssetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAssetWithContext(ctx, input)
+	output, err := client.DescribeAssetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAssetModel(ctx context.Context, input *iotsitewise.DescribeAssetModelInput) (*iotsitewise.DescribeAssetModelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAssetModelWithContext(ctx, input)
+	output, err := client.DescribeAssetModelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAssetProperty(ctx context.Context, input *iotsitewise.DescribeAssetPropertyInput) (*iotsitewise.DescribeAssetPropertyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAssetPropertyWithContext(ctx, input)
+	output, err := client.DescribeAssetPropertyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDashboard(ctx context.Context, input *iotsitewise.DescribeDashboardInput) (*iotsitewise.DescribeDashboardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDashboardWithContext(ctx, input)
+	output, err := client.DescribeDashboardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeGateway(ctx context.Context, input *iotsitewise.DescribeGatewayInput) (*iotsitewise.DescribeGatewayOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeGatewayWithContext(ctx, input)
+	output, err := client.DescribeGatewayWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeGatewayCapabilityConfiguration(ctx context.Context, input *iotsitewise.DescribeGatewayCapabilityConfigurationInput) (*iotsitewise.DescribeGatewayCapabilityConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeGatewayCapabilityConfigurationWithContext(ctx, input)
+	output, err := client.DescribeGatewayCapabilityConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLoggingOptions(ctx context.Context, input *iotsitewise.DescribeLoggingOptionsInput) (*iotsitewise.DescribeLoggingOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLoggingOptionsWithContext(ctx, input)
+	output, err := client.DescribeLoggingOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePortal(ctx context.Context, input *iotsitewise.DescribePortalInput) (*iotsitewise.DescribePortalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePortalWithContext(ctx, input)
+	output, err := client.DescribePortalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeProject(ctx context.Context, input *iotsitewise.DescribeProjectInput) (*iotsitewise.DescribeProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeProjectWithContext(ctx, input)
+	output, err := client.DescribeProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateAssets(ctx context.Context, input *iotsitewise.DisassociateAssetsInput) (*iotsitewise.DisassociateAssetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DisassociateAssetsWithContext(ctx, input)
+	output, err := client.DisassociateAssetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAssetPropertyAggregates(ctx context.Context, input *iotsitewise.GetAssetPropertyAggregatesInput) (*iotsitewise.GetAssetPropertyAggregatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAssetPropertyAggregatesWithContext(ctx, input)
+	output, err := client.GetAssetPropertyAggregatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAssetPropertyValue(ctx context.Context, input *iotsitewise.GetAssetPropertyValueInput) (*iotsitewise.GetAssetPropertyValueOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAssetPropertyValueWithContext(ctx, input)
+	output, err := client.GetAssetPropertyValueWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAssetPropertyValueHistory(ctx context.Context, input *iotsitewise.GetAssetPropertyValueHistoryInput) (*iotsitewise.GetAssetPropertyValueHistoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAssetPropertyValueHistoryWithContext(ctx, input)
+	output, err := client.GetAssetPropertyValueHistoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAccessPolicies(ctx context.Context, input *iotsitewise.ListAccessPoliciesInput) (*iotsitewise.ListAccessPoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAccessPoliciesWithContext(ctx, input)
+	output, err := client.ListAccessPoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAssetModels(ctx context.Context, input *iotsitewise.ListAssetModelsInput) (*iotsitewise.ListAssetModelsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAssetModelsWithContext(ctx, input)
+	output, err := client.ListAssetModelsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAssets(ctx context.Context, input *iotsitewise.ListAssetsInput) (*iotsitewise.ListAssetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAssetsWithContext(ctx, input)
+	output, err := client.ListAssetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAssociatedAssets(ctx context.Context, input *iotsitewise.ListAssociatedAssetsInput) (*iotsitewise.ListAssociatedAssetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAssociatedAssetsWithContext(ctx, input)
+	output, err := client.ListAssociatedAssetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDashboards(ctx context.Context, input *iotsitewise.ListDashboardsInput) (*iotsitewise.ListDashboardsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDashboardsWithContext(ctx, input)
+	output, err := client.ListDashboardsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListGateways(ctx context.Context, input *iotsitewise.ListGatewaysInput) (*iotsitewise.ListGatewaysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListGatewaysWithContext(ctx, input)
+	output, err := client.ListGatewaysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPortals(ctx context.Context, input *iotsitewise.ListPortalsInput) (*iotsitewise.ListPortalsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPortalsWithContext(ctx, input)
+	output, err := client.ListPortalsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListProjectAssets(ctx context.Context, input *iotsitewise.ListProjectAssetsInput) (*iotsitewise.ListProjectAssetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListProjectAssetsWithContext(ctx, input)
+	output, err := client.ListProjectAssetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListProjects(ctx context.Context, input *iotsitewise.ListProjectsInput) (*iotsitewise.ListProjectsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListProjectsWithContext(ctx, input)
+	output, err := client.ListProjectsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *iotsitewise.ListTagsForResourceInput) (*iotsitewise.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutLoggingOptions(ctx context.Context, input *iotsitewise.PutLoggingOptionsInput) (*iotsitewise.PutLoggingOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutLoggingOptionsWithContext(ctx, input)
+	output, err := client.PutLoggingOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *iotsitewise.TagResourceInput) (*iotsitewise.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *iotsitewise.UntagResourceInput) (*iotsitewise.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAccessPolicy(ctx context.Context, input *iotsitewise.UpdateAccessPolicyInput) (*iotsitewise.UpdateAccessPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.UpdateAccessPolicyWithContext(ctx, input)
+	output, err := client.UpdateAccessPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAsset(ctx context.Context, input *iotsitewise.UpdateAssetInput) (*iotsitewise.UpdateAssetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.UpdateAssetWithContext(ctx, input)
+	output, err := client.UpdateAssetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAssetModel(ctx context.Context, input *iotsitewise.UpdateAssetModelInput) (*iotsitewise.UpdateAssetModelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.UpdateAssetModelWithContext(ctx, input)
+	output, err := client.UpdateAssetModelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAssetProperty(ctx context.Context, input *iotsitewise.UpdateAssetPropertyInput) (*iotsitewise.UpdateAssetPropertyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.UpdateAssetPropertyWithContext(ctx, input)
+	output, err := client.UpdateAssetPropertyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDashboard(ctx context.Context, input *iotsitewise.UpdateDashboardInput) (*iotsitewise.UpdateDashboardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.UpdateDashboardWithContext(ctx, input)
+	output, err := client.UpdateDashboardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateGateway(ctx context.Context, input *iotsitewise.UpdateGatewayInput) (*iotsitewise.UpdateGatewayOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateGatewayWithContext(ctx, input)
+	output, err := client.UpdateGatewayWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateGatewayCapabilityConfiguration(ctx context.Context, input *iotsitewise.UpdateGatewayCapabilityConfigurationInput) (*iotsitewise.UpdateGatewayCapabilityConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateGatewayCapabilityConfigurationWithContext(ctx, input)
+	output, err := client.UpdateGatewayCapabilityConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePortal(ctx context.Context, input *iotsitewise.UpdatePortalInput) (*iotsitewise.UpdatePortalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.UpdatePortalWithContext(ctx, input)
+	output, err := client.UpdatePortalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateProject(ctx context.Context, input *iotsitewise.UpdateProjectInput) (*iotsitewise.UpdateProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.UpdateProjectWithContext(ctx, input)
+	output, err := client.UpdateProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilAssetActive(ctx context.Context, input *iotsitewise.DescribeAssetInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilAssetActiveWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilAssetActiveWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilAssetModelActive(ctx context.Context, input *iotsitewise.DescribeAssetModelInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilAssetModelActiveWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilAssetModelActiveWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilAssetModelNotExists(ctx context.Context, input *iotsitewise.DescribeAssetModelInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilAssetModelNotExistsWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilAssetModelNotExistsWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilAssetNotExists(ctx context.Context, input *iotsitewise.DescribeAssetInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilAssetNotExistsWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilAssetNotExistsWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilPortalActive(ctx context.Context, input *iotsitewise.DescribePortalInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilPortalActiveWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilPortalActiveWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilPortalNotExists(ctx context.Context, input *iotsitewise.DescribePortalInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilPortalNotExistsWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilPortalNotExistsWithContext(ctx, input, options...))
 	})
 }

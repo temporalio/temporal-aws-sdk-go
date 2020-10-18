@@ -6,12 +6,14 @@ package pinpoint
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/pinpoint"
 	"github.com/aws/aws-sdk-go/service/pinpoint/pinpointiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (pinpointiface.PinpointAPI, 
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return pinpoint.New(sess), nil
@@ -55,895 +57,1119 @@ func (a *Activities) getClient(ctx context.Context) (pinpointiface.PinpointAPI, 
 func (a *Activities) CreateApp(ctx context.Context, input *pinpoint.CreateAppInput) (*pinpoint.CreateAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAppWithContext(ctx, input)
+	output, err := client.CreateAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCampaign(ctx context.Context, input *pinpoint.CreateCampaignInput) (*pinpoint.CreateCampaignOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCampaignWithContext(ctx, input)
+	output, err := client.CreateCampaignWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateEmailTemplate(ctx context.Context, input *pinpoint.CreateEmailTemplateInput) (*pinpoint.CreateEmailTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateEmailTemplateWithContext(ctx, input)
+	output, err := client.CreateEmailTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateExportJob(ctx context.Context, input *pinpoint.CreateExportJobInput) (*pinpoint.CreateExportJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateExportJobWithContext(ctx, input)
+	output, err := client.CreateExportJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateImportJob(ctx context.Context, input *pinpoint.CreateImportJobInput) (*pinpoint.CreateImportJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateImportJobWithContext(ctx, input)
+	output, err := client.CreateImportJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateJourney(ctx context.Context, input *pinpoint.CreateJourneyInput) (*pinpoint.CreateJourneyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateJourneyWithContext(ctx, input)
+	output, err := client.CreateJourneyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePushTemplate(ctx context.Context, input *pinpoint.CreatePushTemplateInput) (*pinpoint.CreatePushTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePushTemplateWithContext(ctx, input)
+	output, err := client.CreatePushTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateRecommenderConfiguration(ctx context.Context, input *pinpoint.CreateRecommenderConfigurationInput) (*pinpoint.CreateRecommenderConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateRecommenderConfigurationWithContext(ctx, input)
+	output, err := client.CreateRecommenderConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSegment(ctx context.Context, input *pinpoint.CreateSegmentInput) (*pinpoint.CreateSegmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSegmentWithContext(ctx, input)
+	output, err := client.CreateSegmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSmsTemplate(ctx context.Context, input *pinpoint.CreateSmsTemplateInput) (*pinpoint.CreateSmsTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSmsTemplateWithContext(ctx, input)
+	output, err := client.CreateSmsTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateVoiceTemplate(ctx context.Context, input *pinpoint.CreateVoiceTemplateInput) (*pinpoint.CreateVoiceTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateVoiceTemplateWithContext(ctx, input)
+	output, err := client.CreateVoiceTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAdmChannel(ctx context.Context, input *pinpoint.DeleteAdmChannelInput) (*pinpoint.DeleteAdmChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAdmChannelWithContext(ctx, input)
+	output, err := client.DeleteAdmChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApnsChannel(ctx context.Context, input *pinpoint.DeleteApnsChannelInput) (*pinpoint.DeleteApnsChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteApnsChannelWithContext(ctx, input)
+	output, err := client.DeleteApnsChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApnsSandboxChannel(ctx context.Context, input *pinpoint.DeleteApnsSandboxChannelInput) (*pinpoint.DeleteApnsSandboxChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteApnsSandboxChannelWithContext(ctx, input)
+	output, err := client.DeleteApnsSandboxChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApnsVoipChannel(ctx context.Context, input *pinpoint.DeleteApnsVoipChannelInput) (*pinpoint.DeleteApnsVoipChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteApnsVoipChannelWithContext(ctx, input)
+	output, err := client.DeleteApnsVoipChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApnsVoipSandboxChannel(ctx context.Context, input *pinpoint.DeleteApnsVoipSandboxChannelInput) (*pinpoint.DeleteApnsVoipSandboxChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteApnsVoipSandboxChannelWithContext(ctx, input)
+	output, err := client.DeleteApnsVoipSandboxChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApp(ctx context.Context, input *pinpoint.DeleteAppInput) (*pinpoint.DeleteAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAppWithContext(ctx, input)
+	output, err := client.DeleteAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteBaiduChannel(ctx context.Context, input *pinpoint.DeleteBaiduChannelInput) (*pinpoint.DeleteBaiduChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteBaiduChannelWithContext(ctx, input)
+	output, err := client.DeleteBaiduChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCampaign(ctx context.Context, input *pinpoint.DeleteCampaignInput) (*pinpoint.DeleteCampaignOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCampaignWithContext(ctx, input)
+	output, err := client.DeleteCampaignWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteEmailChannel(ctx context.Context, input *pinpoint.DeleteEmailChannelInput) (*pinpoint.DeleteEmailChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteEmailChannelWithContext(ctx, input)
+	output, err := client.DeleteEmailChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteEmailTemplate(ctx context.Context, input *pinpoint.DeleteEmailTemplateInput) (*pinpoint.DeleteEmailTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteEmailTemplateWithContext(ctx, input)
+	output, err := client.DeleteEmailTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteEndpoint(ctx context.Context, input *pinpoint.DeleteEndpointInput) (*pinpoint.DeleteEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteEndpointWithContext(ctx, input)
+	output, err := client.DeleteEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteEventStream(ctx context.Context, input *pinpoint.DeleteEventStreamInput) (*pinpoint.DeleteEventStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteEventStreamWithContext(ctx, input)
+	output, err := client.DeleteEventStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteGcmChannel(ctx context.Context, input *pinpoint.DeleteGcmChannelInput) (*pinpoint.DeleteGcmChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteGcmChannelWithContext(ctx, input)
+	output, err := client.DeleteGcmChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteJourney(ctx context.Context, input *pinpoint.DeleteJourneyInput) (*pinpoint.DeleteJourneyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteJourneyWithContext(ctx, input)
+	output, err := client.DeleteJourneyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePushTemplate(ctx context.Context, input *pinpoint.DeletePushTemplateInput) (*pinpoint.DeletePushTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePushTemplateWithContext(ctx, input)
+	output, err := client.DeletePushTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteRecommenderConfiguration(ctx context.Context, input *pinpoint.DeleteRecommenderConfigurationInput) (*pinpoint.DeleteRecommenderConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteRecommenderConfigurationWithContext(ctx, input)
+	output, err := client.DeleteRecommenderConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSegment(ctx context.Context, input *pinpoint.DeleteSegmentInput) (*pinpoint.DeleteSegmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSegmentWithContext(ctx, input)
+	output, err := client.DeleteSegmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSmsChannel(ctx context.Context, input *pinpoint.DeleteSmsChannelInput) (*pinpoint.DeleteSmsChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSmsChannelWithContext(ctx, input)
+	output, err := client.DeleteSmsChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSmsTemplate(ctx context.Context, input *pinpoint.DeleteSmsTemplateInput) (*pinpoint.DeleteSmsTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSmsTemplateWithContext(ctx, input)
+	output, err := client.DeleteSmsTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUserEndpoints(ctx context.Context, input *pinpoint.DeleteUserEndpointsInput) (*pinpoint.DeleteUserEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUserEndpointsWithContext(ctx, input)
+	output, err := client.DeleteUserEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteVoiceChannel(ctx context.Context, input *pinpoint.DeleteVoiceChannelInput) (*pinpoint.DeleteVoiceChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteVoiceChannelWithContext(ctx, input)
+	output, err := client.DeleteVoiceChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteVoiceTemplate(ctx context.Context, input *pinpoint.DeleteVoiceTemplateInput) (*pinpoint.DeleteVoiceTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteVoiceTemplateWithContext(ctx, input)
+	output, err := client.DeleteVoiceTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAdmChannel(ctx context.Context, input *pinpoint.GetAdmChannelInput) (*pinpoint.GetAdmChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAdmChannelWithContext(ctx, input)
+	output, err := client.GetAdmChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApnsChannel(ctx context.Context, input *pinpoint.GetApnsChannelInput) (*pinpoint.GetApnsChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApnsChannelWithContext(ctx, input)
+	output, err := client.GetApnsChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApnsSandboxChannel(ctx context.Context, input *pinpoint.GetApnsSandboxChannelInput) (*pinpoint.GetApnsSandboxChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApnsSandboxChannelWithContext(ctx, input)
+	output, err := client.GetApnsSandboxChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApnsVoipChannel(ctx context.Context, input *pinpoint.GetApnsVoipChannelInput) (*pinpoint.GetApnsVoipChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApnsVoipChannelWithContext(ctx, input)
+	output, err := client.GetApnsVoipChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApnsVoipSandboxChannel(ctx context.Context, input *pinpoint.GetApnsVoipSandboxChannelInput) (*pinpoint.GetApnsVoipSandboxChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApnsVoipSandboxChannelWithContext(ctx, input)
+	output, err := client.GetApnsVoipSandboxChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApp(ctx context.Context, input *pinpoint.GetAppInput) (*pinpoint.GetAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAppWithContext(ctx, input)
+	output, err := client.GetAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApplicationDateRangeKpi(ctx context.Context, input *pinpoint.GetApplicationDateRangeKpiInput) (*pinpoint.GetApplicationDateRangeKpiOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApplicationDateRangeKpiWithContext(ctx, input)
+	output, err := client.GetApplicationDateRangeKpiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApplicationSettings(ctx context.Context, input *pinpoint.GetApplicationSettingsInput) (*pinpoint.GetApplicationSettingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApplicationSettingsWithContext(ctx, input)
+	output, err := client.GetApplicationSettingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApps(ctx context.Context, input *pinpoint.GetAppsInput) (*pinpoint.GetAppsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAppsWithContext(ctx, input)
+	output, err := client.GetAppsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetBaiduChannel(ctx context.Context, input *pinpoint.GetBaiduChannelInput) (*pinpoint.GetBaiduChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetBaiduChannelWithContext(ctx, input)
+	output, err := client.GetBaiduChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCampaign(ctx context.Context, input *pinpoint.GetCampaignInput) (*pinpoint.GetCampaignOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCampaignWithContext(ctx, input)
+	output, err := client.GetCampaignWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCampaignActivities(ctx context.Context, input *pinpoint.GetCampaignActivitiesInput) (*pinpoint.GetCampaignActivitiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCampaignActivitiesWithContext(ctx, input)
+	output, err := client.GetCampaignActivitiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCampaignDateRangeKpi(ctx context.Context, input *pinpoint.GetCampaignDateRangeKpiInput) (*pinpoint.GetCampaignDateRangeKpiOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCampaignDateRangeKpiWithContext(ctx, input)
+	output, err := client.GetCampaignDateRangeKpiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCampaignVersion(ctx context.Context, input *pinpoint.GetCampaignVersionInput) (*pinpoint.GetCampaignVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCampaignVersionWithContext(ctx, input)
+	output, err := client.GetCampaignVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCampaignVersions(ctx context.Context, input *pinpoint.GetCampaignVersionsInput) (*pinpoint.GetCampaignVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCampaignVersionsWithContext(ctx, input)
+	output, err := client.GetCampaignVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCampaigns(ctx context.Context, input *pinpoint.GetCampaignsInput) (*pinpoint.GetCampaignsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCampaignsWithContext(ctx, input)
+	output, err := client.GetCampaignsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetChannels(ctx context.Context, input *pinpoint.GetChannelsInput) (*pinpoint.GetChannelsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetChannelsWithContext(ctx, input)
+	output, err := client.GetChannelsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetEmailChannel(ctx context.Context, input *pinpoint.GetEmailChannelInput) (*pinpoint.GetEmailChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetEmailChannelWithContext(ctx, input)
+	output, err := client.GetEmailChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetEmailTemplate(ctx context.Context, input *pinpoint.GetEmailTemplateInput) (*pinpoint.GetEmailTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetEmailTemplateWithContext(ctx, input)
+	output, err := client.GetEmailTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetEndpoint(ctx context.Context, input *pinpoint.GetEndpointInput) (*pinpoint.GetEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetEndpointWithContext(ctx, input)
+	output, err := client.GetEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetEventStream(ctx context.Context, input *pinpoint.GetEventStreamInput) (*pinpoint.GetEventStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetEventStreamWithContext(ctx, input)
+	output, err := client.GetEventStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetExportJob(ctx context.Context, input *pinpoint.GetExportJobInput) (*pinpoint.GetExportJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetExportJobWithContext(ctx, input)
+	output, err := client.GetExportJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetExportJobs(ctx context.Context, input *pinpoint.GetExportJobsInput) (*pinpoint.GetExportJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetExportJobsWithContext(ctx, input)
+	output, err := client.GetExportJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetGcmChannel(ctx context.Context, input *pinpoint.GetGcmChannelInput) (*pinpoint.GetGcmChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetGcmChannelWithContext(ctx, input)
+	output, err := client.GetGcmChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetImportJob(ctx context.Context, input *pinpoint.GetImportJobInput) (*pinpoint.GetImportJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetImportJobWithContext(ctx, input)
+	output, err := client.GetImportJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetImportJobs(ctx context.Context, input *pinpoint.GetImportJobsInput) (*pinpoint.GetImportJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetImportJobsWithContext(ctx, input)
+	output, err := client.GetImportJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJourney(ctx context.Context, input *pinpoint.GetJourneyInput) (*pinpoint.GetJourneyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJourneyWithContext(ctx, input)
+	output, err := client.GetJourneyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJourneyDateRangeKpi(ctx context.Context, input *pinpoint.GetJourneyDateRangeKpiInput) (*pinpoint.GetJourneyDateRangeKpiOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJourneyDateRangeKpiWithContext(ctx, input)
+	output, err := client.GetJourneyDateRangeKpiWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJourneyExecutionActivityMetrics(ctx context.Context, input *pinpoint.GetJourneyExecutionActivityMetricsInput) (*pinpoint.GetJourneyExecutionActivityMetricsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJourneyExecutionActivityMetricsWithContext(ctx, input)
+	output, err := client.GetJourneyExecutionActivityMetricsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetJourneyExecutionMetrics(ctx context.Context, input *pinpoint.GetJourneyExecutionMetricsInput) (*pinpoint.GetJourneyExecutionMetricsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetJourneyExecutionMetricsWithContext(ctx, input)
+	output, err := client.GetJourneyExecutionMetricsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPushTemplate(ctx context.Context, input *pinpoint.GetPushTemplateInput) (*pinpoint.GetPushTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPushTemplateWithContext(ctx, input)
+	output, err := client.GetPushTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRecommenderConfiguration(ctx context.Context, input *pinpoint.GetRecommenderConfigurationInput) (*pinpoint.GetRecommenderConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRecommenderConfigurationWithContext(ctx, input)
+	output, err := client.GetRecommenderConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRecommenderConfigurations(ctx context.Context, input *pinpoint.GetRecommenderConfigurationsInput) (*pinpoint.GetRecommenderConfigurationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRecommenderConfigurationsWithContext(ctx, input)
+	output, err := client.GetRecommenderConfigurationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSegment(ctx context.Context, input *pinpoint.GetSegmentInput) (*pinpoint.GetSegmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSegmentWithContext(ctx, input)
+	output, err := client.GetSegmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSegmentExportJobs(ctx context.Context, input *pinpoint.GetSegmentExportJobsInput) (*pinpoint.GetSegmentExportJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSegmentExportJobsWithContext(ctx, input)
+	output, err := client.GetSegmentExportJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSegmentImportJobs(ctx context.Context, input *pinpoint.GetSegmentImportJobsInput) (*pinpoint.GetSegmentImportJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSegmentImportJobsWithContext(ctx, input)
+	output, err := client.GetSegmentImportJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSegmentVersion(ctx context.Context, input *pinpoint.GetSegmentVersionInput) (*pinpoint.GetSegmentVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSegmentVersionWithContext(ctx, input)
+	output, err := client.GetSegmentVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSegmentVersions(ctx context.Context, input *pinpoint.GetSegmentVersionsInput) (*pinpoint.GetSegmentVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSegmentVersionsWithContext(ctx, input)
+	output, err := client.GetSegmentVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSegments(ctx context.Context, input *pinpoint.GetSegmentsInput) (*pinpoint.GetSegmentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSegmentsWithContext(ctx, input)
+	output, err := client.GetSegmentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSmsChannel(ctx context.Context, input *pinpoint.GetSmsChannelInput) (*pinpoint.GetSmsChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSmsChannelWithContext(ctx, input)
+	output, err := client.GetSmsChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSmsTemplate(ctx context.Context, input *pinpoint.GetSmsTemplateInput) (*pinpoint.GetSmsTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSmsTemplateWithContext(ctx, input)
+	output, err := client.GetSmsTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetUserEndpoints(ctx context.Context, input *pinpoint.GetUserEndpointsInput) (*pinpoint.GetUserEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetUserEndpointsWithContext(ctx, input)
+	output, err := client.GetUserEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetVoiceChannel(ctx context.Context, input *pinpoint.GetVoiceChannelInput) (*pinpoint.GetVoiceChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetVoiceChannelWithContext(ctx, input)
+	output, err := client.GetVoiceChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetVoiceTemplate(ctx context.Context, input *pinpoint.GetVoiceTemplateInput) (*pinpoint.GetVoiceTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetVoiceTemplateWithContext(ctx, input)
+	output, err := client.GetVoiceTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListJourneys(ctx context.Context, input *pinpoint.ListJourneysInput) (*pinpoint.ListJourneysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListJourneysWithContext(ctx, input)
+	output, err := client.ListJourneysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *pinpoint.ListTagsForResourceInput) (*pinpoint.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTemplateVersions(ctx context.Context, input *pinpoint.ListTemplateVersionsInput) (*pinpoint.ListTemplateVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTemplateVersionsWithContext(ctx, input)
+	output, err := client.ListTemplateVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTemplates(ctx context.Context, input *pinpoint.ListTemplatesInput) (*pinpoint.ListTemplatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTemplatesWithContext(ctx, input)
+	output, err := client.ListTemplatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PhoneNumberValidate(ctx context.Context, input *pinpoint.PhoneNumberValidateInput) (*pinpoint.PhoneNumberValidateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PhoneNumberValidateWithContext(ctx, input)
+	output, err := client.PhoneNumberValidateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutEventStream(ctx context.Context, input *pinpoint.PutEventStreamInput) (*pinpoint.PutEventStreamOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutEventStreamWithContext(ctx, input)
+	output, err := client.PutEventStreamWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutEvents(ctx context.Context, input *pinpoint.PutEventsInput) (*pinpoint.PutEventsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutEventsWithContext(ctx, input)
+	output, err := client.PutEventsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveAttributes(ctx context.Context, input *pinpoint.RemoveAttributesInput) (*pinpoint.RemoveAttributesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveAttributesWithContext(ctx, input)
+	output, err := client.RemoveAttributesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SendMessages(ctx context.Context, input *pinpoint.SendMessagesInput) (*pinpoint.SendMessagesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SendMessagesWithContext(ctx, input)
+	output, err := client.SendMessagesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SendUsersMessages(ctx context.Context, input *pinpoint.SendUsersMessagesInput) (*pinpoint.SendUsersMessagesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SendUsersMessagesWithContext(ctx, input)
+	output, err := client.SendUsersMessagesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *pinpoint.TagResourceInput) (*pinpoint.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *pinpoint.UntagResourceInput) (*pinpoint.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAdmChannel(ctx context.Context, input *pinpoint.UpdateAdmChannelInput) (*pinpoint.UpdateAdmChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAdmChannelWithContext(ctx, input)
+	output, err := client.UpdateAdmChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApnsChannel(ctx context.Context, input *pinpoint.UpdateApnsChannelInput) (*pinpoint.UpdateApnsChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApnsChannelWithContext(ctx, input)
+	output, err := client.UpdateApnsChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApnsSandboxChannel(ctx context.Context, input *pinpoint.UpdateApnsSandboxChannelInput) (*pinpoint.UpdateApnsSandboxChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApnsSandboxChannelWithContext(ctx, input)
+	output, err := client.UpdateApnsSandboxChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApnsVoipChannel(ctx context.Context, input *pinpoint.UpdateApnsVoipChannelInput) (*pinpoint.UpdateApnsVoipChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApnsVoipChannelWithContext(ctx, input)
+	output, err := client.UpdateApnsVoipChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApnsVoipSandboxChannel(ctx context.Context, input *pinpoint.UpdateApnsVoipSandboxChannelInput) (*pinpoint.UpdateApnsVoipSandboxChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApnsVoipSandboxChannelWithContext(ctx, input)
+	output, err := client.UpdateApnsVoipSandboxChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApplicationSettings(ctx context.Context, input *pinpoint.UpdateApplicationSettingsInput) (*pinpoint.UpdateApplicationSettingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApplicationSettingsWithContext(ctx, input)
+	output, err := client.UpdateApplicationSettingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateBaiduChannel(ctx context.Context, input *pinpoint.UpdateBaiduChannelInput) (*pinpoint.UpdateBaiduChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateBaiduChannelWithContext(ctx, input)
+	output, err := client.UpdateBaiduChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCampaign(ctx context.Context, input *pinpoint.UpdateCampaignInput) (*pinpoint.UpdateCampaignOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCampaignWithContext(ctx, input)
+	output, err := client.UpdateCampaignWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateEmailChannel(ctx context.Context, input *pinpoint.UpdateEmailChannelInput) (*pinpoint.UpdateEmailChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateEmailChannelWithContext(ctx, input)
+	output, err := client.UpdateEmailChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateEmailTemplate(ctx context.Context, input *pinpoint.UpdateEmailTemplateInput) (*pinpoint.UpdateEmailTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateEmailTemplateWithContext(ctx, input)
+	output, err := client.UpdateEmailTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateEndpoint(ctx context.Context, input *pinpoint.UpdateEndpointInput) (*pinpoint.UpdateEndpointOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateEndpointWithContext(ctx, input)
+	output, err := client.UpdateEndpointWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateEndpointsBatch(ctx context.Context, input *pinpoint.UpdateEndpointsBatchInput) (*pinpoint.UpdateEndpointsBatchOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateEndpointsBatchWithContext(ctx, input)
+	output, err := client.UpdateEndpointsBatchWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateGcmChannel(ctx context.Context, input *pinpoint.UpdateGcmChannelInput) (*pinpoint.UpdateGcmChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateGcmChannelWithContext(ctx, input)
+	output, err := client.UpdateGcmChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateJourney(ctx context.Context, input *pinpoint.UpdateJourneyInput) (*pinpoint.UpdateJourneyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateJourneyWithContext(ctx, input)
+	output, err := client.UpdateJourneyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateJourneyState(ctx context.Context, input *pinpoint.UpdateJourneyStateInput) (*pinpoint.UpdateJourneyStateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateJourneyStateWithContext(ctx, input)
+	output, err := client.UpdateJourneyStateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePushTemplate(ctx context.Context, input *pinpoint.UpdatePushTemplateInput) (*pinpoint.UpdatePushTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePushTemplateWithContext(ctx, input)
+	output, err := client.UpdatePushTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRecommenderConfiguration(ctx context.Context, input *pinpoint.UpdateRecommenderConfigurationInput) (*pinpoint.UpdateRecommenderConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRecommenderConfigurationWithContext(ctx, input)
+	output, err := client.UpdateRecommenderConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateSegment(ctx context.Context, input *pinpoint.UpdateSegmentInput) (*pinpoint.UpdateSegmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateSegmentWithContext(ctx, input)
+	output, err := client.UpdateSegmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateSmsChannel(ctx context.Context, input *pinpoint.UpdateSmsChannelInput) (*pinpoint.UpdateSmsChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateSmsChannelWithContext(ctx, input)
+	output, err := client.UpdateSmsChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateSmsTemplate(ctx context.Context, input *pinpoint.UpdateSmsTemplateInput) (*pinpoint.UpdateSmsTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateSmsTemplateWithContext(ctx, input)
+	output, err := client.UpdateSmsTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTemplateActiveVersion(ctx context.Context, input *pinpoint.UpdateTemplateActiveVersionInput) (*pinpoint.UpdateTemplateActiveVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTemplateActiveVersionWithContext(ctx, input)
+	output, err := client.UpdateTemplateActiveVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateVoiceChannel(ctx context.Context, input *pinpoint.UpdateVoiceChannelInput) (*pinpoint.UpdateVoiceChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateVoiceChannelWithContext(ctx, input)
+	output, err := client.UpdateVoiceChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateVoiceTemplate(ctx context.Context, input *pinpoint.UpdateVoiceTemplateInput) (*pinpoint.UpdateVoiceTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateVoiceTemplateWithContext(ctx, input)
+	output, err := client.UpdateVoiceTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

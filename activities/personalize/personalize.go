@@ -6,12 +6,14 @@ package personalize
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/personalize"
 	"github.com/aws/aws-sdk-go/service/personalize/personalizeiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (personalizeiface.Personaliz
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return personalize.New(sess), nil
@@ -55,343 +57,429 @@ func (a *Activities) getClient(ctx context.Context) (personalizeiface.Personaliz
 func (a *Activities) CreateBatchInferenceJob(ctx context.Context, input *personalize.CreateBatchInferenceJobInput) (*personalize.CreateBatchInferenceJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateBatchInferenceJobWithContext(ctx, input)
+	output, err := client.CreateBatchInferenceJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCampaign(ctx context.Context, input *personalize.CreateCampaignInput) (*personalize.CreateCampaignOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCampaignWithContext(ctx, input)
+	output, err := client.CreateCampaignWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDataset(ctx context.Context, input *personalize.CreateDatasetInput) (*personalize.CreateDatasetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDatasetWithContext(ctx, input)
+	output, err := client.CreateDatasetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDatasetGroup(ctx context.Context, input *personalize.CreateDatasetGroupInput) (*personalize.CreateDatasetGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDatasetGroupWithContext(ctx, input)
+	output, err := client.CreateDatasetGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDatasetImportJob(ctx context.Context, input *personalize.CreateDatasetImportJobInput) (*personalize.CreateDatasetImportJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDatasetImportJobWithContext(ctx, input)
+	output, err := client.CreateDatasetImportJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateEventTracker(ctx context.Context, input *personalize.CreateEventTrackerInput) (*personalize.CreateEventTrackerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateEventTrackerWithContext(ctx, input)
+	output, err := client.CreateEventTrackerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateFilter(ctx context.Context, input *personalize.CreateFilterInput) (*personalize.CreateFilterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateFilterWithContext(ctx, input)
+	output, err := client.CreateFilterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSchema(ctx context.Context, input *personalize.CreateSchemaInput) (*personalize.CreateSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSchemaWithContext(ctx, input)
+	output, err := client.CreateSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSolution(ctx context.Context, input *personalize.CreateSolutionInput) (*personalize.CreateSolutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSolutionWithContext(ctx, input)
+	output, err := client.CreateSolutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSolutionVersion(ctx context.Context, input *personalize.CreateSolutionVersionInput) (*personalize.CreateSolutionVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSolutionVersionWithContext(ctx, input)
+	output, err := client.CreateSolutionVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCampaign(ctx context.Context, input *personalize.DeleteCampaignInput) (*personalize.DeleteCampaignOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCampaignWithContext(ctx, input)
+	output, err := client.DeleteCampaignWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDataset(ctx context.Context, input *personalize.DeleteDatasetInput) (*personalize.DeleteDatasetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDatasetWithContext(ctx, input)
+	output, err := client.DeleteDatasetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDatasetGroup(ctx context.Context, input *personalize.DeleteDatasetGroupInput) (*personalize.DeleteDatasetGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDatasetGroupWithContext(ctx, input)
+	output, err := client.DeleteDatasetGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteEventTracker(ctx context.Context, input *personalize.DeleteEventTrackerInput) (*personalize.DeleteEventTrackerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteEventTrackerWithContext(ctx, input)
+	output, err := client.DeleteEventTrackerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteFilter(ctx context.Context, input *personalize.DeleteFilterInput) (*personalize.DeleteFilterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteFilterWithContext(ctx, input)
+	output, err := client.DeleteFilterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSchema(ctx context.Context, input *personalize.DeleteSchemaInput) (*personalize.DeleteSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSchemaWithContext(ctx, input)
+	output, err := client.DeleteSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSolution(ctx context.Context, input *personalize.DeleteSolutionInput) (*personalize.DeleteSolutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSolutionWithContext(ctx, input)
+	output, err := client.DeleteSolutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAlgorithm(ctx context.Context, input *personalize.DescribeAlgorithmInput) (*personalize.DescribeAlgorithmOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAlgorithmWithContext(ctx, input)
+	output, err := client.DescribeAlgorithmWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBatchInferenceJob(ctx context.Context, input *personalize.DescribeBatchInferenceJobInput) (*personalize.DescribeBatchInferenceJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBatchInferenceJobWithContext(ctx, input)
+	output, err := client.DescribeBatchInferenceJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCampaign(ctx context.Context, input *personalize.DescribeCampaignInput) (*personalize.DescribeCampaignOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCampaignWithContext(ctx, input)
+	output, err := client.DescribeCampaignWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDataset(ctx context.Context, input *personalize.DescribeDatasetInput) (*personalize.DescribeDatasetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDatasetWithContext(ctx, input)
+	output, err := client.DescribeDatasetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDatasetGroup(ctx context.Context, input *personalize.DescribeDatasetGroupInput) (*personalize.DescribeDatasetGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDatasetGroupWithContext(ctx, input)
+	output, err := client.DescribeDatasetGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDatasetImportJob(ctx context.Context, input *personalize.DescribeDatasetImportJobInput) (*personalize.DescribeDatasetImportJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDatasetImportJobWithContext(ctx, input)
+	output, err := client.DescribeDatasetImportJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEventTracker(ctx context.Context, input *personalize.DescribeEventTrackerInput) (*personalize.DescribeEventTrackerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEventTrackerWithContext(ctx, input)
+	output, err := client.DescribeEventTrackerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeFeatureTransformation(ctx context.Context, input *personalize.DescribeFeatureTransformationInput) (*personalize.DescribeFeatureTransformationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeFeatureTransformationWithContext(ctx, input)
+	output, err := client.DescribeFeatureTransformationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeFilter(ctx context.Context, input *personalize.DescribeFilterInput) (*personalize.DescribeFilterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeFilterWithContext(ctx, input)
+	output, err := client.DescribeFilterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeRecipe(ctx context.Context, input *personalize.DescribeRecipeInput) (*personalize.DescribeRecipeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeRecipeWithContext(ctx, input)
+	output, err := client.DescribeRecipeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSchema(ctx context.Context, input *personalize.DescribeSchemaInput) (*personalize.DescribeSchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSchemaWithContext(ctx, input)
+	output, err := client.DescribeSchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSolution(ctx context.Context, input *personalize.DescribeSolutionInput) (*personalize.DescribeSolutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSolutionWithContext(ctx, input)
+	output, err := client.DescribeSolutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSolutionVersion(ctx context.Context, input *personalize.DescribeSolutionVersionInput) (*personalize.DescribeSolutionVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSolutionVersionWithContext(ctx, input)
+	output, err := client.DescribeSolutionVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSolutionMetrics(ctx context.Context, input *personalize.GetSolutionMetricsInput) (*personalize.GetSolutionMetricsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSolutionMetricsWithContext(ctx, input)
+	output, err := client.GetSolutionMetricsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListBatchInferenceJobs(ctx context.Context, input *personalize.ListBatchInferenceJobsInput) (*personalize.ListBatchInferenceJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListBatchInferenceJobsWithContext(ctx, input)
+	output, err := client.ListBatchInferenceJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCampaigns(ctx context.Context, input *personalize.ListCampaignsInput) (*personalize.ListCampaignsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCampaignsWithContext(ctx, input)
+	output, err := client.ListCampaignsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDatasetGroups(ctx context.Context, input *personalize.ListDatasetGroupsInput) (*personalize.ListDatasetGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDatasetGroupsWithContext(ctx, input)
+	output, err := client.ListDatasetGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDatasetImportJobs(ctx context.Context, input *personalize.ListDatasetImportJobsInput) (*personalize.ListDatasetImportJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDatasetImportJobsWithContext(ctx, input)
+	output, err := client.ListDatasetImportJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDatasets(ctx context.Context, input *personalize.ListDatasetsInput) (*personalize.ListDatasetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDatasetsWithContext(ctx, input)
+	output, err := client.ListDatasetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListEventTrackers(ctx context.Context, input *personalize.ListEventTrackersInput) (*personalize.ListEventTrackersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListEventTrackersWithContext(ctx, input)
+	output, err := client.ListEventTrackersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListFilters(ctx context.Context, input *personalize.ListFiltersInput) (*personalize.ListFiltersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListFiltersWithContext(ctx, input)
+	output, err := client.ListFiltersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListRecipes(ctx context.Context, input *personalize.ListRecipesInput) (*personalize.ListRecipesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListRecipesWithContext(ctx, input)
+	output, err := client.ListRecipesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSchemas(ctx context.Context, input *personalize.ListSchemasInput) (*personalize.ListSchemasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSchemasWithContext(ctx, input)
+	output, err := client.ListSchemasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSolutionVersions(ctx context.Context, input *personalize.ListSolutionVersionsInput) (*personalize.ListSolutionVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSolutionVersionsWithContext(ctx, input)
+	output, err := client.ListSolutionVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSolutions(ctx context.Context, input *personalize.ListSolutionsInput) (*personalize.ListSolutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSolutionsWithContext(ctx, input)
+	output, err := client.ListSolutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCampaign(ctx context.Context, input *personalize.UpdateCampaignInput) (*personalize.UpdateCampaignOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCampaignWithContext(ctx, input)
+	output, err := client.UpdateCampaignWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

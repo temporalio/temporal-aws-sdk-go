@@ -6,12 +6,14 @@ package opsworks
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/opsworks"
 	"github.com/aws/aws-sdk-go/service/opsworks/opsworksiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (opsworksiface.OpsWorksAPI, 
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return opsworks.New(sess), nil
@@ -55,651 +57,799 @@ func (a *Activities) getClient(ctx context.Context) (opsworksiface.OpsWorksAPI, 
 func (a *Activities) AssignInstance(ctx context.Context, input *opsworks.AssignInstanceInput) (*opsworks.AssignInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssignInstanceWithContext(ctx, input)
+	output, err := client.AssignInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssignVolume(ctx context.Context, input *opsworks.AssignVolumeInput) (*opsworks.AssignVolumeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssignVolumeWithContext(ctx, input)
+	output, err := client.AssignVolumeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateElasticIp(ctx context.Context, input *opsworks.AssociateElasticIpInput) (*opsworks.AssociateElasticIpOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateElasticIpWithContext(ctx, input)
+	output, err := client.AssociateElasticIpWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AttachElasticLoadBalancer(ctx context.Context, input *opsworks.AttachElasticLoadBalancerInput) (*opsworks.AttachElasticLoadBalancerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AttachElasticLoadBalancerWithContext(ctx, input)
+	output, err := client.AttachElasticLoadBalancerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CloneStack(ctx context.Context, input *opsworks.CloneStackInput) (*opsworks.CloneStackOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CloneStackWithContext(ctx, input)
+	output, err := client.CloneStackWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateApp(ctx context.Context, input *opsworks.CreateAppInput) (*opsworks.CreateAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAppWithContext(ctx, input)
+	output, err := client.CreateAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDeployment(ctx context.Context, input *opsworks.CreateDeploymentInput) (*opsworks.CreateDeploymentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDeploymentWithContext(ctx, input)
+	output, err := client.CreateDeploymentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateInstance(ctx context.Context, input *opsworks.CreateInstanceInput) (*opsworks.CreateInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateInstanceWithContext(ctx, input)
+	output, err := client.CreateInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLayer(ctx context.Context, input *opsworks.CreateLayerInput) (*opsworks.CreateLayerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLayerWithContext(ctx, input)
+	output, err := client.CreateLayerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateStack(ctx context.Context, input *opsworks.CreateStackInput) (*opsworks.CreateStackOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateStackWithContext(ctx, input)
+	output, err := client.CreateStackWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateUserProfile(ctx context.Context, input *opsworks.CreateUserProfileInput) (*opsworks.CreateUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateUserProfileWithContext(ctx, input)
+	output, err := client.CreateUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApp(ctx context.Context, input *opsworks.DeleteAppInput) (*opsworks.DeleteAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAppWithContext(ctx, input)
+	output, err := client.DeleteAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteInstance(ctx context.Context, input *opsworks.DeleteInstanceInput) (*opsworks.DeleteInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteInstanceWithContext(ctx, input)
+	output, err := client.DeleteInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteLayer(ctx context.Context, input *opsworks.DeleteLayerInput) (*opsworks.DeleteLayerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteLayerWithContext(ctx, input)
+	output, err := client.DeleteLayerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteStack(ctx context.Context, input *opsworks.DeleteStackInput) (*opsworks.DeleteStackOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteStackWithContext(ctx, input)
+	output, err := client.DeleteStackWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUserProfile(ctx context.Context, input *opsworks.DeleteUserProfileInput) (*opsworks.DeleteUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUserProfileWithContext(ctx, input)
+	output, err := client.DeleteUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterEcsCluster(ctx context.Context, input *opsworks.DeregisterEcsClusterInput) (*opsworks.DeregisterEcsClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterEcsClusterWithContext(ctx, input)
+	output, err := client.DeregisterEcsClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterElasticIp(ctx context.Context, input *opsworks.DeregisterElasticIpInput) (*opsworks.DeregisterElasticIpOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterElasticIpWithContext(ctx, input)
+	output, err := client.DeregisterElasticIpWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterInstance(ctx context.Context, input *opsworks.DeregisterInstanceInput) (*opsworks.DeregisterInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterInstanceWithContext(ctx, input)
+	output, err := client.DeregisterInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterRdsDbInstance(ctx context.Context, input *opsworks.DeregisterRdsDbInstanceInput) (*opsworks.DeregisterRdsDbInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterRdsDbInstanceWithContext(ctx, input)
+	output, err := client.DeregisterRdsDbInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterVolume(ctx context.Context, input *opsworks.DeregisterVolumeInput) (*opsworks.DeregisterVolumeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterVolumeWithContext(ctx, input)
+	output, err := client.DeregisterVolumeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAgentVersions(ctx context.Context, input *opsworks.DescribeAgentVersionsInput) (*opsworks.DescribeAgentVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAgentVersionsWithContext(ctx, input)
+	output, err := client.DescribeAgentVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeApps(ctx context.Context, input *opsworks.DescribeAppsInput) (*opsworks.DescribeAppsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAppsWithContext(ctx, input)
+	output, err := client.DescribeAppsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCommands(ctx context.Context, input *opsworks.DescribeCommandsInput) (*opsworks.DescribeCommandsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCommandsWithContext(ctx, input)
+	output, err := client.DescribeCommandsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDeployments(ctx context.Context, input *opsworks.DescribeDeploymentsInput) (*opsworks.DescribeDeploymentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDeploymentsWithContext(ctx, input)
+	output, err := client.DescribeDeploymentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEcsClusters(ctx context.Context, input *opsworks.DescribeEcsClustersInput) (*opsworks.DescribeEcsClustersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEcsClustersWithContext(ctx, input)
+	output, err := client.DescribeEcsClustersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeElasticIps(ctx context.Context, input *opsworks.DescribeElasticIpsInput) (*opsworks.DescribeElasticIpsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeElasticIpsWithContext(ctx, input)
+	output, err := client.DescribeElasticIpsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeElasticLoadBalancers(ctx context.Context, input *opsworks.DescribeElasticLoadBalancersInput) (*opsworks.DescribeElasticLoadBalancersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeElasticLoadBalancersWithContext(ctx, input)
+	output, err := client.DescribeElasticLoadBalancersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInstances(ctx context.Context, input *opsworks.DescribeInstancesInput) (*opsworks.DescribeInstancesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInstancesWithContext(ctx, input)
+	output, err := client.DescribeInstancesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLayers(ctx context.Context, input *opsworks.DescribeLayersInput) (*opsworks.DescribeLayersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLayersWithContext(ctx, input)
+	output, err := client.DescribeLayersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLoadBasedAutoScaling(ctx context.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) (*opsworks.DescribeLoadBasedAutoScalingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLoadBasedAutoScalingWithContext(ctx, input)
+	output, err := client.DescribeLoadBasedAutoScalingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMyUserProfile(ctx context.Context, input *opsworks.DescribeMyUserProfileInput) (*opsworks.DescribeMyUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMyUserProfileWithContext(ctx, input)
+	output, err := client.DescribeMyUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeOperatingSystems(ctx context.Context, input *opsworks.DescribeOperatingSystemsInput) (*opsworks.DescribeOperatingSystemsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeOperatingSystemsWithContext(ctx, input)
+	output, err := client.DescribeOperatingSystemsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePermissions(ctx context.Context, input *opsworks.DescribePermissionsInput) (*opsworks.DescribePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePermissionsWithContext(ctx, input)
+	output, err := client.DescribePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeRaidArrays(ctx context.Context, input *opsworks.DescribeRaidArraysInput) (*opsworks.DescribeRaidArraysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeRaidArraysWithContext(ctx, input)
+	output, err := client.DescribeRaidArraysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeRdsDbInstances(ctx context.Context, input *opsworks.DescribeRdsDbInstancesInput) (*opsworks.DescribeRdsDbInstancesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeRdsDbInstancesWithContext(ctx, input)
+	output, err := client.DescribeRdsDbInstancesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeServiceErrors(ctx context.Context, input *opsworks.DescribeServiceErrorsInput) (*opsworks.DescribeServiceErrorsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeServiceErrorsWithContext(ctx, input)
+	output, err := client.DescribeServiceErrorsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeStackProvisioningParameters(ctx context.Context, input *opsworks.DescribeStackProvisioningParametersInput) (*opsworks.DescribeStackProvisioningParametersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeStackProvisioningParametersWithContext(ctx, input)
+	output, err := client.DescribeStackProvisioningParametersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeStackSummary(ctx context.Context, input *opsworks.DescribeStackSummaryInput) (*opsworks.DescribeStackSummaryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeStackSummaryWithContext(ctx, input)
+	output, err := client.DescribeStackSummaryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeStacks(ctx context.Context, input *opsworks.DescribeStacksInput) (*opsworks.DescribeStacksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeStacksWithContext(ctx, input)
+	output, err := client.DescribeStacksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTimeBasedAutoScaling(ctx context.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) (*opsworks.DescribeTimeBasedAutoScalingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTimeBasedAutoScalingWithContext(ctx, input)
+	output, err := client.DescribeTimeBasedAutoScalingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeUserProfiles(ctx context.Context, input *opsworks.DescribeUserProfilesInput) (*opsworks.DescribeUserProfilesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeUserProfilesWithContext(ctx, input)
+	output, err := client.DescribeUserProfilesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeVolumes(ctx context.Context, input *opsworks.DescribeVolumesInput) (*opsworks.DescribeVolumesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeVolumesWithContext(ctx, input)
+	output, err := client.DescribeVolumesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DetachElasticLoadBalancer(ctx context.Context, input *opsworks.DetachElasticLoadBalancerInput) (*opsworks.DetachElasticLoadBalancerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DetachElasticLoadBalancerWithContext(ctx, input)
+	output, err := client.DetachElasticLoadBalancerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateElasticIp(ctx context.Context, input *opsworks.DisassociateElasticIpInput) (*opsworks.DisassociateElasticIpOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateElasticIpWithContext(ctx, input)
+	output, err := client.DisassociateElasticIpWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetHostnameSuggestion(ctx context.Context, input *opsworks.GetHostnameSuggestionInput) (*opsworks.GetHostnameSuggestionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetHostnameSuggestionWithContext(ctx, input)
+	output, err := client.GetHostnameSuggestionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GrantAccess(ctx context.Context, input *opsworks.GrantAccessInput) (*opsworks.GrantAccessOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GrantAccessWithContext(ctx, input)
+	output, err := client.GrantAccessWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTags(ctx context.Context, input *opsworks.ListTagsInput) (*opsworks.ListTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsWithContext(ctx, input)
+	output, err := client.ListTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RebootInstance(ctx context.Context, input *opsworks.RebootInstanceInput) (*opsworks.RebootInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RebootInstanceWithContext(ctx, input)
+	output, err := client.RebootInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterEcsCluster(ctx context.Context, input *opsworks.RegisterEcsClusterInput) (*opsworks.RegisterEcsClusterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterEcsClusterWithContext(ctx, input)
+	output, err := client.RegisterEcsClusterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterElasticIp(ctx context.Context, input *opsworks.RegisterElasticIpInput) (*opsworks.RegisterElasticIpOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterElasticIpWithContext(ctx, input)
+	output, err := client.RegisterElasticIpWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterInstance(ctx context.Context, input *opsworks.RegisterInstanceInput) (*opsworks.RegisterInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterInstanceWithContext(ctx, input)
+	output, err := client.RegisterInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterRdsDbInstance(ctx context.Context, input *opsworks.RegisterRdsDbInstanceInput) (*opsworks.RegisterRdsDbInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterRdsDbInstanceWithContext(ctx, input)
+	output, err := client.RegisterRdsDbInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterVolume(ctx context.Context, input *opsworks.RegisterVolumeInput) (*opsworks.RegisterVolumeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterVolumeWithContext(ctx, input)
+	output, err := client.RegisterVolumeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetLoadBasedAutoScaling(ctx context.Context, input *opsworks.SetLoadBasedAutoScalingInput) (*opsworks.SetLoadBasedAutoScalingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetLoadBasedAutoScalingWithContext(ctx, input)
+	output, err := client.SetLoadBasedAutoScalingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetPermission(ctx context.Context, input *opsworks.SetPermissionInput) (*opsworks.SetPermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetPermissionWithContext(ctx, input)
+	output, err := client.SetPermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SetTimeBasedAutoScaling(ctx context.Context, input *opsworks.SetTimeBasedAutoScalingInput) (*opsworks.SetTimeBasedAutoScalingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SetTimeBasedAutoScalingWithContext(ctx, input)
+	output, err := client.SetTimeBasedAutoScalingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartInstance(ctx context.Context, input *opsworks.StartInstanceInput) (*opsworks.StartInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartInstanceWithContext(ctx, input)
+	output, err := client.StartInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartStack(ctx context.Context, input *opsworks.StartStackInput) (*opsworks.StartStackOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartStackWithContext(ctx, input)
+	output, err := client.StartStackWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopInstance(ctx context.Context, input *opsworks.StopInstanceInput) (*opsworks.StopInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopInstanceWithContext(ctx, input)
+	output, err := client.StopInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopStack(ctx context.Context, input *opsworks.StopStackInput) (*opsworks.StopStackOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopStackWithContext(ctx, input)
+	output, err := client.StopStackWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *opsworks.TagResourceInput) (*opsworks.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UnassignInstance(ctx context.Context, input *opsworks.UnassignInstanceInput) (*opsworks.UnassignInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UnassignInstanceWithContext(ctx, input)
+	output, err := client.UnassignInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UnassignVolume(ctx context.Context, input *opsworks.UnassignVolumeInput) (*opsworks.UnassignVolumeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UnassignVolumeWithContext(ctx, input)
+	output, err := client.UnassignVolumeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *opsworks.UntagResourceInput) (*opsworks.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApp(ctx context.Context, input *opsworks.UpdateAppInput) (*opsworks.UpdateAppOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAppWithContext(ctx, input)
+	output, err := client.UpdateAppWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateElasticIp(ctx context.Context, input *opsworks.UpdateElasticIpInput) (*opsworks.UpdateElasticIpOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateElasticIpWithContext(ctx, input)
+	output, err := client.UpdateElasticIpWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateInstance(ctx context.Context, input *opsworks.UpdateInstanceInput) (*opsworks.UpdateInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateInstanceWithContext(ctx, input)
+	output, err := client.UpdateInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateLayer(ctx context.Context, input *opsworks.UpdateLayerInput) (*opsworks.UpdateLayerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateLayerWithContext(ctx, input)
+	output, err := client.UpdateLayerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMyUserProfile(ctx context.Context, input *opsworks.UpdateMyUserProfileInput) (*opsworks.UpdateMyUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMyUserProfileWithContext(ctx, input)
+	output, err := client.UpdateMyUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRdsDbInstance(ctx context.Context, input *opsworks.UpdateRdsDbInstanceInput) (*opsworks.UpdateRdsDbInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRdsDbInstanceWithContext(ctx, input)
+	output, err := client.UpdateRdsDbInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateStack(ctx context.Context, input *opsworks.UpdateStackInput) (*opsworks.UpdateStackOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateStackWithContext(ctx, input)
+	output, err := client.UpdateStackWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateUserProfile(ctx context.Context, input *opsworks.UpdateUserProfileInput) (*opsworks.UpdateUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateUserProfileWithContext(ctx, input)
+	output, err := client.UpdateUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateVolume(ctx context.Context, input *opsworks.UpdateVolumeInput) (*opsworks.UpdateVolumeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateVolumeWithContext(ctx, input)
+	output, err := client.UpdateVolumeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilAppExists(ctx context.Context, input *opsworks.DescribeAppsInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilAppExistsWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilAppExistsWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilDeploymentSuccessful(ctx context.Context, input *opsworks.DescribeDeploymentsInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilDeploymentSuccessfulWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilDeploymentSuccessfulWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilInstanceOnline(ctx context.Context, input *opsworks.DescribeInstancesInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilInstanceOnlineWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilInstanceOnlineWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilInstanceRegistered(ctx context.Context, input *opsworks.DescribeInstancesInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilInstanceRegisteredWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilInstanceRegisteredWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilInstanceStopped(ctx context.Context, input *opsworks.DescribeInstancesInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilInstanceStoppedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilInstanceStoppedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilInstanceTerminated(ctx context.Context, input *opsworks.DescribeInstancesInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilInstanceTerminatedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilInstanceTerminatedWithContext(ctx, input, options...))
 	})
 }

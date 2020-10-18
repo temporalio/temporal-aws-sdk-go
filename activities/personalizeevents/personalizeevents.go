@@ -6,12 +6,14 @@ package personalizeevents
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/personalizeevents"
 	"github.com/aws/aws-sdk-go/service/personalizeevents/personalizeeventsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (personalizeeventsiface.Pers
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return personalizeevents.New(sess), nil
@@ -55,23 +57,29 @@ func (a *Activities) getClient(ctx context.Context) (personalizeeventsiface.Pers
 func (a *Activities) PutEvents(ctx context.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutEventsWithContext(ctx, input)
+	output, err := client.PutEventsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutItems(ctx context.Context, input *personalizeevents.PutItemsInput) (*personalizeevents.PutItemsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutItemsWithContext(ctx, input)
+	output, err := client.PutItemsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutUsers(ctx context.Context, input *personalizeevents.PutUsersInput) (*personalizeevents.PutUsersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutUsersWithContext(ctx, input)
+	output, err := client.PutUsersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

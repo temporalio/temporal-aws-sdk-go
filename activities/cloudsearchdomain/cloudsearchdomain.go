@@ -6,12 +6,14 @@ package cloudsearchdomain
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/cloudsearchdomain"
 	"github.com/aws/aws-sdk-go/service/cloudsearchdomain/cloudsearchdomainiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (cloudsearchdomainiface.Clou
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return cloudsearchdomain.New(sess), nil
@@ -55,23 +57,29 @@ func (a *Activities) getClient(ctx context.Context) (cloudsearchdomainiface.Clou
 func (a *Activities) Search(ctx context.Context, input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SearchWithContext(ctx, input)
+	output, err := client.SearchWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) Suggest(ctx context.Context, input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SuggestWithContext(ctx, input)
+	output, err := client.SuggestWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UploadDocuments(ctx context.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UploadDocumentsWithContext(ctx, input)
+	output, err := client.UploadDocumentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

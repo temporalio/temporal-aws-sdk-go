@@ -6,12 +6,14 @@ package iotjobsdataplane
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/iotjobsdataplane"
 	"github.com/aws/aws-sdk-go/service/iotjobsdataplane/iotjobsdataplaneiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (iotjobsdataplaneiface.IoTJo
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return iotjobsdataplane.New(sess), nil
@@ -55,31 +57,39 @@ func (a *Activities) getClient(ctx context.Context) (iotjobsdataplaneiface.IoTJo
 func (a *Activities) DescribeJobExecution(ctx context.Context, input *iotjobsdataplane.DescribeJobExecutionInput) (*iotjobsdataplane.DescribeJobExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeJobExecutionWithContext(ctx, input)
+	output, err := client.DescribeJobExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPendingJobExecutions(ctx context.Context, input *iotjobsdataplane.GetPendingJobExecutionsInput) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPendingJobExecutionsWithContext(ctx, input)
+	output, err := client.GetPendingJobExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartNextPendingJobExecution(ctx context.Context, input *iotjobsdataplane.StartNextPendingJobExecutionInput) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartNextPendingJobExecutionWithContext(ctx, input)
+	output, err := client.StartNextPendingJobExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateJobExecution(ctx context.Context, input *iotjobsdataplane.UpdateJobExecutionInput) (*iotjobsdataplane.UpdateJobExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateJobExecutionWithContext(ctx, input)
+	output, err := client.UpdateJobExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

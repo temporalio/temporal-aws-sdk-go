@@ -6,12 +6,14 @@ package translate
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/translate"
 	"github.com/aws/aws-sdk-go/service/translate/translateiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (translateiface.TranslateAPI
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return translate.New(sess), nil
@@ -55,72 +57,90 @@ func (a *Activities) getClient(ctx context.Context) (translateiface.TranslateAPI
 func (a *Activities) DeleteTerminology(ctx context.Context, input *translate.DeleteTerminologyInput) (*translate.DeleteTerminologyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTerminologyWithContext(ctx, input)
+	output, err := client.DeleteTerminologyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTextTranslationJob(ctx context.Context, input *translate.DescribeTextTranslationJobInput) (*translate.DescribeTextTranslationJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTextTranslationJobWithContext(ctx, input)
+	output, err := client.DescribeTextTranslationJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetTerminology(ctx context.Context, input *translate.GetTerminologyInput) (*translate.GetTerminologyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetTerminologyWithContext(ctx, input)
+	output, err := client.GetTerminologyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportTerminology(ctx context.Context, input *translate.ImportTerminologyInput) (*translate.ImportTerminologyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportTerminologyWithContext(ctx, input)
+	output, err := client.ImportTerminologyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTerminologies(ctx context.Context, input *translate.ListTerminologiesInput) (*translate.ListTerminologiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTerminologiesWithContext(ctx, input)
+	output, err := client.ListTerminologiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTextTranslationJobs(ctx context.Context, input *translate.ListTextTranslationJobsInput) (*translate.ListTextTranslationJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTextTranslationJobsWithContext(ctx, input)
+	output, err := client.ListTextTranslationJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartTextTranslationJob(ctx context.Context, input *translate.StartTextTranslationJobInput) (*translate.StartTextTranslationJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.StartTextTranslationJobWithContext(ctx, input)
+	output, err := client.StartTextTranslationJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopTextTranslationJob(ctx context.Context, input *translate.StopTextTranslationJobInput) (*translate.StopTextTranslationJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopTextTranslationJobWithContext(ctx, input)
+	output, err := client.StopTextTranslationJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) Text(ctx context.Context, input *translate.TextInput) (*translate.TextOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TextWithContext(ctx, input)
+	output, err := client.TextWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

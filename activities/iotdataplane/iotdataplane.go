@@ -6,12 +6,14 @@ package iotdataplane
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/iotdataplane"
 	"github.com/aws/aws-sdk-go/service/iotdataplane/iotdataplaneiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (iotdataplaneiface.IoTDataPl
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return iotdataplane.New(sess), nil
@@ -55,39 +57,49 @@ func (a *Activities) getClient(ctx context.Context) (iotdataplaneiface.IoTDataPl
 func (a *Activities) DeleteThingShadow(ctx context.Context, input *iotdataplane.DeleteThingShadowInput) (*iotdataplane.DeleteThingShadowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteThingShadowWithContext(ctx, input)
+	output, err := client.DeleteThingShadowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetThingShadow(ctx context.Context, input *iotdataplane.GetThingShadowInput) (*iotdataplane.GetThingShadowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetThingShadowWithContext(ctx, input)
+	output, err := client.GetThingShadowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListNamedShadowsForThing(ctx context.Context, input *iotdataplane.ListNamedShadowsForThingInput) (*iotdataplane.ListNamedShadowsForThingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListNamedShadowsForThingWithContext(ctx, input)
+	output, err := client.ListNamedShadowsForThingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) Publish(ctx context.Context, input *iotdataplane.PublishInput) (*iotdataplane.PublishOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PublishWithContext(ctx, input)
+	output, err := client.PublishWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateThingShadow(ctx context.Context, input *iotdataplane.UpdateThingShadowInput) (*iotdataplane.UpdateThingShadowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateThingShadowWithContext(ctx, input)
+	output, err := client.UpdateThingShadowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

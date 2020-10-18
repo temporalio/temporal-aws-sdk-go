@@ -6,12 +6,14 @@ package marketplacemetering
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/marketplacemetering"
 	"github.com/aws/aws-sdk-go/service/marketplacemetering/marketplacemeteringiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (marketplacemeteringiface.Ma
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return marketplacemetering.New(sess), nil
@@ -55,31 +57,39 @@ func (a *Activities) getClient(ctx context.Context) (marketplacemeteringiface.Ma
 func (a *Activities) BatchMeterUsage(ctx context.Context, input *marketplacemetering.BatchMeterUsageInput) (*marketplacemetering.BatchMeterUsageOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchMeterUsageWithContext(ctx, input)
+	output, err := client.BatchMeterUsageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) MeterUsage(ctx context.Context, input *marketplacemetering.MeterUsageInput) (*marketplacemetering.MeterUsageOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.MeterUsageWithContext(ctx, input)
+	output, err := client.MeterUsageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterUsage(ctx context.Context, input *marketplacemetering.RegisterUsageInput) (*marketplacemetering.RegisterUsageOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterUsageWithContext(ctx, input)
+	output, err := client.RegisterUsageWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResolveCustomer(ctx context.Context, input *marketplacemetering.ResolveCustomerInput) (*marketplacemetering.ResolveCustomerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResolveCustomerWithContext(ctx, input)
+	output, err := client.ResolveCustomerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

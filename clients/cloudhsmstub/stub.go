@@ -6,8 +6,9 @@ package cloudhsmstub
 
 import (
 	"github.com/aws/aws-sdk-go/service/cloudhsm"
-	"go.temporal.io/aws-sdk/clients"
 	"go.temporal.io/sdk/workflow"
+
+	"go.temporal.io/aws-sdk/clients"
 )
 
 // ensure that imports are valid even if not used by the generated code

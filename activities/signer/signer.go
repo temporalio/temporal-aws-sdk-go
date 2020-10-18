@@ -6,12 +6,14 @@ package signer
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/signer"
 	"github.com/aws/aws-sdk-go/service/signer/signeriface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (signeriface.SignerAPI, erro
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return signer.New(sess), nil
@@ -55,105 +57,129 @@ func (a *Activities) getClient(ctx context.Context) (signeriface.SignerAPI, erro
 func (a *Activities) CancelSigningProfile(ctx context.Context, input *signer.CancelSigningProfileInput) (*signer.CancelSigningProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelSigningProfileWithContext(ctx, input)
+	output, err := client.CancelSigningProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSigningJob(ctx context.Context, input *signer.DescribeSigningJobInput) (*signer.DescribeSigningJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSigningJobWithContext(ctx, input)
+	output, err := client.DescribeSigningJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSigningPlatform(ctx context.Context, input *signer.GetSigningPlatformInput) (*signer.GetSigningPlatformOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSigningPlatformWithContext(ctx, input)
+	output, err := client.GetSigningPlatformWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSigningProfile(ctx context.Context, input *signer.GetSigningProfileInput) (*signer.GetSigningProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSigningProfileWithContext(ctx, input)
+	output, err := client.GetSigningProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSigningJobs(ctx context.Context, input *signer.ListSigningJobsInput) (*signer.ListSigningJobsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSigningJobsWithContext(ctx, input)
+	output, err := client.ListSigningJobsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSigningPlatforms(ctx context.Context, input *signer.ListSigningPlatformsInput) (*signer.ListSigningPlatformsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSigningPlatformsWithContext(ctx, input)
+	output, err := client.ListSigningPlatformsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListSigningProfiles(ctx context.Context, input *signer.ListSigningProfilesInput) (*signer.ListSigningProfilesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListSigningProfilesWithContext(ctx, input)
+	output, err := client.ListSigningProfilesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *signer.ListTagsForResourceInput) (*signer.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutSigningProfile(ctx context.Context, input *signer.PutSigningProfileInput) (*signer.PutSigningProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutSigningProfileWithContext(ctx, input)
+	output, err := client.PutSigningProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartSigningJob(ctx context.Context, input *signer.StartSigningJobInput) (*signer.StartSigningJobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartSigningJobWithContext(ctx, input)
+	output, err := client.StartSigningJobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *signer.TagResourceInput) (*signer.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilSuccessfulSigningJob(ctx context.Context, input *signer.DescribeSigningJobInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilSuccessfulSigningJobWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilSuccessfulSigningJobWithContext(ctx, input, options...))
 	})
 }

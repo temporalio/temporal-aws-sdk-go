@@ -6,12 +6,14 @@ package directconnect
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/directconnect"
 	"github.com/aws/aws-sdk-go/service/directconnect/directconnectiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (directconnectiface.DirectCo
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return directconnect.New(sess), nil
@@ -55,447 +57,559 @@ func (a *Activities) getClient(ctx context.Context) (directconnectiface.DirectCo
 func (a *Activities) AcceptDirectConnectGatewayAssociationProposal(ctx context.Context, input *directconnect.AcceptDirectConnectGatewayAssociationProposalInput) (*directconnect.AcceptDirectConnectGatewayAssociationProposalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AcceptDirectConnectGatewayAssociationProposalWithContext(ctx, input)
+	output, err := client.AcceptDirectConnectGatewayAssociationProposalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AllocateConnectionOnInterconnect(ctx context.Context, input *directconnect.AllocateConnectionOnInterconnectInput) (*directconnect.Connection, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AllocateConnectionOnInterconnectWithContext(ctx, input)
+	output, err := client.AllocateConnectionOnInterconnectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AllocateHostedConnection(ctx context.Context, input *directconnect.AllocateHostedConnectionInput) (*directconnect.Connection, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AllocateHostedConnectionWithContext(ctx, input)
+	output, err := client.AllocateHostedConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AllocatePrivateVirtualInterface(ctx context.Context, input *directconnect.AllocatePrivateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AllocatePrivateVirtualInterfaceWithContext(ctx, input)
+	output, err := client.AllocatePrivateVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AllocatePublicVirtualInterface(ctx context.Context, input *directconnect.AllocatePublicVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AllocatePublicVirtualInterfaceWithContext(ctx, input)
+	output, err := client.AllocatePublicVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AllocateTransitVirtualInterface(ctx context.Context, input *directconnect.AllocateTransitVirtualInterfaceInput) (*directconnect.AllocateTransitVirtualInterfaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AllocateTransitVirtualInterfaceWithContext(ctx, input)
+	output, err := client.AllocateTransitVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateConnectionWithLag(ctx context.Context, input *directconnect.AssociateConnectionWithLagInput) (*directconnect.Connection, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateConnectionWithLagWithContext(ctx, input)
+	output, err := client.AssociateConnectionWithLagWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateHostedConnection(ctx context.Context, input *directconnect.AssociateHostedConnectionInput) (*directconnect.Connection, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateHostedConnectionWithContext(ctx, input)
+	output, err := client.AssociateHostedConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateVirtualInterface(ctx context.Context, input *directconnect.AssociateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateVirtualInterfaceWithContext(ctx, input)
+	output, err := client.AssociateVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ConfirmConnection(ctx context.Context, input *directconnect.ConfirmConnectionInput) (*directconnect.ConfirmConnectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ConfirmConnectionWithContext(ctx, input)
+	output, err := client.ConfirmConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ConfirmPrivateVirtualInterface(ctx context.Context, input *directconnect.ConfirmPrivateVirtualInterfaceInput) (*directconnect.ConfirmPrivateVirtualInterfaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ConfirmPrivateVirtualInterfaceWithContext(ctx, input)
+	output, err := client.ConfirmPrivateVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ConfirmPublicVirtualInterface(ctx context.Context, input *directconnect.ConfirmPublicVirtualInterfaceInput) (*directconnect.ConfirmPublicVirtualInterfaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ConfirmPublicVirtualInterfaceWithContext(ctx, input)
+	output, err := client.ConfirmPublicVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ConfirmTransitVirtualInterface(ctx context.Context, input *directconnect.ConfirmTransitVirtualInterfaceInput) (*directconnect.ConfirmTransitVirtualInterfaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ConfirmTransitVirtualInterfaceWithContext(ctx, input)
+	output, err := client.ConfirmTransitVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateBGPPeer(ctx context.Context, input *directconnect.CreateBGPPeerInput) (*directconnect.CreateBGPPeerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateBGPPeerWithContext(ctx, input)
+	output, err := client.CreateBGPPeerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateConnection(ctx context.Context, input *directconnect.CreateConnectionInput) (*directconnect.Connection, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateConnectionWithContext(ctx, input)
+	output, err := client.CreateConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDirectConnectGateway(ctx context.Context, input *directconnect.CreateDirectConnectGatewayInput) (*directconnect.CreateDirectConnectGatewayOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDirectConnectGatewayWithContext(ctx, input)
+	output, err := client.CreateDirectConnectGatewayWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDirectConnectGatewayAssociation(ctx context.Context, input *directconnect.CreateDirectConnectGatewayAssociationInput) (*directconnect.CreateDirectConnectGatewayAssociationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDirectConnectGatewayAssociationWithContext(ctx, input)
+	output, err := client.CreateDirectConnectGatewayAssociationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDirectConnectGatewayAssociationProposal(ctx context.Context, input *directconnect.CreateDirectConnectGatewayAssociationProposalInput) (*directconnect.CreateDirectConnectGatewayAssociationProposalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDirectConnectGatewayAssociationProposalWithContext(ctx, input)
+	output, err := client.CreateDirectConnectGatewayAssociationProposalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateInterconnect(ctx context.Context, input *directconnect.CreateInterconnectInput) (*directconnect.Interconnect, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateInterconnectWithContext(ctx, input)
+	output, err := client.CreateInterconnectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLag(ctx context.Context, input *directconnect.CreateLagInput) (*directconnect.Lag, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLagWithContext(ctx, input)
+	output, err := client.CreateLagWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePrivateVirtualInterface(ctx context.Context, input *directconnect.CreatePrivateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePrivateVirtualInterfaceWithContext(ctx, input)
+	output, err := client.CreatePrivateVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePublicVirtualInterface(ctx context.Context, input *directconnect.CreatePublicVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePublicVirtualInterfaceWithContext(ctx, input)
+	output, err := client.CreatePublicVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTransitVirtualInterface(ctx context.Context, input *directconnect.CreateTransitVirtualInterfaceInput) (*directconnect.CreateTransitVirtualInterfaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTransitVirtualInterfaceWithContext(ctx, input)
+	output, err := client.CreateTransitVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteBGPPeer(ctx context.Context, input *directconnect.DeleteBGPPeerInput) (*directconnect.DeleteBGPPeerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteBGPPeerWithContext(ctx, input)
+	output, err := client.DeleteBGPPeerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteConnection(ctx context.Context, input *directconnect.DeleteConnectionInput) (*directconnect.Connection, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteConnectionWithContext(ctx, input)
+	output, err := client.DeleteConnectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDirectConnectGateway(ctx context.Context, input *directconnect.DeleteDirectConnectGatewayInput) (*directconnect.DeleteDirectConnectGatewayOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDirectConnectGatewayWithContext(ctx, input)
+	output, err := client.DeleteDirectConnectGatewayWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDirectConnectGatewayAssociation(ctx context.Context, input *directconnect.DeleteDirectConnectGatewayAssociationInput) (*directconnect.DeleteDirectConnectGatewayAssociationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDirectConnectGatewayAssociationWithContext(ctx, input)
+	output, err := client.DeleteDirectConnectGatewayAssociationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDirectConnectGatewayAssociationProposal(ctx context.Context, input *directconnect.DeleteDirectConnectGatewayAssociationProposalInput) (*directconnect.DeleteDirectConnectGatewayAssociationProposalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDirectConnectGatewayAssociationProposalWithContext(ctx, input)
+	output, err := client.DeleteDirectConnectGatewayAssociationProposalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteInterconnect(ctx context.Context, input *directconnect.DeleteInterconnectInput) (*directconnect.DeleteInterconnectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteInterconnectWithContext(ctx, input)
+	output, err := client.DeleteInterconnectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteLag(ctx context.Context, input *directconnect.DeleteLagInput) (*directconnect.Lag, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteLagWithContext(ctx, input)
+	output, err := client.DeleteLagWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteVirtualInterface(ctx context.Context, input *directconnect.DeleteVirtualInterfaceInput) (*directconnect.DeleteVirtualInterfaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteVirtualInterfaceWithContext(ctx, input)
+	output, err := client.DeleteVirtualInterfaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeConnectionLoa(ctx context.Context, input *directconnect.DescribeConnectionLoaInput) (*directconnect.DescribeConnectionLoaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeConnectionLoaWithContext(ctx, input)
+	output, err := client.DescribeConnectionLoaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeConnections(ctx context.Context, input *directconnect.DescribeConnectionsInput) (*directconnect.Connections, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeConnectionsWithContext(ctx, input)
+	output, err := client.DescribeConnectionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeConnectionsOnInterconnect(ctx context.Context, input *directconnect.DescribeConnectionsOnInterconnectInput) (*directconnect.Connections, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeConnectionsOnInterconnectWithContext(ctx, input)
+	output, err := client.DescribeConnectionsOnInterconnectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDirectConnectGatewayAssociationProposals(ctx context.Context, input *directconnect.DescribeDirectConnectGatewayAssociationProposalsInput) (*directconnect.DescribeDirectConnectGatewayAssociationProposalsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDirectConnectGatewayAssociationProposalsWithContext(ctx, input)
+	output, err := client.DescribeDirectConnectGatewayAssociationProposalsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDirectConnectGatewayAssociations(ctx context.Context, input *directconnect.DescribeDirectConnectGatewayAssociationsInput) (*directconnect.DescribeDirectConnectGatewayAssociationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDirectConnectGatewayAssociationsWithContext(ctx, input)
+	output, err := client.DescribeDirectConnectGatewayAssociationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDirectConnectGatewayAttachments(ctx context.Context, input *directconnect.DescribeDirectConnectGatewayAttachmentsInput) (*directconnect.DescribeDirectConnectGatewayAttachmentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDirectConnectGatewayAttachmentsWithContext(ctx, input)
+	output, err := client.DescribeDirectConnectGatewayAttachmentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDirectConnectGateways(ctx context.Context, input *directconnect.DescribeDirectConnectGatewaysInput) (*directconnect.DescribeDirectConnectGatewaysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDirectConnectGatewaysWithContext(ctx, input)
+	output, err := client.DescribeDirectConnectGatewaysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeHostedConnections(ctx context.Context, input *directconnect.DescribeHostedConnectionsInput) (*directconnect.Connections, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeHostedConnectionsWithContext(ctx, input)
+	output, err := client.DescribeHostedConnectionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInterconnectLoa(ctx context.Context, input *directconnect.DescribeInterconnectLoaInput) (*directconnect.DescribeInterconnectLoaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInterconnectLoaWithContext(ctx, input)
+	output, err := client.DescribeInterconnectLoaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInterconnects(ctx context.Context, input *directconnect.DescribeInterconnectsInput) (*directconnect.DescribeInterconnectsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInterconnectsWithContext(ctx, input)
+	output, err := client.DescribeInterconnectsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLags(ctx context.Context, input *directconnect.DescribeLagsInput) (*directconnect.DescribeLagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLagsWithContext(ctx, input)
+	output, err := client.DescribeLagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLoa(ctx context.Context, input *directconnect.DescribeLoaInput) (*directconnect.Loa, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLoaWithContext(ctx, input)
+	output, err := client.DescribeLoaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeLocations(ctx context.Context, input *directconnect.DescribeLocationsInput) (*directconnect.DescribeLocationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeLocationsWithContext(ctx, input)
+	output, err := client.DescribeLocationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTags(ctx context.Context, input *directconnect.DescribeTagsInput) (*directconnect.DescribeTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTagsWithContext(ctx, input)
+	output, err := client.DescribeTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeVirtualGateways(ctx context.Context, input *directconnect.DescribeVirtualGatewaysInput) (*directconnect.DescribeVirtualGatewaysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeVirtualGatewaysWithContext(ctx, input)
+	output, err := client.DescribeVirtualGatewaysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeVirtualInterfaces(ctx context.Context, input *directconnect.DescribeVirtualInterfacesInput) (*directconnect.DescribeVirtualInterfacesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeVirtualInterfacesWithContext(ctx, input)
+	output, err := client.DescribeVirtualInterfacesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateConnectionFromLag(ctx context.Context, input *directconnect.DisassociateConnectionFromLagInput) (*directconnect.Connection, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateConnectionFromLagWithContext(ctx, input)
+	output, err := client.DisassociateConnectionFromLagWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListVirtualInterfaceTestHistory(ctx context.Context, input *directconnect.ListVirtualInterfaceTestHistoryInput) (*directconnect.ListVirtualInterfaceTestHistoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListVirtualInterfaceTestHistoryWithContext(ctx, input)
+	output, err := client.ListVirtualInterfaceTestHistoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartBgpFailoverTest(ctx context.Context, input *directconnect.StartBgpFailoverTestInput) (*directconnect.StartBgpFailoverTestOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartBgpFailoverTestWithContext(ctx, input)
+	output, err := client.StartBgpFailoverTestWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopBgpFailoverTest(ctx context.Context, input *directconnect.StopBgpFailoverTestInput) (*directconnect.StopBgpFailoverTestOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopBgpFailoverTestWithContext(ctx, input)
+	output, err := client.StopBgpFailoverTestWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *directconnect.TagResourceInput) (*directconnect.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *directconnect.UntagResourceInput) (*directconnect.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDirectConnectGatewayAssociation(ctx context.Context, input *directconnect.UpdateDirectConnectGatewayAssociationInput) (*directconnect.UpdateDirectConnectGatewayAssociationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDirectConnectGatewayAssociationWithContext(ctx, input)
+	output, err := client.UpdateDirectConnectGatewayAssociationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateLag(ctx context.Context, input *directconnect.UpdateLagInput) (*directconnect.Lag, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateLagWithContext(ctx, input)
+	output, err := client.UpdateLagWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateVirtualInterfaceAttributes(ctx context.Context, input *directconnect.UpdateVirtualInterfaceAttributesInput) (*directconnect.UpdateVirtualInterfaceAttributesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateVirtualInterfaceAttributesWithContext(ctx, input)
+	output, err := client.UpdateVirtualInterfaceAttributesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

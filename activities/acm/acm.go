@@ -6,12 +6,14 @@ package acm
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/acm"
 	"github.com/aws/aws-sdk-go/service/acm/acmiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (acmiface.ACMAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return acm.New(sess), nil
@@ -55,113 +57,139 @@ func (a *Activities) getClient(ctx context.Context) (acmiface.ACMAPI, error) {
 func (a *Activities) AddTagsToCertificate(ctx context.Context, input *acm.AddTagsToCertificateInput) (*acm.AddTagsToCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddTagsToCertificateWithContext(ctx, input)
+	output, err := client.AddTagsToCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCertificate(ctx context.Context, input *acm.DeleteCertificateInput) (*acm.DeleteCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCertificateWithContext(ctx, input)
+	output, err := client.DeleteCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCertificate(ctx context.Context, input *acm.DescribeCertificateInput) (*acm.DescribeCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCertificateWithContext(ctx, input)
+	output, err := client.DescribeCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ExportCertificate(ctx context.Context, input *acm.ExportCertificateInput) (*acm.ExportCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ExportCertificateWithContext(ctx, input)
+	output, err := client.ExportCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCertificate(ctx context.Context, input *acm.GetCertificateInput) (*acm.GetCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCertificateWithContext(ctx, input)
+	output, err := client.GetCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ImportCertificate(ctx context.Context, input *acm.ImportCertificateInput) (*acm.ImportCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ImportCertificateWithContext(ctx, input)
+	output, err := client.ImportCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCertificates(ctx context.Context, input *acm.ListCertificatesInput) (*acm.ListCertificatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCertificatesWithContext(ctx, input)
+	output, err := client.ListCertificatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForCertificate(ctx context.Context, input *acm.ListTagsForCertificateInput) (*acm.ListTagsForCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForCertificateWithContext(ctx, input)
+	output, err := client.ListTagsForCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveTagsFromCertificate(ctx context.Context, input *acm.RemoveTagsFromCertificateInput) (*acm.RemoveTagsFromCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveTagsFromCertificateWithContext(ctx, input)
+	output, err := client.RemoveTagsFromCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RenewCertificate(ctx context.Context, input *acm.RenewCertificateInput) (*acm.RenewCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RenewCertificateWithContext(ctx, input)
+	output, err := client.RenewCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RequestCertificate(ctx context.Context, input *acm.RequestCertificateInput) (*acm.RequestCertificateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RequestCertificateWithContext(ctx, input)
+	output, err := client.RequestCertificateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResendValidationEmail(ctx context.Context, input *acm.ResendValidationEmailInput) (*acm.ResendValidationEmailOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResendValidationEmailWithContext(ctx, input)
+	output, err := client.ResendValidationEmailWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCertificateOptions(ctx context.Context, input *acm.UpdateCertificateOptionsInput) (*acm.UpdateCertificateOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCertificateOptionsWithContext(ctx, input)
+	output, err := client.UpdateCertificateOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilCertificateValidated(ctx context.Context, input *acm.DescribeCertificateInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilCertificateValidatedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilCertificateValidatedWithContext(ctx, input, options...))
 	})
 }

@@ -6,12 +6,14 @@ package shield
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/shield"
 	"github.com/aws/aws-sdk-go/service/shield/shieldiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (shieldiface.ShieldAPI, erro
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return shield.New(sess), nil
@@ -55,183 +57,229 @@ func (a *Activities) getClient(ctx context.Context) (shieldiface.ShieldAPI, erro
 func (a *Activities) AssociateDRTLogBucket(ctx context.Context, input *shield.AssociateDRTLogBucketInput) (*shield.AssociateDRTLogBucketOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateDRTLogBucketWithContext(ctx, input)
+	output, err := client.AssociateDRTLogBucketWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateDRTRole(ctx context.Context, input *shield.AssociateDRTRoleInput) (*shield.AssociateDRTRoleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateDRTRoleWithContext(ctx, input)
+	output, err := client.AssociateDRTRoleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateHealthCheck(ctx context.Context, input *shield.AssociateHealthCheckInput) (*shield.AssociateHealthCheckOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateHealthCheckWithContext(ctx, input)
+	output, err := client.AssociateHealthCheckWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateProactiveEngagementDetails(ctx context.Context, input *shield.AssociateProactiveEngagementDetailsInput) (*shield.AssociateProactiveEngagementDetailsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateProactiveEngagementDetailsWithContext(ctx, input)
+	output, err := client.AssociateProactiveEngagementDetailsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateProtection(ctx context.Context, input *shield.CreateProtectionInput) (*shield.CreateProtectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateProtectionWithContext(ctx, input)
+	output, err := client.CreateProtectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateSubscription(ctx context.Context, input *shield.CreateSubscriptionInput) (*shield.CreateSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateSubscriptionWithContext(ctx, input)
+	output, err := client.CreateSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteProtection(ctx context.Context, input *shield.DeleteProtectionInput) (*shield.DeleteProtectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteProtectionWithContext(ctx, input)
+	output, err := client.DeleteProtectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSubscription(ctx context.Context, input *shield.DeleteSubscriptionInput) (*shield.DeleteSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteSubscriptionWithContext(ctx, input)
+	output, err := client.DeleteSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAttack(ctx context.Context, input *shield.DescribeAttackInput) (*shield.DescribeAttackOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAttackWithContext(ctx, input)
+	output, err := client.DescribeAttackWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDRTAccess(ctx context.Context, input *shield.DescribeDRTAccessInput) (*shield.DescribeDRTAccessOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDRTAccessWithContext(ctx, input)
+	output, err := client.DescribeDRTAccessWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEmergencyContactSettings(ctx context.Context, input *shield.DescribeEmergencyContactSettingsInput) (*shield.DescribeEmergencyContactSettingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEmergencyContactSettingsWithContext(ctx, input)
+	output, err := client.DescribeEmergencyContactSettingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeProtection(ctx context.Context, input *shield.DescribeProtectionInput) (*shield.DescribeProtectionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeProtectionWithContext(ctx, input)
+	output, err := client.DescribeProtectionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSubscription(ctx context.Context, input *shield.DescribeSubscriptionInput) (*shield.DescribeSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSubscriptionWithContext(ctx, input)
+	output, err := client.DescribeSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisableProactiveEngagement(ctx context.Context, input *shield.DisableProactiveEngagementInput) (*shield.DisableProactiveEngagementOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisableProactiveEngagementWithContext(ctx, input)
+	output, err := client.DisableProactiveEngagementWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateDRTLogBucket(ctx context.Context, input *shield.DisassociateDRTLogBucketInput) (*shield.DisassociateDRTLogBucketOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateDRTLogBucketWithContext(ctx, input)
+	output, err := client.DisassociateDRTLogBucketWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateDRTRole(ctx context.Context, input *shield.DisassociateDRTRoleInput) (*shield.DisassociateDRTRoleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateDRTRoleWithContext(ctx, input)
+	output, err := client.DisassociateDRTRoleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateHealthCheck(ctx context.Context, input *shield.DisassociateHealthCheckInput) (*shield.DisassociateHealthCheckOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateHealthCheckWithContext(ctx, input)
+	output, err := client.DisassociateHealthCheckWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableProactiveEngagement(ctx context.Context, input *shield.EnableProactiveEngagementInput) (*shield.EnableProactiveEngagementOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableProactiveEngagementWithContext(ctx, input)
+	output, err := client.EnableProactiveEngagementWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSubscriptionState(ctx context.Context, input *shield.GetSubscriptionStateInput) (*shield.GetSubscriptionStateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSubscriptionStateWithContext(ctx, input)
+	output, err := client.GetSubscriptionStateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAttacks(ctx context.Context, input *shield.ListAttacksInput) (*shield.ListAttacksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAttacksWithContext(ctx, input)
+	output, err := client.ListAttacksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListProtections(ctx context.Context, input *shield.ListProtectionsInput) (*shield.ListProtectionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListProtectionsWithContext(ctx, input)
+	output, err := client.ListProtectionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateEmergencyContactSettings(ctx context.Context, input *shield.UpdateEmergencyContactSettingsInput) (*shield.UpdateEmergencyContactSettingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateEmergencyContactSettingsWithContext(ctx, input)
+	output, err := client.UpdateEmergencyContactSettingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateSubscription(ctx context.Context, input *shield.UpdateSubscriptionInput) (*shield.UpdateSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateSubscriptionWithContext(ctx, input)
+	output, err := client.UpdateSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

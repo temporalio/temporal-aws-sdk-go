@@ -6,12 +6,14 @@ package detective
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/detective"
 	"github.com/aws/aws-sdk-go/service/detective/detectiveiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (detectiveiface.DetectiveAPI
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return detective.New(sess), nil
@@ -55,95 +57,119 @@ func (a *Activities) getClient(ctx context.Context) (detectiveiface.DetectiveAPI
 func (a *Activities) AcceptInvitation(ctx context.Context, input *detective.AcceptInvitationInput) (*detective.AcceptInvitationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AcceptInvitationWithContext(ctx, input)
+	output, err := client.AcceptInvitationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateGraph(ctx context.Context, input *detective.CreateGraphInput) (*detective.CreateGraphOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateGraphWithContext(ctx, input)
+	output, err := client.CreateGraphWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateMembers(ctx context.Context, input *detective.CreateMembersInput) (*detective.CreateMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateMembersWithContext(ctx, input)
+	output, err := client.CreateMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteGraph(ctx context.Context, input *detective.DeleteGraphInput) (*detective.DeleteGraphOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteGraphWithContext(ctx, input)
+	output, err := client.DeleteGraphWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMembers(ctx context.Context, input *detective.DeleteMembersInput) (*detective.DeleteMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMembersWithContext(ctx, input)
+	output, err := client.DeleteMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateMembership(ctx context.Context, input *detective.DisassociateMembershipInput) (*detective.DisassociateMembershipOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateMembershipWithContext(ctx, input)
+	output, err := client.DisassociateMembershipWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMembers(ctx context.Context, input *detective.GetMembersInput) (*detective.GetMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMembersWithContext(ctx, input)
+	output, err := client.GetMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListGraphs(ctx context.Context, input *detective.ListGraphsInput) (*detective.ListGraphsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListGraphsWithContext(ctx, input)
+	output, err := client.ListGraphsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInvitations(ctx context.Context, input *detective.ListInvitationsInput) (*detective.ListInvitationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInvitationsWithContext(ctx, input)
+	output, err := client.ListInvitationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListMembers(ctx context.Context, input *detective.ListMembersInput) (*detective.ListMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListMembersWithContext(ctx, input)
+	output, err := client.ListMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RejectInvitation(ctx context.Context, input *detective.RejectInvitationInput) (*detective.RejectInvitationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RejectInvitationWithContext(ctx, input)
+	output, err := client.RejectInvitationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartMonitoringMember(ctx context.Context, input *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartMonitoringMemberWithContext(ctx, input)
+	output, err := client.StartMonitoringMemberWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

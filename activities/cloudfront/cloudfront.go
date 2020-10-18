@@ -6,12 +6,14 @@ package cloudfront
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/cloudfront"
 	"github.com/aws/aws-sdk-go/service/cloudfront/cloudfrontiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (cloudfrontiface.CloudFrontA
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return cloudfront.New(sess), nil
@@ -55,573 +57,709 @@ func (a *Activities) getClient(ctx context.Context) (cloudfrontiface.CloudFrontA
 func (a *Activities) CreateCachePolicy(ctx context.Context, input *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCachePolicyWithContext(ctx, input)
+	output, err := client.CreateCachePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCloudFrontOriginAccessIdentity(ctx context.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) (*cloudfront.CreateCloudFrontOriginAccessIdentityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCloudFrontOriginAccessIdentityWithContext(ctx, input)
+	output, err := client.CreateCloudFrontOriginAccessIdentityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDistribution(ctx context.Context, input *cloudfront.CreateDistributionInput) (*cloudfront.CreateDistributionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDistributionWithContext(ctx, input)
+	output, err := client.CreateDistributionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDistributionWithTags(ctx context.Context, input *cloudfront.CreateDistributionWithTagsInput) (*cloudfront.CreateDistributionWithTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDistributionWithTagsWithContext(ctx, input)
+	output, err := client.CreateDistributionWithTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateFieldLevelEncryptionConfig(ctx context.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) (*cloudfront.CreateFieldLevelEncryptionConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateFieldLevelEncryptionConfigWithContext(ctx, input)
+	output, err := client.CreateFieldLevelEncryptionConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateFieldLevelEncryptionProfile(ctx context.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) (*cloudfront.CreateFieldLevelEncryptionProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateFieldLevelEncryptionProfileWithContext(ctx, input)
+	output, err := client.CreateFieldLevelEncryptionProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateInvalidation(ctx context.Context, input *cloudfront.CreateInvalidationInput) (*cloudfront.CreateInvalidationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateInvalidationWithContext(ctx, input)
+	output, err := client.CreateInvalidationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateMonitoringSubscription(ctx context.Context, input *cloudfront.CreateMonitoringSubscriptionInput) (*cloudfront.CreateMonitoringSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateMonitoringSubscriptionWithContext(ctx, input)
+	output, err := client.CreateMonitoringSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateOriginRequestPolicy(ctx context.Context, input *cloudfront.CreateOriginRequestPolicyInput) (*cloudfront.CreateOriginRequestPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateOriginRequestPolicyWithContext(ctx, input)
+	output, err := client.CreateOriginRequestPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePublicKey(ctx context.Context, input *cloudfront.CreatePublicKeyInput) (*cloudfront.CreatePublicKeyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePublicKeyWithContext(ctx, input)
+	output, err := client.CreatePublicKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateRealtimeLogConfig(ctx context.Context, input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateRealtimeLogConfigWithContext(ctx, input)
+	output, err := client.CreateRealtimeLogConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateStreamingDistribution(ctx context.Context, input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateStreamingDistributionWithContext(ctx, input)
+	output, err := client.CreateStreamingDistributionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateStreamingDistributionWithTags(ctx context.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) (*cloudfront.CreateStreamingDistributionWithTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateStreamingDistributionWithTagsWithContext(ctx, input)
+	output, err := client.CreateStreamingDistributionWithTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCachePolicy(ctx context.Context, input *cloudfront.DeleteCachePolicyInput) (*cloudfront.DeleteCachePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCachePolicyWithContext(ctx, input)
+	output, err := client.DeleteCachePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCloudFrontOriginAccessIdentity(ctx context.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) (*cloudfront.DeleteCloudFrontOriginAccessIdentityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCloudFrontOriginAccessIdentityWithContext(ctx, input)
+	output, err := client.DeleteCloudFrontOriginAccessIdentityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDistribution(ctx context.Context, input *cloudfront.DeleteDistributionInput) (*cloudfront.DeleteDistributionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDistributionWithContext(ctx, input)
+	output, err := client.DeleteDistributionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteFieldLevelEncryptionConfig(ctx context.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) (*cloudfront.DeleteFieldLevelEncryptionConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteFieldLevelEncryptionConfigWithContext(ctx, input)
+	output, err := client.DeleteFieldLevelEncryptionConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteFieldLevelEncryptionProfile(ctx context.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) (*cloudfront.DeleteFieldLevelEncryptionProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteFieldLevelEncryptionProfileWithContext(ctx, input)
+	output, err := client.DeleteFieldLevelEncryptionProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMonitoringSubscription(ctx context.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) (*cloudfront.DeleteMonitoringSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMonitoringSubscriptionWithContext(ctx, input)
+	output, err := client.DeleteMonitoringSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteOriginRequestPolicy(ctx context.Context, input *cloudfront.DeleteOriginRequestPolicyInput) (*cloudfront.DeleteOriginRequestPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteOriginRequestPolicyWithContext(ctx, input)
+	output, err := client.DeleteOriginRequestPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePublicKey(ctx context.Context, input *cloudfront.DeletePublicKeyInput) (*cloudfront.DeletePublicKeyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePublicKeyWithContext(ctx, input)
+	output, err := client.DeletePublicKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteRealtimeLogConfig(ctx context.Context, input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteRealtimeLogConfigWithContext(ctx, input)
+	output, err := client.DeleteRealtimeLogConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteStreamingDistribution(ctx context.Context, input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteStreamingDistributionWithContext(ctx, input)
+	output, err := client.DeleteStreamingDistributionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCachePolicy(ctx context.Context, input *cloudfront.GetCachePolicyInput) (*cloudfront.GetCachePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCachePolicyWithContext(ctx, input)
+	output, err := client.GetCachePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCachePolicyConfig(ctx context.Context, input *cloudfront.GetCachePolicyConfigInput) (*cloudfront.GetCachePolicyConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCachePolicyConfigWithContext(ctx, input)
+	output, err := client.GetCachePolicyConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCloudFrontOriginAccessIdentity(ctx context.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) (*cloudfront.GetCloudFrontOriginAccessIdentityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCloudFrontOriginAccessIdentityWithContext(ctx, input)
+	output, err := client.GetCloudFrontOriginAccessIdentityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCloudFrontOriginAccessIdentityConfig(ctx context.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) (*cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCloudFrontOriginAccessIdentityConfigWithContext(ctx, input)
+	output, err := client.GetCloudFrontOriginAccessIdentityConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDistribution(ctx context.Context, input *cloudfront.GetDistributionInput) (*cloudfront.GetDistributionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDistributionWithContext(ctx, input)
+	output, err := client.GetDistributionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDistributionConfig(ctx context.Context, input *cloudfront.GetDistributionConfigInput) (*cloudfront.GetDistributionConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDistributionConfigWithContext(ctx, input)
+	output, err := client.GetDistributionConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFieldLevelEncryption(ctx context.Context, input *cloudfront.GetFieldLevelEncryptionInput) (*cloudfront.GetFieldLevelEncryptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFieldLevelEncryptionWithContext(ctx, input)
+	output, err := client.GetFieldLevelEncryptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFieldLevelEncryptionConfig(ctx context.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) (*cloudfront.GetFieldLevelEncryptionConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFieldLevelEncryptionConfigWithContext(ctx, input)
+	output, err := client.GetFieldLevelEncryptionConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFieldLevelEncryptionProfile(ctx context.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) (*cloudfront.GetFieldLevelEncryptionProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFieldLevelEncryptionProfileWithContext(ctx, input)
+	output, err := client.GetFieldLevelEncryptionProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFieldLevelEncryptionProfileConfig(ctx context.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) (*cloudfront.GetFieldLevelEncryptionProfileConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFieldLevelEncryptionProfileConfigWithContext(ctx, input)
+	output, err := client.GetFieldLevelEncryptionProfileConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetInvalidation(ctx context.Context, input *cloudfront.GetInvalidationInput) (*cloudfront.GetInvalidationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetInvalidationWithContext(ctx, input)
+	output, err := client.GetInvalidationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMonitoringSubscription(ctx context.Context, input *cloudfront.GetMonitoringSubscriptionInput) (*cloudfront.GetMonitoringSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMonitoringSubscriptionWithContext(ctx, input)
+	output, err := client.GetMonitoringSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetOriginRequestPolicy(ctx context.Context, input *cloudfront.GetOriginRequestPolicyInput) (*cloudfront.GetOriginRequestPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetOriginRequestPolicyWithContext(ctx, input)
+	output, err := client.GetOriginRequestPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetOriginRequestPolicyConfig(ctx context.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) (*cloudfront.GetOriginRequestPolicyConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetOriginRequestPolicyConfigWithContext(ctx, input)
+	output, err := client.GetOriginRequestPolicyConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPublicKey(ctx context.Context, input *cloudfront.GetPublicKeyInput) (*cloudfront.GetPublicKeyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPublicKeyWithContext(ctx, input)
+	output, err := client.GetPublicKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPublicKeyConfig(ctx context.Context, input *cloudfront.GetPublicKeyConfigInput) (*cloudfront.GetPublicKeyConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPublicKeyConfigWithContext(ctx, input)
+	output, err := client.GetPublicKeyConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRealtimeLogConfig(ctx context.Context, input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRealtimeLogConfigWithContext(ctx, input)
+	output, err := client.GetRealtimeLogConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetStreamingDistribution(ctx context.Context, input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetStreamingDistributionWithContext(ctx, input)
+	output, err := client.GetStreamingDistributionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetStreamingDistributionConfig(ctx context.Context, input *cloudfront.GetStreamingDistributionConfigInput) (*cloudfront.GetStreamingDistributionConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetStreamingDistributionConfigWithContext(ctx, input)
+	output, err := client.GetStreamingDistributionConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCachePolicies(ctx context.Context, input *cloudfront.ListCachePoliciesInput) (*cloudfront.ListCachePoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCachePoliciesWithContext(ctx, input)
+	output, err := client.ListCachePoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCloudFrontOriginAccessIdentities(ctx context.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) (*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCloudFrontOriginAccessIdentitiesWithContext(ctx, input)
+	output, err := client.ListCloudFrontOriginAccessIdentitiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDistributions(ctx context.Context, input *cloudfront.ListDistributionsInput) (*cloudfront.ListDistributionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDistributionsWithContext(ctx, input)
+	output, err := client.ListDistributionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDistributionsByCachePolicyId(ctx context.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) (*cloudfront.ListDistributionsByCachePolicyIdOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDistributionsByCachePolicyIdWithContext(ctx, input)
+	output, err := client.ListDistributionsByCachePolicyIdWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDistributionsByOriginRequestPolicyId(ctx context.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDistributionsByOriginRequestPolicyIdWithContext(ctx, input)
+	output, err := client.ListDistributionsByOriginRequestPolicyIdWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDistributionsByRealtimeLogConfig(ctx context.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDistributionsByRealtimeLogConfigWithContext(ctx, input)
+	output, err := client.ListDistributionsByRealtimeLogConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDistributionsByWebACLId(ctx context.Context, input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDistributionsByWebACLIdWithContext(ctx, input)
+	output, err := client.ListDistributionsByWebACLIdWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListFieldLevelEncryptionConfigs(ctx context.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) (*cloudfront.ListFieldLevelEncryptionConfigsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListFieldLevelEncryptionConfigsWithContext(ctx, input)
+	output, err := client.ListFieldLevelEncryptionConfigsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListFieldLevelEncryptionProfiles(ctx context.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) (*cloudfront.ListFieldLevelEncryptionProfilesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListFieldLevelEncryptionProfilesWithContext(ctx, input)
+	output, err := client.ListFieldLevelEncryptionProfilesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInvalidations(ctx context.Context, input *cloudfront.ListInvalidationsInput) (*cloudfront.ListInvalidationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInvalidationsWithContext(ctx, input)
+	output, err := client.ListInvalidationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListOriginRequestPolicies(ctx context.Context, input *cloudfront.ListOriginRequestPoliciesInput) (*cloudfront.ListOriginRequestPoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListOriginRequestPoliciesWithContext(ctx, input)
+	output, err := client.ListOriginRequestPoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPublicKeys(ctx context.Context, input *cloudfront.ListPublicKeysInput) (*cloudfront.ListPublicKeysOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPublicKeysWithContext(ctx, input)
+	output, err := client.ListPublicKeysWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListRealtimeLogConfigs(ctx context.Context, input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListRealtimeLogConfigsWithContext(ctx, input)
+	output, err := client.ListRealtimeLogConfigsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListStreamingDistributions(ctx context.Context, input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListStreamingDistributionsWithContext(ctx, input)
+	output, err := client.ListStreamingDistributionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *cloudfront.ListTagsForResourceInput) (*cloudfront.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *cloudfront.TagResourceInput) (*cloudfront.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *cloudfront.UntagResourceInput) (*cloudfront.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCachePolicy(ctx context.Context, input *cloudfront.UpdateCachePolicyInput) (*cloudfront.UpdateCachePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCachePolicyWithContext(ctx, input)
+	output, err := client.UpdateCachePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCloudFrontOriginAccessIdentity(ctx context.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) (*cloudfront.UpdateCloudFrontOriginAccessIdentityOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCloudFrontOriginAccessIdentityWithContext(ctx, input)
+	output, err := client.UpdateCloudFrontOriginAccessIdentityWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDistribution(ctx context.Context, input *cloudfront.UpdateDistributionInput) (*cloudfront.UpdateDistributionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDistributionWithContext(ctx, input)
+	output, err := client.UpdateDistributionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateFieldLevelEncryptionConfig(ctx context.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) (*cloudfront.UpdateFieldLevelEncryptionConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateFieldLevelEncryptionConfigWithContext(ctx, input)
+	output, err := client.UpdateFieldLevelEncryptionConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateFieldLevelEncryptionProfile(ctx context.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) (*cloudfront.UpdateFieldLevelEncryptionProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateFieldLevelEncryptionProfileWithContext(ctx, input)
+	output, err := client.UpdateFieldLevelEncryptionProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateOriginRequestPolicy(ctx context.Context, input *cloudfront.UpdateOriginRequestPolicyInput) (*cloudfront.UpdateOriginRequestPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateOriginRequestPolicyWithContext(ctx, input)
+	output, err := client.UpdateOriginRequestPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePublicKey(ctx context.Context, input *cloudfront.UpdatePublicKeyInput) (*cloudfront.UpdatePublicKeyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePublicKeyWithContext(ctx, input)
+	output, err := client.UpdatePublicKeyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRealtimeLogConfig(ctx context.Context, input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRealtimeLogConfigWithContext(ctx, input)
+	output, err := client.UpdateRealtimeLogConfigWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateStreamingDistribution(ctx context.Context, input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateStreamingDistributionWithContext(ctx, input)
+	output, err := client.UpdateStreamingDistributionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilDistributionDeployed(ctx context.Context, input *cloudfront.GetDistributionInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilDistributionDeployedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilDistributionDeployedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilInvalidationCompleted(ctx context.Context, input *cloudfront.GetInvalidationInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilInvalidationCompletedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilInvalidationCompletedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilStreamingDistributionDeployed(ctx context.Context, input *cloudfront.GetStreamingDistributionInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilStreamingDistributionDeployedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilStreamingDistributionDeployedWithContext(ctx, input, options...))
 	})
 }

@@ -6,12 +6,14 @@ package codecommit
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/codecommit"
 	"github.com/aws/aws-sdk-go/service/codecommit/codecommitiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (codecommitiface.CodeCommitA
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return codecommit.New(sess), nil
@@ -55,583 +57,729 @@ func (a *Activities) getClient(ctx context.Context) (codecommitiface.CodeCommitA
 func (a *Activities) AssociateApprovalRuleTemplateWithRepository(ctx context.Context, input *codecommit.AssociateApprovalRuleTemplateWithRepositoryInput) (*codecommit.AssociateApprovalRuleTemplateWithRepositoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateApprovalRuleTemplateWithRepositoryWithContext(ctx, input)
+	output, err := client.AssociateApprovalRuleTemplateWithRepositoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchAssociateApprovalRuleTemplateWithRepositories(ctx context.Context, input *codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesInput) (*codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchAssociateApprovalRuleTemplateWithRepositoriesWithContext(ctx, input)
+	output, err := client.BatchAssociateApprovalRuleTemplateWithRepositoriesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchDescribeMergeConflicts(ctx context.Context, input *codecommit.BatchDescribeMergeConflictsInput) (*codecommit.BatchDescribeMergeConflictsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchDescribeMergeConflictsWithContext(ctx, input)
+	output, err := client.BatchDescribeMergeConflictsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchDisassociateApprovalRuleTemplateFromRepositories(ctx context.Context, input *codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesInput) (*codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchDisassociateApprovalRuleTemplateFromRepositoriesWithContext(ctx, input)
+	output, err := client.BatchDisassociateApprovalRuleTemplateFromRepositoriesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetCommits(ctx context.Context, input *codecommit.BatchGetCommitsInput) (*codecommit.BatchGetCommitsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetCommitsWithContext(ctx, input)
+	output, err := client.BatchGetCommitsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchGetRepositories(ctx context.Context, input *codecommit.BatchGetRepositoriesInput) (*codecommit.BatchGetRepositoriesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchGetRepositoriesWithContext(ctx, input)
+	output, err := client.BatchGetRepositoriesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateApprovalRuleTemplate(ctx context.Context, input *codecommit.CreateApprovalRuleTemplateInput) (*codecommit.CreateApprovalRuleTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateApprovalRuleTemplateWithContext(ctx, input)
+	output, err := client.CreateApprovalRuleTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateBranch(ctx context.Context, input *codecommit.CreateBranchInput) (*codecommit.CreateBranchOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateBranchWithContext(ctx, input)
+	output, err := client.CreateBranchWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCommit(ctx context.Context, input *codecommit.CreateCommitInput) (*codecommit.CreateCommitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCommitWithContext(ctx, input)
+	output, err := client.CreateCommitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePullRequestApprovalRule(ctx context.Context, input *codecommit.CreatePullRequestApprovalRuleInput) (*codecommit.CreatePullRequestApprovalRuleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePullRequestApprovalRuleWithContext(ctx, input)
+	output, err := client.CreatePullRequestApprovalRuleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateRepository(ctx context.Context, input *codecommit.CreateRepositoryInput) (*codecommit.CreateRepositoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateRepositoryWithContext(ctx, input)
+	output, err := client.CreateRepositoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateUnreferencedMergeCommit(ctx context.Context, input *codecommit.CreateUnreferencedMergeCommitInput) (*codecommit.CreateUnreferencedMergeCommitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateUnreferencedMergeCommitWithContext(ctx, input)
+	output, err := client.CreateUnreferencedMergeCommitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteApprovalRuleTemplate(ctx context.Context, input *codecommit.DeleteApprovalRuleTemplateInput) (*codecommit.DeleteApprovalRuleTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteApprovalRuleTemplateWithContext(ctx, input)
+	output, err := client.DeleteApprovalRuleTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteBranch(ctx context.Context, input *codecommit.DeleteBranchInput) (*codecommit.DeleteBranchOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteBranchWithContext(ctx, input)
+	output, err := client.DeleteBranchWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCommentContent(ctx context.Context, input *codecommit.DeleteCommentContentInput) (*codecommit.DeleteCommentContentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCommentContentWithContext(ctx, input)
+	output, err := client.DeleteCommentContentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteFile(ctx context.Context, input *codecommit.DeleteFileInput) (*codecommit.DeleteFileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteFileWithContext(ctx, input)
+	output, err := client.DeleteFileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePullRequestApprovalRule(ctx context.Context, input *codecommit.DeletePullRequestApprovalRuleInput) (*codecommit.DeletePullRequestApprovalRuleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePullRequestApprovalRuleWithContext(ctx, input)
+	output, err := client.DeletePullRequestApprovalRuleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteRepository(ctx context.Context, input *codecommit.DeleteRepositoryInput) (*codecommit.DeleteRepositoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteRepositoryWithContext(ctx, input)
+	output, err := client.DeleteRepositoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMergeConflicts(ctx context.Context, input *codecommit.DescribeMergeConflictsInput) (*codecommit.DescribeMergeConflictsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMergeConflictsWithContext(ctx, input)
+	output, err := client.DescribeMergeConflictsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePullRequestEvents(ctx context.Context, input *codecommit.DescribePullRequestEventsInput) (*codecommit.DescribePullRequestEventsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePullRequestEventsWithContext(ctx, input)
+	output, err := client.DescribePullRequestEventsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateApprovalRuleTemplateFromRepository(ctx context.Context, input *codecommit.DisassociateApprovalRuleTemplateFromRepositoryInput) (*codecommit.DisassociateApprovalRuleTemplateFromRepositoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateApprovalRuleTemplateFromRepositoryWithContext(ctx, input)
+	output, err := client.DisassociateApprovalRuleTemplateFromRepositoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EvaluatePullRequestApprovalRules(ctx context.Context, input *codecommit.EvaluatePullRequestApprovalRulesInput) (*codecommit.EvaluatePullRequestApprovalRulesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EvaluatePullRequestApprovalRulesWithContext(ctx, input)
+	output, err := client.EvaluatePullRequestApprovalRulesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetApprovalRuleTemplate(ctx context.Context, input *codecommit.GetApprovalRuleTemplateInput) (*codecommit.GetApprovalRuleTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetApprovalRuleTemplateWithContext(ctx, input)
+	output, err := client.GetApprovalRuleTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetBlob(ctx context.Context, input *codecommit.GetBlobInput) (*codecommit.GetBlobOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetBlobWithContext(ctx, input)
+	output, err := client.GetBlobWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetBranch(ctx context.Context, input *codecommit.GetBranchInput) (*codecommit.GetBranchOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetBranchWithContext(ctx, input)
+	output, err := client.GetBranchWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetComment(ctx context.Context, input *codecommit.GetCommentInput) (*codecommit.GetCommentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCommentWithContext(ctx, input)
+	output, err := client.GetCommentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCommentReactions(ctx context.Context, input *codecommit.GetCommentReactionsInput) (*codecommit.GetCommentReactionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCommentReactionsWithContext(ctx, input)
+	output, err := client.GetCommentReactionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCommentsForComparedCommit(ctx context.Context, input *codecommit.GetCommentsForComparedCommitInput) (*codecommit.GetCommentsForComparedCommitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCommentsForComparedCommitWithContext(ctx, input)
+	output, err := client.GetCommentsForComparedCommitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCommit(ctx context.Context, input *codecommit.GetCommitInput) (*codecommit.GetCommitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCommitWithContext(ctx, input)
+	output, err := client.GetCommitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDifferences(ctx context.Context, input *codecommit.GetDifferencesInput) (*codecommit.GetDifferencesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDifferencesWithContext(ctx, input)
+	output, err := client.GetDifferencesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFile(ctx context.Context, input *codecommit.GetFileInput) (*codecommit.GetFileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFileWithContext(ctx, input)
+	output, err := client.GetFileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFolder(ctx context.Context, input *codecommit.GetFolderInput) (*codecommit.GetFolderOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFolderWithContext(ctx, input)
+	output, err := client.GetFolderWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMergeCommit(ctx context.Context, input *codecommit.GetMergeCommitInput) (*codecommit.GetMergeCommitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMergeCommitWithContext(ctx, input)
+	output, err := client.GetMergeCommitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMergeConflicts(ctx context.Context, input *codecommit.GetMergeConflictsInput) (*codecommit.GetMergeConflictsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMergeConflictsWithContext(ctx, input)
+	output, err := client.GetMergeConflictsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMergeOptions(ctx context.Context, input *codecommit.GetMergeOptionsInput) (*codecommit.GetMergeOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMergeOptionsWithContext(ctx, input)
+	output, err := client.GetMergeOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPullRequestApprovalStates(ctx context.Context, input *codecommit.GetPullRequestApprovalStatesInput) (*codecommit.GetPullRequestApprovalStatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPullRequestApprovalStatesWithContext(ctx, input)
+	output, err := client.GetPullRequestApprovalStatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPullRequestOverrideState(ctx context.Context, input *codecommit.GetPullRequestOverrideStateInput) (*codecommit.GetPullRequestOverrideStateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPullRequestOverrideStateWithContext(ctx, input)
+	output, err := client.GetPullRequestOverrideStateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRepository(ctx context.Context, input *codecommit.GetRepositoryInput) (*codecommit.GetRepositoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRepositoryWithContext(ctx, input)
+	output, err := client.GetRepositoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetRepositoryTriggers(ctx context.Context, input *codecommit.GetRepositoryTriggersInput) (*codecommit.GetRepositoryTriggersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRepositoryTriggersWithContext(ctx, input)
+	output, err := client.GetRepositoryTriggersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListApprovalRuleTemplates(ctx context.Context, input *codecommit.ListApprovalRuleTemplatesInput) (*codecommit.ListApprovalRuleTemplatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListApprovalRuleTemplatesWithContext(ctx, input)
+	output, err := client.ListApprovalRuleTemplatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAssociatedApprovalRuleTemplatesForRepository(ctx context.Context, input *codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryInput) (*codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAssociatedApprovalRuleTemplatesForRepositoryWithContext(ctx, input)
+	output, err := client.ListAssociatedApprovalRuleTemplatesForRepositoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListBranches(ctx context.Context, input *codecommit.ListBranchesInput) (*codecommit.ListBranchesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListBranchesWithContext(ctx, input)
+	output, err := client.ListBranchesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPullRequests(ctx context.Context, input *codecommit.ListPullRequestsInput) (*codecommit.ListPullRequestsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPullRequestsWithContext(ctx, input)
+	output, err := client.ListPullRequestsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListRepositories(ctx context.Context, input *codecommit.ListRepositoriesInput) (*codecommit.ListRepositoriesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListRepositoriesWithContext(ctx, input)
+	output, err := client.ListRepositoriesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListRepositoriesForApprovalRuleTemplate(ctx context.Context, input *codecommit.ListRepositoriesForApprovalRuleTemplateInput) (*codecommit.ListRepositoriesForApprovalRuleTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListRepositoriesForApprovalRuleTemplateWithContext(ctx, input)
+	output, err := client.ListRepositoriesForApprovalRuleTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *codecommit.ListTagsForResourceInput) (*codecommit.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) MergeBranchesByFastForward(ctx context.Context, input *codecommit.MergeBranchesByFastForwardInput) (*codecommit.MergeBranchesByFastForwardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.MergeBranchesByFastForwardWithContext(ctx, input)
+	output, err := client.MergeBranchesByFastForwardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) MergeBranchesBySquash(ctx context.Context, input *codecommit.MergeBranchesBySquashInput) (*codecommit.MergeBranchesBySquashOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.MergeBranchesBySquashWithContext(ctx, input)
+	output, err := client.MergeBranchesBySquashWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) MergeBranchesByThreeWay(ctx context.Context, input *codecommit.MergeBranchesByThreeWayInput) (*codecommit.MergeBranchesByThreeWayOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.MergeBranchesByThreeWayWithContext(ctx, input)
+	output, err := client.MergeBranchesByThreeWayWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) MergePullRequestByFastForward(ctx context.Context, input *codecommit.MergePullRequestByFastForwardInput) (*codecommit.MergePullRequestByFastForwardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.MergePullRequestByFastForwardWithContext(ctx, input)
+	output, err := client.MergePullRequestByFastForwardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) MergePullRequestBySquash(ctx context.Context, input *codecommit.MergePullRequestBySquashInput) (*codecommit.MergePullRequestBySquashOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.MergePullRequestBySquashWithContext(ctx, input)
+	output, err := client.MergePullRequestBySquashWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) MergePullRequestByThreeWay(ctx context.Context, input *codecommit.MergePullRequestByThreeWayInput) (*codecommit.MergePullRequestByThreeWayOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.MergePullRequestByThreeWayWithContext(ctx, input)
+	output, err := client.MergePullRequestByThreeWayWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) OverridePullRequestApprovalRules(ctx context.Context, input *codecommit.OverridePullRequestApprovalRulesInput) (*codecommit.OverridePullRequestApprovalRulesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.OverridePullRequestApprovalRulesWithContext(ctx, input)
+	output, err := client.OverridePullRequestApprovalRulesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PostCommentForComparedCommit(ctx context.Context, input *codecommit.PostCommentForComparedCommitInput) (*codecommit.PostCommentForComparedCommitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PostCommentForComparedCommitWithContext(ctx, input)
+	output, err := client.PostCommentForComparedCommitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PostCommentReply(ctx context.Context, input *codecommit.PostCommentReplyInput) (*codecommit.PostCommentReplyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PostCommentReplyWithContext(ctx, input)
+	output, err := client.PostCommentReplyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutCommentReaction(ctx context.Context, input *codecommit.PutCommentReactionInput) (*codecommit.PutCommentReactionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutCommentReactionWithContext(ctx, input)
+	output, err := client.PutCommentReactionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutFile(ctx context.Context, input *codecommit.PutFileInput) (*codecommit.PutFileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutFileWithContext(ctx, input)
+	output, err := client.PutFileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutRepositoryTriggers(ctx context.Context, input *codecommit.PutRepositoryTriggersInput) (*codecommit.PutRepositoryTriggersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutRepositoryTriggersWithContext(ctx, input)
+	output, err := client.PutRepositoryTriggersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *codecommit.TagResourceInput) (*codecommit.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TestRepositoryTriggers(ctx context.Context, input *codecommit.TestRepositoryTriggersInput) (*codecommit.TestRepositoryTriggersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TestRepositoryTriggersWithContext(ctx, input)
+	output, err := client.TestRepositoryTriggersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *codecommit.UntagResourceInput) (*codecommit.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApprovalRuleTemplateContent(ctx context.Context, input *codecommit.UpdateApprovalRuleTemplateContentInput) (*codecommit.UpdateApprovalRuleTemplateContentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApprovalRuleTemplateContentWithContext(ctx, input)
+	output, err := client.UpdateApprovalRuleTemplateContentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApprovalRuleTemplateDescription(ctx context.Context, input *codecommit.UpdateApprovalRuleTemplateDescriptionInput) (*codecommit.UpdateApprovalRuleTemplateDescriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApprovalRuleTemplateDescriptionWithContext(ctx, input)
+	output, err := client.UpdateApprovalRuleTemplateDescriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateApprovalRuleTemplateName(ctx context.Context, input *codecommit.UpdateApprovalRuleTemplateNameInput) (*codecommit.UpdateApprovalRuleTemplateNameOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateApprovalRuleTemplateNameWithContext(ctx, input)
+	output, err := client.UpdateApprovalRuleTemplateNameWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateComment(ctx context.Context, input *codecommit.UpdateCommentInput) (*codecommit.UpdateCommentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCommentWithContext(ctx, input)
+	output, err := client.UpdateCommentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDefaultBranch(ctx context.Context, input *codecommit.UpdateDefaultBranchInput) (*codecommit.UpdateDefaultBranchOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDefaultBranchWithContext(ctx, input)
+	output, err := client.UpdateDefaultBranchWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePullRequestApprovalRuleContent(ctx context.Context, input *codecommit.UpdatePullRequestApprovalRuleContentInput) (*codecommit.UpdatePullRequestApprovalRuleContentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePullRequestApprovalRuleContentWithContext(ctx, input)
+	output, err := client.UpdatePullRequestApprovalRuleContentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePullRequestApprovalState(ctx context.Context, input *codecommit.UpdatePullRequestApprovalStateInput) (*codecommit.UpdatePullRequestApprovalStateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePullRequestApprovalStateWithContext(ctx, input)
+	output, err := client.UpdatePullRequestApprovalStateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePullRequestDescription(ctx context.Context, input *codecommit.UpdatePullRequestDescriptionInput) (*codecommit.UpdatePullRequestDescriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePullRequestDescriptionWithContext(ctx, input)
+	output, err := client.UpdatePullRequestDescriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePullRequestStatus(ctx context.Context, input *codecommit.UpdatePullRequestStatusInput) (*codecommit.UpdatePullRequestStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePullRequestStatusWithContext(ctx, input)
+	output, err := client.UpdatePullRequestStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePullRequestTitle(ctx context.Context, input *codecommit.UpdatePullRequestTitleInput) (*codecommit.UpdatePullRequestTitleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePullRequestTitleWithContext(ctx, input)
+	output, err := client.UpdatePullRequestTitleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRepositoryDescription(ctx context.Context, input *codecommit.UpdateRepositoryDescriptionInput) (*codecommit.UpdateRepositoryDescriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRepositoryDescriptionWithContext(ctx, input)
+	output, err := client.UpdateRepositoryDescriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateRepositoryName(ctx context.Context, input *codecommit.UpdateRepositoryNameInput) (*codecommit.UpdateRepositoryNameOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateRepositoryNameWithContext(ctx, input)
+	output, err := client.UpdateRepositoryNameWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

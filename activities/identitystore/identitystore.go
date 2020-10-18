@@ -6,12 +6,14 @@ package identitystore
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/identitystore"
 	"github.com/aws/aws-sdk-go/service/identitystore/identitystoreiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (identitystoreiface.Identity
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return identitystore.New(sess), nil
@@ -55,31 +57,39 @@ func (a *Activities) getClient(ctx context.Context) (identitystoreiface.Identity
 func (a *Activities) DescribeGroup(ctx context.Context, input *identitystore.DescribeGroupInput) (*identitystore.DescribeGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeGroupWithContext(ctx, input)
+	output, err := client.DescribeGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeUser(ctx context.Context, input *identitystore.DescribeUserInput) (*identitystore.DescribeUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeUserWithContext(ctx, input)
+	output, err := client.DescribeUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListGroups(ctx context.Context, input *identitystore.ListGroupsInput) (*identitystore.ListGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListGroupsWithContext(ctx, input)
+	output, err := client.ListGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListUsers(ctx context.Context, input *identitystore.ListUsersInput) (*identitystore.ListUsersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListUsersWithContext(ctx, input)
+	output, err := client.ListUsersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

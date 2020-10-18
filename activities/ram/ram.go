@@ -6,12 +6,14 @@ package ram
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/ram"
 	"github.com/aws/aws-sdk-go/service/ram/ramiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (ramiface.RAMAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return ram.New(sess), nil
@@ -55,200 +57,248 @@ func (a *Activities) getClient(ctx context.Context) (ramiface.RAMAPI, error) {
 func (a *Activities) AcceptResourceShareInvitation(ctx context.Context, input *ram.AcceptResourceShareInvitationInput) (*ram.AcceptResourceShareInvitationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.AcceptResourceShareInvitationWithContext(ctx, input)
+	output, err := client.AcceptResourceShareInvitationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateResourceShare(ctx context.Context, input *ram.AssociateResourceShareInput) (*ram.AssociateResourceShareOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.AssociateResourceShareWithContext(ctx, input)
+	output, err := client.AssociateResourceShareWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AssociateResourceSharePermission(ctx context.Context, input *ram.AssociateResourceSharePermissionInput) (*ram.AssociateResourceSharePermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.AssociateResourceSharePermissionWithContext(ctx, input)
+	output, err := client.AssociateResourceSharePermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateResourceShare(ctx context.Context, input *ram.CreateResourceShareInput) (*ram.CreateResourceShareOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateResourceShareWithContext(ctx, input)
+	output, err := client.CreateResourceShareWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteResourceShare(ctx context.Context, input *ram.DeleteResourceShareInput) (*ram.DeleteResourceShareOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DeleteResourceShareWithContext(ctx, input)
+	output, err := client.DeleteResourceShareWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateResourceShare(ctx context.Context, input *ram.DisassociateResourceShareInput) (*ram.DisassociateResourceShareOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DisassociateResourceShareWithContext(ctx, input)
+	output, err := client.DisassociateResourceShareWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateResourceSharePermission(ctx context.Context, input *ram.DisassociateResourceSharePermissionInput) (*ram.DisassociateResourceSharePermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DisassociateResourceSharePermissionWithContext(ctx, input)
+	output, err := client.DisassociateResourceSharePermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableSharingWithAwsOrganization(ctx context.Context, input *ram.EnableSharingWithAwsOrganizationInput) (*ram.EnableSharingWithAwsOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableSharingWithAwsOrganizationWithContext(ctx, input)
+	output, err := client.EnableSharingWithAwsOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPermission(ctx context.Context, input *ram.GetPermissionInput) (*ram.GetPermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPermissionWithContext(ctx, input)
+	output, err := client.GetPermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResourcePolicies(ctx context.Context, input *ram.GetResourcePoliciesInput) (*ram.GetResourcePoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourcePoliciesWithContext(ctx, input)
+	output, err := client.GetResourcePoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResourceShareAssociations(ctx context.Context, input *ram.GetResourceShareAssociationsInput) (*ram.GetResourceShareAssociationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourceShareAssociationsWithContext(ctx, input)
+	output, err := client.GetResourceShareAssociationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResourceShareInvitations(ctx context.Context, input *ram.GetResourceShareInvitationsInput) (*ram.GetResourceShareInvitationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourceShareInvitationsWithContext(ctx, input)
+	output, err := client.GetResourceShareInvitationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResourceShares(ctx context.Context, input *ram.GetResourceSharesInput) (*ram.GetResourceSharesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourceSharesWithContext(ctx, input)
+	output, err := client.GetResourceSharesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPendingInvitationResources(ctx context.Context, input *ram.ListPendingInvitationResourcesInput) (*ram.ListPendingInvitationResourcesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPendingInvitationResourcesWithContext(ctx, input)
+	output, err := client.ListPendingInvitationResourcesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPermissions(ctx context.Context, input *ram.ListPermissionsInput) (*ram.ListPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPermissionsWithContext(ctx, input)
+	output, err := client.ListPermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPrincipals(ctx context.Context, input *ram.ListPrincipalsInput) (*ram.ListPrincipalsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPrincipalsWithContext(ctx, input)
+	output, err := client.ListPrincipalsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListResourceSharePermissions(ctx context.Context, input *ram.ListResourceSharePermissionsInput) (*ram.ListResourceSharePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListResourceSharePermissionsWithContext(ctx, input)
+	output, err := client.ListResourceSharePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListResourceTypes(ctx context.Context, input *ram.ListResourceTypesInput) (*ram.ListResourceTypesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListResourceTypesWithContext(ctx, input)
+	output, err := client.ListResourceTypesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListResources(ctx context.Context, input *ram.ListResourcesInput) (*ram.ListResourcesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListResourcesWithContext(ctx, input)
+	output, err := client.ListResourcesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PromoteResourceShareCreatedFromPolicy(ctx context.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PromoteResourceShareCreatedFromPolicyWithContext(ctx, input)
+	output, err := client.PromoteResourceShareCreatedFromPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RejectResourceShareInvitation(ctx context.Context, input *ram.RejectResourceShareInvitationInput) (*ram.RejectResourceShareInvitationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.RejectResourceShareInvitationWithContext(ctx, input)
+	output, err := client.RejectResourceShareInvitationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *ram.TagResourceInput) (*ram.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *ram.UntagResourceInput) (*ram.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateResourceShare(ctx context.Context, input *ram.UpdateResourceShareInput) (*ram.UpdateResourceShareOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.UpdateResourceShareWithContext(ctx, input)
+	output, err := client.UpdateResourceShareWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

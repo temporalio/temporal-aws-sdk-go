@@ -6,12 +6,14 @@ package honeycode
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/honeycode"
 	"github.com/aws/aws-sdk-go/service/honeycode/honeycodeiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (honeycodeiface.HoneycodeAPI
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return honeycode.New(sess), nil
@@ -55,15 +57,19 @@ func (a *Activities) getClient(ctx context.Context) (honeycodeiface.HoneycodeAPI
 func (a *Activities) GetScreenData(ctx context.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetScreenDataWithContext(ctx, input)
+	output, err := client.GetScreenDataWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) InvokeScreenAutomation(ctx context.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.InvokeScreenAutomationWithContext(ctx, input)
+	output, err := client.InvokeScreenAutomationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

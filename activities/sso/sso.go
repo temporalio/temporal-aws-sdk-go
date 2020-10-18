@@ -6,12 +6,14 @@ package sso
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/sso"
 	"github.com/aws/aws-sdk-go/service/sso/ssoiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (ssoiface.SSOAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return sso.New(sess), nil
@@ -55,31 +57,39 @@ func (a *Activities) getClient(ctx context.Context) (ssoiface.SSOAPI, error) {
 func (a *Activities) GetRoleCredentials(ctx context.Context, input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetRoleCredentialsWithContext(ctx, input)
+	output, err := client.GetRoleCredentialsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAccountRoles(ctx context.Context, input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAccountRolesWithContext(ctx, input)
+	output, err := client.ListAccountRolesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAccounts(ctx context.Context, input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAccountsWithContext(ctx, input)
+	output, err := client.ListAccountsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) Logout(ctx context.Context, input *sso.LogoutInput) (*sso.LogoutOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.LogoutWithContext(ctx, input)
+	output, err := client.LogoutWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

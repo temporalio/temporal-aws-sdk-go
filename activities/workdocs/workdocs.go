@@ -6,12 +6,14 @@ package workdocs
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/workdocs"
 	"github.com/aws/aws-sdk-go/service/workdocs/workdocsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (workdocsiface.WorkDocsAPI, 
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return workdocs.New(sess), nil
@@ -55,327 +57,409 @@ func (a *Activities) getClient(ctx context.Context) (workdocsiface.WorkDocsAPI, 
 func (a *Activities) AbortDocumentVersionUpload(ctx context.Context, input *workdocs.AbortDocumentVersionUploadInput) (*workdocs.AbortDocumentVersionUploadOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AbortDocumentVersionUploadWithContext(ctx, input)
+	output, err := client.AbortDocumentVersionUploadWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ActivateUser(ctx context.Context, input *workdocs.ActivateUserInput) (*workdocs.ActivateUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ActivateUserWithContext(ctx, input)
+	output, err := client.ActivateUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AddResourcePermissions(ctx context.Context, input *workdocs.AddResourcePermissionsInput) (*workdocs.AddResourcePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddResourcePermissionsWithContext(ctx, input)
+	output, err := client.AddResourcePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateComment(ctx context.Context, input *workdocs.CreateCommentInput) (*workdocs.CreateCommentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCommentWithContext(ctx, input)
+	output, err := client.CreateCommentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateCustomMetadata(ctx context.Context, input *workdocs.CreateCustomMetadataInput) (*workdocs.CreateCustomMetadataOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCustomMetadataWithContext(ctx, input)
+	output, err := client.CreateCustomMetadataWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateFolder(ctx context.Context, input *workdocs.CreateFolderInput) (*workdocs.CreateFolderOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateFolderWithContext(ctx, input)
+	output, err := client.CreateFolderWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateLabels(ctx context.Context, input *workdocs.CreateLabelsInput) (*workdocs.CreateLabelsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateLabelsWithContext(ctx, input)
+	output, err := client.CreateLabelsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateNotificationSubscription(ctx context.Context, input *workdocs.CreateNotificationSubscriptionInput) (*workdocs.CreateNotificationSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateNotificationSubscriptionWithContext(ctx, input)
+	output, err := client.CreateNotificationSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateUser(ctx context.Context, input *workdocs.CreateUserInput) (*workdocs.CreateUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateUserWithContext(ctx, input)
+	output, err := client.CreateUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeactivateUser(ctx context.Context, input *workdocs.DeactivateUserInput) (*workdocs.DeactivateUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeactivateUserWithContext(ctx, input)
+	output, err := client.DeactivateUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteComment(ctx context.Context, input *workdocs.DeleteCommentInput) (*workdocs.DeleteCommentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCommentWithContext(ctx, input)
+	output, err := client.DeleteCommentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCustomMetadata(ctx context.Context, input *workdocs.DeleteCustomMetadataInput) (*workdocs.DeleteCustomMetadataOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCustomMetadataWithContext(ctx, input)
+	output, err := client.DeleteCustomMetadataWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDocument(ctx context.Context, input *workdocs.DeleteDocumentInput) (*workdocs.DeleteDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDocumentWithContext(ctx, input)
+	output, err := client.DeleteDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteFolder(ctx context.Context, input *workdocs.DeleteFolderInput) (*workdocs.DeleteFolderOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteFolderWithContext(ctx, input)
+	output, err := client.DeleteFolderWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteFolderContents(ctx context.Context, input *workdocs.DeleteFolderContentsInput) (*workdocs.DeleteFolderContentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteFolderContentsWithContext(ctx, input)
+	output, err := client.DeleteFolderContentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteLabels(ctx context.Context, input *workdocs.DeleteLabelsInput) (*workdocs.DeleteLabelsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteLabelsWithContext(ctx, input)
+	output, err := client.DeleteLabelsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteNotificationSubscription(ctx context.Context, input *workdocs.DeleteNotificationSubscriptionInput) (*workdocs.DeleteNotificationSubscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteNotificationSubscriptionWithContext(ctx, input)
+	output, err := client.DeleteNotificationSubscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUser(ctx context.Context, input *workdocs.DeleteUserInput) (*workdocs.DeleteUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUserWithContext(ctx, input)
+	output, err := client.DeleteUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeActivities(ctx context.Context, input *workdocs.DescribeActivitiesInput) (*workdocs.DescribeActivitiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeActivitiesWithContext(ctx, input)
+	output, err := client.DescribeActivitiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeComments(ctx context.Context, input *workdocs.DescribeCommentsInput) (*workdocs.DescribeCommentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCommentsWithContext(ctx, input)
+	output, err := client.DescribeCommentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDocumentVersions(ctx context.Context, input *workdocs.DescribeDocumentVersionsInput) (*workdocs.DescribeDocumentVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDocumentVersionsWithContext(ctx, input)
+	output, err := client.DescribeDocumentVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeFolderContents(ctx context.Context, input *workdocs.DescribeFolderContentsInput) (*workdocs.DescribeFolderContentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeFolderContentsWithContext(ctx, input)
+	output, err := client.DescribeFolderContentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeGroups(ctx context.Context, input *workdocs.DescribeGroupsInput) (*workdocs.DescribeGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeGroupsWithContext(ctx, input)
+	output, err := client.DescribeGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeNotificationSubscriptions(ctx context.Context, input *workdocs.DescribeNotificationSubscriptionsInput) (*workdocs.DescribeNotificationSubscriptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeNotificationSubscriptionsWithContext(ctx, input)
+	output, err := client.DescribeNotificationSubscriptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeResourcePermissions(ctx context.Context, input *workdocs.DescribeResourcePermissionsInput) (*workdocs.DescribeResourcePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeResourcePermissionsWithContext(ctx, input)
+	output, err := client.DescribeResourcePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeRootFolders(ctx context.Context, input *workdocs.DescribeRootFoldersInput) (*workdocs.DescribeRootFoldersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeRootFoldersWithContext(ctx, input)
+	output, err := client.DescribeRootFoldersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeUsers(ctx context.Context, input *workdocs.DescribeUsersInput) (*workdocs.DescribeUsersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeUsersWithContext(ctx, input)
+	output, err := client.DescribeUsersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCurrentUser(ctx context.Context, input *workdocs.GetCurrentUserInput) (*workdocs.GetCurrentUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCurrentUserWithContext(ctx, input)
+	output, err := client.GetCurrentUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocument(ctx context.Context, input *workdocs.GetDocumentInput) (*workdocs.GetDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentWithContext(ctx, input)
+	output, err := client.GetDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocumentPath(ctx context.Context, input *workdocs.GetDocumentPathInput) (*workdocs.GetDocumentPathOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentPathWithContext(ctx, input)
+	output, err := client.GetDocumentPathWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocumentVersion(ctx context.Context, input *workdocs.GetDocumentVersionInput) (*workdocs.GetDocumentVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentVersionWithContext(ctx, input)
+	output, err := client.GetDocumentVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFolder(ctx context.Context, input *workdocs.GetFolderInput) (*workdocs.GetFolderOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFolderWithContext(ctx, input)
+	output, err := client.GetFolderWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetFolderPath(ctx context.Context, input *workdocs.GetFolderPathInput) (*workdocs.GetFolderPathOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetFolderPathWithContext(ctx, input)
+	output, err := client.GetFolderPathWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetResources(ctx context.Context, input *workdocs.GetResourcesInput) (*workdocs.GetResourcesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetResourcesWithContext(ctx, input)
+	output, err := client.GetResourcesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) InitiateDocumentVersionUpload(ctx context.Context, input *workdocs.InitiateDocumentVersionUploadInput) (*workdocs.InitiateDocumentVersionUploadOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.InitiateDocumentVersionUploadWithContext(ctx, input)
+	output, err := client.InitiateDocumentVersionUploadWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveAllResourcePermissions(ctx context.Context, input *workdocs.RemoveAllResourcePermissionsInput) (*workdocs.RemoveAllResourcePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveAllResourcePermissionsWithContext(ctx, input)
+	output, err := client.RemoveAllResourcePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveResourcePermission(ctx context.Context, input *workdocs.RemoveResourcePermissionInput) (*workdocs.RemoveResourcePermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveResourcePermissionWithContext(ctx, input)
+	output, err := client.RemoveResourcePermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDocument(ctx context.Context, input *workdocs.UpdateDocumentInput) (*workdocs.UpdateDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDocumentWithContext(ctx, input)
+	output, err := client.UpdateDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDocumentVersion(ctx context.Context, input *workdocs.UpdateDocumentVersionInput) (*workdocs.UpdateDocumentVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDocumentVersionWithContext(ctx, input)
+	output, err := client.UpdateDocumentVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateFolder(ctx context.Context, input *workdocs.UpdateFolderInput) (*workdocs.UpdateFolderOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateFolderWithContext(ctx, input)
+	output, err := client.UpdateFolderWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateUser(ctx context.Context, input *workdocs.UpdateUserInput) (*workdocs.UpdateUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateUserWithContext(ctx, input)
+	output, err := client.UpdateUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

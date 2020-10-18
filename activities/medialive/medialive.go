@@ -6,12 +6,14 @@ package medialive
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/medialive"
 	"github.com/aws/aws-sdk-go/service/medialive/medialiveiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (medialiveiface.MediaLiveAPI
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return medialive.New(sess), nil
@@ -55,509 +57,609 @@ func (a *Activities) getClient(ctx context.Context) (medialiveiface.MediaLiveAPI
 func (a *Activities) BatchDelete(ctx context.Context, input *medialive.BatchDeleteInput) (*medialive.BatchDeleteOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchDeleteWithContext(ctx, input)
+	output, err := client.BatchDeleteWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchStart(ctx context.Context, input *medialive.BatchStartInput) (*medialive.BatchStartOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchStartWithContext(ctx, input)
+	output, err := client.BatchStartWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchStop(ctx context.Context, input *medialive.BatchStopInput) (*medialive.BatchStopOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchStopWithContext(ctx, input)
+	output, err := client.BatchStopWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) BatchUpdateSchedule(ctx context.Context, input *medialive.BatchUpdateScheduleInput) (*medialive.BatchUpdateScheduleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.BatchUpdateScheduleWithContext(ctx, input)
+	output, err := client.BatchUpdateScheduleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateChannel(ctx context.Context, input *medialive.CreateChannelInput) (*medialive.CreateChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateChannelWithContext(ctx, input)
+	output, err := client.CreateChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateInput(ctx context.Context, input *medialive.CreateInputInput) (*medialive.CreateInputOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateInputWithContext(ctx, input)
+	output, err := client.CreateInputWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateInputSecurityGroup(ctx context.Context, input *medialive.CreateInputSecurityGroupInput) (*medialive.CreateInputSecurityGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateInputSecurityGroupWithContext(ctx, input)
+	output, err := client.CreateInputSecurityGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateMultiplex(ctx context.Context, input *medialive.CreateMultiplexInput) (*medialive.CreateMultiplexOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateMultiplexWithContext(ctx, input)
+	output, err := client.CreateMultiplexWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateMultiplexProgram(ctx context.Context, input *medialive.CreateMultiplexProgramInput) (*medialive.CreateMultiplexProgramOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateMultiplexProgramWithContext(ctx, input)
+	output, err := client.CreateMultiplexProgramWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTags(ctx context.Context, input *medialive.CreateTagsInput) (*medialive.CreateTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTagsWithContext(ctx, input)
+	output, err := client.CreateTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteChannel(ctx context.Context, input *medialive.DeleteChannelInput) (*medialive.DeleteChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteChannelWithContext(ctx, input)
+	output, err := client.DeleteChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteInput(ctx context.Context, input *medialive.DeleteInputInput) (*medialive.DeleteInputOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteInputWithContext(ctx, input)
+	output, err := client.DeleteInputWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteInputSecurityGroup(ctx context.Context, input *medialive.DeleteInputSecurityGroupInput) (*medialive.DeleteInputSecurityGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteInputSecurityGroupWithContext(ctx, input)
+	output, err := client.DeleteInputSecurityGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMultiplex(ctx context.Context, input *medialive.DeleteMultiplexInput) (*medialive.DeleteMultiplexOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMultiplexWithContext(ctx, input)
+	output, err := client.DeleteMultiplexWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMultiplexProgram(ctx context.Context, input *medialive.DeleteMultiplexProgramInput) (*medialive.DeleteMultiplexProgramOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMultiplexProgramWithContext(ctx, input)
+	output, err := client.DeleteMultiplexProgramWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteReservation(ctx context.Context, input *medialive.DeleteReservationInput) (*medialive.DeleteReservationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteReservationWithContext(ctx, input)
+	output, err := client.DeleteReservationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteSchedule(ctx context.Context, input *medialive.DeleteScheduleInput) (*medialive.DeleteScheduleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteScheduleWithContext(ctx, input)
+	output, err := client.DeleteScheduleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTags(ctx context.Context, input *medialive.DeleteTagsInput) (*medialive.DeleteTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTagsWithContext(ctx, input)
+	output, err := client.DeleteTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeChannel(ctx context.Context, input *medialive.DescribeChannelInput) (*medialive.DescribeChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeChannelWithContext(ctx, input)
+	output, err := client.DescribeChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInput(ctx context.Context, input *medialive.DescribeInputInput) (*medialive.DescribeInputOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInputWithContext(ctx, input)
+	output, err := client.DescribeInputWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInputDevice(ctx context.Context, input *medialive.DescribeInputDeviceInput) (*medialive.DescribeInputDeviceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInputDeviceWithContext(ctx, input)
+	output, err := client.DescribeInputDeviceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInputDeviceThumbnail(ctx context.Context, input *medialive.DescribeInputDeviceThumbnailInput) (*medialive.DescribeInputDeviceThumbnailOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInputDeviceThumbnailWithContext(ctx, input)
+	output, err := client.DescribeInputDeviceThumbnailWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInputSecurityGroup(ctx context.Context, input *medialive.DescribeInputSecurityGroupInput) (*medialive.DescribeInputSecurityGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInputSecurityGroupWithContext(ctx, input)
+	output, err := client.DescribeInputSecurityGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMultiplex(ctx context.Context, input *medialive.DescribeMultiplexInput) (*medialive.DescribeMultiplexOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMultiplexWithContext(ctx, input)
+	output, err := client.DescribeMultiplexWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMultiplexProgram(ctx context.Context, input *medialive.DescribeMultiplexProgramInput) (*medialive.DescribeMultiplexProgramOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMultiplexProgramWithContext(ctx, input)
+	output, err := client.DescribeMultiplexProgramWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeOffering(ctx context.Context, input *medialive.DescribeOfferingInput) (*medialive.DescribeOfferingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeOfferingWithContext(ctx, input)
+	output, err := client.DescribeOfferingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeReservation(ctx context.Context, input *medialive.DescribeReservationInput) (*medialive.DescribeReservationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeReservationWithContext(ctx, input)
+	output, err := client.DescribeReservationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSchedule(ctx context.Context, input *medialive.DescribeScheduleInput) (*medialive.DescribeScheduleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeScheduleWithContext(ctx, input)
+	output, err := client.DescribeScheduleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListChannels(ctx context.Context, input *medialive.ListChannelsInput) (*medialive.ListChannelsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListChannelsWithContext(ctx, input)
+	output, err := client.ListChannelsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInputDevices(ctx context.Context, input *medialive.ListInputDevicesInput) (*medialive.ListInputDevicesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInputDevicesWithContext(ctx, input)
+	output, err := client.ListInputDevicesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInputSecurityGroups(ctx context.Context, input *medialive.ListInputSecurityGroupsInput) (*medialive.ListInputSecurityGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInputSecurityGroupsWithContext(ctx, input)
+	output, err := client.ListInputSecurityGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInputs(ctx context.Context, input *medialive.ListInputsInput) (*medialive.ListInputsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInputsWithContext(ctx, input)
+	output, err := client.ListInputsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListMultiplexPrograms(ctx context.Context, input *medialive.ListMultiplexProgramsInput) (*medialive.ListMultiplexProgramsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListMultiplexProgramsWithContext(ctx, input)
+	output, err := client.ListMultiplexProgramsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListMultiplexes(ctx context.Context, input *medialive.ListMultiplexesInput) (*medialive.ListMultiplexesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListMultiplexesWithContext(ctx, input)
+	output, err := client.ListMultiplexesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListOfferings(ctx context.Context, input *medialive.ListOfferingsInput) (*medialive.ListOfferingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListOfferingsWithContext(ctx, input)
+	output, err := client.ListOfferingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListReservations(ctx context.Context, input *medialive.ListReservationsInput) (*medialive.ListReservationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListReservationsWithContext(ctx, input)
+	output, err := client.ListReservationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *medialive.ListTagsForResourceInput) (*medialive.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PurchaseOffering(ctx context.Context, input *medialive.PurchaseOfferingInput) (*medialive.PurchaseOfferingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PurchaseOfferingWithContext(ctx, input)
+	output, err := client.PurchaseOfferingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartChannel(ctx context.Context, input *medialive.StartChannelInput) (*medialive.StartChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartChannelWithContext(ctx, input)
+	output, err := client.StartChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartMultiplex(ctx context.Context, input *medialive.StartMultiplexInput) (*medialive.StartMultiplexOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartMultiplexWithContext(ctx, input)
+	output, err := client.StartMultiplexWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopChannel(ctx context.Context, input *medialive.StopChannelInput) (*medialive.StopChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopChannelWithContext(ctx, input)
+	output, err := client.StopChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopMultiplex(ctx context.Context, input *medialive.StopMultiplexInput) (*medialive.StopMultiplexOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopMultiplexWithContext(ctx, input)
+	output, err := client.StopMultiplexWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateChannel(ctx context.Context, input *medialive.UpdateChannelInput) (*medialive.UpdateChannelOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateChannelWithContext(ctx, input)
+	output, err := client.UpdateChannelWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateChannelClass(ctx context.Context, input *medialive.UpdateChannelClassInput) (*medialive.UpdateChannelClassOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateChannelClassWithContext(ctx, input)
+	output, err := client.UpdateChannelClassWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateInput(ctx context.Context, input *medialive.UpdateInputInput) (*medialive.UpdateInputOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateInputWithContext(ctx, input)
+	output, err := client.UpdateInputWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateInputDevice(ctx context.Context, input *medialive.UpdateInputDeviceInput) (*medialive.UpdateInputDeviceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateInputDeviceWithContext(ctx, input)
+	output, err := client.UpdateInputDeviceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateInputSecurityGroup(ctx context.Context, input *medialive.UpdateInputSecurityGroupInput) (*medialive.UpdateInputSecurityGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateInputSecurityGroupWithContext(ctx, input)
+	output, err := client.UpdateInputSecurityGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMultiplex(ctx context.Context, input *medialive.UpdateMultiplexInput) (*medialive.UpdateMultiplexOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMultiplexWithContext(ctx, input)
+	output, err := client.UpdateMultiplexWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMultiplexProgram(ctx context.Context, input *medialive.UpdateMultiplexProgramInput) (*medialive.UpdateMultiplexProgramOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMultiplexProgramWithContext(ctx, input)
+	output, err := client.UpdateMultiplexProgramWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateReservation(ctx context.Context, input *medialive.UpdateReservationInput) (*medialive.UpdateReservationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateReservationWithContext(ctx, input)
+	output, err := client.UpdateReservationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilChannelCreated(ctx context.Context, input *medialive.DescribeChannelInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilChannelCreatedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilChannelCreatedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilChannelDeleted(ctx context.Context, input *medialive.DescribeChannelInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilChannelDeletedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilChannelDeletedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilChannelRunning(ctx context.Context, input *medialive.DescribeChannelInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilChannelRunningWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilChannelRunningWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilChannelStopped(ctx context.Context, input *medialive.DescribeChannelInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilChannelStoppedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilChannelStoppedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilInputAttached(ctx context.Context, input *medialive.DescribeInputInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilInputAttachedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilInputAttachedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilInputDeleted(ctx context.Context, input *medialive.DescribeInputInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilInputDeletedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilInputDeletedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilInputDetached(ctx context.Context, input *medialive.DescribeInputInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilInputDetachedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilInputDetachedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilMultiplexCreated(ctx context.Context, input *medialive.DescribeMultiplexInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilMultiplexCreatedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilMultiplexCreatedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilMultiplexDeleted(ctx context.Context, input *medialive.DescribeMultiplexInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilMultiplexDeletedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilMultiplexDeletedWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilMultiplexRunning(ctx context.Context, input *medialive.DescribeMultiplexInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilMultiplexRunningWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilMultiplexRunningWithContext(ctx, input, options...))
 	})
 }
 
 func (a *Activities) WaitUntilMultiplexStopped(ctx context.Context, input *medialive.DescribeMultiplexInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilMultiplexStoppedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilMultiplexStoppedWithContext(ctx, input, options...))
 	})
 }

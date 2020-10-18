@@ -6,12 +6,14 @@ package timestreamwrite
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/timestreamwrite"
 	"github.com/aws/aws-sdk-go/service/timestreamwrite/timestreamwriteiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (timestreamwriteiface.Timest
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return timestreamwrite.New(sess), nil
@@ -55,119 +57,149 @@ func (a *Activities) getClient(ctx context.Context) (timestreamwriteiface.Timest
 func (a *Activities) CreateDatabase(ctx context.Context, input *timestreamwrite.CreateDatabaseInput) (*timestreamwrite.CreateDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDatabaseWithContext(ctx, input)
+	output, err := client.CreateDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTable(ctx context.Context, input *timestreamwrite.CreateTableInput) (*timestreamwrite.CreateTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTableWithContext(ctx, input)
+	output, err := client.CreateTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDatabase(ctx context.Context, input *timestreamwrite.DeleteDatabaseInput) (*timestreamwrite.DeleteDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDatabaseWithContext(ctx, input)
+	output, err := client.DeleteDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTable(ctx context.Context, input *timestreamwrite.DeleteTableInput) (*timestreamwrite.DeleteTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTableWithContext(ctx, input)
+	output, err := client.DeleteTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDatabase(ctx context.Context, input *timestreamwrite.DescribeDatabaseInput) (*timestreamwrite.DescribeDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDatabaseWithContext(ctx, input)
+	output, err := client.DescribeDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEndpoints(ctx context.Context, input *timestreamwrite.DescribeEndpointsInput) (*timestreamwrite.DescribeEndpointsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEndpointsWithContext(ctx, input)
+	output, err := client.DescribeEndpointsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTable(ctx context.Context, input *timestreamwrite.DescribeTableInput) (*timestreamwrite.DescribeTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTableWithContext(ctx, input)
+	output, err := client.DescribeTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDatabases(ctx context.Context, input *timestreamwrite.ListDatabasesInput) (*timestreamwrite.ListDatabasesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDatabasesWithContext(ctx, input)
+	output, err := client.ListDatabasesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTables(ctx context.Context, input *timestreamwrite.ListTablesInput) (*timestreamwrite.ListTablesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTablesWithContext(ctx, input)
+	output, err := client.ListTablesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *timestreamwrite.ListTagsForResourceInput) (*timestreamwrite.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *timestreamwrite.TagResourceInput) (*timestreamwrite.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *timestreamwrite.UntagResourceInput) (*timestreamwrite.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDatabase(ctx context.Context, input *timestreamwrite.UpdateDatabaseInput) (*timestreamwrite.UpdateDatabaseOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDatabaseWithContext(ctx, input)
+	output, err := client.UpdateDatabaseWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTable(ctx context.Context, input *timestreamwrite.UpdateTableInput) (*timestreamwrite.UpdateTableOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTableWithContext(ctx, input)
+	output, err := client.UpdateTableWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WriteRecords(ctx context.Context, input *timestreamwrite.WriteRecordsInput) (*timestreamwrite.WriteRecordsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.WriteRecordsWithContext(ctx, input)
+	output, err := client.WriteRecordsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

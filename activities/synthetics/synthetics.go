@@ -6,12 +6,14 @@ package synthetics
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/synthetics"
 	"github.com/aws/aws-sdk-go/service/synthetics/syntheticsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (syntheticsiface.SyntheticsA
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return synthetics.New(sess), nil
@@ -55,103 +57,129 @@ func (a *Activities) getClient(ctx context.Context) (syntheticsiface.SyntheticsA
 func (a *Activities) CreateCanary(ctx context.Context, input *synthetics.CreateCanaryInput) (*synthetics.CreateCanaryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateCanaryWithContext(ctx, input)
+	output, err := client.CreateCanaryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteCanary(ctx context.Context, input *synthetics.DeleteCanaryInput) (*synthetics.DeleteCanaryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteCanaryWithContext(ctx, input)
+	output, err := client.DeleteCanaryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCanaries(ctx context.Context, input *synthetics.DescribeCanariesInput) (*synthetics.DescribeCanariesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCanariesWithContext(ctx, input)
+	output, err := client.DescribeCanariesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCanariesLastRun(ctx context.Context, input *synthetics.DescribeCanariesLastRunInput) (*synthetics.DescribeCanariesLastRunOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCanariesLastRunWithContext(ctx, input)
+	output, err := client.DescribeCanariesLastRunWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeRuntimeVersions(ctx context.Context, input *synthetics.DescribeRuntimeVersionsInput) (*synthetics.DescribeRuntimeVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeRuntimeVersionsWithContext(ctx, input)
+	output, err := client.DescribeRuntimeVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCanary(ctx context.Context, input *synthetics.GetCanaryInput) (*synthetics.GetCanaryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCanaryWithContext(ctx, input)
+	output, err := client.GetCanaryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCanaryRuns(ctx context.Context, input *synthetics.GetCanaryRunsInput) (*synthetics.GetCanaryRunsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCanaryRunsWithContext(ctx, input)
+	output, err := client.GetCanaryRunsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *synthetics.ListTagsForResourceInput) (*synthetics.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartCanary(ctx context.Context, input *synthetics.StartCanaryInput) (*synthetics.StartCanaryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartCanaryWithContext(ctx, input)
+	output, err := client.StartCanaryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopCanary(ctx context.Context, input *synthetics.StopCanaryInput) (*synthetics.StopCanaryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopCanaryWithContext(ctx, input)
+	output, err := client.StopCanaryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *synthetics.TagResourceInput) (*synthetics.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *synthetics.UntagResourceInput) (*synthetics.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateCanary(ctx context.Context, input *synthetics.UpdateCanaryInput) (*synthetics.UpdateCanaryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateCanaryWithContext(ctx, input)
+	output, err := client.UpdateCanaryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

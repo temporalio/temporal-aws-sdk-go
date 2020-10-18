@@ -6,12 +6,14 @@ package ssm
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/ssm"
 	"github.com/aws/aws-sdk-go/service/ssm/ssmiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (ssmiface.SSMAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return ssm.New(sess), nil
@@ -55,991 +57,1235 @@ func (a *Activities) getClient(ctx context.Context) (ssmiface.SSMAPI, error) {
 func (a *Activities) AddTagsToResource(ctx context.Context, input *ssm.AddTagsToResourceInput) (*ssm.AddTagsToResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AddTagsToResourceWithContext(ctx, input)
+	output, err := client.AddTagsToResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelCommand(ctx context.Context, input *ssm.CancelCommandInput) (*ssm.CancelCommandOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelCommandWithContext(ctx, input)
+	output, err := client.CancelCommandWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelMaintenanceWindowExecution(ctx context.Context, input *ssm.CancelMaintenanceWindowExecutionInput) (*ssm.CancelMaintenanceWindowExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelMaintenanceWindowExecutionWithContext(ctx, input)
+	output, err := client.CancelMaintenanceWindowExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateActivation(ctx context.Context, input *ssm.CreateActivationInput) (*ssm.CreateActivationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateActivationWithContext(ctx, input)
+	output, err := client.CreateActivationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAssociation(ctx context.Context, input *ssm.CreateAssociationInput) (*ssm.CreateAssociationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAssociationWithContext(ctx, input)
+	output, err := client.CreateAssociationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAssociationBatch(ctx context.Context, input *ssm.CreateAssociationBatchInput) (*ssm.CreateAssociationBatchOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAssociationBatchWithContext(ctx, input)
+	output, err := client.CreateAssociationBatchWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDocument(ctx context.Context, input *ssm.CreateDocumentInput) (*ssm.CreateDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDocumentWithContext(ctx, input)
+	output, err := client.CreateDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateMaintenanceWindow(ctx context.Context, input *ssm.CreateMaintenanceWindowInput) (*ssm.CreateMaintenanceWindowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreateMaintenanceWindowWithContext(ctx, input)
+	output, err := client.CreateMaintenanceWindowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateOpsItem(ctx context.Context, input *ssm.CreateOpsItemInput) (*ssm.CreateOpsItemOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateOpsItemWithContext(ctx, input)
+	output, err := client.CreateOpsItemWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePatchBaseline(ctx context.Context, input *ssm.CreatePatchBaselineInput) (*ssm.CreatePatchBaselineOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.CreatePatchBaselineWithContext(ctx, input)
+	output, err := client.CreatePatchBaselineWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateResourceDataSync(ctx context.Context, input *ssm.CreateResourceDataSyncInput) (*ssm.CreateResourceDataSyncOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateResourceDataSyncWithContext(ctx, input)
+	output, err := client.CreateResourceDataSyncWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteActivation(ctx context.Context, input *ssm.DeleteActivationInput) (*ssm.DeleteActivationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteActivationWithContext(ctx, input)
+	output, err := client.DeleteActivationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAssociation(ctx context.Context, input *ssm.DeleteAssociationInput) (*ssm.DeleteAssociationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAssociationWithContext(ctx, input)
+	output, err := client.DeleteAssociationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDocument(ctx context.Context, input *ssm.DeleteDocumentInput) (*ssm.DeleteDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDocumentWithContext(ctx, input)
+	output, err := client.DeleteDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteInventory(ctx context.Context, input *ssm.DeleteInventoryInput) (*ssm.DeleteInventoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.DeleteInventoryWithContext(ctx, input)
+	output, err := client.DeleteInventoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteMaintenanceWindow(ctx context.Context, input *ssm.DeleteMaintenanceWindowInput) (*ssm.DeleteMaintenanceWindowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteMaintenanceWindowWithContext(ctx, input)
+	output, err := client.DeleteMaintenanceWindowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteParameter(ctx context.Context, input *ssm.DeleteParameterInput) (*ssm.DeleteParameterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteParameterWithContext(ctx, input)
+	output, err := client.DeleteParameterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteParameters(ctx context.Context, input *ssm.DeleteParametersInput) (*ssm.DeleteParametersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteParametersWithContext(ctx, input)
+	output, err := client.DeleteParametersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePatchBaseline(ctx context.Context, input *ssm.DeletePatchBaselineInput) (*ssm.DeletePatchBaselineOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePatchBaselineWithContext(ctx, input)
+	output, err := client.DeletePatchBaselineWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteResourceDataSync(ctx context.Context, input *ssm.DeleteResourceDataSyncInput) (*ssm.DeleteResourceDataSyncOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteResourceDataSyncWithContext(ctx, input)
+	output, err := client.DeleteResourceDataSyncWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterManagedInstance(ctx context.Context, input *ssm.DeregisterManagedInstanceInput) (*ssm.DeregisterManagedInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterManagedInstanceWithContext(ctx, input)
+	output, err := client.DeregisterManagedInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterPatchBaselineForPatchGroup(ctx context.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) (*ssm.DeregisterPatchBaselineForPatchGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterPatchBaselineForPatchGroupWithContext(ctx, input)
+	output, err := client.DeregisterPatchBaselineForPatchGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterTargetFromMaintenanceWindow(ctx context.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) (*ssm.DeregisterTargetFromMaintenanceWindowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterTargetFromMaintenanceWindowWithContext(ctx, input)
+	output, err := client.DeregisterTargetFromMaintenanceWindowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterTaskFromMaintenanceWindow(ctx context.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) (*ssm.DeregisterTaskFromMaintenanceWindowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterTaskFromMaintenanceWindowWithContext(ctx, input)
+	output, err := client.DeregisterTaskFromMaintenanceWindowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeActivations(ctx context.Context, input *ssm.DescribeActivationsInput) (*ssm.DescribeActivationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeActivationsWithContext(ctx, input)
+	output, err := client.DescribeActivationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAssociation(ctx context.Context, input *ssm.DescribeAssociationInput) (*ssm.DescribeAssociationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAssociationWithContext(ctx, input)
+	output, err := client.DescribeAssociationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAssociationExecutionTargets(ctx context.Context, input *ssm.DescribeAssociationExecutionTargetsInput) (*ssm.DescribeAssociationExecutionTargetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAssociationExecutionTargetsWithContext(ctx, input)
+	output, err := client.DescribeAssociationExecutionTargetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAssociationExecutions(ctx context.Context, input *ssm.DescribeAssociationExecutionsInput) (*ssm.DescribeAssociationExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAssociationExecutionsWithContext(ctx, input)
+	output, err := client.DescribeAssociationExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAutomationExecutions(ctx context.Context, input *ssm.DescribeAutomationExecutionsInput) (*ssm.DescribeAutomationExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAutomationExecutionsWithContext(ctx, input)
+	output, err := client.DescribeAutomationExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAutomationStepExecutions(ctx context.Context, input *ssm.DescribeAutomationStepExecutionsInput) (*ssm.DescribeAutomationStepExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAutomationStepExecutionsWithContext(ctx, input)
+	output, err := client.DescribeAutomationStepExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAvailablePatches(ctx context.Context, input *ssm.DescribeAvailablePatchesInput) (*ssm.DescribeAvailablePatchesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAvailablePatchesWithContext(ctx, input)
+	output, err := client.DescribeAvailablePatchesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDocument(ctx context.Context, input *ssm.DescribeDocumentInput) (*ssm.DescribeDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDocumentWithContext(ctx, input)
+	output, err := client.DescribeDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDocumentPermission(ctx context.Context, input *ssm.DescribeDocumentPermissionInput) (*ssm.DescribeDocumentPermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDocumentPermissionWithContext(ctx, input)
+	output, err := client.DescribeDocumentPermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEffectiveInstanceAssociations(ctx context.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) (*ssm.DescribeEffectiveInstanceAssociationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEffectiveInstanceAssociationsWithContext(ctx, input)
+	output, err := client.DescribeEffectiveInstanceAssociationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEffectivePatchesForPatchBaseline(ctx context.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) (*ssm.DescribeEffectivePatchesForPatchBaselineOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEffectivePatchesForPatchBaselineWithContext(ctx, input)
+	output, err := client.DescribeEffectivePatchesForPatchBaselineWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInstanceAssociationsStatus(ctx context.Context, input *ssm.DescribeInstanceAssociationsStatusInput) (*ssm.DescribeInstanceAssociationsStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInstanceAssociationsStatusWithContext(ctx, input)
+	output, err := client.DescribeInstanceAssociationsStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInstanceInformation(ctx context.Context, input *ssm.DescribeInstanceInformationInput) (*ssm.DescribeInstanceInformationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInstanceInformationWithContext(ctx, input)
+	output, err := client.DescribeInstanceInformationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInstancePatchStates(ctx context.Context, input *ssm.DescribeInstancePatchStatesInput) (*ssm.DescribeInstancePatchStatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInstancePatchStatesWithContext(ctx, input)
+	output, err := client.DescribeInstancePatchStatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInstancePatchStatesForPatchGroup(ctx context.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) (*ssm.DescribeInstancePatchStatesForPatchGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInstancePatchStatesForPatchGroupWithContext(ctx, input)
+	output, err := client.DescribeInstancePatchStatesForPatchGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInstancePatches(ctx context.Context, input *ssm.DescribeInstancePatchesInput) (*ssm.DescribeInstancePatchesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInstancePatchesWithContext(ctx, input)
+	output, err := client.DescribeInstancePatchesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeInventoryDeletions(ctx context.Context, input *ssm.DescribeInventoryDeletionsInput) (*ssm.DescribeInventoryDeletionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeInventoryDeletionsWithContext(ctx, input)
+	output, err := client.DescribeInventoryDeletionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMaintenanceWindowExecutionTaskInvocations(ctx context.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) (*ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMaintenanceWindowExecutionTaskInvocationsWithContext(ctx, input)
+	output, err := client.DescribeMaintenanceWindowExecutionTaskInvocationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMaintenanceWindowExecutionTasks(ctx context.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) (*ssm.DescribeMaintenanceWindowExecutionTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMaintenanceWindowExecutionTasksWithContext(ctx, input)
+	output, err := client.DescribeMaintenanceWindowExecutionTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMaintenanceWindowExecutions(ctx context.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) (*ssm.DescribeMaintenanceWindowExecutionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMaintenanceWindowExecutionsWithContext(ctx, input)
+	output, err := client.DescribeMaintenanceWindowExecutionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMaintenanceWindowSchedule(ctx context.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) (*ssm.DescribeMaintenanceWindowScheduleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMaintenanceWindowScheduleWithContext(ctx, input)
+	output, err := client.DescribeMaintenanceWindowScheduleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMaintenanceWindowTargets(ctx context.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) (*ssm.DescribeMaintenanceWindowTargetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMaintenanceWindowTargetsWithContext(ctx, input)
+	output, err := client.DescribeMaintenanceWindowTargetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMaintenanceWindowTasks(ctx context.Context, input *ssm.DescribeMaintenanceWindowTasksInput) (*ssm.DescribeMaintenanceWindowTasksOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMaintenanceWindowTasksWithContext(ctx, input)
+	output, err := client.DescribeMaintenanceWindowTasksWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMaintenanceWindows(ctx context.Context, input *ssm.DescribeMaintenanceWindowsInput) (*ssm.DescribeMaintenanceWindowsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMaintenanceWindowsWithContext(ctx, input)
+	output, err := client.DescribeMaintenanceWindowsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeMaintenanceWindowsForTarget(ctx context.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) (*ssm.DescribeMaintenanceWindowsForTargetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeMaintenanceWindowsForTargetWithContext(ctx, input)
+	output, err := client.DescribeMaintenanceWindowsForTargetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeOpsItems(ctx context.Context, input *ssm.DescribeOpsItemsInput) (*ssm.DescribeOpsItemsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeOpsItemsWithContext(ctx, input)
+	output, err := client.DescribeOpsItemsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeParameters(ctx context.Context, input *ssm.DescribeParametersInput) (*ssm.DescribeParametersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeParametersWithContext(ctx, input)
+	output, err := client.DescribeParametersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePatchBaselines(ctx context.Context, input *ssm.DescribePatchBaselinesInput) (*ssm.DescribePatchBaselinesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePatchBaselinesWithContext(ctx, input)
+	output, err := client.DescribePatchBaselinesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePatchGroupState(ctx context.Context, input *ssm.DescribePatchGroupStateInput) (*ssm.DescribePatchGroupStateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePatchGroupStateWithContext(ctx, input)
+	output, err := client.DescribePatchGroupStateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePatchGroups(ctx context.Context, input *ssm.DescribePatchGroupsInput) (*ssm.DescribePatchGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePatchGroupsWithContext(ctx, input)
+	output, err := client.DescribePatchGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePatchProperties(ctx context.Context, input *ssm.DescribePatchPropertiesInput) (*ssm.DescribePatchPropertiesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePatchPropertiesWithContext(ctx, input)
+	output, err := client.DescribePatchPropertiesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeSessions(ctx context.Context, input *ssm.DescribeSessionsInput) (*ssm.DescribeSessionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeSessionsWithContext(ctx, input)
+	output, err := client.DescribeSessionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetAutomationExecution(ctx context.Context, input *ssm.GetAutomationExecutionInput) (*ssm.GetAutomationExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetAutomationExecutionWithContext(ctx, input)
+	output, err := client.GetAutomationExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCalendarState(ctx context.Context, input *ssm.GetCalendarStateInput) (*ssm.GetCalendarStateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCalendarStateWithContext(ctx, input)
+	output, err := client.GetCalendarStateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetCommandInvocation(ctx context.Context, input *ssm.GetCommandInvocationInput) (*ssm.GetCommandInvocationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetCommandInvocationWithContext(ctx, input)
+	output, err := client.GetCommandInvocationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetConnectionStatus(ctx context.Context, input *ssm.GetConnectionStatusInput) (*ssm.GetConnectionStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetConnectionStatusWithContext(ctx, input)
+	output, err := client.GetConnectionStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDefaultPatchBaseline(ctx context.Context, input *ssm.GetDefaultPatchBaselineInput) (*ssm.GetDefaultPatchBaselineOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDefaultPatchBaselineWithContext(ctx, input)
+	output, err := client.GetDefaultPatchBaselineWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDeployablePatchSnapshotForInstance(ctx context.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) (*ssm.GetDeployablePatchSnapshotForInstanceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDeployablePatchSnapshotForInstanceWithContext(ctx, input)
+	output, err := client.GetDeployablePatchSnapshotForInstanceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDocument(ctx context.Context, input *ssm.GetDocumentInput) (*ssm.GetDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDocumentWithContext(ctx, input)
+	output, err := client.GetDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetInventory(ctx context.Context, input *ssm.GetInventoryInput) (*ssm.GetInventoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetInventoryWithContext(ctx, input)
+	output, err := client.GetInventoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetInventorySchema(ctx context.Context, input *ssm.GetInventorySchemaInput) (*ssm.GetInventorySchemaOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetInventorySchemaWithContext(ctx, input)
+	output, err := client.GetInventorySchemaWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMaintenanceWindow(ctx context.Context, input *ssm.GetMaintenanceWindowInput) (*ssm.GetMaintenanceWindowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMaintenanceWindowWithContext(ctx, input)
+	output, err := client.GetMaintenanceWindowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMaintenanceWindowExecution(ctx context.Context, input *ssm.GetMaintenanceWindowExecutionInput) (*ssm.GetMaintenanceWindowExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMaintenanceWindowExecutionWithContext(ctx, input)
+	output, err := client.GetMaintenanceWindowExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMaintenanceWindowExecutionTask(ctx context.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) (*ssm.GetMaintenanceWindowExecutionTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMaintenanceWindowExecutionTaskWithContext(ctx, input)
+	output, err := client.GetMaintenanceWindowExecutionTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMaintenanceWindowExecutionTaskInvocation(ctx context.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) (*ssm.GetMaintenanceWindowExecutionTaskInvocationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMaintenanceWindowExecutionTaskInvocationWithContext(ctx, input)
+	output, err := client.GetMaintenanceWindowExecutionTaskInvocationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetMaintenanceWindowTask(ctx context.Context, input *ssm.GetMaintenanceWindowTaskInput) (*ssm.GetMaintenanceWindowTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetMaintenanceWindowTaskWithContext(ctx, input)
+	output, err := client.GetMaintenanceWindowTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetOpsItem(ctx context.Context, input *ssm.GetOpsItemInput) (*ssm.GetOpsItemOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetOpsItemWithContext(ctx, input)
+	output, err := client.GetOpsItemWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetOpsSummary(ctx context.Context, input *ssm.GetOpsSummaryInput) (*ssm.GetOpsSummaryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetOpsSummaryWithContext(ctx, input)
+	output, err := client.GetOpsSummaryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetParameter(ctx context.Context, input *ssm.GetParameterInput) (*ssm.GetParameterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetParameterWithContext(ctx, input)
+	output, err := client.GetParameterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetParameterHistory(ctx context.Context, input *ssm.GetParameterHistoryInput) (*ssm.GetParameterHistoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetParameterHistoryWithContext(ctx, input)
+	output, err := client.GetParameterHistoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetParameters(ctx context.Context, input *ssm.GetParametersInput) (*ssm.GetParametersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetParametersWithContext(ctx, input)
+	output, err := client.GetParametersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetParametersByPath(ctx context.Context, input *ssm.GetParametersByPathInput) (*ssm.GetParametersByPathOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetParametersByPathWithContext(ctx, input)
+	output, err := client.GetParametersByPathWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPatchBaseline(ctx context.Context, input *ssm.GetPatchBaselineInput) (*ssm.GetPatchBaselineOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPatchBaselineWithContext(ctx, input)
+	output, err := client.GetPatchBaselineWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetPatchBaselineForPatchGroup(ctx context.Context, input *ssm.GetPatchBaselineForPatchGroupInput) (*ssm.GetPatchBaselineForPatchGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetPatchBaselineForPatchGroupWithContext(ctx, input)
+	output, err := client.GetPatchBaselineForPatchGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetServiceSetting(ctx context.Context, input *ssm.GetServiceSettingInput) (*ssm.GetServiceSettingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetServiceSettingWithContext(ctx, input)
+	output, err := client.GetServiceSettingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) LabelParameterVersion(ctx context.Context, input *ssm.LabelParameterVersionInput) (*ssm.LabelParameterVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.LabelParameterVersionWithContext(ctx, input)
+	output, err := client.LabelParameterVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAssociationVersions(ctx context.Context, input *ssm.ListAssociationVersionsInput) (*ssm.ListAssociationVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAssociationVersionsWithContext(ctx, input)
+	output, err := client.ListAssociationVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAssociations(ctx context.Context, input *ssm.ListAssociationsInput) (*ssm.ListAssociationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAssociationsWithContext(ctx, input)
+	output, err := client.ListAssociationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCommandInvocations(ctx context.Context, input *ssm.ListCommandInvocationsInput) (*ssm.ListCommandInvocationsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCommandInvocationsWithContext(ctx, input)
+	output, err := client.ListCommandInvocationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCommands(ctx context.Context, input *ssm.ListCommandsInput) (*ssm.ListCommandsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCommandsWithContext(ctx, input)
+	output, err := client.ListCommandsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListComplianceItems(ctx context.Context, input *ssm.ListComplianceItemsInput) (*ssm.ListComplianceItemsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListComplianceItemsWithContext(ctx, input)
+	output, err := client.ListComplianceItemsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListComplianceSummaries(ctx context.Context, input *ssm.ListComplianceSummariesInput) (*ssm.ListComplianceSummariesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListComplianceSummariesWithContext(ctx, input)
+	output, err := client.ListComplianceSummariesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDocumentVersions(ctx context.Context, input *ssm.ListDocumentVersionsInput) (*ssm.ListDocumentVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDocumentVersionsWithContext(ctx, input)
+	output, err := client.ListDocumentVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDocuments(ctx context.Context, input *ssm.ListDocumentsInput) (*ssm.ListDocumentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDocumentsWithContext(ctx, input)
+	output, err := client.ListDocumentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListInventoryEntries(ctx context.Context, input *ssm.ListInventoryEntriesInput) (*ssm.ListInventoryEntriesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListInventoryEntriesWithContext(ctx, input)
+	output, err := client.ListInventoryEntriesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListResourceComplianceSummaries(ctx context.Context, input *ssm.ListResourceComplianceSummariesInput) (*ssm.ListResourceComplianceSummariesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListResourceComplianceSummariesWithContext(ctx, input)
+	output, err := client.ListResourceComplianceSummariesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListResourceDataSync(ctx context.Context, input *ssm.ListResourceDataSyncInput) (*ssm.ListResourceDataSyncOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListResourceDataSyncWithContext(ctx, input)
+	output, err := client.ListResourceDataSyncWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *ssm.ListTagsForResourceInput) (*ssm.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ModifyDocumentPermission(ctx context.Context, input *ssm.ModifyDocumentPermissionInput) (*ssm.ModifyDocumentPermissionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ModifyDocumentPermissionWithContext(ctx, input)
+	output, err := client.ModifyDocumentPermissionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutComplianceItems(ctx context.Context, input *ssm.PutComplianceItemsInput) (*ssm.PutComplianceItemsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutComplianceItemsWithContext(ctx, input)
+	output, err := client.PutComplianceItemsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutInventory(ctx context.Context, input *ssm.PutInventoryInput) (*ssm.PutInventoryOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutInventoryWithContext(ctx, input)
+	output, err := client.PutInventoryWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) PutParameter(ctx context.Context, input *ssm.PutParameterInput) (*ssm.PutParameterOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.PutParameterWithContext(ctx, input)
+	output, err := client.PutParameterWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterDefaultPatchBaseline(ctx context.Context, input *ssm.RegisterDefaultPatchBaselineInput) (*ssm.RegisterDefaultPatchBaselineOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterDefaultPatchBaselineWithContext(ctx, input)
+	output, err := client.RegisterDefaultPatchBaselineWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterPatchBaselineForPatchGroup(ctx context.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) (*ssm.RegisterPatchBaselineForPatchGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterPatchBaselineForPatchGroupWithContext(ctx, input)
+	output, err := client.RegisterPatchBaselineForPatchGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterTargetWithMaintenanceWindow(ctx context.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) (*ssm.RegisterTargetWithMaintenanceWindowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.RegisterTargetWithMaintenanceWindowWithContext(ctx, input)
+	output, err := client.RegisterTargetWithMaintenanceWindowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterTaskWithMaintenanceWindow(ctx context.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) (*ssm.RegisterTaskWithMaintenanceWindowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.RegisterTaskWithMaintenanceWindowWithContext(ctx, input)
+	output, err := client.RegisterTaskWithMaintenanceWindowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveTagsFromResource(ctx context.Context, input *ssm.RemoveTagsFromResourceInput) (*ssm.RemoveTagsFromResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveTagsFromResourceWithContext(ctx, input)
+	output, err := client.RemoveTagsFromResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResetServiceSetting(ctx context.Context, input *ssm.ResetServiceSettingInput) (*ssm.ResetServiceSettingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResetServiceSettingWithContext(ctx, input)
+	output, err := client.ResetServiceSettingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ResumeSession(ctx context.Context, input *ssm.ResumeSessionInput) (*ssm.ResumeSessionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ResumeSessionWithContext(ctx, input)
+	output, err := client.ResumeSessionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SendAutomationSignal(ctx context.Context, input *ssm.SendAutomationSignalInput) (*ssm.SendAutomationSignalOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SendAutomationSignalWithContext(ctx, input)
+	output, err := client.SendAutomationSignalWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SendCommand(ctx context.Context, input *ssm.SendCommandInput) (*ssm.SendCommandOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SendCommandWithContext(ctx, input)
+	output, err := client.SendCommandWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartAssociationsOnce(ctx context.Context, input *ssm.StartAssociationsOnceInput) (*ssm.StartAssociationsOnceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartAssociationsOnceWithContext(ctx, input)
+	output, err := client.StartAssociationsOnceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartAutomationExecution(ctx context.Context, input *ssm.StartAutomationExecutionInput) (*ssm.StartAutomationExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return client.StartAutomationExecutionWithContext(ctx, input)
+	output, err := client.StartAutomationExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StartSession(ctx context.Context, input *ssm.StartSessionInput) (*ssm.StartSessionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartSessionWithContext(ctx, input)
+	output, err := client.StartSessionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) StopAutomationExecution(ctx context.Context, input *ssm.StopAutomationExecutionInput) (*ssm.StopAutomationExecutionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StopAutomationExecutionWithContext(ctx, input)
+	output, err := client.StopAutomationExecutionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TerminateSession(ctx context.Context, input *ssm.TerminateSessionInput) (*ssm.TerminateSessionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TerminateSessionWithContext(ctx, input)
+	output, err := client.TerminateSessionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAssociation(ctx context.Context, input *ssm.UpdateAssociationInput) (*ssm.UpdateAssociationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAssociationWithContext(ctx, input)
+	output, err := client.UpdateAssociationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAssociationStatus(ctx context.Context, input *ssm.UpdateAssociationStatusInput) (*ssm.UpdateAssociationStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAssociationStatusWithContext(ctx, input)
+	output, err := client.UpdateAssociationStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDocument(ctx context.Context, input *ssm.UpdateDocumentInput) (*ssm.UpdateDocumentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDocumentWithContext(ctx, input)
+	output, err := client.UpdateDocumentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDocumentDefaultVersion(ctx context.Context, input *ssm.UpdateDocumentDefaultVersionInput) (*ssm.UpdateDocumentDefaultVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDocumentDefaultVersionWithContext(ctx, input)
+	output, err := client.UpdateDocumentDefaultVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMaintenanceWindow(ctx context.Context, input *ssm.UpdateMaintenanceWindowInput) (*ssm.UpdateMaintenanceWindowOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMaintenanceWindowWithContext(ctx, input)
+	output, err := client.UpdateMaintenanceWindowWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMaintenanceWindowTarget(ctx context.Context, input *ssm.UpdateMaintenanceWindowTargetInput) (*ssm.UpdateMaintenanceWindowTargetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMaintenanceWindowTargetWithContext(ctx, input)
+	output, err := client.UpdateMaintenanceWindowTargetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateMaintenanceWindowTask(ctx context.Context, input *ssm.UpdateMaintenanceWindowTaskInput) (*ssm.UpdateMaintenanceWindowTaskOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateMaintenanceWindowTaskWithContext(ctx, input)
+	output, err := client.UpdateMaintenanceWindowTaskWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateManagedInstanceRole(ctx context.Context, input *ssm.UpdateManagedInstanceRoleInput) (*ssm.UpdateManagedInstanceRoleOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateManagedInstanceRoleWithContext(ctx, input)
+	output, err := client.UpdateManagedInstanceRoleWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateOpsItem(ctx context.Context, input *ssm.UpdateOpsItemInput) (*ssm.UpdateOpsItemOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateOpsItemWithContext(ctx, input)
+	output, err := client.UpdateOpsItemWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePatchBaseline(ctx context.Context, input *ssm.UpdatePatchBaselineInput) (*ssm.UpdatePatchBaselineOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePatchBaselineWithContext(ctx, input)
+	output, err := client.UpdatePatchBaselineWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateResourceDataSync(ctx context.Context, input *ssm.UpdateResourceDataSyncInput) (*ssm.UpdateResourceDataSyncOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateResourceDataSyncWithContext(ctx, input)
+	output, err := client.UpdateResourceDataSyncWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateServiceSetting(ctx context.Context, input *ssm.UpdateServiceSettingInput) (*ssm.UpdateServiceSettingOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateServiceSettingWithContext(ctx, input)
+	output, err := client.UpdateServiceSettingWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) WaitUntilCommandExecuted(ctx context.Context, input *ssm.GetCommandInvocationInput) error {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return err
+		return internal.EncodeError(err)
 	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return client.WaitUntilCommandExecutedWithContext(ctx, input, options...)
+		return internal.EncodeError(client.WaitUntilCommandExecutedWithContext(ctx, input, options...))
 	})
 }

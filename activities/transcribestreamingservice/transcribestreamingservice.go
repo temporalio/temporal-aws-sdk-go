@@ -6,12 +6,14 @@ package transcribestreamingservice
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/transcribestreamingservice"
 	"github.com/aws/aws-sdk-go/service/transcribestreamingservice/transcribestreamingserviceiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (transcribestreamingservicei
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return transcribestreamingservice.New(sess), nil
@@ -55,7 +57,9 @@ func (a *Activities) getClient(ctx context.Context) (transcribestreamingservicei
 func (a *Activities) StartStreamTranscription(ctx context.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.StartStreamTranscriptionWithContext(ctx, input)
+	output, err := client.StartStreamTranscriptionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

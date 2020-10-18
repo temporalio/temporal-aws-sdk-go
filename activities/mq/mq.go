@@ -6,12 +6,14 @@ package mq
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/mq"
 	"github.com/aws/aws-sdk-go/service/mq/mqiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (mqiface.MQAPI, error) {
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return mq.New(sess), nil
@@ -55,175 +57,219 @@ func (a *Activities) getClient(ctx context.Context) (mqiface.MQAPI, error) {
 func (a *Activities) CreateBroker(ctx context.Context, input *mq.CreateBrokerRequest) (*mq.CreateBrokerResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateBrokerWithContext(ctx, input)
+	output, err := client.CreateBrokerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateConfiguration(ctx context.Context, input *mq.CreateConfigurationRequest) (*mq.CreateConfigurationResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateConfigurationWithContext(ctx, input)
+	output, err := client.CreateConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTags(ctx context.Context, input *mq.CreateTagsInput) (*mq.CreateTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTagsWithContext(ctx, input)
+	output, err := client.CreateTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateUser(ctx context.Context, input *mq.CreateUserRequest) (*mq.CreateUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateUserWithContext(ctx, input)
+	output, err := client.CreateUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteBroker(ctx context.Context, input *mq.DeleteBrokerInput) (*mq.DeleteBrokerResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteBrokerWithContext(ctx, input)
+	output, err := client.DeleteBrokerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTags(ctx context.Context, input *mq.DeleteTagsInput) (*mq.DeleteTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTagsWithContext(ctx, input)
+	output, err := client.DeleteTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUser(ctx context.Context, input *mq.DeleteUserInput) (*mq.DeleteUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUserWithContext(ctx, input)
+	output, err := client.DeleteUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBroker(ctx context.Context, input *mq.DescribeBrokerInput) (*mq.DescribeBrokerResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBrokerWithContext(ctx, input)
+	output, err := client.DescribeBrokerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBrokerEngineTypes(ctx context.Context, input *mq.DescribeBrokerEngineTypesInput) (*mq.DescribeBrokerEngineTypesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBrokerEngineTypesWithContext(ctx, input)
+	output, err := client.DescribeBrokerEngineTypesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeBrokerInstanceOptions(ctx context.Context, input *mq.DescribeBrokerInstanceOptionsInput) (*mq.DescribeBrokerInstanceOptionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeBrokerInstanceOptionsWithContext(ctx, input)
+	output, err := client.DescribeBrokerInstanceOptionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeConfiguration(ctx context.Context, input *mq.DescribeConfigurationInput) (*mq.DescribeConfigurationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeConfigurationWithContext(ctx, input)
+	output, err := client.DescribeConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeConfigurationRevision(ctx context.Context, input *mq.DescribeConfigurationRevisionInput) (*mq.DescribeConfigurationRevisionResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeConfigurationRevisionWithContext(ctx, input)
+	output, err := client.DescribeConfigurationRevisionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeUser(ctx context.Context, input *mq.DescribeUserInput) (*mq.DescribeUserResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeUserWithContext(ctx, input)
+	output, err := client.DescribeUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListBrokers(ctx context.Context, input *mq.ListBrokersInput) (*mq.ListBrokersResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListBrokersWithContext(ctx, input)
+	output, err := client.ListBrokersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListConfigurationRevisions(ctx context.Context, input *mq.ListConfigurationRevisionsInput) (*mq.ListConfigurationRevisionsResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListConfigurationRevisionsWithContext(ctx, input)
+	output, err := client.ListConfigurationRevisionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListConfigurations(ctx context.Context, input *mq.ListConfigurationsInput) (*mq.ListConfigurationsResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListConfigurationsWithContext(ctx, input)
+	output, err := client.ListConfigurationsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTags(ctx context.Context, input *mq.ListTagsInput) (*mq.ListTagsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsWithContext(ctx, input)
+	output, err := client.ListTagsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListUsers(ctx context.Context, input *mq.ListUsersInput) (*mq.ListUsersResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListUsersWithContext(ctx, input)
+	output, err := client.ListUsersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RebootBroker(ctx context.Context, input *mq.RebootBrokerInput) (*mq.RebootBrokerOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RebootBrokerWithContext(ctx, input)
+	output, err := client.RebootBrokerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateBroker(ctx context.Context, input *mq.UpdateBrokerRequest) (*mq.UpdateBrokerResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateBrokerWithContext(ctx, input)
+	output, err := client.UpdateBrokerWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateConfiguration(ctx context.Context, input *mq.UpdateConfigurationRequest) (*mq.UpdateConfigurationResponse, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateConfigurationWithContext(ctx, input)
+	output, err := client.UpdateConfigurationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateUser(ctx context.Context, input *mq.UpdateUserRequest) (*mq.UpdateUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateUserWithContext(ctx, input)
+	output, err := client.UpdateUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

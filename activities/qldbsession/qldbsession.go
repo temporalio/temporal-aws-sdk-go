@@ -6,12 +6,14 @@ package qldbsession
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/qldbsession"
 	"github.com/aws/aws-sdk-go/service/qldbsession/qldbsessioniface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (qldbsessioniface.QLDBSessio
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return qldbsession.New(sess), nil
@@ -55,7 +57,9 @@ func (a *Activities) getClient(ctx context.Context) (qldbsessioniface.QLDBSessio
 func (a *Activities) SendCommand(ctx context.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SendCommandWithContext(ctx, input)
+	output, err := client.SendCommandWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

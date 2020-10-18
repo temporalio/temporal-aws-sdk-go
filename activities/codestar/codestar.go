@@ -6,12 +6,14 @@ package codestar
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/codestar"
 	"github.com/aws/aws-sdk-go/service/codestar/codestariface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (codestariface.CodeStarAPI, 
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return codestar.New(sess), nil
@@ -55,143 +57,179 @@ func (a *Activities) getClient(ctx context.Context) (codestariface.CodeStarAPI, 
 func (a *Activities) AssociateTeamMember(ctx context.Context, input *codestar.AssociateTeamMemberInput) (*codestar.AssociateTeamMemberOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AssociateTeamMemberWithContext(ctx, input)
+	output, err := client.AssociateTeamMemberWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateProject(ctx context.Context, input *codestar.CreateProjectInput) (*codestar.CreateProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateProjectWithContext(ctx, input)
+	output, err := client.CreateProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateUserProfile(ctx context.Context, input *codestar.CreateUserProfileInput) (*codestar.CreateUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateUserProfileWithContext(ctx, input)
+	output, err := client.CreateUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteProject(ctx context.Context, input *codestar.DeleteProjectInput) (*codestar.DeleteProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteProjectWithContext(ctx, input)
+	output, err := client.DeleteProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUserProfile(ctx context.Context, input *codestar.DeleteUserProfileInput) (*codestar.DeleteUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUserProfileWithContext(ctx, input)
+	output, err := client.DeleteUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeProject(ctx context.Context, input *codestar.DescribeProjectInput) (*codestar.DescribeProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeProjectWithContext(ctx, input)
+	output, err := client.DescribeProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeUserProfile(ctx context.Context, input *codestar.DescribeUserProfileInput) (*codestar.DescribeUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeUserProfileWithContext(ctx, input)
+	output, err := client.DescribeUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisassociateTeamMember(ctx context.Context, input *codestar.DisassociateTeamMemberInput) (*codestar.DisassociateTeamMemberOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisassociateTeamMemberWithContext(ctx, input)
+	output, err := client.DisassociateTeamMemberWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListProjects(ctx context.Context, input *codestar.ListProjectsInput) (*codestar.ListProjectsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListProjectsWithContext(ctx, input)
+	output, err := client.ListProjectsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListResources(ctx context.Context, input *codestar.ListResourcesInput) (*codestar.ListResourcesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListResourcesWithContext(ctx, input)
+	output, err := client.ListResourcesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForProject(ctx context.Context, input *codestar.ListTagsForProjectInput) (*codestar.ListTagsForProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForProjectWithContext(ctx, input)
+	output, err := client.ListTagsForProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTeamMembers(ctx context.Context, input *codestar.ListTeamMembersInput) (*codestar.ListTeamMembersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTeamMembersWithContext(ctx, input)
+	output, err := client.ListTeamMembersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListUserProfiles(ctx context.Context, input *codestar.ListUserProfilesInput) (*codestar.ListUserProfilesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListUserProfilesWithContext(ctx, input)
+	output, err := client.ListUserProfilesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagProject(ctx context.Context, input *codestar.TagProjectInput) (*codestar.TagProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagProjectWithContext(ctx, input)
+	output, err := client.TagProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagProject(ctx context.Context, input *codestar.UntagProjectInput) (*codestar.UntagProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagProjectWithContext(ctx, input)
+	output, err := client.UntagProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateProject(ctx context.Context, input *codestar.UpdateProjectInput) (*codestar.UpdateProjectOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateProjectWithContext(ctx, input)
+	output, err := client.UpdateProjectWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTeamMember(ctx context.Context, input *codestar.UpdateTeamMemberInput) (*codestar.UpdateTeamMemberOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTeamMemberWithContext(ctx, input)
+	output, err := client.UpdateTeamMemberWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateUserProfile(ctx context.Context, input *codestar.UpdateUserProfileInput) (*codestar.UpdateUserProfileOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateUserProfileWithContext(ctx, input)
+	output, err := client.UpdateUserProfileWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

@@ -6,12 +6,14 @@ package quicksight
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/quicksight"
 	"github.com/aws/aws-sdk-go/service/quicksight/quicksightiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (quicksightiface.QuickSightA
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return quicksight.New(sess), nil
@@ -55,791 +57,989 @@ func (a *Activities) getClient(ctx context.Context) (quicksightiface.QuickSightA
 func (a *Activities) CancelIngestion(ctx context.Context, input *quicksight.CancelIngestionInput) (*quicksight.CancelIngestionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelIngestionWithContext(ctx, input)
+	output, err := client.CancelIngestionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAccountCustomization(ctx context.Context, input *quicksight.CreateAccountCustomizationInput) (*quicksight.CreateAccountCustomizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAccountCustomizationWithContext(ctx, input)
+	output, err := client.CreateAccountCustomizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAnalysis(ctx context.Context, input *quicksight.CreateAnalysisInput) (*quicksight.CreateAnalysisOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAnalysisWithContext(ctx, input)
+	output, err := client.CreateAnalysisWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDashboard(ctx context.Context, input *quicksight.CreateDashboardInput) (*quicksight.CreateDashboardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDashboardWithContext(ctx, input)
+	output, err := client.CreateDashboardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDataSet(ctx context.Context, input *quicksight.CreateDataSetInput) (*quicksight.CreateDataSetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDataSetWithContext(ctx, input)
+	output, err := client.CreateDataSetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateDataSource(ctx context.Context, input *quicksight.CreateDataSourceInput) (*quicksight.CreateDataSourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateDataSourceWithContext(ctx, input)
+	output, err := client.CreateDataSourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateGroup(ctx context.Context, input *quicksight.CreateGroupInput) (*quicksight.CreateGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateGroupWithContext(ctx, input)
+	output, err := client.CreateGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateGroupMembership(ctx context.Context, input *quicksight.CreateGroupMembershipInput) (*quicksight.CreateGroupMembershipOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateGroupMembershipWithContext(ctx, input)
+	output, err := client.CreateGroupMembershipWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateIAMPolicyAssignment(ctx context.Context, input *quicksight.CreateIAMPolicyAssignmentInput) (*quicksight.CreateIAMPolicyAssignmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateIAMPolicyAssignmentWithContext(ctx, input)
+	output, err := client.CreateIAMPolicyAssignmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateIngestion(ctx context.Context, input *quicksight.CreateIngestionInput) (*quicksight.CreateIngestionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateIngestionWithContext(ctx, input)
+	output, err := client.CreateIngestionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateNamespace(ctx context.Context, input *quicksight.CreateNamespaceInput) (*quicksight.CreateNamespaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateNamespaceWithContext(ctx, input)
+	output, err := client.CreateNamespaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTemplate(ctx context.Context, input *quicksight.CreateTemplateInput) (*quicksight.CreateTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTemplateWithContext(ctx, input)
+	output, err := client.CreateTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTemplateAlias(ctx context.Context, input *quicksight.CreateTemplateAliasInput) (*quicksight.CreateTemplateAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateTemplateAliasWithContext(ctx, input)
+	output, err := client.CreateTemplateAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateTheme(ctx context.Context, input *quicksight.CreateThemeInput) (*quicksight.CreateThemeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateThemeWithContext(ctx, input)
+	output, err := client.CreateThemeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateThemeAlias(ctx context.Context, input *quicksight.CreateThemeAliasInput) (*quicksight.CreateThemeAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateThemeAliasWithContext(ctx, input)
+	output, err := client.CreateThemeAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAccountCustomization(ctx context.Context, input *quicksight.DeleteAccountCustomizationInput) (*quicksight.DeleteAccountCustomizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAccountCustomizationWithContext(ctx, input)
+	output, err := client.DeleteAccountCustomizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteAnalysis(ctx context.Context, input *quicksight.DeleteAnalysisInput) (*quicksight.DeleteAnalysisOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteAnalysisWithContext(ctx, input)
+	output, err := client.DeleteAnalysisWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDashboard(ctx context.Context, input *quicksight.DeleteDashboardInput) (*quicksight.DeleteDashboardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDashboardWithContext(ctx, input)
+	output, err := client.DeleteDashboardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDataSet(ctx context.Context, input *quicksight.DeleteDataSetInput) (*quicksight.DeleteDataSetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDataSetWithContext(ctx, input)
+	output, err := client.DeleteDataSetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteDataSource(ctx context.Context, input *quicksight.DeleteDataSourceInput) (*quicksight.DeleteDataSourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteDataSourceWithContext(ctx, input)
+	output, err := client.DeleteDataSourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteGroup(ctx context.Context, input *quicksight.DeleteGroupInput) (*quicksight.DeleteGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteGroupWithContext(ctx, input)
+	output, err := client.DeleteGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteGroupMembership(ctx context.Context, input *quicksight.DeleteGroupMembershipInput) (*quicksight.DeleteGroupMembershipOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteGroupMembershipWithContext(ctx, input)
+	output, err := client.DeleteGroupMembershipWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteIAMPolicyAssignment(ctx context.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) (*quicksight.DeleteIAMPolicyAssignmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteIAMPolicyAssignmentWithContext(ctx, input)
+	output, err := client.DeleteIAMPolicyAssignmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteNamespace(ctx context.Context, input *quicksight.DeleteNamespaceInput) (*quicksight.DeleteNamespaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteNamespaceWithContext(ctx, input)
+	output, err := client.DeleteNamespaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTemplate(ctx context.Context, input *quicksight.DeleteTemplateInput) (*quicksight.DeleteTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTemplateWithContext(ctx, input)
+	output, err := client.DeleteTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTemplateAlias(ctx context.Context, input *quicksight.DeleteTemplateAliasInput) (*quicksight.DeleteTemplateAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteTemplateAliasWithContext(ctx, input)
+	output, err := client.DeleteTemplateAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteTheme(ctx context.Context, input *quicksight.DeleteThemeInput) (*quicksight.DeleteThemeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteThemeWithContext(ctx, input)
+	output, err := client.DeleteThemeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteThemeAlias(ctx context.Context, input *quicksight.DeleteThemeAliasInput) (*quicksight.DeleteThemeAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteThemeAliasWithContext(ctx, input)
+	output, err := client.DeleteThemeAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUser(ctx context.Context, input *quicksight.DeleteUserInput) (*quicksight.DeleteUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUserWithContext(ctx, input)
+	output, err := client.DeleteUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteUserByPrincipalId(ctx context.Context, input *quicksight.DeleteUserByPrincipalIdInput) (*quicksight.DeleteUserByPrincipalIdOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteUserByPrincipalIdWithContext(ctx, input)
+	output, err := client.DeleteUserByPrincipalIdWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAccountCustomization(ctx context.Context, input *quicksight.DescribeAccountCustomizationInput) (*quicksight.DescribeAccountCustomizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAccountCustomizationWithContext(ctx, input)
+	output, err := client.DescribeAccountCustomizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAccountSettings(ctx context.Context, input *quicksight.DescribeAccountSettingsInput) (*quicksight.DescribeAccountSettingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAccountSettingsWithContext(ctx, input)
+	output, err := client.DescribeAccountSettingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAnalysis(ctx context.Context, input *quicksight.DescribeAnalysisInput) (*quicksight.DescribeAnalysisOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAnalysisWithContext(ctx, input)
+	output, err := client.DescribeAnalysisWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAnalysisPermissions(ctx context.Context, input *quicksight.DescribeAnalysisPermissionsInput) (*quicksight.DescribeAnalysisPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAnalysisPermissionsWithContext(ctx, input)
+	output, err := client.DescribeAnalysisPermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDashboard(ctx context.Context, input *quicksight.DescribeDashboardInput) (*quicksight.DescribeDashboardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDashboardWithContext(ctx, input)
+	output, err := client.DescribeDashboardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDashboardPermissions(ctx context.Context, input *quicksight.DescribeDashboardPermissionsInput) (*quicksight.DescribeDashboardPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDashboardPermissionsWithContext(ctx, input)
+	output, err := client.DescribeDashboardPermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDataSet(ctx context.Context, input *quicksight.DescribeDataSetInput) (*quicksight.DescribeDataSetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDataSetWithContext(ctx, input)
+	output, err := client.DescribeDataSetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDataSetPermissions(ctx context.Context, input *quicksight.DescribeDataSetPermissionsInput) (*quicksight.DescribeDataSetPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDataSetPermissionsWithContext(ctx, input)
+	output, err := client.DescribeDataSetPermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDataSource(ctx context.Context, input *quicksight.DescribeDataSourceInput) (*quicksight.DescribeDataSourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDataSourceWithContext(ctx, input)
+	output, err := client.DescribeDataSourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeDataSourcePermissions(ctx context.Context, input *quicksight.DescribeDataSourcePermissionsInput) (*quicksight.DescribeDataSourcePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeDataSourcePermissionsWithContext(ctx, input)
+	output, err := client.DescribeDataSourcePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeGroup(ctx context.Context, input *quicksight.DescribeGroupInput) (*quicksight.DescribeGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeGroupWithContext(ctx, input)
+	output, err := client.DescribeGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeIAMPolicyAssignment(ctx context.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) (*quicksight.DescribeIAMPolicyAssignmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeIAMPolicyAssignmentWithContext(ctx, input)
+	output, err := client.DescribeIAMPolicyAssignmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeIngestion(ctx context.Context, input *quicksight.DescribeIngestionInput) (*quicksight.DescribeIngestionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeIngestionWithContext(ctx, input)
+	output, err := client.DescribeIngestionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeNamespace(ctx context.Context, input *quicksight.DescribeNamespaceInput) (*quicksight.DescribeNamespaceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeNamespaceWithContext(ctx, input)
+	output, err := client.DescribeNamespaceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTemplate(ctx context.Context, input *quicksight.DescribeTemplateInput) (*quicksight.DescribeTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTemplateWithContext(ctx, input)
+	output, err := client.DescribeTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTemplateAlias(ctx context.Context, input *quicksight.DescribeTemplateAliasInput) (*quicksight.DescribeTemplateAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTemplateAliasWithContext(ctx, input)
+	output, err := client.DescribeTemplateAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTemplatePermissions(ctx context.Context, input *quicksight.DescribeTemplatePermissionsInput) (*quicksight.DescribeTemplatePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeTemplatePermissionsWithContext(ctx, input)
+	output, err := client.DescribeTemplatePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeTheme(ctx context.Context, input *quicksight.DescribeThemeInput) (*quicksight.DescribeThemeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeThemeWithContext(ctx, input)
+	output, err := client.DescribeThemeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeThemeAlias(ctx context.Context, input *quicksight.DescribeThemeAliasInput) (*quicksight.DescribeThemeAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeThemeAliasWithContext(ctx, input)
+	output, err := client.DescribeThemeAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeThemePermissions(ctx context.Context, input *quicksight.DescribeThemePermissionsInput) (*quicksight.DescribeThemePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeThemePermissionsWithContext(ctx, input)
+	output, err := client.DescribeThemePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeUser(ctx context.Context, input *quicksight.DescribeUserInput) (*quicksight.DescribeUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeUserWithContext(ctx, input)
+	output, err := client.DescribeUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetDashboardEmbedUrl(ctx context.Context, input *quicksight.GetDashboardEmbedUrlInput) (*quicksight.GetDashboardEmbedUrlOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetDashboardEmbedUrlWithContext(ctx, input)
+	output, err := client.GetDashboardEmbedUrlWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) GetSessionEmbedUrl(ctx context.Context, input *quicksight.GetSessionEmbedUrlInput) (*quicksight.GetSessionEmbedUrlOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.GetSessionEmbedUrlWithContext(ctx, input)
+	output, err := client.GetSessionEmbedUrlWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAnalyses(ctx context.Context, input *quicksight.ListAnalysesInput) (*quicksight.ListAnalysesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAnalysesWithContext(ctx, input)
+	output, err := client.ListAnalysesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDashboardVersions(ctx context.Context, input *quicksight.ListDashboardVersionsInput) (*quicksight.ListDashboardVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDashboardVersionsWithContext(ctx, input)
+	output, err := client.ListDashboardVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDashboards(ctx context.Context, input *quicksight.ListDashboardsInput) (*quicksight.ListDashboardsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDashboardsWithContext(ctx, input)
+	output, err := client.ListDashboardsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDataSets(ctx context.Context, input *quicksight.ListDataSetsInput) (*quicksight.ListDataSetsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDataSetsWithContext(ctx, input)
+	output, err := client.ListDataSetsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDataSources(ctx context.Context, input *quicksight.ListDataSourcesInput) (*quicksight.ListDataSourcesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDataSourcesWithContext(ctx, input)
+	output, err := client.ListDataSourcesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListGroupMemberships(ctx context.Context, input *quicksight.ListGroupMembershipsInput) (*quicksight.ListGroupMembershipsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListGroupMembershipsWithContext(ctx, input)
+	output, err := client.ListGroupMembershipsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListGroups(ctx context.Context, input *quicksight.ListGroupsInput) (*quicksight.ListGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListGroupsWithContext(ctx, input)
+	output, err := client.ListGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListIAMPolicyAssignments(ctx context.Context, input *quicksight.ListIAMPolicyAssignmentsInput) (*quicksight.ListIAMPolicyAssignmentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListIAMPolicyAssignmentsWithContext(ctx, input)
+	output, err := client.ListIAMPolicyAssignmentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListIAMPolicyAssignmentsForUser(ctx context.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) (*quicksight.ListIAMPolicyAssignmentsForUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListIAMPolicyAssignmentsForUserWithContext(ctx, input)
+	output, err := client.ListIAMPolicyAssignmentsForUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListIngestions(ctx context.Context, input *quicksight.ListIngestionsInput) (*quicksight.ListIngestionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListIngestionsWithContext(ctx, input)
+	output, err := client.ListIngestionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListNamespaces(ctx context.Context, input *quicksight.ListNamespacesInput) (*quicksight.ListNamespacesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListNamespacesWithContext(ctx, input)
+	output, err := client.ListNamespacesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *quicksight.ListTagsForResourceInput) (*quicksight.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTemplateAliases(ctx context.Context, input *quicksight.ListTemplateAliasesInput) (*quicksight.ListTemplateAliasesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTemplateAliasesWithContext(ctx, input)
+	output, err := client.ListTemplateAliasesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTemplateVersions(ctx context.Context, input *quicksight.ListTemplateVersionsInput) (*quicksight.ListTemplateVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTemplateVersionsWithContext(ctx, input)
+	output, err := client.ListTemplateVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTemplates(ctx context.Context, input *quicksight.ListTemplatesInput) (*quicksight.ListTemplatesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTemplatesWithContext(ctx, input)
+	output, err := client.ListTemplatesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThemeAliases(ctx context.Context, input *quicksight.ListThemeAliasesInput) (*quicksight.ListThemeAliasesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThemeAliasesWithContext(ctx, input)
+	output, err := client.ListThemeAliasesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThemeVersions(ctx context.Context, input *quicksight.ListThemeVersionsInput) (*quicksight.ListThemeVersionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThemeVersionsWithContext(ctx, input)
+	output, err := client.ListThemeVersionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListThemes(ctx context.Context, input *quicksight.ListThemesInput) (*quicksight.ListThemesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListThemesWithContext(ctx, input)
+	output, err := client.ListThemesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListUserGroups(ctx context.Context, input *quicksight.ListUserGroupsInput) (*quicksight.ListUserGroupsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListUserGroupsWithContext(ctx, input)
+	output, err := client.ListUserGroupsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListUsers(ctx context.Context, input *quicksight.ListUsersInput) (*quicksight.ListUsersOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListUsersWithContext(ctx, input)
+	output, err := client.ListUsersWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterUser(ctx context.Context, input *quicksight.RegisterUserInput) (*quicksight.RegisterUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterUserWithContext(ctx, input)
+	output, err := client.RegisterUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RestoreAnalysis(ctx context.Context, input *quicksight.RestoreAnalysisInput) (*quicksight.RestoreAnalysisOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RestoreAnalysisWithContext(ctx, input)
+	output, err := client.RestoreAnalysisWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SearchAnalyses(ctx context.Context, input *quicksight.SearchAnalysesInput) (*quicksight.SearchAnalysesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SearchAnalysesWithContext(ctx, input)
+	output, err := client.SearchAnalysesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) SearchDashboards(ctx context.Context, input *quicksight.SearchDashboardsInput) (*quicksight.SearchDashboardsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.SearchDashboardsWithContext(ctx, input)
+	output, err := client.SearchDashboardsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *quicksight.TagResourceInput) (*quicksight.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *quicksight.UntagResourceInput) (*quicksight.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAccountCustomization(ctx context.Context, input *quicksight.UpdateAccountCustomizationInput) (*quicksight.UpdateAccountCustomizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAccountCustomizationWithContext(ctx, input)
+	output, err := client.UpdateAccountCustomizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAccountSettings(ctx context.Context, input *quicksight.UpdateAccountSettingsInput) (*quicksight.UpdateAccountSettingsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAccountSettingsWithContext(ctx, input)
+	output, err := client.UpdateAccountSettingsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAnalysis(ctx context.Context, input *quicksight.UpdateAnalysisInput) (*quicksight.UpdateAnalysisOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAnalysisWithContext(ctx, input)
+	output, err := client.UpdateAnalysisWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateAnalysisPermissions(ctx context.Context, input *quicksight.UpdateAnalysisPermissionsInput) (*quicksight.UpdateAnalysisPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateAnalysisPermissionsWithContext(ctx, input)
+	output, err := client.UpdateAnalysisPermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDashboard(ctx context.Context, input *quicksight.UpdateDashboardInput) (*quicksight.UpdateDashboardOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDashboardWithContext(ctx, input)
+	output, err := client.UpdateDashboardWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDashboardPermissions(ctx context.Context, input *quicksight.UpdateDashboardPermissionsInput) (*quicksight.UpdateDashboardPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDashboardPermissionsWithContext(ctx, input)
+	output, err := client.UpdateDashboardPermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDashboardPublishedVersion(ctx context.Context, input *quicksight.UpdateDashboardPublishedVersionInput) (*quicksight.UpdateDashboardPublishedVersionOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDashboardPublishedVersionWithContext(ctx, input)
+	output, err := client.UpdateDashboardPublishedVersionWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDataSet(ctx context.Context, input *quicksight.UpdateDataSetInput) (*quicksight.UpdateDataSetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDataSetWithContext(ctx, input)
+	output, err := client.UpdateDataSetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDataSetPermissions(ctx context.Context, input *quicksight.UpdateDataSetPermissionsInput) (*quicksight.UpdateDataSetPermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDataSetPermissionsWithContext(ctx, input)
+	output, err := client.UpdateDataSetPermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDataSource(ctx context.Context, input *quicksight.UpdateDataSourceInput) (*quicksight.UpdateDataSourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDataSourceWithContext(ctx, input)
+	output, err := client.UpdateDataSourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateDataSourcePermissions(ctx context.Context, input *quicksight.UpdateDataSourcePermissionsInput) (*quicksight.UpdateDataSourcePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateDataSourcePermissionsWithContext(ctx, input)
+	output, err := client.UpdateDataSourcePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateGroup(ctx context.Context, input *quicksight.UpdateGroupInput) (*quicksight.UpdateGroupOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateGroupWithContext(ctx, input)
+	output, err := client.UpdateGroupWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateIAMPolicyAssignment(ctx context.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) (*quicksight.UpdateIAMPolicyAssignmentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateIAMPolicyAssignmentWithContext(ctx, input)
+	output, err := client.UpdateIAMPolicyAssignmentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTemplate(ctx context.Context, input *quicksight.UpdateTemplateInput) (*quicksight.UpdateTemplateOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTemplateWithContext(ctx, input)
+	output, err := client.UpdateTemplateWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTemplateAlias(ctx context.Context, input *quicksight.UpdateTemplateAliasInput) (*quicksight.UpdateTemplateAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTemplateAliasWithContext(ctx, input)
+	output, err := client.UpdateTemplateAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTemplatePermissions(ctx context.Context, input *quicksight.UpdateTemplatePermissionsInput) (*quicksight.UpdateTemplatePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateTemplatePermissionsWithContext(ctx, input)
+	output, err := client.UpdateTemplatePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateTheme(ctx context.Context, input *quicksight.UpdateThemeInput) (*quicksight.UpdateThemeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateThemeWithContext(ctx, input)
+	output, err := client.UpdateThemeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateThemeAlias(ctx context.Context, input *quicksight.UpdateThemeAliasInput) (*quicksight.UpdateThemeAliasOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateThemeAliasWithContext(ctx, input)
+	output, err := client.UpdateThemeAliasWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateThemePermissions(ctx context.Context, input *quicksight.UpdateThemePermissionsInput) (*quicksight.UpdateThemePermissionsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateThemePermissionsWithContext(ctx, input)
+	output, err := client.UpdateThemePermissionsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateUser(ctx context.Context, input *quicksight.UpdateUserInput) (*quicksight.UpdateUserOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateUserWithContext(ctx, input)
+	output, err := client.UpdateUserWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }

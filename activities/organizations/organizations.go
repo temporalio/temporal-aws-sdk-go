@@ -6,12 +6,14 @@ package organizations
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
+
+	"go.temporal.io/aws-sdk/internal"
 	"github.com/aws/aws-sdk-go/service/organizations"
 	"github.com/aws/aws-sdk-go/service/organizations/organizationsiface"
-	"go.temporal.io/aws-sdk/internal"
 )
 
 // ensure that imports are valid even if not used by the generated code
@@ -46,7 +48,7 @@ func (a *Activities) getClient(ctx context.Context) (organizationsiface.Organiza
 
 	sess, err := a.sessionFactory.Session(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
 
 	return organizations.New(sess), nil
@@ -55,407 +57,509 @@ func (a *Activities) getClient(ctx context.Context) (organizationsiface.Organiza
 func (a *Activities) AcceptHandshake(ctx context.Context, input *organizations.AcceptHandshakeInput) (*organizations.AcceptHandshakeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AcceptHandshakeWithContext(ctx, input)
+	output, err := client.AcceptHandshakeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) AttachPolicy(ctx context.Context, input *organizations.AttachPolicyInput) (*organizations.AttachPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.AttachPolicyWithContext(ctx, input)
+	output, err := client.AttachPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CancelHandshake(ctx context.Context, input *organizations.CancelHandshakeInput) (*organizations.CancelHandshakeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CancelHandshakeWithContext(ctx, input)
+	output, err := client.CancelHandshakeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateAccount(ctx context.Context, input *organizations.CreateAccountInput) (*organizations.CreateAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateAccountWithContext(ctx, input)
+	output, err := client.CreateAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateGovCloudAccount(ctx context.Context, input *organizations.CreateGovCloudAccountInput) (*organizations.CreateGovCloudAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateGovCloudAccountWithContext(ctx, input)
+	output, err := client.CreateGovCloudAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateOrganization(ctx context.Context, input *organizations.CreateOrganizationInput) (*organizations.CreateOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateOrganizationWithContext(ctx, input)
+	output, err := client.CreateOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreateOrganizationalUnit(ctx context.Context, input *organizations.CreateOrganizationalUnitInput) (*organizations.CreateOrganizationalUnitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreateOrganizationalUnitWithContext(ctx, input)
+	output, err := client.CreateOrganizationalUnitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) CreatePolicy(ctx context.Context, input *organizations.CreatePolicyInput) (*organizations.CreatePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.CreatePolicyWithContext(ctx, input)
+	output, err := client.CreatePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeclineHandshake(ctx context.Context, input *organizations.DeclineHandshakeInput) (*organizations.DeclineHandshakeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeclineHandshakeWithContext(ctx, input)
+	output, err := client.DeclineHandshakeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteOrganization(ctx context.Context, input *organizations.DeleteOrganizationInput) (*organizations.DeleteOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteOrganizationWithContext(ctx, input)
+	output, err := client.DeleteOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeleteOrganizationalUnit(ctx context.Context, input *organizations.DeleteOrganizationalUnitInput) (*organizations.DeleteOrganizationalUnitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeleteOrganizationalUnitWithContext(ctx, input)
+	output, err := client.DeleteOrganizationalUnitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeletePolicy(ctx context.Context, input *organizations.DeletePolicyInput) (*organizations.DeletePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeletePolicyWithContext(ctx, input)
+	output, err := client.DeletePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DeregisterDelegatedAdministrator(ctx context.Context, input *organizations.DeregisterDelegatedAdministratorInput) (*organizations.DeregisterDelegatedAdministratorOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DeregisterDelegatedAdministratorWithContext(ctx, input)
+	output, err := client.DeregisterDelegatedAdministratorWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeAccount(ctx context.Context, input *organizations.DescribeAccountInput) (*organizations.DescribeAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeAccountWithContext(ctx, input)
+	output, err := client.DescribeAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeCreateAccountStatus(ctx context.Context, input *organizations.DescribeCreateAccountStatusInput) (*organizations.DescribeCreateAccountStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeCreateAccountStatusWithContext(ctx, input)
+	output, err := client.DescribeCreateAccountStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeEffectivePolicy(ctx context.Context, input *organizations.DescribeEffectivePolicyInput) (*organizations.DescribeEffectivePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeEffectivePolicyWithContext(ctx, input)
+	output, err := client.DescribeEffectivePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeHandshake(ctx context.Context, input *organizations.DescribeHandshakeInput) (*organizations.DescribeHandshakeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeHandshakeWithContext(ctx, input)
+	output, err := client.DescribeHandshakeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeOrganization(ctx context.Context, input *organizations.DescribeOrganizationInput) (*organizations.DescribeOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeOrganizationWithContext(ctx, input)
+	output, err := client.DescribeOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribeOrganizationalUnit(ctx context.Context, input *organizations.DescribeOrganizationalUnitInput) (*organizations.DescribeOrganizationalUnitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribeOrganizationalUnitWithContext(ctx, input)
+	output, err := client.DescribeOrganizationalUnitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DescribePolicy(ctx context.Context, input *organizations.DescribePolicyInput) (*organizations.DescribePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DescribePolicyWithContext(ctx, input)
+	output, err := client.DescribePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DetachPolicy(ctx context.Context, input *organizations.DetachPolicyInput) (*organizations.DetachPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DetachPolicyWithContext(ctx, input)
+	output, err := client.DetachPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisableAWSServiceAccess(ctx context.Context, input *organizations.DisableAWSServiceAccessInput) (*organizations.DisableAWSServiceAccessOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisableAWSServiceAccessWithContext(ctx, input)
+	output, err := client.DisableAWSServiceAccessWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) DisablePolicyType(ctx context.Context, input *organizations.DisablePolicyTypeInput) (*organizations.DisablePolicyTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.DisablePolicyTypeWithContext(ctx, input)
+	output, err := client.DisablePolicyTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableAWSServiceAccess(ctx context.Context, input *organizations.EnableAWSServiceAccessInput) (*organizations.EnableAWSServiceAccessOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableAWSServiceAccessWithContext(ctx, input)
+	output, err := client.EnableAWSServiceAccessWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnableAllFeatures(ctx context.Context, input *organizations.EnableAllFeaturesInput) (*organizations.EnableAllFeaturesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnableAllFeaturesWithContext(ctx, input)
+	output, err := client.EnableAllFeaturesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) EnablePolicyType(ctx context.Context, input *organizations.EnablePolicyTypeInput) (*organizations.EnablePolicyTypeOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.EnablePolicyTypeWithContext(ctx, input)
+	output, err := client.EnablePolicyTypeWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) InviteAccountToOrganization(ctx context.Context, input *organizations.InviteAccountToOrganizationInput) (*organizations.InviteAccountToOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.InviteAccountToOrganizationWithContext(ctx, input)
+	output, err := client.InviteAccountToOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) LeaveOrganization(ctx context.Context, input *organizations.LeaveOrganizationInput) (*organizations.LeaveOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.LeaveOrganizationWithContext(ctx, input)
+	output, err := client.LeaveOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAWSServiceAccessForOrganization(ctx context.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) (*organizations.ListAWSServiceAccessForOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAWSServiceAccessForOrganizationWithContext(ctx, input)
+	output, err := client.ListAWSServiceAccessForOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAccounts(ctx context.Context, input *organizations.ListAccountsInput) (*organizations.ListAccountsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAccountsWithContext(ctx, input)
+	output, err := client.ListAccountsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListAccountsForParent(ctx context.Context, input *organizations.ListAccountsForParentInput) (*organizations.ListAccountsForParentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListAccountsForParentWithContext(ctx, input)
+	output, err := client.ListAccountsForParentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListChildren(ctx context.Context, input *organizations.ListChildrenInput) (*organizations.ListChildrenOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListChildrenWithContext(ctx, input)
+	output, err := client.ListChildrenWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListCreateAccountStatus(ctx context.Context, input *organizations.ListCreateAccountStatusInput) (*organizations.ListCreateAccountStatusOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListCreateAccountStatusWithContext(ctx, input)
+	output, err := client.ListCreateAccountStatusWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDelegatedAdministrators(ctx context.Context, input *organizations.ListDelegatedAdministratorsInput) (*organizations.ListDelegatedAdministratorsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDelegatedAdministratorsWithContext(ctx, input)
+	output, err := client.ListDelegatedAdministratorsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListDelegatedServicesForAccount(ctx context.Context, input *organizations.ListDelegatedServicesForAccountInput) (*organizations.ListDelegatedServicesForAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListDelegatedServicesForAccountWithContext(ctx, input)
+	output, err := client.ListDelegatedServicesForAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListHandshakesForAccount(ctx context.Context, input *organizations.ListHandshakesForAccountInput) (*organizations.ListHandshakesForAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListHandshakesForAccountWithContext(ctx, input)
+	output, err := client.ListHandshakesForAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListHandshakesForOrganization(ctx context.Context, input *organizations.ListHandshakesForOrganizationInput) (*organizations.ListHandshakesForOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListHandshakesForOrganizationWithContext(ctx, input)
+	output, err := client.ListHandshakesForOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListOrganizationalUnitsForParent(ctx context.Context, input *organizations.ListOrganizationalUnitsForParentInput) (*organizations.ListOrganizationalUnitsForParentOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListOrganizationalUnitsForParentWithContext(ctx, input)
+	output, err := client.ListOrganizationalUnitsForParentWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListParents(ctx context.Context, input *organizations.ListParentsInput) (*organizations.ListParentsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListParentsWithContext(ctx, input)
+	output, err := client.ListParentsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPolicies(ctx context.Context, input *organizations.ListPoliciesInput) (*organizations.ListPoliciesOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPoliciesWithContext(ctx, input)
+	output, err := client.ListPoliciesWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListPoliciesForTarget(ctx context.Context, input *organizations.ListPoliciesForTargetInput) (*organizations.ListPoliciesForTargetOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListPoliciesForTargetWithContext(ctx, input)
+	output, err := client.ListPoliciesForTargetWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListRoots(ctx context.Context, input *organizations.ListRootsInput) (*organizations.ListRootsOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListRootsWithContext(ctx, input)
+	output, err := client.ListRootsWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTagsForResource(ctx context.Context, input *organizations.ListTagsForResourceInput) (*organizations.ListTagsForResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTagsForResourceWithContext(ctx, input)
+	output, err := client.ListTagsForResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) ListTargetsForPolicy(ctx context.Context, input *organizations.ListTargetsForPolicyInput) (*organizations.ListTargetsForPolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.ListTargetsForPolicyWithContext(ctx, input)
+	output, err := client.ListTargetsForPolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) MoveAccount(ctx context.Context, input *organizations.MoveAccountInput) (*organizations.MoveAccountOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.MoveAccountWithContext(ctx, input)
+	output, err := client.MoveAccountWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RegisterDelegatedAdministrator(ctx context.Context, input *organizations.RegisterDelegatedAdministratorInput) (*organizations.RegisterDelegatedAdministratorOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RegisterDelegatedAdministratorWithContext(ctx, input)
+	output, err := client.RegisterDelegatedAdministratorWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) RemoveAccountFromOrganization(ctx context.Context, input *organizations.RemoveAccountFromOrganizationInput) (*organizations.RemoveAccountFromOrganizationOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.RemoveAccountFromOrganizationWithContext(ctx, input)
+	output, err := client.RemoveAccountFromOrganizationWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) TagResource(ctx context.Context, input *organizations.TagResourceInput) (*organizations.TagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.TagResourceWithContext(ctx, input)
+	output, err := client.TagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UntagResource(ctx context.Context, input *organizations.UntagResourceInput) (*organizations.UntagResourceOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UntagResourceWithContext(ctx, input)
+	output, err := client.UntagResourceWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdateOrganizationalUnit(ctx context.Context, input *organizations.UpdateOrganizationalUnitInput) (*organizations.UpdateOrganizationalUnitOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdateOrganizationalUnitWithContext(ctx, input)
+	output, err := client.UpdateOrganizationalUnitWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
 
 func (a *Activities) UpdatePolicy(ctx context.Context, input *organizations.UpdatePolicyInput) (*organizations.UpdatePolicyOutput, error) {
 	client, err := a.getClient(ctx)
 	if err != nil {
-		return nil, err
+		return nil, internal.EncodeError(err)
 	}
-	return client.UpdatePolicyWithContext(ctx, input)
+	output, err := client.UpdatePolicyWithContext(ctx, input)
+
+	return output, internal.EncodeError(err)
 }
