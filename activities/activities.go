@@ -254,1413 +254,477 @@ type SessionFactory interface {
 // RegisterAwsActivities registers AWS activities with a single session.
 // Use this registration method if your worker will only use a single set of credentials for authentication.
 func RegisterAwsActivities(worker worker.Worker, sess *session.Session, config ...*aws.Config) {
-
-	worker.RegisterActivity(accessanalyzer.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(accessanalyzer.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.accessanalyzer."})
-
-	worker.RegisterActivity(acm.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(acm.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.acm."})
-
-	worker.RegisterActivity(acmpca.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(acmpca.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.acmpca."})
-
-	worker.RegisterActivity(alexaforbusiness.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(alexaforbusiness.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.alexaforbusiness."})
-
-	worker.RegisterActivity(amplify.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(amplify.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.amplify."})
-
-	worker.RegisterActivity(apigateway.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(apigateway.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.apigateway."})
-
-	worker.RegisterActivity(apigatewaymanagementapi.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(apigatewaymanagementapi.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.apigatewaymanagementapi."})
-
-	worker.RegisterActivity(apigatewayv2.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(apigatewayv2.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.apigatewayv2."})
-
-	worker.RegisterActivity(appconfig.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(appconfig.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.appconfig."})
-
-	worker.RegisterActivity(appflow.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(appflow.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.appflow."})
-
-	worker.RegisterActivity(applicationautoscaling.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(applicationautoscaling.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.applicationautoscaling."})
-
-	worker.RegisterActivity(applicationdiscoveryservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(applicationdiscoveryservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.applicationdiscoveryservice."})
-
-	worker.RegisterActivity(applicationinsights.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(applicationinsights.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.applicationinsights."})
-
-	worker.RegisterActivity(appmesh.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(appmesh.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.appmesh."})
-
-	worker.RegisterActivity(appstream.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(appstream.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.appstream."})
-
-	worker.RegisterActivity(appsync.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(appsync.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.appsync."})
-
-	worker.RegisterActivity(athena.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(athena.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.athena."})
-
-	worker.RegisterActivity(augmentedairuntime.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(augmentedairuntime.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.augmentedairuntime."})
-
-	worker.RegisterActivity(autoscaling.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(autoscaling.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.autoscaling."})
-
-	worker.RegisterActivity(autoscalingplans.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(autoscalingplans.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.autoscalingplans."})
-
-	worker.RegisterActivity(backup.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(backup.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.backup."})
-
-	worker.RegisterActivity(batch.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(batch.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.batch."})
-
-	worker.RegisterActivity(braket.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(braket.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.braket."})
-
-	worker.RegisterActivity(budgets.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(budgets.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.budgets."})
-
-	worker.RegisterActivity(chime.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(chime.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.chime."})
-
-	worker.RegisterActivity(cloud9.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloud9.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloud9."})
-
-	worker.RegisterActivity(clouddirectory.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(clouddirectory.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.clouddirectory."})
-
-	worker.RegisterActivity(cloudformation.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudformation.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudformation."})
-
-	worker.RegisterActivity(cloudfront.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudfront.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudfront."})
-
-	worker.RegisterActivity(cloudhsm.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudhsm.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudhsm."})
-
-	worker.RegisterActivity(cloudhsmv2.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudhsmv2.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudhsmv2."})
-
-	worker.RegisterActivity(cloudsearch.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudsearch.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudsearch."})
-
-	worker.RegisterActivity(cloudsearchdomain.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudsearchdomain.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudsearchdomain."})
-
-	worker.RegisterActivity(cloudtrail.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudtrail.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudtrail."})
-
-	worker.RegisterActivity(cloudwatch.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudwatch.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudwatch."})
-
-	worker.RegisterActivity(cloudwatchevents.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudwatchevents.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudwatchevents."})
-
-	worker.RegisterActivity(cloudwatchlogs.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cloudwatchlogs.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cloudwatchlogs."})
-
-	worker.RegisterActivity(codeartifact.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codeartifact.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codeartifact."})
-
-	worker.RegisterActivity(codebuild.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codebuild.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codebuild."})
-
-	worker.RegisterActivity(codecommit.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codecommit.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codecommit."})
-
-	worker.RegisterActivity(codedeploy.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codedeploy.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codedeploy."})
-
-	worker.RegisterActivity(codeguruprofiler.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codeguruprofiler.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codeguruprofiler."})
-
-	worker.RegisterActivity(codegurureviewer.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codegurureviewer.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codegurureviewer."})
-
-	worker.RegisterActivity(codepipeline.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codepipeline.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codepipeline."})
-
-	worker.RegisterActivity(codestar.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codestar.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codestar."})
-
-	worker.RegisterActivity(codestarconnections.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codestarconnections.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codestarconnections."})
-
-	worker.RegisterActivity(codestarnotifications.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(codestarnotifications.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.codestarnotifications."})
-
-	worker.RegisterActivity(cognitoidentity.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cognitoidentity.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cognitoidentity."})
-
-	worker.RegisterActivity(cognitoidentityprovider.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cognitoidentityprovider.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cognitoidentityprovider."})
-
-	worker.RegisterActivity(cognitosync.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(cognitosync.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.cognitosync."})
-
-	worker.RegisterActivity(comprehend.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(comprehend.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.comprehend."})
-
-	worker.RegisterActivity(comprehendmedical.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(comprehendmedical.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.comprehendmedical."})
-
-	worker.RegisterActivity(computeoptimizer.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(computeoptimizer.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.computeoptimizer."})
-
-	worker.RegisterActivity(configservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(configservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.configservice."})
-
-	worker.RegisterActivity(connect.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(connect.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.connect."})
-
-	worker.RegisterActivity(connectparticipant.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(connectparticipant.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.connectparticipant."})
-
-	worker.RegisterActivity(costandusagereportservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(costandusagereportservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.costandusagereportservice."})
-
-	worker.RegisterActivity(costexplorer.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(costexplorer.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.costexplorer."})
-
-	worker.RegisterActivity(databasemigrationservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(databasemigrationservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.databasemigrationservice."})
-
-	worker.RegisterActivity(dataexchange.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(dataexchange.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.dataexchange."})
-
-	worker.RegisterActivity(datapipeline.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(datapipeline.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.datapipeline."})
-
-	worker.RegisterActivity(datasync.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(datasync.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.datasync."})
-
-	worker.RegisterActivity(dax.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(dax.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.dax."})
-
-	worker.RegisterActivity(detective.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(detective.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.detective."})
-
-	worker.RegisterActivity(devicefarm.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(devicefarm.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.devicefarm."})
-
-	worker.RegisterActivity(directconnect.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(directconnect.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.directconnect."})
-
-	worker.RegisterActivity(directoryservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(directoryservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.directoryservice."})
-
-	worker.RegisterActivity(dlm.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(dlm.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.dlm."})
-
-	worker.RegisterActivity(docdb.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(docdb.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.docdb."})
-
-	worker.RegisterActivity(dynamodb.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(dynamodb.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.dynamodb."})
-
-	worker.RegisterActivity(dynamodbstreams.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(dynamodbstreams.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.dynamodbstreams."})
-
-	worker.RegisterActivity(ebs.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ebs.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ebs."})
-
-	worker.RegisterActivity(ec2.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ec2.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ec2."})
-
-	worker.RegisterActivity(ec2instanceconnect.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ec2instanceconnect.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ec2instanceconnect."})
-
-	worker.RegisterActivity(ecr.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ecr.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ecr."})
-
-	worker.RegisterActivity(ecs.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ecs.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ecs."})
-
-	worker.RegisterActivity(efs.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(efs.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.efs."})
-
-	worker.RegisterActivity(eks.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(eks.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.eks."})
-
-	worker.RegisterActivity(elasticache.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(elasticache.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.elasticache."})
-
-	worker.RegisterActivity(elasticbeanstalk.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(elasticbeanstalk.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.elasticbeanstalk."})
-
-	worker.RegisterActivity(elasticinference.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(elasticinference.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.elasticinference."})
-
-	worker.RegisterActivity(elasticsearchservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(elasticsearchservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.elasticsearchservice."})
-
-	worker.RegisterActivity(elastictranscoder.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(elastictranscoder.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.elastictranscoder."})
-
-	worker.RegisterActivity(elb.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(elb.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.elb."})
-
-	worker.RegisterActivity(elbv2.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(elbv2.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.elbv2."})
-
-	worker.RegisterActivity(emr.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(emr.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.emr."})
-
-	worker.RegisterActivity(eventbridge.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(eventbridge.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.eventbridge."})
-
-	worker.RegisterActivity(firehose.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(firehose.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.firehose."})
-
-	worker.RegisterActivity(fms.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(fms.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.fms."})
-
-	worker.RegisterActivity(forecastqueryservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(forecastqueryservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.forecastqueryservice."})
-
-	worker.RegisterActivity(forecastservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(forecastservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.forecastservice."})
-
-	worker.RegisterActivity(frauddetector.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(frauddetector.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.frauddetector."})
-
-	worker.RegisterActivity(fsx.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(fsx.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.fsx."})
-
-	worker.RegisterActivity(gamelift.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(gamelift.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.gamelift."})
-
-	worker.RegisterActivity(glacier.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(glacier.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.glacier."})
-
-	worker.RegisterActivity(globalaccelerator.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(globalaccelerator.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.globalaccelerator."})
-
-	worker.RegisterActivity(glue.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(glue.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.glue."})
-
-	worker.RegisterActivity(greengrass.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(greengrass.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.greengrass."})
-
-	worker.RegisterActivity(groundstation.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(groundstation.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.groundstation."})
-
-	worker.RegisterActivity(guardduty.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(guardduty.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.guardduty."})
-
-	worker.RegisterActivity(health.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(health.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.health."})
-
-	worker.RegisterActivity(honeycode.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(honeycode.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.honeycode."})
-
-	worker.RegisterActivity(iam.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iam.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iam."})
-
-	worker.RegisterActivity(identitystore.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(identitystore.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.identitystore."})
-
-	worker.RegisterActivity(imagebuilder.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(imagebuilder.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.imagebuilder."})
-
-	worker.RegisterActivity(inspector.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(inspector.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.inspector."})
-
-	worker.RegisterActivity(iot.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iot.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iot."})
-
-	worker.RegisterActivity(iot1clickdevicesservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iot1clickdevicesservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iot1clickdevicesservice."})
-
-	worker.RegisterActivity(iot1clickprojects.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iot1clickprojects.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iot1clickprojects."})
-
-	worker.RegisterActivity(iotanalytics.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iotanalytics.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iotanalytics."})
-
-	worker.RegisterActivity(iotdataplane.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iotdataplane.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iotdataplane."})
-
-	worker.RegisterActivity(iotevents.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iotevents.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iotevents."})
-
-	worker.RegisterActivity(ioteventsdata.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ioteventsdata.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ioteventsdata."})
-
-	worker.RegisterActivity(iotjobsdataplane.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iotjobsdataplane.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iotjobsdataplane."})
-
-	worker.RegisterActivity(iotsecuretunneling.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iotsecuretunneling.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iotsecuretunneling."})
-
-	worker.RegisterActivity(iotsitewise.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iotsitewise.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iotsitewise."})
-
-	worker.RegisterActivity(iotthingsgraph.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(iotthingsgraph.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.iotthingsgraph."})
-
-	worker.RegisterActivity(ivs.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ivs.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ivs."})
-
-	worker.RegisterActivity(kafka.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kafka.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kafka."})
-
-	worker.RegisterActivity(kendra.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kendra.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kendra."})
-
-	worker.RegisterActivity(kinesis.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kinesis.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kinesis."})
-
-	worker.RegisterActivity(kinesisanalytics.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kinesisanalytics.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kinesisanalytics."})
-
-	worker.RegisterActivity(kinesisanalyticsv2.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kinesisanalyticsv2.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kinesisanalyticsv2."})
-
-	worker.RegisterActivity(kinesisvideo.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kinesisvideo.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kinesisvideo."})
-
-	worker.RegisterActivity(kinesisvideoarchivedmedia.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kinesisvideoarchivedmedia.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kinesisvideoarchivedmedia."})
-
-	worker.RegisterActivity(kinesisvideomedia.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kinesisvideomedia.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kinesisvideomedia."})
-
-	worker.RegisterActivity(kinesisvideosignalingchannels.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kinesisvideosignalingchannels.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kinesisvideosignalingchannels."})
-
-	worker.RegisterActivity(kms.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(kms.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.kms."})
-
-	worker.RegisterActivity(lakeformation.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(lakeformation.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.lakeformation."})
-
-	worker.RegisterActivity(lambda.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(lambda.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.lambda."})
-
-	worker.RegisterActivity(lexmodelbuildingservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(lexmodelbuildingservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.lexmodelbuildingservice."})
-
-	worker.RegisterActivity(lexruntimeservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(lexruntimeservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.lexruntimeservice."})
-
-	worker.RegisterActivity(licensemanager.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(licensemanager.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.licensemanager."})
-
-	worker.RegisterActivity(lightsail.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(lightsail.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.lightsail."})
-
-	worker.RegisterActivity(machinelearning.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(machinelearning.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.machinelearning."})
-
-	worker.RegisterActivity(macie.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(macie.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.macie."})
-
-	worker.RegisterActivity(macie2.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(macie2.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.macie2."})
-
-	worker.RegisterActivity(managedblockchain.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(managedblockchain.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.managedblockchain."})
-
-	worker.RegisterActivity(marketplacecatalog.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(marketplacecatalog.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.marketplacecatalog."})
-
-	worker.RegisterActivity(marketplacecommerceanalytics.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(marketplacecommerceanalytics.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.marketplacecommerceanalytics."})
-
-	worker.RegisterActivity(marketplaceentitlementservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(marketplaceentitlementservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.marketplaceentitlementservice."})
-
-	worker.RegisterActivity(marketplacemetering.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(marketplacemetering.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.marketplacemetering."})
-
-	worker.RegisterActivity(mediaconnect.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mediaconnect.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mediaconnect."})
-
-	worker.RegisterActivity(mediaconvert.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mediaconvert.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mediaconvert."})
-
-	worker.RegisterActivity(medialive.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(medialive.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.medialive."})
-
-	worker.RegisterActivity(mediapackage.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mediapackage.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mediapackage."})
-
-	worker.RegisterActivity(mediapackagevod.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mediapackagevod.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mediapackagevod."})
-
-	worker.RegisterActivity(mediastore.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mediastore.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mediastore."})
-
-	worker.RegisterActivity(mediastoredata.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mediastoredata.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mediastoredata."})
-
-	worker.RegisterActivity(mediatailor.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mediatailor.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mediatailor."})
-
-	worker.RegisterActivity(migrationhub.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(migrationhub.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.migrationhub."})
-
-	worker.RegisterActivity(migrationhubconfig.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(migrationhubconfig.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.migrationhubconfig."})
-
-	worker.RegisterActivity(mobile.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mobile.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mobile."})
-
-	worker.RegisterActivity(mobileanalytics.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mobileanalytics.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mobileanalytics."})
-
-	worker.RegisterActivity(mq.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mq.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mq."})
-
-	worker.RegisterActivity(mturk.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(mturk.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.mturk."})
-
-	worker.RegisterActivity(neptune.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(neptune.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.neptune."})
-
-	worker.RegisterActivity(networkmanager.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(networkmanager.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.networkmanager."})
-
-	worker.RegisterActivity(opsworks.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(opsworks.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.opsworks."})
-
-	worker.RegisterActivity(opsworkscm.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(opsworkscm.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.opsworkscm."})
-
-	worker.RegisterActivity(organizations.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(organizations.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.organizations."})
-
-	worker.RegisterActivity(outposts.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(outposts.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.outposts."})
-
-	worker.RegisterActivity(personalize.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(personalize.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.personalize."})
-
-	worker.RegisterActivity(personalizeevents.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(personalizeevents.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.personalizeevents."})
-
-	worker.RegisterActivity(personalizeruntime.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(personalizeruntime.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.personalizeruntime."})
-
-	worker.RegisterActivity(pi.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(pi.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.pi."})
-
-	worker.RegisterActivity(pinpoint.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(pinpoint.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.pinpoint."})
-
-	worker.RegisterActivity(pinpointemail.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(pinpointemail.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.pinpointemail."})
-
-	worker.RegisterActivity(pinpointsmsvoice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(pinpointsmsvoice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.pinpointsmsvoice."})
-
-	worker.RegisterActivity(polly.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(polly.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.polly."})
-
-	worker.RegisterActivity(pricing.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(pricing.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.pricing."})
-
-	worker.RegisterActivity(qldb.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(qldb.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.qldb."})
-
-	worker.RegisterActivity(qldbsession.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(qldbsession.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.qldbsession."})
-
-	worker.RegisterActivity(quicksight.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(quicksight.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.quicksight."})
-
-	worker.RegisterActivity(ram.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ram.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ram."})
-
-	worker.RegisterActivity(rds.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(rds.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.rds."})
-
-	worker.RegisterActivity(rdsdataservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(rdsdataservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.rdsdataservice."})
-
-	worker.RegisterActivity(redshift.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(redshift.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.redshift."})
-
-	worker.RegisterActivity(redshiftdataapiservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(redshiftdataapiservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.redshiftdataapiservice."})
-
-	worker.RegisterActivity(rekognition.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(rekognition.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.rekognition."})
-
-	worker.RegisterActivity(resourcegroups.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(resourcegroups.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.resourcegroups."})
-
-	worker.RegisterActivity(resourcegroupstaggingapi.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(resourcegroupstaggingapi.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.resourcegroupstaggingapi."})
-
-	worker.RegisterActivity(robomaker.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(robomaker.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.robomaker."})
-
-	worker.RegisterActivity(route53.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(route53.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.route53."})
-
-	worker.RegisterActivity(route53domains.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(route53domains.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.route53domains."})
-
-	worker.RegisterActivity(route53resolver.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(route53resolver.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.route53resolver."})
-
-	worker.RegisterActivity(s3.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(s3.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.s3."})
-
-	worker.RegisterActivity(s3control.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(s3control.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.s3control."})
-
-	worker.RegisterActivity(s3outposts.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(s3outposts.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.s3outposts."})
-
-	worker.RegisterActivity(sagemaker.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sagemaker.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sagemaker."})
-
-	worker.RegisterActivity(sagemakerruntime.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sagemakerruntime.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sagemakerruntime."})
-
-	worker.RegisterActivity(savingsplans.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(savingsplans.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.savingsplans."})
-
-	worker.RegisterActivity(schemas.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(schemas.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.schemas."})
-
-	worker.RegisterActivity(secretsmanager.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(secretsmanager.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.secretsmanager."})
-
-	worker.RegisterActivity(securityhub.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(securityhub.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.securityhub."})
-
-	worker.RegisterActivity(serverlessapplicationrepository.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(serverlessapplicationrepository.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.serverlessapplicationrepository."})
-
-	worker.RegisterActivity(servicecatalog.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(servicecatalog.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.servicecatalog."})
-
-	worker.RegisterActivity(servicediscovery.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(servicediscovery.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.servicediscovery."})
-
-	worker.RegisterActivity(servicequotas.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(servicequotas.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.servicequotas."})
-
-	worker.RegisterActivity(ses.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ses.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ses."})
-
-	worker.RegisterActivity(sesv2.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sesv2.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sesv2."})
-
-	worker.RegisterActivity(sfn.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sfn.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sfn."})
-
-	worker.RegisterActivity(shield.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(shield.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.shield."})
-
-	worker.RegisterActivity(signer.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(signer.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.signer."})
-
-	worker.RegisterActivity(simpledb.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(simpledb.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.simpledb."})
-
-	worker.RegisterActivity(sms.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sms.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sms."})
-
-	worker.RegisterActivity(snowball.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(snowball.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.snowball."})
-
-	worker.RegisterActivity(sns.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sns.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sns."})
-
-	worker.RegisterActivity(sqs.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sqs.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sqs."})
-
-	worker.RegisterActivity(ssm.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ssm.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ssm."})
-
-	worker.RegisterActivity(sso.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sso.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sso."})
-
-	worker.RegisterActivity(ssoadmin.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ssoadmin.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ssoadmin."})
-
-	worker.RegisterActivity(ssooidc.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(ssooidc.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.ssooidc."})
-
-	worker.RegisterActivity(storagegateway.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(storagegateway.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.storagegateway."})
-
-	worker.RegisterActivity(sts.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(sts.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.sts."})
-
-	worker.RegisterActivity(support.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(support.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.support."})
-
-	worker.RegisterActivity(swf.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(swf.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.swf."})
-
-	worker.RegisterActivity(synthetics.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(synthetics.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.synthetics."})
-
-	worker.RegisterActivity(textract.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(textract.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.textract."})
-
-	worker.RegisterActivity(timestreamquery.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(timestreamquery.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.timestreamquery."})
-
-	worker.RegisterActivity(timestreamwrite.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(timestreamwrite.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.timestreamwrite."})
-
-	worker.RegisterActivity(transcribeservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(transcribeservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.transcribeservice."})
-
-	worker.RegisterActivity(transcribestreamingservice.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(transcribestreamingservice.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.transcribestreamingservice."})
-
-	worker.RegisterActivity(transfer.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(transfer.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.transfer."})
-
-	worker.RegisterActivity(translate.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(translate.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.translate."})
-
-	worker.RegisterActivity(waf.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(waf.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.waf."})
-
-	worker.RegisterActivity(wafregional.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(wafregional.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.wafregional."})
-
-	worker.RegisterActivity(wafv2.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(wafv2.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.wafv2."})
-
-	worker.RegisterActivity(workdocs.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(workdocs.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.workdocs."})
-
-	worker.RegisterActivity(worklink.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(worklink.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.worklink."})
-
-	worker.RegisterActivity(workmail.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(workmail.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.workmail."})
-
-	worker.RegisterActivity(workmailmessageflow.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(workmailmessageflow.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.workmailmessageflow."})
-
-	worker.RegisterActivity(workspaces.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(workspaces.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.workspaces."})
-
-	worker.RegisterActivity(xray.NewActivities(sess, config...))
 	worker.RegisterActivityWithOptions(xray.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.xray."})
 }
 
 // RegisterAwsActivitiesWithSessionFactory registers AWS activities with a session factory that creates a session for every activity execution.
 // Use this registration method if your activities will receive credentials in the context for each activity execution.
 func RegisterAwsActivitiesWithSessionFactory(worker worker.Worker, sessionFactory SessionFactory) {
-
-	worker.RegisterActivity(accessanalyzer.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(accessanalyzer.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.accessanalyzer."})
-
-	worker.RegisterActivity(acm.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(acm.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.acm."})
-
-	worker.RegisterActivity(acmpca.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(acmpca.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.acmpca."})
-
-	worker.RegisterActivity(alexaforbusiness.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(alexaforbusiness.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.alexaforbusiness."})
-
-	worker.RegisterActivity(amplify.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(amplify.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.amplify."})
-
-	worker.RegisterActivity(apigateway.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(apigateway.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.apigateway."})
-
-	worker.RegisterActivity(apigatewaymanagementapi.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(apigatewaymanagementapi.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.apigatewaymanagementapi."})
-
-	worker.RegisterActivity(apigatewayv2.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(apigatewayv2.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.apigatewayv2."})
-
-	worker.RegisterActivity(appconfig.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(appconfig.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.appconfig."})
-
-	worker.RegisterActivity(appflow.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(appflow.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.appflow."})
-
-	worker.RegisterActivity(applicationautoscaling.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(applicationautoscaling.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.applicationautoscaling."})
-
-	worker.RegisterActivity(applicationdiscoveryservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(applicationdiscoveryservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.applicationdiscoveryservice."})
-
-	worker.RegisterActivity(applicationinsights.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(applicationinsights.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.applicationinsights."})
-
-	worker.RegisterActivity(appmesh.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(appmesh.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.appmesh."})
-
-	worker.RegisterActivity(appstream.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(appstream.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.appstream."})
-
-	worker.RegisterActivity(appsync.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(appsync.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.appsync."})
-
-	worker.RegisterActivity(athena.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(athena.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.athena."})
-
-	worker.RegisterActivity(augmentedairuntime.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(augmentedairuntime.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.augmentedairuntime."})
-
-	worker.RegisterActivity(autoscaling.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(autoscaling.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.autoscaling."})
-
-	worker.RegisterActivity(autoscalingplans.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(autoscalingplans.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.autoscalingplans."})
-
-	worker.RegisterActivity(backup.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(backup.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.backup."})
-
-	worker.RegisterActivity(batch.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(batch.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.batch."})
-
-	worker.RegisterActivity(braket.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(braket.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.braket."})
-
-	worker.RegisterActivity(budgets.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(budgets.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.budgets."})
-
-	worker.RegisterActivity(chime.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(chime.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.chime."})
-
-	worker.RegisterActivity(cloud9.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloud9.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloud9."})
-
-	worker.RegisterActivity(clouddirectory.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(clouddirectory.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.clouddirectory."})
-
-	worker.RegisterActivity(cloudformation.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudformation.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudformation."})
-
-	worker.RegisterActivity(cloudfront.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudfront.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudfront."})
-
-	worker.RegisterActivity(cloudhsm.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudhsm.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudhsm."})
-
-	worker.RegisterActivity(cloudhsmv2.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudhsmv2.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudhsmv2."})
-
-	worker.RegisterActivity(cloudsearch.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudsearch.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudsearch."})
-
-	worker.RegisterActivity(cloudsearchdomain.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudsearchdomain.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudsearchdomain."})
-
-	worker.RegisterActivity(cloudtrail.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudtrail.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudtrail."})
-
-	worker.RegisterActivity(cloudwatch.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudwatch.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudwatch."})
-
-	worker.RegisterActivity(cloudwatchevents.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudwatchevents.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudwatchevents."})
-
-	worker.RegisterActivity(cloudwatchlogs.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cloudwatchlogs.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cloudwatchlogs."})
-
-	worker.RegisterActivity(codeartifact.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codeartifact.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codeartifact."})
-
-	worker.RegisterActivity(codebuild.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codebuild.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codebuild."})
-
-	worker.RegisterActivity(codecommit.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codecommit.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codecommit."})
-
-	worker.RegisterActivity(codedeploy.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codedeploy.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codedeploy."})
-
-	worker.RegisterActivity(codeguruprofiler.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codeguruprofiler.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codeguruprofiler."})
-
-	worker.RegisterActivity(codegurureviewer.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codegurureviewer.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codegurureviewer."})
-
-	worker.RegisterActivity(codepipeline.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codepipeline.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codepipeline."})
-
-	worker.RegisterActivity(codestar.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codestar.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codestar."})
-
-	worker.RegisterActivity(codestarconnections.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codestarconnections.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codestarconnections."})
-
-	worker.RegisterActivity(codestarnotifications.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(codestarnotifications.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.codestarnotifications."})
-
-	worker.RegisterActivity(cognitoidentity.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cognitoidentity.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cognitoidentity."})
-
-	worker.RegisterActivity(cognitoidentityprovider.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cognitoidentityprovider.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cognitoidentityprovider."})
-
-	worker.RegisterActivity(cognitosync.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(cognitosync.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.cognitosync."})
-
-	worker.RegisterActivity(comprehend.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(comprehend.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.comprehend."})
-
-	worker.RegisterActivity(comprehendmedical.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(comprehendmedical.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.comprehendmedical."})
-
-	worker.RegisterActivity(computeoptimizer.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(computeoptimizer.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.computeoptimizer."})
-
-	worker.RegisterActivity(configservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(configservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.configservice."})
-
-	worker.RegisterActivity(connect.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(connect.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.connect."})
-
-	worker.RegisterActivity(connectparticipant.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(connectparticipant.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.connectparticipant."})
-
-	worker.RegisterActivity(costandusagereportservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(costandusagereportservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.costandusagereportservice."})
-
-	worker.RegisterActivity(costexplorer.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(costexplorer.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.costexplorer."})
-
-	worker.RegisterActivity(databasemigrationservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(databasemigrationservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.databasemigrationservice."})
-
-	worker.RegisterActivity(dataexchange.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(dataexchange.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.dataexchange."})
-
-	worker.RegisterActivity(datapipeline.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(datapipeline.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.datapipeline."})
-
-	worker.RegisterActivity(datasync.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(datasync.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.datasync."})
-
-	worker.RegisterActivity(dax.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(dax.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.dax."})
-
-	worker.RegisterActivity(detective.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(detective.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.detective."})
-
-	worker.RegisterActivity(devicefarm.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(devicefarm.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.devicefarm."})
-
-	worker.RegisterActivity(directconnect.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(directconnect.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.directconnect."})
-
-	worker.RegisterActivity(directoryservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(directoryservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.directoryservice."})
-
-	worker.RegisterActivity(dlm.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(dlm.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.dlm."})
-
-	worker.RegisterActivity(docdb.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(docdb.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.docdb."})
-
-	worker.RegisterActivity(dynamodb.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(dynamodb.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.dynamodb."})
-
-	worker.RegisterActivity(dynamodbstreams.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(dynamodbstreams.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.dynamodbstreams."})
-
-	worker.RegisterActivity(ebs.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ebs.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ebs."})
-
-	worker.RegisterActivity(ec2.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ec2.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ec2."})
-
-	worker.RegisterActivity(ec2instanceconnect.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ec2instanceconnect.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ec2instanceconnect."})
-
-	worker.RegisterActivity(ecr.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ecr.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ecr."})
-
-	worker.RegisterActivity(ecs.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ecs.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ecs."})
-
-	worker.RegisterActivity(efs.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(efs.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.efs."})
-
-	worker.RegisterActivity(eks.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(eks.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.eks."})
-
-	worker.RegisterActivity(elasticache.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(elasticache.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.elasticache."})
-
-	worker.RegisterActivity(elasticbeanstalk.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(elasticbeanstalk.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.elasticbeanstalk."})
-
-	worker.RegisterActivity(elasticinference.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(elasticinference.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.elasticinference."})
-
-	worker.RegisterActivity(elasticsearchservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(elasticsearchservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.elasticsearchservice."})
-
-	worker.RegisterActivity(elastictranscoder.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(elastictranscoder.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.elastictranscoder."})
-
-	worker.RegisterActivity(elb.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(elb.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.elb."})
-
-	worker.RegisterActivity(elbv2.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(elbv2.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.elbv2."})
-
-	worker.RegisterActivity(emr.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(emr.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.emr."})
-
-	worker.RegisterActivity(eventbridge.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(eventbridge.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.eventbridge."})
-
-	worker.RegisterActivity(firehose.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(firehose.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.firehose."})
-
-	worker.RegisterActivity(fms.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(fms.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.fms."})
-
-	worker.RegisterActivity(forecastqueryservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(forecastqueryservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.forecastqueryservice."})
-
-	worker.RegisterActivity(forecastservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(forecastservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.forecastservice."})
-
-	worker.RegisterActivity(frauddetector.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(frauddetector.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.frauddetector."})
-
-	worker.RegisterActivity(fsx.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(fsx.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.fsx."})
-
-	worker.RegisterActivity(gamelift.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(gamelift.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.gamelift."})
-
-	worker.RegisterActivity(glacier.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(glacier.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.glacier."})
-
-	worker.RegisterActivity(globalaccelerator.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(globalaccelerator.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.globalaccelerator."})
-
-	worker.RegisterActivity(glue.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(glue.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.glue."})
-
-	worker.RegisterActivity(greengrass.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(greengrass.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.greengrass."})
-
-	worker.RegisterActivity(groundstation.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(groundstation.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.groundstation."})
-
-	worker.RegisterActivity(guardduty.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(guardduty.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.guardduty."})
-
-	worker.RegisterActivity(health.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(health.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.health."})
-
-	worker.RegisterActivity(honeycode.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(honeycode.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.honeycode."})
-
-	worker.RegisterActivity(iam.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iam.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iam."})
-
-	worker.RegisterActivity(identitystore.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(identitystore.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.identitystore."})
-
-	worker.RegisterActivity(imagebuilder.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(imagebuilder.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.imagebuilder."})
-
-	worker.RegisterActivity(inspector.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(inspector.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.inspector."})
-
-	worker.RegisterActivity(iot.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iot.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iot."})
-
-	worker.RegisterActivity(iot1clickdevicesservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iot1clickdevicesservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iot1clickdevicesservice."})
-
-	worker.RegisterActivity(iot1clickprojects.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iot1clickprojects.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iot1clickprojects."})
-
-	worker.RegisterActivity(iotanalytics.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iotanalytics.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iotanalytics."})
-
-	worker.RegisterActivity(iotdataplane.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iotdataplane.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iotdataplane."})
-
-	worker.RegisterActivity(iotevents.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iotevents.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iotevents."})
-
-	worker.RegisterActivity(ioteventsdata.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ioteventsdata.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ioteventsdata."})
-
-	worker.RegisterActivity(iotjobsdataplane.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iotjobsdataplane.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iotjobsdataplane."})
-
-	worker.RegisterActivity(iotsecuretunneling.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iotsecuretunneling.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iotsecuretunneling."})
-
-	worker.RegisterActivity(iotsitewise.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iotsitewise.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iotsitewise."})
-
-	worker.RegisterActivity(iotthingsgraph.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(iotthingsgraph.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.iotthingsgraph."})
-
-	worker.RegisterActivity(ivs.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ivs.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ivs."})
-
-	worker.RegisterActivity(kafka.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kafka.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kafka."})
-
-	worker.RegisterActivity(kendra.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kendra.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kendra."})
-
-	worker.RegisterActivity(kinesis.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kinesis.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kinesis."})
-
-	worker.RegisterActivity(kinesisanalytics.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kinesisanalytics.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kinesisanalytics."})
-
-	worker.RegisterActivity(kinesisanalyticsv2.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kinesisanalyticsv2.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kinesisanalyticsv2."})
-
-	worker.RegisterActivity(kinesisvideo.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kinesisvideo.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kinesisvideo."})
-
-	worker.RegisterActivity(kinesisvideoarchivedmedia.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kinesisvideoarchivedmedia.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kinesisvideoarchivedmedia."})
-
-	worker.RegisterActivity(kinesisvideomedia.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kinesisvideomedia.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kinesisvideomedia."})
-
-	worker.RegisterActivity(kinesisvideosignalingchannels.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kinesisvideosignalingchannels.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kinesisvideosignalingchannels."})
-
-	worker.RegisterActivity(kms.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(kms.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.kms."})
-
-	worker.RegisterActivity(lakeformation.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(lakeformation.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.lakeformation."})
-
-	worker.RegisterActivity(lambda.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(lambda.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.lambda."})
-
-	worker.RegisterActivity(lexmodelbuildingservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(lexmodelbuildingservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.lexmodelbuildingservice."})
-
-	worker.RegisterActivity(lexruntimeservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(lexruntimeservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.lexruntimeservice."})
-
-	worker.RegisterActivity(licensemanager.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(licensemanager.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.licensemanager."})
-
-	worker.RegisterActivity(lightsail.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(lightsail.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.lightsail."})
-
-	worker.RegisterActivity(machinelearning.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(machinelearning.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.machinelearning."})
-
-	worker.RegisterActivity(macie.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(macie.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.macie."})
-
-	worker.RegisterActivity(macie2.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(macie2.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.macie2."})
-
-	worker.RegisterActivity(managedblockchain.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(managedblockchain.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.managedblockchain."})
-
-	worker.RegisterActivity(marketplacecatalog.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(marketplacecatalog.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.marketplacecatalog."})
-
-	worker.RegisterActivity(marketplacecommerceanalytics.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(marketplacecommerceanalytics.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.marketplacecommerceanalytics."})
-
-	worker.RegisterActivity(marketplaceentitlementservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(marketplaceentitlementservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.marketplaceentitlementservice."})
-
-	worker.RegisterActivity(marketplacemetering.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(marketplacemetering.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.marketplacemetering."})
-
-	worker.RegisterActivity(mediaconnect.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mediaconnect.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mediaconnect."})
-
-	worker.RegisterActivity(mediaconvert.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mediaconvert.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mediaconvert."})
-
-	worker.RegisterActivity(medialive.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(medialive.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.medialive."})
-
-	worker.RegisterActivity(mediapackage.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mediapackage.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mediapackage."})
-
-	worker.RegisterActivity(mediapackagevod.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mediapackagevod.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mediapackagevod."})
-
-	worker.RegisterActivity(mediastore.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mediastore.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mediastore."})
-
-	worker.RegisterActivity(mediastoredata.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mediastoredata.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mediastoredata."})
-
-	worker.RegisterActivity(mediatailor.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mediatailor.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mediatailor."})
-
-	worker.RegisterActivity(migrationhub.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(migrationhub.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.migrationhub."})
-
-	worker.RegisterActivity(migrationhubconfig.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(migrationhubconfig.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.migrationhubconfig."})
-
-	worker.RegisterActivity(mobile.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mobile.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mobile."})
-
-	worker.RegisterActivity(mobileanalytics.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mobileanalytics.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mobileanalytics."})
-
-	worker.RegisterActivity(mq.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mq.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mq."})
-
-	worker.RegisterActivity(mturk.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(mturk.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.mturk."})
-
-	worker.RegisterActivity(neptune.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(neptune.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.neptune."})
-
-	worker.RegisterActivity(networkmanager.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(networkmanager.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.networkmanager."})
-
-	worker.RegisterActivity(opsworks.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(opsworks.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.opsworks."})
-
-	worker.RegisterActivity(opsworkscm.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(opsworkscm.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.opsworkscm."})
-
-	worker.RegisterActivity(organizations.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(organizations.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.organizations."})
-
-	worker.RegisterActivity(outposts.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(outposts.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.outposts."})
-
-	worker.RegisterActivity(personalize.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(personalize.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.personalize."})
-
-	worker.RegisterActivity(personalizeevents.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(personalizeevents.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.personalizeevents."})
-
-	worker.RegisterActivity(personalizeruntime.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(personalizeruntime.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.personalizeruntime."})
-
-	worker.RegisterActivity(pi.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(pi.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.pi."})
-
-	worker.RegisterActivity(pinpoint.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(pinpoint.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.pinpoint."})
-
-	worker.RegisterActivity(pinpointemail.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(pinpointemail.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.pinpointemail."})
-
-	worker.RegisterActivity(pinpointsmsvoice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(pinpointsmsvoice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.pinpointsmsvoice."})
-
-	worker.RegisterActivity(polly.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(polly.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.polly."})
-
-	worker.RegisterActivity(pricing.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(pricing.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.pricing."})
-
-	worker.RegisterActivity(qldb.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(qldb.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.qldb."})
-
-	worker.RegisterActivity(qldbsession.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(qldbsession.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.qldbsession."})
-
-	worker.RegisterActivity(quicksight.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(quicksight.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.quicksight."})
-
-	worker.RegisterActivity(ram.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ram.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ram."})
-
-	worker.RegisterActivity(rds.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(rds.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.rds."})
-
-	worker.RegisterActivity(rdsdataservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(rdsdataservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.rdsdataservice."})
-
-	worker.RegisterActivity(redshift.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(redshift.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.redshift."})
-
-	worker.RegisterActivity(redshiftdataapiservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(redshiftdataapiservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.redshiftdataapiservice."})
-
-	worker.RegisterActivity(rekognition.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(rekognition.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.rekognition."})
-
-	worker.RegisterActivity(resourcegroups.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(resourcegroups.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.resourcegroups."})
-
-	worker.RegisterActivity(resourcegroupstaggingapi.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(resourcegroupstaggingapi.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.resourcegroupstaggingapi."})
-
-	worker.RegisterActivity(robomaker.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(robomaker.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.robomaker."})
-
-	worker.RegisterActivity(route53.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(route53.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.route53."})
-
-	worker.RegisterActivity(route53domains.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(route53domains.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.route53domains."})
-
-	worker.RegisterActivity(route53resolver.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(route53resolver.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.route53resolver."})
-
-	worker.RegisterActivity(s3.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(s3.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.s3."})
-
-	worker.RegisterActivity(s3control.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(s3control.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.s3control."})
-
-	worker.RegisterActivity(s3outposts.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(s3outposts.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.s3outposts."})
-
-	worker.RegisterActivity(sagemaker.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sagemaker.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sagemaker."})
-
-	worker.RegisterActivity(sagemakerruntime.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sagemakerruntime.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sagemakerruntime."})
-
-	worker.RegisterActivity(savingsplans.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(savingsplans.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.savingsplans."})
-
-	worker.RegisterActivity(schemas.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(schemas.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.schemas."})
-
-	worker.RegisterActivity(secretsmanager.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(secretsmanager.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.secretsmanager."})
-
-	worker.RegisterActivity(securityhub.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(securityhub.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.securityhub."})
-
-	worker.RegisterActivity(serverlessapplicationrepository.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(serverlessapplicationrepository.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.serverlessapplicationrepository."})
-
-	worker.RegisterActivity(servicecatalog.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(servicecatalog.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.servicecatalog."})
-
-	worker.RegisterActivity(servicediscovery.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(servicediscovery.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.servicediscovery."})
-
-	worker.RegisterActivity(servicequotas.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(servicequotas.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.servicequotas."})
-
-	worker.RegisterActivity(ses.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ses.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ses."})
-
-	worker.RegisterActivity(sesv2.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sesv2.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sesv2."})
-
-	worker.RegisterActivity(sfn.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sfn.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sfn."})
-
-	worker.RegisterActivity(shield.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(shield.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.shield."})
-
-	worker.RegisterActivity(signer.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(signer.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.signer."})
-
-	worker.RegisterActivity(simpledb.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(simpledb.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.simpledb."})
-
-	worker.RegisterActivity(sms.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sms.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sms."})
-
-	worker.RegisterActivity(snowball.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(snowball.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.snowball."})
-
-	worker.RegisterActivity(sns.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sns.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sns."})
-
-	worker.RegisterActivity(sqs.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sqs.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sqs."})
-
-	worker.RegisterActivity(ssm.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ssm.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ssm."})
-
-	worker.RegisterActivity(sso.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sso.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sso."})
-
-	worker.RegisterActivity(ssoadmin.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ssoadmin.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ssoadmin."})
-
-	worker.RegisterActivity(ssooidc.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(ssooidc.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.ssooidc."})
-
-	worker.RegisterActivity(storagegateway.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(storagegateway.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.storagegateway."})
-
-	worker.RegisterActivity(sts.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(sts.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.sts."})
-
-	worker.RegisterActivity(support.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(support.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.support."})
-
-	worker.RegisterActivity(swf.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(swf.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.swf."})
-
-	worker.RegisterActivity(synthetics.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(synthetics.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.synthetics."})
-
-	worker.RegisterActivity(textract.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(textract.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.textract."})
-
-	worker.RegisterActivity(timestreamquery.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(timestreamquery.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.timestreamquery."})
-
-	worker.RegisterActivity(timestreamwrite.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(timestreamwrite.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.timestreamwrite."})
-
-	worker.RegisterActivity(transcribeservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(transcribeservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.transcribeservice."})
-
-	worker.RegisterActivity(transcribestreamingservice.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(transcribestreamingservice.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.transcribestreamingservice."})
-
-	worker.RegisterActivity(transfer.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(transfer.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.transfer."})
-
-	worker.RegisterActivity(translate.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(translate.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.translate."})
-
-	worker.RegisterActivity(waf.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(waf.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.waf."})
-
-	worker.RegisterActivity(wafregional.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(wafregional.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.wafregional."})
-
-	worker.RegisterActivity(wafv2.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(wafv2.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.wafv2."})
-
-	worker.RegisterActivity(workdocs.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(workdocs.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.workdocs."})
-
-	worker.RegisterActivity(worklink.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(worklink.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.worklink."})
-
-	worker.RegisterActivity(workmail.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(workmail.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.workmail."})
-
-	worker.RegisterActivity(workmailmessageflow.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(workmailmessageflow.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.workmailmessageflow."})
-
-	worker.RegisterActivity(workspaces.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(workspaces.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.workspaces."})
-
-	worker.RegisterActivity(xray.NewActivitiesWithSessionFactory(sessionFactory))
 	worker.RegisterActivityWithOptions(xray.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.xray."})
 }
