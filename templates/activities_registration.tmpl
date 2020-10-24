@@ -29,8 +29,7 @@ type SessionFactory interface {
 func RegisterAwsActivities(worker worker.Worker, sess *session.Session, config ...*aws.Config) {
 {{- range $services }}
 {{- $name := .Name }}
-{{ $lowerName := .Name |ToLower }}
-	worker.RegisterActivity({{ $lowerName }}.NewActivities(sess, config...))
+{{- $lowerName := .Name |ToLower }}
 	worker.RegisterActivityWithOptions({{ $lowerName }}.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.{{.ID}}."})
 {{- end }}
 }
@@ -40,8 +39,7 @@ func RegisterAwsActivities(worker worker.Worker, sess *session.Session, config .
 func RegisterAwsActivitiesWithSessionFactory(worker worker.Worker, sessionFactory SessionFactory) {
 {{- range $services }}
 {{- $name := .Name }}
-{{ $lowerName := .Name |ToLower }}
-	worker.RegisterActivity({{ $lowerName }}.NewActivitiesWithSessionFactory(sessionFactory))
+{{- $lowerName := .Name |ToLower }}
 	worker.RegisterActivityWithOptions({{ $lowerName }}.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.{{.ID}}."})
 {{- end }}
 }
