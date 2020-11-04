@@ -31,7 +31,7 @@ to regenerate and compile the generated code.
 Templates that are used for code generation are located in
 [templates](templates) directory.
 They use Go [text/template](https://golang.org/pkg/text/template/) package. Each template is invoked with
-AWSSDKDefinition](internal/definitions.go) structure as a parameter. A template file must call `SetFileName`
+[AWSSDKDefinition](internal/definitions.go) structure as a parameter. A template file must call `SetFileName`
 function at the beginning to specify the output file name.
 It is allowed to call `SetFileName` multiple times to generate multiple files from the same template.
 
