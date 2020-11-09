@@ -16,133 +16,133 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchDeleteBuilds(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) (*codebuild.BatchDeleteBuildsOutput, error)
-	BatchDeleteBuildsAsync(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) *CodeBuildBatchDeleteBuildsFuture
+	BatchDeleteBuildsAsync(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) *BatchDeleteBuildsFuture
 
 	BatchGetBuildBatches(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) (*codebuild.BatchGetBuildBatchesOutput, error)
-	BatchGetBuildBatchesAsync(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) *CodeBuildBatchGetBuildBatchesFuture
+	BatchGetBuildBatchesAsync(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) *BatchGetBuildBatchesFuture
 
 	BatchGetBuilds(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) (*codebuild.BatchGetBuildsOutput, error)
-	BatchGetBuildsAsync(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) *CodeBuildBatchGetBuildsFuture
+	BatchGetBuildsAsync(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) *BatchGetBuildsFuture
 
 	BatchGetProjects(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) (*codebuild.BatchGetProjectsOutput, error)
-	BatchGetProjectsAsync(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) *CodeBuildBatchGetProjectsFuture
+	BatchGetProjectsAsync(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) *BatchGetProjectsFuture
 
 	BatchGetReportGroups(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) (*codebuild.BatchGetReportGroupsOutput, error)
-	BatchGetReportGroupsAsync(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) *CodeBuildBatchGetReportGroupsFuture
+	BatchGetReportGroupsAsync(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) *BatchGetReportGroupsFuture
 
 	BatchGetReports(ctx workflow.Context, input *codebuild.BatchGetReportsInput) (*codebuild.BatchGetReportsOutput, error)
-	BatchGetReportsAsync(ctx workflow.Context, input *codebuild.BatchGetReportsInput) *CodeBuildBatchGetReportsFuture
+	BatchGetReportsAsync(ctx workflow.Context, input *codebuild.BatchGetReportsInput) *BatchGetReportsFuture
 
 	CreateProject(ctx workflow.Context, input *codebuild.CreateProjectInput) (*codebuild.CreateProjectOutput, error)
-	CreateProjectAsync(ctx workflow.Context, input *codebuild.CreateProjectInput) *CodeBuildCreateProjectFuture
+	CreateProjectAsync(ctx workflow.Context, input *codebuild.CreateProjectInput) *CreateProjectFuture
 
 	CreateReportGroup(ctx workflow.Context, input *codebuild.CreateReportGroupInput) (*codebuild.CreateReportGroupOutput, error)
-	CreateReportGroupAsync(ctx workflow.Context, input *codebuild.CreateReportGroupInput) *CodeBuildCreateReportGroupFuture
+	CreateReportGroupAsync(ctx workflow.Context, input *codebuild.CreateReportGroupInput) *CreateReportGroupFuture
 
 	CreateWebhook(ctx workflow.Context, input *codebuild.CreateWebhookInput) (*codebuild.CreateWebhookOutput, error)
-	CreateWebhookAsync(ctx workflow.Context, input *codebuild.CreateWebhookInput) *CodeBuildCreateWebhookFuture
+	CreateWebhookAsync(ctx workflow.Context, input *codebuild.CreateWebhookInput) *CreateWebhookFuture
 
 	DeleteBuildBatch(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) (*codebuild.DeleteBuildBatchOutput, error)
-	DeleteBuildBatchAsync(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) *CodeBuildDeleteBuildBatchFuture
+	DeleteBuildBatchAsync(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) *DeleteBuildBatchFuture
 
 	DeleteProject(ctx workflow.Context, input *codebuild.DeleteProjectInput) (*codebuild.DeleteProjectOutput, error)
-	DeleteProjectAsync(ctx workflow.Context, input *codebuild.DeleteProjectInput) *CodeBuildDeleteProjectFuture
+	DeleteProjectAsync(ctx workflow.Context, input *codebuild.DeleteProjectInput) *DeleteProjectFuture
 
 	DeleteReport(ctx workflow.Context, input *codebuild.DeleteReportInput) (*codebuild.DeleteReportOutput, error)
-	DeleteReportAsync(ctx workflow.Context, input *codebuild.DeleteReportInput) *CodeBuildDeleteReportFuture
+	DeleteReportAsync(ctx workflow.Context, input *codebuild.DeleteReportInput) *DeleteReportFuture
 
 	DeleteReportGroup(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) (*codebuild.DeleteReportGroupOutput, error)
-	DeleteReportGroupAsync(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) *CodeBuildDeleteReportGroupFuture
+	DeleteReportGroupAsync(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) *DeleteReportGroupFuture
 
 	DeleteResourcePolicy(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) (*codebuild.DeleteResourcePolicyOutput, error)
-	DeleteResourcePolicyAsync(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) *CodeBuildDeleteResourcePolicyFuture
+	DeleteResourcePolicyAsync(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) *DeleteResourcePolicyFuture
 
 	DeleteSourceCredentials(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) (*codebuild.DeleteSourceCredentialsOutput, error)
-	DeleteSourceCredentialsAsync(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) *CodeBuildDeleteSourceCredentialsFuture
+	DeleteSourceCredentialsAsync(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) *DeleteSourceCredentialsFuture
 
 	DeleteWebhook(ctx workflow.Context, input *codebuild.DeleteWebhookInput) (*codebuild.DeleteWebhookOutput, error)
-	DeleteWebhookAsync(ctx workflow.Context, input *codebuild.DeleteWebhookInput) *CodeBuildDeleteWebhookFuture
+	DeleteWebhookAsync(ctx workflow.Context, input *codebuild.DeleteWebhookInput) *DeleteWebhookFuture
 
 	DescribeCodeCoverages(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) (*codebuild.DescribeCodeCoveragesOutput, error)
-	DescribeCodeCoveragesAsync(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) *CodeBuildDescribeCodeCoveragesFuture
+	DescribeCodeCoveragesAsync(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) *DescribeCodeCoveragesFuture
 
 	DescribeTestCases(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) (*codebuild.DescribeTestCasesOutput, error)
-	DescribeTestCasesAsync(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) *CodeBuildDescribeTestCasesFuture
+	DescribeTestCasesAsync(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) *DescribeTestCasesFuture
 
 	GetResourcePolicy(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) (*codebuild.GetResourcePolicyOutput, error)
-	GetResourcePolicyAsync(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) *CodeBuildGetResourcePolicyFuture
+	GetResourcePolicyAsync(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) *GetResourcePolicyFuture
 
 	ImportSourceCredentials(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) (*codebuild.ImportSourceCredentialsOutput, error)
-	ImportSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) *CodeBuildImportSourceCredentialsFuture
+	ImportSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) *ImportSourceCredentialsFuture
 
 	InvalidateProjectCache(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) (*codebuild.InvalidateProjectCacheOutput, error)
-	InvalidateProjectCacheAsync(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) *CodeBuildInvalidateProjectCacheFuture
+	InvalidateProjectCacheAsync(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) *InvalidateProjectCacheFuture
 
 	ListBuildBatches(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) (*codebuild.ListBuildBatchesOutput, error)
-	ListBuildBatchesAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) *CodeBuildListBuildBatchesFuture
+	ListBuildBatchesAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) *ListBuildBatchesFuture
 
 	ListBuildBatchesForProject(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) (*codebuild.ListBuildBatchesForProjectOutput, error)
-	ListBuildBatchesForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) *CodeBuildListBuildBatchesForProjectFuture
+	ListBuildBatchesForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) *ListBuildBatchesForProjectFuture
 
 	ListBuilds(ctx workflow.Context, input *codebuild.ListBuildsInput) (*codebuild.ListBuildsOutput, error)
-	ListBuildsAsync(ctx workflow.Context, input *codebuild.ListBuildsInput) *CodeBuildListBuildsFuture
+	ListBuildsAsync(ctx workflow.Context, input *codebuild.ListBuildsInput) *ListBuildsFuture
 
 	ListBuildsForProject(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) (*codebuild.ListBuildsForProjectOutput, error)
-	ListBuildsForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) *CodeBuildListBuildsForProjectFuture
+	ListBuildsForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) *ListBuildsForProjectFuture
 
 	ListCuratedEnvironmentImages(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) (*codebuild.ListCuratedEnvironmentImagesOutput, error)
-	ListCuratedEnvironmentImagesAsync(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) *CodeBuildListCuratedEnvironmentImagesFuture
+	ListCuratedEnvironmentImagesAsync(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) *ListCuratedEnvironmentImagesFuture
 
 	ListProjects(ctx workflow.Context, input *codebuild.ListProjectsInput) (*codebuild.ListProjectsOutput, error)
-	ListProjectsAsync(ctx workflow.Context, input *codebuild.ListProjectsInput) *CodeBuildListProjectsFuture
+	ListProjectsAsync(ctx workflow.Context, input *codebuild.ListProjectsInput) *ListProjectsFuture
 
 	ListReportGroups(ctx workflow.Context, input *codebuild.ListReportGroupsInput) (*codebuild.ListReportGroupsOutput, error)
-	ListReportGroupsAsync(ctx workflow.Context, input *codebuild.ListReportGroupsInput) *CodeBuildListReportGroupsFuture
+	ListReportGroupsAsync(ctx workflow.Context, input *codebuild.ListReportGroupsInput) *ListReportGroupsFuture
 
 	ListReports(ctx workflow.Context, input *codebuild.ListReportsInput) (*codebuild.ListReportsOutput, error)
-	ListReportsAsync(ctx workflow.Context, input *codebuild.ListReportsInput) *CodeBuildListReportsFuture
+	ListReportsAsync(ctx workflow.Context, input *codebuild.ListReportsInput) *ListReportsFuture
 
 	ListReportsForReportGroup(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) (*codebuild.ListReportsForReportGroupOutput, error)
-	ListReportsForReportGroupAsync(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) *CodeBuildListReportsForReportGroupFuture
+	ListReportsForReportGroupAsync(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) *ListReportsForReportGroupFuture
 
 	ListSharedProjects(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) (*codebuild.ListSharedProjectsOutput, error)
-	ListSharedProjectsAsync(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) *CodeBuildListSharedProjectsFuture
+	ListSharedProjectsAsync(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) *ListSharedProjectsFuture
 
 	ListSharedReportGroups(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) (*codebuild.ListSharedReportGroupsOutput, error)
-	ListSharedReportGroupsAsync(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) *CodeBuildListSharedReportGroupsFuture
+	ListSharedReportGroupsAsync(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) *ListSharedReportGroupsFuture
 
 	ListSourceCredentials(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) (*codebuild.ListSourceCredentialsOutput, error)
-	ListSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) *CodeBuildListSourceCredentialsFuture
+	ListSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) *ListSourceCredentialsFuture
 
 	PutResourcePolicy(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) (*codebuild.PutResourcePolicyOutput, error)
-	PutResourcePolicyAsync(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) *CodeBuildPutResourcePolicyFuture
+	PutResourcePolicyAsync(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) *PutResourcePolicyFuture
 
 	RetryBuild(ctx workflow.Context, input *codebuild.RetryBuildInput) (*codebuild.RetryBuildOutput, error)
-	RetryBuildAsync(ctx workflow.Context, input *codebuild.RetryBuildInput) *CodeBuildRetryBuildFuture
+	RetryBuildAsync(ctx workflow.Context, input *codebuild.RetryBuildInput) *RetryBuildFuture
 
 	RetryBuildBatch(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) (*codebuild.RetryBuildBatchOutput, error)
-	RetryBuildBatchAsync(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) *CodeBuildRetryBuildBatchFuture
+	RetryBuildBatchAsync(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) *RetryBuildBatchFuture
 
 	StartBuild(ctx workflow.Context, input *codebuild.StartBuildInput) (*codebuild.StartBuildOutput, error)
-	StartBuildAsync(ctx workflow.Context, input *codebuild.StartBuildInput) *CodeBuildStartBuildFuture
+	StartBuildAsync(ctx workflow.Context, input *codebuild.StartBuildInput) *StartBuildFuture
 
 	StartBuildBatch(ctx workflow.Context, input *codebuild.StartBuildBatchInput) (*codebuild.StartBuildBatchOutput, error)
-	StartBuildBatchAsync(ctx workflow.Context, input *codebuild.StartBuildBatchInput) *CodeBuildStartBuildBatchFuture
+	StartBuildBatchAsync(ctx workflow.Context, input *codebuild.StartBuildBatchInput) *StartBuildBatchFuture
 
 	StopBuild(ctx workflow.Context, input *codebuild.StopBuildInput) (*codebuild.StopBuildOutput, error)
-	StopBuildAsync(ctx workflow.Context, input *codebuild.StopBuildInput) *CodeBuildStopBuildFuture
+	StopBuildAsync(ctx workflow.Context, input *codebuild.StopBuildInput) *StopBuildFuture
 
 	StopBuildBatch(ctx workflow.Context, input *codebuild.StopBuildBatchInput) (*codebuild.StopBuildBatchOutput, error)
-	StopBuildBatchAsync(ctx workflow.Context, input *codebuild.StopBuildBatchInput) *CodeBuildStopBuildBatchFuture
+	StopBuildBatchAsync(ctx workflow.Context, input *codebuild.StopBuildBatchInput) *StopBuildBatchFuture
 
 	UpdateProject(ctx workflow.Context, input *codebuild.UpdateProjectInput) (*codebuild.UpdateProjectOutput, error)
-	UpdateProjectAsync(ctx workflow.Context, input *codebuild.UpdateProjectInput) *CodeBuildUpdateProjectFuture
+	UpdateProjectAsync(ctx workflow.Context, input *codebuild.UpdateProjectInput) *UpdateProjectFuture
 
 	UpdateReportGroup(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) (*codebuild.UpdateReportGroupOutput, error)
-	UpdateReportGroupAsync(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) *CodeBuildUpdateReportGroupFuture
+	UpdateReportGroupAsync(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) *UpdateReportGroupFuture
 
 	UpdateWebhook(ctx workflow.Context, input *codebuild.UpdateWebhookInput) (*codebuild.UpdateWebhookOutput, error)
-	UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *CodeBuildUpdateWebhookFuture
+	UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *UpdateWebhookFuture
 }
 
 func NewClient() Client {

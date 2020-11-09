@@ -16,12 +16,12 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type TranscribeStreamingServiceStartStreamTranscriptionFuture struct {
+type StartStreamTranscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranscribeStreamingServiceStartStreamTranscriptionFuture) Get(ctx workflow.Context) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
+func (r *StartStreamTranscriptionFuture) Get(ctx workflow.Context) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
 	var output transcribestreamingservice.StartStreamTranscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -33,7 +33,7 @@ func (a *stub) StartStreamTranscription(ctx workflow.Context, input *transcribes
 	return &output, err
 }
 
-func (a *stub) StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribeStreamingServiceStartStreamTranscriptionFuture {
+func (a *stub) StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *StartStreamTranscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transcribestreamingservice.StartStreamTranscription", input)
-	return &TranscribeStreamingServiceStartStreamTranscriptionFuture{Future: future}
+	return &StartStreamTranscriptionFuture{Future: future}
 }

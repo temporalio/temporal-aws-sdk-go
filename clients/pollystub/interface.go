@@ -16,31 +16,31 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DeleteLexicon(ctx workflow.Context, input *polly.DeleteLexiconInput) (*polly.DeleteLexiconOutput, error)
-	DeleteLexiconAsync(ctx workflow.Context, input *polly.DeleteLexiconInput) *PollyDeleteLexiconFuture
+	DeleteLexiconAsync(ctx workflow.Context, input *polly.DeleteLexiconInput) *DeleteLexiconFuture
 
 	DescribeVoices(ctx workflow.Context, input *polly.DescribeVoicesInput) (*polly.DescribeVoicesOutput, error)
-	DescribeVoicesAsync(ctx workflow.Context, input *polly.DescribeVoicesInput) *PollyDescribeVoicesFuture
+	DescribeVoicesAsync(ctx workflow.Context, input *polly.DescribeVoicesInput) *DescribeVoicesFuture
 
 	GetLexicon(ctx workflow.Context, input *polly.GetLexiconInput) (*polly.GetLexiconOutput, error)
-	GetLexiconAsync(ctx workflow.Context, input *polly.GetLexiconInput) *PollyGetLexiconFuture
+	GetLexiconAsync(ctx workflow.Context, input *polly.GetLexiconInput) *GetLexiconFuture
 
 	GetSpeechSynthesisTask(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) (*polly.GetSpeechSynthesisTaskOutput, error)
-	GetSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) *PollyGetSpeechSynthesisTaskFuture
+	GetSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) *GetSpeechSynthesisTaskFuture
 
 	ListLexicons(ctx workflow.Context, input *polly.ListLexiconsInput) (*polly.ListLexiconsOutput, error)
-	ListLexiconsAsync(ctx workflow.Context, input *polly.ListLexiconsInput) *PollyListLexiconsFuture
+	ListLexiconsAsync(ctx workflow.Context, input *polly.ListLexiconsInput) *ListLexiconsFuture
 
 	ListSpeechSynthesisTasks(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) (*polly.ListSpeechSynthesisTasksOutput, error)
-	ListSpeechSynthesisTasksAsync(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) *PollyListSpeechSynthesisTasksFuture
+	ListSpeechSynthesisTasksAsync(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) *ListSpeechSynthesisTasksFuture
 
 	PutLexicon(ctx workflow.Context, input *polly.PutLexiconInput) (*polly.PutLexiconOutput, error)
-	PutLexiconAsync(ctx workflow.Context, input *polly.PutLexiconInput) *PollyPutLexiconFuture
+	PutLexiconAsync(ctx workflow.Context, input *polly.PutLexiconInput) *PutLexiconFuture
 
 	StartSpeechSynthesisTask(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) (*polly.StartSpeechSynthesisTaskOutput, error)
-	StartSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) *PollyStartSpeechSynthesisTaskFuture
+	StartSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) *StartSpeechSynthesisTaskFuture
 
 	SynthesizeSpeech(ctx workflow.Context, input *polly.SynthesizeSpeechInput) (*polly.SynthesizeSpeechOutput, error)
-	SynthesizeSpeechAsync(ctx workflow.Context, input *polly.SynthesizeSpeechInput) *PollySynthesizeSpeechFuture
+	SynthesizeSpeechAsync(ctx workflow.Context, input *polly.SynthesizeSpeechInput) *SynthesizeSpeechFuture
 }
 
 func NewClient() Client {

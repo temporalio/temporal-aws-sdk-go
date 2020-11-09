@@ -16,169 +16,169 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateAssets(ctx workflow.Context, input *iotsitewise.AssociateAssetsInput) (*iotsitewise.AssociateAssetsOutput, error)
-	AssociateAssetsAsync(ctx workflow.Context, input *iotsitewise.AssociateAssetsInput) *IoTSiteWiseAssociateAssetsFuture
+	AssociateAssetsAsync(ctx workflow.Context, input *iotsitewise.AssociateAssetsInput) *AssociateAssetsFuture
 
 	BatchAssociateProjectAssets(ctx workflow.Context, input *iotsitewise.BatchAssociateProjectAssetsInput) (*iotsitewise.BatchAssociateProjectAssetsOutput, error)
-	BatchAssociateProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.BatchAssociateProjectAssetsInput) *IoTSiteWiseBatchAssociateProjectAssetsFuture
+	BatchAssociateProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.BatchAssociateProjectAssetsInput) *BatchAssociateProjectAssetsFuture
 
 	BatchDisassociateProjectAssets(ctx workflow.Context, input *iotsitewise.BatchDisassociateProjectAssetsInput) (*iotsitewise.BatchDisassociateProjectAssetsOutput, error)
-	BatchDisassociateProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.BatchDisassociateProjectAssetsInput) *IoTSiteWiseBatchDisassociateProjectAssetsFuture
+	BatchDisassociateProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.BatchDisassociateProjectAssetsInput) *BatchDisassociateProjectAssetsFuture
 
 	BatchPutAssetPropertyValue(ctx workflow.Context, input *iotsitewise.BatchPutAssetPropertyValueInput) (*iotsitewise.BatchPutAssetPropertyValueOutput, error)
-	BatchPutAssetPropertyValueAsync(ctx workflow.Context, input *iotsitewise.BatchPutAssetPropertyValueInput) *IoTSiteWiseBatchPutAssetPropertyValueFuture
+	BatchPutAssetPropertyValueAsync(ctx workflow.Context, input *iotsitewise.BatchPutAssetPropertyValueInput) *BatchPutAssetPropertyValueFuture
 
 	CreateAccessPolicy(ctx workflow.Context, input *iotsitewise.CreateAccessPolicyInput) (*iotsitewise.CreateAccessPolicyOutput, error)
-	CreateAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.CreateAccessPolicyInput) *IoTSiteWiseCreateAccessPolicyFuture
+	CreateAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.CreateAccessPolicyInput) *CreateAccessPolicyFuture
 
 	CreateAsset(ctx workflow.Context, input *iotsitewise.CreateAssetInput) (*iotsitewise.CreateAssetOutput, error)
-	CreateAssetAsync(ctx workflow.Context, input *iotsitewise.CreateAssetInput) *IoTSiteWiseCreateAssetFuture
+	CreateAssetAsync(ctx workflow.Context, input *iotsitewise.CreateAssetInput) *CreateAssetFuture
 
 	CreateAssetModel(ctx workflow.Context, input *iotsitewise.CreateAssetModelInput) (*iotsitewise.CreateAssetModelOutput, error)
-	CreateAssetModelAsync(ctx workflow.Context, input *iotsitewise.CreateAssetModelInput) *IoTSiteWiseCreateAssetModelFuture
+	CreateAssetModelAsync(ctx workflow.Context, input *iotsitewise.CreateAssetModelInput) *CreateAssetModelFuture
 
 	CreateDashboard(ctx workflow.Context, input *iotsitewise.CreateDashboardInput) (*iotsitewise.CreateDashboardOutput, error)
-	CreateDashboardAsync(ctx workflow.Context, input *iotsitewise.CreateDashboardInput) *IoTSiteWiseCreateDashboardFuture
+	CreateDashboardAsync(ctx workflow.Context, input *iotsitewise.CreateDashboardInput) *CreateDashboardFuture
 
 	CreateGateway(ctx workflow.Context, input *iotsitewise.CreateGatewayInput) (*iotsitewise.CreateGatewayOutput, error)
-	CreateGatewayAsync(ctx workflow.Context, input *iotsitewise.CreateGatewayInput) *IoTSiteWiseCreateGatewayFuture
+	CreateGatewayAsync(ctx workflow.Context, input *iotsitewise.CreateGatewayInput) *CreateGatewayFuture
 
 	CreatePortal(ctx workflow.Context, input *iotsitewise.CreatePortalInput) (*iotsitewise.CreatePortalOutput, error)
-	CreatePortalAsync(ctx workflow.Context, input *iotsitewise.CreatePortalInput) *IoTSiteWiseCreatePortalFuture
+	CreatePortalAsync(ctx workflow.Context, input *iotsitewise.CreatePortalInput) *CreatePortalFuture
 
 	CreatePresignedPortalUrl(ctx workflow.Context, input *iotsitewise.CreatePresignedPortalUrlInput) (*iotsitewise.CreatePresignedPortalUrlOutput, error)
-	CreatePresignedPortalUrlAsync(ctx workflow.Context, input *iotsitewise.CreatePresignedPortalUrlInput) *IoTSiteWiseCreatePresignedPortalUrlFuture
+	CreatePresignedPortalUrlAsync(ctx workflow.Context, input *iotsitewise.CreatePresignedPortalUrlInput) *CreatePresignedPortalUrlFuture
 
 	CreateProject(ctx workflow.Context, input *iotsitewise.CreateProjectInput) (*iotsitewise.CreateProjectOutput, error)
-	CreateProjectAsync(ctx workflow.Context, input *iotsitewise.CreateProjectInput) *IoTSiteWiseCreateProjectFuture
+	CreateProjectAsync(ctx workflow.Context, input *iotsitewise.CreateProjectInput) *CreateProjectFuture
 
 	DeleteAccessPolicy(ctx workflow.Context, input *iotsitewise.DeleteAccessPolicyInput) (*iotsitewise.DeleteAccessPolicyOutput, error)
-	DeleteAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.DeleteAccessPolicyInput) *IoTSiteWiseDeleteAccessPolicyFuture
+	DeleteAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.DeleteAccessPolicyInput) *DeleteAccessPolicyFuture
 
 	DeleteAsset(ctx workflow.Context, input *iotsitewise.DeleteAssetInput) (*iotsitewise.DeleteAssetOutput, error)
-	DeleteAssetAsync(ctx workflow.Context, input *iotsitewise.DeleteAssetInput) *IoTSiteWiseDeleteAssetFuture
+	DeleteAssetAsync(ctx workflow.Context, input *iotsitewise.DeleteAssetInput) *DeleteAssetFuture
 
 	DeleteAssetModel(ctx workflow.Context, input *iotsitewise.DeleteAssetModelInput) (*iotsitewise.DeleteAssetModelOutput, error)
-	DeleteAssetModelAsync(ctx workflow.Context, input *iotsitewise.DeleteAssetModelInput) *IoTSiteWiseDeleteAssetModelFuture
+	DeleteAssetModelAsync(ctx workflow.Context, input *iotsitewise.DeleteAssetModelInput) *DeleteAssetModelFuture
 
 	DeleteDashboard(ctx workflow.Context, input *iotsitewise.DeleteDashboardInput) (*iotsitewise.DeleteDashboardOutput, error)
-	DeleteDashboardAsync(ctx workflow.Context, input *iotsitewise.DeleteDashboardInput) *IoTSiteWiseDeleteDashboardFuture
+	DeleteDashboardAsync(ctx workflow.Context, input *iotsitewise.DeleteDashboardInput) *DeleteDashboardFuture
 
 	DeleteGateway(ctx workflow.Context, input *iotsitewise.DeleteGatewayInput) (*iotsitewise.DeleteGatewayOutput, error)
-	DeleteGatewayAsync(ctx workflow.Context, input *iotsitewise.DeleteGatewayInput) *IoTSiteWiseDeleteGatewayFuture
+	DeleteGatewayAsync(ctx workflow.Context, input *iotsitewise.DeleteGatewayInput) *DeleteGatewayFuture
 
 	DeletePortal(ctx workflow.Context, input *iotsitewise.DeletePortalInput) (*iotsitewise.DeletePortalOutput, error)
-	DeletePortalAsync(ctx workflow.Context, input *iotsitewise.DeletePortalInput) *IoTSiteWiseDeletePortalFuture
+	DeletePortalAsync(ctx workflow.Context, input *iotsitewise.DeletePortalInput) *DeletePortalFuture
 
 	DeleteProject(ctx workflow.Context, input *iotsitewise.DeleteProjectInput) (*iotsitewise.DeleteProjectOutput, error)
-	DeleteProjectAsync(ctx workflow.Context, input *iotsitewise.DeleteProjectInput) *IoTSiteWiseDeleteProjectFuture
+	DeleteProjectAsync(ctx workflow.Context, input *iotsitewise.DeleteProjectInput) *DeleteProjectFuture
 
 	DescribeAccessPolicy(ctx workflow.Context, input *iotsitewise.DescribeAccessPolicyInput) (*iotsitewise.DescribeAccessPolicyOutput, error)
-	DescribeAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.DescribeAccessPolicyInput) *IoTSiteWiseDescribeAccessPolicyFuture
+	DescribeAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.DescribeAccessPolicyInput) *DescribeAccessPolicyFuture
 
 	DescribeAsset(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) (*iotsitewise.DescribeAssetOutput, error)
-	DescribeAssetAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) *IoTSiteWiseDescribeAssetFuture
+	DescribeAssetAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) *DescribeAssetFuture
 
 	DescribeAssetModel(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) (*iotsitewise.DescribeAssetModelOutput, error)
-	DescribeAssetModelAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) *IoTSiteWiseDescribeAssetModelFuture
+	DescribeAssetModelAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) *DescribeAssetModelFuture
 
 	DescribeAssetProperty(ctx workflow.Context, input *iotsitewise.DescribeAssetPropertyInput) (*iotsitewise.DescribeAssetPropertyOutput, error)
-	DescribeAssetPropertyAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetPropertyInput) *IoTSiteWiseDescribeAssetPropertyFuture
+	DescribeAssetPropertyAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetPropertyInput) *DescribeAssetPropertyFuture
 
 	DescribeDashboard(ctx workflow.Context, input *iotsitewise.DescribeDashboardInput) (*iotsitewise.DescribeDashboardOutput, error)
-	DescribeDashboardAsync(ctx workflow.Context, input *iotsitewise.DescribeDashboardInput) *IoTSiteWiseDescribeDashboardFuture
+	DescribeDashboardAsync(ctx workflow.Context, input *iotsitewise.DescribeDashboardInput) *DescribeDashboardFuture
 
 	DescribeGateway(ctx workflow.Context, input *iotsitewise.DescribeGatewayInput) (*iotsitewise.DescribeGatewayOutput, error)
-	DescribeGatewayAsync(ctx workflow.Context, input *iotsitewise.DescribeGatewayInput) *IoTSiteWiseDescribeGatewayFuture
+	DescribeGatewayAsync(ctx workflow.Context, input *iotsitewise.DescribeGatewayInput) *DescribeGatewayFuture
 
 	DescribeGatewayCapabilityConfiguration(ctx workflow.Context, input *iotsitewise.DescribeGatewayCapabilityConfigurationInput) (*iotsitewise.DescribeGatewayCapabilityConfigurationOutput, error)
-	DescribeGatewayCapabilityConfigurationAsync(ctx workflow.Context, input *iotsitewise.DescribeGatewayCapabilityConfigurationInput) *IoTSiteWiseDescribeGatewayCapabilityConfigurationFuture
+	DescribeGatewayCapabilityConfigurationAsync(ctx workflow.Context, input *iotsitewise.DescribeGatewayCapabilityConfigurationInput) *DescribeGatewayCapabilityConfigurationFuture
 
 	DescribeLoggingOptions(ctx workflow.Context, input *iotsitewise.DescribeLoggingOptionsInput) (*iotsitewise.DescribeLoggingOptionsOutput, error)
-	DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotsitewise.DescribeLoggingOptionsInput) *IoTSiteWiseDescribeLoggingOptionsFuture
+	DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotsitewise.DescribeLoggingOptionsInput) *DescribeLoggingOptionsFuture
 
 	DescribePortal(ctx workflow.Context, input *iotsitewise.DescribePortalInput) (*iotsitewise.DescribePortalOutput, error)
-	DescribePortalAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) *IoTSiteWiseDescribePortalFuture
+	DescribePortalAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) *DescribePortalFuture
 
 	DescribeProject(ctx workflow.Context, input *iotsitewise.DescribeProjectInput) (*iotsitewise.DescribeProjectOutput, error)
-	DescribeProjectAsync(ctx workflow.Context, input *iotsitewise.DescribeProjectInput) *IoTSiteWiseDescribeProjectFuture
+	DescribeProjectAsync(ctx workflow.Context, input *iotsitewise.DescribeProjectInput) *DescribeProjectFuture
 
 	DisassociateAssets(ctx workflow.Context, input *iotsitewise.DisassociateAssetsInput) (*iotsitewise.DisassociateAssetsOutput, error)
-	DisassociateAssetsAsync(ctx workflow.Context, input *iotsitewise.DisassociateAssetsInput) *IoTSiteWiseDisassociateAssetsFuture
+	DisassociateAssetsAsync(ctx workflow.Context, input *iotsitewise.DisassociateAssetsInput) *DisassociateAssetsFuture
 
 	GetAssetPropertyAggregates(ctx workflow.Context, input *iotsitewise.GetAssetPropertyAggregatesInput) (*iotsitewise.GetAssetPropertyAggregatesOutput, error)
-	GetAssetPropertyAggregatesAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyAggregatesInput) *IoTSiteWiseGetAssetPropertyAggregatesFuture
+	GetAssetPropertyAggregatesAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyAggregatesInput) *GetAssetPropertyAggregatesFuture
 
 	GetAssetPropertyValue(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueInput) (*iotsitewise.GetAssetPropertyValueOutput, error)
-	GetAssetPropertyValueAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueInput) *IoTSiteWiseGetAssetPropertyValueFuture
+	GetAssetPropertyValueAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueInput) *GetAssetPropertyValueFuture
 
 	GetAssetPropertyValueHistory(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueHistoryInput) (*iotsitewise.GetAssetPropertyValueHistoryOutput, error)
-	GetAssetPropertyValueHistoryAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueHistoryInput) *IoTSiteWiseGetAssetPropertyValueHistoryFuture
+	GetAssetPropertyValueHistoryAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueHistoryInput) *GetAssetPropertyValueHistoryFuture
 
 	ListAccessPolicies(ctx workflow.Context, input *iotsitewise.ListAccessPoliciesInput) (*iotsitewise.ListAccessPoliciesOutput, error)
-	ListAccessPoliciesAsync(ctx workflow.Context, input *iotsitewise.ListAccessPoliciesInput) *IoTSiteWiseListAccessPoliciesFuture
+	ListAccessPoliciesAsync(ctx workflow.Context, input *iotsitewise.ListAccessPoliciesInput) *ListAccessPoliciesFuture
 
 	ListAssetModels(ctx workflow.Context, input *iotsitewise.ListAssetModelsInput) (*iotsitewise.ListAssetModelsOutput, error)
-	ListAssetModelsAsync(ctx workflow.Context, input *iotsitewise.ListAssetModelsInput) *IoTSiteWiseListAssetModelsFuture
+	ListAssetModelsAsync(ctx workflow.Context, input *iotsitewise.ListAssetModelsInput) *ListAssetModelsFuture
 
 	ListAssets(ctx workflow.Context, input *iotsitewise.ListAssetsInput) (*iotsitewise.ListAssetsOutput, error)
-	ListAssetsAsync(ctx workflow.Context, input *iotsitewise.ListAssetsInput) *IoTSiteWiseListAssetsFuture
+	ListAssetsAsync(ctx workflow.Context, input *iotsitewise.ListAssetsInput) *ListAssetsFuture
 
 	ListAssociatedAssets(ctx workflow.Context, input *iotsitewise.ListAssociatedAssetsInput) (*iotsitewise.ListAssociatedAssetsOutput, error)
-	ListAssociatedAssetsAsync(ctx workflow.Context, input *iotsitewise.ListAssociatedAssetsInput) *IoTSiteWiseListAssociatedAssetsFuture
+	ListAssociatedAssetsAsync(ctx workflow.Context, input *iotsitewise.ListAssociatedAssetsInput) *ListAssociatedAssetsFuture
 
 	ListDashboards(ctx workflow.Context, input *iotsitewise.ListDashboardsInput) (*iotsitewise.ListDashboardsOutput, error)
-	ListDashboardsAsync(ctx workflow.Context, input *iotsitewise.ListDashboardsInput) *IoTSiteWiseListDashboardsFuture
+	ListDashboardsAsync(ctx workflow.Context, input *iotsitewise.ListDashboardsInput) *ListDashboardsFuture
 
 	ListGateways(ctx workflow.Context, input *iotsitewise.ListGatewaysInput) (*iotsitewise.ListGatewaysOutput, error)
-	ListGatewaysAsync(ctx workflow.Context, input *iotsitewise.ListGatewaysInput) *IoTSiteWiseListGatewaysFuture
+	ListGatewaysAsync(ctx workflow.Context, input *iotsitewise.ListGatewaysInput) *ListGatewaysFuture
 
 	ListPortals(ctx workflow.Context, input *iotsitewise.ListPortalsInput) (*iotsitewise.ListPortalsOutput, error)
-	ListPortalsAsync(ctx workflow.Context, input *iotsitewise.ListPortalsInput) *IoTSiteWiseListPortalsFuture
+	ListPortalsAsync(ctx workflow.Context, input *iotsitewise.ListPortalsInput) *ListPortalsFuture
 
 	ListProjectAssets(ctx workflow.Context, input *iotsitewise.ListProjectAssetsInput) (*iotsitewise.ListProjectAssetsOutput, error)
-	ListProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.ListProjectAssetsInput) *IoTSiteWiseListProjectAssetsFuture
+	ListProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.ListProjectAssetsInput) *ListProjectAssetsFuture
 
 	ListProjects(ctx workflow.Context, input *iotsitewise.ListProjectsInput) (*iotsitewise.ListProjectsOutput, error)
-	ListProjectsAsync(ctx workflow.Context, input *iotsitewise.ListProjectsInput) *IoTSiteWiseListProjectsFuture
+	ListProjectsAsync(ctx workflow.Context, input *iotsitewise.ListProjectsInput) *ListProjectsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iotsitewise.ListTagsForResourceInput) (*iotsitewise.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iotsitewise.ListTagsForResourceInput) *IoTSiteWiseListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *iotsitewise.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	PutLoggingOptions(ctx workflow.Context, input *iotsitewise.PutLoggingOptionsInput) (*iotsitewise.PutLoggingOptionsOutput, error)
-	PutLoggingOptionsAsync(ctx workflow.Context, input *iotsitewise.PutLoggingOptionsInput) *IoTSiteWisePutLoggingOptionsFuture
+	PutLoggingOptionsAsync(ctx workflow.Context, input *iotsitewise.PutLoggingOptionsInput) *PutLoggingOptionsFuture
 
 	TagResource(ctx workflow.Context, input *iotsitewise.TagResourceInput) (*iotsitewise.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iotsitewise.TagResourceInput) *IoTSiteWiseTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *iotsitewise.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *iotsitewise.UntagResourceInput) (*iotsitewise.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iotsitewise.UntagResourceInput) *IoTSiteWiseUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *iotsitewise.UntagResourceInput) *UntagResourceFuture
 
 	UpdateAccessPolicy(ctx workflow.Context, input *iotsitewise.UpdateAccessPolicyInput) (*iotsitewise.UpdateAccessPolicyOutput, error)
-	UpdateAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.UpdateAccessPolicyInput) *IoTSiteWiseUpdateAccessPolicyFuture
+	UpdateAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.UpdateAccessPolicyInput) *UpdateAccessPolicyFuture
 
 	UpdateAsset(ctx workflow.Context, input *iotsitewise.UpdateAssetInput) (*iotsitewise.UpdateAssetOutput, error)
-	UpdateAssetAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetInput) *IoTSiteWiseUpdateAssetFuture
+	UpdateAssetAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetInput) *UpdateAssetFuture
 
 	UpdateAssetModel(ctx workflow.Context, input *iotsitewise.UpdateAssetModelInput) (*iotsitewise.UpdateAssetModelOutput, error)
-	UpdateAssetModelAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetModelInput) *IoTSiteWiseUpdateAssetModelFuture
+	UpdateAssetModelAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetModelInput) *UpdateAssetModelFuture
 
 	UpdateAssetProperty(ctx workflow.Context, input *iotsitewise.UpdateAssetPropertyInput) (*iotsitewise.UpdateAssetPropertyOutput, error)
-	UpdateAssetPropertyAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetPropertyInput) *IoTSiteWiseUpdateAssetPropertyFuture
+	UpdateAssetPropertyAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetPropertyInput) *UpdateAssetPropertyFuture
 
 	UpdateDashboard(ctx workflow.Context, input *iotsitewise.UpdateDashboardInput) (*iotsitewise.UpdateDashboardOutput, error)
-	UpdateDashboardAsync(ctx workflow.Context, input *iotsitewise.UpdateDashboardInput) *IoTSiteWiseUpdateDashboardFuture
+	UpdateDashboardAsync(ctx workflow.Context, input *iotsitewise.UpdateDashboardInput) *UpdateDashboardFuture
 
 	UpdateGateway(ctx workflow.Context, input *iotsitewise.UpdateGatewayInput) (*iotsitewise.UpdateGatewayOutput, error)
-	UpdateGatewayAsync(ctx workflow.Context, input *iotsitewise.UpdateGatewayInput) *IoTSiteWiseUpdateGatewayFuture
+	UpdateGatewayAsync(ctx workflow.Context, input *iotsitewise.UpdateGatewayInput) *UpdateGatewayFuture
 
 	UpdateGatewayCapabilityConfiguration(ctx workflow.Context, input *iotsitewise.UpdateGatewayCapabilityConfigurationInput) (*iotsitewise.UpdateGatewayCapabilityConfigurationOutput, error)
-	UpdateGatewayCapabilityConfigurationAsync(ctx workflow.Context, input *iotsitewise.UpdateGatewayCapabilityConfigurationInput) *IoTSiteWiseUpdateGatewayCapabilityConfigurationFuture
+	UpdateGatewayCapabilityConfigurationAsync(ctx workflow.Context, input *iotsitewise.UpdateGatewayCapabilityConfigurationInput) *UpdateGatewayCapabilityConfigurationFuture
 
 	UpdatePortal(ctx workflow.Context, input *iotsitewise.UpdatePortalInput) (*iotsitewise.UpdatePortalOutput, error)
-	UpdatePortalAsync(ctx workflow.Context, input *iotsitewise.UpdatePortalInput) *IoTSiteWiseUpdatePortalFuture
+	UpdatePortalAsync(ctx workflow.Context, input *iotsitewise.UpdatePortalInput) *UpdatePortalFuture
 
 	UpdateProject(ctx workflow.Context, input *iotsitewise.UpdateProjectInput) (*iotsitewise.UpdateProjectOutput, error)
-	UpdateProjectAsync(ctx workflow.Context, input *iotsitewise.UpdateProjectInput) *IoTSiteWiseUpdateProjectFuture
+	UpdateProjectAsync(ctx workflow.Context, input *iotsitewise.UpdateProjectInput) *UpdateProjectFuture
 
 	WaitUntilAssetActive(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error
 	WaitUntilAssetActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) *clients.VoidFuture

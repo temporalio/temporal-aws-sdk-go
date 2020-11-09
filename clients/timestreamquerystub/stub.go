@@ -16,34 +16,34 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type TimestreamQueryCancelQueryFuture struct {
+type CancelQueryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamQueryCancelQueryFuture) Get(ctx workflow.Context) (*timestreamquery.CancelQueryOutput, error) {
+func (r *CancelQueryFuture) Get(ctx workflow.Context) (*timestreamquery.CancelQueryOutput, error) {
 	var output timestreamquery.CancelQueryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamQueryDescribeEndpointsFuture struct {
+type DescribeEndpointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamQueryDescribeEndpointsFuture) Get(ctx workflow.Context) (*timestreamquery.DescribeEndpointsOutput, error) {
+func (r *DescribeEndpointsFuture) Get(ctx workflow.Context) (*timestreamquery.DescribeEndpointsOutput, error) {
 	var output timestreamquery.DescribeEndpointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamQueryQueryFuture struct {
+type QueryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamQueryQueryFuture) Get(ctx workflow.Context) (*timestreamquery.QueryOutput, error) {
+func (r *QueryFuture) Get(ctx workflow.Context) (*timestreamquery.QueryOutput, error) {
 	var output timestreamquery.QueryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -55,9 +55,9 @@ func (a *stub) CancelQuery(ctx workflow.Context, input *timestreamquery.CancelQu
 	return &output, err
 }
 
-func (a *stub) CancelQueryAsync(ctx workflow.Context, input *timestreamquery.CancelQueryInput) *TimestreamQueryCancelQueryFuture {
+func (a *stub) CancelQueryAsync(ctx workflow.Context, input *timestreamquery.CancelQueryInput) *CancelQueryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamquery.CancelQuery", input)
-	return &TimestreamQueryCancelQueryFuture{Future: future}
+	return &CancelQueryFuture{Future: future}
 }
 
 func (a *stub) DescribeEndpoints(ctx workflow.Context, input *timestreamquery.DescribeEndpointsInput) (*timestreamquery.DescribeEndpointsOutput, error) {
@@ -66,9 +66,9 @@ func (a *stub) DescribeEndpoints(ctx workflow.Context, input *timestreamquery.De
 	return &output, err
 }
 
-func (a *stub) DescribeEndpointsAsync(ctx workflow.Context, input *timestreamquery.DescribeEndpointsInput) *TimestreamQueryDescribeEndpointsFuture {
+func (a *stub) DescribeEndpointsAsync(ctx workflow.Context, input *timestreamquery.DescribeEndpointsInput) *DescribeEndpointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamquery.DescribeEndpoints", input)
-	return &TimestreamQueryDescribeEndpointsFuture{Future: future}
+	return &DescribeEndpointsFuture{Future: future}
 }
 
 func (a *stub) Query(ctx workflow.Context, input *timestreamquery.QueryInput) (*timestreamquery.QueryOutput, error) {
@@ -77,7 +77,7 @@ func (a *stub) Query(ctx workflow.Context, input *timestreamquery.QueryInput) (*
 	return &output, err
 }
 
-func (a *stub) QueryAsync(ctx workflow.Context, input *timestreamquery.QueryInput) *TimestreamQueryQueryFuture {
+func (a *stub) QueryAsync(ctx workflow.Context, input *timestreamquery.QueryInput) *QueryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamquery.Query", input)
-	return &TimestreamQueryQueryFuture{Future: future}
+	return &QueryFuture{Future: future}
 }

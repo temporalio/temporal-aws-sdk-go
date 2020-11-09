@@ -16,10 +16,10 @@ var _ clients.VoidFuture
 
 type Client interface {
 	GetIceServerConfig(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error)
-	GetIceServerConfigAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) *KinesisVideoSignalingChannelsGetIceServerConfigFuture
+	GetIceServerConfigAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) *GetIceServerConfigFuture
 
 	SendAlexaOfferToMaster(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error)
-	SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *KinesisVideoSignalingChannelsSendAlexaOfferToMasterFuture
+	SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *SendAlexaOfferToMasterFuture
 }
 
 func NewClient() Client {

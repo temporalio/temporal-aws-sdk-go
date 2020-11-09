@@ -16,188 +16,188 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CognitoSyncBulkPublishFuture struct {
+type BulkPublishFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncBulkPublishFuture) Get(ctx workflow.Context) (*cognitosync.BulkPublishOutput, error) {
+func (r *BulkPublishFuture) Get(ctx workflow.Context) (*cognitosync.BulkPublishOutput, error) {
 	var output cognitosync.BulkPublishOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncDeleteDatasetFuture struct {
+type DeleteDatasetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncDeleteDatasetFuture) Get(ctx workflow.Context) (*cognitosync.DeleteDatasetOutput, error) {
+func (r *DeleteDatasetFuture) Get(ctx workflow.Context) (*cognitosync.DeleteDatasetOutput, error) {
 	var output cognitosync.DeleteDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncDescribeDatasetFuture struct {
+type DescribeDatasetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncDescribeDatasetFuture) Get(ctx workflow.Context) (*cognitosync.DescribeDatasetOutput, error) {
+func (r *DescribeDatasetFuture) Get(ctx workflow.Context) (*cognitosync.DescribeDatasetOutput, error) {
 	var output cognitosync.DescribeDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncDescribeIdentityPoolUsageFuture struct {
+type DescribeIdentityPoolUsageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncDescribeIdentityPoolUsageFuture) Get(ctx workflow.Context) (*cognitosync.DescribeIdentityPoolUsageOutput, error) {
+func (r *DescribeIdentityPoolUsageFuture) Get(ctx workflow.Context) (*cognitosync.DescribeIdentityPoolUsageOutput, error) {
 	var output cognitosync.DescribeIdentityPoolUsageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncDescribeIdentityUsageFuture struct {
+type DescribeIdentityUsageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncDescribeIdentityUsageFuture) Get(ctx workflow.Context) (*cognitosync.DescribeIdentityUsageOutput, error) {
+func (r *DescribeIdentityUsageFuture) Get(ctx workflow.Context) (*cognitosync.DescribeIdentityUsageOutput, error) {
 	var output cognitosync.DescribeIdentityUsageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncGetBulkPublishDetailsFuture struct {
+type GetBulkPublishDetailsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncGetBulkPublishDetailsFuture) Get(ctx workflow.Context) (*cognitosync.GetBulkPublishDetailsOutput, error) {
+func (r *GetBulkPublishDetailsFuture) Get(ctx workflow.Context) (*cognitosync.GetBulkPublishDetailsOutput, error) {
 	var output cognitosync.GetBulkPublishDetailsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncGetCognitoEventsFuture struct {
+type GetCognitoEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncGetCognitoEventsFuture) Get(ctx workflow.Context) (*cognitosync.GetCognitoEventsOutput, error) {
+func (r *GetCognitoEventsFuture) Get(ctx workflow.Context) (*cognitosync.GetCognitoEventsOutput, error) {
 	var output cognitosync.GetCognitoEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncGetIdentityPoolConfigurationFuture struct {
+type GetIdentityPoolConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncGetIdentityPoolConfigurationFuture) Get(ctx workflow.Context) (*cognitosync.GetIdentityPoolConfigurationOutput, error) {
+func (r *GetIdentityPoolConfigurationFuture) Get(ctx workflow.Context) (*cognitosync.GetIdentityPoolConfigurationOutput, error) {
 	var output cognitosync.GetIdentityPoolConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncListDatasetsFuture struct {
+type ListDatasetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncListDatasetsFuture) Get(ctx workflow.Context) (*cognitosync.ListDatasetsOutput, error) {
+func (r *ListDatasetsFuture) Get(ctx workflow.Context) (*cognitosync.ListDatasetsOutput, error) {
 	var output cognitosync.ListDatasetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncListIdentityPoolUsageFuture struct {
+type ListIdentityPoolUsageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncListIdentityPoolUsageFuture) Get(ctx workflow.Context) (*cognitosync.ListIdentityPoolUsageOutput, error) {
+func (r *ListIdentityPoolUsageFuture) Get(ctx workflow.Context) (*cognitosync.ListIdentityPoolUsageOutput, error) {
 	var output cognitosync.ListIdentityPoolUsageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncListRecordsFuture struct {
+type ListRecordsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncListRecordsFuture) Get(ctx workflow.Context) (*cognitosync.ListRecordsOutput, error) {
+func (r *ListRecordsFuture) Get(ctx workflow.Context) (*cognitosync.ListRecordsOutput, error) {
 	var output cognitosync.ListRecordsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncRegisterDeviceFuture struct {
+type RegisterDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncRegisterDeviceFuture) Get(ctx workflow.Context) (*cognitosync.RegisterDeviceOutput, error) {
+func (r *RegisterDeviceFuture) Get(ctx workflow.Context) (*cognitosync.RegisterDeviceOutput, error) {
 	var output cognitosync.RegisterDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncSetCognitoEventsFuture struct {
+type SetCognitoEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncSetCognitoEventsFuture) Get(ctx workflow.Context) (*cognitosync.SetCognitoEventsOutput, error) {
+func (r *SetCognitoEventsFuture) Get(ctx workflow.Context) (*cognitosync.SetCognitoEventsOutput, error) {
 	var output cognitosync.SetCognitoEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncSetIdentityPoolConfigurationFuture struct {
+type SetIdentityPoolConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncSetIdentityPoolConfigurationFuture) Get(ctx workflow.Context) (*cognitosync.SetIdentityPoolConfigurationOutput, error) {
+func (r *SetIdentityPoolConfigurationFuture) Get(ctx workflow.Context) (*cognitosync.SetIdentityPoolConfigurationOutput, error) {
 	var output cognitosync.SetIdentityPoolConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncSubscribeToDatasetFuture struct {
+type SubscribeToDatasetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncSubscribeToDatasetFuture) Get(ctx workflow.Context) (*cognitosync.SubscribeToDatasetOutput, error) {
+func (r *SubscribeToDatasetFuture) Get(ctx workflow.Context) (*cognitosync.SubscribeToDatasetOutput, error) {
 	var output cognitosync.SubscribeToDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncUnsubscribeFromDatasetFuture struct {
+type UnsubscribeFromDatasetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncUnsubscribeFromDatasetFuture) Get(ctx workflow.Context) (*cognitosync.UnsubscribeFromDatasetOutput, error) {
+func (r *UnsubscribeFromDatasetFuture) Get(ctx workflow.Context) (*cognitosync.UnsubscribeFromDatasetOutput, error) {
 	var output cognitosync.UnsubscribeFromDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoSyncUpdateRecordsFuture struct {
+type UpdateRecordsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoSyncUpdateRecordsFuture) Get(ctx workflow.Context) (*cognitosync.UpdateRecordsOutput, error) {
+func (r *UpdateRecordsFuture) Get(ctx workflow.Context) (*cognitosync.UpdateRecordsOutput, error) {
 	var output cognitosync.UpdateRecordsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -209,9 +209,9 @@ func (a *stub) BulkPublish(ctx workflow.Context, input *cognitosync.BulkPublishI
 	return &output, err
 }
 
-func (a *stub) BulkPublishAsync(ctx workflow.Context, input *cognitosync.BulkPublishInput) *CognitoSyncBulkPublishFuture {
+func (a *stub) BulkPublishAsync(ctx workflow.Context, input *cognitosync.BulkPublishInput) *BulkPublishFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.BulkPublish", input)
-	return &CognitoSyncBulkPublishFuture{Future: future}
+	return &BulkPublishFuture{Future: future}
 }
 
 func (a *stub) DeleteDataset(ctx workflow.Context, input *cognitosync.DeleteDatasetInput) (*cognitosync.DeleteDatasetOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) DeleteDataset(ctx workflow.Context, input *cognitosync.DeleteData
 	return &output, err
 }
 
-func (a *stub) DeleteDatasetAsync(ctx workflow.Context, input *cognitosync.DeleteDatasetInput) *CognitoSyncDeleteDatasetFuture {
+func (a *stub) DeleteDatasetAsync(ctx workflow.Context, input *cognitosync.DeleteDatasetInput) *DeleteDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.DeleteDataset", input)
-	return &CognitoSyncDeleteDatasetFuture{Future: future}
+	return &DeleteDatasetFuture{Future: future}
 }
 
 func (a *stub) DescribeDataset(ctx workflow.Context, input *cognitosync.DescribeDatasetInput) (*cognitosync.DescribeDatasetOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) DescribeDataset(ctx workflow.Context, input *cognitosync.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeDatasetAsync(ctx workflow.Context, input *cognitosync.DescribeDatasetInput) *CognitoSyncDescribeDatasetFuture {
+func (a *stub) DescribeDatasetAsync(ctx workflow.Context, input *cognitosync.DescribeDatasetInput) *DescribeDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.DescribeDataset", input)
-	return &CognitoSyncDescribeDatasetFuture{Future: future}
+	return &DescribeDatasetFuture{Future: future}
 }
 
 func (a *stub) DescribeIdentityPoolUsage(ctx workflow.Context, input *cognitosync.DescribeIdentityPoolUsageInput) (*cognitosync.DescribeIdentityPoolUsageOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) DescribeIdentityPoolUsage(ctx workflow.Context, input *cognitosyn
 	return &output, err
 }
 
-func (a *stub) DescribeIdentityPoolUsageAsync(ctx workflow.Context, input *cognitosync.DescribeIdentityPoolUsageInput) *CognitoSyncDescribeIdentityPoolUsageFuture {
+func (a *stub) DescribeIdentityPoolUsageAsync(ctx workflow.Context, input *cognitosync.DescribeIdentityPoolUsageInput) *DescribeIdentityPoolUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.DescribeIdentityPoolUsage", input)
-	return &CognitoSyncDescribeIdentityPoolUsageFuture{Future: future}
+	return &DescribeIdentityPoolUsageFuture{Future: future}
 }
 
 func (a *stub) DescribeIdentityUsage(ctx workflow.Context, input *cognitosync.DescribeIdentityUsageInput) (*cognitosync.DescribeIdentityUsageOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DescribeIdentityUsage(ctx workflow.Context, input *cognitosync.De
 	return &output, err
 }
 
-func (a *stub) DescribeIdentityUsageAsync(ctx workflow.Context, input *cognitosync.DescribeIdentityUsageInput) *CognitoSyncDescribeIdentityUsageFuture {
+func (a *stub) DescribeIdentityUsageAsync(ctx workflow.Context, input *cognitosync.DescribeIdentityUsageInput) *DescribeIdentityUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.DescribeIdentityUsage", input)
-	return &CognitoSyncDescribeIdentityUsageFuture{Future: future}
+	return &DescribeIdentityUsageFuture{Future: future}
 }
 
 func (a *stub) GetBulkPublishDetails(ctx workflow.Context, input *cognitosync.GetBulkPublishDetailsInput) (*cognitosync.GetBulkPublishDetailsOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) GetBulkPublishDetails(ctx workflow.Context, input *cognitosync.Ge
 	return &output, err
 }
 
-func (a *stub) GetBulkPublishDetailsAsync(ctx workflow.Context, input *cognitosync.GetBulkPublishDetailsInput) *CognitoSyncGetBulkPublishDetailsFuture {
+func (a *stub) GetBulkPublishDetailsAsync(ctx workflow.Context, input *cognitosync.GetBulkPublishDetailsInput) *GetBulkPublishDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.GetBulkPublishDetails", input)
-	return &CognitoSyncGetBulkPublishDetailsFuture{Future: future}
+	return &GetBulkPublishDetailsFuture{Future: future}
 }
 
 func (a *stub) GetCognitoEvents(ctx workflow.Context, input *cognitosync.GetCognitoEventsInput) (*cognitosync.GetCognitoEventsOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) GetCognitoEvents(ctx workflow.Context, input *cognitosync.GetCogn
 	return &output, err
 }
 
-func (a *stub) GetCognitoEventsAsync(ctx workflow.Context, input *cognitosync.GetCognitoEventsInput) *CognitoSyncGetCognitoEventsFuture {
+func (a *stub) GetCognitoEventsAsync(ctx workflow.Context, input *cognitosync.GetCognitoEventsInput) *GetCognitoEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.GetCognitoEvents", input)
-	return &CognitoSyncGetCognitoEventsFuture{Future: future}
+	return &GetCognitoEventsFuture{Future: future}
 }
 
 func (a *stub) GetIdentityPoolConfiguration(ctx workflow.Context, input *cognitosync.GetIdentityPoolConfigurationInput) (*cognitosync.GetIdentityPoolConfigurationOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) GetIdentityPoolConfiguration(ctx workflow.Context, input *cognito
 	return &output, err
 }
 
-func (a *stub) GetIdentityPoolConfigurationAsync(ctx workflow.Context, input *cognitosync.GetIdentityPoolConfigurationInput) *CognitoSyncGetIdentityPoolConfigurationFuture {
+func (a *stub) GetIdentityPoolConfigurationAsync(ctx workflow.Context, input *cognitosync.GetIdentityPoolConfigurationInput) *GetIdentityPoolConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.GetIdentityPoolConfiguration", input)
-	return &CognitoSyncGetIdentityPoolConfigurationFuture{Future: future}
+	return &GetIdentityPoolConfigurationFuture{Future: future}
 }
 
 func (a *stub) ListDatasets(ctx workflow.Context, input *cognitosync.ListDatasetsInput) (*cognitosync.ListDatasetsOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) ListDatasets(ctx workflow.Context, input *cognitosync.ListDataset
 	return &output, err
 }
 
-func (a *stub) ListDatasetsAsync(ctx workflow.Context, input *cognitosync.ListDatasetsInput) *CognitoSyncListDatasetsFuture {
+func (a *stub) ListDatasetsAsync(ctx workflow.Context, input *cognitosync.ListDatasetsInput) *ListDatasetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.ListDatasets", input)
-	return &CognitoSyncListDatasetsFuture{Future: future}
+	return &ListDatasetsFuture{Future: future}
 }
 
 func (a *stub) ListIdentityPoolUsage(ctx workflow.Context, input *cognitosync.ListIdentityPoolUsageInput) (*cognitosync.ListIdentityPoolUsageOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) ListIdentityPoolUsage(ctx workflow.Context, input *cognitosync.Li
 	return &output, err
 }
 
-func (a *stub) ListIdentityPoolUsageAsync(ctx workflow.Context, input *cognitosync.ListIdentityPoolUsageInput) *CognitoSyncListIdentityPoolUsageFuture {
+func (a *stub) ListIdentityPoolUsageAsync(ctx workflow.Context, input *cognitosync.ListIdentityPoolUsageInput) *ListIdentityPoolUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.ListIdentityPoolUsage", input)
-	return &CognitoSyncListIdentityPoolUsageFuture{Future: future}
+	return &ListIdentityPoolUsageFuture{Future: future}
 }
 
 func (a *stub) ListRecords(ctx workflow.Context, input *cognitosync.ListRecordsInput) (*cognitosync.ListRecordsOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) ListRecords(ctx workflow.Context, input *cognitosync.ListRecordsI
 	return &output, err
 }
 
-func (a *stub) ListRecordsAsync(ctx workflow.Context, input *cognitosync.ListRecordsInput) *CognitoSyncListRecordsFuture {
+func (a *stub) ListRecordsAsync(ctx workflow.Context, input *cognitosync.ListRecordsInput) *ListRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.ListRecords", input)
-	return &CognitoSyncListRecordsFuture{Future: future}
+	return &ListRecordsFuture{Future: future}
 }
 
 func (a *stub) RegisterDevice(ctx workflow.Context, input *cognitosync.RegisterDeviceInput) (*cognitosync.RegisterDeviceOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) RegisterDevice(ctx workflow.Context, input *cognitosync.RegisterD
 	return &output, err
 }
 
-func (a *stub) RegisterDeviceAsync(ctx workflow.Context, input *cognitosync.RegisterDeviceInput) *CognitoSyncRegisterDeviceFuture {
+func (a *stub) RegisterDeviceAsync(ctx workflow.Context, input *cognitosync.RegisterDeviceInput) *RegisterDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.RegisterDevice", input)
-	return &CognitoSyncRegisterDeviceFuture{Future: future}
+	return &RegisterDeviceFuture{Future: future}
 }
 
 func (a *stub) SetCognitoEvents(ctx workflow.Context, input *cognitosync.SetCognitoEventsInput) (*cognitosync.SetCognitoEventsOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) SetCognitoEvents(ctx workflow.Context, input *cognitosync.SetCogn
 	return &output, err
 }
 
-func (a *stub) SetCognitoEventsAsync(ctx workflow.Context, input *cognitosync.SetCognitoEventsInput) *CognitoSyncSetCognitoEventsFuture {
+func (a *stub) SetCognitoEventsAsync(ctx workflow.Context, input *cognitosync.SetCognitoEventsInput) *SetCognitoEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.SetCognitoEvents", input)
-	return &CognitoSyncSetCognitoEventsFuture{Future: future}
+	return &SetCognitoEventsFuture{Future: future}
 }
 
 func (a *stub) SetIdentityPoolConfiguration(ctx workflow.Context, input *cognitosync.SetIdentityPoolConfigurationInput) (*cognitosync.SetIdentityPoolConfigurationOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) SetIdentityPoolConfiguration(ctx workflow.Context, input *cognito
 	return &output, err
 }
 
-func (a *stub) SetIdentityPoolConfigurationAsync(ctx workflow.Context, input *cognitosync.SetIdentityPoolConfigurationInput) *CognitoSyncSetIdentityPoolConfigurationFuture {
+func (a *stub) SetIdentityPoolConfigurationAsync(ctx workflow.Context, input *cognitosync.SetIdentityPoolConfigurationInput) *SetIdentityPoolConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.SetIdentityPoolConfiguration", input)
-	return &CognitoSyncSetIdentityPoolConfigurationFuture{Future: future}
+	return &SetIdentityPoolConfigurationFuture{Future: future}
 }
 
 func (a *stub) SubscribeToDataset(ctx workflow.Context, input *cognitosync.SubscribeToDatasetInput) (*cognitosync.SubscribeToDatasetOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) SubscribeToDataset(ctx workflow.Context, input *cognitosync.Subsc
 	return &output, err
 }
 
-func (a *stub) SubscribeToDatasetAsync(ctx workflow.Context, input *cognitosync.SubscribeToDatasetInput) *CognitoSyncSubscribeToDatasetFuture {
+func (a *stub) SubscribeToDatasetAsync(ctx workflow.Context, input *cognitosync.SubscribeToDatasetInput) *SubscribeToDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.SubscribeToDataset", input)
-	return &CognitoSyncSubscribeToDatasetFuture{Future: future}
+	return &SubscribeToDatasetFuture{Future: future}
 }
 
 func (a *stub) UnsubscribeFromDataset(ctx workflow.Context, input *cognitosync.UnsubscribeFromDatasetInput) (*cognitosync.UnsubscribeFromDatasetOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) UnsubscribeFromDataset(ctx workflow.Context, input *cognitosync.U
 	return &output, err
 }
 
-func (a *stub) UnsubscribeFromDatasetAsync(ctx workflow.Context, input *cognitosync.UnsubscribeFromDatasetInput) *CognitoSyncUnsubscribeFromDatasetFuture {
+func (a *stub) UnsubscribeFromDatasetAsync(ctx workflow.Context, input *cognitosync.UnsubscribeFromDatasetInput) *UnsubscribeFromDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.UnsubscribeFromDataset", input)
-	return &CognitoSyncUnsubscribeFromDatasetFuture{Future: future}
+	return &UnsubscribeFromDatasetFuture{Future: future}
 }
 
 func (a *stub) UpdateRecords(ctx workflow.Context, input *cognitosync.UpdateRecordsInput) (*cognitosync.UpdateRecordsOutput, error) {
@@ -385,7 +385,7 @@ func (a *stub) UpdateRecords(ctx workflow.Context, input *cognitosync.UpdateReco
 	return &output, err
 }
 
-func (a *stub) UpdateRecordsAsync(ctx workflow.Context, input *cognitosync.UpdateRecordsInput) *CognitoSyncUpdateRecordsFuture {
+func (a *stub) UpdateRecordsAsync(ctx workflow.Context, input *cognitosync.UpdateRecordsInput) *UpdateRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitosync.UpdateRecords", input)
-	return &CognitoSyncUpdateRecordsFuture{Future: future}
+	return &UpdateRecordsFuture{Future: future}
 }

@@ -16,892 +16,892 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type StorageGatewayActivateGatewayFuture struct {
+type ActivateGatewayFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayActivateGatewayFuture) Get(ctx workflow.Context) (*storagegateway.ActivateGatewayOutput, error) {
+func (r *ActivateGatewayFuture) Get(ctx workflow.Context) (*storagegateway.ActivateGatewayOutput, error) {
 	var output storagegateway.ActivateGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayAddCacheFuture struct {
+type AddCacheFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayAddCacheFuture) Get(ctx workflow.Context) (*storagegateway.AddCacheOutput, error) {
+func (r *AddCacheFuture) Get(ctx workflow.Context) (*storagegateway.AddCacheOutput, error) {
 	var output storagegateway.AddCacheOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayAddTagsToResourceFuture struct {
+type AddTagsToResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayAddTagsToResourceFuture) Get(ctx workflow.Context) (*storagegateway.AddTagsToResourceOutput, error) {
+func (r *AddTagsToResourceFuture) Get(ctx workflow.Context) (*storagegateway.AddTagsToResourceOutput, error) {
 	var output storagegateway.AddTagsToResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayAddUploadBufferFuture struct {
+type AddUploadBufferFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayAddUploadBufferFuture) Get(ctx workflow.Context) (*storagegateway.AddUploadBufferOutput, error) {
+func (r *AddUploadBufferFuture) Get(ctx workflow.Context) (*storagegateway.AddUploadBufferOutput, error) {
 	var output storagegateway.AddUploadBufferOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayAddWorkingStorageFuture struct {
+type AddWorkingStorageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayAddWorkingStorageFuture) Get(ctx workflow.Context) (*storagegateway.AddWorkingStorageOutput, error) {
+func (r *AddWorkingStorageFuture) Get(ctx workflow.Context) (*storagegateway.AddWorkingStorageOutput, error) {
 	var output storagegateway.AddWorkingStorageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayAssignTapePoolFuture struct {
+type AssignTapePoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayAssignTapePoolFuture) Get(ctx workflow.Context) (*storagegateway.AssignTapePoolOutput, error) {
+func (r *AssignTapePoolFuture) Get(ctx workflow.Context) (*storagegateway.AssignTapePoolOutput, error) {
 	var output storagegateway.AssignTapePoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayAttachVolumeFuture struct {
+type AttachVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayAttachVolumeFuture) Get(ctx workflow.Context) (*storagegateway.AttachVolumeOutput, error) {
+func (r *AttachVolumeFuture) Get(ctx workflow.Context) (*storagegateway.AttachVolumeOutput, error) {
 	var output storagegateway.AttachVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCancelArchivalFuture struct {
+type CancelArchivalFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCancelArchivalFuture) Get(ctx workflow.Context) (*storagegateway.CancelArchivalOutput, error) {
+func (r *CancelArchivalFuture) Get(ctx workflow.Context) (*storagegateway.CancelArchivalOutput, error) {
 	var output storagegateway.CancelArchivalOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCancelRetrievalFuture struct {
+type CancelRetrievalFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCancelRetrievalFuture) Get(ctx workflow.Context) (*storagegateway.CancelRetrievalOutput, error) {
+func (r *CancelRetrievalFuture) Get(ctx workflow.Context) (*storagegateway.CancelRetrievalOutput, error) {
 	var output storagegateway.CancelRetrievalOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateCachediSCSIVolumeFuture struct {
+type CreateCachediSCSIVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateCachediSCSIVolumeFuture) Get(ctx workflow.Context) (*storagegateway.CreateCachediSCSIVolumeOutput, error) {
+func (r *CreateCachediSCSIVolumeFuture) Get(ctx workflow.Context) (*storagegateway.CreateCachediSCSIVolumeOutput, error) {
 	var output storagegateway.CreateCachediSCSIVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateNFSFileShareFuture struct {
+type CreateNFSFileShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateNFSFileShareFuture) Get(ctx workflow.Context) (*storagegateway.CreateNFSFileShareOutput, error) {
+func (r *CreateNFSFileShareFuture) Get(ctx workflow.Context) (*storagegateway.CreateNFSFileShareOutput, error) {
 	var output storagegateway.CreateNFSFileShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateSMBFileShareFuture struct {
+type CreateSMBFileShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateSMBFileShareFuture) Get(ctx workflow.Context) (*storagegateway.CreateSMBFileShareOutput, error) {
+func (r *CreateSMBFileShareFuture) Get(ctx workflow.Context) (*storagegateway.CreateSMBFileShareOutput, error) {
 	var output storagegateway.CreateSMBFileShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateSnapshotFuture struct {
+type CreateSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateSnapshotFuture) Get(ctx workflow.Context) (*storagegateway.CreateSnapshotOutput, error) {
+func (r *CreateSnapshotFuture) Get(ctx workflow.Context) (*storagegateway.CreateSnapshotOutput, error) {
 	var output storagegateway.CreateSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateSnapshotFromVolumeRecoveryPointFuture struct {
+type CreateSnapshotFromVolumeRecoveryPointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateSnapshotFromVolumeRecoveryPointFuture) Get(ctx workflow.Context) (*storagegateway.CreateSnapshotFromVolumeRecoveryPointOutput, error) {
+func (r *CreateSnapshotFromVolumeRecoveryPointFuture) Get(ctx workflow.Context) (*storagegateway.CreateSnapshotFromVolumeRecoveryPointOutput, error) {
 	var output storagegateway.CreateSnapshotFromVolumeRecoveryPointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateStorediSCSIVolumeFuture struct {
+type CreateStorediSCSIVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateStorediSCSIVolumeFuture) Get(ctx workflow.Context) (*storagegateway.CreateStorediSCSIVolumeOutput, error) {
+func (r *CreateStorediSCSIVolumeFuture) Get(ctx workflow.Context) (*storagegateway.CreateStorediSCSIVolumeOutput, error) {
 	var output storagegateway.CreateStorediSCSIVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateTapePoolFuture struct {
+type CreateTapePoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateTapePoolFuture) Get(ctx workflow.Context) (*storagegateway.CreateTapePoolOutput, error) {
+func (r *CreateTapePoolFuture) Get(ctx workflow.Context) (*storagegateway.CreateTapePoolOutput, error) {
 	var output storagegateway.CreateTapePoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateTapeWithBarcodeFuture struct {
+type CreateTapeWithBarcodeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateTapeWithBarcodeFuture) Get(ctx workflow.Context) (*storagegateway.CreateTapeWithBarcodeOutput, error) {
+func (r *CreateTapeWithBarcodeFuture) Get(ctx workflow.Context) (*storagegateway.CreateTapeWithBarcodeOutput, error) {
 	var output storagegateway.CreateTapeWithBarcodeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayCreateTapesFuture struct {
+type CreateTapesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayCreateTapesFuture) Get(ctx workflow.Context) (*storagegateway.CreateTapesOutput, error) {
+func (r *CreateTapesFuture) Get(ctx workflow.Context) (*storagegateway.CreateTapesOutput, error) {
 	var output storagegateway.CreateTapesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteAutomaticTapeCreationPolicyFuture struct {
+type DeleteAutomaticTapeCreationPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteAutomaticTapeCreationPolicyFuture) Get(ctx workflow.Context) (*storagegateway.DeleteAutomaticTapeCreationPolicyOutput, error) {
+func (r *DeleteAutomaticTapeCreationPolicyFuture) Get(ctx workflow.Context) (*storagegateway.DeleteAutomaticTapeCreationPolicyOutput, error) {
 	var output storagegateway.DeleteAutomaticTapeCreationPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteBandwidthRateLimitFuture struct {
+type DeleteBandwidthRateLimitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteBandwidthRateLimitFuture) Get(ctx workflow.Context) (*storagegateway.DeleteBandwidthRateLimitOutput, error) {
+func (r *DeleteBandwidthRateLimitFuture) Get(ctx workflow.Context) (*storagegateway.DeleteBandwidthRateLimitOutput, error) {
 	var output storagegateway.DeleteBandwidthRateLimitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteChapCredentialsFuture struct {
+type DeleteChapCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteChapCredentialsFuture) Get(ctx workflow.Context) (*storagegateway.DeleteChapCredentialsOutput, error) {
+func (r *DeleteChapCredentialsFuture) Get(ctx workflow.Context) (*storagegateway.DeleteChapCredentialsOutput, error) {
 	var output storagegateway.DeleteChapCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteFileShareFuture struct {
+type DeleteFileShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteFileShareFuture) Get(ctx workflow.Context) (*storagegateway.DeleteFileShareOutput, error) {
+func (r *DeleteFileShareFuture) Get(ctx workflow.Context) (*storagegateway.DeleteFileShareOutput, error) {
 	var output storagegateway.DeleteFileShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteGatewayFuture struct {
+type DeleteGatewayFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteGatewayFuture) Get(ctx workflow.Context) (*storagegateway.DeleteGatewayOutput, error) {
+func (r *DeleteGatewayFuture) Get(ctx workflow.Context) (*storagegateway.DeleteGatewayOutput, error) {
 	var output storagegateway.DeleteGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteSnapshotScheduleFuture struct {
+type DeleteSnapshotScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteSnapshotScheduleFuture) Get(ctx workflow.Context) (*storagegateway.DeleteSnapshotScheduleOutput, error) {
+func (r *DeleteSnapshotScheduleFuture) Get(ctx workflow.Context) (*storagegateway.DeleteSnapshotScheduleOutput, error) {
 	var output storagegateway.DeleteSnapshotScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteTapeFuture struct {
+type DeleteTapeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteTapeFuture) Get(ctx workflow.Context) (*storagegateway.DeleteTapeOutput, error) {
+func (r *DeleteTapeFuture) Get(ctx workflow.Context) (*storagegateway.DeleteTapeOutput, error) {
 	var output storagegateway.DeleteTapeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteTapeArchiveFuture struct {
+type DeleteTapeArchiveFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteTapeArchiveFuture) Get(ctx workflow.Context) (*storagegateway.DeleteTapeArchiveOutput, error) {
+func (r *DeleteTapeArchiveFuture) Get(ctx workflow.Context) (*storagegateway.DeleteTapeArchiveOutput, error) {
 	var output storagegateway.DeleteTapeArchiveOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteTapePoolFuture struct {
+type DeleteTapePoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteTapePoolFuture) Get(ctx workflow.Context) (*storagegateway.DeleteTapePoolOutput, error) {
+func (r *DeleteTapePoolFuture) Get(ctx workflow.Context) (*storagegateway.DeleteTapePoolOutput, error) {
 	var output storagegateway.DeleteTapePoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDeleteVolumeFuture struct {
+type DeleteVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDeleteVolumeFuture) Get(ctx workflow.Context) (*storagegateway.DeleteVolumeOutput, error) {
+func (r *DeleteVolumeFuture) Get(ctx workflow.Context) (*storagegateway.DeleteVolumeOutput, error) {
 	var output storagegateway.DeleteVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeAvailabilityMonitorTestFuture struct {
+type DescribeAvailabilityMonitorTestFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeAvailabilityMonitorTestFuture) Get(ctx workflow.Context) (*storagegateway.DescribeAvailabilityMonitorTestOutput, error) {
+func (r *DescribeAvailabilityMonitorTestFuture) Get(ctx workflow.Context) (*storagegateway.DescribeAvailabilityMonitorTestOutput, error) {
 	var output storagegateway.DescribeAvailabilityMonitorTestOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeBandwidthRateLimitFuture struct {
+type DescribeBandwidthRateLimitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeBandwidthRateLimitFuture) Get(ctx workflow.Context) (*storagegateway.DescribeBandwidthRateLimitOutput, error) {
+func (r *DescribeBandwidthRateLimitFuture) Get(ctx workflow.Context) (*storagegateway.DescribeBandwidthRateLimitOutput, error) {
 	var output storagegateway.DescribeBandwidthRateLimitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeCacheFuture struct {
+type DescribeCacheFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeCacheFuture) Get(ctx workflow.Context) (*storagegateway.DescribeCacheOutput, error) {
+func (r *DescribeCacheFuture) Get(ctx workflow.Context) (*storagegateway.DescribeCacheOutput, error) {
 	var output storagegateway.DescribeCacheOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeCachediSCSIVolumesFuture struct {
+type DescribeCachediSCSIVolumesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeCachediSCSIVolumesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeCachediSCSIVolumesOutput, error) {
+func (r *DescribeCachediSCSIVolumesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeCachediSCSIVolumesOutput, error) {
 	var output storagegateway.DescribeCachediSCSIVolumesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeChapCredentialsFuture struct {
+type DescribeChapCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeChapCredentialsFuture) Get(ctx workflow.Context) (*storagegateway.DescribeChapCredentialsOutput, error) {
+func (r *DescribeChapCredentialsFuture) Get(ctx workflow.Context) (*storagegateway.DescribeChapCredentialsOutput, error) {
 	var output storagegateway.DescribeChapCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeGatewayInformationFuture struct {
+type DescribeGatewayInformationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeGatewayInformationFuture) Get(ctx workflow.Context) (*storagegateway.DescribeGatewayInformationOutput, error) {
+func (r *DescribeGatewayInformationFuture) Get(ctx workflow.Context) (*storagegateway.DescribeGatewayInformationOutput, error) {
 	var output storagegateway.DescribeGatewayInformationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeMaintenanceStartTimeFuture struct {
+type DescribeMaintenanceStartTimeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeMaintenanceStartTimeFuture) Get(ctx workflow.Context) (*storagegateway.DescribeMaintenanceStartTimeOutput, error) {
+func (r *DescribeMaintenanceStartTimeFuture) Get(ctx workflow.Context) (*storagegateway.DescribeMaintenanceStartTimeOutput, error) {
 	var output storagegateway.DescribeMaintenanceStartTimeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeNFSFileSharesFuture struct {
+type DescribeNFSFileSharesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeNFSFileSharesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeNFSFileSharesOutput, error) {
+func (r *DescribeNFSFileSharesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeNFSFileSharesOutput, error) {
 	var output storagegateway.DescribeNFSFileSharesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeSMBFileSharesFuture struct {
+type DescribeSMBFileSharesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeSMBFileSharesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeSMBFileSharesOutput, error) {
+func (r *DescribeSMBFileSharesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeSMBFileSharesOutput, error) {
 	var output storagegateway.DescribeSMBFileSharesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeSMBSettingsFuture struct {
+type DescribeSMBSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeSMBSettingsFuture) Get(ctx workflow.Context) (*storagegateway.DescribeSMBSettingsOutput, error) {
+func (r *DescribeSMBSettingsFuture) Get(ctx workflow.Context) (*storagegateway.DescribeSMBSettingsOutput, error) {
 	var output storagegateway.DescribeSMBSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeSnapshotScheduleFuture struct {
+type DescribeSnapshotScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeSnapshotScheduleFuture) Get(ctx workflow.Context) (*storagegateway.DescribeSnapshotScheduleOutput, error) {
+func (r *DescribeSnapshotScheduleFuture) Get(ctx workflow.Context) (*storagegateway.DescribeSnapshotScheduleOutput, error) {
 	var output storagegateway.DescribeSnapshotScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeStorediSCSIVolumesFuture struct {
+type DescribeStorediSCSIVolumesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeStorediSCSIVolumesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeStorediSCSIVolumesOutput, error) {
+func (r *DescribeStorediSCSIVolumesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeStorediSCSIVolumesOutput, error) {
 	var output storagegateway.DescribeStorediSCSIVolumesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeTapeArchivesFuture struct {
+type DescribeTapeArchivesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeTapeArchivesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeTapeArchivesOutput, error) {
+func (r *DescribeTapeArchivesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeTapeArchivesOutput, error) {
 	var output storagegateway.DescribeTapeArchivesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeTapeRecoveryPointsFuture struct {
+type DescribeTapeRecoveryPointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeTapeRecoveryPointsFuture) Get(ctx workflow.Context) (*storagegateway.DescribeTapeRecoveryPointsOutput, error) {
+func (r *DescribeTapeRecoveryPointsFuture) Get(ctx workflow.Context) (*storagegateway.DescribeTapeRecoveryPointsOutput, error) {
 	var output storagegateway.DescribeTapeRecoveryPointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeTapesFuture struct {
+type DescribeTapesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeTapesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeTapesOutput, error) {
+func (r *DescribeTapesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeTapesOutput, error) {
 	var output storagegateway.DescribeTapesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeUploadBufferFuture struct {
+type DescribeUploadBufferFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeUploadBufferFuture) Get(ctx workflow.Context) (*storagegateway.DescribeUploadBufferOutput, error) {
+func (r *DescribeUploadBufferFuture) Get(ctx workflow.Context) (*storagegateway.DescribeUploadBufferOutput, error) {
 	var output storagegateway.DescribeUploadBufferOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeVTLDevicesFuture struct {
+type DescribeVTLDevicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeVTLDevicesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeVTLDevicesOutput, error) {
+func (r *DescribeVTLDevicesFuture) Get(ctx workflow.Context) (*storagegateway.DescribeVTLDevicesOutput, error) {
 	var output storagegateway.DescribeVTLDevicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDescribeWorkingStorageFuture struct {
+type DescribeWorkingStorageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDescribeWorkingStorageFuture) Get(ctx workflow.Context) (*storagegateway.DescribeWorkingStorageOutput, error) {
+func (r *DescribeWorkingStorageFuture) Get(ctx workflow.Context) (*storagegateway.DescribeWorkingStorageOutput, error) {
 	var output storagegateway.DescribeWorkingStorageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDetachVolumeFuture struct {
+type DetachVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDetachVolumeFuture) Get(ctx workflow.Context) (*storagegateway.DetachVolumeOutput, error) {
+func (r *DetachVolumeFuture) Get(ctx workflow.Context) (*storagegateway.DetachVolumeOutput, error) {
 	var output storagegateway.DetachVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayDisableGatewayFuture struct {
+type DisableGatewayFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayDisableGatewayFuture) Get(ctx workflow.Context) (*storagegateway.DisableGatewayOutput, error) {
+func (r *DisableGatewayFuture) Get(ctx workflow.Context) (*storagegateway.DisableGatewayOutput, error) {
 	var output storagegateway.DisableGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayJoinDomainFuture struct {
+type JoinDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayJoinDomainFuture) Get(ctx workflow.Context) (*storagegateway.JoinDomainOutput, error) {
+func (r *JoinDomainFuture) Get(ctx workflow.Context) (*storagegateway.JoinDomainOutput, error) {
 	var output storagegateway.JoinDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListAutomaticTapeCreationPoliciesFuture struct {
+type ListAutomaticTapeCreationPoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListAutomaticTapeCreationPoliciesFuture) Get(ctx workflow.Context) (*storagegateway.ListAutomaticTapeCreationPoliciesOutput, error) {
+func (r *ListAutomaticTapeCreationPoliciesFuture) Get(ctx workflow.Context) (*storagegateway.ListAutomaticTapeCreationPoliciesOutput, error) {
 	var output storagegateway.ListAutomaticTapeCreationPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListFileSharesFuture struct {
+type ListFileSharesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListFileSharesFuture) Get(ctx workflow.Context) (*storagegateway.ListFileSharesOutput, error) {
+func (r *ListFileSharesFuture) Get(ctx workflow.Context) (*storagegateway.ListFileSharesOutput, error) {
 	var output storagegateway.ListFileSharesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListGatewaysFuture struct {
+type ListGatewaysFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListGatewaysFuture) Get(ctx workflow.Context) (*storagegateway.ListGatewaysOutput, error) {
+func (r *ListGatewaysFuture) Get(ctx workflow.Context) (*storagegateway.ListGatewaysOutput, error) {
 	var output storagegateway.ListGatewaysOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListLocalDisksFuture struct {
+type ListLocalDisksFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListLocalDisksFuture) Get(ctx workflow.Context) (*storagegateway.ListLocalDisksOutput, error) {
+func (r *ListLocalDisksFuture) Get(ctx workflow.Context) (*storagegateway.ListLocalDisksOutput, error) {
 	var output storagegateway.ListLocalDisksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListTagsForResourceFuture) Get(ctx workflow.Context) (*storagegateway.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*storagegateway.ListTagsForResourceOutput, error) {
 	var output storagegateway.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListTapePoolsFuture struct {
+type ListTapePoolsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListTapePoolsFuture) Get(ctx workflow.Context) (*storagegateway.ListTapePoolsOutput, error) {
+func (r *ListTapePoolsFuture) Get(ctx workflow.Context) (*storagegateway.ListTapePoolsOutput, error) {
 	var output storagegateway.ListTapePoolsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListTapesFuture struct {
+type ListTapesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListTapesFuture) Get(ctx workflow.Context) (*storagegateway.ListTapesOutput, error) {
+func (r *ListTapesFuture) Get(ctx workflow.Context) (*storagegateway.ListTapesOutput, error) {
 	var output storagegateway.ListTapesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListVolumeInitiatorsFuture struct {
+type ListVolumeInitiatorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListVolumeInitiatorsFuture) Get(ctx workflow.Context) (*storagegateway.ListVolumeInitiatorsOutput, error) {
+func (r *ListVolumeInitiatorsFuture) Get(ctx workflow.Context) (*storagegateway.ListVolumeInitiatorsOutput, error) {
 	var output storagegateway.ListVolumeInitiatorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListVolumeRecoveryPointsFuture struct {
+type ListVolumeRecoveryPointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListVolumeRecoveryPointsFuture) Get(ctx workflow.Context) (*storagegateway.ListVolumeRecoveryPointsOutput, error) {
+func (r *ListVolumeRecoveryPointsFuture) Get(ctx workflow.Context) (*storagegateway.ListVolumeRecoveryPointsOutput, error) {
 	var output storagegateway.ListVolumeRecoveryPointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayListVolumesFuture struct {
+type ListVolumesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayListVolumesFuture) Get(ctx workflow.Context) (*storagegateway.ListVolumesOutput, error) {
+func (r *ListVolumesFuture) Get(ctx workflow.Context) (*storagegateway.ListVolumesOutput, error) {
 	var output storagegateway.ListVolumesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayNotifyWhenUploadedFuture struct {
+type NotifyWhenUploadedFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayNotifyWhenUploadedFuture) Get(ctx workflow.Context) (*storagegateway.NotifyWhenUploadedOutput, error) {
+func (r *NotifyWhenUploadedFuture) Get(ctx workflow.Context) (*storagegateway.NotifyWhenUploadedOutput, error) {
 	var output storagegateway.NotifyWhenUploadedOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayRefreshCacheFuture struct {
+type RefreshCacheFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayRefreshCacheFuture) Get(ctx workflow.Context) (*storagegateway.RefreshCacheOutput, error) {
+func (r *RefreshCacheFuture) Get(ctx workflow.Context) (*storagegateway.RefreshCacheOutput, error) {
 	var output storagegateway.RefreshCacheOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayRemoveTagsFromResourceFuture struct {
+type RemoveTagsFromResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*storagegateway.RemoveTagsFromResourceOutput, error) {
+func (r *RemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*storagegateway.RemoveTagsFromResourceOutput, error) {
 	var output storagegateway.RemoveTagsFromResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayResetCacheFuture struct {
+type ResetCacheFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayResetCacheFuture) Get(ctx workflow.Context) (*storagegateway.ResetCacheOutput, error) {
+func (r *ResetCacheFuture) Get(ctx workflow.Context) (*storagegateway.ResetCacheOutput, error) {
 	var output storagegateway.ResetCacheOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayRetrieveTapeArchiveFuture struct {
+type RetrieveTapeArchiveFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayRetrieveTapeArchiveFuture) Get(ctx workflow.Context) (*storagegateway.RetrieveTapeArchiveOutput, error) {
+func (r *RetrieveTapeArchiveFuture) Get(ctx workflow.Context) (*storagegateway.RetrieveTapeArchiveOutput, error) {
 	var output storagegateway.RetrieveTapeArchiveOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayRetrieveTapeRecoveryPointFuture struct {
+type RetrieveTapeRecoveryPointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayRetrieveTapeRecoveryPointFuture) Get(ctx workflow.Context) (*storagegateway.RetrieveTapeRecoveryPointOutput, error) {
+func (r *RetrieveTapeRecoveryPointFuture) Get(ctx workflow.Context) (*storagegateway.RetrieveTapeRecoveryPointOutput, error) {
 	var output storagegateway.RetrieveTapeRecoveryPointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewaySetLocalConsolePasswordFuture struct {
+type SetLocalConsolePasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewaySetLocalConsolePasswordFuture) Get(ctx workflow.Context) (*storagegateway.SetLocalConsolePasswordOutput, error) {
+func (r *SetLocalConsolePasswordFuture) Get(ctx workflow.Context) (*storagegateway.SetLocalConsolePasswordOutput, error) {
 	var output storagegateway.SetLocalConsolePasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewaySetSMBGuestPasswordFuture struct {
+type SetSMBGuestPasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewaySetSMBGuestPasswordFuture) Get(ctx workflow.Context) (*storagegateway.SetSMBGuestPasswordOutput, error) {
+func (r *SetSMBGuestPasswordFuture) Get(ctx workflow.Context) (*storagegateway.SetSMBGuestPasswordOutput, error) {
 	var output storagegateway.SetSMBGuestPasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayShutdownGatewayFuture struct {
+type ShutdownGatewayFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayShutdownGatewayFuture) Get(ctx workflow.Context) (*storagegateway.ShutdownGatewayOutput, error) {
+func (r *ShutdownGatewayFuture) Get(ctx workflow.Context) (*storagegateway.ShutdownGatewayOutput, error) {
 	var output storagegateway.ShutdownGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayStartAvailabilityMonitorTestFuture struct {
+type StartAvailabilityMonitorTestFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayStartAvailabilityMonitorTestFuture) Get(ctx workflow.Context) (*storagegateway.StartAvailabilityMonitorTestOutput, error) {
+func (r *StartAvailabilityMonitorTestFuture) Get(ctx workflow.Context) (*storagegateway.StartAvailabilityMonitorTestOutput, error) {
 	var output storagegateway.StartAvailabilityMonitorTestOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayStartGatewayFuture struct {
+type StartGatewayFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayStartGatewayFuture) Get(ctx workflow.Context) (*storagegateway.StartGatewayOutput, error) {
+func (r *StartGatewayFuture) Get(ctx workflow.Context) (*storagegateway.StartGatewayOutput, error) {
 	var output storagegateway.StartGatewayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateAutomaticTapeCreationPolicyFuture struct {
+type UpdateAutomaticTapeCreationPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateAutomaticTapeCreationPolicyFuture) Get(ctx workflow.Context) (*storagegateway.UpdateAutomaticTapeCreationPolicyOutput, error) {
+func (r *UpdateAutomaticTapeCreationPolicyFuture) Get(ctx workflow.Context) (*storagegateway.UpdateAutomaticTapeCreationPolicyOutput, error) {
 	var output storagegateway.UpdateAutomaticTapeCreationPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateBandwidthRateLimitFuture struct {
+type UpdateBandwidthRateLimitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateBandwidthRateLimitFuture) Get(ctx workflow.Context) (*storagegateway.UpdateBandwidthRateLimitOutput, error) {
+func (r *UpdateBandwidthRateLimitFuture) Get(ctx workflow.Context) (*storagegateway.UpdateBandwidthRateLimitOutput, error) {
 	var output storagegateway.UpdateBandwidthRateLimitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateChapCredentialsFuture struct {
+type UpdateChapCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateChapCredentialsFuture) Get(ctx workflow.Context) (*storagegateway.UpdateChapCredentialsOutput, error) {
+func (r *UpdateChapCredentialsFuture) Get(ctx workflow.Context) (*storagegateway.UpdateChapCredentialsOutput, error) {
 	var output storagegateway.UpdateChapCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateGatewayInformationFuture struct {
+type UpdateGatewayInformationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateGatewayInformationFuture) Get(ctx workflow.Context) (*storagegateway.UpdateGatewayInformationOutput, error) {
+func (r *UpdateGatewayInformationFuture) Get(ctx workflow.Context) (*storagegateway.UpdateGatewayInformationOutput, error) {
 	var output storagegateway.UpdateGatewayInformationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateGatewaySoftwareNowFuture struct {
+type UpdateGatewaySoftwareNowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateGatewaySoftwareNowFuture) Get(ctx workflow.Context) (*storagegateway.UpdateGatewaySoftwareNowOutput, error) {
+func (r *UpdateGatewaySoftwareNowFuture) Get(ctx workflow.Context) (*storagegateway.UpdateGatewaySoftwareNowOutput, error) {
 	var output storagegateway.UpdateGatewaySoftwareNowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateMaintenanceStartTimeFuture struct {
+type UpdateMaintenanceStartTimeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateMaintenanceStartTimeFuture) Get(ctx workflow.Context) (*storagegateway.UpdateMaintenanceStartTimeOutput, error) {
+func (r *UpdateMaintenanceStartTimeFuture) Get(ctx workflow.Context) (*storagegateway.UpdateMaintenanceStartTimeOutput, error) {
 	var output storagegateway.UpdateMaintenanceStartTimeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateNFSFileShareFuture struct {
+type UpdateNFSFileShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateNFSFileShareFuture) Get(ctx workflow.Context) (*storagegateway.UpdateNFSFileShareOutput, error) {
+func (r *UpdateNFSFileShareFuture) Get(ctx workflow.Context) (*storagegateway.UpdateNFSFileShareOutput, error) {
 	var output storagegateway.UpdateNFSFileShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateSMBFileShareFuture struct {
+type UpdateSMBFileShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateSMBFileShareFuture) Get(ctx workflow.Context) (*storagegateway.UpdateSMBFileShareOutput, error) {
+func (r *UpdateSMBFileShareFuture) Get(ctx workflow.Context) (*storagegateway.UpdateSMBFileShareOutput, error) {
 	var output storagegateway.UpdateSMBFileShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateSMBSecurityStrategyFuture struct {
+type UpdateSMBSecurityStrategyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateSMBSecurityStrategyFuture) Get(ctx workflow.Context) (*storagegateway.UpdateSMBSecurityStrategyOutput, error) {
+func (r *UpdateSMBSecurityStrategyFuture) Get(ctx workflow.Context) (*storagegateway.UpdateSMBSecurityStrategyOutput, error) {
 	var output storagegateway.UpdateSMBSecurityStrategyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateSnapshotScheduleFuture struct {
+type UpdateSnapshotScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateSnapshotScheduleFuture) Get(ctx workflow.Context) (*storagegateway.UpdateSnapshotScheduleOutput, error) {
+func (r *UpdateSnapshotScheduleFuture) Get(ctx workflow.Context) (*storagegateway.UpdateSnapshotScheduleOutput, error) {
 	var output storagegateway.UpdateSnapshotScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type StorageGatewayUpdateVTLDeviceTypeFuture struct {
+type UpdateVTLDeviceTypeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *StorageGatewayUpdateVTLDeviceTypeFuture) Get(ctx workflow.Context) (*storagegateway.UpdateVTLDeviceTypeOutput, error) {
+func (r *UpdateVTLDeviceTypeFuture) Get(ctx workflow.Context) (*storagegateway.UpdateVTLDeviceTypeOutput, error) {
 	var output storagegateway.UpdateVTLDeviceTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -913,9 +913,9 @@ func (a *stub) ActivateGateway(ctx workflow.Context, input *storagegateway.Activ
 	return &output, err
 }
 
-func (a *stub) ActivateGatewayAsync(ctx workflow.Context, input *storagegateway.ActivateGatewayInput) *StorageGatewayActivateGatewayFuture {
+func (a *stub) ActivateGatewayAsync(ctx workflow.Context, input *storagegateway.ActivateGatewayInput) *ActivateGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ActivateGateway", input)
-	return &StorageGatewayActivateGatewayFuture{Future: future}
+	return &ActivateGatewayFuture{Future: future}
 }
 
 func (a *stub) AddCache(ctx workflow.Context, input *storagegateway.AddCacheInput) (*storagegateway.AddCacheOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) AddCache(ctx workflow.Context, input *storagegateway.AddCacheInpu
 	return &output, err
 }
 
-func (a *stub) AddCacheAsync(ctx workflow.Context, input *storagegateway.AddCacheInput) *StorageGatewayAddCacheFuture {
+func (a *stub) AddCacheAsync(ctx workflow.Context, input *storagegateway.AddCacheInput) *AddCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.AddCache", input)
-	return &StorageGatewayAddCacheFuture{Future: future}
+	return &AddCacheFuture{Future: future}
 }
 
 func (a *stub) AddTagsToResource(ctx workflow.Context, input *storagegateway.AddTagsToResourceInput) (*storagegateway.AddTagsToResourceOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) AddTagsToResource(ctx workflow.Context, input *storagegateway.Add
 	return &output, err
 }
 
-func (a *stub) AddTagsToResourceAsync(ctx workflow.Context, input *storagegateway.AddTagsToResourceInput) *StorageGatewayAddTagsToResourceFuture {
+func (a *stub) AddTagsToResourceAsync(ctx workflow.Context, input *storagegateway.AddTagsToResourceInput) *AddTagsToResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.AddTagsToResource", input)
-	return &StorageGatewayAddTagsToResourceFuture{Future: future}
+	return &AddTagsToResourceFuture{Future: future}
 }
 
 func (a *stub) AddUploadBuffer(ctx workflow.Context, input *storagegateway.AddUploadBufferInput) (*storagegateway.AddUploadBufferOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) AddUploadBuffer(ctx workflow.Context, input *storagegateway.AddUp
 	return &output, err
 }
 
-func (a *stub) AddUploadBufferAsync(ctx workflow.Context, input *storagegateway.AddUploadBufferInput) *StorageGatewayAddUploadBufferFuture {
+func (a *stub) AddUploadBufferAsync(ctx workflow.Context, input *storagegateway.AddUploadBufferInput) *AddUploadBufferFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.AddUploadBuffer", input)
-	return &StorageGatewayAddUploadBufferFuture{Future: future}
+	return &AddUploadBufferFuture{Future: future}
 }
 
 func (a *stub) AddWorkingStorage(ctx workflow.Context, input *storagegateway.AddWorkingStorageInput) (*storagegateway.AddWorkingStorageOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) AddWorkingStorage(ctx workflow.Context, input *storagegateway.Add
 	return &output, err
 }
 
-func (a *stub) AddWorkingStorageAsync(ctx workflow.Context, input *storagegateway.AddWorkingStorageInput) *StorageGatewayAddWorkingStorageFuture {
+func (a *stub) AddWorkingStorageAsync(ctx workflow.Context, input *storagegateway.AddWorkingStorageInput) *AddWorkingStorageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.AddWorkingStorage", input)
-	return &StorageGatewayAddWorkingStorageFuture{Future: future}
+	return &AddWorkingStorageFuture{Future: future}
 }
 
 func (a *stub) AssignTapePool(ctx workflow.Context, input *storagegateway.AssignTapePoolInput) (*storagegateway.AssignTapePoolOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) AssignTapePool(ctx workflow.Context, input *storagegateway.Assign
 	return &output, err
 }
 
-func (a *stub) AssignTapePoolAsync(ctx workflow.Context, input *storagegateway.AssignTapePoolInput) *StorageGatewayAssignTapePoolFuture {
+func (a *stub) AssignTapePoolAsync(ctx workflow.Context, input *storagegateway.AssignTapePoolInput) *AssignTapePoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.AssignTapePool", input)
-	return &StorageGatewayAssignTapePoolFuture{Future: future}
+	return &AssignTapePoolFuture{Future: future}
 }
 
 func (a *stub) AttachVolume(ctx workflow.Context, input *storagegateway.AttachVolumeInput) (*storagegateway.AttachVolumeOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) AttachVolume(ctx workflow.Context, input *storagegateway.AttachVo
 	return &output, err
 }
 
-func (a *stub) AttachVolumeAsync(ctx workflow.Context, input *storagegateway.AttachVolumeInput) *StorageGatewayAttachVolumeFuture {
+func (a *stub) AttachVolumeAsync(ctx workflow.Context, input *storagegateway.AttachVolumeInput) *AttachVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.AttachVolume", input)
-	return &StorageGatewayAttachVolumeFuture{Future: future}
+	return &AttachVolumeFuture{Future: future}
 }
 
 func (a *stub) CancelArchival(ctx workflow.Context, input *storagegateway.CancelArchivalInput) (*storagegateway.CancelArchivalOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) CancelArchival(ctx workflow.Context, input *storagegateway.Cancel
 	return &output, err
 }
 
-func (a *stub) CancelArchivalAsync(ctx workflow.Context, input *storagegateway.CancelArchivalInput) *StorageGatewayCancelArchivalFuture {
+func (a *stub) CancelArchivalAsync(ctx workflow.Context, input *storagegateway.CancelArchivalInput) *CancelArchivalFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CancelArchival", input)
-	return &StorageGatewayCancelArchivalFuture{Future: future}
+	return &CancelArchivalFuture{Future: future}
 }
 
 func (a *stub) CancelRetrieval(ctx workflow.Context, input *storagegateway.CancelRetrievalInput) (*storagegateway.CancelRetrievalOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) CancelRetrieval(ctx workflow.Context, input *storagegateway.Cance
 	return &output, err
 }
 
-func (a *stub) CancelRetrievalAsync(ctx workflow.Context, input *storagegateway.CancelRetrievalInput) *StorageGatewayCancelRetrievalFuture {
+func (a *stub) CancelRetrievalAsync(ctx workflow.Context, input *storagegateway.CancelRetrievalInput) *CancelRetrievalFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CancelRetrieval", input)
-	return &StorageGatewayCancelRetrievalFuture{Future: future}
+	return &CancelRetrievalFuture{Future: future}
 }
 
 func (a *stub) CreateCachediSCSIVolume(ctx workflow.Context, input *storagegateway.CreateCachediSCSIVolumeInput) (*storagegateway.CreateCachediSCSIVolumeOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) CreateCachediSCSIVolume(ctx workflow.Context, input *storagegatew
 	return &output, err
 }
 
-func (a *stub) CreateCachediSCSIVolumeAsync(ctx workflow.Context, input *storagegateway.CreateCachediSCSIVolumeInput) *StorageGatewayCreateCachediSCSIVolumeFuture {
+func (a *stub) CreateCachediSCSIVolumeAsync(ctx workflow.Context, input *storagegateway.CreateCachediSCSIVolumeInput) *CreateCachediSCSIVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateCachediSCSIVolume", input)
-	return &StorageGatewayCreateCachediSCSIVolumeFuture{Future: future}
+	return &CreateCachediSCSIVolumeFuture{Future: future}
 }
 
 func (a *stub) CreateNFSFileShare(ctx workflow.Context, input *storagegateway.CreateNFSFileShareInput) (*storagegateway.CreateNFSFileShareOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) CreateNFSFileShare(ctx workflow.Context, input *storagegateway.Cr
 	return &output, err
 }
 
-func (a *stub) CreateNFSFileShareAsync(ctx workflow.Context, input *storagegateway.CreateNFSFileShareInput) *StorageGatewayCreateNFSFileShareFuture {
+func (a *stub) CreateNFSFileShareAsync(ctx workflow.Context, input *storagegateway.CreateNFSFileShareInput) *CreateNFSFileShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateNFSFileShare", input)
-	return &StorageGatewayCreateNFSFileShareFuture{Future: future}
+	return &CreateNFSFileShareFuture{Future: future}
 }
 
 func (a *stub) CreateSMBFileShare(ctx workflow.Context, input *storagegateway.CreateSMBFileShareInput) (*storagegateway.CreateSMBFileShareOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) CreateSMBFileShare(ctx workflow.Context, input *storagegateway.Cr
 	return &output, err
 }
 
-func (a *stub) CreateSMBFileShareAsync(ctx workflow.Context, input *storagegateway.CreateSMBFileShareInput) *StorageGatewayCreateSMBFileShareFuture {
+func (a *stub) CreateSMBFileShareAsync(ctx workflow.Context, input *storagegateway.CreateSMBFileShareInput) *CreateSMBFileShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateSMBFileShare", input)
-	return &StorageGatewayCreateSMBFileShareFuture{Future: future}
+	return &CreateSMBFileShareFuture{Future: future}
 }
 
 func (a *stub) CreateSnapshot(ctx workflow.Context, input *storagegateway.CreateSnapshotInput) (*storagegateway.CreateSnapshotOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) CreateSnapshot(ctx workflow.Context, input *storagegateway.Create
 	return &output, err
 }
 
-func (a *stub) CreateSnapshotAsync(ctx workflow.Context, input *storagegateway.CreateSnapshotInput) *StorageGatewayCreateSnapshotFuture {
+func (a *stub) CreateSnapshotAsync(ctx workflow.Context, input *storagegateway.CreateSnapshotInput) *CreateSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateSnapshot", input)
-	return &StorageGatewayCreateSnapshotFuture{Future: future}
+	return &CreateSnapshotFuture{Future: future}
 }
 
 func (a *stub) CreateSnapshotFromVolumeRecoveryPoint(ctx workflow.Context, input *storagegateway.CreateSnapshotFromVolumeRecoveryPointInput) (*storagegateway.CreateSnapshotFromVolumeRecoveryPointOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) CreateSnapshotFromVolumeRecoveryPoint(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) CreateSnapshotFromVolumeRecoveryPointAsync(ctx workflow.Context, input *storagegateway.CreateSnapshotFromVolumeRecoveryPointInput) *StorageGatewayCreateSnapshotFromVolumeRecoveryPointFuture {
+func (a *stub) CreateSnapshotFromVolumeRecoveryPointAsync(ctx workflow.Context, input *storagegateway.CreateSnapshotFromVolumeRecoveryPointInput) *CreateSnapshotFromVolumeRecoveryPointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateSnapshotFromVolumeRecoveryPoint", input)
-	return &StorageGatewayCreateSnapshotFromVolumeRecoveryPointFuture{Future: future}
+	return &CreateSnapshotFromVolumeRecoveryPointFuture{Future: future}
 }
 
 func (a *stub) CreateStorediSCSIVolume(ctx workflow.Context, input *storagegateway.CreateStorediSCSIVolumeInput) (*storagegateway.CreateStorediSCSIVolumeOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) CreateStorediSCSIVolume(ctx workflow.Context, input *storagegatew
 	return &output, err
 }
 
-func (a *stub) CreateStorediSCSIVolumeAsync(ctx workflow.Context, input *storagegateway.CreateStorediSCSIVolumeInput) *StorageGatewayCreateStorediSCSIVolumeFuture {
+func (a *stub) CreateStorediSCSIVolumeAsync(ctx workflow.Context, input *storagegateway.CreateStorediSCSIVolumeInput) *CreateStorediSCSIVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateStorediSCSIVolume", input)
-	return &StorageGatewayCreateStorediSCSIVolumeFuture{Future: future}
+	return &CreateStorediSCSIVolumeFuture{Future: future}
 }
 
 func (a *stub) CreateTapePool(ctx workflow.Context, input *storagegateway.CreateTapePoolInput) (*storagegateway.CreateTapePoolOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) CreateTapePool(ctx workflow.Context, input *storagegateway.Create
 	return &output, err
 }
 
-func (a *stub) CreateTapePoolAsync(ctx workflow.Context, input *storagegateway.CreateTapePoolInput) *StorageGatewayCreateTapePoolFuture {
+func (a *stub) CreateTapePoolAsync(ctx workflow.Context, input *storagegateway.CreateTapePoolInput) *CreateTapePoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateTapePool", input)
-	return &StorageGatewayCreateTapePoolFuture{Future: future}
+	return &CreateTapePoolFuture{Future: future}
 }
 
 func (a *stub) CreateTapeWithBarcode(ctx workflow.Context, input *storagegateway.CreateTapeWithBarcodeInput) (*storagegateway.CreateTapeWithBarcodeOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) CreateTapeWithBarcode(ctx workflow.Context, input *storagegateway
 	return &output, err
 }
 
-func (a *stub) CreateTapeWithBarcodeAsync(ctx workflow.Context, input *storagegateway.CreateTapeWithBarcodeInput) *StorageGatewayCreateTapeWithBarcodeFuture {
+func (a *stub) CreateTapeWithBarcodeAsync(ctx workflow.Context, input *storagegateway.CreateTapeWithBarcodeInput) *CreateTapeWithBarcodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateTapeWithBarcode", input)
-	return &StorageGatewayCreateTapeWithBarcodeFuture{Future: future}
+	return &CreateTapeWithBarcodeFuture{Future: future}
 }
 
 func (a *stub) CreateTapes(ctx workflow.Context, input *storagegateway.CreateTapesInput) (*storagegateway.CreateTapesOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) CreateTapes(ctx workflow.Context, input *storagegateway.CreateTap
 	return &output, err
 }
 
-func (a *stub) CreateTapesAsync(ctx workflow.Context, input *storagegateway.CreateTapesInput) *StorageGatewayCreateTapesFuture {
+func (a *stub) CreateTapesAsync(ctx workflow.Context, input *storagegateway.CreateTapesInput) *CreateTapesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.CreateTapes", input)
-	return &StorageGatewayCreateTapesFuture{Future: future}
+	return &CreateTapesFuture{Future: future}
 }
 
 func (a *stub) DeleteAutomaticTapeCreationPolicy(ctx workflow.Context, input *storagegateway.DeleteAutomaticTapeCreationPolicyInput) (*storagegateway.DeleteAutomaticTapeCreationPolicyOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) DeleteAutomaticTapeCreationPolicy(ctx workflow.Context, input *st
 	return &output, err
 }
 
-func (a *stub) DeleteAutomaticTapeCreationPolicyAsync(ctx workflow.Context, input *storagegateway.DeleteAutomaticTapeCreationPolicyInput) *StorageGatewayDeleteAutomaticTapeCreationPolicyFuture {
+func (a *stub) DeleteAutomaticTapeCreationPolicyAsync(ctx workflow.Context, input *storagegateway.DeleteAutomaticTapeCreationPolicyInput) *DeleteAutomaticTapeCreationPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteAutomaticTapeCreationPolicy", input)
-	return &StorageGatewayDeleteAutomaticTapeCreationPolicyFuture{Future: future}
+	return &DeleteAutomaticTapeCreationPolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteBandwidthRateLimit(ctx workflow.Context, input *storagegateway.DeleteBandwidthRateLimitInput) (*storagegateway.DeleteBandwidthRateLimitOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) DeleteBandwidthRateLimit(ctx workflow.Context, input *storagegate
 	return &output, err
 }
 
-func (a *stub) DeleteBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.DeleteBandwidthRateLimitInput) *StorageGatewayDeleteBandwidthRateLimitFuture {
+func (a *stub) DeleteBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.DeleteBandwidthRateLimitInput) *DeleteBandwidthRateLimitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteBandwidthRateLimit", input)
-	return &StorageGatewayDeleteBandwidthRateLimitFuture{Future: future}
+	return &DeleteBandwidthRateLimitFuture{Future: future}
 }
 
 func (a *stub) DeleteChapCredentials(ctx workflow.Context, input *storagegateway.DeleteChapCredentialsInput) (*storagegateway.DeleteChapCredentialsOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) DeleteChapCredentials(ctx workflow.Context, input *storagegateway
 	return &output, err
 }
 
-func (a *stub) DeleteChapCredentialsAsync(ctx workflow.Context, input *storagegateway.DeleteChapCredentialsInput) *StorageGatewayDeleteChapCredentialsFuture {
+func (a *stub) DeleteChapCredentialsAsync(ctx workflow.Context, input *storagegateway.DeleteChapCredentialsInput) *DeleteChapCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteChapCredentials", input)
-	return &StorageGatewayDeleteChapCredentialsFuture{Future: future}
+	return &DeleteChapCredentialsFuture{Future: future}
 }
 
 func (a *stub) DeleteFileShare(ctx workflow.Context, input *storagegateway.DeleteFileShareInput) (*storagegateway.DeleteFileShareOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) DeleteFileShare(ctx workflow.Context, input *storagegateway.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteFileShareAsync(ctx workflow.Context, input *storagegateway.DeleteFileShareInput) *StorageGatewayDeleteFileShareFuture {
+func (a *stub) DeleteFileShareAsync(ctx workflow.Context, input *storagegateway.DeleteFileShareInput) *DeleteFileShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteFileShare", input)
-	return &StorageGatewayDeleteFileShareFuture{Future: future}
+	return &DeleteFileShareFuture{Future: future}
 }
 
 func (a *stub) DeleteGateway(ctx workflow.Context, input *storagegateway.DeleteGatewayInput) (*storagegateway.DeleteGatewayOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) DeleteGateway(ctx workflow.Context, input *storagegateway.DeleteG
 	return &output, err
 }
 
-func (a *stub) DeleteGatewayAsync(ctx workflow.Context, input *storagegateway.DeleteGatewayInput) *StorageGatewayDeleteGatewayFuture {
+func (a *stub) DeleteGatewayAsync(ctx workflow.Context, input *storagegateway.DeleteGatewayInput) *DeleteGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteGateway", input)
-	return &StorageGatewayDeleteGatewayFuture{Future: future}
+	return &DeleteGatewayFuture{Future: future}
 }
 
 func (a *stub) DeleteSnapshotSchedule(ctx workflow.Context, input *storagegateway.DeleteSnapshotScheduleInput) (*storagegateway.DeleteSnapshotScheduleOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) DeleteSnapshotSchedule(ctx workflow.Context, input *storagegatewa
 	return &output, err
 }
 
-func (a *stub) DeleteSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.DeleteSnapshotScheduleInput) *StorageGatewayDeleteSnapshotScheduleFuture {
+func (a *stub) DeleteSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.DeleteSnapshotScheduleInput) *DeleteSnapshotScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteSnapshotSchedule", input)
-	return &StorageGatewayDeleteSnapshotScheduleFuture{Future: future}
+	return &DeleteSnapshotScheduleFuture{Future: future}
 }
 
 func (a *stub) DeleteTape(ctx workflow.Context, input *storagegateway.DeleteTapeInput) (*storagegateway.DeleteTapeOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) DeleteTape(ctx workflow.Context, input *storagegateway.DeleteTape
 	return &output, err
 }
 
-func (a *stub) DeleteTapeAsync(ctx workflow.Context, input *storagegateway.DeleteTapeInput) *StorageGatewayDeleteTapeFuture {
+func (a *stub) DeleteTapeAsync(ctx workflow.Context, input *storagegateway.DeleteTapeInput) *DeleteTapeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteTape", input)
-	return &StorageGatewayDeleteTapeFuture{Future: future}
+	return &DeleteTapeFuture{Future: future}
 }
 
 func (a *stub) DeleteTapeArchive(ctx workflow.Context, input *storagegateway.DeleteTapeArchiveInput) (*storagegateway.DeleteTapeArchiveOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) DeleteTapeArchive(ctx workflow.Context, input *storagegateway.Del
 	return &output, err
 }
 
-func (a *stub) DeleteTapeArchiveAsync(ctx workflow.Context, input *storagegateway.DeleteTapeArchiveInput) *StorageGatewayDeleteTapeArchiveFuture {
+func (a *stub) DeleteTapeArchiveAsync(ctx workflow.Context, input *storagegateway.DeleteTapeArchiveInput) *DeleteTapeArchiveFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteTapeArchive", input)
-	return &StorageGatewayDeleteTapeArchiveFuture{Future: future}
+	return &DeleteTapeArchiveFuture{Future: future}
 }
 
 func (a *stub) DeleteTapePool(ctx workflow.Context, input *storagegateway.DeleteTapePoolInput) (*storagegateway.DeleteTapePoolOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) DeleteTapePool(ctx workflow.Context, input *storagegateway.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteTapePoolAsync(ctx workflow.Context, input *storagegateway.DeleteTapePoolInput) *StorageGatewayDeleteTapePoolFuture {
+func (a *stub) DeleteTapePoolAsync(ctx workflow.Context, input *storagegateway.DeleteTapePoolInput) *DeleteTapePoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteTapePool", input)
-	return &StorageGatewayDeleteTapePoolFuture{Future: future}
+	return &DeleteTapePoolFuture{Future: future}
 }
 
 func (a *stub) DeleteVolume(ctx workflow.Context, input *storagegateway.DeleteVolumeInput) (*storagegateway.DeleteVolumeOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) DeleteVolume(ctx workflow.Context, input *storagegateway.DeleteVo
 	return &output, err
 }
 
-func (a *stub) DeleteVolumeAsync(ctx workflow.Context, input *storagegateway.DeleteVolumeInput) *StorageGatewayDeleteVolumeFuture {
+func (a *stub) DeleteVolumeAsync(ctx workflow.Context, input *storagegateway.DeleteVolumeInput) *DeleteVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DeleteVolume", input)
-	return &StorageGatewayDeleteVolumeFuture{Future: future}
+	return &DeleteVolumeFuture{Future: future}
 }
 
 func (a *stub) DescribeAvailabilityMonitorTest(ctx workflow.Context, input *storagegateway.DescribeAvailabilityMonitorTestInput) (*storagegateway.DescribeAvailabilityMonitorTestOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) DescribeAvailabilityMonitorTest(ctx workflow.Context, input *stor
 	return &output, err
 }
 
-func (a *stub) DescribeAvailabilityMonitorTestAsync(ctx workflow.Context, input *storagegateway.DescribeAvailabilityMonitorTestInput) *StorageGatewayDescribeAvailabilityMonitorTestFuture {
+func (a *stub) DescribeAvailabilityMonitorTestAsync(ctx workflow.Context, input *storagegateway.DescribeAvailabilityMonitorTestInput) *DescribeAvailabilityMonitorTestFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeAvailabilityMonitorTest", input)
-	return &StorageGatewayDescribeAvailabilityMonitorTestFuture{Future: future}
+	return &DescribeAvailabilityMonitorTestFuture{Future: future}
 }
 
 func (a *stub) DescribeBandwidthRateLimit(ctx workflow.Context, input *storagegateway.DescribeBandwidthRateLimitInput) (*storagegateway.DescribeBandwidthRateLimitOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) DescribeBandwidthRateLimit(ctx workflow.Context, input *storagega
 	return &output, err
 }
 
-func (a *stub) DescribeBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.DescribeBandwidthRateLimitInput) *StorageGatewayDescribeBandwidthRateLimitFuture {
+func (a *stub) DescribeBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.DescribeBandwidthRateLimitInput) *DescribeBandwidthRateLimitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeBandwidthRateLimit", input)
-	return &StorageGatewayDescribeBandwidthRateLimitFuture{Future: future}
+	return &DescribeBandwidthRateLimitFuture{Future: future}
 }
 
 func (a *stub) DescribeCache(ctx workflow.Context, input *storagegateway.DescribeCacheInput) (*storagegateway.DescribeCacheOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) DescribeCache(ctx workflow.Context, input *storagegateway.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeCacheAsync(ctx workflow.Context, input *storagegateway.DescribeCacheInput) *StorageGatewayDescribeCacheFuture {
+func (a *stub) DescribeCacheAsync(ctx workflow.Context, input *storagegateway.DescribeCacheInput) *DescribeCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeCache", input)
-	return &StorageGatewayDescribeCacheFuture{Future: future}
+	return &DescribeCacheFuture{Future: future}
 }
 
 func (a *stub) DescribeCachediSCSIVolumes(ctx workflow.Context, input *storagegateway.DescribeCachediSCSIVolumesInput) (*storagegateway.DescribeCachediSCSIVolumesOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) DescribeCachediSCSIVolumes(ctx workflow.Context, input *storagega
 	return &output, err
 }
 
-func (a *stub) DescribeCachediSCSIVolumesAsync(ctx workflow.Context, input *storagegateway.DescribeCachediSCSIVolumesInput) *StorageGatewayDescribeCachediSCSIVolumesFuture {
+func (a *stub) DescribeCachediSCSIVolumesAsync(ctx workflow.Context, input *storagegateway.DescribeCachediSCSIVolumesInput) *DescribeCachediSCSIVolumesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeCachediSCSIVolumes", input)
-	return &StorageGatewayDescribeCachediSCSIVolumesFuture{Future: future}
+	return &DescribeCachediSCSIVolumesFuture{Future: future}
 }
 
 func (a *stub) DescribeChapCredentials(ctx workflow.Context, input *storagegateway.DescribeChapCredentialsInput) (*storagegateway.DescribeChapCredentialsOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) DescribeChapCredentials(ctx workflow.Context, input *storagegatew
 	return &output, err
 }
 
-func (a *stub) DescribeChapCredentialsAsync(ctx workflow.Context, input *storagegateway.DescribeChapCredentialsInput) *StorageGatewayDescribeChapCredentialsFuture {
+func (a *stub) DescribeChapCredentialsAsync(ctx workflow.Context, input *storagegateway.DescribeChapCredentialsInput) *DescribeChapCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeChapCredentials", input)
-	return &StorageGatewayDescribeChapCredentialsFuture{Future: future}
+	return &DescribeChapCredentialsFuture{Future: future}
 }
 
 func (a *stub) DescribeGatewayInformation(ctx workflow.Context, input *storagegateway.DescribeGatewayInformationInput) (*storagegateway.DescribeGatewayInformationOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) DescribeGatewayInformation(ctx workflow.Context, input *storagega
 	return &output, err
 }
 
-func (a *stub) DescribeGatewayInformationAsync(ctx workflow.Context, input *storagegateway.DescribeGatewayInformationInput) *StorageGatewayDescribeGatewayInformationFuture {
+func (a *stub) DescribeGatewayInformationAsync(ctx workflow.Context, input *storagegateway.DescribeGatewayInformationInput) *DescribeGatewayInformationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeGatewayInformation", input)
-	return &StorageGatewayDescribeGatewayInformationFuture{Future: future}
+	return &DescribeGatewayInformationFuture{Future: future}
 }
 
 func (a *stub) DescribeMaintenanceStartTime(ctx workflow.Context, input *storagegateway.DescribeMaintenanceStartTimeInput) (*storagegateway.DescribeMaintenanceStartTimeOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) DescribeMaintenanceStartTime(ctx workflow.Context, input *storage
 	return &output, err
 }
 
-func (a *stub) DescribeMaintenanceStartTimeAsync(ctx workflow.Context, input *storagegateway.DescribeMaintenanceStartTimeInput) *StorageGatewayDescribeMaintenanceStartTimeFuture {
+func (a *stub) DescribeMaintenanceStartTimeAsync(ctx workflow.Context, input *storagegateway.DescribeMaintenanceStartTimeInput) *DescribeMaintenanceStartTimeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeMaintenanceStartTime", input)
-	return &StorageGatewayDescribeMaintenanceStartTimeFuture{Future: future}
+	return &DescribeMaintenanceStartTimeFuture{Future: future}
 }
 
 func (a *stub) DescribeNFSFileShares(ctx workflow.Context, input *storagegateway.DescribeNFSFileSharesInput) (*storagegateway.DescribeNFSFileSharesOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) DescribeNFSFileShares(ctx workflow.Context, input *storagegateway
 	return &output, err
 }
 
-func (a *stub) DescribeNFSFileSharesAsync(ctx workflow.Context, input *storagegateway.DescribeNFSFileSharesInput) *StorageGatewayDescribeNFSFileSharesFuture {
+func (a *stub) DescribeNFSFileSharesAsync(ctx workflow.Context, input *storagegateway.DescribeNFSFileSharesInput) *DescribeNFSFileSharesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeNFSFileShares", input)
-	return &StorageGatewayDescribeNFSFileSharesFuture{Future: future}
+	return &DescribeNFSFileSharesFuture{Future: future}
 }
 
 func (a *stub) DescribeSMBFileShares(ctx workflow.Context, input *storagegateway.DescribeSMBFileSharesInput) (*storagegateway.DescribeSMBFileSharesOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) DescribeSMBFileShares(ctx workflow.Context, input *storagegateway
 	return &output, err
 }
 
-func (a *stub) DescribeSMBFileSharesAsync(ctx workflow.Context, input *storagegateway.DescribeSMBFileSharesInput) *StorageGatewayDescribeSMBFileSharesFuture {
+func (a *stub) DescribeSMBFileSharesAsync(ctx workflow.Context, input *storagegateway.DescribeSMBFileSharesInput) *DescribeSMBFileSharesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeSMBFileShares", input)
-	return &StorageGatewayDescribeSMBFileSharesFuture{Future: future}
+	return &DescribeSMBFileSharesFuture{Future: future}
 }
 
 func (a *stub) DescribeSMBSettings(ctx workflow.Context, input *storagegateway.DescribeSMBSettingsInput) (*storagegateway.DescribeSMBSettingsOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) DescribeSMBSettings(ctx workflow.Context, input *storagegateway.D
 	return &output, err
 }
 
-func (a *stub) DescribeSMBSettingsAsync(ctx workflow.Context, input *storagegateway.DescribeSMBSettingsInput) *StorageGatewayDescribeSMBSettingsFuture {
+func (a *stub) DescribeSMBSettingsAsync(ctx workflow.Context, input *storagegateway.DescribeSMBSettingsInput) *DescribeSMBSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeSMBSettings", input)
-	return &StorageGatewayDescribeSMBSettingsFuture{Future: future}
+	return &DescribeSMBSettingsFuture{Future: future}
 }
 
 func (a *stub) DescribeSnapshotSchedule(ctx workflow.Context, input *storagegateway.DescribeSnapshotScheduleInput) (*storagegateway.DescribeSnapshotScheduleOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) DescribeSnapshotSchedule(ctx workflow.Context, input *storagegate
 	return &output, err
 }
 
-func (a *stub) DescribeSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.DescribeSnapshotScheduleInput) *StorageGatewayDescribeSnapshotScheduleFuture {
+func (a *stub) DescribeSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.DescribeSnapshotScheduleInput) *DescribeSnapshotScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeSnapshotSchedule", input)
-	return &StorageGatewayDescribeSnapshotScheduleFuture{Future: future}
+	return &DescribeSnapshotScheduleFuture{Future: future}
 }
 
 func (a *stub) DescribeStorediSCSIVolumes(ctx workflow.Context, input *storagegateway.DescribeStorediSCSIVolumesInput) (*storagegateway.DescribeStorediSCSIVolumesOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) DescribeStorediSCSIVolumes(ctx workflow.Context, input *storagega
 	return &output, err
 }
 
-func (a *stub) DescribeStorediSCSIVolumesAsync(ctx workflow.Context, input *storagegateway.DescribeStorediSCSIVolumesInput) *StorageGatewayDescribeStorediSCSIVolumesFuture {
+func (a *stub) DescribeStorediSCSIVolumesAsync(ctx workflow.Context, input *storagegateway.DescribeStorediSCSIVolumesInput) *DescribeStorediSCSIVolumesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeStorediSCSIVolumes", input)
-	return &StorageGatewayDescribeStorediSCSIVolumesFuture{Future: future}
+	return &DescribeStorediSCSIVolumesFuture{Future: future}
 }
 
 func (a *stub) DescribeTapeArchives(ctx workflow.Context, input *storagegateway.DescribeTapeArchivesInput) (*storagegateway.DescribeTapeArchivesOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) DescribeTapeArchives(ctx workflow.Context, input *storagegateway.
 	return &output, err
 }
 
-func (a *stub) DescribeTapeArchivesAsync(ctx workflow.Context, input *storagegateway.DescribeTapeArchivesInput) *StorageGatewayDescribeTapeArchivesFuture {
+func (a *stub) DescribeTapeArchivesAsync(ctx workflow.Context, input *storagegateway.DescribeTapeArchivesInput) *DescribeTapeArchivesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeTapeArchives", input)
-	return &StorageGatewayDescribeTapeArchivesFuture{Future: future}
+	return &DescribeTapeArchivesFuture{Future: future}
 }
 
 func (a *stub) DescribeTapeRecoveryPoints(ctx workflow.Context, input *storagegateway.DescribeTapeRecoveryPointsInput) (*storagegateway.DescribeTapeRecoveryPointsOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) DescribeTapeRecoveryPoints(ctx workflow.Context, input *storagega
 	return &output, err
 }
 
-func (a *stub) DescribeTapeRecoveryPointsAsync(ctx workflow.Context, input *storagegateway.DescribeTapeRecoveryPointsInput) *StorageGatewayDescribeTapeRecoveryPointsFuture {
+func (a *stub) DescribeTapeRecoveryPointsAsync(ctx workflow.Context, input *storagegateway.DescribeTapeRecoveryPointsInput) *DescribeTapeRecoveryPointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeTapeRecoveryPoints", input)
-	return &StorageGatewayDescribeTapeRecoveryPointsFuture{Future: future}
+	return &DescribeTapeRecoveryPointsFuture{Future: future}
 }
 
 func (a *stub) DescribeTapes(ctx workflow.Context, input *storagegateway.DescribeTapesInput) (*storagegateway.DescribeTapesOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) DescribeTapes(ctx workflow.Context, input *storagegateway.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeTapesAsync(ctx workflow.Context, input *storagegateway.DescribeTapesInput) *StorageGatewayDescribeTapesFuture {
+func (a *stub) DescribeTapesAsync(ctx workflow.Context, input *storagegateway.DescribeTapesInput) *DescribeTapesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeTapes", input)
-	return &StorageGatewayDescribeTapesFuture{Future: future}
+	return &DescribeTapesFuture{Future: future}
 }
 
 func (a *stub) DescribeUploadBuffer(ctx workflow.Context, input *storagegateway.DescribeUploadBufferInput) (*storagegateway.DescribeUploadBufferOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) DescribeUploadBuffer(ctx workflow.Context, input *storagegateway.
 	return &output, err
 }
 
-func (a *stub) DescribeUploadBufferAsync(ctx workflow.Context, input *storagegateway.DescribeUploadBufferInput) *StorageGatewayDescribeUploadBufferFuture {
+func (a *stub) DescribeUploadBufferAsync(ctx workflow.Context, input *storagegateway.DescribeUploadBufferInput) *DescribeUploadBufferFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeUploadBuffer", input)
-	return &StorageGatewayDescribeUploadBufferFuture{Future: future}
+	return &DescribeUploadBufferFuture{Future: future}
 }
 
 func (a *stub) DescribeVTLDevices(ctx workflow.Context, input *storagegateway.DescribeVTLDevicesInput) (*storagegateway.DescribeVTLDevicesOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) DescribeVTLDevices(ctx workflow.Context, input *storagegateway.De
 	return &output, err
 }
 
-func (a *stub) DescribeVTLDevicesAsync(ctx workflow.Context, input *storagegateway.DescribeVTLDevicesInput) *StorageGatewayDescribeVTLDevicesFuture {
+func (a *stub) DescribeVTLDevicesAsync(ctx workflow.Context, input *storagegateway.DescribeVTLDevicesInput) *DescribeVTLDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeVTLDevices", input)
-	return &StorageGatewayDescribeVTLDevicesFuture{Future: future}
+	return &DescribeVTLDevicesFuture{Future: future}
 }
 
 func (a *stub) DescribeWorkingStorage(ctx workflow.Context, input *storagegateway.DescribeWorkingStorageInput) (*storagegateway.DescribeWorkingStorageOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) DescribeWorkingStorage(ctx workflow.Context, input *storagegatewa
 	return &output, err
 }
 
-func (a *stub) DescribeWorkingStorageAsync(ctx workflow.Context, input *storagegateway.DescribeWorkingStorageInput) *StorageGatewayDescribeWorkingStorageFuture {
+func (a *stub) DescribeWorkingStorageAsync(ctx workflow.Context, input *storagegateway.DescribeWorkingStorageInput) *DescribeWorkingStorageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DescribeWorkingStorage", input)
-	return &StorageGatewayDescribeWorkingStorageFuture{Future: future}
+	return &DescribeWorkingStorageFuture{Future: future}
 }
 
 func (a *stub) DetachVolume(ctx workflow.Context, input *storagegateway.DetachVolumeInput) (*storagegateway.DetachVolumeOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) DetachVolume(ctx workflow.Context, input *storagegateway.DetachVo
 	return &output, err
 }
 
-func (a *stub) DetachVolumeAsync(ctx workflow.Context, input *storagegateway.DetachVolumeInput) *StorageGatewayDetachVolumeFuture {
+func (a *stub) DetachVolumeAsync(ctx workflow.Context, input *storagegateway.DetachVolumeInput) *DetachVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DetachVolume", input)
-	return &StorageGatewayDetachVolumeFuture{Future: future}
+	return &DetachVolumeFuture{Future: future}
 }
 
 func (a *stub) DisableGateway(ctx workflow.Context, input *storagegateway.DisableGatewayInput) (*storagegateway.DisableGatewayOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) DisableGateway(ctx workflow.Context, input *storagegateway.Disabl
 	return &output, err
 }
 
-func (a *stub) DisableGatewayAsync(ctx workflow.Context, input *storagegateway.DisableGatewayInput) *StorageGatewayDisableGatewayFuture {
+func (a *stub) DisableGatewayAsync(ctx workflow.Context, input *storagegateway.DisableGatewayInput) *DisableGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.DisableGateway", input)
-	return &StorageGatewayDisableGatewayFuture{Future: future}
+	return &DisableGatewayFuture{Future: future}
 }
 
 func (a *stub) JoinDomain(ctx workflow.Context, input *storagegateway.JoinDomainInput) (*storagegateway.JoinDomainOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) JoinDomain(ctx workflow.Context, input *storagegateway.JoinDomain
 	return &output, err
 }
 
-func (a *stub) JoinDomainAsync(ctx workflow.Context, input *storagegateway.JoinDomainInput) *StorageGatewayJoinDomainFuture {
+func (a *stub) JoinDomainAsync(ctx workflow.Context, input *storagegateway.JoinDomainInput) *JoinDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.JoinDomain", input)
-	return &StorageGatewayJoinDomainFuture{Future: future}
+	return &JoinDomainFuture{Future: future}
 }
 
 func (a *stub) ListAutomaticTapeCreationPolicies(ctx workflow.Context, input *storagegateway.ListAutomaticTapeCreationPoliciesInput) (*storagegateway.ListAutomaticTapeCreationPoliciesOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) ListAutomaticTapeCreationPolicies(ctx workflow.Context, input *st
 	return &output, err
 }
 
-func (a *stub) ListAutomaticTapeCreationPoliciesAsync(ctx workflow.Context, input *storagegateway.ListAutomaticTapeCreationPoliciesInput) *StorageGatewayListAutomaticTapeCreationPoliciesFuture {
+func (a *stub) ListAutomaticTapeCreationPoliciesAsync(ctx workflow.Context, input *storagegateway.ListAutomaticTapeCreationPoliciesInput) *ListAutomaticTapeCreationPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListAutomaticTapeCreationPolicies", input)
-	return &StorageGatewayListAutomaticTapeCreationPoliciesFuture{Future: future}
+	return &ListAutomaticTapeCreationPoliciesFuture{Future: future}
 }
 
 func (a *stub) ListFileShares(ctx workflow.Context, input *storagegateway.ListFileSharesInput) (*storagegateway.ListFileSharesOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) ListFileShares(ctx workflow.Context, input *storagegateway.ListFi
 	return &output, err
 }
 
-func (a *stub) ListFileSharesAsync(ctx workflow.Context, input *storagegateway.ListFileSharesInput) *StorageGatewayListFileSharesFuture {
+func (a *stub) ListFileSharesAsync(ctx workflow.Context, input *storagegateway.ListFileSharesInput) *ListFileSharesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListFileShares", input)
-	return &StorageGatewayListFileSharesFuture{Future: future}
+	return &ListFileSharesFuture{Future: future}
 }
 
 func (a *stub) ListGateways(ctx workflow.Context, input *storagegateway.ListGatewaysInput) (*storagegateway.ListGatewaysOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) ListGateways(ctx workflow.Context, input *storagegateway.ListGate
 	return &output, err
 }
 
-func (a *stub) ListGatewaysAsync(ctx workflow.Context, input *storagegateway.ListGatewaysInput) *StorageGatewayListGatewaysFuture {
+func (a *stub) ListGatewaysAsync(ctx workflow.Context, input *storagegateway.ListGatewaysInput) *ListGatewaysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListGateways", input)
-	return &StorageGatewayListGatewaysFuture{Future: future}
+	return &ListGatewaysFuture{Future: future}
 }
 
 func (a *stub) ListLocalDisks(ctx workflow.Context, input *storagegateway.ListLocalDisksInput) (*storagegateway.ListLocalDisksOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) ListLocalDisks(ctx workflow.Context, input *storagegateway.ListLo
 	return &output, err
 }
 
-func (a *stub) ListLocalDisksAsync(ctx workflow.Context, input *storagegateway.ListLocalDisksInput) *StorageGatewayListLocalDisksFuture {
+func (a *stub) ListLocalDisksAsync(ctx workflow.Context, input *storagegateway.ListLocalDisksInput) *ListLocalDisksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListLocalDisks", input)
-	return &StorageGatewayListLocalDisksFuture{Future: future}
+	return &ListLocalDisksFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *storagegateway.ListTagsForResourceInput) (*storagegateway.ListTagsForResourceOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *storagegateway.L
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *storagegateway.ListTagsForResourceInput) *StorageGatewayListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *storagegateway.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListTagsForResource", input)
-	return &StorageGatewayListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListTapePools(ctx workflow.Context, input *storagegateway.ListTapePoolsInput) (*storagegateway.ListTapePoolsOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) ListTapePools(ctx workflow.Context, input *storagegateway.ListTap
 	return &output, err
 }
 
-func (a *stub) ListTapePoolsAsync(ctx workflow.Context, input *storagegateway.ListTapePoolsInput) *StorageGatewayListTapePoolsFuture {
+func (a *stub) ListTapePoolsAsync(ctx workflow.Context, input *storagegateway.ListTapePoolsInput) *ListTapePoolsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListTapePools", input)
-	return &StorageGatewayListTapePoolsFuture{Future: future}
+	return &ListTapePoolsFuture{Future: future}
 }
 
 func (a *stub) ListTapes(ctx workflow.Context, input *storagegateway.ListTapesInput) (*storagegateway.ListTapesOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) ListTapes(ctx workflow.Context, input *storagegateway.ListTapesIn
 	return &output, err
 }
 
-func (a *stub) ListTapesAsync(ctx workflow.Context, input *storagegateway.ListTapesInput) *StorageGatewayListTapesFuture {
+func (a *stub) ListTapesAsync(ctx workflow.Context, input *storagegateway.ListTapesInput) *ListTapesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListTapes", input)
-	return &StorageGatewayListTapesFuture{Future: future}
+	return &ListTapesFuture{Future: future}
 }
 
 func (a *stub) ListVolumeInitiators(ctx workflow.Context, input *storagegateway.ListVolumeInitiatorsInput) (*storagegateway.ListVolumeInitiatorsOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) ListVolumeInitiators(ctx workflow.Context, input *storagegateway.
 	return &output, err
 }
 
-func (a *stub) ListVolumeInitiatorsAsync(ctx workflow.Context, input *storagegateway.ListVolumeInitiatorsInput) *StorageGatewayListVolumeInitiatorsFuture {
+func (a *stub) ListVolumeInitiatorsAsync(ctx workflow.Context, input *storagegateway.ListVolumeInitiatorsInput) *ListVolumeInitiatorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListVolumeInitiators", input)
-	return &StorageGatewayListVolumeInitiatorsFuture{Future: future}
+	return &ListVolumeInitiatorsFuture{Future: future}
 }
 
 func (a *stub) ListVolumeRecoveryPoints(ctx workflow.Context, input *storagegateway.ListVolumeRecoveryPointsInput) (*storagegateway.ListVolumeRecoveryPointsOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) ListVolumeRecoveryPoints(ctx workflow.Context, input *storagegate
 	return &output, err
 }
 
-func (a *stub) ListVolumeRecoveryPointsAsync(ctx workflow.Context, input *storagegateway.ListVolumeRecoveryPointsInput) *StorageGatewayListVolumeRecoveryPointsFuture {
+func (a *stub) ListVolumeRecoveryPointsAsync(ctx workflow.Context, input *storagegateway.ListVolumeRecoveryPointsInput) *ListVolumeRecoveryPointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListVolumeRecoveryPoints", input)
-	return &StorageGatewayListVolumeRecoveryPointsFuture{Future: future}
+	return &ListVolumeRecoveryPointsFuture{Future: future}
 }
 
 func (a *stub) ListVolumes(ctx workflow.Context, input *storagegateway.ListVolumesInput) (*storagegateway.ListVolumesOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *stub) ListVolumes(ctx workflow.Context, input *storagegateway.ListVolum
 	return &output, err
 }
 
-func (a *stub) ListVolumesAsync(ctx workflow.Context, input *storagegateway.ListVolumesInput) *StorageGatewayListVolumesFuture {
+func (a *stub) ListVolumesAsync(ctx workflow.Context, input *storagegateway.ListVolumesInput) *ListVolumesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ListVolumes", input)
-	return &StorageGatewayListVolumesFuture{Future: future}
+	return &ListVolumesFuture{Future: future}
 }
 
 func (a *stub) NotifyWhenUploaded(ctx workflow.Context, input *storagegateway.NotifyWhenUploadedInput) (*storagegateway.NotifyWhenUploadedOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *stub) NotifyWhenUploaded(ctx workflow.Context, input *storagegateway.No
 	return &output, err
 }
 
-func (a *stub) NotifyWhenUploadedAsync(ctx workflow.Context, input *storagegateway.NotifyWhenUploadedInput) *StorageGatewayNotifyWhenUploadedFuture {
+func (a *stub) NotifyWhenUploadedAsync(ctx workflow.Context, input *storagegateway.NotifyWhenUploadedInput) *NotifyWhenUploadedFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.NotifyWhenUploaded", input)
-	return &StorageGatewayNotifyWhenUploadedFuture{Future: future}
+	return &NotifyWhenUploadedFuture{Future: future}
 }
 
 func (a *stub) RefreshCache(ctx workflow.Context, input *storagegateway.RefreshCacheInput) (*storagegateway.RefreshCacheOutput, error) {
@@ -1573,9 +1573,9 @@ func (a *stub) RefreshCache(ctx workflow.Context, input *storagegateway.RefreshC
 	return &output, err
 }
 
-func (a *stub) RefreshCacheAsync(ctx workflow.Context, input *storagegateway.RefreshCacheInput) *StorageGatewayRefreshCacheFuture {
+func (a *stub) RefreshCacheAsync(ctx workflow.Context, input *storagegateway.RefreshCacheInput) *RefreshCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.RefreshCache", input)
-	return &StorageGatewayRefreshCacheFuture{Future: future}
+	return &RefreshCacheFuture{Future: future}
 }
 
 func (a *stub) RemoveTagsFromResource(ctx workflow.Context, input *storagegateway.RemoveTagsFromResourceInput) (*storagegateway.RemoveTagsFromResourceOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *stub) RemoveTagsFromResource(ctx workflow.Context, input *storagegatewa
 	return &output, err
 }
 
-func (a *stub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *storagegateway.RemoveTagsFromResourceInput) *StorageGatewayRemoveTagsFromResourceFuture {
+func (a *stub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *storagegateway.RemoveTagsFromResourceInput) *RemoveTagsFromResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.RemoveTagsFromResource", input)
-	return &StorageGatewayRemoveTagsFromResourceFuture{Future: future}
+	return &RemoveTagsFromResourceFuture{Future: future}
 }
 
 func (a *stub) ResetCache(ctx workflow.Context, input *storagegateway.ResetCacheInput) (*storagegateway.ResetCacheOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *stub) ResetCache(ctx workflow.Context, input *storagegateway.ResetCache
 	return &output, err
 }
 
-func (a *stub) ResetCacheAsync(ctx workflow.Context, input *storagegateway.ResetCacheInput) *StorageGatewayResetCacheFuture {
+func (a *stub) ResetCacheAsync(ctx workflow.Context, input *storagegateway.ResetCacheInput) *ResetCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ResetCache", input)
-	return &StorageGatewayResetCacheFuture{Future: future}
+	return &ResetCacheFuture{Future: future}
 }
 
 func (a *stub) RetrieveTapeArchive(ctx workflow.Context, input *storagegateway.RetrieveTapeArchiveInput) (*storagegateway.RetrieveTapeArchiveOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *stub) RetrieveTapeArchive(ctx workflow.Context, input *storagegateway.R
 	return &output, err
 }
 
-func (a *stub) RetrieveTapeArchiveAsync(ctx workflow.Context, input *storagegateway.RetrieveTapeArchiveInput) *StorageGatewayRetrieveTapeArchiveFuture {
+func (a *stub) RetrieveTapeArchiveAsync(ctx workflow.Context, input *storagegateway.RetrieveTapeArchiveInput) *RetrieveTapeArchiveFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.RetrieveTapeArchive", input)
-	return &StorageGatewayRetrieveTapeArchiveFuture{Future: future}
+	return &RetrieveTapeArchiveFuture{Future: future}
 }
 
 func (a *stub) RetrieveTapeRecoveryPoint(ctx workflow.Context, input *storagegateway.RetrieveTapeRecoveryPointInput) (*storagegateway.RetrieveTapeRecoveryPointOutput, error) {
@@ -1617,9 +1617,9 @@ func (a *stub) RetrieveTapeRecoveryPoint(ctx workflow.Context, input *storagegat
 	return &output, err
 }
 
-func (a *stub) RetrieveTapeRecoveryPointAsync(ctx workflow.Context, input *storagegateway.RetrieveTapeRecoveryPointInput) *StorageGatewayRetrieveTapeRecoveryPointFuture {
+func (a *stub) RetrieveTapeRecoveryPointAsync(ctx workflow.Context, input *storagegateway.RetrieveTapeRecoveryPointInput) *RetrieveTapeRecoveryPointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.RetrieveTapeRecoveryPoint", input)
-	return &StorageGatewayRetrieveTapeRecoveryPointFuture{Future: future}
+	return &RetrieveTapeRecoveryPointFuture{Future: future}
 }
 
 func (a *stub) SetLocalConsolePassword(ctx workflow.Context, input *storagegateway.SetLocalConsolePasswordInput) (*storagegateway.SetLocalConsolePasswordOutput, error) {
@@ -1628,9 +1628,9 @@ func (a *stub) SetLocalConsolePassword(ctx workflow.Context, input *storagegatew
 	return &output, err
 }
 
-func (a *stub) SetLocalConsolePasswordAsync(ctx workflow.Context, input *storagegateway.SetLocalConsolePasswordInput) *StorageGatewaySetLocalConsolePasswordFuture {
+func (a *stub) SetLocalConsolePasswordAsync(ctx workflow.Context, input *storagegateway.SetLocalConsolePasswordInput) *SetLocalConsolePasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.SetLocalConsolePassword", input)
-	return &StorageGatewaySetLocalConsolePasswordFuture{Future: future}
+	return &SetLocalConsolePasswordFuture{Future: future}
 }
 
 func (a *stub) SetSMBGuestPassword(ctx workflow.Context, input *storagegateway.SetSMBGuestPasswordInput) (*storagegateway.SetSMBGuestPasswordOutput, error) {
@@ -1639,9 +1639,9 @@ func (a *stub) SetSMBGuestPassword(ctx workflow.Context, input *storagegateway.S
 	return &output, err
 }
 
-func (a *stub) SetSMBGuestPasswordAsync(ctx workflow.Context, input *storagegateway.SetSMBGuestPasswordInput) *StorageGatewaySetSMBGuestPasswordFuture {
+func (a *stub) SetSMBGuestPasswordAsync(ctx workflow.Context, input *storagegateway.SetSMBGuestPasswordInput) *SetSMBGuestPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.SetSMBGuestPassword", input)
-	return &StorageGatewaySetSMBGuestPasswordFuture{Future: future}
+	return &SetSMBGuestPasswordFuture{Future: future}
 }
 
 func (a *stub) ShutdownGateway(ctx workflow.Context, input *storagegateway.ShutdownGatewayInput) (*storagegateway.ShutdownGatewayOutput, error) {
@@ -1650,9 +1650,9 @@ func (a *stub) ShutdownGateway(ctx workflow.Context, input *storagegateway.Shutd
 	return &output, err
 }
 
-func (a *stub) ShutdownGatewayAsync(ctx workflow.Context, input *storagegateway.ShutdownGatewayInput) *StorageGatewayShutdownGatewayFuture {
+func (a *stub) ShutdownGatewayAsync(ctx workflow.Context, input *storagegateway.ShutdownGatewayInput) *ShutdownGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.ShutdownGateway", input)
-	return &StorageGatewayShutdownGatewayFuture{Future: future}
+	return &ShutdownGatewayFuture{Future: future}
 }
 
 func (a *stub) StartAvailabilityMonitorTest(ctx workflow.Context, input *storagegateway.StartAvailabilityMonitorTestInput) (*storagegateway.StartAvailabilityMonitorTestOutput, error) {
@@ -1661,9 +1661,9 @@ func (a *stub) StartAvailabilityMonitorTest(ctx workflow.Context, input *storage
 	return &output, err
 }
 
-func (a *stub) StartAvailabilityMonitorTestAsync(ctx workflow.Context, input *storagegateway.StartAvailabilityMonitorTestInput) *StorageGatewayStartAvailabilityMonitorTestFuture {
+func (a *stub) StartAvailabilityMonitorTestAsync(ctx workflow.Context, input *storagegateway.StartAvailabilityMonitorTestInput) *StartAvailabilityMonitorTestFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.StartAvailabilityMonitorTest", input)
-	return &StorageGatewayStartAvailabilityMonitorTestFuture{Future: future}
+	return &StartAvailabilityMonitorTestFuture{Future: future}
 }
 
 func (a *stub) StartGateway(ctx workflow.Context, input *storagegateway.StartGatewayInput) (*storagegateway.StartGatewayOutput, error) {
@@ -1672,9 +1672,9 @@ func (a *stub) StartGateway(ctx workflow.Context, input *storagegateway.StartGat
 	return &output, err
 }
 
-func (a *stub) StartGatewayAsync(ctx workflow.Context, input *storagegateway.StartGatewayInput) *StorageGatewayStartGatewayFuture {
+func (a *stub) StartGatewayAsync(ctx workflow.Context, input *storagegateway.StartGatewayInput) *StartGatewayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.StartGateway", input)
-	return &StorageGatewayStartGatewayFuture{Future: future}
+	return &StartGatewayFuture{Future: future}
 }
 
 func (a *stub) UpdateAutomaticTapeCreationPolicy(ctx workflow.Context, input *storagegateway.UpdateAutomaticTapeCreationPolicyInput) (*storagegateway.UpdateAutomaticTapeCreationPolicyOutput, error) {
@@ -1683,9 +1683,9 @@ func (a *stub) UpdateAutomaticTapeCreationPolicy(ctx workflow.Context, input *st
 	return &output, err
 }
 
-func (a *stub) UpdateAutomaticTapeCreationPolicyAsync(ctx workflow.Context, input *storagegateway.UpdateAutomaticTapeCreationPolicyInput) *StorageGatewayUpdateAutomaticTapeCreationPolicyFuture {
+func (a *stub) UpdateAutomaticTapeCreationPolicyAsync(ctx workflow.Context, input *storagegateway.UpdateAutomaticTapeCreationPolicyInput) *UpdateAutomaticTapeCreationPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateAutomaticTapeCreationPolicy", input)
-	return &StorageGatewayUpdateAutomaticTapeCreationPolicyFuture{Future: future}
+	return &UpdateAutomaticTapeCreationPolicyFuture{Future: future}
 }
 
 func (a *stub) UpdateBandwidthRateLimit(ctx workflow.Context, input *storagegateway.UpdateBandwidthRateLimitInput) (*storagegateway.UpdateBandwidthRateLimitOutput, error) {
@@ -1694,9 +1694,9 @@ func (a *stub) UpdateBandwidthRateLimit(ctx workflow.Context, input *storagegate
 	return &output, err
 }
 
-func (a *stub) UpdateBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.UpdateBandwidthRateLimitInput) *StorageGatewayUpdateBandwidthRateLimitFuture {
+func (a *stub) UpdateBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.UpdateBandwidthRateLimitInput) *UpdateBandwidthRateLimitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateBandwidthRateLimit", input)
-	return &StorageGatewayUpdateBandwidthRateLimitFuture{Future: future}
+	return &UpdateBandwidthRateLimitFuture{Future: future}
 }
 
 func (a *stub) UpdateChapCredentials(ctx workflow.Context, input *storagegateway.UpdateChapCredentialsInput) (*storagegateway.UpdateChapCredentialsOutput, error) {
@@ -1705,9 +1705,9 @@ func (a *stub) UpdateChapCredentials(ctx workflow.Context, input *storagegateway
 	return &output, err
 }
 
-func (a *stub) UpdateChapCredentialsAsync(ctx workflow.Context, input *storagegateway.UpdateChapCredentialsInput) *StorageGatewayUpdateChapCredentialsFuture {
+func (a *stub) UpdateChapCredentialsAsync(ctx workflow.Context, input *storagegateway.UpdateChapCredentialsInput) *UpdateChapCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateChapCredentials", input)
-	return &StorageGatewayUpdateChapCredentialsFuture{Future: future}
+	return &UpdateChapCredentialsFuture{Future: future}
 }
 
 func (a *stub) UpdateGatewayInformation(ctx workflow.Context, input *storagegateway.UpdateGatewayInformationInput) (*storagegateway.UpdateGatewayInformationOutput, error) {
@@ -1716,9 +1716,9 @@ func (a *stub) UpdateGatewayInformation(ctx workflow.Context, input *storagegate
 	return &output, err
 }
 
-func (a *stub) UpdateGatewayInformationAsync(ctx workflow.Context, input *storagegateway.UpdateGatewayInformationInput) *StorageGatewayUpdateGatewayInformationFuture {
+func (a *stub) UpdateGatewayInformationAsync(ctx workflow.Context, input *storagegateway.UpdateGatewayInformationInput) *UpdateGatewayInformationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateGatewayInformation", input)
-	return &StorageGatewayUpdateGatewayInformationFuture{Future: future}
+	return &UpdateGatewayInformationFuture{Future: future}
 }
 
 func (a *stub) UpdateGatewaySoftwareNow(ctx workflow.Context, input *storagegateway.UpdateGatewaySoftwareNowInput) (*storagegateway.UpdateGatewaySoftwareNowOutput, error) {
@@ -1727,9 +1727,9 @@ func (a *stub) UpdateGatewaySoftwareNow(ctx workflow.Context, input *storagegate
 	return &output, err
 }
 
-func (a *stub) UpdateGatewaySoftwareNowAsync(ctx workflow.Context, input *storagegateway.UpdateGatewaySoftwareNowInput) *StorageGatewayUpdateGatewaySoftwareNowFuture {
+func (a *stub) UpdateGatewaySoftwareNowAsync(ctx workflow.Context, input *storagegateway.UpdateGatewaySoftwareNowInput) *UpdateGatewaySoftwareNowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateGatewaySoftwareNow", input)
-	return &StorageGatewayUpdateGatewaySoftwareNowFuture{Future: future}
+	return &UpdateGatewaySoftwareNowFuture{Future: future}
 }
 
 func (a *stub) UpdateMaintenanceStartTime(ctx workflow.Context, input *storagegateway.UpdateMaintenanceStartTimeInput) (*storagegateway.UpdateMaintenanceStartTimeOutput, error) {
@@ -1738,9 +1738,9 @@ func (a *stub) UpdateMaintenanceStartTime(ctx workflow.Context, input *storagega
 	return &output, err
 }
 
-func (a *stub) UpdateMaintenanceStartTimeAsync(ctx workflow.Context, input *storagegateway.UpdateMaintenanceStartTimeInput) *StorageGatewayUpdateMaintenanceStartTimeFuture {
+func (a *stub) UpdateMaintenanceStartTimeAsync(ctx workflow.Context, input *storagegateway.UpdateMaintenanceStartTimeInput) *UpdateMaintenanceStartTimeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateMaintenanceStartTime", input)
-	return &StorageGatewayUpdateMaintenanceStartTimeFuture{Future: future}
+	return &UpdateMaintenanceStartTimeFuture{Future: future}
 }
 
 func (a *stub) UpdateNFSFileShare(ctx workflow.Context, input *storagegateway.UpdateNFSFileShareInput) (*storagegateway.UpdateNFSFileShareOutput, error) {
@@ -1749,9 +1749,9 @@ func (a *stub) UpdateNFSFileShare(ctx workflow.Context, input *storagegateway.Up
 	return &output, err
 }
 
-func (a *stub) UpdateNFSFileShareAsync(ctx workflow.Context, input *storagegateway.UpdateNFSFileShareInput) *StorageGatewayUpdateNFSFileShareFuture {
+func (a *stub) UpdateNFSFileShareAsync(ctx workflow.Context, input *storagegateway.UpdateNFSFileShareInput) *UpdateNFSFileShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateNFSFileShare", input)
-	return &StorageGatewayUpdateNFSFileShareFuture{Future: future}
+	return &UpdateNFSFileShareFuture{Future: future}
 }
 
 func (a *stub) UpdateSMBFileShare(ctx workflow.Context, input *storagegateway.UpdateSMBFileShareInput) (*storagegateway.UpdateSMBFileShareOutput, error) {
@@ -1760,9 +1760,9 @@ func (a *stub) UpdateSMBFileShare(ctx workflow.Context, input *storagegateway.Up
 	return &output, err
 }
 
-func (a *stub) UpdateSMBFileShareAsync(ctx workflow.Context, input *storagegateway.UpdateSMBFileShareInput) *StorageGatewayUpdateSMBFileShareFuture {
+func (a *stub) UpdateSMBFileShareAsync(ctx workflow.Context, input *storagegateway.UpdateSMBFileShareInput) *UpdateSMBFileShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateSMBFileShare", input)
-	return &StorageGatewayUpdateSMBFileShareFuture{Future: future}
+	return &UpdateSMBFileShareFuture{Future: future}
 }
 
 func (a *stub) UpdateSMBSecurityStrategy(ctx workflow.Context, input *storagegateway.UpdateSMBSecurityStrategyInput) (*storagegateway.UpdateSMBSecurityStrategyOutput, error) {
@@ -1771,9 +1771,9 @@ func (a *stub) UpdateSMBSecurityStrategy(ctx workflow.Context, input *storagegat
 	return &output, err
 }
 
-func (a *stub) UpdateSMBSecurityStrategyAsync(ctx workflow.Context, input *storagegateway.UpdateSMBSecurityStrategyInput) *StorageGatewayUpdateSMBSecurityStrategyFuture {
+func (a *stub) UpdateSMBSecurityStrategyAsync(ctx workflow.Context, input *storagegateway.UpdateSMBSecurityStrategyInput) *UpdateSMBSecurityStrategyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateSMBSecurityStrategy", input)
-	return &StorageGatewayUpdateSMBSecurityStrategyFuture{Future: future}
+	return &UpdateSMBSecurityStrategyFuture{Future: future}
 }
 
 func (a *stub) UpdateSnapshotSchedule(ctx workflow.Context, input *storagegateway.UpdateSnapshotScheduleInput) (*storagegateway.UpdateSnapshotScheduleOutput, error) {
@@ -1782,9 +1782,9 @@ func (a *stub) UpdateSnapshotSchedule(ctx workflow.Context, input *storagegatewa
 	return &output, err
 }
 
-func (a *stub) UpdateSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.UpdateSnapshotScheduleInput) *StorageGatewayUpdateSnapshotScheduleFuture {
+func (a *stub) UpdateSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.UpdateSnapshotScheduleInput) *UpdateSnapshotScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateSnapshotSchedule", input)
-	return &StorageGatewayUpdateSnapshotScheduleFuture{Future: future}
+	return &UpdateSnapshotScheduleFuture{Future: future}
 }
 
 func (a *stub) UpdateVTLDeviceType(ctx workflow.Context, input *storagegateway.UpdateVTLDeviceTypeInput) (*storagegateway.UpdateVTLDeviceTypeOutput, error) {
@@ -1793,7 +1793,7 @@ func (a *stub) UpdateVTLDeviceType(ctx workflow.Context, input *storagegateway.U
 	return &output, err
 }
 
-func (a *stub) UpdateVTLDeviceTypeAsync(ctx workflow.Context, input *storagegateway.UpdateVTLDeviceTypeInput) *StorageGatewayUpdateVTLDeviceTypeFuture {
+func (a *stub) UpdateVTLDeviceTypeAsync(ctx workflow.Context, input *storagegateway.UpdateVTLDeviceTypeInput) *UpdateVTLDeviceTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.storagegateway.UpdateVTLDeviceType", input)
-	return &StorageGatewayUpdateVTLDeviceTypeFuture{Future: future}
+	return &UpdateVTLDeviceTypeFuture{Future: future}
 }

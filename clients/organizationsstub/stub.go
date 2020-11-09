@@ -16,562 +16,562 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type OrganizationsAcceptHandshakeFuture struct {
+type AcceptHandshakeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsAcceptHandshakeFuture) Get(ctx workflow.Context) (*organizations.AcceptHandshakeOutput, error) {
+func (r *AcceptHandshakeFuture) Get(ctx workflow.Context) (*organizations.AcceptHandshakeOutput, error) {
 	var output organizations.AcceptHandshakeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsAttachPolicyFuture struct {
+type AttachPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsAttachPolicyFuture) Get(ctx workflow.Context) (*organizations.AttachPolicyOutput, error) {
+func (r *AttachPolicyFuture) Get(ctx workflow.Context) (*organizations.AttachPolicyOutput, error) {
 	var output organizations.AttachPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsCancelHandshakeFuture struct {
+type CancelHandshakeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsCancelHandshakeFuture) Get(ctx workflow.Context) (*organizations.CancelHandshakeOutput, error) {
+func (r *CancelHandshakeFuture) Get(ctx workflow.Context) (*organizations.CancelHandshakeOutput, error) {
 	var output organizations.CancelHandshakeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsCreateAccountFuture struct {
+type CreateAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsCreateAccountFuture) Get(ctx workflow.Context) (*organizations.CreateAccountOutput, error) {
+func (r *CreateAccountFuture) Get(ctx workflow.Context) (*organizations.CreateAccountOutput, error) {
 	var output organizations.CreateAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsCreateGovCloudAccountFuture struct {
+type CreateGovCloudAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsCreateGovCloudAccountFuture) Get(ctx workflow.Context) (*organizations.CreateGovCloudAccountOutput, error) {
+func (r *CreateGovCloudAccountFuture) Get(ctx workflow.Context) (*organizations.CreateGovCloudAccountOutput, error) {
 	var output organizations.CreateGovCloudAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsCreateOrganizationFuture struct {
+type CreateOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsCreateOrganizationFuture) Get(ctx workflow.Context) (*organizations.CreateOrganizationOutput, error) {
+func (r *CreateOrganizationFuture) Get(ctx workflow.Context) (*organizations.CreateOrganizationOutput, error) {
 	var output organizations.CreateOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsCreateOrganizationalUnitFuture struct {
+type CreateOrganizationalUnitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsCreateOrganizationalUnitFuture) Get(ctx workflow.Context) (*organizations.CreateOrganizationalUnitOutput, error) {
+func (r *CreateOrganizationalUnitFuture) Get(ctx workflow.Context) (*organizations.CreateOrganizationalUnitOutput, error) {
 	var output organizations.CreateOrganizationalUnitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsCreatePolicyFuture struct {
+type CreatePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsCreatePolicyFuture) Get(ctx workflow.Context) (*organizations.CreatePolicyOutput, error) {
+func (r *CreatePolicyFuture) Get(ctx workflow.Context) (*organizations.CreatePolicyOutput, error) {
 	var output organizations.CreatePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDeclineHandshakeFuture struct {
+type DeclineHandshakeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDeclineHandshakeFuture) Get(ctx workflow.Context) (*organizations.DeclineHandshakeOutput, error) {
+func (r *DeclineHandshakeFuture) Get(ctx workflow.Context) (*organizations.DeclineHandshakeOutput, error) {
 	var output organizations.DeclineHandshakeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDeleteOrganizationFuture struct {
+type DeleteOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDeleteOrganizationFuture) Get(ctx workflow.Context) (*organizations.DeleteOrganizationOutput, error) {
+func (r *DeleteOrganizationFuture) Get(ctx workflow.Context) (*organizations.DeleteOrganizationOutput, error) {
 	var output organizations.DeleteOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDeleteOrganizationalUnitFuture struct {
+type DeleteOrganizationalUnitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDeleteOrganizationalUnitFuture) Get(ctx workflow.Context) (*organizations.DeleteOrganizationalUnitOutput, error) {
+func (r *DeleteOrganizationalUnitFuture) Get(ctx workflow.Context) (*organizations.DeleteOrganizationalUnitOutput, error) {
 	var output organizations.DeleteOrganizationalUnitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDeletePolicyFuture struct {
+type DeletePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDeletePolicyFuture) Get(ctx workflow.Context) (*organizations.DeletePolicyOutput, error) {
+func (r *DeletePolicyFuture) Get(ctx workflow.Context) (*organizations.DeletePolicyOutput, error) {
 	var output organizations.DeletePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDeregisterDelegatedAdministratorFuture struct {
+type DeregisterDelegatedAdministratorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDeregisterDelegatedAdministratorFuture) Get(ctx workflow.Context) (*organizations.DeregisterDelegatedAdministratorOutput, error) {
+func (r *DeregisterDelegatedAdministratorFuture) Get(ctx workflow.Context) (*organizations.DeregisterDelegatedAdministratorOutput, error) {
 	var output organizations.DeregisterDelegatedAdministratorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDescribeAccountFuture struct {
+type DescribeAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDescribeAccountFuture) Get(ctx workflow.Context) (*organizations.DescribeAccountOutput, error) {
+func (r *DescribeAccountFuture) Get(ctx workflow.Context) (*organizations.DescribeAccountOutput, error) {
 	var output organizations.DescribeAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDescribeCreateAccountStatusFuture struct {
+type DescribeCreateAccountStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDescribeCreateAccountStatusFuture) Get(ctx workflow.Context) (*organizations.DescribeCreateAccountStatusOutput, error) {
+func (r *DescribeCreateAccountStatusFuture) Get(ctx workflow.Context) (*organizations.DescribeCreateAccountStatusOutput, error) {
 	var output organizations.DescribeCreateAccountStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDescribeEffectivePolicyFuture struct {
+type DescribeEffectivePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDescribeEffectivePolicyFuture) Get(ctx workflow.Context) (*organizations.DescribeEffectivePolicyOutput, error) {
+func (r *DescribeEffectivePolicyFuture) Get(ctx workflow.Context) (*organizations.DescribeEffectivePolicyOutput, error) {
 	var output organizations.DescribeEffectivePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDescribeHandshakeFuture struct {
+type DescribeHandshakeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDescribeHandshakeFuture) Get(ctx workflow.Context) (*organizations.DescribeHandshakeOutput, error) {
+func (r *DescribeHandshakeFuture) Get(ctx workflow.Context) (*organizations.DescribeHandshakeOutput, error) {
 	var output organizations.DescribeHandshakeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDescribeOrganizationFuture struct {
+type DescribeOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDescribeOrganizationFuture) Get(ctx workflow.Context) (*organizations.DescribeOrganizationOutput, error) {
+func (r *DescribeOrganizationFuture) Get(ctx workflow.Context) (*organizations.DescribeOrganizationOutput, error) {
 	var output organizations.DescribeOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDescribeOrganizationalUnitFuture struct {
+type DescribeOrganizationalUnitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDescribeOrganizationalUnitFuture) Get(ctx workflow.Context) (*organizations.DescribeOrganizationalUnitOutput, error) {
+func (r *DescribeOrganizationalUnitFuture) Get(ctx workflow.Context) (*organizations.DescribeOrganizationalUnitOutput, error) {
 	var output organizations.DescribeOrganizationalUnitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDescribePolicyFuture struct {
+type DescribePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDescribePolicyFuture) Get(ctx workflow.Context) (*organizations.DescribePolicyOutput, error) {
+func (r *DescribePolicyFuture) Get(ctx workflow.Context) (*organizations.DescribePolicyOutput, error) {
 	var output organizations.DescribePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDetachPolicyFuture struct {
+type DetachPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDetachPolicyFuture) Get(ctx workflow.Context) (*organizations.DetachPolicyOutput, error) {
+func (r *DetachPolicyFuture) Get(ctx workflow.Context) (*organizations.DetachPolicyOutput, error) {
 	var output organizations.DetachPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDisableAWSServiceAccessFuture struct {
+type DisableAWSServiceAccessFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDisableAWSServiceAccessFuture) Get(ctx workflow.Context) (*organizations.DisableAWSServiceAccessOutput, error) {
+func (r *DisableAWSServiceAccessFuture) Get(ctx workflow.Context) (*organizations.DisableAWSServiceAccessOutput, error) {
 	var output organizations.DisableAWSServiceAccessOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsDisablePolicyTypeFuture struct {
+type DisablePolicyTypeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsDisablePolicyTypeFuture) Get(ctx workflow.Context) (*organizations.DisablePolicyTypeOutput, error) {
+func (r *DisablePolicyTypeFuture) Get(ctx workflow.Context) (*organizations.DisablePolicyTypeOutput, error) {
 	var output organizations.DisablePolicyTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsEnableAWSServiceAccessFuture struct {
+type EnableAWSServiceAccessFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsEnableAWSServiceAccessFuture) Get(ctx workflow.Context) (*organizations.EnableAWSServiceAccessOutput, error) {
+func (r *EnableAWSServiceAccessFuture) Get(ctx workflow.Context) (*organizations.EnableAWSServiceAccessOutput, error) {
 	var output organizations.EnableAWSServiceAccessOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsEnableAllFeaturesFuture struct {
+type EnableAllFeaturesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsEnableAllFeaturesFuture) Get(ctx workflow.Context) (*organizations.EnableAllFeaturesOutput, error) {
+func (r *EnableAllFeaturesFuture) Get(ctx workflow.Context) (*organizations.EnableAllFeaturesOutput, error) {
 	var output organizations.EnableAllFeaturesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsEnablePolicyTypeFuture struct {
+type EnablePolicyTypeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsEnablePolicyTypeFuture) Get(ctx workflow.Context) (*organizations.EnablePolicyTypeOutput, error) {
+func (r *EnablePolicyTypeFuture) Get(ctx workflow.Context) (*organizations.EnablePolicyTypeOutput, error) {
 	var output organizations.EnablePolicyTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsInviteAccountToOrganizationFuture struct {
+type InviteAccountToOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsInviteAccountToOrganizationFuture) Get(ctx workflow.Context) (*organizations.InviteAccountToOrganizationOutput, error) {
+func (r *InviteAccountToOrganizationFuture) Get(ctx workflow.Context) (*organizations.InviteAccountToOrganizationOutput, error) {
 	var output organizations.InviteAccountToOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsLeaveOrganizationFuture struct {
+type LeaveOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsLeaveOrganizationFuture) Get(ctx workflow.Context) (*organizations.LeaveOrganizationOutput, error) {
+func (r *LeaveOrganizationFuture) Get(ctx workflow.Context) (*organizations.LeaveOrganizationOutput, error) {
 	var output organizations.LeaveOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListAWSServiceAccessForOrganizationFuture struct {
+type ListAWSServiceAccessForOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListAWSServiceAccessForOrganizationFuture) Get(ctx workflow.Context) (*organizations.ListAWSServiceAccessForOrganizationOutput, error) {
+func (r *ListAWSServiceAccessForOrganizationFuture) Get(ctx workflow.Context) (*organizations.ListAWSServiceAccessForOrganizationOutput, error) {
 	var output organizations.ListAWSServiceAccessForOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListAccountsFuture struct {
+type ListAccountsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListAccountsFuture) Get(ctx workflow.Context) (*organizations.ListAccountsOutput, error) {
+func (r *ListAccountsFuture) Get(ctx workflow.Context) (*organizations.ListAccountsOutput, error) {
 	var output organizations.ListAccountsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListAccountsForParentFuture struct {
+type ListAccountsForParentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListAccountsForParentFuture) Get(ctx workflow.Context) (*organizations.ListAccountsForParentOutput, error) {
+func (r *ListAccountsForParentFuture) Get(ctx workflow.Context) (*organizations.ListAccountsForParentOutput, error) {
 	var output organizations.ListAccountsForParentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListChildrenFuture struct {
+type ListChildrenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListChildrenFuture) Get(ctx workflow.Context) (*organizations.ListChildrenOutput, error) {
+func (r *ListChildrenFuture) Get(ctx workflow.Context) (*organizations.ListChildrenOutput, error) {
 	var output organizations.ListChildrenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListCreateAccountStatusFuture struct {
+type ListCreateAccountStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListCreateAccountStatusFuture) Get(ctx workflow.Context) (*organizations.ListCreateAccountStatusOutput, error) {
+func (r *ListCreateAccountStatusFuture) Get(ctx workflow.Context) (*organizations.ListCreateAccountStatusOutput, error) {
 	var output organizations.ListCreateAccountStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListDelegatedAdministratorsFuture struct {
+type ListDelegatedAdministratorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListDelegatedAdministratorsFuture) Get(ctx workflow.Context) (*organizations.ListDelegatedAdministratorsOutput, error) {
+func (r *ListDelegatedAdministratorsFuture) Get(ctx workflow.Context) (*organizations.ListDelegatedAdministratorsOutput, error) {
 	var output organizations.ListDelegatedAdministratorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListDelegatedServicesForAccountFuture struct {
+type ListDelegatedServicesForAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListDelegatedServicesForAccountFuture) Get(ctx workflow.Context) (*organizations.ListDelegatedServicesForAccountOutput, error) {
+func (r *ListDelegatedServicesForAccountFuture) Get(ctx workflow.Context) (*organizations.ListDelegatedServicesForAccountOutput, error) {
 	var output organizations.ListDelegatedServicesForAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListHandshakesForAccountFuture struct {
+type ListHandshakesForAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListHandshakesForAccountFuture) Get(ctx workflow.Context) (*organizations.ListHandshakesForAccountOutput, error) {
+func (r *ListHandshakesForAccountFuture) Get(ctx workflow.Context) (*organizations.ListHandshakesForAccountOutput, error) {
 	var output organizations.ListHandshakesForAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListHandshakesForOrganizationFuture struct {
+type ListHandshakesForOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListHandshakesForOrganizationFuture) Get(ctx workflow.Context) (*organizations.ListHandshakesForOrganizationOutput, error) {
+func (r *ListHandshakesForOrganizationFuture) Get(ctx workflow.Context) (*organizations.ListHandshakesForOrganizationOutput, error) {
 	var output organizations.ListHandshakesForOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListOrganizationalUnitsForParentFuture struct {
+type ListOrganizationalUnitsForParentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListOrganizationalUnitsForParentFuture) Get(ctx workflow.Context) (*organizations.ListOrganizationalUnitsForParentOutput, error) {
+func (r *ListOrganizationalUnitsForParentFuture) Get(ctx workflow.Context) (*organizations.ListOrganizationalUnitsForParentOutput, error) {
 	var output organizations.ListOrganizationalUnitsForParentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListParentsFuture struct {
+type ListParentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListParentsFuture) Get(ctx workflow.Context) (*organizations.ListParentsOutput, error) {
+func (r *ListParentsFuture) Get(ctx workflow.Context) (*organizations.ListParentsOutput, error) {
 	var output organizations.ListParentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListPoliciesFuture struct {
+type ListPoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListPoliciesFuture) Get(ctx workflow.Context) (*organizations.ListPoliciesOutput, error) {
+func (r *ListPoliciesFuture) Get(ctx workflow.Context) (*organizations.ListPoliciesOutput, error) {
 	var output organizations.ListPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListPoliciesForTargetFuture struct {
+type ListPoliciesForTargetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListPoliciesForTargetFuture) Get(ctx workflow.Context) (*organizations.ListPoliciesForTargetOutput, error) {
+func (r *ListPoliciesForTargetFuture) Get(ctx workflow.Context) (*organizations.ListPoliciesForTargetOutput, error) {
 	var output organizations.ListPoliciesForTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListRootsFuture struct {
+type ListRootsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListRootsFuture) Get(ctx workflow.Context) (*organizations.ListRootsOutput, error) {
+func (r *ListRootsFuture) Get(ctx workflow.Context) (*organizations.ListRootsOutput, error) {
 	var output organizations.ListRootsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListTagsForResourceFuture) Get(ctx workflow.Context) (*organizations.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*organizations.ListTagsForResourceOutput, error) {
 	var output organizations.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsListTargetsForPolicyFuture struct {
+type ListTargetsForPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsListTargetsForPolicyFuture) Get(ctx workflow.Context) (*organizations.ListTargetsForPolicyOutput, error) {
+func (r *ListTargetsForPolicyFuture) Get(ctx workflow.Context) (*organizations.ListTargetsForPolicyOutput, error) {
 	var output organizations.ListTargetsForPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsMoveAccountFuture struct {
+type MoveAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsMoveAccountFuture) Get(ctx workflow.Context) (*organizations.MoveAccountOutput, error) {
+func (r *MoveAccountFuture) Get(ctx workflow.Context) (*organizations.MoveAccountOutput, error) {
 	var output organizations.MoveAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsRegisterDelegatedAdministratorFuture struct {
+type RegisterDelegatedAdministratorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsRegisterDelegatedAdministratorFuture) Get(ctx workflow.Context) (*organizations.RegisterDelegatedAdministratorOutput, error) {
+func (r *RegisterDelegatedAdministratorFuture) Get(ctx workflow.Context) (*organizations.RegisterDelegatedAdministratorOutput, error) {
 	var output organizations.RegisterDelegatedAdministratorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsRemoveAccountFromOrganizationFuture struct {
+type RemoveAccountFromOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsRemoveAccountFromOrganizationFuture) Get(ctx workflow.Context) (*organizations.RemoveAccountFromOrganizationOutput, error) {
+func (r *RemoveAccountFromOrganizationFuture) Get(ctx workflow.Context) (*organizations.RemoveAccountFromOrganizationOutput, error) {
 	var output organizations.RemoveAccountFromOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsTagResourceFuture) Get(ctx workflow.Context) (*organizations.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*organizations.TagResourceOutput, error) {
 	var output organizations.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsUntagResourceFuture) Get(ctx workflow.Context) (*organizations.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*organizations.UntagResourceOutput, error) {
 	var output organizations.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsUpdateOrganizationalUnitFuture struct {
+type UpdateOrganizationalUnitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsUpdateOrganizationalUnitFuture) Get(ctx workflow.Context) (*organizations.UpdateOrganizationalUnitOutput, error) {
+func (r *UpdateOrganizationalUnitFuture) Get(ctx workflow.Context) (*organizations.UpdateOrganizationalUnitOutput, error) {
 	var output organizations.UpdateOrganizationalUnitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OrganizationsUpdatePolicyFuture struct {
+type UpdatePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OrganizationsUpdatePolicyFuture) Get(ctx workflow.Context) (*organizations.UpdatePolicyOutput, error) {
+func (r *UpdatePolicyFuture) Get(ctx workflow.Context) (*organizations.UpdatePolicyOutput, error) {
 	var output organizations.UpdatePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -583,9 +583,9 @@ func (a *stub) AcceptHandshake(ctx workflow.Context, input *organizations.Accept
 	return &output, err
 }
 
-func (a *stub) AcceptHandshakeAsync(ctx workflow.Context, input *organizations.AcceptHandshakeInput) *OrganizationsAcceptHandshakeFuture {
+func (a *stub) AcceptHandshakeAsync(ctx workflow.Context, input *organizations.AcceptHandshakeInput) *AcceptHandshakeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.AcceptHandshake", input)
-	return &OrganizationsAcceptHandshakeFuture{Future: future}
+	return &AcceptHandshakeFuture{Future: future}
 }
 
 func (a *stub) AttachPolicy(ctx workflow.Context, input *organizations.AttachPolicyInput) (*organizations.AttachPolicyOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) AttachPolicy(ctx workflow.Context, input *organizations.AttachPol
 	return &output, err
 }
 
-func (a *stub) AttachPolicyAsync(ctx workflow.Context, input *organizations.AttachPolicyInput) *OrganizationsAttachPolicyFuture {
+func (a *stub) AttachPolicyAsync(ctx workflow.Context, input *organizations.AttachPolicyInput) *AttachPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.AttachPolicy", input)
-	return &OrganizationsAttachPolicyFuture{Future: future}
+	return &AttachPolicyFuture{Future: future}
 }
 
 func (a *stub) CancelHandshake(ctx workflow.Context, input *organizations.CancelHandshakeInput) (*organizations.CancelHandshakeOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) CancelHandshake(ctx workflow.Context, input *organizations.Cancel
 	return &output, err
 }
 
-func (a *stub) CancelHandshakeAsync(ctx workflow.Context, input *organizations.CancelHandshakeInput) *OrganizationsCancelHandshakeFuture {
+func (a *stub) CancelHandshakeAsync(ctx workflow.Context, input *organizations.CancelHandshakeInput) *CancelHandshakeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.CancelHandshake", input)
-	return &OrganizationsCancelHandshakeFuture{Future: future}
+	return &CancelHandshakeFuture{Future: future}
 }
 
 func (a *stub) CreateAccount(ctx workflow.Context, input *organizations.CreateAccountInput) (*organizations.CreateAccountOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) CreateAccount(ctx workflow.Context, input *organizations.CreateAc
 	return &output, err
 }
 
-func (a *stub) CreateAccountAsync(ctx workflow.Context, input *organizations.CreateAccountInput) *OrganizationsCreateAccountFuture {
+func (a *stub) CreateAccountAsync(ctx workflow.Context, input *organizations.CreateAccountInput) *CreateAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreateAccount", input)
-	return &OrganizationsCreateAccountFuture{Future: future}
+	return &CreateAccountFuture{Future: future}
 }
 
 func (a *stub) CreateGovCloudAccount(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) (*organizations.CreateGovCloudAccountOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) CreateGovCloudAccount(ctx workflow.Context, input *organizations.
 	return &output, err
 }
 
-func (a *stub) CreateGovCloudAccountAsync(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) *OrganizationsCreateGovCloudAccountFuture {
+func (a *stub) CreateGovCloudAccountAsync(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) *CreateGovCloudAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreateGovCloudAccount", input)
-	return &OrganizationsCreateGovCloudAccountFuture{Future: future}
+	return &CreateGovCloudAccountFuture{Future: future}
 }
 
 func (a *stub) CreateOrganization(ctx workflow.Context, input *organizations.CreateOrganizationInput) (*organizations.CreateOrganizationOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) CreateOrganization(ctx workflow.Context, input *organizations.Cre
 	return &output, err
 }
 
-func (a *stub) CreateOrganizationAsync(ctx workflow.Context, input *organizations.CreateOrganizationInput) *OrganizationsCreateOrganizationFuture {
+func (a *stub) CreateOrganizationAsync(ctx workflow.Context, input *organizations.CreateOrganizationInput) *CreateOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreateOrganization", input)
-	return &OrganizationsCreateOrganizationFuture{Future: future}
+	return &CreateOrganizationFuture{Future: future}
 }
 
 func (a *stub) CreateOrganizationalUnit(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) (*organizations.CreateOrganizationalUnitOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) CreateOrganizationalUnit(ctx workflow.Context, input *organizatio
 	return &output, err
 }
 
-func (a *stub) CreateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) *OrganizationsCreateOrganizationalUnitFuture {
+func (a *stub) CreateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) *CreateOrganizationalUnitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreateOrganizationalUnit", input)
-	return &OrganizationsCreateOrganizationalUnitFuture{Future: future}
+	return &CreateOrganizationalUnitFuture{Future: future}
 }
 
 func (a *stub) CreatePolicy(ctx workflow.Context, input *organizations.CreatePolicyInput) (*organizations.CreatePolicyOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) CreatePolicy(ctx workflow.Context, input *organizations.CreatePol
 	return &output, err
 }
 
-func (a *stub) CreatePolicyAsync(ctx workflow.Context, input *organizations.CreatePolicyInput) *OrganizationsCreatePolicyFuture {
+func (a *stub) CreatePolicyAsync(ctx workflow.Context, input *organizations.CreatePolicyInput) *CreatePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreatePolicy", input)
-	return &OrganizationsCreatePolicyFuture{Future: future}
+	return &CreatePolicyFuture{Future: future}
 }
 
 func (a *stub) DeclineHandshake(ctx workflow.Context, input *organizations.DeclineHandshakeInput) (*organizations.DeclineHandshakeOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) DeclineHandshake(ctx workflow.Context, input *organizations.Decli
 	return &output, err
 }
 
-func (a *stub) DeclineHandshakeAsync(ctx workflow.Context, input *organizations.DeclineHandshakeInput) *OrganizationsDeclineHandshakeFuture {
+func (a *stub) DeclineHandshakeAsync(ctx workflow.Context, input *organizations.DeclineHandshakeInput) *DeclineHandshakeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeclineHandshake", input)
-	return &OrganizationsDeclineHandshakeFuture{Future: future}
+	return &DeclineHandshakeFuture{Future: future}
 }
 
 func (a *stub) DeleteOrganization(ctx workflow.Context, input *organizations.DeleteOrganizationInput) (*organizations.DeleteOrganizationOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) DeleteOrganization(ctx workflow.Context, input *organizations.Del
 	return &output, err
 }
 
-func (a *stub) DeleteOrganizationAsync(ctx workflow.Context, input *organizations.DeleteOrganizationInput) *OrganizationsDeleteOrganizationFuture {
+func (a *stub) DeleteOrganizationAsync(ctx workflow.Context, input *organizations.DeleteOrganizationInput) *DeleteOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeleteOrganization", input)
-	return &OrganizationsDeleteOrganizationFuture{Future: future}
+	return &DeleteOrganizationFuture{Future: future}
 }
 
 func (a *stub) DeleteOrganizationalUnit(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) (*organizations.DeleteOrganizationalUnitOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) DeleteOrganizationalUnit(ctx workflow.Context, input *organizatio
 	return &output, err
 }
 
-func (a *stub) DeleteOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) *OrganizationsDeleteOrganizationalUnitFuture {
+func (a *stub) DeleteOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) *DeleteOrganizationalUnitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeleteOrganizationalUnit", input)
-	return &OrganizationsDeleteOrganizationalUnitFuture{Future: future}
+	return &DeleteOrganizationalUnitFuture{Future: future}
 }
 
 func (a *stub) DeletePolicy(ctx workflow.Context, input *organizations.DeletePolicyInput) (*organizations.DeletePolicyOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) DeletePolicy(ctx workflow.Context, input *organizations.DeletePol
 	return &output, err
 }
 
-func (a *stub) DeletePolicyAsync(ctx workflow.Context, input *organizations.DeletePolicyInput) *OrganizationsDeletePolicyFuture {
+func (a *stub) DeletePolicyAsync(ctx workflow.Context, input *organizations.DeletePolicyInput) *DeletePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeletePolicy", input)
-	return &OrganizationsDeletePolicyFuture{Future: future}
+	return &DeletePolicyFuture{Future: future}
 }
 
 func (a *stub) DeregisterDelegatedAdministrator(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) (*organizations.DeregisterDelegatedAdministratorOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) DeregisterDelegatedAdministrator(ctx workflow.Context, input *org
 	return &output, err
 }
 
-func (a *stub) DeregisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) *OrganizationsDeregisterDelegatedAdministratorFuture {
+func (a *stub) DeregisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) *DeregisterDelegatedAdministratorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeregisterDelegatedAdministrator", input)
-	return &OrganizationsDeregisterDelegatedAdministratorFuture{Future: future}
+	return &DeregisterDelegatedAdministratorFuture{Future: future}
 }
 
 func (a *stub) DescribeAccount(ctx workflow.Context, input *organizations.DescribeAccountInput) (*organizations.DescribeAccountOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) DescribeAccount(ctx workflow.Context, input *organizations.Descri
 	return &output, err
 }
 
-func (a *stub) DescribeAccountAsync(ctx workflow.Context, input *organizations.DescribeAccountInput) *OrganizationsDescribeAccountFuture {
+func (a *stub) DescribeAccountAsync(ctx workflow.Context, input *organizations.DescribeAccountInput) *DescribeAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeAccount", input)
-	return &OrganizationsDescribeAccountFuture{Future: future}
+	return &DescribeAccountFuture{Future: future}
 }
 
 func (a *stub) DescribeCreateAccountStatus(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) (*organizations.DescribeCreateAccountStatusOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) DescribeCreateAccountStatus(ctx workflow.Context, input *organiza
 	return &output, err
 }
 
-func (a *stub) DescribeCreateAccountStatusAsync(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) *OrganizationsDescribeCreateAccountStatusFuture {
+func (a *stub) DescribeCreateAccountStatusAsync(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) *DescribeCreateAccountStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeCreateAccountStatus", input)
-	return &OrganizationsDescribeCreateAccountStatusFuture{Future: future}
+	return &DescribeCreateAccountStatusFuture{Future: future}
 }
 
 func (a *stub) DescribeEffectivePolicy(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) (*organizations.DescribeEffectivePolicyOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) DescribeEffectivePolicy(ctx workflow.Context, input *organization
 	return &output, err
 }
 
-func (a *stub) DescribeEffectivePolicyAsync(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) *OrganizationsDescribeEffectivePolicyFuture {
+func (a *stub) DescribeEffectivePolicyAsync(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) *DescribeEffectivePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeEffectivePolicy", input)
-	return &OrganizationsDescribeEffectivePolicyFuture{Future: future}
+	return &DescribeEffectivePolicyFuture{Future: future}
 }
 
 func (a *stub) DescribeHandshake(ctx workflow.Context, input *organizations.DescribeHandshakeInput) (*organizations.DescribeHandshakeOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) DescribeHandshake(ctx workflow.Context, input *organizations.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeHandshakeAsync(ctx workflow.Context, input *organizations.DescribeHandshakeInput) *OrganizationsDescribeHandshakeFuture {
+func (a *stub) DescribeHandshakeAsync(ctx workflow.Context, input *organizations.DescribeHandshakeInput) *DescribeHandshakeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeHandshake", input)
-	return &OrganizationsDescribeHandshakeFuture{Future: future}
+	return &DescribeHandshakeFuture{Future: future}
 }
 
 func (a *stub) DescribeOrganization(ctx workflow.Context, input *organizations.DescribeOrganizationInput) (*organizations.DescribeOrganizationOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) DescribeOrganization(ctx workflow.Context, input *organizations.D
 	return &output, err
 }
 
-func (a *stub) DescribeOrganizationAsync(ctx workflow.Context, input *organizations.DescribeOrganizationInput) *OrganizationsDescribeOrganizationFuture {
+func (a *stub) DescribeOrganizationAsync(ctx workflow.Context, input *organizations.DescribeOrganizationInput) *DescribeOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeOrganization", input)
-	return &OrganizationsDescribeOrganizationFuture{Future: future}
+	return &DescribeOrganizationFuture{Future: future}
 }
 
 func (a *stub) DescribeOrganizationalUnit(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) (*organizations.DescribeOrganizationalUnitOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) DescribeOrganizationalUnit(ctx workflow.Context, input *organizat
 	return &output, err
 }
 
-func (a *stub) DescribeOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) *OrganizationsDescribeOrganizationalUnitFuture {
+func (a *stub) DescribeOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) *DescribeOrganizationalUnitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeOrganizationalUnit", input)
-	return &OrganizationsDescribeOrganizationalUnitFuture{Future: future}
+	return &DescribeOrganizationalUnitFuture{Future: future}
 }
 
 func (a *stub) DescribePolicy(ctx workflow.Context, input *organizations.DescribePolicyInput) (*organizations.DescribePolicyOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) DescribePolicy(ctx workflow.Context, input *organizations.Describ
 	return &output, err
 }
 
-func (a *stub) DescribePolicyAsync(ctx workflow.Context, input *organizations.DescribePolicyInput) *OrganizationsDescribePolicyFuture {
+func (a *stub) DescribePolicyAsync(ctx workflow.Context, input *organizations.DescribePolicyInput) *DescribePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribePolicy", input)
-	return &OrganizationsDescribePolicyFuture{Future: future}
+	return &DescribePolicyFuture{Future: future}
 }
 
 func (a *stub) DetachPolicy(ctx workflow.Context, input *organizations.DetachPolicyInput) (*organizations.DetachPolicyOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) DetachPolicy(ctx workflow.Context, input *organizations.DetachPol
 	return &output, err
 }
 
-func (a *stub) DetachPolicyAsync(ctx workflow.Context, input *organizations.DetachPolicyInput) *OrganizationsDetachPolicyFuture {
+func (a *stub) DetachPolicyAsync(ctx workflow.Context, input *organizations.DetachPolicyInput) *DetachPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DetachPolicy", input)
-	return &OrganizationsDetachPolicyFuture{Future: future}
+	return &DetachPolicyFuture{Future: future}
 }
 
 func (a *stub) DisableAWSServiceAccess(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) (*organizations.DisableAWSServiceAccessOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) DisableAWSServiceAccess(ctx workflow.Context, input *organization
 	return &output, err
 }
 
-func (a *stub) DisableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) *OrganizationsDisableAWSServiceAccessFuture {
+func (a *stub) DisableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) *DisableAWSServiceAccessFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DisableAWSServiceAccess", input)
-	return &OrganizationsDisableAWSServiceAccessFuture{Future: future}
+	return &DisableAWSServiceAccessFuture{Future: future}
 }
 
 func (a *stub) DisablePolicyType(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) (*organizations.DisablePolicyTypeOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) DisablePolicyType(ctx workflow.Context, input *organizations.Disa
 	return &output, err
 }
 
-func (a *stub) DisablePolicyTypeAsync(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) *OrganizationsDisablePolicyTypeFuture {
+func (a *stub) DisablePolicyTypeAsync(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) *DisablePolicyTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.DisablePolicyType", input)
-	return &OrganizationsDisablePolicyTypeFuture{Future: future}
+	return &DisablePolicyTypeFuture{Future: future}
 }
 
 func (a *stub) EnableAWSServiceAccess(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) (*organizations.EnableAWSServiceAccessOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) EnableAWSServiceAccess(ctx workflow.Context, input *organizations
 	return &output, err
 }
 
-func (a *stub) EnableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) *OrganizationsEnableAWSServiceAccessFuture {
+func (a *stub) EnableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) *EnableAWSServiceAccessFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.EnableAWSServiceAccess", input)
-	return &OrganizationsEnableAWSServiceAccessFuture{Future: future}
+	return &EnableAWSServiceAccessFuture{Future: future}
 }
 
 func (a *stub) EnableAllFeatures(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) (*organizations.EnableAllFeaturesOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) EnableAllFeatures(ctx workflow.Context, input *organizations.Enab
 	return &output, err
 }
 
-func (a *stub) EnableAllFeaturesAsync(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) *OrganizationsEnableAllFeaturesFuture {
+func (a *stub) EnableAllFeaturesAsync(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) *EnableAllFeaturesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.EnableAllFeatures", input)
-	return &OrganizationsEnableAllFeaturesFuture{Future: future}
+	return &EnableAllFeaturesFuture{Future: future}
 }
 
 func (a *stub) EnablePolicyType(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) (*organizations.EnablePolicyTypeOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) EnablePolicyType(ctx workflow.Context, input *organizations.Enabl
 	return &output, err
 }
 
-func (a *stub) EnablePolicyTypeAsync(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) *OrganizationsEnablePolicyTypeFuture {
+func (a *stub) EnablePolicyTypeAsync(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) *EnablePolicyTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.EnablePolicyType", input)
-	return &OrganizationsEnablePolicyTypeFuture{Future: future}
+	return &EnablePolicyTypeFuture{Future: future}
 }
 
 func (a *stub) InviteAccountToOrganization(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) (*organizations.InviteAccountToOrganizationOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) InviteAccountToOrganization(ctx workflow.Context, input *organiza
 	return &output, err
 }
 
-func (a *stub) InviteAccountToOrganizationAsync(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) *OrganizationsInviteAccountToOrganizationFuture {
+func (a *stub) InviteAccountToOrganizationAsync(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) *InviteAccountToOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.InviteAccountToOrganization", input)
-	return &OrganizationsInviteAccountToOrganizationFuture{Future: future}
+	return &InviteAccountToOrganizationFuture{Future: future}
 }
 
 func (a *stub) LeaveOrganization(ctx workflow.Context, input *organizations.LeaveOrganizationInput) (*organizations.LeaveOrganizationOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) LeaveOrganization(ctx workflow.Context, input *organizations.Leav
 	return &output, err
 }
 
-func (a *stub) LeaveOrganizationAsync(ctx workflow.Context, input *organizations.LeaveOrganizationInput) *OrganizationsLeaveOrganizationFuture {
+func (a *stub) LeaveOrganizationAsync(ctx workflow.Context, input *organizations.LeaveOrganizationInput) *LeaveOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.LeaveOrganization", input)
-	return &OrganizationsLeaveOrganizationFuture{Future: future}
+	return &LeaveOrganizationFuture{Future: future}
 }
 
 func (a *stub) ListAWSServiceAccessForOrganization(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) (*organizations.ListAWSServiceAccessForOrganizationOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) ListAWSServiceAccessForOrganization(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) ListAWSServiceAccessForOrganizationAsync(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) *OrganizationsListAWSServiceAccessForOrganizationFuture {
+func (a *stub) ListAWSServiceAccessForOrganizationAsync(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) *ListAWSServiceAccessForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListAWSServiceAccessForOrganization", input)
-	return &OrganizationsListAWSServiceAccessForOrganizationFuture{Future: future}
+	return &ListAWSServiceAccessForOrganizationFuture{Future: future}
 }
 
 func (a *stub) ListAccounts(ctx workflow.Context, input *organizations.ListAccountsInput) (*organizations.ListAccountsOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) ListAccounts(ctx workflow.Context, input *organizations.ListAccou
 	return &output, err
 }
 
-func (a *stub) ListAccountsAsync(ctx workflow.Context, input *organizations.ListAccountsInput) *OrganizationsListAccountsFuture {
+func (a *stub) ListAccountsAsync(ctx workflow.Context, input *organizations.ListAccountsInput) *ListAccountsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListAccounts", input)
-	return &OrganizationsListAccountsFuture{Future: future}
+	return &ListAccountsFuture{Future: future}
 }
 
 func (a *stub) ListAccountsForParent(ctx workflow.Context, input *organizations.ListAccountsForParentInput) (*organizations.ListAccountsForParentOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) ListAccountsForParent(ctx workflow.Context, input *organizations.
 	return &output, err
 }
 
-func (a *stub) ListAccountsForParentAsync(ctx workflow.Context, input *organizations.ListAccountsForParentInput) *OrganizationsListAccountsForParentFuture {
+func (a *stub) ListAccountsForParentAsync(ctx workflow.Context, input *organizations.ListAccountsForParentInput) *ListAccountsForParentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListAccountsForParent", input)
-	return &OrganizationsListAccountsForParentFuture{Future: future}
+	return &ListAccountsForParentFuture{Future: future}
 }
 
 func (a *stub) ListChildren(ctx workflow.Context, input *organizations.ListChildrenInput) (*organizations.ListChildrenOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) ListChildren(ctx workflow.Context, input *organizations.ListChild
 	return &output, err
 }
 
-func (a *stub) ListChildrenAsync(ctx workflow.Context, input *organizations.ListChildrenInput) *OrganizationsListChildrenFuture {
+func (a *stub) ListChildrenAsync(ctx workflow.Context, input *organizations.ListChildrenInput) *ListChildrenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListChildren", input)
-	return &OrganizationsListChildrenFuture{Future: future}
+	return &ListChildrenFuture{Future: future}
 }
 
 func (a *stub) ListCreateAccountStatus(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) (*organizations.ListCreateAccountStatusOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) ListCreateAccountStatus(ctx workflow.Context, input *organization
 	return &output, err
 }
 
-func (a *stub) ListCreateAccountStatusAsync(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) *OrganizationsListCreateAccountStatusFuture {
+func (a *stub) ListCreateAccountStatusAsync(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) *ListCreateAccountStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListCreateAccountStatus", input)
-	return &OrganizationsListCreateAccountStatusFuture{Future: future}
+	return &ListCreateAccountStatusFuture{Future: future}
 }
 
 func (a *stub) ListDelegatedAdministrators(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) (*organizations.ListDelegatedAdministratorsOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) ListDelegatedAdministrators(ctx workflow.Context, input *organiza
 	return &output, err
 }
 
-func (a *stub) ListDelegatedAdministratorsAsync(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) *OrganizationsListDelegatedAdministratorsFuture {
+func (a *stub) ListDelegatedAdministratorsAsync(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) *ListDelegatedAdministratorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListDelegatedAdministrators", input)
-	return &OrganizationsListDelegatedAdministratorsFuture{Future: future}
+	return &ListDelegatedAdministratorsFuture{Future: future}
 }
 
 func (a *stub) ListDelegatedServicesForAccount(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) (*organizations.ListDelegatedServicesForAccountOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) ListDelegatedServicesForAccount(ctx workflow.Context, input *orga
 	return &output, err
 }
 
-func (a *stub) ListDelegatedServicesForAccountAsync(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) *OrganizationsListDelegatedServicesForAccountFuture {
+func (a *stub) ListDelegatedServicesForAccountAsync(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) *ListDelegatedServicesForAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListDelegatedServicesForAccount", input)
-	return &OrganizationsListDelegatedServicesForAccountFuture{Future: future}
+	return &ListDelegatedServicesForAccountFuture{Future: future}
 }
 
 func (a *stub) ListHandshakesForAccount(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) (*organizations.ListHandshakesForAccountOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) ListHandshakesForAccount(ctx workflow.Context, input *organizatio
 	return &output, err
 }
 
-func (a *stub) ListHandshakesForAccountAsync(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) *OrganizationsListHandshakesForAccountFuture {
+func (a *stub) ListHandshakesForAccountAsync(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) *ListHandshakesForAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListHandshakesForAccount", input)
-	return &OrganizationsListHandshakesForAccountFuture{Future: future}
+	return &ListHandshakesForAccountFuture{Future: future}
 }
 
 func (a *stub) ListHandshakesForOrganization(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) (*organizations.ListHandshakesForOrganizationOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) ListHandshakesForOrganization(ctx workflow.Context, input *organi
 	return &output, err
 }
 
-func (a *stub) ListHandshakesForOrganizationAsync(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) *OrganizationsListHandshakesForOrganizationFuture {
+func (a *stub) ListHandshakesForOrganizationAsync(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) *ListHandshakesForOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListHandshakesForOrganization", input)
-	return &OrganizationsListHandshakesForOrganizationFuture{Future: future}
+	return &ListHandshakesForOrganizationFuture{Future: future}
 }
 
 func (a *stub) ListOrganizationalUnitsForParent(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) (*organizations.ListOrganizationalUnitsForParentOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) ListOrganizationalUnitsForParent(ctx workflow.Context, input *org
 	return &output, err
 }
 
-func (a *stub) ListOrganizationalUnitsForParentAsync(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) *OrganizationsListOrganizationalUnitsForParentFuture {
+func (a *stub) ListOrganizationalUnitsForParentAsync(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) *ListOrganizationalUnitsForParentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListOrganizationalUnitsForParent", input)
-	return &OrganizationsListOrganizationalUnitsForParentFuture{Future: future}
+	return &ListOrganizationalUnitsForParentFuture{Future: future}
 }
 
 func (a *stub) ListParents(ctx workflow.Context, input *organizations.ListParentsInput) (*organizations.ListParentsOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) ListParents(ctx workflow.Context, input *organizations.ListParent
 	return &output, err
 }
 
-func (a *stub) ListParentsAsync(ctx workflow.Context, input *organizations.ListParentsInput) *OrganizationsListParentsFuture {
+func (a *stub) ListParentsAsync(ctx workflow.Context, input *organizations.ListParentsInput) *ListParentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListParents", input)
-	return &OrganizationsListParentsFuture{Future: future}
+	return &ListParentsFuture{Future: future}
 }
 
 func (a *stub) ListPolicies(ctx workflow.Context, input *organizations.ListPoliciesInput) (*organizations.ListPoliciesOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) ListPolicies(ctx workflow.Context, input *organizations.ListPolic
 	return &output, err
 }
 
-func (a *stub) ListPoliciesAsync(ctx workflow.Context, input *organizations.ListPoliciesInput) *OrganizationsListPoliciesFuture {
+func (a *stub) ListPoliciesAsync(ctx workflow.Context, input *organizations.ListPoliciesInput) *ListPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListPolicies", input)
-	return &OrganizationsListPoliciesFuture{Future: future}
+	return &ListPoliciesFuture{Future: future}
 }
 
 func (a *stub) ListPoliciesForTarget(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) (*organizations.ListPoliciesForTargetOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) ListPoliciesForTarget(ctx workflow.Context, input *organizations.
 	return &output, err
 }
 
-func (a *stub) ListPoliciesForTargetAsync(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) *OrganizationsListPoliciesForTargetFuture {
+func (a *stub) ListPoliciesForTargetAsync(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) *ListPoliciesForTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListPoliciesForTarget", input)
-	return &OrganizationsListPoliciesForTargetFuture{Future: future}
+	return &ListPoliciesForTargetFuture{Future: future}
 }
 
 func (a *stub) ListRoots(ctx workflow.Context, input *organizations.ListRootsInput) (*organizations.ListRootsOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) ListRoots(ctx workflow.Context, input *organizations.ListRootsInp
 	return &output, err
 }
 
-func (a *stub) ListRootsAsync(ctx workflow.Context, input *organizations.ListRootsInput) *OrganizationsListRootsFuture {
+func (a *stub) ListRootsAsync(ctx workflow.Context, input *organizations.ListRootsInput) *ListRootsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListRoots", input)
-	return &OrganizationsListRootsFuture{Future: future}
+	return &ListRootsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *organizations.ListTagsForResourceInput) (*organizations.ListTagsForResourceOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *organizations.Li
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *organizations.ListTagsForResourceInput) *OrganizationsListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *organizations.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListTagsForResource", input)
-	return &OrganizationsListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListTargetsForPolicy(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) (*organizations.ListTargetsForPolicyOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) ListTargetsForPolicy(ctx workflow.Context, input *organizations.L
 	return &output, err
 }
 
-func (a *stub) ListTargetsForPolicyAsync(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) *OrganizationsListTargetsForPolicyFuture {
+func (a *stub) ListTargetsForPolicyAsync(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) *ListTargetsForPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListTargetsForPolicy", input)
-	return &OrganizationsListTargetsForPolicyFuture{Future: future}
+	return &ListTargetsForPolicyFuture{Future: future}
 }
 
 func (a *stub) MoveAccount(ctx workflow.Context, input *organizations.MoveAccountInput) (*organizations.MoveAccountOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) MoveAccount(ctx workflow.Context, input *organizations.MoveAccoun
 	return &output, err
 }
 
-func (a *stub) MoveAccountAsync(ctx workflow.Context, input *organizations.MoveAccountInput) *OrganizationsMoveAccountFuture {
+func (a *stub) MoveAccountAsync(ctx workflow.Context, input *organizations.MoveAccountInput) *MoveAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.MoveAccount", input)
-	return &OrganizationsMoveAccountFuture{Future: future}
+	return &MoveAccountFuture{Future: future}
 }
 
 func (a *stub) RegisterDelegatedAdministrator(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) (*organizations.RegisterDelegatedAdministratorOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) RegisterDelegatedAdministrator(ctx workflow.Context, input *organ
 	return &output, err
 }
 
-func (a *stub) RegisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) *OrganizationsRegisterDelegatedAdministratorFuture {
+func (a *stub) RegisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) *RegisterDelegatedAdministratorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.RegisterDelegatedAdministrator", input)
-	return &OrganizationsRegisterDelegatedAdministratorFuture{Future: future}
+	return &RegisterDelegatedAdministratorFuture{Future: future}
 }
 
 func (a *stub) RemoveAccountFromOrganization(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) (*organizations.RemoveAccountFromOrganizationOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) RemoveAccountFromOrganization(ctx workflow.Context, input *organi
 	return &output, err
 }
 
-func (a *stub) RemoveAccountFromOrganizationAsync(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) *OrganizationsRemoveAccountFromOrganizationFuture {
+func (a *stub) RemoveAccountFromOrganizationAsync(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) *RemoveAccountFromOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.RemoveAccountFromOrganization", input)
-	return &OrganizationsRemoveAccountFromOrganizationFuture{Future: future}
+	return &RemoveAccountFromOrganizationFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *organizations.TagResourceInput) (*organizations.TagResourceOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *organizations.TagResourc
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *organizations.TagResourceInput) *OrganizationsTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *organizations.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.TagResource", input)
-	return &OrganizationsTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *organizations.UntagResourceInput) (*organizations.UntagResourceOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *organizations.UntagRes
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *organizations.UntagResourceInput) *OrganizationsUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *organizations.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.UntagResource", input)
-	return &OrganizationsUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateOrganizationalUnit(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) (*organizations.UpdateOrganizationalUnitOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) UpdateOrganizationalUnit(ctx workflow.Context, input *organizatio
 	return &output, err
 }
 
-func (a *stub) UpdateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) *OrganizationsUpdateOrganizationalUnitFuture {
+func (a *stub) UpdateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) *UpdateOrganizationalUnitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.UpdateOrganizationalUnit", input)
-	return &OrganizationsUpdateOrganizationalUnitFuture{Future: future}
+	return &UpdateOrganizationalUnitFuture{Future: future}
 }
 
 func (a *stub) UpdatePolicy(ctx workflow.Context, input *organizations.UpdatePolicyInput) (*organizations.UpdatePolicyOutput, error) {
@@ -1133,7 +1133,7 @@ func (a *stub) UpdatePolicy(ctx workflow.Context, input *organizations.UpdatePol
 	return &output, err
 }
 
-func (a *stub) UpdatePolicyAsync(ctx workflow.Context, input *organizations.UpdatePolicyInput) *OrganizationsUpdatePolicyFuture {
+func (a *stub) UpdatePolicyAsync(ctx workflow.Context, input *organizations.UpdatePolicyInput) *UpdatePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.organizations.UpdatePolicy", input)
-	return &OrganizationsUpdatePolicyFuture{Future: future}
+	return &UpdatePolicyFuture{Future: future}
 }

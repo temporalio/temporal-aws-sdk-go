@@ -16,13 +16,13 @@ var _ clients.VoidFuture
 
 type Client interface {
 	PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error)
-	PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeEventsPutEventsFuture
+	PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PutEventsFuture
 
 	PutItems(ctx workflow.Context, input *personalizeevents.PutItemsInput) (*personalizeevents.PutItemsOutput, error)
-	PutItemsAsync(ctx workflow.Context, input *personalizeevents.PutItemsInput) *PersonalizeEventsPutItemsFuture
+	PutItemsAsync(ctx workflow.Context, input *personalizeevents.PutItemsInput) *PutItemsFuture
 
 	PutUsers(ctx workflow.Context, input *personalizeevents.PutUsersInput) (*personalizeevents.PutUsersOutput, error)
-	PutUsersAsync(ctx workflow.Context, input *personalizeevents.PutUsersInput) *PersonalizeEventsPutUsersFuture
+	PutUsersAsync(ctx workflow.Context, input *personalizeevents.PutUsersInput) *PutUsersFuture
 }
 
 func NewClient() Client {

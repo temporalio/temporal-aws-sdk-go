@@ -16,89 +16,89 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type PinpointSMSVoiceCreateConfigurationSetFuture struct {
+type CreateConfigurationSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointSMSVoiceCreateConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.CreateConfigurationSetOutput, error) {
+func (r *CreateConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.CreateConfigurationSetOutput, error) {
 	var output pinpointsmsvoice.CreateConfigurationSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointSMSVoiceCreateConfigurationSetEventDestinationFuture struct {
+type CreateConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointSMSVoiceCreateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
+func (r *CreateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
 	var output pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointSMSVoiceDeleteConfigurationSetFuture struct {
+type DeleteConfigurationSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointSMSVoiceDeleteConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
+func (r *DeleteConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
 	var output pinpointsmsvoice.DeleteConfigurationSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointSMSVoiceDeleteConfigurationSetEventDestinationFuture struct {
+type DeleteConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointSMSVoiceDeleteConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
+func (r *DeleteConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
 	var output pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointSMSVoiceGetConfigurationSetEventDestinationsFuture struct {
+type GetConfigurationSetEventDestinationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointSMSVoiceGetConfigurationSetEventDestinationsFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
+func (r *GetConfigurationSetEventDestinationsFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
 	var output pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointSMSVoiceListConfigurationSetsFuture struct {
+type ListConfigurationSetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointSMSVoiceListConfigurationSetsFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
+func (r *ListConfigurationSetsFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
 	var output pinpointsmsvoice.ListConfigurationSetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointSMSVoiceSendVoiceMessageFuture struct {
+type SendVoiceMessageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointSMSVoiceSendVoiceMessageFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
+func (r *SendVoiceMessageFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
 	var output pinpointsmsvoice.SendVoiceMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointSMSVoiceUpdateConfigurationSetEventDestinationFuture struct {
+type UpdateConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointSMSVoiceUpdateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
+func (r *UpdateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
 	var output pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -110,9 +110,9 @@ func (a *stub) CreateConfigurationSet(ctx workflow.Context, input *pinpointsmsvo
 	return &output, err
 }
 
-func (a *stub) CreateConfigurationSetAsync(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetInput) *PinpointSMSVoiceCreateConfigurationSetFuture {
+func (a *stub) CreateConfigurationSetAsync(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetInput) *CreateConfigurationSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.CreateConfigurationSet", input)
-	return &PinpointSMSVoiceCreateConfigurationSetFuture{Future: future}
+	return &CreateConfigurationSetFuture{Future: future}
 }
 
 func (a *stub) CreateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
@@ -121,9 +121,9 @@ func (a *stub) CreateConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) *PinpointSMSVoiceCreateConfigurationSetEventDestinationFuture {
+func (a *stub) CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) *CreateConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.CreateConfigurationSetEventDestination", input)
-	return &PinpointSMSVoiceCreateConfigurationSetEventDestinationFuture{Future: future}
+	return &CreateConfigurationSetEventDestinationFuture{Future: future}
 }
 
 func (a *stub) DeleteConfigurationSet(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetInput) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
@@ -132,9 +132,9 @@ func (a *stub) DeleteConfigurationSet(ctx workflow.Context, input *pinpointsmsvo
 	return &output, err
 }
 
-func (a *stub) DeleteConfigurationSetAsync(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetInput) *PinpointSMSVoiceDeleteConfigurationSetFuture {
+func (a *stub) DeleteConfigurationSetAsync(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetInput) *DeleteConfigurationSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.DeleteConfigurationSet", input)
-	return &PinpointSMSVoiceDeleteConfigurationSetFuture{Future: future}
+	return &DeleteConfigurationSetFuture{Future: future}
 }
 
 func (a *stub) DeleteConfigurationSetEventDestination(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
@@ -143,9 +143,9 @@ func (a *stub) DeleteConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) *PinpointSMSVoiceDeleteConfigurationSetEventDestinationFuture {
+func (a *stub) DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) *DeleteConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.DeleteConfigurationSetEventDestination", input)
-	return &PinpointSMSVoiceDeleteConfigurationSetEventDestinationFuture{Future: future}
+	return &DeleteConfigurationSetEventDestinationFuture{Future: future}
 }
 
 func (a *stub) GetConfigurationSetEventDestinations(ctx workflow.Context, input *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
@@ -154,9 +154,9 @@ func (a *stub) GetConfigurationSetEventDestinations(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) *PinpointSMSVoiceGetConfigurationSetEventDestinationsFuture {
+func (a *stub) GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) *GetConfigurationSetEventDestinationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.GetConfigurationSetEventDestinations", input)
-	return &PinpointSMSVoiceGetConfigurationSetEventDestinationsFuture{Future: future}
+	return &GetConfigurationSetEventDestinationsFuture{Future: future}
 }
 
 func (a *stub) ListConfigurationSets(ctx workflow.Context, input *pinpointsmsvoice.ListConfigurationSetsInput) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
@@ -165,9 +165,9 @@ func (a *stub) ListConfigurationSets(ctx workflow.Context, input *pinpointsmsvoi
 	return &output, err
 }
 
-func (a *stub) ListConfigurationSetsAsync(ctx workflow.Context, input *pinpointsmsvoice.ListConfigurationSetsInput) *PinpointSMSVoiceListConfigurationSetsFuture {
+func (a *stub) ListConfigurationSetsAsync(ctx workflow.Context, input *pinpointsmsvoice.ListConfigurationSetsInput) *ListConfigurationSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.ListConfigurationSets", input)
-	return &PinpointSMSVoiceListConfigurationSetsFuture{Future: future}
+	return &ListConfigurationSetsFuture{Future: future}
 }
 
 func (a *stub) SendVoiceMessage(ctx workflow.Context, input *pinpointsmsvoice.SendVoiceMessageInput) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) SendVoiceMessage(ctx workflow.Context, input *pinpointsmsvoice.Se
 	return &output, err
 }
 
-func (a *stub) SendVoiceMessageAsync(ctx workflow.Context, input *pinpointsmsvoice.SendVoiceMessageInput) *PinpointSMSVoiceSendVoiceMessageFuture {
+func (a *stub) SendVoiceMessageAsync(ctx workflow.Context, input *pinpointsmsvoice.SendVoiceMessageInput) *SendVoiceMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.SendVoiceMessage", input)
-	return &PinpointSMSVoiceSendVoiceMessageFuture{Future: future}
+	return &SendVoiceMessageFuture{Future: future}
 }
 
 func (a *stub) UpdateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
@@ -187,7 +187,7 @@ func (a *stub) UpdateConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) *PinpointSMSVoiceUpdateConfigurationSetEventDestinationFuture {
+func (a *stub) UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) *UpdateConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.UpdateConfigurationSetEventDestination", input)
-	return &PinpointSMSVoiceUpdateConfigurationSetEventDestinationFuture{Future: future}
+	return &UpdateConfigurationSetEventDestinationFuture{Future: future}
 }

@@ -16,88 +16,88 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AcceptDomainTransferFromAnotherAwsAccount(ctx workflow.Context, input *route53domains.AcceptDomainTransferFromAnotherAwsAccountInput) (*route53domains.AcceptDomainTransferFromAnotherAwsAccountOutput, error)
-	AcceptDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.AcceptDomainTransferFromAnotherAwsAccountInput) *Route53DomainsAcceptDomainTransferFromAnotherAwsAccountFuture
+	AcceptDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.AcceptDomainTransferFromAnotherAwsAccountInput) *AcceptDomainTransferFromAnotherAwsAccountFuture
 
 	CancelDomainTransferToAnotherAwsAccount(ctx workflow.Context, input *route53domains.CancelDomainTransferToAnotherAwsAccountInput) (*route53domains.CancelDomainTransferToAnotherAwsAccountOutput, error)
-	CancelDomainTransferToAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.CancelDomainTransferToAnotherAwsAccountInput) *Route53DomainsCancelDomainTransferToAnotherAwsAccountFuture
+	CancelDomainTransferToAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.CancelDomainTransferToAnotherAwsAccountInput) *CancelDomainTransferToAnotherAwsAccountFuture
 
 	CheckDomainAvailability(ctx workflow.Context, input *route53domains.CheckDomainAvailabilityInput) (*route53domains.CheckDomainAvailabilityOutput, error)
-	CheckDomainAvailabilityAsync(ctx workflow.Context, input *route53domains.CheckDomainAvailabilityInput) *Route53DomainsCheckDomainAvailabilityFuture
+	CheckDomainAvailabilityAsync(ctx workflow.Context, input *route53domains.CheckDomainAvailabilityInput) *CheckDomainAvailabilityFuture
 
 	CheckDomainTransferability(ctx workflow.Context, input *route53domains.CheckDomainTransferabilityInput) (*route53domains.CheckDomainTransferabilityOutput, error)
-	CheckDomainTransferabilityAsync(ctx workflow.Context, input *route53domains.CheckDomainTransferabilityInput) *Route53DomainsCheckDomainTransferabilityFuture
+	CheckDomainTransferabilityAsync(ctx workflow.Context, input *route53domains.CheckDomainTransferabilityInput) *CheckDomainTransferabilityFuture
 
 	DeleteTagsForDomain(ctx workflow.Context, input *route53domains.DeleteTagsForDomainInput) (*route53domains.DeleteTagsForDomainOutput, error)
-	DeleteTagsForDomainAsync(ctx workflow.Context, input *route53domains.DeleteTagsForDomainInput) *Route53DomainsDeleteTagsForDomainFuture
+	DeleteTagsForDomainAsync(ctx workflow.Context, input *route53domains.DeleteTagsForDomainInput) *DeleteTagsForDomainFuture
 
 	DisableDomainAutoRenew(ctx workflow.Context, input *route53domains.DisableDomainAutoRenewInput) (*route53domains.DisableDomainAutoRenewOutput, error)
-	DisableDomainAutoRenewAsync(ctx workflow.Context, input *route53domains.DisableDomainAutoRenewInput) *Route53DomainsDisableDomainAutoRenewFuture
+	DisableDomainAutoRenewAsync(ctx workflow.Context, input *route53domains.DisableDomainAutoRenewInput) *DisableDomainAutoRenewFuture
 
 	DisableDomainTransferLock(ctx workflow.Context, input *route53domains.DisableDomainTransferLockInput) (*route53domains.DisableDomainTransferLockOutput, error)
-	DisableDomainTransferLockAsync(ctx workflow.Context, input *route53domains.DisableDomainTransferLockInput) *Route53DomainsDisableDomainTransferLockFuture
+	DisableDomainTransferLockAsync(ctx workflow.Context, input *route53domains.DisableDomainTransferLockInput) *DisableDomainTransferLockFuture
 
 	EnableDomainAutoRenew(ctx workflow.Context, input *route53domains.EnableDomainAutoRenewInput) (*route53domains.EnableDomainAutoRenewOutput, error)
-	EnableDomainAutoRenewAsync(ctx workflow.Context, input *route53domains.EnableDomainAutoRenewInput) *Route53DomainsEnableDomainAutoRenewFuture
+	EnableDomainAutoRenewAsync(ctx workflow.Context, input *route53domains.EnableDomainAutoRenewInput) *EnableDomainAutoRenewFuture
 
 	EnableDomainTransferLock(ctx workflow.Context, input *route53domains.EnableDomainTransferLockInput) (*route53domains.EnableDomainTransferLockOutput, error)
-	EnableDomainTransferLockAsync(ctx workflow.Context, input *route53domains.EnableDomainTransferLockInput) *Route53DomainsEnableDomainTransferLockFuture
+	EnableDomainTransferLockAsync(ctx workflow.Context, input *route53domains.EnableDomainTransferLockInput) *EnableDomainTransferLockFuture
 
 	GetContactReachabilityStatus(ctx workflow.Context, input *route53domains.GetContactReachabilityStatusInput) (*route53domains.GetContactReachabilityStatusOutput, error)
-	GetContactReachabilityStatusAsync(ctx workflow.Context, input *route53domains.GetContactReachabilityStatusInput) *Route53DomainsGetContactReachabilityStatusFuture
+	GetContactReachabilityStatusAsync(ctx workflow.Context, input *route53domains.GetContactReachabilityStatusInput) *GetContactReachabilityStatusFuture
 
 	GetDomainDetail(ctx workflow.Context, input *route53domains.GetDomainDetailInput) (*route53domains.GetDomainDetailOutput, error)
-	GetDomainDetailAsync(ctx workflow.Context, input *route53domains.GetDomainDetailInput) *Route53DomainsGetDomainDetailFuture
+	GetDomainDetailAsync(ctx workflow.Context, input *route53domains.GetDomainDetailInput) *GetDomainDetailFuture
 
 	GetDomainSuggestions(ctx workflow.Context, input *route53domains.GetDomainSuggestionsInput) (*route53domains.GetDomainSuggestionsOutput, error)
-	GetDomainSuggestionsAsync(ctx workflow.Context, input *route53domains.GetDomainSuggestionsInput) *Route53DomainsGetDomainSuggestionsFuture
+	GetDomainSuggestionsAsync(ctx workflow.Context, input *route53domains.GetDomainSuggestionsInput) *GetDomainSuggestionsFuture
 
 	GetOperationDetail(ctx workflow.Context, input *route53domains.GetOperationDetailInput) (*route53domains.GetOperationDetailOutput, error)
-	GetOperationDetailAsync(ctx workflow.Context, input *route53domains.GetOperationDetailInput) *Route53DomainsGetOperationDetailFuture
+	GetOperationDetailAsync(ctx workflow.Context, input *route53domains.GetOperationDetailInput) *GetOperationDetailFuture
 
 	ListDomains(ctx workflow.Context, input *route53domains.ListDomainsInput) (*route53domains.ListDomainsOutput, error)
-	ListDomainsAsync(ctx workflow.Context, input *route53domains.ListDomainsInput) *Route53DomainsListDomainsFuture
+	ListDomainsAsync(ctx workflow.Context, input *route53domains.ListDomainsInput) *ListDomainsFuture
 
 	ListOperations(ctx workflow.Context, input *route53domains.ListOperationsInput) (*route53domains.ListOperationsOutput, error)
-	ListOperationsAsync(ctx workflow.Context, input *route53domains.ListOperationsInput) *Route53DomainsListOperationsFuture
+	ListOperationsAsync(ctx workflow.Context, input *route53domains.ListOperationsInput) *ListOperationsFuture
 
 	ListTagsForDomain(ctx workflow.Context, input *route53domains.ListTagsForDomainInput) (*route53domains.ListTagsForDomainOutput, error)
-	ListTagsForDomainAsync(ctx workflow.Context, input *route53domains.ListTagsForDomainInput) *Route53DomainsListTagsForDomainFuture
+	ListTagsForDomainAsync(ctx workflow.Context, input *route53domains.ListTagsForDomainInput) *ListTagsForDomainFuture
 
 	RegisterDomain(ctx workflow.Context, input *route53domains.RegisterDomainInput) (*route53domains.RegisterDomainOutput, error)
-	RegisterDomainAsync(ctx workflow.Context, input *route53domains.RegisterDomainInput) *Route53DomainsRegisterDomainFuture
+	RegisterDomainAsync(ctx workflow.Context, input *route53domains.RegisterDomainInput) *RegisterDomainFuture
 
 	RejectDomainTransferFromAnotherAwsAccount(ctx workflow.Context, input *route53domains.RejectDomainTransferFromAnotherAwsAccountInput) (*route53domains.RejectDomainTransferFromAnotherAwsAccountOutput, error)
-	RejectDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.RejectDomainTransferFromAnotherAwsAccountInput) *Route53DomainsRejectDomainTransferFromAnotherAwsAccountFuture
+	RejectDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.RejectDomainTransferFromAnotherAwsAccountInput) *RejectDomainTransferFromAnotherAwsAccountFuture
 
 	RenewDomain(ctx workflow.Context, input *route53domains.RenewDomainInput) (*route53domains.RenewDomainOutput, error)
-	RenewDomainAsync(ctx workflow.Context, input *route53domains.RenewDomainInput) *Route53DomainsRenewDomainFuture
+	RenewDomainAsync(ctx workflow.Context, input *route53domains.RenewDomainInput) *RenewDomainFuture
 
 	ResendContactReachabilityEmail(ctx workflow.Context, input *route53domains.ResendContactReachabilityEmailInput) (*route53domains.ResendContactReachabilityEmailOutput, error)
-	ResendContactReachabilityEmailAsync(ctx workflow.Context, input *route53domains.ResendContactReachabilityEmailInput) *Route53DomainsResendContactReachabilityEmailFuture
+	ResendContactReachabilityEmailAsync(ctx workflow.Context, input *route53domains.ResendContactReachabilityEmailInput) *ResendContactReachabilityEmailFuture
 
 	RetrieveDomainAuthCode(ctx workflow.Context, input *route53domains.RetrieveDomainAuthCodeInput) (*route53domains.RetrieveDomainAuthCodeOutput, error)
-	RetrieveDomainAuthCodeAsync(ctx workflow.Context, input *route53domains.RetrieveDomainAuthCodeInput) *Route53DomainsRetrieveDomainAuthCodeFuture
+	RetrieveDomainAuthCodeAsync(ctx workflow.Context, input *route53domains.RetrieveDomainAuthCodeInput) *RetrieveDomainAuthCodeFuture
 
 	TransferDomain(ctx workflow.Context, input *route53domains.TransferDomainInput) (*route53domains.TransferDomainOutput, error)
-	TransferDomainAsync(ctx workflow.Context, input *route53domains.TransferDomainInput) *Route53DomainsTransferDomainFuture
+	TransferDomainAsync(ctx workflow.Context, input *route53domains.TransferDomainInput) *TransferDomainFuture
 
 	TransferDomainToAnotherAwsAccount(ctx workflow.Context, input *route53domains.TransferDomainToAnotherAwsAccountInput) (*route53domains.TransferDomainToAnotherAwsAccountOutput, error)
-	TransferDomainToAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.TransferDomainToAnotherAwsAccountInput) *Route53DomainsTransferDomainToAnotherAwsAccountFuture
+	TransferDomainToAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.TransferDomainToAnotherAwsAccountInput) *TransferDomainToAnotherAwsAccountFuture
 
 	UpdateDomainContact(ctx workflow.Context, input *route53domains.UpdateDomainContactInput) (*route53domains.UpdateDomainContactOutput, error)
-	UpdateDomainContactAsync(ctx workflow.Context, input *route53domains.UpdateDomainContactInput) *Route53DomainsUpdateDomainContactFuture
+	UpdateDomainContactAsync(ctx workflow.Context, input *route53domains.UpdateDomainContactInput) *UpdateDomainContactFuture
 
 	UpdateDomainContactPrivacy(ctx workflow.Context, input *route53domains.UpdateDomainContactPrivacyInput) (*route53domains.UpdateDomainContactPrivacyOutput, error)
-	UpdateDomainContactPrivacyAsync(ctx workflow.Context, input *route53domains.UpdateDomainContactPrivacyInput) *Route53DomainsUpdateDomainContactPrivacyFuture
+	UpdateDomainContactPrivacyAsync(ctx workflow.Context, input *route53domains.UpdateDomainContactPrivacyInput) *UpdateDomainContactPrivacyFuture
 
 	UpdateDomainNameservers(ctx workflow.Context, input *route53domains.UpdateDomainNameserversInput) (*route53domains.UpdateDomainNameserversOutput, error)
-	UpdateDomainNameserversAsync(ctx workflow.Context, input *route53domains.UpdateDomainNameserversInput) *Route53DomainsUpdateDomainNameserversFuture
+	UpdateDomainNameserversAsync(ctx workflow.Context, input *route53domains.UpdateDomainNameserversInput) *UpdateDomainNameserversFuture
 
 	UpdateTagsForDomain(ctx workflow.Context, input *route53domains.UpdateTagsForDomainInput) (*route53domains.UpdateTagsForDomainOutput, error)
-	UpdateTagsForDomainAsync(ctx workflow.Context, input *route53domains.UpdateTagsForDomainInput) *Route53DomainsUpdateTagsForDomainFuture
+	UpdateTagsForDomainAsync(ctx workflow.Context, input *route53domains.UpdateTagsForDomainInput) *UpdateTagsForDomainFuture
 
 	ViewBilling(ctx workflow.Context, input *route53domains.ViewBillingInput) (*route53domains.ViewBillingOutput, error)
-	ViewBillingAsync(ctx workflow.Context, input *route53domains.ViewBillingInput) *Route53DomainsViewBillingFuture
+	ViewBillingAsync(ctx workflow.Context, input *route53domains.ViewBillingInput) *ViewBillingFuture
 }
 
 func NewClient() Client {

@@ -16,320 +16,320 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ELBAddTagsFuture struct {
+type AddTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBAddTagsFuture) Get(ctx workflow.Context) (*elb.AddTagsOutput, error) {
+func (r *AddTagsFuture) Get(ctx workflow.Context) (*elb.AddTagsOutput, error) {
 	var output elb.AddTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBApplySecurityGroupsToLoadBalancerFuture struct {
+type ApplySecurityGroupsToLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBApplySecurityGroupsToLoadBalancerFuture) Get(ctx workflow.Context) (*elb.ApplySecurityGroupsToLoadBalancerOutput, error) {
+func (r *ApplySecurityGroupsToLoadBalancerFuture) Get(ctx workflow.Context) (*elb.ApplySecurityGroupsToLoadBalancerOutput, error) {
 	var output elb.ApplySecurityGroupsToLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBAttachLoadBalancerToSubnetsFuture struct {
+type AttachLoadBalancerToSubnetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBAttachLoadBalancerToSubnetsFuture) Get(ctx workflow.Context) (*elb.AttachLoadBalancerToSubnetsOutput, error) {
+func (r *AttachLoadBalancerToSubnetsFuture) Get(ctx workflow.Context) (*elb.AttachLoadBalancerToSubnetsOutput, error) {
 	var output elb.AttachLoadBalancerToSubnetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBConfigureHealthCheckFuture struct {
+type ConfigureHealthCheckFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBConfigureHealthCheckFuture) Get(ctx workflow.Context) (*elb.ConfigureHealthCheckOutput, error) {
+func (r *ConfigureHealthCheckFuture) Get(ctx workflow.Context) (*elb.ConfigureHealthCheckOutput, error) {
 	var output elb.ConfigureHealthCheckOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBCreateAppCookieStickinessPolicyFuture struct {
+type CreateAppCookieStickinessPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBCreateAppCookieStickinessPolicyFuture) Get(ctx workflow.Context) (*elb.CreateAppCookieStickinessPolicyOutput, error) {
+func (r *CreateAppCookieStickinessPolicyFuture) Get(ctx workflow.Context) (*elb.CreateAppCookieStickinessPolicyOutput, error) {
 	var output elb.CreateAppCookieStickinessPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBCreateLBCookieStickinessPolicyFuture struct {
+type CreateLBCookieStickinessPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBCreateLBCookieStickinessPolicyFuture) Get(ctx workflow.Context) (*elb.CreateLBCookieStickinessPolicyOutput, error) {
+func (r *CreateLBCookieStickinessPolicyFuture) Get(ctx workflow.Context) (*elb.CreateLBCookieStickinessPolicyOutput, error) {
 	var output elb.CreateLBCookieStickinessPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBCreateLoadBalancerFuture struct {
+type CreateLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBCreateLoadBalancerFuture) Get(ctx workflow.Context) (*elb.CreateLoadBalancerOutput, error) {
+func (r *CreateLoadBalancerFuture) Get(ctx workflow.Context) (*elb.CreateLoadBalancerOutput, error) {
 	var output elb.CreateLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBCreateLoadBalancerListenersFuture struct {
+type CreateLoadBalancerListenersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBCreateLoadBalancerListenersFuture) Get(ctx workflow.Context) (*elb.CreateLoadBalancerListenersOutput, error) {
+func (r *CreateLoadBalancerListenersFuture) Get(ctx workflow.Context) (*elb.CreateLoadBalancerListenersOutput, error) {
 	var output elb.CreateLoadBalancerListenersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBCreateLoadBalancerPolicyFuture struct {
+type CreateLoadBalancerPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBCreateLoadBalancerPolicyFuture) Get(ctx workflow.Context) (*elb.CreateLoadBalancerPolicyOutput, error) {
+func (r *CreateLoadBalancerPolicyFuture) Get(ctx workflow.Context) (*elb.CreateLoadBalancerPolicyOutput, error) {
 	var output elb.CreateLoadBalancerPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDeleteLoadBalancerFuture struct {
+type DeleteLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDeleteLoadBalancerFuture) Get(ctx workflow.Context) (*elb.DeleteLoadBalancerOutput, error) {
+func (r *DeleteLoadBalancerFuture) Get(ctx workflow.Context) (*elb.DeleteLoadBalancerOutput, error) {
 	var output elb.DeleteLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDeleteLoadBalancerListenersFuture struct {
+type DeleteLoadBalancerListenersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDeleteLoadBalancerListenersFuture) Get(ctx workflow.Context) (*elb.DeleteLoadBalancerListenersOutput, error) {
+func (r *DeleteLoadBalancerListenersFuture) Get(ctx workflow.Context) (*elb.DeleteLoadBalancerListenersOutput, error) {
 	var output elb.DeleteLoadBalancerListenersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDeleteLoadBalancerPolicyFuture struct {
+type DeleteLoadBalancerPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDeleteLoadBalancerPolicyFuture) Get(ctx workflow.Context) (*elb.DeleteLoadBalancerPolicyOutput, error) {
+func (r *DeleteLoadBalancerPolicyFuture) Get(ctx workflow.Context) (*elb.DeleteLoadBalancerPolicyOutput, error) {
 	var output elb.DeleteLoadBalancerPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDeregisterInstancesFromLoadBalancerFuture struct {
+type DeregisterInstancesFromLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDeregisterInstancesFromLoadBalancerFuture) Get(ctx workflow.Context) (*elb.DeregisterInstancesFromLoadBalancerOutput, error) {
+func (r *DeregisterInstancesFromLoadBalancerFuture) Get(ctx workflow.Context) (*elb.DeregisterInstancesFromLoadBalancerOutput, error) {
 	var output elb.DeregisterInstancesFromLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDescribeAccountLimitsFuture struct {
+type DescribeAccountLimitsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDescribeAccountLimitsFuture) Get(ctx workflow.Context) (*elb.DescribeAccountLimitsOutput, error) {
+func (r *DescribeAccountLimitsFuture) Get(ctx workflow.Context) (*elb.DescribeAccountLimitsOutput, error) {
 	var output elb.DescribeAccountLimitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDescribeInstanceHealthFuture struct {
+type DescribeInstanceHealthFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDescribeInstanceHealthFuture) Get(ctx workflow.Context) (*elb.DescribeInstanceHealthOutput, error) {
+func (r *DescribeInstanceHealthFuture) Get(ctx workflow.Context) (*elb.DescribeInstanceHealthOutput, error) {
 	var output elb.DescribeInstanceHealthOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDescribeLoadBalancerAttributesFuture struct {
+type DescribeLoadBalancerAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDescribeLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elb.DescribeLoadBalancerAttributesOutput, error) {
+func (r *DescribeLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elb.DescribeLoadBalancerAttributesOutput, error) {
 	var output elb.DescribeLoadBalancerAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDescribeLoadBalancerPoliciesFuture struct {
+type DescribeLoadBalancerPoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDescribeLoadBalancerPoliciesFuture) Get(ctx workflow.Context) (*elb.DescribeLoadBalancerPoliciesOutput, error) {
+func (r *DescribeLoadBalancerPoliciesFuture) Get(ctx workflow.Context) (*elb.DescribeLoadBalancerPoliciesOutput, error) {
 	var output elb.DescribeLoadBalancerPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDescribeLoadBalancerPolicyTypesFuture struct {
+type DescribeLoadBalancerPolicyTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDescribeLoadBalancerPolicyTypesFuture) Get(ctx workflow.Context) (*elb.DescribeLoadBalancerPolicyTypesOutput, error) {
+func (r *DescribeLoadBalancerPolicyTypesFuture) Get(ctx workflow.Context) (*elb.DescribeLoadBalancerPolicyTypesOutput, error) {
 	var output elb.DescribeLoadBalancerPolicyTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDescribeLoadBalancersFuture struct {
+type DescribeLoadBalancersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDescribeLoadBalancersFuture) Get(ctx workflow.Context) (*elb.DescribeLoadBalancersOutput, error) {
+func (r *DescribeLoadBalancersFuture) Get(ctx workflow.Context) (*elb.DescribeLoadBalancersOutput, error) {
 	var output elb.DescribeLoadBalancersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDescribeTagsFuture struct {
+type DescribeTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDescribeTagsFuture) Get(ctx workflow.Context) (*elb.DescribeTagsOutput, error) {
+func (r *DescribeTagsFuture) Get(ctx workflow.Context) (*elb.DescribeTagsOutput, error) {
 	var output elb.DescribeTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDetachLoadBalancerFromSubnetsFuture struct {
+type DetachLoadBalancerFromSubnetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDetachLoadBalancerFromSubnetsFuture) Get(ctx workflow.Context) (*elb.DetachLoadBalancerFromSubnetsOutput, error) {
+func (r *DetachLoadBalancerFromSubnetsFuture) Get(ctx workflow.Context) (*elb.DetachLoadBalancerFromSubnetsOutput, error) {
 	var output elb.DetachLoadBalancerFromSubnetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBDisableAvailabilityZonesForLoadBalancerFuture struct {
+type DisableAvailabilityZonesForLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBDisableAvailabilityZonesForLoadBalancerFuture) Get(ctx workflow.Context) (*elb.DisableAvailabilityZonesForLoadBalancerOutput, error) {
+func (r *DisableAvailabilityZonesForLoadBalancerFuture) Get(ctx workflow.Context) (*elb.DisableAvailabilityZonesForLoadBalancerOutput, error) {
 	var output elb.DisableAvailabilityZonesForLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBEnableAvailabilityZonesForLoadBalancerFuture struct {
+type EnableAvailabilityZonesForLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBEnableAvailabilityZonesForLoadBalancerFuture) Get(ctx workflow.Context) (*elb.EnableAvailabilityZonesForLoadBalancerOutput, error) {
+func (r *EnableAvailabilityZonesForLoadBalancerFuture) Get(ctx workflow.Context) (*elb.EnableAvailabilityZonesForLoadBalancerOutput, error) {
 	var output elb.EnableAvailabilityZonesForLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBModifyLoadBalancerAttributesFuture struct {
+type ModifyLoadBalancerAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBModifyLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elb.ModifyLoadBalancerAttributesOutput, error) {
+func (r *ModifyLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elb.ModifyLoadBalancerAttributesOutput, error) {
 	var output elb.ModifyLoadBalancerAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBRegisterInstancesWithLoadBalancerFuture struct {
+type RegisterInstancesWithLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBRegisterInstancesWithLoadBalancerFuture) Get(ctx workflow.Context) (*elb.RegisterInstancesWithLoadBalancerOutput, error) {
+func (r *RegisterInstancesWithLoadBalancerFuture) Get(ctx workflow.Context) (*elb.RegisterInstancesWithLoadBalancerOutput, error) {
 	var output elb.RegisterInstancesWithLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBRemoveTagsFuture struct {
+type RemoveTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBRemoveTagsFuture) Get(ctx workflow.Context) (*elb.RemoveTagsOutput, error) {
+func (r *RemoveTagsFuture) Get(ctx workflow.Context) (*elb.RemoveTagsOutput, error) {
 	var output elb.RemoveTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBSetLoadBalancerListenerSSLCertificateFuture struct {
+type SetLoadBalancerListenerSSLCertificateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBSetLoadBalancerListenerSSLCertificateFuture) Get(ctx workflow.Context) (*elb.SetLoadBalancerListenerSSLCertificateOutput, error) {
+func (r *SetLoadBalancerListenerSSLCertificateFuture) Get(ctx workflow.Context) (*elb.SetLoadBalancerListenerSSLCertificateOutput, error) {
 	var output elb.SetLoadBalancerListenerSSLCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBSetLoadBalancerPoliciesForBackendServerFuture struct {
+type SetLoadBalancerPoliciesForBackendServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBSetLoadBalancerPoliciesForBackendServerFuture) Get(ctx workflow.Context) (*elb.SetLoadBalancerPoliciesForBackendServerOutput, error) {
+func (r *SetLoadBalancerPoliciesForBackendServerFuture) Get(ctx workflow.Context) (*elb.SetLoadBalancerPoliciesForBackendServerOutput, error) {
 	var output elb.SetLoadBalancerPoliciesForBackendServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ELBSetLoadBalancerPoliciesOfListenerFuture struct {
+type SetLoadBalancerPoliciesOfListenerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ELBSetLoadBalancerPoliciesOfListenerFuture) Get(ctx workflow.Context) (*elb.SetLoadBalancerPoliciesOfListenerOutput, error) {
+func (r *SetLoadBalancerPoliciesOfListenerFuture) Get(ctx workflow.Context) (*elb.SetLoadBalancerPoliciesOfListenerOutput, error) {
 	var output elb.SetLoadBalancerPoliciesOfListenerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -341,9 +341,9 @@ func (a *stub) AddTags(ctx workflow.Context, input *elb.AddTagsInput) (*elb.AddT
 	return &output, err
 }
 
-func (a *stub) AddTagsAsync(ctx workflow.Context, input *elb.AddTagsInput) *ELBAddTagsFuture {
+func (a *stub) AddTagsAsync(ctx workflow.Context, input *elb.AddTagsInput) *AddTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.AddTags", input)
-	return &ELBAddTagsFuture{Future: future}
+	return &AddTagsFuture{Future: future}
 }
 
 func (a *stub) ApplySecurityGroupsToLoadBalancer(ctx workflow.Context, input *elb.ApplySecurityGroupsToLoadBalancerInput) (*elb.ApplySecurityGroupsToLoadBalancerOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) ApplySecurityGroupsToLoadBalancer(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *stub) ApplySecurityGroupsToLoadBalancerAsync(ctx workflow.Context, input *elb.ApplySecurityGroupsToLoadBalancerInput) *ELBApplySecurityGroupsToLoadBalancerFuture {
+func (a *stub) ApplySecurityGroupsToLoadBalancerAsync(ctx workflow.Context, input *elb.ApplySecurityGroupsToLoadBalancerInput) *ApplySecurityGroupsToLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.ApplySecurityGroupsToLoadBalancer", input)
-	return &ELBApplySecurityGroupsToLoadBalancerFuture{Future: future}
+	return &ApplySecurityGroupsToLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) AttachLoadBalancerToSubnets(ctx workflow.Context, input *elb.AttachLoadBalancerToSubnetsInput) (*elb.AttachLoadBalancerToSubnetsOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) AttachLoadBalancerToSubnets(ctx workflow.Context, input *elb.Atta
 	return &output, err
 }
 
-func (a *stub) AttachLoadBalancerToSubnetsAsync(ctx workflow.Context, input *elb.AttachLoadBalancerToSubnetsInput) *ELBAttachLoadBalancerToSubnetsFuture {
+func (a *stub) AttachLoadBalancerToSubnetsAsync(ctx workflow.Context, input *elb.AttachLoadBalancerToSubnetsInput) *AttachLoadBalancerToSubnetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.AttachLoadBalancerToSubnets", input)
-	return &ELBAttachLoadBalancerToSubnetsFuture{Future: future}
+	return &AttachLoadBalancerToSubnetsFuture{Future: future}
 }
 
 func (a *stub) ConfigureHealthCheck(ctx workflow.Context, input *elb.ConfigureHealthCheckInput) (*elb.ConfigureHealthCheckOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) ConfigureHealthCheck(ctx workflow.Context, input *elb.ConfigureHe
 	return &output, err
 }
 
-func (a *stub) ConfigureHealthCheckAsync(ctx workflow.Context, input *elb.ConfigureHealthCheckInput) *ELBConfigureHealthCheckFuture {
+func (a *stub) ConfigureHealthCheckAsync(ctx workflow.Context, input *elb.ConfigureHealthCheckInput) *ConfigureHealthCheckFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.ConfigureHealthCheck", input)
-	return &ELBConfigureHealthCheckFuture{Future: future}
+	return &ConfigureHealthCheckFuture{Future: future}
 }
 
 func (a *stub) CreateAppCookieStickinessPolicy(ctx workflow.Context, input *elb.CreateAppCookieStickinessPolicyInput) (*elb.CreateAppCookieStickinessPolicyOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) CreateAppCookieStickinessPolicy(ctx workflow.Context, input *elb.
 	return &output, err
 }
 
-func (a *stub) CreateAppCookieStickinessPolicyAsync(ctx workflow.Context, input *elb.CreateAppCookieStickinessPolicyInput) *ELBCreateAppCookieStickinessPolicyFuture {
+func (a *stub) CreateAppCookieStickinessPolicyAsync(ctx workflow.Context, input *elb.CreateAppCookieStickinessPolicyInput) *CreateAppCookieStickinessPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.CreateAppCookieStickinessPolicy", input)
-	return &ELBCreateAppCookieStickinessPolicyFuture{Future: future}
+	return &CreateAppCookieStickinessPolicyFuture{Future: future}
 }
 
 func (a *stub) CreateLBCookieStickinessPolicy(ctx workflow.Context, input *elb.CreateLBCookieStickinessPolicyInput) (*elb.CreateLBCookieStickinessPolicyOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) CreateLBCookieStickinessPolicy(ctx workflow.Context, input *elb.C
 	return &output, err
 }
 
-func (a *stub) CreateLBCookieStickinessPolicyAsync(ctx workflow.Context, input *elb.CreateLBCookieStickinessPolicyInput) *ELBCreateLBCookieStickinessPolicyFuture {
+func (a *stub) CreateLBCookieStickinessPolicyAsync(ctx workflow.Context, input *elb.CreateLBCookieStickinessPolicyInput) *CreateLBCookieStickinessPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.CreateLBCookieStickinessPolicy", input)
-	return &ELBCreateLBCookieStickinessPolicyFuture{Future: future}
+	return &CreateLBCookieStickinessPolicyFuture{Future: future}
 }
 
 func (a *stub) CreateLoadBalancer(ctx workflow.Context, input *elb.CreateLoadBalancerInput) (*elb.CreateLoadBalancerOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) CreateLoadBalancer(ctx workflow.Context, input *elb.CreateLoadBal
 	return &output, err
 }
 
-func (a *stub) CreateLoadBalancerAsync(ctx workflow.Context, input *elb.CreateLoadBalancerInput) *ELBCreateLoadBalancerFuture {
+func (a *stub) CreateLoadBalancerAsync(ctx workflow.Context, input *elb.CreateLoadBalancerInput) *CreateLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.CreateLoadBalancer", input)
-	return &ELBCreateLoadBalancerFuture{Future: future}
+	return &CreateLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) CreateLoadBalancerListeners(ctx workflow.Context, input *elb.CreateLoadBalancerListenersInput) (*elb.CreateLoadBalancerListenersOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) CreateLoadBalancerListeners(ctx workflow.Context, input *elb.Crea
 	return &output, err
 }
 
-func (a *stub) CreateLoadBalancerListenersAsync(ctx workflow.Context, input *elb.CreateLoadBalancerListenersInput) *ELBCreateLoadBalancerListenersFuture {
+func (a *stub) CreateLoadBalancerListenersAsync(ctx workflow.Context, input *elb.CreateLoadBalancerListenersInput) *CreateLoadBalancerListenersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.CreateLoadBalancerListeners", input)
-	return &ELBCreateLoadBalancerListenersFuture{Future: future}
+	return &CreateLoadBalancerListenersFuture{Future: future}
 }
 
 func (a *stub) CreateLoadBalancerPolicy(ctx workflow.Context, input *elb.CreateLoadBalancerPolicyInput) (*elb.CreateLoadBalancerPolicyOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) CreateLoadBalancerPolicy(ctx workflow.Context, input *elb.CreateL
 	return &output, err
 }
 
-func (a *stub) CreateLoadBalancerPolicyAsync(ctx workflow.Context, input *elb.CreateLoadBalancerPolicyInput) *ELBCreateLoadBalancerPolicyFuture {
+func (a *stub) CreateLoadBalancerPolicyAsync(ctx workflow.Context, input *elb.CreateLoadBalancerPolicyInput) *CreateLoadBalancerPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.CreateLoadBalancerPolicy", input)
-	return &ELBCreateLoadBalancerPolicyFuture{Future: future}
+	return &CreateLoadBalancerPolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteLoadBalancer(ctx workflow.Context, input *elb.DeleteLoadBalancerInput) (*elb.DeleteLoadBalancerOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) DeleteLoadBalancer(ctx workflow.Context, input *elb.DeleteLoadBal
 	return &output, err
 }
 
-func (a *stub) DeleteLoadBalancerAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerInput) *ELBDeleteLoadBalancerFuture {
+func (a *stub) DeleteLoadBalancerAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerInput) *DeleteLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DeleteLoadBalancer", input)
-	return &ELBDeleteLoadBalancerFuture{Future: future}
+	return &DeleteLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) DeleteLoadBalancerListeners(ctx workflow.Context, input *elb.DeleteLoadBalancerListenersInput) (*elb.DeleteLoadBalancerListenersOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) DeleteLoadBalancerListeners(ctx workflow.Context, input *elb.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteLoadBalancerListenersAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerListenersInput) *ELBDeleteLoadBalancerListenersFuture {
+func (a *stub) DeleteLoadBalancerListenersAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerListenersInput) *DeleteLoadBalancerListenersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DeleteLoadBalancerListeners", input)
-	return &ELBDeleteLoadBalancerListenersFuture{Future: future}
+	return &DeleteLoadBalancerListenersFuture{Future: future}
 }
 
 func (a *stub) DeleteLoadBalancerPolicy(ctx workflow.Context, input *elb.DeleteLoadBalancerPolicyInput) (*elb.DeleteLoadBalancerPolicyOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) DeleteLoadBalancerPolicy(ctx workflow.Context, input *elb.DeleteL
 	return &output, err
 }
 
-func (a *stub) DeleteLoadBalancerPolicyAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerPolicyInput) *ELBDeleteLoadBalancerPolicyFuture {
+func (a *stub) DeleteLoadBalancerPolicyAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerPolicyInput) *DeleteLoadBalancerPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DeleteLoadBalancerPolicy", input)
-	return &ELBDeleteLoadBalancerPolicyFuture{Future: future}
+	return &DeleteLoadBalancerPolicyFuture{Future: future}
 }
 
 func (a *stub) DeregisterInstancesFromLoadBalancer(ctx workflow.Context, input *elb.DeregisterInstancesFromLoadBalancerInput) (*elb.DeregisterInstancesFromLoadBalancerOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) DeregisterInstancesFromLoadBalancer(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) DeregisterInstancesFromLoadBalancerAsync(ctx workflow.Context, input *elb.DeregisterInstancesFromLoadBalancerInput) *ELBDeregisterInstancesFromLoadBalancerFuture {
+func (a *stub) DeregisterInstancesFromLoadBalancerAsync(ctx workflow.Context, input *elb.DeregisterInstancesFromLoadBalancerInput) *DeregisterInstancesFromLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DeregisterInstancesFromLoadBalancer", input)
-	return &ELBDeregisterInstancesFromLoadBalancerFuture{Future: future}
+	return &DeregisterInstancesFromLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) DescribeAccountLimits(ctx workflow.Context, input *elb.DescribeAccountLimitsInput) (*elb.DescribeAccountLimitsOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DescribeAccountLimits(ctx workflow.Context, input *elb.DescribeAc
 	return &output, err
 }
 
-func (a *stub) DescribeAccountLimitsAsync(ctx workflow.Context, input *elb.DescribeAccountLimitsInput) *ELBDescribeAccountLimitsFuture {
+func (a *stub) DescribeAccountLimitsAsync(ctx workflow.Context, input *elb.DescribeAccountLimitsInput) *DescribeAccountLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DescribeAccountLimits", input)
-	return &ELBDescribeAccountLimitsFuture{Future: future}
+	return &DescribeAccountLimitsFuture{Future: future}
 }
 
 func (a *stub) DescribeInstanceHealth(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) (*elb.DescribeInstanceHealthOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) DescribeInstanceHealth(ctx workflow.Context, input *elb.DescribeI
 	return &output, err
 }
 
-func (a *stub) DescribeInstanceHealthAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *ELBDescribeInstanceHealthFuture {
+func (a *stub) DescribeInstanceHealthAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *DescribeInstanceHealthFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DescribeInstanceHealth", input)
-	return &ELBDescribeInstanceHealthFuture{Future: future}
+	return &DescribeInstanceHealthFuture{Future: future}
 }
 
 func (a *stub) DescribeLoadBalancerAttributes(ctx workflow.Context, input *elb.DescribeLoadBalancerAttributesInput) (*elb.DescribeLoadBalancerAttributesOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DescribeLoadBalancerAttributes(ctx workflow.Context, input *elb.D
 	return &output, err
 }
 
-func (a *stub) DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerAttributesInput) *ELBDescribeLoadBalancerAttributesFuture {
+func (a *stub) DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerAttributesInput) *DescribeLoadBalancerAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DescribeLoadBalancerAttributes", input)
-	return &ELBDescribeLoadBalancerAttributesFuture{Future: future}
+	return &DescribeLoadBalancerAttributesFuture{Future: future}
 }
 
 func (a *stub) DescribeLoadBalancerPolicies(ctx workflow.Context, input *elb.DescribeLoadBalancerPoliciesInput) (*elb.DescribeLoadBalancerPoliciesOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) DescribeLoadBalancerPolicies(ctx workflow.Context, input *elb.Des
 	return &output, err
 }
 
-func (a *stub) DescribeLoadBalancerPoliciesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerPoliciesInput) *ELBDescribeLoadBalancerPoliciesFuture {
+func (a *stub) DescribeLoadBalancerPoliciesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerPoliciesInput) *DescribeLoadBalancerPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DescribeLoadBalancerPolicies", input)
-	return &ELBDescribeLoadBalancerPoliciesFuture{Future: future}
+	return &DescribeLoadBalancerPoliciesFuture{Future: future}
 }
 
 func (a *stub) DescribeLoadBalancerPolicyTypes(ctx workflow.Context, input *elb.DescribeLoadBalancerPolicyTypesInput) (*elb.DescribeLoadBalancerPolicyTypesOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) DescribeLoadBalancerPolicyTypes(ctx workflow.Context, input *elb.
 	return &output, err
 }
 
-func (a *stub) DescribeLoadBalancerPolicyTypesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerPolicyTypesInput) *ELBDescribeLoadBalancerPolicyTypesFuture {
+func (a *stub) DescribeLoadBalancerPolicyTypesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerPolicyTypesInput) *DescribeLoadBalancerPolicyTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DescribeLoadBalancerPolicyTypes", input)
-	return &ELBDescribeLoadBalancerPolicyTypesFuture{Future: future}
+	return &DescribeLoadBalancerPolicyTypesFuture{Future: future}
 }
 
 func (a *stub) DescribeLoadBalancers(ctx workflow.Context, input *elb.DescribeLoadBalancersInput) (*elb.DescribeLoadBalancersOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) DescribeLoadBalancers(ctx workflow.Context, input *elb.DescribeLo
 	return &output, err
 }
 
-func (a *stub) DescribeLoadBalancersAsync(ctx workflow.Context, input *elb.DescribeLoadBalancersInput) *ELBDescribeLoadBalancersFuture {
+func (a *stub) DescribeLoadBalancersAsync(ctx workflow.Context, input *elb.DescribeLoadBalancersInput) *DescribeLoadBalancersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DescribeLoadBalancers", input)
-	return &ELBDescribeLoadBalancersFuture{Future: future}
+	return &DescribeLoadBalancersFuture{Future: future}
 }
 
 func (a *stub) DescribeTags(ctx workflow.Context, input *elb.DescribeTagsInput) (*elb.DescribeTagsOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) DescribeTags(ctx workflow.Context, input *elb.DescribeTagsInput) 
 	return &output, err
 }
 
-func (a *stub) DescribeTagsAsync(ctx workflow.Context, input *elb.DescribeTagsInput) *ELBDescribeTagsFuture {
+func (a *stub) DescribeTagsAsync(ctx workflow.Context, input *elb.DescribeTagsInput) *DescribeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DescribeTags", input)
-	return &ELBDescribeTagsFuture{Future: future}
+	return &DescribeTagsFuture{Future: future}
 }
 
 func (a *stub) DetachLoadBalancerFromSubnets(ctx workflow.Context, input *elb.DetachLoadBalancerFromSubnetsInput) (*elb.DetachLoadBalancerFromSubnetsOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) DetachLoadBalancerFromSubnets(ctx workflow.Context, input *elb.De
 	return &output, err
 }
 
-func (a *stub) DetachLoadBalancerFromSubnetsAsync(ctx workflow.Context, input *elb.DetachLoadBalancerFromSubnetsInput) *ELBDetachLoadBalancerFromSubnetsFuture {
+func (a *stub) DetachLoadBalancerFromSubnetsAsync(ctx workflow.Context, input *elb.DetachLoadBalancerFromSubnetsInput) *DetachLoadBalancerFromSubnetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DetachLoadBalancerFromSubnets", input)
-	return &ELBDetachLoadBalancerFromSubnetsFuture{Future: future}
+	return &DetachLoadBalancerFromSubnetsFuture{Future: future}
 }
 
 func (a *stub) DisableAvailabilityZonesForLoadBalancer(ctx workflow.Context, input *elb.DisableAvailabilityZonesForLoadBalancerInput) (*elb.DisableAvailabilityZonesForLoadBalancerOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) DisableAvailabilityZonesForLoadBalancer(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) DisableAvailabilityZonesForLoadBalancerAsync(ctx workflow.Context, input *elb.DisableAvailabilityZonesForLoadBalancerInput) *ELBDisableAvailabilityZonesForLoadBalancerFuture {
+func (a *stub) DisableAvailabilityZonesForLoadBalancerAsync(ctx workflow.Context, input *elb.DisableAvailabilityZonesForLoadBalancerInput) *DisableAvailabilityZonesForLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.DisableAvailabilityZonesForLoadBalancer", input)
-	return &ELBDisableAvailabilityZonesForLoadBalancerFuture{Future: future}
+	return &DisableAvailabilityZonesForLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) EnableAvailabilityZonesForLoadBalancer(ctx workflow.Context, input *elb.EnableAvailabilityZonesForLoadBalancerInput) (*elb.EnableAvailabilityZonesForLoadBalancerOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) EnableAvailabilityZonesForLoadBalancer(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) EnableAvailabilityZonesForLoadBalancerAsync(ctx workflow.Context, input *elb.EnableAvailabilityZonesForLoadBalancerInput) *ELBEnableAvailabilityZonesForLoadBalancerFuture {
+func (a *stub) EnableAvailabilityZonesForLoadBalancerAsync(ctx workflow.Context, input *elb.EnableAvailabilityZonesForLoadBalancerInput) *EnableAvailabilityZonesForLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.EnableAvailabilityZonesForLoadBalancer", input)
-	return &ELBEnableAvailabilityZonesForLoadBalancerFuture{Future: future}
+	return &EnableAvailabilityZonesForLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) ModifyLoadBalancerAttributes(ctx workflow.Context, input *elb.ModifyLoadBalancerAttributesInput) (*elb.ModifyLoadBalancerAttributesOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) ModifyLoadBalancerAttributes(ctx workflow.Context, input *elb.Mod
 	return &output, err
 }
 
-func (a *stub) ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elb.ModifyLoadBalancerAttributesInput) *ELBModifyLoadBalancerAttributesFuture {
+func (a *stub) ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elb.ModifyLoadBalancerAttributesInput) *ModifyLoadBalancerAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.ModifyLoadBalancerAttributes", input)
-	return &ELBModifyLoadBalancerAttributesFuture{Future: future}
+	return &ModifyLoadBalancerAttributesFuture{Future: future}
 }
 
 func (a *stub) RegisterInstancesWithLoadBalancer(ctx workflow.Context, input *elb.RegisterInstancesWithLoadBalancerInput) (*elb.RegisterInstancesWithLoadBalancerOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) RegisterInstancesWithLoadBalancer(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *stub) RegisterInstancesWithLoadBalancerAsync(ctx workflow.Context, input *elb.RegisterInstancesWithLoadBalancerInput) *ELBRegisterInstancesWithLoadBalancerFuture {
+func (a *stub) RegisterInstancesWithLoadBalancerAsync(ctx workflow.Context, input *elb.RegisterInstancesWithLoadBalancerInput) *RegisterInstancesWithLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.RegisterInstancesWithLoadBalancer", input)
-	return &ELBRegisterInstancesWithLoadBalancerFuture{Future: future}
+	return &RegisterInstancesWithLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) RemoveTags(ctx workflow.Context, input *elb.RemoveTagsInput) (*elb.RemoveTagsOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) RemoveTags(ctx workflow.Context, input *elb.RemoveTagsInput) (*el
 	return &output, err
 }
 
-func (a *stub) RemoveTagsAsync(ctx workflow.Context, input *elb.RemoveTagsInput) *ELBRemoveTagsFuture {
+func (a *stub) RemoveTagsAsync(ctx workflow.Context, input *elb.RemoveTagsInput) *RemoveTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.RemoveTags", input)
-	return &ELBRemoveTagsFuture{Future: future}
+	return &RemoveTagsFuture{Future: future}
 }
 
 func (a *stub) SetLoadBalancerListenerSSLCertificate(ctx workflow.Context, input *elb.SetLoadBalancerListenerSSLCertificateInput) (*elb.SetLoadBalancerListenerSSLCertificateOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) SetLoadBalancerListenerSSLCertificate(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) SetLoadBalancerListenerSSLCertificateAsync(ctx workflow.Context, input *elb.SetLoadBalancerListenerSSLCertificateInput) *ELBSetLoadBalancerListenerSSLCertificateFuture {
+func (a *stub) SetLoadBalancerListenerSSLCertificateAsync(ctx workflow.Context, input *elb.SetLoadBalancerListenerSSLCertificateInput) *SetLoadBalancerListenerSSLCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.SetLoadBalancerListenerSSLCertificate", input)
-	return &ELBSetLoadBalancerListenerSSLCertificateFuture{Future: future}
+	return &SetLoadBalancerListenerSSLCertificateFuture{Future: future}
 }
 
 func (a *stub) SetLoadBalancerPoliciesForBackendServer(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesForBackendServerInput) (*elb.SetLoadBalancerPoliciesForBackendServerOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) SetLoadBalancerPoliciesForBackendServer(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) SetLoadBalancerPoliciesForBackendServerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesForBackendServerInput) *ELBSetLoadBalancerPoliciesForBackendServerFuture {
+func (a *stub) SetLoadBalancerPoliciesForBackendServerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesForBackendServerInput) *SetLoadBalancerPoliciesForBackendServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.SetLoadBalancerPoliciesForBackendServer", input)
-	return &ELBSetLoadBalancerPoliciesForBackendServerFuture{Future: future}
+	return &SetLoadBalancerPoliciesForBackendServerFuture{Future: future}
 }
 
 func (a *stub) SetLoadBalancerPoliciesOfListener(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) (*elb.SetLoadBalancerPoliciesOfListenerOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) SetLoadBalancerPoliciesOfListener(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *stub) SetLoadBalancerPoliciesOfListenerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) *ELBSetLoadBalancerPoliciesOfListenerFuture {
+func (a *stub) SetLoadBalancerPoliciesOfListenerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) *SetLoadBalancerPoliciesOfListenerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elb.SetLoadBalancerPoliciesOfListener", input)
-	return &ELBSetLoadBalancerPoliciesOfListenerFuture{Future: future}
+	return &SetLoadBalancerPoliciesOfListenerFuture{Future: future}
 }
 
 func (a *stub) WaitUntilAnyInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error {

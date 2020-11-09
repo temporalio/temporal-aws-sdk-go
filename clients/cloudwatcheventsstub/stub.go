@@ -16,342 +16,342 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CloudWatchEventsActivateEventSourceFuture struct {
+type ActivateEventSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsActivateEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.ActivateEventSourceOutput, error) {
+func (r *ActivateEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.ActivateEventSourceOutput, error) {
 	var output cloudwatchevents.ActivateEventSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsCreateEventBusFuture struct {
+type CreateEventBusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsCreateEventBusFuture) Get(ctx workflow.Context) (*cloudwatchevents.CreateEventBusOutput, error) {
+func (r *CreateEventBusFuture) Get(ctx workflow.Context) (*cloudwatchevents.CreateEventBusOutput, error) {
 	var output cloudwatchevents.CreateEventBusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsCreatePartnerEventSourceFuture struct {
+type CreatePartnerEventSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsCreatePartnerEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.CreatePartnerEventSourceOutput, error) {
+func (r *CreatePartnerEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.CreatePartnerEventSourceOutput, error) {
 	var output cloudwatchevents.CreatePartnerEventSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDeactivateEventSourceFuture struct {
+type DeactivateEventSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDeactivateEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.DeactivateEventSourceOutput, error) {
+func (r *DeactivateEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.DeactivateEventSourceOutput, error) {
 	var output cloudwatchevents.DeactivateEventSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDeleteEventBusFuture struct {
+type DeleteEventBusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDeleteEventBusFuture) Get(ctx workflow.Context) (*cloudwatchevents.DeleteEventBusOutput, error) {
+func (r *DeleteEventBusFuture) Get(ctx workflow.Context) (*cloudwatchevents.DeleteEventBusOutput, error) {
 	var output cloudwatchevents.DeleteEventBusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDeletePartnerEventSourceFuture struct {
+type DeletePartnerEventSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDeletePartnerEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.DeletePartnerEventSourceOutput, error) {
+func (r *DeletePartnerEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.DeletePartnerEventSourceOutput, error) {
 	var output cloudwatchevents.DeletePartnerEventSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDeleteRuleFuture struct {
+type DeleteRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDeleteRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.DeleteRuleOutput, error) {
+func (r *DeleteRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.DeleteRuleOutput, error) {
 	var output cloudwatchevents.DeleteRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDescribeEventBusFuture struct {
+type DescribeEventBusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDescribeEventBusFuture) Get(ctx workflow.Context) (*cloudwatchevents.DescribeEventBusOutput, error) {
+func (r *DescribeEventBusFuture) Get(ctx workflow.Context) (*cloudwatchevents.DescribeEventBusOutput, error) {
 	var output cloudwatchevents.DescribeEventBusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDescribeEventSourceFuture struct {
+type DescribeEventSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDescribeEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.DescribeEventSourceOutput, error) {
+func (r *DescribeEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.DescribeEventSourceOutput, error) {
 	var output cloudwatchevents.DescribeEventSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDescribePartnerEventSourceFuture struct {
+type DescribePartnerEventSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDescribePartnerEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.DescribePartnerEventSourceOutput, error) {
+func (r *DescribePartnerEventSourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.DescribePartnerEventSourceOutput, error) {
 	var output cloudwatchevents.DescribePartnerEventSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDescribeRuleFuture struct {
+type DescribeRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDescribeRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.DescribeRuleOutput, error) {
+func (r *DescribeRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.DescribeRuleOutput, error) {
 	var output cloudwatchevents.DescribeRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsDisableRuleFuture struct {
+type DisableRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsDisableRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.DisableRuleOutput, error) {
+func (r *DisableRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.DisableRuleOutput, error) {
 	var output cloudwatchevents.DisableRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsEnableRuleFuture struct {
+type EnableRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsEnableRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.EnableRuleOutput, error) {
+func (r *EnableRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.EnableRuleOutput, error) {
 	var output cloudwatchevents.EnableRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsListEventBusesFuture struct {
+type ListEventBusesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsListEventBusesFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListEventBusesOutput, error) {
+func (r *ListEventBusesFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListEventBusesOutput, error) {
 	var output cloudwatchevents.ListEventBusesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsListEventSourcesFuture struct {
+type ListEventSourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsListEventSourcesFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListEventSourcesOutput, error) {
+func (r *ListEventSourcesFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListEventSourcesOutput, error) {
 	var output cloudwatchevents.ListEventSourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsListPartnerEventSourceAccountsFuture struct {
+type ListPartnerEventSourceAccountsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsListPartnerEventSourceAccountsFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListPartnerEventSourceAccountsOutput, error) {
+func (r *ListPartnerEventSourceAccountsFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListPartnerEventSourceAccountsOutput, error) {
 	var output cloudwatchevents.ListPartnerEventSourceAccountsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsListPartnerEventSourcesFuture struct {
+type ListPartnerEventSourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsListPartnerEventSourcesFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListPartnerEventSourcesOutput, error) {
+func (r *ListPartnerEventSourcesFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListPartnerEventSourcesOutput, error) {
 	var output cloudwatchevents.ListPartnerEventSourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsListRuleNamesByTargetFuture struct {
+type ListRuleNamesByTargetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsListRuleNamesByTargetFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListRuleNamesByTargetOutput, error) {
+func (r *ListRuleNamesByTargetFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListRuleNamesByTargetOutput, error) {
 	var output cloudwatchevents.ListRuleNamesByTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsListRulesFuture struct {
+type ListRulesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsListRulesFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListRulesOutput, error) {
+func (r *ListRulesFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListRulesOutput, error) {
 	var output cloudwatchevents.ListRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsListTagsForResourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListTagsForResourceOutput, error) {
 	var output cloudwatchevents.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsListTargetsByRuleFuture struct {
+type ListTargetsByRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsListTargetsByRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListTargetsByRuleOutput, error) {
+func (r *ListTargetsByRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.ListTargetsByRuleOutput, error) {
 	var output cloudwatchevents.ListTargetsByRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsPutEventsFuture struct {
+type PutEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsPutEventsFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutEventsOutput, error) {
+func (r *PutEventsFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutEventsOutput, error) {
 	var output cloudwatchevents.PutEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsPutPartnerEventsFuture struct {
+type PutPartnerEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsPutPartnerEventsFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutPartnerEventsOutput, error) {
+func (r *PutPartnerEventsFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutPartnerEventsOutput, error) {
 	var output cloudwatchevents.PutPartnerEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsPutPermissionFuture struct {
+type PutPermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsPutPermissionFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutPermissionOutput, error) {
+func (r *PutPermissionFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutPermissionOutput, error) {
 	var output cloudwatchevents.PutPermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsPutRuleFuture struct {
+type PutRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsPutRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutRuleOutput, error) {
+func (r *PutRuleFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutRuleOutput, error) {
 	var output cloudwatchevents.PutRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsPutTargetsFuture struct {
+type PutTargetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsPutTargetsFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutTargetsOutput, error) {
+func (r *PutTargetsFuture) Get(ctx workflow.Context) (*cloudwatchevents.PutTargetsOutput, error) {
 	var output cloudwatchevents.PutTargetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsRemovePermissionFuture struct {
+type RemovePermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsRemovePermissionFuture) Get(ctx workflow.Context) (*cloudwatchevents.RemovePermissionOutput, error) {
+func (r *RemovePermissionFuture) Get(ctx workflow.Context) (*cloudwatchevents.RemovePermissionOutput, error) {
 	var output cloudwatchevents.RemovePermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsRemoveTargetsFuture struct {
+type RemoveTargetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsRemoveTargetsFuture) Get(ctx workflow.Context) (*cloudwatchevents.RemoveTargetsOutput, error) {
+func (r *RemoveTargetsFuture) Get(ctx workflow.Context) (*cloudwatchevents.RemoveTargetsOutput, error) {
 	var output cloudwatchevents.RemoveTargetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsTagResourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.TagResourceOutput, error) {
 	var output cloudwatchevents.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsTestEventPatternFuture struct {
+type TestEventPatternFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsTestEventPatternFuture) Get(ctx workflow.Context) (*cloudwatchevents.TestEventPatternOutput, error) {
+func (r *TestEventPatternFuture) Get(ctx workflow.Context) (*cloudwatchevents.TestEventPatternOutput, error) {
 	var output cloudwatchevents.TestEventPatternOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudWatchEventsUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudWatchEventsUntagResourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*cloudwatchevents.UntagResourceOutput, error) {
 	var output cloudwatchevents.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -363,9 +363,9 @@ func (a *stub) ActivateEventSource(ctx workflow.Context, input *cloudwatchevents
 	return &output, err
 }
 
-func (a *stub) ActivateEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.ActivateEventSourceInput) *CloudWatchEventsActivateEventSourceFuture {
+func (a *stub) ActivateEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.ActivateEventSourceInput) *ActivateEventSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ActivateEventSource", input)
-	return &CloudWatchEventsActivateEventSourceFuture{Future: future}
+	return &ActivateEventSourceFuture{Future: future}
 }
 
 func (a *stub) CreateEventBus(ctx workflow.Context, input *cloudwatchevents.CreateEventBusInput) (*cloudwatchevents.CreateEventBusOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) CreateEventBus(ctx workflow.Context, input *cloudwatchevents.Crea
 	return &output, err
 }
 
-func (a *stub) CreateEventBusAsync(ctx workflow.Context, input *cloudwatchevents.CreateEventBusInput) *CloudWatchEventsCreateEventBusFuture {
+func (a *stub) CreateEventBusAsync(ctx workflow.Context, input *cloudwatchevents.CreateEventBusInput) *CreateEventBusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.CreateEventBus", input)
-	return &CloudWatchEventsCreateEventBusFuture{Future: future}
+	return &CreateEventBusFuture{Future: future}
 }
 
 func (a *stub) CreatePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.CreatePartnerEventSourceInput) (*cloudwatchevents.CreatePartnerEventSourceOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) CreatePartnerEventSource(ctx workflow.Context, input *cloudwatche
 	return &output, err
 }
 
-func (a *stub) CreatePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.CreatePartnerEventSourceInput) *CloudWatchEventsCreatePartnerEventSourceFuture {
+func (a *stub) CreatePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.CreatePartnerEventSourceInput) *CreatePartnerEventSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.CreatePartnerEventSource", input)
-	return &CloudWatchEventsCreatePartnerEventSourceFuture{Future: future}
+	return &CreatePartnerEventSourceFuture{Future: future}
 }
 
 func (a *stub) DeactivateEventSource(ctx workflow.Context, input *cloudwatchevents.DeactivateEventSourceInput) (*cloudwatchevents.DeactivateEventSourceOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) DeactivateEventSource(ctx workflow.Context, input *cloudwatcheven
 	return &output, err
 }
 
-func (a *stub) DeactivateEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DeactivateEventSourceInput) *CloudWatchEventsDeactivateEventSourceFuture {
+func (a *stub) DeactivateEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DeactivateEventSourceInput) *DeactivateEventSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DeactivateEventSource", input)
-	return &CloudWatchEventsDeactivateEventSourceFuture{Future: future}
+	return &DeactivateEventSourceFuture{Future: future}
 }
 
 func (a *stub) DeleteEventBus(ctx workflow.Context, input *cloudwatchevents.DeleteEventBusInput) (*cloudwatchevents.DeleteEventBusOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) DeleteEventBus(ctx workflow.Context, input *cloudwatchevents.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteEventBusAsync(ctx workflow.Context, input *cloudwatchevents.DeleteEventBusInput) *CloudWatchEventsDeleteEventBusFuture {
+func (a *stub) DeleteEventBusAsync(ctx workflow.Context, input *cloudwatchevents.DeleteEventBusInput) *DeleteEventBusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DeleteEventBus", input)
-	return &CloudWatchEventsDeleteEventBusFuture{Future: future}
+	return &DeleteEventBusFuture{Future: future}
 }
 
 func (a *stub) DeletePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.DeletePartnerEventSourceInput) (*cloudwatchevents.DeletePartnerEventSourceOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) DeletePartnerEventSource(ctx workflow.Context, input *cloudwatche
 	return &output, err
 }
 
-func (a *stub) DeletePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DeletePartnerEventSourceInput) *CloudWatchEventsDeletePartnerEventSourceFuture {
+func (a *stub) DeletePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DeletePartnerEventSourceInput) *DeletePartnerEventSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DeletePartnerEventSource", input)
-	return &CloudWatchEventsDeletePartnerEventSourceFuture{Future: future}
+	return &DeletePartnerEventSourceFuture{Future: future}
 }
 
 func (a *stub) DeleteRule(ctx workflow.Context, input *cloudwatchevents.DeleteRuleInput) (*cloudwatchevents.DeleteRuleOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) DeleteRule(ctx workflow.Context, input *cloudwatchevents.DeleteRu
 	return &output, err
 }
 
-func (a *stub) DeleteRuleAsync(ctx workflow.Context, input *cloudwatchevents.DeleteRuleInput) *CloudWatchEventsDeleteRuleFuture {
+func (a *stub) DeleteRuleAsync(ctx workflow.Context, input *cloudwatchevents.DeleteRuleInput) *DeleteRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DeleteRule", input)
-	return &CloudWatchEventsDeleteRuleFuture{Future: future}
+	return &DeleteRuleFuture{Future: future}
 }
 
 func (a *stub) DescribeEventBus(ctx workflow.Context, input *cloudwatchevents.DescribeEventBusInput) (*cloudwatchevents.DescribeEventBusOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) DescribeEventBus(ctx workflow.Context, input *cloudwatchevents.De
 	return &output, err
 }
 
-func (a *stub) DescribeEventBusAsync(ctx workflow.Context, input *cloudwatchevents.DescribeEventBusInput) *CloudWatchEventsDescribeEventBusFuture {
+func (a *stub) DescribeEventBusAsync(ctx workflow.Context, input *cloudwatchevents.DescribeEventBusInput) *DescribeEventBusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DescribeEventBus", input)
-	return &CloudWatchEventsDescribeEventBusFuture{Future: future}
+	return &DescribeEventBusFuture{Future: future}
 }
 
 func (a *stub) DescribeEventSource(ctx workflow.Context, input *cloudwatchevents.DescribeEventSourceInput) (*cloudwatchevents.DescribeEventSourceOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) DescribeEventSource(ctx workflow.Context, input *cloudwatchevents
 	return &output, err
 }
 
-func (a *stub) DescribeEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DescribeEventSourceInput) *CloudWatchEventsDescribeEventSourceFuture {
+func (a *stub) DescribeEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DescribeEventSourceInput) *DescribeEventSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DescribeEventSource", input)
-	return &CloudWatchEventsDescribeEventSourceFuture{Future: future}
+	return &DescribeEventSourceFuture{Future: future}
 }
 
 func (a *stub) DescribePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.DescribePartnerEventSourceInput) (*cloudwatchevents.DescribePartnerEventSourceOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) DescribePartnerEventSource(ctx workflow.Context, input *cloudwatc
 	return &output, err
 }
 
-func (a *stub) DescribePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DescribePartnerEventSourceInput) *CloudWatchEventsDescribePartnerEventSourceFuture {
+func (a *stub) DescribePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DescribePartnerEventSourceInput) *DescribePartnerEventSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DescribePartnerEventSource", input)
-	return &CloudWatchEventsDescribePartnerEventSourceFuture{Future: future}
+	return &DescribePartnerEventSourceFuture{Future: future}
 }
 
 func (a *stub) DescribeRule(ctx workflow.Context, input *cloudwatchevents.DescribeRuleInput) (*cloudwatchevents.DescribeRuleOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) DescribeRule(ctx workflow.Context, input *cloudwatchevents.Descri
 	return &output, err
 }
 
-func (a *stub) DescribeRuleAsync(ctx workflow.Context, input *cloudwatchevents.DescribeRuleInput) *CloudWatchEventsDescribeRuleFuture {
+func (a *stub) DescribeRuleAsync(ctx workflow.Context, input *cloudwatchevents.DescribeRuleInput) *DescribeRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DescribeRule", input)
-	return &CloudWatchEventsDescribeRuleFuture{Future: future}
+	return &DescribeRuleFuture{Future: future}
 }
 
 func (a *stub) DisableRule(ctx workflow.Context, input *cloudwatchevents.DisableRuleInput) (*cloudwatchevents.DisableRuleOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DisableRule(ctx workflow.Context, input *cloudwatchevents.Disable
 	return &output, err
 }
 
-func (a *stub) DisableRuleAsync(ctx workflow.Context, input *cloudwatchevents.DisableRuleInput) *CloudWatchEventsDisableRuleFuture {
+func (a *stub) DisableRuleAsync(ctx workflow.Context, input *cloudwatchevents.DisableRuleInput) *DisableRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.DisableRule", input)
-	return &CloudWatchEventsDisableRuleFuture{Future: future}
+	return &DisableRuleFuture{Future: future}
 }
 
 func (a *stub) EnableRule(ctx workflow.Context, input *cloudwatchevents.EnableRuleInput) (*cloudwatchevents.EnableRuleOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) EnableRule(ctx workflow.Context, input *cloudwatchevents.EnableRu
 	return &output, err
 }
 
-func (a *stub) EnableRuleAsync(ctx workflow.Context, input *cloudwatchevents.EnableRuleInput) *CloudWatchEventsEnableRuleFuture {
+func (a *stub) EnableRuleAsync(ctx workflow.Context, input *cloudwatchevents.EnableRuleInput) *EnableRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.EnableRule", input)
-	return &CloudWatchEventsEnableRuleFuture{Future: future}
+	return &EnableRuleFuture{Future: future}
 }
 
 func (a *stub) ListEventBuses(ctx workflow.Context, input *cloudwatchevents.ListEventBusesInput) (*cloudwatchevents.ListEventBusesOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) ListEventBuses(ctx workflow.Context, input *cloudwatchevents.List
 	return &output, err
 }
 
-func (a *stub) ListEventBusesAsync(ctx workflow.Context, input *cloudwatchevents.ListEventBusesInput) *CloudWatchEventsListEventBusesFuture {
+func (a *stub) ListEventBusesAsync(ctx workflow.Context, input *cloudwatchevents.ListEventBusesInput) *ListEventBusesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ListEventBuses", input)
-	return &CloudWatchEventsListEventBusesFuture{Future: future}
+	return &ListEventBusesFuture{Future: future}
 }
 
 func (a *stub) ListEventSources(ctx workflow.Context, input *cloudwatchevents.ListEventSourcesInput) (*cloudwatchevents.ListEventSourcesOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) ListEventSources(ctx workflow.Context, input *cloudwatchevents.Li
 	return &output, err
 }
 
-func (a *stub) ListEventSourcesAsync(ctx workflow.Context, input *cloudwatchevents.ListEventSourcesInput) *CloudWatchEventsListEventSourcesFuture {
+func (a *stub) ListEventSourcesAsync(ctx workflow.Context, input *cloudwatchevents.ListEventSourcesInput) *ListEventSourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ListEventSources", input)
-	return &CloudWatchEventsListEventSourcesFuture{Future: future}
+	return &ListEventSourcesFuture{Future: future}
 }
 
 func (a *stub) ListPartnerEventSourceAccounts(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourceAccountsInput) (*cloudwatchevents.ListPartnerEventSourceAccountsOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) ListPartnerEventSourceAccounts(ctx workflow.Context, input *cloud
 	return &output, err
 }
 
-func (a *stub) ListPartnerEventSourceAccountsAsync(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourceAccountsInput) *CloudWatchEventsListPartnerEventSourceAccountsFuture {
+func (a *stub) ListPartnerEventSourceAccountsAsync(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourceAccountsInput) *ListPartnerEventSourceAccountsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ListPartnerEventSourceAccounts", input)
-	return &CloudWatchEventsListPartnerEventSourceAccountsFuture{Future: future}
+	return &ListPartnerEventSourceAccountsFuture{Future: future}
 }
 
 func (a *stub) ListPartnerEventSources(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourcesInput) (*cloudwatchevents.ListPartnerEventSourcesOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) ListPartnerEventSources(ctx workflow.Context, input *cloudwatchev
 	return &output, err
 }
 
-func (a *stub) ListPartnerEventSourcesAsync(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourcesInput) *CloudWatchEventsListPartnerEventSourcesFuture {
+func (a *stub) ListPartnerEventSourcesAsync(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourcesInput) *ListPartnerEventSourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ListPartnerEventSources", input)
-	return &CloudWatchEventsListPartnerEventSourcesFuture{Future: future}
+	return &ListPartnerEventSourcesFuture{Future: future}
 }
 
 func (a *stub) ListRuleNamesByTarget(ctx workflow.Context, input *cloudwatchevents.ListRuleNamesByTargetInput) (*cloudwatchevents.ListRuleNamesByTargetOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) ListRuleNamesByTarget(ctx workflow.Context, input *cloudwatcheven
 	return &output, err
 }
 
-func (a *stub) ListRuleNamesByTargetAsync(ctx workflow.Context, input *cloudwatchevents.ListRuleNamesByTargetInput) *CloudWatchEventsListRuleNamesByTargetFuture {
+func (a *stub) ListRuleNamesByTargetAsync(ctx workflow.Context, input *cloudwatchevents.ListRuleNamesByTargetInput) *ListRuleNamesByTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ListRuleNamesByTarget", input)
-	return &CloudWatchEventsListRuleNamesByTargetFuture{Future: future}
+	return &ListRuleNamesByTargetFuture{Future: future}
 }
 
 func (a *stub) ListRules(ctx workflow.Context, input *cloudwatchevents.ListRulesInput) (*cloudwatchevents.ListRulesOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) ListRules(ctx workflow.Context, input *cloudwatchevents.ListRules
 	return &output, err
 }
 
-func (a *stub) ListRulesAsync(ctx workflow.Context, input *cloudwatchevents.ListRulesInput) *CloudWatchEventsListRulesFuture {
+func (a *stub) ListRulesAsync(ctx workflow.Context, input *cloudwatchevents.ListRulesInput) *ListRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ListRules", input)
-	return &CloudWatchEventsListRulesFuture{Future: future}
+	return &ListRulesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *cloudwatchevents.ListTagsForResourceInput) (*cloudwatchevents.ListTagsForResourceOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *cloudwatchevents
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *cloudwatchevents.ListTagsForResourceInput) *CloudWatchEventsListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *cloudwatchevents.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ListTagsForResource", input)
-	return &CloudWatchEventsListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListTargetsByRule(ctx workflow.Context, input *cloudwatchevents.ListTargetsByRuleInput) (*cloudwatchevents.ListTargetsByRuleOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) ListTargetsByRule(ctx workflow.Context, input *cloudwatchevents.L
 	return &output, err
 }
 
-func (a *stub) ListTargetsByRuleAsync(ctx workflow.Context, input *cloudwatchevents.ListTargetsByRuleInput) *CloudWatchEventsListTargetsByRuleFuture {
+func (a *stub) ListTargetsByRuleAsync(ctx workflow.Context, input *cloudwatchevents.ListTargetsByRuleInput) *ListTargetsByRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.ListTargetsByRule", input)
-	return &CloudWatchEventsListTargetsByRuleFuture{Future: future}
+	return &ListTargetsByRuleFuture{Future: future}
 }
 
 func (a *stub) PutEvents(ctx workflow.Context, input *cloudwatchevents.PutEventsInput) (*cloudwatchevents.PutEventsOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) PutEvents(ctx workflow.Context, input *cloudwatchevents.PutEvents
 	return &output, err
 }
 
-func (a *stub) PutEventsAsync(ctx workflow.Context, input *cloudwatchevents.PutEventsInput) *CloudWatchEventsPutEventsFuture {
+func (a *stub) PutEventsAsync(ctx workflow.Context, input *cloudwatchevents.PutEventsInput) *PutEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.PutEvents", input)
-	return &CloudWatchEventsPutEventsFuture{Future: future}
+	return &PutEventsFuture{Future: future}
 }
 
 func (a *stub) PutPartnerEvents(ctx workflow.Context, input *cloudwatchevents.PutPartnerEventsInput) (*cloudwatchevents.PutPartnerEventsOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) PutPartnerEvents(ctx workflow.Context, input *cloudwatchevents.Pu
 	return &output, err
 }
 
-func (a *stub) PutPartnerEventsAsync(ctx workflow.Context, input *cloudwatchevents.PutPartnerEventsInput) *CloudWatchEventsPutPartnerEventsFuture {
+func (a *stub) PutPartnerEventsAsync(ctx workflow.Context, input *cloudwatchevents.PutPartnerEventsInput) *PutPartnerEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.PutPartnerEvents", input)
-	return &CloudWatchEventsPutPartnerEventsFuture{Future: future}
+	return &PutPartnerEventsFuture{Future: future}
 }
 
 func (a *stub) PutPermission(ctx workflow.Context, input *cloudwatchevents.PutPermissionInput) (*cloudwatchevents.PutPermissionOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) PutPermission(ctx workflow.Context, input *cloudwatchevents.PutPe
 	return &output, err
 }
 
-func (a *stub) PutPermissionAsync(ctx workflow.Context, input *cloudwatchevents.PutPermissionInput) *CloudWatchEventsPutPermissionFuture {
+func (a *stub) PutPermissionAsync(ctx workflow.Context, input *cloudwatchevents.PutPermissionInput) *PutPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.PutPermission", input)
-	return &CloudWatchEventsPutPermissionFuture{Future: future}
+	return &PutPermissionFuture{Future: future}
 }
 
 func (a *stub) PutRule(ctx workflow.Context, input *cloudwatchevents.PutRuleInput) (*cloudwatchevents.PutRuleOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) PutRule(ctx workflow.Context, input *cloudwatchevents.PutRuleInpu
 	return &output, err
 }
 
-func (a *stub) PutRuleAsync(ctx workflow.Context, input *cloudwatchevents.PutRuleInput) *CloudWatchEventsPutRuleFuture {
+func (a *stub) PutRuleAsync(ctx workflow.Context, input *cloudwatchevents.PutRuleInput) *PutRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.PutRule", input)
-	return &CloudWatchEventsPutRuleFuture{Future: future}
+	return &PutRuleFuture{Future: future}
 }
 
 func (a *stub) PutTargets(ctx workflow.Context, input *cloudwatchevents.PutTargetsInput) (*cloudwatchevents.PutTargetsOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) PutTargets(ctx workflow.Context, input *cloudwatchevents.PutTarge
 	return &output, err
 }
 
-func (a *stub) PutTargetsAsync(ctx workflow.Context, input *cloudwatchevents.PutTargetsInput) *CloudWatchEventsPutTargetsFuture {
+func (a *stub) PutTargetsAsync(ctx workflow.Context, input *cloudwatchevents.PutTargetsInput) *PutTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.PutTargets", input)
-	return &CloudWatchEventsPutTargetsFuture{Future: future}
+	return &PutTargetsFuture{Future: future}
 }
 
 func (a *stub) RemovePermission(ctx workflow.Context, input *cloudwatchevents.RemovePermissionInput) (*cloudwatchevents.RemovePermissionOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) RemovePermission(ctx workflow.Context, input *cloudwatchevents.Re
 	return &output, err
 }
 
-func (a *stub) RemovePermissionAsync(ctx workflow.Context, input *cloudwatchevents.RemovePermissionInput) *CloudWatchEventsRemovePermissionFuture {
+func (a *stub) RemovePermissionAsync(ctx workflow.Context, input *cloudwatchevents.RemovePermissionInput) *RemovePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.RemovePermission", input)
-	return &CloudWatchEventsRemovePermissionFuture{Future: future}
+	return &RemovePermissionFuture{Future: future}
 }
 
 func (a *stub) RemoveTargets(ctx workflow.Context, input *cloudwatchevents.RemoveTargetsInput) (*cloudwatchevents.RemoveTargetsOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) RemoveTargets(ctx workflow.Context, input *cloudwatchevents.Remov
 	return &output, err
 }
 
-func (a *stub) RemoveTargetsAsync(ctx workflow.Context, input *cloudwatchevents.RemoveTargetsInput) *CloudWatchEventsRemoveTargetsFuture {
+func (a *stub) RemoveTargetsAsync(ctx workflow.Context, input *cloudwatchevents.RemoveTargetsInput) *RemoveTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.RemoveTargets", input)
-	return &CloudWatchEventsRemoveTargetsFuture{Future: future}
+	return &RemoveTargetsFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *cloudwatchevents.TagResourceInput) (*cloudwatchevents.TagResourceOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *cloudwatchevents.TagReso
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *cloudwatchevents.TagResourceInput) *CloudWatchEventsTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *cloudwatchevents.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.TagResource", input)
-	return &CloudWatchEventsTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) TestEventPattern(ctx workflow.Context, input *cloudwatchevents.TestEventPatternInput) (*cloudwatchevents.TestEventPatternOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) TestEventPattern(ctx workflow.Context, input *cloudwatchevents.Te
 	return &output, err
 }
 
-func (a *stub) TestEventPatternAsync(ctx workflow.Context, input *cloudwatchevents.TestEventPatternInput) *CloudWatchEventsTestEventPatternFuture {
+func (a *stub) TestEventPatternAsync(ctx workflow.Context, input *cloudwatchevents.TestEventPatternInput) *TestEventPatternFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.TestEventPattern", input)
-	return &CloudWatchEventsTestEventPatternFuture{Future: future}
+	return &TestEventPatternFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *cloudwatchevents.UntagResourceInput) (*cloudwatchevents.UntagResourceOutput, error) {
@@ -693,7 +693,7 @@ func (a *stub) UntagResource(ctx workflow.Context, input *cloudwatchevents.Untag
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *cloudwatchevents.UntagResourceInput) *CloudWatchEventsUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *cloudwatchevents.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudwatchevents.UntagResource", input)
-	return &CloudWatchEventsUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }

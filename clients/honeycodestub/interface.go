@@ -16,10 +16,10 @@ var _ clients.VoidFuture
 
 type Client interface {
 	GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error)
-	GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataFuture
+	GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *GetScreenDataFuture
 
 	InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error)
-	InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationFuture
+	InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *InvokeScreenAutomationFuture
 }
 
 func NewClient() Client {

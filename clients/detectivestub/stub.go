@@ -16,133 +16,133 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type DetectiveAcceptInvitationFuture struct {
+type AcceptInvitationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveAcceptInvitationFuture) Get(ctx workflow.Context) (*detective.AcceptInvitationOutput, error) {
+func (r *AcceptInvitationFuture) Get(ctx workflow.Context) (*detective.AcceptInvitationOutput, error) {
 	var output detective.AcceptInvitationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveCreateGraphFuture struct {
+type CreateGraphFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveCreateGraphFuture) Get(ctx workflow.Context) (*detective.CreateGraphOutput, error) {
+func (r *CreateGraphFuture) Get(ctx workflow.Context) (*detective.CreateGraphOutput, error) {
 	var output detective.CreateGraphOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveCreateMembersFuture struct {
+type CreateMembersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveCreateMembersFuture) Get(ctx workflow.Context) (*detective.CreateMembersOutput, error) {
+func (r *CreateMembersFuture) Get(ctx workflow.Context) (*detective.CreateMembersOutput, error) {
 	var output detective.CreateMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveDeleteGraphFuture struct {
+type DeleteGraphFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveDeleteGraphFuture) Get(ctx workflow.Context) (*detective.DeleteGraphOutput, error) {
+func (r *DeleteGraphFuture) Get(ctx workflow.Context) (*detective.DeleteGraphOutput, error) {
 	var output detective.DeleteGraphOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveDeleteMembersFuture struct {
+type DeleteMembersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveDeleteMembersFuture) Get(ctx workflow.Context) (*detective.DeleteMembersOutput, error) {
+func (r *DeleteMembersFuture) Get(ctx workflow.Context) (*detective.DeleteMembersOutput, error) {
 	var output detective.DeleteMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveDisassociateMembershipFuture struct {
+type DisassociateMembershipFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveDisassociateMembershipFuture) Get(ctx workflow.Context) (*detective.DisassociateMembershipOutput, error) {
+func (r *DisassociateMembershipFuture) Get(ctx workflow.Context) (*detective.DisassociateMembershipOutput, error) {
 	var output detective.DisassociateMembershipOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveGetMembersFuture struct {
+type GetMembersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveGetMembersFuture) Get(ctx workflow.Context) (*detective.GetMembersOutput, error) {
+func (r *GetMembersFuture) Get(ctx workflow.Context) (*detective.GetMembersOutput, error) {
 	var output detective.GetMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveListGraphsFuture struct {
+type ListGraphsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveListGraphsFuture) Get(ctx workflow.Context) (*detective.ListGraphsOutput, error) {
+func (r *ListGraphsFuture) Get(ctx workflow.Context) (*detective.ListGraphsOutput, error) {
 	var output detective.ListGraphsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveListInvitationsFuture struct {
+type ListInvitationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveListInvitationsFuture) Get(ctx workflow.Context) (*detective.ListInvitationsOutput, error) {
+func (r *ListInvitationsFuture) Get(ctx workflow.Context) (*detective.ListInvitationsOutput, error) {
 	var output detective.ListInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveListMembersFuture struct {
+type ListMembersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveListMembersFuture) Get(ctx workflow.Context) (*detective.ListMembersOutput, error) {
+func (r *ListMembersFuture) Get(ctx workflow.Context) (*detective.ListMembersOutput, error) {
 	var output detective.ListMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveRejectInvitationFuture struct {
+type RejectInvitationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveRejectInvitationFuture) Get(ctx workflow.Context) (*detective.RejectInvitationOutput, error) {
+func (r *RejectInvitationFuture) Get(ctx workflow.Context) (*detective.RejectInvitationOutput, error) {
 	var output detective.RejectInvitationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DetectiveStartMonitoringMemberFuture struct {
+type StartMonitoringMemberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DetectiveStartMonitoringMemberFuture) Get(ctx workflow.Context) (*detective.StartMonitoringMemberOutput, error) {
+func (r *StartMonitoringMemberFuture) Get(ctx workflow.Context) (*detective.StartMonitoringMemberOutput, error) {
 	var output detective.StartMonitoringMemberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -154,9 +154,9 @@ func (a *stub) AcceptInvitation(ctx workflow.Context, input *detective.AcceptInv
 	return &output, err
 }
 
-func (a *stub) AcceptInvitationAsync(ctx workflow.Context, input *detective.AcceptInvitationInput) *DetectiveAcceptInvitationFuture {
+func (a *stub) AcceptInvitationAsync(ctx workflow.Context, input *detective.AcceptInvitationInput) *AcceptInvitationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.AcceptInvitation", input)
-	return &DetectiveAcceptInvitationFuture{Future: future}
+	return &AcceptInvitationFuture{Future: future}
 }
 
 func (a *stub) CreateGraph(ctx workflow.Context, input *detective.CreateGraphInput) (*detective.CreateGraphOutput, error) {
@@ -165,9 +165,9 @@ func (a *stub) CreateGraph(ctx workflow.Context, input *detective.CreateGraphInp
 	return &output, err
 }
 
-func (a *stub) CreateGraphAsync(ctx workflow.Context, input *detective.CreateGraphInput) *DetectiveCreateGraphFuture {
+func (a *stub) CreateGraphAsync(ctx workflow.Context, input *detective.CreateGraphInput) *CreateGraphFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.CreateGraph", input)
-	return &DetectiveCreateGraphFuture{Future: future}
+	return &CreateGraphFuture{Future: future}
 }
 
 func (a *stub) CreateMembers(ctx workflow.Context, input *detective.CreateMembersInput) (*detective.CreateMembersOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) CreateMembers(ctx workflow.Context, input *detective.CreateMember
 	return &output, err
 }
 
-func (a *stub) CreateMembersAsync(ctx workflow.Context, input *detective.CreateMembersInput) *DetectiveCreateMembersFuture {
+func (a *stub) CreateMembersAsync(ctx workflow.Context, input *detective.CreateMembersInput) *CreateMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.CreateMembers", input)
-	return &DetectiveCreateMembersFuture{Future: future}
+	return &CreateMembersFuture{Future: future}
 }
 
 func (a *stub) DeleteGraph(ctx workflow.Context, input *detective.DeleteGraphInput) (*detective.DeleteGraphOutput, error) {
@@ -187,9 +187,9 @@ func (a *stub) DeleteGraph(ctx workflow.Context, input *detective.DeleteGraphInp
 	return &output, err
 }
 
-func (a *stub) DeleteGraphAsync(ctx workflow.Context, input *detective.DeleteGraphInput) *DetectiveDeleteGraphFuture {
+func (a *stub) DeleteGraphAsync(ctx workflow.Context, input *detective.DeleteGraphInput) *DeleteGraphFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.DeleteGraph", input)
-	return &DetectiveDeleteGraphFuture{Future: future}
+	return &DeleteGraphFuture{Future: future}
 }
 
 func (a *stub) DeleteMembers(ctx workflow.Context, input *detective.DeleteMembersInput) (*detective.DeleteMembersOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) DeleteMembers(ctx workflow.Context, input *detective.DeleteMember
 	return &output, err
 }
 
-func (a *stub) DeleteMembersAsync(ctx workflow.Context, input *detective.DeleteMembersInput) *DetectiveDeleteMembersFuture {
+func (a *stub) DeleteMembersAsync(ctx workflow.Context, input *detective.DeleteMembersInput) *DeleteMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.DeleteMembers", input)
-	return &DetectiveDeleteMembersFuture{Future: future}
+	return &DeleteMembersFuture{Future: future}
 }
 
 func (a *stub) DisassociateMembership(ctx workflow.Context, input *detective.DisassociateMembershipInput) (*detective.DisassociateMembershipOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) DisassociateMembership(ctx workflow.Context, input *detective.Dis
 	return &output, err
 }
 
-func (a *stub) DisassociateMembershipAsync(ctx workflow.Context, input *detective.DisassociateMembershipInput) *DetectiveDisassociateMembershipFuture {
+func (a *stub) DisassociateMembershipAsync(ctx workflow.Context, input *detective.DisassociateMembershipInput) *DisassociateMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.DisassociateMembership", input)
-	return &DetectiveDisassociateMembershipFuture{Future: future}
+	return &DisassociateMembershipFuture{Future: future}
 }
 
 func (a *stub) GetMembers(ctx workflow.Context, input *detective.GetMembersInput) (*detective.GetMembersOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) GetMembers(ctx workflow.Context, input *detective.GetMembersInput
 	return &output, err
 }
 
-func (a *stub) GetMembersAsync(ctx workflow.Context, input *detective.GetMembersInput) *DetectiveGetMembersFuture {
+func (a *stub) GetMembersAsync(ctx workflow.Context, input *detective.GetMembersInput) *GetMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.GetMembers", input)
-	return &DetectiveGetMembersFuture{Future: future}
+	return &GetMembersFuture{Future: future}
 }
 
 func (a *stub) ListGraphs(ctx workflow.Context, input *detective.ListGraphsInput) (*detective.ListGraphsOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) ListGraphs(ctx workflow.Context, input *detective.ListGraphsInput
 	return &output, err
 }
 
-func (a *stub) ListGraphsAsync(ctx workflow.Context, input *detective.ListGraphsInput) *DetectiveListGraphsFuture {
+func (a *stub) ListGraphsAsync(ctx workflow.Context, input *detective.ListGraphsInput) *ListGraphsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.ListGraphs", input)
-	return &DetectiveListGraphsFuture{Future: future}
+	return &ListGraphsFuture{Future: future}
 }
 
 func (a *stub) ListInvitations(ctx workflow.Context, input *detective.ListInvitationsInput) (*detective.ListInvitationsOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) ListInvitations(ctx workflow.Context, input *detective.ListInvita
 	return &output, err
 }
 
-func (a *stub) ListInvitationsAsync(ctx workflow.Context, input *detective.ListInvitationsInput) *DetectiveListInvitationsFuture {
+func (a *stub) ListInvitationsAsync(ctx workflow.Context, input *detective.ListInvitationsInput) *ListInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.ListInvitations", input)
-	return &DetectiveListInvitationsFuture{Future: future}
+	return &ListInvitationsFuture{Future: future}
 }
 
 func (a *stub) ListMembers(ctx workflow.Context, input *detective.ListMembersInput) (*detective.ListMembersOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) ListMembers(ctx workflow.Context, input *detective.ListMembersInp
 	return &output, err
 }
 
-func (a *stub) ListMembersAsync(ctx workflow.Context, input *detective.ListMembersInput) *DetectiveListMembersFuture {
+func (a *stub) ListMembersAsync(ctx workflow.Context, input *detective.ListMembersInput) *ListMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.ListMembers", input)
-	return &DetectiveListMembersFuture{Future: future}
+	return &ListMembersFuture{Future: future}
 }
 
 func (a *stub) RejectInvitation(ctx workflow.Context, input *detective.RejectInvitationInput) (*detective.RejectInvitationOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) RejectInvitation(ctx workflow.Context, input *detective.RejectInv
 	return &output, err
 }
 
-func (a *stub) RejectInvitationAsync(ctx workflow.Context, input *detective.RejectInvitationInput) *DetectiveRejectInvitationFuture {
+func (a *stub) RejectInvitationAsync(ctx workflow.Context, input *detective.RejectInvitationInput) *RejectInvitationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.RejectInvitation", input)
-	return &DetectiveRejectInvitationFuture{Future: future}
+	return &RejectInvitationFuture{Future: future}
 }
 
 func (a *stub) StartMonitoringMember(ctx workflow.Context, input *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error) {
@@ -275,7 +275,7 @@ func (a *stub) StartMonitoringMember(ctx workflow.Context, input *detective.Star
 	return &output, err
 }
 
-func (a *stub) StartMonitoringMemberAsync(ctx workflow.Context, input *detective.StartMonitoringMemberInput) *DetectiveStartMonitoringMemberFuture {
+func (a *stub) StartMonitoringMemberAsync(ctx workflow.Context, input *detective.StartMonitoringMemberInput) *StartMonitoringMemberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.detective.StartMonitoringMember", input)
-	return &DetectiveStartMonitoringMemberFuture{Future: future}
+	return &StartMonitoringMemberFuture{Future: future}
 }

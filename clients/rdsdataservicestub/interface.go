@@ -16,22 +16,22 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchExecuteStatement(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) (*rdsdataservice.BatchExecuteStatementOutput, error)
-	BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *RDSDataServiceBatchExecuteStatementFuture
+	BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *BatchExecuteStatementFuture
 
 	BeginTransaction(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) (*rdsdataservice.BeginTransactionOutput, error)
-	BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *RDSDataServiceBeginTransactionFuture
+	BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *BeginTransactionFuture
 
 	CommitTransaction(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) (*rdsdataservice.CommitTransactionOutput, error)
-	CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *RDSDataServiceCommitTransactionFuture
+	CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *CommitTransactionFuture
 
 	ExecuteSql(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) (*rdsdataservice.ExecuteSqlOutput, error)
-	ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *RDSDataServiceExecuteSqlFuture
+	ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *ExecuteSqlFuture
 
 	ExecuteStatement(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) (*rdsdataservice.ExecuteStatementOutput, error)
-	ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *RDSDataServiceExecuteStatementFuture
+	ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *ExecuteStatementFuture
 
 	RollbackTransaction(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) (*rdsdataservice.RollbackTransactionOutput, error)
-	RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RDSDataServiceRollbackTransactionFuture
+	RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RollbackTransactionFuture
 }
 
 func NewClient() Client {

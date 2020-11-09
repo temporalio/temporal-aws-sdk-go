@@ -16,43 +16,43 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateCanary(ctx workflow.Context, input *synthetics.CreateCanaryInput) (*synthetics.CreateCanaryOutput, error)
-	CreateCanaryAsync(ctx workflow.Context, input *synthetics.CreateCanaryInput) *SyntheticsCreateCanaryFuture
+	CreateCanaryAsync(ctx workflow.Context, input *synthetics.CreateCanaryInput) *CreateCanaryFuture
 
 	DeleteCanary(ctx workflow.Context, input *synthetics.DeleteCanaryInput) (*synthetics.DeleteCanaryOutput, error)
-	DeleteCanaryAsync(ctx workflow.Context, input *synthetics.DeleteCanaryInput) *SyntheticsDeleteCanaryFuture
+	DeleteCanaryAsync(ctx workflow.Context, input *synthetics.DeleteCanaryInput) *DeleteCanaryFuture
 
 	DescribeCanaries(ctx workflow.Context, input *synthetics.DescribeCanariesInput) (*synthetics.DescribeCanariesOutput, error)
-	DescribeCanariesAsync(ctx workflow.Context, input *synthetics.DescribeCanariesInput) *SyntheticsDescribeCanariesFuture
+	DescribeCanariesAsync(ctx workflow.Context, input *synthetics.DescribeCanariesInput) *DescribeCanariesFuture
 
 	DescribeCanariesLastRun(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) (*synthetics.DescribeCanariesLastRunOutput, error)
-	DescribeCanariesLastRunAsync(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) *SyntheticsDescribeCanariesLastRunFuture
+	DescribeCanariesLastRunAsync(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) *DescribeCanariesLastRunFuture
 
 	DescribeRuntimeVersions(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) (*synthetics.DescribeRuntimeVersionsOutput, error)
-	DescribeRuntimeVersionsAsync(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) *SyntheticsDescribeRuntimeVersionsFuture
+	DescribeRuntimeVersionsAsync(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) *DescribeRuntimeVersionsFuture
 
 	GetCanary(ctx workflow.Context, input *synthetics.GetCanaryInput) (*synthetics.GetCanaryOutput, error)
-	GetCanaryAsync(ctx workflow.Context, input *synthetics.GetCanaryInput) *SyntheticsGetCanaryFuture
+	GetCanaryAsync(ctx workflow.Context, input *synthetics.GetCanaryInput) *GetCanaryFuture
 
 	GetCanaryRuns(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) (*synthetics.GetCanaryRunsOutput, error)
-	GetCanaryRunsAsync(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) *SyntheticsGetCanaryRunsFuture
+	GetCanaryRunsAsync(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) *GetCanaryRunsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) (*synthetics.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) *SyntheticsListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	StartCanary(ctx workflow.Context, input *synthetics.StartCanaryInput) (*synthetics.StartCanaryOutput, error)
-	StartCanaryAsync(ctx workflow.Context, input *synthetics.StartCanaryInput) *SyntheticsStartCanaryFuture
+	StartCanaryAsync(ctx workflow.Context, input *synthetics.StartCanaryInput) *StartCanaryFuture
 
 	StopCanary(ctx workflow.Context, input *synthetics.StopCanaryInput) (*synthetics.StopCanaryOutput, error)
-	StopCanaryAsync(ctx workflow.Context, input *synthetics.StopCanaryInput) *SyntheticsStopCanaryFuture
+	StopCanaryAsync(ctx workflow.Context, input *synthetics.StopCanaryInput) *StopCanaryFuture
 
 	TagResource(ctx workflow.Context, input *synthetics.TagResourceInput) (*synthetics.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *synthetics.TagResourceInput) *SyntheticsTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *synthetics.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *synthetics.UntagResourceInput) (*synthetics.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *synthetics.UntagResourceInput) *SyntheticsUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *synthetics.UntagResourceInput) *UntagResourceFuture
 
 	UpdateCanary(ctx workflow.Context, input *synthetics.UpdateCanaryInput) (*synthetics.UpdateCanaryOutput, error)
-	UpdateCanaryAsync(ctx workflow.Context, input *synthetics.UpdateCanaryInput) *SyntheticsUpdateCanaryFuture
+	UpdateCanaryAsync(ctx workflow.Context, input *synthetics.UpdateCanaryInput) *UpdateCanaryFuture
 }
 
 func NewClient() Client {

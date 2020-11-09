@@ -16,79 +16,79 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateCertificate(ctx workflow.Context, input *mediaconvert.AssociateCertificateInput) (*mediaconvert.AssociateCertificateOutput, error)
-	AssociateCertificateAsync(ctx workflow.Context, input *mediaconvert.AssociateCertificateInput) *MediaConvertAssociateCertificateFuture
+	AssociateCertificateAsync(ctx workflow.Context, input *mediaconvert.AssociateCertificateInput) *AssociateCertificateFuture
 
 	CancelJob(ctx workflow.Context, input *mediaconvert.CancelJobInput) (*mediaconvert.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *mediaconvert.CancelJobInput) *MediaConvertCancelJobFuture
+	CancelJobAsync(ctx workflow.Context, input *mediaconvert.CancelJobInput) *CancelJobFuture
 
 	CreateJob(ctx workflow.Context, input *mediaconvert.CreateJobInput) (*mediaconvert.CreateJobOutput, error)
-	CreateJobAsync(ctx workflow.Context, input *mediaconvert.CreateJobInput) *MediaConvertCreateJobFuture
+	CreateJobAsync(ctx workflow.Context, input *mediaconvert.CreateJobInput) *CreateJobFuture
 
 	CreateJobTemplate(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) (*mediaconvert.CreateJobTemplateOutput, error)
-	CreateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) *MediaConvertCreateJobTemplateFuture
+	CreateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.CreateJobTemplateInput) *CreateJobTemplateFuture
 
 	CreatePreset(ctx workflow.Context, input *mediaconvert.CreatePresetInput) (*mediaconvert.CreatePresetOutput, error)
-	CreatePresetAsync(ctx workflow.Context, input *mediaconvert.CreatePresetInput) *MediaConvertCreatePresetFuture
+	CreatePresetAsync(ctx workflow.Context, input *mediaconvert.CreatePresetInput) *CreatePresetFuture
 
 	CreateQueue(ctx workflow.Context, input *mediaconvert.CreateQueueInput) (*mediaconvert.CreateQueueOutput, error)
-	CreateQueueAsync(ctx workflow.Context, input *mediaconvert.CreateQueueInput) *MediaConvertCreateQueueFuture
+	CreateQueueAsync(ctx workflow.Context, input *mediaconvert.CreateQueueInput) *CreateQueueFuture
 
 	DeleteJobTemplate(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) (*mediaconvert.DeleteJobTemplateOutput, error)
-	DeleteJobTemplateAsync(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) *MediaConvertDeleteJobTemplateFuture
+	DeleteJobTemplateAsync(ctx workflow.Context, input *mediaconvert.DeleteJobTemplateInput) *DeleteJobTemplateFuture
 
 	DeletePreset(ctx workflow.Context, input *mediaconvert.DeletePresetInput) (*mediaconvert.DeletePresetOutput, error)
-	DeletePresetAsync(ctx workflow.Context, input *mediaconvert.DeletePresetInput) *MediaConvertDeletePresetFuture
+	DeletePresetAsync(ctx workflow.Context, input *mediaconvert.DeletePresetInput) *DeletePresetFuture
 
 	DeleteQueue(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) (*mediaconvert.DeleteQueueOutput, error)
-	DeleteQueueAsync(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) *MediaConvertDeleteQueueFuture
+	DeleteQueueAsync(ctx workflow.Context, input *mediaconvert.DeleteQueueInput) *DeleteQueueFuture
 
 	DescribeEndpoints(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) (*mediaconvert.DescribeEndpointsOutput, error)
-	DescribeEndpointsAsync(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) *MediaConvertDescribeEndpointsFuture
+	DescribeEndpointsAsync(ctx workflow.Context, input *mediaconvert.DescribeEndpointsInput) *DescribeEndpointsFuture
 
 	DisassociateCertificate(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) (*mediaconvert.DisassociateCertificateOutput, error)
-	DisassociateCertificateAsync(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) *MediaConvertDisassociateCertificateFuture
+	DisassociateCertificateAsync(ctx workflow.Context, input *mediaconvert.DisassociateCertificateInput) *DisassociateCertificateFuture
 
 	GetJob(ctx workflow.Context, input *mediaconvert.GetJobInput) (*mediaconvert.GetJobOutput, error)
-	GetJobAsync(ctx workflow.Context, input *mediaconvert.GetJobInput) *MediaConvertGetJobFuture
+	GetJobAsync(ctx workflow.Context, input *mediaconvert.GetJobInput) *GetJobFuture
 
 	GetJobTemplate(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) (*mediaconvert.GetJobTemplateOutput, error)
-	GetJobTemplateAsync(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) *MediaConvertGetJobTemplateFuture
+	GetJobTemplateAsync(ctx workflow.Context, input *mediaconvert.GetJobTemplateInput) *GetJobTemplateFuture
 
 	GetPreset(ctx workflow.Context, input *mediaconvert.GetPresetInput) (*mediaconvert.GetPresetOutput, error)
-	GetPresetAsync(ctx workflow.Context, input *mediaconvert.GetPresetInput) *MediaConvertGetPresetFuture
+	GetPresetAsync(ctx workflow.Context, input *mediaconvert.GetPresetInput) *GetPresetFuture
 
 	GetQueue(ctx workflow.Context, input *mediaconvert.GetQueueInput) (*mediaconvert.GetQueueOutput, error)
-	GetQueueAsync(ctx workflow.Context, input *mediaconvert.GetQueueInput) *MediaConvertGetQueueFuture
+	GetQueueAsync(ctx workflow.Context, input *mediaconvert.GetQueueInput) *GetQueueFuture
 
 	ListJobTemplates(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) (*mediaconvert.ListJobTemplatesOutput, error)
-	ListJobTemplatesAsync(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) *MediaConvertListJobTemplatesFuture
+	ListJobTemplatesAsync(ctx workflow.Context, input *mediaconvert.ListJobTemplatesInput) *ListJobTemplatesFuture
 
 	ListJobs(ctx workflow.Context, input *mediaconvert.ListJobsInput) (*mediaconvert.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *mediaconvert.ListJobsInput) *MediaConvertListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *mediaconvert.ListJobsInput) *ListJobsFuture
 
 	ListPresets(ctx workflow.Context, input *mediaconvert.ListPresetsInput) (*mediaconvert.ListPresetsOutput, error)
-	ListPresetsAsync(ctx workflow.Context, input *mediaconvert.ListPresetsInput) *MediaConvertListPresetsFuture
+	ListPresetsAsync(ctx workflow.Context, input *mediaconvert.ListPresetsInput) *ListPresetsFuture
 
 	ListQueues(ctx workflow.Context, input *mediaconvert.ListQueuesInput) (*mediaconvert.ListQueuesOutput, error)
-	ListQueuesAsync(ctx workflow.Context, input *mediaconvert.ListQueuesInput) *MediaConvertListQueuesFuture
+	ListQueuesAsync(ctx workflow.Context, input *mediaconvert.ListQueuesInput) *ListQueuesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) (*mediaconvert.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) *MediaConvertListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *mediaconvert.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *mediaconvert.TagResourceInput) (*mediaconvert.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *mediaconvert.TagResourceInput) *MediaConvertTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *mediaconvert.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *mediaconvert.UntagResourceInput) (*mediaconvert.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *mediaconvert.UntagResourceInput) *MediaConvertUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *mediaconvert.UntagResourceInput) *UntagResourceFuture
 
 	UpdateJobTemplate(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) (*mediaconvert.UpdateJobTemplateOutput, error)
-	UpdateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) *MediaConvertUpdateJobTemplateFuture
+	UpdateJobTemplateAsync(ctx workflow.Context, input *mediaconvert.UpdateJobTemplateInput) *UpdateJobTemplateFuture
 
 	UpdatePreset(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) (*mediaconvert.UpdatePresetOutput, error)
-	UpdatePresetAsync(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) *MediaConvertUpdatePresetFuture
+	UpdatePresetAsync(ctx workflow.Context, input *mediaconvert.UpdatePresetInput) *UpdatePresetFuture
 
 	UpdateQueue(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) (*mediaconvert.UpdateQueueOutput, error)
-	UpdateQueueAsync(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) *MediaConvertUpdateQueueFuture
+	UpdateQueueAsync(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) *UpdateQueueFuture
 }
 
 func NewClient() Client {

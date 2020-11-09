@@ -16,199 +16,199 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type AccessAnalyzerCreateAnalyzerFuture struct {
+type CreateAnalyzerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerCreateAnalyzerFuture) Get(ctx workflow.Context) (*accessanalyzer.CreateAnalyzerOutput, error) {
+func (r *CreateAnalyzerFuture) Get(ctx workflow.Context) (*accessanalyzer.CreateAnalyzerOutput, error) {
 	var output accessanalyzer.CreateAnalyzerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerCreateArchiveRuleFuture struct {
+type CreateArchiveRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerCreateArchiveRuleFuture) Get(ctx workflow.Context) (*accessanalyzer.CreateArchiveRuleOutput, error) {
+func (r *CreateArchiveRuleFuture) Get(ctx workflow.Context) (*accessanalyzer.CreateArchiveRuleOutput, error) {
 	var output accessanalyzer.CreateArchiveRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerDeleteAnalyzerFuture struct {
+type DeleteAnalyzerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerDeleteAnalyzerFuture) Get(ctx workflow.Context) (*accessanalyzer.DeleteAnalyzerOutput, error) {
+func (r *DeleteAnalyzerFuture) Get(ctx workflow.Context) (*accessanalyzer.DeleteAnalyzerOutput, error) {
 	var output accessanalyzer.DeleteAnalyzerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerDeleteArchiveRuleFuture struct {
+type DeleteArchiveRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerDeleteArchiveRuleFuture) Get(ctx workflow.Context) (*accessanalyzer.DeleteArchiveRuleOutput, error) {
+func (r *DeleteArchiveRuleFuture) Get(ctx workflow.Context) (*accessanalyzer.DeleteArchiveRuleOutput, error) {
 	var output accessanalyzer.DeleteArchiveRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerGetAnalyzedResourceFuture struct {
+type GetAnalyzedResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerGetAnalyzedResourceFuture) Get(ctx workflow.Context) (*accessanalyzer.GetAnalyzedResourceOutput, error) {
+func (r *GetAnalyzedResourceFuture) Get(ctx workflow.Context) (*accessanalyzer.GetAnalyzedResourceOutput, error) {
 	var output accessanalyzer.GetAnalyzedResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerGetAnalyzerFuture struct {
+type GetAnalyzerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerGetAnalyzerFuture) Get(ctx workflow.Context) (*accessanalyzer.GetAnalyzerOutput, error) {
+func (r *GetAnalyzerFuture) Get(ctx workflow.Context) (*accessanalyzer.GetAnalyzerOutput, error) {
 	var output accessanalyzer.GetAnalyzerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerGetArchiveRuleFuture struct {
+type GetArchiveRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerGetArchiveRuleFuture) Get(ctx workflow.Context) (*accessanalyzer.GetArchiveRuleOutput, error) {
+func (r *GetArchiveRuleFuture) Get(ctx workflow.Context) (*accessanalyzer.GetArchiveRuleOutput, error) {
 	var output accessanalyzer.GetArchiveRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerGetFindingFuture struct {
+type GetFindingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerGetFindingFuture) Get(ctx workflow.Context) (*accessanalyzer.GetFindingOutput, error) {
+func (r *GetFindingFuture) Get(ctx workflow.Context) (*accessanalyzer.GetFindingOutput, error) {
 	var output accessanalyzer.GetFindingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerListAnalyzedResourcesFuture struct {
+type ListAnalyzedResourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerListAnalyzedResourcesFuture) Get(ctx workflow.Context) (*accessanalyzer.ListAnalyzedResourcesOutput, error) {
+func (r *ListAnalyzedResourcesFuture) Get(ctx workflow.Context) (*accessanalyzer.ListAnalyzedResourcesOutput, error) {
 	var output accessanalyzer.ListAnalyzedResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerListAnalyzersFuture struct {
+type ListAnalyzersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerListAnalyzersFuture) Get(ctx workflow.Context) (*accessanalyzer.ListAnalyzersOutput, error) {
+func (r *ListAnalyzersFuture) Get(ctx workflow.Context) (*accessanalyzer.ListAnalyzersOutput, error) {
 	var output accessanalyzer.ListAnalyzersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerListArchiveRulesFuture struct {
+type ListArchiveRulesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerListArchiveRulesFuture) Get(ctx workflow.Context) (*accessanalyzer.ListArchiveRulesOutput, error) {
+func (r *ListArchiveRulesFuture) Get(ctx workflow.Context) (*accessanalyzer.ListArchiveRulesOutput, error) {
 	var output accessanalyzer.ListArchiveRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerListFindingsFuture struct {
+type ListFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerListFindingsFuture) Get(ctx workflow.Context) (*accessanalyzer.ListFindingsOutput, error) {
+func (r *ListFindingsFuture) Get(ctx workflow.Context) (*accessanalyzer.ListFindingsOutput, error) {
 	var output accessanalyzer.ListFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerListTagsForResourceFuture) Get(ctx workflow.Context) (*accessanalyzer.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*accessanalyzer.ListTagsForResourceOutput, error) {
 	var output accessanalyzer.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerStartResourceScanFuture struct {
+type StartResourceScanFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerStartResourceScanFuture) Get(ctx workflow.Context) (*accessanalyzer.StartResourceScanOutput, error) {
+func (r *StartResourceScanFuture) Get(ctx workflow.Context) (*accessanalyzer.StartResourceScanOutput, error) {
 	var output accessanalyzer.StartResourceScanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerTagResourceFuture) Get(ctx workflow.Context) (*accessanalyzer.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*accessanalyzer.TagResourceOutput, error) {
 	var output accessanalyzer.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerUntagResourceFuture) Get(ctx workflow.Context) (*accessanalyzer.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*accessanalyzer.UntagResourceOutput, error) {
 	var output accessanalyzer.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerUpdateArchiveRuleFuture struct {
+type UpdateArchiveRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerUpdateArchiveRuleFuture) Get(ctx workflow.Context) (*accessanalyzer.UpdateArchiveRuleOutput, error) {
+func (r *UpdateArchiveRuleFuture) Get(ctx workflow.Context) (*accessanalyzer.UpdateArchiveRuleOutput, error) {
 	var output accessanalyzer.UpdateArchiveRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AccessAnalyzerUpdateFindingsFuture struct {
+type UpdateFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AccessAnalyzerUpdateFindingsFuture) Get(ctx workflow.Context) (*accessanalyzer.UpdateFindingsOutput, error) {
+func (r *UpdateFindingsFuture) Get(ctx workflow.Context) (*accessanalyzer.UpdateFindingsOutput, error) {
 	var output accessanalyzer.UpdateFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -220,9 +220,9 @@ func (a *stub) CreateAnalyzer(ctx workflow.Context, input *accessanalyzer.Create
 	return &output, err
 }
 
-func (a *stub) CreateAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.CreateAnalyzerInput) *AccessAnalyzerCreateAnalyzerFuture {
+func (a *stub) CreateAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.CreateAnalyzerInput) *CreateAnalyzerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.CreateAnalyzer", input)
-	return &AccessAnalyzerCreateAnalyzerFuture{Future: future}
+	return &CreateAnalyzerFuture{Future: future}
 }
 
 func (a *stub) CreateArchiveRule(ctx workflow.Context, input *accessanalyzer.CreateArchiveRuleInput) (*accessanalyzer.CreateArchiveRuleOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) CreateArchiveRule(ctx workflow.Context, input *accessanalyzer.Cre
 	return &output, err
 }
 
-func (a *stub) CreateArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.CreateArchiveRuleInput) *AccessAnalyzerCreateArchiveRuleFuture {
+func (a *stub) CreateArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.CreateArchiveRuleInput) *CreateArchiveRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.CreateArchiveRule", input)
-	return &AccessAnalyzerCreateArchiveRuleFuture{Future: future}
+	return &CreateArchiveRuleFuture{Future: future}
 }
 
 func (a *stub) DeleteAnalyzer(ctx workflow.Context, input *accessanalyzer.DeleteAnalyzerInput) (*accessanalyzer.DeleteAnalyzerOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) DeleteAnalyzer(ctx workflow.Context, input *accessanalyzer.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.DeleteAnalyzerInput) *AccessAnalyzerDeleteAnalyzerFuture {
+func (a *stub) DeleteAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.DeleteAnalyzerInput) *DeleteAnalyzerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.DeleteAnalyzer", input)
-	return &AccessAnalyzerDeleteAnalyzerFuture{Future: future}
+	return &DeleteAnalyzerFuture{Future: future}
 }
 
 func (a *stub) DeleteArchiveRule(ctx workflow.Context, input *accessanalyzer.DeleteArchiveRuleInput) (*accessanalyzer.DeleteArchiveRuleOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DeleteArchiveRule(ctx workflow.Context, input *accessanalyzer.Del
 	return &output, err
 }
 
-func (a *stub) DeleteArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.DeleteArchiveRuleInput) *AccessAnalyzerDeleteArchiveRuleFuture {
+func (a *stub) DeleteArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.DeleteArchiveRuleInput) *DeleteArchiveRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.DeleteArchiveRule", input)
-	return &AccessAnalyzerDeleteArchiveRuleFuture{Future: future}
+	return &DeleteArchiveRuleFuture{Future: future}
 }
 
 func (a *stub) GetAnalyzedResource(ctx workflow.Context, input *accessanalyzer.GetAnalyzedResourceInput) (*accessanalyzer.GetAnalyzedResourceOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) GetAnalyzedResource(ctx workflow.Context, input *accessanalyzer.G
 	return &output, err
 }
 
-func (a *stub) GetAnalyzedResourceAsync(ctx workflow.Context, input *accessanalyzer.GetAnalyzedResourceInput) *AccessAnalyzerGetAnalyzedResourceFuture {
+func (a *stub) GetAnalyzedResourceAsync(ctx workflow.Context, input *accessanalyzer.GetAnalyzedResourceInput) *GetAnalyzedResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.GetAnalyzedResource", input)
-	return &AccessAnalyzerGetAnalyzedResourceFuture{Future: future}
+	return &GetAnalyzedResourceFuture{Future: future}
 }
 
 func (a *stub) GetAnalyzer(ctx workflow.Context, input *accessanalyzer.GetAnalyzerInput) (*accessanalyzer.GetAnalyzerOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) GetAnalyzer(ctx workflow.Context, input *accessanalyzer.GetAnalyz
 	return &output, err
 }
 
-func (a *stub) GetAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.GetAnalyzerInput) *AccessAnalyzerGetAnalyzerFuture {
+func (a *stub) GetAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.GetAnalyzerInput) *GetAnalyzerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.GetAnalyzer", input)
-	return &AccessAnalyzerGetAnalyzerFuture{Future: future}
+	return &GetAnalyzerFuture{Future: future}
 }
 
 func (a *stub) GetArchiveRule(ctx workflow.Context, input *accessanalyzer.GetArchiveRuleInput) (*accessanalyzer.GetArchiveRuleOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) GetArchiveRule(ctx workflow.Context, input *accessanalyzer.GetArc
 	return &output, err
 }
 
-func (a *stub) GetArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.GetArchiveRuleInput) *AccessAnalyzerGetArchiveRuleFuture {
+func (a *stub) GetArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.GetArchiveRuleInput) *GetArchiveRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.GetArchiveRule", input)
-	return &AccessAnalyzerGetArchiveRuleFuture{Future: future}
+	return &GetArchiveRuleFuture{Future: future}
 }
 
 func (a *stub) GetFinding(ctx workflow.Context, input *accessanalyzer.GetFindingInput) (*accessanalyzer.GetFindingOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) GetFinding(ctx workflow.Context, input *accessanalyzer.GetFinding
 	return &output, err
 }
 
-func (a *stub) GetFindingAsync(ctx workflow.Context, input *accessanalyzer.GetFindingInput) *AccessAnalyzerGetFindingFuture {
+func (a *stub) GetFindingAsync(ctx workflow.Context, input *accessanalyzer.GetFindingInput) *GetFindingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.GetFinding", input)
-	return &AccessAnalyzerGetFindingFuture{Future: future}
+	return &GetFindingFuture{Future: future}
 }
 
 func (a *stub) ListAnalyzedResources(ctx workflow.Context, input *accessanalyzer.ListAnalyzedResourcesInput) (*accessanalyzer.ListAnalyzedResourcesOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) ListAnalyzedResources(ctx workflow.Context, input *accessanalyzer
 	return &output, err
 }
 
-func (a *stub) ListAnalyzedResourcesAsync(ctx workflow.Context, input *accessanalyzer.ListAnalyzedResourcesInput) *AccessAnalyzerListAnalyzedResourcesFuture {
+func (a *stub) ListAnalyzedResourcesAsync(ctx workflow.Context, input *accessanalyzer.ListAnalyzedResourcesInput) *ListAnalyzedResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.ListAnalyzedResources", input)
-	return &AccessAnalyzerListAnalyzedResourcesFuture{Future: future}
+	return &ListAnalyzedResourcesFuture{Future: future}
 }
 
 func (a *stub) ListAnalyzers(ctx workflow.Context, input *accessanalyzer.ListAnalyzersInput) (*accessanalyzer.ListAnalyzersOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) ListAnalyzers(ctx workflow.Context, input *accessanalyzer.ListAna
 	return &output, err
 }
 
-func (a *stub) ListAnalyzersAsync(ctx workflow.Context, input *accessanalyzer.ListAnalyzersInput) *AccessAnalyzerListAnalyzersFuture {
+func (a *stub) ListAnalyzersAsync(ctx workflow.Context, input *accessanalyzer.ListAnalyzersInput) *ListAnalyzersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.ListAnalyzers", input)
-	return &AccessAnalyzerListAnalyzersFuture{Future: future}
+	return &ListAnalyzersFuture{Future: future}
 }
 
 func (a *stub) ListArchiveRules(ctx workflow.Context, input *accessanalyzer.ListArchiveRulesInput) (*accessanalyzer.ListArchiveRulesOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) ListArchiveRules(ctx workflow.Context, input *accessanalyzer.List
 	return &output, err
 }
 
-func (a *stub) ListArchiveRulesAsync(ctx workflow.Context, input *accessanalyzer.ListArchiveRulesInput) *AccessAnalyzerListArchiveRulesFuture {
+func (a *stub) ListArchiveRulesAsync(ctx workflow.Context, input *accessanalyzer.ListArchiveRulesInput) *ListArchiveRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.ListArchiveRules", input)
-	return &AccessAnalyzerListArchiveRulesFuture{Future: future}
+	return &ListArchiveRulesFuture{Future: future}
 }
 
 func (a *stub) ListFindings(ctx workflow.Context, input *accessanalyzer.ListFindingsInput) (*accessanalyzer.ListFindingsOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) ListFindings(ctx workflow.Context, input *accessanalyzer.ListFind
 	return &output, err
 }
 
-func (a *stub) ListFindingsAsync(ctx workflow.Context, input *accessanalyzer.ListFindingsInput) *AccessAnalyzerListFindingsFuture {
+func (a *stub) ListFindingsAsync(ctx workflow.Context, input *accessanalyzer.ListFindingsInput) *ListFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.ListFindings", input)
-	return &AccessAnalyzerListFindingsFuture{Future: future}
+	return &ListFindingsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *accessanalyzer.ListTagsForResourceInput) (*accessanalyzer.ListTagsForResourceOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *accessanalyzer.L
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *accessanalyzer.ListTagsForResourceInput) *AccessAnalyzerListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *accessanalyzer.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.ListTagsForResource", input)
-	return &AccessAnalyzerListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) StartResourceScan(ctx workflow.Context, input *accessanalyzer.StartResourceScanInput) (*accessanalyzer.StartResourceScanOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) StartResourceScan(ctx workflow.Context, input *accessanalyzer.Sta
 	return &output, err
 }
 
-func (a *stub) StartResourceScanAsync(ctx workflow.Context, input *accessanalyzer.StartResourceScanInput) *AccessAnalyzerStartResourceScanFuture {
+func (a *stub) StartResourceScanAsync(ctx workflow.Context, input *accessanalyzer.StartResourceScanInput) *StartResourceScanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.StartResourceScan", input)
-	return &AccessAnalyzerStartResourceScanFuture{Future: future}
+	return &StartResourceScanFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *accessanalyzer.TagResourceInput) (*accessanalyzer.TagResourceOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *accessanalyzer.TagResour
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *accessanalyzer.TagResourceInput) *AccessAnalyzerTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *accessanalyzer.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.TagResource", input)
-	return &AccessAnalyzerTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *accessanalyzer.UntagResourceInput) (*accessanalyzer.UntagResourceOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *accessanalyzer.UntagRe
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *accessanalyzer.UntagResourceInput) *AccessAnalyzerUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *accessanalyzer.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.UntagResource", input)
-	return &AccessAnalyzerUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateArchiveRule(ctx workflow.Context, input *accessanalyzer.UpdateArchiveRuleInput) (*accessanalyzer.UpdateArchiveRuleOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) UpdateArchiveRule(ctx workflow.Context, input *accessanalyzer.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.UpdateArchiveRuleInput) *AccessAnalyzerUpdateArchiveRuleFuture {
+func (a *stub) UpdateArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.UpdateArchiveRuleInput) *UpdateArchiveRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.UpdateArchiveRule", input)
-	return &AccessAnalyzerUpdateArchiveRuleFuture{Future: future}
+	return &UpdateArchiveRuleFuture{Future: future}
 }
 
 func (a *stub) UpdateFindings(ctx workflow.Context, input *accessanalyzer.UpdateFindingsInput) (*accessanalyzer.UpdateFindingsOutput, error) {
@@ -407,7 +407,7 @@ func (a *stub) UpdateFindings(ctx workflow.Context, input *accessanalyzer.Update
 	return &output, err
 }
 
-func (a *stub) UpdateFindingsAsync(ctx workflow.Context, input *accessanalyzer.UpdateFindingsInput) *AccessAnalyzerUpdateFindingsFuture {
+func (a *stub) UpdateFindingsAsync(ctx workflow.Context, input *accessanalyzer.UpdateFindingsInput) *UpdateFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.accessanalyzer.UpdateFindings", input)
-	return &AccessAnalyzerUpdateFindingsFuture{Future: future}
+	return &UpdateFindingsFuture{Future: future}
 }

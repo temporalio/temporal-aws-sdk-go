@@ -16,309 +16,309 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type Route53DomainsAcceptDomainTransferFromAnotherAwsAccountFuture struct {
+type AcceptDomainTransferFromAnotherAwsAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsAcceptDomainTransferFromAnotherAwsAccountFuture) Get(ctx workflow.Context) (*route53domains.AcceptDomainTransferFromAnotherAwsAccountOutput, error) {
+func (r *AcceptDomainTransferFromAnotherAwsAccountFuture) Get(ctx workflow.Context) (*route53domains.AcceptDomainTransferFromAnotherAwsAccountOutput, error) {
 	var output route53domains.AcceptDomainTransferFromAnotherAwsAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsCancelDomainTransferToAnotherAwsAccountFuture struct {
+type CancelDomainTransferToAnotherAwsAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsCancelDomainTransferToAnotherAwsAccountFuture) Get(ctx workflow.Context) (*route53domains.CancelDomainTransferToAnotherAwsAccountOutput, error) {
+func (r *CancelDomainTransferToAnotherAwsAccountFuture) Get(ctx workflow.Context) (*route53domains.CancelDomainTransferToAnotherAwsAccountOutput, error) {
 	var output route53domains.CancelDomainTransferToAnotherAwsAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsCheckDomainAvailabilityFuture struct {
+type CheckDomainAvailabilityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsCheckDomainAvailabilityFuture) Get(ctx workflow.Context) (*route53domains.CheckDomainAvailabilityOutput, error) {
+func (r *CheckDomainAvailabilityFuture) Get(ctx workflow.Context) (*route53domains.CheckDomainAvailabilityOutput, error) {
 	var output route53domains.CheckDomainAvailabilityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsCheckDomainTransferabilityFuture struct {
+type CheckDomainTransferabilityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsCheckDomainTransferabilityFuture) Get(ctx workflow.Context) (*route53domains.CheckDomainTransferabilityOutput, error) {
+func (r *CheckDomainTransferabilityFuture) Get(ctx workflow.Context) (*route53domains.CheckDomainTransferabilityOutput, error) {
 	var output route53domains.CheckDomainTransferabilityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsDeleteTagsForDomainFuture struct {
+type DeleteTagsForDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsDeleteTagsForDomainFuture) Get(ctx workflow.Context) (*route53domains.DeleteTagsForDomainOutput, error) {
+func (r *DeleteTagsForDomainFuture) Get(ctx workflow.Context) (*route53domains.DeleteTagsForDomainOutput, error) {
 	var output route53domains.DeleteTagsForDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsDisableDomainAutoRenewFuture struct {
+type DisableDomainAutoRenewFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsDisableDomainAutoRenewFuture) Get(ctx workflow.Context) (*route53domains.DisableDomainAutoRenewOutput, error) {
+func (r *DisableDomainAutoRenewFuture) Get(ctx workflow.Context) (*route53domains.DisableDomainAutoRenewOutput, error) {
 	var output route53domains.DisableDomainAutoRenewOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsDisableDomainTransferLockFuture struct {
+type DisableDomainTransferLockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsDisableDomainTransferLockFuture) Get(ctx workflow.Context) (*route53domains.DisableDomainTransferLockOutput, error) {
+func (r *DisableDomainTransferLockFuture) Get(ctx workflow.Context) (*route53domains.DisableDomainTransferLockOutput, error) {
 	var output route53domains.DisableDomainTransferLockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsEnableDomainAutoRenewFuture struct {
+type EnableDomainAutoRenewFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsEnableDomainAutoRenewFuture) Get(ctx workflow.Context) (*route53domains.EnableDomainAutoRenewOutput, error) {
+func (r *EnableDomainAutoRenewFuture) Get(ctx workflow.Context) (*route53domains.EnableDomainAutoRenewOutput, error) {
 	var output route53domains.EnableDomainAutoRenewOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsEnableDomainTransferLockFuture struct {
+type EnableDomainTransferLockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsEnableDomainTransferLockFuture) Get(ctx workflow.Context) (*route53domains.EnableDomainTransferLockOutput, error) {
+func (r *EnableDomainTransferLockFuture) Get(ctx workflow.Context) (*route53domains.EnableDomainTransferLockOutput, error) {
 	var output route53domains.EnableDomainTransferLockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsGetContactReachabilityStatusFuture struct {
+type GetContactReachabilityStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsGetContactReachabilityStatusFuture) Get(ctx workflow.Context) (*route53domains.GetContactReachabilityStatusOutput, error) {
+func (r *GetContactReachabilityStatusFuture) Get(ctx workflow.Context) (*route53domains.GetContactReachabilityStatusOutput, error) {
 	var output route53domains.GetContactReachabilityStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsGetDomainDetailFuture struct {
+type GetDomainDetailFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsGetDomainDetailFuture) Get(ctx workflow.Context) (*route53domains.GetDomainDetailOutput, error) {
+func (r *GetDomainDetailFuture) Get(ctx workflow.Context) (*route53domains.GetDomainDetailOutput, error) {
 	var output route53domains.GetDomainDetailOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsGetDomainSuggestionsFuture struct {
+type GetDomainSuggestionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsGetDomainSuggestionsFuture) Get(ctx workflow.Context) (*route53domains.GetDomainSuggestionsOutput, error) {
+func (r *GetDomainSuggestionsFuture) Get(ctx workflow.Context) (*route53domains.GetDomainSuggestionsOutput, error) {
 	var output route53domains.GetDomainSuggestionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsGetOperationDetailFuture struct {
+type GetOperationDetailFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsGetOperationDetailFuture) Get(ctx workflow.Context) (*route53domains.GetOperationDetailOutput, error) {
+func (r *GetOperationDetailFuture) Get(ctx workflow.Context) (*route53domains.GetOperationDetailOutput, error) {
 	var output route53domains.GetOperationDetailOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsListDomainsFuture struct {
+type ListDomainsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsListDomainsFuture) Get(ctx workflow.Context) (*route53domains.ListDomainsOutput, error) {
+func (r *ListDomainsFuture) Get(ctx workflow.Context) (*route53domains.ListDomainsOutput, error) {
 	var output route53domains.ListDomainsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsListOperationsFuture struct {
+type ListOperationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsListOperationsFuture) Get(ctx workflow.Context) (*route53domains.ListOperationsOutput, error) {
+func (r *ListOperationsFuture) Get(ctx workflow.Context) (*route53domains.ListOperationsOutput, error) {
 	var output route53domains.ListOperationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsListTagsForDomainFuture struct {
+type ListTagsForDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsListTagsForDomainFuture) Get(ctx workflow.Context) (*route53domains.ListTagsForDomainOutput, error) {
+func (r *ListTagsForDomainFuture) Get(ctx workflow.Context) (*route53domains.ListTagsForDomainOutput, error) {
 	var output route53domains.ListTagsForDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsRegisterDomainFuture struct {
+type RegisterDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsRegisterDomainFuture) Get(ctx workflow.Context) (*route53domains.RegisterDomainOutput, error) {
+func (r *RegisterDomainFuture) Get(ctx workflow.Context) (*route53domains.RegisterDomainOutput, error) {
 	var output route53domains.RegisterDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsRejectDomainTransferFromAnotherAwsAccountFuture struct {
+type RejectDomainTransferFromAnotherAwsAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsRejectDomainTransferFromAnotherAwsAccountFuture) Get(ctx workflow.Context) (*route53domains.RejectDomainTransferFromAnotherAwsAccountOutput, error) {
+func (r *RejectDomainTransferFromAnotherAwsAccountFuture) Get(ctx workflow.Context) (*route53domains.RejectDomainTransferFromAnotherAwsAccountOutput, error) {
 	var output route53domains.RejectDomainTransferFromAnotherAwsAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsRenewDomainFuture struct {
+type RenewDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsRenewDomainFuture) Get(ctx workflow.Context) (*route53domains.RenewDomainOutput, error) {
+func (r *RenewDomainFuture) Get(ctx workflow.Context) (*route53domains.RenewDomainOutput, error) {
 	var output route53domains.RenewDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsResendContactReachabilityEmailFuture struct {
+type ResendContactReachabilityEmailFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsResendContactReachabilityEmailFuture) Get(ctx workflow.Context) (*route53domains.ResendContactReachabilityEmailOutput, error) {
+func (r *ResendContactReachabilityEmailFuture) Get(ctx workflow.Context) (*route53domains.ResendContactReachabilityEmailOutput, error) {
 	var output route53domains.ResendContactReachabilityEmailOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsRetrieveDomainAuthCodeFuture struct {
+type RetrieveDomainAuthCodeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsRetrieveDomainAuthCodeFuture) Get(ctx workflow.Context) (*route53domains.RetrieveDomainAuthCodeOutput, error) {
+func (r *RetrieveDomainAuthCodeFuture) Get(ctx workflow.Context) (*route53domains.RetrieveDomainAuthCodeOutput, error) {
 	var output route53domains.RetrieveDomainAuthCodeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsTransferDomainFuture struct {
+type TransferDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsTransferDomainFuture) Get(ctx workflow.Context) (*route53domains.TransferDomainOutput, error) {
+func (r *TransferDomainFuture) Get(ctx workflow.Context) (*route53domains.TransferDomainOutput, error) {
 	var output route53domains.TransferDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsTransferDomainToAnotherAwsAccountFuture struct {
+type TransferDomainToAnotherAwsAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsTransferDomainToAnotherAwsAccountFuture) Get(ctx workflow.Context) (*route53domains.TransferDomainToAnotherAwsAccountOutput, error) {
+func (r *TransferDomainToAnotherAwsAccountFuture) Get(ctx workflow.Context) (*route53domains.TransferDomainToAnotherAwsAccountOutput, error) {
 	var output route53domains.TransferDomainToAnotherAwsAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsUpdateDomainContactFuture struct {
+type UpdateDomainContactFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsUpdateDomainContactFuture) Get(ctx workflow.Context) (*route53domains.UpdateDomainContactOutput, error) {
+func (r *UpdateDomainContactFuture) Get(ctx workflow.Context) (*route53domains.UpdateDomainContactOutput, error) {
 	var output route53domains.UpdateDomainContactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsUpdateDomainContactPrivacyFuture struct {
+type UpdateDomainContactPrivacyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsUpdateDomainContactPrivacyFuture) Get(ctx workflow.Context) (*route53domains.UpdateDomainContactPrivacyOutput, error) {
+func (r *UpdateDomainContactPrivacyFuture) Get(ctx workflow.Context) (*route53domains.UpdateDomainContactPrivacyOutput, error) {
 	var output route53domains.UpdateDomainContactPrivacyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsUpdateDomainNameserversFuture struct {
+type UpdateDomainNameserversFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsUpdateDomainNameserversFuture) Get(ctx workflow.Context) (*route53domains.UpdateDomainNameserversOutput, error) {
+func (r *UpdateDomainNameserversFuture) Get(ctx workflow.Context) (*route53domains.UpdateDomainNameserversOutput, error) {
 	var output route53domains.UpdateDomainNameserversOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsUpdateTagsForDomainFuture struct {
+type UpdateTagsForDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsUpdateTagsForDomainFuture) Get(ctx workflow.Context) (*route53domains.UpdateTagsForDomainOutput, error) {
+func (r *UpdateTagsForDomainFuture) Get(ctx workflow.Context) (*route53domains.UpdateTagsForDomainOutput, error) {
 	var output route53domains.UpdateTagsForDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Route53DomainsViewBillingFuture struct {
+type ViewBillingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Route53DomainsViewBillingFuture) Get(ctx workflow.Context) (*route53domains.ViewBillingOutput, error) {
+func (r *ViewBillingFuture) Get(ctx workflow.Context) (*route53domains.ViewBillingOutput, error) {
 	var output route53domains.ViewBillingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -330,9 +330,9 @@ func (a *stub) AcceptDomainTransferFromAnotherAwsAccount(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *stub) AcceptDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.AcceptDomainTransferFromAnotherAwsAccountInput) *Route53DomainsAcceptDomainTransferFromAnotherAwsAccountFuture {
+func (a *stub) AcceptDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.AcceptDomainTransferFromAnotherAwsAccountInput) *AcceptDomainTransferFromAnotherAwsAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.AcceptDomainTransferFromAnotherAwsAccount", input)
-	return &Route53DomainsAcceptDomainTransferFromAnotherAwsAccountFuture{Future: future}
+	return &AcceptDomainTransferFromAnotherAwsAccountFuture{Future: future}
 }
 
 func (a *stub) CancelDomainTransferToAnotherAwsAccount(ctx workflow.Context, input *route53domains.CancelDomainTransferToAnotherAwsAccountInput) (*route53domains.CancelDomainTransferToAnotherAwsAccountOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) CancelDomainTransferToAnotherAwsAccount(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) CancelDomainTransferToAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.CancelDomainTransferToAnotherAwsAccountInput) *Route53DomainsCancelDomainTransferToAnotherAwsAccountFuture {
+func (a *stub) CancelDomainTransferToAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.CancelDomainTransferToAnotherAwsAccountInput) *CancelDomainTransferToAnotherAwsAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.CancelDomainTransferToAnotherAwsAccount", input)
-	return &Route53DomainsCancelDomainTransferToAnotherAwsAccountFuture{Future: future}
+	return &CancelDomainTransferToAnotherAwsAccountFuture{Future: future}
 }
 
 func (a *stub) CheckDomainAvailability(ctx workflow.Context, input *route53domains.CheckDomainAvailabilityInput) (*route53domains.CheckDomainAvailabilityOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) CheckDomainAvailability(ctx workflow.Context, input *route53domai
 	return &output, err
 }
 
-func (a *stub) CheckDomainAvailabilityAsync(ctx workflow.Context, input *route53domains.CheckDomainAvailabilityInput) *Route53DomainsCheckDomainAvailabilityFuture {
+func (a *stub) CheckDomainAvailabilityAsync(ctx workflow.Context, input *route53domains.CheckDomainAvailabilityInput) *CheckDomainAvailabilityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.CheckDomainAvailability", input)
-	return &Route53DomainsCheckDomainAvailabilityFuture{Future: future}
+	return &CheckDomainAvailabilityFuture{Future: future}
 }
 
 func (a *stub) CheckDomainTransferability(ctx workflow.Context, input *route53domains.CheckDomainTransferabilityInput) (*route53domains.CheckDomainTransferabilityOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) CheckDomainTransferability(ctx workflow.Context, input *route53do
 	return &output, err
 }
 
-func (a *stub) CheckDomainTransferabilityAsync(ctx workflow.Context, input *route53domains.CheckDomainTransferabilityInput) *Route53DomainsCheckDomainTransferabilityFuture {
+func (a *stub) CheckDomainTransferabilityAsync(ctx workflow.Context, input *route53domains.CheckDomainTransferabilityInput) *CheckDomainTransferabilityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.CheckDomainTransferability", input)
-	return &Route53DomainsCheckDomainTransferabilityFuture{Future: future}
+	return &CheckDomainTransferabilityFuture{Future: future}
 }
 
 func (a *stub) DeleteTagsForDomain(ctx workflow.Context, input *route53domains.DeleteTagsForDomainInput) (*route53domains.DeleteTagsForDomainOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) DeleteTagsForDomain(ctx workflow.Context, input *route53domains.D
 	return &output, err
 }
 
-func (a *stub) DeleteTagsForDomainAsync(ctx workflow.Context, input *route53domains.DeleteTagsForDomainInput) *Route53DomainsDeleteTagsForDomainFuture {
+func (a *stub) DeleteTagsForDomainAsync(ctx workflow.Context, input *route53domains.DeleteTagsForDomainInput) *DeleteTagsForDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.DeleteTagsForDomain", input)
-	return &Route53DomainsDeleteTagsForDomainFuture{Future: future}
+	return &DeleteTagsForDomainFuture{Future: future}
 }
 
 func (a *stub) DisableDomainAutoRenew(ctx workflow.Context, input *route53domains.DisableDomainAutoRenewInput) (*route53domains.DisableDomainAutoRenewOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) DisableDomainAutoRenew(ctx workflow.Context, input *route53domain
 	return &output, err
 }
 
-func (a *stub) DisableDomainAutoRenewAsync(ctx workflow.Context, input *route53domains.DisableDomainAutoRenewInput) *Route53DomainsDisableDomainAutoRenewFuture {
+func (a *stub) DisableDomainAutoRenewAsync(ctx workflow.Context, input *route53domains.DisableDomainAutoRenewInput) *DisableDomainAutoRenewFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.DisableDomainAutoRenew", input)
-	return &Route53DomainsDisableDomainAutoRenewFuture{Future: future}
+	return &DisableDomainAutoRenewFuture{Future: future}
 }
 
 func (a *stub) DisableDomainTransferLock(ctx workflow.Context, input *route53domains.DisableDomainTransferLockInput) (*route53domains.DisableDomainTransferLockOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) DisableDomainTransferLock(ctx workflow.Context, input *route53dom
 	return &output, err
 }
 
-func (a *stub) DisableDomainTransferLockAsync(ctx workflow.Context, input *route53domains.DisableDomainTransferLockInput) *Route53DomainsDisableDomainTransferLockFuture {
+func (a *stub) DisableDomainTransferLockAsync(ctx workflow.Context, input *route53domains.DisableDomainTransferLockInput) *DisableDomainTransferLockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.DisableDomainTransferLock", input)
-	return &Route53DomainsDisableDomainTransferLockFuture{Future: future}
+	return &DisableDomainTransferLockFuture{Future: future}
 }
 
 func (a *stub) EnableDomainAutoRenew(ctx workflow.Context, input *route53domains.EnableDomainAutoRenewInput) (*route53domains.EnableDomainAutoRenewOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) EnableDomainAutoRenew(ctx workflow.Context, input *route53domains
 	return &output, err
 }
 
-func (a *stub) EnableDomainAutoRenewAsync(ctx workflow.Context, input *route53domains.EnableDomainAutoRenewInput) *Route53DomainsEnableDomainAutoRenewFuture {
+func (a *stub) EnableDomainAutoRenewAsync(ctx workflow.Context, input *route53domains.EnableDomainAutoRenewInput) *EnableDomainAutoRenewFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.EnableDomainAutoRenew", input)
-	return &Route53DomainsEnableDomainAutoRenewFuture{Future: future}
+	return &EnableDomainAutoRenewFuture{Future: future}
 }
 
 func (a *stub) EnableDomainTransferLock(ctx workflow.Context, input *route53domains.EnableDomainTransferLockInput) (*route53domains.EnableDomainTransferLockOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) EnableDomainTransferLock(ctx workflow.Context, input *route53doma
 	return &output, err
 }
 
-func (a *stub) EnableDomainTransferLockAsync(ctx workflow.Context, input *route53domains.EnableDomainTransferLockInput) *Route53DomainsEnableDomainTransferLockFuture {
+func (a *stub) EnableDomainTransferLockAsync(ctx workflow.Context, input *route53domains.EnableDomainTransferLockInput) *EnableDomainTransferLockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.EnableDomainTransferLock", input)
-	return &Route53DomainsEnableDomainTransferLockFuture{Future: future}
+	return &EnableDomainTransferLockFuture{Future: future}
 }
 
 func (a *stub) GetContactReachabilityStatus(ctx workflow.Context, input *route53domains.GetContactReachabilityStatusInput) (*route53domains.GetContactReachabilityStatusOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) GetContactReachabilityStatus(ctx workflow.Context, input *route53
 	return &output, err
 }
 
-func (a *stub) GetContactReachabilityStatusAsync(ctx workflow.Context, input *route53domains.GetContactReachabilityStatusInput) *Route53DomainsGetContactReachabilityStatusFuture {
+func (a *stub) GetContactReachabilityStatusAsync(ctx workflow.Context, input *route53domains.GetContactReachabilityStatusInput) *GetContactReachabilityStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.GetContactReachabilityStatus", input)
-	return &Route53DomainsGetContactReachabilityStatusFuture{Future: future}
+	return &GetContactReachabilityStatusFuture{Future: future}
 }
 
 func (a *stub) GetDomainDetail(ctx workflow.Context, input *route53domains.GetDomainDetailInput) (*route53domains.GetDomainDetailOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) GetDomainDetail(ctx workflow.Context, input *route53domains.GetDo
 	return &output, err
 }
 
-func (a *stub) GetDomainDetailAsync(ctx workflow.Context, input *route53domains.GetDomainDetailInput) *Route53DomainsGetDomainDetailFuture {
+func (a *stub) GetDomainDetailAsync(ctx workflow.Context, input *route53domains.GetDomainDetailInput) *GetDomainDetailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.GetDomainDetail", input)
-	return &Route53DomainsGetDomainDetailFuture{Future: future}
+	return &GetDomainDetailFuture{Future: future}
 }
 
 func (a *stub) GetDomainSuggestions(ctx workflow.Context, input *route53domains.GetDomainSuggestionsInput) (*route53domains.GetDomainSuggestionsOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) GetDomainSuggestions(ctx workflow.Context, input *route53domains.
 	return &output, err
 }
 
-func (a *stub) GetDomainSuggestionsAsync(ctx workflow.Context, input *route53domains.GetDomainSuggestionsInput) *Route53DomainsGetDomainSuggestionsFuture {
+func (a *stub) GetDomainSuggestionsAsync(ctx workflow.Context, input *route53domains.GetDomainSuggestionsInput) *GetDomainSuggestionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.GetDomainSuggestions", input)
-	return &Route53DomainsGetDomainSuggestionsFuture{Future: future}
+	return &GetDomainSuggestionsFuture{Future: future}
 }
 
 func (a *stub) GetOperationDetail(ctx workflow.Context, input *route53domains.GetOperationDetailInput) (*route53domains.GetOperationDetailOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) GetOperationDetail(ctx workflow.Context, input *route53domains.Ge
 	return &output, err
 }
 
-func (a *stub) GetOperationDetailAsync(ctx workflow.Context, input *route53domains.GetOperationDetailInput) *Route53DomainsGetOperationDetailFuture {
+func (a *stub) GetOperationDetailAsync(ctx workflow.Context, input *route53domains.GetOperationDetailInput) *GetOperationDetailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.GetOperationDetail", input)
-	return &Route53DomainsGetOperationDetailFuture{Future: future}
+	return &GetOperationDetailFuture{Future: future}
 }
 
 func (a *stub) ListDomains(ctx workflow.Context, input *route53domains.ListDomainsInput) (*route53domains.ListDomainsOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) ListDomains(ctx workflow.Context, input *route53domains.ListDomai
 	return &output, err
 }
 
-func (a *stub) ListDomainsAsync(ctx workflow.Context, input *route53domains.ListDomainsInput) *Route53DomainsListDomainsFuture {
+func (a *stub) ListDomainsAsync(ctx workflow.Context, input *route53domains.ListDomainsInput) *ListDomainsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.ListDomains", input)
-	return &Route53DomainsListDomainsFuture{Future: future}
+	return &ListDomainsFuture{Future: future}
 }
 
 func (a *stub) ListOperations(ctx workflow.Context, input *route53domains.ListOperationsInput) (*route53domains.ListOperationsOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) ListOperations(ctx workflow.Context, input *route53domains.ListOp
 	return &output, err
 }
 
-func (a *stub) ListOperationsAsync(ctx workflow.Context, input *route53domains.ListOperationsInput) *Route53DomainsListOperationsFuture {
+func (a *stub) ListOperationsAsync(ctx workflow.Context, input *route53domains.ListOperationsInput) *ListOperationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.ListOperations", input)
-	return &Route53DomainsListOperationsFuture{Future: future}
+	return &ListOperationsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForDomain(ctx workflow.Context, input *route53domains.ListTagsForDomainInput) (*route53domains.ListTagsForDomainOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) ListTagsForDomain(ctx workflow.Context, input *route53domains.Lis
 	return &output, err
 }
 
-func (a *stub) ListTagsForDomainAsync(ctx workflow.Context, input *route53domains.ListTagsForDomainInput) *Route53DomainsListTagsForDomainFuture {
+func (a *stub) ListTagsForDomainAsync(ctx workflow.Context, input *route53domains.ListTagsForDomainInput) *ListTagsForDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.ListTagsForDomain", input)
-	return &Route53DomainsListTagsForDomainFuture{Future: future}
+	return &ListTagsForDomainFuture{Future: future}
 }
 
 func (a *stub) RegisterDomain(ctx workflow.Context, input *route53domains.RegisterDomainInput) (*route53domains.RegisterDomainOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) RegisterDomain(ctx workflow.Context, input *route53domains.Regist
 	return &output, err
 }
 
-func (a *stub) RegisterDomainAsync(ctx workflow.Context, input *route53domains.RegisterDomainInput) *Route53DomainsRegisterDomainFuture {
+func (a *stub) RegisterDomainAsync(ctx workflow.Context, input *route53domains.RegisterDomainInput) *RegisterDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.RegisterDomain", input)
-	return &Route53DomainsRegisterDomainFuture{Future: future}
+	return &RegisterDomainFuture{Future: future}
 }
 
 func (a *stub) RejectDomainTransferFromAnotherAwsAccount(ctx workflow.Context, input *route53domains.RejectDomainTransferFromAnotherAwsAccountInput) (*route53domains.RejectDomainTransferFromAnotherAwsAccountOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) RejectDomainTransferFromAnotherAwsAccount(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *stub) RejectDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.RejectDomainTransferFromAnotherAwsAccountInput) *Route53DomainsRejectDomainTransferFromAnotherAwsAccountFuture {
+func (a *stub) RejectDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.RejectDomainTransferFromAnotherAwsAccountInput) *RejectDomainTransferFromAnotherAwsAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.RejectDomainTransferFromAnotherAwsAccount", input)
-	return &Route53DomainsRejectDomainTransferFromAnotherAwsAccountFuture{Future: future}
+	return &RejectDomainTransferFromAnotherAwsAccountFuture{Future: future}
 }
 
 func (a *stub) RenewDomain(ctx workflow.Context, input *route53domains.RenewDomainInput) (*route53domains.RenewDomainOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) RenewDomain(ctx workflow.Context, input *route53domains.RenewDoma
 	return &output, err
 }
 
-func (a *stub) RenewDomainAsync(ctx workflow.Context, input *route53domains.RenewDomainInput) *Route53DomainsRenewDomainFuture {
+func (a *stub) RenewDomainAsync(ctx workflow.Context, input *route53domains.RenewDomainInput) *RenewDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.RenewDomain", input)
-	return &Route53DomainsRenewDomainFuture{Future: future}
+	return &RenewDomainFuture{Future: future}
 }
 
 func (a *stub) ResendContactReachabilityEmail(ctx workflow.Context, input *route53domains.ResendContactReachabilityEmailInput) (*route53domains.ResendContactReachabilityEmailOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) ResendContactReachabilityEmail(ctx workflow.Context, input *route
 	return &output, err
 }
 
-func (a *stub) ResendContactReachabilityEmailAsync(ctx workflow.Context, input *route53domains.ResendContactReachabilityEmailInput) *Route53DomainsResendContactReachabilityEmailFuture {
+func (a *stub) ResendContactReachabilityEmailAsync(ctx workflow.Context, input *route53domains.ResendContactReachabilityEmailInput) *ResendContactReachabilityEmailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.ResendContactReachabilityEmail", input)
-	return &Route53DomainsResendContactReachabilityEmailFuture{Future: future}
+	return &ResendContactReachabilityEmailFuture{Future: future}
 }
 
 func (a *stub) RetrieveDomainAuthCode(ctx workflow.Context, input *route53domains.RetrieveDomainAuthCodeInput) (*route53domains.RetrieveDomainAuthCodeOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) RetrieveDomainAuthCode(ctx workflow.Context, input *route53domain
 	return &output, err
 }
 
-func (a *stub) RetrieveDomainAuthCodeAsync(ctx workflow.Context, input *route53domains.RetrieveDomainAuthCodeInput) *Route53DomainsRetrieveDomainAuthCodeFuture {
+func (a *stub) RetrieveDomainAuthCodeAsync(ctx workflow.Context, input *route53domains.RetrieveDomainAuthCodeInput) *RetrieveDomainAuthCodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.RetrieveDomainAuthCode", input)
-	return &Route53DomainsRetrieveDomainAuthCodeFuture{Future: future}
+	return &RetrieveDomainAuthCodeFuture{Future: future}
 }
 
 func (a *stub) TransferDomain(ctx workflow.Context, input *route53domains.TransferDomainInput) (*route53domains.TransferDomainOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) TransferDomain(ctx workflow.Context, input *route53domains.Transf
 	return &output, err
 }
 
-func (a *stub) TransferDomainAsync(ctx workflow.Context, input *route53domains.TransferDomainInput) *Route53DomainsTransferDomainFuture {
+func (a *stub) TransferDomainAsync(ctx workflow.Context, input *route53domains.TransferDomainInput) *TransferDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.TransferDomain", input)
-	return &Route53DomainsTransferDomainFuture{Future: future}
+	return &TransferDomainFuture{Future: future}
 }
 
 func (a *stub) TransferDomainToAnotherAwsAccount(ctx workflow.Context, input *route53domains.TransferDomainToAnotherAwsAccountInput) (*route53domains.TransferDomainToAnotherAwsAccountOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) TransferDomainToAnotherAwsAccount(ctx workflow.Context, input *ro
 	return &output, err
 }
 
-func (a *stub) TransferDomainToAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.TransferDomainToAnotherAwsAccountInput) *Route53DomainsTransferDomainToAnotherAwsAccountFuture {
+func (a *stub) TransferDomainToAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.TransferDomainToAnotherAwsAccountInput) *TransferDomainToAnotherAwsAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.TransferDomainToAnotherAwsAccount", input)
-	return &Route53DomainsTransferDomainToAnotherAwsAccountFuture{Future: future}
+	return &TransferDomainToAnotherAwsAccountFuture{Future: future}
 }
 
 func (a *stub) UpdateDomainContact(ctx workflow.Context, input *route53domains.UpdateDomainContactInput) (*route53domains.UpdateDomainContactOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) UpdateDomainContact(ctx workflow.Context, input *route53domains.U
 	return &output, err
 }
 
-func (a *stub) UpdateDomainContactAsync(ctx workflow.Context, input *route53domains.UpdateDomainContactInput) *Route53DomainsUpdateDomainContactFuture {
+func (a *stub) UpdateDomainContactAsync(ctx workflow.Context, input *route53domains.UpdateDomainContactInput) *UpdateDomainContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.UpdateDomainContact", input)
-	return &Route53DomainsUpdateDomainContactFuture{Future: future}
+	return &UpdateDomainContactFuture{Future: future}
 }
 
 func (a *stub) UpdateDomainContactPrivacy(ctx workflow.Context, input *route53domains.UpdateDomainContactPrivacyInput) (*route53domains.UpdateDomainContactPrivacyOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) UpdateDomainContactPrivacy(ctx workflow.Context, input *route53do
 	return &output, err
 }
 
-func (a *stub) UpdateDomainContactPrivacyAsync(ctx workflow.Context, input *route53domains.UpdateDomainContactPrivacyInput) *Route53DomainsUpdateDomainContactPrivacyFuture {
+func (a *stub) UpdateDomainContactPrivacyAsync(ctx workflow.Context, input *route53domains.UpdateDomainContactPrivacyInput) *UpdateDomainContactPrivacyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.UpdateDomainContactPrivacy", input)
-	return &Route53DomainsUpdateDomainContactPrivacyFuture{Future: future}
+	return &UpdateDomainContactPrivacyFuture{Future: future}
 }
 
 func (a *stub) UpdateDomainNameservers(ctx workflow.Context, input *route53domains.UpdateDomainNameserversInput) (*route53domains.UpdateDomainNameserversOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) UpdateDomainNameservers(ctx workflow.Context, input *route53domai
 	return &output, err
 }
 
-func (a *stub) UpdateDomainNameserversAsync(ctx workflow.Context, input *route53domains.UpdateDomainNameserversInput) *Route53DomainsUpdateDomainNameserversFuture {
+func (a *stub) UpdateDomainNameserversAsync(ctx workflow.Context, input *route53domains.UpdateDomainNameserversInput) *UpdateDomainNameserversFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.UpdateDomainNameservers", input)
-	return &Route53DomainsUpdateDomainNameserversFuture{Future: future}
+	return &UpdateDomainNameserversFuture{Future: future}
 }
 
 func (a *stub) UpdateTagsForDomain(ctx workflow.Context, input *route53domains.UpdateTagsForDomainInput) (*route53domains.UpdateTagsForDomainOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) UpdateTagsForDomain(ctx workflow.Context, input *route53domains.U
 	return &output, err
 }
 
-func (a *stub) UpdateTagsForDomainAsync(ctx workflow.Context, input *route53domains.UpdateTagsForDomainInput) *Route53DomainsUpdateTagsForDomainFuture {
+func (a *stub) UpdateTagsForDomainAsync(ctx workflow.Context, input *route53domains.UpdateTagsForDomainInput) *UpdateTagsForDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.UpdateTagsForDomain", input)
-	return &Route53DomainsUpdateTagsForDomainFuture{Future: future}
+	return &UpdateTagsForDomainFuture{Future: future}
 }
 
 func (a *stub) ViewBilling(ctx workflow.Context, input *route53domains.ViewBillingInput) (*route53domains.ViewBillingOutput, error) {
@@ -627,7 +627,7 @@ func (a *stub) ViewBilling(ctx workflow.Context, input *route53domains.ViewBilli
 	return &output, err
 }
 
-func (a *stub) ViewBillingAsync(ctx workflow.Context, input *route53domains.ViewBillingInput) *Route53DomainsViewBillingFuture {
+func (a *stub) ViewBillingAsync(ctx workflow.Context, input *route53domains.ViewBillingInput) *ViewBillingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.route53domains.ViewBilling", input)
-	return &Route53DomainsViewBillingFuture{Future: future}
+	return &ViewBillingFuture{Future: future}
 }

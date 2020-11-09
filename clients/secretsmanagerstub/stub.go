@@ -16,210 +16,210 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type SecretsManagerCancelRotateSecretFuture struct {
+type CancelRotateSecretFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerCancelRotateSecretFuture) Get(ctx workflow.Context) (*secretsmanager.CancelRotateSecretOutput, error) {
+func (r *CancelRotateSecretFuture) Get(ctx workflow.Context) (*secretsmanager.CancelRotateSecretOutput, error) {
 	var output secretsmanager.CancelRotateSecretOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerCreateSecretFuture struct {
+type CreateSecretFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerCreateSecretFuture) Get(ctx workflow.Context) (*secretsmanager.CreateSecretOutput, error) {
+func (r *CreateSecretFuture) Get(ctx workflow.Context) (*secretsmanager.CreateSecretOutput, error) {
 	var output secretsmanager.CreateSecretOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerDeleteResourcePolicyFuture struct {
+type DeleteResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*secretsmanager.DeleteResourcePolicyOutput, error) {
+func (r *DeleteResourcePolicyFuture) Get(ctx workflow.Context) (*secretsmanager.DeleteResourcePolicyOutput, error) {
 	var output secretsmanager.DeleteResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerDeleteSecretFuture struct {
+type DeleteSecretFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerDeleteSecretFuture) Get(ctx workflow.Context) (*secretsmanager.DeleteSecretOutput, error) {
+func (r *DeleteSecretFuture) Get(ctx workflow.Context) (*secretsmanager.DeleteSecretOutput, error) {
 	var output secretsmanager.DeleteSecretOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerDescribeSecretFuture struct {
+type DescribeSecretFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerDescribeSecretFuture) Get(ctx workflow.Context) (*secretsmanager.DescribeSecretOutput, error) {
+func (r *DescribeSecretFuture) Get(ctx workflow.Context) (*secretsmanager.DescribeSecretOutput, error) {
 	var output secretsmanager.DescribeSecretOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerGetRandomPasswordFuture struct {
+type GetRandomPasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerGetRandomPasswordFuture) Get(ctx workflow.Context) (*secretsmanager.GetRandomPasswordOutput, error) {
+func (r *GetRandomPasswordFuture) Get(ctx workflow.Context) (*secretsmanager.GetRandomPasswordOutput, error) {
 	var output secretsmanager.GetRandomPasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerGetResourcePolicyFuture struct {
+type GetResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerGetResourcePolicyFuture) Get(ctx workflow.Context) (*secretsmanager.GetResourcePolicyOutput, error) {
+func (r *GetResourcePolicyFuture) Get(ctx workflow.Context) (*secretsmanager.GetResourcePolicyOutput, error) {
 	var output secretsmanager.GetResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerGetSecretValueFuture struct {
+type GetSecretValueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerGetSecretValueFuture) Get(ctx workflow.Context) (*secretsmanager.GetSecretValueOutput, error) {
+func (r *GetSecretValueFuture) Get(ctx workflow.Context) (*secretsmanager.GetSecretValueOutput, error) {
 	var output secretsmanager.GetSecretValueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerListSecretVersionIdsFuture struct {
+type ListSecretVersionIdsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerListSecretVersionIdsFuture) Get(ctx workflow.Context) (*secretsmanager.ListSecretVersionIdsOutput, error) {
+func (r *ListSecretVersionIdsFuture) Get(ctx workflow.Context) (*secretsmanager.ListSecretVersionIdsOutput, error) {
 	var output secretsmanager.ListSecretVersionIdsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerListSecretsFuture struct {
+type ListSecretsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerListSecretsFuture) Get(ctx workflow.Context) (*secretsmanager.ListSecretsOutput, error) {
+func (r *ListSecretsFuture) Get(ctx workflow.Context) (*secretsmanager.ListSecretsOutput, error) {
 	var output secretsmanager.ListSecretsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerPutResourcePolicyFuture struct {
+type PutResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerPutResourcePolicyFuture) Get(ctx workflow.Context) (*secretsmanager.PutResourcePolicyOutput, error) {
+func (r *PutResourcePolicyFuture) Get(ctx workflow.Context) (*secretsmanager.PutResourcePolicyOutput, error) {
 	var output secretsmanager.PutResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerPutSecretValueFuture struct {
+type PutSecretValueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerPutSecretValueFuture) Get(ctx workflow.Context) (*secretsmanager.PutSecretValueOutput, error) {
+func (r *PutSecretValueFuture) Get(ctx workflow.Context) (*secretsmanager.PutSecretValueOutput, error) {
 	var output secretsmanager.PutSecretValueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerRestoreSecretFuture struct {
+type RestoreSecretFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerRestoreSecretFuture) Get(ctx workflow.Context) (*secretsmanager.RestoreSecretOutput, error) {
+func (r *RestoreSecretFuture) Get(ctx workflow.Context) (*secretsmanager.RestoreSecretOutput, error) {
 	var output secretsmanager.RestoreSecretOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerRotateSecretFuture struct {
+type RotateSecretFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerRotateSecretFuture) Get(ctx workflow.Context) (*secretsmanager.RotateSecretOutput, error) {
+func (r *RotateSecretFuture) Get(ctx workflow.Context) (*secretsmanager.RotateSecretOutput, error) {
 	var output secretsmanager.RotateSecretOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerTagResourceFuture) Get(ctx workflow.Context) (*secretsmanager.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*secretsmanager.TagResourceOutput, error) {
 	var output secretsmanager.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerUntagResourceFuture) Get(ctx workflow.Context) (*secretsmanager.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*secretsmanager.UntagResourceOutput, error) {
 	var output secretsmanager.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerUpdateSecretFuture struct {
+type UpdateSecretFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerUpdateSecretFuture) Get(ctx workflow.Context) (*secretsmanager.UpdateSecretOutput, error) {
+func (r *UpdateSecretFuture) Get(ctx workflow.Context) (*secretsmanager.UpdateSecretOutput, error) {
 	var output secretsmanager.UpdateSecretOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerUpdateSecretVersionStageFuture struct {
+type UpdateSecretVersionStageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerUpdateSecretVersionStageFuture) Get(ctx workflow.Context) (*secretsmanager.UpdateSecretVersionStageOutput, error) {
+func (r *UpdateSecretVersionStageFuture) Get(ctx workflow.Context) (*secretsmanager.UpdateSecretVersionStageOutput, error) {
 	var output secretsmanager.UpdateSecretVersionStageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SecretsManagerValidateResourcePolicyFuture struct {
+type ValidateResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SecretsManagerValidateResourcePolicyFuture) Get(ctx workflow.Context) (*secretsmanager.ValidateResourcePolicyOutput, error) {
+func (r *ValidateResourcePolicyFuture) Get(ctx workflow.Context) (*secretsmanager.ValidateResourcePolicyOutput, error) {
 	var output secretsmanager.ValidateResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -231,9 +231,9 @@ func (a *stub) CancelRotateSecret(ctx workflow.Context, input *secretsmanager.Ca
 	return &output, err
 }
 
-func (a *stub) CancelRotateSecretAsync(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) *SecretsManagerCancelRotateSecretFuture {
+func (a *stub) CancelRotateSecretAsync(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) *CancelRotateSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.CancelRotateSecret", input)
-	return &SecretsManagerCancelRotateSecretFuture{Future: future}
+	return &CancelRotateSecretFuture{Future: future}
 }
 
 func (a *stub) CreateSecret(ctx workflow.Context, input *secretsmanager.CreateSecretInput) (*secretsmanager.CreateSecretOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) CreateSecret(ctx workflow.Context, input *secretsmanager.CreateSe
 	return &output, err
 }
 
-func (a *stub) CreateSecretAsync(ctx workflow.Context, input *secretsmanager.CreateSecretInput) *SecretsManagerCreateSecretFuture {
+func (a *stub) CreateSecretAsync(ctx workflow.Context, input *secretsmanager.CreateSecretInput) *CreateSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.CreateSecret", input)
-	return &SecretsManagerCreateSecretFuture{Future: future}
+	return &CreateSecretFuture{Future: future}
 }
 
 func (a *stub) DeleteResourcePolicy(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) (*secretsmanager.DeleteResourcePolicyOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DeleteResourcePolicy(ctx workflow.Context, input *secretsmanager.
 	return &output, err
 }
 
-func (a *stub) DeleteResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) *SecretsManagerDeleteResourcePolicyFuture {
+func (a *stub) DeleteResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) *DeleteResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DeleteResourcePolicy", input)
-	return &SecretsManagerDeleteResourcePolicyFuture{Future: future}
+	return &DeleteResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteSecret(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) (*secretsmanager.DeleteSecretOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) DeleteSecret(ctx workflow.Context, input *secretsmanager.DeleteSe
 	return &output, err
 }
 
-func (a *stub) DeleteSecretAsync(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) *SecretsManagerDeleteSecretFuture {
+func (a *stub) DeleteSecretAsync(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) *DeleteSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DeleteSecret", input)
-	return &SecretsManagerDeleteSecretFuture{Future: future}
+	return &DeleteSecretFuture{Future: future}
 }
 
 func (a *stub) DescribeSecret(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) (*secretsmanager.DescribeSecretOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) DescribeSecret(ctx workflow.Context, input *secretsmanager.Descri
 	return &output, err
 }
 
-func (a *stub) DescribeSecretAsync(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) *SecretsManagerDescribeSecretFuture {
+func (a *stub) DescribeSecretAsync(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) *DescribeSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DescribeSecret", input)
-	return &SecretsManagerDescribeSecretFuture{Future: future}
+	return &DescribeSecretFuture{Future: future}
 }
 
 func (a *stub) GetRandomPassword(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) (*secretsmanager.GetRandomPasswordOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) GetRandomPassword(ctx workflow.Context, input *secretsmanager.Get
 	return &output, err
 }
 
-func (a *stub) GetRandomPasswordAsync(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) *SecretsManagerGetRandomPasswordFuture {
+func (a *stub) GetRandomPasswordAsync(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) *GetRandomPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetRandomPassword", input)
-	return &SecretsManagerGetRandomPasswordFuture{Future: future}
+	return &GetRandomPasswordFuture{Future: future}
 }
 
 func (a *stub) GetResourcePolicy(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) (*secretsmanager.GetResourcePolicyOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) GetResourcePolicy(ctx workflow.Context, input *secretsmanager.Get
 	return &output, err
 }
 
-func (a *stub) GetResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) *SecretsManagerGetResourcePolicyFuture {
+func (a *stub) GetResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) *GetResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetResourcePolicy", input)
-	return &SecretsManagerGetResourcePolicyFuture{Future: future}
+	return &GetResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) GetSecretValue(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) (*secretsmanager.GetSecretValueOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) GetSecretValue(ctx workflow.Context, input *secretsmanager.GetSec
 	return &output, err
 }
 
-func (a *stub) GetSecretValueAsync(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) *SecretsManagerGetSecretValueFuture {
+func (a *stub) GetSecretValueAsync(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) *GetSecretValueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetSecretValue", input)
-	return &SecretsManagerGetSecretValueFuture{Future: future}
+	return &GetSecretValueFuture{Future: future}
 }
 
 func (a *stub) ListSecretVersionIds(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) (*secretsmanager.ListSecretVersionIdsOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) ListSecretVersionIds(ctx workflow.Context, input *secretsmanager.
 	return &output, err
 }
 
-func (a *stub) ListSecretVersionIdsAsync(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) *SecretsManagerListSecretVersionIdsFuture {
+func (a *stub) ListSecretVersionIdsAsync(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) *ListSecretVersionIdsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ListSecretVersionIds", input)
-	return &SecretsManagerListSecretVersionIdsFuture{Future: future}
+	return &ListSecretVersionIdsFuture{Future: future}
 }
 
 func (a *stub) ListSecrets(ctx workflow.Context, input *secretsmanager.ListSecretsInput) (*secretsmanager.ListSecretsOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) ListSecrets(ctx workflow.Context, input *secretsmanager.ListSecre
 	return &output, err
 }
 
-func (a *stub) ListSecretsAsync(ctx workflow.Context, input *secretsmanager.ListSecretsInput) *SecretsManagerListSecretsFuture {
+func (a *stub) ListSecretsAsync(ctx workflow.Context, input *secretsmanager.ListSecretsInput) *ListSecretsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ListSecrets", input)
-	return &SecretsManagerListSecretsFuture{Future: future}
+	return &ListSecretsFuture{Future: future}
 }
 
 func (a *stub) PutResourcePolicy(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) (*secretsmanager.PutResourcePolicyOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) PutResourcePolicy(ctx workflow.Context, input *secretsmanager.Put
 	return &output, err
 }
 
-func (a *stub) PutResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) *SecretsManagerPutResourcePolicyFuture {
+func (a *stub) PutResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) *PutResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.PutResourcePolicy", input)
-	return &SecretsManagerPutResourcePolicyFuture{Future: future}
+	return &PutResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) PutSecretValue(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) (*secretsmanager.PutSecretValueOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) PutSecretValue(ctx workflow.Context, input *secretsmanager.PutSec
 	return &output, err
 }
 
-func (a *stub) PutSecretValueAsync(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) *SecretsManagerPutSecretValueFuture {
+func (a *stub) PutSecretValueAsync(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) *PutSecretValueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.PutSecretValue", input)
-	return &SecretsManagerPutSecretValueFuture{Future: future}
+	return &PutSecretValueFuture{Future: future}
 }
 
 func (a *stub) RestoreSecret(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) (*secretsmanager.RestoreSecretOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) RestoreSecret(ctx workflow.Context, input *secretsmanager.Restore
 	return &output, err
 }
 
-func (a *stub) RestoreSecretAsync(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) *SecretsManagerRestoreSecretFuture {
+func (a *stub) RestoreSecretAsync(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) *RestoreSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.RestoreSecret", input)
-	return &SecretsManagerRestoreSecretFuture{Future: future}
+	return &RestoreSecretFuture{Future: future}
 }
 
 func (a *stub) RotateSecret(ctx workflow.Context, input *secretsmanager.RotateSecretInput) (*secretsmanager.RotateSecretOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) RotateSecret(ctx workflow.Context, input *secretsmanager.RotateSe
 	return &output, err
 }
 
-func (a *stub) RotateSecretAsync(ctx workflow.Context, input *secretsmanager.RotateSecretInput) *SecretsManagerRotateSecretFuture {
+func (a *stub) RotateSecretAsync(ctx workflow.Context, input *secretsmanager.RotateSecretInput) *RotateSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.RotateSecret", input)
-	return &SecretsManagerRotateSecretFuture{Future: future}
+	return &RotateSecretFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *secretsmanager.TagResourceInput) (*secretsmanager.TagResourceOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *secretsmanager.TagResour
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *secretsmanager.TagResourceInput) *SecretsManagerTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *secretsmanager.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.TagResource", input)
-	return &SecretsManagerTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *secretsmanager.UntagResourceInput) (*secretsmanager.UntagResourceOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *secretsmanager.UntagRe
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *secretsmanager.UntagResourceInput) *SecretsManagerUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *secretsmanager.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UntagResource", input)
-	return &SecretsManagerUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateSecret(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) (*secretsmanager.UpdateSecretOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) UpdateSecret(ctx workflow.Context, input *secretsmanager.UpdateSe
 	return &output, err
 }
 
-func (a *stub) UpdateSecretAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) *SecretsManagerUpdateSecretFuture {
+func (a *stub) UpdateSecretAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) *UpdateSecretFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UpdateSecret", input)
-	return &SecretsManagerUpdateSecretFuture{Future: future}
+	return &UpdateSecretFuture{Future: future}
 }
 
 func (a *stub) UpdateSecretVersionStage(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) (*secretsmanager.UpdateSecretVersionStageOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) UpdateSecretVersionStage(ctx workflow.Context, input *secretsmana
 	return &output, err
 }
 
-func (a *stub) UpdateSecretVersionStageAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) *SecretsManagerUpdateSecretVersionStageFuture {
+func (a *stub) UpdateSecretVersionStageAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) *UpdateSecretVersionStageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UpdateSecretVersionStage", input)
-	return &SecretsManagerUpdateSecretVersionStageFuture{Future: future}
+	return &UpdateSecretVersionStageFuture{Future: future}
 }
 
 func (a *stub) ValidateResourcePolicy(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) (*secretsmanager.ValidateResourcePolicyOutput, error) {
@@ -429,7 +429,7 @@ func (a *stub) ValidateResourcePolicy(ctx workflow.Context, input *secretsmanage
 	return &output, err
 }
 
-func (a *stub) ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *SecretsManagerValidateResourcePolicyFuture {
+func (a *stub) ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *ValidateResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ValidateResourcePolicy", input)
-	return &SecretsManagerValidateResourcePolicyFuture{Future: future}
+	return &ValidateResourcePolicyFuture{Future: future}
 }

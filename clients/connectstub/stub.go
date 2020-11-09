@@ -16,518 +16,518 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ConnectAssociateRoutingProfileQueuesFuture struct {
+type AssociateRoutingProfileQueuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectAssociateRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*connect.AssociateRoutingProfileQueuesOutput, error) {
+func (r *AssociateRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*connect.AssociateRoutingProfileQueuesOutput, error) {
 	var output connect.AssociateRoutingProfileQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectCreateContactFlowFuture struct {
+type CreateContactFlowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectCreateContactFlowFuture) Get(ctx workflow.Context) (*connect.CreateContactFlowOutput, error) {
+func (r *CreateContactFlowFuture) Get(ctx workflow.Context) (*connect.CreateContactFlowOutput, error) {
 	var output connect.CreateContactFlowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectCreateRoutingProfileFuture struct {
+type CreateRoutingProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectCreateRoutingProfileFuture) Get(ctx workflow.Context) (*connect.CreateRoutingProfileOutput, error) {
+func (r *CreateRoutingProfileFuture) Get(ctx workflow.Context) (*connect.CreateRoutingProfileOutput, error) {
 	var output connect.CreateRoutingProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectCreateUserFuture struct {
+type CreateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectCreateUserFuture) Get(ctx workflow.Context) (*connect.CreateUserOutput, error) {
+func (r *CreateUserFuture) Get(ctx workflow.Context) (*connect.CreateUserOutput, error) {
 	var output connect.CreateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectDeleteUserFuture struct {
+type DeleteUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectDeleteUserFuture) Get(ctx workflow.Context) (*connect.DeleteUserOutput, error) {
+func (r *DeleteUserFuture) Get(ctx workflow.Context) (*connect.DeleteUserOutput, error) {
 	var output connect.DeleteUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectDescribeContactFlowFuture struct {
+type DescribeContactFlowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectDescribeContactFlowFuture) Get(ctx workflow.Context) (*connect.DescribeContactFlowOutput, error) {
+func (r *DescribeContactFlowFuture) Get(ctx workflow.Context) (*connect.DescribeContactFlowOutput, error) {
 	var output connect.DescribeContactFlowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectDescribeRoutingProfileFuture struct {
+type DescribeRoutingProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectDescribeRoutingProfileFuture) Get(ctx workflow.Context) (*connect.DescribeRoutingProfileOutput, error) {
+func (r *DescribeRoutingProfileFuture) Get(ctx workflow.Context) (*connect.DescribeRoutingProfileOutput, error) {
 	var output connect.DescribeRoutingProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectDescribeUserFuture struct {
+type DescribeUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectDescribeUserFuture) Get(ctx workflow.Context) (*connect.DescribeUserOutput, error) {
+func (r *DescribeUserFuture) Get(ctx workflow.Context) (*connect.DescribeUserOutput, error) {
 	var output connect.DescribeUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectDescribeUserHierarchyGroupFuture struct {
+type DescribeUserHierarchyGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectDescribeUserHierarchyGroupFuture) Get(ctx workflow.Context) (*connect.DescribeUserHierarchyGroupOutput, error) {
+func (r *DescribeUserHierarchyGroupFuture) Get(ctx workflow.Context) (*connect.DescribeUserHierarchyGroupOutput, error) {
 	var output connect.DescribeUserHierarchyGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectDescribeUserHierarchyStructureFuture struct {
+type DescribeUserHierarchyStructureFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectDescribeUserHierarchyStructureFuture) Get(ctx workflow.Context) (*connect.DescribeUserHierarchyStructureOutput, error) {
+func (r *DescribeUserHierarchyStructureFuture) Get(ctx workflow.Context) (*connect.DescribeUserHierarchyStructureOutput, error) {
 	var output connect.DescribeUserHierarchyStructureOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectDisassociateRoutingProfileQueuesFuture struct {
+type DisassociateRoutingProfileQueuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectDisassociateRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*connect.DisassociateRoutingProfileQueuesOutput, error) {
+func (r *DisassociateRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*connect.DisassociateRoutingProfileQueuesOutput, error) {
 	var output connect.DisassociateRoutingProfileQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectGetContactAttributesFuture struct {
+type GetContactAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectGetContactAttributesFuture) Get(ctx workflow.Context) (*connect.GetContactAttributesOutput, error) {
+func (r *GetContactAttributesFuture) Get(ctx workflow.Context) (*connect.GetContactAttributesOutput, error) {
 	var output connect.GetContactAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectGetCurrentMetricDataFuture struct {
+type GetCurrentMetricDataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectGetCurrentMetricDataFuture) Get(ctx workflow.Context) (*connect.GetCurrentMetricDataOutput, error) {
+func (r *GetCurrentMetricDataFuture) Get(ctx workflow.Context) (*connect.GetCurrentMetricDataOutput, error) {
 	var output connect.GetCurrentMetricDataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectGetFederationTokenFuture struct {
+type GetFederationTokenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectGetFederationTokenFuture) Get(ctx workflow.Context) (*connect.GetFederationTokenOutput, error) {
+func (r *GetFederationTokenFuture) Get(ctx workflow.Context) (*connect.GetFederationTokenOutput, error) {
 	var output connect.GetFederationTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectGetMetricDataFuture struct {
+type GetMetricDataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectGetMetricDataFuture) Get(ctx workflow.Context) (*connect.GetMetricDataOutput, error) {
+func (r *GetMetricDataFuture) Get(ctx workflow.Context) (*connect.GetMetricDataOutput, error) {
 	var output connect.GetMetricDataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListContactFlowsFuture struct {
+type ListContactFlowsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListContactFlowsFuture) Get(ctx workflow.Context) (*connect.ListContactFlowsOutput, error) {
+func (r *ListContactFlowsFuture) Get(ctx workflow.Context) (*connect.ListContactFlowsOutput, error) {
 	var output connect.ListContactFlowsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListHoursOfOperationsFuture struct {
+type ListHoursOfOperationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListHoursOfOperationsFuture) Get(ctx workflow.Context) (*connect.ListHoursOfOperationsOutput, error) {
+func (r *ListHoursOfOperationsFuture) Get(ctx workflow.Context) (*connect.ListHoursOfOperationsOutput, error) {
 	var output connect.ListHoursOfOperationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListPhoneNumbersFuture struct {
+type ListPhoneNumbersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListPhoneNumbersFuture) Get(ctx workflow.Context) (*connect.ListPhoneNumbersOutput, error) {
+func (r *ListPhoneNumbersFuture) Get(ctx workflow.Context) (*connect.ListPhoneNumbersOutput, error) {
 	var output connect.ListPhoneNumbersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListPromptsFuture struct {
+type ListPromptsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListPromptsFuture) Get(ctx workflow.Context) (*connect.ListPromptsOutput, error) {
+func (r *ListPromptsFuture) Get(ctx workflow.Context) (*connect.ListPromptsOutput, error) {
 	var output connect.ListPromptsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListQueuesFuture struct {
+type ListQueuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListQueuesFuture) Get(ctx workflow.Context) (*connect.ListQueuesOutput, error) {
+func (r *ListQueuesFuture) Get(ctx workflow.Context) (*connect.ListQueuesOutput, error) {
 	var output connect.ListQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListRoutingProfileQueuesFuture struct {
+type ListRoutingProfileQueuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*connect.ListRoutingProfileQueuesOutput, error) {
+func (r *ListRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*connect.ListRoutingProfileQueuesOutput, error) {
 	var output connect.ListRoutingProfileQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListRoutingProfilesFuture struct {
+type ListRoutingProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListRoutingProfilesFuture) Get(ctx workflow.Context) (*connect.ListRoutingProfilesOutput, error) {
+func (r *ListRoutingProfilesFuture) Get(ctx workflow.Context) (*connect.ListRoutingProfilesOutput, error) {
 	var output connect.ListRoutingProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListSecurityProfilesFuture struct {
+type ListSecurityProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListSecurityProfilesFuture) Get(ctx workflow.Context) (*connect.ListSecurityProfilesOutput, error) {
+func (r *ListSecurityProfilesFuture) Get(ctx workflow.Context) (*connect.ListSecurityProfilesOutput, error) {
 	var output connect.ListSecurityProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListTagsForResourceFuture) Get(ctx workflow.Context) (*connect.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*connect.ListTagsForResourceOutput, error) {
 	var output connect.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListUserHierarchyGroupsFuture struct {
+type ListUserHierarchyGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListUserHierarchyGroupsFuture) Get(ctx workflow.Context) (*connect.ListUserHierarchyGroupsOutput, error) {
+func (r *ListUserHierarchyGroupsFuture) Get(ctx workflow.Context) (*connect.ListUserHierarchyGroupsOutput, error) {
 	var output connect.ListUserHierarchyGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectListUsersFuture struct {
+type ListUsersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectListUsersFuture) Get(ctx workflow.Context) (*connect.ListUsersOutput, error) {
+func (r *ListUsersFuture) Get(ctx workflow.Context) (*connect.ListUsersOutput, error) {
 	var output connect.ListUsersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectResumeContactRecordingFuture struct {
+type ResumeContactRecordingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectResumeContactRecordingFuture) Get(ctx workflow.Context) (*connect.ResumeContactRecordingOutput, error) {
+func (r *ResumeContactRecordingFuture) Get(ctx workflow.Context) (*connect.ResumeContactRecordingOutput, error) {
 	var output connect.ResumeContactRecordingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectStartChatContactFuture struct {
+type StartChatContactFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectStartChatContactFuture) Get(ctx workflow.Context) (*connect.StartChatContactOutput, error) {
+func (r *StartChatContactFuture) Get(ctx workflow.Context) (*connect.StartChatContactOutput, error) {
 	var output connect.StartChatContactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectStartContactRecordingFuture struct {
+type StartContactRecordingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectStartContactRecordingFuture) Get(ctx workflow.Context) (*connect.StartContactRecordingOutput, error) {
+func (r *StartContactRecordingFuture) Get(ctx workflow.Context) (*connect.StartContactRecordingOutput, error) {
 	var output connect.StartContactRecordingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectStartOutboundVoiceContactFuture struct {
+type StartOutboundVoiceContactFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectStartOutboundVoiceContactFuture) Get(ctx workflow.Context) (*connect.StartOutboundVoiceContactOutput, error) {
+func (r *StartOutboundVoiceContactFuture) Get(ctx workflow.Context) (*connect.StartOutboundVoiceContactOutput, error) {
 	var output connect.StartOutboundVoiceContactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectStopContactFuture struct {
+type StopContactFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectStopContactFuture) Get(ctx workflow.Context) (*connect.StopContactOutput, error) {
+func (r *StopContactFuture) Get(ctx workflow.Context) (*connect.StopContactOutput, error) {
 	var output connect.StopContactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectStopContactRecordingFuture struct {
+type StopContactRecordingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectStopContactRecordingFuture) Get(ctx workflow.Context) (*connect.StopContactRecordingOutput, error) {
+func (r *StopContactRecordingFuture) Get(ctx workflow.Context) (*connect.StopContactRecordingOutput, error) {
 	var output connect.StopContactRecordingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectSuspendContactRecordingFuture struct {
+type SuspendContactRecordingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectSuspendContactRecordingFuture) Get(ctx workflow.Context) (*connect.SuspendContactRecordingOutput, error) {
+func (r *SuspendContactRecordingFuture) Get(ctx workflow.Context) (*connect.SuspendContactRecordingOutput, error) {
 	var output connect.SuspendContactRecordingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectTagResourceFuture) Get(ctx workflow.Context) (*connect.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*connect.TagResourceOutput, error) {
 	var output connect.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUntagResourceFuture) Get(ctx workflow.Context) (*connect.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*connect.UntagResourceOutput, error) {
 	var output connect.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateContactAttributesFuture struct {
+type UpdateContactAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateContactAttributesFuture) Get(ctx workflow.Context) (*connect.UpdateContactAttributesOutput, error) {
+func (r *UpdateContactAttributesFuture) Get(ctx workflow.Context) (*connect.UpdateContactAttributesOutput, error) {
 	var output connect.UpdateContactAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateContactFlowContentFuture struct {
+type UpdateContactFlowContentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateContactFlowContentFuture) Get(ctx workflow.Context) (*connect.UpdateContactFlowContentOutput, error) {
+func (r *UpdateContactFlowContentFuture) Get(ctx workflow.Context) (*connect.UpdateContactFlowContentOutput, error) {
 	var output connect.UpdateContactFlowContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateContactFlowNameFuture struct {
+type UpdateContactFlowNameFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateContactFlowNameFuture) Get(ctx workflow.Context) (*connect.UpdateContactFlowNameOutput, error) {
+func (r *UpdateContactFlowNameFuture) Get(ctx workflow.Context) (*connect.UpdateContactFlowNameOutput, error) {
 	var output connect.UpdateContactFlowNameOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateRoutingProfileConcurrencyFuture struct {
+type UpdateRoutingProfileConcurrencyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateRoutingProfileConcurrencyFuture) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileConcurrencyOutput, error) {
+func (r *UpdateRoutingProfileConcurrencyFuture) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileConcurrencyOutput, error) {
 	var output connect.UpdateRoutingProfileConcurrencyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateRoutingProfileDefaultOutboundQueueFuture struct {
+type UpdateRoutingProfileDefaultOutboundQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateRoutingProfileDefaultOutboundQueueFuture) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileDefaultOutboundQueueOutput, error) {
+func (r *UpdateRoutingProfileDefaultOutboundQueueFuture) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileDefaultOutboundQueueOutput, error) {
 	var output connect.UpdateRoutingProfileDefaultOutboundQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateRoutingProfileNameFuture struct {
+type UpdateRoutingProfileNameFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateRoutingProfileNameFuture) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileNameOutput, error) {
+func (r *UpdateRoutingProfileNameFuture) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileNameOutput, error) {
 	var output connect.UpdateRoutingProfileNameOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateRoutingProfileQueuesFuture struct {
+type UpdateRoutingProfileQueuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileQueuesOutput, error) {
+func (r *UpdateRoutingProfileQueuesFuture) Get(ctx workflow.Context) (*connect.UpdateRoutingProfileQueuesOutput, error) {
 	var output connect.UpdateRoutingProfileQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateUserHierarchyFuture struct {
+type UpdateUserHierarchyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateUserHierarchyFuture) Get(ctx workflow.Context) (*connect.UpdateUserHierarchyOutput, error) {
+func (r *UpdateUserHierarchyFuture) Get(ctx workflow.Context) (*connect.UpdateUserHierarchyOutput, error) {
 	var output connect.UpdateUserHierarchyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateUserIdentityInfoFuture struct {
+type UpdateUserIdentityInfoFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateUserIdentityInfoFuture) Get(ctx workflow.Context) (*connect.UpdateUserIdentityInfoOutput, error) {
+func (r *UpdateUserIdentityInfoFuture) Get(ctx workflow.Context) (*connect.UpdateUserIdentityInfoOutput, error) {
 	var output connect.UpdateUserIdentityInfoOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateUserPhoneConfigFuture struct {
+type UpdateUserPhoneConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateUserPhoneConfigFuture) Get(ctx workflow.Context) (*connect.UpdateUserPhoneConfigOutput, error) {
+func (r *UpdateUserPhoneConfigFuture) Get(ctx workflow.Context) (*connect.UpdateUserPhoneConfigOutput, error) {
 	var output connect.UpdateUserPhoneConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateUserRoutingProfileFuture struct {
+type UpdateUserRoutingProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateUserRoutingProfileFuture) Get(ctx workflow.Context) (*connect.UpdateUserRoutingProfileOutput, error) {
+func (r *UpdateUserRoutingProfileFuture) Get(ctx workflow.Context) (*connect.UpdateUserRoutingProfileOutput, error) {
 	var output connect.UpdateUserRoutingProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ConnectUpdateUserSecurityProfilesFuture struct {
+type UpdateUserSecurityProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ConnectUpdateUserSecurityProfilesFuture) Get(ctx workflow.Context) (*connect.UpdateUserSecurityProfilesOutput, error) {
+func (r *UpdateUserSecurityProfilesFuture) Get(ctx workflow.Context) (*connect.UpdateUserSecurityProfilesOutput, error) {
 	var output connect.UpdateUserSecurityProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -539,9 +539,9 @@ func (a *stub) AssociateRoutingProfileQueues(ctx workflow.Context, input *connec
 	return &output, err
 }
 
-func (a *stub) AssociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) *ConnectAssociateRoutingProfileQueuesFuture {
+func (a *stub) AssociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) *AssociateRoutingProfileQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.AssociateRoutingProfileQueues", input)
-	return &ConnectAssociateRoutingProfileQueuesFuture{Future: future}
+	return &AssociateRoutingProfileQueuesFuture{Future: future}
 }
 
 func (a *stub) CreateContactFlow(ctx workflow.Context, input *connect.CreateContactFlowInput) (*connect.CreateContactFlowOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) CreateContactFlow(ctx workflow.Context, input *connect.CreateCont
 	return &output, err
 }
 
-func (a *stub) CreateContactFlowAsync(ctx workflow.Context, input *connect.CreateContactFlowInput) *ConnectCreateContactFlowFuture {
+func (a *stub) CreateContactFlowAsync(ctx workflow.Context, input *connect.CreateContactFlowInput) *CreateContactFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.CreateContactFlow", input)
-	return &ConnectCreateContactFlowFuture{Future: future}
+	return &CreateContactFlowFuture{Future: future}
 }
 
 func (a *stub) CreateRoutingProfile(ctx workflow.Context, input *connect.CreateRoutingProfileInput) (*connect.CreateRoutingProfileOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) CreateRoutingProfile(ctx workflow.Context, input *connect.CreateR
 	return &output, err
 }
 
-func (a *stub) CreateRoutingProfileAsync(ctx workflow.Context, input *connect.CreateRoutingProfileInput) *ConnectCreateRoutingProfileFuture {
+func (a *stub) CreateRoutingProfileAsync(ctx workflow.Context, input *connect.CreateRoutingProfileInput) *CreateRoutingProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.CreateRoutingProfile", input)
-	return &ConnectCreateRoutingProfileFuture{Future: future}
+	return &CreateRoutingProfileFuture{Future: future}
 }
 
 func (a *stub) CreateUser(ctx workflow.Context, input *connect.CreateUserInput) (*connect.CreateUserOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) CreateUser(ctx workflow.Context, input *connect.CreateUserInput) 
 	return &output, err
 }
 
-func (a *stub) CreateUserAsync(ctx workflow.Context, input *connect.CreateUserInput) *ConnectCreateUserFuture {
+func (a *stub) CreateUserAsync(ctx workflow.Context, input *connect.CreateUserInput) *CreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.CreateUser", input)
-	return &ConnectCreateUserFuture{Future: future}
+	return &CreateUserFuture{Future: future}
 }
 
 func (a *stub) DeleteUser(ctx workflow.Context, input *connect.DeleteUserInput) (*connect.DeleteUserOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) DeleteUser(ctx workflow.Context, input *connect.DeleteUserInput) 
 	return &output, err
 }
 
-func (a *stub) DeleteUserAsync(ctx workflow.Context, input *connect.DeleteUserInput) *ConnectDeleteUserFuture {
+func (a *stub) DeleteUserAsync(ctx workflow.Context, input *connect.DeleteUserInput) *DeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DeleteUser", input)
-	return &ConnectDeleteUserFuture{Future: future}
+	return &DeleteUserFuture{Future: future}
 }
 
 func (a *stub) DescribeContactFlow(ctx workflow.Context, input *connect.DescribeContactFlowInput) (*connect.DescribeContactFlowOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DescribeContactFlow(ctx workflow.Context, input *connect.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeContactFlowAsync(ctx workflow.Context, input *connect.DescribeContactFlowInput) *ConnectDescribeContactFlowFuture {
+func (a *stub) DescribeContactFlowAsync(ctx workflow.Context, input *connect.DescribeContactFlowInput) *DescribeContactFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DescribeContactFlow", input)
-	return &ConnectDescribeContactFlowFuture{Future: future}
+	return &DescribeContactFlowFuture{Future: future}
 }
 
 func (a *stub) DescribeRoutingProfile(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) (*connect.DescribeRoutingProfileOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) DescribeRoutingProfile(ctx workflow.Context, input *connect.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeRoutingProfileAsync(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) *ConnectDescribeRoutingProfileFuture {
+func (a *stub) DescribeRoutingProfileAsync(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) *DescribeRoutingProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DescribeRoutingProfile", input)
-	return &ConnectDescribeRoutingProfileFuture{Future: future}
+	return &DescribeRoutingProfileFuture{Future: future}
 }
 
 func (a *stub) DescribeUser(ctx workflow.Context, input *connect.DescribeUserInput) (*connect.DescribeUserOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) DescribeUser(ctx workflow.Context, input *connect.DescribeUserInp
 	return &output, err
 }
 
-func (a *stub) DescribeUserAsync(ctx workflow.Context, input *connect.DescribeUserInput) *ConnectDescribeUserFuture {
+func (a *stub) DescribeUserAsync(ctx workflow.Context, input *connect.DescribeUserInput) *DescribeUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DescribeUser", input)
-	return &ConnectDescribeUserFuture{Future: future}
+	return &DescribeUserFuture{Future: future}
 }
 
 func (a *stub) DescribeUserHierarchyGroup(ctx workflow.Context, input *connect.DescribeUserHierarchyGroupInput) (*connect.DescribeUserHierarchyGroupOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) DescribeUserHierarchyGroup(ctx workflow.Context, input *connect.D
 	return &output, err
 }
 
-func (a *stub) DescribeUserHierarchyGroupAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyGroupInput) *ConnectDescribeUserHierarchyGroupFuture {
+func (a *stub) DescribeUserHierarchyGroupAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyGroupInput) *DescribeUserHierarchyGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DescribeUserHierarchyGroup", input)
-	return &ConnectDescribeUserHierarchyGroupFuture{Future: future}
+	return &DescribeUserHierarchyGroupFuture{Future: future}
 }
 
 func (a *stub) DescribeUserHierarchyStructure(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) (*connect.DescribeUserHierarchyStructureOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) DescribeUserHierarchyStructure(ctx workflow.Context, input *conne
 	return &output, err
 }
 
-func (a *stub) DescribeUserHierarchyStructureAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) *ConnectDescribeUserHierarchyStructureFuture {
+func (a *stub) DescribeUserHierarchyStructureAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) *DescribeUserHierarchyStructureFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DescribeUserHierarchyStructure", input)
-	return &ConnectDescribeUserHierarchyStructureFuture{Future: future}
+	return &DescribeUserHierarchyStructureFuture{Future: future}
 }
 
 func (a *stub) DisassociateRoutingProfileQueues(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) (*connect.DisassociateRoutingProfileQueuesOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) DisassociateRoutingProfileQueues(ctx workflow.Context, input *con
 	return &output, err
 }
 
-func (a *stub) DisassociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) *ConnectDisassociateRoutingProfileQueuesFuture {
+func (a *stub) DisassociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) *DisassociateRoutingProfileQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.DisassociateRoutingProfileQueues", input)
-	return &ConnectDisassociateRoutingProfileQueuesFuture{Future: future}
+	return &DisassociateRoutingProfileQueuesFuture{Future: future}
 }
 
 func (a *stub) GetContactAttributes(ctx workflow.Context, input *connect.GetContactAttributesInput) (*connect.GetContactAttributesOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) GetContactAttributes(ctx workflow.Context, input *connect.GetCont
 	return &output, err
 }
 
-func (a *stub) GetContactAttributesAsync(ctx workflow.Context, input *connect.GetContactAttributesInput) *ConnectGetContactAttributesFuture {
+func (a *stub) GetContactAttributesAsync(ctx workflow.Context, input *connect.GetContactAttributesInput) *GetContactAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.GetContactAttributes", input)
-	return &ConnectGetContactAttributesFuture{Future: future}
+	return &GetContactAttributesFuture{Future: future}
 }
 
 func (a *stub) GetCurrentMetricData(ctx workflow.Context, input *connect.GetCurrentMetricDataInput) (*connect.GetCurrentMetricDataOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) GetCurrentMetricData(ctx workflow.Context, input *connect.GetCurr
 	return &output, err
 }
 
-func (a *stub) GetCurrentMetricDataAsync(ctx workflow.Context, input *connect.GetCurrentMetricDataInput) *ConnectGetCurrentMetricDataFuture {
+func (a *stub) GetCurrentMetricDataAsync(ctx workflow.Context, input *connect.GetCurrentMetricDataInput) *GetCurrentMetricDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.GetCurrentMetricData", input)
-	return &ConnectGetCurrentMetricDataFuture{Future: future}
+	return &GetCurrentMetricDataFuture{Future: future}
 }
 
 func (a *stub) GetFederationToken(ctx workflow.Context, input *connect.GetFederationTokenInput) (*connect.GetFederationTokenOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) GetFederationToken(ctx workflow.Context, input *connect.GetFedera
 	return &output, err
 }
 
-func (a *stub) GetFederationTokenAsync(ctx workflow.Context, input *connect.GetFederationTokenInput) *ConnectGetFederationTokenFuture {
+func (a *stub) GetFederationTokenAsync(ctx workflow.Context, input *connect.GetFederationTokenInput) *GetFederationTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.GetFederationToken", input)
-	return &ConnectGetFederationTokenFuture{Future: future}
+	return &GetFederationTokenFuture{Future: future}
 }
 
 func (a *stub) GetMetricData(ctx workflow.Context, input *connect.GetMetricDataInput) (*connect.GetMetricDataOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) GetMetricData(ctx workflow.Context, input *connect.GetMetricDataI
 	return &output, err
 }
 
-func (a *stub) GetMetricDataAsync(ctx workflow.Context, input *connect.GetMetricDataInput) *ConnectGetMetricDataFuture {
+func (a *stub) GetMetricDataAsync(ctx workflow.Context, input *connect.GetMetricDataInput) *GetMetricDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.GetMetricData", input)
-	return &ConnectGetMetricDataFuture{Future: future}
+	return &GetMetricDataFuture{Future: future}
 }
 
 func (a *stub) ListContactFlows(ctx workflow.Context, input *connect.ListContactFlowsInput) (*connect.ListContactFlowsOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) ListContactFlows(ctx workflow.Context, input *connect.ListContact
 	return &output, err
 }
 
-func (a *stub) ListContactFlowsAsync(ctx workflow.Context, input *connect.ListContactFlowsInput) *ConnectListContactFlowsFuture {
+func (a *stub) ListContactFlowsAsync(ctx workflow.Context, input *connect.ListContactFlowsInput) *ListContactFlowsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListContactFlows", input)
-	return &ConnectListContactFlowsFuture{Future: future}
+	return &ListContactFlowsFuture{Future: future}
 }
 
 func (a *stub) ListHoursOfOperations(ctx workflow.Context, input *connect.ListHoursOfOperationsInput) (*connect.ListHoursOfOperationsOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) ListHoursOfOperations(ctx workflow.Context, input *connect.ListHo
 	return &output, err
 }
 
-func (a *stub) ListHoursOfOperationsAsync(ctx workflow.Context, input *connect.ListHoursOfOperationsInput) *ConnectListHoursOfOperationsFuture {
+func (a *stub) ListHoursOfOperationsAsync(ctx workflow.Context, input *connect.ListHoursOfOperationsInput) *ListHoursOfOperationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListHoursOfOperations", input)
-	return &ConnectListHoursOfOperationsFuture{Future: future}
+	return &ListHoursOfOperationsFuture{Future: future}
 }
 
 func (a *stub) ListPhoneNumbers(ctx workflow.Context, input *connect.ListPhoneNumbersInput) (*connect.ListPhoneNumbersOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) ListPhoneNumbers(ctx workflow.Context, input *connect.ListPhoneNu
 	return &output, err
 }
 
-func (a *stub) ListPhoneNumbersAsync(ctx workflow.Context, input *connect.ListPhoneNumbersInput) *ConnectListPhoneNumbersFuture {
+func (a *stub) ListPhoneNumbersAsync(ctx workflow.Context, input *connect.ListPhoneNumbersInput) *ListPhoneNumbersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListPhoneNumbers", input)
-	return &ConnectListPhoneNumbersFuture{Future: future}
+	return &ListPhoneNumbersFuture{Future: future}
 }
 
 func (a *stub) ListPrompts(ctx workflow.Context, input *connect.ListPromptsInput) (*connect.ListPromptsOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) ListPrompts(ctx workflow.Context, input *connect.ListPromptsInput
 	return &output, err
 }
 
-func (a *stub) ListPromptsAsync(ctx workflow.Context, input *connect.ListPromptsInput) *ConnectListPromptsFuture {
+func (a *stub) ListPromptsAsync(ctx workflow.Context, input *connect.ListPromptsInput) *ListPromptsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListPrompts", input)
-	return &ConnectListPromptsFuture{Future: future}
+	return &ListPromptsFuture{Future: future}
 }
 
 func (a *stub) ListQueues(ctx workflow.Context, input *connect.ListQueuesInput) (*connect.ListQueuesOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) ListQueues(ctx workflow.Context, input *connect.ListQueuesInput) 
 	return &output, err
 }
 
-func (a *stub) ListQueuesAsync(ctx workflow.Context, input *connect.ListQueuesInput) *ConnectListQueuesFuture {
+func (a *stub) ListQueuesAsync(ctx workflow.Context, input *connect.ListQueuesInput) *ListQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListQueues", input)
-	return &ConnectListQueuesFuture{Future: future}
+	return &ListQueuesFuture{Future: future}
 }
 
 func (a *stub) ListRoutingProfileQueues(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) (*connect.ListRoutingProfileQueuesOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) ListRoutingProfileQueues(ctx workflow.Context, input *connect.Lis
 	return &output, err
 }
 
-func (a *stub) ListRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) *ConnectListRoutingProfileQueuesFuture {
+func (a *stub) ListRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) *ListRoutingProfileQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListRoutingProfileQueues", input)
-	return &ConnectListRoutingProfileQueuesFuture{Future: future}
+	return &ListRoutingProfileQueuesFuture{Future: future}
 }
 
 func (a *stub) ListRoutingProfiles(ctx workflow.Context, input *connect.ListRoutingProfilesInput) (*connect.ListRoutingProfilesOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) ListRoutingProfiles(ctx workflow.Context, input *connect.ListRout
 	return &output, err
 }
 
-func (a *stub) ListRoutingProfilesAsync(ctx workflow.Context, input *connect.ListRoutingProfilesInput) *ConnectListRoutingProfilesFuture {
+func (a *stub) ListRoutingProfilesAsync(ctx workflow.Context, input *connect.ListRoutingProfilesInput) *ListRoutingProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListRoutingProfiles", input)
-	return &ConnectListRoutingProfilesFuture{Future: future}
+	return &ListRoutingProfilesFuture{Future: future}
 }
 
 func (a *stub) ListSecurityProfiles(ctx workflow.Context, input *connect.ListSecurityProfilesInput) (*connect.ListSecurityProfilesOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) ListSecurityProfiles(ctx workflow.Context, input *connect.ListSec
 	return &output, err
 }
 
-func (a *stub) ListSecurityProfilesAsync(ctx workflow.Context, input *connect.ListSecurityProfilesInput) *ConnectListSecurityProfilesFuture {
+func (a *stub) ListSecurityProfilesAsync(ctx workflow.Context, input *connect.ListSecurityProfilesInput) *ListSecurityProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListSecurityProfiles", input)
-	return &ConnectListSecurityProfilesFuture{Future: future}
+	return &ListSecurityProfilesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *connect.ListTagsForResourceInput) (*connect.ListTagsForResourceOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *connect.ListTags
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *connect.ListTagsForResourceInput) *ConnectListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *connect.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListTagsForResource", input)
-	return &ConnectListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListUserHierarchyGroups(ctx workflow.Context, input *connect.ListUserHierarchyGroupsInput) (*connect.ListUserHierarchyGroupsOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) ListUserHierarchyGroups(ctx workflow.Context, input *connect.List
 	return &output, err
 }
 
-func (a *stub) ListUserHierarchyGroupsAsync(ctx workflow.Context, input *connect.ListUserHierarchyGroupsInput) *ConnectListUserHierarchyGroupsFuture {
+func (a *stub) ListUserHierarchyGroupsAsync(ctx workflow.Context, input *connect.ListUserHierarchyGroupsInput) *ListUserHierarchyGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListUserHierarchyGroups", input)
-	return &ConnectListUserHierarchyGroupsFuture{Future: future}
+	return &ListUserHierarchyGroupsFuture{Future: future}
 }
 
 func (a *stub) ListUsers(ctx workflow.Context, input *connect.ListUsersInput) (*connect.ListUsersOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) ListUsers(ctx workflow.Context, input *connect.ListUsersInput) (*
 	return &output, err
 }
 
-func (a *stub) ListUsersAsync(ctx workflow.Context, input *connect.ListUsersInput) *ConnectListUsersFuture {
+func (a *stub) ListUsersAsync(ctx workflow.Context, input *connect.ListUsersInput) *ListUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ListUsers", input)
-	return &ConnectListUsersFuture{Future: future}
+	return &ListUsersFuture{Future: future}
 }
 
 func (a *stub) ResumeContactRecording(ctx workflow.Context, input *connect.ResumeContactRecordingInput) (*connect.ResumeContactRecordingOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) ResumeContactRecording(ctx workflow.Context, input *connect.Resum
 	return &output, err
 }
 
-func (a *stub) ResumeContactRecordingAsync(ctx workflow.Context, input *connect.ResumeContactRecordingInput) *ConnectResumeContactRecordingFuture {
+func (a *stub) ResumeContactRecordingAsync(ctx workflow.Context, input *connect.ResumeContactRecordingInput) *ResumeContactRecordingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.ResumeContactRecording", input)
-	return &ConnectResumeContactRecordingFuture{Future: future}
+	return &ResumeContactRecordingFuture{Future: future}
 }
 
 func (a *stub) StartChatContact(ctx workflow.Context, input *connect.StartChatContactInput) (*connect.StartChatContactOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) StartChatContact(ctx workflow.Context, input *connect.StartChatCo
 	return &output, err
 }
 
-func (a *stub) StartChatContactAsync(ctx workflow.Context, input *connect.StartChatContactInput) *ConnectStartChatContactFuture {
+func (a *stub) StartChatContactAsync(ctx workflow.Context, input *connect.StartChatContactInput) *StartChatContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.StartChatContact", input)
-	return &ConnectStartChatContactFuture{Future: future}
+	return &StartChatContactFuture{Future: future}
 }
 
 func (a *stub) StartContactRecording(ctx workflow.Context, input *connect.StartContactRecordingInput) (*connect.StartContactRecordingOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) StartContactRecording(ctx workflow.Context, input *connect.StartC
 	return &output, err
 }
 
-func (a *stub) StartContactRecordingAsync(ctx workflow.Context, input *connect.StartContactRecordingInput) *ConnectStartContactRecordingFuture {
+func (a *stub) StartContactRecordingAsync(ctx workflow.Context, input *connect.StartContactRecordingInput) *StartContactRecordingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.StartContactRecording", input)
-	return &ConnectStartContactRecordingFuture{Future: future}
+	return &StartContactRecordingFuture{Future: future}
 }
 
 func (a *stub) StartOutboundVoiceContact(ctx workflow.Context, input *connect.StartOutboundVoiceContactInput) (*connect.StartOutboundVoiceContactOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) StartOutboundVoiceContact(ctx workflow.Context, input *connect.St
 	return &output, err
 }
 
-func (a *stub) StartOutboundVoiceContactAsync(ctx workflow.Context, input *connect.StartOutboundVoiceContactInput) *ConnectStartOutboundVoiceContactFuture {
+func (a *stub) StartOutboundVoiceContactAsync(ctx workflow.Context, input *connect.StartOutboundVoiceContactInput) *StartOutboundVoiceContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.StartOutboundVoiceContact", input)
-	return &ConnectStartOutboundVoiceContactFuture{Future: future}
+	return &StartOutboundVoiceContactFuture{Future: future}
 }
 
 func (a *stub) StopContact(ctx workflow.Context, input *connect.StopContactInput) (*connect.StopContactOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) StopContact(ctx workflow.Context, input *connect.StopContactInput
 	return &output, err
 }
 
-func (a *stub) StopContactAsync(ctx workflow.Context, input *connect.StopContactInput) *ConnectStopContactFuture {
+func (a *stub) StopContactAsync(ctx workflow.Context, input *connect.StopContactInput) *StopContactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.StopContact", input)
-	return &ConnectStopContactFuture{Future: future}
+	return &StopContactFuture{Future: future}
 }
 
 func (a *stub) StopContactRecording(ctx workflow.Context, input *connect.StopContactRecordingInput) (*connect.StopContactRecordingOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) StopContactRecording(ctx workflow.Context, input *connect.StopCon
 	return &output, err
 }
 
-func (a *stub) StopContactRecordingAsync(ctx workflow.Context, input *connect.StopContactRecordingInput) *ConnectStopContactRecordingFuture {
+func (a *stub) StopContactRecordingAsync(ctx workflow.Context, input *connect.StopContactRecordingInput) *StopContactRecordingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.StopContactRecording", input)
-	return &ConnectStopContactRecordingFuture{Future: future}
+	return &StopContactRecordingFuture{Future: future}
 }
 
 func (a *stub) SuspendContactRecording(ctx workflow.Context, input *connect.SuspendContactRecordingInput) (*connect.SuspendContactRecordingOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) SuspendContactRecording(ctx workflow.Context, input *connect.Susp
 	return &output, err
 }
 
-func (a *stub) SuspendContactRecordingAsync(ctx workflow.Context, input *connect.SuspendContactRecordingInput) *ConnectSuspendContactRecordingFuture {
+func (a *stub) SuspendContactRecordingAsync(ctx workflow.Context, input *connect.SuspendContactRecordingInput) *SuspendContactRecordingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.SuspendContactRecording", input)
-	return &ConnectSuspendContactRecordingFuture{Future: future}
+	return &SuspendContactRecordingFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *connect.TagResourceInput) (*connect.TagResourceOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *connect.TagResourceInput
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *connect.TagResourceInput) *ConnectTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *connect.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.TagResource", input)
-	return &ConnectTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *connect.UntagResourceInput) (*connect.UntagResourceOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *connect.UntagResourceI
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *connect.UntagResourceInput) *ConnectUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *connect.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UntagResource", input)
-	return &ConnectUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateContactAttributes(ctx workflow.Context, input *connect.UpdateContactAttributesInput) (*connect.UpdateContactAttributesOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) UpdateContactAttributes(ctx workflow.Context, input *connect.Upda
 	return &output, err
 }
 
-func (a *stub) UpdateContactAttributesAsync(ctx workflow.Context, input *connect.UpdateContactAttributesInput) *ConnectUpdateContactAttributesFuture {
+func (a *stub) UpdateContactAttributesAsync(ctx workflow.Context, input *connect.UpdateContactAttributesInput) *UpdateContactAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateContactAttributes", input)
-	return &ConnectUpdateContactAttributesFuture{Future: future}
+	return &UpdateContactAttributesFuture{Future: future}
 }
 
 func (a *stub) UpdateContactFlowContent(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) (*connect.UpdateContactFlowContentOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) UpdateContactFlowContent(ctx workflow.Context, input *connect.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateContactFlowContentAsync(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) *ConnectUpdateContactFlowContentFuture {
+func (a *stub) UpdateContactFlowContentAsync(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) *UpdateContactFlowContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateContactFlowContent", input)
-	return &ConnectUpdateContactFlowContentFuture{Future: future}
+	return &UpdateContactFlowContentFuture{Future: future}
 }
 
 func (a *stub) UpdateContactFlowName(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) (*connect.UpdateContactFlowNameOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) UpdateContactFlowName(ctx workflow.Context, input *connect.Update
 	return &output, err
 }
 
-func (a *stub) UpdateContactFlowNameAsync(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) *ConnectUpdateContactFlowNameFuture {
+func (a *stub) UpdateContactFlowNameAsync(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) *UpdateContactFlowNameFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateContactFlowName", input)
-	return &ConnectUpdateContactFlowNameFuture{Future: future}
+	return &UpdateContactFlowNameFuture{Future: future}
 }
 
 func (a *stub) UpdateRoutingProfileConcurrency(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) (*connect.UpdateRoutingProfileConcurrencyOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) UpdateRoutingProfileConcurrency(ctx workflow.Context, input *conn
 	return &output, err
 }
 
-func (a *stub) UpdateRoutingProfileConcurrencyAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) *ConnectUpdateRoutingProfileConcurrencyFuture {
+func (a *stub) UpdateRoutingProfileConcurrencyAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) *UpdateRoutingProfileConcurrencyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileConcurrency", input)
-	return &ConnectUpdateRoutingProfileConcurrencyFuture{Future: future}
+	return &UpdateRoutingProfileConcurrencyFuture{Future: future}
 }
 
 func (a *stub) UpdateRoutingProfileDefaultOutboundQueue(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) (*connect.UpdateRoutingProfileDefaultOutboundQueueOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) UpdateRoutingProfileDefaultOutboundQueue(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *stub) UpdateRoutingProfileDefaultOutboundQueueAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) *ConnectUpdateRoutingProfileDefaultOutboundQueueFuture {
+func (a *stub) UpdateRoutingProfileDefaultOutboundQueueAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) *UpdateRoutingProfileDefaultOutboundQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileDefaultOutboundQueue", input)
-	return &ConnectUpdateRoutingProfileDefaultOutboundQueueFuture{Future: future}
+	return &UpdateRoutingProfileDefaultOutboundQueueFuture{Future: future}
 }
 
 func (a *stub) UpdateRoutingProfileName(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) (*connect.UpdateRoutingProfileNameOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) UpdateRoutingProfileName(ctx workflow.Context, input *connect.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateRoutingProfileNameAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) *ConnectUpdateRoutingProfileNameFuture {
+func (a *stub) UpdateRoutingProfileNameAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) *UpdateRoutingProfileNameFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileName", input)
-	return &ConnectUpdateRoutingProfileNameFuture{Future: future}
+	return &UpdateRoutingProfileNameFuture{Future: future}
 }
 
 func (a *stub) UpdateRoutingProfileQueues(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) (*connect.UpdateRoutingProfileQueuesOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) UpdateRoutingProfileQueues(ctx workflow.Context, input *connect.U
 	return &output, err
 }
 
-func (a *stub) UpdateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) *ConnectUpdateRoutingProfileQueuesFuture {
+func (a *stub) UpdateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) *UpdateRoutingProfileQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateRoutingProfileQueues", input)
-	return &ConnectUpdateRoutingProfileQueuesFuture{Future: future}
+	return &UpdateRoutingProfileQueuesFuture{Future: future}
 }
 
 func (a *stub) UpdateUserHierarchy(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) (*connect.UpdateUserHierarchyOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) UpdateUserHierarchy(ctx workflow.Context, input *connect.UpdateUs
 	return &output, err
 }
 
-func (a *stub) UpdateUserHierarchyAsync(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) *ConnectUpdateUserHierarchyFuture {
+func (a *stub) UpdateUserHierarchyAsync(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) *UpdateUserHierarchyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateUserHierarchy", input)
-	return &ConnectUpdateUserHierarchyFuture{Future: future}
+	return &UpdateUserHierarchyFuture{Future: future}
 }
 
 func (a *stub) UpdateUserIdentityInfo(ctx workflow.Context, input *connect.UpdateUserIdentityInfoInput) (*connect.UpdateUserIdentityInfoOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) UpdateUserIdentityInfo(ctx workflow.Context, input *connect.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateUserIdentityInfoAsync(ctx workflow.Context, input *connect.UpdateUserIdentityInfoInput) *ConnectUpdateUserIdentityInfoFuture {
+func (a *stub) UpdateUserIdentityInfoAsync(ctx workflow.Context, input *connect.UpdateUserIdentityInfoInput) *UpdateUserIdentityInfoFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateUserIdentityInfo", input)
-	return &ConnectUpdateUserIdentityInfoFuture{Future: future}
+	return &UpdateUserIdentityInfoFuture{Future: future}
 }
 
 func (a *stub) UpdateUserPhoneConfig(ctx workflow.Context, input *connect.UpdateUserPhoneConfigInput) (*connect.UpdateUserPhoneConfigOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) UpdateUserPhoneConfig(ctx workflow.Context, input *connect.Update
 	return &output, err
 }
 
-func (a *stub) UpdateUserPhoneConfigAsync(ctx workflow.Context, input *connect.UpdateUserPhoneConfigInput) *ConnectUpdateUserPhoneConfigFuture {
+func (a *stub) UpdateUserPhoneConfigAsync(ctx workflow.Context, input *connect.UpdateUserPhoneConfigInput) *UpdateUserPhoneConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateUserPhoneConfig", input)
-	return &ConnectUpdateUserPhoneConfigFuture{Future: future}
+	return &UpdateUserPhoneConfigFuture{Future: future}
 }
 
 func (a *stub) UpdateUserRoutingProfile(ctx workflow.Context, input *connect.UpdateUserRoutingProfileInput) (*connect.UpdateUserRoutingProfileOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) UpdateUserRoutingProfile(ctx workflow.Context, input *connect.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateUserRoutingProfileAsync(ctx workflow.Context, input *connect.UpdateUserRoutingProfileInput) *ConnectUpdateUserRoutingProfileFuture {
+func (a *stub) UpdateUserRoutingProfileAsync(ctx workflow.Context, input *connect.UpdateUserRoutingProfileInput) *UpdateUserRoutingProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateUserRoutingProfile", input)
-	return &ConnectUpdateUserRoutingProfileFuture{Future: future}
+	return &UpdateUserRoutingProfileFuture{Future: future}
 }
 
 func (a *stub) UpdateUserSecurityProfiles(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) (*connect.UpdateUserSecurityProfilesOutput, error) {
@@ -1045,7 +1045,7 @@ func (a *stub) UpdateUserSecurityProfiles(ctx workflow.Context, input *connect.U
 	return &output, err
 }
 
-func (a *stub) UpdateUserSecurityProfilesAsync(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) *ConnectUpdateUserSecurityProfilesFuture {
+func (a *stub) UpdateUserSecurityProfilesAsync(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) *UpdateUserSecurityProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.connect.UpdateUserSecurityProfiles", input)
-	return &ConnectUpdateUserSecurityProfilesFuture{Future: future}
+	return &UpdateUserSecurityProfilesFuture{Future: future}
 }

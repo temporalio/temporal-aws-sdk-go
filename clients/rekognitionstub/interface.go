@@ -16,145 +16,145 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CompareFaces(ctx workflow.Context, input *rekognition.CompareFacesInput) (*rekognition.CompareFacesOutput, error)
-	CompareFacesAsync(ctx workflow.Context, input *rekognition.CompareFacesInput) *RekognitionCompareFacesFuture
+	CompareFacesAsync(ctx workflow.Context, input *rekognition.CompareFacesInput) *CompareFacesFuture
 
 	CreateCollection(ctx workflow.Context, input *rekognition.CreateCollectionInput) (*rekognition.CreateCollectionOutput, error)
-	CreateCollectionAsync(ctx workflow.Context, input *rekognition.CreateCollectionInput) *RekognitionCreateCollectionFuture
+	CreateCollectionAsync(ctx workflow.Context, input *rekognition.CreateCollectionInput) *CreateCollectionFuture
 
 	CreateProject(ctx workflow.Context, input *rekognition.CreateProjectInput) (*rekognition.CreateProjectOutput, error)
-	CreateProjectAsync(ctx workflow.Context, input *rekognition.CreateProjectInput) *RekognitionCreateProjectFuture
+	CreateProjectAsync(ctx workflow.Context, input *rekognition.CreateProjectInput) *CreateProjectFuture
 
 	CreateProjectVersion(ctx workflow.Context, input *rekognition.CreateProjectVersionInput) (*rekognition.CreateProjectVersionOutput, error)
-	CreateProjectVersionAsync(ctx workflow.Context, input *rekognition.CreateProjectVersionInput) *RekognitionCreateProjectVersionFuture
+	CreateProjectVersionAsync(ctx workflow.Context, input *rekognition.CreateProjectVersionInput) *CreateProjectVersionFuture
 
 	CreateStreamProcessor(ctx workflow.Context, input *rekognition.CreateStreamProcessorInput) (*rekognition.CreateStreamProcessorOutput, error)
-	CreateStreamProcessorAsync(ctx workflow.Context, input *rekognition.CreateStreamProcessorInput) *RekognitionCreateStreamProcessorFuture
+	CreateStreamProcessorAsync(ctx workflow.Context, input *rekognition.CreateStreamProcessorInput) *CreateStreamProcessorFuture
 
 	DeleteCollection(ctx workflow.Context, input *rekognition.DeleteCollectionInput) (*rekognition.DeleteCollectionOutput, error)
-	DeleteCollectionAsync(ctx workflow.Context, input *rekognition.DeleteCollectionInput) *RekognitionDeleteCollectionFuture
+	DeleteCollectionAsync(ctx workflow.Context, input *rekognition.DeleteCollectionInput) *DeleteCollectionFuture
 
 	DeleteFaces(ctx workflow.Context, input *rekognition.DeleteFacesInput) (*rekognition.DeleteFacesOutput, error)
-	DeleteFacesAsync(ctx workflow.Context, input *rekognition.DeleteFacesInput) *RekognitionDeleteFacesFuture
+	DeleteFacesAsync(ctx workflow.Context, input *rekognition.DeleteFacesInput) *DeleteFacesFuture
 
 	DeleteProject(ctx workflow.Context, input *rekognition.DeleteProjectInput) (*rekognition.DeleteProjectOutput, error)
-	DeleteProjectAsync(ctx workflow.Context, input *rekognition.DeleteProjectInput) *RekognitionDeleteProjectFuture
+	DeleteProjectAsync(ctx workflow.Context, input *rekognition.DeleteProjectInput) *DeleteProjectFuture
 
 	DeleteProjectVersion(ctx workflow.Context, input *rekognition.DeleteProjectVersionInput) (*rekognition.DeleteProjectVersionOutput, error)
-	DeleteProjectVersionAsync(ctx workflow.Context, input *rekognition.DeleteProjectVersionInput) *RekognitionDeleteProjectVersionFuture
+	DeleteProjectVersionAsync(ctx workflow.Context, input *rekognition.DeleteProjectVersionInput) *DeleteProjectVersionFuture
 
 	DeleteStreamProcessor(ctx workflow.Context, input *rekognition.DeleteStreamProcessorInput) (*rekognition.DeleteStreamProcessorOutput, error)
-	DeleteStreamProcessorAsync(ctx workflow.Context, input *rekognition.DeleteStreamProcessorInput) *RekognitionDeleteStreamProcessorFuture
+	DeleteStreamProcessorAsync(ctx workflow.Context, input *rekognition.DeleteStreamProcessorInput) *DeleteStreamProcessorFuture
 
 	DescribeCollection(ctx workflow.Context, input *rekognition.DescribeCollectionInput) (*rekognition.DescribeCollectionOutput, error)
-	DescribeCollectionAsync(ctx workflow.Context, input *rekognition.DescribeCollectionInput) *RekognitionDescribeCollectionFuture
+	DescribeCollectionAsync(ctx workflow.Context, input *rekognition.DescribeCollectionInput) *DescribeCollectionFuture
 
 	DescribeProjectVersions(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) (*rekognition.DescribeProjectVersionsOutput, error)
-	DescribeProjectVersionsAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *RekognitionDescribeProjectVersionsFuture
+	DescribeProjectVersionsAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *DescribeProjectVersionsFuture
 
 	DescribeProjects(ctx workflow.Context, input *rekognition.DescribeProjectsInput) (*rekognition.DescribeProjectsOutput, error)
-	DescribeProjectsAsync(ctx workflow.Context, input *rekognition.DescribeProjectsInput) *RekognitionDescribeProjectsFuture
+	DescribeProjectsAsync(ctx workflow.Context, input *rekognition.DescribeProjectsInput) *DescribeProjectsFuture
 
 	DescribeStreamProcessor(ctx workflow.Context, input *rekognition.DescribeStreamProcessorInput) (*rekognition.DescribeStreamProcessorOutput, error)
-	DescribeStreamProcessorAsync(ctx workflow.Context, input *rekognition.DescribeStreamProcessorInput) *RekognitionDescribeStreamProcessorFuture
+	DescribeStreamProcessorAsync(ctx workflow.Context, input *rekognition.DescribeStreamProcessorInput) *DescribeStreamProcessorFuture
 
 	DetectCustomLabels(ctx workflow.Context, input *rekognition.DetectCustomLabelsInput) (*rekognition.DetectCustomLabelsOutput, error)
-	DetectCustomLabelsAsync(ctx workflow.Context, input *rekognition.DetectCustomLabelsInput) *RekognitionDetectCustomLabelsFuture
+	DetectCustomLabelsAsync(ctx workflow.Context, input *rekognition.DetectCustomLabelsInput) *DetectCustomLabelsFuture
 
 	DetectFaces(ctx workflow.Context, input *rekognition.DetectFacesInput) (*rekognition.DetectFacesOutput, error)
-	DetectFacesAsync(ctx workflow.Context, input *rekognition.DetectFacesInput) *RekognitionDetectFacesFuture
+	DetectFacesAsync(ctx workflow.Context, input *rekognition.DetectFacesInput) *DetectFacesFuture
 
 	DetectLabels(ctx workflow.Context, input *rekognition.DetectLabelsInput) (*rekognition.DetectLabelsOutput, error)
-	DetectLabelsAsync(ctx workflow.Context, input *rekognition.DetectLabelsInput) *RekognitionDetectLabelsFuture
+	DetectLabelsAsync(ctx workflow.Context, input *rekognition.DetectLabelsInput) *DetectLabelsFuture
 
 	DetectModerationLabels(ctx workflow.Context, input *rekognition.DetectModerationLabelsInput) (*rekognition.DetectModerationLabelsOutput, error)
-	DetectModerationLabelsAsync(ctx workflow.Context, input *rekognition.DetectModerationLabelsInput) *RekognitionDetectModerationLabelsFuture
+	DetectModerationLabelsAsync(ctx workflow.Context, input *rekognition.DetectModerationLabelsInput) *DetectModerationLabelsFuture
 
 	DetectText(ctx workflow.Context, input *rekognition.DetectTextInput) (*rekognition.DetectTextOutput, error)
-	DetectTextAsync(ctx workflow.Context, input *rekognition.DetectTextInput) *RekognitionDetectTextFuture
+	DetectTextAsync(ctx workflow.Context, input *rekognition.DetectTextInput) *DetectTextFuture
 
 	GetCelebrityInfo(ctx workflow.Context, input *rekognition.GetCelebrityInfoInput) (*rekognition.GetCelebrityInfoOutput, error)
-	GetCelebrityInfoAsync(ctx workflow.Context, input *rekognition.GetCelebrityInfoInput) *RekognitionGetCelebrityInfoFuture
+	GetCelebrityInfoAsync(ctx workflow.Context, input *rekognition.GetCelebrityInfoInput) *GetCelebrityInfoFuture
 
 	GetCelebrityRecognition(ctx workflow.Context, input *rekognition.GetCelebrityRecognitionInput) (*rekognition.GetCelebrityRecognitionOutput, error)
-	GetCelebrityRecognitionAsync(ctx workflow.Context, input *rekognition.GetCelebrityRecognitionInput) *RekognitionGetCelebrityRecognitionFuture
+	GetCelebrityRecognitionAsync(ctx workflow.Context, input *rekognition.GetCelebrityRecognitionInput) *GetCelebrityRecognitionFuture
 
 	GetContentModeration(ctx workflow.Context, input *rekognition.GetContentModerationInput) (*rekognition.GetContentModerationOutput, error)
-	GetContentModerationAsync(ctx workflow.Context, input *rekognition.GetContentModerationInput) *RekognitionGetContentModerationFuture
+	GetContentModerationAsync(ctx workflow.Context, input *rekognition.GetContentModerationInput) *GetContentModerationFuture
 
 	GetFaceDetection(ctx workflow.Context, input *rekognition.GetFaceDetectionInput) (*rekognition.GetFaceDetectionOutput, error)
-	GetFaceDetectionAsync(ctx workflow.Context, input *rekognition.GetFaceDetectionInput) *RekognitionGetFaceDetectionFuture
+	GetFaceDetectionAsync(ctx workflow.Context, input *rekognition.GetFaceDetectionInput) *GetFaceDetectionFuture
 
 	GetFaceSearch(ctx workflow.Context, input *rekognition.GetFaceSearchInput) (*rekognition.GetFaceSearchOutput, error)
-	GetFaceSearchAsync(ctx workflow.Context, input *rekognition.GetFaceSearchInput) *RekognitionGetFaceSearchFuture
+	GetFaceSearchAsync(ctx workflow.Context, input *rekognition.GetFaceSearchInput) *GetFaceSearchFuture
 
 	GetLabelDetection(ctx workflow.Context, input *rekognition.GetLabelDetectionInput) (*rekognition.GetLabelDetectionOutput, error)
-	GetLabelDetectionAsync(ctx workflow.Context, input *rekognition.GetLabelDetectionInput) *RekognitionGetLabelDetectionFuture
+	GetLabelDetectionAsync(ctx workflow.Context, input *rekognition.GetLabelDetectionInput) *GetLabelDetectionFuture
 
 	GetPersonTracking(ctx workflow.Context, input *rekognition.GetPersonTrackingInput) (*rekognition.GetPersonTrackingOutput, error)
-	GetPersonTrackingAsync(ctx workflow.Context, input *rekognition.GetPersonTrackingInput) *RekognitionGetPersonTrackingFuture
+	GetPersonTrackingAsync(ctx workflow.Context, input *rekognition.GetPersonTrackingInput) *GetPersonTrackingFuture
 
 	GetSegmentDetection(ctx workflow.Context, input *rekognition.GetSegmentDetectionInput) (*rekognition.GetSegmentDetectionOutput, error)
-	GetSegmentDetectionAsync(ctx workflow.Context, input *rekognition.GetSegmentDetectionInput) *RekognitionGetSegmentDetectionFuture
+	GetSegmentDetectionAsync(ctx workflow.Context, input *rekognition.GetSegmentDetectionInput) *GetSegmentDetectionFuture
 
 	GetTextDetection(ctx workflow.Context, input *rekognition.GetTextDetectionInput) (*rekognition.GetTextDetectionOutput, error)
-	GetTextDetectionAsync(ctx workflow.Context, input *rekognition.GetTextDetectionInput) *RekognitionGetTextDetectionFuture
+	GetTextDetectionAsync(ctx workflow.Context, input *rekognition.GetTextDetectionInput) *GetTextDetectionFuture
 
 	IndexFaces(ctx workflow.Context, input *rekognition.IndexFacesInput) (*rekognition.IndexFacesOutput, error)
-	IndexFacesAsync(ctx workflow.Context, input *rekognition.IndexFacesInput) *RekognitionIndexFacesFuture
+	IndexFacesAsync(ctx workflow.Context, input *rekognition.IndexFacesInput) *IndexFacesFuture
 
 	ListCollections(ctx workflow.Context, input *rekognition.ListCollectionsInput) (*rekognition.ListCollectionsOutput, error)
-	ListCollectionsAsync(ctx workflow.Context, input *rekognition.ListCollectionsInput) *RekognitionListCollectionsFuture
+	ListCollectionsAsync(ctx workflow.Context, input *rekognition.ListCollectionsInput) *ListCollectionsFuture
 
 	ListFaces(ctx workflow.Context, input *rekognition.ListFacesInput) (*rekognition.ListFacesOutput, error)
-	ListFacesAsync(ctx workflow.Context, input *rekognition.ListFacesInput) *RekognitionListFacesFuture
+	ListFacesAsync(ctx workflow.Context, input *rekognition.ListFacesInput) *ListFacesFuture
 
 	ListStreamProcessors(ctx workflow.Context, input *rekognition.ListStreamProcessorsInput) (*rekognition.ListStreamProcessorsOutput, error)
-	ListStreamProcessorsAsync(ctx workflow.Context, input *rekognition.ListStreamProcessorsInput) *RekognitionListStreamProcessorsFuture
+	ListStreamProcessorsAsync(ctx workflow.Context, input *rekognition.ListStreamProcessorsInput) *ListStreamProcessorsFuture
 
 	RecognizeCelebrities(ctx workflow.Context, input *rekognition.RecognizeCelebritiesInput) (*rekognition.RecognizeCelebritiesOutput, error)
-	RecognizeCelebritiesAsync(ctx workflow.Context, input *rekognition.RecognizeCelebritiesInput) *RekognitionRecognizeCelebritiesFuture
+	RecognizeCelebritiesAsync(ctx workflow.Context, input *rekognition.RecognizeCelebritiesInput) *RecognizeCelebritiesFuture
 
 	SearchFaces(ctx workflow.Context, input *rekognition.SearchFacesInput) (*rekognition.SearchFacesOutput, error)
-	SearchFacesAsync(ctx workflow.Context, input *rekognition.SearchFacesInput) *RekognitionSearchFacesFuture
+	SearchFacesAsync(ctx workflow.Context, input *rekognition.SearchFacesInput) *SearchFacesFuture
 
 	SearchFacesByImage(ctx workflow.Context, input *rekognition.SearchFacesByImageInput) (*rekognition.SearchFacesByImageOutput, error)
-	SearchFacesByImageAsync(ctx workflow.Context, input *rekognition.SearchFacesByImageInput) *RekognitionSearchFacesByImageFuture
+	SearchFacesByImageAsync(ctx workflow.Context, input *rekognition.SearchFacesByImageInput) *SearchFacesByImageFuture
 
 	StartCelebrityRecognition(ctx workflow.Context, input *rekognition.StartCelebrityRecognitionInput) (*rekognition.StartCelebrityRecognitionOutput, error)
-	StartCelebrityRecognitionAsync(ctx workflow.Context, input *rekognition.StartCelebrityRecognitionInput) *RekognitionStartCelebrityRecognitionFuture
+	StartCelebrityRecognitionAsync(ctx workflow.Context, input *rekognition.StartCelebrityRecognitionInput) *StartCelebrityRecognitionFuture
 
 	StartContentModeration(ctx workflow.Context, input *rekognition.StartContentModerationInput) (*rekognition.StartContentModerationOutput, error)
-	StartContentModerationAsync(ctx workflow.Context, input *rekognition.StartContentModerationInput) *RekognitionStartContentModerationFuture
+	StartContentModerationAsync(ctx workflow.Context, input *rekognition.StartContentModerationInput) *StartContentModerationFuture
 
 	StartFaceDetection(ctx workflow.Context, input *rekognition.StartFaceDetectionInput) (*rekognition.StartFaceDetectionOutput, error)
-	StartFaceDetectionAsync(ctx workflow.Context, input *rekognition.StartFaceDetectionInput) *RekognitionStartFaceDetectionFuture
+	StartFaceDetectionAsync(ctx workflow.Context, input *rekognition.StartFaceDetectionInput) *StartFaceDetectionFuture
 
 	StartFaceSearch(ctx workflow.Context, input *rekognition.StartFaceSearchInput) (*rekognition.StartFaceSearchOutput, error)
-	StartFaceSearchAsync(ctx workflow.Context, input *rekognition.StartFaceSearchInput) *RekognitionStartFaceSearchFuture
+	StartFaceSearchAsync(ctx workflow.Context, input *rekognition.StartFaceSearchInput) *StartFaceSearchFuture
 
 	StartLabelDetection(ctx workflow.Context, input *rekognition.StartLabelDetectionInput) (*rekognition.StartLabelDetectionOutput, error)
-	StartLabelDetectionAsync(ctx workflow.Context, input *rekognition.StartLabelDetectionInput) *RekognitionStartLabelDetectionFuture
+	StartLabelDetectionAsync(ctx workflow.Context, input *rekognition.StartLabelDetectionInput) *StartLabelDetectionFuture
 
 	StartPersonTracking(ctx workflow.Context, input *rekognition.StartPersonTrackingInput) (*rekognition.StartPersonTrackingOutput, error)
-	StartPersonTrackingAsync(ctx workflow.Context, input *rekognition.StartPersonTrackingInput) *RekognitionStartPersonTrackingFuture
+	StartPersonTrackingAsync(ctx workflow.Context, input *rekognition.StartPersonTrackingInput) *StartPersonTrackingFuture
 
 	StartProjectVersion(ctx workflow.Context, input *rekognition.StartProjectVersionInput) (*rekognition.StartProjectVersionOutput, error)
-	StartProjectVersionAsync(ctx workflow.Context, input *rekognition.StartProjectVersionInput) *RekognitionStartProjectVersionFuture
+	StartProjectVersionAsync(ctx workflow.Context, input *rekognition.StartProjectVersionInput) *StartProjectVersionFuture
 
 	StartSegmentDetection(ctx workflow.Context, input *rekognition.StartSegmentDetectionInput) (*rekognition.StartSegmentDetectionOutput, error)
-	StartSegmentDetectionAsync(ctx workflow.Context, input *rekognition.StartSegmentDetectionInput) *RekognitionStartSegmentDetectionFuture
+	StartSegmentDetectionAsync(ctx workflow.Context, input *rekognition.StartSegmentDetectionInput) *StartSegmentDetectionFuture
 
 	StartStreamProcessor(ctx workflow.Context, input *rekognition.StartStreamProcessorInput) (*rekognition.StartStreamProcessorOutput, error)
-	StartStreamProcessorAsync(ctx workflow.Context, input *rekognition.StartStreamProcessorInput) *RekognitionStartStreamProcessorFuture
+	StartStreamProcessorAsync(ctx workflow.Context, input *rekognition.StartStreamProcessorInput) *StartStreamProcessorFuture
 
 	StartTextDetection(ctx workflow.Context, input *rekognition.StartTextDetectionInput) (*rekognition.StartTextDetectionOutput, error)
-	StartTextDetectionAsync(ctx workflow.Context, input *rekognition.StartTextDetectionInput) *RekognitionStartTextDetectionFuture
+	StartTextDetectionAsync(ctx workflow.Context, input *rekognition.StartTextDetectionInput) *StartTextDetectionFuture
 
 	StopProjectVersion(ctx workflow.Context, input *rekognition.StopProjectVersionInput) (*rekognition.StopProjectVersionOutput, error)
-	StopProjectVersionAsync(ctx workflow.Context, input *rekognition.StopProjectVersionInput) *RekognitionStopProjectVersionFuture
+	StopProjectVersionAsync(ctx workflow.Context, input *rekognition.StopProjectVersionInput) *StopProjectVersionFuture
 
 	StopStreamProcessor(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) (*rekognition.StopStreamProcessorOutput, error)
-	StopStreamProcessorAsync(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) *RekognitionStopStreamProcessorFuture
+	StopStreamProcessorAsync(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) *StopStreamProcessorFuture
 
 	WaitUntilProjectVersionRunning(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error
 	WaitUntilProjectVersionRunningAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *clients.VoidFuture

@@ -16,628 +16,628 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type DirectoryServiceAcceptSharedDirectoryFuture struct {
+type AcceptSharedDirectoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceAcceptSharedDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.AcceptSharedDirectoryOutput, error) {
+func (r *AcceptSharedDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.AcceptSharedDirectoryOutput, error) {
 	var output directoryservice.AcceptSharedDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceAddIpRoutesFuture struct {
+type AddIpRoutesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceAddIpRoutesFuture) Get(ctx workflow.Context) (*directoryservice.AddIpRoutesOutput, error) {
+func (r *AddIpRoutesFuture) Get(ctx workflow.Context) (*directoryservice.AddIpRoutesOutput, error) {
 	var output directoryservice.AddIpRoutesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceAddTagsToResourceFuture struct {
+type AddTagsToResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceAddTagsToResourceFuture) Get(ctx workflow.Context) (*directoryservice.AddTagsToResourceOutput, error) {
+func (r *AddTagsToResourceFuture) Get(ctx workflow.Context) (*directoryservice.AddTagsToResourceOutput, error) {
 	var output directoryservice.AddTagsToResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCancelSchemaExtensionFuture struct {
+type CancelSchemaExtensionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCancelSchemaExtensionFuture) Get(ctx workflow.Context) (*directoryservice.CancelSchemaExtensionOutput, error) {
+func (r *CancelSchemaExtensionFuture) Get(ctx workflow.Context) (*directoryservice.CancelSchemaExtensionOutput, error) {
 	var output directoryservice.CancelSchemaExtensionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceConnectDirectoryFuture struct {
+type ConnectDirectoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceConnectDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.ConnectDirectoryOutput, error) {
+func (r *ConnectDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.ConnectDirectoryOutput, error) {
 	var output directoryservice.ConnectDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCreateAliasFuture struct {
+type CreateAliasFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCreateAliasFuture) Get(ctx workflow.Context) (*directoryservice.CreateAliasOutput, error) {
+func (r *CreateAliasFuture) Get(ctx workflow.Context) (*directoryservice.CreateAliasOutput, error) {
 	var output directoryservice.CreateAliasOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCreateComputerFuture struct {
+type CreateComputerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCreateComputerFuture) Get(ctx workflow.Context) (*directoryservice.CreateComputerOutput, error) {
+func (r *CreateComputerFuture) Get(ctx workflow.Context) (*directoryservice.CreateComputerOutput, error) {
 	var output directoryservice.CreateComputerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCreateConditionalForwarderFuture struct {
+type CreateConditionalForwarderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCreateConditionalForwarderFuture) Get(ctx workflow.Context) (*directoryservice.CreateConditionalForwarderOutput, error) {
+func (r *CreateConditionalForwarderFuture) Get(ctx workflow.Context) (*directoryservice.CreateConditionalForwarderOutput, error) {
 	var output directoryservice.CreateConditionalForwarderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCreateDirectoryFuture struct {
+type CreateDirectoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCreateDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.CreateDirectoryOutput, error) {
+func (r *CreateDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.CreateDirectoryOutput, error) {
 	var output directoryservice.CreateDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCreateLogSubscriptionFuture struct {
+type CreateLogSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCreateLogSubscriptionFuture) Get(ctx workflow.Context) (*directoryservice.CreateLogSubscriptionOutput, error) {
+func (r *CreateLogSubscriptionFuture) Get(ctx workflow.Context) (*directoryservice.CreateLogSubscriptionOutput, error) {
 	var output directoryservice.CreateLogSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCreateMicrosoftADFuture struct {
+type CreateMicrosoftADFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCreateMicrosoftADFuture) Get(ctx workflow.Context) (*directoryservice.CreateMicrosoftADOutput, error) {
+func (r *CreateMicrosoftADFuture) Get(ctx workflow.Context) (*directoryservice.CreateMicrosoftADOutput, error) {
 	var output directoryservice.CreateMicrosoftADOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCreateSnapshotFuture struct {
+type CreateSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCreateSnapshotFuture) Get(ctx workflow.Context) (*directoryservice.CreateSnapshotOutput, error) {
+func (r *CreateSnapshotFuture) Get(ctx workflow.Context) (*directoryservice.CreateSnapshotOutput, error) {
 	var output directoryservice.CreateSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceCreateTrustFuture struct {
+type CreateTrustFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceCreateTrustFuture) Get(ctx workflow.Context) (*directoryservice.CreateTrustOutput, error) {
+func (r *CreateTrustFuture) Get(ctx workflow.Context) (*directoryservice.CreateTrustOutput, error) {
 	var output directoryservice.CreateTrustOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDeleteConditionalForwarderFuture struct {
+type DeleteConditionalForwarderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDeleteConditionalForwarderFuture) Get(ctx workflow.Context) (*directoryservice.DeleteConditionalForwarderOutput, error) {
+func (r *DeleteConditionalForwarderFuture) Get(ctx workflow.Context) (*directoryservice.DeleteConditionalForwarderOutput, error) {
 	var output directoryservice.DeleteConditionalForwarderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDeleteDirectoryFuture struct {
+type DeleteDirectoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDeleteDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.DeleteDirectoryOutput, error) {
+func (r *DeleteDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.DeleteDirectoryOutput, error) {
 	var output directoryservice.DeleteDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDeleteLogSubscriptionFuture struct {
+type DeleteLogSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDeleteLogSubscriptionFuture) Get(ctx workflow.Context) (*directoryservice.DeleteLogSubscriptionOutput, error) {
+func (r *DeleteLogSubscriptionFuture) Get(ctx workflow.Context) (*directoryservice.DeleteLogSubscriptionOutput, error) {
 	var output directoryservice.DeleteLogSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDeleteSnapshotFuture struct {
+type DeleteSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDeleteSnapshotFuture) Get(ctx workflow.Context) (*directoryservice.DeleteSnapshotOutput, error) {
+func (r *DeleteSnapshotFuture) Get(ctx workflow.Context) (*directoryservice.DeleteSnapshotOutput, error) {
 	var output directoryservice.DeleteSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDeleteTrustFuture struct {
+type DeleteTrustFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDeleteTrustFuture) Get(ctx workflow.Context) (*directoryservice.DeleteTrustOutput, error) {
+func (r *DeleteTrustFuture) Get(ctx workflow.Context) (*directoryservice.DeleteTrustOutput, error) {
 	var output directoryservice.DeleteTrustOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDeregisterCertificateFuture struct {
+type DeregisterCertificateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDeregisterCertificateFuture) Get(ctx workflow.Context) (*directoryservice.DeregisterCertificateOutput, error) {
+func (r *DeregisterCertificateFuture) Get(ctx workflow.Context) (*directoryservice.DeregisterCertificateOutput, error) {
 	var output directoryservice.DeregisterCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDeregisterEventTopicFuture struct {
+type DeregisterEventTopicFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDeregisterEventTopicFuture) Get(ctx workflow.Context) (*directoryservice.DeregisterEventTopicOutput, error) {
+func (r *DeregisterEventTopicFuture) Get(ctx workflow.Context) (*directoryservice.DeregisterEventTopicOutput, error) {
 	var output directoryservice.DeregisterEventTopicOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeCertificateFuture struct {
+type DescribeCertificateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeCertificateFuture) Get(ctx workflow.Context) (*directoryservice.DescribeCertificateOutput, error) {
+func (r *DescribeCertificateFuture) Get(ctx workflow.Context) (*directoryservice.DescribeCertificateOutput, error) {
 	var output directoryservice.DescribeCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeConditionalForwardersFuture struct {
+type DescribeConditionalForwardersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeConditionalForwardersFuture) Get(ctx workflow.Context) (*directoryservice.DescribeConditionalForwardersOutput, error) {
+func (r *DescribeConditionalForwardersFuture) Get(ctx workflow.Context) (*directoryservice.DescribeConditionalForwardersOutput, error) {
 	var output directoryservice.DescribeConditionalForwardersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeDirectoriesFuture struct {
+type DescribeDirectoriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeDirectoriesFuture) Get(ctx workflow.Context) (*directoryservice.DescribeDirectoriesOutput, error) {
+func (r *DescribeDirectoriesFuture) Get(ctx workflow.Context) (*directoryservice.DescribeDirectoriesOutput, error) {
 	var output directoryservice.DescribeDirectoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeDomainControllersFuture struct {
+type DescribeDomainControllersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeDomainControllersFuture) Get(ctx workflow.Context) (*directoryservice.DescribeDomainControllersOutput, error) {
+func (r *DescribeDomainControllersFuture) Get(ctx workflow.Context) (*directoryservice.DescribeDomainControllersOutput, error) {
 	var output directoryservice.DescribeDomainControllersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeEventTopicsFuture struct {
+type DescribeEventTopicsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeEventTopicsFuture) Get(ctx workflow.Context) (*directoryservice.DescribeEventTopicsOutput, error) {
+func (r *DescribeEventTopicsFuture) Get(ctx workflow.Context) (*directoryservice.DescribeEventTopicsOutput, error) {
 	var output directoryservice.DescribeEventTopicsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeLDAPSSettingsFuture struct {
+type DescribeLDAPSSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeLDAPSSettingsFuture) Get(ctx workflow.Context) (*directoryservice.DescribeLDAPSSettingsOutput, error) {
+func (r *DescribeLDAPSSettingsFuture) Get(ctx workflow.Context) (*directoryservice.DescribeLDAPSSettingsOutput, error) {
 	var output directoryservice.DescribeLDAPSSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeSharedDirectoriesFuture struct {
+type DescribeSharedDirectoriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeSharedDirectoriesFuture) Get(ctx workflow.Context) (*directoryservice.DescribeSharedDirectoriesOutput, error) {
+func (r *DescribeSharedDirectoriesFuture) Get(ctx workflow.Context) (*directoryservice.DescribeSharedDirectoriesOutput, error) {
 	var output directoryservice.DescribeSharedDirectoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeSnapshotsFuture struct {
+type DescribeSnapshotsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeSnapshotsFuture) Get(ctx workflow.Context) (*directoryservice.DescribeSnapshotsOutput, error) {
+func (r *DescribeSnapshotsFuture) Get(ctx workflow.Context) (*directoryservice.DescribeSnapshotsOutput, error) {
 	var output directoryservice.DescribeSnapshotsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDescribeTrustsFuture struct {
+type DescribeTrustsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDescribeTrustsFuture) Get(ctx workflow.Context) (*directoryservice.DescribeTrustsOutput, error) {
+func (r *DescribeTrustsFuture) Get(ctx workflow.Context) (*directoryservice.DescribeTrustsOutput, error) {
 	var output directoryservice.DescribeTrustsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDisableLDAPSFuture struct {
+type DisableLDAPSFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDisableLDAPSFuture) Get(ctx workflow.Context) (*directoryservice.DisableLDAPSOutput, error) {
+func (r *DisableLDAPSFuture) Get(ctx workflow.Context) (*directoryservice.DisableLDAPSOutput, error) {
 	var output directoryservice.DisableLDAPSOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDisableRadiusFuture struct {
+type DisableRadiusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDisableRadiusFuture) Get(ctx workflow.Context) (*directoryservice.DisableRadiusOutput, error) {
+func (r *DisableRadiusFuture) Get(ctx workflow.Context) (*directoryservice.DisableRadiusOutput, error) {
 	var output directoryservice.DisableRadiusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceDisableSsoFuture struct {
+type DisableSsoFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceDisableSsoFuture) Get(ctx workflow.Context) (*directoryservice.DisableSsoOutput, error) {
+func (r *DisableSsoFuture) Get(ctx workflow.Context) (*directoryservice.DisableSsoOutput, error) {
 	var output directoryservice.DisableSsoOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceEnableLDAPSFuture struct {
+type EnableLDAPSFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceEnableLDAPSFuture) Get(ctx workflow.Context) (*directoryservice.EnableLDAPSOutput, error) {
+func (r *EnableLDAPSFuture) Get(ctx workflow.Context) (*directoryservice.EnableLDAPSOutput, error) {
 	var output directoryservice.EnableLDAPSOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceEnableRadiusFuture struct {
+type EnableRadiusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceEnableRadiusFuture) Get(ctx workflow.Context) (*directoryservice.EnableRadiusOutput, error) {
+func (r *EnableRadiusFuture) Get(ctx workflow.Context) (*directoryservice.EnableRadiusOutput, error) {
 	var output directoryservice.EnableRadiusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceEnableSsoFuture struct {
+type EnableSsoFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceEnableSsoFuture) Get(ctx workflow.Context) (*directoryservice.EnableSsoOutput, error) {
+func (r *EnableSsoFuture) Get(ctx workflow.Context) (*directoryservice.EnableSsoOutput, error) {
 	var output directoryservice.EnableSsoOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceGetDirectoryLimitsFuture struct {
+type GetDirectoryLimitsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceGetDirectoryLimitsFuture) Get(ctx workflow.Context) (*directoryservice.GetDirectoryLimitsOutput, error) {
+func (r *GetDirectoryLimitsFuture) Get(ctx workflow.Context) (*directoryservice.GetDirectoryLimitsOutput, error) {
 	var output directoryservice.GetDirectoryLimitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceGetSnapshotLimitsFuture struct {
+type GetSnapshotLimitsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceGetSnapshotLimitsFuture) Get(ctx workflow.Context) (*directoryservice.GetSnapshotLimitsOutput, error) {
+func (r *GetSnapshotLimitsFuture) Get(ctx workflow.Context) (*directoryservice.GetSnapshotLimitsOutput, error) {
 	var output directoryservice.GetSnapshotLimitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceListCertificatesFuture struct {
+type ListCertificatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceListCertificatesFuture) Get(ctx workflow.Context) (*directoryservice.ListCertificatesOutput, error) {
+func (r *ListCertificatesFuture) Get(ctx workflow.Context) (*directoryservice.ListCertificatesOutput, error) {
 	var output directoryservice.ListCertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceListIpRoutesFuture struct {
+type ListIpRoutesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceListIpRoutesFuture) Get(ctx workflow.Context) (*directoryservice.ListIpRoutesOutput, error) {
+func (r *ListIpRoutesFuture) Get(ctx workflow.Context) (*directoryservice.ListIpRoutesOutput, error) {
 	var output directoryservice.ListIpRoutesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceListLogSubscriptionsFuture struct {
+type ListLogSubscriptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceListLogSubscriptionsFuture) Get(ctx workflow.Context) (*directoryservice.ListLogSubscriptionsOutput, error) {
+func (r *ListLogSubscriptionsFuture) Get(ctx workflow.Context) (*directoryservice.ListLogSubscriptionsOutput, error) {
 	var output directoryservice.ListLogSubscriptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceListSchemaExtensionsFuture struct {
+type ListSchemaExtensionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceListSchemaExtensionsFuture) Get(ctx workflow.Context) (*directoryservice.ListSchemaExtensionsOutput, error) {
+func (r *ListSchemaExtensionsFuture) Get(ctx workflow.Context) (*directoryservice.ListSchemaExtensionsOutput, error) {
 	var output directoryservice.ListSchemaExtensionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceListTagsForResourceFuture) Get(ctx workflow.Context) (*directoryservice.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*directoryservice.ListTagsForResourceOutput, error) {
 	var output directoryservice.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceRegisterCertificateFuture struct {
+type RegisterCertificateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceRegisterCertificateFuture) Get(ctx workflow.Context) (*directoryservice.RegisterCertificateOutput, error) {
+func (r *RegisterCertificateFuture) Get(ctx workflow.Context) (*directoryservice.RegisterCertificateOutput, error) {
 	var output directoryservice.RegisterCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceRegisterEventTopicFuture struct {
+type RegisterEventTopicFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceRegisterEventTopicFuture) Get(ctx workflow.Context) (*directoryservice.RegisterEventTopicOutput, error) {
+func (r *RegisterEventTopicFuture) Get(ctx workflow.Context) (*directoryservice.RegisterEventTopicOutput, error) {
 	var output directoryservice.RegisterEventTopicOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceRejectSharedDirectoryFuture struct {
+type RejectSharedDirectoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceRejectSharedDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.RejectSharedDirectoryOutput, error) {
+func (r *RejectSharedDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.RejectSharedDirectoryOutput, error) {
 	var output directoryservice.RejectSharedDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceRemoveIpRoutesFuture struct {
+type RemoveIpRoutesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceRemoveIpRoutesFuture) Get(ctx workflow.Context) (*directoryservice.RemoveIpRoutesOutput, error) {
+func (r *RemoveIpRoutesFuture) Get(ctx workflow.Context) (*directoryservice.RemoveIpRoutesOutput, error) {
 	var output directoryservice.RemoveIpRoutesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceRemoveTagsFromResourceFuture struct {
+type RemoveTagsFromResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*directoryservice.RemoveTagsFromResourceOutput, error) {
+func (r *RemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*directoryservice.RemoveTagsFromResourceOutput, error) {
 	var output directoryservice.RemoveTagsFromResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceResetUserPasswordFuture struct {
+type ResetUserPasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceResetUserPasswordFuture) Get(ctx workflow.Context) (*directoryservice.ResetUserPasswordOutput, error) {
+func (r *ResetUserPasswordFuture) Get(ctx workflow.Context) (*directoryservice.ResetUserPasswordOutput, error) {
 	var output directoryservice.ResetUserPasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceRestoreFromSnapshotFuture struct {
+type RestoreFromSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceRestoreFromSnapshotFuture) Get(ctx workflow.Context) (*directoryservice.RestoreFromSnapshotOutput, error) {
+func (r *RestoreFromSnapshotFuture) Get(ctx workflow.Context) (*directoryservice.RestoreFromSnapshotOutput, error) {
 	var output directoryservice.RestoreFromSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceShareDirectoryFuture struct {
+type ShareDirectoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceShareDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.ShareDirectoryOutput, error) {
+func (r *ShareDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.ShareDirectoryOutput, error) {
 	var output directoryservice.ShareDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceStartSchemaExtensionFuture struct {
+type StartSchemaExtensionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceStartSchemaExtensionFuture) Get(ctx workflow.Context) (*directoryservice.StartSchemaExtensionOutput, error) {
+func (r *StartSchemaExtensionFuture) Get(ctx workflow.Context) (*directoryservice.StartSchemaExtensionOutput, error) {
 	var output directoryservice.StartSchemaExtensionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceUnshareDirectoryFuture struct {
+type UnshareDirectoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceUnshareDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.UnshareDirectoryOutput, error) {
+func (r *UnshareDirectoryFuture) Get(ctx workflow.Context) (*directoryservice.UnshareDirectoryOutput, error) {
 	var output directoryservice.UnshareDirectoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceUpdateConditionalForwarderFuture struct {
+type UpdateConditionalForwarderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceUpdateConditionalForwarderFuture) Get(ctx workflow.Context) (*directoryservice.UpdateConditionalForwarderOutput, error) {
+func (r *UpdateConditionalForwarderFuture) Get(ctx workflow.Context) (*directoryservice.UpdateConditionalForwarderOutput, error) {
 	var output directoryservice.UpdateConditionalForwarderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceUpdateNumberOfDomainControllersFuture struct {
+type UpdateNumberOfDomainControllersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceUpdateNumberOfDomainControllersFuture) Get(ctx workflow.Context) (*directoryservice.UpdateNumberOfDomainControllersOutput, error) {
+func (r *UpdateNumberOfDomainControllersFuture) Get(ctx workflow.Context) (*directoryservice.UpdateNumberOfDomainControllersOutput, error) {
 	var output directoryservice.UpdateNumberOfDomainControllersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceUpdateRadiusFuture struct {
+type UpdateRadiusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceUpdateRadiusFuture) Get(ctx workflow.Context) (*directoryservice.UpdateRadiusOutput, error) {
+func (r *UpdateRadiusFuture) Get(ctx workflow.Context) (*directoryservice.UpdateRadiusOutput, error) {
 	var output directoryservice.UpdateRadiusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceUpdateTrustFuture struct {
+type UpdateTrustFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceUpdateTrustFuture) Get(ctx workflow.Context) (*directoryservice.UpdateTrustOutput, error) {
+func (r *UpdateTrustFuture) Get(ctx workflow.Context) (*directoryservice.UpdateTrustOutput, error) {
 	var output directoryservice.UpdateTrustOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DirectoryServiceVerifyTrustFuture struct {
+type VerifyTrustFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DirectoryServiceVerifyTrustFuture) Get(ctx workflow.Context) (*directoryservice.VerifyTrustOutput, error) {
+func (r *VerifyTrustFuture) Get(ctx workflow.Context) (*directoryservice.VerifyTrustOutput, error) {
 	var output directoryservice.VerifyTrustOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -649,9 +649,9 @@ func (a *stub) AcceptSharedDirectory(ctx workflow.Context, input *directoryservi
 	return &output, err
 }
 
-func (a *stub) AcceptSharedDirectoryAsync(ctx workflow.Context, input *directoryservice.AcceptSharedDirectoryInput) *DirectoryServiceAcceptSharedDirectoryFuture {
+func (a *stub) AcceptSharedDirectoryAsync(ctx workflow.Context, input *directoryservice.AcceptSharedDirectoryInput) *AcceptSharedDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.AcceptSharedDirectory", input)
-	return &DirectoryServiceAcceptSharedDirectoryFuture{Future: future}
+	return &AcceptSharedDirectoryFuture{Future: future}
 }
 
 func (a *stub) AddIpRoutes(ctx workflow.Context, input *directoryservice.AddIpRoutesInput) (*directoryservice.AddIpRoutesOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) AddIpRoutes(ctx workflow.Context, input *directoryservice.AddIpRo
 	return &output, err
 }
 
-func (a *stub) AddIpRoutesAsync(ctx workflow.Context, input *directoryservice.AddIpRoutesInput) *DirectoryServiceAddIpRoutesFuture {
+func (a *stub) AddIpRoutesAsync(ctx workflow.Context, input *directoryservice.AddIpRoutesInput) *AddIpRoutesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.AddIpRoutes", input)
-	return &DirectoryServiceAddIpRoutesFuture{Future: future}
+	return &AddIpRoutesFuture{Future: future}
 }
 
 func (a *stub) AddTagsToResource(ctx workflow.Context, input *directoryservice.AddTagsToResourceInput) (*directoryservice.AddTagsToResourceOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) AddTagsToResource(ctx workflow.Context, input *directoryservice.A
 	return &output, err
 }
 
-func (a *stub) AddTagsToResourceAsync(ctx workflow.Context, input *directoryservice.AddTagsToResourceInput) *DirectoryServiceAddTagsToResourceFuture {
+func (a *stub) AddTagsToResourceAsync(ctx workflow.Context, input *directoryservice.AddTagsToResourceInput) *AddTagsToResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.AddTagsToResource", input)
-	return &DirectoryServiceAddTagsToResourceFuture{Future: future}
+	return &AddTagsToResourceFuture{Future: future}
 }
 
 func (a *stub) CancelSchemaExtension(ctx workflow.Context, input *directoryservice.CancelSchemaExtensionInput) (*directoryservice.CancelSchemaExtensionOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) CancelSchemaExtension(ctx workflow.Context, input *directoryservi
 	return &output, err
 }
 
-func (a *stub) CancelSchemaExtensionAsync(ctx workflow.Context, input *directoryservice.CancelSchemaExtensionInput) *DirectoryServiceCancelSchemaExtensionFuture {
+func (a *stub) CancelSchemaExtensionAsync(ctx workflow.Context, input *directoryservice.CancelSchemaExtensionInput) *CancelSchemaExtensionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CancelSchemaExtension", input)
-	return &DirectoryServiceCancelSchemaExtensionFuture{Future: future}
+	return &CancelSchemaExtensionFuture{Future: future}
 }
 
 func (a *stub) ConnectDirectory(ctx workflow.Context, input *directoryservice.ConnectDirectoryInput) (*directoryservice.ConnectDirectoryOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) ConnectDirectory(ctx workflow.Context, input *directoryservice.Co
 	return &output, err
 }
 
-func (a *stub) ConnectDirectoryAsync(ctx workflow.Context, input *directoryservice.ConnectDirectoryInput) *DirectoryServiceConnectDirectoryFuture {
+func (a *stub) ConnectDirectoryAsync(ctx workflow.Context, input *directoryservice.ConnectDirectoryInput) *ConnectDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ConnectDirectory", input)
-	return &DirectoryServiceConnectDirectoryFuture{Future: future}
+	return &ConnectDirectoryFuture{Future: future}
 }
 
 func (a *stub) CreateAlias(ctx workflow.Context, input *directoryservice.CreateAliasInput) (*directoryservice.CreateAliasOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) CreateAlias(ctx workflow.Context, input *directoryservice.CreateA
 	return &output, err
 }
 
-func (a *stub) CreateAliasAsync(ctx workflow.Context, input *directoryservice.CreateAliasInput) *DirectoryServiceCreateAliasFuture {
+func (a *stub) CreateAliasAsync(ctx workflow.Context, input *directoryservice.CreateAliasInput) *CreateAliasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateAlias", input)
-	return &DirectoryServiceCreateAliasFuture{Future: future}
+	return &CreateAliasFuture{Future: future}
 }
 
 func (a *stub) CreateComputer(ctx workflow.Context, input *directoryservice.CreateComputerInput) (*directoryservice.CreateComputerOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) CreateComputer(ctx workflow.Context, input *directoryservice.Crea
 	return &output, err
 }
 
-func (a *stub) CreateComputerAsync(ctx workflow.Context, input *directoryservice.CreateComputerInput) *DirectoryServiceCreateComputerFuture {
+func (a *stub) CreateComputerAsync(ctx workflow.Context, input *directoryservice.CreateComputerInput) *CreateComputerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateComputer", input)
-	return &DirectoryServiceCreateComputerFuture{Future: future}
+	return &CreateComputerFuture{Future: future}
 }
 
 func (a *stub) CreateConditionalForwarder(ctx workflow.Context, input *directoryservice.CreateConditionalForwarderInput) (*directoryservice.CreateConditionalForwarderOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) CreateConditionalForwarder(ctx workflow.Context, input *directory
 	return &output, err
 }
 
-func (a *stub) CreateConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.CreateConditionalForwarderInput) *DirectoryServiceCreateConditionalForwarderFuture {
+func (a *stub) CreateConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.CreateConditionalForwarderInput) *CreateConditionalForwarderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateConditionalForwarder", input)
-	return &DirectoryServiceCreateConditionalForwarderFuture{Future: future}
+	return &CreateConditionalForwarderFuture{Future: future}
 }
 
 func (a *stub) CreateDirectory(ctx workflow.Context, input *directoryservice.CreateDirectoryInput) (*directoryservice.CreateDirectoryOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) CreateDirectory(ctx workflow.Context, input *directoryservice.Cre
 	return &output, err
 }
 
-func (a *stub) CreateDirectoryAsync(ctx workflow.Context, input *directoryservice.CreateDirectoryInput) *DirectoryServiceCreateDirectoryFuture {
+func (a *stub) CreateDirectoryAsync(ctx workflow.Context, input *directoryservice.CreateDirectoryInput) *CreateDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateDirectory", input)
-	return &DirectoryServiceCreateDirectoryFuture{Future: future}
+	return &CreateDirectoryFuture{Future: future}
 }
 
 func (a *stub) CreateLogSubscription(ctx workflow.Context, input *directoryservice.CreateLogSubscriptionInput) (*directoryservice.CreateLogSubscriptionOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) CreateLogSubscription(ctx workflow.Context, input *directoryservi
 	return &output, err
 }
 
-func (a *stub) CreateLogSubscriptionAsync(ctx workflow.Context, input *directoryservice.CreateLogSubscriptionInput) *DirectoryServiceCreateLogSubscriptionFuture {
+func (a *stub) CreateLogSubscriptionAsync(ctx workflow.Context, input *directoryservice.CreateLogSubscriptionInput) *CreateLogSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateLogSubscription", input)
-	return &DirectoryServiceCreateLogSubscriptionFuture{Future: future}
+	return &CreateLogSubscriptionFuture{Future: future}
 }
 
 func (a *stub) CreateMicrosoftAD(ctx workflow.Context, input *directoryservice.CreateMicrosoftADInput) (*directoryservice.CreateMicrosoftADOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) CreateMicrosoftAD(ctx workflow.Context, input *directoryservice.C
 	return &output, err
 }
 
-func (a *stub) CreateMicrosoftADAsync(ctx workflow.Context, input *directoryservice.CreateMicrosoftADInput) *DirectoryServiceCreateMicrosoftADFuture {
+func (a *stub) CreateMicrosoftADAsync(ctx workflow.Context, input *directoryservice.CreateMicrosoftADInput) *CreateMicrosoftADFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateMicrosoftAD", input)
-	return &DirectoryServiceCreateMicrosoftADFuture{Future: future}
+	return &CreateMicrosoftADFuture{Future: future}
 }
 
 func (a *stub) CreateSnapshot(ctx workflow.Context, input *directoryservice.CreateSnapshotInput) (*directoryservice.CreateSnapshotOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) CreateSnapshot(ctx workflow.Context, input *directoryservice.Crea
 	return &output, err
 }
 
-func (a *stub) CreateSnapshotAsync(ctx workflow.Context, input *directoryservice.CreateSnapshotInput) *DirectoryServiceCreateSnapshotFuture {
+func (a *stub) CreateSnapshotAsync(ctx workflow.Context, input *directoryservice.CreateSnapshotInput) *CreateSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateSnapshot", input)
-	return &DirectoryServiceCreateSnapshotFuture{Future: future}
+	return &CreateSnapshotFuture{Future: future}
 }
 
 func (a *stub) CreateTrust(ctx workflow.Context, input *directoryservice.CreateTrustInput) (*directoryservice.CreateTrustOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) CreateTrust(ctx workflow.Context, input *directoryservice.CreateT
 	return &output, err
 }
 
-func (a *stub) CreateTrustAsync(ctx workflow.Context, input *directoryservice.CreateTrustInput) *DirectoryServiceCreateTrustFuture {
+func (a *stub) CreateTrustAsync(ctx workflow.Context, input *directoryservice.CreateTrustInput) *CreateTrustFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateTrust", input)
-	return &DirectoryServiceCreateTrustFuture{Future: future}
+	return &CreateTrustFuture{Future: future}
 }
 
 func (a *stub) DeleteConditionalForwarder(ctx workflow.Context, input *directoryservice.DeleteConditionalForwarderInput) (*directoryservice.DeleteConditionalForwarderOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) DeleteConditionalForwarder(ctx workflow.Context, input *directory
 	return &output, err
 }
 
-func (a *stub) DeleteConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.DeleteConditionalForwarderInput) *DirectoryServiceDeleteConditionalForwarderFuture {
+func (a *stub) DeleteConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.DeleteConditionalForwarderInput) *DeleteConditionalForwarderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteConditionalForwarder", input)
-	return &DirectoryServiceDeleteConditionalForwarderFuture{Future: future}
+	return &DeleteConditionalForwarderFuture{Future: future}
 }
 
 func (a *stub) DeleteDirectory(ctx workflow.Context, input *directoryservice.DeleteDirectoryInput) (*directoryservice.DeleteDirectoryOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) DeleteDirectory(ctx workflow.Context, input *directoryservice.Del
 	return &output, err
 }
 
-func (a *stub) DeleteDirectoryAsync(ctx workflow.Context, input *directoryservice.DeleteDirectoryInput) *DirectoryServiceDeleteDirectoryFuture {
+func (a *stub) DeleteDirectoryAsync(ctx workflow.Context, input *directoryservice.DeleteDirectoryInput) *DeleteDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteDirectory", input)
-	return &DirectoryServiceDeleteDirectoryFuture{Future: future}
+	return &DeleteDirectoryFuture{Future: future}
 }
 
 func (a *stub) DeleteLogSubscription(ctx workflow.Context, input *directoryservice.DeleteLogSubscriptionInput) (*directoryservice.DeleteLogSubscriptionOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) DeleteLogSubscription(ctx workflow.Context, input *directoryservi
 	return &output, err
 }
 
-func (a *stub) DeleteLogSubscriptionAsync(ctx workflow.Context, input *directoryservice.DeleteLogSubscriptionInput) *DirectoryServiceDeleteLogSubscriptionFuture {
+func (a *stub) DeleteLogSubscriptionAsync(ctx workflow.Context, input *directoryservice.DeleteLogSubscriptionInput) *DeleteLogSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteLogSubscription", input)
-	return &DirectoryServiceDeleteLogSubscriptionFuture{Future: future}
+	return &DeleteLogSubscriptionFuture{Future: future}
 }
 
 func (a *stub) DeleteSnapshot(ctx workflow.Context, input *directoryservice.DeleteSnapshotInput) (*directoryservice.DeleteSnapshotOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) DeleteSnapshot(ctx workflow.Context, input *directoryservice.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteSnapshotAsync(ctx workflow.Context, input *directoryservice.DeleteSnapshotInput) *DirectoryServiceDeleteSnapshotFuture {
+func (a *stub) DeleteSnapshotAsync(ctx workflow.Context, input *directoryservice.DeleteSnapshotInput) *DeleteSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteSnapshot", input)
-	return &DirectoryServiceDeleteSnapshotFuture{Future: future}
+	return &DeleteSnapshotFuture{Future: future}
 }
 
 func (a *stub) DeleteTrust(ctx workflow.Context, input *directoryservice.DeleteTrustInput) (*directoryservice.DeleteTrustOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) DeleteTrust(ctx workflow.Context, input *directoryservice.DeleteT
 	return &output, err
 }
 
-func (a *stub) DeleteTrustAsync(ctx workflow.Context, input *directoryservice.DeleteTrustInput) *DirectoryServiceDeleteTrustFuture {
+func (a *stub) DeleteTrustAsync(ctx workflow.Context, input *directoryservice.DeleteTrustInput) *DeleteTrustFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteTrust", input)
-	return &DirectoryServiceDeleteTrustFuture{Future: future}
+	return &DeleteTrustFuture{Future: future}
 }
 
 func (a *stub) DeregisterCertificate(ctx workflow.Context, input *directoryservice.DeregisterCertificateInput) (*directoryservice.DeregisterCertificateOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) DeregisterCertificate(ctx workflow.Context, input *directoryservi
 	return &output, err
 }
 
-func (a *stub) DeregisterCertificateAsync(ctx workflow.Context, input *directoryservice.DeregisterCertificateInput) *DirectoryServiceDeregisterCertificateFuture {
+func (a *stub) DeregisterCertificateAsync(ctx workflow.Context, input *directoryservice.DeregisterCertificateInput) *DeregisterCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeregisterCertificate", input)
-	return &DirectoryServiceDeregisterCertificateFuture{Future: future}
+	return &DeregisterCertificateFuture{Future: future}
 }
 
 func (a *stub) DeregisterEventTopic(ctx workflow.Context, input *directoryservice.DeregisterEventTopicInput) (*directoryservice.DeregisterEventTopicOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) DeregisterEventTopic(ctx workflow.Context, input *directoryservic
 	return &output, err
 }
 
-func (a *stub) DeregisterEventTopicAsync(ctx workflow.Context, input *directoryservice.DeregisterEventTopicInput) *DirectoryServiceDeregisterEventTopicFuture {
+func (a *stub) DeregisterEventTopicAsync(ctx workflow.Context, input *directoryservice.DeregisterEventTopicInput) *DeregisterEventTopicFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeregisterEventTopic", input)
-	return &DirectoryServiceDeregisterEventTopicFuture{Future: future}
+	return &DeregisterEventTopicFuture{Future: future}
 }
 
 func (a *stub) DescribeCertificate(ctx workflow.Context, input *directoryservice.DescribeCertificateInput) (*directoryservice.DescribeCertificateOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) DescribeCertificate(ctx workflow.Context, input *directoryservice
 	return &output, err
 }
 
-func (a *stub) DescribeCertificateAsync(ctx workflow.Context, input *directoryservice.DescribeCertificateInput) *DirectoryServiceDescribeCertificateFuture {
+func (a *stub) DescribeCertificateAsync(ctx workflow.Context, input *directoryservice.DescribeCertificateInput) *DescribeCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeCertificate", input)
-	return &DirectoryServiceDescribeCertificateFuture{Future: future}
+	return &DescribeCertificateFuture{Future: future}
 }
 
 func (a *stub) DescribeConditionalForwarders(ctx workflow.Context, input *directoryservice.DescribeConditionalForwardersInput) (*directoryservice.DescribeConditionalForwardersOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) DescribeConditionalForwarders(ctx workflow.Context, input *direct
 	return &output, err
 }
 
-func (a *stub) DescribeConditionalForwardersAsync(ctx workflow.Context, input *directoryservice.DescribeConditionalForwardersInput) *DirectoryServiceDescribeConditionalForwardersFuture {
+func (a *stub) DescribeConditionalForwardersAsync(ctx workflow.Context, input *directoryservice.DescribeConditionalForwardersInput) *DescribeConditionalForwardersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeConditionalForwarders", input)
-	return &DirectoryServiceDescribeConditionalForwardersFuture{Future: future}
+	return &DescribeConditionalForwardersFuture{Future: future}
 }
 
 func (a *stub) DescribeDirectories(ctx workflow.Context, input *directoryservice.DescribeDirectoriesInput) (*directoryservice.DescribeDirectoriesOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) DescribeDirectories(ctx workflow.Context, input *directoryservice
 	return &output, err
 }
 
-func (a *stub) DescribeDirectoriesAsync(ctx workflow.Context, input *directoryservice.DescribeDirectoriesInput) *DirectoryServiceDescribeDirectoriesFuture {
+func (a *stub) DescribeDirectoriesAsync(ctx workflow.Context, input *directoryservice.DescribeDirectoriesInput) *DescribeDirectoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeDirectories", input)
-	return &DirectoryServiceDescribeDirectoriesFuture{Future: future}
+	return &DescribeDirectoriesFuture{Future: future}
 }
 
 func (a *stub) DescribeDomainControllers(ctx workflow.Context, input *directoryservice.DescribeDomainControllersInput) (*directoryservice.DescribeDomainControllersOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) DescribeDomainControllers(ctx workflow.Context, input *directorys
 	return &output, err
 }
 
-func (a *stub) DescribeDomainControllersAsync(ctx workflow.Context, input *directoryservice.DescribeDomainControllersInput) *DirectoryServiceDescribeDomainControllersFuture {
+func (a *stub) DescribeDomainControllersAsync(ctx workflow.Context, input *directoryservice.DescribeDomainControllersInput) *DescribeDomainControllersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeDomainControllers", input)
-	return &DirectoryServiceDescribeDomainControllersFuture{Future: future}
+	return &DescribeDomainControllersFuture{Future: future}
 }
 
 func (a *stub) DescribeEventTopics(ctx workflow.Context, input *directoryservice.DescribeEventTopicsInput) (*directoryservice.DescribeEventTopicsOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) DescribeEventTopics(ctx workflow.Context, input *directoryservice
 	return &output, err
 }
 
-func (a *stub) DescribeEventTopicsAsync(ctx workflow.Context, input *directoryservice.DescribeEventTopicsInput) *DirectoryServiceDescribeEventTopicsFuture {
+func (a *stub) DescribeEventTopicsAsync(ctx workflow.Context, input *directoryservice.DescribeEventTopicsInput) *DescribeEventTopicsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeEventTopics", input)
-	return &DirectoryServiceDescribeEventTopicsFuture{Future: future}
+	return &DescribeEventTopicsFuture{Future: future}
 }
 
 func (a *stub) DescribeLDAPSSettings(ctx workflow.Context, input *directoryservice.DescribeLDAPSSettingsInput) (*directoryservice.DescribeLDAPSSettingsOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) DescribeLDAPSSettings(ctx workflow.Context, input *directoryservi
 	return &output, err
 }
 
-func (a *stub) DescribeLDAPSSettingsAsync(ctx workflow.Context, input *directoryservice.DescribeLDAPSSettingsInput) *DirectoryServiceDescribeLDAPSSettingsFuture {
+func (a *stub) DescribeLDAPSSettingsAsync(ctx workflow.Context, input *directoryservice.DescribeLDAPSSettingsInput) *DescribeLDAPSSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeLDAPSSettings", input)
-	return &DirectoryServiceDescribeLDAPSSettingsFuture{Future: future}
+	return &DescribeLDAPSSettingsFuture{Future: future}
 }
 
 func (a *stub) DescribeSharedDirectories(ctx workflow.Context, input *directoryservice.DescribeSharedDirectoriesInput) (*directoryservice.DescribeSharedDirectoriesOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) DescribeSharedDirectories(ctx workflow.Context, input *directorys
 	return &output, err
 }
 
-func (a *stub) DescribeSharedDirectoriesAsync(ctx workflow.Context, input *directoryservice.DescribeSharedDirectoriesInput) *DirectoryServiceDescribeSharedDirectoriesFuture {
+func (a *stub) DescribeSharedDirectoriesAsync(ctx workflow.Context, input *directoryservice.DescribeSharedDirectoriesInput) *DescribeSharedDirectoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeSharedDirectories", input)
-	return &DirectoryServiceDescribeSharedDirectoriesFuture{Future: future}
+	return &DescribeSharedDirectoriesFuture{Future: future}
 }
 
 func (a *stub) DescribeSnapshots(ctx workflow.Context, input *directoryservice.DescribeSnapshotsInput) (*directoryservice.DescribeSnapshotsOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) DescribeSnapshots(ctx workflow.Context, input *directoryservice.D
 	return &output, err
 }
 
-func (a *stub) DescribeSnapshotsAsync(ctx workflow.Context, input *directoryservice.DescribeSnapshotsInput) *DirectoryServiceDescribeSnapshotsFuture {
+func (a *stub) DescribeSnapshotsAsync(ctx workflow.Context, input *directoryservice.DescribeSnapshotsInput) *DescribeSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeSnapshots", input)
-	return &DirectoryServiceDescribeSnapshotsFuture{Future: future}
+	return &DescribeSnapshotsFuture{Future: future}
 }
 
 func (a *stub) DescribeTrusts(ctx workflow.Context, input *directoryservice.DescribeTrustsInput) (*directoryservice.DescribeTrustsOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) DescribeTrusts(ctx workflow.Context, input *directoryservice.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeTrustsAsync(ctx workflow.Context, input *directoryservice.DescribeTrustsInput) *DirectoryServiceDescribeTrustsFuture {
+func (a *stub) DescribeTrustsAsync(ctx workflow.Context, input *directoryservice.DescribeTrustsInput) *DescribeTrustsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeTrusts", input)
-	return &DirectoryServiceDescribeTrustsFuture{Future: future}
+	return &DescribeTrustsFuture{Future: future}
 }
 
 func (a *stub) DisableLDAPS(ctx workflow.Context, input *directoryservice.DisableLDAPSInput) (*directoryservice.DisableLDAPSOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) DisableLDAPS(ctx workflow.Context, input *directoryservice.Disabl
 	return &output, err
 }
 
-func (a *stub) DisableLDAPSAsync(ctx workflow.Context, input *directoryservice.DisableLDAPSInput) *DirectoryServiceDisableLDAPSFuture {
+func (a *stub) DisableLDAPSAsync(ctx workflow.Context, input *directoryservice.DisableLDAPSInput) *DisableLDAPSFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableLDAPS", input)
-	return &DirectoryServiceDisableLDAPSFuture{Future: future}
+	return &DisableLDAPSFuture{Future: future}
 }
 
 func (a *stub) DisableRadius(ctx workflow.Context, input *directoryservice.DisableRadiusInput) (*directoryservice.DisableRadiusOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) DisableRadius(ctx workflow.Context, input *directoryservice.Disab
 	return &output, err
 }
 
-func (a *stub) DisableRadiusAsync(ctx workflow.Context, input *directoryservice.DisableRadiusInput) *DirectoryServiceDisableRadiusFuture {
+func (a *stub) DisableRadiusAsync(ctx workflow.Context, input *directoryservice.DisableRadiusInput) *DisableRadiusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableRadius", input)
-	return &DirectoryServiceDisableRadiusFuture{Future: future}
+	return &DisableRadiusFuture{Future: future}
 }
 
 func (a *stub) DisableSso(ctx workflow.Context, input *directoryservice.DisableSsoInput) (*directoryservice.DisableSsoOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) DisableSso(ctx workflow.Context, input *directoryservice.DisableS
 	return &output, err
 }
 
-func (a *stub) DisableSsoAsync(ctx workflow.Context, input *directoryservice.DisableSsoInput) *DirectoryServiceDisableSsoFuture {
+func (a *stub) DisableSsoAsync(ctx workflow.Context, input *directoryservice.DisableSsoInput) *DisableSsoFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableSso", input)
-	return &DirectoryServiceDisableSsoFuture{Future: future}
+	return &DisableSsoFuture{Future: future}
 }
 
 func (a *stub) EnableLDAPS(ctx workflow.Context, input *directoryservice.EnableLDAPSInput) (*directoryservice.EnableLDAPSOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) EnableLDAPS(ctx workflow.Context, input *directoryservice.EnableL
 	return &output, err
 }
 
-func (a *stub) EnableLDAPSAsync(ctx workflow.Context, input *directoryservice.EnableLDAPSInput) *DirectoryServiceEnableLDAPSFuture {
+func (a *stub) EnableLDAPSAsync(ctx workflow.Context, input *directoryservice.EnableLDAPSInput) *EnableLDAPSFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableLDAPS", input)
-	return &DirectoryServiceEnableLDAPSFuture{Future: future}
+	return &EnableLDAPSFuture{Future: future}
 }
 
 func (a *stub) EnableRadius(ctx workflow.Context, input *directoryservice.EnableRadiusInput) (*directoryservice.EnableRadiusOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) EnableRadius(ctx workflow.Context, input *directoryservice.Enable
 	return &output, err
 }
 
-func (a *stub) EnableRadiusAsync(ctx workflow.Context, input *directoryservice.EnableRadiusInput) *DirectoryServiceEnableRadiusFuture {
+func (a *stub) EnableRadiusAsync(ctx workflow.Context, input *directoryservice.EnableRadiusInput) *EnableRadiusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableRadius", input)
-	return &DirectoryServiceEnableRadiusFuture{Future: future}
+	return &EnableRadiusFuture{Future: future}
 }
 
 func (a *stub) EnableSso(ctx workflow.Context, input *directoryservice.EnableSsoInput) (*directoryservice.EnableSsoOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) EnableSso(ctx workflow.Context, input *directoryservice.EnableSso
 	return &output, err
 }
 
-func (a *stub) EnableSsoAsync(ctx workflow.Context, input *directoryservice.EnableSsoInput) *DirectoryServiceEnableSsoFuture {
+func (a *stub) EnableSsoAsync(ctx workflow.Context, input *directoryservice.EnableSsoInput) *EnableSsoFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableSso", input)
-	return &DirectoryServiceEnableSsoFuture{Future: future}
+	return &EnableSsoFuture{Future: future}
 }
 
 func (a *stub) GetDirectoryLimits(ctx workflow.Context, input *directoryservice.GetDirectoryLimitsInput) (*directoryservice.GetDirectoryLimitsOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) GetDirectoryLimits(ctx workflow.Context, input *directoryservice.
 	return &output, err
 }
 
-func (a *stub) GetDirectoryLimitsAsync(ctx workflow.Context, input *directoryservice.GetDirectoryLimitsInput) *DirectoryServiceGetDirectoryLimitsFuture {
+func (a *stub) GetDirectoryLimitsAsync(ctx workflow.Context, input *directoryservice.GetDirectoryLimitsInput) *GetDirectoryLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.GetDirectoryLimits", input)
-	return &DirectoryServiceGetDirectoryLimitsFuture{Future: future}
+	return &GetDirectoryLimitsFuture{Future: future}
 }
 
 func (a *stub) GetSnapshotLimits(ctx workflow.Context, input *directoryservice.GetSnapshotLimitsInput) (*directoryservice.GetSnapshotLimitsOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) GetSnapshotLimits(ctx workflow.Context, input *directoryservice.G
 	return &output, err
 }
 
-func (a *stub) GetSnapshotLimitsAsync(ctx workflow.Context, input *directoryservice.GetSnapshotLimitsInput) *DirectoryServiceGetSnapshotLimitsFuture {
+func (a *stub) GetSnapshotLimitsAsync(ctx workflow.Context, input *directoryservice.GetSnapshotLimitsInput) *GetSnapshotLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.GetSnapshotLimits", input)
-	return &DirectoryServiceGetSnapshotLimitsFuture{Future: future}
+	return &GetSnapshotLimitsFuture{Future: future}
 }
 
 func (a *stub) ListCertificates(ctx workflow.Context, input *directoryservice.ListCertificatesInput) (*directoryservice.ListCertificatesOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) ListCertificates(ctx workflow.Context, input *directoryservice.Li
 	return &output, err
 }
 
-func (a *stub) ListCertificatesAsync(ctx workflow.Context, input *directoryservice.ListCertificatesInput) *DirectoryServiceListCertificatesFuture {
+func (a *stub) ListCertificatesAsync(ctx workflow.Context, input *directoryservice.ListCertificatesInput) *ListCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListCertificates", input)
-	return &DirectoryServiceListCertificatesFuture{Future: future}
+	return &ListCertificatesFuture{Future: future}
 }
 
 func (a *stub) ListIpRoutes(ctx workflow.Context, input *directoryservice.ListIpRoutesInput) (*directoryservice.ListIpRoutesOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) ListIpRoutes(ctx workflow.Context, input *directoryservice.ListIp
 	return &output, err
 }
 
-func (a *stub) ListIpRoutesAsync(ctx workflow.Context, input *directoryservice.ListIpRoutesInput) *DirectoryServiceListIpRoutesFuture {
+func (a *stub) ListIpRoutesAsync(ctx workflow.Context, input *directoryservice.ListIpRoutesInput) *ListIpRoutesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListIpRoutes", input)
-	return &DirectoryServiceListIpRoutesFuture{Future: future}
+	return &ListIpRoutesFuture{Future: future}
 }
 
 func (a *stub) ListLogSubscriptions(ctx workflow.Context, input *directoryservice.ListLogSubscriptionsInput) (*directoryservice.ListLogSubscriptionsOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) ListLogSubscriptions(ctx workflow.Context, input *directoryservic
 	return &output, err
 }
 
-func (a *stub) ListLogSubscriptionsAsync(ctx workflow.Context, input *directoryservice.ListLogSubscriptionsInput) *DirectoryServiceListLogSubscriptionsFuture {
+func (a *stub) ListLogSubscriptionsAsync(ctx workflow.Context, input *directoryservice.ListLogSubscriptionsInput) *ListLogSubscriptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListLogSubscriptions", input)
-	return &DirectoryServiceListLogSubscriptionsFuture{Future: future}
+	return &ListLogSubscriptionsFuture{Future: future}
 }
 
 func (a *stub) ListSchemaExtensions(ctx workflow.Context, input *directoryservice.ListSchemaExtensionsInput) (*directoryservice.ListSchemaExtensionsOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) ListSchemaExtensions(ctx workflow.Context, input *directoryservic
 	return &output, err
 }
 
-func (a *stub) ListSchemaExtensionsAsync(ctx workflow.Context, input *directoryservice.ListSchemaExtensionsInput) *DirectoryServiceListSchemaExtensionsFuture {
+func (a *stub) ListSchemaExtensionsAsync(ctx workflow.Context, input *directoryservice.ListSchemaExtensionsInput) *ListSchemaExtensionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListSchemaExtensions", input)
-	return &DirectoryServiceListSchemaExtensionsFuture{Future: future}
+	return &ListSchemaExtensionsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *directoryservice.ListTagsForResourceInput) (*directoryservice.ListTagsForResourceOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *directoryservice
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *directoryservice.ListTagsForResourceInput) *DirectoryServiceListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *directoryservice.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListTagsForResource", input)
-	return &DirectoryServiceListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) RegisterCertificate(ctx workflow.Context, input *directoryservice.RegisterCertificateInput) (*directoryservice.RegisterCertificateOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) RegisterCertificate(ctx workflow.Context, input *directoryservice
 	return &output, err
 }
 
-func (a *stub) RegisterCertificateAsync(ctx workflow.Context, input *directoryservice.RegisterCertificateInput) *DirectoryServiceRegisterCertificateFuture {
+func (a *stub) RegisterCertificateAsync(ctx workflow.Context, input *directoryservice.RegisterCertificateInput) *RegisterCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RegisterCertificate", input)
-	return &DirectoryServiceRegisterCertificateFuture{Future: future}
+	return &RegisterCertificateFuture{Future: future}
 }
 
 func (a *stub) RegisterEventTopic(ctx workflow.Context, input *directoryservice.RegisterEventTopicInput) (*directoryservice.RegisterEventTopicOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) RegisterEventTopic(ctx workflow.Context, input *directoryservice.
 	return &output, err
 }
 
-func (a *stub) RegisterEventTopicAsync(ctx workflow.Context, input *directoryservice.RegisterEventTopicInput) *DirectoryServiceRegisterEventTopicFuture {
+func (a *stub) RegisterEventTopicAsync(ctx workflow.Context, input *directoryservice.RegisterEventTopicInput) *RegisterEventTopicFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RegisterEventTopic", input)
-	return &DirectoryServiceRegisterEventTopicFuture{Future: future}
+	return &RegisterEventTopicFuture{Future: future}
 }
 
 func (a *stub) RejectSharedDirectory(ctx workflow.Context, input *directoryservice.RejectSharedDirectoryInput) (*directoryservice.RejectSharedDirectoryOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) RejectSharedDirectory(ctx workflow.Context, input *directoryservi
 	return &output, err
 }
 
-func (a *stub) RejectSharedDirectoryAsync(ctx workflow.Context, input *directoryservice.RejectSharedDirectoryInput) *DirectoryServiceRejectSharedDirectoryFuture {
+func (a *stub) RejectSharedDirectoryAsync(ctx workflow.Context, input *directoryservice.RejectSharedDirectoryInput) *RejectSharedDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RejectSharedDirectory", input)
-	return &DirectoryServiceRejectSharedDirectoryFuture{Future: future}
+	return &RejectSharedDirectoryFuture{Future: future}
 }
 
 func (a *stub) RemoveIpRoutes(ctx workflow.Context, input *directoryservice.RemoveIpRoutesInput) (*directoryservice.RemoveIpRoutesOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) RemoveIpRoutes(ctx workflow.Context, input *directoryservice.Remo
 	return &output, err
 }
 
-func (a *stub) RemoveIpRoutesAsync(ctx workflow.Context, input *directoryservice.RemoveIpRoutesInput) *DirectoryServiceRemoveIpRoutesFuture {
+func (a *stub) RemoveIpRoutesAsync(ctx workflow.Context, input *directoryservice.RemoveIpRoutesInput) *RemoveIpRoutesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RemoveIpRoutes", input)
-	return &DirectoryServiceRemoveIpRoutesFuture{Future: future}
+	return &RemoveIpRoutesFuture{Future: future}
 }
 
 func (a *stub) RemoveTagsFromResource(ctx workflow.Context, input *directoryservice.RemoveTagsFromResourceInput) (*directoryservice.RemoveTagsFromResourceOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) RemoveTagsFromResource(ctx workflow.Context, input *directoryserv
 	return &output, err
 }
 
-func (a *stub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *directoryservice.RemoveTagsFromResourceInput) *DirectoryServiceRemoveTagsFromResourceFuture {
+func (a *stub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *directoryservice.RemoveTagsFromResourceInput) *RemoveTagsFromResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RemoveTagsFromResource", input)
-	return &DirectoryServiceRemoveTagsFromResourceFuture{Future: future}
+	return &RemoveTagsFromResourceFuture{Future: future}
 }
 
 func (a *stub) ResetUserPassword(ctx workflow.Context, input *directoryservice.ResetUserPasswordInput) (*directoryservice.ResetUserPasswordOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) ResetUserPassword(ctx workflow.Context, input *directoryservice.R
 	return &output, err
 }
 
-func (a *stub) ResetUserPasswordAsync(ctx workflow.Context, input *directoryservice.ResetUserPasswordInput) *DirectoryServiceResetUserPasswordFuture {
+func (a *stub) ResetUserPasswordAsync(ctx workflow.Context, input *directoryservice.ResetUserPasswordInput) *ResetUserPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ResetUserPassword", input)
-	return &DirectoryServiceResetUserPasswordFuture{Future: future}
+	return &ResetUserPasswordFuture{Future: future}
 }
 
 func (a *stub) RestoreFromSnapshot(ctx workflow.Context, input *directoryservice.RestoreFromSnapshotInput) (*directoryservice.RestoreFromSnapshotOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) RestoreFromSnapshot(ctx workflow.Context, input *directoryservice
 	return &output, err
 }
 
-func (a *stub) RestoreFromSnapshotAsync(ctx workflow.Context, input *directoryservice.RestoreFromSnapshotInput) *DirectoryServiceRestoreFromSnapshotFuture {
+func (a *stub) RestoreFromSnapshotAsync(ctx workflow.Context, input *directoryservice.RestoreFromSnapshotInput) *RestoreFromSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RestoreFromSnapshot", input)
-	return &DirectoryServiceRestoreFromSnapshotFuture{Future: future}
+	return &RestoreFromSnapshotFuture{Future: future}
 }
 
 func (a *stub) ShareDirectory(ctx workflow.Context, input *directoryservice.ShareDirectoryInput) (*directoryservice.ShareDirectoryOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) ShareDirectory(ctx workflow.Context, input *directoryservice.Shar
 	return &output, err
 }
 
-func (a *stub) ShareDirectoryAsync(ctx workflow.Context, input *directoryservice.ShareDirectoryInput) *DirectoryServiceShareDirectoryFuture {
+func (a *stub) ShareDirectoryAsync(ctx workflow.Context, input *directoryservice.ShareDirectoryInput) *ShareDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ShareDirectory", input)
-	return &DirectoryServiceShareDirectoryFuture{Future: future}
+	return &ShareDirectoryFuture{Future: future}
 }
 
 func (a *stub) StartSchemaExtension(ctx workflow.Context, input *directoryservice.StartSchemaExtensionInput) (*directoryservice.StartSchemaExtensionOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) StartSchemaExtension(ctx workflow.Context, input *directoryservic
 	return &output, err
 }
 
-func (a *stub) StartSchemaExtensionAsync(ctx workflow.Context, input *directoryservice.StartSchemaExtensionInput) *DirectoryServiceStartSchemaExtensionFuture {
+func (a *stub) StartSchemaExtensionAsync(ctx workflow.Context, input *directoryservice.StartSchemaExtensionInput) *StartSchemaExtensionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.StartSchemaExtension", input)
-	return &DirectoryServiceStartSchemaExtensionFuture{Future: future}
+	return &StartSchemaExtensionFuture{Future: future}
 }
 
 func (a *stub) UnshareDirectory(ctx workflow.Context, input *directoryservice.UnshareDirectoryInput) (*directoryservice.UnshareDirectoryOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) UnshareDirectory(ctx workflow.Context, input *directoryservice.Un
 	return &output, err
 }
 
-func (a *stub) UnshareDirectoryAsync(ctx workflow.Context, input *directoryservice.UnshareDirectoryInput) *DirectoryServiceUnshareDirectoryFuture {
+func (a *stub) UnshareDirectoryAsync(ctx workflow.Context, input *directoryservice.UnshareDirectoryInput) *UnshareDirectoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UnshareDirectory", input)
-	return &DirectoryServiceUnshareDirectoryFuture{Future: future}
+	return &UnshareDirectoryFuture{Future: future}
 }
 
 func (a *stub) UpdateConditionalForwarder(ctx workflow.Context, input *directoryservice.UpdateConditionalForwarderInput) (*directoryservice.UpdateConditionalForwarderOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) UpdateConditionalForwarder(ctx workflow.Context, input *directory
 	return &output, err
 }
 
-func (a *stub) UpdateConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.UpdateConditionalForwarderInput) *DirectoryServiceUpdateConditionalForwarderFuture {
+func (a *stub) UpdateConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.UpdateConditionalForwarderInput) *UpdateConditionalForwarderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateConditionalForwarder", input)
-	return &DirectoryServiceUpdateConditionalForwarderFuture{Future: future}
+	return &UpdateConditionalForwarderFuture{Future: future}
 }
 
 func (a *stub) UpdateNumberOfDomainControllers(ctx workflow.Context, input *directoryservice.UpdateNumberOfDomainControllersInput) (*directoryservice.UpdateNumberOfDomainControllersOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) UpdateNumberOfDomainControllers(ctx workflow.Context, input *dire
 	return &output, err
 }
 
-func (a *stub) UpdateNumberOfDomainControllersAsync(ctx workflow.Context, input *directoryservice.UpdateNumberOfDomainControllersInput) *DirectoryServiceUpdateNumberOfDomainControllersFuture {
+func (a *stub) UpdateNumberOfDomainControllersAsync(ctx workflow.Context, input *directoryservice.UpdateNumberOfDomainControllersInput) *UpdateNumberOfDomainControllersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateNumberOfDomainControllers", input)
-	return &DirectoryServiceUpdateNumberOfDomainControllersFuture{Future: future}
+	return &UpdateNumberOfDomainControllersFuture{Future: future}
 }
 
 func (a *stub) UpdateRadius(ctx workflow.Context, input *directoryservice.UpdateRadiusInput) (*directoryservice.UpdateRadiusOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) UpdateRadius(ctx workflow.Context, input *directoryservice.Update
 	return &output, err
 }
 
-func (a *stub) UpdateRadiusAsync(ctx workflow.Context, input *directoryservice.UpdateRadiusInput) *DirectoryServiceUpdateRadiusFuture {
+func (a *stub) UpdateRadiusAsync(ctx workflow.Context, input *directoryservice.UpdateRadiusInput) *UpdateRadiusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateRadius", input)
-	return &DirectoryServiceUpdateRadiusFuture{Future: future}
+	return &UpdateRadiusFuture{Future: future}
 }
 
 func (a *stub) UpdateTrust(ctx workflow.Context, input *directoryservice.UpdateTrustInput) (*directoryservice.UpdateTrustOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) UpdateTrust(ctx workflow.Context, input *directoryservice.UpdateT
 	return &output, err
 }
 
-func (a *stub) UpdateTrustAsync(ctx workflow.Context, input *directoryservice.UpdateTrustInput) *DirectoryServiceUpdateTrustFuture {
+func (a *stub) UpdateTrustAsync(ctx workflow.Context, input *directoryservice.UpdateTrustInput) *UpdateTrustFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateTrust", input)
-	return &DirectoryServiceUpdateTrustFuture{Future: future}
+	return &UpdateTrustFuture{Future: future}
 }
 
 func (a *stub) VerifyTrust(ctx workflow.Context, input *directoryservice.VerifyTrustInput) (*directoryservice.VerifyTrustOutput, error) {
@@ -1265,7 +1265,7 @@ func (a *stub) VerifyTrust(ctx workflow.Context, input *directoryservice.VerifyT
 	return &output, err
 }
 
-func (a *stub) VerifyTrustAsync(ctx workflow.Context, input *directoryservice.VerifyTrustInput) *DirectoryServiceVerifyTrustFuture {
+func (a *stub) VerifyTrustAsync(ctx workflow.Context, input *directoryservice.VerifyTrustInput) *VerifyTrustFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.VerifyTrust", input)
-	return &DirectoryServiceVerifyTrustFuture{Future: future}
+	return &VerifyTrustFuture{Future: future}
 }

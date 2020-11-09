@@ -16,175 +16,175 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchDeleteWorlds(ctx workflow.Context, input *robomaker.BatchDeleteWorldsInput) (*robomaker.BatchDeleteWorldsOutput, error)
-	BatchDeleteWorldsAsync(ctx workflow.Context, input *robomaker.BatchDeleteWorldsInput) *RoboMakerBatchDeleteWorldsFuture
+	BatchDeleteWorldsAsync(ctx workflow.Context, input *robomaker.BatchDeleteWorldsInput) *BatchDeleteWorldsFuture
 
 	BatchDescribeSimulationJob(ctx workflow.Context, input *robomaker.BatchDescribeSimulationJobInput) (*robomaker.BatchDescribeSimulationJobOutput, error)
-	BatchDescribeSimulationJobAsync(ctx workflow.Context, input *robomaker.BatchDescribeSimulationJobInput) *RoboMakerBatchDescribeSimulationJobFuture
+	BatchDescribeSimulationJobAsync(ctx workflow.Context, input *robomaker.BatchDescribeSimulationJobInput) *BatchDescribeSimulationJobFuture
 
 	CancelDeploymentJob(ctx workflow.Context, input *robomaker.CancelDeploymentJobInput) (*robomaker.CancelDeploymentJobOutput, error)
-	CancelDeploymentJobAsync(ctx workflow.Context, input *robomaker.CancelDeploymentJobInput) *RoboMakerCancelDeploymentJobFuture
+	CancelDeploymentJobAsync(ctx workflow.Context, input *robomaker.CancelDeploymentJobInput) *CancelDeploymentJobFuture
 
 	CancelSimulationJob(ctx workflow.Context, input *robomaker.CancelSimulationJobInput) (*robomaker.CancelSimulationJobOutput, error)
-	CancelSimulationJobAsync(ctx workflow.Context, input *robomaker.CancelSimulationJobInput) *RoboMakerCancelSimulationJobFuture
+	CancelSimulationJobAsync(ctx workflow.Context, input *robomaker.CancelSimulationJobInput) *CancelSimulationJobFuture
 
 	CancelSimulationJobBatch(ctx workflow.Context, input *robomaker.CancelSimulationJobBatchInput) (*robomaker.CancelSimulationJobBatchOutput, error)
-	CancelSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.CancelSimulationJobBatchInput) *RoboMakerCancelSimulationJobBatchFuture
+	CancelSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.CancelSimulationJobBatchInput) *CancelSimulationJobBatchFuture
 
 	CancelWorldExportJob(ctx workflow.Context, input *robomaker.CancelWorldExportJobInput) (*robomaker.CancelWorldExportJobOutput, error)
-	CancelWorldExportJobAsync(ctx workflow.Context, input *robomaker.CancelWorldExportJobInput) *RoboMakerCancelWorldExportJobFuture
+	CancelWorldExportJobAsync(ctx workflow.Context, input *robomaker.CancelWorldExportJobInput) *CancelWorldExportJobFuture
 
 	CancelWorldGenerationJob(ctx workflow.Context, input *robomaker.CancelWorldGenerationJobInput) (*robomaker.CancelWorldGenerationJobOutput, error)
-	CancelWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.CancelWorldGenerationJobInput) *RoboMakerCancelWorldGenerationJobFuture
+	CancelWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.CancelWorldGenerationJobInput) *CancelWorldGenerationJobFuture
 
 	CreateDeploymentJob(ctx workflow.Context, input *robomaker.CreateDeploymentJobInput) (*robomaker.CreateDeploymentJobOutput, error)
-	CreateDeploymentJobAsync(ctx workflow.Context, input *robomaker.CreateDeploymentJobInput) *RoboMakerCreateDeploymentJobFuture
+	CreateDeploymentJobAsync(ctx workflow.Context, input *robomaker.CreateDeploymentJobInput) *CreateDeploymentJobFuture
 
 	CreateFleet(ctx workflow.Context, input *robomaker.CreateFleetInput) (*robomaker.CreateFleetOutput, error)
-	CreateFleetAsync(ctx workflow.Context, input *robomaker.CreateFleetInput) *RoboMakerCreateFleetFuture
+	CreateFleetAsync(ctx workflow.Context, input *robomaker.CreateFleetInput) *CreateFleetFuture
 
 	CreateRobot(ctx workflow.Context, input *robomaker.CreateRobotInput) (*robomaker.CreateRobotOutput, error)
-	CreateRobotAsync(ctx workflow.Context, input *robomaker.CreateRobotInput) *RoboMakerCreateRobotFuture
+	CreateRobotAsync(ctx workflow.Context, input *robomaker.CreateRobotInput) *CreateRobotFuture
 
 	CreateRobotApplication(ctx workflow.Context, input *robomaker.CreateRobotApplicationInput) (*robomaker.CreateRobotApplicationOutput, error)
-	CreateRobotApplicationAsync(ctx workflow.Context, input *robomaker.CreateRobotApplicationInput) *RoboMakerCreateRobotApplicationFuture
+	CreateRobotApplicationAsync(ctx workflow.Context, input *robomaker.CreateRobotApplicationInput) *CreateRobotApplicationFuture
 
 	CreateRobotApplicationVersion(ctx workflow.Context, input *robomaker.CreateRobotApplicationVersionInput) (*robomaker.CreateRobotApplicationVersionOutput, error)
-	CreateRobotApplicationVersionAsync(ctx workflow.Context, input *robomaker.CreateRobotApplicationVersionInput) *RoboMakerCreateRobotApplicationVersionFuture
+	CreateRobotApplicationVersionAsync(ctx workflow.Context, input *robomaker.CreateRobotApplicationVersionInput) *CreateRobotApplicationVersionFuture
 
 	CreateSimulationApplication(ctx workflow.Context, input *robomaker.CreateSimulationApplicationInput) (*robomaker.CreateSimulationApplicationOutput, error)
-	CreateSimulationApplicationAsync(ctx workflow.Context, input *robomaker.CreateSimulationApplicationInput) *RoboMakerCreateSimulationApplicationFuture
+	CreateSimulationApplicationAsync(ctx workflow.Context, input *robomaker.CreateSimulationApplicationInput) *CreateSimulationApplicationFuture
 
 	CreateSimulationApplicationVersion(ctx workflow.Context, input *robomaker.CreateSimulationApplicationVersionInput) (*robomaker.CreateSimulationApplicationVersionOutput, error)
-	CreateSimulationApplicationVersionAsync(ctx workflow.Context, input *robomaker.CreateSimulationApplicationVersionInput) *RoboMakerCreateSimulationApplicationVersionFuture
+	CreateSimulationApplicationVersionAsync(ctx workflow.Context, input *robomaker.CreateSimulationApplicationVersionInput) *CreateSimulationApplicationVersionFuture
 
 	CreateSimulationJob(ctx workflow.Context, input *robomaker.CreateSimulationJobInput) (*robomaker.CreateSimulationJobOutput, error)
-	CreateSimulationJobAsync(ctx workflow.Context, input *robomaker.CreateSimulationJobInput) *RoboMakerCreateSimulationJobFuture
+	CreateSimulationJobAsync(ctx workflow.Context, input *robomaker.CreateSimulationJobInput) *CreateSimulationJobFuture
 
 	CreateWorldExportJob(ctx workflow.Context, input *robomaker.CreateWorldExportJobInput) (*robomaker.CreateWorldExportJobOutput, error)
-	CreateWorldExportJobAsync(ctx workflow.Context, input *robomaker.CreateWorldExportJobInput) *RoboMakerCreateWorldExportJobFuture
+	CreateWorldExportJobAsync(ctx workflow.Context, input *robomaker.CreateWorldExportJobInput) *CreateWorldExportJobFuture
 
 	CreateWorldGenerationJob(ctx workflow.Context, input *robomaker.CreateWorldGenerationJobInput) (*robomaker.CreateWorldGenerationJobOutput, error)
-	CreateWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.CreateWorldGenerationJobInput) *RoboMakerCreateWorldGenerationJobFuture
+	CreateWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.CreateWorldGenerationJobInput) *CreateWorldGenerationJobFuture
 
 	CreateWorldTemplate(ctx workflow.Context, input *robomaker.CreateWorldTemplateInput) (*robomaker.CreateWorldTemplateOutput, error)
-	CreateWorldTemplateAsync(ctx workflow.Context, input *robomaker.CreateWorldTemplateInput) *RoboMakerCreateWorldTemplateFuture
+	CreateWorldTemplateAsync(ctx workflow.Context, input *robomaker.CreateWorldTemplateInput) *CreateWorldTemplateFuture
 
 	DeleteFleet(ctx workflow.Context, input *robomaker.DeleteFleetInput) (*robomaker.DeleteFleetOutput, error)
-	DeleteFleetAsync(ctx workflow.Context, input *robomaker.DeleteFleetInput) *RoboMakerDeleteFleetFuture
+	DeleteFleetAsync(ctx workflow.Context, input *robomaker.DeleteFleetInput) *DeleteFleetFuture
 
 	DeleteRobot(ctx workflow.Context, input *robomaker.DeleteRobotInput) (*robomaker.DeleteRobotOutput, error)
-	DeleteRobotAsync(ctx workflow.Context, input *robomaker.DeleteRobotInput) *RoboMakerDeleteRobotFuture
+	DeleteRobotAsync(ctx workflow.Context, input *robomaker.DeleteRobotInput) *DeleteRobotFuture
 
 	DeleteRobotApplication(ctx workflow.Context, input *robomaker.DeleteRobotApplicationInput) (*robomaker.DeleteRobotApplicationOutput, error)
-	DeleteRobotApplicationAsync(ctx workflow.Context, input *robomaker.DeleteRobotApplicationInput) *RoboMakerDeleteRobotApplicationFuture
+	DeleteRobotApplicationAsync(ctx workflow.Context, input *robomaker.DeleteRobotApplicationInput) *DeleteRobotApplicationFuture
 
 	DeleteSimulationApplication(ctx workflow.Context, input *robomaker.DeleteSimulationApplicationInput) (*robomaker.DeleteSimulationApplicationOutput, error)
-	DeleteSimulationApplicationAsync(ctx workflow.Context, input *robomaker.DeleteSimulationApplicationInput) *RoboMakerDeleteSimulationApplicationFuture
+	DeleteSimulationApplicationAsync(ctx workflow.Context, input *robomaker.DeleteSimulationApplicationInput) *DeleteSimulationApplicationFuture
 
 	DeleteWorldTemplate(ctx workflow.Context, input *robomaker.DeleteWorldTemplateInput) (*robomaker.DeleteWorldTemplateOutput, error)
-	DeleteWorldTemplateAsync(ctx workflow.Context, input *robomaker.DeleteWorldTemplateInput) *RoboMakerDeleteWorldTemplateFuture
+	DeleteWorldTemplateAsync(ctx workflow.Context, input *robomaker.DeleteWorldTemplateInput) *DeleteWorldTemplateFuture
 
 	DeregisterRobot(ctx workflow.Context, input *robomaker.DeregisterRobotInput) (*robomaker.DeregisterRobotOutput, error)
-	DeregisterRobotAsync(ctx workflow.Context, input *robomaker.DeregisterRobotInput) *RoboMakerDeregisterRobotFuture
+	DeregisterRobotAsync(ctx workflow.Context, input *robomaker.DeregisterRobotInput) *DeregisterRobotFuture
 
 	DescribeDeploymentJob(ctx workflow.Context, input *robomaker.DescribeDeploymentJobInput) (*robomaker.DescribeDeploymentJobOutput, error)
-	DescribeDeploymentJobAsync(ctx workflow.Context, input *robomaker.DescribeDeploymentJobInput) *RoboMakerDescribeDeploymentJobFuture
+	DescribeDeploymentJobAsync(ctx workflow.Context, input *robomaker.DescribeDeploymentJobInput) *DescribeDeploymentJobFuture
 
 	DescribeFleet(ctx workflow.Context, input *robomaker.DescribeFleetInput) (*robomaker.DescribeFleetOutput, error)
-	DescribeFleetAsync(ctx workflow.Context, input *robomaker.DescribeFleetInput) *RoboMakerDescribeFleetFuture
+	DescribeFleetAsync(ctx workflow.Context, input *robomaker.DescribeFleetInput) *DescribeFleetFuture
 
 	DescribeRobot(ctx workflow.Context, input *robomaker.DescribeRobotInput) (*robomaker.DescribeRobotOutput, error)
-	DescribeRobotAsync(ctx workflow.Context, input *robomaker.DescribeRobotInput) *RoboMakerDescribeRobotFuture
+	DescribeRobotAsync(ctx workflow.Context, input *robomaker.DescribeRobotInput) *DescribeRobotFuture
 
 	DescribeRobotApplication(ctx workflow.Context, input *robomaker.DescribeRobotApplicationInput) (*robomaker.DescribeRobotApplicationOutput, error)
-	DescribeRobotApplicationAsync(ctx workflow.Context, input *robomaker.DescribeRobotApplicationInput) *RoboMakerDescribeRobotApplicationFuture
+	DescribeRobotApplicationAsync(ctx workflow.Context, input *robomaker.DescribeRobotApplicationInput) *DescribeRobotApplicationFuture
 
 	DescribeSimulationApplication(ctx workflow.Context, input *robomaker.DescribeSimulationApplicationInput) (*robomaker.DescribeSimulationApplicationOutput, error)
-	DescribeSimulationApplicationAsync(ctx workflow.Context, input *robomaker.DescribeSimulationApplicationInput) *RoboMakerDescribeSimulationApplicationFuture
+	DescribeSimulationApplicationAsync(ctx workflow.Context, input *robomaker.DescribeSimulationApplicationInput) *DescribeSimulationApplicationFuture
 
 	DescribeSimulationJob(ctx workflow.Context, input *robomaker.DescribeSimulationJobInput) (*robomaker.DescribeSimulationJobOutput, error)
-	DescribeSimulationJobAsync(ctx workflow.Context, input *robomaker.DescribeSimulationJobInput) *RoboMakerDescribeSimulationJobFuture
+	DescribeSimulationJobAsync(ctx workflow.Context, input *robomaker.DescribeSimulationJobInput) *DescribeSimulationJobFuture
 
 	DescribeSimulationJobBatch(ctx workflow.Context, input *robomaker.DescribeSimulationJobBatchInput) (*robomaker.DescribeSimulationJobBatchOutput, error)
-	DescribeSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.DescribeSimulationJobBatchInput) *RoboMakerDescribeSimulationJobBatchFuture
+	DescribeSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.DescribeSimulationJobBatchInput) *DescribeSimulationJobBatchFuture
 
 	DescribeWorld(ctx workflow.Context, input *robomaker.DescribeWorldInput) (*robomaker.DescribeWorldOutput, error)
-	DescribeWorldAsync(ctx workflow.Context, input *robomaker.DescribeWorldInput) *RoboMakerDescribeWorldFuture
+	DescribeWorldAsync(ctx workflow.Context, input *robomaker.DescribeWorldInput) *DescribeWorldFuture
 
 	DescribeWorldExportJob(ctx workflow.Context, input *robomaker.DescribeWorldExportJobInput) (*robomaker.DescribeWorldExportJobOutput, error)
-	DescribeWorldExportJobAsync(ctx workflow.Context, input *robomaker.DescribeWorldExportJobInput) *RoboMakerDescribeWorldExportJobFuture
+	DescribeWorldExportJobAsync(ctx workflow.Context, input *robomaker.DescribeWorldExportJobInput) *DescribeWorldExportJobFuture
 
 	DescribeWorldGenerationJob(ctx workflow.Context, input *robomaker.DescribeWorldGenerationJobInput) (*robomaker.DescribeWorldGenerationJobOutput, error)
-	DescribeWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.DescribeWorldGenerationJobInput) *RoboMakerDescribeWorldGenerationJobFuture
+	DescribeWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.DescribeWorldGenerationJobInput) *DescribeWorldGenerationJobFuture
 
 	DescribeWorldTemplate(ctx workflow.Context, input *robomaker.DescribeWorldTemplateInput) (*robomaker.DescribeWorldTemplateOutput, error)
-	DescribeWorldTemplateAsync(ctx workflow.Context, input *robomaker.DescribeWorldTemplateInput) *RoboMakerDescribeWorldTemplateFuture
+	DescribeWorldTemplateAsync(ctx workflow.Context, input *robomaker.DescribeWorldTemplateInput) *DescribeWorldTemplateFuture
 
 	GetWorldTemplateBody(ctx workflow.Context, input *robomaker.GetWorldTemplateBodyInput) (*robomaker.GetWorldTemplateBodyOutput, error)
-	GetWorldTemplateBodyAsync(ctx workflow.Context, input *robomaker.GetWorldTemplateBodyInput) *RoboMakerGetWorldTemplateBodyFuture
+	GetWorldTemplateBodyAsync(ctx workflow.Context, input *robomaker.GetWorldTemplateBodyInput) *GetWorldTemplateBodyFuture
 
 	ListDeploymentJobs(ctx workflow.Context, input *robomaker.ListDeploymentJobsInput) (*robomaker.ListDeploymentJobsOutput, error)
-	ListDeploymentJobsAsync(ctx workflow.Context, input *robomaker.ListDeploymentJobsInput) *RoboMakerListDeploymentJobsFuture
+	ListDeploymentJobsAsync(ctx workflow.Context, input *robomaker.ListDeploymentJobsInput) *ListDeploymentJobsFuture
 
 	ListFleets(ctx workflow.Context, input *robomaker.ListFleetsInput) (*robomaker.ListFleetsOutput, error)
-	ListFleetsAsync(ctx workflow.Context, input *robomaker.ListFleetsInput) *RoboMakerListFleetsFuture
+	ListFleetsAsync(ctx workflow.Context, input *robomaker.ListFleetsInput) *ListFleetsFuture
 
 	ListRobotApplications(ctx workflow.Context, input *robomaker.ListRobotApplicationsInput) (*robomaker.ListRobotApplicationsOutput, error)
-	ListRobotApplicationsAsync(ctx workflow.Context, input *robomaker.ListRobotApplicationsInput) *RoboMakerListRobotApplicationsFuture
+	ListRobotApplicationsAsync(ctx workflow.Context, input *robomaker.ListRobotApplicationsInput) *ListRobotApplicationsFuture
 
 	ListRobots(ctx workflow.Context, input *robomaker.ListRobotsInput) (*robomaker.ListRobotsOutput, error)
-	ListRobotsAsync(ctx workflow.Context, input *robomaker.ListRobotsInput) *RoboMakerListRobotsFuture
+	ListRobotsAsync(ctx workflow.Context, input *robomaker.ListRobotsInput) *ListRobotsFuture
 
 	ListSimulationApplications(ctx workflow.Context, input *robomaker.ListSimulationApplicationsInput) (*robomaker.ListSimulationApplicationsOutput, error)
-	ListSimulationApplicationsAsync(ctx workflow.Context, input *robomaker.ListSimulationApplicationsInput) *RoboMakerListSimulationApplicationsFuture
+	ListSimulationApplicationsAsync(ctx workflow.Context, input *robomaker.ListSimulationApplicationsInput) *ListSimulationApplicationsFuture
 
 	ListSimulationJobBatches(ctx workflow.Context, input *robomaker.ListSimulationJobBatchesInput) (*robomaker.ListSimulationJobBatchesOutput, error)
-	ListSimulationJobBatchesAsync(ctx workflow.Context, input *robomaker.ListSimulationJobBatchesInput) *RoboMakerListSimulationJobBatchesFuture
+	ListSimulationJobBatchesAsync(ctx workflow.Context, input *robomaker.ListSimulationJobBatchesInput) *ListSimulationJobBatchesFuture
 
 	ListSimulationJobs(ctx workflow.Context, input *robomaker.ListSimulationJobsInput) (*robomaker.ListSimulationJobsOutput, error)
-	ListSimulationJobsAsync(ctx workflow.Context, input *robomaker.ListSimulationJobsInput) *RoboMakerListSimulationJobsFuture
+	ListSimulationJobsAsync(ctx workflow.Context, input *robomaker.ListSimulationJobsInput) *ListSimulationJobsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *robomaker.ListTagsForResourceInput) (*robomaker.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *robomaker.ListTagsForResourceInput) *RoboMakerListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *robomaker.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListWorldExportJobs(ctx workflow.Context, input *robomaker.ListWorldExportJobsInput) (*robomaker.ListWorldExportJobsOutput, error)
-	ListWorldExportJobsAsync(ctx workflow.Context, input *robomaker.ListWorldExportJobsInput) *RoboMakerListWorldExportJobsFuture
+	ListWorldExportJobsAsync(ctx workflow.Context, input *robomaker.ListWorldExportJobsInput) *ListWorldExportJobsFuture
 
 	ListWorldGenerationJobs(ctx workflow.Context, input *robomaker.ListWorldGenerationJobsInput) (*robomaker.ListWorldGenerationJobsOutput, error)
-	ListWorldGenerationJobsAsync(ctx workflow.Context, input *robomaker.ListWorldGenerationJobsInput) *RoboMakerListWorldGenerationJobsFuture
+	ListWorldGenerationJobsAsync(ctx workflow.Context, input *robomaker.ListWorldGenerationJobsInput) *ListWorldGenerationJobsFuture
 
 	ListWorldTemplates(ctx workflow.Context, input *robomaker.ListWorldTemplatesInput) (*robomaker.ListWorldTemplatesOutput, error)
-	ListWorldTemplatesAsync(ctx workflow.Context, input *robomaker.ListWorldTemplatesInput) *RoboMakerListWorldTemplatesFuture
+	ListWorldTemplatesAsync(ctx workflow.Context, input *robomaker.ListWorldTemplatesInput) *ListWorldTemplatesFuture
 
 	ListWorlds(ctx workflow.Context, input *robomaker.ListWorldsInput) (*robomaker.ListWorldsOutput, error)
-	ListWorldsAsync(ctx workflow.Context, input *robomaker.ListWorldsInput) *RoboMakerListWorldsFuture
+	ListWorldsAsync(ctx workflow.Context, input *robomaker.ListWorldsInput) *ListWorldsFuture
 
 	RegisterRobot(ctx workflow.Context, input *robomaker.RegisterRobotInput) (*robomaker.RegisterRobotOutput, error)
-	RegisterRobotAsync(ctx workflow.Context, input *robomaker.RegisterRobotInput) *RoboMakerRegisterRobotFuture
+	RegisterRobotAsync(ctx workflow.Context, input *robomaker.RegisterRobotInput) *RegisterRobotFuture
 
 	RestartSimulationJob(ctx workflow.Context, input *robomaker.RestartSimulationJobInput) (*robomaker.RestartSimulationJobOutput, error)
-	RestartSimulationJobAsync(ctx workflow.Context, input *robomaker.RestartSimulationJobInput) *RoboMakerRestartSimulationJobFuture
+	RestartSimulationJobAsync(ctx workflow.Context, input *robomaker.RestartSimulationJobInput) *RestartSimulationJobFuture
 
 	StartSimulationJobBatch(ctx workflow.Context, input *robomaker.StartSimulationJobBatchInput) (*robomaker.StartSimulationJobBatchOutput, error)
-	StartSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.StartSimulationJobBatchInput) *RoboMakerStartSimulationJobBatchFuture
+	StartSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.StartSimulationJobBatchInput) *StartSimulationJobBatchFuture
 
 	SyncDeploymentJob(ctx workflow.Context, input *robomaker.SyncDeploymentJobInput) (*robomaker.SyncDeploymentJobOutput, error)
-	SyncDeploymentJobAsync(ctx workflow.Context, input *robomaker.SyncDeploymentJobInput) *RoboMakerSyncDeploymentJobFuture
+	SyncDeploymentJobAsync(ctx workflow.Context, input *robomaker.SyncDeploymentJobInput) *SyncDeploymentJobFuture
 
 	TagResource(ctx workflow.Context, input *robomaker.TagResourceInput) (*robomaker.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *robomaker.TagResourceInput) *RoboMakerTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *robomaker.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *robomaker.UntagResourceInput) (*robomaker.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *robomaker.UntagResourceInput) *RoboMakerUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *robomaker.UntagResourceInput) *UntagResourceFuture
 
 	UpdateRobotApplication(ctx workflow.Context, input *robomaker.UpdateRobotApplicationInput) (*robomaker.UpdateRobotApplicationOutput, error)
-	UpdateRobotApplicationAsync(ctx workflow.Context, input *robomaker.UpdateRobotApplicationInput) *RoboMakerUpdateRobotApplicationFuture
+	UpdateRobotApplicationAsync(ctx workflow.Context, input *robomaker.UpdateRobotApplicationInput) *UpdateRobotApplicationFuture
 
 	UpdateSimulationApplication(ctx workflow.Context, input *robomaker.UpdateSimulationApplicationInput) (*robomaker.UpdateSimulationApplicationOutput, error)
-	UpdateSimulationApplicationAsync(ctx workflow.Context, input *robomaker.UpdateSimulationApplicationInput) *RoboMakerUpdateSimulationApplicationFuture
+	UpdateSimulationApplicationAsync(ctx workflow.Context, input *robomaker.UpdateSimulationApplicationInput) *UpdateSimulationApplicationFuture
 
 	UpdateWorldTemplate(ctx workflow.Context, input *robomaker.UpdateWorldTemplateInput) (*robomaker.UpdateWorldTemplateOutput, error)
-	UpdateWorldTemplateAsync(ctx workflow.Context, input *robomaker.UpdateWorldTemplateInput) *RoboMakerUpdateWorldTemplateFuture
+	UpdateWorldTemplateAsync(ctx workflow.Context, input *robomaker.UpdateWorldTemplateInput) *UpdateWorldTemplateFuture
 }
 
 func NewClient() Client {

@@ -16,7 +16,7 @@ var _ clients.VoidFuture
 
 type Client interface {
 	QueryForecast(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error)
-	QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastQueryServiceQueryForecastFuture
+	QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *QueryForecastFuture
 }
 
 func NewClient() Client {

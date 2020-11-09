@@ -16,232 +16,232 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type EKSCreateClusterFuture struct {
+type CreateClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSCreateClusterFuture) Get(ctx workflow.Context) (*eks.CreateClusterOutput, error) {
+func (r *CreateClusterFuture) Get(ctx workflow.Context) (*eks.CreateClusterOutput, error) {
 	var output eks.CreateClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSCreateFargateProfileFuture struct {
+type CreateFargateProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSCreateFargateProfileFuture) Get(ctx workflow.Context) (*eks.CreateFargateProfileOutput, error) {
+func (r *CreateFargateProfileFuture) Get(ctx workflow.Context) (*eks.CreateFargateProfileOutput, error) {
 	var output eks.CreateFargateProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSCreateNodegroupFuture struct {
+type CreateNodegroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSCreateNodegroupFuture) Get(ctx workflow.Context) (*eks.CreateNodegroupOutput, error) {
+func (r *CreateNodegroupFuture) Get(ctx workflow.Context) (*eks.CreateNodegroupOutput, error) {
 	var output eks.CreateNodegroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSDeleteClusterFuture struct {
+type DeleteClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSDeleteClusterFuture) Get(ctx workflow.Context) (*eks.DeleteClusterOutput, error) {
+func (r *DeleteClusterFuture) Get(ctx workflow.Context) (*eks.DeleteClusterOutput, error) {
 	var output eks.DeleteClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSDeleteFargateProfileFuture struct {
+type DeleteFargateProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSDeleteFargateProfileFuture) Get(ctx workflow.Context) (*eks.DeleteFargateProfileOutput, error) {
+func (r *DeleteFargateProfileFuture) Get(ctx workflow.Context) (*eks.DeleteFargateProfileOutput, error) {
 	var output eks.DeleteFargateProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSDeleteNodegroupFuture struct {
+type DeleteNodegroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSDeleteNodegroupFuture) Get(ctx workflow.Context) (*eks.DeleteNodegroupOutput, error) {
+func (r *DeleteNodegroupFuture) Get(ctx workflow.Context) (*eks.DeleteNodegroupOutput, error) {
 	var output eks.DeleteNodegroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSDescribeClusterFuture struct {
+type DescribeClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSDescribeClusterFuture) Get(ctx workflow.Context) (*eks.DescribeClusterOutput, error) {
+func (r *DescribeClusterFuture) Get(ctx workflow.Context) (*eks.DescribeClusterOutput, error) {
 	var output eks.DescribeClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSDescribeFargateProfileFuture struct {
+type DescribeFargateProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSDescribeFargateProfileFuture) Get(ctx workflow.Context) (*eks.DescribeFargateProfileOutput, error) {
+func (r *DescribeFargateProfileFuture) Get(ctx workflow.Context) (*eks.DescribeFargateProfileOutput, error) {
 	var output eks.DescribeFargateProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSDescribeNodegroupFuture struct {
+type DescribeNodegroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSDescribeNodegroupFuture) Get(ctx workflow.Context) (*eks.DescribeNodegroupOutput, error) {
+func (r *DescribeNodegroupFuture) Get(ctx workflow.Context) (*eks.DescribeNodegroupOutput, error) {
 	var output eks.DescribeNodegroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSDescribeUpdateFuture struct {
+type DescribeUpdateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSDescribeUpdateFuture) Get(ctx workflow.Context) (*eks.DescribeUpdateOutput, error) {
+func (r *DescribeUpdateFuture) Get(ctx workflow.Context) (*eks.DescribeUpdateOutput, error) {
 	var output eks.DescribeUpdateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSListClustersFuture struct {
+type ListClustersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSListClustersFuture) Get(ctx workflow.Context) (*eks.ListClustersOutput, error) {
+func (r *ListClustersFuture) Get(ctx workflow.Context) (*eks.ListClustersOutput, error) {
 	var output eks.ListClustersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSListFargateProfilesFuture struct {
+type ListFargateProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSListFargateProfilesFuture) Get(ctx workflow.Context) (*eks.ListFargateProfilesOutput, error) {
+func (r *ListFargateProfilesFuture) Get(ctx workflow.Context) (*eks.ListFargateProfilesOutput, error) {
 	var output eks.ListFargateProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSListNodegroupsFuture struct {
+type ListNodegroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSListNodegroupsFuture) Get(ctx workflow.Context) (*eks.ListNodegroupsOutput, error) {
+func (r *ListNodegroupsFuture) Get(ctx workflow.Context) (*eks.ListNodegroupsOutput, error) {
 	var output eks.ListNodegroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSListTagsForResourceFuture) Get(ctx workflow.Context) (*eks.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*eks.ListTagsForResourceOutput, error) {
 	var output eks.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSListUpdatesFuture struct {
+type ListUpdatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSListUpdatesFuture) Get(ctx workflow.Context) (*eks.ListUpdatesOutput, error) {
+func (r *ListUpdatesFuture) Get(ctx workflow.Context) (*eks.ListUpdatesOutput, error) {
 	var output eks.ListUpdatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSTagResourceFuture) Get(ctx workflow.Context) (*eks.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*eks.TagResourceOutput, error) {
 	var output eks.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSUntagResourceFuture) Get(ctx workflow.Context) (*eks.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*eks.UntagResourceOutput, error) {
 	var output eks.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSUpdateClusterConfigFuture struct {
+type UpdateClusterConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSUpdateClusterConfigFuture) Get(ctx workflow.Context) (*eks.UpdateClusterConfigOutput, error) {
+func (r *UpdateClusterConfigFuture) Get(ctx workflow.Context) (*eks.UpdateClusterConfigOutput, error) {
 	var output eks.UpdateClusterConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSUpdateClusterVersionFuture struct {
+type UpdateClusterVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSUpdateClusterVersionFuture) Get(ctx workflow.Context) (*eks.UpdateClusterVersionOutput, error) {
+func (r *UpdateClusterVersionFuture) Get(ctx workflow.Context) (*eks.UpdateClusterVersionOutput, error) {
 	var output eks.UpdateClusterVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSUpdateNodegroupConfigFuture struct {
+type UpdateNodegroupConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSUpdateNodegroupConfigFuture) Get(ctx workflow.Context) (*eks.UpdateNodegroupConfigOutput, error) {
+func (r *UpdateNodegroupConfigFuture) Get(ctx workflow.Context) (*eks.UpdateNodegroupConfigOutput, error) {
 	var output eks.UpdateNodegroupConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type EKSUpdateNodegroupVersionFuture struct {
+type UpdateNodegroupVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EKSUpdateNodegroupVersionFuture) Get(ctx workflow.Context) (*eks.UpdateNodegroupVersionOutput, error) {
+func (r *UpdateNodegroupVersionFuture) Get(ctx workflow.Context) (*eks.UpdateNodegroupVersionOutput, error) {
 	var output eks.UpdateNodegroupVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -253,9 +253,9 @@ func (a *stub) CreateCluster(ctx workflow.Context, input *eks.CreateClusterInput
 	return &output, err
 }
 
-func (a *stub) CreateClusterAsync(ctx workflow.Context, input *eks.CreateClusterInput) *EKSCreateClusterFuture {
+func (a *stub) CreateClusterAsync(ctx workflow.Context, input *eks.CreateClusterInput) *CreateClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.CreateCluster", input)
-	return &EKSCreateClusterFuture{Future: future}
+	return &CreateClusterFuture{Future: future}
 }
 
 func (a *stub) CreateFargateProfile(ctx workflow.Context, input *eks.CreateFargateProfileInput) (*eks.CreateFargateProfileOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) CreateFargateProfile(ctx workflow.Context, input *eks.CreateFarga
 	return &output, err
 }
 
-func (a *stub) CreateFargateProfileAsync(ctx workflow.Context, input *eks.CreateFargateProfileInput) *EKSCreateFargateProfileFuture {
+func (a *stub) CreateFargateProfileAsync(ctx workflow.Context, input *eks.CreateFargateProfileInput) *CreateFargateProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.CreateFargateProfile", input)
-	return &EKSCreateFargateProfileFuture{Future: future}
+	return &CreateFargateProfileFuture{Future: future}
 }
 
 func (a *stub) CreateNodegroup(ctx workflow.Context, input *eks.CreateNodegroupInput) (*eks.CreateNodegroupOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) CreateNodegroup(ctx workflow.Context, input *eks.CreateNodegroupI
 	return &output, err
 }
 
-func (a *stub) CreateNodegroupAsync(ctx workflow.Context, input *eks.CreateNodegroupInput) *EKSCreateNodegroupFuture {
+func (a *stub) CreateNodegroupAsync(ctx workflow.Context, input *eks.CreateNodegroupInput) *CreateNodegroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.CreateNodegroup", input)
-	return &EKSCreateNodegroupFuture{Future: future}
+	return &CreateNodegroupFuture{Future: future}
 }
 
 func (a *stub) DeleteCluster(ctx workflow.Context, input *eks.DeleteClusterInput) (*eks.DeleteClusterOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) DeleteCluster(ctx workflow.Context, input *eks.DeleteClusterInput
 	return &output, err
 }
 
-func (a *stub) DeleteClusterAsync(ctx workflow.Context, input *eks.DeleteClusterInput) *EKSDeleteClusterFuture {
+func (a *stub) DeleteClusterAsync(ctx workflow.Context, input *eks.DeleteClusterInput) *DeleteClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.DeleteCluster", input)
-	return &EKSDeleteClusterFuture{Future: future}
+	return &DeleteClusterFuture{Future: future}
 }
 
 func (a *stub) DeleteFargateProfile(ctx workflow.Context, input *eks.DeleteFargateProfileInput) (*eks.DeleteFargateProfileOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) DeleteFargateProfile(ctx workflow.Context, input *eks.DeleteFarga
 	return &output, err
 }
 
-func (a *stub) DeleteFargateProfileAsync(ctx workflow.Context, input *eks.DeleteFargateProfileInput) *EKSDeleteFargateProfileFuture {
+func (a *stub) DeleteFargateProfileAsync(ctx workflow.Context, input *eks.DeleteFargateProfileInput) *DeleteFargateProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.DeleteFargateProfile", input)
-	return &EKSDeleteFargateProfileFuture{Future: future}
+	return &DeleteFargateProfileFuture{Future: future}
 }
 
 func (a *stub) DeleteNodegroup(ctx workflow.Context, input *eks.DeleteNodegroupInput) (*eks.DeleteNodegroupOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) DeleteNodegroup(ctx workflow.Context, input *eks.DeleteNodegroupI
 	return &output, err
 }
 
-func (a *stub) DeleteNodegroupAsync(ctx workflow.Context, input *eks.DeleteNodegroupInput) *EKSDeleteNodegroupFuture {
+func (a *stub) DeleteNodegroupAsync(ctx workflow.Context, input *eks.DeleteNodegroupInput) *DeleteNodegroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.DeleteNodegroup", input)
-	return &EKSDeleteNodegroupFuture{Future: future}
+	return &DeleteNodegroupFuture{Future: future}
 }
 
 func (a *stub) DescribeCluster(ctx workflow.Context, input *eks.DescribeClusterInput) (*eks.DescribeClusterOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) DescribeCluster(ctx workflow.Context, input *eks.DescribeClusterI
 	return &output, err
 }
 
-func (a *stub) DescribeClusterAsync(ctx workflow.Context, input *eks.DescribeClusterInput) *EKSDescribeClusterFuture {
+func (a *stub) DescribeClusterAsync(ctx workflow.Context, input *eks.DescribeClusterInput) *DescribeClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.DescribeCluster", input)
-	return &EKSDescribeClusterFuture{Future: future}
+	return &DescribeClusterFuture{Future: future}
 }
 
 func (a *stub) DescribeFargateProfile(ctx workflow.Context, input *eks.DescribeFargateProfileInput) (*eks.DescribeFargateProfileOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) DescribeFargateProfile(ctx workflow.Context, input *eks.DescribeF
 	return &output, err
 }
 
-func (a *stub) DescribeFargateProfileAsync(ctx workflow.Context, input *eks.DescribeFargateProfileInput) *EKSDescribeFargateProfileFuture {
+func (a *stub) DescribeFargateProfileAsync(ctx workflow.Context, input *eks.DescribeFargateProfileInput) *DescribeFargateProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.DescribeFargateProfile", input)
-	return &EKSDescribeFargateProfileFuture{Future: future}
+	return &DescribeFargateProfileFuture{Future: future}
 }
 
 func (a *stub) DescribeNodegroup(ctx workflow.Context, input *eks.DescribeNodegroupInput) (*eks.DescribeNodegroupOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) DescribeNodegroup(ctx workflow.Context, input *eks.DescribeNodegr
 	return &output, err
 }
 
-func (a *stub) DescribeNodegroupAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) *EKSDescribeNodegroupFuture {
+func (a *stub) DescribeNodegroupAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) *DescribeNodegroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.DescribeNodegroup", input)
-	return &EKSDescribeNodegroupFuture{Future: future}
+	return &DescribeNodegroupFuture{Future: future}
 }
 
 func (a *stub) DescribeUpdate(ctx workflow.Context, input *eks.DescribeUpdateInput) (*eks.DescribeUpdateOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) DescribeUpdate(ctx workflow.Context, input *eks.DescribeUpdateInp
 	return &output, err
 }
 
-func (a *stub) DescribeUpdateAsync(ctx workflow.Context, input *eks.DescribeUpdateInput) *EKSDescribeUpdateFuture {
+func (a *stub) DescribeUpdateAsync(ctx workflow.Context, input *eks.DescribeUpdateInput) *DescribeUpdateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.DescribeUpdate", input)
-	return &EKSDescribeUpdateFuture{Future: future}
+	return &DescribeUpdateFuture{Future: future}
 }
 
 func (a *stub) ListClusters(ctx workflow.Context, input *eks.ListClustersInput) (*eks.ListClustersOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) ListClusters(ctx workflow.Context, input *eks.ListClustersInput) 
 	return &output, err
 }
 
-func (a *stub) ListClustersAsync(ctx workflow.Context, input *eks.ListClustersInput) *EKSListClustersFuture {
+func (a *stub) ListClustersAsync(ctx workflow.Context, input *eks.ListClustersInput) *ListClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.ListClusters", input)
-	return &EKSListClustersFuture{Future: future}
+	return &ListClustersFuture{Future: future}
 }
 
 func (a *stub) ListFargateProfiles(ctx workflow.Context, input *eks.ListFargateProfilesInput) (*eks.ListFargateProfilesOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) ListFargateProfiles(ctx workflow.Context, input *eks.ListFargateP
 	return &output, err
 }
 
-func (a *stub) ListFargateProfilesAsync(ctx workflow.Context, input *eks.ListFargateProfilesInput) *EKSListFargateProfilesFuture {
+func (a *stub) ListFargateProfilesAsync(ctx workflow.Context, input *eks.ListFargateProfilesInput) *ListFargateProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.ListFargateProfiles", input)
-	return &EKSListFargateProfilesFuture{Future: future}
+	return &ListFargateProfilesFuture{Future: future}
 }
 
 func (a *stub) ListNodegroups(ctx workflow.Context, input *eks.ListNodegroupsInput) (*eks.ListNodegroupsOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) ListNodegroups(ctx workflow.Context, input *eks.ListNodegroupsInp
 	return &output, err
 }
 
-func (a *stub) ListNodegroupsAsync(ctx workflow.Context, input *eks.ListNodegroupsInput) *EKSListNodegroupsFuture {
+func (a *stub) ListNodegroupsAsync(ctx workflow.Context, input *eks.ListNodegroupsInput) *ListNodegroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.ListNodegroups", input)
-	return &EKSListNodegroupsFuture{Future: future}
+	return &ListNodegroupsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *eks.ListTagsForResourceInput) (*eks.ListTagsForResourceOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *eks.ListTagsForR
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *eks.ListTagsForResourceInput) *EKSListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *eks.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.ListTagsForResource", input)
-	return &EKSListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListUpdates(ctx workflow.Context, input *eks.ListUpdatesInput) (*eks.ListUpdatesOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) ListUpdates(ctx workflow.Context, input *eks.ListUpdatesInput) (*
 	return &output, err
 }
 
-func (a *stub) ListUpdatesAsync(ctx workflow.Context, input *eks.ListUpdatesInput) *EKSListUpdatesFuture {
+func (a *stub) ListUpdatesAsync(ctx workflow.Context, input *eks.ListUpdatesInput) *ListUpdatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.ListUpdates", input)
-	return &EKSListUpdatesFuture{Future: future}
+	return &ListUpdatesFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *eks.TagResourceInput) (*eks.TagResourceOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *eks.TagResourceInput) (*
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *eks.TagResourceInput) *EKSTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *eks.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.TagResource", input)
-	return &EKSTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *eks.UntagResourceInput) (*eks.UntagResourceOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *eks.UntagResourceInput
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *eks.UntagResourceInput) *EKSUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *eks.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.UntagResource", input)
-	return &EKSUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateClusterConfig(ctx workflow.Context, input *eks.UpdateClusterConfigInput) (*eks.UpdateClusterConfigOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) UpdateClusterConfig(ctx workflow.Context, input *eks.UpdateCluste
 	return &output, err
 }
 
-func (a *stub) UpdateClusterConfigAsync(ctx workflow.Context, input *eks.UpdateClusterConfigInput) *EKSUpdateClusterConfigFuture {
+func (a *stub) UpdateClusterConfigAsync(ctx workflow.Context, input *eks.UpdateClusterConfigInput) *UpdateClusterConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.UpdateClusterConfig", input)
-	return &EKSUpdateClusterConfigFuture{Future: future}
+	return &UpdateClusterConfigFuture{Future: future}
 }
 
 func (a *stub) UpdateClusterVersion(ctx workflow.Context, input *eks.UpdateClusterVersionInput) (*eks.UpdateClusterVersionOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) UpdateClusterVersion(ctx workflow.Context, input *eks.UpdateClust
 	return &output, err
 }
 
-func (a *stub) UpdateClusterVersionAsync(ctx workflow.Context, input *eks.UpdateClusterVersionInput) *EKSUpdateClusterVersionFuture {
+func (a *stub) UpdateClusterVersionAsync(ctx workflow.Context, input *eks.UpdateClusterVersionInput) *UpdateClusterVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.UpdateClusterVersion", input)
-	return &EKSUpdateClusterVersionFuture{Future: future}
+	return &UpdateClusterVersionFuture{Future: future}
 }
 
 func (a *stub) UpdateNodegroupConfig(ctx workflow.Context, input *eks.UpdateNodegroupConfigInput) (*eks.UpdateNodegroupConfigOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) UpdateNodegroupConfig(ctx workflow.Context, input *eks.UpdateNode
 	return &output, err
 }
 
-func (a *stub) UpdateNodegroupConfigAsync(ctx workflow.Context, input *eks.UpdateNodegroupConfigInput) *EKSUpdateNodegroupConfigFuture {
+func (a *stub) UpdateNodegroupConfigAsync(ctx workflow.Context, input *eks.UpdateNodegroupConfigInput) *UpdateNodegroupConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.UpdateNodegroupConfig", input)
-	return &EKSUpdateNodegroupConfigFuture{Future: future}
+	return &UpdateNodegroupConfigFuture{Future: future}
 }
 
 func (a *stub) UpdateNodegroupVersion(ctx workflow.Context, input *eks.UpdateNodegroupVersionInput) (*eks.UpdateNodegroupVersionOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) UpdateNodegroupVersion(ctx workflow.Context, input *eks.UpdateNod
 	return &output, err
 }
 
-func (a *stub) UpdateNodegroupVersionAsync(ctx workflow.Context, input *eks.UpdateNodegroupVersionInput) *EKSUpdateNodegroupVersionFuture {
+func (a *stub) UpdateNodegroupVersionAsync(ctx workflow.Context, input *eks.UpdateNodegroupVersionInput) *UpdateNodegroupVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.eks.UpdateNodegroupVersion", input)
-	return &EKSUpdateNodegroupVersionFuture{Future: future}
+	return &UpdateNodegroupVersionFuture{Future: future}
 }
 
 func (a *stub) WaitUntilClusterActive(ctx workflow.Context, input *eks.DescribeClusterInput) error {

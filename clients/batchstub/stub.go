@@ -16,210 +16,210 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type BatchCancelJobFuture struct {
+type CancelJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchCancelJobFuture) Get(ctx workflow.Context) (*batch.CancelJobOutput, error) {
+func (r *CancelJobFuture) Get(ctx workflow.Context) (*batch.CancelJobOutput, error) {
 	var output batch.CancelJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchCreateComputeEnvironmentFuture struct {
+type CreateComputeEnvironmentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchCreateComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.CreateComputeEnvironmentOutput, error) {
+func (r *CreateComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.CreateComputeEnvironmentOutput, error) {
 	var output batch.CreateComputeEnvironmentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchCreateJobQueueFuture struct {
+type CreateJobQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchCreateJobQueueFuture) Get(ctx workflow.Context) (*batch.CreateJobQueueOutput, error) {
+func (r *CreateJobQueueFuture) Get(ctx workflow.Context) (*batch.CreateJobQueueOutput, error) {
 	var output batch.CreateJobQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchDeleteComputeEnvironmentFuture struct {
+type DeleteComputeEnvironmentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchDeleteComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.DeleteComputeEnvironmentOutput, error) {
+func (r *DeleteComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.DeleteComputeEnvironmentOutput, error) {
 	var output batch.DeleteComputeEnvironmentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchDeleteJobQueueFuture struct {
+type DeleteJobQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchDeleteJobQueueFuture) Get(ctx workflow.Context) (*batch.DeleteJobQueueOutput, error) {
+func (r *DeleteJobQueueFuture) Get(ctx workflow.Context) (*batch.DeleteJobQueueOutput, error) {
 	var output batch.DeleteJobQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchDeregisterJobDefinitionFuture struct {
+type DeregisterJobDefinitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchDeregisterJobDefinitionFuture) Get(ctx workflow.Context) (*batch.DeregisterJobDefinitionOutput, error) {
+func (r *DeregisterJobDefinitionFuture) Get(ctx workflow.Context) (*batch.DeregisterJobDefinitionOutput, error) {
 	var output batch.DeregisterJobDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchDescribeComputeEnvironmentsFuture struct {
+type DescribeComputeEnvironmentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchDescribeComputeEnvironmentsFuture) Get(ctx workflow.Context) (*batch.DescribeComputeEnvironmentsOutput, error) {
+func (r *DescribeComputeEnvironmentsFuture) Get(ctx workflow.Context) (*batch.DescribeComputeEnvironmentsOutput, error) {
 	var output batch.DescribeComputeEnvironmentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchDescribeJobDefinitionsFuture struct {
+type DescribeJobDefinitionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchDescribeJobDefinitionsFuture) Get(ctx workflow.Context) (*batch.DescribeJobDefinitionsOutput, error) {
+func (r *DescribeJobDefinitionsFuture) Get(ctx workflow.Context) (*batch.DescribeJobDefinitionsOutput, error) {
 	var output batch.DescribeJobDefinitionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchDescribeJobQueuesFuture struct {
+type DescribeJobQueuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchDescribeJobQueuesFuture) Get(ctx workflow.Context) (*batch.DescribeJobQueuesOutput, error) {
+func (r *DescribeJobQueuesFuture) Get(ctx workflow.Context) (*batch.DescribeJobQueuesOutput, error) {
 	var output batch.DescribeJobQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchDescribeJobsFuture struct {
+type DescribeJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchDescribeJobsFuture) Get(ctx workflow.Context) (*batch.DescribeJobsOutput, error) {
+func (r *DescribeJobsFuture) Get(ctx workflow.Context) (*batch.DescribeJobsOutput, error) {
 	var output batch.DescribeJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchListJobsFuture struct {
+type ListJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchListJobsFuture) Get(ctx workflow.Context) (*batch.ListJobsOutput, error) {
+func (r *ListJobsFuture) Get(ctx workflow.Context) (*batch.ListJobsOutput, error) {
 	var output batch.ListJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchListTagsForResourceFuture) Get(ctx workflow.Context) (*batch.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*batch.ListTagsForResourceOutput, error) {
 	var output batch.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchRegisterJobDefinitionFuture struct {
+type RegisterJobDefinitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchRegisterJobDefinitionFuture) Get(ctx workflow.Context) (*batch.RegisterJobDefinitionOutput, error) {
+func (r *RegisterJobDefinitionFuture) Get(ctx workflow.Context) (*batch.RegisterJobDefinitionOutput, error) {
 	var output batch.RegisterJobDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchSubmitJobFuture struct {
+type SubmitJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchSubmitJobFuture) Get(ctx workflow.Context) (*batch.SubmitJobOutput, error) {
+func (r *SubmitJobFuture) Get(ctx workflow.Context) (*batch.SubmitJobOutput, error) {
 	var output batch.SubmitJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchTagResourceFuture) Get(ctx workflow.Context) (*batch.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*batch.TagResourceOutput, error) {
 	var output batch.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchTerminateJobFuture struct {
+type TerminateJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchTerminateJobFuture) Get(ctx workflow.Context) (*batch.TerminateJobOutput, error) {
+func (r *TerminateJobFuture) Get(ctx workflow.Context) (*batch.TerminateJobOutput, error) {
 	var output batch.TerminateJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchUntagResourceFuture) Get(ctx workflow.Context) (*batch.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*batch.UntagResourceOutput, error) {
 	var output batch.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchUpdateComputeEnvironmentFuture struct {
+type UpdateComputeEnvironmentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchUpdateComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.UpdateComputeEnvironmentOutput, error) {
+func (r *UpdateComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.UpdateComputeEnvironmentOutput, error) {
 	var output batch.UpdateComputeEnvironmentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type BatchUpdateJobQueueFuture struct {
+type UpdateJobQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *BatchUpdateJobQueueFuture) Get(ctx workflow.Context) (*batch.UpdateJobQueueOutput, error) {
+func (r *UpdateJobQueueFuture) Get(ctx workflow.Context) (*batch.UpdateJobQueueOutput, error) {
 	var output batch.UpdateJobQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -231,9 +231,9 @@ func (a *stub) CancelJob(ctx workflow.Context, input *batch.CancelJobInput) (*ba
 	return &output, err
 }
 
-func (a *stub) CancelJobAsync(ctx workflow.Context, input *batch.CancelJobInput) *BatchCancelJobFuture {
+func (a *stub) CancelJobAsync(ctx workflow.Context, input *batch.CancelJobInput) *CancelJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.CancelJob", input)
-	return &BatchCancelJobFuture{Future: future}
+	return &CancelJobFuture{Future: future}
 }
 
 func (a *stub) CreateComputeEnvironment(ctx workflow.Context, input *batch.CreateComputeEnvironmentInput) (*batch.CreateComputeEnvironmentOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) CreateComputeEnvironment(ctx workflow.Context, input *batch.Creat
 	return &output, err
 }
 
-func (a *stub) CreateComputeEnvironmentAsync(ctx workflow.Context, input *batch.CreateComputeEnvironmentInput) *BatchCreateComputeEnvironmentFuture {
+func (a *stub) CreateComputeEnvironmentAsync(ctx workflow.Context, input *batch.CreateComputeEnvironmentInput) *CreateComputeEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.CreateComputeEnvironment", input)
-	return &BatchCreateComputeEnvironmentFuture{Future: future}
+	return &CreateComputeEnvironmentFuture{Future: future}
 }
 
 func (a *stub) CreateJobQueue(ctx workflow.Context, input *batch.CreateJobQueueInput) (*batch.CreateJobQueueOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) CreateJobQueue(ctx workflow.Context, input *batch.CreateJobQueueI
 	return &output, err
 }
 
-func (a *stub) CreateJobQueueAsync(ctx workflow.Context, input *batch.CreateJobQueueInput) *BatchCreateJobQueueFuture {
+func (a *stub) CreateJobQueueAsync(ctx workflow.Context, input *batch.CreateJobQueueInput) *CreateJobQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.CreateJobQueue", input)
-	return &BatchCreateJobQueueFuture{Future: future}
+	return &CreateJobQueueFuture{Future: future}
 }
 
 func (a *stub) DeleteComputeEnvironment(ctx workflow.Context, input *batch.DeleteComputeEnvironmentInput) (*batch.DeleteComputeEnvironmentOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) DeleteComputeEnvironment(ctx workflow.Context, input *batch.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteComputeEnvironmentAsync(ctx workflow.Context, input *batch.DeleteComputeEnvironmentInput) *BatchDeleteComputeEnvironmentFuture {
+func (a *stub) DeleteComputeEnvironmentAsync(ctx workflow.Context, input *batch.DeleteComputeEnvironmentInput) *DeleteComputeEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.DeleteComputeEnvironment", input)
-	return &BatchDeleteComputeEnvironmentFuture{Future: future}
+	return &DeleteComputeEnvironmentFuture{Future: future}
 }
 
 func (a *stub) DeleteJobQueue(ctx workflow.Context, input *batch.DeleteJobQueueInput) (*batch.DeleteJobQueueOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) DeleteJobQueue(ctx workflow.Context, input *batch.DeleteJobQueueI
 	return &output, err
 }
 
-func (a *stub) DeleteJobQueueAsync(ctx workflow.Context, input *batch.DeleteJobQueueInput) *BatchDeleteJobQueueFuture {
+func (a *stub) DeleteJobQueueAsync(ctx workflow.Context, input *batch.DeleteJobQueueInput) *DeleteJobQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.DeleteJobQueue", input)
-	return &BatchDeleteJobQueueFuture{Future: future}
+	return &DeleteJobQueueFuture{Future: future}
 }
 
 func (a *stub) DeregisterJobDefinition(ctx workflow.Context, input *batch.DeregisterJobDefinitionInput) (*batch.DeregisterJobDefinitionOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) DeregisterJobDefinition(ctx workflow.Context, input *batch.Deregi
 	return &output, err
 }
 
-func (a *stub) DeregisterJobDefinitionAsync(ctx workflow.Context, input *batch.DeregisterJobDefinitionInput) *BatchDeregisterJobDefinitionFuture {
+func (a *stub) DeregisterJobDefinitionAsync(ctx workflow.Context, input *batch.DeregisterJobDefinitionInput) *DeregisterJobDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.DeregisterJobDefinition", input)
-	return &BatchDeregisterJobDefinitionFuture{Future: future}
+	return &DeregisterJobDefinitionFuture{Future: future}
 }
 
 func (a *stub) DescribeComputeEnvironments(ctx workflow.Context, input *batch.DescribeComputeEnvironmentsInput) (*batch.DescribeComputeEnvironmentsOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) DescribeComputeEnvironments(ctx workflow.Context, input *batch.De
 	return &output, err
 }
 
-func (a *stub) DescribeComputeEnvironmentsAsync(ctx workflow.Context, input *batch.DescribeComputeEnvironmentsInput) *BatchDescribeComputeEnvironmentsFuture {
+func (a *stub) DescribeComputeEnvironmentsAsync(ctx workflow.Context, input *batch.DescribeComputeEnvironmentsInput) *DescribeComputeEnvironmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.DescribeComputeEnvironments", input)
-	return &BatchDescribeComputeEnvironmentsFuture{Future: future}
+	return &DescribeComputeEnvironmentsFuture{Future: future}
 }
 
 func (a *stub) DescribeJobDefinitions(ctx workflow.Context, input *batch.DescribeJobDefinitionsInput) (*batch.DescribeJobDefinitionsOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) DescribeJobDefinitions(ctx workflow.Context, input *batch.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeJobDefinitionsAsync(ctx workflow.Context, input *batch.DescribeJobDefinitionsInput) *BatchDescribeJobDefinitionsFuture {
+func (a *stub) DescribeJobDefinitionsAsync(ctx workflow.Context, input *batch.DescribeJobDefinitionsInput) *DescribeJobDefinitionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobDefinitions", input)
-	return &BatchDescribeJobDefinitionsFuture{Future: future}
+	return &DescribeJobDefinitionsFuture{Future: future}
 }
 
 func (a *stub) DescribeJobQueues(ctx workflow.Context, input *batch.DescribeJobQueuesInput) (*batch.DescribeJobQueuesOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) DescribeJobQueues(ctx workflow.Context, input *batch.DescribeJobQ
 	return &output, err
 }
 
-func (a *stub) DescribeJobQueuesAsync(ctx workflow.Context, input *batch.DescribeJobQueuesInput) *BatchDescribeJobQueuesFuture {
+func (a *stub) DescribeJobQueuesAsync(ctx workflow.Context, input *batch.DescribeJobQueuesInput) *DescribeJobQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobQueues", input)
-	return &BatchDescribeJobQueuesFuture{Future: future}
+	return &DescribeJobQueuesFuture{Future: future}
 }
 
 func (a *stub) DescribeJobs(ctx workflow.Context, input *batch.DescribeJobsInput) (*batch.DescribeJobsOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) DescribeJobs(ctx workflow.Context, input *batch.DescribeJobsInput
 	return &output, err
 }
 
-func (a *stub) DescribeJobsAsync(ctx workflow.Context, input *batch.DescribeJobsInput) *BatchDescribeJobsFuture {
+func (a *stub) DescribeJobsAsync(ctx workflow.Context, input *batch.DescribeJobsInput) *DescribeJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobs", input)
-	return &BatchDescribeJobsFuture{Future: future}
+	return &DescribeJobsFuture{Future: future}
 }
 
 func (a *stub) ListJobs(ctx workflow.Context, input *batch.ListJobsInput) (*batch.ListJobsOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) ListJobs(ctx workflow.Context, input *batch.ListJobsInput) (*batc
 	return &output, err
 }
 
-func (a *stub) ListJobsAsync(ctx workflow.Context, input *batch.ListJobsInput) *BatchListJobsFuture {
+func (a *stub) ListJobsAsync(ctx workflow.Context, input *batch.ListJobsInput) *ListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.ListJobs", input)
-	return &BatchListJobsFuture{Future: future}
+	return &ListJobsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *batch.ListTagsForResourceInput) (*batch.ListTagsForResourceOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *batch.ListTagsFo
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *batch.ListTagsForResourceInput) *BatchListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *batch.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.ListTagsForResource", input)
-	return &BatchListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) RegisterJobDefinition(ctx workflow.Context, input *batch.RegisterJobDefinitionInput) (*batch.RegisterJobDefinitionOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) RegisterJobDefinition(ctx workflow.Context, input *batch.Register
 	return &output, err
 }
 
-func (a *stub) RegisterJobDefinitionAsync(ctx workflow.Context, input *batch.RegisterJobDefinitionInput) *BatchRegisterJobDefinitionFuture {
+func (a *stub) RegisterJobDefinitionAsync(ctx workflow.Context, input *batch.RegisterJobDefinitionInput) *RegisterJobDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.RegisterJobDefinition", input)
-	return &BatchRegisterJobDefinitionFuture{Future: future}
+	return &RegisterJobDefinitionFuture{Future: future}
 }
 
 func (a *stub) SubmitJob(ctx workflow.Context, input *batch.SubmitJobInput) (*batch.SubmitJobOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) SubmitJob(ctx workflow.Context, input *batch.SubmitJobInput) (*ba
 	return &output, err
 }
 
-func (a *stub) SubmitJobAsync(ctx workflow.Context, input *batch.SubmitJobInput) *BatchSubmitJobFuture {
+func (a *stub) SubmitJobAsync(ctx workflow.Context, input *batch.SubmitJobInput) *SubmitJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.SubmitJob", input)
-	return &BatchSubmitJobFuture{Future: future}
+	return &SubmitJobFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *batch.TagResourceInput) (*batch.TagResourceOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *batch.TagResourceInput) 
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *batch.TagResourceInput) *BatchTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *batch.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.TagResource", input)
-	return &BatchTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) TerminateJob(ctx workflow.Context, input *batch.TerminateJobInput) (*batch.TerminateJobOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) TerminateJob(ctx workflow.Context, input *batch.TerminateJobInput
 	return &output, err
 }
 
-func (a *stub) TerminateJobAsync(ctx workflow.Context, input *batch.TerminateJobInput) *BatchTerminateJobFuture {
+func (a *stub) TerminateJobAsync(ctx workflow.Context, input *batch.TerminateJobInput) *TerminateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.TerminateJob", input)
-	return &BatchTerminateJobFuture{Future: future}
+	return &TerminateJobFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *batch.UntagResourceInput) (*batch.UntagResourceOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *batch.UntagResourceInp
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *batch.UntagResourceInput) *BatchUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *batch.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.UntagResource", input)
-	return &BatchUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateComputeEnvironment(ctx workflow.Context, input *batch.UpdateComputeEnvironmentInput) (*batch.UpdateComputeEnvironmentOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) UpdateComputeEnvironment(ctx workflow.Context, input *batch.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateComputeEnvironmentAsync(ctx workflow.Context, input *batch.UpdateComputeEnvironmentInput) *BatchUpdateComputeEnvironmentFuture {
+func (a *stub) UpdateComputeEnvironmentAsync(ctx workflow.Context, input *batch.UpdateComputeEnvironmentInput) *UpdateComputeEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.UpdateComputeEnvironment", input)
-	return &BatchUpdateComputeEnvironmentFuture{Future: future}
+	return &UpdateComputeEnvironmentFuture{Future: future}
 }
 
 func (a *stub) UpdateJobQueue(ctx workflow.Context, input *batch.UpdateJobQueueInput) (*batch.UpdateJobQueueOutput, error) {
@@ -429,7 +429,7 @@ func (a *stub) UpdateJobQueue(ctx workflow.Context, input *batch.UpdateJobQueueI
 	return &output, err
 }
 
-func (a *stub) UpdateJobQueueAsync(ctx workflow.Context, input *batch.UpdateJobQueueInput) *BatchUpdateJobQueueFuture {
+func (a *stub) UpdateJobQueueAsync(ctx workflow.Context, input *batch.UpdateJobQueueInput) *UpdateJobQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.batch.UpdateJobQueue", input)
-	return &BatchUpdateJobQueueFuture{Future: future}
+	return &UpdateJobQueueFuture{Future: future}
 }

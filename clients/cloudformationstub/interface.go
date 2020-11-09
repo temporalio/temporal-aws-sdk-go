@@ -16,169 +16,169 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelUpdateStack(ctx workflow.Context, input *cloudformation.CancelUpdateStackInput) (*cloudformation.CancelUpdateStackOutput, error)
-	CancelUpdateStackAsync(ctx workflow.Context, input *cloudformation.CancelUpdateStackInput) *CloudFormationCancelUpdateStackFuture
+	CancelUpdateStackAsync(ctx workflow.Context, input *cloudformation.CancelUpdateStackInput) *CancelUpdateStackFuture
 
 	ContinueUpdateRollback(ctx workflow.Context, input *cloudformation.ContinueUpdateRollbackInput) (*cloudformation.ContinueUpdateRollbackOutput, error)
-	ContinueUpdateRollbackAsync(ctx workflow.Context, input *cloudformation.ContinueUpdateRollbackInput) *CloudFormationContinueUpdateRollbackFuture
+	ContinueUpdateRollbackAsync(ctx workflow.Context, input *cloudformation.ContinueUpdateRollbackInput) *ContinueUpdateRollbackFuture
 
 	CreateChangeSet(ctx workflow.Context, input *cloudformation.CreateChangeSetInput) (*cloudformation.CreateChangeSetOutput, error)
-	CreateChangeSetAsync(ctx workflow.Context, input *cloudformation.CreateChangeSetInput) *CloudFormationCreateChangeSetFuture
+	CreateChangeSetAsync(ctx workflow.Context, input *cloudformation.CreateChangeSetInput) *CreateChangeSetFuture
 
 	CreateStack(ctx workflow.Context, input *cloudformation.CreateStackInput) (*cloudformation.CreateStackOutput, error)
-	CreateStackAsync(ctx workflow.Context, input *cloudformation.CreateStackInput) *CloudFormationCreateStackFuture
+	CreateStackAsync(ctx workflow.Context, input *cloudformation.CreateStackInput) *CreateStackFuture
 
 	CreateStackInstances(ctx workflow.Context, input *cloudformation.CreateStackInstancesInput) (*cloudformation.CreateStackInstancesOutput, error)
-	CreateStackInstancesAsync(ctx workflow.Context, input *cloudformation.CreateStackInstancesInput) *CloudFormationCreateStackInstancesFuture
+	CreateStackInstancesAsync(ctx workflow.Context, input *cloudformation.CreateStackInstancesInput) *CreateStackInstancesFuture
 
 	CreateStackSet(ctx workflow.Context, input *cloudformation.CreateStackSetInput) (*cloudformation.CreateStackSetOutput, error)
-	CreateStackSetAsync(ctx workflow.Context, input *cloudformation.CreateStackSetInput) *CloudFormationCreateStackSetFuture
+	CreateStackSetAsync(ctx workflow.Context, input *cloudformation.CreateStackSetInput) *CreateStackSetFuture
 
 	DeleteChangeSet(ctx workflow.Context, input *cloudformation.DeleteChangeSetInput) (*cloudformation.DeleteChangeSetOutput, error)
-	DeleteChangeSetAsync(ctx workflow.Context, input *cloudformation.DeleteChangeSetInput) *CloudFormationDeleteChangeSetFuture
+	DeleteChangeSetAsync(ctx workflow.Context, input *cloudformation.DeleteChangeSetInput) *DeleteChangeSetFuture
 
 	DeleteStack(ctx workflow.Context, input *cloudformation.DeleteStackInput) (*cloudformation.DeleteStackOutput, error)
-	DeleteStackAsync(ctx workflow.Context, input *cloudformation.DeleteStackInput) *CloudFormationDeleteStackFuture
+	DeleteStackAsync(ctx workflow.Context, input *cloudformation.DeleteStackInput) *DeleteStackFuture
 
 	DeleteStackInstances(ctx workflow.Context, input *cloudformation.DeleteStackInstancesInput) (*cloudformation.DeleteStackInstancesOutput, error)
-	DeleteStackInstancesAsync(ctx workflow.Context, input *cloudformation.DeleteStackInstancesInput) *CloudFormationDeleteStackInstancesFuture
+	DeleteStackInstancesAsync(ctx workflow.Context, input *cloudformation.DeleteStackInstancesInput) *DeleteStackInstancesFuture
 
 	DeleteStackSet(ctx workflow.Context, input *cloudformation.DeleteStackSetInput) (*cloudformation.DeleteStackSetOutput, error)
-	DeleteStackSetAsync(ctx workflow.Context, input *cloudformation.DeleteStackSetInput) *CloudFormationDeleteStackSetFuture
+	DeleteStackSetAsync(ctx workflow.Context, input *cloudformation.DeleteStackSetInput) *DeleteStackSetFuture
 
 	DeregisterType(ctx workflow.Context, input *cloudformation.DeregisterTypeInput) (*cloudformation.DeregisterTypeOutput, error)
-	DeregisterTypeAsync(ctx workflow.Context, input *cloudformation.DeregisterTypeInput) *CloudFormationDeregisterTypeFuture
+	DeregisterTypeAsync(ctx workflow.Context, input *cloudformation.DeregisterTypeInput) *DeregisterTypeFuture
 
 	DescribeAccountLimits(ctx workflow.Context, input *cloudformation.DescribeAccountLimitsInput) (*cloudformation.DescribeAccountLimitsOutput, error)
-	DescribeAccountLimitsAsync(ctx workflow.Context, input *cloudformation.DescribeAccountLimitsInput) *CloudFormationDescribeAccountLimitsFuture
+	DescribeAccountLimitsAsync(ctx workflow.Context, input *cloudformation.DescribeAccountLimitsInput) *DescribeAccountLimitsFuture
 
 	DescribeChangeSet(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) (*cloudformation.DescribeChangeSetOutput, error)
-	DescribeChangeSetAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) *CloudFormationDescribeChangeSetFuture
+	DescribeChangeSetAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) *DescribeChangeSetFuture
 
 	DescribeStackDriftDetectionStatus(ctx workflow.Context, input *cloudformation.DescribeStackDriftDetectionStatusInput) (*cloudformation.DescribeStackDriftDetectionStatusOutput, error)
-	DescribeStackDriftDetectionStatusAsync(ctx workflow.Context, input *cloudformation.DescribeStackDriftDetectionStatusInput) *CloudFormationDescribeStackDriftDetectionStatusFuture
+	DescribeStackDriftDetectionStatusAsync(ctx workflow.Context, input *cloudformation.DescribeStackDriftDetectionStatusInput) *DescribeStackDriftDetectionStatusFuture
 
 	DescribeStackEvents(ctx workflow.Context, input *cloudformation.DescribeStackEventsInput) (*cloudformation.DescribeStackEventsOutput, error)
-	DescribeStackEventsAsync(ctx workflow.Context, input *cloudformation.DescribeStackEventsInput) *CloudFormationDescribeStackEventsFuture
+	DescribeStackEventsAsync(ctx workflow.Context, input *cloudformation.DescribeStackEventsInput) *DescribeStackEventsFuture
 
 	DescribeStackInstance(ctx workflow.Context, input *cloudformation.DescribeStackInstanceInput) (*cloudformation.DescribeStackInstanceOutput, error)
-	DescribeStackInstanceAsync(ctx workflow.Context, input *cloudformation.DescribeStackInstanceInput) *CloudFormationDescribeStackInstanceFuture
+	DescribeStackInstanceAsync(ctx workflow.Context, input *cloudformation.DescribeStackInstanceInput) *DescribeStackInstanceFuture
 
 	DescribeStackResource(ctx workflow.Context, input *cloudformation.DescribeStackResourceInput) (*cloudformation.DescribeStackResourceOutput, error)
-	DescribeStackResourceAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourceInput) *CloudFormationDescribeStackResourceFuture
+	DescribeStackResourceAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourceInput) *DescribeStackResourceFuture
 
 	DescribeStackResourceDrifts(ctx workflow.Context, input *cloudformation.DescribeStackResourceDriftsInput) (*cloudformation.DescribeStackResourceDriftsOutput, error)
-	DescribeStackResourceDriftsAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourceDriftsInput) *CloudFormationDescribeStackResourceDriftsFuture
+	DescribeStackResourceDriftsAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourceDriftsInput) *DescribeStackResourceDriftsFuture
 
 	DescribeStackResources(ctx workflow.Context, input *cloudformation.DescribeStackResourcesInput) (*cloudformation.DescribeStackResourcesOutput, error)
-	DescribeStackResourcesAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourcesInput) *CloudFormationDescribeStackResourcesFuture
+	DescribeStackResourcesAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourcesInput) *DescribeStackResourcesFuture
 
 	DescribeStackSet(ctx workflow.Context, input *cloudformation.DescribeStackSetInput) (*cloudformation.DescribeStackSetOutput, error)
-	DescribeStackSetAsync(ctx workflow.Context, input *cloudformation.DescribeStackSetInput) *CloudFormationDescribeStackSetFuture
+	DescribeStackSetAsync(ctx workflow.Context, input *cloudformation.DescribeStackSetInput) *DescribeStackSetFuture
 
 	DescribeStackSetOperation(ctx workflow.Context, input *cloudformation.DescribeStackSetOperationInput) (*cloudformation.DescribeStackSetOperationOutput, error)
-	DescribeStackSetOperationAsync(ctx workflow.Context, input *cloudformation.DescribeStackSetOperationInput) *CloudFormationDescribeStackSetOperationFuture
+	DescribeStackSetOperationAsync(ctx workflow.Context, input *cloudformation.DescribeStackSetOperationInput) *DescribeStackSetOperationFuture
 
 	DescribeStacks(ctx workflow.Context, input *cloudformation.DescribeStacksInput) (*cloudformation.DescribeStacksOutput, error)
-	DescribeStacksAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *CloudFormationDescribeStacksFuture
+	DescribeStacksAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *DescribeStacksFuture
 
 	DescribeType(ctx workflow.Context, input *cloudformation.DescribeTypeInput) (*cloudformation.DescribeTypeOutput, error)
-	DescribeTypeAsync(ctx workflow.Context, input *cloudformation.DescribeTypeInput) *CloudFormationDescribeTypeFuture
+	DescribeTypeAsync(ctx workflow.Context, input *cloudformation.DescribeTypeInput) *DescribeTypeFuture
 
 	DescribeTypeRegistration(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) (*cloudformation.DescribeTypeRegistrationOutput, error)
-	DescribeTypeRegistrationAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) *CloudFormationDescribeTypeRegistrationFuture
+	DescribeTypeRegistrationAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) *DescribeTypeRegistrationFuture
 
 	DetectStackDrift(ctx workflow.Context, input *cloudformation.DetectStackDriftInput) (*cloudformation.DetectStackDriftOutput, error)
-	DetectStackDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackDriftInput) *CloudFormationDetectStackDriftFuture
+	DetectStackDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackDriftInput) *DetectStackDriftFuture
 
 	DetectStackResourceDrift(ctx workflow.Context, input *cloudformation.DetectStackResourceDriftInput) (*cloudformation.DetectStackResourceDriftOutput, error)
-	DetectStackResourceDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackResourceDriftInput) *CloudFormationDetectStackResourceDriftFuture
+	DetectStackResourceDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackResourceDriftInput) *DetectStackResourceDriftFuture
 
 	DetectStackSetDrift(ctx workflow.Context, input *cloudformation.DetectStackSetDriftInput) (*cloudformation.DetectStackSetDriftOutput, error)
-	DetectStackSetDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackSetDriftInput) *CloudFormationDetectStackSetDriftFuture
+	DetectStackSetDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackSetDriftInput) *DetectStackSetDriftFuture
 
 	EstimateTemplateCost(ctx workflow.Context, input *cloudformation.EstimateTemplateCostInput) (*cloudformation.EstimateTemplateCostOutput, error)
-	EstimateTemplateCostAsync(ctx workflow.Context, input *cloudformation.EstimateTemplateCostInput) *CloudFormationEstimateTemplateCostFuture
+	EstimateTemplateCostAsync(ctx workflow.Context, input *cloudformation.EstimateTemplateCostInput) *EstimateTemplateCostFuture
 
 	ExecuteChangeSet(ctx workflow.Context, input *cloudformation.ExecuteChangeSetInput) (*cloudformation.ExecuteChangeSetOutput, error)
-	ExecuteChangeSetAsync(ctx workflow.Context, input *cloudformation.ExecuteChangeSetInput) *CloudFormationExecuteChangeSetFuture
+	ExecuteChangeSetAsync(ctx workflow.Context, input *cloudformation.ExecuteChangeSetInput) *ExecuteChangeSetFuture
 
 	GetStackPolicy(ctx workflow.Context, input *cloudformation.GetStackPolicyInput) (*cloudformation.GetStackPolicyOutput, error)
-	GetStackPolicyAsync(ctx workflow.Context, input *cloudformation.GetStackPolicyInput) *CloudFormationGetStackPolicyFuture
+	GetStackPolicyAsync(ctx workflow.Context, input *cloudformation.GetStackPolicyInput) *GetStackPolicyFuture
 
 	GetTemplate(ctx workflow.Context, input *cloudformation.GetTemplateInput) (*cloudformation.GetTemplateOutput, error)
-	GetTemplateAsync(ctx workflow.Context, input *cloudformation.GetTemplateInput) *CloudFormationGetTemplateFuture
+	GetTemplateAsync(ctx workflow.Context, input *cloudformation.GetTemplateInput) *GetTemplateFuture
 
 	GetTemplateSummary(ctx workflow.Context, input *cloudformation.GetTemplateSummaryInput) (*cloudformation.GetTemplateSummaryOutput, error)
-	GetTemplateSummaryAsync(ctx workflow.Context, input *cloudformation.GetTemplateSummaryInput) *CloudFormationGetTemplateSummaryFuture
+	GetTemplateSummaryAsync(ctx workflow.Context, input *cloudformation.GetTemplateSummaryInput) *GetTemplateSummaryFuture
 
 	ListChangeSets(ctx workflow.Context, input *cloudformation.ListChangeSetsInput) (*cloudformation.ListChangeSetsOutput, error)
-	ListChangeSetsAsync(ctx workflow.Context, input *cloudformation.ListChangeSetsInput) *CloudFormationListChangeSetsFuture
+	ListChangeSetsAsync(ctx workflow.Context, input *cloudformation.ListChangeSetsInput) *ListChangeSetsFuture
 
 	ListExports(ctx workflow.Context, input *cloudformation.ListExportsInput) (*cloudformation.ListExportsOutput, error)
-	ListExportsAsync(ctx workflow.Context, input *cloudformation.ListExportsInput) *CloudFormationListExportsFuture
+	ListExportsAsync(ctx workflow.Context, input *cloudformation.ListExportsInput) *ListExportsFuture
 
 	ListImports(ctx workflow.Context, input *cloudformation.ListImportsInput) (*cloudformation.ListImportsOutput, error)
-	ListImportsAsync(ctx workflow.Context, input *cloudformation.ListImportsInput) *CloudFormationListImportsFuture
+	ListImportsAsync(ctx workflow.Context, input *cloudformation.ListImportsInput) *ListImportsFuture
 
 	ListStackInstances(ctx workflow.Context, input *cloudformation.ListStackInstancesInput) (*cloudformation.ListStackInstancesOutput, error)
-	ListStackInstancesAsync(ctx workflow.Context, input *cloudformation.ListStackInstancesInput) *CloudFormationListStackInstancesFuture
+	ListStackInstancesAsync(ctx workflow.Context, input *cloudformation.ListStackInstancesInput) *ListStackInstancesFuture
 
 	ListStackResources(ctx workflow.Context, input *cloudformation.ListStackResourcesInput) (*cloudformation.ListStackResourcesOutput, error)
-	ListStackResourcesAsync(ctx workflow.Context, input *cloudformation.ListStackResourcesInput) *CloudFormationListStackResourcesFuture
+	ListStackResourcesAsync(ctx workflow.Context, input *cloudformation.ListStackResourcesInput) *ListStackResourcesFuture
 
 	ListStackSetOperationResults(ctx workflow.Context, input *cloudformation.ListStackSetOperationResultsInput) (*cloudformation.ListStackSetOperationResultsOutput, error)
-	ListStackSetOperationResultsAsync(ctx workflow.Context, input *cloudformation.ListStackSetOperationResultsInput) *CloudFormationListStackSetOperationResultsFuture
+	ListStackSetOperationResultsAsync(ctx workflow.Context, input *cloudformation.ListStackSetOperationResultsInput) *ListStackSetOperationResultsFuture
 
 	ListStackSetOperations(ctx workflow.Context, input *cloudformation.ListStackSetOperationsInput) (*cloudformation.ListStackSetOperationsOutput, error)
-	ListStackSetOperationsAsync(ctx workflow.Context, input *cloudformation.ListStackSetOperationsInput) *CloudFormationListStackSetOperationsFuture
+	ListStackSetOperationsAsync(ctx workflow.Context, input *cloudformation.ListStackSetOperationsInput) *ListStackSetOperationsFuture
 
 	ListStackSets(ctx workflow.Context, input *cloudformation.ListStackSetsInput) (*cloudformation.ListStackSetsOutput, error)
-	ListStackSetsAsync(ctx workflow.Context, input *cloudformation.ListStackSetsInput) *CloudFormationListStackSetsFuture
+	ListStackSetsAsync(ctx workflow.Context, input *cloudformation.ListStackSetsInput) *ListStackSetsFuture
 
 	ListStacks(ctx workflow.Context, input *cloudformation.ListStacksInput) (*cloudformation.ListStacksOutput, error)
-	ListStacksAsync(ctx workflow.Context, input *cloudformation.ListStacksInput) *CloudFormationListStacksFuture
+	ListStacksAsync(ctx workflow.Context, input *cloudformation.ListStacksInput) *ListStacksFuture
 
 	ListTypeRegistrations(ctx workflow.Context, input *cloudformation.ListTypeRegistrationsInput) (*cloudformation.ListTypeRegistrationsOutput, error)
-	ListTypeRegistrationsAsync(ctx workflow.Context, input *cloudformation.ListTypeRegistrationsInput) *CloudFormationListTypeRegistrationsFuture
+	ListTypeRegistrationsAsync(ctx workflow.Context, input *cloudformation.ListTypeRegistrationsInput) *ListTypeRegistrationsFuture
 
 	ListTypeVersions(ctx workflow.Context, input *cloudformation.ListTypeVersionsInput) (*cloudformation.ListTypeVersionsOutput, error)
-	ListTypeVersionsAsync(ctx workflow.Context, input *cloudformation.ListTypeVersionsInput) *CloudFormationListTypeVersionsFuture
+	ListTypeVersionsAsync(ctx workflow.Context, input *cloudformation.ListTypeVersionsInput) *ListTypeVersionsFuture
 
 	ListTypes(ctx workflow.Context, input *cloudformation.ListTypesInput) (*cloudformation.ListTypesOutput, error)
-	ListTypesAsync(ctx workflow.Context, input *cloudformation.ListTypesInput) *CloudFormationListTypesFuture
+	ListTypesAsync(ctx workflow.Context, input *cloudformation.ListTypesInput) *ListTypesFuture
 
 	RecordHandlerProgress(ctx workflow.Context, input *cloudformation.RecordHandlerProgressInput) (*cloudformation.RecordHandlerProgressOutput, error)
-	RecordHandlerProgressAsync(ctx workflow.Context, input *cloudformation.RecordHandlerProgressInput) *CloudFormationRecordHandlerProgressFuture
+	RecordHandlerProgressAsync(ctx workflow.Context, input *cloudformation.RecordHandlerProgressInput) *RecordHandlerProgressFuture
 
 	RegisterType(ctx workflow.Context, input *cloudformation.RegisterTypeInput) (*cloudformation.RegisterTypeOutput, error)
-	RegisterTypeAsync(ctx workflow.Context, input *cloudformation.RegisterTypeInput) *CloudFormationRegisterTypeFuture
+	RegisterTypeAsync(ctx workflow.Context, input *cloudformation.RegisterTypeInput) *RegisterTypeFuture
 
 	SetStackPolicy(ctx workflow.Context, input *cloudformation.SetStackPolicyInput) (*cloudformation.SetStackPolicyOutput, error)
-	SetStackPolicyAsync(ctx workflow.Context, input *cloudformation.SetStackPolicyInput) *CloudFormationSetStackPolicyFuture
+	SetStackPolicyAsync(ctx workflow.Context, input *cloudformation.SetStackPolicyInput) *SetStackPolicyFuture
 
 	SetTypeDefaultVersion(ctx workflow.Context, input *cloudformation.SetTypeDefaultVersionInput) (*cloudformation.SetTypeDefaultVersionOutput, error)
-	SetTypeDefaultVersionAsync(ctx workflow.Context, input *cloudformation.SetTypeDefaultVersionInput) *CloudFormationSetTypeDefaultVersionFuture
+	SetTypeDefaultVersionAsync(ctx workflow.Context, input *cloudformation.SetTypeDefaultVersionInput) *SetTypeDefaultVersionFuture
 
 	SignalResource(ctx workflow.Context, input *cloudformation.SignalResourceInput) (*cloudformation.SignalResourceOutput, error)
-	SignalResourceAsync(ctx workflow.Context, input *cloudformation.SignalResourceInput) *CloudFormationSignalResourceFuture
+	SignalResourceAsync(ctx workflow.Context, input *cloudformation.SignalResourceInput) *SignalResourceFuture
 
 	StopStackSetOperation(ctx workflow.Context, input *cloudformation.StopStackSetOperationInput) (*cloudformation.StopStackSetOperationOutput, error)
-	StopStackSetOperationAsync(ctx workflow.Context, input *cloudformation.StopStackSetOperationInput) *CloudFormationStopStackSetOperationFuture
+	StopStackSetOperationAsync(ctx workflow.Context, input *cloudformation.StopStackSetOperationInput) *StopStackSetOperationFuture
 
 	UpdateStack(ctx workflow.Context, input *cloudformation.UpdateStackInput) (*cloudformation.UpdateStackOutput, error)
-	UpdateStackAsync(ctx workflow.Context, input *cloudformation.UpdateStackInput) *CloudFormationUpdateStackFuture
+	UpdateStackAsync(ctx workflow.Context, input *cloudformation.UpdateStackInput) *UpdateStackFuture
 
 	UpdateStackInstances(ctx workflow.Context, input *cloudformation.UpdateStackInstancesInput) (*cloudformation.UpdateStackInstancesOutput, error)
-	UpdateStackInstancesAsync(ctx workflow.Context, input *cloudformation.UpdateStackInstancesInput) *CloudFormationUpdateStackInstancesFuture
+	UpdateStackInstancesAsync(ctx workflow.Context, input *cloudformation.UpdateStackInstancesInput) *UpdateStackInstancesFuture
 
 	UpdateStackSet(ctx workflow.Context, input *cloudformation.UpdateStackSetInput) (*cloudformation.UpdateStackSetOutput, error)
-	UpdateStackSetAsync(ctx workflow.Context, input *cloudformation.UpdateStackSetInput) *CloudFormationUpdateStackSetFuture
+	UpdateStackSetAsync(ctx workflow.Context, input *cloudformation.UpdateStackSetInput) *UpdateStackSetFuture
 
 	UpdateTerminationProtection(ctx workflow.Context, input *cloudformation.UpdateTerminationProtectionInput) (*cloudformation.UpdateTerminationProtectionOutput, error)
-	UpdateTerminationProtectionAsync(ctx workflow.Context, input *cloudformation.UpdateTerminationProtectionInput) *CloudFormationUpdateTerminationProtectionFuture
+	UpdateTerminationProtectionAsync(ctx workflow.Context, input *cloudformation.UpdateTerminationProtectionInput) *UpdateTerminationProtectionFuture
 
 	ValidateTemplate(ctx workflow.Context, input *cloudformation.ValidateTemplateInput) (*cloudformation.ValidateTemplateOutput, error)
-	ValidateTemplateAsync(ctx workflow.Context, input *cloudformation.ValidateTemplateInput) *CloudFormationValidateTemplateFuture
+	ValidateTemplateAsync(ctx workflow.Context, input *cloudformation.ValidateTemplateInput) *ValidateTemplateFuture
 
 	WaitUntilChangeSetCreateComplete(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) error
 	WaitUntilChangeSetCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) *clients.VoidFuture

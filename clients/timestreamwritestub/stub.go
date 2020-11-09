@@ -16,166 +16,166 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type TimestreamWriteCreateDatabaseFuture struct {
+type CreateDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteCreateDatabaseFuture) Get(ctx workflow.Context) (*timestreamwrite.CreateDatabaseOutput, error) {
+func (r *CreateDatabaseFuture) Get(ctx workflow.Context) (*timestreamwrite.CreateDatabaseOutput, error) {
 	var output timestreamwrite.CreateDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteCreateTableFuture struct {
+type CreateTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteCreateTableFuture) Get(ctx workflow.Context) (*timestreamwrite.CreateTableOutput, error) {
+func (r *CreateTableFuture) Get(ctx workflow.Context) (*timestreamwrite.CreateTableOutput, error) {
 	var output timestreamwrite.CreateTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteDeleteDatabaseFuture struct {
+type DeleteDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteDeleteDatabaseFuture) Get(ctx workflow.Context) (*timestreamwrite.DeleteDatabaseOutput, error) {
+func (r *DeleteDatabaseFuture) Get(ctx workflow.Context) (*timestreamwrite.DeleteDatabaseOutput, error) {
 	var output timestreamwrite.DeleteDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteDeleteTableFuture struct {
+type DeleteTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteDeleteTableFuture) Get(ctx workflow.Context) (*timestreamwrite.DeleteTableOutput, error) {
+func (r *DeleteTableFuture) Get(ctx workflow.Context) (*timestreamwrite.DeleteTableOutput, error) {
 	var output timestreamwrite.DeleteTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteDescribeDatabaseFuture struct {
+type DescribeDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteDescribeDatabaseFuture) Get(ctx workflow.Context) (*timestreamwrite.DescribeDatabaseOutput, error) {
+func (r *DescribeDatabaseFuture) Get(ctx workflow.Context) (*timestreamwrite.DescribeDatabaseOutput, error) {
 	var output timestreamwrite.DescribeDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteDescribeEndpointsFuture struct {
+type DescribeEndpointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteDescribeEndpointsFuture) Get(ctx workflow.Context) (*timestreamwrite.DescribeEndpointsOutput, error) {
+func (r *DescribeEndpointsFuture) Get(ctx workflow.Context) (*timestreamwrite.DescribeEndpointsOutput, error) {
 	var output timestreamwrite.DescribeEndpointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteDescribeTableFuture struct {
+type DescribeTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteDescribeTableFuture) Get(ctx workflow.Context) (*timestreamwrite.DescribeTableOutput, error) {
+func (r *DescribeTableFuture) Get(ctx workflow.Context) (*timestreamwrite.DescribeTableOutput, error) {
 	var output timestreamwrite.DescribeTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteListDatabasesFuture struct {
+type ListDatabasesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteListDatabasesFuture) Get(ctx workflow.Context) (*timestreamwrite.ListDatabasesOutput, error) {
+func (r *ListDatabasesFuture) Get(ctx workflow.Context) (*timestreamwrite.ListDatabasesOutput, error) {
 	var output timestreamwrite.ListDatabasesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteListTablesFuture struct {
+type ListTablesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteListTablesFuture) Get(ctx workflow.Context) (*timestreamwrite.ListTablesOutput, error) {
+func (r *ListTablesFuture) Get(ctx workflow.Context) (*timestreamwrite.ListTablesOutput, error) {
 	var output timestreamwrite.ListTablesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteListTagsForResourceFuture) Get(ctx workflow.Context) (*timestreamwrite.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*timestreamwrite.ListTagsForResourceOutput, error) {
 	var output timestreamwrite.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteTagResourceFuture) Get(ctx workflow.Context) (*timestreamwrite.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*timestreamwrite.TagResourceOutput, error) {
 	var output timestreamwrite.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteUntagResourceFuture) Get(ctx workflow.Context) (*timestreamwrite.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*timestreamwrite.UntagResourceOutput, error) {
 	var output timestreamwrite.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteUpdateDatabaseFuture struct {
+type UpdateDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteUpdateDatabaseFuture) Get(ctx workflow.Context) (*timestreamwrite.UpdateDatabaseOutput, error) {
+func (r *UpdateDatabaseFuture) Get(ctx workflow.Context) (*timestreamwrite.UpdateDatabaseOutput, error) {
 	var output timestreamwrite.UpdateDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteUpdateTableFuture struct {
+type UpdateTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteUpdateTableFuture) Get(ctx workflow.Context) (*timestreamwrite.UpdateTableOutput, error) {
+func (r *UpdateTableFuture) Get(ctx workflow.Context) (*timestreamwrite.UpdateTableOutput, error) {
 	var output timestreamwrite.UpdateTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TimestreamWriteWriteRecordsFuture struct {
+type WriteRecordsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TimestreamWriteWriteRecordsFuture) Get(ctx workflow.Context) (*timestreamwrite.WriteRecordsOutput, error) {
+func (r *WriteRecordsFuture) Get(ctx workflow.Context) (*timestreamwrite.WriteRecordsOutput, error) {
 	var output timestreamwrite.WriteRecordsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -187,9 +187,9 @@ func (a *stub) CreateDatabase(ctx workflow.Context, input *timestreamwrite.Creat
 	return &output, err
 }
 
-func (a *stub) CreateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.CreateDatabaseInput) *TimestreamWriteCreateDatabaseFuture {
+func (a *stub) CreateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.CreateDatabaseInput) *CreateDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.CreateDatabase", input)
-	return &TimestreamWriteCreateDatabaseFuture{Future: future}
+	return &CreateDatabaseFuture{Future: future}
 }
 
 func (a *stub) CreateTable(ctx workflow.Context, input *timestreamwrite.CreateTableInput) (*timestreamwrite.CreateTableOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) CreateTable(ctx workflow.Context, input *timestreamwrite.CreateTa
 	return &output, err
 }
 
-func (a *stub) CreateTableAsync(ctx workflow.Context, input *timestreamwrite.CreateTableInput) *TimestreamWriteCreateTableFuture {
+func (a *stub) CreateTableAsync(ctx workflow.Context, input *timestreamwrite.CreateTableInput) *CreateTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.CreateTable", input)
-	return &TimestreamWriteCreateTableFuture{Future: future}
+	return &CreateTableFuture{Future: future}
 }
 
 func (a *stub) DeleteDatabase(ctx workflow.Context, input *timestreamwrite.DeleteDatabaseInput) (*timestreamwrite.DeleteDatabaseOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) DeleteDatabase(ctx workflow.Context, input *timestreamwrite.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteDatabaseAsync(ctx workflow.Context, input *timestreamwrite.DeleteDatabaseInput) *TimestreamWriteDeleteDatabaseFuture {
+func (a *stub) DeleteDatabaseAsync(ctx workflow.Context, input *timestreamwrite.DeleteDatabaseInput) *DeleteDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.DeleteDatabase", input)
-	return &TimestreamWriteDeleteDatabaseFuture{Future: future}
+	return &DeleteDatabaseFuture{Future: future}
 }
 
 func (a *stub) DeleteTable(ctx workflow.Context, input *timestreamwrite.DeleteTableInput) (*timestreamwrite.DeleteTableOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) DeleteTable(ctx workflow.Context, input *timestreamwrite.DeleteTa
 	return &output, err
 }
 
-func (a *stub) DeleteTableAsync(ctx workflow.Context, input *timestreamwrite.DeleteTableInput) *TimestreamWriteDeleteTableFuture {
+func (a *stub) DeleteTableAsync(ctx workflow.Context, input *timestreamwrite.DeleteTableInput) *DeleteTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.DeleteTable", input)
-	return &TimestreamWriteDeleteTableFuture{Future: future}
+	return &DeleteTableFuture{Future: future}
 }
 
 func (a *stub) DescribeDatabase(ctx workflow.Context, input *timestreamwrite.DescribeDatabaseInput) (*timestreamwrite.DescribeDatabaseOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) DescribeDatabase(ctx workflow.Context, input *timestreamwrite.Des
 	return &output, err
 }
 
-func (a *stub) DescribeDatabaseAsync(ctx workflow.Context, input *timestreamwrite.DescribeDatabaseInput) *TimestreamWriteDescribeDatabaseFuture {
+func (a *stub) DescribeDatabaseAsync(ctx workflow.Context, input *timestreamwrite.DescribeDatabaseInput) *DescribeDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.DescribeDatabase", input)
-	return &TimestreamWriteDescribeDatabaseFuture{Future: future}
+	return &DescribeDatabaseFuture{Future: future}
 }
 
 func (a *stub) DescribeEndpoints(ctx workflow.Context, input *timestreamwrite.DescribeEndpointsInput) (*timestreamwrite.DescribeEndpointsOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) DescribeEndpoints(ctx workflow.Context, input *timestreamwrite.De
 	return &output, err
 }
 
-func (a *stub) DescribeEndpointsAsync(ctx workflow.Context, input *timestreamwrite.DescribeEndpointsInput) *TimestreamWriteDescribeEndpointsFuture {
+func (a *stub) DescribeEndpointsAsync(ctx workflow.Context, input *timestreamwrite.DescribeEndpointsInput) *DescribeEndpointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.DescribeEndpoints", input)
-	return &TimestreamWriteDescribeEndpointsFuture{Future: future}
+	return &DescribeEndpointsFuture{Future: future}
 }
 
 func (a *stub) DescribeTable(ctx workflow.Context, input *timestreamwrite.DescribeTableInput) (*timestreamwrite.DescribeTableOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DescribeTable(ctx workflow.Context, input *timestreamwrite.Descri
 	return &output, err
 }
 
-func (a *stub) DescribeTableAsync(ctx workflow.Context, input *timestreamwrite.DescribeTableInput) *TimestreamWriteDescribeTableFuture {
+func (a *stub) DescribeTableAsync(ctx workflow.Context, input *timestreamwrite.DescribeTableInput) *DescribeTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.DescribeTable", input)
-	return &TimestreamWriteDescribeTableFuture{Future: future}
+	return &DescribeTableFuture{Future: future}
 }
 
 func (a *stub) ListDatabases(ctx workflow.Context, input *timestreamwrite.ListDatabasesInput) (*timestreamwrite.ListDatabasesOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) ListDatabases(ctx workflow.Context, input *timestreamwrite.ListDa
 	return &output, err
 }
 
-func (a *stub) ListDatabasesAsync(ctx workflow.Context, input *timestreamwrite.ListDatabasesInput) *TimestreamWriteListDatabasesFuture {
+func (a *stub) ListDatabasesAsync(ctx workflow.Context, input *timestreamwrite.ListDatabasesInput) *ListDatabasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.ListDatabases", input)
-	return &TimestreamWriteListDatabasesFuture{Future: future}
+	return &ListDatabasesFuture{Future: future}
 }
 
 func (a *stub) ListTables(ctx workflow.Context, input *timestreamwrite.ListTablesInput) (*timestreamwrite.ListTablesOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) ListTables(ctx workflow.Context, input *timestreamwrite.ListTable
 	return &output, err
 }
 
-func (a *stub) ListTablesAsync(ctx workflow.Context, input *timestreamwrite.ListTablesInput) *TimestreamWriteListTablesFuture {
+func (a *stub) ListTablesAsync(ctx workflow.Context, input *timestreamwrite.ListTablesInput) *ListTablesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.ListTables", input)
-	return &TimestreamWriteListTablesFuture{Future: future}
+	return &ListTablesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *timestreamwrite.ListTagsForResourceInput) (*timestreamwrite.ListTagsForResourceOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *timestreamwrite.
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *timestreamwrite.ListTagsForResourceInput) *TimestreamWriteListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *timestreamwrite.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.ListTagsForResource", input)
-	return &TimestreamWriteListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *timestreamwrite.TagResourceInput) (*timestreamwrite.TagResourceOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *timestreamwrite.TagResou
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *timestreamwrite.TagResourceInput) *TimestreamWriteTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *timestreamwrite.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.TagResource", input)
-	return &TimestreamWriteTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *timestreamwrite.UntagResourceInput) (*timestreamwrite.UntagResourceOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *timestreamwrite.UntagR
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *timestreamwrite.UntagResourceInput) *TimestreamWriteUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *timestreamwrite.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.UntagResource", input)
-	return &TimestreamWriteUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateDatabase(ctx workflow.Context, input *timestreamwrite.UpdateDatabaseInput) (*timestreamwrite.UpdateDatabaseOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) UpdateDatabase(ctx workflow.Context, input *timestreamwrite.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.UpdateDatabaseInput) *TimestreamWriteUpdateDatabaseFuture {
+func (a *stub) UpdateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.UpdateDatabaseInput) *UpdateDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.UpdateDatabase", input)
-	return &TimestreamWriteUpdateDatabaseFuture{Future: future}
+	return &UpdateDatabaseFuture{Future: future}
 }
 
 func (a *stub) UpdateTable(ctx workflow.Context, input *timestreamwrite.UpdateTableInput) (*timestreamwrite.UpdateTableOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) UpdateTable(ctx workflow.Context, input *timestreamwrite.UpdateTa
 	return &output, err
 }
 
-func (a *stub) UpdateTableAsync(ctx workflow.Context, input *timestreamwrite.UpdateTableInput) *TimestreamWriteUpdateTableFuture {
+func (a *stub) UpdateTableAsync(ctx workflow.Context, input *timestreamwrite.UpdateTableInput) *UpdateTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.UpdateTable", input)
-	return &TimestreamWriteUpdateTableFuture{Future: future}
+	return &UpdateTableFuture{Future: future}
 }
 
 func (a *stub) WriteRecords(ctx workflow.Context, input *timestreamwrite.WriteRecordsInput) (*timestreamwrite.WriteRecordsOutput, error) {
@@ -341,7 +341,7 @@ func (a *stub) WriteRecords(ctx workflow.Context, input *timestreamwrite.WriteRe
 	return &output, err
 }
 
-func (a *stub) WriteRecordsAsync(ctx workflow.Context, input *timestreamwrite.WriteRecordsInput) *TimestreamWriteWriteRecordsFuture {
+func (a *stub) WriteRecordsAsync(ctx workflow.Context, input *timestreamwrite.WriteRecordsInput) *WriteRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.timestreamwrite.WriteRecords", input)
-	return &TimestreamWriteWriteRecordsFuture{Future: future}
+	return &WriteRecordsFuture{Future: future}
 }

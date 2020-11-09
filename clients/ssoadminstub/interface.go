@@ -16,85 +16,85 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AttachManagedPolicyToPermissionSet(ctx workflow.Context, input *ssoadmin.AttachManagedPolicyToPermissionSetInput) (*ssoadmin.AttachManagedPolicyToPermissionSetOutput, error)
-	AttachManagedPolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.AttachManagedPolicyToPermissionSetInput) *SSOAdminAttachManagedPolicyToPermissionSetFuture
+	AttachManagedPolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.AttachManagedPolicyToPermissionSetInput) *AttachManagedPolicyToPermissionSetFuture
 
 	CreateAccountAssignment(ctx workflow.Context, input *ssoadmin.CreateAccountAssignmentInput) (*ssoadmin.CreateAccountAssignmentOutput, error)
-	CreateAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.CreateAccountAssignmentInput) *SSOAdminCreateAccountAssignmentFuture
+	CreateAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.CreateAccountAssignmentInput) *CreateAccountAssignmentFuture
 
 	CreatePermissionSet(ctx workflow.Context, input *ssoadmin.CreatePermissionSetInput) (*ssoadmin.CreatePermissionSetOutput, error)
-	CreatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.CreatePermissionSetInput) *SSOAdminCreatePermissionSetFuture
+	CreatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.CreatePermissionSetInput) *CreatePermissionSetFuture
 
 	DeleteAccountAssignment(ctx workflow.Context, input *ssoadmin.DeleteAccountAssignmentInput) (*ssoadmin.DeleteAccountAssignmentOutput, error)
-	DeleteAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.DeleteAccountAssignmentInput) *SSOAdminDeleteAccountAssignmentFuture
+	DeleteAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.DeleteAccountAssignmentInput) *DeleteAccountAssignmentFuture
 
 	DeleteInlinePolicyFromPermissionSet(ctx workflow.Context, input *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) (*ssoadmin.DeleteInlinePolicyFromPermissionSetOutput, error)
-	DeleteInlinePolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) *SSOAdminDeleteInlinePolicyFromPermissionSetFuture
+	DeleteInlinePolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) *DeleteInlinePolicyFromPermissionSetFuture
 
 	DeletePermissionSet(ctx workflow.Context, input *ssoadmin.DeletePermissionSetInput) (*ssoadmin.DeletePermissionSetOutput, error)
-	DeletePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeletePermissionSetInput) *SSOAdminDeletePermissionSetFuture
+	DeletePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeletePermissionSetInput) *DeletePermissionSetFuture
 
 	DescribeAccountAssignmentCreationStatus(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentCreationStatusInput) (*ssoadmin.DescribeAccountAssignmentCreationStatusOutput, error)
-	DescribeAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentCreationStatusInput) *SSOAdminDescribeAccountAssignmentCreationStatusFuture
+	DescribeAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentCreationStatusInput) *DescribeAccountAssignmentCreationStatusFuture
 
 	DescribeAccountAssignmentDeletionStatus(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) (*ssoadmin.DescribeAccountAssignmentDeletionStatusOutput, error)
-	DescribeAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) *SSOAdminDescribeAccountAssignmentDeletionStatusFuture
+	DescribeAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) *DescribeAccountAssignmentDeletionStatusFuture
 
 	DescribePermissionSet(ctx workflow.Context, input *ssoadmin.DescribePermissionSetInput) (*ssoadmin.DescribePermissionSetOutput, error)
-	DescribePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetInput) *SSOAdminDescribePermissionSetFuture
+	DescribePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetInput) *DescribePermissionSetFuture
 
 	DescribePermissionSetProvisioningStatus(ctx workflow.Context, input *ssoadmin.DescribePermissionSetProvisioningStatusInput) (*ssoadmin.DescribePermissionSetProvisioningStatusOutput, error)
-	DescribePermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetProvisioningStatusInput) *SSOAdminDescribePermissionSetProvisioningStatusFuture
+	DescribePermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetProvisioningStatusInput) *DescribePermissionSetProvisioningStatusFuture
 
 	DetachManagedPolicyFromPermissionSet(ctx workflow.Context, input *ssoadmin.DetachManagedPolicyFromPermissionSetInput) (*ssoadmin.DetachManagedPolicyFromPermissionSetOutput, error)
-	DetachManagedPolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DetachManagedPolicyFromPermissionSetInput) *SSOAdminDetachManagedPolicyFromPermissionSetFuture
+	DetachManagedPolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DetachManagedPolicyFromPermissionSetInput) *DetachManagedPolicyFromPermissionSetFuture
 
 	GetInlinePolicyForPermissionSet(ctx workflow.Context, input *ssoadmin.GetInlinePolicyForPermissionSetInput) (*ssoadmin.GetInlinePolicyForPermissionSetOutput, error)
-	GetInlinePolicyForPermissionSetAsync(ctx workflow.Context, input *ssoadmin.GetInlinePolicyForPermissionSetInput) *SSOAdminGetInlinePolicyForPermissionSetFuture
+	GetInlinePolicyForPermissionSetAsync(ctx workflow.Context, input *ssoadmin.GetInlinePolicyForPermissionSetInput) *GetInlinePolicyForPermissionSetFuture
 
 	ListAccountAssignmentCreationStatus(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentCreationStatusInput) (*ssoadmin.ListAccountAssignmentCreationStatusOutput, error)
-	ListAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentCreationStatusInput) *SSOAdminListAccountAssignmentCreationStatusFuture
+	ListAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentCreationStatusInput) *ListAccountAssignmentCreationStatusFuture
 
 	ListAccountAssignmentDeletionStatus(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentDeletionStatusInput) (*ssoadmin.ListAccountAssignmentDeletionStatusOutput, error)
-	ListAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentDeletionStatusInput) *SSOAdminListAccountAssignmentDeletionStatusFuture
+	ListAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentDeletionStatusInput) *ListAccountAssignmentDeletionStatusFuture
 
 	ListAccountAssignments(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentsInput) (*ssoadmin.ListAccountAssignmentsOutput, error)
-	ListAccountAssignmentsAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentsInput) *SSOAdminListAccountAssignmentsFuture
+	ListAccountAssignmentsAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentsInput) *ListAccountAssignmentsFuture
 
 	ListAccountsForProvisionedPermissionSet(ctx workflow.Context, input *ssoadmin.ListAccountsForProvisionedPermissionSetInput) (*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, error)
-	ListAccountsForProvisionedPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListAccountsForProvisionedPermissionSetInput) *SSOAdminListAccountsForProvisionedPermissionSetFuture
+	ListAccountsForProvisionedPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListAccountsForProvisionedPermissionSetInput) *ListAccountsForProvisionedPermissionSetFuture
 
 	ListInstances(ctx workflow.Context, input *ssoadmin.ListInstancesInput) (*ssoadmin.ListInstancesOutput, error)
-	ListInstancesAsync(ctx workflow.Context, input *ssoadmin.ListInstancesInput) *SSOAdminListInstancesFuture
+	ListInstancesAsync(ctx workflow.Context, input *ssoadmin.ListInstancesInput) *ListInstancesFuture
 
 	ListManagedPoliciesInPermissionSet(ctx workflow.Context, input *ssoadmin.ListManagedPoliciesInPermissionSetInput) (*ssoadmin.ListManagedPoliciesInPermissionSetOutput, error)
-	ListManagedPoliciesInPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListManagedPoliciesInPermissionSetInput) *SSOAdminListManagedPoliciesInPermissionSetFuture
+	ListManagedPoliciesInPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListManagedPoliciesInPermissionSetInput) *ListManagedPoliciesInPermissionSetFuture
 
 	ListPermissionSetProvisioningStatus(ctx workflow.Context, input *ssoadmin.ListPermissionSetProvisioningStatusInput) (*ssoadmin.ListPermissionSetProvisioningStatusOutput, error)
-	ListPermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetProvisioningStatusInput) *SSOAdminListPermissionSetProvisioningStatusFuture
+	ListPermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetProvisioningStatusInput) *ListPermissionSetProvisioningStatusFuture
 
 	ListPermissionSets(ctx workflow.Context, input *ssoadmin.ListPermissionSetsInput) (*ssoadmin.ListPermissionSetsOutput, error)
-	ListPermissionSetsAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsInput) *SSOAdminListPermissionSetsFuture
+	ListPermissionSetsAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsInput) *ListPermissionSetsFuture
 
 	ListPermissionSetsProvisionedToAccount(ctx workflow.Context, input *ssoadmin.ListPermissionSetsProvisionedToAccountInput) (*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, error)
-	ListPermissionSetsProvisionedToAccountAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsProvisionedToAccountInput) *SSOAdminListPermissionSetsProvisionedToAccountFuture
+	ListPermissionSetsProvisionedToAccountAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsProvisionedToAccountInput) *ListPermissionSetsProvisionedToAccountFuture
 
 	ListTagsForResource(ctx workflow.Context, input *ssoadmin.ListTagsForResourceInput) (*ssoadmin.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *ssoadmin.ListTagsForResourceInput) *SSOAdminListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *ssoadmin.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ProvisionPermissionSet(ctx workflow.Context, input *ssoadmin.ProvisionPermissionSetInput) (*ssoadmin.ProvisionPermissionSetOutput, error)
-	ProvisionPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ProvisionPermissionSetInput) *SSOAdminProvisionPermissionSetFuture
+	ProvisionPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ProvisionPermissionSetInput) *ProvisionPermissionSetFuture
 
 	PutInlinePolicyToPermissionSet(ctx workflow.Context, input *ssoadmin.PutInlinePolicyToPermissionSetInput) (*ssoadmin.PutInlinePolicyToPermissionSetOutput, error)
-	PutInlinePolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.PutInlinePolicyToPermissionSetInput) *SSOAdminPutInlinePolicyToPermissionSetFuture
+	PutInlinePolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.PutInlinePolicyToPermissionSetInput) *PutInlinePolicyToPermissionSetFuture
 
 	TagResource(ctx workflow.Context, input *ssoadmin.TagResourceInput) (*ssoadmin.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *ssoadmin.TagResourceInput) *SSOAdminTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *ssoadmin.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *ssoadmin.UntagResourceInput) (*ssoadmin.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *ssoadmin.UntagResourceInput) *SSOAdminUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *ssoadmin.UntagResourceInput) *UntagResourceFuture
 
 	UpdatePermissionSet(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) (*ssoadmin.UpdatePermissionSetOutput, error)
-	UpdatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) *SSOAdminUpdatePermissionSetFuture
+	UpdatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) *UpdatePermissionSetFuture
 }
 
 func NewClient() Client {

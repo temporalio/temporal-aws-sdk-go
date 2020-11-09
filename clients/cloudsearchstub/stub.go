@@ -16,287 +16,287 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CloudSearchBuildSuggestersFuture struct {
+type BuildSuggestersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchBuildSuggestersFuture) Get(ctx workflow.Context) (*cloudsearch.BuildSuggestersOutput, error) {
+func (r *BuildSuggestersFuture) Get(ctx workflow.Context) (*cloudsearch.BuildSuggestersOutput, error) {
 	var output cloudsearch.BuildSuggestersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchCreateDomainFuture struct {
+type CreateDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchCreateDomainFuture) Get(ctx workflow.Context) (*cloudsearch.CreateDomainOutput, error) {
+func (r *CreateDomainFuture) Get(ctx workflow.Context) (*cloudsearch.CreateDomainOutput, error) {
 	var output cloudsearch.CreateDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDefineAnalysisSchemeFuture struct {
+type DefineAnalysisSchemeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDefineAnalysisSchemeFuture) Get(ctx workflow.Context) (*cloudsearch.DefineAnalysisSchemeOutput, error) {
+func (r *DefineAnalysisSchemeFuture) Get(ctx workflow.Context) (*cloudsearch.DefineAnalysisSchemeOutput, error) {
 	var output cloudsearch.DefineAnalysisSchemeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDefineExpressionFuture struct {
+type DefineExpressionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDefineExpressionFuture) Get(ctx workflow.Context) (*cloudsearch.DefineExpressionOutput, error) {
+func (r *DefineExpressionFuture) Get(ctx workflow.Context) (*cloudsearch.DefineExpressionOutput, error) {
 	var output cloudsearch.DefineExpressionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDefineIndexFieldFuture struct {
+type DefineIndexFieldFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDefineIndexFieldFuture) Get(ctx workflow.Context) (*cloudsearch.DefineIndexFieldOutput, error) {
+func (r *DefineIndexFieldFuture) Get(ctx workflow.Context) (*cloudsearch.DefineIndexFieldOutput, error) {
 	var output cloudsearch.DefineIndexFieldOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDefineSuggesterFuture struct {
+type DefineSuggesterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDefineSuggesterFuture) Get(ctx workflow.Context) (*cloudsearch.DefineSuggesterOutput, error) {
+func (r *DefineSuggesterFuture) Get(ctx workflow.Context) (*cloudsearch.DefineSuggesterOutput, error) {
 	var output cloudsearch.DefineSuggesterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDeleteAnalysisSchemeFuture struct {
+type DeleteAnalysisSchemeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDeleteAnalysisSchemeFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteAnalysisSchemeOutput, error) {
+func (r *DeleteAnalysisSchemeFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteAnalysisSchemeOutput, error) {
 	var output cloudsearch.DeleteAnalysisSchemeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDeleteDomainFuture struct {
+type DeleteDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDeleteDomainFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteDomainOutput, error) {
+func (r *DeleteDomainFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteDomainOutput, error) {
 	var output cloudsearch.DeleteDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDeleteExpressionFuture struct {
+type DeleteExpressionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDeleteExpressionFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteExpressionOutput, error) {
+func (r *DeleteExpressionFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteExpressionOutput, error) {
 	var output cloudsearch.DeleteExpressionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDeleteIndexFieldFuture struct {
+type DeleteIndexFieldFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDeleteIndexFieldFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteIndexFieldOutput, error) {
+func (r *DeleteIndexFieldFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteIndexFieldOutput, error) {
 	var output cloudsearch.DeleteIndexFieldOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDeleteSuggesterFuture struct {
+type DeleteSuggesterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDeleteSuggesterFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteSuggesterOutput, error) {
+func (r *DeleteSuggesterFuture) Get(ctx workflow.Context) (*cloudsearch.DeleteSuggesterOutput, error) {
 	var output cloudsearch.DeleteSuggesterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeAnalysisSchemesFuture struct {
+type DescribeAnalysisSchemesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeAnalysisSchemesFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeAnalysisSchemesOutput, error) {
+func (r *DescribeAnalysisSchemesFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeAnalysisSchemesOutput, error) {
 	var output cloudsearch.DescribeAnalysisSchemesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeAvailabilityOptionsFuture struct {
+type DescribeAvailabilityOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeAvailabilityOptionsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeAvailabilityOptionsOutput, error) {
+func (r *DescribeAvailabilityOptionsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeAvailabilityOptionsOutput, error) {
 	var output cloudsearch.DescribeAvailabilityOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeDomainEndpointOptionsFuture struct {
+type DescribeDomainEndpointOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeDomainEndpointOptionsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeDomainEndpointOptionsOutput, error) {
+func (r *DescribeDomainEndpointOptionsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeDomainEndpointOptionsOutput, error) {
 	var output cloudsearch.DescribeDomainEndpointOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeDomainsFuture struct {
+type DescribeDomainsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeDomainsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeDomainsOutput, error) {
+func (r *DescribeDomainsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeDomainsOutput, error) {
 	var output cloudsearch.DescribeDomainsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeExpressionsFuture struct {
+type DescribeExpressionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeExpressionsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeExpressionsOutput, error) {
+func (r *DescribeExpressionsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeExpressionsOutput, error) {
 	var output cloudsearch.DescribeExpressionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeIndexFieldsFuture struct {
+type DescribeIndexFieldsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeIndexFieldsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeIndexFieldsOutput, error) {
+func (r *DescribeIndexFieldsFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeIndexFieldsOutput, error) {
 	var output cloudsearch.DescribeIndexFieldsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeScalingParametersFuture struct {
+type DescribeScalingParametersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeScalingParametersFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeScalingParametersOutput, error) {
+func (r *DescribeScalingParametersFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeScalingParametersOutput, error) {
 	var output cloudsearch.DescribeScalingParametersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeServiceAccessPoliciesFuture struct {
+type DescribeServiceAccessPoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeServiceAccessPoliciesFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeServiceAccessPoliciesOutput, error) {
+func (r *DescribeServiceAccessPoliciesFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeServiceAccessPoliciesOutput, error) {
 	var output cloudsearch.DescribeServiceAccessPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchDescribeSuggestersFuture struct {
+type DescribeSuggestersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchDescribeSuggestersFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeSuggestersOutput, error) {
+func (r *DescribeSuggestersFuture) Get(ctx workflow.Context) (*cloudsearch.DescribeSuggestersOutput, error) {
 	var output cloudsearch.DescribeSuggestersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchIndexDocumentsFuture struct {
+type IndexDocumentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchIndexDocumentsFuture) Get(ctx workflow.Context) (*cloudsearch.IndexDocumentsOutput, error) {
+func (r *IndexDocumentsFuture) Get(ctx workflow.Context) (*cloudsearch.IndexDocumentsOutput, error) {
 	var output cloudsearch.IndexDocumentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchListDomainNamesFuture struct {
+type ListDomainNamesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchListDomainNamesFuture) Get(ctx workflow.Context) (*cloudsearch.ListDomainNamesOutput, error) {
+func (r *ListDomainNamesFuture) Get(ctx workflow.Context) (*cloudsearch.ListDomainNamesOutput, error) {
 	var output cloudsearch.ListDomainNamesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchUpdateAvailabilityOptionsFuture struct {
+type UpdateAvailabilityOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchUpdateAvailabilityOptionsFuture) Get(ctx workflow.Context) (*cloudsearch.UpdateAvailabilityOptionsOutput, error) {
+func (r *UpdateAvailabilityOptionsFuture) Get(ctx workflow.Context) (*cloudsearch.UpdateAvailabilityOptionsOutput, error) {
 	var output cloudsearch.UpdateAvailabilityOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchUpdateDomainEndpointOptionsFuture struct {
+type UpdateDomainEndpointOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchUpdateDomainEndpointOptionsFuture) Get(ctx workflow.Context) (*cloudsearch.UpdateDomainEndpointOptionsOutput, error) {
+func (r *UpdateDomainEndpointOptionsFuture) Get(ctx workflow.Context) (*cloudsearch.UpdateDomainEndpointOptionsOutput, error) {
 	var output cloudsearch.UpdateDomainEndpointOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchUpdateScalingParametersFuture struct {
+type UpdateScalingParametersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchUpdateScalingParametersFuture) Get(ctx workflow.Context) (*cloudsearch.UpdateScalingParametersOutput, error) {
+func (r *UpdateScalingParametersFuture) Get(ctx workflow.Context) (*cloudsearch.UpdateScalingParametersOutput, error) {
 	var output cloudsearch.UpdateScalingParametersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudSearchUpdateServiceAccessPoliciesFuture struct {
+type UpdateServiceAccessPoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudSearchUpdateServiceAccessPoliciesFuture) Get(ctx workflow.Context) (*cloudsearch.UpdateServiceAccessPoliciesOutput, error) {
+func (r *UpdateServiceAccessPoliciesFuture) Get(ctx workflow.Context) (*cloudsearch.UpdateServiceAccessPoliciesOutput, error) {
 	var output cloudsearch.UpdateServiceAccessPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -308,9 +308,9 @@ func (a *stub) BuildSuggesters(ctx workflow.Context, input *cloudsearch.BuildSug
 	return &output, err
 }
 
-func (a *stub) BuildSuggestersAsync(ctx workflow.Context, input *cloudsearch.BuildSuggestersInput) *CloudSearchBuildSuggestersFuture {
+func (a *stub) BuildSuggestersAsync(ctx workflow.Context, input *cloudsearch.BuildSuggestersInput) *BuildSuggestersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.BuildSuggesters", input)
-	return &CloudSearchBuildSuggestersFuture{Future: future}
+	return &BuildSuggestersFuture{Future: future}
 }
 
 func (a *stub) CreateDomain(ctx workflow.Context, input *cloudsearch.CreateDomainInput) (*cloudsearch.CreateDomainOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) CreateDomain(ctx workflow.Context, input *cloudsearch.CreateDomai
 	return &output, err
 }
 
-func (a *stub) CreateDomainAsync(ctx workflow.Context, input *cloudsearch.CreateDomainInput) *CloudSearchCreateDomainFuture {
+func (a *stub) CreateDomainAsync(ctx workflow.Context, input *cloudsearch.CreateDomainInput) *CreateDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.CreateDomain", input)
-	return &CloudSearchCreateDomainFuture{Future: future}
+	return &CreateDomainFuture{Future: future}
 }
 
 func (a *stub) DefineAnalysisScheme(ctx workflow.Context, input *cloudsearch.DefineAnalysisSchemeInput) (*cloudsearch.DefineAnalysisSchemeOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) DefineAnalysisScheme(ctx workflow.Context, input *cloudsearch.Def
 	return &output, err
 }
 
-func (a *stub) DefineAnalysisSchemeAsync(ctx workflow.Context, input *cloudsearch.DefineAnalysisSchemeInput) *CloudSearchDefineAnalysisSchemeFuture {
+func (a *stub) DefineAnalysisSchemeAsync(ctx workflow.Context, input *cloudsearch.DefineAnalysisSchemeInput) *DefineAnalysisSchemeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DefineAnalysisScheme", input)
-	return &CloudSearchDefineAnalysisSchemeFuture{Future: future}
+	return &DefineAnalysisSchemeFuture{Future: future}
 }
 
 func (a *stub) DefineExpression(ctx workflow.Context, input *cloudsearch.DefineExpressionInput) (*cloudsearch.DefineExpressionOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) DefineExpression(ctx workflow.Context, input *cloudsearch.DefineE
 	return &output, err
 }
 
-func (a *stub) DefineExpressionAsync(ctx workflow.Context, input *cloudsearch.DefineExpressionInput) *CloudSearchDefineExpressionFuture {
+func (a *stub) DefineExpressionAsync(ctx workflow.Context, input *cloudsearch.DefineExpressionInput) *DefineExpressionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DefineExpression", input)
-	return &CloudSearchDefineExpressionFuture{Future: future}
+	return &DefineExpressionFuture{Future: future}
 }
 
 func (a *stub) DefineIndexField(ctx workflow.Context, input *cloudsearch.DefineIndexFieldInput) (*cloudsearch.DefineIndexFieldOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) DefineIndexField(ctx workflow.Context, input *cloudsearch.DefineI
 	return &output, err
 }
 
-func (a *stub) DefineIndexFieldAsync(ctx workflow.Context, input *cloudsearch.DefineIndexFieldInput) *CloudSearchDefineIndexFieldFuture {
+func (a *stub) DefineIndexFieldAsync(ctx workflow.Context, input *cloudsearch.DefineIndexFieldInput) *DefineIndexFieldFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DefineIndexField", input)
-	return &CloudSearchDefineIndexFieldFuture{Future: future}
+	return &DefineIndexFieldFuture{Future: future}
 }
 
 func (a *stub) DefineSuggester(ctx workflow.Context, input *cloudsearch.DefineSuggesterInput) (*cloudsearch.DefineSuggesterOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) DefineSuggester(ctx workflow.Context, input *cloudsearch.DefineSu
 	return &output, err
 }
 
-func (a *stub) DefineSuggesterAsync(ctx workflow.Context, input *cloudsearch.DefineSuggesterInput) *CloudSearchDefineSuggesterFuture {
+func (a *stub) DefineSuggesterAsync(ctx workflow.Context, input *cloudsearch.DefineSuggesterInput) *DefineSuggesterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DefineSuggester", input)
-	return &CloudSearchDefineSuggesterFuture{Future: future}
+	return &DefineSuggesterFuture{Future: future}
 }
 
 func (a *stub) DeleteAnalysisScheme(ctx workflow.Context, input *cloudsearch.DeleteAnalysisSchemeInput) (*cloudsearch.DeleteAnalysisSchemeOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) DeleteAnalysisScheme(ctx workflow.Context, input *cloudsearch.Del
 	return &output, err
 }
 
-func (a *stub) DeleteAnalysisSchemeAsync(ctx workflow.Context, input *cloudsearch.DeleteAnalysisSchemeInput) *CloudSearchDeleteAnalysisSchemeFuture {
+func (a *stub) DeleteAnalysisSchemeAsync(ctx workflow.Context, input *cloudsearch.DeleteAnalysisSchemeInput) *DeleteAnalysisSchemeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DeleteAnalysisScheme", input)
-	return &CloudSearchDeleteAnalysisSchemeFuture{Future: future}
+	return &DeleteAnalysisSchemeFuture{Future: future}
 }
 
 func (a *stub) DeleteDomain(ctx workflow.Context, input *cloudsearch.DeleteDomainInput) (*cloudsearch.DeleteDomainOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) DeleteDomain(ctx workflow.Context, input *cloudsearch.DeleteDomai
 	return &output, err
 }
 
-func (a *stub) DeleteDomainAsync(ctx workflow.Context, input *cloudsearch.DeleteDomainInput) *CloudSearchDeleteDomainFuture {
+func (a *stub) DeleteDomainAsync(ctx workflow.Context, input *cloudsearch.DeleteDomainInput) *DeleteDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DeleteDomain", input)
-	return &CloudSearchDeleteDomainFuture{Future: future}
+	return &DeleteDomainFuture{Future: future}
 }
 
 func (a *stub) DeleteExpression(ctx workflow.Context, input *cloudsearch.DeleteExpressionInput) (*cloudsearch.DeleteExpressionOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) DeleteExpression(ctx workflow.Context, input *cloudsearch.DeleteE
 	return &output, err
 }
 
-func (a *stub) DeleteExpressionAsync(ctx workflow.Context, input *cloudsearch.DeleteExpressionInput) *CloudSearchDeleteExpressionFuture {
+func (a *stub) DeleteExpressionAsync(ctx workflow.Context, input *cloudsearch.DeleteExpressionInput) *DeleteExpressionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DeleteExpression", input)
-	return &CloudSearchDeleteExpressionFuture{Future: future}
+	return &DeleteExpressionFuture{Future: future}
 }
 
 func (a *stub) DeleteIndexField(ctx workflow.Context, input *cloudsearch.DeleteIndexFieldInput) (*cloudsearch.DeleteIndexFieldOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) DeleteIndexField(ctx workflow.Context, input *cloudsearch.DeleteI
 	return &output, err
 }
 
-func (a *stub) DeleteIndexFieldAsync(ctx workflow.Context, input *cloudsearch.DeleteIndexFieldInput) *CloudSearchDeleteIndexFieldFuture {
+func (a *stub) DeleteIndexFieldAsync(ctx workflow.Context, input *cloudsearch.DeleteIndexFieldInput) *DeleteIndexFieldFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DeleteIndexField", input)
-	return &CloudSearchDeleteIndexFieldFuture{Future: future}
+	return &DeleteIndexFieldFuture{Future: future}
 }
 
 func (a *stub) DeleteSuggester(ctx workflow.Context, input *cloudsearch.DeleteSuggesterInput) (*cloudsearch.DeleteSuggesterOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) DeleteSuggester(ctx workflow.Context, input *cloudsearch.DeleteSu
 	return &output, err
 }
 
-func (a *stub) DeleteSuggesterAsync(ctx workflow.Context, input *cloudsearch.DeleteSuggesterInput) *CloudSearchDeleteSuggesterFuture {
+func (a *stub) DeleteSuggesterAsync(ctx workflow.Context, input *cloudsearch.DeleteSuggesterInput) *DeleteSuggesterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DeleteSuggester", input)
-	return &CloudSearchDeleteSuggesterFuture{Future: future}
+	return &DeleteSuggesterFuture{Future: future}
 }
 
 func (a *stub) DescribeAnalysisSchemes(ctx workflow.Context, input *cloudsearch.DescribeAnalysisSchemesInput) (*cloudsearch.DescribeAnalysisSchemesOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) DescribeAnalysisSchemes(ctx workflow.Context, input *cloudsearch.
 	return &output, err
 }
 
-func (a *stub) DescribeAnalysisSchemesAsync(ctx workflow.Context, input *cloudsearch.DescribeAnalysisSchemesInput) *CloudSearchDescribeAnalysisSchemesFuture {
+func (a *stub) DescribeAnalysisSchemesAsync(ctx workflow.Context, input *cloudsearch.DescribeAnalysisSchemesInput) *DescribeAnalysisSchemesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeAnalysisSchemes", input)
-	return &CloudSearchDescribeAnalysisSchemesFuture{Future: future}
+	return &DescribeAnalysisSchemesFuture{Future: future}
 }
 
 func (a *stub) DescribeAvailabilityOptions(ctx workflow.Context, input *cloudsearch.DescribeAvailabilityOptionsInput) (*cloudsearch.DescribeAvailabilityOptionsOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) DescribeAvailabilityOptions(ctx workflow.Context, input *cloudsea
 	return &output, err
 }
 
-func (a *stub) DescribeAvailabilityOptionsAsync(ctx workflow.Context, input *cloudsearch.DescribeAvailabilityOptionsInput) *CloudSearchDescribeAvailabilityOptionsFuture {
+func (a *stub) DescribeAvailabilityOptionsAsync(ctx workflow.Context, input *cloudsearch.DescribeAvailabilityOptionsInput) *DescribeAvailabilityOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeAvailabilityOptions", input)
-	return &CloudSearchDescribeAvailabilityOptionsFuture{Future: future}
+	return &DescribeAvailabilityOptionsFuture{Future: future}
 }
 
 func (a *stub) DescribeDomainEndpointOptions(ctx workflow.Context, input *cloudsearch.DescribeDomainEndpointOptionsInput) (*cloudsearch.DescribeDomainEndpointOptionsOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) DescribeDomainEndpointOptions(ctx workflow.Context, input *clouds
 	return &output, err
 }
 
-func (a *stub) DescribeDomainEndpointOptionsAsync(ctx workflow.Context, input *cloudsearch.DescribeDomainEndpointOptionsInput) *CloudSearchDescribeDomainEndpointOptionsFuture {
+func (a *stub) DescribeDomainEndpointOptionsAsync(ctx workflow.Context, input *cloudsearch.DescribeDomainEndpointOptionsInput) *DescribeDomainEndpointOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeDomainEndpointOptions", input)
-	return &CloudSearchDescribeDomainEndpointOptionsFuture{Future: future}
+	return &DescribeDomainEndpointOptionsFuture{Future: future}
 }
 
 func (a *stub) DescribeDomains(ctx workflow.Context, input *cloudsearch.DescribeDomainsInput) (*cloudsearch.DescribeDomainsOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) DescribeDomains(ctx workflow.Context, input *cloudsearch.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeDomainsAsync(ctx workflow.Context, input *cloudsearch.DescribeDomainsInput) *CloudSearchDescribeDomainsFuture {
+func (a *stub) DescribeDomainsAsync(ctx workflow.Context, input *cloudsearch.DescribeDomainsInput) *DescribeDomainsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeDomains", input)
-	return &CloudSearchDescribeDomainsFuture{Future: future}
+	return &DescribeDomainsFuture{Future: future}
 }
 
 func (a *stub) DescribeExpressions(ctx workflow.Context, input *cloudsearch.DescribeExpressionsInput) (*cloudsearch.DescribeExpressionsOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) DescribeExpressions(ctx workflow.Context, input *cloudsearch.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeExpressionsAsync(ctx workflow.Context, input *cloudsearch.DescribeExpressionsInput) *CloudSearchDescribeExpressionsFuture {
+func (a *stub) DescribeExpressionsAsync(ctx workflow.Context, input *cloudsearch.DescribeExpressionsInput) *DescribeExpressionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeExpressions", input)
-	return &CloudSearchDescribeExpressionsFuture{Future: future}
+	return &DescribeExpressionsFuture{Future: future}
 }
 
 func (a *stub) DescribeIndexFields(ctx workflow.Context, input *cloudsearch.DescribeIndexFieldsInput) (*cloudsearch.DescribeIndexFieldsOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DescribeIndexFields(ctx workflow.Context, input *cloudsearch.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeIndexFieldsAsync(ctx workflow.Context, input *cloudsearch.DescribeIndexFieldsInput) *CloudSearchDescribeIndexFieldsFuture {
+func (a *stub) DescribeIndexFieldsAsync(ctx workflow.Context, input *cloudsearch.DescribeIndexFieldsInput) *DescribeIndexFieldsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeIndexFields", input)
-	return &CloudSearchDescribeIndexFieldsFuture{Future: future}
+	return &DescribeIndexFieldsFuture{Future: future}
 }
 
 func (a *stub) DescribeScalingParameters(ctx workflow.Context, input *cloudsearch.DescribeScalingParametersInput) (*cloudsearch.DescribeScalingParametersOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) DescribeScalingParameters(ctx workflow.Context, input *cloudsearc
 	return &output, err
 }
 
-func (a *stub) DescribeScalingParametersAsync(ctx workflow.Context, input *cloudsearch.DescribeScalingParametersInput) *CloudSearchDescribeScalingParametersFuture {
+func (a *stub) DescribeScalingParametersAsync(ctx workflow.Context, input *cloudsearch.DescribeScalingParametersInput) *DescribeScalingParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeScalingParameters", input)
-	return &CloudSearchDescribeScalingParametersFuture{Future: future}
+	return &DescribeScalingParametersFuture{Future: future}
 }
 
 func (a *stub) DescribeServiceAccessPolicies(ctx workflow.Context, input *cloudsearch.DescribeServiceAccessPoliciesInput) (*cloudsearch.DescribeServiceAccessPoliciesOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DescribeServiceAccessPolicies(ctx workflow.Context, input *clouds
 	return &output, err
 }
 
-func (a *stub) DescribeServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.DescribeServiceAccessPoliciesInput) *CloudSearchDescribeServiceAccessPoliciesFuture {
+func (a *stub) DescribeServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.DescribeServiceAccessPoliciesInput) *DescribeServiceAccessPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeServiceAccessPolicies", input)
-	return &CloudSearchDescribeServiceAccessPoliciesFuture{Future: future}
+	return &DescribeServiceAccessPoliciesFuture{Future: future}
 }
 
 func (a *stub) DescribeSuggesters(ctx workflow.Context, input *cloudsearch.DescribeSuggestersInput) (*cloudsearch.DescribeSuggestersOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) DescribeSuggesters(ctx workflow.Context, input *cloudsearch.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeSuggestersAsync(ctx workflow.Context, input *cloudsearch.DescribeSuggestersInput) *CloudSearchDescribeSuggestersFuture {
+func (a *stub) DescribeSuggestersAsync(ctx workflow.Context, input *cloudsearch.DescribeSuggestersInput) *DescribeSuggestersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.DescribeSuggesters", input)
-	return &CloudSearchDescribeSuggestersFuture{Future: future}
+	return &DescribeSuggestersFuture{Future: future}
 }
 
 func (a *stub) IndexDocuments(ctx workflow.Context, input *cloudsearch.IndexDocumentsInput) (*cloudsearch.IndexDocumentsOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) IndexDocuments(ctx workflow.Context, input *cloudsearch.IndexDocu
 	return &output, err
 }
 
-func (a *stub) IndexDocumentsAsync(ctx workflow.Context, input *cloudsearch.IndexDocumentsInput) *CloudSearchIndexDocumentsFuture {
+func (a *stub) IndexDocumentsAsync(ctx workflow.Context, input *cloudsearch.IndexDocumentsInput) *IndexDocumentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.IndexDocuments", input)
-	return &CloudSearchIndexDocumentsFuture{Future: future}
+	return &IndexDocumentsFuture{Future: future}
 }
 
 func (a *stub) ListDomainNames(ctx workflow.Context, input *cloudsearch.ListDomainNamesInput) (*cloudsearch.ListDomainNamesOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) ListDomainNames(ctx workflow.Context, input *cloudsearch.ListDoma
 	return &output, err
 }
 
-func (a *stub) ListDomainNamesAsync(ctx workflow.Context, input *cloudsearch.ListDomainNamesInput) *CloudSearchListDomainNamesFuture {
+func (a *stub) ListDomainNamesAsync(ctx workflow.Context, input *cloudsearch.ListDomainNamesInput) *ListDomainNamesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.ListDomainNames", input)
-	return &CloudSearchListDomainNamesFuture{Future: future}
+	return &ListDomainNamesFuture{Future: future}
 }
 
 func (a *stub) UpdateAvailabilityOptions(ctx workflow.Context, input *cloudsearch.UpdateAvailabilityOptionsInput) (*cloudsearch.UpdateAvailabilityOptionsOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) UpdateAvailabilityOptions(ctx workflow.Context, input *cloudsearc
 	return &output, err
 }
 
-func (a *stub) UpdateAvailabilityOptionsAsync(ctx workflow.Context, input *cloudsearch.UpdateAvailabilityOptionsInput) *CloudSearchUpdateAvailabilityOptionsFuture {
+func (a *stub) UpdateAvailabilityOptionsAsync(ctx workflow.Context, input *cloudsearch.UpdateAvailabilityOptionsInput) *UpdateAvailabilityOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.UpdateAvailabilityOptions", input)
-	return &CloudSearchUpdateAvailabilityOptionsFuture{Future: future}
+	return &UpdateAvailabilityOptionsFuture{Future: future}
 }
 
 func (a *stub) UpdateDomainEndpointOptions(ctx workflow.Context, input *cloudsearch.UpdateDomainEndpointOptionsInput) (*cloudsearch.UpdateDomainEndpointOptionsOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) UpdateDomainEndpointOptions(ctx workflow.Context, input *cloudsea
 	return &output, err
 }
 
-func (a *stub) UpdateDomainEndpointOptionsAsync(ctx workflow.Context, input *cloudsearch.UpdateDomainEndpointOptionsInput) *CloudSearchUpdateDomainEndpointOptionsFuture {
+func (a *stub) UpdateDomainEndpointOptionsAsync(ctx workflow.Context, input *cloudsearch.UpdateDomainEndpointOptionsInput) *UpdateDomainEndpointOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.UpdateDomainEndpointOptions", input)
-	return &CloudSearchUpdateDomainEndpointOptionsFuture{Future: future}
+	return &UpdateDomainEndpointOptionsFuture{Future: future}
 }
 
 func (a *stub) UpdateScalingParameters(ctx workflow.Context, input *cloudsearch.UpdateScalingParametersInput) (*cloudsearch.UpdateScalingParametersOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) UpdateScalingParameters(ctx workflow.Context, input *cloudsearch.
 	return &output, err
 }
 
-func (a *stub) UpdateScalingParametersAsync(ctx workflow.Context, input *cloudsearch.UpdateScalingParametersInput) *CloudSearchUpdateScalingParametersFuture {
+func (a *stub) UpdateScalingParametersAsync(ctx workflow.Context, input *cloudsearch.UpdateScalingParametersInput) *UpdateScalingParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.UpdateScalingParameters", input)
-	return &CloudSearchUpdateScalingParametersFuture{Future: future}
+	return &UpdateScalingParametersFuture{Future: future}
 }
 
 func (a *stub) UpdateServiceAccessPolicies(ctx workflow.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) (*cloudsearch.UpdateServiceAccessPoliciesOutput, error) {
@@ -583,7 +583,7 @@ func (a *stub) UpdateServiceAccessPolicies(ctx workflow.Context, input *cloudsea
 	return &output, err
 }
 
-func (a *stub) UpdateServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) *CloudSearchUpdateServiceAccessPoliciesFuture {
+func (a *stub) UpdateServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) *UpdateServiceAccessPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudsearch.UpdateServiceAccessPolicies", input)
-	return &CloudSearchUpdateServiceAccessPoliciesFuture{Future: future}
+	return &UpdateServiceAccessPoliciesFuture{Future: future}
 }

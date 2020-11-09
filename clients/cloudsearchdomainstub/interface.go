@@ -16,13 +16,13 @@ var _ clients.VoidFuture
 
 type Client interface {
 	Search(ctx workflow.Context, input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error)
-	SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *CloudSearchDomainSearchFuture
+	SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *SearchFuture
 
 	Suggest(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error)
-	SuggestAsync(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) *CloudSearchDomainSuggestFuture
+	SuggestAsync(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) *SuggestFuture
 
 	UploadDocuments(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error)
-	UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudSearchDomainUploadDocumentsFuture
+	UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *UploadDocumentsFuture
 }
 
 func NewClient() Client {

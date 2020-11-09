@@ -16,23 +16,23 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type PIDescribeDimensionKeysFuture struct {
+type DescribeDimensionKeysFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PIDescribeDimensionKeysFuture) Get(ctx workflow.Context) (*pi.DescribeDimensionKeysOutput, error) {
+func (r *DescribeDimensionKeysFuture) Get(ctx workflow.Context) (*pi.DescribeDimensionKeysOutput, error) {
 	var output pi.DescribeDimensionKeysOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PIGetResourceMetricsFuture struct {
+type GetResourceMetricsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PIGetResourceMetricsFuture) Get(ctx workflow.Context) (*pi.GetResourceMetricsOutput, error) {
+func (r *GetResourceMetricsFuture) Get(ctx workflow.Context) (*pi.GetResourceMetricsOutput, error) {
 	var output pi.GetResourceMetricsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -44,9 +44,9 @@ func (a *stub) DescribeDimensionKeys(ctx workflow.Context, input *pi.DescribeDim
 	return &output, err
 }
 
-func (a *stub) DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PIDescribeDimensionKeysFuture {
+func (a *stub) DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *DescribeDimensionKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pi.DescribeDimensionKeys", input)
-	return &PIDescribeDimensionKeysFuture{Future: future}
+	return &DescribeDimensionKeysFuture{Future: future}
 }
 
 func (a *stub) GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error) {
@@ -55,7 +55,7 @@ func (a *stub) GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMet
 	return &output, err
 }
 
-func (a *stub) GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PIGetResourceMetricsFuture {
+func (a *stub) GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *GetResourceMetricsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pi.GetResourceMetrics", input)
-	return &PIGetResourceMetricsFuture{Future: future}
+	return &GetResourceMetricsFuture{Future: future}
 }

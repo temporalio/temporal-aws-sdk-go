@@ -16,45 +16,45 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type DynamoDBStreamsDescribeStreamFuture struct {
+type DescribeStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBStreamsDescribeStreamFuture) Get(ctx workflow.Context) (*dynamodbstreams.DescribeStreamOutput, error) {
+func (r *DescribeStreamFuture) Get(ctx workflow.Context) (*dynamodbstreams.DescribeStreamOutput, error) {
 	var output dynamodbstreams.DescribeStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBStreamsGetRecordsFuture struct {
+type GetRecordsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBStreamsGetRecordsFuture) Get(ctx workflow.Context) (*dynamodbstreams.GetRecordsOutput, error) {
+func (r *GetRecordsFuture) Get(ctx workflow.Context) (*dynamodbstreams.GetRecordsOutput, error) {
 	var output dynamodbstreams.GetRecordsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBStreamsGetShardIteratorFuture struct {
+type GetShardIteratorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBStreamsGetShardIteratorFuture) Get(ctx workflow.Context) (*dynamodbstreams.GetShardIteratorOutput, error) {
+func (r *GetShardIteratorFuture) Get(ctx workflow.Context) (*dynamodbstreams.GetShardIteratorOutput, error) {
 	var output dynamodbstreams.GetShardIteratorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBStreamsListStreamsFuture struct {
+type ListStreamsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBStreamsListStreamsFuture) Get(ctx workflow.Context) (*dynamodbstreams.ListStreamsOutput, error) {
+func (r *ListStreamsFuture) Get(ctx workflow.Context) (*dynamodbstreams.ListStreamsOutput, error) {
 	var output dynamodbstreams.ListStreamsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -66,9 +66,9 @@ func (a *stub) DescribeStream(ctx workflow.Context, input *dynamodbstreams.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeStreamAsync(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) *DynamoDBStreamsDescribeStreamFuture {
+func (a *stub) DescribeStreamAsync(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) *DescribeStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodbstreams.DescribeStream", input)
-	return &DynamoDBStreamsDescribeStreamFuture{Future: future}
+	return &DescribeStreamFuture{Future: future}
 }
 
 func (a *stub) GetRecords(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) (*dynamodbstreams.GetRecordsOutput, error) {
@@ -77,9 +77,9 @@ func (a *stub) GetRecords(ctx workflow.Context, input *dynamodbstreams.GetRecord
 	return &output, err
 }
 
-func (a *stub) GetRecordsAsync(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) *DynamoDBStreamsGetRecordsFuture {
+func (a *stub) GetRecordsAsync(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) *GetRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodbstreams.GetRecords", input)
-	return &DynamoDBStreamsGetRecordsFuture{Future: future}
+	return &GetRecordsFuture{Future: future}
 }
 
 func (a *stub) GetShardIterator(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) (*dynamodbstreams.GetShardIteratorOutput, error) {
@@ -88,9 +88,9 @@ func (a *stub) GetShardIterator(ctx workflow.Context, input *dynamodbstreams.Get
 	return &output, err
 }
 
-func (a *stub) GetShardIteratorAsync(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) *DynamoDBStreamsGetShardIteratorFuture {
+func (a *stub) GetShardIteratorAsync(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) *GetShardIteratorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodbstreams.GetShardIterator", input)
-	return &DynamoDBStreamsGetShardIteratorFuture{Future: future}
+	return &GetShardIteratorFuture{Future: future}
 }
 
 func (a *stub) ListStreams(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) (*dynamodbstreams.ListStreamsOutput, error) {
@@ -99,7 +99,7 @@ func (a *stub) ListStreams(ctx workflow.Context, input *dynamodbstreams.ListStre
 	return &output, err
 }
 
-func (a *stub) ListStreamsAsync(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) *DynamoDBStreamsListStreamsFuture {
+func (a *stub) ListStreamsAsync(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) *ListStreamsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodbstreams.ListStreams", input)
-	return &DynamoDBStreamsListStreamsFuture{Future: future}
+	return &ListStreamsFuture{Future: future}
 }

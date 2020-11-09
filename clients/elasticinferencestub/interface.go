@@ -16,22 +16,22 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DescribeAcceleratorOfferings(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) (*elasticinference.DescribeAcceleratorOfferingsOutput, error)
-	DescribeAcceleratorOfferingsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) *ElasticInferenceDescribeAcceleratorOfferingsFuture
+	DescribeAcceleratorOfferingsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) *DescribeAcceleratorOfferingsFuture
 
 	DescribeAcceleratorTypes(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) (*elasticinference.DescribeAcceleratorTypesOutput, error)
-	DescribeAcceleratorTypesAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) *ElasticInferenceDescribeAcceleratorTypesFuture
+	DescribeAcceleratorTypesAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) *DescribeAcceleratorTypesFuture
 
 	DescribeAccelerators(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) (*elasticinference.DescribeAcceleratorsOutput, error)
-	DescribeAcceleratorsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) *ElasticInferenceDescribeAcceleratorsFuture
+	DescribeAcceleratorsAsync(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) *DescribeAcceleratorsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) (*elasticinference.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) *ElasticInferenceListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *elasticinference.TagResourceInput) (*elasticinference.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *elasticinference.TagResourceInput) *ElasticInferenceTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *elasticinference.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *elasticinference.UntagResourceInput) *ElasticInferenceUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *elasticinference.UntagResourceInput) *UntagResourceFuture
 }
 
 func NewClient() Client {

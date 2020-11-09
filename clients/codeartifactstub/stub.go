@@ -16,342 +16,342 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CodeArtifactAssociateExternalConnectionFuture struct {
+type AssociateExternalConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactAssociateExternalConnectionFuture) Get(ctx workflow.Context) (*codeartifact.AssociateExternalConnectionOutput, error) {
+func (r *AssociateExternalConnectionFuture) Get(ctx workflow.Context) (*codeartifact.AssociateExternalConnectionOutput, error) {
 	var output codeartifact.AssociateExternalConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactCopyPackageVersionsFuture struct {
+type CopyPackageVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactCopyPackageVersionsFuture) Get(ctx workflow.Context) (*codeartifact.CopyPackageVersionsOutput, error) {
+func (r *CopyPackageVersionsFuture) Get(ctx workflow.Context) (*codeartifact.CopyPackageVersionsOutput, error) {
 	var output codeartifact.CopyPackageVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactCreateDomainFuture struct {
+type CreateDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactCreateDomainFuture) Get(ctx workflow.Context) (*codeartifact.CreateDomainOutput, error) {
+func (r *CreateDomainFuture) Get(ctx workflow.Context) (*codeartifact.CreateDomainOutput, error) {
 	var output codeartifact.CreateDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactCreateRepositoryFuture struct {
+type CreateRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactCreateRepositoryFuture) Get(ctx workflow.Context) (*codeartifact.CreateRepositoryOutput, error) {
+func (r *CreateRepositoryFuture) Get(ctx workflow.Context) (*codeartifact.CreateRepositoryOutput, error) {
 	var output codeartifact.CreateRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDeleteDomainFuture struct {
+type DeleteDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDeleteDomainFuture) Get(ctx workflow.Context) (*codeartifact.DeleteDomainOutput, error) {
+func (r *DeleteDomainFuture) Get(ctx workflow.Context) (*codeartifact.DeleteDomainOutput, error) {
 	var output codeartifact.DeleteDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDeleteDomainPermissionsPolicyFuture struct {
+type DeleteDomainPermissionsPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDeleteDomainPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.DeleteDomainPermissionsPolicyOutput, error) {
+func (r *DeleteDomainPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.DeleteDomainPermissionsPolicyOutput, error) {
 	var output codeartifact.DeleteDomainPermissionsPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDeletePackageVersionsFuture struct {
+type DeletePackageVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDeletePackageVersionsFuture) Get(ctx workflow.Context) (*codeartifact.DeletePackageVersionsOutput, error) {
+func (r *DeletePackageVersionsFuture) Get(ctx workflow.Context) (*codeartifact.DeletePackageVersionsOutput, error) {
 	var output codeartifact.DeletePackageVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDeleteRepositoryFuture struct {
+type DeleteRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDeleteRepositoryFuture) Get(ctx workflow.Context) (*codeartifact.DeleteRepositoryOutput, error) {
+func (r *DeleteRepositoryFuture) Get(ctx workflow.Context) (*codeartifact.DeleteRepositoryOutput, error) {
 	var output codeartifact.DeleteRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDeleteRepositoryPermissionsPolicyFuture struct {
+type DeleteRepositoryPermissionsPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDeleteRepositoryPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.DeleteRepositoryPermissionsPolicyOutput, error) {
+func (r *DeleteRepositoryPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.DeleteRepositoryPermissionsPolicyOutput, error) {
 	var output codeartifact.DeleteRepositoryPermissionsPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDescribeDomainFuture struct {
+type DescribeDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDescribeDomainFuture) Get(ctx workflow.Context) (*codeartifact.DescribeDomainOutput, error) {
+func (r *DescribeDomainFuture) Get(ctx workflow.Context) (*codeartifact.DescribeDomainOutput, error) {
 	var output codeartifact.DescribeDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDescribePackageVersionFuture struct {
+type DescribePackageVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDescribePackageVersionFuture) Get(ctx workflow.Context) (*codeartifact.DescribePackageVersionOutput, error) {
+func (r *DescribePackageVersionFuture) Get(ctx workflow.Context) (*codeartifact.DescribePackageVersionOutput, error) {
 	var output codeartifact.DescribePackageVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDescribeRepositoryFuture struct {
+type DescribeRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDescribeRepositoryFuture) Get(ctx workflow.Context) (*codeartifact.DescribeRepositoryOutput, error) {
+func (r *DescribeRepositoryFuture) Get(ctx workflow.Context) (*codeartifact.DescribeRepositoryOutput, error) {
 	var output codeartifact.DescribeRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDisassociateExternalConnectionFuture struct {
+type DisassociateExternalConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDisassociateExternalConnectionFuture) Get(ctx workflow.Context) (*codeartifact.DisassociateExternalConnectionOutput, error) {
+func (r *DisassociateExternalConnectionFuture) Get(ctx workflow.Context) (*codeartifact.DisassociateExternalConnectionOutput, error) {
 	var output codeartifact.DisassociateExternalConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactDisposePackageVersionsFuture struct {
+type DisposePackageVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactDisposePackageVersionsFuture) Get(ctx workflow.Context) (*codeartifact.DisposePackageVersionsOutput, error) {
+func (r *DisposePackageVersionsFuture) Get(ctx workflow.Context) (*codeartifact.DisposePackageVersionsOutput, error) {
 	var output codeartifact.DisposePackageVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactGetAuthorizationTokenFuture struct {
+type GetAuthorizationTokenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactGetAuthorizationTokenFuture) Get(ctx workflow.Context) (*codeartifact.GetAuthorizationTokenOutput, error) {
+func (r *GetAuthorizationTokenFuture) Get(ctx workflow.Context) (*codeartifact.GetAuthorizationTokenOutput, error) {
 	var output codeartifact.GetAuthorizationTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactGetDomainPermissionsPolicyFuture struct {
+type GetDomainPermissionsPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactGetDomainPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.GetDomainPermissionsPolicyOutput, error) {
+func (r *GetDomainPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.GetDomainPermissionsPolicyOutput, error) {
 	var output codeartifact.GetDomainPermissionsPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactGetPackageVersionAssetFuture struct {
+type GetPackageVersionAssetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactGetPackageVersionAssetFuture) Get(ctx workflow.Context) (*codeartifact.GetPackageVersionAssetOutput, error) {
+func (r *GetPackageVersionAssetFuture) Get(ctx workflow.Context) (*codeartifact.GetPackageVersionAssetOutput, error) {
 	var output codeartifact.GetPackageVersionAssetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactGetPackageVersionReadmeFuture struct {
+type GetPackageVersionReadmeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactGetPackageVersionReadmeFuture) Get(ctx workflow.Context) (*codeartifact.GetPackageVersionReadmeOutput, error) {
+func (r *GetPackageVersionReadmeFuture) Get(ctx workflow.Context) (*codeartifact.GetPackageVersionReadmeOutput, error) {
 	var output codeartifact.GetPackageVersionReadmeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactGetRepositoryEndpointFuture struct {
+type GetRepositoryEndpointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactGetRepositoryEndpointFuture) Get(ctx workflow.Context) (*codeartifact.GetRepositoryEndpointOutput, error) {
+func (r *GetRepositoryEndpointFuture) Get(ctx workflow.Context) (*codeartifact.GetRepositoryEndpointOutput, error) {
 	var output codeartifact.GetRepositoryEndpointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactGetRepositoryPermissionsPolicyFuture struct {
+type GetRepositoryPermissionsPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactGetRepositoryPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.GetRepositoryPermissionsPolicyOutput, error) {
+func (r *GetRepositoryPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.GetRepositoryPermissionsPolicyOutput, error) {
 	var output codeartifact.GetRepositoryPermissionsPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactListDomainsFuture struct {
+type ListDomainsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactListDomainsFuture) Get(ctx workflow.Context) (*codeartifact.ListDomainsOutput, error) {
+func (r *ListDomainsFuture) Get(ctx workflow.Context) (*codeartifact.ListDomainsOutput, error) {
 	var output codeartifact.ListDomainsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactListPackageVersionAssetsFuture struct {
+type ListPackageVersionAssetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactListPackageVersionAssetsFuture) Get(ctx workflow.Context) (*codeartifact.ListPackageVersionAssetsOutput, error) {
+func (r *ListPackageVersionAssetsFuture) Get(ctx workflow.Context) (*codeartifact.ListPackageVersionAssetsOutput, error) {
 	var output codeartifact.ListPackageVersionAssetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactListPackageVersionDependenciesFuture struct {
+type ListPackageVersionDependenciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactListPackageVersionDependenciesFuture) Get(ctx workflow.Context) (*codeartifact.ListPackageVersionDependenciesOutput, error) {
+func (r *ListPackageVersionDependenciesFuture) Get(ctx workflow.Context) (*codeartifact.ListPackageVersionDependenciesOutput, error) {
 	var output codeartifact.ListPackageVersionDependenciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactListPackageVersionsFuture struct {
+type ListPackageVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactListPackageVersionsFuture) Get(ctx workflow.Context) (*codeartifact.ListPackageVersionsOutput, error) {
+func (r *ListPackageVersionsFuture) Get(ctx workflow.Context) (*codeartifact.ListPackageVersionsOutput, error) {
 	var output codeartifact.ListPackageVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactListPackagesFuture struct {
+type ListPackagesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactListPackagesFuture) Get(ctx workflow.Context) (*codeartifact.ListPackagesOutput, error) {
+func (r *ListPackagesFuture) Get(ctx workflow.Context) (*codeartifact.ListPackagesOutput, error) {
 	var output codeartifact.ListPackagesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactListRepositoriesFuture struct {
+type ListRepositoriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactListRepositoriesFuture) Get(ctx workflow.Context) (*codeartifact.ListRepositoriesOutput, error) {
+func (r *ListRepositoriesFuture) Get(ctx workflow.Context) (*codeartifact.ListRepositoriesOutput, error) {
 	var output codeartifact.ListRepositoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactListRepositoriesInDomainFuture struct {
+type ListRepositoriesInDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactListRepositoriesInDomainFuture) Get(ctx workflow.Context) (*codeartifact.ListRepositoriesInDomainOutput, error) {
+func (r *ListRepositoriesInDomainFuture) Get(ctx workflow.Context) (*codeartifact.ListRepositoriesInDomainOutput, error) {
 	var output codeartifact.ListRepositoriesInDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactPutDomainPermissionsPolicyFuture struct {
+type PutDomainPermissionsPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactPutDomainPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.PutDomainPermissionsPolicyOutput, error) {
+func (r *PutDomainPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.PutDomainPermissionsPolicyOutput, error) {
 	var output codeartifact.PutDomainPermissionsPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactPutRepositoryPermissionsPolicyFuture struct {
+type PutRepositoryPermissionsPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactPutRepositoryPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.PutRepositoryPermissionsPolicyOutput, error) {
+func (r *PutRepositoryPermissionsPolicyFuture) Get(ctx workflow.Context) (*codeartifact.PutRepositoryPermissionsPolicyOutput, error) {
 	var output codeartifact.PutRepositoryPermissionsPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactUpdatePackageVersionsStatusFuture struct {
+type UpdatePackageVersionsStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactUpdatePackageVersionsStatusFuture) Get(ctx workflow.Context) (*codeartifact.UpdatePackageVersionsStatusOutput, error) {
+func (r *UpdatePackageVersionsStatusFuture) Get(ctx workflow.Context) (*codeartifact.UpdatePackageVersionsStatusOutput, error) {
 	var output codeartifact.UpdatePackageVersionsStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeArtifactUpdateRepositoryFuture struct {
+type UpdateRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeArtifactUpdateRepositoryFuture) Get(ctx workflow.Context) (*codeartifact.UpdateRepositoryOutput, error) {
+func (r *UpdateRepositoryFuture) Get(ctx workflow.Context) (*codeartifact.UpdateRepositoryOutput, error) {
 	var output codeartifact.UpdateRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -363,9 +363,9 @@ func (a *stub) AssociateExternalConnection(ctx workflow.Context, input *codearti
 	return &output, err
 }
 
-func (a *stub) AssociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.AssociateExternalConnectionInput) *CodeArtifactAssociateExternalConnectionFuture {
+func (a *stub) AssociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.AssociateExternalConnectionInput) *AssociateExternalConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.AssociateExternalConnection", input)
-	return &CodeArtifactAssociateExternalConnectionFuture{Future: future}
+	return &AssociateExternalConnectionFuture{Future: future}
 }
 
 func (a *stub) CopyPackageVersions(ctx workflow.Context, input *codeartifact.CopyPackageVersionsInput) (*codeartifact.CopyPackageVersionsOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) CopyPackageVersions(ctx workflow.Context, input *codeartifact.Cop
 	return &output, err
 }
 
-func (a *stub) CopyPackageVersionsAsync(ctx workflow.Context, input *codeartifact.CopyPackageVersionsInput) *CodeArtifactCopyPackageVersionsFuture {
+func (a *stub) CopyPackageVersionsAsync(ctx workflow.Context, input *codeartifact.CopyPackageVersionsInput) *CopyPackageVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.CopyPackageVersions", input)
-	return &CodeArtifactCopyPackageVersionsFuture{Future: future}
+	return &CopyPackageVersionsFuture{Future: future}
 }
 
 func (a *stub) CreateDomain(ctx workflow.Context, input *codeartifact.CreateDomainInput) (*codeartifact.CreateDomainOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) CreateDomain(ctx workflow.Context, input *codeartifact.CreateDoma
 	return &output, err
 }
 
-func (a *stub) CreateDomainAsync(ctx workflow.Context, input *codeartifact.CreateDomainInput) *CodeArtifactCreateDomainFuture {
+func (a *stub) CreateDomainAsync(ctx workflow.Context, input *codeartifact.CreateDomainInput) *CreateDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.CreateDomain", input)
-	return &CodeArtifactCreateDomainFuture{Future: future}
+	return &CreateDomainFuture{Future: future}
 }
 
 func (a *stub) CreateRepository(ctx workflow.Context, input *codeartifact.CreateRepositoryInput) (*codeartifact.CreateRepositoryOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) CreateRepository(ctx workflow.Context, input *codeartifact.Create
 	return &output, err
 }
 
-func (a *stub) CreateRepositoryAsync(ctx workflow.Context, input *codeartifact.CreateRepositoryInput) *CodeArtifactCreateRepositoryFuture {
+func (a *stub) CreateRepositoryAsync(ctx workflow.Context, input *codeartifact.CreateRepositoryInput) *CreateRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.CreateRepository", input)
-	return &CodeArtifactCreateRepositoryFuture{Future: future}
+	return &CreateRepositoryFuture{Future: future}
 }
 
 func (a *stub) DeleteDomain(ctx workflow.Context, input *codeartifact.DeleteDomainInput) (*codeartifact.DeleteDomainOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) DeleteDomain(ctx workflow.Context, input *codeartifact.DeleteDoma
 	return &output, err
 }
 
-func (a *stub) DeleteDomainAsync(ctx workflow.Context, input *codeartifact.DeleteDomainInput) *CodeArtifactDeleteDomainFuture {
+func (a *stub) DeleteDomainAsync(ctx workflow.Context, input *codeartifact.DeleteDomainInput) *DeleteDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DeleteDomain", input)
-	return &CodeArtifactDeleteDomainFuture{Future: future}
+	return &DeleteDomainFuture{Future: future}
 }
 
 func (a *stub) DeleteDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.DeleteDomainPermissionsPolicyInput) (*codeartifact.DeleteDomainPermissionsPolicyOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) DeleteDomainPermissionsPolicy(ctx workflow.Context, input *codear
 	return &output, err
 }
 
-func (a *stub) DeleteDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.DeleteDomainPermissionsPolicyInput) *CodeArtifactDeleteDomainPermissionsPolicyFuture {
+func (a *stub) DeleteDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.DeleteDomainPermissionsPolicyInput) *DeleteDomainPermissionsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DeleteDomainPermissionsPolicy", input)
-	return &CodeArtifactDeleteDomainPermissionsPolicyFuture{Future: future}
+	return &DeleteDomainPermissionsPolicyFuture{Future: future}
 }
 
 func (a *stub) DeletePackageVersions(ctx workflow.Context, input *codeartifact.DeletePackageVersionsInput) (*codeartifact.DeletePackageVersionsOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) DeletePackageVersions(ctx workflow.Context, input *codeartifact.D
 	return &output, err
 }
 
-func (a *stub) DeletePackageVersionsAsync(ctx workflow.Context, input *codeartifact.DeletePackageVersionsInput) *CodeArtifactDeletePackageVersionsFuture {
+func (a *stub) DeletePackageVersionsAsync(ctx workflow.Context, input *codeartifact.DeletePackageVersionsInput) *DeletePackageVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DeletePackageVersions", input)
-	return &CodeArtifactDeletePackageVersionsFuture{Future: future}
+	return &DeletePackageVersionsFuture{Future: future}
 }
 
 func (a *stub) DeleteRepository(ctx workflow.Context, input *codeartifact.DeleteRepositoryInput) (*codeartifact.DeleteRepositoryOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) DeleteRepository(ctx workflow.Context, input *codeartifact.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteRepositoryAsync(ctx workflow.Context, input *codeartifact.DeleteRepositoryInput) *CodeArtifactDeleteRepositoryFuture {
+func (a *stub) DeleteRepositoryAsync(ctx workflow.Context, input *codeartifact.DeleteRepositoryInput) *DeleteRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DeleteRepository", input)
-	return &CodeArtifactDeleteRepositoryFuture{Future: future}
+	return &DeleteRepositoryFuture{Future: future}
 }
 
 func (a *stub) DeleteRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.DeleteRepositoryPermissionsPolicyInput) (*codeartifact.DeleteRepositoryPermissionsPolicyOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) DeleteRepositoryPermissionsPolicy(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *stub) DeleteRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.DeleteRepositoryPermissionsPolicyInput) *CodeArtifactDeleteRepositoryPermissionsPolicyFuture {
+func (a *stub) DeleteRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.DeleteRepositoryPermissionsPolicyInput) *DeleteRepositoryPermissionsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DeleteRepositoryPermissionsPolicy", input)
-	return &CodeArtifactDeleteRepositoryPermissionsPolicyFuture{Future: future}
+	return &DeleteRepositoryPermissionsPolicyFuture{Future: future}
 }
 
 func (a *stub) DescribeDomain(ctx workflow.Context, input *codeartifact.DescribeDomainInput) (*codeartifact.DescribeDomainOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) DescribeDomain(ctx workflow.Context, input *codeartifact.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeDomainAsync(ctx workflow.Context, input *codeartifact.DescribeDomainInput) *CodeArtifactDescribeDomainFuture {
+func (a *stub) DescribeDomainAsync(ctx workflow.Context, input *codeartifact.DescribeDomainInput) *DescribeDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DescribeDomain", input)
-	return &CodeArtifactDescribeDomainFuture{Future: future}
+	return &DescribeDomainFuture{Future: future}
 }
 
 func (a *stub) DescribePackageVersion(ctx workflow.Context, input *codeartifact.DescribePackageVersionInput) (*codeartifact.DescribePackageVersionOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) DescribePackageVersion(ctx workflow.Context, input *codeartifact.
 	return &output, err
 }
 
-func (a *stub) DescribePackageVersionAsync(ctx workflow.Context, input *codeartifact.DescribePackageVersionInput) *CodeArtifactDescribePackageVersionFuture {
+func (a *stub) DescribePackageVersionAsync(ctx workflow.Context, input *codeartifact.DescribePackageVersionInput) *DescribePackageVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DescribePackageVersion", input)
-	return &CodeArtifactDescribePackageVersionFuture{Future: future}
+	return &DescribePackageVersionFuture{Future: future}
 }
 
 func (a *stub) DescribeRepository(ctx workflow.Context, input *codeartifact.DescribeRepositoryInput) (*codeartifact.DescribeRepositoryOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DescribeRepository(ctx workflow.Context, input *codeartifact.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeRepositoryAsync(ctx workflow.Context, input *codeartifact.DescribeRepositoryInput) *CodeArtifactDescribeRepositoryFuture {
+func (a *stub) DescribeRepositoryAsync(ctx workflow.Context, input *codeartifact.DescribeRepositoryInput) *DescribeRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DescribeRepository", input)
-	return &CodeArtifactDescribeRepositoryFuture{Future: future}
+	return &DescribeRepositoryFuture{Future: future}
 }
 
 func (a *stub) DisassociateExternalConnection(ctx workflow.Context, input *codeartifact.DisassociateExternalConnectionInput) (*codeartifact.DisassociateExternalConnectionOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) DisassociateExternalConnection(ctx workflow.Context, input *codea
 	return &output, err
 }
 
-func (a *stub) DisassociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.DisassociateExternalConnectionInput) *CodeArtifactDisassociateExternalConnectionFuture {
+func (a *stub) DisassociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.DisassociateExternalConnectionInput) *DisassociateExternalConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DisassociateExternalConnection", input)
-	return &CodeArtifactDisassociateExternalConnectionFuture{Future: future}
+	return &DisassociateExternalConnectionFuture{Future: future}
 }
 
 func (a *stub) DisposePackageVersions(ctx workflow.Context, input *codeartifact.DisposePackageVersionsInput) (*codeartifact.DisposePackageVersionsOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DisposePackageVersions(ctx workflow.Context, input *codeartifact.
 	return &output, err
 }
 
-func (a *stub) DisposePackageVersionsAsync(ctx workflow.Context, input *codeartifact.DisposePackageVersionsInput) *CodeArtifactDisposePackageVersionsFuture {
+func (a *stub) DisposePackageVersionsAsync(ctx workflow.Context, input *codeartifact.DisposePackageVersionsInput) *DisposePackageVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.DisposePackageVersions", input)
-	return &CodeArtifactDisposePackageVersionsFuture{Future: future}
+	return &DisposePackageVersionsFuture{Future: future}
 }
 
 func (a *stub) GetAuthorizationToken(ctx workflow.Context, input *codeartifact.GetAuthorizationTokenInput) (*codeartifact.GetAuthorizationTokenOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) GetAuthorizationToken(ctx workflow.Context, input *codeartifact.G
 	return &output, err
 }
 
-func (a *stub) GetAuthorizationTokenAsync(ctx workflow.Context, input *codeartifact.GetAuthorizationTokenInput) *CodeArtifactGetAuthorizationTokenFuture {
+func (a *stub) GetAuthorizationTokenAsync(ctx workflow.Context, input *codeartifact.GetAuthorizationTokenInput) *GetAuthorizationTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.GetAuthorizationToken", input)
-	return &CodeArtifactGetAuthorizationTokenFuture{Future: future}
+	return &GetAuthorizationTokenFuture{Future: future}
 }
 
 func (a *stub) GetDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.GetDomainPermissionsPolicyInput) (*codeartifact.GetDomainPermissionsPolicyOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) GetDomainPermissionsPolicy(ctx workflow.Context, input *codeartif
 	return &output, err
 }
 
-func (a *stub) GetDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.GetDomainPermissionsPolicyInput) *CodeArtifactGetDomainPermissionsPolicyFuture {
+func (a *stub) GetDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.GetDomainPermissionsPolicyInput) *GetDomainPermissionsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.GetDomainPermissionsPolicy", input)
-	return &CodeArtifactGetDomainPermissionsPolicyFuture{Future: future}
+	return &GetDomainPermissionsPolicyFuture{Future: future}
 }
 
 func (a *stub) GetPackageVersionAsset(ctx workflow.Context, input *codeartifact.GetPackageVersionAssetInput) (*codeartifact.GetPackageVersionAssetOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) GetPackageVersionAsset(ctx workflow.Context, input *codeartifact.
 	return &output, err
 }
 
-func (a *stub) GetPackageVersionAssetAsync(ctx workflow.Context, input *codeartifact.GetPackageVersionAssetInput) *CodeArtifactGetPackageVersionAssetFuture {
+func (a *stub) GetPackageVersionAssetAsync(ctx workflow.Context, input *codeartifact.GetPackageVersionAssetInput) *GetPackageVersionAssetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.GetPackageVersionAsset", input)
-	return &CodeArtifactGetPackageVersionAssetFuture{Future: future}
+	return &GetPackageVersionAssetFuture{Future: future}
 }
 
 func (a *stub) GetPackageVersionReadme(ctx workflow.Context, input *codeartifact.GetPackageVersionReadmeInput) (*codeartifact.GetPackageVersionReadmeOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) GetPackageVersionReadme(ctx workflow.Context, input *codeartifact
 	return &output, err
 }
 
-func (a *stub) GetPackageVersionReadmeAsync(ctx workflow.Context, input *codeartifact.GetPackageVersionReadmeInput) *CodeArtifactGetPackageVersionReadmeFuture {
+func (a *stub) GetPackageVersionReadmeAsync(ctx workflow.Context, input *codeartifact.GetPackageVersionReadmeInput) *GetPackageVersionReadmeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.GetPackageVersionReadme", input)
-	return &CodeArtifactGetPackageVersionReadmeFuture{Future: future}
+	return &GetPackageVersionReadmeFuture{Future: future}
 }
 
 func (a *stub) GetRepositoryEndpoint(ctx workflow.Context, input *codeartifact.GetRepositoryEndpointInput) (*codeartifact.GetRepositoryEndpointOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) GetRepositoryEndpoint(ctx workflow.Context, input *codeartifact.G
 	return &output, err
 }
 
-func (a *stub) GetRepositoryEndpointAsync(ctx workflow.Context, input *codeartifact.GetRepositoryEndpointInput) *CodeArtifactGetRepositoryEndpointFuture {
+func (a *stub) GetRepositoryEndpointAsync(ctx workflow.Context, input *codeartifact.GetRepositoryEndpointInput) *GetRepositoryEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.GetRepositoryEndpoint", input)
-	return &CodeArtifactGetRepositoryEndpointFuture{Future: future}
+	return &GetRepositoryEndpointFuture{Future: future}
 }
 
 func (a *stub) GetRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.GetRepositoryPermissionsPolicyInput) (*codeartifact.GetRepositoryPermissionsPolicyOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) GetRepositoryPermissionsPolicy(ctx workflow.Context, input *codea
 	return &output, err
 }
 
-func (a *stub) GetRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.GetRepositoryPermissionsPolicyInput) *CodeArtifactGetRepositoryPermissionsPolicyFuture {
+func (a *stub) GetRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.GetRepositoryPermissionsPolicyInput) *GetRepositoryPermissionsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.GetRepositoryPermissionsPolicy", input)
-	return &CodeArtifactGetRepositoryPermissionsPolicyFuture{Future: future}
+	return &GetRepositoryPermissionsPolicyFuture{Future: future}
 }
 
 func (a *stub) ListDomains(ctx workflow.Context, input *codeartifact.ListDomainsInput) (*codeartifact.ListDomainsOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) ListDomains(ctx workflow.Context, input *codeartifact.ListDomains
 	return &output, err
 }
 
-func (a *stub) ListDomainsAsync(ctx workflow.Context, input *codeartifact.ListDomainsInput) *CodeArtifactListDomainsFuture {
+func (a *stub) ListDomainsAsync(ctx workflow.Context, input *codeartifact.ListDomainsInput) *ListDomainsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.ListDomains", input)
-	return &CodeArtifactListDomainsFuture{Future: future}
+	return &ListDomainsFuture{Future: future}
 }
 
 func (a *stub) ListPackageVersionAssets(ctx workflow.Context, input *codeartifact.ListPackageVersionAssetsInput) (*codeartifact.ListPackageVersionAssetsOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) ListPackageVersionAssets(ctx workflow.Context, input *codeartifac
 	return &output, err
 }
 
-func (a *stub) ListPackageVersionAssetsAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionAssetsInput) *CodeArtifactListPackageVersionAssetsFuture {
+func (a *stub) ListPackageVersionAssetsAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionAssetsInput) *ListPackageVersionAssetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.ListPackageVersionAssets", input)
-	return &CodeArtifactListPackageVersionAssetsFuture{Future: future}
+	return &ListPackageVersionAssetsFuture{Future: future}
 }
 
 func (a *stub) ListPackageVersionDependencies(ctx workflow.Context, input *codeartifact.ListPackageVersionDependenciesInput) (*codeartifact.ListPackageVersionDependenciesOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) ListPackageVersionDependencies(ctx workflow.Context, input *codea
 	return &output, err
 }
 
-func (a *stub) ListPackageVersionDependenciesAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionDependenciesInput) *CodeArtifactListPackageVersionDependenciesFuture {
+func (a *stub) ListPackageVersionDependenciesAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionDependenciesInput) *ListPackageVersionDependenciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.ListPackageVersionDependencies", input)
-	return &CodeArtifactListPackageVersionDependenciesFuture{Future: future}
+	return &ListPackageVersionDependenciesFuture{Future: future}
 }
 
 func (a *stub) ListPackageVersions(ctx workflow.Context, input *codeartifact.ListPackageVersionsInput) (*codeartifact.ListPackageVersionsOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) ListPackageVersions(ctx workflow.Context, input *codeartifact.Lis
 	return &output, err
 }
 
-func (a *stub) ListPackageVersionsAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionsInput) *CodeArtifactListPackageVersionsFuture {
+func (a *stub) ListPackageVersionsAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionsInput) *ListPackageVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.ListPackageVersions", input)
-	return &CodeArtifactListPackageVersionsFuture{Future: future}
+	return &ListPackageVersionsFuture{Future: future}
 }
 
 func (a *stub) ListPackages(ctx workflow.Context, input *codeartifact.ListPackagesInput) (*codeartifact.ListPackagesOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) ListPackages(ctx workflow.Context, input *codeartifact.ListPackag
 	return &output, err
 }
 
-func (a *stub) ListPackagesAsync(ctx workflow.Context, input *codeartifact.ListPackagesInput) *CodeArtifactListPackagesFuture {
+func (a *stub) ListPackagesAsync(ctx workflow.Context, input *codeartifact.ListPackagesInput) *ListPackagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.ListPackages", input)
-	return &CodeArtifactListPackagesFuture{Future: future}
+	return &ListPackagesFuture{Future: future}
 }
 
 func (a *stub) ListRepositories(ctx workflow.Context, input *codeartifact.ListRepositoriesInput) (*codeartifact.ListRepositoriesOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) ListRepositories(ctx workflow.Context, input *codeartifact.ListRe
 	return &output, err
 }
 
-func (a *stub) ListRepositoriesAsync(ctx workflow.Context, input *codeartifact.ListRepositoriesInput) *CodeArtifactListRepositoriesFuture {
+func (a *stub) ListRepositoriesAsync(ctx workflow.Context, input *codeartifact.ListRepositoriesInput) *ListRepositoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.ListRepositories", input)
-	return &CodeArtifactListRepositoriesFuture{Future: future}
+	return &ListRepositoriesFuture{Future: future}
 }
 
 func (a *stub) ListRepositoriesInDomain(ctx workflow.Context, input *codeartifact.ListRepositoriesInDomainInput) (*codeartifact.ListRepositoriesInDomainOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) ListRepositoriesInDomain(ctx workflow.Context, input *codeartifac
 	return &output, err
 }
 
-func (a *stub) ListRepositoriesInDomainAsync(ctx workflow.Context, input *codeartifact.ListRepositoriesInDomainInput) *CodeArtifactListRepositoriesInDomainFuture {
+func (a *stub) ListRepositoriesInDomainAsync(ctx workflow.Context, input *codeartifact.ListRepositoriesInDomainInput) *ListRepositoriesInDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.ListRepositoriesInDomain", input)
-	return &CodeArtifactListRepositoriesInDomainFuture{Future: future}
+	return &ListRepositoriesInDomainFuture{Future: future}
 }
 
 func (a *stub) PutDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.PutDomainPermissionsPolicyInput) (*codeartifact.PutDomainPermissionsPolicyOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) PutDomainPermissionsPolicy(ctx workflow.Context, input *codeartif
 	return &output, err
 }
 
-func (a *stub) PutDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.PutDomainPermissionsPolicyInput) *CodeArtifactPutDomainPermissionsPolicyFuture {
+func (a *stub) PutDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.PutDomainPermissionsPolicyInput) *PutDomainPermissionsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.PutDomainPermissionsPolicy", input)
-	return &CodeArtifactPutDomainPermissionsPolicyFuture{Future: future}
+	return &PutDomainPermissionsPolicyFuture{Future: future}
 }
 
 func (a *stub) PutRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.PutRepositoryPermissionsPolicyInput) (*codeartifact.PutRepositoryPermissionsPolicyOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) PutRepositoryPermissionsPolicy(ctx workflow.Context, input *codea
 	return &output, err
 }
 
-func (a *stub) PutRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.PutRepositoryPermissionsPolicyInput) *CodeArtifactPutRepositoryPermissionsPolicyFuture {
+func (a *stub) PutRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.PutRepositoryPermissionsPolicyInput) *PutRepositoryPermissionsPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.PutRepositoryPermissionsPolicy", input)
-	return &CodeArtifactPutRepositoryPermissionsPolicyFuture{Future: future}
+	return &PutRepositoryPermissionsPolicyFuture{Future: future}
 }
 
 func (a *stub) UpdatePackageVersionsStatus(ctx workflow.Context, input *codeartifact.UpdatePackageVersionsStatusInput) (*codeartifact.UpdatePackageVersionsStatusOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) UpdatePackageVersionsStatus(ctx workflow.Context, input *codearti
 	return &output, err
 }
 
-func (a *stub) UpdatePackageVersionsStatusAsync(ctx workflow.Context, input *codeartifact.UpdatePackageVersionsStatusInput) *CodeArtifactUpdatePackageVersionsStatusFuture {
+func (a *stub) UpdatePackageVersionsStatusAsync(ctx workflow.Context, input *codeartifact.UpdatePackageVersionsStatusInput) *UpdatePackageVersionsStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.UpdatePackageVersionsStatus", input)
-	return &CodeArtifactUpdatePackageVersionsStatusFuture{Future: future}
+	return &UpdatePackageVersionsStatusFuture{Future: future}
 }
 
 func (a *stub) UpdateRepository(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) (*codeartifact.UpdateRepositoryOutput, error) {
@@ -693,7 +693,7 @@ func (a *stub) UpdateRepository(ctx workflow.Context, input *codeartifact.Update
 	return &output, err
 }
 
-func (a *stub) UpdateRepositoryAsync(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) *CodeArtifactUpdateRepositoryFuture {
+func (a *stub) UpdateRepositoryAsync(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) *UpdateRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeartifact.UpdateRepository", input)
-	return &CodeArtifactUpdateRepositoryFuture{Future: future}
+	return &UpdateRepositoryFuture{Future: future}
 }

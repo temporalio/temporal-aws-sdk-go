@@ -16,85 +16,85 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateApplication(ctx workflow.Context, input *applicationinsights.CreateApplicationInput) (*applicationinsights.CreateApplicationOutput, error)
-	CreateApplicationAsync(ctx workflow.Context, input *applicationinsights.CreateApplicationInput) *ApplicationInsightsCreateApplicationFuture
+	CreateApplicationAsync(ctx workflow.Context, input *applicationinsights.CreateApplicationInput) *CreateApplicationFuture
 
 	CreateComponent(ctx workflow.Context, input *applicationinsights.CreateComponentInput) (*applicationinsights.CreateComponentOutput, error)
-	CreateComponentAsync(ctx workflow.Context, input *applicationinsights.CreateComponentInput) *ApplicationInsightsCreateComponentFuture
+	CreateComponentAsync(ctx workflow.Context, input *applicationinsights.CreateComponentInput) *CreateComponentFuture
 
 	CreateLogPattern(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) (*applicationinsights.CreateLogPatternOutput, error)
-	CreateLogPatternAsync(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) *ApplicationInsightsCreateLogPatternFuture
+	CreateLogPatternAsync(ctx workflow.Context, input *applicationinsights.CreateLogPatternInput) *CreateLogPatternFuture
 
 	DeleteApplication(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) (*applicationinsights.DeleteApplicationOutput, error)
-	DeleteApplicationAsync(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) *ApplicationInsightsDeleteApplicationFuture
+	DeleteApplicationAsync(ctx workflow.Context, input *applicationinsights.DeleteApplicationInput) *DeleteApplicationFuture
 
 	DeleteComponent(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) (*applicationinsights.DeleteComponentOutput, error)
-	DeleteComponentAsync(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) *ApplicationInsightsDeleteComponentFuture
+	DeleteComponentAsync(ctx workflow.Context, input *applicationinsights.DeleteComponentInput) *DeleteComponentFuture
 
 	DeleteLogPattern(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) (*applicationinsights.DeleteLogPatternOutput, error)
-	DeleteLogPatternAsync(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) *ApplicationInsightsDeleteLogPatternFuture
+	DeleteLogPatternAsync(ctx workflow.Context, input *applicationinsights.DeleteLogPatternInput) *DeleteLogPatternFuture
 
 	DescribeApplication(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) (*applicationinsights.DescribeApplicationOutput, error)
-	DescribeApplicationAsync(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) *ApplicationInsightsDescribeApplicationFuture
+	DescribeApplicationAsync(ctx workflow.Context, input *applicationinsights.DescribeApplicationInput) *DescribeApplicationFuture
 
 	DescribeComponent(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) (*applicationinsights.DescribeComponentOutput, error)
-	DescribeComponentAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) *ApplicationInsightsDescribeComponentFuture
+	DescribeComponentAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentInput) *DescribeComponentFuture
 
 	DescribeComponentConfiguration(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) (*applicationinsights.DescribeComponentConfigurationOutput, error)
-	DescribeComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) *ApplicationInsightsDescribeComponentConfigurationFuture
+	DescribeComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationInput) *DescribeComponentConfigurationFuture
 
 	DescribeComponentConfigurationRecommendation(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) (*applicationinsights.DescribeComponentConfigurationRecommendationOutput, error)
-	DescribeComponentConfigurationRecommendationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) *ApplicationInsightsDescribeComponentConfigurationRecommendationFuture
+	DescribeComponentConfigurationRecommendationAsync(ctx workflow.Context, input *applicationinsights.DescribeComponentConfigurationRecommendationInput) *DescribeComponentConfigurationRecommendationFuture
 
 	DescribeLogPattern(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) (*applicationinsights.DescribeLogPatternOutput, error)
-	DescribeLogPatternAsync(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) *ApplicationInsightsDescribeLogPatternFuture
+	DescribeLogPatternAsync(ctx workflow.Context, input *applicationinsights.DescribeLogPatternInput) *DescribeLogPatternFuture
 
 	DescribeObservation(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) (*applicationinsights.DescribeObservationOutput, error)
-	DescribeObservationAsync(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) *ApplicationInsightsDescribeObservationFuture
+	DescribeObservationAsync(ctx workflow.Context, input *applicationinsights.DescribeObservationInput) *DescribeObservationFuture
 
 	DescribeProblem(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) (*applicationinsights.DescribeProblemOutput, error)
-	DescribeProblemAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) *ApplicationInsightsDescribeProblemFuture
+	DescribeProblemAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemInput) *DescribeProblemFuture
 
 	DescribeProblemObservations(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) (*applicationinsights.DescribeProblemObservationsOutput, error)
-	DescribeProblemObservationsAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) *ApplicationInsightsDescribeProblemObservationsFuture
+	DescribeProblemObservationsAsync(ctx workflow.Context, input *applicationinsights.DescribeProblemObservationsInput) *DescribeProblemObservationsFuture
 
 	ListApplications(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) (*applicationinsights.ListApplicationsOutput, error)
-	ListApplicationsAsync(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) *ApplicationInsightsListApplicationsFuture
+	ListApplicationsAsync(ctx workflow.Context, input *applicationinsights.ListApplicationsInput) *ListApplicationsFuture
 
 	ListComponents(ctx workflow.Context, input *applicationinsights.ListComponentsInput) (*applicationinsights.ListComponentsOutput, error)
-	ListComponentsAsync(ctx workflow.Context, input *applicationinsights.ListComponentsInput) *ApplicationInsightsListComponentsFuture
+	ListComponentsAsync(ctx workflow.Context, input *applicationinsights.ListComponentsInput) *ListComponentsFuture
 
 	ListConfigurationHistory(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) (*applicationinsights.ListConfigurationHistoryOutput, error)
-	ListConfigurationHistoryAsync(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) *ApplicationInsightsListConfigurationHistoryFuture
+	ListConfigurationHistoryAsync(ctx workflow.Context, input *applicationinsights.ListConfigurationHistoryInput) *ListConfigurationHistoryFuture
 
 	ListLogPatternSets(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) (*applicationinsights.ListLogPatternSetsOutput, error)
-	ListLogPatternSetsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) *ApplicationInsightsListLogPatternSetsFuture
+	ListLogPatternSetsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternSetsInput) *ListLogPatternSetsFuture
 
 	ListLogPatterns(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) (*applicationinsights.ListLogPatternsOutput, error)
-	ListLogPatternsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) *ApplicationInsightsListLogPatternsFuture
+	ListLogPatternsAsync(ctx workflow.Context, input *applicationinsights.ListLogPatternsInput) *ListLogPatternsFuture
 
 	ListProblems(ctx workflow.Context, input *applicationinsights.ListProblemsInput) (*applicationinsights.ListProblemsOutput, error)
-	ListProblemsAsync(ctx workflow.Context, input *applicationinsights.ListProblemsInput) *ApplicationInsightsListProblemsFuture
+	ListProblemsAsync(ctx workflow.Context, input *applicationinsights.ListProblemsInput) *ListProblemsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) (*applicationinsights.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) *ApplicationInsightsListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *applicationinsights.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *applicationinsights.TagResourceInput) (*applicationinsights.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *applicationinsights.TagResourceInput) *ApplicationInsightsTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *applicationinsights.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *applicationinsights.UntagResourceInput) (*applicationinsights.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *applicationinsights.UntagResourceInput) *ApplicationInsightsUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *applicationinsights.UntagResourceInput) *UntagResourceFuture
 
 	UpdateApplication(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) (*applicationinsights.UpdateApplicationOutput, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) *ApplicationInsightsUpdateApplicationFuture
+	UpdateApplicationAsync(ctx workflow.Context, input *applicationinsights.UpdateApplicationInput) *UpdateApplicationFuture
 
 	UpdateComponent(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) (*applicationinsights.UpdateComponentOutput, error)
-	UpdateComponentAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) *ApplicationInsightsUpdateComponentFuture
+	UpdateComponentAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentInput) *UpdateComponentFuture
 
 	UpdateComponentConfiguration(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) (*applicationinsights.UpdateComponentConfigurationOutput, error)
-	UpdateComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) *ApplicationInsightsUpdateComponentConfigurationFuture
+	UpdateComponentConfigurationAsync(ctx workflow.Context, input *applicationinsights.UpdateComponentConfigurationInput) *UpdateComponentConfigurationFuture
 
 	UpdateLogPattern(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) (*applicationinsights.UpdateLogPatternOutput, error)
-	UpdateLogPatternAsync(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) *ApplicationInsightsUpdateLogPatternFuture
+	UpdateLogPatternAsync(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) *UpdateLogPatternFuture
 }
 
 func NewClient() Client {

@@ -16,31 +16,31 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateProject(ctx workflow.Context, input *mobile.CreateProjectInput) (*mobile.CreateProjectOutput, error)
-	CreateProjectAsync(ctx workflow.Context, input *mobile.CreateProjectInput) *MobileCreateProjectFuture
+	CreateProjectAsync(ctx workflow.Context, input *mobile.CreateProjectInput) *CreateProjectFuture
 
 	DeleteProject(ctx workflow.Context, input *mobile.DeleteProjectInput) (*mobile.DeleteProjectOutput, error)
-	DeleteProjectAsync(ctx workflow.Context, input *mobile.DeleteProjectInput) *MobileDeleteProjectFuture
+	DeleteProjectAsync(ctx workflow.Context, input *mobile.DeleteProjectInput) *DeleteProjectFuture
 
 	DescribeBundle(ctx workflow.Context, input *mobile.DescribeBundleInput) (*mobile.DescribeBundleOutput, error)
-	DescribeBundleAsync(ctx workflow.Context, input *mobile.DescribeBundleInput) *MobileDescribeBundleFuture
+	DescribeBundleAsync(ctx workflow.Context, input *mobile.DescribeBundleInput) *DescribeBundleFuture
 
 	DescribeProject(ctx workflow.Context, input *mobile.DescribeProjectInput) (*mobile.DescribeProjectOutput, error)
-	DescribeProjectAsync(ctx workflow.Context, input *mobile.DescribeProjectInput) *MobileDescribeProjectFuture
+	DescribeProjectAsync(ctx workflow.Context, input *mobile.DescribeProjectInput) *DescribeProjectFuture
 
 	ExportBundle(ctx workflow.Context, input *mobile.ExportBundleInput) (*mobile.ExportBundleOutput, error)
-	ExportBundleAsync(ctx workflow.Context, input *mobile.ExportBundleInput) *MobileExportBundleFuture
+	ExportBundleAsync(ctx workflow.Context, input *mobile.ExportBundleInput) *ExportBundleFuture
 
 	ExportProject(ctx workflow.Context, input *mobile.ExportProjectInput) (*mobile.ExportProjectOutput, error)
-	ExportProjectAsync(ctx workflow.Context, input *mobile.ExportProjectInput) *MobileExportProjectFuture
+	ExportProjectAsync(ctx workflow.Context, input *mobile.ExportProjectInput) *ExportProjectFuture
 
 	ListBundles(ctx workflow.Context, input *mobile.ListBundlesInput) (*mobile.ListBundlesOutput, error)
-	ListBundlesAsync(ctx workflow.Context, input *mobile.ListBundlesInput) *MobileListBundlesFuture
+	ListBundlesAsync(ctx workflow.Context, input *mobile.ListBundlesInput) *ListBundlesFuture
 
 	ListProjects(ctx workflow.Context, input *mobile.ListProjectsInput) (*mobile.ListProjectsOutput, error)
-	ListProjectsAsync(ctx workflow.Context, input *mobile.ListProjectsInput) *MobileListProjectsFuture
+	ListProjectsAsync(ctx workflow.Context, input *mobile.ListProjectsInput) *ListProjectsFuture
 
 	UpdateProject(ctx workflow.Context, input *mobile.UpdateProjectInput) (*mobile.UpdateProjectOutput, error)
-	UpdateProjectAsync(ctx workflow.Context, input *mobile.UpdateProjectInput) *MobileUpdateProjectFuture
+	UpdateProjectAsync(ctx workflow.Context, input *mobile.UpdateProjectInput) *UpdateProjectFuture
 }
 
 func NewClient() Client {

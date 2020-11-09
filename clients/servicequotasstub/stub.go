@@ -16,177 +16,177 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ServiceQuotasAssociateServiceQuotaTemplateFuture struct {
+type AssociateServiceQuotaTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasAssociateServiceQuotaTemplateFuture) Get(ctx workflow.Context) (*servicequotas.AssociateServiceQuotaTemplateOutput, error) {
+func (r *AssociateServiceQuotaTemplateFuture) Get(ctx workflow.Context) (*servicequotas.AssociateServiceQuotaTemplateOutput, error) {
 	var output servicequotas.AssociateServiceQuotaTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasDeleteServiceQuotaIncreaseRequestFromTemplateFuture struct {
+type DeleteServiceQuotaIncreaseRequestFromTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasDeleteServiceQuotaIncreaseRequestFromTemplateFuture) Get(ctx workflow.Context) (*servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error) {
+func (r *DeleteServiceQuotaIncreaseRequestFromTemplateFuture) Get(ctx workflow.Context) (*servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error) {
 	var output servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasDisassociateServiceQuotaTemplateFuture struct {
+type DisassociateServiceQuotaTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasDisassociateServiceQuotaTemplateFuture) Get(ctx workflow.Context) (*servicequotas.DisassociateServiceQuotaTemplateOutput, error) {
+func (r *DisassociateServiceQuotaTemplateFuture) Get(ctx workflow.Context) (*servicequotas.DisassociateServiceQuotaTemplateOutput, error) {
 	var output servicequotas.DisassociateServiceQuotaTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasGetAWSDefaultServiceQuotaFuture struct {
+type GetAWSDefaultServiceQuotaFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasGetAWSDefaultServiceQuotaFuture) Get(ctx workflow.Context) (*servicequotas.GetAWSDefaultServiceQuotaOutput, error) {
+func (r *GetAWSDefaultServiceQuotaFuture) Get(ctx workflow.Context) (*servicequotas.GetAWSDefaultServiceQuotaOutput, error) {
 	var output servicequotas.GetAWSDefaultServiceQuotaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasGetAssociationForServiceQuotaTemplateFuture struct {
+type GetAssociationForServiceQuotaTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasGetAssociationForServiceQuotaTemplateFuture) Get(ctx workflow.Context) (*servicequotas.GetAssociationForServiceQuotaTemplateOutput, error) {
+func (r *GetAssociationForServiceQuotaTemplateFuture) Get(ctx workflow.Context) (*servicequotas.GetAssociationForServiceQuotaTemplateOutput, error) {
 	var output servicequotas.GetAssociationForServiceQuotaTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasGetRequestedServiceQuotaChangeFuture struct {
+type GetRequestedServiceQuotaChangeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasGetRequestedServiceQuotaChangeFuture) Get(ctx workflow.Context) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error) {
+func (r *GetRequestedServiceQuotaChangeFuture) Get(ctx workflow.Context) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error) {
 	var output servicequotas.GetRequestedServiceQuotaChangeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasGetServiceQuotaFuture struct {
+type GetServiceQuotaFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasGetServiceQuotaFuture) Get(ctx workflow.Context) (*servicequotas.GetServiceQuotaOutput, error) {
+func (r *GetServiceQuotaFuture) Get(ctx workflow.Context) (*servicequotas.GetServiceQuotaOutput, error) {
 	var output servicequotas.GetServiceQuotaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasGetServiceQuotaIncreaseRequestFromTemplateFuture struct {
+type GetServiceQuotaIncreaseRequestFromTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasGetServiceQuotaIncreaseRequestFromTemplateFuture) Get(ctx workflow.Context) (*servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput, error) {
+func (r *GetServiceQuotaIncreaseRequestFromTemplateFuture) Get(ctx workflow.Context) (*servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput, error) {
 	var output servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasListAWSDefaultServiceQuotasFuture struct {
+type ListAWSDefaultServiceQuotasFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasListAWSDefaultServiceQuotasFuture) Get(ctx workflow.Context) (*servicequotas.ListAWSDefaultServiceQuotasOutput, error) {
+func (r *ListAWSDefaultServiceQuotasFuture) Get(ctx workflow.Context) (*servicequotas.ListAWSDefaultServiceQuotasOutput, error) {
 	var output servicequotas.ListAWSDefaultServiceQuotasOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasListRequestedServiceQuotaChangeHistoryFuture struct {
+type ListRequestedServiceQuotaChangeHistoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasListRequestedServiceQuotaChangeHistoryFuture) Get(ctx workflow.Context) (*servicequotas.ListRequestedServiceQuotaChangeHistoryOutput, error) {
+func (r *ListRequestedServiceQuotaChangeHistoryFuture) Get(ctx workflow.Context) (*servicequotas.ListRequestedServiceQuotaChangeHistoryOutput, error) {
 	var output servicequotas.ListRequestedServiceQuotaChangeHistoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasListRequestedServiceQuotaChangeHistoryByQuotaFuture struct {
+type ListRequestedServiceQuotaChangeHistoryByQuotaFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasListRequestedServiceQuotaChangeHistoryByQuotaFuture) Get(ctx workflow.Context) (*servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput, error) {
+func (r *ListRequestedServiceQuotaChangeHistoryByQuotaFuture) Get(ctx workflow.Context) (*servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput, error) {
 	var output servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasListServiceQuotaIncreaseRequestsInTemplateFuture struct {
+type ListServiceQuotaIncreaseRequestsInTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasListServiceQuotaIncreaseRequestsInTemplateFuture) Get(ctx workflow.Context) (*servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput, error) {
+func (r *ListServiceQuotaIncreaseRequestsInTemplateFuture) Get(ctx workflow.Context) (*servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput, error) {
 	var output servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasListServiceQuotasFuture struct {
+type ListServiceQuotasFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasListServiceQuotasFuture) Get(ctx workflow.Context) (*servicequotas.ListServiceQuotasOutput, error) {
+func (r *ListServiceQuotasFuture) Get(ctx workflow.Context) (*servicequotas.ListServiceQuotasOutput, error) {
 	var output servicequotas.ListServiceQuotasOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasListServicesFuture struct {
+type ListServicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasListServicesFuture) Get(ctx workflow.Context) (*servicequotas.ListServicesOutput, error) {
+func (r *ListServicesFuture) Get(ctx workflow.Context) (*servicequotas.ListServicesOutput, error) {
 	var output servicequotas.ListServicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasPutServiceQuotaIncreaseRequestIntoTemplateFuture struct {
+type PutServiceQuotaIncreaseRequestIntoTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasPutServiceQuotaIncreaseRequestIntoTemplateFuture) Get(ctx workflow.Context) (*servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput, error) {
+func (r *PutServiceQuotaIncreaseRequestIntoTemplateFuture) Get(ctx workflow.Context) (*servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput, error) {
 	var output servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceQuotasRequestServiceQuotaIncreaseFuture struct {
+type RequestServiceQuotaIncreaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceQuotasRequestServiceQuotaIncreaseFuture) Get(ctx workflow.Context) (*servicequotas.RequestServiceQuotaIncreaseOutput, error) {
+func (r *RequestServiceQuotaIncreaseFuture) Get(ctx workflow.Context) (*servicequotas.RequestServiceQuotaIncreaseOutput, error) {
 	var output servicequotas.RequestServiceQuotaIncreaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -198,9 +198,9 @@ func (a *stub) AssociateServiceQuotaTemplate(ctx workflow.Context, input *servic
 	return &output, err
 }
 
-func (a *stub) AssociateServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.AssociateServiceQuotaTemplateInput) *ServiceQuotasAssociateServiceQuotaTemplateFuture {
+func (a *stub) AssociateServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.AssociateServiceQuotaTemplateInput) *AssociateServiceQuotaTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.AssociateServiceQuotaTemplate", input)
-	return &ServiceQuotasAssociateServiceQuotaTemplateFuture{Future: future}
+	return &AssociateServiceQuotaTemplateFuture{Future: future}
 }
 
 func (a *stub) DeleteServiceQuotaIncreaseRequestFromTemplate(ctx workflow.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) DeleteServiceQuotaIncreaseRequestFromTemplate(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *stub) DeleteServiceQuotaIncreaseRequestFromTemplateAsync(ctx workflow.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) *ServiceQuotasDeleteServiceQuotaIncreaseRequestFromTemplateFuture {
+func (a *stub) DeleteServiceQuotaIncreaseRequestFromTemplateAsync(ctx workflow.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) *DeleteServiceQuotaIncreaseRequestFromTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplate", input)
-	return &ServiceQuotasDeleteServiceQuotaIncreaseRequestFromTemplateFuture{Future: future}
+	return &DeleteServiceQuotaIncreaseRequestFromTemplateFuture{Future: future}
 }
 
 func (a *stub) DisassociateServiceQuotaTemplate(ctx workflow.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) (*servicequotas.DisassociateServiceQuotaTemplateOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) DisassociateServiceQuotaTemplate(ctx workflow.Context, input *ser
 	return &output, err
 }
 
-func (a *stub) DisassociateServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) *ServiceQuotasDisassociateServiceQuotaTemplateFuture {
+func (a *stub) DisassociateServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) *DisassociateServiceQuotaTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.DisassociateServiceQuotaTemplate", input)
-	return &ServiceQuotasDisassociateServiceQuotaTemplateFuture{Future: future}
+	return &DisassociateServiceQuotaTemplateFuture{Future: future}
 }
 
 func (a *stub) GetAWSDefaultServiceQuota(ctx workflow.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) (*servicequotas.GetAWSDefaultServiceQuotaOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) GetAWSDefaultServiceQuota(ctx workflow.Context, input *servicequo
 	return &output, err
 }
 
-func (a *stub) GetAWSDefaultServiceQuotaAsync(ctx workflow.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) *ServiceQuotasGetAWSDefaultServiceQuotaFuture {
+func (a *stub) GetAWSDefaultServiceQuotaAsync(ctx workflow.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) *GetAWSDefaultServiceQuotaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.GetAWSDefaultServiceQuota", input)
-	return &ServiceQuotasGetAWSDefaultServiceQuotaFuture{Future: future}
+	return &GetAWSDefaultServiceQuotaFuture{Future: future}
 }
 
 func (a *stub) GetAssociationForServiceQuotaTemplate(ctx workflow.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) (*servicequotas.GetAssociationForServiceQuotaTemplateOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) GetAssociationForServiceQuotaTemplate(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) GetAssociationForServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) *ServiceQuotasGetAssociationForServiceQuotaTemplateFuture {
+func (a *stub) GetAssociationForServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) *GetAssociationForServiceQuotaTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.GetAssociationForServiceQuotaTemplate", input)
-	return &ServiceQuotasGetAssociationForServiceQuotaTemplateFuture{Future: future}
+	return &GetAssociationForServiceQuotaTemplateFuture{Future: future}
 }
 
 func (a *stub) GetRequestedServiceQuotaChange(ctx workflow.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) GetRequestedServiceQuotaChange(ctx workflow.Context, input *servi
 	return &output, err
 }
 
-func (a *stub) GetRequestedServiceQuotaChangeAsync(ctx workflow.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) *ServiceQuotasGetRequestedServiceQuotaChangeFuture {
+func (a *stub) GetRequestedServiceQuotaChangeAsync(ctx workflow.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) *GetRequestedServiceQuotaChangeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.GetRequestedServiceQuotaChange", input)
-	return &ServiceQuotasGetRequestedServiceQuotaChangeFuture{Future: future}
+	return &GetRequestedServiceQuotaChangeFuture{Future: future}
 }
 
 func (a *stub) GetServiceQuota(ctx workflow.Context, input *servicequotas.GetServiceQuotaInput) (*servicequotas.GetServiceQuotaOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) GetServiceQuota(ctx workflow.Context, input *servicequotas.GetSer
 	return &output, err
 }
 
-func (a *stub) GetServiceQuotaAsync(ctx workflow.Context, input *servicequotas.GetServiceQuotaInput) *ServiceQuotasGetServiceQuotaFuture {
+func (a *stub) GetServiceQuotaAsync(ctx workflow.Context, input *servicequotas.GetServiceQuotaInput) *GetServiceQuotaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.GetServiceQuota", input)
-	return &ServiceQuotasGetServiceQuotaFuture{Future: future}
+	return &GetServiceQuotaFuture{Future: future}
 }
 
 func (a *stub) GetServiceQuotaIncreaseRequestFromTemplate(ctx workflow.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) GetServiceQuotaIncreaseRequestFromTemplate(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) GetServiceQuotaIncreaseRequestFromTemplateAsync(ctx workflow.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) *ServiceQuotasGetServiceQuotaIncreaseRequestFromTemplateFuture {
+func (a *stub) GetServiceQuotaIncreaseRequestFromTemplateAsync(ctx workflow.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) *GetServiceQuotaIncreaseRequestFromTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.GetServiceQuotaIncreaseRequestFromTemplate", input)
-	return &ServiceQuotasGetServiceQuotaIncreaseRequestFromTemplateFuture{Future: future}
+	return &GetServiceQuotaIncreaseRequestFromTemplateFuture{Future: future}
 }
 
 func (a *stub) ListAWSDefaultServiceQuotas(ctx workflow.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) (*servicequotas.ListAWSDefaultServiceQuotasOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) ListAWSDefaultServiceQuotas(ctx workflow.Context, input *serviceq
 	return &output, err
 }
 
-func (a *stub) ListAWSDefaultServiceQuotasAsync(ctx workflow.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) *ServiceQuotasListAWSDefaultServiceQuotasFuture {
+func (a *stub) ListAWSDefaultServiceQuotasAsync(ctx workflow.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) *ListAWSDefaultServiceQuotasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.ListAWSDefaultServiceQuotas", input)
-	return &ServiceQuotasListAWSDefaultServiceQuotasFuture{Future: future}
+	return &ListAWSDefaultServiceQuotasFuture{Future: future}
 }
 
 func (a *stub) ListRequestedServiceQuotaChangeHistory(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) ListRequestedServiceQuotaChangeHistory(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) ListRequestedServiceQuotaChangeHistoryAsync(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) *ServiceQuotasListRequestedServiceQuotaChangeHistoryFuture {
+func (a *stub) ListRequestedServiceQuotaChangeHistoryAsync(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) *ListRequestedServiceQuotaChangeHistoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.ListRequestedServiceQuotaChangeHistory", input)
-	return &ServiceQuotasListRequestedServiceQuotaChangeHistoryFuture{Future: future}
+	return &ListRequestedServiceQuotaChangeHistoryFuture{Future: future}
 }
 
 func (a *stub) ListRequestedServiceQuotaChangeHistoryByQuota(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) ListRequestedServiceQuotaChangeHistoryByQuota(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *stub) ListRequestedServiceQuotaChangeHistoryByQuotaAsync(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) *ServiceQuotasListRequestedServiceQuotaChangeHistoryByQuotaFuture {
+func (a *stub) ListRequestedServiceQuotaChangeHistoryByQuotaAsync(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) *ListRequestedServiceQuotaChangeHistoryByQuotaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.ListRequestedServiceQuotaChangeHistoryByQuota", input)
-	return &ServiceQuotasListRequestedServiceQuotaChangeHistoryByQuotaFuture{Future: future}
+	return &ListRequestedServiceQuotaChangeHistoryByQuotaFuture{Future: future}
 }
 
 func (a *stub) ListServiceQuotaIncreaseRequestsInTemplate(ctx workflow.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) (*servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) ListServiceQuotaIncreaseRequestsInTemplate(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) ListServiceQuotaIncreaseRequestsInTemplateAsync(ctx workflow.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) *ServiceQuotasListServiceQuotaIncreaseRequestsInTemplateFuture {
+func (a *stub) ListServiceQuotaIncreaseRequestsInTemplateAsync(ctx workflow.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) *ListServiceQuotaIncreaseRequestsInTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.ListServiceQuotaIncreaseRequestsInTemplate", input)
-	return &ServiceQuotasListServiceQuotaIncreaseRequestsInTemplateFuture{Future: future}
+	return &ListServiceQuotaIncreaseRequestsInTemplateFuture{Future: future}
 }
 
 func (a *stub) ListServiceQuotas(ctx workflow.Context, input *servicequotas.ListServiceQuotasInput) (*servicequotas.ListServiceQuotasOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) ListServiceQuotas(ctx workflow.Context, input *servicequotas.List
 	return &output, err
 }
 
-func (a *stub) ListServiceQuotasAsync(ctx workflow.Context, input *servicequotas.ListServiceQuotasInput) *ServiceQuotasListServiceQuotasFuture {
+func (a *stub) ListServiceQuotasAsync(ctx workflow.Context, input *servicequotas.ListServiceQuotasInput) *ListServiceQuotasFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.ListServiceQuotas", input)
-	return &ServiceQuotasListServiceQuotasFuture{Future: future}
+	return &ListServiceQuotasFuture{Future: future}
 }
 
 func (a *stub) ListServices(ctx workflow.Context, input *servicequotas.ListServicesInput) (*servicequotas.ListServicesOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) ListServices(ctx workflow.Context, input *servicequotas.ListServi
 	return &output, err
 }
 
-func (a *stub) ListServicesAsync(ctx workflow.Context, input *servicequotas.ListServicesInput) *ServiceQuotasListServicesFuture {
+func (a *stub) ListServicesAsync(ctx workflow.Context, input *servicequotas.ListServicesInput) *ListServicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.ListServices", input)
-	return &ServiceQuotasListServicesFuture{Future: future}
+	return &ListServicesFuture{Future: future}
 }
 
 func (a *stub) PutServiceQuotaIncreaseRequestIntoTemplate(ctx workflow.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) (*servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) PutServiceQuotaIncreaseRequestIntoTemplate(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) PutServiceQuotaIncreaseRequestIntoTemplateAsync(ctx workflow.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) *ServiceQuotasPutServiceQuotaIncreaseRequestIntoTemplateFuture {
+func (a *stub) PutServiceQuotaIncreaseRequestIntoTemplateAsync(ctx workflow.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) *PutServiceQuotaIncreaseRequestIntoTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.PutServiceQuotaIncreaseRequestIntoTemplate", input)
-	return &ServiceQuotasPutServiceQuotaIncreaseRequestIntoTemplateFuture{Future: future}
+	return &PutServiceQuotaIncreaseRequestIntoTemplateFuture{Future: future}
 }
 
 func (a *stub) RequestServiceQuotaIncrease(ctx workflow.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) (*servicequotas.RequestServiceQuotaIncreaseOutput, error) {
@@ -363,7 +363,7 @@ func (a *stub) RequestServiceQuotaIncrease(ctx workflow.Context, input *serviceq
 	return &output, err
 }
 
-func (a *stub) RequestServiceQuotaIncreaseAsync(ctx workflow.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) *ServiceQuotasRequestServiceQuotaIncreaseFuture {
+func (a *stub) RequestServiceQuotaIncreaseAsync(ctx workflow.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) *RequestServiceQuotaIncreaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicequotas.RequestServiceQuotaIncrease", input)
-	return &ServiceQuotasRequestServiceQuotaIncreaseFuture{Future: future}
+	return &RequestServiceQuotaIncreaseFuture{Future: future}
 }

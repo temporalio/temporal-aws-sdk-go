@@ -16,12 +16,12 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type MobileAnalyticsPutEventsFuture struct {
+type PutEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MobileAnalyticsPutEventsFuture) Get(ctx workflow.Context) (*mobileanalytics.PutEventsOutput, error) {
+func (r *PutEventsFuture) Get(ctx workflow.Context) (*mobileanalytics.PutEventsOutput, error) {
 	var output mobileanalytics.PutEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -33,7 +33,7 @@ func (a *stub) PutEvents(ctx workflow.Context, input *mobileanalytics.PutEventsI
 	return &output, err
 }
 
-func (a *stub) PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileAnalyticsPutEventsFuture {
+func (a *stub) PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *PutEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mobileanalytics.PutEvents", input)
-	return &MobileAnalyticsPutEventsFuture{Future: future}
+	return &PutEventsFuture{Future: future}
 }

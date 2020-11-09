@@ -16,40 +16,40 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AcceptInvitation(ctx workflow.Context, input *detective.AcceptInvitationInput) (*detective.AcceptInvitationOutput, error)
-	AcceptInvitationAsync(ctx workflow.Context, input *detective.AcceptInvitationInput) *DetectiveAcceptInvitationFuture
+	AcceptInvitationAsync(ctx workflow.Context, input *detective.AcceptInvitationInput) *AcceptInvitationFuture
 
 	CreateGraph(ctx workflow.Context, input *detective.CreateGraphInput) (*detective.CreateGraphOutput, error)
-	CreateGraphAsync(ctx workflow.Context, input *detective.CreateGraphInput) *DetectiveCreateGraphFuture
+	CreateGraphAsync(ctx workflow.Context, input *detective.CreateGraphInput) *CreateGraphFuture
 
 	CreateMembers(ctx workflow.Context, input *detective.CreateMembersInput) (*detective.CreateMembersOutput, error)
-	CreateMembersAsync(ctx workflow.Context, input *detective.CreateMembersInput) *DetectiveCreateMembersFuture
+	CreateMembersAsync(ctx workflow.Context, input *detective.CreateMembersInput) *CreateMembersFuture
 
 	DeleteGraph(ctx workflow.Context, input *detective.DeleteGraphInput) (*detective.DeleteGraphOutput, error)
-	DeleteGraphAsync(ctx workflow.Context, input *detective.DeleteGraphInput) *DetectiveDeleteGraphFuture
+	DeleteGraphAsync(ctx workflow.Context, input *detective.DeleteGraphInput) *DeleteGraphFuture
 
 	DeleteMembers(ctx workflow.Context, input *detective.DeleteMembersInput) (*detective.DeleteMembersOutput, error)
-	DeleteMembersAsync(ctx workflow.Context, input *detective.DeleteMembersInput) *DetectiveDeleteMembersFuture
+	DeleteMembersAsync(ctx workflow.Context, input *detective.DeleteMembersInput) *DeleteMembersFuture
 
 	DisassociateMembership(ctx workflow.Context, input *detective.DisassociateMembershipInput) (*detective.DisassociateMembershipOutput, error)
-	DisassociateMembershipAsync(ctx workflow.Context, input *detective.DisassociateMembershipInput) *DetectiveDisassociateMembershipFuture
+	DisassociateMembershipAsync(ctx workflow.Context, input *detective.DisassociateMembershipInput) *DisassociateMembershipFuture
 
 	GetMembers(ctx workflow.Context, input *detective.GetMembersInput) (*detective.GetMembersOutput, error)
-	GetMembersAsync(ctx workflow.Context, input *detective.GetMembersInput) *DetectiveGetMembersFuture
+	GetMembersAsync(ctx workflow.Context, input *detective.GetMembersInput) *GetMembersFuture
 
 	ListGraphs(ctx workflow.Context, input *detective.ListGraphsInput) (*detective.ListGraphsOutput, error)
-	ListGraphsAsync(ctx workflow.Context, input *detective.ListGraphsInput) *DetectiveListGraphsFuture
+	ListGraphsAsync(ctx workflow.Context, input *detective.ListGraphsInput) *ListGraphsFuture
 
 	ListInvitations(ctx workflow.Context, input *detective.ListInvitationsInput) (*detective.ListInvitationsOutput, error)
-	ListInvitationsAsync(ctx workflow.Context, input *detective.ListInvitationsInput) *DetectiveListInvitationsFuture
+	ListInvitationsAsync(ctx workflow.Context, input *detective.ListInvitationsInput) *ListInvitationsFuture
 
 	ListMembers(ctx workflow.Context, input *detective.ListMembersInput) (*detective.ListMembersOutput, error)
-	ListMembersAsync(ctx workflow.Context, input *detective.ListMembersInput) *DetectiveListMembersFuture
+	ListMembersAsync(ctx workflow.Context, input *detective.ListMembersInput) *ListMembersFuture
 
 	RejectInvitation(ctx workflow.Context, input *detective.RejectInvitationInput) (*detective.RejectInvitationOutput, error)
-	RejectInvitationAsync(ctx workflow.Context, input *detective.RejectInvitationInput) *DetectiveRejectInvitationFuture
+	RejectInvitationAsync(ctx workflow.Context, input *detective.RejectInvitationInput) *RejectInvitationFuture
 
 	StartMonitoringMember(ctx workflow.Context, input *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error)
-	StartMonitoringMemberAsync(ctx workflow.Context, input *detective.StartMonitoringMemberInput) *DetectiveStartMonitoringMemberFuture
+	StartMonitoringMemberAsync(ctx workflow.Context, input *detective.StartMonitoringMemberInput) *StartMonitoringMemberFuture
 }
 
 func NewClient() Client {

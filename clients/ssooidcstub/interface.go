@@ -16,13 +16,13 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateToken(ctx workflow.Context, input *ssooidc.CreateTokenInput) (*ssooidc.CreateTokenOutput, error)
-	CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SSOOIDCCreateTokenFuture
+	CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *CreateTokenFuture
 
 	RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error)
-	RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SSOOIDCRegisterClientFuture
+	RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *RegisterClientFuture
 
 	StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error)
-	StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SSOOIDCStartDeviceAuthorizationFuture
+	StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *StartDeviceAuthorizationFuture
 }
 
 func NewClient() Client {

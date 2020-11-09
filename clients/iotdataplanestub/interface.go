@@ -16,19 +16,19 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DeleteThingShadow(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) (*iotdataplane.DeleteThingShadowOutput, error)
-	DeleteThingShadowAsync(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) *IoTDataPlaneDeleteThingShadowFuture
+	DeleteThingShadowAsync(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) *DeleteThingShadowFuture
 
 	GetThingShadow(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) (*iotdataplane.GetThingShadowOutput, error)
-	GetThingShadowAsync(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) *IoTDataPlaneGetThingShadowFuture
+	GetThingShadowAsync(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) *GetThingShadowFuture
 
 	ListNamedShadowsForThing(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) (*iotdataplane.ListNamedShadowsForThingOutput, error)
-	ListNamedShadowsForThingAsync(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) *IoTDataPlaneListNamedShadowsForThingFuture
+	ListNamedShadowsForThingAsync(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) *ListNamedShadowsForThingFuture
 
 	Publish(ctx workflow.Context, input *iotdataplane.PublishInput) (*iotdataplane.PublishOutput, error)
-	PublishAsync(ctx workflow.Context, input *iotdataplane.PublishInput) *IoTDataPlanePublishFuture
+	PublishAsync(ctx workflow.Context, input *iotdataplane.PublishInput) *PublishFuture
 
 	UpdateThingShadow(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) (*iotdataplane.UpdateThingShadowOutput, error)
-	UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *IoTDataPlaneUpdateThingShadowFuture
+	UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *UpdateThingShadowFuture
 }
 
 func NewClient() Client {

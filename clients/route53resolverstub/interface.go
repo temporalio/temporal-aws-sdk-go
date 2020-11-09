@@ -16,100 +16,100 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateResolverEndpointIpAddress(ctx workflow.Context, input *route53resolver.AssociateResolverEndpointIpAddressInput) (*route53resolver.AssociateResolverEndpointIpAddressOutput, error)
-	AssociateResolverEndpointIpAddressAsync(ctx workflow.Context, input *route53resolver.AssociateResolverEndpointIpAddressInput) *Route53ResolverAssociateResolverEndpointIpAddressFuture
+	AssociateResolverEndpointIpAddressAsync(ctx workflow.Context, input *route53resolver.AssociateResolverEndpointIpAddressInput) *AssociateResolverEndpointIpAddressFuture
 
 	AssociateResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.AssociateResolverQueryLogConfigInput) (*route53resolver.AssociateResolverQueryLogConfigOutput, error)
-	AssociateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.AssociateResolverQueryLogConfigInput) *Route53ResolverAssociateResolverQueryLogConfigFuture
+	AssociateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.AssociateResolverQueryLogConfigInput) *AssociateResolverQueryLogConfigFuture
 
 	AssociateResolverRule(ctx workflow.Context, input *route53resolver.AssociateResolverRuleInput) (*route53resolver.AssociateResolverRuleOutput, error)
-	AssociateResolverRuleAsync(ctx workflow.Context, input *route53resolver.AssociateResolverRuleInput) *Route53ResolverAssociateResolverRuleFuture
+	AssociateResolverRuleAsync(ctx workflow.Context, input *route53resolver.AssociateResolverRuleInput) *AssociateResolverRuleFuture
 
 	CreateResolverEndpoint(ctx workflow.Context, input *route53resolver.CreateResolverEndpointInput) (*route53resolver.CreateResolverEndpointOutput, error)
-	CreateResolverEndpointAsync(ctx workflow.Context, input *route53resolver.CreateResolverEndpointInput) *Route53ResolverCreateResolverEndpointFuture
+	CreateResolverEndpointAsync(ctx workflow.Context, input *route53resolver.CreateResolverEndpointInput) *CreateResolverEndpointFuture
 
 	CreateResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.CreateResolverQueryLogConfigInput) (*route53resolver.CreateResolverQueryLogConfigOutput, error)
-	CreateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.CreateResolverQueryLogConfigInput) *Route53ResolverCreateResolverQueryLogConfigFuture
+	CreateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.CreateResolverQueryLogConfigInput) *CreateResolverQueryLogConfigFuture
 
 	CreateResolverRule(ctx workflow.Context, input *route53resolver.CreateResolverRuleInput) (*route53resolver.CreateResolverRuleOutput, error)
-	CreateResolverRuleAsync(ctx workflow.Context, input *route53resolver.CreateResolverRuleInput) *Route53ResolverCreateResolverRuleFuture
+	CreateResolverRuleAsync(ctx workflow.Context, input *route53resolver.CreateResolverRuleInput) *CreateResolverRuleFuture
 
 	DeleteResolverEndpoint(ctx workflow.Context, input *route53resolver.DeleteResolverEndpointInput) (*route53resolver.DeleteResolverEndpointOutput, error)
-	DeleteResolverEndpointAsync(ctx workflow.Context, input *route53resolver.DeleteResolverEndpointInput) *Route53ResolverDeleteResolverEndpointFuture
+	DeleteResolverEndpointAsync(ctx workflow.Context, input *route53resolver.DeleteResolverEndpointInput) *DeleteResolverEndpointFuture
 
 	DeleteResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.DeleteResolverQueryLogConfigInput) (*route53resolver.DeleteResolverQueryLogConfigOutput, error)
-	DeleteResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.DeleteResolverQueryLogConfigInput) *Route53ResolverDeleteResolverQueryLogConfigFuture
+	DeleteResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.DeleteResolverQueryLogConfigInput) *DeleteResolverQueryLogConfigFuture
 
 	DeleteResolverRule(ctx workflow.Context, input *route53resolver.DeleteResolverRuleInput) (*route53resolver.DeleteResolverRuleOutput, error)
-	DeleteResolverRuleAsync(ctx workflow.Context, input *route53resolver.DeleteResolverRuleInput) *Route53ResolverDeleteResolverRuleFuture
+	DeleteResolverRuleAsync(ctx workflow.Context, input *route53resolver.DeleteResolverRuleInput) *DeleteResolverRuleFuture
 
 	DisassociateResolverEndpointIpAddress(ctx workflow.Context, input *route53resolver.DisassociateResolverEndpointIpAddressInput) (*route53resolver.DisassociateResolverEndpointIpAddressOutput, error)
-	DisassociateResolverEndpointIpAddressAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverEndpointIpAddressInput) *Route53ResolverDisassociateResolverEndpointIpAddressFuture
+	DisassociateResolverEndpointIpAddressAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverEndpointIpAddressInput) *DisassociateResolverEndpointIpAddressFuture
 
 	DisassociateResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.DisassociateResolverQueryLogConfigInput) (*route53resolver.DisassociateResolverQueryLogConfigOutput, error)
-	DisassociateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverQueryLogConfigInput) *Route53ResolverDisassociateResolverQueryLogConfigFuture
+	DisassociateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverQueryLogConfigInput) *DisassociateResolverQueryLogConfigFuture
 
 	DisassociateResolverRule(ctx workflow.Context, input *route53resolver.DisassociateResolverRuleInput) (*route53resolver.DisassociateResolverRuleOutput, error)
-	DisassociateResolverRuleAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverRuleInput) *Route53ResolverDisassociateResolverRuleFuture
+	DisassociateResolverRuleAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverRuleInput) *DisassociateResolverRuleFuture
 
 	GetResolverEndpoint(ctx workflow.Context, input *route53resolver.GetResolverEndpointInput) (*route53resolver.GetResolverEndpointOutput, error)
-	GetResolverEndpointAsync(ctx workflow.Context, input *route53resolver.GetResolverEndpointInput) *Route53ResolverGetResolverEndpointFuture
+	GetResolverEndpointAsync(ctx workflow.Context, input *route53resolver.GetResolverEndpointInput) *GetResolverEndpointFuture
 
 	GetResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigInput) (*route53resolver.GetResolverQueryLogConfigOutput, error)
-	GetResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigInput) *Route53ResolverGetResolverQueryLogConfigFuture
+	GetResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigInput) *GetResolverQueryLogConfigFuture
 
 	GetResolverQueryLogConfigAssociation(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigAssociationInput) (*route53resolver.GetResolverQueryLogConfigAssociationOutput, error)
-	GetResolverQueryLogConfigAssociationAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigAssociationInput) *Route53ResolverGetResolverQueryLogConfigAssociationFuture
+	GetResolverQueryLogConfigAssociationAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigAssociationInput) *GetResolverQueryLogConfigAssociationFuture
 
 	GetResolverQueryLogConfigPolicy(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigPolicyInput) (*route53resolver.GetResolverQueryLogConfigPolicyOutput, error)
-	GetResolverQueryLogConfigPolicyAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigPolicyInput) *Route53ResolverGetResolverQueryLogConfigPolicyFuture
+	GetResolverQueryLogConfigPolicyAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigPolicyInput) *GetResolverQueryLogConfigPolicyFuture
 
 	GetResolverRule(ctx workflow.Context, input *route53resolver.GetResolverRuleInput) (*route53resolver.GetResolverRuleOutput, error)
-	GetResolverRuleAsync(ctx workflow.Context, input *route53resolver.GetResolverRuleInput) *Route53ResolverGetResolverRuleFuture
+	GetResolverRuleAsync(ctx workflow.Context, input *route53resolver.GetResolverRuleInput) *GetResolverRuleFuture
 
 	GetResolverRuleAssociation(ctx workflow.Context, input *route53resolver.GetResolverRuleAssociationInput) (*route53resolver.GetResolverRuleAssociationOutput, error)
-	GetResolverRuleAssociationAsync(ctx workflow.Context, input *route53resolver.GetResolverRuleAssociationInput) *Route53ResolverGetResolverRuleAssociationFuture
+	GetResolverRuleAssociationAsync(ctx workflow.Context, input *route53resolver.GetResolverRuleAssociationInput) *GetResolverRuleAssociationFuture
 
 	GetResolverRulePolicy(ctx workflow.Context, input *route53resolver.GetResolverRulePolicyInput) (*route53resolver.GetResolverRulePolicyOutput, error)
-	GetResolverRulePolicyAsync(ctx workflow.Context, input *route53resolver.GetResolverRulePolicyInput) *Route53ResolverGetResolverRulePolicyFuture
+	GetResolverRulePolicyAsync(ctx workflow.Context, input *route53resolver.GetResolverRulePolicyInput) *GetResolverRulePolicyFuture
 
 	ListResolverEndpointIpAddresses(ctx workflow.Context, input *route53resolver.ListResolverEndpointIpAddressesInput) (*route53resolver.ListResolverEndpointIpAddressesOutput, error)
-	ListResolverEndpointIpAddressesAsync(ctx workflow.Context, input *route53resolver.ListResolverEndpointIpAddressesInput) *Route53ResolverListResolverEndpointIpAddressesFuture
+	ListResolverEndpointIpAddressesAsync(ctx workflow.Context, input *route53resolver.ListResolverEndpointIpAddressesInput) *ListResolverEndpointIpAddressesFuture
 
 	ListResolverEndpoints(ctx workflow.Context, input *route53resolver.ListResolverEndpointsInput) (*route53resolver.ListResolverEndpointsOutput, error)
-	ListResolverEndpointsAsync(ctx workflow.Context, input *route53resolver.ListResolverEndpointsInput) *Route53ResolverListResolverEndpointsFuture
+	ListResolverEndpointsAsync(ctx workflow.Context, input *route53resolver.ListResolverEndpointsInput) *ListResolverEndpointsFuture
 
 	ListResolverQueryLogConfigAssociations(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigAssociationsInput) (*route53resolver.ListResolverQueryLogConfigAssociationsOutput, error)
-	ListResolverQueryLogConfigAssociationsAsync(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigAssociationsInput) *Route53ResolverListResolverQueryLogConfigAssociationsFuture
+	ListResolverQueryLogConfigAssociationsAsync(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigAssociationsInput) *ListResolverQueryLogConfigAssociationsFuture
 
 	ListResolverQueryLogConfigs(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigsInput) (*route53resolver.ListResolverQueryLogConfigsOutput, error)
-	ListResolverQueryLogConfigsAsync(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigsInput) *Route53ResolverListResolverQueryLogConfigsFuture
+	ListResolverQueryLogConfigsAsync(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigsInput) *ListResolverQueryLogConfigsFuture
 
 	ListResolverRuleAssociations(ctx workflow.Context, input *route53resolver.ListResolverRuleAssociationsInput) (*route53resolver.ListResolverRuleAssociationsOutput, error)
-	ListResolverRuleAssociationsAsync(ctx workflow.Context, input *route53resolver.ListResolverRuleAssociationsInput) *Route53ResolverListResolverRuleAssociationsFuture
+	ListResolverRuleAssociationsAsync(ctx workflow.Context, input *route53resolver.ListResolverRuleAssociationsInput) *ListResolverRuleAssociationsFuture
 
 	ListResolverRules(ctx workflow.Context, input *route53resolver.ListResolverRulesInput) (*route53resolver.ListResolverRulesOutput, error)
-	ListResolverRulesAsync(ctx workflow.Context, input *route53resolver.ListResolverRulesInput) *Route53ResolverListResolverRulesFuture
+	ListResolverRulesAsync(ctx workflow.Context, input *route53resolver.ListResolverRulesInput) *ListResolverRulesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *route53resolver.ListTagsForResourceInput) (*route53resolver.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *route53resolver.ListTagsForResourceInput) *Route53ResolverListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *route53resolver.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	PutResolverQueryLogConfigPolicy(ctx workflow.Context, input *route53resolver.PutResolverQueryLogConfigPolicyInput) (*route53resolver.PutResolverQueryLogConfigPolicyOutput, error)
-	PutResolverQueryLogConfigPolicyAsync(ctx workflow.Context, input *route53resolver.PutResolverQueryLogConfigPolicyInput) *Route53ResolverPutResolverQueryLogConfigPolicyFuture
+	PutResolverQueryLogConfigPolicyAsync(ctx workflow.Context, input *route53resolver.PutResolverQueryLogConfigPolicyInput) *PutResolverQueryLogConfigPolicyFuture
 
 	PutResolverRulePolicy(ctx workflow.Context, input *route53resolver.PutResolverRulePolicyInput) (*route53resolver.PutResolverRulePolicyOutput, error)
-	PutResolverRulePolicyAsync(ctx workflow.Context, input *route53resolver.PutResolverRulePolicyInput) *Route53ResolverPutResolverRulePolicyFuture
+	PutResolverRulePolicyAsync(ctx workflow.Context, input *route53resolver.PutResolverRulePolicyInput) *PutResolverRulePolicyFuture
 
 	TagResource(ctx workflow.Context, input *route53resolver.TagResourceInput) (*route53resolver.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *route53resolver.TagResourceInput) *Route53ResolverTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *route53resolver.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *route53resolver.UntagResourceInput) (*route53resolver.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *route53resolver.UntagResourceInput) *Route53ResolverUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *route53resolver.UntagResourceInput) *UntagResourceFuture
 
 	UpdateResolverEndpoint(ctx workflow.Context, input *route53resolver.UpdateResolverEndpointInput) (*route53resolver.UpdateResolverEndpointOutput, error)
-	UpdateResolverEndpointAsync(ctx workflow.Context, input *route53resolver.UpdateResolverEndpointInput) *Route53ResolverUpdateResolverEndpointFuture
+	UpdateResolverEndpointAsync(ctx workflow.Context, input *route53resolver.UpdateResolverEndpointInput) *UpdateResolverEndpointFuture
 
 	UpdateResolverRule(ctx workflow.Context, input *route53resolver.UpdateResolverRuleInput) (*route53resolver.UpdateResolverRuleOutput, error)
-	UpdateResolverRuleAsync(ctx workflow.Context, input *route53resolver.UpdateResolverRuleInput) *Route53ResolverUpdateResolverRuleFuture
+	UpdateResolverRuleAsync(ctx workflow.Context, input *route53resolver.UpdateResolverRuleInput) *UpdateResolverRuleFuture
 }
 
 func NewClient() Client {

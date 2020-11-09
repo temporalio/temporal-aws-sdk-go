@@ -16,408 +16,408 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type AmplifyCreateAppFuture struct {
+type CreateAppFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyCreateAppFuture) Get(ctx workflow.Context) (*amplify.CreateAppOutput, error) {
+func (r *CreateAppFuture) Get(ctx workflow.Context) (*amplify.CreateAppOutput, error) {
 	var output amplify.CreateAppOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyCreateBackendEnvironmentFuture struct {
+type CreateBackendEnvironmentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyCreateBackendEnvironmentFuture) Get(ctx workflow.Context) (*amplify.CreateBackendEnvironmentOutput, error) {
+func (r *CreateBackendEnvironmentFuture) Get(ctx workflow.Context) (*amplify.CreateBackendEnvironmentOutput, error) {
 	var output amplify.CreateBackendEnvironmentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyCreateBranchFuture struct {
+type CreateBranchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyCreateBranchFuture) Get(ctx workflow.Context) (*amplify.CreateBranchOutput, error) {
+func (r *CreateBranchFuture) Get(ctx workflow.Context) (*amplify.CreateBranchOutput, error) {
 	var output amplify.CreateBranchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyCreateDeploymentFuture struct {
+type CreateDeploymentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyCreateDeploymentFuture) Get(ctx workflow.Context) (*amplify.CreateDeploymentOutput, error) {
+func (r *CreateDeploymentFuture) Get(ctx workflow.Context) (*amplify.CreateDeploymentOutput, error) {
 	var output amplify.CreateDeploymentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyCreateDomainAssociationFuture struct {
+type CreateDomainAssociationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyCreateDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.CreateDomainAssociationOutput, error) {
+func (r *CreateDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.CreateDomainAssociationOutput, error) {
 	var output amplify.CreateDomainAssociationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyCreateWebhookFuture struct {
+type CreateWebhookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyCreateWebhookFuture) Get(ctx workflow.Context) (*amplify.CreateWebhookOutput, error) {
+func (r *CreateWebhookFuture) Get(ctx workflow.Context) (*amplify.CreateWebhookOutput, error) {
 	var output amplify.CreateWebhookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyDeleteAppFuture struct {
+type DeleteAppFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyDeleteAppFuture) Get(ctx workflow.Context) (*amplify.DeleteAppOutput, error) {
+func (r *DeleteAppFuture) Get(ctx workflow.Context) (*amplify.DeleteAppOutput, error) {
 	var output amplify.DeleteAppOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyDeleteBackendEnvironmentFuture struct {
+type DeleteBackendEnvironmentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyDeleteBackendEnvironmentFuture) Get(ctx workflow.Context) (*amplify.DeleteBackendEnvironmentOutput, error) {
+func (r *DeleteBackendEnvironmentFuture) Get(ctx workflow.Context) (*amplify.DeleteBackendEnvironmentOutput, error) {
 	var output amplify.DeleteBackendEnvironmentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyDeleteBranchFuture struct {
+type DeleteBranchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyDeleteBranchFuture) Get(ctx workflow.Context) (*amplify.DeleteBranchOutput, error) {
+func (r *DeleteBranchFuture) Get(ctx workflow.Context) (*amplify.DeleteBranchOutput, error) {
 	var output amplify.DeleteBranchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyDeleteDomainAssociationFuture struct {
+type DeleteDomainAssociationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyDeleteDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.DeleteDomainAssociationOutput, error) {
+func (r *DeleteDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.DeleteDomainAssociationOutput, error) {
 	var output amplify.DeleteDomainAssociationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyDeleteJobFuture struct {
+type DeleteJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyDeleteJobFuture) Get(ctx workflow.Context) (*amplify.DeleteJobOutput, error) {
+func (r *DeleteJobFuture) Get(ctx workflow.Context) (*amplify.DeleteJobOutput, error) {
 	var output amplify.DeleteJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyDeleteWebhookFuture struct {
+type DeleteWebhookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyDeleteWebhookFuture) Get(ctx workflow.Context) (*amplify.DeleteWebhookOutput, error) {
+func (r *DeleteWebhookFuture) Get(ctx workflow.Context) (*amplify.DeleteWebhookOutput, error) {
 	var output amplify.DeleteWebhookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyGenerateAccessLogsFuture struct {
+type GenerateAccessLogsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyGenerateAccessLogsFuture) Get(ctx workflow.Context) (*amplify.GenerateAccessLogsOutput, error) {
+func (r *GenerateAccessLogsFuture) Get(ctx workflow.Context) (*amplify.GenerateAccessLogsOutput, error) {
 	var output amplify.GenerateAccessLogsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyGetAppFuture struct {
+type GetAppFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyGetAppFuture) Get(ctx workflow.Context) (*amplify.GetAppOutput, error) {
+func (r *GetAppFuture) Get(ctx workflow.Context) (*amplify.GetAppOutput, error) {
 	var output amplify.GetAppOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyGetArtifactUrlFuture struct {
+type GetArtifactUrlFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyGetArtifactUrlFuture) Get(ctx workflow.Context) (*amplify.GetArtifactUrlOutput, error) {
+func (r *GetArtifactUrlFuture) Get(ctx workflow.Context) (*amplify.GetArtifactUrlOutput, error) {
 	var output amplify.GetArtifactUrlOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyGetBackendEnvironmentFuture struct {
+type GetBackendEnvironmentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyGetBackendEnvironmentFuture) Get(ctx workflow.Context) (*amplify.GetBackendEnvironmentOutput, error) {
+func (r *GetBackendEnvironmentFuture) Get(ctx workflow.Context) (*amplify.GetBackendEnvironmentOutput, error) {
 	var output amplify.GetBackendEnvironmentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyGetBranchFuture struct {
+type GetBranchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyGetBranchFuture) Get(ctx workflow.Context) (*amplify.GetBranchOutput, error) {
+func (r *GetBranchFuture) Get(ctx workflow.Context) (*amplify.GetBranchOutput, error) {
 	var output amplify.GetBranchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyGetDomainAssociationFuture struct {
+type GetDomainAssociationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyGetDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.GetDomainAssociationOutput, error) {
+func (r *GetDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.GetDomainAssociationOutput, error) {
 	var output amplify.GetDomainAssociationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyGetJobFuture struct {
+type GetJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyGetJobFuture) Get(ctx workflow.Context) (*amplify.GetJobOutput, error) {
+func (r *GetJobFuture) Get(ctx workflow.Context) (*amplify.GetJobOutput, error) {
 	var output amplify.GetJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyGetWebhookFuture struct {
+type GetWebhookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyGetWebhookFuture) Get(ctx workflow.Context) (*amplify.GetWebhookOutput, error) {
+func (r *GetWebhookFuture) Get(ctx workflow.Context) (*amplify.GetWebhookOutput, error) {
 	var output amplify.GetWebhookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyListAppsFuture struct {
+type ListAppsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyListAppsFuture) Get(ctx workflow.Context) (*amplify.ListAppsOutput, error) {
+func (r *ListAppsFuture) Get(ctx workflow.Context) (*amplify.ListAppsOutput, error) {
 	var output amplify.ListAppsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyListArtifactsFuture struct {
+type ListArtifactsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyListArtifactsFuture) Get(ctx workflow.Context) (*amplify.ListArtifactsOutput, error) {
+func (r *ListArtifactsFuture) Get(ctx workflow.Context) (*amplify.ListArtifactsOutput, error) {
 	var output amplify.ListArtifactsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyListBackendEnvironmentsFuture struct {
+type ListBackendEnvironmentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyListBackendEnvironmentsFuture) Get(ctx workflow.Context) (*amplify.ListBackendEnvironmentsOutput, error) {
+func (r *ListBackendEnvironmentsFuture) Get(ctx workflow.Context) (*amplify.ListBackendEnvironmentsOutput, error) {
 	var output amplify.ListBackendEnvironmentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyListBranchesFuture struct {
+type ListBranchesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyListBranchesFuture) Get(ctx workflow.Context) (*amplify.ListBranchesOutput, error) {
+func (r *ListBranchesFuture) Get(ctx workflow.Context) (*amplify.ListBranchesOutput, error) {
 	var output amplify.ListBranchesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyListDomainAssociationsFuture struct {
+type ListDomainAssociationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyListDomainAssociationsFuture) Get(ctx workflow.Context) (*amplify.ListDomainAssociationsOutput, error) {
+func (r *ListDomainAssociationsFuture) Get(ctx workflow.Context) (*amplify.ListDomainAssociationsOutput, error) {
 	var output amplify.ListDomainAssociationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyListJobsFuture struct {
+type ListJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyListJobsFuture) Get(ctx workflow.Context) (*amplify.ListJobsOutput, error) {
+func (r *ListJobsFuture) Get(ctx workflow.Context) (*amplify.ListJobsOutput, error) {
 	var output amplify.ListJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyListTagsForResourceFuture) Get(ctx workflow.Context) (*amplify.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*amplify.ListTagsForResourceOutput, error) {
 	var output amplify.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyListWebhooksFuture struct {
+type ListWebhooksFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyListWebhooksFuture) Get(ctx workflow.Context) (*amplify.ListWebhooksOutput, error) {
+func (r *ListWebhooksFuture) Get(ctx workflow.Context) (*amplify.ListWebhooksOutput, error) {
 	var output amplify.ListWebhooksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyStartDeploymentFuture struct {
+type StartDeploymentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyStartDeploymentFuture) Get(ctx workflow.Context) (*amplify.StartDeploymentOutput, error) {
+func (r *StartDeploymentFuture) Get(ctx workflow.Context) (*amplify.StartDeploymentOutput, error) {
 	var output amplify.StartDeploymentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyStartJobFuture struct {
+type StartJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyStartJobFuture) Get(ctx workflow.Context) (*amplify.StartJobOutput, error) {
+func (r *StartJobFuture) Get(ctx workflow.Context) (*amplify.StartJobOutput, error) {
 	var output amplify.StartJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyStopJobFuture struct {
+type StopJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyStopJobFuture) Get(ctx workflow.Context) (*amplify.StopJobOutput, error) {
+func (r *StopJobFuture) Get(ctx workflow.Context) (*amplify.StopJobOutput, error) {
 	var output amplify.StopJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyTagResourceFuture) Get(ctx workflow.Context) (*amplify.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*amplify.TagResourceOutput, error) {
 	var output amplify.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyUntagResourceFuture) Get(ctx workflow.Context) (*amplify.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*amplify.UntagResourceOutput, error) {
 	var output amplify.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyUpdateAppFuture struct {
+type UpdateAppFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyUpdateAppFuture) Get(ctx workflow.Context) (*amplify.UpdateAppOutput, error) {
+func (r *UpdateAppFuture) Get(ctx workflow.Context) (*amplify.UpdateAppOutput, error) {
 	var output amplify.UpdateAppOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyUpdateBranchFuture struct {
+type UpdateBranchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyUpdateBranchFuture) Get(ctx workflow.Context) (*amplify.UpdateBranchOutput, error) {
+func (r *UpdateBranchFuture) Get(ctx workflow.Context) (*amplify.UpdateBranchOutput, error) {
 	var output amplify.UpdateBranchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyUpdateDomainAssociationFuture struct {
+type UpdateDomainAssociationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyUpdateDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.UpdateDomainAssociationOutput, error) {
+func (r *UpdateDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.UpdateDomainAssociationOutput, error) {
 	var output amplify.UpdateDomainAssociationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AmplifyUpdateWebhookFuture struct {
+type UpdateWebhookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AmplifyUpdateWebhookFuture) Get(ctx workflow.Context) (*amplify.UpdateWebhookOutput, error) {
+func (r *UpdateWebhookFuture) Get(ctx workflow.Context) (*amplify.UpdateWebhookOutput, error) {
 	var output amplify.UpdateWebhookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -429,9 +429,9 @@ func (a *stub) CreateApp(ctx workflow.Context, input *amplify.CreateAppInput) (*
 	return &output, err
 }
 
-func (a *stub) CreateAppAsync(ctx workflow.Context, input *amplify.CreateAppInput) *AmplifyCreateAppFuture {
+func (a *stub) CreateAppAsync(ctx workflow.Context, input *amplify.CreateAppInput) *CreateAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateApp", input)
-	return &AmplifyCreateAppFuture{Future: future}
+	return &CreateAppFuture{Future: future}
 }
 
 func (a *stub) CreateBackendEnvironment(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) (*amplify.CreateBackendEnvironmentOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) CreateBackendEnvironment(ctx workflow.Context, input *amplify.Cre
 	return &output, err
 }
 
-func (a *stub) CreateBackendEnvironmentAsync(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) *AmplifyCreateBackendEnvironmentFuture {
+func (a *stub) CreateBackendEnvironmentAsync(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) *CreateBackendEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateBackendEnvironment", input)
-	return &AmplifyCreateBackendEnvironmentFuture{Future: future}
+	return &CreateBackendEnvironmentFuture{Future: future}
 }
 
 func (a *stub) CreateBranch(ctx workflow.Context, input *amplify.CreateBranchInput) (*amplify.CreateBranchOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) CreateBranch(ctx workflow.Context, input *amplify.CreateBranchInp
 	return &output, err
 }
 
-func (a *stub) CreateBranchAsync(ctx workflow.Context, input *amplify.CreateBranchInput) *AmplifyCreateBranchFuture {
+func (a *stub) CreateBranchAsync(ctx workflow.Context, input *amplify.CreateBranchInput) *CreateBranchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateBranch", input)
-	return &AmplifyCreateBranchFuture{Future: future}
+	return &CreateBranchFuture{Future: future}
 }
 
 func (a *stub) CreateDeployment(ctx workflow.Context, input *amplify.CreateDeploymentInput) (*amplify.CreateDeploymentOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) CreateDeployment(ctx workflow.Context, input *amplify.CreateDeplo
 	return &output, err
 }
 
-func (a *stub) CreateDeploymentAsync(ctx workflow.Context, input *amplify.CreateDeploymentInput) *AmplifyCreateDeploymentFuture {
+func (a *stub) CreateDeploymentAsync(ctx workflow.Context, input *amplify.CreateDeploymentInput) *CreateDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateDeployment", input)
-	return &AmplifyCreateDeploymentFuture{Future: future}
+	return &CreateDeploymentFuture{Future: future}
 }
 
 func (a *stub) CreateDomainAssociation(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) (*amplify.CreateDomainAssociationOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) CreateDomainAssociation(ctx workflow.Context, input *amplify.Crea
 	return &output, err
 }
 
-func (a *stub) CreateDomainAssociationAsync(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) *AmplifyCreateDomainAssociationFuture {
+func (a *stub) CreateDomainAssociationAsync(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) *CreateDomainAssociationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateDomainAssociation", input)
-	return &AmplifyCreateDomainAssociationFuture{Future: future}
+	return &CreateDomainAssociationFuture{Future: future}
 }
 
 func (a *stub) CreateWebhook(ctx workflow.Context, input *amplify.CreateWebhookInput) (*amplify.CreateWebhookOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) CreateWebhook(ctx workflow.Context, input *amplify.CreateWebhookI
 	return &output, err
 }
 
-func (a *stub) CreateWebhookAsync(ctx workflow.Context, input *amplify.CreateWebhookInput) *AmplifyCreateWebhookFuture {
+func (a *stub) CreateWebhookAsync(ctx workflow.Context, input *amplify.CreateWebhookInput) *CreateWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateWebhook", input)
-	return &AmplifyCreateWebhookFuture{Future: future}
+	return &CreateWebhookFuture{Future: future}
 }
 
 func (a *stub) DeleteApp(ctx workflow.Context, input *amplify.DeleteAppInput) (*amplify.DeleteAppOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) DeleteApp(ctx workflow.Context, input *amplify.DeleteAppInput) (*
 	return &output, err
 }
 
-func (a *stub) DeleteAppAsync(ctx workflow.Context, input *amplify.DeleteAppInput) *AmplifyDeleteAppFuture {
+func (a *stub) DeleteAppAsync(ctx workflow.Context, input *amplify.DeleteAppInput) *DeleteAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteApp", input)
-	return &AmplifyDeleteAppFuture{Future: future}
+	return &DeleteAppFuture{Future: future}
 }
 
 func (a *stub) DeleteBackendEnvironment(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) (*amplify.DeleteBackendEnvironmentOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DeleteBackendEnvironment(ctx workflow.Context, input *amplify.Del
 	return &output, err
 }
 
-func (a *stub) DeleteBackendEnvironmentAsync(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) *AmplifyDeleteBackendEnvironmentFuture {
+func (a *stub) DeleteBackendEnvironmentAsync(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) *DeleteBackendEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteBackendEnvironment", input)
-	return &AmplifyDeleteBackendEnvironmentFuture{Future: future}
+	return &DeleteBackendEnvironmentFuture{Future: future}
 }
 
 func (a *stub) DeleteBranch(ctx workflow.Context, input *amplify.DeleteBranchInput) (*amplify.DeleteBranchOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) DeleteBranch(ctx workflow.Context, input *amplify.DeleteBranchInp
 	return &output, err
 }
 
-func (a *stub) DeleteBranchAsync(ctx workflow.Context, input *amplify.DeleteBranchInput) *AmplifyDeleteBranchFuture {
+func (a *stub) DeleteBranchAsync(ctx workflow.Context, input *amplify.DeleteBranchInput) *DeleteBranchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteBranch", input)
-	return &AmplifyDeleteBranchFuture{Future: future}
+	return &DeleteBranchFuture{Future: future}
 }
 
 func (a *stub) DeleteDomainAssociation(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) (*amplify.DeleteDomainAssociationOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) DeleteDomainAssociation(ctx workflow.Context, input *amplify.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteDomainAssociationAsync(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) *AmplifyDeleteDomainAssociationFuture {
+func (a *stub) DeleteDomainAssociationAsync(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) *DeleteDomainAssociationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteDomainAssociation", input)
-	return &AmplifyDeleteDomainAssociationFuture{Future: future}
+	return &DeleteDomainAssociationFuture{Future: future}
 }
 
 func (a *stub) DeleteJob(ctx workflow.Context, input *amplify.DeleteJobInput) (*amplify.DeleteJobOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) DeleteJob(ctx workflow.Context, input *amplify.DeleteJobInput) (*
 	return &output, err
 }
 
-func (a *stub) DeleteJobAsync(ctx workflow.Context, input *amplify.DeleteJobInput) *AmplifyDeleteJobFuture {
+func (a *stub) DeleteJobAsync(ctx workflow.Context, input *amplify.DeleteJobInput) *DeleteJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteJob", input)
-	return &AmplifyDeleteJobFuture{Future: future}
+	return &DeleteJobFuture{Future: future}
 }
 
 func (a *stub) DeleteWebhook(ctx workflow.Context, input *amplify.DeleteWebhookInput) (*amplify.DeleteWebhookOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) DeleteWebhook(ctx workflow.Context, input *amplify.DeleteWebhookI
 	return &output, err
 }
 
-func (a *stub) DeleteWebhookAsync(ctx workflow.Context, input *amplify.DeleteWebhookInput) *AmplifyDeleteWebhookFuture {
+func (a *stub) DeleteWebhookAsync(ctx workflow.Context, input *amplify.DeleteWebhookInput) *DeleteWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteWebhook", input)
-	return &AmplifyDeleteWebhookFuture{Future: future}
+	return &DeleteWebhookFuture{Future: future}
 }
 
 func (a *stub) GenerateAccessLogs(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) (*amplify.GenerateAccessLogsOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) GenerateAccessLogs(ctx workflow.Context, input *amplify.GenerateA
 	return &output, err
 }
 
-func (a *stub) GenerateAccessLogsAsync(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) *AmplifyGenerateAccessLogsFuture {
+func (a *stub) GenerateAccessLogsAsync(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) *GenerateAccessLogsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.GenerateAccessLogs", input)
-	return &AmplifyGenerateAccessLogsFuture{Future: future}
+	return &GenerateAccessLogsFuture{Future: future}
 }
 
 func (a *stub) GetApp(ctx workflow.Context, input *amplify.GetAppInput) (*amplify.GetAppOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) GetApp(ctx workflow.Context, input *amplify.GetAppInput) (*amplif
 	return &output, err
 }
 
-func (a *stub) GetAppAsync(ctx workflow.Context, input *amplify.GetAppInput) *AmplifyGetAppFuture {
+func (a *stub) GetAppAsync(ctx workflow.Context, input *amplify.GetAppInput) *GetAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetApp", input)
-	return &AmplifyGetAppFuture{Future: future}
+	return &GetAppFuture{Future: future}
 }
 
 func (a *stub) GetArtifactUrl(ctx workflow.Context, input *amplify.GetArtifactUrlInput) (*amplify.GetArtifactUrlOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) GetArtifactUrl(ctx workflow.Context, input *amplify.GetArtifactUr
 	return &output, err
 }
 
-func (a *stub) GetArtifactUrlAsync(ctx workflow.Context, input *amplify.GetArtifactUrlInput) *AmplifyGetArtifactUrlFuture {
+func (a *stub) GetArtifactUrlAsync(ctx workflow.Context, input *amplify.GetArtifactUrlInput) *GetArtifactUrlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetArtifactUrl", input)
-	return &AmplifyGetArtifactUrlFuture{Future: future}
+	return &GetArtifactUrlFuture{Future: future}
 }
 
 func (a *stub) GetBackendEnvironment(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) (*amplify.GetBackendEnvironmentOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) GetBackendEnvironment(ctx workflow.Context, input *amplify.GetBac
 	return &output, err
 }
 
-func (a *stub) GetBackendEnvironmentAsync(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) *AmplifyGetBackendEnvironmentFuture {
+func (a *stub) GetBackendEnvironmentAsync(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) *GetBackendEnvironmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetBackendEnvironment", input)
-	return &AmplifyGetBackendEnvironmentFuture{Future: future}
+	return &GetBackendEnvironmentFuture{Future: future}
 }
 
 func (a *stub) GetBranch(ctx workflow.Context, input *amplify.GetBranchInput) (*amplify.GetBranchOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) GetBranch(ctx workflow.Context, input *amplify.GetBranchInput) (*
 	return &output, err
 }
 
-func (a *stub) GetBranchAsync(ctx workflow.Context, input *amplify.GetBranchInput) *AmplifyGetBranchFuture {
+func (a *stub) GetBranchAsync(ctx workflow.Context, input *amplify.GetBranchInput) *GetBranchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetBranch", input)
-	return &AmplifyGetBranchFuture{Future: future}
+	return &GetBranchFuture{Future: future}
 }
 
 func (a *stub) GetDomainAssociation(ctx workflow.Context, input *amplify.GetDomainAssociationInput) (*amplify.GetDomainAssociationOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) GetDomainAssociation(ctx workflow.Context, input *amplify.GetDoma
 	return &output, err
 }
 
-func (a *stub) GetDomainAssociationAsync(ctx workflow.Context, input *amplify.GetDomainAssociationInput) *AmplifyGetDomainAssociationFuture {
+func (a *stub) GetDomainAssociationAsync(ctx workflow.Context, input *amplify.GetDomainAssociationInput) *GetDomainAssociationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetDomainAssociation", input)
-	return &AmplifyGetDomainAssociationFuture{Future: future}
+	return &GetDomainAssociationFuture{Future: future}
 }
 
 func (a *stub) GetJob(ctx workflow.Context, input *amplify.GetJobInput) (*amplify.GetJobOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) GetJob(ctx workflow.Context, input *amplify.GetJobInput) (*amplif
 	return &output, err
 }
 
-func (a *stub) GetJobAsync(ctx workflow.Context, input *amplify.GetJobInput) *AmplifyGetJobFuture {
+func (a *stub) GetJobAsync(ctx workflow.Context, input *amplify.GetJobInput) *GetJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetJob", input)
-	return &AmplifyGetJobFuture{Future: future}
+	return &GetJobFuture{Future: future}
 }
 
 func (a *stub) GetWebhook(ctx workflow.Context, input *amplify.GetWebhookInput) (*amplify.GetWebhookOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) GetWebhook(ctx workflow.Context, input *amplify.GetWebhookInput) 
 	return &output, err
 }
 
-func (a *stub) GetWebhookAsync(ctx workflow.Context, input *amplify.GetWebhookInput) *AmplifyGetWebhookFuture {
+func (a *stub) GetWebhookAsync(ctx workflow.Context, input *amplify.GetWebhookInput) *GetWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetWebhook", input)
-	return &AmplifyGetWebhookFuture{Future: future}
+	return &GetWebhookFuture{Future: future}
 }
 
 func (a *stub) ListApps(ctx workflow.Context, input *amplify.ListAppsInput) (*amplify.ListAppsOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) ListApps(ctx workflow.Context, input *amplify.ListAppsInput) (*am
 	return &output, err
 }
 
-func (a *stub) ListAppsAsync(ctx workflow.Context, input *amplify.ListAppsInput) *AmplifyListAppsFuture {
+func (a *stub) ListAppsAsync(ctx workflow.Context, input *amplify.ListAppsInput) *ListAppsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListApps", input)
-	return &AmplifyListAppsFuture{Future: future}
+	return &ListAppsFuture{Future: future}
 }
 
 func (a *stub) ListArtifacts(ctx workflow.Context, input *amplify.ListArtifactsInput) (*amplify.ListArtifactsOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) ListArtifacts(ctx workflow.Context, input *amplify.ListArtifactsI
 	return &output, err
 }
 
-func (a *stub) ListArtifactsAsync(ctx workflow.Context, input *amplify.ListArtifactsInput) *AmplifyListArtifactsFuture {
+func (a *stub) ListArtifactsAsync(ctx workflow.Context, input *amplify.ListArtifactsInput) *ListArtifactsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListArtifacts", input)
-	return &AmplifyListArtifactsFuture{Future: future}
+	return &ListArtifactsFuture{Future: future}
 }
 
 func (a *stub) ListBackendEnvironments(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) (*amplify.ListBackendEnvironmentsOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) ListBackendEnvironments(ctx workflow.Context, input *amplify.List
 	return &output, err
 }
 
-func (a *stub) ListBackendEnvironmentsAsync(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) *AmplifyListBackendEnvironmentsFuture {
+func (a *stub) ListBackendEnvironmentsAsync(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) *ListBackendEnvironmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListBackendEnvironments", input)
-	return &AmplifyListBackendEnvironmentsFuture{Future: future}
+	return &ListBackendEnvironmentsFuture{Future: future}
 }
 
 func (a *stub) ListBranches(ctx workflow.Context, input *amplify.ListBranchesInput) (*amplify.ListBranchesOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) ListBranches(ctx workflow.Context, input *amplify.ListBranchesInp
 	return &output, err
 }
 
-func (a *stub) ListBranchesAsync(ctx workflow.Context, input *amplify.ListBranchesInput) *AmplifyListBranchesFuture {
+func (a *stub) ListBranchesAsync(ctx workflow.Context, input *amplify.ListBranchesInput) *ListBranchesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListBranches", input)
-	return &AmplifyListBranchesFuture{Future: future}
+	return &ListBranchesFuture{Future: future}
 }
 
 func (a *stub) ListDomainAssociations(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) (*amplify.ListDomainAssociationsOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) ListDomainAssociations(ctx workflow.Context, input *amplify.ListD
 	return &output, err
 }
 
-func (a *stub) ListDomainAssociationsAsync(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) *AmplifyListDomainAssociationsFuture {
+func (a *stub) ListDomainAssociationsAsync(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) *ListDomainAssociationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListDomainAssociations", input)
-	return &AmplifyListDomainAssociationsFuture{Future: future}
+	return &ListDomainAssociationsFuture{Future: future}
 }
 
 func (a *stub) ListJobs(ctx workflow.Context, input *amplify.ListJobsInput) (*amplify.ListJobsOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) ListJobs(ctx workflow.Context, input *amplify.ListJobsInput) (*am
 	return &output, err
 }
 
-func (a *stub) ListJobsAsync(ctx workflow.Context, input *amplify.ListJobsInput) *AmplifyListJobsFuture {
+func (a *stub) ListJobsAsync(ctx workflow.Context, input *amplify.ListJobsInput) *ListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListJobs", input)
-	return &AmplifyListJobsFuture{Future: future}
+	return &ListJobsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *amplify.ListTagsForResourceInput) (*amplify.ListTagsForResourceOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *amplify.ListTags
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *amplify.ListTagsForResourceInput) *AmplifyListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *amplify.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListTagsForResource", input)
-	return &AmplifyListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListWebhooks(ctx workflow.Context, input *amplify.ListWebhooksInput) (*amplify.ListWebhooksOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) ListWebhooks(ctx workflow.Context, input *amplify.ListWebhooksInp
 	return &output, err
 }
 
-func (a *stub) ListWebhooksAsync(ctx workflow.Context, input *amplify.ListWebhooksInput) *AmplifyListWebhooksFuture {
+func (a *stub) ListWebhooksAsync(ctx workflow.Context, input *amplify.ListWebhooksInput) *ListWebhooksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListWebhooks", input)
-	return &AmplifyListWebhooksFuture{Future: future}
+	return &ListWebhooksFuture{Future: future}
 }
 
 func (a *stub) StartDeployment(ctx workflow.Context, input *amplify.StartDeploymentInput) (*amplify.StartDeploymentOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) StartDeployment(ctx workflow.Context, input *amplify.StartDeploym
 	return &output, err
 }
 
-func (a *stub) StartDeploymentAsync(ctx workflow.Context, input *amplify.StartDeploymentInput) *AmplifyStartDeploymentFuture {
+func (a *stub) StartDeploymentAsync(ctx workflow.Context, input *amplify.StartDeploymentInput) *StartDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.StartDeployment", input)
-	return &AmplifyStartDeploymentFuture{Future: future}
+	return &StartDeploymentFuture{Future: future}
 }
 
 func (a *stub) StartJob(ctx workflow.Context, input *amplify.StartJobInput) (*amplify.StartJobOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) StartJob(ctx workflow.Context, input *amplify.StartJobInput) (*am
 	return &output, err
 }
 
-func (a *stub) StartJobAsync(ctx workflow.Context, input *amplify.StartJobInput) *AmplifyStartJobFuture {
+func (a *stub) StartJobAsync(ctx workflow.Context, input *amplify.StartJobInput) *StartJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.StartJob", input)
-	return &AmplifyStartJobFuture{Future: future}
+	return &StartJobFuture{Future: future}
 }
 
 func (a *stub) StopJob(ctx workflow.Context, input *amplify.StopJobInput) (*amplify.StopJobOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) StopJob(ctx workflow.Context, input *amplify.StopJobInput) (*ampl
 	return &output, err
 }
 
-func (a *stub) StopJobAsync(ctx workflow.Context, input *amplify.StopJobInput) *AmplifyStopJobFuture {
+func (a *stub) StopJobAsync(ctx workflow.Context, input *amplify.StopJobInput) *StopJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.StopJob", input)
-	return &AmplifyStopJobFuture{Future: future}
+	return &StopJobFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *amplify.TagResourceInput) (*amplify.TagResourceOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *amplify.TagResourceInput
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *amplify.TagResourceInput) *AmplifyTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *amplify.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.TagResource", input)
-	return &AmplifyTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *amplify.UntagResourceInput) (*amplify.UntagResourceOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *amplify.UntagResourceI
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *amplify.UntagResourceInput) *AmplifyUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *amplify.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.UntagResource", input)
-	return &AmplifyUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateApp(ctx workflow.Context, input *amplify.UpdateAppInput) (*amplify.UpdateAppOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) UpdateApp(ctx workflow.Context, input *amplify.UpdateAppInput) (*
 	return &output, err
 }
 
-func (a *stub) UpdateAppAsync(ctx workflow.Context, input *amplify.UpdateAppInput) *AmplifyUpdateAppFuture {
+func (a *stub) UpdateAppAsync(ctx workflow.Context, input *amplify.UpdateAppInput) *UpdateAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateApp", input)
-	return &AmplifyUpdateAppFuture{Future: future}
+	return &UpdateAppFuture{Future: future}
 }
 
 func (a *stub) UpdateBranch(ctx workflow.Context, input *amplify.UpdateBranchInput) (*amplify.UpdateBranchOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) UpdateBranch(ctx workflow.Context, input *amplify.UpdateBranchInp
 	return &output, err
 }
 
-func (a *stub) UpdateBranchAsync(ctx workflow.Context, input *amplify.UpdateBranchInput) *AmplifyUpdateBranchFuture {
+func (a *stub) UpdateBranchAsync(ctx workflow.Context, input *amplify.UpdateBranchInput) *UpdateBranchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateBranch", input)
-	return &AmplifyUpdateBranchFuture{Future: future}
+	return &UpdateBranchFuture{Future: future}
 }
 
 func (a *stub) UpdateDomainAssociation(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) (*amplify.UpdateDomainAssociationOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) UpdateDomainAssociation(ctx workflow.Context, input *amplify.Upda
 	return &output, err
 }
 
-func (a *stub) UpdateDomainAssociationAsync(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) *AmplifyUpdateDomainAssociationFuture {
+func (a *stub) UpdateDomainAssociationAsync(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) *UpdateDomainAssociationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateDomainAssociation", input)
-	return &AmplifyUpdateDomainAssociationFuture{Future: future}
+	return &UpdateDomainAssociationFuture{Future: future}
 }
 
 func (a *stub) UpdateWebhook(ctx workflow.Context, input *amplify.UpdateWebhookInput) (*amplify.UpdateWebhookOutput, error) {
@@ -825,7 +825,7 @@ func (a *stub) UpdateWebhook(ctx workflow.Context, input *amplify.UpdateWebhookI
 	return &output, err
 }
 
-func (a *stub) UpdateWebhookAsync(ctx workflow.Context, input *amplify.UpdateWebhookInput) *AmplifyUpdateWebhookFuture {
+func (a *stub) UpdateWebhookAsync(ctx workflow.Context, input *amplify.UpdateWebhookInput) *UpdateWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateWebhook", input)
-	return &AmplifyUpdateWebhookFuture{Future: future}
+	return &UpdateWebhookFuture{Future: future}
 }

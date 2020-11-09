@@ -16,353 +16,353 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type S3ControlCreateAccessPointFuture struct {
+type CreateAccessPointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlCreateAccessPointFuture) Get(ctx workflow.Context) (*s3control.CreateAccessPointOutput, error) {
+func (r *CreateAccessPointFuture) Get(ctx workflow.Context) (*s3control.CreateAccessPointOutput, error) {
 	var output s3control.CreateAccessPointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlCreateBucketFuture struct {
+type CreateBucketFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlCreateBucketFuture) Get(ctx workflow.Context) (*s3control.CreateBucketOutput, error) {
+func (r *CreateBucketFuture) Get(ctx workflow.Context) (*s3control.CreateBucketOutput, error) {
 	var output s3control.CreateBucketOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlCreateJobFuture struct {
+type CreateJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlCreateJobFuture) Get(ctx workflow.Context) (*s3control.CreateJobOutput, error) {
+func (r *CreateJobFuture) Get(ctx workflow.Context) (*s3control.CreateJobOutput, error) {
 	var output s3control.CreateJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDeleteAccessPointFuture struct {
+type DeleteAccessPointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDeleteAccessPointFuture) Get(ctx workflow.Context) (*s3control.DeleteAccessPointOutput, error) {
+func (r *DeleteAccessPointFuture) Get(ctx workflow.Context) (*s3control.DeleteAccessPointOutput, error) {
 	var output s3control.DeleteAccessPointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDeleteAccessPointPolicyFuture struct {
+type DeleteAccessPointPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDeleteAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3control.DeleteAccessPointPolicyOutput, error) {
+func (r *DeleteAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3control.DeleteAccessPointPolicyOutput, error) {
 	var output s3control.DeleteAccessPointPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDeleteBucketFuture struct {
+type DeleteBucketFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDeleteBucketFuture) Get(ctx workflow.Context) (*s3control.DeleteBucketOutput, error) {
+func (r *DeleteBucketFuture) Get(ctx workflow.Context) (*s3control.DeleteBucketOutput, error) {
 	var output s3control.DeleteBucketOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDeleteBucketLifecycleConfigurationFuture struct {
+type DeleteBucketLifecycleConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDeleteBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3control.DeleteBucketLifecycleConfigurationOutput, error) {
+func (r *DeleteBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3control.DeleteBucketLifecycleConfigurationOutput, error) {
 	var output s3control.DeleteBucketLifecycleConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDeleteBucketPolicyFuture struct {
+type DeleteBucketPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDeleteBucketPolicyFuture) Get(ctx workflow.Context) (*s3control.DeleteBucketPolicyOutput, error) {
+func (r *DeleteBucketPolicyFuture) Get(ctx workflow.Context) (*s3control.DeleteBucketPolicyOutput, error) {
 	var output s3control.DeleteBucketPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDeleteBucketTaggingFuture struct {
+type DeleteBucketTaggingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDeleteBucketTaggingFuture) Get(ctx workflow.Context) (*s3control.DeleteBucketTaggingOutput, error) {
+func (r *DeleteBucketTaggingFuture) Get(ctx workflow.Context) (*s3control.DeleteBucketTaggingOutput, error) {
 	var output s3control.DeleteBucketTaggingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDeleteJobTaggingFuture struct {
+type DeleteJobTaggingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDeleteJobTaggingFuture) Get(ctx workflow.Context) (*s3control.DeleteJobTaggingOutput, error) {
+func (r *DeleteJobTaggingFuture) Get(ctx workflow.Context) (*s3control.DeleteJobTaggingOutput, error) {
 	var output s3control.DeleteJobTaggingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDeletePublicAccessBlockFuture struct {
+type DeletePublicAccessBlockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDeletePublicAccessBlockFuture) Get(ctx workflow.Context) (*s3control.DeletePublicAccessBlockOutput, error) {
+func (r *DeletePublicAccessBlockFuture) Get(ctx workflow.Context) (*s3control.DeletePublicAccessBlockOutput, error) {
 	var output s3control.DeletePublicAccessBlockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlDescribeJobFuture struct {
+type DescribeJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlDescribeJobFuture) Get(ctx workflow.Context) (*s3control.DescribeJobOutput, error) {
+func (r *DescribeJobFuture) Get(ctx workflow.Context) (*s3control.DescribeJobOutput, error) {
 	var output s3control.DescribeJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetAccessPointFuture struct {
+type GetAccessPointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetAccessPointFuture) Get(ctx workflow.Context) (*s3control.GetAccessPointOutput, error) {
+func (r *GetAccessPointFuture) Get(ctx workflow.Context) (*s3control.GetAccessPointOutput, error) {
 	var output s3control.GetAccessPointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetAccessPointPolicyFuture struct {
+type GetAccessPointPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3control.GetAccessPointPolicyOutput, error) {
+func (r *GetAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3control.GetAccessPointPolicyOutput, error) {
 	var output s3control.GetAccessPointPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetAccessPointPolicyStatusFuture struct {
+type GetAccessPointPolicyStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetAccessPointPolicyStatusFuture) Get(ctx workflow.Context) (*s3control.GetAccessPointPolicyStatusOutput, error) {
+func (r *GetAccessPointPolicyStatusFuture) Get(ctx workflow.Context) (*s3control.GetAccessPointPolicyStatusOutput, error) {
 	var output s3control.GetAccessPointPolicyStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetBucketFuture struct {
+type GetBucketFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetBucketFuture) Get(ctx workflow.Context) (*s3control.GetBucketOutput, error) {
+func (r *GetBucketFuture) Get(ctx workflow.Context) (*s3control.GetBucketOutput, error) {
 	var output s3control.GetBucketOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetBucketLifecycleConfigurationFuture struct {
+type GetBucketLifecycleConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3control.GetBucketLifecycleConfigurationOutput, error) {
+func (r *GetBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3control.GetBucketLifecycleConfigurationOutput, error) {
 	var output s3control.GetBucketLifecycleConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetBucketPolicyFuture struct {
+type GetBucketPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetBucketPolicyFuture) Get(ctx workflow.Context) (*s3control.GetBucketPolicyOutput, error) {
+func (r *GetBucketPolicyFuture) Get(ctx workflow.Context) (*s3control.GetBucketPolicyOutput, error) {
 	var output s3control.GetBucketPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetBucketTaggingFuture struct {
+type GetBucketTaggingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetBucketTaggingFuture) Get(ctx workflow.Context) (*s3control.GetBucketTaggingOutput, error) {
+func (r *GetBucketTaggingFuture) Get(ctx workflow.Context) (*s3control.GetBucketTaggingOutput, error) {
 	var output s3control.GetBucketTaggingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetJobTaggingFuture struct {
+type GetJobTaggingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetJobTaggingFuture) Get(ctx workflow.Context) (*s3control.GetJobTaggingOutput, error) {
+func (r *GetJobTaggingFuture) Get(ctx workflow.Context) (*s3control.GetJobTaggingOutput, error) {
 	var output s3control.GetJobTaggingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlGetPublicAccessBlockFuture struct {
+type GetPublicAccessBlockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlGetPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3control.GetPublicAccessBlockOutput, error) {
+func (r *GetPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3control.GetPublicAccessBlockOutput, error) {
 	var output s3control.GetPublicAccessBlockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlListAccessPointsFuture struct {
+type ListAccessPointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlListAccessPointsFuture) Get(ctx workflow.Context) (*s3control.ListAccessPointsOutput, error) {
+func (r *ListAccessPointsFuture) Get(ctx workflow.Context) (*s3control.ListAccessPointsOutput, error) {
 	var output s3control.ListAccessPointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlListJobsFuture struct {
+type ListJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlListJobsFuture) Get(ctx workflow.Context) (*s3control.ListJobsOutput, error) {
+func (r *ListJobsFuture) Get(ctx workflow.Context) (*s3control.ListJobsOutput, error) {
 	var output s3control.ListJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlListRegionalBucketsFuture struct {
+type ListRegionalBucketsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlListRegionalBucketsFuture) Get(ctx workflow.Context) (*s3control.ListRegionalBucketsOutput, error) {
+func (r *ListRegionalBucketsFuture) Get(ctx workflow.Context) (*s3control.ListRegionalBucketsOutput, error) {
 	var output s3control.ListRegionalBucketsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlPutAccessPointPolicyFuture struct {
+type PutAccessPointPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlPutAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3control.PutAccessPointPolicyOutput, error) {
+func (r *PutAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3control.PutAccessPointPolicyOutput, error) {
 	var output s3control.PutAccessPointPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlPutBucketLifecycleConfigurationFuture struct {
+type PutBucketLifecycleConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlPutBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3control.PutBucketLifecycleConfigurationOutput, error) {
+func (r *PutBucketLifecycleConfigurationFuture) Get(ctx workflow.Context) (*s3control.PutBucketLifecycleConfigurationOutput, error) {
 	var output s3control.PutBucketLifecycleConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlPutBucketPolicyFuture struct {
+type PutBucketPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlPutBucketPolicyFuture) Get(ctx workflow.Context) (*s3control.PutBucketPolicyOutput, error) {
+func (r *PutBucketPolicyFuture) Get(ctx workflow.Context) (*s3control.PutBucketPolicyOutput, error) {
 	var output s3control.PutBucketPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlPutBucketTaggingFuture struct {
+type PutBucketTaggingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlPutBucketTaggingFuture) Get(ctx workflow.Context) (*s3control.PutBucketTaggingOutput, error) {
+func (r *PutBucketTaggingFuture) Get(ctx workflow.Context) (*s3control.PutBucketTaggingOutput, error) {
 	var output s3control.PutBucketTaggingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlPutJobTaggingFuture struct {
+type PutJobTaggingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlPutJobTaggingFuture) Get(ctx workflow.Context) (*s3control.PutJobTaggingOutput, error) {
+func (r *PutJobTaggingFuture) Get(ctx workflow.Context) (*s3control.PutJobTaggingOutput, error) {
 	var output s3control.PutJobTaggingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlPutPublicAccessBlockFuture struct {
+type PutPublicAccessBlockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlPutPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3control.PutPublicAccessBlockOutput, error) {
+func (r *PutPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3control.PutPublicAccessBlockOutput, error) {
 	var output s3control.PutPublicAccessBlockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlUpdateJobPriorityFuture struct {
+type UpdateJobPriorityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlUpdateJobPriorityFuture) Get(ctx workflow.Context) (*s3control.UpdateJobPriorityOutput, error) {
+func (r *UpdateJobPriorityFuture) Get(ctx workflow.Context) (*s3control.UpdateJobPriorityOutput, error) {
 	var output s3control.UpdateJobPriorityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type S3ControlUpdateJobStatusFuture struct {
+type UpdateJobStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *S3ControlUpdateJobStatusFuture) Get(ctx workflow.Context) (*s3control.UpdateJobStatusOutput, error) {
+func (r *UpdateJobStatusFuture) Get(ctx workflow.Context) (*s3control.UpdateJobStatusOutput, error) {
 	var output s3control.UpdateJobStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -374,9 +374,9 @@ func (a *stub) CreateAccessPoint(ctx workflow.Context, input *s3control.CreateAc
 	return &output, err
 }
 
-func (a *stub) CreateAccessPointAsync(ctx workflow.Context, input *s3control.CreateAccessPointInput) *S3ControlCreateAccessPointFuture {
+func (a *stub) CreateAccessPointAsync(ctx workflow.Context, input *s3control.CreateAccessPointInput) *CreateAccessPointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.CreateAccessPoint", input)
-	return &S3ControlCreateAccessPointFuture{Future: future}
+	return &CreateAccessPointFuture{Future: future}
 }
 
 func (a *stub) CreateBucket(ctx workflow.Context, input *s3control.CreateBucketInput) (*s3control.CreateBucketOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) CreateBucket(ctx workflow.Context, input *s3control.CreateBucketI
 	return &output, err
 }
 
-func (a *stub) CreateBucketAsync(ctx workflow.Context, input *s3control.CreateBucketInput) *S3ControlCreateBucketFuture {
+func (a *stub) CreateBucketAsync(ctx workflow.Context, input *s3control.CreateBucketInput) *CreateBucketFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.CreateBucket", input)
-	return &S3ControlCreateBucketFuture{Future: future}
+	return &CreateBucketFuture{Future: future}
 }
 
 func (a *stub) CreateJob(ctx workflow.Context, input *s3control.CreateJobInput) (*s3control.CreateJobOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) CreateJob(ctx workflow.Context, input *s3control.CreateJobInput) 
 	return &output, err
 }
 
-func (a *stub) CreateJobAsync(ctx workflow.Context, input *s3control.CreateJobInput) *S3ControlCreateJobFuture {
+func (a *stub) CreateJobAsync(ctx workflow.Context, input *s3control.CreateJobInput) *CreateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.CreateJob", input)
-	return &S3ControlCreateJobFuture{Future: future}
+	return &CreateJobFuture{Future: future}
 }
 
 func (a *stub) DeleteAccessPoint(ctx workflow.Context, input *s3control.DeleteAccessPointInput) (*s3control.DeleteAccessPointOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) DeleteAccessPoint(ctx workflow.Context, input *s3control.DeleteAc
 	return &output, err
 }
 
-func (a *stub) DeleteAccessPointAsync(ctx workflow.Context, input *s3control.DeleteAccessPointInput) *S3ControlDeleteAccessPointFuture {
+func (a *stub) DeleteAccessPointAsync(ctx workflow.Context, input *s3control.DeleteAccessPointInput) *DeleteAccessPointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DeleteAccessPoint", input)
-	return &S3ControlDeleteAccessPointFuture{Future: future}
+	return &DeleteAccessPointFuture{Future: future}
 }
 
 func (a *stub) DeleteAccessPointPolicy(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) (*s3control.DeleteAccessPointPolicyOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) DeleteAccessPointPolicy(ctx workflow.Context, input *s3control.De
 	return &output, err
 }
 
-func (a *stub) DeleteAccessPointPolicyAsync(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) *S3ControlDeleteAccessPointPolicyFuture {
+func (a *stub) DeleteAccessPointPolicyAsync(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) *DeleteAccessPointPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DeleteAccessPointPolicy", input)
-	return &S3ControlDeleteAccessPointPolicyFuture{Future: future}
+	return &DeleteAccessPointPolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteBucket(ctx workflow.Context, input *s3control.DeleteBucketInput) (*s3control.DeleteBucketOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) DeleteBucket(ctx workflow.Context, input *s3control.DeleteBucketI
 	return &output, err
 }
 
-func (a *stub) DeleteBucketAsync(ctx workflow.Context, input *s3control.DeleteBucketInput) *S3ControlDeleteBucketFuture {
+func (a *stub) DeleteBucketAsync(ctx workflow.Context, input *s3control.DeleteBucketInput) *DeleteBucketFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DeleteBucket", input)
-	return &S3ControlDeleteBucketFuture{Future: future}
+	return &DeleteBucketFuture{Future: future}
 }
 
 func (a *stub) DeleteBucketLifecycleConfiguration(ctx workflow.Context, input *s3control.DeleteBucketLifecycleConfigurationInput) (*s3control.DeleteBucketLifecycleConfigurationOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) DeleteBucketLifecycleConfiguration(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *stub) DeleteBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.DeleteBucketLifecycleConfigurationInput) *S3ControlDeleteBucketLifecycleConfigurationFuture {
+func (a *stub) DeleteBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.DeleteBucketLifecycleConfigurationInput) *DeleteBucketLifecycleConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DeleteBucketLifecycleConfiguration", input)
-	return &S3ControlDeleteBucketLifecycleConfigurationFuture{Future: future}
+	return &DeleteBucketLifecycleConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteBucketPolicy(ctx workflow.Context, input *s3control.DeleteBucketPolicyInput) (*s3control.DeleteBucketPolicyOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) DeleteBucketPolicy(ctx workflow.Context, input *s3control.DeleteB
 	return &output, err
 }
 
-func (a *stub) DeleteBucketPolicyAsync(ctx workflow.Context, input *s3control.DeleteBucketPolicyInput) *S3ControlDeleteBucketPolicyFuture {
+func (a *stub) DeleteBucketPolicyAsync(ctx workflow.Context, input *s3control.DeleteBucketPolicyInput) *DeleteBucketPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DeleteBucketPolicy", input)
-	return &S3ControlDeleteBucketPolicyFuture{Future: future}
+	return &DeleteBucketPolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteBucketTagging(ctx workflow.Context, input *s3control.DeleteBucketTaggingInput) (*s3control.DeleteBucketTaggingOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) DeleteBucketTagging(ctx workflow.Context, input *s3control.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteBucketTaggingAsync(ctx workflow.Context, input *s3control.DeleteBucketTaggingInput) *S3ControlDeleteBucketTaggingFuture {
+func (a *stub) DeleteBucketTaggingAsync(ctx workflow.Context, input *s3control.DeleteBucketTaggingInput) *DeleteBucketTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DeleteBucketTagging", input)
-	return &S3ControlDeleteBucketTaggingFuture{Future: future}
+	return &DeleteBucketTaggingFuture{Future: future}
 }
 
 func (a *stub) DeleteJobTagging(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) (*s3control.DeleteJobTaggingOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) DeleteJobTagging(ctx workflow.Context, input *s3control.DeleteJob
 	return &output, err
 }
 
-func (a *stub) DeleteJobTaggingAsync(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) *S3ControlDeleteJobTaggingFuture {
+func (a *stub) DeleteJobTaggingAsync(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) *DeleteJobTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DeleteJobTagging", input)
-	return &S3ControlDeleteJobTaggingFuture{Future: future}
+	return &DeleteJobTaggingFuture{Future: future}
 }
 
 func (a *stub) DeletePublicAccessBlock(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) (*s3control.DeletePublicAccessBlockOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DeletePublicAccessBlock(ctx workflow.Context, input *s3control.De
 	return &output, err
 }
 
-func (a *stub) DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) *S3ControlDeletePublicAccessBlockFuture {
+func (a *stub) DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) *DeletePublicAccessBlockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DeletePublicAccessBlock", input)
-	return &S3ControlDeletePublicAccessBlockFuture{Future: future}
+	return &DeletePublicAccessBlockFuture{Future: future}
 }
 
 func (a *stub) DescribeJob(ctx workflow.Context, input *s3control.DescribeJobInput) (*s3control.DescribeJobOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) DescribeJob(ctx workflow.Context, input *s3control.DescribeJobInp
 	return &output, err
 }
 
-func (a *stub) DescribeJobAsync(ctx workflow.Context, input *s3control.DescribeJobInput) *S3ControlDescribeJobFuture {
+func (a *stub) DescribeJobAsync(ctx workflow.Context, input *s3control.DescribeJobInput) *DescribeJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.DescribeJob", input)
-	return &S3ControlDescribeJobFuture{Future: future}
+	return &DescribeJobFuture{Future: future}
 }
 
 func (a *stub) GetAccessPoint(ctx workflow.Context, input *s3control.GetAccessPointInput) (*s3control.GetAccessPointOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) GetAccessPoint(ctx workflow.Context, input *s3control.GetAccessPo
 	return &output, err
 }
 
-func (a *stub) GetAccessPointAsync(ctx workflow.Context, input *s3control.GetAccessPointInput) *S3ControlGetAccessPointFuture {
+func (a *stub) GetAccessPointAsync(ctx workflow.Context, input *s3control.GetAccessPointInput) *GetAccessPointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetAccessPoint", input)
-	return &S3ControlGetAccessPointFuture{Future: future}
+	return &GetAccessPointFuture{Future: future}
 }
 
 func (a *stub) GetAccessPointPolicy(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) (*s3control.GetAccessPointPolicyOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) GetAccessPointPolicy(ctx workflow.Context, input *s3control.GetAc
 	return &output, err
 }
 
-func (a *stub) GetAccessPointPolicyAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) *S3ControlGetAccessPointPolicyFuture {
+func (a *stub) GetAccessPointPolicyAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) *GetAccessPointPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetAccessPointPolicy", input)
-	return &S3ControlGetAccessPointPolicyFuture{Future: future}
+	return &GetAccessPointPolicyFuture{Future: future}
 }
 
 func (a *stub) GetAccessPointPolicyStatus(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) (*s3control.GetAccessPointPolicyStatusOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) GetAccessPointPolicyStatus(ctx workflow.Context, input *s3control
 	return &output, err
 }
 
-func (a *stub) GetAccessPointPolicyStatusAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) *S3ControlGetAccessPointPolicyStatusFuture {
+func (a *stub) GetAccessPointPolicyStatusAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) *GetAccessPointPolicyStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetAccessPointPolicyStatus", input)
-	return &S3ControlGetAccessPointPolicyStatusFuture{Future: future}
+	return &GetAccessPointPolicyStatusFuture{Future: future}
 }
 
 func (a *stub) GetBucket(ctx workflow.Context, input *s3control.GetBucketInput) (*s3control.GetBucketOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) GetBucket(ctx workflow.Context, input *s3control.GetBucketInput) 
 	return &output, err
 }
 
-func (a *stub) GetBucketAsync(ctx workflow.Context, input *s3control.GetBucketInput) *S3ControlGetBucketFuture {
+func (a *stub) GetBucketAsync(ctx workflow.Context, input *s3control.GetBucketInput) *GetBucketFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetBucket", input)
-	return &S3ControlGetBucketFuture{Future: future}
+	return &GetBucketFuture{Future: future}
 }
 
 func (a *stub) GetBucketLifecycleConfiguration(ctx workflow.Context, input *s3control.GetBucketLifecycleConfigurationInput) (*s3control.GetBucketLifecycleConfigurationOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) GetBucketLifecycleConfiguration(ctx workflow.Context, input *s3co
 	return &output, err
 }
 
-func (a *stub) GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.GetBucketLifecycleConfigurationInput) *S3ControlGetBucketLifecycleConfigurationFuture {
+func (a *stub) GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.GetBucketLifecycleConfigurationInput) *GetBucketLifecycleConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetBucketLifecycleConfiguration", input)
-	return &S3ControlGetBucketLifecycleConfigurationFuture{Future: future}
+	return &GetBucketLifecycleConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetBucketPolicy(ctx workflow.Context, input *s3control.GetBucketPolicyInput) (*s3control.GetBucketPolicyOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) GetBucketPolicy(ctx workflow.Context, input *s3control.GetBucketP
 	return &output, err
 }
 
-func (a *stub) GetBucketPolicyAsync(ctx workflow.Context, input *s3control.GetBucketPolicyInput) *S3ControlGetBucketPolicyFuture {
+func (a *stub) GetBucketPolicyAsync(ctx workflow.Context, input *s3control.GetBucketPolicyInput) *GetBucketPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetBucketPolicy", input)
-	return &S3ControlGetBucketPolicyFuture{Future: future}
+	return &GetBucketPolicyFuture{Future: future}
 }
 
 func (a *stub) GetBucketTagging(ctx workflow.Context, input *s3control.GetBucketTaggingInput) (*s3control.GetBucketTaggingOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) GetBucketTagging(ctx workflow.Context, input *s3control.GetBucket
 	return &output, err
 }
 
-func (a *stub) GetBucketTaggingAsync(ctx workflow.Context, input *s3control.GetBucketTaggingInput) *S3ControlGetBucketTaggingFuture {
+func (a *stub) GetBucketTaggingAsync(ctx workflow.Context, input *s3control.GetBucketTaggingInput) *GetBucketTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetBucketTagging", input)
-	return &S3ControlGetBucketTaggingFuture{Future: future}
+	return &GetBucketTaggingFuture{Future: future}
 }
 
 func (a *stub) GetJobTagging(ctx workflow.Context, input *s3control.GetJobTaggingInput) (*s3control.GetJobTaggingOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) GetJobTagging(ctx workflow.Context, input *s3control.GetJobTaggin
 	return &output, err
 }
 
-func (a *stub) GetJobTaggingAsync(ctx workflow.Context, input *s3control.GetJobTaggingInput) *S3ControlGetJobTaggingFuture {
+func (a *stub) GetJobTaggingAsync(ctx workflow.Context, input *s3control.GetJobTaggingInput) *GetJobTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetJobTagging", input)
-	return &S3ControlGetJobTaggingFuture{Future: future}
+	return &GetJobTaggingFuture{Future: future}
 }
 
 func (a *stub) GetPublicAccessBlock(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) (*s3control.GetPublicAccessBlockOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) GetPublicAccessBlock(ctx workflow.Context, input *s3control.GetPu
 	return &output, err
 }
 
-func (a *stub) GetPublicAccessBlockAsync(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) *S3ControlGetPublicAccessBlockFuture {
+func (a *stub) GetPublicAccessBlockAsync(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) *GetPublicAccessBlockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.GetPublicAccessBlock", input)
-	return &S3ControlGetPublicAccessBlockFuture{Future: future}
+	return &GetPublicAccessBlockFuture{Future: future}
 }
 
 func (a *stub) ListAccessPoints(ctx workflow.Context, input *s3control.ListAccessPointsInput) (*s3control.ListAccessPointsOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) ListAccessPoints(ctx workflow.Context, input *s3control.ListAcces
 	return &output, err
 }
 
-func (a *stub) ListAccessPointsAsync(ctx workflow.Context, input *s3control.ListAccessPointsInput) *S3ControlListAccessPointsFuture {
+func (a *stub) ListAccessPointsAsync(ctx workflow.Context, input *s3control.ListAccessPointsInput) *ListAccessPointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.ListAccessPoints", input)
-	return &S3ControlListAccessPointsFuture{Future: future}
+	return &ListAccessPointsFuture{Future: future}
 }
 
 func (a *stub) ListJobs(ctx workflow.Context, input *s3control.ListJobsInput) (*s3control.ListJobsOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) ListJobs(ctx workflow.Context, input *s3control.ListJobsInput) (*
 	return &output, err
 }
 
-func (a *stub) ListJobsAsync(ctx workflow.Context, input *s3control.ListJobsInput) *S3ControlListJobsFuture {
+func (a *stub) ListJobsAsync(ctx workflow.Context, input *s3control.ListJobsInput) *ListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.ListJobs", input)
-	return &S3ControlListJobsFuture{Future: future}
+	return &ListJobsFuture{Future: future}
 }
 
 func (a *stub) ListRegionalBuckets(ctx workflow.Context, input *s3control.ListRegionalBucketsInput) (*s3control.ListRegionalBucketsOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) ListRegionalBuckets(ctx workflow.Context, input *s3control.ListRe
 	return &output, err
 }
 
-func (a *stub) ListRegionalBucketsAsync(ctx workflow.Context, input *s3control.ListRegionalBucketsInput) *S3ControlListRegionalBucketsFuture {
+func (a *stub) ListRegionalBucketsAsync(ctx workflow.Context, input *s3control.ListRegionalBucketsInput) *ListRegionalBucketsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.ListRegionalBuckets", input)
-	return &S3ControlListRegionalBucketsFuture{Future: future}
+	return &ListRegionalBucketsFuture{Future: future}
 }
 
 func (a *stub) PutAccessPointPolicy(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) (*s3control.PutAccessPointPolicyOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) PutAccessPointPolicy(ctx workflow.Context, input *s3control.PutAc
 	return &output, err
 }
 
-func (a *stub) PutAccessPointPolicyAsync(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) *S3ControlPutAccessPointPolicyFuture {
+func (a *stub) PutAccessPointPolicyAsync(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) *PutAccessPointPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.PutAccessPointPolicy", input)
-	return &S3ControlPutAccessPointPolicyFuture{Future: future}
+	return &PutAccessPointPolicyFuture{Future: future}
 }
 
 func (a *stub) PutBucketLifecycleConfiguration(ctx workflow.Context, input *s3control.PutBucketLifecycleConfigurationInput) (*s3control.PutBucketLifecycleConfigurationOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) PutBucketLifecycleConfiguration(ctx workflow.Context, input *s3co
 	return &output, err
 }
 
-func (a *stub) PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.PutBucketLifecycleConfigurationInput) *S3ControlPutBucketLifecycleConfigurationFuture {
+func (a *stub) PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.PutBucketLifecycleConfigurationInput) *PutBucketLifecycleConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.PutBucketLifecycleConfiguration", input)
-	return &S3ControlPutBucketLifecycleConfigurationFuture{Future: future}
+	return &PutBucketLifecycleConfigurationFuture{Future: future}
 }
 
 func (a *stub) PutBucketPolicy(ctx workflow.Context, input *s3control.PutBucketPolicyInput) (*s3control.PutBucketPolicyOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) PutBucketPolicy(ctx workflow.Context, input *s3control.PutBucketP
 	return &output, err
 }
 
-func (a *stub) PutBucketPolicyAsync(ctx workflow.Context, input *s3control.PutBucketPolicyInput) *S3ControlPutBucketPolicyFuture {
+func (a *stub) PutBucketPolicyAsync(ctx workflow.Context, input *s3control.PutBucketPolicyInput) *PutBucketPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.PutBucketPolicy", input)
-	return &S3ControlPutBucketPolicyFuture{Future: future}
+	return &PutBucketPolicyFuture{Future: future}
 }
 
 func (a *stub) PutBucketTagging(ctx workflow.Context, input *s3control.PutBucketTaggingInput) (*s3control.PutBucketTaggingOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) PutBucketTagging(ctx workflow.Context, input *s3control.PutBucket
 	return &output, err
 }
 
-func (a *stub) PutBucketTaggingAsync(ctx workflow.Context, input *s3control.PutBucketTaggingInput) *S3ControlPutBucketTaggingFuture {
+func (a *stub) PutBucketTaggingAsync(ctx workflow.Context, input *s3control.PutBucketTaggingInput) *PutBucketTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.PutBucketTagging", input)
-	return &S3ControlPutBucketTaggingFuture{Future: future}
+	return &PutBucketTaggingFuture{Future: future}
 }
 
 func (a *stub) PutJobTagging(ctx workflow.Context, input *s3control.PutJobTaggingInput) (*s3control.PutJobTaggingOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) PutJobTagging(ctx workflow.Context, input *s3control.PutJobTaggin
 	return &output, err
 }
 
-func (a *stub) PutJobTaggingAsync(ctx workflow.Context, input *s3control.PutJobTaggingInput) *S3ControlPutJobTaggingFuture {
+func (a *stub) PutJobTaggingAsync(ctx workflow.Context, input *s3control.PutJobTaggingInput) *PutJobTaggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.PutJobTagging", input)
-	return &S3ControlPutJobTaggingFuture{Future: future}
+	return &PutJobTaggingFuture{Future: future}
 }
 
 func (a *stub) PutPublicAccessBlock(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) (*s3control.PutPublicAccessBlockOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) PutPublicAccessBlock(ctx workflow.Context, input *s3control.PutPu
 	return &output, err
 }
 
-func (a *stub) PutPublicAccessBlockAsync(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) *S3ControlPutPublicAccessBlockFuture {
+func (a *stub) PutPublicAccessBlockAsync(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) *PutPublicAccessBlockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.PutPublicAccessBlock", input)
-	return &S3ControlPutPublicAccessBlockFuture{Future: future}
+	return &PutPublicAccessBlockFuture{Future: future}
 }
 
 func (a *stub) UpdateJobPriority(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) (*s3control.UpdateJobPriorityOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) UpdateJobPriority(ctx workflow.Context, input *s3control.UpdateJo
 	return &output, err
 }
 
-func (a *stub) UpdateJobPriorityAsync(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) *S3ControlUpdateJobPriorityFuture {
+func (a *stub) UpdateJobPriorityAsync(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) *UpdateJobPriorityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.UpdateJobPriority", input)
-	return &S3ControlUpdateJobPriorityFuture{Future: future}
+	return &UpdateJobPriorityFuture{Future: future}
 }
 
 func (a *stub) UpdateJobStatus(ctx workflow.Context, input *s3control.UpdateJobStatusInput) (*s3control.UpdateJobStatusOutput, error) {
@@ -715,7 +715,7 @@ func (a *stub) UpdateJobStatus(ctx workflow.Context, input *s3control.UpdateJobS
 	return &output, err
 }
 
-func (a *stub) UpdateJobStatusAsync(ctx workflow.Context, input *s3control.UpdateJobStatusInput) *S3ControlUpdateJobStatusFuture {
+func (a *stub) UpdateJobStatusAsync(ctx workflow.Context, input *s3control.UpdateJobStatusInput) *UpdateJobStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.s3control.UpdateJobStatus", input)
-	return &S3ControlUpdateJobStatusFuture{Future: future}
+	return &UpdateJobStatusFuture{Future: future}
 }

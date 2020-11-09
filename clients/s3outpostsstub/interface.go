@@ -16,13 +16,13 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateEndpoint(ctx workflow.Context, input *s3outposts.CreateEndpointInput) (*s3outposts.CreateEndpointOutput, error)
-	CreateEndpointAsync(ctx workflow.Context, input *s3outposts.CreateEndpointInput) *S3OutpostsCreateEndpointFuture
+	CreateEndpointAsync(ctx workflow.Context, input *s3outposts.CreateEndpointInput) *CreateEndpointFuture
 
 	DeleteEndpoint(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) (*s3outposts.DeleteEndpointOutput, error)
-	DeleteEndpointAsync(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) *S3OutpostsDeleteEndpointFuture
+	DeleteEndpointAsync(ctx workflow.Context, input *s3outposts.DeleteEndpointInput) *DeleteEndpointFuture
 
 	ListEndpoints(ctx workflow.Context, input *s3outposts.ListEndpointsInput) (*s3outposts.ListEndpointsOutput, error)
-	ListEndpointsAsync(ctx workflow.Context, input *s3outposts.ListEndpointsInput) *S3OutpostsListEndpointsFuture
+	ListEndpointsAsync(ctx workflow.Context, input *s3outposts.ListEndpointsInput) *ListEndpointsFuture
 }
 
 func NewClient() Client {

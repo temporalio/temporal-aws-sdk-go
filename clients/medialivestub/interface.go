@@ -16,154 +16,154 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchDelete(ctx workflow.Context, input *medialive.BatchDeleteInput) (*medialive.BatchDeleteOutput, error)
-	BatchDeleteAsync(ctx workflow.Context, input *medialive.BatchDeleteInput) *MediaLiveBatchDeleteFuture
+	BatchDeleteAsync(ctx workflow.Context, input *medialive.BatchDeleteInput) *BatchDeleteFuture
 
 	BatchStart(ctx workflow.Context, input *medialive.BatchStartInput) (*medialive.BatchStartOutput, error)
-	BatchStartAsync(ctx workflow.Context, input *medialive.BatchStartInput) *MediaLiveBatchStartFuture
+	BatchStartAsync(ctx workflow.Context, input *medialive.BatchStartInput) *BatchStartFuture
 
 	BatchStop(ctx workflow.Context, input *medialive.BatchStopInput) (*medialive.BatchStopOutput, error)
-	BatchStopAsync(ctx workflow.Context, input *medialive.BatchStopInput) *MediaLiveBatchStopFuture
+	BatchStopAsync(ctx workflow.Context, input *medialive.BatchStopInput) *BatchStopFuture
 
 	BatchUpdateSchedule(ctx workflow.Context, input *medialive.BatchUpdateScheduleInput) (*medialive.BatchUpdateScheduleOutput, error)
-	BatchUpdateScheduleAsync(ctx workflow.Context, input *medialive.BatchUpdateScheduleInput) *MediaLiveBatchUpdateScheduleFuture
+	BatchUpdateScheduleAsync(ctx workflow.Context, input *medialive.BatchUpdateScheduleInput) *BatchUpdateScheduleFuture
 
 	CreateChannel(ctx workflow.Context, input *medialive.CreateChannelInput) (*medialive.CreateChannelOutput, error)
-	CreateChannelAsync(ctx workflow.Context, input *medialive.CreateChannelInput) *MediaLiveCreateChannelFuture
+	CreateChannelAsync(ctx workflow.Context, input *medialive.CreateChannelInput) *CreateChannelFuture
 
 	CreateInput(ctx workflow.Context, input *medialive.CreateInputInput) (*medialive.CreateInputOutput, error)
-	CreateInputAsync(ctx workflow.Context, input *medialive.CreateInputInput) *MediaLiveCreateInputFuture
+	CreateInputAsync(ctx workflow.Context, input *medialive.CreateInputInput) *CreateInputFuture
 
 	CreateInputSecurityGroup(ctx workflow.Context, input *medialive.CreateInputSecurityGroupInput) (*medialive.CreateInputSecurityGroupOutput, error)
-	CreateInputSecurityGroupAsync(ctx workflow.Context, input *medialive.CreateInputSecurityGroupInput) *MediaLiveCreateInputSecurityGroupFuture
+	CreateInputSecurityGroupAsync(ctx workflow.Context, input *medialive.CreateInputSecurityGroupInput) *CreateInputSecurityGroupFuture
 
 	CreateMultiplex(ctx workflow.Context, input *medialive.CreateMultiplexInput) (*medialive.CreateMultiplexOutput, error)
-	CreateMultiplexAsync(ctx workflow.Context, input *medialive.CreateMultiplexInput) *MediaLiveCreateMultiplexFuture
+	CreateMultiplexAsync(ctx workflow.Context, input *medialive.CreateMultiplexInput) *CreateMultiplexFuture
 
 	CreateMultiplexProgram(ctx workflow.Context, input *medialive.CreateMultiplexProgramInput) (*medialive.CreateMultiplexProgramOutput, error)
-	CreateMultiplexProgramAsync(ctx workflow.Context, input *medialive.CreateMultiplexProgramInput) *MediaLiveCreateMultiplexProgramFuture
+	CreateMultiplexProgramAsync(ctx workflow.Context, input *medialive.CreateMultiplexProgramInput) *CreateMultiplexProgramFuture
 
 	CreateTags(ctx workflow.Context, input *medialive.CreateTagsInput) (*medialive.CreateTagsOutput, error)
-	CreateTagsAsync(ctx workflow.Context, input *medialive.CreateTagsInput) *MediaLiveCreateTagsFuture
+	CreateTagsAsync(ctx workflow.Context, input *medialive.CreateTagsInput) *CreateTagsFuture
 
 	DeleteChannel(ctx workflow.Context, input *medialive.DeleteChannelInput) (*medialive.DeleteChannelOutput, error)
-	DeleteChannelAsync(ctx workflow.Context, input *medialive.DeleteChannelInput) *MediaLiveDeleteChannelFuture
+	DeleteChannelAsync(ctx workflow.Context, input *medialive.DeleteChannelInput) *DeleteChannelFuture
 
 	DeleteInput(ctx workflow.Context, input *medialive.DeleteInputInput) (*medialive.DeleteInputOutput, error)
-	DeleteInputAsync(ctx workflow.Context, input *medialive.DeleteInputInput) *MediaLiveDeleteInputFuture
+	DeleteInputAsync(ctx workflow.Context, input *medialive.DeleteInputInput) *DeleteInputFuture
 
 	DeleteInputSecurityGroup(ctx workflow.Context, input *medialive.DeleteInputSecurityGroupInput) (*medialive.DeleteInputSecurityGroupOutput, error)
-	DeleteInputSecurityGroupAsync(ctx workflow.Context, input *medialive.DeleteInputSecurityGroupInput) *MediaLiveDeleteInputSecurityGroupFuture
+	DeleteInputSecurityGroupAsync(ctx workflow.Context, input *medialive.DeleteInputSecurityGroupInput) *DeleteInputSecurityGroupFuture
 
 	DeleteMultiplex(ctx workflow.Context, input *medialive.DeleteMultiplexInput) (*medialive.DeleteMultiplexOutput, error)
-	DeleteMultiplexAsync(ctx workflow.Context, input *medialive.DeleteMultiplexInput) *MediaLiveDeleteMultiplexFuture
+	DeleteMultiplexAsync(ctx workflow.Context, input *medialive.DeleteMultiplexInput) *DeleteMultiplexFuture
 
 	DeleteMultiplexProgram(ctx workflow.Context, input *medialive.DeleteMultiplexProgramInput) (*medialive.DeleteMultiplexProgramOutput, error)
-	DeleteMultiplexProgramAsync(ctx workflow.Context, input *medialive.DeleteMultiplexProgramInput) *MediaLiveDeleteMultiplexProgramFuture
+	DeleteMultiplexProgramAsync(ctx workflow.Context, input *medialive.DeleteMultiplexProgramInput) *DeleteMultiplexProgramFuture
 
 	DeleteReservation(ctx workflow.Context, input *medialive.DeleteReservationInput) (*medialive.DeleteReservationOutput, error)
-	DeleteReservationAsync(ctx workflow.Context, input *medialive.DeleteReservationInput) *MediaLiveDeleteReservationFuture
+	DeleteReservationAsync(ctx workflow.Context, input *medialive.DeleteReservationInput) *DeleteReservationFuture
 
 	DeleteSchedule(ctx workflow.Context, input *medialive.DeleteScheduleInput) (*medialive.DeleteScheduleOutput, error)
-	DeleteScheduleAsync(ctx workflow.Context, input *medialive.DeleteScheduleInput) *MediaLiveDeleteScheduleFuture
+	DeleteScheduleAsync(ctx workflow.Context, input *medialive.DeleteScheduleInput) *DeleteScheduleFuture
 
 	DeleteTags(ctx workflow.Context, input *medialive.DeleteTagsInput) (*medialive.DeleteTagsOutput, error)
-	DeleteTagsAsync(ctx workflow.Context, input *medialive.DeleteTagsInput) *MediaLiveDeleteTagsFuture
+	DeleteTagsAsync(ctx workflow.Context, input *medialive.DeleteTagsInput) *DeleteTagsFuture
 
 	DescribeChannel(ctx workflow.Context, input *medialive.DescribeChannelInput) (*medialive.DescribeChannelOutput, error)
-	DescribeChannelAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *MediaLiveDescribeChannelFuture
+	DescribeChannelAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *DescribeChannelFuture
 
 	DescribeInput(ctx workflow.Context, input *medialive.DescribeInputInput) (*medialive.DescribeInputOutput, error)
-	DescribeInputAsync(ctx workflow.Context, input *medialive.DescribeInputInput) *MediaLiveDescribeInputFuture
+	DescribeInputAsync(ctx workflow.Context, input *medialive.DescribeInputInput) *DescribeInputFuture
 
 	DescribeInputDevice(ctx workflow.Context, input *medialive.DescribeInputDeviceInput) (*medialive.DescribeInputDeviceOutput, error)
-	DescribeInputDeviceAsync(ctx workflow.Context, input *medialive.DescribeInputDeviceInput) *MediaLiveDescribeInputDeviceFuture
+	DescribeInputDeviceAsync(ctx workflow.Context, input *medialive.DescribeInputDeviceInput) *DescribeInputDeviceFuture
 
 	DescribeInputDeviceThumbnail(ctx workflow.Context, input *medialive.DescribeInputDeviceThumbnailInput) (*medialive.DescribeInputDeviceThumbnailOutput, error)
-	DescribeInputDeviceThumbnailAsync(ctx workflow.Context, input *medialive.DescribeInputDeviceThumbnailInput) *MediaLiveDescribeInputDeviceThumbnailFuture
+	DescribeInputDeviceThumbnailAsync(ctx workflow.Context, input *medialive.DescribeInputDeviceThumbnailInput) *DescribeInputDeviceThumbnailFuture
 
 	DescribeInputSecurityGroup(ctx workflow.Context, input *medialive.DescribeInputSecurityGroupInput) (*medialive.DescribeInputSecurityGroupOutput, error)
-	DescribeInputSecurityGroupAsync(ctx workflow.Context, input *medialive.DescribeInputSecurityGroupInput) *MediaLiveDescribeInputSecurityGroupFuture
+	DescribeInputSecurityGroupAsync(ctx workflow.Context, input *medialive.DescribeInputSecurityGroupInput) *DescribeInputSecurityGroupFuture
 
 	DescribeMultiplex(ctx workflow.Context, input *medialive.DescribeMultiplexInput) (*medialive.DescribeMultiplexOutput, error)
-	DescribeMultiplexAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *MediaLiveDescribeMultiplexFuture
+	DescribeMultiplexAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) *DescribeMultiplexFuture
 
 	DescribeMultiplexProgram(ctx workflow.Context, input *medialive.DescribeMultiplexProgramInput) (*medialive.DescribeMultiplexProgramOutput, error)
-	DescribeMultiplexProgramAsync(ctx workflow.Context, input *medialive.DescribeMultiplexProgramInput) *MediaLiveDescribeMultiplexProgramFuture
+	DescribeMultiplexProgramAsync(ctx workflow.Context, input *medialive.DescribeMultiplexProgramInput) *DescribeMultiplexProgramFuture
 
 	DescribeOffering(ctx workflow.Context, input *medialive.DescribeOfferingInput) (*medialive.DescribeOfferingOutput, error)
-	DescribeOfferingAsync(ctx workflow.Context, input *medialive.DescribeOfferingInput) *MediaLiveDescribeOfferingFuture
+	DescribeOfferingAsync(ctx workflow.Context, input *medialive.DescribeOfferingInput) *DescribeOfferingFuture
 
 	DescribeReservation(ctx workflow.Context, input *medialive.DescribeReservationInput) (*medialive.DescribeReservationOutput, error)
-	DescribeReservationAsync(ctx workflow.Context, input *medialive.DescribeReservationInput) *MediaLiveDescribeReservationFuture
+	DescribeReservationAsync(ctx workflow.Context, input *medialive.DescribeReservationInput) *DescribeReservationFuture
 
 	DescribeSchedule(ctx workflow.Context, input *medialive.DescribeScheduleInput) (*medialive.DescribeScheduleOutput, error)
-	DescribeScheduleAsync(ctx workflow.Context, input *medialive.DescribeScheduleInput) *MediaLiveDescribeScheduleFuture
+	DescribeScheduleAsync(ctx workflow.Context, input *medialive.DescribeScheduleInput) *DescribeScheduleFuture
 
 	ListChannels(ctx workflow.Context, input *medialive.ListChannelsInput) (*medialive.ListChannelsOutput, error)
-	ListChannelsAsync(ctx workflow.Context, input *medialive.ListChannelsInput) *MediaLiveListChannelsFuture
+	ListChannelsAsync(ctx workflow.Context, input *medialive.ListChannelsInput) *ListChannelsFuture
 
 	ListInputDevices(ctx workflow.Context, input *medialive.ListInputDevicesInput) (*medialive.ListInputDevicesOutput, error)
-	ListInputDevicesAsync(ctx workflow.Context, input *medialive.ListInputDevicesInput) *MediaLiveListInputDevicesFuture
+	ListInputDevicesAsync(ctx workflow.Context, input *medialive.ListInputDevicesInput) *ListInputDevicesFuture
 
 	ListInputSecurityGroups(ctx workflow.Context, input *medialive.ListInputSecurityGroupsInput) (*medialive.ListInputSecurityGroupsOutput, error)
-	ListInputSecurityGroupsAsync(ctx workflow.Context, input *medialive.ListInputSecurityGroupsInput) *MediaLiveListInputSecurityGroupsFuture
+	ListInputSecurityGroupsAsync(ctx workflow.Context, input *medialive.ListInputSecurityGroupsInput) *ListInputSecurityGroupsFuture
 
 	ListInputs(ctx workflow.Context, input *medialive.ListInputsInput) (*medialive.ListInputsOutput, error)
-	ListInputsAsync(ctx workflow.Context, input *medialive.ListInputsInput) *MediaLiveListInputsFuture
+	ListInputsAsync(ctx workflow.Context, input *medialive.ListInputsInput) *ListInputsFuture
 
 	ListMultiplexPrograms(ctx workflow.Context, input *medialive.ListMultiplexProgramsInput) (*medialive.ListMultiplexProgramsOutput, error)
-	ListMultiplexProgramsAsync(ctx workflow.Context, input *medialive.ListMultiplexProgramsInput) *MediaLiveListMultiplexProgramsFuture
+	ListMultiplexProgramsAsync(ctx workflow.Context, input *medialive.ListMultiplexProgramsInput) *ListMultiplexProgramsFuture
 
 	ListMultiplexes(ctx workflow.Context, input *medialive.ListMultiplexesInput) (*medialive.ListMultiplexesOutput, error)
-	ListMultiplexesAsync(ctx workflow.Context, input *medialive.ListMultiplexesInput) *MediaLiveListMultiplexesFuture
+	ListMultiplexesAsync(ctx workflow.Context, input *medialive.ListMultiplexesInput) *ListMultiplexesFuture
 
 	ListOfferings(ctx workflow.Context, input *medialive.ListOfferingsInput) (*medialive.ListOfferingsOutput, error)
-	ListOfferingsAsync(ctx workflow.Context, input *medialive.ListOfferingsInput) *MediaLiveListOfferingsFuture
+	ListOfferingsAsync(ctx workflow.Context, input *medialive.ListOfferingsInput) *ListOfferingsFuture
 
 	ListReservations(ctx workflow.Context, input *medialive.ListReservationsInput) (*medialive.ListReservationsOutput, error)
-	ListReservationsAsync(ctx workflow.Context, input *medialive.ListReservationsInput) *MediaLiveListReservationsFuture
+	ListReservationsAsync(ctx workflow.Context, input *medialive.ListReservationsInput) *ListReservationsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *medialive.ListTagsForResourceInput) (*medialive.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *medialive.ListTagsForResourceInput) *MediaLiveListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *medialive.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	PurchaseOffering(ctx workflow.Context, input *medialive.PurchaseOfferingInput) (*medialive.PurchaseOfferingOutput, error)
-	PurchaseOfferingAsync(ctx workflow.Context, input *medialive.PurchaseOfferingInput) *MediaLivePurchaseOfferingFuture
+	PurchaseOfferingAsync(ctx workflow.Context, input *medialive.PurchaseOfferingInput) *PurchaseOfferingFuture
 
 	StartChannel(ctx workflow.Context, input *medialive.StartChannelInput) (*medialive.StartChannelOutput, error)
-	StartChannelAsync(ctx workflow.Context, input *medialive.StartChannelInput) *MediaLiveStartChannelFuture
+	StartChannelAsync(ctx workflow.Context, input *medialive.StartChannelInput) *StartChannelFuture
 
 	StartMultiplex(ctx workflow.Context, input *medialive.StartMultiplexInput) (*medialive.StartMultiplexOutput, error)
-	StartMultiplexAsync(ctx workflow.Context, input *medialive.StartMultiplexInput) *MediaLiveStartMultiplexFuture
+	StartMultiplexAsync(ctx workflow.Context, input *medialive.StartMultiplexInput) *StartMultiplexFuture
 
 	StopChannel(ctx workflow.Context, input *medialive.StopChannelInput) (*medialive.StopChannelOutput, error)
-	StopChannelAsync(ctx workflow.Context, input *medialive.StopChannelInput) *MediaLiveStopChannelFuture
+	StopChannelAsync(ctx workflow.Context, input *medialive.StopChannelInput) *StopChannelFuture
 
 	StopMultiplex(ctx workflow.Context, input *medialive.StopMultiplexInput) (*medialive.StopMultiplexOutput, error)
-	StopMultiplexAsync(ctx workflow.Context, input *medialive.StopMultiplexInput) *MediaLiveStopMultiplexFuture
+	StopMultiplexAsync(ctx workflow.Context, input *medialive.StopMultiplexInput) *StopMultiplexFuture
 
 	UpdateChannel(ctx workflow.Context, input *medialive.UpdateChannelInput) (*medialive.UpdateChannelOutput, error)
-	UpdateChannelAsync(ctx workflow.Context, input *medialive.UpdateChannelInput) *MediaLiveUpdateChannelFuture
+	UpdateChannelAsync(ctx workflow.Context, input *medialive.UpdateChannelInput) *UpdateChannelFuture
 
 	UpdateChannelClass(ctx workflow.Context, input *medialive.UpdateChannelClassInput) (*medialive.UpdateChannelClassOutput, error)
-	UpdateChannelClassAsync(ctx workflow.Context, input *medialive.UpdateChannelClassInput) *MediaLiveUpdateChannelClassFuture
+	UpdateChannelClassAsync(ctx workflow.Context, input *medialive.UpdateChannelClassInput) *UpdateChannelClassFuture
 
 	UpdateInput(ctx workflow.Context, input *medialive.UpdateInputInput) (*medialive.UpdateInputOutput, error)
-	UpdateInputAsync(ctx workflow.Context, input *medialive.UpdateInputInput) *MediaLiveUpdateInputFuture
+	UpdateInputAsync(ctx workflow.Context, input *medialive.UpdateInputInput) *UpdateInputFuture
 
 	UpdateInputDevice(ctx workflow.Context, input *medialive.UpdateInputDeviceInput) (*medialive.UpdateInputDeviceOutput, error)
-	UpdateInputDeviceAsync(ctx workflow.Context, input *medialive.UpdateInputDeviceInput) *MediaLiveUpdateInputDeviceFuture
+	UpdateInputDeviceAsync(ctx workflow.Context, input *medialive.UpdateInputDeviceInput) *UpdateInputDeviceFuture
 
 	UpdateInputSecurityGroup(ctx workflow.Context, input *medialive.UpdateInputSecurityGroupInput) (*medialive.UpdateInputSecurityGroupOutput, error)
-	UpdateInputSecurityGroupAsync(ctx workflow.Context, input *medialive.UpdateInputSecurityGroupInput) *MediaLiveUpdateInputSecurityGroupFuture
+	UpdateInputSecurityGroupAsync(ctx workflow.Context, input *medialive.UpdateInputSecurityGroupInput) *UpdateInputSecurityGroupFuture
 
 	UpdateMultiplex(ctx workflow.Context, input *medialive.UpdateMultiplexInput) (*medialive.UpdateMultiplexOutput, error)
-	UpdateMultiplexAsync(ctx workflow.Context, input *medialive.UpdateMultiplexInput) *MediaLiveUpdateMultiplexFuture
+	UpdateMultiplexAsync(ctx workflow.Context, input *medialive.UpdateMultiplexInput) *UpdateMultiplexFuture
 
 	UpdateMultiplexProgram(ctx workflow.Context, input *medialive.UpdateMultiplexProgramInput) (*medialive.UpdateMultiplexProgramOutput, error)
-	UpdateMultiplexProgramAsync(ctx workflow.Context, input *medialive.UpdateMultiplexProgramInput) *MediaLiveUpdateMultiplexProgramFuture
+	UpdateMultiplexProgramAsync(ctx workflow.Context, input *medialive.UpdateMultiplexProgramInput) *UpdateMultiplexProgramFuture
 
 	UpdateReservation(ctx workflow.Context, input *medialive.UpdateReservationInput) (*medialive.UpdateReservationOutput, error)
-	UpdateReservationAsync(ctx workflow.Context, input *medialive.UpdateReservationInput) *MediaLiveUpdateReservationFuture
+	UpdateReservationAsync(ctx workflow.Context, input *medialive.UpdateReservationInput) *UpdateReservationFuture
 
 	WaitUntilChannelCreated(ctx workflow.Context, input *medialive.DescribeChannelInput) error
 	WaitUntilChannelCreatedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) *clients.VoidFuture

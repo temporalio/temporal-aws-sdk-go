@@ -16,22 +16,22 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelQuantumTask(ctx workflow.Context, input *braket.CancelQuantumTaskInput) (*braket.CancelQuantumTaskOutput, error)
-	CancelQuantumTaskAsync(ctx workflow.Context, input *braket.CancelQuantumTaskInput) *BraketCancelQuantumTaskFuture
+	CancelQuantumTaskAsync(ctx workflow.Context, input *braket.CancelQuantumTaskInput) *CancelQuantumTaskFuture
 
 	CreateQuantumTask(ctx workflow.Context, input *braket.CreateQuantumTaskInput) (*braket.CreateQuantumTaskOutput, error)
-	CreateQuantumTaskAsync(ctx workflow.Context, input *braket.CreateQuantumTaskInput) *BraketCreateQuantumTaskFuture
+	CreateQuantumTaskAsync(ctx workflow.Context, input *braket.CreateQuantumTaskInput) *CreateQuantumTaskFuture
 
 	GetDevice(ctx workflow.Context, input *braket.GetDeviceInput) (*braket.GetDeviceOutput, error)
-	GetDeviceAsync(ctx workflow.Context, input *braket.GetDeviceInput) *BraketGetDeviceFuture
+	GetDeviceAsync(ctx workflow.Context, input *braket.GetDeviceInput) *GetDeviceFuture
 
 	GetQuantumTask(ctx workflow.Context, input *braket.GetQuantumTaskInput) (*braket.GetQuantumTaskOutput, error)
-	GetQuantumTaskAsync(ctx workflow.Context, input *braket.GetQuantumTaskInput) *BraketGetQuantumTaskFuture
+	GetQuantumTaskAsync(ctx workflow.Context, input *braket.GetQuantumTaskInput) *GetQuantumTaskFuture
 
 	SearchDevices(ctx workflow.Context, input *braket.SearchDevicesInput) (*braket.SearchDevicesOutput, error)
-	SearchDevicesAsync(ctx workflow.Context, input *braket.SearchDevicesInput) *BraketSearchDevicesFuture
+	SearchDevicesAsync(ctx workflow.Context, input *braket.SearchDevicesInput) *SearchDevicesFuture
 
 	SearchQuantumTasks(ctx workflow.Context, input *braket.SearchQuantumTasksInput) (*braket.SearchQuantumTasksOutput, error)
-	SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *BraketSearchQuantumTasksFuture
+	SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *SearchQuantumTasksFuture
 }
 
 func NewClient() Client {

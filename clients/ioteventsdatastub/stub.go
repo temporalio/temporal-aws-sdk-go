@@ -16,45 +16,45 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type IoTEventsDataBatchPutMessageFuture struct {
+type BatchPutMessageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDataBatchPutMessageFuture) Get(ctx workflow.Context) (*ioteventsdata.BatchPutMessageOutput, error) {
+func (r *BatchPutMessageFuture) Get(ctx workflow.Context) (*ioteventsdata.BatchPutMessageOutput, error) {
 	var output ioteventsdata.BatchPutMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsDataBatchUpdateDetectorFuture struct {
+type BatchUpdateDetectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDataBatchUpdateDetectorFuture) Get(ctx workflow.Context) (*ioteventsdata.BatchUpdateDetectorOutput, error) {
+func (r *BatchUpdateDetectorFuture) Get(ctx workflow.Context) (*ioteventsdata.BatchUpdateDetectorOutput, error) {
 	var output ioteventsdata.BatchUpdateDetectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsDataDescribeDetectorFuture struct {
+type DescribeDetectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDataDescribeDetectorFuture) Get(ctx workflow.Context) (*ioteventsdata.DescribeDetectorOutput, error) {
+func (r *DescribeDetectorFuture) Get(ctx workflow.Context) (*ioteventsdata.DescribeDetectorOutput, error) {
 	var output ioteventsdata.DescribeDetectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsDataListDetectorsFuture struct {
+type ListDetectorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDataListDetectorsFuture) Get(ctx workflow.Context) (*ioteventsdata.ListDetectorsOutput, error) {
+func (r *ListDetectorsFuture) Get(ctx workflow.Context) (*ioteventsdata.ListDetectorsOutput, error) {
 	var output ioteventsdata.ListDetectorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -66,9 +66,9 @@ func (a *stub) BatchPutMessage(ctx workflow.Context, input *ioteventsdata.BatchP
 	return &output, err
 }
 
-func (a *stub) BatchPutMessageAsync(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) *IoTEventsDataBatchPutMessageFuture {
+func (a *stub) BatchPutMessageAsync(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) *BatchPutMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ioteventsdata.BatchPutMessage", input)
-	return &IoTEventsDataBatchPutMessageFuture{Future: future}
+	return &BatchPutMessageFuture{Future: future}
 }
 
 func (a *stub) BatchUpdateDetector(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) (*ioteventsdata.BatchUpdateDetectorOutput, error) {
@@ -77,9 +77,9 @@ func (a *stub) BatchUpdateDetector(ctx workflow.Context, input *ioteventsdata.Ba
 	return &output, err
 }
 
-func (a *stub) BatchUpdateDetectorAsync(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) *IoTEventsDataBatchUpdateDetectorFuture {
+func (a *stub) BatchUpdateDetectorAsync(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) *BatchUpdateDetectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ioteventsdata.BatchUpdateDetector", input)
-	return &IoTEventsDataBatchUpdateDetectorFuture{Future: future}
+	return &BatchUpdateDetectorFuture{Future: future}
 }
 
 func (a *stub) DescribeDetector(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) (*ioteventsdata.DescribeDetectorOutput, error) {
@@ -88,9 +88,9 @@ func (a *stub) DescribeDetector(ctx workflow.Context, input *ioteventsdata.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeDetectorAsync(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) *IoTEventsDataDescribeDetectorFuture {
+func (a *stub) DescribeDetectorAsync(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) *DescribeDetectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ioteventsdata.DescribeDetector", input)
-	return &IoTEventsDataDescribeDetectorFuture{Future: future}
+	return &DescribeDetectorFuture{Future: future}
 }
 
 func (a *stub) ListDetectors(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) (*ioteventsdata.ListDetectorsOutput, error) {
@@ -99,7 +99,7 @@ func (a *stub) ListDetectors(ctx workflow.Context, input *ioteventsdata.ListDete
 	return &output, err
 }
 
-func (a *stub) ListDetectorsAsync(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) *IoTEventsDataListDetectorsFuture {
+func (a *stub) ListDetectorsAsync(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) *ListDetectorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ioteventsdata.ListDetectors", input)
-	return &IoTEventsDataListDetectorsFuture{Future: future}
+	return &ListDetectorsFuture{Future: future}
 }

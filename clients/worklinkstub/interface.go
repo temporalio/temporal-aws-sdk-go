@@ -16,103 +16,103 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateDomain(ctx workflow.Context, input *worklink.AssociateDomainInput) (*worklink.AssociateDomainOutput, error)
-	AssociateDomainAsync(ctx workflow.Context, input *worklink.AssociateDomainInput) *WorkLinkAssociateDomainFuture
+	AssociateDomainAsync(ctx workflow.Context, input *worklink.AssociateDomainInput) *AssociateDomainFuture
 
 	AssociateWebsiteAuthorizationProvider(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) (*worklink.AssociateWebsiteAuthorizationProviderOutput, error)
-	AssociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) *WorkLinkAssociateWebsiteAuthorizationProviderFuture
+	AssociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.AssociateWebsiteAuthorizationProviderInput) *AssociateWebsiteAuthorizationProviderFuture
 
 	AssociateWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) (*worklink.AssociateWebsiteCertificateAuthorityOutput, error)
-	AssociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) *WorkLinkAssociateWebsiteCertificateAuthorityFuture
+	AssociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.AssociateWebsiteCertificateAuthorityInput) *AssociateWebsiteCertificateAuthorityFuture
 
 	CreateFleet(ctx workflow.Context, input *worklink.CreateFleetInput) (*worklink.CreateFleetOutput, error)
-	CreateFleetAsync(ctx workflow.Context, input *worklink.CreateFleetInput) *WorkLinkCreateFleetFuture
+	CreateFleetAsync(ctx workflow.Context, input *worklink.CreateFleetInput) *CreateFleetFuture
 
 	DeleteFleet(ctx workflow.Context, input *worklink.DeleteFleetInput) (*worklink.DeleteFleetOutput, error)
-	DeleteFleetAsync(ctx workflow.Context, input *worklink.DeleteFleetInput) *WorkLinkDeleteFleetFuture
+	DeleteFleetAsync(ctx workflow.Context, input *worklink.DeleteFleetInput) *DeleteFleetFuture
 
 	DescribeAuditStreamConfiguration(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) (*worklink.DescribeAuditStreamConfigurationOutput, error)
-	DescribeAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) *WorkLinkDescribeAuditStreamConfigurationFuture
+	DescribeAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.DescribeAuditStreamConfigurationInput) *DescribeAuditStreamConfigurationFuture
 
 	DescribeCompanyNetworkConfiguration(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) (*worklink.DescribeCompanyNetworkConfigurationOutput, error)
-	DescribeCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) *WorkLinkDescribeCompanyNetworkConfigurationFuture
+	DescribeCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.DescribeCompanyNetworkConfigurationInput) *DescribeCompanyNetworkConfigurationFuture
 
 	DescribeDevice(ctx workflow.Context, input *worklink.DescribeDeviceInput) (*worklink.DescribeDeviceOutput, error)
-	DescribeDeviceAsync(ctx workflow.Context, input *worklink.DescribeDeviceInput) *WorkLinkDescribeDeviceFuture
+	DescribeDeviceAsync(ctx workflow.Context, input *worklink.DescribeDeviceInput) *DescribeDeviceFuture
 
 	DescribeDevicePolicyConfiguration(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) (*worklink.DescribeDevicePolicyConfigurationOutput, error)
-	DescribeDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) *WorkLinkDescribeDevicePolicyConfigurationFuture
+	DescribeDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.DescribeDevicePolicyConfigurationInput) *DescribeDevicePolicyConfigurationFuture
 
 	DescribeDomain(ctx workflow.Context, input *worklink.DescribeDomainInput) (*worklink.DescribeDomainOutput, error)
-	DescribeDomainAsync(ctx workflow.Context, input *worklink.DescribeDomainInput) *WorkLinkDescribeDomainFuture
+	DescribeDomainAsync(ctx workflow.Context, input *worklink.DescribeDomainInput) *DescribeDomainFuture
 
 	DescribeFleetMetadata(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) (*worklink.DescribeFleetMetadataOutput, error)
-	DescribeFleetMetadataAsync(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) *WorkLinkDescribeFleetMetadataFuture
+	DescribeFleetMetadataAsync(ctx workflow.Context, input *worklink.DescribeFleetMetadataInput) *DescribeFleetMetadataFuture
 
 	DescribeIdentityProviderConfiguration(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) (*worklink.DescribeIdentityProviderConfigurationOutput, error)
-	DescribeIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) *WorkLinkDescribeIdentityProviderConfigurationFuture
+	DescribeIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.DescribeIdentityProviderConfigurationInput) *DescribeIdentityProviderConfigurationFuture
 
 	DescribeWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) (*worklink.DescribeWebsiteCertificateAuthorityOutput, error)
-	DescribeWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) *WorkLinkDescribeWebsiteCertificateAuthorityFuture
+	DescribeWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DescribeWebsiteCertificateAuthorityInput) *DescribeWebsiteCertificateAuthorityFuture
 
 	DisassociateDomain(ctx workflow.Context, input *worklink.DisassociateDomainInput) (*worklink.DisassociateDomainOutput, error)
-	DisassociateDomainAsync(ctx workflow.Context, input *worklink.DisassociateDomainInput) *WorkLinkDisassociateDomainFuture
+	DisassociateDomainAsync(ctx workflow.Context, input *worklink.DisassociateDomainInput) *DisassociateDomainFuture
 
 	DisassociateWebsiteAuthorizationProvider(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) (*worklink.DisassociateWebsiteAuthorizationProviderOutput, error)
-	DisassociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) *WorkLinkDisassociateWebsiteAuthorizationProviderFuture
+	DisassociateWebsiteAuthorizationProviderAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteAuthorizationProviderInput) *DisassociateWebsiteAuthorizationProviderFuture
 
 	DisassociateWebsiteCertificateAuthority(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) (*worklink.DisassociateWebsiteCertificateAuthorityOutput, error)
-	DisassociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) *WorkLinkDisassociateWebsiteCertificateAuthorityFuture
+	DisassociateWebsiteCertificateAuthorityAsync(ctx workflow.Context, input *worklink.DisassociateWebsiteCertificateAuthorityInput) *DisassociateWebsiteCertificateAuthorityFuture
 
 	ListDevices(ctx workflow.Context, input *worklink.ListDevicesInput) (*worklink.ListDevicesOutput, error)
-	ListDevicesAsync(ctx workflow.Context, input *worklink.ListDevicesInput) *WorkLinkListDevicesFuture
+	ListDevicesAsync(ctx workflow.Context, input *worklink.ListDevicesInput) *ListDevicesFuture
 
 	ListDomains(ctx workflow.Context, input *worklink.ListDomainsInput) (*worklink.ListDomainsOutput, error)
-	ListDomainsAsync(ctx workflow.Context, input *worklink.ListDomainsInput) *WorkLinkListDomainsFuture
+	ListDomainsAsync(ctx workflow.Context, input *worklink.ListDomainsInput) *ListDomainsFuture
 
 	ListFleets(ctx workflow.Context, input *worklink.ListFleetsInput) (*worklink.ListFleetsOutput, error)
-	ListFleetsAsync(ctx workflow.Context, input *worklink.ListFleetsInput) *WorkLinkListFleetsFuture
+	ListFleetsAsync(ctx workflow.Context, input *worklink.ListFleetsInput) *ListFleetsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *worklink.ListTagsForResourceInput) (*worklink.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *worklink.ListTagsForResourceInput) *WorkLinkListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *worklink.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListWebsiteAuthorizationProviders(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) (*worklink.ListWebsiteAuthorizationProvidersOutput, error)
-	ListWebsiteAuthorizationProvidersAsync(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) *WorkLinkListWebsiteAuthorizationProvidersFuture
+	ListWebsiteAuthorizationProvidersAsync(ctx workflow.Context, input *worklink.ListWebsiteAuthorizationProvidersInput) *ListWebsiteAuthorizationProvidersFuture
 
 	ListWebsiteCertificateAuthorities(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) (*worklink.ListWebsiteCertificateAuthoritiesOutput, error)
-	ListWebsiteCertificateAuthoritiesAsync(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) *WorkLinkListWebsiteCertificateAuthoritiesFuture
+	ListWebsiteCertificateAuthoritiesAsync(ctx workflow.Context, input *worklink.ListWebsiteCertificateAuthoritiesInput) *ListWebsiteCertificateAuthoritiesFuture
 
 	RestoreDomainAccess(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) (*worklink.RestoreDomainAccessOutput, error)
-	RestoreDomainAccessAsync(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) *WorkLinkRestoreDomainAccessFuture
+	RestoreDomainAccessAsync(ctx workflow.Context, input *worklink.RestoreDomainAccessInput) *RestoreDomainAccessFuture
 
 	RevokeDomainAccess(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) (*worklink.RevokeDomainAccessOutput, error)
-	RevokeDomainAccessAsync(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) *WorkLinkRevokeDomainAccessFuture
+	RevokeDomainAccessAsync(ctx workflow.Context, input *worklink.RevokeDomainAccessInput) *RevokeDomainAccessFuture
 
 	SignOutUser(ctx workflow.Context, input *worklink.SignOutUserInput) (*worklink.SignOutUserOutput, error)
-	SignOutUserAsync(ctx workflow.Context, input *worklink.SignOutUserInput) *WorkLinkSignOutUserFuture
+	SignOutUserAsync(ctx workflow.Context, input *worklink.SignOutUserInput) *SignOutUserFuture
 
 	TagResource(ctx workflow.Context, input *worklink.TagResourceInput) (*worklink.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *worklink.TagResourceInput) *WorkLinkTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *worklink.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *worklink.UntagResourceInput) (*worklink.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *worklink.UntagResourceInput) *WorkLinkUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *worklink.UntagResourceInput) *UntagResourceFuture
 
 	UpdateAuditStreamConfiguration(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) (*worklink.UpdateAuditStreamConfigurationOutput, error)
-	UpdateAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) *WorkLinkUpdateAuditStreamConfigurationFuture
+	UpdateAuditStreamConfigurationAsync(ctx workflow.Context, input *worklink.UpdateAuditStreamConfigurationInput) *UpdateAuditStreamConfigurationFuture
 
 	UpdateCompanyNetworkConfiguration(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) (*worklink.UpdateCompanyNetworkConfigurationOutput, error)
-	UpdateCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) *WorkLinkUpdateCompanyNetworkConfigurationFuture
+	UpdateCompanyNetworkConfigurationAsync(ctx workflow.Context, input *worklink.UpdateCompanyNetworkConfigurationInput) *UpdateCompanyNetworkConfigurationFuture
 
 	UpdateDevicePolicyConfiguration(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) (*worklink.UpdateDevicePolicyConfigurationOutput, error)
-	UpdateDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) *WorkLinkUpdateDevicePolicyConfigurationFuture
+	UpdateDevicePolicyConfigurationAsync(ctx workflow.Context, input *worklink.UpdateDevicePolicyConfigurationInput) *UpdateDevicePolicyConfigurationFuture
 
 	UpdateDomainMetadata(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) (*worklink.UpdateDomainMetadataOutput, error)
-	UpdateDomainMetadataAsync(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) *WorkLinkUpdateDomainMetadataFuture
+	UpdateDomainMetadataAsync(ctx workflow.Context, input *worklink.UpdateDomainMetadataInput) *UpdateDomainMetadataFuture
 
 	UpdateFleetMetadata(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) (*worklink.UpdateFleetMetadataOutput, error)
-	UpdateFleetMetadataAsync(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) *WorkLinkUpdateFleetMetadataFuture
+	UpdateFleetMetadataAsync(ctx workflow.Context, input *worklink.UpdateFleetMetadataInput) *UpdateFleetMetadataFuture
 
 	UpdateIdentityProviderConfiguration(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) (*worklink.UpdateIdentityProviderConfigurationOutput, error)
-	UpdateIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) *WorkLinkUpdateIdentityProviderConfigurationFuture
+	UpdateIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) *UpdateIdentityProviderConfigurationFuture
 }
 
 func NewClient() Client {

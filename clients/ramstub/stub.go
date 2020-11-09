@@ -16,265 +16,265 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type RAMAcceptResourceShareInvitationFuture struct {
+type AcceptResourceShareInvitationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMAcceptResourceShareInvitationFuture) Get(ctx workflow.Context) (*ram.AcceptResourceShareInvitationOutput, error) {
+func (r *AcceptResourceShareInvitationFuture) Get(ctx workflow.Context) (*ram.AcceptResourceShareInvitationOutput, error) {
 	var output ram.AcceptResourceShareInvitationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMAssociateResourceShareFuture struct {
+type AssociateResourceShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMAssociateResourceShareFuture) Get(ctx workflow.Context) (*ram.AssociateResourceShareOutput, error) {
+func (r *AssociateResourceShareFuture) Get(ctx workflow.Context) (*ram.AssociateResourceShareOutput, error) {
 	var output ram.AssociateResourceShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMAssociateResourceSharePermissionFuture struct {
+type AssociateResourceSharePermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMAssociateResourceSharePermissionFuture) Get(ctx workflow.Context) (*ram.AssociateResourceSharePermissionOutput, error) {
+func (r *AssociateResourceSharePermissionFuture) Get(ctx workflow.Context) (*ram.AssociateResourceSharePermissionOutput, error) {
 	var output ram.AssociateResourceSharePermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMCreateResourceShareFuture struct {
+type CreateResourceShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMCreateResourceShareFuture) Get(ctx workflow.Context) (*ram.CreateResourceShareOutput, error) {
+func (r *CreateResourceShareFuture) Get(ctx workflow.Context) (*ram.CreateResourceShareOutput, error) {
 	var output ram.CreateResourceShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMDeleteResourceShareFuture struct {
+type DeleteResourceShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMDeleteResourceShareFuture) Get(ctx workflow.Context) (*ram.DeleteResourceShareOutput, error) {
+func (r *DeleteResourceShareFuture) Get(ctx workflow.Context) (*ram.DeleteResourceShareOutput, error) {
 	var output ram.DeleteResourceShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMDisassociateResourceShareFuture struct {
+type DisassociateResourceShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMDisassociateResourceShareFuture) Get(ctx workflow.Context) (*ram.DisassociateResourceShareOutput, error) {
+func (r *DisassociateResourceShareFuture) Get(ctx workflow.Context) (*ram.DisassociateResourceShareOutput, error) {
 	var output ram.DisassociateResourceShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMDisassociateResourceSharePermissionFuture struct {
+type DisassociateResourceSharePermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMDisassociateResourceSharePermissionFuture) Get(ctx workflow.Context) (*ram.DisassociateResourceSharePermissionOutput, error) {
+func (r *DisassociateResourceSharePermissionFuture) Get(ctx workflow.Context) (*ram.DisassociateResourceSharePermissionOutput, error) {
 	var output ram.DisassociateResourceSharePermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMEnableSharingWithAwsOrganizationFuture struct {
+type EnableSharingWithAwsOrganizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMEnableSharingWithAwsOrganizationFuture) Get(ctx workflow.Context) (*ram.EnableSharingWithAwsOrganizationOutput, error) {
+func (r *EnableSharingWithAwsOrganizationFuture) Get(ctx workflow.Context) (*ram.EnableSharingWithAwsOrganizationOutput, error) {
 	var output ram.EnableSharingWithAwsOrganizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMGetPermissionFuture struct {
+type GetPermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMGetPermissionFuture) Get(ctx workflow.Context) (*ram.GetPermissionOutput, error) {
+func (r *GetPermissionFuture) Get(ctx workflow.Context) (*ram.GetPermissionOutput, error) {
 	var output ram.GetPermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMGetResourcePoliciesFuture struct {
+type GetResourcePoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMGetResourcePoliciesFuture) Get(ctx workflow.Context) (*ram.GetResourcePoliciesOutput, error) {
+func (r *GetResourcePoliciesFuture) Get(ctx workflow.Context) (*ram.GetResourcePoliciesOutput, error) {
 	var output ram.GetResourcePoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMGetResourceShareAssociationsFuture struct {
+type GetResourceShareAssociationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMGetResourceShareAssociationsFuture) Get(ctx workflow.Context) (*ram.GetResourceShareAssociationsOutput, error) {
+func (r *GetResourceShareAssociationsFuture) Get(ctx workflow.Context) (*ram.GetResourceShareAssociationsOutput, error) {
 	var output ram.GetResourceShareAssociationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMGetResourceShareInvitationsFuture struct {
+type GetResourceShareInvitationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMGetResourceShareInvitationsFuture) Get(ctx workflow.Context) (*ram.GetResourceShareInvitationsOutput, error) {
+func (r *GetResourceShareInvitationsFuture) Get(ctx workflow.Context) (*ram.GetResourceShareInvitationsOutput, error) {
 	var output ram.GetResourceShareInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMGetResourceSharesFuture struct {
+type GetResourceSharesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMGetResourceSharesFuture) Get(ctx workflow.Context) (*ram.GetResourceSharesOutput, error) {
+func (r *GetResourceSharesFuture) Get(ctx workflow.Context) (*ram.GetResourceSharesOutput, error) {
 	var output ram.GetResourceSharesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMListPendingInvitationResourcesFuture struct {
+type ListPendingInvitationResourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMListPendingInvitationResourcesFuture) Get(ctx workflow.Context) (*ram.ListPendingInvitationResourcesOutput, error) {
+func (r *ListPendingInvitationResourcesFuture) Get(ctx workflow.Context) (*ram.ListPendingInvitationResourcesOutput, error) {
 	var output ram.ListPendingInvitationResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMListPermissionsFuture struct {
+type ListPermissionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMListPermissionsFuture) Get(ctx workflow.Context) (*ram.ListPermissionsOutput, error) {
+func (r *ListPermissionsFuture) Get(ctx workflow.Context) (*ram.ListPermissionsOutput, error) {
 	var output ram.ListPermissionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMListPrincipalsFuture struct {
+type ListPrincipalsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMListPrincipalsFuture) Get(ctx workflow.Context) (*ram.ListPrincipalsOutput, error) {
+func (r *ListPrincipalsFuture) Get(ctx workflow.Context) (*ram.ListPrincipalsOutput, error) {
 	var output ram.ListPrincipalsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMListResourceSharePermissionsFuture struct {
+type ListResourceSharePermissionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMListResourceSharePermissionsFuture) Get(ctx workflow.Context) (*ram.ListResourceSharePermissionsOutput, error) {
+func (r *ListResourceSharePermissionsFuture) Get(ctx workflow.Context) (*ram.ListResourceSharePermissionsOutput, error) {
 	var output ram.ListResourceSharePermissionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMListResourceTypesFuture struct {
+type ListResourceTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMListResourceTypesFuture) Get(ctx workflow.Context) (*ram.ListResourceTypesOutput, error) {
+func (r *ListResourceTypesFuture) Get(ctx workflow.Context) (*ram.ListResourceTypesOutput, error) {
 	var output ram.ListResourceTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMListResourcesFuture struct {
+type ListResourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMListResourcesFuture) Get(ctx workflow.Context) (*ram.ListResourcesOutput, error) {
+func (r *ListResourcesFuture) Get(ctx workflow.Context) (*ram.ListResourcesOutput, error) {
 	var output ram.ListResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMPromoteResourceShareCreatedFromPolicyFuture struct {
+type PromoteResourceShareCreatedFromPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMPromoteResourceShareCreatedFromPolicyFuture) Get(ctx workflow.Context) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error) {
+func (r *PromoteResourceShareCreatedFromPolicyFuture) Get(ctx workflow.Context) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error) {
 	var output ram.PromoteResourceShareCreatedFromPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMRejectResourceShareInvitationFuture struct {
+type RejectResourceShareInvitationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMRejectResourceShareInvitationFuture) Get(ctx workflow.Context) (*ram.RejectResourceShareInvitationOutput, error) {
+func (r *RejectResourceShareInvitationFuture) Get(ctx workflow.Context) (*ram.RejectResourceShareInvitationOutput, error) {
 	var output ram.RejectResourceShareInvitationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMTagResourceFuture) Get(ctx workflow.Context) (*ram.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*ram.TagResourceOutput, error) {
 	var output ram.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMUntagResourceFuture) Get(ctx workflow.Context) (*ram.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*ram.UntagResourceOutput, error) {
 	var output ram.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RAMUpdateResourceShareFuture struct {
+type UpdateResourceShareFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RAMUpdateResourceShareFuture) Get(ctx workflow.Context) (*ram.UpdateResourceShareOutput, error) {
+func (r *UpdateResourceShareFuture) Get(ctx workflow.Context) (*ram.UpdateResourceShareOutput, error) {
 	var output ram.UpdateResourceShareOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -286,9 +286,9 @@ func (a *stub) AcceptResourceShareInvitation(ctx workflow.Context, input *ram.Ac
 	return &output, err
 }
 
-func (a *stub) AcceptResourceShareInvitationAsync(ctx workflow.Context, input *ram.AcceptResourceShareInvitationInput) *RAMAcceptResourceShareInvitationFuture {
+func (a *stub) AcceptResourceShareInvitationAsync(ctx workflow.Context, input *ram.AcceptResourceShareInvitationInput) *AcceptResourceShareInvitationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.AcceptResourceShareInvitation", input)
-	return &RAMAcceptResourceShareInvitationFuture{Future: future}
+	return &AcceptResourceShareInvitationFuture{Future: future}
 }
 
 func (a *stub) AssociateResourceShare(ctx workflow.Context, input *ram.AssociateResourceShareInput) (*ram.AssociateResourceShareOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) AssociateResourceShare(ctx workflow.Context, input *ram.Associate
 	return &output, err
 }
 
-func (a *stub) AssociateResourceShareAsync(ctx workflow.Context, input *ram.AssociateResourceShareInput) *RAMAssociateResourceShareFuture {
+func (a *stub) AssociateResourceShareAsync(ctx workflow.Context, input *ram.AssociateResourceShareInput) *AssociateResourceShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.AssociateResourceShare", input)
-	return &RAMAssociateResourceShareFuture{Future: future}
+	return &AssociateResourceShareFuture{Future: future}
 }
 
 func (a *stub) AssociateResourceSharePermission(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) (*ram.AssociateResourceSharePermissionOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) AssociateResourceSharePermission(ctx workflow.Context, input *ram
 	return &output, err
 }
 
-func (a *stub) AssociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) *RAMAssociateResourceSharePermissionFuture {
+func (a *stub) AssociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) *AssociateResourceSharePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.AssociateResourceSharePermission", input)
-	return &RAMAssociateResourceSharePermissionFuture{Future: future}
+	return &AssociateResourceSharePermissionFuture{Future: future}
 }
 
 func (a *stub) CreateResourceShare(ctx workflow.Context, input *ram.CreateResourceShareInput) (*ram.CreateResourceShareOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) CreateResourceShare(ctx workflow.Context, input *ram.CreateResour
 	return &output, err
 }
 
-func (a *stub) CreateResourceShareAsync(ctx workflow.Context, input *ram.CreateResourceShareInput) *RAMCreateResourceShareFuture {
+func (a *stub) CreateResourceShareAsync(ctx workflow.Context, input *ram.CreateResourceShareInput) *CreateResourceShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.CreateResourceShare", input)
-	return &RAMCreateResourceShareFuture{Future: future}
+	return &CreateResourceShareFuture{Future: future}
 }
 
 func (a *stub) DeleteResourceShare(ctx workflow.Context, input *ram.DeleteResourceShareInput) (*ram.DeleteResourceShareOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) DeleteResourceShare(ctx workflow.Context, input *ram.DeleteResour
 	return &output, err
 }
 
-func (a *stub) DeleteResourceShareAsync(ctx workflow.Context, input *ram.DeleteResourceShareInput) *RAMDeleteResourceShareFuture {
+func (a *stub) DeleteResourceShareAsync(ctx workflow.Context, input *ram.DeleteResourceShareInput) *DeleteResourceShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.DeleteResourceShare", input)
-	return &RAMDeleteResourceShareFuture{Future: future}
+	return &DeleteResourceShareFuture{Future: future}
 }
 
 func (a *stub) DisassociateResourceShare(ctx workflow.Context, input *ram.DisassociateResourceShareInput) (*ram.DisassociateResourceShareOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) DisassociateResourceShare(ctx workflow.Context, input *ram.Disass
 	return &output, err
 }
 
-func (a *stub) DisassociateResourceShareAsync(ctx workflow.Context, input *ram.DisassociateResourceShareInput) *RAMDisassociateResourceShareFuture {
+func (a *stub) DisassociateResourceShareAsync(ctx workflow.Context, input *ram.DisassociateResourceShareInput) *DisassociateResourceShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.DisassociateResourceShare", input)
-	return &RAMDisassociateResourceShareFuture{Future: future}
+	return &DisassociateResourceShareFuture{Future: future}
 }
 
 func (a *stub) DisassociateResourceSharePermission(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) (*ram.DisassociateResourceSharePermissionOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) DisassociateResourceSharePermission(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) DisassociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) *RAMDisassociateResourceSharePermissionFuture {
+func (a *stub) DisassociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) *DisassociateResourceSharePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.DisassociateResourceSharePermission", input)
-	return &RAMDisassociateResourceSharePermissionFuture{Future: future}
+	return &DisassociateResourceSharePermissionFuture{Future: future}
 }
 
 func (a *stub) EnableSharingWithAwsOrganization(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) (*ram.EnableSharingWithAwsOrganizationOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) EnableSharingWithAwsOrganization(ctx workflow.Context, input *ram
 	return &output, err
 }
 
-func (a *stub) EnableSharingWithAwsOrganizationAsync(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) *RAMEnableSharingWithAwsOrganizationFuture {
+func (a *stub) EnableSharingWithAwsOrganizationAsync(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) *EnableSharingWithAwsOrganizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.EnableSharingWithAwsOrganization", input)
-	return &RAMEnableSharingWithAwsOrganizationFuture{Future: future}
+	return &EnableSharingWithAwsOrganizationFuture{Future: future}
 }
 
 func (a *stub) GetPermission(ctx workflow.Context, input *ram.GetPermissionInput) (*ram.GetPermissionOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) GetPermission(ctx workflow.Context, input *ram.GetPermissionInput
 	return &output, err
 }
 
-func (a *stub) GetPermissionAsync(ctx workflow.Context, input *ram.GetPermissionInput) *RAMGetPermissionFuture {
+func (a *stub) GetPermissionAsync(ctx workflow.Context, input *ram.GetPermissionInput) *GetPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.GetPermission", input)
-	return &RAMGetPermissionFuture{Future: future}
+	return &GetPermissionFuture{Future: future}
 }
 
 func (a *stub) GetResourcePolicies(ctx workflow.Context, input *ram.GetResourcePoliciesInput) (*ram.GetResourcePoliciesOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) GetResourcePolicies(ctx workflow.Context, input *ram.GetResourceP
 	return &output, err
 }
 
-func (a *stub) GetResourcePoliciesAsync(ctx workflow.Context, input *ram.GetResourcePoliciesInput) *RAMGetResourcePoliciesFuture {
+func (a *stub) GetResourcePoliciesAsync(ctx workflow.Context, input *ram.GetResourcePoliciesInput) *GetResourcePoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.GetResourcePolicies", input)
-	return &RAMGetResourcePoliciesFuture{Future: future}
+	return &GetResourcePoliciesFuture{Future: future}
 }
 
 func (a *stub) GetResourceShareAssociations(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) (*ram.GetResourceShareAssociationsOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) GetResourceShareAssociations(ctx workflow.Context, input *ram.Get
 	return &output, err
 }
 
-func (a *stub) GetResourceShareAssociationsAsync(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) *RAMGetResourceShareAssociationsFuture {
+func (a *stub) GetResourceShareAssociationsAsync(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) *GetResourceShareAssociationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShareAssociations", input)
-	return &RAMGetResourceShareAssociationsFuture{Future: future}
+	return &GetResourceShareAssociationsFuture{Future: future}
 }
 
 func (a *stub) GetResourceShareInvitations(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) (*ram.GetResourceShareInvitationsOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) GetResourceShareInvitations(ctx workflow.Context, input *ram.GetR
 	return &output, err
 }
 
-func (a *stub) GetResourceShareInvitationsAsync(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) *RAMGetResourceShareInvitationsFuture {
+func (a *stub) GetResourceShareInvitationsAsync(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) *GetResourceShareInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShareInvitations", input)
-	return &RAMGetResourceShareInvitationsFuture{Future: future}
+	return &GetResourceShareInvitationsFuture{Future: future}
 }
 
 func (a *stub) GetResourceShares(ctx workflow.Context, input *ram.GetResourceSharesInput) (*ram.GetResourceSharesOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) GetResourceShares(ctx workflow.Context, input *ram.GetResourceSha
 	return &output, err
 }
 
-func (a *stub) GetResourceSharesAsync(ctx workflow.Context, input *ram.GetResourceSharesInput) *RAMGetResourceSharesFuture {
+func (a *stub) GetResourceSharesAsync(ctx workflow.Context, input *ram.GetResourceSharesInput) *GetResourceSharesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShares", input)
-	return &RAMGetResourceSharesFuture{Future: future}
+	return &GetResourceSharesFuture{Future: future}
 }
 
 func (a *stub) ListPendingInvitationResources(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) (*ram.ListPendingInvitationResourcesOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) ListPendingInvitationResources(ctx workflow.Context, input *ram.L
 	return &output, err
 }
 
-func (a *stub) ListPendingInvitationResourcesAsync(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) *RAMListPendingInvitationResourcesFuture {
+func (a *stub) ListPendingInvitationResourcesAsync(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) *ListPendingInvitationResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.ListPendingInvitationResources", input)
-	return &RAMListPendingInvitationResourcesFuture{Future: future}
+	return &ListPendingInvitationResourcesFuture{Future: future}
 }
 
 func (a *stub) ListPermissions(ctx workflow.Context, input *ram.ListPermissionsInput) (*ram.ListPermissionsOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) ListPermissions(ctx workflow.Context, input *ram.ListPermissionsI
 	return &output, err
 }
 
-func (a *stub) ListPermissionsAsync(ctx workflow.Context, input *ram.ListPermissionsInput) *RAMListPermissionsFuture {
+func (a *stub) ListPermissionsAsync(ctx workflow.Context, input *ram.ListPermissionsInput) *ListPermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.ListPermissions", input)
-	return &RAMListPermissionsFuture{Future: future}
+	return &ListPermissionsFuture{Future: future}
 }
 
 func (a *stub) ListPrincipals(ctx workflow.Context, input *ram.ListPrincipalsInput) (*ram.ListPrincipalsOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) ListPrincipals(ctx workflow.Context, input *ram.ListPrincipalsInp
 	return &output, err
 }
 
-func (a *stub) ListPrincipalsAsync(ctx workflow.Context, input *ram.ListPrincipalsInput) *RAMListPrincipalsFuture {
+func (a *stub) ListPrincipalsAsync(ctx workflow.Context, input *ram.ListPrincipalsInput) *ListPrincipalsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.ListPrincipals", input)
-	return &RAMListPrincipalsFuture{Future: future}
+	return &ListPrincipalsFuture{Future: future}
 }
 
 func (a *stub) ListResourceSharePermissions(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) (*ram.ListResourceSharePermissionsOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) ListResourceSharePermissions(ctx workflow.Context, input *ram.Lis
 	return &output, err
 }
 
-func (a *stub) ListResourceSharePermissionsAsync(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) *RAMListResourceSharePermissionsFuture {
+func (a *stub) ListResourceSharePermissionsAsync(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) *ListResourceSharePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.ListResourceSharePermissions", input)
-	return &RAMListResourceSharePermissionsFuture{Future: future}
+	return &ListResourceSharePermissionsFuture{Future: future}
 }
 
 func (a *stub) ListResourceTypes(ctx workflow.Context, input *ram.ListResourceTypesInput) (*ram.ListResourceTypesOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) ListResourceTypes(ctx workflow.Context, input *ram.ListResourceTy
 	return &output, err
 }
 
-func (a *stub) ListResourceTypesAsync(ctx workflow.Context, input *ram.ListResourceTypesInput) *RAMListResourceTypesFuture {
+func (a *stub) ListResourceTypesAsync(ctx workflow.Context, input *ram.ListResourceTypesInput) *ListResourceTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.ListResourceTypes", input)
-	return &RAMListResourceTypesFuture{Future: future}
+	return &ListResourceTypesFuture{Future: future}
 }
 
 func (a *stub) ListResources(ctx workflow.Context, input *ram.ListResourcesInput) (*ram.ListResourcesOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) ListResources(ctx workflow.Context, input *ram.ListResourcesInput
 	return &output, err
 }
 
-func (a *stub) ListResourcesAsync(ctx workflow.Context, input *ram.ListResourcesInput) *RAMListResourcesFuture {
+func (a *stub) ListResourcesAsync(ctx workflow.Context, input *ram.ListResourcesInput) *ListResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.ListResources", input)
-	return &RAMListResourcesFuture{Future: future}
+	return &ListResourcesFuture{Future: future}
 }
 
 func (a *stub) PromoteResourceShareCreatedFromPolicy(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) PromoteResourceShareCreatedFromPolicy(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) PromoteResourceShareCreatedFromPolicyAsync(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) *RAMPromoteResourceShareCreatedFromPolicyFuture {
+func (a *stub) PromoteResourceShareCreatedFromPolicyAsync(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) *PromoteResourceShareCreatedFromPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.PromoteResourceShareCreatedFromPolicy", input)
-	return &RAMPromoteResourceShareCreatedFromPolicyFuture{Future: future}
+	return &PromoteResourceShareCreatedFromPolicyFuture{Future: future}
 }
 
 func (a *stub) RejectResourceShareInvitation(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) (*ram.RejectResourceShareInvitationOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) RejectResourceShareInvitation(ctx workflow.Context, input *ram.Re
 	return &output, err
 }
 
-func (a *stub) RejectResourceShareInvitationAsync(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) *RAMRejectResourceShareInvitationFuture {
+func (a *stub) RejectResourceShareInvitationAsync(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) *RejectResourceShareInvitationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.RejectResourceShareInvitation", input)
-	return &RAMRejectResourceShareInvitationFuture{Future: future}
+	return &RejectResourceShareInvitationFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *ram.TagResourceInput) (*ram.TagResourceOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *ram.TagResourceInput) (*
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *ram.TagResourceInput) *RAMTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *ram.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.TagResource", input)
-	return &RAMTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *ram.UntagResourceInput) (*ram.UntagResourceOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *ram.UntagResourceInput
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *ram.UntagResourceInput) *RAMUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *ram.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.UntagResource", input)
-	return &RAMUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateResourceShare(ctx workflow.Context, input *ram.UpdateResourceShareInput) (*ram.UpdateResourceShareOutput, error) {
@@ -539,7 +539,7 @@ func (a *stub) UpdateResourceShare(ctx workflow.Context, input *ram.UpdateResour
 	return &output, err
 }
 
-func (a *stub) UpdateResourceShareAsync(ctx workflow.Context, input *ram.UpdateResourceShareInput) *RAMUpdateResourceShareFuture {
+func (a *stub) UpdateResourceShareAsync(ctx workflow.Context, input *ram.UpdateResourceShareInput) *UpdateResourceShareFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ram.UpdateResourceShare", input)
-	return &RAMUpdateResourceShareFuture{Future: future}
+	return &UpdateResourceShareFuture{Future: future}
 }

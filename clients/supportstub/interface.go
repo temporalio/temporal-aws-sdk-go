@@ -16,46 +16,46 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AddAttachmentsToSet(ctx workflow.Context, input *support.AddAttachmentsToSetInput) (*support.AddAttachmentsToSetOutput, error)
-	AddAttachmentsToSetAsync(ctx workflow.Context, input *support.AddAttachmentsToSetInput) *SupportAddAttachmentsToSetFuture
+	AddAttachmentsToSetAsync(ctx workflow.Context, input *support.AddAttachmentsToSetInput) *AddAttachmentsToSetFuture
 
 	AddCommunicationToCase(ctx workflow.Context, input *support.AddCommunicationToCaseInput) (*support.AddCommunicationToCaseOutput, error)
-	AddCommunicationToCaseAsync(ctx workflow.Context, input *support.AddCommunicationToCaseInput) *SupportAddCommunicationToCaseFuture
+	AddCommunicationToCaseAsync(ctx workflow.Context, input *support.AddCommunicationToCaseInput) *AddCommunicationToCaseFuture
 
 	CreateCase(ctx workflow.Context, input *support.CreateCaseInput) (*support.CreateCaseOutput, error)
-	CreateCaseAsync(ctx workflow.Context, input *support.CreateCaseInput) *SupportCreateCaseFuture
+	CreateCaseAsync(ctx workflow.Context, input *support.CreateCaseInput) *CreateCaseFuture
 
 	DescribeAttachment(ctx workflow.Context, input *support.DescribeAttachmentInput) (*support.DescribeAttachmentOutput, error)
-	DescribeAttachmentAsync(ctx workflow.Context, input *support.DescribeAttachmentInput) *SupportDescribeAttachmentFuture
+	DescribeAttachmentAsync(ctx workflow.Context, input *support.DescribeAttachmentInput) *DescribeAttachmentFuture
 
 	DescribeCases(ctx workflow.Context, input *support.DescribeCasesInput) (*support.DescribeCasesOutput, error)
-	DescribeCasesAsync(ctx workflow.Context, input *support.DescribeCasesInput) *SupportDescribeCasesFuture
+	DescribeCasesAsync(ctx workflow.Context, input *support.DescribeCasesInput) *DescribeCasesFuture
 
 	DescribeCommunications(ctx workflow.Context, input *support.DescribeCommunicationsInput) (*support.DescribeCommunicationsOutput, error)
-	DescribeCommunicationsAsync(ctx workflow.Context, input *support.DescribeCommunicationsInput) *SupportDescribeCommunicationsFuture
+	DescribeCommunicationsAsync(ctx workflow.Context, input *support.DescribeCommunicationsInput) *DescribeCommunicationsFuture
 
 	DescribeServices(ctx workflow.Context, input *support.DescribeServicesInput) (*support.DescribeServicesOutput, error)
-	DescribeServicesAsync(ctx workflow.Context, input *support.DescribeServicesInput) *SupportDescribeServicesFuture
+	DescribeServicesAsync(ctx workflow.Context, input *support.DescribeServicesInput) *DescribeServicesFuture
 
 	DescribeSeverityLevels(ctx workflow.Context, input *support.DescribeSeverityLevelsInput) (*support.DescribeSeverityLevelsOutput, error)
-	DescribeSeverityLevelsAsync(ctx workflow.Context, input *support.DescribeSeverityLevelsInput) *SupportDescribeSeverityLevelsFuture
+	DescribeSeverityLevelsAsync(ctx workflow.Context, input *support.DescribeSeverityLevelsInput) *DescribeSeverityLevelsFuture
 
 	DescribeTrustedAdvisorCheckRefreshStatuses(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) (*support.DescribeTrustedAdvisorCheckRefreshStatusesOutput, error)
-	DescribeTrustedAdvisorCheckRefreshStatusesAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) *SupportDescribeTrustedAdvisorCheckRefreshStatusesFuture
+	DescribeTrustedAdvisorCheckRefreshStatusesAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) *DescribeTrustedAdvisorCheckRefreshStatusesFuture
 
 	DescribeTrustedAdvisorCheckResult(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckResultInput) (*support.DescribeTrustedAdvisorCheckResultOutput, error)
-	DescribeTrustedAdvisorCheckResultAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckResultInput) *SupportDescribeTrustedAdvisorCheckResultFuture
+	DescribeTrustedAdvisorCheckResultAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckResultInput) *DescribeTrustedAdvisorCheckResultFuture
 
 	DescribeTrustedAdvisorCheckSummaries(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) (*support.DescribeTrustedAdvisorCheckSummariesOutput, error)
-	DescribeTrustedAdvisorCheckSummariesAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) *SupportDescribeTrustedAdvisorCheckSummariesFuture
+	DescribeTrustedAdvisorCheckSummariesAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) *DescribeTrustedAdvisorCheckSummariesFuture
 
 	DescribeTrustedAdvisorChecks(ctx workflow.Context, input *support.DescribeTrustedAdvisorChecksInput) (*support.DescribeTrustedAdvisorChecksOutput, error)
-	DescribeTrustedAdvisorChecksAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorChecksInput) *SupportDescribeTrustedAdvisorChecksFuture
+	DescribeTrustedAdvisorChecksAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorChecksInput) *DescribeTrustedAdvisorChecksFuture
 
 	RefreshTrustedAdvisorCheck(ctx workflow.Context, input *support.RefreshTrustedAdvisorCheckInput) (*support.RefreshTrustedAdvisorCheckOutput, error)
-	RefreshTrustedAdvisorCheckAsync(ctx workflow.Context, input *support.RefreshTrustedAdvisorCheckInput) *SupportRefreshTrustedAdvisorCheckFuture
+	RefreshTrustedAdvisorCheckAsync(ctx workflow.Context, input *support.RefreshTrustedAdvisorCheckInput) *RefreshTrustedAdvisorCheckFuture
 
 	ResolveCase(ctx workflow.Context, input *support.ResolveCaseInput) (*support.ResolveCaseOutput, error)
-	ResolveCaseAsync(ctx workflow.Context, input *support.ResolveCaseInput) *SupportResolveCaseFuture
+	ResolveCaseAsync(ctx workflow.Context, input *support.ResolveCaseInput) *ResolveCaseFuture
 }
 
 func NewClient() Client {

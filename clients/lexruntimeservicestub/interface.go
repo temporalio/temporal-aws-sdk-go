@@ -16,19 +16,19 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DeleteSession(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) (*lexruntimeservice.DeleteSessionOutput, error)
-	DeleteSessionAsync(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) *LexRuntimeServiceDeleteSessionFuture
+	DeleteSessionAsync(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) *DeleteSessionFuture
 
 	GetSession(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error)
-	GetSessionAsync(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) *LexRuntimeServiceGetSessionFuture
+	GetSessionAsync(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) *GetSessionFuture
 
 	PostContent(ctx workflow.Context, input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error)
-	PostContentAsync(ctx workflow.Context, input *lexruntimeservice.PostContentInput) *LexRuntimeServicePostContentFuture
+	PostContentAsync(ctx workflow.Context, input *lexruntimeservice.PostContentInput) *PostContentFuture
 
 	PostText(ctx workflow.Context, input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error)
-	PostTextAsync(ctx workflow.Context, input *lexruntimeservice.PostTextInput) *LexRuntimeServicePostTextFuture
+	PostTextAsync(ctx workflow.Context, input *lexruntimeservice.PostTextInput) *PostTextFuture
 
 	PutSession(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error)
-	PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexRuntimeServicePutSessionFuture
+	PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *PutSessionFuture
 }
 
 func NewClient() Client {

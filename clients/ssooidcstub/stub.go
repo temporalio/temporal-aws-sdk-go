@@ -16,34 +16,34 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type SSOOIDCCreateTokenFuture struct {
+type CreateTokenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOOIDCCreateTokenFuture) Get(ctx workflow.Context) (*ssooidc.CreateTokenOutput, error) {
+func (r *CreateTokenFuture) Get(ctx workflow.Context) (*ssooidc.CreateTokenOutput, error) {
 	var output ssooidc.CreateTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOOIDCRegisterClientFuture struct {
+type RegisterClientFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOOIDCRegisterClientFuture) Get(ctx workflow.Context) (*ssooidc.RegisterClientOutput, error) {
+func (r *RegisterClientFuture) Get(ctx workflow.Context) (*ssooidc.RegisterClientOutput, error) {
 	var output ssooidc.RegisterClientOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOOIDCStartDeviceAuthorizationFuture struct {
+type StartDeviceAuthorizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOOIDCStartDeviceAuthorizationFuture) Get(ctx workflow.Context) (*ssooidc.StartDeviceAuthorizationOutput, error) {
+func (r *StartDeviceAuthorizationFuture) Get(ctx workflow.Context) (*ssooidc.StartDeviceAuthorizationOutput, error) {
 	var output ssooidc.StartDeviceAuthorizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -55,9 +55,9 @@ func (a *stub) CreateToken(ctx workflow.Context, input *ssooidc.CreateTokenInput
 	return &output, err
 }
 
-func (a *stub) CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SSOOIDCCreateTokenFuture {
+func (a *stub) CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *CreateTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.CreateToken", input)
-	return &SSOOIDCCreateTokenFuture{Future: future}
+	return &CreateTokenFuture{Future: future}
 }
 
 func (a *stub) RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error) {
@@ -66,9 +66,9 @@ func (a *stub) RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClien
 	return &output, err
 }
 
-func (a *stub) RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SSOOIDCRegisterClientFuture {
+func (a *stub) RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *RegisterClientFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.RegisterClient", input)
-	return &SSOOIDCRegisterClientFuture{Future: future}
+	return &RegisterClientFuture{Future: future}
 }
 
 func (a *stub) StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error) {
@@ -77,7 +77,7 @@ func (a *stub) StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.Sta
 	return &output, err
 }
 
-func (a *stub) StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SSOOIDCStartDeviceAuthorizationFuture {
+func (a *stub) StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *StartDeviceAuthorizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.StartDeviceAuthorization", input)
-	return &SSOOIDCStartDeviceAuthorizationFuture{Future: future}
+	return &StartDeviceAuthorizationFuture{Future: future}
 }

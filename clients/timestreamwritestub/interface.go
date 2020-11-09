@@ -16,49 +16,49 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateDatabase(ctx workflow.Context, input *timestreamwrite.CreateDatabaseInput) (*timestreamwrite.CreateDatabaseOutput, error)
-	CreateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.CreateDatabaseInput) *TimestreamWriteCreateDatabaseFuture
+	CreateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.CreateDatabaseInput) *CreateDatabaseFuture
 
 	CreateTable(ctx workflow.Context, input *timestreamwrite.CreateTableInput) (*timestreamwrite.CreateTableOutput, error)
-	CreateTableAsync(ctx workflow.Context, input *timestreamwrite.CreateTableInput) *TimestreamWriteCreateTableFuture
+	CreateTableAsync(ctx workflow.Context, input *timestreamwrite.CreateTableInput) *CreateTableFuture
 
 	DeleteDatabase(ctx workflow.Context, input *timestreamwrite.DeleteDatabaseInput) (*timestreamwrite.DeleteDatabaseOutput, error)
-	DeleteDatabaseAsync(ctx workflow.Context, input *timestreamwrite.DeleteDatabaseInput) *TimestreamWriteDeleteDatabaseFuture
+	DeleteDatabaseAsync(ctx workflow.Context, input *timestreamwrite.DeleteDatabaseInput) *DeleteDatabaseFuture
 
 	DeleteTable(ctx workflow.Context, input *timestreamwrite.DeleteTableInput) (*timestreamwrite.DeleteTableOutput, error)
-	DeleteTableAsync(ctx workflow.Context, input *timestreamwrite.DeleteTableInput) *TimestreamWriteDeleteTableFuture
+	DeleteTableAsync(ctx workflow.Context, input *timestreamwrite.DeleteTableInput) *DeleteTableFuture
 
 	DescribeDatabase(ctx workflow.Context, input *timestreamwrite.DescribeDatabaseInput) (*timestreamwrite.DescribeDatabaseOutput, error)
-	DescribeDatabaseAsync(ctx workflow.Context, input *timestreamwrite.DescribeDatabaseInput) *TimestreamWriteDescribeDatabaseFuture
+	DescribeDatabaseAsync(ctx workflow.Context, input *timestreamwrite.DescribeDatabaseInput) *DescribeDatabaseFuture
 
 	DescribeEndpoints(ctx workflow.Context, input *timestreamwrite.DescribeEndpointsInput) (*timestreamwrite.DescribeEndpointsOutput, error)
-	DescribeEndpointsAsync(ctx workflow.Context, input *timestreamwrite.DescribeEndpointsInput) *TimestreamWriteDescribeEndpointsFuture
+	DescribeEndpointsAsync(ctx workflow.Context, input *timestreamwrite.DescribeEndpointsInput) *DescribeEndpointsFuture
 
 	DescribeTable(ctx workflow.Context, input *timestreamwrite.DescribeTableInput) (*timestreamwrite.DescribeTableOutput, error)
-	DescribeTableAsync(ctx workflow.Context, input *timestreamwrite.DescribeTableInput) *TimestreamWriteDescribeTableFuture
+	DescribeTableAsync(ctx workflow.Context, input *timestreamwrite.DescribeTableInput) *DescribeTableFuture
 
 	ListDatabases(ctx workflow.Context, input *timestreamwrite.ListDatabasesInput) (*timestreamwrite.ListDatabasesOutput, error)
-	ListDatabasesAsync(ctx workflow.Context, input *timestreamwrite.ListDatabasesInput) *TimestreamWriteListDatabasesFuture
+	ListDatabasesAsync(ctx workflow.Context, input *timestreamwrite.ListDatabasesInput) *ListDatabasesFuture
 
 	ListTables(ctx workflow.Context, input *timestreamwrite.ListTablesInput) (*timestreamwrite.ListTablesOutput, error)
-	ListTablesAsync(ctx workflow.Context, input *timestreamwrite.ListTablesInput) *TimestreamWriteListTablesFuture
+	ListTablesAsync(ctx workflow.Context, input *timestreamwrite.ListTablesInput) *ListTablesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *timestreamwrite.ListTagsForResourceInput) (*timestreamwrite.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *timestreamwrite.ListTagsForResourceInput) *TimestreamWriteListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *timestreamwrite.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *timestreamwrite.TagResourceInput) (*timestreamwrite.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *timestreamwrite.TagResourceInput) *TimestreamWriteTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *timestreamwrite.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *timestreamwrite.UntagResourceInput) (*timestreamwrite.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *timestreamwrite.UntagResourceInput) *TimestreamWriteUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *timestreamwrite.UntagResourceInput) *UntagResourceFuture
 
 	UpdateDatabase(ctx workflow.Context, input *timestreamwrite.UpdateDatabaseInput) (*timestreamwrite.UpdateDatabaseOutput, error)
-	UpdateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.UpdateDatabaseInput) *TimestreamWriteUpdateDatabaseFuture
+	UpdateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.UpdateDatabaseInput) *UpdateDatabaseFuture
 
 	UpdateTable(ctx workflow.Context, input *timestreamwrite.UpdateTableInput) (*timestreamwrite.UpdateTableOutput, error)
-	UpdateTableAsync(ctx workflow.Context, input *timestreamwrite.UpdateTableInput) *TimestreamWriteUpdateTableFuture
+	UpdateTableAsync(ctx workflow.Context, input *timestreamwrite.UpdateTableInput) *UpdateTableFuture
 
 	WriteRecords(ctx workflow.Context, input *timestreamwrite.WriteRecordsInput) (*timestreamwrite.WriteRecordsOutput, error)
-	WriteRecordsAsync(ctx workflow.Context, input *timestreamwrite.WriteRecordsInput) *TimestreamWriteWriteRecordsFuture
+	WriteRecordsAsync(ctx workflow.Context, input *timestreamwrite.WriteRecordsInput) *WriteRecordsFuture
 }
 
 func NewClient() Client {

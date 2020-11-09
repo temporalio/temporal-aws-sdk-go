@@ -16,628 +16,628 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type AutoScalingAttachInstancesFuture struct {
+type AttachInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingAttachInstancesFuture) Get(ctx workflow.Context) (*autoscaling.AttachInstancesOutput, error) {
+func (r *AttachInstancesFuture) Get(ctx workflow.Context) (*autoscaling.AttachInstancesOutput, error) {
 	var output autoscaling.AttachInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingAttachLoadBalancerTargetGroupsFuture struct {
+type AttachLoadBalancerTargetGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingAttachLoadBalancerTargetGroupsFuture) Get(ctx workflow.Context) (*autoscaling.AttachLoadBalancerTargetGroupsOutput, error) {
+func (r *AttachLoadBalancerTargetGroupsFuture) Get(ctx workflow.Context) (*autoscaling.AttachLoadBalancerTargetGroupsOutput, error) {
 	var output autoscaling.AttachLoadBalancerTargetGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingAttachLoadBalancersFuture struct {
+type AttachLoadBalancersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingAttachLoadBalancersFuture) Get(ctx workflow.Context) (*autoscaling.AttachLoadBalancersOutput, error) {
+func (r *AttachLoadBalancersFuture) Get(ctx workflow.Context) (*autoscaling.AttachLoadBalancersOutput, error) {
 	var output autoscaling.AttachLoadBalancersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingBatchDeleteScheduledActionFuture struct {
+type BatchDeleteScheduledActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingBatchDeleteScheduledActionFuture) Get(ctx workflow.Context) (*autoscaling.BatchDeleteScheduledActionOutput, error) {
+func (r *BatchDeleteScheduledActionFuture) Get(ctx workflow.Context) (*autoscaling.BatchDeleteScheduledActionOutput, error) {
 	var output autoscaling.BatchDeleteScheduledActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingBatchPutScheduledUpdateGroupActionFuture struct {
+type BatchPutScheduledUpdateGroupActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingBatchPutScheduledUpdateGroupActionFuture) Get(ctx workflow.Context) (*autoscaling.BatchPutScheduledUpdateGroupActionOutput, error) {
+func (r *BatchPutScheduledUpdateGroupActionFuture) Get(ctx workflow.Context) (*autoscaling.BatchPutScheduledUpdateGroupActionOutput, error) {
 	var output autoscaling.BatchPutScheduledUpdateGroupActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingCancelInstanceRefreshFuture struct {
+type CancelInstanceRefreshFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingCancelInstanceRefreshFuture) Get(ctx workflow.Context) (*autoscaling.CancelInstanceRefreshOutput, error) {
+func (r *CancelInstanceRefreshFuture) Get(ctx workflow.Context) (*autoscaling.CancelInstanceRefreshOutput, error) {
 	var output autoscaling.CancelInstanceRefreshOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingCompleteLifecycleActionFuture struct {
+type CompleteLifecycleActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingCompleteLifecycleActionFuture) Get(ctx workflow.Context) (*autoscaling.CompleteLifecycleActionOutput, error) {
+func (r *CompleteLifecycleActionFuture) Get(ctx workflow.Context) (*autoscaling.CompleteLifecycleActionOutput, error) {
 	var output autoscaling.CompleteLifecycleActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingCreateAutoScalingGroupFuture struct {
+type CreateAutoScalingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingCreateAutoScalingGroupFuture) Get(ctx workflow.Context) (*autoscaling.CreateAutoScalingGroupOutput, error) {
+func (r *CreateAutoScalingGroupFuture) Get(ctx workflow.Context) (*autoscaling.CreateAutoScalingGroupOutput, error) {
 	var output autoscaling.CreateAutoScalingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingCreateLaunchConfigurationFuture struct {
+type CreateLaunchConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingCreateLaunchConfigurationFuture) Get(ctx workflow.Context) (*autoscaling.CreateLaunchConfigurationOutput, error) {
+func (r *CreateLaunchConfigurationFuture) Get(ctx workflow.Context) (*autoscaling.CreateLaunchConfigurationOutput, error) {
 	var output autoscaling.CreateLaunchConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingCreateOrUpdateTagsFuture struct {
+type CreateOrUpdateTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingCreateOrUpdateTagsFuture) Get(ctx workflow.Context) (*autoscaling.CreateOrUpdateTagsOutput, error) {
+func (r *CreateOrUpdateTagsFuture) Get(ctx workflow.Context) (*autoscaling.CreateOrUpdateTagsOutput, error) {
 	var output autoscaling.CreateOrUpdateTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDeleteAutoScalingGroupFuture struct {
+type DeleteAutoScalingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDeleteAutoScalingGroupFuture) Get(ctx workflow.Context) (*autoscaling.DeleteAutoScalingGroupOutput, error) {
+func (r *DeleteAutoScalingGroupFuture) Get(ctx workflow.Context) (*autoscaling.DeleteAutoScalingGroupOutput, error) {
 	var output autoscaling.DeleteAutoScalingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDeleteLaunchConfigurationFuture struct {
+type DeleteLaunchConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDeleteLaunchConfigurationFuture) Get(ctx workflow.Context) (*autoscaling.DeleteLaunchConfigurationOutput, error) {
+func (r *DeleteLaunchConfigurationFuture) Get(ctx workflow.Context) (*autoscaling.DeleteLaunchConfigurationOutput, error) {
 	var output autoscaling.DeleteLaunchConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDeleteLifecycleHookFuture struct {
+type DeleteLifecycleHookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDeleteLifecycleHookFuture) Get(ctx workflow.Context) (*autoscaling.DeleteLifecycleHookOutput, error) {
+func (r *DeleteLifecycleHookFuture) Get(ctx workflow.Context) (*autoscaling.DeleteLifecycleHookOutput, error) {
 	var output autoscaling.DeleteLifecycleHookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDeleteNotificationConfigurationFuture struct {
+type DeleteNotificationConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDeleteNotificationConfigurationFuture) Get(ctx workflow.Context) (*autoscaling.DeleteNotificationConfigurationOutput, error) {
+func (r *DeleteNotificationConfigurationFuture) Get(ctx workflow.Context) (*autoscaling.DeleteNotificationConfigurationOutput, error) {
 	var output autoscaling.DeleteNotificationConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDeletePolicyFuture struct {
+type DeletePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDeletePolicyFuture) Get(ctx workflow.Context) (*autoscaling.DeletePolicyOutput, error) {
+func (r *DeletePolicyFuture) Get(ctx workflow.Context) (*autoscaling.DeletePolicyOutput, error) {
 	var output autoscaling.DeletePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDeleteScheduledActionFuture struct {
+type DeleteScheduledActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDeleteScheduledActionFuture) Get(ctx workflow.Context) (*autoscaling.DeleteScheduledActionOutput, error) {
+func (r *DeleteScheduledActionFuture) Get(ctx workflow.Context) (*autoscaling.DeleteScheduledActionOutput, error) {
 	var output autoscaling.DeleteScheduledActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDeleteTagsFuture struct {
+type DeleteTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDeleteTagsFuture) Get(ctx workflow.Context) (*autoscaling.DeleteTagsOutput, error) {
+func (r *DeleteTagsFuture) Get(ctx workflow.Context) (*autoscaling.DeleteTagsOutput, error) {
 	var output autoscaling.DeleteTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeAccountLimitsFuture struct {
+type DescribeAccountLimitsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeAccountLimitsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAccountLimitsOutput, error) {
+func (r *DescribeAccountLimitsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAccountLimitsOutput, error) {
 	var output autoscaling.DescribeAccountLimitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeAdjustmentTypesFuture struct {
+type DescribeAdjustmentTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeAdjustmentTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAdjustmentTypesOutput, error) {
+func (r *DescribeAdjustmentTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAdjustmentTypesOutput, error) {
 	var output autoscaling.DescribeAdjustmentTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeAutoScalingGroupsFuture struct {
+type DescribeAutoScalingGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeAutoScalingGroupsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAutoScalingGroupsOutput, error) {
+func (r *DescribeAutoScalingGroupsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAutoScalingGroupsOutput, error) {
 	var output autoscaling.DescribeAutoScalingGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeAutoScalingInstancesFuture struct {
+type DescribeAutoScalingInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeAutoScalingInstancesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAutoScalingInstancesOutput, error) {
+func (r *DescribeAutoScalingInstancesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAutoScalingInstancesOutput, error) {
 	var output autoscaling.DescribeAutoScalingInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeAutoScalingNotificationTypesFuture struct {
+type DescribeAutoScalingNotificationTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeAutoScalingNotificationTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAutoScalingNotificationTypesOutput, error) {
+func (r *DescribeAutoScalingNotificationTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeAutoScalingNotificationTypesOutput, error) {
 	var output autoscaling.DescribeAutoScalingNotificationTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeInstanceRefreshesFuture struct {
+type DescribeInstanceRefreshesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeInstanceRefreshesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeInstanceRefreshesOutput, error) {
+func (r *DescribeInstanceRefreshesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeInstanceRefreshesOutput, error) {
 	var output autoscaling.DescribeInstanceRefreshesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeLaunchConfigurationsFuture struct {
+type DescribeLaunchConfigurationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeLaunchConfigurationsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLaunchConfigurationsOutput, error) {
+func (r *DescribeLaunchConfigurationsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLaunchConfigurationsOutput, error) {
 	var output autoscaling.DescribeLaunchConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeLifecycleHookTypesFuture struct {
+type DescribeLifecycleHookTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeLifecycleHookTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLifecycleHookTypesOutput, error) {
+func (r *DescribeLifecycleHookTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLifecycleHookTypesOutput, error) {
 	var output autoscaling.DescribeLifecycleHookTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeLifecycleHooksFuture struct {
+type DescribeLifecycleHooksFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeLifecycleHooksFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLifecycleHooksOutput, error) {
+func (r *DescribeLifecycleHooksFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLifecycleHooksOutput, error) {
 	var output autoscaling.DescribeLifecycleHooksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeLoadBalancerTargetGroupsFuture struct {
+type DescribeLoadBalancerTargetGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeLoadBalancerTargetGroupsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLoadBalancerTargetGroupsOutput, error) {
+func (r *DescribeLoadBalancerTargetGroupsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLoadBalancerTargetGroupsOutput, error) {
 	var output autoscaling.DescribeLoadBalancerTargetGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeLoadBalancersFuture struct {
+type DescribeLoadBalancersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeLoadBalancersFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLoadBalancersOutput, error) {
+func (r *DescribeLoadBalancersFuture) Get(ctx workflow.Context) (*autoscaling.DescribeLoadBalancersOutput, error) {
 	var output autoscaling.DescribeLoadBalancersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeMetricCollectionTypesFuture struct {
+type DescribeMetricCollectionTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeMetricCollectionTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeMetricCollectionTypesOutput, error) {
+func (r *DescribeMetricCollectionTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeMetricCollectionTypesOutput, error) {
 	var output autoscaling.DescribeMetricCollectionTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeNotificationConfigurationsFuture struct {
+type DescribeNotificationConfigurationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeNotificationConfigurationsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeNotificationConfigurationsOutput, error) {
+func (r *DescribeNotificationConfigurationsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeNotificationConfigurationsOutput, error) {
 	var output autoscaling.DescribeNotificationConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribePoliciesFuture struct {
+type DescribePoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribePoliciesFuture) Get(ctx workflow.Context) (*autoscaling.DescribePoliciesOutput, error) {
+func (r *DescribePoliciesFuture) Get(ctx workflow.Context) (*autoscaling.DescribePoliciesOutput, error) {
 	var output autoscaling.DescribePoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeScalingActivitiesFuture struct {
+type DescribeScalingActivitiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeScalingActivitiesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeScalingActivitiesOutput, error) {
+func (r *DescribeScalingActivitiesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeScalingActivitiesOutput, error) {
 	var output autoscaling.DescribeScalingActivitiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeScalingProcessTypesFuture struct {
+type DescribeScalingProcessTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeScalingProcessTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeScalingProcessTypesOutput, error) {
+func (r *DescribeScalingProcessTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeScalingProcessTypesOutput, error) {
 	var output autoscaling.DescribeScalingProcessTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeScheduledActionsFuture struct {
+type DescribeScheduledActionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeScheduledActionsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeScheduledActionsOutput, error) {
+func (r *DescribeScheduledActionsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeScheduledActionsOutput, error) {
 	var output autoscaling.DescribeScheduledActionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeTagsFuture struct {
+type DescribeTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeTagsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeTagsOutput, error) {
+func (r *DescribeTagsFuture) Get(ctx workflow.Context) (*autoscaling.DescribeTagsOutput, error) {
 	var output autoscaling.DescribeTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDescribeTerminationPolicyTypesFuture struct {
+type DescribeTerminationPolicyTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDescribeTerminationPolicyTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeTerminationPolicyTypesOutput, error) {
+func (r *DescribeTerminationPolicyTypesFuture) Get(ctx workflow.Context) (*autoscaling.DescribeTerminationPolicyTypesOutput, error) {
 	var output autoscaling.DescribeTerminationPolicyTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDetachInstancesFuture struct {
+type DetachInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDetachInstancesFuture) Get(ctx workflow.Context) (*autoscaling.DetachInstancesOutput, error) {
+func (r *DetachInstancesFuture) Get(ctx workflow.Context) (*autoscaling.DetachInstancesOutput, error) {
 	var output autoscaling.DetachInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDetachLoadBalancerTargetGroupsFuture struct {
+type DetachLoadBalancerTargetGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDetachLoadBalancerTargetGroupsFuture) Get(ctx workflow.Context) (*autoscaling.DetachLoadBalancerTargetGroupsOutput, error) {
+func (r *DetachLoadBalancerTargetGroupsFuture) Get(ctx workflow.Context) (*autoscaling.DetachLoadBalancerTargetGroupsOutput, error) {
 	var output autoscaling.DetachLoadBalancerTargetGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDetachLoadBalancersFuture struct {
+type DetachLoadBalancersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDetachLoadBalancersFuture) Get(ctx workflow.Context) (*autoscaling.DetachLoadBalancersOutput, error) {
+func (r *DetachLoadBalancersFuture) Get(ctx workflow.Context) (*autoscaling.DetachLoadBalancersOutput, error) {
 	var output autoscaling.DetachLoadBalancersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingDisableMetricsCollectionFuture struct {
+type DisableMetricsCollectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingDisableMetricsCollectionFuture) Get(ctx workflow.Context) (*autoscaling.DisableMetricsCollectionOutput, error) {
+func (r *DisableMetricsCollectionFuture) Get(ctx workflow.Context) (*autoscaling.DisableMetricsCollectionOutput, error) {
 	var output autoscaling.DisableMetricsCollectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingEnableMetricsCollectionFuture struct {
+type EnableMetricsCollectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingEnableMetricsCollectionFuture) Get(ctx workflow.Context) (*autoscaling.EnableMetricsCollectionOutput, error) {
+func (r *EnableMetricsCollectionFuture) Get(ctx workflow.Context) (*autoscaling.EnableMetricsCollectionOutput, error) {
 	var output autoscaling.EnableMetricsCollectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingEnterStandbyFuture struct {
+type EnterStandbyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingEnterStandbyFuture) Get(ctx workflow.Context) (*autoscaling.EnterStandbyOutput, error) {
+func (r *EnterStandbyFuture) Get(ctx workflow.Context) (*autoscaling.EnterStandbyOutput, error) {
 	var output autoscaling.EnterStandbyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingExecutePolicyFuture struct {
+type ExecutePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingExecutePolicyFuture) Get(ctx workflow.Context) (*autoscaling.ExecutePolicyOutput, error) {
+func (r *ExecutePolicyFuture) Get(ctx workflow.Context) (*autoscaling.ExecutePolicyOutput, error) {
 	var output autoscaling.ExecutePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingExitStandbyFuture struct {
+type ExitStandbyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingExitStandbyFuture) Get(ctx workflow.Context) (*autoscaling.ExitStandbyOutput, error) {
+func (r *ExitStandbyFuture) Get(ctx workflow.Context) (*autoscaling.ExitStandbyOutput, error) {
 	var output autoscaling.ExitStandbyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingPutLifecycleHookFuture struct {
+type PutLifecycleHookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingPutLifecycleHookFuture) Get(ctx workflow.Context) (*autoscaling.PutLifecycleHookOutput, error) {
+func (r *PutLifecycleHookFuture) Get(ctx workflow.Context) (*autoscaling.PutLifecycleHookOutput, error) {
 	var output autoscaling.PutLifecycleHookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingPutNotificationConfigurationFuture struct {
+type PutNotificationConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingPutNotificationConfigurationFuture) Get(ctx workflow.Context) (*autoscaling.PutNotificationConfigurationOutput, error) {
+func (r *PutNotificationConfigurationFuture) Get(ctx workflow.Context) (*autoscaling.PutNotificationConfigurationOutput, error) {
 	var output autoscaling.PutNotificationConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingPutScalingPolicyFuture struct {
+type PutScalingPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingPutScalingPolicyFuture) Get(ctx workflow.Context) (*autoscaling.PutScalingPolicyOutput, error) {
+func (r *PutScalingPolicyFuture) Get(ctx workflow.Context) (*autoscaling.PutScalingPolicyOutput, error) {
 	var output autoscaling.PutScalingPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingPutScheduledUpdateGroupActionFuture struct {
+type PutScheduledUpdateGroupActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingPutScheduledUpdateGroupActionFuture) Get(ctx workflow.Context) (*autoscaling.PutScheduledUpdateGroupActionOutput, error) {
+func (r *PutScheduledUpdateGroupActionFuture) Get(ctx workflow.Context) (*autoscaling.PutScheduledUpdateGroupActionOutput, error) {
 	var output autoscaling.PutScheduledUpdateGroupActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingRecordLifecycleActionHeartbeatFuture struct {
+type RecordLifecycleActionHeartbeatFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingRecordLifecycleActionHeartbeatFuture) Get(ctx workflow.Context) (*autoscaling.RecordLifecycleActionHeartbeatOutput, error) {
+func (r *RecordLifecycleActionHeartbeatFuture) Get(ctx workflow.Context) (*autoscaling.RecordLifecycleActionHeartbeatOutput, error) {
 	var output autoscaling.RecordLifecycleActionHeartbeatOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingResumeProcessesFuture struct {
+type ResumeProcessesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingResumeProcessesFuture) Get(ctx workflow.Context) (*autoscaling.ResumeProcessesOutput, error) {
+func (r *ResumeProcessesFuture) Get(ctx workflow.Context) (*autoscaling.ResumeProcessesOutput, error) {
 	var output autoscaling.ResumeProcessesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingSetDesiredCapacityFuture struct {
+type SetDesiredCapacityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingSetDesiredCapacityFuture) Get(ctx workflow.Context) (*autoscaling.SetDesiredCapacityOutput, error) {
+func (r *SetDesiredCapacityFuture) Get(ctx workflow.Context) (*autoscaling.SetDesiredCapacityOutput, error) {
 	var output autoscaling.SetDesiredCapacityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingSetInstanceHealthFuture struct {
+type SetInstanceHealthFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingSetInstanceHealthFuture) Get(ctx workflow.Context) (*autoscaling.SetInstanceHealthOutput, error) {
+func (r *SetInstanceHealthFuture) Get(ctx workflow.Context) (*autoscaling.SetInstanceHealthOutput, error) {
 	var output autoscaling.SetInstanceHealthOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingSetInstanceProtectionFuture struct {
+type SetInstanceProtectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingSetInstanceProtectionFuture) Get(ctx workflow.Context) (*autoscaling.SetInstanceProtectionOutput, error) {
+func (r *SetInstanceProtectionFuture) Get(ctx workflow.Context) (*autoscaling.SetInstanceProtectionOutput, error) {
 	var output autoscaling.SetInstanceProtectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingStartInstanceRefreshFuture struct {
+type StartInstanceRefreshFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingStartInstanceRefreshFuture) Get(ctx workflow.Context) (*autoscaling.StartInstanceRefreshOutput, error) {
+func (r *StartInstanceRefreshFuture) Get(ctx workflow.Context) (*autoscaling.StartInstanceRefreshOutput, error) {
 	var output autoscaling.StartInstanceRefreshOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingSuspendProcessesFuture struct {
+type SuspendProcessesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingSuspendProcessesFuture) Get(ctx workflow.Context) (*autoscaling.SuspendProcessesOutput, error) {
+func (r *SuspendProcessesFuture) Get(ctx workflow.Context) (*autoscaling.SuspendProcessesOutput, error) {
 	var output autoscaling.SuspendProcessesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingTerminateInstanceInAutoScalingGroupFuture struct {
+type TerminateInstanceInAutoScalingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingTerminateInstanceInAutoScalingGroupFuture) Get(ctx workflow.Context) (*autoscaling.TerminateInstanceInAutoScalingGroupOutput, error) {
+func (r *TerminateInstanceInAutoScalingGroupFuture) Get(ctx workflow.Context) (*autoscaling.TerminateInstanceInAutoScalingGroupOutput, error) {
 	var output autoscaling.TerminateInstanceInAutoScalingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AutoScalingUpdateAutoScalingGroupFuture struct {
+type UpdateAutoScalingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AutoScalingUpdateAutoScalingGroupFuture) Get(ctx workflow.Context) (*autoscaling.UpdateAutoScalingGroupOutput, error) {
+func (r *UpdateAutoScalingGroupFuture) Get(ctx workflow.Context) (*autoscaling.UpdateAutoScalingGroupOutput, error) {
 	var output autoscaling.UpdateAutoScalingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -649,9 +649,9 @@ func (a *stub) AttachInstances(ctx workflow.Context, input *autoscaling.AttachIn
 	return &output, err
 }
 
-func (a *stub) AttachInstancesAsync(ctx workflow.Context, input *autoscaling.AttachInstancesInput) *AutoScalingAttachInstancesFuture {
+func (a *stub) AttachInstancesAsync(ctx workflow.Context, input *autoscaling.AttachInstancesInput) *AttachInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.AttachInstances", input)
-	return &AutoScalingAttachInstancesFuture{Future: future}
+	return &AttachInstancesFuture{Future: future}
 }
 
 func (a *stub) AttachLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.AttachLoadBalancerTargetGroupsInput) (*autoscaling.AttachLoadBalancerTargetGroupsOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) AttachLoadBalancerTargetGroups(ctx workflow.Context, input *autos
 	return &output, err
 }
 
-func (a *stub) AttachLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.AttachLoadBalancerTargetGroupsInput) *AutoScalingAttachLoadBalancerTargetGroupsFuture {
+func (a *stub) AttachLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.AttachLoadBalancerTargetGroupsInput) *AttachLoadBalancerTargetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.AttachLoadBalancerTargetGroups", input)
-	return &AutoScalingAttachLoadBalancerTargetGroupsFuture{Future: future}
+	return &AttachLoadBalancerTargetGroupsFuture{Future: future}
 }
 
 func (a *stub) AttachLoadBalancers(ctx workflow.Context, input *autoscaling.AttachLoadBalancersInput) (*autoscaling.AttachLoadBalancersOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) AttachLoadBalancers(ctx workflow.Context, input *autoscaling.Atta
 	return &output, err
 }
 
-func (a *stub) AttachLoadBalancersAsync(ctx workflow.Context, input *autoscaling.AttachLoadBalancersInput) *AutoScalingAttachLoadBalancersFuture {
+func (a *stub) AttachLoadBalancersAsync(ctx workflow.Context, input *autoscaling.AttachLoadBalancersInput) *AttachLoadBalancersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.AttachLoadBalancers", input)
-	return &AutoScalingAttachLoadBalancersFuture{Future: future}
+	return &AttachLoadBalancersFuture{Future: future}
 }
 
 func (a *stub) BatchDeleteScheduledAction(ctx workflow.Context, input *autoscaling.BatchDeleteScheduledActionInput) (*autoscaling.BatchDeleteScheduledActionOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) BatchDeleteScheduledAction(ctx workflow.Context, input *autoscali
 	return &output, err
 }
 
-func (a *stub) BatchDeleteScheduledActionAsync(ctx workflow.Context, input *autoscaling.BatchDeleteScheduledActionInput) *AutoScalingBatchDeleteScheduledActionFuture {
+func (a *stub) BatchDeleteScheduledActionAsync(ctx workflow.Context, input *autoscaling.BatchDeleteScheduledActionInput) *BatchDeleteScheduledActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.BatchDeleteScheduledAction", input)
-	return &AutoScalingBatchDeleteScheduledActionFuture{Future: future}
+	return &BatchDeleteScheduledActionFuture{Future: future}
 }
 
 func (a *stub) BatchPutScheduledUpdateGroupAction(ctx workflow.Context, input *autoscaling.BatchPutScheduledUpdateGroupActionInput) (*autoscaling.BatchPutScheduledUpdateGroupActionOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) BatchPutScheduledUpdateGroupAction(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *stub) BatchPutScheduledUpdateGroupActionAsync(ctx workflow.Context, input *autoscaling.BatchPutScheduledUpdateGroupActionInput) *AutoScalingBatchPutScheduledUpdateGroupActionFuture {
+func (a *stub) BatchPutScheduledUpdateGroupActionAsync(ctx workflow.Context, input *autoscaling.BatchPutScheduledUpdateGroupActionInput) *BatchPutScheduledUpdateGroupActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.BatchPutScheduledUpdateGroupAction", input)
-	return &AutoScalingBatchPutScheduledUpdateGroupActionFuture{Future: future}
+	return &BatchPutScheduledUpdateGroupActionFuture{Future: future}
 }
 
 func (a *stub) CancelInstanceRefresh(ctx workflow.Context, input *autoscaling.CancelInstanceRefreshInput) (*autoscaling.CancelInstanceRefreshOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) CancelInstanceRefresh(ctx workflow.Context, input *autoscaling.Ca
 	return &output, err
 }
 
-func (a *stub) CancelInstanceRefreshAsync(ctx workflow.Context, input *autoscaling.CancelInstanceRefreshInput) *AutoScalingCancelInstanceRefreshFuture {
+func (a *stub) CancelInstanceRefreshAsync(ctx workflow.Context, input *autoscaling.CancelInstanceRefreshInput) *CancelInstanceRefreshFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.CancelInstanceRefresh", input)
-	return &AutoScalingCancelInstanceRefreshFuture{Future: future}
+	return &CancelInstanceRefreshFuture{Future: future}
 }
 
 func (a *stub) CompleteLifecycleAction(ctx workflow.Context, input *autoscaling.CompleteLifecycleActionInput) (*autoscaling.CompleteLifecycleActionOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) CompleteLifecycleAction(ctx workflow.Context, input *autoscaling.
 	return &output, err
 }
 
-func (a *stub) CompleteLifecycleActionAsync(ctx workflow.Context, input *autoscaling.CompleteLifecycleActionInput) *AutoScalingCompleteLifecycleActionFuture {
+func (a *stub) CompleteLifecycleActionAsync(ctx workflow.Context, input *autoscaling.CompleteLifecycleActionInput) *CompleteLifecycleActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.CompleteLifecycleAction", input)
-	return &AutoScalingCompleteLifecycleActionFuture{Future: future}
+	return &CompleteLifecycleActionFuture{Future: future}
 }
 
 func (a *stub) CreateAutoScalingGroup(ctx workflow.Context, input *autoscaling.CreateAutoScalingGroupInput) (*autoscaling.CreateAutoScalingGroupOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) CreateAutoScalingGroup(ctx workflow.Context, input *autoscaling.C
 	return &output, err
 }
 
-func (a *stub) CreateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.CreateAutoScalingGroupInput) *AutoScalingCreateAutoScalingGroupFuture {
+func (a *stub) CreateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.CreateAutoScalingGroupInput) *CreateAutoScalingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.CreateAutoScalingGroup", input)
-	return &AutoScalingCreateAutoScalingGroupFuture{Future: future}
+	return &CreateAutoScalingGroupFuture{Future: future}
 }
 
 func (a *stub) CreateLaunchConfiguration(ctx workflow.Context, input *autoscaling.CreateLaunchConfigurationInput) (*autoscaling.CreateLaunchConfigurationOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) CreateLaunchConfiguration(ctx workflow.Context, input *autoscalin
 	return &output, err
 }
 
-func (a *stub) CreateLaunchConfigurationAsync(ctx workflow.Context, input *autoscaling.CreateLaunchConfigurationInput) *AutoScalingCreateLaunchConfigurationFuture {
+func (a *stub) CreateLaunchConfigurationAsync(ctx workflow.Context, input *autoscaling.CreateLaunchConfigurationInput) *CreateLaunchConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.CreateLaunchConfiguration", input)
-	return &AutoScalingCreateLaunchConfigurationFuture{Future: future}
+	return &CreateLaunchConfigurationFuture{Future: future}
 }
 
 func (a *stub) CreateOrUpdateTags(ctx workflow.Context, input *autoscaling.CreateOrUpdateTagsInput) (*autoscaling.CreateOrUpdateTagsOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) CreateOrUpdateTags(ctx workflow.Context, input *autoscaling.Creat
 	return &output, err
 }
 
-func (a *stub) CreateOrUpdateTagsAsync(ctx workflow.Context, input *autoscaling.CreateOrUpdateTagsInput) *AutoScalingCreateOrUpdateTagsFuture {
+func (a *stub) CreateOrUpdateTagsAsync(ctx workflow.Context, input *autoscaling.CreateOrUpdateTagsInput) *CreateOrUpdateTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.CreateOrUpdateTags", input)
-	return &AutoScalingCreateOrUpdateTagsFuture{Future: future}
+	return &CreateOrUpdateTagsFuture{Future: future}
 }
 
 func (a *stub) DeleteAutoScalingGroup(ctx workflow.Context, input *autoscaling.DeleteAutoScalingGroupInput) (*autoscaling.DeleteAutoScalingGroupOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) DeleteAutoScalingGroup(ctx workflow.Context, input *autoscaling.D
 	return &output, err
 }
 
-func (a *stub) DeleteAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.DeleteAutoScalingGroupInput) *AutoScalingDeleteAutoScalingGroupFuture {
+func (a *stub) DeleteAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.DeleteAutoScalingGroupInput) *DeleteAutoScalingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DeleteAutoScalingGroup", input)
-	return &AutoScalingDeleteAutoScalingGroupFuture{Future: future}
+	return &DeleteAutoScalingGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteLaunchConfiguration(ctx workflow.Context, input *autoscaling.DeleteLaunchConfigurationInput) (*autoscaling.DeleteLaunchConfigurationOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) DeleteLaunchConfiguration(ctx workflow.Context, input *autoscalin
 	return &output, err
 }
 
-func (a *stub) DeleteLaunchConfigurationAsync(ctx workflow.Context, input *autoscaling.DeleteLaunchConfigurationInput) *AutoScalingDeleteLaunchConfigurationFuture {
+func (a *stub) DeleteLaunchConfigurationAsync(ctx workflow.Context, input *autoscaling.DeleteLaunchConfigurationInput) *DeleteLaunchConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DeleteLaunchConfiguration", input)
-	return &AutoScalingDeleteLaunchConfigurationFuture{Future: future}
+	return &DeleteLaunchConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteLifecycleHook(ctx workflow.Context, input *autoscaling.DeleteLifecycleHookInput) (*autoscaling.DeleteLifecycleHookOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) DeleteLifecycleHook(ctx workflow.Context, input *autoscaling.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteLifecycleHookAsync(ctx workflow.Context, input *autoscaling.DeleteLifecycleHookInput) *AutoScalingDeleteLifecycleHookFuture {
+func (a *stub) DeleteLifecycleHookAsync(ctx workflow.Context, input *autoscaling.DeleteLifecycleHookInput) *DeleteLifecycleHookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DeleteLifecycleHook", input)
-	return &AutoScalingDeleteLifecycleHookFuture{Future: future}
+	return &DeleteLifecycleHookFuture{Future: future}
 }
 
 func (a *stub) DeleteNotificationConfiguration(ctx workflow.Context, input *autoscaling.DeleteNotificationConfigurationInput) (*autoscaling.DeleteNotificationConfigurationOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) DeleteNotificationConfiguration(ctx workflow.Context, input *auto
 	return &output, err
 }
 
-func (a *stub) DeleteNotificationConfigurationAsync(ctx workflow.Context, input *autoscaling.DeleteNotificationConfigurationInput) *AutoScalingDeleteNotificationConfigurationFuture {
+func (a *stub) DeleteNotificationConfigurationAsync(ctx workflow.Context, input *autoscaling.DeleteNotificationConfigurationInput) *DeleteNotificationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DeleteNotificationConfiguration", input)
-	return &AutoScalingDeleteNotificationConfigurationFuture{Future: future}
+	return &DeleteNotificationConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeletePolicy(ctx workflow.Context, input *autoscaling.DeletePolicyInput) (*autoscaling.DeletePolicyOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) DeletePolicy(ctx workflow.Context, input *autoscaling.DeletePolic
 	return &output, err
 }
 
-func (a *stub) DeletePolicyAsync(ctx workflow.Context, input *autoscaling.DeletePolicyInput) *AutoScalingDeletePolicyFuture {
+func (a *stub) DeletePolicyAsync(ctx workflow.Context, input *autoscaling.DeletePolicyInput) *DeletePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DeletePolicy", input)
-	return &AutoScalingDeletePolicyFuture{Future: future}
+	return &DeletePolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteScheduledAction(ctx workflow.Context, input *autoscaling.DeleteScheduledActionInput) (*autoscaling.DeleteScheduledActionOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) DeleteScheduledAction(ctx workflow.Context, input *autoscaling.De
 	return &output, err
 }
 
-func (a *stub) DeleteScheduledActionAsync(ctx workflow.Context, input *autoscaling.DeleteScheduledActionInput) *AutoScalingDeleteScheduledActionFuture {
+func (a *stub) DeleteScheduledActionAsync(ctx workflow.Context, input *autoscaling.DeleteScheduledActionInput) *DeleteScheduledActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DeleteScheduledAction", input)
-	return &AutoScalingDeleteScheduledActionFuture{Future: future}
+	return &DeleteScheduledActionFuture{Future: future}
 }
 
 func (a *stub) DeleteTags(ctx workflow.Context, input *autoscaling.DeleteTagsInput) (*autoscaling.DeleteTagsOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) DeleteTags(ctx workflow.Context, input *autoscaling.DeleteTagsInp
 	return &output, err
 }
 
-func (a *stub) DeleteTagsAsync(ctx workflow.Context, input *autoscaling.DeleteTagsInput) *AutoScalingDeleteTagsFuture {
+func (a *stub) DeleteTagsAsync(ctx workflow.Context, input *autoscaling.DeleteTagsInput) *DeleteTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DeleteTags", input)
-	return &AutoScalingDeleteTagsFuture{Future: future}
+	return &DeleteTagsFuture{Future: future}
 }
 
 func (a *stub) DescribeAccountLimits(ctx workflow.Context, input *autoscaling.DescribeAccountLimitsInput) (*autoscaling.DescribeAccountLimitsOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) DescribeAccountLimits(ctx workflow.Context, input *autoscaling.De
 	return &output, err
 }
 
-func (a *stub) DescribeAccountLimitsAsync(ctx workflow.Context, input *autoscaling.DescribeAccountLimitsInput) *AutoScalingDescribeAccountLimitsFuture {
+func (a *stub) DescribeAccountLimitsAsync(ctx workflow.Context, input *autoscaling.DescribeAccountLimitsInput) *DescribeAccountLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeAccountLimits", input)
-	return &AutoScalingDescribeAccountLimitsFuture{Future: future}
+	return &DescribeAccountLimitsFuture{Future: future}
 }
 
 func (a *stub) DescribeAdjustmentTypes(ctx workflow.Context, input *autoscaling.DescribeAdjustmentTypesInput) (*autoscaling.DescribeAdjustmentTypesOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) DescribeAdjustmentTypes(ctx workflow.Context, input *autoscaling.
 	return &output, err
 }
 
-func (a *stub) DescribeAdjustmentTypesAsync(ctx workflow.Context, input *autoscaling.DescribeAdjustmentTypesInput) *AutoScalingDescribeAdjustmentTypesFuture {
+func (a *stub) DescribeAdjustmentTypesAsync(ctx workflow.Context, input *autoscaling.DescribeAdjustmentTypesInput) *DescribeAdjustmentTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeAdjustmentTypes", input)
-	return &AutoScalingDescribeAdjustmentTypesFuture{Future: future}
+	return &DescribeAdjustmentTypesFuture{Future: future}
 }
 
 func (a *stub) DescribeAutoScalingGroups(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) (*autoscaling.DescribeAutoScalingGroupsOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) DescribeAutoScalingGroups(ctx workflow.Context, input *autoscalin
 	return &output, err
 }
 
-func (a *stub) DescribeAutoScalingGroupsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *AutoScalingDescribeAutoScalingGroupsFuture {
+func (a *stub) DescribeAutoScalingGroupsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *DescribeAutoScalingGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeAutoScalingGroups", input)
-	return &AutoScalingDescribeAutoScalingGroupsFuture{Future: future}
+	return &DescribeAutoScalingGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeAutoScalingInstances(ctx workflow.Context, input *autoscaling.DescribeAutoScalingInstancesInput) (*autoscaling.DescribeAutoScalingInstancesOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) DescribeAutoScalingInstances(ctx workflow.Context, input *autosca
 	return &output, err
 }
 
-func (a *stub) DescribeAutoScalingInstancesAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingInstancesInput) *AutoScalingDescribeAutoScalingInstancesFuture {
+func (a *stub) DescribeAutoScalingInstancesAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingInstancesInput) *DescribeAutoScalingInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeAutoScalingInstances", input)
-	return &AutoScalingDescribeAutoScalingInstancesFuture{Future: future}
+	return &DescribeAutoScalingInstancesFuture{Future: future}
 }
 
 func (a *stub) DescribeAutoScalingNotificationTypes(ctx workflow.Context, input *autoscaling.DescribeAutoScalingNotificationTypesInput) (*autoscaling.DescribeAutoScalingNotificationTypesOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) DescribeAutoScalingNotificationTypes(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) DescribeAutoScalingNotificationTypesAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingNotificationTypesInput) *AutoScalingDescribeAutoScalingNotificationTypesFuture {
+func (a *stub) DescribeAutoScalingNotificationTypesAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingNotificationTypesInput) *DescribeAutoScalingNotificationTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeAutoScalingNotificationTypes", input)
-	return &AutoScalingDescribeAutoScalingNotificationTypesFuture{Future: future}
+	return &DescribeAutoScalingNotificationTypesFuture{Future: future}
 }
 
 func (a *stub) DescribeInstanceRefreshes(ctx workflow.Context, input *autoscaling.DescribeInstanceRefreshesInput) (*autoscaling.DescribeInstanceRefreshesOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) DescribeInstanceRefreshes(ctx workflow.Context, input *autoscalin
 	return &output, err
 }
 
-func (a *stub) DescribeInstanceRefreshesAsync(ctx workflow.Context, input *autoscaling.DescribeInstanceRefreshesInput) *AutoScalingDescribeInstanceRefreshesFuture {
+func (a *stub) DescribeInstanceRefreshesAsync(ctx workflow.Context, input *autoscaling.DescribeInstanceRefreshesInput) *DescribeInstanceRefreshesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeInstanceRefreshes", input)
-	return &AutoScalingDescribeInstanceRefreshesFuture{Future: future}
+	return &DescribeInstanceRefreshesFuture{Future: future}
 }
 
 func (a *stub) DescribeLaunchConfigurations(ctx workflow.Context, input *autoscaling.DescribeLaunchConfigurationsInput) (*autoscaling.DescribeLaunchConfigurationsOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) DescribeLaunchConfigurations(ctx workflow.Context, input *autosca
 	return &output, err
 }
 
-func (a *stub) DescribeLaunchConfigurationsAsync(ctx workflow.Context, input *autoscaling.DescribeLaunchConfigurationsInput) *AutoScalingDescribeLaunchConfigurationsFuture {
+func (a *stub) DescribeLaunchConfigurationsAsync(ctx workflow.Context, input *autoscaling.DescribeLaunchConfigurationsInput) *DescribeLaunchConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeLaunchConfigurations", input)
-	return &AutoScalingDescribeLaunchConfigurationsFuture{Future: future}
+	return &DescribeLaunchConfigurationsFuture{Future: future}
 }
 
 func (a *stub) DescribeLifecycleHookTypes(ctx workflow.Context, input *autoscaling.DescribeLifecycleHookTypesInput) (*autoscaling.DescribeLifecycleHookTypesOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) DescribeLifecycleHookTypes(ctx workflow.Context, input *autoscali
 	return &output, err
 }
 
-func (a *stub) DescribeLifecycleHookTypesAsync(ctx workflow.Context, input *autoscaling.DescribeLifecycleHookTypesInput) *AutoScalingDescribeLifecycleHookTypesFuture {
+func (a *stub) DescribeLifecycleHookTypesAsync(ctx workflow.Context, input *autoscaling.DescribeLifecycleHookTypesInput) *DescribeLifecycleHookTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeLifecycleHookTypes", input)
-	return &AutoScalingDescribeLifecycleHookTypesFuture{Future: future}
+	return &DescribeLifecycleHookTypesFuture{Future: future}
 }
 
 func (a *stub) DescribeLifecycleHooks(ctx workflow.Context, input *autoscaling.DescribeLifecycleHooksInput) (*autoscaling.DescribeLifecycleHooksOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) DescribeLifecycleHooks(ctx workflow.Context, input *autoscaling.D
 	return &output, err
 }
 
-func (a *stub) DescribeLifecycleHooksAsync(ctx workflow.Context, input *autoscaling.DescribeLifecycleHooksInput) *AutoScalingDescribeLifecycleHooksFuture {
+func (a *stub) DescribeLifecycleHooksAsync(ctx workflow.Context, input *autoscaling.DescribeLifecycleHooksInput) *DescribeLifecycleHooksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeLifecycleHooks", input)
-	return &AutoScalingDescribeLifecycleHooksFuture{Future: future}
+	return &DescribeLifecycleHooksFuture{Future: future}
 }
 
 func (a *stub) DescribeLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.DescribeLoadBalancerTargetGroupsInput) (*autoscaling.DescribeLoadBalancerTargetGroupsOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) DescribeLoadBalancerTargetGroups(ctx workflow.Context, input *aut
 	return &output, err
 }
 
-func (a *stub) DescribeLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.DescribeLoadBalancerTargetGroupsInput) *AutoScalingDescribeLoadBalancerTargetGroupsFuture {
+func (a *stub) DescribeLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.DescribeLoadBalancerTargetGroupsInput) *DescribeLoadBalancerTargetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeLoadBalancerTargetGroups", input)
-	return &AutoScalingDescribeLoadBalancerTargetGroupsFuture{Future: future}
+	return &DescribeLoadBalancerTargetGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeLoadBalancers(ctx workflow.Context, input *autoscaling.DescribeLoadBalancersInput) (*autoscaling.DescribeLoadBalancersOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) DescribeLoadBalancers(ctx workflow.Context, input *autoscaling.De
 	return &output, err
 }
 
-func (a *stub) DescribeLoadBalancersAsync(ctx workflow.Context, input *autoscaling.DescribeLoadBalancersInput) *AutoScalingDescribeLoadBalancersFuture {
+func (a *stub) DescribeLoadBalancersAsync(ctx workflow.Context, input *autoscaling.DescribeLoadBalancersInput) *DescribeLoadBalancersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeLoadBalancers", input)
-	return &AutoScalingDescribeLoadBalancersFuture{Future: future}
+	return &DescribeLoadBalancersFuture{Future: future}
 }
 
 func (a *stub) DescribeMetricCollectionTypes(ctx workflow.Context, input *autoscaling.DescribeMetricCollectionTypesInput) (*autoscaling.DescribeMetricCollectionTypesOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) DescribeMetricCollectionTypes(ctx workflow.Context, input *autosc
 	return &output, err
 }
 
-func (a *stub) DescribeMetricCollectionTypesAsync(ctx workflow.Context, input *autoscaling.DescribeMetricCollectionTypesInput) *AutoScalingDescribeMetricCollectionTypesFuture {
+func (a *stub) DescribeMetricCollectionTypesAsync(ctx workflow.Context, input *autoscaling.DescribeMetricCollectionTypesInput) *DescribeMetricCollectionTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeMetricCollectionTypes", input)
-	return &AutoScalingDescribeMetricCollectionTypesFuture{Future: future}
+	return &DescribeMetricCollectionTypesFuture{Future: future}
 }
 
 func (a *stub) DescribeNotificationConfigurations(ctx workflow.Context, input *autoscaling.DescribeNotificationConfigurationsInput) (*autoscaling.DescribeNotificationConfigurationsOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) DescribeNotificationConfigurations(ctx workflow.Context, input *a
 	return &output, err
 }
 
-func (a *stub) DescribeNotificationConfigurationsAsync(ctx workflow.Context, input *autoscaling.DescribeNotificationConfigurationsInput) *AutoScalingDescribeNotificationConfigurationsFuture {
+func (a *stub) DescribeNotificationConfigurationsAsync(ctx workflow.Context, input *autoscaling.DescribeNotificationConfigurationsInput) *DescribeNotificationConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeNotificationConfigurations", input)
-	return &AutoScalingDescribeNotificationConfigurationsFuture{Future: future}
+	return &DescribeNotificationConfigurationsFuture{Future: future}
 }
 
 func (a *stub) DescribePolicies(ctx workflow.Context, input *autoscaling.DescribePoliciesInput) (*autoscaling.DescribePoliciesOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) DescribePolicies(ctx workflow.Context, input *autoscaling.Describ
 	return &output, err
 }
 
-func (a *stub) DescribePoliciesAsync(ctx workflow.Context, input *autoscaling.DescribePoliciesInput) *AutoScalingDescribePoliciesFuture {
+func (a *stub) DescribePoliciesAsync(ctx workflow.Context, input *autoscaling.DescribePoliciesInput) *DescribePoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribePolicies", input)
-	return &AutoScalingDescribePoliciesFuture{Future: future}
+	return &DescribePoliciesFuture{Future: future}
 }
 
 func (a *stub) DescribeScalingActivities(ctx workflow.Context, input *autoscaling.DescribeScalingActivitiesInput) (*autoscaling.DescribeScalingActivitiesOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) DescribeScalingActivities(ctx workflow.Context, input *autoscalin
 	return &output, err
 }
 
-func (a *stub) DescribeScalingActivitiesAsync(ctx workflow.Context, input *autoscaling.DescribeScalingActivitiesInput) *AutoScalingDescribeScalingActivitiesFuture {
+func (a *stub) DescribeScalingActivitiesAsync(ctx workflow.Context, input *autoscaling.DescribeScalingActivitiesInput) *DescribeScalingActivitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeScalingActivities", input)
-	return &AutoScalingDescribeScalingActivitiesFuture{Future: future}
+	return &DescribeScalingActivitiesFuture{Future: future}
 }
 
 func (a *stub) DescribeScalingProcessTypes(ctx workflow.Context, input *autoscaling.DescribeScalingProcessTypesInput) (*autoscaling.DescribeScalingProcessTypesOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) DescribeScalingProcessTypes(ctx workflow.Context, input *autoscal
 	return &output, err
 }
 
-func (a *stub) DescribeScalingProcessTypesAsync(ctx workflow.Context, input *autoscaling.DescribeScalingProcessTypesInput) *AutoScalingDescribeScalingProcessTypesFuture {
+func (a *stub) DescribeScalingProcessTypesAsync(ctx workflow.Context, input *autoscaling.DescribeScalingProcessTypesInput) *DescribeScalingProcessTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeScalingProcessTypes", input)
-	return &AutoScalingDescribeScalingProcessTypesFuture{Future: future}
+	return &DescribeScalingProcessTypesFuture{Future: future}
 }
 
 func (a *stub) DescribeScheduledActions(ctx workflow.Context, input *autoscaling.DescribeScheduledActionsInput) (*autoscaling.DescribeScheduledActionsOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) DescribeScheduledActions(ctx workflow.Context, input *autoscaling
 	return &output, err
 }
 
-func (a *stub) DescribeScheduledActionsAsync(ctx workflow.Context, input *autoscaling.DescribeScheduledActionsInput) *AutoScalingDescribeScheduledActionsFuture {
+func (a *stub) DescribeScheduledActionsAsync(ctx workflow.Context, input *autoscaling.DescribeScheduledActionsInput) *DescribeScheduledActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeScheduledActions", input)
-	return &AutoScalingDescribeScheduledActionsFuture{Future: future}
+	return &DescribeScheduledActionsFuture{Future: future}
 }
 
 func (a *stub) DescribeTags(ctx workflow.Context, input *autoscaling.DescribeTagsInput) (*autoscaling.DescribeTagsOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) DescribeTags(ctx workflow.Context, input *autoscaling.DescribeTag
 	return &output, err
 }
 
-func (a *stub) DescribeTagsAsync(ctx workflow.Context, input *autoscaling.DescribeTagsInput) *AutoScalingDescribeTagsFuture {
+func (a *stub) DescribeTagsAsync(ctx workflow.Context, input *autoscaling.DescribeTagsInput) *DescribeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeTags", input)
-	return &AutoScalingDescribeTagsFuture{Future: future}
+	return &DescribeTagsFuture{Future: future}
 }
 
 func (a *stub) DescribeTerminationPolicyTypes(ctx workflow.Context, input *autoscaling.DescribeTerminationPolicyTypesInput) (*autoscaling.DescribeTerminationPolicyTypesOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) DescribeTerminationPolicyTypes(ctx workflow.Context, input *autos
 	return &output, err
 }
 
-func (a *stub) DescribeTerminationPolicyTypesAsync(ctx workflow.Context, input *autoscaling.DescribeTerminationPolicyTypesInput) *AutoScalingDescribeTerminationPolicyTypesFuture {
+func (a *stub) DescribeTerminationPolicyTypesAsync(ctx workflow.Context, input *autoscaling.DescribeTerminationPolicyTypesInput) *DescribeTerminationPolicyTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DescribeTerminationPolicyTypes", input)
-	return &AutoScalingDescribeTerminationPolicyTypesFuture{Future: future}
+	return &DescribeTerminationPolicyTypesFuture{Future: future}
 }
 
 func (a *stub) DetachInstances(ctx workflow.Context, input *autoscaling.DetachInstancesInput) (*autoscaling.DetachInstancesOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) DetachInstances(ctx workflow.Context, input *autoscaling.DetachIn
 	return &output, err
 }
 
-func (a *stub) DetachInstancesAsync(ctx workflow.Context, input *autoscaling.DetachInstancesInput) *AutoScalingDetachInstancesFuture {
+func (a *stub) DetachInstancesAsync(ctx workflow.Context, input *autoscaling.DetachInstancesInput) *DetachInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DetachInstances", input)
-	return &AutoScalingDetachInstancesFuture{Future: future}
+	return &DetachInstancesFuture{Future: future}
 }
 
 func (a *stub) DetachLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.DetachLoadBalancerTargetGroupsInput) (*autoscaling.DetachLoadBalancerTargetGroupsOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) DetachLoadBalancerTargetGroups(ctx workflow.Context, input *autos
 	return &output, err
 }
 
-func (a *stub) DetachLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.DetachLoadBalancerTargetGroupsInput) *AutoScalingDetachLoadBalancerTargetGroupsFuture {
+func (a *stub) DetachLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.DetachLoadBalancerTargetGroupsInput) *DetachLoadBalancerTargetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DetachLoadBalancerTargetGroups", input)
-	return &AutoScalingDetachLoadBalancerTargetGroupsFuture{Future: future}
+	return &DetachLoadBalancerTargetGroupsFuture{Future: future}
 }
 
 func (a *stub) DetachLoadBalancers(ctx workflow.Context, input *autoscaling.DetachLoadBalancersInput) (*autoscaling.DetachLoadBalancersOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) DetachLoadBalancers(ctx workflow.Context, input *autoscaling.Deta
 	return &output, err
 }
 
-func (a *stub) DetachLoadBalancersAsync(ctx workflow.Context, input *autoscaling.DetachLoadBalancersInput) *AutoScalingDetachLoadBalancersFuture {
+func (a *stub) DetachLoadBalancersAsync(ctx workflow.Context, input *autoscaling.DetachLoadBalancersInput) *DetachLoadBalancersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DetachLoadBalancers", input)
-	return &AutoScalingDetachLoadBalancersFuture{Future: future}
+	return &DetachLoadBalancersFuture{Future: future}
 }
 
 func (a *stub) DisableMetricsCollection(ctx workflow.Context, input *autoscaling.DisableMetricsCollectionInput) (*autoscaling.DisableMetricsCollectionOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) DisableMetricsCollection(ctx workflow.Context, input *autoscaling
 	return &output, err
 }
 
-func (a *stub) DisableMetricsCollectionAsync(ctx workflow.Context, input *autoscaling.DisableMetricsCollectionInput) *AutoScalingDisableMetricsCollectionFuture {
+func (a *stub) DisableMetricsCollectionAsync(ctx workflow.Context, input *autoscaling.DisableMetricsCollectionInput) *DisableMetricsCollectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.DisableMetricsCollection", input)
-	return &AutoScalingDisableMetricsCollectionFuture{Future: future}
+	return &DisableMetricsCollectionFuture{Future: future}
 }
 
 func (a *stub) EnableMetricsCollection(ctx workflow.Context, input *autoscaling.EnableMetricsCollectionInput) (*autoscaling.EnableMetricsCollectionOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) EnableMetricsCollection(ctx workflow.Context, input *autoscaling.
 	return &output, err
 }
 
-func (a *stub) EnableMetricsCollectionAsync(ctx workflow.Context, input *autoscaling.EnableMetricsCollectionInput) *AutoScalingEnableMetricsCollectionFuture {
+func (a *stub) EnableMetricsCollectionAsync(ctx workflow.Context, input *autoscaling.EnableMetricsCollectionInput) *EnableMetricsCollectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.EnableMetricsCollection", input)
-	return &AutoScalingEnableMetricsCollectionFuture{Future: future}
+	return &EnableMetricsCollectionFuture{Future: future}
 }
 
 func (a *stub) EnterStandby(ctx workflow.Context, input *autoscaling.EnterStandbyInput) (*autoscaling.EnterStandbyOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) EnterStandby(ctx workflow.Context, input *autoscaling.EnterStandb
 	return &output, err
 }
 
-func (a *stub) EnterStandbyAsync(ctx workflow.Context, input *autoscaling.EnterStandbyInput) *AutoScalingEnterStandbyFuture {
+func (a *stub) EnterStandbyAsync(ctx workflow.Context, input *autoscaling.EnterStandbyInput) *EnterStandbyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.EnterStandby", input)
-	return &AutoScalingEnterStandbyFuture{Future: future}
+	return &EnterStandbyFuture{Future: future}
 }
 
 func (a *stub) ExecutePolicy(ctx workflow.Context, input *autoscaling.ExecutePolicyInput) (*autoscaling.ExecutePolicyOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) ExecutePolicy(ctx workflow.Context, input *autoscaling.ExecutePol
 	return &output, err
 }
 
-func (a *stub) ExecutePolicyAsync(ctx workflow.Context, input *autoscaling.ExecutePolicyInput) *AutoScalingExecutePolicyFuture {
+func (a *stub) ExecutePolicyAsync(ctx workflow.Context, input *autoscaling.ExecutePolicyInput) *ExecutePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.ExecutePolicy", input)
-	return &AutoScalingExecutePolicyFuture{Future: future}
+	return &ExecutePolicyFuture{Future: future}
 }
 
 func (a *stub) ExitStandby(ctx workflow.Context, input *autoscaling.ExitStandbyInput) (*autoscaling.ExitStandbyOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) ExitStandby(ctx workflow.Context, input *autoscaling.ExitStandbyI
 	return &output, err
 }
 
-func (a *stub) ExitStandbyAsync(ctx workflow.Context, input *autoscaling.ExitStandbyInput) *AutoScalingExitStandbyFuture {
+func (a *stub) ExitStandbyAsync(ctx workflow.Context, input *autoscaling.ExitStandbyInput) *ExitStandbyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.ExitStandby", input)
-	return &AutoScalingExitStandbyFuture{Future: future}
+	return &ExitStandbyFuture{Future: future}
 }
 
 func (a *stub) PutLifecycleHook(ctx workflow.Context, input *autoscaling.PutLifecycleHookInput) (*autoscaling.PutLifecycleHookOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) PutLifecycleHook(ctx workflow.Context, input *autoscaling.PutLife
 	return &output, err
 }
 
-func (a *stub) PutLifecycleHookAsync(ctx workflow.Context, input *autoscaling.PutLifecycleHookInput) *AutoScalingPutLifecycleHookFuture {
+func (a *stub) PutLifecycleHookAsync(ctx workflow.Context, input *autoscaling.PutLifecycleHookInput) *PutLifecycleHookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.PutLifecycleHook", input)
-	return &AutoScalingPutLifecycleHookFuture{Future: future}
+	return &PutLifecycleHookFuture{Future: future}
 }
 
 func (a *stub) PutNotificationConfiguration(ctx workflow.Context, input *autoscaling.PutNotificationConfigurationInput) (*autoscaling.PutNotificationConfigurationOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) PutNotificationConfiguration(ctx workflow.Context, input *autosca
 	return &output, err
 }
 
-func (a *stub) PutNotificationConfigurationAsync(ctx workflow.Context, input *autoscaling.PutNotificationConfigurationInput) *AutoScalingPutNotificationConfigurationFuture {
+func (a *stub) PutNotificationConfigurationAsync(ctx workflow.Context, input *autoscaling.PutNotificationConfigurationInput) *PutNotificationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.PutNotificationConfiguration", input)
-	return &AutoScalingPutNotificationConfigurationFuture{Future: future}
+	return &PutNotificationConfigurationFuture{Future: future}
 }
 
 func (a *stub) PutScalingPolicy(ctx workflow.Context, input *autoscaling.PutScalingPolicyInput) (*autoscaling.PutScalingPolicyOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) PutScalingPolicy(ctx workflow.Context, input *autoscaling.PutScal
 	return &output, err
 }
 
-func (a *stub) PutScalingPolicyAsync(ctx workflow.Context, input *autoscaling.PutScalingPolicyInput) *AutoScalingPutScalingPolicyFuture {
+func (a *stub) PutScalingPolicyAsync(ctx workflow.Context, input *autoscaling.PutScalingPolicyInput) *PutScalingPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.PutScalingPolicy", input)
-	return &AutoScalingPutScalingPolicyFuture{Future: future}
+	return &PutScalingPolicyFuture{Future: future}
 }
 
 func (a *stub) PutScheduledUpdateGroupAction(ctx workflow.Context, input *autoscaling.PutScheduledUpdateGroupActionInput) (*autoscaling.PutScheduledUpdateGroupActionOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) PutScheduledUpdateGroupAction(ctx workflow.Context, input *autosc
 	return &output, err
 }
 
-func (a *stub) PutScheduledUpdateGroupActionAsync(ctx workflow.Context, input *autoscaling.PutScheduledUpdateGroupActionInput) *AutoScalingPutScheduledUpdateGroupActionFuture {
+func (a *stub) PutScheduledUpdateGroupActionAsync(ctx workflow.Context, input *autoscaling.PutScheduledUpdateGroupActionInput) *PutScheduledUpdateGroupActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.PutScheduledUpdateGroupAction", input)
-	return &AutoScalingPutScheduledUpdateGroupActionFuture{Future: future}
+	return &PutScheduledUpdateGroupActionFuture{Future: future}
 }
 
 func (a *stub) RecordLifecycleActionHeartbeat(ctx workflow.Context, input *autoscaling.RecordLifecycleActionHeartbeatInput) (*autoscaling.RecordLifecycleActionHeartbeatOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) RecordLifecycleActionHeartbeat(ctx workflow.Context, input *autos
 	return &output, err
 }
 
-func (a *stub) RecordLifecycleActionHeartbeatAsync(ctx workflow.Context, input *autoscaling.RecordLifecycleActionHeartbeatInput) *AutoScalingRecordLifecycleActionHeartbeatFuture {
+func (a *stub) RecordLifecycleActionHeartbeatAsync(ctx workflow.Context, input *autoscaling.RecordLifecycleActionHeartbeatInput) *RecordLifecycleActionHeartbeatFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.RecordLifecycleActionHeartbeat", input)
-	return &AutoScalingRecordLifecycleActionHeartbeatFuture{Future: future}
+	return &RecordLifecycleActionHeartbeatFuture{Future: future}
 }
 
 func (a *stub) ResumeProcesses(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) (*autoscaling.ResumeProcessesOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) ResumeProcesses(ctx workflow.Context, input *autoscaling.ScalingP
 	return &output, err
 }
 
-func (a *stub) ResumeProcessesAsync(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) *AutoScalingResumeProcessesFuture {
+func (a *stub) ResumeProcessesAsync(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) *ResumeProcessesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.ResumeProcesses", input)
-	return &AutoScalingResumeProcessesFuture{Future: future}
+	return &ResumeProcessesFuture{Future: future}
 }
 
 func (a *stub) SetDesiredCapacity(ctx workflow.Context, input *autoscaling.SetDesiredCapacityInput) (*autoscaling.SetDesiredCapacityOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) SetDesiredCapacity(ctx workflow.Context, input *autoscaling.SetDe
 	return &output, err
 }
 
-func (a *stub) SetDesiredCapacityAsync(ctx workflow.Context, input *autoscaling.SetDesiredCapacityInput) *AutoScalingSetDesiredCapacityFuture {
+func (a *stub) SetDesiredCapacityAsync(ctx workflow.Context, input *autoscaling.SetDesiredCapacityInput) *SetDesiredCapacityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.SetDesiredCapacity", input)
-	return &AutoScalingSetDesiredCapacityFuture{Future: future}
+	return &SetDesiredCapacityFuture{Future: future}
 }
 
 func (a *stub) SetInstanceHealth(ctx workflow.Context, input *autoscaling.SetInstanceHealthInput) (*autoscaling.SetInstanceHealthOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) SetInstanceHealth(ctx workflow.Context, input *autoscaling.SetIns
 	return &output, err
 }
 
-func (a *stub) SetInstanceHealthAsync(ctx workflow.Context, input *autoscaling.SetInstanceHealthInput) *AutoScalingSetInstanceHealthFuture {
+func (a *stub) SetInstanceHealthAsync(ctx workflow.Context, input *autoscaling.SetInstanceHealthInput) *SetInstanceHealthFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.SetInstanceHealth", input)
-	return &AutoScalingSetInstanceHealthFuture{Future: future}
+	return &SetInstanceHealthFuture{Future: future}
 }
 
 func (a *stub) SetInstanceProtection(ctx workflow.Context, input *autoscaling.SetInstanceProtectionInput) (*autoscaling.SetInstanceProtectionOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) SetInstanceProtection(ctx workflow.Context, input *autoscaling.Se
 	return &output, err
 }
 
-func (a *stub) SetInstanceProtectionAsync(ctx workflow.Context, input *autoscaling.SetInstanceProtectionInput) *AutoScalingSetInstanceProtectionFuture {
+func (a *stub) SetInstanceProtectionAsync(ctx workflow.Context, input *autoscaling.SetInstanceProtectionInput) *SetInstanceProtectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.SetInstanceProtection", input)
-	return &AutoScalingSetInstanceProtectionFuture{Future: future}
+	return &SetInstanceProtectionFuture{Future: future}
 }
 
 func (a *stub) StartInstanceRefresh(ctx workflow.Context, input *autoscaling.StartInstanceRefreshInput) (*autoscaling.StartInstanceRefreshOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) StartInstanceRefresh(ctx workflow.Context, input *autoscaling.Sta
 	return &output, err
 }
 
-func (a *stub) StartInstanceRefreshAsync(ctx workflow.Context, input *autoscaling.StartInstanceRefreshInput) *AutoScalingStartInstanceRefreshFuture {
+func (a *stub) StartInstanceRefreshAsync(ctx workflow.Context, input *autoscaling.StartInstanceRefreshInput) *StartInstanceRefreshFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.StartInstanceRefresh", input)
-	return &AutoScalingStartInstanceRefreshFuture{Future: future}
+	return &StartInstanceRefreshFuture{Future: future}
 }
 
 func (a *stub) SuspendProcesses(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) (*autoscaling.SuspendProcessesOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) SuspendProcesses(ctx workflow.Context, input *autoscaling.Scaling
 	return &output, err
 }
 
-func (a *stub) SuspendProcessesAsync(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) *AutoScalingSuspendProcessesFuture {
+func (a *stub) SuspendProcessesAsync(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) *SuspendProcessesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.SuspendProcesses", input)
-	return &AutoScalingSuspendProcessesFuture{Future: future}
+	return &SuspendProcessesFuture{Future: future}
 }
 
 func (a *stub) TerminateInstanceInAutoScalingGroup(ctx workflow.Context, input *autoscaling.TerminateInstanceInAutoScalingGroupInput) (*autoscaling.TerminateInstanceInAutoScalingGroupOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) TerminateInstanceInAutoScalingGroup(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) TerminateInstanceInAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.TerminateInstanceInAutoScalingGroupInput) *AutoScalingTerminateInstanceInAutoScalingGroupFuture {
+func (a *stub) TerminateInstanceInAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.TerminateInstanceInAutoScalingGroupInput) *TerminateInstanceInAutoScalingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.TerminateInstanceInAutoScalingGroup", input)
-	return &AutoScalingTerminateInstanceInAutoScalingGroupFuture{Future: future}
+	return &TerminateInstanceInAutoScalingGroupFuture{Future: future}
 }
 
 func (a *stub) UpdateAutoScalingGroup(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) (*autoscaling.UpdateAutoScalingGroupOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) UpdateAutoScalingGroup(ctx workflow.Context, input *autoscaling.U
 	return &output, err
 }
 
-func (a *stub) UpdateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) *AutoScalingUpdateAutoScalingGroupFuture {
+func (a *stub) UpdateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) *UpdateAutoScalingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.autoscaling.UpdateAutoScalingGroup", input)
-	return &AutoScalingUpdateAutoScalingGroupFuture{Future: future}
+	return &UpdateAutoScalingGroupFuture{Future: future}
 }
 
 func (a *stub) WaitUntilGroupExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error {

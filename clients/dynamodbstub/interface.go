@@ -16,127 +16,127 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchGetItem(ctx workflow.Context, input *dynamodb.BatchGetItemInput) (*dynamodb.BatchGetItemOutput, error)
-	BatchGetItemAsync(ctx workflow.Context, input *dynamodb.BatchGetItemInput) *DynamoDBBatchGetItemFuture
+	BatchGetItemAsync(ctx workflow.Context, input *dynamodb.BatchGetItemInput) *BatchGetItemFuture
 
 	BatchWriteItem(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) (*dynamodb.BatchWriteItemOutput, error)
-	BatchWriteItemAsync(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) *DynamoDBBatchWriteItemFuture
+	BatchWriteItemAsync(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) *BatchWriteItemFuture
 
 	CreateBackup(ctx workflow.Context, input *dynamodb.CreateBackupInput) (*dynamodb.CreateBackupOutput, error)
-	CreateBackupAsync(ctx workflow.Context, input *dynamodb.CreateBackupInput) *DynamoDBCreateBackupFuture
+	CreateBackupAsync(ctx workflow.Context, input *dynamodb.CreateBackupInput) *CreateBackupFuture
 
 	CreateGlobalTable(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) (*dynamodb.CreateGlobalTableOutput, error)
-	CreateGlobalTableAsync(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) *DynamoDBCreateGlobalTableFuture
+	CreateGlobalTableAsync(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) *CreateGlobalTableFuture
 
 	CreateTable(ctx workflow.Context, input *dynamodb.CreateTableInput) (*dynamodb.CreateTableOutput, error)
-	CreateTableAsync(ctx workflow.Context, input *dynamodb.CreateTableInput) *DynamoDBCreateTableFuture
+	CreateTableAsync(ctx workflow.Context, input *dynamodb.CreateTableInput) *CreateTableFuture
 
 	DeleteBackup(ctx workflow.Context, input *dynamodb.DeleteBackupInput) (*dynamodb.DeleteBackupOutput, error)
-	DeleteBackupAsync(ctx workflow.Context, input *dynamodb.DeleteBackupInput) *DynamoDBDeleteBackupFuture
+	DeleteBackupAsync(ctx workflow.Context, input *dynamodb.DeleteBackupInput) *DeleteBackupFuture
 
 	DeleteItem(ctx workflow.Context, input *dynamodb.DeleteItemInput) (*dynamodb.DeleteItemOutput, error)
-	DeleteItemAsync(ctx workflow.Context, input *dynamodb.DeleteItemInput) *DynamoDBDeleteItemFuture
+	DeleteItemAsync(ctx workflow.Context, input *dynamodb.DeleteItemInput) *DeleteItemFuture
 
 	DeleteTable(ctx workflow.Context, input *dynamodb.DeleteTableInput) (*dynamodb.DeleteTableOutput, error)
-	DeleteTableAsync(ctx workflow.Context, input *dynamodb.DeleteTableInput) *DynamoDBDeleteTableFuture
+	DeleteTableAsync(ctx workflow.Context, input *dynamodb.DeleteTableInput) *DeleteTableFuture
 
 	DescribeBackup(ctx workflow.Context, input *dynamodb.DescribeBackupInput) (*dynamodb.DescribeBackupOutput, error)
-	DescribeBackupAsync(ctx workflow.Context, input *dynamodb.DescribeBackupInput) *DynamoDBDescribeBackupFuture
+	DescribeBackupAsync(ctx workflow.Context, input *dynamodb.DescribeBackupInput) *DescribeBackupFuture
 
 	DescribeContinuousBackups(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) (*dynamodb.DescribeContinuousBackupsOutput, error)
-	DescribeContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) *DynamoDBDescribeContinuousBackupsFuture
+	DescribeContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) *DescribeContinuousBackupsFuture
 
 	DescribeContributorInsights(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) (*dynamodb.DescribeContributorInsightsOutput, error)
-	DescribeContributorInsightsAsync(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) *DynamoDBDescribeContributorInsightsFuture
+	DescribeContributorInsightsAsync(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) *DescribeContributorInsightsFuture
 
 	DescribeEndpoints(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) (*dynamodb.DescribeEndpointsOutput, error)
-	DescribeEndpointsAsync(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) *DynamoDBDescribeEndpointsFuture
+	DescribeEndpointsAsync(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) *DescribeEndpointsFuture
 
 	DescribeGlobalTable(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error)
-	DescribeGlobalTableAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) *DynamoDBDescribeGlobalTableFuture
+	DescribeGlobalTableAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) *DescribeGlobalTableFuture
 
 	DescribeGlobalTableSettings(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) (*dynamodb.DescribeGlobalTableSettingsOutput, error)
-	DescribeGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) *DynamoDBDescribeGlobalTableSettingsFuture
+	DescribeGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) *DescribeGlobalTableSettingsFuture
 
 	DescribeLimits(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) (*dynamodb.DescribeLimitsOutput, error)
-	DescribeLimitsAsync(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) *DynamoDBDescribeLimitsFuture
+	DescribeLimitsAsync(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) *DescribeLimitsFuture
 
 	DescribeTable(ctx workflow.Context, input *dynamodb.DescribeTableInput) (*dynamodb.DescribeTableOutput, error)
-	DescribeTableAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *DynamoDBDescribeTableFuture
+	DescribeTableAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *DescribeTableFuture
 
 	DescribeTableReplicaAutoScaling(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) (*dynamodb.DescribeTableReplicaAutoScalingOutput, error)
-	DescribeTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) *DynamoDBDescribeTableReplicaAutoScalingFuture
+	DescribeTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) *DescribeTableReplicaAutoScalingFuture
 
 	DescribeTimeToLive(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) (*dynamodb.DescribeTimeToLiveOutput, error)
-	DescribeTimeToLiveAsync(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) *DynamoDBDescribeTimeToLiveFuture
+	DescribeTimeToLiveAsync(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) *DescribeTimeToLiveFuture
 
 	GetItem(ctx workflow.Context, input *dynamodb.GetItemInput) (*dynamodb.GetItemOutput, error)
-	GetItemAsync(ctx workflow.Context, input *dynamodb.GetItemInput) *DynamoDBGetItemFuture
+	GetItemAsync(ctx workflow.Context, input *dynamodb.GetItemInput) *GetItemFuture
 
 	ListBackups(ctx workflow.Context, input *dynamodb.ListBackupsInput) (*dynamodb.ListBackupsOutput, error)
-	ListBackupsAsync(ctx workflow.Context, input *dynamodb.ListBackupsInput) *DynamoDBListBackupsFuture
+	ListBackupsAsync(ctx workflow.Context, input *dynamodb.ListBackupsInput) *ListBackupsFuture
 
 	ListContributorInsights(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) (*dynamodb.ListContributorInsightsOutput, error)
-	ListContributorInsightsAsync(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) *DynamoDBListContributorInsightsFuture
+	ListContributorInsightsAsync(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) *ListContributorInsightsFuture
 
 	ListGlobalTables(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) (*dynamodb.ListGlobalTablesOutput, error)
-	ListGlobalTablesAsync(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) *DynamoDBListGlobalTablesFuture
+	ListGlobalTablesAsync(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) *ListGlobalTablesFuture
 
 	ListTables(ctx workflow.Context, input *dynamodb.ListTablesInput) (*dynamodb.ListTablesOutput, error)
-	ListTablesAsync(ctx workflow.Context, input *dynamodb.ListTablesInput) *DynamoDBListTablesFuture
+	ListTablesAsync(ctx workflow.Context, input *dynamodb.ListTablesInput) *ListTablesFuture
 
 	ListTagsOfResource(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) (*dynamodb.ListTagsOfResourceOutput, error)
-	ListTagsOfResourceAsync(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) *DynamoDBListTagsOfResourceFuture
+	ListTagsOfResourceAsync(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) *ListTagsOfResourceFuture
 
 	PutItem(ctx workflow.Context, input *dynamodb.PutItemInput) (*dynamodb.PutItemOutput, error)
-	PutItemAsync(ctx workflow.Context, input *dynamodb.PutItemInput) *DynamoDBPutItemFuture
+	PutItemAsync(ctx workflow.Context, input *dynamodb.PutItemInput) *PutItemFuture
 
 	Query(ctx workflow.Context, input *dynamodb.QueryInput) (*dynamodb.QueryOutput, error)
-	QueryAsync(ctx workflow.Context, input *dynamodb.QueryInput) *DynamoDBQueryFuture
+	QueryAsync(ctx workflow.Context, input *dynamodb.QueryInput) *QueryFuture
 
 	RestoreTableFromBackup(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) (*dynamodb.RestoreTableFromBackupOutput, error)
-	RestoreTableFromBackupAsync(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) *DynamoDBRestoreTableFromBackupFuture
+	RestoreTableFromBackupAsync(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) *RestoreTableFromBackupFuture
 
 	RestoreTableToPointInTime(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) (*dynamodb.RestoreTableToPointInTimeOutput, error)
-	RestoreTableToPointInTimeAsync(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) *DynamoDBRestoreTableToPointInTimeFuture
+	RestoreTableToPointInTimeAsync(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) *RestoreTableToPointInTimeFuture
 
 	Scan(ctx workflow.Context, input *dynamodb.ScanInput) (*dynamodb.ScanOutput, error)
-	ScanAsync(ctx workflow.Context, input *dynamodb.ScanInput) *DynamoDBScanFuture
+	ScanAsync(ctx workflow.Context, input *dynamodb.ScanInput) *ScanFuture
 
 	TagResource(ctx workflow.Context, input *dynamodb.TagResourceInput) (*dynamodb.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *dynamodb.TagResourceInput) *DynamoDBTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *dynamodb.TagResourceInput) *TagResourceFuture
 
 	TransactGetItems(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) (*dynamodb.TransactGetItemsOutput, error)
-	TransactGetItemsAsync(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) *DynamoDBTransactGetItemsFuture
+	TransactGetItemsAsync(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) *TransactGetItemsFuture
 
 	TransactWriteItems(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) (*dynamodb.TransactWriteItemsOutput, error)
-	TransactWriteItemsAsync(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) *DynamoDBTransactWriteItemsFuture
+	TransactWriteItemsAsync(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) *TransactWriteItemsFuture
 
 	UntagResource(ctx workflow.Context, input *dynamodb.UntagResourceInput) (*dynamodb.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *dynamodb.UntagResourceInput) *DynamoDBUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *dynamodb.UntagResourceInput) *UntagResourceFuture
 
 	UpdateContinuousBackups(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) (*dynamodb.UpdateContinuousBackupsOutput, error)
-	UpdateContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) *DynamoDBUpdateContinuousBackupsFuture
+	UpdateContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) *UpdateContinuousBackupsFuture
 
 	UpdateContributorInsights(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) (*dynamodb.UpdateContributorInsightsOutput, error)
-	UpdateContributorInsightsAsync(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) *DynamoDBUpdateContributorInsightsFuture
+	UpdateContributorInsightsAsync(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) *UpdateContributorInsightsFuture
 
 	UpdateGlobalTable(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) (*dynamodb.UpdateGlobalTableOutput, error)
-	UpdateGlobalTableAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) *DynamoDBUpdateGlobalTableFuture
+	UpdateGlobalTableAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) *UpdateGlobalTableFuture
 
 	UpdateGlobalTableSettings(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) (*dynamodb.UpdateGlobalTableSettingsOutput, error)
-	UpdateGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) *DynamoDBUpdateGlobalTableSettingsFuture
+	UpdateGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) *UpdateGlobalTableSettingsFuture
 
 	UpdateItem(ctx workflow.Context, input *dynamodb.UpdateItemInput) (*dynamodb.UpdateItemOutput, error)
-	UpdateItemAsync(ctx workflow.Context, input *dynamodb.UpdateItemInput) *DynamoDBUpdateItemFuture
+	UpdateItemAsync(ctx workflow.Context, input *dynamodb.UpdateItemInput) *UpdateItemFuture
 
 	UpdateTable(ctx workflow.Context, input *dynamodb.UpdateTableInput) (*dynamodb.UpdateTableOutput, error)
-	UpdateTableAsync(ctx workflow.Context, input *dynamodb.UpdateTableInput) *DynamoDBUpdateTableFuture
+	UpdateTableAsync(ctx workflow.Context, input *dynamodb.UpdateTableInput) *UpdateTableFuture
 
 	UpdateTableReplicaAutoScaling(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) (*dynamodb.UpdateTableReplicaAutoScalingOutput, error)
-	UpdateTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) *DynamoDBUpdateTableReplicaAutoScalingFuture
+	UpdateTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) *UpdateTableReplicaAutoScalingFuture
 
 	UpdateTimeToLive(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) (*dynamodb.UpdateTimeToLiveOutput, error)
-	UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *DynamoDBUpdateTimeToLiveFuture
+	UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *UpdateTimeToLiveFuture
 
 	WaitUntilTableExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
 	WaitUntilTableExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *clients.VoidFuture

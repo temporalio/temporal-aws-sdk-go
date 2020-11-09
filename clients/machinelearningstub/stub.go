@@ -16,309 +16,309 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type MachineLearningAddTagsFuture struct {
+type AddTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningAddTagsFuture) Get(ctx workflow.Context) (*machinelearning.AddTagsOutput, error) {
+func (r *AddTagsFuture) Get(ctx workflow.Context) (*machinelearning.AddTagsOutput, error) {
 	var output machinelearning.AddTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningCreateBatchPredictionFuture struct {
+type CreateBatchPredictionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningCreateBatchPredictionFuture) Get(ctx workflow.Context) (*machinelearning.CreateBatchPredictionOutput, error) {
+func (r *CreateBatchPredictionFuture) Get(ctx workflow.Context) (*machinelearning.CreateBatchPredictionOutput, error) {
 	var output machinelearning.CreateBatchPredictionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningCreateDataSourceFromRDSFuture struct {
+type CreateDataSourceFromRDSFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningCreateDataSourceFromRDSFuture) Get(ctx workflow.Context) (*machinelearning.CreateDataSourceFromRDSOutput, error) {
+func (r *CreateDataSourceFromRDSFuture) Get(ctx workflow.Context) (*machinelearning.CreateDataSourceFromRDSOutput, error) {
 	var output machinelearning.CreateDataSourceFromRDSOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningCreateDataSourceFromRedshiftFuture struct {
+type CreateDataSourceFromRedshiftFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningCreateDataSourceFromRedshiftFuture) Get(ctx workflow.Context) (*machinelearning.CreateDataSourceFromRedshiftOutput, error) {
+func (r *CreateDataSourceFromRedshiftFuture) Get(ctx workflow.Context) (*machinelearning.CreateDataSourceFromRedshiftOutput, error) {
 	var output machinelearning.CreateDataSourceFromRedshiftOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningCreateDataSourceFromS3Future struct {
+type CreateDataSourceFromS3Future struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningCreateDataSourceFromS3Future) Get(ctx workflow.Context) (*machinelearning.CreateDataSourceFromS3Output, error) {
+func (r *CreateDataSourceFromS3Future) Get(ctx workflow.Context) (*machinelearning.CreateDataSourceFromS3Output, error) {
 	var output machinelearning.CreateDataSourceFromS3Output
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningCreateEvaluationFuture struct {
+type CreateEvaluationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningCreateEvaluationFuture) Get(ctx workflow.Context) (*machinelearning.CreateEvaluationOutput, error) {
+func (r *CreateEvaluationFuture) Get(ctx workflow.Context) (*machinelearning.CreateEvaluationOutput, error) {
 	var output machinelearning.CreateEvaluationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningCreateMLModelFuture struct {
+type CreateMLModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningCreateMLModelFuture) Get(ctx workflow.Context) (*machinelearning.CreateMLModelOutput, error) {
+func (r *CreateMLModelFuture) Get(ctx workflow.Context) (*machinelearning.CreateMLModelOutput, error) {
 	var output machinelearning.CreateMLModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningCreateRealtimeEndpointFuture struct {
+type CreateRealtimeEndpointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningCreateRealtimeEndpointFuture) Get(ctx workflow.Context) (*machinelearning.CreateRealtimeEndpointOutput, error) {
+func (r *CreateRealtimeEndpointFuture) Get(ctx workflow.Context) (*machinelearning.CreateRealtimeEndpointOutput, error) {
 	var output machinelearning.CreateRealtimeEndpointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDeleteBatchPredictionFuture struct {
+type DeleteBatchPredictionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDeleteBatchPredictionFuture) Get(ctx workflow.Context) (*machinelearning.DeleteBatchPredictionOutput, error) {
+func (r *DeleteBatchPredictionFuture) Get(ctx workflow.Context) (*machinelearning.DeleteBatchPredictionOutput, error) {
 	var output machinelearning.DeleteBatchPredictionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDeleteDataSourceFuture struct {
+type DeleteDataSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDeleteDataSourceFuture) Get(ctx workflow.Context) (*machinelearning.DeleteDataSourceOutput, error) {
+func (r *DeleteDataSourceFuture) Get(ctx workflow.Context) (*machinelearning.DeleteDataSourceOutput, error) {
 	var output machinelearning.DeleteDataSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDeleteEvaluationFuture struct {
+type DeleteEvaluationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDeleteEvaluationFuture) Get(ctx workflow.Context) (*machinelearning.DeleteEvaluationOutput, error) {
+func (r *DeleteEvaluationFuture) Get(ctx workflow.Context) (*machinelearning.DeleteEvaluationOutput, error) {
 	var output machinelearning.DeleteEvaluationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDeleteMLModelFuture struct {
+type DeleteMLModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDeleteMLModelFuture) Get(ctx workflow.Context) (*machinelearning.DeleteMLModelOutput, error) {
+func (r *DeleteMLModelFuture) Get(ctx workflow.Context) (*machinelearning.DeleteMLModelOutput, error) {
 	var output machinelearning.DeleteMLModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDeleteRealtimeEndpointFuture struct {
+type DeleteRealtimeEndpointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDeleteRealtimeEndpointFuture) Get(ctx workflow.Context) (*machinelearning.DeleteRealtimeEndpointOutput, error) {
+func (r *DeleteRealtimeEndpointFuture) Get(ctx workflow.Context) (*machinelearning.DeleteRealtimeEndpointOutput, error) {
 	var output machinelearning.DeleteRealtimeEndpointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDeleteTagsFuture struct {
+type DeleteTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDeleteTagsFuture) Get(ctx workflow.Context) (*machinelearning.DeleteTagsOutput, error) {
+func (r *DeleteTagsFuture) Get(ctx workflow.Context) (*machinelearning.DeleteTagsOutput, error) {
 	var output machinelearning.DeleteTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDescribeBatchPredictionsFuture struct {
+type DescribeBatchPredictionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDescribeBatchPredictionsFuture) Get(ctx workflow.Context) (*machinelearning.DescribeBatchPredictionsOutput, error) {
+func (r *DescribeBatchPredictionsFuture) Get(ctx workflow.Context) (*machinelearning.DescribeBatchPredictionsOutput, error) {
 	var output machinelearning.DescribeBatchPredictionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDescribeDataSourcesFuture struct {
+type DescribeDataSourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDescribeDataSourcesFuture) Get(ctx workflow.Context) (*machinelearning.DescribeDataSourcesOutput, error) {
+func (r *DescribeDataSourcesFuture) Get(ctx workflow.Context) (*machinelearning.DescribeDataSourcesOutput, error) {
 	var output machinelearning.DescribeDataSourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDescribeEvaluationsFuture struct {
+type DescribeEvaluationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDescribeEvaluationsFuture) Get(ctx workflow.Context) (*machinelearning.DescribeEvaluationsOutput, error) {
+func (r *DescribeEvaluationsFuture) Get(ctx workflow.Context) (*machinelearning.DescribeEvaluationsOutput, error) {
 	var output machinelearning.DescribeEvaluationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDescribeMLModelsFuture struct {
+type DescribeMLModelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDescribeMLModelsFuture) Get(ctx workflow.Context) (*machinelearning.DescribeMLModelsOutput, error) {
+func (r *DescribeMLModelsFuture) Get(ctx workflow.Context) (*machinelearning.DescribeMLModelsOutput, error) {
 	var output machinelearning.DescribeMLModelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningDescribeTagsFuture struct {
+type DescribeTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningDescribeTagsFuture) Get(ctx workflow.Context) (*machinelearning.DescribeTagsOutput, error) {
+func (r *DescribeTagsFuture) Get(ctx workflow.Context) (*machinelearning.DescribeTagsOutput, error) {
 	var output machinelearning.DescribeTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningGetBatchPredictionFuture struct {
+type GetBatchPredictionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningGetBatchPredictionFuture) Get(ctx workflow.Context) (*machinelearning.GetBatchPredictionOutput, error) {
+func (r *GetBatchPredictionFuture) Get(ctx workflow.Context) (*machinelearning.GetBatchPredictionOutput, error) {
 	var output machinelearning.GetBatchPredictionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningGetDataSourceFuture struct {
+type GetDataSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningGetDataSourceFuture) Get(ctx workflow.Context) (*machinelearning.GetDataSourceOutput, error) {
+func (r *GetDataSourceFuture) Get(ctx workflow.Context) (*machinelearning.GetDataSourceOutput, error) {
 	var output machinelearning.GetDataSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningGetEvaluationFuture struct {
+type GetEvaluationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningGetEvaluationFuture) Get(ctx workflow.Context) (*machinelearning.GetEvaluationOutput, error) {
+func (r *GetEvaluationFuture) Get(ctx workflow.Context) (*machinelearning.GetEvaluationOutput, error) {
 	var output machinelearning.GetEvaluationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningGetMLModelFuture struct {
+type GetMLModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningGetMLModelFuture) Get(ctx workflow.Context) (*machinelearning.GetMLModelOutput, error) {
+func (r *GetMLModelFuture) Get(ctx workflow.Context) (*machinelearning.GetMLModelOutput, error) {
 	var output machinelearning.GetMLModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningPredictFuture struct {
+type PredictFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningPredictFuture) Get(ctx workflow.Context) (*machinelearning.PredictOutput, error) {
+func (r *PredictFuture) Get(ctx workflow.Context) (*machinelearning.PredictOutput, error) {
 	var output machinelearning.PredictOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningUpdateBatchPredictionFuture struct {
+type UpdateBatchPredictionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningUpdateBatchPredictionFuture) Get(ctx workflow.Context) (*machinelearning.UpdateBatchPredictionOutput, error) {
+func (r *UpdateBatchPredictionFuture) Get(ctx workflow.Context) (*machinelearning.UpdateBatchPredictionOutput, error) {
 	var output machinelearning.UpdateBatchPredictionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningUpdateDataSourceFuture struct {
+type UpdateDataSourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningUpdateDataSourceFuture) Get(ctx workflow.Context) (*machinelearning.UpdateDataSourceOutput, error) {
+func (r *UpdateDataSourceFuture) Get(ctx workflow.Context) (*machinelearning.UpdateDataSourceOutput, error) {
 	var output machinelearning.UpdateDataSourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningUpdateEvaluationFuture struct {
+type UpdateEvaluationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningUpdateEvaluationFuture) Get(ctx workflow.Context) (*machinelearning.UpdateEvaluationOutput, error) {
+func (r *UpdateEvaluationFuture) Get(ctx workflow.Context) (*machinelearning.UpdateEvaluationOutput, error) {
 	var output machinelearning.UpdateEvaluationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MachineLearningUpdateMLModelFuture struct {
+type UpdateMLModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MachineLearningUpdateMLModelFuture) Get(ctx workflow.Context) (*machinelearning.UpdateMLModelOutput, error) {
+func (r *UpdateMLModelFuture) Get(ctx workflow.Context) (*machinelearning.UpdateMLModelOutput, error) {
 	var output machinelearning.UpdateMLModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -330,9 +330,9 @@ func (a *stub) AddTags(ctx workflow.Context, input *machinelearning.AddTagsInput
 	return &output, err
 }
 
-func (a *stub) AddTagsAsync(ctx workflow.Context, input *machinelearning.AddTagsInput) *MachineLearningAddTagsFuture {
+func (a *stub) AddTagsAsync(ctx workflow.Context, input *machinelearning.AddTagsInput) *AddTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.AddTags", input)
-	return &MachineLearningAddTagsFuture{Future: future}
+	return &AddTagsFuture{Future: future}
 }
 
 func (a *stub) CreateBatchPrediction(ctx workflow.Context, input *machinelearning.CreateBatchPredictionInput) (*machinelearning.CreateBatchPredictionOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) CreateBatchPrediction(ctx workflow.Context, input *machinelearnin
 	return &output, err
 }
 
-func (a *stub) CreateBatchPredictionAsync(ctx workflow.Context, input *machinelearning.CreateBatchPredictionInput) *MachineLearningCreateBatchPredictionFuture {
+func (a *stub) CreateBatchPredictionAsync(ctx workflow.Context, input *machinelearning.CreateBatchPredictionInput) *CreateBatchPredictionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.CreateBatchPrediction", input)
-	return &MachineLearningCreateBatchPredictionFuture{Future: future}
+	return &CreateBatchPredictionFuture{Future: future}
 }
 
 func (a *stub) CreateDataSourceFromRDS(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRDSInput) (*machinelearning.CreateDataSourceFromRDSOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) CreateDataSourceFromRDS(ctx workflow.Context, input *machinelearn
 	return &output, err
 }
 
-func (a *stub) CreateDataSourceFromRDSAsync(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRDSInput) *MachineLearningCreateDataSourceFromRDSFuture {
+func (a *stub) CreateDataSourceFromRDSAsync(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRDSInput) *CreateDataSourceFromRDSFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.CreateDataSourceFromRDS", input)
-	return &MachineLearningCreateDataSourceFromRDSFuture{Future: future}
+	return &CreateDataSourceFromRDSFuture{Future: future}
 }
 
 func (a *stub) CreateDataSourceFromRedshift(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRedshiftInput) (*machinelearning.CreateDataSourceFromRedshiftOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) CreateDataSourceFromRedshift(ctx workflow.Context, input *machine
 	return &output, err
 }
 
-func (a *stub) CreateDataSourceFromRedshiftAsync(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRedshiftInput) *MachineLearningCreateDataSourceFromRedshiftFuture {
+func (a *stub) CreateDataSourceFromRedshiftAsync(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRedshiftInput) *CreateDataSourceFromRedshiftFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.CreateDataSourceFromRedshift", input)
-	return &MachineLearningCreateDataSourceFromRedshiftFuture{Future: future}
+	return &CreateDataSourceFromRedshiftFuture{Future: future}
 }
 
 func (a *stub) CreateDataSourceFromS3(ctx workflow.Context, input *machinelearning.CreateDataSourceFromS3Input) (*machinelearning.CreateDataSourceFromS3Output, error) {
@@ -374,9 +374,9 @@ func (a *stub) CreateDataSourceFromS3(ctx workflow.Context, input *machinelearni
 	return &output, err
 }
 
-func (a *stub) CreateDataSourceFromS3Async(ctx workflow.Context, input *machinelearning.CreateDataSourceFromS3Input) *MachineLearningCreateDataSourceFromS3Future {
+func (a *stub) CreateDataSourceFromS3Async(ctx workflow.Context, input *machinelearning.CreateDataSourceFromS3Input) *CreateDataSourceFromS3Future {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.CreateDataSourceFromS3", input)
-	return &MachineLearningCreateDataSourceFromS3Future{Future: future}
+	return &CreateDataSourceFromS3Future{Future: future}
 }
 
 func (a *stub) CreateEvaluation(ctx workflow.Context, input *machinelearning.CreateEvaluationInput) (*machinelearning.CreateEvaluationOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) CreateEvaluation(ctx workflow.Context, input *machinelearning.Cre
 	return &output, err
 }
 
-func (a *stub) CreateEvaluationAsync(ctx workflow.Context, input *machinelearning.CreateEvaluationInput) *MachineLearningCreateEvaluationFuture {
+func (a *stub) CreateEvaluationAsync(ctx workflow.Context, input *machinelearning.CreateEvaluationInput) *CreateEvaluationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.CreateEvaluation", input)
-	return &MachineLearningCreateEvaluationFuture{Future: future}
+	return &CreateEvaluationFuture{Future: future}
 }
 
 func (a *stub) CreateMLModel(ctx workflow.Context, input *machinelearning.CreateMLModelInput) (*machinelearning.CreateMLModelOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) CreateMLModel(ctx workflow.Context, input *machinelearning.Create
 	return &output, err
 }
 
-func (a *stub) CreateMLModelAsync(ctx workflow.Context, input *machinelearning.CreateMLModelInput) *MachineLearningCreateMLModelFuture {
+func (a *stub) CreateMLModelAsync(ctx workflow.Context, input *machinelearning.CreateMLModelInput) *CreateMLModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.CreateMLModel", input)
-	return &MachineLearningCreateMLModelFuture{Future: future}
+	return &CreateMLModelFuture{Future: future}
 }
 
 func (a *stub) CreateRealtimeEndpoint(ctx workflow.Context, input *machinelearning.CreateRealtimeEndpointInput) (*machinelearning.CreateRealtimeEndpointOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) CreateRealtimeEndpoint(ctx workflow.Context, input *machinelearni
 	return &output, err
 }
 
-func (a *stub) CreateRealtimeEndpointAsync(ctx workflow.Context, input *machinelearning.CreateRealtimeEndpointInput) *MachineLearningCreateRealtimeEndpointFuture {
+func (a *stub) CreateRealtimeEndpointAsync(ctx workflow.Context, input *machinelearning.CreateRealtimeEndpointInput) *CreateRealtimeEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.CreateRealtimeEndpoint", input)
-	return &MachineLearningCreateRealtimeEndpointFuture{Future: future}
+	return &CreateRealtimeEndpointFuture{Future: future}
 }
 
 func (a *stub) DeleteBatchPrediction(ctx workflow.Context, input *machinelearning.DeleteBatchPredictionInput) (*machinelearning.DeleteBatchPredictionOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) DeleteBatchPrediction(ctx workflow.Context, input *machinelearnin
 	return &output, err
 }
 
-func (a *stub) DeleteBatchPredictionAsync(ctx workflow.Context, input *machinelearning.DeleteBatchPredictionInput) *MachineLearningDeleteBatchPredictionFuture {
+func (a *stub) DeleteBatchPredictionAsync(ctx workflow.Context, input *machinelearning.DeleteBatchPredictionInput) *DeleteBatchPredictionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DeleteBatchPrediction", input)
-	return &MachineLearningDeleteBatchPredictionFuture{Future: future}
+	return &DeleteBatchPredictionFuture{Future: future}
 }
 
 func (a *stub) DeleteDataSource(ctx workflow.Context, input *machinelearning.DeleteDataSourceInput) (*machinelearning.DeleteDataSourceOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) DeleteDataSource(ctx workflow.Context, input *machinelearning.Del
 	return &output, err
 }
 
-func (a *stub) DeleteDataSourceAsync(ctx workflow.Context, input *machinelearning.DeleteDataSourceInput) *MachineLearningDeleteDataSourceFuture {
+func (a *stub) DeleteDataSourceAsync(ctx workflow.Context, input *machinelearning.DeleteDataSourceInput) *DeleteDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DeleteDataSource", input)
-	return &MachineLearningDeleteDataSourceFuture{Future: future}
+	return &DeleteDataSourceFuture{Future: future}
 }
 
 func (a *stub) DeleteEvaluation(ctx workflow.Context, input *machinelearning.DeleteEvaluationInput) (*machinelearning.DeleteEvaluationOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) DeleteEvaluation(ctx workflow.Context, input *machinelearning.Del
 	return &output, err
 }
 
-func (a *stub) DeleteEvaluationAsync(ctx workflow.Context, input *machinelearning.DeleteEvaluationInput) *MachineLearningDeleteEvaluationFuture {
+func (a *stub) DeleteEvaluationAsync(ctx workflow.Context, input *machinelearning.DeleteEvaluationInput) *DeleteEvaluationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DeleteEvaluation", input)
-	return &MachineLearningDeleteEvaluationFuture{Future: future}
+	return &DeleteEvaluationFuture{Future: future}
 }
 
 func (a *stub) DeleteMLModel(ctx workflow.Context, input *machinelearning.DeleteMLModelInput) (*machinelearning.DeleteMLModelOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) DeleteMLModel(ctx workflow.Context, input *machinelearning.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteMLModelAsync(ctx workflow.Context, input *machinelearning.DeleteMLModelInput) *MachineLearningDeleteMLModelFuture {
+func (a *stub) DeleteMLModelAsync(ctx workflow.Context, input *machinelearning.DeleteMLModelInput) *DeleteMLModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DeleteMLModel", input)
-	return &MachineLearningDeleteMLModelFuture{Future: future}
+	return &DeleteMLModelFuture{Future: future}
 }
 
 func (a *stub) DeleteRealtimeEndpoint(ctx workflow.Context, input *machinelearning.DeleteRealtimeEndpointInput) (*machinelearning.DeleteRealtimeEndpointOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) DeleteRealtimeEndpoint(ctx workflow.Context, input *machinelearni
 	return &output, err
 }
 
-func (a *stub) DeleteRealtimeEndpointAsync(ctx workflow.Context, input *machinelearning.DeleteRealtimeEndpointInput) *MachineLearningDeleteRealtimeEndpointFuture {
+func (a *stub) DeleteRealtimeEndpointAsync(ctx workflow.Context, input *machinelearning.DeleteRealtimeEndpointInput) *DeleteRealtimeEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DeleteRealtimeEndpoint", input)
-	return &MachineLearningDeleteRealtimeEndpointFuture{Future: future}
+	return &DeleteRealtimeEndpointFuture{Future: future}
 }
 
 func (a *stub) DeleteTags(ctx workflow.Context, input *machinelearning.DeleteTagsInput) (*machinelearning.DeleteTagsOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) DeleteTags(ctx workflow.Context, input *machinelearning.DeleteTag
 	return &output, err
 }
 
-func (a *stub) DeleteTagsAsync(ctx workflow.Context, input *machinelearning.DeleteTagsInput) *MachineLearningDeleteTagsFuture {
+func (a *stub) DeleteTagsAsync(ctx workflow.Context, input *machinelearning.DeleteTagsInput) *DeleteTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DeleteTags", input)
-	return &MachineLearningDeleteTagsFuture{Future: future}
+	return &DeleteTagsFuture{Future: future}
 }
 
 func (a *stub) DescribeBatchPredictions(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) (*machinelearning.DescribeBatchPredictionsOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DescribeBatchPredictions(ctx workflow.Context, input *machinelear
 	return &output, err
 }
 
-func (a *stub) DescribeBatchPredictionsAsync(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) *MachineLearningDescribeBatchPredictionsFuture {
+func (a *stub) DescribeBatchPredictionsAsync(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) *DescribeBatchPredictionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DescribeBatchPredictions", input)
-	return &MachineLearningDescribeBatchPredictionsFuture{Future: future}
+	return &DescribeBatchPredictionsFuture{Future: future}
 }
 
 func (a *stub) DescribeDataSources(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) (*machinelearning.DescribeDataSourcesOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) DescribeDataSources(ctx workflow.Context, input *machinelearning.
 	return &output, err
 }
 
-func (a *stub) DescribeDataSourcesAsync(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) *MachineLearningDescribeDataSourcesFuture {
+func (a *stub) DescribeDataSourcesAsync(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) *DescribeDataSourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DescribeDataSources", input)
-	return &MachineLearningDescribeDataSourcesFuture{Future: future}
+	return &DescribeDataSourcesFuture{Future: future}
 }
 
 func (a *stub) DescribeEvaluations(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) (*machinelearning.DescribeEvaluationsOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DescribeEvaluations(ctx workflow.Context, input *machinelearning.
 	return &output, err
 }
 
-func (a *stub) DescribeEvaluationsAsync(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) *MachineLearningDescribeEvaluationsFuture {
+func (a *stub) DescribeEvaluationsAsync(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) *DescribeEvaluationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DescribeEvaluations", input)
-	return &MachineLearningDescribeEvaluationsFuture{Future: future}
+	return &DescribeEvaluationsFuture{Future: future}
 }
 
 func (a *stub) DescribeMLModels(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) (*machinelearning.DescribeMLModelsOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) DescribeMLModels(ctx workflow.Context, input *machinelearning.Des
 	return &output, err
 }
 
-func (a *stub) DescribeMLModelsAsync(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) *MachineLearningDescribeMLModelsFuture {
+func (a *stub) DescribeMLModelsAsync(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) *DescribeMLModelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DescribeMLModels", input)
-	return &MachineLearningDescribeMLModelsFuture{Future: future}
+	return &DescribeMLModelsFuture{Future: future}
 }
 
 func (a *stub) DescribeTags(ctx workflow.Context, input *machinelearning.DescribeTagsInput) (*machinelearning.DescribeTagsOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) DescribeTags(ctx workflow.Context, input *machinelearning.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeTagsAsync(ctx workflow.Context, input *machinelearning.DescribeTagsInput) *MachineLearningDescribeTagsFuture {
+func (a *stub) DescribeTagsAsync(ctx workflow.Context, input *machinelearning.DescribeTagsInput) *DescribeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.DescribeTags", input)
-	return &MachineLearningDescribeTagsFuture{Future: future}
+	return &DescribeTagsFuture{Future: future}
 }
 
 func (a *stub) GetBatchPrediction(ctx workflow.Context, input *machinelearning.GetBatchPredictionInput) (*machinelearning.GetBatchPredictionOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) GetBatchPrediction(ctx workflow.Context, input *machinelearning.G
 	return &output, err
 }
 
-func (a *stub) GetBatchPredictionAsync(ctx workflow.Context, input *machinelearning.GetBatchPredictionInput) *MachineLearningGetBatchPredictionFuture {
+func (a *stub) GetBatchPredictionAsync(ctx workflow.Context, input *machinelearning.GetBatchPredictionInput) *GetBatchPredictionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.GetBatchPrediction", input)
-	return &MachineLearningGetBatchPredictionFuture{Future: future}
+	return &GetBatchPredictionFuture{Future: future}
 }
 
 func (a *stub) GetDataSource(ctx workflow.Context, input *machinelearning.GetDataSourceInput) (*machinelearning.GetDataSourceOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) GetDataSource(ctx workflow.Context, input *machinelearning.GetDat
 	return &output, err
 }
 
-func (a *stub) GetDataSourceAsync(ctx workflow.Context, input *machinelearning.GetDataSourceInput) *MachineLearningGetDataSourceFuture {
+func (a *stub) GetDataSourceAsync(ctx workflow.Context, input *machinelearning.GetDataSourceInput) *GetDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.GetDataSource", input)
-	return &MachineLearningGetDataSourceFuture{Future: future}
+	return &GetDataSourceFuture{Future: future}
 }
 
 func (a *stub) GetEvaluation(ctx workflow.Context, input *machinelearning.GetEvaluationInput) (*machinelearning.GetEvaluationOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) GetEvaluation(ctx workflow.Context, input *machinelearning.GetEva
 	return &output, err
 }
 
-func (a *stub) GetEvaluationAsync(ctx workflow.Context, input *machinelearning.GetEvaluationInput) *MachineLearningGetEvaluationFuture {
+func (a *stub) GetEvaluationAsync(ctx workflow.Context, input *machinelearning.GetEvaluationInput) *GetEvaluationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.GetEvaluation", input)
-	return &MachineLearningGetEvaluationFuture{Future: future}
+	return &GetEvaluationFuture{Future: future}
 }
 
 func (a *stub) GetMLModel(ctx workflow.Context, input *machinelearning.GetMLModelInput) (*machinelearning.GetMLModelOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) GetMLModel(ctx workflow.Context, input *machinelearning.GetMLMode
 	return &output, err
 }
 
-func (a *stub) GetMLModelAsync(ctx workflow.Context, input *machinelearning.GetMLModelInput) *MachineLearningGetMLModelFuture {
+func (a *stub) GetMLModelAsync(ctx workflow.Context, input *machinelearning.GetMLModelInput) *GetMLModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.GetMLModel", input)
-	return &MachineLearningGetMLModelFuture{Future: future}
+	return &GetMLModelFuture{Future: future}
 }
 
 func (a *stub) Predict(ctx workflow.Context, input *machinelearning.PredictInput) (*machinelearning.PredictOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) Predict(ctx workflow.Context, input *machinelearning.PredictInput
 	return &output, err
 }
 
-func (a *stub) PredictAsync(ctx workflow.Context, input *machinelearning.PredictInput) *MachineLearningPredictFuture {
+func (a *stub) PredictAsync(ctx workflow.Context, input *machinelearning.PredictInput) *PredictFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.Predict", input)
-	return &MachineLearningPredictFuture{Future: future}
+	return &PredictFuture{Future: future}
 }
 
 func (a *stub) UpdateBatchPrediction(ctx workflow.Context, input *machinelearning.UpdateBatchPredictionInput) (*machinelearning.UpdateBatchPredictionOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) UpdateBatchPrediction(ctx workflow.Context, input *machinelearnin
 	return &output, err
 }
 
-func (a *stub) UpdateBatchPredictionAsync(ctx workflow.Context, input *machinelearning.UpdateBatchPredictionInput) *MachineLearningUpdateBatchPredictionFuture {
+func (a *stub) UpdateBatchPredictionAsync(ctx workflow.Context, input *machinelearning.UpdateBatchPredictionInput) *UpdateBatchPredictionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.UpdateBatchPrediction", input)
-	return &MachineLearningUpdateBatchPredictionFuture{Future: future}
+	return &UpdateBatchPredictionFuture{Future: future}
 }
 
 func (a *stub) UpdateDataSource(ctx workflow.Context, input *machinelearning.UpdateDataSourceInput) (*machinelearning.UpdateDataSourceOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) UpdateDataSource(ctx workflow.Context, input *machinelearning.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateDataSourceAsync(ctx workflow.Context, input *machinelearning.UpdateDataSourceInput) *MachineLearningUpdateDataSourceFuture {
+func (a *stub) UpdateDataSourceAsync(ctx workflow.Context, input *machinelearning.UpdateDataSourceInput) *UpdateDataSourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.UpdateDataSource", input)
-	return &MachineLearningUpdateDataSourceFuture{Future: future}
+	return &UpdateDataSourceFuture{Future: future}
 }
 
 func (a *stub) UpdateEvaluation(ctx workflow.Context, input *machinelearning.UpdateEvaluationInput) (*machinelearning.UpdateEvaluationOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) UpdateEvaluation(ctx workflow.Context, input *machinelearning.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateEvaluationAsync(ctx workflow.Context, input *machinelearning.UpdateEvaluationInput) *MachineLearningUpdateEvaluationFuture {
+func (a *stub) UpdateEvaluationAsync(ctx workflow.Context, input *machinelearning.UpdateEvaluationInput) *UpdateEvaluationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.UpdateEvaluation", input)
-	return &MachineLearningUpdateEvaluationFuture{Future: future}
+	return &UpdateEvaluationFuture{Future: future}
 }
 
 func (a *stub) UpdateMLModel(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) (*machinelearning.UpdateMLModelOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) UpdateMLModel(ctx workflow.Context, input *machinelearning.Update
 	return &output, err
 }
 
-func (a *stub) UpdateMLModelAsync(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) *MachineLearningUpdateMLModelFuture {
+func (a *stub) UpdateMLModelAsync(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) *UpdateMLModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.machinelearning.UpdateMLModel", input)
-	return &MachineLearningUpdateMLModelFuture{Future: future}
+	return &UpdateMLModelFuture{Future: future}
 }
 
 func (a *stub) WaitUntilBatchPredictionAvailable(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) error {

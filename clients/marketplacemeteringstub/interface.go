@@ -16,16 +16,16 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchMeterUsage(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) (*marketplacemetering.BatchMeterUsageOutput, error)
-	BatchMeterUsageAsync(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) *MarketplaceMeteringBatchMeterUsageFuture
+	BatchMeterUsageAsync(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) *BatchMeterUsageFuture
 
 	MeterUsage(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) (*marketplacemetering.MeterUsageOutput, error)
-	MeterUsageAsync(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) *MarketplaceMeteringMeterUsageFuture
+	MeterUsageAsync(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) *MeterUsageFuture
 
 	RegisterUsage(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) (*marketplacemetering.RegisterUsageOutput, error)
-	RegisterUsageAsync(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) *MarketplaceMeteringRegisterUsageFuture
+	RegisterUsageAsync(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) *RegisterUsageFuture
 
 	ResolveCustomer(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) (*marketplacemetering.ResolveCustomerOutput, error)
-	ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *MarketplaceMeteringResolveCustomerFuture
+	ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *ResolveCustomerFuture
 }
 
 func NewClient() Client {

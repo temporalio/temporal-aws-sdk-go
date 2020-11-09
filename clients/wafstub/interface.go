@@ -16,235 +16,235 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateByteMatchSet(ctx workflow.Context, input *waf.CreateByteMatchSetInput) (*waf.CreateByteMatchSetOutput, error)
-	CreateByteMatchSetAsync(ctx workflow.Context, input *waf.CreateByteMatchSetInput) *WAFCreateByteMatchSetFuture
+	CreateByteMatchSetAsync(ctx workflow.Context, input *waf.CreateByteMatchSetInput) *CreateByteMatchSetFuture
 
 	CreateGeoMatchSet(ctx workflow.Context, input *waf.CreateGeoMatchSetInput) (*waf.CreateGeoMatchSetOutput, error)
-	CreateGeoMatchSetAsync(ctx workflow.Context, input *waf.CreateGeoMatchSetInput) *WAFCreateGeoMatchSetFuture
+	CreateGeoMatchSetAsync(ctx workflow.Context, input *waf.CreateGeoMatchSetInput) *CreateGeoMatchSetFuture
 
 	CreateIPSet(ctx workflow.Context, input *waf.CreateIPSetInput) (*waf.CreateIPSetOutput, error)
-	CreateIPSetAsync(ctx workflow.Context, input *waf.CreateIPSetInput) *WAFCreateIPSetFuture
+	CreateIPSetAsync(ctx workflow.Context, input *waf.CreateIPSetInput) *CreateIPSetFuture
 
 	CreateRateBasedRule(ctx workflow.Context, input *waf.CreateRateBasedRuleInput) (*waf.CreateRateBasedRuleOutput, error)
-	CreateRateBasedRuleAsync(ctx workflow.Context, input *waf.CreateRateBasedRuleInput) *WAFCreateRateBasedRuleFuture
+	CreateRateBasedRuleAsync(ctx workflow.Context, input *waf.CreateRateBasedRuleInput) *CreateRateBasedRuleFuture
 
 	CreateRegexMatchSet(ctx workflow.Context, input *waf.CreateRegexMatchSetInput) (*waf.CreateRegexMatchSetOutput, error)
-	CreateRegexMatchSetAsync(ctx workflow.Context, input *waf.CreateRegexMatchSetInput) *WAFCreateRegexMatchSetFuture
+	CreateRegexMatchSetAsync(ctx workflow.Context, input *waf.CreateRegexMatchSetInput) *CreateRegexMatchSetFuture
 
 	CreateRegexPatternSet(ctx workflow.Context, input *waf.CreateRegexPatternSetInput) (*waf.CreateRegexPatternSetOutput, error)
-	CreateRegexPatternSetAsync(ctx workflow.Context, input *waf.CreateRegexPatternSetInput) *WAFCreateRegexPatternSetFuture
+	CreateRegexPatternSetAsync(ctx workflow.Context, input *waf.CreateRegexPatternSetInput) *CreateRegexPatternSetFuture
 
 	CreateRule(ctx workflow.Context, input *waf.CreateRuleInput) (*waf.CreateRuleOutput, error)
-	CreateRuleAsync(ctx workflow.Context, input *waf.CreateRuleInput) *WAFCreateRuleFuture
+	CreateRuleAsync(ctx workflow.Context, input *waf.CreateRuleInput) *CreateRuleFuture
 
 	CreateRuleGroup(ctx workflow.Context, input *waf.CreateRuleGroupInput) (*waf.CreateRuleGroupOutput, error)
-	CreateRuleGroupAsync(ctx workflow.Context, input *waf.CreateRuleGroupInput) *WAFCreateRuleGroupFuture
+	CreateRuleGroupAsync(ctx workflow.Context, input *waf.CreateRuleGroupInput) *CreateRuleGroupFuture
 
 	CreateSizeConstraintSet(ctx workflow.Context, input *waf.CreateSizeConstraintSetInput) (*waf.CreateSizeConstraintSetOutput, error)
-	CreateSizeConstraintSetAsync(ctx workflow.Context, input *waf.CreateSizeConstraintSetInput) *WAFCreateSizeConstraintSetFuture
+	CreateSizeConstraintSetAsync(ctx workflow.Context, input *waf.CreateSizeConstraintSetInput) *CreateSizeConstraintSetFuture
 
 	CreateSqlInjectionMatchSet(ctx workflow.Context, input *waf.CreateSqlInjectionMatchSetInput) (*waf.CreateSqlInjectionMatchSetOutput, error)
-	CreateSqlInjectionMatchSetAsync(ctx workflow.Context, input *waf.CreateSqlInjectionMatchSetInput) *WAFCreateSqlInjectionMatchSetFuture
+	CreateSqlInjectionMatchSetAsync(ctx workflow.Context, input *waf.CreateSqlInjectionMatchSetInput) *CreateSqlInjectionMatchSetFuture
 
 	CreateWebACL(ctx workflow.Context, input *waf.CreateWebACLInput) (*waf.CreateWebACLOutput, error)
-	CreateWebACLAsync(ctx workflow.Context, input *waf.CreateWebACLInput) *WAFCreateWebACLFuture
+	CreateWebACLAsync(ctx workflow.Context, input *waf.CreateWebACLInput) *CreateWebACLFuture
 
 	CreateWebACLMigrationStack(ctx workflow.Context, input *waf.CreateWebACLMigrationStackInput) (*waf.CreateWebACLMigrationStackOutput, error)
-	CreateWebACLMigrationStackAsync(ctx workflow.Context, input *waf.CreateWebACLMigrationStackInput) *WAFCreateWebACLMigrationStackFuture
+	CreateWebACLMigrationStackAsync(ctx workflow.Context, input *waf.CreateWebACLMigrationStackInput) *CreateWebACLMigrationStackFuture
 
 	CreateXssMatchSet(ctx workflow.Context, input *waf.CreateXssMatchSetInput) (*waf.CreateXssMatchSetOutput, error)
-	CreateXssMatchSetAsync(ctx workflow.Context, input *waf.CreateXssMatchSetInput) *WAFCreateXssMatchSetFuture
+	CreateXssMatchSetAsync(ctx workflow.Context, input *waf.CreateXssMatchSetInput) *CreateXssMatchSetFuture
 
 	DeleteByteMatchSet(ctx workflow.Context, input *waf.DeleteByteMatchSetInput) (*waf.DeleteByteMatchSetOutput, error)
-	DeleteByteMatchSetAsync(ctx workflow.Context, input *waf.DeleteByteMatchSetInput) *WAFDeleteByteMatchSetFuture
+	DeleteByteMatchSetAsync(ctx workflow.Context, input *waf.DeleteByteMatchSetInput) *DeleteByteMatchSetFuture
 
 	DeleteGeoMatchSet(ctx workflow.Context, input *waf.DeleteGeoMatchSetInput) (*waf.DeleteGeoMatchSetOutput, error)
-	DeleteGeoMatchSetAsync(ctx workflow.Context, input *waf.DeleteGeoMatchSetInput) *WAFDeleteGeoMatchSetFuture
+	DeleteGeoMatchSetAsync(ctx workflow.Context, input *waf.DeleteGeoMatchSetInput) *DeleteGeoMatchSetFuture
 
 	DeleteIPSet(ctx workflow.Context, input *waf.DeleteIPSetInput) (*waf.DeleteIPSetOutput, error)
-	DeleteIPSetAsync(ctx workflow.Context, input *waf.DeleteIPSetInput) *WAFDeleteIPSetFuture
+	DeleteIPSetAsync(ctx workflow.Context, input *waf.DeleteIPSetInput) *DeleteIPSetFuture
 
 	DeleteLoggingConfiguration(ctx workflow.Context, input *waf.DeleteLoggingConfigurationInput) (*waf.DeleteLoggingConfigurationOutput, error)
-	DeleteLoggingConfigurationAsync(ctx workflow.Context, input *waf.DeleteLoggingConfigurationInput) *WAFDeleteLoggingConfigurationFuture
+	DeleteLoggingConfigurationAsync(ctx workflow.Context, input *waf.DeleteLoggingConfigurationInput) *DeleteLoggingConfigurationFuture
 
 	DeletePermissionPolicy(ctx workflow.Context, input *waf.DeletePermissionPolicyInput) (*waf.DeletePermissionPolicyOutput, error)
-	DeletePermissionPolicyAsync(ctx workflow.Context, input *waf.DeletePermissionPolicyInput) *WAFDeletePermissionPolicyFuture
+	DeletePermissionPolicyAsync(ctx workflow.Context, input *waf.DeletePermissionPolicyInput) *DeletePermissionPolicyFuture
 
 	DeleteRateBasedRule(ctx workflow.Context, input *waf.DeleteRateBasedRuleInput) (*waf.DeleteRateBasedRuleOutput, error)
-	DeleteRateBasedRuleAsync(ctx workflow.Context, input *waf.DeleteRateBasedRuleInput) *WAFDeleteRateBasedRuleFuture
+	DeleteRateBasedRuleAsync(ctx workflow.Context, input *waf.DeleteRateBasedRuleInput) *DeleteRateBasedRuleFuture
 
 	DeleteRegexMatchSet(ctx workflow.Context, input *waf.DeleteRegexMatchSetInput) (*waf.DeleteRegexMatchSetOutput, error)
-	DeleteRegexMatchSetAsync(ctx workflow.Context, input *waf.DeleteRegexMatchSetInput) *WAFDeleteRegexMatchSetFuture
+	DeleteRegexMatchSetAsync(ctx workflow.Context, input *waf.DeleteRegexMatchSetInput) *DeleteRegexMatchSetFuture
 
 	DeleteRegexPatternSet(ctx workflow.Context, input *waf.DeleteRegexPatternSetInput) (*waf.DeleteRegexPatternSetOutput, error)
-	DeleteRegexPatternSetAsync(ctx workflow.Context, input *waf.DeleteRegexPatternSetInput) *WAFDeleteRegexPatternSetFuture
+	DeleteRegexPatternSetAsync(ctx workflow.Context, input *waf.DeleteRegexPatternSetInput) *DeleteRegexPatternSetFuture
 
 	DeleteRule(ctx workflow.Context, input *waf.DeleteRuleInput) (*waf.DeleteRuleOutput, error)
-	DeleteRuleAsync(ctx workflow.Context, input *waf.DeleteRuleInput) *WAFDeleteRuleFuture
+	DeleteRuleAsync(ctx workflow.Context, input *waf.DeleteRuleInput) *DeleteRuleFuture
 
 	DeleteRuleGroup(ctx workflow.Context, input *waf.DeleteRuleGroupInput) (*waf.DeleteRuleGroupOutput, error)
-	DeleteRuleGroupAsync(ctx workflow.Context, input *waf.DeleteRuleGroupInput) *WAFDeleteRuleGroupFuture
+	DeleteRuleGroupAsync(ctx workflow.Context, input *waf.DeleteRuleGroupInput) *DeleteRuleGroupFuture
 
 	DeleteSizeConstraintSet(ctx workflow.Context, input *waf.DeleteSizeConstraintSetInput) (*waf.DeleteSizeConstraintSetOutput, error)
-	DeleteSizeConstraintSetAsync(ctx workflow.Context, input *waf.DeleteSizeConstraintSetInput) *WAFDeleteSizeConstraintSetFuture
+	DeleteSizeConstraintSetAsync(ctx workflow.Context, input *waf.DeleteSizeConstraintSetInput) *DeleteSizeConstraintSetFuture
 
 	DeleteSqlInjectionMatchSet(ctx workflow.Context, input *waf.DeleteSqlInjectionMatchSetInput) (*waf.DeleteSqlInjectionMatchSetOutput, error)
-	DeleteSqlInjectionMatchSetAsync(ctx workflow.Context, input *waf.DeleteSqlInjectionMatchSetInput) *WAFDeleteSqlInjectionMatchSetFuture
+	DeleteSqlInjectionMatchSetAsync(ctx workflow.Context, input *waf.DeleteSqlInjectionMatchSetInput) *DeleteSqlInjectionMatchSetFuture
 
 	DeleteWebACL(ctx workflow.Context, input *waf.DeleteWebACLInput) (*waf.DeleteWebACLOutput, error)
-	DeleteWebACLAsync(ctx workflow.Context, input *waf.DeleteWebACLInput) *WAFDeleteWebACLFuture
+	DeleteWebACLAsync(ctx workflow.Context, input *waf.DeleteWebACLInput) *DeleteWebACLFuture
 
 	DeleteXssMatchSet(ctx workflow.Context, input *waf.DeleteXssMatchSetInput) (*waf.DeleteXssMatchSetOutput, error)
-	DeleteXssMatchSetAsync(ctx workflow.Context, input *waf.DeleteXssMatchSetInput) *WAFDeleteXssMatchSetFuture
+	DeleteXssMatchSetAsync(ctx workflow.Context, input *waf.DeleteXssMatchSetInput) *DeleteXssMatchSetFuture
 
 	GetByteMatchSet(ctx workflow.Context, input *waf.GetByteMatchSetInput) (*waf.GetByteMatchSetOutput, error)
-	GetByteMatchSetAsync(ctx workflow.Context, input *waf.GetByteMatchSetInput) *WAFGetByteMatchSetFuture
+	GetByteMatchSetAsync(ctx workflow.Context, input *waf.GetByteMatchSetInput) *GetByteMatchSetFuture
 
 	GetChangeToken(ctx workflow.Context, input *waf.GetChangeTokenInput) (*waf.GetChangeTokenOutput, error)
-	GetChangeTokenAsync(ctx workflow.Context, input *waf.GetChangeTokenInput) *WAFGetChangeTokenFuture
+	GetChangeTokenAsync(ctx workflow.Context, input *waf.GetChangeTokenInput) *GetChangeTokenFuture
 
 	GetChangeTokenStatus(ctx workflow.Context, input *waf.GetChangeTokenStatusInput) (*waf.GetChangeTokenStatusOutput, error)
-	GetChangeTokenStatusAsync(ctx workflow.Context, input *waf.GetChangeTokenStatusInput) *WAFGetChangeTokenStatusFuture
+	GetChangeTokenStatusAsync(ctx workflow.Context, input *waf.GetChangeTokenStatusInput) *GetChangeTokenStatusFuture
 
 	GetGeoMatchSet(ctx workflow.Context, input *waf.GetGeoMatchSetInput) (*waf.GetGeoMatchSetOutput, error)
-	GetGeoMatchSetAsync(ctx workflow.Context, input *waf.GetGeoMatchSetInput) *WAFGetGeoMatchSetFuture
+	GetGeoMatchSetAsync(ctx workflow.Context, input *waf.GetGeoMatchSetInput) *GetGeoMatchSetFuture
 
 	GetIPSet(ctx workflow.Context, input *waf.GetIPSetInput) (*waf.GetIPSetOutput, error)
-	GetIPSetAsync(ctx workflow.Context, input *waf.GetIPSetInput) *WAFGetIPSetFuture
+	GetIPSetAsync(ctx workflow.Context, input *waf.GetIPSetInput) *GetIPSetFuture
 
 	GetLoggingConfiguration(ctx workflow.Context, input *waf.GetLoggingConfigurationInput) (*waf.GetLoggingConfigurationOutput, error)
-	GetLoggingConfigurationAsync(ctx workflow.Context, input *waf.GetLoggingConfigurationInput) *WAFGetLoggingConfigurationFuture
+	GetLoggingConfigurationAsync(ctx workflow.Context, input *waf.GetLoggingConfigurationInput) *GetLoggingConfigurationFuture
 
 	GetPermissionPolicy(ctx workflow.Context, input *waf.GetPermissionPolicyInput) (*waf.GetPermissionPolicyOutput, error)
-	GetPermissionPolicyAsync(ctx workflow.Context, input *waf.GetPermissionPolicyInput) *WAFGetPermissionPolicyFuture
+	GetPermissionPolicyAsync(ctx workflow.Context, input *waf.GetPermissionPolicyInput) *GetPermissionPolicyFuture
 
 	GetRateBasedRule(ctx workflow.Context, input *waf.GetRateBasedRuleInput) (*waf.GetRateBasedRuleOutput, error)
-	GetRateBasedRuleAsync(ctx workflow.Context, input *waf.GetRateBasedRuleInput) *WAFGetRateBasedRuleFuture
+	GetRateBasedRuleAsync(ctx workflow.Context, input *waf.GetRateBasedRuleInput) *GetRateBasedRuleFuture
 
 	GetRateBasedRuleManagedKeys(ctx workflow.Context, input *waf.GetRateBasedRuleManagedKeysInput) (*waf.GetRateBasedRuleManagedKeysOutput, error)
-	GetRateBasedRuleManagedKeysAsync(ctx workflow.Context, input *waf.GetRateBasedRuleManagedKeysInput) *WAFGetRateBasedRuleManagedKeysFuture
+	GetRateBasedRuleManagedKeysAsync(ctx workflow.Context, input *waf.GetRateBasedRuleManagedKeysInput) *GetRateBasedRuleManagedKeysFuture
 
 	GetRegexMatchSet(ctx workflow.Context, input *waf.GetRegexMatchSetInput) (*waf.GetRegexMatchSetOutput, error)
-	GetRegexMatchSetAsync(ctx workflow.Context, input *waf.GetRegexMatchSetInput) *WAFGetRegexMatchSetFuture
+	GetRegexMatchSetAsync(ctx workflow.Context, input *waf.GetRegexMatchSetInput) *GetRegexMatchSetFuture
 
 	GetRegexPatternSet(ctx workflow.Context, input *waf.GetRegexPatternSetInput) (*waf.GetRegexPatternSetOutput, error)
-	GetRegexPatternSetAsync(ctx workflow.Context, input *waf.GetRegexPatternSetInput) *WAFGetRegexPatternSetFuture
+	GetRegexPatternSetAsync(ctx workflow.Context, input *waf.GetRegexPatternSetInput) *GetRegexPatternSetFuture
 
 	GetRule(ctx workflow.Context, input *waf.GetRuleInput) (*waf.GetRuleOutput, error)
-	GetRuleAsync(ctx workflow.Context, input *waf.GetRuleInput) *WAFGetRuleFuture
+	GetRuleAsync(ctx workflow.Context, input *waf.GetRuleInput) *GetRuleFuture
 
 	GetRuleGroup(ctx workflow.Context, input *waf.GetRuleGroupInput) (*waf.GetRuleGroupOutput, error)
-	GetRuleGroupAsync(ctx workflow.Context, input *waf.GetRuleGroupInput) *WAFGetRuleGroupFuture
+	GetRuleGroupAsync(ctx workflow.Context, input *waf.GetRuleGroupInput) *GetRuleGroupFuture
 
 	GetSampledRequests(ctx workflow.Context, input *waf.GetSampledRequestsInput) (*waf.GetSampledRequestsOutput, error)
-	GetSampledRequestsAsync(ctx workflow.Context, input *waf.GetSampledRequestsInput) *WAFGetSampledRequestsFuture
+	GetSampledRequestsAsync(ctx workflow.Context, input *waf.GetSampledRequestsInput) *GetSampledRequestsFuture
 
 	GetSizeConstraintSet(ctx workflow.Context, input *waf.GetSizeConstraintSetInput) (*waf.GetSizeConstraintSetOutput, error)
-	GetSizeConstraintSetAsync(ctx workflow.Context, input *waf.GetSizeConstraintSetInput) *WAFGetSizeConstraintSetFuture
+	GetSizeConstraintSetAsync(ctx workflow.Context, input *waf.GetSizeConstraintSetInput) *GetSizeConstraintSetFuture
 
 	GetSqlInjectionMatchSet(ctx workflow.Context, input *waf.GetSqlInjectionMatchSetInput) (*waf.GetSqlInjectionMatchSetOutput, error)
-	GetSqlInjectionMatchSetAsync(ctx workflow.Context, input *waf.GetSqlInjectionMatchSetInput) *WAFGetSqlInjectionMatchSetFuture
+	GetSqlInjectionMatchSetAsync(ctx workflow.Context, input *waf.GetSqlInjectionMatchSetInput) *GetSqlInjectionMatchSetFuture
 
 	GetWebACL(ctx workflow.Context, input *waf.GetWebACLInput) (*waf.GetWebACLOutput, error)
-	GetWebACLAsync(ctx workflow.Context, input *waf.GetWebACLInput) *WAFGetWebACLFuture
+	GetWebACLAsync(ctx workflow.Context, input *waf.GetWebACLInput) *GetWebACLFuture
 
 	GetXssMatchSet(ctx workflow.Context, input *waf.GetXssMatchSetInput) (*waf.GetXssMatchSetOutput, error)
-	GetXssMatchSetAsync(ctx workflow.Context, input *waf.GetXssMatchSetInput) *WAFGetXssMatchSetFuture
+	GetXssMatchSetAsync(ctx workflow.Context, input *waf.GetXssMatchSetInput) *GetXssMatchSetFuture
 
 	ListActivatedRulesInRuleGroup(ctx workflow.Context, input *waf.ListActivatedRulesInRuleGroupInput) (*waf.ListActivatedRulesInRuleGroupOutput, error)
-	ListActivatedRulesInRuleGroupAsync(ctx workflow.Context, input *waf.ListActivatedRulesInRuleGroupInput) *WAFListActivatedRulesInRuleGroupFuture
+	ListActivatedRulesInRuleGroupAsync(ctx workflow.Context, input *waf.ListActivatedRulesInRuleGroupInput) *ListActivatedRulesInRuleGroupFuture
 
 	ListByteMatchSets(ctx workflow.Context, input *waf.ListByteMatchSetsInput) (*waf.ListByteMatchSetsOutput, error)
-	ListByteMatchSetsAsync(ctx workflow.Context, input *waf.ListByteMatchSetsInput) *WAFListByteMatchSetsFuture
+	ListByteMatchSetsAsync(ctx workflow.Context, input *waf.ListByteMatchSetsInput) *ListByteMatchSetsFuture
 
 	ListGeoMatchSets(ctx workflow.Context, input *waf.ListGeoMatchSetsInput) (*waf.ListGeoMatchSetsOutput, error)
-	ListGeoMatchSetsAsync(ctx workflow.Context, input *waf.ListGeoMatchSetsInput) *WAFListGeoMatchSetsFuture
+	ListGeoMatchSetsAsync(ctx workflow.Context, input *waf.ListGeoMatchSetsInput) *ListGeoMatchSetsFuture
 
 	ListIPSets(ctx workflow.Context, input *waf.ListIPSetsInput) (*waf.ListIPSetsOutput, error)
-	ListIPSetsAsync(ctx workflow.Context, input *waf.ListIPSetsInput) *WAFListIPSetsFuture
+	ListIPSetsAsync(ctx workflow.Context, input *waf.ListIPSetsInput) *ListIPSetsFuture
 
 	ListLoggingConfigurations(ctx workflow.Context, input *waf.ListLoggingConfigurationsInput) (*waf.ListLoggingConfigurationsOutput, error)
-	ListLoggingConfigurationsAsync(ctx workflow.Context, input *waf.ListLoggingConfigurationsInput) *WAFListLoggingConfigurationsFuture
+	ListLoggingConfigurationsAsync(ctx workflow.Context, input *waf.ListLoggingConfigurationsInput) *ListLoggingConfigurationsFuture
 
 	ListRateBasedRules(ctx workflow.Context, input *waf.ListRateBasedRulesInput) (*waf.ListRateBasedRulesOutput, error)
-	ListRateBasedRulesAsync(ctx workflow.Context, input *waf.ListRateBasedRulesInput) *WAFListRateBasedRulesFuture
+	ListRateBasedRulesAsync(ctx workflow.Context, input *waf.ListRateBasedRulesInput) *ListRateBasedRulesFuture
 
 	ListRegexMatchSets(ctx workflow.Context, input *waf.ListRegexMatchSetsInput) (*waf.ListRegexMatchSetsOutput, error)
-	ListRegexMatchSetsAsync(ctx workflow.Context, input *waf.ListRegexMatchSetsInput) *WAFListRegexMatchSetsFuture
+	ListRegexMatchSetsAsync(ctx workflow.Context, input *waf.ListRegexMatchSetsInput) *ListRegexMatchSetsFuture
 
 	ListRegexPatternSets(ctx workflow.Context, input *waf.ListRegexPatternSetsInput) (*waf.ListRegexPatternSetsOutput, error)
-	ListRegexPatternSetsAsync(ctx workflow.Context, input *waf.ListRegexPatternSetsInput) *WAFListRegexPatternSetsFuture
+	ListRegexPatternSetsAsync(ctx workflow.Context, input *waf.ListRegexPatternSetsInput) *ListRegexPatternSetsFuture
 
 	ListRuleGroups(ctx workflow.Context, input *waf.ListRuleGroupsInput) (*waf.ListRuleGroupsOutput, error)
-	ListRuleGroupsAsync(ctx workflow.Context, input *waf.ListRuleGroupsInput) *WAFListRuleGroupsFuture
+	ListRuleGroupsAsync(ctx workflow.Context, input *waf.ListRuleGroupsInput) *ListRuleGroupsFuture
 
 	ListRules(ctx workflow.Context, input *waf.ListRulesInput) (*waf.ListRulesOutput, error)
-	ListRulesAsync(ctx workflow.Context, input *waf.ListRulesInput) *WAFListRulesFuture
+	ListRulesAsync(ctx workflow.Context, input *waf.ListRulesInput) *ListRulesFuture
 
 	ListSizeConstraintSets(ctx workflow.Context, input *waf.ListSizeConstraintSetsInput) (*waf.ListSizeConstraintSetsOutput, error)
-	ListSizeConstraintSetsAsync(ctx workflow.Context, input *waf.ListSizeConstraintSetsInput) *WAFListSizeConstraintSetsFuture
+	ListSizeConstraintSetsAsync(ctx workflow.Context, input *waf.ListSizeConstraintSetsInput) *ListSizeConstraintSetsFuture
 
 	ListSqlInjectionMatchSets(ctx workflow.Context, input *waf.ListSqlInjectionMatchSetsInput) (*waf.ListSqlInjectionMatchSetsOutput, error)
-	ListSqlInjectionMatchSetsAsync(ctx workflow.Context, input *waf.ListSqlInjectionMatchSetsInput) *WAFListSqlInjectionMatchSetsFuture
+	ListSqlInjectionMatchSetsAsync(ctx workflow.Context, input *waf.ListSqlInjectionMatchSetsInput) *ListSqlInjectionMatchSetsFuture
 
 	ListSubscribedRuleGroups(ctx workflow.Context, input *waf.ListSubscribedRuleGroupsInput) (*waf.ListSubscribedRuleGroupsOutput, error)
-	ListSubscribedRuleGroupsAsync(ctx workflow.Context, input *waf.ListSubscribedRuleGroupsInput) *WAFListSubscribedRuleGroupsFuture
+	ListSubscribedRuleGroupsAsync(ctx workflow.Context, input *waf.ListSubscribedRuleGroupsInput) *ListSubscribedRuleGroupsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *waf.ListTagsForResourceInput) (*waf.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *waf.ListTagsForResourceInput) *WAFListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *waf.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListWebACLs(ctx workflow.Context, input *waf.ListWebACLsInput) (*waf.ListWebACLsOutput, error)
-	ListWebACLsAsync(ctx workflow.Context, input *waf.ListWebACLsInput) *WAFListWebACLsFuture
+	ListWebACLsAsync(ctx workflow.Context, input *waf.ListWebACLsInput) *ListWebACLsFuture
 
 	ListXssMatchSets(ctx workflow.Context, input *waf.ListXssMatchSetsInput) (*waf.ListXssMatchSetsOutput, error)
-	ListXssMatchSetsAsync(ctx workflow.Context, input *waf.ListXssMatchSetsInput) *WAFListXssMatchSetsFuture
+	ListXssMatchSetsAsync(ctx workflow.Context, input *waf.ListXssMatchSetsInput) *ListXssMatchSetsFuture
 
 	PutLoggingConfiguration(ctx workflow.Context, input *waf.PutLoggingConfigurationInput) (*waf.PutLoggingConfigurationOutput, error)
-	PutLoggingConfigurationAsync(ctx workflow.Context, input *waf.PutLoggingConfigurationInput) *WAFPutLoggingConfigurationFuture
+	PutLoggingConfigurationAsync(ctx workflow.Context, input *waf.PutLoggingConfigurationInput) *PutLoggingConfigurationFuture
 
 	PutPermissionPolicy(ctx workflow.Context, input *waf.PutPermissionPolicyInput) (*waf.PutPermissionPolicyOutput, error)
-	PutPermissionPolicyAsync(ctx workflow.Context, input *waf.PutPermissionPolicyInput) *WAFPutPermissionPolicyFuture
+	PutPermissionPolicyAsync(ctx workflow.Context, input *waf.PutPermissionPolicyInput) *PutPermissionPolicyFuture
 
 	TagResource(ctx workflow.Context, input *waf.TagResourceInput) (*waf.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *waf.TagResourceInput) *WAFTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *waf.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *waf.UntagResourceInput) (*waf.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *waf.UntagResourceInput) *WAFUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *waf.UntagResourceInput) *UntagResourceFuture
 
 	UpdateByteMatchSet(ctx workflow.Context, input *waf.UpdateByteMatchSetInput) (*waf.UpdateByteMatchSetOutput, error)
-	UpdateByteMatchSetAsync(ctx workflow.Context, input *waf.UpdateByteMatchSetInput) *WAFUpdateByteMatchSetFuture
+	UpdateByteMatchSetAsync(ctx workflow.Context, input *waf.UpdateByteMatchSetInput) *UpdateByteMatchSetFuture
 
 	UpdateGeoMatchSet(ctx workflow.Context, input *waf.UpdateGeoMatchSetInput) (*waf.UpdateGeoMatchSetOutput, error)
-	UpdateGeoMatchSetAsync(ctx workflow.Context, input *waf.UpdateGeoMatchSetInput) *WAFUpdateGeoMatchSetFuture
+	UpdateGeoMatchSetAsync(ctx workflow.Context, input *waf.UpdateGeoMatchSetInput) *UpdateGeoMatchSetFuture
 
 	UpdateIPSet(ctx workflow.Context, input *waf.UpdateIPSetInput) (*waf.UpdateIPSetOutput, error)
-	UpdateIPSetAsync(ctx workflow.Context, input *waf.UpdateIPSetInput) *WAFUpdateIPSetFuture
+	UpdateIPSetAsync(ctx workflow.Context, input *waf.UpdateIPSetInput) *UpdateIPSetFuture
 
 	UpdateRateBasedRule(ctx workflow.Context, input *waf.UpdateRateBasedRuleInput) (*waf.UpdateRateBasedRuleOutput, error)
-	UpdateRateBasedRuleAsync(ctx workflow.Context, input *waf.UpdateRateBasedRuleInput) *WAFUpdateRateBasedRuleFuture
+	UpdateRateBasedRuleAsync(ctx workflow.Context, input *waf.UpdateRateBasedRuleInput) *UpdateRateBasedRuleFuture
 
 	UpdateRegexMatchSet(ctx workflow.Context, input *waf.UpdateRegexMatchSetInput) (*waf.UpdateRegexMatchSetOutput, error)
-	UpdateRegexMatchSetAsync(ctx workflow.Context, input *waf.UpdateRegexMatchSetInput) *WAFUpdateRegexMatchSetFuture
+	UpdateRegexMatchSetAsync(ctx workflow.Context, input *waf.UpdateRegexMatchSetInput) *UpdateRegexMatchSetFuture
 
 	UpdateRegexPatternSet(ctx workflow.Context, input *waf.UpdateRegexPatternSetInput) (*waf.UpdateRegexPatternSetOutput, error)
-	UpdateRegexPatternSetAsync(ctx workflow.Context, input *waf.UpdateRegexPatternSetInput) *WAFUpdateRegexPatternSetFuture
+	UpdateRegexPatternSetAsync(ctx workflow.Context, input *waf.UpdateRegexPatternSetInput) *UpdateRegexPatternSetFuture
 
 	UpdateRule(ctx workflow.Context, input *waf.UpdateRuleInput) (*waf.UpdateRuleOutput, error)
-	UpdateRuleAsync(ctx workflow.Context, input *waf.UpdateRuleInput) *WAFUpdateRuleFuture
+	UpdateRuleAsync(ctx workflow.Context, input *waf.UpdateRuleInput) *UpdateRuleFuture
 
 	UpdateRuleGroup(ctx workflow.Context, input *waf.UpdateRuleGroupInput) (*waf.UpdateRuleGroupOutput, error)
-	UpdateRuleGroupAsync(ctx workflow.Context, input *waf.UpdateRuleGroupInput) *WAFUpdateRuleGroupFuture
+	UpdateRuleGroupAsync(ctx workflow.Context, input *waf.UpdateRuleGroupInput) *UpdateRuleGroupFuture
 
 	UpdateSizeConstraintSet(ctx workflow.Context, input *waf.UpdateSizeConstraintSetInput) (*waf.UpdateSizeConstraintSetOutput, error)
-	UpdateSizeConstraintSetAsync(ctx workflow.Context, input *waf.UpdateSizeConstraintSetInput) *WAFUpdateSizeConstraintSetFuture
+	UpdateSizeConstraintSetAsync(ctx workflow.Context, input *waf.UpdateSizeConstraintSetInput) *UpdateSizeConstraintSetFuture
 
 	UpdateSqlInjectionMatchSet(ctx workflow.Context, input *waf.UpdateSqlInjectionMatchSetInput) (*waf.UpdateSqlInjectionMatchSetOutput, error)
-	UpdateSqlInjectionMatchSetAsync(ctx workflow.Context, input *waf.UpdateSqlInjectionMatchSetInput) *WAFUpdateSqlInjectionMatchSetFuture
+	UpdateSqlInjectionMatchSetAsync(ctx workflow.Context, input *waf.UpdateSqlInjectionMatchSetInput) *UpdateSqlInjectionMatchSetFuture
 
 	UpdateWebACL(ctx workflow.Context, input *waf.UpdateWebACLInput) (*waf.UpdateWebACLOutput, error)
-	UpdateWebACLAsync(ctx workflow.Context, input *waf.UpdateWebACLInput) *WAFUpdateWebACLFuture
+	UpdateWebACLAsync(ctx workflow.Context, input *waf.UpdateWebACLInput) *UpdateWebACLFuture
 
 	UpdateXssMatchSet(ctx workflow.Context, input *waf.UpdateXssMatchSetInput) (*waf.UpdateXssMatchSetOutput, error)
-	UpdateXssMatchSetAsync(ctx workflow.Context, input *waf.UpdateXssMatchSetInput) *WAFUpdateXssMatchSetFuture
+	UpdateXssMatchSetAsync(ctx workflow.Context, input *waf.UpdateXssMatchSetInput) *UpdateXssMatchSetFuture
 }
 
 func NewClient() Client {

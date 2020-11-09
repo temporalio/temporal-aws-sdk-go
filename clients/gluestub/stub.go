@@ -16,1486 +16,1486 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type GlueBatchCreatePartitionFuture struct {
+type BatchCreatePartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchCreatePartitionFuture) Get(ctx workflow.Context) (*glue.BatchCreatePartitionOutput, error) {
+func (r *BatchCreatePartitionFuture) Get(ctx workflow.Context) (*glue.BatchCreatePartitionOutput, error) {
 	var output glue.BatchCreatePartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchDeleteConnectionFuture struct {
+type BatchDeleteConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchDeleteConnectionFuture) Get(ctx workflow.Context) (*glue.BatchDeleteConnectionOutput, error) {
+func (r *BatchDeleteConnectionFuture) Get(ctx workflow.Context) (*glue.BatchDeleteConnectionOutput, error) {
 	var output glue.BatchDeleteConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchDeletePartitionFuture struct {
+type BatchDeletePartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchDeletePartitionFuture) Get(ctx workflow.Context) (*glue.BatchDeletePartitionOutput, error) {
+func (r *BatchDeletePartitionFuture) Get(ctx workflow.Context) (*glue.BatchDeletePartitionOutput, error) {
 	var output glue.BatchDeletePartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchDeleteTableFuture struct {
+type BatchDeleteTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchDeleteTableFuture) Get(ctx workflow.Context) (*glue.BatchDeleteTableOutput, error) {
+func (r *BatchDeleteTableFuture) Get(ctx workflow.Context) (*glue.BatchDeleteTableOutput, error) {
 	var output glue.BatchDeleteTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchDeleteTableVersionFuture struct {
+type BatchDeleteTableVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchDeleteTableVersionFuture) Get(ctx workflow.Context) (*glue.BatchDeleteTableVersionOutput, error) {
+func (r *BatchDeleteTableVersionFuture) Get(ctx workflow.Context) (*glue.BatchDeleteTableVersionOutput, error) {
 	var output glue.BatchDeleteTableVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchGetCrawlersFuture struct {
+type BatchGetCrawlersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchGetCrawlersFuture) Get(ctx workflow.Context) (*glue.BatchGetCrawlersOutput, error) {
+func (r *BatchGetCrawlersFuture) Get(ctx workflow.Context) (*glue.BatchGetCrawlersOutput, error) {
 	var output glue.BatchGetCrawlersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchGetDevEndpointsFuture struct {
+type BatchGetDevEndpointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchGetDevEndpointsFuture) Get(ctx workflow.Context) (*glue.BatchGetDevEndpointsOutput, error) {
+func (r *BatchGetDevEndpointsFuture) Get(ctx workflow.Context) (*glue.BatchGetDevEndpointsOutput, error) {
 	var output glue.BatchGetDevEndpointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchGetJobsFuture struct {
+type BatchGetJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchGetJobsFuture) Get(ctx workflow.Context) (*glue.BatchGetJobsOutput, error) {
+func (r *BatchGetJobsFuture) Get(ctx workflow.Context) (*glue.BatchGetJobsOutput, error) {
 	var output glue.BatchGetJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchGetPartitionFuture struct {
+type BatchGetPartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchGetPartitionFuture) Get(ctx workflow.Context) (*glue.BatchGetPartitionOutput, error) {
+func (r *BatchGetPartitionFuture) Get(ctx workflow.Context) (*glue.BatchGetPartitionOutput, error) {
 	var output glue.BatchGetPartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchGetTriggersFuture struct {
+type BatchGetTriggersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchGetTriggersFuture) Get(ctx workflow.Context) (*glue.BatchGetTriggersOutput, error) {
+func (r *BatchGetTriggersFuture) Get(ctx workflow.Context) (*glue.BatchGetTriggersOutput, error) {
 	var output glue.BatchGetTriggersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchGetWorkflowsFuture struct {
+type BatchGetWorkflowsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchGetWorkflowsFuture) Get(ctx workflow.Context) (*glue.BatchGetWorkflowsOutput, error) {
+func (r *BatchGetWorkflowsFuture) Get(ctx workflow.Context) (*glue.BatchGetWorkflowsOutput, error) {
 	var output glue.BatchGetWorkflowsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchStopJobRunFuture struct {
+type BatchStopJobRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchStopJobRunFuture) Get(ctx workflow.Context) (*glue.BatchStopJobRunOutput, error) {
+func (r *BatchStopJobRunFuture) Get(ctx workflow.Context) (*glue.BatchStopJobRunOutput, error) {
 	var output glue.BatchStopJobRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueBatchUpdatePartitionFuture struct {
+type BatchUpdatePartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueBatchUpdatePartitionFuture) Get(ctx workflow.Context) (*glue.BatchUpdatePartitionOutput, error) {
+func (r *BatchUpdatePartitionFuture) Get(ctx workflow.Context) (*glue.BatchUpdatePartitionOutput, error) {
 	var output glue.BatchUpdatePartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCancelMLTaskRunFuture struct {
+type CancelMLTaskRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCancelMLTaskRunFuture) Get(ctx workflow.Context) (*glue.CancelMLTaskRunOutput, error) {
+func (r *CancelMLTaskRunFuture) Get(ctx workflow.Context) (*glue.CancelMLTaskRunOutput, error) {
 	var output glue.CancelMLTaskRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateClassifierFuture struct {
+type CreateClassifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateClassifierFuture) Get(ctx workflow.Context) (*glue.CreateClassifierOutput, error) {
+func (r *CreateClassifierFuture) Get(ctx workflow.Context) (*glue.CreateClassifierOutput, error) {
 	var output glue.CreateClassifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateConnectionFuture struct {
+type CreateConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateConnectionFuture) Get(ctx workflow.Context) (*glue.CreateConnectionOutput, error) {
+func (r *CreateConnectionFuture) Get(ctx workflow.Context) (*glue.CreateConnectionOutput, error) {
 	var output glue.CreateConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateCrawlerFuture struct {
+type CreateCrawlerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateCrawlerFuture) Get(ctx workflow.Context) (*glue.CreateCrawlerOutput, error) {
+func (r *CreateCrawlerFuture) Get(ctx workflow.Context) (*glue.CreateCrawlerOutput, error) {
 	var output glue.CreateCrawlerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateDatabaseFuture struct {
+type CreateDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateDatabaseFuture) Get(ctx workflow.Context) (*glue.CreateDatabaseOutput, error) {
+func (r *CreateDatabaseFuture) Get(ctx workflow.Context) (*glue.CreateDatabaseOutput, error) {
 	var output glue.CreateDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateDevEndpointFuture struct {
+type CreateDevEndpointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateDevEndpointFuture) Get(ctx workflow.Context) (*glue.CreateDevEndpointOutput, error) {
+func (r *CreateDevEndpointFuture) Get(ctx workflow.Context) (*glue.CreateDevEndpointOutput, error) {
 	var output glue.CreateDevEndpointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateJobFuture struct {
+type CreateJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateJobFuture) Get(ctx workflow.Context) (*glue.CreateJobOutput, error) {
+func (r *CreateJobFuture) Get(ctx workflow.Context) (*glue.CreateJobOutput, error) {
 	var output glue.CreateJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateMLTransformFuture struct {
+type CreateMLTransformFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateMLTransformFuture) Get(ctx workflow.Context) (*glue.CreateMLTransformOutput, error) {
+func (r *CreateMLTransformFuture) Get(ctx workflow.Context) (*glue.CreateMLTransformOutput, error) {
 	var output glue.CreateMLTransformOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreatePartitionFuture struct {
+type CreatePartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreatePartitionFuture) Get(ctx workflow.Context) (*glue.CreatePartitionOutput, error) {
+func (r *CreatePartitionFuture) Get(ctx workflow.Context) (*glue.CreatePartitionOutput, error) {
 	var output glue.CreatePartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateScriptFuture struct {
+type CreateScriptFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateScriptFuture) Get(ctx workflow.Context) (*glue.CreateScriptOutput, error) {
+func (r *CreateScriptFuture) Get(ctx workflow.Context) (*glue.CreateScriptOutput, error) {
 	var output glue.CreateScriptOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateSecurityConfigurationFuture struct {
+type CreateSecurityConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue.CreateSecurityConfigurationOutput, error) {
+func (r *CreateSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue.CreateSecurityConfigurationOutput, error) {
 	var output glue.CreateSecurityConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateTableFuture struct {
+type CreateTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateTableFuture) Get(ctx workflow.Context) (*glue.CreateTableOutput, error) {
+func (r *CreateTableFuture) Get(ctx workflow.Context) (*glue.CreateTableOutput, error) {
 	var output glue.CreateTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateTriggerFuture struct {
+type CreateTriggerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateTriggerFuture) Get(ctx workflow.Context) (*glue.CreateTriggerOutput, error) {
+func (r *CreateTriggerFuture) Get(ctx workflow.Context) (*glue.CreateTriggerOutput, error) {
 	var output glue.CreateTriggerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateUserDefinedFunctionFuture struct {
+type CreateUserDefinedFunctionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.CreateUserDefinedFunctionOutput, error) {
+func (r *CreateUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.CreateUserDefinedFunctionOutput, error) {
 	var output glue.CreateUserDefinedFunctionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueCreateWorkflowFuture struct {
+type CreateWorkflowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueCreateWorkflowFuture) Get(ctx workflow.Context) (*glue.CreateWorkflowOutput, error) {
+func (r *CreateWorkflowFuture) Get(ctx workflow.Context) (*glue.CreateWorkflowOutput, error) {
 	var output glue.CreateWorkflowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteClassifierFuture struct {
+type DeleteClassifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteClassifierFuture) Get(ctx workflow.Context) (*glue.DeleteClassifierOutput, error) {
+func (r *DeleteClassifierFuture) Get(ctx workflow.Context) (*glue.DeleteClassifierOutput, error) {
 	var output glue.DeleteClassifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteColumnStatisticsForPartitionFuture struct {
+type DeleteColumnStatisticsForPartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteColumnStatisticsForPartitionFuture) Get(ctx workflow.Context) (*glue.DeleteColumnStatisticsForPartitionOutput, error) {
+func (r *DeleteColumnStatisticsForPartitionFuture) Get(ctx workflow.Context) (*glue.DeleteColumnStatisticsForPartitionOutput, error) {
 	var output glue.DeleteColumnStatisticsForPartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteColumnStatisticsForTableFuture struct {
+type DeleteColumnStatisticsForTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*glue.DeleteColumnStatisticsForTableOutput, error) {
+func (r *DeleteColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*glue.DeleteColumnStatisticsForTableOutput, error) {
 	var output glue.DeleteColumnStatisticsForTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteConnectionFuture struct {
+type DeleteConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteConnectionFuture) Get(ctx workflow.Context) (*glue.DeleteConnectionOutput, error) {
+func (r *DeleteConnectionFuture) Get(ctx workflow.Context) (*glue.DeleteConnectionOutput, error) {
 	var output glue.DeleteConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteCrawlerFuture struct {
+type DeleteCrawlerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteCrawlerFuture) Get(ctx workflow.Context) (*glue.DeleteCrawlerOutput, error) {
+func (r *DeleteCrawlerFuture) Get(ctx workflow.Context) (*glue.DeleteCrawlerOutput, error) {
 	var output glue.DeleteCrawlerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteDatabaseFuture struct {
+type DeleteDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteDatabaseFuture) Get(ctx workflow.Context) (*glue.DeleteDatabaseOutput, error) {
+func (r *DeleteDatabaseFuture) Get(ctx workflow.Context) (*glue.DeleteDatabaseOutput, error) {
 	var output glue.DeleteDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteDevEndpointFuture struct {
+type DeleteDevEndpointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteDevEndpointFuture) Get(ctx workflow.Context) (*glue.DeleteDevEndpointOutput, error) {
+func (r *DeleteDevEndpointFuture) Get(ctx workflow.Context) (*glue.DeleteDevEndpointOutput, error) {
 	var output glue.DeleteDevEndpointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteJobFuture struct {
+type DeleteJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteJobFuture) Get(ctx workflow.Context) (*glue.DeleteJobOutput, error) {
+func (r *DeleteJobFuture) Get(ctx workflow.Context) (*glue.DeleteJobOutput, error) {
 	var output glue.DeleteJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteMLTransformFuture struct {
+type DeleteMLTransformFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteMLTransformFuture) Get(ctx workflow.Context) (*glue.DeleteMLTransformOutput, error) {
+func (r *DeleteMLTransformFuture) Get(ctx workflow.Context) (*glue.DeleteMLTransformOutput, error) {
 	var output glue.DeleteMLTransformOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeletePartitionFuture struct {
+type DeletePartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeletePartitionFuture) Get(ctx workflow.Context) (*glue.DeletePartitionOutput, error) {
+func (r *DeletePartitionFuture) Get(ctx workflow.Context) (*glue.DeletePartitionOutput, error) {
 	var output glue.DeletePartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteResourcePolicyFuture struct {
+type DeleteResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*glue.DeleteResourcePolicyOutput, error) {
+func (r *DeleteResourcePolicyFuture) Get(ctx workflow.Context) (*glue.DeleteResourcePolicyOutput, error) {
 	var output glue.DeleteResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteSecurityConfigurationFuture struct {
+type DeleteSecurityConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue.DeleteSecurityConfigurationOutput, error) {
+func (r *DeleteSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue.DeleteSecurityConfigurationOutput, error) {
 	var output glue.DeleteSecurityConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteTableFuture struct {
+type DeleteTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteTableFuture) Get(ctx workflow.Context) (*glue.DeleteTableOutput, error) {
+func (r *DeleteTableFuture) Get(ctx workflow.Context) (*glue.DeleteTableOutput, error) {
 	var output glue.DeleteTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteTableVersionFuture struct {
+type DeleteTableVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteTableVersionFuture) Get(ctx workflow.Context) (*glue.DeleteTableVersionOutput, error) {
+func (r *DeleteTableVersionFuture) Get(ctx workflow.Context) (*glue.DeleteTableVersionOutput, error) {
 	var output glue.DeleteTableVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteTriggerFuture struct {
+type DeleteTriggerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteTriggerFuture) Get(ctx workflow.Context) (*glue.DeleteTriggerOutput, error) {
+func (r *DeleteTriggerFuture) Get(ctx workflow.Context) (*glue.DeleteTriggerOutput, error) {
 	var output glue.DeleteTriggerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteUserDefinedFunctionFuture struct {
+type DeleteUserDefinedFunctionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.DeleteUserDefinedFunctionOutput, error) {
+func (r *DeleteUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.DeleteUserDefinedFunctionOutput, error) {
 	var output glue.DeleteUserDefinedFunctionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueDeleteWorkflowFuture struct {
+type DeleteWorkflowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueDeleteWorkflowFuture) Get(ctx workflow.Context) (*glue.DeleteWorkflowOutput, error) {
+func (r *DeleteWorkflowFuture) Get(ctx workflow.Context) (*glue.DeleteWorkflowOutput, error) {
 	var output glue.DeleteWorkflowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetCatalogImportStatusFuture struct {
+type GetCatalogImportStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetCatalogImportStatusFuture) Get(ctx workflow.Context) (*glue.GetCatalogImportStatusOutput, error) {
+func (r *GetCatalogImportStatusFuture) Get(ctx workflow.Context) (*glue.GetCatalogImportStatusOutput, error) {
 	var output glue.GetCatalogImportStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetClassifierFuture struct {
+type GetClassifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetClassifierFuture) Get(ctx workflow.Context) (*glue.GetClassifierOutput, error) {
+func (r *GetClassifierFuture) Get(ctx workflow.Context) (*glue.GetClassifierOutput, error) {
 	var output glue.GetClassifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetClassifiersFuture struct {
+type GetClassifiersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetClassifiersFuture) Get(ctx workflow.Context) (*glue.GetClassifiersOutput, error) {
+func (r *GetClassifiersFuture) Get(ctx workflow.Context) (*glue.GetClassifiersOutput, error) {
 	var output glue.GetClassifiersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetColumnStatisticsForPartitionFuture struct {
+type GetColumnStatisticsForPartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetColumnStatisticsForPartitionFuture) Get(ctx workflow.Context) (*glue.GetColumnStatisticsForPartitionOutput, error) {
+func (r *GetColumnStatisticsForPartitionFuture) Get(ctx workflow.Context) (*glue.GetColumnStatisticsForPartitionOutput, error) {
 	var output glue.GetColumnStatisticsForPartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetColumnStatisticsForTableFuture struct {
+type GetColumnStatisticsForTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*glue.GetColumnStatisticsForTableOutput, error) {
+func (r *GetColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*glue.GetColumnStatisticsForTableOutput, error) {
 	var output glue.GetColumnStatisticsForTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetConnectionFuture struct {
+type GetConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetConnectionFuture) Get(ctx workflow.Context) (*glue.GetConnectionOutput, error) {
+func (r *GetConnectionFuture) Get(ctx workflow.Context) (*glue.GetConnectionOutput, error) {
 	var output glue.GetConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetConnectionsFuture struct {
+type GetConnectionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetConnectionsFuture) Get(ctx workflow.Context) (*glue.GetConnectionsOutput, error) {
+func (r *GetConnectionsFuture) Get(ctx workflow.Context) (*glue.GetConnectionsOutput, error) {
 	var output glue.GetConnectionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetCrawlerFuture struct {
+type GetCrawlerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetCrawlerFuture) Get(ctx workflow.Context) (*glue.GetCrawlerOutput, error) {
+func (r *GetCrawlerFuture) Get(ctx workflow.Context) (*glue.GetCrawlerOutput, error) {
 	var output glue.GetCrawlerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetCrawlerMetricsFuture struct {
+type GetCrawlerMetricsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetCrawlerMetricsFuture) Get(ctx workflow.Context) (*glue.GetCrawlerMetricsOutput, error) {
+func (r *GetCrawlerMetricsFuture) Get(ctx workflow.Context) (*glue.GetCrawlerMetricsOutput, error) {
 	var output glue.GetCrawlerMetricsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetCrawlersFuture struct {
+type GetCrawlersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetCrawlersFuture) Get(ctx workflow.Context) (*glue.GetCrawlersOutput, error) {
+func (r *GetCrawlersFuture) Get(ctx workflow.Context) (*glue.GetCrawlersOutput, error) {
 	var output glue.GetCrawlersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetDataCatalogEncryptionSettingsFuture struct {
+type GetDataCatalogEncryptionSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetDataCatalogEncryptionSettingsFuture) Get(ctx workflow.Context) (*glue.GetDataCatalogEncryptionSettingsOutput, error) {
+func (r *GetDataCatalogEncryptionSettingsFuture) Get(ctx workflow.Context) (*glue.GetDataCatalogEncryptionSettingsOutput, error) {
 	var output glue.GetDataCatalogEncryptionSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetDatabaseFuture struct {
+type GetDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetDatabaseFuture) Get(ctx workflow.Context) (*glue.GetDatabaseOutput, error) {
+func (r *GetDatabaseFuture) Get(ctx workflow.Context) (*glue.GetDatabaseOutput, error) {
 	var output glue.GetDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetDatabasesFuture struct {
+type GetDatabasesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetDatabasesFuture) Get(ctx workflow.Context) (*glue.GetDatabasesOutput, error) {
+func (r *GetDatabasesFuture) Get(ctx workflow.Context) (*glue.GetDatabasesOutput, error) {
 	var output glue.GetDatabasesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetDataflowGraphFuture struct {
+type GetDataflowGraphFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetDataflowGraphFuture) Get(ctx workflow.Context) (*glue.GetDataflowGraphOutput, error) {
+func (r *GetDataflowGraphFuture) Get(ctx workflow.Context) (*glue.GetDataflowGraphOutput, error) {
 	var output glue.GetDataflowGraphOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetDevEndpointFuture struct {
+type GetDevEndpointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetDevEndpointFuture) Get(ctx workflow.Context) (*glue.GetDevEndpointOutput, error) {
+func (r *GetDevEndpointFuture) Get(ctx workflow.Context) (*glue.GetDevEndpointOutput, error) {
 	var output glue.GetDevEndpointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetDevEndpointsFuture struct {
+type GetDevEndpointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetDevEndpointsFuture) Get(ctx workflow.Context) (*glue.GetDevEndpointsOutput, error) {
+func (r *GetDevEndpointsFuture) Get(ctx workflow.Context) (*glue.GetDevEndpointsOutput, error) {
 	var output glue.GetDevEndpointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetJobFuture struct {
+type GetJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetJobFuture) Get(ctx workflow.Context) (*glue.GetJobOutput, error) {
+func (r *GetJobFuture) Get(ctx workflow.Context) (*glue.GetJobOutput, error) {
 	var output glue.GetJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetJobBookmarkFuture struct {
+type GetJobBookmarkFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetJobBookmarkFuture) Get(ctx workflow.Context) (*glue.GetJobBookmarkOutput, error) {
+func (r *GetJobBookmarkFuture) Get(ctx workflow.Context) (*glue.GetJobBookmarkOutput, error) {
 	var output glue.GetJobBookmarkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetJobRunFuture struct {
+type GetJobRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetJobRunFuture) Get(ctx workflow.Context) (*glue.GetJobRunOutput, error) {
+func (r *GetJobRunFuture) Get(ctx workflow.Context) (*glue.GetJobRunOutput, error) {
 	var output glue.GetJobRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetJobRunsFuture struct {
+type GetJobRunsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetJobRunsFuture) Get(ctx workflow.Context) (*glue.GetJobRunsOutput, error) {
+func (r *GetJobRunsFuture) Get(ctx workflow.Context) (*glue.GetJobRunsOutput, error) {
 	var output glue.GetJobRunsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetJobsFuture struct {
+type GetJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetJobsFuture) Get(ctx workflow.Context) (*glue.GetJobsOutput, error) {
+func (r *GetJobsFuture) Get(ctx workflow.Context) (*glue.GetJobsOutput, error) {
 	var output glue.GetJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetMLTaskRunFuture struct {
+type GetMLTaskRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetMLTaskRunFuture) Get(ctx workflow.Context) (*glue.GetMLTaskRunOutput, error) {
+func (r *GetMLTaskRunFuture) Get(ctx workflow.Context) (*glue.GetMLTaskRunOutput, error) {
 	var output glue.GetMLTaskRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetMLTaskRunsFuture struct {
+type GetMLTaskRunsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetMLTaskRunsFuture) Get(ctx workflow.Context) (*glue.GetMLTaskRunsOutput, error) {
+func (r *GetMLTaskRunsFuture) Get(ctx workflow.Context) (*glue.GetMLTaskRunsOutput, error) {
 	var output glue.GetMLTaskRunsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetMLTransformFuture struct {
+type GetMLTransformFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetMLTransformFuture) Get(ctx workflow.Context) (*glue.GetMLTransformOutput, error) {
+func (r *GetMLTransformFuture) Get(ctx workflow.Context) (*glue.GetMLTransformOutput, error) {
 	var output glue.GetMLTransformOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetMLTransformsFuture struct {
+type GetMLTransformsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetMLTransformsFuture) Get(ctx workflow.Context) (*glue.GetMLTransformsOutput, error) {
+func (r *GetMLTransformsFuture) Get(ctx workflow.Context) (*glue.GetMLTransformsOutput, error) {
 	var output glue.GetMLTransformsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetMappingFuture struct {
+type GetMappingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetMappingFuture) Get(ctx workflow.Context) (*glue.GetMappingOutput, error) {
+func (r *GetMappingFuture) Get(ctx workflow.Context) (*glue.GetMappingOutput, error) {
 	var output glue.GetMappingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetPartitionFuture struct {
+type GetPartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetPartitionFuture) Get(ctx workflow.Context) (*glue.GetPartitionOutput, error) {
+func (r *GetPartitionFuture) Get(ctx workflow.Context) (*glue.GetPartitionOutput, error) {
 	var output glue.GetPartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetPartitionIndexesFuture struct {
+type GetPartitionIndexesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetPartitionIndexesFuture) Get(ctx workflow.Context) (*glue.GetPartitionIndexesOutput, error) {
+func (r *GetPartitionIndexesFuture) Get(ctx workflow.Context) (*glue.GetPartitionIndexesOutput, error) {
 	var output glue.GetPartitionIndexesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetPartitionsFuture struct {
+type GetPartitionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetPartitionsFuture) Get(ctx workflow.Context) (*glue.GetPartitionsOutput, error) {
+func (r *GetPartitionsFuture) Get(ctx workflow.Context) (*glue.GetPartitionsOutput, error) {
 	var output glue.GetPartitionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetPlanFuture struct {
+type GetPlanFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetPlanFuture) Get(ctx workflow.Context) (*glue.GetPlanOutput, error) {
+func (r *GetPlanFuture) Get(ctx workflow.Context) (*glue.GetPlanOutput, error) {
 	var output glue.GetPlanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetResourcePoliciesFuture struct {
+type GetResourcePoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetResourcePoliciesFuture) Get(ctx workflow.Context) (*glue.GetResourcePoliciesOutput, error) {
+func (r *GetResourcePoliciesFuture) Get(ctx workflow.Context) (*glue.GetResourcePoliciesOutput, error) {
 	var output glue.GetResourcePoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetResourcePolicyFuture struct {
+type GetResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetResourcePolicyFuture) Get(ctx workflow.Context) (*glue.GetResourcePolicyOutput, error) {
+func (r *GetResourcePolicyFuture) Get(ctx workflow.Context) (*glue.GetResourcePolicyOutput, error) {
 	var output glue.GetResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetSecurityConfigurationFuture struct {
+type GetSecurityConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue.GetSecurityConfigurationOutput, error) {
+func (r *GetSecurityConfigurationFuture) Get(ctx workflow.Context) (*glue.GetSecurityConfigurationOutput, error) {
 	var output glue.GetSecurityConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetSecurityConfigurationsFuture struct {
+type GetSecurityConfigurationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetSecurityConfigurationsFuture) Get(ctx workflow.Context) (*glue.GetSecurityConfigurationsOutput, error) {
+func (r *GetSecurityConfigurationsFuture) Get(ctx workflow.Context) (*glue.GetSecurityConfigurationsOutput, error) {
 	var output glue.GetSecurityConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetTableFuture struct {
+type GetTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetTableFuture) Get(ctx workflow.Context) (*glue.GetTableOutput, error) {
+func (r *GetTableFuture) Get(ctx workflow.Context) (*glue.GetTableOutput, error) {
 	var output glue.GetTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetTableVersionFuture struct {
+type GetTableVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetTableVersionFuture) Get(ctx workflow.Context) (*glue.GetTableVersionOutput, error) {
+func (r *GetTableVersionFuture) Get(ctx workflow.Context) (*glue.GetTableVersionOutput, error) {
 	var output glue.GetTableVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetTableVersionsFuture struct {
+type GetTableVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetTableVersionsFuture) Get(ctx workflow.Context) (*glue.GetTableVersionsOutput, error) {
+func (r *GetTableVersionsFuture) Get(ctx workflow.Context) (*glue.GetTableVersionsOutput, error) {
 	var output glue.GetTableVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetTablesFuture struct {
+type GetTablesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetTablesFuture) Get(ctx workflow.Context) (*glue.GetTablesOutput, error) {
+func (r *GetTablesFuture) Get(ctx workflow.Context) (*glue.GetTablesOutput, error) {
 	var output glue.GetTablesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetTagsFuture struct {
+type GetTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetTagsFuture) Get(ctx workflow.Context) (*glue.GetTagsOutput, error) {
+func (r *GetTagsFuture) Get(ctx workflow.Context) (*glue.GetTagsOutput, error) {
 	var output glue.GetTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetTriggerFuture struct {
+type GetTriggerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetTriggerFuture) Get(ctx workflow.Context) (*glue.GetTriggerOutput, error) {
+func (r *GetTriggerFuture) Get(ctx workflow.Context) (*glue.GetTriggerOutput, error) {
 	var output glue.GetTriggerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetTriggersFuture struct {
+type GetTriggersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetTriggersFuture) Get(ctx workflow.Context) (*glue.GetTriggersOutput, error) {
+func (r *GetTriggersFuture) Get(ctx workflow.Context) (*glue.GetTriggersOutput, error) {
 	var output glue.GetTriggersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetUserDefinedFunctionFuture struct {
+type GetUserDefinedFunctionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.GetUserDefinedFunctionOutput, error) {
+func (r *GetUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.GetUserDefinedFunctionOutput, error) {
 	var output glue.GetUserDefinedFunctionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetUserDefinedFunctionsFuture struct {
+type GetUserDefinedFunctionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetUserDefinedFunctionsFuture) Get(ctx workflow.Context) (*glue.GetUserDefinedFunctionsOutput, error) {
+func (r *GetUserDefinedFunctionsFuture) Get(ctx workflow.Context) (*glue.GetUserDefinedFunctionsOutput, error) {
 	var output glue.GetUserDefinedFunctionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetWorkflowFuture struct {
+type GetWorkflowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetWorkflowFuture) Get(ctx workflow.Context) (*glue.GetWorkflowOutput, error) {
+func (r *GetWorkflowFuture) Get(ctx workflow.Context) (*glue.GetWorkflowOutput, error) {
 	var output glue.GetWorkflowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetWorkflowRunFuture struct {
+type GetWorkflowRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetWorkflowRunFuture) Get(ctx workflow.Context) (*glue.GetWorkflowRunOutput, error) {
+func (r *GetWorkflowRunFuture) Get(ctx workflow.Context) (*glue.GetWorkflowRunOutput, error) {
 	var output glue.GetWorkflowRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetWorkflowRunPropertiesFuture struct {
+type GetWorkflowRunPropertiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetWorkflowRunPropertiesFuture) Get(ctx workflow.Context) (*glue.GetWorkflowRunPropertiesOutput, error) {
+func (r *GetWorkflowRunPropertiesFuture) Get(ctx workflow.Context) (*glue.GetWorkflowRunPropertiesOutput, error) {
 	var output glue.GetWorkflowRunPropertiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueGetWorkflowRunsFuture struct {
+type GetWorkflowRunsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueGetWorkflowRunsFuture) Get(ctx workflow.Context) (*glue.GetWorkflowRunsOutput, error) {
+func (r *GetWorkflowRunsFuture) Get(ctx workflow.Context) (*glue.GetWorkflowRunsOutput, error) {
 	var output glue.GetWorkflowRunsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueImportCatalogToGlueFuture struct {
+type ImportCatalogToGlueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueImportCatalogToGlueFuture) Get(ctx workflow.Context) (*glue.ImportCatalogToGlueOutput, error) {
+func (r *ImportCatalogToGlueFuture) Get(ctx workflow.Context) (*glue.ImportCatalogToGlueOutput, error) {
 	var output glue.ImportCatalogToGlueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueListCrawlersFuture struct {
+type ListCrawlersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueListCrawlersFuture) Get(ctx workflow.Context) (*glue.ListCrawlersOutput, error) {
+func (r *ListCrawlersFuture) Get(ctx workflow.Context) (*glue.ListCrawlersOutput, error) {
 	var output glue.ListCrawlersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueListDevEndpointsFuture struct {
+type ListDevEndpointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueListDevEndpointsFuture) Get(ctx workflow.Context) (*glue.ListDevEndpointsOutput, error) {
+func (r *ListDevEndpointsFuture) Get(ctx workflow.Context) (*glue.ListDevEndpointsOutput, error) {
 	var output glue.ListDevEndpointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueListJobsFuture struct {
+type ListJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueListJobsFuture) Get(ctx workflow.Context) (*glue.ListJobsOutput, error) {
+func (r *ListJobsFuture) Get(ctx workflow.Context) (*glue.ListJobsOutput, error) {
 	var output glue.ListJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueListMLTransformsFuture struct {
+type ListMLTransformsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueListMLTransformsFuture) Get(ctx workflow.Context) (*glue.ListMLTransformsOutput, error) {
+func (r *ListMLTransformsFuture) Get(ctx workflow.Context) (*glue.ListMLTransformsOutput, error) {
 	var output glue.ListMLTransformsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueListTriggersFuture struct {
+type ListTriggersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueListTriggersFuture) Get(ctx workflow.Context) (*glue.ListTriggersOutput, error) {
+func (r *ListTriggersFuture) Get(ctx workflow.Context) (*glue.ListTriggersOutput, error) {
 	var output glue.ListTriggersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueListWorkflowsFuture struct {
+type ListWorkflowsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueListWorkflowsFuture) Get(ctx workflow.Context) (*glue.ListWorkflowsOutput, error) {
+func (r *ListWorkflowsFuture) Get(ctx workflow.Context) (*glue.ListWorkflowsOutput, error) {
 	var output glue.ListWorkflowsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GluePutDataCatalogEncryptionSettingsFuture struct {
+type PutDataCatalogEncryptionSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GluePutDataCatalogEncryptionSettingsFuture) Get(ctx workflow.Context) (*glue.PutDataCatalogEncryptionSettingsOutput, error) {
+func (r *PutDataCatalogEncryptionSettingsFuture) Get(ctx workflow.Context) (*glue.PutDataCatalogEncryptionSettingsOutput, error) {
 	var output glue.PutDataCatalogEncryptionSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GluePutResourcePolicyFuture struct {
+type PutResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GluePutResourcePolicyFuture) Get(ctx workflow.Context) (*glue.PutResourcePolicyOutput, error) {
+func (r *PutResourcePolicyFuture) Get(ctx workflow.Context) (*glue.PutResourcePolicyOutput, error) {
 	var output glue.PutResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GluePutWorkflowRunPropertiesFuture struct {
+type PutWorkflowRunPropertiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GluePutWorkflowRunPropertiesFuture) Get(ctx workflow.Context) (*glue.PutWorkflowRunPropertiesOutput, error) {
+func (r *PutWorkflowRunPropertiesFuture) Get(ctx workflow.Context) (*glue.PutWorkflowRunPropertiesOutput, error) {
 	var output glue.PutWorkflowRunPropertiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueResetJobBookmarkFuture struct {
+type ResetJobBookmarkFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueResetJobBookmarkFuture) Get(ctx workflow.Context) (*glue.ResetJobBookmarkOutput, error) {
+func (r *ResetJobBookmarkFuture) Get(ctx workflow.Context) (*glue.ResetJobBookmarkOutput, error) {
 	var output glue.ResetJobBookmarkOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueResumeWorkflowRunFuture struct {
+type ResumeWorkflowRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueResumeWorkflowRunFuture) Get(ctx workflow.Context) (*glue.ResumeWorkflowRunOutput, error) {
+func (r *ResumeWorkflowRunFuture) Get(ctx workflow.Context) (*glue.ResumeWorkflowRunOutput, error) {
 	var output glue.ResumeWorkflowRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueSearchTablesFuture struct {
+type SearchTablesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueSearchTablesFuture) Get(ctx workflow.Context) (*glue.SearchTablesOutput, error) {
+func (r *SearchTablesFuture) Get(ctx workflow.Context) (*glue.SearchTablesOutput, error) {
 	var output glue.SearchTablesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartCrawlerFuture struct {
+type StartCrawlerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartCrawlerFuture) Get(ctx workflow.Context) (*glue.StartCrawlerOutput, error) {
+func (r *StartCrawlerFuture) Get(ctx workflow.Context) (*glue.StartCrawlerOutput, error) {
 	var output glue.StartCrawlerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartCrawlerScheduleFuture struct {
+type StartCrawlerScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.StartCrawlerScheduleOutput, error) {
+func (r *StartCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.StartCrawlerScheduleOutput, error) {
 	var output glue.StartCrawlerScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartExportLabelsTaskRunFuture struct {
+type StartExportLabelsTaskRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartExportLabelsTaskRunFuture) Get(ctx workflow.Context) (*glue.StartExportLabelsTaskRunOutput, error) {
+func (r *StartExportLabelsTaskRunFuture) Get(ctx workflow.Context) (*glue.StartExportLabelsTaskRunOutput, error) {
 	var output glue.StartExportLabelsTaskRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartImportLabelsTaskRunFuture struct {
+type StartImportLabelsTaskRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartImportLabelsTaskRunFuture) Get(ctx workflow.Context) (*glue.StartImportLabelsTaskRunOutput, error) {
+func (r *StartImportLabelsTaskRunFuture) Get(ctx workflow.Context) (*glue.StartImportLabelsTaskRunOutput, error) {
 	var output glue.StartImportLabelsTaskRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartJobRunFuture struct {
+type StartJobRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartJobRunFuture) Get(ctx workflow.Context) (*glue.StartJobRunOutput, error) {
+func (r *StartJobRunFuture) Get(ctx workflow.Context) (*glue.StartJobRunOutput, error) {
 	var output glue.StartJobRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartMLEvaluationTaskRunFuture struct {
+type StartMLEvaluationTaskRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartMLEvaluationTaskRunFuture) Get(ctx workflow.Context) (*glue.StartMLEvaluationTaskRunOutput, error) {
+func (r *StartMLEvaluationTaskRunFuture) Get(ctx workflow.Context) (*glue.StartMLEvaluationTaskRunOutput, error) {
 	var output glue.StartMLEvaluationTaskRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartMLLabelingSetGenerationTaskRunFuture struct {
+type StartMLLabelingSetGenerationTaskRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartMLLabelingSetGenerationTaskRunFuture) Get(ctx workflow.Context) (*glue.StartMLLabelingSetGenerationTaskRunOutput, error) {
+func (r *StartMLLabelingSetGenerationTaskRunFuture) Get(ctx workflow.Context) (*glue.StartMLLabelingSetGenerationTaskRunOutput, error) {
 	var output glue.StartMLLabelingSetGenerationTaskRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartTriggerFuture struct {
+type StartTriggerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartTriggerFuture) Get(ctx workflow.Context) (*glue.StartTriggerOutput, error) {
+func (r *StartTriggerFuture) Get(ctx workflow.Context) (*glue.StartTriggerOutput, error) {
 	var output glue.StartTriggerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStartWorkflowRunFuture struct {
+type StartWorkflowRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStartWorkflowRunFuture) Get(ctx workflow.Context) (*glue.StartWorkflowRunOutput, error) {
+func (r *StartWorkflowRunFuture) Get(ctx workflow.Context) (*glue.StartWorkflowRunOutput, error) {
 	var output glue.StartWorkflowRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStopCrawlerFuture struct {
+type StopCrawlerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStopCrawlerFuture) Get(ctx workflow.Context) (*glue.StopCrawlerOutput, error) {
+func (r *StopCrawlerFuture) Get(ctx workflow.Context) (*glue.StopCrawlerOutput, error) {
 	var output glue.StopCrawlerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStopCrawlerScheduleFuture struct {
+type StopCrawlerScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStopCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.StopCrawlerScheduleOutput, error) {
+func (r *StopCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.StopCrawlerScheduleOutput, error) {
 	var output glue.StopCrawlerScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStopTriggerFuture struct {
+type StopTriggerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStopTriggerFuture) Get(ctx workflow.Context) (*glue.StopTriggerOutput, error) {
+func (r *StopTriggerFuture) Get(ctx workflow.Context) (*glue.StopTriggerOutput, error) {
 	var output glue.StopTriggerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueStopWorkflowRunFuture struct {
+type StopWorkflowRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueStopWorkflowRunFuture) Get(ctx workflow.Context) (*glue.StopWorkflowRunOutput, error) {
+func (r *StopWorkflowRunFuture) Get(ctx workflow.Context) (*glue.StopWorkflowRunOutput, error) {
 	var output glue.StopWorkflowRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueTagResourceFuture) Get(ctx workflow.Context) (*glue.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*glue.TagResourceOutput, error) {
 	var output glue.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUntagResourceFuture) Get(ctx workflow.Context) (*glue.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*glue.UntagResourceOutput, error) {
 	var output glue.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateClassifierFuture struct {
+type UpdateClassifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateClassifierFuture) Get(ctx workflow.Context) (*glue.UpdateClassifierOutput, error) {
+func (r *UpdateClassifierFuture) Get(ctx workflow.Context) (*glue.UpdateClassifierOutput, error) {
 	var output glue.UpdateClassifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateColumnStatisticsForPartitionFuture struct {
+type UpdateColumnStatisticsForPartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateColumnStatisticsForPartitionFuture) Get(ctx workflow.Context) (*glue.UpdateColumnStatisticsForPartitionOutput, error) {
+func (r *UpdateColumnStatisticsForPartitionFuture) Get(ctx workflow.Context) (*glue.UpdateColumnStatisticsForPartitionOutput, error) {
 	var output glue.UpdateColumnStatisticsForPartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateColumnStatisticsForTableFuture struct {
+type UpdateColumnStatisticsForTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*glue.UpdateColumnStatisticsForTableOutput, error) {
+func (r *UpdateColumnStatisticsForTableFuture) Get(ctx workflow.Context) (*glue.UpdateColumnStatisticsForTableOutput, error) {
 	var output glue.UpdateColumnStatisticsForTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateConnectionFuture struct {
+type UpdateConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateConnectionFuture) Get(ctx workflow.Context) (*glue.UpdateConnectionOutput, error) {
+func (r *UpdateConnectionFuture) Get(ctx workflow.Context) (*glue.UpdateConnectionOutput, error) {
 	var output glue.UpdateConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateCrawlerFuture struct {
+type UpdateCrawlerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateCrawlerFuture) Get(ctx workflow.Context) (*glue.UpdateCrawlerOutput, error) {
+func (r *UpdateCrawlerFuture) Get(ctx workflow.Context) (*glue.UpdateCrawlerOutput, error) {
 	var output glue.UpdateCrawlerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateCrawlerScheduleFuture struct {
+type UpdateCrawlerScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.UpdateCrawlerScheduleOutput, error) {
+func (r *UpdateCrawlerScheduleFuture) Get(ctx workflow.Context) (*glue.UpdateCrawlerScheduleOutput, error) {
 	var output glue.UpdateCrawlerScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateDatabaseFuture struct {
+type UpdateDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateDatabaseFuture) Get(ctx workflow.Context) (*glue.UpdateDatabaseOutput, error) {
+func (r *UpdateDatabaseFuture) Get(ctx workflow.Context) (*glue.UpdateDatabaseOutput, error) {
 	var output glue.UpdateDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateDevEndpointFuture struct {
+type UpdateDevEndpointFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateDevEndpointFuture) Get(ctx workflow.Context) (*glue.UpdateDevEndpointOutput, error) {
+func (r *UpdateDevEndpointFuture) Get(ctx workflow.Context) (*glue.UpdateDevEndpointOutput, error) {
 	var output glue.UpdateDevEndpointOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateJobFuture struct {
+type UpdateJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateJobFuture) Get(ctx workflow.Context) (*glue.UpdateJobOutput, error) {
+func (r *UpdateJobFuture) Get(ctx workflow.Context) (*glue.UpdateJobOutput, error) {
 	var output glue.UpdateJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateMLTransformFuture struct {
+type UpdateMLTransformFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateMLTransformFuture) Get(ctx workflow.Context) (*glue.UpdateMLTransformOutput, error) {
+func (r *UpdateMLTransformFuture) Get(ctx workflow.Context) (*glue.UpdateMLTransformOutput, error) {
 	var output glue.UpdateMLTransformOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdatePartitionFuture struct {
+type UpdatePartitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdatePartitionFuture) Get(ctx workflow.Context) (*glue.UpdatePartitionOutput, error) {
+func (r *UpdatePartitionFuture) Get(ctx workflow.Context) (*glue.UpdatePartitionOutput, error) {
 	var output glue.UpdatePartitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateTableFuture struct {
+type UpdateTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateTableFuture) Get(ctx workflow.Context) (*glue.UpdateTableOutput, error) {
+func (r *UpdateTableFuture) Get(ctx workflow.Context) (*glue.UpdateTableOutput, error) {
 	var output glue.UpdateTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateTriggerFuture struct {
+type UpdateTriggerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateTriggerFuture) Get(ctx workflow.Context) (*glue.UpdateTriggerOutput, error) {
+func (r *UpdateTriggerFuture) Get(ctx workflow.Context) (*glue.UpdateTriggerOutput, error) {
 	var output glue.UpdateTriggerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateUserDefinedFunctionFuture struct {
+type UpdateUserDefinedFunctionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.UpdateUserDefinedFunctionOutput, error) {
+func (r *UpdateUserDefinedFunctionFuture) Get(ctx workflow.Context) (*glue.UpdateUserDefinedFunctionOutput, error) {
 	var output glue.UpdateUserDefinedFunctionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlueUpdateWorkflowFuture struct {
+type UpdateWorkflowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlueUpdateWorkflowFuture) Get(ctx workflow.Context) (*glue.UpdateWorkflowOutput, error) {
+func (r *UpdateWorkflowFuture) Get(ctx workflow.Context) (*glue.UpdateWorkflowOutput, error) {
 	var output glue.UpdateWorkflowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -1507,9 +1507,9 @@ func (a *stub) BatchCreatePartition(ctx workflow.Context, input *glue.BatchCreat
 	return &output, err
 }
 
-func (a *stub) BatchCreatePartitionAsync(ctx workflow.Context, input *glue.BatchCreatePartitionInput) *GlueBatchCreatePartitionFuture {
+func (a *stub) BatchCreatePartitionAsync(ctx workflow.Context, input *glue.BatchCreatePartitionInput) *BatchCreatePartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchCreatePartition", input)
-	return &GlueBatchCreatePartitionFuture{Future: future}
+	return &BatchCreatePartitionFuture{Future: future}
 }
 
 func (a *stub) BatchDeleteConnection(ctx workflow.Context, input *glue.BatchDeleteConnectionInput) (*glue.BatchDeleteConnectionOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) BatchDeleteConnection(ctx workflow.Context, input *glue.BatchDele
 	return &output, err
 }
 
-func (a *stub) BatchDeleteConnectionAsync(ctx workflow.Context, input *glue.BatchDeleteConnectionInput) *GlueBatchDeleteConnectionFuture {
+func (a *stub) BatchDeleteConnectionAsync(ctx workflow.Context, input *glue.BatchDeleteConnectionInput) *BatchDeleteConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchDeleteConnection", input)
-	return &GlueBatchDeleteConnectionFuture{Future: future}
+	return &BatchDeleteConnectionFuture{Future: future}
 }
 
 func (a *stub) BatchDeletePartition(ctx workflow.Context, input *glue.BatchDeletePartitionInput) (*glue.BatchDeletePartitionOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) BatchDeletePartition(ctx workflow.Context, input *glue.BatchDelet
 	return &output, err
 }
 
-func (a *stub) BatchDeletePartitionAsync(ctx workflow.Context, input *glue.BatchDeletePartitionInput) *GlueBatchDeletePartitionFuture {
+func (a *stub) BatchDeletePartitionAsync(ctx workflow.Context, input *glue.BatchDeletePartitionInput) *BatchDeletePartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchDeletePartition", input)
-	return &GlueBatchDeletePartitionFuture{Future: future}
+	return &BatchDeletePartitionFuture{Future: future}
 }
 
 func (a *stub) BatchDeleteTable(ctx workflow.Context, input *glue.BatchDeleteTableInput) (*glue.BatchDeleteTableOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) BatchDeleteTable(ctx workflow.Context, input *glue.BatchDeleteTab
 	return &output, err
 }
 
-func (a *stub) BatchDeleteTableAsync(ctx workflow.Context, input *glue.BatchDeleteTableInput) *GlueBatchDeleteTableFuture {
+func (a *stub) BatchDeleteTableAsync(ctx workflow.Context, input *glue.BatchDeleteTableInput) *BatchDeleteTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchDeleteTable", input)
-	return &GlueBatchDeleteTableFuture{Future: future}
+	return &BatchDeleteTableFuture{Future: future}
 }
 
 func (a *stub) BatchDeleteTableVersion(ctx workflow.Context, input *glue.BatchDeleteTableVersionInput) (*glue.BatchDeleteTableVersionOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *stub) BatchDeleteTableVersion(ctx workflow.Context, input *glue.BatchDe
 	return &output, err
 }
 
-func (a *stub) BatchDeleteTableVersionAsync(ctx workflow.Context, input *glue.BatchDeleteTableVersionInput) *GlueBatchDeleteTableVersionFuture {
+func (a *stub) BatchDeleteTableVersionAsync(ctx workflow.Context, input *glue.BatchDeleteTableVersionInput) *BatchDeleteTableVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchDeleteTableVersion", input)
-	return &GlueBatchDeleteTableVersionFuture{Future: future}
+	return &BatchDeleteTableVersionFuture{Future: future}
 }
 
 func (a *stub) BatchGetCrawlers(ctx workflow.Context, input *glue.BatchGetCrawlersInput) (*glue.BatchGetCrawlersOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *stub) BatchGetCrawlers(ctx workflow.Context, input *glue.BatchGetCrawle
 	return &output, err
 }
 
-func (a *stub) BatchGetCrawlersAsync(ctx workflow.Context, input *glue.BatchGetCrawlersInput) *GlueBatchGetCrawlersFuture {
+func (a *stub) BatchGetCrawlersAsync(ctx workflow.Context, input *glue.BatchGetCrawlersInput) *BatchGetCrawlersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchGetCrawlers", input)
-	return &GlueBatchGetCrawlersFuture{Future: future}
+	return &BatchGetCrawlersFuture{Future: future}
 }
 
 func (a *stub) BatchGetDevEndpoints(ctx workflow.Context, input *glue.BatchGetDevEndpointsInput) (*glue.BatchGetDevEndpointsOutput, error) {
@@ -1573,9 +1573,9 @@ func (a *stub) BatchGetDevEndpoints(ctx workflow.Context, input *glue.BatchGetDe
 	return &output, err
 }
 
-func (a *stub) BatchGetDevEndpointsAsync(ctx workflow.Context, input *glue.BatchGetDevEndpointsInput) *GlueBatchGetDevEndpointsFuture {
+func (a *stub) BatchGetDevEndpointsAsync(ctx workflow.Context, input *glue.BatchGetDevEndpointsInput) *BatchGetDevEndpointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchGetDevEndpoints", input)
-	return &GlueBatchGetDevEndpointsFuture{Future: future}
+	return &BatchGetDevEndpointsFuture{Future: future}
 }
 
 func (a *stub) BatchGetJobs(ctx workflow.Context, input *glue.BatchGetJobsInput) (*glue.BatchGetJobsOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *stub) BatchGetJobs(ctx workflow.Context, input *glue.BatchGetJobsInput)
 	return &output, err
 }
 
-func (a *stub) BatchGetJobsAsync(ctx workflow.Context, input *glue.BatchGetJobsInput) *GlueBatchGetJobsFuture {
+func (a *stub) BatchGetJobsAsync(ctx workflow.Context, input *glue.BatchGetJobsInput) *BatchGetJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchGetJobs", input)
-	return &GlueBatchGetJobsFuture{Future: future}
+	return &BatchGetJobsFuture{Future: future}
 }
 
 func (a *stub) BatchGetPartition(ctx workflow.Context, input *glue.BatchGetPartitionInput) (*glue.BatchGetPartitionOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *stub) BatchGetPartition(ctx workflow.Context, input *glue.BatchGetParti
 	return &output, err
 }
 
-func (a *stub) BatchGetPartitionAsync(ctx workflow.Context, input *glue.BatchGetPartitionInput) *GlueBatchGetPartitionFuture {
+func (a *stub) BatchGetPartitionAsync(ctx workflow.Context, input *glue.BatchGetPartitionInput) *BatchGetPartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchGetPartition", input)
-	return &GlueBatchGetPartitionFuture{Future: future}
+	return &BatchGetPartitionFuture{Future: future}
 }
 
 func (a *stub) BatchGetTriggers(ctx workflow.Context, input *glue.BatchGetTriggersInput) (*glue.BatchGetTriggersOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *stub) BatchGetTriggers(ctx workflow.Context, input *glue.BatchGetTrigge
 	return &output, err
 }
 
-func (a *stub) BatchGetTriggersAsync(ctx workflow.Context, input *glue.BatchGetTriggersInput) *GlueBatchGetTriggersFuture {
+func (a *stub) BatchGetTriggersAsync(ctx workflow.Context, input *glue.BatchGetTriggersInput) *BatchGetTriggersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchGetTriggers", input)
-	return &GlueBatchGetTriggersFuture{Future: future}
+	return &BatchGetTriggersFuture{Future: future}
 }
 
 func (a *stub) BatchGetWorkflows(ctx workflow.Context, input *glue.BatchGetWorkflowsInput) (*glue.BatchGetWorkflowsOutput, error) {
@@ -1617,9 +1617,9 @@ func (a *stub) BatchGetWorkflows(ctx workflow.Context, input *glue.BatchGetWorkf
 	return &output, err
 }
 
-func (a *stub) BatchGetWorkflowsAsync(ctx workflow.Context, input *glue.BatchGetWorkflowsInput) *GlueBatchGetWorkflowsFuture {
+func (a *stub) BatchGetWorkflowsAsync(ctx workflow.Context, input *glue.BatchGetWorkflowsInput) *BatchGetWorkflowsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchGetWorkflows", input)
-	return &GlueBatchGetWorkflowsFuture{Future: future}
+	return &BatchGetWorkflowsFuture{Future: future}
 }
 
 func (a *stub) BatchStopJobRun(ctx workflow.Context, input *glue.BatchStopJobRunInput) (*glue.BatchStopJobRunOutput, error) {
@@ -1628,9 +1628,9 @@ func (a *stub) BatchStopJobRun(ctx workflow.Context, input *glue.BatchStopJobRun
 	return &output, err
 }
 
-func (a *stub) BatchStopJobRunAsync(ctx workflow.Context, input *glue.BatchStopJobRunInput) *GlueBatchStopJobRunFuture {
+func (a *stub) BatchStopJobRunAsync(ctx workflow.Context, input *glue.BatchStopJobRunInput) *BatchStopJobRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchStopJobRun", input)
-	return &GlueBatchStopJobRunFuture{Future: future}
+	return &BatchStopJobRunFuture{Future: future}
 }
 
 func (a *stub) BatchUpdatePartition(ctx workflow.Context, input *glue.BatchUpdatePartitionInput) (*glue.BatchUpdatePartitionOutput, error) {
@@ -1639,9 +1639,9 @@ func (a *stub) BatchUpdatePartition(ctx workflow.Context, input *glue.BatchUpdat
 	return &output, err
 }
 
-func (a *stub) BatchUpdatePartitionAsync(ctx workflow.Context, input *glue.BatchUpdatePartitionInput) *GlueBatchUpdatePartitionFuture {
+func (a *stub) BatchUpdatePartitionAsync(ctx workflow.Context, input *glue.BatchUpdatePartitionInput) *BatchUpdatePartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.BatchUpdatePartition", input)
-	return &GlueBatchUpdatePartitionFuture{Future: future}
+	return &BatchUpdatePartitionFuture{Future: future}
 }
 
 func (a *stub) CancelMLTaskRun(ctx workflow.Context, input *glue.CancelMLTaskRunInput) (*glue.CancelMLTaskRunOutput, error) {
@@ -1650,9 +1650,9 @@ func (a *stub) CancelMLTaskRun(ctx workflow.Context, input *glue.CancelMLTaskRun
 	return &output, err
 }
 
-func (a *stub) CancelMLTaskRunAsync(ctx workflow.Context, input *glue.CancelMLTaskRunInput) *GlueCancelMLTaskRunFuture {
+func (a *stub) CancelMLTaskRunAsync(ctx workflow.Context, input *glue.CancelMLTaskRunInput) *CancelMLTaskRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CancelMLTaskRun", input)
-	return &GlueCancelMLTaskRunFuture{Future: future}
+	return &CancelMLTaskRunFuture{Future: future}
 }
 
 func (a *stub) CreateClassifier(ctx workflow.Context, input *glue.CreateClassifierInput) (*glue.CreateClassifierOutput, error) {
@@ -1661,9 +1661,9 @@ func (a *stub) CreateClassifier(ctx workflow.Context, input *glue.CreateClassifi
 	return &output, err
 }
 
-func (a *stub) CreateClassifierAsync(ctx workflow.Context, input *glue.CreateClassifierInput) *GlueCreateClassifierFuture {
+func (a *stub) CreateClassifierAsync(ctx workflow.Context, input *glue.CreateClassifierInput) *CreateClassifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateClassifier", input)
-	return &GlueCreateClassifierFuture{Future: future}
+	return &CreateClassifierFuture{Future: future}
 }
 
 func (a *stub) CreateConnection(ctx workflow.Context, input *glue.CreateConnectionInput) (*glue.CreateConnectionOutput, error) {
@@ -1672,9 +1672,9 @@ func (a *stub) CreateConnection(ctx workflow.Context, input *glue.CreateConnecti
 	return &output, err
 }
 
-func (a *stub) CreateConnectionAsync(ctx workflow.Context, input *glue.CreateConnectionInput) *GlueCreateConnectionFuture {
+func (a *stub) CreateConnectionAsync(ctx workflow.Context, input *glue.CreateConnectionInput) *CreateConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateConnection", input)
-	return &GlueCreateConnectionFuture{Future: future}
+	return &CreateConnectionFuture{Future: future}
 }
 
 func (a *stub) CreateCrawler(ctx workflow.Context, input *glue.CreateCrawlerInput) (*glue.CreateCrawlerOutput, error) {
@@ -1683,9 +1683,9 @@ func (a *stub) CreateCrawler(ctx workflow.Context, input *glue.CreateCrawlerInpu
 	return &output, err
 }
 
-func (a *stub) CreateCrawlerAsync(ctx workflow.Context, input *glue.CreateCrawlerInput) *GlueCreateCrawlerFuture {
+func (a *stub) CreateCrawlerAsync(ctx workflow.Context, input *glue.CreateCrawlerInput) *CreateCrawlerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateCrawler", input)
-	return &GlueCreateCrawlerFuture{Future: future}
+	return &CreateCrawlerFuture{Future: future}
 }
 
 func (a *stub) CreateDatabase(ctx workflow.Context, input *glue.CreateDatabaseInput) (*glue.CreateDatabaseOutput, error) {
@@ -1694,9 +1694,9 @@ func (a *stub) CreateDatabase(ctx workflow.Context, input *glue.CreateDatabaseIn
 	return &output, err
 }
 
-func (a *stub) CreateDatabaseAsync(ctx workflow.Context, input *glue.CreateDatabaseInput) *GlueCreateDatabaseFuture {
+func (a *stub) CreateDatabaseAsync(ctx workflow.Context, input *glue.CreateDatabaseInput) *CreateDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateDatabase", input)
-	return &GlueCreateDatabaseFuture{Future: future}
+	return &CreateDatabaseFuture{Future: future}
 }
 
 func (a *stub) CreateDevEndpoint(ctx workflow.Context, input *glue.CreateDevEndpointInput) (*glue.CreateDevEndpointOutput, error) {
@@ -1705,9 +1705,9 @@ func (a *stub) CreateDevEndpoint(ctx workflow.Context, input *glue.CreateDevEndp
 	return &output, err
 }
 
-func (a *stub) CreateDevEndpointAsync(ctx workflow.Context, input *glue.CreateDevEndpointInput) *GlueCreateDevEndpointFuture {
+func (a *stub) CreateDevEndpointAsync(ctx workflow.Context, input *glue.CreateDevEndpointInput) *CreateDevEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateDevEndpoint", input)
-	return &GlueCreateDevEndpointFuture{Future: future}
+	return &CreateDevEndpointFuture{Future: future}
 }
 
 func (a *stub) CreateJob(ctx workflow.Context, input *glue.CreateJobInput) (*glue.CreateJobOutput, error) {
@@ -1716,9 +1716,9 @@ func (a *stub) CreateJob(ctx workflow.Context, input *glue.CreateJobInput) (*glu
 	return &output, err
 }
 
-func (a *stub) CreateJobAsync(ctx workflow.Context, input *glue.CreateJobInput) *GlueCreateJobFuture {
+func (a *stub) CreateJobAsync(ctx workflow.Context, input *glue.CreateJobInput) *CreateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateJob", input)
-	return &GlueCreateJobFuture{Future: future}
+	return &CreateJobFuture{Future: future}
 }
 
 func (a *stub) CreateMLTransform(ctx workflow.Context, input *glue.CreateMLTransformInput) (*glue.CreateMLTransformOutput, error) {
@@ -1727,9 +1727,9 @@ func (a *stub) CreateMLTransform(ctx workflow.Context, input *glue.CreateMLTrans
 	return &output, err
 }
 
-func (a *stub) CreateMLTransformAsync(ctx workflow.Context, input *glue.CreateMLTransformInput) *GlueCreateMLTransformFuture {
+func (a *stub) CreateMLTransformAsync(ctx workflow.Context, input *glue.CreateMLTransformInput) *CreateMLTransformFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateMLTransform", input)
-	return &GlueCreateMLTransformFuture{Future: future}
+	return &CreateMLTransformFuture{Future: future}
 }
 
 func (a *stub) CreatePartition(ctx workflow.Context, input *glue.CreatePartitionInput) (*glue.CreatePartitionOutput, error) {
@@ -1738,9 +1738,9 @@ func (a *stub) CreatePartition(ctx workflow.Context, input *glue.CreatePartition
 	return &output, err
 }
 
-func (a *stub) CreatePartitionAsync(ctx workflow.Context, input *glue.CreatePartitionInput) *GlueCreatePartitionFuture {
+func (a *stub) CreatePartitionAsync(ctx workflow.Context, input *glue.CreatePartitionInput) *CreatePartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreatePartition", input)
-	return &GlueCreatePartitionFuture{Future: future}
+	return &CreatePartitionFuture{Future: future}
 }
 
 func (a *stub) CreateScript(ctx workflow.Context, input *glue.CreateScriptInput) (*glue.CreateScriptOutput, error) {
@@ -1749,9 +1749,9 @@ func (a *stub) CreateScript(ctx workflow.Context, input *glue.CreateScriptInput)
 	return &output, err
 }
 
-func (a *stub) CreateScriptAsync(ctx workflow.Context, input *glue.CreateScriptInput) *GlueCreateScriptFuture {
+func (a *stub) CreateScriptAsync(ctx workflow.Context, input *glue.CreateScriptInput) *CreateScriptFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateScript", input)
-	return &GlueCreateScriptFuture{Future: future}
+	return &CreateScriptFuture{Future: future}
 }
 
 func (a *stub) CreateSecurityConfiguration(ctx workflow.Context, input *glue.CreateSecurityConfigurationInput) (*glue.CreateSecurityConfigurationOutput, error) {
@@ -1760,9 +1760,9 @@ func (a *stub) CreateSecurityConfiguration(ctx workflow.Context, input *glue.Cre
 	return &output, err
 }
 
-func (a *stub) CreateSecurityConfigurationAsync(ctx workflow.Context, input *glue.CreateSecurityConfigurationInput) *GlueCreateSecurityConfigurationFuture {
+func (a *stub) CreateSecurityConfigurationAsync(ctx workflow.Context, input *glue.CreateSecurityConfigurationInput) *CreateSecurityConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateSecurityConfiguration", input)
-	return &GlueCreateSecurityConfigurationFuture{Future: future}
+	return &CreateSecurityConfigurationFuture{Future: future}
 }
 
 func (a *stub) CreateTable(ctx workflow.Context, input *glue.CreateTableInput) (*glue.CreateTableOutput, error) {
@@ -1771,9 +1771,9 @@ func (a *stub) CreateTable(ctx workflow.Context, input *glue.CreateTableInput) (
 	return &output, err
 }
 
-func (a *stub) CreateTableAsync(ctx workflow.Context, input *glue.CreateTableInput) *GlueCreateTableFuture {
+func (a *stub) CreateTableAsync(ctx workflow.Context, input *glue.CreateTableInput) *CreateTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateTable", input)
-	return &GlueCreateTableFuture{Future: future}
+	return &CreateTableFuture{Future: future}
 }
 
 func (a *stub) CreateTrigger(ctx workflow.Context, input *glue.CreateTriggerInput) (*glue.CreateTriggerOutput, error) {
@@ -1782,9 +1782,9 @@ func (a *stub) CreateTrigger(ctx workflow.Context, input *glue.CreateTriggerInpu
 	return &output, err
 }
 
-func (a *stub) CreateTriggerAsync(ctx workflow.Context, input *glue.CreateTriggerInput) *GlueCreateTriggerFuture {
+func (a *stub) CreateTriggerAsync(ctx workflow.Context, input *glue.CreateTriggerInput) *CreateTriggerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateTrigger", input)
-	return &GlueCreateTriggerFuture{Future: future}
+	return &CreateTriggerFuture{Future: future}
 }
 
 func (a *stub) CreateUserDefinedFunction(ctx workflow.Context, input *glue.CreateUserDefinedFunctionInput) (*glue.CreateUserDefinedFunctionOutput, error) {
@@ -1793,9 +1793,9 @@ func (a *stub) CreateUserDefinedFunction(ctx workflow.Context, input *glue.Creat
 	return &output, err
 }
 
-func (a *stub) CreateUserDefinedFunctionAsync(ctx workflow.Context, input *glue.CreateUserDefinedFunctionInput) *GlueCreateUserDefinedFunctionFuture {
+func (a *stub) CreateUserDefinedFunctionAsync(ctx workflow.Context, input *glue.CreateUserDefinedFunctionInput) *CreateUserDefinedFunctionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateUserDefinedFunction", input)
-	return &GlueCreateUserDefinedFunctionFuture{Future: future}
+	return &CreateUserDefinedFunctionFuture{Future: future}
 }
 
 func (a *stub) CreateWorkflow(ctx workflow.Context, input *glue.CreateWorkflowInput) (*glue.CreateWorkflowOutput, error) {
@@ -1804,9 +1804,9 @@ func (a *stub) CreateWorkflow(ctx workflow.Context, input *glue.CreateWorkflowIn
 	return &output, err
 }
 
-func (a *stub) CreateWorkflowAsync(ctx workflow.Context, input *glue.CreateWorkflowInput) *GlueCreateWorkflowFuture {
+func (a *stub) CreateWorkflowAsync(ctx workflow.Context, input *glue.CreateWorkflowInput) *CreateWorkflowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.CreateWorkflow", input)
-	return &GlueCreateWorkflowFuture{Future: future}
+	return &CreateWorkflowFuture{Future: future}
 }
 
 func (a *stub) DeleteClassifier(ctx workflow.Context, input *glue.DeleteClassifierInput) (*glue.DeleteClassifierOutput, error) {
@@ -1815,9 +1815,9 @@ func (a *stub) DeleteClassifier(ctx workflow.Context, input *glue.DeleteClassifi
 	return &output, err
 }
 
-func (a *stub) DeleteClassifierAsync(ctx workflow.Context, input *glue.DeleteClassifierInput) *GlueDeleteClassifierFuture {
+func (a *stub) DeleteClassifierAsync(ctx workflow.Context, input *glue.DeleteClassifierInput) *DeleteClassifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteClassifier", input)
-	return &GlueDeleteClassifierFuture{Future: future}
+	return &DeleteClassifierFuture{Future: future}
 }
 
 func (a *stub) DeleteColumnStatisticsForPartition(ctx workflow.Context, input *glue.DeleteColumnStatisticsForPartitionInput) (*glue.DeleteColumnStatisticsForPartitionOutput, error) {
@@ -1826,9 +1826,9 @@ func (a *stub) DeleteColumnStatisticsForPartition(ctx workflow.Context, input *g
 	return &output, err
 }
 
-func (a *stub) DeleteColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.DeleteColumnStatisticsForPartitionInput) *GlueDeleteColumnStatisticsForPartitionFuture {
+func (a *stub) DeleteColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.DeleteColumnStatisticsForPartitionInput) *DeleteColumnStatisticsForPartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteColumnStatisticsForPartition", input)
-	return &GlueDeleteColumnStatisticsForPartitionFuture{Future: future}
+	return &DeleteColumnStatisticsForPartitionFuture{Future: future}
 }
 
 func (a *stub) DeleteColumnStatisticsForTable(ctx workflow.Context, input *glue.DeleteColumnStatisticsForTableInput) (*glue.DeleteColumnStatisticsForTableOutput, error) {
@@ -1837,9 +1837,9 @@ func (a *stub) DeleteColumnStatisticsForTable(ctx workflow.Context, input *glue.
 	return &output, err
 }
 
-func (a *stub) DeleteColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.DeleteColumnStatisticsForTableInput) *GlueDeleteColumnStatisticsForTableFuture {
+func (a *stub) DeleteColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.DeleteColumnStatisticsForTableInput) *DeleteColumnStatisticsForTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteColumnStatisticsForTable", input)
-	return &GlueDeleteColumnStatisticsForTableFuture{Future: future}
+	return &DeleteColumnStatisticsForTableFuture{Future: future}
 }
 
 func (a *stub) DeleteConnection(ctx workflow.Context, input *glue.DeleteConnectionInput) (*glue.DeleteConnectionOutput, error) {
@@ -1848,9 +1848,9 @@ func (a *stub) DeleteConnection(ctx workflow.Context, input *glue.DeleteConnecti
 	return &output, err
 }
 
-func (a *stub) DeleteConnectionAsync(ctx workflow.Context, input *glue.DeleteConnectionInput) *GlueDeleteConnectionFuture {
+func (a *stub) DeleteConnectionAsync(ctx workflow.Context, input *glue.DeleteConnectionInput) *DeleteConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteConnection", input)
-	return &GlueDeleteConnectionFuture{Future: future}
+	return &DeleteConnectionFuture{Future: future}
 }
 
 func (a *stub) DeleteCrawler(ctx workflow.Context, input *glue.DeleteCrawlerInput) (*glue.DeleteCrawlerOutput, error) {
@@ -1859,9 +1859,9 @@ func (a *stub) DeleteCrawler(ctx workflow.Context, input *glue.DeleteCrawlerInpu
 	return &output, err
 }
 
-func (a *stub) DeleteCrawlerAsync(ctx workflow.Context, input *glue.DeleteCrawlerInput) *GlueDeleteCrawlerFuture {
+func (a *stub) DeleteCrawlerAsync(ctx workflow.Context, input *glue.DeleteCrawlerInput) *DeleteCrawlerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteCrawler", input)
-	return &GlueDeleteCrawlerFuture{Future: future}
+	return &DeleteCrawlerFuture{Future: future}
 }
 
 func (a *stub) DeleteDatabase(ctx workflow.Context, input *glue.DeleteDatabaseInput) (*glue.DeleteDatabaseOutput, error) {
@@ -1870,9 +1870,9 @@ func (a *stub) DeleteDatabase(ctx workflow.Context, input *glue.DeleteDatabaseIn
 	return &output, err
 }
 
-func (a *stub) DeleteDatabaseAsync(ctx workflow.Context, input *glue.DeleteDatabaseInput) *GlueDeleteDatabaseFuture {
+func (a *stub) DeleteDatabaseAsync(ctx workflow.Context, input *glue.DeleteDatabaseInput) *DeleteDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteDatabase", input)
-	return &GlueDeleteDatabaseFuture{Future: future}
+	return &DeleteDatabaseFuture{Future: future}
 }
 
 func (a *stub) DeleteDevEndpoint(ctx workflow.Context, input *glue.DeleteDevEndpointInput) (*glue.DeleteDevEndpointOutput, error) {
@@ -1881,9 +1881,9 @@ func (a *stub) DeleteDevEndpoint(ctx workflow.Context, input *glue.DeleteDevEndp
 	return &output, err
 }
 
-func (a *stub) DeleteDevEndpointAsync(ctx workflow.Context, input *glue.DeleteDevEndpointInput) *GlueDeleteDevEndpointFuture {
+func (a *stub) DeleteDevEndpointAsync(ctx workflow.Context, input *glue.DeleteDevEndpointInput) *DeleteDevEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteDevEndpoint", input)
-	return &GlueDeleteDevEndpointFuture{Future: future}
+	return &DeleteDevEndpointFuture{Future: future}
 }
 
 func (a *stub) DeleteJob(ctx workflow.Context, input *glue.DeleteJobInput) (*glue.DeleteJobOutput, error) {
@@ -1892,9 +1892,9 @@ func (a *stub) DeleteJob(ctx workflow.Context, input *glue.DeleteJobInput) (*glu
 	return &output, err
 }
 
-func (a *stub) DeleteJobAsync(ctx workflow.Context, input *glue.DeleteJobInput) *GlueDeleteJobFuture {
+func (a *stub) DeleteJobAsync(ctx workflow.Context, input *glue.DeleteJobInput) *DeleteJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteJob", input)
-	return &GlueDeleteJobFuture{Future: future}
+	return &DeleteJobFuture{Future: future}
 }
 
 func (a *stub) DeleteMLTransform(ctx workflow.Context, input *glue.DeleteMLTransformInput) (*glue.DeleteMLTransformOutput, error) {
@@ -1903,9 +1903,9 @@ func (a *stub) DeleteMLTransform(ctx workflow.Context, input *glue.DeleteMLTrans
 	return &output, err
 }
 
-func (a *stub) DeleteMLTransformAsync(ctx workflow.Context, input *glue.DeleteMLTransformInput) *GlueDeleteMLTransformFuture {
+func (a *stub) DeleteMLTransformAsync(ctx workflow.Context, input *glue.DeleteMLTransformInput) *DeleteMLTransformFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteMLTransform", input)
-	return &GlueDeleteMLTransformFuture{Future: future}
+	return &DeleteMLTransformFuture{Future: future}
 }
 
 func (a *stub) DeletePartition(ctx workflow.Context, input *glue.DeletePartitionInput) (*glue.DeletePartitionOutput, error) {
@@ -1914,9 +1914,9 @@ func (a *stub) DeletePartition(ctx workflow.Context, input *glue.DeletePartition
 	return &output, err
 }
 
-func (a *stub) DeletePartitionAsync(ctx workflow.Context, input *glue.DeletePartitionInput) *GlueDeletePartitionFuture {
+func (a *stub) DeletePartitionAsync(ctx workflow.Context, input *glue.DeletePartitionInput) *DeletePartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeletePartition", input)
-	return &GlueDeletePartitionFuture{Future: future}
+	return &DeletePartitionFuture{Future: future}
 }
 
 func (a *stub) DeleteResourcePolicy(ctx workflow.Context, input *glue.DeleteResourcePolicyInput) (*glue.DeleteResourcePolicyOutput, error) {
@@ -1925,9 +1925,9 @@ func (a *stub) DeleteResourcePolicy(ctx workflow.Context, input *glue.DeleteReso
 	return &output, err
 }
 
-func (a *stub) DeleteResourcePolicyAsync(ctx workflow.Context, input *glue.DeleteResourcePolicyInput) *GlueDeleteResourcePolicyFuture {
+func (a *stub) DeleteResourcePolicyAsync(ctx workflow.Context, input *glue.DeleteResourcePolicyInput) *DeleteResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteResourcePolicy", input)
-	return &GlueDeleteResourcePolicyFuture{Future: future}
+	return &DeleteResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteSecurityConfiguration(ctx workflow.Context, input *glue.DeleteSecurityConfigurationInput) (*glue.DeleteSecurityConfigurationOutput, error) {
@@ -1936,9 +1936,9 @@ func (a *stub) DeleteSecurityConfiguration(ctx workflow.Context, input *glue.Del
 	return &output, err
 }
 
-func (a *stub) DeleteSecurityConfigurationAsync(ctx workflow.Context, input *glue.DeleteSecurityConfigurationInput) *GlueDeleteSecurityConfigurationFuture {
+func (a *stub) DeleteSecurityConfigurationAsync(ctx workflow.Context, input *glue.DeleteSecurityConfigurationInput) *DeleteSecurityConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteSecurityConfiguration", input)
-	return &GlueDeleteSecurityConfigurationFuture{Future: future}
+	return &DeleteSecurityConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteTable(ctx workflow.Context, input *glue.DeleteTableInput) (*glue.DeleteTableOutput, error) {
@@ -1947,9 +1947,9 @@ func (a *stub) DeleteTable(ctx workflow.Context, input *glue.DeleteTableInput) (
 	return &output, err
 }
 
-func (a *stub) DeleteTableAsync(ctx workflow.Context, input *glue.DeleteTableInput) *GlueDeleteTableFuture {
+func (a *stub) DeleteTableAsync(ctx workflow.Context, input *glue.DeleteTableInput) *DeleteTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteTable", input)
-	return &GlueDeleteTableFuture{Future: future}
+	return &DeleteTableFuture{Future: future}
 }
 
 func (a *stub) DeleteTableVersion(ctx workflow.Context, input *glue.DeleteTableVersionInput) (*glue.DeleteTableVersionOutput, error) {
@@ -1958,9 +1958,9 @@ func (a *stub) DeleteTableVersion(ctx workflow.Context, input *glue.DeleteTableV
 	return &output, err
 }
 
-func (a *stub) DeleteTableVersionAsync(ctx workflow.Context, input *glue.DeleteTableVersionInput) *GlueDeleteTableVersionFuture {
+func (a *stub) DeleteTableVersionAsync(ctx workflow.Context, input *glue.DeleteTableVersionInput) *DeleteTableVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteTableVersion", input)
-	return &GlueDeleteTableVersionFuture{Future: future}
+	return &DeleteTableVersionFuture{Future: future}
 }
 
 func (a *stub) DeleteTrigger(ctx workflow.Context, input *glue.DeleteTriggerInput) (*glue.DeleteTriggerOutput, error) {
@@ -1969,9 +1969,9 @@ func (a *stub) DeleteTrigger(ctx workflow.Context, input *glue.DeleteTriggerInpu
 	return &output, err
 }
 
-func (a *stub) DeleteTriggerAsync(ctx workflow.Context, input *glue.DeleteTriggerInput) *GlueDeleteTriggerFuture {
+func (a *stub) DeleteTriggerAsync(ctx workflow.Context, input *glue.DeleteTriggerInput) *DeleteTriggerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteTrigger", input)
-	return &GlueDeleteTriggerFuture{Future: future}
+	return &DeleteTriggerFuture{Future: future}
 }
 
 func (a *stub) DeleteUserDefinedFunction(ctx workflow.Context, input *glue.DeleteUserDefinedFunctionInput) (*glue.DeleteUserDefinedFunctionOutput, error) {
@@ -1980,9 +1980,9 @@ func (a *stub) DeleteUserDefinedFunction(ctx workflow.Context, input *glue.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteUserDefinedFunctionAsync(ctx workflow.Context, input *glue.DeleteUserDefinedFunctionInput) *GlueDeleteUserDefinedFunctionFuture {
+func (a *stub) DeleteUserDefinedFunctionAsync(ctx workflow.Context, input *glue.DeleteUserDefinedFunctionInput) *DeleteUserDefinedFunctionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteUserDefinedFunction", input)
-	return &GlueDeleteUserDefinedFunctionFuture{Future: future}
+	return &DeleteUserDefinedFunctionFuture{Future: future}
 }
 
 func (a *stub) DeleteWorkflow(ctx workflow.Context, input *glue.DeleteWorkflowInput) (*glue.DeleteWorkflowOutput, error) {
@@ -1991,9 +1991,9 @@ func (a *stub) DeleteWorkflow(ctx workflow.Context, input *glue.DeleteWorkflowIn
 	return &output, err
 }
 
-func (a *stub) DeleteWorkflowAsync(ctx workflow.Context, input *glue.DeleteWorkflowInput) *GlueDeleteWorkflowFuture {
+func (a *stub) DeleteWorkflowAsync(ctx workflow.Context, input *glue.DeleteWorkflowInput) *DeleteWorkflowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.DeleteWorkflow", input)
-	return &GlueDeleteWorkflowFuture{Future: future}
+	return &DeleteWorkflowFuture{Future: future}
 }
 
 func (a *stub) GetCatalogImportStatus(ctx workflow.Context, input *glue.GetCatalogImportStatusInput) (*glue.GetCatalogImportStatusOutput, error) {
@@ -2002,9 +2002,9 @@ func (a *stub) GetCatalogImportStatus(ctx workflow.Context, input *glue.GetCatal
 	return &output, err
 }
 
-func (a *stub) GetCatalogImportStatusAsync(ctx workflow.Context, input *glue.GetCatalogImportStatusInput) *GlueGetCatalogImportStatusFuture {
+func (a *stub) GetCatalogImportStatusAsync(ctx workflow.Context, input *glue.GetCatalogImportStatusInput) *GetCatalogImportStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetCatalogImportStatus", input)
-	return &GlueGetCatalogImportStatusFuture{Future: future}
+	return &GetCatalogImportStatusFuture{Future: future}
 }
 
 func (a *stub) GetClassifier(ctx workflow.Context, input *glue.GetClassifierInput) (*glue.GetClassifierOutput, error) {
@@ -2013,9 +2013,9 @@ func (a *stub) GetClassifier(ctx workflow.Context, input *glue.GetClassifierInpu
 	return &output, err
 }
 
-func (a *stub) GetClassifierAsync(ctx workflow.Context, input *glue.GetClassifierInput) *GlueGetClassifierFuture {
+func (a *stub) GetClassifierAsync(ctx workflow.Context, input *glue.GetClassifierInput) *GetClassifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetClassifier", input)
-	return &GlueGetClassifierFuture{Future: future}
+	return &GetClassifierFuture{Future: future}
 }
 
 func (a *stub) GetClassifiers(ctx workflow.Context, input *glue.GetClassifiersInput) (*glue.GetClassifiersOutput, error) {
@@ -2024,9 +2024,9 @@ func (a *stub) GetClassifiers(ctx workflow.Context, input *glue.GetClassifiersIn
 	return &output, err
 }
 
-func (a *stub) GetClassifiersAsync(ctx workflow.Context, input *glue.GetClassifiersInput) *GlueGetClassifiersFuture {
+func (a *stub) GetClassifiersAsync(ctx workflow.Context, input *glue.GetClassifiersInput) *GetClassifiersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetClassifiers", input)
-	return &GlueGetClassifiersFuture{Future: future}
+	return &GetClassifiersFuture{Future: future}
 }
 
 func (a *stub) GetColumnStatisticsForPartition(ctx workflow.Context, input *glue.GetColumnStatisticsForPartitionInput) (*glue.GetColumnStatisticsForPartitionOutput, error) {
@@ -2035,9 +2035,9 @@ func (a *stub) GetColumnStatisticsForPartition(ctx workflow.Context, input *glue
 	return &output, err
 }
 
-func (a *stub) GetColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.GetColumnStatisticsForPartitionInput) *GlueGetColumnStatisticsForPartitionFuture {
+func (a *stub) GetColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.GetColumnStatisticsForPartitionInput) *GetColumnStatisticsForPartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetColumnStatisticsForPartition", input)
-	return &GlueGetColumnStatisticsForPartitionFuture{Future: future}
+	return &GetColumnStatisticsForPartitionFuture{Future: future}
 }
 
 func (a *stub) GetColumnStatisticsForTable(ctx workflow.Context, input *glue.GetColumnStatisticsForTableInput) (*glue.GetColumnStatisticsForTableOutput, error) {
@@ -2046,9 +2046,9 @@ func (a *stub) GetColumnStatisticsForTable(ctx workflow.Context, input *glue.Get
 	return &output, err
 }
 
-func (a *stub) GetColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.GetColumnStatisticsForTableInput) *GlueGetColumnStatisticsForTableFuture {
+func (a *stub) GetColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.GetColumnStatisticsForTableInput) *GetColumnStatisticsForTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetColumnStatisticsForTable", input)
-	return &GlueGetColumnStatisticsForTableFuture{Future: future}
+	return &GetColumnStatisticsForTableFuture{Future: future}
 }
 
 func (a *stub) GetConnection(ctx workflow.Context, input *glue.GetConnectionInput) (*glue.GetConnectionOutput, error) {
@@ -2057,9 +2057,9 @@ func (a *stub) GetConnection(ctx workflow.Context, input *glue.GetConnectionInpu
 	return &output, err
 }
 
-func (a *stub) GetConnectionAsync(ctx workflow.Context, input *glue.GetConnectionInput) *GlueGetConnectionFuture {
+func (a *stub) GetConnectionAsync(ctx workflow.Context, input *glue.GetConnectionInput) *GetConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetConnection", input)
-	return &GlueGetConnectionFuture{Future: future}
+	return &GetConnectionFuture{Future: future}
 }
 
 func (a *stub) GetConnections(ctx workflow.Context, input *glue.GetConnectionsInput) (*glue.GetConnectionsOutput, error) {
@@ -2068,9 +2068,9 @@ func (a *stub) GetConnections(ctx workflow.Context, input *glue.GetConnectionsIn
 	return &output, err
 }
 
-func (a *stub) GetConnectionsAsync(ctx workflow.Context, input *glue.GetConnectionsInput) *GlueGetConnectionsFuture {
+func (a *stub) GetConnectionsAsync(ctx workflow.Context, input *glue.GetConnectionsInput) *GetConnectionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetConnections", input)
-	return &GlueGetConnectionsFuture{Future: future}
+	return &GetConnectionsFuture{Future: future}
 }
 
 func (a *stub) GetCrawler(ctx workflow.Context, input *glue.GetCrawlerInput) (*glue.GetCrawlerOutput, error) {
@@ -2079,9 +2079,9 @@ func (a *stub) GetCrawler(ctx workflow.Context, input *glue.GetCrawlerInput) (*g
 	return &output, err
 }
 
-func (a *stub) GetCrawlerAsync(ctx workflow.Context, input *glue.GetCrawlerInput) *GlueGetCrawlerFuture {
+func (a *stub) GetCrawlerAsync(ctx workflow.Context, input *glue.GetCrawlerInput) *GetCrawlerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetCrawler", input)
-	return &GlueGetCrawlerFuture{Future: future}
+	return &GetCrawlerFuture{Future: future}
 }
 
 func (a *stub) GetCrawlerMetrics(ctx workflow.Context, input *glue.GetCrawlerMetricsInput) (*glue.GetCrawlerMetricsOutput, error) {
@@ -2090,9 +2090,9 @@ func (a *stub) GetCrawlerMetrics(ctx workflow.Context, input *glue.GetCrawlerMet
 	return &output, err
 }
 
-func (a *stub) GetCrawlerMetricsAsync(ctx workflow.Context, input *glue.GetCrawlerMetricsInput) *GlueGetCrawlerMetricsFuture {
+func (a *stub) GetCrawlerMetricsAsync(ctx workflow.Context, input *glue.GetCrawlerMetricsInput) *GetCrawlerMetricsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetCrawlerMetrics", input)
-	return &GlueGetCrawlerMetricsFuture{Future: future}
+	return &GetCrawlerMetricsFuture{Future: future}
 }
 
 func (a *stub) GetCrawlers(ctx workflow.Context, input *glue.GetCrawlersInput) (*glue.GetCrawlersOutput, error) {
@@ -2101,9 +2101,9 @@ func (a *stub) GetCrawlers(ctx workflow.Context, input *glue.GetCrawlersInput) (
 	return &output, err
 }
 
-func (a *stub) GetCrawlersAsync(ctx workflow.Context, input *glue.GetCrawlersInput) *GlueGetCrawlersFuture {
+func (a *stub) GetCrawlersAsync(ctx workflow.Context, input *glue.GetCrawlersInput) *GetCrawlersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetCrawlers", input)
-	return &GlueGetCrawlersFuture{Future: future}
+	return &GetCrawlersFuture{Future: future}
 }
 
 func (a *stub) GetDataCatalogEncryptionSettings(ctx workflow.Context, input *glue.GetDataCatalogEncryptionSettingsInput) (*glue.GetDataCatalogEncryptionSettingsOutput, error) {
@@ -2112,9 +2112,9 @@ func (a *stub) GetDataCatalogEncryptionSettings(ctx workflow.Context, input *glu
 	return &output, err
 }
 
-func (a *stub) GetDataCatalogEncryptionSettingsAsync(ctx workflow.Context, input *glue.GetDataCatalogEncryptionSettingsInput) *GlueGetDataCatalogEncryptionSettingsFuture {
+func (a *stub) GetDataCatalogEncryptionSettingsAsync(ctx workflow.Context, input *glue.GetDataCatalogEncryptionSettingsInput) *GetDataCatalogEncryptionSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetDataCatalogEncryptionSettings", input)
-	return &GlueGetDataCatalogEncryptionSettingsFuture{Future: future}
+	return &GetDataCatalogEncryptionSettingsFuture{Future: future}
 }
 
 func (a *stub) GetDatabase(ctx workflow.Context, input *glue.GetDatabaseInput) (*glue.GetDatabaseOutput, error) {
@@ -2123,9 +2123,9 @@ func (a *stub) GetDatabase(ctx workflow.Context, input *glue.GetDatabaseInput) (
 	return &output, err
 }
 
-func (a *stub) GetDatabaseAsync(ctx workflow.Context, input *glue.GetDatabaseInput) *GlueGetDatabaseFuture {
+func (a *stub) GetDatabaseAsync(ctx workflow.Context, input *glue.GetDatabaseInput) *GetDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetDatabase", input)
-	return &GlueGetDatabaseFuture{Future: future}
+	return &GetDatabaseFuture{Future: future}
 }
 
 func (a *stub) GetDatabases(ctx workflow.Context, input *glue.GetDatabasesInput) (*glue.GetDatabasesOutput, error) {
@@ -2134,9 +2134,9 @@ func (a *stub) GetDatabases(ctx workflow.Context, input *glue.GetDatabasesInput)
 	return &output, err
 }
 
-func (a *stub) GetDatabasesAsync(ctx workflow.Context, input *glue.GetDatabasesInput) *GlueGetDatabasesFuture {
+func (a *stub) GetDatabasesAsync(ctx workflow.Context, input *glue.GetDatabasesInput) *GetDatabasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetDatabases", input)
-	return &GlueGetDatabasesFuture{Future: future}
+	return &GetDatabasesFuture{Future: future}
 }
 
 func (a *stub) GetDataflowGraph(ctx workflow.Context, input *glue.GetDataflowGraphInput) (*glue.GetDataflowGraphOutput, error) {
@@ -2145,9 +2145,9 @@ func (a *stub) GetDataflowGraph(ctx workflow.Context, input *glue.GetDataflowGra
 	return &output, err
 }
 
-func (a *stub) GetDataflowGraphAsync(ctx workflow.Context, input *glue.GetDataflowGraphInput) *GlueGetDataflowGraphFuture {
+func (a *stub) GetDataflowGraphAsync(ctx workflow.Context, input *glue.GetDataflowGraphInput) *GetDataflowGraphFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetDataflowGraph", input)
-	return &GlueGetDataflowGraphFuture{Future: future}
+	return &GetDataflowGraphFuture{Future: future}
 }
 
 func (a *stub) GetDevEndpoint(ctx workflow.Context, input *glue.GetDevEndpointInput) (*glue.GetDevEndpointOutput, error) {
@@ -2156,9 +2156,9 @@ func (a *stub) GetDevEndpoint(ctx workflow.Context, input *glue.GetDevEndpointIn
 	return &output, err
 }
 
-func (a *stub) GetDevEndpointAsync(ctx workflow.Context, input *glue.GetDevEndpointInput) *GlueGetDevEndpointFuture {
+func (a *stub) GetDevEndpointAsync(ctx workflow.Context, input *glue.GetDevEndpointInput) *GetDevEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetDevEndpoint", input)
-	return &GlueGetDevEndpointFuture{Future: future}
+	return &GetDevEndpointFuture{Future: future}
 }
 
 func (a *stub) GetDevEndpoints(ctx workflow.Context, input *glue.GetDevEndpointsInput) (*glue.GetDevEndpointsOutput, error) {
@@ -2167,9 +2167,9 @@ func (a *stub) GetDevEndpoints(ctx workflow.Context, input *glue.GetDevEndpoints
 	return &output, err
 }
 
-func (a *stub) GetDevEndpointsAsync(ctx workflow.Context, input *glue.GetDevEndpointsInput) *GlueGetDevEndpointsFuture {
+func (a *stub) GetDevEndpointsAsync(ctx workflow.Context, input *glue.GetDevEndpointsInput) *GetDevEndpointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetDevEndpoints", input)
-	return &GlueGetDevEndpointsFuture{Future: future}
+	return &GetDevEndpointsFuture{Future: future}
 }
 
 func (a *stub) GetJob(ctx workflow.Context, input *glue.GetJobInput) (*glue.GetJobOutput, error) {
@@ -2178,9 +2178,9 @@ func (a *stub) GetJob(ctx workflow.Context, input *glue.GetJobInput) (*glue.GetJ
 	return &output, err
 }
 
-func (a *stub) GetJobAsync(ctx workflow.Context, input *glue.GetJobInput) *GlueGetJobFuture {
+func (a *stub) GetJobAsync(ctx workflow.Context, input *glue.GetJobInput) *GetJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetJob", input)
-	return &GlueGetJobFuture{Future: future}
+	return &GetJobFuture{Future: future}
 }
 
 func (a *stub) GetJobBookmark(ctx workflow.Context, input *glue.GetJobBookmarkInput) (*glue.GetJobBookmarkOutput, error) {
@@ -2189,9 +2189,9 @@ func (a *stub) GetJobBookmark(ctx workflow.Context, input *glue.GetJobBookmarkIn
 	return &output, err
 }
 
-func (a *stub) GetJobBookmarkAsync(ctx workflow.Context, input *glue.GetJobBookmarkInput) *GlueGetJobBookmarkFuture {
+func (a *stub) GetJobBookmarkAsync(ctx workflow.Context, input *glue.GetJobBookmarkInput) *GetJobBookmarkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetJobBookmark", input)
-	return &GlueGetJobBookmarkFuture{Future: future}
+	return &GetJobBookmarkFuture{Future: future}
 }
 
 func (a *stub) GetJobRun(ctx workflow.Context, input *glue.GetJobRunInput) (*glue.GetJobRunOutput, error) {
@@ -2200,9 +2200,9 @@ func (a *stub) GetJobRun(ctx workflow.Context, input *glue.GetJobRunInput) (*glu
 	return &output, err
 }
 
-func (a *stub) GetJobRunAsync(ctx workflow.Context, input *glue.GetJobRunInput) *GlueGetJobRunFuture {
+func (a *stub) GetJobRunAsync(ctx workflow.Context, input *glue.GetJobRunInput) *GetJobRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetJobRun", input)
-	return &GlueGetJobRunFuture{Future: future}
+	return &GetJobRunFuture{Future: future}
 }
 
 func (a *stub) GetJobRuns(ctx workflow.Context, input *glue.GetJobRunsInput) (*glue.GetJobRunsOutput, error) {
@@ -2211,9 +2211,9 @@ func (a *stub) GetJobRuns(ctx workflow.Context, input *glue.GetJobRunsInput) (*g
 	return &output, err
 }
 
-func (a *stub) GetJobRunsAsync(ctx workflow.Context, input *glue.GetJobRunsInput) *GlueGetJobRunsFuture {
+func (a *stub) GetJobRunsAsync(ctx workflow.Context, input *glue.GetJobRunsInput) *GetJobRunsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetJobRuns", input)
-	return &GlueGetJobRunsFuture{Future: future}
+	return &GetJobRunsFuture{Future: future}
 }
 
 func (a *stub) GetJobs(ctx workflow.Context, input *glue.GetJobsInput) (*glue.GetJobsOutput, error) {
@@ -2222,9 +2222,9 @@ func (a *stub) GetJobs(ctx workflow.Context, input *glue.GetJobsInput) (*glue.Ge
 	return &output, err
 }
 
-func (a *stub) GetJobsAsync(ctx workflow.Context, input *glue.GetJobsInput) *GlueGetJobsFuture {
+func (a *stub) GetJobsAsync(ctx workflow.Context, input *glue.GetJobsInput) *GetJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetJobs", input)
-	return &GlueGetJobsFuture{Future: future}
+	return &GetJobsFuture{Future: future}
 }
 
 func (a *stub) GetMLTaskRun(ctx workflow.Context, input *glue.GetMLTaskRunInput) (*glue.GetMLTaskRunOutput, error) {
@@ -2233,9 +2233,9 @@ func (a *stub) GetMLTaskRun(ctx workflow.Context, input *glue.GetMLTaskRunInput)
 	return &output, err
 }
 
-func (a *stub) GetMLTaskRunAsync(ctx workflow.Context, input *glue.GetMLTaskRunInput) *GlueGetMLTaskRunFuture {
+func (a *stub) GetMLTaskRunAsync(ctx workflow.Context, input *glue.GetMLTaskRunInput) *GetMLTaskRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetMLTaskRun", input)
-	return &GlueGetMLTaskRunFuture{Future: future}
+	return &GetMLTaskRunFuture{Future: future}
 }
 
 func (a *stub) GetMLTaskRuns(ctx workflow.Context, input *glue.GetMLTaskRunsInput) (*glue.GetMLTaskRunsOutput, error) {
@@ -2244,9 +2244,9 @@ func (a *stub) GetMLTaskRuns(ctx workflow.Context, input *glue.GetMLTaskRunsInpu
 	return &output, err
 }
 
-func (a *stub) GetMLTaskRunsAsync(ctx workflow.Context, input *glue.GetMLTaskRunsInput) *GlueGetMLTaskRunsFuture {
+func (a *stub) GetMLTaskRunsAsync(ctx workflow.Context, input *glue.GetMLTaskRunsInput) *GetMLTaskRunsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetMLTaskRuns", input)
-	return &GlueGetMLTaskRunsFuture{Future: future}
+	return &GetMLTaskRunsFuture{Future: future}
 }
 
 func (a *stub) GetMLTransform(ctx workflow.Context, input *glue.GetMLTransformInput) (*glue.GetMLTransformOutput, error) {
@@ -2255,9 +2255,9 @@ func (a *stub) GetMLTransform(ctx workflow.Context, input *glue.GetMLTransformIn
 	return &output, err
 }
 
-func (a *stub) GetMLTransformAsync(ctx workflow.Context, input *glue.GetMLTransformInput) *GlueGetMLTransformFuture {
+func (a *stub) GetMLTransformAsync(ctx workflow.Context, input *glue.GetMLTransformInput) *GetMLTransformFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetMLTransform", input)
-	return &GlueGetMLTransformFuture{Future: future}
+	return &GetMLTransformFuture{Future: future}
 }
 
 func (a *stub) GetMLTransforms(ctx workflow.Context, input *glue.GetMLTransformsInput) (*glue.GetMLTransformsOutput, error) {
@@ -2266,9 +2266,9 @@ func (a *stub) GetMLTransforms(ctx workflow.Context, input *glue.GetMLTransforms
 	return &output, err
 }
 
-func (a *stub) GetMLTransformsAsync(ctx workflow.Context, input *glue.GetMLTransformsInput) *GlueGetMLTransformsFuture {
+func (a *stub) GetMLTransformsAsync(ctx workflow.Context, input *glue.GetMLTransformsInput) *GetMLTransformsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetMLTransforms", input)
-	return &GlueGetMLTransformsFuture{Future: future}
+	return &GetMLTransformsFuture{Future: future}
 }
 
 func (a *stub) GetMapping(ctx workflow.Context, input *glue.GetMappingInput) (*glue.GetMappingOutput, error) {
@@ -2277,9 +2277,9 @@ func (a *stub) GetMapping(ctx workflow.Context, input *glue.GetMappingInput) (*g
 	return &output, err
 }
 
-func (a *stub) GetMappingAsync(ctx workflow.Context, input *glue.GetMappingInput) *GlueGetMappingFuture {
+func (a *stub) GetMappingAsync(ctx workflow.Context, input *glue.GetMappingInput) *GetMappingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetMapping", input)
-	return &GlueGetMappingFuture{Future: future}
+	return &GetMappingFuture{Future: future}
 }
 
 func (a *stub) GetPartition(ctx workflow.Context, input *glue.GetPartitionInput) (*glue.GetPartitionOutput, error) {
@@ -2288,9 +2288,9 @@ func (a *stub) GetPartition(ctx workflow.Context, input *glue.GetPartitionInput)
 	return &output, err
 }
 
-func (a *stub) GetPartitionAsync(ctx workflow.Context, input *glue.GetPartitionInput) *GlueGetPartitionFuture {
+func (a *stub) GetPartitionAsync(ctx workflow.Context, input *glue.GetPartitionInput) *GetPartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetPartition", input)
-	return &GlueGetPartitionFuture{Future: future}
+	return &GetPartitionFuture{Future: future}
 }
 
 func (a *stub) GetPartitionIndexes(ctx workflow.Context, input *glue.GetPartitionIndexesInput) (*glue.GetPartitionIndexesOutput, error) {
@@ -2299,9 +2299,9 @@ func (a *stub) GetPartitionIndexes(ctx workflow.Context, input *glue.GetPartitio
 	return &output, err
 }
 
-func (a *stub) GetPartitionIndexesAsync(ctx workflow.Context, input *glue.GetPartitionIndexesInput) *GlueGetPartitionIndexesFuture {
+func (a *stub) GetPartitionIndexesAsync(ctx workflow.Context, input *glue.GetPartitionIndexesInput) *GetPartitionIndexesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetPartitionIndexes", input)
-	return &GlueGetPartitionIndexesFuture{Future: future}
+	return &GetPartitionIndexesFuture{Future: future}
 }
 
 func (a *stub) GetPartitions(ctx workflow.Context, input *glue.GetPartitionsInput) (*glue.GetPartitionsOutput, error) {
@@ -2310,9 +2310,9 @@ func (a *stub) GetPartitions(ctx workflow.Context, input *glue.GetPartitionsInpu
 	return &output, err
 }
 
-func (a *stub) GetPartitionsAsync(ctx workflow.Context, input *glue.GetPartitionsInput) *GlueGetPartitionsFuture {
+func (a *stub) GetPartitionsAsync(ctx workflow.Context, input *glue.GetPartitionsInput) *GetPartitionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetPartitions", input)
-	return &GlueGetPartitionsFuture{Future: future}
+	return &GetPartitionsFuture{Future: future}
 }
 
 func (a *stub) GetPlan(ctx workflow.Context, input *glue.GetPlanInput) (*glue.GetPlanOutput, error) {
@@ -2321,9 +2321,9 @@ func (a *stub) GetPlan(ctx workflow.Context, input *glue.GetPlanInput) (*glue.Ge
 	return &output, err
 }
 
-func (a *stub) GetPlanAsync(ctx workflow.Context, input *glue.GetPlanInput) *GlueGetPlanFuture {
+func (a *stub) GetPlanAsync(ctx workflow.Context, input *glue.GetPlanInput) *GetPlanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetPlan", input)
-	return &GlueGetPlanFuture{Future: future}
+	return &GetPlanFuture{Future: future}
 }
 
 func (a *stub) GetResourcePolicies(ctx workflow.Context, input *glue.GetResourcePoliciesInput) (*glue.GetResourcePoliciesOutput, error) {
@@ -2332,9 +2332,9 @@ func (a *stub) GetResourcePolicies(ctx workflow.Context, input *glue.GetResource
 	return &output, err
 }
 
-func (a *stub) GetResourcePoliciesAsync(ctx workflow.Context, input *glue.GetResourcePoliciesInput) *GlueGetResourcePoliciesFuture {
+func (a *stub) GetResourcePoliciesAsync(ctx workflow.Context, input *glue.GetResourcePoliciesInput) *GetResourcePoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetResourcePolicies", input)
-	return &GlueGetResourcePoliciesFuture{Future: future}
+	return &GetResourcePoliciesFuture{Future: future}
 }
 
 func (a *stub) GetResourcePolicy(ctx workflow.Context, input *glue.GetResourcePolicyInput) (*glue.GetResourcePolicyOutput, error) {
@@ -2343,9 +2343,9 @@ func (a *stub) GetResourcePolicy(ctx workflow.Context, input *glue.GetResourcePo
 	return &output, err
 }
 
-func (a *stub) GetResourcePolicyAsync(ctx workflow.Context, input *glue.GetResourcePolicyInput) *GlueGetResourcePolicyFuture {
+func (a *stub) GetResourcePolicyAsync(ctx workflow.Context, input *glue.GetResourcePolicyInput) *GetResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetResourcePolicy", input)
-	return &GlueGetResourcePolicyFuture{Future: future}
+	return &GetResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) GetSecurityConfiguration(ctx workflow.Context, input *glue.GetSecurityConfigurationInput) (*glue.GetSecurityConfigurationOutput, error) {
@@ -2354,9 +2354,9 @@ func (a *stub) GetSecurityConfiguration(ctx workflow.Context, input *glue.GetSec
 	return &output, err
 }
 
-func (a *stub) GetSecurityConfigurationAsync(ctx workflow.Context, input *glue.GetSecurityConfigurationInput) *GlueGetSecurityConfigurationFuture {
+func (a *stub) GetSecurityConfigurationAsync(ctx workflow.Context, input *glue.GetSecurityConfigurationInput) *GetSecurityConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetSecurityConfiguration", input)
-	return &GlueGetSecurityConfigurationFuture{Future: future}
+	return &GetSecurityConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetSecurityConfigurations(ctx workflow.Context, input *glue.GetSecurityConfigurationsInput) (*glue.GetSecurityConfigurationsOutput, error) {
@@ -2365,9 +2365,9 @@ func (a *stub) GetSecurityConfigurations(ctx workflow.Context, input *glue.GetSe
 	return &output, err
 }
 
-func (a *stub) GetSecurityConfigurationsAsync(ctx workflow.Context, input *glue.GetSecurityConfigurationsInput) *GlueGetSecurityConfigurationsFuture {
+func (a *stub) GetSecurityConfigurationsAsync(ctx workflow.Context, input *glue.GetSecurityConfigurationsInput) *GetSecurityConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetSecurityConfigurations", input)
-	return &GlueGetSecurityConfigurationsFuture{Future: future}
+	return &GetSecurityConfigurationsFuture{Future: future}
 }
 
 func (a *stub) GetTable(ctx workflow.Context, input *glue.GetTableInput) (*glue.GetTableOutput, error) {
@@ -2376,9 +2376,9 @@ func (a *stub) GetTable(ctx workflow.Context, input *glue.GetTableInput) (*glue.
 	return &output, err
 }
 
-func (a *stub) GetTableAsync(ctx workflow.Context, input *glue.GetTableInput) *GlueGetTableFuture {
+func (a *stub) GetTableAsync(ctx workflow.Context, input *glue.GetTableInput) *GetTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetTable", input)
-	return &GlueGetTableFuture{Future: future}
+	return &GetTableFuture{Future: future}
 }
 
 func (a *stub) GetTableVersion(ctx workflow.Context, input *glue.GetTableVersionInput) (*glue.GetTableVersionOutput, error) {
@@ -2387,9 +2387,9 @@ func (a *stub) GetTableVersion(ctx workflow.Context, input *glue.GetTableVersion
 	return &output, err
 }
 
-func (a *stub) GetTableVersionAsync(ctx workflow.Context, input *glue.GetTableVersionInput) *GlueGetTableVersionFuture {
+func (a *stub) GetTableVersionAsync(ctx workflow.Context, input *glue.GetTableVersionInput) *GetTableVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetTableVersion", input)
-	return &GlueGetTableVersionFuture{Future: future}
+	return &GetTableVersionFuture{Future: future}
 }
 
 func (a *stub) GetTableVersions(ctx workflow.Context, input *glue.GetTableVersionsInput) (*glue.GetTableVersionsOutput, error) {
@@ -2398,9 +2398,9 @@ func (a *stub) GetTableVersions(ctx workflow.Context, input *glue.GetTableVersio
 	return &output, err
 }
 
-func (a *stub) GetTableVersionsAsync(ctx workflow.Context, input *glue.GetTableVersionsInput) *GlueGetTableVersionsFuture {
+func (a *stub) GetTableVersionsAsync(ctx workflow.Context, input *glue.GetTableVersionsInput) *GetTableVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetTableVersions", input)
-	return &GlueGetTableVersionsFuture{Future: future}
+	return &GetTableVersionsFuture{Future: future}
 }
 
 func (a *stub) GetTables(ctx workflow.Context, input *glue.GetTablesInput) (*glue.GetTablesOutput, error) {
@@ -2409,9 +2409,9 @@ func (a *stub) GetTables(ctx workflow.Context, input *glue.GetTablesInput) (*glu
 	return &output, err
 }
 
-func (a *stub) GetTablesAsync(ctx workflow.Context, input *glue.GetTablesInput) *GlueGetTablesFuture {
+func (a *stub) GetTablesAsync(ctx workflow.Context, input *glue.GetTablesInput) *GetTablesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetTables", input)
-	return &GlueGetTablesFuture{Future: future}
+	return &GetTablesFuture{Future: future}
 }
 
 func (a *stub) GetTags(ctx workflow.Context, input *glue.GetTagsInput) (*glue.GetTagsOutput, error) {
@@ -2420,9 +2420,9 @@ func (a *stub) GetTags(ctx workflow.Context, input *glue.GetTagsInput) (*glue.Ge
 	return &output, err
 }
 
-func (a *stub) GetTagsAsync(ctx workflow.Context, input *glue.GetTagsInput) *GlueGetTagsFuture {
+func (a *stub) GetTagsAsync(ctx workflow.Context, input *glue.GetTagsInput) *GetTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetTags", input)
-	return &GlueGetTagsFuture{Future: future}
+	return &GetTagsFuture{Future: future}
 }
 
 func (a *stub) GetTrigger(ctx workflow.Context, input *glue.GetTriggerInput) (*glue.GetTriggerOutput, error) {
@@ -2431,9 +2431,9 @@ func (a *stub) GetTrigger(ctx workflow.Context, input *glue.GetTriggerInput) (*g
 	return &output, err
 }
 
-func (a *stub) GetTriggerAsync(ctx workflow.Context, input *glue.GetTriggerInput) *GlueGetTriggerFuture {
+func (a *stub) GetTriggerAsync(ctx workflow.Context, input *glue.GetTriggerInput) *GetTriggerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetTrigger", input)
-	return &GlueGetTriggerFuture{Future: future}
+	return &GetTriggerFuture{Future: future}
 }
 
 func (a *stub) GetTriggers(ctx workflow.Context, input *glue.GetTriggersInput) (*glue.GetTriggersOutput, error) {
@@ -2442,9 +2442,9 @@ func (a *stub) GetTriggers(ctx workflow.Context, input *glue.GetTriggersInput) (
 	return &output, err
 }
 
-func (a *stub) GetTriggersAsync(ctx workflow.Context, input *glue.GetTriggersInput) *GlueGetTriggersFuture {
+func (a *stub) GetTriggersAsync(ctx workflow.Context, input *glue.GetTriggersInput) *GetTriggersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetTriggers", input)
-	return &GlueGetTriggersFuture{Future: future}
+	return &GetTriggersFuture{Future: future}
 }
 
 func (a *stub) GetUserDefinedFunction(ctx workflow.Context, input *glue.GetUserDefinedFunctionInput) (*glue.GetUserDefinedFunctionOutput, error) {
@@ -2453,9 +2453,9 @@ func (a *stub) GetUserDefinedFunction(ctx workflow.Context, input *glue.GetUserD
 	return &output, err
 }
 
-func (a *stub) GetUserDefinedFunctionAsync(ctx workflow.Context, input *glue.GetUserDefinedFunctionInput) *GlueGetUserDefinedFunctionFuture {
+func (a *stub) GetUserDefinedFunctionAsync(ctx workflow.Context, input *glue.GetUserDefinedFunctionInput) *GetUserDefinedFunctionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetUserDefinedFunction", input)
-	return &GlueGetUserDefinedFunctionFuture{Future: future}
+	return &GetUserDefinedFunctionFuture{Future: future}
 }
 
 func (a *stub) GetUserDefinedFunctions(ctx workflow.Context, input *glue.GetUserDefinedFunctionsInput) (*glue.GetUserDefinedFunctionsOutput, error) {
@@ -2464,9 +2464,9 @@ func (a *stub) GetUserDefinedFunctions(ctx workflow.Context, input *glue.GetUser
 	return &output, err
 }
 
-func (a *stub) GetUserDefinedFunctionsAsync(ctx workflow.Context, input *glue.GetUserDefinedFunctionsInput) *GlueGetUserDefinedFunctionsFuture {
+func (a *stub) GetUserDefinedFunctionsAsync(ctx workflow.Context, input *glue.GetUserDefinedFunctionsInput) *GetUserDefinedFunctionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetUserDefinedFunctions", input)
-	return &GlueGetUserDefinedFunctionsFuture{Future: future}
+	return &GetUserDefinedFunctionsFuture{Future: future}
 }
 
 func (a *stub) GetWorkflow(ctx workflow.Context, input *glue.GetWorkflowInput) (*glue.GetWorkflowOutput, error) {
@@ -2475,9 +2475,9 @@ func (a *stub) GetWorkflow(ctx workflow.Context, input *glue.GetWorkflowInput) (
 	return &output, err
 }
 
-func (a *stub) GetWorkflowAsync(ctx workflow.Context, input *glue.GetWorkflowInput) *GlueGetWorkflowFuture {
+func (a *stub) GetWorkflowAsync(ctx workflow.Context, input *glue.GetWorkflowInput) *GetWorkflowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetWorkflow", input)
-	return &GlueGetWorkflowFuture{Future: future}
+	return &GetWorkflowFuture{Future: future}
 }
 
 func (a *stub) GetWorkflowRun(ctx workflow.Context, input *glue.GetWorkflowRunInput) (*glue.GetWorkflowRunOutput, error) {
@@ -2486,9 +2486,9 @@ func (a *stub) GetWorkflowRun(ctx workflow.Context, input *glue.GetWorkflowRunIn
 	return &output, err
 }
 
-func (a *stub) GetWorkflowRunAsync(ctx workflow.Context, input *glue.GetWorkflowRunInput) *GlueGetWorkflowRunFuture {
+func (a *stub) GetWorkflowRunAsync(ctx workflow.Context, input *glue.GetWorkflowRunInput) *GetWorkflowRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetWorkflowRun", input)
-	return &GlueGetWorkflowRunFuture{Future: future}
+	return &GetWorkflowRunFuture{Future: future}
 }
 
 func (a *stub) GetWorkflowRunProperties(ctx workflow.Context, input *glue.GetWorkflowRunPropertiesInput) (*glue.GetWorkflowRunPropertiesOutput, error) {
@@ -2497,9 +2497,9 @@ func (a *stub) GetWorkflowRunProperties(ctx workflow.Context, input *glue.GetWor
 	return &output, err
 }
 
-func (a *stub) GetWorkflowRunPropertiesAsync(ctx workflow.Context, input *glue.GetWorkflowRunPropertiesInput) *GlueGetWorkflowRunPropertiesFuture {
+func (a *stub) GetWorkflowRunPropertiesAsync(ctx workflow.Context, input *glue.GetWorkflowRunPropertiesInput) *GetWorkflowRunPropertiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetWorkflowRunProperties", input)
-	return &GlueGetWorkflowRunPropertiesFuture{Future: future}
+	return &GetWorkflowRunPropertiesFuture{Future: future}
 }
 
 func (a *stub) GetWorkflowRuns(ctx workflow.Context, input *glue.GetWorkflowRunsInput) (*glue.GetWorkflowRunsOutput, error) {
@@ -2508,9 +2508,9 @@ func (a *stub) GetWorkflowRuns(ctx workflow.Context, input *glue.GetWorkflowRuns
 	return &output, err
 }
 
-func (a *stub) GetWorkflowRunsAsync(ctx workflow.Context, input *glue.GetWorkflowRunsInput) *GlueGetWorkflowRunsFuture {
+func (a *stub) GetWorkflowRunsAsync(ctx workflow.Context, input *glue.GetWorkflowRunsInput) *GetWorkflowRunsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.GetWorkflowRuns", input)
-	return &GlueGetWorkflowRunsFuture{Future: future}
+	return &GetWorkflowRunsFuture{Future: future}
 }
 
 func (a *stub) ImportCatalogToGlue(ctx workflow.Context, input *glue.ImportCatalogToGlueInput) (*glue.ImportCatalogToGlueOutput, error) {
@@ -2519,9 +2519,9 @@ func (a *stub) ImportCatalogToGlue(ctx workflow.Context, input *glue.ImportCatal
 	return &output, err
 }
 
-func (a *stub) ImportCatalogToGlueAsync(ctx workflow.Context, input *glue.ImportCatalogToGlueInput) *GlueImportCatalogToGlueFuture {
+func (a *stub) ImportCatalogToGlueAsync(ctx workflow.Context, input *glue.ImportCatalogToGlueInput) *ImportCatalogToGlueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ImportCatalogToGlue", input)
-	return &GlueImportCatalogToGlueFuture{Future: future}
+	return &ImportCatalogToGlueFuture{Future: future}
 }
 
 func (a *stub) ListCrawlers(ctx workflow.Context, input *glue.ListCrawlersInput) (*glue.ListCrawlersOutput, error) {
@@ -2530,9 +2530,9 @@ func (a *stub) ListCrawlers(ctx workflow.Context, input *glue.ListCrawlersInput)
 	return &output, err
 }
 
-func (a *stub) ListCrawlersAsync(ctx workflow.Context, input *glue.ListCrawlersInput) *GlueListCrawlersFuture {
+func (a *stub) ListCrawlersAsync(ctx workflow.Context, input *glue.ListCrawlersInput) *ListCrawlersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ListCrawlers", input)
-	return &GlueListCrawlersFuture{Future: future}
+	return &ListCrawlersFuture{Future: future}
 }
 
 func (a *stub) ListDevEndpoints(ctx workflow.Context, input *glue.ListDevEndpointsInput) (*glue.ListDevEndpointsOutput, error) {
@@ -2541,9 +2541,9 @@ func (a *stub) ListDevEndpoints(ctx workflow.Context, input *glue.ListDevEndpoin
 	return &output, err
 }
 
-func (a *stub) ListDevEndpointsAsync(ctx workflow.Context, input *glue.ListDevEndpointsInput) *GlueListDevEndpointsFuture {
+func (a *stub) ListDevEndpointsAsync(ctx workflow.Context, input *glue.ListDevEndpointsInput) *ListDevEndpointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ListDevEndpoints", input)
-	return &GlueListDevEndpointsFuture{Future: future}
+	return &ListDevEndpointsFuture{Future: future}
 }
 
 func (a *stub) ListJobs(ctx workflow.Context, input *glue.ListJobsInput) (*glue.ListJobsOutput, error) {
@@ -2552,9 +2552,9 @@ func (a *stub) ListJobs(ctx workflow.Context, input *glue.ListJobsInput) (*glue.
 	return &output, err
 }
 
-func (a *stub) ListJobsAsync(ctx workflow.Context, input *glue.ListJobsInput) *GlueListJobsFuture {
+func (a *stub) ListJobsAsync(ctx workflow.Context, input *glue.ListJobsInput) *ListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ListJobs", input)
-	return &GlueListJobsFuture{Future: future}
+	return &ListJobsFuture{Future: future}
 }
 
 func (a *stub) ListMLTransforms(ctx workflow.Context, input *glue.ListMLTransformsInput) (*glue.ListMLTransformsOutput, error) {
@@ -2563,9 +2563,9 @@ func (a *stub) ListMLTransforms(ctx workflow.Context, input *glue.ListMLTransfor
 	return &output, err
 }
 
-func (a *stub) ListMLTransformsAsync(ctx workflow.Context, input *glue.ListMLTransformsInput) *GlueListMLTransformsFuture {
+func (a *stub) ListMLTransformsAsync(ctx workflow.Context, input *glue.ListMLTransformsInput) *ListMLTransformsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ListMLTransforms", input)
-	return &GlueListMLTransformsFuture{Future: future}
+	return &ListMLTransformsFuture{Future: future}
 }
 
 func (a *stub) ListTriggers(ctx workflow.Context, input *glue.ListTriggersInput) (*glue.ListTriggersOutput, error) {
@@ -2574,9 +2574,9 @@ func (a *stub) ListTriggers(ctx workflow.Context, input *glue.ListTriggersInput)
 	return &output, err
 }
 
-func (a *stub) ListTriggersAsync(ctx workflow.Context, input *glue.ListTriggersInput) *GlueListTriggersFuture {
+func (a *stub) ListTriggersAsync(ctx workflow.Context, input *glue.ListTriggersInput) *ListTriggersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ListTriggers", input)
-	return &GlueListTriggersFuture{Future: future}
+	return &ListTriggersFuture{Future: future}
 }
 
 func (a *stub) ListWorkflows(ctx workflow.Context, input *glue.ListWorkflowsInput) (*glue.ListWorkflowsOutput, error) {
@@ -2585,9 +2585,9 @@ func (a *stub) ListWorkflows(ctx workflow.Context, input *glue.ListWorkflowsInpu
 	return &output, err
 }
 
-func (a *stub) ListWorkflowsAsync(ctx workflow.Context, input *glue.ListWorkflowsInput) *GlueListWorkflowsFuture {
+func (a *stub) ListWorkflowsAsync(ctx workflow.Context, input *glue.ListWorkflowsInput) *ListWorkflowsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ListWorkflows", input)
-	return &GlueListWorkflowsFuture{Future: future}
+	return &ListWorkflowsFuture{Future: future}
 }
 
 func (a *stub) PutDataCatalogEncryptionSettings(ctx workflow.Context, input *glue.PutDataCatalogEncryptionSettingsInput) (*glue.PutDataCatalogEncryptionSettingsOutput, error) {
@@ -2596,9 +2596,9 @@ func (a *stub) PutDataCatalogEncryptionSettings(ctx workflow.Context, input *glu
 	return &output, err
 }
 
-func (a *stub) PutDataCatalogEncryptionSettingsAsync(ctx workflow.Context, input *glue.PutDataCatalogEncryptionSettingsInput) *GluePutDataCatalogEncryptionSettingsFuture {
+func (a *stub) PutDataCatalogEncryptionSettingsAsync(ctx workflow.Context, input *glue.PutDataCatalogEncryptionSettingsInput) *PutDataCatalogEncryptionSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.PutDataCatalogEncryptionSettings", input)
-	return &GluePutDataCatalogEncryptionSettingsFuture{Future: future}
+	return &PutDataCatalogEncryptionSettingsFuture{Future: future}
 }
 
 func (a *stub) PutResourcePolicy(ctx workflow.Context, input *glue.PutResourcePolicyInput) (*glue.PutResourcePolicyOutput, error) {
@@ -2607,9 +2607,9 @@ func (a *stub) PutResourcePolicy(ctx workflow.Context, input *glue.PutResourcePo
 	return &output, err
 }
 
-func (a *stub) PutResourcePolicyAsync(ctx workflow.Context, input *glue.PutResourcePolicyInput) *GluePutResourcePolicyFuture {
+func (a *stub) PutResourcePolicyAsync(ctx workflow.Context, input *glue.PutResourcePolicyInput) *PutResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.PutResourcePolicy", input)
-	return &GluePutResourcePolicyFuture{Future: future}
+	return &PutResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) PutWorkflowRunProperties(ctx workflow.Context, input *glue.PutWorkflowRunPropertiesInput) (*glue.PutWorkflowRunPropertiesOutput, error) {
@@ -2618,9 +2618,9 @@ func (a *stub) PutWorkflowRunProperties(ctx workflow.Context, input *glue.PutWor
 	return &output, err
 }
 
-func (a *stub) PutWorkflowRunPropertiesAsync(ctx workflow.Context, input *glue.PutWorkflowRunPropertiesInput) *GluePutWorkflowRunPropertiesFuture {
+func (a *stub) PutWorkflowRunPropertiesAsync(ctx workflow.Context, input *glue.PutWorkflowRunPropertiesInput) *PutWorkflowRunPropertiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.PutWorkflowRunProperties", input)
-	return &GluePutWorkflowRunPropertiesFuture{Future: future}
+	return &PutWorkflowRunPropertiesFuture{Future: future}
 }
 
 func (a *stub) ResetJobBookmark(ctx workflow.Context, input *glue.ResetJobBookmarkInput) (*glue.ResetJobBookmarkOutput, error) {
@@ -2629,9 +2629,9 @@ func (a *stub) ResetJobBookmark(ctx workflow.Context, input *glue.ResetJobBookma
 	return &output, err
 }
 
-func (a *stub) ResetJobBookmarkAsync(ctx workflow.Context, input *glue.ResetJobBookmarkInput) *GlueResetJobBookmarkFuture {
+func (a *stub) ResetJobBookmarkAsync(ctx workflow.Context, input *glue.ResetJobBookmarkInput) *ResetJobBookmarkFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ResetJobBookmark", input)
-	return &GlueResetJobBookmarkFuture{Future: future}
+	return &ResetJobBookmarkFuture{Future: future}
 }
 
 func (a *stub) ResumeWorkflowRun(ctx workflow.Context, input *glue.ResumeWorkflowRunInput) (*glue.ResumeWorkflowRunOutput, error) {
@@ -2640,9 +2640,9 @@ func (a *stub) ResumeWorkflowRun(ctx workflow.Context, input *glue.ResumeWorkflo
 	return &output, err
 }
 
-func (a *stub) ResumeWorkflowRunAsync(ctx workflow.Context, input *glue.ResumeWorkflowRunInput) *GlueResumeWorkflowRunFuture {
+func (a *stub) ResumeWorkflowRunAsync(ctx workflow.Context, input *glue.ResumeWorkflowRunInput) *ResumeWorkflowRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.ResumeWorkflowRun", input)
-	return &GlueResumeWorkflowRunFuture{Future: future}
+	return &ResumeWorkflowRunFuture{Future: future}
 }
 
 func (a *stub) SearchTables(ctx workflow.Context, input *glue.SearchTablesInput) (*glue.SearchTablesOutput, error) {
@@ -2651,9 +2651,9 @@ func (a *stub) SearchTables(ctx workflow.Context, input *glue.SearchTablesInput)
 	return &output, err
 }
 
-func (a *stub) SearchTablesAsync(ctx workflow.Context, input *glue.SearchTablesInput) *GlueSearchTablesFuture {
+func (a *stub) SearchTablesAsync(ctx workflow.Context, input *glue.SearchTablesInput) *SearchTablesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.SearchTables", input)
-	return &GlueSearchTablesFuture{Future: future}
+	return &SearchTablesFuture{Future: future}
 }
 
 func (a *stub) StartCrawler(ctx workflow.Context, input *glue.StartCrawlerInput) (*glue.StartCrawlerOutput, error) {
@@ -2662,9 +2662,9 @@ func (a *stub) StartCrawler(ctx workflow.Context, input *glue.StartCrawlerInput)
 	return &output, err
 }
 
-func (a *stub) StartCrawlerAsync(ctx workflow.Context, input *glue.StartCrawlerInput) *GlueStartCrawlerFuture {
+func (a *stub) StartCrawlerAsync(ctx workflow.Context, input *glue.StartCrawlerInput) *StartCrawlerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartCrawler", input)
-	return &GlueStartCrawlerFuture{Future: future}
+	return &StartCrawlerFuture{Future: future}
 }
 
 func (a *stub) StartCrawlerSchedule(ctx workflow.Context, input *glue.StartCrawlerScheduleInput) (*glue.StartCrawlerScheduleOutput, error) {
@@ -2673,9 +2673,9 @@ func (a *stub) StartCrawlerSchedule(ctx workflow.Context, input *glue.StartCrawl
 	return &output, err
 }
 
-func (a *stub) StartCrawlerScheduleAsync(ctx workflow.Context, input *glue.StartCrawlerScheduleInput) *GlueStartCrawlerScheduleFuture {
+func (a *stub) StartCrawlerScheduleAsync(ctx workflow.Context, input *glue.StartCrawlerScheduleInput) *StartCrawlerScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartCrawlerSchedule", input)
-	return &GlueStartCrawlerScheduleFuture{Future: future}
+	return &StartCrawlerScheduleFuture{Future: future}
 }
 
 func (a *stub) StartExportLabelsTaskRun(ctx workflow.Context, input *glue.StartExportLabelsTaskRunInput) (*glue.StartExportLabelsTaskRunOutput, error) {
@@ -2684,9 +2684,9 @@ func (a *stub) StartExportLabelsTaskRun(ctx workflow.Context, input *glue.StartE
 	return &output, err
 }
 
-func (a *stub) StartExportLabelsTaskRunAsync(ctx workflow.Context, input *glue.StartExportLabelsTaskRunInput) *GlueStartExportLabelsTaskRunFuture {
+func (a *stub) StartExportLabelsTaskRunAsync(ctx workflow.Context, input *glue.StartExportLabelsTaskRunInput) *StartExportLabelsTaskRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartExportLabelsTaskRun", input)
-	return &GlueStartExportLabelsTaskRunFuture{Future: future}
+	return &StartExportLabelsTaskRunFuture{Future: future}
 }
 
 func (a *stub) StartImportLabelsTaskRun(ctx workflow.Context, input *glue.StartImportLabelsTaskRunInput) (*glue.StartImportLabelsTaskRunOutput, error) {
@@ -2695,9 +2695,9 @@ func (a *stub) StartImportLabelsTaskRun(ctx workflow.Context, input *glue.StartI
 	return &output, err
 }
 
-func (a *stub) StartImportLabelsTaskRunAsync(ctx workflow.Context, input *glue.StartImportLabelsTaskRunInput) *GlueStartImportLabelsTaskRunFuture {
+func (a *stub) StartImportLabelsTaskRunAsync(ctx workflow.Context, input *glue.StartImportLabelsTaskRunInput) *StartImportLabelsTaskRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartImportLabelsTaskRun", input)
-	return &GlueStartImportLabelsTaskRunFuture{Future: future}
+	return &StartImportLabelsTaskRunFuture{Future: future}
 }
 
 func (a *stub) StartJobRun(ctx workflow.Context, input *glue.StartJobRunInput) (*glue.StartJobRunOutput, error) {
@@ -2706,9 +2706,9 @@ func (a *stub) StartJobRun(ctx workflow.Context, input *glue.StartJobRunInput) (
 	return &output, err
 }
 
-func (a *stub) StartJobRunAsync(ctx workflow.Context, input *glue.StartJobRunInput) *GlueStartJobRunFuture {
+func (a *stub) StartJobRunAsync(ctx workflow.Context, input *glue.StartJobRunInput) *StartJobRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartJobRun", input)
-	return &GlueStartJobRunFuture{Future: future}
+	return &StartJobRunFuture{Future: future}
 }
 
 func (a *stub) StartMLEvaluationTaskRun(ctx workflow.Context, input *glue.StartMLEvaluationTaskRunInput) (*glue.StartMLEvaluationTaskRunOutput, error) {
@@ -2717,9 +2717,9 @@ func (a *stub) StartMLEvaluationTaskRun(ctx workflow.Context, input *glue.StartM
 	return &output, err
 }
 
-func (a *stub) StartMLEvaluationTaskRunAsync(ctx workflow.Context, input *glue.StartMLEvaluationTaskRunInput) *GlueStartMLEvaluationTaskRunFuture {
+func (a *stub) StartMLEvaluationTaskRunAsync(ctx workflow.Context, input *glue.StartMLEvaluationTaskRunInput) *StartMLEvaluationTaskRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartMLEvaluationTaskRun", input)
-	return &GlueStartMLEvaluationTaskRunFuture{Future: future}
+	return &StartMLEvaluationTaskRunFuture{Future: future}
 }
 
 func (a *stub) StartMLLabelingSetGenerationTaskRun(ctx workflow.Context, input *glue.StartMLLabelingSetGenerationTaskRunInput) (*glue.StartMLLabelingSetGenerationTaskRunOutput, error) {
@@ -2728,9 +2728,9 @@ func (a *stub) StartMLLabelingSetGenerationTaskRun(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) StartMLLabelingSetGenerationTaskRunAsync(ctx workflow.Context, input *glue.StartMLLabelingSetGenerationTaskRunInput) *GlueStartMLLabelingSetGenerationTaskRunFuture {
+func (a *stub) StartMLLabelingSetGenerationTaskRunAsync(ctx workflow.Context, input *glue.StartMLLabelingSetGenerationTaskRunInput) *StartMLLabelingSetGenerationTaskRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartMLLabelingSetGenerationTaskRun", input)
-	return &GlueStartMLLabelingSetGenerationTaskRunFuture{Future: future}
+	return &StartMLLabelingSetGenerationTaskRunFuture{Future: future}
 }
 
 func (a *stub) StartTrigger(ctx workflow.Context, input *glue.StartTriggerInput) (*glue.StartTriggerOutput, error) {
@@ -2739,9 +2739,9 @@ func (a *stub) StartTrigger(ctx workflow.Context, input *glue.StartTriggerInput)
 	return &output, err
 }
 
-func (a *stub) StartTriggerAsync(ctx workflow.Context, input *glue.StartTriggerInput) *GlueStartTriggerFuture {
+func (a *stub) StartTriggerAsync(ctx workflow.Context, input *glue.StartTriggerInput) *StartTriggerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartTrigger", input)
-	return &GlueStartTriggerFuture{Future: future}
+	return &StartTriggerFuture{Future: future}
 }
 
 func (a *stub) StartWorkflowRun(ctx workflow.Context, input *glue.StartWorkflowRunInput) (*glue.StartWorkflowRunOutput, error) {
@@ -2750,9 +2750,9 @@ func (a *stub) StartWorkflowRun(ctx workflow.Context, input *glue.StartWorkflowR
 	return &output, err
 }
 
-func (a *stub) StartWorkflowRunAsync(ctx workflow.Context, input *glue.StartWorkflowRunInput) *GlueStartWorkflowRunFuture {
+func (a *stub) StartWorkflowRunAsync(ctx workflow.Context, input *glue.StartWorkflowRunInput) *StartWorkflowRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StartWorkflowRun", input)
-	return &GlueStartWorkflowRunFuture{Future: future}
+	return &StartWorkflowRunFuture{Future: future}
 }
 
 func (a *stub) StopCrawler(ctx workflow.Context, input *glue.StopCrawlerInput) (*glue.StopCrawlerOutput, error) {
@@ -2761,9 +2761,9 @@ func (a *stub) StopCrawler(ctx workflow.Context, input *glue.StopCrawlerInput) (
 	return &output, err
 }
 
-func (a *stub) StopCrawlerAsync(ctx workflow.Context, input *glue.StopCrawlerInput) *GlueStopCrawlerFuture {
+func (a *stub) StopCrawlerAsync(ctx workflow.Context, input *glue.StopCrawlerInput) *StopCrawlerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StopCrawler", input)
-	return &GlueStopCrawlerFuture{Future: future}
+	return &StopCrawlerFuture{Future: future}
 }
 
 func (a *stub) StopCrawlerSchedule(ctx workflow.Context, input *glue.StopCrawlerScheduleInput) (*glue.StopCrawlerScheduleOutput, error) {
@@ -2772,9 +2772,9 @@ func (a *stub) StopCrawlerSchedule(ctx workflow.Context, input *glue.StopCrawler
 	return &output, err
 }
 
-func (a *stub) StopCrawlerScheduleAsync(ctx workflow.Context, input *glue.StopCrawlerScheduleInput) *GlueStopCrawlerScheduleFuture {
+func (a *stub) StopCrawlerScheduleAsync(ctx workflow.Context, input *glue.StopCrawlerScheduleInput) *StopCrawlerScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StopCrawlerSchedule", input)
-	return &GlueStopCrawlerScheduleFuture{Future: future}
+	return &StopCrawlerScheduleFuture{Future: future}
 }
 
 func (a *stub) StopTrigger(ctx workflow.Context, input *glue.StopTriggerInput) (*glue.StopTriggerOutput, error) {
@@ -2783,9 +2783,9 @@ func (a *stub) StopTrigger(ctx workflow.Context, input *glue.StopTriggerInput) (
 	return &output, err
 }
 
-func (a *stub) StopTriggerAsync(ctx workflow.Context, input *glue.StopTriggerInput) *GlueStopTriggerFuture {
+func (a *stub) StopTriggerAsync(ctx workflow.Context, input *glue.StopTriggerInput) *StopTriggerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StopTrigger", input)
-	return &GlueStopTriggerFuture{Future: future}
+	return &StopTriggerFuture{Future: future}
 }
 
 func (a *stub) StopWorkflowRun(ctx workflow.Context, input *glue.StopWorkflowRunInput) (*glue.StopWorkflowRunOutput, error) {
@@ -2794,9 +2794,9 @@ func (a *stub) StopWorkflowRun(ctx workflow.Context, input *glue.StopWorkflowRun
 	return &output, err
 }
 
-func (a *stub) StopWorkflowRunAsync(ctx workflow.Context, input *glue.StopWorkflowRunInput) *GlueStopWorkflowRunFuture {
+func (a *stub) StopWorkflowRunAsync(ctx workflow.Context, input *glue.StopWorkflowRunInput) *StopWorkflowRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.StopWorkflowRun", input)
-	return &GlueStopWorkflowRunFuture{Future: future}
+	return &StopWorkflowRunFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *glue.TagResourceInput) (*glue.TagResourceOutput, error) {
@@ -2805,9 +2805,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *glue.TagResourceInput) (
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *glue.TagResourceInput) *GlueTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *glue.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.TagResource", input)
-	return &GlueTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *glue.UntagResourceInput) (*glue.UntagResourceOutput, error) {
@@ -2816,9 +2816,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *glue.UntagResourceInpu
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *glue.UntagResourceInput) *GlueUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *glue.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UntagResource", input)
-	return &GlueUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateClassifier(ctx workflow.Context, input *glue.UpdateClassifierInput) (*glue.UpdateClassifierOutput, error) {
@@ -2827,9 +2827,9 @@ func (a *stub) UpdateClassifier(ctx workflow.Context, input *glue.UpdateClassifi
 	return &output, err
 }
 
-func (a *stub) UpdateClassifierAsync(ctx workflow.Context, input *glue.UpdateClassifierInput) *GlueUpdateClassifierFuture {
+func (a *stub) UpdateClassifierAsync(ctx workflow.Context, input *glue.UpdateClassifierInput) *UpdateClassifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateClassifier", input)
-	return &GlueUpdateClassifierFuture{Future: future}
+	return &UpdateClassifierFuture{Future: future}
 }
 
 func (a *stub) UpdateColumnStatisticsForPartition(ctx workflow.Context, input *glue.UpdateColumnStatisticsForPartitionInput) (*glue.UpdateColumnStatisticsForPartitionOutput, error) {
@@ -2838,9 +2838,9 @@ func (a *stub) UpdateColumnStatisticsForPartition(ctx workflow.Context, input *g
 	return &output, err
 }
 
-func (a *stub) UpdateColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.UpdateColumnStatisticsForPartitionInput) *GlueUpdateColumnStatisticsForPartitionFuture {
+func (a *stub) UpdateColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.UpdateColumnStatisticsForPartitionInput) *UpdateColumnStatisticsForPartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateColumnStatisticsForPartition", input)
-	return &GlueUpdateColumnStatisticsForPartitionFuture{Future: future}
+	return &UpdateColumnStatisticsForPartitionFuture{Future: future}
 }
 
 func (a *stub) UpdateColumnStatisticsForTable(ctx workflow.Context, input *glue.UpdateColumnStatisticsForTableInput) (*glue.UpdateColumnStatisticsForTableOutput, error) {
@@ -2849,9 +2849,9 @@ func (a *stub) UpdateColumnStatisticsForTable(ctx workflow.Context, input *glue.
 	return &output, err
 }
 
-func (a *stub) UpdateColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.UpdateColumnStatisticsForTableInput) *GlueUpdateColumnStatisticsForTableFuture {
+func (a *stub) UpdateColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.UpdateColumnStatisticsForTableInput) *UpdateColumnStatisticsForTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateColumnStatisticsForTable", input)
-	return &GlueUpdateColumnStatisticsForTableFuture{Future: future}
+	return &UpdateColumnStatisticsForTableFuture{Future: future}
 }
 
 func (a *stub) UpdateConnection(ctx workflow.Context, input *glue.UpdateConnectionInput) (*glue.UpdateConnectionOutput, error) {
@@ -2860,9 +2860,9 @@ func (a *stub) UpdateConnection(ctx workflow.Context, input *glue.UpdateConnecti
 	return &output, err
 }
 
-func (a *stub) UpdateConnectionAsync(ctx workflow.Context, input *glue.UpdateConnectionInput) *GlueUpdateConnectionFuture {
+func (a *stub) UpdateConnectionAsync(ctx workflow.Context, input *glue.UpdateConnectionInput) *UpdateConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateConnection", input)
-	return &GlueUpdateConnectionFuture{Future: future}
+	return &UpdateConnectionFuture{Future: future}
 }
 
 func (a *stub) UpdateCrawler(ctx workflow.Context, input *glue.UpdateCrawlerInput) (*glue.UpdateCrawlerOutput, error) {
@@ -2871,9 +2871,9 @@ func (a *stub) UpdateCrawler(ctx workflow.Context, input *glue.UpdateCrawlerInpu
 	return &output, err
 }
 
-func (a *stub) UpdateCrawlerAsync(ctx workflow.Context, input *glue.UpdateCrawlerInput) *GlueUpdateCrawlerFuture {
+func (a *stub) UpdateCrawlerAsync(ctx workflow.Context, input *glue.UpdateCrawlerInput) *UpdateCrawlerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateCrawler", input)
-	return &GlueUpdateCrawlerFuture{Future: future}
+	return &UpdateCrawlerFuture{Future: future}
 }
 
 func (a *stub) UpdateCrawlerSchedule(ctx workflow.Context, input *glue.UpdateCrawlerScheduleInput) (*glue.UpdateCrawlerScheduleOutput, error) {
@@ -2882,9 +2882,9 @@ func (a *stub) UpdateCrawlerSchedule(ctx workflow.Context, input *glue.UpdateCra
 	return &output, err
 }
 
-func (a *stub) UpdateCrawlerScheduleAsync(ctx workflow.Context, input *glue.UpdateCrawlerScheduleInput) *GlueUpdateCrawlerScheduleFuture {
+func (a *stub) UpdateCrawlerScheduleAsync(ctx workflow.Context, input *glue.UpdateCrawlerScheduleInput) *UpdateCrawlerScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateCrawlerSchedule", input)
-	return &GlueUpdateCrawlerScheduleFuture{Future: future}
+	return &UpdateCrawlerScheduleFuture{Future: future}
 }
 
 func (a *stub) UpdateDatabase(ctx workflow.Context, input *glue.UpdateDatabaseInput) (*glue.UpdateDatabaseOutput, error) {
@@ -2893,9 +2893,9 @@ func (a *stub) UpdateDatabase(ctx workflow.Context, input *glue.UpdateDatabaseIn
 	return &output, err
 }
 
-func (a *stub) UpdateDatabaseAsync(ctx workflow.Context, input *glue.UpdateDatabaseInput) *GlueUpdateDatabaseFuture {
+func (a *stub) UpdateDatabaseAsync(ctx workflow.Context, input *glue.UpdateDatabaseInput) *UpdateDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateDatabase", input)
-	return &GlueUpdateDatabaseFuture{Future: future}
+	return &UpdateDatabaseFuture{Future: future}
 }
 
 func (a *stub) UpdateDevEndpoint(ctx workflow.Context, input *glue.UpdateDevEndpointInput) (*glue.UpdateDevEndpointOutput, error) {
@@ -2904,9 +2904,9 @@ func (a *stub) UpdateDevEndpoint(ctx workflow.Context, input *glue.UpdateDevEndp
 	return &output, err
 }
 
-func (a *stub) UpdateDevEndpointAsync(ctx workflow.Context, input *glue.UpdateDevEndpointInput) *GlueUpdateDevEndpointFuture {
+func (a *stub) UpdateDevEndpointAsync(ctx workflow.Context, input *glue.UpdateDevEndpointInput) *UpdateDevEndpointFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateDevEndpoint", input)
-	return &GlueUpdateDevEndpointFuture{Future: future}
+	return &UpdateDevEndpointFuture{Future: future}
 }
 
 func (a *stub) UpdateJob(ctx workflow.Context, input *glue.UpdateJobInput) (*glue.UpdateJobOutput, error) {
@@ -2915,9 +2915,9 @@ func (a *stub) UpdateJob(ctx workflow.Context, input *glue.UpdateJobInput) (*glu
 	return &output, err
 }
 
-func (a *stub) UpdateJobAsync(ctx workflow.Context, input *glue.UpdateJobInput) *GlueUpdateJobFuture {
+func (a *stub) UpdateJobAsync(ctx workflow.Context, input *glue.UpdateJobInput) *UpdateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateJob", input)
-	return &GlueUpdateJobFuture{Future: future}
+	return &UpdateJobFuture{Future: future}
 }
 
 func (a *stub) UpdateMLTransform(ctx workflow.Context, input *glue.UpdateMLTransformInput) (*glue.UpdateMLTransformOutput, error) {
@@ -2926,9 +2926,9 @@ func (a *stub) UpdateMLTransform(ctx workflow.Context, input *glue.UpdateMLTrans
 	return &output, err
 }
 
-func (a *stub) UpdateMLTransformAsync(ctx workflow.Context, input *glue.UpdateMLTransformInput) *GlueUpdateMLTransformFuture {
+func (a *stub) UpdateMLTransformAsync(ctx workflow.Context, input *glue.UpdateMLTransformInput) *UpdateMLTransformFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateMLTransform", input)
-	return &GlueUpdateMLTransformFuture{Future: future}
+	return &UpdateMLTransformFuture{Future: future}
 }
 
 func (a *stub) UpdatePartition(ctx workflow.Context, input *glue.UpdatePartitionInput) (*glue.UpdatePartitionOutput, error) {
@@ -2937,9 +2937,9 @@ func (a *stub) UpdatePartition(ctx workflow.Context, input *glue.UpdatePartition
 	return &output, err
 }
 
-func (a *stub) UpdatePartitionAsync(ctx workflow.Context, input *glue.UpdatePartitionInput) *GlueUpdatePartitionFuture {
+func (a *stub) UpdatePartitionAsync(ctx workflow.Context, input *glue.UpdatePartitionInput) *UpdatePartitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdatePartition", input)
-	return &GlueUpdatePartitionFuture{Future: future}
+	return &UpdatePartitionFuture{Future: future}
 }
 
 func (a *stub) UpdateTable(ctx workflow.Context, input *glue.UpdateTableInput) (*glue.UpdateTableOutput, error) {
@@ -2948,9 +2948,9 @@ func (a *stub) UpdateTable(ctx workflow.Context, input *glue.UpdateTableInput) (
 	return &output, err
 }
 
-func (a *stub) UpdateTableAsync(ctx workflow.Context, input *glue.UpdateTableInput) *GlueUpdateTableFuture {
+func (a *stub) UpdateTableAsync(ctx workflow.Context, input *glue.UpdateTableInput) *UpdateTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateTable", input)
-	return &GlueUpdateTableFuture{Future: future}
+	return &UpdateTableFuture{Future: future}
 }
 
 func (a *stub) UpdateTrigger(ctx workflow.Context, input *glue.UpdateTriggerInput) (*glue.UpdateTriggerOutput, error) {
@@ -2959,9 +2959,9 @@ func (a *stub) UpdateTrigger(ctx workflow.Context, input *glue.UpdateTriggerInpu
 	return &output, err
 }
 
-func (a *stub) UpdateTriggerAsync(ctx workflow.Context, input *glue.UpdateTriggerInput) *GlueUpdateTriggerFuture {
+func (a *stub) UpdateTriggerAsync(ctx workflow.Context, input *glue.UpdateTriggerInput) *UpdateTriggerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateTrigger", input)
-	return &GlueUpdateTriggerFuture{Future: future}
+	return &UpdateTriggerFuture{Future: future}
 }
 
 func (a *stub) UpdateUserDefinedFunction(ctx workflow.Context, input *glue.UpdateUserDefinedFunctionInput) (*glue.UpdateUserDefinedFunctionOutput, error) {
@@ -2970,9 +2970,9 @@ func (a *stub) UpdateUserDefinedFunction(ctx workflow.Context, input *glue.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateUserDefinedFunctionAsync(ctx workflow.Context, input *glue.UpdateUserDefinedFunctionInput) *GlueUpdateUserDefinedFunctionFuture {
+func (a *stub) UpdateUserDefinedFunctionAsync(ctx workflow.Context, input *glue.UpdateUserDefinedFunctionInput) *UpdateUserDefinedFunctionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateUserDefinedFunction", input)
-	return &GlueUpdateUserDefinedFunctionFuture{Future: future}
+	return &UpdateUserDefinedFunctionFuture{Future: future}
 }
 
 func (a *stub) UpdateWorkflow(ctx workflow.Context, input *glue.UpdateWorkflowInput) (*glue.UpdateWorkflowOutput, error) {
@@ -2981,7 +2981,7 @@ func (a *stub) UpdateWorkflow(ctx workflow.Context, input *glue.UpdateWorkflowIn
 	return &output, err
 }
 
-func (a *stub) UpdateWorkflowAsync(ctx workflow.Context, input *glue.UpdateWorkflowInput) *GlueUpdateWorkflowFuture {
+func (a *stub) UpdateWorkflowAsync(ctx workflow.Context, input *glue.UpdateWorkflowInput) *UpdateWorkflowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glue.UpdateWorkflow", input)
-	return &GlueUpdateWorkflowFuture{Future: future}
+	return &UpdateWorkflowFuture{Future: future}
 }

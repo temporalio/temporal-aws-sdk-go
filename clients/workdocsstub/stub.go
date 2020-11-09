@@ -16,452 +16,452 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type WorkDocsAbortDocumentVersionUploadFuture struct {
+type AbortDocumentVersionUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsAbortDocumentVersionUploadFuture) Get(ctx workflow.Context) (*workdocs.AbortDocumentVersionUploadOutput, error) {
+func (r *AbortDocumentVersionUploadFuture) Get(ctx workflow.Context) (*workdocs.AbortDocumentVersionUploadOutput, error) {
 	var output workdocs.AbortDocumentVersionUploadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsActivateUserFuture struct {
+type ActivateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsActivateUserFuture) Get(ctx workflow.Context) (*workdocs.ActivateUserOutput, error) {
+func (r *ActivateUserFuture) Get(ctx workflow.Context) (*workdocs.ActivateUserOutput, error) {
 	var output workdocs.ActivateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsAddResourcePermissionsFuture struct {
+type AddResourcePermissionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsAddResourcePermissionsFuture) Get(ctx workflow.Context) (*workdocs.AddResourcePermissionsOutput, error) {
+func (r *AddResourcePermissionsFuture) Get(ctx workflow.Context) (*workdocs.AddResourcePermissionsOutput, error) {
 	var output workdocs.AddResourcePermissionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsCreateCommentFuture struct {
+type CreateCommentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsCreateCommentFuture) Get(ctx workflow.Context) (*workdocs.CreateCommentOutput, error) {
+func (r *CreateCommentFuture) Get(ctx workflow.Context) (*workdocs.CreateCommentOutput, error) {
 	var output workdocs.CreateCommentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsCreateCustomMetadataFuture struct {
+type CreateCustomMetadataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsCreateCustomMetadataFuture) Get(ctx workflow.Context) (*workdocs.CreateCustomMetadataOutput, error) {
+func (r *CreateCustomMetadataFuture) Get(ctx workflow.Context) (*workdocs.CreateCustomMetadataOutput, error) {
 	var output workdocs.CreateCustomMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsCreateFolderFuture struct {
+type CreateFolderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsCreateFolderFuture) Get(ctx workflow.Context) (*workdocs.CreateFolderOutput, error) {
+func (r *CreateFolderFuture) Get(ctx workflow.Context) (*workdocs.CreateFolderOutput, error) {
 	var output workdocs.CreateFolderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsCreateLabelsFuture struct {
+type CreateLabelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsCreateLabelsFuture) Get(ctx workflow.Context) (*workdocs.CreateLabelsOutput, error) {
+func (r *CreateLabelsFuture) Get(ctx workflow.Context) (*workdocs.CreateLabelsOutput, error) {
 	var output workdocs.CreateLabelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsCreateNotificationSubscriptionFuture struct {
+type CreateNotificationSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsCreateNotificationSubscriptionFuture) Get(ctx workflow.Context) (*workdocs.CreateNotificationSubscriptionOutput, error) {
+func (r *CreateNotificationSubscriptionFuture) Get(ctx workflow.Context) (*workdocs.CreateNotificationSubscriptionOutput, error) {
 	var output workdocs.CreateNotificationSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsCreateUserFuture struct {
+type CreateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsCreateUserFuture) Get(ctx workflow.Context) (*workdocs.CreateUserOutput, error) {
+func (r *CreateUserFuture) Get(ctx workflow.Context) (*workdocs.CreateUserOutput, error) {
 	var output workdocs.CreateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeactivateUserFuture struct {
+type DeactivateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeactivateUserFuture) Get(ctx workflow.Context) (*workdocs.DeactivateUserOutput, error) {
+func (r *DeactivateUserFuture) Get(ctx workflow.Context) (*workdocs.DeactivateUserOutput, error) {
 	var output workdocs.DeactivateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeleteCommentFuture struct {
+type DeleteCommentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeleteCommentFuture) Get(ctx workflow.Context) (*workdocs.DeleteCommentOutput, error) {
+func (r *DeleteCommentFuture) Get(ctx workflow.Context) (*workdocs.DeleteCommentOutput, error) {
 	var output workdocs.DeleteCommentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeleteCustomMetadataFuture struct {
+type DeleteCustomMetadataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeleteCustomMetadataFuture) Get(ctx workflow.Context) (*workdocs.DeleteCustomMetadataOutput, error) {
+func (r *DeleteCustomMetadataFuture) Get(ctx workflow.Context) (*workdocs.DeleteCustomMetadataOutput, error) {
 	var output workdocs.DeleteCustomMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeleteDocumentFuture struct {
+type DeleteDocumentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeleteDocumentFuture) Get(ctx workflow.Context) (*workdocs.DeleteDocumentOutput, error) {
+func (r *DeleteDocumentFuture) Get(ctx workflow.Context) (*workdocs.DeleteDocumentOutput, error) {
 	var output workdocs.DeleteDocumentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeleteFolderFuture struct {
+type DeleteFolderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeleteFolderFuture) Get(ctx workflow.Context) (*workdocs.DeleteFolderOutput, error) {
+func (r *DeleteFolderFuture) Get(ctx workflow.Context) (*workdocs.DeleteFolderOutput, error) {
 	var output workdocs.DeleteFolderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeleteFolderContentsFuture struct {
+type DeleteFolderContentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeleteFolderContentsFuture) Get(ctx workflow.Context) (*workdocs.DeleteFolderContentsOutput, error) {
+func (r *DeleteFolderContentsFuture) Get(ctx workflow.Context) (*workdocs.DeleteFolderContentsOutput, error) {
 	var output workdocs.DeleteFolderContentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeleteLabelsFuture struct {
+type DeleteLabelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeleteLabelsFuture) Get(ctx workflow.Context) (*workdocs.DeleteLabelsOutput, error) {
+func (r *DeleteLabelsFuture) Get(ctx workflow.Context) (*workdocs.DeleteLabelsOutput, error) {
 	var output workdocs.DeleteLabelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeleteNotificationSubscriptionFuture struct {
+type DeleteNotificationSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeleteNotificationSubscriptionFuture) Get(ctx workflow.Context) (*workdocs.DeleteNotificationSubscriptionOutput, error) {
+func (r *DeleteNotificationSubscriptionFuture) Get(ctx workflow.Context) (*workdocs.DeleteNotificationSubscriptionOutput, error) {
 	var output workdocs.DeleteNotificationSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDeleteUserFuture struct {
+type DeleteUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDeleteUserFuture) Get(ctx workflow.Context) (*workdocs.DeleteUserOutput, error) {
+func (r *DeleteUserFuture) Get(ctx workflow.Context) (*workdocs.DeleteUserOutput, error) {
 	var output workdocs.DeleteUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeActivitiesFuture struct {
+type DescribeActivitiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeActivitiesFuture) Get(ctx workflow.Context) (*workdocs.DescribeActivitiesOutput, error) {
+func (r *DescribeActivitiesFuture) Get(ctx workflow.Context) (*workdocs.DescribeActivitiesOutput, error) {
 	var output workdocs.DescribeActivitiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeCommentsFuture struct {
+type DescribeCommentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeCommentsFuture) Get(ctx workflow.Context) (*workdocs.DescribeCommentsOutput, error) {
+func (r *DescribeCommentsFuture) Get(ctx workflow.Context) (*workdocs.DescribeCommentsOutput, error) {
 	var output workdocs.DescribeCommentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeDocumentVersionsFuture struct {
+type DescribeDocumentVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeDocumentVersionsFuture) Get(ctx workflow.Context) (*workdocs.DescribeDocumentVersionsOutput, error) {
+func (r *DescribeDocumentVersionsFuture) Get(ctx workflow.Context) (*workdocs.DescribeDocumentVersionsOutput, error) {
 	var output workdocs.DescribeDocumentVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeFolderContentsFuture struct {
+type DescribeFolderContentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeFolderContentsFuture) Get(ctx workflow.Context) (*workdocs.DescribeFolderContentsOutput, error) {
+func (r *DescribeFolderContentsFuture) Get(ctx workflow.Context) (*workdocs.DescribeFolderContentsOutput, error) {
 	var output workdocs.DescribeFolderContentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeGroupsFuture struct {
+type DescribeGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeGroupsFuture) Get(ctx workflow.Context) (*workdocs.DescribeGroupsOutput, error) {
+func (r *DescribeGroupsFuture) Get(ctx workflow.Context) (*workdocs.DescribeGroupsOutput, error) {
 	var output workdocs.DescribeGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeNotificationSubscriptionsFuture struct {
+type DescribeNotificationSubscriptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeNotificationSubscriptionsFuture) Get(ctx workflow.Context) (*workdocs.DescribeNotificationSubscriptionsOutput, error) {
+func (r *DescribeNotificationSubscriptionsFuture) Get(ctx workflow.Context) (*workdocs.DescribeNotificationSubscriptionsOutput, error) {
 	var output workdocs.DescribeNotificationSubscriptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeResourcePermissionsFuture struct {
+type DescribeResourcePermissionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeResourcePermissionsFuture) Get(ctx workflow.Context) (*workdocs.DescribeResourcePermissionsOutput, error) {
+func (r *DescribeResourcePermissionsFuture) Get(ctx workflow.Context) (*workdocs.DescribeResourcePermissionsOutput, error) {
 	var output workdocs.DescribeResourcePermissionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeRootFoldersFuture struct {
+type DescribeRootFoldersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeRootFoldersFuture) Get(ctx workflow.Context) (*workdocs.DescribeRootFoldersOutput, error) {
+func (r *DescribeRootFoldersFuture) Get(ctx workflow.Context) (*workdocs.DescribeRootFoldersOutput, error) {
 	var output workdocs.DescribeRootFoldersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsDescribeUsersFuture struct {
+type DescribeUsersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsDescribeUsersFuture) Get(ctx workflow.Context) (*workdocs.DescribeUsersOutput, error) {
+func (r *DescribeUsersFuture) Get(ctx workflow.Context) (*workdocs.DescribeUsersOutput, error) {
 	var output workdocs.DescribeUsersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsGetCurrentUserFuture struct {
+type GetCurrentUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsGetCurrentUserFuture) Get(ctx workflow.Context) (*workdocs.GetCurrentUserOutput, error) {
+func (r *GetCurrentUserFuture) Get(ctx workflow.Context) (*workdocs.GetCurrentUserOutput, error) {
 	var output workdocs.GetCurrentUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsGetDocumentFuture struct {
+type GetDocumentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsGetDocumentFuture) Get(ctx workflow.Context) (*workdocs.GetDocumentOutput, error) {
+func (r *GetDocumentFuture) Get(ctx workflow.Context) (*workdocs.GetDocumentOutput, error) {
 	var output workdocs.GetDocumentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsGetDocumentPathFuture struct {
+type GetDocumentPathFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsGetDocumentPathFuture) Get(ctx workflow.Context) (*workdocs.GetDocumentPathOutput, error) {
+func (r *GetDocumentPathFuture) Get(ctx workflow.Context) (*workdocs.GetDocumentPathOutput, error) {
 	var output workdocs.GetDocumentPathOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsGetDocumentVersionFuture struct {
+type GetDocumentVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsGetDocumentVersionFuture) Get(ctx workflow.Context) (*workdocs.GetDocumentVersionOutput, error) {
+func (r *GetDocumentVersionFuture) Get(ctx workflow.Context) (*workdocs.GetDocumentVersionOutput, error) {
 	var output workdocs.GetDocumentVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsGetFolderFuture struct {
+type GetFolderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsGetFolderFuture) Get(ctx workflow.Context) (*workdocs.GetFolderOutput, error) {
+func (r *GetFolderFuture) Get(ctx workflow.Context) (*workdocs.GetFolderOutput, error) {
 	var output workdocs.GetFolderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsGetFolderPathFuture struct {
+type GetFolderPathFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsGetFolderPathFuture) Get(ctx workflow.Context) (*workdocs.GetFolderPathOutput, error) {
+func (r *GetFolderPathFuture) Get(ctx workflow.Context) (*workdocs.GetFolderPathOutput, error) {
 	var output workdocs.GetFolderPathOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsGetResourcesFuture struct {
+type GetResourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsGetResourcesFuture) Get(ctx workflow.Context) (*workdocs.GetResourcesOutput, error) {
+func (r *GetResourcesFuture) Get(ctx workflow.Context) (*workdocs.GetResourcesOutput, error) {
 	var output workdocs.GetResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsInitiateDocumentVersionUploadFuture struct {
+type InitiateDocumentVersionUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsInitiateDocumentVersionUploadFuture) Get(ctx workflow.Context) (*workdocs.InitiateDocumentVersionUploadOutput, error) {
+func (r *InitiateDocumentVersionUploadFuture) Get(ctx workflow.Context) (*workdocs.InitiateDocumentVersionUploadOutput, error) {
 	var output workdocs.InitiateDocumentVersionUploadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsRemoveAllResourcePermissionsFuture struct {
+type RemoveAllResourcePermissionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsRemoveAllResourcePermissionsFuture) Get(ctx workflow.Context) (*workdocs.RemoveAllResourcePermissionsOutput, error) {
+func (r *RemoveAllResourcePermissionsFuture) Get(ctx workflow.Context) (*workdocs.RemoveAllResourcePermissionsOutput, error) {
 	var output workdocs.RemoveAllResourcePermissionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsRemoveResourcePermissionFuture struct {
+type RemoveResourcePermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsRemoveResourcePermissionFuture) Get(ctx workflow.Context) (*workdocs.RemoveResourcePermissionOutput, error) {
+func (r *RemoveResourcePermissionFuture) Get(ctx workflow.Context) (*workdocs.RemoveResourcePermissionOutput, error) {
 	var output workdocs.RemoveResourcePermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsUpdateDocumentFuture struct {
+type UpdateDocumentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsUpdateDocumentFuture) Get(ctx workflow.Context) (*workdocs.UpdateDocumentOutput, error) {
+func (r *UpdateDocumentFuture) Get(ctx workflow.Context) (*workdocs.UpdateDocumentOutput, error) {
 	var output workdocs.UpdateDocumentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsUpdateDocumentVersionFuture struct {
+type UpdateDocumentVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsUpdateDocumentVersionFuture) Get(ctx workflow.Context) (*workdocs.UpdateDocumentVersionOutput, error) {
+func (r *UpdateDocumentVersionFuture) Get(ctx workflow.Context) (*workdocs.UpdateDocumentVersionOutput, error) {
 	var output workdocs.UpdateDocumentVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsUpdateFolderFuture struct {
+type UpdateFolderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsUpdateFolderFuture) Get(ctx workflow.Context) (*workdocs.UpdateFolderOutput, error) {
+func (r *UpdateFolderFuture) Get(ctx workflow.Context) (*workdocs.UpdateFolderOutput, error) {
 	var output workdocs.UpdateFolderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type WorkDocsUpdateUserFuture struct {
+type UpdateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkDocsUpdateUserFuture) Get(ctx workflow.Context) (*workdocs.UpdateUserOutput, error) {
+func (r *UpdateUserFuture) Get(ctx workflow.Context) (*workdocs.UpdateUserOutput, error) {
 	var output workdocs.UpdateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -473,9 +473,9 @@ func (a *stub) AbortDocumentVersionUpload(ctx workflow.Context, input *workdocs.
 	return &output, err
 }
 
-func (a *stub) AbortDocumentVersionUploadAsync(ctx workflow.Context, input *workdocs.AbortDocumentVersionUploadInput) *WorkDocsAbortDocumentVersionUploadFuture {
+func (a *stub) AbortDocumentVersionUploadAsync(ctx workflow.Context, input *workdocs.AbortDocumentVersionUploadInput) *AbortDocumentVersionUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.AbortDocumentVersionUpload", input)
-	return &WorkDocsAbortDocumentVersionUploadFuture{Future: future}
+	return &AbortDocumentVersionUploadFuture{Future: future}
 }
 
 func (a *stub) ActivateUser(ctx workflow.Context, input *workdocs.ActivateUserInput) (*workdocs.ActivateUserOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) ActivateUser(ctx workflow.Context, input *workdocs.ActivateUserIn
 	return &output, err
 }
 
-func (a *stub) ActivateUserAsync(ctx workflow.Context, input *workdocs.ActivateUserInput) *WorkDocsActivateUserFuture {
+func (a *stub) ActivateUserAsync(ctx workflow.Context, input *workdocs.ActivateUserInput) *ActivateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.ActivateUser", input)
-	return &WorkDocsActivateUserFuture{Future: future}
+	return &ActivateUserFuture{Future: future}
 }
 
 func (a *stub) AddResourcePermissions(ctx workflow.Context, input *workdocs.AddResourcePermissionsInput) (*workdocs.AddResourcePermissionsOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) AddResourcePermissions(ctx workflow.Context, input *workdocs.AddR
 	return &output, err
 }
 
-func (a *stub) AddResourcePermissionsAsync(ctx workflow.Context, input *workdocs.AddResourcePermissionsInput) *WorkDocsAddResourcePermissionsFuture {
+func (a *stub) AddResourcePermissionsAsync(ctx workflow.Context, input *workdocs.AddResourcePermissionsInput) *AddResourcePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.AddResourcePermissions", input)
-	return &WorkDocsAddResourcePermissionsFuture{Future: future}
+	return &AddResourcePermissionsFuture{Future: future}
 }
 
 func (a *stub) CreateComment(ctx workflow.Context, input *workdocs.CreateCommentInput) (*workdocs.CreateCommentOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) CreateComment(ctx workflow.Context, input *workdocs.CreateComment
 	return &output, err
 }
 
-func (a *stub) CreateCommentAsync(ctx workflow.Context, input *workdocs.CreateCommentInput) *WorkDocsCreateCommentFuture {
+func (a *stub) CreateCommentAsync(ctx workflow.Context, input *workdocs.CreateCommentInput) *CreateCommentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.CreateComment", input)
-	return &WorkDocsCreateCommentFuture{Future: future}
+	return &CreateCommentFuture{Future: future}
 }
 
 func (a *stub) CreateCustomMetadata(ctx workflow.Context, input *workdocs.CreateCustomMetadataInput) (*workdocs.CreateCustomMetadataOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) CreateCustomMetadata(ctx workflow.Context, input *workdocs.Create
 	return &output, err
 }
 
-func (a *stub) CreateCustomMetadataAsync(ctx workflow.Context, input *workdocs.CreateCustomMetadataInput) *WorkDocsCreateCustomMetadataFuture {
+func (a *stub) CreateCustomMetadataAsync(ctx workflow.Context, input *workdocs.CreateCustomMetadataInput) *CreateCustomMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.CreateCustomMetadata", input)
-	return &WorkDocsCreateCustomMetadataFuture{Future: future}
+	return &CreateCustomMetadataFuture{Future: future}
 }
 
 func (a *stub) CreateFolder(ctx workflow.Context, input *workdocs.CreateFolderInput) (*workdocs.CreateFolderOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) CreateFolder(ctx workflow.Context, input *workdocs.CreateFolderIn
 	return &output, err
 }
 
-func (a *stub) CreateFolderAsync(ctx workflow.Context, input *workdocs.CreateFolderInput) *WorkDocsCreateFolderFuture {
+func (a *stub) CreateFolderAsync(ctx workflow.Context, input *workdocs.CreateFolderInput) *CreateFolderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.CreateFolder", input)
-	return &WorkDocsCreateFolderFuture{Future: future}
+	return &CreateFolderFuture{Future: future}
 }
 
 func (a *stub) CreateLabels(ctx workflow.Context, input *workdocs.CreateLabelsInput) (*workdocs.CreateLabelsOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) CreateLabels(ctx workflow.Context, input *workdocs.CreateLabelsIn
 	return &output, err
 }
 
-func (a *stub) CreateLabelsAsync(ctx workflow.Context, input *workdocs.CreateLabelsInput) *WorkDocsCreateLabelsFuture {
+func (a *stub) CreateLabelsAsync(ctx workflow.Context, input *workdocs.CreateLabelsInput) *CreateLabelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.CreateLabels", input)
-	return &WorkDocsCreateLabelsFuture{Future: future}
+	return &CreateLabelsFuture{Future: future}
 }
 
 func (a *stub) CreateNotificationSubscription(ctx workflow.Context, input *workdocs.CreateNotificationSubscriptionInput) (*workdocs.CreateNotificationSubscriptionOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) CreateNotificationSubscription(ctx workflow.Context, input *workd
 	return &output, err
 }
 
-func (a *stub) CreateNotificationSubscriptionAsync(ctx workflow.Context, input *workdocs.CreateNotificationSubscriptionInput) *WorkDocsCreateNotificationSubscriptionFuture {
+func (a *stub) CreateNotificationSubscriptionAsync(ctx workflow.Context, input *workdocs.CreateNotificationSubscriptionInput) *CreateNotificationSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.CreateNotificationSubscription", input)
-	return &WorkDocsCreateNotificationSubscriptionFuture{Future: future}
+	return &CreateNotificationSubscriptionFuture{Future: future}
 }
 
 func (a *stub) CreateUser(ctx workflow.Context, input *workdocs.CreateUserInput) (*workdocs.CreateUserOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) CreateUser(ctx workflow.Context, input *workdocs.CreateUserInput)
 	return &output, err
 }
 
-func (a *stub) CreateUserAsync(ctx workflow.Context, input *workdocs.CreateUserInput) *WorkDocsCreateUserFuture {
+func (a *stub) CreateUserAsync(ctx workflow.Context, input *workdocs.CreateUserInput) *CreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.CreateUser", input)
-	return &WorkDocsCreateUserFuture{Future: future}
+	return &CreateUserFuture{Future: future}
 }
 
 func (a *stub) DeactivateUser(ctx workflow.Context, input *workdocs.DeactivateUserInput) (*workdocs.DeactivateUserOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) DeactivateUser(ctx workflow.Context, input *workdocs.DeactivateUs
 	return &output, err
 }
 
-func (a *stub) DeactivateUserAsync(ctx workflow.Context, input *workdocs.DeactivateUserInput) *WorkDocsDeactivateUserFuture {
+func (a *stub) DeactivateUserAsync(ctx workflow.Context, input *workdocs.DeactivateUserInput) *DeactivateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeactivateUser", input)
-	return &WorkDocsDeactivateUserFuture{Future: future}
+	return &DeactivateUserFuture{Future: future}
 }
 
 func (a *stub) DeleteComment(ctx workflow.Context, input *workdocs.DeleteCommentInput) (*workdocs.DeleteCommentOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) DeleteComment(ctx workflow.Context, input *workdocs.DeleteComment
 	return &output, err
 }
 
-func (a *stub) DeleteCommentAsync(ctx workflow.Context, input *workdocs.DeleteCommentInput) *WorkDocsDeleteCommentFuture {
+func (a *stub) DeleteCommentAsync(ctx workflow.Context, input *workdocs.DeleteCommentInput) *DeleteCommentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeleteComment", input)
-	return &WorkDocsDeleteCommentFuture{Future: future}
+	return &DeleteCommentFuture{Future: future}
 }
 
 func (a *stub) DeleteCustomMetadata(ctx workflow.Context, input *workdocs.DeleteCustomMetadataInput) (*workdocs.DeleteCustomMetadataOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DeleteCustomMetadata(ctx workflow.Context, input *workdocs.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteCustomMetadataAsync(ctx workflow.Context, input *workdocs.DeleteCustomMetadataInput) *WorkDocsDeleteCustomMetadataFuture {
+func (a *stub) DeleteCustomMetadataAsync(ctx workflow.Context, input *workdocs.DeleteCustomMetadataInput) *DeleteCustomMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeleteCustomMetadata", input)
-	return &WorkDocsDeleteCustomMetadataFuture{Future: future}
+	return &DeleteCustomMetadataFuture{Future: future}
 }
 
 func (a *stub) DeleteDocument(ctx workflow.Context, input *workdocs.DeleteDocumentInput) (*workdocs.DeleteDocumentOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) DeleteDocument(ctx workflow.Context, input *workdocs.DeleteDocume
 	return &output, err
 }
 
-func (a *stub) DeleteDocumentAsync(ctx workflow.Context, input *workdocs.DeleteDocumentInput) *WorkDocsDeleteDocumentFuture {
+func (a *stub) DeleteDocumentAsync(ctx workflow.Context, input *workdocs.DeleteDocumentInput) *DeleteDocumentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeleteDocument", input)
-	return &WorkDocsDeleteDocumentFuture{Future: future}
+	return &DeleteDocumentFuture{Future: future}
 }
 
 func (a *stub) DeleteFolder(ctx workflow.Context, input *workdocs.DeleteFolderInput) (*workdocs.DeleteFolderOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) DeleteFolder(ctx workflow.Context, input *workdocs.DeleteFolderIn
 	return &output, err
 }
 
-func (a *stub) DeleteFolderAsync(ctx workflow.Context, input *workdocs.DeleteFolderInput) *WorkDocsDeleteFolderFuture {
+func (a *stub) DeleteFolderAsync(ctx workflow.Context, input *workdocs.DeleteFolderInput) *DeleteFolderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeleteFolder", input)
-	return &WorkDocsDeleteFolderFuture{Future: future}
+	return &DeleteFolderFuture{Future: future}
 }
 
 func (a *stub) DeleteFolderContents(ctx workflow.Context, input *workdocs.DeleteFolderContentsInput) (*workdocs.DeleteFolderContentsOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) DeleteFolderContents(ctx workflow.Context, input *workdocs.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteFolderContentsAsync(ctx workflow.Context, input *workdocs.DeleteFolderContentsInput) *WorkDocsDeleteFolderContentsFuture {
+func (a *stub) DeleteFolderContentsAsync(ctx workflow.Context, input *workdocs.DeleteFolderContentsInput) *DeleteFolderContentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeleteFolderContents", input)
-	return &WorkDocsDeleteFolderContentsFuture{Future: future}
+	return &DeleteFolderContentsFuture{Future: future}
 }
 
 func (a *stub) DeleteLabels(ctx workflow.Context, input *workdocs.DeleteLabelsInput) (*workdocs.DeleteLabelsOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) DeleteLabels(ctx workflow.Context, input *workdocs.DeleteLabelsIn
 	return &output, err
 }
 
-func (a *stub) DeleteLabelsAsync(ctx workflow.Context, input *workdocs.DeleteLabelsInput) *WorkDocsDeleteLabelsFuture {
+func (a *stub) DeleteLabelsAsync(ctx workflow.Context, input *workdocs.DeleteLabelsInput) *DeleteLabelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeleteLabels", input)
-	return &WorkDocsDeleteLabelsFuture{Future: future}
+	return &DeleteLabelsFuture{Future: future}
 }
 
 func (a *stub) DeleteNotificationSubscription(ctx workflow.Context, input *workdocs.DeleteNotificationSubscriptionInput) (*workdocs.DeleteNotificationSubscriptionOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) DeleteNotificationSubscription(ctx workflow.Context, input *workd
 	return &output, err
 }
 
-func (a *stub) DeleteNotificationSubscriptionAsync(ctx workflow.Context, input *workdocs.DeleteNotificationSubscriptionInput) *WorkDocsDeleteNotificationSubscriptionFuture {
+func (a *stub) DeleteNotificationSubscriptionAsync(ctx workflow.Context, input *workdocs.DeleteNotificationSubscriptionInput) *DeleteNotificationSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeleteNotificationSubscription", input)
-	return &WorkDocsDeleteNotificationSubscriptionFuture{Future: future}
+	return &DeleteNotificationSubscriptionFuture{Future: future}
 }
 
 func (a *stub) DeleteUser(ctx workflow.Context, input *workdocs.DeleteUserInput) (*workdocs.DeleteUserOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) DeleteUser(ctx workflow.Context, input *workdocs.DeleteUserInput)
 	return &output, err
 }
 
-func (a *stub) DeleteUserAsync(ctx workflow.Context, input *workdocs.DeleteUserInput) *WorkDocsDeleteUserFuture {
+func (a *stub) DeleteUserAsync(ctx workflow.Context, input *workdocs.DeleteUserInput) *DeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DeleteUser", input)
-	return &WorkDocsDeleteUserFuture{Future: future}
+	return &DeleteUserFuture{Future: future}
 }
 
 func (a *stub) DescribeActivities(ctx workflow.Context, input *workdocs.DescribeActivitiesInput) (*workdocs.DescribeActivitiesOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) DescribeActivities(ctx workflow.Context, input *workdocs.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeActivitiesAsync(ctx workflow.Context, input *workdocs.DescribeActivitiesInput) *WorkDocsDescribeActivitiesFuture {
+func (a *stub) DescribeActivitiesAsync(ctx workflow.Context, input *workdocs.DescribeActivitiesInput) *DescribeActivitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeActivities", input)
-	return &WorkDocsDescribeActivitiesFuture{Future: future}
+	return &DescribeActivitiesFuture{Future: future}
 }
 
 func (a *stub) DescribeComments(ctx workflow.Context, input *workdocs.DescribeCommentsInput) (*workdocs.DescribeCommentsOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) DescribeComments(ctx workflow.Context, input *workdocs.DescribeCo
 	return &output, err
 }
 
-func (a *stub) DescribeCommentsAsync(ctx workflow.Context, input *workdocs.DescribeCommentsInput) *WorkDocsDescribeCommentsFuture {
+func (a *stub) DescribeCommentsAsync(ctx workflow.Context, input *workdocs.DescribeCommentsInput) *DescribeCommentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeComments", input)
-	return &WorkDocsDescribeCommentsFuture{Future: future}
+	return &DescribeCommentsFuture{Future: future}
 }
 
 func (a *stub) DescribeDocumentVersions(ctx workflow.Context, input *workdocs.DescribeDocumentVersionsInput) (*workdocs.DescribeDocumentVersionsOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) DescribeDocumentVersions(ctx workflow.Context, input *workdocs.De
 	return &output, err
 }
 
-func (a *stub) DescribeDocumentVersionsAsync(ctx workflow.Context, input *workdocs.DescribeDocumentVersionsInput) *WorkDocsDescribeDocumentVersionsFuture {
+func (a *stub) DescribeDocumentVersionsAsync(ctx workflow.Context, input *workdocs.DescribeDocumentVersionsInput) *DescribeDocumentVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeDocumentVersions", input)
-	return &WorkDocsDescribeDocumentVersionsFuture{Future: future}
+	return &DescribeDocumentVersionsFuture{Future: future}
 }
 
 func (a *stub) DescribeFolderContents(ctx workflow.Context, input *workdocs.DescribeFolderContentsInput) (*workdocs.DescribeFolderContentsOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) DescribeFolderContents(ctx workflow.Context, input *workdocs.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeFolderContentsAsync(ctx workflow.Context, input *workdocs.DescribeFolderContentsInput) *WorkDocsDescribeFolderContentsFuture {
+func (a *stub) DescribeFolderContentsAsync(ctx workflow.Context, input *workdocs.DescribeFolderContentsInput) *DescribeFolderContentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeFolderContents", input)
-	return &WorkDocsDescribeFolderContentsFuture{Future: future}
+	return &DescribeFolderContentsFuture{Future: future}
 }
 
 func (a *stub) DescribeGroups(ctx workflow.Context, input *workdocs.DescribeGroupsInput) (*workdocs.DescribeGroupsOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) DescribeGroups(ctx workflow.Context, input *workdocs.DescribeGrou
 	return &output, err
 }
 
-func (a *stub) DescribeGroupsAsync(ctx workflow.Context, input *workdocs.DescribeGroupsInput) *WorkDocsDescribeGroupsFuture {
+func (a *stub) DescribeGroupsAsync(ctx workflow.Context, input *workdocs.DescribeGroupsInput) *DescribeGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeGroups", input)
-	return &WorkDocsDescribeGroupsFuture{Future: future}
+	return &DescribeGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeNotificationSubscriptions(ctx workflow.Context, input *workdocs.DescribeNotificationSubscriptionsInput) (*workdocs.DescribeNotificationSubscriptionsOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) DescribeNotificationSubscriptions(ctx workflow.Context, input *wo
 	return &output, err
 }
 
-func (a *stub) DescribeNotificationSubscriptionsAsync(ctx workflow.Context, input *workdocs.DescribeNotificationSubscriptionsInput) *WorkDocsDescribeNotificationSubscriptionsFuture {
+func (a *stub) DescribeNotificationSubscriptionsAsync(ctx workflow.Context, input *workdocs.DescribeNotificationSubscriptionsInput) *DescribeNotificationSubscriptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeNotificationSubscriptions", input)
-	return &WorkDocsDescribeNotificationSubscriptionsFuture{Future: future}
+	return &DescribeNotificationSubscriptionsFuture{Future: future}
 }
 
 func (a *stub) DescribeResourcePermissions(ctx workflow.Context, input *workdocs.DescribeResourcePermissionsInput) (*workdocs.DescribeResourcePermissionsOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) DescribeResourcePermissions(ctx workflow.Context, input *workdocs
 	return &output, err
 }
 
-func (a *stub) DescribeResourcePermissionsAsync(ctx workflow.Context, input *workdocs.DescribeResourcePermissionsInput) *WorkDocsDescribeResourcePermissionsFuture {
+func (a *stub) DescribeResourcePermissionsAsync(ctx workflow.Context, input *workdocs.DescribeResourcePermissionsInput) *DescribeResourcePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeResourcePermissions", input)
-	return &WorkDocsDescribeResourcePermissionsFuture{Future: future}
+	return &DescribeResourcePermissionsFuture{Future: future}
 }
 
 func (a *stub) DescribeRootFolders(ctx workflow.Context, input *workdocs.DescribeRootFoldersInput) (*workdocs.DescribeRootFoldersOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) DescribeRootFolders(ctx workflow.Context, input *workdocs.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeRootFoldersAsync(ctx workflow.Context, input *workdocs.DescribeRootFoldersInput) *WorkDocsDescribeRootFoldersFuture {
+func (a *stub) DescribeRootFoldersAsync(ctx workflow.Context, input *workdocs.DescribeRootFoldersInput) *DescribeRootFoldersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeRootFolders", input)
-	return &WorkDocsDescribeRootFoldersFuture{Future: future}
+	return &DescribeRootFoldersFuture{Future: future}
 }
 
 func (a *stub) DescribeUsers(ctx workflow.Context, input *workdocs.DescribeUsersInput) (*workdocs.DescribeUsersOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) DescribeUsers(ctx workflow.Context, input *workdocs.DescribeUsers
 	return &output, err
 }
 
-func (a *stub) DescribeUsersAsync(ctx workflow.Context, input *workdocs.DescribeUsersInput) *WorkDocsDescribeUsersFuture {
+func (a *stub) DescribeUsersAsync(ctx workflow.Context, input *workdocs.DescribeUsersInput) *DescribeUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.DescribeUsers", input)
-	return &WorkDocsDescribeUsersFuture{Future: future}
+	return &DescribeUsersFuture{Future: future}
 }
 
 func (a *stub) GetCurrentUser(ctx workflow.Context, input *workdocs.GetCurrentUserInput) (*workdocs.GetCurrentUserOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) GetCurrentUser(ctx workflow.Context, input *workdocs.GetCurrentUs
 	return &output, err
 }
 
-func (a *stub) GetCurrentUserAsync(ctx workflow.Context, input *workdocs.GetCurrentUserInput) *WorkDocsGetCurrentUserFuture {
+func (a *stub) GetCurrentUserAsync(ctx workflow.Context, input *workdocs.GetCurrentUserInput) *GetCurrentUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.GetCurrentUser", input)
-	return &WorkDocsGetCurrentUserFuture{Future: future}
+	return &GetCurrentUserFuture{Future: future}
 }
 
 func (a *stub) GetDocument(ctx workflow.Context, input *workdocs.GetDocumentInput) (*workdocs.GetDocumentOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) GetDocument(ctx workflow.Context, input *workdocs.GetDocumentInpu
 	return &output, err
 }
 
-func (a *stub) GetDocumentAsync(ctx workflow.Context, input *workdocs.GetDocumentInput) *WorkDocsGetDocumentFuture {
+func (a *stub) GetDocumentAsync(ctx workflow.Context, input *workdocs.GetDocumentInput) *GetDocumentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.GetDocument", input)
-	return &WorkDocsGetDocumentFuture{Future: future}
+	return &GetDocumentFuture{Future: future}
 }
 
 func (a *stub) GetDocumentPath(ctx workflow.Context, input *workdocs.GetDocumentPathInput) (*workdocs.GetDocumentPathOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) GetDocumentPath(ctx workflow.Context, input *workdocs.GetDocument
 	return &output, err
 }
 
-func (a *stub) GetDocumentPathAsync(ctx workflow.Context, input *workdocs.GetDocumentPathInput) *WorkDocsGetDocumentPathFuture {
+func (a *stub) GetDocumentPathAsync(ctx workflow.Context, input *workdocs.GetDocumentPathInput) *GetDocumentPathFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.GetDocumentPath", input)
-	return &WorkDocsGetDocumentPathFuture{Future: future}
+	return &GetDocumentPathFuture{Future: future}
 }
 
 func (a *stub) GetDocumentVersion(ctx workflow.Context, input *workdocs.GetDocumentVersionInput) (*workdocs.GetDocumentVersionOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) GetDocumentVersion(ctx workflow.Context, input *workdocs.GetDocum
 	return &output, err
 }
 
-func (a *stub) GetDocumentVersionAsync(ctx workflow.Context, input *workdocs.GetDocumentVersionInput) *WorkDocsGetDocumentVersionFuture {
+func (a *stub) GetDocumentVersionAsync(ctx workflow.Context, input *workdocs.GetDocumentVersionInput) *GetDocumentVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.GetDocumentVersion", input)
-	return &WorkDocsGetDocumentVersionFuture{Future: future}
+	return &GetDocumentVersionFuture{Future: future}
 }
 
 func (a *stub) GetFolder(ctx workflow.Context, input *workdocs.GetFolderInput) (*workdocs.GetFolderOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) GetFolder(ctx workflow.Context, input *workdocs.GetFolderInput) (
 	return &output, err
 }
 
-func (a *stub) GetFolderAsync(ctx workflow.Context, input *workdocs.GetFolderInput) *WorkDocsGetFolderFuture {
+func (a *stub) GetFolderAsync(ctx workflow.Context, input *workdocs.GetFolderInput) *GetFolderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.GetFolder", input)
-	return &WorkDocsGetFolderFuture{Future: future}
+	return &GetFolderFuture{Future: future}
 }
 
 func (a *stub) GetFolderPath(ctx workflow.Context, input *workdocs.GetFolderPathInput) (*workdocs.GetFolderPathOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) GetFolderPath(ctx workflow.Context, input *workdocs.GetFolderPath
 	return &output, err
 }
 
-func (a *stub) GetFolderPathAsync(ctx workflow.Context, input *workdocs.GetFolderPathInput) *WorkDocsGetFolderPathFuture {
+func (a *stub) GetFolderPathAsync(ctx workflow.Context, input *workdocs.GetFolderPathInput) *GetFolderPathFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.GetFolderPath", input)
-	return &WorkDocsGetFolderPathFuture{Future: future}
+	return &GetFolderPathFuture{Future: future}
 }
 
 func (a *stub) GetResources(ctx workflow.Context, input *workdocs.GetResourcesInput) (*workdocs.GetResourcesOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) GetResources(ctx workflow.Context, input *workdocs.GetResourcesIn
 	return &output, err
 }
 
-func (a *stub) GetResourcesAsync(ctx workflow.Context, input *workdocs.GetResourcesInput) *WorkDocsGetResourcesFuture {
+func (a *stub) GetResourcesAsync(ctx workflow.Context, input *workdocs.GetResourcesInput) *GetResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.GetResources", input)
-	return &WorkDocsGetResourcesFuture{Future: future}
+	return &GetResourcesFuture{Future: future}
 }
 
 func (a *stub) InitiateDocumentVersionUpload(ctx workflow.Context, input *workdocs.InitiateDocumentVersionUploadInput) (*workdocs.InitiateDocumentVersionUploadOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) InitiateDocumentVersionUpload(ctx workflow.Context, input *workdo
 	return &output, err
 }
 
-func (a *stub) InitiateDocumentVersionUploadAsync(ctx workflow.Context, input *workdocs.InitiateDocumentVersionUploadInput) *WorkDocsInitiateDocumentVersionUploadFuture {
+func (a *stub) InitiateDocumentVersionUploadAsync(ctx workflow.Context, input *workdocs.InitiateDocumentVersionUploadInput) *InitiateDocumentVersionUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.InitiateDocumentVersionUpload", input)
-	return &WorkDocsInitiateDocumentVersionUploadFuture{Future: future}
+	return &InitiateDocumentVersionUploadFuture{Future: future}
 }
 
 func (a *stub) RemoveAllResourcePermissions(ctx workflow.Context, input *workdocs.RemoveAllResourcePermissionsInput) (*workdocs.RemoveAllResourcePermissionsOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) RemoveAllResourcePermissions(ctx workflow.Context, input *workdoc
 	return &output, err
 }
 
-func (a *stub) RemoveAllResourcePermissionsAsync(ctx workflow.Context, input *workdocs.RemoveAllResourcePermissionsInput) *WorkDocsRemoveAllResourcePermissionsFuture {
+func (a *stub) RemoveAllResourcePermissionsAsync(ctx workflow.Context, input *workdocs.RemoveAllResourcePermissionsInput) *RemoveAllResourcePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.RemoveAllResourcePermissions", input)
-	return &WorkDocsRemoveAllResourcePermissionsFuture{Future: future}
+	return &RemoveAllResourcePermissionsFuture{Future: future}
 }
 
 func (a *stub) RemoveResourcePermission(ctx workflow.Context, input *workdocs.RemoveResourcePermissionInput) (*workdocs.RemoveResourcePermissionOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) RemoveResourcePermission(ctx workflow.Context, input *workdocs.Re
 	return &output, err
 }
 
-func (a *stub) RemoveResourcePermissionAsync(ctx workflow.Context, input *workdocs.RemoveResourcePermissionInput) *WorkDocsRemoveResourcePermissionFuture {
+func (a *stub) RemoveResourcePermissionAsync(ctx workflow.Context, input *workdocs.RemoveResourcePermissionInput) *RemoveResourcePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.RemoveResourcePermission", input)
-	return &WorkDocsRemoveResourcePermissionFuture{Future: future}
+	return &RemoveResourcePermissionFuture{Future: future}
 }
 
 func (a *stub) UpdateDocument(ctx workflow.Context, input *workdocs.UpdateDocumentInput) (*workdocs.UpdateDocumentOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) UpdateDocument(ctx workflow.Context, input *workdocs.UpdateDocume
 	return &output, err
 }
 
-func (a *stub) UpdateDocumentAsync(ctx workflow.Context, input *workdocs.UpdateDocumentInput) *WorkDocsUpdateDocumentFuture {
+func (a *stub) UpdateDocumentAsync(ctx workflow.Context, input *workdocs.UpdateDocumentInput) *UpdateDocumentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.UpdateDocument", input)
-	return &WorkDocsUpdateDocumentFuture{Future: future}
+	return &UpdateDocumentFuture{Future: future}
 }
 
 func (a *stub) UpdateDocumentVersion(ctx workflow.Context, input *workdocs.UpdateDocumentVersionInput) (*workdocs.UpdateDocumentVersionOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) UpdateDocumentVersion(ctx workflow.Context, input *workdocs.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateDocumentVersionAsync(ctx workflow.Context, input *workdocs.UpdateDocumentVersionInput) *WorkDocsUpdateDocumentVersionFuture {
+func (a *stub) UpdateDocumentVersionAsync(ctx workflow.Context, input *workdocs.UpdateDocumentVersionInput) *UpdateDocumentVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.UpdateDocumentVersion", input)
-	return &WorkDocsUpdateDocumentVersionFuture{Future: future}
+	return &UpdateDocumentVersionFuture{Future: future}
 }
 
 func (a *stub) UpdateFolder(ctx workflow.Context, input *workdocs.UpdateFolderInput) (*workdocs.UpdateFolderOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) UpdateFolder(ctx workflow.Context, input *workdocs.UpdateFolderIn
 	return &output, err
 }
 
-func (a *stub) UpdateFolderAsync(ctx workflow.Context, input *workdocs.UpdateFolderInput) *WorkDocsUpdateFolderFuture {
+func (a *stub) UpdateFolderAsync(ctx workflow.Context, input *workdocs.UpdateFolderInput) *UpdateFolderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.UpdateFolder", input)
-	return &WorkDocsUpdateFolderFuture{Future: future}
+	return &UpdateFolderFuture{Future: future}
 }
 
 func (a *stub) UpdateUser(ctx workflow.Context, input *workdocs.UpdateUserInput) (*workdocs.UpdateUserOutput, error) {
@@ -913,7 +913,7 @@ func (a *stub) UpdateUser(ctx workflow.Context, input *workdocs.UpdateUserInput)
 	return &output, err
 }
 
-func (a *stub) UpdateUserAsync(ctx workflow.Context, input *workdocs.UpdateUserInput) *WorkDocsUpdateUserFuture {
+func (a *stub) UpdateUserAsync(ctx workflow.Context, input *workdocs.UpdateUserInput) *UpdateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workdocs.UpdateUser", input)
-	return &WorkDocsUpdateUserFuture{Future: future}
+	return &UpdateUserFuture{Future: future}
 }

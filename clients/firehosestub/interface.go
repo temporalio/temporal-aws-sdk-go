@@ -16,40 +16,40 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateDeliveryStream(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error)
-	CreateDeliveryStreamAsync(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) *FirehoseCreateDeliveryStreamFuture
+	CreateDeliveryStreamAsync(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) *CreateDeliveryStreamFuture
 
 	DeleteDeliveryStream(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error)
-	DeleteDeliveryStreamAsync(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) *FirehoseDeleteDeliveryStreamFuture
+	DeleteDeliveryStreamAsync(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) *DeleteDeliveryStreamFuture
 
 	DescribeDeliveryStream(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error)
-	DescribeDeliveryStreamAsync(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) *FirehoseDescribeDeliveryStreamFuture
+	DescribeDeliveryStreamAsync(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) *DescribeDeliveryStreamFuture
 
 	ListDeliveryStreams(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error)
-	ListDeliveryStreamsAsync(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) *FirehoseListDeliveryStreamsFuture
+	ListDeliveryStreamsAsync(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) *ListDeliveryStreamsFuture
 
 	ListTagsForDeliveryStream(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error)
-	ListTagsForDeliveryStreamAsync(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) *FirehoseListTagsForDeliveryStreamFuture
+	ListTagsForDeliveryStreamAsync(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) *ListTagsForDeliveryStreamFuture
 
 	PutRecord(ctx workflow.Context, input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error)
-	PutRecordAsync(ctx workflow.Context, input *firehose.PutRecordInput) *FirehosePutRecordFuture
+	PutRecordAsync(ctx workflow.Context, input *firehose.PutRecordInput) *PutRecordFuture
 
 	PutRecordBatch(ctx workflow.Context, input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error)
-	PutRecordBatchAsync(ctx workflow.Context, input *firehose.PutRecordBatchInput) *FirehosePutRecordBatchFuture
+	PutRecordBatchAsync(ctx workflow.Context, input *firehose.PutRecordBatchInput) *PutRecordBatchFuture
 
 	StartDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error)
-	StartDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) *FirehoseStartDeliveryStreamEncryptionFuture
+	StartDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) *StartDeliveryStreamEncryptionFuture
 
 	StopDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error)
-	StopDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) *FirehoseStopDeliveryStreamEncryptionFuture
+	StopDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) *StopDeliveryStreamEncryptionFuture
 
 	TagDeliveryStream(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error)
-	TagDeliveryStreamAsync(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) *FirehoseTagDeliveryStreamFuture
+	TagDeliveryStreamAsync(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) *TagDeliveryStreamFuture
 
 	UntagDeliveryStream(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error)
-	UntagDeliveryStreamAsync(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) *FirehoseUntagDeliveryStreamFuture
+	UntagDeliveryStreamAsync(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) *UntagDeliveryStreamFuture
 
 	UpdateDestination(ctx workflow.Context, input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error)
-	UpdateDestinationAsync(ctx workflow.Context, input *firehose.UpdateDestinationInput) *FirehoseUpdateDestinationFuture
+	UpdateDestinationAsync(ctx workflow.Context, input *firehose.UpdateDestinationInput) *UpdateDestinationFuture
 }
 
 func NewClient() Client {

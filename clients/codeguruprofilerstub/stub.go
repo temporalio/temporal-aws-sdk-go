@@ -16,254 +16,254 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CodeGuruProfilerAddNotificationChannelsFuture struct {
+type AddNotificationChannelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerAddNotificationChannelsFuture) Get(ctx workflow.Context) (*codeguruprofiler.AddNotificationChannelsOutput, error) {
+func (r *AddNotificationChannelsFuture) Get(ctx workflow.Context) (*codeguruprofiler.AddNotificationChannelsOutput, error) {
 	var output codeguruprofiler.AddNotificationChannelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerBatchGetFrameMetricDataFuture struct {
+type BatchGetFrameMetricDataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerBatchGetFrameMetricDataFuture) Get(ctx workflow.Context) (*codeguruprofiler.BatchGetFrameMetricDataOutput, error) {
+func (r *BatchGetFrameMetricDataFuture) Get(ctx workflow.Context) (*codeguruprofiler.BatchGetFrameMetricDataOutput, error) {
 	var output codeguruprofiler.BatchGetFrameMetricDataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerConfigureAgentFuture struct {
+type ConfigureAgentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerConfigureAgentFuture) Get(ctx workflow.Context) (*codeguruprofiler.ConfigureAgentOutput, error) {
+func (r *ConfigureAgentFuture) Get(ctx workflow.Context) (*codeguruprofiler.ConfigureAgentOutput, error) {
 	var output codeguruprofiler.ConfigureAgentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerCreateProfilingGroupFuture struct {
+type CreateProfilingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerCreateProfilingGroupFuture) Get(ctx workflow.Context) (*codeguruprofiler.CreateProfilingGroupOutput, error) {
+func (r *CreateProfilingGroupFuture) Get(ctx workflow.Context) (*codeguruprofiler.CreateProfilingGroupOutput, error) {
 	var output codeguruprofiler.CreateProfilingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerDeleteProfilingGroupFuture struct {
+type DeleteProfilingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerDeleteProfilingGroupFuture) Get(ctx workflow.Context) (*codeguruprofiler.DeleteProfilingGroupOutput, error) {
+func (r *DeleteProfilingGroupFuture) Get(ctx workflow.Context) (*codeguruprofiler.DeleteProfilingGroupOutput, error) {
 	var output codeguruprofiler.DeleteProfilingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerDescribeProfilingGroupFuture struct {
+type DescribeProfilingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerDescribeProfilingGroupFuture) Get(ctx workflow.Context) (*codeguruprofiler.DescribeProfilingGroupOutput, error) {
+func (r *DescribeProfilingGroupFuture) Get(ctx workflow.Context) (*codeguruprofiler.DescribeProfilingGroupOutput, error) {
 	var output codeguruprofiler.DescribeProfilingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerGetFindingsReportAccountSummaryFuture struct {
+type GetFindingsReportAccountSummaryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerGetFindingsReportAccountSummaryFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetFindingsReportAccountSummaryOutput, error) {
+func (r *GetFindingsReportAccountSummaryFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetFindingsReportAccountSummaryOutput, error) {
 	var output codeguruprofiler.GetFindingsReportAccountSummaryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerGetNotificationConfigurationFuture struct {
+type GetNotificationConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerGetNotificationConfigurationFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetNotificationConfigurationOutput, error) {
+func (r *GetNotificationConfigurationFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetNotificationConfigurationOutput, error) {
 	var output codeguruprofiler.GetNotificationConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerGetPolicyFuture struct {
+type GetPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerGetPolicyFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetPolicyOutput, error) {
+func (r *GetPolicyFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetPolicyOutput, error) {
 	var output codeguruprofiler.GetPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerGetProfileFuture struct {
+type GetProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerGetProfileFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetProfileOutput, error) {
+func (r *GetProfileFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetProfileOutput, error) {
 	var output codeguruprofiler.GetProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerGetRecommendationsFuture struct {
+type GetRecommendationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerGetRecommendationsFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetRecommendationsOutput, error) {
+func (r *GetRecommendationsFuture) Get(ctx workflow.Context) (*codeguruprofiler.GetRecommendationsOutput, error) {
 	var output codeguruprofiler.GetRecommendationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerListFindingsReportsFuture struct {
+type ListFindingsReportsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerListFindingsReportsFuture) Get(ctx workflow.Context) (*codeguruprofiler.ListFindingsReportsOutput, error) {
+func (r *ListFindingsReportsFuture) Get(ctx workflow.Context) (*codeguruprofiler.ListFindingsReportsOutput, error) {
 	var output codeguruprofiler.ListFindingsReportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerListProfileTimesFuture struct {
+type ListProfileTimesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerListProfileTimesFuture) Get(ctx workflow.Context) (*codeguruprofiler.ListProfileTimesOutput, error) {
+func (r *ListProfileTimesFuture) Get(ctx workflow.Context) (*codeguruprofiler.ListProfileTimesOutput, error) {
 	var output codeguruprofiler.ListProfileTimesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerListProfilingGroupsFuture struct {
+type ListProfilingGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerListProfilingGroupsFuture) Get(ctx workflow.Context) (*codeguruprofiler.ListProfilingGroupsOutput, error) {
+func (r *ListProfilingGroupsFuture) Get(ctx workflow.Context) (*codeguruprofiler.ListProfilingGroupsOutput, error) {
 	var output codeguruprofiler.ListProfilingGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerListTagsForResourceFuture) Get(ctx workflow.Context) (*codeguruprofiler.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*codeguruprofiler.ListTagsForResourceOutput, error) {
 	var output codeguruprofiler.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerPostAgentProfileFuture struct {
+type PostAgentProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerPostAgentProfileFuture) Get(ctx workflow.Context) (*codeguruprofiler.PostAgentProfileOutput, error) {
+func (r *PostAgentProfileFuture) Get(ctx workflow.Context) (*codeguruprofiler.PostAgentProfileOutput, error) {
 	var output codeguruprofiler.PostAgentProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerPutPermissionFuture struct {
+type PutPermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerPutPermissionFuture) Get(ctx workflow.Context) (*codeguruprofiler.PutPermissionOutput, error) {
+func (r *PutPermissionFuture) Get(ctx workflow.Context) (*codeguruprofiler.PutPermissionOutput, error) {
 	var output codeguruprofiler.PutPermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerRemoveNotificationChannelFuture struct {
+type RemoveNotificationChannelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerRemoveNotificationChannelFuture) Get(ctx workflow.Context) (*codeguruprofiler.RemoveNotificationChannelOutput, error) {
+func (r *RemoveNotificationChannelFuture) Get(ctx workflow.Context) (*codeguruprofiler.RemoveNotificationChannelOutput, error) {
 	var output codeguruprofiler.RemoveNotificationChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerRemovePermissionFuture struct {
+type RemovePermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerRemovePermissionFuture) Get(ctx workflow.Context) (*codeguruprofiler.RemovePermissionOutput, error) {
+func (r *RemovePermissionFuture) Get(ctx workflow.Context) (*codeguruprofiler.RemovePermissionOutput, error) {
 	var output codeguruprofiler.RemovePermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerSubmitFeedbackFuture struct {
+type SubmitFeedbackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerSubmitFeedbackFuture) Get(ctx workflow.Context) (*codeguruprofiler.SubmitFeedbackOutput, error) {
+func (r *SubmitFeedbackFuture) Get(ctx workflow.Context) (*codeguruprofiler.SubmitFeedbackOutput, error) {
 	var output codeguruprofiler.SubmitFeedbackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerTagResourceFuture) Get(ctx workflow.Context) (*codeguruprofiler.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*codeguruprofiler.TagResourceOutput, error) {
 	var output codeguruprofiler.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerUntagResourceFuture) Get(ctx workflow.Context) (*codeguruprofiler.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*codeguruprofiler.UntagResourceOutput, error) {
 	var output codeguruprofiler.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeGuruProfilerUpdateProfilingGroupFuture struct {
+type UpdateProfilingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeGuruProfilerUpdateProfilingGroupFuture) Get(ctx workflow.Context) (*codeguruprofiler.UpdateProfilingGroupOutput, error) {
+func (r *UpdateProfilingGroupFuture) Get(ctx workflow.Context) (*codeguruprofiler.UpdateProfilingGroupOutput, error) {
 	var output codeguruprofiler.UpdateProfilingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -275,9 +275,9 @@ func (a *stub) AddNotificationChannels(ctx workflow.Context, input *codeguruprof
 	return &output, err
 }
 
-func (a *stub) AddNotificationChannelsAsync(ctx workflow.Context, input *codeguruprofiler.AddNotificationChannelsInput) *CodeGuruProfilerAddNotificationChannelsFuture {
+func (a *stub) AddNotificationChannelsAsync(ctx workflow.Context, input *codeguruprofiler.AddNotificationChannelsInput) *AddNotificationChannelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.AddNotificationChannels", input)
-	return &CodeGuruProfilerAddNotificationChannelsFuture{Future: future}
+	return &AddNotificationChannelsFuture{Future: future}
 }
 
 func (a *stub) BatchGetFrameMetricData(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) (*codeguruprofiler.BatchGetFrameMetricDataOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) BatchGetFrameMetricData(ctx workflow.Context, input *codeguruprof
 	return &output, err
 }
 
-func (a *stub) BatchGetFrameMetricDataAsync(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) *CodeGuruProfilerBatchGetFrameMetricDataFuture {
+func (a *stub) BatchGetFrameMetricDataAsync(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) *BatchGetFrameMetricDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.BatchGetFrameMetricData", input)
-	return &CodeGuruProfilerBatchGetFrameMetricDataFuture{Future: future}
+	return &BatchGetFrameMetricDataFuture{Future: future}
 }
 
 func (a *stub) ConfigureAgent(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) (*codeguruprofiler.ConfigureAgentOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) ConfigureAgent(ctx workflow.Context, input *codeguruprofiler.Conf
 	return &output, err
 }
 
-func (a *stub) ConfigureAgentAsync(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) *CodeGuruProfilerConfigureAgentFuture {
+func (a *stub) ConfigureAgentAsync(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) *ConfigureAgentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ConfigureAgent", input)
-	return &CodeGuruProfilerConfigureAgentFuture{Future: future}
+	return &ConfigureAgentFuture{Future: future}
 }
 
 func (a *stub) CreateProfilingGroup(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) (*codeguruprofiler.CreateProfilingGroupOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) CreateProfilingGroup(ctx workflow.Context, input *codeguruprofile
 	return &output, err
 }
 
-func (a *stub) CreateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) *CodeGuruProfilerCreateProfilingGroupFuture {
+func (a *stub) CreateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) *CreateProfilingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.CreateProfilingGroup", input)
-	return &CodeGuruProfilerCreateProfilingGroupFuture{Future: future}
+	return &CreateProfilingGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteProfilingGroup(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) (*codeguruprofiler.DeleteProfilingGroupOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) DeleteProfilingGroup(ctx workflow.Context, input *codeguruprofile
 	return &output, err
 }
 
-func (a *stub) DeleteProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) *CodeGuruProfilerDeleteProfilingGroupFuture {
+func (a *stub) DeleteProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) *DeleteProfilingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.DeleteProfilingGroup", input)
-	return &CodeGuruProfilerDeleteProfilingGroupFuture{Future: future}
+	return &DeleteProfilingGroupFuture{Future: future}
 }
 
 func (a *stub) DescribeProfilingGroup(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) (*codeguruprofiler.DescribeProfilingGroupOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) DescribeProfilingGroup(ctx workflow.Context, input *codeguruprofi
 	return &output, err
 }
 
-func (a *stub) DescribeProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) *CodeGuruProfilerDescribeProfilingGroupFuture {
+func (a *stub) DescribeProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) *DescribeProfilingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.DescribeProfilingGroup", input)
-	return &CodeGuruProfilerDescribeProfilingGroupFuture{Future: future}
+	return &DescribeProfilingGroupFuture{Future: future}
 }
 
 func (a *stub) GetFindingsReportAccountSummary(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) (*codeguruprofiler.GetFindingsReportAccountSummaryOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) GetFindingsReportAccountSummary(ctx workflow.Context, input *code
 	return &output, err
 }
 
-func (a *stub) GetFindingsReportAccountSummaryAsync(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) *CodeGuruProfilerGetFindingsReportAccountSummaryFuture {
+func (a *stub) GetFindingsReportAccountSummaryAsync(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) *GetFindingsReportAccountSummaryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetFindingsReportAccountSummary", input)
-	return &CodeGuruProfilerGetFindingsReportAccountSummaryFuture{Future: future}
+	return &GetFindingsReportAccountSummaryFuture{Future: future}
 }
 
 func (a *stub) GetNotificationConfiguration(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) (*codeguruprofiler.GetNotificationConfigurationOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) GetNotificationConfiguration(ctx workflow.Context, input *codegur
 	return &output, err
 }
 
-func (a *stub) GetNotificationConfigurationAsync(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) *CodeGuruProfilerGetNotificationConfigurationFuture {
+func (a *stub) GetNotificationConfigurationAsync(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) *GetNotificationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetNotificationConfiguration", input)
-	return &CodeGuruProfilerGetNotificationConfigurationFuture{Future: future}
+	return &GetNotificationConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetPolicy(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) (*codeguruprofiler.GetPolicyOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) GetPolicy(ctx workflow.Context, input *codeguruprofiler.GetPolicy
 	return &output, err
 }
 
-func (a *stub) GetPolicyAsync(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) *CodeGuruProfilerGetPolicyFuture {
+func (a *stub) GetPolicyAsync(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) *GetPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetPolicy", input)
-	return &CodeGuruProfilerGetPolicyFuture{Future: future}
+	return &GetPolicyFuture{Future: future}
 }
 
 func (a *stub) GetProfile(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) (*codeguruprofiler.GetProfileOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) GetProfile(ctx workflow.Context, input *codeguruprofiler.GetProfi
 	return &output, err
 }
 
-func (a *stub) GetProfileAsync(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) *CodeGuruProfilerGetProfileFuture {
+func (a *stub) GetProfileAsync(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) *GetProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetProfile", input)
-	return &CodeGuruProfilerGetProfileFuture{Future: future}
+	return &GetProfileFuture{Future: future}
 }
 
 func (a *stub) GetRecommendations(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) (*codeguruprofiler.GetRecommendationsOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) GetRecommendations(ctx workflow.Context, input *codeguruprofiler.
 	return &output, err
 }
 
-func (a *stub) GetRecommendationsAsync(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) *CodeGuruProfilerGetRecommendationsFuture {
+func (a *stub) GetRecommendationsAsync(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) *GetRecommendationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetRecommendations", input)
-	return &CodeGuruProfilerGetRecommendationsFuture{Future: future}
+	return &GetRecommendationsFuture{Future: future}
 }
 
 func (a *stub) ListFindingsReports(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) (*codeguruprofiler.ListFindingsReportsOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) ListFindingsReports(ctx workflow.Context, input *codeguruprofiler
 	return &output, err
 }
 
-func (a *stub) ListFindingsReportsAsync(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) *CodeGuruProfilerListFindingsReportsFuture {
+func (a *stub) ListFindingsReportsAsync(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) *ListFindingsReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListFindingsReports", input)
-	return &CodeGuruProfilerListFindingsReportsFuture{Future: future}
+	return &ListFindingsReportsFuture{Future: future}
 }
 
 func (a *stub) ListProfileTimes(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) (*codeguruprofiler.ListProfileTimesOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) ListProfileTimes(ctx workflow.Context, input *codeguruprofiler.Li
 	return &output, err
 }
 
-func (a *stub) ListProfileTimesAsync(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) *CodeGuruProfilerListProfileTimesFuture {
+func (a *stub) ListProfileTimesAsync(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) *ListProfileTimesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListProfileTimes", input)
-	return &CodeGuruProfilerListProfileTimesFuture{Future: future}
+	return &ListProfileTimesFuture{Future: future}
 }
 
 func (a *stub) ListProfilingGroups(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) (*codeguruprofiler.ListProfilingGroupsOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) ListProfilingGroups(ctx workflow.Context, input *codeguruprofiler
 	return &output, err
 }
 
-func (a *stub) ListProfilingGroupsAsync(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) *CodeGuruProfilerListProfilingGroupsFuture {
+func (a *stub) ListProfilingGroupsAsync(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) *ListProfilingGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListProfilingGroups", input)
-	return &CodeGuruProfilerListProfilingGroupsFuture{Future: future}
+	return &ListProfilingGroupsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) (*codeguruprofiler.ListTagsForResourceOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *codeguruprofiler
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) *CodeGuruProfilerListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListTagsForResource", input)
-	return &CodeGuruProfilerListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PostAgentProfile(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) (*codeguruprofiler.PostAgentProfileOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) PostAgentProfile(ctx workflow.Context, input *codeguruprofiler.Po
 	return &output, err
 }
 
-func (a *stub) PostAgentProfileAsync(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) *CodeGuruProfilerPostAgentProfileFuture {
+func (a *stub) PostAgentProfileAsync(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) *PostAgentProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.PostAgentProfile", input)
-	return &CodeGuruProfilerPostAgentProfileFuture{Future: future}
+	return &PostAgentProfileFuture{Future: future}
 }
 
 func (a *stub) PutPermission(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) (*codeguruprofiler.PutPermissionOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) PutPermission(ctx workflow.Context, input *codeguruprofiler.PutPe
 	return &output, err
 }
 
-func (a *stub) PutPermissionAsync(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) *CodeGuruProfilerPutPermissionFuture {
+func (a *stub) PutPermissionAsync(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) *PutPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.PutPermission", input)
-	return &CodeGuruProfilerPutPermissionFuture{Future: future}
+	return &PutPermissionFuture{Future: future}
 }
 
 func (a *stub) RemoveNotificationChannel(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) (*codeguruprofiler.RemoveNotificationChannelOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) RemoveNotificationChannel(ctx workflow.Context, input *codegurupr
 	return &output, err
 }
 
-func (a *stub) RemoveNotificationChannelAsync(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) *CodeGuruProfilerRemoveNotificationChannelFuture {
+func (a *stub) RemoveNotificationChannelAsync(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) *RemoveNotificationChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.RemoveNotificationChannel", input)
-	return &CodeGuruProfilerRemoveNotificationChannelFuture{Future: future}
+	return &RemoveNotificationChannelFuture{Future: future}
 }
 
 func (a *stub) RemovePermission(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) (*codeguruprofiler.RemovePermissionOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) RemovePermission(ctx workflow.Context, input *codeguruprofiler.Re
 	return &output, err
 }
 
-func (a *stub) RemovePermissionAsync(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) *CodeGuruProfilerRemovePermissionFuture {
+func (a *stub) RemovePermissionAsync(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) *RemovePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.RemovePermission", input)
-	return &CodeGuruProfilerRemovePermissionFuture{Future: future}
+	return &RemovePermissionFuture{Future: future}
 }
 
 func (a *stub) SubmitFeedback(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) (*codeguruprofiler.SubmitFeedbackOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) SubmitFeedback(ctx workflow.Context, input *codeguruprofiler.Subm
 	return &output, err
 }
 
-func (a *stub) SubmitFeedbackAsync(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) *CodeGuruProfilerSubmitFeedbackFuture {
+func (a *stub) SubmitFeedbackAsync(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) *SubmitFeedbackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.SubmitFeedback", input)
-	return &CodeGuruProfilerSubmitFeedbackFuture{Future: future}
+	return &SubmitFeedbackFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) (*codeguruprofiler.TagResourceOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *codeguruprofiler.TagReso
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) *CodeGuruProfilerTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.TagResource", input)
-	return &CodeGuruProfilerTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) (*codeguruprofiler.UntagResourceOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *codeguruprofiler.Untag
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) *CodeGuruProfilerUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.UntagResource", input)
-	return &CodeGuruProfilerUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateProfilingGroup(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) (*codeguruprofiler.UpdateProfilingGroupOutput, error) {
@@ -517,7 +517,7 @@ func (a *stub) UpdateProfilingGroup(ctx workflow.Context, input *codeguruprofile
 	return &output, err
 }
 
-func (a *stub) UpdateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) *CodeGuruProfilerUpdateProfilingGroupFuture {
+func (a *stub) UpdateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) *UpdateProfilingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.UpdateProfilingGroup", input)
-	return &CodeGuruProfilerUpdateProfilingGroupFuture{Future: future}
+	return &UpdateProfilingGroupFuture{Future: future}
 }

@@ -16,716 +16,716 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ElastiCacheAddTagsToResourceFuture struct {
+type AddTagsToResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheAddTagsToResourceFuture) Get(ctx workflow.Context) (*elasticache.TagListMessage, error) {
+func (r *AddTagsToResourceFuture) Get(ctx workflow.Context) (*elasticache.TagListMessage, error) {
 	var output elasticache.TagListMessage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheAuthorizeCacheSecurityGroupIngressFuture struct {
+type AuthorizeCacheSecurityGroupIngressFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheAuthorizeCacheSecurityGroupIngressFuture) Get(ctx workflow.Context) (*elasticache.AuthorizeCacheSecurityGroupIngressOutput, error) {
+func (r *AuthorizeCacheSecurityGroupIngressFuture) Get(ctx workflow.Context) (*elasticache.AuthorizeCacheSecurityGroupIngressOutput, error) {
 	var output elasticache.AuthorizeCacheSecurityGroupIngressOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheBatchApplyUpdateActionFuture struct {
+type BatchApplyUpdateActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheBatchApplyUpdateActionFuture) Get(ctx workflow.Context) (*elasticache.BatchApplyUpdateActionOutput, error) {
+func (r *BatchApplyUpdateActionFuture) Get(ctx workflow.Context) (*elasticache.BatchApplyUpdateActionOutput, error) {
 	var output elasticache.BatchApplyUpdateActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheBatchStopUpdateActionFuture struct {
+type BatchStopUpdateActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheBatchStopUpdateActionFuture) Get(ctx workflow.Context) (*elasticache.BatchStopUpdateActionOutput, error) {
+func (r *BatchStopUpdateActionFuture) Get(ctx workflow.Context) (*elasticache.BatchStopUpdateActionOutput, error) {
 	var output elasticache.BatchStopUpdateActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCompleteMigrationFuture struct {
+type CompleteMigrationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCompleteMigrationFuture) Get(ctx workflow.Context) (*elasticache.CompleteMigrationOutput, error) {
+func (r *CompleteMigrationFuture) Get(ctx workflow.Context) (*elasticache.CompleteMigrationOutput, error) {
 	var output elasticache.CompleteMigrationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCopySnapshotFuture struct {
+type CopySnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCopySnapshotFuture) Get(ctx workflow.Context) (*elasticache.CopySnapshotOutput, error) {
+func (r *CopySnapshotFuture) Get(ctx workflow.Context) (*elasticache.CopySnapshotOutput, error) {
 	var output elasticache.CopySnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateCacheClusterFuture struct {
+type CreateCacheClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateCacheClusterFuture) Get(ctx workflow.Context) (*elasticache.CreateCacheClusterOutput, error) {
+func (r *CreateCacheClusterFuture) Get(ctx workflow.Context) (*elasticache.CreateCacheClusterOutput, error) {
 	var output elasticache.CreateCacheClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateCacheParameterGroupFuture struct {
+type CreateCacheParameterGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateCacheParameterGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateCacheParameterGroupOutput, error) {
+func (r *CreateCacheParameterGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateCacheParameterGroupOutput, error) {
 	var output elasticache.CreateCacheParameterGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateCacheSecurityGroupFuture struct {
+type CreateCacheSecurityGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateCacheSecurityGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateCacheSecurityGroupOutput, error) {
+func (r *CreateCacheSecurityGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateCacheSecurityGroupOutput, error) {
 	var output elasticache.CreateCacheSecurityGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateCacheSubnetGroupFuture struct {
+type CreateCacheSubnetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateCacheSubnetGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateCacheSubnetGroupOutput, error) {
+func (r *CreateCacheSubnetGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateCacheSubnetGroupOutput, error) {
 	var output elasticache.CreateCacheSubnetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateGlobalReplicationGroupFuture struct {
+type CreateGlobalReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateGlobalReplicationGroupOutput, error) {
+func (r *CreateGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateGlobalReplicationGroupOutput, error) {
 	var output elasticache.CreateGlobalReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateReplicationGroupFuture struct {
+type CreateReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateReplicationGroupOutput, error) {
+func (r *CreateReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateReplicationGroupOutput, error) {
 	var output elasticache.CreateReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateSnapshotFuture struct {
+type CreateSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateSnapshotFuture) Get(ctx workflow.Context) (*elasticache.CreateSnapshotOutput, error) {
+func (r *CreateSnapshotFuture) Get(ctx workflow.Context) (*elasticache.CreateSnapshotOutput, error) {
 	var output elasticache.CreateSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateUserFuture struct {
+type CreateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateUserFuture) Get(ctx workflow.Context) (*elasticache.CreateUserOutput, error) {
+func (r *CreateUserFuture) Get(ctx workflow.Context) (*elasticache.CreateUserOutput, error) {
 	var output elasticache.CreateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheCreateUserGroupFuture struct {
+type CreateUserGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheCreateUserGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateUserGroupOutput, error) {
+func (r *CreateUserGroupFuture) Get(ctx workflow.Context) (*elasticache.CreateUserGroupOutput, error) {
 	var output elasticache.CreateUserGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDecreaseNodeGroupsInGlobalReplicationGroupFuture struct {
+type DecreaseNodeGroupsInGlobalReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDecreaseNodeGroupsInGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.DecreaseNodeGroupsInGlobalReplicationGroupOutput, error) {
+func (r *DecreaseNodeGroupsInGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.DecreaseNodeGroupsInGlobalReplicationGroupOutput, error) {
 	var output elasticache.DecreaseNodeGroupsInGlobalReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDecreaseReplicaCountFuture struct {
+type DecreaseReplicaCountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDecreaseReplicaCountFuture) Get(ctx workflow.Context) (*elasticache.DecreaseReplicaCountOutput, error) {
+func (r *DecreaseReplicaCountFuture) Get(ctx workflow.Context) (*elasticache.DecreaseReplicaCountOutput, error) {
 	var output elasticache.DecreaseReplicaCountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteCacheClusterFuture struct {
+type DeleteCacheClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteCacheClusterFuture) Get(ctx workflow.Context) (*elasticache.DeleteCacheClusterOutput, error) {
+func (r *DeleteCacheClusterFuture) Get(ctx workflow.Context) (*elasticache.DeleteCacheClusterOutput, error) {
 	var output elasticache.DeleteCacheClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteCacheParameterGroupFuture struct {
+type DeleteCacheParameterGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteCacheParameterGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteCacheParameterGroupOutput, error) {
+func (r *DeleteCacheParameterGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteCacheParameterGroupOutput, error) {
 	var output elasticache.DeleteCacheParameterGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteCacheSecurityGroupFuture struct {
+type DeleteCacheSecurityGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteCacheSecurityGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteCacheSecurityGroupOutput, error) {
+func (r *DeleteCacheSecurityGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteCacheSecurityGroupOutput, error) {
 	var output elasticache.DeleteCacheSecurityGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteCacheSubnetGroupFuture struct {
+type DeleteCacheSubnetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteCacheSubnetGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteCacheSubnetGroupOutput, error) {
+func (r *DeleteCacheSubnetGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteCacheSubnetGroupOutput, error) {
 	var output elasticache.DeleteCacheSubnetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteGlobalReplicationGroupFuture struct {
+type DeleteGlobalReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteGlobalReplicationGroupOutput, error) {
+func (r *DeleteGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteGlobalReplicationGroupOutput, error) {
 	var output elasticache.DeleteGlobalReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteReplicationGroupFuture struct {
+type DeleteReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteReplicationGroupOutput, error) {
+func (r *DeleteReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteReplicationGroupOutput, error) {
 	var output elasticache.DeleteReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteSnapshotFuture struct {
+type DeleteSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteSnapshotFuture) Get(ctx workflow.Context) (*elasticache.DeleteSnapshotOutput, error) {
+func (r *DeleteSnapshotFuture) Get(ctx workflow.Context) (*elasticache.DeleteSnapshotOutput, error) {
 	var output elasticache.DeleteSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteUserFuture struct {
+type DeleteUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteUserFuture) Get(ctx workflow.Context) (*elasticache.DeleteUserOutput, error) {
+func (r *DeleteUserFuture) Get(ctx workflow.Context) (*elasticache.DeleteUserOutput, error) {
 	var output elasticache.DeleteUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDeleteUserGroupFuture struct {
+type DeleteUserGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDeleteUserGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteUserGroupOutput, error) {
+func (r *DeleteUserGroupFuture) Get(ctx workflow.Context) (*elasticache.DeleteUserGroupOutput, error) {
 	var output elasticache.DeleteUserGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeCacheClustersFuture struct {
+type DescribeCacheClustersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeCacheClustersFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheClustersOutput, error) {
+func (r *DescribeCacheClustersFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheClustersOutput, error) {
 	var output elasticache.DescribeCacheClustersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeCacheEngineVersionsFuture struct {
+type DescribeCacheEngineVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeCacheEngineVersionsFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheEngineVersionsOutput, error) {
+func (r *DescribeCacheEngineVersionsFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheEngineVersionsOutput, error) {
 	var output elasticache.DescribeCacheEngineVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeCacheParameterGroupsFuture struct {
+type DescribeCacheParameterGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeCacheParameterGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheParameterGroupsOutput, error) {
+func (r *DescribeCacheParameterGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheParameterGroupsOutput, error) {
 	var output elasticache.DescribeCacheParameterGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeCacheParametersFuture struct {
+type DescribeCacheParametersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeCacheParametersFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheParametersOutput, error) {
+func (r *DescribeCacheParametersFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheParametersOutput, error) {
 	var output elasticache.DescribeCacheParametersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeCacheSecurityGroupsFuture struct {
+type DescribeCacheSecurityGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeCacheSecurityGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheSecurityGroupsOutput, error) {
+func (r *DescribeCacheSecurityGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheSecurityGroupsOutput, error) {
 	var output elasticache.DescribeCacheSecurityGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeCacheSubnetGroupsFuture struct {
+type DescribeCacheSubnetGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeCacheSubnetGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheSubnetGroupsOutput, error) {
+func (r *DescribeCacheSubnetGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeCacheSubnetGroupsOutput, error) {
 	var output elasticache.DescribeCacheSubnetGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeEngineDefaultParametersFuture struct {
+type DescribeEngineDefaultParametersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeEngineDefaultParametersFuture) Get(ctx workflow.Context) (*elasticache.DescribeEngineDefaultParametersOutput, error) {
+func (r *DescribeEngineDefaultParametersFuture) Get(ctx workflow.Context) (*elasticache.DescribeEngineDefaultParametersOutput, error) {
 	var output elasticache.DescribeEngineDefaultParametersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeEventsFuture struct {
+type DescribeEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeEventsFuture) Get(ctx workflow.Context) (*elasticache.DescribeEventsOutput, error) {
+func (r *DescribeEventsFuture) Get(ctx workflow.Context) (*elasticache.DescribeEventsOutput, error) {
 	var output elasticache.DescribeEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeGlobalReplicationGroupsFuture struct {
+type DescribeGlobalReplicationGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeGlobalReplicationGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeGlobalReplicationGroupsOutput, error) {
+func (r *DescribeGlobalReplicationGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeGlobalReplicationGroupsOutput, error) {
 	var output elasticache.DescribeGlobalReplicationGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeReplicationGroupsFuture struct {
+type DescribeReplicationGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeReplicationGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeReplicationGroupsOutput, error) {
+func (r *DescribeReplicationGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeReplicationGroupsOutput, error) {
 	var output elasticache.DescribeReplicationGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeReservedCacheNodesFuture struct {
+type DescribeReservedCacheNodesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeReservedCacheNodesFuture) Get(ctx workflow.Context) (*elasticache.DescribeReservedCacheNodesOutput, error) {
+func (r *DescribeReservedCacheNodesFuture) Get(ctx workflow.Context) (*elasticache.DescribeReservedCacheNodesOutput, error) {
 	var output elasticache.DescribeReservedCacheNodesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeReservedCacheNodesOfferingsFuture struct {
+type DescribeReservedCacheNodesOfferingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeReservedCacheNodesOfferingsFuture) Get(ctx workflow.Context) (*elasticache.DescribeReservedCacheNodesOfferingsOutput, error) {
+func (r *DescribeReservedCacheNodesOfferingsFuture) Get(ctx workflow.Context) (*elasticache.DescribeReservedCacheNodesOfferingsOutput, error) {
 	var output elasticache.DescribeReservedCacheNodesOfferingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeServiceUpdatesFuture struct {
+type DescribeServiceUpdatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeServiceUpdatesFuture) Get(ctx workflow.Context) (*elasticache.DescribeServiceUpdatesOutput, error) {
+func (r *DescribeServiceUpdatesFuture) Get(ctx workflow.Context) (*elasticache.DescribeServiceUpdatesOutput, error) {
 	var output elasticache.DescribeServiceUpdatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeSnapshotsFuture struct {
+type DescribeSnapshotsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeSnapshotsFuture) Get(ctx workflow.Context) (*elasticache.DescribeSnapshotsOutput, error) {
+func (r *DescribeSnapshotsFuture) Get(ctx workflow.Context) (*elasticache.DescribeSnapshotsOutput, error) {
 	var output elasticache.DescribeSnapshotsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeUpdateActionsFuture struct {
+type DescribeUpdateActionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeUpdateActionsFuture) Get(ctx workflow.Context) (*elasticache.DescribeUpdateActionsOutput, error) {
+func (r *DescribeUpdateActionsFuture) Get(ctx workflow.Context) (*elasticache.DescribeUpdateActionsOutput, error) {
 	var output elasticache.DescribeUpdateActionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeUserGroupsFuture struct {
+type DescribeUserGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeUserGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeUserGroupsOutput, error) {
+func (r *DescribeUserGroupsFuture) Get(ctx workflow.Context) (*elasticache.DescribeUserGroupsOutput, error) {
 	var output elasticache.DescribeUserGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDescribeUsersFuture struct {
+type DescribeUsersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDescribeUsersFuture) Get(ctx workflow.Context) (*elasticache.DescribeUsersOutput, error) {
+func (r *DescribeUsersFuture) Get(ctx workflow.Context) (*elasticache.DescribeUsersOutput, error) {
 	var output elasticache.DescribeUsersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheDisassociateGlobalReplicationGroupFuture struct {
+type DisassociateGlobalReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheDisassociateGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.DisassociateGlobalReplicationGroupOutput, error) {
+func (r *DisassociateGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.DisassociateGlobalReplicationGroupOutput, error) {
 	var output elasticache.DisassociateGlobalReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheFailoverGlobalReplicationGroupFuture struct {
+type FailoverGlobalReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheFailoverGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.FailoverGlobalReplicationGroupOutput, error) {
+func (r *FailoverGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.FailoverGlobalReplicationGroupOutput, error) {
 	var output elasticache.FailoverGlobalReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheIncreaseNodeGroupsInGlobalReplicationGroupFuture struct {
+type IncreaseNodeGroupsInGlobalReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheIncreaseNodeGroupsInGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.IncreaseNodeGroupsInGlobalReplicationGroupOutput, error) {
+func (r *IncreaseNodeGroupsInGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.IncreaseNodeGroupsInGlobalReplicationGroupOutput, error) {
 	var output elasticache.IncreaseNodeGroupsInGlobalReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheIncreaseReplicaCountFuture struct {
+type IncreaseReplicaCountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheIncreaseReplicaCountFuture) Get(ctx workflow.Context) (*elasticache.IncreaseReplicaCountOutput, error) {
+func (r *IncreaseReplicaCountFuture) Get(ctx workflow.Context) (*elasticache.IncreaseReplicaCountOutput, error) {
 	var output elasticache.IncreaseReplicaCountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheListAllowedNodeTypeModificationsFuture struct {
+type ListAllowedNodeTypeModificationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheListAllowedNodeTypeModificationsFuture) Get(ctx workflow.Context) (*elasticache.ListAllowedNodeTypeModificationsOutput, error) {
+func (r *ListAllowedNodeTypeModificationsFuture) Get(ctx workflow.Context) (*elasticache.ListAllowedNodeTypeModificationsOutput, error) {
 	var output elasticache.ListAllowedNodeTypeModificationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheListTagsForResourceFuture) Get(ctx workflow.Context) (*elasticache.TagListMessage, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*elasticache.TagListMessage, error) {
 	var output elasticache.TagListMessage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheModifyCacheClusterFuture struct {
+type ModifyCacheClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheModifyCacheClusterFuture) Get(ctx workflow.Context) (*elasticache.ModifyCacheClusterOutput, error) {
+func (r *ModifyCacheClusterFuture) Get(ctx workflow.Context) (*elasticache.ModifyCacheClusterOutput, error) {
 	var output elasticache.ModifyCacheClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheModifyCacheParameterGroupFuture struct {
+type ModifyCacheParameterGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheModifyCacheParameterGroupFuture) Get(ctx workflow.Context) (*elasticache.CacheParameterGroupNameMessage, error) {
+func (r *ModifyCacheParameterGroupFuture) Get(ctx workflow.Context) (*elasticache.CacheParameterGroupNameMessage, error) {
 	var output elasticache.CacheParameterGroupNameMessage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheModifyCacheSubnetGroupFuture struct {
+type ModifyCacheSubnetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheModifyCacheSubnetGroupFuture) Get(ctx workflow.Context) (*elasticache.ModifyCacheSubnetGroupOutput, error) {
+func (r *ModifyCacheSubnetGroupFuture) Get(ctx workflow.Context) (*elasticache.ModifyCacheSubnetGroupOutput, error) {
 	var output elasticache.ModifyCacheSubnetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheModifyGlobalReplicationGroupFuture struct {
+type ModifyGlobalReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheModifyGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.ModifyGlobalReplicationGroupOutput, error) {
+func (r *ModifyGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.ModifyGlobalReplicationGroupOutput, error) {
 	var output elasticache.ModifyGlobalReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheModifyReplicationGroupFuture struct {
+type ModifyReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheModifyReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.ModifyReplicationGroupOutput, error) {
+func (r *ModifyReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.ModifyReplicationGroupOutput, error) {
 	var output elasticache.ModifyReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheModifyReplicationGroupShardConfigurationFuture struct {
+type ModifyReplicationGroupShardConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheModifyReplicationGroupShardConfigurationFuture) Get(ctx workflow.Context) (*elasticache.ModifyReplicationGroupShardConfigurationOutput, error) {
+func (r *ModifyReplicationGroupShardConfigurationFuture) Get(ctx workflow.Context) (*elasticache.ModifyReplicationGroupShardConfigurationOutput, error) {
 	var output elasticache.ModifyReplicationGroupShardConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheModifyUserFuture struct {
+type ModifyUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheModifyUserFuture) Get(ctx workflow.Context) (*elasticache.ModifyUserOutput, error) {
+func (r *ModifyUserFuture) Get(ctx workflow.Context) (*elasticache.ModifyUserOutput, error) {
 	var output elasticache.ModifyUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheModifyUserGroupFuture struct {
+type ModifyUserGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheModifyUserGroupFuture) Get(ctx workflow.Context) (*elasticache.ModifyUserGroupOutput, error) {
+func (r *ModifyUserGroupFuture) Get(ctx workflow.Context) (*elasticache.ModifyUserGroupOutput, error) {
 	var output elasticache.ModifyUserGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCachePurchaseReservedCacheNodesOfferingFuture struct {
+type PurchaseReservedCacheNodesOfferingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCachePurchaseReservedCacheNodesOfferingFuture) Get(ctx workflow.Context) (*elasticache.PurchaseReservedCacheNodesOfferingOutput, error) {
+func (r *PurchaseReservedCacheNodesOfferingFuture) Get(ctx workflow.Context) (*elasticache.PurchaseReservedCacheNodesOfferingOutput, error) {
 	var output elasticache.PurchaseReservedCacheNodesOfferingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheRebalanceSlotsInGlobalReplicationGroupFuture struct {
+type RebalanceSlotsInGlobalReplicationGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheRebalanceSlotsInGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.RebalanceSlotsInGlobalReplicationGroupOutput, error) {
+func (r *RebalanceSlotsInGlobalReplicationGroupFuture) Get(ctx workflow.Context) (*elasticache.RebalanceSlotsInGlobalReplicationGroupOutput, error) {
 	var output elasticache.RebalanceSlotsInGlobalReplicationGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheRebootCacheClusterFuture struct {
+type RebootCacheClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheRebootCacheClusterFuture) Get(ctx workflow.Context) (*elasticache.RebootCacheClusterOutput, error) {
+func (r *RebootCacheClusterFuture) Get(ctx workflow.Context) (*elasticache.RebootCacheClusterOutput, error) {
 	var output elasticache.RebootCacheClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheRemoveTagsFromResourceFuture struct {
+type RemoveTagsFromResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*elasticache.TagListMessage, error) {
+func (r *RemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*elasticache.TagListMessage, error) {
 	var output elasticache.TagListMessage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheResetCacheParameterGroupFuture struct {
+type ResetCacheParameterGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheResetCacheParameterGroupFuture) Get(ctx workflow.Context) (*elasticache.CacheParameterGroupNameMessage, error) {
+func (r *ResetCacheParameterGroupFuture) Get(ctx workflow.Context) (*elasticache.CacheParameterGroupNameMessage, error) {
 	var output elasticache.CacheParameterGroupNameMessage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheRevokeCacheSecurityGroupIngressFuture struct {
+type RevokeCacheSecurityGroupIngressFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheRevokeCacheSecurityGroupIngressFuture) Get(ctx workflow.Context) (*elasticache.RevokeCacheSecurityGroupIngressOutput, error) {
+func (r *RevokeCacheSecurityGroupIngressFuture) Get(ctx workflow.Context) (*elasticache.RevokeCacheSecurityGroupIngressOutput, error) {
 	var output elasticache.RevokeCacheSecurityGroupIngressOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheStartMigrationFuture struct {
+type StartMigrationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheStartMigrationFuture) Get(ctx workflow.Context) (*elasticache.StartMigrationOutput, error) {
+func (r *StartMigrationFuture) Get(ctx workflow.Context) (*elasticache.StartMigrationOutput, error) {
 	var output elasticache.StartMigrationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElastiCacheTestFailoverFuture struct {
+type TestFailoverFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElastiCacheTestFailoverFuture) Get(ctx workflow.Context) (*elasticache.TestFailoverOutput, error) {
+func (r *TestFailoverFuture) Get(ctx workflow.Context) (*elasticache.TestFailoverOutput, error) {
 	var output elasticache.TestFailoverOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -737,9 +737,9 @@ func (a *stub) AddTagsToResource(ctx workflow.Context, input *elasticache.AddTag
 	return &output, err
 }
 
-func (a *stub) AddTagsToResourceAsync(ctx workflow.Context, input *elasticache.AddTagsToResourceInput) *ElastiCacheAddTagsToResourceFuture {
+func (a *stub) AddTagsToResourceAsync(ctx workflow.Context, input *elasticache.AddTagsToResourceInput) *AddTagsToResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.AddTagsToResource", input)
-	return &ElastiCacheAddTagsToResourceFuture{Future: future}
+	return &AddTagsToResourceFuture{Future: future}
 }
 
 func (a *stub) AuthorizeCacheSecurityGroupIngress(ctx workflow.Context, input *elasticache.AuthorizeCacheSecurityGroupIngressInput) (*elasticache.AuthorizeCacheSecurityGroupIngressOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) AuthorizeCacheSecurityGroupIngress(ctx workflow.Context, input *e
 	return &output, err
 }
 
-func (a *stub) AuthorizeCacheSecurityGroupIngressAsync(ctx workflow.Context, input *elasticache.AuthorizeCacheSecurityGroupIngressInput) *ElastiCacheAuthorizeCacheSecurityGroupIngressFuture {
+func (a *stub) AuthorizeCacheSecurityGroupIngressAsync(ctx workflow.Context, input *elasticache.AuthorizeCacheSecurityGroupIngressInput) *AuthorizeCacheSecurityGroupIngressFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.AuthorizeCacheSecurityGroupIngress", input)
-	return &ElastiCacheAuthorizeCacheSecurityGroupIngressFuture{Future: future}
+	return &AuthorizeCacheSecurityGroupIngressFuture{Future: future}
 }
 
 func (a *stub) BatchApplyUpdateAction(ctx workflow.Context, input *elasticache.BatchApplyUpdateActionInput) (*elasticache.BatchApplyUpdateActionOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) BatchApplyUpdateAction(ctx workflow.Context, input *elasticache.B
 	return &output, err
 }
 
-func (a *stub) BatchApplyUpdateActionAsync(ctx workflow.Context, input *elasticache.BatchApplyUpdateActionInput) *ElastiCacheBatchApplyUpdateActionFuture {
+func (a *stub) BatchApplyUpdateActionAsync(ctx workflow.Context, input *elasticache.BatchApplyUpdateActionInput) *BatchApplyUpdateActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.BatchApplyUpdateAction", input)
-	return &ElastiCacheBatchApplyUpdateActionFuture{Future: future}
+	return &BatchApplyUpdateActionFuture{Future: future}
 }
 
 func (a *stub) BatchStopUpdateAction(ctx workflow.Context, input *elasticache.BatchStopUpdateActionInput) (*elasticache.BatchStopUpdateActionOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) BatchStopUpdateAction(ctx workflow.Context, input *elasticache.Ba
 	return &output, err
 }
 
-func (a *stub) BatchStopUpdateActionAsync(ctx workflow.Context, input *elasticache.BatchStopUpdateActionInput) *ElastiCacheBatchStopUpdateActionFuture {
+func (a *stub) BatchStopUpdateActionAsync(ctx workflow.Context, input *elasticache.BatchStopUpdateActionInput) *BatchStopUpdateActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.BatchStopUpdateAction", input)
-	return &ElastiCacheBatchStopUpdateActionFuture{Future: future}
+	return &BatchStopUpdateActionFuture{Future: future}
 }
 
 func (a *stub) CompleteMigration(ctx workflow.Context, input *elasticache.CompleteMigrationInput) (*elasticache.CompleteMigrationOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) CompleteMigration(ctx workflow.Context, input *elasticache.Comple
 	return &output, err
 }
 
-func (a *stub) CompleteMigrationAsync(ctx workflow.Context, input *elasticache.CompleteMigrationInput) *ElastiCacheCompleteMigrationFuture {
+func (a *stub) CompleteMigrationAsync(ctx workflow.Context, input *elasticache.CompleteMigrationInput) *CompleteMigrationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CompleteMigration", input)
-	return &ElastiCacheCompleteMigrationFuture{Future: future}
+	return &CompleteMigrationFuture{Future: future}
 }
 
 func (a *stub) CopySnapshot(ctx workflow.Context, input *elasticache.CopySnapshotInput) (*elasticache.CopySnapshotOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) CopySnapshot(ctx workflow.Context, input *elasticache.CopySnapsho
 	return &output, err
 }
 
-func (a *stub) CopySnapshotAsync(ctx workflow.Context, input *elasticache.CopySnapshotInput) *ElastiCacheCopySnapshotFuture {
+func (a *stub) CopySnapshotAsync(ctx workflow.Context, input *elasticache.CopySnapshotInput) *CopySnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CopySnapshot", input)
-	return &ElastiCacheCopySnapshotFuture{Future: future}
+	return &CopySnapshotFuture{Future: future}
 }
 
 func (a *stub) CreateCacheCluster(ctx workflow.Context, input *elasticache.CreateCacheClusterInput) (*elasticache.CreateCacheClusterOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) CreateCacheCluster(ctx workflow.Context, input *elasticache.Creat
 	return &output, err
 }
 
-func (a *stub) CreateCacheClusterAsync(ctx workflow.Context, input *elasticache.CreateCacheClusterInput) *ElastiCacheCreateCacheClusterFuture {
+func (a *stub) CreateCacheClusterAsync(ctx workflow.Context, input *elasticache.CreateCacheClusterInput) *CreateCacheClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateCacheCluster", input)
-	return &ElastiCacheCreateCacheClusterFuture{Future: future}
+	return &CreateCacheClusterFuture{Future: future}
 }
 
 func (a *stub) CreateCacheParameterGroup(ctx workflow.Context, input *elasticache.CreateCacheParameterGroupInput) (*elasticache.CreateCacheParameterGroupOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) CreateCacheParameterGroup(ctx workflow.Context, input *elasticach
 	return &output, err
 }
 
-func (a *stub) CreateCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheParameterGroupInput) *ElastiCacheCreateCacheParameterGroupFuture {
+func (a *stub) CreateCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheParameterGroupInput) *CreateCacheParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateCacheParameterGroup", input)
-	return &ElastiCacheCreateCacheParameterGroupFuture{Future: future}
+	return &CreateCacheParameterGroupFuture{Future: future}
 }
 
 func (a *stub) CreateCacheSecurityGroup(ctx workflow.Context, input *elasticache.CreateCacheSecurityGroupInput) (*elasticache.CreateCacheSecurityGroupOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) CreateCacheSecurityGroup(ctx workflow.Context, input *elasticache
 	return &output, err
 }
 
-func (a *stub) CreateCacheSecurityGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheSecurityGroupInput) *ElastiCacheCreateCacheSecurityGroupFuture {
+func (a *stub) CreateCacheSecurityGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheSecurityGroupInput) *CreateCacheSecurityGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateCacheSecurityGroup", input)
-	return &ElastiCacheCreateCacheSecurityGroupFuture{Future: future}
+	return &CreateCacheSecurityGroupFuture{Future: future}
 }
 
 func (a *stub) CreateCacheSubnetGroup(ctx workflow.Context, input *elasticache.CreateCacheSubnetGroupInput) (*elasticache.CreateCacheSubnetGroupOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) CreateCacheSubnetGroup(ctx workflow.Context, input *elasticache.C
 	return &output, err
 }
 
-func (a *stub) CreateCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheSubnetGroupInput) *ElastiCacheCreateCacheSubnetGroupFuture {
+func (a *stub) CreateCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheSubnetGroupInput) *CreateCacheSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateCacheSubnetGroup", input)
-	return &ElastiCacheCreateCacheSubnetGroupFuture{Future: future}
+	return &CreateCacheSubnetGroupFuture{Future: future}
 }
 
 func (a *stub) CreateGlobalReplicationGroup(ctx workflow.Context, input *elasticache.CreateGlobalReplicationGroupInput) (*elasticache.CreateGlobalReplicationGroupOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) CreateGlobalReplicationGroup(ctx workflow.Context, input *elastic
 	return &output, err
 }
 
-func (a *stub) CreateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.CreateGlobalReplicationGroupInput) *ElastiCacheCreateGlobalReplicationGroupFuture {
+func (a *stub) CreateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.CreateGlobalReplicationGroupInput) *CreateGlobalReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateGlobalReplicationGroup", input)
-	return &ElastiCacheCreateGlobalReplicationGroupFuture{Future: future}
+	return &CreateGlobalReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) CreateReplicationGroup(ctx workflow.Context, input *elasticache.CreateReplicationGroupInput) (*elasticache.CreateReplicationGroupOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) CreateReplicationGroup(ctx workflow.Context, input *elasticache.C
 	return &output, err
 }
 
-func (a *stub) CreateReplicationGroupAsync(ctx workflow.Context, input *elasticache.CreateReplicationGroupInput) *ElastiCacheCreateReplicationGroupFuture {
+func (a *stub) CreateReplicationGroupAsync(ctx workflow.Context, input *elasticache.CreateReplicationGroupInput) *CreateReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateReplicationGroup", input)
-	return &ElastiCacheCreateReplicationGroupFuture{Future: future}
+	return &CreateReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) CreateSnapshot(ctx workflow.Context, input *elasticache.CreateSnapshotInput) (*elasticache.CreateSnapshotOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) CreateSnapshot(ctx workflow.Context, input *elasticache.CreateSna
 	return &output, err
 }
 
-func (a *stub) CreateSnapshotAsync(ctx workflow.Context, input *elasticache.CreateSnapshotInput) *ElastiCacheCreateSnapshotFuture {
+func (a *stub) CreateSnapshotAsync(ctx workflow.Context, input *elasticache.CreateSnapshotInput) *CreateSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateSnapshot", input)
-	return &ElastiCacheCreateSnapshotFuture{Future: future}
+	return &CreateSnapshotFuture{Future: future}
 }
 
 func (a *stub) CreateUser(ctx workflow.Context, input *elasticache.CreateUserInput) (*elasticache.CreateUserOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) CreateUser(ctx workflow.Context, input *elasticache.CreateUserInp
 	return &output, err
 }
 
-func (a *stub) CreateUserAsync(ctx workflow.Context, input *elasticache.CreateUserInput) *ElastiCacheCreateUserFuture {
+func (a *stub) CreateUserAsync(ctx workflow.Context, input *elasticache.CreateUserInput) *CreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateUser", input)
-	return &ElastiCacheCreateUserFuture{Future: future}
+	return &CreateUserFuture{Future: future}
 }
 
 func (a *stub) CreateUserGroup(ctx workflow.Context, input *elasticache.CreateUserGroupInput) (*elasticache.CreateUserGroupOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) CreateUserGroup(ctx workflow.Context, input *elasticache.CreateUs
 	return &output, err
 }
 
-func (a *stub) CreateUserGroupAsync(ctx workflow.Context, input *elasticache.CreateUserGroupInput) *ElastiCacheCreateUserGroupFuture {
+func (a *stub) CreateUserGroupAsync(ctx workflow.Context, input *elasticache.CreateUserGroupInput) *CreateUserGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.CreateUserGroup", input)
-	return &ElastiCacheCreateUserGroupFuture{Future: future}
+	return &CreateUserGroupFuture{Future: future}
 }
 
 func (a *stub) DecreaseNodeGroupsInGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) (*elasticache.DecreaseNodeGroupsInGlobalReplicationGroupOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) DecreaseNodeGroupsInGlobalReplicationGroup(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) DecreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) *ElastiCacheDecreaseNodeGroupsInGlobalReplicationGroupFuture {
+func (a *stub) DecreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) *DecreaseNodeGroupsInGlobalReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DecreaseNodeGroupsInGlobalReplicationGroup", input)
-	return &ElastiCacheDecreaseNodeGroupsInGlobalReplicationGroupFuture{Future: future}
+	return &DecreaseNodeGroupsInGlobalReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) DecreaseReplicaCount(ctx workflow.Context, input *elasticache.DecreaseReplicaCountInput) (*elasticache.DecreaseReplicaCountOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) DecreaseReplicaCount(ctx workflow.Context, input *elasticache.Dec
 	return &output, err
 }
 
-func (a *stub) DecreaseReplicaCountAsync(ctx workflow.Context, input *elasticache.DecreaseReplicaCountInput) *ElastiCacheDecreaseReplicaCountFuture {
+func (a *stub) DecreaseReplicaCountAsync(ctx workflow.Context, input *elasticache.DecreaseReplicaCountInput) *DecreaseReplicaCountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DecreaseReplicaCount", input)
-	return &ElastiCacheDecreaseReplicaCountFuture{Future: future}
+	return &DecreaseReplicaCountFuture{Future: future}
 }
 
 func (a *stub) DeleteCacheCluster(ctx workflow.Context, input *elasticache.DeleteCacheClusterInput) (*elasticache.DeleteCacheClusterOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) DeleteCacheCluster(ctx workflow.Context, input *elasticache.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteCacheClusterAsync(ctx workflow.Context, input *elasticache.DeleteCacheClusterInput) *ElastiCacheDeleteCacheClusterFuture {
+func (a *stub) DeleteCacheClusterAsync(ctx workflow.Context, input *elasticache.DeleteCacheClusterInput) *DeleteCacheClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteCacheCluster", input)
-	return &ElastiCacheDeleteCacheClusterFuture{Future: future}
+	return &DeleteCacheClusterFuture{Future: future}
 }
 
 func (a *stub) DeleteCacheParameterGroup(ctx workflow.Context, input *elasticache.DeleteCacheParameterGroupInput) (*elasticache.DeleteCacheParameterGroupOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) DeleteCacheParameterGroup(ctx workflow.Context, input *elasticach
 	return &output, err
 }
 
-func (a *stub) DeleteCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheParameterGroupInput) *ElastiCacheDeleteCacheParameterGroupFuture {
+func (a *stub) DeleteCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheParameterGroupInput) *DeleteCacheParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteCacheParameterGroup", input)
-	return &ElastiCacheDeleteCacheParameterGroupFuture{Future: future}
+	return &DeleteCacheParameterGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteCacheSecurityGroup(ctx workflow.Context, input *elasticache.DeleteCacheSecurityGroupInput) (*elasticache.DeleteCacheSecurityGroupOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) DeleteCacheSecurityGroup(ctx workflow.Context, input *elasticache
 	return &output, err
 }
 
-func (a *stub) DeleteCacheSecurityGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheSecurityGroupInput) *ElastiCacheDeleteCacheSecurityGroupFuture {
+func (a *stub) DeleteCacheSecurityGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheSecurityGroupInput) *DeleteCacheSecurityGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteCacheSecurityGroup", input)
-	return &ElastiCacheDeleteCacheSecurityGroupFuture{Future: future}
+	return &DeleteCacheSecurityGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteCacheSubnetGroup(ctx workflow.Context, input *elasticache.DeleteCacheSubnetGroupInput) (*elasticache.DeleteCacheSubnetGroupOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) DeleteCacheSubnetGroup(ctx workflow.Context, input *elasticache.D
 	return &output, err
 }
 
-func (a *stub) DeleteCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheSubnetGroupInput) *ElastiCacheDeleteCacheSubnetGroupFuture {
+func (a *stub) DeleteCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheSubnetGroupInput) *DeleteCacheSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteCacheSubnetGroup", input)
-	return &ElastiCacheDeleteCacheSubnetGroupFuture{Future: future}
+	return &DeleteCacheSubnetGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DeleteGlobalReplicationGroupInput) (*elasticache.DeleteGlobalReplicationGroupOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) DeleteGlobalReplicationGroup(ctx workflow.Context, input *elastic
 	return &output, err
 }
 
-func (a *stub) DeleteGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DeleteGlobalReplicationGroupInput) *ElastiCacheDeleteGlobalReplicationGroupFuture {
+func (a *stub) DeleteGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DeleteGlobalReplicationGroupInput) *DeleteGlobalReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteGlobalReplicationGroup", input)
-	return &ElastiCacheDeleteGlobalReplicationGroupFuture{Future: future}
+	return &DeleteGlobalReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteReplicationGroup(ctx workflow.Context, input *elasticache.DeleteReplicationGroupInput) (*elasticache.DeleteReplicationGroupOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) DeleteReplicationGroup(ctx workflow.Context, input *elasticache.D
 	return &output, err
 }
 
-func (a *stub) DeleteReplicationGroupAsync(ctx workflow.Context, input *elasticache.DeleteReplicationGroupInput) *ElastiCacheDeleteReplicationGroupFuture {
+func (a *stub) DeleteReplicationGroupAsync(ctx workflow.Context, input *elasticache.DeleteReplicationGroupInput) *DeleteReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteReplicationGroup", input)
-	return &ElastiCacheDeleteReplicationGroupFuture{Future: future}
+	return &DeleteReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteSnapshot(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) (*elasticache.DeleteSnapshotOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) DeleteSnapshot(ctx workflow.Context, input *elasticache.DeleteSna
 	return &output, err
 }
 
-func (a *stub) DeleteSnapshotAsync(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) *ElastiCacheDeleteSnapshotFuture {
+func (a *stub) DeleteSnapshotAsync(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) *DeleteSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteSnapshot", input)
-	return &ElastiCacheDeleteSnapshotFuture{Future: future}
+	return &DeleteSnapshotFuture{Future: future}
 }
 
 func (a *stub) DeleteUser(ctx workflow.Context, input *elasticache.DeleteUserInput) (*elasticache.DeleteUserOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) DeleteUser(ctx workflow.Context, input *elasticache.DeleteUserInp
 	return &output, err
 }
 
-func (a *stub) DeleteUserAsync(ctx workflow.Context, input *elasticache.DeleteUserInput) *ElastiCacheDeleteUserFuture {
+func (a *stub) DeleteUserAsync(ctx workflow.Context, input *elasticache.DeleteUserInput) *DeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteUser", input)
-	return &ElastiCacheDeleteUserFuture{Future: future}
+	return &DeleteUserFuture{Future: future}
 }
 
 func (a *stub) DeleteUserGroup(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) (*elasticache.DeleteUserGroupOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) DeleteUserGroup(ctx workflow.Context, input *elasticache.DeleteUs
 	return &output, err
 }
 
-func (a *stub) DeleteUserGroupAsync(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) *ElastiCacheDeleteUserGroupFuture {
+func (a *stub) DeleteUserGroupAsync(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) *DeleteUserGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DeleteUserGroup", input)
-	return &ElastiCacheDeleteUserGroupFuture{Future: future}
+	return &DeleteUserGroupFuture{Future: future}
 }
 
 func (a *stub) DescribeCacheClusters(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) (*elasticache.DescribeCacheClustersOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) DescribeCacheClusters(ctx workflow.Context, input *elasticache.De
 	return &output, err
 }
 
-func (a *stub) DescribeCacheClustersAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *ElastiCacheDescribeCacheClustersFuture {
+func (a *stub) DescribeCacheClustersAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *DescribeCacheClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeCacheClusters", input)
-	return &ElastiCacheDescribeCacheClustersFuture{Future: future}
+	return &DescribeCacheClustersFuture{Future: future}
 }
 
 func (a *stub) DescribeCacheEngineVersions(ctx workflow.Context, input *elasticache.DescribeCacheEngineVersionsInput) (*elasticache.DescribeCacheEngineVersionsOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) DescribeCacheEngineVersions(ctx workflow.Context, input *elastica
 	return &output, err
 }
 
-func (a *stub) DescribeCacheEngineVersionsAsync(ctx workflow.Context, input *elasticache.DescribeCacheEngineVersionsInput) *ElastiCacheDescribeCacheEngineVersionsFuture {
+func (a *stub) DescribeCacheEngineVersionsAsync(ctx workflow.Context, input *elasticache.DescribeCacheEngineVersionsInput) *DescribeCacheEngineVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeCacheEngineVersions", input)
-	return &ElastiCacheDescribeCacheEngineVersionsFuture{Future: future}
+	return &DescribeCacheEngineVersionsFuture{Future: future}
 }
 
 func (a *stub) DescribeCacheParameterGroups(ctx workflow.Context, input *elasticache.DescribeCacheParameterGroupsInput) (*elasticache.DescribeCacheParameterGroupsOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) DescribeCacheParameterGroups(ctx workflow.Context, input *elastic
 	return &output, err
 }
 
-func (a *stub) DescribeCacheParameterGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheParameterGroupsInput) *ElastiCacheDescribeCacheParameterGroupsFuture {
+func (a *stub) DescribeCacheParameterGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheParameterGroupsInput) *DescribeCacheParameterGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeCacheParameterGroups", input)
-	return &ElastiCacheDescribeCacheParameterGroupsFuture{Future: future}
+	return &DescribeCacheParameterGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeCacheParameters(ctx workflow.Context, input *elasticache.DescribeCacheParametersInput) (*elasticache.DescribeCacheParametersOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) DescribeCacheParameters(ctx workflow.Context, input *elasticache.
 	return &output, err
 }
 
-func (a *stub) DescribeCacheParametersAsync(ctx workflow.Context, input *elasticache.DescribeCacheParametersInput) *ElastiCacheDescribeCacheParametersFuture {
+func (a *stub) DescribeCacheParametersAsync(ctx workflow.Context, input *elasticache.DescribeCacheParametersInput) *DescribeCacheParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeCacheParameters", input)
-	return &ElastiCacheDescribeCacheParametersFuture{Future: future}
+	return &DescribeCacheParametersFuture{Future: future}
 }
 
 func (a *stub) DescribeCacheSecurityGroups(ctx workflow.Context, input *elasticache.DescribeCacheSecurityGroupsInput) (*elasticache.DescribeCacheSecurityGroupsOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) DescribeCacheSecurityGroups(ctx workflow.Context, input *elastica
 	return &output, err
 }
 
-func (a *stub) DescribeCacheSecurityGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheSecurityGroupsInput) *ElastiCacheDescribeCacheSecurityGroupsFuture {
+func (a *stub) DescribeCacheSecurityGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheSecurityGroupsInput) *DescribeCacheSecurityGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeCacheSecurityGroups", input)
-	return &ElastiCacheDescribeCacheSecurityGroupsFuture{Future: future}
+	return &DescribeCacheSecurityGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeCacheSubnetGroups(ctx workflow.Context, input *elasticache.DescribeCacheSubnetGroupsInput) (*elasticache.DescribeCacheSubnetGroupsOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) DescribeCacheSubnetGroups(ctx workflow.Context, input *elasticach
 	return &output, err
 }
 
-func (a *stub) DescribeCacheSubnetGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheSubnetGroupsInput) *ElastiCacheDescribeCacheSubnetGroupsFuture {
+func (a *stub) DescribeCacheSubnetGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheSubnetGroupsInput) *DescribeCacheSubnetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeCacheSubnetGroups", input)
-	return &ElastiCacheDescribeCacheSubnetGroupsFuture{Future: future}
+	return &DescribeCacheSubnetGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeEngineDefaultParameters(ctx workflow.Context, input *elasticache.DescribeEngineDefaultParametersInput) (*elasticache.DescribeEngineDefaultParametersOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) DescribeEngineDefaultParameters(ctx workflow.Context, input *elas
 	return &output, err
 }
 
-func (a *stub) DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *elasticache.DescribeEngineDefaultParametersInput) *ElastiCacheDescribeEngineDefaultParametersFuture {
+func (a *stub) DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *elasticache.DescribeEngineDefaultParametersInput) *DescribeEngineDefaultParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeEngineDefaultParameters", input)
-	return &ElastiCacheDescribeEngineDefaultParametersFuture{Future: future}
+	return &DescribeEngineDefaultParametersFuture{Future: future}
 }
 
 func (a *stub) DescribeEvents(ctx workflow.Context, input *elasticache.DescribeEventsInput) (*elasticache.DescribeEventsOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) DescribeEvents(ctx workflow.Context, input *elasticache.DescribeE
 	return &output, err
 }
 
-func (a *stub) DescribeEventsAsync(ctx workflow.Context, input *elasticache.DescribeEventsInput) *ElastiCacheDescribeEventsFuture {
+func (a *stub) DescribeEventsAsync(ctx workflow.Context, input *elasticache.DescribeEventsInput) *DescribeEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeEvents", input)
-	return &ElastiCacheDescribeEventsFuture{Future: future}
+	return &DescribeEventsFuture{Future: future}
 }
 
 func (a *stub) DescribeGlobalReplicationGroups(ctx workflow.Context, input *elasticache.DescribeGlobalReplicationGroupsInput) (*elasticache.DescribeGlobalReplicationGroupsOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) DescribeGlobalReplicationGroups(ctx workflow.Context, input *elas
 	return &output, err
 }
 
-func (a *stub) DescribeGlobalReplicationGroupsAsync(ctx workflow.Context, input *elasticache.DescribeGlobalReplicationGroupsInput) *ElastiCacheDescribeGlobalReplicationGroupsFuture {
+func (a *stub) DescribeGlobalReplicationGroupsAsync(ctx workflow.Context, input *elasticache.DescribeGlobalReplicationGroupsInput) *DescribeGlobalReplicationGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeGlobalReplicationGroups", input)
-	return &ElastiCacheDescribeGlobalReplicationGroupsFuture{Future: future}
+	return &DescribeGlobalReplicationGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeReplicationGroups(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) (*elasticache.DescribeReplicationGroupsOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) DescribeReplicationGroups(ctx workflow.Context, input *elasticach
 	return &output, err
 }
 
-func (a *stub) DescribeReplicationGroupsAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) *ElastiCacheDescribeReplicationGroupsFuture {
+func (a *stub) DescribeReplicationGroupsAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) *DescribeReplicationGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeReplicationGroups", input)
-	return &ElastiCacheDescribeReplicationGroupsFuture{Future: future}
+	return &DescribeReplicationGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeReservedCacheNodes(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesInput) (*elasticache.DescribeReservedCacheNodesOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) DescribeReservedCacheNodes(ctx workflow.Context, input *elasticac
 	return &output, err
 }
 
-func (a *stub) DescribeReservedCacheNodesAsync(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesInput) *ElastiCacheDescribeReservedCacheNodesFuture {
+func (a *stub) DescribeReservedCacheNodesAsync(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesInput) *DescribeReservedCacheNodesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeReservedCacheNodes", input)
-	return &ElastiCacheDescribeReservedCacheNodesFuture{Future: future}
+	return &DescribeReservedCacheNodesFuture{Future: future}
 }
 
 func (a *stub) DescribeReservedCacheNodesOfferings(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesOfferingsInput) (*elasticache.DescribeReservedCacheNodesOfferingsOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) DescribeReservedCacheNodesOfferings(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) DescribeReservedCacheNodesOfferingsAsync(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesOfferingsInput) *ElastiCacheDescribeReservedCacheNodesOfferingsFuture {
+func (a *stub) DescribeReservedCacheNodesOfferingsAsync(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesOfferingsInput) *DescribeReservedCacheNodesOfferingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeReservedCacheNodesOfferings", input)
-	return &ElastiCacheDescribeReservedCacheNodesOfferingsFuture{Future: future}
+	return &DescribeReservedCacheNodesOfferingsFuture{Future: future}
 }
 
 func (a *stub) DescribeServiceUpdates(ctx workflow.Context, input *elasticache.DescribeServiceUpdatesInput) (*elasticache.DescribeServiceUpdatesOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) DescribeServiceUpdates(ctx workflow.Context, input *elasticache.D
 	return &output, err
 }
 
-func (a *stub) DescribeServiceUpdatesAsync(ctx workflow.Context, input *elasticache.DescribeServiceUpdatesInput) *ElastiCacheDescribeServiceUpdatesFuture {
+func (a *stub) DescribeServiceUpdatesAsync(ctx workflow.Context, input *elasticache.DescribeServiceUpdatesInput) *DescribeServiceUpdatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeServiceUpdates", input)
-	return &ElastiCacheDescribeServiceUpdatesFuture{Future: future}
+	return &DescribeServiceUpdatesFuture{Future: future}
 }
 
 func (a *stub) DescribeSnapshots(ctx workflow.Context, input *elasticache.DescribeSnapshotsInput) (*elasticache.DescribeSnapshotsOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) DescribeSnapshots(ctx workflow.Context, input *elasticache.Descri
 	return &output, err
 }
 
-func (a *stub) DescribeSnapshotsAsync(ctx workflow.Context, input *elasticache.DescribeSnapshotsInput) *ElastiCacheDescribeSnapshotsFuture {
+func (a *stub) DescribeSnapshotsAsync(ctx workflow.Context, input *elasticache.DescribeSnapshotsInput) *DescribeSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeSnapshots", input)
-	return &ElastiCacheDescribeSnapshotsFuture{Future: future}
+	return &DescribeSnapshotsFuture{Future: future}
 }
 
 func (a *stub) DescribeUpdateActions(ctx workflow.Context, input *elasticache.DescribeUpdateActionsInput) (*elasticache.DescribeUpdateActionsOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) DescribeUpdateActions(ctx workflow.Context, input *elasticache.De
 	return &output, err
 }
 
-func (a *stub) DescribeUpdateActionsAsync(ctx workflow.Context, input *elasticache.DescribeUpdateActionsInput) *ElastiCacheDescribeUpdateActionsFuture {
+func (a *stub) DescribeUpdateActionsAsync(ctx workflow.Context, input *elasticache.DescribeUpdateActionsInput) *DescribeUpdateActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeUpdateActions", input)
-	return &ElastiCacheDescribeUpdateActionsFuture{Future: future}
+	return &DescribeUpdateActionsFuture{Future: future}
 }
 
 func (a *stub) DescribeUserGroups(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) (*elasticache.DescribeUserGroupsOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) DescribeUserGroups(ctx workflow.Context, input *elasticache.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeUserGroupsAsync(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) *ElastiCacheDescribeUserGroupsFuture {
+func (a *stub) DescribeUserGroupsAsync(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) *DescribeUserGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeUserGroups", input)
-	return &ElastiCacheDescribeUserGroupsFuture{Future: future}
+	return &DescribeUserGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeUsers(ctx workflow.Context, input *elasticache.DescribeUsersInput) (*elasticache.DescribeUsersOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) DescribeUsers(ctx workflow.Context, input *elasticache.DescribeUs
 	return &output, err
 }
 
-func (a *stub) DescribeUsersAsync(ctx workflow.Context, input *elasticache.DescribeUsersInput) *ElastiCacheDescribeUsersFuture {
+func (a *stub) DescribeUsersAsync(ctx workflow.Context, input *elasticache.DescribeUsersInput) *DescribeUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DescribeUsers", input)
-	return &ElastiCacheDescribeUsersFuture{Future: future}
+	return &DescribeUsersFuture{Future: future}
 }
 
 func (a *stub) DisassociateGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) (*elasticache.DisassociateGlobalReplicationGroupOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) DisassociateGlobalReplicationGroup(ctx workflow.Context, input *e
 	return &output, err
 }
 
-func (a *stub) DisassociateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) *ElastiCacheDisassociateGlobalReplicationGroupFuture {
+func (a *stub) DisassociateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) *DisassociateGlobalReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.DisassociateGlobalReplicationGroup", input)
-	return &ElastiCacheDisassociateGlobalReplicationGroupFuture{Future: future}
+	return &DisassociateGlobalReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) FailoverGlobalReplicationGroup(ctx workflow.Context, input *elasticache.FailoverGlobalReplicationGroupInput) (*elasticache.FailoverGlobalReplicationGroupOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) FailoverGlobalReplicationGroup(ctx workflow.Context, input *elast
 	return &output, err
 }
 
-func (a *stub) FailoverGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.FailoverGlobalReplicationGroupInput) *ElastiCacheFailoverGlobalReplicationGroupFuture {
+func (a *stub) FailoverGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.FailoverGlobalReplicationGroupInput) *FailoverGlobalReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.FailoverGlobalReplicationGroup", input)
-	return &ElastiCacheFailoverGlobalReplicationGroupFuture{Future: future}
+	return &FailoverGlobalReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) IncreaseNodeGroupsInGlobalReplicationGroup(ctx workflow.Context, input *elasticache.IncreaseNodeGroupsInGlobalReplicationGroupInput) (*elasticache.IncreaseNodeGroupsInGlobalReplicationGroupOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) IncreaseNodeGroupsInGlobalReplicationGroup(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) IncreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.IncreaseNodeGroupsInGlobalReplicationGroupInput) *ElastiCacheIncreaseNodeGroupsInGlobalReplicationGroupFuture {
+func (a *stub) IncreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.IncreaseNodeGroupsInGlobalReplicationGroupInput) *IncreaseNodeGroupsInGlobalReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.IncreaseNodeGroupsInGlobalReplicationGroup", input)
-	return &ElastiCacheIncreaseNodeGroupsInGlobalReplicationGroupFuture{Future: future}
+	return &IncreaseNodeGroupsInGlobalReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) IncreaseReplicaCount(ctx workflow.Context, input *elasticache.IncreaseReplicaCountInput) (*elasticache.IncreaseReplicaCountOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) IncreaseReplicaCount(ctx workflow.Context, input *elasticache.Inc
 	return &output, err
 }
 
-func (a *stub) IncreaseReplicaCountAsync(ctx workflow.Context, input *elasticache.IncreaseReplicaCountInput) *ElastiCacheIncreaseReplicaCountFuture {
+func (a *stub) IncreaseReplicaCountAsync(ctx workflow.Context, input *elasticache.IncreaseReplicaCountInput) *IncreaseReplicaCountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.IncreaseReplicaCount", input)
-	return &ElastiCacheIncreaseReplicaCountFuture{Future: future}
+	return &IncreaseReplicaCountFuture{Future: future}
 }
 
 func (a *stub) ListAllowedNodeTypeModifications(ctx workflow.Context, input *elasticache.ListAllowedNodeTypeModificationsInput) (*elasticache.ListAllowedNodeTypeModificationsOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) ListAllowedNodeTypeModifications(ctx workflow.Context, input *ela
 	return &output, err
 }
 
-func (a *stub) ListAllowedNodeTypeModificationsAsync(ctx workflow.Context, input *elasticache.ListAllowedNodeTypeModificationsInput) *ElastiCacheListAllowedNodeTypeModificationsFuture {
+func (a *stub) ListAllowedNodeTypeModificationsAsync(ctx workflow.Context, input *elasticache.ListAllowedNodeTypeModificationsInput) *ListAllowedNodeTypeModificationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ListAllowedNodeTypeModifications", input)
-	return &ElastiCacheListAllowedNodeTypeModificationsFuture{Future: future}
+	return &ListAllowedNodeTypeModificationsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *elasticache.ListTagsForResourceInput) (*elasticache.TagListMessage, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *elasticache.List
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *elasticache.ListTagsForResourceInput) *ElastiCacheListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *elasticache.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ListTagsForResource", input)
-	return &ElastiCacheListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ModifyCacheCluster(ctx workflow.Context, input *elasticache.ModifyCacheClusterInput) (*elasticache.ModifyCacheClusterOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) ModifyCacheCluster(ctx workflow.Context, input *elasticache.Modif
 	return &output, err
 }
 
-func (a *stub) ModifyCacheClusterAsync(ctx workflow.Context, input *elasticache.ModifyCacheClusterInput) *ElastiCacheModifyCacheClusterFuture {
+func (a *stub) ModifyCacheClusterAsync(ctx workflow.Context, input *elasticache.ModifyCacheClusterInput) *ModifyCacheClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyCacheCluster", input)
-	return &ElastiCacheModifyCacheClusterFuture{Future: future}
+	return &ModifyCacheClusterFuture{Future: future}
 }
 
 func (a *stub) ModifyCacheParameterGroup(ctx workflow.Context, input *elasticache.ModifyCacheParameterGroupInput) (*elasticache.CacheParameterGroupNameMessage, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) ModifyCacheParameterGroup(ctx workflow.Context, input *elasticach
 	return &output, err
 }
 
-func (a *stub) ModifyCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.ModifyCacheParameterGroupInput) *ElastiCacheModifyCacheParameterGroupFuture {
+func (a *stub) ModifyCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.ModifyCacheParameterGroupInput) *ModifyCacheParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyCacheParameterGroup", input)
-	return &ElastiCacheModifyCacheParameterGroupFuture{Future: future}
+	return &ModifyCacheParameterGroupFuture{Future: future}
 }
 
 func (a *stub) ModifyCacheSubnetGroup(ctx workflow.Context, input *elasticache.ModifyCacheSubnetGroupInput) (*elasticache.ModifyCacheSubnetGroupOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) ModifyCacheSubnetGroup(ctx workflow.Context, input *elasticache.M
 	return &output, err
 }
 
-func (a *stub) ModifyCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.ModifyCacheSubnetGroupInput) *ElastiCacheModifyCacheSubnetGroupFuture {
+func (a *stub) ModifyCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.ModifyCacheSubnetGroupInput) *ModifyCacheSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyCacheSubnetGroup", input)
-	return &ElastiCacheModifyCacheSubnetGroupFuture{Future: future}
+	return &ModifyCacheSubnetGroupFuture{Future: future}
 }
 
 func (a *stub) ModifyGlobalReplicationGroup(ctx workflow.Context, input *elasticache.ModifyGlobalReplicationGroupInput) (*elasticache.ModifyGlobalReplicationGroupOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) ModifyGlobalReplicationGroup(ctx workflow.Context, input *elastic
 	return &output, err
 }
 
-func (a *stub) ModifyGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.ModifyGlobalReplicationGroupInput) *ElastiCacheModifyGlobalReplicationGroupFuture {
+func (a *stub) ModifyGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.ModifyGlobalReplicationGroupInput) *ModifyGlobalReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyGlobalReplicationGroup", input)
-	return &ElastiCacheModifyGlobalReplicationGroupFuture{Future: future}
+	return &ModifyGlobalReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) ModifyReplicationGroup(ctx workflow.Context, input *elasticache.ModifyReplicationGroupInput) (*elasticache.ModifyReplicationGroupOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) ModifyReplicationGroup(ctx workflow.Context, input *elasticache.M
 	return &output, err
 }
 
-func (a *stub) ModifyReplicationGroupAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupInput) *ElastiCacheModifyReplicationGroupFuture {
+func (a *stub) ModifyReplicationGroupAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupInput) *ModifyReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyReplicationGroup", input)
-	return &ElastiCacheModifyReplicationGroupFuture{Future: future}
+	return &ModifyReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) ModifyReplicationGroupShardConfiguration(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) (*elasticache.ModifyReplicationGroupShardConfigurationOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) ModifyReplicationGroupShardConfiguration(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *stub) ModifyReplicationGroupShardConfigurationAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) *ElastiCacheModifyReplicationGroupShardConfigurationFuture {
+func (a *stub) ModifyReplicationGroupShardConfigurationAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) *ModifyReplicationGroupShardConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyReplicationGroupShardConfiguration", input)
-	return &ElastiCacheModifyReplicationGroupShardConfigurationFuture{Future: future}
+	return &ModifyReplicationGroupShardConfigurationFuture{Future: future}
 }
 
 func (a *stub) ModifyUser(ctx workflow.Context, input *elasticache.ModifyUserInput) (*elasticache.ModifyUserOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) ModifyUser(ctx workflow.Context, input *elasticache.ModifyUserInp
 	return &output, err
 }
 
-func (a *stub) ModifyUserAsync(ctx workflow.Context, input *elasticache.ModifyUserInput) *ElastiCacheModifyUserFuture {
+func (a *stub) ModifyUserAsync(ctx workflow.Context, input *elasticache.ModifyUserInput) *ModifyUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyUser", input)
-	return &ElastiCacheModifyUserFuture{Future: future}
+	return &ModifyUserFuture{Future: future}
 }
 
 func (a *stub) ModifyUserGroup(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) (*elasticache.ModifyUserGroupOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) ModifyUserGroup(ctx workflow.Context, input *elasticache.ModifyUs
 	return &output, err
 }
 
-func (a *stub) ModifyUserGroupAsync(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) *ElastiCacheModifyUserGroupFuture {
+func (a *stub) ModifyUserGroupAsync(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) *ModifyUserGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ModifyUserGroup", input)
-	return &ElastiCacheModifyUserGroupFuture{Future: future}
+	return &ModifyUserGroupFuture{Future: future}
 }
 
 func (a *stub) PurchaseReservedCacheNodesOffering(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) (*elasticache.PurchaseReservedCacheNodesOfferingOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) PurchaseReservedCacheNodesOffering(ctx workflow.Context, input *e
 	return &output, err
 }
 
-func (a *stub) PurchaseReservedCacheNodesOfferingAsync(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) *ElastiCachePurchaseReservedCacheNodesOfferingFuture {
+func (a *stub) PurchaseReservedCacheNodesOfferingAsync(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) *PurchaseReservedCacheNodesOfferingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.PurchaseReservedCacheNodesOffering", input)
-	return &ElastiCachePurchaseReservedCacheNodesOfferingFuture{Future: future}
+	return &PurchaseReservedCacheNodesOfferingFuture{Future: future}
 }
 
 func (a *stub) RebalanceSlotsInGlobalReplicationGroup(ctx workflow.Context, input *elasticache.RebalanceSlotsInGlobalReplicationGroupInput) (*elasticache.RebalanceSlotsInGlobalReplicationGroupOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) RebalanceSlotsInGlobalReplicationGroup(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) RebalanceSlotsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.RebalanceSlotsInGlobalReplicationGroupInput) *ElastiCacheRebalanceSlotsInGlobalReplicationGroupFuture {
+func (a *stub) RebalanceSlotsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.RebalanceSlotsInGlobalReplicationGroupInput) *RebalanceSlotsInGlobalReplicationGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.RebalanceSlotsInGlobalReplicationGroup", input)
-	return &ElastiCacheRebalanceSlotsInGlobalReplicationGroupFuture{Future: future}
+	return &RebalanceSlotsInGlobalReplicationGroupFuture{Future: future}
 }
 
 func (a *stub) RebootCacheCluster(ctx workflow.Context, input *elasticache.RebootCacheClusterInput) (*elasticache.RebootCacheClusterOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) RebootCacheCluster(ctx workflow.Context, input *elasticache.Reboo
 	return &output, err
 }
 
-func (a *stub) RebootCacheClusterAsync(ctx workflow.Context, input *elasticache.RebootCacheClusterInput) *ElastiCacheRebootCacheClusterFuture {
+func (a *stub) RebootCacheClusterAsync(ctx workflow.Context, input *elasticache.RebootCacheClusterInput) *RebootCacheClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.RebootCacheCluster", input)
-	return &ElastiCacheRebootCacheClusterFuture{Future: future}
+	return &RebootCacheClusterFuture{Future: future}
 }
 
 func (a *stub) RemoveTagsFromResource(ctx workflow.Context, input *elasticache.RemoveTagsFromResourceInput) (*elasticache.TagListMessage, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) RemoveTagsFromResource(ctx workflow.Context, input *elasticache.R
 	return &output, err
 }
 
-func (a *stub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *elasticache.RemoveTagsFromResourceInput) *ElastiCacheRemoveTagsFromResourceFuture {
+func (a *stub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *elasticache.RemoveTagsFromResourceInput) *RemoveTagsFromResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.RemoveTagsFromResource", input)
-	return &ElastiCacheRemoveTagsFromResourceFuture{Future: future}
+	return &RemoveTagsFromResourceFuture{Future: future}
 }
 
 func (a *stub) ResetCacheParameterGroup(ctx workflow.Context, input *elasticache.ResetCacheParameterGroupInput) (*elasticache.CacheParameterGroupNameMessage, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) ResetCacheParameterGroup(ctx workflow.Context, input *elasticache
 	return &output, err
 }
 
-func (a *stub) ResetCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.ResetCacheParameterGroupInput) *ElastiCacheResetCacheParameterGroupFuture {
+func (a *stub) ResetCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.ResetCacheParameterGroupInput) *ResetCacheParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.ResetCacheParameterGroup", input)
-	return &ElastiCacheResetCacheParameterGroupFuture{Future: future}
+	return &ResetCacheParameterGroupFuture{Future: future}
 }
 
 func (a *stub) RevokeCacheSecurityGroupIngress(ctx workflow.Context, input *elasticache.RevokeCacheSecurityGroupIngressInput) (*elasticache.RevokeCacheSecurityGroupIngressOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) RevokeCacheSecurityGroupIngress(ctx workflow.Context, input *elas
 	return &output, err
 }
 
-func (a *stub) RevokeCacheSecurityGroupIngressAsync(ctx workflow.Context, input *elasticache.RevokeCacheSecurityGroupIngressInput) *ElastiCacheRevokeCacheSecurityGroupIngressFuture {
+func (a *stub) RevokeCacheSecurityGroupIngressAsync(ctx workflow.Context, input *elasticache.RevokeCacheSecurityGroupIngressInput) *RevokeCacheSecurityGroupIngressFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.RevokeCacheSecurityGroupIngress", input)
-	return &ElastiCacheRevokeCacheSecurityGroupIngressFuture{Future: future}
+	return &RevokeCacheSecurityGroupIngressFuture{Future: future}
 }
 
 func (a *stub) StartMigration(ctx workflow.Context, input *elasticache.StartMigrationInput) (*elasticache.StartMigrationOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) StartMigration(ctx workflow.Context, input *elasticache.StartMigr
 	return &output, err
 }
 
-func (a *stub) StartMigrationAsync(ctx workflow.Context, input *elasticache.StartMigrationInput) *ElastiCacheStartMigrationFuture {
+func (a *stub) StartMigrationAsync(ctx workflow.Context, input *elasticache.StartMigrationInput) *StartMigrationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.StartMigration", input)
-	return &ElastiCacheStartMigrationFuture{Future: future}
+	return &StartMigrationFuture{Future: future}
 }
 
 func (a *stub) TestFailover(ctx workflow.Context, input *elasticache.TestFailoverInput) (*elasticache.TestFailoverOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) TestFailover(ctx workflow.Context, input *elasticache.TestFailove
 	return &output, err
 }
 
-func (a *stub) TestFailoverAsync(ctx workflow.Context, input *elasticache.TestFailoverInput) *ElastiCacheTestFailoverFuture {
+func (a *stub) TestFailoverAsync(ctx workflow.Context, input *elasticache.TestFailoverInput) *TestFailoverFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticache.TestFailover", input)
-	return &ElastiCacheTestFailoverFuture{Future: future}
+	return &TestFailoverFuture{Future: future}
 }
 
 func (a *stub) WaitUntilCacheClusterAvailable(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error {

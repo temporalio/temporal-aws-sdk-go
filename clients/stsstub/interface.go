@@ -16,28 +16,28 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error)
-	AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *STSAssumeRoleFuture
+	AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *AssumeRoleFuture
 
 	AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error)
-	AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *STSAssumeRoleWithSAMLFuture
+	AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *AssumeRoleWithSAMLFuture
 
 	AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error)
-	AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *STSAssumeRoleWithWebIdentityFuture
+	AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *AssumeRoleWithWebIdentityFuture
 
 	DecodeAuthorizationMessage(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error)
-	DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *STSDecodeAuthorizationMessageFuture
+	DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *DecodeAuthorizationMessageFuture
 
 	GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error)
-	GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *STSGetAccessKeyInfoFuture
+	GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *GetAccessKeyInfoFuture
 
 	GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error)
-	GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *STSGetCallerIdentityFuture
+	GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *GetCallerIdentityFuture
 
 	GetFederationToken(ctx workflow.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error)
-	GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *STSGetFederationTokenFuture
+	GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *GetFederationTokenFuture
 
 	GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error)
-	GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *STSGetSessionTokenFuture
+	GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *GetSessionTokenFuture
 }
 
 func NewClient() Client {
