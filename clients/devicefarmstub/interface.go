@@ -16,235 +16,235 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateDevicePool(ctx workflow.Context, input *devicefarm.CreateDevicePoolInput) (*devicefarm.CreateDevicePoolOutput, error)
-	CreateDevicePoolAsync(ctx workflow.Context, input *devicefarm.CreateDevicePoolInput) *DeviceFarmCreateDevicePoolFuture
+	CreateDevicePoolAsync(ctx workflow.Context, input *devicefarm.CreateDevicePoolInput) *CreateDevicePoolFuture
 
 	CreateInstanceProfile(ctx workflow.Context, input *devicefarm.CreateInstanceProfileInput) (*devicefarm.CreateInstanceProfileOutput, error)
-	CreateInstanceProfileAsync(ctx workflow.Context, input *devicefarm.CreateInstanceProfileInput) *DeviceFarmCreateInstanceProfileFuture
+	CreateInstanceProfileAsync(ctx workflow.Context, input *devicefarm.CreateInstanceProfileInput) *CreateInstanceProfileFuture
 
 	CreateNetworkProfile(ctx workflow.Context, input *devicefarm.CreateNetworkProfileInput) (*devicefarm.CreateNetworkProfileOutput, error)
-	CreateNetworkProfileAsync(ctx workflow.Context, input *devicefarm.CreateNetworkProfileInput) *DeviceFarmCreateNetworkProfileFuture
+	CreateNetworkProfileAsync(ctx workflow.Context, input *devicefarm.CreateNetworkProfileInput) *CreateNetworkProfileFuture
 
 	CreateProject(ctx workflow.Context, input *devicefarm.CreateProjectInput) (*devicefarm.CreateProjectOutput, error)
-	CreateProjectAsync(ctx workflow.Context, input *devicefarm.CreateProjectInput) *DeviceFarmCreateProjectFuture
+	CreateProjectAsync(ctx workflow.Context, input *devicefarm.CreateProjectInput) *CreateProjectFuture
 
 	CreateRemoteAccessSession(ctx workflow.Context, input *devicefarm.CreateRemoteAccessSessionInput) (*devicefarm.CreateRemoteAccessSessionOutput, error)
-	CreateRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.CreateRemoteAccessSessionInput) *DeviceFarmCreateRemoteAccessSessionFuture
+	CreateRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.CreateRemoteAccessSessionInput) *CreateRemoteAccessSessionFuture
 
 	CreateTestGridProject(ctx workflow.Context, input *devicefarm.CreateTestGridProjectInput) (*devicefarm.CreateTestGridProjectOutput, error)
-	CreateTestGridProjectAsync(ctx workflow.Context, input *devicefarm.CreateTestGridProjectInput) *DeviceFarmCreateTestGridProjectFuture
+	CreateTestGridProjectAsync(ctx workflow.Context, input *devicefarm.CreateTestGridProjectInput) *CreateTestGridProjectFuture
 
 	CreateTestGridUrl(ctx workflow.Context, input *devicefarm.CreateTestGridUrlInput) (*devicefarm.CreateTestGridUrlOutput, error)
-	CreateTestGridUrlAsync(ctx workflow.Context, input *devicefarm.CreateTestGridUrlInput) *DeviceFarmCreateTestGridUrlFuture
+	CreateTestGridUrlAsync(ctx workflow.Context, input *devicefarm.CreateTestGridUrlInput) *CreateTestGridUrlFuture
 
 	CreateUpload(ctx workflow.Context, input *devicefarm.CreateUploadInput) (*devicefarm.CreateUploadOutput, error)
-	CreateUploadAsync(ctx workflow.Context, input *devicefarm.CreateUploadInput) *DeviceFarmCreateUploadFuture
+	CreateUploadAsync(ctx workflow.Context, input *devicefarm.CreateUploadInput) *CreateUploadFuture
 
 	CreateVPCEConfiguration(ctx workflow.Context, input *devicefarm.CreateVPCEConfigurationInput) (*devicefarm.CreateVPCEConfigurationOutput, error)
-	CreateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.CreateVPCEConfigurationInput) *DeviceFarmCreateVPCEConfigurationFuture
+	CreateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.CreateVPCEConfigurationInput) *CreateVPCEConfigurationFuture
 
 	DeleteDevicePool(ctx workflow.Context, input *devicefarm.DeleteDevicePoolInput) (*devicefarm.DeleteDevicePoolOutput, error)
-	DeleteDevicePoolAsync(ctx workflow.Context, input *devicefarm.DeleteDevicePoolInput) *DeviceFarmDeleteDevicePoolFuture
+	DeleteDevicePoolAsync(ctx workflow.Context, input *devicefarm.DeleteDevicePoolInput) *DeleteDevicePoolFuture
 
 	DeleteInstanceProfile(ctx workflow.Context, input *devicefarm.DeleteInstanceProfileInput) (*devicefarm.DeleteInstanceProfileOutput, error)
-	DeleteInstanceProfileAsync(ctx workflow.Context, input *devicefarm.DeleteInstanceProfileInput) *DeviceFarmDeleteInstanceProfileFuture
+	DeleteInstanceProfileAsync(ctx workflow.Context, input *devicefarm.DeleteInstanceProfileInput) *DeleteInstanceProfileFuture
 
 	DeleteNetworkProfile(ctx workflow.Context, input *devicefarm.DeleteNetworkProfileInput) (*devicefarm.DeleteNetworkProfileOutput, error)
-	DeleteNetworkProfileAsync(ctx workflow.Context, input *devicefarm.DeleteNetworkProfileInput) *DeviceFarmDeleteNetworkProfileFuture
+	DeleteNetworkProfileAsync(ctx workflow.Context, input *devicefarm.DeleteNetworkProfileInput) *DeleteNetworkProfileFuture
 
 	DeleteProject(ctx workflow.Context, input *devicefarm.DeleteProjectInput) (*devicefarm.DeleteProjectOutput, error)
-	DeleteProjectAsync(ctx workflow.Context, input *devicefarm.DeleteProjectInput) *DeviceFarmDeleteProjectFuture
+	DeleteProjectAsync(ctx workflow.Context, input *devicefarm.DeleteProjectInput) *DeleteProjectFuture
 
 	DeleteRemoteAccessSession(ctx workflow.Context, input *devicefarm.DeleteRemoteAccessSessionInput) (*devicefarm.DeleteRemoteAccessSessionOutput, error)
-	DeleteRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.DeleteRemoteAccessSessionInput) *DeviceFarmDeleteRemoteAccessSessionFuture
+	DeleteRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.DeleteRemoteAccessSessionInput) *DeleteRemoteAccessSessionFuture
 
 	DeleteRun(ctx workflow.Context, input *devicefarm.DeleteRunInput) (*devicefarm.DeleteRunOutput, error)
-	DeleteRunAsync(ctx workflow.Context, input *devicefarm.DeleteRunInput) *DeviceFarmDeleteRunFuture
+	DeleteRunAsync(ctx workflow.Context, input *devicefarm.DeleteRunInput) *DeleteRunFuture
 
 	DeleteTestGridProject(ctx workflow.Context, input *devicefarm.DeleteTestGridProjectInput) (*devicefarm.DeleteTestGridProjectOutput, error)
-	DeleteTestGridProjectAsync(ctx workflow.Context, input *devicefarm.DeleteTestGridProjectInput) *DeviceFarmDeleteTestGridProjectFuture
+	DeleteTestGridProjectAsync(ctx workflow.Context, input *devicefarm.DeleteTestGridProjectInput) *DeleteTestGridProjectFuture
 
 	DeleteUpload(ctx workflow.Context, input *devicefarm.DeleteUploadInput) (*devicefarm.DeleteUploadOutput, error)
-	DeleteUploadAsync(ctx workflow.Context, input *devicefarm.DeleteUploadInput) *DeviceFarmDeleteUploadFuture
+	DeleteUploadAsync(ctx workflow.Context, input *devicefarm.DeleteUploadInput) *DeleteUploadFuture
 
 	DeleteVPCEConfiguration(ctx workflow.Context, input *devicefarm.DeleteVPCEConfigurationInput) (*devicefarm.DeleteVPCEConfigurationOutput, error)
-	DeleteVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.DeleteVPCEConfigurationInput) *DeviceFarmDeleteVPCEConfigurationFuture
+	DeleteVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.DeleteVPCEConfigurationInput) *DeleteVPCEConfigurationFuture
 
 	GetAccountSettings(ctx workflow.Context, input *devicefarm.GetAccountSettingsInput) (*devicefarm.GetAccountSettingsOutput, error)
-	GetAccountSettingsAsync(ctx workflow.Context, input *devicefarm.GetAccountSettingsInput) *DeviceFarmGetAccountSettingsFuture
+	GetAccountSettingsAsync(ctx workflow.Context, input *devicefarm.GetAccountSettingsInput) *GetAccountSettingsFuture
 
 	GetDevice(ctx workflow.Context, input *devicefarm.GetDeviceInput) (*devicefarm.GetDeviceOutput, error)
-	GetDeviceAsync(ctx workflow.Context, input *devicefarm.GetDeviceInput) *DeviceFarmGetDeviceFuture
+	GetDeviceAsync(ctx workflow.Context, input *devicefarm.GetDeviceInput) *GetDeviceFuture
 
 	GetDeviceInstance(ctx workflow.Context, input *devicefarm.GetDeviceInstanceInput) (*devicefarm.GetDeviceInstanceOutput, error)
-	GetDeviceInstanceAsync(ctx workflow.Context, input *devicefarm.GetDeviceInstanceInput) *DeviceFarmGetDeviceInstanceFuture
+	GetDeviceInstanceAsync(ctx workflow.Context, input *devicefarm.GetDeviceInstanceInput) *GetDeviceInstanceFuture
 
 	GetDevicePool(ctx workflow.Context, input *devicefarm.GetDevicePoolInput) (*devicefarm.GetDevicePoolOutput, error)
-	GetDevicePoolAsync(ctx workflow.Context, input *devicefarm.GetDevicePoolInput) *DeviceFarmGetDevicePoolFuture
+	GetDevicePoolAsync(ctx workflow.Context, input *devicefarm.GetDevicePoolInput) *GetDevicePoolFuture
 
 	GetDevicePoolCompatibility(ctx workflow.Context, input *devicefarm.GetDevicePoolCompatibilityInput) (*devicefarm.GetDevicePoolCompatibilityOutput, error)
-	GetDevicePoolCompatibilityAsync(ctx workflow.Context, input *devicefarm.GetDevicePoolCompatibilityInput) *DeviceFarmGetDevicePoolCompatibilityFuture
+	GetDevicePoolCompatibilityAsync(ctx workflow.Context, input *devicefarm.GetDevicePoolCompatibilityInput) *GetDevicePoolCompatibilityFuture
 
 	GetInstanceProfile(ctx workflow.Context, input *devicefarm.GetInstanceProfileInput) (*devicefarm.GetInstanceProfileOutput, error)
-	GetInstanceProfileAsync(ctx workflow.Context, input *devicefarm.GetInstanceProfileInput) *DeviceFarmGetInstanceProfileFuture
+	GetInstanceProfileAsync(ctx workflow.Context, input *devicefarm.GetInstanceProfileInput) *GetInstanceProfileFuture
 
 	GetJob(ctx workflow.Context, input *devicefarm.GetJobInput) (*devicefarm.GetJobOutput, error)
-	GetJobAsync(ctx workflow.Context, input *devicefarm.GetJobInput) *DeviceFarmGetJobFuture
+	GetJobAsync(ctx workflow.Context, input *devicefarm.GetJobInput) *GetJobFuture
 
 	GetNetworkProfile(ctx workflow.Context, input *devicefarm.GetNetworkProfileInput) (*devicefarm.GetNetworkProfileOutput, error)
-	GetNetworkProfileAsync(ctx workflow.Context, input *devicefarm.GetNetworkProfileInput) *DeviceFarmGetNetworkProfileFuture
+	GetNetworkProfileAsync(ctx workflow.Context, input *devicefarm.GetNetworkProfileInput) *GetNetworkProfileFuture
 
 	GetOfferingStatus(ctx workflow.Context, input *devicefarm.GetOfferingStatusInput) (*devicefarm.GetOfferingStatusOutput, error)
-	GetOfferingStatusAsync(ctx workflow.Context, input *devicefarm.GetOfferingStatusInput) *DeviceFarmGetOfferingStatusFuture
+	GetOfferingStatusAsync(ctx workflow.Context, input *devicefarm.GetOfferingStatusInput) *GetOfferingStatusFuture
 
 	GetProject(ctx workflow.Context, input *devicefarm.GetProjectInput) (*devicefarm.GetProjectOutput, error)
-	GetProjectAsync(ctx workflow.Context, input *devicefarm.GetProjectInput) *DeviceFarmGetProjectFuture
+	GetProjectAsync(ctx workflow.Context, input *devicefarm.GetProjectInput) *GetProjectFuture
 
 	GetRemoteAccessSession(ctx workflow.Context, input *devicefarm.GetRemoteAccessSessionInput) (*devicefarm.GetRemoteAccessSessionOutput, error)
-	GetRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.GetRemoteAccessSessionInput) *DeviceFarmGetRemoteAccessSessionFuture
+	GetRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.GetRemoteAccessSessionInput) *GetRemoteAccessSessionFuture
 
 	GetRun(ctx workflow.Context, input *devicefarm.GetRunInput) (*devicefarm.GetRunOutput, error)
-	GetRunAsync(ctx workflow.Context, input *devicefarm.GetRunInput) *DeviceFarmGetRunFuture
+	GetRunAsync(ctx workflow.Context, input *devicefarm.GetRunInput) *GetRunFuture
 
 	GetSuite(ctx workflow.Context, input *devicefarm.GetSuiteInput) (*devicefarm.GetSuiteOutput, error)
-	GetSuiteAsync(ctx workflow.Context, input *devicefarm.GetSuiteInput) *DeviceFarmGetSuiteFuture
+	GetSuiteAsync(ctx workflow.Context, input *devicefarm.GetSuiteInput) *GetSuiteFuture
 
 	GetTest(ctx workflow.Context, input *devicefarm.GetTestInput) (*devicefarm.GetTestOutput, error)
-	GetTestAsync(ctx workflow.Context, input *devicefarm.GetTestInput) *DeviceFarmGetTestFuture
+	GetTestAsync(ctx workflow.Context, input *devicefarm.GetTestInput) *GetTestFuture
 
 	GetTestGridProject(ctx workflow.Context, input *devicefarm.GetTestGridProjectInput) (*devicefarm.GetTestGridProjectOutput, error)
-	GetTestGridProjectAsync(ctx workflow.Context, input *devicefarm.GetTestGridProjectInput) *DeviceFarmGetTestGridProjectFuture
+	GetTestGridProjectAsync(ctx workflow.Context, input *devicefarm.GetTestGridProjectInput) *GetTestGridProjectFuture
 
 	GetTestGridSession(ctx workflow.Context, input *devicefarm.GetTestGridSessionInput) (*devicefarm.GetTestGridSessionOutput, error)
-	GetTestGridSessionAsync(ctx workflow.Context, input *devicefarm.GetTestGridSessionInput) *DeviceFarmGetTestGridSessionFuture
+	GetTestGridSessionAsync(ctx workflow.Context, input *devicefarm.GetTestGridSessionInput) *GetTestGridSessionFuture
 
 	GetUpload(ctx workflow.Context, input *devicefarm.GetUploadInput) (*devicefarm.GetUploadOutput, error)
-	GetUploadAsync(ctx workflow.Context, input *devicefarm.GetUploadInput) *DeviceFarmGetUploadFuture
+	GetUploadAsync(ctx workflow.Context, input *devicefarm.GetUploadInput) *GetUploadFuture
 
 	GetVPCEConfiguration(ctx workflow.Context, input *devicefarm.GetVPCEConfigurationInput) (*devicefarm.GetVPCEConfigurationOutput, error)
-	GetVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.GetVPCEConfigurationInput) *DeviceFarmGetVPCEConfigurationFuture
+	GetVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.GetVPCEConfigurationInput) *GetVPCEConfigurationFuture
 
 	InstallToRemoteAccessSession(ctx workflow.Context, input *devicefarm.InstallToRemoteAccessSessionInput) (*devicefarm.InstallToRemoteAccessSessionOutput, error)
-	InstallToRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.InstallToRemoteAccessSessionInput) *DeviceFarmInstallToRemoteAccessSessionFuture
+	InstallToRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.InstallToRemoteAccessSessionInput) *InstallToRemoteAccessSessionFuture
 
 	ListArtifacts(ctx workflow.Context, input *devicefarm.ListArtifactsInput) (*devicefarm.ListArtifactsOutput, error)
-	ListArtifactsAsync(ctx workflow.Context, input *devicefarm.ListArtifactsInput) *DeviceFarmListArtifactsFuture
+	ListArtifactsAsync(ctx workflow.Context, input *devicefarm.ListArtifactsInput) *ListArtifactsFuture
 
 	ListDeviceInstances(ctx workflow.Context, input *devicefarm.ListDeviceInstancesInput) (*devicefarm.ListDeviceInstancesOutput, error)
-	ListDeviceInstancesAsync(ctx workflow.Context, input *devicefarm.ListDeviceInstancesInput) *DeviceFarmListDeviceInstancesFuture
+	ListDeviceInstancesAsync(ctx workflow.Context, input *devicefarm.ListDeviceInstancesInput) *ListDeviceInstancesFuture
 
 	ListDevicePools(ctx workflow.Context, input *devicefarm.ListDevicePoolsInput) (*devicefarm.ListDevicePoolsOutput, error)
-	ListDevicePoolsAsync(ctx workflow.Context, input *devicefarm.ListDevicePoolsInput) *DeviceFarmListDevicePoolsFuture
+	ListDevicePoolsAsync(ctx workflow.Context, input *devicefarm.ListDevicePoolsInput) *ListDevicePoolsFuture
 
 	ListDevices(ctx workflow.Context, input *devicefarm.ListDevicesInput) (*devicefarm.ListDevicesOutput, error)
-	ListDevicesAsync(ctx workflow.Context, input *devicefarm.ListDevicesInput) *DeviceFarmListDevicesFuture
+	ListDevicesAsync(ctx workflow.Context, input *devicefarm.ListDevicesInput) *ListDevicesFuture
 
 	ListInstanceProfiles(ctx workflow.Context, input *devicefarm.ListInstanceProfilesInput) (*devicefarm.ListInstanceProfilesOutput, error)
-	ListInstanceProfilesAsync(ctx workflow.Context, input *devicefarm.ListInstanceProfilesInput) *DeviceFarmListInstanceProfilesFuture
+	ListInstanceProfilesAsync(ctx workflow.Context, input *devicefarm.ListInstanceProfilesInput) *ListInstanceProfilesFuture
 
 	ListJobs(ctx workflow.Context, input *devicefarm.ListJobsInput) (*devicefarm.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *devicefarm.ListJobsInput) *DeviceFarmListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *devicefarm.ListJobsInput) *ListJobsFuture
 
 	ListNetworkProfiles(ctx workflow.Context, input *devicefarm.ListNetworkProfilesInput) (*devicefarm.ListNetworkProfilesOutput, error)
-	ListNetworkProfilesAsync(ctx workflow.Context, input *devicefarm.ListNetworkProfilesInput) *DeviceFarmListNetworkProfilesFuture
+	ListNetworkProfilesAsync(ctx workflow.Context, input *devicefarm.ListNetworkProfilesInput) *ListNetworkProfilesFuture
 
 	ListOfferingPromotions(ctx workflow.Context, input *devicefarm.ListOfferingPromotionsInput) (*devicefarm.ListOfferingPromotionsOutput, error)
-	ListOfferingPromotionsAsync(ctx workflow.Context, input *devicefarm.ListOfferingPromotionsInput) *DeviceFarmListOfferingPromotionsFuture
+	ListOfferingPromotionsAsync(ctx workflow.Context, input *devicefarm.ListOfferingPromotionsInput) *ListOfferingPromotionsFuture
 
 	ListOfferingTransactions(ctx workflow.Context, input *devicefarm.ListOfferingTransactionsInput) (*devicefarm.ListOfferingTransactionsOutput, error)
-	ListOfferingTransactionsAsync(ctx workflow.Context, input *devicefarm.ListOfferingTransactionsInput) *DeviceFarmListOfferingTransactionsFuture
+	ListOfferingTransactionsAsync(ctx workflow.Context, input *devicefarm.ListOfferingTransactionsInput) *ListOfferingTransactionsFuture
 
 	ListOfferings(ctx workflow.Context, input *devicefarm.ListOfferingsInput) (*devicefarm.ListOfferingsOutput, error)
-	ListOfferingsAsync(ctx workflow.Context, input *devicefarm.ListOfferingsInput) *DeviceFarmListOfferingsFuture
+	ListOfferingsAsync(ctx workflow.Context, input *devicefarm.ListOfferingsInput) *ListOfferingsFuture
 
 	ListProjects(ctx workflow.Context, input *devicefarm.ListProjectsInput) (*devicefarm.ListProjectsOutput, error)
-	ListProjectsAsync(ctx workflow.Context, input *devicefarm.ListProjectsInput) *DeviceFarmListProjectsFuture
+	ListProjectsAsync(ctx workflow.Context, input *devicefarm.ListProjectsInput) *ListProjectsFuture
 
 	ListRemoteAccessSessions(ctx workflow.Context, input *devicefarm.ListRemoteAccessSessionsInput) (*devicefarm.ListRemoteAccessSessionsOutput, error)
-	ListRemoteAccessSessionsAsync(ctx workflow.Context, input *devicefarm.ListRemoteAccessSessionsInput) *DeviceFarmListRemoteAccessSessionsFuture
+	ListRemoteAccessSessionsAsync(ctx workflow.Context, input *devicefarm.ListRemoteAccessSessionsInput) *ListRemoteAccessSessionsFuture
 
 	ListRuns(ctx workflow.Context, input *devicefarm.ListRunsInput) (*devicefarm.ListRunsOutput, error)
-	ListRunsAsync(ctx workflow.Context, input *devicefarm.ListRunsInput) *DeviceFarmListRunsFuture
+	ListRunsAsync(ctx workflow.Context, input *devicefarm.ListRunsInput) *ListRunsFuture
 
 	ListSamples(ctx workflow.Context, input *devicefarm.ListSamplesInput) (*devicefarm.ListSamplesOutput, error)
-	ListSamplesAsync(ctx workflow.Context, input *devicefarm.ListSamplesInput) *DeviceFarmListSamplesFuture
+	ListSamplesAsync(ctx workflow.Context, input *devicefarm.ListSamplesInput) *ListSamplesFuture
 
 	ListSuites(ctx workflow.Context, input *devicefarm.ListSuitesInput) (*devicefarm.ListSuitesOutput, error)
-	ListSuitesAsync(ctx workflow.Context, input *devicefarm.ListSuitesInput) *DeviceFarmListSuitesFuture
+	ListSuitesAsync(ctx workflow.Context, input *devicefarm.ListSuitesInput) *ListSuitesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *devicefarm.ListTagsForResourceInput) (*devicefarm.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *devicefarm.ListTagsForResourceInput) *DeviceFarmListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *devicefarm.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListTestGridProjects(ctx workflow.Context, input *devicefarm.ListTestGridProjectsInput) (*devicefarm.ListTestGridProjectsOutput, error)
-	ListTestGridProjectsAsync(ctx workflow.Context, input *devicefarm.ListTestGridProjectsInput) *DeviceFarmListTestGridProjectsFuture
+	ListTestGridProjectsAsync(ctx workflow.Context, input *devicefarm.ListTestGridProjectsInput) *ListTestGridProjectsFuture
 
 	ListTestGridSessionActions(ctx workflow.Context, input *devicefarm.ListTestGridSessionActionsInput) (*devicefarm.ListTestGridSessionActionsOutput, error)
-	ListTestGridSessionActionsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionActionsInput) *DeviceFarmListTestGridSessionActionsFuture
+	ListTestGridSessionActionsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionActionsInput) *ListTestGridSessionActionsFuture
 
 	ListTestGridSessionArtifacts(ctx workflow.Context, input *devicefarm.ListTestGridSessionArtifactsInput) (*devicefarm.ListTestGridSessionArtifactsOutput, error)
-	ListTestGridSessionArtifactsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionArtifactsInput) *DeviceFarmListTestGridSessionArtifactsFuture
+	ListTestGridSessionArtifactsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionArtifactsInput) *ListTestGridSessionArtifactsFuture
 
 	ListTestGridSessions(ctx workflow.Context, input *devicefarm.ListTestGridSessionsInput) (*devicefarm.ListTestGridSessionsOutput, error)
-	ListTestGridSessionsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionsInput) *DeviceFarmListTestGridSessionsFuture
+	ListTestGridSessionsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionsInput) *ListTestGridSessionsFuture
 
 	ListTests(ctx workflow.Context, input *devicefarm.ListTestsInput) (*devicefarm.ListTestsOutput, error)
-	ListTestsAsync(ctx workflow.Context, input *devicefarm.ListTestsInput) *DeviceFarmListTestsFuture
+	ListTestsAsync(ctx workflow.Context, input *devicefarm.ListTestsInput) *ListTestsFuture
 
 	ListUniqueProblems(ctx workflow.Context, input *devicefarm.ListUniqueProblemsInput) (*devicefarm.ListUniqueProblemsOutput, error)
-	ListUniqueProblemsAsync(ctx workflow.Context, input *devicefarm.ListUniqueProblemsInput) *DeviceFarmListUniqueProblemsFuture
+	ListUniqueProblemsAsync(ctx workflow.Context, input *devicefarm.ListUniqueProblemsInput) *ListUniqueProblemsFuture
 
 	ListUploads(ctx workflow.Context, input *devicefarm.ListUploadsInput) (*devicefarm.ListUploadsOutput, error)
-	ListUploadsAsync(ctx workflow.Context, input *devicefarm.ListUploadsInput) *DeviceFarmListUploadsFuture
+	ListUploadsAsync(ctx workflow.Context, input *devicefarm.ListUploadsInput) *ListUploadsFuture
 
 	ListVPCEConfigurations(ctx workflow.Context, input *devicefarm.ListVPCEConfigurationsInput) (*devicefarm.ListVPCEConfigurationsOutput, error)
-	ListVPCEConfigurationsAsync(ctx workflow.Context, input *devicefarm.ListVPCEConfigurationsInput) *DeviceFarmListVPCEConfigurationsFuture
+	ListVPCEConfigurationsAsync(ctx workflow.Context, input *devicefarm.ListVPCEConfigurationsInput) *ListVPCEConfigurationsFuture
 
 	PurchaseOffering(ctx workflow.Context, input *devicefarm.PurchaseOfferingInput) (*devicefarm.PurchaseOfferingOutput, error)
-	PurchaseOfferingAsync(ctx workflow.Context, input *devicefarm.PurchaseOfferingInput) *DeviceFarmPurchaseOfferingFuture
+	PurchaseOfferingAsync(ctx workflow.Context, input *devicefarm.PurchaseOfferingInput) *PurchaseOfferingFuture
 
 	RenewOffering(ctx workflow.Context, input *devicefarm.RenewOfferingInput) (*devicefarm.RenewOfferingOutput, error)
-	RenewOfferingAsync(ctx workflow.Context, input *devicefarm.RenewOfferingInput) *DeviceFarmRenewOfferingFuture
+	RenewOfferingAsync(ctx workflow.Context, input *devicefarm.RenewOfferingInput) *RenewOfferingFuture
 
 	ScheduleRun(ctx workflow.Context, input *devicefarm.ScheduleRunInput) (*devicefarm.ScheduleRunOutput, error)
-	ScheduleRunAsync(ctx workflow.Context, input *devicefarm.ScheduleRunInput) *DeviceFarmScheduleRunFuture
+	ScheduleRunAsync(ctx workflow.Context, input *devicefarm.ScheduleRunInput) *ScheduleRunFuture
 
 	StopJob(ctx workflow.Context, input *devicefarm.StopJobInput) (*devicefarm.StopJobOutput, error)
-	StopJobAsync(ctx workflow.Context, input *devicefarm.StopJobInput) *DeviceFarmStopJobFuture
+	StopJobAsync(ctx workflow.Context, input *devicefarm.StopJobInput) *StopJobFuture
 
 	StopRemoteAccessSession(ctx workflow.Context, input *devicefarm.StopRemoteAccessSessionInput) (*devicefarm.StopRemoteAccessSessionOutput, error)
-	StopRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.StopRemoteAccessSessionInput) *DeviceFarmStopRemoteAccessSessionFuture
+	StopRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.StopRemoteAccessSessionInput) *StopRemoteAccessSessionFuture
 
 	StopRun(ctx workflow.Context, input *devicefarm.StopRunInput) (*devicefarm.StopRunOutput, error)
-	StopRunAsync(ctx workflow.Context, input *devicefarm.StopRunInput) *DeviceFarmStopRunFuture
+	StopRunAsync(ctx workflow.Context, input *devicefarm.StopRunInput) *StopRunFuture
 
 	TagResource(ctx workflow.Context, input *devicefarm.TagResourceInput) (*devicefarm.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *devicefarm.TagResourceInput) *DeviceFarmTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *devicefarm.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *devicefarm.UntagResourceInput) (*devicefarm.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *devicefarm.UntagResourceInput) *DeviceFarmUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *devicefarm.UntagResourceInput) *UntagResourceFuture
 
 	UpdateDeviceInstance(ctx workflow.Context, input *devicefarm.UpdateDeviceInstanceInput) (*devicefarm.UpdateDeviceInstanceOutput, error)
-	UpdateDeviceInstanceAsync(ctx workflow.Context, input *devicefarm.UpdateDeviceInstanceInput) *DeviceFarmUpdateDeviceInstanceFuture
+	UpdateDeviceInstanceAsync(ctx workflow.Context, input *devicefarm.UpdateDeviceInstanceInput) *UpdateDeviceInstanceFuture
 
 	UpdateDevicePool(ctx workflow.Context, input *devicefarm.UpdateDevicePoolInput) (*devicefarm.UpdateDevicePoolOutput, error)
-	UpdateDevicePoolAsync(ctx workflow.Context, input *devicefarm.UpdateDevicePoolInput) *DeviceFarmUpdateDevicePoolFuture
+	UpdateDevicePoolAsync(ctx workflow.Context, input *devicefarm.UpdateDevicePoolInput) *UpdateDevicePoolFuture
 
 	UpdateInstanceProfile(ctx workflow.Context, input *devicefarm.UpdateInstanceProfileInput) (*devicefarm.UpdateInstanceProfileOutput, error)
-	UpdateInstanceProfileAsync(ctx workflow.Context, input *devicefarm.UpdateInstanceProfileInput) *DeviceFarmUpdateInstanceProfileFuture
+	UpdateInstanceProfileAsync(ctx workflow.Context, input *devicefarm.UpdateInstanceProfileInput) *UpdateInstanceProfileFuture
 
 	UpdateNetworkProfile(ctx workflow.Context, input *devicefarm.UpdateNetworkProfileInput) (*devicefarm.UpdateNetworkProfileOutput, error)
-	UpdateNetworkProfileAsync(ctx workflow.Context, input *devicefarm.UpdateNetworkProfileInput) *DeviceFarmUpdateNetworkProfileFuture
+	UpdateNetworkProfileAsync(ctx workflow.Context, input *devicefarm.UpdateNetworkProfileInput) *UpdateNetworkProfileFuture
 
 	UpdateProject(ctx workflow.Context, input *devicefarm.UpdateProjectInput) (*devicefarm.UpdateProjectOutput, error)
-	UpdateProjectAsync(ctx workflow.Context, input *devicefarm.UpdateProjectInput) *DeviceFarmUpdateProjectFuture
+	UpdateProjectAsync(ctx workflow.Context, input *devicefarm.UpdateProjectInput) *UpdateProjectFuture
 
 	UpdateTestGridProject(ctx workflow.Context, input *devicefarm.UpdateTestGridProjectInput) (*devicefarm.UpdateTestGridProjectOutput, error)
-	UpdateTestGridProjectAsync(ctx workflow.Context, input *devicefarm.UpdateTestGridProjectInput) *DeviceFarmUpdateTestGridProjectFuture
+	UpdateTestGridProjectAsync(ctx workflow.Context, input *devicefarm.UpdateTestGridProjectInput) *UpdateTestGridProjectFuture
 
 	UpdateUpload(ctx workflow.Context, input *devicefarm.UpdateUploadInput) (*devicefarm.UpdateUploadOutput, error)
-	UpdateUploadAsync(ctx workflow.Context, input *devicefarm.UpdateUploadInput) *DeviceFarmUpdateUploadFuture
+	UpdateUploadAsync(ctx workflow.Context, input *devicefarm.UpdateUploadInput) *UpdateUploadFuture
 
 	UpdateVPCEConfiguration(ctx workflow.Context, input *devicefarm.UpdateVPCEConfigurationInput) (*devicefarm.UpdateVPCEConfigurationOutput, error)
-	UpdateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.UpdateVPCEConfigurationInput) *DeviceFarmUpdateVPCEConfigurationFuture
+	UpdateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.UpdateVPCEConfigurationInput) *UpdateVPCEConfigurationFuture
 }
 
 func NewClient() Client {

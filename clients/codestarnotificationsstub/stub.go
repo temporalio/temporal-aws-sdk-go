@@ -16,144 +16,144 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CodeStarNotificationsCreateNotificationRuleFuture struct {
+type CreateNotificationRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsCreateNotificationRuleFuture) Get(ctx workflow.Context) (*codestarnotifications.CreateNotificationRuleOutput, error) {
+func (r *CreateNotificationRuleFuture) Get(ctx workflow.Context) (*codestarnotifications.CreateNotificationRuleOutput, error) {
 	var output codestarnotifications.CreateNotificationRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsDeleteNotificationRuleFuture struct {
+type DeleteNotificationRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsDeleteNotificationRuleFuture) Get(ctx workflow.Context) (*codestarnotifications.DeleteNotificationRuleOutput, error) {
+func (r *DeleteNotificationRuleFuture) Get(ctx workflow.Context) (*codestarnotifications.DeleteNotificationRuleOutput, error) {
 	var output codestarnotifications.DeleteNotificationRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsDeleteTargetFuture struct {
+type DeleteTargetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsDeleteTargetFuture) Get(ctx workflow.Context) (*codestarnotifications.DeleteTargetOutput, error) {
+func (r *DeleteTargetFuture) Get(ctx workflow.Context) (*codestarnotifications.DeleteTargetOutput, error) {
 	var output codestarnotifications.DeleteTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsDescribeNotificationRuleFuture struct {
+type DescribeNotificationRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsDescribeNotificationRuleFuture) Get(ctx workflow.Context) (*codestarnotifications.DescribeNotificationRuleOutput, error) {
+func (r *DescribeNotificationRuleFuture) Get(ctx workflow.Context) (*codestarnotifications.DescribeNotificationRuleOutput, error) {
 	var output codestarnotifications.DescribeNotificationRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsListEventTypesFuture struct {
+type ListEventTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsListEventTypesFuture) Get(ctx workflow.Context) (*codestarnotifications.ListEventTypesOutput, error) {
+func (r *ListEventTypesFuture) Get(ctx workflow.Context) (*codestarnotifications.ListEventTypesOutput, error) {
 	var output codestarnotifications.ListEventTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsListNotificationRulesFuture struct {
+type ListNotificationRulesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsListNotificationRulesFuture) Get(ctx workflow.Context) (*codestarnotifications.ListNotificationRulesOutput, error) {
+func (r *ListNotificationRulesFuture) Get(ctx workflow.Context) (*codestarnotifications.ListNotificationRulesOutput, error) {
 	var output codestarnotifications.ListNotificationRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsListTagsForResourceFuture) Get(ctx workflow.Context) (*codestarnotifications.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*codestarnotifications.ListTagsForResourceOutput, error) {
 	var output codestarnotifications.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsListTargetsFuture struct {
+type ListTargetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsListTargetsFuture) Get(ctx workflow.Context) (*codestarnotifications.ListTargetsOutput, error) {
+func (r *ListTargetsFuture) Get(ctx workflow.Context) (*codestarnotifications.ListTargetsOutput, error) {
 	var output codestarnotifications.ListTargetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsSubscribeFuture struct {
+type SubscribeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsSubscribeFuture) Get(ctx workflow.Context) (*codestarnotifications.SubscribeOutput, error) {
+func (r *SubscribeFuture) Get(ctx workflow.Context) (*codestarnotifications.SubscribeOutput, error) {
 	var output codestarnotifications.SubscribeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsTagResourceFuture) Get(ctx workflow.Context) (*codestarnotifications.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*codestarnotifications.TagResourceOutput, error) {
 	var output codestarnotifications.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsUnsubscribeFuture struct {
+type UnsubscribeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsUnsubscribeFuture) Get(ctx workflow.Context) (*codestarnotifications.UnsubscribeOutput, error) {
+func (r *UnsubscribeFuture) Get(ctx workflow.Context) (*codestarnotifications.UnsubscribeOutput, error) {
 	var output codestarnotifications.UnsubscribeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsUntagResourceFuture) Get(ctx workflow.Context) (*codestarnotifications.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*codestarnotifications.UntagResourceOutput, error) {
 	var output codestarnotifications.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarNotificationsUpdateNotificationRuleFuture struct {
+type UpdateNotificationRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarNotificationsUpdateNotificationRuleFuture) Get(ctx workflow.Context) (*codestarnotifications.UpdateNotificationRuleOutput, error) {
+func (r *UpdateNotificationRuleFuture) Get(ctx workflow.Context) (*codestarnotifications.UpdateNotificationRuleOutput, error) {
 	var output codestarnotifications.UpdateNotificationRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -165,9 +165,9 @@ func (a *stub) CreateNotificationRule(ctx workflow.Context, input *codestarnotif
 	return &output, err
 }
 
-func (a *stub) CreateNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.CreateNotificationRuleInput) *CodeStarNotificationsCreateNotificationRuleFuture {
+func (a *stub) CreateNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.CreateNotificationRuleInput) *CreateNotificationRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.CreateNotificationRule", input)
-	return &CodeStarNotificationsCreateNotificationRuleFuture{Future: future}
+	return &CreateNotificationRuleFuture{Future: future}
 }
 
 func (a *stub) DeleteNotificationRule(ctx workflow.Context, input *codestarnotifications.DeleteNotificationRuleInput) (*codestarnotifications.DeleteNotificationRuleOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) DeleteNotificationRule(ctx workflow.Context, input *codestarnotif
 	return &output, err
 }
 
-func (a *stub) DeleteNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.DeleteNotificationRuleInput) *CodeStarNotificationsDeleteNotificationRuleFuture {
+func (a *stub) DeleteNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.DeleteNotificationRuleInput) *DeleteNotificationRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.DeleteNotificationRule", input)
-	return &CodeStarNotificationsDeleteNotificationRuleFuture{Future: future}
+	return &DeleteNotificationRuleFuture{Future: future}
 }
 
 func (a *stub) DeleteTarget(ctx workflow.Context, input *codestarnotifications.DeleteTargetInput) (*codestarnotifications.DeleteTargetOutput, error) {
@@ -187,9 +187,9 @@ func (a *stub) DeleteTarget(ctx workflow.Context, input *codestarnotifications.D
 	return &output, err
 }
 
-func (a *stub) DeleteTargetAsync(ctx workflow.Context, input *codestarnotifications.DeleteTargetInput) *CodeStarNotificationsDeleteTargetFuture {
+func (a *stub) DeleteTargetAsync(ctx workflow.Context, input *codestarnotifications.DeleteTargetInput) *DeleteTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.DeleteTarget", input)
-	return &CodeStarNotificationsDeleteTargetFuture{Future: future}
+	return &DeleteTargetFuture{Future: future}
 }
 
 func (a *stub) DescribeNotificationRule(ctx workflow.Context, input *codestarnotifications.DescribeNotificationRuleInput) (*codestarnotifications.DescribeNotificationRuleOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) DescribeNotificationRule(ctx workflow.Context, input *codestarnot
 	return &output, err
 }
 
-func (a *stub) DescribeNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.DescribeNotificationRuleInput) *CodeStarNotificationsDescribeNotificationRuleFuture {
+func (a *stub) DescribeNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.DescribeNotificationRuleInput) *DescribeNotificationRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.DescribeNotificationRule", input)
-	return &CodeStarNotificationsDescribeNotificationRuleFuture{Future: future}
+	return &DescribeNotificationRuleFuture{Future: future}
 }
 
 func (a *stub) ListEventTypes(ctx workflow.Context, input *codestarnotifications.ListEventTypesInput) (*codestarnotifications.ListEventTypesOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) ListEventTypes(ctx workflow.Context, input *codestarnotifications
 	return &output, err
 }
 
-func (a *stub) ListEventTypesAsync(ctx workflow.Context, input *codestarnotifications.ListEventTypesInput) *CodeStarNotificationsListEventTypesFuture {
+func (a *stub) ListEventTypesAsync(ctx workflow.Context, input *codestarnotifications.ListEventTypesInput) *ListEventTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.ListEventTypes", input)
-	return &CodeStarNotificationsListEventTypesFuture{Future: future}
+	return &ListEventTypesFuture{Future: future}
 }
 
 func (a *stub) ListNotificationRules(ctx workflow.Context, input *codestarnotifications.ListNotificationRulesInput) (*codestarnotifications.ListNotificationRulesOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) ListNotificationRules(ctx workflow.Context, input *codestarnotifi
 	return &output, err
 }
 
-func (a *stub) ListNotificationRulesAsync(ctx workflow.Context, input *codestarnotifications.ListNotificationRulesInput) *CodeStarNotificationsListNotificationRulesFuture {
+func (a *stub) ListNotificationRulesAsync(ctx workflow.Context, input *codestarnotifications.ListNotificationRulesInput) *ListNotificationRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.ListNotificationRules", input)
-	return &CodeStarNotificationsListNotificationRulesFuture{Future: future}
+	return &ListNotificationRulesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *codestarnotifications.ListTagsForResourceInput) (*codestarnotifications.ListTagsForResourceOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *codestarnotifica
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *codestarnotifications.ListTagsForResourceInput) *CodeStarNotificationsListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *codestarnotifications.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.ListTagsForResource", input)
-	return &CodeStarNotificationsListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListTargets(ctx workflow.Context, input *codestarnotifications.ListTargetsInput) (*codestarnotifications.ListTargetsOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) ListTargets(ctx workflow.Context, input *codestarnotifications.Li
 	return &output, err
 }
 
-func (a *stub) ListTargetsAsync(ctx workflow.Context, input *codestarnotifications.ListTargetsInput) *CodeStarNotificationsListTargetsFuture {
+func (a *stub) ListTargetsAsync(ctx workflow.Context, input *codestarnotifications.ListTargetsInput) *ListTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.ListTargets", input)
-	return &CodeStarNotificationsListTargetsFuture{Future: future}
+	return &ListTargetsFuture{Future: future}
 }
 
 func (a *stub) Subscribe(ctx workflow.Context, input *codestarnotifications.SubscribeInput) (*codestarnotifications.SubscribeOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) Subscribe(ctx workflow.Context, input *codestarnotifications.Subs
 	return &output, err
 }
 
-func (a *stub) SubscribeAsync(ctx workflow.Context, input *codestarnotifications.SubscribeInput) *CodeStarNotificationsSubscribeFuture {
+func (a *stub) SubscribeAsync(ctx workflow.Context, input *codestarnotifications.SubscribeInput) *SubscribeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.Subscribe", input)
-	return &CodeStarNotificationsSubscribeFuture{Future: future}
+	return &SubscribeFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *codestarnotifications.TagResourceInput) (*codestarnotifications.TagResourceOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *codestarnotifications.Ta
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *codestarnotifications.TagResourceInput) *CodeStarNotificationsTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *codestarnotifications.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.TagResource", input)
-	return &CodeStarNotificationsTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) Unsubscribe(ctx workflow.Context, input *codestarnotifications.UnsubscribeInput) (*codestarnotifications.UnsubscribeOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) Unsubscribe(ctx workflow.Context, input *codestarnotifications.Un
 	return &output, err
 }
 
-func (a *stub) UnsubscribeAsync(ctx workflow.Context, input *codestarnotifications.UnsubscribeInput) *CodeStarNotificationsUnsubscribeFuture {
+func (a *stub) UnsubscribeAsync(ctx workflow.Context, input *codestarnotifications.UnsubscribeInput) *UnsubscribeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.Unsubscribe", input)
-	return &CodeStarNotificationsUnsubscribeFuture{Future: future}
+	return &UnsubscribeFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *codestarnotifications.UntagResourceInput) (*codestarnotifications.UntagResourceOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *codestarnotifications.
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *codestarnotifications.UntagResourceInput) *CodeStarNotificationsUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *codestarnotifications.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.UntagResource", input)
-	return &CodeStarNotificationsUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateNotificationRule(ctx workflow.Context, input *codestarnotifications.UpdateNotificationRuleInput) (*codestarnotifications.UpdateNotificationRuleOutput, error) {
@@ -297,7 +297,7 @@ func (a *stub) UpdateNotificationRule(ctx workflow.Context, input *codestarnotif
 	return &output, err
 }
 
-func (a *stub) UpdateNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.UpdateNotificationRuleInput) *CodeStarNotificationsUpdateNotificationRuleFuture {
+func (a *stub) UpdateNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.UpdateNotificationRuleInput) *UpdateNotificationRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarnotifications.UpdateNotificationRule", input)
-	return &CodeStarNotificationsUpdateNotificationRuleFuture{Future: future}
+	return &UpdateNotificationRuleFuture{Future: future}
 }

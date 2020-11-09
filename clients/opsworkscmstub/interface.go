@@ -16,61 +16,61 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateNode(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) (*opsworkscm.AssociateNodeOutput, error)
-	AssociateNodeAsync(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) *OpsWorksCMAssociateNodeFuture
+	AssociateNodeAsync(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) *AssociateNodeFuture
 
 	CreateBackup(ctx workflow.Context, input *opsworkscm.CreateBackupInput) (*opsworkscm.CreateBackupOutput, error)
-	CreateBackupAsync(ctx workflow.Context, input *opsworkscm.CreateBackupInput) *OpsWorksCMCreateBackupFuture
+	CreateBackupAsync(ctx workflow.Context, input *opsworkscm.CreateBackupInput) *CreateBackupFuture
 
 	CreateServer(ctx workflow.Context, input *opsworkscm.CreateServerInput) (*opsworkscm.CreateServerOutput, error)
-	CreateServerAsync(ctx workflow.Context, input *opsworkscm.CreateServerInput) *OpsWorksCMCreateServerFuture
+	CreateServerAsync(ctx workflow.Context, input *opsworkscm.CreateServerInput) *CreateServerFuture
 
 	DeleteBackup(ctx workflow.Context, input *opsworkscm.DeleteBackupInput) (*opsworkscm.DeleteBackupOutput, error)
-	DeleteBackupAsync(ctx workflow.Context, input *opsworkscm.DeleteBackupInput) *OpsWorksCMDeleteBackupFuture
+	DeleteBackupAsync(ctx workflow.Context, input *opsworkscm.DeleteBackupInput) *DeleteBackupFuture
 
 	DeleteServer(ctx workflow.Context, input *opsworkscm.DeleteServerInput) (*opsworkscm.DeleteServerOutput, error)
-	DeleteServerAsync(ctx workflow.Context, input *opsworkscm.DeleteServerInput) *OpsWorksCMDeleteServerFuture
+	DeleteServerAsync(ctx workflow.Context, input *opsworkscm.DeleteServerInput) *DeleteServerFuture
 
 	DescribeAccountAttributes(ctx workflow.Context, input *opsworkscm.DescribeAccountAttributesInput) (*opsworkscm.DescribeAccountAttributesOutput, error)
-	DescribeAccountAttributesAsync(ctx workflow.Context, input *opsworkscm.DescribeAccountAttributesInput) *OpsWorksCMDescribeAccountAttributesFuture
+	DescribeAccountAttributesAsync(ctx workflow.Context, input *opsworkscm.DescribeAccountAttributesInput) *DescribeAccountAttributesFuture
 
 	DescribeBackups(ctx workflow.Context, input *opsworkscm.DescribeBackupsInput) (*opsworkscm.DescribeBackupsOutput, error)
-	DescribeBackupsAsync(ctx workflow.Context, input *opsworkscm.DescribeBackupsInput) *OpsWorksCMDescribeBackupsFuture
+	DescribeBackupsAsync(ctx workflow.Context, input *opsworkscm.DescribeBackupsInput) *DescribeBackupsFuture
 
 	DescribeEvents(ctx workflow.Context, input *opsworkscm.DescribeEventsInput) (*opsworkscm.DescribeEventsOutput, error)
-	DescribeEventsAsync(ctx workflow.Context, input *opsworkscm.DescribeEventsInput) *OpsWorksCMDescribeEventsFuture
+	DescribeEventsAsync(ctx workflow.Context, input *opsworkscm.DescribeEventsInput) *DescribeEventsFuture
 
 	DescribeNodeAssociationStatus(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) (*opsworkscm.DescribeNodeAssociationStatusOutput, error)
-	DescribeNodeAssociationStatusAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) *OpsWorksCMDescribeNodeAssociationStatusFuture
+	DescribeNodeAssociationStatusAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) *DescribeNodeAssociationStatusFuture
 
 	DescribeServers(ctx workflow.Context, input *opsworkscm.DescribeServersInput) (*opsworkscm.DescribeServersOutput, error)
-	DescribeServersAsync(ctx workflow.Context, input *opsworkscm.DescribeServersInput) *OpsWorksCMDescribeServersFuture
+	DescribeServersAsync(ctx workflow.Context, input *opsworkscm.DescribeServersInput) *DescribeServersFuture
 
 	DisassociateNode(ctx workflow.Context, input *opsworkscm.DisassociateNodeInput) (*opsworkscm.DisassociateNodeOutput, error)
-	DisassociateNodeAsync(ctx workflow.Context, input *opsworkscm.DisassociateNodeInput) *OpsWorksCMDisassociateNodeFuture
+	DisassociateNodeAsync(ctx workflow.Context, input *opsworkscm.DisassociateNodeInput) *DisassociateNodeFuture
 
 	ExportServerEngineAttribute(ctx workflow.Context, input *opsworkscm.ExportServerEngineAttributeInput) (*opsworkscm.ExportServerEngineAttributeOutput, error)
-	ExportServerEngineAttributeAsync(ctx workflow.Context, input *opsworkscm.ExportServerEngineAttributeInput) *OpsWorksCMExportServerEngineAttributeFuture
+	ExportServerEngineAttributeAsync(ctx workflow.Context, input *opsworkscm.ExportServerEngineAttributeInput) *ExportServerEngineAttributeFuture
 
 	ListTagsForResource(ctx workflow.Context, input *opsworkscm.ListTagsForResourceInput) (*opsworkscm.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *opsworkscm.ListTagsForResourceInput) *OpsWorksCMListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *opsworkscm.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	RestoreServer(ctx workflow.Context, input *opsworkscm.RestoreServerInput) (*opsworkscm.RestoreServerOutput, error)
-	RestoreServerAsync(ctx workflow.Context, input *opsworkscm.RestoreServerInput) *OpsWorksCMRestoreServerFuture
+	RestoreServerAsync(ctx workflow.Context, input *opsworkscm.RestoreServerInput) *RestoreServerFuture
 
 	StartMaintenance(ctx workflow.Context, input *opsworkscm.StartMaintenanceInput) (*opsworkscm.StartMaintenanceOutput, error)
-	StartMaintenanceAsync(ctx workflow.Context, input *opsworkscm.StartMaintenanceInput) *OpsWorksCMStartMaintenanceFuture
+	StartMaintenanceAsync(ctx workflow.Context, input *opsworkscm.StartMaintenanceInput) *StartMaintenanceFuture
 
 	TagResource(ctx workflow.Context, input *opsworkscm.TagResourceInput) (*opsworkscm.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *opsworkscm.TagResourceInput) *OpsWorksCMTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *opsworkscm.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *opsworkscm.UntagResourceInput) (*opsworkscm.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *opsworkscm.UntagResourceInput) *OpsWorksCMUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *opsworkscm.UntagResourceInput) *UntagResourceFuture
 
 	UpdateServer(ctx workflow.Context, input *opsworkscm.UpdateServerInput) (*opsworkscm.UpdateServerOutput, error)
-	UpdateServerAsync(ctx workflow.Context, input *opsworkscm.UpdateServerInput) *OpsWorksCMUpdateServerFuture
+	UpdateServerAsync(ctx workflow.Context, input *opsworkscm.UpdateServerInput) *UpdateServerFuture
 
 	UpdateServerEngineAttributes(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) (*opsworkscm.UpdateServerEngineAttributesOutput, error)
-	UpdateServerEngineAttributesAsync(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) *OpsWorksCMUpdateServerEngineAttributesFuture
+	UpdateServerEngineAttributesAsync(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) *UpdateServerEngineAttributesFuture
 
 	WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error
 	WaitUntilNodeAssociatedAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) *clients.VoidFuture

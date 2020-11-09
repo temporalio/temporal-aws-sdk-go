@@ -16,562 +16,562 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type Macie2AcceptInvitationFuture struct {
+type AcceptInvitationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2AcceptInvitationFuture) Get(ctx workflow.Context) (*macie2.AcceptInvitationOutput, error) {
+func (r *AcceptInvitationFuture) Get(ctx workflow.Context) (*macie2.AcceptInvitationOutput, error) {
 	var output macie2.AcceptInvitationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2BatchGetCustomDataIdentifiersFuture struct {
+type BatchGetCustomDataIdentifiersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2BatchGetCustomDataIdentifiersFuture) Get(ctx workflow.Context) (*macie2.BatchGetCustomDataIdentifiersOutput, error) {
+func (r *BatchGetCustomDataIdentifiersFuture) Get(ctx workflow.Context) (*macie2.BatchGetCustomDataIdentifiersOutput, error) {
 	var output macie2.BatchGetCustomDataIdentifiersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2CreateClassificationJobFuture struct {
+type CreateClassificationJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2CreateClassificationJobFuture) Get(ctx workflow.Context) (*macie2.CreateClassificationJobOutput, error) {
+func (r *CreateClassificationJobFuture) Get(ctx workflow.Context) (*macie2.CreateClassificationJobOutput, error) {
 	var output macie2.CreateClassificationJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2CreateCustomDataIdentifierFuture struct {
+type CreateCustomDataIdentifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2CreateCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2.CreateCustomDataIdentifierOutput, error) {
+func (r *CreateCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2.CreateCustomDataIdentifierOutput, error) {
 	var output macie2.CreateCustomDataIdentifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2CreateFindingsFilterFuture struct {
+type CreateFindingsFilterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2CreateFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.CreateFindingsFilterOutput, error) {
+func (r *CreateFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.CreateFindingsFilterOutput, error) {
 	var output macie2.CreateFindingsFilterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2CreateInvitationsFuture struct {
+type CreateInvitationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2CreateInvitationsFuture) Get(ctx workflow.Context) (*macie2.CreateInvitationsOutput, error) {
+func (r *CreateInvitationsFuture) Get(ctx workflow.Context) (*macie2.CreateInvitationsOutput, error) {
 	var output macie2.CreateInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2CreateMemberFuture struct {
+type CreateMemberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2CreateMemberFuture) Get(ctx workflow.Context) (*macie2.CreateMemberOutput, error) {
+func (r *CreateMemberFuture) Get(ctx workflow.Context) (*macie2.CreateMemberOutput, error) {
 	var output macie2.CreateMemberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2CreateSampleFindingsFuture struct {
+type CreateSampleFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2CreateSampleFindingsFuture) Get(ctx workflow.Context) (*macie2.CreateSampleFindingsOutput, error) {
+func (r *CreateSampleFindingsFuture) Get(ctx workflow.Context) (*macie2.CreateSampleFindingsOutput, error) {
 	var output macie2.CreateSampleFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DeclineInvitationsFuture struct {
+type DeclineInvitationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DeclineInvitationsFuture) Get(ctx workflow.Context) (*macie2.DeclineInvitationsOutput, error) {
+func (r *DeclineInvitationsFuture) Get(ctx workflow.Context) (*macie2.DeclineInvitationsOutput, error) {
 	var output macie2.DeclineInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DeleteCustomDataIdentifierFuture struct {
+type DeleteCustomDataIdentifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DeleteCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2.DeleteCustomDataIdentifierOutput, error) {
+func (r *DeleteCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2.DeleteCustomDataIdentifierOutput, error) {
 	var output macie2.DeleteCustomDataIdentifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DeleteFindingsFilterFuture struct {
+type DeleteFindingsFilterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DeleteFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.DeleteFindingsFilterOutput, error) {
+func (r *DeleteFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.DeleteFindingsFilterOutput, error) {
 	var output macie2.DeleteFindingsFilterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DeleteInvitationsFuture struct {
+type DeleteInvitationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DeleteInvitationsFuture) Get(ctx workflow.Context) (*macie2.DeleteInvitationsOutput, error) {
+func (r *DeleteInvitationsFuture) Get(ctx workflow.Context) (*macie2.DeleteInvitationsOutput, error) {
 	var output macie2.DeleteInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DeleteMemberFuture struct {
+type DeleteMemberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DeleteMemberFuture) Get(ctx workflow.Context) (*macie2.DeleteMemberOutput, error) {
+func (r *DeleteMemberFuture) Get(ctx workflow.Context) (*macie2.DeleteMemberOutput, error) {
 	var output macie2.DeleteMemberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DescribeBucketsFuture struct {
+type DescribeBucketsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DescribeBucketsFuture) Get(ctx workflow.Context) (*macie2.DescribeBucketsOutput, error) {
+func (r *DescribeBucketsFuture) Get(ctx workflow.Context) (*macie2.DescribeBucketsOutput, error) {
 	var output macie2.DescribeBucketsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DescribeClassificationJobFuture struct {
+type DescribeClassificationJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DescribeClassificationJobFuture) Get(ctx workflow.Context) (*macie2.DescribeClassificationJobOutput, error) {
+func (r *DescribeClassificationJobFuture) Get(ctx workflow.Context) (*macie2.DescribeClassificationJobOutput, error) {
 	var output macie2.DescribeClassificationJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DescribeOrganizationConfigurationFuture struct {
+type DescribeOrganizationConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DescribeOrganizationConfigurationFuture) Get(ctx workflow.Context) (*macie2.DescribeOrganizationConfigurationOutput, error) {
+func (r *DescribeOrganizationConfigurationFuture) Get(ctx workflow.Context) (*macie2.DescribeOrganizationConfigurationOutput, error) {
 	var output macie2.DescribeOrganizationConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DisableMacieFuture struct {
+type DisableMacieFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DisableMacieFuture) Get(ctx workflow.Context) (*macie2.DisableMacieOutput, error) {
+func (r *DisableMacieFuture) Get(ctx workflow.Context) (*macie2.DisableMacieOutput, error) {
 	var output macie2.DisableMacieOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DisableOrganizationAdminAccountFuture struct {
+type DisableOrganizationAdminAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DisableOrganizationAdminAccountFuture) Get(ctx workflow.Context) (*macie2.DisableOrganizationAdminAccountOutput, error) {
+func (r *DisableOrganizationAdminAccountFuture) Get(ctx workflow.Context) (*macie2.DisableOrganizationAdminAccountOutput, error) {
 	var output macie2.DisableOrganizationAdminAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DisassociateFromMasterAccountFuture struct {
+type DisassociateFromMasterAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DisassociateFromMasterAccountFuture) Get(ctx workflow.Context) (*macie2.DisassociateFromMasterAccountOutput, error) {
+func (r *DisassociateFromMasterAccountFuture) Get(ctx workflow.Context) (*macie2.DisassociateFromMasterAccountOutput, error) {
 	var output macie2.DisassociateFromMasterAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2DisassociateMemberFuture struct {
+type DisassociateMemberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2DisassociateMemberFuture) Get(ctx workflow.Context) (*macie2.DisassociateMemberOutput, error) {
+func (r *DisassociateMemberFuture) Get(ctx workflow.Context) (*macie2.DisassociateMemberOutput, error) {
 	var output macie2.DisassociateMemberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2EnableMacieFuture struct {
+type EnableMacieFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2EnableMacieFuture) Get(ctx workflow.Context) (*macie2.EnableMacieOutput, error) {
+func (r *EnableMacieFuture) Get(ctx workflow.Context) (*macie2.EnableMacieOutput, error) {
 	var output macie2.EnableMacieOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2EnableOrganizationAdminAccountFuture struct {
+type EnableOrganizationAdminAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2EnableOrganizationAdminAccountFuture) Get(ctx workflow.Context) (*macie2.EnableOrganizationAdminAccountOutput, error) {
+func (r *EnableOrganizationAdminAccountFuture) Get(ctx workflow.Context) (*macie2.EnableOrganizationAdminAccountOutput, error) {
 	var output macie2.EnableOrganizationAdminAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetBucketStatisticsFuture struct {
+type GetBucketStatisticsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetBucketStatisticsFuture) Get(ctx workflow.Context) (*macie2.GetBucketStatisticsOutput, error) {
+func (r *GetBucketStatisticsFuture) Get(ctx workflow.Context) (*macie2.GetBucketStatisticsOutput, error) {
 	var output macie2.GetBucketStatisticsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetClassificationExportConfigurationFuture struct {
+type GetClassificationExportConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetClassificationExportConfigurationFuture) Get(ctx workflow.Context) (*macie2.GetClassificationExportConfigurationOutput, error) {
+func (r *GetClassificationExportConfigurationFuture) Get(ctx workflow.Context) (*macie2.GetClassificationExportConfigurationOutput, error) {
 	var output macie2.GetClassificationExportConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetCustomDataIdentifierFuture struct {
+type GetCustomDataIdentifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2.GetCustomDataIdentifierOutput, error) {
+func (r *GetCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2.GetCustomDataIdentifierOutput, error) {
 	var output macie2.GetCustomDataIdentifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetFindingStatisticsFuture struct {
+type GetFindingStatisticsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetFindingStatisticsFuture) Get(ctx workflow.Context) (*macie2.GetFindingStatisticsOutput, error) {
+func (r *GetFindingStatisticsFuture) Get(ctx workflow.Context) (*macie2.GetFindingStatisticsOutput, error) {
 	var output macie2.GetFindingStatisticsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetFindingsFuture struct {
+type GetFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetFindingsFuture) Get(ctx workflow.Context) (*macie2.GetFindingsOutput, error) {
+func (r *GetFindingsFuture) Get(ctx workflow.Context) (*macie2.GetFindingsOutput, error) {
 	var output macie2.GetFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetFindingsFilterFuture struct {
+type GetFindingsFilterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.GetFindingsFilterOutput, error) {
+func (r *GetFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.GetFindingsFilterOutput, error) {
 	var output macie2.GetFindingsFilterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetInvitationsCountFuture struct {
+type GetInvitationsCountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetInvitationsCountFuture) Get(ctx workflow.Context) (*macie2.GetInvitationsCountOutput, error) {
+func (r *GetInvitationsCountFuture) Get(ctx workflow.Context) (*macie2.GetInvitationsCountOutput, error) {
 	var output macie2.GetInvitationsCountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetMacieSessionFuture struct {
+type GetMacieSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetMacieSessionFuture) Get(ctx workflow.Context) (*macie2.GetMacieSessionOutput, error) {
+func (r *GetMacieSessionFuture) Get(ctx workflow.Context) (*macie2.GetMacieSessionOutput, error) {
 	var output macie2.GetMacieSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetMasterAccountFuture struct {
+type GetMasterAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetMasterAccountFuture) Get(ctx workflow.Context) (*macie2.GetMasterAccountOutput, error) {
+func (r *GetMasterAccountFuture) Get(ctx workflow.Context) (*macie2.GetMasterAccountOutput, error) {
 	var output macie2.GetMasterAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetMemberFuture struct {
+type GetMemberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetMemberFuture) Get(ctx workflow.Context) (*macie2.GetMemberOutput, error) {
+func (r *GetMemberFuture) Get(ctx workflow.Context) (*macie2.GetMemberOutput, error) {
 	var output macie2.GetMemberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetUsageStatisticsFuture struct {
+type GetUsageStatisticsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetUsageStatisticsFuture) Get(ctx workflow.Context) (*macie2.GetUsageStatisticsOutput, error) {
+func (r *GetUsageStatisticsFuture) Get(ctx workflow.Context) (*macie2.GetUsageStatisticsOutput, error) {
 	var output macie2.GetUsageStatisticsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2GetUsageTotalsFuture struct {
+type GetUsageTotalsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2GetUsageTotalsFuture) Get(ctx workflow.Context) (*macie2.GetUsageTotalsOutput, error) {
+func (r *GetUsageTotalsFuture) Get(ctx workflow.Context) (*macie2.GetUsageTotalsOutput, error) {
 	var output macie2.GetUsageTotalsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2ListClassificationJobsFuture struct {
+type ListClassificationJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2ListClassificationJobsFuture) Get(ctx workflow.Context) (*macie2.ListClassificationJobsOutput, error) {
+func (r *ListClassificationJobsFuture) Get(ctx workflow.Context) (*macie2.ListClassificationJobsOutput, error) {
 	var output macie2.ListClassificationJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2ListCustomDataIdentifiersFuture struct {
+type ListCustomDataIdentifiersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2ListCustomDataIdentifiersFuture) Get(ctx workflow.Context) (*macie2.ListCustomDataIdentifiersOutput, error) {
+func (r *ListCustomDataIdentifiersFuture) Get(ctx workflow.Context) (*macie2.ListCustomDataIdentifiersOutput, error) {
 	var output macie2.ListCustomDataIdentifiersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2ListFindingsFuture struct {
+type ListFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2ListFindingsFuture) Get(ctx workflow.Context) (*macie2.ListFindingsOutput, error) {
+func (r *ListFindingsFuture) Get(ctx workflow.Context) (*macie2.ListFindingsOutput, error) {
 	var output macie2.ListFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2ListFindingsFiltersFuture struct {
+type ListFindingsFiltersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2ListFindingsFiltersFuture) Get(ctx workflow.Context) (*macie2.ListFindingsFiltersOutput, error) {
+func (r *ListFindingsFiltersFuture) Get(ctx workflow.Context) (*macie2.ListFindingsFiltersOutput, error) {
 	var output macie2.ListFindingsFiltersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2ListInvitationsFuture struct {
+type ListInvitationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2ListInvitationsFuture) Get(ctx workflow.Context) (*macie2.ListInvitationsOutput, error) {
+func (r *ListInvitationsFuture) Get(ctx workflow.Context) (*macie2.ListInvitationsOutput, error) {
 	var output macie2.ListInvitationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2ListMembersFuture struct {
+type ListMembersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2ListMembersFuture) Get(ctx workflow.Context) (*macie2.ListMembersOutput, error) {
+func (r *ListMembersFuture) Get(ctx workflow.Context) (*macie2.ListMembersOutput, error) {
 	var output macie2.ListMembersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2ListOrganizationAdminAccountsFuture struct {
+type ListOrganizationAdminAccountsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2ListOrganizationAdminAccountsFuture) Get(ctx workflow.Context) (*macie2.ListOrganizationAdminAccountsOutput, error) {
+func (r *ListOrganizationAdminAccountsFuture) Get(ctx workflow.Context) (*macie2.ListOrganizationAdminAccountsOutput, error) {
 	var output macie2.ListOrganizationAdminAccountsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2ListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2ListTagsForResourceFuture) Get(ctx workflow.Context) (*macie2.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*macie2.ListTagsForResourceOutput, error) {
 	var output macie2.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2PutClassificationExportConfigurationFuture struct {
+type PutClassificationExportConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2PutClassificationExportConfigurationFuture) Get(ctx workflow.Context) (*macie2.PutClassificationExportConfigurationOutput, error) {
+func (r *PutClassificationExportConfigurationFuture) Get(ctx workflow.Context) (*macie2.PutClassificationExportConfigurationOutput, error) {
 	var output macie2.PutClassificationExportConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2TagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2TagResourceFuture) Get(ctx workflow.Context) (*macie2.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*macie2.TagResourceOutput, error) {
 	var output macie2.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2TestCustomDataIdentifierFuture struct {
+type TestCustomDataIdentifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2TestCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2.TestCustomDataIdentifierOutput, error) {
+func (r *TestCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2.TestCustomDataIdentifierOutput, error) {
 	var output macie2.TestCustomDataIdentifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2UntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2UntagResourceFuture) Get(ctx workflow.Context) (*macie2.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*macie2.UntagResourceOutput, error) {
 	var output macie2.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2UpdateClassificationJobFuture struct {
+type UpdateClassificationJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2UpdateClassificationJobFuture) Get(ctx workflow.Context) (*macie2.UpdateClassificationJobOutput, error) {
+func (r *UpdateClassificationJobFuture) Get(ctx workflow.Context) (*macie2.UpdateClassificationJobOutput, error) {
 	var output macie2.UpdateClassificationJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2UpdateFindingsFilterFuture struct {
+type UpdateFindingsFilterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2UpdateFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.UpdateFindingsFilterOutput, error) {
+func (r *UpdateFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.UpdateFindingsFilterOutput, error) {
 	var output macie2.UpdateFindingsFilterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2UpdateMacieSessionFuture struct {
+type UpdateMacieSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2UpdateMacieSessionFuture) Get(ctx workflow.Context) (*macie2.UpdateMacieSessionOutput, error) {
+func (r *UpdateMacieSessionFuture) Get(ctx workflow.Context) (*macie2.UpdateMacieSessionOutput, error) {
 	var output macie2.UpdateMacieSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2UpdateMemberSessionFuture struct {
+type UpdateMemberSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2UpdateMemberSessionFuture) Get(ctx workflow.Context) (*macie2.UpdateMemberSessionOutput, error) {
+func (r *UpdateMemberSessionFuture) Get(ctx workflow.Context) (*macie2.UpdateMemberSessionOutput, error) {
 	var output macie2.UpdateMemberSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type Macie2UpdateOrganizationConfigurationFuture struct {
+type UpdateOrganizationConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *Macie2UpdateOrganizationConfigurationFuture) Get(ctx workflow.Context) (*macie2.UpdateOrganizationConfigurationOutput, error) {
+func (r *UpdateOrganizationConfigurationFuture) Get(ctx workflow.Context) (*macie2.UpdateOrganizationConfigurationOutput, error) {
 	var output macie2.UpdateOrganizationConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -583,9 +583,9 @@ func (a *stub) AcceptInvitation(ctx workflow.Context, input *macie2.AcceptInvita
 	return &output, err
 }
 
-func (a *stub) AcceptInvitationAsync(ctx workflow.Context, input *macie2.AcceptInvitationInput) *Macie2AcceptInvitationFuture {
+func (a *stub) AcceptInvitationAsync(ctx workflow.Context, input *macie2.AcceptInvitationInput) *AcceptInvitationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.AcceptInvitation", input)
-	return &Macie2AcceptInvitationFuture{Future: future}
+	return &AcceptInvitationFuture{Future: future}
 }
 
 func (a *stub) BatchGetCustomDataIdentifiers(ctx workflow.Context, input *macie2.BatchGetCustomDataIdentifiersInput) (*macie2.BatchGetCustomDataIdentifiersOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) BatchGetCustomDataIdentifiers(ctx workflow.Context, input *macie2
 	return &output, err
 }
 
-func (a *stub) BatchGetCustomDataIdentifiersAsync(ctx workflow.Context, input *macie2.BatchGetCustomDataIdentifiersInput) *Macie2BatchGetCustomDataIdentifiersFuture {
+func (a *stub) BatchGetCustomDataIdentifiersAsync(ctx workflow.Context, input *macie2.BatchGetCustomDataIdentifiersInput) *BatchGetCustomDataIdentifiersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.BatchGetCustomDataIdentifiers", input)
-	return &Macie2BatchGetCustomDataIdentifiersFuture{Future: future}
+	return &BatchGetCustomDataIdentifiersFuture{Future: future}
 }
 
 func (a *stub) CreateClassificationJob(ctx workflow.Context, input *macie2.CreateClassificationJobInput) (*macie2.CreateClassificationJobOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) CreateClassificationJob(ctx workflow.Context, input *macie2.Creat
 	return &output, err
 }
 
-func (a *stub) CreateClassificationJobAsync(ctx workflow.Context, input *macie2.CreateClassificationJobInput) *Macie2CreateClassificationJobFuture {
+func (a *stub) CreateClassificationJobAsync(ctx workflow.Context, input *macie2.CreateClassificationJobInput) *CreateClassificationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.CreateClassificationJob", input)
-	return &Macie2CreateClassificationJobFuture{Future: future}
+	return &CreateClassificationJobFuture{Future: future}
 }
 
 func (a *stub) CreateCustomDataIdentifier(ctx workflow.Context, input *macie2.CreateCustomDataIdentifierInput) (*macie2.CreateCustomDataIdentifierOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) CreateCustomDataIdentifier(ctx workflow.Context, input *macie2.Cr
 	return &output, err
 }
 
-func (a *stub) CreateCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.CreateCustomDataIdentifierInput) *Macie2CreateCustomDataIdentifierFuture {
+func (a *stub) CreateCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.CreateCustomDataIdentifierInput) *CreateCustomDataIdentifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.CreateCustomDataIdentifier", input)
-	return &Macie2CreateCustomDataIdentifierFuture{Future: future}
+	return &CreateCustomDataIdentifierFuture{Future: future}
 }
 
 func (a *stub) CreateFindingsFilter(ctx workflow.Context, input *macie2.CreateFindingsFilterInput) (*macie2.CreateFindingsFilterOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) CreateFindingsFilter(ctx workflow.Context, input *macie2.CreateFi
 	return &output, err
 }
 
-func (a *stub) CreateFindingsFilterAsync(ctx workflow.Context, input *macie2.CreateFindingsFilterInput) *Macie2CreateFindingsFilterFuture {
+func (a *stub) CreateFindingsFilterAsync(ctx workflow.Context, input *macie2.CreateFindingsFilterInput) *CreateFindingsFilterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.CreateFindingsFilter", input)
-	return &Macie2CreateFindingsFilterFuture{Future: future}
+	return &CreateFindingsFilterFuture{Future: future}
 }
 
 func (a *stub) CreateInvitations(ctx workflow.Context, input *macie2.CreateInvitationsInput) (*macie2.CreateInvitationsOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) CreateInvitations(ctx workflow.Context, input *macie2.CreateInvit
 	return &output, err
 }
 
-func (a *stub) CreateInvitationsAsync(ctx workflow.Context, input *macie2.CreateInvitationsInput) *Macie2CreateInvitationsFuture {
+func (a *stub) CreateInvitationsAsync(ctx workflow.Context, input *macie2.CreateInvitationsInput) *CreateInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.CreateInvitations", input)
-	return &Macie2CreateInvitationsFuture{Future: future}
+	return &CreateInvitationsFuture{Future: future}
 }
 
 func (a *stub) CreateMember(ctx workflow.Context, input *macie2.CreateMemberInput) (*macie2.CreateMemberOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) CreateMember(ctx workflow.Context, input *macie2.CreateMemberInpu
 	return &output, err
 }
 
-func (a *stub) CreateMemberAsync(ctx workflow.Context, input *macie2.CreateMemberInput) *Macie2CreateMemberFuture {
+func (a *stub) CreateMemberAsync(ctx workflow.Context, input *macie2.CreateMemberInput) *CreateMemberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.CreateMember", input)
-	return &Macie2CreateMemberFuture{Future: future}
+	return &CreateMemberFuture{Future: future}
 }
 
 func (a *stub) CreateSampleFindings(ctx workflow.Context, input *macie2.CreateSampleFindingsInput) (*macie2.CreateSampleFindingsOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) CreateSampleFindings(ctx workflow.Context, input *macie2.CreateSa
 	return &output, err
 }
 
-func (a *stub) CreateSampleFindingsAsync(ctx workflow.Context, input *macie2.CreateSampleFindingsInput) *Macie2CreateSampleFindingsFuture {
+func (a *stub) CreateSampleFindingsAsync(ctx workflow.Context, input *macie2.CreateSampleFindingsInput) *CreateSampleFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.CreateSampleFindings", input)
-	return &Macie2CreateSampleFindingsFuture{Future: future}
+	return &CreateSampleFindingsFuture{Future: future}
 }
 
 func (a *stub) DeclineInvitations(ctx workflow.Context, input *macie2.DeclineInvitationsInput) (*macie2.DeclineInvitationsOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) DeclineInvitations(ctx workflow.Context, input *macie2.DeclineInv
 	return &output, err
 }
 
-func (a *stub) DeclineInvitationsAsync(ctx workflow.Context, input *macie2.DeclineInvitationsInput) *Macie2DeclineInvitationsFuture {
+func (a *stub) DeclineInvitationsAsync(ctx workflow.Context, input *macie2.DeclineInvitationsInput) *DeclineInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DeclineInvitations", input)
-	return &Macie2DeclineInvitationsFuture{Future: future}
+	return &DeclineInvitationsFuture{Future: future}
 }
 
 func (a *stub) DeleteCustomDataIdentifier(ctx workflow.Context, input *macie2.DeleteCustomDataIdentifierInput) (*macie2.DeleteCustomDataIdentifierOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) DeleteCustomDataIdentifier(ctx workflow.Context, input *macie2.De
 	return &output, err
 }
 
-func (a *stub) DeleteCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.DeleteCustomDataIdentifierInput) *Macie2DeleteCustomDataIdentifierFuture {
+func (a *stub) DeleteCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.DeleteCustomDataIdentifierInput) *DeleteCustomDataIdentifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DeleteCustomDataIdentifier", input)
-	return &Macie2DeleteCustomDataIdentifierFuture{Future: future}
+	return &DeleteCustomDataIdentifierFuture{Future: future}
 }
 
 func (a *stub) DeleteFindingsFilter(ctx workflow.Context, input *macie2.DeleteFindingsFilterInput) (*macie2.DeleteFindingsFilterOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) DeleteFindingsFilter(ctx workflow.Context, input *macie2.DeleteFi
 	return &output, err
 }
 
-func (a *stub) DeleteFindingsFilterAsync(ctx workflow.Context, input *macie2.DeleteFindingsFilterInput) *Macie2DeleteFindingsFilterFuture {
+func (a *stub) DeleteFindingsFilterAsync(ctx workflow.Context, input *macie2.DeleteFindingsFilterInput) *DeleteFindingsFilterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DeleteFindingsFilter", input)
-	return &Macie2DeleteFindingsFilterFuture{Future: future}
+	return &DeleteFindingsFilterFuture{Future: future}
 }
 
 func (a *stub) DeleteInvitations(ctx workflow.Context, input *macie2.DeleteInvitationsInput) (*macie2.DeleteInvitationsOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) DeleteInvitations(ctx workflow.Context, input *macie2.DeleteInvit
 	return &output, err
 }
 
-func (a *stub) DeleteInvitationsAsync(ctx workflow.Context, input *macie2.DeleteInvitationsInput) *Macie2DeleteInvitationsFuture {
+func (a *stub) DeleteInvitationsAsync(ctx workflow.Context, input *macie2.DeleteInvitationsInput) *DeleteInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DeleteInvitations", input)
-	return &Macie2DeleteInvitationsFuture{Future: future}
+	return &DeleteInvitationsFuture{Future: future}
 }
 
 func (a *stub) DeleteMember(ctx workflow.Context, input *macie2.DeleteMemberInput) (*macie2.DeleteMemberOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) DeleteMember(ctx workflow.Context, input *macie2.DeleteMemberInpu
 	return &output, err
 }
 
-func (a *stub) DeleteMemberAsync(ctx workflow.Context, input *macie2.DeleteMemberInput) *Macie2DeleteMemberFuture {
+func (a *stub) DeleteMemberAsync(ctx workflow.Context, input *macie2.DeleteMemberInput) *DeleteMemberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DeleteMember", input)
-	return &Macie2DeleteMemberFuture{Future: future}
+	return &DeleteMemberFuture{Future: future}
 }
 
 func (a *stub) DescribeBuckets(ctx workflow.Context, input *macie2.DescribeBucketsInput) (*macie2.DescribeBucketsOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) DescribeBuckets(ctx workflow.Context, input *macie2.DescribeBucke
 	return &output, err
 }
 
-func (a *stub) DescribeBucketsAsync(ctx workflow.Context, input *macie2.DescribeBucketsInput) *Macie2DescribeBucketsFuture {
+func (a *stub) DescribeBucketsAsync(ctx workflow.Context, input *macie2.DescribeBucketsInput) *DescribeBucketsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DescribeBuckets", input)
-	return &Macie2DescribeBucketsFuture{Future: future}
+	return &DescribeBucketsFuture{Future: future}
 }
 
 func (a *stub) DescribeClassificationJob(ctx workflow.Context, input *macie2.DescribeClassificationJobInput) (*macie2.DescribeClassificationJobOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) DescribeClassificationJob(ctx workflow.Context, input *macie2.Des
 	return &output, err
 }
 
-func (a *stub) DescribeClassificationJobAsync(ctx workflow.Context, input *macie2.DescribeClassificationJobInput) *Macie2DescribeClassificationJobFuture {
+func (a *stub) DescribeClassificationJobAsync(ctx workflow.Context, input *macie2.DescribeClassificationJobInput) *DescribeClassificationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DescribeClassificationJob", input)
-	return &Macie2DescribeClassificationJobFuture{Future: future}
+	return &DescribeClassificationJobFuture{Future: future}
 }
 
 func (a *stub) DescribeOrganizationConfiguration(ctx workflow.Context, input *macie2.DescribeOrganizationConfigurationInput) (*macie2.DescribeOrganizationConfigurationOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) DescribeOrganizationConfiguration(ctx workflow.Context, input *ma
 	return &output, err
 }
 
-func (a *stub) DescribeOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.DescribeOrganizationConfigurationInput) *Macie2DescribeOrganizationConfigurationFuture {
+func (a *stub) DescribeOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.DescribeOrganizationConfigurationInput) *DescribeOrganizationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DescribeOrganizationConfiguration", input)
-	return &Macie2DescribeOrganizationConfigurationFuture{Future: future}
+	return &DescribeOrganizationConfigurationFuture{Future: future}
 }
 
 func (a *stub) DisableMacie(ctx workflow.Context, input *macie2.DisableMacieInput) (*macie2.DisableMacieOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) DisableMacie(ctx workflow.Context, input *macie2.DisableMacieInpu
 	return &output, err
 }
 
-func (a *stub) DisableMacieAsync(ctx workflow.Context, input *macie2.DisableMacieInput) *Macie2DisableMacieFuture {
+func (a *stub) DisableMacieAsync(ctx workflow.Context, input *macie2.DisableMacieInput) *DisableMacieFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DisableMacie", input)
-	return &Macie2DisableMacieFuture{Future: future}
+	return &DisableMacieFuture{Future: future}
 }
 
 func (a *stub) DisableOrganizationAdminAccount(ctx workflow.Context, input *macie2.DisableOrganizationAdminAccountInput) (*macie2.DisableOrganizationAdminAccountOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) DisableOrganizationAdminAccount(ctx workflow.Context, input *maci
 	return &output, err
 }
 
-func (a *stub) DisableOrganizationAdminAccountAsync(ctx workflow.Context, input *macie2.DisableOrganizationAdminAccountInput) *Macie2DisableOrganizationAdminAccountFuture {
+func (a *stub) DisableOrganizationAdminAccountAsync(ctx workflow.Context, input *macie2.DisableOrganizationAdminAccountInput) *DisableOrganizationAdminAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DisableOrganizationAdminAccount", input)
-	return &Macie2DisableOrganizationAdminAccountFuture{Future: future}
+	return &DisableOrganizationAdminAccountFuture{Future: future}
 }
 
 func (a *stub) DisassociateFromMasterAccount(ctx workflow.Context, input *macie2.DisassociateFromMasterAccountInput) (*macie2.DisassociateFromMasterAccountOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) DisassociateFromMasterAccount(ctx workflow.Context, input *macie2
 	return &output, err
 }
 
-func (a *stub) DisassociateFromMasterAccountAsync(ctx workflow.Context, input *macie2.DisassociateFromMasterAccountInput) *Macie2DisassociateFromMasterAccountFuture {
+func (a *stub) DisassociateFromMasterAccountAsync(ctx workflow.Context, input *macie2.DisassociateFromMasterAccountInput) *DisassociateFromMasterAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DisassociateFromMasterAccount", input)
-	return &Macie2DisassociateFromMasterAccountFuture{Future: future}
+	return &DisassociateFromMasterAccountFuture{Future: future}
 }
 
 func (a *stub) DisassociateMember(ctx workflow.Context, input *macie2.DisassociateMemberInput) (*macie2.DisassociateMemberOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) DisassociateMember(ctx workflow.Context, input *macie2.Disassocia
 	return &output, err
 }
 
-func (a *stub) DisassociateMemberAsync(ctx workflow.Context, input *macie2.DisassociateMemberInput) *Macie2DisassociateMemberFuture {
+func (a *stub) DisassociateMemberAsync(ctx workflow.Context, input *macie2.DisassociateMemberInput) *DisassociateMemberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.DisassociateMember", input)
-	return &Macie2DisassociateMemberFuture{Future: future}
+	return &DisassociateMemberFuture{Future: future}
 }
 
 func (a *stub) EnableMacie(ctx workflow.Context, input *macie2.EnableMacieInput) (*macie2.EnableMacieOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) EnableMacie(ctx workflow.Context, input *macie2.EnableMacieInput)
 	return &output, err
 }
 
-func (a *stub) EnableMacieAsync(ctx workflow.Context, input *macie2.EnableMacieInput) *Macie2EnableMacieFuture {
+func (a *stub) EnableMacieAsync(ctx workflow.Context, input *macie2.EnableMacieInput) *EnableMacieFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.EnableMacie", input)
-	return &Macie2EnableMacieFuture{Future: future}
+	return &EnableMacieFuture{Future: future}
 }
 
 func (a *stub) EnableOrganizationAdminAccount(ctx workflow.Context, input *macie2.EnableOrganizationAdminAccountInput) (*macie2.EnableOrganizationAdminAccountOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) EnableOrganizationAdminAccount(ctx workflow.Context, input *macie
 	return &output, err
 }
 
-func (a *stub) EnableOrganizationAdminAccountAsync(ctx workflow.Context, input *macie2.EnableOrganizationAdminAccountInput) *Macie2EnableOrganizationAdminAccountFuture {
+func (a *stub) EnableOrganizationAdminAccountAsync(ctx workflow.Context, input *macie2.EnableOrganizationAdminAccountInput) *EnableOrganizationAdminAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.EnableOrganizationAdminAccount", input)
-	return &Macie2EnableOrganizationAdminAccountFuture{Future: future}
+	return &EnableOrganizationAdminAccountFuture{Future: future}
 }
 
 func (a *stub) GetBucketStatistics(ctx workflow.Context, input *macie2.GetBucketStatisticsInput) (*macie2.GetBucketStatisticsOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) GetBucketStatistics(ctx workflow.Context, input *macie2.GetBucket
 	return &output, err
 }
 
-func (a *stub) GetBucketStatisticsAsync(ctx workflow.Context, input *macie2.GetBucketStatisticsInput) *Macie2GetBucketStatisticsFuture {
+func (a *stub) GetBucketStatisticsAsync(ctx workflow.Context, input *macie2.GetBucketStatisticsInput) *GetBucketStatisticsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetBucketStatistics", input)
-	return &Macie2GetBucketStatisticsFuture{Future: future}
+	return &GetBucketStatisticsFuture{Future: future}
 }
 
 func (a *stub) GetClassificationExportConfiguration(ctx workflow.Context, input *macie2.GetClassificationExportConfigurationInput) (*macie2.GetClassificationExportConfigurationOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) GetClassificationExportConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) GetClassificationExportConfigurationAsync(ctx workflow.Context, input *macie2.GetClassificationExportConfigurationInput) *Macie2GetClassificationExportConfigurationFuture {
+func (a *stub) GetClassificationExportConfigurationAsync(ctx workflow.Context, input *macie2.GetClassificationExportConfigurationInput) *GetClassificationExportConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetClassificationExportConfiguration", input)
-	return &Macie2GetClassificationExportConfigurationFuture{Future: future}
+	return &GetClassificationExportConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetCustomDataIdentifier(ctx workflow.Context, input *macie2.GetCustomDataIdentifierInput) (*macie2.GetCustomDataIdentifierOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) GetCustomDataIdentifier(ctx workflow.Context, input *macie2.GetCu
 	return &output, err
 }
 
-func (a *stub) GetCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.GetCustomDataIdentifierInput) *Macie2GetCustomDataIdentifierFuture {
+func (a *stub) GetCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.GetCustomDataIdentifierInput) *GetCustomDataIdentifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetCustomDataIdentifier", input)
-	return &Macie2GetCustomDataIdentifierFuture{Future: future}
+	return &GetCustomDataIdentifierFuture{Future: future}
 }
 
 func (a *stub) GetFindingStatistics(ctx workflow.Context, input *macie2.GetFindingStatisticsInput) (*macie2.GetFindingStatisticsOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) GetFindingStatistics(ctx workflow.Context, input *macie2.GetFindi
 	return &output, err
 }
 
-func (a *stub) GetFindingStatisticsAsync(ctx workflow.Context, input *macie2.GetFindingStatisticsInput) *Macie2GetFindingStatisticsFuture {
+func (a *stub) GetFindingStatisticsAsync(ctx workflow.Context, input *macie2.GetFindingStatisticsInput) *GetFindingStatisticsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetFindingStatistics", input)
-	return &Macie2GetFindingStatisticsFuture{Future: future}
+	return &GetFindingStatisticsFuture{Future: future}
 }
 
 func (a *stub) GetFindings(ctx workflow.Context, input *macie2.GetFindingsInput) (*macie2.GetFindingsOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) GetFindings(ctx workflow.Context, input *macie2.GetFindingsInput)
 	return &output, err
 }
 
-func (a *stub) GetFindingsAsync(ctx workflow.Context, input *macie2.GetFindingsInput) *Macie2GetFindingsFuture {
+func (a *stub) GetFindingsAsync(ctx workflow.Context, input *macie2.GetFindingsInput) *GetFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetFindings", input)
-	return &Macie2GetFindingsFuture{Future: future}
+	return &GetFindingsFuture{Future: future}
 }
 
 func (a *stub) GetFindingsFilter(ctx workflow.Context, input *macie2.GetFindingsFilterInput) (*macie2.GetFindingsFilterOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) GetFindingsFilter(ctx workflow.Context, input *macie2.GetFindings
 	return &output, err
 }
 
-func (a *stub) GetFindingsFilterAsync(ctx workflow.Context, input *macie2.GetFindingsFilterInput) *Macie2GetFindingsFilterFuture {
+func (a *stub) GetFindingsFilterAsync(ctx workflow.Context, input *macie2.GetFindingsFilterInput) *GetFindingsFilterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetFindingsFilter", input)
-	return &Macie2GetFindingsFilterFuture{Future: future}
+	return &GetFindingsFilterFuture{Future: future}
 }
 
 func (a *stub) GetInvitationsCount(ctx workflow.Context, input *macie2.GetInvitationsCountInput) (*macie2.GetInvitationsCountOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) GetInvitationsCount(ctx workflow.Context, input *macie2.GetInvita
 	return &output, err
 }
 
-func (a *stub) GetInvitationsCountAsync(ctx workflow.Context, input *macie2.GetInvitationsCountInput) *Macie2GetInvitationsCountFuture {
+func (a *stub) GetInvitationsCountAsync(ctx workflow.Context, input *macie2.GetInvitationsCountInput) *GetInvitationsCountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetInvitationsCount", input)
-	return &Macie2GetInvitationsCountFuture{Future: future}
+	return &GetInvitationsCountFuture{Future: future}
 }
 
 func (a *stub) GetMacieSession(ctx workflow.Context, input *macie2.GetMacieSessionInput) (*macie2.GetMacieSessionOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) GetMacieSession(ctx workflow.Context, input *macie2.GetMacieSessi
 	return &output, err
 }
 
-func (a *stub) GetMacieSessionAsync(ctx workflow.Context, input *macie2.GetMacieSessionInput) *Macie2GetMacieSessionFuture {
+func (a *stub) GetMacieSessionAsync(ctx workflow.Context, input *macie2.GetMacieSessionInput) *GetMacieSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetMacieSession", input)
-	return &Macie2GetMacieSessionFuture{Future: future}
+	return &GetMacieSessionFuture{Future: future}
 }
 
 func (a *stub) GetMasterAccount(ctx workflow.Context, input *macie2.GetMasterAccountInput) (*macie2.GetMasterAccountOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) GetMasterAccount(ctx workflow.Context, input *macie2.GetMasterAcc
 	return &output, err
 }
 
-func (a *stub) GetMasterAccountAsync(ctx workflow.Context, input *macie2.GetMasterAccountInput) *Macie2GetMasterAccountFuture {
+func (a *stub) GetMasterAccountAsync(ctx workflow.Context, input *macie2.GetMasterAccountInput) *GetMasterAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetMasterAccount", input)
-	return &Macie2GetMasterAccountFuture{Future: future}
+	return &GetMasterAccountFuture{Future: future}
 }
 
 func (a *stub) GetMember(ctx workflow.Context, input *macie2.GetMemberInput) (*macie2.GetMemberOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) GetMember(ctx workflow.Context, input *macie2.GetMemberInput) (*m
 	return &output, err
 }
 
-func (a *stub) GetMemberAsync(ctx workflow.Context, input *macie2.GetMemberInput) *Macie2GetMemberFuture {
+func (a *stub) GetMemberAsync(ctx workflow.Context, input *macie2.GetMemberInput) *GetMemberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetMember", input)
-	return &Macie2GetMemberFuture{Future: future}
+	return &GetMemberFuture{Future: future}
 }
 
 func (a *stub) GetUsageStatistics(ctx workflow.Context, input *macie2.GetUsageStatisticsInput) (*macie2.GetUsageStatisticsOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) GetUsageStatistics(ctx workflow.Context, input *macie2.GetUsageSt
 	return &output, err
 }
 
-func (a *stub) GetUsageStatisticsAsync(ctx workflow.Context, input *macie2.GetUsageStatisticsInput) *Macie2GetUsageStatisticsFuture {
+func (a *stub) GetUsageStatisticsAsync(ctx workflow.Context, input *macie2.GetUsageStatisticsInput) *GetUsageStatisticsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetUsageStatistics", input)
-	return &Macie2GetUsageStatisticsFuture{Future: future}
+	return &GetUsageStatisticsFuture{Future: future}
 }
 
 func (a *stub) GetUsageTotals(ctx workflow.Context, input *macie2.GetUsageTotalsInput) (*macie2.GetUsageTotalsOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) GetUsageTotals(ctx workflow.Context, input *macie2.GetUsageTotals
 	return &output, err
 }
 
-func (a *stub) GetUsageTotalsAsync(ctx workflow.Context, input *macie2.GetUsageTotalsInput) *Macie2GetUsageTotalsFuture {
+func (a *stub) GetUsageTotalsAsync(ctx workflow.Context, input *macie2.GetUsageTotalsInput) *GetUsageTotalsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.GetUsageTotals", input)
-	return &Macie2GetUsageTotalsFuture{Future: future}
+	return &GetUsageTotalsFuture{Future: future}
 }
 
 func (a *stub) ListClassificationJobs(ctx workflow.Context, input *macie2.ListClassificationJobsInput) (*macie2.ListClassificationJobsOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) ListClassificationJobs(ctx workflow.Context, input *macie2.ListCl
 	return &output, err
 }
 
-func (a *stub) ListClassificationJobsAsync(ctx workflow.Context, input *macie2.ListClassificationJobsInput) *Macie2ListClassificationJobsFuture {
+func (a *stub) ListClassificationJobsAsync(ctx workflow.Context, input *macie2.ListClassificationJobsInput) *ListClassificationJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.ListClassificationJobs", input)
-	return &Macie2ListClassificationJobsFuture{Future: future}
+	return &ListClassificationJobsFuture{Future: future}
 }
 
 func (a *stub) ListCustomDataIdentifiers(ctx workflow.Context, input *macie2.ListCustomDataIdentifiersInput) (*macie2.ListCustomDataIdentifiersOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) ListCustomDataIdentifiers(ctx workflow.Context, input *macie2.Lis
 	return &output, err
 }
 
-func (a *stub) ListCustomDataIdentifiersAsync(ctx workflow.Context, input *macie2.ListCustomDataIdentifiersInput) *Macie2ListCustomDataIdentifiersFuture {
+func (a *stub) ListCustomDataIdentifiersAsync(ctx workflow.Context, input *macie2.ListCustomDataIdentifiersInput) *ListCustomDataIdentifiersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.ListCustomDataIdentifiers", input)
-	return &Macie2ListCustomDataIdentifiersFuture{Future: future}
+	return &ListCustomDataIdentifiersFuture{Future: future}
 }
 
 func (a *stub) ListFindings(ctx workflow.Context, input *macie2.ListFindingsInput) (*macie2.ListFindingsOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) ListFindings(ctx workflow.Context, input *macie2.ListFindingsInpu
 	return &output, err
 }
 
-func (a *stub) ListFindingsAsync(ctx workflow.Context, input *macie2.ListFindingsInput) *Macie2ListFindingsFuture {
+func (a *stub) ListFindingsAsync(ctx workflow.Context, input *macie2.ListFindingsInput) *ListFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.ListFindings", input)
-	return &Macie2ListFindingsFuture{Future: future}
+	return &ListFindingsFuture{Future: future}
 }
 
 func (a *stub) ListFindingsFilters(ctx workflow.Context, input *macie2.ListFindingsFiltersInput) (*macie2.ListFindingsFiltersOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) ListFindingsFilters(ctx workflow.Context, input *macie2.ListFindi
 	return &output, err
 }
 
-func (a *stub) ListFindingsFiltersAsync(ctx workflow.Context, input *macie2.ListFindingsFiltersInput) *Macie2ListFindingsFiltersFuture {
+func (a *stub) ListFindingsFiltersAsync(ctx workflow.Context, input *macie2.ListFindingsFiltersInput) *ListFindingsFiltersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.ListFindingsFilters", input)
-	return &Macie2ListFindingsFiltersFuture{Future: future}
+	return &ListFindingsFiltersFuture{Future: future}
 }
 
 func (a *stub) ListInvitations(ctx workflow.Context, input *macie2.ListInvitationsInput) (*macie2.ListInvitationsOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) ListInvitations(ctx workflow.Context, input *macie2.ListInvitatio
 	return &output, err
 }
 
-func (a *stub) ListInvitationsAsync(ctx workflow.Context, input *macie2.ListInvitationsInput) *Macie2ListInvitationsFuture {
+func (a *stub) ListInvitationsAsync(ctx workflow.Context, input *macie2.ListInvitationsInput) *ListInvitationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.ListInvitations", input)
-	return &Macie2ListInvitationsFuture{Future: future}
+	return &ListInvitationsFuture{Future: future}
 }
 
 func (a *stub) ListMembers(ctx workflow.Context, input *macie2.ListMembersInput) (*macie2.ListMembersOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) ListMembers(ctx workflow.Context, input *macie2.ListMembersInput)
 	return &output, err
 }
 
-func (a *stub) ListMembersAsync(ctx workflow.Context, input *macie2.ListMembersInput) *Macie2ListMembersFuture {
+func (a *stub) ListMembersAsync(ctx workflow.Context, input *macie2.ListMembersInput) *ListMembersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.ListMembers", input)
-	return &Macie2ListMembersFuture{Future: future}
+	return &ListMembersFuture{Future: future}
 }
 
 func (a *stub) ListOrganizationAdminAccounts(ctx workflow.Context, input *macie2.ListOrganizationAdminAccountsInput) (*macie2.ListOrganizationAdminAccountsOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) ListOrganizationAdminAccounts(ctx workflow.Context, input *macie2
 	return &output, err
 }
 
-func (a *stub) ListOrganizationAdminAccountsAsync(ctx workflow.Context, input *macie2.ListOrganizationAdminAccountsInput) *Macie2ListOrganizationAdminAccountsFuture {
+func (a *stub) ListOrganizationAdminAccountsAsync(ctx workflow.Context, input *macie2.ListOrganizationAdminAccountsInput) *ListOrganizationAdminAccountsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.ListOrganizationAdminAccounts", input)
-	return &Macie2ListOrganizationAdminAccountsFuture{Future: future}
+	return &ListOrganizationAdminAccountsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *macie2.ListTagsForResourceInput) (*macie2.ListTagsForResourceOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *macie2.ListTagsF
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *macie2.ListTagsForResourceInput) *Macie2ListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *macie2.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.ListTagsForResource", input)
-	return &Macie2ListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PutClassificationExportConfiguration(ctx workflow.Context, input *macie2.PutClassificationExportConfigurationInput) (*macie2.PutClassificationExportConfigurationOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) PutClassificationExportConfiguration(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) PutClassificationExportConfigurationAsync(ctx workflow.Context, input *macie2.PutClassificationExportConfigurationInput) *Macie2PutClassificationExportConfigurationFuture {
+func (a *stub) PutClassificationExportConfigurationAsync(ctx workflow.Context, input *macie2.PutClassificationExportConfigurationInput) *PutClassificationExportConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.PutClassificationExportConfiguration", input)
-	return &Macie2PutClassificationExportConfigurationFuture{Future: future}
+	return &PutClassificationExportConfigurationFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *macie2.TagResourceInput) (*macie2.TagResourceOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *macie2.TagResourceInput)
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *macie2.TagResourceInput) *Macie2TagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *macie2.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.TagResource", input)
-	return &Macie2TagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) TestCustomDataIdentifier(ctx workflow.Context, input *macie2.TestCustomDataIdentifierInput) (*macie2.TestCustomDataIdentifierOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) TestCustomDataIdentifier(ctx workflow.Context, input *macie2.Test
 	return &output, err
 }
 
-func (a *stub) TestCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.TestCustomDataIdentifierInput) *Macie2TestCustomDataIdentifierFuture {
+func (a *stub) TestCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.TestCustomDataIdentifierInput) *TestCustomDataIdentifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.TestCustomDataIdentifier", input)
-	return &Macie2TestCustomDataIdentifierFuture{Future: future}
+	return &TestCustomDataIdentifierFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *macie2.UntagResourceInput) (*macie2.UntagResourceOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *macie2.UntagResourceIn
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *macie2.UntagResourceInput) *Macie2UntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *macie2.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.UntagResource", input)
-	return &Macie2UntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateClassificationJob(ctx workflow.Context, input *macie2.UpdateClassificationJobInput) (*macie2.UpdateClassificationJobOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) UpdateClassificationJob(ctx workflow.Context, input *macie2.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateClassificationJobAsync(ctx workflow.Context, input *macie2.UpdateClassificationJobInput) *Macie2UpdateClassificationJobFuture {
+func (a *stub) UpdateClassificationJobAsync(ctx workflow.Context, input *macie2.UpdateClassificationJobInput) *UpdateClassificationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.UpdateClassificationJob", input)
-	return &Macie2UpdateClassificationJobFuture{Future: future}
+	return &UpdateClassificationJobFuture{Future: future}
 }
 
 func (a *stub) UpdateFindingsFilter(ctx workflow.Context, input *macie2.UpdateFindingsFilterInput) (*macie2.UpdateFindingsFilterOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) UpdateFindingsFilter(ctx workflow.Context, input *macie2.UpdateFi
 	return &output, err
 }
 
-func (a *stub) UpdateFindingsFilterAsync(ctx workflow.Context, input *macie2.UpdateFindingsFilterInput) *Macie2UpdateFindingsFilterFuture {
+func (a *stub) UpdateFindingsFilterAsync(ctx workflow.Context, input *macie2.UpdateFindingsFilterInput) *UpdateFindingsFilterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.UpdateFindingsFilter", input)
-	return &Macie2UpdateFindingsFilterFuture{Future: future}
+	return &UpdateFindingsFilterFuture{Future: future}
 }
 
 func (a *stub) UpdateMacieSession(ctx workflow.Context, input *macie2.UpdateMacieSessionInput) (*macie2.UpdateMacieSessionOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) UpdateMacieSession(ctx workflow.Context, input *macie2.UpdateMaci
 	return &output, err
 }
 
-func (a *stub) UpdateMacieSessionAsync(ctx workflow.Context, input *macie2.UpdateMacieSessionInput) *Macie2UpdateMacieSessionFuture {
+func (a *stub) UpdateMacieSessionAsync(ctx workflow.Context, input *macie2.UpdateMacieSessionInput) *UpdateMacieSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.UpdateMacieSession", input)
-	return &Macie2UpdateMacieSessionFuture{Future: future}
+	return &UpdateMacieSessionFuture{Future: future}
 }
 
 func (a *stub) UpdateMemberSession(ctx workflow.Context, input *macie2.UpdateMemberSessionInput) (*macie2.UpdateMemberSessionOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) UpdateMemberSession(ctx workflow.Context, input *macie2.UpdateMem
 	return &output, err
 }
 
-func (a *stub) UpdateMemberSessionAsync(ctx workflow.Context, input *macie2.UpdateMemberSessionInput) *Macie2UpdateMemberSessionFuture {
+func (a *stub) UpdateMemberSessionAsync(ctx workflow.Context, input *macie2.UpdateMemberSessionInput) *UpdateMemberSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.UpdateMemberSession", input)
-	return &Macie2UpdateMemberSessionFuture{Future: future}
+	return &UpdateMemberSessionFuture{Future: future}
 }
 
 func (a *stub) UpdateOrganizationConfiguration(ctx workflow.Context, input *macie2.UpdateOrganizationConfigurationInput) (*macie2.UpdateOrganizationConfigurationOutput, error) {
@@ -1133,7 +1133,7 @@ func (a *stub) UpdateOrganizationConfiguration(ctx workflow.Context, input *maci
 	return &output, err
 }
 
-func (a *stub) UpdateOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.UpdateOrganizationConfigurationInput) *Macie2UpdateOrganizationConfigurationFuture {
+func (a *stub) UpdateOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.UpdateOrganizationConfigurationInput) *UpdateOrganizationConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.macie2.UpdateOrganizationConfiguration", input)
-	return &Macie2UpdateOrganizationConfigurationFuture{Future: future}
+	return &UpdateOrganizationConfigurationFuture{Future: future}
 }

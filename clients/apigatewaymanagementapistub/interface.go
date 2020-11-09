@@ -16,13 +16,13 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DeleteConnection(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) (*apigatewaymanagementapi.DeleteConnectionOutput, error)
-	DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *ApiGatewayManagementApiDeleteConnectionFuture
+	DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *DeleteConnectionFuture
 
 	GetConnection(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) (*apigatewaymanagementapi.GetConnectionOutput, error)
-	GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *ApiGatewayManagementApiGetConnectionFuture
+	GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *GetConnectionFuture
 
 	PostToConnection(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) (*apigatewaymanagementapi.PostToConnectionOutput, error)
-	PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApiGatewayManagementApiPostToConnectionFuture
+	PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *PostToConnectionFuture
 }
 
 func NewClient() Client {

@@ -16,1101 +16,1101 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CognitoIdentityProviderAddCustomAttributesFuture struct {
+type AddCustomAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAddCustomAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AddCustomAttributesOutput, error) {
+func (r *AddCustomAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AddCustomAttributesOutput, error) {
 	var output cognitoidentityprovider.AddCustomAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminAddUserToGroupFuture struct {
+type AdminAddUserToGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminAddUserToGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminAddUserToGroupOutput, error) {
+func (r *AdminAddUserToGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminAddUserToGroupOutput, error) {
 	var output cognitoidentityprovider.AdminAddUserToGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminConfirmSignUpFuture struct {
+type AdminConfirmSignUpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminConfirmSignUpFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminConfirmSignUpOutput, error) {
+func (r *AdminConfirmSignUpFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminConfirmSignUpOutput, error) {
 	var output cognitoidentityprovider.AdminConfirmSignUpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminCreateUserFuture struct {
+type AdminCreateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminCreateUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminCreateUserOutput, error) {
+func (r *AdminCreateUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminCreateUserOutput, error) {
 	var output cognitoidentityprovider.AdminCreateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminDeleteUserFuture struct {
+type AdminDeleteUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminDeleteUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminDeleteUserOutput, error) {
+func (r *AdminDeleteUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminDeleteUserOutput, error) {
 	var output cognitoidentityprovider.AdminDeleteUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminDeleteUserAttributesFuture struct {
+type AdminDeleteUserAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminDeleteUserAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminDeleteUserAttributesOutput, error) {
+func (r *AdminDeleteUserAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminDeleteUserAttributesOutput, error) {
 	var output cognitoidentityprovider.AdminDeleteUserAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminDisableProviderForUserFuture struct {
+type AdminDisableProviderForUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminDisableProviderForUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminDisableProviderForUserOutput, error) {
+func (r *AdminDisableProviderForUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminDisableProviderForUserOutput, error) {
 	var output cognitoidentityprovider.AdminDisableProviderForUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminDisableUserFuture struct {
+type AdminDisableUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminDisableUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminDisableUserOutput, error) {
+func (r *AdminDisableUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminDisableUserOutput, error) {
 	var output cognitoidentityprovider.AdminDisableUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminEnableUserFuture struct {
+type AdminEnableUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminEnableUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminEnableUserOutput, error) {
+func (r *AdminEnableUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminEnableUserOutput, error) {
 	var output cognitoidentityprovider.AdminEnableUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminForgetDeviceFuture struct {
+type AdminForgetDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminForgetDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminForgetDeviceOutput, error) {
+func (r *AdminForgetDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminForgetDeviceOutput, error) {
 	var output cognitoidentityprovider.AdminForgetDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminGetDeviceFuture struct {
+type AdminGetDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminGetDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminGetDeviceOutput, error) {
+func (r *AdminGetDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminGetDeviceOutput, error) {
 	var output cognitoidentityprovider.AdminGetDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminGetUserFuture struct {
+type AdminGetUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminGetUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminGetUserOutput, error) {
+func (r *AdminGetUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminGetUserOutput, error) {
 	var output cognitoidentityprovider.AdminGetUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminInitiateAuthFuture struct {
+type AdminInitiateAuthFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminInitiateAuthFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminInitiateAuthOutput, error) {
+func (r *AdminInitiateAuthFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminInitiateAuthOutput, error) {
 	var output cognitoidentityprovider.AdminInitiateAuthOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminLinkProviderForUserFuture struct {
+type AdminLinkProviderForUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminLinkProviderForUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminLinkProviderForUserOutput, error) {
+func (r *AdminLinkProviderForUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminLinkProviderForUserOutput, error) {
 	var output cognitoidentityprovider.AdminLinkProviderForUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminListDevicesFuture struct {
+type AdminListDevicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminListDevicesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminListDevicesOutput, error) {
+func (r *AdminListDevicesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminListDevicesOutput, error) {
 	var output cognitoidentityprovider.AdminListDevicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminListGroupsForUserFuture struct {
+type AdminListGroupsForUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminListGroupsForUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminListGroupsForUserOutput, error) {
+func (r *AdminListGroupsForUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminListGroupsForUserOutput, error) {
 	var output cognitoidentityprovider.AdminListGroupsForUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminListUserAuthEventsFuture struct {
+type AdminListUserAuthEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminListUserAuthEventsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminListUserAuthEventsOutput, error) {
+func (r *AdminListUserAuthEventsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminListUserAuthEventsOutput, error) {
 	var output cognitoidentityprovider.AdminListUserAuthEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminRemoveUserFromGroupFuture struct {
+type AdminRemoveUserFromGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminRemoveUserFromGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminRemoveUserFromGroupOutput, error) {
+func (r *AdminRemoveUserFromGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminRemoveUserFromGroupOutput, error) {
 	var output cognitoidentityprovider.AdminRemoveUserFromGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminResetUserPasswordFuture struct {
+type AdminResetUserPasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminResetUserPasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminResetUserPasswordOutput, error) {
+func (r *AdminResetUserPasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminResetUserPasswordOutput, error) {
 	var output cognitoidentityprovider.AdminResetUserPasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminRespondToAuthChallengeFuture struct {
+type AdminRespondToAuthChallengeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminRespondToAuthChallengeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminRespondToAuthChallengeOutput, error) {
+func (r *AdminRespondToAuthChallengeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminRespondToAuthChallengeOutput, error) {
 	var output cognitoidentityprovider.AdminRespondToAuthChallengeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminSetUserMFAPreferenceFuture struct {
+type AdminSetUserMFAPreferenceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminSetUserMFAPreferenceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminSetUserMFAPreferenceOutput, error) {
+func (r *AdminSetUserMFAPreferenceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminSetUserMFAPreferenceOutput, error) {
 	var output cognitoidentityprovider.AdminSetUserMFAPreferenceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminSetUserPasswordFuture struct {
+type AdminSetUserPasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminSetUserPasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminSetUserPasswordOutput, error) {
+func (r *AdminSetUserPasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminSetUserPasswordOutput, error) {
 	var output cognitoidentityprovider.AdminSetUserPasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminSetUserSettingsFuture struct {
+type AdminSetUserSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminSetUserSettingsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminSetUserSettingsOutput, error) {
+func (r *AdminSetUserSettingsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminSetUserSettingsOutput, error) {
 	var output cognitoidentityprovider.AdminSetUserSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminUpdateAuthEventFeedbackFuture struct {
+type AdminUpdateAuthEventFeedbackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminUpdateAuthEventFeedbackFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput, error) {
+func (r *AdminUpdateAuthEventFeedbackFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput, error) {
 	var output cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminUpdateDeviceStatusFuture struct {
+type AdminUpdateDeviceStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminUpdateDeviceStatusFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminUpdateDeviceStatusOutput, error) {
+func (r *AdminUpdateDeviceStatusFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminUpdateDeviceStatusOutput, error) {
 	var output cognitoidentityprovider.AdminUpdateDeviceStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminUpdateUserAttributesFuture struct {
+type AdminUpdateUserAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminUpdateUserAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminUpdateUserAttributesOutput, error) {
+func (r *AdminUpdateUserAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminUpdateUserAttributesOutput, error) {
 	var output cognitoidentityprovider.AdminUpdateUserAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAdminUserGlobalSignOutFuture struct {
+type AdminUserGlobalSignOutFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAdminUserGlobalSignOutFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminUserGlobalSignOutOutput, error) {
+func (r *AdminUserGlobalSignOutFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AdminUserGlobalSignOutOutput, error) {
 	var output cognitoidentityprovider.AdminUserGlobalSignOutOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderAssociateSoftwareTokenFuture struct {
+type AssociateSoftwareTokenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderAssociateSoftwareTokenFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AssociateSoftwareTokenOutput, error) {
+func (r *AssociateSoftwareTokenFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.AssociateSoftwareTokenOutput, error) {
 	var output cognitoidentityprovider.AssociateSoftwareTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderChangePasswordFuture struct {
+type ChangePasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderChangePasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ChangePasswordOutput, error) {
+func (r *ChangePasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ChangePasswordOutput, error) {
 	var output cognitoidentityprovider.ChangePasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderConfirmDeviceFuture struct {
+type ConfirmDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderConfirmDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ConfirmDeviceOutput, error) {
+func (r *ConfirmDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ConfirmDeviceOutput, error) {
 	var output cognitoidentityprovider.ConfirmDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderConfirmForgotPasswordFuture struct {
+type ConfirmForgotPasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderConfirmForgotPasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ConfirmForgotPasswordOutput, error) {
+func (r *ConfirmForgotPasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ConfirmForgotPasswordOutput, error) {
 	var output cognitoidentityprovider.ConfirmForgotPasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderConfirmSignUpFuture struct {
+type ConfirmSignUpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderConfirmSignUpFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ConfirmSignUpOutput, error) {
+func (r *ConfirmSignUpFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ConfirmSignUpOutput, error) {
 	var output cognitoidentityprovider.ConfirmSignUpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderCreateGroupFuture struct {
+type CreateGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderCreateGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateGroupOutput, error) {
+func (r *CreateGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateGroupOutput, error) {
 	var output cognitoidentityprovider.CreateGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderCreateIdentityProviderFuture struct {
+type CreateIdentityProviderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderCreateIdentityProviderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateIdentityProviderOutput, error) {
+func (r *CreateIdentityProviderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateIdentityProviderOutput, error) {
 	var output cognitoidentityprovider.CreateIdentityProviderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderCreateResourceServerFuture struct {
+type CreateResourceServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderCreateResourceServerFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateResourceServerOutput, error) {
+func (r *CreateResourceServerFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateResourceServerOutput, error) {
 	var output cognitoidentityprovider.CreateResourceServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderCreateUserImportJobFuture struct {
+type CreateUserImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderCreateUserImportJobFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateUserImportJobOutput, error) {
+func (r *CreateUserImportJobFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateUserImportJobOutput, error) {
 	var output cognitoidentityprovider.CreateUserImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderCreateUserPoolFuture struct {
+type CreateUserPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderCreateUserPoolFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateUserPoolOutput, error) {
+func (r *CreateUserPoolFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateUserPoolOutput, error) {
 	var output cognitoidentityprovider.CreateUserPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderCreateUserPoolClientFuture struct {
+type CreateUserPoolClientFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderCreateUserPoolClientFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateUserPoolClientOutput, error) {
+func (r *CreateUserPoolClientFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateUserPoolClientOutput, error) {
 	var output cognitoidentityprovider.CreateUserPoolClientOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderCreateUserPoolDomainFuture struct {
+type CreateUserPoolDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderCreateUserPoolDomainFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateUserPoolDomainOutput, error) {
+func (r *CreateUserPoolDomainFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.CreateUserPoolDomainOutput, error) {
 	var output cognitoidentityprovider.CreateUserPoolDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDeleteGroupFuture struct {
+type DeleteGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDeleteGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteGroupOutput, error) {
+func (r *DeleteGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteGroupOutput, error) {
 	var output cognitoidentityprovider.DeleteGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDeleteIdentityProviderFuture struct {
+type DeleteIdentityProviderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDeleteIdentityProviderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteIdentityProviderOutput, error) {
+func (r *DeleteIdentityProviderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteIdentityProviderOutput, error) {
 	var output cognitoidentityprovider.DeleteIdentityProviderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDeleteResourceServerFuture struct {
+type DeleteResourceServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDeleteResourceServerFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteResourceServerOutput, error) {
+func (r *DeleteResourceServerFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteResourceServerOutput, error) {
 	var output cognitoidentityprovider.DeleteResourceServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDeleteUserFuture struct {
+type DeleteUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDeleteUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserOutput, error) {
+func (r *DeleteUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserOutput, error) {
 	var output cognitoidentityprovider.DeleteUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDeleteUserAttributesFuture struct {
+type DeleteUserAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDeleteUserAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserAttributesOutput, error) {
+func (r *DeleteUserAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserAttributesOutput, error) {
 	var output cognitoidentityprovider.DeleteUserAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDeleteUserPoolFuture struct {
+type DeleteUserPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDeleteUserPoolFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserPoolOutput, error) {
+func (r *DeleteUserPoolFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserPoolOutput, error) {
 	var output cognitoidentityprovider.DeleteUserPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDeleteUserPoolClientFuture struct {
+type DeleteUserPoolClientFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDeleteUserPoolClientFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserPoolClientOutput, error) {
+func (r *DeleteUserPoolClientFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserPoolClientOutput, error) {
 	var output cognitoidentityprovider.DeleteUserPoolClientOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDeleteUserPoolDomainFuture struct {
+type DeleteUserPoolDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDeleteUserPoolDomainFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserPoolDomainOutput, error) {
+func (r *DeleteUserPoolDomainFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DeleteUserPoolDomainOutput, error) {
 	var output cognitoidentityprovider.DeleteUserPoolDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDescribeIdentityProviderFuture struct {
+type DescribeIdentityProviderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDescribeIdentityProviderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeIdentityProviderOutput, error) {
+func (r *DescribeIdentityProviderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeIdentityProviderOutput, error) {
 	var output cognitoidentityprovider.DescribeIdentityProviderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDescribeResourceServerFuture struct {
+type DescribeResourceServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDescribeResourceServerFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeResourceServerOutput, error) {
+func (r *DescribeResourceServerFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeResourceServerOutput, error) {
 	var output cognitoidentityprovider.DescribeResourceServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDescribeRiskConfigurationFuture struct {
+type DescribeRiskConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDescribeRiskConfigurationFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeRiskConfigurationOutput, error) {
+func (r *DescribeRiskConfigurationFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeRiskConfigurationOutput, error) {
 	var output cognitoidentityprovider.DescribeRiskConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDescribeUserImportJobFuture struct {
+type DescribeUserImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDescribeUserImportJobFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeUserImportJobOutput, error) {
+func (r *DescribeUserImportJobFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeUserImportJobOutput, error) {
 	var output cognitoidentityprovider.DescribeUserImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDescribeUserPoolFuture struct {
+type DescribeUserPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDescribeUserPoolFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeUserPoolOutput, error) {
+func (r *DescribeUserPoolFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeUserPoolOutput, error) {
 	var output cognitoidentityprovider.DescribeUserPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDescribeUserPoolClientFuture struct {
+type DescribeUserPoolClientFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDescribeUserPoolClientFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeUserPoolClientOutput, error) {
+func (r *DescribeUserPoolClientFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeUserPoolClientOutput, error) {
 	var output cognitoidentityprovider.DescribeUserPoolClientOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderDescribeUserPoolDomainFuture struct {
+type DescribeUserPoolDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderDescribeUserPoolDomainFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeUserPoolDomainOutput, error) {
+func (r *DescribeUserPoolDomainFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.DescribeUserPoolDomainOutput, error) {
 	var output cognitoidentityprovider.DescribeUserPoolDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderForgetDeviceFuture struct {
+type ForgetDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderForgetDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ForgetDeviceOutput, error) {
+func (r *ForgetDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ForgetDeviceOutput, error) {
 	var output cognitoidentityprovider.ForgetDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderForgotPasswordFuture struct {
+type ForgotPasswordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderForgotPasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ForgotPasswordOutput, error) {
+func (r *ForgotPasswordFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ForgotPasswordOutput, error) {
 	var output cognitoidentityprovider.ForgotPasswordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetCSVHeaderFuture struct {
+type GetCSVHeaderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetCSVHeaderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetCSVHeaderOutput, error) {
+func (r *GetCSVHeaderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetCSVHeaderOutput, error) {
 	var output cognitoidentityprovider.GetCSVHeaderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetDeviceFuture struct {
+type GetDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetDeviceOutput, error) {
+func (r *GetDeviceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetDeviceOutput, error) {
 	var output cognitoidentityprovider.GetDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetGroupFuture struct {
+type GetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetGroupOutput, error) {
+func (r *GetGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetGroupOutput, error) {
 	var output cognitoidentityprovider.GetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetIdentityProviderByIdentifierFuture struct {
+type GetIdentityProviderByIdentifierFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetIdentityProviderByIdentifierFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetIdentityProviderByIdentifierOutput, error) {
+func (r *GetIdentityProviderByIdentifierFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetIdentityProviderByIdentifierOutput, error) {
 	var output cognitoidentityprovider.GetIdentityProviderByIdentifierOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetSigningCertificateFuture struct {
+type GetSigningCertificateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetSigningCertificateFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetSigningCertificateOutput, error) {
+func (r *GetSigningCertificateFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetSigningCertificateOutput, error) {
 	var output cognitoidentityprovider.GetSigningCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetUICustomizationFuture struct {
+type GetUICustomizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetUICustomizationFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetUICustomizationOutput, error) {
+func (r *GetUICustomizationFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetUICustomizationOutput, error) {
 	var output cognitoidentityprovider.GetUICustomizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetUserFuture struct {
+type GetUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetUserOutput, error) {
+func (r *GetUserFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetUserOutput, error) {
 	var output cognitoidentityprovider.GetUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetUserAttributeVerificationCodeFuture struct {
+type GetUserAttributeVerificationCodeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetUserAttributeVerificationCodeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetUserAttributeVerificationCodeOutput, error) {
+func (r *GetUserAttributeVerificationCodeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetUserAttributeVerificationCodeOutput, error) {
 	var output cognitoidentityprovider.GetUserAttributeVerificationCodeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGetUserPoolMfaConfigFuture struct {
+type GetUserPoolMfaConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGetUserPoolMfaConfigFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error) {
+func (r *GetUserPoolMfaConfigFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error) {
 	var output cognitoidentityprovider.GetUserPoolMfaConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderGlobalSignOutFuture struct {
+type GlobalSignOutFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderGlobalSignOutFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GlobalSignOutOutput, error) {
+func (r *GlobalSignOutFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.GlobalSignOutOutput, error) {
 	var output cognitoidentityprovider.GlobalSignOutOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderInitiateAuthFuture struct {
+type InitiateAuthFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderInitiateAuthFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.InitiateAuthOutput, error) {
+func (r *InitiateAuthFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.InitiateAuthOutput, error) {
 	var output cognitoidentityprovider.InitiateAuthOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListDevicesFuture struct {
+type ListDevicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListDevicesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListDevicesOutput, error) {
+func (r *ListDevicesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListDevicesOutput, error) {
 	var output cognitoidentityprovider.ListDevicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListGroupsFuture struct {
+type ListGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListGroupsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListGroupsOutput, error) {
+func (r *ListGroupsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListGroupsOutput, error) {
 	var output cognitoidentityprovider.ListGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListIdentityProvidersFuture struct {
+type ListIdentityProvidersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListIdentityProvidersFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListIdentityProvidersOutput, error) {
+func (r *ListIdentityProvidersFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListIdentityProvidersOutput, error) {
 	var output cognitoidentityprovider.ListIdentityProvidersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListResourceServersFuture struct {
+type ListResourceServersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListResourceServersFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListResourceServersOutput, error) {
+func (r *ListResourceServersFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListResourceServersOutput, error) {
 	var output cognitoidentityprovider.ListResourceServersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListTagsForResourceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListTagsForResourceOutput, error) {
 	var output cognitoidentityprovider.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListUserImportJobsFuture struct {
+type ListUserImportJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListUserImportJobsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUserImportJobsOutput, error) {
+func (r *ListUserImportJobsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUserImportJobsOutput, error) {
 	var output cognitoidentityprovider.ListUserImportJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListUserPoolClientsFuture struct {
+type ListUserPoolClientsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListUserPoolClientsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUserPoolClientsOutput, error) {
+func (r *ListUserPoolClientsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUserPoolClientsOutput, error) {
 	var output cognitoidentityprovider.ListUserPoolClientsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListUserPoolsFuture struct {
+type ListUserPoolsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListUserPoolsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUserPoolsOutput, error) {
+func (r *ListUserPoolsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUserPoolsOutput, error) {
 	var output cognitoidentityprovider.ListUserPoolsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListUsersFuture struct {
+type ListUsersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListUsersFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUsersOutput, error) {
+func (r *ListUsersFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUsersOutput, error) {
 	var output cognitoidentityprovider.ListUsersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderListUsersInGroupFuture struct {
+type ListUsersInGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderListUsersInGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUsersInGroupOutput, error) {
+func (r *ListUsersInGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ListUsersInGroupOutput, error) {
 	var output cognitoidentityprovider.ListUsersInGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderResendConfirmationCodeFuture struct {
+type ResendConfirmationCodeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderResendConfirmationCodeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ResendConfirmationCodeOutput, error) {
+func (r *ResendConfirmationCodeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.ResendConfirmationCodeOutput, error) {
 	var output cognitoidentityprovider.ResendConfirmationCodeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderRespondToAuthChallengeFuture struct {
+type RespondToAuthChallengeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderRespondToAuthChallengeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.RespondToAuthChallengeOutput, error) {
+func (r *RespondToAuthChallengeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.RespondToAuthChallengeOutput, error) {
 	var output cognitoidentityprovider.RespondToAuthChallengeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderSetRiskConfigurationFuture struct {
+type SetRiskConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderSetRiskConfigurationFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetRiskConfigurationOutput, error) {
+func (r *SetRiskConfigurationFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetRiskConfigurationOutput, error) {
 	var output cognitoidentityprovider.SetRiskConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderSetUICustomizationFuture struct {
+type SetUICustomizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderSetUICustomizationFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetUICustomizationOutput, error) {
+func (r *SetUICustomizationFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetUICustomizationOutput, error) {
 	var output cognitoidentityprovider.SetUICustomizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderSetUserMFAPreferenceFuture struct {
+type SetUserMFAPreferenceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderSetUserMFAPreferenceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetUserMFAPreferenceOutput, error) {
+func (r *SetUserMFAPreferenceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetUserMFAPreferenceOutput, error) {
 	var output cognitoidentityprovider.SetUserMFAPreferenceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderSetUserPoolMfaConfigFuture struct {
+type SetUserPoolMfaConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderSetUserPoolMfaConfigFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetUserPoolMfaConfigOutput, error) {
+func (r *SetUserPoolMfaConfigFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetUserPoolMfaConfigOutput, error) {
 	var output cognitoidentityprovider.SetUserPoolMfaConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderSetUserSettingsFuture struct {
+type SetUserSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderSetUserSettingsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetUserSettingsOutput, error) {
+func (r *SetUserSettingsFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SetUserSettingsOutput, error) {
 	var output cognitoidentityprovider.SetUserSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderSignUpFuture struct {
+type SignUpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderSignUpFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SignUpOutput, error) {
+func (r *SignUpFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.SignUpOutput, error) {
 	var output cognitoidentityprovider.SignUpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderStartUserImportJobFuture struct {
+type StartUserImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderStartUserImportJobFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.StartUserImportJobOutput, error) {
+func (r *StartUserImportJobFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.StartUserImportJobOutput, error) {
 	var output cognitoidentityprovider.StartUserImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderStopUserImportJobFuture struct {
+type StopUserImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderStopUserImportJobFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.StopUserImportJobOutput, error) {
+func (r *StopUserImportJobFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.StopUserImportJobOutput, error) {
 	var output cognitoidentityprovider.StopUserImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderTagResourceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.TagResourceOutput, error) {
 	var output cognitoidentityprovider.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUntagResourceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UntagResourceOutput, error) {
 	var output cognitoidentityprovider.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateAuthEventFeedbackFuture struct {
+type UpdateAuthEventFeedbackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateAuthEventFeedbackFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateAuthEventFeedbackOutput, error) {
+func (r *UpdateAuthEventFeedbackFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateAuthEventFeedbackOutput, error) {
 	var output cognitoidentityprovider.UpdateAuthEventFeedbackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateDeviceStatusFuture struct {
+type UpdateDeviceStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateDeviceStatusFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateDeviceStatusOutput, error) {
+func (r *UpdateDeviceStatusFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateDeviceStatusOutput, error) {
 	var output cognitoidentityprovider.UpdateDeviceStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateGroupFuture struct {
+type UpdateGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateGroupOutput, error) {
+func (r *UpdateGroupFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateGroupOutput, error) {
 	var output cognitoidentityprovider.UpdateGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateIdentityProviderFuture struct {
+type UpdateIdentityProviderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateIdentityProviderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateIdentityProviderOutput, error) {
+func (r *UpdateIdentityProviderFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateIdentityProviderOutput, error) {
 	var output cognitoidentityprovider.UpdateIdentityProviderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateResourceServerFuture struct {
+type UpdateResourceServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateResourceServerFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateResourceServerOutput, error) {
+func (r *UpdateResourceServerFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateResourceServerOutput, error) {
 	var output cognitoidentityprovider.UpdateResourceServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateUserAttributesFuture struct {
+type UpdateUserAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateUserAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateUserAttributesOutput, error) {
+func (r *UpdateUserAttributesFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateUserAttributesOutput, error) {
 	var output cognitoidentityprovider.UpdateUserAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateUserPoolFuture struct {
+type UpdateUserPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateUserPoolFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateUserPoolOutput, error) {
+func (r *UpdateUserPoolFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateUserPoolOutput, error) {
 	var output cognitoidentityprovider.UpdateUserPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateUserPoolClientFuture struct {
+type UpdateUserPoolClientFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateUserPoolClientFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateUserPoolClientOutput, error) {
+func (r *UpdateUserPoolClientFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateUserPoolClientOutput, error) {
 	var output cognitoidentityprovider.UpdateUserPoolClientOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderUpdateUserPoolDomainFuture struct {
+type UpdateUserPoolDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderUpdateUserPoolDomainFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateUserPoolDomainOutput, error) {
+func (r *UpdateUserPoolDomainFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.UpdateUserPoolDomainOutput, error) {
 	var output cognitoidentityprovider.UpdateUserPoolDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderVerifySoftwareTokenFuture struct {
+type VerifySoftwareTokenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderVerifySoftwareTokenFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.VerifySoftwareTokenOutput, error) {
+func (r *VerifySoftwareTokenFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.VerifySoftwareTokenOutput, error) {
 	var output cognitoidentityprovider.VerifySoftwareTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CognitoIdentityProviderVerifyUserAttributeFuture struct {
+type VerifyUserAttributeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CognitoIdentityProviderVerifyUserAttributeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.VerifyUserAttributeOutput, error) {
+func (r *VerifyUserAttributeFuture) Get(ctx workflow.Context) (*cognitoidentityprovider.VerifyUserAttributeOutput, error) {
 	var output cognitoidentityprovider.VerifyUserAttributeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -1122,9 +1122,9 @@ func (a *stub) AddCustomAttributes(ctx workflow.Context, input *cognitoidentityp
 	return &output, err
 }
 
-func (a *stub) AddCustomAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AddCustomAttributesInput) *CognitoIdentityProviderAddCustomAttributesFuture {
+func (a *stub) AddCustomAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AddCustomAttributesInput) *AddCustomAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AddCustomAttributes", input)
-	return &CognitoIdentityProviderAddCustomAttributesFuture{Future: future}
+	return &AddCustomAttributesFuture{Future: future}
 }
 
 func (a *stub) AdminAddUserToGroup(ctx workflow.Context, input *cognitoidentityprovider.AdminAddUserToGroupInput) (*cognitoidentityprovider.AdminAddUserToGroupOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) AdminAddUserToGroup(ctx workflow.Context, input *cognitoidentityp
 	return &output, err
 }
 
-func (a *stub) AdminAddUserToGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminAddUserToGroupInput) *CognitoIdentityProviderAdminAddUserToGroupFuture {
+func (a *stub) AdminAddUserToGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminAddUserToGroupInput) *AdminAddUserToGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminAddUserToGroup", input)
-	return &CognitoIdentityProviderAdminAddUserToGroupFuture{Future: future}
+	return &AdminAddUserToGroupFuture{Future: future}
 }
 
 func (a *stub) AdminConfirmSignUp(ctx workflow.Context, input *cognitoidentityprovider.AdminConfirmSignUpInput) (*cognitoidentityprovider.AdminConfirmSignUpOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) AdminConfirmSignUp(ctx workflow.Context, input *cognitoidentitypr
 	return &output, err
 }
 
-func (a *stub) AdminConfirmSignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminConfirmSignUpInput) *CognitoIdentityProviderAdminConfirmSignUpFuture {
+func (a *stub) AdminConfirmSignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminConfirmSignUpInput) *AdminConfirmSignUpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminConfirmSignUp", input)
-	return &CognitoIdentityProviderAdminConfirmSignUpFuture{Future: future}
+	return &AdminConfirmSignUpFuture{Future: future}
 }
 
 func (a *stub) AdminCreateUser(ctx workflow.Context, input *cognitoidentityprovider.AdminCreateUserInput) (*cognitoidentityprovider.AdminCreateUserOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) AdminCreateUser(ctx workflow.Context, input *cognitoidentityprovi
 	return &output, err
 }
 
-func (a *stub) AdminCreateUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminCreateUserInput) *CognitoIdentityProviderAdminCreateUserFuture {
+func (a *stub) AdminCreateUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminCreateUserInput) *AdminCreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminCreateUser", input)
-	return &CognitoIdentityProviderAdminCreateUserFuture{Future: future}
+	return &AdminCreateUserFuture{Future: future}
 }
 
 func (a *stub) AdminDeleteUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserInput) (*cognitoidentityprovider.AdminDeleteUserOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) AdminDeleteUser(ctx workflow.Context, input *cognitoidentityprovi
 	return &output, err
 }
 
-func (a *stub) AdminDeleteUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserInput) *CognitoIdentityProviderAdminDeleteUserFuture {
+func (a *stub) AdminDeleteUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserInput) *AdminDeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminDeleteUser", input)
-	return &CognitoIdentityProviderAdminDeleteUserFuture{Future: future}
+	return &AdminDeleteUserFuture{Future: future}
 }
 
 func (a *stub) AdminDeleteUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserAttributesInput) (*cognitoidentityprovider.AdminDeleteUserAttributesOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) AdminDeleteUserAttributes(ctx workflow.Context, input *cognitoide
 	return &output, err
 }
 
-func (a *stub) AdminDeleteUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserAttributesInput) *CognitoIdentityProviderAdminDeleteUserAttributesFuture {
+func (a *stub) AdminDeleteUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserAttributesInput) *AdminDeleteUserAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminDeleteUserAttributes", input)
-	return &CognitoIdentityProviderAdminDeleteUserAttributesFuture{Future: future}
+	return &AdminDeleteUserAttributesFuture{Future: future}
 }
 
 func (a *stub) AdminDisableProviderForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableProviderForUserInput) (*cognitoidentityprovider.AdminDisableProviderForUserOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) AdminDisableProviderForUser(ctx workflow.Context, input *cognitoi
 	return &output, err
 }
 
-func (a *stub) AdminDisableProviderForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableProviderForUserInput) *CognitoIdentityProviderAdminDisableProviderForUserFuture {
+func (a *stub) AdminDisableProviderForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableProviderForUserInput) *AdminDisableProviderForUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminDisableProviderForUser", input)
-	return &CognitoIdentityProviderAdminDisableProviderForUserFuture{Future: future}
+	return &AdminDisableProviderForUserFuture{Future: future}
 }
 
 func (a *stub) AdminDisableUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableUserInput) (*cognitoidentityprovider.AdminDisableUserOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) AdminDisableUser(ctx workflow.Context, input *cognitoidentityprov
 	return &output, err
 }
 
-func (a *stub) AdminDisableUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableUserInput) *CognitoIdentityProviderAdminDisableUserFuture {
+func (a *stub) AdminDisableUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableUserInput) *AdminDisableUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminDisableUser", input)
-	return &CognitoIdentityProviderAdminDisableUserFuture{Future: future}
+	return &AdminDisableUserFuture{Future: future}
 }
 
 func (a *stub) AdminEnableUser(ctx workflow.Context, input *cognitoidentityprovider.AdminEnableUserInput) (*cognitoidentityprovider.AdminEnableUserOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) AdminEnableUser(ctx workflow.Context, input *cognitoidentityprovi
 	return &output, err
 }
 
-func (a *stub) AdminEnableUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminEnableUserInput) *CognitoIdentityProviderAdminEnableUserFuture {
+func (a *stub) AdminEnableUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminEnableUserInput) *AdminEnableUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminEnableUser", input)
-	return &CognitoIdentityProviderAdminEnableUserFuture{Future: future}
+	return &AdminEnableUserFuture{Future: future}
 }
 
 func (a *stub) AdminForgetDevice(ctx workflow.Context, input *cognitoidentityprovider.AdminForgetDeviceInput) (*cognitoidentityprovider.AdminForgetDeviceOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) AdminForgetDevice(ctx workflow.Context, input *cognitoidentitypro
 	return &output, err
 }
 
-func (a *stub) AdminForgetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminForgetDeviceInput) *CognitoIdentityProviderAdminForgetDeviceFuture {
+func (a *stub) AdminForgetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminForgetDeviceInput) *AdminForgetDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminForgetDevice", input)
-	return &CognitoIdentityProviderAdminForgetDeviceFuture{Future: future}
+	return &AdminForgetDeviceFuture{Future: future}
 }
 
 func (a *stub) AdminGetDevice(ctx workflow.Context, input *cognitoidentityprovider.AdminGetDeviceInput) (*cognitoidentityprovider.AdminGetDeviceOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) AdminGetDevice(ctx workflow.Context, input *cognitoidentityprovid
 	return &output, err
 }
 
-func (a *stub) AdminGetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminGetDeviceInput) *CognitoIdentityProviderAdminGetDeviceFuture {
+func (a *stub) AdminGetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminGetDeviceInput) *AdminGetDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminGetDevice", input)
-	return &CognitoIdentityProviderAdminGetDeviceFuture{Future: future}
+	return &AdminGetDeviceFuture{Future: future}
 }
 
 func (a *stub) AdminGetUser(ctx workflow.Context, input *cognitoidentityprovider.AdminGetUserInput) (*cognitoidentityprovider.AdminGetUserOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) AdminGetUser(ctx workflow.Context, input *cognitoidentityprovider
 	return &output, err
 }
 
-func (a *stub) AdminGetUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminGetUserInput) *CognitoIdentityProviderAdminGetUserFuture {
+func (a *stub) AdminGetUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminGetUserInput) *AdminGetUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminGetUser", input)
-	return &CognitoIdentityProviderAdminGetUserFuture{Future: future}
+	return &AdminGetUserFuture{Future: future}
 }
 
 func (a *stub) AdminInitiateAuth(ctx workflow.Context, input *cognitoidentityprovider.AdminInitiateAuthInput) (*cognitoidentityprovider.AdminInitiateAuthOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) AdminInitiateAuth(ctx workflow.Context, input *cognitoidentitypro
 	return &output, err
 }
 
-func (a *stub) AdminInitiateAuthAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminInitiateAuthInput) *CognitoIdentityProviderAdminInitiateAuthFuture {
+func (a *stub) AdminInitiateAuthAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminInitiateAuthInput) *AdminInitiateAuthFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminInitiateAuth", input)
-	return &CognitoIdentityProviderAdminInitiateAuthFuture{Future: future}
+	return &AdminInitiateAuthFuture{Future: future}
 }
 
 func (a *stub) AdminLinkProviderForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminLinkProviderForUserInput) (*cognitoidentityprovider.AdminLinkProviderForUserOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) AdminLinkProviderForUser(ctx workflow.Context, input *cognitoiden
 	return &output, err
 }
 
-func (a *stub) AdminLinkProviderForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminLinkProviderForUserInput) *CognitoIdentityProviderAdminLinkProviderForUserFuture {
+func (a *stub) AdminLinkProviderForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminLinkProviderForUserInput) *AdminLinkProviderForUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminLinkProviderForUser", input)
-	return &CognitoIdentityProviderAdminLinkProviderForUserFuture{Future: future}
+	return &AdminLinkProviderForUserFuture{Future: future}
 }
 
 func (a *stub) AdminListDevices(ctx workflow.Context, input *cognitoidentityprovider.AdminListDevicesInput) (*cognitoidentityprovider.AdminListDevicesOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) AdminListDevices(ctx workflow.Context, input *cognitoidentityprov
 	return &output, err
 }
 
-func (a *stub) AdminListDevicesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListDevicesInput) *CognitoIdentityProviderAdminListDevicesFuture {
+func (a *stub) AdminListDevicesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListDevicesInput) *AdminListDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminListDevices", input)
-	return &CognitoIdentityProviderAdminListDevicesFuture{Future: future}
+	return &AdminListDevicesFuture{Future: future}
 }
 
 func (a *stub) AdminListGroupsForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminListGroupsForUserInput) (*cognitoidentityprovider.AdminListGroupsForUserOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) AdminListGroupsForUser(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) AdminListGroupsForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListGroupsForUserInput) *CognitoIdentityProviderAdminListGroupsForUserFuture {
+func (a *stub) AdminListGroupsForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListGroupsForUserInput) *AdminListGroupsForUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminListGroupsForUser", input)
-	return &CognitoIdentityProviderAdminListGroupsForUserFuture{Future: future}
+	return &AdminListGroupsForUserFuture{Future: future}
 }
 
 func (a *stub) AdminListUserAuthEvents(ctx workflow.Context, input *cognitoidentityprovider.AdminListUserAuthEventsInput) (*cognitoidentityprovider.AdminListUserAuthEventsOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) AdminListUserAuthEvents(ctx workflow.Context, input *cognitoident
 	return &output, err
 }
 
-func (a *stub) AdminListUserAuthEventsAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListUserAuthEventsInput) *CognitoIdentityProviderAdminListUserAuthEventsFuture {
+func (a *stub) AdminListUserAuthEventsAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListUserAuthEventsInput) *AdminListUserAuthEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminListUserAuthEvents", input)
-	return &CognitoIdentityProviderAdminListUserAuthEventsFuture{Future: future}
+	return &AdminListUserAuthEventsFuture{Future: future}
 }
 
 func (a *stub) AdminRemoveUserFromGroup(ctx workflow.Context, input *cognitoidentityprovider.AdminRemoveUserFromGroupInput) (*cognitoidentityprovider.AdminRemoveUserFromGroupOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) AdminRemoveUserFromGroup(ctx workflow.Context, input *cognitoiden
 	return &output, err
 }
 
-func (a *stub) AdminRemoveUserFromGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminRemoveUserFromGroupInput) *CognitoIdentityProviderAdminRemoveUserFromGroupFuture {
+func (a *stub) AdminRemoveUserFromGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminRemoveUserFromGroupInput) *AdminRemoveUserFromGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminRemoveUserFromGroup", input)
-	return &CognitoIdentityProviderAdminRemoveUserFromGroupFuture{Future: future}
+	return &AdminRemoveUserFromGroupFuture{Future: future}
 }
 
 func (a *stub) AdminResetUserPassword(ctx workflow.Context, input *cognitoidentityprovider.AdminResetUserPasswordInput) (*cognitoidentityprovider.AdminResetUserPasswordOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) AdminResetUserPassword(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) AdminResetUserPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminResetUserPasswordInput) *CognitoIdentityProviderAdminResetUserPasswordFuture {
+func (a *stub) AdminResetUserPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminResetUserPasswordInput) *AdminResetUserPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminResetUserPassword", input)
-	return &CognitoIdentityProviderAdminResetUserPasswordFuture{Future: future}
+	return &AdminResetUserPasswordFuture{Future: future}
 }
 
 func (a *stub) AdminRespondToAuthChallenge(ctx workflow.Context, input *cognitoidentityprovider.AdminRespondToAuthChallengeInput) (*cognitoidentityprovider.AdminRespondToAuthChallengeOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) AdminRespondToAuthChallenge(ctx workflow.Context, input *cognitoi
 	return &output, err
 }
 
-func (a *stub) AdminRespondToAuthChallengeAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminRespondToAuthChallengeInput) *CognitoIdentityProviderAdminRespondToAuthChallengeFuture {
+func (a *stub) AdminRespondToAuthChallengeAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminRespondToAuthChallengeInput) *AdminRespondToAuthChallengeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminRespondToAuthChallenge", input)
-	return &CognitoIdentityProviderAdminRespondToAuthChallengeFuture{Future: future}
+	return &AdminRespondToAuthChallengeFuture{Future: future}
 }
 
 func (a *stub) AdminSetUserMFAPreference(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) (*cognitoidentityprovider.AdminSetUserMFAPreferenceOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) AdminSetUserMFAPreference(ctx workflow.Context, input *cognitoide
 	return &output, err
 }
 
-func (a *stub) AdminSetUserMFAPreferenceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) *CognitoIdentityProviderAdminSetUserMFAPreferenceFuture {
+func (a *stub) AdminSetUserMFAPreferenceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) *AdminSetUserMFAPreferenceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminSetUserMFAPreference", input)
-	return &CognitoIdentityProviderAdminSetUserMFAPreferenceFuture{Future: future}
+	return &AdminSetUserMFAPreferenceFuture{Future: future}
 }
 
 func (a *stub) AdminSetUserPassword(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserPasswordInput) (*cognitoidentityprovider.AdminSetUserPasswordOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) AdminSetUserPassword(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) AdminSetUserPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserPasswordInput) *CognitoIdentityProviderAdminSetUserPasswordFuture {
+func (a *stub) AdminSetUserPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserPasswordInput) *AdminSetUserPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminSetUserPassword", input)
-	return &CognitoIdentityProviderAdminSetUserPasswordFuture{Future: future}
+	return &AdminSetUserPasswordFuture{Future: future}
 }
 
 func (a *stub) AdminSetUserSettings(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserSettingsInput) (*cognitoidentityprovider.AdminSetUserSettingsOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) AdminSetUserSettings(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) AdminSetUserSettingsAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserSettingsInput) *CognitoIdentityProviderAdminSetUserSettingsFuture {
+func (a *stub) AdminSetUserSettingsAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserSettingsInput) *AdminSetUserSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminSetUserSettings", input)
-	return &CognitoIdentityProviderAdminSetUserSettingsFuture{Future: future}
+	return &AdminSetUserSettingsFuture{Future: future}
 }
 
 func (a *stub) AdminUpdateAuthEventFeedback(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) (*cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) AdminUpdateAuthEventFeedback(ctx workflow.Context, input *cognito
 	return &output, err
 }
 
-func (a *stub) AdminUpdateAuthEventFeedbackAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) *CognitoIdentityProviderAdminUpdateAuthEventFeedbackFuture {
+func (a *stub) AdminUpdateAuthEventFeedbackAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) *AdminUpdateAuthEventFeedbackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminUpdateAuthEventFeedback", input)
-	return &CognitoIdentityProviderAdminUpdateAuthEventFeedbackFuture{Future: future}
+	return &AdminUpdateAuthEventFeedbackFuture{Future: future}
 }
 
 func (a *stub) AdminUpdateDeviceStatus(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateDeviceStatusInput) (*cognitoidentityprovider.AdminUpdateDeviceStatusOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) AdminUpdateDeviceStatus(ctx workflow.Context, input *cognitoident
 	return &output, err
 }
 
-func (a *stub) AdminUpdateDeviceStatusAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateDeviceStatusInput) *CognitoIdentityProviderAdminUpdateDeviceStatusFuture {
+func (a *stub) AdminUpdateDeviceStatusAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateDeviceStatusInput) *AdminUpdateDeviceStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminUpdateDeviceStatus", input)
-	return &CognitoIdentityProviderAdminUpdateDeviceStatusFuture{Future: future}
+	return &AdminUpdateDeviceStatusFuture{Future: future}
 }
 
 func (a *stub) AdminUpdateUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateUserAttributesInput) (*cognitoidentityprovider.AdminUpdateUserAttributesOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) AdminUpdateUserAttributes(ctx workflow.Context, input *cognitoide
 	return &output, err
 }
 
-func (a *stub) AdminUpdateUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateUserAttributesInput) *CognitoIdentityProviderAdminUpdateUserAttributesFuture {
+func (a *stub) AdminUpdateUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateUserAttributesInput) *AdminUpdateUserAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminUpdateUserAttributes", input)
-	return &CognitoIdentityProviderAdminUpdateUserAttributesFuture{Future: future}
+	return &AdminUpdateUserAttributesFuture{Future: future}
 }
 
 func (a *stub) AdminUserGlobalSignOut(ctx workflow.Context, input *cognitoidentityprovider.AdminUserGlobalSignOutInput) (*cognitoidentityprovider.AdminUserGlobalSignOutOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) AdminUserGlobalSignOut(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) AdminUserGlobalSignOutAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUserGlobalSignOutInput) *CognitoIdentityProviderAdminUserGlobalSignOutFuture {
+func (a *stub) AdminUserGlobalSignOutAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUserGlobalSignOutInput) *AdminUserGlobalSignOutFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AdminUserGlobalSignOut", input)
-	return &CognitoIdentityProviderAdminUserGlobalSignOutFuture{Future: future}
+	return &AdminUserGlobalSignOutFuture{Future: future}
 }
 
 func (a *stub) AssociateSoftwareToken(ctx workflow.Context, input *cognitoidentityprovider.AssociateSoftwareTokenInput) (*cognitoidentityprovider.AssociateSoftwareTokenOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) AssociateSoftwareToken(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) AssociateSoftwareTokenAsync(ctx workflow.Context, input *cognitoidentityprovider.AssociateSoftwareTokenInput) *CognitoIdentityProviderAssociateSoftwareTokenFuture {
+func (a *stub) AssociateSoftwareTokenAsync(ctx workflow.Context, input *cognitoidentityprovider.AssociateSoftwareTokenInput) *AssociateSoftwareTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.AssociateSoftwareToken", input)
-	return &CognitoIdentityProviderAssociateSoftwareTokenFuture{Future: future}
+	return &AssociateSoftwareTokenFuture{Future: future}
 }
 
 func (a *stub) ChangePassword(ctx workflow.Context, input *cognitoidentityprovider.ChangePasswordInput) (*cognitoidentityprovider.ChangePasswordOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) ChangePassword(ctx workflow.Context, input *cognitoidentityprovid
 	return &output, err
 }
 
-func (a *stub) ChangePasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ChangePasswordInput) *CognitoIdentityProviderChangePasswordFuture {
+func (a *stub) ChangePasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ChangePasswordInput) *ChangePasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ChangePassword", input)
-	return &CognitoIdentityProviderChangePasswordFuture{Future: future}
+	return &ChangePasswordFuture{Future: future}
 }
 
 func (a *stub) ConfirmDevice(ctx workflow.Context, input *cognitoidentityprovider.ConfirmDeviceInput) (*cognitoidentityprovider.ConfirmDeviceOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) ConfirmDevice(ctx workflow.Context, input *cognitoidentityprovide
 	return &output, err
 }
 
-func (a *stub) ConfirmDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmDeviceInput) *CognitoIdentityProviderConfirmDeviceFuture {
+func (a *stub) ConfirmDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmDeviceInput) *ConfirmDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ConfirmDevice", input)
-	return &CognitoIdentityProviderConfirmDeviceFuture{Future: future}
+	return &ConfirmDeviceFuture{Future: future}
 }
 
 func (a *stub) ConfirmForgotPassword(ctx workflow.Context, input *cognitoidentityprovider.ConfirmForgotPasswordInput) (*cognitoidentityprovider.ConfirmForgotPasswordOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) ConfirmForgotPassword(ctx workflow.Context, input *cognitoidentit
 	return &output, err
 }
 
-func (a *stub) ConfirmForgotPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmForgotPasswordInput) *CognitoIdentityProviderConfirmForgotPasswordFuture {
+func (a *stub) ConfirmForgotPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmForgotPasswordInput) *ConfirmForgotPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ConfirmForgotPassword", input)
-	return &CognitoIdentityProviderConfirmForgotPasswordFuture{Future: future}
+	return &ConfirmForgotPasswordFuture{Future: future}
 }
 
 func (a *stub) ConfirmSignUp(ctx workflow.Context, input *cognitoidentityprovider.ConfirmSignUpInput) (*cognitoidentityprovider.ConfirmSignUpOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) ConfirmSignUp(ctx workflow.Context, input *cognitoidentityprovide
 	return &output, err
 }
 
-func (a *stub) ConfirmSignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmSignUpInput) *CognitoIdentityProviderConfirmSignUpFuture {
+func (a *stub) ConfirmSignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmSignUpInput) *ConfirmSignUpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ConfirmSignUp", input)
-	return &CognitoIdentityProviderConfirmSignUpFuture{Future: future}
+	return &ConfirmSignUpFuture{Future: future}
 }
 
 func (a *stub) CreateGroup(ctx workflow.Context, input *cognitoidentityprovider.CreateGroupInput) (*cognitoidentityprovider.CreateGroupOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) CreateGroup(ctx workflow.Context, input *cognitoidentityprovider.
 	return &output, err
 }
 
-func (a *stub) CreateGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateGroupInput) *CognitoIdentityProviderCreateGroupFuture {
+func (a *stub) CreateGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateGroupInput) *CreateGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.CreateGroup", input)
-	return &CognitoIdentityProviderCreateGroupFuture{Future: future}
+	return &CreateGroupFuture{Future: future}
 }
 
 func (a *stub) CreateIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.CreateIdentityProviderInput) (*cognitoidentityprovider.CreateIdentityProviderOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) CreateIdentityProvider(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) CreateIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateIdentityProviderInput) *CognitoIdentityProviderCreateIdentityProviderFuture {
+func (a *stub) CreateIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateIdentityProviderInput) *CreateIdentityProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.CreateIdentityProvider", input)
-	return &CognitoIdentityProviderCreateIdentityProviderFuture{Future: future}
+	return &CreateIdentityProviderFuture{Future: future}
 }
 
 func (a *stub) CreateResourceServer(ctx workflow.Context, input *cognitoidentityprovider.CreateResourceServerInput) (*cognitoidentityprovider.CreateResourceServerOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) CreateResourceServer(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) CreateResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateResourceServerInput) *CognitoIdentityProviderCreateResourceServerFuture {
+func (a *stub) CreateResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateResourceServerInput) *CreateResourceServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.CreateResourceServer", input)
-	return &CognitoIdentityProviderCreateResourceServerFuture{Future: future}
+	return &CreateResourceServerFuture{Future: future}
 }
 
 func (a *stub) CreateUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.CreateUserImportJobInput) (*cognitoidentityprovider.CreateUserImportJobOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) CreateUserImportJob(ctx workflow.Context, input *cognitoidentityp
 	return &output, err
 }
 
-func (a *stub) CreateUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserImportJobInput) *CognitoIdentityProviderCreateUserImportJobFuture {
+func (a *stub) CreateUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserImportJobInput) *CreateUserImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.CreateUserImportJob", input)
-	return &CognitoIdentityProviderCreateUserImportJobFuture{Future: future}
+	return &CreateUserImportJobFuture{Future: future}
 }
 
 func (a *stub) CreateUserPool(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolInput) (*cognitoidentityprovider.CreateUserPoolOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) CreateUserPool(ctx workflow.Context, input *cognitoidentityprovid
 	return &output, err
 }
 
-func (a *stub) CreateUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolInput) *CognitoIdentityProviderCreateUserPoolFuture {
+func (a *stub) CreateUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolInput) *CreateUserPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.CreateUserPool", input)
-	return &CognitoIdentityProviderCreateUserPoolFuture{Future: future}
+	return &CreateUserPoolFuture{Future: future}
 }
 
 func (a *stub) CreateUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolClientInput) (*cognitoidentityprovider.CreateUserPoolClientOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) CreateUserPoolClient(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) CreateUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolClientInput) *CognitoIdentityProviderCreateUserPoolClientFuture {
+func (a *stub) CreateUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolClientInput) *CreateUserPoolClientFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.CreateUserPoolClient", input)
-	return &CognitoIdentityProviderCreateUserPoolClientFuture{Future: future}
+	return &CreateUserPoolClientFuture{Future: future}
 }
 
 func (a *stub) CreateUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolDomainInput) (*cognitoidentityprovider.CreateUserPoolDomainOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) CreateUserPoolDomain(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) CreateUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolDomainInput) *CognitoIdentityProviderCreateUserPoolDomainFuture {
+func (a *stub) CreateUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolDomainInput) *CreateUserPoolDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.CreateUserPoolDomain", input)
-	return &CognitoIdentityProviderCreateUserPoolDomainFuture{Future: future}
+	return &CreateUserPoolDomainFuture{Future: future}
 }
 
 func (a *stub) DeleteGroup(ctx workflow.Context, input *cognitoidentityprovider.DeleteGroupInput) (*cognitoidentityprovider.DeleteGroupOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *stub) DeleteGroup(ctx workflow.Context, input *cognitoidentityprovider.
 	return &output, err
 }
 
-func (a *stub) DeleteGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteGroupInput) *CognitoIdentityProviderDeleteGroupFuture {
+func (a *stub) DeleteGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteGroupInput) *DeleteGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DeleteGroup", input)
-	return &CognitoIdentityProviderDeleteGroupFuture{Future: future}
+	return &DeleteGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.DeleteIdentityProviderInput) (*cognitoidentityprovider.DeleteIdentityProviderOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *stub) DeleteIdentityProvider(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) DeleteIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteIdentityProviderInput) *CognitoIdentityProviderDeleteIdentityProviderFuture {
+func (a *stub) DeleteIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteIdentityProviderInput) *DeleteIdentityProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DeleteIdentityProvider", input)
-	return &CognitoIdentityProviderDeleteIdentityProviderFuture{Future: future}
+	return &DeleteIdentityProviderFuture{Future: future}
 }
 
 func (a *stub) DeleteResourceServer(ctx workflow.Context, input *cognitoidentityprovider.DeleteResourceServerInput) (*cognitoidentityprovider.DeleteResourceServerOutput, error) {
@@ -1573,9 +1573,9 @@ func (a *stub) DeleteResourceServer(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) DeleteResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteResourceServerInput) *CognitoIdentityProviderDeleteResourceServerFuture {
+func (a *stub) DeleteResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteResourceServerInput) *DeleteResourceServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DeleteResourceServer", input)
-	return &CognitoIdentityProviderDeleteResourceServerFuture{Future: future}
+	return &DeleteResourceServerFuture{Future: future}
 }
 
 func (a *stub) DeleteUser(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserInput) (*cognitoidentityprovider.DeleteUserOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *stub) DeleteUser(ctx workflow.Context, input *cognitoidentityprovider.D
 	return &output, err
 }
 
-func (a *stub) DeleteUserAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserInput) *CognitoIdentityProviderDeleteUserFuture {
+func (a *stub) DeleteUserAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserInput) *DeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DeleteUser", input)
-	return &CognitoIdentityProviderDeleteUserFuture{Future: future}
+	return &DeleteUserFuture{Future: future}
 }
 
 func (a *stub) DeleteUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserAttributesInput) (*cognitoidentityprovider.DeleteUserAttributesOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *stub) DeleteUserAttributes(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) DeleteUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserAttributesInput) *CognitoIdentityProviderDeleteUserAttributesFuture {
+func (a *stub) DeleteUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserAttributesInput) *DeleteUserAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DeleteUserAttributes", input)
-	return &CognitoIdentityProviderDeleteUserAttributesFuture{Future: future}
+	return &DeleteUserAttributesFuture{Future: future}
 }
 
 func (a *stub) DeleteUserPool(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolInput) (*cognitoidentityprovider.DeleteUserPoolOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *stub) DeleteUserPool(ctx workflow.Context, input *cognitoidentityprovid
 	return &output, err
 }
 
-func (a *stub) DeleteUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolInput) *CognitoIdentityProviderDeleteUserPoolFuture {
+func (a *stub) DeleteUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolInput) *DeleteUserPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DeleteUserPool", input)
-	return &CognitoIdentityProviderDeleteUserPoolFuture{Future: future}
+	return &DeleteUserPoolFuture{Future: future}
 }
 
 func (a *stub) DeleteUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolClientInput) (*cognitoidentityprovider.DeleteUserPoolClientOutput, error) {
@@ -1617,9 +1617,9 @@ func (a *stub) DeleteUserPoolClient(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) DeleteUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolClientInput) *CognitoIdentityProviderDeleteUserPoolClientFuture {
+func (a *stub) DeleteUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolClientInput) *DeleteUserPoolClientFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DeleteUserPoolClient", input)
-	return &CognitoIdentityProviderDeleteUserPoolClientFuture{Future: future}
+	return &DeleteUserPoolClientFuture{Future: future}
 }
 
 func (a *stub) DeleteUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolDomainInput) (*cognitoidentityprovider.DeleteUserPoolDomainOutput, error) {
@@ -1628,9 +1628,9 @@ func (a *stub) DeleteUserPoolDomain(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) DeleteUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolDomainInput) *CognitoIdentityProviderDeleteUserPoolDomainFuture {
+func (a *stub) DeleteUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolDomainInput) *DeleteUserPoolDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DeleteUserPoolDomain", input)
-	return &CognitoIdentityProviderDeleteUserPoolDomainFuture{Future: future}
+	return &DeleteUserPoolDomainFuture{Future: future}
 }
 
 func (a *stub) DescribeIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.DescribeIdentityProviderInput) (*cognitoidentityprovider.DescribeIdentityProviderOutput, error) {
@@ -1639,9 +1639,9 @@ func (a *stub) DescribeIdentityProvider(ctx workflow.Context, input *cognitoiden
 	return &output, err
 }
 
-func (a *stub) DescribeIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeIdentityProviderInput) *CognitoIdentityProviderDescribeIdentityProviderFuture {
+func (a *stub) DescribeIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeIdentityProviderInput) *DescribeIdentityProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DescribeIdentityProvider", input)
-	return &CognitoIdentityProviderDescribeIdentityProviderFuture{Future: future}
+	return &DescribeIdentityProviderFuture{Future: future}
 }
 
 func (a *stub) DescribeResourceServer(ctx workflow.Context, input *cognitoidentityprovider.DescribeResourceServerInput) (*cognitoidentityprovider.DescribeResourceServerOutput, error) {
@@ -1650,9 +1650,9 @@ func (a *stub) DescribeResourceServer(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) DescribeResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeResourceServerInput) *CognitoIdentityProviderDescribeResourceServerFuture {
+func (a *stub) DescribeResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeResourceServerInput) *DescribeResourceServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DescribeResourceServer", input)
-	return &CognitoIdentityProviderDescribeResourceServerFuture{Future: future}
+	return &DescribeResourceServerFuture{Future: future}
 }
 
 func (a *stub) DescribeRiskConfiguration(ctx workflow.Context, input *cognitoidentityprovider.DescribeRiskConfigurationInput) (*cognitoidentityprovider.DescribeRiskConfigurationOutput, error) {
@@ -1661,9 +1661,9 @@ func (a *stub) DescribeRiskConfiguration(ctx workflow.Context, input *cognitoide
 	return &output, err
 }
 
-func (a *stub) DescribeRiskConfigurationAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeRiskConfigurationInput) *CognitoIdentityProviderDescribeRiskConfigurationFuture {
+func (a *stub) DescribeRiskConfigurationAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeRiskConfigurationInput) *DescribeRiskConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DescribeRiskConfiguration", input)
-	return &CognitoIdentityProviderDescribeRiskConfigurationFuture{Future: future}
+	return &DescribeRiskConfigurationFuture{Future: future}
 }
 
 func (a *stub) DescribeUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserImportJobInput) (*cognitoidentityprovider.DescribeUserImportJobOutput, error) {
@@ -1672,9 +1672,9 @@ func (a *stub) DescribeUserImportJob(ctx workflow.Context, input *cognitoidentit
 	return &output, err
 }
 
-func (a *stub) DescribeUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserImportJobInput) *CognitoIdentityProviderDescribeUserImportJobFuture {
+func (a *stub) DescribeUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserImportJobInput) *DescribeUserImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DescribeUserImportJob", input)
-	return &CognitoIdentityProviderDescribeUserImportJobFuture{Future: future}
+	return &DescribeUserImportJobFuture{Future: future}
 }
 
 func (a *stub) DescribeUserPool(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolInput) (*cognitoidentityprovider.DescribeUserPoolOutput, error) {
@@ -1683,9 +1683,9 @@ func (a *stub) DescribeUserPool(ctx workflow.Context, input *cognitoidentityprov
 	return &output, err
 }
 
-func (a *stub) DescribeUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolInput) *CognitoIdentityProviderDescribeUserPoolFuture {
+func (a *stub) DescribeUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolInput) *DescribeUserPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DescribeUserPool", input)
-	return &CognitoIdentityProviderDescribeUserPoolFuture{Future: future}
+	return &DescribeUserPoolFuture{Future: future}
 }
 
 func (a *stub) DescribeUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolClientInput) (*cognitoidentityprovider.DescribeUserPoolClientOutput, error) {
@@ -1694,9 +1694,9 @@ func (a *stub) DescribeUserPoolClient(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) DescribeUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolClientInput) *CognitoIdentityProviderDescribeUserPoolClientFuture {
+func (a *stub) DescribeUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolClientInput) *DescribeUserPoolClientFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DescribeUserPoolClient", input)
-	return &CognitoIdentityProviderDescribeUserPoolClientFuture{Future: future}
+	return &DescribeUserPoolClientFuture{Future: future}
 }
 
 func (a *stub) DescribeUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolDomainInput) (*cognitoidentityprovider.DescribeUserPoolDomainOutput, error) {
@@ -1705,9 +1705,9 @@ func (a *stub) DescribeUserPoolDomain(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) DescribeUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolDomainInput) *CognitoIdentityProviderDescribeUserPoolDomainFuture {
+func (a *stub) DescribeUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolDomainInput) *DescribeUserPoolDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.DescribeUserPoolDomain", input)
-	return &CognitoIdentityProviderDescribeUserPoolDomainFuture{Future: future}
+	return &DescribeUserPoolDomainFuture{Future: future}
 }
 
 func (a *stub) ForgetDevice(ctx workflow.Context, input *cognitoidentityprovider.ForgetDeviceInput) (*cognitoidentityprovider.ForgetDeviceOutput, error) {
@@ -1716,9 +1716,9 @@ func (a *stub) ForgetDevice(ctx workflow.Context, input *cognitoidentityprovider
 	return &output, err
 }
 
-func (a *stub) ForgetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.ForgetDeviceInput) *CognitoIdentityProviderForgetDeviceFuture {
+func (a *stub) ForgetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.ForgetDeviceInput) *ForgetDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ForgetDevice", input)
-	return &CognitoIdentityProviderForgetDeviceFuture{Future: future}
+	return &ForgetDeviceFuture{Future: future}
 }
 
 func (a *stub) ForgotPassword(ctx workflow.Context, input *cognitoidentityprovider.ForgotPasswordInput) (*cognitoidentityprovider.ForgotPasswordOutput, error) {
@@ -1727,9 +1727,9 @@ func (a *stub) ForgotPassword(ctx workflow.Context, input *cognitoidentityprovid
 	return &output, err
 }
 
-func (a *stub) ForgotPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ForgotPasswordInput) *CognitoIdentityProviderForgotPasswordFuture {
+func (a *stub) ForgotPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ForgotPasswordInput) *ForgotPasswordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ForgotPassword", input)
-	return &CognitoIdentityProviderForgotPasswordFuture{Future: future}
+	return &ForgotPasswordFuture{Future: future}
 }
 
 func (a *stub) GetCSVHeader(ctx workflow.Context, input *cognitoidentityprovider.GetCSVHeaderInput) (*cognitoidentityprovider.GetCSVHeaderOutput, error) {
@@ -1738,9 +1738,9 @@ func (a *stub) GetCSVHeader(ctx workflow.Context, input *cognitoidentityprovider
 	return &output, err
 }
 
-func (a *stub) GetCSVHeaderAsync(ctx workflow.Context, input *cognitoidentityprovider.GetCSVHeaderInput) *CognitoIdentityProviderGetCSVHeaderFuture {
+func (a *stub) GetCSVHeaderAsync(ctx workflow.Context, input *cognitoidentityprovider.GetCSVHeaderInput) *GetCSVHeaderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetCSVHeader", input)
-	return &CognitoIdentityProviderGetCSVHeaderFuture{Future: future}
+	return &GetCSVHeaderFuture{Future: future}
 }
 
 func (a *stub) GetDevice(ctx workflow.Context, input *cognitoidentityprovider.GetDeviceInput) (*cognitoidentityprovider.GetDeviceOutput, error) {
@@ -1749,9 +1749,9 @@ func (a *stub) GetDevice(ctx workflow.Context, input *cognitoidentityprovider.Ge
 	return &output, err
 }
 
-func (a *stub) GetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.GetDeviceInput) *CognitoIdentityProviderGetDeviceFuture {
+func (a *stub) GetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.GetDeviceInput) *GetDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetDevice", input)
-	return &CognitoIdentityProviderGetDeviceFuture{Future: future}
+	return &GetDeviceFuture{Future: future}
 }
 
 func (a *stub) GetGroup(ctx workflow.Context, input *cognitoidentityprovider.GetGroupInput) (*cognitoidentityprovider.GetGroupOutput, error) {
@@ -1760,9 +1760,9 @@ func (a *stub) GetGroup(ctx workflow.Context, input *cognitoidentityprovider.Get
 	return &output, err
 }
 
-func (a *stub) GetGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.GetGroupInput) *CognitoIdentityProviderGetGroupFuture {
+func (a *stub) GetGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.GetGroupInput) *GetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetGroup", input)
-	return &CognitoIdentityProviderGetGroupFuture{Future: future}
+	return &GetGroupFuture{Future: future}
 }
 
 func (a *stub) GetIdentityProviderByIdentifier(ctx workflow.Context, input *cognitoidentityprovider.GetIdentityProviderByIdentifierInput) (*cognitoidentityprovider.GetIdentityProviderByIdentifierOutput, error) {
@@ -1771,9 +1771,9 @@ func (a *stub) GetIdentityProviderByIdentifier(ctx workflow.Context, input *cogn
 	return &output, err
 }
 
-func (a *stub) GetIdentityProviderByIdentifierAsync(ctx workflow.Context, input *cognitoidentityprovider.GetIdentityProviderByIdentifierInput) *CognitoIdentityProviderGetIdentityProviderByIdentifierFuture {
+func (a *stub) GetIdentityProviderByIdentifierAsync(ctx workflow.Context, input *cognitoidentityprovider.GetIdentityProviderByIdentifierInput) *GetIdentityProviderByIdentifierFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetIdentityProviderByIdentifier", input)
-	return &CognitoIdentityProviderGetIdentityProviderByIdentifierFuture{Future: future}
+	return &GetIdentityProviderByIdentifierFuture{Future: future}
 }
 
 func (a *stub) GetSigningCertificate(ctx workflow.Context, input *cognitoidentityprovider.GetSigningCertificateInput) (*cognitoidentityprovider.GetSigningCertificateOutput, error) {
@@ -1782,9 +1782,9 @@ func (a *stub) GetSigningCertificate(ctx workflow.Context, input *cognitoidentit
 	return &output, err
 }
 
-func (a *stub) GetSigningCertificateAsync(ctx workflow.Context, input *cognitoidentityprovider.GetSigningCertificateInput) *CognitoIdentityProviderGetSigningCertificateFuture {
+func (a *stub) GetSigningCertificateAsync(ctx workflow.Context, input *cognitoidentityprovider.GetSigningCertificateInput) *GetSigningCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetSigningCertificate", input)
-	return &CognitoIdentityProviderGetSigningCertificateFuture{Future: future}
+	return &GetSigningCertificateFuture{Future: future}
 }
 
 func (a *stub) GetUICustomization(ctx workflow.Context, input *cognitoidentityprovider.GetUICustomizationInput) (*cognitoidentityprovider.GetUICustomizationOutput, error) {
@@ -1793,9 +1793,9 @@ func (a *stub) GetUICustomization(ctx workflow.Context, input *cognitoidentitypr
 	return &output, err
 }
 
-func (a *stub) GetUICustomizationAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUICustomizationInput) *CognitoIdentityProviderGetUICustomizationFuture {
+func (a *stub) GetUICustomizationAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUICustomizationInput) *GetUICustomizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetUICustomization", input)
-	return &CognitoIdentityProviderGetUICustomizationFuture{Future: future}
+	return &GetUICustomizationFuture{Future: future}
 }
 
 func (a *stub) GetUser(ctx workflow.Context, input *cognitoidentityprovider.GetUserInput) (*cognitoidentityprovider.GetUserOutput, error) {
@@ -1804,9 +1804,9 @@ func (a *stub) GetUser(ctx workflow.Context, input *cognitoidentityprovider.GetU
 	return &output, err
 }
 
-func (a *stub) GetUserAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserInput) *CognitoIdentityProviderGetUserFuture {
+func (a *stub) GetUserAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserInput) *GetUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetUser", input)
-	return &CognitoIdentityProviderGetUserFuture{Future: future}
+	return &GetUserFuture{Future: future}
 }
 
 func (a *stub) GetUserAttributeVerificationCode(ctx workflow.Context, input *cognitoidentityprovider.GetUserAttributeVerificationCodeInput) (*cognitoidentityprovider.GetUserAttributeVerificationCodeOutput, error) {
@@ -1815,9 +1815,9 @@ func (a *stub) GetUserAttributeVerificationCode(ctx workflow.Context, input *cog
 	return &output, err
 }
 
-func (a *stub) GetUserAttributeVerificationCodeAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserAttributeVerificationCodeInput) *CognitoIdentityProviderGetUserAttributeVerificationCodeFuture {
+func (a *stub) GetUserAttributeVerificationCodeAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserAttributeVerificationCodeInput) *GetUserAttributeVerificationCodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetUserAttributeVerificationCode", input)
-	return &CognitoIdentityProviderGetUserAttributeVerificationCodeFuture{Future: future}
+	return &GetUserAttributeVerificationCodeFuture{Future: future}
 }
 
 func (a *stub) GetUserPoolMfaConfig(ctx workflow.Context, input *cognitoidentityprovider.GetUserPoolMfaConfigInput) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error) {
@@ -1826,9 +1826,9 @@ func (a *stub) GetUserPoolMfaConfig(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) GetUserPoolMfaConfigAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserPoolMfaConfigInput) *CognitoIdentityProviderGetUserPoolMfaConfigFuture {
+func (a *stub) GetUserPoolMfaConfigAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserPoolMfaConfigInput) *GetUserPoolMfaConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GetUserPoolMfaConfig", input)
-	return &CognitoIdentityProviderGetUserPoolMfaConfigFuture{Future: future}
+	return &GetUserPoolMfaConfigFuture{Future: future}
 }
 
 func (a *stub) GlobalSignOut(ctx workflow.Context, input *cognitoidentityprovider.GlobalSignOutInput) (*cognitoidentityprovider.GlobalSignOutOutput, error) {
@@ -1837,9 +1837,9 @@ func (a *stub) GlobalSignOut(ctx workflow.Context, input *cognitoidentityprovide
 	return &output, err
 }
 
-func (a *stub) GlobalSignOutAsync(ctx workflow.Context, input *cognitoidentityprovider.GlobalSignOutInput) *CognitoIdentityProviderGlobalSignOutFuture {
+func (a *stub) GlobalSignOutAsync(ctx workflow.Context, input *cognitoidentityprovider.GlobalSignOutInput) *GlobalSignOutFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.GlobalSignOut", input)
-	return &CognitoIdentityProviderGlobalSignOutFuture{Future: future}
+	return &GlobalSignOutFuture{Future: future}
 }
 
 func (a *stub) InitiateAuth(ctx workflow.Context, input *cognitoidentityprovider.InitiateAuthInput) (*cognitoidentityprovider.InitiateAuthOutput, error) {
@@ -1848,9 +1848,9 @@ func (a *stub) InitiateAuth(ctx workflow.Context, input *cognitoidentityprovider
 	return &output, err
 }
 
-func (a *stub) InitiateAuthAsync(ctx workflow.Context, input *cognitoidentityprovider.InitiateAuthInput) *CognitoIdentityProviderInitiateAuthFuture {
+func (a *stub) InitiateAuthAsync(ctx workflow.Context, input *cognitoidentityprovider.InitiateAuthInput) *InitiateAuthFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.InitiateAuth", input)
-	return &CognitoIdentityProviderInitiateAuthFuture{Future: future}
+	return &InitiateAuthFuture{Future: future}
 }
 
 func (a *stub) ListDevices(ctx workflow.Context, input *cognitoidentityprovider.ListDevicesInput) (*cognitoidentityprovider.ListDevicesOutput, error) {
@@ -1859,9 +1859,9 @@ func (a *stub) ListDevices(ctx workflow.Context, input *cognitoidentityprovider.
 	return &output, err
 }
 
-func (a *stub) ListDevicesAsync(ctx workflow.Context, input *cognitoidentityprovider.ListDevicesInput) *CognitoIdentityProviderListDevicesFuture {
+func (a *stub) ListDevicesAsync(ctx workflow.Context, input *cognitoidentityprovider.ListDevicesInput) *ListDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListDevices", input)
-	return &CognitoIdentityProviderListDevicesFuture{Future: future}
+	return &ListDevicesFuture{Future: future}
 }
 
 func (a *stub) ListGroups(ctx workflow.Context, input *cognitoidentityprovider.ListGroupsInput) (*cognitoidentityprovider.ListGroupsOutput, error) {
@@ -1870,9 +1870,9 @@ func (a *stub) ListGroups(ctx workflow.Context, input *cognitoidentityprovider.L
 	return &output, err
 }
 
-func (a *stub) ListGroupsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListGroupsInput) *CognitoIdentityProviderListGroupsFuture {
+func (a *stub) ListGroupsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListGroupsInput) *ListGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListGroups", input)
-	return &CognitoIdentityProviderListGroupsFuture{Future: future}
+	return &ListGroupsFuture{Future: future}
 }
 
 func (a *stub) ListIdentityProviders(ctx workflow.Context, input *cognitoidentityprovider.ListIdentityProvidersInput) (*cognitoidentityprovider.ListIdentityProvidersOutput, error) {
@@ -1881,9 +1881,9 @@ func (a *stub) ListIdentityProviders(ctx workflow.Context, input *cognitoidentit
 	return &output, err
 }
 
-func (a *stub) ListIdentityProvidersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListIdentityProvidersInput) *CognitoIdentityProviderListIdentityProvidersFuture {
+func (a *stub) ListIdentityProvidersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListIdentityProvidersInput) *ListIdentityProvidersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListIdentityProviders", input)
-	return &CognitoIdentityProviderListIdentityProvidersFuture{Future: future}
+	return &ListIdentityProvidersFuture{Future: future}
 }
 
 func (a *stub) ListResourceServers(ctx workflow.Context, input *cognitoidentityprovider.ListResourceServersInput) (*cognitoidentityprovider.ListResourceServersOutput, error) {
@@ -1892,9 +1892,9 @@ func (a *stub) ListResourceServers(ctx workflow.Context, input *cognitoidentityp
 	return &output, err
 }
 
-func (a *stub) ListResourceServersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListResourceServersInput) *CognitoIdentityProviderListResourceServersFuture {
+func (a *stub) ListResourceServersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListResourceServersInput) *ListResourceServersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListResourceServers", input)
-	return &CognitoIdentityProviderListResourceServersFuture{Future: future}
+	return &ListResourceServersFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *cognitoidentityprovider.ListTagsForResourceInput) (*cognitoidentityprovider.ListTagsForResourceOutput, error) {
@@ -1903,9 +1903,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *cognitoidentityp
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.ListTagsForResourceInput) *CognitoIdentityProviderListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListTagsForResource", input)
-	return &CognitoIdentityProviderListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListUserImportJobs(ctx workflow.Context, input *cognitoidentityprovider.ListUserImportJobsInput) (*cognitoidentityprovider.ListUserImportJobsOutput, error) {
@@ -1914,9 +1914,9 @@ func (a *stub) ListUserImportJobs(ctx workflow.Context, input *cognitoidentitypr
 	return &output, err
 }
 
-func (a *stub) ListUserImportJobsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserImportJobsInput) *CognitoIdentityProviderListUserImportJobsFuture {
+func (a *stub) ListUserImportJobsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserImportJobsInput) *ListUserImportJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListUserImportJobs", input)
-	return &CognitoIdentityProviderListUserImportJobsFuture{Future: future}
+	return &ListUserImportJobsFuture{Future: future}
 }
 
 func (a *stub) ListUserPoolClients(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolClientsInput) (*cognitoidentityprovider.ListUserPoolClientsOutput, error) {
@@ -1925,9 +1925,9 @@ func (a *stub) ListUserPoolClients(ctx workflow.Context, input *cognitoidentityp
 	return &output, err
 }
 
-func (a *stub) ListUserPoolClientsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolClientsInput) *CognitoIdentityProviderListUserPoolClientsFuture {
+func (a *stub) ListUserPoolClientsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolClientsInput) *ListUserPoolClientsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListUserPoolClients", input)
-	return &CognitoIdentityProviderListUserPoolClientsFuture{Future: future}
+	return &ListUserPoolClientsFuture{Future: future}
 }
 
 func (a *stub) ListUserPools(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolsInput) (*cognitoidentityprovider.ListUserPoolsOutput, error) {
@@ -1936,9 +1936,9 @@ func (a *stub) ListUserPools(ctx workflow.Context, input *cognitoidentityprovide
 	return &output, err
 }
 
-func (a *stub) ListUserPoolsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolsInput) *CognitoIdentityProviderListUserPoolsFuture {
+func (a *stub) ListUserPoolsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolsInput) *ListUserPoolsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListUserPools", input)
-	return &CognitoIdentityProviderListUserPoolsFuture{Future: future}
+	return &ListUserPoolsFuture{Future: future}
 }
 
 func (a *stub) ListUsers(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInput) (*cognitoidentityprovider.ListUsersOutput, error) {
@@ -1947,9 +1947,9 @@ func (a *stub) ListUsers(ctx workflow.Context, input *cognitoidentityprovider.Li
 	return &output, err
 }
 
-func (a *stub) ListUsersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInput) *CognitoIdentityProviderListUsersFuture {
+func (a *stub) ListUsersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInput) *ListUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListUsers", input)
-	return &CognitoIdentityProviderListUsersFuture{Future: future}
+	return &ListUsersFuture{Future: future}
 }
 
 func (a *stub) ListUsersInGroup(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInGroupInput) (*cognitoidentityprovider.ListUsersInGroupOutput, error) {
@@ -1958,9 +1958,9 @@ func (a *stub) ListUsersInGroup(ctx workflow.Context, input *cognitoidentityprov
 	return &output, err
 }
 
-func (a *stub) ListUsersInGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInGroupInput) *CognitoIdentityProviderListUsersInGroupFuture {
+func (a *stub) ListUsersInGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInGroupInput) *ListUsersInGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ListUsersInGroup", input)
-	return &CognitoIdentityProviderListUsersInGroupFuture{Future: future}
+	return &ListUsersInGroupFuture{Future: future}
 }
 
 func (a *stub) ResendConfirmationCode(ctx workflow.Context, input *cognitoidentityprovider.ResendConfirmationCodeInput) (*cognitoidentityprovider.ResendConfirmationCodeOutput, error) {
@@ -1969,9 +1969,9 @@ func (a *stub) ResendConfirmationCode(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) ResendConfirmationCodeAsync(ctx workflow.Context, input *cognitoidentityprovider.ResendConfirmationCodeInput) *CognitoIdentityProviderResendConfirmationCodeFuture {
+func (a *stub) ResendConfirmationCodeAsync(ctx workflow.Context, input *cognitoidentityprovider.ResendConfirmationCodeInput) *ResendConfirmationCodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.ResendConfirmationCode", input)
-	return &CognitoIdentityProviderResendConfirmationCodeFuture{Future: future}
+	return &ResendConfirmationCodeFuture{Future: future}
 }
 
 func (a *stub) RespondToAuthChallenge(ctx workflow.Context, input *cognitoidentityprovider.RespondToAuthChallengeInput) (*cognitoidentityprovider.RespondToAuthChallengeOutput, error) {
@@ -1980,9 +1980,9 @@ func (a *stub) RespondToAuthChallenge(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) RespondToAuthChallengeAsync(ctx workflow.Context, input *cognitoidentityprovider.RespondToAuthChallengeInput) *CognitoIdentityProviderRespondToAuthChallengeFuture {
+func (a *stub) RespondToAuthChallengeAsync(ctx workflow.Context, input *cognitoidentityprovider.RespondToAuthChallengeInput) *RespondToAuthChallengeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.RespondToAuthChallenge", input)
-	return &CognitoIdentityProviderRespondToAuthChallengeFuture{Future: future}
+	return &RespondToAuthChallengeFuture{Future: future}
 }
 
 func (a *stub) SetRiskConfiguration(ctx workflow.Context, input *cognitoidentityprovider.SetRiskConfigurationInput) (*cognitoidentityprovider.SetRiskConfigurationOutput, error) {
@@ -1991,9 +1991,9 @@ func (a *stub) SetRiskConfiguration(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) SetRiskConfigurationAsync(ctx workflow.Context, input *cognitoidentityprovider.SetRiskConfigurationInput) *CognitoIdentityProviderSetRiskConfigurationFuture {
+func (a *stub) SetRiskConfigurationAsync(ctx workflow.Context, input *cognitoidentityprovider.SetRiskConfigurationInput) *SetRiskConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.SetRiskConfiguration", input)
-	return &CognitoIdentityProviderSetRiskConfigurationFuture{Future: future}
+	return &SetRiskConfigurationFuture{Future: future}
 }
 
 func (a *stub) SetUICustomization(ctx workflow.Context, input *cognitoidentityprovider.SetUICustomizationInput) (*cognitoidentityprovider.SetUICustomizationOutput, error) {
@@ -2002,9 +2002,9 @@ func (a *stub) SetUICustomization(ctx workflow.Context, input *cognitoidentitypr
 	return &output, err
 }
 
-func (a *stub) SetUICustomizationAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUICustomizationInput) *CognitoIdentityProviderSetUICustomizationFuture {
+func (a *stub) SetUICustomizationAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUICustomizationInput) *SetUICustomizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.SetUICustomization", input)
-	return &CognitoIdentityProviderSetUICustomizationFuture{Future: future}
+	return &SetUICustomizationFuture{Future: future}
 }
 
 func (a *stub) SetUserMFAPreference(ctx workflow.Context, input *cognitoidentityprovider.SetUserMFAPreferenceInput) (*cognitoidentityprovider.SetUserMFAPreferenceOutput, error) {
@@ -2013,9 +2013,9 @@ func (a *stub) SetUserMFAPreference(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) SetUserMFAPreferenceAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserMFAPreferenceInput) *CognitoIdentityProviderSetUserMFAPreferenceFuture {
+func (a *stub) SetUserMFAPreferenceAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserMFAPreferenceInput) *SetUserMFAPreferenceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.SetUserMFAPreference", input)
-	return &CognitoIdentityProviderSetUserMFAPreferenceFuture{Future: future}
+	return &SetUserMFAPreferenceFuture{Future: future}
 }
 
 func (a *stub) SetUserPoolMfaConfig(ctx workflow.Context, input *cognitoidentityprovider.SetUserPoolMfaConfigInput) (*cognitoidentityprovider.SetUserPoolMfaConfigOutput, error) {
@@ -2024,9 +2024,9 @@ func (a *stub) SetUserPoolMfaConfig(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) SetUserPoolMfaConfigAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserPoolMfaConfigInput) *CognitoIdentityProviderSetUserPoolMfaConfigFuture {
+func (a *stub) SetUserPoolMfaConfigAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserPoolMfaConfigInput) *SetUserPoolMfaConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.SetUserPoolMfaConfig", input)
-	return &CognitoIdentityProviderSetUserPoolMfaConfigFuture{Future: future}
+	return &SetUserPoolMfaConfigFuture{Future: future}
 }
 
 func (a *stub) SetUserSettings(ctx workflow.Context, input *cognitoidentityprovider.SetUserSettingsInput) (*cognitoidentityprovider.SetUserSettingsOutput, error) {
@@ -2035,9 +2035,9 @@ func (a *stub) SetUserSettings(ctx workflow.Context, input *cognitoidentityprovi
 	return &output, err
 }
 
-func (a *stub) SetUserSettingsAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserSettingsInput) *CognitoIdentityProviderSetUserSettingsFuture {
+func (a *stub) SetUserSettingsAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserSettingsInput) *SetUserSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.SetUserSettings", input)
-	return &CognitoIdentityProviderSetUserSettingsFuture{Future: future}
+	return &SetUserSettingsFuture{Future: future}
 }
 
 func (a *stub) SignUp(ctx workflow.Context, input *cognitoidentityprovider.SignUpInput) (*cognitoidentityprovider.SignUpOutput, error) {
@@ -2046,9 +2046,9 @@ func (a *stub) SignUp(ctx workflow.Context, input *cognitoidentityprovider.SignU
 	return &output, err
 }
 
-func (a *stub) SignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.SignUpInput) *CognitoIdentityProviderSignUpFuture {
+func (a *stub) SignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.SignUpInput) *SignUpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.SignUp", input)
-	return &CognitoIdentityProviderSignUpFuture{Future: future}
+	return &SignUpFuture{Future: future}
 }
 
 func (a *stub) StartUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.StartUserImportJobInput) (*cognitoidentityprovider.StartUserImportJobOutput, error) {
@@ -2057,9 +2057,9 @@ func (a *stub) StartUserImportJob(ctx workflow.Context, input *cognitoidentitypr
 	return &output, err
 }
 
-func (a *stub) StartUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.StartUserImportJobInput) *CognitoIdentityProviderStartUserImportJobFuture {
+func (a *stub) StartUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.StartUserImportJobInput) *StartUserImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.StartUserImportJob", input)
-	return &CognitoIdentityProviderStartUserImportJobFuture{Future: future}
+	return &StartUserImportJobFuture{Future: future}
 }
 
 func (a *stub) StopUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.StopUserImportJobInput) (*cognitoidentityprovider.StopUserImportJobOutput, error) {
@@ -2068,9 +2068,9 @@ func (a *stub) StopUserImportJob(ctx workflow.Context, input *cognitoidentitypro
 	return &output, err
 }
 
-func (a *stub) StopUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.StopUserImportJobInput) *CognitoIdentityProviderStopUserImportJobFuture {
+func (a *stub) StopUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.StopUserImportJobInput) *StopUserImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.StopUserImportJob", input)
-	return &CognitoIdentityProviderStopUserImportJobFuture{Future: future}
+	return &StopUserImportJobFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *cognitoidentityprovider.TagResourceInput) (*cognitoidentityprovider.TagResourceOutput, error) {
@@ -2079,9 +2079,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *cognitoidentityprovider.
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.TagResourceInput) *CognitoIdentityProviderTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.TagResource", input)
-	return &CognitoIdentityProviderTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *cognitoidentityprovider.UntagResourceInput) (*cognitoidentityprovider.UntagResourceOutput, error) {
@@ -2090,9 +2090,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *cognitoidentityprovide
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.UntagResourceInput) *CognitoIdentityProviderUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UntagResource", input)
-	return &CognitoIdentityProviderUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateAuthEventFeedback(ctx workflow.Context, input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) (*cognitoidentityprovider.UpdateAuthEventFeedbackOutput, error) {
@@ -2101,9 +2101,9 @@ func (a *stub) UpdateAuthEventFeedback(ctx workflow.Context, input *cognitoident
 	return &output, err
 }
 
-func (a *stub) UpdateAuthEventFeedbackAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) *CognitoIdentityProviderUpdateAuthEventFeedbackFuture {
+func (a *stub) UpdateAuthEventFeedbackAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) *UpdateAuthEventFeedbackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateAuthEventFeedback", input)
-	return &CognitoIdentityProviderUpdateAuthEventFeedbackFuture{Future: future}
+	return &UpdateAuthEventFeedbackFuture{Future: future}
 }
 
 func (a *stub) UpdateDeviceStatus(ctx workflow.Context, input *cognitoidentityprovider.UpdateDeviceStatusInput) (*cognitoidentityprovider.UpdateDeviceStatusOutput, error) {
@@ -2112,9 +2112,9 @@ func (a *stub) UpdateDeviceStatus(ctx workflow.Context, input *cognitoidentitypr
 	return &output, err
 }
 
-func (a *stub) UpdateDeviceStatusAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateDeviceStatusInput) *CognitoIdentityProviderUpdateDeviceStatusFuture {
+func (a *stub) UpdateDeviceStatusAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateDeviceStatusInput) *UpdateDeviceStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateDeviceStatus", input)
-	return &CognitoIdentityProviderUpdateDeviceStatusFuture{Future: future}
+	return &UpdateDeviceStatusFuture{Future: future}
 }
 
 func (a *stub) UpdateGroup(ctx workflow.Context, input *cognitoidentityprovider.UpdateGroupInput) (*cognitoidentityprovider.UpdateGroupOutput, error) {
@@ -2123,9 +2123,9 @@ func (a *stub) UpdateGroup(ctx workflow.Context, input *cognitoidentityprovider.
 	return &output, err
 }
 
-func (a *stub) UpdateGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateGroupInput) *CognitoIdentityProviderUpdateGroupFuture {
+func (a *stub) UpdateGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateGroupInput) *UpdateGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateGroup", input)
-	return &CognitoIdentityProviderUpdateGroupFuture{Future: future}
+	return &UpdateGroupFuture{Future: future}
 }
 
 func (a *stub) UpdateIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.UpdateIdentityProviderInput) (*cognitoidentityprovider.UpdateIdentityProviderOutput, error) {
@@ -2134,9 +2134,9 @@ func (a *stub) UpdateIdentityProvider(ctx workflow.Context, input *cognitoidenti
 	return &output, err
 }
 
-func (a *stub) UpdateIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateIdentityProviderInput) *CognitoIdentityProviderUpdateIdentityProviderFuture {
+func (a *stub) UpdateIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateIdentityProviderInput) *UpdateIdentityProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateIdentityProvider", input)
-	return &CognitoIdentityProviderUpdateIdentityProviderFuture{Future: future}
+	return &UpdateIdentityProviderFuture{Future: future}
 }
 
 func (a *stub) UpdateResourceServer(ctx workflow.Context, input *cognitoidentityprovider.UpdateResourceServerInput) (*cognitoidentityprovider.UpdateResourceServerOutput, error) {
@@ -2145,9 +2145,9 @@ func (a *stub) UpdateResourceServer(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) UpdateResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateResourceServerInput) *CognitoIdentityProviderUpdateResourceServerFuture {
+func (a *stub) UpdateResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateResourceServerInput) *UpdateResourceServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateResourceServer", input)
-	return &CognitoIdentityProviderUpdateResourceServerFuture{Future: future}
+	return &UpdateResourceServerFuture{Future: future}
 }
 
 func (a *stub) UpdateUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserAttributesInput) (*cognitoidentityprovider.UpdateUserAttributesOutput, error) {
@@ -2156,9 +2156,9 @@ func (a *stub) UpdateUserAttributes(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) UpdateUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserAttributesInput) *CognitoIdentityProviderUpdateUserAttributesFuture {
+func (a *stub) UpdateUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserAttributesInput) *UpdateUserAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateUserAttributes", input)
-	return &CognitoIdentityProviderUpdateUserAttributesFuture{Future: future}
+	return &UpdateUserAttributesFuture{Future: future}
 }
 
 func (a *stub) UpdateUserPool(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolInput) (*cognitoidentityprovider.UpdateUserPoolOutput, error) {
@@ -2167,9 +2167,9 @@ func (a *stub) UpdateUserPool(ctx workflow.Context, input *cognitoidentityprovid
 	return &output, err
 }
 
-func (a *stub) UpdateUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolInput) *CognitoIdentityProviderUpdateUserPoolFuture {
+func (a *stub) UpdateUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolInput) *UpdateUserPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateUserPool", input)
-	return &CognitoIdentityProviderUpdateUserPoolFuture{Future: future}
+	return &UpdateUserPoolFuture{Future: future}
 }
 
 func (a *stub) UpdateUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolClientInput) (*cognitoidentityprovider.UpdateUserPoolClientOutput, error) {
@@ -2178,9 +2178,9 @@ func (a *stub) UpdateUserPoolClient(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) UpdateUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolClientInput) *CognitoIdentityProviderUpdateUserPoolClientFuture {
+func (a *stub) UpdateUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolClientInput) *UpdateUserPoolClientFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateUserPoolClient", input)
-	return &CognitoIdentityProviderUpdateUserPoolClientFuture{Future: future}
+	return &UpdateUserPoolClientFuture{Future: future}
 }
 
 func (a *stub) UpdateUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolDomainInput) (*cognitoidentityprovider.UpdateUserPoolDomainOutput, error) {
@@ -2189,9 +2189,9 @@ func (a *stub) UpdateUserPoolDomain(ctx workflow.Context, input *cognitoidentity
 	return &output, err
 }
 
-func (a *stub) UpdateUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolDomainInput) *CognitoIdentityProviderUpdateUserPoolDomainFuture {
+func (a *stub) UpdateUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolDomainInput) *UpdateUserPoolDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.UpdateUserPoolDomain", input)
-	return &CognitoIdentityProviderUpdateUserPoolDomainFuture{Future: future}
+	return &UpdateUserPoolDomainFuture{Future: future}
 }
 
 func (a *stub) VerifySoftwareToken(ctx workflow.Context, input *cognitoidentityprovider.VerifySoftwareTokenInput) (*cognitoidentityprovider.VerifySoftwareTokenOutput, error) {
@@ -2200,9 +2200,9 @@ func (a *stub) VerifySoftwareToken(ctx workflow.Context, input *cognitoidentityp
 	return &output, err
 }
 
-func (a *stub) VerifySoftwareTokenAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifySoftwareTokenInput) *CognitoIdentityProviderVerifySoftwareTokenFuture {
+func (a *stub) VerifySoftwareTokenAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifySoftwareTokenInput) *VerifySoftwareTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.VerifySoftwareToken", input)
-	return &CognitoIdentityProviderVerifySoftwareTokenFuture{Future: future}
+	return &VerifySoftwareTokenFuture{Future: future}
 }
 
 func (a *stub) VerifyUserAttribute(ctx workflow.Context, input *cognitoidentityprovider.VerifyUserAttributeInput) (*cognitoidentityprovider.VerifyUserAttributeOutput, error) {
@@ -2211,7 +2211,7 @@ func (a *stub) VerifyUserAttribute(ctx workflow.Context, input *cognitoidentityp
 	return &output, err
 }
 
-func (a *stub) VerifyUserAttributeAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifyUserAttributeInput) *CognitoIdentityProviderVerifyUserAttributeFuture {
+func (a *stub) VerifyUserAttributeAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifyUserAttributeInput) *VerifyUserAttributeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cognitoidentityprovider.VerifyUserAttribute", input)
-	return &CognitoIdentityProviderVerifyUserAttributeFuture{Future: future}
+	return &VerifyUserAttributeFuture{Future: future}
 }

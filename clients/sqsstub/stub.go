@@ -16,221 +16,221 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type SQSAddPermissionFuture struct {
+type AddPermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSAddPermissionFuture) Get(ctx workflow.Context) (*sqs.AddPermissionOutput, error) {
+func (r *AddPermissionFuture) Get(ctx workflow.Context) (*sqs.AddPermissionOutput, error) {
 	var output sqs.AddPermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSChangeMessageVisibilityFuture struct {
+type ChangeMessageVisibilityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSChangeMessageVisibilityFuture) Get(ctx workflow.Context) (*sqs.ChangeMessageVisibilityOutput, error) {
+func (r *ChangeMessageVisibilityFuture) Get(ctx workflow.Context) (*sqs.ChangeMessageVisibilityOutput, error) {
 	var output sqs.ChangeMessageVisibilityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSChangeMessageVisibilityBatchFuture struct {
+type ChangeMessageVisibilityBatchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSChangeMessageVisibilityBatchFuture) Get(ctx workflow.Context) (*sqs.ChangeMessageVisibilityBatchOutput, error) {
+func (r *ChangeMessageVisibilityBatchFuture) Get(ctx workflow.Context) (*sqs.ChangeMessageVisibilityBatchOutput, error) {
 	var output sqs.ChangeMessageVisibilityBatchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSCreateQueueFuture struct {
+type CreateQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSCreateQueueFuture) Get(ctx workflow.Context) (*sqs.CreateQueueOutput, error) {
+func (r *CreateQueueFuture) Get(ctx workflow.Context) (*sqs.CreateQueueOutput, error) {
 	var output sqs.CreateQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSDeleteMessageFuture struct {
+type DeleteMessageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSDeleteMessageFuture) Get(ctx workflow.Context) (*sqs.DeleteMessageOutput, error) {
+func (r *DeleteMessageFuture) Get(ctx workflow.Context) (*sqs.DeleteMessageOutput, error) {
 	var output sqs.DeleteMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSDeleteMessageBatchFuture struct {
+type DeleteMessageBatchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSDeleteMessageBatchFuture) Get(ctx workflow.Context) (*sqs.DeleteMessageBatchOutput, error) {
+func (r *DeleteMessageBatchFuture) Get(ctx workflow.Context) (*sqs.DeleteMessageBatchOutput, error) {
 	var output sqs.DeleteMessageBatchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSDeleteQueueFuture struct {
+type DeleteQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSDeleteQueueFuture) Get(ctx workflow.Context) (*sqs.DeleteQueueOutput, error) {
+func (r *DeleteQueueFuture) Get(ctx workflow.Context) (*sqs.DeleteQueueOutput, error) {
 	var output sqs.DeleteQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSGetQueueAttributesFuture struct {
+type GetQueueAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSGetQueueAttributesFuture) Get(ctx workflow.Context) (*sqs.GetQueueAttributesOutput, error) {
+func (r *GetQueueAttributesFuture) Get(ctx workflow.Context) (*sqs.GetQueueAttributesOutput, error) {
 	var output sqs.GetQueueAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSGetQueueUrlFuture struct {
+type GetQueueUrlFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSGetQueueUrlFuture) Get(ctx workflow.Context) (*sqs.GetQueueUrlOutput, error) {
+func (r *GetQueueUrlFuture) Get(ctx workflow.Context) (*sqs.GetQueueUrlOutput, error) {
 	var output sqs.GetQueueUrlOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSListDeadLetterSourceQueuesFuture struct {
+type ListDeadLetterSourceQueuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSListDeadLetterSourceQueuesFuture) Get(ctx workflow.Context) (*sqs.ListDeadLetterSourceQueuesOutput, error) {
+func (r *ListDeadLetterSourceQueuesFuture) Get(ctx workflow.Context) (*sqs.ListDeadLetterSourceQueuesOutput, error) {
 	var output sqs.ListDeadLetterSourceQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSListQueueTagsFuture struct {
+type ListQueueTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSListQueueTagsFuture) Get(ctx workflow.Context) (*sqs.ListQueueTagsOutput, error) {
+func (r *ListQueueTagsFuture) Get(ctx workflow.Context) (*sqs.ListQueueTagsOutput, error) {
 	var output sqs.ListQueueTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSListQueuesFuture struct {
+type ListQueuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSListQueuesFuture) Get(ctx workflow.Context) (*sqs.ListQueuesOutput, error) {
+func (r *ListQueuesFuture) Get(ctx workflow.Context) (*sqs.ListQueuesOutput, error) {
 	var output sqs.ListQueuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSPurgeQueueFuture struct {
+type PurgeQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSPurgeQueueFuture) Get(ctx workflow.Context) (*sqs.PurgeQueueOutput, error) {
+func (r *PurgeQueueFuture) Get(ctx workflow.Context) (*sqs.PurgeQueueOutput, error) {
 	var output sqs.PurgeQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSReceiveMessageFuture struct {
+type ReceiveMessageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSReceiveMessageFuture) Get(ctx workflow.Context) (*sqs.ReceiveMessageOutput, error) {
+func (r *ReceiveMessageFuture) Get(ctx workflow.Context) (*sqs.ReceiveMessageOutput, error) {
 	var output sqs.ReceiveMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSRemovePermissionFuture struct {
+type RemovePermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSRemovePermissionFuture) Get(ctx workflow.Context) (*sqs.RemovePermissionOutput, error) {
+func (r *RemovePermissionFuture) Get(ctx workflow.Context) (*sqs.RemovePermissionOutput, error) {
 	var output sqs.RemovePermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSSendMessageFuture struct {
+type SendMessageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSSendMessageFuture) Get(ctx workflow.Context) (*sqs.SendMessageOutput, error) {
+func (r *SendMessageFuture) Get(ctx workflow.Context) (*sqs.SendMessageOutput, error) {
 	var output sqs.SendMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSSendMessageBatchFuture struct {
+type SendMessageBatchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSSendMessageBatchFuture) Get(ctx workflow.Context) (*sqs.SendMessageBatchOutput, error) {
+func (r *SendMessageBatchFuture) Get(ctx workflow.Context) (*sqs.SendMessageBatchOutput, error) {
 	var output sqs.SendMessageBatchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSSetQueueAttributesFuture struct {
+type SetQueueAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSSetQueueAttributesFuture) Get(ctx workflow.Context) (*sqs.SetQueueAttributesOutput, error) {
+func (r *SetQueueAttributesFuture) Get(ctx workflow.Context) (*sqs.SetQueueAttributesOutput, error) {
 	var output sqs.SetQueueAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSTagQueueFuture struct {
+type TagQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSTagQueueFuture) Get(ctx workflow.Context) (*sqs.TagQueueOutput, error) {
+func (r *TagQueueFuture) Get(ctx workflow.Context) (*sqs.TagQueueOutput, error) {
 	var output sqs.TagQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SQSUntagQueueFuture struct {
+type UntagQueueFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SQSUntagQueueFuture) Get(ctx workflow.Context) (*sqs.UntagQueueOutput, error) {
+func (r *UntagQueueFuture) Get(ctx workflow.Context) (*sqs.UntagQueueOutput, error) {
 	var output sqs.UntagQueueOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -242,9 +242,9 @@ func (a *stub) AddPermission(ctx workflow.Context, input *sqs.AddPermissionInput
 	return &output, err
 }
 
-func (a *stub) AddPermissionAsync(ctx workflow.Context, input *sqs.AddPermissionInput) *SQSAddPermissionFuture {
+func (a *stub) AddPermissionAsync(ctx workflow.Context, input *sqs.AddPermissionInput) *AddPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.AddPermission", input)
-	return &SQSAddPermissionFuture{Future: future}
+	return &AddPermissionFuture{Future: future}
 }
 
 func (a *stub) ChangeMessageVisibility(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) (*sqs.ChangeMessageVisibilityOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) ChangeMessageVisibility(ctx workflow.Context, input *sqs.ChangeMe
 	return &output, err
 }
 
-func (a *stub) ChangeMessageVisibilityAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) *SQSChangeMessageVisibilityFuture {
+func (a *stub) ChangeMessageVisibilityAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) *ChangeMessageVisibilityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.ChangeMessageVisibility", input)
-	return &SQSChangeMessageVisibilityFuture{Future: future}
+	return &ChangeMessageVisibilityFuture{Future: future}
 }
 
 func (a *stub) ChangeMessageVisibilityBatch(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) (*sqs.ChangeMessageVisibilityBatchOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) ChangeMessageVisibilityBatch(ctx workflow.Context, input *sqs.Cha
 	return &output, err
 }
 
-func (a *stub) ChangeMessageVisibilityBatchAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) *SQSChangeMessageVisibilityBatchFuture {
+func (a *stub) ChangeMessageVisibilityBatchAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) *ChangeMessageVisibilityBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.ChangeMessageVisibilityBatch", input)
-	return &SQSChangeMessageVisibilityBatchFuture{Future: future}
+	return &ChangeMessageVisibilityBatchFuture{Future: future}
 }
 
 func (a *stub) CreateQueue(ctx workflow.Context, input *sqs.CreateQueueInput) (*sqs.CreateQueueOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) CreateQueue(ctx workflow.Context, input *sqs.CreateQueueInput) (*
 	return &output, err
 }
 
-func (a *stub) CreateQueueAsync(ctx workflow.Context, input *sqs.CreateQueueInput) *SQSCreateQueueFuture {
+func (a *stub) CreateQueueAsync(ctx workflow.Context, input *sqs.CreateQueueInput) *CreateQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.CreateQueue", input)
-	return &SQSCreateQueueFuture{Future: future}
+	return &CreateQueueFuture{Future: future}
 }
 
 func (a *stub) DeleteMessage(ctx workflow.Context, input *sqs.DeleteMessageInput) (*sqs.DeleteMessageOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) DeleteMessage(ctx workflow.Context, input *sqs.DeleteMessageInput
 	return &output, err
 }
 
-func (a *stub) DeleteMessageAsync(ctx workflow.Context, input *sqs.DeleteMessageInput) *SQSDeleteMessageFuture {
+func (a *stub) DeleteMessageAsync(ctx workflow.Context, input *sqs.DeleteMessageInput) *DeleteMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.DeleteMessage", input)
-	return &SQSDeleteMessageFuture{Future: future}
+	return &DeleteMessageFuture{Future: future}
 }
 
 func (a *stub) DeleteMessageBatch(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) (*sqs.DeleteMessageBatchOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) DeleteMessageBatch(ctx workflow.Context, input *sqs.DeleteMessage
 	return &output, err
 }
 
-func (a *stub) DeleteMessageBatchAsync(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) *SQSDeleteMessageBatchFuture {
+func (a *stub) DeleteMessageBatchAsync(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) *DeleteMessageBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.DeleteMessageBatch", input)
-	return &SQSDeleteMessageBatchFuture{Future: future}
+	return &DeleteMessageBatchFuture{Future: future}
 }
 
 func (a *stub) DeleteQueue(ctx workflow.Context, input *sqs.DeleteQueueInput) (*sqs.DeleteQueueOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) DeleteQueue(ctx workflow.Context, input *sqs.DeleteQueueInput) (*
 	return &output, err
 }
 
-func (a *stub) DeleteQueueAsync(ctx workflow.Context, input *sqs.DeleteQueueInput) *SQSDeleteQueueFuture {
+func (a *stub) DeleteQueueAsync(ctx workflow.Context, input *sqs.DeleteQueueInput) *DeleteQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.DeleteQueue", input)
-	return &SQSDeleteQueueFuture{Future: future}
+	return &DeleteQueueFuture{Future: future}
 }
 
 func (a *stub) GetQueueAttributes(ctx workflow.Context, input *sqs.GetQueueAttributesInput) (*sqs.GetQueueAttributesOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) GetQueueAttributes(ctx workflow.Context, input *sqs.GetQueueAttri
 	return &output, err
 }
 
-func (a *stub) GetQueueAttributesAsync(ctx workflow.Context, input *sqs.GetQueueAttributesInput) *SQSGetQueueAttributesFuture {
+func (a *stub) GetQueueAttributesAsync(ctx workflow.Context, input *sqs.GetQueueAttributesInput) *GetQueueAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.GetQueueAttributes", input)
-	return &SQSGetQueueAttributesFuture{Future: future}
+	return &GetQueueAttributesFuture{Future: future}
 }
 
 func (a *stub) GetQueueUrl(ctx workflow.Context, input *sqs.GetQueueUrlInput) (*sqs.GetQueueUrlOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) GetQueueUrl(ctx workflow.Context, input *sqs.GetQueueUrlInput) (*
 	return &output, err
 }
 
-func (a *stub) GetQueueUrlAsync(ctx workflow.Context, input *sqs.GetQueueUrlInput) *SQSGetQueueUrlFuture {
+func (a *stub) GetQueueUrlAsync(ctx workflow.Context, input *sqs.GetQueueUrlInput) *GetQueueUrlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.GetQueueUrl", input)
-	return &SQSGetQueueUrlFuture{Future: future}
+	return &GetQueueUrlFuture{Future: future}
 }
 
 func (a *stub) ListDeadLetterSourceQueues(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) (*sqs.ListDeadLetterSourceQueuesOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) ListDeadLetterSourceQueues(ctx workflow.Context, input *sqs.ListD
 	return &output, err
 }
 
-func (a *stub) ListDeadLetterSourceQueuesAsync(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) *SQSListDeadLetterSourceQueuesFuture {
+func (a *stub) ListDeadLetterSourceQueuesAsync(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) *ListDeadLetterSourceQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.ListDeadLetterSourceQueues", input)
-	return &SQSListDeadLetterSourceQueuesFuture{Future: future}
+	return &ListDeadLetterSourceQueuesFuture{Future: future}
 }
 
 func (a *stub) ListQueueTags(ctx workflow.Context, input *sqs.ListQueueTagsInput) (*sqs.ListQueueTagsOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) ListQueueTags(ctx workflow.Context, input *sqs.ListQueueTagsInput
 	return &output, err
 }
 
-func (a *stub) ListQueueTagsAsync(ctx workflow.Context, input *sqs.ListQueueTagsInput) *SQSListQueueTagsFuture {
+func (a *stub) ListQueueTagsAsync(ctx workflow.Context, input *sqs.ListQueueTagsInput) *ListQueueTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.ListQueueTags", input)
-	return &SQSListQueueTagsFuture{Future: future}
+	return &ListQueueTagsFuture{Future: future}
 }
 
 func (a *stub) ListQueues(ctx workflow.Context, input *sqs.ListQueuesInput) (*sqs.ListQueuesOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) ListQueues(ctx workflow.Context, input *sqs.ListQueuesInput) (*sq
 	return &output, err
 }
 
-func (a *stub) ListQueuesAsync(ctx workflow.Context, input *sqs.ListQueuesInput) *SQSListQueuesFuture {
+func (a *stub) ListQueuesAsync(ctx workflow.Context, input *sqs.ListQueuesInput) *ListQueuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.ListQueues", input)
-	return &SQSListQueuesFuture{Future: future}
+	return &ListQueuesFuture{Future: future}
 }
 
 func (a *stub) PurgeQueue(ctx workflow.Context, input *sqs.PurgeQueueInput) (*sqs.PurgeQueueOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) PurgeQueue(ctx workflow.Context, input *sqs.PurgeQueueInput) (*sq
 	return &output, err
 }
 
-func (a *stub) PurgeQueueAsync(ctx workflow.Context, input *sqs.PurgeQueueInput) *SQSPurgeQueueFuture {
+func (a *stub) PurgeQueueAsync(ctx workflow.Context, input *sqs.PurgeQueueInput) *PurgeQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.PurgeQueue", input)
-	return &SQSPurgeQueueFuture{Future: future}
+	return &PurgeQueueFuture{Future: future}
 }
 
 func (a *stub) ReceiveMessage(ctx workflow.Context, input *sqs.ReceiveMessageInput) (*sqs.ReceiveMessageOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) ReceiveMessage(ctx workflow.Context, input *sqs.ReceiveMessageInp
 	return &output, err
 }
 
-func (a *stub) ReceiveMessageAsync(ctx workflow.Context, input *sqs.ReceiveMessageInput) *SQSReceiveMessageFuture {
+func (a *stub) ReceiveMessageAsync(ctx workflow.Context, input *sqs.ReceiveMessageInput) *ReceiveMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.ReceiveMessage", input)
-	return &SQSReceiveMessageFuture{Future: future}
+	return &ReceiveMessageFuture{Future: future}
 }
 
 func (a *stub) RemovePermission(ctx workflow.Context, input *sqs.RemovePermissionInput) (*sqs.RemovePermissionOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) RemovePermission(ctx workflow.Context, input *sqs.RemovePermissio
 	return &output, err
 }
 
-func (a *stub) RemovePermissionAsync(ctx workflow.Context, input *sqs.RemovePermissionInput) *SQSRemovePermissionFuture {
+func (a *stub) RemovePermissionAsync(ctx workflow.Context, input *sqs.RemovePermissionInput) *RemovePermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.RemovePermission", input)
-	return &SQSRemovePermissionFuture{Future: future}
+	return &RemovePermissionFuture{Future: future}
 }
 
 func (a *stub) SendMessage(ctx workflow.Context, input *sqs.SendMessageInput) (*sqs.SendMessageOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) SendMessage(ctx workflow.Context, input *sqs.SendMessageInput) (*
 	return &output, err
 }
 
-func (a *stub) SendMessageAsync(ctx workflow.Context, input *sqs.SendMessageInput) *SQSSendMessageFuture {
+func (a *stub) SendMessageAsync(ctx workflow.Context, input *sqs.SendMessageInput) *SendMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.SendMessage", input)
-	return &SQSSendMessageFuture{Future: future}
+	return &SendMessageFuture{Future: future}
 }
 
 func (a *stub) SendMessageBatch(ctx workflow.Context, input *sqs.SendMessageBatchInput) (*sqs.SendMessageBatchOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) SendMessageBatch(ctx workflow.Context, input *sqs.SendMessageBatc
 	return &output, err
 }
 
-func (a *stub) SendMessageBatchAsync(ctx workflow.Context, input *sqs.SendMessageBatchInput) *SQSSendMessageBatchFuture {
+func (a *stub) SendMessageBatchAsync(ctx workflow.Context, input *sqs.SendMessageBatchInput) *SendMessageBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.SendMessageBatch", input)
-	return &SQSSendMessageBatchFuture{Future: future}
+	return &SendMessageBatchFuture{Future: future}
 }
 
 func (a *stub) SetQueueAttributes(ctx workflow.Context, input *sqs.SetQueueAttributesInput) (*sqs.SetQueueAttributesOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) SetQueueAttributes(ctx workflow.Context, input *sqs.SetQueueAttri
 	return &output, err
 }
 
-func (a *stub) SetQueueAttributesAsync(ctx workflow.Context, input *sqs.SetQueueAttributesInput) *SQSSetQueueAttributesFuture {
+func (a *stub) SetQueueAttributesAsync(ctx workflow.Context, input *sqs.SetQueueAttributesInput) *SetQueueAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.SetQueueAttributes", input)
-	return &SQSSetQueueAttributesFuture{Future: future}
+	return &SetQueueAttributesFuture{Future: future}
 }
 
 func (a *stub) TagQueue(ctx workflow.Context, input *sqs.TagQueueInput) (*sqs.TagQueueOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) TagQueue(ctx workflow.Context, input *sqs.TagQueueInput) (*sqs.Ta
 	return &output, err
 }
 
-func (a *stub) TagQueueAsync(ctx workflow.Context, input *sqs.TagQueueInput) *SQSTagQueueFuture {
+func (a *stub) TagQueueAsync(ctx workflow.Context, input *sqs.TagQueueInput) *TagQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.TagQueue", input)
-	return &SQSTagQueueFuture{Future: future}
+	return &TagQueueFuture{Future: future}
 }
 
 func (a *stub) UntagQueue(ctx workflow.Context, input *sqs.UntagQueueInput) (*sqs.UntagQueueOutput, error) {
@@ -451,7 +451,7 @@ func (a *stub) UntagQueue(ctx workflow.Context, input *sqs.UntagQueueInput) (*sq
 	return &output, err
 }
 
-func (a *stub) UntagQueueAsync(ctx workflow.Context, input *sqs.UntagQueueInput) *SQSUntagQueueFuture {
+func (a *stub) UntagQueueAsync(ctx workflow.Context, input *sqs.UntagQueueInput) *UntagQueueFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sqs.UntagQueue", input)
-	return &SQSUntagQueueFuture{Future: future}
+	return &UntagQueueFuture{Future: future}
 }

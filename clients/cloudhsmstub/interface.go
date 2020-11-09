@@ -16,64 +16,64 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AddTagsToResource(ctx workflow.Context, input *cloudhsm.AddTagsToResourceInput) (*cloudhsm.AddTagsToResourceOutput, error)
-	AddTagsToResourceAsync(ctx workflow.Context, input *cloudhsm.AddTagsToResourceInput) *CloudHSMAddTagsToResourceFuture
+	AddTagsToResourceAsync(ctx workflow.Context, input *cloudhsm.AddTagsToResourceInput) *AddTagsToResourceFuture
 
 	CreateHapg(ctx workflow.Context, input *cloudhsm.CreateHapgInput) (*cloudhsm.CreateHapgOutput, error)
-	CreateHapgAsync(ctx workflow.Context, input *cloudhsm.CreateHapgInput) *CloudHSMCreateHapgFuture
+	CreateHapgAsync(ctx workflow.Context, input *cloudhsm.CreateHapgInput) *CreateHapgFuture
 
 	CreateHsm(ctx workflow.Context, input *cloudhsm.CreateHsmInput) (*cloudhsm.CreateHsmOutput, error)
-	CreateHsmAsync(ctx workflow.Context, input *cloudhsm.CreateHsmInput) *CloudHSMCreateHsmFuture
+	CreateHsmAsync(ctx workflow.Context, input *cloudhsm.CreateHsmInput) *CreateHsmFuture
 
 	CreateLunaClient(ctx workflow.Context, input *cloudhsm.CreateLunaClientInput) (*cloudhsm.CreateLunaClientOutput, error)
-	CreateLunaClientAsync(ctx workflow.Context, input *cloudhsm.CreateLunaClientInput) *CloudHSMCreateLunaClientFuture
+	CreateLunaClientAsync(ctx workflow.Context, input *cloudhsm.CreateLunaClientInput) *CreateLunaClientFuture
 
 	DeleteHapg(ctx workflow.Context, input *cloudhsm.DeleteHapgInput) (*cloudhsm.DeleteHapgOutput, error)
-	DeleteHapgAsync(ctx workflow.Context, input *cloudhsm.DeleteHapgInput) *CloudHSMDeleteHapgFuture
+	DeleteHapgAsync(ctx workflow.Context, input *cloudhsm.DeleteHapgInput) *DeleteHapgFuture
 
 	DeleteHsm(ctx workflow.Context, input *cloudhsm.DeleteHsmInput) (*cloudhsm.DeleteHsmOutput, error)
-	DeleteHsmAsync(ctx workflow.Context, input *cloudhsm.DeleteHsmInput) *CloudHSMDeleteHsmFuture
+	DeleteHsmAsync(ctx workflow.Context, input *cloudhsm.DeleteHsmInput) *DeleteHsmFuture
 
 	DeleteLunaClient(ctx workflow.Context, input *cloudhsm.DeleteLunaClientInput) (*cloudhsm.DeleteLunaClientOutput, error)
-	DeleteLunaClientAsync(ctx workflow.Context, input *cloudhsm.DeleteLunaClientInput) *CloudHSMDeleteLunaClientFuture
+	DeleteLunaClientAsync(ctx workflow.Context, input *cloudhsm.DeleteLunaClientInput) *DeleteLunaClientFuture
 
 	DescribeHapg(ctx workflow.Context, input *cloudhsm.DescribeHapgInput) (*cloudhsm.DescribeHapgOutput, error)
-	DescribeHapgAsync(ctx workflow.Context, input *cloudhsm.DescribeHapgInput) *CloudHSMDescribeHapgFuture
+	DescribeHapgAsync(ctx workflow.Context, input *cloudhsm.DescribeHapgInput) *DescribeHapgFuture
 
 	DescribeHsm(ctx workflow.Context, input *cloudhsm.DescribeHsmInput) (*cloudhsm.DescribeHsmOutput, error)
-	DescribeHsmAsync(ctx workflow.Context, input *cloudhsm.DescribeHsmInput) *CloudHSMDescribeHsmFuture
+	DescribeHsmAsync(ctx workflow.Context, input *cloudhsm.DescribeHsmInput) *DescribeHsmFuture
 
 	DescribeLunaClient(ctx workflow.Context, input *cloudhsm.DescribeLunaClientInput) (*cloudhsm.DescribeLunaClientOutput, error)
-	DescribeLunaClientAsync(ctx workflow.Context, input *cloudhsm.DescribeLunaClientInput) *CloudHSMDescribeLunaClientFuture
+	DescribeLunaClientAsync(ctx workflow.Context, input *cloudhsm.DescribeLunaClientInput) *DescribeLunaClientFuture
 
 	GetConfig(ctx workflow.Context, input *cloudhsm.GetConfigInput) (*cloudhsm.GetConfigOutput, error)
-	GetConfigAsync(ctx workflow.Context, input *cloudhsm.GetConfigInput) *CloudHSMGetConfigFuture
+	GetConfigAsync(ctx workflow.Context, input *cloudhsm.GetConfigInput) *GetConfigFuture
 
 	ListAvailableZones(ctx workflow.Context, input *cloudhsm.ListAvailableZonesInput) (*cloudhsm.ListAvailableZonesOutput, error)
-	ListAvailableZonesAsync(ctx workflow.Context, input *cloudhsm.ListAvailableZonesInput) *CloudHSMListAvailableZonesFuture
+	ListAvailableZonesAsync(ctx workflow.Context, input *cloudhsm.ListAvailableZonesInput) *ListAvailableZonesFuture
 
 	ListHapgs(ctx workflow.Context, input *cloudhsm.ListHapgsInput) (*cloudhsm.ListHapgsOutput, error)
-	ListHapgsAsync(ctx workflow.Context, input *cloudhsm.ListHapgsInput) *CloudHSMListHapgsFuture
+	ListHapgsAsync(ctx workflow.Context, input *cloudhsm.ListHapgsInput) *ListHapgsFuture
 
 	ListHsms(ctx workflow.Context, input *cloudhsm.ListHsmsInput) (*cloudhsm.ListHsmsOutput, error)
-	ListHsmsAsync(ctx workflow.Context, input *cloudhsm.ListHsmsInput) *CloudHSMListHsmsFuture
+	ListHsmsAsync(ctx workflow.Context, input *cloudhsm.ListHsmsInput) *ListHsmsFuture
 
 	ListLunaClients(ctx workflow.Context, input *cloudhsm.ListLunaClientsInput) (*cloudhsm.ListLunaClientsOutput, error)
-	ListLunaClientsAsync(ctx workflow.Context, input *cloudhsm.ListLunaClientsInput) *CloudHSMListLunaClientsFuture
+	ListLunaClientsAsync(ctx workflow.Context, input *cloudhsm.ListLunaClientsInput) *ListLunaClientsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *cloudhsm.ListTagsForResourceInput) (*cloudhsm.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *cloudhsm.ListTagsForResourceInput) *CloudHSMListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *cloudhsm.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ModifyHapg(ctx workflow.Context, input *cloudhsm.ModifyHapgInput) (*cloudhsm.ModifyHapgOutput, error)
-	ModifyHapgAsync(ctx workflow.Context, input *cloudhsm.ModifyHapgInput) *CloudHSMModifyHapgFuture
+	ModifyHapgAsync(ctx workflow.Context, input *cloudhsm.ModifyHapgInput) *ModifyHapgFuture
 
 	ModifyHsm(ctx workflow.Context, input *cloudhsm.ModifyHsmInput) (*cloudhsm.ModifyHsmOutput, error)
-	ModifyHsmAsync(ctx workflow.Context, input *cloudhsm.ModifyHsmInput) *CloudHSMModifyHsmFuture
+	ModifyHsmAsync(ctx workflow.Context, input *cloudhsm.ModifyHsmInput) *ModifyHsmFuture
 
 	ModifyLunaClient(ctx workflow.Context, input *cloudhsm.ModifyLunaClientInput) (*cloudhsm.ModifyLunaClientOutput, error)
-	ModifyLunaClientAsync(ctx workflow.Context, input *cloudhsm.ModifyLunaClientInput) *CloudHSMModifyLunaClientFuture
+	ModifyLunaClientAsync(ctx workflow.Context, input *cloudhsm.ModifyLunaClientInput) *ModifyLunaClientFuture
 
 	RemoveTagsFromResource(ctx workflow.Context, input *cloudhsm.RemoveTagsFromResourceInput) (*cloudhsm.RemoveTagsFromResourceOutput, error)
-	RemoveTagsFromResourceAsync(ctx workflow.Context, input *cloudhsm.RemoveTagsFromResourceInput) *CloudHSMRemoveTagsFromResourceFuture
+	RemoveTagsFromResourceAsync(ctx workflow.Context, input *cloudhsm.RemoveTagsFromResourceInput) *RemoveTagsFromResourceFuture
 }
 
 func NewClient() Client {

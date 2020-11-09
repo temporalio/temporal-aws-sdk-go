@@ -16,67 +16,67 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type RDSDataServiceBatchExecuteStatementFuture struct {
+type BatchExecuteStatementFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RDSDataServiceBatchExecuteStatementFuture) Get(ctx workflow.Context) (*rdsdataservice.BatchExecuteStatementOutput, error) {
+func (r *BatchExecuteStatementFuture) Get(ctx workflow.Context) (*rdsdataservice.BatchExecuteStatementOutput, error) {
 	var output rdsdataservice.BatchExecuteStatementOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RDSDataServiceBeginTransactionFuture struct {
+type BeginTransactionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RDSDataServiceBeginTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.BeginTransactionOutput, error) {
+func (r *BeginTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.BeginTransactionOutput, error) {
 	var output rdsdataservice.BeginTransactionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RDSDataServiceCommitTransactionFuture struct {
+type CommitTransactionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RDSDataServiceCommitTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.CommitTransactionOutput, error) {
+func (r *CommitTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.CommitTransactionOutput, error) {
 	var output rdsdataservice.CommitTransactionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RDSDataServiceExecuteSqlFuture struct {
+type ExecuteSqlFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RDSDataServiceExecuteSqlFuture) Get(ctx workflow.Context) (*rdsdataservice.ExecuteSqlOutput, error) {
+func (r *ExecuteSqlFuture) Get(ctx workflow.Context) (*rdsdataservice.ExecuteSqlOutput, error) {
 	var output rdsdataservice.ExecuteSqlOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RDSDataServiceExecuteStatementFuture struct {
+type ExecuteStatementFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RDSDataServiceExecuteStatementFuture) Get(ctx workflow.Context) (*rdsdataservice.ExecuteStatementOutput, error) {
+func (r *ExecuteStatementFuture) Get(ctx workflow.Context) (*rdsdataservice.ExecuteStatementOutput, error) {
 	var output rdsdataservice.ExecuteStatementOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RDSDataServiceRollbackTransactionFuture struct {
+type RollbackTransactionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RDSDataServiceRollbackTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.RollbackTransactionOutput, error) {
+func (r *RollbackTransactionFuture) Get(ctx workflow.Context) (*rdsdataservice.RollbackTransactionOutput, error) {
 	var output rdsdataservice.RollbackTransactionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -88,9 +88,9 @@ func (a *stub) BatchExecuteStatement(ctx workflow.Context, input *rdsdataservice
 	return &output, err
 }
 
-func (a *stub) BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *RDSDataServiceBatchExecuteStatementFuture {
+func (a *stub) BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *BatchExecuteStatementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.BatchExecuteStatement", input)
-	return &RDSDataServiceBatchExecuteStatementFuture{Future: future}
+	return &BatchExecuteStatementFuture{Future: future}
 }
 
 func (a *stub) BeginTransaction(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) (*rdsdataservice.BeginTransactionOutput, error) {
@@ -99,9 +99,9 @@ func (a *stub) BeginTransaction(ctx workflow.Context, input *rdsdataservice.Begi
 	return &output, err
 }
 
-func (a *stub) BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *RDSDataServiceBeginTransactionFuture {
+func (a *stub) BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *BeginTransactionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.BeginTransaction", input)
-	return &RDSDataServiceBeginTransactionFuture{Future: future}
+	return &BeginTransactionFuture{Future: future}
 }
 
 func (a *stub) CommitTransaction(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) (*rdsdataservice.CommitTransactionOutput, error) {
@@ -110,9 +110,9 @@ func (a *stub) CommitTransaction(ctx workflow.Context, input *rdsdataservice.Com
 	return &output, err
 }
 
-func (a *stub) CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *RDSDataServiceCommitTransactionFuture {
+func (a *stub) CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *CommitTransactionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.CommitTransaction", input)
-	return &RDSDataServiceCommitTransactionFuture{Future: future}
+	return &CommitTransactionFuture{Future: future}
 }
 
 func (a *stub) ExecuteSql(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) (*rdsdataservice.ExecuteSqlOutput, error) {
@@ -121,9 +121,9 @@ func (a *stub) ExecuteSql(ctx workflow.Context, input *rdsdataservice.ExecuteSql
 	return &output, err
 }
 
-func (a *stub) ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *RDSDataServiceExecuteSqlFuture {
+func (a *stub) ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *ExecuteSqlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.ExecuteSql", input)
-	return &RDSDataServiceExecuteSqlFuture{Future: future}
+	return &ExecuteSqlFuture{Future: future}
 }
 
 func (a *stub) ExecuteStatement(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) (*rdsdataservice.ExecuteStatementOutput, error) {
@@ -132,9 +132,9 @@ func (a *stub) ExecuteStatement(ctx workflow.Context, input *rdsdataservice.Exec
 	return &output, err
 }
 
-func (a *stub) ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *RDSDataServiceExecuteStatementFuture {
+func (a *stub) ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *ExecuteStatementFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.ExecuteStatement", input)
-	return &RDSDataServiceExecuteStatementFuture{Future: future}
+	return &ExecuteStatementFuture{Future: future}
 }
 
 func (a *stub) RollbackTransaction(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) (*rdsdataservice.RollbackTransactionOutput, error) {
@@ -143,7 +143,7 @@ func (a *stub) RollbackTransaction(ctx workflow.Context, input *rdsdataservice.R
 	return &output, err
 }
 
-func (a *stub) RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RDSDataServiceRollbackTransactionFuture {
+func (a *stub) RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RollbackTransactionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rdsdataservice.RollbackTransaction", input)
-	return &RDSDataServiceRollbackTransactionFuture{Future: future}
+	return &RollbackTransactionFuture{Future: future}
 }

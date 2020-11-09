@@ -16,496 +16,496 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type FraudDetectorBatchCreateVariableFuture struct {
+type BatchCreateVariableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorBatchCreateVariableFuture) Get(ctx workflow.Context) (*frauddetector.BatchCreateVariableOutput, error) {
+func (r *BatchCreateVariableFuture) Get(ctx workflow.Context) (*frauddetector.BatchCreateVariableOutput, error) {
 	var output frauddetector.BatchCreateVariableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorBatchGetVariableFuture struct {
+type BatchGetVariableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorBatchGetVariableFuture) Get(ctx workflow.Context) (*frauddetector.BatchGetVariableOutput, error) {
+func (r *BatchGetVariableFuture) Get(ctx workflow.Context) (*frauddetector.BatchGetVariableOutput, error) {
 	var output frauddetector.BatchGetVariableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorCreateDetectorVersionFuture struct {
+type CreateDetectorVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorCreateDetectorVersionFuture) Get(ctx workflow.Context) (*frauddetector.CreateDetectorVersionOutput, error) {
+func (r *CreateDetectorVersionFuture) Get(ctx workflow.Context) (*frauddetector.CreateDetectorVersionOutput, error) {
 	var output frauddetector.CreateDetectorVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorCreateModelFuture struct {
+type CreateModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorCreateModelFuture) Get(ctx workflow.Context) (*frauddetector.CreateModelOutput, error) {
+func (r *CreateModelFuture) Get(ctx workflow.Context) (*frauddetector.CreateModelOutput, error) {
 	var output frauddetector.CreateModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorCreateModelVersionFuture struct {
+type CreateModelVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorCreateModelVersionFuture) Get(ctx workflow.Context) (*frauddetector.CreateModelVersionOutput, error) {
+func (r *CreateModelVersionFuture) Get(ctx workflow.Context) (*frauddetector.CreateModelVersionOutput, error) {
 	var output frauddetector.CreateModelVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorCreateRuleFuture struct {
+type CreateRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorCreateRuleFuture) Get(ctx workflow.Context) (*frauddetector.CreateRuleOutput, error) {
+func (r *CreateRuleFuture) Get(ctx workflow.Context) (*frauddetector.CreateRuleOutput, error) {
 	var output frauddetector.CreateRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorCreateVariableFuture struct {
+type CreateVariableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorCreateVariableFuture) Get(ctx workflow.Context) (*frauddetector.CreateVariableOutput, error) {
+func (r *CreateVariableFuture) Get(ctx workflow.Context) (*frauddetector.CreateVariableOutput, error) {
 	var output frauddetector.CreateVariableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorDeleteDetectorFuture struct {
+type DeleteDetectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorDeleteDetectorFuture) Get(ctx workflow.Context) (*frauddetector.DeleteDetectorOutput, error) {
+func (r *DeleteDetectorFuture) Get(ctx workflow.Context) (*frauddetector.DeleteDetectorOutput, error) {
 	var output frauddetector.DeleteDetectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorDeleteDetectorVersionFuture struct {
+type DeleteDetectorVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorDeleteDetectorVersionFuture) Get(ctx workflow.Context) (*frauddetector.DeleteDetectorVersionOutput, error) {
+func (r *DeleteDetectorVersionFuture) Get(ctx workflow.Context) (*frauddetector.DeleteDetectorVersionOutput, error) {
 	var output frauddetector.DeleteDetectorVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorDeleteEventFuture struct {
+type DeleteEventFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorDeleteEventFuture) Get(ctx workflow.Context) (*frauddetector.DeleteEventOutput, error) {
+func (r *DeleteEventFuture) Get(ctx workflow.Context) (*frauddetector.DeleteEventOutput, error) {
 	var output frauddetector.DeleteEventOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorDeleteRuleFuture struct {
+type DeleteRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorDeleteRuleFuture) Get(ctx workflow.Context) (*frauddetector.DeleteRuleOutput, error) {
+func (r *DeleteRuleFuture) Get(ctx workflow.Context) (*frauddetector.DeleteRuleOutput, error) {
 	var output frauddetector.DeleteRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorDescribeDetectorFuture struct {
+type DescribeDetectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorDescribeDetectorFuture) Get(ctx workflow.Context) (*frauddetector.DescribeDetectorOutput, error) {
+func (r *DescribeDetectorFuture) Get(ctx workflow.Context) (*frauddetector.DescribeDetectorOutput, error) {
 	var output frauddetector.DescribeDetectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorDescribeModelVersionsFuture struct {
+type DescribeModelVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorDescribeModelVersionsFuture) Get(ctx workflow.Context) (*frauddetector.DescribeModelVersionsOutput, error) {
+func (r *DescribeModelVersionsFuture) Get(ctx workflow.Context) (*frauddetector.DescribeModelVersionsOutput, error) {
 	var output frauddetector.DescribeModelVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetDetectorVersionFuture struct {
+type GetDetectorVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetDetectorVersionFuture) Get(ctx workflow.Context) (*frauddetector.GetDetectorVersionOutput, error) {
+func (r *GetDetectorVersionFuture) Get(ctx workflow.Context) (*frauddetector.GetDetectorVersionOutput, error) {
 	var output frauddetector.GetDetectorVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetDetectorsFuture struct {
+type GetDetectorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetDetectorsFuture) Get(ctx workflow.Context) (*frauddetector.GetDetectorsOutput, error) {
+func (r *GetDetectorsFuture) Get(ctx workflow.Context) (*frauddetector.GetDetectorsOutput, error) {
 	var output frauddetector.GetDetectorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetEntityTypesFuture struct {
+type GetEntityTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetEntityTypesFuture) Get(ctx workflow.Context) (*frauddetector.GetEntityTypesOutput, error) {
+func (r *GetEntityTypesFuture) Get(ctx workflow.Context) (*frauddetector.GetEntityTypesOutput, error) {
 	var output frauddetector.GetEntityTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetEventPredictionFuture struct {
+type GetEventPredictionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetEventPredictionFuture) Get(ctx workflow.Context) (*frauddetector.GetEventPredictionOutput, error) {
+func (r *GetEventPredictionFuture) Get(ctx workflow.Context) (*frauddetector.GetEventPredictionOutput, error) {
 	var output frauddetector.GetEventPredictionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetEventTypesFuture struct {
+type GetEventTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetEventTypesFuture) Get(ctx workflow.Context) (*frauddetector.GetEventTypesOutput, error) {
+func (r *GetEventTypesFuture) Get(ctx workflow.Context) (*frauddetector.GetEventTypesOutput, error) {
 	var output frauddetector.GetEventTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetExternalModelsFuture struct {
+type GetExternalModelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetExternalModelsFuture) Get(ctx workflow.Context) (*frauddetector.GetExternalModelsOutput, error) {
+func (r *GetExternalModelsFuture) Get(ctx workflow.Context) (*frauddetector.GetExternalModelsOutput, error) {
 	var output frauddetector.GetExternalModelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetKMSEncryptionKeyFuture struct {
+type GetKMSEncryptionKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetKMSEncryptionKeyFuture) Get(ctx workflow.Context) (*frauddetector.GetKMSEncryptionKeyOutput, error) {
+func (r *GetKMSEncryptionKeyFuture) Get(ctx workflow.Context) (*frauddetector.GetKMSEncryptionKeyOutput, error) {
 	var output frauddetector.GetKMSEncryptionKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetLabelsFuture struct {
+type GetLabelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetLabelsFuture) Get(ctx workflow.Context) (*frauddetector.GetLabelsOutput, error) {
+func (r *GetLabelsFuture) Get(ctx workflow.Context) (*frauddetector.GetLabelsOutput, error) {
 	var output frauddetector.GetLabelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetModelVersionFuture struct {
+type GetModelVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetModelVersionFuture) Get(ctx workflow.Context) (*frauddetector.GetModelVersionOutput, error) {
+func (r *GetModelVersionFuture) Get(ctx workflow.Context) (*frauddetector.GetModelVersionOutput, error) {
 	var output frauddetector.GetModelVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetModelsFuture struct {
+type GetModelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetModelsFuture) Get(ctx workflow.Context) (*frauddetector.GetModelsOutput, error) {
+func (r *GetModelsFuture) Get(ctx workflow.Context) (*frauddetector.GetModelsOutput, error) {
 	var output frauddetector.GetModelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetOutcomesFuture struct {
+type GetOutcomesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetOutcomesFuture) Get(ctx workflow.Context) (*frauddetector.GetOutcomesOutput, error) {
+func (r *GetOutcomesFuture) Get(ctx workflow.Context) (*frauddetector.GetOutcomesOutput, error) {
 	var output frauddetector.GetOutcomesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetRulesFuture struct {
+type GetRulesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetRulesFuture) Get(ctx workflow.Context) (*frauddetector.GetRulesOutput, error) {
+func (r *GetRulesFuture) Get(ctx workflow.Context) (*frauddetector.GetRulesOutput, error) {
 	var output frauddetector.GetRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorGetVariablesFuture struct {
+type GetVariablesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorGetVariablesFuture) Get(ctx workflow.Context) (*frauddetector.GetVariablesOutput, error) {
+func (r *GetVariablesFuture) Get(ctx workflow.Context) (*frauddetector.GetVariablesOutput, error) {
 	var output frauddetector.GetVariablesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorListTagsForResourceFuture) Get(ctx workflow.Context) (*frauddetector.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*frauddetector.ListTagsForResourceOutput, error) {
 	var output frauddetector.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorPutDetectorFuture struct {
+type PutDetectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorPutDetectorFuture) Get(ctx workflow.Context) (*frauddetector.PutDetectorOutput, error) {
+func (r *PutDetectorFuture) Get(ctx workflow.Context) (*frauddetector.PutDetectorOutput, error) {
 	var output frauddetector.PutDetectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorPutEntityTypeFuture struct {
+type PutEntityTypeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorPutEntityTypeFuture) Get(ctx workflow.Context) (*frauddetector.PutEntityTypeOutput, error) {
+func (r *PutEntityTypeFuture) Get(ctx workflow.Context) (*frauddetector.PutEntityTypeOutput, error) {
 	var output frauddetector.PutEntityTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorPutEventTypeFuture struct {
+type PutEventTypeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorPutEventTypeFuture) Get(ctx workflow.Context) (*frauddetector.PutEventTypeOutput, error) {
+func (r *PutEventTypeFuture) Get(ctx workflow.Context) (*frauddetector.PutEventTypeOutput, error) {
 	var output frauddetector.PutEventTypeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorPutExternalModelFuture struct {
+type PutExternalModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorPutExternalModelFuture) Get(ctx workflow.Context) (*frauddetector.PutExternalModelOutput, error) {
+func (r *PutExternalModelFuture) Get(ctx workflow.Context) (*frauddetector.PutExternalModelOutput, error) {
 	var output frauddetector.PutExternalModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorPutKMSEncryptionKeyFuture struct {
+type PutKMSEncryptionKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorPutKMSEncryptionKeyFuture) Get(ctx workflow.Context) (*frauddetector.PutKMSEncryptionKeyOutput, error) {
+func (r *PutKMSEncryptionKeyFuture) Get(ctx workflow.Context) (*frauddetector.PutKMSEncryptionKeyOutput, error) {
 	var output frauddetector.PutKMSEncryptionKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorPutLabelFuture struct {
+type PutLabelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorPutLabelFuture) Get(ctx workflow.Context) (*frauddetector.PutLabelOutput, error) {
+func (r *PutLabelFuture) Get(ctx workflow.Context) (*frauddetector.PutLabelOutput, error) {
 	var output frauddetector.PutLabelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorPutOutcomeFuture struct {
+type PutOutcomeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorPutOutcomeFuture) Get(ctx workflow.Context) (*frauddetector.PutOutcomeOutput, error) {
+func (r *PutOutcomeFuture) Get(ctx workflow.Context) (*frauddetector.PutOutcomeOutput, error) {
 	var output frauddetector.PutOutcomeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorTagResourceFuture) Get(ctx workflow.Context) (*frauddetector.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*frauddetector.TagResourceOutput, error) {
 	var output frauddetector.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUntagResourceFuture) Get(ctx workflow.Context) (*frauddetector.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*frauddetector.UntagResourceOutput, error) {
 	var output frauddetector.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateDetectorVersionFuture struct {
+type UpdateDetectorVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateDetectorVersionFuture) Get(ctx workflow.Context) (*frauddetector.UpdateDetectorVersionOutput, error) {
+func (r *UpdateDetectorVersionFuture) Get(ctx workflow.Context) (*frauddetector.UpdateDetectorVersionOutput, error) {
 	var output frauddetector.UpdateDetectorVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateDetectorVersionMetadataFuture struct {
+type UpdateDetectorVersionMetadataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateDetectorVersionMetadataFuture) Get(ctx workflow.Context) (*frauddetector.UpdateDetectorVersionMetadataOutput, error) {
+func (r *UpdateDetectorVersionMetadataFuture) Get(ctx workflow.Context) (*frauddetector.UpdateDetectorVersionMetadataOutput, error) {
 	var output frauddetector.UpdateDetectorVersionMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateDetectorVersionStatusFuture struct {
+type UpdateDetectorVersionStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateDetectorVersionStatusFuture) Get(ctx workflow.Context) (*frauddetector.UpdateDetectorVersionStatusOutput, error) {
+func (r *UpdateDetectorVersionStatusFuture) Get(ctx workflow.Context) (*frauddetector.UpdateDetectorVersionStatusOutput, error) {
 	var output frauddetector.UpdateDetectorVersionStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateModelFuture struct {
+type UpdateModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateModelFuture) Get(ctx workflow.Context) (*frauddetector.UpdateModelOutput, error) {
+func (r *UpdateModelFuture) Get(ctx workflow.Context) (*frauddetector.UpdateModelOutput, error) {
 	var output frauddetector.UpdateModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateModelVersionFuture struct {
+type UpdateModelVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateModelVersionFuture) Get(ctx workflow.Context) (*frauddetector.UpdateModelVersionOutput, error) {
+func (r *UpdateModelVersionFuture) Get(ctx workflow.Context) (*frauddetector.UpdateModelVersionOutput, error) {
 	var output frauddetector.UpdateModelVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateModelVersionStatusFuture struct {
+type UpdateModelVersionStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateModelVersionStatusFuture) Get(ctx workflow.Context) (*frauddetector.UpdateModelVersionStatusOutput, error) {
+func (r *UpdateModelVersionStatusFuture) Get(ctx workflow.Context) (*frauddetector.UpdateModelVersionStatusOutput, error) {
 	var output frauddetector.UpdateModelVersionStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateRuleMetadataFuture struct {
+type UpdateRuleMetadataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateRuleMetadataFuture) Get(ctx workflow.Context) (*frauddetector.UpdateRuleMetadataOutput, error) {
+func (r *UpdateRuleMetadataFuture) Get(ctx workflow.Context) (*frauddetector.UpdateRuleMetadataOutput, error) {
 	var output frauddetector.UpdateRuleMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateRuleVersionFuture struct {
+type UpdateRuleVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateRuleVersionFuture) Get(ctx workflow.Context) (*frauddetector.UpdateRuleVersionOutput, error) {
+func (r *UpdateRuleVersionFuture) Get(ctx workflow.Context) (*frauddetector.UpdateRuleVersionOutput, error) {
 	var output frauddetector.UpdateRuleVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FraudDetectorUpdateVariableFuture struct {
+type UpdateVariableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FraudDetectorUpdateVariableFuture) Get(ctx workflow.Context) (*frauddetector.UpdateVariableOutput, error) {
+func (r *UpdateVariableFuture) Get(ctx workflow.Context) (*frauddetector.UpdateVariableOutput, error) {
 	var output frauddetector.UpdateVariableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -517,9 +517,9 @@ func (a *stub) BatchCreateVariable(ctx workflow.Context, input *frauddetector.Ba
 	return &output, err
 }
 
-func (a *stub) BatchCreateVariableAsync(ctx workflow.Context, input *frauddetector.BatchCreateVariableInput) *FraudDetectorBatchCreateVariableFuture {
+func (a *stub) BatchCreateVariableAsync(ctx workflow.Context, input *frauddetector.BatchCreateVariableInput) *BatchCreateVariableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.BatchCreateVariable", input)
-	return &FraudDetectorBatchCreateVariableFuture{Future: future}
+	return &BatchCreateVariableFuture{Future: future}
 }
 
 func (a *stub) BatchGetVariable(ctx workflow.Context, input *frauddetector.BatchGetVariableInput) (*frauddetector.BatchGetVariableOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) BatchGetVariable(ctx workflow.Context, input *frauddetector.Batch
 	return &output, err
 }
 
-func (a *stub) BatchGetVariableAsync(ctx workflow.Context, input *frauddetector.BatchGetVariableInput) *FraudDetectorBatchGetVariableFuture {
+func (a *stub) BatchGetVariableAsync(ctx workflow.Context, input *frauddetector.BatchGetVariableInput) *BatchGetVariableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.BatchGetVariable", input)
-	return &FraudDetectorBatchGetVariableFuture{Future: future}
+	return &BatchGetVariableFuture{Future: future}
 }
 
 func (a *stub) CreateDetectorVersion(ctx workflow.Context, input *frauddetector.CreateDetectorVersionInput) (*frauddetector.CreateDetectorVersionOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) CreateDetectorVersion(ctx workflow.Context, input *frauddetector.
 	return &output, err
 }
 
-func (a *stub) CreateDetectorVersionAsync(ctx workflow.Context, input *frauddetector.CreateDetectorVersionInput) *FraudDetectorCreateDetectorVersionFuture {
+func (a *stub) CreateDetectorVersionAsync(ctx workflow.Context, input *frauddetector.CreateDetectorVersionInput) *CreateDetectorVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.CreateDetectorVersion", input)
-	return &FraudDetectorCreateDetectorVersionFuture{Future: future}
+	return &CreateDetectorVersionFuture{Future: future}
 }
 
 func (a *stub) CreateModel(ctx workflow.Context, input *frauddetector.CreateModelInput) (*frauddetector.CreateModelOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) CreateModel(ctx workflow.Context, input *frauddetector.CreateMode
 	return &output, err
 }
 
-func (a *stub) CreateModelAsync(ctx workflow.Context, input *frauddetector.CreateModelInput) *FraudDetectorCreateModelFuture {
+func (a *stub) CreateModelAsync(ctx workflow.Context, input *frauddetector.CreateModelInput) *CreateModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.CreateModel", input)
-	return &FraudDetectorCreateModelFuture{Future: future}
+	return &CreateModelFuture{Future: future}
 }
 
 func (a *stub) CreateModelVersion(ctx workflow.Context, input *frauddetector.CreateModelVersionInput) (*frauddetector.CreateModelVersionOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) CreateModelVersion(ctx workflow.Context, input *frauddetector.Cre
 	return &output, err
 }
 
-func (a *stub) CreateModelVersionAsync(ctx workflow.Context, input *frauddetector.CreateModelVersionInput) *FraudDetectorCreateModelVersionFuture {
+func (a *stub) CreateModelVersionAsync(ctx workflow.Context, input *frauddetector.CreateModelVersionInput) *CreateModelVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.CreateModelVersion", input)
-	return &FraudDetectorCreateModelVersionFuture{Future: future}
+	return &CreateModelVersionFuture{Future: future}
 }
 
 func (a *stub) CreateRule(ctx workflow.Context, input *frauddetector.CreateRuleInput) (*frauddetector.CreateRuleOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) CreateRule(ctx workflow.Context, input *frauddetector.CreateRuleI
 	return &output, err
 }
 
-func (a *stub) CreateRuleAsync(ctx workflow.Context, input *frauddetector.CreateRuleInput) *FraudDetectorCreateRuleFuture {
+func (a *stub) CreateRuleAsync(ctx workflow.Context, input *frauddetector.CreateRuleInput) *CreateRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.CreateRule", input)
-	return &FraudDetectorCreateRuleFuture{Future: future}
+	return &CreateRuleFuture{Future: future}
 }
 
 func (a *stub) CreateVariable(ctx workflow.Context, input *frauddetector.CreateVariableInput) (*frauddetector.CreateVariableOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) CreateVariable(ctx workflow.Context, input *frauddetector.CreateV
 	return &output, err
 }
 
-func (a *stub) CreateVariableAsync(ctx workflow.Context, input *frauddetector.CreateVariableInput) *FraudDetectorCreateVariableFuture {
+func (a *stub) CreateVariableAsync(ctx workflow.Context, input *frauddetector.CreateVariableInput) *CreateVariableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.CreateVariable", input)
-	return &FraudDetectorCreateVariableFuture{Future: future}
+	return &CreateVariableFuture{Future: future}
 }
 
 func (a *stub) DeleteDetector(ctx workflow.Context, input *frauddetector.DeleteDetectorInput) (*frauddetector.DeleteDetectorOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DeleteDetector(ctx workflow.Context, input *frauddetector.DeleteD
 	return &output, err
 }
 
-func (a *stub) DeleteDetectorAsync(ctx workflow.Context, input *frauddetector.DeleteDetectorInput) *FraudDetectorDeleteDetectorFuture {
+func (a *stub) DeleteDetectorAsync(ctx workflow.Context, input *frauddetector.DeleteDetectorInput) *DeleteDetectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.DeleteDetector", input)
-	return &FraudDetectorDeleteDetectorFuture{Future: future}
+	return &DeleteDetectorFuture{Future: future}
 }
 
 func (a *stub) DeleteDetectorVersion(ctx workflow.Context, input *frauddetector.DeleteDetectorVersionInput) (*frauddetector.DeleteDetectorVersionOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) DeleteDetectorVersion(ctx workflow.Context, input *frauddetector.
 	return &output, err
 }
 
-func (a *stub) DeleteDetectorVersionAsync(ctx workflow.Context, input *frauddetector.DeleteDetectorVersionInput) *FraudDetectorDeleteDetectorVersionFuture {
+func (a *stub) DeleteDetectorVersionAsync(ctx workflow.Context, input *frauddetector.DeleteDetectorVersionInput) *DeleteDetectorVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.DeleteDetectorVersion", input)
-	return &FraudDetectorDeleteDetectorVersionFuture{Future: future}
+	return &DeleteDetectorVersionFuture{Future: future}
 }
 
 func (a *stub) DeleteEvent(ctx workflow.Context, input *frauddetector.DeleteEventInput) (*frauddetector.DeleteEventOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) DeleteEvent(ctx workflow.Context, input *frauddetector.DeleteEven
 	return &output, err
 }
 
-func (a *stub) DeleteEventAsync(ctx workflow.Context, input *frauddetector.DeleteEventInput) *FraudDetectorDeleteEventFuture {
+func (a *stub) DeleteEventAsync(ctx workflow.Context, input *frauddetector.DeleteEventInput) *DeleteEventFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.DeleteEvent", input)
-	return &FraudDetectorDeleteEventFuture{Future: future}
+	return &DeleteEventFuture{Future: future}
 }
 
 func (a *stub) DeleteRule(ctx workflow.Context, input *frauddetector.DeleteRuleInput) (*frauddetector.DeleteRuleOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) DeleteRule(ctx workflow.Context, input *frauddetector.DeleteRuleI
 	return &output, err
 }
 
-func (a *stub) DeleteRuleAsync(ctx workflow.Context, input *frauddetector.DeleteRuleInput) *FraudDetectorDeleteRuleFuture {
+func (a *stub) DeleteRuleAsync(ctx workflow.Context, input *frauddetector.DeleteRuleInput) *DeleteRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.DeleteRule", input)
-	return &FraudDetectorDeleteRuleFuture{Future: future}
+	return &DeleteRuleFuture{Future: future}
 }
 
 func (a *stub) DescribeDetector(ctx workflow.Context, input *frauddetector.DescribeDetectorInput) (*frauddetector.DescribeDetectorOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) DescribeDetector(ctx workflow.Context, input *frauddetector.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeDetectorAsync(ctx workflow.Context, input *frauddetector.DescribeDetectorInput) *FraudDetectorDescribeDetectorFuture {
+func (a *stub) DescribeDetectorAsync(ctx workflow.Context, input *frauddetector.DescribeDetectorInput) *DescribeDetectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.DescribeDetector", input)
-	return &FraudDetectorDescribeDetectorFuture{Future: future}
+	return &DescribeDetectorFuture{Future: future}
 }
 
 func (a *stub) DescribeModelVersions(ctx workflow.Context, input *frauddetector.DescribeModelVersionsInput) (*frauddetector.DescribeModelVersionsOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) DescribeModelVersions(ctx workflow.Context, input *frauddetector.
 	return &output, err
 }
 
-func (a *stub) DescribeModelVersionsAsync(ctx workflow.Context, input *frauddetector.DescribeModelVersionsInput) *FraudDetectorDescribeModelVersionsFuture {
+func (a *stub) DescribeModelVersionsAsync(ctx workflow.Context, input *frauddetector.DescribeModelVersionsInput) *DescribeModelVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.DescribeModelVersions", input)
-	return &FraudDetectorDescribeModelVersionsFuture{Future: future}
+	return &DescribeModelVersionsFuture{Future: future}
 }
 
 func (a *stub) GetDetectorVersion(ctx workflow.Context, input *frauddetector.GetDetectorVersionInput) (*frauddetector.GetDetectorVersionOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) GetDetectorVersion(ctx workflow.Context, input *frauddetector.Get
 	return &output, err
 }
 
-func (a *stub) GetDetectorVersionAsync(ctx workflow.Context, input *frauddetector.GetDetectorVersionInput) *FraudDetectorGetDetectorVersionFuture {
+func (a *stub) GetDetectorVersionAsync(ctx workflow.Context, input *frauddetector.GetDetectorVersionInput) *GetDetectorVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetDetectorVersion", input)
-	return &FraudDetectorGetDetectorVersionFuture{Future: future}
+	return &GetDetectorVersionFuture{Future: future}
 }
 
 func (a *stub) GetDetectors(ctx workflow.Context, input *frauddetector.GetDetectorsInput) (*frauddetector.GetDetectorsOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) GetDetectors(ctx workflow.Context, input *frauddetector.GetDetect
 	return &output, err
 }
 
-func (a *stub) GetDetectorsAsync(ctx workflow.Context, input *frauddetector.GetDetectorsInput) *FraudDetectorGetDetectorsFuture {
+func (a *stub) GetDetectorsAsync(ctx workflow.Context, input *frauddetector.GetDetectorsInput) *GetDetectorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetDetectors", input)
-	return &FraudDetectorGetDetectorsFuture{Future: future}
+	return &GetDetectorsFuture{Future: future}
 }
 
 func (a *stub) GetEntityTypes(ctx workflow.Context, input *frauddetector.GetEntityTypesInput) (*frauddetector.GetEntityTypesOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) GetEntityTypes(ctx workflow.Context, input *frauddetector.GetEnti
 	return &output, err
 }
 
-func (a *stub) GetEntityTypesAsync(ctx workflow.Context, input *frauddetector.GetEntityTypesInput) *FraudDetectorGetEntityTypesFuture {
+func (a *stub) GetEntityTypesAsync(ctx workflow.Context, input *frauddetector.GetEntityTypesInput) *GetEntityTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetEntityTypes", input)
-	return &FraudDetectorGetEntityTypesFuture{Future: future}
+	return &GetEntityTypesFuture{Future: future}
 }
 
 func (a *stub) GetEventPrediction(ctx workflow.Context, input *frauddetector.GetEventPredictionInput) (*frauddetector.GetEventPredictionOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) GetEventPrediction(ctx workflow.Context, input *frauddetector.Get
 	return &output, err
 }
 
-func (a *stub) GetEventPredictionAsync(ctx workflow.Context, input *frauddetector.GetEventPredictionInput) *FraudDetectorGetEventPredictionFuture {
+func (a *stub) GetEventPredictionAsync(ctx workflow.Context, input *frauddetector.GetEventPredictionInput) *GetEventPredictionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetEventPrediction", input)
-	return &FraudDetectorGetEventPredictionFuture{Future: future}
+	return &GetEventPredictionFuture{Future: future}
 }
 
 func (a *stub) GetEventTypes(ctx workflow.Context, input *frauddetector.GetEventTypesInput) (*frauddetector.GetEventTypesOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) GetEventTypes(ctx workflow.Context, input *frauddetector.GetEvent
 	return &output, err
 }
 
-func (a *stub) GetEventTypesAsync(ctx workflow.Context, input *frauddetector.GetEventTypesInput) *FraudDetectorGetEventTypesFuture {
+func (a *stub) GetEventTypesAsync(ctx workflow.Context, input *frauddetector.GetEventTypesInput) *GetEventTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetEventTypes", input)
-	return &FraudDetectorGetEventTypesFuture{Future: future}
+	return &GetEventTypesFuture{Future: future}
 }
 
 func (a *stub) GetExternalModels(ctx workflow.Context, input *frauddetector.GetExternalModelsInput) (*frauddetector.GetExternalModelsOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) GetExternalModels(ctx workflow.Context, input *frauddetector.GetE
 	return &output, err
 }
 
-func (a *stub) GetExternalModelsAsync(ctx workflow.Context, input *frauddetector.GetExternalModelsInput) *FraudDetectorGetExternalModelsFuture {
+func (a *stub) GetExternalModelsAsync(ctx workflow.Context, input *frauddetector.GetExternalModelsInput) *GetExternalModelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetExternalModels", input)
-	return &FraudDetectorGetExternalModelsFuture{Future: future}
+	return &GetExternalModelsFuture{Future: future}
 }
 
 func (a *stub) GetKMSEncryptionKey(ctx workflow.Context, input *frauddetector.GetKMSEncryptionKeyInput) (*frauddetector.GetKMSEncryptionKeyOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) GetKMSEncryptionKey(ctx workflow.Context, input *frauddetector.Ge
 	return &output, err
 }
 
-func (a *stub) GetKMSEncryptionKeyAsync(ctx workflow.Context, input *frauddetector.GetKMSEncryptionKeyInput) *FraudDetectorGetKMSEncryptionKeyFuture {
+func (a *stub) GetKMSEncryptionKeyAsync(ctx workflow.Context, input *frauddetector.GetKMSEncryptionKeyInput) *GetKMSEncryptionKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetKMSEncryptionKey", input)
-	return &FraudDetectorGetKMSEncryptionKeyFuture{Future: future}
+	return &GetKMSEncryptionKeyFuture{Future: future}
 }
 
 func (a *stub) GetLabels(ctx workflow.Context, input *frauddetector.GetLabelsInput) (*frauddetector.GetLabelsOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) GetLabels(ctx workflow.Context, input *frauddetector.GetLabelsInp
 	return &output, err
 }
 
-func (a *stub) GetLabelsAsync(ctx workflow.Context, input *frauddetector.GetLabelsInput) *FraudDetectorGetLabelsFuture {
+func (a *stub) GetLabelsAsync(ctx workflow.Context, input *frauddetector.GetLabelsInput) *GetLabelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetLabels", input)
-	return &FraudDetectorGetLabelsFuture{Future: future}
+	return &GetLabelsFuture{Future: future}
 }
 
 func (a *stub) GetModelVersion(ctx workflow.Context, input *frauddetector.GetModelVersionInput) (*frauddetector.GetModelVersionOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) GetModelVersion(ctx workflow.Context, input *frauddetector.GetMod
 	return &output, err
 }
 
-func (a *stub) GetModelVersionAsync(ctx workflow.Context, input *frauddetector.GetModelVersionInput) *FraudDetectorGetModelVersionFuture {
+func (a *stub) GetModelVersionAsync(ctx workflow.Context, input *frauddetector.GetModelVersionInput) *GetModelVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetModelVersion", input)
-	return &FraudDetectorGetModelVersionFuture{Future: future}
+	return &GetModelVersionFuture{Future: future}
 }
 
 func (a *stub) GetModels(ctx workflow.Context, input *frauddetector.GetModelsInput) (*frauddetector.GetModelsOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) GetModels(ctx workflow.Context, input *frauddetector.GetModelsInp
 	return &output, err
 }
 
-func (a *stub) GetModelsAsync(ctx workflow.Context, input *frauddetector.GetModelsInput) *FraudDetectorGetModelsFuture {
+func (a *stub) GetModelsAsync(ctx workflow.Context, input *frauddetector.GetModelsInput) *GetModelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetModels", input)
-	return &FraudDetectorGetModelsFuture{Future: future}
+	return &GetModelsFuture{Future: future}
 }
 
 func (a *stub) GetOutcomes(ctx workflow.Context, input *frauddetector.GetOutcomesInput) (*frauddetector.GetOutcomesOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) GetOutcomes(ctx workflow.Context, input *frauddetector.GetOutcome
 	return &output, err
 }
 
-func (a *stub) GetOutcomesAsync(ctx workflow.Context, input *frauddetector.GetOutcomesInput) *FraudDetectorGetOutcomesFuture {
+func (a *stub) GetOutcomesAsync(ctx workflow.Context, input *frauddetector.GetOutcomesInput) *GetOutcomesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetOutcomes", input)
-	return &FraudDetectorGetOutcomesFuture{Future: future}
+	return &GetOutcomesFuture{Future: future}
 }
 
 func (a *stub) GetRules(ctx workflow.Context, input *frauddetector.GetRulesInput) (*frauddetector.GetRulesOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) GetRules(ctx workflow.Context, input *frauddetector.GetRulesInput
 	return &output, err
 }
 
-func (a *stub) GetRulesAsync(ctx workflow.Context, input *frauddetector.GetRulesInput) *FraudDetectorGetRulesFuture {
+func (a *stub) GetRulesAsync(ctx workflow.Context, input *frauddetector.GetRulesInput) *GetRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetRules", input)
-	return &FraudDetectorGetRulesFuture{Future: future}
+	return &GetRulesFuture{Future: future}
 }
 
 func (a *stub) GetVariables(ctx workflow.Context, input *frauddetector.GetVariablesInput) (*frauddetector.GetVariablesOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) GetVariables(ctx workflow.Context, input *frauddetector.GetVariab
 	return &output, err
 }
 
-func (a *stub) GetVariablesAsync(ctx workflow.Context, input *frauddetector.GetVariablesInput) *FraudDetectorGetVariablesFuture {
+func (a *stub) GetVariablesAsync(ctx workflow.Context, input *frauddetector.GetVariablesInput) *GetVariablesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.GetVariables", input)
-	return &FraudDetectorGetVariablesFuture{Future: future}
+	return &GetVariablesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *frauddetector.ListTagsForResourceInput) (*frauddetector.ListTagsForResourceOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *frauddetector.Li
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *frauddetector.ListTagsForResourceInput) *FraudDetectorListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *frauddetector.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.ListTagsForResource", input)
-	return &FraudDetectorListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PutDetector(ctx workflow.Context, input *frauddetector.PutDetectorInput) (*frauddetector.PutDetectorOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) PutDetector(ctx workflow.Context, input *frauddetector.PutDetecto
 	return &output, err
 }
 
-func (a *stub) PutDetectorAsync(ctx workflow.Context, input *frauddetector.PutDetectorInput) *FraudDetectorPutDetectorFuture {
+func (a *stub) PutDetectorAsync(ctx workflow.Context, input *frauddetector.PutDetectorInput) *PutDetectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.PutDetector", input)
-	return &FraudDetectorPutDetectorFuture{Future: future}
+	return &PutDetectorFuture{Future: future}
 }
 
 func (a *stub) PutEntityType(ctx workflow.Context, input *frauddetector.PutEntityTypeInput) (*frauddetector.PutEntityTypeOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) PutEntityType(ctx workflow.Context, input *frauddetector.PutEntit
 	return &output, err
 }
 
-func (a *stub) PutEntityTypeAsync(ctx workflow.Context, input *frauddetector.PutEntityTypeInput) *FraudDetectorPutEntityTypeFuture {
+func (a *stub) PutEntityTypeAsync(ctx workflow.Context, input *frauddetector.PutEntityTypeInput) *PutEntityTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.PutEntityType", input)
-	return &FraudDetectorPutEntityTypeFuture{Future: future}
+	return &PutEntityTypeFuture{Future: future}
 }
 
 func (a *stub) PutEventType(ctx workflow.Context, input *frauddetector.PutEventTypeInput) (*frauddetector.PutEventTypeOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) PutEventType(ctx workflow.Context, input *frauddetector.PutEventT
 	return &output, err
 }
 
-func (a *stub) PutEventTypeAsync(ctx workflow.Context, input *frauddetector.PutEventTypeInput) *FraudDetectorPutEventTypeFuture {
+func (a *stub) PutEventTypeAsync(ctx workflow.Context, input *frauddetector.PutEventTypeInput) *PutEventTypeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.PutEventType", input)
-	return &FraudDetectorPutEventTypeFuture{Future: future}
+	return &PutEventTypeFuture{Future: future}
 }
 
 func (a *stub) PutExternalModel(ctx workflow.Context, input *frauddetector.PutExternalModelInput) (*frauddetector.PutExternalModelOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) PutExternalModel(ctx workflow.Context, input *frauddetector.PutEx
 	return &output, err
 }
 
-func (a *stub) PutExternalModelAsync(ctx workflow.Context, input *frauddetector.PutExternalModelInput) *FraudDetectorPutExternalModelFuture {
+func (a *stub) PutExternalModelAsync(ctx workflow.Context, input *frauddetector.PutExternalModelInput) *PutExternalModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.PutExternalModel", input)
-	return &FraudDetectorPutExternalModelFuture{Future: future}
+	return &PutExternalModelFuture{Future: future}
 }
 
 func (a *stub) PutKMSEncryptionKey(ctx workflow.Context, input *frauddetector.PutKMSEncryptionKeyInput) (*frauddetector.PutKMSEncryptionKeyOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) PutKMSEncryptionKey(ctx workflow.Context, input *frauddetector.Pu
 	return &output, err
 }
 
-func (a *stub) PutKMSEncryptionKeyAsync(ctx workflow.Context, input *frauddetector.PutKMSEncryptionKeyInput) *FraudDetectorPutKMSEncryptionKeyFuture {
+func (a *stub) PutKMSEncryptionKeyAsync(ctx workflow.Context, input *frauddetector.PutKMSEncryptionKeyInput) *PutKMSEncryptionKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.PutKMSEncryptionKey", input)
-	return &FraudDetectorPutKMSEncryptionKeyFuture{Future: future}
+	return &PutKMSEncryptionKeyFuture{Future: future}
 }
 
 func (a *stub) PutLabel(ctx workflow.Context, input *frauddetector.PutLabelInput) (*frauddetector.PutLabelOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) PutLabel(ctx workflow.Context, input *frauddetector.PutLabelInput
 	return &output, err
 }
 
-func (a *stub) PutLabelAsync(ctx workflow.Context, input *frauddetector.PutLabelInput) *FraudDetectorPutLabelFuture {
+func (a *stub) PutLabelAsync(ctx workflow.Context, input *frauddetector.PutLabelInput) *PutLabelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.PutLabel", input)
-	return &FraudDetectorPutLabelFuture{Future: future}
+	return &PutLabelFuture{Future: future}
 }
 
 func (a *stub) PutOutcome(ctx workflow.Context, input *frauddetector.PutOutcomeInput) (*frauddetector.PutOutcomeOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) PutOutcome(ctx workflow.Context, input *frauddetector.PutOutcomeI
 	return &output, err
 }
 
-func (a *stub) PutOutcomeAsync(ctx workflow.Context, input *frauddetector.PutOutcomeInput) *FraudDetectorPutOutcomeFuture {
+func (a *stub) PutOutcomeAsync(ctx workflow.Context, input *frauddetector.PutOutcomeInput) *PutOutcomeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.PutOutcome", input)
-	return &FraudDetectorPutOutcomeFuture{Future: future}
+	return &PutOutcomeFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *frauddetector.TagResourceInput) (*frauddetector.TagResourceOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *frauddetector.TagResourc
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *frauddetector.TagResourceInput) *FraudDetectorTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *frauddetector.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.TagResource", input)
-	return &FraudDetectorTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *frauddetector.UntagResourceInput) (*frauddetector.UntagResourceOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *frauddetector.UntagRes
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *frauddetector.UntagResourceInput) *FraudDetectorUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *frauddetector.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UntagResource", input)
-	return &FraudDetectorUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateDetectorVersion(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionInput) (*frauddetector.UpdateDetectorVersionOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) UpdateDetectorVersion(ctx workflow.Context, input *frauddetector.
 	return &output, err
 }
 
-func (a *stub) UpdateDetectorVersionAsync(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionInput) *FraudDetectorUpdateDetectorVersionFuture {
+func (a *stub) UpdateDetectorVersionAsync(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionInput) *UpdateDetectorVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateDetectorVersion", input)
-	return &FraudDetectorUpdateDetectorVersionFuture{Future: future}
+	return &UpdateDetectorVersionFuture{Future: future}
 }
 
 func (a *stub) UpdateDetectorVersionMetadata(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionMetadataInput) (*frauddetector.UpdateDetectorVersionMetadataOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) UpdateDetectorVersionMetadata(ctx workflow.Context, input *fraudd
 	return &output, err
 }
 
-func (a *stub) UpdateDetectorVersionMetadataAsync(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionMetadataInput) *FraudDetectorUpdateDetectorVersionMetadataFuture {
+func (a *stub) UpdateDetectorVersionMetadataAsync(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionMetadataInput) *UpdateDetectorVersionMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateDetectorVersionMetadata", input)
-	return &FraudDetectorUpdateDetectorVersionMetadataFuture{Future: future}
+	return &UpdateDetectorVersionMetadataFuture{Future: future}
 }
 
 func (a *stub) UpdateDetectorVersionStatus(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionStatusInput) (*frauddetector.UpdateDetectorVersionStatusOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) UpdateDetectorVersionStatus(ctx workflow.Context, input *frauddet
 	return &output, err
 }
 
-func (a *stub) UpdateDetectorVersionStatusAsync(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionStatusInput) *FraudDetectorUpdateDetectorVersionStatusFuture {
+func (a *stub) UpdateDetectorVersionStatusAsync(ctx workflow.Context, input *frauddetector.UpdateDetectorVersionStatusInput) *UpdateDetectorVersionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateDetectorVersionStatus", input)
-	return &FraudDetectorUpdateDetectorVersionStatusFuture{Future: future}
+	return &UpdateDetectorVersionStatusFuture{Future: future}
 }
 
 func (a *stub) UpdateModel(ctx workflow.Context, input *frauddetector.UpdateModelInput) (*frauddetector.UpdateModelOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) UpdateModel(ctx workflow.Context, input *frauddetector.UpdateMode
 	return &output, err
 }
 
-func (a *stub) UpdateModelAsync(ctx workflow.Context, input *frauddetector.UpdateModelInput) *FraudDetectorUpdateModelFuture {
+func (a *stub) UpdateModelAsync(ctx workflow.Context, input *frauddetector.UpdateModelInput) *UpdateModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateModel", input)
-	return &FraudDetectorUpdateModelFuture{Future: future}
+	return &UpdateModelFuture{Future: future}
 }
 
 func (a *stub) UpdateModelVersion(ctx workflow.Context, input *frauddetector.UpdateModelVersionInput) (*frauddetector.UpdateModelVersionOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) UpdateModelVersion(ctx workflow.Context, input *frauddetector.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateModelVersionAsync(ctx workflow.Context, input *frauddetector.UpdateModelVersionInput) *FraudDetectorUpdateModelVersionFuture {
+func (a *stub) UpdateModelVersionAsync(ctx workflow.Context, input *frauddetector.UpdateModelVersionInput) *UpdateModelVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateModelVersion", input)
-	return &FraudDetectorUpdateModelVersionFuture{Future: future}
+	return &UpdateModelVersionFuture{Future: future}
 }
 
 func (a *stub) UpdateModelVersionStatus(ctx workflow.Context, input *frauddetector.UpdateModelVersionStatusInput) (*frauddetector.UpdateModelVersionStatusOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) UpdateModelVersionStatus(ctx workflow.Context, input *frauddetect
 	return &output, err
 }
 
-func (a *stub) UpdateModelVersionStatusAsync(ctx workflow.Context, input *frauddetector.UpdateModelVersionStatusInput) *FraudDetectorUpdateModelVersionStatusFuture {
+func (a *stub) UpdateModelVersionStatusAsync(ctx workflow.Context, input *frauddetector.UpdateModelVersionStatusInput) *UpdateModelVersionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateModelVersionStatus", input)
-	return &FraudDetectorUpdateModelVersionStatusFuture{Future: future}
+	return &UpdateModelVersionStatusFuture{Future: future}
 }
 
 func (a *stub) UpdateRuleMetadata(ctx workflow.Context, input *frauddetector.UpdateRuleMetadataInput) (*frauddetector.UpdateRuleMetadataOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) UpdateRuleMetadata(ctx workflow.Context, input *frauddetector.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateRuleMetadataAsync(ctx workflow.Context, input *frauddetector.UpdateRuleMetadataInput) *FraudDetectorUpdateRuleMetadataFuture {
+func (a *stub) UpdateRuleMetadataAsync(ctx workflow.Context, input *frauddetector.UpdateRuleMetadataInput) *UpdateRuleMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateRuleMetadata", input)
-	return &FraudDetectorUpdateRuleMetadataFuture{Future: future}
+	return &UpdateRuleMetadataFuture{Future: future}
 }
 
 func (a *stub) UpdateRuleVersion(ctx workflow.Context, input *frauddetector.UpdateRuleVersionInput) (*frauddetector.UpdateRuleVersionOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) UpdateRuleVersion(ctx workflow.Context, input *frauddetector.Upda
 	return &output, err
 }
 
-func (a *stub) UpdateRuleVersionAsync(ctx workflow.Context, input *frauddetector.UpdateRuleVersionInput) *FraudDetectorUpdateRuleVersionFuture {
+func (a *stub) UpdateRuleVersionAsync(ctx workflow.Context, input *frauddetector.UpdateRuleVersionInput) *UpdateRuleVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateRuleVersion", input)
-	return &FraudDetectorUpdateRuleVersionFuture{Future: future}
+	return &UpdateRuleVersionFuture{Future: future}
 }
 
 func (a *stub) UpdateVariable(ctx workflow.Context, input *frauddetector.UpdateVariableInput) (*frauddetector.UpdateVariableOutput, error) {
@@ -1001,7 +1001,7 @@ func (a *stub) UpdateVariable(ctx workflow.Context, input *frauddetector.UpdateV
 	return &output, err
 }
 
-func (a *stub) UpdateVariableAsync(ctx workflow.Context, input *frauddetector.UpdateVariableInput) *FraudDetectorUpdateVariableFuture {
+func (a *stub) UpdateVariableAsync(ctx workflow.Context, input *frauddetector.UpdateVariableInput) *UpdateVariableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.frauddetector.UpdateVariable", input)
-	return &FraudDetectorUpdateVariableFuture{Future: future}
+	return &UpdateVariableFuture{Future: future}
 }

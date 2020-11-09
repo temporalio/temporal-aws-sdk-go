@@ -16,640 +16,640 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AcceptCertificateTransfer(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) (*iot.AcceptCertificateTransferOutput, error)
-	AcceptCertificateTransferAsync(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) *IoTAcceptCertificateTransferFuture
+	AcceptCertificateTransferAsync(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) *AcceptCertificateTransferFuture
 
 	AddThingToBillingGroup(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) (*iot.AddThingToBillingGroupOutput, error)
-	AddThingToBillingGroupAsync(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) *IoTAddThingToBillingGroupFuture
+	AddThingToBillingGroupAsync(ctx workflow.Context, input *iot.AddThingToBillingGroupInput) *AddThingToBillingGroupFuture
 
 	AddThingToThingGroup(ctx workflow.Context, input *iot.AddThingToThingGroupInput) (*iot.AddThingToThingGroupOutput, error)
-	AddThingToThingGroupAsync(ctx workflow.Context, input *iot.AddThingToThingGroupInput) *IoTAddThingToThingGroupFuture
+	AddThingToThingGroupAsync(ctx workflow.Context, input *iot.AddThingToThingGroupInput) *AddThingToThingGroupFuture
 
 	AssociateTargetsWithJob(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) (*iot.AssociateTargetsWithJobOutput, error)
-	AssociateTargetsWithJobAsync(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) *IoTAssociateTargetsWithJobFuture
+	AssociateTargetsWithJobAsync(ctx workflow.Context, input *iot.AssociateTargetsWithJobInput) *AssociateTargetsWithJobFuture
 
 	AttachPolicy(ctx workflow.Context, input *iot.AttachPolicyInput) (*iot.AttachPolicyOutput, error)
-	AttachPolicyAsync(ctx workflow.Context, input *iot.AttachPolicyInput) *IoTAttachPolicyFuture
+	AttachPolicyAsync(ctx workflow.Context, input *iot.AttachPolicyInput) *AttachPolicyFuture
 
 	AttachPrincipalPolicy(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) (*iot.AttachPrincipalPolicyOutput, error)
-	AttachPrincipalPolicyAsync(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) *IoTAttachPrincipalPolicyFuture
+	AttachPrincipalPolicyAsync(ctx workflow.Context, input *iot.AttachPrincipalPolicyInput) *AttachPrincipalPolicyFuture
 
 	AttachSecurityProfile(ctx workflow.Context, input *iot.AttachSecurityProfileInput) (*iot.AttachSecurityProfileOutput, error)
-	AttachSecurityProfileAsync(ctx workflow.Context, input *iot.AttachSecurityProfileInput) *IoTAttachSecurityProfileFuture
+	AttachSecurityProfileAsync(ctx workflow.Context, input *iot.AttachSecurityProfileInput) *AttachSecurityProfileFuture
 
 	AttachThingPrincipal(ctx workflow.Context, input *iot.AttachThingPrincipalInput) (*iot.AttachThingPrincipalOutput, error)
-	AttachThingPrincipalAsync(ctx workflow.Context, input *iot.AttachThingPrincipalInput) *IoTAttachThingPrincipalFuture
+	AttachThingPrincipalAsync(ctx workflow.Context, input *iot.AttachThingPrincipalInput) *AttachThingPrincipalFuture
 
 	CancelAuditMitigationActionsTask(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) (*iot.CancelAuditMitigationActionsTaskOutput, error)
-	CancelAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) *IoTCancelAuditMitigationActionsTaskFuture
+	CancelAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.CancelAuditMitigationActionsTaskInput) *CancelAuditMitigationActionsTaskFuture
 
 	CancelAuditTask(ctx workflow.Context, input *iot.CancelAuditTaskInput) (*iot.CancelAuditTaskOutput, error)
-	CancelAuditTaskAsync(ctx workflow.Context, input *iot.CancelAuditTaskInput) *IoTCancelAuditTaskFuture
+	CancelAuditTaskAsync(ctx workflow.Context, input *iot.CancelAuditTaskInput) *CancelAuditTaskFuture
 
 	CancelCertificateTransfer(ctx workflow.Context, input *iot.CancelCertificateTransferInput) (*iot.CancelCertificateTransferOutput, error)
-	CancelCertificateTransferAsync(ctx workflow.Context, input *iot.CancelCertificateTransferInput) *IoTCancelCertificateTransferFuture
+	CancelCertificateTransferAsync(ctx workflow.Context, input *iot.CancelCertificateTransferInput) *CancelCertificateTransferFuture
 
 	CancelJob(ctx workflow.Context, input *iot.CancelJobInput) (*iot.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *iot.CancelJobInput) *IoTCancelJobFuture
+	CancelJobAsync(ctx workflow.Context, input *iot.CancelJobInput) *CancelJobFuture
 
 	CancelJobExecution(ctx workflow.Context, input *iot.CancelJobExecutionInput) (*iot.CancelJobExecutionOutput, error)
-	CancelJobExecutionAsync(ctx workflow.Context, input *iot.CancelJobExecutionInput) *IoTCancelJobExecutionFuture
+	CancelJobExecutionAsync(ctx workflow.Context, input *iot.CancelJobExecutionInput) *CancelJobExecutionFuture
 
 	ClearDefaultAuthorizer(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) (*iot.ClearDefaultAuthorizerOutput, error)
-	ClearDefaultAuthorizerAsync(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) *IoTClearDefaultAuthorizerFuture
+	ClearDefaultAuthorizerAsync(ctx workflow.Context, input *iot.ClearDefaultAuthorizerInput) *ClearDefaultAuthorizerFuture
 
 	ConfirmTopicRuleDestination(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) (*iot.ConfirmTopicRuleDestinationOutput, error)
-	ConfirmTopicRuleDestinationAsync(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) *IoTConfirmTopicRuleDestinationFuture
+	ConfirmTopicRuleDestinationAsync(ctx workflow.Context, input *iot.ConfirmTopicRuleDestinationInput) *ConfirmTopicRuleDestinationFuture
 
 	CreateAuditSuppression(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) (*iot.CreateAuditSuppressionOutput, error)
-	CreateAuditSuppressionAsync(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) *IoTCreateAuditSuppressionFuture
+	CreateAuditSuppressionAsync(ctx workflow.Context, input *iot.CreateAuditSuppressionInput) *CreateAuditSuppressionFuture
 
 	CreateAuthorizer(ctx workflow.Context, input *iot.CreateAuthorizerInput) (*iot.CreateAuthorizerOutput, error)
-	CreateAuthorizerAsync(ctx workflow.Context, input *iot.CreateAuthorizerInput) *IoTCreateAuthorizerFuture
+	CreateAuthorizerAsync(ctx workflow.Context, input *iot.CreateAuthorizerInput) *CreateAuthorizerFuture
 
 	CreateBillingGroup(ctx workflow.Context, input *iot.CreateBillingGroupInput) (*iot.CreateBillingGroupOutput, error)
-	CreateBillingGroupAsync(ctx workflow.Context, input *iot.CreateBillingGroupInput) *IoTCreateBillingGroupFuture
+	CreateBillingGroupAsync(ctx workflow.Context, input *iot.CreateBillingGroupInput) *CreateBillingGroupFuture
 
 	CreateCertificateFromCsr(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) (*iot.CreateCertificateFromCsrOutput, error)
-	CreateCertificateFromCsrAsync(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) *IoTCreateCertificateFromCsrFuture
+	CreateCertificateFromCsrAsync(ctx workflow.Context, input *iot.CreateCertificateFromCsrInput) *CreateCertificateFromCsrFuture
 
 	CreateDimension(ctx workflow.Context, input *iot.CreateDimensionInput) (*iot.CreateDimensionOutput, error)
-	CreateDimensionAsync(ctx workflow.Context, input *iot.CreateDimensionInput) *IoTCreateDimensionFuture
+	CreateDimensionAsync(ctx workflow.Context, input *iot.CreateDimensionInput) *CreateDimensionFuture
 
 	CreateDomainConfiguration(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) (*iot.CreateDomainConfigurationOutput, error)
-	CreateDomainConfigurationAsync(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) *IoTCreateDomainConfigurationFuture
+	CreateDomainConfigurationAsync(ctx workflow.Context, input *iot.CreateDomainConfigurationInput) *CreateDomainConfigurationFuture
 
 	CreateDynamicThingGroup(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) (*iot.CreateDynamicThingGroupOutput, error)
-	CreateDynamicThingGroupAsync(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) *IoTCreateDynamicThingGroupFuture
+	CreateDynamicThingGroupAsync(ctx workflow.Context, input *iot.CreateDynamicThingGroupInput) *CreateDynamicThingGroupFuture
 
 	CreateJob(ctx workflow.Context, input *iot.CreateJobInput) (*iot.CreateJobOutput, error)
-	CreateJobAsync(ctx workflow.Context, input *iot.CreateJobInput) *IoTCreateJobFuture
+	CreateJobAsync(ctx workflow.Context, input *iot.CreateJobInput) *CreateJobFuture
 
 	CreateKeysAndCertificate(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) (*iot.CreateKeysAndCertificateOutput, error)
-	CreateKeysAndCertificateAsync(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) *IoTCreateKeysAndCertificateFuture
+	CreateKeysAndCertificateAsync(ctx workflow.Context, input *iot.CreateKeysAndCertificateInput) *CreateKeysAndCertificateFuture
 
 	CreateMitigationAction(ctx workflow.Context, input *iot.CreateMitigationActionInput) (*iot.CreateMitigationActionOutput, error)
-	CreateMitigationActionAsync(ctx workflow.Context, input *iot.CreateMitigationActionInput) *IoTCreateMitigationActionFuture
+	CreateMitigationActionAsync(ctx workflow.Context, input *iot.CreateMitigationActionInput) *CreateMitigationActionFuture
 
 	CreateOTAUpdate(ctx workflow.Context, input *iot.CreateOTAUpdateInput) (*iot.CreateOTAUpdateOutput, error)
-	CreateOTAUpdateAsync(ctx workflow.Context, input *iot.CreateOTAUpdateInput) *IoTCreateOTAUpdateFuture
+	CreateOTAUpdateAsync(ctx workflow.Context, input *iot.CreateOTAUpdateInput) *CreateOTAUpdateFuture
 
 	CreatePolicy(ctx workflow.Context, input *iot.CreatePolicyInput) (*iot.CreatePolicyOutput, error)
-	CreatePolicyAsync(ctx workflow.Context, input *iot.CreatePolicyInput) *IoTCreatePolicyFuture
+	CreatePolicyAsync(ctx workflow.Context, input *iot.CreatePolicyInput) *CreatePolicyFuture
 
 	CreatePolicyVersion(ctx workflow.Context, input *iot.CreatePolicyVersionInput) (*iot.CreatePolicyVersionOutput, error)
-	CreatePolicyVersionAsync(ctx workflow.Context, input *iot.CreatePolicyVersionInput) *IoTCreatePolicyVersionFuture
+	CreatePolicyVersionAsync(ctx workflow.Context, input *iot.CreatePolicyVersionInput) *CreatePolicyVersionFuture
 
 	CreateProvisioningClaim(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) (*iot.CreateProvisioningClaimOutput, error)
-	CreateProvisioningClaimAsync(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) *IoTCreateProvisioningClaimFuture
+	CreateProvisioningClaimAsync(ctx workflow.Context, input *iot.CreateProvisioningClaimInput) *CreateProvisioningClaimFuture
 
 	CreateProvisioningTemplate(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) (*iot.CreateProvisioningTemplateOutput, error)
-	CreateProvisioningTemplateAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) *IoTCreateProvisioningTemplateFuture
+	CreateProvisioningTemplateAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateInput) *CreateProvisioningTemplateFuture
 
 	CreateProvisioningTemplateVersion(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) (*iot.CreateProvisioningTemplateVersionOutput, error)
-	CreateProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) *IoTCreateProvisioningTemplateVersionFuture
+	CreateProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.CreateProvisioningTemplateVersionInput) *CreateProvisioningTemplateVersionFuture
 
 	CreateRoleAlias(ctx workflow.Context, input *iot.CreateRoleAliasInput) (*iot.CreateRoleAliasOutput, error)
-	CreateRoleAliasAsync(ctx workflow.Context, input *iot.CreateRoleAliasInput) *IoTCreateRoleAliasFuture
+	CreateRoleAliasAsync(ctx workflow.Context, input *iot.CreateRoleAliasInput) *CreateRoleAliasFuture
 
 	CreateScheduledAudit(ctx workflow.Context, input *iot.CreateScheduledAuditInput) (*iot.CreateScheduledAuditOutput, error)
-	CreateScheduledAuditAsync(ctx workflow.Context, input *iot.CreateScheduledAuditInput) *IoTCreateScheduledAuditFuture
+	CreateScheduledAuditAsync(ctx workflow.Context, input *iot.CreateScheduledAuditInput) *CreateScheduledAuditFuture
 
 	CreateSecurityProfile(ctx workflow.Context, input *iot.CreateSecurityProfileInput) (*iot.CreateSecurityProfileOutput, error)
-	CreateSecurityProfileAsync(ctx workflow.Context, input *iot.CreateSecurityProfileInput) *IoTCreateSecurityProfileFuture
+	CreateSecurityProfileAsync(ctx workflow.Context, input *iot.CreateSecurityProfileInput) *CreateSecurityProfileFuture
 
 	CreateStream(ctx workflow.Context, input *iot.CreateStreamInput) (*iot.CreateStreamOutput, error)
-	CreateStreamAsync(ctx workflow.Context, input *iot.CreateStreamInput) *IoTCreateStreamFuture
+	CreateStreamAsync(ctx workflow.Context, input *iot.CreateStreamInput) *CreateStreamFuture
 
 	CreateThing(ctx workflow.Context, input *iot.CreateThingInput) (*iot.CreateThingOutput, error)
-	CreateThingAsync(ctx workflow.Context, input *iot.CreateThingInput) *IoTCreateThingFuture
+	CreateThingAsync(ctx workflow.Context, input *iot.CreateThingInput) *CreateThingFuture
 
 	CreateThingGroup(ctx workflow.Context, input *iot.CreateThingGroupInput) (*iot.CreateThingGroupOutput, error)
-	CreateThingGroupAsync(ctx workflow.Context, input *iot.CreateThingGroupInput) *IoTCreateThingGroupFuture
+	CreateThingGroupAsync(ctx workflow.Context, input *iot.CreateThingGroupInput) *CreateThingGroupFuture
 
 	CreateThingType(ctx workflow.Context, input *iot.CreateThingTypeInput) (*iot.CreateThingTypeOutput, error)
-	CreateThingTypeAsync(ctx workflow.Context, input *iot.CreateThingTypeInput) *IoTCreateThingTypeFuture
+	CreateThingTypeAsync(ctx workflow.Context, input *iot.CreateThingTypeInput) *CreateThingTypeFuture
 
 	CreateTopicRule(ctx workflow.Context, input *iot.CreateTopicRuleInput) (*iot.CreateTopicRuleOutput, error)
-	CreateTopicRuleAsync(ctx workflow.Context, input *iot.CreateTopicRuleInput) *IoTCreateTopicRuleFuture
+	CreateTopicRuleAsync(ctx workflow.Context, input *iot.CreateTopicRuleInput) *CreateTopicRuleFuture
 
 	CreateTopicRuleDestination(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) (*iot.CreateTopicRuleDestinationOutput, error)
-	CreateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) *IoTCreateTopicRuleDestinationFuture
+	CreateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.CreateTopicRuleDestinationInput) *CreateTopicRuleDestinationFuture
 
 	DeleteAccountAuditConfiguration(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) (*iot.DeleteAccountAuditConfigurationOutput, error)
-	DeleteAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) *IoTDeleteAccountAuditConfigurationFuture
+	DeleteAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DeleteAccountAuditConfigurationInput) *DeleteAccountAuditConfigurationFuture
 
 	DeleteAuditSuppression(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) (*iot.DeleteAuditSuppressionOutput, error)
-	DeleteAuditSuppressionAsync(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) *IoTDeleteAuditSuppressionFuture
+	DeleteAuditSuppressionAsync(ctx workflow.Context, input *iot.DeleteAuditSuppressionInput) *DeleteAuditSuppressionFuture
 
 	DeleteAuthorizer(ctx workflow.Context, input *iot.DeleteAuthorizerInput) (*iot.DeleteAuthorizerOutput, error)
-	DeleteAuthorizerAsync(ctx workflow.Context, input *iot.DeleteAuthorizerInput) *IoTDeleteAuthorizerFuture
+	DeleteAuthorizerAsync(ctx workflow.Context, input *iot.DeleteAuthorizerInput) *DeleteAuthorizerFuture
 
 	DeleteBillingGroup(ctx workflow.Context, input *iot.DeleteBillingGroupInput) (*iot.DeleteBillingGroupOutput, error)
-	DeleteBillingGroupAsync(ctx workflow.Context, input *iot.DeleteBillingGroupInput) *IoTDeleteBillingGroupFuture
+	DeleteBillingGroupAsync(ctx workflow.Context, input *iot.DeleteBillingGroupInput) *DeleteBillingGroupFuture
 
 	DeleteCACertificate(ctx workflow.Context, input *iot.DeleteCACertificateInput) (*iot.DeleteCACertificateOutput, error)
-	DeleteCACertificateAsync(ctx workflow.Context, input *iot.DeleteCACertificateInput) *IoTDeleteCACertificateFuture
+	DeleteCACertificateAsync(ctx workflow.Context, input *iot.DeleteCACertificateInput) *DeleteCACertificateFuture
 
 	DeleteCertificate(ctx workflow.Context, input *iot.DeleteCertificateInput) (*iot.DeleteCertificateOutput, error)
-	DeleteCertificateAsync(ctx workflow.Context, input *iot.DeleteCertificateInput) *IoTDeleteCertificateFuture
+	DeleteCertificateAsync(ctx workflow.Context, input *iot.DeleteCertificateInput) *DeleteCertificateFuture
 
 	DeleteDimension(ctx workflow.Context, input *iot.DeleteDimensionInput) (*iot.DeleteDimensionOutput, error)
-	DeleteDimensionAsync(ctx workflow.Context, input *iot.DeleteDimensionInput) *IoTDeleteDimensionFuture
+	DeleteDimensionAsync(ctx workflow.Context, input *iot.DeleteDimensionInput) *DeleteDimensionFuture
 
 	DeleteDomainConfiguration(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) (*iot.DeleteDomainConfigurationOutput, error)
-	DeleteDomainConfigurationAsync(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) *IoTDeleteDomainConfigurationFuture
+	DeleteDomainConfigurationAsync(ctx workflow.Context, input *iot.DeleteDomainConfigurationInput) *DeleteDomainConfigurationFuture
 
 	DeleteDynamicThingGroup(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) (*iot.DeleteDynamicThingGroupOutput, error)
-	DeleteDynamicThingGroupAsync(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) *IoTDeleteDynamicThingGroupFuture
+	DeleteDynamicThingGroupAsync(ctx workflow.Context, input *iot.DeleteDynamicThingGroupInput) *DeleteDynamicThingGroupFuture
 
 	DeleteJob(ctx workflow.Context, input *iot.DeleteJobInput) (*iot.DeleteJobOutput, error)
-	DeleteJobAsync(ctx workflow.Context, input *iot.DeleteJobInput) *IoTDeleteJobFuture
+	DeleteJobAsync(ctx workflow.Context, input *iot.DeleteJobInput) *DeleteJobFuture
 
 	DeleteJobExecution(ctx workflow.Context, input *iot.DeleteJobExecutionInput) (*iot.DeleteJobExecutionOutput, error)
-	DeleteJobExecutionAsync(ctx workflow.Context, input *iot.DeleteJobExecutionInput) *IoTDeleteJobExecutionFuture
+	DeleteJobExecutionAsync(ctx workflow.Context, input *iot.DeleteJobExecutionInput) *DeleteJobExecutionFuture
 
 	DeleteMitigationAction(ctx workflow.Context, input *iot.DeleteMitigationActionInput) (*iot.DeleteMitigationActionOutput, error)
-	DeleteMitigationActionAsync(ctx workflow.Context, input *iot.DeleteMitigationActionInput) *IoTDeleteMitigationActionFuture
+	DeleteMitigationActionAsync(ctx workflow.Context, input *iot.DeleteMitigationActionInput) *DeleteMitigationActionFuture
 
 	DeleteOTAUpdate(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) (*iot.DeleteOTAUpdateOutput, error)
-	DeleteOTAUpdateAsync(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) *IoTDeleteOTAUpdateFuture
+	DeleteOTAUpdateAsync(ctx workflow.Context, input *iot.DeleteOTAUpdateInput) *DeleteOTAUpdateFuture
 
 	DeletePolicy(ctx workflow.Context, input *iot.DeletePolicyInput) (*iot.DeletePolicyOutput, error)
-	DeletePolicyAsync(ctx workflow.Context, input *iot.DeletePolicyInput) *IoTDeletePolicyFuture
+	DeletePolicyAsync(ctx workflow.Context, input *iot.DeletePolicyInput) *DeletePolicyFuture
 
 	DeletePolicyVersion(ctx workflow.Context, input *iot.DeletePolicyVersionInput) (*iot.DeletePolicyVersionOutput, error)
-	DeletePolicyVersionAsync(ctx workflow.Context, input *iot.DeletePolicyVersionInput) *IoTDeletePolicyVersionFuture
+	DeletePolicyVersionAsync(ctx workflow.Context, input *iot.DeletePolicyVersionInput) *DeletePolicyVersionFuture
 
 	DeleteProvisioningTemplate(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) (*iot.DeleteProvisioningTemplateOutput, error)
-	DeleteProvisioningTemplateAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) *IoTDeleteProvisioningTemplateFuture
+	DeleteProvisioningTemplateAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateInput) *DeleteProvisioningTemplateFuture
 
 	DeleteProvisioningTemplateVersion(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) (*iot.DeleteProvisioningTemplateVersionOutput, error)
-	DeleteProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) *IoTDeleteProvisioningTemplateVersionFuture
+	DeleteProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DeleteProvisioningTemplateVersionInput) *DeleteProvisioningTemplateVersionFuture
 
 	DeleteRegistrationCode(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) (*iot.DeleteRegistrationCodeOutput, error)
-	DeleteRegistrationCodeAsync(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) *IoTDeleteRegistrationCodeFuture
+	DeleteRegistrationCodeAsync(ctx workflow.Context, input *iot.DeleteRegistrationCodeInput) *DeleteRegistrationCodeFuture
 
 	DeleteRoleAlias(ctx workflow.Context, input *iot.DeleteRoleAliasInput) (*iot.DeleteRoleAliasOutput, error)
-	DeleteRoleAliasAsync(ctx workflow.Context, input *iot.DeleteRoleAliasInput) *IoTDeleteRoleAliasFuture
+	DeleteRoleAliasAsync(ctx workflow.Context, input *iot.DeleteRoleAliasInput) *DeleteRoleAliasFuture
 
 	DeleteScheduledAudit(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) (*iot.DeleteScheduledAuditOutput, error)
-	DeleteScheduledAuditAsync(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) *IoTDeleteScheduledAuditFuture
+	DeleteScheduledAuditAsync(ctx workflow.Context, input *iot.DeleteScheduledAuditInput) *DeleteScheduledAuditFuture
 
 	DeleteSecurityProfile(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) (*iot.DeleteSecurityProfileOutput, error)
-	DeleteSecurityProfileAsync(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) *IoTDeleteSecurityProfileFuture
+	DeleteSecurityProfileAsync(ctx workflow.Context, input *iot.DeleteSecurityProfileInput) *DeleteSecurityProfileFuture
 
 	DeleteStream(ctx workflow.Context, input *iot.DeleteStreamInput) (*iot.DeleteStreamOutput, error)
-	DeleteStreamAsync(ctx workflow.Context, input *iot.DeleteStreamInput) *IoTDeleteStreamFuture
+	DeleteStreamAsync(ctx workflow.Context, input *iot.DeleteStreamInput) *DeleteStreamFuture
 
 	DeleteThing(ctx workflow.Context, input *iot.DeleteThingInput) (*iot.DeleteThingOutput, error)
-	DeleteThingAsync(ctx workflow.Context, input *iot.DeleteThingInput) *IoTDeleteThingFuture
+	DeleteThingAsync(ctx workflow.Context, input *iot.DeleteThingInput) *DeleteThingFuture
 
 	DeleteThingGroup(ctx workflow.Context, input *iot.DeleteThingGroupInput) (*iot.DeleteThingGroupOutput, error)
-	DeleteThingGroupAsync(ctx workflow.Context, input *iot.DeleteThingGroupInput) *IoTDeleteThingGroupFuture
+	DeleteThingGroupAsync(ctx workflow.Context, input *iot.DeleteThingGroupInput) *DeleteThingGroupFuture
 
 	DeleteThingType(ctx workflow.Context, input *iot.DeleteThingTypeInput) (*iot.DeleteThingTypeOutput, error)
-	DeleteThingTypeAsync(ctx workflow.Context, input *iot.DeleteThingTypeInput) *IoTDeleteThingTypeFuture
+	DeleteThingTypeAsync(ctx workflow.Context, input *iot.DeleteThingTypeInput) *DeleteThingTypeFuture
 
 	DeleteTopicRule(ctx workflow.Context, input *iot.DeleteTopicRuleInput) (*iot.DeleteTopicRuleOutput, error)
-	DeleteTopicRuleAsync(ctx workflow.Context, input *iot.DeleteTopicRuleInput) *IoTDeleteTopicRuleFuture
+	DeleteTopicRuleAsync(ctx workflow.Context, input *iot.DeleteTopicRuleInput) *DeleteTopicRuleFuture
 
 	DeleteTopicRuleDestination(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) (*iot.DeleteTopicRuleDestinationOutput, error)
-	DeleteTopicRuleDestinationAsync(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) *IoTDeleteTopicRuleDestinationFuture
+	DeleteTopicRuleDestinationAsync(ctx workflow.Context, input *iot.DeleteTopicRuleDestinationInput) *DeleteTopicRuleDestinationFuture
 
 	DeleteV2LoggingLevel(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) (*iot.DeleteV2LoggingLevelOutput, error)
-	DeleteV2LoggingLevelAsync(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) *IoTDeleteV2LoggingLevelFuture
+	DeleteV2LoggingLevelAsync(ctx workflow.Context, input *iot.DeleteV2LoggingLevelInput) *DeleteV2LoggingLevelFuture
 
 	DeprecateThingType(ctx workflow.Context, input *iot.DeprecateThingTypeInput) (*iot.DeprecateThingTypeOutput, error)
-	DeprecateThingTypeAsync(ctx workflow.Context, input *iot.DeprecateThingTypeInput) *IoTDeprecateThingTypeFuture
+	DeprecateThingTypeAsync(ctx workflow.Context, input *iot.DeprecateThingTypeInput) *DeprecateThingTypeFuture
 
 	DescribeAccountAuditConfiguration(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) (*iot.DescribeAccountAuditConfigurationOutput, error)
-	DescribeAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) *IoTDescribeAccountAuditConfigurationFuture
+	DescribeAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.DescribeAccountAuditConfigurationInput) *DescribeAccountAuditConfigurationFuture
 
 	DescribeAuditFinding(ctx workflow.Context, input *iot.DescribeAuditFindingInput) (*iot.DescribeAuditFindingOutput, error)
-	DescribeAuditFindingAsync(ctx workflow.Context, input *iot.DescribeAuditFindingInput) *IoTDescribeAuditFindingFuture
+	DescribeAuditFindingAsync(ctx workflow.Context, input *iot.DescribeAuditFindingInput) *DescribeAuditFindingFuture
 
 	DescribeAuditMitigationActionsTask(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) (*iot.DescribeAuditMitigationActionsTaskOutput, error)
-	DescribeAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) *IoTDescribeAuditMitigationActionsTaskFuture
+	DescribeAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.DescribeAuditMitigationActionsTaskInput) *DescribeAuditMitigationActionsTaskFuture
 
 	DescribeAuditSuppression(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) (*iot.DescribeAuditSuppressionOutput, error)
-	DescribeAuditSuppressionAsync(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) *IoTDescribeAuditSuppressionFuture
+	DescribeAuditSuppressionAsync(ctx workflow.Context, input *iot.DescribeAuditSuppressionInput) *DescribeAuditSuppressionFuture
 
 	DescribeAuditTask(ctx workflow.Context, input *iot.DescribeAuditTaskInput) (*iot.DescribeAuditTaskOutput, error)
-	DescribeAuditTaskAsync(ctx workflow.Context, input *iot.DescribeAuditTaskInput) *IoTDescribeAuditTaskFuture
+	DescribeAuditTaskAsync(ctx workflow.Context, input *iot.DescribeAuditTaskInput) *DescribeAuditTaskFuture
 
 	DescribeAuthorizer(ctx workflow.Context, input *iot.DescribeAuthorizerInput) (*iot.DescribeAuthorizerOutput, error)
-	DescribeAuthorizerAsync(ctx workflow.Context, input *iot.DescribeAuthorizerInput) *IoTDescribeAuthorizerFuture
+	DescribeAuthorizerAsync(ctx workflow.Context, input *iot.DescribeAuthorizerInput) *DescribeAuthorizerFuture
 
 	DescribeBillingGroup(ctx workflow.Context, input *iot.DescribeBillingGroupInput) (*iot.DescribeBillingGroupOutput, error)
-	DescribeBillingGroupAsync(ctx workflow.Context, input *iot.DescribeBillingGroupInput) *IoTDescribeBillingGroupFuture
+	DescribeBillingGroupAsync(ctx workflow.Context, input *iot.DescribeBillingGroupInput) *DescribeBillingGroupFuture
 
 	DescribeCACertificate(ctx workflow.Context, input *iot.DescribeCACertificateInput) (*iot.DescribeCACertificateOutput, error)
-	DescribeCACertificateAsync(ctx workflow.Context, input *iot.DescribeCACertificateInput) *IoTDescribeCACertificateFuture
+	DescribeCACertificateAsync(ctx workflow.Context, input *iot.DescribeCACertificateInput) *DescribeCACertificateFuture
 
 	DescribeCertificate(ctx workflow.Context, input *iot.DescribeCertificateInput) (*iot.DescribeCertificateOutput, error)
-	DescribeCertificateAsync(ctx workflow.Context, input *iot.DescribeCertificateInput) *IoTDescribeCertificateFuture
+	DescribeCertificateAsync(ctx workflow.Context, input *iot.DescribeCertificateInput) *DescribeCertificateFuture
 
 	DescribeDefaultAuthorizer(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) (*iot.DescribeDefaultAuthorizerOutput, error)
-	DescribeDefaultAuthorizerAsync(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) *IoTDescribeDefaultAuthorizerFuture
+	DescribeDefaultAuthorizerAsync(ctx workflow.Context, input *iot.DescribeDefaultAuthorizerInput) *DescribeDefaultAuthorizerFuture
 
 	DescribeDimension(ctx workflow.Context, input *iot.DescribeDimensionInput) (*iot.DescribeDimensionOutput, error)
-	DescribeDimensionAsync(ctx workflow.Context, input *iot.DescribeDimensionInput) *IoTDescribeDimensionFuture
+	DescribeDimensionAsync(ctx workflow.Context, input *iot.DescribeDimensionInput) *DescribeDimensionFuture
 
 	DescribeDomainConfiguration(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) (*iot.DescribeDomainConfigurationOutput, error)
-	DescribeDomainConfigurationAsync(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) *IoTDescribeDomainConfigurationFuture
+	DescribeDomainConfigurationAsync(ctx workflow.Context, input *iot.DescribeDomainConfigurationInput) *DescribeDomainConfigurationFuture
 
 	DescribeEndpoint(ctx workflow.Context, input *iot.DescribeEndpointInput) (*iot.DescribeEndpointOutput, error)
-	DescribeEndpointAsync(ctx workflow.Context, input *iot.DescribeEndpointInput) *IoTDescribeEndpointFuture
+	DescribeEndpointAsync(ctx workflow.Context, input *iot.DescribeEndpointInput) *DescribeEndpointFuture
 
 	DescribeEventConfigurations(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) (*iot.DescribeEventConfigurationsOutput, error)
-	DescribeEventConfigurationsAsync(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) *IoTDescribeEventConfigurationsFuture
+	DescribeEventConfigurationsAsync(ctx workflow.Context, input *iot.DescribeEventConfigurationsInput) *DescribeEventConfigurationsFuture
 
 	DescribeIndex(ctx workflow.Context, input *iot.DescribeIndexInput) (*iot.DescribeIndexOutput, error)
-	DescribeIndexAsync(ctx workflow.Context, input *iot.DescribeIndexInput) *IoTDescribeIndexFuture
+	DescribeIndexAsync(ctx workflow.Context, input *iot.DescribeIndexInput) *DescribeIndexFuture
 
 	DescribeJob(ctx workflow.Context, input *iot.DescribeJobInput) (*iot.DescribeJobOutput, error)
-	DescribeJobAsync(ctx workflow.Context, input *iot.DescribeJobInput) *IoTDescribeJobFuture
+	DescribeJobAsync(ctx workflow.Context, input *iot.DescribeJobInput) *DescribeJobFuture
 
 	DescribeJobExecution(ctx workflow.Context, input *iot.DescribeJobExecutionInput) (*iot.DescribeJobExecutionOutput, error)
-	DescribeJobExecutionAsync(ctx workflow.Context, input *iot.DescribeJobExecutionInput) *IoTDescribeJobExecutionFuture
+	DescribeJobExecutionAsync(ctx workflow.Context, input *iot.DescribeJobExecutionInput) *DescribeJobExecutionFuture
 
 	DescribeMitigationAction(ctx workflow.Context, input *iot.DescribeMitigationActionInput) (*iot.DescribeMitigationActionOutput, error)
-	DescribeMitigationActionAsync(ctx workflow.Context, input *iot.DescribeMitigationActionInput) *IoTDescribeMitigationActionFuture
+	DescribeMitigationActionAsync(ctx workflow.Context, input *iot.DescribeMitigationActionInput) *DescribeMitigationActionFuture
 
 	DescribeProvisioningTemplate(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) (*iot.DescribeProvisioningTemplateOutput, error)
-	DescribeProvisioningTemplateAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) *IoTDescribeProvisioningTemplateFuture
+	DescribeProvisioningTemplateAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateInput) *DescribeProvisioningTemplateFuture
 
 	DescribeProvisioningTemplateVersion(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) (*iot.DescribeProvisioningTemplateVersionOutput, error)
-	DescribeProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) *IoTDescribeProvisioningTemplateVersionFuture
+	DescribeProvisioningTemplateVersionAsync(ctx workflow.Context, input *iot.DescribeProvisioningTemplateVersionInput) *DescribeProvisioningTemplateVersionFuture
 
 	DescribeRoleAlias(ctx workflow.Context, input *iot.DescribeRoleAliasInput) (*iot.DescribeRoleAliasOutput, error)
-	DescribeRoleAliasAsync(ctx workflow.Context, input *iot.DescribeRoleAliasInput) *IoTDescribeRoleAliasFuture
+	DescribeRoleAliasAsync(ctx workflow.Context, input *iot.DescribeRoleAliasInput) *DescribeRoleAliasFuture
 
 	DescribeScheduledAudit(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) (*iot.DescribeScheduledAuditOutput, error)
-	DescribeScheduledAuditAsync(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) *IoTDescribeScheduledAuditFuture
+	DescribeScheduledAuditAsync(ctx workflow.Context, input *iot.DescribeScheduledAuditInput) *DescribeScheduledAuditFuture
 
 	DescribeSecurityProfile(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) (*iot.DescribeSecurityProfileOutput, error)
-	DescribeSecurityProfileAsync(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) *IoTDescribeSecurityProfileFuture
+	DescribeSecurityProfileAsync(ctx workflow.Context, input *iot.DescribeSecurityProfileInput) *DescribeSecurityProfileFuture
 
 	DescribeStream(ctx workflow.Context, input *iot.DescribeStreamInput) (*iot.DescribeStreamOutput, error)
-	DescribeStreamAsync(ctx workflow.Context, input *iot.DescribeStreamInput) *IoTDescribeStreamFuture
+	DescribeStreamAsync(ctx workflow.Context, input *iot.DescribeStreamInput) *DescribeStreamFuture
 
 	DescribeThing(ctx workflow.Context, input *iot.DescribeThingInput) (*iot.DescribeThingOutput, error)
-	DescribeThingAsync(ctx workflow.Context, input *iot.DescribeThingInput) *IoTDescribeThingFuture
+	DescribeThingAsync(ctx workflow.Context, input *iot.DescribeThingInput) *DescribeThingFuture
 
 	DescribeThingGroup(ctx workflow.Context, input *iot.DescribeThingGroupInput) (*iot.DescribeThingGroupOutput, error)
-	DescribeThingGroupAsync(ctx workflow.Context, input *iot.DescribeThingGroupInput) *IoTDescribeThingGroupFuture
+	DescribeThingGroupAsync(ctx workflow.Context, input *iot.DescribeThingGroupInput) *DescribeThingGroupFuture
 
 	DescribeThingRegistrationTask(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) (*iot.DescribeThingRegistrationTaskOutput, error)
-	DescribeThingRegistrationTaskAsync(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) *IoTDescribeThingRegistrationTaskFuture
+	DescribeThingRegistrationTaskAsync(ctx workflow.Context, input *iot.DescribeThingRegistrationTaskInput) *DescribeThingRegistrationTaskFuture
 
 	DescribeThingType(ctx workflow.Context, input *iot.DescribeThingTypeInput) (*iot.DescribeThingTypeOutput, error)
-	DescribeThingTypeAsync(ctx workflow.Context, input *iot.DescribeThingTypeInput) *IoTDescribeThingTypeFuture
+	DescribeThingTypeAsync(ctx workflow.Context, input *iot.DescribeThingTypeInput) *DescribeThingTypeFuture
 
 	DetachPolicy(ctx workflow.Context, input *iot.DetachPolicyInput) (*iot.DetachPolicyOutput, error)
-	DetachPolicyAsync(ctx workflow.Context, input *iot.DetachPolicyInput) *IoTDetachPolicyFuture
+	DetachPolicyAsync(ctx workflow.Context, input *iot.DetachPolicyInput) *DetachPolicyFuture
 
 	DetachPrincipalPolicy(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) (*iot.DetachPrincipalPolicyOutput, error)
-	DetachPrincipalPolicyAsync(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) *IoTDetachPrincipalPolicyFuture
+	DetachPrincipalPolicyAsync(ctx workflow.Context, input *iot.DetachPrincipalPolicyInput) *DetachPrincipalPolicyFuture
 
 	DetachSecurityProfile(ctx workflow.Context, input *iot.DetachSecurityProfileInput) (*iot.DetachSecurityProfileOutput, error)
-	DetachSecurityProfileAsync(ctx workflow.Context, input *iot.DetachSecurityProfileInput) *IoTDetachSecurityProfileFuture
+	DetachSecurityProfileAsync(ctx workflow.Context, input *iot.DetachSecurityProfileInput) *DetachSecurityProfileFuture
 
 	DetachThingPrincipal(ctx workflow.Context, input *iot.DetachThingPrincipalInput) (*iot.DetachThingPrincipalOutput, error)
-	DetachThingPrincipalAsync(ctx workflow.Context, input *iot.DetachThingPrincipalInput) *IoTDetachThingPrincipalFuture
+	DetachThingPrincipalAsync(ctx workflow.Context, input *iot.DetachThingPrincipalInput) *DetachThingPrincipalFuture
 
 	DisableTopicRule(ctx workflow.Context, input *iot.DisableTopicRuleInput) (*iot.DisableTopicRuleOutput, error)
-	DisableTopicRuleAsync(ctx workflow.Context, input *iot.DisableTopicRuleInput) *IoTDisableTopicRuleFuture
+	DisableTopicRuleAsync(ctx workflow.Context, input *iot.DisableTopicRuleInput) *DisableTopicRuleFuture
 
 	EnableTopicRule(ctx workflow.Context, input *iot.EnableTopicRuleInput) (*iot.EnableTopicRuleOutput, error)
-	EnableTopicRuleAsync(ctx workflow.Context, input *iot.EnableTopicRuleInput) *IoTEnableTopicRuleFuture
+	EnableTopicRuleAsync(ctx workflow.Context, input *iot.EnableTopicRuleInput) *EnableTopicRuleFuture
 
 	GetCardinality(ctx workflow.Context, input *iot.GetCardinalityInput) (*iot.GetCardinalityOutput, error)
-	GetCardinalityAsync(ctx workflow.Context, input *iot.GetCardinalityInput) *IoTGetCardinalityFuture
+	GetCardinalityAsync(ctx workflow.Context, input *iot.GetCardinalityInput) *GetCardinalityFuture
 
 	GetEffectivePolicies(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) (*iot.GetEffectivePoliciesOutput, error)
-	GetEffectivePoliciesAsync(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) *IoTGetEffectivePoliciesFuture
+	GetEffectivePoliciesAsync(ctx workflow.Context, input *iot.GetEffectivePoliciesInput) *GetEffectivePoliciesFuture
 
 	GetIndexingConfiguration(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) (*iot.GetIndexingConfigurationOutput, error)
-	GetIndexingConfigurationAsync(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) *IoTGetIndexingConfigurationFuture
+	GetIndexingConfigurationAsync(ctx workflow.Context, input *iot.GetIndexingConfigurationInput) *GetIndexingConfigurationFuture
 
 	GetJobDocument(ctx workflow.Context, input *iot.GetJobDocumentInput) (*iot.GetJobDocumentOutput, error)
-	GetJobDocumentAsync(ctx workflow.Context, input *iot.GetJobDocumentInput) *IoTGetJobDocumentFuture
+	GetJobDocumentAsync(ctx workflow.Context, input *iot.GetJobDocumentInput) *GetJobDocumentFuture
 
 	GetLoggingOptions(ctx workflow.Context, input *iot.GetLoggingOptionsInput) (*iot.GetLoggingOptionsOutput, error)
-	GetLoggingOptionsAsync(ctx workflow.Context, input *iot.GetLoggingOptionsInput) *IoTGetLoggingOptionsFuture
+	GetLoggingOptionsAsync(ctx workflow.Context, input *iot.GetLoggingOptionsInput) *GetLoggingOptionsFuture
 
 	GetOTAUpdate(ctx workflow.Context, input *iot.GetOTAUpdateInput) (*iot.GetOTAUpdateOutput, error)
-	GetOTAUpdateAsync(ctx workflow.Context, input *iot.GetOTAUpdateInput) *IoTGetOTAUpdateFuture
+	GetOTAUpdateAsync(ctx workflow.Context, input *iot.GetOTAUpdateInput) *GetOTAUpdateFuture
 
 	GetPercentiles(ctx workflow.Context, input *iot.GetPercentilesInput) (*iot.GetPercentilesOutput, error)
-	GetPercentilesAsync(ctx workflow.Context, input *iot.GetPercentilesInput) *IoTGetPercentilesFuture
+	GetPercentilesAsync(ctx workflow.Context, input *iot.GetPercentilesInput) *GetPercentilesFuture
 
 	GetPolicy(ctx workflow.Context, input *iot.GetPolicyInput) (*iot.GetPolicyOutput, error)
-	GetPolicyAsync(ctx workflow.Context, input *iot.GetPolicyInput) *IoTGetPolicyFuture
+	GetPolicyAsync(ctx workflow.Context, input *iot.GetPolicyInput) *GetPolicyFuture
 
 	GetPolicyVersion(ctx workflow.Context, input *iot.GetPolicyVersionInput) (*iot.GetPolicyVersionOutput, error)
-	GetPolicyVersionAsync(ctx workflow.Context, input *iot.GetPolicyVersionInput) *IoTGetPolicyVersionFuture
+	GetPolicyVersionAsync(ctx workflow.Context, input *iot.GetPolicyVersionInput) *GetPolicyVersionFuture
 
 	GetRegistrationCode(ctx workflow.Context, input *iot.GetRegistrationCodeInput) (*iot.GetRegistrationCodeOutput, error)
-	GetRegistrationCodeAsync(ctx workflow.Context, input *iot.GetRegistrationCodeInput) *IoTGetRegistrationCodeFuture
+	GetRegistrationCodeAsync(ctx workflow.Context, input *iot.GetRegistrationCodeInput) *GetRegistrationCodeFuture
 
 	GetStatistics(ctx workflow.Context, input *iot.GetStatisticsInput) (*iot.GetStatisticsOutput, error)
-	GetStatisticsAsync(ctx workflow.Context, input *iot.GetStatisticsInput) *IoTGetStatisticsFuture
+	GetStatisticsAsync(ctx workflow.Context, input *iot.GetStatisticsInput) *GetStatisticsFuture
 
 	GetTopicRule(ctx workflow.Context, input *iot.GetTopicRuleInput) (*iot.GetTopicRuleOutput, error)
-	GetTopicRuleAsync(ctx workflow.Context, input *iot.GetTopicRuleInput) *IoTGetTopicRuleFuture
+	GetTopicRuleAsync(ctx workflow.Context, input *iot.GetTopicRuleInput) *GetTopicRuleFuture
 
 	GetTopicRuleDestination(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) (*iot.GetTopicRuleDestinationOutput, error)
-	GetTopicRuleDestinationAsync(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) *IoTGetTopicRuleDestinationFuture
+	GetTopicRuleDestinationAsync(ctx workflow.Context, input *iot.GetTopicRuleDestinationInput) *GetTopicRuleDestinationFuture
 
 	GetV2LoggingOptions(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) (*iot.GetV2LoggingOptionsOutput, error)
-	GetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) *IoTGetV2LoggingOptionsFuture
+	GetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.GetV2LoggingOptionsInput) *GetV2LoggingOptionsFuture
 
 	ListActiveViolations(ctx workflow.Context, input *iot.ListActiveViolationsInput) (*iot.ListActiveViolationsOutput, error)
-	ListActiveViolationsAsync(ctx workflow.Context, input *iot.ListActiveViolationsInput) *IoTListActiveViolationsFuture
+	ListActiveViolationsAsync(ctx workflow.Context, input *iot.ListActiveViolationsInput) *ListActiveViolationsFuture
 
 	ListAttachedPolicies(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) (*iot.ListAttachedPoliciesOutput, error)
-	ListAttachedPoliciesAsync(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) *IoTListAttachedPoliciesFuture
+	ListAttachedPoliciesAsync(ctx workflow.Context, input *iot.ListAttachedPoliciesInput) *ListAttachedPoliciesFuture
 
 	ListAuditFindings(ctx workflow.Context, input *iot.ListAuditFindingsInput) (*iot.ListAuditFindingsOutput, error)
-	ListAuditFindingsAsync(ctx workflow.Context, input *iot.ListAuditFindingsInput) *IoTListAuditFindingsFuture
+	ListAuditFindingsAsync(ctx workflow.Context, input *iot.ListAuditFindingsInput) *ListAuditFindingsFuture
 
 	ListAuditMitigationActionsExecutions(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) (*iot.ListAuditMitigationActionsExecutionsOutput, error)
-	ListAuditMitigationActionsExecutionsAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) *IoTListAuditMitigationActionsExecutionsFuture
+	ListAuditMitigationActionsExecutionsAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsExecutionsInput) *ListAuditMitigationActionsExecutionsFuture
 
 	ListAuditMitigationActionsTasks(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) (*iot.ListAuditMitigationActionsTasksOutput, error)
-	ListAuditMitigationActionsTasksAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) *IoTListAuditMitigationActionsTasksFuture
+	ListAuditMitigationActionsTasksAsync(ctx workflow.Context, input *iot.ListAuditMitigationActionsTasksInput) *ListAuditMitigationActionsTasksFuture
 
 	ListAuditSuppressions(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) (*iot.ListAuditSuppressionsOutput, error)
-	ListAuditSuppressionsAsync(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) *IoTListAuditSuppressionsFuture
+	ListAuditSuppressionsAsync(ctx workflow.Context, input *iot.ListAuditSuppressionsInput) *ListAuditSuppressionsFuture
 
 	ListAuditTasks(ctx workflow.Context, input *iot.ListAuditTasksInput) (*iot.ListAuditTasksOutput, error)
-	ListAuditTasksAsync(ctx workflow.Context, input *iot.ListAuditTasksInput) *IoTListAuditTasksFuture
+	ListAuditTasksAsync(ctx workflow.Context, input *iot.ListAuditTasksInput) *ListAuditTasksFuture
 
 	ListAuthorizers(ctx workflow.Context, input *iot.ListAuthorizersInput) (*iot.ListAuthorizersOutput, error)
-	ListAuthorizersAsync(ctx workflow.Context, input *iot.ListAuthorizersInput) *IoTListAuthorizersFuture
+	ListAuthorizersAsync(ctx workflow.Context, input *iot.ListAuthorizersInput) *ListAuthorizersFuture
 
 	ListBillingGroups(ctx workflow.Context, input *iot.ListBillingGroupsInput) (*iot.ListBillingGroupsOutput, error)
-	ListBillingGroupsAsync(ctx workflow.Context, input *iot.ListBillingGroupsInput) *IoTListBillingGroupsFuture
+	ListBillingGroupsAsync(ctx workflow.Context, input *iot.ListBillingGroupsInput) *ListBillingGroupsFuture
 
 	ListCACertificates(ctx workflow.Context, input *iot.ListCACertificatesInput) (*iot.ListCACertificatesOutput, error)
-	ListCACertificatesAsync(ctx workflow.Context, input *iot.ListCACertificatesInput) *IoTListCACertificatesFuture
+	ListCACertificatesAsync(ctx workflow.Context, input *iot.ListCACertificatesInput) *ListCACertificatesFuture
 
 	ListCertificates(ctx workflow.Context, input *iot.ListCertificatesInput) (*iot.ListCertificatesOutput, error)
-	ListCertificatesAsync(ctx workflow.Context, input *iot.ListCertificatesInput) *IoTListCertificatesFuture
+	ListCertificatesAsync(ctx workflow.Context, input *iot.ListCertificatesInput) *ListCertificatesFuture
 
 	ListCertificatesByCA(ctx workflow.Context, input *iot.ListCertificatesByCAInput) (*iot.ListCertificatesByCAOutput, error)
-	ListCertificatesByCAAsync(ctx workflow.Context, input *iot.ListCertificatesByCAInput) *IoTListCertificatesByCAFuture
+	ListCertificatesByCAAsync(ctx workflow.Context, input *iot.ListCertificatesByCAInput) *ListCertificatesByCAFuture
 
 	ListDimensions(ctx workflow.Context, input *iot.ListDimensionsInput) (*iot.ListDimensionsOutput, error)
-	ListDimensionsAsync(ctx workflow.Context, input *iot.ListDimensionsInput) *IoTListDimensionsFuture
+	ListDimensionsAsync(ctx workflow.Context, input *iot.ListDimensionsInput) *ListDimensionsFuture
 
 	ListDomainConfigurations(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) (*iot.ListDomainConfigurationsOutput, error)
-	ListDomainConfigurationsAsync(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) *IoTListDomainConfigurationsFuture
+	ListDomainConfigurationsAsync(ctx workflow.Context, input *iot.ListDomainConfigurationsInput) *ListDomainConfigurationsFuture
 
 	ListIndices(ctx workflow.Context, input *iot.ListIndicesInput) (*iot.ListIndicesOutput, error)
-	ListIndicesAsync(ctx workflow.Context, input *iot.ListIndicesInput) *IoTListIndicesFuture
+	ListIndicesAsync(ctx workflow.Context, input *iot.ListIndicesInput) *ListIndicesFuture
 
 	ListJobExecutionsForJob(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) (*iot.ListJobExecutionsForJobOutput, error)
-	ListJobExecutionsForJobAsync(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) *IoTListJobExecutionsForJobFuture
+	ListJobExecutionsForJobAsync(ctx workflow.Context, input *iot.ListJobExecutionsForJobInput) *ListJobExecutionsForJobFuture
 
 	ListJobExecutionsForThing(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) (*iot.ListJobExecutionsForThingOutput, error)
-	ListJobExecutionsForThingAsync(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) *IoTListJobExecutionsForThingFuture
+	ListJobExecutionsForThingAsync(ctx workflow.Context, input *iot.ListJobExecutionsForThingInput) *ListJobExecutionsForThingFuture
 
 	ListJobs(ctx workflow.Context, input *iot.ListJobsInput) (*iot.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *iot.ListJobsInput) *IoTListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *iot.ListJobsInput) *ListJobsFuture
 
 	ListMitigationActions(ctx workflow.Context, input *iot.ListMitigationActionsInput) (*iot.ListMitigationActionsOutput, error)
-	ListMitigationActionsAsync(ctx workflow.Context, input *iot.ListMitigationActionsInput) *IoTListMitigationActionsFuture
+	ListMitigationActionsAsync(ctx workflow.Context, input *iot.ListMitigationActionsInput) *ListMitigationActionsFuture
 
 	ListOTAUpdates(ctx workflow.Context, input *iot.ListOTAUpdatesInput) (*iot.ListOTAUpdatesOutput, error)
-	ListOTAUpdatesAsync(ctx workflow.Context, input *iot.ListOTAUpdatesInput) *IoTListOTAUpdatesFuture
+	ListOTAUpdatesAsync(ctx workflow.Context, input *iot.ListOTAUpdatesInput) *ListOTAUpdatesFuture
 
 	ListOutgoingCertificates(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) (*iot.ListOutgoingCertificatesOutput, error)
-	ListOutgoingCertificatesAsync(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) *IoTListOutgoingCertificatesFuture
+	ListOutgoingCertificatesAsync(ctx workflow.Context, input *iot.ListOutgoingCertificatesInput) *ListOutgoingCertificatesFuture
 
 	ListPolicies(ctx workflow.Context, input *iot.ListPoliciesInput) (*iot.ListPoliciesOutput, error)
-	ListPoliciesAsync(ctx workflow.Context, input *iot.ListPoliciesInput) *IoTListPoliciesFuture
+	ListPoliciesAsync(ctx workflow.Context, input *iot.ListPoliciesInput) *ListPoliciesFuture
 
 	ListPolicyPrincipals(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) (*iot.ListPolicyPrincipalsOutput, error)
-	ListPolicyPrincipalsAsync(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) *IoTListPolicyPrincipalsFuture
+	ListPolicyPrincipalsAsync(ctx workflow.Context, input *iot.ListPolicyPrincipalsInput) *ListPolicyPrincipalsFuture
 
 	ListPolicyVersions(ctx workflow.Context, input *iot.ListPolicyVersionsInput) (*iot.ListPolicyVersionsOutput, error)
-	ListPolicyVersionsAsync(ctx workflow.Context, input *iot.ListPolicyVersionsInput) *IoTListPolicyVersionsFuture
+	ListPolicyVersionsAsync(ctx workflow.Context, input *iot.ListPolicyVersionsInput) *ListPolicyVersionsFuture
 
 	ListPrincipalPolicies(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) (*iot.ListPrincipalPoliciesOutput, error)
-	ListPrincipalPoliciesAsync(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) *IoTListPrincipalPoliciesFuture
+	ListPrincipalPoliciesAsync(ctx workflow.Context, input *iot.ListPrincipalPoliciesInput) *ListPrincipalPoliciesFuture
 
 	ListPrincipalThings(ctx workflow.Context, input *iot.ListPrincipalThingsInput) (*iot.ListPrincipalThingsOutput, error)
-	ListPrincipalThingsAsync(ctx workflow.Context, input *iot.ListPrincipalThingsInput) *IoTListPrincipalThingsFuture
+	ListPrincipalThingsAsync(ctx workflow.Context, input *iot.ListPrincipalThingsInput) *ListPrincipalThingsFuture
 
 	ListProvisioningTemplateVersions(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) (*iot.ListProvisioningTemplateVersionsOutput, error)
-	ListProvisioningTemplateVersionsAsync(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) *IoTListProvisioningTemplateVersionsFuture
+	ListProvisioningTemplateVersionsAsync(ctx workflow.Context, input *iot.ListProvisioningTemplateVersionsInput) *ListProvisioningTemplateVersionsFuture
 
 	ListProvisioningTemplates(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) (*iot.ListProvisioningTemplatesOutput, error)
-	ListProvisioningTemplatesAsync(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) *IoTListProvisioningTemplatesFuture
+	ListProvisioningTemplatesAsync(ctx workflow.Context, input *iot.ListProvisioningTemplatesInput) *ListProvisioningTemplatesFuture
 
 	ListRoleAliases(ctx workflow.Context, input *iot.ListRoleAliasesInput) (*iot.ListRoleAliasesOutput, error)
-	ListRoleAliasesAsync(ctx workflow.Context, input *iot.ListRoleAliasesInput) *IoTListRoleAliasesFuture
+	ListRoleAliasesAsync(ctx workflow.Context, input *iot.ListRoleAliasesInput) *ListRoleAliasesFuture
 
 	ListScheduledAudits(ctx workflow.Context, input *iot.ListScheduledAuditsInput) (*iot.ListScheduledAuditsOutput, error)
-	ListScheduledAuditsAsync(ctx workflow.Context, input *iot.ListScheduledAuditsInput) *IoTListScheduledAuditsFuture
+	ListScheduledAuditsAsync(ctx workflow.Context, input *iot.ListScheduledAuditsInput) *ListScheduledAuditsFuture
 
 	ListSecurityProfiles(ctx workflow.Context, input *iot.ListSecurityProfilesInput) (*iot.ListSecurityProfilesOutput, error)
-	ListSecurityProfilesAsync(ctx workflow.Context, input *iot.ListSecurityProfilesInput) *IoTListSecurityProfilesFuture
+	ListSecurityProfilesAsync(ctx workflow.Context, input *iot.ListSecurityProfilesInput) *ListSecurityProfilesFuture
 
 	ListSecurityProfilesForTarget(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) (*iot.ListSecurityProfilesForTargetOutput, error)
-	ListSecurityProfilesForTargetAsync(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) *IoTListSecurityProfilesForTargetFuture
+	ListSecurityProfilesForTargetAsync(ctx workflow.Context, input *iot.ListSecurityProfilesForTargetInput) *ListSecurityProfilesForTargetFuture
 
 	ListStreams(ctx workflow.Context, input *iot.ListStreamsInput) (*iot.ListStreamsOutput, error)
-	ListStreamsAsync(ctx workflow.Context, input *iot.ListStreamsInput) *IoTListStreamsFuture
+	ListStreamsAsync(ctx workflow.Context, input *iot.ListStreamsInput) *ListStreamsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iot.ListTagsForResourceInput) (*iot.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iot.ListTagsForResourceInput) *IoTListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *iot.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListTargetsForPolicy(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) (*iot.ListTargetsForPolicyOutput, error)
-	ListTargetsForPolicyAsync(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) *IoTListTargetsForPolicyFuture
+	ListTargetsForPolicyAsync(ctx workflow.Context, input *iot.ListTargetsForPolicyInput) *ListTargetsForPolicyFuture
 
 	ListTargetsForSecurityProfile(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) (*iot.ListTargetsForSecurityProfileOutput, error)
-	ListTargetsForSecurityProfileAsync(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) *IoTListTargetsForSecurityProfileFuture
+	ListTargetsForSecurityProfileAsync(ctx workflow.Context, input *iot.ListTargetsForSecurityProfileInput) *ListTargetsForSecurityProfileFuture
 
 	ListThingGroups(ctx workflow.Context, input *iot.ListThingGroupsInput) (*iot.ListThingGroupsOutput, error)
-	ListThingGroupsAsync(ctx workflow.Context, input *iot.ListThingGroupsInput) *IoTListThingGroupsFuture
+	ListThingGroupsAsync(ctx workflow.Context, input *iot.ListThingGroupsInput) *ListThingGroupsFuture
 
 	ListThingGroupsForThing(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) (*iot.ListThingGroupsForThingOutput, error)
-	ListThingGroupsForThingAsync(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) *IoTListThingGroupsForThingFuture
+	ListThingGroupsForThingAsync(ctx workflow.Context, input *iot.ListThingGroupsForThingInput) *ListThingGroupsForThingFuture
 
 	ListThingPrincipals(ctx workflow.Context, input *iot.ListThingPrincipalsInput) (*iot.ListThingPrincipalsOutput, error)
-	ListThingPrincipalsAsync(ctx workflow.Context, input *iot.ListThingPrincipalsInput) *IoTListThingPrincipalsFuture
+	ListThingPrincipalsAsync(ctx workflow.Context, input *iot.ListThingPrincipalsInput) *ListThingPrincipalsFuture
 
 	ListThingRegistrationTaskReports(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) (*iot.ListThingRegistrationTaskReportsOutput, error)
-	ListThingRegistrationTaskReportsAsync(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) *IoTListThingRegistrationTaskReportsFuture
+	ListThingRegistrationTaskReportsAsync(ctx workflow.Context, input *iot.ListThingRegistrationTaskReportsInput) *ListThingRegistrationTaskReportsFuture
 
 	ListThingRegistrationTasks(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) (*iot.ListThingRegistrationTasksOutput, error)
-	ListThingRegistrationTasksAsync(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) *IoTListThingRegistrationTasksFuture
+	ListThingRegistrationTasksAsync(ctx workflow.Context, input *iot.ListThingRegistrationTasksInput) *ListThingRegistrationTasksFuture
 
 	ListThingTypes(ctx workflow.Context, input *iot.ListThingTypesInput) (*iot.ListThingTypesOutput, error)
-	ListThingTypesAsync(ctx workflow.Context, input *iot.ListThingTypesInput) *IoTListThingTypesFuture
+	ListThingTypesAsync(ctx workflow.Context, input *iot.ListThingTypesInput) *ListThingTypesFuture
 
 	ListThings(ctx workflow.Context, input *iot.ListThingsInput) (*iot.ListThingsOutput, error)
-	ListThingsAsync(ctx workflow.Context, input *iot.ListThingsInput) *IoTListThingsFuture
+	ListThingsAsync(ctx workflow.Context, input *iot.ListThingsInput) *ListThingsFuture
 
 	ListThingsInBillingGroup(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) (*iot.ListThingsInBillingGroupOutput, error)
-	ListThingsInBillingGroupAsync(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) *IoTListThingsInBillingGroupFuture
+	ListThingsInBillingGroupAsync(ctx workflow.Context, input *iot.ListThingsInBillingGroupInput) *ListThingsInBillingGroupFuture
 
 	ListThingsInThingGroup(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) (*iot.ListThingsInThingGroupOutput, error)
-	ListThingsInThingGroupAsync(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) *IoTListThingsInThingGroupFuture
+	ListThingsInThingGroupAsync(ctx workflow.Context, input *iot.ListThingsInThingGroupInput) *ListThingsInThingGroupFuture
 
 	ListTopicRuleDestinations(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) (*iot.ListTopicRuleDestinationsOutput, error)
-	ListTopicRuleDestinationsAsync(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) *IoTListTopicRuleDestinationsFuture
+	ListTopicRuleDestinationsAsync(ctx workflow.Context, input *iot.ListTopicRuleDestinationsInput) *ListTopicRuleDestinationsFuture
 
 	ListTopicRules(ctx workflow.Context, input *iot.ListTopicRulesInput) (*iot.ListTopicRulesOutput, error)
-	ListTopicRulesAsync(ctx workflow.Context, input *iot.ListTopicRulesInput) *IoTListTopicRulesFuture
+	ListTopicRulesAsync(ctx workflow.Context, input *iot.ListTopicRulesInput) *ListTopicRulesFuture
 
 	ListV2LoggingLevels(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) (*iot.ListV2LoggingLevelsOutput, error)
-	ListV2LoggingLevelsAsync(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) *IoTListV2LoggingLevelsFuture
+	ListV2LoggingLevelsAsync(ctx workflow.Context, input *iot.ListV2LoggingLevelsInput) *ListV2LoggingLevelsFuture
 
 	ListViolationEvents(ctx workflow.Context, input *iot.ListViolationEventsInput) (*iot.ListViolationEventsOutput, error)
-	ListViolationEventsAsync(ctx workflow.Context, input *iot.ListViolationEventsInput) *IoTListViolationEventsFuture
+	ListViolationEventsAsync(ctx workflow.Context, input *iot.ListViolationEventsInput) *ListViolationEventsFuture
 
 	RegisterCACertificate(ctx workflow.Context, input *iot.RegisterCACertificateInput) (*iot.RegisterCACertificateOutput, error)
-	RegisterCACertificateAsync(ctx workflow.Context, input *iot.RegisterCACertificateInput) *IoTRegisterCACertificateFuture
+	RegisterCACertificateAsync(ctx workflow.Context, input *iot.RegisterCACertificateInput) *RegisterCACertificateFuture
 
 	RegisterCertificate(ctx workflow.Context, input *iot.RegisterCertificateInput) (*iot.RegisterCertificateOutput, error)
-	RegisterCertificateAsync(ctx workflow.Context, input *iot.RegisterCertificateInput) *IoTRegisterCertificateFuture
+	RegisterCertificateAsync(ctx workflow.Context, input *iot.RegisterCertificateInput) *RegisterCertificateFuture
 
 	RegisterCertificateWithoutCA(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) (*iot.RegisterCertificateWithoutCAOutput, error)
-	RegisterCertificateWithoutCAAsync(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) *IoTRegisterCertificateWithoutCAFuture
+	RegisterCertificateWithoutCAAsync(ctx workflow.Context, input *iot.RegisterCertificateWithoutCAInput) *RegisterCertificateWithoutCAFuture
 
 	RegisterThing(ctx workflow.Context, input *iot.RegisterThingInput) (*iot.RegisterThingOutput, error)
-	RegisterThingAsync(ctx workflow.Context, input *iot.RegisterThingInput) *IoTRegisterThingFuture
+	RegisterThingAsync(ctx workflow.Context, input *iot.RegisterThingInput) *RegisterThingFuture
 
 	RejectCertificateTransfer(ctx workflow.Context, input *iot.RejectCertificateTransferInput) (*iot.RejectCertificateTransferOutput, error)
-	RejectCertificateTransferAsync(ctx workflow.Context, input *iot.RejectCertificateTransferInput) *IoTRejectCertificateTransferFuture
+	RejectCertificateTransferAsync(ctx workflow.Context, input *iot.RejectCertificateTransferInput) *RejectCertificateTransferFuture
 
 	RemoveThingFromBillingGroup(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) (*iot.RemoveThingFromBillingGroupOutput, error)
-	RemoveThingFromBillingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) *IoTRemoveThingFromBillingGroupFuture
+	RemoveThingFromBillingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromBillingGroupInput) *RemoveThingFromBillingGroupFuture
 
 	RemoveThingFromThingGroup(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) (*iot.RemoveThingFromThingGroupOutput, error)
-	RemoveThingFromThingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) *IoTRemoveThingFromThingGroupFuture
+	RemoveThingFromThingGroupAsync(ctx workflow.Context, input *iot.RemoveThingFromThingGroupInput) *RemoveThingFromThingGroupFuture
 
 	ReplaceTopicRule(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) (*iot.ReplaceTopicRuleOutput, error)
-	ReplaceTopicRuleAsync(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) *IoTReplaceTopicRuleFuture
+	ReplaceTopicRuleAsync(ctx workflow.Context, input *iot.ReplaceTopicRuleInput) *ReplaceTopicRuleFuture
 
 	SearchIndex(ctx workflow.Context, input *iot.SearchIndexInput) (*iot.SearchIndexOutput, error)
-	SearchIndexAsync(ctx workflow.Context, input *iot.SearchIndexInput) *IoTSearchIndexFuture
+	SearchIndexAsync(ctx workflow.Context, input *iot.SearchIndexInput) *SearchIndexFuture
 
 	SetDefaultAuthorizer(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) (*iot.SetDefaultAuthorizerOutput, error)
-	SetDefaultAuthorizerAsync(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) *IoTSetDefaultAuthorizerFuture
+	SetDefaultAuthorizerAsync(ctx workflow.Context, input *iot.SetDefaultAuthorizerInput) *SetDefaultAuthorizerFuture
 
 	SetDefaultPolicyVersion(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) (*iot.SetDefaultPolicyVersionOutput, error)
-	SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) *IoTSetDefaultPolicyVersionFuture
+	SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iot.SetDefaultPolicyVersionInput) *SetDefaultPolicyVersionFuture
 
 	SetLoggingOptions(ctx workflow.Context, input *iot.SetLoggingOptionsInput) (*iot.SetLoggingOptionsOutput, error)
-	SetLoggingOptionsAsync(ctx workflow.Context, input *iot.SetLoggingOptionsInput) *IoTSetLoggingOptionsFuture
+	SetLoggingOptionsAsync(ctx workflow.Context, input *iot.SetLoggingOptionsInput) *SetLoggingOptionsFuture
 
 	SetV2LoggingLevel(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) (*iot.SetV2LoggingLevelOutput, error)
-	SetV2LoggingLevelAsync(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) *IoTSetV2LoggingLevelFuture
+	SetV2LoggingLevelAsync(ctx workflow.Context, input *iot.SetV2LoggingLevelInput) *SetV2LoggingLevelFuture
 
 	SetV2LoggingOptions(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) (*iot.SetV2LoggingOptionsOutput, error)
-	SetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) *IoTSetV2LoggingOptionsFuture
+	SetV2LoggingOptionsAsync(ctx workflow.Context, input *iot.SetV2LoggingOptionsInput) *SetV2LoggingOptionsFuture
 
 	StartAuditMitigationActionsTask(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) (*iot.StartAuditMitigationActionsTaskOutput, error)
-	StartAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) *IoTStartAuditMitigationActionsTaskFuture
+	StartAuditMitigationActionsTaskAsync(ctx workflow.Context, input *iot.StartAuditMitigationActionsTaskInput) *StartAuditMitigationActionsTaskFuture
 
 	StartOnDemandAuditTask(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) (*iot.StartOnDemandAuditTaskOutput, error)
-	StartOnDemandAuditTaskAsync(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) *IoTStartOnDemandAuditTaskFuture
+	StartOnDemandAuditTaskAsync(ctx workflow.Context, input *iot.StartOnDemandAuditTaskInput) *StartOnDemandAuditTaskFuture
 
 	StartThingRegistrationTask(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) (*iot.StartThingRegistrationTaskOutput, error)
-	StartThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) *IoTStartThingRegistrationTaskFuture
+	StartThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StartThingRegistrationTaskInput) *StartThingRegistrationTaskFuture
 
 	StopThingRegistrationTask(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) (*iot.StopThingRegistrationTaskOutput, error)
-	StopThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) *IoTStopThingRegistrationTaskFuture
+	StopThingRegistrationTaskAsync(ctx workflow.Context, input *iot.StopThingRegistrationTaskInput) *StopThingRegistrationTaskFuture
 
 	TagResource(ctx workflow.Context, input *iot.TagResourceInput) (*iot.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iot.TagResourceInput) *IoTTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *iot.TagResourceInput) *TagResourceFuture
 
 	TestAuthorization(ctx workflow.Context, input *iot.TestAuthorizationInput) (*iot.TestAuthorizationOutput, error)
-	TestAuthorizationAsync(ctx workflow.Context, input *iot.TestAuthorizationInput) *IoTTestAuthorizationFuture
+	TestAuthorizationAsync(ctx workflow.Context, input *iot.TestAuthorizationInput) *TestAuthorizationFuture
 
 	TestInvokeAuthorizer(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) (*iot.TestInvokeAuthorizerOutput, error)
-	TestInvokeAuthorizerAsync(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) *IoTTestInvokeAuthorizerFuture
+	TestInvokeAuthorizerAsync(ctx workflow.Context, input *iot.TestInvokeAuthorizerInput) *TestInvokeAuthorizerFuture
 
 	TransferCertificate(ctx workflow.Context, input *iot.TransferCertificateInput) (*iot.TransferCertificateOutput, error)
-	TransferCertificateAsync(ctx workflow.Context, input *iot.TransferCertificateInput) *IoTTransferCertificateFuture
+	TransferCertificateAsync(ctx workflow.Context, input *iot.TransferCertificateInput) *TransferCertificateFuture
 
 	UntagResource(ctx workflow.Context, input *iot.UntagResourceInput) (*iot.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iot.UntagResourceInput) *IoTUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *iot.UntagResourceInput) *UntagResourceFuture
 
 	UpdateAccountAuditConfiguration(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) (*iot.UpdateAccountAuditConfigurationOutput, error)
-	UpdateAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) *IoTUpdateAccountAuditConfigurationFuture
+	UpdateAccountAuditConfigurationAsync(ctx workflow.Context, input *iot.UpdateAccountAuditConfigurationInput) *UpdateAccountAuditConfigurationFuture
 
 	UpdateAuditSuppression(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) (*iot.UpdateAuditSuppressionOutput, error)
-	UpdateAuditSuppressionAsync(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) *IoTUpdateAuditSuppressionFuture
+	UpdateAuditSuppressionAsync(ctx workflow.Context, input *iot.UpdateAuditSuppressionInput) *UpdateAuditSuppressionFuture
 
 	UpdateAuthorizer(ctx workflow.Context, input *iot.UpdateAuthorizerInput) (*iot.UpdateAuthorizerOutput, error)
-	UpdateAuthorizerAsync(ctx workflow.Context, input *iot.UpdateAuthorizerInput) *IoTUpdateAuthorizerFuture
+	UpdateAuthorizerAsync(ctx workflow.Context, input *iot.UpdateAuthorizerInput) *UpdateAuthorizerFuture
 
 	UpdateBillingGroup(ctx workflow.Context, input *iot.UpdateBillingGroupInput) (*iot.UpdateBillingGroupOutput, error)
-	UpdateBillingGroupAsync(ctx workflow.Context, input *iot.UpdateBillingGroupInput) *IoTUpdateBillingGroupFuture
+	UpdateBillingGroupAsync(ctx workflow.Context, input *iot.UpdateBillingGroupInput) *UpdateBillingGroupFuture
 
 	UpdateCACertificate(ctx workflow.Context, input *iot.UpdateCACertificateInput) (*iot.UpdateCACertificateOutput, error)
-	UpdateCACertificateAsync(ctx workflow.Context, input *iot.UpdateCACertificateInput) *IoTUpdateCACertificateFuture
+	UpdateCACertificateAsync(ctx workflow.Context, input *iot.UpdateCACertificateInput) *UpdateCACertificateFuture
 
 	UpdateCertificate(ctx workflow.Context, input *iot.UpdateCertificateInput) (*iot.UpdateCertificateOutput, error)
-	UpdateCertificateAsync(ctx workflow.Context, input *iot.UpdateCertificateInput) *IoTUpdateCertificateFuture
+	UpdateCertificateAsync(ctx workflow.Context, input *iot.UpdateCertificateInput) *UpdateCertificateFuture
 
 	UpdateDimension(ctx workflow.Context, input *iot.UpdateDimensionInput) (*iot.UpdateDimensionOutput, error)
-	UpdateDimensionAsync(ctx workflow.Context, input *iot.UpdateDimensionInput) *IoTUpdateDimensionFuture
+	UpdateDimensionAsync(ctx workflow.Context, input *iot.UpdateDimensionInput) *UpdateDimensionFuture
 
 	UpdateDomainConfiguration(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) (*iot.UpdateDomainConfigurationOutput, error)
-	UpdateDomainConfigurationAsync(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) *IoTUpdateDomainConfigurationFuture
+	UpdateDomainConfigurationAsync(ctx workflow.Context, input *iot.UpdateDomainConfigurationInput) *UpdateDomainConfigurationFuture
 
 	UpdateDynamicThingGroup(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) (*iot.UpdateDynamicThingGroupOutput, error)
-	UpdateDynamicThingGroupAsync(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) *IoTUpdateDynamicThingGroupFuture
+	UpdateDynamicThingGroupAsync(ctx workflow.Context, input *iot.UpdateDynamicThingGroupInput) *UpdateDynamicThingGroupFuture
 
 	UpdateEventConfigurations(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) (*iot.UpdateEventConfigurationsOutput, error)
-	UpdateEventConfigurationsAsync(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) *IoTUpdateEventConfigurationsFuture
+	UpdateEventConfigurationsAsync(ctx workflow.Context, input *iot.UpdateEventConfigurationsInput) *UpdateEventConfigurationsFuture
 
 	UpdateIndexingConfiguration(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) (*iot.UpdateIndexingConfigurationOutput, error)
-	UpdateIndexingConfigurationAsync(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) *IoTUpdateIndexingConfigurationFuture
+	UpdateIndexingConfigurationAsync(ctx workflow.Context, input *iot.UpdateIndexingConfigurationInput) *UpdateIndexingConfigurationFuture
 
 	UpdateJob(ctx workflow.Context, input *iot.UpdateJobInput) (*iot.UpdateJobOutput, error)
-	UpdateJobAsync(ctx workflow.Context, input *iot.UpdateJobInput) *IoTUpdateJobFuture
+	UpdateJobAsync(ctx workflow.Context, input *iot.UpdateJobInput) *UpdateJobFuture
 
 	UpdateMitigationAction(ctx workflow.Context, input *iot.UpdateMitigationActionInput) (*iot.UpdateMitigationActionOutput, error)
-	UpdateMitigationActionAsync(ctx workflow.Context, input *iot.UpdateMitigationActionInput) *IoTUpdateMitigationActionFuture
+	UpdateMitigationActionAsync(ctx workflow.Context, input *iot.UpdateMitigationActionInput) *UpdateMitigationActionFuture
 
 	UpdateProvisioningTemplate(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) (*iot.UpdateProvisioningTemplateOutput, error)
-	UpdateProvisioningTemplateAsync(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) *IoTUpdateProvisioningTemplateFuture
+	UpdateProvisioningTemplateAsync(ctx workflow.Context, input *iot.UpdateProvisioningTemplateInput) *UpdateProvisioningTemplateFuture
 
 	UpdateRoleAlias(ctx workflow.Context, input *iot.UpdateRoleAliasInput) (*iot.UpdateRoleAliasOutput, error)
-	UpdateRoleAliasAsync(ctx workflow.Context, input *iot.UpdateRoleAliasInput) *IoTUpdateRoleAliasFuture
+	UpdateRoleAliasAsync(ctx workflow.Context, input *iot.UpdateRoleAliasInput) *UpdateRoleAliasFuture
 
 	UpdateScheduledAudit(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) (*iot.UpdateScheduledAuditOutput, error)
-	UpdateScheduledAuditAsync(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) *IoTUpdateScheduledAuditFuture
+	UpdateScheduledAuditAsync(ctx workflow.Context, input *iot.UpdateScheduledAuditInput) *UpdateScheduledAuditFuture
 
 	UpdateSecurityProfile(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) (*iot.UpdateSecurityProfileOutput, error)
-	UpdateSecurityProfileAsync(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) *IoTUpdateSecurityProfileFuture
+	UpdateSecurityProfileAsync(ctx workflow.Context, input *iot.UpdateSecurityProfileInput) *UpdateSecurityProfileFuture
 
 	UpdateStream(ctx workflow.Context, input *iot.UpdateStreamInput) (*iot.UpdateStreamOutput, error)
-	UpdateStreamAsync(ctx workflow.Context, input *iot.UpdateStreamInput) *IoTUpdateStreamFuture
+	UpdateStreamAsync(ctx workflow.Context, input *iot.UpdateStreamInput) *UpdateStreamFuture
 
 	UpdateThing(ctx workflow.Context, input *iot.UpdateThingInput) (*iot.UpdateThingOutput, error)
-	UpdateThingAsync(ctx workflow.Context, input *iot.UpdateThingInput) *IoTUpdateThingFuture
+	UpdateThingAsync(ctx workflow.Context, input *iot.UpdateThingInput) *UpdateThingFuture
 
 	UpdateThingGroup(ctx workflow.Context, input *iot.UpdateThingGroupInput) (*iot.UpdateThingGroupOutput, error)
-	UpdateThingGroupAsync(ctx workflow.Context, input *iot.UpdateThingGroupInput) *IoTUpdateThingGroupFuture
+	UpdateThingGroupAsync(ctx workflow.Context, input *iot.UpdateThingGroupInput) *UpdateThingGroupFuture
 
 	UpdateThingGroupsForThing(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) (*iot.UpdateThingGroupsForThingOutput, error)
-	UpdateThingGroupsForThingAsync(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) *IoTUpdateThingGroupsForThingFuture
+	UpdateThingGroupsForThingAsync(ctx workflow.Context, input *iot.UpdateThingGroupsForThingInput) *UpdateThingGroupsForThingFuture
 
 	UpdateTopicRuleDestination(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) (*iot.UpdateTopicRuleDestinationOutput, error)
-	UpdateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) *IoTUpdateTopicRuleDestinationFuture
+	UpdateTopicRuleDestinationAsync(ctx workflow.Context, input *iot.UpdateTopicRuleDestinationInput) *UpdateTopicRuleDestinationFuture
 
 	ValidateSecurityProfileBehaviors(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) (*iot.ValidateSecurityProfileBehaviorsOutput, error)
-	ValidateSecurityProfileBehaviorsAsync(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) *IoTValidateSecurityProfileBehaviorsFuture
+	ValidateSecurityProfileBehaviorsAsync(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) *ValidateSecurityProfileBehaviorsFuture
 }
 
 func NewClient() Client {

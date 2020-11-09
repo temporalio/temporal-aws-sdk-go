@@ -16,100 +16,100 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ComputeOptimizerDescribeRecommendationExportJobsFuture struct {
+type DescribeRecommendationExportJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerDescribeRecommendationExportJobsFuture) Get(ctx workflow.Context) (*computeoptimizer.DescribeRecommendationExportJobsOutput, error) {
+func (r *DescribeRecommendationExportJobsFuture) Get(ctx workflow.Context) (*computeoptimizer.DescribeRecommendationExportJobsOutput, error) {
 	var output computeoptimizer.DescribeRecommendationExportJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComputeOptimizerExportAutoScalingGroupRecommendationsFuture struct {
+type ExportAutoScalingGroupRecommendationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerExportAutoScalingGroupRecommendationsFuture) Get(ctx workflow.Context) (*computeoptimizer.ExportAutoScalingGroupRecommendationsOutput, error) {
+func (r *ExportAutoScalingGroupRecommendationsFuture) Get(ctx workflow.Context) (*computeoptimizer.ExportAutoScalingGroupRecommendationsOutput, error) {
 	var output computeoptimizer.ExportAutoScalingGroupRecommendationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComputeOptimizerExportEC2InstanceRecommendationsFuture struct {
+type ExportEC2InstanceRecommendationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerExportEC2InstanceRecommendationsFuture) Get(ctx workflow.Context) (*computeoptimizer.ExportEC2InstanceRecommendationsOutput, error) {
+func (r *ExportEC2InstanceRecommendationsFuture) Get(ctx workflow.Context) (*computeoptimizer.ExportEC2InstanceRecommendationsOutput, error) {
 	var output computeoptimizer.ExportEC2InstanceRecommendationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComputeOptimizerGetAutoScalingGroupRecommendationsFuture struct {
+type GetAutoScalingGroupRecommendationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerGetAutoScalingGroupRecommendationsFuture) Get(ctx workflow.Context) (*computeoptimizer.GetAutoScalingGroupRecommendationsOutput, error) {
+func (r *GetAutoScalingGroupRecommendationsFuture) Get(ctx workflow.Context) (*computeoptimizer.GetAutoScalingGroupRecommendationsOutput, error) {
 	var output computeoptimizer.GetAutoScalingGroupRecommendationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComputeOptimizerGetEC2InstanceRecommendationsFuture struct {
+type GetEC2InstanceRecommendationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerGetEC2InstanceRecommendationsFuture) Get(ctx workflow.Context) (*computeoptimizer.GetEC2InstanceRecommendationsOutput, error) {
+func (r *GetEC2InstanceRecommendationsFuture) Get(ctx workflow.Context) (*computeoptimizer.GetEC2InstanceRecommendationsOutput, error) {
 	var output computeoptimizer.GetEC2InstanceRecommendationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComputeOptimizerGetEC2RecommendationProjectedMetricsFuture struct {
+type GetEC2RecommendationProjectedMetricsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerGetEC2RecommendationProjectedMetricsFuture) Get(ctx workflow.Context) (*computeoptimizer.GetEC2RecommendationProjectedMetricsOutput, error) {
+func (r *GetEC2RecommendationProjectedMetricsFuture) Get(ctx workflow.Context) (*computeoptimizer.GetEC2RecommendationProjectedMetricsOutput, error) {
 	var output computeoptimizer.GetEC2RecommendationProjectedMetricsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComputeOptimizerGetEnrollmentStatusFuture struct {
+type GetEnrollmentStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerGetEnrollmentStatusFuture) Get(ctx workflow.Context) (*computeoptimizer.GetEnrollmentStatusOutput, error) {
+func (r *GetEnrollmentStatusFuture) Get(ctx workflow.Context) (*computeoptimizer.GetEnrollmentStatusOutput, error) {
 	var output computeoptimizer.GetEnrollmentStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComputeOptimizerGetRecommendationSummariesFuture struct {
+type GetRecommendationSummariesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerGetRecommendationSummariesFuture) Get(ctx workflow.Context) (*computeoptimizer.GetRecommendationSummariesOutput, error) {
+func (r *GetRecommendationSummariesFuture) Get(ctx workflow.Context) (*computeoptimizer.GetRecommendationSummariesOutput, error) {
 	var output computeoptimizer.GetRecommendationSummariesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ComputeOptimizerUpdateEnrollmentStatusFuture struct {
+type UpdateEnrollmentStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ComputeOptimizerUpdateEnrollmentStatusFuture) Get(ctx workflow.Context) (*computeoptimizer.UpdateEnrollmentStatusOutput, error) {
+func (r *UpdateEnrollmentStatusFuture) Get(ctx workflow.Context) (*computeoptimizer.UpdateEnrollmentStatusOutput, error) {
 	var output computeoptimizer.UpdateEnrollmentStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -121,9 +121,9 @@ func (a *stub) DescribeRecommendationExportJobs(ctx workflow.Context, input *com
 	return &output, err
 }
 
-func (a *stub) DescribeRecommendationExportJobsAsync(ctx workflow.Context, input *computeoptimizer.DescribeRecommendationExportJobsInput) *ComputeOptimizerDescribeRecommendationExportJobsFuture {
+func (a *stub) DescribeRecommendationExportJobsAsync(ctx workflow.Context, input *computeoptimizer.DescribeRecommendationExportJobsInput) *DescribeRecommendationExportJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.DescribeRecommendationExportJobs", input)
-	return &ComputeOptimizerDescribeRecommendationExportJobsFuture{Future: future}
+	return &DescribeRecommendationExportJobsFuture{Future: future}
 }
 
 func (a *stub) ExportAutoScalingGroupRecommendations(ctx workflow.Context, input *computeoptimizer.ExportAutoScalingGroupRecommendationsInput) (*computeoptimizer.ExportAutoScalingGroupRecommendationsOutput, error) {
@@ -132,9 +132,9 @@ func (a *stub) ExportAutoScalingGroupRecommendations(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) ExportAutoScalingGroupRecommendationsAsync(ctx workflow.Context, input *computeoptimizer.ExportAutoScalingGroupRecommendationsInput) *ComputeOptimizerExportAutoScalingGroupRecommendationsFuture {
+func (a *stub) ExportAutoScalingGroupRecommendationsAsync(ctx workflow.Context, input *computeoptimizer.ExportAutoScalingGroupRecommendationsInput) *ExportAutoScalingGroupRecommendationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.ExportAutoScalingGroupRecommendations", input)
-	return &ComputeOptimizerExportAutoScalingGroupRecommendationsFuture{Future: future}
+	return &ExportAutoScalingGroupRecommendationsFuture{Future: future}
 }
 
 func (a *stub) ExportEC2InstanceRecommendations(ctx workflow.Context, input *computeoptimizer.ExportEC2InstanceRecommendationsInput) (*computeoptimizer.ExportEC2InstanceRecommendationsOutput, error) {
@@ -143,9 +143,9 @@ func (a *stub) ExportEC2InstanceRecommendations(ctx workflow.Context, input *com
 	return &output, err
 }
 
-func (a *stub) ExportEC2InstanceRecommendationsAsync(ctx workflow.Context, input *computeoptimizer.ExportEC2InstanceRecommendationsInput) *ComputeOptimizerExportEC2InstanceRecommendationsFuture {
+func (a *stub) ExportEC2InstanceRecommendationsAsync(ctx workflow.Context, input *computeoptimizer.ExportEC2InstanceRecommendationsInput) *ExportEC2InstanceRecommendationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.ExportEC2InstanceRecommendations", input)
-	return &ComputeOptimizerExportEC2InstanceRecommendationsFuture{Future: future}
+	return &ExportEC2InstanceRecommendationsFuture{Future: future}
 }
 
 func (a *stub) GetAutoScalingGroupRecommendations(ctx workflow.Context, input *computeoptimizer.GetAutoScalingGroupRecommendationsInput) (*computeoptimizer.GetAutoScalingGroupRecommendationsOutput, error) {
@@ -154,9 +154,9 @@ func (a *stub) GetAutoScalingGroupRecommendations(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *stub) GetAutoScalingGroupRecommendationsAsync(ctx workflow.Context, input *computeoptimizer.GetAutoScalingGroupRecommendationsInput) *ComputeOptimizerGetAutoScalingGroupRecommendationsFuture {
+func (a *stub) GetAutoScalingGroupRecommendationsAsync(ctx workflow.Context, input *computeoptimizer.GetAutoScalingGroupRecommendationsInput) *GetAutoScalingGroupRecommendationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.GetAutoScalingGroupRecommendations", input)
-	return &ComputeOptimizerGetAutoScalingGroupRecommendationsFuture{Future: future}
+	return &GetAutoScalingGroupRecommendationsFuture{Future: future}
 }
 
 func (a *stub) GetEC2InstanceRecommendations(ctx workflow.Context, input *computeoptimizer.GetEC2InstanceRecommendationsInput) (*computeoptimizer.GetEC2InstanceRecommendationsOutput, error) {
@@ -165,9 +165,9 @@ func (a *stub) GetEC2InstanceRecommendations(ctx workflow.Context, input *comput
 	return &output, err
 }
 
-func (a *stub) GetEC2InstanceRecommendationsAsync(ctx workflow.Context, input *computeoptimizer.GetEC2InstanceRecommendationsInput) *ComputeOptimizerGetEC2InstanceRecommendationsFuture {
+func (a *stub) GetEC2InstanceRecommendationsAsync(ctx workflow.Context, input *computeoptimizer.GetEC2InstanceRecommendationsInput) *GetEC2InstanceRecommendationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.GetEC2InstanceRecommendations", input)
-	return &ComputeOptimizerGetEC2InstanceRecommendationsFuture{Future: future}
+	return &GetEC2InstanceRecommendationsFuture{Future: future}
 }
 
 func (a *stub) GetEC2RecommendationProjectedMetrics(ctx workflow.Context, input *computeoptimizer.GetEC2RecommendationProjectedMetricsInput) (*computeoptimizer.GetEC2RecommendationProjectedMetricsOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) GetEC2RecommendationProjectedMetrics(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) GetEC2RecommendationProjectedMetricsAsync(ctx workflow.Context, input *computeoptimizer.GetEC2RecommendationProjectedMetricsInput) *ComputeOptimizerGetEC2RecommendationProjectedMetricsFuture {
+func (a *stub) GetEC2RecommendationProjectedMetricsAsync(ctx workflow.Context, input *computeoptimizer.GetEC2RecommendationProjectedMetricsInput) *GetEC2RecommendationProjectedMetricsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.GetEC2RecommendationProjectedMetrics", input)
-	return &ComputeOptimizerGetEC2RecommendationProjectedMetricsFuture{Future: future}
+	return &GetEC2RecommendationProjectedMetricsFuture{Future: future}
 }
 
 func (a *stub) GetEnrollmentStatus(ctx workflow.Context, input *computeoptimizer.GetEnrollmentStatusInput) (*computeoptimizer.GetEnrollmentStatusOutput, error) {
@@ -187,9 +187,9 @@ func (a *stub) GetEnrollmentStatus(ctx workflow.Context, input *computeoptimizer
 	return &output, err
 }
 
-func (a *stub) GetEnrollmentStatusAsync(ctx workflow.Context, input *computeoptimizer.GetEnrollmentStatusInput) *ComputeOptimizerGetEnrollmentStatusFuture {
+func (a *stub) GetEnrollmentStatusAsync(ctx workflow.Context, input *computeoptimizer.GetEnrollmentStatusInput) *GetEnrollmentStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.GetEnrollmentStatus", input)
-	return &ComputeOptimizerGetEnrollmentStatusFuture{Future: future}
+	return &GetEnrollmentStatusFuture{Future: future}
 }
 
 func (a *stub) GetRecommendationSummaries(ctx workflow.Context, input *computeoptimizer.GetRecommendationSummariesInput) (*computeoptimizer.GetRecommendationSummariesOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) GetRecommendationSummaries(ctx workflow.Context, input *computeop
 	return &output, err
 }
 
-func (a *stub) GetRecommendationSummariesAsync(ctx workflow.Context, input *computeoptimizer.GetRecommendationSummariesInput) *ComputeOptimizerGetRecommendationSummariesFuture {
+func (a *stub) GetRecommendationSummariesAsync(ctx workflow.Context, input *computeoptimizer.GetRecommendationSummariesInput) *GetRecommendationSummariesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.GetRecommendationSummaries", input)
-	return &ComputeOptimizerGetRecommendationSummariesFuture{Future: future}
+	return &GetRecommendationSummariesFuture{Future: future}
 }
 
 func (a *stub) UpdateEnrollmentStatus(ctx workflow.Context, input *computeoptimizer.UpdateEnrollmentStatusInput) (*computeoptimizer.UpdateEnrollmentStatusOutput, error) {
@@ -209,7 +209,7 @@ func (a *stub) UpdateEnrollmentStatus(ctx workflow.Context, input *computeoptimi
 	return &output, err
 }
 
-func (a *stub) UpdateEnrollmentStatusAsync(ctx workflow.Context, input *computeoptimizer.UpdateEnrollmentStatusInput) *ComputeOptimizerUpdateEnrollmentStatusFuture {
+func (a *stub) UpdateEnrollmentStatusAsync(ctx workflow.Context, input *computeoptimizer.UpdateEnrollmentStatusInput) *UpdateEnrollmentStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.computeoptimizer.UpdateEnrollmentStatus", input)
-	return &ComputeOptimizerUpdateEnrollmentStatusFuture{Future: future}
+	return &UpdateEnrollmentStatusFuture{Future: future}
 }

@@ -16,452 +16,452 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type DynamoDBBatchGetItemFuture struct {
+type BatchGetItemFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBBatchGetItemFuture) Get(ctx workflow.Context) (*dynamodb.BatchGetItemOutput, error) {
+func (r *BatchGetItemFuture) Get(ctx workflow.Context) (*dynamodb.BatchGetItemOutput, error) {
 	var output dynamodb.BatchGetItemOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBBatchWriteItemFuture struct {
+type BatchWriteItemFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBBatchWriteItemFuture) Get(ctx workflow.Context) (*dynamodb.BatchWriteItemOutput, error) {
+func (r *BatchWriteItemFuture) Get(ctx workflow.Context) (*dynamodb.BatchWriteItemOutput, error) {
 	var output dynamodb.BatchWriteItemOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBCreateBackupFuture struct {
+type CreateBackupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBCreateBackupFuture) Get(ctx workflow.Context) (*dynamodb.CreateBackupOutput, error) {
+func (r *CreateBackupFuture) Get(ctx workflow.Context) (*dynamodb.CreateBackupOutput, error) {
 	var output dynamodb.CreateBackupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBCreateGlobalTableFuture struct {
+type CreateGlobalTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBCreateGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb.CreateGlobalTableOutput, error) {
+func (r *CreateGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb.CreateGlobalTableOutput, error) {
 	var output dynamodb.CreateGlobalTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBCreateTableFuture struct {
+type CreateTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBCreateTableFuture) Get(ctx workflow.Context) (*dynamodb.CreateTableOutput, error) {
+func (r *CreateTableFuture) Get(ctx workflow.Context) (*dynamodb.CreateTableOutput, error) {
 	var output dynamodb.CreateTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDeleteBackupFuture struct {
+type DeleteBackupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDeleteBackupFuture) Get(ctx workflow.Context) (*dynamodb.DeleteBackupOutput, error) {
+func (r *DeleteBackupFuture) Get(ctx workflow.Context) (*dynamodb.DeleteBackupOutput, error) {
 	var output dynamodb.DeleteBackupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDeleteItemFuture struct {
+type DeleteItemFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDeleteItemFuture) Get(ctx workflow.Context) (*dynamodb.DeleteItemOutput, error) {
+func (r *DeleteItemFuture) Get(ctx workflow.Context) (*dynamodb.DeleteItemOutput, error) {
 	var output dynamodb.DeleteItemOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDeleteTableFuture struct {
+type DeleteTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDeleteTableFuture) Get(ctx workflow.Context) (*dynamodb.DeleteTableOutput, error) {
+func (r *DeleteTableFuture) Get(ctx workflow.Context) (*dynamodb.DeleteTableOutput, error) {
 	var output dynamodb.DeleteTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeBackupFuture struct {
+type DescribeBackupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeBackupFuture) Get(ctx workflow.Context) (*dynamodb.DescribeBackupOutput, error) {
+func (r *DescribeBackupFuture) Get(ctx workflow.Context) (*dynamodb.DescribeBackupOutput, error) {
 	var output dynamodb.DescribeBackupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeContinuousBackupsFuture struct {
+type DescribeContinuousBackupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeContinuousBackupsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeContinuousBackupsOutput, error) {
+func (r *DescribeContinuousBackupsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeContinuousBackupsOutput, error) {
 	var output dynamodb.DescribeContinuousBackupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeContributorInsightsFuture struct {
+type DescribeContributorInsightsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeContributorInsightsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeContributorInsightsOutput, error) {
+func (r *DescribeContributorInsightsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeContributorInsightsOutput, error) {
 	var output dynamodb.DescribeContributorInsightsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeEndpointsFuture struct {
+type DescribeEndpointsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeEndpointsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeEndpointsOutput, error) {
+func (r *DescribeEndpointsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeEndpointsOutput, error) {
 	var output dynamodb.DescribeEndpointsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeGlobalTableFuture struct {
+type DescribeGlobalTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb.DescribeGlobalTableOutput, error) {
+func (r *DescribeGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb.DescribeGlobalTableOutput, error) {
 	var output dynamodb.DescribeGlobalTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeGlobalTableSettingsFuture struct {
+type DescribeGlobalTableSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeGlobalTableSettingsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeGlobalTableSettingsOutput, error) {
+func (r *DescribeGlobalTableSettingsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeGlobalTableSettingsOutput, error) {
 	var output dynamodb.DescribeGlobalTableSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeLimitsFuture struct {
+type DescribeLimitsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeLimitsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeLimitsOutput, error) {
+func (r *DescribeLimitsFuture) Get(ctx workflow.Context) (*dynamodb.DescribeLimitsOutput, error) {
 	var output dynamodb.DescribeLimitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeTableFuture struct {
+type DescribeTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeTableFuture) Get(ctx workflow.Context) (*dynamodb.DescribeTableOutput, error) {
+func (r *DescribeTableFuture) Get(ctx workflow.Context) (*dynamodb.DescribeTableOutput, error) {
 	var output dynamodb.DescribeTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeTableReplicaAutoScalingFuture struct {
+type DescribeTableReplicaAutoScalingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeTableReplicaAutoScalingFuture) Get(ctx workflow.Context) (*dynamodb.DescribeTableReplicaAutoScalingOutput, error) {
+func (r *DescribeTableReplicaAutoScalingFuture) Get(ctx workflow.Context) (*dynamodb.DescribeTableReplicaAutoScalingOutput, error) {
 	var output dynamodb.DescribeTableReplicaAutoScalingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBDescribeTimeToLiveFuture struct {
+type DescribeTimeToLiveFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBDescribeTimeToLiveFuture) Get(ctx workflow.Context) (*dynamodb.DescribeTimeToLiveOutput, error) {
+func (r *DescribeTimeToLiveFuture) Get(ctx workflow.Context) (*dynamodb.DescribeTimeToLiveOutput, error) {
 	var output dynamodb.DescribeTimeToLiveOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBGetItemFuture struct {
+type GetItemFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBGetItemFuture) Get(ctx workflow.Context) (*dynamodb.GetItemOutput, error) {
+func (r *GetItemFuture) Get(ctx workflow.Context) (*dynamodb.GetItemOutput, error) {
 	var output dynamodb.GetItemOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBListBackupsFuture struct {
+type ListBackupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBListBackupsFuture) Get(ctx workflow.Context) (*dynamodb.ListBackupsOutput, error) {
+func (r *ListBackupsFuture) Get(ctx workflow.Context) (*dynamodb.ListBackupsOutput, error) {
 	var output dynamodb.ListBackupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBListContributorInsightsFuture struct {
+type ListContributorInsightsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBListContributorInsightsFuture) Get(ctx workflow.Context) (*dynamodb.ListContributorInsightsOutput, error) {
+func (r *ListContributorInsightsFuture) Get(ctx workflow.Context) (*dynamodb.ListContributorInsightsOutput, error) {
 	var output dynamodb.ListContributorInsightsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBListGlobalTablesFuture struct {
+type ListGlobalTablesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBListGlobalTablesFuture) Get(ctx workflow.Context) (*dynamodb.ListGlobalTablesOutput, error) {
+func (r *ListGlobalTablesFuture) Get(ctx workflow.Context) (*dynamodb.ListGlobalTablesOutput, error) {
 	var output dynamodb.ListGlobalTablesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBListTablesFuture struct {
+type ListTablesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBListTablesFuture) Get(ctx workflow.Context) (*dynamodb.ListTablesOutput, error) {
+func (r *ListTablesFuture) Get(ctx workflow.Context) (*dynamodb.ListTablesOutput, error) {
 	var output dynamodb.ListTablesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBListTagsOfResourceFuture struct {
+type ListTagsOfResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBListTagsOfResourceFuture) Get(ctx workflow.Context) (*dynamodb.ListTagsOfResourceOutput, error) {
+func (r *ListTagsOfResourceFuture) Get(ctx workflow.Context) (*dynamodb.ListTagsOfResourceOutput, error) {
 	var output dynamodb.ListTagsOfResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBPutItemFuture struct {
+type PutItemFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBPutItemFuture) Get(ctx workflow.Context) (*dynamodb.PutItemOutput, error) {
+func (r *PutItemFuture) Get(ctx workflow.Context) (*dynamodb.PutItemOutput, error) {
 	var output dynamodb.PutItemOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBQueryFuture struct {
+type QueryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBQueryFuture) Get(ctx workflow.Context) (*dynamodb.QueryOutput, error) {
+func (r *QueryFuture) Get(ctx workflow.Context) (*dynamodb.QueryOutput, error) {
 	var output dynamodb.QueryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBRestoreTableFromBackupFuture struct {
+type RestoreTableFromBackupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBRestoreTableFromBackupFuture) Get(ctx workflow.Context) (*dynamodb.RestoreTableFromBackupOutput, error) {
+func (r *RestoreTableFromBackupFuture) Get(ctx workflow.Context) (*dynamodb.RestoreTableFromBackupOutput, error) {
 	var output dynamodb.RestoreTableFromBackupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBRestoreTableToPointInTimeFuture struct {
+type RestoreTableToPointInTimeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBRestoreTableToPointInTimeFuture) Get(ctx workflow.Context) (*dynamodb.RestoreTableToPointInTimeOutput, error) {
+func (r *RestoreTableToPointInTimeFuture) Get(ctx workflow.Context) (*dynamodb.RestoreTableToPointInTimeOutput, error) {
 	var output dynamodb.RestoreTableToPointInTimeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBScanFuture struct {
+type ScanFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBScanFuture) Get(ctx workflow.Context) (*dynamodb.ScanOutput, error) {
+func (r *ScanFuture) Get(ctx workflow.Context) (*dynamodb.ScanOutput, error) {
 	var output dynamodb.ScanOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBTagResourceFuture) Get(ctx workflow.Context) (*dynamodb.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*dynamodb.TagResourceOutput, error) {
 	var output dynamodb.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBTransactGetItemsFuture struct {
+type TransactGetItemsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBTransactGetItemsFuture) Get(ctx workflow.Context) (*dynamodb.TransactGetItemsOutput, error) {
+func (r *TransactGetItemsFuture) Get(ctx workflow.Context) (*dynamodb.TransactGetItemsOutput, error) {
 	var output dynamodb.TransactGetItemsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBTransactWriteItemsFuture struct {
+type TransactWriteItemsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBTransactWriteItemsFuture) Get(ctx workflow.Context) (*dynamodb.TransactWriteItemsOutput, error) {
+func (r *TransactWriteItemsFuture) Get(ctx workflow.Context) (*dynamodb.TransactWriteItemsOutput, error) {
 	var output dynamodb.TransactWriteItemsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUntagResourceFuture) Get(ctx workflow.Context) (*dynamodb.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*dynamodb.UntagResourceOutput, error) {
 	var output dynamodb.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUpdateContinuousBackupsFuture struct {
+type UpdateContinuousBackupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUpdateContinuousBackupsFuture) Get(ctx workflow.Context) (*dynamodb.UpdateContinuousBackupsOutput, error) {
+func (r *UpdateContinuousBackupsFuture) Get(ctx workflow.Context) (*dynamodb.UpdateContinuousBackupsOutput, error) {
 	var output dynamodb.UpdateContinuousBackupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUpdateContributorInsightsFuture struct {
+type UpdateContributorInsightsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUpdateContributorInsightsFuture) Get(ctx workflow.Context) (*dynamodb.UpdateContributorInsightsOutput, error) {
+func (r *UpdateContributorInsightsFuture) Get(ctx workflow.Context) (*dynamodb.UpdateContributorInsightsOutput, error) {
 	var output dynamodb.UpdateContributorInsightsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUpdateGlobalTableFuture struct {
+type UpdateGlobalTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUpdateGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb.UpdateGlobalTableOutput, error) {
+func (r *UpdateGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb.UpdateGlobalTableOutput, error) {
 	var output dynamodb.UpdateGlobalTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUpdateGlobalTableSettingsFuture struct {
+type UpdateGlobalTableSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUpdateGlobalTableSettingsFuture) Get(ctx workflow.Context) (*dynamodb.UpdateGlobalTableSettingsOutput, error) {
+func (r *UpdateGlobalTableSettingsFuture) Get(ctx workflow.Context) (*dynamodb.UpdateGlobalTableSettingsOutput, error) {
 	var output dynamodb.UpdateGlobalTableSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUpdateItemFuture struct {
+type UpdateItemFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUpdateItemFuture) Get(ctx workflow.Context) (*dynamodb.UpdateItemOutput, error) {
+func (r *UpdateItemFuture) Get(ctx workflow.Context) (*dynamodb.UpdateItemOutput, error) {
 	var output dynamodb.UpdateItemOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUpdateTableFuture struct {
+type UpdateTableFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUpdateTableFuture) Get(ctx workflow.Context) (*dynamodb.UpdateTableOutput, error) {
+func (r *UpdateTableFuture) Get(ctx workflow.Context) (*dynamodb.UpdateTableOutput, error) {
 	var output dynamodb.UpdateTableOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUpdateTableReplicaAutoScalingFuture struct {
+type UpdateTableReplicaAutoScalingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUpdateTableReplicaAutoScalingFuture) Get(ctx workflow.Context) (*dynamodb.UpdateTableReplicaAutoScalingOutput, error) {
+func (r *UpdateTableReplicaAutoScalingFuture) Get(ctx workflow.Context) (*dynamodb.UpdateTableReplicaAutoScalingOutput, error) {
 	var output dynamodb.UpdateTableReplicaAutoScalingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DynamoDBUpdateTimeToLiveFuture struct {
+type UpdateTimeToLiveFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DynamoDBUpdateTimeToLiveFuture) Get(ctx workflow.Context) (*dynamodb.UpdateTimeToLiveOutput, error) {
+func (r *UpdateTimeToLiveFuture) Get(ctx workflow.Context) (*dynamodb.UpdateTimeToLiveOutput, error) {
 	var output dynamodb.UpdateTimeToLiveOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -473,9 +473,9 @@ func (a *stub) BatchGetItem(ctx workflow.Context, input *dynamodb.BatchGetItemIn
 	return &output, err
 }
 
-func (a *stub) BatchGetItemAsync(ctx workflow.Context, input *dynamodb.BatchGetItemInput) *DynamoDBBatchGetItemFuture {
+func (a *stub) BatchGetItemAsync(ctx workflow.Context, input *dynamodb.BatchGetItemInput) *BatchGetItemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.BatchGetItem", input)
-	return &DynamoDBBatchGetItemFuture{Future: future}
+	return &BatchGetItemFuture{Future: future}
 }
 
 func (a *stub) BatchWriteItem(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) (*dynamodb.BatchWriteItemOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) BatchWriteItem(ctx workflow.Context, input *dynamodb.BatchWriteIt
 	return &output, err
 }
 
-func (a *stub) BatchWriteItemAsync(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) *DynamoDBBatchWriteItemFuture {
+func (a *stub) BatchWriteItemAsync(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) *BatchWriteItemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.BatchWriteItem", input)
-	return &DynamoDBBatchWriteItemFuture{Future: future}
+	return &BatchWriteItemFuture{Future: future}
 }
 
 func (a *stub) CreateBackup(ctx workflow.Context, input *dynamodb.CreateBackupInput) (*dynamodb.CreateBackupOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) CreateBackup(ctx workflow.Context, input *dynamodb.CreateBackupIn
 	return &output, err
 }
 
-func (a *stub) CreateBackupAsync(ctx workflow.Context, input *dynamodb.CreateBackupInput) *DynamoDBCreateBackupFuture {
+func (a *stub) CreateBackupAsync(ctx workflow.Context, input *dynamodb.CreateBackupInput) *CreateBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateBackup", input)
-	return &DynamoDBCreateBackupFuture{Future: future}
+	return &CreateBackupFuture{Future: future}
 }
 
 func (a *stub) CreateGlobalTable(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) (*dynamodb.CreateGlobalTableOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) CreateGlobalTable(ctx workflow.Context, input *dynamodb.CreateGlo
 	return &output, err
 }
 
-func (a *stub) CreateGlobalTableAsync(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) *DynamoDBCreateGlobalTableFuture {
+func (a *stub) CreateGlobalTableAsync(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) *CreateGlobalTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateGlobalTable", input)
-	return &DynamoDBCreateGlobalTableFuture{Future: future}
+	return &CreateGlobalTableFuture{Future: future}
 }
 
 func (a *stub) CreateTable(ctx workflow.Context, input *dynamodb.CreateTableInput) (*dynamodb.CreateTableOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) CreateTable(ctx workflow.Context, input *dynamodb.CreateTableInpu
 	return &output, err
 }
 
-func (a *stub) CreateTableAsync(ctx workflow.Context, input *dynamodb.CreateTableInput) *DynamoDBCreateTableFuture {
+func (a *stub) CreateTableAsync(ctx workflow.Context, input *dynamodb.CreateTableInput) *CreateTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateTable", input)
-	return &DynamoDBCreateTableFuture{Future: future}
+	return &CreateTableFuture{Future: future}
 }
 
 func (a *stub) DeleteBackup(ctx workflow.Context, input *dynamodb.DeleteBackupInput) (*dynamodb.DeleteBackupOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) DeleteBackup(ctx workflow.Context, input *dynamodb.DeleteBackupIn
 	return &output, err
 }
 
-func (a *stub) DeleteBackupAsync(ctx workflow.Context, input *dynamodb.DeleteBackupInput) *DynamoDBDeleteBackupFuture {
+func (a *stub) DeleteBackupAsync(ctx workflow.Context, input *dynamodb.DeleteBackupInput) *DeleteBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteBackup", input)
-	return &DynamoDBDeleteBackupFuture{Future: future}
+	return &DeleteBackupFuture{Future: future}
 }
 
 func (a *stub) DeleteItem(ctx workflow.Context, input *dynamodb.DeleteItemInput) (*dynamodb.DeleteItemOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) DeleteItem(ctx workflow.Context, input *dynamodb.DeleteItemInput)
 	return &output, err
 }
 
-func (a *stub) DeleteItemAsync(ctx workflow.Context, input *dynamodb.DeleteItemInput) *DynamoDBDeleteItemFuture {
+func (a *stub) DeleteItemAsync(ctx workflow.Context, input *dynamodb.DeleteItemInput) *DeleteItemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteItem", input)
-	return &DynamoDBDeleteItemFuture{Future: future}
+	return &DeleteItemFuture{Future: future}
 }
 
 func (a *stub) DeleteTable(ctx workflow.Context, input *dynamodb.DeleteTableInput) (*dynamodb.DeleteTableOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) DeleteTable(ctx workflow.Context, input *dynamodb.DeleteTableInpu
 	return &output, err
 }
 
-func (a *stub) DeleteTableAsync(ctx workflow.Context, input *dynamodb.DeleteTableInput) *DynamoDBDeleteTableFuture {
+func (a *stub) DeleteTableAsync(ctx workflow.Context, input *dynamodb.DeleteTableInput) *DeleteTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteTable", input)
-	return &DynamoDBDeleteTableFuture{Future: future}
+	return &DeleteTableFuture{Future: future}
 }
 
 func (a *stub) DescribeBackup(ctx workflow.Context, input *dynamodb.DescribeBackupInput) (*dynamodb.DescribeBackupOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) DescribeBackup(ctx workflow.Context, input *dynamodb.DescribeBack
 	return &output, err
 }
 
-func (a *stub) DescribeBackupAsync(ctx workflow.Context, input *dynamodb.DescribeBackupInput) *DynamoDBDescribeBackupFuture {
+func (a *stub) DescribeBackupAsync(ctx workflow.Context, input *dynamodb.DescribeBackupInput) *DescribeBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeBackup", input)
-	return &DynamoDBDescribeBackupFuture{Future: future}
+	return &DescribeBackupFuture{Future: future}
 }
 
 func (a *stub) DescribeContinuousBackups(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) (*dynamodb.DescribeContinuousBackupsOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) DescribeContinuousBackups(ctx workflow.Context, input *dynamodb.D
 	return &output, err
 }
 
-func (a *stub) DescribeContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) *DynamoDBDescribeContinuousBackupsFuture {
+func (a *stub) DescribeContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) *DescribeContinuousBackupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeContinuousBackups", input)
-	return &DynamoDBDescribeContinuousBackupsFuture{Future: future}
+	return &DescribeContinuousBackupsFuture{Future: future}
 }
 
 func (a *stub) DescribeContributorInsights(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) (*dynamodb.DescribeContributorInsightsOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) DescribeContributorInsights(ctx workflow.Context, input *dynamodb
 	return &output, err
 }
 
-func (a *stub) DescribeContributorInsightsAsync(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) *DynamoDBDescribeContributorInsightsFuture {
+func (a *stub) DescribeContributorInsightsAsync(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) *DescribeContributorInsightsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeContributorInsights", input)
-	return &DynamoDBDescribeContributorInsightsFuture{Future: future}
+	return &DescribeContributorInsightsFuture{Future: future}
 }
 
 func (a *stub) DescribeEndpoints(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) (*dynamodb.DescribeEndpointsOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DescribeEndpoints(ctx workflow.Context, input *dynamodb.DescribeE
 	return &output, err
 }
 
-func (a *stub) DescribeEndpointsAsync(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) *DynamoDBDescribeEndpointsFuture {
+func (a *stub) DescribeEndpointsAsync(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) *DescribeEndpointsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeEndpoints", input)
-	return &DynamoDBDescribeEndpointsFuture{Future: future}
+	return &DescribeEndpointsFuture{Future: future}
 }
 
 func (a *stub) DescribeGlobalTable(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) DescribeGlobalTable(ctx workflow.Context, input *dynamodb.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeGlobalTableAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) *DynamoDBDescribeGlobalTableFuture {
+func (a *stub) DescribeGlobalTableAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) *DescribeGlobalTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeGlobalTable", input)
-	return &DynamoDBDescribeGlobalTableFuture{Future: future}
+	return &DescribeGlobalTableFuture{Future: future}
 }
 
 func (a *stub) DescribeGlobalTableSettings(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) (*dynamodb.DescribeGlobalTableSettingsOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) DescribeGlobalTableSettings(ctx workflow.Context, input *dynamodb
 	return &output, err
 }
 
-func (a *stub) DescribeGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) *DynamoDBDescribeGlobalTableSettingsFuture {
+func (a *stub) DescribeGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) *DescribeGlobalTableSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeGlobalTableSettings", input)
-	return &DynamoDBDescribeGlobalTableSettingsFuture{Future: future}
+	return &DescribeGlobalTableSettingsFuture{Future: future}
 }
 
 func (a *stub) DescribeLimits(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) (*dynamodb.DescribeLimitsOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) DescribeLimits(ctx workflow.Context, input *dynamodb.DescribeLimi
 	return &output, err
 }
 
-func (a *stub) DescribeLimitsAsync(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) *DynamoDBDescribeLimitsFuture {
+func (a *stub) DescribeLimitsAsync(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) *DescribeLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeLimits", input)
-	return &DynamoDBDescribeLimitsFuture{Future: future}
+	return &DescribeLimitsFuture{Future: future}
 }
 
 func (a *stub) DescribeTable(ctx workflow.Context, input *dynamodb.DescribeTableInput) (*dynamodb.DescribeTableOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) DescribeTable(ctx workflow.Context, input *dynamodb.DescribeTable
 	return &output, err
 }
 
-func (a *stub) DescribeTableAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *DynamoDBDescribeTableFuture {
+func (a *stub) DescribeTableAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *DescribeTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTable", input)
-	return &DynamoDBDescribeTableFuture{Future: future}
+	return &DescribeTableFuture{Future: future}
 }
 
 func (a *stub) DescribeTableReplicaAutoScaling(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) (*dynamodb.DescribeTableReplicaAutoScalingOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) DescribeTableReplicaAutoScaling(ctx workflow.Context, input *dyna
 	return &output, err
 }
 
-func (a *stub) DescribeTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) *DynamoDBDescribeTableReplicaAutoScalingFuture {
+func (a *stub) DescribeTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) *DescribeTableReplicaAutoScalingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTableReplicaAutoScaling", input)
-	return &DynamoDBDescribeTableReplicaAutoScalingFuture{Future: future}
+	return &DescribeTableReplicaAutoScalingFuture{Future: future}
 }
 
 func (a *stub) DescribeTimeToLive(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) (*dynamodb.DescribeTimeToLiveOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) DescribeTimeToLive(ctx workflow.Context, input *dynamodb.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeTimeToLiveAsync(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) *DynamoDBDescribeTimeToLiveFuture {
+func (a *stub) DescribeTimeToLiveAsync(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) *DescribeTimeToLiveFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTimeToLive", input)
-	return &DynamoDBDescribeTimeToLiveFuture{Future: future}
+	return &DescribeTimeToLiveFuture{Future: future}
 }
 
 func (a *stub) GetItem(ctx workflow.Context, input *dynamodb.GetItemInput) (*dynamodb.GetItemOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) GetItem(ctx workflow.Context, input *dynamodb.GetItemInput) (*dyn
 	return &output, err
 }
 
-func (a *stub) GetItemAsync(ctx workflow.Context, input *dynamodb.GetItemInput) *DynamoDBGetItemFuture {
+func (a *stub) GetItemAsync(ctx workflow.Context, input *dynamodb.GetItemInput) *GetItemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.GetItem", input)
-	return &DynamoDBGetItemFuture{Future: future}
+	return &GetItemFuture{Future: future}
 }
 
 func (a *stub) ListBackups(ctx workflow.Context, input *dynamodb.ListBackupsInput) (*dynamodb.ListBackupsOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) ListBackups(ctx workflow.Context, input *dynamodb.ListBackupsInpu
 	return &output, err
 }
 
-func (a *stub) ListBackupsAsync(ctx workflow.Context, input *dynamodb.ListBackupsInput) *DynamoDBListBackupsFuture {
+func (a *stub) ListBackupsAsync(ctx workflow.Context, input *dynamodb.ListBackupsInput) *ListBackupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListBackups", input)
-	return &DynamoDBListBackupsFuture{Future: future}
+	return &ListBackupsFuture{Future: future}
 }
 
 func (a *stub) ListContributorInsights(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) (*dynamodb.ListContributorInsightsOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) ListContributorInsights(ctx workflow.Context, input *dynamodb.Lis
 	return &output, err
 }
 
-func (a *stub) ListContributorInsightsAsync(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) *DynamoDBListContributorInsightsFuture {
+func (a *stub) ListContributorInsightsAsync(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) *ListContributorInsightsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListContributorInsights", input)
-	return &DynamoDBListContributorInsightsFuture{Future: future}
+	return &ListContributorInsightsFuture{Future: future}
 }
 
 func (a *stub) ListGlobalTables(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) (*dynamodb.ListGlobalTablesOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) ListGlobalTables(ctx workflow.Context, input *dynamodb.ListGlobal
 	return &output, err
 }
 
-func (a *stub) ListGlobalTablesAsync(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) *DynamoDBListGlobalTablesFuture {
+func (a *stub) ListGlobalTablesAsync(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) *ListGlobalTablesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListGlobalTables", input)
-	return &DynamoDBListGlobalTablesFuture{Future: future}
+	return &ListGlobalTablesFuture{Future: future}
 }
 
 func (a *stub) ListTables(ctx workflow.Context, input *dynamodb.ListTablesInput) (*dynamodb.ListTablesOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) ListTables(ctx workflow.Context, input *dynamodb.ListTablesInput)
 	return &output, err
 }
 
-func (a *stub) ListTablesAsync(ctx workflow.Context, input *dynamodb.ListTablesInput) *DynamoDBListTablesFuture {
+func (a *stub) ListTablesAsync(ctx workflow.Context, input *dynamodb.ListTablesInput) *ListTablesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListTables", input)
-	return &DynamoDBListTablesFuture{Future: future}
+	return &ListTablesFuture{Future: future}
 }
 
 func (a *stub) ListTagsOfResource(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) (*dynamodb.ListTagsOfResourceOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) ListTagsOfResource(ctx workflow.Context, input *dynamodb.ListTags
 	return &output, err
 }
 
-func (a *stub) ListTagsOfResourceAsync(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) *DynamoDBListTagsOfResourceFuture {
+func (a *stub) ListTagsOfResourceAsync(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) *ListTagsOfResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListTagsOfResource", input)
-	return &DynamoDBListTagsOfResourceFuture{Future: future}
+	return &ListTagsOfResourceFuture{Future: future}
 }
 
 func (a *stub) PutItem(ctx workflow.Context, input *dynamodb.PutItemInput) (*dynamodb.PutItemOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) PutItem(ctx workflow.Context, input *dynamodb.PutItemInput) (*dyn
 	return &output, err
 }
 
-func (a *stub) PutItemAsync(ctx workflow.Context, input *dynamodb.PutItemInput) *DynamoDBPutItemFuture {
+func (a *stub) PutItemAsync(ctx workflow.Context, input *dynamodb.PutItemInput) *PutItemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.PutItem", input)
-	return &DynamoDBPutItemFuture{Future: future}
+	return &PutItemFuture{Future: future}
 }
 
 func (a *stub) Query(ctx workflow.Context, input *dynamodb.QueryInput) (*dynamodb.QueryOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) Query(ctx workflow.Context, input *dynamodb.QueryInput) (*dynamod
 	return &output, err
 }
 
-func (a *stub) QueryAsync(ctx workflow.Context, input *dynamodb.QueryInput) *DynamoDBQueryFuture {
+func (a *stub) QueryAsync(ctx workflow.Context, input *dynamodb.QueryInput) *QueryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.Query", input)
-	return &DynamoDBQueryFuture{Future: future}
+	return &QueryFuture{Future: future}
 }
 
 func (a *stub) RestoreTableFromBackup(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) (*dynamodb.RestoreTableFromBackupOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) RestoreTableFromBackup(ctx workflow.Context, input *dynamodb.Rest
 	return &output, err
 }
 
-func (a *stub) RestoreTableFromBackupAsync(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) *DynamoDBRestoreTableFromBackupFuture {
+func (a *stub) RestoreTableFromBackupAsync(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) *RestoreTableFromBackupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.RestoreTableFromBackup", input)
-	return &DynamoDBRestoreTableFromBackupFuture{Future: future}
+	return &RestoreTableFromBackupFuture{Future: future}
 }
 
 func (a *stub) RestoreTableToPointInTime(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) (*dynamodb.RestoreTableToPointInTimeOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) RestoreTableToPointInTime(ctx workflow.Context, input *dynamodb.R
 	return &output, err
 }
 
-func (a *stub) RestoreTableToPointInTimeAsync(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) *DynamoDBRestoreTableToPointInTimeFuture {
+func (a *stub) RestoreTableToPointInTimeAsync(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) *RestoreTableToPointInTimeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.RestoreTableToPointInTime", input)
-	return &DynamoDBRestoreTableToPointInTimeFuture{Future: future}
+	return &RestoreTableToPointInTimeFuture{Future: future}
 }
 
 func (a *stub) Scan(ctx workflow.Context, input *dynamodb.ScanInput) (*dynamodb.ScanOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) Scan(ctx workflow.Context, input *dynamodb.ScanInput) (*dynamodb.
 	return &output, err
 }
 
-func (a *stub) ScanAsync(ctx workflow.Context, input *dynamodb.ScanInput) *DynamoDBScanFuture {
+func (a *stub) ScanAsync(ctx workflow.Context, input *dynamodb.ScanInput) *ScanFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.Scan", input)
-	return &DynamoDBScanFuture{Future: future}
+	return &ScanFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *dynamodb.TagResourceInput) (*dynamodb.TagResourceOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *dynamodb.TagResourceInpu
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *dynamodb.TagResourceInput) *DynamoDBTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *dynamodb.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.TagResource", input)
-	return &DynamoDBTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) TransactGetItems(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) (*dynamodb.TransactGetItemsOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) TransactGetItems(ctx workflow.Context, input *dynamodb.TransactGe
 	return &output, err
 }
 
-func (a *stub) TransactGetItemsAsync(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) *DynamoDBTransactGetItemsFuture {
+func (a *stub) TransactGetItemsAsync(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) *TransactGetItemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.TransactGetItems", input)
-	return &DynamoDBTransactGetItemsFuture{Future: future}
+	return &TransactGetItemsFuture{Future: future}
 }
 
 func (a *stub) TransactWriteItems(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) (*dynamodb.TransactWriteItemsOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) TransactWriteItems(ctx workflow.Context, input *dynamodb.Transact
 	return &output, err
 }
 
-func (a *stub) TransactWriteItemsAsync(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) *DynamoDBTransactWriteItemsFuture {
+func (a *stub) TransactWriteItemsAsync(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) *TransactWriteItemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.TransactWriteItems", input)
-	return &DynamoDBTransactWriteItemsFuture{Future: future}
+	return &TransactWriteItemsFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *dynamodb.UntagResourceInput) (*dynamodb.UntagResourceOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *dynamodb.UntagResource
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *dynamodb.UntagResourceInput) *DynamoDBUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *dynamodb.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UntagResource", input)
-	return &DynamoDBUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateContinuousBackups(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) (*dynamodb.UpdateContinuousBackupsOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) UpdateContinuousBackups(ctx workflow.Context, input *dynamodb.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) *DynamoDBUpdateContinuousBackupsFuture {
+func (a *stub) UpdateContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) *UpdateContinuousBackupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateContinuousBackups", input)
-	return &DynamoDBUpdateContinuousBackupsFuture{Future: future}
+	return &UpdateContinuousBackupsFuture{Future: future}
 }
 
 func (a *stub) UpdateContributorInsights(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) (*dynamodb.UpdateContributorInsightsOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) UpdateContributorInsights(ctx workflow.Context, input *dynamodb.U
 	return &output, err
 }
 
-func (a *stub) UpdateContributorInsightsAsync(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) *DynamoDBUpdateContributorInsightsFuture {
+func (a *stub) UpdateContributorInsightsAsync(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) *UpdateContributorInsightsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateContributorInsights", input)
-	return &DynamoDBUpdateContributorInsightsFuture{Future: future}
+	return &UpdateContributorInsightsFuture{Future: future}
 }
 
 func (a *stub) UpdateGlobalTable(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) (*dynamodb.UpdateGlobalTableOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) UpdateGlobalTable(ctx workflow.Context, input *dynamodb.UpdateGlo
 	return &output, err
 }
 
-func (a *stub) UpdateGlobalTableAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) *DynamoDBUpdateGlobalTableFuture {
+func (a *stub) UpdateGlobalTableAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) *UpdateGlobalTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateGlobalTable", input)
-	return &DynamoDBUpdateGlobalTableFuture{Future: future}
+	return &UpdateGlobalTableFuture{Future: future}
 }
 
 func (a *stub) UpdateGlobalTableSettings(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) (*dynamodb.UpdateGlobalTableSettingsOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) UpdateGlobalTableSettings(ctx workflow.Context, input *dynamodb.U
 	return &output, err
 }
 
-func (a *stub) UpdateGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) *DynamoDBUpdateGlobalTableSettingsFuture {
+func (a *stub) UpdateGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) *UpdateGlobalTableSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateGlobalTableSettings", input)
-	return &DynamoDBUpdateGlobalTableSettingsFuture{Future: future}
+	return &UpdateGlobalTableSettingsFuture{Future: future}
 }
 
 func (a *stub) UpdateItem(ctx workflow.Context, input *dynamodb.UpdateItemInput) (*dynamodb.UpdateItemOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) UpdateItem(ctx workflow.Context, input *dynamodb.UpdateItemInput)
 	return &output, err
 }
 
-func (a *stub) UpdateItemAsync(ctx workflow.Context, input *dynamodb.UpdateItemInput) *DynamoDBUpdateItemFuture {
+func (a *stub) UpdateItemAsync(ctx workflow.Context, input *dynamodb.UpdateItemInput) *UpdateItemFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateItem", input)
-	return &DynamoDBUpdateItemFuture{Future: future}
+	return &UpdateItemFuture{Future: future}
 }
 
 func (a *stub) UpdateTable(ctx workflow.Context, input *dynamodb.UpdateTableInput) (*dynamodb.UpdateTableOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) UpdateTable(ctx workflow.Context, input *dynamodb.UpdateTableInpu
 	return &output, err
 }
 
-func (a *stub) UpdateTableAsync(ctx workflow.Context, input *dynamodb.UpdateTableInput) *DynamoDBUpdateTableFuture {
+func (a *stub) UpdateTableAsync(ctx workflow.Context, input *dynamodb.UpdateTableInput) *UpdateTableFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTable", input)
-	return &DynamoDBUpdateTableFuture{Future: future}
+	return &UpdateTableFuture{Future: future}
 }
 
 func (a *stub) UpdateTableReplicaAutoScaling(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) (*dynamodb.UpdateTableReplicaAutoScalingOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) UpdateTableReplicaAutoScaling(ctx workflow.Context, input *dynamo
 	return &output, err
 }
 
-func (a *stub) UpdateTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) *DynamoDBUpdateTableReplicaAutoScalingFuture {
+func (a *stub) UpdateTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) *UpdateTableReplicaAutoScalingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTableReplicaAutoScaling", input)
-	return &DynamoDBUpdateTableReplicaAutoScalingFuture{Future: future}
+	return &UpdateTableReplicaAutoScalingFuture{Future: future}
 }
 
 func (a *stub) UpdateTimeToLive(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) (*dynamodb.UpdateTimeToLiveOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) UpdateTimeToLive(ctx workflow.Context, input *dynamodb.UpdateTime
 	return &output, err
 }
 
-func (a *stub) UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *DynamoDBUpdateTimeToLiveFuture {
+func (a *stub) UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *UpdateTimeToLiveFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTimeToLive", input)
-	return &DynamoDBUpdateTimeToLiveFuture{Future: future}
+	return &UpdateTimeToLiveFuture{Future: future}
 }
 
 func (a *stub) WaitUntilTableExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error {

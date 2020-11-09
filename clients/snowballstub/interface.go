@@ -16,70 +16,70 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelCluster(ctx workflow.Context, input *snowball.CancelClusterInput) (*snowball.CancelClusterOutput, error)
-	CancelClusterAsync(ctx workflow.Context, input *snowball.CancelClusterInput) *SnowballCancelClusterFuture
+	CancelClusterAsync(ctx workflow.Context, input *snowball.CancelClusterInput) *CancelClusterFuture
 
 	CancelJob(ctx workflow.Context, input *snowball.CancelJobInput) (*snowball.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *snowball.CancelJobInput) *SnowballCancelJobFuture
+	CancelJobAsync(ctx workflow.Context, input *snowball.CancelJobInput) *CancelJobFuture
 
 	CreateAddress(ctx workflow.Context, input *snowball.CreateAddressInput) (*snowball.CreateAddressOutput, error)
-	CreateAddressAsync(ctx workflow.Context, input *snowball.CreateAddressInput) *SnowballCreateAddressFuture
+	CreateAddressAsync(ctx workflow.Context, input *snowball.CreateAddressInput) *CreateAddressFuture
 
 	CreateCluster(ctx workflow.Context, input *snowball.CreateClusterInput) (*snowball.CreateClusterOutput, error)
-	CreateClusterAsync(ctx workflow.Context, input *snowball.CreateClusterInput) *SnowballCreateClusterFuture
+	CreateClusterAsync(ctx workflow.Context, input *snowball.CreateClusterInput) *CreateClusterFuture
 
 	CreateJob(ctx workflow.Context, input *snowball.CreateJobInput) (*snowball.CreateJobOutput, error)
-	CreateJobAsync(ctx workflow.Context, input *snowball.CreateJobInput) *SnowballCreateJobFuture
+	CreateJobAsync(ctx workflow.Context, input *snowball.CreateJobInput) *CreateJobFuture
 
 	CreateReturnShippingLabel(ctx workflow.Context, input *snowball.CreateReturnShippingLabelInput) (*snowball.CreateReturnShippingLabelOutput, error)
-	CreateReturnShippingLabelAsync(ctx workflow.Context, input *snowball.CreateReturnShippingLabelInput) *SnowballCreateReturnShippingLabelFuture
+	CreateReturnShippingLabelAsync(ctx workflow.Context, input *snowball.CreateReturnShippingLabelInput) *CreateReturnShippingLabelFuture
 
 	DescribeAddress(ctx workflow.Context, input *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error)
-	DescribeAddressAsync(ctx workflow.Context, input *snowball.DescribeAddressInput) *SnowballDescribeAddressFuture
+	DescribeAddressAsync(ctx workflow.Context, input *snowball.DescribeAddressInput) *DescribeAddressFuture
 
 	DescribeAddresses(ctx workflow.Context, input *snowball.DescribeAddressesInput) (*snowball.DescribeAddressesOutput, error)
-	DescribeAddressesAsync(ctx workflow.Context, input *snowball.DescribeAddressesInput) *SnowballDescribeAddressesFuture
+	DescribeAddressesAsync(ctx workflow.Context, input *snowball.DescribeAddressesInput) *DescribeAddressesFuture
 
 	DescribeCluster(ctx workflow.Context, input *snowball.DescribeClusterInput) (*snowball.DescribeClusterOutput, error)
-	DescribeClusterAsync(ctx workflow.Context, input *snowball.DescribeClusterInput) *SnowballDescribeClusterFuture
+	DescribeClusterAsync(ctx workflow.Context, input *snowball.DescribeClusterInput) *DescribeClusterFuture
 
 	DescribeJob(ctx workflow.Context, input *snowball.DescribeJobInput) (*snowball.DescribeJobOutput, error)
-	DescribeJobAsync(ctx workflow.Context, input *snowball.DescribeJobInput) *SnowballDescribeJobFuture
+	DescribeJobAsync(ctx workflow.Context, input *snowball.DescribeJobInput) *DescribeJobFuture
 
 	DescribeReturnShippingLabel(ctx workflow.Context, input *snowball.DescribeReturnShippingLabelInput) (*snowball.DescribeReturnShippingLabelOutput, error)
-	DescribeReturnShippingLabelAsync(ctx workflow.Context, input *snowball.DescribeReturnShippingLabelInput) *SnowballDescribeReturnShippingLabelFuture
+	DescribeReturnShippingLabelAsync(ctx workflow.Context, input *snowball.DescribeReturnShippingLabelInput) *DescribeReturnShippingLabelFuture
 
 	GetJobManifest(ctx workflow.Context, input *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error)
-	GetJobManifestAsync(ctx workflow.Context, input *snowball.GetJobManifestInput) *SnowballGetJobManifestFuture
+	GetJobManifestAsync(ctx workflow.Context, input *snowball.GetJobManifestInput) *GetJobManifestFuture
 
 	GetJobUnlockCode(ctx workflow.Context, input *snowball.GetJobUnlockCodeInput) (*snowball.GetJobUnlockCodeOutput, error)
-	GetJobUnlockCodeAsync(ctx workflow.Context, input *snowball.GetJobUnlockCodeInput) *SnowballGetJobUnlockCodeFuture
+	GetJobUnlockCodeAsync(ctx workflow.Context, input *snowball.GetJobUnlockCodeInput) *GetJobUnlockCodeFuture
 
 	GetSnowballUsage(ctx workflow.Context, input *snowball.GetSnowballUsageInput) (*snowball.GetSnowballUsageOutput, error)
-	GetSnowballUsageAsync(ctx workflow.Context, input *snowball.GetSnowballUsageInput) *SnowballGetSnowballUsageFuture
+	GetSnowballUsageAsync(ctx workflow.Context, input *snowball.GetSnowballUsageInput) *GetSnowballUsageFuture
 
 	GetSoftwareUpdates(ctx workflow.Context, input *snowball.GetSoftwareUpdatesInput) (*snowball.GetSoftwareUpdatesOutput, error)
-	GetSoftwareUpdatesAsync(ctx workflow.Context, input *snowball.GetSoftwareUpdatesInput) *SnowballGetSoftwareUpdatesFuture
+	GetSoftwareUpdatesAsync(ctx workflow.Context, input *snowball.GetSoftwareUpdatesInput) *GetSoftwareUpdatesFuture
 
 	ListClusterJobs(ctx workflow.Context, input *snowball.ListClusterJobsInput) (*snowball.ListClusterJobsOutput, error)
-	ListClusterJobsAsync(ctx workflow.Context, input *snowball.ListClusterJobsInput) *SnowballListClusterJobsFuture
+	ListClusterJobsAsync(ctx workflow.Context, input *snowball.ListClusterJobsInput) *ListClusterJobsFuture
 
 	ListClusters(ctx workflow.Context, input *snowball.ListClustersInput) (*snowball.ListClustersOutput, error)
-	ListClustersAsync(ctx workflow.Context, input *snowball.ListClustersInput) *SnowballListClustersFuture
+	ListClustersAsync(ctx workflow.Context, input *snowball.ListClustersInput) *ListClustersFuture
 
 	ListCompatibleImages(ctx workflow.Context, input *snowball.ListCompatibleImagesInput) (*snowball.ListCompatibleImagesOutput, error)
-	ListCompatibleImagesAsync(ctx workflow.Context, input *snowball.ListCompatibleImagesInput) *SnowballListCompatibleImagesFuture
+	ListCompatibleImagesAsync(ctx workflow.Context, input *snowball.ListCompatibleImagesInput) *ListCompatibleImagesFuture
 
 	ListJobs(ctx workflow.Context, input *snowball.ListJobsInput) (*snowball.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *snowball.ListJobsInput) *SnowballListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *snowball.ListJobsInput) *ListJobsFuture
 
 	UpdateCluster(ctx workflow.Context, input *snowball.UpdateClusterInput) (*snowball.UpdateClusterOutput, error)
-	UpdateClusterAsync(ctx workflow.Context, input *snowball.UpdateClusterInput) *SnowballUpdateClusterFuture
+	UpdateClusterAsync(ctx workflow.Context, input *snowball.UpdateClusterInput) *UpdateClusterFuture
 
 	UpdateJob(ctx workflow.Context, input *snowball.UpdateJobInput) (*snowball.UpdateJobOutput, error)
-	UpdateJobAsync(ctx workflow.Context, input *snowball.UpdateJobInput) *SnowballUpdateJobFuture
+	UpdateJobAsync(ctx workflow.Context, input *snowball.UpdateJobInput) *UpdateJobFuture
 
 	UpdateJobShipmentState(ctx workflow.Context, input *snowball.UpdateJobShipmentStateInput) (*snowball.UpdateJobShipmentStateOutput, error)
-	UpdateJobShipmentStateAsync(ctx workflow.Context, input *snowball.UpdateJobShipmentStateInput) *SnowballUpdateJobShipmentStateFuture
+	UpdateJobShipmentStateAsync(ctx workflow.Context, input *snowball.UpdateJobShipmentStateInput) *UpdateJobShipmentStateFuture
 }
 
 func NewClient() Client {

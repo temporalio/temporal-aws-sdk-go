@@ -16,177 +16,177 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type IoTEventsCreateDetectorModelFuture struct {
+type CreateDetectorModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsCreateDetectorModelFuture) Get(ctx workflow.Context) (*iotevents.CreateDetectorModelOutput, error) {
+func (r *CreateDetectorModelFuture) Get(ctx workflow.Context) (*iotevents.CreateDetectorModelOutput, error) {
 	var output iotevents.CreateDetectorModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsCreateInputFuture struct {
+type CreateInputFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsCreateInputFuture) Get(ctx workflow.Context) (*iotevents.CreateInputOutput, error) {
+func (r *CreateInputFuture) Get(ctx workflow.Context) (*iotevents.CreateInputOutput, error) {
 	var output iotevents.CreateInputOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsDeleteDetectorModelFuture struct {
+type DeleteDetectorModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDeleteDetectorModelFuture) Get(ctx workflow.Context) (*iotevents.DeleteDetectorModelOutput, error) {
+func (r *DeleteDetectorModelFuture) Get(ctx workflow.Context) (*iotevents.DeleteDetectorModelOutput, error) {
 	var output iotevents.DeleteDetectorModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsDeleteInputFuture struct {
+type DeleteInputFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDeleteInputFuture) Get(ctx workflow.Context) (*iotevents.DeleteInputOutput, error) {
+func (r *DeleteInputFuture) Get(ctx workflow.Context) (*iotevents.DeleteInputOutput, error) {
 	var output iotevents.DeleteInputOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsDescribeDetectorModelFuture struct {
+type DescribeDetectorModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDescribeDetectorModelFuture) Get(ctx workflow.Context) (*iotevents.DescribeDetectorModelOutput, error) {
+func (r *DescribeDetectorModelFuture) Get(ctx workflow.Context) (*iotevents.DescribeDetectorModelOutput, error) {
 	var output iotevents.DescribeDetectorModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsDescribeInputFuture struct {
+type DescribeInputFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDescribeInputFuture) Get(ctx workflow.Context) (*iotevents.DescribeInputOutput, error) {
+func (r *DescribeInputFuture) Get(ctx workflow.Context) (*iotevents.DescribeInputOutput, error) {
 	var output iotevents.DescribeInputOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsDescribeLoggingOptionsFuture struct {
+type DescribeLoggingOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsDescribeLoggingOptionsFuture) Get(ctx workflow.Context) (*iotevents.DescribeLoggingOptionsOutput, error) {
+func (r *DescribeLoggingOptionsFuture) Get(ctx workflow.Context) (*iotevents.DescribeLoggingOptionsOutput, error) {
 	var output iotevents.DescribeLoggingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsListDetectorModelVersionsFuture struct {
+type ListDetectorModelVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsListDetectorModelVersionsFuture) Get(ctx workflow.Context) (*iotevents.ListDetectorModelVersionsOutput, error) {
+func (r *ListDetectorModelVersionsFuture) Get(ctx workflow.Context) (*iotevents.ListDetectorModelVersionsOutput, error) {
 	var output iotevents.ListDetectorModelVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsListDetectorModelsFuture struct {
+type ListDetectorModelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsListDetectorModelsFuture) Get(ctx workflow.Context) (*iotevents.ListDetectorModelsOutput, error) {
+func (r *ListDetectorModelsFuture) Get(ctx workflow.Context) (*iotevents.ListDetectorModelsOutput, error) {
 	var output iotevents.ListDetectorModelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsListInputsFuture struct {
+type ListInputsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsListInputsFuture) Get(ctx workflow.Context) (*iotevents.ListInputsOutput, error) {
+func (r *ListInputsFuture) Get(ctx workflow.Context) (*iotevents.ListInputsOutput, error) {
 	var output iotevents.ListInputsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsListTagsForResourceFuture) Get(ctx workflow.Context) (*iotevents.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*iotevents.ListTagsForResourceOutput, error) {
 	var output iotevents.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsPutLoggingOptionsFuture struct {
+type PutLoggingOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsPutLoggingOptionsFuture) Get(ctx workflow.Context) (*iotevents.PutLoggingOptionsOutput, error) {
+func (r *PutLoggingOptionsFuture) Get(ctx workflow.Context) (*iotevents.PutLoggingOptionsOutput, error) {
 	var output iotevents.PutLoggingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsTagResourceFuture) Get(ctx workflow.Context) (*iotevents.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*iotevents.TagResourceOutput, error) {
 	var output iotevents.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsUntagResourceFuture) Get(ctx workflow.Context) (*iotevents.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*iotevents.UntagResourceOutput, error) {
 	var output iotevents.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsUpdateDetectorModelFuture struct {
+type UpdateDetectorModelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsUpdateDetectorModelFuture) Get(ctx workflow.Context) (*iotevents.UpdateDetectorModelOutput, error) {
+func (r *UpdateDetectorModelFuture) Get(ctx workflow.Context) (*iotevents.UpdateDetectorModelOutput, error) {
 	var output iotevents.UpdateDetectorModelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoTEventsUpdateInputFuture struct {
+type UpdateInputFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoTEventsUpdateInputFuture) Get(ctx workflow.Context) (*iotevents.UpdateInputOutput, error) {
+func (r *UpdateInputFuture) Get(ctx workflow.Context) (*iotevents.UpdateInputOutput, error) {
 	var output iotevents.UpdateInputOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -198,9 +198,9 @@ func (a *stub) CreateDetectorModel(ctx workflow.Context, input *iotevents.Create
 	return &output, err
 }
 
-func (a *stub) CreateDetectorModelAsync(ctx workflow.Context, input *iotevents.CreateDetectorModelInput) *IoTEventsCreateDetectorModelFuture {
+func (a *stub) CreateDetectorModelAsync(ctx workflow.Context, input *iotevents.CreateDetectorModelInput) *CreateDetectorModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.CreateDetectorModel", input)
-	return &IoTEventsCreateDetectorModelFuture{Future: future}
+	return &CreateDetectorModelFuture{Future: future}
 }
 
 func (a *stub) CreateInput(ctx workflow.Context, input *iotevents.CreateInputInput) (*iotevents.CreateInputOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) CreateInput(ctx workflow.Context, input *iotevents.CreateInputInp
 	return &output, err
 }
 
-func (a *stub) CreateInputAsync(ctx workflow.Context, input *iotevents.CreateInputInput) *IoTEventsCreateInputFuture {
+func (a *stub) CreateInputAsync(ctx workflow.Context, input *iotevents.CreateInputInput) *CreateInputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.CreateInput", input)
-	return &IoTEventsCreateInputFuture{Future: future}
+	return &CreateInputFuture{Future: future}
 }
 
 func (a *stub) DeleteDetectorModel(ctx workflow.Context, input *iotevents.DeleteDetectorModelInput) (*iotevents.DeleteDetectorModelOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) DeleteDetectorModel(ctx workflow.Context, input *iotevents.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteDetectorModelAsync(ctx workflow.Context, input *iotevents.DeleteDetectorModelInput) *IoTEventsDeleteDetectorModelFuture {
+func (a *stub) DeleteDetectorModelAsync(ctx workflow.Context, input *iotevents.DeleteDetectorModelInput) *DeleteDetectorModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.DeleteDetectorModel", input)
-	return &IoTEventsDeleteDetectorModelFuture{Future: future}
+	return &DeleteDetectorModelFuture{Future: future}
 }
 
 func (a *stub) DeleteInput(ctx workflow.Context, input *iotevents.DeleteInputInput) (*iotevents.DeleteInputOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) DeleteInput(ctx workflow.Context, input *iotevents.DeleteInputInp
 	return &output, err
 }
 
-func (a *stub) DeleteInputAsync(ctx workflow.Context, input *iotevents.DeleteInputInput) *IoTEventsDeleteInputFuture {
+func (a *stub) DeleteInputAsync(ctx workflow.Context, input *iotevents.DeleteInputInput) *DeleteInputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.DeleteInput", input)
-	return &IoTEventsDeleteInputFuture{Future: future}
+	return &DeleteInputFuture{Future: future}
 }
 
 func (a *stub) DescribeDetectorModel(ctx workflow.Context, input *iotevents.DescribeDetectorModelInput) (*iotevents.DescribeDetectorModelOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) DescribeDetectorModel(ctx workflow.Context, input *iotevents.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeDetectorModelAsync(ctx workflow.Context, input *iotevents.DescribeDetectorModelInput) *IoTEventsDescribeDetectorModelFuture {
+func (a *stub) DescribeDetectorModelAsync(ctx workflow.Context, input *iotevents.DescribeDetectorModelInput) *DescribeDetectorModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.DescribeDetectorModel", input)
-	return &IoTEventsDescribeDetectorModelFuture{Future: future}
+	return &DescribeDetectorModelFuture{Future: future}
 }
 
 func (a *stub) DescribeInput(ctx workflow.Context, input *iotevents.DescribeInputInput) (*iotevents.DescribeInputOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DescribeInput(ctx workflow.Context, input *iotevents.DescribeInpu
 	return &output, err
 }
 
-func (a *stub) DescribeInputAsync(ctx workflow.Context, input *iotevents.DescribeInputInput) *IoTEventsDescribeInputFuture {
+func (a *stub) DescribeInputAsync(ctx workflow.Context, input *iotevents.DescribeInputInput) *DescribeInputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.DescribeInput", input)
-	return &IoTEventsDescribeInputFuture{Future: future}
+	return &DescribeInputFuture{Future: future}
 }
 
 func (a *stub) DescribeLoggingOptions(ctx workflow.Context, input *iotevents.DescribeLoggingOptionsInput) (*iotevents.DescribeLoggingOptionsOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) DescribeLoggingOptions(ctx workflow.Context, input *iotevents.Des
 	return &output, err
 }
 
-func (a *stub) DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotevents.DescribeLoggingOptionsInput) *IoTEventsDescribeLoggingOptionsFuture {
+func (a *stub) DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotevents.DescribeLoggingOptionsInput) *DescribeLoggingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.DescribeLoggingOptions", input)
-	return &IoTEventsDescribeLoggingOptionsFuture{Future: future}
+	return &DescribeLoggingOptionsFuture{Future: future}
 }
 
 func (a *stub) ListDetectorModelVersions(ctx workflow.Context, input *iotevents.ListDetectorModelVersionsInput) (*iotevents.ListDetectorModelVersionsOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) ListDetectorModelVersions(ctx workflow.Context, input *iotevents.
 	return &output, err
 }
 
-func (a *stub) ListDetectorModelVersionsAsync(ctx workflow.Context, input *iotevents.ListDetectorModelVersionsInput) *IoTEventsListDetectorModelVersionsFuture {
+func (a *stub) ListDetectorModelVersionsAsync(ctx workflow.Context, input *iotevents.ListDetectorModelVersionsInput) *ListDetectorModelVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.ListDetectorModelVersions", input)
-	return &IoTEventsListDetectorModelVersionsFuture{Future: future}
+	return &ListDetectorModelVersionsFuture{Future: future}
 }
 
 func (a *stub) ListDetectorModels(ctx workflow.Context, input *iotevents.ListDetectorModelsInput) (*iotevents.ListDetectorModelsOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) ListDetectorModels(ctx workflow.Context, input *iotevents.ListDet
 	return &output, err
 }
 
-func (a *stub) ListDetectorModelsAsync(ctx workflow.Context, input *iotevents.ListDetectorModelsInput) *IoTEventsListDetectorModelsFuture {
+func (a *stub) ListDetectorModelsAsync(ctx workflow.Context, input *iotevents.ListDetectorModelsInput) *ListDetectorModelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.ListDetectorModels", input)
-	return &IoTEventsListDetectorModelsFuture{Future: future}
+	return &ListDetectorModelsFuture{Future: future}
 }
 
 func (a *stub) ListInputs(ctx workflow.Context, input *iotevents.ListInputsInput) (*iotevents.ListInputsOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) ListInputs(ctx workflow.Context, input *iotevents.ListInputsInput
 	return &output, err
 }
 
-func (a *stub) ListInputsAsync(ctx workflow.Context, input *iotevents.ListInputsInput) *IoTEventsListInputsFuture {
+func (a *stub) ListInputsAsync(ctx workflow.Context, input *iotevents.ListInputsInput) *ListInputsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.ListInputs", input)
-	return &IoTEventsListInputsFuture{Future: future}
+	return &ListInputsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *iotevents.ListTagsForResourceInput) (*iotevents.ListTagsForResourceOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *iotevents.ListTa
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *iotevents.ListTagsForResourceInput) *IoTEventsListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *iotevents.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.ListTagsForResource", input)
-	return &IoTEventsListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PutLoggingOptions(ctx workflow.Context, input *iotevents.PutLoggingOptionsInput) (*iotevents.PutLoggingOptionsOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) PutLoggingOptions(ctx workflow.Context, input *iotevents.PutLoggi
 	return &output, err
 }
 
-func (a *stub) PutLoggingOptionsAsync(ctx workflow.Context, input *iotevents.PutLoggingOptionsInput) *IoTEventsPutLoggingOptionsFuture {
+func (a *stub) PutLoggingOptionsAsync(ctx workflow.Context, input *iotevents.PutLoggingOptionsInput) *PutLoggingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.PutLoggingOptions", input)
-	return &IoTEventsPutLoggingOptionsFuture{Future: future}
+	return &PutLoggingOptionsFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *iotevents.TagResourceInput) (*iotevents.TagResourceOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *iotevents.TagResourceInp
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *iotevents.TagResourceInput) *IoTEventsTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *iotevents.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.TagResource", input)
-	return &IoTEventsTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *iotevents.UntagResourceInput) (*iotevents.UntagResourceOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *iotevents.UntagResourc
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *iotevents.UntagResourceInput) *IoTEventsUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *iotevents.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.UntagResource", input)
-	return &IoTEventsUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateDetectorModel(ctx workflow.Context, input *iotevents.UpdateDetectorModelInput) (*iotevents.UpdateDetectorModelOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) UpdateDetectorModel(ctx workflow.Context, input *iotevents.Update
 	return &output, err
 }
 
-func (a *stub) UpdateDetectorModelAsync(ctx workflow.Context, input *iotevents.UpdateDetectorModelInput) *IoTEventsUpdateDetectorModelFuture {
+func (a *stub) UpdateDetectorModelAsync(ctx workflow.Context, input *iotevents.UpdateDetectorModelInput) *UpdateDetectorModelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.UpdateDetectorModel", input)
-	return &IoTEventsUpdateDetectorModelFuture{Future: future}
+	return &UpdateDetectorModelFuture{Future: future}
 }
 
 func (a *stub) UpdateInput(ctx workflow.Context, input *iotevents.UpdateInputInput) (*iotevents.UpdateInputOutput, error) {
@@ -363,7 +363,7 @@ func (a *stub) UpdateInput(ctx workflow.Context, input *iotevents.UpdateInputInp
 	return &output, err
 }
 
-func (a *stub) UpdateInputAsync(ctx workflow.Context, input *iotevents.UpdateInputInput) *IoTEventsUpdateInputFuture {
+func (a *stub) UpdateInputAsync(ctx workflow.Context, input *iotevents.UpdateInputInput) *UpdateInputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iotevents.UpdateInput", input)
-	return &IoTEventsUpdateInputFuture{Future: future}
+	return &UpdateInputFuture{Future: future}
 }

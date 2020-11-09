@@ -16,64 +16,64 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AddPermission(ctx workflow.Context, input *sqs.AddPermissionInput) (*sqs.AddPermissionOutput, error)
-	AddPermissionAsync(ctx workflow.Context, input *sqs.AddPermissionInput) *SQSAddPermissionFuture
+	AddPermissionAsync(ctx workflow.Context, input *sqs.AddPermissionInput) *AddPermissionFuture
 
 	ChangeMessageVisibility(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) (*sqs.ChangeMessageVisibilityOutput, error)
-	ChangeMessageVisibilityAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) *SQSChangeMessageVisibilityFuture
+	ChangeMessageVisibilityAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) *ChangeMessageVisibilityFuture
 
 	ChangeMessageVisibilityBatch(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) (*sqs.ChangeMessageVisibilityBatchOutput, error)
-	ChangeMessageVisibilityBatchAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) *SQSChangeMessageVisibilityBatchFuture
+	ChangeMessageVisibilityBatchAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) *ChangeMessageVisibilityBatchFuture
 
 	CreateQueue(ctx workflow.Context, input *sqs.CreateQueueInput) (*sqs.CreateQueueOutput, error)
-	CreateQueueAsync(ctx workflow.Context, input *sqs.CreateQueueInput) *SQSCreateQueueFuture
+	CreateQueueAsync(ctx workflow.Context, input *sqs.CreateQueueInput) *CreateQueueFuture
 
 	DeleteMessage(ctx workflow.Context, input *sqs.DeleteMessageInput) (*sqs.DeleteMessageOutput, error)
-	DeleteMessageAsync(ctx workflow.Context, input *sqs.DeleteMessageInput) *SQSDeleteMessageFuture
+	DeleteMessageAsync(ctx workflow.Context, input *sqs.DeleteMessageInput) *DeleteMessageFuture
 
 	DeleteMessageBatch(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) (*sqs.DeleteMessageBatchOutput, error)
-	DeleteMessageBatchAsync(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) *SQSDeleteMessageBatchFuture
+	DeleteMessageBatchAsync(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) *DeleteMessageBatchFuture
 
 	DeleteQueue(ctx workflow.Context, input *sqs.DeleteQueueInput) (*sqs.DeleteQueueOutput, error)
-	DeleteQueueAsync(ctx workflow.Context, input *sqs.DeleteQueueInput) *SQSDeleteQueueFuture
+	DeleteQueueAsync(ctx workflow.Context, input *sqs.DeleteQueueInput) *DeleteQueueFuture
 
 	GetQueueAttributes(ctx workflow.Context, input *sqs.GetQueueAttributesInput) (*sqs.GetQueueAttributesOutput, error)
-	GetQueueAttributesAsync(ctx workflow.Context, input *sqs.GetQueueAttributesInput) *SQSGetQueueAttributesFuture
+	GetQueueAttributesAsync(ctx workflow.Context, input *sqs.GetQueueAttributesInput) *GetQueueAttributesFuture
 
 	GetQueueUrl(ctx workflow.Context, input *sqs.GetQueueUrlInput) (*sqs.GetQueueUrlOutput, error)
-	GetQueueUrlAsync(ctx workflow.Context, input *sqs.GetQueueUrlInput) *SQSGetQueueUrlFuture
+	GetQueueUrlAsync(ctx workflow.Context, input *sqs.GetQueueUrlInput) *GetQueueUrlFuture
 
 	ListDeadLetterSourceQueues(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) (*sqs.ListDeadLetterSourceQueuesOutput, error)
-	ListDeadLetterSourceQueuesAsync(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) *SQSListDeadLetterSourceQueuesFuture
+	ListDeadLetterSourceQueuesAsync(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) *ListDeadLetterSourceQueuesFuture
 
 	ListQueueTags(ctx workflow.Context, input *sqs.ListQueueTagsInput) (*sqs.ListQueueTagsOutput, error)
-	ListQueueTagsAsync(ctx workflow.Context, input *sqs.ListQueueTagsInput) *SQSListQueueTagsFuture
+	ListQueueTagsAsync(ctx workflow.Context, input *sqs.ListQueueTagsInput) *ListQueueTagsFuture
 
 	ListQueues(ctx workflow.Context, input *sqs.ListQueuesInput) (*sqs.ListQueuesOutput, error)
-	ListQueuesAsync(ctx workflow.Context, input *sqs.ListQueuesInput) *SQSListQueuesFuture
+	ListQueuesAsync(ctx workflow.Context, input *sqs.ListQueuesInput) *ListQueuesFuture
 
 	PurgeQueue(ctx workflow.Context, input *sqs.PurgeQueueInput) (*sqs.PurgeQueueOutput, error)
-	PurgeQueueAsync(ctx workflow.Context, input *sqs.PurgeQueueInput) *SQSPurgeQueueFuture
+	PurgeQueueAsync(ctx workflow.Context, input *sqs.PurgeQueueInput) *PurgeQueueFuture
 
 	ReceiveMessage(ctx workflow.Context, input *sqs.ReceiveMessageInput) (*sqs.ReceiveMessageOutput, error)
-	ReceiveMessageAsync(ctx workflow.Context, input *sqs.ReceiveMessageInput) *SQSReceiveMessageFuture
+	ReceiveMessageAsync(ctx workflow.Context, input *sqs.ReceiveMessageInput) *ReceiveMessageFuture
 
 	RemovePermission(ctx workflow.Context, input *sqs.RemovePermissionInput) (*sqs.RemovePermissionOutput, error)
-	RemovePermissionAsync(ctx workflow.Context, input *sqs.RemovePermissionInput) *SQSRemovePermissionFuture
+	RemovePermissionAsync(ctx workflow.Context, input *sqs.RemovePermissionInput) *RemovePermissionFuture
 
 	SendMessage(ctx workflow.Context, input *sqs.SendMessageInput) (*sqs.SendMessageOutput, error)
-	SendMessageAsync(ctx workflow.Context, input *sqs.SendMessageInput) *SQSSendMessageFuture
+	SendMessageAsync(ctx workflow.Context, input *sqs.SendMessageInput) *SendMessageFuture
 
 	SendMessageBatch(ctx workflow.Context, input *sqs.SendMessageBatchInput) (*sqs.SendMessageBatchOutput, error)
-	SendMessageBatchAsync(ctx workflow.Context, input *sqs.SendMessageBatchInput) *SQSSendMessageBatchFuture
+	SendMessageBatchAsync(ctx workflow.Context, input *sqs.SendMessageBatchInput) *SendMessageBatchFuture
 
 	SetQueueAttributes(ctx workflow.Context, input *sqs.SetQueueAttributesInput) (*sqs.SetQueueAttributesOutput, error)
-	SetQueueAttributesAsync(ctx workflow.Context, input *sqs.SetQueueAttributesInput) *SQSSetQueueAttributesFuture
+	SetQueueAttributesAsync(ctx workflow.Context, input *sqs.SetQueueAttributesInput) *SetQueueAttributesFuture
 
 	TagQueue(ctx workflow.Context, input *sqs.TagQueueInput) (*sqs.TagQueueOutput, error)
-	TagQueueAsync(ctx workflow.Context, input *sqs.TagQueueInput) *SQSTagQueueFuture
+	TagQueueAsync(ctx workflow.Context, input *sqs.TagQueueInput) *TagQueueFuture
 
 	UntagQueue(ctx workflow.Context, input *sqs.UntagQueueInput) (*sqs.UntagQueueOutput, error)
-	UntagQueueAsync(ctx workflow.Context, input *sqs.UntagQueueInput) *SQSUntagQueueFuture
+	UntagQueueAsync(ctx workflow.Context, input *sqs.UntagQueueInput) *UntagQueueFuture
 }
 
 func NewClient() Client {

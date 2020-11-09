@@ -16,408 +16,408 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type InspectorAddAttributesToFindingsFuture struct {
+type AddAttributesToFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorAddAttributesToFindingsFuture) Get(ctx workflow.Context) (*inspector.AddAttributesToFindingsOutput, error) {
+func (r *AddAttributesToFindingsFuture) Get(ctx workflow.Context) (*inspector.AddAttributesToFindingsOutput, error) {
 	var output inspector.AddAttributesToFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorCreateAssessmentTargetFuture struct {
+type CreateAssessmentTargetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorCreateAssessmentTargetFuture) Get(ctx workflow.Context) (*inspector.CreateAssessmentTargetOutput, error) {
+func (r *CreateAssessmentTargetFuture) Get(ctx workflow.Context) (*inspector.CreateAssessmentTargetOutput, error) {
 	var output inspector.CreateAssessmentTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorCreateAssessmentTemplateFuture struct {
+type CreateAssessmentTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorCreateAssessmentTemplateFuture) Get(ctx workflow.Context) (*inspector.CreateAssessmentTemplateOutput, error) {
+func (r *CreateAssessmentTemplateFuture) Get(ctx workflow.Context) (*inspector.CreateAssessmentTemplateOutput, error) {
 	var output inspector.CreateAssessmentTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorCreateExclusionsPreviewFuture struct {
+type CreateExclusionsPreviewFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorCreateExclusionsPreviewFuture) Get(ctx workflow.Context) (*inspector.CreateExclusionsPreviewOutput, error) {
+func (r *CreateExclusionsPreviewFuture) Get(ctx workflow.Context) (*inspector.CreateExclusionsPreviewOutput, error) {
 	var output inspector.CreateExclusionsPreviewOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorCreateResourceGroupFuture struct {
+type CreateResourceGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorCreateResourceGroupFuture) Get(ctx workflow.Context) (*inspector.CreateResourceGroupOutput, error) {
+func (r *CreateResourceGroupFuture) Get(ctx workflow.Context) (*inspector.CreateResourceGroupOutput, error) {
 	var output inspector.CreateResourceGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDeleteAssessmentRunFuture struct {
+type DeleteAssessmentRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDeleteAssessmentRunFuture) Get(ctx workflow.Context) (*inspector.DeleteAssessmentRunOutput, error) {
+func (r *DeleteAssessmentRunFuture) Get(ctx workflow.Context) (*inspector.DeleteAssessmentRunOutput, error) {
 	var output inspector.DeleteAssessmentRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDeleteAssessmentTargetFuture struct {
+type DeleteAssessmentTargetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDeleteAssessmentTargetFuture) Get(ctx workflow.Context) (*inspector.DeleteAssessmentTargetOutput, error) {
+func (r *DeleteAssessmentTargetFuture) Get(ctx workflow.Context) (*inspector.DeleteAssessmentTargetOutput, error) {
 	var output inspector.DeleteAssessmentTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDeleteAssessmentTemplateFuture struct {
+type DeleteAssessmentTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDeleteAssessmentTemplateFuture) Get(ctx workflow.Context) (*inspector.DeleteAssessmentTemplateOutput, error) {
+func (r *DeleteAssessmentTemplateFuture) Get(ctx workflow.Context) (*inspector.DeleteAssessmentTemplateOutput, error) {
 	var output inspector.DeleteAssessmentTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDescribeAssessmentRunsFuture struct {
+type DescribeAssessmentRunsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDescribeAssessmentRunsFuture) Get(ctx workflow.Context) (*inspector.DescribeAssessmentRunsOutput, error) {
+func (r *DescribeAssessmentRunsFuture) Get(ctx workflow.Context) (*inspector.DescribeAssessmentRunsOutput, error) {
 	var output inspector.DescribeAssessmentRunsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDescribeAssessmentTargetsFuture struct {
+type DescribeAssessmentTargetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDescribeAssessmentTargetsFuture) Get(ctx workflow.Context) (*inspector.DescribeAssessmentTargetsOutput, error) {
+func (r *DescribeAssessmentTargetsFuture) Get(ctx workflow.Context) (*inspector.DescribeAssessmentTargetsOutput, error) {
 	var output inspector.DescribeAssessmentTargetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDescribeAssessmentTemplatesFuture struct {
+type DescribeAssessmentTemplatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDescribeAssessmentTemplatesFuture) Get(ctx workflow.Context) (*inspector.DescribeAssessmentTemplatesOutput, error) {
+func (r *DescribeAssessmentTemplatesFuture) Get(ctx workflow.Context) (*inspector.DescribeAssessmentTemplatesOutput, error) {
 	var output inspector.DescribeAssessmentTemplatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDescribeCrossAccountAccessRoleFuture struct {
+type DescribeCrossAccountAccessRoleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDescribeCrossAccountAccessRoleFuture) Get(ctx workflow.Context) (*inspector.DescribeCrossAccountAccessRoleOutput, error) {
+func (r *DescribeCrossAccountAccessRoleFuture) Get(ctx workflow.Context) (*inspector.DescribeCrossAccountAccessRoleOutput, error) {
 	var output inspector.DescribeCrossAccountAccessRoleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDescribeExclusionsFuture struct {
+type DescribeExclusionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDescribeExclusionsFuture) Get(ctx workflow.Context) (*inspector.DescribeExclusionsOutput, error) {
+func (r *DescribeExclusionsFuture) Get(ctx workflow.Context) (*inspector.DescribeExclusionsOutput, error) {
 	var output inspector.DescribeExclusionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDescribeFindingsFuture struct {
+type DescribeFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDescribeFindingsFuture) Get(ctx workflow.Context) (*inspector.DescribeFindingsOutput, error) {
+func (r *DescribeFindingsFuture) Get(ctx workflow.Context) (*inspector.DescribeFindingsOutput, error) {
 	var output inspector.DescribeFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDescribeResourceGroupsFuture struct {
+type DescribeResourceGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDescribeResourceGroupsFuture) Get(ctx workflow.Context) (*inspector.DescribeResourceGroupsOutput, error) {
+func (r *DescribeResourceGroupsFuture) Get(ctx workflow.Context) (*inspector.DescribeResourceGroupsOutput, error) {
 	var output inspector.DescribeResourceGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorDescribeRulesPackagesFuture struct {
+type DescribeRulesPackagesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorDescribeRulesPackagesFuture) Get(ctx workflow.Context) (*inspector.DescribeRulesPackagesOutput, error) {
+func (r *DescribeRulesPackagesFuture) Get(ctx workflow.Context) (*inspector.DescribeRulesPackagesOutput, error) {
 	var output inspector.DescribeRulesPackagesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorGetAssessmentReportFuture struct {
+type GetAssessmentReportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorGetAssessmentReportFuture) Get(ctx workflow.Context) (*inspector.GetAssessmentReportOutput, error) {
+func (r *GetAssessmentReportFuture) Get(ctx workflow.Context) (*inspector.GetAssessmentReportOutput, error) {
 	var output inspector.GetAssessmentReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorGetExclusionsPreviewFuture struct {
+type GetExclusionsPreviewFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorGetExclusionsPreviewFuture) Get(ctx workflow.Context) (*inspector.GetExclusionsPreviewOutput, error) {
+func (r *GetExclusionsPreviewFuture) Get(ctx workflow.Context) (*inspector.GetExclusionsPreviewOutput, error) {
 	var output inspector.GetExclusionsPreviewOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorGetTelemetryMetadataFuture struct {
+type GetTelemetryMetadataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorGetTelemetryMetadataFuture) Get(ctx workflow.Context) (*inspector.GetTelemetryMetadataOutput, error) {
+func (r *GetTelemetryMetadataFuture) Get(ctx workflow.Context) (*inspector.GetTelemetryMetadataOutput, error) {
 	var output inspector.GetTelemetryMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListAssessmentRunAgentsFuture struct {
+type ListAssessmentRunAgentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListAssessmentRunAgentsFuture) Get(ctx workflow.Context) (*inspector.ListAssessmentRunAgentsOutput, error) {
+func (r *ListAssessmentRunAgentsFuture) Get(ctx workflow.Context) (*inspector.ListAssessmentRunAgentsOutput, error) {
 	var output inspector.ListAssessmentRunAgentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListAssessmentRunsFuture struct {
+type ListAssessmentRunsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListAssessmentRunsFuture) Get(ctx workflow.Context) (*inspector.ListAssessmentRunsOutput, error) {
+func (r *ListAssessmentRunsFuture) Get(ctx workflow.Context) (*inspector.ListAssessmentRunsOutput, error) {
 	var output inspector.ListAssessmentRunsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListAssessmentTargetsFuture struct {
+type ListAssessmentTargetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListAssessmentTargetsFuture) Get(ctx workflow.Context) (*inspector.ListAssessmentTargetsOutput, error) {
+func (r *ListAssessmentTargetsFuture) Get(ctx workflow.Context) (*inspector.ListAssessmentTargetsOutput, error) {
 	var output inspector.ListAssessmentTargetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListAssessmentTemplatesFuture struct {
+type ListAssessmentTemplatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListAssessmentTemplatesFuture) Get(ctx workflow.Context) (*inspector.ListAssessmentTemplatesOutput, error) {
+func (r *ListAssessmentTemplatesFuture) Get(ctx workflow.Context) (*inspector.ListAssessmentTemplatesOutput, error) {
 	var output inspector.ListAssessmentTemplatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListEventSubscriptionsFuture struct {
+type ListEventSubscriptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListEventSubscriptionsFuture) Get(ctx workflow.Context) (*inspector.ListEventSubscriptionsOutput, error) {
+func (r *ListEventSubscriptionsFuture) Get(ctx workflow.Context) (*inspector.ListEventSubscriptionsOutput, error) {
 	var output inspector.ListEventSubscriptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListExclusionsFuture struct {
+type ListExclusionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListExclusionsFuture) Get(ctx workflow.Context) (*inspector.ListExclusionsOutput, error) {
+func (r *ListExclusionsFuture) Get(ctx workflow.Context) (*inspector.ListExclusionsOutput, error) {
 	var output inspector.ListExclusionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListFindingsFuture struct {
+type ListFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListFindingsFuture) Get(ctx workflow.Context) (*inspector.ListFindingsOutput, error) {
+func (r *ListFindingsFuture) Get(ctx workflow.Context) (*inspector.ListFindingsOutput, error) {
 	var output inspector.ListFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListRulesPackagesFuture struct {
+type ListRulesPackagesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListRulesPackagesFuture) Get(ctx workflow.Context) (*inspector.ListRulesPackagesOutput, error) {
+func (r *ListRulesPackagesFuture) Get(ctx workflow.Context) (*inspector.ListRulesPackagesOutput, error) {
 	var output inspector.ListRulesPackagesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorListTagsForResourceFuture) Get(ctx workflow.Context) (*inspector.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*inspector.ListTagsForResourceOutput, error) {
 	var output inspector.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorPreviewAgentsFuture struct {
+type PreviewAgentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorPreviewAgentsFuture) Get(ctx workflow.Context) (*inspector.PreviewAgentsOutput, error) {
+func (r *PreviewAgentsFuture) Get(ctx workflow.Context) (*inspector.PreviewAgentsOutput, error) {
 	var output inspector.PreviewAgentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorRegisterCrossAccountAccessRoleFuture struct {
+type RegisterCrossAccountAccessRoleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorRegisterCrossAccountAccessRoleFuture) Get(ctx workflow.Context) (*inspector.RegisterCrossAccountAccessRoleOutput, error) {
+func (r *RegisterCrossAccountAccessRoleFuture) Get(ctx workflow.Context) (*inspector.RegisterCrossAccountAccessRoleOutput, error) {
 	var output inspector.RegisterCrossAccountAccessRoleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorRemoveAttributesFromFindingsFuture struct {
+type RemoveAttributesFromFindingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorRemoveAttributesFromFindingsFuture) Get(ctx workflow.Context) (*inspector.RemoveAttributesFromFindingsOutput, error) {
+func (r *RemoveAttributesFromFindingsFuture) Get(ctx workflow.Context) (*inspector.RemoveAttributesFromFindingsOutput, error) {
 	var output inspector.RemoveAttributesFromFindingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorSetTagsForResourceFuture struct {
+type SetTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorSetTagsForResourceFuture) Get(ctx workflow.Context) (*inspector.SetTagsForResourceOutput, error) {
+func (r *SetTagsForResourceFuture) Get(ctx workflow.Context) (*inspector.SetTagsForResourceOutput, error) {
 	var output inspector.SetTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorStartAssessmentRunFuture struct {
+type StartAssessmentRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorStartAssessmentRunFuture) Get(ctx workflow.Context) (*inspector.StartAssessmentRunOutput, error) {
+func (r *StartAssessmentRunFuture) Get(ctx workflow.Context) (*inspector.StartAssessmentRunOutput, error) {
 	var output inspector.StartAssessmentRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorStopAssessmentRunFuture struct {
+type StopAssessmentRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorStopAssessmentRunFuture) Get(ctx workflow.Context) (*inspector.StopAssessmentRunOutput, error) {
+func (r *StopAssessmentRunFuture) Get(ctx workflow.Context) (*inspector.StopAssessmentRunOutput, error) {
 	var output inspector.StopAssessmentRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorSubscribeToEventFuture struct {
+type SubscribeToEventFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorSubscribeToEventFuture) Get(ctx workflow.Context) (*inspector.SubscribeToEventOutput, error) {
+func (r *SubscribeToEventFuture) Get(ctx workflow.Context) (*inspector.SubscribeToEventOutput, error) {
 	var output inspector.SubscribeToEventOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorUnsubscribeFromEventFuture struct {
+type UnsubscribeFromEventFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorUnsubscribeFromEventFuture) Get(ctx workflow.Context) (*inspector.UnsubscribeFromEventOutput, error) {
+func (r *UnsubscribeFromEventFuture) Get(ctx workflow.Context) (*inspector.UnsubscribeFromEventOutput, error) {
 	var output inspector.UnsubscribeFromEventOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type InspectorUpdateAssessmentTargetFuture struct {
+type UpdateAssessmentTargetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *InspectorUpdateAssessmentTargetFuture) Get(ctx workflow.Context) (*inspector.UpdateAssessmentTargetOutput, error) {
+func (r *UpdateAssessmentTargetFuture) Get(ctx workflow.Context) (*inspector.UpdateAssessmentTargetOutput, error) {
 	var output inspector.UpdateAssessmentTargetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -429,9 +429,9 @@ func (a *stub) AddAttributesToFindings(ctx workflow.Context, input *inspector.Ad
 	return &output, err
 }
 
-func (a *stub) AddAttributesToFindingsAsync(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) *InspectorAddAttributesToFindingsFuture {
+func (a *stub) AddAttributesToFindingsAsync(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) *AddAttributesToFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.AddAttributesToFindings", input)
-	return &InspectorAddAttributesToFindingsFuture{Future: future}
+	return &AddAttributesToFindingsFuture{Future: future}
 }
 
 func (a *stub) CreateAssessmentTarget(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) (*inspector.CreateAssessmentTargetOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) CreateAssessmentTarget(ctx workflow.Context, input *inspector.Cre
 	return &output, err
 }
 
-func (a *stub) CreateAssessmentTargetAsync(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) *InspectorCreateAssessmentTargetFuture {
+func (a *stub) CreateAssessmentTargetAsync(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) *CreateAssessmentTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.CreateAssessmentTarget", input)
-	return &InspectorCreateAssessmentTargetFuture{Future: future}
+	return &CreateAssessmentTargetFuture{Future: future}
 }
 
 func (a *stub) CreateAssessmentTemplate(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) (*inspector.CreateAssessmentTemplateOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) CreateAssessmentTemplate(ctx workflow.Context, input *inspector.C
 	return &output, err
 }
 
-func (a *stub) CreateAssessmentTemplateAsync(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) *InspectorCreateAssessmentTemplateFuture {
+func (a *stub) CreateAssessmentTemplateAsync(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) *CreateAssessmentTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.CreateAssessmentTemplate", input)
-	return &InspectorCreateAssessmentTemplateFuture{Future: future}
+	return &CreateAssessmentTemplateFuture{Future: future}
 }
 
 func (a *stub) CreateExclusionsPreview(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) (*inspector.CreateExclusionsPreviewOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) CreateExclusionsPreview(ctx workflow.Context, input *inspector.Cr
 	return &output, err
 }
 
-func (a *stub) CreateExclusionsPreviewAsync(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) *InspectorCreateExclusionsPreviewFuture {
+func (a *stub) CreateExclusionsPreviewAsync(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) *CreateExclusionsPreviewFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.CreateExclusionsPreview", input)
-	return &InspectorCreateExclusionsPreviewFuture{Future: future}
+	return &CreateExclusionsPreviewFuture{Future: future}
 }
 
 func (a *stub) CreateResourceGroup(ctx workflow.Context, input *inspector.CreateResourceGroupInput) (*inspector.CreateResourceGroupOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) CreateResourceGroup(ctx workflow.Context, input *inspector.Create
 	return &output, err
 }
 
-func (a *stub) CreateResourceGroupAsync(ctx workflow.Context, input *inspector.CreateResourceGroupInput) *InspectorCreateResourceGroupFuture {
+func (a *stub) CreateResourceGroupAsync(ctx workflow.Context, input *inspector.CreateResourceGroupInput) *CreateResourceGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.CreateResourceGroup", input)
-	return &InspectorCreateResourceGroupFuture{Future: future}
+	return &CreateResourceGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteAssessmentRun(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) (*inspector.DeleteAssessmentRunOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DeleteAssessmentRun(ctx workflow.Context, input *inspector.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteAssessmentRunAsync(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) *InspectorDeleteAssessmentRunFuture {
+func (a *stub) DeleteAssessmentRunAsync(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) *DeleteAssessmentRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentRun", input)
-	return &InspectorDeleteAssessmentRunFuture{Future: future}
+	return &DeleteAssessmentRunFuture{Future: future}
 }
 
 func (a *stub) DeleteAssessmentTarget(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) (*inspector.DeleteAssessmentTargetOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) DeleteAssessmentTarget(ctx workflow.Context, input *inspector.Del
 	return &output, err
 }
 
-func (a *stub) DeleteAssessmentTargetAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) *InspectorDeleteAssessmentTargetFuture {
+func (a *stub) DeleteAssessmentTargetAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) *DeleteAssessmentTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentTarget", input)
-	return &InspectorDeleteAssessmentTargetFuture{Future: future}
+	return &DeleteAssessmentTargetFuture{Future: future}
 }
 
 func (a *stub) DeleteAssessmentTemplate(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) (*inspector.DeleteAssessmentTemplateOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DeleteAssessmentTemplate(ctx workflow.Context, input *inspector.D
 	return &output, err
 }
 
-func (a *stub) DeleteAssessmentTemplateAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) *InspectorDeleteAssessmentTemplateFuture {
+func (a *stub) DeleteAssessmentTemplateAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) *DeleteAssessmentTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentTemplate", input)
-	return &InspectorDeleteAssessmentTemplateFuture{Future: future}
+	return &DeleteAssessmentTemplateFuture{Future: future}
 }
 
 func (a *stub) DescribeAssessmentRuns(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) (*inspector.DescribeAssessmentRunsOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) DescribeAssessmentRuns(ctx workflow.Context, input *inspector.Des
 	return &output, err
 }
 
-func (a *stub) DescribeAssessmentRunsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) *InspectorDescribeAssessmentRunsFuture {
+func (a *stub) DescribeAssessmentRunsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) *DescribeAssessmentRunsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentRuns", input)
-	return &InspectorDescribeAssessmentRunsFuture{Future: future}
+	return &DescribeAssessmentRunsFuture{Future: future}
 }
 
 func (a *stub) DescribeAssessmentTargets(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) (*inspector.DescribeAssessmentTargetsOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) DescribeAssessmentTargets(ctx workflow.Context, input *inspector.
 	return &output, err
 }
 
-func (a *stub) DescribeAssessmentTargetsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) *InspectorDescribeAssessmentTargetsFuture {
+func (a *stub) DescribeAssessmentTargetsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) *DescribeAssessmentTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentTargets", input)
-	return &InspectorDescribeAssessmentTargetsFuture{Future: future}
+	return &DescribeAssessmentTargetsFuture{Future: future}
 }
 
 func (a *stub) DescribeAssessmentTemplates(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) (*inspector.DescribeAssessmentTemplatesOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) DescribeAssessmentTemplates(ctx workflow.Context, input *inspecto
 	return &output, err
 }
 
-func (a *stub) DescribeAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) *InspectorDescribeAssessmentTemplatesFuture {
+func (a *stub) DescribeAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) *DescribeAssessmentTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentTemplates", input)
-	return &InspectorDescribeAssessmentTemplatesFuture{Future: future}
+	return &DescribeAssessmentTemplatesFuture{Future: future}
 }
 
 func (a *stub) DescribeCrossAccountAccessRole(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) (*inspector.DescribeCrossAccountAccessRoleOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) DescribeCrossAccountAccessRole(ctx workflow.Context, input *inspe
 	return &output, err
 }
 
-func (a *stub) DescribeCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) *InspectorDescribeCrossAccountAccessRoleFuture {
+func (a *stub) DescribeCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) *DescribeCrossAccountAccessRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeCrossAccountAccessRole", input)
-	return &InspectorDescribeCrossAccountAccessRoleFuture{Future: future}
+	return &DescribeCrossAccountAccessRoleFuture{Future: future}
 }
 
 func (a *stub) DescribeExclusions(ctx workflow.Context, input *inspector.DescribeExclusionsInput) (*inspector.DescribeExclusionsOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) DescribeExclusions(ctx workflow.Context, input *inspector.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeExclusionsAsync(ctx workflow.Context, input *inspector.DescribeExclusionsInput) *InspectorDescribeExclusionsFuture {
+func (a *stub) DescribeExclusionsAsync(ctx workflow.Context, input *inspector.DescribeExclusionsInput) *DescribeExclusionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeExclusions", input)
-	return &InspectorDescribeExclusionsFuture{Future: future}
+	return &DescribeExclusionsFuture{Future: future}
 }
 
 func (a *stub) DescribeFindings(ctx workflow.Context, input *inspector.DescribeFindingsInput) (*inspector.DescribeFindingsOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) DescribeFindings(ctx workflow.Context, input *inspector.DescribeF
 	return &output, err
 }
 
-func (a *stub) DescribeFindingsAsync(ctx workflow.Context, input *inspector.DescribeFindingsInput) *InspectorDescribeFindingsFuture {
+func (a *stub) DescribeFindingsAsync(ctx workflow.Context, input *inspector.DescribeFindingsInput) *DescribeFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeFindings", input)
-	return &InspectorDescribeFindingsFuture{Future: future}
+	return &DescribeFindingsFuture{Future: future}
 }
 
 func (a *stub) DescribeResourceGroups(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) (*inspector.DescribeResourceGroupsOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) DescribeResourceGroups(ctx workflow.Context, input *inspector.Des
 	return &output, err
 }
 
-func (a *stub) DescribeResourceGroupsAsync(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) *InspectorDescribeResourceGroupsFuture {
+func (a *stub) DescribeResourceGroupsAsync(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) *DescribeResourceGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeResourceGroups", input)
-	return &InspectorDescribeResourceGroupsFuture{Future: future}
+	return &DescribeResourceGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeRulesPackages(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) (*inspector.DescribeRulesPackagesOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DescribeRulesPackages(ctx workflow.Context, input *inspector.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeRulesPackagesAsync(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) *InspectorDescribeRulesPackagesFuture {
+func (a *stub) DescribeRulesPackagesAsync(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) *DescribeRulesPackagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeRulesPackages", input)
-	return &InspectorDescribeRulesPackagesFuture{Future: future}
+	return &DescribeRulesPackagesFuture{Future: future}
 }
 
 func (a *stub) GetAssessmentReport(ctx workflow.Context, input *inspector.GetAssessmentReportInput) (*inspector.GetAssessmentReportOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) GetAssessmentReport(ctx workflow.Context, input *inspector.GetAss
 	return &output, err
 }
 
-func (a *stub) GetAssessmentReportAsync(ctx workflow.Context, input *inspector.GetAssessmentReportInput) *InspectorGetAssessmentReportFuture {
+func (a *stub) GetAssessmentReportAsync(ctx workflow.Context, input *inspector.GetAssessmentReportInput) *GetAssessmentReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.GetAssessmentReport", input)
-	return &InspectorGetAssessmentReportFuture{Future: future}
+	return &GetAssessmentReportFuture{Future: future}
 }
 
 func (a *stub) GetExclusionsPreview(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) (*inspector.GetExclusionsPreviewOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) GetExclusionsPreview(ctx workflow.Context, input *inspector.GetEx
 	return &output, err
 }
 
-func (a *stub) GetExclusionsPreviewAsync(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) *InspectorGetExclusionsPreviewFuture {
+func (a *stub) GetExclusionsPreviewAsync(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) *GetExclusionsPreviewFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.GetExclusionsPreview", input)
-	return &InspectorGetExclusionsPreviewFuture{Future: future}
+	return &GetExclusionsPreviewFuture{Future: future}
 }
 
 func (a *stub) GetTelemetryMetadata(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) (*inspector.GetTelemetryMetadataOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) GetTelemetryMetadata(ctx workflow.Context, input *inspector.GetTe
 	return &output, err
 }
 
-func (a *stub) GetTelemetryMetadataAsync(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) *InspectorGetTelemetryMetadataFuture {
+func (a *stub) GetTelemetryMetadataAsync(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) *GetTelemetryMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.GetTelemetryMetadata", input)
-	return &InspectorGetTelemetryMetadataFuture{Future: future}
+	return &GetTelemetryMetadataFuture{Future: future}
 }
 
 func (a *stub) ListAssessmentRunAgents(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) (*inspector.ListAssessmentRunAgentsOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) ListAssessmentRunAgents(ctx workflow.Context, input *inspector.Li
 	return &output, err
 }
 
-func (a *stub) ListAssessmentRunAgentsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) *InspectorListAssessmentRunAgentsFuture {
+func (a *stub) ListAssessmentRunAgentsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) *ListAssessmentRunAgentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentRunAgents", input)
-	return &InspectorListAssessmentRunAgentsFuture{Future: future}
+	return &ListAssessmentRunAgentsFuture{Future: future}
 }
 
 func (a *stub) ListAssessmentRuns(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) (*inspector.ListAssessmentRunsOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) ListAssessmentRuns(ctx workflow.Context, input *inspector.ListAss
 	return &output, err
 }
 
-func (a *stub) ListAssessmentRunsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) *InspectorListAssessmentRunsFuture {
+func (a *stub) ListAssessmentRunsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) *ListAssessmentRunsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentRuns", input)
-	return &InspectorListAssessmentRunsFuture{Future: future}
+	return &ListAssessmentRunsFuture{Future: future}
 }
 
 func (a *stub) ListAssessmentTargets(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) (*inspector.ListAssessmentTargetsOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) ListAssessmentTargets(ctx workflow.Context, input *inspector.List
 	return &output, err
 }
 
-func (a *stub) ListAssessmentTargetsAsync(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) *InspectorListAssessmentTargetsFuture {
+func (a *stub) ListAssessmentTargetsAsync(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) *ListAssessmentTargetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentTargets", input)
-	return &InspectorListAssessmentTargetsFuture{Future: future}
+	return &ListAssessmentTargetsFuture{Future: future}
 }
 
 func (a *stub) ListAssessmentTemplates(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) (*inspector.ListAssessmentTemplatesOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) ListAssessmentTemplates(ctx workflow.Context, input *inspector.Li
 	return &output, err
 }
 
-func (a *stub) ListAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) *InspectorListAssessmentTemplatesFuture {
+func (a *stub) ListAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) *ListAssessmentTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentTemplates", input)
-	return &InspectorListAssessmentTemplatesFuture{Future: future}
+	return &ListAssessmentTemplatesFuture{Future: future}
 }
 
 func (a *stub) ListEventSubscriptions(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) (*inspector.ListEventSubscriptionsOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) ListEventSubscriptions(ctx workflow.Context, input *inspector.Lis
 	return &output, err
 }
 
-func (a *stub) ListEventSubscriptionsAsync(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) *InspectorListEventSubscriptionsFuture {
+func (a *stub) ListEventSubscriptionsAsync(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) *ListEventSubscriptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListEventSubscriptions", input)
-	return &InspectorListEventSubscriptionsFuture{Future: future}
+	return &ListEventSubscriptionsFuture{Future: future}
 }
 
 func (a *stub) ListExclusions(ctx workflow.Context, input *inspector.ListExclusionsInput) (*inspector.ListExclusionsOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) ListExclusions(ctx workflow.Context, input *inspector.ListExclusi
 	return &output, err
 }
 
-func (a *stub) ListExclusionsAsync(ctx workflow.Context, input *inspector.ListExclusionsInput) *InspectorListExclusionsFuture {
+func (a *stub) ListExclusionsAsync(ctx workflow.Context, input *inspector.ListExclusionsInput) *ListExclusionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListExclusions", input)
-	return &InspectorListExclusionsFuture{Future: future}
+	return &ListExclusionsFuture{Future: future}
 }
 
 func (a *stub) ListFindings(ctx workflow.Context, input *inspector.ListFindingsInput) (*inspector.ListFindingsOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) ListFindings(ctx workflow.Context, input *inspector.ListFindingsI
 	return &output, err
 }
 
-func (a *stub) ListFindingsAsync(ctx workflow.Context, input *inspector.ListFindingsInput) *InspectorListFindingsFuture {
+func (a *stub) ListFindingsAsync(ctx workflow.Context, input *inspector.ListFindingsInput) *ListFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListFindings", input)
-	return &InspectorListFindingsFuture{Future: future}
+	return &ListFindingsFuture{Future: future}
 }
 
 func (a *stub) ListRulesPackages(ctx workflow.Context, input *inspector.ListRulesPackagesInput) (*inspector.ListRulesPackagesOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) ListRulesPackages(ctx workflow.Context, input *inspector.ListRule
 	return &output, err
 }
 
-func (a *stub) ListRulesPackagesAsync(ctx workflow.Context, input *inspector.ListRulesPackagesInput) *InspectorListRulesPackagesFuture {
+func (a *stub) ListRulesPackagesAsync(ctx workflow.Context, input *inspector.ListRulesPackagesInput) *ListRulesPackagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListRulesPackages", input)
-	return &InspectorListRulesPackagesFuture{Future: future}
+	return &ListRulesPackagesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *inspector.ListTagsForResourceInput) (*inspector.ListTagsForResourceOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *inspector.ListTa
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *inspector.ListTagsForResourceInput) *InspectorListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *inspector.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListTagsForResource", input)
-	return &InspectorListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PreviewAgents(ctx workflow.Context, input *inspector.PreviewAgentsInput) (*inspector.PreviewAgentsOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) PreviewAgents(ctx workflow.Context, input *inspector.PreviewAgent
 	return &output, err
 }
 
-func (a *stub) PreviewAgentsAsync(ctx workflow.Context, input *inspector.PreviewAgentsInput) *InspectorPreviewAgentsFuture {
+func (a *stub) PreviewAgentsAsync(ctx workflow.Context, input *inspector.PreviewAgentsInput) *PreviewAgentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.PreviewAgents", input)
-	return &InspectorPreviewAgentsFuture{Future: future}
+	return &PreviewAgentsFuture{Future: future}
 }
 
 func (a *stub) RegisterCrossAccountAccessRole(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) (*inspector.RegisterCrossAccountAccessRoleOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) RegisterCrossAccountAccessRole(ctx workflow.Context, input *inspe
 	return &output, err
 }
 
-func (a *stub) RegisterCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) *InspectorRegisterCrossAccountAccessRoleFuture {
+func (a *stub) RegisterCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) *RegisterCrossAccountAccessRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.RegisterCrossAccountAccessRole", input)
-	return &InspectorRegisterCrossAccountAccessRoleFuture{Future: future}
+	return &RegisterCrossAccountAccessRoleFuture{Future: future}
 }
 
 func (a *stub) RemoveAttributesFromFindings(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) (*inspector.RemoveAttributesFromFindingsOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) RemoveAttributesFromFindings(ctx workflow.Context, input *inspect
 	return &output, err
 }
 
-func (a *stub) RemoveAttributesFromFindingsAsync(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) *InspectorRemoveAttributesFromFindingsFuture {
+func (a *stub) RemoveAttributesFromFindingsAsync(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) *RemoveAttributesFromFindingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.RemoveAttributesFromFindings", input)
-	return &InspectorRemoveAttributesFromFindingsFuture{Future: future}
+	return &RemoveAttributesFromFindingsFuture{Future: future}
 }
 
 func (a *stub) SetTagsForResource(ctx workflow.Context, input *inspector.SetTagsForResourceInput) (*inspector.SetTagsForResourceOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) SetTagsForResource(ctx workflow.Context, input *inspector.SetTags
 	return &output, err
 }
 
-func (a *stub) SetTagsForResourceAsync(ctx workflow.Context, input *inspector.SetTagsForResourceInput) *InspectorSetTagsForResourceFuture {
+func (a *stub) SetTagsForResourceAsync(ctx workflow.Context, input *inspector.SetTagsForResourceInput) *SetTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.SetTagsForResource", input)
-	return &InspectorSetTagsForResourceFuture{Future: future}
+	return &SetTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) StartAssessmentRun(ctx workflow.Context, input *inspector.StartAssessmentRunInput) (*inspector.StartAssessmentRunOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) StartAssessmentRun(ctx workflow.Context, input *inspector.StartAs
 	return &output, err
 }
 
-func (a *stub) StartAssessmentRunAsync(ctx workflow.Context, input *inspector.StartAssessmentRunInput) *InspectorStartAssessmentRunFuture {
+func (a *stub) StartAssessmentRunAsync(ctx workflow.Context, input *inspector.StartAssessmentRunInput) *StartAssessmentRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.StartAssessmentRun", input)
-	return &InspectorStartAssessmentRunFuture{Future: future}
+	return &StartAssessmentRunFuture{Future: future}
 }
 
 func (a *stub) StopAssessmentRun(ctx workflow.Context, input *inspector.StopAssessmentRunInput) (*inspector.StopAssessmentRunOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) StopAssessmentRun(ctx workflow.Context, input *inspector.StopAsse
 	return &output, err
 }
 
-func (a *stub) StopAssessmentRunAsync(ctx workflow.Context, input *inspector.StopAssessmentRunInput) *InspectorStopAssessmentRunFuture {
+func (a *stub) StopAssessmentRunAsync(ctx workflow.Context, input *inspector.StopAssessmentRunInput) *StopAssessmentRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.StopAssessmentRun", input)
-	return &InspectorStopAssessmentRunFuture{Future: future}
+	return &StopAssessmentRunFuture{Future: future}
 }
 
 func (a *stub) SubscribeToEvent(ctx workflow.Context, input *inspector.SubscribeToEventInput) (*inspector.SubscribeToEventOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) SubscribeToEvent(ctx workflow.Context, input *inspector.Subscribe
 	return &output, err
 }
 
-func (a *stub) SubscribeToEventAsync(ctx workflow.Context, input *inspector.SubscribeToEventInput) *InspectorSubscribeToEventFuture {
+func (a *stub) SubscribeToEventAsync(ctx workflow.Context, input *inspector.SubscribeToEventInput) *SubscribeToEventFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.SubscribeToEvent", input)
-	return &InspectorSubscribeToEventFuture{Future: future}
+	return &SubscribeToEventFuture{Future: future}
 }
 
 func (a *stub) UnsubscribeFromEvent(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) (*inspector.UnsubscribeFromEventOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) UnsubscribeFromEvent(ctx workflow.Context, input *inspector.Unsub
 	return &output, err
 }
 
-func (a *stub) UnsubscribeFromEventAsync(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) *InspectorUnsubscribeFromEventFuture {
+func (a *stub) UnsubscribeFromEventAsync(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) *UnsubscribeFromEventFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.UnsubscribeFromEvent", input)
-	return &InspectorUnsubscribeFromEventFuture{Future: future}
+	return &UnsubscribeFromEventFuture{Future: future}
 }
 
 func (a *stub) UpdateAssessmentTarget(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) (*inspector.UpdateAssessmentTargetOutput, error) {
@@ -825,7 +825,7 @@ func (a *stub) UpdateAssessmentTarget(ctx workflow.Context, input *inspector.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateAssessmentTargetAsync(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) *InspectorUpdateAssessmentTargetFuture {
+func (a *stub) UpdateAssessmentTargetAsync(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) *UpdateAssessmentTargetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.inspector.UpdateAssessmentTarget", input)
-	return &InspectorUpdateAssessmentTargetFuture{Future: future}
+	return &UpdateAssessmentTargetFuture{Future: future}
 }

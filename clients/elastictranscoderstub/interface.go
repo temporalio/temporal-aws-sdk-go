@@ -16,55 +16,55 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelJob(ctx workflow.Context, input *elastictranscoder.CancelJobInput) (*elastictranscoder.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *elastictranscoder.CancelJobInput) *ElasticTranscoderCancelJobFuture
+	CancelJobAsync(ctx workflow.Context, input *elastictranscoder.CancelJobInput) *CancelJobFuture
 
 	CreateJob(ctx workflow.Context, input *elastictranscoder.CreateJobInput) (*elastictranscoder.CreateJobResponse, error)
-	CreateJobAsync(ctx workflow.Context, input *elastictranscoder.CreateJobInput) *ElasticTranscoderCreateJobFuture
+	CreateJobAsync(ctx workflow.Context, input *elastictranscoder.CreateJobInput) *CreateJobFuture
 
 	CreatePipeline(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) (*elastictranscoder.CreatePipelineOutput, error)
-	CreatePipelineAsync(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) *ElasticTranscoderCreatePipelineFuture
+	CreatePipelineAsync(ctx workflow.Context, input *elastictranscoder.CreatePipelineInput) *CreatePipelineFuture
 
 	CreatePreset(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) (*elastictranscoder.CreatePresetOutput, error)
-	CreatePresetAsync(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) *ElasticTranscoderCreatePresetFuture
+	CreatePresetAsync(ctx workflow.Context, input *elastictranscoder.CreatePresetInput) *CreatePresetFuture
 
 	DeletePipeline(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) (*elastictranscoder.DeletePipelineOutput, error)
-	DeletePipelineAsync(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) *ElasticTranscoderDeletePipelineFuture
+	DeletePipelineAsync(ctx workflow.Context, input *elastictranscoder.DeletePipelineInput) *DeletePipelineFuture
 
 	DeletePreset(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) (*elastictranscoder.DeletePresetOutput, error)
-	DeletePresetAsync(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) *ElasticTranscoderDeletePresetFuture
+	DeletePresetAsync(ctx workflow.Context, input *elastictranscoder.DeletePresetInput) *DeletePresetFuture
 
 	ListJobsByPipeline(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) (*elastictranscoder.ListJobsByPipelineOutput, error)
-	ListJobsByPipelineAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) *ElasticTranscoderListJobsByPipelineFuture
+	ListJobsByPipelineAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByPipelineInput) *ListJobsByPipelineFuture
 
 	ListJobsByStatus(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) (*elastictranscoder.ListJobsByStatusOutput, error)
-	ListJobsByStatusAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) *ElasticTranscoderListJobsByStatusFuture
+	ListJobsByStatusAsync(ctx workflow.Context, input *elastictranscoder.ListJobsByStatusInput) *ListJobsByStatusFuture
 
 	ListPipelines(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) (*elastictranscoder.ListPipelinesOutput, error)
-	ListPipelinesAsync(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) *ElasticTranscoderListPipelinesFuture
+	ListPipelinesAsync(ctx workflow.Context, input *elastictranscoder.ListPipelinesInput) *ListPipelinesFuture
 
 	ListPresets(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) (*elastictranscoder.ListPresetsOutput, error)
-	ListPresetsAsync(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) *ElasticTranscoderListPresetsFuture
+	ListPresetsAsync(ctx workflow.Context, input *elastictranscoder.ListPresetsInput) *ListPresetsFuture
 
 	ReadJob(ctx workflow.Context, input *elastictranscoder.ReadJobInput) (*elastictranscoder.ReadJobOutput, error)
-	ReadJobAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *ElasticTranscoderReadJobFuture
+	ReadJobAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *ReadJobFuture
 
 	ReadPipeline(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) (*elastictranscoder.ReadPipelineOutput, error)
-	ReadPipelineAsync(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) *ElasticTranscoderReadPipelineFuture
+	ReadPipelineAsync(ctx workflow.Context, input *elastictranscoder.ReadPipelineInput) *ReadPipelineFuture
 
 	ReadPreset(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) (*elastictranscoder.ReadPresetOutput, error)
-	ReadPresetAsync(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) *ElasticTranscoderReadPresetFuture
+	ReadPresetAsync(ctx workflow.Context, input *elastictranscoder.ReadPresetInput) *ReadPresetFuture
 
 	TestRole(ctx workflow.Context, input *elastictranscoder.TestRoleInput) (*elastictranscoder.TestRoleOutput, error)
-	TestRoleAsync(ctx workflow.Context, input *elastictranscoder.TestRoleInput) *ElasticTranscoderTestRoleFuture
+	TestRoleAsync(ctx workflow.Context, input *elastictranscoder.TestRoleInput) *TestRoleFuture
 
 	UpdatePipeline(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) (*elastictranscoder.UpdatePipelineOutput, error)
-	UpdatePipelineAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) *ElasticTranscoderUpdatePipelineFuture
+	UpdatePipelineAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineInput) *UpdatePipelineFuture
 
 	UpdatePipelineNotifications(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) (*elastictranscoder.UpdatePipelineNotificationsOutput, error)
-	UpdatePipelineNotificationsAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) *ElasticTranscoderUpdatePipelineNotificationsFuture
+	UpdatePipelineNotificationsAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineNotificationsInput) *UpdatePipelineNotificationsFuture
 
 	UpdatePipelineStatus(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) (*elastictranscoder.UpdatePipelineStatusOutput, error)
-	UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *ElasticTranscoderUpdatePipelineStatusFuture
+	UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *UpdatePipelineStatusFuture
 
 	WaitUntilJobComplete(ctx workflow.Context, input *elastictranscoder.ReadJobInput) error
 	WaitUntilJobCompleteAsync(ctx workflow.Context, input *elastictranscoder.ReadJobInput) *clients.VoidFuture

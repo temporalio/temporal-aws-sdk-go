@@ -16,10 +16,10 @@ var _ clients.VoidFuture
 
 type Client interface {
 	GetPersonalizedRanking(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error)
-	GetPersonalizedRankingAsync(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) *PersonalizeRuntimeGetPersonalizedRankingFuture
+	GetPersonalizedRankingAsync(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) *GetPersonalizedRankingFuture
 
 	GetRecommendations(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error)
-	GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *PersonalizeRuntimeGetRecommendationsFuture
+	GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *GetRecommendationsFuture
 }
 
 func NewClient() Client {

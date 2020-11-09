@@ -16,22 +16,22 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AnalyzeDocument(ctx workflow.Context, input *textract.AnalyzeDocumentInput) (*textract.AnalyzeDocumentOutput, error)
-	AnalyzeDocumentAsync(ctx workflow.Context, input *textract.AnalyzeDocumentInput) *TextractAnalyzeDocumentFuture
+	AnalyzeDocumentAsync(ctx workflow.Context, input *textract.AnalyzeDocumentInput) *AnalyzeDocumentFuture
 
 	DetectDocumentText(ctx workflow.Context, input *textract.DetectDocumentTextInput) (*textract.DetectDocumentTextOutput, error)
-	DetectDocumentTextAsync(ctx workflow.Context, input *textract.DetectDocumentTextInput) *TextractDetectDocumentTextFuture
+	DetectDocumentTextAsync(ctx workflow.Context, input *textract.DetectDocumentTextInput) *DetectDocumentTextFuture
 
 	GetDocumentAnalysis(ctx workflow.Context, input *textract.GetDocumentAnalysisInput) (*textract.GetDocumentAnalysisOutput, error)
-	GetDocumentAnalysisAsync(ctx workflow.Context, input *textract.GetDocumentAnalysisInput) *TextractGetDocumentAnalysisFuture
+	GetDocumentAnalysisAsync(ctx workflow.Context, input *textract.GetDocumentAnalysisInput) *GetDocumentAnalysisFuture
 
 	GetDocumentTextDetection(ctx workflow.Context, input *textract.GetDocumentTextDetectionInput) (*textract.GetDocumentTextDetectionOutput, error)
-	GetDocumentTextDetectionAsync(ctx workflow.Context, input *textract.GetDocumentTextDetectionInput) *TextractGetDocumentTextDetectionFuture
+	GetDocumentTextDetectionAsync(ctx workflow.Context, input *textract.GetDocumentTextDetectionInput) *GetDocumentTextDetectionFuture
 
 	StartDocumentAnalysis(ctx workflow.Context, input *textract.StartDocumentAnalysisInput) (*textract.StartDocumentAnalysisOutput, error)
-	StartDocumentAnalysisAsync(ctx workflow.Context, input *textract.StartDocumentAnalysisInput) *TextractStartDocumentAnalysisFuture
+	StartDocumentAnalysisAsync(ctx workflow.Context, input *textract.StartDocumentAnalysisInput) *StartDocumentAnalysisFuture
 
 	StartDocumentTextDetection(ctx workflow.Context, input *textract.StartDocumentTextDetectionInput) (*textract.StartDocumentTextDetectionOutput, error)
-	StartDocumentTextDetectionAsync(ctx workflow.Context, input *textract.StartDocumentTextDetectionInput) *TextractStartDocumentTextDetectionFuture
+	StartDocumentTextDetectionAsync(ctx workflow.Context, input *textract.StartDocumentTextDetectionInput) *StartDocumentTextDetectionFuture
 }
 
 func NewClient() Client {

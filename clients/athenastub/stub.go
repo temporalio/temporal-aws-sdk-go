@@ -16,309 +16,309 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type AthenaBatchGetNamedQueryFuture struct {
+type BatchGetNamedQueryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaBatchGetNamedQueryFuture) Get(ctx workflow.Context) (*athena.BatchGetNamedQueryOutput, error) {
+func (r *BatchGetNamedQueryFuture) Get(ctx workflow.Context) (*athena.BatchGetNamedQueryOutput, error) {
 	var output athena.BatchGetNamedQueryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaBatchGetQueryExecutionFuture struct {
+type BatchGetQueryExecutionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaBatchGetQueryExecutionFuture) Get(ctx workflow.Context) (*athena.BatchGetQueryExecutionOutput, error) {
+func (r *BatchGetQueryExecutionFuture) Get(ctx workflow.Context) (*athena.BatchGetQueryExecutionOutput, error) {
 	var output athena.BatchGetQueryExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaCreateDataCatalogFuture struct {
+type CreateDataCatalogFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaCreateDataCatalogFuture) Get(ctx workflow.Context) (*athena.CreateDataCatalogOutput, error) {
+func (r *CreateDataCatalogFuture) Get(ctx workflow.Context) (*athena.CreateDataCatalogOutput, error) {
 	var output athena.CreateDataCatalogOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaCreateNamedQueryFuture struct {
+type CreateNamedQueryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaCreateNamedQueryFuture) Get(ctx workflow.Context) (*athena.CreateNamedQueryOutput, error) {
+func (r *CreateNamedQueryFuture) Get(ctx workflow.Context) (*athena.CreateNamedQueryOutput, error) {
 	var output athena.CreateNamedQueryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaCreateWorkGroupFuture struct {
+type CreateWorkGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaCreateWorkGroupFuture) Get(ctx workflow.Context) (*athena.CreateWorkGroupOutput, error) {
+func (r *CreateWorkGroupFuture) Get(ctx workflow.Context) (*athena.CreateWorkGroupOutput, error) {
 	var output athena.CreateWorkGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaDeleteDataCatalogFuture struct {
+type DeleteDataCatalogFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaDeleteDataCatalogFuture) Get(ctx workflow.Context) (*athena.DeleteDataCatalogOutput, error) {
+func (r *DeleteDataCatalogFuture) Get(ctx workflow.Context) (*athena.DeleteDataCatalogOutput, error) {
 	var output athena.DeleteDataCatalogOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaDeleteNamedQueryFuture struct {
+type DeleteNamedQueryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaDeleteNamedQueryFuture) Get(ctx workflow.Context) (*athena.DeleteNamedQueryOutput, error) {
+func (r *DeleteNamedQueryFuture) Get(ctx workflow.Context) (*athena.DeleteNamedQueryOutput, error) {
 	var output athena.DeleteNamedQueryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaDeleteWorkGroupFuture struct {
+type DeleteWorkGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaDeleteWorkGroupFuture) Get(ctx workflow.Context) (*athena.DeleteWorkGroupOutput, error) {
+func (r *DeleteWorkGroupFuture) Get(ctx workflow.Context) (*athena.DeleteWorkGroupOutput, error) {
 	var output athena.DeleteWorkGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaGetDataCatalogFuture struct {
+type GetDataCatalogFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaGetDataCatalogFuture) Get(ctx workflow.Context) (*athena.GetDataCatalogOutput, error) {
+func (r *GetDataCatalogFuture) Get(ctx workflow.Context) (*athena.GetDataCatalogOutput, error) {
 	var output athena.GetDataCatalogOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaGetDatabaseFuture struct {
+type GetDatabaseFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaGetDatabaseFuture) Get(ctx workflow.Context) (*athena.GetDatabaseOutput, error) {
+func (r *GetDatabaseFuture) Get(ctx workflow.Context) (*athena.GetDatabaseOutput, error) {
 	var output athena.GetDatabaseOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaGetNamedQueryFuture struct {
+type GetNamedQueryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaGetNamedQueryFuture) Get(ctx workflow.Context) (*athena.GetNamedQueryOutput, error) {
+func (r *GetNamedQueryFuture) Get(ctx workflow.Context) (*athena.GetNamedQueryOutput, error) {
 	var output athena.GetNamedQueryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaGetQueryExecutionFuture struct {
+type GetQueryExecutionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaGetQueryExecutionFuture) Get(ctx workflow.Context) (*athena.GetQueryExecutionOutput, error) {
+func (r *GetQueryExecutionFuture) Get(ctx workflow.Context) (*athena.GetQueryExecutionOutput, error) {
 	var output athena.GetQueryExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaGetQueryResultsFuture struct {
+type GetQueryResultsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaGetQueryResultsFuture) Get(ctx workflow.Context) (*athena.GetQueryResultsOutput, error) {
+func (r *GetQueryResultsFuture) Get(ctx workflow.Context) (*athena.GetQueryResultsOutput, error) {
 	var output athena.GetQueryResultsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaGetTableMetadataFuture struct {
+type GetTableMetadataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaGetTableMetadataFuture) Get(ctx workflow.Context) (*athena.GetTableMetadataOutput, error) {
+func (r *GetTableMetadataFuture) Get(ctx workflow.Context) (*athena.GetTableMetadataOutput, error) {
 	var output athena.GetTableMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaGetWorkGroupFuture struct {
+type GetWorkGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaGetWorkGroupFuture) Get(ctx workflow.Context) (*athena.GetWorkGroupOutput, error) {
+func (r *GetWorkGroupFuture) Get(ctx workflow.Context) (*athena.GetWorkGroupOutput, error) {
 	var output athena.GetWorkGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaListDataCatalogsFuture struct {
+type ListDataCatalogsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaListDataCatalogsFuture) Get(ctx workflow.Context) (*athena.ListDataCatalogsOutput, error) {
+func (r *ListDataCatalogsFuture) Get(ctx workflow.Context) (*athena.ListDataCatalogsOutput, error) {
 	var output athena.ListDataCatalogsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaListDatabasesFuture struct {
+type ListDatabasesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaListDatabasesFuture) Get(ctx workflow.Context) (*athena.ListDatabasesOutput, error) {
+func (r *ListDatabasesFuture) Get(ctx workflow.Context) (*athena.ListDatabasesOutput, error) {
 	var output athena.ListDatabasesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaListNamedQueriesFuture struct {
+type ListNamedQueriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaListNamedQueriesFuture) Get(ctx workflow.Context) (*athena.ListNamedQueriesOutput, error) {
+func (r *ListNamedQueriesFuture) Get(ctx workflow.Context) (*athena.ListNamedQueriesOutput, error) {
 	var output athena.ListNamedQueriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaListQueryExecutionsFuture struct {
+type ListQueryExecutionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaListQueryExecutionsFuture) Get(ctx workflow.Context) (*athena.ListQueryExecutionsOutput, error) {
+func (r *ListQueryExecutionsFuture) Get(ctx workflow.Context) (*athena.ListQueryExecutionsOutput, error) {
 	var output athena.ListQueryExecutionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaListTableMetadataFuture struct {
+type ListTableMetadataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaListTableMetadataFuture) Get(ctx workflow.Context) (*athena.ListTableMetadataOutput, error) {
+func (r *ListTableMetadataFuture) Get(ctx workflow.Context) (*athena.ListTableMetadataOutput, error) {
 	var output athena.ListTableMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaListTagsForResourceFuture) Get(ctx workflow.Context) (*athena.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*athena.ListTagsForResourceOutput, error) {
 	var output athena.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaListWorkGroupsFuture struct {
+type ListWorkGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaListWorkGroupsFuture) Get(ctx workflow.Context) (*athena.ListWorkGroupsOutput, error) {
+func (r *ListWorkGroupsFuture) Get(ctx workflow.Context) (*athena.ListWorkGroupsOutput, error) {
 	var output athena.ListWorkGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaStartQueryExecutionFuture struct {
+type StartQueryExecutionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaStartQueryExecutionFuture) Get(ctx workflow.Context) (*athena.StartQueryExecutionOutput, error) {
+func (r *StartQueryExecutionFuture) Get(ctx workflow.Context) (*athena.StartQueryExecutionOutput, error) {
 	var output athena.StartQueryExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaStopQueryExecutionFuture struct {
+type StopQueryExecutionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaStopQueryExecutionFuture) Get(ctx workflow.Context) (*athena.StopQueryExecutionOutput, error) {
+func (r *StopQueryExecutionFuture) Get(ctx workflow.Context) (*athena.StopQueryExecutionOutput, error) {
 	var output athena.StopQueryExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaTagResourceFuture) Get(ctx workflow.Context) (*athena.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*athena.TagResourceOutput, error) {
 	var output athena.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaUntagResourceFuture) Get(ctx workflow.Context) (*athena.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*athena.UntagResourceOutput, error) {
 	var output athena.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaUpdateDataCatalogFuture struct {
+type UpdateDataCatalogFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaUpdateDataCatalogFuture) Get(ctx workflow.Context) (*athena.UpdateDataCatalogOutput, error) {
+func (r *UpdateDataCatalogFuture) Get(ctx workflow.Context) (*athena.UpdateDataCatalogOutput, error) {
 	var output athena.UpdateDataCatalogOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AthenaUpdateWorkGroupFuture struct {
+type UpdateWorkGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AthenaUpdateWorkGroupFuture) Get(ctx workflow.Context) (*athena.UpdateWorkGroupOutput, error) {
+func (r *UpdateWorkGroupFuture) Get(ctx workflow.Context) (*athena.UpdateWorkGroupOutput, error) {
 	var output athena.UpdateWorkGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -330,9 +330,9 @@ func (a *stub) BatchGetNamedQuery(ctx workflow.Context, input *athena.BatchGetNa
 	return &output, err
 }
 
-func (a *stub) BatchGetNamedQueryAsync(ctx workflow.Context, input *athena.BatchGetNamedQueryInput) *AthenaBatchGetNamedQueryFuture {
+func (a *stub) BatchGetNamedQueryAsync(ctx workflow.Context, input *athena.BatchGetNamedQueryInput) *BatchGetNamedQueryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.BatchGetNamedQuery", input)
-	return &AthenaBatchGetNamedQueryFuture{Future: future}
+	return &BatchGetNamedQueryFuture{Future: future}
 }
 
 func (a *stub) BatchGetQueryExecution(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) (*athena.BatchGetQueryExecutionOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) BatchGetQueryExecution(ctx workflow.Context, input *athena.BatchG
 	return &output, err
 }
 
-func (a *stub) BatchGetQueryExecutionAsync(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) *AthenaBatchGetQueryExecutionFuture {
+func (a *stub) BatchGetQueryExecutionAsync(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) *BatchGetQueryExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.BatchGetQueryExecution", input)
-	return &AthenaBatchGetQueryExecutionFuture{Future: future}
+	return &BatchGetQueryExecutionFuture{Future: future}
 }
 
 func (a *stub) CreateDataCatalog(ctx workflow.Context, input *athena.CreateDataCatalogInput) (*athena.CreateDataCatalogOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) CreateDataCatalog(ctx workflow.Context, input *athena.CreateDataC
 	return &output, err
 }
 
-func (a *stub) CreateDataCatalogAsync(ctx workflow.Context, input *athena.CreateDataCatalogInput) *AthenaCreateDataCatalogFuture {
+func (a *stub) CreateDataCatalogAsync(ctx workflow.Context, input *athena.CreateDataCatalogInput) *CreateDataCatalogFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.CreateDataCatalog", input)
-	return &AthenaCreateDataCatalogFuture{Future: future}
+	return &CreateDataCatalogFuture{Future: future}
 }
 
 func (a *stub) CreateNamedQuery(ctx workflow.Context, input *athena.CreateNamedQueryInput) (*athena.CreateNamedQueryOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) CreateNamedQuery(ctx workflow.Context, input *athena.CreateNamedQ
 	return &output, err
 }
 
-func (a *stub) CreateNamedQueryAsync(ctx workflow.Context, input *athena.CreateNamedQueryInput) *AthenaCreateNamedQueryFuture {
+func (a *stub) CreateNamedQueryAsync(ctx workflow.Context, input *athena.CreateNamedQueryInput) *CreateNamedQueryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.CreateNamedQuery", input)
-	return &AthenaCreateNamedQueryFuture{Future: future}
+	return &CreateNamedQueryFuture{Future: future}
 }
 
 func (a *stub) CreateWorkGroup(ctx workflow.Context, input *athena.CreateWorkGroupInput) (*athena.CreateWorkGroupOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) CreateWorkGroup(ctx workflow.Context, input *athena.CreateWorkGro
 	return &output, err
 }
 
-func (a *stub) CreateWorkGroupAsync(ctx workflow.Context, input *athena.CreateWorkGroupInput) *AthenaCreateWorkGroupFuture {
+func (a *stub) CreateWorkGroupAsync(ctx workflow.Context, input *athena.CreateWorkGroupInput) *CreateWorkGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.CreateWorkGroup", input)
-	return &AthenaCreateWorkGroupFuture{Future: future}
+	return &CreateWorkGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteDataCatalog(ctx workflow.Context, input *athena.DeleteDataCatalogInput) (*athena.DeleteDataCatalogOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) DeleteDataCatalog(ctx workflow.Context, input *athena.DeleteDataC
 	return &output, err
 }
 
-func (a *stub) DeleteDataCatalogAsync(ctx workflow.Context, input *athena.DeleteDataCatalogInput) *AthenaDeleteDataCatalogFuture {
+func (a *stub) DeleteDataCatalogAsync(ctx workflow.Context, input *athena.DeleteDataCatalogInput) *DeleteDataCatalogFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.DeleteDataCatalog", input)
-	return &AthenaDeleteDataCatalogFuture{Future: future}
+	return &DeleteDataCatalogFuture{Future: future}
 }
 
 func (a *stub) DeleteNamedQuery(ctx workflow.Context, input *athena.DeleteNamedQueryInput) (*athena.DeleteNamedQueryOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) DeleteNamedQuery(ctx workflow.Context, input *athena.DeleteNamedQ
 	return &output, err
 }
 
-func (a *stub) DeleteNamedQueryAsync(ctx workflow.Context, input *athena.DeleteNamedQueryInput) *AthenaDeleteNamedQueryFuture {
+func (a *stub) DeleteNamedQueryAsync(ctx workflow.Context, input *athena.DeleteNamedQueryInput) *DeleteNamedQueryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.DeleteNamedQuery", input)
-	return &AthenaDeleteNamedQueryFuture{Future: future}
+	return &DeleteNamedQueryFuture{Future: future}
 }
 
 func (a *stub) DeleteWorkGroup(ctx workflow.Context, input *athena.DeleteWorkGroupInput) (*athena.DeleteWorkGroupOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) DeleteWorkGroup(ctx workflow.Context, input *athena.DeleteWorkGro
 	return &output, err
 }
 
-func (a *stub) DeleteWorkGroupAsync(ctx workflow.Context, input *athena.DeleteWorkGroupInput) *AthenaDeleteWorkGroupFuture {
+func (a *stub) DeleteWorkGroupAsync(ctx workflow.Context, input *athena.DeleteWorkGroupInput) *DeleteWorkGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.DeleteWorkGroup", input)
-	return &AthenaDeleteWorkGroupFuture{Future: future}
+	return &DeleteWorkGroupFuture{Future: future}
 }
 
 func (a *stub) GetDataCatalog(ctx workflow.Context, input *athena.GetDataCatalogInput) (*athena.GetDataCatalogOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) GetDataCatalog(ctx workflow.Context, input *athena.GetDataCatalog
 	return &output, err
 }
 
-func (a *stub) GetDataCatalogAsync(ctx workflow.Context, input *athena.GetDataCatalogInput) *AthenaGetDataCatalogFuture {
+func (a *stub) GetDataCatalogAsync(ctx workflow.Context, input *athena.GetDataCatalogInput) *GetDataCatalogFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.GetDataCatalog", input)
-	return &AthenaGetDataCatalogFuture{Future: future}
+	return &GetDataCatalogFuture{Future: future}
 }
 
 func (a *stub) GetDatabase(ctx workflow.Context, input *athena.GetDatabaseInput) (*athena.GetDatabaseOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) GetDatabase(ctx workflow.Context, input *athena.GetDatabaseInput)
 	return &output, err
 }
 
-func (a *stub) GetDatabaseAsync(ctx workflow.Context, input *athena.GetDatabaseInput) *AthenaGetDatabaseFuture {
+func (a *stub) GetDatabaseAsync(ctx workflow.Context, input *athena.GetDatabaseInput) *GetDatabaseFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.GetDatabase", input)
-	return &AthenaGetDatabaseFuture{Future: future}
+	return &GetDatabaseFuture{Future: future}
 }
 
 func (a *stub) GetNamedQuery(ctx workflow.Context, input *athena.GetNamedQueryInput) (*athena.GetNamedQueryOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) GetNamedQuery(ctx workflow.Context, input *athena.GetNamedQueryIn
 	return &output, err
 }
 
-func (a *stub) GetNamedQueryAsync(ctx workflow.Context, input *athena.GetNamedQueryInput) *AthenaGetNamedQueryFuture {
+func (a *stub) GetNamedQueryAsync(ctx workflow.Context, input *athena.GetNamedQueryInput) *GetNamedQueryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.GetNamedQuery", input)
-	return &AthenaGetNamedQueryFuture{Future: future}
+	return &GetNamedQueryFuture{Future: future}
 }
 
 func (a *stub) GetQueryExecution(ctx workflow.Context, input *athena.GetQueryExecutionInput) (*athena.GetQueryExecutionOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) GetQueryExecution(ctx workflow.Context, input *athena.GetQueryExe
 	return &output, err
 }
 
-func (a *stub) GetQueryExecutionAsync(ctx workflow.Context, input *athena.GetQueryExecutionInput) *AthenaGetQueryExecutionFuture {
+func (a *stub) GetQueryExecutionAsync(ctx workflow.Context, input *athena.GetQueryExecutionInput) *GetQueryExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.GetQueryExecution", input)
-	return &AthenaGetQueryExecutionFuture{Future: future}
+	return &GetQueryExecutionFuture{Future: future}
 }
 
 func (a *stub) GetQueryResults(ctx workflow.Context, input *athena.GetQueryResultsInput) (*athena.GetQueryResultsOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) GetQueryResults(ctx workflow.Context, input *athena.GetQueryResul
 	return &output, err
 }
 
-func (a *stub) GetQueryResultsAsync(ctx workflow.Context, input *athena.GetQueryResultsInput) *AthenaGetQueryResultsFuture {
+func (a *stub) GetQueryResultsAsync(ctx workflow.Context, input *athena.GetQueryResultsInput) *GetQueryResultsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.GetQueryResults", input)
-	return &AthenaGetQueryResultsFuture{Future: future}
+	return &GetQueryResultsFuture{Future: future}
 }
 
 func (a *stub) GetTableMetadata(ctx workflow.Context, input *athena.GetTableMetadataInput) (*athena.GetTableMetadataOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) GetTableMetadata(ctx workflow.Context, input *athena.GetTableMeta
 	return &output, err
 }
 
-func (a *stub) GetTableMetadataAsync(ctx workflow.Context, input *athena.GetTableMetadataInput) *AthenaGetTableMetadataFuture {
+func (a *stub) GetTableMetadataAsync(ctx workflow.Context, input *athena.GetTableMetadataInput) *GetTableMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.GetTableMetadata", input)
-	return &AthenaGetTableMetadataFuture{Future: future}
+	return &GetTableMetadataFuture{Future: future}
 }
 
 func (a *stub) GetWorkGroup(ctx workflow.Context, input *athena.GetWorkGroupInput) (*athena.GetWorkGroupOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) GetWorkGroup(ctx workflow.Context, input *athena.GetWorkGroupInpu
 	return &output, err
 }
 
-func (a *stub) GetWorkGroupAsync(ctx workflow.Context, input *athena.GetWorkGroupInput) *AthenaGetWorkGroupFuture {
+func (a *stub) GetWorkGroupAsync(ctx workflow.Context, input *athena.GetWorkGroupInput) *GetWorkGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.GetWorkGroup", input)
-	return &AthenaGetWorkGroupFuture{Future: future}
+	return &GetWorkGroupFuture{Future: future}
 }
 
 func (a *stub) ListDataCatalogs(ctx workflow.Context, input *athena.ListDataCatalogsInput) (*athena.ListDataCatalogsOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) ListDataCatalogs(ctx workflow.Context, input *athena.ListDataCata
 	return &output, err
 }
 
-func (a *stub) ListDataCatalogsAsync(ctx workflow.Context, input *athena.ListDataCatalogsInput) *AthenaListDataCatalogsFuture {
+func (a *stub) ListDataCatalogsAsync(ctx workflow.Context, input *athena.ListDataCatalogsInput) *ListDataCatalogsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.ListDataCatalogs", input)
-	return &AthenaListDataCatalogsFuture{Future: future}
+	return &ListDataCatalogsFuture{Future: future}
 }
 
 func (a *stub) ListDatabases(ctx workflow.Context, input *athena.ListDatabasesInput) (*athena.ListDatabasesOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) ListDatabases(ctx workflow.Context, input *athena.ListDatabasesIn
 	return &output, err
 }
 
-func (a *stub) ListDatabasesAsync(ctx workflow.Context, input *athena.ListDatabasesInput) *AthenaListDatabasesFuture {
+func (a *stub) ListDatabasesAsync(ctx workflow.Context, input *athena.ListDatabasesInput) *ListDatabasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.ListDatabases", input)
-	return &AthenaListDatabasesFuture{Future: future}
+	return &ListDatabasesFuture{Future: future}
 }
 
 func (a *stub) ListNamedQueries(ctx workflow.Context, input *athena.ListNamedQueriesInput) (*athena.ListNamedQueriesOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) ListNamedQueries(ctx workflow.Context, input *athena.ListNamedQue
 	return &output, err
 }
 
-func (a *stub) ListNamedQueriesAsync(ctx workflow.Context, input *athena.ListNamedQueriesInput) *AthenaListNamedQueriesFuture {
+func (a *stub) ListNamedQueriesAsync(ctx workflow.Context, input *athena.ListNamedQueriesInput) *ListNamedQueriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.ListNamedQueries", input)
-	return &AthenaListNamedQueriesFuture{Future: future}
+	return &ListNamedQueriesFuture{Future: future}
 }
 
 func (a *stub) ListQueryExecutions(ctx workflow.Context, input *athena.ListQueryExecutionsInput) (*athena.ListQueryExecutionsOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) ListQueryExecutions(ctx workflow.Context, input *athena.ListQuery
 	return &output, err
 }
 
-func (a *stub) ListQueryExecutionsAsync(ctx workflow.Context, input *athena.ListQueryExecutionsInput) *AthenaListQueryExecutionsFuture {
+func (a *stub) ListQueryExecutionsAsync(ctx workflow.Context, input *athena.ListQueryExecutionsInput) *ListQueryExecutionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.ListQueryExecutions", input)
-	return &AthenaListQueryExecutionsFuture{Future: future}
+	return &ListQueryExecutionsFuture{Future: future}
 }
 
 func (a *stub) ListTableMetadata(ctx workflow.Context, input *athena.ListTableMetadataInput) (*athena.ListTableMetadataOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) ListTableMetadata(ctx workflow.Context, input *athena.ListTableMe
 	return &output, err
 }
 
-func (a *stub) ListTableMetadataAsync(ctx workflow.Context, input *athena.ListTableMetadataInput) *AthenaListTableMetadataFuture {
+func (a *stub) ListTableMetadataAsync(ctx workflow.Context, input *athena.ListTableMetadataInput) *ListTableMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.ListTableMetadata", input)
-	return &AthenaListTableMetadataFuture{Future: future}
+	return &ListTableMetadataFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *athena.ListTagsForResourceInput) (*athena.ListTagsForResourceOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *athena.ListTagsF
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *athena.ListTagsForResourceInput) *AthenaListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *athena.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.ListTagsForResource", input)
-	return &AthenaListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListWorkGroups(ctx workflow.Context, input *athena.ListWorkGroupsInput) (*athena.ListWorkGroupsOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) ListWorkGroups(ctx workflow.Context, input *athena.ListWorkGroups
 	return &output, err
 }
 
-func (a *stub) ListWorkGroupsAsync(ctx workflow.Context, input *athena.ListWorkGroupsInput) *AthenaListWorkGroupsFuture {
+func (a *stub) ListWorkGroupsAsync(ctx workflow.Context, input *athena.ListWorkGroupsInput) *ListWorkGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.ListWorkGroups", input)
-	return &AthenaListWorkGroupsFuture{Future: future}
+	return &ListWorkGroupsFuture{Future: future}
 }
 
 func (a *stub) StartQueryExecution(ctx workflow.Context, input *athena.StartQueryExecutionInput) (*athena.StartQueryExecutionOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) StartQueryExecution(ctx workflow.Context, input *athena.StartQuer
 	return &output, err
 }
 
-func (a *stub) StartQueryExecutionAsync(ctx workflow.Context, input *athena.StartQueryExecutionInput) *AthenaStartQueryExecutionFuture {
+func (a *stub) StartQueryExecutionAsync(ctx workflow.Context, input *athena.StartQueryExecutionInput) *StartQueryExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.StartQueryExecution", input)
-	return &AthenaStartQueryExecutionFuture{Future: future}
+	return &StartQueryExecutionFuture{Future: future}
 }
 
 func (a *stub) StopQueryExecution(ctx workflow.Context, input *athena.StopQueryExecutionInput) (*athena.StopQueryExecutionOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) StopQueryExecution(ctx workflow.Context, input *athena.StopQueryE
 	return &output, err
 }
 
-func (a *stub) StopQueryExecutionAsync(ctx workflow.Context, input *athena.StopQueryExecutionInput) *AthenaStopQueryExecutionFuture {
+func (a *stub) StopQueryExecutionAsync(ctx workflow.Context, input *athena.StopQueryExecutionInput) *StopQueryExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.StopQueryExecution", input)
-	return &AthenaStopQueryExecutionFuture{Future: future}
+	return &StopQueryExecutionFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *athena.TagResourceInput) (*athena.TagResourceOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *athena.TagResourceInput)
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *athena.TagResourceInput) *AthenaTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *athena.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.TagResource", input)
-	return &AthenaTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *athena.UntagResourceInput) (*athena.UntagResourceOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *athena.UntagResourceIn
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *athena.UntagResourceInput) *AthenaUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *athena.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.UntagResource", input)
-	return &AthenaUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateDataCatalog(ctx workflow.Context, input *athena.UpdateDataCatalogInput) (*athena.UpdateDataCatalogOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) UpdateDataCatalog(ctx workflow.Context, input *athena.UpdateDataC
 	return &output, err
 }
 
-func (a *stub) UpdateDataCatalogAsync(ctx workflow.Context, input *athena.UpdateDataCatalogInput) *AthenaUpdateDataCatalogFuture {
+func (a *stub) UpdateDataCatalogAsync(ctx workflow.Context, input *athena.UpdateDataCatalogInput) *UpdateDataCatalogFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.UpdateDataCatalog", input)
-	return &AthenaUpdateDataCatalogFuture{Future: future}
+	return &UpdateDataCatalogFuture{Future: future}
 }
 
 func (a *stub) UpdateWorkGroup(ctx workflow.Context, input *athena.UpdateWorkGroupInput) (*athena.UpdateWorkGroupOutput, error) {
@@ -627,7 +627,7 @@ func (a *stub) UpdateWorkGroup(ctx workflow.Context, input *athena.UpdateWorkGro
 	return &output, err
 }
 
-func (a *stub) UpdateWorkGroupAsync(ctx workflow.Context, input *athena.UpdateWorkGroupInput) *AthenaUpdateWorkGroupFuture {
+func (a *stub) UpdateWorkGroupAsync(ctx workflow.Context, input *athena.UpdateWorkGroupInput) *UpdateWorkGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.athena.UpdateWorkGroup", input)
-	return &AthenaUpdateWorkGroupFuture{Future: future}
+	return &UpdateWorkGroupFuture{Future: future}
 }

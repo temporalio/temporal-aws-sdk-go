@@ -16,61 +16,61 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelRotateSecret(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) (*secretsmanager.CancelRotateSecretOutput, error)
-	CancelRotateSecretAsync(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) *SecretsManagerCancelRotateSecretFuture
+	CancelRotateSecretAsync(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) *CancelRotateSecretFuture
 
 	CreateSecret(ctx workflow.Context, input *secretsmanager.CreateSecretInput) (*secretsmanager.CreateSecretOutput, error)
-	CreateSecretAsync(ctx workflow.Context, input *secretsmanager.CreateSecretInput) *SecretsManagerCreateSecretFuture
+	CreateSecretAsync(ctx workflow.Context, input *secretsmanager.CreateSecretInput) *CreateSecretFuture
 
 	DeleteResourcePolicy(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) (*secretsmanager.DeleteResourcePolicyOutput, error)
-	DeleteResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) *SecretsManagerDeleteResourcePolicyFuture
+	DeleteResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) *DeleteResourcePolicyFuture
 
 	DeleteSecret(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) (*secretsmanager.DeleteSecretOutput, error)
-	DeleteSecretAsync(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) *SecretsManagerDeleteSecretFuture
+	DeleteSecretAsync(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) *DeleteSecretFuture
 
 	DescribeSecret(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) (*secretsmanager.DescribeSecretOutput, error)
-	DescribeSecretAsync(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) *SecretsManagerDescribeSecretFuture
+	DescribeSecretAsync(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) *DescribeSecretFuture
 
 	GetRandomPassword(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) (*secretsmanager.GetRandomPasswordOutput, error)
-	GetRandomPasswordAsync(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) *SecretsManagerGetRandomPasswordFuture
+	GetRandomPasswordAsync(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) *GetRandomPasswordFuture
 
 	GetResourcePolicy(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) (*secretsmanager.GetResourcePolicyOutput, error)
-	GetResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) *SecretsManagerGetResourcePolicyFuture
+	GetResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) *GetResourcePolicyFuture
 
 	GetSecretValue(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) (*secretsmanager.GetSecretValueOutput, error)
-	GetSecretValueAsync(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) *SecretsManagerGetSecretValueFuture
+	GetSecretValueAsync(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) *GetSecretValueFuture
 
 	ListSecretVersionIds(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) (*secretsmanager.ListSecretVersionIdsOutput, error)
-	ListSecretVersionIdsAsync(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) *SecretsManagerListSecretVersionIdsFuture
+	ListSecretVersionIdsAsync(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) *ListSecretVersionIdsFuture
 
 	ListSecrets(ctx workflow.Context, input *secretsmanager.ListSecretsInput) (*secretsmanager.ListSecretsOutput, error)
-	ListSecretsAsync(ctx workflow.Context, input *secretsmanager.ListSecretsInput) *SecretsManagerListSecretsFuture
+	ListSecretsAsync(ctx workflow.Context, input *secretsmanager.ListSecretsInput) *ListSecretsFuture
 
 	PutResourcePolicy(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) (*secretsmanager.PutResourcePolicyOutput, error)
-	PutResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) *SecretsManagerPutResourcePolicyFuture
+	PutResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) *PutResourcePolicyFuture
 
 	PutSecretValue(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) (*secretsmanager.PutSecretValueOutput, error)
-	PutSecretValueAsync(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) *SecretsManagerPutSecretValueFuture
+	PutSecretValueAsync(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) *PutSecretValueFuture
 
 	RestoreSecret(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) (*secretsmanager.RestoreSecretOutput, error)
-	RestoreSecretAsync(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) *SecretsManagerRestoreSecretFuture
+	RestoreSecretAsync(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) *RestoreSecretFuture
 
 	RotateSecret(ctx workflow.Context, input *secretsmanager.RotateSecretInput) (*secretsmanager.RotateSecretOutput, error)
-	RotateSecretAsync(ctx workflow.Context, input *secretsmanager.RotateSecretInput) *SecretsManagerRotateSecretFuture
+	RotateSecretAsync(ctx workflow.Context, input *secretsmanager.RotateSecretInput) *RotateSecretFuture
 
 	TagResource(ctx workflow.Context, input *secretsmanager.TagResourceInput) (*secretsmanager.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *secretsmanager.TagResourceInput) *SecretsManagerTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *secretsmanager.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *secretsmanager.UntagResourceInput) (*secretsmanager.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *secretsmanager.UntagResourceInput) *SecretsManagerUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *secretsmanager.UntagResourceInput) *UntagResourceFuture
 
 	UpdateSecret(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) (*secretsmanager.UpdateSecretOutput, error)
-	UpdateSecretAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) *SecretsManagerUpdateSecretFuture
+	UpdateSecretAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) *UpdateSecretFuture
 
 	UpdateSecretVersionStage(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) (*secretsmanager.UpdateSecretVersionStageOutput, error)
-	UpdateSecretVersionStageAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) *SecretsManagerUpdateSecretVersionStageFuture
+	UpdateSecretVersionStageAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) *UpdateSecretVersionStageFuture
 
 	ValidateResourcePolicy(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) (*secretsmanager.ValidateResourcePolicyOutput, error)
-	ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *SecretsManagerValidateResourcePolicyFuture
+	ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *ValidateResourcePolicyFuture
 }
 
 func NewClient() Client {

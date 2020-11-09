@@ -16,34 +16,34 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DeleteScalingPolicy(ctx workflow.Context, input *applicationautoscaling.DeleteScalingPolicyInput) (*applicationautoscaling.DeleteScalingPolicyOutput, error)
-	DeleteScalingPolicyAsync(ctx workflow.Context, input *applicationautoscaling.DeleteScalingPolicyInput) *ApplicationAutoScalingDeleteScalingPolicyFuture
+	DeleteScalingPolicyAsync(ctx workflow.Context, input *applicationautoscaling.DeleteScalingPolicyInput) *DeleteScalingPolicyFuture
 
 	DeleteScheduledAction(ctx workflow.Context, input *applicationautoscaling.DeleteScheduledActionInput) (*applicationautoscaling.DeleteScheduledActionOutput, error)
-	DeleteScheduledActionAsync(ctx workflow.Context, input *applicationautoscaling.DeleteScheduledActionInput) *ApplicationAutoScalingDeleteScheduledActionFuture
+	DeleteScheduledActionAsync(ctx workflow.Context, input *applicationautoscaling.DeleteScheduledActionInput) *DeleteScheduledActionFuture
 
 	DeregisterScalableTarget(ctx workflow.Context, input *applicationautoscaling.DeregisterScalableTargetInput) (*applicationautoscaling.DeregisterScalableTargetOutput, error)
-	DeregisterScalableTargetAsync(ctx workflow.Context, input *applicationautoscaling.DeregisterScalableTargetInput) *ApplicationAutoScalingDeregisterScalableTargetFuture
+	DeregisterScalableTargetAsync(ctx workflow.Context, input *applicationautoscaling.DeregisterScalableTargetInput) *DeregisterScalableTargetFuture
 
 	DescribeScalableTargets(ctx workflow.Context, input *applicationautoscaling.DescribeScalableTargetsInput) (*applicationautoscaling.DescribeScalableTargetsOutput, error)
-	DescribeScalableTargetsAsync(ctx workflow.Context, input *applicationautoscaling.DescribeScalableTargetsInput) *ApplicationAutoScalingDescribeScalableTargetsFuture
+	DescribeScalableTargetsAsync(ctx workflow.Context, input *applicationautoscaling.DescribeScalableTargetsInput) *DescribeScalableTargetsFuture
 
 	DescribeScalingActivities(ctx workflow.Context, input *applicationautoscaling.DescribeScalingActivitiesInput) (*applicationautoscaling.DescribeScalingActivitiesOutput, error)
-	DescribeScalingActivitiesAsync(ctx workflow.Context, input *applicationautoscaling.DescribeScalingActivitiesInput) *ApplicationAutoScalingDescribeScalingActivitiesFuture
+	DescribeScalingActivitiesAsync(ctx workflow.Context, input *applicationautoscaling.DescribeScalingActivitiesInput) *DescribeScalingActivitiesFuture
 
 	DescribeScalingPolicies(ctx workflow.Context, input *applicationautoscaling.DescribeScalingPoliciesInput) (*applicationautoscaling.DescribeScalingPoliciesOutput, error)
-	DescribeScalingPoliciesAsync(ctx workflow.Context, input *applicationautoscaling.DescribeScalingPoliciesInput) *ApplicationAutoScalingDescribeScalingPoliciesFuture
+	DescribeScalingPoliciesAsync(ctx workflow.Context, input *applicationautoscaling.DescribeScalingPoliciesInput) *DescribeScalingPoliciesFuture
 
 	DescribeScheduledActions(ctx workflow.Context, input *applicationautoscaling.DescribeScheduledActionsInput) (*applicationautoscaling.DescribeScheduledActionsOutput, error)
-	DescribeScheduledActionsAsync(ctx workflow.Context, input *applicationautoscaling.DescribeScheduledActionsInput) *ApplicationAutoScalingDescribeScheduledActionsFuture
+	DescribeScheduledActionsAsync(ctx workflow.Context, input *applicationautoscaling.DescribeScheduledActionsInput) *DescribeScheduledActionsFuture
 
 	PutScalingPolicy(ctx workflow.Context, input *applicationautoscaling.PutScalingPolicyInput) (*applicationautoscaling.PutScalingPolicyOutput, error)
-	PutScalingPolicyAsync(ctx workflow.Context, input *applicationautoscaling.PutScalingPolicyInput) *ApplicationAutoScalingPutScalingPolicyFuture
+	PutScalingPolicyAsync(ctx workflow.Context, input *applicationautoscaling.PutScalingPolicyInput) *PutScalingPolicyFuture
 
 	PutScheduledAction(ctx workflow.Context, input *applicationautoscaling.PutScheduledActionInput) (*applicationautoscaling.PutScheduledActionOutput, error)
-	PutScheduledActionAsync(ctx workflow.Context, input *applicationautoscaling.PutScheduledActionInput) *ApplicationAutoScalingPutScheduledActionFuture
+	PutScheduledActionAsync(ctx workflow.Context, input *applicationautoscaling.PutScheduledActionInput) *PutScheduledActionFuture
 
 	RegisterScalableTarget(ctx workflow.Context, input *applicationautoscaling.RegisterScalableTargetInput) (*applicationautoscaling.RegisterScalableTargetOutput, error)
-	RegisterScalableTargetAsync(ctx workflow.Context, input *applicationautoscaling.RegisterScalableTargetInput) *ApplicationAutoScalingRegisterScalableTargetFuture
+	RegisterScalableTargetAsync(ctx workflow.Context, input *applicationautoscaling.RegisterScalableTargetInput) *RegisterScalableTargetFuture
 }
 
 func NewClient() Client {

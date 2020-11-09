@@ -16,298 +16,298 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type SSOAdminAttachManagedPolicyToPermissionSetFuture struct {
+type AttachManagedPolicyToPermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminAttachManagedPolicyToPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.AttachManagedPolicyToPermissionSetOutput, error) {
+func (r *AttachManagedPolicyToPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.AttachManagedPolicyToPermissionSetOutput, error) {
 	var output ssoadmin.AttachManagedPolicyToPermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminCreateAccountAssignmentFuture struct {
+type CreateAccountAssignmentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminCreateAccountAssignmentFuture) Get(ctx workflow.Context) (*ssoadmin.CreateAccountAssignmentOutput, error) {
+func (r *CreateAccountAssignmentFuture) Get(ctx workflow.Context) (*ssoadmin.CreateAccountAssignmentOutput, error) {
 	var output ssoadmin.CreateAccountAssignmentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminCreatePermissionSetFuture struct {
+type CreatePermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminCreatePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.CreatePermissionSetOutput, error) {
+func (r *CreatePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.CreatePermissionSetOutput, error) {
 	var output ssoadmin.CreatePermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminDeleteAccountAssignmentFuture struct {
+type DeleteAccountAssignmentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminDeleteAccountAssignmentFuture) Get(ctx workflow.Context) (*ssoadmin.DeleteAccountAssignmentOutput, error) {
+func (r *DeleteAccountAssignmentFuture) Get(ctx workflow.Context) (*ssoadmin.DeleteAccountAssignmentOutput, error) {
 	var output ssoadmin.DeleteAccountAssignmentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminDeleteInlinePolicyFromPermissionSetFuture struct {
+type DeleteInlinePolicyFromPermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminDeleteInlinePolicyFromPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.DeleteInlinePolicyFromPermissionSetOutput, error) {
+func (r *DeleteInlinePolicyFromPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.DeleteInlinePolicyFromPermissionSetOutput, error) {
 	var output ssoadmin.DeleteInlinePolicyFromPermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminDeletePermissionSetFuture struct {
+type DeletePermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminDeletePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.DeletePermissionSetOutput, error) {
+func (r *DeletePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.DeletePermissionSetOutput, error) {
 	var output ssoadmin.DeletePermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminDescribeAccountAssignmentCreationStatusFuture struct {
+type DescribeAccountAssignmentCreationStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminDescribeAccountAssignmentCreationStatusFuture) Get(ctx workflow.Context) (*ssoadmin.DescribeAccountAssignmentCreationStatusOutput, error) {
+func (r *DescribeAccountAssignmentCreationStatusFuture) Get(ctx workflow.Context) (*ssoadmin.DescribeAccountAssignmentCreationStatusOutput, error) {
 	var output ssoadmin.DescribeAccountAssignmentCreationStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminDescribeAccountAssignmentDeletionStatusFuture struct {
+type DescribeAccountAssignmentDeletionStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminDescribeAccountAssignmentDeletionStatusFuture) Get(ctx workflow.Context) (*ssoadmin.DescribeAccountAssignmentDeletionStatusOutput, error) {
+func (r *DescribeAccountAssignmentDeletionStatusFuture) Get(ctx workflow.Context) (*ssoadmin.DescribeAccountAssignmentDeletionStatusOutput, error) {
 	var output ssoadmin.DescribeAccountAssignmentDeletionStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminDescribePermissionSetFuture struct {
+type DescribePermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminDescribePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.DescribePermissionSetOutput, error) {
+func (r *DescribePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.DescribePermissionSetOutput, error) {
 	var output ssoadmin.DescribePermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminDescribePermissionSetProvisioningStatusFuture struct {
+type DescribePermissionSetProvisioningStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminDescribePermissionSetProvisioningStatusFuture) Get(ctx workflow.Context) (*ssoadmin.DescribePermissionSetProvisioningStatusOutput, error) {
+func (r *DescribePermissionSetProvisioningStatusFuture) Get(ctx workflow.Context) (*ssoadmin.DescribePermissionSetProvisioningStatusOutput, error) {
 	var output ssoadmin.DescribePermissionSetProvisioningStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminDetachManagedPolicyFromPermissionSetFuture struct {
+type DetachManagedPolicyFromPermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminDetachManagedPolicyFromPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.DetachManagedPolicyFromPermissionSetOutput, error) {
+func (r *DetachManagedPolicyFromPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.DetachManagedPolicyFromPermissionSetOutput, error) {
 	var output ssoadmin.DetachManagedPolicyFromPermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminGetInlinePolicyForPermissionSetFuture struct {
+type GetInlinePolicyForPermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminGetInlinePolicyForPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.GetInlinePolicyForPermissionSetOutput, error) {
+func (r *GetInlinePolicyForPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.GetInlinePolicyForPermissionSetOutput, error) {
 	var output ssoadmin.GetInlinePolicyForPermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListAccountAssignmentCreationStatusFuture struct {
+type ListAccountAssignmentCreationStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListAccountAssignmentCreationStatusFuture) Get(ctx workflow.Context) (*ssoadmin.ListAccountAssignmentCreationStatusOutput, error) {
+func (r *ListAccountAssignmentCreationStatusFuture) Get(ctx workflow.Context) (*ssoadmin.ListAccountAssignmentCreationStatusOutput, error) {
 	var output ssoadmin.ListAccountAssignmentCreationStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListAccountAssignmentDeletionStatusFuture struct {
+type ListAccountAssignmentDeletionStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListAccountAssignmentDeletionStatusFuture) Get(ctx workflow.Context) (*ssoadmin.ListAccountAssignmentDeletionStatusOutput, error) {
+func (r *ListAccountAssignmentDeletionStatusFuture) Get(ctx workflow.Context) (*ssoadmin.ListAccountAssignmentDeletionStatusOutput, error) {
 	var output ssoadmin.ListAccountAssignmentDeletionStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListAccountAssignmentsFuture struct {
+type ListAccountAssignmentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListAccountAssignmentsFuture) Get(ctx workflow.Context) (*ssoadmin.ListAccountAssignmentsOutput, error) {
+func (r *ListAccountAssignmentsFuture) Get(ctx workflow.Context) (*ssoadmin.ListAccountAssignmentsOutput, error) {
 	var output ssoadmin.ListAccountAssignmentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListAccountsForProvisionedPermissionSetFuture struct {
+type ListAccountsForProvisionedPermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListAccountsForProvisionedPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, error) {
+func (r *ListAccountsForProvisionedPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, error) {
 	var output ssoadmin.ListAccountsForProvisionedPermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListInstancesFuture struct {
+type ListInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListInstancesFuture) Get(ctx workflow.Context) (*ssoadmin.ListInstancesOutput, error) {
+func (r *ListInstancesFuture) Get(ctx workflow.Context) (*ssoadmin.ListInstancesOutput, error) {
 	var output ssoadmin.ListInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListManagedPoliciesInPermissionSetFuture struct {
+type ListManagedPoliciesInPermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListManagedPoliciesInPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.ListManagedPoliciesInPermissionSetOutput, error) {
+func (r *ListManagedPoliciesInPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.ListManagedPoliciesInPermissionSetOutput, error) {
 	var output ssoadmin.ListManagedPoliciesInPermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListPermissionSetProvisioningStatusFuture struct {
+type ListPermissionSetProvisioningStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListPermissionSetProvisioningStatusFuture) Get(ctx workflow.Context) (*ssoadmin.ListPermissionSetProvisioningStatusOutput, error) {
+func (r *ListPermissionSetProvisioningStatusFuture) Get(ctx workflow.Context) (*ssoadmin.ListPermissionSetProvisioningStatusOutput, error) {
 	var output ssoadmin.ListPermissionSetProvisioningStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListPermissionSetsFuture struct {
+type ListPermissionSetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListPermissionSetsFuture) Get(ctx workflow.Context) (*ssoadmin.ListPermissionSetsOutput, error) {
+func (r *ListPermissionSetsFuture) Get(ctx workflow.Context) (*ssoadmin.ListPermissionSetsOutput, error) {
 	var output ssoadmin.ListPermissionSetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListPermissionSetsProvisionedToAccountFuture struct {
+type ListPermissionSetsProvisionedToAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListPermissionSetsProvisionedToAccountFuture) Get(ctx workflow.Context) (*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, error) {
+func (r *ListPermissionSetsProvisionedToAccountFuture) Get(ctx workflow.Context) (*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, error) {
 	var output ssoadmin.ListPermissionSetsProvisionedToAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminListTagsForResourceFuture) Get(ctx workflow.Context) (*ssoadmin.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*ssoadmin.ListTagsForResourceOutput, error) {
 	var output ssoadmin.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminProvisionPermissionSetFuture struct {
+type ProvisionPermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminProvisionPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.ProvisionPermissionSetOutput, error) {
+func (r *ProvisionPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.ProvisionPermissionSetOutput, error) {
 	var output ssoadmin.ProvisionPermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminPutInlinePolicyToPermissionSetFuture struct {
+type PutInlinePolicyToPermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminPutInlinePolicyToPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.PutInlinePolicyToPermissionSetOutput, error) {
+func (r *PutInlinePolicyToPermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.PutInlinePolicyToPermissionSetOutput, error) {
 	var output ssoadmin.PutInlinePolicyToPermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminTagResourceFuture) Get(ctx workflow.Context) (*ssoadmin.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*ssoadmin.TagResourceOutput, error) {
 	var output ssoadmin.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminUntagResourceFuture) Get(ctx workflow.Context) (*ssoadmin.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*ssoadmin.UntagResourceOutput, error) {
 	var output ssoadmin.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SSOAdminUpdatePermissionSetFuture struct {
+type UpdatePermissionSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SSOAdminUpdatePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.UpdatePermissionSetOutput, error) {
+func (r *UpdatePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin.UpdatePermissionSetOutput, error) {
 	var output ssoadmin.UpdatePermissionSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -319,9 +319,9 @@ func (a *stub) AttachManagedPolicyToPermissionSet(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *stub) AttachManagedPolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.AttachManagedPolicyToPermissionSetInput) *SSOAdminAttachManagedPolicyToPermissionSetFuture {
+func (a *stub) AttachManagedPolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.AttachManagedPolicyToPermissionSetInput) *AttachManagedPolicyToPermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.AttachManagedPolicyToPermissionSet", input)
-	return &SSOAdminAttachManagedPolicyToPermissionSetFuture{Future: future}
+	return &AttachManagedPolicyToPermissionSetFuture{Future: future}
 }
 
 func (a *stub) CreateAccountAssignment(ctx workflow.Context, input *ssoadmin.CreateAccountAssignmentInput) (*ssoadmin.CreateAccountAssignmentOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) CreateAccountAssignment(ctx workflow.Context, input *ssoadmin.Cre
 	return &output, err
 }
 
-func (a *stub) CreateAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.CreateAccountAssignmentInput) *SSOAdminCreateAccountAssignmentFuture {
+func (a *stub) CreateAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.CreateAccountAssignmentInput) *CreateAccountAssignmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.CreateAccountAssignment", input)
-	return &SSOAdminCreateAccountAssignmentFuture{Future: future}
+	return &CreateAccountAssignmentFuture{Future: future}
 }
 
 func (a *stub) CreatePermissionSet(ctx workflow.Context, input *ssoadmin.CreatePermissionSetInput) (*ssoadmin.CreatePermissionSetOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) CreatePermissionSet(ctx workflow.Context, input *ssoadmin.CreateP
 	return &output, err
 }
 
-func (a *stub) CreatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.CreatePermissionSetInput) *SSOAdminCreatePermissionSetFuture {
+func (a *stub) CreatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.CreatePermissionSetInput) *CreatePermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.CreatePermissionSet", input)
-	return &SSOAdminCreatePermissionSetFuture{Future: future}
+	return &CreatePermissionSetFuture{Future: future}
 }
 
 func (a *stub) DeleteAccountAssignment(ctx workflow.Context, input *ssoadmin.DeleteAccountAssignmentInput) (*ssoadmin.DeleteAccountAssignmentOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) DeleteAccountAssignment(ctx workflow.Context, input *ssoadmin.Del
 	return &output, err
 }
 
-func (a *stub) DeleteAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.DeleteAccountAssignmentInput) *SSOAdminDeleteAccountAssignmentFuture {
+func (a *stub) DeleteAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.DeleteAccountAssignmentInput) *DeleteAccountAssignmentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeleteAccountAssignment", input)
-	return &SSOAdminDeleteAccountAssignmentFuture{Future: future}
+	return &DeleteAccountAssignmentFuture{Future: future}
 }
 
 func (a *stub) DeleteInlinePolicyFromPermissionSet(ctx workflow.Context, input *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) (*ssoadmin.DeleteInlinePolicyFromPermissionSetOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) DeleteInlinePolicyFromPermissionSet(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) DeleteInlinePolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) *SSOAdminDeleteInlinePolicyFromPermissionSetFuture {
+func (a *stub) DeleteInlinePolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) *DeleteInlinePolicyFromPermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeleteInlinePolicyFromPermissionSet", input)
-	return &SSOAdminDeleteInlinePolicyFromPermissionSetFuture{Future: future}
+	return &DeleteInlinePolicyFromPermissionSetFuture{Future: future}
 }
 
 func (a *stub) DeletePermissionSet(ctx workflow.Context, input *ssoadmin.DeletePermissionSetInput) (*ssoadmin.DeletePermissionSetOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) DeletePermissionSet(ctx workflow.Context, input *ssoadmin.DeleteP
 	return &output, err
 }
 
-func (a *stub) DeletePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeletePermissionSetInput) *SSOAdminDeletePermissionSetFuture {
+func (a *stub) DeletePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeletePermissionSetInput) *DeletePermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeletePermissionSet", input)
-	return &SSOAdminDeletePermissionSetFuture{Future: future}
+	return &DeletePermissionSetFuture{Future: future}
 }
 
 func (a *stub) DescribeAccountAssignmentCreationStatus(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentCreationStatusInput) (*ssoadmin.DescribeAccountAssignmentCreationStatusOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) DescribeAccountAssignmentCreationStatus(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) DescribeAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentCreationStatusInput) *SSOAdminDescribeAccountAssignmentCreationStatusFuture {
+func (a *stub) DescribeAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentCreationStatusInput) *DescribeAccountAssignmentCreationStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribeAccountAssignmentCreationStatus", input)
-	return &SSOAdminDescribeAccountAssignmentCreationStatusFuture{Future: future}
+	return &DescribeAccountAssignmentCreationStatusFuture{Future: future}
 }
 
 func (a *stub) DescribeAccountAssignmentDeletionStatus(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) (*ssoadmin.DescribeAccountAssignmentDeletionStatusOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) DescribeAccountAssignmentDeletionStatus(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) DescribeAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) *SSOAdminDescribeAccountAssignmentDeletionStatusFuture {
+func (a *stub) DescribeAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) *DescribeAccountAssignmentDeletionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribeAccountAssignmentDeletionStatus", input)
-	return &SSOAdminDescribeAccountAssignmentDeletionStatusFuture{Future: future}
+	return &DescribeAccountAssignmentDeletionStatusFuture{Future: future}
 }
 
 func (a *stub) DescribePermissionSet(ctx workflow.Context, input *ssoadmin.DescribePermissionSetInput) (*ssoadmin.DescribePermissionSetOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) DescribePermissionSet(ctx workflow.Context, input *ssoadmin.Descr
 	return &output, err
 }
 
-func (a *stub) DescribePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetInput) *SSOAdminDescribePermissionSetFuture {
+func (a *stub) DescribePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetInput) *DescribePermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribePermissionSet", input)
-	return &SSOAdminDescribePermissionSetFuture{Future: future}
+	return &DescribePermissionSetFuture{Future: future}
 }
 
 func (a *stub) DescribePermissionSetProvisioningStatus(ctx workflow.Context, input *ssoadmin.DescribePermissionSetProvisioningStatusInput) (*ssoadmin.DescribePermissionSetProvisioningStatusOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) DescribePermissionSetProvisioningStatus(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) DescribePermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetProvisioningStatusInput) *SSOAdminDescribePermissionSetProvisioningStatusFuture {
+func (a *stub) DescribePermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetProvisioningStatusInput) *DescribePermissionSetProvisioningStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribePermissionSetProvisioningStatus", input)
-	return &SSOAdminDescribePermissionSetProvisioningStatusFuture{Future: future}
+	return &DescribePermissionSetProvisioningStatusFuture{Future: future}
 }
 
 func (a *stub) DetachManagedPolicyFromPermissionSet(ctx workflow.Context, input *ssoadmin.DetachManagedPolicyFromPermissionSetInput) (*ssoadmin.DetachManagedPolicyFromPermissionSetOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) DetachManagedPolicyFromPermissionSet(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) DetachManagedPolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DetachManagedPolicyFromPermissionSetInput) *SSOAdminDetachManagedPolicyFromPermissionSetFuture {
+func (a *stub) DetachManagedPolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DetachManagedPolicyFromPermissionSetInput) *DetachManagedPolicyFromPermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DetachManagedPolicyFromPermissionSet", input)
-	return &SSOAdminDetachManagedPolicyFromPermissionSetFuture{Future: future}
+	return &DetachManagedPolicyFromPermissionSetFuture{Future: future}
 }
 
 func (a *stub) GetInlinePolicyForPermissionSet(ctx workflow.Context, input *ssoadmin.GetInlinePolicyForPermissionSetInput) (*ssoadmin.GetInlinePolicyForPermissionSetOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) GetInlinePolicyForPermissionSet(ctx workflow.Context, input *ssoa
 	return &output, err
 }
 
-func (a *stub) GetInlinePolicyForPermissionSetAsync(ctx workflow.Context, input *ssoadmin.GetInlinePolicyForPermissionSetInput) *SSOAdminGetInlinePolicyForPermissionSetFuture {
+func (a *stub) GetInlinePolicyForPermissionSetAsync(ctx workflow.Context, input *ssoadmin.GetInlinePolicyForPermissionSetInput) *GetInlinePolicyForPermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.GetInlinePolicyForPermissionSet", input)
-	return &SSOAdminGetInlinePolicyForPermissionSetFuture{Future: future}
+	return &GetInlinePolicyForPermissionSetFuture{Future: future}
 }
 
 func (a *stub) ListAccountAssignmentCreationStatus(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentCreationStatusInput) (*ssoadmin.ListAccountAssignmentCreationStatusOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) ListAccountAssignmentCreationStatus(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) ListAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentCreationStatusInput) *SSOAdminListAccountAssignmentCreationStatusFuture {
+func (a *stub) ListAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentCreationStatusInput) *ListAccountAssignmentCreationStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignmentCreationStatus", input)
-	return &SSOAdminListAccountAssignmentCreationStatusFuture{Future: future}
+	return &ListAccountAssignmentCreationStatusFuture{Future: future}
 }
 
 func (a *stub) ListAccountAssignmentDeletionStatus(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentDeletionStatusInput) (*ssoadmin.ListAccountAssignmentDeletionStatusOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) ListAccountAssignmentDeletionStatus(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) ListAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentDeletionStatusInput) *SSOAdminListAccountAssignmentDeletionStatusFuture {
+func (a *stub) ListAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentDeletionStatusInput) *ListAccountAssignmentDeletionStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignmentDeletionStatus", input)
-	return &SSOAdminListAccountAssignmentDeletionStatusFuture{Future: future}
+	return &ListAccountAssignmentDeletionStatusFuture{Future: future}
 }
 
 func (a *stub) ListAccountAssignments(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentsInput) (*ssoadmin.ListAccountAssignmentsOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) ListAccountAssignments(ctx workflow.Context, input *ssoadmin.List
 	return &output, err
 }
 
-func (a *stub) ListAccountAssignmentsAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentsInput) *SSOAdminListAccountAssignmentsFuture {
+func (a *stub) ListAccountAssignmentsAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentsInput) *ListAccountAssignmentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignments", input)
-	return &SSOAdminListAccountAssignmentsFuture{Future: future}
+	return &ListAccountAssignmentsFuture{Future: future}
 }
 
 func (a *stub) ListAccountsForProvisionedPermissionSet(ctx workflow.Context, input *ssoadmin.ListAccountsForProvisionedPermissionSetInput) (*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) ListAccountsForProvisionedPermissionSet(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) ListAccountsForProvisionedPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListAccountsForProvisionedPermissionSetInput) *SSOAdminListAccountsForProvisionedPermissionSetFuture {
+func (a *stub) ListAccountsForProvisionedPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListAccountsForProvisionedPermissionSetInput) *ListAccountsForProvisionedPermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountsForProvisionedPermissionSet", input)
-	return &SSOAdminListAccountsForProvisionedPermissionSetFuture{Future: future}
+	return &ListAccountsForProvisionedPermissionSetFuture{Future: future}
 }
 
 func (a *stub) ListInstances(ctx workflow.Context, input *ssoadmin.ListInstancesInput) (*ssoadmin.ListInstancesOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) ListInstances(ctx workflow.Context, input *ssoadmin.ListInstances
 	return &output, err
 }
 
-func (a *stub) ListInstancesAsync(ctx workflow.Context, input *ssoadmin.ListInstancesInput) *SSOAdminListInstancesFuture {
+func (a *stub) ListInstancesAsync(ctx workflow.Context, input *ssoadmin.ListInstancesInput) *ListInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListInstances", input)
-	return &SSOAdminListInstancesFuture{Future: future}
+	return &ListInstancesFuture{Future: future}
 }
 
 func (a *stub) ListManagedPoliciesInPermissionSet(ctx workflow.Context, input *ssoadmin.ListManagedPoliciesInPermissionSetInput) (*ssoadmin.ListManagedPoliciesInPermissionSetOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) ListManagedPoliciesInPermissionSet(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *stub) ListManagedPoliciesInPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListManagedPoliciesInPermissionSetInput) *SSOAdminListManagedPoliciesInPermissionSetFuture {
+func (a *stub) ListManagedPoliciesInPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListManagedPoliciesInPermissionSetInput) *ListManagedPoliciesInPermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListManagedPoliciesInPermissionSet", input)
-	return &SSOAdminListManagedPoliciesInPermissionSetFuture{Future: future}
+	return &ListManagedPoliciesInPermissionSetFuture{Future: future}
 }
 
 func (a *stub) ListPermissionSetProvisioningStatus(ctx workflow.Context, input *ssoadmin.ListPermissionSetProvisioningStatusInput) (*ssoadmin.ListPermissionSetProvisioningStatusOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) ListPermissionSetProvisioningStatus(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) ListPermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetProvisioningStatusInput) *SSOAdminListPermissionSetProvisioningStatusFuture {
+func (a *stub) ListPermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetProvisioningStatusInput) *ListPermissionSetProvisioningStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSetProvisioningStatus", input)
-	return &SSOAdminListPermissionSetProvisioningStatusFuture{Future: future}
+	return &ListPermissionSetProvisioningStatusFuture{Future: future}
 }
 
 func (a *stub) ListPermissionSets(ctx workflow.Context, input *ssoadmin.ListPermissionSetsInput) (*ssoadmin.ListPermissionSetsOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) ListPermissionSets(ctx workflow.Context, input *ssoadmin.ListPerm
 	return &output, err
 }
 
-func (a *stub) ListPermissionSetsAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsInput) *SSOAdminListPermissionSetsFuture {
+func (a *stub) ListPermissionSetsAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsInput) *ListPermissionSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSets", input)
-	return &SSOAdminListPermissionSetsFuture{Future: future}
+	return &ListPermissionSetsFuture{Future: future}
 }
 
 func (a *stub) ListPermissionSetsProvisionedToAccount(ctx workflow.Context, input *ssoadmin.ListPermissionSetsProvisionedToAccountInput) (*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) ListPermissionSetsProvisionedToAccount(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) ListPermissionSetsProvisionedToAccountAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsProvisionedToAccountInput) *SSOAdminListPermissionSetsProvisionedToAccountFuture {
+func (a *stub) ListPermissionSetsProvisionedToAccountAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsProvisionedToAccountInput) *ListPermissionSetsProvisionedToAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSetsProvisionedToAccount", input)
-	return &SSOAdminListPermissionSetsProvisionedToAccountFuture{Future: future}
+	return &ListPermissionSetsProvisionedToAccountFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *ssoadmin.ListTagsForResourceInput) (*ssoadmin.ListTagsForResourceOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *ssoadmin.ListTag
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *ssoadmin.ListTagsForResourceInput) *SSOAdminListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *ssoadmin.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListTagsForResource", input)
-	return &SSOAdminListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ProvisionPermissionSet(ctx workflow.Context, input *ssoadmin.ProvisionPermissionSetInput) (*ssoadmin.ProvisionPermissionSetOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) ProvisionPermissionSet(ctx workflow.Context, input *ssoadmin.Prov
 	return &output, err
 }
 
-func (a *stub) ProvisionPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ProvisionPermissionSetInput) *SSOAdminProvisionPermissionSetFuture {
+func (a *stub) ProvisionPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ProvisionPermissionSetInput) *ProvisionPermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ProvisionPermissionSet", input)
-	return &SSOAdminProvisionPermissionSetFuture{Future: future}
+	return &ProvisionPermissionSetFuture{Future: future}
 }
 
 func (a *stub) PutInlinePolicyToPermissionSet(ctx workflow.Context, input *ssoadmin.PutInlinePolicyToPermissionSetInput) (*ssoadmin.PutInlinePolicyToPermissionSetOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) PutInlinePolicyToPermissionSet(ctx workflow.Context, input *ssoad
 	return &output, err
 }
 
-func (a *stub) PutInlinePolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.PutInlinePolicyToPermissionSetInput) *SSOAdminPutInlinePolicyToPermissionSetFuture {
+func (a *stub) PutInlinePolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.PutInlinePolicyToPermissionSetInput) *PutInlinePolicyToPermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.PutInlinePolicyToPermissionSet", input)
-	return &SSOAdminPutInlinePolicyToPermissionSetFuture{Future: future}
+	return &PutInlinePolicyToPermissionSetFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *ssoadmin.TagResourceInput) (*ssoadmin.TagResourceOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *ssoadmin.TagResourceInpu
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *ssoadmin.TagResourceInput) *SSOAdminTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *ssoadmin.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.TagResource", input)
-	return &SSOAdminTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *ssoadmin.UntagResourceInput) (*ssoadmin.UntagResourceOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *ssoadmin.UntagResource
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *ssoadmin.UntagResourceInput) *SSOAdminUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *ssoadmin.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.UntagResource", input)
-	return &SSOAdminUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdatePermissionSet(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) (*ssoadmin.UpdatePermissionSetOutput, error) {
@@ -605,7 +605,7 @@ func (a *stub) UpdatePermissionSet(ctx workflow.Context, input *ssoadmin.UpdateP
 	return &output, err
 }
 
-func (a *stub) UpdatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) *SSOAdminUpdatePermissionSetFuture {
+func (a *stub) UpdatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) *UpdatePermissionSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.UpdatePermissionSet", input)
-	return &SSOAdminUpdatePermissionSetFuture{Future: future}
+	return &UpdatePermissionSetFuture{Future: future}
 }

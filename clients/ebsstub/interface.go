@@ -16,22 +16,22 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CompleteSnapshot(ctx workflow.Context, input *ebs.CompleteSnapshotInput) (*ebs.CompleteSnapshotOutput, error)
-	CompleteSnapshotAsync(ctx workflow.Context, input *ebs.CompleteSnapshotInput) *EBSCompleteSnapshotFuture
+	CompleteSnapshotAsync(ctx workflow.Context, input *ebs.CompleteSnapshotInput) *CompleteSnapshotFuture
 
 	GetSnapshotBlock(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) (*ebs.GetSnapshotBlockOutput, error)
-	GetSnapshotBlockAsync(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) *EBSGetSnapshotBlockFuture
+	GetSnapshotBlockAsync(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) *GetSnapshotBlockFuture
 
 	ListChangedBlocks(ctx workflow.Context, input *ebs.ListChangedBlocksInput) (*ebs.ListChangedBlocksOutput, error)
-	ListChangedBlocksAsync(ctx workflow.Context, input *ebs.ListChangedBlocksInput) *EBSListChangedBlocksFuture
+	ListChangedBlocksAsync(ctx workflow.Context, input *ebs.ListChangedBlocksInput) *ListChangedBlocksFuture
 
 	ListSnapshotBlocks(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) (*ebs.ListSnapshotBlocksOutput, error)
-	ListSnapshotBlocksAsync(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) *EBSListSnapshotBlocksFuture
+	ListSnapshotBlocksAsync(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) *ListSnapshotBlocksFuture
 
 	PutSnapshotBlock(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) (*ebs.PutSnapshotBlockOutput, error)
-	PutSnapshotBlockAsync(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) *EBSPutSnapshotBlockFuture
+	PutSnapshotBlockAsync(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) *PutSnapshotBlockFuture
 
 	StartSnapshot(ctx workflow.Context, input *ebs.StartSnapshotInput) (*ebs.StartSnapshotOutput, error)
-	StartSnapshotAsync(ctx workflow.Context, input *ebs.StartSnapshotInput) *EBSStartSnapshotFuture
+	StartSnapshotAsync(ctx workflow.Context, input *ebs.StartSnapshotInput) *StartSnapshotFuture
 }
 
 func NewClient() Client {

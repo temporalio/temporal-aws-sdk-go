@@ -16,13 +16,13 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DescribeServices(ctx workflow.Context, input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error)
-	DescribeServicesAsync(ctx workflow.Context, input *pricing.DescribeServicesInput) *PricingDescribeServicesFuture
+	DescribeServicesAsync(ctx workflow.Context, input *pricing.DescribeServicesInput) *DescribeServicesFuture
 
 	GetAttributeValues(ctx workflow.Context, input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error)
-	GetAttributeValuesAsync(ctx workflow.Context, input *pricing.GetAttributeValuesInput) *PricingGetAttributeValuesFuture
+	GetAttributeValuesAsync(ctx workflow.Context, input *pricing.GetAttributeValuesInput) *GetAttributeValuesFuture
 
 	GetProducts(ctx workflow.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error)
-	GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *PricingGetProductsFuture
+	GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *GetProductsFuture
 }
 
 func NewClient() Client {

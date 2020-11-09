@@ -16,16 +16,16 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchPutMessage(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) (*ioteventsdata.BatchPutMessageOutput, error)
-	BatchPutMessageAsync(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) *IoTEventsDataBatchPutMessageFuture
+	BatchPutMessageAsync(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) *BatchPutMessageFuture
 
 	BatchUpdateDetector(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) (*ioteventsdata.BatchUpdateDetectorOutput, error)
-	BatchUpdateDetectorAsync(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) *IoTEventsDataBatchUpdateDetectorFuture
+	BatchUpdateDetectorAsync(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) *BatchUpdateDetectorFuture
 
 	DescribeDetector(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) (*ioteventsdata.DescribeDetectorOutput, error)
-	DescribeDetectorAsync(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) *IoTEventsDataDescribeDetectorFuture
+	DescribeDetectorAsync(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) *DescribeDetectorFuture
 
 	ListDetectors(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) (*ioteventsdata.ListDetectorsOutput, error)
-	ListDetectorsAsync(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) *IoTEventsDataListDetectorsFuture
+	ListDetectorsAsync(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) *ListDetectorsFuture
 }
 
 func NewClient() Client {

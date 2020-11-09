@@ -16,61 +16,61 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelJob(ctx workflow.Context, input *batch.CancelJobInput) (*batch.CancelJobOutput, error)
-	CancelJobAsync(ctx workflow.Context, input *batch.CancelJobInput) *BatchCancelJobFuture
+	CancelJobAsync(ctx workflow.Context, input *batch.CancelJobInput) *CancelJobFuture
 
 	CreateComputeEnvironment(ctx workflow.Context, input *batch.CreateComputeEnvironmentInput) (*batch.CreateComputeEnvironmentOutput, error)
-	CreateComputeEnvironmentAsync(ctx workflow.Context, input *batch.CreateComputeEnvironmentInput) *BatchCreateComputeEnvironmentFuture
+	CreateComputeEnvironmentAsync(ctx workflow.Context, input *batch.CreateComputeEnvironmentInput) *CreateComputeEnvironmentFuture
 
 	CreateJobQueue(ctx workflow.Context, input *batch.CreateJobQueueInput) (*batch.CreateJobQueueOutput, error)
-	CreateJobQueueAsync(ctx workflow.Context, input *batch.CreateJobQueueInput) *BatchCreateJobQueueFuture
+	CreateJobQueueAsync(ctx workflow.Context, input *batch.CreateJobQueueInput) *CreateJobQueueFuture
 
 	DeleteComputeEnvironment(ctx workflow.Context, input *batch.DeleteComputeEnvironmentInput) (*batch.DeleteComputeEnvironmentOutput, error)
-	DeleteComputeEnvironmentAsync(ctx workflow.Context, input *batch.DeleteComputeEnvironmentInput) *BatchDeleteComputeEnvironmentFuture
+	DeleteComputeEnvironmentAsync(ctx workflow.Context, input *batch.DeleteComputeEnvironmentInput) *DeleteComputeEnvironmentFuture
 
 	DeleteJobQueue(ctx workflow.Context, input *batch.DeleteJobQueueInput) (*batch.DeleteJobQueueOutput, error)
-	DeleteJobQueueAsync(ctx workflow.Context, input *batch.DeleteJobQueueInput) *BatchDeleteJobQueueFuture
+	DeleteJobQueueAsync(ctx workflow.Context, input *batch.DeleteJobQueueInput) *DeleteJobQueueFuture
 
 	DeregisterJobDefinition(ctx workflow.Context, input *batch.DeregisterJobDefinitionInput) (*batch.DeregisterJobDefinitionOutput, error)
-	DeregisterJobDefinitionAsync(ctx workflow.Context, input *batch.DeregisterJobDefinitionInput) *BatchDeregisterJobDefinitionFuture
+	DeregisterJobDefinitionAsync(ctx workflow.Context, input *batch.DeregisterJobDefinitionInput) *DeregisterJobDefinitionFuture
 
 	DescribeComputeEnvironments(ctx workflow.Context, input *batch.DescribeComputeEnvironmentsInput) (*batch.DescribeComputeEnvironmentsOutput, error)
-	DescribeComputeEnvironmentsAsync(ctx workflow.Context, input *batch.DescribeComputeEnvironmentsInput) *BatchDescribeComputeEnvironmentsFuture
+	DescribeComputeEnvironmentsAsync(ctx workflow.Context, input *batch.DescribeComputeEnvironmentsInput) *DescribeComputeEnvironmentsFuture
 
 	DescribeJobDefinitions(ctx workflow.Context, input *batch.DescribeJobDefinitionsInput) (*batch.DescribeJobDefinitionsOutput, error)
-	DescribeJobDefinitionsAsync(ctx workflow.Context, input *batch.DescribeJobDefinitionsInput) *BatchDescribeJobDefinitionsFuture
+	DescribeJobDefinitionsAsync(ctx workflow.Context, input *batch.DescribeJobDefinitionsInput) *DescribeJobDefinitionsFuture
 
 	DescribeJobQueues(ctx workflow.Context, input *batch.DescribeJobQueuesInput) (*batch.DescribeJobQueuesOutput, error)
-	DescribeJobQueuesAsync(ctx workflow.Context, input *batch.DescribeJobQueuesInput) *BatchDescribeJobQueuesFuture
+	DescribeJobQueuesAsync(ctx workflow.Context, input *batch.DescribeJobQueuesInput) *DescribeJobQueuesFuture
 
 	DescribeJobs(ctx workflow.Context, input *batch.DescribeJobsInput) (*batch.DescribeJobsOutput, error)
-	DescribeJobsAsync(ctx workflow.Context, input *batch.DescribeJobsInput) *BatchDescribeJobsFuture
+	DescribeJobsAsync(ctx workflow.Context, input *batch.DescribeJobsInput) *DescribeJobsFuture
 
 	ListJobs(ctx workflow.Context, input *batch.ListJobsInput) (*batch.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *batch.ListJobsInput) *BatchListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *batch.ListJobsInput) *ListJobsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *batch.ListTagsForResourceInput) (*batch.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *batch.ListTagsForResourceInput) *BatchListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *batch.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	RegisterJobDefinition(ctx workflow.Context, input *batch.RegisterJobDefinitionInput) (*batch.RegisterJobDefinitionOutput, error)
-	RegisterJobDefinitionAsync(ctx workflow.Context, input *batch.RegisterJobDefinitionInput) *BatchRegisterJobDefinitionFuture
+	RegisterJobDefinitionAsync(ctx workflow.Context, input *batch.RegisterJobDefinitionInput) *RegisterJobDefinitionFuture
 
 	SubmitJob(ctx workflow.Context, input *batch.SubmitJobInput) (*batch.SubmitJobOutput, error)
-	SubmitJobAsync(ctx workflow.Context, input *batch.SubmitJobInput) *BatchSubmitJobFuture
+	SubmitJobAsync(ctx workflow.Context, input *batch.SubmitJobInput) *SubmitJobFuture
 
 	TagResource(ctx workflow.Context, input *batch.TagResourceInput) (*batch.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *batch.TagResourceInput) *BatchTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *batch.TagResourceInput) *TagResourceFuture
 
 	TerminateJob(ctx workflow.Context, input *batch.TerminateJobInput) (*batch.TerminateJobOutput, error)
-	TerminateJobAsync(ctx workflow.Context, input *batch.TerminateJobInput) *BatchTerminateJobFuture
+	TerminateJobAsync(ctx workflow.Context, input *batch.TerminateJobInput) *TerminateJobFuture
 
 	UntagResource(ctx workflow.Context, input *batch.UntagResourceInput) (*batch.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *batch.UntagResourceInput) *BatchUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *batch.UntagResourceInput) *UntagResourceFuture
 
 	UpdateComputeEnvironment(ctx workflow.Context, input *batch.UpdateComputeEnvironmentInput) (*batch.UpdateComputeEnvironmentOutput, error)
-	UpdateComputeEnvironmentAsync(ctx workflow.Context, input *batch.UpdateComputeEnvironmentInput) *BatchUpdateComputeEnvironmentFuture
+	UpdateComputeEnvironmentAsync(ctx workflow.Context, input *batch.UpdateComputeEnvironmentInput) *UpdateComputeEnvironmentFuture
 
 	UpdateJobQueue(ctx workflow.Context, input *batch.UpdateJobQueueInput) (*batch.UpdateJobQueueOutput, error)
-	UpdateJobQueueAsync(ctx workflow.Context, input *batch.UpdateJobQueueInput) *BatchUpdateJobQueueFuture
+	UpdateJobQueueAsync(ctx workflow.Context, input *batch.UpdateJobQueueInput) *UpdateJobQueueFuture
 }
 
 func NewClient() Client {

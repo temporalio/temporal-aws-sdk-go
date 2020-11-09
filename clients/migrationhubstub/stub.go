@@ -16,188 +16,188 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type MigrationHubAssociateCreatedArtifactFuture struct {
+type AssociateCreatedArtifactFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubAssociateCreatedArtifactFuture) Get(ctx workflow.Context) (*migrationhub.AssociateCreatedArtifactOutput, error) {
+func (r *AssociateCreatedArtifactFuture) Get(ctx workflow.Context) (*migrationhub.AssociateCreatedArtifactOutput, error) {
 	var output migrationhub.AssociateCreatedArtifactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubAssociateDiscoveredResourceFuture struct {
+type AssociateDiscoveredResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubAssociateDiscoveredResourceFuture) Get(ctx workflow.Context) (*migrationhub.AssociateDiscoveredResourceOutput, error) {
+func (r *AssociateDiscoveredResourceFuture) Get(ctx workflow.Context) (*migrationhub.AssociateDiscoveredResourceOutput, error) {
 	var output migrationhub.AssociateDiscoveredResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubCreateProgressUpdateStreamFuture struct {
+type CreateProgressUpdateStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubCreateProgressUpdateStreamFuture) Get(ctx workflow.Context) (*migrationhub.CreateProgressUpdateStreamOutput, error) {
+func (r *CreateProgressUpdateStreamFuture) Get(ctx workflow.Context) (*migrationhub.CreateProgressUpdateStreamOutput, error) {
 	var output migrationhub.CreateProgressUpdateStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubDeleteProgressUpdateStreamFuture struct {
+type DeleteProgressUpdateStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubDeleteProgressUpdateStreamFuture) Get(ctx workflow.Context) (*migrationhub.DeleteProgressUpdateStreamOutput, error) {
+func (r *DeleteProgressUpdateStreamFuture) Get(ctx workflow.Context) (*migrationhub.DeleteProgressUpdateStreamOutput, error) {
 	var output migrationhub.DeleteProgressUpdateStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubDescribeApplicationStateFuture struct {
+type DescribeApplicationStateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubDescribeApplicationStateFuture) Get(ctx workflow.Context) (*migrationhub.DescribeApplicationStateOutput, error) {
+func (r *DescribeApplicationStateFuture) Get(ctx workflow.Context) (*migrationhub.DescribeApplicationStateOutput, error) {
 	var output migrationhub.DescribeApplicationStateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubDescribeMigrationTaskFuture struct {
+type DescribeMigrationTaskFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubDescribeMigrationTaskFuture) Get(ctx workflow.Context) (*migrationhub.DescribeMigrationTaskOutput, error) {
+func (r *DescribeMigrationTaskFuture) Get(ctx workflow.Context) (*migrationhub.DescribeMigrationTaskOutput, error) {
 	var output migrationhub.DescribeMigrationTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubDisassociateCreatedArtifactFuture struct {
+type DisassociateCreatedArtifactFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubDisassociateCreatedArtifactFuture) Get(ctx workflow.Context) (*migrationhub.DisassociateCreatedArtifactOutput, error) {
+func (r *DisassociateCreatedArtifactFuture) Get(ctx workflow.Context) (*migrationhub.DisassociateCreatedArtifactOutput, error) {
 	var output migrationhub.DisassociateCreatedArtifactOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubDisassociateDiscoveredResourceFuture struct {
+type DisassociateDiscoveredResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubDisassociateDiscoveredResourceFuture) Get(ctx workflow.Context) (*migrationhub.DisassociateDiscoveredResourceOutput, error) {
+func (r *DisassociateDiscoveredResourceFuture) Get(ctx workflow.Context) (*migrationhub.DisassociateDiscoveredResourceOutput, error) {
 	var output migrationhub.DisassociateDiscoveredResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubImportMigrationTaskFuture struct {
+type ImportMigrationTaskFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubImportMigrationTaskFuture) Get(ctx workflow.Context) (*migrationhub.ImportMigrationTaskOutput, error) {
+func (r *ImportMigrationTaskFuture) Get(ctx workflow.Context) (*migrationhub.ImportMigrationTaskOutput, error) {
 	var output migrationhub.ImportMigrationTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubListApplicationStatesFuture struct {
+type ListApplicationStatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubListApplicationStatesFuture) Get(ctx workflow.Context) (*migrationhub.ListApplicationStatesOutput, error) {
+func (r *ListApplicationStatesFuture) Get(ctx workflow.Context) (*migrationhub.ListApplicationStatesOutput, error) {
 	var output migrationhub.ListApplicationStatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubListCreatedArtifactsFuture struct {
+type ListCreatedArtifactsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubListCreatedArtifactsFuture) Get(ctx workflow.Context) (*migrationhub.ListCreatedArtifactsOutput, error) {
+func (r *ListCreatedArtifactsFuture) Get(ctx workflow.Context) (*migrationhub.ListCreatedArtifactsOutput, error) {
 	var output migrationhub.ListCreatedArtifactsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubListDiscoveredResourcesFuture struct {
+type ListDiscoveredResourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubListDiscoveredResourcesFuture) Get(ctx workflow.Context) (*migrationhub.ListDiscoveredResourcesOutput, error) {
+func (r *ListDiscoveredResourcesFuture) Get(ctx workflow.Context) (*migrationhub.ListDiscoveredResourcesOutput, error) {
 	var output migrationhub.ListDiscoveredResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubListMigrationTasksFuture struct {
+type ListMigrationTasksFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubListMigrationTasksFuture) Get(ctx workflow.Context) (*migrationhub.ListMigrationTasksOutput, error) {
+func (r *ListMigrationTasksFuture) Get(ctx workflow.Context) (*migrationhub.ListMigrationTasksOutput, error) {
 	var output migrationhub.ListMigrationTasksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubListProgressUpdateStreamsFuture struct {
+type ListProgressUpdateStreamsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubListProgressUpdateStreamsFuture) Get(ctx workflow.Context) (*migrationhub.ListProgressUpdateStreamsOutput, error) {
+func (r *ListProgressUpdateStreamsFuture) Get(ctx workflow.Context) (*migrationhub.ListProgressUpdateStreamsOutput, error) {
 	var output migrationhub.ListProgressUpdateStreamsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubNotifyApplicationStateFuture struct {
+type NotifyApplicationStateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubNotifyApplicationStateFuture) Get(ctx workflow.Context) (*migrationhub.NotifyApplicationStateOutput, error) {
+func (r *NotifyApplicationStateFuture) Get(ctx workflow.Context) (*migrationhub.NotifyApplicationStateOutput, error) {
 	var output migrationhub.NotifyApplicationStateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubNotifyMigrationTaskStateFuture struct {
+type NotifyMigrationTaskStateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubNotifyMigrationTaskStateFuture) Get(ctx workflow.Context) (*migrationhub.NotifyMigrationTaskStateOutput, error) {
+func (r *NotifyMigrationTaskStateFuture) Get(ctx workflow.Context) (*migrationhub.NotifyMigrationTaskStateOutput, error) {
 	var output migrationhub.NotifyMigrationTaskStateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MigrationHubPutResourceAttributesFuture struct {
+type PutResourceAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MigrationHubPutResourceAttributesFuture) Get(ctx workflow.Context) (*migrationhub.PutResourceAttributesOutput, error) {
+func (r *PutResourceAttributesFuture) Get(ctx workflow.Context) (*migrationhub.PutResourceAttributesOutput, error) {
 	var output migrationhub.PutResourceAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -209,9 +209,9 @@ func (a *stub) AssociateCreatedArtifact(ctx workflow.Context, input *migrationhu
 	return &output, err
 }
 
-func (a *stub) AssociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.AssociateCreatedArtifactInput) *MigrationHubAssociateCreatedArtifactFuture {
+func (a *stub) AssociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.AssociateCreatedArtifactInput) *AssociateCreatedArtifactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.AssociateCreatedArtifact", input)
-	return &MigrationHubAssociateCreatedArtifactFuture{Future: future}
+	return &AssociateCreatedArtifactFuture{Future: future}
 }
 
 func (a *stub) AssociateDiscoveredResource(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) (*migrationhub.AssociateDiscoveredResourceOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) AssociateDiscoveredResource(ctx workflow.Context, input *migratio
 	return &output, err
 }
 
-func (a *stub) AssociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) *MigrationHubAssociateDiscoveredResourceFuture {
+func (a *stub) AssociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) *AssociateDiscoveredResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.AssociateDiscoveredResource", input)
-	return &MigrationHubAssociateDiscoveredResourceFuture{Future: future}
+	return &AssociateDiscoveredResourceFuture{Future: future}
 }
 
 func (a *stub) CreateProgressUpdateStream(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) (*migrationhub.CreateProgressUpdateStreamOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) CreateProgressUpdateStream(ctx workflow.Context, input *migration
 	return &output, err
 }
 
-func (a *stub) CreateProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) *MigrationHubCreateProgressUpdateStreamFuture {
+func (a *stub) CreateProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) *CreateProgressUpdateStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.CreateProgressUpdateStream", input)
-	return &MigrationHubCreateProgressUpdateStreamFuture{Future: future}
+	return &CreateProgressUpdateStreamFuture{Future: future}
 }
 
 func (a *stub) DeleteProgressUpdateStream(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) (*migrationhub.DeleteProgressUpdateStreamOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) DeleteProgressUpdateStream(ctx workflow.Context, input *migration
 	return &output, err
 }
 
-func (a *stub) DeleteProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) *MigrationHubDeleteProgressUpdateStreamFuture {
+func (a *stub) DeleteProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) *DeleteProgressUpdateStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DeleteProgressUpdateStream", input)
-	return &MigrationHubDeleteProgressUpdateStreamFuture{Future: future}
+	return &DeleteProgressUpdateStreamFuture{Future: future}
 }
 
 func (a *stub) DescribeApplicationState(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) (*migrationhub.DescribeApplicationStateOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DescribeApplicationState(ctx workflow.Context, input *migrationhu
 	return &output, err
 }
 
-func (a *stub) DescribeApplicationStateAsync(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) *MigrationHubDescribeApplicationStateFuture {
+func (a *stub) DescribeApplicationStateAsync(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) *DescribeApplicationStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DescribeApplicationState", input)
-	return &MigrationHubDescribeApplicationStateFuture{Future: future}
+	return &DescribeApplicationStateFuture{Future: future}
 }
 
 func (a *stub) DescribeMigrationTask(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) (*migrationhub.DescribeMigrationTaskOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) DescribeMigrationTask(ctx workflow.Context, input *migrationhub.D
 	return &output, err
 }
 
-func (a *stub) DescribeMigrationTaskAsync(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) *MigrationHubDescribeMigrationTaskFuture {
+func (a *stub) DescribeMigrationTaskAsync(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) *DescribeMigrationTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DescribeMigrationTask", input)
-	return &MigrationHubDescribeMigrationTaskFuture{Future: future}
+	return &DescribeMigrationTaskFuture{Future: future}
 }
 
 func (a *stub) DisassociateCreatedArtifact(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) (*migrationhub.DisassociateCreatedArtifactOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) DisassociateCreatedArtifact(ctx workflow.Context, input *migratio
 	return &output, err
 }
 
-func (a *stub) DisassociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) *MigrationHubDisassociateCreatedArtifactFuture {
+func (a *stub) DisassociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) *DisassociateCreatedArtifactFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DisassociateCreatedArtifact", input)
-	return &MigrationHubDisassociateCreatedArtifactFuture{Future: future}
+	return &DisassociateCreatedArtifactFuture{Future: future}
 }
 
 func (a *stub) DisassociateDiscoveredResource(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) (*migrationhub.DisassociateDiscoveredResourceOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) DisassociateDiscoveredResource(ctx workflow.Context, input *migra
 	return &output, err
 }
 
-func (a *stub) DisassociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) *MigrationHubDisassociateDiscoveredResourceFuture {
+func (a *stub) DisassociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) *DisassociateDiscoveredResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DisassociateDiscoveredResource", input)
-	return &MigrationHubDisassociateDiscoveredResourceFuture{Future: future}
+	return &DisassociateDiscoveredResourceFuture{Future: future}
 }
 
 func (a *stub) ImportMigrationTask(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) (*migrationhub.ImportMigrationTaskOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) ImportMigrationTask(ctx workflow.Context, input *migrationhub.Imp
 	return &output, err
 }
 
-func (a *stub) ImportMigrationTaskAsync(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) *MigrationHubImportMigrationTaskFuture {
+func (a *stub) ImportMigrationTaskAsync(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) *ImportMigrationTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ImportMigrationTask", input)
-	return &MigrationHubImportMigrationTaskFuture{Future: future}
+	return &ImportMigrationTaskFuture{Future: future}
 }
 
 func (a *stub) ListApplicationStates(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) (*migrationhub.ListApplicationStatesOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) ListApplicationStates(ctx workflow.Context, input *migrationhub.L
 	return &output, err
 }
 
-func (a *stub) ListApplicationStatesAsync(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) *MigrationHubListApplicationStatesFuture {
+func (a *stub) ListApplicationStatesAsync(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) *ListApplicationStatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListApplicationStates", input)
-	return &MigrationHubListApplicationStatesFuture{Future: future}
+	return &ListApplicationStatesFuture{Future: future}
 }
 
 func (a *stub) ListCreatedArtifacts(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) (*migrationhub.ListCreatedArtifactsOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) ListCreatedArtifacts(ctx workflow.Context, input *migrationhub.Li
 	return &output, err
 }
 
-func (a *stub) ListCreatedArtifactsAsync(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) *MigrationHubListCreatedArtifactsFuture {
+func (a *stub) ListCreatedArtifactsAsync(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) *ListCreatedArtifactsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListCreatedArtifacts", input)
-	return &MigrationHubListCreatedArtifactsFuture{Future: future}
+	return &ListCreatedArtifactsFuture{Future: future}
 }
 
 func (a *stub) ListDiscoveredResources(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) (*migrationhub.ListDiscoveredResourcesOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) ListDiscoveredResources(ctx workflow.Context, input *migrationhub
 	return &output, err
 }
 
-func (a *stub) ListDiscoveredResourcesAsync(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) *MigrationHubListDiscoveredResourcesFuture {
+func (a *stub) ListDiscoveredResourcesAsync(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) *ListDiscoveredResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListDiscoveredResources", input)
-	return &MigrationHubListDiscoveredResourcesFuture{Future: future}
+	return &ListDiscoveredResourcesFuture{Future: future}
 }
 
 func (a *stub) ListMigrationTasks(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) (*migrationhub.ListMigrationTasksOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) ListMigrationTasks(ctx workflow.Context, input *migrationhub.List
 	return &output, err
 }
 
-func (a *stub) ListMigrationTasksAsync(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) *MigrationHubListMigrationTasksFuture {
+func (a *stub) ListMigrationTasksAsync(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) *ListMigrationTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListMigrationTasks", input)
-	return &MigrationHubListMigrationTasksFuture{Future: future}
+	return &ListMigrationTasksFuture{Future: future}
 }
 
 func (a *stub) ListProgressUpdateStreams(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) (*migrationhub.ListProgressUpdateStreamsOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) ListProgressUpdateStreams(ctx workflow.Context, input *migrationh
 	return &output, err
 }
 
-func (a *stub) ListProgressUpdateStreamsAsync(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) *MigrationHubListProgressUpdateStreamsFuture {
+func (a *stub) ListProgressUpdateStreamsAsync(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) *ListProgressUpdateStreamsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListProgressUpdateStreams", input)
-	return &MigrationHubListProgressUpdateStreamsFuture{Future: future}
+	return &ListProgressUpdateStreamsFuture{Future: future}
 }
 
 func (a *stub) NotifyApplicationState(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) (*migrationhub.NotifyApplicationStateOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) NotifyApplicationState(ctx workflow.Context, input *migrationhub.
 	return &output, err
 }
 
-func (a *stub) NotifyApplicationStateAsync(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) *MigrationHubNotifyApplicationStateFuture {
+func (a *stub) NotifyApplicationStateAsync(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) *NotifyApplicationStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.NotifyApplicationState", input)
-	return &MigrationHubNotifyApplicationStateFuture{Future: future}
+	return &NotifyApplicationStateFuture{Future: future}
 }
 
 func (a *stub) NotifyMigrationTaskState(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) (*migrationhub.NotifyMigrationTaskStateOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) NotifyMigrationTaskState(ctx workflow.Context, input *migrationhu
 	return &output, err
 }
 
-func (a *stub) NotifyMigrationTaskStateAsync(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) *MigrationHubNotifyMigrationTaskStateFuture {
+func (a *stub) NotifyMigrationTaskStateAsync(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) *NotifyMigrationTaskStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.NotifyMigrationTaskState", input)
-	return &MigrationHubNotifyMigrationTaskStateFuture{Future: future}
+	return &NotifyMigrationTaskStateFuture{Future: future}
 }
 
 func (a *stub) PutResourceAttributes(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) (*migrationhub.PutResourceAttributesOutput, error) {
@@ -385,7 +385,7 @@ func (a *stub) PutResourceAttributes(ctx workflow.Context, input *migrationhub.P
 	return &output, err
 }
 
-func (a *stub) PutResourceAttributesAsync(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) *MigrationHubPutResourceAttributesFuture {
+func (a *stub) PutResourceAttributesAsync(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) *PutResourceAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.PutResourceAttributes", input)
-	return &MigrationHubPutResourceAttributesFuture{Future: future}
+	return &PutResourceAttributesFuture{Future: future}
 }

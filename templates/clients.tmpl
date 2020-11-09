@@ -32,7 +32,7 @@ type Client interface {
 {{ else }}
 {{- $prefix := CapitalizeFirstLetter $method.Output.Package }}
 {{ "	"}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error)
-{{ "	"}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{ $name }}{{ $method.Name }}Future
+{{ "	"}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{ $method.Name }}Future
 {{ end }}
 {{- end -}}
 }
@@ -64,12 +64,12 @@ type stub struct{}
 {{- range $i, $method := .Methods }}
 {{- if not (IsNil $method.Output) }}
 {{ $prefix := CapitalizeFirstLetter $method.Output.Package }}
-type {{ $name }}{{ $method.Name }}Future struct {
+type {{ $method.Name }}Future struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *{{ $name }}{{ $method.Name }}Future) Get(ctx workflow.Context) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
+func (r *{{ $method.Name }}Future) Get(ctx workflow.Context) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
 	var output {{ $method.Output.Package }}.{{ $method.Output.Name }}
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -94,9 +94,9 @@ func (a *stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.
 	return &output, err
 }
 
-func (a *stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{ $name }}{{ $method.Name }}Future {
+func (a *stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{ $method.Name }}Future {
 	future := workflow.ExecuteActivity(ctx, "aws.{{ $id }}.{{$method.Name}}", input)
-	return &{{ $name }}{{ $method.Name }}Future{Future: future}
+	return &{{ $method.Name }}Future{Future: future}
 }
 {{ end -}}
 {{- end -}}

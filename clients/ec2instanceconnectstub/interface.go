@@ -16,7 +16,7 @@ var _ clients.VoidFuture
 
 type Client interface {
 	SendSSHPublicKey(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) (*ec2instanceconnect.SendSSHPublicKeyOutput, error)
-	SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *EC2InstanceConnectSendSSHPublicKeyFuture
+	SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *SendSSHPublicKeyFuture
 }
 
 func NewClient() Client {

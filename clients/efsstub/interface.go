@@ -16,79 +16,79 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateAccessPoint(ctx workflow.Context, input *efs.CreateAccessPointInput) (*efs.CreateAccessPointOutput, error)
-	CreateAccessPointAsync(ctx workflow.Context, input *efs.CreateAccessPointInput) *EFSCreateAccessPointFuture
+	CreateAccessPointAsync(ctx workflow.Context, input *efs.CreateAccessPointInput) *CreateAccessPointFuture
 
 	CreateFileSystem(ctx workflow.Context, input *efs.CreateFileSystemInput) (*efs.FileSystemDescription, error)
-	CreateFileSystemAsync(ctx workflow.Context, input *efs.CreateFileSystemInput) *EFSCreateFileSystemFuture
+	CreateFileSystemAsync(ctx workflow.Context, input *efs.CreateFileSystemInput) *CreateFileSystemFuture
 
 	CreateMountTarget(ctx workflow.Context, input *efs.CreateMountTargetInput) (*efs.MountTargetDescription, error)
-	CreateMountTargetAsync(ctx workflow.Context, input *efs.CreateMountTargetInput) *EFSCreateMountTargetFuture
+	CreateMountTargetAsync(ctx workflow.Context, input *efs.CreateMountTargetInput) *CreateMountTargetFuture
 
 	CreateTags(ctx workflow.Context, input *efs.CreateTagsInput) (*efs.CreateTagsOutput, error)
-	CreateTagsAsync(ctx workflow.Context, input *efs.CreateTagsInput) *EFSCreateTagsFuture
+	CreateTagsAsync(ctx workflow.Context, input *efs.CreateTagsInput) *CreateTagsFuture
 
 	DeleteAccessPoint(ctx workflow.Context, input *efs.DeleteAccessPointInput) (*efs.DeleteAccessPointOutput, error)
-	DeleteAccessPointAsync(ctx workflow.Context, input *efs.DeleteAccessPointInput) *EFSDeleteAccessPointFuture
+	DeleteAccessPointAsync(ctx workflow.Context, input *efs.DeleteAccessPointInput) *DeleteAccessPointFuture
 
 	DeleteFileSystem(ctx workflow.Context, input *efs.DeleteFileSystemInput) (*efs.DeleteFileSystemOutput, error)
-	DeleteFileSystemAsync(ctx workflow.Context, input *efs.DeleteFileSystemInput) *EFSDeleteFileSystemFuture
+	DeleteFileSystemAsync(ctx workflow.Context, input *efs.DeleteFileSystemInput) *DeleteFileSystemFuture
 
 	DeleteFileSystemPolicy(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) (*efs.DeleteFileSystemPolicyOutput, error)
-	DeleteFileSystemPolicyAsync(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) *EFSDeleteFileSystemPolicyFuture
+	DeleteFileSystemPolicyAsync(ctx workflow.Context, input *efs.DeleteFileSystemPolicyInput) *DeleteFileSystemPolicyFuture
 
 	DeleteMountTarget(ctx workflow.Context, input *efs.DeleteMountTargetInput) (*efs.DeleteMountTargetOutput, error)
-	DeleteMountTargetAsync(ctx workflow.Context, input *efs.DeleteMountTargetInput) *EFSDeleteMountTargetFuture
+	DeleteMountTargetAsync(ctx workflow.Context, input *efs.DeleteMountTargetInput) *DeleteMountTargetFuture
 
 	DeleteTags(ctx workflow.Context, input *efs.DeleteTagsInput) (*efs.DeleteTagsOutput, error)
-	DeleteTagsAsync(ctx workflow.Context, input *efs.DeleteTagsInput) *EFSDeleteTagsFuture
+	DeleteTagsAsync(ctx workflow.Context, input *efs.DeleteTagsInput) *DeleteTagsFuture
 
 	DescribeAccessPoints(ctx workflow.Context, input *efs.DescribeAccessPointsInput) (*efs.DescribeAccessPointsOutput, error)
-	DescribeAccessPointsAsync(ctx workflow.Context, input *efs.DescribeAccessPointsInput) *EFSDescribeAccessPointsFuture
+	DescribeAccessPointsAsync(ctx workflow.Context, input *efs.DescribeAccessPointsInput) *DescribeAccessPointsFuture
 
 	DescribeBackupPolicy(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) (*efs.DescribeBackupPolicyOutput, error)
-	DescribeBackupPolicyAsync(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) *EFSDescribeBackupPolicyFuture
+	DescribeBackupPolicyAsync(ctx workflow.Context, input *efs.DescribeBackupPolicyInput) *DescribeBackupPolicyFuture
 
 	DescribeFileSystemPolicy(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) (*efs.DescribeFileSystemPolicyOutput, error)
-	DescribeFileSystemPolicyAsync(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) *EFSDescribeFileSystemPolicyFuture
+	DescribeFileSystemPolicyAsync(ctx workflow.Context, input *efs.DescribeFileSystemPolicyInput) *DescribeFileSystemPolicyFuture
 
 	DescribeFileSystems(ctx workflow.Context, input *efs.DescribeFileSystemsInput) (*efs.DescribeFileSystemsOutput, error)
-	DescribeFileSystemsAsync(ctx workflow.Context, input *efs.DescribeFileSystemsInput) *EFSDescribeFileSystemsFuture
+	DescribeFileSystemsAsync(ctx workflow.Context, input *efs.DescribeFileSystemsInput) *DescribeFileSystemsFuture
 
 	DescribeLifecycleConfiguration(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) (*efs.DescribeLifecycleConfigurationOutput, error)
-	DescribeLifecycleConfigurationAsync(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) *EFSDescribeLifecycleConfigurationFuture
+	DescribeLifecycleConfigurationAsync(ctx workflow.Context, input *efs.DescribeLifecycleConfigurationInput) *DescribeLifecycleConfigurationFuture
 
 	DescribeMountTargetSecurityGroups(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) (*efs.DescribeMountTargetSecurityGroupsOutput, error)
-	DescribeMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) *EFSDescribeMountTargetSecurityGroupsFuture
+	DescribeMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.DescribeMountTargetSecurityGroupsInput) *DescribeMountTargetSecurityGroupsFuture
 
 	DescribeMountTargets(ctx workflow.Context, input *efs.DescribeMountTargetsInput) (*efs.DescribeMountTargetsOutput, error)
-	DescribeMountTargetsAsync(ctx workflow.Context, input *efs.DescribeMountTargetsInput) *EFSDescribeMountTargetsFuture
+	DescribeMountTargetsAsync(ctx workflow.Context, input *efs.DescribeMountTargetsInput) *DescribeMountTargetsFuture
 
 	DescribeTags(ctx workflow.Context, input *efs.DescribeTagsInput) (*efs.DescribeTagsOutput, error)
-	DescribeTagsAsync(ctx workflow.Context, input *efs.DescribeTagsInput) *EFSDescribeTagsFuture
+	DescribeTagsAsync(ctx workflow.Context, input *efs.DescribeTagsInput) *DescribeTagsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *efs.ListTagsForResourceInput) (*efs.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *efs.ListTagsForResourceInput) *EFSListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *efs.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ModifyMountTargetSecurityGroups(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) (*efs.ModifyMountTargetSecurityGroupsOutput, error)
-	ModifyMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) *EFSModifyMountTargetSecurityGroupsFuture
+	ModifyMountTargetSecurityGroupsAsync(ctx workflow.Context, input *efs.ModifyMountTargetSecurityGroupsInput) *ModifyMountTargetSecurityGroupsFuture
 
 	PutBackupPolicy(ctx workflow.Context, input *efs.PutBackupPolicyInput) (*efs.PutBackupPolicyOutput, error)
-	PutBackupPolicyAsync(ctx workflow.Context, input *efs.PutBackupPolicyInput) *EFSPutBackupPolicyFuture
+	PutBackupPolicyAsync(ctx workflow.Context, input *efs.PutBackupPolicyInput) *PutBackupPolicyFuture
 
 	PutFileSystemPolicy(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) (*efs.PutFileSystemPolicyOutput, error)
-	PutFileSystemPolicyAsync(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) *EFSPutFileSystemPolicyFuture
+	PutFileSystemPolicyAsync(ctx workflow.Context, input *efs.PutFileSystemPolicyInput) *PutFileSystemPolicyFuture
 
 	PutLifecycleConfiguration(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) (*efs.PutLifecycleConfigurationOutput, error)
-	PutLifecycleConfigurationAsync(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) *EFSPutLifecycleConfigurationFuture
+	PutLifecycleConfigurationAsync(ctx workflow.Context, input *efs.PutLifecycleConfigurationInput) *PutLifecycleConfigurationFuture
 
 	TagResource(ctx workflow.Context, input *efs.TagResourceInput) (*efs.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *efs.TagResourceInput) *EFSTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *efs.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *efs.UntagResourceInput) (*efs.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *efs.UntagResourceInput) *EFSUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *efs.UntagResourceInput) *UntagResourceFuture
 
 	UpdateFileSystem(ctx workflow.Context, input *efs.UpdateFileSystemInput) (*efs.UpdateFileSystemOutput, error)
-	UpdateFileSystemAsync(ctx workflow.Context, input *efs.UpdateFileSystemInput) *EFSUpdateFileSystemFuture
+	UpdateFileSystemAsync(ctx workflow.Context, input *efs.UpdateFileSystemInput) *UpdateFileSystemFuture
 }
 
 func NewClient() Client {

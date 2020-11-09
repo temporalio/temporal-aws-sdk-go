@@ -16,122 +16,122 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CodeStarConnectionsCreateConnectionFuture struct {
+type CreateConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsCreateConnectionFuture) Get(ctx workflow.Context) (*codestarconnections.CreateConnectionOutput, error) {
+func (r *CreateConnectionFuture) Get(ctx workflow.Context) (*codestarconnections.CreateConnectionOutput, error) {
 	var output codestarconnections.CreateConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsCreateHostFuture struct {
+type CreateHostFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsCreateHostFuture) Get(ctx workflow.Context) (*codestarconnections.CreateHostOutput, error) {
+func (r *CreateHostFuture) Get(ctx workflow.Context) (*codestarconnections.CreateHostOutput, error) {
 	var output codestarconnections.CreateHostOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsDeleteConnectionFuture struct {
+type DeleteConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsDeleteConnectionFuture) Get(ctx workflow.Context) (*codestarconnections.DeleteConnectionOutput, error) {
+func (r *DeleteConnectionFuture) Get(ctx workflow.Context) (*codestarconnections.DeleteConnectionOutput, error) {
 	var output codestarconnections.DeleteConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsDeleteHostFuture struct {
+type DeleteHostFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsDeleteHostFuture) Get(ctx workflow.Context) (*codestarconnections.DeleteHostOutput, error) {
+func (r *DeleteHostFuture) Get(ctx workflow.Context) (*codestarconnections.DeleteHostOutput, error) {
 	var output codestarconnections.DeleteHostOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsGetConnectionFuture struct {
+type GetConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsGetConnectionFuture) Get(ctx workflow.Context) (*codestarconnections.GetConnectionOutput, error) {
+func (r *GetConnectionFuture) Get(ctx workflow.Context) (*codestarconnections.GetConnectionOutput, error) {
 	var output codestarconnections.GetConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsGetHostFuture struct {
+type GetHostFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsGetHostFuture) Get(ctx workflow.Context) (*codestarconnections.GetHostOutput, error) {
+func (r *GetHostFuture) Get(ctx workflow.Context) (*codestarconnections.GetHostOutput, error) {
 	var output codestarconnections.GetHostOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsListConnectionsFuture struct {
+type ListConnectionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsListConnectionsFuture) Get(ctx workflow.Context) (*codestarconnections.ListConnectionsOutput, error) {
+func (r *ListConnectionsFuture) Get(ctx workflow.Context) (*codestarconnections.ListConnectionsOutput, error) {
 	var output codestarconnections.ListConnectionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsListHostsFuture struct {
+type ListHostsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsListHostsFuture) Get(ctx workflow.Context) (*codestarconnections.ListHostsOutput, error) {
+func (r *ListHostsFuture) Get(ctx workflow.Context) (*codestarconnections.ListHostsOutput, error) {
 	var output codestarconnections.ListHostsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsListTagsForResourceFuture) Get(ctx workflow.Context) (*codestarconnections.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*codestarconnections.ListTagsForResourceOutput, error) {
 	var output codestarconnections.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsTagResourceFuture) Get(ctx workflow.Context) (*codestarconnections.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*codestarconnections.TagResourceOutput, error) {
 	var output codestarconnections.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeStarConnectionsUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeStarConnectionsUntagResourceFuture) Get(ctx workflow.Context) (*codestarconnections.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*codestarconnections.UntagResourceOutput, error) {
 	var output codestarconnections.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -143,9 +143,9 @@ func (a *stub) CreateConnection(ctx workflow.Context, input *codestarconnections
 	return &output, err
 }
 
-func (a *stub) CreateConnectionAsync(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) *CodeStarConnectionsCreateConnectionFuture {
+func (a *stub) CreateConnectionAsync(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) *CreateConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.CreateConnection", input)
-	return &CodeStarConnectionsCreateConnectionFuture{Future: future}
+	return &CreateConnectionFuture{Future: future}
 }
 
 func (a *stub) CreateHost(ctx workflow.Context, input *codestarconnections.CreateHostInput) (*codestarconnections.CreateHostOutput, error) {
@@ -154,9 +154,9 @@ func (a *stub) CreateHost(ctx workflow.Context, input *codestarconnections.Creat
 	return &output, err
 }
 
-func (a *stub) CreateHostAsync(ctx workflow.Context, input *codestarconnections.CreateHostInput) *CodeStarConnectionsCreateHostFuture {
+func (a *stub) CreateHostAsync(ctx workflow.Context, input *codestarconnections.CreateHostInput) *CreateHostFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.CreateHost", input)
-	return &CodeStarConnectionsCreateHostFuture{Future: future}
+	return &CreateHostFuture{Future: future}
 }
 
 func (a *stub) DeleteConnection(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) (*codestarconnections.DeleteConnectionOutput, error) {
@@ -165,9 +165,9 @@ func (a *stub) DeleteConnection(ctx workflow.Context, input *codestarconnections
 	return &output, err
 }
 
-func (a *stub) DeleteConnectionAsync(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) *CodeStarConnectionsDeleteConnectionFuture {
+func (a *stub) DeleteConnectionAsync(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) *DeleteConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.DeleteConnection", input)
-	return &CodeStarConnectionsDeleteConnectionFuture{Future: future}
+	return &DeleteConnectionFuture{Future: future}
 }
 
 func (a *stub) DeleteHost(ctx workflow.Context, input *codestarconnections.DeleteHostInput) (*codestarconnections.DeleteHostOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) DeleteHost(ctx workflow.Context, input *codestarconnections.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteHostAsync(ctx workflow.Context, input *codestarconnections.DeleteHostInput) *CodeStarConnectionsDeleteHostFuture {
+func (a *stub) DeleteHostAsync(ctx workflow.Context, input *codestarconnections.DeleteHostInput) *DeleteHostFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.DeleteHost", input)
-	return &CodeStarConnectionsDeleteHostFuture{Future: future}
+	return &DeleteHostFuture{Future: future}
 }
 
 func (a *stub) GetConnection(ctx workflow.Context, input *codestarconnections.GetConnectionInput) (*codestarconnections.GetConnectionOutput, error) {
@@ -187,9 +187,9 @@ func (a *stub) GetConnection(ctx workflow.Context, input *codestarconnections.Ge
 	return &output, err
 }
 
-func (a *stub) GetConnectionAsync(ctx workflow.Context, input *codestarconnections.GetConnectionInput) *CodeStarConnectionsGetConnectionFuture {
+func (a *stub) GetConnectionAsync(ctx workflow.Context, input *codestarconnections.GetConnectionInput) *GetConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.GetConnection", input)
-	return &CodeStarConnectionsGetConnectionFuture{Future: future}
+	return &GetConnectionFuture{Future: future}
 }
 
 func (a *stub) GetHost(ctx workflow.Context, input *codestarconnections.GetHostInput) (*codestarconnections.GetHostOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) GetHost(ctx workflow.Context, input *codestarconnections.GetHostI
 	return &output, err
 }
 
-func (a *stub) GetHostAsync(ctx workflow.Context, input *codestarconnections.GetHostInput) *CodeStarConnectionsGetHostFuture {
+func (a *stub) GetHostAsync(ctx workflow.Context, input *codestarconnections.GetHostInput) *GetHostFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.GetHost", input)
-	return &CodeStarConnectionsGetHostFuture{Future: future}
+	return &GetHostFuture{Future: future}
 }
 
 func (a *stub) ListConnections(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) (*codestarconnections.ListConnectionsOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) ListConnections(ctx workflow.Context, input *codestarconnections.
 	return &output, err
 }
 
-func (a *stub) ListConnectionsAsync(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) *CodeStarConnectionsListConnectionsFuture {
+func (a *stub) ListConnectionsAsync(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) *ListConnectionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.ListConnections", input)
-	return &CodeStarConnectionsListConnectionsFuture{Future: future}
+	return &ListConnectionsFuture{Future: future}
 }
 
 func (a *stub) ListHosts(ctx workflow.Context, input *codestarconnections.ListHostsInput) (*codestarconnections.ListHostsOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) ListHosts(ctx workflow.Context, input *codestarconnections.ListHo
 	return &output, err
 }
 
-func (a *stub) ListHostsAsync(ctx workflow.Context, input *codestarconnections.ListHostsInput) *CodeStarConnectionsListHostsFuture {
+func (a *stub) ListHostsAsync(ctx workflow.Context, input *codestarconnections.ListHostsInput) *ListHostsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.ListHosts", input)
-	return &CodeStarConnectionsListHostsFuture{Future: future}
+	return &ListHostsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) (*codestarconnections.ListTagsForResourceOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *codestarconnecti
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) *CodeStarConnectionsListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.ListTagsForResource", input)
-	return &CodeStarConnectionsListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *codestarconnections.TagResourceInput) (*codestarconnections.TagResourceOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *codestarconnections.TagR
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *codestarconnections.TagResourceInput) *CodeStarConnectionsTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *codestarconnections.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.TagResource", input)
-	return &CodeStarConnectionsTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *codestarconnections.UntagResourceInput) (*codestarconnections.UntagResourceOutput, error) {
@@ -253,7 +253,7 @@ func (a *stub) UntagResource(ctx workflow.Context, input *codestarconnections.Un
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *codestarconnections.UntagResourceInput) *CodeStarConnectionsUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *codestarconnections.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codestarconnections.UntagResource", input)
-	return &CodeStarConnectionsUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }

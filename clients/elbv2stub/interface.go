@@ -16,106 +16,106 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AddListenerCertificates(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) (*elbv2.AddListenerCertificatesOutput, error)
-	AddListenerCertificatesAsync(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) *ELBV2AddListenerCertificatesFuture
+	AddListenerCertificatesAsync(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) *AddListenerCertificatesFuture
 
 	AddTags(ctx workflow.Context, input *elbv2.AddTagsInput) (*elbv2.AddTagsOutput, error)
-	AddTagsAsync(ctx workflow.Context, input *elbv2.AddTagsInput) *ELBV2AddTagsFuture
+	AddTagsAsync(ctx workflow.Context, input *elbv2.AddTagsInput) *AddTagsFuture
 
 	CreateListener(ctx workflow.Context, input *elbv2.CreateListenerInput) (*elbv2.CreateListenerOutput, error)
-	CreateListenerAsync(ctx workflow.Context, input *elbv2.CreateListenerInput) *ELBV2CreateListenerFuture
+	CreateListenerAsync(ctx workflow.Context, input *elbv2.CreateListenerInput) *CreateListenerFuture
 
 	CreateLoadBalancer(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) (*elbv2.CreateLoadBalancerOutput, error)
-	CreateLoadBalancerAsync(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) *ELBV2CreateLoadBalancerFuture
+	CreateLoadBalancerAsync(ctx workflow.Context, input *elbv2.CreateLoadBalancerInput) *CreateLoadBalancerFuture
 
 	CreateRule(ctx workflow.Context, input *elbv2.CreateRuleInput) (*elbv2.CreateRuleOutput, error)
-	CreateRuleAsync(ctx workflow.Context, input *elbv2.CreateRuleInput) *ELBV2CreateRuleFuture
+	CreateRuleAsync(ctx workflow.Context, input *elbv2.CreateRuleInput) *CreateRuleFuture
 
 	CreateTargetGroup(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) (*elbv2.CreateTargetGroupOutput, error)
-	CreateTargetGroupAsync(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) *ELBV2CreateTargetGroupFuture
+	CreateTargetGroupAsync(ctx workflow.Context, input *elbv2.CreateTargetGroupInput) *CreateTargetGroupFuture
 
 	DeleteListener(ctx workflow.Context, input *elbv2.DeleteListenerInput) (*elbv2.DeleteListenerOutput, error)
-	DeleteListenerAsync(ctx workflow.Context, input *elbv2.DeleteListenerInput) *ELBV2DeleteListenerFuture
+	DeleteListenerAsync(ctx workflow.Context, input *elbv2.DeleteListenerInput) *DeleteListenerFuture
 
 	DeleteLoadBalancer(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) (*elbv2.DeleteLoadBalancerOutput, error)
-	DeleteLoadBalancerAsync(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) *ELBV2DeleteLoadBalancerFuture
+	DeleteLoadBalancerAsync(ctx workflow.Context, input *elbv2.DeleteLoadBalancerInput) *DeleteLoadBalancerFuture
 
 	DeleteRule(ctx workflow.Context, input *elbv2.DeleteRuleInput) (*elbv2.DeleteRuleOutput, error)
-	DeleteRuleAsync(ctx workflow.Context, input *elbv2.DeleteRuleInput) *ELBV2DeleteRuleFuture
+	DeleteRuleAsync(ctx workflow.Context, input *elbv2.DeleteRuleInput) *DeleteRuleFuture
 
 	DeleteTargetGroup(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) (*elbv2.DeleteTargetGroupOutput, error)
-	DeleteTargetGroupAsync(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) *ELBV2DeleteTargetGroupFuture
+	DeleteTargetGroupAsync(ctx workflow.Context, input *elbv2.DeleteTargetGroupInput) *DeleteTargetGroupFuture
 
 	DeregisterTargets(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) (*elbv2.DeregisterTargetsOutput, error)
-	DeregisterTargetsAsync(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) *ELBV2DeregisterTargetsFuture
+	DeregisterTargetsAsync(ctx workflow.Context, input *elbv2.DeregisterTargetsInput) *DeregisterTargetsFuture
 
 	DescribeAccountLimits(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) (*elbv2.DescribeAccountLimitsOutput, error)
-	DescribeAccountLimitsAsync(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) *ELBV2DescribeAccountLimitsFuture
+	DescribeAccountLimitsAsync(ctx workflow.Context, input *elbv2.DescribeAccountLimitsInput) *DescribeAccountLimitsFuture
 
 	DescribeListenerCertificates(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) (*elbv2.DescribeListenerCertificatesOutput, error)
-	DescribeListenerCertificatesAsync(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) *ELBV2DescribeListenerCertificatesFuture
+	DescribeListenerCertificatesAsync(ctx workflow.Context, input *elbv2.DescribeListenerCertificatesInput) *DescribeListenerCertificatesFuture
 
 	DescribeListeners(ctx workflow.Context, input *elbv2.DescribeListenersInput) (*elbv2.DescribeListenersOutput, error)
-	DescribeListenersAsync(ctx workflow.Context, input *elbv2.DescribeListenersInput) *ELBV2DescribeListenersFuture
+	DescribeListenersAsync(ctx workflow.Context, input *elbv2.DescribeListenersInput) *DescribeListenersFuture
 
 	DescribeLoadBalancerAttributes(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) (*elbv2.DescribeLoadBalancerAttributesOutput, error)
-	DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) *ELBV2DescribeLoadBalancerAttributesFuture
+	DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancerAttributesInput) *DescribeLoadBalancerAttributesFuture
 
 	DescribeLoadBalancers(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) (*elbv2.DescribeLoadBalancersOutput, error)
-	DescribeLoadBalancersAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *ELBV2DescribeLoadBalancersFuture
+	DescribeLoadBalancersAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *DescribeLoadBalancersFuture
 
 	DescribeRules(ctx workflow.Context, input *elbv2.DescribeRulesInput) (*elbv2.DescribeRulesOutput, error)
-	DescribeRulesAsync(ctx workflow.Context, input *elbv2.DescribeRulesInput) *ELBV2DescribeRulesFuture
+	DescribeRulesAsync(ctx workflow.Context, input *elbv2.DescribeRulesInput) *DescribeRulesFuture
 
 	DescribeSSLPolicies(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) (*elbv2.DescribeSSLPoliciesOutput, error)
-	DescribeSSLPoliciesAsync(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) *ELBV2DescribeSSLPoliciesFuture
+	DescribeSSLPoliciesAsync(ctx workflow.Context, input *elbv2.DescribeSSLPoliciesInput) *DescribeSSLPoliciesFuture
 
 	DescribeTags(ctx workflow.Context, input *elbv2.DescribeTagsInput) (*elbv2.DescribeTagsOutput, error)
-	DescribeTagsAsync(ctx workflow.Context, input *elbv2.DescribeTagsInput) *ELBV2DescribeTagsFuture
+	DescribeTagsAsync(ctx workflow.Context, input *elbv2.DescribeTagsInput) *DescribeTagsFuture
 
 	DescribeTargetGroupAttributes(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) (*elbv2.DescribeTargetGroupAttributesOutput, error)
-	DescribeTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) *ELBV2DescribeTargetGroupAttributesFuture
+	DescribeTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupAttributesInput) *DescribeTargetGroupAttributesFuture
 
 	DescribeTargetGroups(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) (*elbv2.DescribeTargetGroupsOutput, error)
-	DescribeTargetGroupsAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) *ELBV2DescribeTargetGroupsFuture
+	DescribeTargetGroupsAsync(ctx workflow.Context, input *elbv2.DescribeTargetGroupsInput) *DescribeTargetGroupsFuture
 
 	DescribeTargetHealth(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) (*elbv2.DescribeTargetHealthOutput, error)
-	DescribeTargetHealthAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *ELBV2DescribeTargetHealthFuture
+	DescribeTargetHealthAsync(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) *DescribeTargetHealthFuture
 
 	ModifyListener(ctx workflow.Context, input *elbv2.ModifyListenerInput) (*elbv2.ModifyListenerOutput, error)
-	ModifyListenerAsync(ctx workflow.Context, input *elbv2.ModifyListenerInput) *ELBV2ModifyListenerFuture
+	ModifyListenerAsync(ctx workflow.Context, input *elbv2.ModifyListenerInput) *ModifyListenerFuture
 
 	ModifyLoadBalancerAttributes(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) (*elbv2.ModifyLoadBalancerAttributesOutput, error)
-	ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) *ELBV2ModifyLoadBalancerAttributesFuture
+	ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elbv2.ModifyLoadBalancerAttributesInput) *ModifyLoadBalancerAttributesFuture
 
 	ModifyRule(ctx workflow.Context, input *elbv2.ModifyRuleInput) (*elbv2.ModifyRuleOutput, error)
-	ModifyRuleAsync(ctx workflow.Context, input *elbv2.ModifyRuleInput) *ELBV2ModifyRuleFuture
+	ModifyRuleAsync(ctx workflow.Context, input *elbv2.ModifyRuleInput) *ModifyRuleFuture
 
 	ModifyTargetGroup(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) (*elbv2.ModifyTargetGroupOutput, error)
-	ModifyTargetGroupAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) *ELBV2ModifyTargetGroupFuture
+	ModifyTargetGroupAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupInput) *ModifyTargetGroupFuture
 
 	ModifyTargetGroupAttributes(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) (*elbv2.ModifyTargetGroupAttributesOutput, error)
-	ModifyTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) *ELBV2ModifyTargetGroupAttributesFuture
+	ModifyTargetGroupAttributesAsync(ctx workflow.Context, input *elbv2.ModifyTargetGroupAttributesInput) *ModifyTargetGroupAttributesFuture
 
 	RegisterTargets(ctx workflow.Context, input *elbv2.RegisterTargetsInput) (*elbv2.RegisterTargetsOutput, error)
-	RegisterTargetsAsync(ctx workflow.Context, input *elbv2.RegisterTargetsInput) *ELBV2RegisterTargetsFuture
+	RegisterTargetsAsync(ctx workflow.Context, input *elbv2.RegisterTargetsInput) *RegisterTargetsFuture
 
 	RemoveListenerCertificates(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) (*elbv2.RemoveListenerCertificatesOutput, error)
-	RemoveListenerCertificatesAsync(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) *ELBV2RemoveListenerCertificatesFuture
+	RemoveListenerCertificatesAsync(ctx workflow.Context, input *elbv2.RemoveListenerCertificatesInput) *RemoveListenerCertificatesFuture
 
 	RemoveTags(ctx workflow.Context, input *elbv2.RemoveTagsInput) (*elbv2.RemoveTagsOutput, error)
-	RemoveTagsAsync(ctx workflow.Context, input *elbv2.RemoveTagsInput) *ELBV2RemoveTagsFuture
+	RemoveTagsAsync(ctx workflow.Context, input *elbv2.RemoveTagsInput) *RemoveTagsFuture
 
 	SetIpAddressType(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) (*elbv2.SetIpAddressTypeOutput, error)
-	SetIpAddressTypeAsync(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) *ELBV2SetIpAddressTypeFuture
+	SetIpAddressTypeAsync(ctx workflow.Context, input *elbv2.SetIpAddressTypeInput) *SetIpAddressTypeFuture
 
 	SetRulePriorities(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) (*elbv2.SetRulePrioritiesOutput, error)
-	SetRulePrioritiesAsync(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) *ELBV2SetRulePrioritiesFuture
+	SetRulePrioritiesAsync(ctx workflow.Context, input *elbv2.SetRulePrioritiesInput) *SetRulePrioritiesFuture
 
 	SetSecurityGroups(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) (*elbv2.SetSecurityGroupsOutput, error)
-	SetSecurityGroupsAsync(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) *ELBV2SetSecurityGroupsFuture
+	SetSecurityGroupsAsync(ctx workflow.Context, input *elbv2.SetSecurityGroupsInput) *SetSecurityGroupsFuture
 
 	SetSubnets(ctx workflow.Context, input *elbv2.SetSubnetsInput) (*elbv2.SetSubnetsOutput, error)
-	SetSubnetsAsync(ctx workflow.Context, input *elbv2.SetSubnetsInput) *ELBV2SetSubnetsFuture
+	SetSubnetsAsync(ctx workflow.Context, input *elbv2.SetSubnetsInput) *SetSubnetsFuture
 
 	WaitUntilLoadBalancerAvailable(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
 	WaitUntilLoadBalancerAvailableAsync(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) *clients.VoidFuture

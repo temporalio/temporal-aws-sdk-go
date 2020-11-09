@@ -16,181 +16,181 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AddRoleToDBCluster(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) (*neptune.AddRoleToDBClusterOutput, error)
-	AddRoleToDBClusterAsync(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) *NeptuneAddRoleToDBClusterFuture
+	AddRoleToDBClusterAsync(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) *AddRoleToDBClusterFuture
 
 	AddSourceIdentifierToSubscription(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) (*neptune.AddSourceIdentifierToSubscriptionOutput, error)
-	AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) *NeptuneAddSourceIdentifierToSubscriptionFuture
+	AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) *AddSourceIdentifierToSubscriptionFuture
 
 	AddTagsToResource(ctx workflow.Context, input *neptune.AddTagsToResourceInput) (*neptune.AddTagsToResourceOutput, error)
-	AddTagsToResourceAsync(ctx workflow.Context, input *neptune.AddTagsToResourceInput) *NeptuneAddTagsToResourceFuture
+	AddTagsToResourceAsync(ctx workflow.Context, input *neptune.AddTagsToResourceInput) *AddTagsToResourceFuture
 
 	ApplyPendingMaintenanceAction(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) (*neptune.ApplyPendingMaintenanceActionOutput, error)
-	ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) *NeptuneApplyPendingMaintenanceActionFuture
+	ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) *ApplyPendingMaintenanceActionFuture
 
 	CopyDBClusterParameterGroup(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) (*neptune.CopyDBClusterParameterGroupOutput, error)
-	CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) *NeptuneCopyDBClusterParameterGroupFuture
+	CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) *CopyDBClusterParameterGroupFuture
 
 	CopyDBClusterSnapshot(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) (*neptune.CopyDBClusterSnapshotOutput, error)
-	CopyDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) *NeptuneCopyDBClusterSnapshotFuture
+	CopyDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) *CopyDBClusterSnapshotFuture
 
 	CopyDBParameterGroup(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) (*neptune.CopyDBParameterGroupOutput, error)
-	CopyDBParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) *NeptuneCopyDBParameterGroupFuture
+	CopyDBParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) *CopyDBParameterGroupFuture
 
 	CreateDBCluster(ctx workflow.Context, input *neptune.CreateDBClusterInput) (*neptune.CreateDBClusterOutput, error)
-	CreateDBClusterAsync(ctx workflow.Context, input *neptune.CreateDBClusterInput) *NeptuneCreateDBClusterFuture
+	CreateDBClusterAsync(ctx workflow.Context, input *neptune.CreateDBClusterInput) *CreateDBClusterFuture
 
 	CreateDBClusterParameterGroup(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) (*neptune.CreateDBClusterParameterGroupOutput, error)
-	CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) *NeptuneCreateDBClusterParameterGroupFuture
+	CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) *CreateDBClusterParameterGroupFuture
 
 	CreateDBClusterSnapshot(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) (*neptune.CreateDBClusterSnapshotOutput, error)
-	CreateDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) *NeptuneCreateDBClusterSnapshotFuture
+	CreateDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) *CreateDBClusterSnapshotFuture
 
 	CreateDBInstance(ctx workflow.Context, input *neptune.CreateDBInstanceInput) (*neptune.CreateDBInstanceOutput, error)
-	CreateDBInstanceAsync(ctx workflow.Context, input *neptune.CreateDBInstanceInput) *NeptuneCreateDBInstanceFuture
+	CreateDBInstanceAsync(ctx workflow.Context, input *neptune.CreateDBInstanceInput) *CreateDBInstanceFuture
 
 	CreateDBParameterGroup(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) (*neptune.CreateDBParameterGroupOutput, error)
-	CreateDBParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) *NeptuneCreateDBParameterGroupFuture
+	CreateDBParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) *CreateDBParameterGroupFuture
 
 	CreateDBSubnetGroup(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) (*neptune.CreateDBSubnetGroupOutput, error)
-	CreateDBSubnetGroupAsync(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) *NeptuneCreateDBSubnetGroupFuture
+	CreateDBSubnetGroupAsync(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) *CreateDBSubnetGroupFuture
 
 	CreateEventSubscription(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) (*neptune.CreateEventSubscriptionOutput, error)
-	CreateEventSubscriptionAsync(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) *NeptuneCreateEventSubscriptionFuture
+	CreateEventSubscriptionAsync(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) *CreateEventSubscriptionFuture
 
 	DeleteDBCluster(ctx workflow.Context, input *neptune.DeleteDBClusterInput) (*neptune.DeleteDBClusterOutput, error)
-	DeleteDBClusterAsync(ctx workflow.Context, input *neptune.DeleteDBClusterInput) *NeptuneDeleteDBClusterFuture
+	DeleteDBClusterAsync(ctx workflow.Context, input *neptune.DeleteDBClusterInput) *DeleteDBClusterFuture
 
 	DeleteDBClusterParameterGroup(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) (*neptune.DeleteDBClusterParameterGroupOutput, error)
-	DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) *NeptuneDeleteDBClusterParameterGroupFuture
+	DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) *DeleteDBClusterParameterGroupFuture
 
 	DeleteDBClusterSnapshot(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) (*neptune.DeleteDBClusterSnapshotOutput, error)
-	DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) *NeptuneDeleteDBClusterSnapshotFuture
+	DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) *DeleteDBClusterSnapshotFuture
 
 	DeleteDBInstance(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) (*neptune.DeleteDBInstanceOutput, error)
-	DeleteDBInstanceAsync(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) *NeptuneDeleteDBInstanceFuture
+	DeleteDBInstanceAsync(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) *DeleteDBInstanceFuture
 
 	DeleteDBParameterGroup(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) (*neptune.DeleteDBParameterGroupOutput, error)
-	DeleteDBParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) *NeptuneDeleteDBParameterGroupFuture
+	DeleteDBParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) *DeleteDBParameterGroupFuture
 
 	DeleteDBSubnetGroup(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) (*neptune.DeleteDBSubnetGroupOutput, error)
-	DeleteDBSubnetGroupAsync(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) *NeptuneDeleteDBSubnetGroupFuture
+	DeleteDBSubnetGroupAsync(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) *DeleteDBSubnetGroupFuture
 
 	DeleteEventSubscription(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) (*neptune.DeleteEventSubscriptionOutput, error)
-	DeleteEventSubscriptionAsync(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) *NeptuneDeleteEventSubscriptionFuture
+	DeleteEventSubscriptionAsync(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) *DeleteEventSubscriptionFuture
 
 	DescribeDBClusterParameterGroups(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) (*neptune.DescribeDBClusterParameterGroupsOutput, error)
-	DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) *NeptuneDescribeDBClusterParameterGroupsFuture
+	DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) *DescribeDBClusterParameterGroupsFuture
 
 	DescribeDBClusterParameters(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) (*neptune.DescribeDBClusterParametersOutput, error)
-	DescribeDBClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) *NeptuneDescribeDBClusterParametersFuture
+	DescribeDBClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) *DescribeDBClusterParametersFuture
 
 	DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) (*neptune.DescribeDBClusterSnapshotAttributesOutput, error)
-	DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) *NeptuneDescribeDBClusterSnapshotAttributesFuture
+	DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) *DescribeDBClusterSnapshotAttributesFuture
 
 	DescribeDBClusterSnapshots(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) (*neptune.DescribeDBClusterSnapshotsOutput, error)
-	DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) *NeptuneDescribeDBClusterSnapshotsFuture
+	DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) *DescribeDBClusterSnapshotsFuture
 
 	DescribeDBClusters(ctx workflow.Context, input *neptune.DescribeDBClustersInput) (*neptune.DescribeDBClustersOutput, error)
-	DescribeDBClustersAsync(ctx workflow.Context, input *neptune.DescribeDBClustersInput) *NeptuneDescribeDBClustersFuture
+	DescribeDBClustersAsync(ctx workflow.Context, input *neptune.DescribeDBClustersInput) *DescribeDBClustersFuture
 
 	DescribeDBEngineVersions(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) (*neptune.DescribeDBEngineVersionsOutput, error)
-	DescribeDBEngineVersionsAsync(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) *NeptuneDescribeDBEngineVersionsFuture
+	DescribeDBEngineVersionsAsync(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) *DescribeDBEngineVersionsFuture
 
 	DescribeDBInstances(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) (*neptune.DescribeDBInstancesOutput, error)
-	DescribeDBInstancesAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *NeptuneDescribeDBInstancesFuture
+	DescribeDBInstancesAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *DescribeDBInstancesFuture
 
 	DescribeDBParameterGroups(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) (*neptune.DescribeDBParameterGroupsOutput, error)
-	DescribeDBParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) *NeptuneDescribeDBParameterGroupsFuture
+	DescribeDBParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) *DescribeDBParameterGroupsFuture
 
 	DescribeDBParameters(ctx workflow.Context, input *neptune.DescribeDBParametersInput) (*neptune.DescribeDBParametersOutput, error)
-	DescribeDBParametersAsync(ctx workflow.Context, input *neptune.DescribeDBParametersInput) *NeptuneDescribeDBParametersFuture
+	DescribeDBParametersAsync(ctx workflow.Context, input *neptune.DescribeDBParametersInput) *DescribeDBParametersFuture
 
 	DescribeDBSubnetGroups(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) (*neptune.DescribeDBSubnetGroupsOutput, error)
-	DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) *NeptuneDescribeDBSubnetGroupsFuture
+	DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) *DescribeDBSubnetGroupsFuture
 
 	DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) (*neptune.DescribeEngineDefaultClusterParametersOutput, error)
-	DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) *NeptuneDescribeEngineDefaultClusterParametersFuture
+	DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) *DescribeEngineDefaultClusterParametersFuture
 
 	DescribeEngineDefaultParameters(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) (*neptune.DescribeEngineDefaultParametersOutput, error)
-	DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) *NeptuneDescribeEngineDefaultParametersFuture
+	DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) *DescribeEngineDefaultParametersFuture
 
 	DescribeEventCategories(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) (*neptune.DescribeEventCategoriesOutput, error)
-	DescribeEventCategoriesAsync(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) *NeptuneDescribeEventCategoriesFuture
+	DescribeEventCategoriesAsync(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) *DescribeEventCategoriesFuture
 
 	DescribeEventSubscriptions(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) (*neptune.DescribeEventSubscriptionsOutput, error)
-	DescribeEventSubscriptionsAsync(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) *NeptuneDescribeEventSubscriptionsFuture
+	DescribeEventSubscriptionsAsync(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) *DescribeEventSubscriptionsFuture
 
 	DescribeEvents(ctx workflow.Context, input *neptune.DescribeEventsInput) (*neptune.DescribeEventsOutput, error)
-	DescribeEventsAsync(ctx workflow.Context, input *neptune.DescribeEventsInput) *NeptuneDescribeEventsFuture
+	DescribeEventsAsync(ctx workflow.Context, input *neptune.DescribeEventsInput) *DescribeEventsFuture
 
 	DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) (*neptune.DescribeOrderableDBInstanceOptionsOutput, error)
-	DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) *NeptuneDescribeOrderableDBInstanceOptionsFuture
+	DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) *DescribeOrderableDBInstanceOptionsFuture
 
 	DescribePendingMaintenanceActions(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) (*neptune.DescribePendingMaintenanceActionsOutput, error)
-	DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) *NeptuneDescribePendingMaintenanceActionsFuture
+	DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) *DescribePendingMaintenanceActionsFuture
 
 	DescribeValidDBInstanceModifications(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) (*neptune.DescribeValidDBInstanceModificationsOutput, error)
-	DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) *NeptuneDescribeValidDBInstanceModificationsFuture
+	DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) *DescribeValidDBInstanceModificationsFuture
 
 	FailoverDBCluster(ctx workflow.Context, input *neptune.FailoverDBClusterInput) (*neptune.FailoverDBClusterOutput, error)
-	FailoverDBClusterAsync(ctx workflow.Context, input *neptune.FailoverDBClusterInput) *NeptuneFailoverDBClusterFuture
+	FailoverDBClusterAsync(ctx workflow.Context, input *neptune.FailoverDBClusterInput) *FailoverDBClusterFuture
 
 	ListTagsForResource(ctx workflow.Context, input *neptune.ListTagsForResourceInput) (*neptune.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *neptune.ListTagsForResourceInput) *NeptuneListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *neptune.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ModifyDBCluster(ctx workflow.Context, input *neptune.ModifyDBClusterInput) (*neptune.ModifyDBClusterOutput, error)
-	ModifyDBClusterAsync(ctx workflow.Context, input *neptune.ModifyDBClusterInput) *NeptuneModifyDBClusterFuture
+	ModifyDBClusterAsync(ctx workflow.Context, input *neptune.ModifyDBClusterInput) *ModifyDBClusterFuture
 
 	ModifyDBClusterParameterGroup(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error)
-	ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) *NeptuneModifyDBClusterParameterGroupFuture
+	ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) *ModifyDBClusterParameterGroupFuture
 
 	ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) (*neptune.ModifyDBClusterSnapshotAttributeOutput, error)
-	ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) *NeptuneModifyDBClusterSnapshotAttributeFuture
+	ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) *ModifyDBClusterSnapshotAttributeFuture
 
 	ModifyDBInstance(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) (*neptune.ModifyDBInstanceOutput, error)
-	ModifyDBInstanceAsync(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) *NeptuneModifyDBInstanceFuture
+	ModifyDBInstanceAsync(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) *ModifyDBInstanceFuture
 
 	ModifyDBParameterGroup(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error)
-	ModifyDBParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) *NeptuneModifyDBParameterGroupFuture
+	ModifyDBParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) *ModifyDBParameterGroupFuture
 
 	ModifyDBSubnetGroup(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) (*neptune.ModifyDBSubnetGroupOutput, error)
-	ModifyDBSubnetGroupAsync(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) *NeptuneModifyDBSubnetGroupFuture
+	ModifyDBSubnetGroupAsync(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) *ModifyDBSubnetGroupFuture
 
 	ModifyEventSubscription(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) (*neptune.ModifyEventSubscriptionOutput, error)
-	ModifyEventSubscriptionAsync(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) *NeptuneModifyEventSubscriptionFuture
+	ModifyEventSubscriptionAsync(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) *ModifyEventSubscriptionFuture
 
 	PromoteReadReplicaDBCluster(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) (*neptune.PromoteReadReplicaDBClusterOutput, error)
-	PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) *NeptunePromoteReadReplicaDBClusterFuture
+	PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) *PromoteReadReplicaDBClusterFuture
 
 	RebootDBInstance(ctx workflow.Context, input *neptune.RebootDBInstanceInput) (*neptune.RebootDBInstanceOutput, error)
-	RebootDBInstanceAsync(ctx workflow.Context, input *neptune.RebootDBInstanceInput) *NeptuneRebootDBInstanceFuture
+	RebootDBInstanceAsync(ctx workflow.Context, input *neptune.RebootDBInstanceInput) *RebootDBInstanceFuture
 
 	RemoveRoleFromDBCluster(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) (*neptune.RemoveRoleFromDBClusterOutput, error)
-	RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) *NeptuneRemoveRoleFromDBClusterFuture
+	RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) *RemoveRoleFromDBClusterFuture
 
 	RemoveSourceIdentifierFromSubscription(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) (*neptune.RemoveSourceIdentifierFromSubscriptionOutput, error)
-	RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) *NeptuneRemoveSourceIdentifierFromSubscriptionFuture
+	RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) *RemoveSourceIdentifierFromSubscriptionFuture
 
 	RemoveTagsFromResource(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) (*neptune.RemoveTagsFromResourceOutput, error)
-	RemoveTagsFromResourceAsync(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) *NeptuneRemoveTagsFromResourceFuture
+	RemoveTagsFromResourceAsync(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) *RemoveTagsFromResourceFuture
 
 	ResetDBClusterParameterGroup(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error)
-	ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) *NeptuneResetDBClusterParameterGroupFuture
+	ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) *ResetDBClusterParameterGroupFuture
 
 	ResetDBParameterGroup(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error)
-	ResetDBParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) *NeptuneResetDBParameterGroupFuture
+	ResetDBParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) *ResetDBParameterGroupFuture
 
 	RestoreDBClusterFromSnapshot(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) (*neptune.RestoreDBClusterFromSnapshotOutput, error)
-	RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) *NeptuneRestoreDBClusterFromSnapshotFuture
+	RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) *RestoreDBClusterFromSnapshotFuture
 
 	RestoreDBClusterToPointInTime(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) (*neptune.RestoreDBClusterToPointInTimeOutput, error)
-	RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) *NeptuneRestoreDBClusterToPointInTimeFuture
+	RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) *RestoreDBClusterToPointInTimeFuture
 
 	StartDBCluster(ctx workflow.Context, input *neptune.StartDBClusterInput) (*neptune.StartDBClusterOutput, error)
-	StartDBClusterAsync(ctx workflow.Context, input *neptune.StartDBClusterInput) *NeptuneStartDBClusterFuture
+	StartDBClusterAsync(ctx workflow.Context, input *neptune.StartDBClusterInput) *StartDBClusterFuture
 
 	StopDBCluster(ctx workflow.Context, input *neptune.StopDBClusterInput) (*neptune.StopDBClusterOutput, error)
-	StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterFuture
+	StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *StopDBClusterFuture
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
 	WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *clients.VoidFuture

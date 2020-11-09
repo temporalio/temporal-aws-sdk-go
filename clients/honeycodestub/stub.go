@@ -16,23 +16,23 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type HoneycodeGetScreenDataFuture struct {
+type GetScreenDataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *HoneycodeGetScreenDataFuture) Get(ctx workflow.Context) (*honeycode.GetScreenDataOutput, error) {
+func (r *GetScreenDataFuture) Get(ctx workflow.Context) (*honeycode.GetScreenDataOutput, error) {
 	var output honeycode.GetScreenDataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type HoneycodeInvokeScreenAutomationFuture struct {
+type InvokeScreenAutomationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *HoneycodeInvokeScreenAutomationFuture) Get(ctx workflow.Context) (*honeycode.InvokeScreenAutomationOutput, error) {
+func (r *InvokeScreenAutomationFuture) Get(ctx workflow.Context) (*honeycode.InvokeScreenAutomationOutput, error) {
 	var output honeycode.InvokeScreenAutomationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -44,9 +44,9 @@ func (a *stub) GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDat
 	return &output, err
 }
 
-func (a *stub) GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataFuture {
+func (a *stub) GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *GetScreenDataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.honeycode.GetScreenData", input)
-	return &HoneycodeGetScreenDataFuture{Future: future}
+	return &GetScreenDataFuture{Future: future}
 }
 
 func (a *stub) InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error) {
@@ -55,7 +55,7 @@ func (a *stub) InvokeScreenAutomation(ctx workflow.Context, input *honeycode.Inv
 	return &output, err
 }
 
-func (a *stub) InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationFuture {
+func (a *stub) InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *InvokeScreenAutomationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.honeycode.InvokeScreenAutomation", input)
-	return &HoneycodeInvokeScreenAutomationFuture{Future: future}
+	return &InvokeScreenAutomationFuture{Future: future}
 }

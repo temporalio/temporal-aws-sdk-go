@@ -16,12 +16,12 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ForecastQueryServiceQueryForecastFuture struct {
+type QueryForecastFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastQueryServiceQueryForecastFuture) Get(ctx workflow.Context) (*forecastqueryservice.QueryForecastOutput, error) {
+func (r *QueryForecastFuture) Get(ctx workflow.Context) (*forecastqueryservice.QueryForecastOutput, error) {
 	var output forecastqueryservice.QueryForecastOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -33,7 +33,7 @@ func (a *stub) QueryForecast(ctx workflow.Context, input *forecastqueryservice.Q
 	return &output, err
 }
 
-func (a *stub) QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastQueryServiceQueryForecastFuture {
+func (a *stub) QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *QueryForecastFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastqueryservice.QueryForecast", input)
-	return &ForecastQueryServiceQueryForecastFuture{Future: future}
+	return &QueryForecastFuture{Future: future}
 }

@@ -16,34 +16,34 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchDeleteAttributes(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) (*simpledb.BatchDeleteAttributesOutput, error)
-	BatchDeleteAttributesAsync(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) *SimpleDBBatchDeleteAttributesFuture
+	BatchDeleteAttributesAsync(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) *BatchDeleteAttributesFuture
 
 	BatchPutAttributes(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) (*simpledb.BatchPutAttributesOutput, error)
-	BatchPutAttributesAsync(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) *SimpleDBBatchPutAttributesFuture
+	BatchPutAttributesAsync(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) *BatchPutAttributesFuture
 
 	CreateDomain(ctx workflow.Context, input *simpledb.CreateDomainInput) (*simpledb.CreateDomainOutput, error)
-	CreateDomainAsync(ctx workflow.Context, input *simpledb.CreateDomainInput) *SimpleDBCreateDomainFuture
+	CreateDomainAsync(ctx workflow.Context, input *simpledb.CreateDomainInput) *CreateDomainFuture
 
 	DeleteAttributes(ctx workflow.Context, input *simpledb.DeleteAttributesInput) (*simpledb.DeleteAttributesOutput, error)
-	DeleteAttributesAsync(ctx workflow.Context, input *simpledb.DeleteAttributesInput) *SimpleDBDeleteAttributesFuture
+	DeleteAttributesAsync(ctx workflow.Context, input *simpledb.DeleteAttributesInput) *DeleteAttributesFuture
 
 	DeleteDomain(ctx workflow.Context, input *simpledb.DeleteDomainInput) (*simpledb.DeleteDomainOutput, error)
-	DeleteDomainAsync(ctx workflow.Context, input *simpledb.DeleteDomainInput) *SimpleDBDeleteDomainFuture
+	DeleteDomainAsync(ctx workflow.Context, input *simpledb.DeleteDomainInput) *DeleteDomainFuture
 
 	DomainMetadata(ctx workflow.Context, input *simpledb.DomainMetadataInput) (*simpledb.DomainMetadataOutput, error)
-	DomainMetadataAsync(ctx workflow.Context, input *simpledb.DomainMetadataInput) *SimpleDBDomainMetadataFuture
+	DomainMetadataAsync(ctx workflow.Context, input *simpledb.DomainMetadataInput) *DomainMetadataFuture
 
 	GetAttributes(ctx workflow.Context, input *simpledb.GetAttributesInput) (*simpledb.GetAttributesOutput, error)
-	GetAttributesAsync(ctx workflow.Context, input *simpledb.GetAttributesInput) *SimpleDBGetAttributesFuture
+	GetAttributesAsync(ctx workflow.Context, input *simpledb.GetAttributesInput) *GetAttributesFuture
 
 	ListDomains(ctx workflow.Context, input *simpledb.ListDomainsInput) (*simpledb.ListDomainsOutput, error)
-	ListDomainsAsync(ctx workflow.Context, input *simpledb.ListDomainsInput) *SimpleDBListDomainsFuture
+	ListDomainsAsync(ctx workflow.Context, input *simpledb.ListDomainsInput) *ListDomainsFuture
 
 	PutAttributes(ctx workflow.Context, input *simpledb.PutAttributesInput) (*simpledb.PutAttributesOutput, error)
-	PutAttributesAsync(ctx workflow.Context, input *simpledb.PutAttributesInput) *SimpleDBPutAttributesFuture
+	PutAttributesAsync(ctx workflow.Context, input *simpledb.PutAttributesInput) *PutAttributesFuture
 
 	Select(ctx workflow.Context, input *simpledb.SelectInput) (*simpledb.SelectOutput, error)
-	SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SimpleDBSelectFuture
+	SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SelectFuture
 }
 
 func NewClient() Client {

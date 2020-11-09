@@ -16,73 +16,73 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateCertificateAuthority(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) (*acmpca.CreateCertificateAuthorityOutput, error)
-	CreateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) *ACMPCACreateCertificateAuthorityFuture
+	CreateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) *CreateCertificateAuthorityFuture
 
 	CreateCertificateAuthorityAuditReport(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) (*acmpca.CreateCertificateAuthorityAuditReportOutput, error)
-	CreateCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) *ACMPCACreateCertificateAuthorityAuditReportFuture
+	CreateCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityAuditReportInput) *CreateCertificateAuthorityAuditReportFuture
 
 	CreatePermission(ctx workflow.Context, input *acmpca.CreatePermissionInput) (*acmpca.CreatePermissionOutput, error)
-	CreatePermissionAsync(ctx workflow.Context, input *acmpca.CreatePermissionInput) *ACMPCACreatePermissionFuture
+	CreatePermissionAsync(ctx workflow.Context, input *acmpca.CreatePermissionInput) *CreatePermissionFuture
 
 	DeleteCertificateAuthority(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) (*acmpca.DeleteCertificateAuthorityOutput, error)
-	DeleteCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) *ACMPCADeleteCertificateAuthorityFuture
+	DeleteCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DeleteCertificateAuthorityInput) *DeleteCertificateAuthorityFuture
 
 	DeletePermission(ctx workflow.Context, input *acmpca.DeletePermissionInput) (*acmpca.DeletePermissionOutput, error)
-	DeletePermissionAsync(ctx workflow.Context, input *acmpca.DeletePermissionInput) *ACMPCADeletePermissionFuture
+	DeletePermissionAsync(ctx workflow.Context, input *acmpca.DeletePermissionInput) *DeletePermissionFuture
 
 	DeletePolicy(ctx workflow.Context, input *acmpca.DeletePolicyInput) (*acmpca.DeletePolicyOutput, error)
-	DeletePolicyAsync(ctx workflow.Context, input *acmpca.DeletePolicyInput) *ACMPCADeletePolicyFuture
+	DeletePolicyAsync(ctx workflow.Context, input *acmpca.DeletePolicyInput) *DeletePolicyFuture
 
 	DescribeCertificateAuthority(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) (*acmpca.DescribeCertificateAuthorityOutput, error)
-	DescribeCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) *ACMPCADescribeCertificateAuthorityFuture
+	DescribeCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityInput) *DescribeCertificateAuthorityFuture
 
 	DescribeCertificateAuthorityAuditReport(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) (*acmpca.DescribeCertificateAuthorityAuditReportOutput, error)
-	DescribeCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *ACMPCADescribeCertificateAuthorityAuditReportFuture
+	DescribeCertificateAuthorityAuditReportAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *DescribeCertificateAuthorityAuditReportFuture
 
 	GetCertificate(ctx workflow.Context, input *acmpca.GetCertificateInput) (*acmpca.GetCertificateOutput, error)
-	GetCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) *ACMPCAGetCertificateFuture
+	GetCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateInput) *GetCertificateFuture
 
 	GetCertificateAuthorityCertificate(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) (*acmpca.GetCertificateAuthorityCertificateOutput, error)
-	GetCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) *ACMPCAGetCertificateAuthorityCertificateFuture
+	GetCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCertificateInput) *GetCertificateAuthorityCertificateFuture
 
 	GetCertificateAuthorityCsr(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) (*acmpca.GetCertificateAuthorityCsrOutput, error)
-	GetCertificateAuthorityCsrAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) *ACMPCAGetCertificateAuthorityCsrFuture
+	GetCertificateAuthorityCsrAsync(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) *GetCertificateAuthorityCsrFuture
 
 	GetPolicy(ctx workflow.Context, input *acmpca.GetPolicyInput) (*acmpca.GetPolicyOutput, error)
-	GetPolicyAsync(ctx workflow.Context, input *acmpca.GetPolicyInput) *ACMPCAGetPolicyFuture
+	GetPolicyAsync(ctx workflow.Context, input *acmpca.GetPolicyInput) *GetPolicyFuture
 
 	ImportCertificateAuthorityCertificate(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) (*acmpca.ImportCertificateAuthorityCertificateOutput, error)
-	ImportCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) *ACMPCAImportCertificateAuthorityCertificateFuture
+	ImportCertificateAuthorityCertificateAsync(ctx workflow.Context, input *acmpca.ImportCertificateAuthorityCertificateInput) *ImportCertificateAuthorityCertificateFuture
 
 	IssueCertificate(ctx workflow.Context, input *acmpca.IssueCertificateInput) (*acmpca.IssueCertificateOutput, error)
-	IssueCertificateAsync(ctx workflow.Context, input *acmpca.IssueCertificateInput) *ACMPCAIssueCertificateFuture
+	IssueCertificateAsync(ctx workflow.Context, input *acmpca.IssueCertificateInput) *IssueCertificateFuture
 
 	ListCertificateAuthorities(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) (*acmpca.ListCertificateAuthoritiesOutput, error)
-	ListCertificateAuthoritiesAsync(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) *ACMPCAListCertificateAuthoritiesFuture
+	ListCertificateAuthoritiesAsync(ctx workflow.Context, input *acmpca.ListCertificateAuthoritiesInput) *ListCertificateAuthoritiesFuture
 
 	ListPermissions(ctx workflow.Context, input *acmpca.ListPermissionsInput) (*acmpca.ListPermissionsOutput, error)
-	ListPermissionsAsync(ctx workflow.Context, input *acmpca.ListPermissionsInput) *ACMPCAListPermissionsFuture
+	ListPermissionsAsync(ctx workflow.Context, input *acmpca.ListPermissionsInput) *ListPermissionsFuture
 
 	ListTags(ctx workflow.Context, input *acmpca.ListTagsInput) (*acmpca.ListTagsOutput, error)
-	ListTagsAsync(ctx workflow.Context, input *acmpca.ListTagsInput) *ACMPCAListTagsFuture
+	ListTagsAsync(ctx workflow.Context, input *acmpca.ListTagsInput) *ListTagsFuture
 
 	PutPolicy(ctx workflow.Context, input *acmpca.PutPolicyInput) (*acmpca.PutPolicyOutput, error)
-	PutPolicyAsync(ctx workflow.Context, input *acmpca.PutPolicyInput) *ACMPCAPutPolicyFuture
+	PutPolicyAsync(ctx workflow.Context, input *acmpca.PutPolicyInput) *PutPolicyFuture
 
 	RestoreCertificateAuthority(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) (*acmpca.RestoreCertificateAuthorityOutput, error)
-	RestoreCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) *ACMPCARestoreCertificateAuthorityFuture
+	RestoreCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.RestoreCertificateAuthorityInput) *RestoreCertificateAuthorityFuture
 
 	RevokeCertificate(ctx workflow.Context, input *acmpca.RevokeCertificateInput) (*acmpca.RevokeCertificateOutput, error)
-	RevokeCertificateAsync(ctx workflow.Context, input *acmpca.RevokeCertificateInput) *ACMPCARevokeCertificateFuture
+	RevokeCertificateAsync(ctx workflow.Context, input *acmpca.RevokeCertificateInput) *RevokeCertificateFuture
 
 	TagCertificateAuthority(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) (*acmpca.TagCertificateAuthorityOutput, error)
-	TagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) *ACMPCATagCertificateAuthorityFuture
+	TagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.TagCertificateAuthorityInput) *TagCertificateAuthorityFuture
 
 	UntagCertificateAuthority(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) (*acmpca.UntagCertificateAuthorityOutput, error)
-	UntagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) *ACMPCAUntagCertificateAuthorityFuture
+	UntagCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UntagCertificateAuthorityInput) *UntagCertificateAuthorityFuture
 
 	UpdateCertificateAuthority(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) (*acmpca.UpdateCertificateAuthorityOutput, error)
-	UpdateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) *ACMPCAUpdateCertificateAuthorityFuture
+	UpdateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) *UpdateCertificateAuthorityFuture
 
 	WaitUntilAuditReportCreated(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) error
 	WaitUntilAuditReportCreatedAsync(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) *clients.VoidFuture

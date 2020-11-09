@@ -16,52 +16,52 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateAsset(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) (*mediapackagevod.CreateAssetOutput, error)
-	CreateAssetAsync(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) *MediaPackageVodCreateAssetFuture
+	CreateAssetAsync(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) *CreateAssetFuture
 
 	CreatePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) (*mediapackagevod.CreatePackagingConfigurationOutput, error)
-	CreatePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) *MediaPackageVodCreatePackagingConfigurationFuture
+	CreatePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) *CreatePackagingConfigurationFuture
 
 	CreatePackagingGroup(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) (*mediapackagevod.CreatePackagingGroupOutput, error)
-	CreatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) *MediaPackageVodCreatePackagingGroupFuture
+	CreatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) *CreatePackagingGroupFuture
 
 	DeleteAsset(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) (*mediapackagevod.DeleteAssetOutput, error)
-	DeleteAssetAsync(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) *MediaPackageVodDeleteAssetFuture
+	DeleteAssetAsync(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) *DeleteAssetFuture
 
 	DeletePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) (*mediapackagevod.DeletePackagingConfigurationOutput, error)
-	DeletePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) *MediaPackageVodDeletePackagingConfigurationFuture
+	DeletePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) *DeletePackagingConfigurationFuture
 
 	DeletePackagingGroup(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) (*mediapackagevod.DeletePackagingGroupOutput, error)
-	DeletePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) *MediaPackageVodDeletePackagingGroupFuture
+	DeletePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) *DeletePackagingGroupFuture
 
 	DescribeAsset(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) (*mediapackagevod.DescribeAssetOutput, error)
-	DescribeAssetAsync(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) *MediaPackageVodDescribeAssetFuture
+	DescribeAssetAsync(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) *DescribeAssetFuture
 
 	DescribePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) (*mediapackagevod.DescribePackagingConfigurationOutput, error)
-	DescribePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) *MediaPackageVodDescribePackagingConfigurationFuture
+	DescribePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) *DescribePackagingConfigurationFuture
 
 	DescribePackagingGroup(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) (*mediapackagevod.DescribePackagingGroupOutput, error)
-	DescribePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) *MediaPackageVodDescribePackagingGroupFuture
+	DescribePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) *DescribePackagingGroupFuture
 
 	ListAssets(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) (*mediapackagevod.ListAssetsOutput, error)
-	ListAssetsAsync(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) *MediaPackageVodListAssetsFuture
+	ListAssetsAsync(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) *ListAssetsFuture
 
 	ListPackagingConfigurations(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) (*mediapackagevod.ListPackagingConfigurationsOutput, error)
-	ListPackagingConfigurationsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) *MediaPackageVodListPackagingConfigurationsFuture
+	ListPackagingConfigurationsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) *ListPackagingConfigurationsFuture
 
 	ListPackagingGroups(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) (*mediapackagevod.ListPackagingGroupsOutput, error)
-	ListPackagingGroupsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) *MediaPackageVodListPackagingGroupsFuture
+	ListPackagingGroupsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) *ListPackagingGroupsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) (*mediapackagevod.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) *MediaPackageVodListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *mediapackagevod.TagResourceInput) (*mediapackagevod.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *mediapackagevod.TagResourceInput) *MediaPackageVodTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *mediapackagevod.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) (*mediapackagevod.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) *MediaPackageVodUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) *UntagResourceFuture
 
 	UpdatePackagingGroup(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) (*mediapackagevod.UpdatePackagingGroupOutput, error)
-	UpdatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) *MediaPackageVodUpdatePackagingGroupFuture
+	UpdatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) *UpdatePackagingGroupFuture
 }
 
 func NewClient() Client {

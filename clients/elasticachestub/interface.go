@@ -16,199 +16,199 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AddTagsToResource(ctx workflow.Context, input *elasticache.AddTagsToResourceInput) (*elasticache.TagListMessage, error)
-	AddTagsToResourceAsync(ctx workflow.Context, input *elasticache.AddTagsToResourceInput) *ElastiCacheAddTagsToResourceFuture
+	AddTagsToResourceAsync(ctx workflow.Context, input *elasticache.AddTagsToResourceInput) *AddTagsToResourceFuture
 
 	AuthorizeCacheSecurityGroupIngress(ctx workflow.Context, input *elasticache.AuthorizeCacheSecurityGroupIngressInput) (*elasticache.AuthorizeCacheSecurityGroupIngressOutput, error)
-	AuthorizeCacheSecurityGroupIngressAsync(ctx workflow.Context, input *elasticache.AuthorizeCacheSecurityGroupIngressInput) *ElastiCacheAuthorizeCacheSecurityGroupIngressFuture
+	AuthorizeCacheSecurityGroupIngressAsync(ctx workflow.Context, input *elasticache.AuthorizeCacheSecurityGroupIngressInput) *AuthorizeCacheSecurityGroupIngressFuture
 
 	BatchApplyUpdateAction(ctx workflow.Context, input *elasticache.BatchApplyUpdateActionInput) (*elasticache.BatchApplyUpdateActionOutput, error)
-	BatchApplyUpdateActionAsync(ctx workflow.Context, input *elasticache.BatchApplyUpdateActionInput) *ElastiCacheBatchApplyUpdateActionFuture
+	BatchApplyUpdateActionAsync(ctx workflow.Context, input *elasticache.BatchApplyUpdateActionInput) *BatchApplyUpdateActionFuture
 
 	BatchStopUpdateAction(ctx workflow.Context, input *elasticache.BatchStopUpdateActionInput) (*elasticache.BatchStopUpdateActionOutput, error)
-	BatchStopUpdateActionAsync(ctx workflow.Context, input *elasticache.BatchStopUpdateActionInput) *ElastiCacheBatchStopUpdateActionFuture
+	BatchStopUpdateActionAsync(ctx workflow.Context, input *elasticache.BatchStopUpdateActionInput) *BatchStopUpdateActionFuture
 
 	CompleteMigration(ctx workflow.Context, input *elasticache.CompleteMigrationInput) (*elasticache.CompleteMigrationOutput, error)
-	CompleteMigrationAsync(ctx workflow.Context, input *elasticache.CompleteMigrationInput) *ElastiCacheCompleteMigrationFuture
+	CompleteMigrationAsync(ctx workflow.Context, input *elasticache.CompleteMigrationInput) *CompleteMigrationFuture
 
 	CopySnapshot(ctx workflow.Context, input *elasticache.CopySnapshotInput) (*elasticache.CopySnapshotOutput, error)
-	CopySnapshotAsync(ctx workflow.Context, input *elasticache.CopySnapshotInput) *ElastiCacheCopySnapshotFuture
+	CopySnapshotAsync(ctx workflow.Context, input *elasticache.CopySnapshotInput) *CopySnapshotFuture
 
 	CreateCacheCluster(ctx workflow.Context, input *elasticache.CreateCacheClusterInput) (*elasticache.CreateCacheClusterOutput, error)
-	CreateCacheClusterAsync(ctx workflow.Context, input *elasticache.CreateCacheClusterInput) *ElastiCacheCreateCacheClusterFuture
+	CreateCacheClusterAsync(ctx workflow.Context, input *elasticache.CreateCacheClusterInput) *CreateCacheClusterFuture
 
 	CreateCacheParameterGroup(ctx workflow.Context, input *elasticache.CreateCacheParameterGroupInput) (*elasticache.CreateCacheParameterGroupOutput, error)
-	CreateCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheParameterGroupInput) *ElastiCacheCreateCacheParameterGroupFuture
+	CreateCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheParameterGroupInput) *CreateCacheParameterGroupFuture
 
 	CreateCacheSecurityGroup(ctx workflow.Context, input *elasticache.CreateCacheSecurityGroupInput) (*elasticache.CreateCacheSecurityGroupOutput, error)
-	CreateCacheSecurityGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheSecurityGroupInput) *ElastiCacheCreateCacheSecurityGroupFuture
+	CreateCacheSecurityGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheSecurityGroupInput) *CreateCacheSecurityGroupFuture
 
 	CreateCacheSubnetGroup(ctx workflow.Context, input *elasticache.CreateCacheSubnetGroupInput) (*elasticache.CreateCacheSubnetGroupOutput, error)
-	CreateCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheSubnetGroupInput) *ElastiCacheCreateCacheSubnetGroupFuture
+	CreateCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.CreateCacheSubnetGroupInput) *CreateCacheSubnetGroupFuture
 
 	CreateGlobalReplicationGroup(ctx workflow.Context, input *elasticache.CreateGlobalReplicationGroupInput) (*elasticache.CreateGlobalReplicationGroupOutput, error)
-	CreateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.CreateGlobalReplicationGroupInput) *ElastiCacheCreateGlobalReplicationGroupFuture
+	CreateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.CreateGlobalReplicationGroupInput) *CreateGlobalReplicationGroupFuture
 
 	CreateReplicationGroup(ctx workflow.Context, input *elasticache.CreateReplicationGroupInput) (*elasticache.CreateReplicationGroupOutput, error)
-	CreateReplicationGroupAsync(ctx workflow.Context, input *elasticache.CreateReplicationGroupInput) *ElastiCacheCreateReplicationGroupFuture
+	CreateReplicationGroupAsync(ctx workflow.Context, input *elasticache.CreateReplicationGroupInput) *CreateReplicationGroupFuture
 
 	CreateSnapshot(ctx workflow.Context, input *elasticache.CreateSnapshotInput) (*elasticache.CreateSnapshotOutput, error)
-	CreateSnapshotAsync(ctx workflow.Context, input *elasticache.CreateSnapshotInput) *ElastiCacheCreateSnapshotFuture
+	CreateSnapshotAsync(ctx workflow.Context, input *elasticache.CreateSnapshotInput) *CreateSnapshotFuture
 
 	CreateUser(ctx workflow.Context, input *elasticache.CreateUserInput) (*elasticache.CreateUserOutput, error)
-	CreateUserAsync(ctx workflow.Context, input *elasticache.CreateUserInput) *ElastiCacheCreateUserFuture
+	CreateUserAsync(ctx workflow.Context, input *elasticache.CreateUserInput) *CreateUserFuture
 
 	CreateUserGroup(ctx workflow.Context, input *elasticache.CreateUserGroupInput) (*elasticache.CreateUserGroupOutput, error)
-	CreateUserGroupAsync(ctx workflow.Context, input *elasticache.CreateUserGroupInput) *ElastiCacheCreateUserGroupFuture
+	CreateUserGroupAsync(ctx workflow.Context, input *elasticache.CreateUserGroupInput) *CreateUserGroupFuture
 
 	DecreaseNodeGroupsInGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) (*elasticache.DecreaseNodeGroupsInGlobalReplicationGroupOutput, error)
-	DecreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) *ElastiCacheDecreaseNodeGroupsInGlobalReplicationGroupFuture
+	DecreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DecreaseNodeGroupsInGlobalReplicationGroupInput) *DecreaseNodeGroupsInGlobalReplicationGroupFuture
 
 	DecreaseReplicaCount(ctx workflow.Context, input *elasticache.DecreaseReplicaCountInput) (*elasticache.DecreaseReplicaCountOutput, error)
-	DecreaseReplicaCountAsync(ctx workflow.Context, input *elasticache.DecreaseReplicaCountInput) *ElastiCacheDecreaseReplicaCountFuture
+	DecreaseReplicaCountAsync(ctx workflow.Context, input *elasticache.DecreaseReplicaCountInput) *DecreaseReplicaCountFuture
 
 	DeleteCacheCluster(ctx workflow.Context, input *elasticache.DeleteCacheClusterInput) (*elasticache.DeleteCacheClusterOutput, error)
-	DeleteCacheClusterAsync(ctx workflow.Context, input *elasticache.DeleteCacheClusterInput) *ElastiCacheDeleteCacheClusterFuture
+	DeleteCacheClusterAsync(ctx workflow.Context, input *elasticache.DeleteCacheClusterInput) *DeleteCacheClusterFuture
 
 	DeleteCacheParameterGroup(ctx workflow.Context, input *elasticache.DeleteCacheParameterGroupInput) (*elasticache.DeleteCacheParameterGroupOutput, error)
-	DeleteCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheParameterGroupInput) *ElastiCacheDeleteCacheParameterGroupFuture
+	DeleteCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheParameterGroupInput) *DeleteCacheParameterGroupFuture
 
 	DeleteCacheSecurityGroup(ctx workflow.Context, input *elasticache.DeleteCacheSecurityGroupInput) (*elasticache.DeleteCacheSecurityGroupOutput, error)
-	DeleteCacheSecurityGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheSecurityGroupInput) *ElastiCacheDeleteCacheSecurityGroupFuture
+	DeleteCacheSecurityGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheSecurityGroupInput) *DeleteCacheSecurityGroupFuture
 
 	DeleteCacheSubnetGroup(ctx workflow.Context, input *elasticache.DeleteCacheSubnetGroupInput) (*elasticache.DeleteCacheSubnetGroupOutput, error)
-	DeleteCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheSubnetGroupInput) *ElastiCacheDeleteCacheSubnetGroupFuture
+	DeleteCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.DeleteCacheSubnetGroupInput) *DeleteCacheSubnetGroupFuture
 
 	DeleteGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DeleteGlobalReplicationGroupInput) (*elasticache.DeleteGlobalReplicationGroupOutput, error)
-	DeleteGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DeleteGlobalReplicationGroupInput) *ElastiCacheDeleteGlobalReplicationGroupFuture
+	DeleteGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DeleteGlobalReplicationGroupInput) *DeleteGlobalReplicationGroupFuture
 
 	DeleteReplicationGroup(ctx workflow.Context, input *elasticache.DeleteReplicationGroupInput) (*elasticache.DeleteReplicationGroupOutput, error)
-	DeleteReplicationGroupAsync(ctx workflow.Context, input *elasticache.DeleteReplicationGroupInput) *ElastiCacheDeleteReplicationGroupFuture
+	DeleteReplicationGroupAsync(ctx workflow.Context, input *elasticache.DeleteReplicationGroupInput) *DeleteReplicationGroupFuture
 
 	DeleteSnapshot(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) (*elasticache.DeleteSnapshotOutput, error)
-	DeleteSnapshotAsync(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) *ElastiCacheDeleteSnapshotFuture
+	DeleteSnapshotAsync(ctx workflow.Context, input *elasticache.DeleteSnapshotInput) *DeleteSnapshotFuture
 
 	DeleteUser(ctx workflow.Context, input *elasticache.DeleteUserInput) (*elasticache.DeleteUserOutput, error)
-	DeleteUserAsync(ctx workflow.Context, input *elasticache.DeleteUserInput) *ElastiCacheDeleteUserFuture
+	DeleteUserAsync(ctx workflow.Context, input *elasticache.DeleteUserInput) *DeleteUserFuture
 
 	DeleteUserGroup(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) (*elasticache.DeleteUserGroupOutput, error)
-	DeleteUserGroupAsync(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) *ElastiCacheDeleteUserGroupFuture
+	DeleteUserGroupAsync(ctx workflow.Context, input *elasticache.DeleteUserGroupInput) *DeleteUserGroupFuture
 
 	DescribeCacheClusters(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) (*elasticache.DescribeCacheClustersOutput, error)
-	DescribeCacheClustersAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *ElastiCacheDescribeCacheClustersFuture
+	DescribeCacheClustersAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *DescribeCacheClustersFuture
 
 	DescribeCacheEngineVersions(ctx workflow.Context, input *elasticache.DescribeCacheEngineVersionsInput) (*elasticache.DescribeCacheEngineVersionsOutput, error)
-	DescribeCacheEngineVersionsAsync(ctx workflow.Context, input *elasticache.DescribeCacheEngineVersionsInput) *ElastiCacheDescribeCacheEngineVersionsFuture
+	DescribeCacheEngineVersionsAsync(ctx workflow.Context, input *elasticache.DescribeCacheEngineVersionsInput) *DescribeCacheEngineVersionsFuture
 
 	DescribeCacheParameterGroups(ctx workflow.Context, input *elasticache.DescribeCacheParameterGroupsInput) (*elasticache.DescribeCacheParameterGroupsOutput, error)
-	DescribeCacheParameterGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheParameterGroupsInput) *ElastiCacheDescribeCacheParameterGroupsFuture
+	DescribeCacheParameterGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheParameterGroupsInput) *DescribeCacheParameterGroupsFuture
 
 	DescribeCacheParameters(ctx workflow.Context, input *elasticache.DescribeCacheParametersInput) (*elasticache.DescribeCacheParametersOutput, error)
-	DescribeCacheParametersAsync(ctx workflow.Context, input *elasticache.DescribeCacheParametersInput) *ElastiCacheDescribeCacheParametersFuture
+	DescribeCacheParametersAsync(ctx workflow.Context, input *elasticache.DescribeCacheParametersInput) *DescribeCacheParametersFuture
 
 	DescribeCacheSecurityGroups(ctx workflow.Context, input *elasticache.DescribeCacheSecurityGroupsInput) (*elasticache.DescribeCacheSecurityGroupsOutput, error)
-	DescribeCacheSecurityGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheSecurityGroupsInput) *ElastiCacheDescribeCacheSecurityGroupsFuture
+	DescribeCacheSecurityGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheSecurityGroupsInput) *DescribeCacheSecurityGroupsFuture
 
 	DescribeCacheSubnetGroups(ctx workflow.Context, input *elasticache.DescribeCacheSubnetGroupsInput) (*elasticache.DescribeCacheSubnetGroupsOutput, error)
-	DescribeCacheSubnetGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheSubnetGroupsInput) *ElastiCacheDescribeCacheSubnetGroupsFuture
+	DescribeCacheSubnetGroupsAsync(ctx workflow.Context, input *elasticache.DescribeCacheSubnetGroupsInput) *DescribeCacheSubnetGroupsFuture
 
 	DescribeEngineDefaultParameters(ctx workflow.Context, input *elasticache.DescribeEngineDefaultParametersInput) (*elasticache.DescribeEngineDefaultParametersOutput, error)
-	DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *elasticache.DescribeEngineDefaultParametersInput) *ElastiCacheDescribeEngineDefaultParametersFuture
+	DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *elasticache.DescribeEngineDefaultParametersInput) *DescribeEngineDefaultParametersFuture
 
 	DescribeEvents(ctx workflow.Context, input *elasticache.DescribeEventsInput) (*elasticache.DescribeEventsOutput, error)
-	DescribeEventsAsync(ctx workflow.Context, input *elasticache.DescribeEventsInput) *ElastiCacheDescribeEventsFuture
+	DescribeEventsAsync(ctx workflow.Context, input *elasticache.DescribeEventsInput) *DescribeEventsFuture
 
 	DescribeGlobalReplicationGroups(ctx workflow.Context, input *elasticache.DescribeGlobalReplicationGroupsInput) (*elasticache.DescribeGlobalReplicationGroupsOutput, error)
-	DescribeGlobalReplicationGroupsAsync(ctx workflow.Context, input *elasticache.DescribeGlobalReplicationGroupsInput) *ElastiCacheDescribeGlobalReplicationGroupsFuture
+	DescribeGlobalReplicationGroupsAsync(ctx workflow.Context, input *elasticache.DescribeGlobalReplicationGroupsInput) *DescribeGlobalReplicationGroupsFuture
 
 	DescribeReplicationGroups(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) (*elasticache.DescribeReplicationGroupsOutput, error)
-	DescribeReplicationGroupsAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) *ElastiCacheDescribeReplicationGroupsFuture
+	DescribeReplicationGroupsAsync(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) *DescribeReplicationGroupsFuture
 
 	DescribeReservedCacheNodes(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesInput) (*elasticache.DescribeReservedCacheNodesOutput, error)
-	DescribeReservedCacheNodesAsync(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesInput) *ElastiCacheDescribeReservedCacheNodesFuture
+	DescribeReservedCacheNodesAsync(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesInput) *DescribeReservedCacheNodesFuture
 
 	DescribeReservedCacheNodesOfferings(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesOfferingsInput) (*elasticache.DescribeReservedCacheNodesOfferingsOutput, error)
-	DescribeReservedCacheNodesOfferingsAsync(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesOfferingsInput) *ElastiCacheDescribeReservedCacheNodesOfferingsFuture
+	DescribeReservedCacheNodesOfferingsAsync(ctx workflow.Context, input *elasticache.DescribeReservedCacheNodesOfferingsInput) *DescribeReservedCacheNodesOfferingsFuture
 
 	DescribeServiceUpdates(ctx workflow.Context, input *elasticache.DescribeServiceUpdatesInput) (*elasticache.DescribeServiceUpdatesOutput, error)
-	DescribeServiceUpdatesAsync(ctx workflow.Context, input *elasticache.DescribeServiceUpdatesInput) *ElastiCacheDescribeServiceUpdatesFuture
+	DescribeServiceUpdatesAsync(ctx workflow.Context, input *elasticache.DescribeServiceUpdatesInput) *DescribeServiceUpdatesFuture
 
 	DescribeSnapshots(ctx workflow.Context, input *elasticache.DescribeSnapshotsInput) (*elasticache.DescribeSnapshotsOutput, error)
-	DescribeSnapshotsAsync(ctx workflow.Context, input *elasticache.DescribeSnapshotsInput) *ElastiCacheDescribeSnapshotsFuture
+	DescribeSnapshotsAsync(ctx workflow.Context, input *elasticache.DescribeSnapshotsInput) *DescribeSnapshotsFuture
 
 	DescribeUpdateActions(ctx workflow.Context, input *elasticache.DescribeUpdateActionsInput) (*elasticache.DescribeUpdateActionsOutput, error)
-	DescribeUpdateActionsAsync(ctx workflow.Context, input *elasticache.DescribeUpdateActionsInput) *ElastiCacheDescribeUpdateActionsFuture
+	DescribeUpdateActionsAsync(ctx workflow.Context, input *elasticache.DescribeUpdateActionsInput) *DescribeUpdateActionsFuture
 
 	DescribeUserGroups(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) (*elasticache.DescribeUserGroupsOutput, error)
-	DescribeUserGroupsAsync(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) *ElastiCacheDescribeUserGroupsFuture
+	DescribeUserGroupsAsync(ctx workflow.Context, input *elasticache.DescribeUserGroupsInput) *DescribeUserGroupsFuture
 
 	DescribeUsers(ctx workflow.Context, input *elasticache.DescribeUsersInput) (*elasticache.DescribeUsersOutput, error)
-	DescribeUsersAsync(ctx workflow.Context, input *elasticache.DescribeUsersInput) *ElastiCacheDescribeUsersFuture
+	DescribeUsersAsync(ctx workflow.Context, input *elasticache.DescribeUsersInput) *DescribeUsersFuture
 
 	DisassociateGlobalReplicationGroup(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) (*elasticache.DisassociateGlobalReplicationGroupOutput, error)
-	DisassociateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) *ElastiCacheDisassociateGlobalReplicationGroupFuture
+	DisassociateGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.DisassociateGlobalReplicationGroupInput) *DisassociateGlobalReplicationGroupFuture
 
 	FailoverGlobalReplicationGroup(ctx workflow.Context, input *elasticache.FailoverGlobalReplicationGroupInput) (*elasticache.FailoverGlobalReplicationGroupOutput, error)
-	FailoverGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.FailoverGlobalReplicationGroupInput) *ElastiCacheFailoverGlobalReplicationGroupFuture
+	FailoverGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.FailoverGlobalReplicationGroupInput) *FailoverGlobalReplicationGroupFuture
 
 	IncreaseNodeGroupsInGlobalReplicationGroup(ctx workflow.Context, input *elasticache.IncreaseNodeGroupsInGlobalReplicationGroupInput) (*elasticache.IncreaseNodeGroupsInGlobalReplicationGroupOutput, error)
-	IncreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.IncreaseNodeGroupsInGlobalReplicationGroupInput) *ElastiCacheIncreaseNodeGroupsInGlobalReplicationGroupFuture
+	IncreaseNodeGroupsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.IncreaseNodeGroupsInGlobalReplicationGroupInput) *IncreaseNodeGroupsInGlobalReplicationGroupFuture
 
 	IncreaseReplicaCount(ctx workflow.Context, input *elasticache.IncreaseReplicaCountInput) (*elasticache.IncreaseReplicaCountOutput, error)
-	IncreaseReplicaCountAsync(ctx workflow.Context, input *elasticache.IncreaseReplicaCountInput) *ElastiCacheIncreaseReplicaCountFuture
+	IncreaseReplicaCountAsync(ctx workflow.Context, input *elasticache.IncreaseReplicaCountInput) *IncreaseReplicaCountFuture
 
 	ListAllowedNodeTypeModifications(ctx workflow.Context, input *elasticache.ListAllowedNodeTypeModificationsInput) (*elasticache.ListAllowedNodeTypeModificationsOutput, error)
-	ListAllowedNodeTypeModificationsAsync(ctx workflow.Context, input *elasticache.ListAllowedNodeTypeModificationsInput) *ElastiCacheListAllowedNodeTypeModificationsFuture
+	ListAllowedNodeTypeModificationsAsync(ctx workflow.Context, input *elasticache.ListAllowedNodeTypeModificationsInput) *ListAllowedNodeTypeModificationsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *elasticache.ListTagsForResourceInput) (*elasticache.TagListMessage, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *elasticache.ListTagsForResourceInput) *ElastiCacheListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *elasticache.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ModifyCacheCluster(ctx workflow.Context, input *elasticache.ModifyCacheClusterInput) (*elasticache.ModifyCacheClusterOutput, error)
-	ModifyCacheClusterAsync(ctx workflow.Context, input *elasticache.ModifyCacheClusterInput) *ElastiCacheModifyCacheClusterFuture
+	ModifyCacheClusterAsync(ctx workflow.Context, input *elasticache.ModifyCacheClusterInput) *ModifyCacheClusterFuture
 
 	ModifyCacheParameterGroup(ctx workflow.Context, input *elasticache.ModifyCacheParameterGroupInput) (*elasticache.CacheParameterGroupNameMessage, error)
-	ModifyCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.ModifyCacheParameterGroupInput) *ElastiCacheModifyCacheParameterGroupFuture
+	ModifyCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.ModifyCacheParameterGroupInput) *ModifyCacheParameterGroupFuture
 
 	ModifyCacheSubnetGroup(ctx workflow.Context, input *elasticache.ModifyCacheSubnetGroupInput) (*elasticache.ModifyCacheSubnetGroupOutput, error)
-	ModifyCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.ModifyCacheSubnetGroupInput) *ElastiCacheModifyCacheSubnetGroupFuture
+	ModifyCacheSubnetGroupAsync(ctx workflow.Context, input *elasticache.ModifyCacheSubnetGroupInput) *ModifyCacheSubnetGroupFuture
 
 	ModifyGlobalReplicationGroup(ctx workflow.Context, input *elasticache.ModifyGlobalReplicationGroupInput) (*elasticache.ModifyGlobalReplicationGroupOutput, error)
-	ModifyGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.ModifyGlobalReplicationGroupInput) *ElastiCacheModifyGlobalReplicationGroupFuture
+	ModifyGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.ModifyGlobalReplicationGroupInput) *ModifyGlobalReplicationGroupFuture
 
 	ModifyReplicationGroup(ctx workflow.Context, input *elasticache.ModifyReplicationGroupInput) (*elasticache.ModifyReplicationGroupOutput, error)
-	ModifyReplicationGroupAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupInput) *ElastiCacheModifyReplicationGroupFuture
+	ModifyReplicationGroupAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupInput) *ModifyReplicationGroupFuture
 
 	ModifyReplicationGroupShardConfiguration(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) (*elasticache.ModifyReplicationGroupShardConfigurationOutput, error)
-	ModifyReplicationGroupShardConfigurationAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) *ElastiCacheModifyReplicationGroupShardConfigurationFuture
+	ModifyReplicationGroupShardConfigurationAsync(ctx workflow.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput) *ModifyReplicationGroupShardConfigurationFuture
 
 	ModifyUser(ctx workflow.Context, input *elasticache.ModifyUserInput) (*elasticache.ModifyUserOutput, error)
-	ModifyUserAsync(ctx workflow.Context, input *elasticache.ModifyUserInput) *ElastiCacheModifyUserFuture
+	ModifyUserAsync(ctx workflow.Context, input *elasticache.ModifyUserInput) *ModifyUserFuture
 
 	ModifyUserGroup(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) (*elasticache.ModifyUserGroupOutput, error)
-	ModifyUserGroupAsync(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) *ElastiCacheModifyUserGroupFuture
+	ModifyUserGroupAsync(ctx workflow.Context, input *elasticache.ModifyUserGroupInput) *ModifyUserGroupFuture
 
 	PurchaseReservedCacheNodesOffering(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) (*elasticache.PurchaseReservedCacheNodesOfferingOutput, error)
-	PurchaseReservedCacheNodesOfferingAsync(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) *ElastiCachePurchaseReservedCacheNodesOfferingFuture
+	PurchaseReservedCacheNodesOfferingAsync(ctx workflow.Context, input *elasticache.PurchaseReservedCacheNodesOfferingInput) *PurchaseReservedCacheNodesOfferingFuture
 
 	RebalanceSlotsInGlobalReplicationGroup(ctx workflow.Context, input *elasticache.RebalanceSlotsInGlobalReplicationGroupInput) (*elasticache.RebalanceSlotsInGlobalReplicationGroupOutput, error)
-	RebalanceSlotsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.RebalanceSlotsInGlobalReplicationGroupInput) *ElastiCacheRebalanceSlotsInGlobalReplicationGroupFuture
+	RebalanceSlotsInGlobalReplicationGroupAsync(ctx workflow.Context, input *elasticache.RebalanceSlotsInGlobalReplicationGroupInput) *RebalanceSlotsInGlobalReplicationGroupFuture
 
 	RebootCacheCluster(ctx workflow.Context, input *elasticache.RebootCacheClusterInput) (*elasticache.RebootCacheClusterOutput, error)
-	RebootCacheClusterAsync(ctx workflow.Context, input *elasticache.RebootCacheClusterInput) *ElastiCacheRebootCacheClusterFuture
+	RebootCacheClusterAsync(ctx workflow.Context, input *elasticache.RebootCacheClusterInput) *RebootCacheClusterFuture
 
 	RemoveTagsFromResource(ctx workflow.Context, input *elasticache.RemoveTagsFromResourceInput) (*elasticache.TagListMessage, error)
-	RemoveTagsFromResourceAsync(ctx workflow.Context, input *elasticache.RemoveTagsFromResourceInput) *ElastiCacheRemoveTagsFromResourceFuture
+	RemoveTagsFromResourceAsync(ctx workflow.Context, input *elasticache.RemoveTagsFromResourceInput) *RemoveTagsFromResourceFuture
 
 	ResetCacheParameterGroup(ctx workflow.Context, input *elasticache.ResetCacheParameterGroupInput) (*elasticache.CacheParameterGroupNameMessage, error)
-	ResetCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.ResetCacheParameterGroupInput) *ElastiCacheResetCacheParameterGroupFuture
+	ResetCacheParameterGroupAsync(ctx workflow.Context, input *elasticache.ResetCacheParameterGroupInput) *ResetCacheParameterGroupFuture
 
 	RevokeCacheSecurityGroupIngress(ctx workflow.Context, input *elasticache.RevokeCacheSecurityGroupIngressInput) (*elasticache.RevokeCacheSecurityGroupIngressOutput, error)
-	RevokeCacheSecurityGroupIngressAsync(ctx workflow.Context, input *elasticache.RevokeCacheSecurityGroupIngressInput) *ElastiCacheRevokeCacheSecurityGroupIngressFuture
+	RevokeCacheSecurityGroupIngressAsync(ctx workflow.Context, input *elasticache.RevokeCacheSecurityGroupIngressInput) *RevokeCacheSecurityGroupIngressFuture
 
 	StartMigration(ctx workflow.Context, input *elasticache.StartMigrationInput) (*elasticache.StartMigrationOutput, error)
-	StartMigrationAsync(ctx workflow.Context, input *elasticache.StartMigrationInput) *ElastiCacheStartMigrationFuture
+	StartMigrationAsync(ctx workflow.Context, input *elasticache.StartMigrationInput) *StartMigrationFuture
 
 	TestFailover(ctx workflow.Context, input *elasticache.TestFailoverInput) (*elasticache.TestFailoverOutput, error)
-	TestFailoverAsync(ctx workflow.Context, input *elasticache.TestFailoverInput) *ElastiCacheTestFailoverFuture
+	TestFailoverAsync(ctx workflow.Context, input *elasticache.TestFailoverInput) *TestFailoverFuture
 
 	WaitUntilCacheClusterAvailable(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error
 	WaitUntilCacheClusterAvailableAsync(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) *clients.VoidFuture

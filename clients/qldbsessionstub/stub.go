@@ -16,12 +16,12 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type QLDBSessionSendCommandFuture struct {
+type SendCommandFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBSessionSendCommandFuture) Get(ctx workflow.Context) (*qldbsession.SendCommandOutput, error) {
+func (r *SendCommandFuture) Get(ctx workflow.Context) (*qldbsession.SendCommandOutput, error) {
 	var output qldbsession.SendCommandOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -33,7 +33,7 @@ func (a *stub) SendCommand(ctx workflow.Context, input *qldbsession.SendCommandI
 	return &output, err
 }
 
-func (a *stub) SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QLDBSessionSendCommandFuture {
+func (a *stub) SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *SendCommandFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldbsession.SendCommand", input)
-	return &QLDBSessionSendCommandFuture{Future: future}
+	return &SendCommandFuture{Future: future}
 }

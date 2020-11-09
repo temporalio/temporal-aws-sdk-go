@@ -16,25 +16,25 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CloseTunnel(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) (*iotsecuretunneling.CloseTunnelOutput, error)
-	CloseTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) *IoTSecureTunnelingCloseTunnelFuture
+	CloseTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) *CloseTunnelFuture
 
 	DescribeTunnel(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) (*iotsecuretunneling.DescribeTunnelOutput, error)
-	DescribeTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) *IoTSecureTunnelingDescribeTunnelFuture
+	DescribeTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) *DescribeTunnelFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) (*iotsecuretunneling.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) *IoTSecureTunnelingListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListTunnels(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) (*iotsecuretunneling.ListTunnelsOutput, error)
-	ListTunnelsAsync(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) *IoTSecureTunnelingListTunnelsFuture
+	ListTunnelsAsync(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) *ListTunnelsFuture
 
 	OpenTunnel(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) (*iotsecuretunneling.OpenTunnelOutput, error)
-	OpenTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) *IoTSecureTunnelingOpenTunnelFuture
+	OpenTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) *OpenTunnelFuture
 
 	TagResource(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) (*iotsecuretunneling.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) *IoTSecureTunnelingTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) (*iotsecuretunneling.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *IoTSecureTunnelingUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *UntagResourceFuture
 }
 
 func NewClient() Client {

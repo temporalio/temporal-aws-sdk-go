@@ -16,463 +16,463 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type PinpointEmailCreateConfigurationSetFuture struct {
+type CreateConfigurationSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailCreateConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointemail.CreateConfigurationSetOutput, error) {
+func (r *CreateConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointemail.CreateConfigurationSetOutput, error) {
 	var output pinpointemail.CreateConfigurationSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailCreateConfigurationSetEventDestinationFuture struct {
+type CreateConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailCreateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointemail.CreateConfigurationSetEventDestinationOutput, error) {
+func (r *CreateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointemail.CreateConfigurationSetEventDestinationOutput, error) {
 	var output pinpointemail.CreateConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailCreateDedicatedIpPoolFuture struct {
+type CreateDedicatedIpPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailCreateDedicatedIpPoolFuture) Get(ctx workflow.Context) (*pinpointemail.CreateDedicatedIpPoolOutput, error) {
+func (r *CreateDedicatedIpPoolFuture) Get(ctx workflow.Context) (*pinpointemail.CreateDedicatedIpPoolOutput, error) {
 	var output pinpointemail.CreateDedicatedIpPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailCreateDeliverabilityTestReportFuture struct {
+type CreateDeliverabilityTestReportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailCreateDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*pinpointemail.CreateDeliverabilityTestReportOutput, error) {
+func (r *CreateDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*pinpointemail.CreateDeliverabilityTestReportOutput, error) {
 	var output pinpointemail.CreateDeliverabilityTestReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailCreateEmailIdentityFuture struct {
+type CreateEmailIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailCreateEmailIdentityFuture) Get(ctx workflow.Context) (*pinpointemail.CreateEmailIdentityOutput, error) {
+func (r *CreateEmailIdentityFuture) Get(ctx workflow.Context) (*pinpointemail.CreateEmailIdentityOutput, error) {
 	var output pinpointemail.CreateEmailIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailDeleteConfigurationSetFuture struct {
+type DeleteConfigurationSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailDeleteConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointemail.DeleteConfigurationSetOutput, error) {
+func (r *DeleteConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointemail.DeleteConfigurationSetOutput, error) {
 	var output pinpointemail.DeleteConfigurationSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailDeleteConfigurationSetEventDestinationFuture struct {
+type DeleteConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailDeleteConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointemail.DeleteConfigurationSetEventDestinationOutput, error) {
+func (r *DeleteConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointemail.DeleteConfigurationSetEventDestinationOutput, error) {
 	var output pinpointemail.DeleteConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailDeleteDedicatedIpPoolFuture struct {
+type DeleteDedicatedIpPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailDeleteDedicatedIpPoolFuture) Get(ctx workflow.Context) (*pinpointemail.DeleteDedicatedIpPoolOutput, error) {
+func (r *DeleteDedicatedIpPoolFuture) Get(ctx workflow.Context) (*pinpointemail.DeleteDedicatedIpPoolOutput, error) {
 	var output pinpointemail.DeleteDedicatedIpPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailDeleteEmailIdentityFuture struct {
+type DeleteEmailIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailDeleteEmailIdentityFuture) Get(ctx workflow.Context) (*pinpointemail.DeleteEmailIdentityOutput, error) {
+func (r *DeleteEmailIdentityFuture) Get(ctx workflow.Context) (*pinpointemail.DeleteEmailIdentityOutput, error) {
 	var output pinpointemail.DeleteEmailIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetAccountFuture struct {
+type GetAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetAccountFuture) Get(ctx workflow.Context) (*pinpointemail.GetAccountOutput, error) {
+func (r *GetAccountFuture) Get(ctx workflow.Context) (*pinpointemail.GetAccountOutput, error) {
 	var output pinpointemail.GetAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetBlacklistReportsFuture struct {
+type GetBlacklistReportsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetBlacklistReportsFuture) Get(ctx workflow.Context) (*pinpointemail.GetBlacklistReportsOutput, error) {
+func (r *GetBlacklistReportsFuture) Get(ctx workflow.Context) (*pinpointemail.GetBlacklistReportsOutput, error) {
 	var output pinpointemail.GetBlacklistReportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetConfigurationSetFuture struct {
+type GetConfigurationSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointemail.GetConfigurationSetOutput, error) {
+func (r *GetConfigurationSetFuture) Get(ctx workflow.Context) (*pinpointemail.GetConfigurationSetOutput, error) {
 	var output pinpointemail.GetConfigurationSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetConfigurationSetEventDestinationsFuture struct {
+type GetConfigurationSetEventDestinationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetConfigurationSetEventDestinationsFuture) Get(ctx workflow.Context) (*pinpointemail.GetConfigurationSetEventDestinationsOutput, error) {
+func (r *GetConfigurationSetEventDestinationsFuture) Get(ctx workflow.Context) (*pinpointemail.GetConfigurationSetEventDestinationsOutput, error) {
 	var output pinpointemail.GetConfigurationSetEventDestinationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetDedicatedIpFuture struct {
+type GetDedicatedIpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetDedicatedIpFuture) Get(ctx workflow.Context) (*pinpointemail.GetDedicatedIpOutput, error) {
+func (r *GetDedicatedIpFuture) Get(ctx workflow.Context) (*pinpointemail.GetDedicatedIpOutput, error) {
 	var output pinpointemail.GetDedicatedIpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetDedicatedIpsFuture struct {
+type GetDedicatedIpsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetDedicatedIpsFuture) Get(ctx workflow.Context) (*pinpointemail.GetDedicatedIpsOutput, error) {
+func (r *GetDedicatedIpsFuture) Get(ctx workflow.Context) (*pinpointemail.GetDedicatedIpsOutput, error) {
 	var output pinpointemail.GetDedicatedIpsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetDeliverabilityDashboardOptionsFuture struct {
+type GetDeliverabilityDashboardOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetDeliverabilityDashboardOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.GetDeliverabilityDashboardOptionsOutput, error) {
+func (r *GetDeliverabilityDashboardOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.GetDeliverabilityDashboardOptionsOutput, error) {
 	var output pinpointemail.GetDeliverabilityDashboardOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetDeliverabilityTestReportFuture struct {
+type GetDeliverabilityTestReportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*pinpointemail.GetDeliverabilityTestReportOutput, error) {
+func (r *GetDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*pinpointemail.GetDeliverabilityTestReportOutput, error) {
 	var output pinpointemail.GetDeliverabilityTestReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetDomainDeliverabilityCampaignFuture struct {
+type GetDomainDeliverabilityCampaignFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetDomainDeliverabilityCampaignFuture) Get(ctx workflow.Context) (*pinpointemail.GetDomainDeliverabilityCampaignOutput, error) {
+func (r *GetDomainDeliverabilityCampaignFuture) Get(ctx workflow.Context) (*pinpointemail.GetDomainDeliverabilityCampaignOutput, error) {
 	var output pinpointemail.GetDomainDeliverabilityCampaignOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetDomainStatisticsReportFuture struct {
+type GetDomainStatisticsReportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetDomainStatisticsReportFuture) Get(ctx workflow.Context) (*pinpointemail.GetDomainStatisticsReportOutput, error) {
+func (r *GetDomainStatisticsReportFuture) Get(ctx workflow.Context) (*pinpointemail.GetDomainStatisticsReportOutput, error) {
 	var output pinpointemail.GetDomainStatisticsReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailGetEmailIdentityFuture struct {
+type GetEmailIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailGetEmailIdentityFuture) Get(ctx workflow.Context) (*pinpointemail.GetEmailIdentityOutput, error) {
+func (r *GetEmailIdentityFuture) Get(ctx workflow.Context) (*pinpointemail.GetEmailIdentityOutput, error) {
 	var output pinpointemail.GetEmailIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailListConfigurationSetsFuture struct {
+type ListConfigurationSetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailListConfigurationSetsFuture) Get(ctx workflow.Context) (*pinpointemail.ListConfigurationSetsOutput, error) {
+func (r *ListConfigurationSetsFuture) Get(ctx workflow.Context) (*pinpointemail.ListConfigurationSetsOutput, error) {
 	var output pinpointemail.ListConfigurationSetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailListDedicatedIpPoolsFuture struct {
+type ListDedicatedIpPoolsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailListDedicatedIpPoolsFuture) Get(ctx workflow.Context) (*pinpointemail.ListDedicatedIpPoolsOutput, error) {
+func (r *ListDedicatedIpPoolsFuture) Get(ctx workflow.Context) (*pinpointemail.ListDedicatedIpPoolsOutput, error) {
 	var output pinpointemail.ListDedicatedIpPoolsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailListDeliverabilityTestReportsFuture struct {
+type ListDeliverabilityTestReportsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailListDeliverabilityTestReportsFuture) Get(ctx workflow.Context) (*pinpointemail.ListDeliverabilityTestReportsOutput, error) {
+func (r *ListDeliverabilityTestReportsFuture) Get(ctx workflow.Context) (*pinpointemail.ListDeliverabilityTestReportsOutput, error) {
 	var output pinpointemail.ListDeliverabilityTestReportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailListDomainDeliverabilityCampaignsFuture struct {
+type ListDomainDeliverabilityCampaignsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailListDomainDeliverabilityCampaignsFuture) Get(ctx workflow.Context) (*pinpointemail.ListDomainDeliverabilityCampaignsOutput, error) {
+func (r *ListDomainDeliverabilityCampaignsFuture) Get(ctx workflow.Context) (*pinpointemail.ListDomainDeliverabilityCampaignsOutput, error) {
 	var output pinpointemail.ListDomainDeliverabilityCampaignsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailListEmailIdentitiesFuture struct {
+type ListEmailIdentitiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailListEmailIdentitiesFuture) Get(ctx workflow.Context) (*pinpointemail.ListEmailIdentitiesOutput, error) {
+func (r *ListEmailIdentitiesFuture) Get(ctx workflow.Context) (*pinpointemail.ListEmailIdentitiesOutput, error) {
 	var output pinpointemail.ListEmailIdentitiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailListTagsForResourceFuture) Get(ctx workflow.Context) (*pinpointemail.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*pinpointemail.ListTagsForResourceOutput, error) {
 	var output pinpointemail.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutAccountDedicatedIpWarmupAttributesFuture struct {
+type PutAccountDedicatedIpWarmupAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutAccountDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutAccountDedicatedIpWarmupAttributesOutput, error) {
+func (r *PutAccountDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutAccountDedicatedIpWarmupAttributesOutput, error) {
 	var output pinpointemail.PutAccountDedicatedIpWarmupAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutAccountSendingAttributesFuture struct {
+type PutAccountSendingAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutAccountSendingAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutAccountSendingAttributesOutput, error) {
+func (r *PutAccountSendingAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutAccountSendingAttributesOutput, error) {
 	var output pinpointemail.PutAccountSendingAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutConfigurationSetDeliveryOptionsFuture struct {
+type PutConfigurationSetDeliveryOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutConfigurationSetDeliveryOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.PutConfigurationSetDeliveryOptionsOutput, error) {
+func (r *PutConfigurationSetDeliveryOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.PutConfigurationSetDeliveryOptionsOutput, error) {
 	var output pinpointemail.PutConfigurationSetDeliveryOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutConfigurationSetReputationOptionsFuture struct {
+type PutConfigurationSetReputationOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutConfigurationSetReputationOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.PutConfigurationSetReputationOptionsOutput, error) {
+func (r *PutConfigurationSetReputationOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.PutConfigurationSetReputationOptionsOutput, error) {
 	var output pinpointemail.PutConfigurationSetReputationOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutConfigurationSetSendingOptionsFuture struct {
+type PutConfigurationSetSendingOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutConfigurationSetSendingOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.PutConfigurationSetSendingOptionsOutput, error) {
+func (r *PutConfigurationSetSendingOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.PutConfigurationSetSendingOptionsOutput, error) {
 	var output pinpointemail.PutConfigurationSetSendingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutConfigurationSetTrackingOptionsFuture struct {
+type PutConfigurationSetTrackingOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutConfigurationSetTrackingOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.PutConfigurationSetTrackingOptionsOutput, error) {
+func (r *PutConfigurationSetTrackingOptionsFuture) Get(ctx workflow.Context) (*pinpointemail.PutConfigurationSetTrackingOptionsOutput, error) {
 	var output pinpointemail.PutConfigurationSetTrackingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutDedicatedIpInPoolFuture struct {
+type PutDedicatedIpInPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutDedicatedIpInPoolFuture) Get(ctx workflow.Context) (*pinpointemail.PutDedicatedIpInPoolOutput, error) {
+func (r *PutDedicatedIpInPoolFuture) Get(ctx workflow.Context) (*pinpointemail.PutDedicatedIpInPoolOutput, error) {
 	var output pinpointemail.PutDedicatedIpInPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutDedicatedIpWarmupAttributesFuture struct {
+type PutDedicatedIpWarmupAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutDedicatedIpWarmupAttributesOutput, error) {
+func (r *PutDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutDedicatedIpWarmupAttributesOutput, error) {
 	var output pinpointemail.PutDedicatedIpWarmupAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutDeliverabilityDashboardOptionFuture struct {
+type PutDeliverabilityDashboardOptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutDeliverabilityDashboardOptionFuture) Get(ctx workflow.Context) (*pinpointemail.PutDeliverabilityDashboardOptionOutput, error) {
+func (r *PutDeliverabilityDashboardOptionFuture) Get(ctx workflow.Context) (*pinpointemail.PutDeliverabilityDashboardOptionOutput, error) {
 	var output pinpointemail.PutDeliverabilityDashboardOptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutEmailIdentityDkimAttributesFuture struct {
+type PutEmailIdentityDkimAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutEmailIdentityDkimAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutEmailIdentityDkimAttributesOutput, error) {
+func (r *PutEmailIdentityDkimAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutEmailIdentityDkimAttributesOutput, error) {
 	var output pinpointemail.PutEmailIdentityDkimAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutEmailIdentityFeedbackAttributesFuture struct {
+type PutEmailIdentityFeedbackAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutEmailIdentityFeedbackAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutEmailIdentityFeedbackAttributesOutput, error) {
+func (r *PutEmailIdentityFeedbackAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutEmailIdentityFeedbackAttributesOutput, error) {
 	var output pinpointemail.PutEmailIdentityFeedbackAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailPutEmailIdentityMailFromAttributesFuture struct {
+type PutEmailIdentityMailFromAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailPutEmailIdentityMailFromAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutEmailIdentityMailFromAttributesOutput, error) {
+func (r *PutEmailIdentityMailFromAttributesFuture) Get(ctx workflow.Context) (*pinpointemail.PutEmailIdentityMailFromAttributesOutput, error) {
 	var output pinpointemail.PutEmailIdentityMailFromAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailSendEmailFuture struct {
+type SendEmailFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailSendEmailFuture) Get(ctx workflow.Context) (*pinpointemail.SendEmailOutput, error) {
+func (r *SendEmailFuture) Get(ctx workflow.Context) (*pinpointemail.SendEmailOutput, error) {
 	var output pinpointemail.SendEmailOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailTagResourceFuture) Get(ctx workflow.Context) (*pinpointemail.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*pinpointemail.TagResourceOutput, error) {
 	var output pinpointemail.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailUntagResourceFuture) Get(ctx workflow.Context) (*pinpointemail.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*pinpointemail.UntagResourceOutput, error) {
 	var output pinpointemail.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PinpointEmailUpdateConfigurationSetEventDestinationFuture struct {
+type UpdateConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PinpointEmailUpdateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointemail.UpdateConfigurationSetEventDestinationOutput, error) {
+func (r *UpdateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*pinpointemail.UpdateConfigurationSetEventDestinationOutput, error) {
 	var output pinpointemail.UpdateConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -484,9 +484,9 @@ func (a *stub) CreateConfigurationSet(ctx workflow.Context, input *pinpointemail
 	return &output, err
 }
 
-func (a *stub) CreateConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetInput) *PinpointEmailCreateConfigurationSetFuture {
+func (a *stub) CreateConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetInput) *CreateConfigurationSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.CreateConfigurationSet", input)
-	return &PinpointEmailCreateConfigurationSetFuture{Future: future}
+	return &CreateConfigurationSetFuture{Future: future}
 }
 
 func (a *stub) CreateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetEventDestinationInput) (*pinpointemail.CreateConfigurationSetEventDestinationOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) CreateConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetEventDestinationInput) *PinpointEmailCreateConfigurationSetEventDestinationFuture {
+func (a *stub) CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetEventDestinationInput) *CreateConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.CreateConfigurationSetEventDestination", input)
-	return &PinpointEmailCreateConfigurationSetEventDestinationFuture{Future: future}
+	return &CreateConfigurationSetEventDestinationFuture{Future: future}
 }
 
 func (a *stub) CreateDedicatedIpPool(ctx workflow.Context, input *pinpointemail.CreateDedicatedIpPoolInput) (*pinpointemail.CreateDedicatedIpPoolOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) CreateDedicatedIpPool(ctx workflow.Context, input *pinpointemail.
 	return &output, err
 }
 
-func (a *stub) CreateDedicatedIpPoolAsync(ctx workflow.Context, input *pinpointemail.CreateDedicatedIpPoolInput) *PinpointEmailCreateDedicatedIpPoolFuture {
+func (a *stub) CreateDedicatedIpPoolAsync(ctx workflow.Context, input *pinpointemail.CreateDedicatedIpPoolInput) *CreateDedicatedIpPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.CreateDedicatedIpPool", input)
-	return &PinpointEmailCreateDedicatedIpPoolFuture{Future: future}
+	return &CreateDedicatedIpPoolFuture{Future: future}
 }
 
 func (a *stub) CreateDeliverabilityTestReport(ctx workflow.Context, input *pinpointemail.CreateDeliverabilityTestReportInput) (*pinpointemail.CreateDeliverabilityTestReportOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) CreateDeliverabilityTestReport(ctx workflow.Context, input *pinpo
 	return &output, err
 }
 
-func (a *stub) CreateDeliverabilityTestReportAsync(ctx workflow.Context, input *pinpointemail.CreateDeliverabilityTestReportInput) *PinpointEmailCreateDeliverabilityTestReportFuture {
+func (a *stub) CreateDeliverabilityTestReportAsync(ctx workflow.Context, input *pinpointemail.CreateDeliverabilityTestReportInput) *CreateDeliverabilityTestReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.CreateDeliverabilityTestReport", input)
-	return &PinpointEmailCreateDeliverabilityTestReportFuture{Future: future}
+	return &CreateDeliverabilityTestReportFuture{Future: future}
 }
 
 func (a *stub) CreateEmailIdentity(ctx workflow.Context, input *pinpointemail.CreateEmailIdentityInput) (*pinpointemail.CreateEmailIdentityOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) CreateEmailIdentity(ctx workflow.Context, input *pinpointemail.Cr
 	return &output, err
 }
 
-func (a *stub) CreateEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.CreateEmailIdentityInput) *PinpointEmailCreateEmailIdentityFuture {
+func (a *stub) CreateEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.CreateEmailIdentityInput) *CreateEmailIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.CreateEmailIdentity", input)
-	return &PinpointEmailCreateEmailIdentityFuture{Future: future}
+	return &CreateEmailIdentityFuture{Future: future}
 }
 
 func (a *stub) DeleteConfigurationSet(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetInput) (*pinpointemail.DeleteConfigurationSetOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) DeleteConfigurationSet(ctx workflow.Context, input *pinpointemail
 	return &output, err
 }
 
-func (a *stub) DeleteConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetInput) *PinpointEmailDeleteConfigurationSetFuture {
+func (a *stub) DeleteConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetInput) *DeleteConfigurationSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.DeleteConfigurationSet", input)
-	return &PinpointEmailDeleteConfigurationSetFuture{Future: future}
+	return &DeleteConfigurationSetFuture{Future: future}
 }
 
 func (a *stub) DeleteConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetEventDestinationInput) (*pinpointemail.DeleteConfigurationSetEventDestinationOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) DeleteConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetEventDestinationInput) *PinpointEmailDeleteConfigurationSetEventDestinationFuture {
+func (a *stub) DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetEventDestinationInput) *DeleteConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.DeleteConfigurationSetEventDestination", input)
-	return &PinpointEmailDeleteConfigurationSetEventDestinationFuture{Future: future}
+	return &DeleteConfigurationSetEventDestinationFuture{Future: future}
 }
 
 func (a *stub) DeleteDedicatedIpPool(ctx workflow.Context, input *pinpointemail.DeleteDedicatedIpPoolInput) (*pinpointemail.DeleteDedicatedIpPoolOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) DeleteDedicatedIpPool(ctx workflow.Context, input *pinpointemail.
 	return &output, err
 }
 
-func (a *stub) DeleteDedicatedIpPoolAsync(ctx workflow.Context, input *pinpointemail.DeleteDedicatedIpPoolInput) *PinpointEmailDeleteDedicatedIpPoolFuture {
+func (a *stub) DeleteDedicatedIpPoolAsync(ctx workflow.Context, input *pinpointemail.DeleteDedicatedIpPoolInput) *DeleteDedicatedIpPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.DeleteDedicatedIpPool", input)
-	return &PinpointEmailDeleteDedicatedIpPoolFuture{Future: future}
+	return &DeleteDedicatedIpPoolFuture{Future: future}
 }
 
 func (a *stub) DeleteEmailIdentity(ctx workflow.Context, input *pinpointemail.DeleteEmailIdentityInput) (*pinpointemail.DeleteEmailIdentityOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) DeleteEmailIdentity(ctx workflow.Context, input *pinpointemail.De
 	return &output, err
 }
 
-func (a *stub) DeleteEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.DeleteEmailIdentityInput) *PinpointEmailDeleteEmailIdentityFuture {
+func (a *stub) DeleteEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.DeleteEmailIdentityInput) *DeleteEmailIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.DeleteEmailIdentity", input)
-	return &PinpointEmailDeleteEmailIdentityFuture{Future: future}
+	return &DeleteEmailIdentityFuture{Future: future}
 }
 
 func (a *stub) GetAccount(ctx workflow.Context, input *pinpointemail.GetAccountInput) (*pinpointemail.GetAccountOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) GetAccount(ctx workflow.Context, input *pinpointemail.GetAccountI
 	return &output, err
 }
 
-func (a *stub) GetAccountAsync(ctx workflow.Context, input *pinpointemail.GetAccountInput) *PinpointEmailGetAccountFuture {
+func (a *stub) GetAccountAsync(ctx workflow.Context, input *pinpointemail.GetAccountInput) *GetAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetAccount", input)
-	return &PinpointEmailGetAccountFuture{Future: future}
+	return &GetAccountFuture{Future: future}
 }
 
 func (a *stub) GetBlacklistReports(ctx workflow.Context, input *pinpointemail.GetBlacklistReportsInput) (*pinpointemail.GetBlacklistReportsOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) GetBlacklistReports(ctx workflow.Context, input *pinpointemail.Ge
 	return &output, err
 }
 
-func (a *stub) GetBlacklistReportsAsync(ctx workflow.Context, input *pinpointemail.GetBlacklistReportsInput) *PinpointEmailGetBlacklistReportsFuture {
+func (a *stub) GetBlacklistReportsAsync(ctx workflow.Context, input *pinpointemail.GetBlacklistReportsInput) *GetBlacklistReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetBlacklistReports", input)
-	return &PinpointEmailGetBlacklistReportsFuture{Future: future}
+	return &GetBlacklistReportsFuture{Future: future}
 }
 
 func (a *stub) GetConfigurationSet(ctx workflow.Context, input *pinpointemail.GetConfigurationSetInput) (*pinpointemail.GetConfigurationSetOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) GetConfigurationSet(ctx workflow.Context, input *pinpointemail.Ge
 	return &output, err
 }
 
-func (a *stub) GetConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.GetConfigurationSetInput) *PinpointEmailGetConfigurationSetFuture {
+func (a *stub) GetConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.GetConfigurationSetInput) *GetConfigurationSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetConfigurationSet", input)
-	return &PinpointEmailGetConfigurationSetFuture{Future: future}
+	return &GetConfigurationSetFuture{Future: future}
 }
 
 func (a *stub) GetConfigurationSetEventDestinations(ctx workflow.Context, input *pinpointemail.GetConfigurationSetEventDestinationsInput) (*pinpointemail.GetConfigurationSetEventDestinationsOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) GetConfigurationSetEventDestinations(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *pinpointemail.GetConfigurationSetEventDestinationsInput) *PinpointEmailGetConfigurationSetEventDestinationsFuture {
+func (a *stub) GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *pinpointemail.GetConfigurationSetEventDestinationsInput) *GetConfigurationSetEventDestinationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetConfigurationSetEventDestinations", input)
-	return &PinpointEmailGetConfigurationSetEventDestinationsFuture{Future: future}
+	return &GetConfigurationSetEventDestinationsFuture{Future: future}
 }
 
 func (a *stub) GetDedicatedIp(ctx workflow.Context, input *pinpointemail.GetDedicatedIpInput) (*pinpointemail.GetDedicatedIpOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) GetDedicatedIp(ctx workflow.Context, input *pinpointemail.GetDedi
 	return &output, err
 }
 
-func (a *stub) GetDedicatedIpAsync(ctx workflow.Context, input *pinpointemail.GetDedicatedIpInput) *PinpointEmailGetDedicatedIpFuture {
+func (a *stub) GetDedicatedIpAsync(ctx workflow.Context, input *pinpointemail.GetDedicatedIpInput) *GetDedicatedIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetDedicatedIp", input)
-	return &PinpointEmailGetDedicatedIpFuture{Future: future}
+	return &GetDedicatedIpFuture{Future: future}
 }
 
 func (a *stub) GetDedicatedIps(ctx workflow.Context, input *pinpointemail.GetDedicatedIpsInput) (*pinpointemail.GetDedicatedIpsOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) GetDedicatedIps(ctx workflow.Context, input *pinpointemail.GetDed
 	return &output, err
 }
 
-func (a *stub) GetDedicatedIpsAsync(ctx workflow.Context, input *pinpointemail.GetDedicatedIpsInput) *PinpointEmailGetDedicatedIpsFuture {
+func (a *stub) GetDedicatedIpsAsync(ctx workflow.Context, input *pinpointemail.GetDedicatedIpsInput) *GetDedicatedIpsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetDedicatedIps", input)
-	return &PinpointEmailGetDedicatedIpsFuture{Future: future}
+	return &GetDedicatedIpsFuture{Future: future}
 }
 
 func (a *stub) GetDeliverabilityDashboardOptions(ctx workflow.Context, input *pinpointemail.GetDeliverabilityDashboardOptionsInput) (*pinpointemail.GetDeliverabilityDashboardOptionsOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) GetDeliverabilityDashboardOptions(ctx workflow.Context, input *pi
 	return &output, err
 }
 
-func (a *stub) GetDeliverabilityDashboardOptionsAsync(ctx workflow.Context, input *pinpointemail.GetDeliverabilityDashboardOptionsInput) *PinpointEmailGetDeliverabilityDashboardOptionsFuture {
+func (a *stub) GetDeliverabilityDashboardOptionsAsync(ctx workflow.Context, input *pinpointemail.GetDeliverabilityDashboardOptionsInput) *GetDeliverabilityDashboardOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetDeliverabilityDashboardOptions", input)
-	return &PinpointEmailGetDeliverabilityDashboardOptionsFuture{Future: future}
+	return &GetDeliverabilityDashboardOptionsFuture{Future: future}
 }
 
 func (a *stub) GetDeliverabilityTestReport(ctx workflow.Context, input *pinpointemail.GetDeliverabilityTestReportInput) (*pinpointemail.GetDeliverabilityTestReportOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) GetDeliverabilityTestReport(ctx workflow.Context, input *pinpoint
 	return &output, err
 }
 
-func (a *stub) GetDeliverabilityTestReportAsync(ctx workflow.Context, input *pinpointemail.GetDeliverabilityTestReportInput) *PinpointEmailGetDeliverabilityTestReportFuture {
+func (a *stub) GetDeliverabilityTestReportAsync(ctx workflow.Context, input *pinpointemail.GetDeliverabilityTestReportInput) *GetDeliverabilityTestReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetDeliverabilityTestReport", input)
-	return &PinpointEmailGetDeliverabilityTestReportFuture{Future: future}
+	return &GetDeliverabilityTestReportFuture{Future: future}
 }
 
 func (a *stub) GetDomainDeliverabilityCampaign(ctx workflow.Context, input *pinpointemail.GetDomainDeliverabilityCampaignInput) (*pinpointemail.GetDomainDeliverabilityCampaignOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) GetDomainDeliverabilityCampaign(ctx workflow.Context, input *pinp
 	return &output, err
 }
 
-func (a *stub) GetDomainDeliverabilityCampaignAsync(ctx workflow.Context, input *pinpointemail.GetDomainDeliverabilityCampaignInput) *PinpointEmailGetDomainDeliverabilityCampaignFuture {
+func (a *stub) GetDomainDeliverabilityCampaignAsync(ctx workflow.Context, input *pinpointemail.GetDomainDeliverabilityCampaignInput) *GetDomainDeliverabilityCampaignFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetDomainDeliverabilityCampaign", input)
-	return &PinpointEmailGetDomainDeliverabilityCampaignFuture{Future: future}
+	return &GetDomainDeliverabilityCampaignFuture{Future: future}
 }
 
 func (a *stub) GetDomainStatisticsReport(ctx workflow.Context, input *pinpointemail.GetDomainStatisticsReportInput) (*pinpointemail.GetDomainStatisticsReportOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) GetDomainStatisticsReport(ctx workflow.Context, input *pinpointem
 	return &output, err
 }
 
-func (a *stub) GetDomainStatisticsReportAsync(ctx workflow.Context, input *pinpointemail.GetDomainStatisticsReportInput) *PinpointEmailGetDomainStatisticsReportFuture {
+func (a *stub) GetDomainStatisticsReportAsync(ctx workflow.Context, input *pinpointemail.GetDomainStatisticsReportInput) *GetDomainStatisticsReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetDomainStatisticsReport", input)
-	return &PinpointEmailGetDomainStatisticsReportFuture{Future: future}
+	return &GetDomainStatisticsReportFuture{Future: future}
 }
 
 func (a *stub) GetEmailIdentity(ctx workflow.Context, input *pinpointemail.GetEmailIdentityInput) (*pinpointemail.GetEmailIdentityOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) GetEmailIdentity(ctx workflow.Context, input *pinpointemail.GetEm
 	return &output, err
 }
 
-func (a *stub) GetEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.GetEmailIdentityInput) *PinpointEmailGetEmailIdentityFuture {
+func (a *stub) GetEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.GetEmailIdentityInput) *GetEmailIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.GetEmailIdentity", input)
-	return &PinpointEmailGetEmailIdentityFuture{Future: future}
+	return &GetEmailIdentityFuture{Future: future}
 }
 
 func (a *stub) ListConfigurationSets(ctx workflow.Context, input *pinpointemail.ListConfigurationSetsInput) (*pinpointemail.ListConfigurationSetsOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) ListConfigurationSets(ctx workflow.Context, input *pinpointemail.
 	return &output, err
 }
 
-func (a *stub) ListConfigurationSetsAsync(ctx workflow.Context, input *pinpointemail.ListConfigurationSetsInput) *PinpointEmailListConfigurationSetsFuture {
+func (a *stub) ListConfigurationSetsAsync(ctx workflow.Context, input *pinpointemail.ListConfigurationSetsInput) *ListConfigurationSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.ListConfigurationSets", input)
-	return &PinpointEmailListConfigurationSetsFuture{Future: future}
+	return &ListConfigurationSetsFuture{Future: future}
 }
 
 func (a *stub) ListDedicatedIpPools(ctx workflow.Context, input *pinpointemail.ListDedicatedIpPoolsInput) (*pinpointemail.ListDedicatedIpPoolsOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) ListDedicatedIpPools(ctx workflow.Context, input *pinpointemail.L
 	return &output, err
 }
 
-func (a *stub) ListDedicatedIpPoolsAsync(ctx workflow.Context, input *pinpointemail.ListDedicatedIpPoolsInput) *PinpointEmailListDedicatedIpPoolsFuture {
+func (a *stub) ListDedicatedIpPoolsAsync(ctx workflow.Context, input *pinpointemail.ListDedicatedIpPoolsInput) *ListDedicatedIpPoolsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.ListDedicatedIpPools", input)
-	return &PinpointEmailListDedicatedIpPoolsFuture{Future: future}
+	return &ListDedicatedIpPoolsFuture{Future: future}
 }
 
 func (a *stub) ListDeliverabilityTestReports(ctx workflow.Context, input *pinpointemail.ListDeliverabilityTestReportsInput) (*pinpointemail.ListDeliverabilityTestReportsOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) ListDeliverabilityTestReports(ctx workflow.Context, input *pinpoi
 	return &output, err
 }
 
-func (a *stub) ListDeliverabilityTestReportsAsync(ctx workflow.Context, input *pinpointemail.ListDeliverabilityTestReportsInput) *PinpointEmailListDeliverabilityTestReportsFuture {
+func (a *stub) ListDeliverabilityTestReportsAsync(ctx workflow.Context, input *pinpointemail.ListDeliverabilityTestReportsInput) *ListDeliverabilityTestReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.ListDeliverabilityTestReports", input)
-	return &PinpointEmailListDeliverabilityTestReportsFuture{Future: future}
+	return &ListDeliverabilityTestReportsFuture{Future: future}
 }
 
 func (a *stub) ListDomainDeliverabilityCampaigns(ctx workflow.Context, input *pinpointemail.ListDomainDeliverabilityCampaignsInput) (*pinpointemail.ListDomainDeliverabilityCampaignsOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) ListDomainDeliverabilityCampaigns(ctx workflow.Context, input *pi
 	return &output, err
 }
 
-func (a *stub) ListDomainDeliverabilityCampaignsAsync(ctx workflow.Context, input *pinpointemail.ListDomainDeliverabilityCampaignsInput) *PinpointEmailListDomainDeliverabilityCampaignsFuture {
+func (a *stub) ListDomainDeliverabilityCampaignsAsync(ctx workflow.Context, input *pinpointemail.ListDomainDeliverabilityCampaignsInput) *ListDomainDeliverabilityCampaignsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.ListDomainDeliverabilityCampaigns", input)
-	return &PinpointEmailListDomainDeliverabilityCampaignsFuture{Future: future}
+	return &ListDomainDeliverabilityCampaignsFuture{Future: future}
 }
 
 func (a *stub) ListEmailIdentities(ctx workflow.Context, input *pinpointemail.ListEmailIdentitiesInput) (*pinpointemail.ListEmailIdentitiesOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) ListEmailIdentities(ctx workflow.Context, input *pinpointemail.Li
 	return &output, err
 }
 
-func (a *stub) ListEmailIdentitiesAsync(ctx workflow.Context, input *pinpointemail.ListEmailIdentitiesInput) *PinpointEmailListEmailIdentitiesFuture {
+func (a *stub) ListEmailIdentitiesAsync(ctx workflow.Context, input *pinpointemail.ListEmailIdentitiesInput) *ListEmailIdentitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.ListEmailIdentities", input)
-	return &PinpointEmailListEmailIdentitiesFuture{Future: future}
+	return &ListEmailIdentitiesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *pinpointemail.ListTagsForResourceInput) (*pinpointemail.ListTagsForResourceOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *pinpointemail.Li
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *pinpointemail.ListTagsForResourceInput) *PinpointEmailListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *pinpointemail.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.ListTagsForResource", input)
-	return &PinpointEmailListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PutAccountDedicatedIpWarmupAttributes(ctx workflow.Context, input *pinpointemail.PutAccountDedicatedIpWarmupAttributesInput) (*pinpointemail.PutAccountDedicatedIpWarmupAttributesOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) PutAccountDedicatedIpWarmupAttributes(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) PutAccountDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *pinpointemail.PutAccountDedicatedIpWarmupAttributesInput) *PinpointEmailPutAccountDedicatedIpWarmupAttributesFuture {
+func (a *stub) PutAccountDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *pinpointemail.PutAccountDedicatedIpWarmupAttributesInput) *PutAccountDedicatedIpWarmupAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutAccountDedicatedIpWarmupAttributes", input)
-	return &PinpointEmailPutAccountDedicatedIpWarmupAttributesFuture{Future: future}
+	return &PutAccountDedicatedIpWarmupAttributesFuture{Future: future}
 }
 
 func (a *stub) PutAccountSendingAttributes(ctx workflow.Context, input *pinpointemail.PutAccountSendingAttributesInput) (*pinpointemail.PutAccountSendingAttributesOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) PutAccountSendingAttributes(ctx workflow.Context, input *pinpoint
 	return &output, err
 }
 
-func (a *stub) PutAccountSendingAttributesAsync(ctx workflow.Context, input *pinpointemail.PutAccountSendingAttributesInput) *PinpointEmailPutAccountSendingAttributesFuture {
+func (a *stub) PutAccountSendingAttributesAsync(ctx workflow.Context, input *pinpointemail.PutAccountSendingAttributesInput) *PutAccountSendingAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutAccountSendingAttributes", input)
-	return &PinpointEmailPutAccountSendingAttributesFuture{Future: future}
+	return &PutAccountSendingAttributesFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetDeliveryOptionsInput) (*pinpointemail.PutConfigurationSetDeliveryOptionsOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *p
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetDeliveryOptionsInput) *PinpointEmailPutConfigurationSetDeliveryOptionsFuture {
+func (a *stub) PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetDeliveryOptionsInput) *PutConfigurationSetDeliveryOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutConfigurationSetDeliveryOptions", input)
-	return &PinpointEmailPutConfigurationSetDeliveryOptionsFuture{Future: future}
+	return &PutConfigurationSetDeliveryOptionsFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetReputationOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetReputationOptionsInput) (*pinpointemail.PutConfigurationSetReputationOptionsOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) PutConfigurationSetReputationOptions(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetReputationOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetReputationOptionsInput) *PinpointEmailPutConfigurationSetReputationOptionsFuture {
+func (a *stub) PutConfigurationSetReputationOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetReputationOptionsInput) *PutConfigurationSetReputationOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutConfigurationSetReputationOptions", input)
-	return &PinpointEmailPutConfigurationSetReputationOptionsFuture{Future: future}
+	return &PutConfigurationSetReputationOptionsFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetSendingOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetSendingOptionsInput) (*pinpointemail.PutConfigurationSetSendingOptionsOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) PutConfigurationSetSendingOptions(ctx workflow.Context, input *pi
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetSendingOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetSendingOptionsInput) *PinpointEmailPutConfigurationSetSendingOptionsFuture {
+func (a *stub) PutConfigurationSetSendingOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetSendingOptionsInput) *PutConfigurationSetSendingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutConfigurationSetSendingOptions", input)
-	return &PinpointEmailPutConfigurationSetSendingOptionsFuture{Future: future}
+	return &PutConfigurationSetSendingOptionsFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetTrackingOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetTrackingOptionsInput) (*pinpointemail.PutConfigurationSetTrackingOptionsOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) PutConfigurationSetTrackingOptions(ctx workflow.Context, input *p
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetTrackingOptionsInput) *PinpointEmailPutConfigurationSetTrackingOptionsFuture {
+func (a *stub) PutConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetTrackingOptionsInput) *PutConfigurationSetTrackingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutConfigurationSetTrackingOptions", input)
-	return &PinpointEmailPutConfigurationSetTrackingOptionsFuture{Future: future}
+	return &PutConfigurationSetTrackingOptionsFuture{Future: future}
 }
 
 func (a *stub) PutDedicatedIpInPool(ctx workflow.Context, input *pinpointemail.PutDedicatedIpInPoolInput) (*pinpointemail.PutDedicatedIpInPoolOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) PutDedicatedIpInPool(ctx workflow.Context, input *pinpointemail.P
 	return &output, err
 }
 
-func (a *stub) PutDedicatedIpInPoolAsync(ctx workflow.Context, input *pinpointemail.PutDedicatedIpInPoolInput) *PinpointEmailPutDedicatedIpInPoolFuture {
+func (a *stub) PutDedicatedIpInPoolAsync(ctx workflow.Context, input *pinpointemail.PutDedicatedIpInPoolInput) *PutDedicatedIpInPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutDedicatedIpInPool", input)
-	return &PinpointEmailPutDedicatedIpInPoolFuture{Future: future}
+	return &PutDedicatedIpInPoolFuture{Future: future}
 }
 
 func (a *stub) PutDedicatedIpWarmupAttributes(ctx workflow.Context, input *pinpointemail.PutDedicatedIpWarmupAttributesInput) (*pinpointemail.PutDedicatedIpWarmupAttributesOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) PutDedicatedIpWarmupAttributes(ctx workflow.Context, input *pinpo
 	return &output, err
 }
 
-func (a *stub) PutDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *pinpointemail.PutDedicatedIpWarmupAttributesInput) *PinpointEmailPutDedicatedIpWarmupAttributesFuture {
+func (a *stub) PutDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *pinpointemail.PutDedicatedIpWarmupAttributesInput) *PutDedicatedIpWarmupAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutDedicatedIpWarmupAttributes", input)
-	return &PinpointEmailPutDedicatedIpWarmupAttributesFuture{Future: future}
+	return &PutDedicatedIpWarmupAttributesFuture{Future: future}
 }
 
 func (a *stub) PutDeliverabilityDashboardOption(ctx workflow.Context, input *pinpointemail.PutDeliverabilityDashboardOptionInput) (*pinpointemail.PutDeliverabilityDashboardOptionOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) PutDeliverabilityDashboardOption(ctx workflow.Context, input *pin
 	return &output, err
 }
 
-func (a *stub) PutDeliverabilityDashboardOptionAsync(ctx workflow.Context, input *pinpointemail.PutDeliverabilityDashboardOptionInput) *PinpointEmailPutDeliverabilityDashboardOptionFuture {
+func (a *stub) PutDeliverabilityDashboardOptionAsync(ctx workflow.Context, input *pinpointemail.PutDeliverabilityDashboardOptionInput) *PutDeliverabilityDashboardOptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutDeliverabilityDashboardOption", input)
-	return &PinpointEmailPutDeliverabilityDashboardOptionFuture{Future: future}
+	return &PutDeliverabilityDashboardOptionFuture{Future: future}
 }
 
 func (a *stub) PutEmailIdentityDkimAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityDkimAttributesInput) (*pinpointemail.PutEmailIdentityDkimAttributesOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) PutEmailIdentityDkimAttributes(ctx workflow.Context, input *pinpo
 	return &output, err
 }
 
-func (a *stub) PutEmailIdentityDkimAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityDkimAttributesInput) *PinpointEmailPutEmailIdentityDkimAttributesFuture {
+func (a *stub) PutEmailIdentityDkimAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityDkimAttributesInput) *PutEmailIdentityDkimAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutEmailIdentityDkimAttributes", input)
-	return &PinpointEmailPutEmailIdentityDkimAttributesFuture{Future: future}
+	return &PutEmailIdentityDkimAttributesFuture{Future: future}
 }
 
 func (a *stub) PutEmailIdentityFeedbackAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityFeedbackAttributesInput) (*pinpointemail.PutEmailIdentityFeedbackAttributesOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) PutEmailIdentityFeedbackAttributes(ctx workflow.Context, input *p
 	return &output, err
 }
 
-func (a *stub) PutEmailIdentityFeedbackAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityFeedbackAttributesInput) *PinpointEmailPutEmailIdentityFeedbackAttributesFuture {
+func (a *stub) PutEmailIdentityFeedbackAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityFeedbackAttributesInput) *PutEmailIdentityFeedbackAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutEmailIdentityFeedbackAttributes", input)
-	return &PinpointEmailPutEmailIdentityFeedbackAttributesFuture{Future: future}
+	return &PutEmailIdentityFeedbackAttributesFuture{Future: future}
 }
 
 func (a *stub) PutEmailIdentityMailFromAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityMailFromAttributesInput) (*pinpointemail.PutEmailIdentityMailFromAttributesOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) PutEmailIdentityMailFromAttributes(ctx workflow.Context, input *p
 	return &output, err
 }
 
-func (a *stub) PutEmailIdentityMailFromAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityMailFromAttributesInput) *PinpointEmailPutEmailIdentityMailFromAttributesFuture {
+func (a *stub) PutEmailIdentityMailFromAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityMailFromAttributesInput) *PutEmailIdentityMailFromAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.PutEmailIdentityMailFromAttributes", input)
-	return &PinpointEmailPutEmailIdentityMailFromAttributesFuture{Future: future}
+	return &PutEmailIdentityMailFromAttributesFuture{Future: future}
 }
 
 func (a *stub) SendEmail(ctx workflow.Context, input *pinpointemail.SendEmailInput) (*pinpointemail.SendEmailOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) SendEmail(ctx workflow.Context, input *pinpointemail.SendEmailInp
 	return &output, err
 }
 
-func (a *stub) SendEmailAsync(ctx workflow.Context, input *pinpointemail.SendEmailInput) *PinpointEmailSendEmailFuture {
+func (a *stub) SendEmailAsync(ctx workflow.Context, input *pinpointemail.SendEmailInput) *SendEmailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.SendEmail", input)
-	return &PinpointEmailSendEmailFuture{Future: future}
+	return &SendEmailFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *pinpointemail.TagResourceInput) (*pinpointemail.TagResourceOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *pinpointemail.TagResourc
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *pinpointemail.TagResourceInput) *PinpointEmailTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *pinpointemail.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.TagResource", input)
-	return &PinpointEmailTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *pinpointemail.UntagResourceInput) (*pinpointemail.UntagResourceOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *pinpointemail.UntagRes
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *pinpointemail.UntagResourceInput) *PinpointEmailUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *pinpointemail.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.UntagResource", input)
-	return &PinpointEmailUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.UpdateConfigurationSetEventDestinationInput) (*pinpointemail.UpdateConfigurationSetEventDestinationOutput, error) {
@@ -935,7 +935,7 @@ func (a *stub) UpdateConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.UpdateConfigurationSetEventDestinationInput) *PinpointEmailUpdateConfigurationSetEventDestinationFuture {
+func (a *stub) UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.UpdateConfigurationSetEventDestinationInput) *UpdateConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pinpointemail.UpdateConfigurationSetEventDestination", input)
-	return &PinpointEmailUpdateConfigurationSetEventDestinationFuture{Future: future}
+	return &UpdateConfigurationSetEventDestinationFuture{Future: future}
 }

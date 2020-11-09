@@ -16,177 +16,177 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type MediaPackageVodCreateAssetFuture struct {
+type CreateAssetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodCreateAssetFuture) Get(ctx workflow.Context) (*mediapackagevod.CreateAssetOutput, error) {
+func (r *CreateAssetFuture) Get(ctx workflow.Context) (*mediapackagevod.CreateAssetOutput, error) {
 	var output mediapackagevod.CreateAssetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodCreatePackagingConfigurationFuture struct {
+type CreatePackagingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodCreatePackagingConfigurationFuture) Get(ctx workflow.Context) (*mediapackagevod.CreatePackagingConfigurationOutput, error) {
+func (r *CreatePackagingConfigurationFuture) Get(ctx workflow.Context) (*mediapackagevod.CreatePackagingConfigurationOutput, error) {
 	var output mediapackagevod.CreatePackagingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodCreatePackagingGroupFuture struct {
+type CreatePackagingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodCreatePackagingGroupFuture) Get(ctx workflow.Context) (*mediapackagevod.CreatePackagingGroupOutput, error) {
+func (r *CreatePackagingGroupFuture) Get(ctx workflow.Context) (*mediapackagevod.CreatePackagingGroupOutput, error) {
 	var output mediapackagevod.CreatePackagingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodDeleteAssetFuture struct {
+type DeleteAssetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodDeleteAssetFuture) Get(ctx workflow.Context) (*mediapackagevod.DeleteAssetOutput, error) {
+func (r *DeleteAssetFuture) Get(ctx workflow.Context) (*mediapackagevod.DeleteAssetOutput, error) {
 	var output mediapackagevod.DeleteAssetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodDeletePackagingConfigurationFuture struct {
+type DeletePackagingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodDeletePackagingConfigurationFuture) Get(ctx workflow.Context) (*mediapackagevod.DeletePackagingConfigurationOutput, error) {
+func (r *DeletePackagingConfigurationFuture) Get(ctx workflow.Context) (*mediapackagevod.DeletePackagingConfigurationOutput, error) {
 	var output mediapackagevod.DeletePackagingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodDeletePackagingGroupFuture struct {
+type DeletePackagingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodDeletePackagingGroupFuture) Get(ctx workflow.Context) (*mediapackagevod.DeletePackagingGroupOutput, error) {
+func (r *DeletePackagingGroupFuture) Get(ctx workflow.Context) (*mediapackagevod.DeletePackagingGroupOutput, error) {
 	var output mediapackagevod.DeletePackagingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodDescribeAssetFuture struct {
+type DescribeAssetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodDescribeAssetFuture) Get(ctx workflow.Context) (*mediapackagevod.DescribeAssetOutput, error) {
+func (r *DescribeAssetFuture) Get(ctx workflow.Context) (*mediapackagevod.DescribeAssetOutput, error) {
 	var output mediapackagevod.DescribeAssetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodDescribePackagingConfigurationFuture struct {
+type DescribePackagingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodDescribePackagingConfigurationFuture) Get(ctx workflow.Context) (*mediapackagevod.DescribePackagingConfigurationOutput, error) {
+func (r *DescribePackagingConfigurationFuture) Get(ctx workflow.Context) (*mediapackagevod.DescribePackagingConfigurationOutput, error) {
 	var output mediapackagevod.DescribePackagingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodDescribePackagingGroupFuture struct {
+type DescribePackagingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodDescribePackagingGroupFuture) Get(ctx workflow.Context) (*mediapackagevod.DescribePackagingGroupOutput, error) {
+func (r *DescribePackagingGroupFuture) Get(ctx workflow.Context) (*mediapackagevod.DescribePackagingGroupOutput, error) {
 	var output mediapackagevod.DescribePackagingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodListAssetsFuture struct {
+type ListAssetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodListAssetsFuture) Get(ctx workflow.Context) (*mediapackagevod.ListAssetsOutput, error) {
+func (r *ListAssetsFuture) Get(ctx workflow.Context) (*mediapackagevod.ListAssetsOutput, error) {
 	var output mediapackagevod.ListAssetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodListPackagingConfigurationsFuture struct {
+type ListPackagingConfigurationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodListPackagingConfigurationsFuture) Get(ctx workflow.Context) (*mediapackagevod.ListPackagingConfigurationsOutput, error) {
+func (r *ListPackagingConfigurationsFuture) Get(ctx workflow.Context) (*mediapackagevod.ListPackagingConfigurationsOutput, error) {
 	var output mediapackagevod.ListPackagingConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodListPackagingGroupsFuture struct {
+type ListPackagingGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodListPackagingGroupsFuture) Get(ctx workflow.Context) (*mediapackagevod.ListPackagingGroupsOutput, error) {
+func (r *ListPackagingGroupsFuture) Get(ctx workflow.Context) (*mediapackagevod.ListPackagingGroupsOutput, error) {
 	var output mediapackagevod.ListPackagingGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodListTagsForResourceFuture) Get(ctx workflow.Context) (*mediapackagevod.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*mediapackagevod.ListTagsForResourceOutput, error) {
 	var output mediapackagevod.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodTagResourceFuture) Get(ctx workflow.Context) (*mediapackagevod.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*mediapackagevod.TagResourceOutput, error) {
 	var output mediapackagevod.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodUntagResourceFuture) Get(ctx workflow.Context) (*mediapackagevod.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*mediapackagevod.UntagResourceOutput, error) {
 	var output mediapackagevod.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MediaPackageVodUpdatePackagingGroupFuture struct {
+type UpdatePackagingGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MediaPackageVodUpdatePackagingGroupFuture) Get(ctx workflow.Context) (*mediapackagevod.UpdatePackagingGroupOutput, error) {
+func (r *UpdatePackagingGroupFuture) Get(ctx workflow.Context) (*mediapackagevod.UpdatePackagingGroupOutput, error) {
 	var output mediapackagevod.UpdatePackagingGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -198,9 +198,9 @@ func (a *stub) CreateAsset(ctx workflow.Context, input *mediapackagevod.CreateAs
 	return &output, err
 }
 
-func (a *stub) CreateAssetAsync(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) *MediaPackageVodCreateAssetFuture {
+func (a *stub) CreateAssetAsync(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) *CreateAssetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.CreateAsset", input)
-	return &MediaPackageVodCreateAssetFuture{Future: future}
+	return &CreateAssetFuture{Future: future}
 }
 
 func (a *stub) CreatePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) (*mediapackagevod.CreatePackagingConfigurationOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) CreatePackagingConfiguration(ctx workflow.Context, input *mediapa
 	return &output, err
 }
 
-func (a *stub) CreatePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) *MediaPackageVodCreatePackagingConfigurationFuture {
+func (a *stub) CreatePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) *CreatePackagingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.CreatePackagingConfiguration", input)
-	return &MediaPackageVodCreatePackagingConfigurationFuture{Future: future}
+	return &CreatePackagingConfigurationFuture{Future: future}
 }
 
 func (a *stub) CreatePackagingGroup(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) (*mediapackagevod.CreatePackagingGroupOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) CreatePackagingGroup(ctx workflow.Context, input *mediapackagevod
 	return &output, err
 }
 
-func (a *stub) CreatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) *MediaPackageVodCreatePackagingGroupFuture {
+func (a *stub) CreatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) *CreatePackagingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.CreatePackagingGroup", input)
-	return &MediaPackageVodCreatePackagingGroupFuture{Future: future}
+	return &CreatePackagingGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteAsset(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) (*mediapackagevod.DeleteAssetOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) DeleteAsset(ctx workflow.Context, input *mediapackagevod.DeleteAs
 	return &output, err
 }
 
-func (a *stub) DeleteAssetAsync(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) *MediaPackageVodDeleteAssetFuture {
+func (a *stub) DeleteAssetAsync(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) *DeleteAssetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.DeleteAsset", input)
-	return &MediaPackageVodDeleteAssetFuture{Future: future}
+	return &DeleteAssetFuture{Future: future}
 }
 
 func (a *stub) DeletePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) (*mediapackagevod.DeletePackagingConfigurationOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) DeletePackagingConfiguration(ctx workflow.Context, input *mediapa
 	return &output, err
 }
 
-func (a *stub) DeletePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) *MediaPackageVodDeletePackagingConfigurationFuture {
+func (a *stub) DeletePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) *DeletePackagingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.DeletePackagingConfiguration", input)
-	return &MediaPackageVodDeletePackagingConfigurationFuture{Future: future}
+	return &DeletePackagingConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeletePackagingGroup(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) (*mediapackagevod.DeletePackagingGroupOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DeletePackagingGroup(ctx workflow.Context, input *mediapackagevod
 	return &output, err
 }
 
-func (a *stub) DeletePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) *MediaPackageVodDeletePackagingGroupFuture {
+func (a *stub) DeletePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) *DeletePackagingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.DeletePackagingGroup", input)
-	return &MediaPackageVodDeletePackagingGroupFuture{Future: future}
+	return &DeletePackagingGroupFuture{Future: future}
 }
 
 func (a *stub) DescribeAsset(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) (*mediapackagevod.DescribeAssetOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) DescribeAsset(ctx workflow.Context, input *mediapackagevod.Descri
 	return &output, err
 }
 
-func (a *stub) DescribeAssetAsync(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) *MediaPackageVodDescribeAssetFuture {
+func (a *stub) DescribeAssetAsync(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) *DescribeAssetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.DescribeAsset", input)
-	return &MediaPackageVodDescribeAssetFuture{Future: future}
+	return &DescribeAssetFuture{Future: future}
 }
 
 func (a *stub) DescribePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) (*mediapackagevod.DescribePackagingConfigurationOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) DescribePackagingConfiguration(ctx workflow.Context, input *media
 	return &output, err
 }
 
-func (a *stub) DescribePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) *MediaPackageVodDescribePackagingConfigurationFuture {
+func (a *stub) DescribePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) *DescribePackagingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.DescribePackagingConfiguration", input)
-	return &MediaPackageVodDescribePackagingConfigurationFuture{Future: future}
+	return &DescribePackagingConfigurationFuture{Future: future}
 }
 
 func (a *stub) DescribePackagingGroup(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) (*mediapackagevod.DescribePackagingGroupOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) DescribePackagingGroup(ctx workflow.Context, input *mediapackagev
 	return &output, err
 }
 
-func (a *stub) DescribePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) *MediaPackageVodDescribePackagingGroupFuture {
+func (a *stub) DescribePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) *DescribePackagingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.DescribePackagingGroup", input)
-	return &MediaPackageVodDescribePackagingGroupFuture{Future: future}
+	return &DescribePackagingGroupFuture{Future: future}
 }
 
 func (a *stub) ListAssets(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) (*mediapackagevod.ListAssetsOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) ListAssets(ctx workflow.Context, input *mediapackagevod.ListAsset
 	return &output, err
 }
 
-func (a *stub) ListAssetsAsync(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) *MediaPackageVodListAssetsFuture {
+func (a *stub) ListAssetsAsync(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) *ListAssetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.ListAssets", input)
-	return &MediaPackageVodListAssetsFuture{Future: future}
+	return &ListAssetsFuture{Future: future}
 }
 
 func (a *stub) ListPackagingConfigurations(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) (*mediapackagevod.ListPackagingConfigurationsOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) ListPackagingConfigurations(ctx workflow.Context, input *mediapac
 	return &output, err
 }
 
-func (a *stub) ListPackagingConfigurationsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) *MediaPackageVodListPackagingConfigurationsFuture {
+func (a *stub) ListPackagingConfigurationsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) *ListPackagingConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.ListPackagingConfigurations", input)
-	return &MediaPackageVodListPackagingConfigurationsFuture{Future: future}
+	return &ListPackagingConfigurationsFuture{Future: future}
 }
 
 func (a *stub) ListPackagingGroups(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) (*mediapackagevod.ListPackagingGroupsOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) ListPackagingGroups(ctx workflow.Context, input *mediapackagevod.
 	return &output, err
 }
 
-func (a *stub) ListPackagingGroupsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) *MediaPackageVodListPackagingGroupsFuture {
+func (a *stub) ListPackagingGroupsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) *ListPackagingGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.ListPackagingGroups", input)
-	return &MediaPackageVodListPackagingGroupsFuture{Future: future}
+	return &ListPackagingGroupsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) (*mediapackagevod.ListTagsForResourceOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *mediapackagevod.
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) *MediaPackageVodListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.ListTagsForResource", input)
-	return &MediaPackageVodListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *mediapackagevod.TagResourceInput) (*mediapackagevod.TagResourceOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *mediapackagevod.TagResou
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *mediapackagevod.TagResourceInput) *MediaPackageVodTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *mediapackagevod.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.TagResource", input)
-	return &MediaPackageVodTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) (*mediapackagevod.UntagResourceOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *mediapackagevod.UntagR
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) *MediaPackageVodUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.UntagResource", input)
-	return &MediaPackageVodUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdatePackagingGroup(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) (*mediapackagevod.UpdatePackagingGroupOutput, error) {
@@ -363,7 +363,7 @@ func (a *stub) UpdatePackagingGroup(ctx workflow.Context, input *mediapackagevod
 	return &output, err
 }
 
-func (a *stub) UpdatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) *MediaPackageVodUpdatePackagingGroupFuture {
+func (a *stub) UpdatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) *UpdatePackagingGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.mediapackagevod.UpdatePackagingGroup", input)
-	return &MediaPackageVodUpdatePackagingGroupFuture{Future: future}
+	return &UpdatePackagingGroupFuture{Future: future}
 }

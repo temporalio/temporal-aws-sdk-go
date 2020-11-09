@@ -16,221 +16,221 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type TransferCreateServerFuture struct {
+type CreateServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferCreateServerFuture) Get(ctx workflow.Context) (*transfer.CreateServerOutput, error) {
+func (r *CreateServerFuture) Get(ctx workflow.Context) (*transfer.CreateServerOutput, error) {
 	var output transfer.CreateServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferCreateUserFuture struct {
+type CreateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferCreateUserFuture) Get(ctx workflow.Context) (*transfer.CreateUserOutput, error) {
+func (r *CreateUserFuture) Get(ctx workflow.Context) (*transfer.CreateUserOutput, error) {
 	var output transfer.CreateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferDeleteServerFuture struct {
+type DeleteServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferDeleteServerFuture) Get(ctx workflow.Context) (*transfer.DeleteServerOutput, error) {
+func (r *DeleteServerFuture) Get(ctx workflow.Context) (*transfer.DeleteServerOutput, error) {
 	var output transfer.DeleteServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferDeleteSshPublicKeyFuture struct {
+type DeleteSshPublicKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferDeleteSshPublicKeyFuture) Get(ctx workflow.Context) (*transfer.DeleteSshPublicKeyOutput, error) {
+func (r *DeleteSshPublicKeyFuture) Get(ctx workflow.Context) (*transfer.DeleteSshPublicKeyOutput, error) {
 	var output transfer.DeleteSshPublicKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferDeleteUserFuture struct {
+type DeleteUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferDeleteUserFuture) Get(ctx workflow.Context) (*transfer.DeleteUserOutput, error) {
+func (r *DeleteUserFuture) Get(ctx workflow.Context) (*transfer.DeleteUserOutput, error) {
 	var output transfer.DeleteUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferDescribeSecurityPolicyFuture struct {
+type DescribeSecurityPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferDescribeSecurityPolicyFuture) Get(ctx workflow.Context) (*transfer.DescribeSecurityPolicyOutput, error) {
+func (r *DescribeSecurityPolicyFuture) Get(ctx workflow.Context) (*transfer.DescribeSecurityPolicyOutput, error) {
 	var output transfer.DescribeSecurityPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferDescribeServerFuture struct {
+type DescribeServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferDescribeServerFuture) Get(ctx workflow.Context) (*transfer.DescribeServerOutput, error) {
+func (r *DescribeServerFuture) Get(ctx workflow.Context) (*transfer.DescribeServerOutput, error) {
 	var output transfer.DescribeServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferDescribeUserFuture struct {
+type DescribeUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferDescribeUserFuture) Get(ctx workflow.Context) (*transfer.DescribeUserOutput, error) {
+func (r *DescribeUserFuture) Get(ctx workflow.Context) (*transfer.DescribeUserOutput, error) {
 	var output transfer.DescribeUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferImportSshPublicKeyFuture struct {
+type ImportSshPublicKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferImportSshPublicKeyFuture) Get(ctx workflow.Context) (*transfer.ImportSshPublicKeyOutput, error) {
+func (r *ImportSshPublicKeyFuture) Get(ctx workflow.Context) (*transfer.ImportSshPublicKeyOutput, error) {
 	var output transfer.ImportSshPublicKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferListSecurityPoliciesFuture struct {
+type ListSecurityPoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferListSecurityPoliciesFuture) Get(ctx workflow.Context) (*transfer.ListSecurityPoliciesOutput, error) {
+func (r *ListSecurityPoliciesFuture) Get(ctx workflow.Context) (*transfer.ListSecurityPoliciesOutput, error) {
 	var output transfer.ListSecurityPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferListServersFuture struct {
+type ListServersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferListServersFuture) Get(ctx workflow.Context) (*transfer.ListServersOutput, error) {
+func (r *ListServersFuture) Get(ctx workflow.Context) (*transfer.ListServersOutput, error) {
 	var output transfer.ListServersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferListTagsForResourceFuture) Get(ctx workflow.Context) (*transfer.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*transfer.ListTagsForResourceOutput, error) {
 	var output transfer.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferListUsersFuture struct {
+type ListUsersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferListUsersFuture) Get(ctx workflow.Context) (*transfer.ListUsersOutput, error) {
+func (r *ListUsersFuture) Get(ctx workflow.Context) (*transfer.ListUsersOutput, error) {
 	var output transfer.ListUsersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferStartServerFuture struct {
+type StartServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferStartServerFuture) Get(ctx workflow.Context) (*transfer.StartServerOutput, error) {
+func (r *StartServerFuture) Get(ctx workflow.Context) (*transfer.StartServerOutput, error) {
 	var output transfer.StartServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferStopServerFuture struct {
+type StopServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferStopServerFuture) Get(ctx workflow.Context) (*transfer.StopServerOutput, error) {
+func (r *StopServerFuture) Get(ctx workflow.Context) (*transfer.StopServerOutput, error) {
 	var output transfer.StopServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferTagResourceFuture) Get(ctx workflow.Context) (*transfer.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*transfer.TagResourceOutput, error) {
 	var output transfer.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferTestIdentityProviderFuture struct {
+type TestIdentityProviderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferTestIdentityProviderFuture) Get(ctx workflow.Context) (*transfer.TestIdentityProviderOutput, error) {
+func (r *TestIdentityProviderFuture) Get(ctx workflow.Context) (*transfer.TestIdentityProviderOutput, error) {
 	var output transfer.TestIdentityProviderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferUntagResourceFuture) Get(ctx workflow.Context) (*transfer.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*transfer.UntagResourceOutput, error) {
 	var output transfer.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferUpdateServerFuture struct {
+type UpdateServerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferUpdateServerFuture) Get(ctx workflow.Context) (*transfer.UpdateServerOutput, error) {
+func (r *UpdateServerFuture) Get(ctx workflow.Context) (*transfer.UpdateServerOutput, error) {
 	var output transfer.UpdateServerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TransferUpdateUserFuture struct {
+type UpdateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TransferUpdateUserFuture) Get(ctx workflow.Context) (*transfer.UpdateUserOutput, error) {
+func (r *UpdateUserFuture) Get(ctx workflow.Context) (*transfer.UpdateUserOutput, error) {
 	var output transfer.UpdateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -242,9 +242,9 @@ func (a *stub) CreateServer(ctx workflow.Context, input *transfer.CreateServerIn
 	return &output, err
 }
 
-func (a *stub) CreateServerAsync(ctx workflow.Context, input *transfer.CreateServerInput) *TransferCreateServerFuture {
+func (a *stub) CreateServerAsync(ctx workflow.Context, input *transfer.CreateServerInput) *CreateServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.CreateServer", input)
-	return &TransferCreateServerFuture{Future: future}
+	return &CreateServerFuture{Future: future}
 }
 
 func (a *stub) CreateUser(ctx workflow.Context, input *transfer.CreateUserInput) (*transfer.CreateUserOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) CreateUser(ctx workflow.Context, input *transfer.CreateUserInput)
 	return &output, err
 }
 
-func (a *stub) CreateUserAsync(ctx workflow.Context, input *transfer.CreateUserInput) *TransferCreateUserFuture {
+func (a *stub) CreateUserAsync(ctx workflow.Context, input *transfer.CreateUserInput) *CreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.CreateUser", input)
-	return &TransferCreateUserFuture{Future: future}
+	return &CreateUserFuture{Future: future}
 }
 
 func (a *stub) DeleteServer(ctx workflow.Context, input *transfer.DeleteServerInput) (*transfer.DeleteServerOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) DeleteServer(ctx workflow.Context, input *transfer.DeleteServerIn
 	return &output, err
 }
 
-func (a *stub) DeleteServerAsync(ctx workflow.Context, input *transfer.DeleteServerInput) *TransferDeleteServerFuture {
+func (a *stub) DeleteServerAsync(ctx workflow.Context, input *transfer.DeleteServerInput) *DeleteServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteServer", input)
-	return &TransferDeleteServerFuture{Future: future}
+	return &DeleteServerFuture{Future: future}
 }
 
 func (a *stub) DeleteSshPublicKey(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) (*transfer.DeleteSshPublicKeyOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) DeleteSshPublicKey(ctx workflow.Context, input *transfer.DeleteSs
 	return &output, err
 }
 
-func (a *stub) DeleteSshPublicKeyAsync(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) *TransferDeleteSshPublicKeyFuture {
+func (a *stub) DeleteSshPublicKeyAsync(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) *DeleteSshPublicKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteSshPublicKey", input)
-	return &TransferDeleteSshPublicKeyFuture{Future: future}
+	return &DeleteSshPublicKeyFuture{Future: future}
 }
 
 func (a *stub) DeleteUser(ctx workflow.Context, input *transfer.DeleteUserInput) (*transfer.DeleteUserOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) DeleteUser(ctx workflow.Context, input *transfer.DeleteUserInput)
 	return &output, err
 }
 
-func (a *stub) DeleteUserAsync(ctx workflow.Context, input *transfer.DeleteUserInput) *TransferDeleteUserFuture {
+func (a *stub) DeleteUserAsync(ctx workflow.Context, input *transfer.DeleteUserInput) *DeleteUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteUser", input)
-	return &TransferDeleteUserFuture{Future: future}
+	return &DeleteUserFuture{Future: future}
 }
 
 func (a *stub) DescribeSecurityPolicy(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) (*transfer.DescribeSecurityPolicyOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) DescribeSecurityPolicy(ctx workflow.Context, input *transfer.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeSecurityPolicyAsync(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) *TransferDescribeSecurityPolicyFuture {
+func (a *stub) DescribeSecurityPolicyAsync(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) *DescribeSecurityPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeSecurityPolicy", input)
-	return &TransferDescribeSecurityPolicyFuture{Future: future}
+	return &DescribeSecurityPolicyFuture{Future: future}
 }
 
 func (a *stub) DescribeServer(ctx workflow.Context, input *transfer.DescribeServerInput) (*transfer.DescribeServerOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) DescribeServer(ctx workflow.Context, input *transfer.DescribeServ
 	return &output, err
 }
 
-func (a *stub) DescribeServerAsync(ctx workflow.Context, input *transfer.DescribeServerInput) *TransferDescribeServerFuture {
+func (a *stub) DescribeServerAsync(ctx workflow.Context, input *transfer.DescribeServerInput) *DescribeServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeServer", input)
-	return &TransferDescribeServerFuture{Future: future}
+	return &DescribeServerFuture{Future: future}
 }
 
 func (a *stub) DescribeUser(ctx workflow.Context, input *transfer.DescribeUserInput) (*transfer.DescribeUserOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) DescribeUser(ctx workflow.Context, input *transfer.DescribeUserIn
 	return &output, err
 }
 
-func (a *stub) DescribeUserAsync(ctx workflow.Context, input *transfer.DescribeUserInput) *TransferDescribeUserFuture {
+func (a *stub) DescribeUserAsync(ctx workflow.Context, input *transfer.DescribeUserInput) *DescribeUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeUser", input)
-	return &TransferDescribeUserFuture{Future: future}
+	return &DescribeUserFuture{Future: future}
 }
 
 func (a *stub) ImportSshPublicKey(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) (*transfer.ImportSshPublicKeyOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) ImportSshPublicKey(ctx workflow.Context, input *transfer.ImportSs
 	return &output, err
 }
 
-func (a *stub) ImportSshPublicKeyAsync(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) *TransferImportSshPublicKeyFuture {
+func (a *stub) ImportSshPublicKeyAsync(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) *ImportSshPublicKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.ImportSshPublicKey", input)
-	return &TransferImportSshPublicKeyFuture{Future: future}
+	return &ImportSshPublicKeyFuture{Future: future}
 }
 
 func (a *stub) ListSecurityPolicies(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) (*transfer.ListSecurityPoliciesOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) ListSecurityPolicies(ctx workflow.Context, input *transfer.ListSe
 	return &output, err
 }
 
-func (a *stub) ListSecurityPoliciesAsync(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) *TransferListSecurityPoliciesFuture {
+func (a *stub) ListSecurityPoliciesAsync(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) *ListSecurityPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.ListSecurityPolicies", input)
-	return &TransferListSecurityPoliciesFuture{Future: future}
+	return &ListSecurityPoliciesFuture{Future: future}
 }
 
 func (a *stub) ListServers(ctx workflow.Context, input *transfer.ListServersInput) (*transfer.ListServersOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) ListServers(ctx workflow.Context, input *transfer.ListServersInpu
 	return &output, err
 }
 
-func (a *stub) ListServersAsync(ctx workflow.Context, input *transfer.ListServersInput) *TransferListServersFuture {
+func (a *stub) ListServersAsync(ctx workflow.Context, input *transfer.ListServersInput) *ListServersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.ListServers", input)
-	return &TransferListServersFuture{Future: future}
+	return &ListServersFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *transfer.ListTagsForResourceInput) (*transfer.ListTagsForResourceOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *transfer.ListTag
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *transfer.ListTagsForResourceInput) *TransferListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *transfer.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.ListTagsForResource", input)
-	return &TransferListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListUsers(ctx workflow.Context, input *transfer.ListUsersInput) (*transfer.ListUsersOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) ListUsers(ctx workflow.Context, input *transfer.ListUsersInput) (
 	return &output, err
 }
 
-func (a *stub) ListUsersAsync(ctx workflow.Context, input *transfer.ListUsersInput) *TransferListUsersFuture {
+func (a *stub) ListUsersAsync(ctx workflow.Context, input *transfer.ListUsersInput) *ListUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.ListUsers", input)
-	return &TransferListUsersFuture{Future: future}
+	return &ListUsersFuture{Future: future}
 }
 
 func (a *stub) StartServer(ctx workflow.Context, input *transfer.StartServerInput) (*transfer.StartServerOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) StartServer(ctx workflow.Context, input *transfer.StartServerInpu
 	return &output, err
 }
 
-func (a *stub) StartServerAsync(ctx workflow.Context, input *transfer.StartServerInput) *TransferStartServerFuture {
+func (a *stub) StartServerAsync(ctx workflow.Context, input *transfer.StartServerInput) *StartServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.StartServer", input)
-	return &TransferStartServerFuture{Future: future}
+	return &StartServerFuture{Future: future}
 }
 
 func (a *stub) StopServer(ctx workflow.Context, input *transfer.StopServerInput) (*transfer.StopServerOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) StopServer(ctx workflow.Context, input *transfer.StopServerInput)
 	return &output, err
 }
 
-func (a *stub) StopServerAsync(ctx workflow.Context, input *transfer.StopServerInput) *TransferStopServerFuture {
+func (a *stub) StopServerAsync(ctx workflow.Context, input *transfer.StopServerInput) *StopServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.StopServer", input)
-	return &TransferStopServerFuture{Future: future}
+	return &StopServerFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *transfer.TagResourceInput) (*transfer.TagResourceOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *transfer.TagResourceInpu
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *transfer.TagResourceInput) *TransferTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *transfer.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.TagResource", input)
-	return &TransferTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) TestIdentityProvider(ctx workflow.Context, input *transfer.TestIdentityProviderInput) (*transfer.TestIdentityProviderOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) TestIdentityProvider(ctx workflow.Context, input *transfer.TestId
 	return &output, err
 }
 
-func (a *stub) TestIdentityProviderAsync(ctx workflow.Context, input *transfer.TestIdentityProviderInput) *TransferTestIdentityProviderFuture {
+func (a *stub) TestIdentityProviderAsync(ctx workflow.Context, input *transfer.TestIdentityProviderInput) *TestIdentityProviderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.TestIdentityProvider", input)
-	return &TransferTestIdentityProviderFuture{Future: future}
+	return &TestIdentityProviderFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *transfer.UntagResourceInput) (*transfer.UntagResourceOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *transfer.UntagResource
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *transfer.UntagResourceInput) *TransferUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *transfer.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.UntagResource", input)
-	return &TransferUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateServer(ctx workflow.Context, input *transfer.UpdateServerInput) (*transfer.UpdateServerOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) UpdateServer(ctx workflow.Context, input *transfer.UpdateServerIn
 	return &output, err
 }
 
-func (a *stub) UpdateServerAsync(ctx workflow.Context, input *transfer.UpdateServerInput) *TransferUpdateServerFuture {
+func (a *stub) UpdateServerAsync(ctx workflow.Context, input *transfer.UpdateServerInput) *UpdateServerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.UpdateServer", input)
-	return &TransferUpdateServerFuture{Future: future}
+	return &UpdateServerFuture{Future: future}
 }
 
 func (a *stub) UpdateUser(ctx workflow.Context, input *transfer.UpdateUserInput) (*transfer.UpdateUserOutput, error) {
@@ -451,7 +451,7 @@ func (a *stub) UpdateUser(ctx workflow.Context, input *transfer.UpdateUserInput)
 	return &output, err
 }
 
-func (a *stub) UpdateUserAsync(ctx workflow.Context, input *transfer.UpdateUserInput) *TransferUpdateUserFuture {
+func (a *stub) UpdateUserAsync(ctx workflow.Context, input *transfer.UpdateUserInput) *UpdateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.transfer.UpdateUser", input)
-	return &TransferUpdateUserFuture{Future: future}
+	return &UpdateUserFuture{Future: future}
 }

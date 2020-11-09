@@ -16,28 +16,28 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateLifecyclePolicy(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) (*dlm.CreateLifecyclePolicyOutput, error)
-	CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *DLMCreateLifecyclePolicyFuture
+	CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *CreateLifecyclePolicyFuture
 
 	DeleteLifecyclePolicy(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error)
-	DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DLMDeleteLifecyclePolicyFuture
+	DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DeleteLifecyclePolicyFuture
 
 	GetLifecyclePolicies(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error)
-	GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *DLMGetLifecyclePoliciesFuture
+	GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *GetLifecyclePoliciesFuture
 
 	GetLifecyclePolicy(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error)
-	GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *DLMGetLifecyclePolicyFuture
+	GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *GetLifecyclePolicyFuture
 
 	ListTagsForResource(ctx workflow.Context, input *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *DLMListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *dlm.TagResourceInput) (*dlm.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *DLMTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *DLMUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *UntagResourceFuture
 
 	UpdateLifecyclePolicy(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error)
-	UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DLMUpdateLifecyclePolicyFuture
+	UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *UpdateLifecyclePolicyFuture
 }
 
 func NewClient() Client {

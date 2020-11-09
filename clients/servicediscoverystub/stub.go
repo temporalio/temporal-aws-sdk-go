@@ -16,254 +16,254 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ServiceDiscoveryCreateHttpNamespaceFuture struct {
+type CreateHttpNamespaceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryCreateHttpNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.CreateHttpNamespaceOutput, error) {
+func (r *CreateHttpNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.CreateHttpNamespaceOutput, error) {
 	var output servicediscovery.CreateHttpNamespaceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryCreatePrivateDnsNamespaceFuture struct {
+type CreatePrivateDnsNamespaceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryCreatePrivateDnsNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.CreatePrivateDnsNamespaceOutput, error) {
+func (r *CreatePrivateDnsNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.CreatePrivateDnsNamespaceOutput, error) {
 	var output servicediscovery.CreatePrivateDnsNamespaceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryCreatePublicDnsNamespaceFuture struct {
+type CreatePublicDnsNamespaceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryCreatePublicDnsNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.CreatePublicDnsNamespaceOutput, error) {
+func (r *CreatePublicDnsNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.CreatePublicDnsNamespaceOutput, error) {
 	var output servicediscovery.CreatePublicDnsNamespaceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryCreateServiceFuture struct {
+type CreateServiceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryCreateServiceFuture) Get(ctx workflow.Context) (*servicediscovery.CreateServiceOutput, error) {
+func (r *CreateServiceFuture) Get(ctx workflow.Context) (*servicediscovery.CreateServiceOutput, error) {
 	var output servicediscovery.CreateServiceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryDeleteNamespaceFuture struct {
+type DeleteNamespaceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryDeleteNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.DeleteNamespaceOutput, error) {
+func (r *DeleteNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.DeleteNamespaceOutput, error) {
 	var output servicediscovery.DeleteNamespaceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryDeleteServiceFuture struct {
+type DeleteServiceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryDeleteServiceFuture) Get(ctx workflow.Context) (*servicediscovery.DeleteServiceOutput, error) {
+func (r *DeleteServiceFuture) Get(ctx workflow.Context) (*servicediscovery.DeleteServiceOutput, error) {
 	var output servicediscovery.DeleteServiceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryDeregisterInstanceFuture struct {
+type DeregisterInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryDeregisterInstanceFuture) Get(ctx workflow.Context) (*servicediscovery.DeregisterInstanceOutput, error) {
+func (r *DeregisterInstanceFuture) Get(ctx workflow.Context) (*servicediscovery.DeregisterInstanceOutput, error) {
 	var output servicediscovery.DeregisterInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryDiscoverInstancesFuture struct {
+type DiscoverInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryDiscoverInstancesFuture) Get(ctx workflow.Context) (*servicediscovery.DiscoverInstancesOutput, error) {
+func (r *DiscoverInstancesFuture) Get(ctx workflow.Context) (*servicediscovery.DiscoverInstancesOutput, error) {
 	var output servicediscovery.DiscoverInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryGetInstanceFuture struct {
+type GetInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryGetInstanceFuture) Get(ctx workflow.Context) (*servicediscovery.GetInstanceOutput, error) {
+func (r *GetInstanceFuture) Get(ctx workflow.Context) (*servicediscovery.GetInstanceOutput, error) {
 	var output servicediscovery.GetInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryGetInstancesHealthStatusFuture struct {
+type GetInstancesHealthStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryGetInstancesHealthStatusFuture) Get(ctx workflow.Context) (*servicediscovery.GetInstancesHealthStatusOutput, error) {
+func (r *GetInstancesHealthStatusFuture) Get(ctx workflow.Context) (*servicediscovery.GetInstancesHealthStatusOutput, error) {
 	var output servicediscovery.GetInstancesHealthStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryGetNamespaceFuture struct {
+type GetNamespaceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryGetNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.GetNamespaceOutput, error) {
+func (r *GetNamespaceFuture) Get(ctx workflow.Context) (*servicediscovery.GetNamespaceOutput, error) {
 	var output servicediscovery.GetNamespaceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryGetOperationFuture struct {
+type GetOperationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryGetOperationFuture) Get(ctx workflow.Context) (*servicediscovery.GetOperationOutput, error) {
+func (r *GetOperationFuture) Get(ctx workflow.Context) (*servicediscovery.GetOperationOutput, error) {
 	var output servicediscovery.GetOperationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryGetServiceFuture struct {
+type GetServiceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryGetServiceFuture) Get(ctx workflow.Context) (*servicediscovery.GetServiceOutput, error) {
+func (r *GetServiceFuture) Get(ctx workflow.Context) (*servicediscovery.GetServiceOutput, error) {
 	var output servicediscovery.GetServiceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryListInstancesFuture struct {
+type ListInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryListInstancesFuture) Get(ctx workflow.Context) (*servicediscovery.ListInstancesOutput, error) {
+func (r *ListInstancesFuture) Get(ctx workflow.Context) (*servicediscovery.ListInstancesOutput, error) {
 	var output servicediscovery.ListInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryListNamespacesFuture struct {
+type ListNamespacesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryListNamespacesFuture) Get(ctx workflow.Context) (*servicediscovery.ListNamespacesOutput, error) {
+func (r *ListNamespacesFuture) Get(ctx workflow.Context) (*servicediscovery.ListNamespacesOutput, error) {
 	var output servicediscovery.ListNamespacesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryListOperationsFuture struct {
+type ListOperationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryListOperationsFuture) Get(ctx workflow.Context) (*servicediscovery.ListOperationsOutput, error) {
+func (r *ListOperationsFuture) Get(ctx workflow.Context) (*servicediscovery.ListOperationsOutput, error) {
 	var output servicediscovery.ListOperationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryListServicesFuture struct {
+type ListServicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryListServicesFuture) Get(ctx workflow.Context) (*servicediscovery.ListServicesOutput, error) {
+func (r *ListServicesFuture) Get(ctx workflow.Context) (*servicediscovery.ListServicesOutput, error) {
 	var output servicediscovery.ListServicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryListTagsForResourceFuture) Get(ctx workflow.Context) (*servicediscovery.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*servicediscovery.ListTagsForResourceOutput, error) {
 	var output servicediscovery.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryRegisterInstanceFuture struct {
+type RegisterInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryRegisterInstanceFuture) Get(ctx workflow.Context) (*servicediscovery.RegisterInstanceOutput, error) {
+func (r *RegisterInstanceFuture) Get(ctx workflow.Context) (*servicediscovery.RegisterInstanceOutput, error) {
 	var output servicediscovery.RegisterInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryTagResourceFuture) Get(ctx workflow.Context) (*servicediscovery.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*servicediscovery.TagResourceOutput, error) {
 	var output servicediscovery.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryUntagResourceFuture) Get(ctx workflow.Context) (*servicediscovery.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*servicediscovery.UntagResourceOutput, error) {
 	var output servicediscovery.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryUpdateInstanceCustomHealthStatusFuture struct {
+type UpdateInstanceCustomHealthStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryUpdateInstanceCustomHealthStatusFuture) Get(ctx workflow.Context) (*servicediscovery.UpdateInstanceCustomHealthStatusOutput, error) {
+func (r *UpdateInstanceCustomHealthStatusFuture) Get(ctx workflow.Context) (*servicediscovery.UpdateInstanceCustomHealthStatusOutput, error) {
 	var output servicediscovery.UpdateInstanceCustomHealthStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ServiceDiscoveryUpdateServiceFuture struct {
+type UpdateServiceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ServiceDiscoveryUpdateServiceFuture) Get(ctx workflow.Context) (*servicediscovery.UpdateServiceOutput, error) {
+func (r *UpdateServiceFuture) Get(ctx workflow.Context) (*servicediscovery.UpdateServiceOutput, error) {
 	var output servicediscovery.UpdateServiceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -275,9 +275,9 @@ func (a *stub) CreateHttpNamespace(ctx workflow.Context, input *servicediscovery
 	return &output, err
 }
 
-func (a *stub) CreateHttpNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreateHttpNamespaceInput) *ServiceDiscoveryCreateHttpNamespaceFuture {
+func (a *stub) CreateHttpNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreateHttpNamespaceInput) *CreateHttpNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreateHttpNamespace", input)
-	return &ServiceDiscoveryCreateHttpNamespaceFuture{Future: future}
+	return &CreateHttpNamespaceFuture{Future: future}
 }
 
 func (a *stub) CreatePrivateDnsNamespace(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) (*servicediscovery.CreatePrivateDnsNamespaceOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) CreatePrivateDnsNamespace(ctx workflow.Context, input *servicedis
 	return &output, err
 }
 
-func (a *stub) CreatePrivateDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) *ServiceDiscoveryCreatePrivateDnsNamespaceFuture {
+func (a *stub) CreatePrivateDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) *CreatePrivateDnsNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreatePrivateDnsNamespace", input)
-	return &ServiceDiscoveryCreatePrivateDnsNamespaceFuture{Future: future}
+	return &CreatePrivateDnsNamespaceFuture{Future: future}
 }
 
 func (a *stub) CreatePublicDnsNamespace(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) (*servicediscovery.CreatePublicDnsNamespaceOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) CreatePublicDnsNamespace(ctx workflow.Context, input *servicedisc
 	return &output, err
 }
 
-func (a *stub) CreatePublicDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) *ServiceDiscoveryCreatePublicDnsNamespaceFuture {
+func (a *stub) CreatePublicDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) *CreatePublicDnsNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreatePublicDnsNamespace", input)
-	return &ServiceDiscoveryCreatePublicDnsNamespaceFuture{Future: future}
+	return &CreatePublicDnsNamespaceFuture{Future: future}
 }
 
 func (a *stub) CreateService(ctx workflow.Context, input *servicediscovery.CreateServiceInput) (*servicediscovery.CreateServiceOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) CreateService(ctx workflow.Context, input *servicediscovery.Creat
 	return &output, err
 }
 
-func (a *stub) CreateServiceAsync(ctx workflow.Context, input *servicediscovery.CreateServiceInput) *ServiceDiscoveryCreateServiceFuture {
+func (a *stub) CreateServiceAsync(ctx workflow.Context, input *servicediscovery.CreateServiceInput) *CreateServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreateService", input)
-	return &ServiceDiscoveryCreateServiceFuture{Future: future}
+	return &CreateServiceFuture{Future: future}
 }
 
 func (a *stub) DeleteNamespace(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) (*servicediscovery.DeleteNamespaceOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) DeleteNamespace(ctx workflow.Context, input *servicediscovery.Del
 	return &output, err
 }
 
-func (a *stub) DeleteNamespaceAsync(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) *ServiceDiscoveryDeleteNamespaceFuture {
+func (a *stub) DeleteNamespaceAsync(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) *DeleteNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeleteNamespace", input)
-	return &ServiceDiscoveryDeleteNamespaceFuture{Future: future}
+	return &DeleteNamespaceFuture{Future: future}
 }
 
 func (a *stub) DeleteService(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) (*servicediscovery.DeleteServiceOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) DeleteService(ctx workflow.Context, input *servicediscovery.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteServiceAsync(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) *ServiceDiscoveryDeleteServiceFuture {
+func (a *stub) DeleteServiceAsync(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) *DeleteServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeleteService", input)
-	return &ServiceDiscoveryDeleteServiceFuture{Future: future}
+	return &DeleteServiceFuture{Future: future}
 }
 
 func (a *stub) DeregisterInstance(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) (*servicediscovery.DeregisterInstanceOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) DeregisterInstance(ctx workflow.Context, input *servicediscovery.
 	return &output, err
 }
 
-func (a *stub) DeregisterInstanceAsync(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) *ServiceDiscoveryDeregisterInstanceFuture {
+func (a *stub) DeregisterInstanceAsync(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) *DeregisterInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeregisterInstance", input)
-	return &ServiceDiscoveryDeregisterInstanceFuture{Future: future}
+	return &DeregisterInstanceFuture{Future: future}
 }
 
 func (a *stub) DiscoverInstances(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) (*servicediscovery.DiscoverInstancesOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) DiscoverInstances(ctx workflow.Context, input *servicediscovery.D
 	return &output, err
 }
 
-func (a *stub) DiscoverInstancesAsync(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) *ServiceDiscoveryDiscoverInstancesFuture {
+func (a *stub) DiscoverInstancesAsync(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) *DiscoverInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DiscoverInstances", input)
-	return &ServiceDiscoveryDiscoverInstancesFuture{Future: future}
+	return &DiscoverInstancesFuture{Future: future}
 }
 
 func (a *stub) GetInstance(ctx workflow.Context, input *servicediscovery.GetInstanceInput) (*servicediscovery.GetInstanceOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) GetInstance(ctx workflow.Context, input *servicediscovery.GetInst
 	return &output, err
 }
 
-func (a *stub) GetInstanceAsync(ctx workflow.Context, input *servicediscovery.GetInstanceInput) *ServiceDiscoveryGetInstanceFuture {
+func (a *stub) GetInstanceAsync(ctx workflow.Context, input *servicediscovery.GetInstanceInput) *GetInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetInstance", input)
-	return &ServiceDiscoveryGetInstanceFuture{Future: future}
+	return &GetInstanceFuture{Future: future}
 }
 
 func (a *stub) GetInstancesHealthStatus(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) (*servicediscovery.GetInstancesHealthStatusOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) GetInstancesHealthStatus(ctx workflow.Context, input *servicedisc
 	return &output, err
 }
 
-func (a *stub) GetInstancesHealthStatusAsync(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) *ServiceDiscoveryGetInstancesHealthStatusFuture {
+func (a *stub) GetInstancesHealthStatusAsync(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) *GetInstancesHealthStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetInstancesHealthStatus", input)
-	return &ServiceDiscoveryGetInstancesHealthStatusFuture{Future: future}
+	return &GetInstancesHealthStatusFuture{Future: future}
 }
 
 func (a *stub) GetNamespace(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) (*servicediscovery.GetNamespaceOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) GetNamespace(ctx workflow.Context, input *servicediscovery.GetNam
 	return &output, err
 }
 
-func (a *stub) GetNamespaceAsync(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) *ServiceDiscoveryGetNamespaceFuture {
+func (a *stub) GetNamespaceAsync(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) *GetNamespaceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetNamespace", input)
-	return &ServiceDiscoveryGetNamespaceFuture{Future: future}
+	return &GetNamespaceFuture{Future: future}
 }
 
 func (a *stub) GetOperation(ctx workflow.Context, input *servicediscovery.GetOperationInput) (*servicediscovery.GetOperationOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) GetOperation(ctx workflow.Context, input *servicediscovery.GetOpe
 	return &output, err
 }
 
-func (a *stub) GetOperationAsync(ctx workflow.Context, input *servicediscovery.GetOperationInput) *ServiceDiscoveryGetOperationFuture {
+func (a *stub) GetOperationAsync(ctx workflow.Context, input *servicediscovery.GetOperationInput) *GetOperationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetOperation", input)
-	return &ServiceDiscoveryGetOperationFuture{Future: future}
+	return &GetOperationFuture{Future: future}
 }
 
 func (a *stub) GetService(ctx workflow.Context, input *servicediscovery.GetServiceInput) (*servicediscovery.GetServiceOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) GetService(ctx workflow.Context, input *servicediscovery.GetServi
 	return &output, err
 }
 
-func (a *stub) GetServiceAsync(ctx workflow.Context, input *servicediscovery.GetServiceInput) *ServiceDiscoveryGetServiceFuture {
+func (a *stub) GetServiceAsync(ctx workflow.Context, input *servicediscovery.GetServiceInput) *GetServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetService", input)
-	return &ServiceDiscoveryGetServiceFuture{Future: future}
+	return &GetServiceFuture{Future: future}
 }
 
 func (a *stub) ListInstances(ctx workflow.Context, input *servicediscovery.ListInstancesInput) (*servicediscovery.ListInstancesOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) ListInstances(ctx workflow.Context, input *servicediscovery.ListI
 	return &output, err
 }
 
-func (a *stub) ListInstancesAsync(ctx workflow.Context, input *servicediscovery.ListInstancesInput) *ServiceDiscoveryListInstancesFuture {
+func (a *stub) ListInstancesAsync(ctx workflow.Context, input *servicediscovery.ListInstancesInput) *ListInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListInstances", input)
-	return &ServiceDiscoveryListInstancesFuture{Future: future}
+	return &ListInstancesFuture{Future: future}
 }
 
 func (a *stub) ListNamespaces(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) (*servicediscovery.ListNamespacesOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) ListNamespaces(ctx workflow.Context, input *servicediscovery.List
 	return &output, err
 }
 
-func (a *stub) ListNamespacesAsync(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) *ServiceDiscoveryListNamespacesFuture {
+func (a *stub) ListNamespacesAsync(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) *ListNamespacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListNamespaces", input)
-	return &ServiceDiscoveryListNamespacesFuture{Future: future}
+	return &ListNamespacesFuture{Future: future}
 }
 
 func (a *stub) ListOperations(ctx workflow.Context, input *servicediscovery.ListOperationsInput) (*servicediscovery.ListOperationsOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) ListOperations(ctx workflow.Context, input *servicediscovery.List
 	return &output, err
 }
 
-func (a *stub) ListOperationsAsync(ctx workflow.Context, input *servicediscovery.ListOperationsInput) *ServiceDiscoveryListOperationsFuture {
+func (a *stub) ListOperationsAsync(ctx workflow.Context, input *servicediscovery.ListOperationsInput) *ListOperationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListOperations", input)
-	return &ServiceDiscoveryListOperationsFuture{Future: future}
+	return &ListOperationsFuture{Future: future}
 }
 
 func (a *stub) ListServices(ctx workflow.Context, input *servicediscovery.ListServicesInput) (*servicediscovery.ListServicesOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) ListServices(ctx workflow.Context, input *servicediscovery.ListSe
 	return &output, err
 }
 
-func (a *stub) ListServicesAsync(ctx workflow.Context, input *servicediscovery.ListServicesInput) *ServiceDiscoveryListServicesFuture {
+func (a *stub) ListServicesAsync(ctx workflow.Context, input *servicediscovery.ListServicesInput) *ListServicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListServices", input)
-	return &ServiceDiscoveryListServicesFuture{Future: future}
+	return &ListServicesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) (*servicediscovery.ListTagsForResourceOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *servicediscovery
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) *ServiceDiscoveryListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListTagsForResource", input)
-	return &ServiceDiscoveryListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) RegisterInstance(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) (*servicediscovery.RegisterInstanceOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) RegisterInstance(ctx workflow.Context, input *servicediscovery.Re
 	return &output, err
 }
 
-func (a *stub) RegisterInstanceAsync(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) *ServiceDiscoveryRegisterInstanceFuture {
+func (a *stub) RegisterInstanceAsync(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) *RegisterInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.RegisterInstance", input)
-	return &ServiceDiscoveryRegisterInstanceFuture{Future: future}
+	return &RegisterInstanceFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *servicediscovery.TagResourceInput) (*servicediscovery.TagResourceOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *servicediscovery.TagReso
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *servicediscovery.TagResourceInput) *ServiceDiscoveryTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *servicediscovery.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.TagResource", input)
-	return &ServiceDiscoveryTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *servicediscovery.UntagResourceInput) (*servicediscovery.UntagResourceOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *servicediscovery.Untag
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *servicediscovery.UntagResourceInput) *ServiceDiscoveryUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *servicediscovery.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UntagResource", input)
-	return &ServiceDiscoveryUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateInstanceCustomHealthStatus(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) (*servicediscovery.UpdateInstanceCustomHealthStatusOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) UpdateInstanceCustomHealthStatus(ctx workflow.Context, input *ser
 	return &output, err
 }
 
-func (a *stub) UpdateInstanceCustomHealthStatusAsync(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) *ServiceDiscoveryUpdateInstanceCustomHealthStatusFuture {
+func (a *stub) UpdateInstanceCustomHealthStatusAsync(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) *UpdateInstanceCustomHealthStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UpdateInstanceCustomHealthStatus", input)
-	return &ServiceDiscoveryUpdateInstanceCustomHealthStatusFuture{Future: future}
+	return &UpdateInstanceCustomHealthStatusFuture{Future: future}
 }
 
 func (a *stub) UpdateService(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) (*servicediscovery.UpdateServiceOutput, error) {
@@ -517,7 +517,7 @@ func (a *stub) UpdateService(ctx workflow.Context, input *servicediscovery.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateServiceAsync(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) *ServiceDiscoveryUpdateServiceFuture {
+func (a *stub) UpdateServiceAsync(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) *UpdateServiceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UpdateService", input)
-	return &ServiceDiscoveryUpdateServiceFuture{Future: future}
+	return &UpdateServiceFuture{Future: future}
 }

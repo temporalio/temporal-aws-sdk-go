@@ -16,7 +16,7 @@ var _ clients.VoidFuture
 
 type Client interface {
 	PutEvents(ctx workflow.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error)
-	PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileAnalyticsPutEventsFuture
+	PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *PutEventsFuture
 }
 
 func NewClient() Client {

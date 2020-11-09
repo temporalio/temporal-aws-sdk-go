@@ -16,103 +16,103 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AbortMultipartUpload(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) (*glacier.AbortMultipartUploadOutput, error)
-	AbortMultipartUploadAsync(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) *GlacierAbortMultipartUploadFuture
+	AbortMultipartUploadAsync(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) *AbortMultipartUploadFuture
 
 	AbortVaultLock(ctx workflow.Context, input *glacier.AbortVaultLockInput) (*glacier.AbortVaultLockOutput, error)
-	AbortVaultLockAsync(ctx workflow.Context, input *glacier.AbortVaultLockInput) *GlacierAbortVaultLockFuture
+	AbortVaultLockAsync(ctx workflow.Context, input *glacier.AbortVaultLockInput) *AbortVaultLockFuture
 
 	AddTagsToVault(ctx workflow.Context, input *glacier.AddTagsToVaultInput) (*glacier.AddTagsToVaultOutput, error)
-	AddTagsToVaultAsync(ctx workflow.Context, input *glacier.AddTagsToVaultInput) *GlacierAddTagsToVaultFuture
+	AddTagsToVaultAsync(ctx workflow.Context, input *glacier.AddTagsToVaultInput) *AddTagsToVaultFuture
 
 	CompleteMultipartUpload(ctx workflow.Context, input *glacier.CompleteMultipartUploadInput) (*glacier.ArchiveCreationOutput, error)
-	CompleteMultipartUploadAsync(ctx workflow.Context, input *glacier.CompleteMultipartUploadInput) *GlacierCompleteMultipartUploadFuture
+	CompleteMultipartUploadAsync(ctx workflow.Context, input *glacier.CompleteMultipartUploadInput) *CompleteMultipartUploadFuture
 
 	CompleteVaultLock(ctx workflow.Context, input *glacier.CompleteVaultLockInput) (*glacier.CompleteVaultLockOutput, error)
-	CompleteVaultLockAsync(ctx workflow.Context, input *glacier.CompleteVaultLockInput) *GlacierCompleteVaultLockFuture
+	CompleteVaultLockAsync(ctx workflow.Context, input *glacier.CompleteVaultLockInput) *CompleteVaultLockFuture
 
 	CreateVault(ctx workflow.Context, input *glacier.CreateVaultInput) (*glacier.CreateVaultOutput, error)
-	CreateVaultAsync(ctx workflow.Context, input *glacier.CreateVaultInput) *GlacierCreateVaultFuture
+	CreateVaultAsync(ctx workflow.Context, input *glacier.CreateVaultInput) *CreateVaultFuture
 
 	DeleteArchive(ctx workflow.Context, input *glacier.DeleteArchiveInput) (*glacier.DeleteArchiveOutput, error)
-	DeleteArchiveAsync(ctx workflow.Context, input *glacier.DeleteArchiveInput) *GlacierDeleteArchiveFuture
+	DeleteArchiveAsync(ctx workflow.Context, input *glacier.DeleteArchiveInput) *DeleteArchiveFuture
 
 	DeleteVault(ctx workflow.Context, input *glacier.DeleteVaultInput) (*glacier.DeleteVaultOutput, error)
-	DeleteVaultAsync(ctx workflow.Context, input *glacier.DeleteVaultInput) *GlacierDeleteVaultFuture
+	DeleteVaultAsync(ctx workflow.Context, input *glacier.DeleteVaultInput) *DeleteVaultFuture
 
 	DeleteVaultAccessPolicy(ctx workflow.Context, input *glacier.DeleteVaultAccessPolicyInput) (*glacier.DeleteVaultAccessPolicyOutput, error)
-	DeleteVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.DeleteVaultAccessPolicyInput) *GlacierDeleteVaultAccessPolicyFuture
+	DeleteVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.DeleteVaultAccessPolicyInput) *DeleteVaultAccessPolicyFuture
 
 	DeleteVaultNotifications(ctx workflow.Context, input *glacier.DeleteVaultNotificationsInput) (*glacier.DeleteVaultNotificationsOutput, error)
-	DeleteVaultNotificationsAsync(ctx workflow.Context, input *glacier.DeleteVaultNotificationsInput) *GlacierDeleteVaultNotificationsFuture
+	DeleteVaultNotificationsAsync(ctx workflow.Context, input *glacier.DeleteVaultNotificationsInput) *DeleteVaultNotificationsFuture
 
 	DescribeJob(ctx workflow.Context, input *glacier.DescribeJobInput) (*glacier.JobDescription, error)
-	DescribeJobAsync(ctx workflow.Context, input *glacier.DescribeJobInput) *GlacierDescribeJobFuture
+	DescribeJobAsync(ctx workflow.Context, input *glacier.DescribeJobInput) *DescribeJobFuture
 
 	DescribeVault(ctx workflow.Context, input *glacier.DescribeVaultInput) (*glacier.DescribeVaultOutput, error)
-	DescribeVaultAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *GlacierDescribeVaultFuture
+	DescribeVaultAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *DescribeVaultFuture
 
 	GetDataRetrievalPolicy(ctx workflow.Context, input *glacier.GetDataRetrievalPolicyInput) (*glacier.GetDataRetrievalPolicyOutput, error)
-	GetDataRetrievalPolicyAsync(ctx workflow.Context, input *glacier.GetDataRetrievalPolicyInput) *GlacierGetDataRetrievalPolicyFuture
+	GetDataRetrievalPolicyAsync(ctx workflow.Context, input *glacier.GetDataRetrievalPolicyInput) *GetDataRetrievalPolicyFuture
 
 	GetJobOutput(ctx workflow.Context, input *glacier.GetJobOutputInput) (*glacier.GetJobOutputOutput, error)
-	GetJobOutputAsync(ctx workflow.Context, input *glacier.GetJobOutputInput) *GlacierGetJobOutputFuture
+	GetJobOutputAsync(ctx workflow.Context, input *glacier.GetJobOutputInput) *GetJobOutputFuture
 
 	GetVaultAccessPolicy(ctx workflow.Context, input *glacier.GetVaultAccessPolicyInput) (*glacier.GetVaultAccessPolicyOutput, error)
-	GetVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.GetVaultAccessPolicyInput) *GlacierGetVaultAccessPolicyFuture
+	GetVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.GetVaultAccessPolicyInput) *GetVaultAccessPolicyFuture
 
 	GetVaultLock(ctx workflow.Context, input *glacier.GetVaultLockInput) (*glacier.GetVaultLockOutput, error)
-	GetVaultLockAsync(ctx workflow.Context, input *glacier.GetVaultLockInput) *GlacierGetVaultLockFuture
+	GetVaultLockAsync(ctx workflow.Context, input *glacier.GetVaultLockInput) *GetVaultLockFuture
 
 	GetVaultNotifications(ctx workflow.Context, input *glacier.GetVaultNotificationsInput) (*glacier.GetVaultNotificationsOutput, error)
-	GetVaultNotificationsAsync(ctx workflow.Context, input *glacier.GetVaultNotificationsInput) *GlacierGetVaultNotificationsFuture
+	GetVaultNotificationsAsync(ctx workflow.Context, input *glacier.GetVaultNotificationsInput) *GetVaultNotificationsFuture
 
 	InitiateJob(ctx workflow.Context, input *glacier.InitiateJobInput) (*glacier.InitiateJobOutput, error)
-	InitiateJobAsync(ctx workflow.Context, input *glacier.InitiateJobInput) *GlacierInitiateJobFuture
+	InitiateJobAsync(ctx workflow.Context, input *glacier.InitiateJobInput) *InitiateJobFuture
 
 	InitiateMultipartUpload(ctx workflow.Context, input *glacier.InitiateMultipartUploadInput) (*glacier.InitiateMultipartUploadOutput, error)
-	InitiateMultipartUploadAsync(ctx workflow.Context, input *glacier.InitiateMultipartUploadInput) *GlacierInitiateMultipartUploadFuture
+	InitiateMultipartUploadAsync(ctx workflow.Context, input *glacier.InitiateMultipartUploadInput) *InitiateMultipartUploadFuture
 
 	InitiateVaultLock(ctx workflow.Context, input *glacier.InitiateVaultLockInput) (*glacier.InitiateVaultLockOutput, error)
-	InitiateVaultLockAsync(ctx workflow.Context, input *glacier.InitiateVaultLockInput) *GlacierInitiateVaultLockFuture
+	InitiateVaultLockAsync(ctx workflow.Context, input *glacier.InitiateVaultLockInput) *InitiateVaultLockFuture
 
 	ListJobs(ctx workflow.Context, input *glacier.ListJobsInput) (*glacier.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *glacier.ListJobsInput) *GlacierListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *glacier.ListJobsInput) *ListJobsFuture
 
 	ListMultipartUploads(ctx workflow.Context, input *glacier.ListMultipartUploadsInput) (*glacier.ListMultipartUploadsOutput, error)
-	ListMultipartUploadsAsync(ctx workflow.Context, input *glacier.ListMultipartUploadsInput) *GlacierListMultipartUploadsFuture
+	ListMultipartUploadsAsync(ctx workflow.Context, input *glacier.ListMultipartUploadsInput) *ListMultipartUploadsFuture
 
 	ListParts(ctx workflow.Context, input *glacier.ListPartsInput) (*glacier.ListPartsOutput, error)
-	ListPartsAsync(ctx workflow.Context, input *glacier.ListPartsInput) *GlacierListPartsFuture
+	ListPartsAsync(ctx workflow.Context, input *glacier.ListPartsInput) *ListPartsFuture
 
 	ListProvisionedCapacity(ctx workflow.Context, input *glacier.ListProvisionedCapacityInput) (*glacier.ListProvisionedCapacityOutput, error)
-	ListProvisionedCapacityAsync(ctx workflow.Context, input *glacier.ListProvisionedCapacityInput) *GlacierListProvisionedCapacityFuture
+	ListProvisionedCapacityAsync(ctx workflow.Context, input *glacier.ListProvisionedCapacityInput) *ListProvisionedCapacityFuture
 
 	ListTagsForVault(ctx workflow.Context, input *glacier.ListTagsForVaultInput) (*glacier.ListTagsForVaultOutput, error)
-	ListTagsForVaultAsync(ctx workflow.Context, input *glacier.ListTagsForVaultInput) *GlacierListTagsForVaultFuture
+	ListTagsForVaultAsync(ctx workflow.Context, input *glacier.ListTagsForVaultInput) *ListTagsForVaultFuture
 
 	ListVaults(ctx workflow.Context, input *glacier.ListVaultsInput) (*glacier.ListVaultsOutput, error)
-	ListVaultsAsync(ctx workflow.Context, input *glacier.ListVaultsInput) *GlacierListVaultsFuture
+	ListVaultsAsync(ctx workflow.Context, input *glacier.ListVaultsInput) *ListVaultsFuture
 
 	PurchaseProvisionedCapacity(ctx workflow.Context, input *glacier.PurchaseProvisionedCapacityInput) (*glacier.PurchaseProvisionedCapacityOutput, error)
-	PurchaseProvisionedCapacityAsync(ctx workflow.Context, input *glacier.PurchaseProvisionedCapacityInput) *GlacierPurchaseProvisionedCapacityFuture
+	PurchaseProvisionedCapacityAsync(ctx workflow.Context, input *glacier.PurchaseProvisionedCapacityInput) *PurchaseProvisionedCapacityFuture
 
 	RemoveTagsFromVault(ctx workflow.Context, input *glacier.RemoveTagsFromVaultInput) (*glacier.RemoveTagsFromVaultOutput, error)
-	RemoveTagsFromVaultAsync(ctx workflow.Context, input *glacier.RemoveTagsFromVaultInput) *GlacierRemoveTagsFromVaultFuture
+	RemoveTagsFromVaultAsync(ctx workflow.Context, input *glacier.RemoveTagsFromVaultInput) *RemoveTagsFromVaultFuture
 
 	SetDataRetrievalPolicy(ctx workflow.Context, input *glacier.SetDataRetrievalPolicyInput) (*glacier.SetDataRetrievalPolicyOutput, error)
-	SetDataRetrievalPolicyAsync(ctx workflow.Context, input *glacier.SetDataRetrievalPolicyInput) *GlacierSetDataRetrievalPolicyFuture
+	SetDataRetrievalPolicyAsync(ctx workflow.Context, input *glacier.SetDataRetrievalPolicyInput) *SetDataRetrievalPolicyFuture
 
 	SetVaultAccessPolicy(ctx workflow.Context, input *glacier.SetVaultAccessPolicyInput) (*glacier.SetVaultAccessPolicyOutput, error)
-	SetVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.SetVaultAccessPolicyInput) *GlacierSetVaultAccessPolicyFuture
+	SetVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.SetVaultAccessPolicyInput) *SetVaultAccessPolicyFuture
 
 	SetVaultNotifications(ctx workflow.Context, input *glacier.SetVaultNotificationsInput) (*glacier.SetVaultNotificationsOutput, error)
-	SetVaultNotificationsAsync(ctx workflow.Context, input *glacier.SetVaultNotificationsInput) *GlacierSetVaultNotificationsFuture
+	SetVaultNotificationsAsync(ctx workflow.Context, input *glacier.SetVaultNotificationsInput) *SetVaultNotificationsFuture
 
 	UploadArchive(ctx workflow.Context, input *glacier.UploadArchiveInput) (*glacier.ArchiveCreationOutput, error)
-	UploadArchiveAsync(ctx workflow.Context, input *glacier.UploadArchiveInput) *GlacierUploadArchiveFuture
+	UploadArchiveAsync(ctx workflow.Context, input *glacier.UploadArchiveInput) *UploadArchiveFuture
 
 	UploadMultipartPart(ctx workflow.Context, input *glacier.UploadMultipartPartInput) (*glacier.UploadMultipartPartOutput, error)
-	UploadMultipartPartAsync(ctx workflow.Context, input *glacier.UploadMultipartPartInput) *GlacierUploadMultipartPartFuture
+	UploadMultipartPartAsync(ctx workflow.Context, input *glacier.UploadMultipartPartInput) *UploadMultipartPartFuture
 
 	WaitUntilVaultExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error
 	WaitUntilVaultExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *clients.VoidFuture

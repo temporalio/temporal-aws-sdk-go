@@ -16,37 +16,37 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateConnection(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) (*codestarconnections.CreateConnectionOutput, error)
-	CreateConnectionAsync(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) *CodeStarConnectionsCreateConnectionFuture
+	CreateConnectionAsync(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) *CreateConnectionFuture
 
 	CreateHost(ctx workflow.Context, input *codestarconnections.CreateHostInput) (*codestarconnections.CreateHostOutput, error)
-	CreateHostAsync(ctx workflow.Context, input *codestarconnections.CreateHostInput) *CodeStarConnectionsCreateHostFuture
+	CreateHostAsync(ctx workflow.Context, input *codestarconnections.CreateHostInput) *CreateHostFuture
 
 	DeleteConnection(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) (*codestarconnections.DeleteConnectionOutput, error)
-	DeleteConnectionAsync(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) *CodeStarConnectionsDeleteConnectionFuture
+	DeleteConnectionAsync(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) *DeleteConnectionFuture
 
 	DeleteHost(ctx workflow.Context, input *codestarconnections.DeleteHostInput) (*codestarconnections.DeleteHostOutput, error)
-	DeleteHostAsync(ctx workflow.Context, input *codestarconnections.DeleteHostInput) *CodeStarConnectionsDeleteHostFuture
+	DeleteHostAsync(ctx workflow.Context, input *codestarconnections.DeleteHostInput) *DeleteHostFuture
 
 	GetConnection(ctx workflow.Context, input *codestarconnections.GetConnectionInput) (*codestarconnections.GetConnectionOutput, error)
-	GetConnectionAsync(ctx workflow.Context, input *codestarconnections.GetConnectionInput) *CodeStarConnectionsGetConnectionFuture
+	GetConnectionAsync(ctx workflow.Context, input *codestarconnections.GetConnectionInput) *GetConnectionFuture
 
 	GetHost(ctx workflow.Context, input *codestarconnections.GetHostInput) (*codestarconnections.GetHostOutput, error)
-	GetHostAsync(ctx workflow.Context, input *codestarconnections.GetHostInput) *CodeStarConnectionsGetHostFuture
+	GetHostAsync(ctx workflow.Context, input *codestarconnections.GetHostInput) *GetHostFuture
 
 	ListConnections(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) (*codestarconnections.ListConnectionsOutput, error)
-	ListConnectionsAsync(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) *CodeStarConnectionsListConnectionsFuture
+	ListConnectionsAsync(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) *ListConnectionsFuture
 
 	ListHosts(ctx workflow.Context, input *codestarconnections.ListHostsInput) (*codestarconnections.ListHostsOutput, error)
-	ListHostsAsync(ctx workflow.Context, input *codestarconnections.ListHostsInput) *CodeStarConnectionsListHostsFuture
+	ListHostsAsync(ctx workflow.Context, input *codestarconnections.ListHostsInput) *ListHostsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) (*codestarconnections.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) *CodeStarConnectionsListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *codestarconnections.TagResourceInput) (*codestarconnections.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *codestarconnections.TagResourceInput) *CodeStarConnectionsTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *codestarconnections.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *codestarconnections.UntagResourceInput) (*codestarconnections.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *codestarconnections.UntagResourceInput) *CodeStarConnectionsUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *codestarconnections.UntagResourceInput) *UntagResourceFuture
 }
 
 func NewClient() Client {

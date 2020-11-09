@@ -16,22 +16,22 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelChangeSet(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) (*marketplacecatalog.CancelChangeSetOutput, error)
-	CancelChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) *MarketplaceCatalogCancelChangeSetFuture
+	CancelChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) *CancelChangeSetFuture
 
 	DescribeChangeSet(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error)
-	DescribeChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) *MarketplaceCatalogDescribeChangeSetFuture
+	DescribeChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) *DescribeChangeSetFuture
 
 	DescribeEntity(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error)
-	DescribeEntityAsync(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) *MarketplaceCatalogDescribeEntityFuture
+	DescribeEntityAsync(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) *DescribeEntityFuture
 
 	ListChangeSets(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error)
-	ListChangeSetsAsync(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) *MarketplaceCatalogListChangeSetsFuture
+	ListChangeSetsAsync(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) *ListChangeSetsFuture
 
 	ListEntities(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error)
-	ListEntitiesAsync(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) *MarketplaceCatalogListEntitiesFuture
+	ListEntitiesAsync(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) *ListEntitiesFuture
 
 	StartChangeSet(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error)
-	StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *MarketplaceCatalogStartChangeSetFuture
+	StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *StartChangeSetFuture
 }
 
 func NewClient() Client {

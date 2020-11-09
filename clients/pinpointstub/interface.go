@@ -16,340 +16,340 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateApp(ctx workflow.Context, input *pinpoint.CreateAppInput) (*pinpoint.CreateAppOutput, error)
-	CreateAppAsync(ctx workflow.Context, input *pinpoint.CreateAppInput) *PinpointCreateAppFuture
+	CreateAppAsync(ctx workflow.Context, input *pinpoint.CreateAppInput) *CreateAppFuture
 
 	CreateCampaign(ctx workflow.Context, input *pinpoint.CreateCampaignInput) (*pinpoint.CreateCampaignOutput, error)
-	CreateCampaignAsync(ctx workflow.Context, input *pinpoint.CreateCampaignInput) *PinpointCreateCampaignFuture
+	CreateCampaignAsync(ctx workflow.Context, input *pinpoint.CreateCampaignInput) *CreateCampaignFuture
 
 	CreateEmailTemplate(ctx workflow.Context, input *pinpoint.CreateEmailTemplateInput) (*pinpoint.CreateEmailTemplateOutput, error)
-	CreateEmailTemplateAsync(ctx workflow.Context, input *pinpoint.CreateEmailTemplateInput) *PinpointCreateEmailTemplateFuture
+	CreateEmailTemplateAsync(ctx workflow.Context, input *pinpoint.CreateEmailTemplateInput) *CreateEmailTemplateFuture
 
 	CreateExportJob(ctx workflow.Context, input *pinpoint.CreateExportJobInput) (*pinpoint.CreateExportJobOutput, error)
-	CreateExportJobAsync(ctx workflow.Context, input *pinpoint.CreateExportJobInput) *PinpointCreateExportJobFuture
+	CreateExportJobAsync(ctx workflow.Context, input *pinpoint.CreateExportJobInput) *CreateExportJobFuture
 
 	CreateImportJob(ctx workflow.Context, input *pinpoint.CreateImportJobInput) (*pinpoint.CreateImportJobOutput, error)
-	CreateImportJobAsync(ctx workflow.Context, input *pinpoint.CreateImportJobInput) *PinpointCreateImportJobFuture
+	CreateImportJobAsync(ctx workflow.Context, input *pinpoint.CreateImportJobInput) *CreateImportJobFuture
 
 	CreateJourney(ctx workflow.Context, input *pinpoint.CreateJourneyInput) (*pinpoint.CreateJourneyOutput, error)
-	CreateJourneyAsync(ctx workflow.Context, input *pinpoint.CreateJourneyInput) *PinpointCreateJourneyFuture
+	CreateJourneyAsync(ctx workflow.Context, input *pinpoint.CreateJourneyInput) *CreateJourneyFuture
 
 	CreatePushTemplate(ctx workflow.Context, input *pinpoint.CreatePushTemplateInput) (*pinpoint.CreatePushTemplateOutput, error)
-	CreatePushTemplateAsync(ctx workflow.Context, input *pinpoint.CreatePushTemplateInput) *PinpointCreatePushTemplateFuture
+	CreatePushTemplateAsync(ctx workflow.Context, input *pinpoint.CreatePushTemplateInput) *CreatePushTemplateFuture
 
 	CreateRecommenderConfiguration(ctx workflow.Context, input *pinpoint.CreateRecommenderConfigurationInput) (*pinpoint.CreateRecommenderConfigurationOutput, error)
-	CreateRecommenderConfigurationAsync(ctx workflow.Context, input *pinpoint.CreateRecommenderConfigurationInput) *PinpointCreateRecommenderConfigurationFuture
+	CreateRecommenderConfigurationAsync(ctx workflow.Context, input *pinpoint.CreateRecommenderConfigurationInput) *CreateRecommenderConfigurationFuture
 
 	CreateSegment(ctx workflow.Context, input *pinpoint.CreateSegmentInput) (*pinpoint.CreateSegmentOutput, error)
-	CreateSegmentAsync(ctx workflow.Context, input *pinpoint.CreateSegmentInput) *PinpointCreateSegmentFuture
+	CreateSegmentAsync(ctx workflow.Context, input *pinpoint.CreateSegmentInput) *CreateSegmentFuture
 
 	CreateSmsTemplate(ctx workflow.Context, input *pinpoint.CreateSmsTemplateInput) (*pinpoint.CreateSmsTemplateOutput, error)
-	CreateSmsTemplateAsync(ctx workflow.Context, input *pinpoint.CreateSmsTemplateInput) *PinpointCreateSmsTemplateFuture
+	CreateSmsTemplateAsync(ctx workflow.Context, input *pinpoint.CreateSmsTemplateInput) *CreateSmsTemplateFuture
 
 	CreateVoiceTemplate(ctx workflow.Context, input *pinpoint.CreateVoiceTemplateInput) (*pinpoint.CreateVoiceTemplateOutput, error)
-	CreateVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.CreateVoiceTemplateInput) *PinpointCreateVoiceTemplateFuture
+	CreateVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.CreateVoiceTemplateInput) *CreateVoiceTemplateFuture
 
 	DeleteAdmChannel(ctx workflow.Context, input *pinpoint.DeleteAdmChannelInput) (*pinpoint.DeleteAdmChannelOutput, error)
-	DeleteAdmChannelAsync(ctx workflow.Context, input *pinpoint.DeleteAdmChannelInput) *PinpointDeleteAdmChannelFuture
+	DeleteAdmChannelAsync(ctx workflow.Context, input *pinpoint.DeleteAdmChannelInput) *DeleteAdmChannelFuture
 
 	DeleteApnsChannel(ctx workflow.Context, input *pinpoint.DeleteApnsChannelInput) (*pinpoint.DeleteApnsChannelOutput, error)
-	DeleteApnsChannelAsync(ctx workflow.Context, input *pinpoint.DeleteApnsChannelInput) *PinpointDeleteApnsChannelFuture
+	DeleteApnsChannelAsync(ctx workflow.Context, input *pinpoint.DeleteApnsChannelInput) *DeleteApnsChannelFuture
 
 	DeleteApnsSandboxChannel(ctx workflow.Context, input *pinpoint.DeleteApnsSandboxChannelInput) (*pinpoint.DeleteApnsSandboxChannelOutput, error)
-	DeleteApnsSandboxChannelAsync(ctx workflow.Context, input *pinpoint.DeleteApnsSandboxChannelInput) *PinpointDeleteApnsSandboxChannelFuture
+	DeleteApnsSandboxChannelAsync(ctx workflow.Context, input *pinpoint.DeleteApnsSandboxChannelInput) *DeleteApnsSandboxChannelFuture
 
 	DeleteApnsVoipChannel(ctx workflow.Context, input *pinpoint.DeleteApnsVoipChannelInput) (*pinpoint.DeleteApnsVoipChannelOutput, error)
-	DeleteApnsVoipChannelAsync(ctx workflow.Context, input *pinpoint.DeleteApnsVoipChannelInput) *PinpointDeleteApnsVoipChannelFuture
+	DeleteApnsVoipChannelAsync(ctx workflow.Context, input *pinpoint.DeleteApnsVoipChannelInput) *DeleteApnsVoipChannelFuture
 
 	DeleteApnsVoipSandboxChannel(ctx workflow.Context, input *pinpoint.DeleteApnsVoipSandboxChannelInput) (*pinpoint.DeleteApnsVoipSandboxChannelOutput, error)
-	DeleteApnsVoipSandboxChannelAsync(ctx workflow.Context, input *pinpoint.DeleteApnsVoipSandboxChannelInput) *PinpointDeleteApnsVoipSandboxChannelFuture
+	DeleteApnsVoipSandboxChannelAsync(ctx workflow.Context, input *pinpoint.DeleteApnsVoipSandboxChannelInput) *DeleteApnsVoipSandboxChannelFuture
 
 	DeleteApp(ctx workflow.Context, input *pinpoint.DeleteAppInput) (*pinpoint.DeleteAppOutput, error)
-	DeleteAppAsync(ctx workflow.Context, input *pinpoint.DeleteAppInput) *PinpointDeleteAppFuture
+	DeleteAppAsync(ctx workflow.Context, input *pinpoint.DeleteAppInput) *DeleteAppFuture
 
 	DeleteBaiduChannel(ctx workflow.Context, input *pinpoint.DeleteBaiduChannelInput) (*pinpoint.DeleteBaiduChannelOutput, error)
-	DeleteBaiduChannelAsync(ctx workflow.Context, input *pinpoint.DeleteBaiduChannelInput) *PinpointDeleteBaiduChannelFuture
+	DeleteBaiduChannelAsync(ctx workflow.Context, input *pinpoint.DeleteBaiduChannelInput) *DeleteBaiduChannelFuture
 
 	DeleteCampaign(ctx workflow.Context, input *pinpoint.DeleteCampaignInput) (*pinpoint.DeleteCampaignOutput, error)
-	DeleteCampaignAsync(ctx workflow.Context, input *pinpoint.DeleteCampaignInput) *PinpointDeleteCampaignFuture
+	DeleteCampaignAsync(ctx workflow.Context, input *pinpoint.DeleteCampaignInput) *DeleteCampaignFuture
 
 	DeleteEmailChannel(ctx workflow.Context, input *pinpoint.DeleteEmailChannelInput) (*pinpoint.DeleteEmailChannelOutput, error)
-	DeleteEmailChannelAsync(ctx workflow.Context, input *pinpoint.DeleteEmailChannelInput) *PinpointDeleteEmailChannelFuture
+	DeleteEmailChannelAsync(ctx workflow.Context, input *pinpoint.DeleteEmailChannelInput) *DeleteEmailChannelFuture
 
 	DeleteEmailTemplate(ctx workflow.Context, input *pinpoint.DeleteEmailTemplateInput) (*pinpoint.DeleteEmailTemplateOutput, error)
-	DeleteEmailTemplateAsync(ctx workflow.Context, input *pinpoint.DeleteEmailTemplateInput) *PinpointDeleteEmailTemplateFuture
+	DeleteEmailTemplateAsync(ctx workflow.Context, input *pinpoint.DeleteEmailTemplateInput) *DeleteEmailTemplateFuture
 
 	DeleteEndpoint(ctx workflow.Context, input *pinpoint.DeleteEndpointInput) (*pinpoint.DeleteEndpointOutput, error)
-	DeleteEndpointAsync(ctx workflow.Context, input *pinpoint.DeleteEndpointInput) *PinpointDeleteEndpointFuture
+	DeleteEndpointAsync(ctx workflow.Context, input *pinpoint.DeleteEndpointInput) *DeleteEndpointFuture
 
 	DeleteEventStream(ctx workflow.Context, input *pinpoint.DeleteEventStreamInput) (*pinpoint.DeleteEventStreamOutput, error)
-	DeleteEventStreamAsync(ctx workflow.Context, input *pinpoint.DeleteEventStreamInput) *PinpointDeleteEventStreamFuture
+	DeleteEventStreamAsync(ctx workflow.Context, input *pinpoint.DeleteEventStreamInput) *DeleteEventStreamFuture
 
 	DeleteGcmChannel(ctx workflow.Context, input *pinpoint.DeleteGcmChannelInput) (*pinpoint.DeleteGcmChannelOutput, error)
-	DeleteGcmChannelAsync(ctx workflow.Context, input *pinpoint.DeleteGcmChannelInput) *PinpointDeleteGcmChannelFuture
+	DeleteGcmChannelAsync(ctx workflow.Context, input *pinpoint.DeleteGcmChannelInput) *DeleteGcmChannelFuture
 
 	DeleteJourney(ctx workflow.Context, input *pinpoint.DeleteJourneyInput) (*pinpoint.DeleteJourneyOutput, error)
-	DeleteJourneyAsync(ctx workflow.Context, input *pinpoint.DeleteJourneyInput) *PinpointDeleteJourneyFuture
+	DeleteJourneyAsync(ctx workflow.Context, input *pinpoint.DeleteJourneyInput) *DeleteJourneyFuture
 
 	DeletePushTemplate(ctx workflow.Context, input *pinpoint.DeletePushTemplateInput) (*pinpoint.DeletePushTemplateOutput, error)
-	DeletePushTemplateAsync(ctx workflow.Context, input *pinpoint.DeletePushTemplateInput) *PinpointDeletePushTemplateFuture
+	DeletePushTemplateAsync(ctx workflow.Context, input *pinpoint.DeletePushTemplateInput) *DeletePushTemplateFuture
 
 	DeleteRecommenderConfiguration(ctx workflow.Context, input *pinpoint.DeleteRecommenderConfigurationInput) (*pinpoint.DeleteRecommenderConfigurationOutput, error)
-	DeleteRecommenderConfigurationAsync(ctx workflow.Context, input *pinpoint.DeleteRecommenderConfigurationInput) *PinpointDeleteRecommenderConfigurationFuture
+	DeleteRecommenderConfigurationAsync(ctx workflow.Context, input *pinpoint.DeleteRecommenderConfigurationInput) *DeleteRecommenderConfigurationFuture
 
 	DeleteSegment(ctx workflow.Context, input *pinpoint.DeleteSegmentInput) (*pinpoint.DeleteSegmentOutput, error)
-	DeleteSegmentAsync(ctx workflow.Context, input *pinpoint.DeleteSegmentInput) *PinpointDeleteSegmentFuture
+	DeleteSegmentAsync(ctx workflow.Context, input *pinpoint.DeleteSegmentInput) *DeleteSegmentFuture
 
 	DeleteSmsChannel(ctx workflow.Context, input *pinpoint.DeleteSmsChannelInput) (*pinpoint.DeleteSmsChannelOutput, error)
-	DeleteSmsChannelAsync(ctx workflow.Context, input *pinpoint.DeleteSmsChannelInput) *PinpointDeleteSmsChannelFuture
+	DeleteSmsChannelAsync(ctx workflow.Context, input *pinpoint.DeleteSmsChannelInput) *DeleteSmsChannelFuture
 
 	DeleteSmsTemplate(ctx workflow.Context, input *pinpoint.DeleteSmsTemplateInput) (*pinpoint.DeleteSmsTemplateOutput, error)
-	DeleteSmsTemplateAsync(ctx workflow.Context, input *pinpoint.DeleteSmsTemplateInput) *PinpointDeleteSmsTemplateFuture
+	DeleteSmsTemplateAsync(ctx workflow.Context, input *pinpoint.DeleteSmsTemplateInput) *DeleteSmsTemplateFuture
 
 	DeleteUserEndpoints(ctx workflow.Context, input *pinpoint.DeleteUserEndpointsInput) (*pinpoint.DeleteUserEndpointsOutput, error)
-	DeleteUserEndpointsAsync(ctx workflow.Context, input *pinpoint.DeleteUserEndpointsInput) *PinpointDeleteUserEndpointsFuture
+	DeleteUserEndpointsAsync(ctx workflow.Context, input *pinpoint.DeleteUserEndpointsInput) *DeleteUserEndpointsFuture
 
 	DeleteVoiceChannel(ctx workflow.Context, input *pinpoint.DeleteVoiceChannelInput) (*pinpoint.DeleteVoiceChannelOutput, error)
-	DeleteVoiceChannelAsync(ctx workflow.Context, input *pinpoint.DeleteVoiceChannelInput) *PinpointDeleteVoiceChannelFuture
+	DeleteVoiceChannelAsync(ctx workflow.Context, input *pinpoint.DeleteVoiceChannelInput) *DeleteVoiceChannelFuture
 
 	DeleteVoiceTemplate(ctx workflow.Context, input *pinpoint.DeleteVoiceTemplateInput) (*pinpoint.DeleteVoiceTemplateOutput, error)
-	DeleteVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.DeleteVoiceTemplateInput) *PinpointDeleteVoiceTemplateFuture
+	DeleteVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.DeleteVoiceTemplateInput) *DeleteVoiceTemplateFuture
 
 	GetAdmChannel(ctx workflow.Context, input *pinpoint.GetAdmChannelInput) (*pinpoint.GetAdmChannelOutput, error)
-	GetAdmChannelAsync(ctx workflow.Context, input *pinpoint.GetAdmChannelInput) *PinpointGetAdmChannelFuture
+	GetAdmChannelAsync(ctx workflow.Context, input *pinpoint.GetAdmChannelInput) *GetAdmChannelFuture
 
 	GetApnsChannel(ctx workflow.Context, input *pinpoint.GetApnsChannelInput) (*pinpoint.GetApnsChannelOutput, error)
-	GetApnsChannelAsync(ctx workflow.Context, input *pinpoint.GetApnsChannelInput) *PinpointGetApnsChannelFuture
+	GetApnsChannelAsync(ctx workflow.Context, input *pinpoint.GetApnsChannelInput) *GetApnsChannelFuture
 
 	GetApnsSandboxChannel(ctx workflow.Context, input *pinpoint.GetApnsSandboxChannelInput) (*pinpoint.GetApnsSandboxChannelOutput, error)
-	GetApnsSandboxChannelAsync(ctx workflow.Context, input *pinpoint.GetApnsSandboxChannelInput) *PinpointGetApnsSandboxChannelFuture
+	GetApnsSandboxChannelAsync(ctx workflow.Context, input *pinpoint.GetApnsSandboxChannelInput) *GetApnsSandboxChannelFuture
 
 	GetApnsVoipChannel(ctx workflow.Context, input *pinpoint.GetApnsVoipChannelInput) (*pinpoint.GetApnsVoipChannelOutput, error)
-	GetApnsVoipChannelAsync(ctx workflow.Context, input *pinpoint.GetApnsVoipChannelInput) *PinpointGetApnsVoipChannelFuture
+	GetApnsVoipChannelAsync(ctx workflow.Context, input *pinpoint.GetApnsVoipChannelInput) *GetApnsVoipChannelFuture
 
 	GetApnsVoipSandboxChannel(ctx workflow.Context, input *pinpoint.GetApnsVoipSandboxChannelInput) (*pinpoint.GetApnsVoipSandboxChannelOutput, error)
-	GetApnsVoipSandboxChannelAsync(ctx workflow.Context, input *pinpoint.GetApnsVoipSandboxChannelInput) *PinpointGetApnsVoipSandboxChannelFuture
+	GetApnsVoipSandboxChannelAsync(ctx workflow.Context, input *pinpoint.GetApnsVoipSandboxChannelInput) *GetApnsVoipSandboxChannelFuture
 
 	GetApp(ctx workflow.Context, input *pinpoint.GetAppInput) (*pinpoint.GetAppOutput, error)
-	GetAppAsync(ctx workflow.Context, input *pinpoint.GetAppInput) *PinpointGetAppFuture
+	GetAppAsync(ctx workflow.Context, input *pinpoint.GetAppInput) *GetAppFuture
 
 	GetApplicationDateRangeKpi(ctx workflow.Context, input *pinpoint.GetApplicationDateRangeKpiInput) (*pinpoint.GetApplicationDateRangeKpiOutput, error)
-	GetApplicationDateRangeKpiAsync(ctx workflow.Context, input *pinpoint.GetApplicationDateRangeKpiInput) *PinpointGetApplicationDateRangeKpiFuture
+	GetApplicationDateRangeKpiAsync(ctx workflow.Context, input *pinpoint.GetApplicationDateRangeKpiInput) *GetApplicationDateRangeKpiFuture
 
 	GetApplicationSettings(ctx workflow.Context, input *pinpoint.GetApplicationSettingsInput) (*pinpoint.GetApplicationSettingsOutput, error)
-	GetApplicationSettingsAsync(ctx workflow.Context, input *pinpoint.GetApplicationSettingsInput) *PinpointGetApplicationSettingsFuture
+	GetApplicationSettingsAsync(ctx workflow.Context, input *pinpoint.GetApplicationSettingsInput) *GetApplicationSettingsFuture
 
 	GetApps(ctx workflow.Context, input *pinpoint.GetAppsInput) (*pinpoint.GetAppsOutput, error)
-	GetAppsAsync(ctx workflow.Context, input *pinpoint.GetAppsInput) *PinpointGetAppsFuture
+	GetAppsAsync(ctx workflow.Context, input *pinpoint.GetAppsInput) *GetAppsFuture
 
 	GetBaiduChannel(ctx workflow.Context, input *pinpoint.GetBaiduChannelInput) (*pinpoint.GetBaiduChannelOutput, error)
-	GetBaiduChannelAsync(ctx workflow.Context, input *pinpoint.GetBaiduChannelInput) *PinpointGetBaiduChannelFuture
+	GetBaiduChannelAsync(ctx workflow.Context, input *pinpoint.GetBaiduChannelInput) *GetBaiduChannelFuture
 
 	GetCampaign(ctx workflow.Context, input *pinpoint.GetCampaignInput) (*pinpoint.GetCampaignOutput, error)
-	GetCampaignAsync(ctx workflow.Context, input *pinpoint.GetCampaignInput) *PinpointGetCampaignFuture
+	GetCampaignAsync(ctx workflow.Context, input *pinpoint.GetCampaignInput) *GetCampaignFuture
 
 	GetCampaignActivities(ctx workflow.Context, input *pinpoint.GetCampaignActivitiesInput) (*pinpoint.GetCampaignActivitiesOutput, error)
-	GetCampaignActivitiesAsync(ctx workflow.Context, input *pinpoint.GetCampaignActivitiesInput) *PinpointGetCampaignActivitiesFuture
+	GetCampaignActivitiesAsync(ctx workflow.Context, input *pinpoint.GetCampaignActivitiesInput) *GetCampaignActivitiesFuture
 
 	GetCampaignDateRangeKpi(ctx workflow.Context, input *pinpoint.GetCampaignDateRangeKpiInput) (*pinpoint.GetCampaignDateRangeKpiOutput, error)
-	GetCampaignDateRangeKpiAsync(ctx workflow.Context, input *pinpoint.GetCampaignDateRangeKpiInput) *PinpointGetCampaignDateRangeKpiFuture
+	GetCampaignDateRangeKpiAsync(ctx workflow.Context, input *pinpoint.GetCampaignDateRangeKpiInput) *GetCampaignDateRangeKpiFuture
 
 	GetCampaignVersion(ctx workflow.Context, input *pinpoint.GetCampaignVersionInput) (*pinpoint.GetCampaignVersionOutput, error)
-	GetCampaignVersionAsync(ctx workflow.Context, input *pinpoint.GetCampaignVersionInput) *PinpointGetCampaignVersionFuture
+	GetCampaignVersionAsync(ctx workflow.Context, input *pinpoint.GetCampaignVersionInput) *GetCampaignVersionFuture
 
 	GetCampaignVersions(ctx workflow.Context, input *pinpoint.GetCampaignVersionsInput) (*pinpoint.GetCampaignVersionsOutput, error)
-	GetCampaignVersionsAsync(ctx workflow.Context, input *pinpoint.GetCampaignVersionsInput) *PinpointGetCampaignVersionsFuture
+	GetCampaignVersionsAsync(ctx workflow.Context, input *pinpoint.GetCampaignVersionsInput) *GetCampaignVersionsFuture
 
 	GetCampaigns(ctx workflow.Context, input *pinpoint.GetCampaignsInput) (*pinpoint.GetCampaignsOutput, error)
-	GetCampaignsAsync(ctx workflow.Context, input *pinpoint.GetCampaignsInput) *PinpointGetCampaignsFuture
+	GetCampaignsAsync(ctx workflow.Context, input *pinpoint.GetCampaignsInput) *GetCampaignsFuture
 
 	GetChannels(ctx workflow.Context, input *pinpoint.GetChannelsInput) (*pinpoint.GetChannelsOutput, error)
-	GetChannelsAsync(ctx workflow.Context, input *pinpoint.GetChannelsInput) *PinpointGetChannelsFuture
+	GetChannelsAsync(ctx workflow.Context, input *pinpoint.GetChannelsInput) *GetChannelsFuture
 
 	GetEmailChannel(ctx workflow.Context, input *pinpoint.GetEmailChannelInput) (*pinpoint.GetEmailChannelOutput, error)
-	GetEmailChannelAsync(ctx workflow.Context, input *pinpoint.GetEmailChannelInput) *PinpointGetEmailChannelFuture
+	GetEmailChannelAsync(ctx workflow.Context, input *pinpoint.GetEmailChannelInput) *GetEmailChannelFuture
 
 	GetEmailTemplate(ctx workflow.Context, input *pinpoint.GetEmailTemplateInput) (*pinpoint.GetEmailTemplateOutput, error)
-	GetEmailTemplateAsync(ctx workflow.Context, input *pinpoint.GetEmailTemplateInput) *PinpointGetEmailTemplateFuture
+	GetEmailTemplateAsync(ctx workflow.Context, input *pinpoint.GetEmailTemplateInput) *GetEmailTemplateFuture
 
 	GetEndpoint(ctx workflow.Context, input *pinpoint.GetEndpointInput) (*pinpoint.GetEndpointOutput, error)
-	GetEndpointAsync(ctx workflow.Context, input *pinpoint.GetEndpointInput) *PinpointGetEndpointFuture
+	GetEndpointAsync(ctx workflow.Context, input *pinpoint.GetEndpointInput) *GetEndpointFuture
 
 	GetEventStream(ctx workflow.Context, input *pinpoint.GetEventStreamInput) (*pinpoint.GetEventStreamOutput, error)
-	GetEventStreamAsync(ctx workflow.Context, input *pinpoint.GetEventStreamInput) *PinpointGetEventStreamFuture
+	GetEventStreamAsync(ctx workflow.Context, input *pinpoint.GetEventStreamInput) *GetEventStreamFuture
 
 	GetExportJob(ctx workflow.Context, input *pinpoint.GetExportJobInput) (*pinpoint.GetExportJobOutput, error)
-	GetExportJobAsync(ctx workflow.Context, input *pinpoint.GetExportJobInput) *PinpointGetExportJobFuture
+	GetExportJobAsync(ctx workflow.Context, input *pinpoint.GetExportJobInput) *GetExportJobFuture
 
 	GetExportJobs(ctx workflow.Context, input *pinpoint.GetExportJobsInput) (*pinpoint.GetExportJobsOutput, error)
-	GetExportJobsAsync(ctx workflow.Context, input *pinpoint.GetExportJobsInput) *PinpointGetExportJobsFuture
+	GetExportJobsAsync(ctx workflow.Context, input *pinpoint.GetExportJobsInput) *GetExportJobsFuture
 
 	GetGcmChannel(ctx workflow.Context, input *pinpoint.GetGcmChannelInput) (*pinpoint.GetGcmChannelOutput, error)
-	GetGcmChannelAsync(ctx workflow.Context, input *pinpoint.GetGcmChannelInput) *PinpointGetGcmChannelFuture
+	GetGcmChannelAsync(ctx workflow.Context, input *pinpoint.GetGcmChannelInput) *GetGcmChannelFuture
 
 	GetImportJob(ctx workflow.Context, input *pinpoint.GetImportJobInput) (*pinpoint.GetImportJobOutput, error)
-	GetImportJobAsync(ctx workflow.Context, input *pinpoint.GetImportJobInput) *PinpointGetImportJobFuture
+	GetImportJobAsync(ctx workflow.Context, input *pinpoint.GetImportJobInput) *GetImportJobFuture
 
 	GetImportJobs(ctx workflow.Context, input *pinpoint.GetImportJobsInput) (*pinpoint.GetImportJobsOutput, error)
-	GetImportJobsAsync(ctx workflow.Context, input *pinpoint.GetImportJobsInput) *PinpointGetImportJobsFuture
+	GetImportJobsAsync(ctx workflow.Context, input *pinpoint.GetImportJobsInput) *GetImportJobsFuture
 
 	GetJourney(ctx workflow.Context, input *pinpoint.GetJourneyInput) (*pinpoint.GetJourneyOutput, error)
-	GetJourneyAsync(ctx workflow.Context, input *pinpoint.GetJourneyInput) *PinpointGetJourneyFuture
+	GetJourneyAsync(ctx workflow.Context, input *pinpoint.GetJourneyInput) *GetJourneyFuture
 
 	GetJourneyDateRangeKpi(ctx workflow.Context, input *pinpoint.GetJourneyDateRangeKpiInput) (*pinpoint.GetJourneyDateRangeKpiOutput, error)
-	GetJourneyDateRangeKpiAsync(ctx workflow.Context, input *pinpoint.GetJourneyDateRangeKpiInput) *PinpointGetJourneyDateRangeKpiFuture
+	GetJourneyDateRangeKpiAsync(ctx workflow.Context, input *pinpoint.GetJourneyDateRangeKpiInput) *GetJourneyDateRangeKpiFuture
 
 	GetJourneyExecutionActivityMetrics(ctx workflow.Context, input *pinpoint.GetJourneyExecutionActivityMetricsInput) (*pinpoint.GetJourneyExecutionActivityMetricsOutput, error)
-	GetJourneyExecutionActivityMetricsAsync(ctx workflow.Context, input *pinpoint.GetJourneyExecutionActivityMetricsInput) *PinpointGetJourneyExecutionActivityMetricsFuture
+	GetJourneyExecutionActivityMetricsAsync(ctx workflow.Context, input *pinpoint.GetJourneyExecutionActivityMetricsInput) *GetJourneyExecutionActivityMetricsFuture
 
 	GetJourneyExecutionMetrics(ctx workflow.Context, input *pinpoint.GetJourneyExecutionMetricsInput) (*pinpoint.GetJourneyExecutionMetricsOutput, error)
-	GetJourneyExecutionMetricsAsync(ctx workflow.Context, input *pinpoint.GetJourneyExecutionMetricsInput) *PinpointGetJourneyExecutionMetricsFuture
+	GetJourneyExecutionMetricsAsync(ctx workflow.Context, input *pinpoint.GetJourneyExecutionMetricsInput) *GetJourneyExecutionMetricsFuture
 
 	GetPushTemplate(ctx workflow.Context, input *pinpoint.GetPushTemplateInput) (*pinpoint.GetPushTemplateOutput, error)
-	GetPushTemplateAsync(ctx workflow.Context, input *pinpoint.GetPushTemplateInput) *PinpointGetPushTemplateFuture
+	GetPushTemplateAsync(ctx workflow.Context, input *pinpoint.GetPushTemplateInput) *GetPushTemplateFuture
 
 	GetRecommenderConfiguration(ctx workflow.Context, input *pinpoint.GetRecommenderConfigurationInput) (*pinpoint.GetRecommenderConfigurationOutput, error)
-	GetRecommenderConfigurationAsync(ctx workflow.Context, input *pinpoint.GetRecommenderConfigurationInput) *PinpointGetRecommenderConfigurationFuture
+	GetRecommenderConfigurationAsync(ctx workflow.Context, input *pinpoint.GetRecommenderConfigurationInput) *GetRecommenderConfigurationFuture
 
 	GetRecommenderConfigurations(ctx workflow.Context, input *pinpoint.GetRecommenderConfigurationsInput) (*pinpoint.GetRecommenderConfigurationsOutput, error)
-	GetRecommenderConfigurationsAsync(ctx workflow.Context, input *pinpoint.GetRecommenderConfigurationsInput) *PinpointGetRecommenderConfigurationsFuture
+	GetRecommenderConfigurationsAsync(ctx workflow.Context, input *pinpoint.GetRecommenderConfigurationsInput) *GetRecommenderConfigurationsFuture
 
 	GetSegment(ctx workflow.Context, input *pinpoint.GetSegmentInput) (*pinpoint.GetSegmentOutput, error)
-	GetSegmentAsync(ctx workflow.Context, input *pinpoint.GetSegmentInput) *PinpointGetSegmentFuture
+	GetSegmentAsync(ctx workflow.Context, input *pinpoint.GetSegmentInput) *GetSegmentFuture
 
 	GetSegmentExportJobs(ctx workflow.Context, input *pinpoint.GetSegmentExportJobsInput) (*pinpoint.GetSegmentExportJobsOutput, error)
-	GetSegmentExportJobsAsync(ctx workflow.Context, input *pinpoint.GetSegmentExportJobsInput) *PinpointGetSegmentExportJobsFuture
+	GetSegmentExportJobsAsync(ctx workflow.Context, input *pinpoint.GetSegmentExportJobsInput) *GetSegmentExportJobsFuture
 
 	GetSegmentImportJobs(ctx workflow.Context, input *pinpoint.GetSegmentImportJobsInput) (*pinpoint.GetSegmentImportJobsOutput, error)
-	GetSegmentImportJobsAsync(ctx workflow.Context, input *pinpoint.GetSegmentImportJobsInput) *PinpointGetSegmentImportJobsFuture
+	GetSegmentImportJobsAsync(ctx workflow.Context, input *pinpoint.GetSegmentImportJobsInput) *GetSegmentImportJobsFuture
 
 	GetSegmentVersion(ctx workflow.Context, input *pinpoint.GetSegmentVersionInput) (*pinpoint.GetSegmentVersionOutput, error)
-	GetSegmentVersionAsync(ctx workflow.Context, input *pinpoint.GetSegmentVersionInput) *PinpointGetSegmentVersionFuture
+	GetSegmentVersionAsync(ctx workflow.Context, input *pinpoint.GetSegmentVersionInput) *GetSegmentVersionFuture
 
 	GetSegmentVersions(ctx workflow.Context, input *pinpoint.GetSegmentVersionsInput) (*pinpoint.GetSegmentVersionsOutput, error)
-	GetSegmentVersionsAsync(ctx workflow.Context, input *pinpoint.GetSegmentVersionsInput) *PinpointGetSegmentVersionsFuture
+	GetSegmentVersionsAsync(ctx workflow.Context, input *pinpoint.GetSegmentVersionsInput) *GetSegmentVersionsFuture
 
 	GetSegments(ctx workflow.Context, input *pinpoint.GetSegmentsInput) (*pinpoint.GetSegmentsOutput, error)
-	GetSegmentsAsync(ctx workflow.Context, input *pinpoint.GetSegmentsInput) *PinpointGetSegmentsFuture
+	GetSegmentsAsync(ctx workflow.Context, input *pinpoint.GetSegmentsInput) *GetSegmentsFuture
 
 	GetSmsChannel(ctx workflow.Context, input *pinpoint.GetSmsChannelInput) (*pinpoint.GetSmsChannelOutput, error)
-	GetSmsChannelAsync(ctx workflow.Context, input *pinpoint.GetSmsChannelInput) *PinpointGetSmsChannelFuture
+	GetSmsChannelAsync(ctx workflow.Context, input *pinpoint.GetSmsChannelInput) *GetSmsChannelFuture
 
 	GetSmsTemplate(ctx workflow.Context, input *pinpoint.GetSmsTemplateInput) (*pinpoint.GetSmsTemplateOutput, error)
-	GetSmsTemplateAsync(ctx workflow.Context, input *pinpoint.GetSmsTemplateInput) *PinpointGetSmsTemplateFuture
+	GetSmsTemplateAsync(ctx workflow.Context, input *pinpoint.GetSmsTemplateInput) *GetSmsTemplateFuture
 
 	GetUserEndpoints(ctx workflow.Context, input *pinpoint.GetUserEndpointsInput) (*pinpoint.GetUserEndpointsOutput, error)
-	GetUserEndpointsAsync(ctx workflow.Context, input *pinpoint.GetUserEndpointsInput) *PinpointGetUserEndpointsFuture
+	GetUserEndpointsAsync(ctx workflow.Context, input *pinpoint.GetUserEndpointsInput) *GetUserEndpointsFuture
 
 	GetVoiceChannel(ctx workflow.Context, input *pinpoint.GetVoiceChannelInput) (*pinpoint.GetVoiceChannelOutput, error)
-	GetVoiceChannelAsync(ctx workflow.Context, input *pinpoint.GetVoiceChannelInput) *PinpointGetVoiceChannelFuture
+	GetVoiceChannelAsync(ctx workflow.Context, input *pinpoint.GetVoiceChannelInput) *GetVoiceChannelFuture
 
 	GetVoiceTemplate(ctx workflow.Context, input *pinpoint.GetVoiceTemplateInput) (*pinpoint.GetVoiceTemplateOutput, error)
-	GetVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.GetVoiceTemplateInput) *PinpointGetVoiceTemplateFuture
+	GetVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.GetVoiceTemplateInput) *GetVoiceTemplateFuture
 
 	ListJourneys(ctx workflow.Context, input *pinpoint.ListJourneysInput) (*pinpoint.ListJourneysOutput, error)
-	ListJourneysAsync(ctx workflow.Context, input *pinpoint.ListJourneysInput) *PinpointListJourneysFuture
+	ListJourneysAsync(ctx workflow.Context, input *pinpoint.ListJourneysInput) *ListJourneysFuture
 
 	ListTagsForResource(ctx workflow.Context, input *pinpoint.ListTagsForResourceInput) (*pinpoint.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *pinpoint.ListTagsForResourceInput) *PinpointListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *pinpoint.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListTemplateVersions(ctx workflow.Context, input *pinpoint.ListTemplateVersionsInput) (*pinpoint.ListTemplateVersionsOutput, error)
-	ListTemplateVersionsAsync(ctx workflow.Context, input *pinpoint.ListTemplateVersionsInput) *PinpointListTemplateVersionsFuture
+	ListTemplateVersionsAsync(ctx workflow.Context, input *pinpoint.ListTemplateVersionsInput) *ListTemplateVersionsFuture
 
 	ListTemplates(ctx workflow.Context, input *pinpoint.ListTemplatesInput) (*pinpoint.ListTemplatesOutput, error)
-	ListTemplatesAsync(ctx workflow.Context, input *pinpoint.ListTemplatesInput) *PinpointListTemplatesFuture
+	ListTemplatesAsync(ctx workflow.Context, input *pinpoint.ListTemplatesInput) *ListTemplatesFuture
 
 	PhoneNumberValidate(ctx workflow.Context, input *pinpoint.PhoneNumberValidateInput) (*pinpoint.PhoneNumberValidateOutput, error)
-	PhoneNumberValidateAsync(ctx workflow.Context, input *pinpoint.PhoneNumberValidateInput) *PinpointPhoneNumberValidateFuture
+	PhoneNumberValidateAsync(ctx workflow.Context, input *pinpoint.PhoneNumberValidateInput) *PhoneNumberValidateFuture
 
 	PutEventStream(ctx workflow.Context, input *pinpoint.PutEventStreamInput) (*pinpoint.PutEventStreamOutput, error)
-	PutEventStreamAsync(ctx workflow.Context, input *pinpoint.PutEventStreamInput) *PinpointPutEventStreamFuture
+	PutEventStreamAsync(ctx workflow.Context, input *pinpoint.PutEventStreamInput) *PutEventStreamFuture
 
 	PutEvents(ctx workflow.Context, input *pinpoint.PutEventsInput) (*pinpoint.PutEventsOutput, error)
-	PutEventsAsync(ctx workflow.Context, input *pinpoint.PutEventsInput) *PinpointPutEventsFuture
+	PutEventsAsync(ctx workflow.Context, input *pinpoint.PutEventsInput) *PutEventsFuture
 
 	RemoveAttributes(ctx workflow.Context, input *pinpoint.RemoveAttributesInput) (*pinpoint.RemoveAttributesOutput, error)
-	RemoveAttributesAsync(ctx workflow.Context, input *pinpoint.RemoveAttributesInput) *PinpointRemoveAttributesFuture
+	RemoveAttributesAsync(ctx workflow.Context, input *pinpoint.RemoveAttributesInput) *RemoveAttributesFuture
 
 	SendMessages(ctx workflow.Context, input *pinpoint.SendMessagesInput) (*pinpoint.SendMessagesOutput, error)
-	SendMessagesAsync(ctx workflow.Context, input *pinpoint.SendMessagesInput) *PinpointSendMessagesFuture
+	SendMessagesAsync(ctx workflow.Context, input *pinpoint.SendMessagesInput) *SendMessagesFuture
 
 	SendUsersMessages(ctx workflow.Context, input *pinpoint.SendUsersMessagesInput) (*pinpoint.SendUsersMessagesOutput, error)
-	SendUsersMessagesAsync(ctx workflow.Context, input *pinpoint.SendUsersMessagesInput) *PinpointSendUsersMessagesFuture
+	SendUsersMessagesAsync(ctx workflow.Context, input *pinpoint.SendUsersMessagesInput) *SendUsersMessagesFuture
 
 	TagResource(ctx workflow.Context, input *pinpoint.TagResourceInput) (*pinpoint.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *pinpoint.TagResourceInput) *PinpointTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *pinpoint.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *pinpoint.UntagResourceInput) (*pinpoint.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *pinpoint.UntagResourceInput) *PinpointUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *pinpoint.UntagResourceInput) *UntagResourceFuture
 
 	UpdateAdmChannel(ctx workflow.Context, input *pinpoint.UpdateAdmChannelInput) (*pinpoint.UpdateAdmChannelOutput, error)
-	UpdateAdmChannelAsync(ctx workflow.Context, input *pinpoint.UpdateAdmChannelInput) *PinpointUpdateAdmChannelFuture
+	UpdateAdmChannelAsync(ctx workflow.Context, input *pinpoint.UpdateAdmChannelInput) *UpdateAdmChannelFuture
 
 	UpdateApnsChannel(ctx workflow.Context, input *pinpoint.UpdateApnsChannelInput) (*pinpoint.UpdateApnsChannelOutput, error)
-	UpdateApnsChannelAsync(ctx workflow.Context, input *pinpoint.UpdateApnsChannelInput) *PinpointUpdateApnsChannelFuture
+	UpdateApnsChannelAsync(ctx workflow.Context, input *pinpoint.UpdateApnsChannelInput) *UpdateApnsChannelFuture
 
 	UpdateApnsSandboxChannel(ctx workflow.Context, input *pinpoint.UpdateApnsSandboxChannelInput) (*pinpoint.UpdateApnsSandboxChannelOutput, error)
-	UpdateApnsSandboxChannelAsync(ctx workflow.Context, input *pinpoint.UpdateApnsSandboxChannelInput) *PinpointUpdateApnsSandboxChannelFuture
+	UpdateApnsSandboxChannelAsync(ctx workflow.Context, input *pinpoint.UpdateApnsSandboxChannelInput) *UpdateApnsSandboxChannelFuture
 
 	UpdateApnsVoipChannel(ctx workflow.Context, input *pinpoint.UpdateApnsVoipChannelInput) (*pinpoint.UpdateApnsVoipChannelOutput, error)
-	UpdateApnsVoipChannelAsync(ctx workflow.Context, input *pinpoint.UpdateApnsVoipChannelInput) *PinpointUpdateApnsVoipChannelFuture
+	UpdateApnsVoipChannelAsync(ctx workflow.Context, input *pinpoint.UpdateApnsVoipChannelInput) *UpdateApnsVoipChannelFuture
 
 	UpdateApnsVoipSandboxChannel(ctx workflow.Context, input *pinpoint.UpdateApnsVoipSandboxChannelInput) (*pinpoint.UpdateApnsVoipSandboxChannelOutput, error)
-	UpdateApnsVoipSandboxChannelAsync(ctx workflow.Context, input *pinpoint.UpdateApnsVoipSandboxChannelInput) *PinpointUpdateApnsVoipSandboxChannelFuture
+	UpdateApnsVoipSandboxChannelAsync(ctx workflow.Context, input *pinpoint.UpdateApnsVoipSandboxChannelInput) *UpdateApnsVoipSandboxChannelFuture
 
 	UpdateApplicationSettings(ctx workflow.Context, input *pinpoint.UpdateApplicationSettingsInput) (*pinpoint.UpdateApplicationSettingsOutput, error)
-	UpdateApplicationSettingsAsync(ctx workflow.Context, input *pinpoint.UpdateApplicationSettingsInput) *PinpointUpdateApplicationSettingsFuture
+	UpdateApplicationSettingsAsync(ctx workflow.Context, input *pinpoint.UpdateApplicationSettingsInput) *UpdateApplicationSettingsFuture
 
 	UpdateBaiduChannel(ctx workflow.Context, input *pinpoint.UpdateBaiduChannelInput) (*pinpoint.UpdateBaiduChannelOutput, error)
-	UpdateBaiduChannelAsync(ctx workflow.Context, input *pinpoint.UpdateBaiduChannelInput) *PinpointUpdateBaiduChannelFuture
+	UpdateBaiduChannelAsync(ctx workflow.Context, input *pinpoint.UpdateBaiduChannelInput) *UpdateBaiduChannelFuture
 
 	UpdateCampaign(ctx workflow.Context, input *pinpoint.UpdateCampaignInput) (*pinpoint.UpdateCampaignOutput, error)
-	UpdateCampaignAsync(ctx workflow.Context, input *pinpoint.UpdateCampaignInput) *PinpointUpdateCampaignFuture
+	UpdateCampaignAsync(ctx workflow.Context, input *pinpoint.UpdateCampaignInput) *UpdateCampaignFuture
 
 	UpdateEmailChannel(ctx workflow.Context, input *pinpoint.UpdateEmailChannelInput) (*pinpoint.UpdateEmailChannelOutput, error)
-	UpdateEmailChannelAsync(ctx workflow.Context, input *pinpoint.UpdateEmailChannelInput) *PinpointUpdateEmailChannelFuture
+	UpdateEmailChannelAsync(ctx workflow.Context, input *pinpoint.UpdateEmailChannelInput) *UpdateEmailChannelFuture
 
 	UpdateEmailTemplate(ctx workflow.Context, input *pinpoint.UpdateEmailTemplateInput) (*pinpoint.UpdateEmailTemplateOutput, error)
-	UpdateEmailTemplateAsync(ctx workflow.Context, input *pinpoint.UpdateEmailTemplateInput) *PinpointUpdateEmailTemplateFuture
+	UpdateEmailTemplateAsync(ctx workflow.Context, input *pinpoint.UpdateEmailTemplateInput) *UpdateEmailTemplateFuture
 
 	UpdateEndpoint(ctx workflow.Context, input *pinpoint.UpdateEndpointInput) (*pinpoint.UpdateEndpointOutput, error)
-	UpdateEndpointAsync(ctx workflow.Context, input *pinpoint.UpdateEndpointInput) *PinpointUpdateEndpointFuture
+	UpdateEndpointAsync(ctx workflow.Context, input *pinpoint.UpdateEndpointInput) *UpdateEndpointFuture
 
 	UpdateEndpointsBatch(ctx workflow.Context, input *pinpoint.UpdateEndpointsBatchInput) (*pinpoint.UpdateEndpointsBatchOutput, error)
-	UpdateEndpointsBatchAsync(ctx workflow.Context, input *pinpoint.UpdateEndpointsBatchInput) *PinpointUpdateEndpointsBatchFuture
+	UpdateEndpointsBatchAsync(ctx workflow.Context, input *pinpoint.UpdateEndpointsBatchInput) *UpdateEndpointsBatchFuture
 
 	UpdateGcmChannel(ctx workflow.Context, input *pinpoint.UpdateGcmChannelInput) (*pinpoint.UpdateGcmChannelOutput, error)
-	UpdateGcmChannelAsync(ctx workflow.Context, input *pinpoint.UpdateGcmChannelInput) *PinpointUpdateGcmChannelFuture
+	UpdateGcmChannelAsync(ctx workflow.Context, input *pinpoint.UpdateGcmChannelInput) *UpdateGcmChannelFuture
 
 	UpdateJourney(ctx workflow.Context, input *pinpoint.UpdateJourneyInput) (*pinpoint.UpdateJourneyOutput, error)
-	UpdateJourneyAsync(ctx workflow.Context, input *pinpoint.UpdateJourneyInput) *PinpointUpdateJourneyFuture
+	UpdateJourneyAsync(ctx workflow.Context, input *pinpoint.UpdateJourneyInput) *UpdateJourneyFuture
 
 	UpdateJourneyState(ctx workflow.Context, input *pinpoint.UpdateJourneyStateInput) (*pinpoint.UpdateJourneyStateOutput, error)
-	UpdateJourneyStateAsync(ctx workflow.Context, input *pinpoint.UpdateJourneyStateInput) *PinpointUpdateJourneyStateFuture
+	UpdateJourneyStateAsync(ctx workflow.Context, input *pinpoint.UpdateJourneyStateInput) *UpdateJourneyStateFuture
 
 	UpdatePushTemplate(ctx workflow.Context, input *pinpoint.UpdatePushTemplateInput) (*pinpoint.UpdatePushTemplateOutput, error)
-	UpdatePushTemplateAsync(ctx workflow.Context, input *pinpoint.UpdatePushTemplateInput) *PinpointUpdatePushTemplateFuture
+	UpdatePushTemplateAsync(ctx workflow.Context, input *pinpoint.UpdatePushTemplateInput) *UpdatePushTemplateFuture
 
 	UpdateRecommenderConfiguration(ctx workflow.Context, input *pinpoint.UpdateRecommenderConfigurationInput) (*pinpoint.UpdateRecommenderConfigurationOutput, error)
-	UpdateRecommenderConfigurationAsync(ctx workflow.Context, input *pinpoint.UpdateRecommenderConfigurationInput) *PinpointUpdateRecommenderConfigurationFuture
+	UpdateRecommenderConfigurationAsync(ctx workflow.Context, input *pinpoint.UpdateRecommenderConfigurationInput) *UpdateRecommenderConfigurationFuture
 
 	UpdateSegment(ctx workflow.Context, input *pinpoint.UpdateSegmentInput) (*pinpoint.UpdateSegmentOutput, error)
-	UpdateSegmentAsync(ctx workflow.Context, input *pinpoint.UpdateSegmentInput) *PinpointUpdateSegmentFuture
+	UpdateSegmentAsync(ctx workflow.Context, input *pinpoint.UpdateSegmentInput) *UpdateSegmentFuture
 
 	UpdateSmsChannel(ctx workflow.Context, input *pinpoint.UpdateSmsChannelInput) (*pinpoint.UpdateSmsChannelOutput, error)
-	UpdateSmsChannelAsync(ctx workflow.Context, input *pinpoint.UpdateSmsChannelInput) *PinpointUpdateSmsChannelFuture
+	UpdateSmsChannelAsync(ctx workflow.Context, input *pinpoint.UpdateSmsChannelInput) *UpdateSmsChannelFuture
 
 	UpdateSmsTemplate(ctx workflow.Context, input *pinpoint.UpdateSmsTemplateInput) (*pinpoint.UpdateSmsTemplateOutput, error)
-	UpdateSmsTemplateAsync(ctx workflow.Context, input *pinpoint.UpdateSmsTemplateInput) *PinpointUpdateSmsTemplateFuture
+	UpdateSmsTemplateAsync(ctx workflow.Context, input *pinpoint.UpdateSmsTemplateInput) *UpdateSmsTemplateFuture
 
 	UpdateTemplateActiveVersion(ctx workflow.Context, input *pinpoint.UpdateTemplateActiveVersionInput) (*pinpoint.UpdateTemplateActiveVersionOutput, error)
-	UpdateTemplateActiveVersionAsync(ctx workflow.Context, input *pinpoint.UpdateTemplateActiveVersionInput) *PinpointUpdateTemplateActiveVersionFuture
+	UpdateTemplateActiveVersionAsync(ctx workflow.Context, input *pinpoint.UpdateTemplateActiveVersionInput) *UpdateTemplateActiveVersionFuture
 
 	UpdateVoiceChannel(ctx workflow.Context, input *pinpoint.UpdateVoiceChannelInput) (*pinpoint.UpdateVoiceChannelOutput, error)
-	UpdateVoiceChannelAsync(ctx workflow.Context, input *pinpoint.UpdateVoiceChannelInput) *PinpointUpdateVoiceChannelFuture
+	UpdateVoiceChannelAsync(ctx workflow.Context, input *pinpoint.UpdateVoiceChannelInput) *UpdateVoiceChannelFuture
 
 	UpdateVoiceTemplate(ctx workflow.Context, input *pinpoint.UpdateVoiceTemplateInput) (*pinpoint.UpdateVoiceTemplateOutput, error)
-	UpdateVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.UpdateVoiceTemplateInput) *PinpointUpdateVoiceTemplateFuture
+	UpdateVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.UpdateVoiceTemplateInput) *UpdateVoiceTemplateFuture
 }
 
 func NewClient() Client {

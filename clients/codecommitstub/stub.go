@@ -16,804 +16,804 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CodeCommitAssociateApprovalRuleTemplateWithRepositoryFuture struct {
+type AssociateApprovalRuleTemplateWithRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitAssociateApprovalRuleTemplateWithRepositoryFuture) Get(ctx workflow.Context) (*codecommit.AssociateApprovalRuleTemplateWithRepositoryOutput, error) {
+func (r *AssociateApprovalRuleTemplateWithRepositoryFuture) Get(ctx workflow.Context) (*codecommit.AssociateApprovalRuleTemplateWithRepositoryOutput, error) {
 	var output codecommit.AssociateApprovalRuleTemplateWithRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitBatchAssociateApprovalRuleTemplateWithRepositoriesFuture struct {
+type BatchAssociateApprovalRuleTemplateWithRepositoriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitBatchAssociateApprovalRuleTemplateWithRepositoriesFuture) Get(ctx workflow.Context) (*codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput, error) {
+func (r *BatchAssociateApprovalRuleTemplateWithRepositoriesFuture) Get(ctx workflow.Context) (*codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput, error) {
 	var output codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitBatchDescribeMergeConflictsFuture struct {
+type BatchDescribeMergeConflictsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitBatchDescribeMergeConflictsFuture) Get(ctx workflow.Context) (*codecommit.BatchDescribeMergeConflictsOutput, error) {
+func (r *BatchDescribeMergeConflictsFuture) Get(ctx workflow.Context) (*codecommit.BatchDescribeMergeConflictsOutput, error) {
 	var output codecommit.BatchDescribeMergeConflictsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitBatchDisassociateApprovalRuleTemplateFromRepositoriesFuture struct {
+type BatchDisassociateApprovalRuleTemplateFromRepositoriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitBatchDisassociateApprovalRuleTemplateFromRepositoriesFuture) Get(ctx workflow.Context) (*codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesOutput, error) {
+func (r *BatchDisassociateApprovalRuleTemplateFromRepositoriesFuture) Get(ctx workflow.Context) (*codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesOutput, error) {
 	var output codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitBatchGetCommitsFuture struct {
+type BatchGetCommitsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitBatchGetCommitsFuture) Get(ctx workflow.Context) (*codecommit.BatchGetCommitsOutput, error) {
+func (r *BatchGetCommitsFuture) Get(ctx workflow.Context) (*codecommit.BatchGetCommitsOutput, error) {
 	var output codecommit.BatchGetCommitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitBatchGetRepositoriesFuture struct {
+type BatchGetRepositoriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitBatchGetRepositoriesFuture) Get(ctx workflow.Context) (*codecommit.BatchGetRepositoriesOutput, error) {
+func (r *BatchGetRepositoriesFuture) Get(ctx workflow.Context) (*codecommit.BatchGetRepositoriesOutput, error) {
 	var output codecommit.BatchGetRepositoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitCreateApprovalRuleTemplateFuture struct {
+type CreateApprovalRuleTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitCreateApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*codecommit.CreateApprovalRuleTemplateOutput, error) {
+func (r *CreateApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*codecommit.CreateApprovalRuleTemplateOutput, error) {
 	var output codecommit.CreateApprovalRuleTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitCreateBranchFuture struct {
+type CreateBranchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitCreateBranchFuture) Get(ctx workflow.Context) (*codecommit.CreateBranchOutput, error) {
+func (r *CreateBranchFuture) Get(ctx workflow.Context) (*codecommit.CreateBranchOutput, error) {
 	var output codecommit.CreateBranchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitCreateCommitFuture struct {
+type CreateCommitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitCreateCommitFuture) Get(ctx workflow.Context) (*codecommit.CreateCommitOutput, error) {
+func (r *CreateCommitFuture) Get(ctx workflow.Context) (*codecommit.CreateCommitOutput, error) {
 	var output codecommit.CreateCommitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitCreatePullRequestApprovalRuleFuture struct {
+type CreatePullRequestApprovalRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitCreatePullRequestApprovalRuleFuture) Get(ctx workflow.Context) (*codecommit.CreatePullRequestApprovalRuleOutput, error) {
+func (r *CreatePullRequestApprovalRuleFuture) Get(ctx workflow.Context) (*codecommit.CreatePullRequestApprovalRuleOutput, error) {
 	var output codecommit.CreatePullRequestApprovalRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitCreateRepositoryFuture struct {
+type CreateRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitCreateRepositoryFuture) Get(ctx workflow.Context) (*codecommit.CreateRepositoryOutput, error) {
+func (r *CreateRepositoryFuture) Get(ctx workflow.Context) (*codecommit.CreateRepositoryOutput, error) {
 	var output codecommit.CreateRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitCreateUnreferencedMergeCommitFuture struct {
+type CreateUnreferencedMergeCommitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitCreateUnreferencedMergeCommitFuture) Get(ctx workflow.Context) (*codecommit.CreateUnreferencedMergeCommitOutput, error) {
+func (r *CreateUnreferencedMergeCommitFuture) Get(ctx workflow.Context) (*codecommit.CreateUnreferencedMergeCommitOutput, error) {
 	var output codecommit.CreateUnreferencedMergeCommitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDeleteApprovalRuleTemplateFuture struct {
+type DeleteApprovalRuleTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDeleteApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*codecommit.DeleteApprovalRuleTemplateOutput, error) {
+func (r *DeleteApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*codecommit.DeleteApprovalRuleTemplateOutput, error) {
 	var output codecommit.DeleteApprovalRuleTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDeleteBranchFuture struct {
+type DeleteBranchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDeleteBranchFuture) Get(ctx workflow.Context) (*codecommit.DeleteBranchOutput, error) {
+func (r *DeleteBranchFuture) Get(ctx workflow.Context) (*codecommit.DeleteBranchOutput, error) {
 	var output codecommit.DeleteBranchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDeleteCommentContentFuture struct {
+type DeleteCommentContentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDeleteCommentContentFuture) Get(ctx workflow.Context) (*codecommit.DeleteCommentContentOutput, error) {
+func (r *DeleteCommentContentFuture) Get(ctx workflow.Context) (*codecommit.DeleteCommentContentOutput, error) {
 	var output codecommit.DeleteCommentContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDeleteFileFuture struct {
+type DeleteFileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDeleteFileFuture) Get(ctx workflow.Context) (*codecommit.DeleteFileOutput, error) {
+func (r *DeleteFileFuture) Get(ctx workflow.Context) (*codecommit.DeleteFileOutput, error) {
 	var output codecommit.DeleteFileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDeletePullRequestApprovalRuleFuture struct {
+type DeletePullRequestApprovalRuleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDeletePullRequestApprovalRuleFuture) Get(ctx workflow.Context) (*codecommit.DeletePullRequestApprovalRuleOutput, error) {
+func (r *DeletePullRequestApprovalRuleFuture) Get(ctx workflow.Context) (*codecommit.DeletePullRequestApprovalRuleOutput, error) {
 	var output codecommit.DeletePullRequestApprovalRuleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDeleteRepositoryFuture struct {
+type DeleteRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDeleteRepositoryFuture) Get(ctx workflow.Context) (*codecommit.DeleteRepositoryOutput, error) {
+func (r *DeleteRepositoryFuture) Get(ctx workflow.Context) (*codecommit.DeleteRepositoryOutput, error) {
 	var output codecommit.DeleteRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDescribeMergeConflictsFuture struct {
+type DescribeMergeConflictsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDescribeMergeConflictsFuture) Get(ctx workflow.Context) (*codecommit.DescribeMergeConflictsOutput, error) {
+func (r *DescribeMergeConflictsFuture) Get(ctx workflow.Context) (*codecommit.DescribeMergeConflictsOutput, error) {
 	var output codecommit.DescribeMergeConflictsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDescribePullRequestEventsFuture struct {
+type DescribePullRequestEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDescribePullRequestEventsFuture) Get(ctx workflow.Context) (*codecommit.DescribePullRequestEventsOutput, error) {
+func (r *DescribePullRequestEventsFuture) Get(ctx workflow.Context) (*codecommit.DescribePullRequestEventsOutput, error) {
 	var output codecommit.DescribePullRequestEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitDisassociateApprovalRuleTemplateFromRepositoryFuture struct {
+type DisassociateApprovalRuleTemplateFromRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitDisassociateApprovalRuleTemplateFromRepositoryFuture) Get(ctx workflow.Context) (*codecommit.DisassociateApprovalRuleTemplateFromRepositoryOutput, error) {
+func (r *DisassociateApprovalRuleTemplateFromRepositoryFuture) Get(ctx workflow.Context) (*codecommit.DisassociateApprovalRuleTemplateFromRepositoryOutput, error) {
 	var output codecommit.DisassociateApprovalRuleTemplateFromRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitEvaluatePullRequestApprovalRulesFuture struct {
+type EvaluatePullRequestApprovalRulesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitEvaluatePullRequestApprovalRulesFuture) Get(ctx workflow.Context) (*codecommit.EvaluatePullRequestApprovalRulesOutput, error) {
+func (r *EvaluatePullRequestApprovalRulesFuture) Get(ctx workflow.Context) (*codecommit.EvaluatePullRequestApprovalRulesOutput, error) {
 	var output codecommit.EvaluatePullRequestApprovalRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetApprovalRuleTemplateFuture struct {
+type GetApprovalRuleTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*codecommit.GetApprovalRuleTemplateOutput, error) {
+func (r *GetApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*codecommit.GetApprovalRuleTemplateOutput, error) {
 	var output codecommit.GetApprovalRuleTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetBlobFuture struct {
+type GetBlobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetBlobFuture) Get(ctx workflow.Context) (*codecommit.GetBlobOutput, error) {
+func (r *GetBlobFuture) Get(ctx workflow.Context) (*codecommit.GetBlobOutput, error) {
 	var output codecommit.GetBlobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetBranchFuture struct {
+type GetBranchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetBranchFuture) Get(ctx workflow.Context) (*codecommit.GetBranchOutput, error) {
+func (r *GetBranchFuture) Get(ctx workflow.Context) (*codecommit.GetBranchOutput, error) {
 	var output codecommit.GetBranchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetCommentFuture struct {
+type GetCommentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetCommentFuture) Get(ctx workflow.Context) (*codecommit.GetCommentOutput, error) {
+func (r *GetCommentFuture) Get(ctx workflow.Context) (*codecommit.GetCommentOutput, error) {
 	var output codecommit.GetCommentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetCommentReactionsFuture struct {
+type GetCommentReactionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetCommentReactionsFuture) Get(ctx workflow.Context) (*codecommit.GetCommentReactionsOutput, error) {
+func (r *GetCommentReactionsFuture) Get(ctx workflow.Context) (*codecommit.GetCommentReactionsOutput, error) {
 	var output codecommit.GetCommentReactionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetCommentsForComparedCommitFuture struct {
+type GetCommentsForComparedCommitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetCommentsForComparedCommitFuture) Get(ctx workflow.Context) (*codecommit.GetCommentsForComparedCommitOutput, error) {
+func (r *GetCommentsForComparedCommitFuture) Get(ctx workflow.Context) (*codecommit.GetCommentsForComparedCommitOutput, error) {
 	var output codecommit.GetCommentsForComparedCommitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetCommitFuture struct {
+type GetCommitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetCommitFuture) Get(ctx workflow.Context) (*codecommit.GetCommitOutput, error) {
+func (r *GetCommitFuture) Get(ctx workflow.Context) (*codecommit.GetCommitOutput, error) {
 	var output codecommit.GetCommitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetDifferencesFuture struct {
+type GetDifferencesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetDifferencesFuture) Get(ctx workflow.Context) (*codecommit.GetDifferencesOutput, error) {
+func (r *GetDifferencesFuture) Get(ctx workflow.Context) (*codecommit.GetDifferencesOutput, error) {
 	var output codecommit.GetDifferencesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetFileFuture struct {
+type GetFileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetFileFuture) Get(ctx workflow.Context) (*codecommit.GetFileOutput, error) {
+func (r *GetFileFuture) Get(ctx workflow.Context) (*codecommit.GetFileOutput, error) {
 	var output codecommit.GetFileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetFolderFuture struct {
+type GetFolderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetFolderFuture) Get(ctx workflow.Context) (*codecommit.GetFolderOutput, error) {
+func (r *GetFolderFuture) Get(ctx workflow.Context) (*codecommit.GetFolderOutput, error) {
 	var output codecommit.GetFolderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetMergeCommitFuture struct {
+type GetMergeCommitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetMergeCommitFuture) Get(ctx workflow.Context) (*codecommit.GetMergeCommitOutput, error) {
+func (r *GetMergeCommitFuture) Get(ctx workflow.Context) (*codecommit.GetMergeCommitOutput, error) {
 	var output codecommit.GetMergeCommitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetMergeConflictsFuture struct {
+type GetMergeConflictsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetMergeConflictsFuture) Get(ctx workflow.Context) (*codecommit.GetMergeConflictsOutput, error) {
+func (r *GetMergeConflictsFuture) Get(ctx workflow.Context) (*codecommit.GetMergeConflictsOutput, error) {
 	var output codecommit.GetMergeConflictsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetMergeOptionsFuture struct {
+type GetMergeOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetMergeOptionsFuture) Get(ctx workflow.Context) (*codecommit.GetMergeOptionsOutput, error) {
+func (r *GetMergeOptionsFuture) Get(ctx workflow.Context) (*codecommit.GetMergeOptionsOutput, error) {
 	var output codecommit.GetMergeOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetPullRequestApprovalStatesFuture struct {
+type GetPullRequestApprovalStatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetPullRequestApprovalStatesFuture) Get(ctx workflow.Context) (*codecommit.GetPullRequestApprovalStatesOutput, error) {
+func (r *GetPullRequestApprovalStatesFuture) Get(ctx workflow.Context) (*codecommit.GetPullRequestApprovalStatesOutput, error) {
 	var output codecommit.GetPullRequestApprovalStatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetPullRequestOverrideStateFuture struct {
+type GetPullRequestOverrideStateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetPullRequestOverrideStateFuture) Get(ctx workflow.Context) (*codecommit.GetPullRequestOverrideStateOutput, error) {
+func (r *GetPullRequestOverrideStateFuture) Get(ctx workflow.Context) (*codecommit.GetPullRequestOverrideStateOutput, error) {
 	var output codecommit.GetPullRequestOverrideStateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetRepositoryFuture struct {
+type GetRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetRepositoryFuture) Get(ctx workflow.Context) (*codecommit.GetRepositoryOutput, error) {
+func (r *GetRepositoryFuture) Get(ctx workflow.Context) (*codecommit.GetRepositoryOutput, error) {
 	var output codecommit.GetRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitGetRepositoryTriggersFuture struct {
+type GetRepositoryTriggersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitGetRepositoryTriggersFuture) Get(ctx workflow.Context) (*codecommit.GetRepositoryTriggersOutput, error) {
+func (r *GetRepositoryTriggersFuture) Get(ctx workflow.Context) (*codecommit.GetRepositoryTriggersOutput, error) {
 	var output codecommit.GetRepositoryTriggersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitListApprovalRuleTemplatesFuture struct {
+type ListApprovalRuleTemplatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitListApprovalRuleTemplatesFuture) Get(ctx workflow.Context) (*codecommit.ListApprovalRuleTemplatesOutput, error) {
+func (r *ListApprovalRuleTemplatesFuture) Get(ctx workflow.Context) (*codecommit.ListApprovalRuleTemplatesOutput, error) {
 	var output codecommit.ListApprovalRuleTemplatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitListAssociatedApprovalRuleTemplatesForRepositoryFuture struct {
+type ListAssociatedApprovalRuleTemplatesForRepositoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitListAssociatedApprovalRuleTemplatesForRepositoryFuture) Get(ctx workflow.Context) (*codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryOutput, error) {
+func (r *ListAssociatedApprovalRuleTemplatesForRepositoryFuture) Get(ctx workflow.Context) (*codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryOutput, error) {
 	var output codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitListBranchesFuture struct {
+type ListBranchesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitListBranchesFuture) Get(ctx workflow.Context) (*codecommit.ListBranchesOutput, error) {
+func (r *ListBranchesFuture) Get(ctx workflow.Context) (*codecommit.ListBranchesOutput, error) {
 	var output codecommit.ListBranchesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitListPullRequestsFuture struct {
+type ListPullRequestsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitListPullRequestsFuture) Get(ctx workflow.Context) (*codecommit.ListPullRequestsOutput, error) {
+func (r *ListPullRequestsFuture) Get(ctx workflow.Context) (*codecommit.ListPullRequestsOutput, error) {
 	var output codecommit.ListPullRequestsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitListRepositoriesFuture struct {
+type ListRepositoriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitListRepositoriesFuture) Get(ctx workflow.Context) (*codecommit.ListRepositoriesOutput, error) {
+func (r *ListRepositoriesFuture) Get(ctx workflow.Context) (*codecommit.ListRepositoriesOutput, error) {
 	var output codecommit.ListRepositoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitListRepositoriesForApprovalRuleTemplateFuture struct {
+type ListRepositoriesForApprovalRuleTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitListRepositoriesForApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*codecommit.ListRepositoriesForApprovalRuleTemplateOutput, error) {
+func (r *ListRepositoriesForApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*codecommit.ListRepositoriesForApprovalRuleTemplateOutput, error) {
 	var output codecommit.ListRepositoriesForApprovalRuleTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitListTagsForResourceFuture) Get(ctx workflow.Context) (*codecommit.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*codecommit.ListTagsForResourceOutput, error) {
 	var output codecommit.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitMergeBranchesByFastForwardFuture struct {
+type MergeBranchesByFastForwardFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitMergeBranchesByFastForwardFuture) Get(ctx workflow.Context) (*codecommit.MergeBranchesByFastForwardOutput, error) {
+func (r *MergeBranchesByFastForwardFuture) Get(ctx workflow.Context) (*codecommit.MergeBranchesByFastForwardOutput, error) {
 	var output codecommit.MergeBranchesByFastForwardOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitMergeBranchesBySquashFuture struct {
+type MergeBranchesBySquashFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitMergeBranchesBySquashFuture) Get(ctx workflow.Context) (*codecommit.MergeBranchesBySquashOutput, error) {
+func (r *MergeBranchesBySquashFuture) Get(ctx workflow.Context) (*codecommit.MergeBranchesBySquashOutput, error) {
 	var output codecommit.MergeBranchesBySquashOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitMergeBranchesByThreeWayFuture struct {
+type MergeBranchesByThreeWayFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitMergeBranchesByThreeWayFuture) Get(ctx workflow.Context) (*codecommit.MergeBranchesByThreeWayOutput, error) {
+func (r *MergeBranchesByThreeWayFuture) Get(ctx workflow.Context) (*codecommit.MergeBranchesByThreeWayOutput, error) {
 	var output codecommit.MergeBranchesByThreeWayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitMergePullRequestByFastForwardFuture struct {
+type MergePullRequestByFastForwardFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitMergePullRequestByFastForwardFuture) Get(ctx workflow.Context) (*codecommit.MergePullRequestByFastForwardOutput, error) {
+func (r *MergePullRequestByFastForwardFuture) Get(ctx workflow.Context) (*codecommit.MergePullRequestByFastForwardOutput, error) {
 	var output codecommit.MergePullRequestByFastForwardOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitMergePullRequestBySquashFuture struct {
+type MergePullRequestBySquashFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitMergePullRequestBySquashFuture) Get(ctx workflow.Context) (*codecommit.MergePullRequestBySquashOutput, error) {
+func (r *MergePullRequestBySquashFuture) Get(ctx workflow.Context) (*codecommit.MergePullRequestBySquashOutput, error) {
 	var output codecommit.MergePullRequestBySquashOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitMergePullRequestByThreeWayFuture struct {
+type MergePullRequestByThreeWayFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitMergePullRequestByThreeWayFuture) Get(ctx workflow.Context) (*codecommit.MergePullRequestByThreeWayOutput, error) {
+func (r *MergePullRequestByThreeWayFuture) Get(ctx workflow.Context) (*codecommit.MergePullRequestByThreeWayOutput, error) {
 	var output codecommit.MergePullRequestByThreeWayOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitOverridePullRequestApprovalRulesFuture struct {
+type OverridePullRequestApprovalRulesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitOverridePullRequestApprovalRulesFuture) Get(ctx workflow.Context) (*codecommit.OverridePullRequestApprovalRulesOutput, error) {
+func (r *OverridePullRequestApprovalRulesFuture) Get(ctx workflow.Context) (*codecommit.OverridePullRequestApprovalRulesOutput, error) {
 	var output codecommit.OverridePullRequestApprovalRulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitPostCommentForComparedCommitFuture struct {
+type PostCommentForComparedCommitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitPostCommentForComparedCommitFuture) Get(ctx workflow.Context) (*codecommit.PostCommentForComparedCommitOutput, error) {
+func (r *PostCommentForComparedCommitFuture) Get(ctx workflow.Context) (*codecommit.PostCommentForComparedCommitOutput, error) {
 	var output codecommit.PostCommentForComparedCommitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitPostCommentReplyFuture struct {
+type PostCommentReplyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitPostCommentReplyFuture) Get(ctx workflow.Context) (*codecommit.PostCommentReplyOutput, error) {
+func (r *PostCommentReplyFuture) Get(ctx workflow.Context) (*codecommit.PostCommentReplyOutput, error) {
 	var output codecommit.PostCommentReplyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitPutCommentReactionFuture struct {
+type PutCommentReactionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitPutCommentReactionFuture) Get(ctx workflow.Context) (*codecommit.PutCommentReactionOutput, error) {
+func (r *PutCommentReactionFuture) Get(ctx workflow.Context) (*codecommit.PutCommentReactionOutput, error) {
 	var output codecommit.PutCommentReactionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitPutFileFuture struct {
+type PutFileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitPutFileFuture) Get(ctx workflow.Context) (*codecommit.PutFileOutput, error) {
+func (r *PutFileFuture) Get(ctx workflow.Context) (*codecommit.PutFileOutput, error) {
 	var output codecommit.PutFileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitPutRepositoryTriggersFuture struct {
+type PutRepositoryTriggersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitPutRepositoryTriggersFuture) Get(ctx workflow.Context) (*codecommit.PutRepositoryTriggersOutput, error) {
+func (r *PutRepositoryTriggersFuture) Get(ctx workflow.Context) (*codecommit.PutRepositoryTriggersOutput, error) {
 	var output codecommit.PutRepositoryTriggersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitTagResourceFuture) Get(ctx workflow.Context) (*codecommit.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*codecommit.TagResourceOutput, error) {
 	var output codecommit.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitTestRepositoryTriggersFuture struct {
+type TestRepositoryTriggersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitTestRepositoryTriggersFuture) Get(ctx workflow.Context) (*codecommit.TestRepositoryTriggersOutput, error) {
+func (r *TestRepositoryTriggersFuture) Get(ctx workflow.Context) (*codecommit.TestRepositoryTriggersOutput, error) {
 	var output codecommit.TestRepositoryTriggersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUntagResourceFuture) Get(ctx workflow.Context) (*codecommit.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*codecommit.UntagResourceOutput, error) {
 	var output codecommit.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdateApprovalRuleTemplateContentFuture struct {
+type UpdateApprovalRuleTemplateContentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdateApprovalRuleTemplateContentFuture) Get(ctx workflow.Context) (*codecommit.UpdateApprovalRuleTemplateContentOutput, error) {
+func (r *UpdateApprovalRuleTemplateContentFuture) Get(ctx workflow.Context) (*codecommit.UpdateApprovalRuleTemplateContentOutput, error) {
 	var output codecommit.UpdateApprovalRuleTemplateContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdateApprovalRuleTemplateDescriptionFuture struct {
+type UpdateApprovalRuleTemplateDescriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdateApprovalRuleTemplateDescriptionFuture) Get(ctx workflow.Context) (*codecommit.UpdateApprovalRuleTemplateDescriptionOutput, error) {
+func (r *UpdateApprovalRuleTemplateDescriptionFuture) Get(ctx workflow.Context) (*codecommit.UpdateApprovalRuleTemplateDescriptionOutput, error) {
 	var output codecommit.UpdateApprovalRuleTemplateDescriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdateApprovalRuleTemplateNameFuture struct {
+type UpdateApprovalRuleTemplateNameFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdateApprovalRuleTemplateNameFuture) Get(ctx workflow.Context) (*codecommit.UpdateApprovalRuleTemplateNameOutput, error) {
+func (r *UpdateApprovalRuleTemplateNameFuture) Get(ctx workflow.Context) (*codecommit.UpdateApprovalRuleTemplateNameOutput, error) {
 	var output codecommit.UpdateApprovalRuleTemplateNameOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdateCommentFuture struct {
+type UpdateCommentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdateCommentFuture) Get(ctx workflow.Context) (*codecommit.UpdateCommentOutput, error) {
+func (r *UpdateCommentFuture) Get(ctx workflow.Context) (*codecommit.UpdateCommentOutput, error) {
 	var output codecommit.UpdateCommentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdateDefaultBranchFuture struct {
+type UpdateDefaultBranchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdateDefaultBranchFuture) Get(ctx workflow.Context) (*codecommit.UpdateDefaultBranchOutput, error) {
+func (r *UpdateDefaultBranchFuture) Get(ctx workflow.Context) (*codecommit.UpdateDefaultBranchOutput, error) {
 	var output codecommit.UpdateDefaultBranchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdatePullRequestApprovalRuleContentFuture struct {
+type UpdatePullRequestApprovalRuleContentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdatePullRequestApprovalRuleContentFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestApprovalRuleContentOutput, error) {
+func (r *UpdatePullRequestApprovalRuleContentFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestApprovalRuleContentOutput, error) {
 	var output codecommit.UpdatePullRequestApprovalRuleContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdatePullRequestApprovalStateFuture struct {
+type UpdatePullRequestApprovalStateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdatePullRequestApprovalStateFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestApprovalStateOutput, error) {
+func (r *UpdatePullRequestApprovalStateFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestApprovalStateOutput, error) {
 	var output codecommit.UpdatePullRequestApprovalStateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdatePullRequestDescriptionFuture struct {
+type UpdatePullRequestDescriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdatePullRequestDescriptionFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestDescriptionOutput, error) {
+func (r *UpdatePullRequestDescriptionFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestDescriptionOutput, error) {
 	var output codecommit.UpdatePullRequestDescriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdatePullRequestStatusFuture struct {
+type UpdatePullRequestStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdatePullRequestStatusFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestStatusOutput, error) {
+func (r *UpdatePullRequestStatusFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestStatusOutput, error) {
 	var output codecommit.UpdatePullRequestStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdatePullRequestTitleFuture struct {
+type UpdatePullRequestTitleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdatePullRequestTitleFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestTitleOutput, error) {
+func (r *UpdatePullRequestTitleFuture) Get(ctx workflow.Context) (*codecommit.UpdatePullRequestTitleOutput, error) {
 	var output codecommit.UpdatePullRequestTitleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdateRepositoryDescriptionFuture struct {
+type UpdateRepositoryDescriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdateRepositoryDescriptionFuture) Get(ctx workflow.Context) (*codecommit.UpdateRepositoryDescriptionOutput, error) {
+func (r *UpdateRepositoryDescriptionFuture) Get(ctx workflow.Context) (*codecommit.UpdateRepositoryDescriptionOutput, error) {
 	var output codecommit.UpdateRepositoryDescriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeCommitUpdateRepositoryNameFuture struct {
+type UpdateRepositoryNameFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeCommitUpdateRepositoryNameFuture) Get(ctx workflow.Context) (*codecommit.UpdateRepositoryNameOutput, error) {
+func (r *UpdateRepositoryNameFuture) Get(ctx workflow.Context) (*codecommit.UpdateRepositoryNameOutput, error) {
 	var output codecommit.UpdateRepositoryNameOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -825,9 +825,9 @@ func (a *stub) AssociateApprovalRuleTemplateWithRepository(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *stub) AssociateApprovalRuleTemplateWithRepositoryAsync(ctx workflow.Context, input *codecommit.AssociateApprovalRuleTemplateWithRepositoryInput) *CodeCommitAssociateApprovalRuleTemplateWithRepositoryFuture {
+func (a *stub) AssociateApprovalRuleTemplateWithRepositoryAsync(ctx workflow.Context, input *codecommit.AssociateApprovalRuleTemplateWithRepositoryInput) *AssociateApprovalRuleTemplateWithRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.AssociateApprovalRuleTemplateWithRepository", input)
-	return &CodeCommitAssociateApprovalRuleTemplateWithRepositoryFuture{Future: future}
+	return &AssociateApprovalRuleTemplateWithRepositoryFuture{Future: future}
 }
 
 func (a *stub) BatchAssociateApprovalRuleTemplateWithRepositories(ctx workflow.Context, input *codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesInput) (*codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) BatchAssociateApprovalRuleTemplateWithRepositories(ctx workflow.C
 	return &output, err
 }
 
-func (a *stub) BatchAssociateApprovalRuleTemplateWithRepositoriesAsync(ctx workflow.Context, input *codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesInput) *CodeCommitBatchAssociateApprovalRuleTemplateWithRepositoriesFuture {
+func (a *stub) BatchAssociateApprovalRuleTemplateWithRepositoriesAsync(ctx workflow.Context, input *codecommit.BatchAssociateApprovalRuleTemplateWithRepositoriesInput) *BatchAssociateApprovalRuleTemplateWithRepositoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.BatchAssociateApprovalRuleTemplateWithRepositories", input)
-	return &CodeCommitBatchAssociateApprovalRuleTemplateWithRepositoriesFuture{Future: future}
+	return &BatchAssociateApprovalRuleTemplateWithRepositoriesFuture{Future: future}
 }
 
 func (a *stub) BatchDescribeMergeConflicts(ctx workflow.Context, input *codecommit.BatchDescribeMergeConflictsInput) (*codecommit.BatchDescribeMergeConflictsOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) BatchDescribeMergeConflicts(ctx workflow.Context, input *codecomm
 	return &output, err
 }
 
-func (a *stub) BatchDescribeMergeConflictsAsync(ctx workflow.Context, input *codecommit.BatchDescribeMergeConflictsInput) *CodeCommitBatchDescribeMergeConflictsFuture {
+func (a *stub) BatchDescribeMergeConflictsAsync(ctx workflow.Context, input *codecommit.BatchDescribeMergeConflictsInput) *BatchDescribeMergeConflictsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.BatchDescribeMergeConflicts", input)
-	return &CodeCommitBatchDescribeMergeConflictsFuture{Future: future}
+	return &BatchDescribeMergeConflictsFuture{Future: future}
 }
 
 func (a *stub) BatchDisassociateApprovalRuleTemplateFromRepositories(ctx workflow.Context, input *codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesInput) (*codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) BatchDisassociateApprovalRuleTemplateFromRepositories(ctx workflo
 	return &output, err
 }
 
-func (a *stub) BatchDisassociateApprovalRuleTemplateFromRepositoriesAsync(ctx workflow.Context, input *codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesInput) *CodeCommitBatchDisassociateApprovalRuleTemplateFromRepositoriesFuture {
+func (a *stub) BatchDisassociateApprovalRuleTemplateFromRepositoriesAsync(ctx workflow.Context, input *codecommit.BatchDisassociateApprovalRuleTemplateFromRepositoriesInput) *BatchDisassociateApprovalRuleTemplateFromRepositoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.BatchDisassociateApprovalRuleTemplateFromRepositories", input)
-	return &CodeCommitBatchDisassociateApprovalRuleTemplateFromRepositoriesFuture{Future: future}
+	return &BatchDisassociateApprovalRuleTemplateFromRepositoriesFuture{Future: future}
 }
 
 func (a *stub) BatchGetCommits(ctx workflow.Context, input *codecommit.BatchGetCommitsInput) (*codecommit.BatchGetCommitsOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) BatchGetCommits(ctx workflow.Context, input *codecommit.BatchGetC
 	return &output, err
 }
 
-func (a *stub) BatchGetCommitsAsync(ctx workflow.Context, input *codecommit.BatchGetCommitsInput) *CodeCommitBatchGetCommitsFuture {
+func (a *stub) BatchGetCommitsAsync(ctx workflow.Context, input *codecommit.BatchGetCommitsInput) *BatchGetCommitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.BatchGetCommits", input)
-	return &CodeCommitBatchGetCommitsFuture{Future: future}
+	return &BatchGetCommitsFuture{Future: future}
 }
 
 func (a *stub) BatchGetRepositories(ctx workflow.Context, input *codecommit.BatchGetRepositoriesInput) (*codecommit.BatchGetRepositoriesOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) BatchGetRepositories(ctx workflow.Context, input *codecommit.Batc
 	return &output, err
 }
 
-func (a *stub) BatchGetRepositoriesAsync(ctx workflow.Context, input *codecommit.BatchGetRepositoriesInput) *CodeCommitBatchGetRepositoriesFuture {
+func (a *stub) BatchGetRepositoriesAsync(ctx workflow.Context, input *codecommit.BatchGetRepositoriesInput) *BatchGetRepositoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.BatchGetRepositories", input)
-	return &CodeCommitBatchGetRepositoriesFuture{Future: future}
+	return &BatchGetRepositoriesFuture{Future: future}
 }
 
 func (a *stub) CreateApprovalRuleTemplate(ctx workflow.Context, input *codecommit.CreateApprovalRuleTemplateInput) (*codecommit.CreateApprovalRuleTemplateOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) CreateApprovalRuleTemplate(ctx workflow.Context, input *codecommi
 	return &output, err
 }
 
-func (a *stub) CreateApprovalRuleTemplateAsync(ctx workflow.Context, input *codecommit.CreateApprovalRuleTemplateInput) *CodeCommitCreateApprovalRuleTemplateFuture {
+func (a *stub) CreateApprovalRuleTemplateAsync(ctx workflow.Context, input *codecommit.CreateApprovalRuleTemplateInput) *CreateApprovalRuleTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.CreateApprovalRuleTemplate", input)
-	return &CodeCommitCreateApprovalRuleTemplateFuture{Future: future}
+	return &CreateApprovalRuleTemplateFuture{Future: future}
 }
 
 func (a *stub) CreateBranch(ctx workflow.Context, input *codecommit.CreateBranchInput) (*codecommit.CreateBranchOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) CreateBranch(ctx workflow.Context, input *codecommit.CreateBranch
 	return &output, err
 }
 
-func (a *stub) CreateBranchAsync(ctx workflow.Context, input *codecommit.CreateBranchInput) *CodeCommitCreateBranchFuture {
+func (a *stub) CreateBranchAsync(ctx workflow.Context, input *codecommit.CreateBranchInput) *CreateBranchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.CreateBranch", input)
-	return &CodeCommitCreateBranchFuture{Future: future}
+	return &CreateBranchFuture{Future: future}
 }
 
 func (a *stub) CreateCommit(ctx workflow.Context, input *codecommit.CreateCommitInput) (*codecommit.CreateCommitOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) CreateCommit(ctx workflow.Context, input *codecommit.CreateCommit
 	return &output, err
 }
 
-func (a *stub) CreateCommitAsync(ctx workflow.Context, input *codecommit.CreateCommitInput) *CodeCommitCreateCommitFuture {
+func (a *stub) CreateCommitAsync(ctx workflow.Context, input *codecommit.CreateCommitInput) *CreateCommitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.CreateCommit", input)
-	return &CodeCommitCreateCommitFuture{Future: future}
+	return &CreateCommitFuture{Future: future}
 }
 
 func (a *stub) CreatePullRequestApprovalRule(ctx workflow.Context, input *codecommit.CreatePullRequestApprovalRuleInput) (*codecommit.CreatePullRequestApprovalRuleOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) CreatePullRequestApprovalRule(ctx workflow.Context, input *codeco
 	return &output, err
 }
 
-func (a *stub) CreatePullRequestApprovalRuleAsync(ctx workflow.Context, input *codecommit.CreatePullRequestApprovalRuleInput) *CodeCommitCreatePullRequestApprovalRuleFuture {
+func (a *stub) CreatePullRequestApprovalRuleAsync(ctx workflow.Context, input *codecommit.CreatePullRequestApprovalRuleInput) *CreatePullRequestApprovalRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.CreatePullRequestApprovalRule", input)
-	return &CodeCommitCreatePullRequestApprovalRuleFuture{Future: future}
+	return &CreatePullRequestApprovalRuleFuture{Future: future}
 }
 
 func (a *stub) CreateRepository(ctx workflow.Context, input *codecommit.CreateRepositoryInput) (*codecommit.CreateRepositoryOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) CreateRepository(ctx workflow.Context, input *codecommit.CreateRe
 	return &output, err
 }
 
-func (a *stub) CreateRepositoryAsync(ctx workflow.Context, input *codecommit.CreateRepositoryInput) *CodeCommitCreateRepositoryFuture {
+func (a *stub) CreateRepositoryAsync(ctx workflow.Context, input *codecommit.CreateRepositoryInput) *CreateRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.CreateRepository", input)
-	return &CodeCommitCreateRepositoryFuture{Future: future}
+	return &CreateRepositoryFuture{Future: future}
 }
 
 func (a *stub) CreateUnreferencedMergeCommit(ctx workflow.Context, input *codecommit.CreateUnreferencedMergeCommitInput) (*codecommit.CreateUnreferencedMergeCommitOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) CreateUnreferencedMergeCommit(ctx workflow.Context, input *codeco
 	return &output, err
 }
 
-func (a *stub) CreateUnreferencedMergeCommitAsync(ctx workflow.Context, input *codecommit.CreateUnreferencedMergeCommitInput) *CodeCommitCreateUnreferencedMergeCommitFuture {
+func (a *stub) CreateUnreferencedMergeCommitAsync(ctx workflow.Context, input *codecommit.CreateUnreferencedMergeCommitInput) *CreateUnreferencedMergeCommitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.CreateUnreferencedMergeCommit", input)
-	return &CodeCommitCreateUnreferencedMergeCommitFuture{Future: future}
+	return &CreateUnreferencedMergeCommitFuture{Future: future}
 }
 
 func (a *stub) DeleteApprovalRuleTemplate(ctx workflow.Context, input *codecommit.DeleteApprovalRuleTemplateInput) (*codecommit.DeleteApprovalRuleTemplateOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) DeleteApprovalRuleTemplate(ctx workflow.Context, input *codecommi
 	return &output, err
 }
 
-func (a *stub) DeleteApprovalRuleTemplateAsync(ctx workflow.Context, input *codecommit.DeleteApprovalRuleTemplateInput) *CodeCommitDeleteApprovalRuleTemplateFuture {
+func (a *stub) DeleteApprovalRuleTemplateAsync(ctx workflow.Context, input *codecommit.DeleteApprovalRuleTemplateInput) *DeleteApprovalRuleTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DeleteApprovalRuleTemplate", input)
-	return &CodeCommitDeleteApprovalRuleTemplateFuture{Future: future}
+	return &DeleteApprovalRuleTemplateFuture{Future: future}
 }
 
 func (a *stub) DeleteBranch(ctx workflow.Context, input *codecommit.DeleteBranchInput) (*codecommit.DeleteBranchOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) DeleteBranch(ctx workflow.Context, input *codecommit.DeleteBranch
 	return &output, err
 }
 
-func (a *stub) DeleteBranchAsync(ctx workflow.Context, input *codecommit.DeleteBranchInput) *CodeCommitDeleteBranchFuture {
+func (a *stub) DeleteBranchAsync(ctx workflow.Context, input *codecommit.DeleteBranchInput) *DeleteBranchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DeleteBranch", input)
-	return &CodeCommitDeleteBranchFuture{Future: future}
+	return &DeleteBranchFuture{Future: future}
 }
 
 func (a *stub) DeleteCommentContent(ctx workflow.Context, input *codecommit.DeleteCommentContentInput) (*codecommit.DeleteCommentContentOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) DeleteCommentContent(ctx workflow.Context, input *codecommit.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteCommentContentAsync(ctx workflow.Context, input *codecommit.DeleteCommentContentInput) *CodeCommitDeleteCommentContentFuture {
+func (a *stub) DeleteCommentContentAsync(ctx workflow.Context, input *codecommit.DeleteCommentContentInput) *DeleteCommentContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DeleteCommentContent", input)
-	return &CodeCommitDeleteCommentContentFuture{Future: future}
+	return &DeleteCommentContentFuture{Future: future}
 }
 
 func (a *stub) DeleteFile(ctx workflow.Context, input *codecommit.DeleteFileInput) (*codecommit.DeleteFileOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) DeleteFile(ctx workflow.Context, input *codecommit.DeleteFileInpu
 	return &output, err
 }
 
-func (a *stub) DeleteFileAsync(ctx workflow.Context, input *codecommit.DeleteFileInput) *CodeCommitDeleteFileFuture {
+func (a *stub) DeleteFileAsync(ctx workflow.Context, input *codecommit.DeleteFileInput) *DeleteFileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DeleteFile", input)
-	return &CodeCommitDeleteFileFuture{Future: future}
+	return &DeleteFileFuture{Future: future}
 }
 
 func (a *stub) DeletePullRequestApprovalRule(ctx workflow.Context, input *codecommit.DeletePullRequestApprovalRuleInput) (*codecommit.DeletePullRequestApprovalRuleOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) DeletePullRequestApprovalRule(ctx workflow.Context, input *codeco
 	return &output, err
 }
 
-func (a *stub) DeletePullRequestApprovalRuleAsync(ctx workflow.Context, input *codecommit.DeletePullRequestApprovalRuleInput) *CodeCommitDeletePullRequestApprovalRuleFuture {
+func (a *stub) DeletePullRequestApprovalRuleAsync(ctx workflow.Context, input *codecommit.DeletePullRequestApprovalRuleInput) *DeletePullRequestApprovalRuleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DeletePullRequestApprovalRule", input)
-	return &CodeCommitDeletePullRequestApprovalRuleFuture{Future: future}
+	return &DeletePullRequestApprovalRuleFuture{Future: future}
 }
 
 func (a *stub) DeleteRepository(ctx workflow.Context, input *codecommit.DeleteRepositoryInput) (*codecommit.DeleteRepositoryOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) DeleteRepository(ctx workflow.Context, input *codecommit.DeleteRe
 	return &output, err
 }
 
-func (a *stub) DeleteRepositoryAsync(ctx workflow.Context, input *codecommit.DeleteRepositoryInput) *CodeCommitDeleteRepositoryFuture {
+func (a *stub) DeleteRepositoryAsync(ctx workflow.Context, input *codecommit.DeleteRepositoryInput) *DeleteRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DeleteRepository", input)
-	return &CodeCommitDeleteRepositoryFuture{Future: future}
+	return &DeleteRepositoryFuture{Future: future}
 }
 
 func (a *stub) DescribeMergeConflicts(ctx workflow.Context, input *codecommit.DescribeMergeConflictsInput) (*codecommit.DescribeMergeConflictsOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) DescribeMergeConflicts(ctx workflow.Context, input *codecommit.De
 	return &output, err
 }
 
-func (a *stub) DescribeMergeConflictsAsync(ctx workflow.Context, input *codecommit.DescribeMergeConflictsInput) *CodeCommitDescribeMergeConflictsFuture {
+func (a *stub) DescribeMergeConflictsAsync(ctx workflow.Context, input *codecommit.DescribeMergeConflictsInput) *DescribeMergeConflictsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DescribeMergeConflicts", input)
-	return &CodeCommitDescribeMergeConflictsFuture{Future: future}
+	return &DescribeMergeConflictsFuture{Future: future}
 }
 
 func (a *stub) DescribePullRequestEvents(ctx workflow.Context, input *codecommit.DescribePullRequestEventsInput) (*codecommit.DescribePullRequestEventsOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) DescribePullRequestEvents(ctx workflow.Context, input *codecommit
 	return &output, err
 }
 
-func (a *stub) DescribePullRequestEventsAsync(ctx workflow.Context, input *codecommit.DescribePullRequestEventsInput) *CodeCommitDescribePullRequestEventsFuture {
+func (a *stub) DescribePullRequestEventsAsync(ctx workflow.Context, input *codecommit.DescribePullRequestEventsInput) *DescribePullRequestEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DescribePullRequestEvents", input)
-	return &CodeCommitDescribePullRequestEventsFuture{Future: future}
+	return &DescribePullRequestEventsFuture{Future: future}
 }
 
 func (a *stub) DisassociateApprovalRuleTemplateFromRepository(ctx workflow.Context, input *codecommit.DisassociateApprovalRuleTemplateFromRepositoryInput) (*codecommit.DisassociateApprovalRuleTemplateFromRepositoryOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) DisassociateApprovalRuleTemplateFromRepository(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *stub) DisassociateApprovalRuleTemplateFromRepositoryAsync(ctx workflow.Context, input *codecommit.DisassociateApprovalRuleTemplateFromRepositoryInput) *CodeCommitDisassociateApprovalRuleTemplateFromRepositoryFuture {
+func (a *stub) DisassociateApprovalRuleTemplateFromRepositoryAsync(ctx workflow.Context, input *codecommit.DisassociateApprovalRuleTemplateFromRepositoryInput) *DisassociateApprovalRuleTemplateFromRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.DisassociateApprovalRuleTemplateFromRepository", input)
-	return &CodeCommitDisassociateApprovalRuleTemplateFromRepositoryFuture{Future: future}
+	return &DisassociateApprovalRuleTemplateFromRepositoryFuture{Future: future}
 }
 
 func (a *stub) EvaluatePullRequestApprovalRules(ctx workflow.Context, input *codecommit.EvaluatePullRequestApprovalRulesInput) (*codecommit.EvaluatePullRequestApprovalRulesOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) EvaluatePullRequestApprovalRules(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *stub) EvaluatePullRequestApprovalRulesAsync(ctx workflow.Context, input *codecommit.EvaluatePullRequestApprovalRulesInput) *CodeCommitEvaluatePullRequestApprovalRulesFuture {
+func (a *stub) EvaluatePullRequestApprovalRulesAsync(ctx workflow.Context, input *codecommit.EvaluatePullRequestApprovalRulesInput) *EvaluatePullRequestApprovalRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.EvaluatePullRequestApprovalRules", input)
-	return &CodeCommitEvaluatePullRequestApprovalRulesFuture{Future: future}
+	return &EvaluatePullRequestApprovalRulesFuture{Future: future}
 }
 
 func (a *stub) GetApprovalRuleTemplate(ctx workflow.Context, input *codecommit.GetApprovalRuleTemplateInput) (*codecommit.GetApprovalRuleTemplateOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) GetApprovalRuleTemplate(ctx workflow.Context, input *codecommit.G
 	return &output, err
 }
 
-func (a *stub) GetApprovalRuleTemplateAsync(ctx workflow.Context, input *codecommit.GetApprovalRuleTemplateInput) *CodeCommitGetApprovalRuleTemplateFuture {
+func (a *stub) GetApprovalRuleTemplateAsync(ctx workflow.Context, input *codecommit.GetApprovalRuleTemplateInput) *GetApprovalRuleTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetApprovalRuleTemplate", input)
-	return &CodeCommitGetApprovalRuleTemplateFuture{Future: future}
+	return &GetApprovalRuleTemplateFuture{Future: future}
 }
 
 func (a *stub) GetBlob(ctx workflow.Context, input *codecommit.GetBlobInput) (*codecommit.GetBlobOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) GetBlob(ctx workflow.Context, input *codecommit.GetBlobInput) (*c
 	return &output, err
 }
 
-func (a *stub) GetBlobAsync(ctx workflow.Context, input *codecommit.GetBlobInput) *CodeCommitGetBlobFuture {
+func (a *stub) GetBlobAsync(ctx workflow.Context, input *codecommit.GetBlobInput) *GetBlobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetBlob", input)
-	return &CodeCommitGetBlobFuture{Future: future}
+	return &GetBlobFuture{Future: future}
 }
 
 func (a *stub) GetBranch(ctx workflow.Context, input *codecommit.GetBranchInput) (*codecommit.GetBranchOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) GetBranch(ctx workflow.Context, input *codecommit.GetBranchInput)
 	return &output, err
 }
 
-func (a *stub) GetBranchAsync(ctx workflow.Context, input *codecommit.GetBranchInput) *CodeCommitGetBranchFuture {
+func (a *stub) GetBranchAsync(ctx workflow.Context, input *codecommit.GetBranchInput) *GetBranchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetBranch", input)
-	return &CodeCommitGetBranchFuture{Future: future}
+	return &GetBranchFuture{Future: future}
 }
 
 func (a *stub) GetComment(ctx workflow.Context, input *codecommit.GetCommentInput) (*codecommit.GetCommentOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) GetComment(ctx workflow.Context, input *codecommit.GetCommentInpu
 	return &output, err
 }
 
-func (a *stub) GetCommentAsync(ctx workflow.Context, input *codecommit.GetCommentInput) *CodeCommitGetCommentFuture {
+func (a *stub) GetCommentAsync(ctx workflow.Context, input *codecommit.GetCommentInput) *GetCommentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetComment", input)
-	return &CodeCommitGetCommentFuture{Future: future}
+	return &GetCommentFuture{Future: future}
 }
 
 func (a *stub) GetCommentReactions(ctx workflow.Context, input *codecommit.GetCommentReactionsInput) (*codecommit.GetCommentReactionsOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) GetCommentReactions(ctx workflow.Context, input *codecommit.GetCo
 	return &output, err
 }
 
-func (a *stub) GetCommentReactionsAsync(ctx workflow.Context, input *codecommit.GetCommentReactionsInput) *CodeCommitGetCommentReactionsFuture {
+func (a *stub) GetCommentReactionsAsync(ctx workflow.Context, input *codecommit.GetCommentReactionsInput) *GetCommentReactionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetCommentReactions", input)
-	return &CodeCommitGetCommentReactionsFuture{Future: future}
+	return &GetCommentReactionsFuture{Future: future}
 }
 
 func (a *stub) GetCommentsForComparedCommit(ctx workflow.Context, input *codecommit.GetCommentsForComparedCommitInput) (*codecommit.GetCommentsForComparedCommitOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) GetCommentsForComparedCommit(ctx workflow.Context, input *codecom
 	return &output, err
 }
 
-func (a *stub) GetCommentsForComparedCommitAsync(ctx workflow.Context, input *codecommit.GetCommentsForComparedCommitInput) *CodeCommitGetCommentsForComparedCommitFuture {
+func (a *stub) GetCommentsForComparedCommitAsync(ctx workflow.Context, input *codecommit.GetCommentsForComparedCommitInput) *GetCommentsForComparedCommitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetCommentsForComparedCommit", input)
-	return &CodeCommitGetCommentsForComparedCommitFuture{Future: future}
+	return &GetCommentsForComparedCommitFuture{Future: future}
 }
 
 func (a *stub) GetCommit(ctx workflow.Context, input *codecommit.GetCommitInput) (*codecommit.GetCommitOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) GetCommit(ctx workflow.Context, input *codecommit.GetCommitInput)
 	return &output, err
 }
 
-func (a *stub) GetCommitAsync(ctx workflow.Context, input *codecommit.GetCommitInput) *CodeCommitGetCommitFuture {
+func (a *stub) GetCommitAsync(ctx workflow.Context, input *codecommit.GetCommitInput) *GetCommitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetCommit", input)
-	return &CodeCommitGetCommitFuture{Future: future}
+	return &GetCommitFuture{Future: future}
 }
 
 func (a *stub) GetDifferences(ctx workflow.Context, input *codecommit.GetDifferencesInput) (*codecommit.GetDifferencesOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) GetDifferences(ctx workflow.Context, input *codecommit.GetDiffere
 	return &output, err
 }
 
-func (a *stub) GetDifferencesAsync(ctx workflow.Context, input *codecommit.GetDifferencesInput) *CodeCommitGetDifferencesFuture {
+func (a *stub) GetDifferencesAsync(ctx workflow.Context, input *codecommit.GetDifferencesInput) *GetDifferencesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetDifferences", input)
-	return &CodeCommitGetDifferencesFuture{Future: future}
+	return &GetDifferencesFuture{Future: future}
 }
 
 func (a *stub) GetFile(ctx workflow.Context, input *codecommit.GetFileInput) (*codecommit.GetFileOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) GetFile(ctx workflow.Context, input *codecommit.GetFileInput) (*c
 	return &output, err
 }
 
-func (a *stub) GetFileAsync(ctx workflow.Context, input *codecommit.GetFileInput) *CodeCommitGetFileFuture {
+func (a *stub) GetFileAsync(ctx workflow.Context, input *codecommit.GetFileInput) *GetFileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetFile", input)
-	return &CodeCommitGetFileFuture{Future: future}
+	return &GetFileFuture{Future: future}
 }
 
 func (a *stub) GetFolder(ctx workflow.Context, input *codecommit.GetFolderInput) (*codecommit.GetFolderOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) GetFolder(ctx workflow.Context, input *codecommit.GetFolderInput)
 	return &output, err
 }
 
-func (a *stub) GetFolderAsync(ctx workflow.Context, input *codecommit.GetFolderInput) *CodeCommitGetFolderFuture {
+func (a *stub) GetFolderAsync(ctx workflow.Context, input *codecommit.GetFolderInput) *GetFolderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetFolder", input)
-	return &CodeCommitGetFolderFuture{Future: future}
+	return &GetFolderFuture{Future: future}
 }
 
 func (a *stub) GetMergeCommit(ctx workflow.Context, input *codecommit.GetMergeCommitInput) (*codecommit.GetMergeCommitOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) GetMergeCommit(ctx workflow.Context, input *codecommit.GetMergeCo
 	return &output, err
 }
 
-func (a *stub) GetMergeCommitAsync(ctx workflow.Context, input *codecommit.GetMergeCommitInput) *CodeCommitGetMergeCommitFuture {
+func (a *stub) GetMergeCommitAsync(ctx workflow.Context, input *codecommit.GetMergeCommitInput) *GetMergeCommitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetMergeCommit", input)
-	return &CodeCommitGetMergeCommitFuture{Future: future}
+	return &GetMergeCommitFuture{Future: future}
 }
 
 func (a *stub) GetMergeConflicts(ctx workflow.Context, input *codecommit.GetMergeConflictsInput) (*codecommit.GetMergeConflictsOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) GetMergeConflicts(ctx workflow.Context, input *codecommit.GetMerg
 	return &output, err
 }
 
-func (a *stub) GetMergeConflictsAsync(ctx workflow.Context, input *codecommit.GetMergeConflictsInput) *CodeCommitGetMergeConflictsFuture {
+func (a *stub) GetMergeConflictsAsync(ctx workflow.Context, input *codecommit.GetMergeConflictsInput) *GetMergeConflictsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetMergeConflicts", input)
-	return &CodeCommitGetMergeConflictsFuture{Future: future}
+	return &GetMergeConflictsFuture{Future: future}
 }
 
 func (a *stub) GetMergeOptions(ctx workflow.Context, input *codecommit.GetMergeOptionsInput) (*codecommit.GetMergeOptionsOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) GetMergeOptions(ctx workflow.Context, input *codecommit.GetMergeO
 	return &output, err
 }
 
-func (a *stub) GetMergeOptionsAsync(ctx workflow.Context, input *codecommit.GetMergeOptionsInput) *CodeCommitGetMergeOptionsFuture {
+func (a *stub) GetMergeOptionsAsync(ctx workflow.Context, input *codecommit.GetMergeOptionsInput) *GetMergeOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetMergeOptions", input)
-	return &CodeCommitGetMergeOptionsFuture{Future: future}
+	return &GetMergeOptionsFuture{Future: future}
 }
 
 func (a *stub) GetPullRequestApprovalStates(ctx workflow.Context, input *codecommit.GetPullRequestApprovalStatesInput) (*codecommit.GetPullRequestApprovalStatesOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) GetPullRequestApprovalStates(ctx workflow.Context, input *codecom
 	return &output, err
 }
 
-func (a *stub) GetPullRequestApprovalStatesAsync(ctx workflow.Context, input *codecommit.GetPullRequestApprovalStatesInput) *CodeCommitGetPullRequestApprovalStatesFuture {
+func (a *stub) GetPullRequestApprovalStatesAsync(ctx workflow.Context, input *codecommit.GetPullRequestApprovalStatesInput) *GetPullRequestApprovalStatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetPullRequestApprovalStates", input)
-	return &CodeCommitGetPullRequestApprovalStatesFuture{Future: future}
+	return &GetPullRequestApprovalStatesFuture{Future: future}
 }
 
 func (a *stub) GetPullRequestOverrideState(ctx workflow.Context, input *codecommit.GetPullRequestOverrideStateInput) (*codecommit.GetPullRequestOverrideStateOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) GetPullRequestOverrideState(ctx workflow.Context, input *codecomm
 	return &output, err
 }
 
-func (a *stub) GetPullRequestOverrideStateAsync(ctx workflow.Context, input *codecommit.GetPullRequestOverrideStateInput) *CodeCommitGetPullRequestOverrideStateFuture {
+func (a *stub) GetPullRequestOverrideStateAsync(ctx workflow.Context, input *codecommit.GetPullRequestOverrideStateInput) *GetPullRequestOverrideStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetPullRequestOverrideState", input)
-	return &CodeCommitGetPullRequestOverrideStateFuture{Future: future}
+	return &GetPullRequestOverrideStateFuture{Future: future}
 }
 
 func (a *stub) GetRepository(ctx workflow.Context, input *codecommit.GetRepositoryInput) (*codecommit.GetRepositoryOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) GetRepository(ctx workflow.Context, input *codecommit.GetReposito
 	return &output, err
 }
 
-func (a *stub) GetRepositoryAsync(ctx workflow.Context, input *codecommit.GetRepositoryInput) *CodeCommitGetRepositoryFuture {
+func (a *stub) GetRepositoryAsync(ctx workflow.Context, input *codecommit.GetRepositoryInput) *GetRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetRepository", input)
-	return &CodeCommitGetRepositoryFuture{Future: future}
+	return &GetRepositoryFuture{Future: future}
 }
 
 func (a *stub) GetRepositoryTriggers(ctx workflow.Context, input *codecommit.GetRepositoryTriggersInput) (*codecommit.GetRepositoryTriggersOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) GetRepositoryTriggers(ctx workflow.Context, input *codecommit.Get
 	return &output, err
 }
 
-func (a *stub) GetRepositoryTriggersAsync(ctx workflow.Context, input *codecommit.GetRepositoryTriggersInput) *CodeCommitGetRepositoryTriggersFuture {
+func (a *stub) GetRepositoryTriggersAsync(ctx workflow.Context, input *codecommit.GetRepositoryTriggersInput) *GetRepositoryTriggersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.GetRepositoryTriggers", input)
-	return &CodeCommitGetRepositoryTriggersFuture{Future: future}
+	return &GetRepositoryTriggersFuture{Future: future}
 }
 
 func (a *stub) ListApprovalRuleTemplates(ctx workflow.Context, input *codecommit.ListApprovalRuleTemplatesInput) (*codecommit.ListApprovalRuleTemplatesOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) ListApprovalRuleTemplates(ctx workflow.Context, input *codecommit
 	return &output, err
 }
 
-func (a *stub) ListApprovalRuleTemplatesAsync(ctx workflow.Context, input *codecommit.ListApprovalRuleTemplatesInput) *CodeCommitListApprovalRuleTemplatesFuture {
+func (a *stub) ListApprovalRuleTemplatesAsync(ctx workflow.Context, input *codecommit.ListApprovalRuleTemplatesInput) *ListApprovalRuleTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.ListApprovalRuleTemplates", input)
-	return &CodeCommitListApprovalRuleTemplatesFuture{Future: future}
+	return &ListApprovalRuleTemplatesFuture{Future: future}
 }
 
 func (a *stub) ListAssociatedApprovalRuleTemplatesForRepository(ctx workflow.Context, input *codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryInput) (*codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) ListAssociatedApprovalRuleTemplatesForRepository(ctx workflow.Con
 	return &output, err
 }
 
-func (a *stub) ListAssociatedApprovalRuleTemplatesForRepositoryAsync(ctx workflow.Context, input *codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryInput) *CodeCommitListAssociatedApprovalRuleTemplatesForRepositoryFuture {
+func (a *stub) ListAssociatedApprovalRuleTemplatesForRepositoryAsync(ctx workflow.Context, input *codecommit.ListAssociatedApprovalRuleTemplatesForRepositoryInput) *ListAssociatedApprovalRuleTemplatesForRepositoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.ListAssociatedApprovalRuleTemplatesForRepository", input)
-	return &CodeCommitListAssociatedApprovalRuleTemplatesForRepositoryFuture{Future: future}
+	return &ListAssociatedApprovalRuleTemplatesForRepositoryFuture{Future: future}
 }
 
 func (a *stub) ListBranches(ctx workflow.Context, input *codecommit.ListBranchesInput) (*codecommit.ListBranchesOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) ListBranches(ctx workflow.Context, input *codecommit.ListBranches
 	return &output, err
 }
 
-func (a *stub) ListBranchesAsync(ctx workflow.Context, input *codecommit.ListBranchesInput) *CodeCommitListBranchesFuture {
+func (a *stub) ListBranchesAsync(ctx workflow.Context, input *codecommit.ListBranchesInput) *ListBranchesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.ListBranches", input)
-	return &CodeCommitListBranchesFuture{Future: future}
+	return &ListBranchesFuture{Future: future}
 }
 
 func (a *stub) ListPullRequests(ctx workflow.Context, input *codecommit.ListPullRequestsInput) (*codecommit.ListPullRequestsOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) ListPullRequests(ctx workflow.Context, input *codecommit.ListPull
 	return &output, err
 }
 
-func (a *stub) ListPullRequestsAsync(ctx workflow.Context, input *codecommit.ListPullRequestsInput) *CodeCommitListPullRequestsFuture {
+func (a *stub) ListPullRequestsAsync(ctx workflow.Context, input *codecommit.ListPullRequestsInput) *ListPullRequestsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.ListPullRequests", input)
-	return &CodeCommitListPullRequestsFuture{Future: future}
+	return &ListPullRequestsFuture{Future: future}
 }
 
 func (a *stub) ListRepositories(ctx workflow.Context, input *codecommit.ListRepositoriesInput) (*codecommit.ListRepositoriesOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) ListRepositories(ctx workflow.Context, input *codecommit.ListRepo
 	return &output, err
 }
 
-func (a *stub) ListRepositoriesAsync(ctx workflow.Context, input *codecommit.ListRepositoriesInput) *CodeCommitListRepositoriesFuture {
+func (a *stub) ListRepositoriesAsync(ctx workflow.Context, input *codecommit.ListRepositoriesInput) *ListRepositoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.ListRepositories", input)
-	return &CodeCommitListRepositoriesFuture{Future: future}
+	return &ListRepositoriesFuture{Future: future}
 }
 
 func (a *stub) ListRepositoriesForApprovalRuleTemplate(ctx workflow.Context, input *codecommit.ListRepositoriesForApprovalRuleTemplateInput) (*codecommit.ListRepositoriesForApprovalRuleTemplateOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) ListRepositoriesForApprovalRuleTemplate(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) ListRepositoriesForApprovalRuleTemplateAsync(ctx workflow.Context, input *codecommit.ListRepositoriesForApprovalRuleTemplateInput) *CodeCommitListRepositoriesForApprovalRuleTemplateFuture {
+func (a *stub) ListRepositoriesForApprovalRuleTemplateAsync(ctx workflow.Context, input *codecommit.ListRepositoriesForApprovalRuleTemplateInput) *ListRepositoriesForApprovalRuleTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.ListRepositoriesForApprovalRuleTemplate", input)
-	return &CodeCommitListRepositoriesForApprovalRuleTemplateFuture{Future: future}
+	return &ListRepositoriesForApprovalRuleTemplateFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *codecommit.ListTagsForResourceInput) (*codecommit.ListTagsForResourceOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *codecommit.ListT
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *codecommit.ListTagsForResourceInput) *CodeCommitListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *codecommit.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.ListTagsForResource", input)
-	return &CodeCommitListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) MergeBranchesByFastForward(ctx workflow.Context, input *codecommit.MergeBranchesByFastForwardInput) (*codecommit.MergeBranchesByFastForwardOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) MergeBranchesByFastForward(ctx workflow.Context, input *codecommi
 	return &output, err
 }
 
-func (a *stub) MergeBranchesByFastForwardAsync(ctx workflow.Context, input *codecommit.MergeBranchesByFastForwardInput) *CodeCommitMergeBranchesByFastForwardFuture {
+func (a *stub) MergeBranchesByFastForwardAsync(ctx workflow.Context, input *codecommit.MergeBranchesByFastForwardInput) *MergeBranchesByFastForwardFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.MergeBranchesByFastForward", input)
-	return &CodeCommitMergeBranchesByFastForwardFuture{Future: future}
+	return &MergeBranchesByFastForwardFuture{Future: future}
 }
 
 func (a *stub) MergeBranchesBySquash(ctx workflow.Context, input *codecommit.MergeBranchesBySquashInput) (*codecommit.MergeBranchesBySquashOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) MergeBranchesBySquash(ctx workflow.Context, input *codecommit.Mer
 	return &output, err
 }
 
-func (a *stub) MergeBranchesBySquashAsync(ctx workflow.Context, input *codecommit.MergeBranchesBySquashInput) *CodeCommitMergeBranchesBySquashFuture {
+func (a *stub) MergeBranchesBySquashAsync(ctx workflow.Context, input *codecommit.MergeBranchesBySquashInput) *MergeBranchesBySquashFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.MergeBranchesBySquash", input)
-	return &CodeCommitMergeBranchesBySquashFuture{Future: future}
+	return &MergeBranchesBySquashFuture{Future: future}
 }
 
 func (a *stub) MergeBranchesByThreeWay(ctx workflow.Context, input *codecommit.MergeBranchesByThreeWayInput) (*codecommit.MergeBranchesByThreeWayOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) MergeBranchesByThreeWay(ctx workflow.Context, input *codecommit.M
 	return &output, err
 }
 
-func (a *stub) MergeBranchesByThreeWayAsync(ctx workflow.Context, input *codecommit.MergeBranchesByThreeWayInput) *CodeCommitMergeBranchesByThreeWayFuture {
+func (a *stub) MergeBranchesByThreeWayAsync(ctx workflow.Context, input *codecommit.MergeBranchesByThreeWayInput) *MergeBranchesByThreeWayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.MergeBranchesByThreeWay", input)
-	return &CodeCommitMergeBranchesByThreeWayFuture{Future: future}
+	return &MergeBranchesByThreeWayFuture{Future: future}
 }
 
 func (a *stub) MergePullRequestByFastForward(ctx workflow.Context, input *codecommit.MergePullRequestByFastForwardInput) (*codecommit.MergePullRequestByFastForwardOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) MergePullRequestByFastForward(ctx workflow.Context, input *codeco
 	return &output, err
 }
 
-func (a *stub) MergePullRequestByFastForwardAsync(ctx workflow.Context, input *codecommit.MergePullRequestByFastForwardInput) *CodeCommitMergePullRequestByFastForwardFuture {
+func (a *stub) MergePullRequestByFastForwardAsync(ctx workflow.Context, input *codecommit.MergePullRequestByFastForwardInput) *MergePullRequestByFastForwardFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.MergePullRequestByFastForward", input)
-	return &CodeCommitMergePullRequestByFastForwardFuture{Future: future}
+	return &MergePullRequestByFastForwardFuture{Future: future}
 }
 
 func (a *stub) MergePullRequestBySquash(ctx workflow.Context, input *codecommit.MergePullRequestBySquashInput) (*codecommit.MergePullRequestBySquashOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) MergePullRequestBySquash(ctx workflow.Context, input *codecommit.
 	return &output, err
 }
 
-func (a *stub) MergePullRequestBySquashAsync(ctx workflow.Context, input *codecommit.MergePullRequestBySquashInput) *CodeCommitMergePullRequestBySquashFuture {
+func (a *stub) MergePullRequestBySquashAsync(ctx workflow.Context, input *codecommit.MergePullRequestBySquashInput) *MergePullRequestBySquashFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.MergePullRequestBySquash", input)
-	return &CodeCommitMergePullRequestBySquashFuture{Future: future}
+	return &MergePullRequestBySquashFuture{Future: future}
 }
 
 func (a *stub) MergePullRequestByThreeWay(ctx workflow.Context, input *codecommit.MergePullRequestByThreeWayInput) (*codecommit.MergePullRequestByThreeWayOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) MergePullRequestByThreeWay(ctx workflow.Context, input *codecommi
 	return &output, err
 }
 
-func (a *stub) MergePullRequestByThreeWayAsync(ctx workflow.Context, input *codecommit.MergePullRequestByThreeWayInput) *CodeCommitMergePullRequestByThreeWayFuture {
+func (a *stub) MergePullRequestByThreeWayAsync(ctx workflow.Context, input *codecommit.MergePullRequestByThreeWayInput) *MergePullRequestByThreeWayFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.MergePullRequestByThreeWay", input)
-	return &CodeCommitMergePullRequestByThreeWayFuture{Future: future}
+	return &MergePullRequestByThreeWayFuture{Future: future}
 }
 
 func (a *stub) OverridePullRequestApprovalRules(ctx workflow.Context, input *codecommit.OverridePullRequestApprovalRulesInput) (*codecommit.OverridePullRequestApprovalRulesOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) OverridePullRequestApprovalRules(ctx workflow.Context, input *cod
 	return &output, err
 }
 
-func (a *stub) OverridePullRequestApprovalRulesAsync(ctx workflow.Context, input *codecommit.OverridePullRequestApprovalRulesInput) *CodeCommitOverridePullRequestApprovalRulesFuture {
+func (a *stub) OverridePullRequestApprovalRulesAsync(ctx workflow.Context, input *codecommit.OverridePullRequestApprovalRulesInput) *OverridePullRequestApprovalRulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.OverridePullRequestApprovalRules", input)
-	return &CodeCommitOverridePullRequestApprovalRulesFuture{Future: future}
+	return &OverridePullRequestApprovalRulesFuture{Future: future}
 }
 
 func (a *stub) PostCommentForComparedCommit(ctx workflow.Context, input *codecommit.PostCommentForComparedCommitInput) (*codecommit.PostCommentForComparedCommitOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) PostCommentForComparedCommit(ctx workflow.Context, input *codecom
 	return &output, err
 }
 
-func (a *stub) PostCommentForComparedCommitAsync(ctx workflow.Context, input *codecommit.PostCommentForComparedCommitInput) *CodeCommitPostCommentForComparedCommitFuture {
+func (a *stub) PostCommentForComparedCommitAsync(ctx workflow.Context, input *codecommit.PostCommentForComparedCommitInput) *PostCommentForComparedCommitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.PostCommentForComparedCommit", input)
-	return &CodeCommitPostCommentForComparedCommitFuture{Future: future}
+	return &PostCommentForComparedCommitFuture{Future: future}
 }
 
 func (a *stub) PostCommentReply(ctx workflow.Context, input *codecommit.PostCommentReplyInput) (*codecommit.PostCommentReplyOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) PostCommentReply(ctx workflow.Context, input *codecommit.PostComm
 	return &output, err
 }
 
-func (a *stub) PostCommentReplyAsync(ctx workflow.Context, input *codecommit.PostCommentReplyInput) *CodeCommitPostCommentReplyFuture {
+func (a *stub) PostCommentReplyAsync(ctx workflow.Context, input *codecommit.PostCommentReplyInput) *PostCommentReplyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.PostCommentReply", input)
-	return &CodeCommitPostCommentReplyFuture{Future: future}
+	return &PostCommentReplyFuture{Future: future}
 }
 
 func (a *stub) PutCommentReaction(ctx workflow.Context, input *codecommit.PutCommentReactionInput) (*codecommit.PutCommentReactionOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) PutCommentReaction(ctx workflow.Context, input *codecommit.PutCom
 	return &output, err
 }
 
-func (a *stub) PutCommentReactionAsync(ctx workflow.Context, input *codecommit.PutCommentReactionInput) *CodeCommitPutCommentReactionFuture {
+func (a *stub) PutCommentReactionAsync(ctx workflow.Context, input *codecommit.PutCommentReactionInput) *PutCommentReactionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.PutCommentReaction", input)
-	return &CodeCommitPutCommentReactionFuture{Future: future}
+	return &PutCommentReactionFuture{Future: future}
 }
 
 func (a *stub) PutFile(ctx workflow.Context, input *codecommit.PutFileInput) (*codecommit.PutFileOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) PutFile(ctx workflow.Context, input *codecommit.PutFileInput) (*c
 	return &output, err
 }
 
-func (a *stub) PutFileAsync(ctx workflow.Context, input *codecommit.PutFileInput) *CodeCommitPutFileFuture {
+func (a *stub) PutFileAsync(ctx workflow.Context, input *codecommit.PutFileInput) *PutFileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.PutFile", input)
-	return &CodeCommitPutFileFuture{Future: future}
+	return &PutFileFuture{Future: future}
 }
 
 func (a *stub) PutRepositoryTriggers(ctx workflow.Context, input *codecommit.PutRepositoryTriggersInput) (*codecommit.PutRepositoryTriggersOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) PutRepositoryTriggers(ctx workflow.Context, input *codecommit.Put
 	return &output, err
 }
 
-func (a *stub) PutRepositoryTriggersAsync(ctx workflow.Context, input *codecommit.PutRepositoryTriggersInput) *CodeCommitPutRepositoryTriggersFuture {
+func (a *stub) PutRepositoryTriggersAsync(ctx workflow.Context, input *codecommit.PutRepositoryTriggersInput) *PutRepositoryTriggersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.PutRepositoryTriggers", input)
-	return &CodeCommitPutRepositoryTriggersFuture{Future: future}
+	return &PutRepositoryTriggersFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *codecommit.TagResourceInput) (*codecommit.TagResourceOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *codecommit.TagResourceIn
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *codecommit.TagResourceInput) *CodeCommitTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *codecommit.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.TagResource", input)
-	return &CodeCommitTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) TestRepositoryTriggers(ctx workflow.Context, input *codecommit.TestRepositoryTriggersInput) (*codecommit.TestRepositoryTriggersOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) TestRepositoryTriggers(ctx workflow.Context, input *codecommit.Te
 	return &output, err
 }
 
-func (a *stub) TestRepositoryTriggersAsync(ctx workflow.Context, input *codecommit.TestRepositoryTriggersInput) *CodeCommitTestRepositoryTriggersFuture {
+func (a *stub) TestRepositoryTriggersAsync(ctx workflow.Context, input *codecommit.TestRepositoryTriggersInput) *TestRepositoryTriggersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.TestRepositoryTriggers", input)
-	return &CodeCommitTestRepositoryTriggersFuture{Future: future}
+	return &TestRepositoryTriggersFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *codecommit.UntagResourceInput) (*codecommit.UntagResourceOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *codecommit.UntagResour
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *codecommit.UntagResourceInput) *CodeCommitUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *codecommit.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UntagResource", input)
-	return &CodeCommitUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateApprovalRuleTemplateContent(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateContentInput) (*codecommit.UpdateApprovalRuleTemplateContentOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) UpdateApprovalRuleTemplateContent(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *stub) UpdateApprovalRuleTemplateContentAsync(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateContentInput) *CodeCommitUpdateApprovalRuleTemplateContentFuture {
+func (a *stub) UpdateApprovalRuleTemplateContentAsync(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateContentInput) *UpdateApprovalRuleTemplateContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdateApprovalRuleTemplateContent", input)
-	return &CodeCommitUpdateApprovalRuleTemplateContentFuture{Future: future}
+	return &UpdateApprovalRuleTemplateContentFuture{Future: future}
 }
 
 func (a *stub) UpdateApprovalRuleTemplateDescription(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateDescriptionInput) (*codecommit.UpdateApprovalRuleTemplateDescriptionOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) UpdateApprovalRuleTemplateDescription(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) UpdateApprovalRuleTemplateDescriptionAsync(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateDescriptionInput) *CodeCommitUpdateApprovalRuleTemplateDescriptionFuture {
+func (a *stub) UpdateApprovalRuleTemplateDescriptionAsync(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateDescriptionInput) *UpdateApprovalRuleTemplateDescriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdateApprovalRuleTemplateDescription", input)
-	return &CodeCommitUpdateApprovalRuleTemplateDescriptionFuture{Future: future}
+	return &UpdateApprovalRuleTemplateDescriptionFuture{Future: future}
 }
 
 func (a *stub) UpdateApprovalRuleTemplateName(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateNameInput) (*codecommit.UpdateApprovalRuleTemplateNameOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) UpdateApprovalRuleTemplateName(ctx workflow.Context, input *codec
 	return &output, err
 }
 
-func (a *stub) UpdateApprovalRuleTemplateNameAsync(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateNameInput) *CodeCommitUpdateApprovalRuleTemplateNameFuture {
+func (a *stub) UpdateApprovalRuleTemplateNameAsync(ctx workflow.Context, input *codecommit.UpdateApprovalRuleTemplateNameInput) *UpdateApprovalRuleTemplateNameFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdateApprovalRuleTemplateName", input)
-	return &CodeCommitUpdateApprovalRuleTemplateNameFuture{Future: future}
+	return &UpdateApprovalRuleTemplateNameFuture{Future: future}
 }
 
 func (a *stub) UpdateComment(ctx workflow.Context, input *codecommit.UpdateCommentInput) (*codecommit.UpdateCommentOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) UpdateComment(ctx workflow.Context, input *codecommit.UpdateComme
 	return &output, err
 }
 
-func (a *stub) UpdateCommentAsync(ctx workflow.Context, input *codecommit.UpdateCommentInput) *CodeCommitUpdateCommentFuture {
+func (a *stub) UpdateCommentAsync(ctx workflow.Context, input *codecommit.UpdateCommentInput) *UpdateCommentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdateComment", input)
-	return &CodeCommitUpdateCommentFuture{Future: future}
+	return &UpdateCommentFuture{Future: future}
 }
 
 func (a *stub) UpdateDefaultBranch(ctx workflow.Context, input *codecommit.UpdateDefaultBranchInput) (*codecommit.UpdateDefaultBranchOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) UpdateDefaultBranch(ctx workflow.Context, input *codecommit.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateDefaultBranchAsync(ctx workflow.Context, input *codecommit.UpdateDefaultBranchInput) *CodeCommitUpdateDefaultBranchFuture {
+func (a *stub) UpdateDefaultBranchAsync(ctx workflow.Context, input *codecommit.UpdateDefaultBranchInput) *UpdateDefaultBranchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdateDefaultBranch", input)
-	return &CodeCommitUpdateDefaultBranchFuture{Future: future}
+	return &UpdateDefaultBranchFuture{Future: future}
 }
 
 func (a *stub) UpdatePullRequestApprovalRuleContent(ctx workflow.Context, input *codecommit.UpdatePullRequestApprovalRuleContentInput) (*codecommit.UpdatePullRequestApprovalRuleContentOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *stub) UpdatePullRequestApprovalRuleContent(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) UpdatePullRequestApprovalRuleContentAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestApprovalRuleContentInput) *CodeCommitUpdatePullRequestApprovalRuleContentFuture {
+func (a *stub) UpdatePullRequestApprovalRuleContentAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestApprovalRuleContentInput) *UpdatePullRequestApprovalRuleContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdatePullRequestApprovalRuleContent", input)
-	return &CodeCommitUpdatePullRequestApprovalRuleContentFuture{Future: future}
+	return &UpdatePullRequestApprovalRuleContentFuture{Future: future}
 }
 
 func (a *stub) UpdatePullRequestApprovalState(ctx workflow.Context, input *codecommit.UpdatePullRequestApprovalStateInput) (*codecommit.UpdatePullRequestApprovalStateOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *stub) UpdatePullRequestApprovalState(ctx workflow.Context, input *codec
 	return &output, err
 }
 
-func (a *stub) UpdatePullRequestApprovalStateAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestApprovalStateInput) *CodeCommitUpdatePullRequestApprovalStateFuture {
+func (a *stub) UpdatePullRequestApprovalStateAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestApprovalStateInput) *UpdatePullRequestApprovalStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdatePullRequestApprovalState", input)
-	return &CodeCommitUpdatePullRequestApprovalStateFuture{Future: future}
+	return &UpdatePullRequestApprovalStateFuture{Future: future}
 }
 
 func (a *stub) UpdatePullRequestDescription(ctx workflow.Context, input *codecommit.UpdatePullRequestDescriptionInput) (*codecommit.UpdatePullRequestDescriptionOutput, error) {
@@ -1573,9 +1573,9 @@ func (a *stub) UpdatePullRequestDescription(ctx workflow.Context, input *codecom
 	return &output, err
 }
 
-func (a *stub) UpdatePullRequestDescriptionAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestDescriptionInput) *CodeCommitUpdatePullRequestDescriptionFuture {
+func (a *stub) UpdatePullRequestDescriptionAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestDescriptionInput) *UpdatePullRequestDescriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdatePullRequestDescription", input)
-	return &CodeCommitUpdatePullRequestDescriptionFuture{Future: future}
+	return &UpdatePullRequestDescriptionFuture{Future: future}
 }
 
 func (a *stub) UpdatePullRequestStatus(ctx workflow.Context, input *codecommit.UpdatePullRequestStatusInput) (*codecommit.UpdatePullRequestStatusOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *stub) UpdatePullRequestStatus(ctx workflow.Context, input *codecommit.U
 	return &output, err
 }
 
-func (a *stub) UpdatePullRequestStatusAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestStatusInput) *CodeCommitUpdatePullRequestStatusFuture {
+func (a *stub) UpdatePullRequestStatusAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestStatusInput) *UpdatePullRequestStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdatePullRequestStatus", input)
-	return &CodeCommitUpdatePullRequestStatusFuture{Future: future}
+	return &UpdatePullRequestStatusFuture{Future: future}
 }
 
 func (a *stub) UpdatePullRequestTitle(ctx workflow.Context, input *codecommit.UpdatePullRequestTitleInput) (*codecommit.UpdatePullRequestTitleOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *stub) UpdatePullRequestTitle(ctx workflow.Context, input *codecommit.Up
 	return &output, err
 }
 
-func (a *stub) UpdatePullRequestTitleAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestTitleInput) *CodeCommitUpdatePullRequestTitleFuture {
+func (a *stub) UpdatePullRequestTitleAsync(ctx workflow.Context, input *codecommit.UpdatePullRequestTitleInput) *UpdatePullRequestTitleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdatePullRequestTitle", input)
-	return &CodeCommitUpdatePullRequestTitleFuture{Future: future}
+	return &UpdatePullRequestTitleFuture{Future: future}
 }
 
 func (a *stub) UpdateRepositoryDescription(ctx workflow.Context, input *codecommit.UpdateRepositoryDescriptionInput) (*codecommit.UpdateRepositoryDescriptionOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *stub) UpdateRepositoryDescription(ctx workflow.Context, input *codecomm
 	return &output, err
 }
 
-func (a *stub) UpdateRepositoryDescriptionAsync(ctx workflow.Context, input *codecommit.UpdateRepositoryDescriptionInput) *CodeCommitUpdateRepositoryDescriptionFuture {
+func (a *stub) UpdateRepositoryDescriptionAsync(ctx workflow.Context, input *codecommit.UpdateRepositoryDescriptionInput) *UpdateRepositoryDescriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdateRepositoryDescription", input)
-	return &CodeCommitUpdateRepositoryDescriptionFuture{Future: future}
+	return &UpdateRepositoryDescriptionFuture{Future: future}
 }
 
 func (a *stub) UpdateRepositoryName(ctx workflow.Context, input *codecommit.UpdateRepositoryNameInput) (*codecommit.UpdateRepositoryNameOutput, error) {
@@ -1617,7 +1617,7 @@ func (a *stub) UpdateRepositoryName(ctx workflow.Context, input *codecommit.Upda
 	return &output, err
 }
 
-func (a *stub) UpdateRepositoryNameAsync(ctx workflow.Context, input *codecommit.UpdateRepositoryNameInput) *CodeCommitUpdateRepositoryNameFuture {
+func (a *stub) UpdateRepositoryNameAsync(ctx workflow.Context, input *codecommit.UpdateRepositoryNameInput) *UpdateRepositoryNameFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codecommit.UpdateRepositoryName", input)
-	return &CodeCommitUpdateRepositoryNameFuture{Future: future}
+	return &UpdateRepositoryNameFuture{Future: future}
 }

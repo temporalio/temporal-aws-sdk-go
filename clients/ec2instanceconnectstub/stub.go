@@ -16,12 +16,12 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type EC2InstanceConnectSendSSHPublicKeyFuture struct {
+type SendSSHPublicKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *EC2InstanceConnectSendSSHPublicKeyFuture) Get(ctx workflow.Context) (*ec2instanceconnect.SendSSHPublicKeyOutput, error) {
+func (r *SendSSHPublicKeyFuture) Get(ctx workflow.Context) (*ec2instanceconnect.SendSSHPublicKeyOutput, error) {
 	var output ec2instanceconnect.SendSSHPublicKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -33,7 +33,7 @@ func (a *stub) SendSSHPublicKey(ctx workflow.Context, input *ec2instanceconnect.
 	return &output, err
 }
 
-func (a *stub) SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *EC2InstanceConnectSendSSHPublicKeyFuture {
+func (a *stub) SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *SendSSHPublicKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ec2instanceconnect.SendSSHPublicKey", input)
-	return &EC2InstanceConnectSendSSHPublicKeyFuture{Future: future}
+	return &SendSSHPublicKeyFuture{Future: future}
 }
